@@ -78,6 +78,16 @@
   {"en": "divergence", "zh": "相分"},
   {"en": "contrary-reading", "zh": "反读"}
  ],
+ "agreement_of": [
+  {"en": "law"},
+  {"en": "thesis-or-method"},
+  {"en": "reading"}
+ ],
+ "target_roles": [
+  {"en": "carries"},
+  {"en": "neighbour"},
+  {"en": "limit"}
+ ],
  "group_kinds": [
   {"en": "theory"},
   {"en": "design"},

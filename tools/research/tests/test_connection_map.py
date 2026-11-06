@@ -9,7 +9,8 @@ sys.path.insert(0, str(ROOT))
 from tools.research import connection_map as cm  # noqa: E402
 
 VOCABULARY = {'relations': [{'en': 'agreement', 'zh': '相合'}, {'en': 'divergence', 'zh': '相分'}],
-              'carried': [{'en': c} for c in ('carried', 'not-carried', 'history-only', 'fresh-reading')]}
+              'carried': [{'en': c} for c in ('carried', 'not-carried', 'history-only', 'fresh-reading')],
+              'agreement_of': [{'en': a} for a in ('law', 'thesis-or-method', 'reading')]}
 GRAPH = {'nodes': [{'id': 'result:r1', 'type': 'result', 'record': 'r1', 'status': 'recorded-checked', 'kind': 'theorem', 'title': 'Law one'},
                    {'id': 'section:' + cm.BECOMING + 'chapters/02-MAP.md#r-r1', 'type': 'section'},
                    {'id': 'text:A', 'type': 'text'}, {'id': 'text:B', 'type': 'text'}, {'id': 'text:C', 'type': 'text'}, {'id': 'text:D', 'type': 'text'}],
@@ -22,16 +23,17 @@ SHARED = {'boundary': {'counts': {'derived': 2, 'counting': 1, 'connected': 3, '
           'central_reach': {'counts': {'reaching the grammar': 4, 'the rest': 2}}}
 
 
-def entry(id_, group, carried='carried', relation='agreement', record='r1', basis='read-in-repo'):
-    targets = [{'record': record, 'says': {'en': 'It says.'}}] if record else []
-    return {'id': id_, 'name': {'en': id_}, 'group': group, 'carried': carried, 'relation': relation, 'sense': {'en': 'Sense.'}, 'quote': None,
+def entry(id_, group, carried='carried', relation='agreement', record='r1', basis='read-in-repo', of='law', role='carries', same_as=None):
+    targets = [{'record': record, 'role': role, 'says': {'en': 'It says.'}}] if record else []
+    return {'id': id_, 'name': {'en': id_}, 'group': group, 'carried': carried, 'relation': relation, 'agreement_of': of if relation == 'agreement' else None,
+            'same_as': same_as, 'sense': {'en': 'Sense.'}, 'quote': None,
             'reading': {'en': 'Read.'}, 'source': {'work': 'a.md', 'locator': 'head', 'basis': basis}, 'account_adds': None, 'source_adds': None,
             'absence': {'searched': ['x'], 'read': []} if carried in cm.ABSENT else None, 'targets': targets}
 
 
 def group(id_, domain):
     return {'id': id_, 'title': {'en': id_}, 'domain': domain, 'kind': 'theory', 'summary': {'en': 'S.'}, 'read': ['a'], 'skimmed': [], 'searched': [],
-            'not_mapped': [], 'coverage': None, 'by_carried': {}, 'by_relation': {}}
+            'not_mapped': [], 'coverage': None, 'by_carried': {}, 'by_relation': {}, 'by_agreement_of': {}}
 
 
 def atlas(*entries):
@@ -63,6 +65,21 @@ class PayloadTests(unittest.TestCase):
         d = self.data(entry('cx-a', 'cxg-early'), entry('cx-b', 'cxg-greek', 'fresh-reading', 'divergence', basis='ai-knowledge'))
         self.assertEqual([(p['key'], p['groups'], p['differ']) for p in d['points']], [('r1', 2, True)])
         self.assertEqual(d['totals']['from_knowledge'], 1)
+
+    def test_only_a_carrying_target_draws_a_thread_or_a_meeting(self):
+        d = self.data(entry('cx-a', 'cxg-early', role='neighbour', of='reading'), entry('cx-b', 'cxg-greek', role='limit', of='reading'))
+        self.assertEqual(d['warp'], [])
+        self.assertEqual(d['points'], [])
+        self.assertEqual(d['totals']['unwarped'], 2)
+        self.assertEqual(d['entries'][0]['targets'][0]['role'], 'neighbour')
+
+    def test_agreement_is_counted_by_what_it_is_with(self):
+        d = self.data(entry('cx-a', 'cxg-early'), entry('cx-b', 'cxg-early', of='reading'), entry('cx-c', 'cxg-greek', 'fresh-reading', of='thesis-or-method'))
+        self.assertEqual(d['totals']['agreement_of'], {'law': 1, 'reading': 1, 'thesis-or-method': 1})
+
+    def test_a_claim_in_two_rows_counts_once(self):
+        d = self.data(entry('cx-a', 'cxg-early', same_as=['cx-b']), entry('cx-b', 'cxg-greek', same_as=['cx-a']), entry('cx-c', 'cxg-greek'))
+        self.assertEqual((d['totals']['entries'], d['totals']['distinct']), (3, 2))
 
     def test_the_standings_are_read_from_the_data_and_a_zero_is_left_out(self):
         d = self.data()

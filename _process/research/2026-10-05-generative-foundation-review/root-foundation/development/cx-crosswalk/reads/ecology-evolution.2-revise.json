@@ -1,0 +1,1735 @@
+{
+  "group": {
+    "id": "ecology-evolution",
+    "domain": "ecology-evolution",
+    "title": {
+      "en": "Ecology and evolution"
+    },
+    "kind": "domain",
+    "summary": {
+      "en": "The account holds population genetics and harvested renewal as laws in counts, by its own verdict restated and adding no new population-genetic prediction; what the fields state with quantities (rates, folds over the reals, relaxation times, measured r, b, c) it mostly does not state. Its theses go further and stand mixed: T1's need passed on one yeast experiment's regimes, held out from the fit and not the analyst, levels and timing failed, and no field test of a need measured in advance has run; T2 narrowed; T6 not rejected at low power. Three of the plan's seeds did not hold as written. Divergences are kept: Red Queen, runaway's cost, debt against T1, fitness as maximand, Gaia."
+    },
+    "read": [
+      "theories/becoming/review/SCIENCES.md S-07 to S-16",
+      "theories/becoming/chapters/04-LIFE.md, whole",
+      "aa-attractor-atlas/PLAN.md sections 6.3 and 6.4",
+      "aa-attractor-atlas/readers-2026-11-04/correspondences.md, the domain table and section 5, each line cut to about 900 characters",
+      "theories/becoming/chapters/02-MAP.md: margin of a regime, thresholds and the table of cases, T1 to its standing, each line cut at 2,200 to 7,000 characters",
+      "Records, statement, does-not-show and correspondence: margin-of-a-regime, threshold-in-the-state-plane, coupled-regimes, coupled-webs, dormancy-over-a-stretch, reserve-defers-ending, the-selection-term-and-a-lineages-fate, confined-rise-within-a-whole, what-taking-all-excludes, groups-whose-conditions-are-coupled, selection-among-groups-by-ending, shaping-the-rule-selected-by-what-comes-back, dependence-formed-from-drawing, selection-with-returns-to-groupmates, what-training-installs, selection-through-couplings, seeking-boundary, relative-position-is-zero-sum, a-race-for-position-draws-everything, evolution-on-descent, what-keeping-widening-needs"
+    ],
+    "skimmed": [
+      "theories/becoming/chapters/02-MAP.md section 9's capture laws, each cut at about 1,800 characters; reserve and dormancy",
+      "theories/becoming/chapters/05-COLLECTIVES.md: what-taking-all-excludes, relative-position-is-zero-sum, what-a-rise-draws-from-beyond, a-race-for-position-draws-everything, each only in its first part",
+      "theories/becoming/chapters/08-METHOD.md: the known-results rows on evolution and drift, the lines on the margin and pace of selection, T1's and T3's rows",
+      "theories/becoming/chapters/07-SIGNIFICANCE.md: where-the-possible-grows and what-keeping-widening-needs, their first part"
+    ],
+    "searched": [
+      "Front pages, chapters, review, GLOSSARY and record pages, by script with context, for: Allee, depensation, bistab, hysteres, alternative stable, stable state, extinction debt, committed to, evolutionary suicide, evolutionary trap, ecological trap, maladapt, mismatch, Red Queen, Van Valen, arms race, coevol, sexual, Fisherian, peacock, major transition, Maynard Smith, Szathm, division of labo, Michod, Levins, Hanski, metapopulation, Odling, niche, Gause, competitive exclusion, Tilman, Holling, resilien, Gaia, Daisyworld, Doolittle, Gould, spandrel, evolvab, fitness landscape, adaptive landscape, Lotka, Volterra, predator, keystone, trophic, source-sink, Dollo, Muller, mutational meltdown, Baldwin, Hardy, Gompertz, senescence, Hubbell, neutral theory, Grafen, inclusive.fitness, Dawkins, Lewontin, bet-hedging, cheater, Wynne-Edwards, survivorship, hazard, evolutionary rescue, Wallace, open-ended, Koh et al, Dean 1983, Rankin, greenbeard, Schaffer",
+      "record-index.tsv, for the life region and for lumping, regulation, widening and training"
+    ],
+    "not_mapped": [
+      {
+        "en": "T2's state of level, recent giving and one lag (S-15), with its delay-difference neighbours",
+        "why": "Its relation to Deriso and Schnute is stated at home and in S-15, with counts; a new entry would repeat them."
+      },
+      {
+        "en": "T6 and critical slowing down (S-16)",
+        "why": "Belongs to the dynamics domain's row; its ecological literature is credited in 03 and S-16."
+      },
+      {
+        "en": "Bioeconomics of the optimum laws (S-13): Schaefer, Scott, Gordon, Clark",
+        "why": "Credited in S-13, with the dossier's note that cost is not represented; the frame belongs with the economics domain."
+      },
+      {
+        "en": "The pace of selection (S-09): Nei, Felsenstein, Haldane's cost, the opportunity for selection",
+        "why": "08 states what it restates and what it is not, and S-09 asks the field; only its soft-selection witness is used, under relative fitness."
+      },
+      {
+        "en": "Mutation-selection balance and the error threshold (S-07, 04 section 6)",
+        "why": "Same verdict row as drift; a further entry adds no reading."
+      },
+      {
+        "en": "Loops and regulation (S-10)",
+        "why": "Their neighbours are control theory and walks on graphs; they fall to the systems and dynamics rows, apart from one law used under Gaia and recovery."
+      },
+      {
+        "en": "04 section 9's yeast and bacterial reanalyses, and the copying mechanisms of section 2",
+        "why": "Empirical correspondences and machine models, not a claim of the field to place."
+      }
+    ],
+    "coverage": {
+      "present": [
+        {
+          "what": "Evolution dossier items",
+          "where": "theories/becoming/review/SCIENCES.md#s-07",
+          "extent": "4 items, S-07 to S-10: census and classical laws in counts, what bounds offspring numbers, pace of selection, loops and regulation"
+        },
+        {
+          "what": "Ecology and renewable-resource dossier items",
+          "where": "theories/becoming/review/SCIENCES.md#s-11",
+          "extent": "6 items, S-11 to S-16: joint excess, regime margin, optimum laws, T1, T2, T6, with each frozen test's count"
+        },
+        {
+          "what": "Chapter on life and evolution",
+          "where": "theories/becoming/chapters/04-LIFE.md",
+          "extent": "9 sections; 18 central declarations in its boundary record; 46 records indexed in the life region of record-index.tsv"
+        },
+        {
+          "what": "Verdicts against prior work",
+          "where": "theories/becoming/chapters/08-METHOD.md#known-results",
+          "extent": "2 evolution-line rows of the table, each with what prior work states and the account does not yet, plus lines on the margin and on the pace of selection"
+        },
+        {
+          "what": "T1's frozen tests",
+          "where": "theories/becoming/chapters/02-MAP.md#t1",
+          "extent": "As S-14 counts them: MQ1 real yeast 1 of 2; MQ2 4 of 8; MQ3 fish stocks 0 of 4; MQ6 3 of 10; T1N and T1R refused before reading a row, so no field test of a need measured in advance has run"
+        },
+        {
+          "what": "Field names credited only in record correspondences",
+          "where": "theories/becoming/results/records/coupled-webs.md",
+          "extent": "Levins, Hanski, Pimm, Dunne, Koh and Dean appear only in a correspondence field of a few records; Odling-Smee also in the alignment dossier; Maynard Smith only for the haystack model; Rankin and colleagues in one row of 08; Szathmary nowhere"
+        }
+      ],
+      "absent": [
+        {
+          "en": "Alternative stable states as a named concept, with two positive states of a community and a parameter loop. 'Bistable' occurs only in S-16's credit to Dekker and in a market record; 'hysteresis' only in two correspondence fields",
+          "searched": [
+            "alternative stable",
+            "stable state",
+            "bistab",
+            "hysteres"
+          ]
+        },
+        {
+          "en": "Extinction debt and relaxation time",
+          "searched": [
+            "extinction debt",
+            "relaxation time",
+            "committed to",
+            "Tilman"
+          ]
+        },
+        {
+          "en": "Evolutionary and ecological traps; mismatch in the biological sense",
+          "searched": [
+            "evolutionary trap",
+            "ecological trap",
+            "maladapt",
+            "mismatch"
+          ]
+        },
+        {
+          "en": "Red Queen, coevolution and arms races",
+          "searched": [
+            "Red Queen",
+            "Van Valen",
+            "arms race",
+            "coevol"
+          ]
+        },
+        {
+          "en": "Sexual selection in any form",
+          "searched": [
+            "sexual",
+            "Fisherian",
+            "peacock"
+          ]
+        },
+        {
+          "en": "Major transitions as a programme: Maynard Smith and Szathmary's list, division of labour. The phrase occurs once, in a record's does-not-show",
+          "searched": [
+            "major transition",
+            "Szathm",
+            "division of labo"
+          ]
+        },
+        {
+          "en": "Holling's resilience and panarchy; 'resilience' occurs once, in an unrelated use. The systems domain's row holds it",
+          "searched": [
+            "Holling",
+            "resilien"
+          ]
+        },
+        {
+          "en": "Gaia, adaptationism and its critics, evolvability, fitness landscapes",
+          "searched": [
+            "Gaia",
+            "Daisyworld",
+            "Doolittle",
+            "Gould",
+            "spandrel",
+            "evolvab",
+            "fitness landscape",
+            "adaptive landscape"
+          ]
+        },
+        {
+          "en": "Community ecology as a field beyond cascades: coexistence theory, resource-ratio theory, predator-prey dynamics, neutral community theory. 'Trophic cascade' occurs only as a witness's name",
+          "searched": [
+            "Chesson",
+            "Tilman",
+            "Volterra",
+            "Hubbell",
+            "keystone",
+            "trophic"
+          ]
+        },
+        {
+          "en": "Life-history and genome-decay classics: senescence, Gompertz, Muller's ratchet, mutational meltdown, Dollo's law, the Baldwin effect, bet-hedging",
+          "searched": [
+            "senescence",
+            "Gompertz",
+            "Muller",
+            "mutational meltdown",
+            "Dollo",
+            "Baldwin",
+            "bet-hedging"
+          ]
+        }
+      ]
+    }
+  },
+  "entries": [
+    {
+      "id": "cx-ecoevo-alternative-stable-states",
+      "name": {
+        "en": "Alternative stable states"
+      },
+      "domain": "ecology-evolution",
+      "group": "ecology-evolution",
+      "source": {
+        "work": "May, Thresholds and breakpoints in ecosystems with a multiplicity of stable states (1977); Scheffer et al., Catastrophic shifts in ecosystems (2001)",
+        "locator": "locator unverified; the papers' central argument",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Under the same external conditions a community can hold more than one self-maintaining state, each with its basin. Slowly moving a parameter past a fold brings a sudden shift, and return needs the parameter moved well back. Shallow lakes, clear or turbid, are the stock case. How often real systems do this is disputed (Schröder, Persson and De Roos 2005, as I recall)."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "Proved in counts: under one draw a level splits exactly at a point, the lower fate being ending, not a second community state. With adjusting giving, runs resting below the draw and at it are split by a least level that does not rise with recent giving, and in a witness what was given lowers it. Two self-keeping ends stand only for shares: with lo < c < hi a course locks either side of a critical mass. 'Stable state' names no law here. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "margin-of-a-regime",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime",
+          "says": {
+            "en": "Theorem, whole numbers, under stated premises: a level up to a top ends exactly where it starts below H + y. Credited at 08 as harvesting under depensation and the fold (Clark 1976; May 1977), in whole numbers. The record's limits: the fold over the reals and the other order of a step are not stated."
+          }
+        },
+        {
+          "record": "threshold-in-the-state-plane",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-threshold-in-the-state-plane",
+          "says": {
+            "en": "Theorem: for giving rising in both and keeping a band, runs resting below the draw are those from levels below a least level, which does not rise with the recent giving. A witness without rising giving has no separating level."
+          }
+        },
+        {
+          "record": "webs-with-a-recent-giving",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-webs-with-a-recent-giving",
+          "says": {
+            "en": "Theorem: under mutual support thresholds are exact and do not rise as any level or recent giving rises; what was given can lower a threshold (witness Momentum). Its correspondence names history-dependent response as hysteresis."
+          }
+        },
+        {
+          "record": "coupled-regimes",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-coupled-regimes",
+          "says": {
+            "en": "Theorem: under mutual support the order of states is kept and ending is down-closed; inhibition breaks the order of fates, and beyond a band support can sustain a cycle."
+          }
+        },
+        {
+          "record": "shaping-read-by-readers-drawn-from-the-selected",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected",
+          "says": {
+            "en": "Theorem (counts): with lo <= hi a share decides exactly where lo < c < hi, and every such course is locked one way. It reads shares of carriers under a rule, not levels of a community."
+          }
+        },
+        {
+          "anchor": "theories/becoming/review/SCIENCES.md#s-14",
+          "says": {
+            "en": "On yeast: MQ2 passed 4 of 8, the need and its rise with the draw, levels failing; MQ6 3 of 10, neither break timed. In 113 fish stocks MQ3 passed 0 of 4."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Proved in counts, for any giving law meeting the premises: the point's exactness; a witness that rising giving is needed; a joint draw's rise superadditive up to one, with two draws each held alone ending the condition together. These locate an end and order nothing."
+      },
+      "source_adds": {
+        "en": "Stated with quantities and over the reals: the fold as a bifurcation in a moving parameter, the hysteresis loop's width, two positive community states, noise-driven shifts between them, measured lake and reef cases and their dispute. 'Hysteresis' appears in the account only as a correspondence word in two records."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ecoevo-recovery-beyond-removing-the-pressure",
+      "name": {
+        "en": "Recovery needs more than removing the pressure"
+      },
+      "domain": "ecology-evolution",
+      "group": "ecology-evolution",
+      "source": {
+        "work": "Scheffer et al., Catastrophic shifts in ecosystems (2001); Hutchings, Collapse and recovery of marine fishes (2000)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Having collapsed, a system may stay low after the driver is relaxed. Lakes can stay turbid after loading falls; many collapsed fish stocks recovered little after catches fell, as I recall Hutchings. The field offers several explanations, not only a threshold: changed ecosystems, continued catch, altered life history."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "Proved: with balance, where the joint exchange gives no more than it takes below m, a level below m never returns to it, gated renewal being the case. T1 turns this into one forbidden form: a condition below a need measured in advance returning with nothing given from beyond. Return from outside stays allowed, and the need is measured apart from the fate. Past the model it is conjectured; its one field design on return was refused at the table's header. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "regulation-from-one-side-and-locally",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-regulation-from-one-side-and-locally",
+          "says": {
+            "en": "Theorem (World): with balance, where the joint exchange gives no more than it takes below m, a level below m never returns to it, gated renewal being the case."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/02-MAP.md#t1",
+          "says": {
+            "en": "T1 forbids 'a condition below a need measured in advance returning with nothing given from beyond'. No field test of a need measured in advance has run; T1R, on whether the lakes' natural renewal returns once stocking has raised adults above that need, is frozen and was refused; neither says anything of T1."
+          }
+        },
+        {
+          "record": "dormancy-over-a-stretch",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-dormancy-over-a-stretch",
+          "says": {
+            "en": "Theorem: where from a step on a formation inactive with its reserve spent neither arises nor regains reserve, a premise, support returning later finds no dependent; a reserve spanning the gap bridges it. Not shown: that ending is final for actual dependents. Correspondence: hysteresis of collapse."
+          }
+        },
+        {
+          "anchor": "theories/becoming/review/SCIENCES.md#s-11",
+          "says": {
+            "en": "At the step the excess reaches the end holds for any renewal, and a formation renewed from outside can be active again (Restored.returns); the gated conclusions after that step are proved only for renewal depending on what it renews."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Separates what returns: from outside or not, and at which grain. Stocks showing no need above the least that can renew are not reached by T1's forbidden return, and their showing none does not count against T1."
+      },
+      "source_adds": {
+        "en": "Stated with quantities or by cause: measured recovery rates, the field's other explanations (changed ecosystems, continued catch, altered life history), and non-recovery where no need has been measured at all, on which T1 is silent."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ecoevo-allee-effects",
+      "name": {
+        "en": "Allee effects"
+      },
+      "domain": "ecology-evolution",
+      "group": "ecology-evolution",
+      "source": {
+        "work": "Stephens, Sutherland and Freckleton, What is the Allee effect? (1999); Courchamp, Berec and Gascoigne, Allee Effects in Ecology and Conservation (2008)",
+        "locator": "definitions of component, demographic, strong and weak effects",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "A component of fitness rises with density (component effect); per-capita growth rises with density at low density (demographic effect). A strong effect has negative growth below a threshold, a weak one does not. Causes are named: mate finding, group defence, feeding. Detection in stocks is uneven: significant depensation in 3 of 128 in Myers et al. 1995, as SCIENCES reports it."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The regime's need has the form of a strong effect at the demographic level, and the gate is its limit, renewal zero below the need: at a need above the least that can renew, S-11 calls it stronger than depensation as fisheries measure it, and at a need of one it needs no depensation at all. The 'critical mass' of 02 section 9 is another mechanism, a share of shapers among readers, not density in renewal; the plan's seed joins them by the word only. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "margin-of-a-regime",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime",
+          "says": {
+            "en": "Where giving stops below a need and the draw is positive and met at y, the point lies at least the draw above the need. Its correspondence names Allee effects under harvest; how giving depends on the draw is a premise, not a theorem."
+          }
+        },
+        {
+          "anchor": "theories/becoming/review/SCIENCES.md#s-11",
+          "says": {
+            "en": "[Dossier, AI] At a need above the least that can renew, the gate is the limiting form of critical depensation, and how often depensation occurs bounds from above how often the later gated conclusions apply; at a need of one it bounds nothing."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/02-MAP.md#t1",
+          "says": {
+            "en": "Depensation is rarely detected in assessed fish stocks (Myers et al. 1995), so at the levels studied most show no need above the least that can renew at all; at that need the return T1 forbids tests nothing on those stocks."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Proved in counts: an exact point for any giving law under its premises, how the draw raises it, and draws superadditive up to one. Tested only so far: super-additivity passed in simulated Allee yeast and is unmeasured in a real system. S-14 asks whether T1 forbids anything an Allee model of the same system does not; no live text answers."
+      },
+      "source_adds": {
+        "en": "Stated with quantities: component against demographic effects, weak effects, causes (mate finding, group defence, feeding) and measured density dependence, including 207 stocks in Keith and Hutchings 2012. The account reads no mechanism of low-density failure; the need is supplied or measured, and in real yeast the need passed where the levels failed."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ecoevo-coextinction-and-cascades",
+      "name": {
+        "en": "Coextinction and secondary extinctions"
+      },
+      "domain": "ecology-evolution",
+      "group": "ecology-evolution",
+      "source": {
+        "work": "Dean, A simple model of mutualism (1983); Pimm, Food web design and the effect of species deletion (1980); Dunne, Williams and Martinez, Network structure and biodiversity loss in food webs (2002); Koh et al., Species coextinctions and the biodiversity crisis (2004)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Dependents are lost with their partners, and deletions cascade through webs, with the reach set by web structure such as connectance. In obligate mutualism a threshold curve separates persistence from extinction, each partner needing less as the other has more. Estimates of coextinction are quantitative and model-laden, as I recall."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "In counts, these are the records' own credits. Under mutual support a point of no return does not rise as a partner rises, the threshold curve's form; along every chain of total dependence with positive draws the end of one ends everything downstream, a ring ending together or not at all. A decaying reserve lags this link by link. Dependence here is total: what the field measures is mostly partial. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "coupled-regimes",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-coupled-regimes",
+          "says": {
+            "en": "Theorem: under mutual support a point of no return does not rise as the partner rises; a condition with a positive draw, giving nothing where its partner has nothing, ends after its partner stays within its draw. Whether measured conditions are so coupled is untested."
+          }
+        },
+        {
+          "record": "coupled-webs",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-coupled-webs",
+          "says": {
+            "en": "Theorem: along every chain of total dependence with positive draws the end of one ends everything downstream, and a draw of nothing stops the cascade. How far it reaches in a field web is untested."
+          }
+        },
+        {
+          "record": "reserve-defers-ending",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-reserve-defers-ending",
+          "says": {
+            "en": "Where the reserve decays, coextinction runs down a chain link by link; without decay a last active step gives LPO, so the core does not state one."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Exactness and step counts for any index type, a witness that positive draws are needed, and the constructive cost of naming when a deferred end comes."
+      },
+      "source_adds": {
+        "en": "Partial dependence with a rate, the time of a cascade, robustness measures by connectance, measured webs and coextinction estimates. The record names partial dependence, a cascade's time and a measured field web as next."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ecoevo-extinction-debt",
+      "name": {
+        "en": "Extinction debt"
+      },
+      "domain": "ecology-evolution",
+      "group": "ecology-evolution",
+      "source": {
+        "work": "Tilman, May, Lehman and Nowak, Habitat destruction and the extinction debt (1994); Kuussaari et al., Extinction debt: a challenge for biodiversity conservation (2009)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "After habitat loss, species still present can be committed to extinction, the loss arriving generations later. In Tilman and colleagues' metapopulation model the best competitors, which are poor colonizers, go first even where locally abundant, as I recall. Empirically, present richness tracks past better than present landscape in some studies, by the Kuussaari review as I recall it."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {
+        "en": "The account never names it. Its form exists: below H + y a positive level falls every step and is nothing after as many steps as it stood, so what stands is already decided under the premises; a reserve defers an end, link by link down a chain. But the model has no hidden state, and on measured data the timing failed: yeast past its fold broke three and at least six days early. Commitment holds in the model; its timing is not supported. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "margin-of-a-regime",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime",
+          "says": {
+            "en": "A positive level below H + y falls at every step, is nothing after as many steps as it stood, and stays nothing; the time to break lies in a band. Does not show that a margin times a break: yeast past its fold broke three and at least six days early."
+          }
+        },
+        {
+          "record": "reserve-defers-ending",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-reserve-defers-ending",
+          "says": {
+            "en": "A formation unsupported from some step on is active over any later stretch at most as often as its reserve; where the reserve decays, coextinction runs down a chain link by link. Without decay a last active step gives LPO."
+          }
+        },
+        {
+          "record": "coupled-regimes",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-coupled-regimes",
+          "says": {
+            "en": "A condition with a positive draw, giving nothing where its partner has nothing, ends after its partner stays within its draw."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "A proof that an end is decided before it arrives, under stated premises, and that naming when a deferred end comes without decay is a question of omniscience in the constructive logic."
+      },
+      "source_adds": {
+        "en": "Competitive hierarchy, habitat fraction, species-area relations, relaxation times in generations, and the measured debt. The surprising ordering, best competitors first, has no form in the account."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ecoevo-extinction-debt-against-persistence",
+      "name": {
+        "en": "Extinction debt against 'persistence certifies'"
+      },
+      "domain": "ecology-evolution",
+      "group": "ecology-evolution",
+      "source": {
+        "work": "Tilman, May, Lehman and Nowak, Habitat destruction and the extinction debt (1994); Kuussaari et al., Extinction debt: a challenge for biodiversity conservation (2009)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Species now present may already be committed to loss, so present occurrence overstates what present habitat supports. Relaxation can run for many generations, longer than most surveys, by the review as I recall it."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {
+        "en": "T1 says what persists through many renewal cycles has had the joint draw kept within the margin, and its wording gives 'many' no count. In its own model a level below the point falls at every step and may stand as many steps as its level, so a large stock persists while already below. The certificate binds only past that transient. Debt says the transient can be long in the field. No live text names this. [AI reading]"
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/02-MAP.md#t1",
+          "says": {
+            "en": "T1: 'Whatever persists through many renewal cycles' has had the joint draw kept within the regime's margin. In the model, n steps of joint excess from a level below n + m end every formation depending at a need of at least m. Beyond the model conjectured."
+          }
+        },
+        {
+          "record": "margin-of-a-regime",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime",
+          "says": {
+            "en": "A positive level below H + y falls at every step and is nothing after as many steps as it stood; the time to break lies in a band. Does not show that a margin times a break."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "In counts, the transient has bounds: steps of persistence certify only against a level they exceed, for one condition under the premises."
+      },
+      "source_adds": {
+        "en": "A measured relaxation time, and the claim that it can outrun observation. A persisting stock with its debt unpaid would neither support nor refute T1 until the transient ends, which bears on how a field test of T1 reads survivors."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ecoevo-evolutionary-suicide",
+      "name": {
+        "en": "Evolutionary suicide"
+      },
+      "domain": "ecology-evolution",
+      "group": "ecology-evolution",
+      "source": {
+        "work": "Gyllenberg and Parvinen, Necessary and sufficient conditions for evolutionary suicide (2001); Rankin and Lopez-Sepulcre, Can adaptation lead to extinction? (2005); Rankin, Bargum and Kokko, The tragedy of the commons in evolutionary biology (2007)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Selection, by favouring what raises individual reproductive success, can itself drive a population extinct: the invading type wins each step, and the population falls off a discontinuous transition (in adaptive-dynamics analyses, a fold, as I recall). It is stated with invasion fitness and bifurcation of the evolving trait. Laboratory cases are claimed in social microbes; I hold these thinly."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "In counts: the selection term reads how offspring numbers differ, not how many, so a positive term coexists with ending; the record names suicide a classical case. Its witness is of the pattern only, reproduction stopped and the mark a label. The draw-carrying half stands apart: a confined rise takes during the excess, not causing it, and a group's overuse enters as a hypothesis. No law joins them, so the plan's 'a witness exists' overstates. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "the-selection-term-and-a-lineages-fate",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-the-selection-term-and-a-lineages-fate",
+          "says": {
+            "en": "Theorem: the witness of evolutionary suicide's pattern, reproduction simply stopped and the mark a label rather than a draw, is positive at every nonempty cohort but the last, while every member degenerates. Not shown: a suicide witness whose amount draws past the gated renewal."
+          }
+        },
+        {
+          "record": "confined-rise-within-a-whole",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-confined-rise-within-a-whole",
+          "says": {
+            "en": "Theorem: a confined rise has no member after the end, whatever selection within had raised it to. The drawing clause says the lineage takes from the family during the excess, not that it causes it."
+          }
+        },
+        {
+          "record": "ending-laws-as-regimes-on-a-lineage",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-ending-laws-as-regimes-on-a-lineage",
+          "says": {
+            "en": "Theorem: n steps of uptake above replenishment from a stock below n + m make the line degenerate at the kind grain where its reach so depends; the stock alone decides neither fate."
+          }
+        },
+        {
+          "record": "selection-among-groups-by-ending",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-selection-among-groups-by-ending",
+          "says": {
+            "en": "Theorem: a member depending at a need of at least m on a condition whose gated renewal ran into joint excess leaves no descendant from then on; one condition shared by every group ends them all and supplies none among them. Which group's condition runs into excess, or why, is a hypothesis."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/08-METHOD.md#what-the-unifications-claim",
+          "says": {
+            "en": "Natural selection is claimed as one selection through couplings, the drain lying wherever room lies, crediting the commons in evolutionary biology (Rankin, Bargum and Kokko 2007): the laws proved; one law across domains conjectured (T3)."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Two sides of a boundary: terms positive at unboundedly many steps keep every cohort nonempty, while terms zero from some step are shared by a course that goes on and one that ends. 'Selection decides what rises, not whether any go on' is an AI reading in the record."
+      },
+      "source_adds": {
+        "en": "The dynamic itself: a heritable draw raised by selection, causing the end through its own feedback, with invasion conditions and the discontinuity. The record's next step names this join as not done."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ecoevo-relative-and-absolute-fitness",
+      "name": {
+        "en": "Relative and absolute fitness; evolutionary rescue"
+      },
+      "domain": "ecology-evolution",
+      "group": "ecology-evolution",
+      "source": {
+        "work": "Wallace, Hard and soft selection revisited (1975); Gomulkiewicz and Holt, When does evolution by natural selection prevent extinction? (1995)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Selection acts through relative differences, while persistence turns on absolute growth. In soft selection a variant gains at others' expense with total output unchanged. Evolutionary rescue is adaptation restoring positive growth before a declining population is lost, its chance depending on population size and rate of decline, in models as I recall them."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "In counts: a common number added to every offspring number leaves the selection term unmoved, so one course of terms within a horizon is shared by a course that goes on and one that ends. The record calls this the classical distinction. Rescue has only a boundary here: terms positive at unboundedly many steps keep every cohort nonempty, and which side a course is on is not decided. Soft selection stands as a reading of a witness, not a theorem. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "the-selection-term-and-a-lineages-fate",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-the-selection-term-and-a-lineages-fate",
+          "says": {
+            "en": "Theorem: the term reads how offspring numbers differ, not how many there are; within a horizon a nonempty course's terms are shared by one going on and one empty from H + 2. Which side a course is on is not decided. Its correspondence names rescue and suicide as classical cases."
+          }
+        },
+        {
+          "record": "pace-of-selection-within-what-flows-in",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-pace-of-selection-within-what-flows-in",
+          "says": {
+            "en": "Witness: in a closed family gaining nothing, a carrier's share rises from a half to the whole at constant size two by drawing on another member and a pool. Reading: the setting of Wallace's soft selection; the record says it is not a theorem."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Exact statements on either side of the boundary, for any list of offspring numbers, with no rates; and a pace law in which a rise of the mean with nothing flowing into the carrying lineages shrinks the population."
+      },
+      "source_adds": {
+        "en": "Stated with quantities: rescue's probability and time window, by population size, standing variation and decline rate, and measured rescue in experiments. Absolute growth rate is no quantity here, since offspring lists are supplied."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ecoevo-evolutionary-traps",
+      "name": {
+        "en": "Evolutionary and ecological traps"
+      },
+      "domain": "ecology-evolution",
+      "group": "ecology-evolution",
+      "source": {
+        "work": "Schlaepfer, Runge and Sherman, Ecological and evolutionary traps (2002); Robertson and Hutto, A framework for understanding ecological traps (2006)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "A cue once reliable for a good option comes, after rapid environmental change, to favour a worse one: an organism prefers the option leaving it fewer offspring although better is available. Insects laying on polarizing surfaces are a stock case. The definition compares fitness across options and requires the preference to be measured."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {
+        "en": "The account does not name this. Nearest form: a selection reaches only what couples in, and training read as selection installs a law only along its own courses, as far as its representation lumps them, so a law read off those courses is not fixed. A cue installed on ancestral courses and read after rapid change has that shape; the parallel is this reading's, the record being about learners. None states a cue reversing, and 'worse' reads offspring number as a reading only. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "selection-through-couplings",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+          "says": {
+            "en": "Theorem (World): two histories are selected alike by every selection through a formation's couplings exactly when they are alike through them. A particular selection may ignore what its couplings carry."
+          }
+        },
+        {
+          "record": "evolution-on-descent",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-evolution-on-descent",
+          "says": {
+            "en": "Where the flow transmits a dependence within delta, a descendant's need is at most the condition's level at the giving step plus delta. In the witness one inheriting its need is unsupported, since the parent's taking lowered the pool."
+          }
+        },
+        {
+          "record": "what-training-installs",
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-training-installs",
+          "says": {
+            "en": "Theorem, on training read as selection over act laws: it installs a law only along its own courses and as far as the learner's representation lumps them; credited as the formal kernel of goal misgeneralization. It reads learners, not organisms. It says what a training can install, not what it should."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Proved: an exact reason a selection cannot react to what lies beyond its couplings, on any type of reader, near-definitional by its record's own word; and a descendant's need bounded by the condition's level one step back."
+      },
+      "source_adds": {
+        "en": "The trap itself: a preference pointing at the worse of two available options, the role of cue evolution and rapid change, measured fitness differences, and conservation practice. No law here has a reader's preference turned against offspring number."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ecoevo-red-queen-relative-race",
+      "name": {
+        "en": "Red Queen: running to stay in place"
+      },
+      "domain": "ecology-evolution",
+      "group": "ecology-evolution",
+      "source": {
+        "work": "Van Valen, A new evolutionary law (1973); Dawkins and Krebs, Arms races between and within species (1979)",
+        "locator": "locator unverified; Van Valen's zero-sum explanation of his law",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Each species' adaptive gain worsens the others' effective environment, in a roughly zero-sum world, so all must keep changing to hold their place, none gaining in the long run. Arms races are the dyadic version, asymmetric between and within species. It is a claim about interacting lineages over evolutionary time."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {
+        "en": "The account does not state this. Its zero-sum holds by counting, whatever the amounts do; Van Valen's is a claim about the world's resources. 'Above all others' never rests for two, and a selection term is unmoved by a common shift, so it reads differences. No law has two lineages each changing the other's selection, so the running is not proved. In the one race played out, drawers in turn, the stock ends rather than the running going on. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "relative-position-is-zero-sum",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-relative-position-is-zero-sum",
+          "says": {
+            "en": "Theorem, any type for the counting: across every change of amounts the positions' rises total their falls; no change raises every part's position."
+          }
+        },
+        {
+          "record": "seeking-boundary",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-seeking-boundary",
+          "says": {
+            "en": "Theorem: 'above all others' is met by at most one seeker, so no unchanged state meets it for two. How a target forms is not modelled."
+          }
+        },
+        {
+          "record": "a-race-for-position-draws-everything",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-race-for-position-draws-everything",
+          "says": {
+            "en": "Theorem: among two drawers or more, where what stands from nothing is at most what stands from anything left, every profile perfect for position draws everything before the horizon. It does not show that actual races are so played. Credited: relative-payoff maximizers (Schaffer 1988) and spite (Hamilton 1970)."
+          }
+        },
+        {
+          "record": "the-selection-term-and-a-lineages-fate",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-the-selection-term-and-a-lineages-fate",
+          "says": {
+            "en": "The selection term proper reads how offspring numbers differ, not how many there are: a common number added to every offspring number leaves concordance and discordance unchanged."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Proved: position's rises total its falls for any amounts; and a race for position ending the stock it draws on, over any renewal law, in a game among drawers rather than lineages. That a race produces joint excess is a premise elsewhere."
+      },
+      "source_adds": {
+        "en": "Reciprocal evolutionary change between lineages, with its dynamics; asymmetries of arms races between and within species; and the zero-sum as a claim about the world, where in the account it comes with position's definition."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ecoevo-red-queen-constant-hazard",
+      "name": {
+        "en": "Van Valen's law of constant extinction"
+      },
+      "domain": "ecology-evolution",
+      "group": "ecology-evolution",
+      "source": {
+        "work": "Van Valen, A new evolutionary law (1973)",
+        "locator": "the survivorship curves; locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "From fossil taxa: within an ecologically related group, the probability of extinction is roughly constant in time, independent of a taxon's age, so survivorship curves are log-linear. It is an empirical regularity with quantities, later challenged and refined; I do not hold its present standing in detail. Hamilton's Red Queen theory of sex is a further and separate claim."
+      },
+      "quote": null,
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "Nothing in the account states a hazard independent of age, and its laws of ending read a stock against a draw, not a taxon's survivorship. The nearest form is thin: in the exit from a margin a record bears on the exit only through the margin it shows and the steps left, a bound on weights, not a rate. Not a defect; a field's measured law the account has not taken up. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "A measured, falsifiable, age-independent rate across taxa: the kind of quantity the account's verdict says it lacks."
+      },
+      "absence": {
+        "searched": [
+          "Red Queen, Van Valen, survivorship, hazard, across the front pages, chapters, review and record pages: no hit",
+          "taxon: chapters and review"
+        ],
+        "read": [
+          "04-LIFE.md sections 3 and 4 on lineage fate",
+          "02-MAP.md T1's statement and the exit from a margin"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ecoevo-fisher-runaway-rule-read-from-share",
+      "name": {
+        "en": "Fisherian runaway: preference carried with what it prefers"
+      },
+      "domain": "ecology-evolution",
+      "group": "ecology-evolution",
+      "source": {
+        "work": "Fisher, The Genetical Theory of Natural Selection (1930), on sexual selection; Lande, Models of speciation by sexual selection on polygenic traits (1981)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Choosers' offspring inherit both the preference and the preferred trait, so the two become correlated. Selection on the trait by choice then raises the preference, which strengthens selection on the trait: a self-reinforcing process with no need of any benefit to viability. Lande treats it with quantitative genetics: a genetic covariance, a line of equilibria."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {
+        "en": "The account has no sexual selection. The self-reference has a form in counts: a rule read monotonically from the share it selects locks; readers drawn from the selected move that premise to who reads; with lo below c below hi, a critical mass divides two locks. Yet one share collapses two linked traits, and the rule is read, not inherited through a covariance. Agreement of loop shape only. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "capture-through-the-rule",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule",
+          "says": {
+            "en": "Theorem (any type): with selection not lowering a share under a favouring rule, the rule read monotonically from the share, and the start's rule and every rule read favouring, the share falls at no step and the course locks. That actual rules read the share is the premise."
+          }
+        },
+        {
+          "record": "readers-drawn-from-the-selected",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-readers-drawn-from-the-selected",
+          "says": {
+            "en": "Theorem: the rule read as the pool of its readers' readings is monotone in the share exactly where the others' reading is not above the carriers'."
+          }
+        },
+        {
+          "record": "shaping-read-by-readers-drawn-from-the-selected",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected",
+          "says": {
+            "en": "Theorem (counts): with lo <= hi a share decides exactly where lo < c < hi. Its correspondence names a stag hunt and, as a biological comparator for readers favouring their own kind, the greenbeard."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Exact conditions in counts for a lock on either side of a critical mass; drawn one member at a time, either lock is left by drift, at a weight whose bound falls across the distance from the mass."
+      },
+      "source_adds": {
+        "en": "Two traits and their genetic covariance, the line of equilibria, the ratio of variances deciding instability, exaggeration as continuing change of a trait's value, speciation consequences, the rival handicap argument (Zahavi 1975)."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ecoevo-fisher-runaway-cost-is-read",
+      "name": {
+        "en": "Fisherian runaway is not closed capture"
+      },
+      "domain": "ecology-evolution",
+      "group": "ecology-evolution",
+      "source": {
+        "work": "Lande, Models of speciation by sexual selection on polygenic traits (1981); Kirkpatrick, Sexual selection and the evolution of female choice (1982)",
+        "locator": "locator unverified; the balance of sexual selection against viability selection",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "The trait's viability cost acts on the same offspring numbers as choice does. The runaway stops where the two balance, or, past the line of equilibria's stability, goes until cost halts it. Cost is inside the selection, not unread by it."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {
+        "en": "The plan seeds this as 'closed capture by preference'. Closed capture's lock outlives a loss because neither next share nor rule read reads it (Unread). In the Fisher-Lande setting a viability loss enters the counts that make the share, so Unread fails and the lock-outlives-loss law does not apply. The closed form fits only a cost the share does not read, such as one falling beyond the lineage. The account's 'runaway' names another thing, how far a break is: same word, other mechanism. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "closed-capture",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+          "says": {
+            "en": "Theorem: where neither next share nor rule read reads the beyond (Unread), courses alike in share and rule stay alike; under the further premises the loss passes every bound while the course stays locked. A reading favouring at no loss above a bound unlocks the course, a sufficient way out."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The exact condition, Unread, that tells a loss a loop can outlive from one it cannot; the Fisher case falls on the far side of it."
+      },
+      "source_adds": {
+        "en": "A self-reinforcing loop whose cost is read and which comes to rest by balance: a dynamic the capture laws do not state, since their lock needs monotone reading and favouring, not a balance of two selections in one term."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ecoevo-major-transitions",
+      "name": {
+        "en": "Major transitions in evolution"
+      },
+      "domain": "ecology-evolution",
+      "group": "ecology-evolution",
+      "source": {
+        "work": "Maynard Smith and Szathmary, The Major Transitions in Evolution (1995); Michod, Darwinian Dynamics (1999)",
+        "locator": "the book's opening chapter on common features; locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Entities that replicated alone come to replicate only as parts of a larger whole, with new ways of storing and passing information: genes into genomes, cells into organisms, organisms into societies, language. Common features recur: division of labour, contingent irreversibility, conflict suppressed. Michod reads these as fitness moving between levels."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The account holds what follows a transition, and only that: levels partitioned in counts, a founding's bottleneck and sequestration as hypotheses, group ancestry from bonds in one periphery model. Its record says it does not hold the transitions themselves. Its reading that cell, organ, body, ecosystem is one case, not a fixed ladder, is thin as a divergence: Maynard Smith and Szathmary do not claim inevitability, as I recall. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "confined-rise-within-a-whole",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-confined-rise-within-a-whole",
+          "says": {
+            "en": "Over wholes each founded by one part, where every next founder carries its founder's value (a hypothesis stating an outcome), the mean founding value rises exactly where selection among wholes goes for it. Does not show how parts first come to live as one."
+          }
+        },
+        {
+          "record": "selection-within-and-among-groups-of-any-sizes",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-selection-within-and-among-groups-of-any-sizes",
+          "says": {
+            "en": "Theorem: the law of total covariance with size weights, in counts; how the next cohort is listed fixes the next step's among-group part."
+          }
+        },
+        {
+          "record": "groups-formed-by-bonds-share-a-founder",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-groups-formed-by-bonds-share-a-founder",
+          "says": {
+            "en": "Theorem (periphery): where division copies retention and adds a bond, positions connected by actual bonds share a founder; aggregation is the counterexample. A common founder is not constant genotype or shared interest."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/04-LIFE.md#does-not-show",
+          "says": {
+            "en": "The chapter does not show how parts first come to live as one, wholes founded by several parts, removal of parts by a whole's rule, or how groups and couplings form beyond the bonded model of section 5."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/04-LIFE.md#organization",
+          "says": {
+            "en": "Reading [AI reading]: inclusion, functional participation and dependence are distinct relations; cell, organ, body, ecosystem is one biological case, not a fixed ladder. Open list: novel organization and changed units."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Proved: a rise confined to its whole ends with it whatever selection within raised it to, and a witness in which a variant selected within lowers the mean founding value. Both take the whole as already formed."
+      },
+      "source_adds": {
+        "en": "The transitions themselves, division of labour, new inheritance systems, irreversibility, aggregative and colonial routes, policing. The 'novel organization and changed units' requirement stays open in 04's own list."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ecoevo-germ-line-and-cancer",
+      "name": {
+        "en": "The germ line and cancer as conflict within a body"
+      },
+      "domain": "ecology-evolution",
+      "group": "ecology-evolution",
+      "source": {
+        "work": "Buss, The Evolution of Individuality (1987); Michod and Roze, Cooperation and conflict in the evolution of multicellularity (2001); Aktipis et al., Cancer across the tree of life (2015)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Selection among cell lineages within a body runs against selection among bodies. A single-cell bottleneck and a sequestered germ line reduce that conflict, and cancer reads as cheating on multicellular cooperation. These are mechanistic and comparative claims, with measured cases across taxa."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "04 says these laws restate known results on cancer and the germ line, with the flow. A rise is a lineage selection within goes for, drawing during its family's excess; confined, it has no member after the end. Over wholes each founded by one part, with every next founder carrying its founder's value, the mean founding value rises exactly where selection among wholes goes for it. That condition states an outcome, not a mechanism. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "confined-rise-within-a-whole",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-confined-rise-within-a-whole",
+          "says": {
+            "en": "Theorem (World; any type for the founding laws): a confined rise has no member after the end, whatever selection within raised it to. Sequestered is a hypothesis stating an outcome. Without it, in a witness, a variant selected within lowers the mean founding value from a half to none. That a tumour meets the clauses is empirical."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The transmission and ending laws joined on one flow. Not a ranking: the record says that a lineage ending with its whole is worse, or sequestration better, is not shown; ranking goes through C."
+      },
+      "source_adds": {
+        "en": "How a germ line is sequestered and how far it varies, removal of parts by a whole's rule (policing), wholes founded by several parts, transmissible cancers beyond one generation's witness, and every measured rate."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ecoevo-group-selection-by-extinction",
+      "name": {
+        "en": "Group selection by differential extinction"
+      },
+      "domain": "ecology-evolution",
+      "group": "ecology-evolution",
+      "source": {
+        "work": "Wright, Tempo and mode in evolution (1945); Maynard Smith, Group selection and kin selection (1964); Wilson, A theory of group selection (1975); Wilson and Sober, Reintroducing group selection to the human behavioral sciences (1994)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "A trait selected against within groups can spread if groups with more of it last or produce more. This needs variance among groups, which group formation must regenerate, as in the haystack model and trait groups. How often it matters, and whether it differs from kin selection, has been argued for decades."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "In counts: the multilevel partition at any size weights, in which how the next cohort is listed fixes the next step's among-group part, and a step can use that part up. Which level wins is read off the counts, not explained. On the World, ending can supply the among-group part where each group has its own gated condition; one condition shared by all, or one coupled family, supplies none. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "selection-within-and-among-groups-of-any-sizes",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-selection-within-and-among-groups-of-any-sizes",
+          "says": {
+            "en": "Theorem: the law of total covariance with size weights; how the next cohort is listed fixes the next step's among-group part. Credits the haystack model and trait groups."
+          }
+        },
+        {
+          "record": "selection-among-groups-by-ending",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-selection-among-groups-by-ending",
+          "says": {
+            "en": "Where every group with less leaves no offspring, nothing is discordant among groups. One condition shared by every group ends them all. How groups form, or that keeping is better, is not shown."
+          }
+        },
+        {
+          "record": "groups-whose-conditions-are-coupled",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-groups-whose-conditions-are-coupled",
+          "says": {
+            "en": "Theorem (World): groups depending on one coupled family end together, nothing selected among them: ending selects only between families. Mixing between groups is not stated."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Exact counts for the split, the either-verdict witnesses from the same within-group counts, and which grouping of conditions lets ending select at all."
+      },
+      "source_adds": {
+        "en": "Migration and group reproduction with its rates (Traulsen and Nowak 2006, named at 08), group formation as a process, and the empirical question of when among-group selection is strong enough."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ecoevo-hamilton-rule",
+      "name": {
+        "en": "Hamilton's rule"
+      },
+      "domain": "ecology-evolution",
+      "group": "ecology-evolution",
+      "source": {
+        "work": "Hamilton, The genetical evolution of social behaviour (1964); Hamilton, Innate social aptitudes of man (1975); Queller, Kinship, reciprocity and synergism (1985)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "A costly trait spreads where relatedness times benefit exceeds cost, rb > c. r is a statistical measure of genetic association between actor and recipient, in the 1975 paper read through the Price equation among groups. Queller adds a synergy term. Field studies estimate r, b and c as quantities."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "In counts, nothing subtracted: for equal groups and additive returns, the whole selects for keeping exactly where (b + c) times its spread falls short of mb times the spread among groups, with the assortment the share among groups. A general additive form needs no groups. It is restated, not improved, by the account's own verdict. Assortment is a reading of spreads, and descent does not supply it; groups' founding enters as given. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "selection-with-returns-to-groupmates",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-selection-with-returns-to-groupmates",
+          "says": {
+            "en": "Theorem (any type), exact transmission for the step law: this is Hamilton's rule, in counts with nothing subtracted; its general additive form holds on any list. Synergy is not stated, nor which sharing actual groups have, which is a premise."
+          }
+        },
+        {
+          "record": "unequal-groups-not-decided-by-the-spread-among-groups",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-unequal-groups-not-decided-by-the-spread-among-groups",
+          "says": {
+            "en": "Theorem (counts): at unequal sizes, where each member gains for every unit its group holds, two listings with the same spreads give either verdict; the verdict goes through the covariance of a member's group total with its group's mean."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/08-METHOD.md#known-results",
+          "says": {
+            "en": "Restated in counts. Prior work states what the account does not yet: Hamilton's rule with synergy (Queller 1985) and with assortment changing over generations."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The kept form, K < s + mq times rho, in which what comes back alone counts at every assortment, and the unequal-size witness. Shaping a rule is a case of it, which carries the rule outside biology."
+      },
+      "source_adds": {
+        "en": "r as genetic association by descent, synergy, class structure, measured r, b and c, and the kin-against-group dispute (Nowak, Tarnita and Wilson 2010 and replies, as I recall), on which the account's text takes no side beyond additive equivalence in a correspondence field."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ecoevo-fitness-as-a-maximand",
+      "name": {
+        "en": "Fitness as what organisms maximize"
+      },
+      "domain": "ecology-evolution",
+      "group": "ecology-evolution",
+      "source": {
+        "work": "Hamilton (1964) on inclusive fitness; Grafen, Optimization of inclusive fitness (2006)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "In the field's frame, selection makes organisms appear to maximize inclusive fitness: a quantity attributable to an individual, under which an organism's adaptations are read as design. Formal Darwinism aims to link gene-frequency change and optimization formally. Its scope is argued, and others dispute inclusive fitness's generality."
+      },
+      "quote": null,
+      "carried": "changed",
+      "relation": "divergence",
+      "reading": {
+        "en": "The account does not define fitness; offspring number is everywhere a weight and a reading, never a measure of worth. Its optima are always of an order supplied, each law holding for every order rising with a family, so none is a property of the organism. Where evaluation enters, it rests on two premises, neither asserted: the continuation condition for scope and C for order. Not a denial of the field's mathematics, which is simply not stated here. [AI reading]"
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/04-LIFE.md#does-not-show",
+          "says": {
+            "en": "Not shown: that any amount, lineage, group or level of selection is better; fitness, rational amounts beyond a common denominator, or a new population-genetic prediction."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/04-LIFE.md#blind-selection",
+          "says": {
+            "en": "Fitness is not defined, and no reproductive advantage is ethical authority. It adds no new population-genetic prediction."
+          }
+        },
+        {
+          "record": "selection-with-returns-to-groupmates",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-selection-with-returns-to-groupmates",
+          "says": {
+            "en": "The rule reads the counts; that keeping is better where it is selected for is not shown, and ranking goes through the comparison C."
+          }
+        },
+        {
+          "anchor": "theories/becoming/review/SCIENCES.md#s-07",
+          "says": {
+            "en": "The dossier asks reviewers whether stating these laws in whole numbers, with offspring lists supplied and fitness not defined, loses anything that matters. Open."
+          }
+        },
+        {
+          "anchor": "theories/becoming/review/SCIENCES.md#s-13",
+          "says": {
+            "en": "Every optimum of every order rising with the total drawn holds a level of greatest renewal under the stated premises: laws over orders, not one objective."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "A refusal with a reason: comparison is formed by a comparer, and the counts order nothing by themselves."
+      },
+      "source_adds": {
+        "en": "An individual-level design quantity, and the adaptationist explanatory practice built on it. A biologist could say the account gives up a tool that explains organisms' fit."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ecoevo-price-equation",
+      "name": {
+        "en": "Price's equation"
+      },
+      "domain": "ecology-evolution",
+      "group": "ecology-evolution",
+      "source": {
+        "work": "Price, Selection and covariance (1970); Price, Extension of covariance selection mathematics (1972)",
+        "locator": "the covariance and transmission terms",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Change in a mean trait equals the covariance of fitness and trait, plus the fitness-weighted expected change in transmission, over mean fitness. It is an exact identity for any population with a parent-offspring mapping, recursively expandable across levels. Whether an identity explains anything is argued in the field (Frank 2012; van Veelen, as I recall)."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "In counts: an identity of natural numbers over finite lists, with no premise, the differences truncated, the covariance's denominators cleared, the multilevel form at any size weights. The account credits substance elsewhere: its record calls this an identity checked 'without improving it'. Real-valued traits and expectations are not its form. What is new is only the join to support and flow. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "evolution-on-descent",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-evolution-on-descent",
+          "says": {
+            "en": "Price's equation in counting form: over any finite family and natural-number amounts, the offspring's total with what transmission lowered is each parent's amount counted once per offspring with what transmission raised. No premise."
+          }
+        },
+        {
+          "record": "selection-term-over-generations",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-selection-term-over-generations",
+          "says": {
+            "en": "With no premise, the covariance with its denominators cleared; over cohorts the mean is kept across a step exactly where selection proper and transmission balance."
+          }
+        },
+        {
+          "anchor": "theories/becoming/review/SCIENCES.md#s-08",
+          "says": {
+            "en": "In a family closed and dissipated on, a lineage that reproduced at first has a step at which transmission lowered offspring number by more than selection and what transmission raised. Whether actual lineages lie within such families is an application question."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The flow beside the identity: only the supported leave descendants, and Price's transmission term must at some step outweigh selection in a closed, dissipating family. The audit calls that third part known as the Malthusian bound."
+      },
+      "source_adds": {
+        "en": "Real-valued traits, expected transmission as a term of a statistical population, and Price's later general frame for selection, which I recall only thinly."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ecoevo-fisher-fundamental-theorem",
+      "name": {
+        "en": "Fisher's fundamental theorem"
+      },
+      "domain": "ecology-evolution",
+      "group": "ecology-evolution",
+      "source": {
+        "work": "Fisher, The Genetical Theory of Natural Selection (1930); Price, Fisher's 'fundamental theorem' made clear (1972)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "The rate of increase of mean fitness due to natural selection equals the additive genetic variance in fitness. As Price clarified, this is the partial change only; the environment's own change, which can fully offset it, stands apart. So total mean fitness need not rise."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "In counts: with exact transmission the mean offspring number rises exactly where offspring numbers vary; with breeding values given by the normal equations, transmitted exactly, the mean breeding value rises by its spread. So it holds in the case with no change other than selection. Fisher's partial-change sense, the environment term, is what the account marks not stated. The closed-lineage law supplies its counter-pressure from flow instead. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "what-bounds-offspring-numbers",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-what-bounds-offspring-numbers",
+          "says": {
+            "en": "Fisher's theorem in counts, exact case: with exact transmission, the mean offspring number rises across a step exactly where offspring numbers vary and is kept exactly where they are uniform."
+          }
+        },
+        {
+          "record": "the-breeding-value",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-the-breeding-value",
+          "says": {
+            "en": "Fisher's fundamental theorem with breeding values. That the normal equations have such a solution is given, not shown; inexact transmission of the breeding value is not stated."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/08-METHOD.md#known-results",
+          "says": {
+            "en": "Prior work states what the account does not yet: Fisher's theorem under inexact transmission, with the environment term (Price 1972), and a solution of the normal equations."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Proved in counts: a witness on four members where a breeding value's spread is 32 against the whole's 48, so part of the variance is left over; and, in a balanced, dissipating family, a step at which transmission lowered offspring number by more than selection and what transmission raised."
+      },
+      "source_adds": {
+        "en": "The environment term's meaning, which is the theorem's point in Price's reading; a solved regression, and real-valued variance as a rate. Stated with a rate, the theorem is a quantitative claim the counting form only cross-multiplies."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ecoevo-drift-and-neutral-theory",
+      "name": {
+        "en": "Drift and the neutral theory"
+      },
+      "domain": "ecology-evolution",
+      "group": "ecology-evolution",
+      "source": {
+        "work": "Wright, Evolution in Mendelian populations (1931); Moran, Random processes in genetics (1958); Kimura, Evolutionary rate at the molecular level (1968)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "In a finite population gene frequencies change by sampling alone. A neutral allele fixes with probability equal to its starting share, in a time of order the population size, and the neutral rate of substitution equals the mutation rate. With selection, fixation probability has a closed form in s and N."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "In counts: drawing histories weighed by ways of drawing, with no chance of the unfolding supposed. Summed over histories drift has no direction, and the histories fixing a kind are bounded both ways by its starting share. The limit is read from finite bounds, not proved. Moran's ratio stands for the jump chain. 08's verdict is 'restated as finite weighted bounds', and 04 says it adds no new population-genetic prediction. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "fixation-by-drift",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-fixation-by-drift",
+          "says": {
+            "en": "Finite weighted bounds, whose reading is that the fixing share tends to h/N. Constant N at least 2, no selection or mutation in the draw; the time to fixation bounded, not stated."
+          }
+        },
+        {
+          "record": "fixation-with-selection",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-fixation-with-selection",
+          "says": {
+            "en": "For the count-changing jump chain of the Moran process, fixing histories are bounded by the ratio that is the Moran probability in counts. Wright-Fisher with selection not stated."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/08-METHOD.md#known-results",
+          "says": {
+            "en": "Prior work states what the account does not yet: Kimura's fixation with selection in sampled generations, the neutral rate of substitution, drift's time scales."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Bounds with no probability taken as primitive, and, for a rule read at each count, a witness where the Moran criterion parts from risk dominance."
+      },
+      "source_adds": {
+        "en": "Every quantity the field is used for: the substitution rate, heterozygosity's loss by 1 - 1/N a generation, fixation time, effective population size and the molecular clock."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ecoevo-competitive-exclusion",
+      "name": {
+        "en": "Competitive exclusion"
+      },
+      "domain": "ecology-evolution",
+      "group": "ecology-evolution",
+      "source": {
+        "work": "Gause, The Struggle for Existence (1934); Hardin, The competitive exclusion principle (1960); Tilman, Resource Competition and Community Structure (1982)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Complete competitors for one limiting resource cannot coexist at equilibrium. In Tilman's resource-ratio form, the species drawing the resource lowest wins, a measurable R*. Hutchinson's paradox of the plankton and later coexistence theory ask why so many in fact coexist: fluctuation, partitioning and stabilizing differences."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "The record calls its law 'the form here' of the principle 'where one formation takes the whole renewal'. In the World, under the gate: a full taker continuing leaves no named other taking through all of a window one step longer than the level. So taking all is a premise, not an outcome of competition, and who becomes the full taker is not derived. Exclusion acts through taking, not levels. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "what-taking-all-excludes",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-taking-all-excludes",
+          "says": {
+            "en": "Theorem (World; the gate at the need): where a formation takes all that is given and is active at every step, not at every one of the level + 1 steps from T is a named other present and taking. Taking jointly within what is given keeps the level."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Taking jointly within what is given at every step keeps the level, and every formation depending on that condition alone at a need met at the start stays supported; the levels still admit the excluded."
+      },
+      "source_adds": {
+        "en": "Which competitor wins, by a measured R* or a growth rate; coexistence mechanisms with their quantities; the equilibrium assumption the principle rests on. The account's law does not predict an outcome between two competitors."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ecoevo-metapopulations",
+      "name": {
+        "en": "Metapopulation persistence"
+      },
+      "domain": "ecology-evolution",
+      "group": "ecology-evolution",
+      "source": {
+        "work": "Levins, Some demographic and genetic consequences of environmental heterogeneity for biological control (1969); Hanski, Metapopulation dynamics (1998)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "A species can persist across patches though each goes extinct, by the balance of colonization and local extinction; occupancy settles at one minus the ratio of the two rates, and persists only if colonization outruns extinction. Rescue effects and landscape connectivity refine this with measured quantities."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "The account reads the other side of this: a patch renewed by a neighbour shows no excess alone, and under the coupled gate the pair ends as one, nothing selected among groups on it. That is ending of a family in deficit. Levins's claim, persistence through asynchronous patch turnover, is not stated. The record's gloss, patches 'persist or go extinct together', fits this law better than it fits Levins, whose patches end apart. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "groups-whose-conditions-are-coupled",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-groups-whose-conditions-are-coupled",
+          "says": {
+            "en": "Theorem (World): under the coupled gate, n steps of family excess from a stock below n + m end every formation depending on a member at such a need; a patch renewed by a neighbour shows no excess read alone; both end read as one. The scope prediction tests the identification, not the dynamics."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The grain of reading decides whether a deficit shows, tested in one learners' commons: joint excess on one patch read alone failed in all 679 windows and held for the two read as one."
+      },
+      "source_adds": {
+        "en": "Stated with quantities: persistence through extinction and recolonization, occupancy at one minus the rates' ratio, the persistence threshold, rescue and connectivity measures. In the account a patch's ending and a family's are one kind of law, with no recolonization rate."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ecoevo-niche-construction",
+      "name": {
+        "en": "Niche construction"
+      },
+      "domain": "ecology-evolution",
+      "group": "ecology-evolution",
+      "source": {
+        "work": "Odling-Smee, Laland and Feldman, Niche Construction: The Neglected Process in Evolution (2003)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Organisms change their own selective environment, and later generations inherit the changed conditions: an ecological inheritance alongside genes. Models show lags and momentum in response. The proponents read this as a second causal route, which others call a mere consequence of standard theory."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The account has the formal half. Under the reading of drawing, a dependence forms anew at a descent exactly where the giver drew on what it did not depend on; activity lowers a pool that a descendant's support then reads; a capacity to shape the rule is selected by what comes back. All are premised, and the law says where a dependence comes from, not why. It takes no side on the extended synthesis. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "dependence-formed-from-drawing",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-dependence-formed-from-drawing",
+          "says": {
+            "en": "Theorem (World): under the reading of drawing at the descent, a hypothesis, a dependence forms anew exactly where the giver drew on what it did not depend on. The law says where a new dependence comes from, not why."
+          }
+        },
+        {
+          "record": "evolution-on-descent",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-evolution-on-descent",
+          "says": {
+            "en": "One unfolding (witness): transmission, variation, selection and the feedback of activity on selection, in a parent whose taking lowers the pool an inheriting descendant needs."
+          }
+        },
+        {
+          "record": "shaping-the-rule-selected-by-what-comes-back",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-the-rule-selected-by-what-comes-back",
+          "says": {
+            "en": "Theorem (counts): at a step the rule favours the shapers (weakly) exactly where c <= s, whatever p comes to every member alike; with nothing coming back and a cost, their share falls strictly."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "With balance and inheritance at the descents, transmission lets descent vary a need and drop a dependence, never add one nothing taking part held; and what every member receives alike does not change which way the rule favours."
+      },
+      "source_adds": {
+        "en": "Ecological inheritance as a population-genetic variable, its time-lag dynamics, empirical cases, and the claim that it is a causal route equal to selection. The open list names 'evolution of the conditions of evolution' as unfinished."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ecoevo-open-ended-evolution",
+      "name": {
+        "en": "Open-ended evolution"
+      },
+      "domain": "ecology-evolution",
+      "group": "ecology-evolution",
+      "source": {
+        "work": "Bedau et al., Open problems in artificial life (2000); Banzhaf et al., Defining and simulating open-ended novelty (2016); Taylor et al., Open-ended evolution: perspectives from the OEE workshop in York (2016); Adams et al., Formal definitions of unbounded evolution and innovation (2017)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Evolution on Earth keeps producing novelty with no evident bound, and artificial systems so far do not. Definitions vary: unbounded change against an isolated system's recurrence, or innovation that changes the model and so the possibilities of variation. No agreed test exists, as I recall."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "08 calls the laws restatements. A course keeping widening by name, with fixed finite requirements, needs a stock passing every bound, fed from beyond, and a finite balanced world has none. That the possible with what is held grows only across a change of what is held holds by definition. Widening here is a relation between courses; its being better is C, with scope from the continuation condition, neither asserted. 08 says the possible within a horizon restates the adjacent possible for a prestated space only. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "what-keeping-widening-needs",
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-keeping-widening-needs",
+          "says": {
+            "en": "Theorem (World; witnesses): the family's stock passes every bound, and a finite balanced world under the first law has no such course. No law here compares two courses; renewal does not give widening."
+          }
+        },
+        {
+          "record": "where-the-possible-grows",
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-where-the-possible-grows",
+          "says": {
+            "en": "Theorem (any process): what is possible under a process from a configuration it reaches is possible from the first, so where the possible keeps widening, some bounded stretch is not made of its moves."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/08-METHOD.md#known-results",
+          "says": {
+            "en": "08's list: restated; 'as open-ended evolution measures unbounded evolution against an isolated system's recurrence'; the innovation law 'holds there by definition'. The adjacent possible is restated for a prestated space only."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/04-LIFE.md#open",
+          "says": {
+            "en": "Open: novel organization and changed units; evolution of the conditions of evolution."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The constraint from the flow: a witness that renewal alone can go on while what it forms by name only returns."
+      },
+      "source_adds": {
+        "en": "Measures of novelty on data, what makes biological evolution open-ended, and novelty that cannot be prestated (Longo, Montevil and Kauffman 2012, named at 08). The account has no candidate for the mechanism, by its open list."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ecoevo-gaia-and-persistence-selection",
+      "name": {
+        "en": "Gaia and selection for persistence"
+      },
+      "domain": "ecology-evolution",
+      "group": "ecology-evolution",
+      "source": {
+        "work": "Lovelock and Margulis, Atmospheric homeostasis by and for the biosphere (1974); Watson and Lovelock, Biological homeostasis of the global environment: the parable of Daisyworld (1983); Doolittle, Natural selection through survival alone, and the possibility of Gaia (2014)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Life with its environment regulates planetary conditions in ways that keep them habitable. Daisyworld shows regulation with no foresight or selection for it; Doolittle argues persistence alone could select such systems. Critics deny any general tendency, and Ward's Medea hypothesis argues the reverse, as I recall."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {
+        "en": "The account does not name this, and its laws do not give the tendency. A form of regulation exists: where each condition's exchange opposes departure from its own level, a family's stock settles at the total, nothing reading the total. Against the strong form, selection is blind beyond its couplings, and unconditional convergence toward renewal of the whole is called not established. T1 is a filter on what persisted, not a claim that persisting regulates. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "regulation-from-one-side-and-locally",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-regulation-from-one-side-and-locally",
+          "says": {
+            "en": "Theorem (World): the family's stock is the total of those levels from the step every condition has settled, nothing reading the total; opposition alone permits overshoot."
+          }
+        },
+        {
+          "record": "selection-through-couplings",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+          "says": {
+            "en": "Theorem (World): with the rest fixed, selection is blind beyond the coupling closure. Near-definitional by its record's word."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/04-LIFE.md#organization",
+          "says": {
+            "en": "Reading [AI reading]: absolute continuation, rising relative frequency and renewal of wider conditions are different outcomes; unconditional convergence toward renewal of the whole is not established."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "A law in which a total is kept with no reader of the total, under premises on each condition, stating no direction. No dynamic is good here."
+      },
+      "source_adds": {
+        "en": "A claim of tendency at the scale of a planet, its feedback cases and their quantities. The account has none, and whether life tends to keep its conditions would be an empirical claim it does not make."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    }
+  ],
+  "changes": [
+    {
+      "id": "cx-ecoevo-alternative-stable-states",
+      "what": "changed",
+      "why": "Relation scope to agreement: the source is not universal and the account corrects nothing; 08 credits the form. Reading separates what is proved. Added recent-giving and share-lock targets and S-14's counts; the mapper's 'one positive-rest case' is replaced, since a rest below the draw is no community state."
+    },
+    {
+      "id": "cx-ecoevo-recovery-beyond-removing-the-pressure",
+      "what": "changed",
+      "why": "Added the law the mapper missed, Flow.never_returns_below, which is the proved core; dormancy's target rewritten to its record's wording, since 'exhaustion alone does not give it' was a gloss. The Allee-model question moved to the Allee entry."
+    },
+    {
+      "id": "cx-ecoevo-allee-effects",
+      "what": "changed",
+      "why": "Relation scope to agreement: the record credits the form and nothing universal is corrected. Took the open question on T1 against an Allee model from the recovery entry, where it fit less. Kept the mapper's correction of the plan's 'critical mass' seed, checked against 02 section 9."
+    },
+    {
+      "id": "cx-ecoevo-extinction-debt",
+      "what": "changed",
+      "why": "Sense corrected: the mapper had the best competitors 'rare', and as I recall the model's point is that they can be abundant. Reading's timing given in the record's figures. The tension with T1 split out as its own entry."
+    },
+    {
+      "id": "cx-ecoevo-extinction-debt-against-persistence",
+      "what": "added",
+      "why": "The mapper had only agreement on debt. The source's own point, that presence overstates viability, runs against T1's headline, and T1's 'many' is uncounted. A divergence the file lacked; the reading is mine and no live text states it."
+    },
+    {
+      "id": "cx-ecoevo-evolutionary-suicide",
+      "what": "changed",
+      "why": "Relation scope to agreement: the record itself credits the classical case. Added the group-ending law, the nearer form of overuse ending its own, and 08's credit to Rankin and colleagues, which the mapper missed. The plan's seed stays corrected."
+    },
+    {
+      "id": "cx-ecoevo-relative-and-absolute-fitness",
+      "what": "added",
+      "why": "The mapper's file has this law only as a remark under suicide. The record states it as the classical distinction and names rescue, which nothing in the file reached."
+    },
+    {
+      "id": "cx-ecoevo-evolutionary-traps",
+      "what": "changed",
+      "why": "Reading rebuilt on the on-course law, the form that fits a cue off its ancestral courses, and credits goal misgeneralization as the record does; the mapper led with weaker neighbours. Marked the blindness law near-definitional, as its record says."
+    },
+    {
+      "id": "cx-ecoevo-red-queen-relative-race",
+      "what": "changed",
+      "why": "Relation agreement to divergence: the source's mechanism, reciprocal change in selection, has no law here, and the account's zero-sum is a counting identity. Agreement was a word match. Added the record's own credit to Schaffer and Hamilton's spite."
+    },
+    {
+      "id": "cx-ecoevo-red-queen-constant-hazard",
+      "what": "changed",
+      "why": "Kept as not-carried. Dropped the line on what T1 'would rather say', which is silent on a rate anyway; named the one neighbouring law and why it is not the claim; widened the search to the whole live account."
+    },
+    {
+      "id": "cx-ecoevo-fisher-runaway-rule-read-from-share",
+      "what": "kept",
+      "why": "Checked against 02 section 9: the readers' law is the nearest form of a preference carried with the trait, the greenbeard credit is in the record, and the limit stands: one share collapses two traits."
+    },
+    {
+      "id": "cx-ecoevo-fisher-runaway-cost-is-read",
+      "what": "changed",
+      "why": "Dropped runaway-distance-uncoupled as a target: it shares only a word, and a word match is no target; the warning stays in the reading. Added the turned-by-loss clause to closed-capture's wording, the nearest thing to a stop."
+    },
+    {
+      "id": "cx-ecoevo-major-transitions",
+      "what": "changed",
+      "why": "Relation scope to agreement. The source states no universal for the account to correct; the laws have its form after a transition. Marked the 'not a ladder' reading as thin, and its target added. The germ-line credit split into its own entry."
+    },
+    {
+      "id": "cx-ecoevo-germ-line-and-cancer",
+      "what": "added",
+      "why": "The mapper folded this under major transitions, but it is a distinct credited claim, the part 04 does restate. Kept apart so that the transitions entry can say plainly what is missing."
+    },
+    {
+      "id": "cx-ecoevo-hamilton-rule",
+      "what": "kept",
+      "why": "Read against 04 section 5, the record and 08's row. The rule, its counts and its gaps are as stated; the source's sense names what the account's assortment is not."
+    },
+    {
+      "id": "cx-ecoevo-group-selection-by-extinction",
+      "what": "added",
+      "why": "Credited in three records and 04 section 5, and absent from the mapper's entries, which reached Levins only for patch persistence."
+    },
+    {
+      "id": "cx-ecoevo-coextinction-and-cascades",
+      "what": "added",
+      "why": "The mapper listed food-web structure as absent. Coupled-webs and coupled-regimes credit Pimm, Dunne and colleagues, Koh and colleagues and Dean, so the coverage line was wrong, and this is the nearest carried claim in community ecology."
+    },
+    {
+      "id": "cx-ecoevo-fitness-as-a-maximand",
+      "what": "changed",
+      "why": "The sentence on comparisons came from the repository's instructions, not the live account; replaced with what S-13 states of orders. Added S-07's open question, which shows the account treating this as a possible loss."
+    },
+    {
+      "id": "cx-ecoevo-price-equation",
+      "what": "kept",
+      "why": "Read against 04 section 3, the record and S-08. The record's 'without improving it' is verbatim, and the Malthusian credit is the audit's."
+    },
+    {
+      "id": "cx-ecoevo-fisher-fundamental-theorem",
+      "what": "changed",
+      "why": "Added the interaction witness, which shows the additive part as less than the whole in counts. Relation scope kept: the account states the theorem's exact case and marks the environment term as not stated."
+    },
+    {
+      "id": "cx-ecoevo-competitive-exclusion",
+      "what": "kept",
+      "why": "Read against 05 and the record: 'the form here' is the record's, and taking all is its premise. Scope holds: it says where one law of the kind stands."
+    },
+    {
+      "id": "cx-ecoevo-metapopulations",
+      "what": "changed",
+      "why": "Named the mismatch in the record's correspondence line: Levins's persistence depends on patches not ending together. That line's gloss needs a reader's check at home. Otherwise as mapped."
+    },
+    {
+      "id": "cx-ecoevo-niche-construction",
+      "what": "kept",
+      "why": "Read against 04's law of forming, 02's shaping law and both records' credits. The mechanism is named, the reading of drawing is a hypothesis, and the 'where, not why' limit stands."
+    },
+    {
+      "id": "cx-ecoevo-drift-and-neutral-theory",
+      "what": "added",
+      "why": "The mapper left this unmapped since 08 has a row. A row is a verdict, not a crosswalk, and this is the plainest case of counts against quantities, which this domain was asked to separate."
+    },
+    {
+      "id": "cx-ecoevo-open-ended-evolution",
+      "what": "added",
+      "why": "08 and the record credit this field, the review's README names it among its readers, and the mapper's file did not reach it."
+    },
+    {
+      "id": "cx-ecoevo-gaia-and-persistence-selection",
+      "what": "added",
+      "why": "The mapper listed Gaia only as absent. An absence with no reading loses the divergence: the source asserts a tendency, the account's laws have a regulation form and refuse the tendency. Proposed here, for the checker to test."
+    }
+  ]
+}

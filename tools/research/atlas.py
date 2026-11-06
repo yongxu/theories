@@ -61,8 +61,8 @@ ABOUT = ("The atlas of the account's dynamics, resolved: each entry with its rec
 KINDS = {'dynamics': 'dynamic', 'correspondences': 'correspondence', 'correspondence_groups': 'correspondence group'}
 FIELDS = {'dynamic': ('id', 'name', 'family', 'mechanism', 'records', 'declarations', 'base', 'hypotheses', 'forbids',
                       'exits', 'transitions', 'tests', 'open', 'valence', 'beyond', 'sources', 'standing_without_record'),
-          'correspondence': ('id', 'name', 'domain', 'group', 'source', 'sense', 'quote', 'carried', 'relation', 'reading',
-                             'targets', 'account_adds', 'source_adds', 'absence', 'labels', 'reads'),
+          'correspondence': ('id', 'name', 'domain', 'group', 'source', 'sense', 'quote', 'carried', 'relation', 'agreement_of',
+                             'reading', 'targets', 'account_adds', 'source_adds', 'absence', 'same_as', 'labels', 'reads'),
           'correspondence group': ('id', 'domain', 'title', 'kind', 'summary', 'read', 'skimmed', 'searched', 'not_mapped',
                                    'coverage', 'reads', 'source')}
 # The fields of a dynamic's lists of objects, and those an object may leave out.
@@ -72,10 +72,17 @@ PARTS = {'hypotheses': ('record', 'index'), 'exits': ('to', 'law', 'edge', 'stre
 OPTIONAL = {'open': ('zh',)}
 # The vocabulary's closed lists. A family is named by its letter (`id`), every other item by its `en`.
 LISTS = ('families', 'bases', 'transition_kinds', 'exit_strengths', 'standings_without_record', 'test_states', 'domains',
-         'carried', 'relations', 'group_kinds', 'source_bases')
+         'carried', 'relations', 'agreement_of', 'target_roles', 'group_kinds', 'source_bases')
 # What became of a claim, and what each outcome must show: a relation and targets, or the search behind an absence.
 STATED = ('carried', 'carried-in-part', 'changed', 'fresh-reading')
 ABSENT = ('history-only', 'not-carried')
+# The reads every correspondence has had: a mapper, a reviser, a checker told to refute, a repair after a critic, and a
+# comparison across items.
+READS = ['map', 'revise', 'check', 'repair', 'compare']
+# A target's role, and the one whose connection rests on it: only that one counts in a total of what connects to what.
+CARRIES = 'carries'
+# A checked law, the only thing `agreement_of: law` may rest on.
+LAW = ('recorded-checked', 'theorem')
 # The live account: what a target may cite. History, studies, sources and the earlier folders are not.
 LIVE = ('theories/becoming/ONE-PAGE', 'theories/becoming/THE-THEORY-OF-BECOMING', 'theories/becoming/chapters/',
         'theories/becoming/COLLECTIVE-DIRECTION', 'theories/becoming/FREE-ENERGY-PRINCIPLE', 'theories/becoming/ONE-ARGUMENT',
@@ -182,6 +189,10 @@ def validate(entries: dict, vocabulary: dict, records: list | None = None) -> li
                 errors.append(f'{kind}: {at}: id: listed {every.count(at)} times; ids are unique across the atlas')
             seen.add(at)
             errors += check[KINDS[kind]](e, f'{kind}: {at}', closed, by_id, repo, groups if kind != 'dynamics' else known)
+    for e in listed.get('correspondences') or []:
+        same = e.get('same_as') if isinstance(e, dict) else None
+        if same is not None and not (_strings(same) and set(same) <= known):
+            errors.append(f'correspondences: {e.get("id")}: same_as: not a list of other entries of the atlas')
     return errors
 
 
@@ -217,8 +228,8 @@ def _correspondence(e, at: str, closed: dict, by_id: dict, repo: Repository, gro
         fail('domain', f'its group {e["group"]} is in {groups[e["group"]].get("domain")}')
     if not (isinstance(e['labels'], list) and 'AI reading' in e['labels']):
         fail('labels', 'every correspondence is labelled AI reading')
-    if e['reads'] != ['map', 'revise', 'check']:
-        fail('reads', "a correspondence has had its three reads: ['map', 'revise', 'check']")
+    if e['reads'] != READS:
+        fail('reads', f'a correspondence has had its reads: {READS}')
     source = e['source']
     if not (isinstance(source, dict) and set(source) == {'work', 'locator', 'basis'}
             and all(isinstance(source[k], str) and source[k].strip() for k in source)):
@@ -243,11 +254,24 @@ def _correspondence(e, at: str, closed: dict, by_id: dict, repo: Repository, gro
     if targets is None:
         fail('targets', 'not a list')
         targets = []
+    carrying = [t for t in targets if isinstance(t, dict) and t.get('role') == CARRIES]
     if e['carried'] in STATED:
         if e['relation'] is None:
             fail('relation', f'{e["carried"]} needs a relation')
         if not targets:
             fail('targets', f'{e["carried"]} needs what it is read against')
+        elif not carrying:
+            fail('targets', f'{e["carried"]} needs a target whose role is {CARRIES}')
+    if e['carried'] == 'history-only' and carrying:
+        fail('targets', f'nothing is carried in a history-only entry; its targets are neighbours, not {CARRIES}')
+    if e['relation'] == 'agreement':
+        if e['agreement_of'] not in closed['agreement_of']:
+            fail('agreement_of', f'{e["agreement_of"]!r} is not in the vocabulary\'s agreement_of; every agreement says what it is agreement with')
+        elif e['agreement_of'] == 'law' and not any((by_id.get(t.get('record')) or {}).get('status') == LAW[0] and by_id[t['record']].get('kind') == LAW[1]
+                                                    for t in carrying):
+            fail('agreement_of', 'agreement of a law needs a carrying target that is a checked theorem')
+    elif e['agreement_of'] is not None:
+        fail('agreement_of', 'only for agreement')
     if e['carried'] == 'carried-in-part' and not e['source_adds']:
         fail('source_adds', 'carried-in-part says what is not stated')
     if e['carried'] == 'not-carried' and (e['relation'] is not None or targets):
@@ -263,6 +287,8 @@ def _correspondence(e, at: str, closed: dict, by_id: dict, repo: Repository, gro
         if not (isinstance(t, dict) and (t.get('record') or t.get('anchor')) and _text(t.get('says'))):
             fail(where, 'not {record or anchor, says}')
             continue
+        if t.get('role') not in closed['target_roles']:
+            fail(where + '.role', f'{t.get("role")!r} is not in the vocabulary\'s target_roles')
         if t.get('record'):
             if t['record'] not in by_id:
                 fail(where + '.record', f'no record {t["record"]} in {RECORDS}')
@@ -308,8 +334,8 @@ def _correspondence_group(g, at: str, closed: dict, by_id: dict, repo: Repositor
             fail(field, 'not a list of strings')
     if not isinstance(g['not_mapped'], list):
         fail('not_mapped', 'not a list')
-    if g['reads'] != ['map', 'revise', 'check']:
-        fail('reads', "a group has had its three reads: ['map', 'revise', 'check']")
+    if g['reads'] != READS:
+        fail('reads', f'a group has had its reads: {READS}')
     why = repo.missing(g['source'])
     if why:
         fail('source', why)
@@ -483,7 +509,8 @@ def build(entries: dict, vocabulary: dict, records: list) -> dict:
         held = [e for e in correspondences if e['group'] == g['id']]
         groups.append({**g, 'entries': len(held),
                        'by_carried': {c['en']: sum(e['carried'] == c['en'] for e in held) for c in vocabulary['carried']},
-                       'by_relation': {r['en']: sum(e['relation'] == r['en'] for e in held) for r in vocabulary['relations']}})
+                       'by_relation': {r['en']: sum(e['relation'] == r['en'] for e in held) for r in vocabulary['relations']},
+                       'by_agreement_of': {a['en']: sum(e['agreement_of'] == a['en'] for e in held) for a in vocabulary['agreement_of']}})
     return {'schema_version': 1, 'about': ABOUT, 'vocabulary': vocabulary, 'counts': counts, 'dynamics': dynamics,
             'correspondence_groups': groups, 'correspondences': correspondences}
 
@@ -593,12 +620,18 @@ def _adds(label: str, value) -> list[str]:
     return [f'  - {label}: {_line(value)}'] if value else []
 
 
+ROLE_WORD = {'carries': 'Read against', 'neighbour': 'Beside it, not carrying it:', 'limit': 'Where the account stops:'}
+AGREEMENT_WORD = {'law': 'a law', 'thesis-or-method': 'a thesis or method', 'reading': 'a reading'}
+
+
 def _correspondence_lines(e: dict) -> list[str]:
     """One correspondence: the source's own sense first, then what became of it."""
     source = e['source']
     work = f'[{source["work"]}]({_href(source["work"])})' if source['basis'] == 'read-in-repo' else source['work']
     where = f'{work}, {source["locator"]}' + ('' if source['basis'] == 'read-in-repo' else ' (from the AI\'s knowledge, not checked against a text)')
     relation = f', {e["relation"]}' if e['relation'] else ''
+    if e['agreement_of']:
+        relation += f' of {AGREEMENT_WORD[e["agreement_of"]]}'
     lines = [f'<a id="{e["id"]}"></a>', f'- **{e["name"]["en"]}** ({e["carried"]}{relation}). {where}.',
              f'  - Its own sense: {_line(e["sense"])}' + (f' 「{e["quote"]}」' if e['quote'] else ''),
              f'  - Reading [AI reading]: {_line(e["reading"])}']
@@ -608,7 +641,8 @@ def _correspondence_lines(e: dict) -> list[str]:
             cite.append(_source(t['anchor']) if '#' in t['anchor'] else f'[{posixpath.basename(t["anchor"])}]({_href(t["anchor"])})')
         if t.get('record'):
             cite.append(f'{_record(t["record"])} {t["standing"]["status"]} ({t["standing"]["kind"]})')
-        lines.append(f'  - Read against {"; ".join(cite)}: {_line(t["says"])}')
+        part = f' ({t["part"]})' if t.get('part') else ''
+        lines.append(f'  - {ROLE_WORD[t["role"]]} {"; ".join(cite)}{part}: {_line(t["says"])}')
     lines += _adds('The account adds', e['account_adds']) + _adds('The source adds', e['source_adds'])
     if e['absence']:
         lines.append('  - Searched: ' + '; '.join(map(str, e['absence'].get('searched', [])))
@@ -620,22 +654,26 @@ def crosswalk_page(atlas: dict) -> str:
     vocabulary, groups, entries = atlas['vocabulary'], atlas['correspondence_groups'], atlas['correspondences']
     carried = [c['en'] for c in vocabulary['carried']]
     relations = [r['en'] for r in vocabulary['relations']]
+    agreements = [a['en'] for a in vocabulary['agreement_of']]
     out = [GENERATED, '', '# The crosswalk', '',
            'Each earlier theory folder and each domain of thought: what it claimed in its own terms, and what became of that '
            'in the live account. The evidence layer, not for reading through. It creates no result, and every entry is an AI '
-           'reading that had three independent reads and no person\'s. A shared word is not a correspondence, structural '
-           'agreement is not agreement in meaning, and no tradition is spoken for. Not carried is an outcome, not a defect. '
-           'Where a source is not stored here, what is said of it comes from the AI\'s knowledge and has not been checked '
-           'against a text.', '',
-           '**What became of it:** ' + '; '.join(f'*{c["en"]}*' for c in vocabulary['carried']) + '. **Relations**, '
-           'from [06](../../chapters/06-CLASSICAL-TEXTS.md#three-relations): ' + '; '.join(f'*{r["en"]}*' for r in vocabulary['relations']) + '.', '',
+           'reading with no person\'s behind it. A shared word is not a correspondence, structural agreement is not agreement '
+           'in meaning, and no tradition is spoken for. Not carried is an outcome, not a defect. Where a source is not stored '
+           'here, what is said of it comes from the AI\'s knowledge and has not been checked against a text.', '',
+           '**What became of it:** ' + '; '.join(f'*{c["en"]}*' for c in vocabulary['carried']) + '. *Fresh-reading* means the account '
+           'does not state the connection and a reader proposes it here. **Relations**, from '
+           '[06](../../chapters/06-CLASSICAL-TEXTS.md#three-relations): ' + '; '.join(f'*{r["en"]}*' for r in vocabulary['relations'])
+           + '. Agreement says what it is agreement with: a checked **law**, a **thesis or method**, or a **reading**, where the join '
+           'is a reader\'s or descends from the source. Only what a target carries counts as a connection.', '',
            f'{len(entries)} entries in {len(groups)} groups:', '',
-           '| Group | Entries | ' + ' | '.join(carried) + ' | ' + ' | '.join(relations) + ' |',
-           '|---|---:|' + '---:|' * (len(carried) + len(relations))]
+           '| Group | Entries | ' + ' | '.join(carried) + ' | ' + ' | '.join(relations) + ' | ' + ' | '.join(f'agreement of {a}' for a in agreements) + ' |',
+           '|---|---:|' + '---:|' * (len(carried) + len(relations) + len(agreements))]
     for g in groups:
         out.append(f'| [{_cell(g["title"]["en"])}](#{g["id"]}) | {g["entries"]} | '
                    + ' | '.join(str(g['by_carried'][c]) for c in carried) + ' | '
-                   + ' | '.join(str(g['by_relation'][r]) for r in relations) + ' |')
+                   + ' | '.join(str(g['by_relation'][r]) for r in relations) + ' | '
+                   + ' | '.join(str(g['by_agreement_of'][a]) for a in agreements) + ' |')
     for g in groups:
         out += ['', f'<a id="{g["id"]}"></a>', f'## {g["title"]["en"]}', '', _line(g['summary']), '',
                 f'*Kind: {g["kind"]}. Read in full: {"; ".join(g["read"]) or "none listed"}. Skimmed: {"; ".join(g["skimmed"]) or "none listed"}. '

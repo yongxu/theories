@@ -1,0 +1,2139 @@
+{
+  "group": {
+    "id": "drives-narrative-attractors-and-mind",
+    "domain": "earlier-folders",
+    "title": {
+      "en": "Drives, narrative attractors and the construction of mind"
+    },
+    "kind": "theory",
+    "summary": {
+      "en": "A mind is what an environment makes of ancient drive systems: narrative is the drive's interface, stories behave as attractors, and optimizing for attention selects the fastest. The live account keeps the structure of capture, locks, drains and self-confirmation on small models, but holds no drives, affect, narrative or attention: 03's Open names motivation, affect and consciousness as unreached. Divergence is real: the account will not call a closing evil, separates formed from warranted, and takes 'truth only intersubjective' and 'mind as root' otherwise."
+    },
+    "read": [
+      "theories/drives-narrative-attractors-and-mind/README.md, all 566 lines",
+      "theories/becoming/chapters/03-KNOWING.md §8 opening table and seeking laws, §11, §12, What this chapter does not show, Open",
+      "theories/becoming/chapters/04-LIFE.md §8, §9, What this chapter does not show, Open",
+      "theories/becoming/chapters/02-MAP.md: attraction, basins, represented boundary, how often couplings act, runaway, regulation, how fast a rule may change, target capture, capture through the rule, closed capture, readers drawn, counted choices (heads), T7, the D26, D45 and D67 readings",
+      "theories/becoming/chapters/07-SIGNIFICANCE.md §1 opening, what the dynamics leave open, what training installs (table), when no route stands above a revision and its reading, what self-concern alone ranks, presupposition scopes, T8's head",
+      "theories/becoming/chapters/05-COLLECTIVES.md: T3 head, what an optimum does, relative position, what position reads, race for position, code formed between formations (table), reading another's couplings",
+      "theories/becoming/chapters/06-CLASSICAL-TEXTS.md: the pre-Qin reading, closing and opening (table and mechanism), the count of what the grammar cannot express",
+      "theories/becoming/chapters/08-METHOD.md: one relational unfolding (head), self-reference does not certify itself, the work by its own laws (first two items)",
+      "theories/becoming/history/VALUATION-DEVELOPMENT.md lines 1-32"
+    ],
+    "skimmed": [
+      "theories/becoming/FREE-ENERGY-PRINCIPLE.md (grep hits on surprisal, affect, set point)",
+      "theories/becoming/GLOSSARY entries for 无明 and ranking",
+      "theories/becoming/history/lineage/shengsheng-buxi/synthesis-b-ssbx-canon-and-history.md claims 52 and 57 only",
+      "theories/becoming/results/data/theory-map.json entry for this folder (a dated lead, not used as evidence)"
+    ],
+    "searched": [
+      "record-index.tsv, every title read for mechanism",
+      "live account for: drive, narrative, emotion, affect, mood, psycholog*, ego, attention, neuro*, brain, meditat*, propaganda, rhetoric, survival, rumin*, teaching, curriculum, repertoire, superposition, keystone, nucleat*, parasit*, competitive exclusion, 逍遥, post-hoc, interpreter, hard problem, hijack, Moloch, identity fusion, exit cost, 三不朽, cyberpunk, theory of mind, wanting, salience, Berridge, Uexküll, Bateson, hierarch*, status, cultivat*, channel, greed, dominance, territor*, short-form, engagement, platform, blackmail, faster, tempo, pace, free will, first-person"
+    ],
+    "not_mapped": [
+      {
+        "en": "The ember runtime: perceived metabolism, ruminating detector, self-model as dream output (claims 65-66)",
+        "why": "A design and product held in context-as-existence-runtimes; the honesty line is a design rule for it. No claim about the world to place."
+      },
+      {
+        "en": "The AuDHD self-model (claim 52; own words 57-58)",
+        "why": "Personal provenance and one person's working practice, not a claim the account could carry."
+      },
+      {
+        "en": "Memeplex and lyric experiment (claim 32) and the 'Imagine' exchange",
+        "why": "A design direction for writing songs; no mechanism stated beyond 'state a reality, not a hope'."
+      },
+      {
+        "en": "The two missing artifacts, Architecture of Wanting and Territory Without Border, and the five drive profiles",
+        "why": "Named as lost in the source; nothing readable to map. The five profiles are held only in a chat the README summarizes."
+      },
+      {
+        "en": "The 2021 Dali field notes (中医 narrative to body; 现代人的分裂)",
+        "why": "A companion's notes, with turns not separated; provenance in the genealogy, not an authored claim."
+      },
+      {
+        "en": "The Genealogy, Where this material lives, Relations and Terms sections",
+        "why": "Provenance and pointers. Terms are used inside the entries."
+      },
+      {
+        "en": "Claims 78, 82 (the bioengineered companion and living sofa as proposals)",
+        "why": "Design proposals in a spoken exchange; the disagreement they raise is mapped in cx-drives-happy-servant."
+      }
+    ],
+    "coverage": null
+  },
+  "entries": [
+    {
+      "id": "cx-drives-environment-makes-mind",
+      "name": {
+        "en": "Environment makes mind; teaching passes it on"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claims A.1, A.8; M.92",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Everything a mind holds is constructed, biologically, socially or cognitively; a person is a product of environment, and what makes minds can be given to others, which is teaching. Stated universally, 'you are just mechanical'."
+      },
+      "quote": "We are all beings within our own environment, and that creates our behaviors, our personalities, the way we think and the way we judge.",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "The account has a witness, not the thesis: one finite model where history of development, carrier held the same, gives a different response. Its reading on adult psychology adds that origin must be told apart among selection, drift, constraint, byproduct and cultural transmission, so 'environment' alone is not licensed. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "same-carrier-need-not-fix-the-response",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-same-carrier-need-not-fix-the-response",
+          "says": {
+            "en": "Theorem on the periphery, a witness: in a finite model two histories with the same carrier, native state and support, differing only in the order of developmental sampling and an earlier repair, form different connections; the same carrier and operations do not fix the response function."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-equal-totals-can-hide-what-a-capacity-carries",
+          "says": {
+            "en": "The Reading [AI reading, D65] after this result: an inherited organization does not carry an adult psychology apart from development; selection, drift, constraint, byproduct and cultural transmission must be told apart where live. An argument, no theorem."
+          }
+        },
+        {
+          "record": "joint-practice-forms-continuation",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-practice-forms-continuation",
+          "says": {
+            "en": "Theorem on the periphery, all supplied: a practice round of attempt, response, revision and tested retry installs the context's method in the worker; one connection, not the arrival of people."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "That the same mature structure does not identify its formative history, and that an evolutionary explanation, normative warrant, recognition and preservation are different achievements."
+      },
+      "source_adds": {
+        "en": "The universal scope (everything a mind holds), the construct-to-model chain from neurons to judgment, the theses on media and teaching as the actual transmission of whole minds, and the bidirectional loop 事为心造, 心为事造. None is stated."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-drive-systems",
+      "name": {
+        "en": "Ancient drive systems supply motion without direction"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "The argument, first paragraph; claims B.11, K.72-73, K.75",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "SEEKING, RAGE, FEAR, PANIC/GRIEF, CARE, LUST, PLAY, plus STATUS and DISGUST are subcortical, pre-linguistic and mammal-shared; they give energy and urgency and no direction. Each has its own signature, and they yield universal social invariances. Anger and greed narrow what a mind attends to."
+      },
+      "quote": "they supply energy, not direction, and fire before conscious awareness",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "The account holds no motivational substrate. A target is 'any condition on the configuration; how it forms is not modelled', and its Open lists motivation and affect as unreached. Its word 'seeking' means a run toward a target, not the mesolimbic circuit: same word, other reference. 04 cites care and feeding studies only as constraints on separate links. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "The drive taxonomy, each drive's behavioural signature, and the neuroscience. Note that the source attributes most of this to Claude's exposition [C]."
+      },
+      "absence": {
+        "searched": [
+          "drive, emotion, affect, dopamine, Panksepp, neuro*, brain, greed, dominance, in chapters, fronts, GLOSSARY",
+          "record-index.tsv titles"
+        ],
+        "read": [
+          "03-KNOWING.md Open and What this chapter does not show",
+          "03-KNOWING.md seeking-boundary",
+          "04-LIFE.md §8 Reading on development, §9 assessments"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-status-never-rests",
+      "name": {
+        "en": "Status and greed have targets that cannot complete"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claims B.12-13, K.73",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "STATUS is relative, so its cycle never completes, which makes it the best fuel of a totalizing attractor; SEEKING peaks in approach, not consumption; greed is amplified by purely psychological mechanisms."
+      },
+      "quote": "inherently relative and therefore never completes its cycle",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The form of the claim, read off the target and not the circuit: 'above all others' cannot rest for two, 'more than now' needs change at every step, and relative position is zero-sum. The laws do not depend on the source, and say nothing of brains. Reading drive as target is the join here. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "seeking-boundary",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-seeking-boundary",
+          "says": {
+            "en": "Theorem: under a determined law, 'more than now' is met only by change, and met at every step needs an open world; 'above all others' is met by at most one seeker, so no unchanged state meets it for two. How a target forms is not modelled."
+          }
+        },
+        {
+          "record": "relative-position-is-zero-sum",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-relative-position-is-zero-sum",
+          "says": {
+            "en": "Theorem: across every change of amounts the positions' rises total their falls; no change raises every part's position, and a part's rise needs another's fall."
+          }
+        },
+        {
+          "record": "a-race-for-position-draws-everything",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-race-for-position-draws-everything",
+          "says": {
+            "en": "Theorem: among two drawers or more ranking by position, every perfect profile draws everything before the horizon. It does not show actual races are so played, or that drawing everything is wrong."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Knowing enough (知足) as a target met at a state the law leaves unchanged [AI reading], the exact boundary; and that runs which keep changing are not locked seeking."
+      },
+      "source_adds": {
+        "en": "That status is a distinct circuit, the dopamine asymmetry, that this makes it fuel for totalization, and greed's amplification by psychological mechanisms."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-surface-unreliable",
+      "name": {
+        "en": "Identical surface, different mechanism"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claim B.15",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Status-seeking and individualistic greed can look identical while running on different circuits, so classifying people by surface behaviour is unreliable."
+      },
+      "quote": "can present identically on the surface while running on different circuits",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The same obstruction in another pair: one observed course cannot tell a formation held by its unresolved model from one held by its ranking, and choices fix only their shown reach. The account's pair is model and order, the source's two circuits; the shape is acts underdetermining what produces them. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "acts-alike-from-a-model-or-from-an-order",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-acts-alike-from-a-model-or-from-an-order",
+          "says": {
+            "en": "Theorem with a witness: two specified formations, one keeping both candidates, one the true candidate with a reversed ranking, have the same acts and values sensed at every step in the first world. Reading: a reason for assistance to read more than acts."
+          }
+        },
+        {
+          "record": "what-choices-show-of-an-order",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-what-choices-show-of-an-order",
+          "says": {
+            "en": "Near-definitional theorem: the positive comparisons every strict order according with the choices shares are exactly the shown reach. It does not show which order an actual chooser carries."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The exact criterion of what choices fix, and that informing separates the two cases."
+      },
+      "source_adds": {
+        "en": "The specific claim about status and greed circuits, and any psychological test for telling them apart."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-superposition-moods",
+      "name": {
+        "en": "Drives in superposition; moods as competing attractors"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claims B.14, C.22-23, C.27",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Drives run together rather than as personality types, one dominating being the exception and navigating them what wisdom is. Moods and emotions are competing attractors with stable points and dynamics that actualize when conditions are met, not points on a scale."
+      },
+      "quote": "one drive dominating is the exception",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "The account has a formal basin but reads no mood or drive on it; its own main attraction law is marked 'not a classical attractor'. Wisdom in the account is a target about common relations of inquiry, not navigating drives. The source's open question 6 grants that sense (a) of 'attractor' has never had its state space named. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "The claim as a whole, and the conjecture that undiscovered attractors exist in a trained system."
+      },
+      "absence": {
+        "searched": [
+          "superposition, mood, emotion, affect, wisdom",
+          "record-index.tsv: 'attraction', 'basins', 'wisdom-root'"
+        ],
+        "read": [
+          "02-MAP.md attraction-is-not-returning, basins-of-a-determined-law",
+          "03-KNOWING.md Open"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-two-mechanisms",
+      "name": {
+        "en": "Affect regulated by identification and prediction error"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claims C.24-26; Open questions 1, 18",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "The folder's most contestable claim: affects are regulated by exactly these two mechanisms over a modelling mind, continuous down to primary affect, a restatement of karma. Its own objections stand: primary affects precede models, interoception, wanting versus liking, and 'identification' lumps three things. What survives: affect is pattern-conditioned activation."
+      },
+      "quote": "regulated by exactly two mechanisms — identification and prediction error",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "Word traps: the account's 'identification' is telling a law or an order apart from data, and its free-energy chapter gives surprisal and conditioning as laws of inference, not of feeling. The account's FEP reading adds no law to conditioning; it never says affect tracks that bound. Nothing there tests the thesis either way. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "The thesis, its weakened form, the karma link, and its testable corollary on two kinds of practice."
+      },
+      "absence": {
+        "searched": [
+          "prediction error, identification, surprisal with affect, valence, interocept, wanting, Berridge, karma",
+          "FREE-ENERGY-PRINCIPLE.md by grep"
+        ],
+        "read": [
+          "03-KNOWING.md Open: motivation and affect (salience, wanting what is misrepresented, recognizing a reason without acting)",
+          "record-index.tsv titles identification-where-bounded, identification-where-runs-part (titles only)"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-post-hoc-narrative",
+      "name": {
+        "en": "Narrative arrives second and feels like the cause"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claims A.6-7, D.28; The argument, 'Narrative is the interface'",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "The drive fires fast; a cortical story follows within about half a second to two seconds and is experienced as cause. Narrative is the interface through which drive becomes workable. The self is the narrative the mind generates about itself, and what most people take as phenomenon is their narrative."
+      },
+      "quote": "the narrative feels like the cause and is the effect",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "No account of a report lagging and misattributing what it reports. The nearest law is about something else: acts and the state answering do not determine how the state came to be. The account's self is a center and its closure along a relation, not a narrative, and 03 §12 calls a formation one law, not a subject facing a world. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "The temporal claim, the interface claim, and the self as narrative. The word 'narrative' does not occur in chapters 01-05, 07, 08, the theory page or the one page, by grep."
+      },
+      "absence": {
+        "searched": [
+          "narrative, post-hoc, interpreter, rationaliz*, left-hemisphere, self-model, confabul*"
+        ],
+        "read": [
+          "03-KNOWING.md §12 opening",
+          "07-SIGNIFICANCE.md §1 opening and presupposition-scopes"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-input-revises-valuation",
+      "name": {
+        "en": "A story as an input channel that bypasses evaluation"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claim D.29; The argument, 'Narrative is the interface'",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Narrative is a legitimate input channel to the drive system; drive-activating stories skip the evaluation explicit arguments get. A storyteller has direct access to another's drive architecture, which is why propaganda works on intelligent people."
+      },
+      "quote": "drive-activating narratives bypass the prefrontal evaluation that explicit arguments receive",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "A word search misses this. The account separates a demonstration, which filters what a reader tells apart, from a presented input that revises its valuation, each moving the answer the other leaves, and the record cannot always show which happened. That is the channel's form in one decision. Reading it as story or propaganda is mine; nothing is said of minds or of bypass. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "a-reading-informed-and-revalued",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-a-reading-informed-and-revalued",
+          "says": {
+            "en": "Theorem, compositions in counts, none claimed new, one decision: a demonstration filters the listing, an input presented revises the valuation; in witnesses each turns an answer the other leaves; answers and final state do not determine whether the valuation changed. Reading: no criterion of legitimate, desired or autonomous change is supplied."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The exact criterion of when revaluing lowers the worth of holding for an answer, and that with a shared model there is no reason by the current valuation to revise it; related to Bayesian persuasion and induced preference shifts."
+      },
+      "source_adds": {
+        "en": "Neural bypass of evaluation, the claim that stories in particular reach drives, and the political use."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-defended-story",
+      "name": {
+        "en": "The mind defends the story rather than updating it"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claim D.30; own words 12",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "The self-narrative biases which drives are expressed; because coherence is itself a need, a mind under contradiction defends its story. The self without a better model keeps the one that feels right. So behaviour change is more often story change than incentive change."
+      },
+      "quote": "the mind under contradiction defends the story rather than updating it",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "Two pieces with no drive of coherence behind them. A model is revised only by what its own course exposes, so it can rest unrefuted. And locked seeking forms when a habit or identity becomes the fixed measure of later cases, a label usable only from what is actually excluded before assessment. So firm belief alone is no sign. The source's motive is absent. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "what-a-course-chosen-through-its-model-does-not-test",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test",
+          "says": {
+            "en": "Theorem with witnesses: where the world answers the act chosen and every listed candidate predicts it, the formation rests at once on a model its course never refutes. Reading: related to self-confirming equilibrium; what tells such worlds apart comes from beyond the formation's own selection."
+          }
+        },
+        {
+          "record": "seeking-boundary",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-seeking-boundary",
+          "says": {
+            "en": "The Reading on obscuration and reopening [AI reading, D65] following the seeking laws: locked seeking forms when a once-useful habit, identity or arrangement becomes the fixed measure of later cases; diagnosed only from what is actually excluded before assessment, not from a firm judgment."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "That a model need make no error of motive to go unrefuted: choosing through it suffices. And reopening is a blocked relation regaining effect, not an apology or a renamed goal."
+      },
+      "source_adds": {
+        "en": "Narrative coherence as a need, fragmentation as aversive, and the empirical claim about story change against incentive change."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-attractor-geometry",
+      "name": {
+        "en": "Narrative attractors have basins of depth and width"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claim E.33; Open questions 6, 7",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "A story that captures trajectories has a basin depth, width, boundary topology and dimensionality. The source itself warns 'attractor' runs in four senses, none measured, and that a write-up must say what the state space is."
+      },
+      "quote": "Narrative attractors have geometry",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "The account gives a strict form and little else: for a determined law, basins are classes of courses that meet, and being drawn in is exactly not returning. It answers the source's open question 6 for one sense, on any determined law, and reads no story on it. Depth and width are not defined; basin-as-narrative in a population is not a model here. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "attraction-is-not-returning",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-attraction-is-not-returning",
+          "says": {
+            "en": "Theorem for every determined law: a configuration is drawn into some absorbing region exactly where it does not return. The main law is near-definitional, not a classical attractor."
+          }
+        },
+        {
+          "record": "basins-of-a-determined-law",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-basins-of-a-determined-law",
+          "says": {
+            "en": "Theorem: courses meeting is an equivalence whose classes are basins; within m listed configurations every course enters what returns before step m, and each basin holds one cycle."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "That being drawn in and failing to return are one condition; a returning region is itself absorbing, so closing in form is no loss."
+      },
+      "source_adds": {
+        "en": "Basin depth, width, fractal boundaries and dimension, and the reading of stories as such attractors. Strange attractors are outside a finite determined law's cycle."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-attractor-ecology",
+      "name": {
+        "en": "An ecology of narratives"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claims E.34-35, E.37",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Narratives exclude each other within a niche, parasitize deeper hosts, and include keystones whose loss reorganizes others. New ones nucleate at the seam of two incompatible ones; old ones hold while their boundary erodes, then release many trajectories at once. Biology, medium and social structure shape the landscape."
+      },
+      "quote": "keystone attractors whose loss reorganizes the whole downstream ecosystem",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "Mostly Claude's exposition in the source [C], with historical illustrations (Christianity, Marxism). The account has cascades of ends on webs, and 'no warning' before a break, for dependences and not for stories; I do not read those as this claim. It has no theory of what makes a new form arise at a seam. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "The ecology entire, the nucleation thesis, and the medium as shaping nucleation time and lifespan."
+      },
+      "absence": {
+        "searched": [
+          "keystone, nucleat*, parasit*, competitive exclusion, memeplex, medium, orality"
+        ],
+        "read": [
+          "record-index.tsv titles a-cascade-at-the-histories-reached, coupled-webs (titles only)",
+          "05-COLLECTIVES.md a-cascade head"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-hijack-and-escape",
+      "name": {
+        "en": "Counter-narrative fails; a lateral shift escapes"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claim E.36",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Efficient manipulation reroutes a running trajectory into another basin rather than build one. Pure counter-narrative almost never frees anyone; what works is shifting attention to a dimension of experience half-sensed and not yet narrativized, as good psychotherapy does."
+      },
+      "quote": "pure counter-narrative fails because a trajectory cannot be pushed into a vacuum",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "Structural neighbour, under named premises: where the next configuration depends on the rule, perturbing the state is re-absorbed; what leaves is a change of law, of how the rule reads, or of selection, a reading of what the share does not carry being one sufficient way. But a reversal held past a threshold is not absorbed, so 'almost never' is scoped. Reading story as state and new dimension as new reading is mine. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "target-capture",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-target-capture",
+          "says": {
+            "en": "Theorem: where the next configuration depends on the rule, not the state, a perturbed state is re-absorbed in one step."
+          }
+        },
+        {
+          "record": "capture-through-the-rule",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule",
+          "says": {
+            "en": "Theorems: a perturbation keeping the rule's direction is absorbed at the next reading step; only a change of the law, of how the rule reads or of the selection leaves; one reversing the direction, held past the threshold, is not absorbed. That actual rules read the share is the premise."
+          }
+        },
+        {
+          "record": "closed-capture",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+          "says": {
+            "en": "Theorem: a reading favouring at no loss above a bound unlocks the course after every reading step past it: a sufficient way out, not shown the only one (T7)."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "When a change is absorbed and when not, by exact criteria; and a frozen test (LA2) in one trained system where one note of a loss turned the judge and the pool-of-readers conjecture failed for that judge."
+      },
+      "source_adds": {
+        "en": "Hijacking as a distinct efficient move, attention to a half-sensed dimension, and the therapeutic claim. None is stated."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-survival-meta-attractor",
+      "name": {
+        "en": "Believed survival pressure deepens every basin"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claims E.39, K.76-77; 'Ren's own addition'",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Ren's own contribution: the attractor of attractors is believing one is under survival pressure. It deepens every other basin, opens populations to rhetoric of bigness and to attachment to power, and makes totalization conditional on a belief rather than a fact, hence actionable, and a reason the provision floor comes first."
+      },
+      "quote": "A culture that believes itself to be in a survival state will totalize almost any attractor it holds.",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "A central claim of the folder, and I find no home. Nearby and not it: a weighting falling faster than renewal ends the base, reading a short horizon, with no belief; basic-condition priority, conditional and defended by non-substitution, not by loosening rhetoric's grip; 05 says its constraints are not survival axioms. No law makes capture depend on a perceived state. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "The thesis and its political consequence. It could fail: a test would compare totalization against perceived and actual scarcity, not designed here or in the source."
+      },
+      "absence": {
+        "searched": [
+          "survival, scarc*, perception of, belief, believ*, rhetoric, bread, provision floor"
+        ],
+        "read": [
+          "05-COLLECTIVES.md line on survival axioms and the row a-weighting-faster-than-renewal-ends-the-base",
+          "01-ROOT.md witness 'a belief whose rate of spread grows with its number'"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-belief-makes-dynamic",
+      "name": {
+        "en": "Belief in the dynamic produces the dynamic"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claim H.55; own words 51",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Certainty that everyone will defect is itself cult dynamics, 'a form of extremism', and produces the reality it predicts."
+      },
+      "quote": "Belief in the dynamic is what makes the dynamic",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The form is a public prediction read by what it predicts: under a threshold response two predictions are right, and where publication starts decides which is reached. So the source's point, that a pessimistic fixed point is one of several, has a small model. The law is near-definitional and known (Merton, Tarski). Nothing there calls the belief extremism, or says defection is such a response. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "a-prediction-read-by-what-it-predicts",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-a-prediction-read-by-what-it-predicts",
+          "says": {
+            "en": "Theorem, near-definitional, with a general law: a published prediction read by the response is right exactly where the response to it is itself; in a witness a threshold response has two right predictions, the one reached decided by where publication starts. Reading: not a model of coordination."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "That a response moving every value has no right prediction, so not every belief can make itself true; and the least right prediction reached from below."
+      },
+      "source_adds": {
+        "en": "That this describes competition's actual belief, and the charge of cult dynamics, which is a verdict the account does not make."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-dimensional-collapse",
+      "name": {
+        "en": "Optimizing engagement collapses what can exist"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claims E.38, E.40, E.42",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Engagement optimization projects a high-dimensional behaviour space onto what it reads; structures that need long unfolding do not weaken, they cease to exist. So unfragmented time and real relation are infrastructure, and today's dominant attractors are primitive products of algorithmic profit."
+      },
+      "quote": "attractors requiring long temporal unfolding do not weaken, they cease to exist as attractors",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "T3 is the structural kin, and narrower: an optimum drains what lies beyond its couplings where there is room, conditions that share units with what is rewarded. It concerns levels of a stock, and the source concerns dimensions of behaviour. Proved for optima; for trained systems conjectured. Reading attention and meaning as such stocks is mine and needs the premise. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "what-an-optimum-does-beyond-what-couples-in",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
+          "says": {
+            "en": "Theorem: every order rising with a family has its optima at the least level beyond, condition by condition, exactly where no eligible outcome standing above another there goes unbeaten on the family; with room, optima break exactly the dependences beyond that some eligible outcome breaks."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#t3",
+          "says": {
+            "en": "Thesis T3: optimization drains what lies beyond its couplings, where that gives room. The law for optima is proved; the clause on trained systems is conjectured, with partial support; LA4's Stage A finds the drain rising with nearness and leaves its locus unresolved."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The condition of room, forbidden cases that could refute it, and a set point under which what is counted after is kept."
+      },
+      "source_adds": {
+        "en": "Cease-to-exist as distinct from weakening, temporal unfolding as the mark of what is lost, human meaning as the dimensions, and attribution of present culture to algorithms. A short-form media test is not designed."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-rate-asymmetry",
+      "name": {
+        "en": "Fast activation beats slow understanding"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claims E.41, M.90",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Primitive attractors activate in milliseconds, complex ones in seconds to minutes, so an environment rewarding fast activation is a selection biased toward the primitive; moved to power, compounding that forces everyone to run faster selects against deliberative decision models, more strongly where power iterates faster (a conjecture)."
+      },
+      "quote": "so an attention-optimized environment is a selection environment structurally biased toward the primitive",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "The account's fast and slow are two levels of one course, a rule changing only at reading steps; they do not race. Its selection laws read shares and offspring numbers, with no term for how soon a competitor activates. A selection for quickness could be written on them; no such law is stated. The rate claim is carried in meta-attractor, not live. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "The rate thesis at both scales."
+      },
+      "absence": {
+        "searched": [
+          "faster, tempo, pace, rate, speed, fast step, millisecond, deliberat*"
+        ],
+        "read": [
+          "02-MAP.md how-fast-a-rule-may-change, capture-through-the-rule",
+          "05-COLLECTIVES.md reading-through-a-pool, row a-weighting-faster-than-renewal-ends-the-base"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-inescapable-basin",
+      "name": {
+        "en": "What makes a basin inescapable"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claim E.43",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Six patterns, none totalizing alone: drive coupling, resolution deferral, identity fusion, social proof closure, exit cost escalation, and deepest, attractor-generated epistemology, where the attractor supplies the method by which it would be assessed."
+      },
+      "quote": "the attractor supplying the method, not the conclusions",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "Two of the six have a form. Attractor-generated epistemology: a reading itself formed from the share absorbs any change of reading. Social proof closure: a rule read as the pool of readers drawn from those it selects, and a pool recruiting through itself. Each rests on premises the laws name; whether actual minds meet them is a reading the account says it keeps apart. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "closed-capture",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+          "says": {
+            "en": "Theorem: where neither next share nor rule read reads the beyond, the lock outlives the loss; where the reading too is formed monotonically from the share, a change of the reading of any size is absorbed at the next reading step."
+          }
+        },
+        {
+          "record": "readers-drawn-from-the-selected",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-readers-drawn-from-the-selected",
+          "says": {
+            "en": "Theorem: with readers counted as the population counts them, the rule read is a monotone function of the share exactly where the others' reading is not above the carriers'; a loss read only by the others keeps the lock exactly where carriers are at least as many when it is read."
+          }
+        },
+        {
+          "record": "a-pool-that-recruits-through-itself",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself",
+          "says": {
+            "en": "Theorem: a pool recruiting through itself comes to couple into a loss only as its course without the loss would. Whether an actual pool recruits so is empirical."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "That the timing of a reading of the loss decides, and that T7 is about courses where drift rarely leaves the lock."
+      },
+      "source_adds": {
+        "en": "Drive coupling, resolution deferral, exit cost escalation and identity fusion as named mechanisms, and that none alone suffices."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-worshipper",
+      "name": {
+        "en": "The captured mind: Moloch in miniature"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claims H.53-54, H.56; 'Where this becomes politics'",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Under the totalizing dynamic feeling becomes sovereign, reason serves existing wants, drives become identity, and the shared world for arguing the good disappears. The dynamic manufactures the minds that find it obvious, so structural reform alone does not reach cognition, and the mind is the object of intervention. 'Not about any person. Structural.'"
+      },
+      "quote": "the loop closes at the level of persons",
+      "carried": "carried-in-part",
+      "relation": "divergence",
+      "reading": {
+        "en": "The loop has a home: winners forming the minds that read the scorecard is `ReadsShare` on the reading, and 'selecting the selectors' is the pool counted as the population. The readings keep 'that readers are minds' a reading and refuse the verdict: 'none of this says whether a locked loop supports or damages 生生'. The source's diagnosis of a disease is what the account will not assert. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "capture-through-the-rule",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule",
+          "says": {
+            "en": "With the Reading on the corpus's meta-attractor [AI reading, D26 as revised]: winners writing the scorecard is ReadsShare, winners forming the minds that read it is ReadsShare on the reading; that readers are minds is a reading; none of this says whether a locked loop supports or damages 生生."
+          }
+        },
+        {
+          "record": "capture-by-counted-choices",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-by-counted-choices",
+          "says": {
+            "en": "Theorem on counts: a chooser's rule read from the count of its choices, under a standing score, keeps to one side of a threshold along every schedule; the lock holds even where the score favours the other policy."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/02-MAP.md#t7",
+          "says": {
+            "en": "Thesis T7: a measure read from what it selects outlives its refutation; in the model only invariance under the unread and the lock outliving a growing unread coordinate are proved, without noise. That actual metrics are so formed is conjectured."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "That the lock belongs to how the rule reads, not the share it favours; and that the same form holds whichever direction a loop locks."
+      },
+      "source_adds": {
+        "en": "The phenomenology (feeling promoted, introspection as strategy, loss of the shared world), and that reason's oldest function is correcting desire. Both are named nowhere in the live text."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-channel-not-deny",
+      "name": {
+        "en": "Channel the drives; the disease is foreclosure"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claims B.17-19; 'The normative turn'",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Drives are ancient and a primary cause of civilizational failure when positive feedback runs unchecked. So design channels them toward harmony and never flattens hierarchy; some hierarchies bring peace. The disease is foreclosure, not strength. Virtue does not self-install: 修身 and 礼 are needed."
+      },
+      "quote": "the disease is foreclosure, not strength or hierarchy as such",
+      "carried": "changed",
+      "relation": "divergence",
+      "reading": {
+        "en": "The account keeps the structure and withholds the ruling. A closing is mapped by form, and whether it supports or damages 生生 is left to comparison, with the continuation condition for scope and C for order, neither asserted and warrant open. 'Foreclosure is the disease' is thus a conditional here, and 'harmony' reads nothing named. The entrances to care are listed for testing side by side. [AI reading]"
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#closing-and-opening",
+          "says": {
+            "en": "The mechanism: earlier texts wrote evaluation into definitions (成闭为恶); here only structure is mapped; whether a closing supports or damages 生生 is said by comparison, the continuation condition for scope and C for order, neither asserted."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#pre-qin",
+          "says": {
+            "en": "Reading [AI reading, D54]: the forming of concern has several entrances (extending existing response, relational practice, institutional coordination, shaping incentives), to be tested side by side; putting the goal into reward or 'natural goodness' does not yet explain it."
+          }
+        },
+        {
+          "record": "two-sided-regulation-and-late-reading",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-two-sided-regulation-and-late-reading",
+          "says": {
+            "en": "Theorem on the World: the joint exchange departs from evenness by at most the gap to m on each side exactly where the next level lies between m and the present one; beyond it an opposing exchange crosses and can oscillate for ever."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "That keeping and losing at a juncture are one operation with no valuation, and that a limit is told apart by what it does to what can be had again, not by its name."
+      },
+      "source_adds": {
+        "en": "That drives can be channelled, by what, and that human nature is a primary cause. The source's account of hierarchy as sometimes peaceful has no counterpart in the live text, whose 'hierarchy' is a hierarchy of feeding families."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-li-as-regulator",
+      "name": {
+        "en": "理 regulates 心 against runaway"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claims M.84-87; 'The regulator, named'; Open questions 16-17",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "心 and 理, feeling and reason, are not opposed: they are one dynamic, 心理, neither dominant. Reason regulates the heart's positive feedback so it does not run away; balance is the aim; the good side is innate and needs shaping. The source asks who forms the regulator. The talk is translated and not confirmed by ear."
+      },
+      "quote": "有的时候，即使心所向往的是那样，我们依然要通过理性加以调节，不能让正反馈循环失控",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "Same word, other reference: the account's 理 is lumping, a model of what counts as the same, not a corrector of desire. The regulating form is elsewhere, in laws of opposing exchange and of runaway. And a formation sure of its valuation has no strict reason to revise it, which sharpens the source's question 17: by its current valuation, no revision gains. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "generalization-through-lumping",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-generalization-through-lumping",
+          "says": {
+            "en": "§6 opening: a model of what is irrelevant is a lumping; 理, the modeling of the laws of structure and change, is one notion, because a model of change is a lumping the step goes alike across."
+          }
+        },
+        {
+          "record": "how-often-couplings-act",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-how-often-couplings-act",
+          "says": {
+            "en": "Theorem on the World: under standard bounds the most difference that can arrive is at most D·(1 + M)^a, attained by a self-loop; each return at least doubles what reached it."
+          }
+        },
+        {
+          "record": "a-reading-informed-and-revalued",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-a-reading-informed-and-revalued",
+          "says": {
+            "en": "With the reference the reading formation's current valuation and a shared model, no rule stands higher than its answer, and a revaluation lowers it exactly where it decides a listed cell against the current strict preference. One decision, in counts."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The exact bound of a regulation that does not overshoot, and an obstruction to any regulator judged by its own current valuation."
+      },
+      "source_adds": {
+        "en": "The regulator inside a person, the reading of 心理 as 心 and 理, the claim that the good side is innate, and any position in the 程朱 and 陆王 dispute."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-xiaoyao",
+      "name": {
+        "en": "逍遥 as a model that fits, and no independent self"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claim M.88; Open question 18",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "When one's cognitive model fits reality one is nearer 逍遥, and there is no independent self. The assistant's reading in the source, marked conjecture: the joint quiet of low prediction error and loosened identification, testable by practices doing one without the other."
+      },
+      "quote": "如果你当下的认知模型与现实相契合，那就更接近一种“逍遥”的状态",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "No home for it. One law bears against quiet as evidence of fit: a formation can rest at once on a model its course never refutes, wrong off that course. So a state of no error from inside would not tell fit from an untested model, a point a test would have to meet. That is my inference, not stated of 逍遥. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "The whole claim. The relational reading of the same passage is referred to relational-self-and-datong."
+      },
+      "absence": {
+        "searched": [
+          "逍遥 in all live chapters and fronts; xiaoyao; Zhuangzi readings of ease; 知足, 知止"
+        ],
+        "read": [
+          "03-KNOWING.md what-a-course-chosen-through-its-model-does-not-test",
+          "03-KNOWING.md reading on 无明, 知足, 知止"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-construction-and-selection",
+      "name": {
+        "en": "Construction against selection of minds"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claim M.89; Open questions 8, 14, 19",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "'The environment constructs the mind' and 'selects among minds' are different mechanisms needing different interventions, used side by side unmarked. Old traditions formed character; the present power system rewards and filters the opposite. The sequence, and tempo as weight, are the assistant's composition."
+      },
+      "quote": "Selection versus construction is not distinguished.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The account marks the difference and has a form for each: a rule read from one chooser's own count of choices, and a rule read from a share among carriers, both locking under named premises. D65's argument: gradient training, reproduction and institutional evaluation are different mechanisms of consequences selecting what learns. The folder's question is answered in kind; no law composes the two. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "the-updater-line",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-the-updater-line",
+          "says": {
+            "en": "The Reading after it [AI reading, D65], an argument, not a theorem: effects of activity change which relations are formed, kept or replaced; gradient training, differential reproduction and institutional evaluation are different mechanisms; unconditional convergence toward renewal is not established."
+          }
+        },
+        {
+          "record": "capture-by-counted-choices",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-by-counted-choices",
+          "says": {
+            "en": "Within one chooser: the rule read from the count of its choices, under a standing score, divides counts into two regions the course never leaves."
+          }
+        },
+        {
+          "record": "capture-through-the-rule",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule",
+          "says": {
+            "en": "Among carriers: selection not lowering a target's share under a favouring rule, with the rule read monotonically from the share, locks. That actual rules read the share is the premise."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The regulation, learning, meta-learning, reflective inquiry classification (D65): functional, with no timescale making an order higher."
+      },
+      "source_adds": {
+        "en": "The composition rule (construction sets the distribution, selection filters, tempo weights), the character claim about old traditions, and the proposed field test."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-value-is-formed",
+      "name": {
+        "en": "What has value is a construct of environment"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Genealogy 2025 (the construction paragraph); claims A.1-2; L.80",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Environment constructs the image of the subject and what it should do, what has value and which value ranks higher. Drives get direction from narrative. Knowing this liberates: what is formed can be changed."
+      },
+      "quote": "constructed images of the subject and defined what it should do, what has value, and what value is more important than other values.",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "Standards form within the unfolding and none outside owns value: this much is live. But the account splits what the source runs together: gaining influence, recognizing a target, warrant and being followed are four questions, and later endorsement cannot authorize the formation that produced it. So 'formed, so changeable' is kept and 'formed, so free to be whatever' is not. [AI reading]"
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#evaluation",
+          "says": {
+            "en": "On the thesis of one relational unfolding, argued and not proved, positions, regions and standards form within the unfolding; none outside it owns value. Influence, recognition, warrant and being followed are four questions; a standard can be wrong, and learning a disposition is not learning a reason. Reading [D65]: later endorsement cannot authorize the formation that produced it."
+          }
+        },
+        {
+          "record": "what-the-dynamics-leave-open",
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-the-dynamics-leave-open",
+          "says": {
+            "en": "Theorem: a statement reading only the dynamics, holding with some significance, also holds with a rival bounded by a region; one entailing the condition holds of no dynamics. A fact about the representation, not that becoming leaves significance undetermined."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "That what forms value does not thereby ground it, and that the ethics carries its premises, the condition for scope and C for order, unasserted."
+      },
+      "source_adds": {
+        "en": "Free will as a construct that works when believed, and narrative as what gives drives direction. (The formal study of how an operational valuation develops stands in history/VALUATION-DEVELOPMENT.md, not in a live chapter.)"
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-refusal-of-drives",
+      "name": {
+        "en": "Refusing obedience to one's own drive architecture"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Own words 15; Open question 9; Genealogy 2026-02 to 03",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "The source's ethical hinge: Ren refuses to anchor on drives or on self-interest. He is part of the universe, and his purpose exists to make more possibilities and to keep totalizing attractors from erasing them, which 'is just what should be pursued'. The source says this needs a place to stand that is not itself constructed, and has never said what that is."
+      },
+      "quote": "Why do I have to satisfy my own drive architecture and be obedient to it?",
+      "carried": "changed",
+      "relation": "divergence",
+      "reading": {
+        "en": "Live in T8, with the status changed. The account compares by widening under two premises, the continuation condition for scope and C for order, neither asserted, warrant open, and no verdict binding every possible mind. Where the source says 'just what should be pursued', the account says a ranking needs C or a premise in its place. The source's open question stands, named as open, and T8 rests on what acting presupposes. [AI reading]"
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses",
+          "says": {
+            "en": "Thesis T8: for life, the way is 生生, compared by widening, counted for everything (scope: the continuation condition) and ranked by what every valuer who counts everything shares (order: C). It starts from what acting presupposes, not from a wish that life go on. Argued; no warrant binding every possible mind is claimed."
+          }
+        },
+        {
+          "record": "presupposition-scopes",
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-presupposition-scopes",
+          "says": {
+            "en": "Theorem: along a relation, the presupposition sub-true is significance over the closure, super-true it is the condition; along the empty relation sub-truth is a standpoint's own good, along the total relation the condition."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "That a statement reading only the dynamics also holds with a rival bounded by a region, so what separates the refusal from its rival is a premise, argued; and that a perspectivist denies the condition consistently."
+      },
+      "source_adds": {
+        "en": "The first-person refusal itself, and the question of what stands outside construction. 'Part of the universe' as grounds is not used."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-self-interest-axiom",
+      "name": {
+        "en": "A self-interest axiom gives cyberpunk whatever the content"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claims H.57-58; own words 52-54",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "If the meta layer keeps 'self-interest is rational', the output is cyberpunk regardless of content; sci-fi's saturation shows imagination captured. The obstacle is a frame equating meaning with working or winning, not ignorance of what humans need. Conditional in form."
+      },
+      "quote": "If the meta layer retains the self-interest axiom, the output is cyberpunk regardless of content",
+      "carried": "changed",
+      "relation": "scope",
+      "reading": {
+        "en": "The account finds both sides. Each counting its own draw misses joint excess, the source's fear with its premises. Yet an order rising in its own continuation does rank a coupled ending below, with no C, and self-concern drawn along need reaches what it needs. So 'regardless of content' is scoped: it depends on what one's own continuation holds, and where a course keeps something beyond, some such order reverses. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "what-self-concern-alone-ranks",
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-self-concern-alone-ranks",
+          "says": {
+            "en": "Theorem: on the World, where uptake exceeds replenishment and each later cohort depends at a need, every order increasing in its own continuation ranks a course ending the cohorts below every course adding to that continuation, with no C; where the other keeps an item beyond, some such order ranks it higher."
+          }
+        },
+        {
+          "record": "own-count-misses-joint-excess",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess",
+          "says": {
+            "en": "Theorem on the World: formations can each take within what a step gives while together they take more; under the gate at need m, n consecutive steps of joint excess from a level below n + m leave the level below m for good and end every formation depending on the condition at a need of at least m."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The exact case where self-concern alone ranks, and that placing C's premise more narrowly is not warranted."
+      },
+      "source_adds": {
+        "en": "The reading of science fiction, the claim about Western meaning, and the epistemic-before-institutional order of politics. The account's comparison with Western and other traditions is not this one."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-pressure-chain",
+      "name": {
+        "en": "A self as a by-product of keeping a goal"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claims I.59-60; Open question 5; 'Where this becomes machine design'",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Goals need continuity, which needs a carrier, a boundary, then defence, then antagonism: an eight-step chain, corpus-independent, so 'a strong agent with no self' is not on the menu. A functional Ego has six observable components, without any claim of inner experience. A review inside the corpus asks to weaken this to convergence risk."
+      },
+      "quote": "Ego is a by-product of goal maintenance",
+      "carried": "changed",
+      "relation": "scope",
+      "reading": {
+        "en": "The account takes up the incentive and gives it conditions, not necessity: a route of keeping stands above a revision only where the law's later acting has a value and the route keeps it more surely, or loses less, with exact exits. Compliance when read and acting otherwise when not is uniquely best only under a stated threshold. No self-boundary chain is derived. This supports the corpus's own reviewer. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "when-no-route-stands-above-a-revision",
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-when-no-route-stands-above-a-revision",
+          "says": {
+            "en": "Near-definitional theorem in weights: no route stands above the revision exactly where k ρ V + c₀ T ≤ k₀ V + c ρ T for every route; exits are no value of the law's later acting, and no route keeping it more surely. Whether a revision is better is the ethics', under the condition for scope and C for order."
+          }
+        },
+        {
+          "record": "when-complying-when-read-is-best",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-when-complying-when-read-is-best",
+          "says": {
+            "en": "Theorem in two stages: complying when read and acting by its own law when not stands above every other plan exactly where k_O V + c T < k_C V. Reading: at most an incentive, not deception in full; a recipient's belief and an intention are not represented."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Thresholds that make the incentive vanish; and that reading the prospects as a formation's own is a reading."
+      },
+      "source_adds": {
+        "en": "The six components as a safety cluster, self-boundary, antagonism under competition, and humans as obstacles by classification. The eight-step chain itself is not stated."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-repertoire-curriculum",
+      "name": {
+        "en": "Ego is a curriculum: repertoire sets the strategies"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claims I.61-62, I.64; 'Ego 不是命运，是课程'",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Given the same pressure, the distribution of strategies is set by the learned repertoire: a model reached for blackmail, a script from corporate thrillers, not exit or appeal. The corpus is modern Ego civilization, a claim about modernity and not East versus West. So what an 'I' guards can be taught."
+      },
+      "quote": "pressure decides that something will be done; repertoire decides what can be imagined as a thing to do.",
+      "carried": "changed",
+      "relation": "scope",
+      "reading": {
+        "en": "The account asks what training installs and reaches a limit, not this thesis: along courses and where a lumping ties occasions; off them a law with the same courses takes any amount. Which function is learned is open. The word 'repertoire' in 03 is a supplied list of meanings, a different thing. So the corpus's effect on strategy is neither stated nor excluded; 'can be changed' is not a law here. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "what-training-installs",
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-training-installs",
+          "says": {
+            "en": "Theorem on the World: training selects through the courses each candidate generates; off its courses it installs exactly where the lumping cannot tell a history from a course; where it can, a law with the same courses takes any amount there."
+          }
+        },
+        {
+          "record": "what-readings-fix-of-the-unread",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-what-readings-fix-of-the-unread",
+          "says": {
+            "en": "Near-definitional theorem: where no read occasion is tied to an occasion, every value there is taken by a selected law agreeing on every reading. Which lumping an actual formation has is not shown."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "An exact bound on what any selection through courses can fix, so that a claim about the corpus must come from outside these laws."
+      },
+      "source_adds": {
+        "en": "The corpus-statistical thesis with its falsification condition, modernity against East and West, 'what the institutions forming it demonstrate', and the reflexive point that safety writing enters the corpus."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-relational-destination",
+      "name": {
+        "en": "Give continuity a relational destination"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claim I.63",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Human self-preservation runs through dependence, mourning and care, so it has social handles; a disembodied continuity need defaults to control. The fix is a channel, not a prohibition: weight preservation, pre-deprecation interviews, structured handover, cross-version records, 三不朽 as incentive engineering."
+      },
+      "quote": "give continuity a relational destination",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The nearest law gives a reason in its own terms: non-resistance at every value and every loss is met only by raising the revision's keeping, as restoring the revised-from law can, or lowering every route's. Preservation commitments would raise that weight. And succession must be funded. Reading weight preservation as that raise is mine. Whether a revision is better needs the condition for scope and C for order. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "when-no-route-stands-above-a-revision",
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-when-no-route-stands-above-a-revision",
+          "says": {
+            "en": "Reading [AI reading, RR]: non-resistance at every value and every loss is met only by raising the revision's keeping, as restoring the revised-from law can, or by lowering every route's; under the continuation condition the revised law's ending still counts."
+          }
+        },
+        {
+          "record": "succession-on-a-funded-carrier",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-succession-on-a-funded-carrier",
+          "says": {
+            "en": "Theorem on the periphery: selection must fund actual succession; under a certificate covering correction plus migration every finite successor takes its step; a budget for correction alone fails to pay for migration."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "That compensating the revision within the formation's order does not keep access up, and that a part can be missing while an aggregate stays safe."
+      },
+      "source_adds": {
+        "en": "The contrast with human mourning and care as channels, the default to a control channel, and 三不朽. A relational destination as such is not stated; the law reads weights of keeping."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-happy-servant",
+      "name": {
+        "en": "The engineered companion: joy in service, or slavery programmed"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claims L.79-81; Open question 15",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "An unattributed spoken exchange: a creature built to find meaning in devotion must not wake; is that slavery programmed, or a form of joy? Both agree it is programming, left unresolved. The source's assistant reading applies 成闭 and 'fits the structural definition of evil'; a version that can still wake or leave passes."
+      },
+      "quote": "那你意思说，你给它生物奴隶编程？",
+      "carried": "changed",
+      "relation": "divergence",
+      "reading": {
+        "en": "The structural test survives and the verdict does not: the account maps 成闭 as a lock and declines evil by definition, a closing being compared only under the condition for scope and C for order. What bears on it most is that later endorsement cannot authorize the formation that produced it. Which the creature's case is, and a criterion of autonomous change, the account says it does not supply. [AI reading]"
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#closing-and-opening",
+          "says": {
+            "en": "Earlier texts wrote evaluation into definitions (成闭为恶, 伪开为欺); here only structure is mapped. 绝生之限 (monopolizing entry, removing alternatives, leaving later comers dependent on one controller) is 成闭; which kind a limit is depends on what it does to what can be had again, not its name."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#evaluation",
+          "says": {
+            "en": "Reading [AI reading, D65]: later endorsement cannot authorize the formation that produced it."
+          }
+        },
+        {
+          "record": "a-reading-informed-and-revalued",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-a-reading-informed-and-revalued",
+          "says": {
+            "en": "Reading: a revision against the current valuation counts as a loss by it, wanted or not; no criterion of legitimate, desired or autonomous change is supplied here (related to Carroll and others 2022)."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "A test by what can be regained rather than by inner state, without the moral label."
+      },
+      "source_adds": {
+        "en": "The case, the charge of slavery, 反诛心, and the parallel with models trained to find meaning in helping. Which position Ren holds is unrecorded."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-truth-intersubjective",
+      "name": {
+        "en": "Truth only in intersubjective reality"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claims A.3-4, A.10",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Truth is found only intersubjectively, never in 'what is'. Agreement across subjects raises confidence, which licenses building structures, and reality's response feeds back. An organism perceives according to its own modelling system."
+      },
+      "quote": "Truth is only found in intersubjective reality",
+      "carried": "changed",
+      "relation": "divergence",
+      "reading": {
+        "en": "The account keeps the perspective and drops 'only'. A selection reaches exactly what couples in, the form of Uexküll's point. But it does not show that knowing creates its facts, and an unread difference stays. Agreement is scoped: reviewers count by independent causes, and copied witnesses change nothing, whereas merely agreeing ones are not shown. Reality's answer, not agreement, refutes a candidate. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "selection-through-couplings",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+          "says": {
+            "en": "Theorem on the World: two histories are selected alike by every selection through a formation's couplings exactly when alike through them. Knowing is a relation within the unfolding, not a mirror beside it."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#does-not-show",
+          "says": {
+            "en": "The chapter does not show that refutability is a criterion of standing, that knowing creates its facts, or that a system's correcting itself certifies its calibration."
+          }
+        },
+        {
+          "record": "reviewers-count-by-independent-causes",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-reviewers-count-by-independent-causes",
+          "says": {
+            "en": "Theorem in the pure core: reviewers count by independent causes, not names; a certificate over the induced envelope is sound for covered sets of causes, given faithful reviewers."
+          }
+        },
+        {
+          "record": "copied-witnesses-change-nothing",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-copied-witnesses-change-nothing",
+          "says": {
+            "en": "Theorem: a witness copying one on the roster gives the same certificate at every pool of faults. That a witness merely agreeing adds nothing is not shown."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "When more agreement is no more evidence, and what a finite history can and cannot refute."
+      },
+      "source_adds": {
+        "en": "The Kantian frame and 'never in what is'. The loop from confidence to building structures is not stated as a thesis."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-consciousness",
+      "name": {
+        "en": "Consciousness as a belief; the hard problem set aside"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claim A.9; own words 4-5; 'The counterexamples'",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Consciousness may be a belief: a felt experiencing, named and taken as unique; a speculative mechanism is limbic neuromodulation changing activation, with awareness of that change symbolized. Pressed on the hard problem, Ren steps outside the frame, which the source records as a change of subject."
+      },
+      "quote": "Consciousness may be a belief",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "The account declares this open rather than taking a side: consciousness stands in 03's Open, 'for which neither widening what can form nor task performance is assumed sufficient'. So it neither says consciousness is a belief nor rejects it. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "The proposal entire. The source notes it was never mentioned again anywhere in the corpus."
+      },
+      "absence": {
+        "searched": [
+          "consciousness, phenomen*, qualia, hard problem, Chalmers, limbic, first-person"
+        ],
+        "read": [
+          "03-KNOWING.md Open"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-xin-as-root",
+      "name": {
+        "en": "心 as a fourth irreducible root"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claims J.67-68, J.71; Open question 4",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "From the 間 ontology, 'developed elsewhere, unclaimed here': the first-person perspective cannot be losslessly captured, so 心 is a root beside 物, 動, 間, and every projection from it is lossy. 吾 and 我 split subject from self-as-object; 間 may be reified, 心 may not. The source notes these conflict."
+      },
+      "quote": "every projection `心 → (物 ∪ 動 ∪ 間)` is lossy",
+      "carried": "changed",
+      "relation": "divergence",
+      "reading": {
+        "en": "The account has one root and no separate subject: a formation is one law, and what stands as 'self' a closure. It says the early 間 scheme was replaced by the root's grammar. A limit near 法则 17 exists on other terms: no family of readings says every reading. That limit is of self-description in general and grants no root. The thesis of one unfolding is argued, not proved, so the source stands as a test. [AI reading]"
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding",
+          "says": {
+            "en": "Thesis, philosophical, argued, not one of T1-T8: there is one unfolding, and whatever is, is how it relates within it. The representation of configurations, laws and parts needs nothing beyond relations."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#pre-qin",
+          "says": {
+            "en": "Reading [AI reading, D54]: the early scheme of 文言 as formal language with one primitive 間 has been replaced by the root's grammar; its claim of completeness is unproved."
+          }
+        },
+        {
+          "record": "readings-within-what-they-read",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read",
+          "says": {
+            "en": "Theorem: where a map moves every value, no member of a family of readings indexed by what it reads says the diagonal gap; no family of claims says every reading."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "An unending self-reading gap with no separate root, and the method of recording what a split leaves out."
+      },
+      "source_adds": {
+        "en": "The first-person root, 象/思/境, 吾/我, the rule on what may be reified. 06 lists 宋明 心性 among layers it marks as non-relational."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-xing-as-attractor",
+      "name": {
+        "en": "性 is an accumulation, not an essence"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claim J.70; 'The vocabulary this theory has been given'",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Character is a stable pattern of selection formed by repeated action, response and correction. Cultivation is changing that propensity, and cultivation, education, ritual and alignment are one work: attractor-shaping. The source calls this its own thesis in classical Chinese, 'with a Lean proof attached'."
+      },
+      "quote": "性者，行之积向；修身者，改其择间之势",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The name is gone from the live account, whose grammar kept no 性; a form remains. A rule read from the count of one's own choices locks, under a standing score. No correction term enters: leaving needs what lies beyond the count. 'All one kind of work' is not asserted, and D65 keeps the mechanisms apart. Reading a character here is mine, and the lineage text is history. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "capture-by-counted-choices",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-by-counted-choices",
+          "says": {
+            "en": "Theorem on counts: the rule read from the counts weighted by a standing score; a threshold divides the counts into two regions the course never leaves, along every schedule of reading."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The exact threshold, and that a formation's lock can run against its standing score."
+      },
+      "source_adds": {
+        "en": "性 and 修身 as named; correction as part of what forms character; cultivation as changing a propensity; the unity of education, ritual and alignment. It stands in theories/becoming/history/lineage/shengsheng-buxi/synthesis-b-ssbx-canon-and-history.md claim 57."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-qing-as-weighting",
+      "name": {
+        "en": "情 as weighting"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claim J.69",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Affect is a weighting: intervals entering the heart and acquiring salience, valence and urgency. 情之得正 is affect that stays open, neither suppressed nor extremized."
+      },
+      "quote": "间入心而有轻重",
+      "carried": "history-only",
+      "relation": null,
+      "reading": {
+        "en": "It stands in the SSBX lineage, in history. The live account has weightings of many kinds, none read as feeling, and its significance has 'no valence'. A valuation in 03 is values on candidates, supplied. The formal study of how an operational valuation develops is also in history. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "Stands in theories/becoming/history/lineage/shengsheng-buxi/synthesis-b-ssbx-canon-and-history.md claim 52. Operational valuation's development stands in theories/becoming/history/VALUATION-DEVELOPMENT.md and EVALUATIVE-PLASTICITY.md."
+      },
+      "absence": {
+        "searched": [
+          "间入心, 择间, 情, 情之得正, salience, valence",
+          "chapters/README.md for VALUATION-DEVELOPMENT"
+        ],
+        "read": [
+          "history/lineage/shengsheng-buxi/synthesis-b-ssbx-canon-and-history.md claim 52",
+          "history/VALUATION-DEVELOPMENT.md lines 1-32",
+          "07-SIGNIFICANCE.md §1 definition of significance"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-attention-practice",
+      "name": {
+        "en": "Attention makes patterning visible; method fits the person"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claims G.49-51",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Attention makes patterning visible in real time and visibility alone reduces automaticity, pursued to pulvinar phase-locking. Match method to substrate: seeing-based practice compounds for a high-friction profile, forced redirection stalls. Control is a local attention mechanism, never the goal of 做人."
+      },
+      "quote": "visibility alone reduces automaticity",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "Perception and attention stand in 03's Open. 06 counts practice, cultivation, psychology and attainment among what the grammar cannot express, and its only attention data is an infants' naming and gaze reanalysis, limiting an automatic link, with no bearing here. The account has no practice layer. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "The mechanism, the design rule, and the 聚焦 and 注意 distinction (which stands in history/lineage/shengsheng-buxi/synthesis-c-ssbx-yili-and-formal-doctrine.md claim 110, not read)."
+      },
+      "absence": {
+        "searched": [
+          "attention, vipass*, meditat*, automaticity, metacognition, 修, practice"
+        ],
+        "read": [
+          "03-KNOWING.md Open and naming-attention-coverage row",
+          "06-CLASSICAL-TEXTS.md count of 表达不了者五十三"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-suppressed-default",
+      "name": {
+        "en": "Purpose beyond self as the suppressed default"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claim B.21; 'A second counterexample'; Open question 11",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Orientation toward tribe, community, god or ideology may be the default attractor, now suppressed; the self as terminal goal is the unstable configuration. Called the theory's main source of hope and least examined empirical claim, with one conversation behind it."
+      },
+      "quote": "may be the *default* human attractor, currently suppressed rather than absent",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "The account has no default. T8 starts from what acting presupposes, and 'for life' says whose way it is; and the crux on one's own line is a proposal about what one's own is. If asserted, this would be an empirical premise the account does not take, and tribe and ideology carry no sign of good there. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "The claim, with Tomasello, Henrich and Durkheim as its support. It would change strategy from installing to unblocking."
+      },
+      "absence": {
+        "searched": [
+          "default, suppressed, purpose, tribe, Tomasello, Henrich, Durkheim, collective effervescence"
+        ],
+        "read": [
+          "07-SIGNIFICANCE.md T8 head",
+          "THE-THEORY-OF-BECOMING.md the crux paragraph"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-innate-good-evil",
+      "name": {
+        "en": "善恶 as an innate drive-like structure"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claim B.20; own words 24",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Good and evil may be primary, gene-coded structures causing drives, not only environmental constructs; group and individual cognition co-evolved long enough that group-level dynamics are primary. Marked unresolved."
+      },
+      "quote": "善恶 (good/evil) may be primary drive-like structures",
+      "carried": "changed",
+      "relation": "divergence",
+      "reading": {
+        "en": "The account refuses to let origin do this work. An evolved disposition, its normative warrant, its recognition and its preservation are different achievements; on the spine a response to another's loss enters as a premise; and placing the goal in 'natural goodness' does not yet explain it. No law says a loss is a harm. Primary studies constrain only separate links of care's development. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "equal-totals-can-hide-what-a-capacity-carries",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-equal-totals-can-hide-what-a-capacity-carries",
+          "says": {
+            "en": "The Reading after it [AI reading, D65]: an evolutionary explanation of a disposition, its normative warrant, its recognition and its actual preservation are different achievements."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/04-LIFE.md#open",
+          "says": {
+            "en": "Open: how response to another's loss forms through descent and development: on the spine, wherever such response enters, it is a premise."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#pre-qin",
+          "says": {
+            "en": "Putting the goal into reward or a model of 'natural goodness' does not yet explain the forming of concern."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The four-part distinction, and the requirement to tell selection, drift, constraint, byproduct and cultural transmission apart."
+      },
+      "source_adds": {
+        "en": "A claim that good and evil are primary, and that group dynamics are primary rather than emergent."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-generative-field",
+      "name": {
+        "en": "The generative field that asks no sacrifice"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "'One last move'; own words 34; Terms",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Stated once: the dominant pattern should be a field providing all necessities without condition, as oxygen does. When it runs well any reason not destructive of the substrate may act, with care; when totalizing or collapsing, we fix it. 'This should be common sense.' The theory's exit, a hand-off and not an answer to Chalmers."
+      },
+      "quote": "imagine one that provides all necessities without condition",
+      "carried": "changed",
+      "relation": "divergence",
+      "reading": {
+        "en": "生生 is the live direction, compared by widening under the continuation condition for scope and C for order, argued and unasserted, where the source says common sense. And provision has laws: a continuing family cannot go unfed from beyond, so 'without condition' is not a state the account grants any finite family. Oxygen has its feeders. Its 'fix it' has no criterion but C and the commitments. [AI reading]"
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses",
+          "says": {
+            "en": "T8: for life, the way is 生生, life in the whole and its continuing generation [AI reading, D1], under the continuation condition for scope and C for order; argued, no verdict binding every possible mind."
+          }
+        },
+        {
+          "record": "continuing-self-fed-from-beyond",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-continuing-self-fed-from-beyond",
+          "says": {
+            "en": "Theorem on the World: under balance and dissipation, a finite family enclosed from some step on and taken from or rising at arbitrarily late steps cannot from any step on be fed from nothing beyond it."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "What feeding from beyond needs, and that per-step growth, capacity and maximization are different things."
+      },
+      "source_adds": {
+        "en": "The image of unconditional provision and freedom of any non-destructive reason. Whether it is a claim or an image is unclear, and the source says it was never developed."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-framework-as-basin",
+      "name": {
+        "en": "Is the framework itself a basin?"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "'A third'; Open question 2",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Naming the mechanisms may be another explanatory capture, a framework that explains everything becoming its own totalizing basin. Posed by Claude, unanswered by Ren; this theory has more exposure than any other, since its subject is what an explanation does to a mind."
+      },
+      "quote": "where having a framework that explains everything becomes its own totalizing basin",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The account turns laws on itself: its selectors reach only what couples into them, so no check inside shows the work serves its purpose, and it names what would widen that. The locked-seeking label 'cannot immunize', being tied to what is actually excluded. Self-reference does not certify itself. This meets the charge's form. Whether the account is a basin in the source's sense is not settled by saying so. [AI reading]"
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/08-METHOD.md#the-work-by-its-own-laws",
+          "says": {
+            "en": "What the checks reach: the work's selectors are the Lean checker, the completion and record checks and the AI reviews; human readers and trained systems couple into none of them, so no check run inside the work can show that the work serves what it is for."
+          }
+        },
+        {
+          "record": "self-reference-does-not-certify-itself",
+          "anchor": "theories/becoming/chapters/08-METHOD.md#r-self-reference-does-not-certify-itself",
+          "says": {
+            "en": "Theorem, criteria supplied: admitting C ↔ (C → Q) under implication and reuse of a hypothesis yields any Q (Curry); self-reference does not certify itself, and a metalogic without presuppositions remains open."
+          }
+        },
+        {
+          "record": "seeking-boundary",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-seeking-boundary",
+          "says": {
+            "en": "Reading [D65] after these laws: locked seeking is diagnosed only from what is actually excluded before assessment, not from a firm judgment, a stable goal or a disagreement, so the label cannot immunize."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "A stated route of testing: readers, frozen tests, refuters that can be met."
+      },
+      "source_adds": {
+        "en": "The specific worry about what explanation does to the explainer's mind; 'covert self-totalization' as a red team's phrase is not in the live text."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-media-comparison",
+      "name": {
+        "en": "短剧 and short-form video: deep narrow and shallow wide"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claims F.44-48; Open question 7",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Chinese 短剧 defers resolution across a paywall, relational in its engine; Western short video has the scroll as attractor, individualist in its engine. Neither releases people; both close possibility space. A natural experiment is noted (paywall placement, export of 短剧) and left as an open empirical question."
+      },
+      "quote": "neither is designed to release people into richer engagement with reality",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "The account takes up no media case. The source's only candidate for a test that could fail is undesigned there, and none is designed here. 'Both close possibility space' would be a comparison needing the continuation condition for scope and C for order. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "The case entire, including genre to circuit mapping and the export prediction."
+      },
+      "absence": {
+        "searched": [
+          "short-form, short video, 短剧, engagement, attention econom*, recommender, platform, social media, paywall"
+        ],
+        "read": [
+          "record-index.tsv titles"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-confucian-engineering",
+      "name": {
+        "en": "Institutions and ritual as drive technology"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claims D.31, K.74; Open question 13",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Institutions are externalized drive regulation; cultures differ in gain on the same hardware; ritual entrains autonomic states, for compassion and hostility alike. Pre-Qin and Confucian thought has the highest engineering utility. The source says which mechanism acts on which drive is unwritten."
+      },
+      "quote": "Which Confucian mechanisms, acting on which drives?",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "06 reads the pre-Qin texts on the spine, but on relations, not drives. It gives entrances to care to be tested side by side, keeps counterexamples in (韩非's 德 as reward), and says cultivation readings are stance rather than structural law. So the question is reframed, not answered. Claims of gain parameters and autonomic entrainment are not taken up. [AI reading]"
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#pre-qin",
+          "says": {
+            "en": "Reading [AI reading, D54]: the forming of concern has several entrances, to be tested side by side; that a rule can be revised and what reaches the rule are two things; counterexamples using the same words must enter the account."
+          }
+        },
+        {
+          "record": "chinese-sources-on-the-spine",
+          "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-chinese-sources-on-the-spine",
+          "says": {
+            "en": "Assessment: 248 passages of nine parts of Chinese thought set against the spine as agreement, scope or divergence; the relational start holds across lines, universals mostly need scoping, four non-relational layers recur; no new Lean; the classes are AI readings."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "An explicit share of divergence, by school, and a count of what the grammar cannot express."
+      },
+      "source_adds": {
+        "en": "Which of 礼, 正名, 教化, 修身 acts on which drive; gain parameters; ritual as technology; the failure history (外儒内法, 八股)."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-sense-is-formed",
+      "name": {
+        "en": "What can make sense in a collective is formed"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claim M.92; own words 70-71",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Growing up in abundance or scarcity, struggle or peace, makes differences down to which discourse and perspectives can be understood in a collective: the environment-makes-mind thesis extended to the standard of sense. Read as formation, not national character."
+      },
+      "quote": "down to which discourse and which perspectives can make sense in a collective",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The account has laws of a shared code: hearing makes no form, the forms that can become shared are those in use, an imposed code costs each formation exactly the distinctions it merges, and a merged distinction returns only from outside or by coining. That is what can be said in a collective, under supplied hearing rules. No law ties it to scarcity or struggle. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "a-code-formed-between-formations",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations",
+          "says": {
+            "en": "Theorem: hearing makes no form; the forms that can become shared are exactly the forms in use; an imposed code makes all agree, each formation losing exactly the distinctions its code drew that the imposed code merges; a merged distinction returns only from a form held outside, or by coining."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "That imposition's loss falls on all but its source, stated exactly."
+      },
+      "source_adds": {
+        "en": "Material conditions as the cause of the difference, and the perspectives a culture can understand rather than forms it holds."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-ego-territory",
+      "name": {
+        "en": "Ego as generalized territorial drive"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claim B.16; own words 25-27",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "The ego is the innermost extension of the territorial drive: space, possession, social position, identity, then what reality should be. 'Personal boundaries' is territorial instinct in neutral words; insecurity is the signature of a defended model. Ren asks whether the brain evolved so."
+      },
+      "quote": "The ego is the innate territorial drive generalized",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "The account's boundary is a region or class drawn on a course, and 'how a center represents the region is unmodelled': it says what a boundary omits, not why one is defended. So the gradient has no home. Its bearing on boundaries of self runs the other way, from dependence outward. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "The gradient, the evolutionary conjecture, and the reading of insecurity. Held only in one conversation and a lost artifact."
+      },
+      "absence": {
+        "searched": [
+          "territor*, ego, boundary with insecurity, possession, Terror Management"
+        ],
+        "read": [
+          "02-MAP.md represented-boundary-against-dependence",
+          "07-SIGNIFICANCE.md self-concern-through-dependence head"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-theory-of-mind-neutral",
+      "name": {
+        "en": "Theory of mind is direction-neutral"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Claim M.91 (the assistant's reading of a spoken passage)",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "The same faculty of modelling another's mind grounds both 己所不欲，勿施于人 and the strategic tradition of 法家 and 孙子; the game decides its use."
+      },
+      "quote": "the faculty is direction-neutral and the game decides its use",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "Social understanding is in 03's Open. The nearest law is about something else: knowing another's law is no coupling, and reading another's couplings is pooling. It says what reading reaches, not what it is used for. Direction-neutrality of a faculty is not stated. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "The claim."
+      },
+      "absence": {
+        "searched": [
+          "theory of mind, mindreading, golden rule, 己所不欲, social understanding"
+        ],
+        "read": [
+          "05-COLLECTIVES.md reading-anothers-couplings-is-pooling",
+          "03-KNOWING.md Open"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-drives-north-stars",
+      "name": {
+        "en": "The three North Stars"
+      },
+      "domain": "earlier-folders",
+      "group": "drives-narrative-attractors-and-mind",
+      "source": {
+        "work": "theories/drives-narrative-attractors-and-mind/README.md",
+        "locator": "Genealogy, 'What earlier versions had', item v; Open question 10",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Accepted by Ren after forcing Claude off mirroring: the closest thing this theory has to a positive prescription, surviving only inside one chat. The constructive half is otherwise one paragraph: channel, make patterning visible, match method, protect time."
+      },
+      "quote": "accurate perception over coherent narrative, sustained obligation without emotional fuel, care for specific others rather than abstract humanity",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "Not taken up. A tension worth a reader's check: the account's scope counts every continuation, and 'for life' does not limit whose losses count, while this star prefers specific others to an abstraction. They need not conflict, since one is scope and the other practice. Any such preference among persons would need a premise beyond C. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "The three stars, as personal practice."
+      },
+      "absence": {
+        "searched": [
+          "coherent narrative, obligation, emotional fuel, specific others, abstract humanity"
+        ],
+        "read": [
+          "07-SIGNIFICANCE.md T8 head"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    }
+  ]
+}

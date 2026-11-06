@@ -39,6 +39,7 @@ AFTER = (('collective-direction', BECOMING + 'COLLECTIVE-DIRECTION.md', 'Collect
 WARP = FRONTS + tuple((i, f'{BECOMING}chapters/{f}.md', t) for i, f, t in CHAPTERS) + AFTER
 REVIEW = BECOMING + 'review/'
 ABSENT = atlas_tool.ABSENT
+CARRIES = atlas_tool.CARRIES
 # The standings against the root's edge, in the words of 08's "Standings on the edge". A key not listed here fails the
 # render's test, so a new standing cannot appear unworded.
 STANDINGS = (('On the edge', 'on the edge', (('derived', 'Derived', 'each a case of grammar laws'),
@@ -120,11 +121,12 @@ def _entry(e: dict, homes: dict, results: dict) -> dict:
         found = [w for w in (_warp_of(p) for p in paths) if w]
         node = results.get(record) or {}
         targets.append({'record': record, 'anchor': t.get('anchor') or (homes.get(record) or [None])[0], 'says': _en(t['says']),
-                        'status': node.get('status'), 'kind': node.get('kind'), 'title': node.get('title')})
-        warps += found
+                        'status': node.get('status'), 'kind': node.get('kind'), 'title': node.get('title'), 'role': t['role'], 'part': t.get('part')})
+        if t['role'] == CARRIES:
+            warps += found
     source = e['source']
     return {'id': e['id'], 'name': _en(e['name']), 'group': e['group'], 'carried': e['carried'], 'relation': e['relation'],
-            'sense': _en(e['sense']), 'quote': e['quote'], 'reading': _en(e['reading']), 'work': source['work'],
+            'agreement_of': e['agreement_of'], 'same_as': e['same_as'], 'sense': _en(e['sense']), 'quote': e['quote'], 'reading': _en(e['reading']), 'work': source['work'],
             'locator': source['locator'], 'basis': source['basis'], 'account_adds': _en(e['account_adds']),
             'source_adds': _en(e['source_adds']), 'searched': (e['absence'] or {}).get('searched'),
             'read': (e['absence'] or {}).get('read'), 'targets': targets, 'warps': sorted(set(warps))}
@@ -139,7 +141,7 @@ def _meeting_points(entries: list, results: dict) -> tuple[list, int]:
             continue
         for t in e['targets']:
             key = t['record'] or t['anchor']
-            if not key:
+            if not key or t['role'] != CARRIES:
                 continue
             p = points.setdefault(key, {'key': key, 'title': t['title'] or _section_title(key), 'status': t['status'], 'kind': t['kind'],
                                         'anchor': t['anchor'], 'readings': []})
@@ -155,6 +157,23 @@ def _meeting_points(entries: list, results: dict) -> tuple[list, int]:
         shared.append(p)
     shared.sort(key=lambda p: (-p['groups'], not p['differ'], p['key']))
     return shared, single
+
+
+def _distinct(entries: list) -> int:
+    """How many claims the entries state, an entry and what it is `same_as` counting once."""
+    parent = {e['id']: e['id'] for e in entries}
+
+    def find(i):
+        while parent[i] != i:
+            parent[i] = parent[parent[i]]
+            i = parent[i]
+        return i
+
+    for e in entries:
+        for other in e['same_as'] or []:
+            if other in parent:
+                parent[find(e['id'])] = find(other)
+    return len({find(e['id']) for e in entries})
 
 
 def _bars(rows: tuple, counts: dict) -> list[dict]:
@@ -173,6 +192,7 @@ def payload(atlas: dict, graph: dict, shared: dict, base: str | None = BASE) -> 
                        'side': 'folders' if g['domain'] == atlas_tool.EARLIER else 'domains', 'read': g['read'], 'skimmed': g['skimmed'],
                        'searched': g['searched'], 'not_mapped': g['not_mapped'], 'coverage': g['coverage'], 'n': len(held),
                        'loose': sum(e['carried'] in ABSENT for e in held), 'by_carried': g['by_carried'], 'by_relation': g['by_relation'],
+                       'by_agreement_of': g['by_agreement_of'],
                        'from_knowledge': sum(e['basis'] == 'ai-knowledge' for e in held)})
     used = Counter(w for e in entries if e['carried'] not in ABSENT for w in e['warps'])
     warp = [{'id': i, 'path': p, 'title': t, 'n': used[i]} for i, p, t in WARP if used[i]]
@@ -186,10 +206,12 @@ def payload(atlas: dict, graph: dict, shared: dict, base: str | None = BASE) -> 
                  if boundary['groups'].get(key, 0)]
     carried = Counter(e['carried'] for e in entries)
     relation = Counter(e['relation'] for e in entries if e['relation'] and e['carried'] not in ABSENT)
+    agreement_of = Counter(e['agreement_of'] for e in entries if e['agreement_of'] and e['carried'] not in ABSENT)
     return {'base': base, 'entries': entries, 'groups': groups, 'warp': warp, 'points': points, 'single': single,
             'relations': atlas['vocabulary']['relations'], 'carried': atlas['vocabulary']['carried'],
             'totals': {'entries': len(entries), 'folders': sum(g['side'] == 'folders' for g in groups),
                        'domains': sum(g['side'] == 'domains' for g in groups), 'carried': dict(carried), 'relation': dict(relation),
+                       'agreement_of': dict(agreement_of), 'distinct': _distinct(entries),
                        'loose': sum(carried[k] for k in ABSENT), 'from_knowledge': sum(e['basis'] == 'ai-knowledge' for e in entries),
                        'unwarped': sum(1 for e in entries if e['carried'] not in ABSENT and not e['warps'])},
             'standings': standings, 'declarations': sum(g['n'] for g in standings), 'reach': _bars(REACH, reach),
@@ -367,17 +389,21 @@ function sv(tag,attrs){const n=document.createElementNS(SVG,tag);for(const k of 
 const G=new Map(D.groups.map(g=>[g.id,g]));const W=new Map(D.warp.map(w=>[w.id,w]));
 const ZH=new Map(D.relations.map(r=>[r.en,r.zh]));
 const OUT={'carried':'Carried','carried-in-part':'In part','changed':'Changed','history-only':'Only in history','not-carried':'Not carried','fresh-reading':'Proposed here'};
-const OUT_LONG={'carried':'The live account states this at the same scope.','carried-in-part':'It states part of this.','changed':'It takes up the topic and says something else, or withdrew the claim.','history-only':'It stands only in history, a study or sources, not in the live account.','not-carried':'Not found anywhere in the live account.','fresh-reading':'The account does not state this connection; an AI reader proposes it here.'};
+const OUT_LONG={'carried':'The live account states this at the same scope.','carried-in-part':'It states part of this, in its own sentence. The rest is under The source adds.','changed':'It takes up the topic and says something else, or withdrew the claim.','history-only':'It stands only in history, a study or sources, not in the live account.','not-carried':'Not found anywhere in the live account.','fresh-reading':'The account does not state this connection; an AI reader proposes it here.'};
 const RELWORD={'agreement':'Agreement','scope':'Scope','divergence':'Divergence','contrary-reading':'Contrary reading'};
 const LOOSE=new Set(['history-only','not-carried']);
-const S={view:'loom',focus:null,rel:new Set(D.relations.map(r=>r.en)),out:new Set(D.carried.map(c=>c.en).filter(c=>!LOOSE.has(c))),side:'folders',looseTab:'not-carried',onlyDiffer:false};
+const OF={'law':'of a law','thesis-or-method':'of a thesis or method','reading':'of a reading'};
+const OF_LONG={'law':'The source’s mechanism has the form of a checked law.','thesis-or-method':'It agrees with a thesis, a method section, a Reading or a front, not with a law.','reading':'A law is cited, but the join is a reader’s, or the reading descends from this source.'};
+const ROLE={'neighbour':'Beside it, not carrying it','limit':'Where the account stops'};
+const S={view:'loom',focus:null,of:new Set(Object.keys(OF)),rel:new Set(D.relations.map(r=>r.en)),out:new Set(D.carried.map(c=>c.en).filter(c=>!LOOSE.has(c))),side:'folders',looseTab:'not-carried',onlyDiffer:false};
 const T=D.totals;
 function fmt(n){return Number(n).toLocaleString('en-US');}
 function link(path,label){const text=label||path;if(!path)return text;return D.base===null?el('code',{},text):el('a',{href:D.base+path},text);}
-function shown(e){return S.out.has(e.carried)&&(!e.relation||S.rel.has(e.relation));}
+function shown(e){return S.out.has(e.carried)&&(!e.relation||S.rel.has(e.relation))&&(e.relation!=='agreement'||S.of.has(e.agreement_of));}
 
-document.getElementById('lede').textContent=fmt(T.entries)+' claims from '+T.folders+' earlier folders and '+T.domains+' domains of thought, each read against the live account. '+fmt(T.entries-T.loose)+' connect to something it states or can be read against; '+fmt(T.loose)+' do not.';
-document.getElementById('sublede').textContent='Every thread is an AI reading that had three independent reads and no person’s. A thread is not proof, a shared word is not a correspondence, and agreement is drawn no more prominently than divergence. '+fmt(T.from_knowledge)+' entries rest on the AI’s knowledge of a text not stored here, unchecked against that text.';
+const stated=(T.carried['carried']||0)+(T.carried['carried-in-part']||0);const of=T.agreement_of;
+document.getElementById('lede').textContent=fmt(T.entries)+' claims from '+T.folders+' earlier folders and '+T.domains+' domains of thought, each read against the live account. It states '+fmt(stated)+' in whole or in part and takes up '+fmt(T.carried['changed']||0)+' to say otherwise. '+fmt(T.carried['fresh-reading']||0)+' it does not state: a reader proposes the connection here. '+fmt(T.loose)+' did not carry.';
+document.getElementById('sublede').textContent='Every thread is an AI reading, and no person’s. Of '+fmt(T.relation.agreement||0)+' agreements, '+fmt(of.law||0)+' are with a checked law, '+fmt(of['thesis-or-method']||0)+' with a thesis or method, and '+fmt(of.reading||0)+' rest on a reader’s join. A thread is not proof, a shared word is not a correspondence, and agreement is drawn no more prominently than divergence. '+fmt(T.from_knowledge)+' entries rest on the AI’s knowledge of a text not stored here, unchecked against that text.';
 const stats=document.getElementById('stats');
 [['carried','carried'],['carried-in-part','in part'],['changed','changed'],['fresh-reading','proposed here'],['history-only','only in history'],['not-carried','not carried']].forEach(p=>stats.append(el('li',{},el('b',{},fmt(T.carried[p[0]]||0)),p[1])));
 
@@ -388,6 +414,8 @@ const nav=document.getElementById('views');VIEWS.forEach(v=>nav.append(el('a',{h
 const filters=document.getElementById('filters');
 function chip(label,on,toggle,cls){const b=el('button',{class:'chip','aria-pressed':String(on),onclick(){const now=b.getAttribute('aria-pressed')!=='true';b.setAttribute('aria-pressed',String(now));toggle(now);draw();}},cls?el('span',{class:'swatch '+cls+' c-'+cls}):null,label);return b;}
 D.relations.forEach(r=>filters.append(chip(RELWORD[r.en]+' '+(r.zh||''),true,on=>{on?S.rel.add(r.en):S.rel.delete(r.en);},r.en)));
+filters.append(el('span',{class:'sep','aria-hidden':'true'}));
+Object.keys(OF).forEach(k=>filters.append(chip('Agreement '+OF[k],true,on=>{on?S.of.add(k):S.of.delete(k);})));
 filters.append(el('span',{class:'sep','aria-hidden':'true'}));
 ['carried','carried-in-part','changed','fresh-reading'].forEach(c=>filters.append(chip(OUT[c],true,on=>{on?S.out.add(c):S.out.delete(c);})));
 
@@ -403,7 +431,7 @@ column('warp',D.warp,w=>el('button',{class:'node','data-id':w.id,onclick(){selec
 column('right',D.groups.filter(g=>g.side==='domains'),groupNode);
 const sidepick=document.getElementById('sidepick');
 [['folders','Earlier folders'],['domains','Domains']].forEach(p=>sidepick.append(el('button',{'aria-pressed':String(S.side===p[0]),'data-s':p[0],onclick(){S.side=p[0];loom.classList.toggle('side-folders',p[0]==='folders');loom.classList.toggle('side-domains',p[0]==='domains');sidepick.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.s===S.side)));draw();}},p[1])));
-document.getElementById('loomnote').textContent='Line weight grows with the number of readings. A short dotted end that reaches nothing is what stayed behind: only in history, or not carried. Faint threads are connections proposed here, not ones the account states. Choose a folder, a domain, a chapter or a thread.';
+document.getElementById('loomnote').textContent='Line weight grows with the number of readings. A short dotted end that reaches nothing is what stayed behind: only in history, or not carried. Faint threads are connections a reader proposes here, not ones the account states. Only a target the connection rests on draws a thread. Choose a folder, a domain, a chapter or a thread.';
 function threads(){const m=new Map();D.entries.forEach(e=>{if(LOOSE.has(e.carried)||!shown(e))return;const fresh=e.carried==='fresh-reading';e.warps.forEach(w=>{const k=[e.group,w,e.relation,fresh?'f':'c'].join('|');m.set(k,(m.get(k)||0)+1);});});return [...m.entries()].map(p=>{const q=p[0].split('|');return {group:q[0],warp:q[1],relation:q[2],fresh:q[3]==='f',n:p[1]};});}
 const OFFSET={'agreement':-3,'scope':-1,'divergence':1,'contrary-reading':3};
 function draw(){
@@ -425,15 +453,15 @@ function applyFocus(id){const ids=id?String(id).split('/'):[];svg.classList.togg
 function select(id){location.hash='#loom/'+id;}
 
 /* entries */
-function tags(e){const list=[];if(e.relation&&!LOOSE.has(e.carried))list.push(el('span',{class:'tag c-'+e.relation},el('span',{class:'mark'}),RELWORD[e.relation]+(ZH.get(e.relation)?' '+ZH.get(e.relation):'')));list.push(el('span',{class:'tag'},OUT[e.carried]));return list;}
+function tags(e){const list=[];if(e.relation&&!LOOSE.has(e.carried))list.push(el('span',{class:'tag c-'+e.relation},el('span',{class:'mark'}),RELWORD[e.relation]+(ZH.get(e.relation)?' '+ZH.get(e.relation):'')+(e.agreement_of?' '+OF[e.agreement_of]:'')));list.push(el('span',{class:'tag'},OUT[e.carried]));return list;}
 function entryCard(e,withGroup){const d=el('details',{class:'entry'});const sum=el('summary',{},withGroup?el('span',{class:'small'},G.get(e.group).title+' · '):null,el('b',{style:'font-weight:600'},e.name),el('br'),tags(e));d.append(sum);let done=false;d.addEventListener('toggle',()=>{if(done||!d.open)return;done=true;d.append(entryBody(e));});return d;}
 function entryBody(e){const b=el('div',{class:'body'});
 b.append(el('p',{},el('span',{class:'label'},'Its own sense '),e.sense));
 if(e.quote)b.append(el('p',{class:'quote'},e.quote));
 b.append(el('p',{class:'small'},e.basis==='read-in-repo'?link(e.work):e.work,', '+e.locator+(e.basis==='ai-knowledge'?'. From the AI’s knowledge of the text, not checked against it.':'')));
 b.append(el('p',{},el('span',{class:'label'},'Reading, by AI '),e.reading));
-b.append(el('p',{class:'warn'},OUT_LONG[e.carried]));
-e.targets.forEach(t=>{b.append(el('div',{class:'tgt c-'+(e.relation||'none')},el('div',{class:'small'},t.anchor?link(t.anchor):null,t.record?' · '+t.status+' ('+t.kind+')':''),t.says));});
+b.append(el('p',{class:'warn'},OUT_LONG[e.carried]+(e.agreement_of?' '+OF_LONG[e.agreement_of]:'')));
+e.targets.forEach(t=>{const carrying=t.role==='carries';b.append(el('div',{class:'tgt c-'+(carrying&&e.relation||'none')},el('div',{class:'small'},carrying?null:el('b',{},ROLE[t.role]+': '),t.anchor?link(t.anchor):null,t.part?' · '+t.part:'',t.record?' · '+t.status+' ('+t.kind+')':''),t.says));});
 if(e.account_adds)b.append(el('p',{},el('span',{class:'label'},'The account adds '),e.account_adds));
 if(e.source_adds)b.append(el('p',{},el('span',{class:'label'},'The source adds '),e.source_adds));
 if(e.searched)b.append(el('p',{class:'small'},'Searched: '+e.searched.join('; ')+(e.read&&e.read.length?'. Read: '+e.read.join('; '):'')));
@@ -444,7 +472,7 @@ function listByCarried(list,withGroup){const order=['divergence','contrary-readi
 const detail=document.getElementById('detail');
 function intro(){detail.textContent='';detail.append(el('div',{class:'label'},'What a thread says'),el('p',{},'A claim from a folder or a domain, in its own terms, read against what the live account states. The relations come from chapter 6: agreement, scope (it holds in a narrower place), divergence, and contrary reading.'),el('p',{class:'small'},'Start with a folder on the left, a domain on the right, or a chapter in the beam. Or turn off everything but divergence above.'));}
 function showGroup(g){detail.textContent='';const held=D.entries.filter(e=>e.group===g.id);
-detail.append(el('div',{class:'label'},g.side==='folders'?'Earlier folder · '+g.kind:'Domain of thought'),el('h2',{},g.title),el('p',{},g.summary),el('p',{class:'small'},g.n+' read here: '+Object.keys(OUT).filter(k=>g.by_carried[k]).map(k=>g.by_carried[k]+' '+OUT[k].toLowerCase()).join(', ')+'. Readers read '+g.read.length+' files in full, skimmed '+g.skimmed.length+', searched '+g.searched.length+'.'+(g.from_knowledge?' '+g.from_knowledge+' entries rest on the AI’s knowledge of a text not stored here.':'')));
+detail.append(el('div',{class:'label'},g.side==='folders'?'Earlier folder · '+g.kind:'Domain of thought'),el('h2',{},g.title),el('p',{},g.summary),el('p',{class:'small'},g.n+' read here: '+Object.keys(OUT).filter(k=>g.by_carried[k]).map(k=>g.by_carried[k]+' '+OUT[k].toLowerCase()).join(', ')+(g.by_relation.agreement?'; '+g.by_relation.agreement+' agreement, '+Object.keys(OF).filter(k=>g.by_agreement_of[k]).map(k=>g.by_agreement_of[k]+' '+OF[k]).join(', '):'')+'. Readers read '+g.read.length+' files in full, skimmed '+g.skimmed.length+', searched '+g.searched.length+'.'+(g.from_knowledge?' '+g.from_knowledge+' entries rest on the AI’s knowledge of a text not stored here.':'')));
 if(g.coverage){detail.append(el('div',{class:'label',style:'margin-top:12px'},'Present in the account'));(g.coverage.present||[]).forEach(p=>detail.append(el('p',{class:'small'},p.what+': '+(p.extent||''))));if((g.coverage.absent||[]).length){detail.append(el('div',{class:'label',style:'margin-top:8px'},'Absent'));g.coverage.absent.forEach(p=>detail.append(el('p',{class:'small'},p.en||p)));}}
 detail.append(el('div',{style:'margin-top:10px'},listByCarried(held)));
 if((g.not_mapped||[]).length){detail.append(el('div',{class:'label',style:'margin-top:12px'},'Found and not mapped'));g.not_mapped.forEach(n=>detail.append(el('p',{class:'small'},(n.en||n)+(n.why?' ('+n.why+')':''))));}}
@@ -455,7 +483,7 @@ function showThread(g,w){detail.textContent='';const held=D.entries.filter(e=>e.
 /* where they meet */
 function viewMeet(){const v=document.querySelector('[data-view=meet]');v.textContent='';const pts=S.onlyDiffer?D.points.filter(p=>p.differ):D.points;
 const both=el('button',{class:'chip','aria-pressed':String(S.onlyDiffer),onclick(){S.onlyDiffer=!S.onlyDiffer;viewMeet();}},'Only where the readings differ');
-v.append(el('h2',{},'Where they meet'),el('p',{class:'note'},'The records and sections that more than one folder or domain is read against: '+D.points.length+' of them, with '+D.single+' more read by one only. Being read against the same place is not agreement among them. Each was read apart, and none speaks for the others.'),el('div',{class:'filters'},both));
+v.append(el('h2',{},'Where they meet'),el('p',{class:'note'},'The records and sections that more than one folder or domain is read against: '+D.points.length+' of them, with '+D.single+' more read by one only. Only a target the connection rests on counts here. Being read against the same place is not agreement among them, and each was read apart, none speaking for the others. A place read by many may only be one that fits many: a near-definitional law or a general section gathers readings without explaining them.'),el('div',{class:'filters'},both));
 pts.forEach(p=>{const by=new Map();p.readings.forEach(r=>{if(!by.has(r.group))by.set(r.group,new Set());by.get(r.group).add(r.relation);});const readers=[...by.entries()].map(q=>el('span',{class:'reader'},[...q[1]].map(rel=>el('span',{class:'mark c-'+rel,title:RELWORD[rel]||''})),G.get(q[0]).title));
 const a=el('article',{class:'point'},el('h3',{},p.title),el('div',{class:'small'},p.anchor?link(p.anchor):null,p.status?' · '+p.status+' ('+p.kind+')':'',' · '+p.groups+' read against it'+(p.differ?' · their relations differ':'')),el('div',{class:'readers'},readers));
 const more=el('details',{class:'entry'},el('summary',{},el('span',{class:'small'},'What each reads')));let done=false;more.addEventListener('toggle',()=>{if(done)return;done=true;const list=el('div',{class:'body'});p.readings.forEach(r=>{const e=D.entries.find(x=>x.id===r.entry);list.append(entryCard(e,true));});more.append(list);});a.append(more);v.append(a);});}
@@ -486,9 +514,9 @@ const test=tab[2];if(test){D.groups.forEach(g=>{const held=D.entries.filter(e=>e
 else{const list=S.looseTab==='absent'?absent:unmapped;let last=null;list.forEach(i=>{if(i.g!==last){v.append(el('h3',{style:'margin-top:16px'},i.g.title));last=i.g;}v.append(el('p',{class:'small',style:'margin:4px 0'},i.text));});}}
 
 function viewMethod(){const v=document.querySelector('[data-view=method]');v.textContent='';
-v.append(el('h2',{},'How it was read'),el('p',{class:'note'},'Each folder and domain had a mapper, a reviser and a checker told to refute, then one critic read the whole. All are AI, and no person has read any of it. What a reader only searched is listed apart from what it read. A source not stored here is paraphrased from the AI’s knowledge and has no quotation to check.'),el('p',{class:'small'},link('theories/becoming/results/atlas/CROSSWALK.md','The crosswalk'),' is the same data as text, with every target’s standing as its record says.'));
-const head=['Folder or domain','Entries','Files read','Skimmed','Searched','From AI knowledge'].concat(Object.values(OUT)).concat(Object.values(RELWORD));
-const t=el('table',{},el('thead',{},el('tr',{},head.map(h=>el('th',{scope:'col'},h)))));const body=el('tbody');D.groups.forEach(g=>{body.append(el('tr',{},[g.title,g.n,g.read.length,g.skimmed.length,g.searched.length,g.from_knowledge].concat(Object.keys(OUT).map(k=>g.by_carried[k]||0)).concat(Object.keys(RELWORD).map(k=>g.by_relation[k]||0)).map(x=>el('td',{},x))));});t.append(body);v.append(el('div',{class:'tablewrap'},t));}
+v.append(el('h2',{},'How it was read'),el('p',{class:'note'},'Each folder and domain had a mapper, a reviser and a checker told to refute. A critic read the whole and found the labels overstating the readings, so each item had a repair by a new reader, like claims were compared across items by the targets they share, and a second critic read a random sample. All are AI, and no person has read any of it. What a reader only searched is listed apart from what it read. A source not stored here is paraphrased from the AI’s knowledge and has no quotation to check.'),el('p',{class:'small'},link('theories/becoming/results/atlas/CROSSWALK.md','The crosswalk'),' is the same data as text, with every target’s standing as its record says.'));
+const head=['Folder or domain','Entries','Files read','Skimmed','Searched','From AI knowledge'].concat(Object.values(OUT)).concat(Object.values(RELWORD)).concat(Object.keys(OF).map(k=>'Agreement '+OF[k]));
+const t=el('table',{},el('thead',{},el('tr',{},head.map(h=>el('th',{scope:'col'},h)))));const body=el('tbody');D.groups.forEach(g=>{body.append(el('tr',{},[g.title,g.n,g.read.length,g.skimmed.length,g.searched.length,g.from_knowledge].concat(Object.keys(OUT).map(k=>g.by_carried[k]||0)).concat(Object.keys(RELWORD).map(k=>g.by_relation[k]||0)).concat(Object.keys(OF).map(k=>g.by_agreement_of[k]||0)).map(x=>el('td',{},x))));});t.append(body);v.append(el('div',{class:'tablewrap'},t));}
 
 const VIEWFN={meet:viewMeet,root:viewRoot,corpus:viewCorpus,loose:viewLoose,method:viewMethod};const drawn=new Set();
 function route(){const raw=(location.hash||'#loom').slice(1).split('/');const view=VIEWS.some(v=>v[0]===raw[0])?raw[0]:'loom';S.view=view;

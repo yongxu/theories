@@ -1,0 +1,651 @@
+{
+  "group": {
+    "id": "other-indian",
+    "domain": "other-indian",
+    "title": {"en": "Indian thought other than Buddhism: Gītā, Upaniṣads, karma doctrine, Jain, Sāṃkhya-Yoga, Nyāya-Vaiśeṣika, Advaita, Cārvāka, Arthaśāstra"},
+    "kind": "domain",
+    "summary": {"en": "Absent from the live account as a body of thought, by search: a Sanskrit gloss on 无明 and two passing 'karmic' clauses, none citing an Indian text. Every fresh entry is proposed from AI knowledge, unchecked against any text, with no reader from these traditions. Of 27 entries: 11 divergence, 8 scope, 4 agreement, 2 contrary reading, 2 history-only. Divergence falls chiefly on a non-relational self and on release from continuing. Structural agreement is not agreement in meaning, and no tradition is spoken for."},
+    "read": [
+      "BRIEF.md in full",
+      "../aa-attractor-atlas/PLAN.md §6.3 and §6.4",
+      "../aa-attractor-atlas/readers-2026-11-04/correspondences.md in full",
+      "reads/other-indian.1-map.json in full",
+      "theories/becoming/chapters/08-METHOD.md #one-relational-unfolding, through the start of the explanatory reading, each line cut at 2,600 characters",
+      "theories/becoming/chapters/06-CLASSICAL-TEXTS.md #three-relations",
+      "theories/becoming/chapters/07-SIGNIFICANCE.md: §3 opening, §3.4, §4 opening and table, §4.7 (each line cut at 900 to 2,200 characters), T5 and T8 cut at 1,300, the readings around #r-reach-past-ones-own-end",
+      "theories/becoming/chapters/03-KNOWING.md: #r-seeking-boundary through the reading on 无明",
+      "theories/becoming/chapters/01-ROOT.md §1 opening, §3 opening",
+      "theories/becoming/chapters/05-COLLECTIVES.md: the thesis at #collectives",
+      "GLOSSARY.md's meta-attractor line",
+      "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/RELATIONAL-GOODNESS-SOURCES.md §1 to §5, each line cut at 620 characters",
+      "theories/meta-attractor/README.md lines 101 and 462, cut at 1,500 characters",
+      "theories/becoming/review/BUDDHIST-THOUGHT.md B-32's known weakness and question 66, and the list of gaps at line 527"
+    ],
+    "skimmed": [
+      "For each record cited (35): the summary line, the first three laws and the start of the conditions and does-not-show lists, each line cut at 240 to 420 characters; for eight of them more of the laws. Each record's standing checked at its home anchor, first 110 characters. Where a home is a table row, the standing is the record's"
+    ],
+    "searched": [
+      "The live account (fronts, chapters, review/, GLOSSARY.md, records) for: gita, gītā, bhagavad, upanishad, upaniṣad, samkhya, sāṃkhya, advaita, vedanta, vedānta, anekanta, ātman, purusha, puruṣa, nyaya, nyāya, karm, avidy, jain, hindu, sanskrit. Hits: 03's gloss, dossier B, and the two records with 'karmic'",
+      "Chapters, review/*.md, GLOSSARY.md and ONE-PAGE.md for the whole words atman, yoga, dharma, brahman, maya: none",
+      "Chapters, GLOSSARY.md, ONE-PAGE.md, THE-THEORY-OF-BECOMING.md and review/*.md for 印度, 吠檀多, 数论, 耆那, 薄伽梵, 梵语, 梵文, 业力, 业报, 外道, 奥义书, 梵: only 梵 in dossier B, as a marker of Sanskrit",
+      "Chapters, review/PHILOSOPHY.md and ONE-PAGE.md for a rival value of ending under another name: antinatal, benatar, pessimis, schopenhauer, negative utilitar, renounc, renunci, better never: none",
+      "Chapters and review/ for bradley and regress: no argument against relation under those names",
+      "Chapters, GLOSSARY.md and ONE-PAGE.md for consciousness, qualia, what an experience: 03's list of what is not composed, and 08's live defeater",
+      "The mapper's further search list (group.searched of reads/other-indian.1-map.json) is not repeated here: its absences were rechecked only for the terms above"
+    ],
+    "not_mapped": [
+      {"en": "Mīmāṃsā: intrinsic validity of cognition (svataḥ prāmāṇya), apūrva as an unseen link from rite to fruit, the authorless Veda as warrant.", "why": "Default standing until defeated sits beside what-a-finite-stretch-verifies, which says a reading no finite record refutes may keep standing, but that law gives no default. A shape, no mechanism on my present knowledge. A later read may."},
+      {"en": "Bhartṛhari on the word-principle and the sentence as the primary unit of meaning.", "why": "Candidates in 03 and 05's shared codes are word matches on my present knowledge; no mechanism named."},
+      {"en": "Rāmānuja's inseparable relation (apṛthak-siddhi), Viśiṣṭādvaita, Dvaita, bhakti traditions, Kashmir Śaiva recognition and spanda, Tantra.", "why": "Rāmānuja's looks the closest Vedānta to a relational start and deserves its own reader. I could not name a law it has the form of, past a shared phrase beside separation-loses-the-relation, and BRIEF asks for a mechanism or no entry."},
+      {"en": "Ājīvika fate (niyati); the Nāsadīya hymn; Tirukkural and Tamil ethics; Sikh thought.", "why": "Known to me mostly through summaries; flattening is the likelier error."},
+      {"en": "The three guṇas; yuga decline; asuric traits as rule-rewriting (the last two named in the meta-attractor README).", "why": "No mechanism beyond naming; a ratio of three strands has no law I can state against it, and yuga drift is a cosmology."},
+      {"en": "Holding the world together (lokasaṃgraha, Gītā 3.20-25); dharma protecting those who protect it.", "why": "Tempting beside 生生 and giving that waits on giving, but on my reading a shared word and a shared mood. Named once in the entry on release, as an internal counter."},
+      {"en": "Varṇa order as the social content of svadharma, and its harms.", "why": "A practice with a history, not a claim to map here. Touched where the entry on niṣkāma-karma says its rule of conduct rests on a given order. It should not be silently left out of any reading of the Gītā."},
+      {"en": "All Buddhist schools, and the twelve links.", "why": "These belong to the separate domain `buddhist`, PLAN §6.3 row 2."}
+    ],
+    "coverage": {
+      "present": [
+        {"what": "A gloss on 无明 as Sanskrit avidyā, in one reading paragraph; dossier B questions whether to keep it", "where": "theories/becoming/chapters/03-KNOWING.md#r-seeking-boundary", "extent": "One parenthesis, plus review/BUDDHIST-THOUGHT.md B-32 and question 66. Buddhist in context; taken up in cx-oi-avidya"},
+        {"what": "'in Ren's karmic reading, after a reverse the levels show no difference and the history does'", "where": "theories/becoming/results/records/entropy-history-and-record.md", "extent": "One clause in a correspondence section; no Indian text cited"},
+        {"what": "'The readings as entropy, as karmic passing and as physics are the AI's.'", "where": "theories/becoming/results/records/recurrence-without-premise.md", "extent": "One clause in a correspondence section; no Indian text cited"},
+        {"what": "The step of invariance's prior form across drawings, 'the reductionist step of Parfit (1984) and Siderits (2003)'", "where": "theories/becoming/chapters/07-SIGNIFICANCE.md#step", "extent": "One citation, of modern authors, Siderits on Buddhist reductionism; nothing Hindu or Jain"},
+        {"what": "Karma and the agent in Chinese Buddhist texts, 《观业品》", "where": "theories/becoming/review/BUDDHIST-THOUGHT.md#b-01", "extent": "Mentioned in B-01; the dossier lists it as a gap. Belongs to the Buddhist domain, not re-mapped here"}
+      ],
+      "absent": [
+        {"en": "The Bhagavad Gītā, the Upaniṣads, the Vedas: not named anywhere live.", "searched": ["gita", "gītā", "bhagavad", "upanishad", "upaniṣad", "薄伽梵", "奥义书"]},
+        {"en": "Karma as doctrine, rebirth, saṃsāra, mokṣa: no statement live beyond the two clauses under present.", "searched": ["karm", "业力", "业报"]},
+        {"en": "Jain thought: anekāntavāda, ahiṃsā as a doctrine, kevala.", "searched": ["jain", "耆那", "anekanta"]},
+        {"en": "Sāṃkhya, Yoga, Nyāya, Vaiśeṣika, Mīmāṃsā, Vedānta, Cārvāka: no school is named.", "searched": ["samkhya", "sāṃkhya", "数论", "yoga", "nyaya", "nyāya", "advaita", "vedanta", "吠檀多"]},
+        {"en": "Ātman or puruṣa, even as a position rejected: 08 forbids 'a self with a nature of its own' with no Indian form named.", "searched": ["atman", "ātman", "purusha", "puruṣa", "brahman"]},
+        {"en": "Ending or release as a rival value, under any name, Indian or not. T5 places a negative valuation, and goes no further.", "searched": ["antinatal", "benatar", "pessimis", "schopenhauer", "negative utilitar", "renounc", "renunci"]},
+        {"en": "The regress against relation as real, under Śaṅkara's name or Bradley's.", "searched": ["bradley", "regress"]},
+        {"en": "Indian political thought. The mapper's search for Kauṭilya is relied on here.", "searched": ["kautilya", "kauṭilya", "arthaś", "印度"]}
+      ]
+    }
+  },
+  "entries": [
+    {
+      "id": "cx-oi-gita-descent",
+      "name": {"en": "Gītā's descent from dwelling on objects to loss of discernment"},
+      "domain": "other-indian",
+      "group": "other-indian",
+      "source": {"work": "Bhagavad Gītā (anonymous, in the Mahābhārata)", "locator": "2.62-63; the exit at 2.64", "basis": "ai-knowledge"},
+      "sense": {"en": "Dwelling on sense objects gives attachment; attachment, desire; desire, anger (when thwarted, on Śaṅkara's gloss as I recall it); anger, delusion; delusion, confusion of memory; that, the loss of discernment (buddhi); and with that one perishes. The exit named next is moving among objects with senses free of attraction and aversion. Said of anyone, as moral psychology within a teaching on a steady mind."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {"en": "Only two parts have a law's form. Memory and discernment lost read as a lumping coarsened: a merged pair supplies a lost choice. Desire thwarted reads beside seeking locked onto a target not met at rest, 03's reading of 无明. No law gives one link from the last, or the ruin. As recalled the text states a chain, not a loop; the law on chains is a worst case on supplied strengths, cited only for that difference. [AI reading]"},
+      "targets": [
+        {"record": "selection-when-the-lumping-changes", "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-when-the-lumping-changes", "says": {"en": "Theorem: every selection through an old lumping, an equivalence, is expressible through a new one exactly where new indistinguishability implies old; a pair the new makes alike and the old tells apart gives a lost selection. States no requirement to retain every distinction."}},
+        {"record": "seeking-boundary", "anchor": "theories/becoming/chapters/03-KNOWING.md#r-seeking-boundary", "says": {"en": "Theorem: under a determined law the orbit comes to rest with its target met exactly where it reaches a state the law leaves unchanged that meets the target; how a target forms is not modelled. Reading [AI, D26, D41, D45]: 无明 is seeking locked onto a target that cannot be met at rest."}},
+        {"record": "how-a-carried-difference-grows", "anchor": "theories/becoming/chapters/02-MAP.md#r-how-a-carried-difference-grows", "says": {"en": "Theorem (World): over all laws with supplied strengths, where no loop lies upstream every gap is at most a polynomial in the steps. Runaway is of the most difference that can arrive; which strengths or loops a world has is not shown."}}
+      ],
+      "account_adds": {"en": "The exact condition for a lost selection, without calling the loss a ruin; that a chain and a loop differ in how much difference can arrive."},
+      "source_adds": {"en": "The causal order among dwelling, attachment, desire, anger and delusion, and that lost discernment destroys the person. 03 lists motivation and affect as not composed, and does not model how a target forms."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-oi-yoga-wheel",
+      "name": {"en": "The wheel of mental act and trace (vṛtti and saṃskāra)"},
+      "domain": "other-indian",
+      "group": "other-indian",
+      "source": {"work": "Patañjali, Yoga Sūtra, with the bhāṣya attributed to Vyāsa", "locator": "bhāṣya on 1.5; sūtras 1.2-3, 1.12-14, 1.50 (recalled, wording not checked)", "basis": "ai-knowledge"},
+      "sense": {"en": "Mental acts leave traces and traces produce further mental acts of the same kind, so the wheel of act and trace turns without pause. Afflicted acts feed afflicted traces. Long unbroken practice and non-attachment still it, a trace from concentration blocking other traces; the end is cessation of mental acts (nirodha), when the seer abides in its own form."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {"en": "Here a loop is stated. Its form is a rule read from the count of its own choices: on a simplified two-policy model such a rule, in sync under a standing score, never leaves the region its threshold sets. 02 reads counting the action taken as the value-free habit. Practice laying traces fits that law's named edge, a moved count locking the other way. The aim of cessation, and any affliction, do not map. [AI reading]"},
+      "targets": [
+        {"record": "capture-by-counted-choices", "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-by-counted-choices", "says": {"en": "A rule read from the count of its choices, in sync under a standing score, never leaves the region its threshold sets and outlives an unread loss; one count moved locks the other way. Not shown: that actual agents count so; the overtraining effect the lock matches in rats has failed to replicate in humans (de Wit and others 2018). No evaluation enters."}}
+      ],
+      "account_adds": {"en": "An exact lock and its edges on a stated model, and that its score stands, so it is not the account's meta-attractor."},
+      "source_adds": {"en": "The affliction of traces, a discipline for changing them, and cessation of mental acts as the goal, with a seer standing apart from them."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-oi-nishkama-karma",
+      "name": {"en": "Acting without attachment to the fruit (niṣkāma-karma), under one's own duty"},
+      "domain": "other-indian",
+      "group": "other-indian",
+      "source": {"work": "Bhagavad Gītā", "locator": "2.47, 3.19, 3.30, 3.35, 18.25", "basis": "ai-knowledge"},
+      "sense": {"en": "One has a claim on the act, not its fruits: act, without attachment to the fruit, and do not retreat into inaction. This does not mean ignoring results: 18.25 faults acting without regard to consequence, loss or harm. What to do is given by one's own duty (svadharma) and, later in the text, by offering the act to the Lord. The aim is freedom from bondage by acts."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "Part has a law's form: a rule not read from what returns to the selector fails closed capture's premise, so cannot lock by the share. But a rule set by a given duty reads no loss either, and what a loop does not read does not change it; 18.25's regard for harm is what would. The exit 02 names is a reading of what lies beyond the share. The text's duty is unconditional; a ranking here needs C or a premise. [AI reading]"},
+      "targets": [
+        {"record": "closed-capture", "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture", "says": {"en": "Theorem: in a selection whose rule, and how the rule is read, are read from the share it selects, a loss the loop does not read leaves it locked, and a change of the reading is absorbed; what leaves is a change of the law, such as a reading of what lies beyond the share. That any actual rule is so formed is a premise."}},
+        {"record": "what-the-step-across-standpoints-reaches", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-the-step-across-standpoints-reaches", "says": {"en": "Does not show: a right or a duty. Gewirth's step from a needed good to a claim on others has no counterpart; significance is from a standpoint and claims nothing of anyone."}},
+        {"record": null, "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order", "says": {"en": "The continuation condition fixes scope and C (widening what can form is better) gives order. Neither is asserted. A ranking of courses needs C or a premise in its place."}}
+      ],
+      "account_adds": {"en": "Says what a capture loop needs to leave it, and keeps not being moved by a gain apart from reading a loss."},
+      "source_adds": {"en": "A duty by station, resting on a given social order; the Lord as recipient of acts; detachment as a discipline of motive. The account has no law of motive."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-oi-yajna-wheel",
+      "name": {"en": "The wheel of food, rain and offering"},
+      "domain": "other-indian",
+      "group": "other-indian",
+      "source": {"work": "Bhagavad Gītā", "locator": "3.10-16", "basis": "ai-knowledge"},
+      "sense": {"en": "Beings come from food, food from rain, rain from offering (yajña), offering from action. Gods and humans nourish one another. Whoever takes without giving back is a thief, and whoever does not keep this wheel turning lives in vain. A cosmic reciprocity, stated as obligation; commonly read in the older line of ṛta, the order that offering upholds."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "scope",
+      "reading": {"en": "The form is a feeding loop whose giving waits on giving. Scope: with memory one withholding ends all giving it reaches, and restoring needs another law, one that gives first; without memory it returns round the loop. Read as closed on itself, the wheel meets a law: under balance and dissipation a continuing enclosed finite family cannot be fed from nothing beyond it. The laws give no thief and no 'in vain'. [AI reading]"},
+      "targets": [
+        {"record": "giving-that-waits-on-giving", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-giving-that-waits-on-giving", "says": {"en": "Theorem (any formations and relation of waiting): with memory one withholding ends all giving in a family it reaches; without memory it returns around every loop. In Ring, restoring needs a law in which one gives whatever it waits on. Not shown: how waiting forms, or that cooperation is good, or which giving supports 生生."}},
+        {"record": "continuing-self-fed-from-beyond", "anchor": "theories/becoming/chapters/02-MAP.md#r-continuing-self-fed-from-beyond", "says": {"en": "Theorem (World): under balance and dissipation, a finite family without repetition, enclosed around from some step on and taken from or rising at arbitrarily late steps, cannot from any step on be fed from nothing beyond it. Says only that what lies beyond must be counted, not that it ought to be."}},
+        {"record": "feeding-closure", "anchor": "theories/becoming/chapters/02-MAP.md#r-feeding-closure", "says": {"en": "Theorem (World; no premise): what a continuation depends on is its feeding closure, the least region holding it closed under feeding; a formation beyond it gives nothing at any step to a condition a member then requires."}}
+      ],
+      "account_adds": {"en": "When a withholding spreads, returns or ends the giving; that restoring takes a different law; that an enclosed loop still needs feeding from beyond."},
+      "source_adds": {"en": "Gods as partners in the loop, ritual as the act of giving, and the verdict that taking without return is theft: an obligation the laws do not give."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-oi-karma-residue",
+      "name": {"en": "An act leaves a residue: as one acts, so one becomes"},
+      "domain": "other-indian",
+      "group": "other-indian",
+      "source": {"work": "Bṛhadāraṇyaka Upaniṣad; Patañjali, Yoga Sūtra", "locator": "BU 4.4.5; YS 2.12-13 (recalled)", "basis": "ai-knowledge"},
+      "sense": {"en": "An act does not finish when done. It leaves a residue (karmāśaya, saṃskāra) stored until it ripens, which conditions later experience and acts; a person becomes what they do. In the classical schools the residue has a moral quality and ripens as fruit. They differ on whether rite, expiation or knowledge can burn it."},
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {"en": "The account names this twice in passing, from an analogy and not from any text. Under balance an exchange with its reverse restores every level while the history counts both: a trace outlasting a restored state. But that history is a count on the run; in that law it conditions nothing later. And a present held by a list forgets: two different histories share one present. So 'every act stored' cannot hold of a finite present; a store with no list is outside that law. [AI reading]"},
+      "targets": [
+        {"record": "entropy-history-and-record", "anchor": "theories/becoming/chapters/02-MAP.md#r-entropy-history-and-record", "says": {"en": "Theorem (World): with no premise a family's history of exchanges never shrinks; under balance an exchange with its reverse restores every level while the history counts both. The record's correspondence adds: 'in Ren's karmic reading, after a reverse the levels show no difference and the history does'."}},
+        {"record": "recurrence-without-premise", "anchor": "theories/becoming/chapters/01-ROOT.md#r-recurrence-without-premise", "says": {"en": "Theorem (any type): a kept history merges nothing, never returns and is held by no list; a listed present forgets, two kept histories sharing one present, with no count of what is forgotten. The correspondence says: 'The readings as entropy, as karmic passing and as physics are the AI's.'"}},
+        {"record": "endpoint-loss-and-return", "anchor": "theories/becoming/chapters/02-MAP.md#r-endpoint-loss-and-return", "says": {"en": "Theorem (any process): every configuration reachable from s is reachable from t exactly when t leads back to s. Returning to an equal configuration does not erase the history between. Physical irreversibility does not follow."}}
+      ],
+      "account_adds": {"en": "Which premises the trace needs: history's growth none, restoring levels balance. It separates levels, history and what a present can hold."},
+      "source_adds": {"en": "Not stated live: that the residue is stored, shapes later disposition and character, carries moral quality, ripens as fruit and can be burned. The nearest law of a trace conditioning later acts is cx-oi-yoga-wheel's. No Indian text is cited for 'karmic' in either record."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-oi-karma-analogy-history",
+      "name": {"en": "The repository's own karma analogy: effects become later causes, good making good easier"},
+      "domain": "other-indian",
+      "group": "other-indian",
+      "source": {"work": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/RELATIONAL-GOODNESS-SOURCES.md", "locator": "§1 and §2", "basis": "read-in-repo"},
+      "sense": {"en": "A 6 October 2026 AI-authored genealogy reports Ren's 'kind sounds like karma' and an AI-drafted July text that calls karma action's continuing structural consequences in oneself, others and environment. Its claims: effects become later causes, and good karma makes the next good easier; it rejects fatalism and guarantees no intended outcome. It disclaims any statement about all Buddhist meanings of karma, and cites no Indian text."},
+      "quote": "善业使下一善愈易",
+      "carried": "history-only",
+      "relation": null,
+      "reading": {"en": "It stands in that genealogy and in theories/becoming/history/UNIFIED-ETHICAL-GROUNDING.md, and goes back to sources/12 and sources/07. A modern analogy, not a reading of Indian texts. Live, conditions conditioning later occurrences is the root's net, with no valence. 'Good makes good easier' is not stated: a ranking needs C or a premise in its place, and no dynamic is good or bad. [AI reading]"},
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {"en": "A claim that goodness propagates through changed conditions. The genealogy itself warns that goodness and propagation cannot validate each other circularly."},
+      "absence": {"searched": ["karm across the live account", "果为后因", "善业"], "read": ["RELATIONAL-GOODNESS-SOURCES.md §1 to §5, lines cut at 620 characters", "the grep lines of UNIFIED-ETHICAL-GROUNDING.md that name karma"]},
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-oi-karma-across-carriers",
+      "name": {"en": "Karma as reproduction across carriers: a pattern passing from life to life"},
+      "domain": "other-indian",
+      "group": "other-indian",
+      "source": {"work": "Brahmanical, Sāṃkhya and Jain rebirth doctrine: Bṛhadāraṇyaka Upaniṣad; Sāṃkhya-kārikā; Tattvārtha Sūtra", "locator": "BU 4.4.3-5; SK 40-42 (subtle body); TS book 8 (recalled)", "basis": "ai-knowledge"},
+      "sense": {"en": "What was done and desired conditions a next birth, so a pattern goes on through bodies that end, without beginning, for all beings. These schools name what carries it: a self with a subtle body, or a soul to which karmic matter clings. The carrier is claimed; it is not a mere pattern. (Buddhist series with no carrier are the other domain's.)"},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "scope",
+      "reading": {"en": "Bodies as brief carriers have the form of a pattern lasting through passing, under the passing premise, which is supplied. Under a coarser class a pattern goes on while a finer line ends. But continuation by itself cannot tell a fire passed on from one fire ending and another starting, so a pattern across births needs a stated relation between them. The doctrine inverts the law's terms: a lasting carrier through brief bodies. Not the account's meta-attractor. [AI reading]"},
+      "targets": [
+        {"record": "a-pattern-lasts-through-passing", "anchor": "theories/becoming/chapters/04-LIFE.md#r-a-pattern-lasts-through-passing", "says": {"en": "Theorem: a pattern present from T on whose carriers are brief for d lets no d consecutive steps pass without a carrier beginning (in double-negation form); under the passing premise it is passed across one of every d steps. Not shown: whether carrying forms by passing, or which formations pass."}},
+        {"record": "continuation-relative-to-a-class", "anchor": "theories/becoming/chapters/01-ROOT.md#r-continuation-relative-to-a-class", "says": {"en": "Theorem (root): for every carrier and relation, continuation is 缘 met with a class. Not shown: that a class is warranted, or that continuation contained in 缘 tells a fire passed on from one fire ending and another starting."}},
+        {"record": "reach-past-ones-own-end", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-reach-past-ones-own-end", "says": {"en": "Theorem (root; witnesses): on a line under a class, what continues past the end of a finer line lies within the line's continuing. Not shown: that one's own line runs under a class coarser than one's organism; the reach is conditional on the class."}},
+        {"record": null, "anchor": "GLOSSARY.md", "says": {"en": "Meta-attractor: closed capture. It never means the corpus's working definition, a recurrent organization reproducing its conditions across changes in its carriers; that sense is wider, and the formal 元吸引子 says nothing of carriers."}}
+      ],
+      "account_adds": {"en": "What going on across carriers requires, and that it depends on the class drawn. It also marks that the wide 'across carriers' sense is not its formal term."},
+      "source_adds": {"en": "An actual passage between lives, a carrier for it, and its reach over all beings without beginning. I found no relation between lives stated live other than descent and what passes through formed couplings."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-oi-karma-return",
+      "name": {"en": "The law of karma: no act is lost, and its fruit returns to the doer in kind"},
+      "domain": "other-indian",
+      "group": "other-indian",
+      "source": {"work": "Bṛhadāraṇyaka Upaniṣad; Brahmasūtra; general Hindu and Jain doctrine", "locator": "BU 3.2.13; BS 3.2.38-41 on who gives the fruit (recalled)", "basis": "ai-knowledge"},
+      "sense": {"en": "One becomes good by good action and bad by bad. The fruit reaches the doer, now or in a later birth, matched in moral kind, and suffering is thereby accounted for. Schools dispute the mechanism: a Lord who dispenses it, or an unseen potency arising from the act itself. Some doctrines allow transfer of merit or grace."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "The doctrine asserts return as unconditional and matched in value. On the World model 'return' means less: whatever a formation can affect can affect it, exactly where its loop is closed under affecting. An act whose difference stays beyond the coupling closure is selected alike with or without it. Return is conditional and has no sign. The law does not refute the doctrine: a relation across lives would be a further hypothesis, and 08 asks that it be stated. [AI reading]"},
+      "targets": [
+        {"record": "where-a-formations-acts-return", "anchor": "theories/becoming/chapters/03-KNOWING.md#r-where-a-formations-acts-return", "says": {"en": "Theorem (World; reach and influence read off one flow and one web): a formation's acts return, whatever it can affect being able to affect it, exactly where its loop is closed under affecting. Not shown: that a returning loop persists, or that a returning formation acts for anything."}},
+        {"record": "the-gap-for-ones-own-act", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-gap-for-ones-own-act", "says": {"en": "Theorem (World): where the rest follows one law of exchange reading through coupling, in two balanced flows, an act whose difference stays beyond the actor's coupling closure is selected alike by every selection through any member of the closure. Not shown: how large such consequences are, or that any act is wrong."}},
+        {"record": null, "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding", "says": {"en": "Thesis, argued, not proved. Its content is a demand on explanations: state the relation that carries what is cited, between which occurrences, where a law or a test can read it."}}
+      ],
+      "account_adds": {"en": "An exact condition for being able to return, and a named gap where acts do not reach the actor's selection."},
+      "source_adds": {"en": "A moral order in which nothing is lost and all suffering is accounted for. The account says nothing of this, and treats a loss beyond the closure as unread, not repaid."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-oi-karma-and-the-crux",
+      "name": {"en": "Karma on whose effects are one's own"},
+      "domain": "other-indian",
+      "group": "other-indian",
+      "source": {"work": "General karma doctrine; Manusmṛti", "locator": "Manusmṛti book 12 (locator unverified)", "basis": "ai-knowledge"},
+      "sense": {"en": "What one does to another is one's own in that its fruit is borne by the doer: harm to another comes back as one's own suffering and debt. One's own is thereby drawn by the act and its fruit, not by the body, which ends, nor only by what one intended: unintended acts too bear fruit on many accounts, though schools weigh intention differently."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "It looks like an answer to 07's crux and answers another question. The crux asks whether all one's effects are one's own 'in the sense of whose losses count, not of what one answers for', and leaves that open. Karma makes ownership answering. Ownership wider than intention sits beside the crux's agent-regret; its form meets the objection of the wrong bearer: a village's loss counts as mine. In the ethics the condition fixes scope and C order, neither asserted. [AI reading]"},
+      "targets": [
+        {"record": null, "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#crux", "says": {"en": "An AI reading, argued not proved. 'are all of one's effects one's own, in the sense of whose losses count, not of what one answers for?' For: ownership runs wider than intention and fault (agent-regret, Williams 1976). Against: 'A village's loss counted on my line counts as mine.' None is ruled out, and P4 is not shown."}},
+        {"record": null, "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order", "says": {"en": "The continuation condition fixes whose losses count, every continuation's, and ranks nothing; C ranks a course above every course it widens. Neither is asserted."}}
+      ],
+      "account_adds": {"en": "Keeps whose losses count apart from what one answers for, and the village's own loss apart from a loss to the doer."},
+      "source_adds": {"en": "Desert: that bearing the fruit is just, and a reason for the agent reaching through self-interest across lives."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-oi-atman-non-relational-self",
+      "name": {"en": "The unattached self, and Advaita's one reality"},
+      "domain": "other-indian",
+      "group": "other-indian",
+      "source": {"work": "Upaniṣads; Śaṅkara", "locator": "Bṛhadāraṇyaka 3.9.26 and 4.5.15 (neti neti, asaṅga); Chāndogya 6.8.7; Śaṅkara's preamble on superimposition to the Brahmasūtra-bhāṣya", "basis": "ai-knowledge"},
+      "sense": {"en": "The self (ātman) is 'not this, not that', unattached, untouched by acts. In Advaita it is one with Brahman, which alone is finally real; change and plurality hold at a lower level of truth, through superimposing the not-self on the self. Release is knowing this, and nothing is produced by it. Nonduality here is asserted as what is, from scripture and reasoning."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "This is what 08 forbids as an explanation: 'a self with a nature of its own'. Its argument is that a determination making no difference to how anything goes on explains nothing. Advaita agrees that the self makes no such difference and denies that going-on is final, so the two part before explanation starts. 'One' differs too: 08's is one unfolding, argued, with nonduality a method; Advaita's is the one without relation, held as the truth. [AI reading]"},
+      "targets": [
+        {"record": null, "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding", "says": {"en": "Thesis, argued, not proved. It forbids explanations, not observations: one that needs a determination no relation carries, such as a self with a nature of its own. Neither the laws nor the argument show reality has none. Two live arguments could defeat it: that relations need relata with natures of their own, and that what an experience is like is not how it relates."}},
+        {"record": "identity-across-steps", "anchor": "theories/becoming/chapters/01-ROOT.md#r-identity-across-steps", "says": {"en": "Theorem (World): labels carry nothing; following a formation depends on who continues whom. Continuity is one reading of identity, not its definition. Re-identification covers only one-to-one correspondence."}},
+        {"record": null, "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#three-relations", "says": {"en": "相分 includes setting up a non-relational layer. Whether a passage is relational is a demand of method, not a proof of ontology. Recording 相分 does not say the text is wrong."}}
+      ],
+      "account_adds": {"en": "What would defeat its own stance, and laws for three cases that look like refuters."},
+      "source_adds": {"en": "A witness beyond relation, two levels of truth, and release by knowledge. The second live defeater, what experience is like, is Advaita's home ground, and the account has no answer to it beyond naming it."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-oi-shankara-relation-regress",
+      "name": {"en": "Śaṅkara's regress against relation as real"},
+      "domain": "other-indian",
+      "group": "other-indian",
+      "source": {"work": "Śaṅkara, Brahmasūtra-bhāṣya; later Śrīharṣa, Khaṇḍanakhaṇḍakhādya", "locator": "on BS 2.2.13", "basis": "ai-knowledge"},
+      "sense": {"en": "Against Vaiśeṣika inherence: if inherence relates a quality to a substance, what relates inherence to them? Another relation, and so without end. Used to argue that difference and relation cannot be final, and only the relationless is. Later Advaita presses this on relation and difference generally."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "contrary-reading",
+      "reading": {"en": "It argues against the form the account begins with. The available reply: a relation is the one kind of symbol, a two-place predicate on a carrier, not a third thing needing a link, so no regress starts in the representation. That moves the question into the logic's primitive application and into equality on the carrier, which the model uses and does not derive. So the reply concerns the representation. Kept as a test; not claimed met. [AI reading]"},
+      "targets": [
+        {"record": null, "anchor": "theories/becoming/chapters/01-ROOT.md#one-kind-of-symbol", "says": {"en": "The grammar has one kind of symbol, a relation between occurrences. Definition: a relation (际) on a carrier is a two-place predicate. Telling alike occurrences apart uses equality on the carrier, a commitment of the model."}},
+        {"record": null, "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding", "says": {"en": "'That relations need relata with natures of their own' is a live argument. The nearest case in the account is equality on the carrier, which the model uses and does not derive; the thesis reads it as belonging to the representation, and that reading is not shown."}}
+      ],
+      "account_adds": {"en": "A formal language in which configurations, laws and parts, as represented, need no determination beyond relations."},
+      "source_adds": {"en": "The conclusion that the relationless is what is real. The regress is not argued against live, under this or Bradley's name."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-oi-self-in-all",
+      "name": {"en": "Seeing the self in all beings: widening concern by identity or by likeness"},
+      "domain": "other-indian",
+      "group": "other-indian",
+      "source": {"work": "Īśā Upaniṣad; Bhagavad Gītā", "locator": "Īśā 6-7; Gītā 6.29-32", "basis": "ai-knowledge"},
+      "sense": {"en": "One who sees all beings in the self and the self in all beings shrinks from none; one who measures another's pleasure and pain by likeness to oneself is highest. Concern reaches everything because, on this teaching, the self in fact does. It is a claim of what is so, realized in practice, not a premise."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "scope",
+      "reading": {"en": "Two routes the verses keep close and the account separates. Identity has the form of the own-closure reading: held de se along a relation, the presupposition is the root's condition at the one, with no step of invariance; which class is open, 'the one is not chosen'. Measuring by likeness has the form of the step across standpoints, argued. The text asserts identity as fact; the account leaves it unasserted. Scope is the condition, order C, neither asserted. [AI reading]"},
+      "targets": [
+        {"record": "the-continuation-condition-on-the-root", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-continuation-condition-on-the-root", "says": {"en": "Theorem and Conditional: the condition held de se along a relation is exactly the root's condition at the one of that relation taken as the net. Not shown: that any actual net meets the condition at any class, or which class a center's own line runs under; nor its warrant, nor anything about C."}},
+        {"record": "what-the-step-across-standpoints-reaches", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-the-step-across-standpoints-reaches", "says": {"en": "Theorem: from each standpoint's presupposition and standpoint-invariance, exactly the centers' continuation is forced to have significance, the condition only where every formation is a center; a standpoint's own presupposition forces exactly its closure. The step itself is a hypothesis."}},
+        {"record": null, "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#crux", "says": {"en": "Against, argued. The wrong bearer: 'A village's loss counted on my line counts as mine'; the condition counts it as the village's own, and to treat it as mine passes over the separateness of persons. The word may not survive the stretch."}}
+      ],
+      "account_adds": {"en": "The exact condition under which self-concern reaches everything, the difference from invariance, and the objection that 'own' may not survive the stretch."},
+      "source_adds": {"en": "That the identity is true and can be known firsthand, which then moves one. The account keeps warrant, recognition and motivation apart and claims none of them here."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-oi-purusha-witness",
+      "name": {"en": "Sāṃkhya's two ultimates: the witness that does not act and the nature that does"},
+      "domain": "other-indian",
+      "group": "other-indian",
+      "source": {"work": "Īśvarakṛṣṇa, Sāṃkhya-kārikā", "locator": "SK 11, 19-21, 57-59 (recalled)", "basis": "ai-knowledge"},
+      "sense": {"en": "Two kinds of ultimate: many conscious selves (puruṣa), witnesses that neither act nor change, and one unconscious nature (prakṛti), which through its three strands evolves intellect, ego, mind, senses and elements. All activity, thought included, is nature's, undertaken for the self's sake, as a dancer performs and withdraws once seen. Release is discerning the two apart. A dualism by its own statement."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "A clean case of what the account excludes as an explanation. In the account observation is a route. A witness reached by nothing reads nothing; one reached is in the web, where reading without responding is allowed, so not acting is not the parting. The parting is a reader no relation carries, and a cut given before any relation. One agreement sits inside: intellect and ego are formed in a process, with no separate agent there. [AI reading]"},
+      "targets": [
+        {"record": "observation-is-a-route", "anchor": "theories/becoming/chapters/03-KNOWING.md#r-observation-is-a-route", "says": {"en": "Theorem (World; balance): a stock couples into a formation only through a level it reads downstream; courses apart only in the stock are alike off its downstream. Not shown: that what lies downstream differs: a formation may read without responding."}},
+        {"record": "where-a-move-is-formed", "anchor": "theories/becoming/chapters/01-ROOT.md#r-where-a-move-is-formed", "says": {"en": "Theorem (any process): the move is the part's exactly where it is a policy of the part; one course does not fix whose move it is. Part and rest are given; which cut is apt is not shown."}},
+        {"record": null, "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding", "says": {"en": "Forbids, as an explanation, one that needs a determination no relation carries. Argued, not proved. 'what an experience is like is not how it relates' is named as a live argument that could defeat it."}}
+      ],
+      "account_adds": {"en": "A statement of what a reader needs in order to read. It asks each analytic split for its relational basis."},
+      "source_adds": {"en": "Consciousness apart from all process, many such selves, nature working for a purpose, and release as their separation. 03 lists consciousness among what it does not compose."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-oi-satkarya",
+      "name": {"en": "Is the effect already in its cause? Sāṃkhya against Nyāya-Vaiśeṣika"},
+      "domain": "other-indian",
+      "group": "other-indian",
+      "source": {"work": "Īśvarakṛṣṇa, Sāṃkhya-kārikā; Nyāya-Vaiśeṣika on the effect as a new beginning", "locator": "SK 9; Nyāya Sūtra book 4 on this dispute (locator unverified)", "basis": "ai-knowledge"},
+      "sense": {"en": "Sāṃkhya: the effect pre-exists in its material cause (satkāryavāda), since nothing comes of nothing, oil comes from sesame and not sand, and a cause yields what it can. Change is manifestation. Nyāya-Vaiśeṣika: the effect is a new whole that did not exist (asatkāryavāda), else production would be idle. Each is stated of causation in general."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "scope",
+      "reading": {"en": "Both sides grant that a cause yields only what it can; they dispute whether the effect already exists. Read on a law, the two need not collide. Along a course of a stated process nothing is added to the whole possible: 'only what it can'. What a course adds is the actual, a reading conditional on one stated process: 'new'. Sāṃkhya's stronger claim, pre-existence, is not stated. 'Possible' here is reachability, not the schools' sense. [AI reading]"},
+      "targets": [
+        {"record": "where-the-possible-grows", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-where-the-possible-grows", "says": {"en": "Theorem (root; any process, and witnesses): the possible relative to what is held grows only across steps changing what is held; along a course of a stated process nothing is added to the whole possible. Reading [AI, D45]: 'If the one unfolding were one stated process', what a course adds is the actual."}},
+        {"record": "where-novelty-gain-comes-from", "anchor": "theories/becoming/chapters/02-MAP.md#r-where-novelty-gain-comes-from", "says": {"en": "With the rest counted every rise is given, by the definition of the rest as the residual; under the first law a family without repetition gains from the rest or across its boundary; novelty and endless new formation need gain. Gain is not openness. Whether an actual part is open is correspondence."}}
+      ],
+      "account_adds": {"en": "Two exact senses of 'the possible', with the condition on each; that novelty is a matter of gain, not only of causal relation."},
+      "source_adds": {"en": "A theory of material cause and substance, and the argument from specific capacity (sesame, not sand). The account has no theory of material cause."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-oi-jain-sat",
+      "name": {"en": "The real as arising, ceasing and lasting, substance with its modes"},
+      "domain": "other-indian",
+      "group": "other-indian",
+      "source": {"work": "Umāsvāti, Tattvārtha Sūtra", "locator": "5.29-30, numbering differs by recension", "basis": "ai-knowledge"},
+      "sense": {"en": "What is real is endowed with arising, ceasing and lasting at once: a substance (dravya) lasts while its modes (paryāya) arise and cease. A gold bracelet melted into a ring ends as bracelet, begins as ring, and lasts as gold. So a thing is the same in one respect and different in another. Substances, such as souls and matter, are real kinds with natures."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {"en": "The bracelet has the form of the coarsening law: something can end under a finer class (shape) and not end under a coarser (gold), and it alters where it continues under one class and another tells the two apart. Under one class the marks exclude each other; 'at once' needs two classes. The parting: the Jain substance is a real kind with a nature, where the account's class is supplied, and constancy does not warrant it. [AI reading]"},
+      "targets": [
+        {"record": null, "anchor": "theories/becoming/chapters/01-ROOT.md#four-marks", "says": {"en": "Definition: under a class E an occurrence begins where it continues nothing, ends where nothing continues it, abides where something precedes and follows it; y alters from x where it continues x under E while another class tells the two apart. Theorem (root): beginning and abiding exclude each other, and so do abiding and ending."}},
+        {"record": "continuation-relative-to-a-class", "anchor": "theories/becoming/chapters/01-ROOT.md#r-continuation-relative-to-a-class", "says": {"en": "Theorem (root): no position stands by itself. Under a coarser class what abides under the finer abides; something can end under the finer class and not end under the coarser. Not shown: that a class is warranted: constancy says only that a class agrees with 缘."}}
+      ],
+      "account_adds": {"en": "These positions as definitions with theorems on them, including that a line's regularity is the class's core."},
+      "source_adds": {"en": "A fixed list of real substances, and all three marks predicated of the real as such, at one moment."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-oi-anekanta",
+      "name": {"en": "Many-sidedness (anekāntavāda): each claim holds in some respect"},
+      "domain": "other-indian",
+      "group": "other-indian",
+      "source": {"work": "Siddhasena Divākara, Sanmatitarka; Samantabhadra, Āptamīmāṃsā; Mallisena, Syādvādamañjarī", "locator": "locator unverified", "basis": "ai-knowledge"},
+      "sense": {"en": "Anything has many aspects. A claim holds in some respect (syāt), and a standpoint (naya) goes wrong only when taken for the whole. Seven forms combine is, is not and inexpressible. Jain authors place rival schools as partial truths; some apply many-sidedness to itself. Scholars dispute whether this is a logic of relative truth or a method of disputation."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "scope",
+      "reading": {"en": "'True in its respect' has the form of a claim read with its context: what such a system shows are the relata of one world, with no gluing used, and context-free description exists just where readings glue. So 'the respects compose into one view' is scoped: not shown of an unfolding, and quantum measurements' do not glue. PLAN's seeded law, the diagonal, has another ground, self-indexing, not many aspects: it reaches only the doctrine applied to itself. [AI reading]"},
+      "targets": [
+        {"record": "unity-of-readings", "anchor": "theories/becoming/chapters/01-ROOT.md#r-unity-of-readings", "says": {"en": "Theorem (World): what a contextual system shows, each claim with its context, are the relata of one world, with no gluing used; context-free description exists just where they glue. Not shown: that an unfolding's readings glue; quantum measurements' do not (a witness). Nothing stands or is exchanged in that world."}},
+        {"record": "continuation-relative-to-a-class", "anchor": "theories/becoming/chapters/01-ROOT.md#r-continuation-relative-to-a-class", "says": {"en": "Theorem (root): no position stands by itself: the positions depend on the class. Not shown: that a class is warranted."}},
+        {"record": "readings-within-what-they-read", "anchor": "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read", "says": {"en": "Theorem (any type): where a map moves every value, no member of a family of readings indexed by what it reads says the diagonal gap, so no family of claims says every reading. Gödel and halting lie outside its laws."}}
+      ],
+      "account_adds": {"en": "That being one world need not mean gluing into one description; a proof, for self-indexed families only, that none is complete."},
+      "source_adds": {"en": "An ethic of intellectual non-violence toward rivals, and the 'inexpressible' as a value. The account does not take up a logic of these seven forms."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-oi-kevala",
+      "name": {"en": "Omniscience (kevala-jñāna): knowing without a standpoint"},
+      "domain": "other-indian",
+      "group": "other-indian",
+      "source": {"work": "Umāsvāti, Tattvārtha Sūtra; Jain doctrine generally", "locator": "TS 1.29-30 and 10.1 (recalled)", "basis": "ai-knowledge"},
+      "sense": {"en": "Standpoints are partial, but a perfected soul has kevala: direct, simultaneous knowledge of all substances and all their modes, past, present and future, through no sense or mind. Many-sidedness thus describes ordinary knowers and not the highest. Kumārila and other Mīmāṃsakas denied any such person, so India holds its own contrary."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "Kevala is knowing through no coupling, which a checked law denies of a formation under its premises: what a center can know grows by at most one link a step. And 03 reads position as no defect: every formation selects from one. The diagonal law bites only if the knower's claims are indexed by what they read. Not refuted: a soul of this kind is outside the models, and the law says nothing of what is outside. [AI reading]"},
+      "targets": [
+        {"record": "what-a-center-can-know-by-a-step", "anchor": "theories/becoming/chapters/03-KNOWING.md#r-what-a-center-can-know-by-a-step", "says": {"en": "Theorem (World; deadline premises): no answer a center gives through its couplings differs by T unless a condition coupled into it lies within T − S links; what it can know grows by at most one link a step, along coupling."}},
+        {"record": "readings-within-what-they-read", "anchor": "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read", "says": {"en": "Theorem (any type): where a map moves every value, no family of claims says every reading; a family indexed by what it reads, over inhabited types with equality of values decided, is complete exactly where nothing differs."}},
+        {"record": "seeking-boundary", "anchor": "theories/becoming/chapters/03-KNOWING.md#r-seeking-boundary", "says": {"en": "Reading [AI, D26, D41, D45]: what grounds 无明 is the position every formation selects from, which reaches only what couples in; the position is not itself 无明."}}
+      ],
+      "account_adds": {"en": "Limits with premises, and the reading that partiality of position is no fault to be removed."},
+      "source_adds": {"en": "A completed knower as attainable, the end of the path, which the account's laws give no form for."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-oi-ahimsa",
+      "name": {"en": "Jain non-harm: every life counts, and taking is to be cut to the least"},
+      "domain": "other-indian",
+      "group": "other-indian",
+      "source": {"work": "Ācārāṅga Sūtra; Umāsvāti, Tattvārtha Sūtra", "locator": "Ācārāṅga, first book (locator unverified); TS book 7 (recalled)", "basis": "ai-knowledge"},
+      "sense": {"en": "All beings, down to earth-, water- and plant-bodied ones with one sense, wish to live and shrink from pain, so one must harm none. Harm also binds karma to the soul. Conduct cuts taking to the least: the ideal approaches ceasing activity, and a vowed fast to death (sallekhanā) is a sanctioned ending. Harm is weighed partly by the carelessness of the one acting."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "Scope comes near the continuation condition, but Jain scope is souls who wish; the condition says anything, unasserted, reading no wish. Order parts: Jain conduct ranks less taking above more; C ranks a course above what it widens. A law bears on it: under balance and dissipation recurring taking cannot close, and maintenance is such taking, so what goes on cuts taking down, not out. 07 licenses no ending. Neither premise is asserted. [AI reading]"},
+      "targets": [
+        {"record": null, "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#34-what-the-condition-does-not-settle", "says": {"en": "Under the condition every narrowing loses something with significance. Predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]; telling harm from non-harm among them needs a measure. No ending is licensed."}},
+        {"record": null, "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order", "says": {"en": "The continuation condition fixes scope and ranks nothing; C (widening what can form is better) gives order, and ranks no mixed comparison. Neither is asserted."}},
+        {"record": "no-finite-part-bears-taking", "anchor": "theories/becoming/chapters/02-MAP.md#r-no-finite-part-bears-taking", "says": {"en": "Theorem (World): under balance and dissipation, no finite family without repetition containing a family taken from at arbitrarily late steps is closed from any step on. Maintenance is such taking. Dissipation is vacuous where exchange reaches beyond every finite family."}},
+        {"record": "relation-level-law-of-easing", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-relation-level-law-of-easing", "says": {"en": "Theorem (World) and Conditional (C, for the ranking): restraint that lets no level fall and keeps taking part extends overdraw exactly where it includes a relation overdraw withholds, and C ranks it above. Not shown: restraint by abstaining, since a course that stops drawing loses its relations to the condition."}}
+      ],
+      "account_adds": {"en": "That abstaining and restraint differ under C, and that a living family's draw has a stated floor of premises."},
+      "source_adds": {"en": "One-sensed life as counted by name, the agent's carelessness as part of harm, and a chosen ending as a high attainment."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-oi-moksha",
+      "name": {"en": "Release as the highest aim: ending the round"},
+      "domain": "other-indian",
+      "group": "other-indian",
+      "source": {"work": "Upaniṣads; Sāṃkhya-kārikā; Yoga Sūtra; Nyāya Sūtra; Tattvārtha Sūtra", "locator": "for example Nyāya Sūtra 1.1.22; SK 68; YS 4.34; TS 10 (recalled)", "basis": "ai-knowledge"},
+      "sense": {"en": "Across most of these schools the round of birth and act is bondage or suffering, and the highest aim is its ending: mokṣa, kaivalya or apavarga, for Nyāya the absolute cessation of pain. It is not annihilation for most of them. Not all agree on the state: Vedāntins of devotion keep relation with the Lord, and the Gītā also asks acting to hold the world together (3.20)."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "It ranks less continuing above more, at least for what is released. T8 offers 生生 for life, scope from the condition, order from C, neither asserted. T5's bound, conjectured, says a narrowing ranked above its widening comes only from a negative valuation, a misreading or a framing. A renouncer can state the negative valuation openly, or deny any narrowing, since on Advaita nothing real is lost. Significance has no valence: one may keep the scope and refuse the order. [AI reading]"},
+      "targets": [
+        {"record": null, "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses", "says": {"en": "T8, thesis: for life, the way is 生生, compared by widening, with the continuation condition for scope and C for order. T5, thesis: among valuers counting everything positively, a ranking of a narrowing above its widening comes only from a negative valuation or a misread or framed case; the reduction proved for net weightings, the bound conjectured, the evidence role-play."}},
+        {"record": "a-narrowing-above-its-widening", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-narrowing-above-its-widening", "says": {"en": "Theorem (any type): a ranking of presentations puts a narrowing above its widening by one item only where it ranks that pair otherwise than its order on the kept sets does, or the item weighs at zero or below. Not shown: that a weight below zero is wrong, or that widening is better: that is C, a premise."}},
+        {"record": null, "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#condition", "says": {"en": "Reading [AI, D16]: significance is neither graded nor necessarily positive. The condition, not asserted, ranks nothing."}}
+      ],
+      "account_adds": {"en": "Keeps scope and order apart, so a refusal of continuing is located as a refusal of C or of a positive weight, and not as an error of fact."},
+      "source_adds": {"en": "The judgment that continuing is itself suffering, and a state beyond change. This is the strongest rival value in the domain, and no rival of this form is considered live under any name I searched."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-oi-vyapti",
+      "name": {"en": "Inference from invariable concomitance, and its undetected condition"},
+      "domain": "other-indian",
+      "group": "other-indian",
+      "source": {"work": "Nyāya Sūtra with Vātsyāyana; Gaṅgeśa, Tattvacintāmaṇi; Cārvāka as reported by opponents; Jayarāśi, Tattvopaplavasiṃha", "locator": "NS 1.1.5; other locators unverified", "basis": "ai-knowledge"},
+      "sense": {"en": "Where there is smoke there is fire: inference rests on vyāpti, the invariable concomitance of mark and property, learned from observed co-occurrence with no observed exception. It is defeated by an undetected limiting condition (upādhi). Nyāya holds this yields knowledge. Cārvāka sceptics, known mostly through opponents, replied that no finite perception gives 'all', so inference gives at most probability."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "scope",
+      "reading": {"en": "Data fix a value only at an input lumped with an observed one, and a fit is right there exactly where the world repeats the observed value; an upādhi reads as a finer lumping the data did not separate. On the verifiability law, as my own instance, 'always' is refutable and no finite stretch verifies it. So the sceptic's point has a law's form, and Nyāya's knowing holds within what it lumps. [AI reading]"},
+      "targets": [
+        {"record": "generalization-through-lumping", "anchor": "theories/becoming/chapters/03-KNOWING.md#r-generalization-through-lumping", "says": {"en": "Theorem (any type): where an observed input is lumped with x, data fix the value at x (given two values, listed data and decided lumps, only there); a fit is right at x exactly where the world repeats the observed value. Which lumping a formation has is not derived; PAC and VC bounds are not stated."}},
+        {"record": "what-a-finite-stretch-verifies", "anchor": "theories/becoming/chapters/03-KNOWING.md#r-what-a-finite-stretch-verifies", "says": {"en": "Theorem (any preorder of stretches; any process): with no premise the open classes of histories are exactly the verifiable ones, and refuting is verifying the complement. Which readings of an actual inquiry are so depends on the process."}}
+      ],
+      "account_adds": {"en": "Exact conditions for what data fix, with the decisions that passing from verifying to refuting needs."},
+      "source_adds": {"en": "A full theory of means of knowledge (perception, inference, comparison, testimony), the five-membered argument, and Gaṅgeśa's realism about grasping all instances through a universal, which is Nyāya's answer to the sceptic and is not taken up."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-oi-nyaya-self",
+      "name": {"en": "Nyāya's self inferred from memory and desire"},
+      "domain": "other-indian",
+      "group": "other-indian",
+      "source": {"work": "Gautama, Nyāya Sūtra, with Vātsyāyana's commentary", "locator": "NS 1.1.10 and the discussion in book 3 (recalled)", "basis": "ai-knowledge"},
+      "sense": {"en": "Desire, aversion, effort, pleasure, pain and cognition are marks of a self. One who recognizes today what was seen yesterday, or wants again what pleased before, must be one subject: a series of passing cognitions could not do it, since one does not remember what another saw. So the self is a lasting substance in which these qualities inhere, known by inference."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "contrary-reading",
+      "reading": {"en": "It argues against a form the account uses: a subject read as a line of occurrences under a class. Aimed at series with no bearer, it tests continuation directly. On the models a history carries what later steps need, and continuity is a reading of identity, so recollection asks for no further substance. That shows the models need none, not that recollection does not. 08 keeps 'relations need relata with natures of their own' live. Kept as a test. [AI reading]"},
+      "targets": [
+        {"record": "what-a-summary-keeps", "anchor": "theories/becoming/chapters/08-METHOD.md#r-what-a-summary-keeps", "says": {"en": "Theorem (any process): the history so far carries each prefix-closed language holding the empty word. Finite words of moves only. A summary smaller than the history need not answer a given question."}},
+        {"record": "identity-across-steps", "anchor": "theories/becoming/chapters/01-ROOT.md#r-identity-across-steps", "says": {"en": "Theorem (World): labels carry nothing; following a formation depends on who continues whom. Continuity is one reading of identity, not its definition."}},
+        {"record": null, "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#crux", "says": {"en": "Argued, AI reading: continuity, a part of Parfit's R, is transitive, and a class drawn on it still needs its own reason for scope. None of the candidates for the self is ruled out."}},
+        {"record": null, "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding", "says": {"en": "That the theory as a whole needs no independent entity is argued, not proved. 'relations need relata with natures of their own' is one of two live arguments that could defeat the thesis."}}
+      ],
+      "account_adds": {"en": "A demand to state what carries memory between which occurrences; laws showing that names carry nothing."},
+      "source_adds": {"en": "A substance-quality-inherence ontology, and the first-person fact of recognition, which the account holds de se as a presupposition and does not otherwise treat."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-oi-arthashastra",
+      "name": {"en": "Law of the fishes and the circle of kings"},
+      "domain": "other-indian",
+      "group": "other-indian",
+      "source": {"work": "Kauṭilya, Arthaśāstra (authorship and date disputed)", "locator": "1.4 (mātsyanyāya); book 6 (maṇḍala); 7.1 (decline, stability, advance against a rival); recalled", "basis": "ai-knowledge"},
+      "sense": {"en": "Without the rod of rule the strong devour the weak, as big fish eat small; rule exists to prevent that. Among kings, the immediate neighbour is by position an enemy and the neighbour's neighbour an ally, and a king chooses peace or war by whether he stands to gain relative to the rival. A treatise of statecraft, without the soteriology of the schools above."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "Its starting point is the one 05 declines: joint activity from opposed positions. Some of its form has laws, each conditional: position against others is zero-sum by counting, whatever the amounts do, and drawers ranking position alone, in turn, draw everything under stated conditions. Kauṭilya weighs amounts as well as position, so these fit only part. 'Natural enemy' is a field's frame, read off a map of positions; its enmity is a claim the account does not make. [AI reading]"},
+      "targets": [
+        {"record": null, "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#collectives", "says": {"en": "Thesis: joint activity is explained from actual relations, not opposed interests, bargaining or a fixed common utility; conflict and difference stay real."}},
+        {"record": "relative-position-is-zero-sum", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-relative-position-is-zero-sum", "says": {"en": "Theorem: a part's position against the others is zero-sum by counting; a race of joint excess ends a part through its dependence on the condition, not its position. Not shown: that a race for relative position produces joint excess: that is a premise."}},
+        {"record": "a-race-for-position-draws-everything", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-race-for-position-draws-everything", "says": {"en": "Theorem: drawers in turn, each ranking its position against what all draw, draw everything at every step where what stands from nothing is least and there are at least two; where something left stops what stands next, a drawer keeps it. Not shown: that actual races are so played, or that drawing everything is wrong."}}
+      ],
+      "account_adds": {"en": "Separates position from amounts, and says when a position race ends a base."},
+      "source_adds": {"en": "Rule by force as the remedy, and a detailed practical craft of alliance and espionage. Rule's origin in averting predation is not stated live."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-oi-meta-attractor-reading",
+      "name": {"en": "The folder's Vedic reading: saṃsāra as a global attractor"},
+      "domain": "other-indian",
+      "group": "other-indian",
+      "source": {"work": "theories/meta-attractor/README.md", "locator": "claim 138, and the paragraph at line 101", "basis": "read-in-repo"},
+      "sense": {"en": "The meta-attractor folder reads saṃsāra as a global attractor, Gītā 2.62-63 as a positive-feedback chain, asuric traits as rule-rewriting, ṛta and yajña as a reciprocity whose breakdown degenerates, yuga drift as a macro-attractor, and niṣkāma-karma and others as anti-attractors. Marked as an observation, in that folder's sense of the word."},
+      "quote": "saṃsāra as a global attractor (craving → action → karmic residue → rebirth)",
+      "carried": "history-only",
+      "relation": null,
+      "reading": {"en": "It stands only in that folder, in its asserted, untested historical layer (see cx-ma-historical-layer). Live, 'meta-attractor' is narrower. The verses as I recall them state a chain with no loop, and the paraphrase drops memory and discernment, the structurally telling links. So 'positive feedback' is the folder's addition. Its 'severing the result-proxy loop' is the nearest thing to cx-oi-nishkama-karma's law. This entry adds no check of the verses. [AI reading]"},
+      "targets": [
+        {"record": null, "anchor": "GLOSSARY.md", "says": {"en": "Meta-attractor: closed capture: a loop of selection whose rule and whose reading of the rule are both formed from the share it selects, nothing in it reading what lies beyond the share."}}
+      ],
+      "account_adds": null,
+      "source_adds": {"en": "The whole cross-cultural layer: this is its only reading of Indian material, in the folder, not live."},
+      "absence": {"searched": ["saṃsāra, samsara, gītā, gita, yajña, ṛta, niṣkāma, yuga, asuric across the live account, by the mapper; gita, gītā, karm, upaniṣad rechecked by this read"], "read": ["theories/meta-attractor/README.md lines 101 and 462, cut at 1,500 characters", "GLOSSARY.md's meta-attractor line"]},
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-oi-avidya",
+      "name": {"en": "Avidyā as mistaking the not-self for the self, beside 03's gloss"},
+      "domain": "other-indian",
+      "group": "other-indian",
+      "source": {"work": "Patañjali, Yoga Sūtra; Śaṅkara, Brahmasūtra-bhāṣya", "locator": "YS 2.3-5; Śaṅkara's preamble on superimposition (recalled)", "basis": "ai-knowledge"},
+      "sense": {"en": "Yoga: avidyā is the root affliction, taking the impermanent, impure, painful and not-self for permanent, pure, pleasant and self. Advaita: it is the beginningless superimposition of not-self on self, ended by knowing. In both it is an error about what one is, with a fact for it to be wrong about."},
+      "quote": null,
+      "carried": "changed",
+      "relation": "divergence",
+      "reading": {"en": "03 reads 无明, glossed 'Sanskrit avidyā', as seeking locked onto a target that cannot be met at rest, and says the position is not itself 无明. A locked target is a dynamic, with no error about a self in it and no self to be mistaken about. Dossier B's question 66 already asks whether to drop the gloss, on Buddhist grounds; these schools give a further reason, since a reader takes it as lineage. [AI reading]"},
+      "targets": [
+        {"record": "seeking-boundary", "anchor": "theories/becoming/chapters/03-KNOWING.md#r-seeking-boundary", "says": {"en": "Reading [AI, D26, D41, D45]: 无明 (wúmíng, not-seeing; Sanskrit avidyā) is that locked seeking. What grounds it is the position every formation selects from; the position is not itself 无明. How a target forms is not modelled."}},
+        {"record": null, "anchor": "theories/becoming/review/BUDDHIST-THOUGHT.md#b-32", "says": {"en": "For review: D26 says these are formal readings of terms, not interpretations of classical sources, yet the chapter's gloss invites comparison; the theory's reading sits nearer 爱 and 取. Question 66: whether to drop the gloss or use another name."}}
+      ],
+      "account_adds": {"en": "A condition for when seeking can rest, with no claim about what one really is."},
+      "source_adds": {"en": "Error about the self as the root of bondage, and its removal by discernment or knowing."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-oi-vaisheshika-vishesha",
+      "name": {"en": "Ultimate particulars (viśeṣa): what tells apart things alike in every respect"},
+      "domain": "other-indian",
+      "group": "other-indian",
+      "source": {"work": "Praśastapāda, Padārthadharmasaṃgraha; the Vaiśeṣika category scheme", "locator": "Praśastapāda's section on viśeṣa (locator unverified)", "basis": "ai-knowledge"},
+      "sense": {"en": "Vaiśeṣika lists ultimate particulars among its categories. Eternal atoms of one kind, and selves, are alike in every quality, so each has its own ultimate differentiator, which differentiates itself and needs no further one. It is a determination posited exactly because all qualities and relations leave two things alike."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "The account meets the same case and answers otherwise. Configurations alike by relation pass the same tests; two moments of a stationary process alike in every relation are told apart only by equality on the carrier, a commitment of the model, read as belonging to the representation, 'and that reading is not shown'. Viśeṣa makes that commitment a real thing: a determination no relation carries, at the place 08 names nearest a defeater. [AI reading]"},
+      "targets": [
+        {"record": null, "anchor": "theories/becoming/chapters/01-ROOT.md#one-kind-of-symbol", "says": {"en": "Time and the four positions tell two occurrences alike in every relation apart only by equality on the carrier, a commitment of the model: a stationary process has two moments alike in every relation, which nothing but that equality tells apart."}},
+        {"record": "determinacy-up-to-likeness", "anchor": "theories/becoming/chapters/01-ROOT.md#r-determinacy-up-to-likeness", "says": {"en": "Theorem (any process): the laws on how configurations relate hold up to likeness; an intervention on one of alike configurations, a past no claim tells apart and a description no claim tells apart need equality."}},
+        {"record": null, "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding", "says": {"en": "In the account itself the nearest case is equality on the carrier, which the model uses and does not derive; the thesis reads it as belonging to the representation and not to what is represented, and that reading is not shown."}}
+      ],
+      "account_adds": {"en": "Which laws hold up to likeness and which need equality, so the cost of the commitment is itemized."},
+      "source_adds": {"en": "A complete scheme of categories, eternal atoms, and individuals real before any relation. It also stops its own regress by self-differentiation, an answer to the same question as cx-oi-shankara-relation-regress."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-oi-carvaka-body-self",
+      "name": {"en": "Cārvāka: the self is the arranged body and ends with it"},
+      "domain": "other-indian",
+      "group": "other-indian",
+      "source": {"work": "Cārvāka or Lokāyata, known through opponents: Mādhava, Sarvadarśanasaṃgraha", "locator": "Sarvadarśanasaṃgraha ch. 1 (recalled); the Bṛhaspati sūtras survive only in fragments", "basis": "ai-knowledge"},
+      "sense": {"en": "As reported, mostly by opponents: consciousness arises from the elements when arranged as a body, as intoxicating power arises from ingredients fermented. There is no self beyond the body, so it ends at death and nothing passes to another life. Things go as they do by their own nature (svabhāva). My knowledge is thin and the reports are hostile."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "scope",
+      "reading": {"en": "'The self ends with the body' has the form of one row of 07's crux: under an organism's class nothing of the self follows its end, and a coarser class can go on; the reach is conditional on the class, and none is chosen. So the claim holds within its drawing. Arising from arrangement with no added substance sits with 08's demand; svabhāva, read as a nature of its own, is what 08 forbids as an explanation. [AI reading]"},
+      "targets": [
+        {"record": "reach-past-ones-own-end", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-reach-past-ones-own-end", "says": {"en": "Theorem (root; witnesses): on a line under a class, what continues past the end of a finer line lies within the line's continuing. Reading [AI, new]: under an organism's class nothing of the self follows its end. Not shown: that one's own line runs under a class coarser than one's organism."}},
+        {"record": null, "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#crux", "says": {"en": "AI reading, argued. The self drawn as this organism: its line reaches its own stages, to its end. 'The organism and R have reasons as boundaries of self-concern', and none has been shown to bound whose losses count."}},
+        {"record": null, "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding", "says": {"en": "Thesis, argued, not proved. Forbids an explanation needing a determination no relation carries, such as an intrinsic value, a self with a nature of its own, or a law standing outside what it holds of."}}
+      ],
+      "account_adds": {"en": "That where a self ends depends on the class, and that this leaves whose losses count open."},
+      "source_adds": {"en": "That perception alone warrants, as reported, and pleasure as the aim. Also that an end at death settles what matters, which the account does not grant."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-oi-gita-five-factors",
+      "name": {"en": "Not the self alone: the five factors of an act"},
+      "domain": "other-indian",
+      "group": "other-indian",
+      "source": {"work": "Bhagavad Gītā", "locator": "18.13-16; also 3.27, 13.29, 18.63", "basis": "ai-knowledge"},
+      "sense": {"en": "Every act has five factors: the seat, the doer, the instruments, the several efforts, and the divine or unseen. One who takes the self alone as the doer does not see. Elsewhere acts are done by nature's strands, and one deluded by 'I' thinks 'I am the doer'. The point serves release, since the true self does not act; yet 18.63 still tells Arjuna to do as he chooses."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {"en": "'Not the self alone' has the form of a move formed in a whole: one move couples a part and the rest, is the part's own exactly where it is a policy of the part, and one course does not fix whose it is. The agreement stops there: the account puts no non-acting self behind the cut, says which cut is apt nowhere, and has no fifth factor. [AI reading]"},
+      "targets": [
+        {"record": "where-a-move-is-formed", "anchor": "theories/becoming/chapters/01-ROOT.md#r-where-a-move-is-formed", "says": {"en": "Theorem (any process): one move formed in a whole couples a part and the rest: it is the part's exactly where it is the part's policy, the rest's likewise, both only if constant. Not shown: which cut is apt, or that an actual move is the part's own; being closed against the rest does not imply it."}}
+      ],
+      "account_adds": {"en": "An exact condition for a move being the part's own, and a witness that one course cannot settle it."},
+      "source_adds": {"en": "The list of five, the unseen factor, the delusion of 'I am the doer' as moral error, and a self that does not act."},
+      "absence": null,
+      "labels": ["AI reading"]
+    }
+  ],
+  "changes": [
+    {"id": "cx-oi-gita-descent", "what": "changed", "why": "Sense adds thwarting. Reading narrowed: no law gives link to link or ruin; the lumping law states no requirement to keep distinctions; the chain law marked a worst case on supplied strengths, cited only for the difference. Kept as a narrow agreement."},
+    {"id": "cx-oi-yoga-wheel", "what": "changed", "why": "Locator fixed: the seer is 1.3; 1.50 added, which grounds practice as a moved count. Target's 'five attempts' replaced by the record's own wording, which I could read. Two-policy limit stated."},
+    {"id": "cx-oi-nishkama-karma", "what": "changed", "why": "A sharper divergence: a duty-set rule escapes the lock but reads no loss either, by the Unread law. The mapper's 'no duty is stated' was a gloss on a section that does not say it; replaced by the record that does. 'A target gone' dropped."},
+    {"id": "cx-oi-yajna-wheel", "what": "changed", "why": "Added Ring: restoring needs a law that gives first. Lineage from ṛta softened to 'commonly read'. Relation kept."},
+    {"id": "cx-oi-karma-residue", "what": "changed", "why": "Relation agreement to scope: the history is a count on the run and conditions nothing later, and a listed present forgets, so 'every act stored' is scoped. recurrence target rewritten to say so. Mapper's reading overstated the fit."},
+    {"id": "cx-oi-karma-analogy-history", "what": "changed", "why": "Mapper said the genealogy disclaims any Indian meaning; it says 'no claim about all Buddhist meanings of karma'. Date and authorship corrected: the note is 6 October, the drafted text July. The analogy's provenance is sources/12 and sources/07; sources/15 holds only the later October questions."},
+    {"id": "cx-oi-karma-across-carriers", "what": "changed", "why": "Added that the doctrine inverts the law's terms, a lasting carrier through brief bodies. Absolute 'no relation stated' softened to what I found."},
+    {"id": "cx-oi-karma-return", "what": "changed", "why": "The word 'return' was a near word-match: the law says can affect back, not does. Target and account_adds now say so; balanced flows restored to the gap's statement."},
+    {"id": "cx-oi-karma-and-the-crux", "what": "changed", "why": "Added the crux's own agent-regret argument, which the source's unintended fruit sits beside. Crux quotation corrected to the text."},
+    {"id": "cx-oi-atman-non-relational-self", "what": "changed", "why": "Added that 'one' is not the same reference in the two, 同语不等于同指."},
+    {"id": "cx-oi-shankara-relation-regress", "what": "changed", "why": "Reply marked as relocating the regress to the logic's primitive application and carrier equality. Target quoted from 01 §1 and not glossed."},
+    {"id": "cx-oi-self-in-all", "what": "changed", "why": "Split the mapper's single route: Īśā's identity is own-closure, Gītā 6.32's likeness is the step of invariance. Crux objections added as a target. Both premises named as unasserted."},
+    {"id": "cx-oi-purusha-witness", "what": "changed", "why": "Mapper's argument missed that the law allows reading without responding, so non-acting is not the parting; located it in a reader no relation carries. 'Leaves consciousness undefined' replaced by what 03 says."},
+    {"id": "cx-oi-satkarya", "what": "changed", "why": "Mapper's split was wrong: mapping asatkārya to the possible relative to what is held does not hold, since both schools grant capacity. Recast as possible against actual. The novelty law's 'every rise is given' marked as holding by definition of the rest."},
+    {"id": "cx-oi-jain-sat", "what": "changed", "why": "Mechanism named: the coarsening law fits the bracelet exactly; 'at once' needs two classes since marks exclude under one."},
+    {"id": "cx-oi-anekanta", "what": "changed", "why": "Primary target moved from the diagonal, seeded by PLAN, to unity-of-readings: the diagonal's ground is self-indexing, not many aspects. Kept the diagonal, limited to self-application. Class target added."},
+    {"id": "cx-oi-kevala", "what": "changed", "why": "Order changed so the coupling law leads; said the diagonal bites only for self-indexed claims. Anchor moved to the reading's own home."},
+    {"id": "cx-oi-ahimsa", "what": "changed", "why": "Scope difference stated: souls who wish against anything. Target split, §3.4 anchored at its heading, scope-and-order added so both premises are named. 'Cuts taking down, not out' for what goes on."},
+    {"id": "cx-oi-moksha", "what": "changed", "why": "Dropped seeking-boundary and 'release has rest's shape': a shape only, and most schools put release outside any law. Added the reply that Advaita denies any narrowing. Absence confirmed by a search under other names; T5's scope restored."},
+    {"id": "cx-oi-vyapti", "what": "changed", "why": "'Universal is refutable' marked as my instance, not stated by the record. Gaṅgeśa's answer to the sceptic named as not taken up. Account_adds reworded."},
+    {"id": "cx-oi-nyaya-self", "what": "changed", "why": "Relation divergence to contrary-reading: the argument targets series with no bearer, the form the account uses. Crux target added for continuity as a class. Summary target's scope stated: finite words only."},
+    {"id": "cx-oi-arthashastra", "what": "changed", "why": "Added 7.1, which ties the source to relative position, and that Kauṭilya weighs amounts too, so the laws fit only part. 'Alone, in turn' restored to the race law."},
+    {"id": "cx-oi-meta-attractor-reading", "what": "kept", "why": "Quote and claims checked against README lines 101 and 462. One clause added on the folder's niṣkāma reading; absence evidence now says who searched what."},
+    {"id": "cx-oi-avidya", "what": "added", "why": "The live gloss is the account's one Indian word; for Yoga and Advaita it names an error about the self, which the reading does not carry. Bears on what a reader is told, and on dossier B's question 66."},
+    {"id": "cx-oi-vaisheshika-vishesha", "what": "added", "why": "The mapper left Vaiśeṣika out. Viśeṣa answers the case 01 and 08 name as nearest to a defeater, by making carrier equality a real determination: a named mechanism and a real divergence."},
+    {"id": "cx-oi-carvaka-body-self", "what": "added", "why": "Listed as not mapped by the mapper, but it has a mechanism: the organism row of the crux. Without it the file showed only self-affirming schools. Marked thin and known through opponents."},
+    {"id": "cx-oi-gita-five-factors", "what": "added", "why": "The mapper tucked non-agency inside the puruṣa entry; 18.14-16 is itself a statement of agency distributed over a whole, with its own law and its own parting."}
+  ]
+}

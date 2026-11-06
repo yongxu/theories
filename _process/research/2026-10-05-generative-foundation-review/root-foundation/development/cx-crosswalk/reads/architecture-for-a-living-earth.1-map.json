@@ -1,0 +1,513 @@
+{
+  "group": {
+    "id": "architecture-for-a-living-earth",
+    "domain": "earlier-folders",
+    "title": {"en": "Architecture for a living Earth"},
+    "kind": "exploration",
+    "summary": {"en": "An AI-drafted design exploration, from Ren's messages of 13 September 2026: settlements lifted above living ground, reusable kits, robots, and a fictional Chiang Mai 2025 of shared provision. The live account names it once, in 05 §11, among design programmes, correspondence not established. Its accounting cautions have the form of World laws; its design hypothesis has no live home. Divergence was looked for and found: flourishing, a right to a home and worthwhile things are stated without the premises the account requires."},
+    "read": [
+      "theories/architecture-for-a-living-earth/README.md (in full)",
+      "theories/architecture-for-a-living-earth/RESEARCH-AGENDA.md (in full)",
+      "theories/architecture-for-a-living-earth/SOURCES.md (in full)",
+      "theories/architecture-for-a-living-earth/chiang-mai-2025/README.md (in full)",
+      "theories/architecture-for-a-living-earth/chiang-mai-2025/CITY-DESIGN.md (in full)",
+      "theories/architecture-for-a-living-earth/chiang-mai-2025/CONNECTIONS-AND-EVIDENCE.md (in full)",
+      "theories/becoming/ONE-PAGE.md (in full)",
+      "theories/becoming/COLLECTIVE-DIRECTION.md to line 70: §§1-2 and the opening of §3's table"
+    ],
+    "skimmed": [
+      "theories/becoming/chapters/05-COLLECTIVES.md: the thesis and §§1, 3, 4, 6, 11, with long paragraphs read only in their first part",
+      "theories/becoming/chapters/07-SIGNIFICANCE.md §2, §5, §7 (own widening), §8, §9, what it does not show: the sections named by each target, with long paragraphs read only in their first part",
+      "theories/becoming/chapters/02-MAP.md: the finite-horizon, renewal, margin, capture and T7 passages",
+      "theories/becoming/chapters/04-LIFE.md: life as a condition, copying b-fold, coupled groups, equal totals",
+      "theories/becoming/chapters/03-KNOWING.md: the proxy paragraph after selection through couplings",
+      "theories/becoming/chapters/08-METHOD.md §9, its opening paragraph",
+      "theories/becoming/GLOSSARY entries for 生生, generation, widening, ranking, C; the file is the root GLOSSARY.md",
+      "theories/becoming/history/THEORY-MAP-2026-10-08.md: this folder's dated entry, as a lead"
+    ],
+    "searched": [
+      "record-index.tsv for niche, autocatalysis, reinvest, Goodhart, metric, lock-in, winner, maintenance, hysteresis, irreversibility, redundancy, resilience, modular, exit, commons, provision, abundance, budget, conservation, mass, stock, externality, displacement, environment, scaffold, engineer",
+      "the live chapters, fronts, review and GLOSSARY.md for settlement, elevated, habitat, shading, robot, fusion, recycling, circular economy, post-scarcity, scarcity, abundance, provision, shared access, access to, Liebig, limiting factor, per capita, per resident, single score, voluntary, coercion, regeneration, ecosystem, resilience, fault tolerance, architecture, building, 大同; hits were read only where a target or an absence below names them",
+      "sources/15-codex-theory-conversations founding messages were not opened; the folder's own account of them was used"
+    ],
+    "not_mapped": [
+      {"en": "The two structural families (branching tower, elevated open framework), foundation and wind questions, the seven-step construction sequence, the conceptual bay and its life.", "why": "Engineering design and proposed future practice, marked by the source as unvalidated; no claim the account would take up."},
+      {"en": "The research agenda's particular studies: light at canopy, habitat released, narrow supports, evacuation, material ledger, shadow model.", "why": "Designs of work not done, none run. Their general method is one entry; the studies themselves are not claims."},
+      {"en": "Chiang Mai 2025 as a world: the morning, the rain, breakfast, the learning court, sleeping pavilions, barefoot paths, underground corridors, the valley's places, the alternate-2025 premises of fusion and construction armies.", "why": "Assistant fiction and scenario canon, declared as neither a historical claim nor an engineering plan. Reducing it to laws would falsify what it is."},
+      {"en": "The evidence notes: FHWA, NPS, NREL, World Steel, ETH, Daehn and others, TAT, TMD, CMU, AP, WHO/UNICEF, with what each did and did not establish.", "why": "Bounded evidence for design constraints, not claims about becoming. The account cites none of them for this purpose."},
+      {"en": "Links to worldbuilding worlds and foundations (Living Garden, Open University, City of Shared Quests, regenerative material civilization, generative worldmaking).", "why": "Provenance for another folder's work, read here only as named; they belong to that item."},
+      {"en": "Cautions about analogy: a small trunk is not a small root system, temporary scaffolding is no evidence for a megastructure, natural appearance is not permeability.", "why": "Domain corrections to a design's metaphors. The account's own rule that the same word is not the same reference is about texts, and no mechanism is shared."},
+      {"en": "The reuse hierarchy for cups and beams: preserve useful objects before turning them into feedstock, material passports, a person keeping a beloved cup.", "why": "A design preference with industry precedents; only its mass-balance core is mapped."}
+    ],
+    "coverage": null
+  },
+  "entries": [
+    {
+      "id": "cx-archearth-elevation-leaves-ground",
+      "name": {"en": "Lifting settlement leaves more living ground"},
+      "domain": "earlier-folders",
+      "group": "architecture-for-a-living-earth",
+      "source": {"work": "theories/architecture-for-a-living-earth/README.md", "locator": "opening; The first useful next step", "basis": "read-in-repo"},
+      "sense": {"en": "The starting idea: lift much of the built environment above living ground on trunks or open frameworks, so that human floor area reaches the ground through few points and more remains for other life. Held as a hypothesis, to be compared with compact ground settlement; no form is assumed to win."},
+      "quote": "Elevation is one architectural means to test.",
+      "carried": "history-only",
+      "relation": null,
+      "reading": {"en": "No mechanism in the account has this content: it holds no model of light, habitat, foundations or settlement form. It stands in this folder, and a one-paragraph gloss stands in history/THEORY-MAP-2026-10-08.md. The live text only links the folder, under applications, with correspondence not established. [AI reading]"},
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {"en": "The whole design hypothesis, with what would overturn it: a compact ground alternative leaving more functioning habitat."},
+      "absence": {
+        "searched": ["settlement, elevated, habitat, shading, robot, building and architecture across chapters, fronts, review and GLOSSARY.md; record-index.tsv by the same mechanism words"],
+        "read": ["05-COLLECTIVES §11, the line Applications elsewhere (design programmes, not results; correspondence not established)", "history/THEORY-MAP-2026-10-08.md, this folder's entry", "07 line on the clearer's witness: a dweller's habitat there is a constructed witness, not a study of settlement"]
+      },
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-archearth-more-room-within-the-margin",
+      "name": {"en": "Generous human places and more room for other life, together"},
+      "domain": "earlier-folders",
+      "group": "architecture-for-a-living-earth",
+      "source": {"work": "theories/architecture-for-a-living-earth/README.md", "locator": "The first useful next step, the working thesis", "basis": "read-in-repo"},
+      "sense": {"en": "The working thesis, explicitly conditional: abundance could make more adaptable, generous human environments practical while restoring room for other life, if ecological outcomes and material continuity are built into the whole system. Neither side is to be bought at the other's expense by assumption."},
+      "quote": "abundance could make it practical to build more adaptable and generous human environments while restoring more room for other life",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {"en": "Read people as a part widening its own options, other life as formations beyond its region: the thesis's condition has the form of the own-widening law. The whole widens only if the part's net draw stays within every outside margin; past one it is mixed. The correspondence is this reading's; the account does not claim it. [AI reading]"},
+      "targets": [
+        {"record": "own-widening-within-the-margin", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-own-widening-within-the-margin", "says": {"en": "Theorem (World; balance; part and region decided). Where a part's activity widens what can form within its own region against the levels without its exchange, the whole widens exactly when its net draw stays within the margin for every formation outside the region the levels without it admit, and is mixed exactly when it goes beyond for one. Mixed is not ordered."}},
+        {"record": "loss-beyond-a-region", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-loss-beyond-a-region", "says": {"en": "Theorem (World). In the witness Clearing the clearer, active and supported throughout, closes nothing within itself and its source and, from step 2 on, the dweller beyond them: going on is no sign that nothing is lost."}}
+      ],
+      "account_adds": {"en": "An exact boundary, on a model with conserved whole-number amounts; and that mixed outcomes are not ordered. That the wider course is better is C's, the continuation condition fixing scope, neither asserted."},
+      "source_adds": {"en": "Abundance as the enabling condition, elevation and reuse as means, and restoration as an active rise, not only a draw within margin. No actual settlement is shown to meet the law's hypotheses."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-archearth-flourishing-as-the-aim",
+      "name": {"en": "Human improvement alongside a flourishing ecosystem, as the aim"},
+      "domain": "earlier-folders",
+      "group": "architecture-for-a-living-earth",
+      "source": {"work": "theories/architecture-for-a-living-earth/README.md", "locator": "opening, second paragraph", "basis": "read-in-repo"},
+      "sense": {"en": "The purpose is broader than a smaller footprint: human development should contribute to the conditions in which an ecosystem continues to flourish, with continued improvement in human life. The source questions whether means suffice, not whether the aim is good; it states no premise for it."},
+      "quote": "The aspiration is continued improvement in human life alongside flourishing soils, animals, vegetation, and ecological relationships.",
+      "carried": "carried-in-part",
+      "relation": "divergence",
+      "reading": {"en": "The source starts from an aim the account gives only conditionally. T8 offers 生生 as life's way, under the continuation condition for scope and C for order, neither asserted, warrant open. No law says a lost habitat is a harm; flourishing is no term of the account. And the condition counts anything's continuation, wider than the source's other life. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses", "says": {"en": "Thesis T8, argued: for life, the way is 生生, life in the whole and its continuing generation [AI reading, D1], compared by widening what can form, counted for everything (scope: the continuation condition) and ranked by what every valuer who counts everything shares (order: C). For life says whose way it is, not whose losses count."}},
+        {"anchor": "theories/becoming/ONE-PAGE.md", "says": {"en": "No law evaluates: none says a loss is a harm or restraint better. The ethics adds two premises, neither asserted, warrant open, each a hypothesis wherever used."}}
+      ],
+      "account_adds": {"en": "Scope and order held apart, and what would show T8 wrong: a mixed case argued better from every standpoint counting everything positively, with no further premise."},
+      "source_adds": {"en": "Continued improvement in human life, and ecological flourishing, as positive ends; the account defines neither and ranks no course by them."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-archearth-equal-provision-comparison",
+      "name": {"en": "Compare forms at equal human provision"},
+      "domain": "earlier-folders",
+      "group": "architecture-for-a-living-earth",
+      "source": {"work": "theories/architecture-for-a-living-earth/README.md", "locator": "What would make it regenerative?", "basis": "read-in-repo"},
+      "sense": {"en": "Settlement forms are compared by supplying equivalent housing, functions, accessibility and quality of life, including compact settlement on developed land and meeting needs elsewhere. An intact forest and a degraded site are not interchangeable. Elevation earns its place only where its whole system does better under selected conditions."},
+      "quote": "The central comparison is equal human provision",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {"en": "Fixing what people get is a way of constructing a comparison that inclusion can decide: a form admitting all another admits for people, and more besides, widens it; a gain here with a loss there is mixed. The source does not say this; the form is this reading's. Its better is left without a stated reader, which the account would require. [AI reading]"},
+      "targets": [
+        {"record": "four-cases-of-a-part", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-four-cases-of-a-part", "says": {"en": "Definition and Theorem (World). l includes l' when at every step it admits every formation l' admits, and exceeds it when at some step it admits one l' does not; l widens l' when it includes and exceeds it; two keep the same when each includes the other, and are mixed when each exceeds the other."}},
+        {"record": "widening-as-what-every-positive-weighting-ranks", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-positive-weighting-ranks", "says": {"en": "Theorem (any type; a finite listing). One course widens another exactly when every weighting positive on the listed items weighs it higher; a mixed comparison is decided both ways by positive weightings."}}
+      ],
+      "account_adds": {"en": "Widening says which admits more, not which is better; calling it better is C's, a premise, with the continuation condition for whose losses count."},
+      "source_adds": {"en": "The comparison's construction: same program, same population, several site types, a baseline without construction, and building elsewhere. The account has no method for constructing a comparison across real sites."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-archearth-no-single-score",
+      "name": {"en": "No single score; a good ratio can hide growing damage"},
+      "domain": "earlier-folders",
+      "group": "architecture-for-a-living-earth",
+      "source": {"work": "theories/architecture-for-a-living-earth/RESEARCH-AGENDA.md", "locator": "1. Compare settlement forms on equal terms, after the table", "basis": "read-in-repo"},
+      "sense": {"en": "Habitat, light, support, disturbance, daily life and removal should not be collapsed into one score prematurely. Effects should be reported both in absolute terms and per resident, since a favourable ratio can conceal increasing total damage."},
+      "quote": "a favorable ratio can conceal increasing total damage",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {"en": "The account's form: joint keeping is asked of the joint course, not of a product of separate scores, and equal totals can hide what a capacity carries. Relative readings can leave a total unbounded: positions, which are not per-resident ratios, never bound the total from above. That last is an analogy of form only. [AI reading]"},
+      "targets": [
+        {"record": "conditions-kept-together", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-conditions-kept-together", "says": {"en": "Theorem (any process; witnesses). In ChoicePoint each guard can be kept along some run while the two cannot be kept together; so a product of viabilities is a heuristic: the joint question is asked of the joint course."}},
+        {"record": "equal-totals-can-hide-what-a-capacity-carries", "anchor": "theories/becoming/chapters/04-LIFE.md#r-equal-totals-can-hide-what-a-capacity-carries", "says": {"en": "Theorem (periphery; witness). Two histories from one state can end with equal material, current support, spent work, route and context yet differ in retained effect and withdrawal. A description must keep the relations through which a capacity is realized. Ecological regeneration is not derived."}},
+        {"record": "what-position-reads", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-position-reads", "says": {"en": "Theorem (any type). Positions bound the total from below, by the spread above the least part, and never from above: every bound is exceeded by some profile with the given positions."}}
+      ],
+      "account_adds": {"en": "Exact statements of why each fails, on stated models, and that a natural-number score cannot represent priority of basic conditions in one constructed situation."},
+      "source_adds": {"en": "The specific pairing of absolute with per-resident effects, and the ratio claim itself: no law here concerns ratios to a growing population."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-archearth-whole-system-accounting",
+      "name": {"en": "Count what the footprint leaves out"},
+      "domain": "earlier-folders",
+      "group": "architecture-for-a-living-earth",
+      "source": {"work": "theories/architecture-for-a-living-earth/README.md", "locator": "How such buildings might be built, step 3; What would make it regenerative?", "basis": "read-in-repo"},
+      "sense": {"en": "A visible footprint is not the disturbance: buried support, staging, vehicle routes, supporting industry, noise and light all count. A moving shadow still changes the supply of light, only redistributing it over space and time. The comparison must run over the whole system and its whole life."},
+      "quote": "A small finished footprint does not excuse a destructive construction site.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {"en": "Where a comparison draws its boundary decides what it can see lost. A rise inside a family with nothing gained overall is paid from beyond it, and a region's comparison takes the region as input. A settlement credited on its footprint alone would be such a family; the mapping is this reading's. [AI reading]"},
+      "targets": [
+        {"record": "loss-beyond-a-region", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-loss-beyond-a-region", "says": {"en": "Theorem (World). There is loss beyond a region when some formation outside it is admitted without the part and not with it; inclusion is admission within every region at once, so a region's comparison takes the region as input, the whole's none."}},
+        {"record": "raising-what-couples-in-draws-from-beyond", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-raising-what-couples-in-draws-from-beyond", "says": {"en": "Theorem (World: balance; the containing family gains nothing across the step). The rise is paid from beyond in full. Without the containing family's gaining nothing a rise need not reach beyond."}},
+        {"record": "practical-judgment-under-living-significance", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-practical-judgment-under-living-significance", "says": {"en": "Conditional (living significance, J1-J4, correspondence E; an argument with checked consequences). For the response transform, what changes the judgment includes mere output growth and displaced deprivation."}}
+      ],
+      "account_adds": {"en": "The form holds at every grain, and the choice of boundary is itself named as an input to the comparison."},
+      "source_adds": {"en": "What actually falls outside a footprint, the temporal disturbance of building and removal, and the moving shadow's redistribution: physical and ecological content the account does not model."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-archearth-material-identity",
+      "name": {"en": "External input equals stock growth plus what leaves"},
+      "domain": "earlier-folders",
+      "group": "architecture-for-a-living-earth",
+      "source": {"work": "theories/architecture-for-a-living-earth/README.md", "locator": "The city as a circulating stock of useful things", "basis": "read-in-repo"},
+      "sense": {"en": "Circulating a stock and expanding it are distinct tasks. If more buildings and robots stay in service, their material must come from somewhere other than their own future dismantling; internal reuse adds no matter. The source calls this simple bookkeeping for a defined system and period, an assistant clarification, not a forecast."},
+      "quote": "external material input = net increase in stock + material leaving the system",
+      "carried": "carried",
+      "relation": "agreement",
+      "reading": {"en": "The World's balance premise has this form: a level changes only by what those taking part take and give, so a stock rises by at most its inflow, what merely passes through changes no level, and kept growth in a finite family is fed from beyond. A shared accounting identity, with no descent claimed either way. [AI reading]"},
+      "targets": [
+        {"record": "a-rise-past-the-inflow-is-drawn-from-beyond", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-rise-past-the-inflow-is-drawn-from-beyond", "says": {"en": "Theorem (World: balance). A family's inflow across a step is what each formation taking part gives it beyond what it takes from it, summed; over a stretch a stock rises by at most the stretch's inflow."}},
+        {"record": "what-decides-giving-against-keeping-on-a-flow", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-decides-giving-against-keeping-on-a-flow", "says": {"en": "Theorem (World: balance; near-definitional once the parts are fixed). What passes through changes no level: two balanced flows from the same levels whose takes and gives differ only by amounts that cancel keep the same levels."}},
+        {"record": "what-keeping-widening-needs", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-keeping-widening-needs", "says": {"en": "Theorem (World; witnesses). A finite balanced world under the first law has no course keeping widening by name; read [AI reading, D45] as a throughput phenomenon: a finite family whose kept widening goes on is fed from beyond."}}
+      ],
+      "account_adds": {"en": "What the rise does beyond: past the slack there a named dependence breaks, unseen by every selection rewarding the rise. Balance is a premise of the model, in whole-number amounts and discrete steps."},
+      "source_adds": null,
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-archearth-recursive-capacity",
+      "name": {"en": "Factories that build what builds factories"},
+      "domain": "earlier-folders",
+      "group": "architecture-for-a-living-earth",
+      "source": {"work": "theories/architecture-for-a-living-earth/README.md", "locator": "Abundance, automation, and ordinary life", "basis": "read-in-repo"},
+      "sense": {"en": "Some productive capacity is reinvested in more capacity, making later expansion easier. To compound, the whole chain needs materials, energy, components, maintenance, transport and coordination; the agenda adds that output must also maintain existing capacity. Nothing is established: no doubling time, no closed cycle."},
+      "quote": "No doubling time or fully closed industrial cycle has been established here.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {"en": "The limits have laws; the positive mechanism does not. Copying b-fold runs exactly where a stock covers its draws; more takers without end need unbounded renewers; and a circular dependence needs a reserve already present to begin. These read on robots building robots only by this reading. [AI reading]"},
+      "targets": [
+        {"record": "copying-b-fold", "anchor": "theories/becoming/chapters/04-LIFE.md#r-copying-b-fold", "says": {"en": "Theorem (copying on counts). Where every unit draws d from one stock and becomes b, n rounds from k units run exactly where the stock covers d times k + bk + ... + b^(n-1)k. Whole numbers, the same draw each round; that teaching or reproduction copies at a fixed factor is not shown."}},
+        {"record": "more-needs-renewers", "anchor": "theories/becoming/chapters/02-MAP.md#r-more-needs-renewers", "says": {"en": "Theorem (World). Under balance, more without end needs replenishment with no eventual bound and, each formation giving at most a fixed amount, renewers with no eventual bound."}},
+        {"record": "joint-plans-from-a-supported-start", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start", "says": {"en": "Theorem (any process; periphery module). In the exchange witness an empty or one-sided start never becomes jointly active, and ignition needs a reserve already present: one circular dependence can be maintenance running or a wait no one can begin."}}
+      ],
+      "account_adds": {"en": "The stock a run of copying needs, exactly, on counts; and under upkeep kept widening has ever more takers. All on models, none about industry."},
+      "source_adds": {"en": "That reinvested capacity raises later capacity, the whole positive case for compounding production: no record states a law of it. The account's growth laws bound growth; they do not supply it."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-archearth-energy-does-not-settle",
+      "name": {"en": "Cheap energy leaves other conditions standing"},
+      "domain": "earlier-folders",
+      "group": "architecture-for-a-living-earth",
+      "source": {"work": "theories/architecture-for-a-living-earth/README.md", "locator": "The city as a circulating stock of useful things", "basis": "read-in-repo"},
+      "sense": {"en": "Cheap energy eases collection, cleaning, sorting and reprocessing but does not establish complete recovery: chemistry, contamination, water, equipment and losses remain. In Chiang Mai fusion alone does not remove smoke or settle land management. The scenario asks what still determines a good building once labour and energy matter less."},
+      "quote": "It would not itself establish complete recovery.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {"en": "Relief on one condition does not answer another, so the joint course is what is asked. Nor does plenty remove a selection's drain: with room, an optimum drains what lies beyond whatever it has. Room is a hypothesis, and an abundant world need not meet it. The fit is this reading's. [AI reading]"},
+      "targets": [
+        {"record": "conditions-kept-together", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-conditions-kept-together", "says": {"en": "Theorem (any process; witnesses). The joint question is asked of the joint course; in a reading table [AI reading, D48] material reproduction is: in a balanced flow on a finite family, recurring uptake needs replenishment that never stops for good; persistence and growth do not certify renewal."}},
+        {"record": "what-an-optimum-does-beyond-what-couples-in", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in", "says": {"en": "Theorem. With room (every eligible outcome left higher beyond is beaten on what couples in), every optimum of an order rising with what couples in drains what lies beyond as far as any eligible outcome does. Proved; a known theorem restated. T3, on trained systems, conjectured."}}
+      ],
+      "account_adds": {"en": "That a sun's renewal from outside does not save a line drawn past it from a stock too low, in the model of the joint-excess law."},
+      "source_adds": {"en": "Abundance as a condition to reason from at all: the account has no theory of cheap energy, of what abundance changes, or of what determines a good building once it holds."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-archearth-access-not-from-production",
+      "name": {"en": "Cheap production does not give shared access"},
+      "domain": "earlier-folders",
+      "group": "architecture-for-a-living-earth",
+      "source": {"work": "theories/architecture-for-a-living-earth/README.md", "locator": "Abundance, automation, and ordinary life, last paragraph", "basis": "read-in-repo"},
+      "sense": {"en": "Plenty does not settle who can inhabit, alter or move a space, or who keeps it working: that belongs to the design. Reconfiguration should support community continuity and the choice to stay as well as the ability to leave."},
+      "quote": "Cheap production does not by itself establish shared access.",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {"en": "The account has the arithmetic of shares and the capture of rules, but no statement that production leaves distribution open, and no account of access to places. Equal shares meeting needs is a different claim. Access in 07 means a position's access to secured content, another sense. [AI reading]"},
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {"en": "The claim, and the design question of who holds, alters and keeps a place."},
+      "absence": {
+        "searched": ["shared access, access to, abundance, scarcity, post-scarcity, provision, allocation, distribution, ownership across chapters, fronts, review and GLOSSARY.md; record-index.tsv for provision and abundance"],
+        "read": ["05-COLLECTIVES §3 including least parts and equal shares", "07-SIGNIFICANCE line on secured content (position with actual access)", "07-SIGNIFICANCE, what this chapter does not show"]
+      },
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-archearth-protection-and-regeneration",
+      "name": {"en": "Protection and regeneration need different evidence"},
+      "domain": "earlier-folders",
+      "group": "architecture-for-a-living-earth",
+      "source": {"work": "theories/architecture-for-a-living-earth/README.md", "locator": "What would make it regenerative?", "basis": "read-in-repo"},
+      "sense": {"en": "Preserving an ecosystem is valuable; claiming regeneration further requires evidence of recovery or improved function against an explicit baseline. Preservation, avoided harm and demonstrated recovery are recorded apart. A deck might keep vegetation visible at first while changing what its long-term survival needs."},
+      "quote": "Protection and regeneration need different evidence.",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {"en": "The split has a form: inclusion against exceeding, and keeping a part against renewal. The account then bounds the evidence the source asks for: no reading fixed by finite steps can include every renewing run and exclude consumption. So demonstrated recovery holds to its horizon. Recovery and renewal are not the same term; the link is this reading's. [AI reading]"},
+      "targets": [
+        {"record": "significance-retained-within-margin", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-significance-retained-within-margin", "says": {"en": "Conditional (the continuation condition). Retaining is then inclusion and adding exceeding, from every standpoint."}},
+        {"record": "conditions-kept-together", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-conditions-kept-together", "says": {"en": "Keeping a part is not renewal (witness Renewable): from one configuration no course leaves the focal formation active while one run renews and another consumes the sustaining formation's condition, and the sustaining formation ends."}},
+        {"record": "becoming-finite-horizon", "anchor": "theories/becoming/chapters/02-MAP.md#r-becoming-finite-horizon", "says": {"en": "Theorem (the renewable process; the support-gated law with feedback). For every horizon h, two runs agree before h and then one renews and one consumes, so a reading fixed by h steps that includes every renewing run includes a consuming one. The force lies in every renewing run, which overdraws before h."}}
+      ],
+      "account_adds": {"en": "A limit on what any finite record certifies, proved on the two named processes; the source reads no such limit into its measurements."},
+      "source_adds": {"en": "Baselines and comparison areas, avoided harm as a third column, triggers for changing a structure, and value placed on preservation."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-archearth-mechanical-against-ecological-return",
+      "name": {"en": "A part can come back while the place does not"},
+      "domain": "earlier-folders",
+      "group": "architecture-for-a-living-earth",
+      "source": {"work": "theories/architecture-for-a-living-earth/README.md", "locator": "The city as a circulating stock of useful things, seasonal relocation", "basis": "read-in-repo"},
+      "sense": {"en": "Moving a structure may be mechanically reversible while repeatedly disturbing both sites, and removal needs its own recovery plan and time. In Chiang Mai fast construction has not made an old forest overnight, and affection and ecological time still give reasons to keep things, however quickly they can be made."},
+      "quote": "Frequent movement could be mechanically reversible while repeatedly disturbing both destinations.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {"en": "Return is relative to what is read: a reading of the parts may show return while another endpoint has none, and incomplete questions hide the loss. The regime gives one exact form, a point of no return under a standing draw. Moved modules on repeatedly disturbed ground are this reading's case, not the account's. [AI reading]"},
+      "targets": [
+        {"record": "endpoint-loss-and-return", "anchor": "theories/becoming/chapters/02-MAP.md#r-endpoint-loss-and-return", "says": {"en": "Theorem (any process). Along a finite trace under a fixed law, every existential endpoint possibility is kept exactly where a return path exists; failure to return has a constructive lost endpoint, which, in a witness, incomplete questions hide."}},
+        {"record": "margin-of-a-regime", "anchor": "theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime", "says": {"en": "Theorem (the regime; whole numbers). For one condition under a standing draw H, with giving as stated, a level up to hi ends exactly where it starts below H + y: the point of no return is exact. They locate an end, ordering nothing."}}
+      ],
+      "account_adds": {"en": "That the loss is a property of a law and a question, exact on the model, and orders nothing."},
+      "source_adds": {"en": "Slow ecological and cultural time as a reason to keep things, and rates of recovery: the laws locate an end and give no reason to keep anything."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-archearth-environment-not-self",
+      "name": {"en": "A generative environment, not a generative person"},
+      "domain": "earlier-folders",
+      "group": "architecture-for-a-living-earth",
+      "source": {"work": "theories/architecture-for-a-living-earth/chiang-mai-2025/README.md", "locator": "When a question grows into a place", "basis": "read-in-repo"},
+      "sense": {"en": "Ren's distinction, quoted from a private conversation: what matters is that the environment be generative, not the individual. So the city supports further life with no demand for constant contribution; a neighbour who watched the rain all afternoon owes no equivalent achievement."},
+      "quote": "It’s not about being generative yourself, it’s about ensuring your environment is",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {"en": "Widening compares what a course admits, not what any member produces, so a member's rest costs nothing on that comparison; 生生不息 is read at the whole. Responsibilities arise only from named sources. Agreement of form, under the continuation condition for scope and C for order, neither asserted. [AI reading]"},
+      "targets": [
+        {"record": "where-the-possible-grows", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-where-the-possible-grows", "says": {"en": "Reading [AI reading, D45]: 生生不息, read at the whole as 生生 going on with more still able to form, and not as growth, needs no growth of the whole possible."}},
+        {"record": "practical-judgment-under-living-significance", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-practical-judgment-under-living-significance", "says": {"en": "Conditional (living significance, J1-J4, E; argued with checked consequences). Responsibilities arise from named sources, each limited; an empty plan set generates no duty, a contribution is indispensable only where every admissible allocation requires it."}},
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses", "says": {"en": "Assessment (comparative support for living significance; none a proof): unification, among others of care, repair, creation, learning, renewal, rest and fitting ending from one ground. The formal checks verify no premise."}}
+      ],
+      "account_adds": {"en": "Against its absence, a formation drawing within renewal ties on the possibility reading, since it adds no possibility, while the whole-run and stepwise readings rank its presence higher; no reading is chosen. Any duty is outside what the chapter shows."},
+      "source_adds": {"en": "The stance as a design commitment of a city, ensuring as something one does for an environment, and owing nothing as a social fact. Ensuring is a practical aim the laws do not rank."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-archearth-worthwhile-chain",
+      "name": {"en": "生生不息 as worthwhile things leaving conditions for more"},
+      "domain": "earlier-folders",
+      "group": "architecture-for-a-living-earth",
+      "source": {"work": "theories/architecture-for-a-living-earth/chiang-mai-2025/README.md", "locator": "When a question grows into a place; What to develop next", "basis": "read-in-repo"},
+      "sense": {"en": "The folder's concrete meaning of 生生不息: something worthwhile leaves conditions from which further worthwhile things arise: knowledge, a path, an intact root zone, friendship, a story, a question. A generative culture, a common foundation and an ecosystem are to reinforce one another. The worth is assumed, and its reader unnamed."},
+      "quote": "Something worthwhile leaves conditions from which further worthwhile things can arise",
+      "carried": "changed",
+      "relation": "divergence",
+      "reading": {"en": "The account's 生生 is life in the whole, compared by what a course admits, explicitly not novelty or scale and not any new organization; and generation there allows loss. Worthwhile is a comparison with no stated reader; the account would ask for one, and for C. The source's root zone is close to it; its story and invention are not its measure. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#objections", "says": {"en": "An expansion producing ever more novelty: answered, the order left open. Generation is a pattern going on through carrying renewal, and 生生 life in the whole, not novelty or scale; an expansion ending forms of life another course keeps is mixed with it and C does not rank them."}},
+        {"anchor": "GLOSSARY.md", "says": {"en": "生生: life in the whole and its continuing generation (生发) [AI reading, D1]. T8 argues it is the way for life, compared by widening, with the continuation condition for scope and C for order. Neither the grammar's renewal without end, nor 02's generation as such, which allows loss, nor any new organization."}}
+      ],
+      "account_adds": {"en": "The separation of 生生 from generation and from renewal, and two premises in place of an assumed worth. The account gives the change of sense as argued in 07; it does not discuss this folder's reading."},
+      "source_adds": {"en": "A lived, positive-sum image of further things arising, including culture and play, which the account neither states nor ranks."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-archearth-winning-and-the-next-rule",
+      "name": {"en": "Winning should not buy the rule of the next game"},
+      "domain": "earlier-folders",
+      "group": "architecture-for-a-living-earth",
+      "source": {"work": "theories/architecture-for-a-living-earth/chiang-mai-2025/README.md", "locator": "A city people can play together, last paragraph", "basis": "read-in-repo"},
+      "sense": {"en": "From an earlier private game-design argument: success should not keep purchasing control over how others must play. The practical question is how shared activity shapes desire: whether success helps others begin, or gives an established group indefinite control of the next beginning. Prizes stay bounded; essentials do not depend on play."},
+      "quote": "winning should not keep purchasing the power to decide how everyone else must play",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {"en": "This has the form of capture: winners writing the next scorecard is the premise that a rule reads the share it selects, which then locks; and shaping is selected exactly where what comes back to shapers covers its cost. The account reads this for its own meta-attractor; it does not cite this folder. [AI reading]"},
+      "targets": [
+        {"record": "capture-through-the-rule", "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule", "says": {"en": "Theorem (any type). With selection not lowering a target's share under a rule favouring it and the rule read as a monotone function of the share, the course locks; only a change of the law, of how the rule reads or of the selection leaves. That actual rules read the share is the premise."}},
+        {"record": "closed-capture", "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture", "says": {"en": "Theorem (any type). From a locked configuration the loss passes every bound while the course stays locked; a reading favouring at no loss above a bound unlocks the course: a sufficient way out."}}
+      ],
+      "account_adds": {"en": "The lock derived under premises on a two-kind count model without noise, with named exits, each under hypotheses. No law says a lock is bad: that is the ethics' question, under the continuation condition and C."},
+      "source_adds": {"en": "The should, stated without premise; the effect on desire; bounded prizes and quiet routes around the game as institutional design."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-archearth-points-game-revised",
+      "name": {"en": "A points game that hid patient care, revised after consequences"},
+      "domain": "earlier-folders",
+      "group": "architecture-for-a-living-earth",
+      "source": {"work": "theories/architecture-for-a-living-earth/chiang-mai-2025/README.md", "locator": "A city people can play together, the watershed game", "basis": "read-in-repo"},
+      "sense": {"en": "In assistant fiction, a watershed game gives points for planting. Some sites prove poorly chosen, and points make care less visible than a new photograph. With local ecological advice the players change the next season. Their understanding changes through the consequences of the world they made."},
+      "quote": "the point system has made patient care less visible than a new photograph",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {"en": "The first half is the proxy problem as the account states it. The revision fits T7's stated way out, not a case against it: a loss enters and an outside reader is admitted; and no rule here is read from a share, so T7's premise fails. It is a story, so it is no evidence for T7 or against it. [AI reading]"},
+      "targets": [
+        {"record": "selection-through-couplings", "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings", "says": {"en": "It is the proxy problem (Goodhart 1975; Amodei and others 2016; Manheim and Garrabrant 2018) as the account states it: a proxy on some attributes is a selection through the coupling to them. The main law holds by construction; its force lies in the supplied premise."}},
+        {"anchor": "theories/becoming/chapters/02-MAP.md#t7", "says": {"en": "Thesis T7, conjectured: a metric whose rule and reading are formed from the share it selects is kept by its selectors however large a loss it does not read grows, and, drift aside, is dropped only through a change in what the loop reads (a reader outside the share, a loss entering it, a new reading), not on evidence alone."}},
+        {"record": "a-pool-that-recruits-through-itself", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself", "says": {"en": "Theorem (World). A pool recruiting through itself comes to couple into a loss only as its course without the loss would. The exits bind (witness PoolCourse): a pool admitting a reader at step 2 in every history couples the loss apart there. Whether an actual pool recruits so is empirical."}}
+      ],
+      "account_adds": {"en": "Conditions under which such a correction would not happen; the story shows only one case where it does."},
+      "source_adds": {"en": "Correction through shared play, comedy and celebration of one's own first error: the social form of the revision, unmodelled."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-archearth-security-and-cooperation",
+      "name": {"en": "Material security makes cooperation easier"},
+      "domain": "earlier-folders",
+      "group": "architecture-for-a-living-earth",
+      "source": {"work": "theories/architecture-for-a-living-earth/chiang-mai-2025/README.md", "locator": "大同 as the character of daily relations", "basis": "read-in-repo"},
+      "sense": {"en": "Here 大同 names a sustained condition: no one abandoned to material insecurity, care beyond household or faction. Declared an interpretation of Ren's usage, no scholarly reconstruction. Security and constructive experience are expected to ease cooperation, while desire, pride, disagreement and mistakes remain. No proof that abundance yields harmony."},
+      "quote": "The proposal expects material security and constructive experiences to make cooperation easier",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {"en": "One thin form: a reserve lets giving begin where waiting would hold, and renewal from outside lets a giver give without its level falling. So provision could carry giving, on these witnesses. Whether people cooperate more when secure is not stated, and these laws do not speak of security or of 大同. [AI reading]"},
+      "targets": [
+        {"record": "thresholds-of-waiting", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting", "says": {"en": "Theorem (any type; web reading on the World). Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start: without one, total withholding stays."}},
+        {"record": "what-giving-that-waits-draws-on", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-giving-that-waits-draws-on", "says": {"en": "Theorem (World: balance; single small witnesses). Renewal from outside: a renewer whose giving does not require its own level lets the giver give one unit at every step without its level falling, the gifts over any N steps totalling N, the inflow into the pair."}}
+      ],
+      "account_adds": {"en": "Where giving stays withheld even so, and that what a gift draws on is accounted for in the flow, in small witnesses."},
+      "source_adds": {"en": "The empirical and psychological claim itself, drives and reinforcing feedback, and 大同 as a name: no chapter, front or review page uses the word; a record's data file does."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-archearth-provision-apart-from-membership",
+      "name": {"en": "Essentials held apart from membership and success"},
+      "domain": "earlier-folders",
+      "group": "architecture-for-a-living-earth",
+      "source": {"work": "theories/architecture-for-a-living-earth/chiang-mai-2025/README.md", "locator": "What has changed underneath ordinary life", "basis": "read-in-repo"},
+      "sense": {"en": "Everyone has a good home, food, water, care and means to pursue interests, independent of participation. Demanding work stays voluntary because a livable alternative exists; a failed project or disagreement does not expel anyone from the means of life; no compulsory labour is hidden underneath."},
+      "quote": "Membership in a gardening circle or a game guild does not administer the right to a home.",
+      "carried": "carried-in-part",
+      "relation": "divergence",
+      "reading": {"en": "The source states an unconditional entitlement as the setting's canon. The account shows no right or duty; it gives priority of basic conditions only as a further commitment, its tiers a reading, and that priority does not follow from C. Provision apart from a selection's reach as a release from a lock has no law. [AI reading]"},
+      "targets": [
+        {"record": "basic-priority-step-by-step", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-basic-priority-step-by-step", "says": {"en": "Conditional (J1/J2). Read the support-gated family in two tiers. Every comparison meeting the priority of basic conditions then ranks the absence of a malignant formation above its occurrence under the stepwise and relation-level readings, where C alone leaves them unranked. The tier assignment is a reading."}},
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show", "says": {"en": "What this chapter does not show: any duty, right, recognition, motivation or compliance, or an unconditional or complete ranking of mixed comparisons (priority and transfer rank some, under named premises)."}}
+      ],
+      "account_adds": {"en": "That basic priority is a premise beyond C and the continuation condition: a rival preferring enough secondary gains to one basic restoration is not shown inconsistent."},
+      "source_adds": {"en": "The right to a home; voluntariness as resting on an exit; the separation of provision from associations as an institutional form that keeps conflict from reaching the means of life."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-archearth-part-failure-kept-local",
+      "name": {"en": "Dependable life when one part is out"},
+      "domain": "earlier-folders",
+      "group": "architecture-for-a-living-earth",
+      "source": {"work": "theories/architecture-for-a-living-earth/chiang-mai-2025/CITY-DESIGN.md", "locator": "Underground movement without an underground citywide slab", "basis": "read-in-repo"},
+      "sense": {"en": "Networks get separated compartments, routes that can be taken out of service, protected entries and independently usable alternatives. A neighbourhood keeps essentials running during a network interruption; a closed lift has an alternate route. The city's calm depends partly on making an interruption manageable."},
+      "quote": "The objective is dependable life when one part is unavailable.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {"en": "Ending passes along chains of dependence, and groups on one coupled family end together, so what is separated does not co-end. Independent causes, not names, count: two routes under one cause are one. The account states these for webs and reviewers, not infrastructure; the fit is this reading's. [AI reading]"},
+      "targets": [
+        {"record": "groups-whose-conditions-are-coupled", "anchor": "theories/becoming/chapters/04-LIFE.md#r-groups-whose-conditions-are-coupled", "says": {"en": "Theorem (World). A patch renewed by a neighbour shows no excess read alone and both end read as one. Groups depending on one such family end together, nothing selected among them. Balance on the family, the coupled gate, only active giving and activity needing support are hypotheses."}},
+        {"record": "reviewers-count-by-independent-causes", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-reviewers-count-by-independent-causes", "says": {"en": "Theorem (pure core). Readiness is exactly a nonempty separated envelope of causes; two reviewers moved under one cause make readiness fail while every name is kept."}}
+      ],
+      "account_adds": {"en": "That separation must be of causes and conditions, and is read at the grain of the family, not by what looks separate."},
+      "source_adds": {"en": "The design itself: compartments, alternates, local autonomy, repair knowledge held in public. A word search for resilience and fault tolerance in the live text found no law under those names."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-archearth-disagreement-belongs",
+      "name": {"en": "Different ways of life, and disagreement kept"},
+      "domain": "earlier-folders",
+      "group": "architecture-for-a-living-earth",
+      "source": {"work": "theories/architecture-for-a-living-earth/chiang-mai-2025/README.md", "locator": "大同 as the character of daily relations; A landscape of different places", "basis": "read-in-repo"},
+      "sense": {"en": "The valley need not become one planned community; common means support different rhythms. A gardener wants a place unchanged, a young association wants to build beside it: they draw alternatives, try temporary arrangements, may decide to build elsewhere. A larger intervention involves those it will affect."},
+      "quote": "Their disagreement belongs in the city’s life.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {"en": "The account keeps this: conflict stays real and a collective has no interest of its own. A gardener against a builder is a mixed comparison, which C and the continuation condition, both unasserted, do not decide; a further shared procedure would. The account's procedure line is conditional on further commitments. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/05-COLLECTIVES.md#collectives", "says": {"en": "Joint activity is explained from actual relations, not opposed interests, bargaining or a fixed common utility: a collective is a region of formed relations, not a unit with an interest of its own; conflict and difference stay real."}},
+        {"record": "practical-judgment-under-living-significance", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-practical-judgment-under-living-significance", "says": {"en": "Conditional (living significance, J1-J4, E; argued with checked consequences). Without a unique answer a legitimate shared procedure decides and keeps residual responsibilities."}}
+      ],
+      "account_adds": {"en": "Why no criterion settles such a case: mixed is decided either way by positive weightings."},
+      "source_adds": {"en": "How such a dispute is lived: reversible trials, drawing alternatives, and a culture in which disagreement costs no one a home."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-archearth-causal-sequence",
+      "name": {"en": "From common means through chosen lives to knowledge for others"},
+      "domain": "earlier-folders",
+      "group": "architecture-for-a-living-earth",
+      "source": {"work": "theories/architecture-for-a-living-earth/chiang-mai-2025/CONNECTIONS-AND-EVIDENCE.md", "locator": "The integrated argument", "basis": "read-in-repo"},
+      "sense": {"en": "The proposed sequence: capability supplies common means; secure access supports chosen lives; people shape places and institutions; consequences develop their understanding; knowledge and supportive environments become available to further lives. Ecological and material conditions enter every step. Declared neither a sociological law nor a proof."},
+      "quote": "productive capability supplies generous common means; secure access supports freely chosen lives",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {"en": "Single links have homes: practice forming further participation, and a reading loop in which knower and known change together. The account proves one link on a supplied model and assesses another from software history. The whole chain, and its starting point in abundance, is stated nowhere. [AI reading]"},
+      "targets": [
+        {"record": "joint-practice-forms-continuation", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-practice-forms-continuation", "says": {"en": "Theorem (periphery; much supplied). It closes one connection from enacted practice to further participation, not the arrival of people or indefinite self-maintenance."}},
+        {"record": "formed-software-continuation", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-formed-software-continuation", "says": {"en": "Assessment (selected histories, no theorem, not a universal law). Inherited code, work, coordination and interim support carried activity under partial reorganization, as specific conditions, not interchangeable amounts."}},
+        {"anchor": "theories/becoming/chapters/03-KNOWING.md#the-reading-loop", "says": {"en": "03 §12: a formation that senses, predicts, chooses, acts and revises is one law within the unfolding, not a subject facing a world: its internal part reads what goes on through what it senses, and what it does is part of what goes on. Six laws state that loop under their premises."}}
+      ],
+      "account_adds": {"en": "The exact stop of each link: what each result says it does not close."},
+      "source_adds": {"en": "The chain as a whole, with secure access as its second step and places and institutions as what people shape."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-archearth-refuters-and-negative-findings",
+      "name": {"en": "Name what would change the design; keep negative findings"},
+      "domain": "earlier-folders",
+      "group": "architecture-for-a-living-earth",
+      "source": {"work": "theories/architecture-for-a-living-earth/RESEARCH-AGENDA.md", "locator": "1 (the table's last column); 4. Make regeneration observable", "basis": "read-in-repo"},
+      "sense": {"en": "Each question lists the finding that could change the design, such as a compact alternative leaving more functioning habitat. Preservation, avoided harm and recovery are recorded apart, and negative findings are kept even when the settlement looks appealing. These are assistant proposals; nothing has been run."},
+      "quote": "Retain negative findings even when the settlement is visually appealing.",
+      "carried": "carried",
+      "relation": "agreement",
+      "reading": {"en": "The same method: state what would refute before the data, and keep a failure beside the claim. A shared discipline, and common practice in science, with no descent from this folder claimed. No test of this folder's stands among the account's theses. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/08-METHOD.md#theses", "says": {"en": "A theory of the world is judged by what it forbids. A thesis adds no theorem, a refutation removes none, and a failure stays recorded beside the thesis. Each home chapter states the thesis in full, with what would refute it."}}
+      ],
+      "account_adds": {"en": "Freezing before scoring, and that a frozen rule fixes how a verdict is scored, not that the rule reads the construct the verdict names."},
+      "source_adds": null,
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-archearth-comfort-against-landscape",
+      "name": {"en": "A living landscape managed for comfort, read as a design balance"},
+      "domain": "earlier-folders",
+      "group": "architecture-for-a-living-earth",
+      "source": {"work": "theories/architecture-for-a-living-earth/chiang-mai-2025/README.md", "locator": "Afternoon rain, evening shelter; A landscape of different places", "basis": "read-in-repo"},
+      "sense": {"en": "The city lowers biting pressure along used paths, keeps clearings and fields, and does not claim a bite-free forest or justify removing wetlands and insects. Forest does not cover every square metre. It treats these as design balances, judged by whether people enjoy outdoor life and the ecosystem has conditions to persist."},
+      "quote": "The city aims for low biting pressure along heavily used paths and gathering places",
+      "carried": "changed",
+      "relation": "divergence",
+      "reading": {"en": "The account would not call this a balance found: under the continuation condition every continuation's loss counts, and a gain for people with a loss for what is managed is mixed, not ranked by C. A choice needs a further named premise. The source's balancing assumes an unstated weighting. The account does not discuss this case. [AI reading]"},
+      "targets": [
+        {"record": "own-widening-within-the-margin", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-own-widening-within-the-margin", "says": {"en": "Theorem (World; balance). The whole is mixed exactly when the part's net draw goes beyond the margin for one formation outside the region; with a need met exactly, any net draw on that condition makes it mixed. Mixed is not ordered."}},
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#objections", "says": {"en": "Agent-relative reasons and partiality: answered; partial choices are mixed comparisons, decided either way by weightings counting everything; C leaves gross partiality unranked where numbers differ."}}
+      ],
+      "account_adds": {"en": "That the hard cases are mixed, and that ranking them takes a premise named in place of C."},
+      "source_adds": {"en": "The practical settlement of the balance itself, with protective places, and the refusal to promise what a tropical forest cannot give."},
+      "absence": null,
+      "labels": ["AI reading"]
+    }
+  ]
+}

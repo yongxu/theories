@@ -1,0 +1,2144 @@
+{
+  "group": {
+    "id": "dynamics-physics-complexity",
+    "domain": "dynamics-physics-complexity",
+    "title": {
+      "en": "Dynamical systems, physics and complexity"
+    },
+    "kind": "domain",
+    "summary": {
+      "en": "The account restates thresholds, rest, recurrence, merges and openness in discrete steps and whole amounts, by its own verdict restated, level or states less. It has exact thresholds for the fold's form, a periphery fold and transcritical end, per-graph threshold laws, a critical-mass band, bounds on carried differences and cycle witnesses; no law of a path through a band, critical rate of a regime, escape time beyond geometric bounds, bounded chaos, self-organized criticality, percolation or dissipative structure. Of 30 entries: none carried whole, 20 in part, 4 changed, 3 not carried, 3 fresh. Relations: 20 agreement, 3 scope, 4 divergence, none contrary; I looked for contrary reading and found none."
+    },
+    "read": [
+      "theories/becoming/review/SCIENCES.md S-04, S-05, S-06, S-12, S-16, S-23 (S-23's meaning and weaknesses)",
+      "theories/becoming/chapters/02-MAP.md sections 2, 4, 5 (T1, T2), 7, 8, parts of 9, What this chapter does not show, Open; long lines cut in some reads",
+      "theories/becoming/chapters/08-METHOD.md section 8, the table and the bullets beyond it, 34 by my count; r-what-discrete-steps-and-whole-amounts-represent; r-the-last-change-of-a-run",
+      "theories/becoming/chapters/03-KNOWING.md section 10 with T6's evidence; r-a-response-common-over-a-reading and r-readings-within-what-they-read, opening sentences; 05-COLLECTIVES.md r-thresholds-of-waiting, tolerance, r-errors-by-chance-in-a-pair-keeping-mutual-withholding, r-a-rise-past-the-inflow-is-drawn-from-beyond, the market theorem; GLOSSARY lines for generation and 生生",
+      "Record JSONs: margin-of-a-regime, slowing-down-before-an-own-end, what-discrete-steps-and-whole-amounts-represent, regime-in-any-amounts, regime-point-under-adjusting-giving, where-a-run-of-a-regime-comes-to-rest, two-sided-regulation-and-late-reading, coupled-regimes, coupled-webs, rest-on-coupled-webs, webs-with-a-recent-giving, threshold-in-the-state-plane, thresholds-beyond-a-band, thresholds-of-waiting, tolerance-monotone-across-laws, a-pair-tolerates-only-within-a-window, errors-by-chance-in-a-pair-keeping-mutual-withholding, restoring-giving-from-the-worst-start, a-rise-past-the-inflow-is-drawn-from-beyond, a-pattern-lasts-through-passing, mutual-dependence-and-its-pace, continuing-self-fed-from-beyond",
+      "Record JSONs, continued: how-much-difference-arrives, how-a-carried-difference-grows, whether-a-loop-closes-a-difference, how-loops-form, shaping-read-by-readers-drawn-from-the-selected, drawn-shaping-drawn-one-at-a-time, attraction-is-not-returning, basins-of-a-determined-law, market-model-share-margin-and-ends, market-finite-support-obstruction, market-partial-correction-boundary, market-protected-continuation, entropy-history-and-record, recurrence-without-premise, least-loss-from-entropy-production, merge-of-a-part-kept-by-the-rest, laws-at-coarser-steps, rest-at-every-resolution, how-fast-a-rule-may-change, rooms-tested-by-a-window, regulation-from-one-side-and-locally, dormancy-over-a-stretch, supported-renewal-recovery, optima-rebuild-a-depleted-base, support-from-the-supported",
+      "_process/.../aa-attractor-atlas/PLAN.md sections 4.1 to 4.4, 5's CY row, 6.1 to 6.5, 7; readers-2026-11-04/correspondences.md; the reviser's file in full"
+    ],
+    "skimmed": [
+      "chapters/05-COLLECTIVES.md tolerance's neighbours, the optimum opening, identical cells; 07-SIGNIFICANCE.md line on Kauffman; 04-LIFE.md r-fixation-by-drift, r-a-pattern-lasts-through-passing; 01-ROOT.md recurrence, r-laws-with-noise, r-laws-at-coarser-steps, the order-of-exchanges rows",
+      "theories/becoming/history/SYSTEMS-COMPLEXITY-CHAOS.md and experiments/state-named-in-advance/DESIGN.md, by search hits"
+    ],
+    "searched": [
+      "Searched is not read. Counted, live lines / records, rerun by me: hysteres 0/2; bifurcat 5/4; transcritical 2/1; saddle, Hopf, percolat, self-organized, sandpile, avalanche, Kuramoto, power law, scale-free, Noether, Wolfram, Haken, Morris 0/0; chip-firing 2/1; R-tipping 0/1; absorbing 6/13; critical slowing 3/2; Prigogine 3/1; Landauer 18/3; dissipative structure 1/0; chaos 1/0; Lyapunov 4/2; phase transition 3/6; renormal 0/2; synchroni 0/4; limit cycle 0/1; ergodic 0/1; Turing 5/2",
+      "Also: Aubin 1/3; Granovetter 2/2; Schelling 3/4; Kauffman 4/5; undecidab 0/1; halting 2/2; Perron 3/0; autocatal 2/1; 'branching process' 4/6, processes that branch, a word match; relaxation 0/4 (read by line: approach to rest and a premise relaxed, none of toppling); self-tun, toppl 0/0; Thomas 3/2 (the record hits are other authors)",
+      "By mechanism, across the live chapters and record index: a difference growing around a loop; a band read in a parameter; a burst of errors leaving a regulated pair; a balance per step in counts; composition over coarser steps; a kernel's root form"
+    ],
+    "not_mapped": [
+      {
+        "en": "S-07 to S-10 (evolution) and S-11 to S-16's ecology and the theses' frozen tests",
+        "why": "The plan's row 10 (ecology, evolution) holds them; only S-12's fold and S-16's slowing down are used here."
+      },
+      {
+        "en": "Constructor theory, causal sets, Petri nets, stochastic thermodynamics and fluctuation theorems, Markov blankets and detailed balance at a steady state, autocatalytic sets",
+        "why": "Already placed row by row in 08 section 8, S-04 and the FEP page with verdicts; reported under coverage, not re-mapped."
+      },
+      {
+        "en": "Poincaré recurrence and the first law read as balance as such (S-04, S-05)",
+        "why": "Dossier items, which the brief leaves in their own files; reported under coverage, used in the arrow entry only for Zermelo's and Loschmidt's objections."
+      },
+      {
+        "en": "Quantum contextuality witnesses in 01",
+        "why": "Supplied frameworks read as witnesses (`Square.no_context_free_values`, named by the mapper; not read by me); no claim of quantum theory is taken up, so no correspondence is proposed."
+      },
+      {
+        "en": "The Lean of history/SYSTEMS-COMPLEXITY-CHAOS.md (lean/systems-complexity: shift map, real delayed feedback)",
+        "why": "Named from the history page only; the Lean was not read, and it is not live. The page's results are cited in the chaos and Hopf entries as history."
+      }
+    ],
+    "coverage": {
+      "present": [
+        {
+          "what": "Dossier items on physics: balance and least loss from thermodynamics; recurrence, merges and Landauer's count; rest and fed from beyond",
+          "where": "theories/becoming/review/SCIENCES.md#s-04",
+          "extent": "3 items, S-04 to S-06; verdicts 'a premise located', 'restated'; S-05 and S-06 with Lean blocks"
+        },
+        {
+          "what": "Known-results table and the bullets beyond it",
+          "where": "theories/becoming/chapters/08-METHOD.md#known-results",
+          "extent": "13 rows, each with a column of what the prior framework states that the account does not yet; 34 bullets beyond the table, by my count. Rows of this domain: recurrence and attraction, rest needs a least loss, loops, fed from beyond with entropy and nets; bullets: margin of a regime, least loss from physics, exit from a margin"
+        },
+        {
+          "what": "The cost of discrete steps and whole amounts over the reals",
+          "where": "theories/becoming/chapters/08-METHOD.md#r-what-discrete-steps-and-whole-amounts-represent",
+          "extent": "one theorem group in the periphery, 5 bullets; the commitments listed at 08 section 4"
+        },
+        {
+          "what": "The regime and its cases: exact points of no return, rest, webs",
+          "where": "theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime",
+          "extent": "the margin, the law of exact thresholds, and a table of 8 cases (adjusting giving to recent giving on webs), whole numbers, draw first; reals only for `Drawn.converges`"
+        },
+        {
+          "what": "Thresholds on a given graph of waits",
+          "where": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+          "extent": "one record group with a triad witness and a web reading; tolerance-monotone beside it; no ensemble of graphs"
+        },
+        {
+          "what": "Critical slowing down and T6",
+          "where": "theories/becoming/chapters/03-KNOWING.md#break-seen-coming",
+          "extent": "one periphery theorem, linearized one-variable; one thesis with three frozen seabird tests; S-16 reports them"
+        },
+        {
+          "what": "Thermodynamic correspondences in records",
+          "where": "theories/becoming/results/records/least-loss-from-entropy-production.md",
+          "extent": "Landauer named in 3 records; Prigogine in 1 record and in 08 and S-04/S-06; stated as correspondences, 'not physical derivations' in entropy-history-and-record"
+        },
+        {
+          "what": "Named bifurcations",
+          "where": "theories/becoming/chapters/03-KNOWING.md#r-slowing-down-before-an-own-end",
+          "extent": "fold and transcritical end in one periphery record; the word 'bifurcation' in 5 live lines and in 4 records, 3 of them saying none is stated or follows"
+        },
+        {
+          "what": "How much a difference grows, and whether a loop closes it",
+          "where": "theories/becoming/chapters/02-MAP.md#r-how-much-difference-arrives",
+          "extent": "three record groups in section 7: a worst case over laws attained, polynomial exactly with no loop upstream, whole factors never closing gradually; none links itself to Lyapunov or chaos"
+        },
+        {
+          "what": "A band read in a parameter: critical mass",
+          "where": "theories/becoming/chapters/02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected",
+          "extent": "one law with its three cases of c against lo and hi, constants fixed; a loop across them only by composition"
+        },
+        {
+          "what": "Laws read at coarser steps",
+          "where": "theories/becoming/chapters/01-ROOT.md#r-laws-at-coarser-steps",
+          "extent": "one row: what composes over a coarse step and what need not; refinement of a step is not treated"
+        },
+        {
+          "what": "Lumping as the mathematics of simulation",
+          "where": "theories/becoming/review/SCIENCES.md#s-23",
+          "extent": "one dossier item; lumpability of Markov chains an analogue, not proved; no renormalization flow; quoted from its study, 'Every root law holds in every model, so it forbids no observation'"
+        }
+      ],
+      "absent": [
+        {
+          "en": "Self-organized criticality, sandpile dynamics as such (only chip-firing termination is credited, and its order independence listed as not stated)",
+          "searched": [
+            "self-organi[sz]ed crit",
+            "sandpile",
+            "avalanche",
+            "chip-firing",
+            "power law",
+            "scale-free"
+          ]
+        },
+        {
+          "en": "Percolation: a sharp threshold of connection or tolerance over an ensemble of webs (per-graph threshold laws are present)",
+          "searched": [
+            "percolat",
+            "giant component",
+            "interdependen",
+            "bootstrap",
+            "k-core",
+            "tolerance"
+          ]
+        },
+        {
+          "en": "Hopf bifurcation by name or as eigenvalue crossing; a law of when a regime cycles and with what period",
+          "searched": [
+            "Hopf",
+            "limit cycle",
+            "overcompens",
+            "Alternation"
+          ]
+        },
+        {
+          "en": "Hysteresis in the live chapters (0 hits); 2 records use the word in correspondence fields. A band in a parameter stands only by composition, and no law runs a path through one",
+          "searched": [
+            "hysteres",
+            "critical mass",
+            "never_returns_below",
+            "tolerance"
+          ]
+        },
+        {
+          "en": "Rate-induced tipping by name, a critical rate of a regime, noise-induced transition, escape times beyond one pair's geometric bound",
+          "searched": [
+            "rate-induced",
+            "R-tipping",
+            "noise-induced",
+            "Kramers",
+            "escape time"
+          ]
+        },
+        {
+          "en": "Bounded chaos: aperiodicity, one law's sensitive dependence, Lyapunov exponents in the live account (the live hits for 'Lyapunov' are the Lyapunov equation and stability credits; 'sensitivity' is coupling strength; the growth of a difference is present)",
+          "searched": [
+            "chaos",
+            "chaotic",
+            "sensitive dependence",
+            "Lyapunov",
+            "logistic map"
+          ]
+        },
+        {
+          "en": "Scaling, universality, renormalization, critical exponents, the thermodynamic limit, order parameters",
+          "searched": [
+            "renormal",
+            "phase transition",
+            "power law",
+            "criticality"
+          ]
+        },
+        {
+          "en": "Synchronization of oscillators (Kuramoto); 'synchroni' occurs in 4 records, none on oscillators by their titles",
+          "searched": [
+            "Kuramoto",
+            "synchroni"
+          ]
+        },
+        {
+          "en": "Dissipative structures and least entropy production, except as named gaps in 08's table",
+          "searched": [
+            "dissipative structure",
+            "Prigogine",
+            "maximum entropy production"
+          ]
+        },
+        {
+          "en": "Noether's link of symmetry and conservation; whole-system quantum or relativistic physics",
+          "searched": [
+            "Noether"
+          ]
+        },
+        {
+          "en": "The problem of arbitrarily small continuous stocks recovering (the atto-fox problem)",
+          "searched": [
+            "Mollison",
+            "atto-fox"
+          ]
+        },
+        {
+          "en": "A universal machine in a dynamic, undecidable long-run behaviour of a concrete system (the calibrations by LPO give the logical form only)",
+          "searched": [
+            "undecidab",
+            "halting",
+            "Wolfram",
+            "universal",
+            "LPO"
+          ]
+        },
+        {
+          "en": "Thomas's rules and a loop's sign, named as not yet stated in 08's Loops row",
+          "searched": [
+            "Thomas",
+            "negative circuit",
+            "negative feedback",
+            "Maruyama"
+          ]
+        }
+      ]
+    }
+  },
+  "entries": [
+    {
+      "id": "cx-dpc-fold",
+      "name": {
+        "en": "The saddle-node (fold) and the harvested equilibrium"
+      },
+      "domain": "dynamics-physics-complexity",
+      "group": "dynamics-physics-complexity",
+      "source": {
+        "work": "Guckenheimer and Holmes, Nonlinear Oscillations, Dynamical Systems and Bifurcations of Vector Fields (1983); Clark, Mathematical Bioeconomics (1976); May, Nature 269 (1977)",
+        "locator": "local codimension-one bifurcations; locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "A stable and an unstable equilibrium meet and vanish as a parameter passes a critical value. Generically the local form is x' = r + x²: the equilibria part as the square root of the distance to the fold, and just past it a run lingers in a bottleneck whose passage time grows as the inverse square root. Under a harvest with depensation the unstable branch is a threshold level."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The regime's `Short` and `Meets` are the sign of giving less the draw. `H + y` is the exact point between the fates and reads as the unstable branch; it is a fixed point of the step only where giving at y equals the draw, since whole-number giving can jump past it. A draw beyond all giving ends the condition from every level, which reads as past the fold. The periphery takes the fold's local form separately, as a chosen model. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "margin-of-a-regime",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime",
+          "says": {
+            "en": "Theorem (the regime; any giving law, whole numbers): where giving falls short of the draw below y, gives nothing from nothing, meets it at every z from y with z + H at most a top hi the step keeps, and 0 < H + y, a level up to hi ends exactly where it starts below H + y. The time to break lies in a band."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/08-METHOD.md#beyond-the-table",
+          "says": {
+            "en": "The margin of a regime is harvesting under depensation and the fold (Clark 1976; May 1977), in whole numbers."
+          }
+        },
+        {
+          "record": "slowing-down-before-an-own-end",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-slowing-down-before-an-own-end",
+          "says": {
+            "en": "Record, periphery, discrete steps: at a fold, x + h (m − x²) with rest √m, the multiplier is 1 − 2h√m; it rises to one as the margin m goes to zero, and m = ((1 − a) / (2h))²."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Exactness for any giving law in whole numbers; rises of joint draws superadditive up to one; and `Notch`, a witness that without giving rising with what is left no level separates the fates. S-12 asks whether this adds anything to the continuous analysis; it is unanswered."
+      },
+      "source_adds": {
+        "en": "Continuous theory states that the local form is generic, with its unfolding, and the bottleneck's inverse-square-root time. Here a level falls below b within any n with x < b + (H − Y)n: a bound inverse in the draw less the most given, not a passage law. The form is a model taken, not joined to the whole-number point. The record says the fold over the reals and the other order of a step are not stated, and yeast past its fold broke days before the constant-regime curve said."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-dpc-transcritical",
+      "name": {
+        "en": "The transcritical bifurcation and the threshold at rate one"
+      },
+      "domain": "dynamics-physics-complexity",
+      "group": "dynamics-physics-complexity",
+      "source": {
+        "work": "Kermack and McKendrick (1927); Harris, The Theory of Branching Processes (1963); Diekmann, Heesterbeek and Metz, J. Math. Biol. 28 (1990)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Two equilibria cross and exchange stability at a threshold. The zero state loses stability where a growth factor passes one, for webs where the spectral radius of a next-generation matrix does (R0). Above it a positive branch appears; a branching process at or below one dies out almost surely, except in the trivial case of exactly one offspring."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The periphery's damped and web laws have the threshold's linear form: a + r against one, and a rate against one. The logistic drawn model has one transcritical end, its rest going to nothing as the draw reaches the renewal rate. The core's whole-number loop has no gradual side: it closes at once, keeps, or exceeds every bound. The account does not join these, and the web law has no positive branch: past the threshold it runs away. That they are one threshold is my reading. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "what-discrete-steps-and-whole-amounts-represent",
+          "anchor": "theories/becoming/chapters/08-METHOD.md#r-what-discrete-steps-and-whole-amounts-represent",
+          "says": {
+            "en": "Theorem (periphery): with damping factor a, coupling at every step, D > 0 and a + r ≥ 0, a held loop stays bounded exactly where a + r ≤ 1. A web coupled at every step vanishes below rate one and runs away above it. At rate one, the rate does not decide whether it stays bounded."
+          }
+        },
+        {
+          "record": "whether-a-loop-closes-a-difference",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-whether-a-loop-closes-a-difference",
+          "says": {
+            "en": "Theorem (any type): with whole-number factors a loop closes at once, keeps, or exceeds every bound, never closing gradually (`LoopReturn.nothing_between`)."
+          }
+        },
+        {
+          "record": "slowing-down-before-an-own-end",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-slowing-down-before-an-own-end",
+          "says": {
+            "en": "Theorem (periphery, discrete steps, one variable linearized about a rest): at a transcritical end under a proportional draw, a rises to one as the margin shrinks. Record: under logistic renewal with a proportional draw, rest K (1 − q / r), the multiplier is 1 − h (r − q), so the stock slows in proportion to its own level."
+          }
+        },
+        {
+          "record": "market-model-share-margin-and-ends",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-market-model-share-margin-and-ends",
+          "says": {
+            "en": "In the model's numbers a share of none stays none (a witness): selection does not create an absent practice. So the zero state stands; the record lists a bifurcation among what it does not show."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "At rate one the law undecides: the identity is bounded and a shear carries 1 + n, both rate one. Stated in any normed ring. In whole-number factors nothing lies between closing at once and keeping, so decay below one belongs to the periphery's damping."
+      },
+      "source_adds": {
+        "en": "Continuous and stochastic theory states the exchange of stability as a general form, the branch where saturation bounds a web's growth, and extinction probabilities either side. Here no saturation joins the web law and no chance of extinction is stated; the account's words 'branching process' mean processes that branch, not this source's. Real factors below one are a named next step. 08's Loops row says the rate is not shown to be the Perron root; the record cites Gelfand's formula."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-dpc-hopf-cycles",
+      "name": {
+        "en": "Hopf bifurcation and oscillation from delay"
+      },
+      "domain": "dynamics-physics-complexity",
+      "group": "dynamics-physics-complexity",
+      "source": {
+        "work": "Hopf (1942); Marsden and McCracken, The Hopf Bifurcation and Its Applications (1976); Hutchinson, Ann. N.Y. Acad. Sci. 50 (1948); May, Nature 261 (1976); Thomas (1981) on circuits",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "As a parameter passes a value a complex pair of eigenvalues crosses into instability and a small limit cycle is born, its amplitude growing as the root of the distance, its period set by the eigenvalue (on maps, the flip and Neimark–Sacker cases). Delay in a negative loop alone can do it. Thomas's rules say which circuits oscillation and multistability need."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "No eigenvalue crossing here. What is carried is overshoot by late reading, with exact onset for one relay: past a stated bound it crosses the band and then alternates. That shares delay oscillation's mechanism, not the smooth birth of a small cycle, since a relay's swing starts at full size. `Alternation`, a period-two witness nearer the flip of overcompensating maps, gives two from nothing, so it lies outside the regime's premise that nothing gives nothing. The relation to delay is my reading. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "two-sided-regulation-and-late-reading",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-two-sided-regulation-and-late-reading",
+          "says": {
+            "en": "Theorem (World; balance at the condition): the bound is exactly no overshoot (`Flow.withinGap_iff_between`); within it, opposing, the level settles at m; beyond it an opposing exchange crosses and can oscillate for ever. With a ≤ b, 0 < a, 0 < M and the floor (ℓ + 1)M ≤ b + 1, every balanced run of a relay reading ℓ steps late, from every start below a held for its first ℓ + 1 steps, settles in the band exactly where a + (ℓ + 1)M ≤ b + 1."
+          }
+        },
+        {
+          "record": "where-a-run-of-a-regime-comes-to-rest",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-where-a-run-of-a-regime-comes-to-rest",
+          "says": {
+            "en": "Overcompensating giving can cycle for ever (`Alternation`), a witness: giving two from nothing and nothing from more keeps a band up to two under a draw of one, yet the run from one moves between one and two at every step."
+          }
+        },
+        {
+          "record": "coupled-regimes",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-coupled-regimes",
+          "says": {
+            "en": "Beyond a band support can sustain a cycle (`Relay.cycles`, a witness): each gives two only where enough is left of the other; under draws of one each alone ends from every level, while from two and three the run moves between two and three and three and two for ever."
+          }
+        },
+        {
+          "record": "rooms-tested-by-a-window",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-rooms-tested-by-a-window",
+          "says": {
+            "en": "Correspondence field: the overshooting thermostat's cycle is the limit cycle of an over-compensating on-off controller. A toy rule; the record lists a heater that reads late among what it does not show."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The exact whole-number onset for a late relay, and a cycle sustained by mutual support where each alone ends. That support is a positive loop, a divergence taken up in cx-dpc-circuit-rules."
+      },
+      "source_adds": {
+        "en": "Continuous theory states the crossing condition, amplitude, period and the sub- or supercritical split. 08's Loops row lists Thomas's rules and a loop's sign as not yet stated. The plan's CY(a), when an adjusted regime cycles with its period, is not built. history/SYSTEMS-COMPLEXITY-CHAOS.md reports a real delayed-feedback law, converging exactly for 0 < k < 1 and returning after six steps at k = 1: a linear crossing, off the spine."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-dpc-circuit-rules",
+      "name": {
+        "en": "Thomas's rules: the loop signs that oscillation and multistability need"
+      },
+      "domain": "dynamics-physics-complexity",
+      "group": "dynamics-physics-complexity",
+      "source": {
+        "work": "Thomas (1981); Snoussi, J. Biol. Syst. 6 (1998); Gouzé, J. Biol. Syst. 6 (1998); Remy, Ruet and Thieffry, Adv. Appl. Math. 41 (2008)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "In a differential system sustained oscillation needs a negative circuit and multistability a positive one; for flows these necessities are theorems. Discrete forms hold under asynchronous updating, while synchronous updating can cycle with no negative circuit."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {
+        "en": "Proposed here. `Relay.cycles` sustains a cycle under mutual support, a positive loop, in shared whole steps, where the rule for flows needs a negative circuit. So a cycle read off these laws does not carry to a flow unchanged. The band restores agreement: within it a run under mutual support rests, and thresholds under it give the two fates a positive loop should. That the cycle is a synchronous step's effect is my reading; no record says so, and 08 lists the rules as not stated. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "coupled-regimes",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-coupled-regimes",
+          "says": {
+            "en": "Under mutual support within a band a run rests and a point of no return does not rise as the partner rises. Beyond a band (`Relay.cycles`, a witness) each gives two only where enough is left of the other; under draws of one each alone ends from every level, while from two and three the run moves between two and three and three and two for ever."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/08-METHOD.md#known-results",
+          "says": {
+            "en": "Loops row, among what prior frameworks state and the account does not yet: the sign of a loop from its links' signs (Maruyama 1963) and Thomas's rules for which circuits multistability and oscillation need."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "An exact witness in two whole-number conditions, with each alone ending, and the band as what removes it."
+      },
+      "source_adds": {
+        "en": "The rules themselves, a loop's sign from its links' signs, and any statement of which update order a cycle depends on. The account's step is shared and synchronous by commitment, and its local law's interleavings are a separate reading; I found no law comparing cycles across them."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-dpc-chaos",
+      "name": {
+        "en": "Deterministic chaos, and what whole numbers exclude"
+      },
+      "domain": "dynamics-physics-complexity",
+      "group": "dynamics-physics-complexity",
+      "source": {
+        "work": "Lorenz, J. Atmos. Sci. 20 (1963); Li and Yorke, Amer. Math. Monthly 82 (1975); May, Nature 261 (1976); Costantino and others, Science 275 (1997); Henson and others, Science 293 (2001)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Bounded deterministic motion can be aperiodic and sensitive to its start, in very simple maps and flows, so determinism does not give long prediction from finite precision. Costantino and others report a chaotic regime in flour beetle cultures; Henson and others report lattice effects, the whole-number states pulling a chaotic model's dynamics toward cycles."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "Part is carried under other names: how far a difference can grow. Through a loop the carried amount reaches D(1 + M)^t, attained; with none upstream it stays polynomial. That is stretching without folding, a worst case over laws: no one law's sensitive dependence, no bounded aperiodic motion. Likeness to a Lyapunov bound is my reading. A finite web's run within a bound repeats; the root's laws on any type do not exclude a shift. T2's beetle archive comes from the group reporting chaos; T2 says nothing of it. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "how-much-difference-arrives",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-how-much-difference-arrives",
+          "says": {
+            "en": "Theorem (World): over every law whose exchanges outside the part couple with strengths at most k, a condition's gap at T is at most a exactly where the carried amount there is at most a: 'the most difference that can arrive, a worst case over laws, not a prediction for one pair'. Strengths are supplied bounds; a square law has none. Record: strengths as Lipschitz bounds, the carried amount a discrete Grönwall inequality, attained."
+          }
+        },
+        {
+          "record": "how-a-carried-difference-grows",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-how-a-carried-difference-grows",
+          "says": {
+            "en": "Theorem (World): under the standard bounds the carried amount is at most D(1 + M)^t, attained by a self-loop; with stationary strengths the gap is bounded by a polynomial in the steps, uniformly over laws, exactly where no loop lies upstream. A worst case. Record: it does not show that a particular law runs away around a loop."
+          }
+        },
+        {
+          "record": "thresholds-beyond-a-band",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-thresholds-beyond-a-band",
+          "says": {
+            "en": "A finite web read condition by condition: a run within B repeats within (B + 1)^n steps, so ending is a finite check with no band."
+          }
+        },
+        {
+          "record": "basins-of-a-determined-law",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-basins-of-a-determined-law",
+          "says": {
+            "en": "Theorem (any type): courses meeting is an equivalence whose classes are basins; within m listed configurations each basin holds one cycle."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "An exact worst case in whole amounts, attained, and the split on a loop upstream: the worst case exceeds every polynomial only through one. The carrying law takes nothing, which the record says is not gainless; strengths below one, so decay, are not shown."
+      },
+      "source_adds": {
+        "en": "Folding, aperiodicity, one bounded law's sensitive dependence, Lyapunov exponents and the bound on prediction from finite precision. These stand only in theories/becoming/history/SYSTEMS-COMPLEXITY-CHAOS.md: Lorenz and May discussed, a binary shift 'continuous, transitive, densely periodic and uniformly sensitive' as a Lean witness, finite-state eventual repetition, and no universal edge-of-chaos requirement. On the spine a reader finds no statement that sensitive dependence goes unstated. 'Sensitivity' there is coupling, not this."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-dpc-long-run-undecidable",
+      "name": {
+        "en": "Undecidable long-run behaviour and computational irreducibility"
+      },
+      "domain": "dynamics-physics-complexity",
+      "group": "dynamics-physics-complexity",
+      "source": {
+        "work": "Moore, Phys. Rev. Lett. 64 (1990); Wolfram, Phys. Rev. Lett. 54 (1985)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "A low-dimensional system embedding universal computation has long-run questions, such as whether a run enters a set, that no procedure decides for every start. So exact knowledge of state and law need not give the long run, apart from any sensitivity to the start. Wolfram argues further that for some systems no shortcut beats running them; how general that is stays disputed."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {
+        "en": "Proposed here: the account has this question's logical form. Within a list a run makes fewer than N changes, yet whether it changes again is decided only as a premise, and every run settling is exactly LPO, which computable models refute by the halting problem. Within a bound the question is a finite check. But LPO measures constructive strength, not computability, and no law embeds a universal machine, so no undecidable dynamics is stated. The link is mine; no record draws it. [AI reading]"
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/08-METHOD.md#r-the-last-change-of-a-run",
+          "says": {
+            "en": "Calibration (any process): a run within a list of N configurations with no change within a loop makes fewer than N changes and settles exactly where it is decided at every step whether it changes again. Exactly LPO: in every world of decidable configurations that a list holds, every run from a configuration with no reachable change that can be undone settles. The number of changes is bounded, but the step of the last change is not."
+          }
+        },
+        {
+          "record": "continued-change-needs-openness",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-continued-change-needs-openness",
+          "says": {
+            "en": "The theorem says rest cannot be refuted, not when it comes: naming the step after which nothing arises gives LPO (`World.lpo_of_finite_ends`)."
+          }
+        },
+        {
+          "record": "thresholds-beyond-a-band",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-thresholds-beyond-a-band",
+          "says": {
+            "en": "A run within B repeats within (B + 1)^n steps, so ending is a finite check with no band, on a finite web read condition by condition."
+          }
+        },
+        {
+          "record": "readings-within-what-they-read",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read",
+          "says": {
+            "en": "Theorem (any type): where a map moves every value, no member of a family of readings indexed by what it reads says the diagonal gap. Record: 'Gödel's incompleteness and the halting problem lie outside its laws: arithmetic coding and provability are not stated.'"
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "What a long-run claim costs in logic, stated law by law, with the finite-check side exact."
+      },
+      "source_adds": {
+        "en": "Embedding a universal machine in a dynamic, undecidability for any concrete system, and computational irreducibility. No law of the account is shown to have, or to lack, undecidable long-run behaviour."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-dpc-hysteresis",
+      "name": {
+        "en": "Hysteresis: distinct collapse and recovery thresholds"
+      },
+      "domain": "dynamics-physics-complexity",
+      "group": "dynamics-physics-complexity",
+      "source": {
+        "work": "Noy-Meir, J. Ecol. 63 (1975); Ludwig, Jones and Holling, J. Anim. Ecol. 47 (1978); Scheffer and others, Nature 413 (2001)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Between two folds a system has two stable states, so a parameter that drives a collapse at one value must be taken back past a different value before recovery. Which state holds depends on the path of the parameter. A loop of forward and backward thresholds is the phenomenon; the width of the band sets how costly restoration is."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The loop can be composed, though no live law draws it. In the stag hunt with lo ≤ hi, raising c past hi loses the shapers' lock; brought back within (lo, hi), the others' lock holds until c ≤ lo, given some shapers left: distinct collapse and recovery thresholds, width hi − lo, whose edges are a critical mass meeting an end, not folds. In the triad tolerance zero collapses, one keeps either state, two restores. Both compositions are mine. The records' word names memory in giving and a final ending. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "shaping-read-by-readers-drawn-from-the-selected",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected",
+          "says": {
+            "en": "Theorem (counts): the rule favours the shapers at every share exactly where c ≤ lo and c ≤ hi, the others strictly at every share exactly where lo < c and hi ≤ c; with lo ≤ hi a share decides exactly where lo < c < hi (`DrawnShaping.critical_mass_iff`). Courses lock one way, with no noise; hi, lo, a, p and c are constants. Record: the stag hunt, the critical mass its mixed equilibrium at share (c − lo)/(hi − lo)."
+          }
+        },
+        {
+          "record": "thresholds-of-waiting",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+          "says": {
+            "en": "Theorem (any type; the web reading on the World): under the tolerating law a formation gives where all but its tolerance of what it waits on gave. In a triad one withholding spreads to all with tolerance zero and passes out with tolerance one, while total withholding is kept. Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start; without one, total withholding stays."
+          }
+        },
+        {
+          "record": "regulation-from-one-side-and-locally",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-regulation-from-one-side-and-locally",
+          "says": {
+            "en": "Theorem (World): with balance, where the joint exchange gives no more than it takes below m, a level below m never returns to it, gated renewal being the case (`Flow.never_returns_below`)."
+          }
+        },
+        {
+          "record": "threshold-in-the-state-plane",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-threshold-in-the-state-plane",
+          "says": {
+            "en": "Theorem: for giving that adjusts, rising in both and keeping a band up to hi, the runs that rest below the draw are, for each recent giving, those from levels below a least level, which does not rise as the recent giving rises. Its field frequency failed its one frozen test (MQ7: 0.39 from 5 stocks, lower bound 0.00)."
+          }
+        },
+        {
+          "record": "dormancy-over-a-stretch",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-dormancy-over-a-stretch",
+          "says": {
+            "en": "With an ending made final as a separate premise, support returning after the reserve is spent finds no dependent; exhaustion alone does not give it. Its correspondence field reads 'hysteresis of collapse'."
+          }
+        },
+        {
+          "record": "webs-with-a-recent-giving",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-webs-with-a-recent-giving",
+          "says": {
+            "en": "Giving also reads what each gave last; under mutual support the order is kept; what was given can lower a threshold (`Momentum`). Its correspondence field: history-dependent response is hysteresis (Mayergoyz 2003)."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/02-MAP.md#t1",
+          "says": {
+            "en": "A second frozen test, whether the lakes' natural renewal returns once stocking has raised their adults back above the need, is designed and refused at the agency table's header; neither frozen lake test says anything of T1."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The exact premises of the one-sided case, each with a witness: below a need with no raising exchange a level does not return; where nothing gives nothing, an ended level stays nothing whatever the draw later does, so that branch has no recovery threshold (composition mine). An end absorbs while requirements do not loosen; a dissolved requirement is transformation, not recovery. Restoration by joint net giving is a law of every balanced flow."
+      },
+      "source_adds": {
+        "en": "A law of the path: nothing runs a parameter forward and back, and no live text states the band's width as restoration's cost. On a renewing regime under a draw no band is stated; the plan's CY(b) would, and its hysteresis test holds until then, on a 'no law' the composition above bears on. Continuous theory gives the band from two folds' positions, which the whole-number regime with a standing draw does not, a run under a changing draw not being the regime."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-dpc-rate-tipping",
+      "name": {
+        "en": "Tipping by rate"
+      },
+      "domain": "dynamics-physics-complexity",
+      "group": "dynamics-physics-complexity",
+      "source": {
+        "work": "Wieczorek and others, Proc. R. Soc. A 467 (2011); Ashwin, Wieczorek, Vitolo and Cox, Phil. Trans. R. Soc. A 370 (2012); Scheffer and others, Ecosystems 11 (2008)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "A system can leave a state that stays stable for every frozen value of the parameter, because the parameter moves faster than a critical rate and the system cannot track it. No bifurcation need occur. Ramped past a fold slowly, by contrast, a system tips later than the static threshold, by a delay with its own scaling."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "Only a reading names this route; no law states it, as the plan records. Nearest law, on regulation: no rule reading ℓ late keeps a band unless a + 2(ℓ + 1)d ≤ b, d bounding how far the rest of the exchange moves the level either way. That is a worst case against disturbances of unknown sign, not a known moving parameter; reading it as a critical rate is my composition. `Pace.pace_law`, which the plan names, is of reading pace. 'Faster' and 'outruns' elsewhere compare fixed rates. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "market-model-share-margin-and-ends",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-market-model-share-margin-and-ends",
+          "says": {
+            "en": "Reading [AI, D65]: four routes of transition are distinct, none a proved phase transition: a parameter change removing a region's retention, a shock into another retained region, a failure stopping correction, and change too fast for correction."
+          }
+        },
+        {
+          "record": "two-sided-regulation-and-late-reading",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-two-sided-regulation-and-late-reading",
+          "says": {
+            "en": "Theorem (any type; rules over whole numbers): on the course a rule generates from a start, no rule reading ℓ late keeps the level within [a, b], 0 < a, under every rest moving it by at most d a step unless a + 2(ℓ + 1)d ≤ b, attained by the late return."
+          }
+        },
+        {
+          "record": "how-fast-a-rule-may-change",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-how-fast-a-rule-may-change",
+          "says": {
+            "en": "Theorem (any type): a fast difference reaches the rule only at a reading step; given two values, a stretch of L steps fixes every pair of held-rule courses with at most N states exactly when L ≥ 2N − 1."
+          }
+        },
+        {
+          "record": "margin-of-a-regime",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime",
+          "says": {
+            "en": "Does not show that a margin times a break: yeast driven past its fold broke three and at least six days before the curve from constant regimes said. T2 (02): under a rising draw their giving falls below the curve about three days before the break (post hoc)."
+          }
+        },
+        {
+          "record": "mutual-dependence-and-its-pace",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-mutual-dependence-and-its-pace",
+          "says": {
+            "en": "Theorem (World: balance; nothing given): where each step's draw exceeds everything drawn since T, more than half of what stood at T stands at each of those steps (`half_stands`); a stock lasting n such steps needs at least 2^n − 1 (`doubling_needs`). A rising draw, an account with no renewal."
+          }
+        },
+        {
+          "record": "market-finite-support-obstruction",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-market-finite-support-obstruction",
+          "says": {
+            "en": "Theorem (periphery): a guarded run of a physical pair, under the stated share bound, lasting N steps needs stock at least 5 + N. 'No bifurcation, R-tipping classification or physical death follows from the obstruction.'"
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "A whole-number exact band in rate and lag, attained; and a frozen yeast run showing a renewal curve measured in constant regimes, iterated under the known schedule, did not time a break under a moving draw. The account does not read that run as rate."
+      },
+      "source_adds": {
+        "en": "The critical rate of a regime; tipping from a state stable when frozen; delay past a slowly ramped fold and its scaling; pullback attractors for a moving system. A regime's draw is standing, so its theorems do not read a moving parameter; a draw that moves appears only in accounts where no renewal gives a state to leave. The plan's CY(c) is not built."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-dpc-noise-tipping",
+      "name": {
+        "en": "Tipping by noise and escape times"
+      },
+      "domain": "dynamics-physics-complexity",
+      "group": "dynamics-physics-complexity",
+      "source": {
+        "work": "Kramers, Physica 7 (1940); Freidlin and Wentzell, Random Perturbations of Dynamical Systems (1984); Horsthemke and Lefever, Noise-Induced Transitions (1984)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "In a regulated state noise carries a run over a barrier. The mean time to escape grows exponentially in the barrier height over the noise strength, and a quasi-potential says which route and which state hold in the small-noise limit. Noise can also create states that the deterministic system lacks."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "Noise leaves locks, and in one case a regulated pair: the window absorbs errors it spans, and a burst leaves for good, with survival falling geometrically. A barrier in burst length is a discrete relative of escape, by my reading; the bound counts only aligned bursts, so it is loose. The unregulated walk's Chebyshev-type bound differs in kind. The capture chain's product of weights is a nearer relative of a quasi-potential, also my reading; the records credit Kandori and Young. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "exit-from-a-margin",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-exit-from-a-margin",
+          "says": {
+            "en": "Theorem (two values, natural weights, independent steps): the courses of n steps reaching the need take at most n·p·q/m² of the weight, Kolmogorov's maximal inequality in counting form. Reading: the unregulated case; void from n = m·m/(p·q). It is not the regime's point of no return."
+          }
+        },
+        {
+          "record": "errors-by-chance-in-a-pair-keeping-mutual-withholding",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-errors-by-chance-in-a-pair-keeping-mutual-withholding",
+          "says": {
+            "en": "Theorem (errors only withhold, natural weights; near-definitional once errors are one-way and a law keeps mutual withholding): where both formations err at two consecutive steps, a pair of such laws withholds at every step from then on. Of the courses of 4k values, whose weight is ((p + q)^4)^k, those still giving at step 2k weigh at most ((p + q)^4 − p^4)^k. That the share falls to nothing is by hand."
+          }
+        },
+        {
+          "record": "drawn-shaping-drawn-one-at-a-time",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-drawn-shaping-drawn-one-at-a-time",
+          "says": {
+            "en": "Drawn one member at a time, the stag hunt leaves either lock by drift, at a weight of at most t times the product of down over up across the counts s + 1 to s + n. A time to leave a lock beyond the geometric bound is not stated."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/02-MAP.md#which-locks-noise-leaves",
+          "says": {
+            "en": "Reading [AI, over the proved cases]: a lock read from a population drawn anew is kept for good only without noise, or where the rule leaves the disfavoured kind nothing; counts that accumulate are an urn with increasing returns (cited, not stated)."
+          }
+        },
+        {
+          "record": "laws-with-noise",
+          "anchor": "theories/becoming/chapters/01-ROOT.md#r-laws-with-noise",
+          "says": {
+            "en": "A law with noise is a relation of exchange, so the laws hold path by path; balance passes to the expectation, and rest does not (a witness)."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Bounds in exact counts, and a record law: given the weighting, a record bears on the exit only through the margin it shows and the steps it leaves. Computed, not proved: at an error chance of 1/20, total withholding comes after about 30 steps under answering and about 3×10⁴ under the window of two."
+      },
+      "source_adds": {
+        "en": "Continuous theory states the exponential law and its prefactor, the quasi-potential, the most likely route, and noise creating states. The record says exponential exit bounds within a horizon are not stated, nor unbalanced walks. A regime with renewal has no law of noise-driven exit; the pair's law holds for one-way errors alone. 08 lists the risk-dominant state as noise vanishes as not stated; 02's Open lists the time to leave a lock."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-dpc-absorbing-state",
+      "name": {
+        "en": "Absorbing-state transitions"
+      },
+      "domain": "dynamics-physics-complexity",
+      "group": "dynamics-physics-complexity",
+      "source": {
+        "work": "Harris, Ann. Probab. 2 (1974); Janssen (1981); Grassberger (1982); Hinrichsen, Adv. Phys. 49 (2000)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "A nonequilibrium system with a state it cannot leave can show a sharp transition between an active and an absorbing phase as a parameter passes a critical value, with exponents shared across a universality class (directed percolation is conjectured generic). In a finite system absorption is certain eventually; sharpness belongs to the limit of infinite size."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The account states absorption at several grains, and the premises for it, in laws that are per course and finite. It has no parameter sweep of a density and no large-size limit, so what it has is the state's closure, not the transition. A finite chain reaching its absorbing state is credited by one record, 'by hand'. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "attraction-is-not-returning",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-attraction-is-not-returning",
+          "says": {
+            "en": "Theorem (any type): a configuration is drawn into some absorbing region exactly where it does not return. Near-definitional, not a classical attractor."
+          }
+        },
+        {
+          "record": "support-from-the-supported",
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-support-from-the-supported",
+          "says": {
+            "en": "Theorem (World): the end absorbs: under balance, only active formations giving and activity needing support, once nothing is supported, while requirements do not loosen, nothing is supported or active again. Each premise is needed; dissolving a requirement is transformation, not recovery."
+          }
+        },
+        {
+          "record": "fixation-by-drift",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-fixation-by-drift",
+          "says": {
+            "en": "In sampled generations the ends absorb; the histories still mixed after k cohorts weigh at most r^k of (N^N)^k, finite bounds."
+          }
+        },
+        {
+          "record": "errors-by-chance-in-a-pair-keeping-mutual-withholding",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-errors-by-chance-in-a-pair-keeping-mutual-withholding",
+          "says": {
+            "en": "Correspondence field: 'a chain with a reachable absorbing state reaching it with probability one'. Law: a pair of laws keeping mutual withholding, after a burst of one-way errors, withholds from then on; that the share falls to nothing is by hand, a ratio of the weights."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Witnesses for each premise of absorption (a requirement dissolving, a give from beyond, an idle giver, a giver unsupported, a rise from nothing), which names what would leave the state."
+      },
+      "source_adds": {
+        "en": "The transition itself: the critical parameter, order parameter, exponents, universality, and a metastable lifetime growing with size. All of these need densities and an infinite-size limit that the account does not represent. Its Not-shown says no universal phase threshold between regions."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-dpc-critical-slowing",
+      "name": {
+        "en": "Critical slowing down"
+      },
+      "domain": "dynamics-physics-complexity",
+      "group": "dynamics-physics-complexity",
+      "source": {
+        "work": "Wissel, Oecologia 65 (1984); Scheffer and others, Nature 461 (2009); Dakos and others (2008, 2012)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Near a bifurcation the rate of return to a state falls to zero, so its variance and autocorrelation rise beforehand. These can serve as generic indicators of an approaching transition, read from rolling windows of a single series."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The periphery proves the stationary formulas of the linear step at a fixed multiplier, stationarity supplied, and that the multiplier goes to one in two chosen models, a fold's form and a logistic with a proportional draw. So the law has the field's form in a linear one-variable case. It is credited, and the record says the theory adds only the reading (see the next entry). [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "slowing-down-before-an-own-end",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-slowing-down-before-an-own-end",
+          "says": {
+            "en": "Theorem (periphery; discrete steps, one variable linearized about a rest, deviation and noise independent with finite second moments): variance Var E/(1 − a²) where a² < 1, lag-1 autocorrelation a; at a fold and a transcritical end under a proportional draw, a rises to one. Nonlinear runs, finite windows and several variables are not treated."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The reading: no one function of the multiplier returns the margin to a need for every need (`SlowingDown.need_not_read`), by construction. In the logistic drawn model with h, r and K nonzero a measured need's margin is read off the multiplier, with the model known (`SlowingDown.need_margin_read`), likewise by construction."
+      },
+      "source_adds": {
+        "en": "The record excludes red noise, several variables, flickering, noise-induced transitions, shifts with no bifurcation, the linearization's error near the fold and rolling-window convergence, all of which the field treats. Continuous-time diffusion forms are also unstated."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-dpc-warning-reach",
+      "name": {
+        "en": "How far early warnings reach"
+      },
+      "domain": "dynamics-physics-complexity",
+      "group": "dynamics-physics-complexity",
+      "source": {
+        "work": "Scheffer and others, Nature 461 (2009), on generic signals; Boerlijst, Oudman and de Roos (2013); Dekker, von der Heydt and Dijkstra (2018); Hastings and Wysham, Ecol. Lett. 13 (2010)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "The field's general reading is that rising variance and autocorrelation warn of a coming critical transition across many systems. Later work in the field qualifies this: a warning shows only in what carries the critical mode, a leading system's indicators may ignore whether a follower tips, and shifts can come with no warning at all."
+      },
+      "quote": null,
+      "carried": "changed",
+      "relation": "scope",
+      "reading": {
+        "en": "T6 confines the signal: the statistic reads the observed condition's own rate of return, and a dependent's need is no bifurcation of that renewal. The confinement is the later literature's too: the audit says the uncoupled side holds by construction in matched form and is the eigenvector literature's, and the chapter says that literature refuted T6's first wording. So this is scope with no third part. Its empirical content, negligible feedback, no test has measured. [AI reading]"
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#break-seen-coming",
+          "says": {
+            "en": "Thesis T6: a break is seen coming only through what couples into what breaks; invisible half proved on the World model, seen half periphery, one law across domains and 'only where' outside these models conjectured. Forbids: given the stock's own course, its statistics separating runs where a dependent's need is crossed from runs where not, the dependent taking no measurable share. Three frozen seabird tests did not reject it: low power, estimates in the refuting direction (about 0.3); power about 0.9, near zero, reusing rows; power about 0.5, feedback argued, not measured. None establishes conditional independence."
+          }
+        },
+        {
+          "record": "runaway-distance-uncoupled",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-runaway-distance-uncoupled",
+          "says": {
+            "en": "Theorem (World): where that stock is the only requirement that may fail up to a horizon, some raise of it is alike through the couplings and supports the formation to the horizon: how far off the break is does not couple in."
+          }
+        },
+        {
+          "anchor": "theories/becoming/review/SCIENCES.md#s-16",
+          "says": {
+            "en": "Audit: 'the uncoupled side holds by construction in matched form and is the eigenvector literature's'. Dekker and others (2018) named as the closest prior form of the uncoupled side."
+          }
+        },
+        {
+          "record": "mutual-dependence-and-its-pace",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-mutual-dependence-and-its-pace",
+          "says": {
+            "en": "Theorem (World: balance; nothing given): where each step's draw exceeds everything drawn since T, more than half of what stood at T stands at each of those steps; a stock of seven meets draws of one, two and four, four standing at the third step and none after. A witness of no warning in the level, by a growing draw."
+          }
+        },
+        {
+          "record": "how-loops-form",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-how-loops-form",
+          "says": {
+            "en": "Up to T the carried amount reads only couplings acting before T; a loop forming at T and one forming at any later step carry the same amounts up to T (`Closing.Onset.unforeseen`, a witness)."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The split stated as one thesis with a forbidden observation fixed in advance. 08 records that prose once said nothing sensed shows how near a break is, and corrects it: the theorem assumes the stock is not sensed."
+      },
+      "source_adds": {
+        "en": "Hastings and Wysham's shifts with no warning under strong noise or chaos: the account's no-warning laws are other mechanisms, and the record lists shifts with no bifurcation as not shown. Whether T6 says anything beyond the case without feedback is S-16's open question."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-dpc-soc",
+      "name": {
+        "en": "Self-organized criticality"
+      },
+      "domain": "dynamics-physics-complexity",
+      "group": "dynamics-physics-complexity",
+      "source": {
+        "work": "Bak, Tang and Wiesenfeld, Phys. Rev. Lett. 59 (1987); Dhar, Phys. Rev. Lett. 64 (1990)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "A slowly driven threshold system with fast relaxation tunes itself, with no external parameter, to a critical state where responses come as avalanches of all sizes, in power-law distribution. The sandpile's abelian property says the order of topplings does not change the result. How widely real systems are so is disputed."
+      },
+      "quote": null,
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "Whole numbers are no obstacle: the sandpile is in whole grains. By mechanism the neighbours fall short: `how-loops-form`'s threshold witness has steady drive and a threshold, then doubling, with no relaxation or self-tuning; traces commute unjoined exchanges, which is not firing confluence; a cascade along total dependence has no drive. I found nothing stating slow drive with fast relaxation, a self-tuned margin or a size law. The regime's draw is standing, so its margin does not tune itself. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "All of it: the self-tuning, the avalanche distribution, the abelian group. 08's table names only chip-firing's order independence and thresholds in chips as stated elsewhere. My remark: a stock self-tuned near its need would bear on T1 and T6; this is unexplored."
+      },
+      "absence": {
+        "searched": [
+          "self-organi[sz]ed crit",
+          "sandpile",
+          "avalanche",
+          "chip-firing",
+          "Bak",
+          "power law",
+          "scale-free",
+          "heavy tail",
+          "relaxation",
+          "self-tun",
+          "toppl"
+        ],
+        "read": [
+          "08-METHOD known-results, the row Rest needs a least loss",
+          "record rest-theorem-in-any-amounts correspondence",
+          "record coupled-webs",
+          "record how-loops-form, the threshold witness",
+          "01-ROOT r-order-of-exchanges-is-the-invariant",
+          "08-METHOD known-results, the row naming trace theory"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-dpc-hot",
+      "name": {
+        "en": "Highly optimized tolerance: robust yet fragile"
+      },
+      "domain": "dynamics-physics-complexity",
+      "group": "dynamics-physics-complexity",
+      "source": {
+        "work": "Carlson and Doyle, Phys. Rev. E 60 (1999); Phys. Rev. Lett. 84 (2000)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Against self-organized criticality, power laws can come from design or selection optimizing under constraints: a system tuned against the perturbations it was designed for grows robust to them and fragile to rare or unanticipated ones."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {
+        "en": "Proposed here, not in the account, and only for HOT's 'unanticipated' half: what an optimizing order does not read takes the shared constraint's cost. With room, every optimum stands at the least level beyond. Fragility to rare events differs: HOT's design reads their probability and weighs them low, which this law does not state. HOT's tail law has no counterpart. Standing: my reading only. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "what-an-optimum-does-beyond-what-couples-in",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
+          "says": {
+            "en": "Theorem (any set of outcomes; the breaks on the World). (a) One step: with room every optimum of an order rising with a family stands at the least level beyond, and, on a web with each condition beyond depended on at a need met at the step, breaks exactly the dependences beyond that some eligible outcome breaks."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Exact conditions for the drain, room and the outcome set, on one step, for every order rising with the family; 08 says the law restates Zhuang and Hadfield-Menell's Theorem 1. No evaluation enters: the record says the beyond's fall is not shown a harm."
+      },
+      "source_adds": {
+        "en": "The trade-off curve and tail distributions from a design problem. No statement here says how losses are distributed by size, and no optimum here is measured on an event distribution."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-dpc-percolation",
+      "name": {
+        "en": "Percolation: a sharp threshold over an ensemble of webs"
+      },
+      "domain": "dynamics-physics-complexity",
+      "group": "dynamics-physics-complexity",
+      "source": {
+        "work": "Broadbent and Hammersley (1957); Erdős and Rényi (1960); Callaway and others, Phys. Rev. Lett. 85 (2000)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "On a large random or lattice web a connected cluster spanning the system appears sharply at a threshold in the share of links or nodes kept. Removing nodes past it fragments the web, the threshold depending on the degree distribution. Sharpness belongs to the limit of large size."
+      },
+      "quote": null,
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "The neighbours are per graph and exact, not statistical over an ensemble: a set relying on at most its tolerance outside it keeps giving; a cascade down chains of total dependence; points of no return not rising under mutual support. None gives a threshold in a share of links or a cluster's size. The next two entries take what per-graph form there is; the plan's 'percolation-like' tolerance gap names this. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "The sharp threshold, its dependence on degree distribution, size scaling and the giant component. No law here reads an ensemble of webs. Plan 4.4 lists thresholds of tolerance on webs as a gap; what 05 states is per graph, a kept set and monotonicity."
+      },
+      "absence": {
+        "searched": [
+          "percolat",
+          "giant component",
+          "connectivity threshold",
+          "interdependen",
+          "Erdos",
+          "bootstrap",
+          "k-core",
+          "tolerance",
+          "cascade"
+        ],
+        "read": [
+          "records coupled-webs, rest-on-coupled-webs, tolerance-monotone-across-laws, thresholds-of-waiting, a-pair-tolerates-only-within-a-window",
+          "05-COLLECTIVES r-thresholds-of-waiting",
+          "PLAN.md 4.2 and 4.4"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-dpc-threshold-contagion",
+      "name": {
+        "en": "Threshold contagion on a given graph"
+      },
+      "domain": "dynamics-physics-complexity",
+      "group": "dynamics-physics-complexity",
+      "source": {
+        "work": "Granovetter, Am. J. Sociol. 83 (1978); Chalupa, Leath and Reich, J. Phys. C 12 (1979); Morris, Rev. Econ. Stud. 67 (2000); Watts, PNAS 99 (2002)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "A node adopts once enough of its neighbours have. Thresholds rising or falling move the outcome monotonically. On a given graph contagion from a seed stops at a sufficiently cohesive set (Morris, in fractions); on random graphs a global cascade appears within a window of connectivity and thresholds (Watts)."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The tolerating law is a threshold model on a given graph of waits, written by tolerance rather than need; one record says monotone threshold dynamics, and another sets a critical mass beside Schelling and Granovetter. A thin withholding passing out in one step has the form of a seed too thin to spread. Only `kept_set` as Morris's cohesive set is proposed here. thresholds-of-waiting itself credits none of this and reads onto social viability. No law says whether a seed spreads globally. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "thresholds-of-waiting",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+          "says": {
+            "en": "Theorem (any type; the web reading on the World): under the tolerating law a formation gives where all but its tolerance of what it waits on gave. A set giving at the start, each member waiting on at most its tolerance outside it, keeps giving whatever the rest does, and a thin withholding passes out in one step. In a triad one withholding spreads to all with tolerance zero and passes out with tolerance one, while total withholding is kept."
+          }
+        },
+        {
+          "record": "tolerance-monotone-across-laws",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-tolerance-monotone-across-laws",
+          "says": {
+            "en": "Theorem (any type): for the same waits and start, a formation giving under a tolerating law gives under every tolerating law with tolerances no smaller. It shows only that more tolerance gives no less, not that it is better. Correspondence field: monotone threshold dynamics."
+          }
+        },
+        {
+          "record": "shaping-read-by-readers-drawn-from-the-selected",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected",
+          "says": {
+            "en": "With lo ≤ hi a share decides exactly where lo < c < hi (`DrawnShaping.critical_mass_iff`). Correspondence field: the threshold is the critical mass of binary choice with externalities (Schelling 1973, 1978; Granovetter 1978, whose thresholds are distributed where here there is one)."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "From total withholding, restoring needs a formation sparing all it waits on, and without one total withholding stays; on a gift web support is a run of the law, with tolerance the number upstream less the need."
+      },
+      "source_adds": {
+        "en": "The global cascade window, distributed thresholds, degree distributions, fractions of neighbours and any ensemble. The record excludes amounts of giving, thresholds with memory and how tolerances form."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-dpc-dependence-cascades",
+      "name": {
+        "en": "Cascades along dependence and interdependent networks"
+      },
+      "domain": "dynamics-physics-complexity",
+      "group": "dynamics-physics-complexity",
+      "source": {
+        "work": "Pimm (1980); Dunne, Williams and Martinez (2002); Buldyrev and others, Nature 464 (2010)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Failure passes along dependence. In food webs the reach of secondary extinctions is set by the web's structure. In two interdependent networks a cascade of mutual dependence can fragment both abruptly, leaving them more fragile than either alone."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The chain law has the deterministic form: along total dependence with positive draws the end of one ends everything downstream, a ring together or not at all, and a draw of nothing stops it; a reserve defers it link by link. Buldyrev's abruptness is a statistic of random graphs, absent here. The records credit the food-web work, not Buldyrev; that resemblance is my reading. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "coupled-webs",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-coupled-webs",
+          "says": {
+            "en": "Theorem (the regime; any number of conditions, any index type): under mutual support raising a level never ends one that held; along every chain of total dependence with positive draws the end of one ends everything downstream, a ring ending together or not at all, and a draw of nothing stops the cascade."
+          }
+        },
+        {
+          "record": "reserve-defers-ending",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-reserve-defers-ending",
+          "says": {
+            "en": "Theorem (World): where the reserve decays, along a chain of embodied links, each requiring the one before at a positive need from T on with the first ended from T, coextinction runs down the chain link by link; without decay each link ends given excluded middle, with no bound."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Each link's steps counted, positive draws shown needed by a witness, and a calibration: naming when a deferred end comes is an omniscience principle."
+      },
+      "source_adds": {
+        "en": "Partial dependence and a cascade's time, which 02's Open lists; reach as a statistic of web structure, the record calling field reach untested; abrupt collapse under random failure and its threshold."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-dpc-prigogine-open",
+      "name": {
+        "en": "Open systems: order kept by what flows through"
+      },
+      "domain": "dynamics-physics-complexity",
+      "group": "dynamics-physics-complexity",
+      "source": {
+        "work": "Schrödinger, What Is Life? (1944); Nicolis and Prigogine, Self-Organization in Nonequilibrium Systems (1977)",
+        "locator": "the entropy balance dS = d_e S + d_i S; locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "A system stays away from equilibrium only by exchange with its surroundings: its internal entropy production is non-negative, and the balance is kept by entropy exported, or free energy taken in, at rates the theory quantifies."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The necessity is the account's, in amounts: an enclosed finite family taken from without end cannot go unfed from beyond, and over a stretch a stock rises by at most its inflow, which 08 records as the entropy balance in counts. Reading sunlight or imports as inflow is a correspondence. It is one direction, and openness does not suffice for arising without end. The audit says the exclusion is the sources' own and the theory forbids no more and needs more to forbid it. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "continuing-self-fed-from-beyond",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-continuing-self-fed-from-beyond",
+          "says": {
+            "en": "Theorem (World; balance and dissipation, equality of conditions decided): a finite family without repetition, enclosed around from some step on and taken from or rising at arbitrarily late steps, cannot from any step on be fed from nothing beyond it. No step of feeding is named. It needs a fixed unit of natural-number amounts."
+          }
+        },
+        {
+          "record": "a-rise-past-the-inflow-is-drawn-from-beyond",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-rise-past-the-inflow-is-drawn-from-beyond",
+          "says": {
+            "en": "Theorem (World: balance; local: the risen family listed without repetition): a family's inflow across a step is what each formation taking part gives it beyond what it takes from it, summed; it is zero exactly where the family gains nothing, and over a stretch a stock rises by at most the stretch's inflow."
+          }
+        },
+        {
+          "record": "continued-change-needs-openness",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-continued-change-needs-openness",
+          "says": {
+            "en": "The eight premises decide neither enclosure nor openness, and openness with them does not give arising without end."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/08-METHOD.md#known-results",
+          "says": {
+            "en": "Fed from beyond, entropy, nets: restated; closest prior Schrödinger (1944), Prigogine (1977), ranking functions, P-invariants."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The premises needed, each with a witness (censuses, embodiment), and calibration at the unit: at a unit that splits at arbitrarily late steps the conclusion can fail."
+      },
+      "source_adds": {
+        "en": "Rates and real amounts: a balance per step in counts is stated, yet S-06 says the law gives no amount, rate or time of feeding, which an entropy-production balance would give. How much feeding a stock needs is not stated, and no theorem states the law over real amounts."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-dpc-prigogine-structures",
+      "name": {
+        "en": "Dissipative structures and least entropy production"
+      },
+      "domain": "dynamics-physics-complexity",
+      "group": "dynamics-physics-complexity",
+      "source": {
+        "work": "Glansdorff and Prigogine, Thermodynamic Theory of Structure, Stability and Fluctuations (1971); Nicolis and Prigogine (1977); Bénard cells, Belousov–Zhabotinsky as examples",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Near equilibrium, in the linear regime, a steady state minimizes entropy production. Far from equilibrium that steady state can lose stability at a bifurcation, and new ordered patterns form and are kept by dissipation itself: order through fluctuation. The near-equilibrium principle's reach has been contested (uncertain in detail)."
+      },
+      "quote": null,
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "The account states that continuing needs feeding, not that a throughput forms structure; I found no law where a homogeneous steady state loses stability. Neighbours take the pattern as given: a pattern lasting through passing does not show carrying forming by passing. 08 itself lists both as stated by prior frameworks and not yet here. Were they taken up, the account would still refuse one reading: neither its generation nor 生生 is any new organization, so a Bénard cell's order would say nothing of direction. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "All of it: the extremum principle, the bifurcation, pattern forming, and the temperature and force gradients that a level in whole units of exergy against one reference environment does not represent. Stated limit: 08's last column of the Fed from beyond row."
+      },
+      "absence": {
+        "searched": [
+          "Prigogine",
+          "dissipative structure",
+          "least entropy production",
+          "minimum entropy",
+          "maximum entropy production",
+          "Onsager",
+          "Bénard",
+          "self-organi"
+        ],
+        "read": [
+          "08-METHOD known-results row Fed from beyond",
+          "SCIENCES S-04 and S-06",
+          "GLOSSARY lines for generation and 生生",
+          "record what-keeping-widening-needs, its Prigogine hit",
+          "record a-pattern-lasts-through-passing",
+          "04-LIFE r-a-pattern-lasts-through-passing",
+          "record continuing-self-fed-from-beyond"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-dpc-landauer",
+      "name": {
+        "en": "Landauer's principle and Bennett's history"
+      },
+      "domain": "dynamics-physics-complexity",
+      "group": "dynamics-physics-complexity",
+      "source": {
+        "work": "Landauer, IBM J. Res. Dev. 5 (1961); Bennett, IBM J. Res. Dev. 17 (1973); Sagawa (2014)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "A logically irreversible step compresses the phase space of the bearer of information, so under Liouville's theorem the rest expands, and erasing a bit at temperature T exports at least kT ln 2 of heat in expectation. Keeping a history makes computation logically reversible; Bennett's uncomputation returns the history to blank."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The count is carried for determined maps on listed configurations. The account reads that one merge across computation, heat, extinction and forgetting, as correspondence. It also corrects its own earlier use: the heat bound is no floor of destroyed exergy, so it does not supply the World's least loss. Physics enters only through a stated count-to-heat premise. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "merge-of-a-part-kept-by-the-rest",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-merge-of-a-part-kept-by-the-rest",
+          "says": {
+            "en": "Theorem (any type; a law that merges nothing): where a part reads one value p after every step and some configuration's part is not p, no list holds every configuration. 'This is Landauer's (1961) count with Bennett's (1973) history'; no energy, temperature or probability is read, so kT ln 2 is not derived."
+          }
+        },
+        {
+          "record": "least-loss-from-entropy-production",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-least-loss-from-entropy-production",
+          "says": {
+            "en": "Landauer's bound is no such floor by itself: it bounds the heat an erasure exports, heat exported is not exergy destroyed, and a logically irreversible step can be carried out thermodynamically reversibly (Bennett 2003; Sagawa 2014)."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The law at any type: a reset part under a law that merges nothing means no list holds the configurations; narrowing the part spreads the rest. The record reads the finite-rest floor as the counting shadow of Reeb and Wolf's finite-bath correction."
+      },
+      "source_adds": {
+        "en": "The bound in energy, kT ln 2, measured (Bérut and others, Nature 483, 2012), its general derivation disputed (the record notes Norton); the physics of the bath and of measure on phase space, since a list has no measure. Bennett's uncomputation (only the kept history is stated). 08's table lists both as not yet stated."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-dpc-attractor",
+      "name": {
+        "en": "The attractor of dynamical systems"
+      },
+      "domain": "dynamics-physics-complexity",
+      "group": "dynamics-physics-complexity",
+      "source": {
+        "work": "Milnor, Commun. Math. Phys. 99 (1985); Conley, Isolated Invariant Sets and the Morse Index (1978)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "An attractor is an invariant set, minimal in some sense, attracting a neighbourhood or a set of positive measure; the definition needs a topology or a measure. Conley's theorem splits a flow on a compact space into a chain-recurrent part and a gradient-like part."
+      },
+      "quote": null,
+      "carried": "changed",
+      "relation": "divergence",
+      "reading": {
+        "en": "The account uses a different object and says so: absorbing region, drawn into it, with no neighbourhood, measure, or minimality. So the main law is near-definitional, 'drawn exactly where it does not return'; its record is explicit that this is no attractor in the classical sense. It also counts what no attractor gives: counting on draws 0 and merges nothing, so a run escaping to infinity is drawn. A topology-free shadow of Conley's split seems near; that is my reading. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "attraction-is-not-returning",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-attraction-is-not-returning",
+          "says": {
+            "en": "Theorem (any type): a configuration is drawn into some absorbing region exactly where it does not return. 'The main law is near-definitional, not a classical attractor'. An open world separates merging from drawing: counting on draws 0 and merges nothing. Record: how deep or wide a basin is lies outside the theorems."
+          }
+        },
+        {
+          "record": "basins-of-a-determined-law",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-basins-of-a-determined-law",
+          "says": {
+            "en": "Theorem (any type): courses meeting is an equivalence whose classes are basins; within m listed configurations each basin holds one cycle."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "No finiteness or decidability is needed for the main law; an open world can draw without merging, while within a list the two go together. The periphery's market model does use neighbourhood attraction at one parameter: at β = 1/2 the maintenance end and the depletion end each attract a neighbourhood."
+      },
+      "source_adds": {
+        "en": "Stability under nearby starts, basin size and shape, strange attractors, and fractal basin boundaries. The word 'attractor' on the spine therefore does not promise these, and a physicist reading the account's 'attractor' as Milnor's would be misled unless told."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-dpc-bistability",
+      "name": {
+        "en": "Bistability, basin boundaries and transients"
+      },
+      "domain": "dynamics-physics-complexity",
+      "group": "dynamics-physics-complexity",
+      "source": {
+        "work": "Hirsch and Smith, Monotone Dynamical Systems (2005); Hastings, Trends Ecol. Evol. 19 (2004); Dean, Am. Nat. 121 (1983)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Two stable states are separated by a boundary, in the plane a curve, unordered for order-preserving maps. Which state a run reaches depends on its start; basins have sizes, and transients can cross what a lower-dimensional view takes for a threshold. In obligate mutualism a curve separates persistence from extinction."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The account states the boundary exactly where the order holds: a least level for each recent giving, a falling curve; a partner's threshold not rising as the partner rises. The stag hunt's critical mass is the same shape in shares, where without noise the start decides, and the market has two attracting ends at one parameter. Basin sizes it does not state. A shared shape, read across models; the account does not join them. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "threshold-in-the-state-plane",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-threshold-in-the-state-plane",
+          "says": {
+            "en": "Theorem: for giving rising in what is left and the recent giving and keeping a band up to hi, the runs resting below the draw are, for each recent giving, those from levels below a least level, decided at step 3 hi + 3, not rising as the recent giving rises. Without rising giving no level separates the fates (`Notch`, a witness)."
+          }
+        },
+        {
+          "record": "regime-point-under-adjusting-giving",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-regime-point-under-adjusting-giving",
+          "says": {
+            "en": "The point decides the fate where the recent giving lies on the level's side; otherwise what was given can carry a condition across it (`Crossing.crosses`, a witness). Its correspondence field: with a second state variable a threshold is a curve that transients cross (Hastings 2004)."
+          }
+        },
+        {
+          "record": "coupled-regimes",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-coupled-regimes",
+          "says": {
+            "en": "Under mutual support within a band a run rests and a point of no return does not rise as the partner rises; support can save, and inhibition breaks the order of fates."
+          }
+        },
+        {
+          "record": "shaping-read-by-readers-drawn-from-the-selected",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected",
+          "says": {
+            "en": "Theorem (counts): the rule favours the shapers at every share exactly where c ≤ lo and c ≤ hi, the others strictly at every share exactly where lo < c and hi ≤ c; with lo ≤ hi a share decides exactly where lo < c < hi (`DrawnShaping.critical_mass_iff`). Courses lock one way, with no noise; hi, lo, a, p and c are constants. Record: the stag hunt, the critical mass its mixed equilibrium at share (c − lo)/(hi − lo)."
+          }
+        },
+        {
+          "record": "market-model-share-margin-and-ends",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-market-model-share-margin-and-ends",
+          "says": {
+            "en": "Theorem (periphery): at β = 1/2 the maintenance end and the depletion end each attract a neighbourhood, and the interior point has arbitrarily small perturbations that leave. Record: no full basin, and no stability classification for every β. Correspondence, read by the AI: 'the bistable shape of coordination dynamics'."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Exact premises with witnesses, the boundary found by a finite search with no omniscience, and an inhibition witness where the threshold rises with the partner, so that down-closure is seen to rest on mutual support."
+      },
+      "source_adds": {
+        "en": "Basin size and shape, separatrices as manifolds, and laws of how long transients last. Over the reals the threshold as a computed level is not stated. In the field the curve's fates failed their frozen test (MQ7: 0.39 from 5 stocks, lower bound 0.00), so its use on data is not established."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-dpc-monotone-systems",
+      "name": {
+        "en": "Monotone dynamical systems"
+      },
+      "domain": "dynamics-physics-complexity",
+      "group": "dynamics-physics-complexity",
+      "source": {
+        "work": "Hirsch (1985); Smith, Monotone Dynamical Systems (1995); Hirsch and Smith (2005)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Where each component's rate rises with the others, the order of solutions is kept. Strongly monotone flows converge for generic starts and their limit sets are unordered; planar cooperative flows converge outright. Competitive maps keep the order with one coordinate reversed. Delays can be absorbed into the state."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "Mutual support is the cooperative premise, and the records credit the comparison principle. Discrete steps part here: beyond a band a pair under mutual support cycles for ever between two unordered states, which the unordered-limit-set result allows and which a planar cooperative flow, in my comparison, does not do. The record sets it beside planar maps' regularity conditions and does not call it a step's artefact. So the band is what rest needs in whole steps. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "rest-on-coupled-webs",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-rest-on-coupled-webs",
+          "says": {
+            "en": "Theorem (the regime; finitely many listed conditions, band, mutual support): a run rests within the count times hi plus one steps, ending decided there, and each point of no return, the others given, is exact and does not rise as any other level rises."
+          }
+        },
+        {
+          "record": "coupled-regimes",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-coupled-regimes",
+          "says": {
+            "en": "Record counterexample `Relay.cycles`: mutual support without a band gives no rest; a pair each of which ends alone cycles for ever between two unordered states. Correspondence field: planar cooperative maps are eventually monotone only under regularity conditions (Smith 1998)."
+          }
+        },
+        {
+          "record": "regime-in-any-amounts",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-regime-in-any-amounts",
+          "says": {
+            "en": "The order, the shape of a run and its rests hold in linearly ordered amounts. Theorem (periphery): over the non-negative reals, with the adjustment rising in what is left and in the recent giving and keeping a band up to hi, every run converges, to a rest where the adjustment is continuous, and need not rest."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The record says the shape of a run needs no regularity condition here, since every step neither up nor down moves the recent giving toward the draw, whatever the adjustment; stated constructively in any amounts, with convergence left to the periphery as an omniscience principle."
+      },
+      "source_adds": {
+        "en": "Generic convergence in continuous time, the strong order, and systems with delay beyond one recent giving. A further lag is not stated, and that measured adjustments rise in both over their band is not shown."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-dpc-viability",
+      "name": {
+        "en": "Viability and invariance kernels"
+      },
+      "domain": "dynamics-physics-complexity",
+      "group": "dynamics-physics-complexity",
+      "source": {
+        "work": "Aubin, Viability Theory (1991)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Under a set-valued dynamic, a set is viable if from each state some evolution stays in it, and invariant if every evolution does. Within a constraint the largest such sets are the viability and invariance kernels. In continuous time a tangency condition characterizes them; in discrete time a fixed-point iteration computes them."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The 'never leaving' law has this form, for every process and guard: no course leaves exactly when a certificate inside the guard, kept by every step, contains the start. On the root it is the largest region closed under a relation inside a requirement. A record corrected the name to invariance kernel, the two coinciding for a determined law. Whole steps and any type, so no tangency arises. The market's floors are supplied, and its kernel is not computed. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "market-protected-continuation",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-market-protected-continuation",
+          "says": {
+            "en": "Never leaving. For every process and guard, no course from a configuration leaves the guard exactly when some certificate contains it (a set within the guard that every step keeps; the invariance kernel is the largest). Scope: no entry from unsafe states, no compliance by actual markets."
+          }
+        },
+        {
+          "record": "a-response-common-over-a-reading",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-a-response-common-over-a-reading",
+          "says": {
+            "en": "Theorem (root): the occurrences at which a given region holds throughout their closure under a relation form the largest region inside it closed under the relation; at a process's steps it is the invariance kernel (`Viability.kernel_iff_held`). Record: what Aubin (1991) calls the invariance kernel; where each configuration has exactly one successor, also Aubin's viability kernel."
+          }
+        },
+        {
+          "record": "market-partial-correction-boundary",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-market-partial-correction-boundary",
+          "says": {
+            "en": "Reaching. A start reaches a target within n steps on every admissible disturbance exactly when some funnel holds it at level n; in the market every such state lands exactly when β ≤ 5/12. Not a complete basin or a measured threshold; the record says no bifurcation over all parameters follows."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Reaching and lasting as the same kind of ladder (funnels, ladders, drains), as pure-core laws for any process, with market instances in the periphery."
+      },
+      "source_adds": {
+        "en": "The viability kernel proper under branching, from which some course stays, is named as different and not stated. Also tangency conditions, set-valued continuous dynamics, regularity of kernels and viable control synthesis. The market's kernel is not computed; at its boundary arbitrarily small constant adverse error leaves a positive seed that never lands."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-dpc-phase-transition",
+      "name": {
+        "en": "Phase transitions in statistical physics"
+      },
+      "domain": "dynamics-physics-complexity",
+      "group": "dynamics-physics-complexity",
+      "source": {
+        "work": "Landau (1937); Onsager, Phys. Rev. 65 (1944); Yang and Lee, Phys. Rev. 87 (1952); Wilson (1971)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "A phase transition is a singularity in thermodynamic quantities in the infinite-size limit, described by an order parameter, with scaling and universality explained by renormalization. A finite system of the usual kind has no true singularity, by Yang and Lee."
+      },
+      "quote": null,
+      "carried": "changed",
+      "relation": "divergence",
+      "reading": {
+        "en": "The home text refuses the word: thresholds here are exact points in finite whole-number models, not singularities in a limit. Yet records' correspondence fields keep a line of Ren's calling 'not harm' 'a phase transition with a clear boundary' and one calls three laws 'phase results', AI-read. A reader of a record could take those as the physicist's sense. I flag it. [AI reading]"
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/02-MAP.md#capture",
+          "says": {
+            "en": "Reading [AI, D65]: a region ceasing, a state's departure and a strict bifurcation are not one 'phase transition'. Not shown: 'no universal phase threshold between regions'."
+          }
+        },
+        {
+          "record": "market-model-share-margin-and-ends",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-market-model-share-margin-and-ends",
+          "says": {
+            "en": "Reading [AI, D65]: four routes of transition are distinct, none a proved phase transition."
+          }
+        },
+        {
+          "record": "support-from-the-supported",
+          "anchor": "theories/becoming/results/records/support-from-the-supported.md",
+          "says": {
+            "en": "Correspondence: Ren said that 'not harm' is 'a phase transition with a clear boundary'; the two earlier phase results and this absorbing end are its three forms under this reading. The reading and the names are the AI's."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "One law of exact thresholds for any fate down-closed in the level and read off an exact check, which has no need of a limit."
+      },
+      "source_adds": {
+        "en": "The limit, the order parameter, exponents, universality classes, renormalization. `losses-of-the-sum-over-histories` says only that renormalization of its sum is not stated. No live text compares the lumping laws (S-23) with a renormalization flow; I searched for the word and did not study the likeness."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-dpc-stability",
+      "name": {
+        "en": "Stability theory: rates, linearization, asymptotics"
+      },
+      "domain": "dynamics-physics-complexity",
+      "group": "dynamics-physics-complexity",
+      "source": {
+        "work": "Lyapunov (1892); Hartman (1960) and Grobman (1959); LaSalle, The Stability of Dynamical Systems (1976)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Near a hyperbolic equilibrium a nonlinear flow is conjugate to its linear part, whose eigenvalues classify the state and give exponential rates. A Lyapunov function proves stability, the invariance principle says where runs go, and convergence may be asymptotic, never arriving."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The ranking argument is carried, and whole numbers change the question most here: with a least loss a run arrives, so convergence becomes rest in finitely many steps, bounding how many falls, not when. Without a least loss a closed amount still approaches rest, the asymptotic case. Over the reals the periphery states a band's monotone convergence and damped and web thresholds. Rates appear twice: a multiplier in slowing down, and a web's rate in any normed ring, by Gelfand's formula, not shown the Perron root. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "least-loss-rest",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-least-loss-rest",
+          "says": {
+            "en": "Theorem: over any amounts, an amount not rising from T on, falling by at least ε at each step at which P holds, with m copies of ε not within its value at T, has steps at which P holds not recurring. Halving stocks never rest. Over finitely many configurations a loss above nothing needs a law that merges."
+          }
+        },
+        {
+          "record": "regime-in-any-amounts",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-regime-in-any-amounts",
+          "says": {
+            "en": "Theorem (periphery): over the non-negative reals, with the adjustment rising in what is left and in the recent giving and keeping a band up to hi, every run starting with both within hi converges, to a rest where the adjustment is continuous, and need not rest."
+          }
+        },
+        {
+          "record": "what-discrete-steps-and-whole-amounts-represent",
+          "anchor": "theories/becoming/chapters/08-METHOD.md#r-what-discrete-steps-and-whole-amounts-represent",
+          "says": {
+            "en": "Theorem (periphery): a web coupled at every step vanishes exactly where its rate is below one and runs away where above one; the rate is the spectral radius by Gelfand's formula; at rate one the rate does not decide."
+          }
+        },
+        {
+          "record": "whether-a-loop-closes-a-difference",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-whether-a-loop-closes-a-difference",
+          "says": {
+            "en": "With whole-number factors a loop closes at once, keeps, or exceeds every bound, never closing gradually (`LoopReturn.nothing_between`)."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/08-METHOD.md#known-results",
+          "says": {
+            "en": "Rest needs a least loss: restated. Not yet: stability in continuous time, exponential or asymptotic rates and LaSalle's largest invariant set (here discrete rest, bounding how many falls and not when rest comes, with the discrete invariance principle)."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The cost named as a theorem: no reading into whole numbers keeps the falls of an amount falling at every step. And constructive calibration: naming when rest comes is an omniscience principle."
+      },
+      "source_adds": {
+        "en": "Linearization and its classification by eigenvalues, exponential and asymptotic rates beyond those two cases, converse Lyapunov theorems, continuous time, and a basin estimated from a Lyapunov level. In whole factors gradual closing is not available at all. 02's Open lists real amounts, damping strengths and continuous time."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-dpc-continuum",
+      "name": {
+        "en": "Continuous time and real amounts against steps and units"
+      },
+      "domain": "dynamics-physics-complexity",
+      "group": "dynamics-physics-complexity",
+      "source": {
+        "work": "Poincaré–Bendixson theorem, as in Hirsch, Smale and Devaney, Differential Equations, Dynamical Systems and an Introduction to Chaos (2004); Mollison (1991) on the atto-fox",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "An autonomous flow on a line cannot oscillate and one in the plane cannot be chaotic; a discretized flow can show cycles its flow lacks, and samples can hide what happens between them. Under a proportional or per-capita law a continuous stock only tends to zero and can recover from arbitrarily little, a known artifact for populations; under a standing draw it reaches zero in finite time."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "08 names the cost of steps and units: real-time balance samples exactly, yet a course can stand still at every instant and change between. No live text draws two further results, which I draw here. `Alternation` is a step's overshoot, which a flow on a line cannot do, and a planar cooperative flow has no counterpart of `Relay.cycles`. And finite arrival at nothing is no cost of whole numbers under a standing draw, since a continuous stock arrives too; never arriving is the case of halving and of giving moving halfway. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "what-discrete-steps-and-whole-amounts-represent",
+          "anchor": "theories/becoming/chapters/08-METHOD.md#r-what-discrete-steps-and-whole-amounts-represent",
+          "says": {
+            "en": "Theorem (periphery): a course in real time balances across every step of any reading at instants, but a balanced course can stand still at every whole instant and change between them. No reading into whole numbers keeps the falls of an amount falling at every step. It does not show that actual rates are summable or that amounts are real, nor that the whole-number laws fail where they apply."
+          }
+        },
+        {
+          "record": "margin-of-a-regime",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime",
+          "says": {
+            "en": "Record law: where giving falls short of the draw below y and nothing gives from nothing, a positive level below H + y falls at every step, is nothing after as many steps as it stood, and stays nothing. The other order of a step (giving before the draw) is not stated."
+          }
+        },
+        {
+          "record": "laws-at-coarser-steps",
+          "anchor": "theories/becoming/chapters/01-ROOT.md#r-laws-at-coarser-steps",
+          "says": {
+            "en": "At strictly increasing sample times, balance (each relatum listed once at the fine steps inside), dissipation and running down compose over a coarse step, closure exactly; giving and taking only while active need not compose, nor bounded transmission. Record: time at real values is not treated, and that a becoming with no step can be represented by discrete steps is not shown."
+          }
+        },
+        {
+          "record": "rest-at-every-resolution",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-rest-at-every-resolution",
+          "says": {
+            "en": "The natural-number unit is a quantum of loss. With a unit that only splits and loss in proportion q/(q+1) (a research-note premise, not the theory's), balanced at the refining unit, everything taken from a family without repetition closed from T on is, in the unit of step T, at most q + 1 times its stock at T, a least bound."
+          }
+        },
+        {
+          "record": "regime-in-any-amounts",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-regime-in-any-amounts",
+          "says": {
+            "en": "Theorem (periphery): over the non-negative reals such a run converges and need not rest (`Drawn.Relaxation.never_rests`, giving moving halfway toward a draw of one)."
+          }
+        },
+        {
+          "record": "least-loss-rest",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-least-loss-rest",
+          "says": {
+            "en": "Halving stocks never rest."
+          }
+        },
+        {
+          "record": "whether-a-loop-closes-a-difference",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-whether-a-loop-closes-a-difference",
+          "says": {
+            "en": "With whole-number factors a loop closes at once, keeps, or exceeds every bound, never closing gradually (`LoopReturn.nothing_between`)."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/02-MAP.md#open",
+          "says": {
+            "en": "Open: real amounts, damping strengths, continuous time, infinitely many conditions; the regime's threshold over the reals as a computed level."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The whole-number forms hold over any amounts with a least fall or a least separation, so the commitment is to a least change, not to whole numbers as such; a rest theorem read off listed configurations needs no least loss. What whole factors cost: no gradual closing (`LoopReturn.nothing_between`)."
+      },
+      "source_adds": {
+        "en": "Flows, rates and time-scale separation, and everything that depends on them: the fold, transcritical and rate laws above in continuous form, and how a regime's point moves with a step's size. Coarser steps are stated, refinement is not: what holds at a coarse step need not hold at the fine steps inside. S-12 asks whether the other order of a step would move the point of no return."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-dpc-entropy-arrow",
+      "name": {
+        "en": "The arrow: entropy rising in an isolated system"
+      },
+      "domain": "dynamics-physics-complexity",
+      "group": "dynamics-physics-complexity",
+      "source": {
+        "work": "Clausius (1865); Boltzmann (1877); Zermelo (1896) and Loschmidt (1876) as objections; Lebowitz, Physics Today 46 (1993)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "An isolated system's entropy does not fall, and in Boltzmann's reading it rises because macrostates with more microstates are far more numerous, given an ordered start. Reversibility and recurrence object, and the usual answer rests on a premise about the start and on long recurrence times."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "The objections are carried: a record reads `unending_change_revisits` as Zermelo's and Poincaré's recurrence and `no_arrow` as Loschmidt's reversibility, and within a list a quantity rising along an orbit rules out a law merging nothing. So a universal rise is scoped: an arrow needs a merge or room no list holds. What rises with no premise is the history, not a state function. Two records pull apart on the start: one reading says 'derived', another's limit 'not stated'. I flag it. The second law enters the periphery as a premise. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "entropy-history-and-record",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-entropy-history-and-record",
+          "says": {
+            "en": "Theorem (World): with no premise a family's history of exchanges never shrinks; under balance, the family gaining nothing from T on, an arrow from T leaves change not recurring. Record: a coarse-grained entropy rising from an ordered start needs a premise about the start and is not stated. 'The correspondences to thermodynamics are readings, not physical derivations.'"
+          }
+        },
+        {
+          "record": "recurrence-without-premise",
+          "anchor": "theories/becoming/chapters/01-ROOT.md#r-recurrence-without-premise",
+          "says": {
+            "en": "Theorem (any type): within finitely many configurations, a list holding every one, a determined law merges nothing exactly where every configuration returns; a quantity that never falls along an orbit and rises at some step of it rules out a law that merges nothing. Correspondence, the AI's: 'the low-entropy beginning physics supplies is the beginning of the kept history, and is derived'. 'These readings are not physical derivations.'"
+          }
+        },
+        {
+          "record": "least-loss-from-entropy-production",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-least-loss-from-entropy-production",
+          "says": {
+            "en": "Theorem (periphery): under the exergy balance and the second law nothing comes from nothing at the unit; the second law alone gives no dissipation. Physics enters by stated correspondence."
+          }
+        },
+        {
+          "record": "typicality-by-counting",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-typicality-by-counting",
+          "says": {
+            "en": "Theorem (any type; two values, natural weights): the courses whose squared deviation is at least d weigh, times d, at most n·p·q·(p + q)ⁿ, so counts stay near their means. 03 lists as not shown: 'That the course which happens is typical'."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "As laws, in double-negation form where stated: on the family's listed configurations, an arrow or dissipation rules out a law merging nothing. And the second law read in available work gives the spine's first law; no converse is proved."
+      },
+      "source_adds": {
+        "en": "The statistical account of the rise: coarse-graining, macrostates and their typicality (typical counts of two values are stated; that the course which happens is typical is not), the past hypothesis, recurrence times. S-04 warns the name 'first law' for `Flow.Gainless` may mislead physicists, since the second law gives it."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-dpc-turing",
+      "name": {
+        "en": "Morphogenesis: instability of a homogeneous state"
+      },
+      "domain": "dynamics-physics-complexity",
+      "group": "dynamics-physics-complexity",
+      "source": {
+        "work": "Turing, Phil. Trans. R. Soc. B 237 (1952); Curie (1894)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Reaction and diffusion, each stabilizing alone, can together destabilize a uniform state, and small disturbances grow into a pattern with a selected wavelength. Turing notes the uniform state needs disturbances to leave; instability thus takes part in formation."
+      },
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "Only the obstruction is carried: a symmetric law from a symmetric start keeps the symmetry, and noise of one law keeps it in distribution. That is Curie's side, Turing's remark, not his mechanism. No account of space, diffusion, or a homogeneous state losing stability exists on the spine. The live use is against guarantees in the free-energy literature. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "identical-cells-under-a-descent-treating-them-alike",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-identical-cells-under-a-descent-treating-them-alike",
+          "says": {
+            "en": "Theorem (any type of cell states and fields): under a descent moving every cell by one rule, from its own state and a field read from the configuration, never from a cell's number, two cells alike at the start are alike at every step."
+          }
+        },
+        {
+          "record": "identical-cells-under-noise",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-identical-cells-under-noise",
+          "says": {
+            "en": "Over finite states, an exchangeable start stays exchangeable under noise of one law at every cell; independent noise can part identical cells but never with certainty. Densities, continuous states or time, and Langevin flows are not stated."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The obstruction in exact finite form, in free-energy terms, with what breaks it named: a start that differs, a rule reading a cell's number, or noise."
+      },
+      "source_adds": {
+        "en": "The dispersion relation, wavelength selection, the condition on diffusivities, pattern in space. The account has no continuous space, and the history page names Turing's analysis, which live text cites only for its remark on disturbances."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-dpc-direction-of-complexity",
+      "name": {
+        "en": "Complexity as a direction: order for free, the edge of chaos"
+      },
+      "domain": "dynamics-physics-complexity",
+      "group": "dynamics-physics-complexity",
+      "source": {
+        "work": "Kauffman, The Origins of Order (1993) and Investigations (2000); Langton, Physica D 42 (1990); Chaisson, Cosmic Evolution (2001)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Some complexity writers hold that order arises spontaneously, that life sits near an edge of chaos (Langton, Kauffman; contested), that a biosphere tends to enter its adjacent possible as fast as it can sustain (Kauffman, tentative), or that complexity rises with energy rate density (Chaisson). Attributions from memory, compressed; each author's claim differs in strength."
+      },
+      "quote": null,
+      "carried": "changed",
+      "relation": "divergence",
+      "reading": {
+        "en": "The account finds no direction in the dynamics. A part can go on while closing what lies beyond its dependence, so persistence does not select widening, and 'reality develops more responsive renewal' forbids nothing measurable as stated. No dynamic is good or bad here. Ranking courses needs C for order, and whose losses count the continuation condition for scope; neither is asserted and their warrant is open. Kauffman's law, read on the pasts, loses all precedence at its widest course. [AI reading]"
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/02-MAP.md#not-shown",
+          "says": {
+            "en": "Not shown: that generation is better than keeping or degeneration: order needs C, whose losses count needs the continuation condition. Nor that the regions are decided at a point, or that renewal is generation."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/02-MAP.md#open",
+          "says": {
+            "en": "An empirical target, not a premise: that reality generally develops more shared and more responsive renewal forbids nothing measurable as stated. A part can go on while closing what lies beyond its dependence (`Clearing.loses_beyond`), so persistence alone does not select widening; over which runs, or how fast, it should hold is unsaid."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-can-be-born-next",
+          "says": {
+            "en": "Reading after the law: Kauffman's tentative law, read on the pasts, has its widest course lose all precedence; read on kinds of birth the extremes are incomparable at offset 2."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/08-METHOD.md#beyond-the-table",
+          "says": {
+            "en": "The possible within a horizon restates Kauffman's adjacent possible (2000) for a prestated space, not the one that cannot be prestated (Longo, Montévil and Kauffman 2012)."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Witnesses and exact premises against reading persistence as direction, and the separation of the direction's warrant from any dynamics."
+      },
+      "source_adds": {
+        "en": "Empirical measures and trends of complexity and rate density, and random Boolean networks. None is taken up. The edge of chaos stands only in history/SYSTEMS-COMPLEXITY-CHAOS.md, which says there is no established universal requirement that learning or life occupy one."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    }
+  ],
+  "changes": [
+    {
+      "id": "cx-dpc-fold",
+      "what": "changed",
+      "why": "The file called the time band 'linear in the draw less the most given'. The record's law is falling below b within any n with x < b + (H − Y)n, so the bound is inverse in that gap, and it is a bound, not a passage law."
+    },
+    {
+      "id": "cx-dpc-transcritical",
+      "what": "changed",
+      "why": "Missed the core's own form of the threshold: `LoopReturn.nothing_between`, whole factors never closing gradually, which is the divergence from a subcritical side. Flagged that live 'branching process' hits are a word match."
+    },
+    {
+      "id": "cx-dpc-hopf-cycles",
+      "what": "changed",
+      "why": "Dropped qualifier: `Alternation` gives from nothing, so it is outside the regime's premise. Added the exact overshoot law to the two-sided target and `Relay.cycles`' mechanism; the sign of its loop moved to its own divergence entry."
+    },
+    {
+      "id": "cx-dpc-circuit-rules",
+      "what": "added",
+      "why": "Missing divergence: a witness cycling under mutual support is what Thomas's first rule forbids in a flow, and a specialist would ask. Neither earlier file said so; the record does not either."
+    },
+    {
+      "id": "cx-dpc-chaos",
+      "what": "changed",
+      "why": "history-only to carried-in-part. The reviser searched the source's words and missed the mechanism: the growth of a difference is stated in two laws of 02, with 'sensitivity' as coupling strength. What stays history-only is named in source_adds: folding, aperiodicity, one law's sensitive dependence."
+    },
+    {
+      "id": "cx-dpc-long-run-undecidable",
+      "what": "added",
+      "why": "A limit a physicist would look for beside chaos, omitted by both earlier files. The calibrations give its logical form; the entry keeps LPO apart from computability."
+    },
+    {
+      "id": "cx-dpc-hysteresis",
+      "what": "changed",
+      "why": "Biggest find. 'The loop is absent' was a negative no one had tried to witness: `DrawnShaping` read at c's range and the triad's tolerances compose distinct collapse and recovery thresholds. Labelled as composition. Absent stays: a law of the path, and the band on a renewing regime. This bears on plan section 7's hold."
+    },
+    {
+      "id": "cx-dpc-rate-tipping",
+      "what": "changed",
+      "why": "The composition misread `no_narrower_band`: its d bounds disturbances of either sign, so it is a worst case, not a rate of a known parameter. A gloss of the file's own sat in `says`; moved to the reading. Added the two laws where a draw does move."
+    },
+    {
+      "id": "cx-dpc-noise-tipping",
+      "what": "changed",
+      "why": "'Not how long they hold' and 'no law of exit from a regulated regime' were too wide: the errors-by-chance law has a regulated pair, a burst and a geometric bound, with computed times. Narrowed the absence to the regime with renewal; added the drawn law's bound."
+    },
+    {
+      "id": "cx-dpc-absorbing-state",
+      "what": "changed",
+      "why": "The reading cited a record it did not target; added it. Added the metastable lifetime, which the sense's finite-size clause implies."
+    },
+    {
+      "id": "cx-dpc-critical-slowing",
+      "what": "changed",
+      "why": "account_adds omitted the account's one addition, `need_not_read`, and both laws' standing, 'by construction'. Stationarity named as supplied."
+    },
+    {
+      "id": "cx-dpc-warning-reach",
+      "what": "changed",
+      "why": "T6's target dropped standings a reader would need: the first test's low power and refuting direction, row reuse, the third's unmeasured feedback, and what T6 forbids."
+    },
+    {
+      "id": "cx-dpc-soc",
+      "what": "changed",
+      "why": "Stays not-carried; the search is now by mechanism: drive and threshold in the loop witness, confluence against traces. Neither supplies the claim."
+    },
+    {
+      "id": "cx-dpc-hot",
+      "what": "changed",
+      "why": "Restored the home's 'One step' to the target's sentence; reading kept: HOT's probability-weighted design has no counterpart."
+    },
+    {
+      "id": "cx-dpc-percolation",
+      "what": "kept",
+      "why": "Read coupled-webs, tolerance laws and the plan's line 'tolerance on webs (percolation-like)'; word search for an ensemble found none. No per-ensemble law exists to change this."
+    },
+    {
+      "id": "cx-dpc-threshold-contagion",
+      "what": "changed",
+      "why": "fresh-reading to carried-in-part: records already say 'monotone threshold dynamics' and credit Granovetter and Schelling, so 'the record credits none' held of one record only. Restored 'while total withholding is kept'."
+    },
+    {
+      "id": "cx-dpc-dependence-cascades",
+      "what": "kept",
+      "why": "Read coupled-webs and reserve-defers-ending against the targets; the qualifiers hold, and the resemblance to Buldyrev stays labelled as a reading."
+    },
+    {
+      "id": "cx-dpc-prigogine-open",
+      "what": "changed",
+      "why": "source_adds implied no balance. 08 itself dropped 'the entropy balance in counts' from its gaps because this law states it; added the target and narrowed the gap to rates and real amounts."
+    },
+    {
+      "id": "cx-dpc-prigogine-structures",
+      "what": "changed",
+      "why": "Stays not-carried; read the neighbouring laws by mechanism and recorded that they take the pattern as given."
+    },
+    {
+      "id": "cx-dpc-landauer",
+      "what": "changed",
+      "why": "Restored the law's qualifier, some configuration's part being other than p. Added the measurement and the dispute, which the source's standing turns on."
+    },
+    {
+      "id": "cx-dpc-attractor",
+      "what": "changed",
+      "why": "Sharpened the divergence: a run escaping to infinity counts as drawn, which a physicist reading the word would not expect."
+    },
+    {
+      "id": "cx-dpc-bistability",
+      "what": "changed",
+      "why": "The stag hunt sentence had no target; added it. The market's 'bistable' is the AI's reading in a correspondence field, and now says so."
+    },
+    {
+      "id": "cx-dpc-monotone-systems",
+      "what": "changed",
+      "why": "Said what the record does and does not claim of the cycle: the regularity conditions for planar maps, no judgment of artefact."
+    },
+    {
+      "id": "cx-dpc-viability",
+      "what": "changed",
+      "why": "Missed the root form, which names Aubin. source_adds lacked the sharpest gap: the source's first notion, some evolution staying under branching, is named and not stated."
+    },
+    {
+      "id": "cx-dpc-phase-transition",
+      "what": "kept",
+      "why": "Checked the home's refusal and the flagged correspondence lines verbatim; the flag on record wording stands. S-23 is reported under coverage."
+    },
+    {
+      "id": "cx-dpc-stability",
+      "what": "changed",
+      "why": "'The eigenvalue is present once' was false: `Representation.rate` is the spectral radius and decides vanishing and runaway. Added it, and the core's whole-factor form."
+    },
+    {
+      "id": "cx-dpc-continuum",
+      "what": "changed",
+      "why": "Two errors. A continuous stock under a standing draw reaches zero in finite time, so 'never arrives' held only of proportional laws. 'Whether a law survives refinement is not stated' missed `laws-at-coarser-steps`. Added it, the unit as a quantum of loss, and the cost in whole factors."
+    },
+    {
+      "id": "cx-dpc-entropy-arrow",
+      "what": "changed",
+      "why": "Misattribution: the record ties Zermelo and Loschmidt to `unending_change_revisits` and `no_arrow`, not to the rise law. Flagged a tension between two records on the low-entropy start. Narrowed 'typicality': counts near means are stated."
+    },
+    {
+      "id": "cx-dpc-turing",
+      "what": "kept",
+      "why": "Read the record: 'never with certainty' and the excluded densities hold. Live text's mention of Turing is confined as the entry says."
+    },
+    {
+      "id": "cx-dpc-direction-of-complexity",
+      "what": "kept",
+      "why": "All four targets verified at their anchors; both premises named with their roles, and neither asserted."
+    }
+  ]
+}

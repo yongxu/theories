@@ -1,0 +1,447 @@
+{
+  "group": {
+    "id": "abrahamic-islamic",
+    "domain": "abrahamic-islamic",
+    "title": {"en": "Abrahamic and Islamic thought"},
+    "kind": "domain",
+    "summary": {"en": "Absent from the live account, checked by search: no text of Hebrew Bible, rabbinic, Christian or Islamic thought is read there. Twenty first readings from AI knowledge, unverified against any stored text and thin on Christian and later Islamic sources: 8 agreement, 2 scope, 6 divergence, 1 contrary reading, 3 not carried. Agreement stops at capture and renewal mechanisms; on warrant, unity, stewardship, scope and promised ends the sources assert what the account does not. No tradition is spoken for."},
+    "read": [
+      "cx-crosswalk/BRIEF.md and check_entries.py",
+      "aa-attractor-atlas/PLAN.md sections 6.1 to 6.5",
+      "aa-attractor-atlas/readers-2026-11-04/correspondences.md",
+      "RuleCapture.lean header comment (Alternating, perturbation_absorbed, uniform_locks)"
+    ],
+    "skimmed": [
+      "Each of these was read with long lines cut at about 1,000 to 1,900 characters, so the end of a long paragraph may be unread: 02-MAP.md homes of capture-through-the-rule, closed-capture, readers-drawn-from-the-selected, how-fast-a-rule-may-change, Thesis T7 and its frozen test; 08-METHOD.md one-relational-unfolding thesis; 06-CLASSICAL-TEXTS.md four-layers and laozi-51; 07-SIGNIFICANCE.md sections 3 and 4 openings, the selection passages of section 6, Thesis T8, the objections table, the Open list",
+      "Record statements, hypotheses, does_not_show and correspondence for each targeted record, printed cut at about 800 to 1,500 characters per field",
+      "COLLECTIVE-DIRECTION.md the answer in brief and sections 1 to 3, lines cut at 500 characters",
+      "05-COLLECTIVES.md a-rule-rebuilt-from-the-members-it-limits and what-a-rise-draws-from-beyond",
+      "04-LIFE.md selection within and among groups",
+      "07-SIGNIFICANCE.md section 4.7 opening and the passage on routes of keeping a law against a revision",
+      "theories/meta-attractor/README.md claims 136 to 146, cut at 500 characters; theories/selfishness-spiral-and-narrative-value-frames/README.md line 69 (earlier folders, not live)"
+    ],
+    "searched": [
+      "Live account (fronts, chapters, review, GLOSSARY, record JSON and pages) for: jubilee, sabbath, shmita, hisba, khaldun, asabiyya, tawhid, prophet, abrahamic, islam, quran, torah, bible, hebrew, christian, muslim, talmud, sharia, maqasid, khalifa, stewardship, divine command, aquinas, augustine, moses, jewish, theolog, sacred, and Chinese equivalents. Only hits: the author name Christiano and the Mohist phrase 先知",
+      "Live account for: religion, faith, worship, creator, covenant, scripture, soul, luxury, solidarity, cohesion, dynasty, empire, ruler, king, tyrant, inspector, usury, alms, tithe, waqf, endowment, hoard, redistribute, debt, lend, credit, loan, reset, periodic, Polybius, Tainter, Turchin",
+      "record-index.tsv by mechanism: reset, rotate, alternate, capture, absorb, exit, renew, draw, cycle, group, elite, cohesion, generation, independent, readers, position",
+      "Live account for anticipation of a rule: anticipat, loophole, circumvent, evad, rule beat, gaming"
+    ],
+    "not_mapped": [
+      {"en": "Monastic and diaspora survival of frames through collapse (named in theories/alignment-selection-on-cognition/README.md claim 64)", "why": "A posture and a historical analogy in an earlier folder; belongs to that folder's crosswalk, and I name no mechanism for it here."},
+      {"en": "Sufi, Kabbalistic and Christian mystical thought; Babel and plurality; Exodus as liberation; Catholic social teaching and Laudato Si'", "why": "Outside the plan's declared frame for this first pass, and my knowledge is too thin to name a mechanism without a word match. Absence from this file is not a finding about them."},
+      {"en": "Maqasid al-sharia (the purposes of the law: life, religion, intellect, lineage, property)", "why": "A tempting match to priority of basic conditions (J2) that I could only make by shared words; left for a reader who can read al-Shatibi."}
+    ],
+    "coverage": {
+      "present": [],
+      "absent": [
+        {"en": "Every Abrahamic and Islamic text and tradition. Zero passages, dossier items or records in the live account. Earlier folders hold an index line only: meta-attractor README claims 143 and 145 and the museum note at line 1115, and jubilee in the selfishness-spiral README line 69; none is live and none states a mechanism.", "searched": ["jubilee", "sabbath", "hisba", "khaldun", "asabiyya", "tawhid", "prophet", "abrahamic", "islam", "quran", "torah", "bible", "hebrew", "christian", "muslim", "talmud", "aquinas", "divine command", "stewardship"]},
+        {"en": "A law of a reset at a fixed calendar: what a recurring return of state does across many cycles, how often it must come, and how those bound by it respond in advance. The capture laws state one perturbation; PLAN section 6.3's seed 'rule changing without end' does not name such a law.", "searched": ["reset", "periodic", "schedule", "Alternating", "RaisedEveryOther", "redistribut", "debt", "anticipat"]},
+        {"en": "A law of regimes that rise and fall in cycles, or of a group's cohesion decaying over generations of security.", "searched": ["cycle", "dynasty", "cohesion", "solidarity", "luxury", "Polybius", "Tainter", "generations of"]},
+        {"en": "Any stored text for these traditions. Storing one is a download and Ren's decision (PLAN section 6.4), so nothing here is quoted or machine-checked.", "searched": ["sources/ not consulted for scripture; the brief forbids fetching"]}
+      ]
+    }
+  },
+  "entries": [
+    {
+      "id": "cx-abr-jubilee-return-of-land",
+      "name": {"en": "Jubilee: land returns and bond-servants go free in the fiftieth year"},
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {"work": "Hebrew Bible, Leviticus", "locator": "Leviticus 25:8-55", "basis": "ai-knowledge"},
+      "sense": {"en": "Every fiftieth year land sold goes back to its family's holding and Israelite bond-servants are released; a sale is in effect of the harvests left until then, priced by the years remaining. The grounds given are that the land is God's and the people were freed from Egypt. It reads the calendar, not need. Whether it was ever practised at scale is doubted by historians."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {"en": "[AI reading] Read land as a two-kind count: release lowers the holders' share at a calendar step, breaking the premise Raises there, so it is a change of the selection, which the law names as a way out. A single release under a reading favouring at every share relocks. So recurrence does the work. PLAN's seed 'rule changing without end' misfits: the rule stands and the state returns. That any land regime reads the share is a premise."},
+      "targets": [
+        {"record": "capture-through-the-rule", "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule", "says": {"en": "Theorem (any type), under Raises and ReadsShare: where the reading favours at every share every course locks from its second reading step, so only a change of the law, of how the rule reads or of the selection leaves. That actual rules read the share is the premise."}}
+      ],
+      "account_adds": {"en": "Which perturbations are absorbed and which are not: one reversing the rule's direction, held past a threshold, is not absorbed (RuleCapture.Reversed.not_absorbed), on a stated two-level model."},
+      "source_adds": {"en": "A recurring reset, its period and its pricing, for which the account has no law. Its grounds, God's ownership and the memory of slavery, the account does not take up. Earlier: jubilee is named among balancing loops in the selfishness-spiral README, with no mechanism."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-abr-prozbul-reset-read-ahead",
+      "name": {"en": "The seventh-year release read in advance, and the prozbul"},
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {"work": "Deuteronomy; Mishnah Sheviit and Gittin", "locator": "Deuteronomy 15:1-11, especially 15:9; Mishnah Sheviit 10:3-4; Mishnah Gittin 4:3", "basis": "ai-knowledge"},
+      "sense": {"en": "Deuteronomy releases debts every seventh year and warns against refusing a poor borrower as that year nears. The Mishnah says people did refuse, so Hillel instituted the prozbul, placing the debt with a court so it survives the release, an act counted as repair of the social order. The tradition keeps both the commandment and the instrument that limits it, and its own later debate about that."},
+      "quote": null,
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {"en": "[AI reading] Those a scheduled reset binds read its calendar and act before it, and the rule is then re-read to keep credit flowing. Nearest in the account: revision kept off by a route (07, of a formation's own law), selection for shaping (02), but these state neither anticipation of a fixed reset nor a revision made for those it would hurt. Word match only, so no relation is claimed."},
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {"en": "A worked case in which a reset's own subjects defeat it by anticipation and a reformer responds by narrowing it, read by the source as repair, not capture. The law of shaping would not say which, since no evaluation enters."},
+      "absence": {
+        "searched": ["anticipat", "loophole", "circumvent", "evad", "rule beat", "gaming", "debt", "lend", "credit", "loan", "reset", "periodic in fronts, chapters, review, GLOSSARY", "record-index.tsv for reset, rotate, schedule"],
+        "read": ["07-SIGNIFICANCE.md passage on whether a formation's prospects let a revision go through", "02-MAP.md r-shaping-the-rule-selected-by-what-comes-back", "record loss-read-in-time-by-the-others does_not_show (readers who learn excluded)"]
+      },
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-abr-sabbatical-fallow",
+      "name": {"en": "The seventh-year rest of the land"},
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {"work": "Hebrew Bible, Exodus, Leviticus, 2 Chronicles", "locator": "Exodus 23:10-11; Leviticus 25:1-7; Leviticus 26:34-35; 2 Chronicles 36:21", "basis": "ai-knowledge"},
+      "sense": {"en": "Every seventh year the land is not sown or pruned: a sabbath to the LORD. What grows of itself is for the poor, the household and animals. Leviticus says that if the rest is not kept, exile will give the land the rests it was owed. The text is about holiness and covenant, not yield; soil management is a later gloss, and I do not know that seven years suits any soil."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {"en": "[AI reading] A draw held down on a calendar, reading neither level nor need. On the account's model a draw kept within what is renewed keeps a dependence and one above it loses it for good. Since how far off a break is does not couple in by threshold (T6), a rule needing no reading of the level has a use the laws make visible, though no law states it. Form only; the account says nothing of soil."},
+      "targets": [
+        {"record": "re-optimizing-above-a-renewal-ends-it", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-re-optimizing-above-a-renewal-ends-it", "says": {"en": "Theorem on discrete steps and natural amounts: a dependence on a condition beyond, renewed by r at its need and at most r below, is lost exactly where the draw exceeds r, for good. Not shown: that the loss is a harm, or that a capacity within the renewal is better."}},
+        {"record": "what-a-rise-draws-from-beyond", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-a-rise-draws-from-beyond", "says": {"en": "As restated in COLLECTIVE-DIRECTION section 2: where each drawer's take is within the joint slack and the joint draw breaks a need, a balanced flow from a level as high that takes less by the excess and gives no less keeps the need met (Flow.Balances.kept_of_restrained; World)."}}
+      ],
+      "account_adds": {"en": "The exact threshold at the renewal, and that restraint is not selected where the rest outruns it."},
+      "source_adds": {"en": "The rest is owed to God and the land's fruit goes to the poor, so its ground is not keeping a stock. Exile as the land's rests repaid is a promised return of loss that no law here offers."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-abr-weekly-sabbath",
+      "name": {"en": "The weekly sabbath: cessation that reaches servant, animal and stranger"},
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {"work": "Exodus; Deuteronomy; A. J. Heschel, The Sabbath (1951)", "locator": "Exodus 20:8-11; Deuteronomy 5:12-15; Heschel, locator unverified", "basis": "ai-knowledge"},
+      "sense": {"en": "On the seventh day no work is done by the householder, children, servants, animals or the stranger within the gates. Exodus grounds it in creation's rest, Deuteronomy in remembered slavery. Heschel reads it as holiness in time, not recovery for more labour. It is commanded, and its reach is the household and those within it, not everything."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "[AI reading] Divergence on ground and on order. C ranks a course above what it widens, and a course with a day of cessation is not thereby a widening, at most mixed, so C does not commend it; the source would refuse to measure it so. The chapter names rest among what living significance would unify, as comparative support and no proof. The 'rest' of the rest theorem is change stopping: same word, another reference."},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order", "says": {"en": "The continuation condition (scope) fixes whose losses count; C (order) ranks a course above every course it widens and does not rank mixed comparisons. Neither is asserted."}},
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses", "says": {"en": "Assessment, comparative support for living significance, none a proof: unification of care, repair, creation, learning, renewal, rest and fitting ending from one ground."}}
+      ],
+      "account_adds": {"en": "An explicit separation of whose losses count from which course is better, which a command does not draw."},
+      "source_adds": {"en": "Cessation as holy and owed regardless of gain, with an obligation on those who have power over others' labour."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-abr-prophets-against-rulers",
+      "name": {"en": "Prophetic critique of rulers"},
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {"work": "Hebrew Bible, Samuel, Kings, Amos, Jeremiah", "locator": "2 Samuel 12; 1 Kings 21; Amos 7:10-17; Jeremiah 26 and 37-38", "basis": "ai-knowledge"},
+      "sense": {"en": "Figures without royal office tell kings what their rule costs others: Nathan to David over Uriah, Elijah to Ahab over Naboth, Amos at the king's sanctuary. They speak in God's name; kings too stand under the law. Results vary: David repents, Amos is expelled, Jeremiah is imprisoned. Their warrant is the commission, not their reasoning."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {"en": "[AI reading] A reader not formed from what the rule selects reads a loss the rule does not. That has the form of the account's exit, and the varied results match its edge: reading a loss turns a course only where it enters the rule, and in time. Readers read as people is a reading. The account has no reader standing outside the unfolding, so the commission is what it cannot carry."},
+      "targets": [
+        {"record": "closed-capture", "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture", "says": {"en": "Theorem (any type): from a locked configuration the loss passes every bound while the course stays locked; a reading favouring at no loss above a bound unlocks the course at the step after every reading step past it: a sufficient way out. Not shown: that readers are minds or institutions."}},
+        {"anchor": "theories/becoming/chapters/02-MAP.md#t7", "says": {"en": "Thesis T7: such a metric is dropped, drift aside, only through a change in what the loop reads (a reader outside the share, a loss entering it, a new reading), not on evidence alone. In the model only invariance and the lock outliving the loss are proved; one sufficient way out, not shown the only one."}},
+        {"record": "readers-drawn-from-the-selected", "anchor": "theories/becoming/chapters/02-MAP.md#r-readers-drawn-from-the-selected", "says": {"en": "Witness: the same readers reading the same loss lock the course the other way when they read it from the start, and leave it locked for good when they first read it at step 3."}}
+      ],
+      "account_adds": {"en": "An exact condition for when a reading comes too late, on two-kind counts without noise."},
+      "source_adds": {"en": "That the ruler is answerable to a law beyond the relation, and that the speaker is bound to speak whatever the result. Also indexed in meta-attractor README claim 143, with no mechanism."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-abr-court-prophets-micaiah",
+      "name": {"en": "Four hundred court prophets and one dissenter; unanimity held suspect"},
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {"work": "Hebrew Bible, Kings and Jeremiah; Babylonian Talmud, Sanhedrin", "locator": "1 Kings 22; Jeremiah 28; Deuteronomy 18:21-22; b. Sanhedrin 17a", "basis": "ai-knowledge"},
+      "sense": {"en": "Ahab's four hundred prophets agree on victory; Micaiah alone dissents and is jailed, and the text explains the four hundred by a lying spirit from God. Jeremiah 28 shows that true and false prophecy cannot be told apart at the moment of speaking. The Talmud separately rules that a capital court unanimous for conviction acquits; the reasons commentators give concern the defence, not independence, as far as I recall."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {"en": "[AI reading] Readers who live on the rule count as one cause, however many names. The account has this form twice: readers drawn from those a rule selects keep reading the share, and a roster's readiness follows causes, not names. Treating the Talmudic rule as a test of independence is my reading, not its stated reason. The text's own cause, the lying spirit, is not a relation the account would read."},
+      "targets": [
+        {"record": "reviewers-count-by-independent-causes", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-reviewers-count-by-independent-causes", "says": {"en": "With failures computed from supplied fault formulas: readiness follows causes, not names; two of three reviewers under one cause keep their names, not readiness. The formulas are supplied bounds, not discovered causal laws."}},
+        {"record": "readers-drawn-from-the-selected", "anchor": "theories/becoming/chapters/02-MAP.md#r-readers-drawn-from-the-selected", "says": {"en": "Read as a pool, the rule is a monotone function of the share exactly where the others' reading is not above the carriers'; where who reads is itself a monotone function of the share, it still reads the share. That actual rules are such pools is not shown: the premise is moved to who reads."}}
+      ],
+      "account_adds": {"en": "An exact condition within a pool for when it reads the share, and that shared cause an envelope omits can fail a whole ready roster."},
+      "source_adds": {"en": "That discernment is unresolved at the time, with only a retrospective test (Deuteronomy 18), and that dissent has a personal cost."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-abr-ritual-without-justice",
+      "name": {"en": "Ritual rejected where justice is absent"},
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {"work": "Hebrew Bible, Isaiah, Amos, Hosea, Micah", "locator": "Isaiah 1:11-17; Amos 5:21-24; Hosea 6:6; Micah 6:6-8", "basis": "ai-knowledge"},
+      "sense": {"en": "The prophets report God rejecting sacrifice, festival and prayer where widow, orphan and poor are wronged. Scholars dispute whether this rejects ritual as such or only ritual without justice. The complaint concerns what God requires, and the text does not speak of measures."},
+      "quote": null,
+      "carried": "history-only",
+      "relation": "agreement",
+      "reading": {"en": "[AI reading] Ritual kept up while what it stood for is unread has the form of a measure outliving what it fails to measure, the closed-capture record's reading of Goodhart. The earlier folder calls this 'metric-like piety' (meta-attractor README claim 143, from an essay); 'metric' is that gloss's word. The live account never states the connection, and nothing shows that ritual reads a share."},
+      "targets": [
+        {"record": "closed-capture", "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture", "says": {"en": "Correspondence field: Goodhart (1975) says a measure made a target stops measuring; this states why it is kept: what keeps it reads the share it gives, not what it fails to measure. Whether any actual rule is formed from the share it selects is the premise."}}
+      ],
+      "account_adds": {"en": "The exact condition (Unread) under which a loss leaves the lock untouched."},
+      "source_adds": {"en": "The complaint is addressed by a God who reads what the loop does not; the demand for justice is unconditional. It stands in theories/meta-attractor/README.md claim 143 only."},
+      "absence": {
+        "searched": ["prophet", "hebrew", "ritual", "piety", "sacrifice in fronts, chapters, review, GLOSSARY and records"],
+        "read": ["02-MAP.md r-closed-capture and t7", "theories/meta-attractor/README.md claims 136-146 (not live)"]
+      },
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-abr-hisba-office",
+      "name": {"en": "Hisba: the muhtasib as an appointed reader of the market and of conduct"},
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {"work": "al-Mawardi, al-Ahkam al-Sultaniyya; Ibn Taymiyya, al-Hisba fi al-Islam", "locator": "al-Mawardi's chapter on hisba, number unverified; Ibn Taymiyya, locator unverified", "basis": "ai-knowledge"},
+      "sense": {"en": "An official appointed by the ruler checks weights, measures, fraud and hoarding in the market, and also public religious conduct, enforcing what the law requires. As I recall, al-Mawardi distinguishes the appointee from the volunteer. It is not market regulation in the modern sense: its ground is the duty of commanding right under divine law. Practice varied widely by place and period, which I know thinly."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {"en": "[AI reading] It reads what a trade's two parties do not, so it reads beyond the sellers' share. But an appointee of the ruler is a reader who may be drawn from the ruler's share: that reading stays beyond the traders and not beyond the throne. Where who reads is a function of the share, the pool still reads it. Calling hisba an anti-attractor (the earlier index) needs that independence, which is not shown."},
+      "targets": [
+        {"record": "readers-drawn-from-the-selected", "anchor": "theories/becoming/chapters/02-MAP.md#r-readers-drawn-from-the-selected", "says": {"en": "Where who reads is itself a monotone function of the share, it still reads the share (Drawn.pool_through). That actual rules are such pools is not shown."}},
+        {"record": "closed-capture", "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture", "says": {"en": "A reading favouring at no loss above a bound unlocks the course: a sufficient way out, on a stated model without noise."}}
+      ],
+      "account_adds": {"en": "The question the office's designers do not pose in those terms: whether the reader's selection depends on the share read."},
+      "source_adds": {"en": "Divergence: the office enforces revealed law over conduct as well as trade, which is not an account of any selection, and the account's laws confer no authority. Indexed by name in meta-attractor README claim 143."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-abr-commanding-right",
+      "name": {"en": "Commanding right and forbidding wrong as a duty on every believer"},
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {"work": "Qur'an; Sahih Muslim; Michael Cook, Commanding Right and Forbidding Wrong in Islamic Thought (2000)", "locator": "Qur'an 3:104, 9:71; Sahih Muslim, Book of Faith, the hadith of hand, tongue and heart; Cook, locator unverified", "basis": "ai-knowledge"},
+      "sense": {"en": "Every Muslim should change a wrong by hand, failing that by tongue, failing that in the heart. Jurists debated who owes it and limited it, per Cook: not at grave danger, not by prying into private conduct, and with force often kept for the state. Schools disagree. The duty's ground is revelation, and what counts as wrong is fixed by the law."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {"en": "[AI reading] A duty spread across members has the form of a pool whose reach is the union of what its members couple into. The law bounds the reach and fixes no response, and it leaves how a pool forms or resists capture open; the graded duty is a response the source supplies. A legal limit on prying runs against a reading that treats more reading as simply more reach."},
+      "targets": [
+        {"record": "what-pooled-coupling-reaches", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-pooled-coupling-reaches", "says": {"en": "A pool's selections are blind beyond the union of its members' coupling closures and separate exactly what the members do not all couple alike. Not shown: how a pool forms, lasts or resists capture; that its selection responds to what it separates; that any act is wrong."}}
+      ],
+      "account_adds": {"en": "An exact bound on what any such pool can select."},
+      "source_adds": {"en": "An obligation, its grading by capacity, its limits for the actor's safety and for privacy. None of these is in the account, and privacy as a chosen limit on reading has no law there."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-abr-stewardship",
+      "name": {"en": "Stewardship: humans entrusted with what belongs to God"},
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {"work": "Genesis; Leviticus; Psalms; Qur'an; L. White, The Historical Roots of Our Ecologic Crisis (1967)", "locator": "Genesis 1:26-28, 2:15; Leviticus 25:23; Psalm 24:1; Qur'an 2:30, 33:72", "basis": "ai-knowledge"},
+      "sense": {"en": "The earth is God's; humans hold it in trust, to till and keep, and answer for it. Genesis also grants dominion, which White blamed for ecological harm and later theologians reread as care. Khalifa (Qur'an 2:30) as 'steward' is largely a modern reading: classical commentaries lean to successor or vicegerent, and I am unsure how far. Humans hold a rank the rest of creation lacks."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "[AI reading] Plain divergence on three points. The office comes from an owner beyond the relations; the account reads no such giver and sets up no possession relation at all. Humans are singled out; the condition reads with no center privileged. Answerability to God gives the obligation; the account's scope is unasserted and its warrant open. A shared practical upshot, drawing within renewal, is not agreement in meaning."},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#condition", "says": {"en": "The continuation condition, not asserted: from every standpoint, the continuation of anything has significance at every step. AI reading: the standpoint index reads 'has significance' with no center privileged."}},
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses", "says": {"en": "T8: for life, the way is 生生, counted for everything (scope: the continuation condition) and ranked by what every valuer who counts everything shares (order: C). 'For life' says whose way it is, not whose losses count."}},
+        {"anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#laozi-51", "says": {"en": "AI reading of 不有: the spine sets up no relation of possession; this is only unrepresented, not agreement."}}
+      ],
+      "account_adds": {"en": "Scope and order held apart, with neither asserted; 08 keeps ownership for actual economic relations, so a description of participation confers no authority or right."},
+      "source_adds": {"en": "An owner, an office and a judgement on how it was held; the contest inside the tradition over dominion and care."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-abr-khaldun-asabiyya",
+      "name": {"en": "Ibn Khaldun: asabiyya as what lets a group take and hold rule"},
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {"work": "Ibn Khaldun, The Muqaddimah", "locator": "Chapters 2 and 3; sections as recalled, unverified", "basis": "ai-knowledge"},
+      "sense": {"en": "Group feeling, from kinship, clientage and shared hardship, is strongest among desert peoples and gives a group power to conquer; royal authority is its goal. Stronger solidarity wins over weaker. Religion can multiply it. He offers this as a science of civilization, general across dynasties, drawn from North African and Islamic history."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "scope",
+      "reading": {"en": "[AI reading] If solidarity costs its member within the group and pays between groups, the division of selection into within and among states exactly which level goes for it; that form is Turchin's modern reading (2003, as I recall), not Ibn Khaldun's. Against his general law, the account gives an identity of counts, one that explains neither how groups form nor why one wins, and a shared condition selects among none."},
+      "targets": [
+        {"record": "selection-within-and-among-groups", "anchor": "theories/becoming/chapters/04-LIFE.md#r-selection-within-and-among-groups", "says": {"en": "Theorem (any type, equal sizes): an amount selected against within the groups is selected for in the whole only where selection among them goes for it. Not shown: what the groups are, or how they form, persist or mix: which level wins is read off the counts, not explained."}},
+        {"record": "selection-among-groups-by-ending", "anchor": "theories/becoming/chapters/04-LIFE.md#r-selection-among-groups-by-ending", "says": {"en": "Where groups with less of an amount leave no offspring, nothing is selected against it among groups; one condition shared by every group ends every group, so it supplies no selection among them."}}
+      ],
+      "account_adds": {"en": "The exact accounting identity, with witnesses where the same within-group counts give either verdict."},
+      "source_adds": {"en": "A causal account of where solidarity comes from (hardship, kin, faith), and of conquest as the among-group event. Neither is a law in the account. Selection among groups says nothing of whether conquest is good."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-abr-khaldun-three-generations",
+      "name": {"en": "Ibn Khaldun: a dynasty's natural life of about three generations"},
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {"work": "Ibn Khaldun, The Muqaddimah", "locator": "Chapter 3, on the natural life span of dynasties; Chapter 2, on prestige lasting four generations; section numbers unverified", "basis": "ai-knowledge"},
+      "sense": {"en": "A dynasty lives about 120 years, like a person: the first generation keeps the hardship and solidarity of the desert, the second softens in sedentary life, the third forgets, and luxury unmakes the group; a new group with fresh solidarity then replaces it. Habit under ease drives the decay, and the cycle is presented as natural and recurrent."},
+      "quote": null,
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {"en": "[AI reading] The account has no cycle of regimes, no decay of a bond under security and no fixed span. Its laws of whole and renewal say when a whole ends given a draw, and COLLECTIVE-DIRECTION's 'no guarantee' concerns a good course, but neither touches this claim. Its nearest formal neighbours (RuleCapture.Alternating, a rule read one step late) are not about generations or habit, so I claim no relation."},
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {"en": "A generational mechanism of habit, and a recurrence claim the account could test only if stated as a law with a refuter; atlas plan row 11 lists Ibn Khaldun for the cycles of states and it remains unworked."},
+      "absence": {
+        "searched": ["cycle", "dynasty", "luxury", "cohesion", "solidarity", "generations of", "khaldun", "Polybius", "Tainter", "Turchin in fronts, chapters, review, GLOSSARY", "record-index.tsv for cycle, cohes, solidar, decline, collapse"],
+        "read": ["RuleCapture.lean header on Alternating", "04-LIFE.md r-selection-within-and-among-groups", "05-COLLECTIVES.md r-whole-drawing-beyond-renewal-ends statement via its record"]
+      },
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-abr-khaldun-ruler-replaces-kin",
+      "name": {"en": "Ibn Khaldun: the ruler claims all glory and turns from kin to clients"},
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {"work": "Ibn Khaldun, The Muqaddimah", "locator": "Chapter 3, on the ruler's claiming glory for himself and relying on clients and mercenaries; sections unverified", "basis": "ai-knowledge"},
+      "sense": {"en": "Once authority is secured, the ruler keeps glory for himself, pushes down the kin who raised him, and relies on clients and paid troops who depend on him alone. This cuts away the solidarity his power came from, and the dynasty weakens as a result."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {"en": "[AI reading] Shaping who reads: those who could read against the ruler are replaced by those whose position depends on him. In the account the capacity to shape is selected where what comes back alone covers its cost, and where who reads follows the share the pool still reads the share, leaving the lock kept as the loss grows. The two-kind model is my mapping; the source's ending by lost solidarity is a further step."},
+      "targets": [
+        {"record": "shaping-the-rule-selected-by-what-comes-back", "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-the-rule-selected-by-what-comes-back", "says": {"en": "Theorem (counts): at a step the rule favours the shapers exactly where c ≤ s, whatever comes to every member alike. Not shown: that actual institutions carry such a capacity, or that capture damages 生生 or open rule-making is better: ranking courses needs C."}},
+        {"record": "readers-drawn-from-the-selected", "anchor": "theories/becoming/chapters/02-MAP.md#r-readers-drawn-from-the-selected", "says": {"en": "Where who reads is itself a monotone function of the share, it still reads the share. The premise is moved to who reads, not removed."}}
+      ],
+      "account_adds": {"en": "Conditions in counts, and the observation that a lock can outlive a growing loss rather than fall to it."},
+      "source_adds": {"en": "That the ruler's move destroys his own base and so ends the state, which on the account needs a dependence (a lock itself outlives loss). Stated as a regular outcome, the source goes beyond any law here."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-abr-khaldun-taxation",
+      "name": {"en": "Ibn Khaldun: rising assessments ruin the revenue and the civilization"},
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {"work": "Ibn Khaldun, The Muqaddimah", "locator": "Chapter 3, on taxation and low and high revenues, on the ruler's commerce, and on injustice ruining civilization; sections unverified", "basis": "ai-knowledge"},
+      "sense": {"en": "Early in a dynasty small assessments bring large revenue; late, large assessments bring small revenue, since rising needs from luxury raise rates, people lose the incentive to cultivate and trade, and production falls. A ruler trading with his subjects, and injustice generally, ruins civilization. He gives this as cause and also as moral censure."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "scope",
+      "reading": {"en": "[AI reading] A draw above renewal ends what it draws on: the account gives an exact form, but only for a renewal fixed at r from the need up, and optimizers re-choosing at each step. A ruler ranking whole courses is the sole owner the record excludes, and the source's mechanism, renewal falling as the rate rises, is exactly what it does not state. So the universal claim holds at most inside those premises. Not T1, whose field tests were refused at their headers."},
+      "targets": [
+        {"record": "re-optimizing-above-a-renewal-ends-it", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-re-optimizing-above-a-renewal-ends-it", "says": {"en": "A dependence renewed by r at its need is lost exactly where the draw exceeds r, for good. Not shown: a renewal varying with the level (logistic growth with an interior sustained yield); an optimizer ranking courses rather than steps (Scott's sole owner); that the loss is a harm."}},
+        {"record": "whole-drawing-beyond-renewal-ends", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-whole-drawing-beyond-renewal-ends", "says": {"en": "A whole whose parts arise only where they depend on a family whose renewal is gated on it ends after the joint draw exceeds the renewal for longer than the margin. Not shown: that the collective is the consumer, that its ending is a loss, or that actual collectives meet the premises."}}
+      ],
+      "account_adds": {"en": "The threshold's exactness, and joint draw with no single consumer singled out, where the source names the ruler."},
+      "source_adds": {"en": "Renewal that responds to the rate through incentive; a revenue curve; a moral verdict (zulm) that the account's no-evaluation laws decline, and for which a ranking would need C or a premise in its place."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-abr-tawhid",
+      "name": {"en": "Tawhid: God's oneness, and God's difference from all that is"},
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {"work": "Qur'an; Ash'ari and Maturidi kalam; Maimonides, Guide of the Perplexed; Ibn Arabi and Ibn Taymiyya's critique", "locator": "Qur'an 112 and 42:11; Guide I.50-60; others locator unverified", "basis": "ai-knowledge"},
+      "sense": {"en": "God is one, without partner, unlike anything created, and all else depends on him. Oneness here is of God, not of the whole; the world's reality is distinct from its source. Ibn Arabi's school, later labelled unity of being, reads this nearer to one reality, and Ibn Taymiyya and others attack that as a corruption of tawhid. Maimonides denies God positive attributes."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "[AI reading] 'One' in tawhid and 'one' in one relational unfolding are the same word, different reference. Tawhid sets a source outside whatever unfolds, the first of 06's non-relational layers and also the third, a single governing will; the thesis forbids an explanation needing a determination no relation carries. The thesis is argued, and the representation's not needing a prior ground does not decide whether one exists."},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding", "says": {"en": "Thesis, argued, not proved: there is one unfolding, and whatever is, is how it relates within it. It forbids explanations, not observations: one needing a determination no relation carries. That the theory needs no independent entity is argued; neither result shows that reality has none."}},
+        {"anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#four-layers", "says": {"en": "Four non-relational layers in Chinese sources, each answered from within its tradition. For a prior ground the spine's witness shows the representation needs no beginning before the run, and this does not decide whether a prior ground exists."}}
+      ],
+      "account_adds": {"en": "A demand on explanations: state the relation that carries what is cited."},
+      "source_adds": {"en": "A source not within what unfolds, known by revelation. 06's four-layer table covers Chinese texts only, so applying it here is my extension; the same pattern of internal response (Ibn Arabi against the theologians) deserves a reader."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-abr-aquinas-mixed-relation",
+      "name": {"en": "Aquinas: creatures really related to God, God not really related to creatures"},
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {"work": "Thomas Aquinas, Summa Theologiae", "locator": "ST I, q.13 a.7; q.28 a.1 ad 3", "basis": "ai-knowledge"},
+      "sense": {"en": "Creation is a real relation in the creature, which depends wholly on God, while in God the relation is only one of reason: God gains nothing and changes in no way by creating. So being is not exhausted by relating. Divine simplicity and creation from nothing carry this, and the relation is deliberately asymmetric in kind."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "contrary-reading",
+      "reading": {"en": "[AI reading] An argument against the thesis's form, not an unrelated belief: a dependence real on one side and absent on the other, so that what everything depends on is not how it relates. The thesis names two live arguments against it (relata with natures of their own, and what an experience is like); this is near the first but not it. Kept as a test: can 'whatever is, is how it relates' state this case without assuming its answer?"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding", "says": {"en": "What would defeat it: an argument, which measurements can support and cannot replace. Two are live: that relations need relata with natures of their own, and that what an experience is like is not how it relates. By its section's measure the thesis has no strength: it excludes no observation."}}
+      ],
+      "account_adds": {"en": "Its neighbours and refuter-types named; a stated demand that a cited determination show a relation that carries it."},
+      "source_adds": {"en": "A worked metaphysics of asymmetric dependence that the thesis does not address. Whether it counts as a third live argument is not something this reading settles."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-abr-divine-command",
+      "name": {"en": "Divine command as the warrant of obligation"},
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {"work": "Ash'ari theology against the Mu'tazila; G. Hourani, Reason and Tradition in Islamic Ethics (1985); Duns Scotus; R. Adams, Finite and Infinite Goods (1999)", "locator": "locator unverified", "basis": "ai-knowledge"},
+      "sense": {"en": "For Ash'ari voluntarism, good is what God commands, and obligation binds because God commands it. The Mu'tazila answer that reason knows good and evil apart from revelation; natural-law writers and Adams hold other mixed positions. The tradition itself contests the claim. Most hold that the obligation binds every responsible person, unconditionally."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "[AI reading] Divergence on warrant, plainly. The account rests its ethics on two unasserted premises, the continuation condition for scope and C for order, their warrant open, and claims none binding every possible mind. A command asserted as binding is what it declines to assert. In form it is one 'premise in C's place': the non-entailment results show only that dynamics and logic do not give it, and refute no command."},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-universal-practical-warrant", "says": {"en": "Open: whether practical reasons have a warrant binding every possible mind, with zero substantive premises. Such a warrant, where it would ground the condition, comes neither from the laws of the dynamics alone nor from logic alone; these do not show that none exists."}},
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order", "says": {"en": "Neither premise is asserted. A ranking of courses needs C or a premise in its place. A statement reading no order entails C only where it fails (ReadsNoOrder.not_entails): this is immediate, since 'better' is free; it shows that a frame fixes no order."}}
+      ],
+      "account_adds": {"en": "The separation of warrant, recognition, motivation and compliance, and a proof that dynamics alone fix neither premise."},
+      "source_adds": {"en": "A claimed answer to the warrant question the account leaves open, with a giver and consequences. The Mu'tazili reply is the internal response, parallel in pattern to 06's four layers."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-abr-promised-end",
+      "name": {"en": "A promised end: judgement, redemption, loss made good"},
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {"work": "Isaiah; Daniel; Revelation; Qur'an; Job and Ecclesiastes as the internal reply", "locator": "Isaiah 65:17-25; Daniel 12; Revelation 21:1-4; Qur'an, passages on the Day of Judgement, locator unverified; Job 38-42; Ecclesiastes 1", "basis": "ai-knowledge"},
+      "sense": {"en": "History is going somewhere God guarantees: judgement, and for many readers a restored order in which present losses are answered or undone. Forms differ greatly across and within the three traditions. Job and Ecclesiastes contest neat retribution from within: the just suffer, and no explanation is owed."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "[AI reading] The account gives no guarantee, and its comparison with retained losses (J1) is a further premise. The exact limit matters: its laws rule out a guarantee 'from the theory', on stated models, so they do not refute a promise made from beyond them. Divergence, not contradiction: the account states no loss finally made good, and the source would refuse 'no guarantee' as the whole of what can be said."},
+      "targets": [
+        {"anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#the-answer-in-brief", "says": {"en": "No guarantee: the theory's own laws, each on its stated model, show why. Always guaranteed: No. Always available as a direction: as a criterion only. Achievable under stated conditions: yes, for named exits, none shown to hold of an actual collective."}},
+        {"anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#3-what-the-theorys-own-laws-rule-out", "says": {"en": "Together the laws rule out a guarantee from the theory, however much is observed; whether an actual collective meets their hypotheses is empirical."}}
+      ],
+      "account_adds": {"en": "What specifically is ruled out, law by law, and on which model."},
+      "source_adds": {"en": "A ground for hope that no law supplies, and an answer to loss. Whether hope needs such a ground is a question the account leaves untouched. Job's refusal of retribution is the nearest internal neighbour, and I do not claim it as agreement."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-abr-neighbor-and-stranger",
+      "name": {"en": "Neighbour, stranger, Nineveh and its cattle: whose loss is commanded to count"},
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {"work": "Leviticus; Luke; Jonah; Qur'an", "locator": "Leviticus 19:18, 19:33-34; Luke 10:25-37; Jonah 4:10-11; Qur'an 6:38", "basis": "ai-knowledge"},
+      "sense": {"en": "Love the neighbour and the stranger, as remembered strangers yourselves; the Samaritan redefines who a neighbour is; God rebukes Jonah for not caring for Nineveh and its many animals; the Qur'an calls animals communities like you. Concern is widened by command and example, not by an argument from one's own interest. It stops well short of 'anything'."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "[AI reading] Same question as the crux, whose losses count beyond one's own, with a different kind of answer: commanded, given a giver and bounded to the living. The account's condition is unasserted and reaches 'anything', which its own objections table leaves sharpened, and the step across standpoints is neither defeated nor shown. So the source asserts what the account only conditions on, and the account reaches further than the source would."},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#crux", "says": {"en": "An AI reading, argued, not proved: are all of one's effects one's own, in the sense of whose losses count, not of what one answers for? The laws do not answer it. Open, not settled."}},
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#objections", "says": {"en": "No objection is shown to defeat the step, nor the step shown. 'Why anything has significance': sharpened; the centers' scope parts from the condition at a formation that is no center, and 'anything' decides which losses C counts."}}
+      ],
+      "account_adds": {"en": "The distinction between a loss's counting and what one answers for, and where self-concern alone does and does not reach."},
+      "source_adds": {"en": "An obligation with a ground; memory as its motive ('you were strangers'), which the glossary's separation of warrant and motivation would hold apart and the source joins."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-abr-riba-zakat-waqf",
+      "name": {"en": "Riba, zakat and waqf: standing rules on interest, alms and endowment"},
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {"work": "Qur'an; Hebrew Bible; Islamic law of waqf", "locator": "Qur'an 2:275-280, 9:60; Exodus 22:25; Deuteronomy 23:19-20; waqf law, locator unverified", "basis": "ai-knowledge"},
+      "sense": {"en": "Riba is forbidden in the Qur'an, and interest among fellow Israelites in the Torah (Deuteronomy permits it from foreigners). Zakat requires a yearly share of wealth for named recipients. Waqf places property in inalienable endowment. These are standing, unconditional rules on how wealth moves, and scholars and practice diverge on what each reaches, on which I am thin."},
+      "quote": null,
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {"en": "[AI reading] The account has shares, draws and positions but no law of a standing transfer rule, of compounding claims or of inalienable holdings; RelativePosition's zero-sum count and RuleShaping's shared part are near in words only. Possibly the domain's most practically weighty claims, and it would take a modeller to say whether they carry any form. Nothing here says the account should absorb them."},
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {"en": "Compounding of claims treated as a thing to forbid; a mandatory recurring transfer; property withdrawn from sale. 05 mentions none of them; 08 keeps money and ownership for actual economic relations."},
+      "absence": {
+        "searched": ["usury", "alms", "tithe", "waqf", "endowment", "hoard", "redistribut", "interest rate", "compound interest", "debt in chapters, COLLECTIVE-DIRECTION, fronts, GLOSSARY"],
+        "read": ["05-COLLECTIVES.md r-relative-position-is-zero-sum statement via its record", "07-SIGNIFICANCE.md section 6 passage on shared rule-making", "08-METHOD.md wording paragraph on money and ownership"]
+      },
+      "labels": ["AI reading"]
+    }
+  ]
+}

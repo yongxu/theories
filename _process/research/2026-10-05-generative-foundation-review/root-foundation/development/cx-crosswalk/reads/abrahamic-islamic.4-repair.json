@@ -1,0 +1,2161 @@
+{
+  "group": {
+    "id": "abrahamic-islamic",
+    "domain": "abrahamic-islamic",
+    "title": {
+      "en": "Abrahamic and Islamic thought"
+    },
+    "kind": "domain",
+    "summary": {
+      "en": "Absent from the live account, checked by search: no Hebrew Bible, rabbinic, Christian or Islamic text is read there. So every connection here is this crosswalk's own proposal, from AI knowledge, unverified against any stored text and thin on Christian and later Islamic sources; the account states none of them and nothing here is carried. No agreement is of a law: what agreement stands, at who reads, capture's exit, levels of selection, passing on, answering harm and tiers of priority, is a reader's join onto checked laws. On warrant, goodness, unity, duty, covenant and promised ends the sources assert what the account does not, with Aquinas and al-Ghazali kept as contrary readings; jubilee, riba and Ibn Khaldun's cycle have no law. No tradition is spoken for."
+    },
+    "read": [
+      "cx-crosswalk/BRIEF.md, REPAIR.md and reads/CRITIC.md",
+      "aa-attractor-atlas/PLAN.md sections 6.3 to 6.5",
+      "aa-attractor-atlas/readers-2026-11-04/correspondences.md lines 56-101 (the coverage table)",
+      "02-MAP.md lines 356-405 and 408-455 in full: regulation, pace, capture, closed capture, readers drawn, shaping, read in time, counted choices, T7, LA2, the readings D26, D45, D65",
+      "05-COLLECTIVES.md lines 205-233 (the optimum's table), 348-379 (markets), 400-442 (section 12, does not show, Open) in full",
+      "Homes opened for the labels. 02-MAP.md: r-becoming-return-grades, r-whether-a-loop-closes-a-difference, r-how-fast-a-rule-may-change, T7's statement in full. 05-COLLECTIVES.md: section 4's D48 reading and table, section 5's opening, r-giving-that-waits-on-giving, r-thresholds-of-waiting, its D48 reading, section 8's opening, r-a-pool-read-by-its-majority, r-readers-reading-readers, D45, the D65 readings (lines cut at 1,200 to 1,900 characters). 07-SIGNIFICANCE.md: r-basic-priority-step-by-step, r-protection-priority-excludes-uniform-aggregation, section 4's table, the Assessment, T8's opening, does-not-show's first items, r-where-the-possible-grows cut. 08-METHOD.md: one-relational-unfolding through its first case. 04-LIFE.md r-selection-within-and-among-groups; 03-KNOWING.md r-selection-through-couplings"
+    ],
+    "skimmed": [
+      "05-COLLECTIVES.md sections 1, 3, 4, 5 and 8, lines cut at 1,200 to 1,500 characters; section 6's two theorems; section 9's opening and the outside_needed row",
+      "04-LIFE.md section 2 (passing, transmission, a goal along a lineage), selection levels, returns to groupmates, ending laws as regimes, need drift, organizational rule inheritance, the updater line, lines cut at 1,700 to 3,600 characters",
+      "07-SIGNIFICANCE.md lines 764-830 (theses, objections, does not show, Open), each line cut at 1,500 characters",
+      "07-SIGNIFICANCE.md condition, scope and order, crux opening, section 5's practical judgment and commitments table, section 6's D68 readings, where the possible grows, what keeping widening needs, widening's table, lines cut",
+      "08-METHOD.md one-relational-unfolding through What would defeat it, and the wording paragraph on money and ownership, cut at 1,400 characters; 06-CLASSICAL-TEXTS.md four layers and laozi-51; 01-ROOT.md the Not assumed paragraph and recurrence; 03-KNOWING.md selection through couplings, recurring reference, three forces",
+      "COLLECTIVE-DIRECTION.md the answer in brief, section 3's opening, section 7, cut at 520 to 900 characters",
+      "Record JSON (does_not_show, counterexamples, hypotheses, cut at 260 to 900 characters): closed-capture, capture-through-the-rule, how-fast-a-rule-may-change, where-the-possible-grows, becoming-return-grades, shaping, re-optimizing, horizon optima, step coupling, selection levels, returns, selection through couplings, pattern passing, a goal along a lineage, rule rebuilt, reviewers, recurrence, loop closing, giving that waits, relative position, reading another's couplings, widening, joint plans, majority, readers reading readers, practical judgment"
+    ],
+    "searched": [
+      "Live account with records (ONE-PAGE, THE-THEORY-OF-BECOMING, chapters, COLLECTIVE-DIRECTION, FREE-ENERGY-PRINCIPLE, ONE-ARGUMENT, review, GLOSSARY, records .md) for: jubilee, sabbath, shmita, hisba, muhtasib, khaldun, asabiyy, tawhid, prophet, abrahamic, islam, qur'an, torah, bible, biblical, hebrew, christian, muslim, talmud, sharia, khalifa, steward, divine, aquinas, augustin, jewish, judaism, theolog, sacred, ghazali, maimonides, god, revelation, covenant, creator, scripture, 上帝, 神学, 伊斯兰, 基督, 圣经, 先知, Turchin, Polybius, 'Ibn ', monotheis, monk, monastic, religio, faith, eschat, apocalyp, messian. Hits only: the author name Christiano, 'heaven' in bands of the three powers, the Mohist 先知 in review/recoding/CODEBOOK.md, 'genesis' and 'creation' in other senses. The 1,094 record files searched again for 23 of these words, the traditions' names and terms: none",
+      "Live account by mechanism: cycle, oscillat, recurr, periodic, boom, bust, rise and fall, without end, overshoot, succession, imitat, atroph, disuse, unused, relaxed, hearsay, testimony, luxur, comfort, capital, compound, money, interest rate, usur, financ, ownership, inalienab, property, obligat, command, ritual, piety, sacrific, evil, privation, theodicy, euthyphro, voluntaris, natural law, corrupt, whistle, dissent, heretic, term limit, audit, talion, vengeance, retaliat, revenge, tit-for-tat, forgiv, pardon, mercy, consensus, unanim, hope. Lines read as cut grep output; what bore on an entry was then read at its home",
+      "record-index.tsv by name for pool, majority, cascade, passing, lineage, return, recurrence, position, loop, giving",
+      "Live account for jubilee, calendar, redistribut (fronts, chapters, GLOSSARY) and jubilee (review, records): none"
+    ],
+    "not_mapped": [
+      {
+        "en": "Monastic and diaspora survival of frames through collapse; early Christians (theories/alignment-selection-on-cognition/README.md claim 64; selfishness-spiral README line 117; meta-attractor README line 808)",
+        "why": "A posture and a historical analogy in earlier folders; they belong to those folders' crosswalks, and I name no mechanism for them here."
+      },
+      {
+        "en": "Sufi, Kabbalistic and Christian mystical thought; Babel and plurality; Exodus as liberation; Catholic social teaching, Laudato Si' and liberation theology; shura and ijtihad beyond the consensus entry",
+        "why": "Outside the plan's declared frame for this first pass, and my knowledge is too thin to name a mechanism without a word match. Absence from this file is not a finding about them."
+      },
+      {
+        "en": "Augustine's City of God: the lust for domination and the two loves",
+        "why": "'Domination' would match selection for control by word; what Augustine reads is the will's order toward God, and I name no mechanism that survives that. Left for a reader."
+      },
+      {
+        "en": "Teshuvah and tawba (return, repentance); grace; the image of God",
+        "why": "'Return' would match the return grades and points of no return by word only: the source's return is of a person to God, not of a level. Left unmapped rather than forced."
+      }
+    ],
+    "coverage": {
+      "present": [],
+      "absent": [
+        {
+          "en": "Every Abrahamic and Islamic text and tradition. Zero passages, dossier items or records in the live account. Earlier folders hold index lines only: meta-attractor README claims 143 and 145 and line 1115, jubilee in the selfishness-spiral README line 69, monastics in claim 64 of the alignment-selection README; none is live and none states a mechanism.",
+          "searched": [
+            "jubilee",
+            "sabbath",
+            "hisba",
+            "khaldun",
+            "asabiyy",
+            "tawhid",
+            "prophet",
+            "abrahamic",
+            "islam",
+            "qur'an",
+            "torah",
+            "bible",
+            "hebrew",
+            "christian",
+            "muslim",
+            "talmud",
+            "aquinas",
+            "divine",
+            "steward",
+            "上帝",
+            "基督",
+            "伊斯兰"
+          ]
+        },
+        {
+          "en": "A law of an imposed reset at a fixed calendar: what a recurring imposed return of holdings does to a lock across many cycles, how often it must come, and how those bound by it respond. Near it, and read: return grades (within p, choosing no cycle length), a part changing without end (necessary and not sufficient for the held possible to keep widening), a cycle's return covering its draw, one perturbation in the capture laws, one optimizer's last step at a known horizon.",
+          "searched": [
+            "reset",
+            "periodic",
+            "schedule",
+            "Alternating",
+            "redistribut",
+            "debt",
+            "anticipat",
+            "horizon",
+            "without end",
+            "cycle"
+          ]
+        },
+        {
+          "en": "A law of regimes that rise and fall in cycles, or of a group's cohesion decaying over generations of ease. The passing laws say a pattern lasts only through passing and that nothing in descent makes the passing hold; none says why it would weaken with distance from a founder. 05's Open lists collapse among conjectured ends of a selection for position.",
+          "searched": [
+            "cycle",
+            "dynast",
+            "cohesion",
+            "solidarit",
+            "luxur",
+            "Polybius",
+            "Tainter",
+            "habit",
+            "need drift",
+            "atroph",
+            "imitat"
+          ]
+        },
+        {
+          "en": "Any stored text for these traditions. Storing one is a download and Ren's decision (PLAN section 6.4), so nothing here is quoted or machine-checked.",
+          "searched": [
+            "sources/ not consulted for scripture; the brief forbids fetching"
+          ]
+        }
+      ]
+    }
+  },
+  "entries": [
+    {
+      "id": "cx-abr-jubilee-return-of-land",
+      "name": {
+        "en": "Jubilee: land returns and bond-servants go free in the fiftieth year"
+      },
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {
+        "work": "Hebrew Bible, Leviticus",
+        "locator": "Leviticus 25:8-55",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Every fiftieth year land sold goes back to its family's holding and Israelite bond-servants are released; a sale is in effect of the harvests left until then, priced by the years remaining. Walled-city houses and non-Israelite slaves fall outside it. The grounds given are that the land is God's and the people were freed from Egypt. It reads the calendar, not need. Whether it was ever practised at scale is doubted by historians."
+      },
+      "quote": null,
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "[AI reading] A proposal, no connection the account states. No law treats an imposed calendar reset; the return grades match by word only, grading when a dependence is met again and choosing no cycle length. Read land as a two-kind count: a release changes the selection, so Raises fails at that step; one release relocks under a reading favouring at every share, and under a threshold may not. Its rule reads the calendar, not the share: unreached. Holdings changing without end is what the held possible needs to keep widening, and does not suffice."
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "The claim itself: an imposed recurring reset, its period and its pricing by years left, for which the account has no law. Divergence on ground: the land is God's and the people were freed from Egypt; the account reads no such owner or memory. Ranking a course with a jubilee above one without needs C, or a premise in its place, and the continuation condition for whose losses count, neither asserted, warrant open. PLAN's seed 'rule changing without end' fits the holdings, not the jubilee's rule, which stays fixed. Earlier: named among balancing loops in the selfishness-spiral README, line 69, with no mechanism."
+      },
+      "absence": {
+        "searched": [
+          "jubilee, calendar, redistribut in fronts, chapters and GLOSSARY: none",
+          "jubilee in review and records: none",
+          "reset, periodic, schedule, Alternating, debt, anticipat, horizon, without end, cycle, in the live account, read as cut grep output"
+        ],
+        "read": [
+          "02-MAP.md r-becoming-return-grades, r-how-fast-a-rule-may-change, r-capture-through-the-rule in full",
+          "07-SIGNIFICANCE.md r-where-the-possible-grows, cut at 1,800 characters",
+          "07-SIGNIFICANCE.md section 6's D68 reading of the counter-rule, cut at 900 characters"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": null,
+      "same_as": null
+    },
+    {
+      "id": "cx-abr-prozbul-reset-read-ahead",
+      "name": {
+        "en": "The seventh-year release read in advance, and the prozbul"
+      },
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {
+        "work": "Deuteronomy; Mishnah Sheviit and Gittin",
+        "locator": "Deuteronomy 15:1-11, especially 15:9; Mishnah Sheviit 10:3-4; Mishnah Gittin 4:3",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Deuteronomy releases debts every seventh year and warns against refusing a poor borrower as that year nears. The Mishnah says people did refuse, so Hillel instituted the prozbul, placing the debt with a court so it survives the release, an act counted as repair of the social order. The tradition keeps both the commandment and the instrument that limits it, and its own later debate about that."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {
+        "en": "[AI reading] Those a dated release binds read its date and act before it. The account has this form for one optimizer only: a coupling counted per step met is kept to the last step and broken there. That law is on a stock, not credit: form only. The prozbul moves the debt where the release no longer reads it. 05 reads an enforced contract as the law changing, not the state alone. Whether that is repair or capture, no law here says."
+      },
+      "targets": [
+        {
+          "record": "a-step-coupling-keeps-at-every-horizon",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-step-coupling-keeps-at-every-horizon",
+          "says": {
+            "en": "Any R: added c for each step the need stays met: where r < q + c and c < m, every optimum meets it to the n-th step and breaks it at the last; where q + c < r, a long horizon outweighs the coupling. No evaluation enters; several optimizers ranking courses are not shown."
+          },
+          "role": "carries"
+        },
+        {
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+          "says": {
+            "en": "Reading [AI reading, D48]: kept promises and enforced contracts are laws giving first: the law changes, not the state alone. Tolerance lets cooperation survive scattered withholding, not rebuild it where it is lost everywhere."
+          },
+          "role": "neighbour",
+          "part": "D48: kept promises and enforced contracts"
+        }
+      ],
+      "account_adds": {
+        "en": "Exact conditions for an optimum keeping to the last step, and for a long horizon outweighing the coupling."
+      },
+      "source_adds": {
+        "en": "A worked case in which a rule's own subjects defeat it in advance and a reformer narrows it to keep credit moving. The source reads this as repair. No law states a rule re-read because of anticipation, and 05's laws of giving read past giving, not a dated future."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": "reading",
+      "same_as": null
+    },
+    {
+      "id": "cx-abr-sabbatical-fallow",
+      "name": {
+        "en": "The seventh-year rest of the land"
+      },
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {
+        "work": "Hebrew Bible, Exodus, Leviticus, 2 Chronicles",
+        "locator": "Exodus 23:10-11; Leviticus 25:1-7; Leviticus 26:34-35; 2 Chronicles 36:21",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Every seventh year the land is not sown or pruned: a sabbath to the LORD. What grows of itself is for the poor, the household and animals. Leviticus says that if the rest is not kept, exile will give the land the rests it was owed. The text is about holiness and covenant, not yield; soil management is a later gloss, and I do not know that seven years suits any soil."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {
+        "en": "[AI reading] Divergence on what holds a restraint up. In the account, where the other drawers ('the rest') outrun a renewal no weight on such a reading selects one member's restraint, and among optimizers restraint is no mutual best response. A seventh year binds every field at once and reads no level, so in that year the premise of joint excess fails, with no warning of a break needed. Command and threatened exile hold it, says the source; the account has no such holder."
+      },
+      "targets": [
+        {
+          "record": "the-rest-outruns-the-renewal",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-the-rest-outruns-the-renewal",
+          "says": {
+            "en": "World: where the other members alone take jointly more than a step gives at each of n steps, from a level below n + m, the level stays below m and every formation depending at a need of at least m ends; with need one, every score reading the condition only from the rest's end on scores a member's acts alike. Depletion need not be the only equilibrium."
+          },
+          "role": "carries"
+        },
+        {
+          "record": "several-optimizers-drain-by-their-joint-capacity",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-several-optimizers-drain-by-their-joint-capacity",
+          "says": {
+            "en": "At a mutual best response (its existence not shown in general), each takes its whole capacity wherever something stands at a condition beyond its family, so restraint is no mutual best response."
+          },
+          "role": "carries"
+        },
+        {
+          "record": "what-a-rise-draws-from-beyond",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-a-rise-draws-from-beyond",
+          "says": {
+            "en": "World, balance: a dependence met at a step breaks exactly where its need with all that is taken exceeds the level with all that is given; a balanced flow from a level as high that takes less by the excess and gives no less keeps the need met."
+          },
+          "role": "neighbour"
+        },
+        {
+          "record": "runaway-distance-uncoupled",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-runaway-distance-uncoupled",
+          "says": {
+            "en": "World: where a stock coupled in by threshold only is the only requirement that may fail up to a horizon, how far off the break is does not couple in; coupled by level, every raise passes at once."
+          },
+          "role": "neighbour"
+        },
+        {
+          "record": "optima-rebuild-a-depleted-base",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-optima-rebuild-a-depleted-base",
+          "says": {
+            "en": "Any R: from a start at or below a level y of greatest weighted gain, the level with its renewal rising up to y and the gain rising strictly with it, every optimum draws nothing while the rising level is below y, the stock regrowing, and restores every dependence the rising level meets. Under an overcompensating renewal this is not shown."
+          },
+          "role": "neighbour"
+        }
+      ],
+      "account_adds": {
+        "en": "The exact condition for joint excess; that a member's restraint is not selected where the others outrun the renewal; that one optimizer rests a depleted base where that pays, which is not this rest. With C as a premise, restraint above overdraw is ranked; the continuation condition fixes whose losses count. Neither is asserted, their warrant open."
+      },
+      "source_adds": {
+        "en": "Divergence on ground: the rest is owed to God and the fruit goes to the poor, not to keeping a stock. Exile repaying the land's rests is a ledger of what is owed, which no law keeps; that a level regrows once drawing stops is in the laws where something is given below the need, and where nothing is, it stays below. Earlier: 'sabbath-like slow modes', meta-attractor README claim 145, not live."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": null,
+      "same_as": null
+    },
+    {
+      "id": "cx-abr-weekly-sabbath",
+      "name": {
+        "en": "The weekly sabbath: cessation that reaches servant, animal and stranger"
+      },
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {
+        "work": "Exodus; Deuteronomy; A. J. Heschel, The Sabbath (1951)",
+        "locator": "Exodus 20:8-11; Deuteronomy 5:12-15; Heschel, locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "On the seventh day no work is done by the householder, children, servants, animals or the stranger within the gates. Exodus grounds it in creation's rest, Deuteronomy in remembered slavery. Heschel reads it as holiness in time, not recovery for more labour. It is commanded, and its reach is the household and those within it, not everything."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {
+        "en": "[AI reading] Divergence on ground and on order. Whose losses count is the continuation condition's and order is C's, neither asserted, their warrant open. A course with a day of cessation is no widening by itself, at most mixed, so C is silent, unless the course without it overdraws a renewal, where restraint is ranked on a reading; the source would refuse to measure it so. The chapter names rest among what living significance would unify, no proof. The 'rest' of the rest theorems is change stopping: another reference."
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+          "says": {
+            "en": "The continuation condition (scope) fixes whose losses count and ranks nothing; C (order) ranks a course above every course it widens and does not rank mixed comparisons. Neither is asserted."
+          },
+          "role": "carries"
+        },
+        {
+          "record": "ranking-under-readings",
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-ranking-under-readings",
+          "says": {
+            "en": "Conditional (C; World): in the support-gated family, restraint above overdraw is ranked under the whole-run, stepwise and possibility readings, two parts; with a third formation sharing, not under the stepwise. A formation drawing within renewal ties its absence on the possibility reading. No reading is chosen."
+          },
+          "role": "neighbour"
+        },
+        {
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses",
+          "says": {
+            "en": "Assessment, comparative support for living significance, none a proof: unification of care, repair, creation, learning, renewal, rest and fitting ending from one ground."
+          },
+          "role": "neighbour",
+          "part": "Assessment, comparative support for living significance"
+        }
+      ],
+      "account_adds": {
+        "en": "An explicit separation of whose losses count from which course is better, which a command does not draw."
+      },
+      "source_adds": {
+        "en": "Cessation as holy and owed regardless of gain, with an obligation on those who have power over others' labour."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": null,
+      "same_as": null
+    },
+    {
+      "id": "cx-abr-prophets-against-rulers",
+      "name": {
+        "en": "Prophetic critique of rulers"
+      },
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {
+        "work": "Hebrew Bible, Samuel, Kings, Amos, Jeremiah",
+        "locator": "2 Samuel 12; 1 Kings 21; Amos 7:10-17; Jeremiah 26 and 37-38",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Figures without royal office tell kings what their rule costs others: Nathan to David over Uriah, Elijah to Ahab over Naboth, Amos at the king's sanctuary. They speak in God's name; kings too stand under the law. Results vary: David repents, Amos is expelled, Jeremiah is imprisoned. Their warrant is the commission, not their reasoning."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {
+        "en": "[AI reading] A reader not formed from what a rule selects reads a loss the rule does not. That has the form of the account's exit, and the varied results fit its edge: a reading turns a course only where it enters the rule, in time. A king's rule as a metric, and readers as people, are readings. Expelling Amos keeps a pool closed; the law is of recruiting, not expelling. The account has no reader outside the unfolding: it cannot carry the commission."
+      },
+      "targets": [
+        {
+          "record": "closed-capture",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+          "says": {
+            "en": "Theorem (any type), under Raises, ReadsShare and favouring kept upward, each step adding at least one beyond: from a locked configuration the loss passes every bound while the course stays locked; a reading favouring at no loss above a bound unlocks the course at the step after every reading step past it: a sufficient way out. Not shown: that readers are minds, institutions or a culture, or that what lies beyond is a loss to any formation."
+          },
+          "role": "carries",
+          "part": "ClosedCapture.turned_by_loss, a sufficient way out"
+        },
+        {
+          "anchor": "theories/becoming/chapters/02-MAP.md#t7",
+          "says": {
+            "en": "Thesis T7: such a metric is dropped, drift aside, only through a change in what the loop reads (a reader outside the share, a loss entering it, a new reading), not on evidence alone. In the model only invariance and the lock outliving the loss are proved, without noise; a reading of the loss is one sufficient way out, not shown the only one. That actual metrics are so formed is conjectured."
+          },
+          "role": "neighbour",
+          "part": "Thesis T7"
+        },
+        {
+          "record": "readers-drawn-from-the-selected",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-readers-drawn-from-the-selected",
+          "says": {
+            "en": "Witness, without noise: the same readers reading the same loss lock the course the other way when they read it from the start, and leave it locked for good when they first read it at step 3."
+          },
+          "role": "carries",
+          "part": "the witness: the same readers in time and late"
+        },
+        {
+          "record": "a-pool-that-recruits-through-itself",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself",
+          "says": {
+            "en": "World: a pool recruiting through itself comes to couple into a loss only as its course without the loss would; a witness admitting a reader at step 2 couples the loss apart there. Whether an actual pool recruits so is empirical."
+          },
+          "role": "neighbour"
+        }
+      ],
+      "account_adds": {
+        "en": "An exact condition for when a reading comes too late, on two-kind counts without noise."
+      },
+      "source_adds": {
+        "en": "Divergence on warrant: the ruler answers to a law beyond the relation, and the speaker is bound to speak whatever the result. The prophets claim no law of when rulers turn; that form is read off the narrative. Indexed in meta-attractor README claim 143, with no mechanism."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": "reading",
+      "same_as": null
+    },
+    {
+      "id": "cx-abr-court-prophets-micaiah",
+      "name": {
+        "en": "Four hundred court prophets and one dissenter; unanimity held suspect"
+      },
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {
+        "work": "Hebrew Bible, Kings and Jeremiah; Babylonian Talmud, Sanhedrin",
+        "locator": "1 Kings 22; Jeremiah 28; Deuteronomy 18:21-22; b. Sanhedrin 17a",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Ahab's four hundred prophets agree on victory; Micaiah alone dissents and is jailed, and the text explains the four hundred by a lying spirit from God. Jeremiah 28 is often read as showing that true and false prophecy cannot be told apart at the moment of speaking. The Talmud separately rules that a capital court unanimous for conviction acquits; the reasons commentators give concern the defence, not independence, as far as I recall."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {
+        "en": "[AI reading] Readers who live on one source add agreement, not reach. The account has this form: copied acts carry only the first member's coupling, a majority goes alike where the fewer tell apart, readiness follows causes and not names, and readers drawn from those a rule selects keep reading the share. 02 reads capture of the routes of correction beside this. Treating the Talmudic rule as a test of independence is mine. The text's own cause, the lying spirit, is no relation it would read."
+      },
+      "targets": [
+        {
+          "record": "readers-reading-readers",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-readers-reading-readers",
+          "says": {
+            "en": "Any type, near-definitional: where every member from k on acts alike whatever its own coupling, every act is alike across worlds alike through the couplings of the members before k, however many follow; copying the first act reaches the first member's coupling only. Not shown: that a cascade errs; it can be accurate."
+          },
+          "role": "carries"
+        },
+        {
+          "record": "a-pool-read-by-its-majority",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-pool-read-by-its-majority",
+          "says": {
+            "en": "World, no premise: where more than half the members hold of both histories or fail of both, taking what more than half read goes alike on them, though the fewer than half left may tell them apart. It does not show that any pool reads by its majority."
+          },
+          "role": "carries"
+        },
+        {
+          "record": "reviewers-count-by-independent-causes",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-reviewers-count-by-independent-causes",
+          "says": {
+            "en": "Given faithful reviewers and supplied fault formulas and bounds: in the computed cases, moving two of three reviewers under one cause makes readiness fail while all names are kept. Reviewers count by independent causes, not names."
+          },
+          "role": "neighbour"
+        },
+        {
+          "record": "readers-drawn-from-the-selected",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-readers-drawn-from-the-selected",
+          "says": {
+            "en": "Read as a pool, the rule is a monotone function of the share exactly where the others' reading is not above the carriers'; where who reads is itself a monotone function of the share, it still reads the share. That actual rules are such pools is not shown: the premise is moved to who reads."
+          },
+          "role": "neighbour"
+        },
+        {
+          "anchor": "theories/becoming/chapters/02-MAP.md#t7",
+          "says": {
+            "en": "Reading [AI reading, D26 as revised]: a second order, corruption taking over courts, press, statistics and audit, is a loop whose rule-reading reaches the routes of 明 themselves; a third, rewarding those who break the routes of correction, selects for narrowing what couples in. That readers are minds is a reading."
+          },
+          "role": "neighbour",
+          "part": "D26"
+        }
+      ],
+      "account_adds": {
+        "en": "An exact bound on what copied acts carry, an exact condition within a pool for when it reads the share, and that a cause omitted from the bounds can fail a whole ready roster."
+      },
+      "source_adds": {
+        "en": "That discernment is unresolved at the time, with only a retrospective test (Deuteronomy 18), and that dissent has a personal cost. The cascade law says copying may be accurate; the text says these four hundred were deceived. The reviewers law assumes reviewers faithful; a lying spirit is a failure of exactly that premise, on which it is silent."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": "reading",
+      "same_as": null
+    },
+    {
+      "id": "cx-abr-ritual-without-justice",
+      "name": {
+        "en": "Ritual rejected where justice is absent"
+      },
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {
+        "work": "Hebrew Bible, Isaiah, Amos, Hosea, Micah",
+        "locator": "Isaiah 1:11-17; Amos 5:21-24; Hosea 6:6; Micah 6:6-8",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "The prophets report God rejecting sacrifice, festival and prayer where widow, orphan and poor are wronged. Scholars dispute whether this rejects ritual as such or only ritual without justice. The complaint concerns what God requires, and the text does not speak of measures."
+      },
+      "quote": null,
+      "carried": "history-only",
+      "relation": null,
+      "reading": {
+        "en": "[AI reading] 'Metric-like piety' is the gloss of meta-attractor README claim 143, from an essay. Closed capture's Unread, or the proxy law, would fit only if some selection kept the ritual by reading it, and nothing shows that; the text speaks of a demand, not a measure. 05's reading that a rule can be kept and be the wrong rule is near, but its holder merges compliance and implementation, the very difference at issue. So no relation is claimed."
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "A distinction between keeping a rite and doing justice, addressed by a God who reads what any loop does not, with the demand for justice unconditional. It stands, as a gloss, only in theories/meta-attractor/README.md claim 143."
+      },
+      "absence": {
+        "searched": [
+          "prophet",
+          "hebrew",
+          "ritual",
+          "piety",
+          "sacrific in fronts, chapters, review, GLOSSARY and records"
+        ],
+        "read": [
+          "02-MAP.md r-closed-capture and t7 in full",
+          "05-COLLECTIVES.md section 12's reading of the rule rebuilt from its members in full",
+          "05-COLLECTIVES.md the proxy reading at r-what-an-optimum-does-beyond-what-couples-in, cut at 700 characters",
+          "theories/meta-attractor/README.md claim 143 by the reviser's citation and the correspondences reader's table; I did not reopen it"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": null,
+      "same_as": null
+    },
+    {
+      "id": "cx-abr-hisba-office",
+      "name": {
+        "en": "Hisba: the muhtasib as an appointed reader of the market and of conduct"
+      },
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {
+        "work": "al-Mawardi, al-Ahkam al-Sultaniyya; Ibn Taymiyya, al-Hisba fi al-Islam",
+        "locator": "al-Mawardi's chapter on hisba, number unverified; Ibn Taymiyya, locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "An official appointed by the ruler checks weights, measures, fraud and hoarding in the market, and also public religious conduct, enforcing what the law requires. As I recall, al-Mawardi distinguishes the appointee from the volunteer. It is not market regulation in the modern sense: its ground is the duty of commanding right under divine law. Practice varied widely by place and period, which I know thinly."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {
+        "en": "[AI reading] A buyer's choice selects only what couples into the buyer, so short weight and hidden fraud go unselected, and an inspector couples them in. That has the form of the selection laws; 05 reads audits and courts so, and reads unseen reliability likewise. Coupling is not compliance: the office also needs power to act. Appointed by the ruler, it reads beyond the traders and not beyond the throne. Whether it locks as a counter-rule, as 07 reads the examinations, is not shown."
+      },
+      "targets": [
+        {
+          "record": "selection-through-couplings",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+          "says": {
+            "en": "World, no premise: two histories are selected alike by every selection through a formation's couplings exactly when they are alike through them; the same holds for a group's pooled coupling. A particular selection may ignore what its couplings carry."
+          },
+          "role": "carries"
+        },
+        {
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#kept-together",
+          "says": {
+            "en": "Reading [AI reading, D48]: term limits, audits, courts and antitrust carry what an actor's acts do back into what selects the rule: pooling, not opposed interests. Corruption taking over these routes, and rewarding those who break them, are read beside capture. Its table reads information true to the world as a selection separating exactly what its selector couples apart. The correspondence is the reading's."
+          },
+          "role": "carries",
+          "part": "D48: term limits, audits, courts and antitrust; the table row on information"
+        },
+        {
+          "record": "reading-anothers-couplings-is-pooling",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-reading-anothers-couplings-is-pooling",
+          "says": {
+            "en": "World: a formation coupled by level into everything another couples into selects through at least their pooled coupling. Knowing another's law is no coupling. Which of another's states a reader can read is a correspondence the laws do not supply."
+          },
+          "role": "neighbour"
+        },
+        {
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#markets",
+          "says": {
+            "en": "Reading [AI reading, D65; a hypothetical case]: where buyers cannot tell future reliability and finance rewards present margins, a provider deferring maintenance can outgrow one maintaining: what the selection does not couple into is drawn from (Akerlof 1970 the antecedent). No market law ranks arrangements."
+          },
+          "role": "neighbour",
+          "part": "D65: buyers who cannot tell future reliability"
+        },
+        {
+          "record": "readers-drawn-from-the-selected",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-readers-drawn-from-the-selected",
+          "says": {
+            "en": "Where who reads is itself a monotone function of the share, it still reads the share (Drawn.pool_through). That actual rules are such pools is not shown."
+          },
+          "role": "neighbour",
+          "part": "Drawn.pool_through"
+        }
+      ],
+      "account_adds": {
+        "en": "The question the office's designers do not pose in these terms: whether the reader's selection depends on the share read."
+      },
+      "source_adds": {
+        "en": "Divergence on ground: the office enforces revealed law over conduct as well as trade, which is no account of a selection, and the account's laws confer no authority. Indexed by name in meta-attractor README claim 143 and line 1115 as an anti-attractor pattern, not live."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": "reading",
+      "same_as": null
+    },
+    {
+      "id": "cx-abr-commanding-right",
+      "name": {
+        "en": "Commanding right and forbidding wrong as a duty laid on believers"
+      },
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {
+        "work": "Qur'an; Sahih Muslim; Michael Cook, Commanding Right and Forbidding Wrong in Islamic Thought (2000)",
+        "locator": "Qur'an 3:104, 9:71; Sahih Muslim, Book of Faith, the hadith of hand, tongue and heart; Cook, locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Whoever sees a wrong should change it by hand, failing that by tongue, failing that in the heart. Jurists debated whether it falls on each or on the community as a whole, and limited it, per Cook: not at grave danger, not by prying into private conduct, with force often kept for the state. Schools disagree. The duty's ground is revelation, and what counts as wrong is fixed by the law."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {
+        "en": "[AI reading] Divergence on duty. The source lays an obligation to act on a wrong the law defines; the account asserts no duty, neither the continuation condition (scope) nor C (order) being asserted, their warrant open. Seeing is not valuing, coupling is not compliance. Under further premises it says when a contribution is indispensable: where every admissible allocation requires it. The jurists' debate, on each or on the community, has that shape, my reading. A wrong changed only in the heart alters no selection unless it reaches one."
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show",
+          "says": {
+            "en": "Not shown: any duty, right, recognition, motivation or compliance. Seeing is not valuing: enlarging what couples in changes what a selection can separate, not which differences matter. Coupling is not compliance: it bounds what a member's acts respond to and fixes nothing within the bound."
+          },
+          "role": "carries",
+          "part": "any duty; seeing is not valuing; coupling is not compliance"
+        },
+        {
+          "record": "practical-judgment-under-living-significance",
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-practical-judgment-under-living-significance",
+          "says": {
+            "en": "Conditional (living significance, J1-J4, correspondence E; an argument with checked consequences): responsibilities arise from named sources, each limited; an empty plan set generates no duty, a contribution is indispensable only where every admissible allocation requires it, and without a unique answer a legitimate shared procedure decides and keeps residual responsibilities."
+          },
+          "role": "carries"
+        },
+        {
+          "record": "what-pooled-coupling-reaches",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-pooled-coupling-reaches",
+          "says": {
+            "en": "A pool's selections are blind beyond the union of its members' coupling closures and separate exactly what the members do not all couple alike. Not shown: how a pool forms, lasts or resists capture; that its selection responds to what it separates; that any act is wrong."
+          },
+          "role": "neighbour"
+        }
+      ],
+      "account_adds": {
+        "en": "An exact bound on what any such pool can select, silent on what ought to be done within it; and, conditionally, bounded responsibility in place of a duty laid on all."
+      },
+      "source_adds": {
+        "en": "An obligation, its grading by capacity, its limits for the actor's safety and for privacy. The limit on prying, a chosen limit on reading, has no law in the account: privacy and prying were searched and do not occur on topic. A wrong fixed by revelation, where 07's named sources are undertakings and contributions."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": null,
+      "same_as": null
+    },
+    {
+      "id": "cx-abr-stewardship",
+      "name": {
+        "en": "Stewardship: humans entrusted with what belongs to God"
+      },
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {
+        "work": "Genesis; Leviticus; Psalms; Qur'an; L. White, The Historical Roots of Our Ecologic Crisis (1967)",
+        "locator": "Genesis 1:26-28, 2:15; Leviticus 25:23; Psalm 24:1; Qur'an 2:30, 33:72",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "The earth is God's; humans hold it in trust, to till and keep, and answer for it. Genesis also grants dominion, which White blamed for ecological harm and later theologians reread as care. Khalifa (Qur'an 2:30) as 'steward' is largely a modern reading: classical commentaries lean to successor or vicegerent, and I am unsure how far. Humans hold a rank the rest of creation lacks."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {
+        "en": "[AI reading] Plain divergence on three points. The office comes from an owner beyond the relations; the account reads no such giver and sets up no possession relation at all. Humans are singled out; the condition reads with no center privileged. Answerability to God gives the obligation; the condition (scope) and C (order) are unasserted and their warrant open. The nearest live statement, on maintaining a common support of living, is conditional and has no owner. A shared practical upshot is not agreement in meaning."
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#condition",
+          "says": {
+            "en": "The continuation condition, not asserted: from every standpoint, the continuation of anything has significance at every step. AI reading: the standpoint index reads 'has significance' with no center privileged."
+          },
+          "role": "carries"
+        },
+        {
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses",
+          "says": {
+            "en": "T8: for life, the way is 生生, counted for everything (scope: the continuation condition) and ranked by what every valuer who counts everything shares (order: C). 'For life' says whose way it is, not whose losses count."
+          },
+          "role": "carries",
+          "part": "T8"
+        },
+        {
+          "record": "practical-judgment-under-living-significance",
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-practical-judgment-under-living-significance",
+          "says": {
+            "en": "Conditional (living significance, J1-J4, correspondence E; an argument): maintaining, repairing or adequately replacing a common support of living shares its favourable reason, counted once, for actual continuation, not an institution's survival; keeping a removable dependence for the carer's sake is not repair."
+          },
+          "role": "neighbour"
+        },
+        {
+          "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#laozi-51",
+          "says": {
+            "en": "AI reading of 不有: the spine sets up no relation of possession; this is only unrepresented, not agreement."
+          },
+          "role": "carries",
+          "part": "the AI reading of 不有"
+        }
+      ],
+      "account_adds": {
+        "en": "Scope and order held apart, with neither asserted; 08 keeps ownership for actual economic relations, so a description of participation confers no authority or right."
+      },
+      "source_adds": {
+        "en": "An owner, an office and a judgement on how it was held; the contest inside the tradition over dominion and care."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": null,
+      "same_as": null
+    },
+    {
+      "id": "cx-abr-khaldun-asabiyya",
+      "name": {
+        "en": "Ibn Khaldun: asabiyya as what lets a group take and hold rule"
+      },
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {
+        "work": "Ibn Khaldun, The Muqaddimah",
+        "locator": "Chapters 2 and 3; sections as recalled, unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Group feeling, from kinship, clientage and shared hardship, is strongest among desert peoples and gives a group power to conquer; royal authority is its goal. Stronger solidarity wins over weaker. Religion can multiply it. He offers this as a science of civilization, general across dynasties, drawn from North African and Islamic history."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {
+        "en": "[AI reading] Narrow form only. If solidarity costs its member within the group and pays between groups, the two-level division states which level goes for it, and kin and hardship read as assortment give the returns law its term. That form is Turchin's modern reading (2003, as I recall), not Ibn Khaldun's. The laws neither explain how groups form nor why one wins, so they fix no scope for his general law, and his erosion is by habit, not by selection."
+      },
+      "targets": [
+        {
+          "record": "selection-within-and-among-groups",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-selection-within-and-among-groups",
+          "says": {
+            "en": "Theorem (any type, equal sizes): an amount selected against within the groups is selected for in the whole only where selection among them goes for it. Not shown: what the groups are, or how they form, persist or mix: which level wins is read off the counts, not explained."
+          },
+          "role": "carries"
+        },
+        {
+          "record": "selection-with-returns-to-groupmates",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-selection-with-returns-to-groupmates",
+          "says": {
+            "en": "Theorem (any type), offspring additive in own and groupmates' amounts: the whole selects for keeping exactly where b + c times the whole's spread falls short of mb times the spread among groups, Hamilton's rule in counts. The same returns give either verdict by how groups are founded."
+          },
+          "role": "carries"
+        }
+      ],
+      "account_adds": {
+        "en": "The exact accounting identity, with witnesses where the same within-group counts give either verdict."
+      },
+      "source_adds": {
+        "en": "A causal account of where solidarity comes from (hardship, kin, faith), of conquest as the among-group event, in which the conquered mostly live on, and of royal authority as the goal it tends to by nature. None is a law in the account. Selection among groups says nothing of whether conquest is good."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": "reading",
+      "same_as": null
+    },
+    {
+      "id": "cx-abr-khaldun-three-generations",
+      "name": {
+        "en": "Ibn Khaldun: a dynasty's natural life of about three generations"
+      },
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {
+        "work": "Ibn Khaldun, The Muqaddimah",
+        "locator": "Chapter 3, on the natural life span of dynasties; section number unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "A dynasty lives about 120 years, like a person: the first generation keeps the hardship and solidarity of the desert, the second softens in sedentary life, the third forgets, and luxury unmakes the group; a new group with fresh solidarity then replaces it. Habit under ease drives the decay, and the cycle is presented as natural and recurrent."
+      },
+      "quote": null,
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "[AI reading] The account has no cycle of political regimes, no decay of a bond under ease and no fixed span. What recurs there is other: a configuration returning under one merge-free law, a threshold rule read a step late alternating, an opposing exchange overshooting, a withholding round a loop of p waits. None is a spent group replaced by a successor. 'Regimes' on a lineage are regions of fate, another reference. 05's Open holds collapse among ends of a selection for position, as a conjecture."
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "A generational mechanism of habit, and a recurrence claim the account could test only if stated as a law with a refuter; atlas plan row 11 lists Ibn Khaldun for the cycles of states and it remains unworked."
+      },
+      "absence": {
+        "searched": [
+          "cycle",
+          "oscillat",
+          "recurr",
+          "periodic",
+          "boom",
+          "bust",
+          "rise and fall",
+          "dynast",
+          "luxur",
+          "comfort",
+          "cohesion",
+          "solidarit",
+          "atroph",
+          "disuse",
+          "khaldun",
+          "Polybius",
+          "Tainter",
+          "Turchin in fronts, chapters, review, GLOSSARY and records",
+          "record-index.tsv for cycle, recurr, decay, habit, inherit, lineage, transmit, memory (by the reviser, not repeated)"
+        ],
+        "read": [
+          "02-MAP.md r-two-sided-regulation-and-late-reading, r-capture-through-the-rule and T7's reading of Alternating in full",
+          "04-LIFE.md r-need-drift-along-a-lineage, r-a-goal-along-a-lineage, r-a-pattern-lasts-through-passing, r-ending-laws-as-regimes-on-a-lineage, cut at 3,600 characters",
+          "05-COLLECTIVES.md section 12, section 10's reading of four routes of transition and Open in full; r-giving-that-waits-on-giving and r-whole-drawing-beyond-renewal-ends, cut",
+          "01-ROOT.md r-recurrence-without-premise"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": null,
+      "same_as": [
+        "cx-econ-ibn-khaldun-cycle"
+      ]
+    },
+    {
+      "id": "cx-abr-khaldun-prestige-four-generations",
+      "name": {
+        "en": "Ibn Khaldun: what built a house is lost in passing it on, within four generations"
+      },
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {
+        "work": "Ibn Khaldun, The Muqaddimah",
+        "locator": "Chapter 2, on prestige lasting at most four generations in one lineage; section number unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Prestige lasts at most four generations in a lineage. The builder knows what it cost; the son learned from him and falls short, as one who only heard falls short of one who practised; the third merely imitates; the fourth supposes it came of itself and scorns what made it. He offers this as general, allowing some variation in the number, as I recall."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "scope",
+      "reading": {
+        "en": "[AI reading] What outlasts its carriers lasts only through passing, and nothing in descent makes the passing hold. 05's model passes a rule: from the steady state it is held exactly where the teaching age is below tenure, the quota at least one and the take within renewal; at tenure not above the teaching age it is gone within one tenure. So conditions decide, no span forced. None has his grades of knowing, so this does not refute his decay."
+      },
+      "targets": [
+        {
+          "record": "a-pattern-lasts-through-passing",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-a-pattern-lasts-through-passing",
+          "says": {
+            "en": "World: under the passing premise, where no carrier passes a pattern from T on, nothing carries it from T + d on, its carriers brief for d. The premise is a hypothesis. Which formations pass, when and to which, whether a pattern changes as it is passed, and which are worth passing are not said."
+          },
+          "role": "carries"
+        },
+        {
+          "record": "a-goal-along-a-lineage",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-a-goal-along-a-lineage",
+          "says": {
+            "en": "World: from a founder carrying a goal, with the goal passed at each descent and each member keeping it until it gives, every member carries it. Nothing in descent makes the passing hold."
+          },
+          "role": "carries"
+        },
+        {
+          "record": "a-rule-rebuilt-from-the-members-it-limits",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-rule-rebuilt-from-the-members-it-limits",
+          "says": {
+            "en": "Taught by members, entrants on offer, no revision, a level of at least one: from the steady state the rule is held at every step exactly where l < s, 1 ≤ q and (q + e q)·s ≤ g; at s ≤ l no holder is left after s steps. Holder merges recognition, compliance and implementation. A minimal model of one kind, not a definition of institutions."
+          },
+          "role": "carries"
+        }
+      ],
+      "account_adds": {
+        "en": "Exact thresholds for passing a rule on, and a separation of its being held from its being the right rule."
+      },
+      "source_adds": {
+        "en": "Grades of knowing (done, heard, imitated, assumed) lost across descent, and why loss would grow with distance from the founder. The rule model has no term for them: no teacher and pupil pair, no conduct other than entry, no records."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": null,
+      "same_as": null
+    },
+    {
+      "id": "cx-abr-khaldun-ruler-replaces-kin",
+      "name": {
+        "en": "Ibn Khaldun: the ruler claims all glory and turns from kin to clients"
+      },
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {
+        "work": "Ibn Khaldun, The Muqaddimah",
+        "locator": "Chapter 3, on the ruler's claiming glory for himself and relying on clients and mercenaries; sections unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Once authority is secured, the ruler keeps glory for himself, pushes down the kin who raised him, and relies on clients and paid troops who depend on him alone. This cuts away the solidarity his power came from, and the dynasty weakens as a result."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "scope",
+      "reading": {
+        "en": "[AI reading] Glory: a part's rise in position needs another's fall. Who reads: those who could read against him give way to those whose place depends on him, and where who reads follows the share a lock can outlive a growing loss. He expects a fall, not a lasting lock. The account gives that fall only where he still depends at a need on what is drawn down: position does not protect, and in a witness a greatest part not so depending continues. The mapping is mine."
+      },
+      "targets": [
+        {
+          "record": "relative-position-is-zero-sum",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-relative-position-is-zero-sum",
+          "says": {
+            "en": "Any type for the counting: a part's rise needs another part's fall. Position does not protect: with balance across n steps of joint excess, a part requiring the condition above the level then is not active, its position not entering; in the clearing witness a greatest part not depending on what it draws down continues. That a race for position produces joint excess is a premise."
+          },
+          "role": "carries"
+        },
+        {
+          "record": "readers-drawn-from-the-selected",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-readers-drawn-from-the-selected",
+          "says": {
+            "en": "Where who reads is itself a monotone function of the share, it still reads the share. The premise is moved to who reads, not removed. 02 reads what keeps that premise as something such as who holds the places from which the rule is read."
+          },
+          "role": "carries",
+          "part": "Drawn.pool_through"
+        },
+        {
+          "record": "a-pool-that-recruits-through-itself",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself",
+          "says": {
+            "en": "World: a pool recruiting through itself comes to couple into a loss only as its course without the loss would. Whether an actual pool recruits so is empirical."
+          },
+          "role": "neighbour"
+        }
+      ],
+      "account_adds": {
+        "en": "Conditions in counts; that a lock can outlive a growing loss rather than fall to it; that what ends a part is a dependence broken, whatever its position."
+      },
+      "source_adds": {
+        "en": "That the ruler's move regularly ends the state, with paid troops as a further draw on revenue (the taxation entry). Whether he still depends on kin once clients replace them is the empirical question the law turns on, and his general claim goes beyond any law here. No law ranks kin above clients."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": null,
+      "same_as": null
+    },
+    {
+      "id": "cx-abr-khaldun-reform-needs-group-feeling",
+      "name": {
+        "en": "Ibn Khaldun: a call to reform without group feeling fails"
+      },
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {
+        "work": "Ibn Khaldun, The Muqaddimah",
+        "locator": "Chapter 3, on religious propaganda not materializing without group feeling; section number unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "A religious call adds to a dynasty's power but cannot succeed without group feeling. He holds that no prophet was sent without his people's protection, and tells of would-be reformers who rose against a state without it and were destroyed, which he reads as their mistaking how worldly affairs go. He leaves God's will in place and speaks of the normal course of things."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "scope",
+      "reading": {
+        "en": "[AI reading] He states it generally; the account has a like claim only under premises, not shown of actual rules. Where the reading too is formed from the share, any change of it is absorbed at the next reading step, and T7 forbids a reform of the reading alone outlasting that; with the others' late reading the carriers' mirror, the lock is kept exactly where the carriers are at least as many. His force is arms and strength of feeling, not head count: my mapping."
+      },
+      "targets": [
+        {
+          "record": "closed-capture",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+          "says": {
+            "en": "Theorem (any type): where the reading too is formed monotonically from the share, a change of the reading of any size is absorbed at the next reading step. Not shown: that any actual rule or reading is so formed; that is the premise."
+          },
+          "role": "carries",
+          "part": "reading absorbed at the next reading step"
+        },
+        {
+          "record": "readers-drawn-from-the-selected",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-readers-drawn-from-the-selected",
+          "says": {
+            "en": "With the others' late reading the mirror of the carriers', and the rule in force favouring the carriers, the lock is kept for good exactly where the carriers are at least as many as the others when the loss is read. Without noise. That actual rules are such pools is not shown."
+          },
+          "role": "carries",
+          "part": "Thinned.kept_iff"
+        },
+        {
+          "anchor": "theories/becoming/chapters/02-MAP.md#t7",
+          "says": {
+            "en": "T7 forbids a reform of the reading alone outlasting the next reading. Frozen test LA2: one note of the loss among nine readers turned one trained judge, so a loss read only by those it disfavours turned it; kept as a counterexample to that case as a claim about trained judges. The law stands within its hypotheses, which this judge does not meet."
+          },
+          "role": "limit",
+          "part": "T7 forbidding a reform of the reading alone; LA2"
+        }
+      ],
+      "account_adds": {
+        "en": "An exact condition in counts, and a window: from a start favouring the shapers, a late reading can turn the course only while it still favours the others."
+      },
+      "source_adds": {
+        "en": "A tension kept with the prophets' entry: the prophet is bound to speak whatever the result, where Ibn Khaldun asks what succeeds and judges the unsupported reformer mistaken about causes. Which of these binds is not a question the laws reach. He lets few beat many where feeling is stronger, as I recall, which these counts do not state."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": null,
+      "same_as": null
+    },
+    {
+      "id": "cx-abr-khaldun-taxation",
+      "name": {
+        "en": "Ibn Khaldun: rising assessments ruin the revenue and the civilization"
+      },
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {
+        "work": "Ibn Khaldun, The Muqaddimah",
+        "locator": "Chapter 3, on taxation and low and high revenues, on the ruler's commerce, and on injustice ruining civilization; sections unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Early in a dynasty small assessments bring large revenue; late, large assessments bring small revenue, since rising needs from luxury raise rates, people lose the incentive to cultivate and trade, and production falls. A ruler trading with his subjects, and injustice generally, ruins civilization. He gives this as cause and also as moral censure."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "scope",
+      "reading": {
+        "en": "[AI reading] A draw above renewal ends what it draws on: exact for a renewal fixed at r from the need up, optimizers re-choosing each step; and one optimizer over a course, renewal a law of the level, holds a level of greatest renewal and leaves nothing at the horizon. His mechanism, renewal falling as the rate rises, reads the rate; no law read here states it, so his universal holds at most inside these premises. A ruler in trade sits beside 05's interface reading."
+      },
+      "targets": [
+        {
+          "record": "re-optimizing-above-a-renewal-ends-it",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-re-optimizing-above-a-renewal-ends-it",
+          "says": {
+            "en": "A dependence renewed by r at its need, the withdrawal k the same at every step, is lost for good exactly where r < k. Not shown: a renewal varying with the level; an optimizer ranking courses rather than steps; that the loss is a harm."
+          },
+          "role": "carries"
+        },
+        {
+          "record": "horizon-optima-hold-the-greatest-renewal",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-horizon-optima-hold-the-greatest-renewal",
+          "says": {
+            "en": "Any R: every optimum of every order rising with the draw holds a level of greatest renewal to the n-th step and leaves nothing. Not shown: discounting, several optimizers ranking courses, or that a longer horizon is better."
+          },
+          "role": "carries"
+        },
+        {
+          "record": "whole-drawing-beyond-renewal-ends",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-whole-drawing-beyond-renewal-ends",
+          "says": {
+            "en": "A whole whose parts arise only where they depend on a family whose renewal is gated on it has no part arising after n steps of the family's uptake exceeding its replenishment from a stock below n + m, and ends. Not shown: that the collective is the consumer, or that its ending is a loss."
+          },
+          "role": "neighbour"
+        },
+        {
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#markets",
+          "says": {
+            "en": "Computed in the market model: a liability on the renewing practice strengthens adverse selection. Reading [AI reading, D65; a historical correspondence, no theorem]: running a shared interface and controlling its modification changes others' admission and comparison through operation itself, a route of capture besides paid influence."
+          },
+          "role": "neighbour",
+          "part": "the computed liability; D65 on interface control"
+        }
+      ],
+      "account_adds": {
+        "en": "The threshold's exactness, and joint draw with no single consumer singled out, where the source names the ruler."
+      },
+      "source_adds": {
+        "en": "Renewal that responds to the rate through incentive, of which the model's liability, on shares and not output, is the nearest; a revenue curve; a moral verdict (zulm) these no-evaluation laws decline. A ranking would need C, or a premise in its place, for order, and the continuation condition for whose losses count, neither asserted, warrant open."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": null,
+      "same_as": null
+    },
+    {
+      "id": "cx-abr-tawhid",
+      "name": {
+        "en": "Tawhid: God's oneness, and God's difference from all that is"
+      },
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {
+        "work": "Qur'an; Ash'ari and Maturidi kalam; Maimonides, Guide of the Perplexed; Ibn Arabi and Ibn Taymiyya's critique",
+        "locator": "Qur'an 112 and 42:11; Guide I.50-60; others locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "God is one, without partner, unlike anything created, and all else depends on him. Oneness here is of God, not of the whole; the world's reality is distinct from its source. Ibn Arabi's school, later labelled unity of being, reads this nearer to one reality, and Ibn Taymiyya and others attack that as a corruption of tawhid. Maimonides denies God positive attributes."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {
+        "en": "[AI reading] 'One' in tawhid and 'one' in one relational unfolding are the same word, different reference. Tawhid sets a source outside whatever unfolds, nearest 06's first non-relational layer. 06 says its third layer, a single governor, sets a direction within relations, which tawhid's God is not. The thesis forbids an explanation needing a determination no relation carries. The thesis is argued, and the representation's not needing a prior ground does not decide whether one exists."
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding",
+          "says": {
+            "en": "Thesis, argued, not proved: there is one unfolding, and whatever is, is how it relates within it. It forbids explanations, not observations: one needing a determination no relation carries. That the theory needs no independent entity is argued; neither result shows that reality has none."
+          },
+          "role": "carries",
+          "part": "What it forbids; neither result shows that reality has none"
+        },
+        {
+          "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#four-layers",
+          "says": {
+            "en": "Four non-relational layers in Chinese sources, each answered from within its tradition. For a prior ground, the spine's witness shows the representation needs no beginning before the run, and does not decide whether a prior ground exists. The last two layers set a direction in relations, not something prior to them. For a single governor, a center is not derived, only for scope derived along dependence."
+          },
+          "role": "neighbour",
+          "part": "the layers of a prior ground and of a single governor"
+        }
+      ],
+      "account_adds": {
+        "en": "A demand on explanations: state the relation that carries what is cited."
+      },
+      "source_adds": {
+        "en": "A source not within what unfolds, known by revelation. 06's four-layer table covers Chinese texts only, so applying it here is my extension; the same pattern of internal response (Ibn Arabi against the theologians) deserves a reader."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": null,
+      "same_as": null
+    },
+    {
+      "id": "cx-abr-aquinas-mixed-relation",
+      "name": {
+        "en": "Aquinas: creatures really related to God, God not really related to creatures"
+      },
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {
+        "work": "Thomas Aquinas, Summa Theologiae",
+        "locator": "ST I, q.13 a.7; q.28 a.1 ad 3",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Creation is a real relation in the creature, which depends wholly on God, while in God the relation is only one of reason: God gains nothing and changes in no way by creating. So being is not exhausted by relating. Divine simplicity and creation from nothing carry this, and the relation is deliberately asymmetric in kind."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "contrary-reading",
+      "reading": {
+        "en": "[AI reading] An argument against the thesis's form, not an unrelated belief. One-way dependence the models already state: a renewer giving and requiring nothing. Aquinas says more: what everything depends on is not how it relates, and the relation is nothing in it. The thesis names two live arguments (relata with natures of their own, and what an experience is like); this is near the first but not it. Kept as a test: can 'whatever is, is how it relates' state this case without assuming its answer?"
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding",
+          "says": {
+            "en": "What would defeat it: an argument, which measurements can support and cannot replace. Two are live: that relations need relata with natures of their own, and that what an experience is like is not how it relates. By its section's measure the thesis has no strength: it excludes no observation."
+          },
+          "role": "carries",
+          "part": "What would defeat it"
+        },
+        {
+          "record": "ending-laws-as-regimes-on-a-lineage",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-ending-laws-as-regimes-on-a-lineage",
+          "says": {
+            "en": "World: a renewer giving from no listed condition and requiring none, with nothing in excess, meets none of the three premises, every formation active and supported at every step (FromOutside.from_outside)."
+          },
+          "role": "neighbour",
+          "part": "FromOutside.from_outside"
+        }
+      ],
+      "account_adds": {
+        "en": "Its neighbours and refuter-types named; a stated demand that a cited determination show a relation that carries it."
+      },
+      "source_adds": {
+        "en": "A worked metaphysics of a term the dependence on it does not touch, where the models' one-way renewer is still a relatum among relata. Whether it counts as a third live argument is not something this reading settles."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": null,
+      "same_as": null
+    },
+    {
+      "id": "cx-abr-subsistent-relation",
+      "name": {
+        "en": "Persons distinct only by relation: the Trinity as subsistent relations"
+      },
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {
+        "work": "Augustine, De Trinitate; Thomas Aquinas, Summa Theologiae",
+        "locator": "De Trinitate V; ST I, q.28, q.29 a.4, q.40",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Within God the persons differ only by opposed relations of origin, and Aquinas holds that a divine person signifies a relation as subsisting. A later maxim, as I recall Anselm's and the Council of Florence's, says all in God is one where no opposition of relation intervenes. This is said of God alone: creatures are substances with relations as accidents, and the doctrine is received from revelation, not offered as an account of things in general."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {
+        "en": "[AI reading] Divergence in reach. Relation individuates in God alone, and creatures are substances with relations as accidents: the reverse of the thesis's 'whatever is, is how it relates'. Alike unless a relation tells apart resembles the thesis's first item, but that concerns a represented frame, the doctrine a mystery its holders place beyond any frame, so no agreement is claimed. Kept against a flat picture of these traditions as substance against relation: the neighbouring Aquinas entry denies outside God what this asserts within."
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding",
+          "says": {
+            "en": "The representation of configurations, laws and parts needs nothing beyond relations: a configuration is how it relates (identifiesAlike_iff). That the theory as a whole needs no independent entity is argued, not proved. Neither shows that reality has none."
+          },
+          "role": "carries",
+          "part": "identifiesAlike_iff, and the thesis's statement"
+        }
+      ],
+      "account_adds": {
+        "en": "A checked statement of likeness by relation on stated frames, and the thesis extended to whatever is."
+      },
+      "source_adds": {
+        "en": "One divine substance, which the thesis would not state, and a doctrine received from revelation and not offered of things in general."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": null,
+      "same_as": null
+    },
+    {
+      "id": "cx-abr-ghazali-occasionalism",
+      "name": {
+        "en": "al-Ghazali: no necessary link between fire and burning"
+      },
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {
+        "work": "al-Ghazali, The Incoherence of the Philosophers; Ibn Rushd, The Incoherence of the Incoherence",
+        "locator": "Ghazali, Discussion 17; Ibn Rushd's reply to it, locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Ghazali denies that fire of itself burns cotton: we observe one with the other, never a power; God makes each, and the regularity is a custom God may break. Ash'ari kalam also holds that accidents do not last two moments and are re-created. Ibn Rushd replies that without real causes there is no knowledge. Ghazali argues this to keep miracle and divine freedom open, and scholars dispute how far he holds it."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "contrary-reading",
+      "reading": {
+        "en": "[AI reading] Ghazali denies fire a power of its own, as the thesis refuses a nature of its own. Then he places the determination in a will no relation carries, which it forbids as an explanation. His test: what is observed cannot tell a carrying relation from a will acting regularly. Ibn Rushd's reply, that things have natures and without them no knowledge, has the form of the first argument the thesis names as live. So it is pressed from both sides."
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding",
+          "says": {
+            "en": "A law is read off the history it holds of (shown_le_iff). The thesis forbids an explanation needing a determination no relation carries, such as an intrinsic value, a self with a nature of its own, or a law standing outside what it holds of. An argument would defeat it; two are live, the first that relations need relata with natures of their own. Argued, not proved."
+          },
+          "role": "carries",
+          "part": "shown_le_iff; What it forbids; What would defeat it"
+        }
+      ],
+      "account_adds": {
+        "en": "Laws stated with their premises and checked on models, and a stated demand on any cited determination."
+      },
+      "source_adds": {
+        "en": "A challenge the thesis does not state: that custom suffices for everything observed. The thesis says a determination making no difference explains nothing; a miracle would make one, and Ghazali keeps that open, with God's will as what no relation in the frame carries."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": null,
+      "same_as": null
+    },
+    {
+      "id": "cx-abr-creation-called-good",
+      "name": {
+        "en": "What is made is good, and evil a lack of good"
+      },
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {
+        "work": "Genesis; Qur'an; Augustine, Confessions and Enchiridion; Thomas Aquinas, Summa Theologiae",
+        "locator": "Genesis 1:31; Qur'an 32:7; Confessions VII; Enchiridion 11-14; ST I, q.5 a.1 and a.3",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "What God makes is good. For Augustine and Aquinas being and goodness are convertible, and evil has no nature of its own: it is a lack of a good that ought to be there. This is one strong line and not the whole of these traditions; I do not know how far Islamic and Jewish theologians share its terms. Job presses the problem of suffering from inside."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {
+        "en": "[AI reading] The source grants at the root what the account declines to assume. Its dynamical theorems are sign-neutral, significance is not necessarily positive, and one web is compatible with nothing significant and with everything. A loss there counts by the continuation condition (scope) and courses rank by C (order), both unasserted and warrant open. The nearest form to privation is need: a lack read against what depends, with no ought. The source would call that scope without ground."
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/01-ROOT.md",
+          "says": {
+            "en": "Not assumed: that becoming is good; inevitable improvement or universal growth; a fixed common utility; independent owners of value. Degeneration, ending and mixed change belong to the same unfolding and are not renamed generation."
+          },
+          "role": "carries",
+          "part": "Not assumed"
+        },
+        {
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#condition",
+          "says": {
+            "en": "Reading [AI reading, D16]: significance is neither graded nor necessarily positive. The dynamics leave open whether anything is left out of significance; the continuation condition, not asserted, is the premise that nothing is."
+          },
+          "role": "carries",
+          "part": "D16"
+        },
+        {
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses",
+          "says": {
+            "en": "Assessment, none a proof: the formal checks verify no premise, and the dynamical theorems are sign-neutral."
+          },
+          "role": "neighbour",
+          "part": "Assessment"
+        },
+        {
+          "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#four-layers",
+          "says": {
+            "en": "For the layer of a prior nature or value, in Chinese sources: the same web of dependence is compatible with nothing having significance and with everything having it (Web.significance_undetermined)."
+          },
+          "role": "neighbour",
+          "part": "the layer of a prior nature or value"
+        }
+      ],
+      "account_adds": {
+        "en": "That no statement reading only the dynamics entails the condition, immediate since significance is free, and real losses kept as such without an owed good."
+      },
+      "source_adds": {
+        "en": "A ground for calling anything good, and a reading of loss against a norm. 06's layer table covers Chinese texts only, so applying it here is my extension."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": null,
+      "same_as": null
+    },
+    {
+      "id": "cx-abr-plenitude-of-kinds",
+      "name": {
+        "en": "Plenitude: a universe with more grades of being is better"
+      },
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {
+        "work": "Thomas Aquinas, Summa Theologiae; A. O. Lovejoy, The Great Chain of Being (1936)",
+        "locator": "ST I, q.47 a.1-2; q.48 a.2; Lovejoy, locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "God makes many unequal kinds, since no one creature could show divine goodness, and a universe with more grades of being is the better for it; that perfection even includes things that can fail, so some evils are permitted for the good of the whole. Lovejoy traces this as a long history. It is one line, resisted by voluntarists who deny God must make any best."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {
+        "en": "[AI reading] Nearest to C in shape. Where every being is good, every item weighs above zero, and what every positive weighting ranks is exactly widening: convertibility would assert what 07 keeps as C's premise relocated. C itself is unasserted, warrant open. Plenitude goes further and ranks the mixed case, a failing part serving the whole, where a mixed comparison goes both ways and a course closing something never ranks above. Under the condition's scope, itself unasserted, those losses still count. No descent is claimed."
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+          "says": {
+            "en": "C: widening what can form is better. It ranks a course above every course it widens and does not rank mixed comparisons. The continuation condition fixes whose losses count: every continuation's. Neither is asserted."
+          },
+          "role": "carries"
+        },
+        {
+          "record": "widening-as-what-every-positive-weighting-ranks",
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-positive-weighting-ranks",
+          "says": {
+            "en": "Any type, a finite listing: one course widens another exactly when every positive weighting ranks it higher; a mixed comparison is decided both ways; a course closing something the other admits neither widens nor keeps it, so C never ranks it above. Monotonicity at the standpoint is C's premise relocated: weaker, still a premise."
+          },
+          "role": "carries"
+        },
+        {
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#objections",
+          "says": {
+            "en": "An expansion that ends forms of life another course keeps both exceeds that course and fails to include it, so the two are mixed and C does not rank them. Answered; the order left open."
+          },
+          "role": "neighbour"
+        }
+      ],
+      "account_adds": {
+        "en": "Silence on mixed comparisons as a stated result, and the separation of scope from order."
+      },
+      "source_adds": {
+        "en": "A ground for the order, and a theodicy of the whole, in which a loss can be answered by what the whole gains. The account has no such answer. Grades of being, where widening counts items admitted."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": null,
+      "same_as": null
+    },
+    {
+      "id": "cx-abr-divine-command",
+      "name": {
+        "en": "Divine command as the warrant of obligation"
+      },
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {
+        "work": "Ash'ari theology against the Mu'tazila; G. Hourani, Reason and Tradition in Islamic Ethics (1985); Duns Scotus; R. Adams, Finite and Infinite Goods (1999)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "For Ash'ari voluntarism, good is what God commands, and obligation binds because God commands it. The Mu'tazila answer that reason knows good and evil apart from revelation; natural-law writers and Adams hold other mixed positions. The tradition itself contests the claim. Most hold that the obligation binds every responsible person, unconditionally."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {
+        "en": "[AI reading] Divergence on warrant, plainly. The account rests its ethics on two unasserted premises, the continuation condition for scope and C for order, their warrant open, and claims none binding every possible mind. A command asserted as binding is what it declines to assert. In form it is one 'premise in C's place': the non-entailment results show only that dynamics and logic do not give it, and refute no command."
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-universal-practical-warrant",
+          "says": {
+            "en": "Open: whether practical reasons have a warrant binding every possible mind, with zero substantive premises. Such a warrant, where it would ground the condition, comes neither from the laws of the dynamics alone nor from logic alone; these do not show that none exists."
+          },
+          "role": "carries"
+        },
+        {
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+          "says": {
+            "en": "Neither premise is asserted. A ranking of courses needs C or a premise in its place. A statement reading no order entails C only where it fails (ReadsNoOrder.not_entails): this is immediate, since 'better' is free; it shows that a frame fixes no order."
+          },
+          "role": "carries"
+        },
+        {
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#knowledge-and-standing",
+          "says": {
+            "en": "Assessment, three forces: accuracy, epistemic support and obligation (to investigate, disclose, perform or compel) have different grounds: content and the relation it concerns fix accuracy without an external commander, and neither other force follows."
+          },
+          "role": "neighbour",
+          "part": "three forces"
+        }
+      ],
+      "account_adds": {
+        "en": "The separation of warrant, recognition, motivation and compliance, and that statements reading only the dynamics, or no order, entail neither premise, which is immediate since each is free."
+      },
+      "source_adds": {
+        "en": "A claimed answer to the warrant question the account leaves open, with a giver and consequences. The Mu'tazili reply is the internal response, parallel in pattern to 06's four layers."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": null,
+      "same_as": null
+    },
+    {
+      "id": "cx-abr-promised-end",
+      "name": {
+        "en": "A promised end: judgement, redemption, loss made good"
+      },
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {
+        "work": "Isaiah; Daniel; Revelation; Qur'an; Job and Ecclesiastes as the internal reply",
+        "locator": "Isaiah 65:17-25; Daniel 12; Revelation 21:1-4; Qur'an, passages on the Day of Judgement, locator unverified; Job 38-42; Ecclesiastes 1",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "History is going somewhere God guarantees: judgement, and for many readers a restored order in which present losses are answered or undone. Forms differ greatly across and within the three traditions. Job and Ecclesiastes contest neat retribution from within: the just suffer, and no explanation is owed."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {
+        "en": "[AI reading] The account gives no guarantee, and its comparison with retained losses (J1) is a further premise. The exact limit matters: its laws rule out a guarantee 'from the theory', on stated models, and what is lost stays lost for a stated process; neither refutes a promise made from beyond them. Divergence, not contradiction: the account states no loss finally made good, and the source would refuse 'no guarantee' as the whole of what can be said."
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#the-answer-in-brief",
+          "says": {
+            "en": "No guarantee: the theory's own laws, each on its stated model, show why. Always guaranteed: No. Always available as a direction: as a criterion only. Achievable under stated conditions: yes, for named exits, none shown to hold of an actual collective."
+          },
+          "role": "carries"
+        },
+        {
+          "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#3-what-the-theorys-own-laws-rule-out",
+          "says": {
+            "en": "Together the laws rule out a guarantee from the theory, however much is observed; whether an actual collective meets their hypotheses is empirical."
+          },
+          "role": "carries"
+        },
+        {
+          "record": "recurrence-without-premise",
+          "anchor": "theories/becoming/chapters/01-ROOT.md#r-recurrence-without-premise",
+          "says": {
+            "en": "Any type: for every process what is lost stays lost. The equivalence of merging nothing, returning and keeping every possibility is shown for determined laws only."
+          },
+          "role": "carries",
+          "part": "what is lost stays lost"
+        }
+      ],
+      "account_adds": {
+        "en": "What specifically is ruled out, law by law, and on which model; a direction read only under the continuation condition (scope) and C (order), neither asserted, their warrant open."
+      },
+      "source_adds": {
+        "en": "A ground for hope that no law supplies, and an answer to loss. Whether hope needs such a ground the account leaves untouched. Job's refusal of retribution is the nearest internal neighbour, and I do not claim it as agreement."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": null,
+      "same_as": null
+    },
+    {
+      "id": "cx-abr-neighbor-and-stranger",
+      "name": {
+        "en": "Neighbour, stranger, Nineveh and its cattle: whose loss is commanded to count"
+      },
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {
+        "work": "Leviticus; Luke; Jonah; Qur'an",
+        "locator": "Leviticus 19:18, 19:33-34; Luke 10:25-37; Jonah 4:10-11; Qur'an 6:38",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Love the neighbour and the stranger, as remembered strangers yourselves; the Samaritan redefines who a neighbour is; God rebukes Jonah for not caring for Nineveh and its many animals; the Qur'an calls animals communities like you. Concern is widened by command and example, not by an argument from one's own interest. It stops well short of 'anything'."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {
+        "en": "[AI reading] Same question as the crux, whose losses count beyond one's own, with a different kind of answer: commanded, given a giver and bounded to the living. The account's condition is unasserted and reaches 'anything', which its objections table leaves sharpened, the step across standpoints neither defeated nor shown; order is C's, also unasserted, both warrants open. So the source asserts what the account only conditions on, and the account reaches further than the source would."
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#crux",
+          "says": {
+            "en": "An AI reading, argued, not proved: are all of one's effects one's own, in the sense of whose losses count, not of what one answers for? The laws do not answer it."
+          },
+          "role": "carries"
+        },
+        {
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#objections",
+          "says": {
+            "en": "No objection is shown to defeat the step, nor the step shown. 'Why anything has significance': sharpened; the centers' scope parts from the condition at a formation that is no center, and 'anything' decides which losses C counts."
+          },
+          "role": "carries",
+          "part": "the objection why anything has significance"
+        }
+      ],
+      "account_adds": {
+        "en": "The distinction between a loss's counting and what one answers for, and where self-concern alone does and does not reach."
+      },
+      "source_adds": {
+        "en": "An obligation with a ground; memory as its motive ('you were strangers'), which the glossary's separation of warrant and motivation would hold apart and the source joins."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": null,
+      "same_as": null
+    },
+    {
+      "id": "cx-abr-josiah-law-found",
+      "name": {
+        "en": "A lapsed law recovered from a found scroll"
+      },
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {
+        "work": "Hebrew Bible, 2 Kings, 2 Chronicles, Nehemiah",
+        "locator": "2 Kings 22-23; 2 Chronicles 34; Nehemiah 8",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Under Josiah a scroll of the law is found in the temple, read aloud, and a reform follows; in Nehemiah the law is read to those who returned. The text presents a covenant lapsed in practice and recovered from writing. Many historians date the scroll near that reign, so the finding may be the reform's own story; I note that and take no side."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {
+        "en": "[AI reading] A rule no living member holds can return only from outside the members. In the account's rule model, taught by members, no holder stays no holder, while taught from outside the new cohort holds it at once; in shared codes a merged distinction returns only from a form held outside, or by coining. Reading a stored text as that outside teacher is my mapping: the rule model has no records, and the code law's records offer only what was resolved."
+      },
+      "targets": [
+        {
+          "record": "a-rule-rebuilt-from-the-members-it-limits",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-rule-rebuilt-from-the-members-it-limits",
+          "says": {
+            "en": "Taught by members or not at all, no holder stays no holder under the whole net; taught from outside, the new cohort is the quota at every step that does not end. A minimal model with no compliance and no records."
+          },
+          "role": "carries"
+        },
+        {
+          "record": "a-code-formed-between-formations",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations",
+          "says": {
+            "en": "Under hearings that copy, where every formation holds the imposed form at a sense, all hold it at every later step: a merged distinction returns only from a form held outside, or by coining (SharedCodes.outside_needed). A resolution written back into the records later cohorts read rests from the next cohort on."
+          },
+          "role": "carries",
+          "part": "SharedCodes.outside_needed; written_rests"
+        }
+      ],
+      "account_adds": {
+        "en": "An exact statement of what cannot return from within, on these two models."
+      },
+      "source_adds": {
+        "en": "Divergence on ground: the outside is God's law, binding whether or not anyone holds it; the account's outside is only another relation. The reform's violence and centralization (2 Kings 23) belong to the story; the imposed-code law beside this one is of forms for senses, and reading a cult as a code would be a word match."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": "reading",
+      "same_as": null
+    },
+    {
+      "id": "cx-abr-riba-zakat-waqf",
+      "name": {
+        "en": "Riba, zakat and waqf: standing rules on interest, alms and endowment"
+      },
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {
+        "work": "Qur'an; Hebrew Bible; Islamic law of waqf",
+        "locator": "Qur'an 2:275-280, 3:130, 9:60; Exodus 22:25; Deuteronomy 23:19-20; waqf law, locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Riba is forbidden in the Qur'an, and interest among fellow Israelites in the Torah (Deuteronomy permits it from foreigners). Zakat requires a yearly share of wealth for named recipients. Waqf places property in inalienable endowment. These are standing, unconditional rules on how wealth moves, and scholars and practice diverge on what each reaches, on which I am thin."
+      },
+      "quote": null,
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "[AI reading] Three rules, joined for convenience. Zakat: 05 has giving that waits on nothing, a source restoring those who wait on it, with no amounts, and lists amounts as Open; zakat is an amount, to those who do not wait on the giver. Riba: draws that double need a stock (04), but a claim is not a draw and the Qur'an's ground is not arithmetic. Waqf: no law of holdings withdrawn from sale. Nothing here says the account should absorb them."
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "Compounding of claims treated as a thing to forbid; a mandatory recurring transfer of an amount; property withdrawn from sale. 05 mentions none of them; 08 keeps money and ownership for actual economic relations."
+      },
+      "absence": {
+        "searched": [
+          "usur",
+          "interest rate",
+          "capital",
+          "compound",
+          "money",
+          "financ",
+          "ownership",
+          "inalienab",
+          "property",
+          "alms, tithe, waqf, endowment, hoard, redistribut, debt, loan, lender (by the reviser, not repeated) in chapters, COLLECTIVE-DIRECTION, fronts, review, GLOSSARY"
+        ],
+        "read": [
+          "05-COLLECTIVES.md section 3 r-relative-position-is-zero-sum, section 5 r-giving-that-waits-on-giving, r-restoring-giving-from-the-worst-start, r-thresholds-of-waiting, and Open",
+          "04-LIFE.md r-ending-laws-as-regimes-on-a-lineage (draw_doubling_needs), r-copying-b-fold",
+          "02-MAP.md r-shaping-the-rule-selected-by-what-comes-back in full",
+          "08-METHOD.md wording paragraph on money and ownership"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": null,
+      "same_as": null
+    },
+    {
+      "id": "cx-abr-talion-and-pardon",
+      "name": {
+        "en": "Sevenfold vengeance, eye for eye, payment, pardon and the other cheek"
+      },
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {
+        "work": "Genesis; Exodus; Mishnah Bava Kamma; Qur'an; Gospel of Matthew",
+        "locator": "Genesis 4:23-24; Exodus 21:23-25; Mishnah Bava Kamma 8:1; Qur'an 5:45, 41:34, 42:40; Matthew 5:38-48, 18:21-22",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Lamech boasts of vengeance seventy-sevenfold. The Torah sets eye for eye, which rabbinic law reads as payment. The Qur'an permits like for like, calls pardon better and bids repelling evil with what is better. Jesus says not to resist, to love enemies and to forgive seventy-seven times. Whether talion was a licence or always a limit, and whom the Sermon binds, are disputed. All of it is command or exhortation before God, not a claim about dynamics."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {
+        "en": "[AI reading] Read an exchange of harms as a loop. A factor above one runs away, one keeps the difference, and a difference closes only through a link giving back less than it received. Lamech, talion, and payment or pardon sit there, which is my mapping; 05 itself names compensation, arbitration and absorption. Giving whatever comes has the form of the sparing law: with no one who spares, total withholding stays. Nothing here says closing is better, or counts what the one absorbing bears."
+      },
+      "targets": [
+        {
+          "record": "whether-a-loop-closes-a-difference",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-whether-a-loop-closes-a-difference",
+          "says": {
+            "en": "Any type: where every link gives on at least what it receives the difference never falls, so a loop closes a difference only through a link giving back less; with whole-number factors a loop closes at once, keeps, or exceeds every bound, never closing gradually. That exchanges respond to the gap by a map is a premise. Not shown: that closing is better than keeping or widening."
+          },
+          "role": "carries"
+        },
+        {
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+          "says": {
+            "en": "Reading [AI reading, D48]: an exchange of harms is a loop: answering in kind keeps the difference, answering more runs away, so conflict institutions are links of another kind."
+          },
+          "role": "carries",
+          "part": "D48: an exchange of harms is a loop"
+        },
+        {
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#kept-together",
+          "says": {
+            "en": "Reading [AI reading, D48], its table's row for bounded conflict: a loop closes a difference only through a link giving back less than it received (compensation, arbitration, absorption). The correspondence is the reading's."
+          },
+          "role": "neighbour",
+          "part": "D48, the table row for bounded conflict"
+        },
+        {
+          "record": "thresholds-of-waiting",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+          "says": {
+            "en": "Any type: restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start: without one, total withholding stays."
+          },
+          "role": "neighbour",
+          "part": "Tolerance.sparing_gives, Tolerance.total_stays"
+        },
+        {
+          "record": "a-pair-tolerates-only-within-a-window",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-pair-tolerates-only-within-a-window",
+          "says": {
+            "en": "Under answers one withholding echoes and the pair never give together again. Reading [AI reading, new]: the window is a relative of forgiveness for errors spaced within it; under errors by chance it delays total withholding and does not prevent it. Nothing here says which law of giving is better."
+          },
+          "role": "neighbour",
+          "part": "the window as a relative of forgiveness"
+        }
+      ],
+      "account_adds": {
+        "en": "That with whole-number factors nothing closes gradually, and how far a forgiving window reaches under chance errors, the last by hand."
+      },
+      "source_adds": {
+        "en": "Divergence on ground: talion answers to justice owed and pardon to reward from God, not to a difference kept or closed. Who bears the absorbed harm, and whether it may be asked of the weak, the source debates and the law does not read. Ranking closing above keeping would need C for order, with the continuation condition for scope, neither asserted, warrant open."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": "reading",
+      "same_as": null
+    },
+    {
+      "id": "cx-abr-covenant-given-first",
+      "name": {
+        "en": "Covenant: a bond opened by what was already given"
+      },
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {
+        "work": "Hebrew Bible, Exodus, Deuteronomy, Jeremiah; G. Mendenhall on the treaty form (1954)",
+        "locator": "Exodus 19-24, especially 20:2; Deuteronomy 28; Jeremiah 31:31-34; Mendenhall, locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Israel's law stands inside a sworn bond with God, opened by what God has already done, the bringing out of Egypt, and followed by stipulations, with blessing and curse on keeping or breach. Prophets read disaster as breach; Jeremiah promises a new covenant written on the heart. The comparison with Near Eastern treaties is a modern reading. The other party to the bond is not one relatum among others."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {
+        "en": "[AI reading] Divergence on warrant and on the giver: the bond binds because God swore it, and the other party is no formation among formations. Only an order is alike, a gift before stipulations. 05's form: promises alone start nothing, since each side's waiting on the other eventually acting holds where neither ever acts; a source giving first restores those who wait on it. Reading God as that source is my mapping, which the source would refuse, so no agreement is claimed. That blessing follows keeping is no law here."
+      },
+      "targets": [
+        {
+          "record": "joint-plans-from-a-supported-start",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+          "says": {
+            "en": "Any process, a periphery module: 'if the other eventually does, I eventually do' holds on both sides where neither ever happens; in the exchange witness an empty or one-sided start never becomes jointly active, and ignition needs a reserve already present. Not shown: how a supported start forms."
+          },
+          "role": "carries"
+        },
+        {
+          "record": "giving-that-waits-on-giving",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-giving-that-waits-on-giving",
+          "says": {
+            "en": "Any type: in a ring of three, with memory all withhold from step 2, and with a source giving whatever it waits on (giving first) all give from step 3 from every start. It does not show how waiting forms, or that cooperation is good."
+          },
+          "role": "carries",
+          "part": "giving first, in the ring of three"
+        }
+      ],
+      "account_adds": {
+        "en": "Exact laws of what a withholding does, with and without memory, and that more waiting gives no more."
+      },
+      "source_adds": {
+        "en": "Breach bringing consequences from a party beyond the relations. 07's responsibilities from named sources are conditional on J1-J4 and do not read an oath before God. Also the new covenant, written within, for which I name no mechanism."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": null,
+      "same_as": null
+    },
+    {
+      "id": "cx-abr-ijma-consensus",
+      "name": {
+        "en": "Ijma: the agreement of the qualified as binding"
+      },
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {
+        "work": "al-Shafi'i, al-Risala; W. Hallaq, A History of Islamic Legal Theories (1997)",
+        "locator": "al-Risala, the section on consensus; the report that the community will not agree on error, collections unverified; Hallaq, locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "In most Sunni legal theory the agreement of the qualified scholars of an age binds those after them, as a source of law beside scripture and the Prophet's practice, on a report that the community will not agree on error. The report's strength, who counts and whether consensus can ever be known are disputed; al-Nazzam denied it and Shi'i theory reads it otherwise, as I recall. Disagreement among the schools is also kept as legitimate."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {
+        "en": "[AI reading] Divergence on what agreement does. The source gives the agreement of qualified jurists binding force, with a promise behind it; in the account members reading one channel add agreement, not reach, and warrant is not what a pool reads. The jurists' demand that each reason from the sources has the form of readers not copying, which is my reading. It stands against the Talmudic rule in the court-prophets entry, where a unanimous court is suspect: opposite verdicts on unanimity, both kept."
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#pools",
+          "says": {
+            "en": "Reading [AI reading, D45]: pooling moves the gap outward to the union of the members' closures and does not remove it; members reading one channel add agreement, not reach. A pool's rule may not use what they tell apart."
+          },
+          "role": "carries",
+          "part": "D45"
+        },
+        {
+          "record": "a-pool-read-by-its-majority",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-pool-read-by-its-majority",
+          "says": {
+            "en": "World, no premise: taking what more than half the members read is a selection through the pooled coupling, separating no more than the pool. It does not show that any pool reads by its majority."
+          },
+          "role": "neighbour"
+        }
+      ],
+      "account_adds": {
+        "en": "A bound on what any reading by a pool can separate, whoever its members are."
+      },
+      "source_adds": {
+        "en": "A warrant for agreement itself, resting on a promise about this community, which no law here reads; and a reading of disagreement as legitimate within a shared source. Thin: a reader of usul al-fiqh should check this."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": null,
+      "same_as": null
+    },
+    {
+      "id": "cx-abr-maqasid-tiers",
+      "name": {
+        "en": "Maqasid: the law's purposes in tiers, necessities before needs before refinements"
+      },
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {
+        "work": "al-Ghazali, al-Mustasfa; al-Shatibi, al-Muwafaqat",
+        "locator": "al-Mustasfa on public interest; al-Muwafaqat, the book of purposes; locators unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Jurists from al-Ghazali to al-Shatibi read the law as serving purposes: protecting religion, life, intellect, lineage and property, in tiers of necessities, then needs, then refinements, so that a need gives way to a necessity. The order among the five varies. The purposes are read from revelation and serve the servant's good in this life and the next. As I recall; I am thin here."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {
+        "en": "[AI reading] Tiers, not a sum: a lower tier gives way to a higher. The account's J2 has that form, a premise with checked consequences: the priority of basic conditions, defended by non-substitution, parted from unit-step aggregation. Reading the jurists' order as strict, not weighed case by case, is mine and may overstate them. J2 is a further premise that does not follow from C: scope is the continuation condition's, order C's and J's, none asserted, warrant open. The content differs: religion is among the five, and the tiers come from revelation."
+      },
+      "targets": [
+        {
+          "record": "basic-priority-step-by-step",
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-basic-priority-step-by-step",
+          "says": {
+            "en": "Conditional (J1/J2): read in two tiers, every comparison meeting the priority of basic conditions ranks the absence of a malignant formation above its occurrence under the stepwise and relation-level readings, where C alone leaves them unranked. The tier assignment is a reading. Reading [D65]: a rival preferring enough secondary gains to one basic restoration is not shown inconsistent."
+          },
+          "role": "carries"
+        },
+        {
+          "record": "protection-priority-excludes-uniform-aggregation",
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-protection-priority-excludes-uniform-aggregation",
+          "says": {
+            "en": "Any process, one constructed situation only: the priority does not follow from C; every natural-number score satisfying C ranks score(0) + 2 gains above protection, so none represents the priority, while a bounded score does. This separates the priority only from unit-step aggregation, not aggregation in general."
+          },
+          "role": "carries"
+        }
+      ],
+      "account_adds": {
+        "en": "In one constructed situation: that the priority does not follow from C, and which scores cannot represent it, while a bounded score can."
+      },
+      "source_adds": {
+        "en": "Divergence on ground: the purposes are God's, read from revelation, and reach the next life. Exceptions under necessity (darura), and the contest over how far a purpose may override a text, have no term here. A reader of al-Shatibi should check this."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": "reading",
+      "same_as": null
+    },
+    {
+      "id": "cx-abr-nothing-new",
+      "name": {
+        "en": "Nothing new under the sun, and a new thing"
+      },
+      "domain": "abrahamic-islamic",
+      "group": "abrahamic-islamic",
+      "source": {
+        "work": "Hebrew Bible, Ecclesiastes and Isaiah",
+        "locator": "Ecclesiastes 1:4-11; Isaiah 43:18-19",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Generations go and the earth stays, sun and rivers go round, what has been will be, and nothing is new under the sun; nor is there memory of those before. Qoheleth's point is the futility of gain and the failure of remembrance, not cosmology. Isaiah has God say not to dwell on former things, since God is doing a new thing."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "scope",
+      "reading": {
+        "en": "[AI reading] Whether a course returns is a law in the account, so each saying has hypotheses where it holds: within finitely many configurations, a determined law merges nothing exactly where every configuration returns; becoming that keeps its whole history never returns, and a present a list holds forgets. Neither text speaks of lists. That a present forgets has the form of no memory of those before, which is my mapping. 06 reads 无往不復 and 日新 so."
+      },
+      "targets": [
+        {
+          "record": "recurrence-without-premise",
+          "anchor": "theories/becoming/chapters/01-ROOT.md#r-recurrence-without-premise",
+          "says": {
+            "en": "Any type: within finitely many configurations, a list holding every one, a determined law merges nothing exactly where every configuration returns. Becoming that keeps its whole history loses nothing and never returns, so it needs a carrier no list holds, and a present a list holds forgets. No unfolding is assumed to have such a list."
+          },
+          "role": "carries"
+        },
+        {
+          "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+          "says": {
+            "en": "In its table, 无往不復 and 日新, agreement at two layers: within finite configurations every configuration returns exactly where the law merges nothing; the same law read with its history is held by no list and never revisits. A law that merges does not return every configuration."
+          },
+          "role": "neighbour",
+          "part": "the table row 「无往不復」与「日新」"
+        }
+      ],
+      "account_adds": {
+        "en": "The exact hypothesis under which each saying holds, and that what is lost stays lost under every process."
+      },
+      "source_adds": {
+        "en": "Divergence on what the sayings are for: Qoheleth's weariness and Isaiah's promise are not about configurations, and God's new thing comes from beyond any stated law."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": null,
+      "same_as": null
+    }
+  ],
+  "changes": [
+    {
+      "id": "cx-abr-jubilee-return-of-land",
+      "what": "changed",
+      "why": "Critic H4. Moved to not-carried, the choice the reading supports: its own coverage row says no law of an imposed calendar reset exists, and the account takes up no such claim, so neither agreement nor a divergence the account states. Dropped all targets, becoming-return-grades as a word match (read at home: it grades when a dependence is met again). Capture and widening remarks stay in reading as a proposal; ground and premises in source_adds."
+    },
+    {
+      "id": "cx-abr-prozbul-reset-read-ahead",
+      "what": "changed",
+      "why": "agreement_of reading: form only, one optimizer on a stock, by its own words. a-step-coupling carries; D48 neighbour."
+    },
+    {
+      "id": "cx-abr-sabbatical-fallow",
+      "what": "changed",
+      "why": "Roles set: two carry, three neighbours. Warrant added."
+    },
+    {
+      "id": "cx-abr-weekly-sabbath",
+      "what": "changed",
+      "why": "Roles and part set; ranking and the Assessment are neighbours. Warrant added."
+    },
+    {
+      "id": "cx-abr-prophets-against-rulers",
+      "what": "changed",
+      "why": "Critic's 'partly'. agreement_of reading: a king's rule as a metric and readers as people are readings, and closed-capture says readers are not shown to be minds. T7 and the recruiting law, which the reading says is not of expelling, are neighbours. No wording changed."
+    },
+    {
+      "id": "cx-abr-court-prophets-micaiah",
+      "what": "changed",
+      "why": "agreement_of reading: the source's own cause is a lying spirit, and neither copying nor independence is its term. Two laws carry; reviewers, readers drawn and D26 are neighbours, so no agreement rests on D26's descended reading."
+    },
+    {
+      "id": "cx-abr-ritual-without-justice",
+      "what": "kept",
+      "why": ""
+    },
+    {
+      "id": "cx-abr-hisba-office",
+      "what": "changed",
+      "why": "Critic held the relation. agreement_of reading, not law: the buyer's selection is the reader's and the source's ground is duty under revealed law. Roles and parts set; selection law and D48 carry. Indexed in meta-attractor claim 143 only by name, so no descent is relied on."
+    },
+    {
+      "id": "cx-abr-commanding-right",
+      "what": "changed",
+      "why": "Roles and part set. Warrant added."
+    },
+    {
+      "id": "cx-abr-stewardship",
+      "what": "changed",
+      "why": "Roles and T8's part set."
+    },
+    {
+      "id": "cx-abr-khaldun-asabiyya",
+      "what": "changed",
+      "why": "Critic held the relation. agreement_of reading: the form is Turchin's, by the entry's own words."
+    },
+    {
+      "id": "cx-abr-khaldun-three-generations",
+      "what": "changed",
+      "why": "same_as cx-econ-ibn-khaldun-cycle, the same claim of the same source; both not-carried. Asabiyya and taxation are narrower claims and not linked."
+    },
+    {
+      "id": "cx-abr-khaldun-prestige-four-generations",
+      "what": "changed",
+      "why": "Roles set; scope kept. The scope is of passing's span, and the reading already says his decay is not refuted."
+    },
+    {
+      "id": "cx-abr-khaldun-ruler-replaces-kin",
+      "what": "changed",
+      "why": "Roles and part set; the recruiting law is a neighbour. Fresh-reading and scope kept; the mapping is said to be the reader's."
+    },
+    {
+      "id": "cx-abr-khaldun-reform-needs-group-feeling",
+      "what": "changed",
+      "why": "Agreement to scope, by REPAIR point 3 and in line with the reform-absorbed ruling: he states it generally, and closed-capture and Thinned.kept_iff condition it on a reading formed from the share. Reading says so, and that the premise is not shown. T7 and LA2 cited as a limit."
+    },
+    {
+      "id": "cx-abr-khaldun-taxation",
+      "what": "changed",
+      "why": "Roles and part set; whole drawing and 05's market section are neighbours. Warrant added."
+    },
+    {
+      "id": "cx-abr-tawhid",
+      "what": "changed",
+      "why": "Roles and part set."
+    },
+    {
+      "id": "cx-abr-aquinas-mixed-relation",
+      "what": "changed",
+      "why": "Roles and part set."
+    },
+    {
+      "id": "cx-abr-subsistent-relation",
+      "what": "changed",
+      "why": "Critic H4: agreement to divergence. Said of God alone, the reverse of the thesis, and the target is a thesis's representation result. Reading rewritten so that no form is counted; the reach divergence moved from source_adds to lead it."
+    },
+    {
+      "id": "cx-abr-ghazali-occasionalism",
+      "what": "changed",
+      "why": "Roles and part set."
+    },
+    {
+      "id": "cx-abr-creation-called-good",
+      "what": "changed",
+      "why": "Roles and parts set."
+    },
+    {
+      "id": "cx-abr-plenitude-of-kinds",
+      "what": "changed",
+      "why": "Roles set; the objection is a neighbour. Condition's status added."
+    },
+    {
+      "id": "cx-abr-divine-command",
+      "what": "changed",
+      "why": "Roles and part set."
+    },
+    {
+      "id": "cx-abr-promised-end",
+      "what": "changed",
+      "why": "Roles and part set. Warrant added."
+    },
+    {
+      "id": "cx-abr-neighbor-and-stranger",
+      "what": "changed",
+      "why": "Roles and part set. Warrant added."
+    },
+    {
+      "id": "cx-abr-josiah-law-found",
+      "what": "changed",
+      "why": "agreement_of reading: a stored text as the outside teacher is the reader's mapping, and the rule model has no records."
+    },
+    {
+      "id": "cx-abr-riba-zakat-waqf",
+      "what": "kept",
+      "why": ""
+    },
+    {
+      "id": "cx-abr-talion-and-pardon",
+      "what": "changed",
+      "why": "agreement_of reading: the sense itself says none of this is a claim about dynamics, and the mapping is the reader's; the loop law and D48 carry, three neighbours. Warrant added."
+    },
+    {
+      "id": "cx-abr-covenant-given-first",
+      "what": "changed",
+      "why": "Agreement to divergence, not named by the critic. Reading God as the source is a mapping 'the source would refuse', and the sense says the other party is not one relatum among others; the law's question is ignition, the source's warrant. Only the order of gift and stipulation is alike. Reading and source_adds adjusted; targets now what it is read against."
+    },
+    {
+      "id": "cx-abr-ijma-consensus",
+      "what": "changed",
+      "why": "Roles and part set; D45 carries and the majority law is a neighbour."
+    },
+    {
+      "id": "cx-abr-maqasid-tiers",
+      "what": "changed",
+      "why": "agreement_of reading: the form is shared with premise J2 and strictness is the reader's. Corrected 'order from C': at home the priority does not follow from C and the order is C's and J's. Warrant added."
+    },
+    {
+      "id": "cx-abr-nothing-new",
+      "what": "changed",
+      "why": "Roles and part set; 06's row is a neighbour."
+    }
+  ],
+  "live_flags": []
+}

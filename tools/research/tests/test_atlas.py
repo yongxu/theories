@@ -52,6 +52,8 @@ VOCABULARY = {
     'domains': [{'en': 'earlier-folders'}, {'en': 'greek-roman'}],
     'carried': [{'en': 'carried'}, {'en': 'carried-in-part'}, {'en': 'changed'}, {'en': 'history-only'}, {'en': 'not-carried'}, {'en': 'fresh-reading'}],
     'relations': [{'en': 'agreement', 'zh': '相合'}, {'en': 'scope', 'zh': '定域'}, {'en': 'divergence', 'zh': '相分'}, {'en': 'contrary-reading', 'zh': '反读'}],
+    'agreement_of': [{'en': 'law'}, {'en': 'thesis-or-method'}, {'en': 'reading'}],
+    'target_roles': [{'en': 'carries'}, {'en': 'neighbour'}, {'en': 'limit'}],
     'group_kinds': [{'en': 'theory'}, {'en': 'domain'}],
     'source_bases': [{'en': 'read-in-repo'}, {'en': 'ai-knowledge'}],
 }
@@ -307,7 +309,7 @@ RECORD_PAGE = atlas.RECORDS + '/closed-capture.md'
 def group(**changes):
     g = {'id': 'cxg-early', 'domain': 'earlier-folders', 'title': {'en': 'An earlier folder'}, 'kind': 'theory',
          'summary': {'en': 'What it held.'}, 'read': ['a.md'], 'skimmed': [], 'searched': [], 'not_mapped': [], 'coverage': None,
-         'reads': ['map', 'revise', 'check'], 'source': RECORD_PAGE}
+         'reads': atlas.READS, 'source': RECORD_PAGE}
     g.update(changes)
     return g
 
@@ -315,9 +317,9 @@ def group(**changes):
 def reading(**changes):
     e = {'id': 'cx-early-claim', 'name': {'en': 'A claim'}, 'domain': 'earlier-folders', 'group': 'cxg-early',
          'source': {'work': RECORD_PAGE, 'locator': 'its head', 'basis': 'read-in-repo'}, 'sense': {'en': 'In its own terms.'},
-         'quote': None, 'carried': 'carried', 'relation': 'agreement', 'reading': {'en': 'Read so.'},
-         'targets': [{'record': 'closed-capture', 'says': {'en': 'It says this.'}}], 'account_adds': None, 'source_adds': None,
-         'absence': None, 'labels': ['AI reading'], 'reads': ['map', 'revise', 'check']}
+         'quote': None, 'carried': 'carried', 'relation': 'agreement', 'agreement_of': 'law', 'reading': {'en': 'Read so.'},
+         'targets': [{'record': 'closed-capture', 'role': 'carries', 'says': {'en': 'It says this.'}}], 'account_adds': None, 'source_adds': None,
+         'absence': None, 'same_as': None, 'labels': ['AI reading'], 'reads': atlas.READS}
     e.update(changes)
     return e
 
@@ -336,11 +338,11 @@ class CorrespondenceTests(AtlasCase):
         self.assertTrue(any('unique across the atlas' in e for e in self.problems(reading(), reading())))
 
     def test_the_outcome_decides_what_an_entry_must_show(self):
-        self.assertOne(self.problems(reading(relation=None)), 'relation:', 'needs a relation')
-        self.assertOne(self.problems(reading(targets=[])), 'targets:', 'needs what it is read against')
+        self.assertOne(self.problems(reading(relation=None, agreement_of=None)), 'relation:', 'needs a relation')
+        self.assertTrue(any('needs what it is read against' in e for e in self.problems(reading(targets=[]))))
         self.assertOne(self.problems(reading(carried='carried-in-part')), 'source_adds:')
-        self.assertOne(self.problems(reading(carried='not-carried', relation=None, targets=[])), 'absence:', 'searched')
-        self.assertEqual(self.problems(reading(carried='not-carried', relation=None, targets=[], absence={'searched': ['grep x'], 'read': []})), [])
+        self.assertOne(self.problems(reading(carried='not-carried', relation=None, agreement_of=None, targets=[])), 'absence:', 'searched')
+        self.assertEqual(self.problems(reading(carried='not-carried', relation=None, agreement_of=None, targets=[], absence={'searched': ['grep x'], 'read': []})), [])
         self.assertTrue(any('no relation and no targets' in e
                             for e in self.problems(reading(carried='not-carried', absence={'searched': ['grep x'], 'read': []}))))
         self.assertOne(self.problems(reading(absence={'searched': ['grep x']})), 'absence:', 'only for')
@@ -350,8 +352,31 @@ class CorrespondenceTests(AtlasCase):
         self.assertOne(self.problems(reading(reads=['map'])), 'reads:')
 
     def test_a_target_cites_the_live_account(self):
-        self.assertOne(self.problems(reading(targets=[{'record': 'no-such', 'says': {'en': 'x'}}])), 'no record no-such')
-        self.assertOne(self.problems(reading(targets=[{'anchor': 'experiments/history/Old.lean', 'says': {'en': 'x'}}])), 'not in the live account')
+        self.assertTrue(any('no record no-such' in e for e in self.problems(reading(targets=[{'record': 'no-such', 'role': 'carries', 'says': {'en': 'x'}}]))))
+        self.assertTrue(any('not in the live account' in e for e in self.problems(
+            reading(agreement_of='reading', targets=[{'anchor': 'experiments/history/Old.lean', 'role': 'carries', 'says': {'en': 'x'}}]))))
+
+    def test_agreement_says_what_it_is_with_and_a_law_must_carry_it(self):
+        self.assertOne(self.problems(reading(agreement_of=None)), 'agreement_of:', 'every agreement says')
+        self.assertOne(self.problems(reading(relation='scope')), 'agreement_of:', 'only for agreement')
+        self.assertEqual(self.problems(reading(relation='scope', agreement_of=None)), [])
+        neighbour = [{'record': 'closed-capture', 'role': 'neighbour', 'says': {'en': 'x'}}]
+        self.assertTrue(any('whose role is carries' in e for e in self.problems(reading(agreement_of='reading', targets=neighbour))))
+        self.assertTrue(any('checked theorem' in e for e in self.problems(reading(targets=neighbour))))
+        section = [{'anchor': RECORD_PAGE, 'role': 'carries', 'says': {'en': 'x'}}]
+        self.assertTrue(any('checked theorem' in e for e in self.problems(reading(targets=section))))
+        self.assertEqual(self.problems(reading(agreement_of='thesis-or-method', targets=section)), [])
+
+    def test_a_target_has_a_role_and_nothing_is_carried_in_history(self):
+        self.assertTrue(any('.role' in e for e in self.problems(reading(targets=[{'record': 'closed-capture', 'says': {'en': 'x'}}]))))
+        gone = {'searched': ['grep x'], 'read': []}
+        self.assertTrue(any('nothing is carried' in e for e in self.problems(reading(carried='history-only', relation='scope', agreement_of=None, absence=gone))))
+        near = [{'record': 'closed-capture', 'role': 'neighbour', 'says': {'en': 'x'}}]
+        self.assertEqual(self.problems(reading(carried='history-only', relation='scope', agreement_of=None, absence=gone, targets=near)), [])
+
+    def test_same_as_names_other_entries(self):
+        self.assertTrue(any('same_as' in e for e in self.problems(reading(same_as=['cx-none']))))
+        self.assertEqual(self.problems(reading(same_as=['cx-other']), reading(id='cx-other', same_as=['cx-early-claim'])), [])
 
     def test_a_quote_is_verbatim_and_only_from_a_stored_text(self):
         self.assertOne(self.problems(reading(quote='words not there')), 'quote:', 'verbatim')
@@ -371,14 +396,14 @@ class CorrespondenceTests(AtlasCase):
         (self.root / atlas.ENTRIES / 'dynamics.json').write_text('[]\n')
         (self.root / atlas.ENTRIES / 'correspondence_groups.json').write_text(json.dumps([group()]))
         (self.root / atlas.ENTRIES / 'correspondences.json').write_text(json.dumps(
-            [reading(), reading(id='cx-early-other', relation='divergence'),
-             reading(id='cx-early-gone', carried='not-carried', relation=None, targets=[], absence={'searched': ['grep x'], 'read': []})]))
+            [reading(), reading(id='cx-early-other', relation='divergence', agreement_of=None),
+             reading(id='cx-early-gone', carried='not-carried', relation=None, agreement_of=None, targets=[], absence={'searched': ['grep x'], 'read': []})]))
         pages, errors = atlas.render(RECORDS)
         self.assertEqual(errors, [])
         page = pages[atlas.CROSSWALK]
         self.assertTrue(page.startswith(atlas.GENERATED + '\n'))
         self.assertLess(page.index('Its own sense'), page.index('Reading [AI reading]'))
-        self.assertIn('| [An earlier folder](#cxg-early) | 3 | 2 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 1 | 0 |', page)
+        self.assertIn('| [An earlier folder](#cxg-early) | 3 | 2 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 1 | 0 | 1 | 0 | 0 |', page)
         self.assertIn('Searched: grep x', page)
         data = json.loads(pages[atlas.DATA])
         self.assertEqual(data['correspondence_groups'][0]['by_carried']['not-carried'], 1)

@@ -1,0 +1,995 @@
+{
+  "group": {
+    "id": "buddhist",
+    "domain": "buddhist",
+    "title": {
+      "en": "Buddhist thought, as far as the account has reached it"
+    },
+    "kind": "domain",
+    "summary": {
+      "en": "The account holds Chinese Buddhist texts at length (dossier, corpus, Lean tests of 146 sentences), mostly as the strongest contrary test: its continuation stands on the side 中论 refutes. Chapters and fronts hold almost nothing else: no twelve links, craving, saṃsāra, nirvāṇa, 无我 or suffering. Those mapped in the 脉络 study have no entries here, so this file's totals do not show that absence; coverage's absent list does. No entry here is agreement, of a law or otherwise, and I looked: the nearest are parts of entries; agreement stands only in the earlier maps under coverage. Most entries are this crosswalk's own proposals, contrary or divergent, not connections the account states; what is carried in part rests on the dossier, a live page unread by any person, not on a chapter. 无明 keeps the name and changes the claim. Sharpest finds: 雜阿含 293's 相續滅，是名苦邊 and 青目's refutation of 不住相似生, in no map or count. The dossier's statement that Tiantai is not in the repository is out of date."
+    },
+    "read": [
+      "theories/becoming/review/BUDDHIST-THOUGHT.md (whole)",
+      "theories/becoming/chapters/06-CLASSICAL-TEXTS.md: three relations, §二's table and findings, §三's table, §四 from 需要前提者 through the conditional laws (long lines cut at about 1,600 characters), §六's table, three layers, four layers and gaps, §十一, 未示, 未决",
+      "theories/becoming/chapters/01-ROOT.md: §1 whole; the opening theorem of continuation relative to a class",
+      "theories/becoming/chapters/02-MAP.md: §9's opening, closed capture and its definition line, T7 and the readings after it (cut at about 2,200 characters), a reserve defers the end, a whole persists",
+      "theories/becoming/chapters/03-KNOWING.md: the seeking boundary and the two readings after it; selection through the couplings; readings within what they read; the first lines of the 明 reading",
+      "theories/becoming/chapters/04-LIFE.md: life as a condition of life, its bullets",
+      "theories/becoming/chapters/05-COLLECTIVES.md: what a pool's acts respond to",
+      "theories/becoming/chapters/07-SIGNIFICANCE.md: §3's opening; the credit to Parfit and Siderits; the reading in §6 that the position is not a defect",
+      "theories/becoming/chapters/08-METHOD.md: one relational unfolding; the explanatory reading and what would defeat it; law; words in one sense",
+      "GLOSSARY.md: the line for 无明 and 明",
+      "sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt: 觀本際品第十一, 觀苦品第十二, 觀行品第十三, 觀縛解品第十六, 觀涅槃品第二十五, 觀十二因緣品第二十六, each whole; the 眾因緣生法 passage of 觀四諦品; the opening of 觀邪見品",
+      "sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-SA.txt: 第73, 288, 294, 296, 297, 298, 299經 whole; the end of 第292經 and 第293經 from 所謂有是故是事有",
+      "sources/civilization-thought-v1.0/evidence/additions/fo2/FO2-MH.txt: from the three thousand's count through the four 悉檀 and 非一非一切, about 3,000 characters",
+      "development/zhonghua/passages.json: all 14 entries with source FO1-S-SA, zhonglun-wu-ming-mie, zhonglun-kong-yi-yi-qie-fa-de-cheng, tiantai-fei-zong-fei-heng, tiantai-san-di",
+      "aa-attractor-atlas/PLAN.md §6.3 and §6.4; aa-attractor-atlas/readers-2026-11-04/correspondences.md"
+    ],
+    "skimmed": [
+      "theories/becoming/results/records: claim, hypotheses, does_not_show and correspondence, each cut at about 1,400 characters, of seeking-boundary, continuation-relative-to-a-class, classical-definitions-in-the-grammar, conditional-laws-of-the-corpus, what-a-pools-acts-respond-to, readings-within-what-they-read, closed-capture, feeding-closure, consumption-ends-with-feeders",
+      "development/one-unfolding-root/classify/zhonglun.tsv: rows ZL-01-089 to 091, ZL-01-103, ZL-21-101 to 103",
+      "development/one-unfolding-root/corpus: rows ZL-01-090, ZL-21-101, ZL-21-103, ZL-07-133, ZL-07-170",
+      "development/ou7-conditional-laws/data/groups.tsv: counted by unit prefix and disposition; rows reading production; the row for ZL-24-041",
+      "development/ro-relational-sources/passages.json: id, kind and fragments of the 10 Buddhist passages"
+    ],
+    "searched": [
+      "ONE-PAGE, THE-THEORY-OF-BECOMING, chapters, the other fronts, review/ and GLOSSARY for: 涅槃, 十二因, 十二支, 十二缘, twelve, 渴爱, 渴愛, craving, saṃsār, samsara, no-self, anatt, anātm, 无我, 無我, Buddh, Nāgārjuna, Madhyamaka, Candrak, dependent arising, pratītya, Siderits, 苦灭, 苦滅, suffering, 一念三千, 天台, Tiantai, 相似; 苦 in every chapter but 06. Hits read in context",
+      "results/records/*.json for 中论, 中論, Madhyamaka, 無明, 无明, Buddh, 佛 (ten files), and for coextinct",
+      "sources/civilization-thought-v1.0/evidence/additions for 中觀論疏, 吉藏, 窺基, 述記, Candrak, 月稱, 入中論, Mūlamadhyamaka: no hit",
+      "zhonghua/passages.json and ro-relational-sources/passages.json, by exact phrase: 滅於相續, 相續滅, 三蘆, 法住法界, 此法常住, 還復受身, 更不復受, 不復相續, 不住相似, 大聖說空法, 涅槃與世間, 有為者若生, 無為者不生, 捨任, 法界常住, 非我所作 (none); 當來有愛, 無明離欲, 彼誰老死 (found). 滅於相續 also in chapters, review/ and the corpus files (none)",
+      "record-index.tsv by name: generation-is-replenishment, life-as-condition-of-life, selection-through-couplings, identity-across-steps, whole-persists-through-generation, reserve-defers-ending, feeding-closure"
+    ],
+    "not_mapped": [
+      {
+        "en": "无我 and suffering as a truth: on no chapter or front; 脉络 has zaahan-bian-yi-fei-wo (agreement) and zaahan-wu-chang-shi-ku (divergence), and 07 credits Siderits once.",
+        "why": "Already mapped in the 脉络 study, so not re-mapped here. No entry here counts them: coverage's absent list says they are on no chapter or front, and the wheel entry says what bears on suffering."
+      },
+      {
+        "en": "Candrakīrti's sevenfold chariot analysis, and Madhyamakāvatāra 6.39 on result without a store, both as recalled, unverified.",
+        "why": "Named in one line under the Candrakīrti entry's source_adds; from memory alone, so no entries of their own."
+      },
+      {
+        "en": "Later Tiantai 性具 and 性恶 (Zhili), and the 三谛.",
+        "why": "性具 I know only secondhand; the 三谛 already stand in 脉络 entry tiantai-san-di."
+      },
+      {
+        "en": "吉藏 and 窥基: no stored commentary found by the search listed.",
+        "why": "Reading their commentaries would need texts not in the repository, so downloading, which the brief forbids."
+      },
+      {
+        "en": "中论 15, 18 and 27 as stored chapters (one verse of 15 stands in RO's zhonglun-yin-yuan-jia-ming); 中论 17 on deed and agent, in the corpus and in B-01, B-18.",
+        "why": "15 and 18 not read for this file and 27 only opened, so no entries of their own; 17 is corpus and dossier, not re-mapped."
+      },
+      {
+        "en": "Whole stored texts other than those named in entries: 成唯識論, 五教章, 起信論, 勝鬘, 法華, 金剛, 心經, 因明入正理論, 阿彌陀, 無量壽, 要解, 修習止觀坐禪法要, 壇經.",
+        "why": "Counted under coverage; not read for this file beyond their first lines."
+      },
+      {
+        "en": "Practice: the eightfold path, 止觀, ordination, 修行次第, enlightenment and its stages.",
+        "why": "A practice and a way of life, not claims with a mechanism; the dossier disclaims replacing them."
+      },
+      {
+        "en": "The 36 dossier items, the corpus, the 146 sentences, the ten RO passages and the 脉络 entries.",
+        "why": "Already mapped; their extent is under coverage."
+      }
+    ],
+    "coverage": {
+      "present": [
+        {
+          "what": "Dossier B, for review, unread by any person",
+          "where": "theories/becoming/review/BUDDHIST-THOUGHT.md",
+          "extent": "36 items B-01 to B-36: 18 on 中论, 4 成唯识论, 4 起信论, 5 华严, 2 无明 and 明, 2 阿含 and 坛经, 1 on the conditional laws; 76 questions and 8 sentences to classify"
+        },
+        {
+          "what": "Frozen corpus, one AI coder per unit",
+          "where": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/corpus",
+          "extent": "中论 chapters 1, 2, 7, 21, 10, 17, 19, 24: 1,432 units, 530 coded 己 of the 540 己 in both rounds (B-18, 06 §二). Lines counted, less one header each: 起信论 589, 金师子章 220, 成唯识论 410 (nine passages only), 五教章六相 131"
+        },
+        {
+          "what": "Conditional laws written family by family, Lean-checked, readings unreviewed",
+          "where": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-conditional-laws-of-the-corpus",
+          "extent": "146 of 219 sentences are Buddhist (counted in groups.tsv by unit prefix: 起信 52, 中论 47, 成唯识 32, 金师子 15): law 85, not holding on its reading 6, premise 16, 丁 18, not expressible 16, definition 5, matching B-36. All six not holding are Buddhist"
+        },
+        {
+          "what": "Divergences and contrary readings, as recorded",
+          "where": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#divergences",
+          "extent": "9 bullets, 4 Buddhist: 唯识's store (戊, open), 中观 refuting 相续 (己, open), 起信论 on 念念相续 (己 and 戊), 金师子章 (戊). 未决 keeps 同在 open"
+        },
+        {
+          "what": "Passage-by-passage map, Assessment D54",
+          "where": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/passages.json",
+          "extent": "10 passages labelled 佛教: 5 agreement, 2 scope, 3 divergence, read by field; matches 06 §六's table"
+        },
+        {
+          "what": "脉络 map, Assessment D62",
+          "where": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+          "extent": "118 entries labelled 佛 in `tradition` (the readers' 'about 90' is low), 13 from outside fo1 and fo2: 肇论 9, 原人论 2, 慧远, and 朱熹's critique. 116 entries drawn from fo1 and fo2, 11 without the label: 成唯識論 19, 中论 17 (one on 觀十二因緣品), 雜阿含 14, 起信 13, 五教章 10, 金師子 9, 壇經 6, 勝鬘 6, 因明 5, 摩訶止觀 4, 金剛 3, 法華 2, 修習止觀 2, Pure Land texts 6. Together 126 distinct ids: 37 agreement, 61 scope, 28 divergence. The entries stand in the study; 06 §7.1 reports only shares"
+        },
+        {
+          "what": "Whole stored Chinese texts outside the corpus",
+          "where": "sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt",
+          "extent": "中论 all 27 chapters, 19 of them not in the corpus (3–6, 8, 9, 11–16, 18, 20, 22, 23, 25–27). Also in fo1 and fo2: 雜阿含 (1,771,693 bytes), 成唯識論 whole, 五教章 whole, 起信論, 摩訶止觀 (721,616 bytes), 修習止觀坐禪法要 (T1915)"
+        },
+        {
+          "what": "The account's terms named from Buddhist usage, as readings",
+          "where": "theories/becoming/chapters/03-KNOWING.md#r-seeking-boundary",
+          "extent": "无明 and 明 (D26, D41, D45), glossed 'Sanskrit avidyā', repeated at 02's T7 reading, 07, GLOSSARY and 08's table; among chapters 06 §十一 alone cautions, and only of 起信论's 无明; 08 lists dependent arising among the neighbours of one relational unfolding, one clause"
+        },
+        {
+          "what": "Buddhist reductionism, credited once",
+          "where": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-the-step-across-standpoints-reaches",
+          "extent": "'across drawings, the reductionist step of Parfit (1984) and Siderits (2003)'; P's question 2 asks whether the credit is right. A modern reconstruction, no Buddhist text read there"
+        }
+      ],
+      "absent": [
+        {
+          "en": "Sanskrit MMK, on any page but the dossier's list of gaps and its note at B-08; nothing reads the Sanskrit, and none is stored.",
+          "searched": [
+            "Mūlamadhyamaka",
+            "Nāgārjuna",
+            "Madhyamaka",
+            "in fronts, chapters, review/",
+            "sources/civilization-thought-v1.0/evidence/additions"
+          ]
+        },
+        {
+          "en": "Candrakīrti, and the svātantrika and prāsaṅgika question; also Tibetan readers of Madhyamaka. Nothing under the stored additions.",
+          "searched": [
+            "Candrak",
+            "月稱",
+            "入中論"
+          ]
+        },
+        {
+          "en": "The Pali texts: idappaccayatā, SN 12, taṇhā in three kinds, Theravāda Abhidhamma. The Chinese counterparts are stored. In no corpus, RO or 脉络 entry by these phrases: 此法常住 and 法住法界 (296), 法界常住 (299), 三蘆 (288), 還復受身 and 更不復受 (294), 滅於相續 (293). Already in 脉络: 此有故彼有 and 無明離欲, 彼誰老死 (297), 緣生老死 (298), 當來有愛.",
+          "searched": [
+            "此法常住",
+            "法住法界",
+            "法界常住",
+            "三蘆",
+            "還復受身",
+            "更不復受",
+            "滅於相續",
+            "當來有愛",
+            "無明離欲",
+            "彼誰老死"
+          ]
+        },
+        {
+          "en": "On chapters and fronts: the twelve links, 渴爱, saṃsāra, 涅槃, 无我, suffering as a truth. 涅槃 and the twelve links appear only in the dossier and the re-coding sheet, 无我 only in one clause of B-32; 苦 is in 06 alone, where as valued it goes to 丁; the word suffering is on none of them.",
+          "searched": [
+            "十二因",
+            "十二支",
+            "twelve",
+            "渴爱",
+            "渴愛",
+            "craving",
+            "saṃsār",
+            "samsara",
+            "涅槃",
+            "无我",
+            "無我",
+            "anatt",
+            "no-self",
+            "苦",
+            "suffering"
+          ]
+        },
+        {
+          "en": "Tiantai on live pages, beyond the dossier's list. That list says it is in neither corpus nor repository: true of the corpus, false of the repository, where 摩訶止觀 and 修習止觀坐禪法要 are stored and six 脉络 entries read them.",
+          "searched": [
+            "天台",
+            "Tiantai",
+            "一念三千",
+            "by source_id FO2-MH and FO2-XZG in zhonghua/passages.json"
+          ]
+        },
+        {
+          "en": "19 of 中论's 27 chapters in the corpus, 11, 12, 13, 15, 16, 18, 25, 26, 27 among them, so none is among the 530 己 or the classification counts. 13's argument against 不住相似生 and 12's on 此五陰 and 彼五陰 are thus in no count.",
+          "searched": [
+            "不住相似",
+            "相似 in corpus/zhonglun.tsv and corpus/zhonglun-2.tsv (only 17's 業 相似)",
+            "chapter list in 06 §二"
+          ]
+        },
+        {
+          "en": "Vasubandhu's Abhidharmakośa, Dignāga and Dharmakīrti, Japanese and Korean traditions other than 元晓's commentary at B-25 and B-26. Pure Land and 因明 are absent from live pages; stored texts stand only in the 脉络 study. This row rests on one read's search, not repeated.",
+          "searched": [
+            "Vasubandhu",
+            "世亲",
+            "kośa",
+            "Abhidharm",
+            "Dignāga",
+            "Dharmakīrti",
+            "净土",
+            "因明"
+          ]
+        }
+      ]
+    }
+  },
+  "entries": [
+    {
+      "id": "cx-buddhist-mmk26-chain-and-stopping",
+      "name": {
+        "en": "中论 26: the twelve links, and 相續 as what stops"
+      },
+      "domain": "buddhist",
+      "group": "buddhist",
+      "source": {
+        "work": "sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt",
+        "locator": "觀十二因緣品第二十六, verses and 青目's prose; 觀行品第十三 for 以世諦 and 畢竟滅",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Asked for the 聲聞 teaching that enters the first-meaning way, the chapter runs the links each from the last; 若取者不取，則解脫無有. 青目: 取 acts 令後三有相續. This is the root of birth-and-death: those who do not know make it, the wise do not. 青目: by seeing as it is 無明 ceases, cause ceased, result ceased, 正滅者畢竟滅. At 13 青目 says the Buddha tells this list 以世諦, and with true wisdom 五陰身畢竟滅更無有餘，唯但有空."
+      },
+      "quote": "是謂為生死，諸行之根本，無明者所造，智者所不為。以是事滅故，是事則不生",
+      "carried": "history-only",
+      "relation": "scope",
+      "reading": {
+        "en": "It stands in one 脉络 entry, zhonglun-wu-ming-mie (scope, D62), a study: the chain stops where its condition is cut, seeing widens coupling while the law decides whether seeking unlocks, and the liberation's end is not taken up. No live page reads it. Proposed here as a structural reading, no more: 以是事滅故，是事則不生 has the form of 06's G09 and 04's co-ending, each conditional; that the links so depend is the text's. Kept contrary: 相續 here names what is ended, in a chapter told as 聲聞法 and, by 13, 以世諦. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "conditional-laws-of-the-corpus",
+          "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-conditional-laws-of-the-corpus",
+          "says": {
+            "en": "G09: Q 依 P where every occurrence having Q has a condition having P; 无 P 则无 Q («所依无则依者无»); 依 passes along «而» («依之传»). A definition's unfolding, one-way. Each sentence's reading is an AI reconstruction, unreviewed. Chapter 26 is not among its sentences."
+          },
+          "role": "neighbour",
+          "part": "G09"
+        },
+        {
+          "record": "life-as-condition-of-life",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-life-as-condition-of-life",
+          "says": {
+            "en": "Theorem (World), co-ending: where activity needs support (the premise `Dependent`, which leaves out buffers, reserves and lags), a relatum not active at a step leaves inactive there every formation whose chain of such dependence reaches it. Said of formations and embodied relata; no link is named."
+          },
+          "role": "neighbour"
+        },
+        {
+          "record": "what-a-pools-acts-respond-to",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-a-pools-acts-respond-to",
+          "says": {
+            "en": "Theorem (World; each member following a law of exchange reading through its coupling): 'Coupling bounds response and does not fix it': some law reading through every coupling takes differently, and the law exchanging nothing reads through every coupling too. Stated of pools; applying it to 如實見 is the study's reading."
+          },
+          "role": "neighbour"
+        }
+      ],
+      "account_adds": {
+        "en": "A net where the dependence fails and the conclusion fails with it; a one-way law with no sufficient direction; a reserve that defers the end (02) where this chain ends at once; and that reaching is not responding, which parts from seeing as what ends."
+      },
+      "source_adds": {
+        "en": "The content of each link, the chain as how birth-and-death is, seeing as what ends it, and 正滅, 畢竟滅, which the study declines. The chapter's positive statement sits beside 25's denial of any difference (see the entry on 25)."
+      },
+      "absence": {
+        "searched": [
+          "十二因, 十二支, 十二缘, twelve in fronts, chapters, review/",
+          "觀十二因緣品 in the chapter list of the corpus (06 §二)",
+          "zhonghua/passages.json for 十二因 and 十二支"
+        ],
+        "read": [
+          "FO1-S-MMK.txt chapters 26 and 13",
+          "zhonghua entry zhonglun-wu-ming-mie",
+          "BUDDHIST-THOUGHT 未列为条目之处 and 附录, whose only word on it is that the chapter is outside the corpus"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": null,
+      "same_as": null
+    },
+    {
+      "id": "cx-buddhist-wheel-closed-loop-ming-exit",
+      "name": {
+        "en": "The round of 無明 and 愛: a body again, craving for coming becoming, and 相續滅 as the end of suffering"
+      },
+      "domain": "buddhist",
+      "group": "buddhist",
+      "source": {
+        "work": "sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-SA.txt",
+        "locator": "雜阿含 第294經 (the round and its end), 第293經 (滅於相續), 第73經 (當來有愛), 第288經 (三蘆), 第297經 (而生明), 第298經 (三愛). Pali taṇhā and the Abhidharma wheel recalled, not stored",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "294: covered by 無明, tied by 愛, one has this body; uncut, at death one takes a body again; cut, 更不復受, the difference being 修梵行. 293: 滅於相續，相續滅，是名苦邊. 73: the burden is the five aggregates, taking it up is 當來有愛，貪、喜俱, and 捨任為大樂. 297: 無明離欲而生明. 288: 識 and 名色 lean like three reeds. 298's 三愛 are 欲、色、無色; the Pali's craving for non-becoming (SN 56.11) and the wheel with no first point are recalled, unverified."
+      },
+      "quote": "滅於相續，相續滅，是名苦邊",
+      "carried": "carried-in-part",
+      "relation": "divergence",
+      "reading": {
+        "en": "Closed capture, the plan's seed, is not its form: that selects a share by a rule read from it; this is one stream's conditions. Nearer: a line returning to a class, kept as a flame is fed. Craving nears 'more than now' only as B-32 says. B-34 holds the divergence, limited to one reading and to 344; 293 says it outright, of 相續, a Buddhist word (santāna, 脉络 notes) that I read as a line. 脉络 limits it to the round, not the whole's 生生. 明 leaves a lock and the course goes on; 更不復受 ends the line. [AI reading]"
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/01-ROOT.md#one-kind-of-symbol",
+          "says": {
+            "en": "'What comes round is the class ... a feedback loop is a line returning to a class, not an occurrence reaching itself.' Whether a net meets this depends on what the model takes as an occurrence."
+          },
+          "role": "neighbour"
+        },
+        {
+          "record": "closed-capture",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+          "says": {
+            "en": "Theorem (any type): under stated premises, from a locked configuration the loss passes every bound while the course stays locked; a reading favouring at no loss above a bound unlocks the course at the step after every reading step past it: 'a sufficient way out'. Its terms are a share, a rule read from it and what lies beyond; that what lies beyond is a loss is 'a significance's to say'."
+          },
+          "role": "neighbour"
+        },
+        {
+          "anchor": "theories/becoming/chapters/02-MAP.md#t7",
+          "says": {
+            "en": "Reading [AI, D26 as revised]: 'What leaves is 明, coupling joined to the selection so that it reaches what the share does not carry'; 'none of this says whether a locked loop supports or damages 生生'. That actual metrics are so formed is conjectured."
+          },
+          "role": "neighbour",
+          "part": "the reading after T7, D26 as revised"
+        },
+        {
+          "record": "seeking-boundary",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-seeking-boundary",
+          "says": {
+            "en": "Theorem (any type; a determined law for rest): a target is any condition on the configuration; how it forms is not modelled. 'More than now' is met only by change, and met at every step needs an open world. The statement names no feeling or suffering."
+          },
+          "role": "neighbour"
+        },
+        {
+          "record": "reserve-defers-ending",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-reserve-defers-ending",
+          "says": {
+            "en": "Theorem (World): with its activity decided at each step, a formation unsupported from some step on is active over any later stretch at most as often as its reserve. 脉络 entry zaahan-deng-huo-zeng-you reads 雜阿含's oil and flame by this family (agreement, a study), noting that sūtra's 相續 is not the account's."
+          },
+          "role": "neighbour"
+        },
+        {
+          "record": "conditional-laws-of-the-corpus",
+          "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-conditional-laws-of-the-corpus",
+          "says": {
+            "en": "归丁者三十三: 其 Z 或 Y 断言、预设或转于一个评价，记下而不强入, among them 作为有值之苦乐 and 《起信论》之苦与厌求. Readings are AI's."
+          },
+          "role": "limit",
+          "part": "归丁者三十三"
+        },
+        {
+          "anchor": "theories/becoming/review/BUDDHIST-THOUGHT.md#b-34",
+          "says": {
+            "en": "Quotes 344's 當來有愛…無餘斷…是名苦滅. AI, D54: 苦灭 read as release by no further continuing runs opposite to the continuation condition, recorded as divergence and limited to that reading. The condition fixes scope and C gives order, neither asserted, so 相反 is relative to an unasserted condition. Question 69 asks whether it stands."
+          },
+          "role": "carries"
+        }
+      ],
+      "account_adds": {
+        "en": "Exact conditions for the lock and for leaving it, including who reads and when; exhaustion under draw; enough under undetermined laws. Scope and order stay two premises, the continuation condition and C, neither asserted, warrant open; no law here says a loss is a harm or ranks a course."
+      },
+      "source_adds": {
+        "en": "Not stated: the round itself and 293's sentence; suffering as given, not by a reading; feeling as craving's condition; 明 arising with 離欲, not as added coupling; the end as cutting, not a target met as 03's 知足 is. 73 orders 捨 above 取, reading 苦 and 樂, where the account's one order, C, reads what can form. And 288 uses the mutual leaning 中论 7 refutes as 互生 (B-04), a tension inside the tradition; within-a-step leaning the account does not represent (B-21, 06 §六)."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": null,
+      "same_as": null
+    },
+    {
+      "id": "cx-buddhist-avidya-first-link",
+      "name": {
+        "en": "無明 as the first link: not knowing"
+      },
+      "domain": "buddhist",
+      "group": "buddhist",
+      "source": {
+        "work": "sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-SA.txt",
+        "locator": "雜阿含 第298經, 云何無明; 第297經 for 而生明",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "無明 is defined by what is not known: past, future and both; inner and outer; deed, result and both; Buddha, dharma, sangha; suffering, its arising, its ceasing, the path; causes and what they give rise to; good and bad, blameless and blamed, stained and pure; conditioned arising; the six contact-fields. A lack of knowing with stated content, heading the list; 愛 and 取 come later, as their own links. 297: with it cleared, 明 arises."
+      },
+      "quote": "云何無明？若不知前際、不知後際、不知前後際，不知於內、不知於外、不知內外，不知業、不知報、不知業報，不知佛、不知法、不知僧，不知苦、不知集、不知滅、不知道",
+      "carried": "changed",
+      "relation": "divergence",
+      "reading": {
+        "en": "The account takes the name and says something else: seeking locked on a target that cannot be met at rest, nearer 愛 and 取, as B-32 says. 08's word table excludes the nearer reading: 无明 is not what lies beyond what couples in. That limit, the position, is called no defect; the source's not-knowing is the root to be ended. D26 calls this a formal reading and a 脉络 entry parts it from the first link; yet 03 writes 'Sanskrit avidyā', and GLOSSARY, 02 and 08 give no caution, so a reader would take it as the Buddhist term. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "seeking-boundary",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-seeking-boundary",
+          "says": {
+            "en": "Reading [AI, D26, D41, D45]: '无明 (wúmíng, not-seeing; Sanskrit avidyā) is that locked seeking. What grounds it is the position every formation selects from, which reaches only what couples in; the position is not itself 无明.' The theorem beneath is about rest under a determined law."
+          },
+          "role": "carries",
+          "part": "the reading after the theorem, D26, D41, D45"
+        },
+        {
+          "anchor": "theories/becoming/chapters/08-METHOD.md#five-words",
+          "says": {
+            "en": "Words in one sense. 无明: seeking locked onto a target that cannot be met at rest; the position grounds it and is not it (D25, D26, D45). Not: 'what lies beyond what couples in (that is the reach of a selection)'. 明: coupling joined to a selection, so it reaches what support does not mark."
+          },
+          "role": "carries",
+          "part": "the row for 无明"
+        },
+        {
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
+          "says": {
+            "en": "Reading [AI, D26]: 'The position is not a defect; 无明 is the seeking it leaves locked.'"
+          },
+          "role": "carries",
+          "part": "D26"
+        },
+        {
+          "anchor": "theories/becoming/review/BUDDHIST-THOUGHT.md#b-32",
+          "says": {
+            "en": "Known weakness: D26 says these are formal readings of terms in the theory, not interpretations of classical sources, yet the chapter notes 'Sanskrit avidyā'; in Buddhism 无明 heads the twelve links as not knowing the truths, and the theory's reading is structurally nearer 爱 and 取. For review, unanswered."
+          },
+          "role": "carries"
+        }
+      ],
+      "account_adds": {
+        "en": "The split between the position (no defect) and the lock (the seeking it leaves); a law for when seeking rests; 明 as a width of coupling that pooling can add."
+      },
+      "source_adds": {
+        "en": "Not knowing as root, with specific content (four truths, conditions, deed and result, good and bad), ended by knowing that content; the definition names no seeking. In the source 明 replaces 無明 directly; here 明 is a width of coupling and 无明 a lock on seeking, so they are no pair. Whether wider coupling is such knowing is B-33's question 67. The record's correspondence, 'the not-seeing that keeps seeking locked', is nearer the source than its chapter."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": null,
+      "same_as": null
+    },
+    {
+      "id": "cx-buddhist-idappaccayata-standing",
+      "name": {
+        "en": "This-conditionality, standing whether or not a Buddha appears"
+      },
+      "domain": "buddhist",
+      "group": "buddhist",
+      "source": {
+        "work": "sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-SA.txt",
+        "locator": "雜阿含 第296經 (因緣法 and 緣生法), 第297經 (此起故彼起; 彼誰老死), 第299經 (非我所作); Pali counterpart SN 12.20, as recalled, not stored",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "296: 因緣法 is 此有故彼有, glossed at once as the links from 無明 to the mass of suffering; it stands whether or not a Buddha appears, who awakens to it and teaches it: 法住、法空、法如、法爾, not apart from suchness. 299: 非我所作，亦非餘人作. 297 pairs being with arising. Who sees it no longer asks of past and future selves. SN 12.20, as I recall, names this idappaccayatā, an abstract noun, with fixedness and suchness. Pali not checked."
+      },
+      "quote": "若佛出世，若未出世，此法常住，法住法界",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "The necessary half is carried: 此无故彼无 is dependence's necessary direction, and the sufficient reading the spine does not give (B-34, 06). The text's universal ranges over time and makers, its content the links; it does not say every occurrence has a condition. That wider claim the account holds only as a model's premise (G08), and the links' dependence as the text's own. So 常住 is withheld. Read as a law standing outside what it holds of, 法住 meets 08's prohibition; read as 法爾, it sits with 08's law read off what it holds of. Which is for scholars. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "conditional-laws-of-the-corpus",
+          "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-conditional-laws-of-the-corpus",
+          "says": {
+            "en": "G08 缘起之设: each occurrence not unconditioned (under double negation) exactly where under the one none begins; the grammar admits unconditioned occurrences (`«从缘生非文法之律»`). Standing: a model's premise, three sentences. Readings are AI reconstructions. None of the three is from 雜阿含."
+          },
+          "role": "neighbour",
+          "part": "G08"
+        },
+        {
+          "anchor": "theories/becoming/review/BUDDHIST-THOUGHT.md#b-34",
+          "says": {
+            "en": "AI, D54, on 第262經's wording, not 296's: 此无故彼无 is dependence's necessary direction, agreeing; 此有故彼有 read as the sufficient direction the spine does not give, so the whole passage is scope. Question 68 asks whether it must be read so."
+          },
+          "role": "carries"
+        },
+        {
+          "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding",
+          "says": {
+            "en": "Thesis (philosophical, argued, not proved): it forbids an explanation needing a determination no relation carries, 'such as an intrinsic value, a self with a nature of its own, or a law standing outside what it holds of'."
+          },
+          "role": "neighbour",
+          "part": "what the thesis forbids"
+        },
+        {
+          "anchor": "theories/becoming/chapters/08-METHOD.md#law",
+          "says": {
+            "en": "A law of the theory is read off what it holds of and does not stand over it: a law of the root holds of every carrier, relation and class, so it forbids no relation; a law with content is conditional and forbids through its hypotheses."
+          },
+          "role": "neighbour"
+        }
+      ],
+      "account_adds": {
+        "en": "Nets in which the condition fails, so the premise's content can be seen; the one-way 依 and its passing along 而."
+      },
+      "source_adds": {
+        "en": "Not stated, and what the source cares about most: the principle's standing as fixed (常住) and made by no one; the sufficient direction; the pairing of being with arising; this-conditionality as what is awakened to, not a modelling choice. 296's 於未來世，成不生法 is said of bondage to views of self; 297's, of 老死 and the links, which is where B-34's divergence reaches (relative to the continuation condition for scope, with C for order; neither asserted, warrant open). 297 also refuses 命即是身 and 命異身異 both, a 一異 in the Āgama, which B-01 cites only from 青目."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": null,
+      "same_as": null
+    },
+    {
+      "id": "cx-buddhist-mmk-no-arising-from-other",
+      "name": {
+        "en": "No arising from another: the horn nearest the grammar's own form"
+      },
+      "domain": "buddhist",
+      "group": "buddhist",
+      "source": {
+        "work": "sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt",
+        "locator": "觀因緣品 verse, ZL-01-090 (Sanskrit MMK 1.1, na svato nāpi parato, as recalled); 觀成壞品, ZL-21-101, ZL-21-103; 觀苦品第十二, outside the corpus; compare 雜阿含 第288經",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Things arise not from themselves, not from another, not from both, not without cause; so there is no arising. 21: 若法未生則亦無他，無他故不得言從他生: before a thing has arisen there is no other for it to be from. 12 presses this on succession: if this aggregate makes that one, it is other-made; but 若離此五陰無彼五陰者，則此五陰不異彼五陰. The target is arising established as such, and conditions as what produce (the coder's gloss)."
+      },
+      "quote": "諸法不自生，亦不從他生，不共不無因，是故知無生。",
+      "carried": "fresh-reading",
+      "relation": "contrary-reading",
+      "reading": {
+        "en": "The account takes horns one and four as a model's premises (B-09, G08). Horn two is nearer its own form: 01 glosses `R x y` as 'among what y's coming about comes from', which the coder's note calls a tension. 06 gives the reply's ground without naming the verse: 缘 is a necessary relation between places of the net, and production is not expressible. So 他生 as producing is not asserted. 雜阿含 288 denies 他作 yet says 緣; 中论 1 presses 緣 too (B-16). Telling the two occurrences apart still needs carrier equality. Open. [AI reading]"
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#conditional-laws",
+          "says": {
+            "en": "《中论》的论证（诸法不自生）在这里是对模型的一个前提，是丙一之 Z，不是文法之定理. It speaks of 不自生 only; 不从他生 is not discussed."
+          },
+          "role": "neighbour",
+          "part": "the sentence on 诸法不自生"
+        },
+        {
+          "record": "conditional-laws-of-the-corpus",
+          "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-conditional-laws-of-the-corpus",
+          "says": {
+            "en": "表达不了者: 生产与充足（10），说的是尚未在之事，而文法之缘是网中处所之间的必要关系，网无“在”之谓词. The record's does_not_show: 'Production or sufficiency ... is not expressible'. ZL-07-133 and ZL-07-170 are among these. Readings are AI's, unreviewed."
+          },
+          "role": "carries",
+          "part": "表达不了者, 生产与充足"
+        },
+        {
+          "anchor": "theories/becoming/chapters/01-ROOT.md#one-kind-of-symbol",
+          "says": {
+            "en": "'`R x y` is read as 缘: `x` is a condition of `y`, among what `y`'s coming about comes from.' Time and the four positions tell two occurrences alike in every relation apart only by equality on the carrier, a commitment of the model."
+          },
+          "role": "carries",
+          "part": "the main reading of R x y, with the equality sentence of §1"
+        },
+        {
+          "anchor": "theories/becoming/review/BUDDHIST-THOUGHT.md#b-03",
+          "says": {
+            "en": "AI: 缘 is a relation between occurrences, not an act requiring condition and result together; so 失 does not entail 无因. A modelling commitment, its answer to the question listed as open; the answer's success hangs on it."
+          },
+          "role": "neighbour"
+        },
+        {
+          "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding",
+          "says": {
+            "en": "Argued, not proved. 'In the account itself the nearest case is equality on the carrier, which the model uses and does not derive; the thesis reads it as belonging to the representation and not to what is represented, and that reading is not shown.'"
+          },
+          "role": "limit",
+          "part": "the sentence on equality on the carrier"
+        }
+      ],
+      "account_adds": {
+        "en": "Exact statements for the other horns, each a root theorem with its premise: `«定性之判»` and `«念念灭当且仅当无自缘»` as equivalences, `«自缘则常»` one way."
+      },
+      "source_adds": {
+        "en": "An argument that no producing survives analysis, ending in 無生. The grammar's 生 (under a class, continuing nothing) is not that arising; whether that answers the verse or changes the subject is what B-01 asks, and this horn sharpens it. 01's 'comes from' and 06's 表达不了 of 生产与充足 sit uneasily together."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": null,
+      "same_as": null
+    },
+    {
+      "id": "cx-buddhist-mmk13-arising-alike",
+      "name": {
+        "en": "青目 on 中论 13: 'not abiding, arising alike' refuted, the nearest statement of continuation under a class"
+      },
+      "domain": "buddhist",
+      "group": "buddhist",
+      "source": {
+        "work": "sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt",
+        "locator": "觀行品第十三, 青目's prose on 嬰兒色; the speakers by 問曰 and 答曰",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Commentary prose, not Nāgārjuna's verse. Is the infant's form the old man's, or other? Same: no change. Other: 不應相續, and no father's son. The opponent says it ceases and continues; 青目: ceased, no cause; unceased, no continuing. The opponent retreats to not abiding, arising alike. 青目: then a fixed form arises again, and thousands of forms; so no continuing. Alike succession, as of a lamp flame or a stream, is hard to tell apart, 但以世俗言說故有."
+      },
+      "quote": "我不說滅不滅故相續生，但說不住相似生，故言相續生",
+      "carried": "fresh-reading",
+      "relation": "contrary-reading",
+      "reading": {
+        "en": "不住相似生 is the opponent's closest wording of the account's form: under identity it does not abide, under a class of likeness the later continues the earlier. B-02 concedes the account stands with the refuted, on other passages. 青目's refutation runs through 定色: likeness needs a fixed form. The account grants thousands under identity and names a class with no 定色; that this escapes, and is not B-01's sameness with a nature again, is unproved, and taking 定色 so is my reading. 世俗 still grants the usage, which is B-06's question. 13 is in no count. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "continuation-relative-to-a-class",
+          "anchor": "theories/becoming/chapters/01-ROOT.md#r-continuation-relative-to-a-class",
+          "says": {
+            "en": "Theorem (root): continuation is contained in 缘; under a coarser class every continuation remains one; a line under a class stays within it, its ends alike. Hypotheses: each class an equivalence, and equality on the carrier where identity serves as a class. Does not show that a class is warranted; every single 缘 is a continuation under some class. Registers 'the refutation of 相續 in 《中论》' with its losses."
+          },
+          "role": "carries"
+        },
+        {
+          "record": "classical-definitions-in-the-grammar",
+          "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-classical-definitions-in-the-grammar",
+          "says": {
+            "en": "「滅更不生故，因即為斷滅」 is set against: nothing conditioning itself, R x y and E x y, x ends under identity, y begins, the one condition is continuation under E, all three at once, each relative to its class (`«因灭而续»`). The chapter calls these readings no recovery of the text."
+          },
+          "role": "carries",
+          "part": "«因灭而续»"
+        },
+        {
+          "anchor": "theories/becoming/review/BUDDHIST-THOUGHT.md#b-01",
+          "says": {
+            "en": "Known weakness: whether 在 E 下同 is itself a sameness with a nature is answered only by 依类而立, unproved; Nāgārjuna could ask the class's own nature. For review."
+          },
+          "role": "limit"
+        },
+        {
+          "anchor": "theories/becoming/review/BUDDHIST-THOUGHT.md#b-06",
+          "says": {
+            "en": "Registered contrary: 相续不可得; the account's answer rests on a reading at the level of 假名 or 世俗, unproved. Question 13: if 相续 is absent in the ultimate, can a theory rooted in 续 be only a conventional account? For review."
+          },
+          "role": "limit"
+        }
+      ],
+      "account_adds": {
+        "en": "Classes plural and named, so likeness is read against a stated class; constancy and the core, which say when a class goes alike; 'one kind of symbol' with no 定色 posited."
+      },
+      "source_adds": {
+        "en": "The argument from infant to old man, with its cost (失親屬法); 乳 and 酪, 是法 and 異法 as further tests of alteration; and the verdict that such succession holds only in worldly speech. The images of flame and stream are the ones a reader would bring in support."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": null,
+      "same_as": null
+    },
+    {
+      "id": "cx-buddhist-mmk-24-18-designation-and-views",
+      "name": {
+        "en": "Emptiness as no view (13), and designation in dependence (24): the Chinese stored, the Sanskrit recalled"
+      },
+      "domain": "buddhist",
+      "group": "buddhist",
+      "source": {
+        "work": "sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt",
+        "locator": "觀行品第十三 verse; 觀四諦品 眾因緣生法 verse and prose; Sanskrit 13.8 and 24.18 as recalled, the Sanskrit not stored",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "13: the great sage taught emptiness to leave all views (青目: the sixty-two views, 無明 and 愛); who takes emptiness as a view is past teaching, as medicine turned illness. 24: what arises from conditions I call 無 (prose 空), and 假名, and the middle; prose: 空亦復空. The Sanskrit, as I recall and unverified: 24.18 has śūnyatā and prajñaptir upādāya, designation taken up in dependence; 13.8 has niḥsaraṇa, leaving. So emptiness is no further entity or position."
+      },
+      "quote": "大聖說空法，為離諸見故；若復見有空，諸佛所不化。",
+      "carried": "fresh-reading",
+      "relation": "contrary-reading",
+      "reading": {
+        "en": "B-08 reads 假名 as a way of speaking relative to a class, leaves open whether that is 空, and reports 24's verse as agreement in the 248 passages [D54]. Upādāya names a dependence of designating on what is taken up, and the grammar has classes and no names. Kept contrary for 13's verse: 'whatever is, is how it relates' could be a view of the kind it refuses, though 青目 lists other views and the extension is mine; the question of a class's own nature (B-01) is the same test. Not answered here. [AI reading]"
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/review/BUDDHIST-THOUGHT.md#b-08",
+          "says": {
+            "en": "AI: 相对于类之续 is near 亦為是假名, and the class is to be read as a designation; the plan leaves open whether this is the same as 空; the 248 passages record the verse as agreement [D54]. The grammar lacks 空, and has classes without names, so the 名 in 假名 it cannot itself say. Question 17 asks about 無, 空 and śūnyatā. For review."
+          },
+          "role": "carries"
+        },
+        {
+          "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding",
+          "says": {
+            "en": "Thesis (philosophical, argued; not one of T1–T8): there is one unfolding, and whatever is, is how it relates within it. That the theory needs no independent entity is argued, not proved; neither shows reality has none. Its neighbours include dependent arising."
+          },
+          "role": "carries",
+          "part": "the thesis sentence and its neighbours"
+        }
+      ],
+      "account_adds": {
+        "en": "A statement of what would defeat the thesis, and a separation of representation from what is represented, with the admission that this separation is not shown."
+      },
+      "source_adds": {
+        "en": "The identity of the four terms, the emptiness of emptiness itself, and the leaving of views as the point, which a system of laws does not take up."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": null,
+      "same_as": null
+    },
+    {
+      "id": "cx-buddhist-mmk-samsara-nirvana-no-difference",
+      "name": {
+        "en": "No first point, nothing going round, no difference from nirvāṇa"
+      },
+      "domain": "buddhist",
+      "group": "buddhist",
+      "source": {
+        "work": "sources/civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt",
+        "locator": "觀涅槃品第二十五; with 觀本際品第十一 and 觀縛解品第十六",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "25 names the world by 五陰相續往來 and nirvāṇa by 無性五陰不復相續 and 不生亦不滅, then: they differ not the least, the aggregates being empty. The Buddha taught abandoning 有 and 非有, 非有 being 三有斷滅 (青目). 11: birth-and-death has no beginning and no end, nor are birth and death 一時共. 16: nothing goes round; no nirvāṇa apart; seeking it so binds. Round and exit are used, then not kept."
+      },
+      "quote": "涅槃與世間，無有少分別；世間與涅槃，亦無少分別。",
+      "carried": "fresh-reading",
+      "relation": "contrary-reading",
+      "reading": {
+        "en": "It argues against a loop with an exit, and puts 相續 on the world's side. Closed capture's way out, G15's line with no beginning that ends, and G09's 涅槃 as a state all need a course between regions. 不生亦不滅 has no place in the grammar (B-17). 三有斷滅 refused as the aim bears on B-34: its divergence over 苦灭 as not continuing, relative to the continuation condition (scope; C for order; neither asserted, warrant open), holds for 雜阿含 293 sooner than here; 青目's 畢竟滅 at 13 and 26 pulls back. Unresolved. [AI reading]"
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/review/BUDDHIST-THOUGHT.md#b-17",
+          "says": {
+            "en": "`«无为无别相»`: under any class 不生, 不住, 不亡 do not all hold of one occurrence. An observation (AI, not the theory's reading): one step further, by hand and not in Lean, what neither begins nor ends under a class can only be 住, under double negation; so the grammar has no place for 涅槃's 不生不灭, only 无别相. For review."
+          },
+          "role": "carries"
+        },
+        {
+          "anchor": "theories/becoming/review/BUDDHIST-THOUGHT.md#b-07",
+          "says": {
+            "en": "In the conditional-law families ZL-24-041 enters G09, read as a one-way chain of dependence, and 涅槃 is read there as a state. The theory has never declared which truth its four positions belong to. For review."
+          },
+          "role": "carries",
+          "part": "the sentence on G09 and 涅槃"
+        },
+        {
+          "anchor": "theories/becoming/review/BUDDHIST-THOUGHT.md#b-20",
+          "says": {
+            "en": "CWS-P4-062 enters G15, read as a line with no beginning that ends (`«无始而有终之例»`). 恒 ceases at the arhat stage, so 恒 is not constancy. AI reading; recorded as divergence and open."
+          },
+          "role": "neighbour",
+          "part": "the sentence on G15"
+        },
+        {
+          "anchor": "theories/becoming/review/BUDDHIST-THOUGHT.md#b-34",
+          "says": {
+            "en": "苦灭 read as release by no further continuing runs opposite to the continuation condition, recorded as divergence and limited to that reading; 相反 is relative to an unasserted condition. Question 69: if it cannot be so read, should the divergence be withdrawn?"
+          },
+          "role": "neighbour"
+        },
+        {
+          "anchor": "theories/becoming/review/BUDDHIST-THOUGHT.md#b-25",
+          "says": {
+            "en": "AI: `«四相俱时»`: with a condition, a result and no self-conditioning, an occurrence begins and ends under identity and abides under the one. Only a structural correspondence; 定理之证几乎依定义. The item does not discuss 11's 一時 argument."
+          },
+          "role": "neighbour"
+        },
+        {
+          "record": "closed-capture",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+          "says": {
+            "en": "Theorem (any type): a reading favouring at no loss above a bound unlocks the course at the step after every reading step past it: a sufficient way out. The course continues; no end-state is stated."
+          },
+          "role": "carries"
+        }
+      ],
+      "account_adds": {
+        "en": "A witness that a line with no beginning can end, and positions relative to a class, so a beginning and an end can hold of one occurrence at once."
+      },
+      "source_adds": {
+        "en": "The denial itself, and that seeking release while holding a nirvāṇa apart is bondage; also 雜阿含 293's 無為者不生、不住、不異、不滅. These chapters are outside the corpus, so 25's and 16's arguments are in none of the counts, and 涅槃 appears in no chapter of the account."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": null,
+      "same_as": null
+    },
+    {
+      "id": "cx-buddhist-candrakirti-no-own-thesis",
+      "name": {
+        "en": "Candrakīrti: consequences only, no theory of the conventional"
+      },
+      "domain": "buddhist",
+      "group": "buddhist",
+      "source": {
+        "work": "Candrakīrti, Prasannapadā ch. 1 (against Bhāviveka on autonomous inference); Nāgārjuna, Vigrahavyāvartanī 29",
+        "locator": "locator unverified; recalled from secondary knowledge, no text read",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "As I recall him: a Mādhyamika should not argue by autonomous inference from a subject both sides establish, but draw out the consequences of the opponent's own premises. There is no thesis of one's own (VV 29), a line later readers such as Tsongkhapa take otherwise. Conventional truth is taken as the world takes it, unanalysed; a worked-out theory of it is refused, as against Dignāga's particulars and the store-consciousness. My knowledge here is thin."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "contrary-reading",
+      "reading": {
+        "en": "`«因灭而续»` answers the dilemma by a positive theorem over a built subject: carrier, relation, class. On this view that is the theory of the conventional he refuses, with carrier equality as the commonly established subject. Bhāviveka's side, as I recall, allows an autonomous account of the conventional, so this is one Madhyamaka's test, not all. A partial meeting: root laws forbid no relation, and the ethics' two premises, the continuation condition and C, are unasserted, warrant open. It stops there, for theses are claimed and tested. B-07's question gets a sharper form. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "classical-definitions-in-the-grammar",
+          "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-classical-definitions-in-the-grammar",
+          "says": {
+            "en": "「滅更不生故，因即為斷滅」 is set against: nothing conditioning itself, R x y and E x y, x ends under identity, y begins, the one condition is continuation under E, all three at once, each relative to its class (`«因灭而续»`). The chapter calls this reading no recovery of the text; 同在 stays open."
+          },
+          "role": "carries",
+          "part": "«因灭而续»"
+        },
+        {
+          "anchor": "theories/becoming/review/BUDDHIST-THOUGHT.md#b-07",
+          "says": {
+            "en": "Known weakness: the theory has never declared which truth its 生住异亡 belong to. Question 15: if the grammar must declare, which? For review."
+          },
+          "role": "neighbour"
+        },
+        {
+          "anchor": "theories/becoming/chapters/08-METHOD.md#what-would-defeat-the-reading",
+          "says": {
+            "en": "Thesis (argued): reading a subject as continuation relative to a class explains how it goes on. As a language it forbids nothing and nothing could defeat it; as a named class's explanation a measurement could. A rival dropping the word ties at the grain counted so far."
+          },
+          "role": "neighbour"
+        }
+      ],
+      "account_adds": {
+        "en": "A system that says what could refute it: theses with what they forbid, what refutes them, and frozen tests."
+      },
+      "source_adds": {
+        "en": "A method of refusing any own system, and the conventional as unanalysed usage. As recalled and unverified: the sevenfold chariot analysis, testing a line under a class directly since a class is near 'shape'; and result with no store (Madhyamakāvatāra 6.39). Whether this reading of him is right is a specialist's question."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": null,
+      "same_as": null
+    },
+    {
+      "id": "cx-buddhist-tiantai-neither-produces-nor-contains",
+      "name": {
+        "en": "Tiantai: one moment has the three thousand, with no ground in 法性 or 黎耶, and beyond statement"
+      },
+      "domain": "buddhist",
+      "group": "buddhist",
+      "source": {
+        "work": "sources/civilization-thought-v1.0/evidence/additions/fo2/FO2-MH.txt",
+        "locator": "智顗說、灌頂記《摩訶止觀》卷五, 觀不可思議境 (the 介爾有心 passage through the four 悉檀)",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "介爾有心，即具三千: with any slight moment of mind the three thousand are had, neither produced (縱) nor contained at once (橫). Whether mind, conditions, both or neither have them: the 地論 ground in 法性 and the 攝論 ground in 黎耶 each 據一邊, and 不自不他 refutes all four. 非言所言. 第一義中一法不可得; 世諦中 one mind has them. By the four 悉檀 each horn may be said, 假名相, for its hearers, and 即世諦是第一義."
+      },
+      "quote": "若從一心生一切法者，此則是縱；若心一時含一切法者，此即是橫。縱亦不可，橫亦不可",
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {
+        "en": "脉络 entry tiantai-fei-zong-fei-heng reads 具 through mutual dependence (scope) and is not re-mapped. Not said there: refusing 法性 and 黎耶 as 依持 refuses a prior ground from inside Buddhism, which 06's four-layers row lacks for 自性能生万法, though 智顗 is earlier, so in structure only; it reaches B-20's store too. 具 as one place saying all would meet the diagonal law, on a stretch of 具, and 具 holds only 世諦中. The text denies it is a claim (非言所言), where 08 demands the relation be stated. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "readings-within-what-they-read",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read",
+          "says": {
+            "en": "Theorem (any type): where a map moves every value, no member of a family of readings indexed by what it reads says the diagonal gap; so no family of claims says every reading, and no frame realizes with its own configurations every pattern of claims about them."
+          },
+          "role": "neighbour"
+        },
+        {
+          "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#four-layers",
+          "says": {
+            "en": "四种非关系之层: 先在的根据 lists 自性能生万法; internal replies named are 王夫之, 程颐, 戴震, 郭店, none Buddhist; its witness says representation needs no start before the run, and 这不裁决先在根据是否存在."
+          },
+          "role": "carries",
+          "part": "先在的根据"
+        },
+        {
+          "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding",
+          "says": {
+            "en": "'Its content is a demand on explanations: state the relation that carries what is cited, between which occurrences, where a law or a test can read it.' Argued, not proved."
+          },
+          "role": "carries",
+          "part": "the demand on explanations"
+        },
+        {
+          "anchor": "theories/becoming/review/BUDDHIST-THOUGHT.md#b-30",
+          "says": {
+            "en": "AI, D54: 互相含受 read as each place holding every reading of all conflicts with the diagonal law; 法藏's 仍體不同 limits it, so scope. A second handling of 相即; the grammar has no operation for 相即. For review."
+          },
+          "role": "neighbour"
+        },
+        {
+          "anchor": "theories/becoming/review/BUDDHIST-THOUGHT.md#b-07",
+          "says": {
+            "en": "Known weakness: the theory has never declared which truth its 生住异亡 belong to. Question 15 asks which, if it must. For review."
+          },
+          "role": "neighbour"
+        }
+      ],
+      "account_adds": {
+        "en": "A checked bound on what a place can say of the whole it reads, and what follows when a family is taken step by step (`Diagonal.Unfolds.never_returns`)."
+      },
+      "source_adds": {
+        "en": "The claim that this must be practised and is beyond statement; 三千 as a structured count of realms; mind as what is observed in 止觀; speech as fitted to hearers, not as true of a class; 即世諦是第一義, which meets B-07's question by asking no choice of truth. Reading 具 against the diagonal law is mine, and untested against 四明知禮 or any Tiantai commentator."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ],
+      "agreement_of": null,
+      "same_as": null
+    }
+  ],
+  "changes": [
+    {
+      "id": "cx-buddhist-mmk26-chain-and-stopping",
+      "what": "changed",
+      "why": "history-only and scope kept, by BRIEF as amended (L3): the reading now says it proposes a structural reading, and all three targets are neighbours."
+    },
+    {
+      "id": "cx-buddhist-wheel-closed-loop-ming-exit",
+      "what": "changed",
+      "why": "carried-in-part kept after opening B-34: its words state part (344's 苦灭 by craving's end, read as no further continuing, recorded 相分). Only B-34 carries; closed capture, by this reading not the form, and the other laws are neighbours; 丁 a limit. B-21 moved to source_adds. 'opposite' in Chinese (L2). The join to 293 stays one link."
+    },
+    {
+      "id": "cx-buddhist-avidya-first-link",
+      "what": "changed",
+      "why": "changed/divergence kept after opening 03, 08's table, 07's D26 and B-32. Roles and part D26 set; the §6 target is the D26 sentence, not the general stance."
+    },
+    {
+      "id": "cx-buddhist-idappaccayata-standing",
+      "what": "changed",
+      "why": "carried-in-part and scope kept after opening B-34: its words state the necessary direction and record the passage as 定域. It quotes 第262經, so that is said. G08 and 08's two sections are neighbours, since the reading withholds them. source_adds leads with 常住; both ethics premises named where B-34's divergence is cited."
+    },
+    {
+      "id": "cx-buddhist-mmk-no-arising-from-other",
+      "what": "changed",
+      "why": "fresh-reading and contrary kept: 06 speaks of 不自生 only, and the horn's tension is this file's. Roles and parts set; translations in quotes for 06 replaced by the Chinese, and a paraphrase of 01 unquoted (L2)."
+    },
+    {
+      "id": "cx-buddhist-mmk13-arising-alike",
+      "what": "changed",
+      "why": "Labels kept; the critic held this entry. Roles set; B-01 and B-06 are limits. English in quotes for B-01 replaced by its Chinese (L2)."
+    },
+    {
+      "id": "cx-buddhist-mmk-24-18-designation-and-views",
+      "what": "changed",
+      "why": "Labels kept; roles and parts set."
+    },
+    {
+      "id": "cx-buddhist-mmk-samsara-nirvana-no-difference",
+      "what": "changed",
+      "why": "Labels kept. L2: 定理之证几乎依定义 now quoted in Chinese, and 相反 for 'opposite'. Six targets kept, three of them neighbours by role: B-20, B-34, B-25. B-07 and B-17 opened."
+    },
+    {
+      "id": "cx-buddhist-candrakirti-no-own-thesis",
+      "what": "changed",
+      "why": "Labels kept; roles and part set; the two premises' warrant said to be open."
+    },
+    {
+      "id": "cx-buddhist-tiantai-neither-produces-nor-contains",
+      "what": "changed",
+      "why": "Labels kept; the diagonal law is a neighbour, since the reading calls it a stretch and untested. Roles and parts set."
+    },
+    {
+      "id": "group",
+      "what": "changed",
+      "why": "Summary rewritten without counts by relation, and says totals here do not show the absence of 无我 and the rest, that no entry is agreement, and that most entries are proposals. A trace removed from read; 'this read' and 'entry limit' reasons reworded, every disclosure of what was not read kept."
+    }
+  ],
+  "live_flags": [
+    {
+      "where": "theories/becoming/review/BUDDHIST-THOUGHT.md:527",
+      "what": "Says 天台, 一念三千 included, is in neither corpus nor repository. True of the corpus; false of the repository: sources/civilization-thought-v1.0/evidence/additions/fo2/FO2-MH.txt (摩訶止觀) and FO2-XZG.txt are stored, and six 脉络 entries read them. A reviewer is told to judge this gap in the reply table (line 585)."
+    },
+    {
+      "where": "theories/becoming/chapters/03-KNOWING.md:351",
+      "what": "Glosses 无明 'Sanskrit avidyā' with no caution, and GLOSSARY.md:47, 02-MAP.md:438 and 08's #five-words give none, while the sense is locked seeking, which B-32 says is structurally nearer 爱 and 取 and D26 calls a formal reading. A reader would take it as the Buddhist term. B-32's question 66 asks this and no person has answered."
+    },
+    {
+      "where": "theories/becoming/results/records/seeking-boundary.json (correspondence)",
+      "what": "'无明 is the not-seeing that keeps seeking locked' differs from 03's and 08's one sense, 无明 is that locked seeking, with the position its ground. 08 says every chapter uses the word in one sense; the record's wording is another."
+    },
+    {
+      "where": "theories/becoming/chapters/01-ROOT.md:31",
+      "what": "Reads R x y as 'among what y's coming about comes from', while 06 §四 (line 204) puts 生产与充足 among what cannot be expressed, since 缘 is a necessary relation between places of the net. The two seem to pull apart; 中论 1's 不從他生 presses exactly here. Possibly only a gloss to qualify."
+    }
+  ]
+}

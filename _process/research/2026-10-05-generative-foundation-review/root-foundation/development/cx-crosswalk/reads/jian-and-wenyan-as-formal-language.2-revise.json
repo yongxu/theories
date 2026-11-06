@@ -1,0 +1,3328 @@
+{
+ "group": {
+  "id": "jian-and-wenyan-as-formal-language",
+  "domain": "earlier-folders",
+  "title": {
+   "en": "間 and 文言 as formal language (間 · 文言 · 文), with the algebra of hexagrams"
+  },
+  "kind": "theory",
+  "summary": {
+   "en": "The folder claims 文言's grammar already is a formal system, with one self-containing primitive and an F2/V4 algebra of hexagrams. The account wrote its grammar's definitions from selected sentences (化, 成坏, 同, 复, 通) as AI reconstructions on one symbol, 际; 06 says the 文言 scheme was replaced, its completeness unproved. Of the algebra only the four-element group and its census stay, through the 生生不息 review. R-Family, Claim Z and De Morgan privilege are dropped. Divergence is plentiful."
+  },
+  "read": [
+   "theories/jian-and-wenyan-as-formal-language/README.md lines 1-1300, in parts: all of it",
+   "theories/becoming/chapters/06-CLASSICAL-TEXTS.md §§一-三, 五, #three-layer-verdict, #four-layers, #ro-gaps, §7.1, §7.3, §§八-十一, 未示, 未决",
+   "theories/becoming/chapters/01-ROOT.md §1, §2 opening, §4, the shared-laws balance row, #r-configurations-alike-by-relation, #r-separation-loses-the-relation, Open",
+   "theories/becoming/chapters/03-KNOWING.md #r-selection-through-couplings, #li opening, #r-claims-shown-in-context, #r-readings-within-what-they-read, #r-the-split-that-makes-sense, T6 and #r-slowing-down-before-an-own-end, §11 (first two laws and readings)",
+   "theories/becoming/chapters/08-METHOD.md #one-relational-unfolding opening, #what-would-defeat-the-reading opening, #known-results opening",
+   "theories/becoming/review/CLASSICAL-TEXTS.md C-01, C-02, C-04, C-07",
+   "theories/becoming/COLLECTIVE-DIRECTION.md §8",
+   "sources/08-jian-wen-language/downloads-2026-05/v4-foundation (1).md §§1.1, 5, 6.1, 7.3 (part), 10.4",
+   "_process/research/2026-10-05-generative-foundation-review/root-foundation/SSBX-REPOSITORY-REVIEW.md §2 rows A1-A7, §3.1, §5 end, as leads and provenance only"
+  ],
+  "skimmed": [
+   "theories/jian-and-wenyan-as-formal-language/synthesis-a-jian-repo.md and synthesis-b-jian-ontology-and-wen-language-downloads.md (headings and first claims)",
+   "Becoming/HexagramLaws.lean (module documentation, lines 9-77, by grep and read)",
+   "Becoming/Grammar.lean (definition of «非», by grep)",
+   "records, JSON fields: hexagrams-on-the-spine, hexagram-world-laws, classical-definitions-in-the-grammar, civilization-thought-on-the-spine, wenli-on-the-spine",
+   "chapters/05-COLLECTIVES.md code laws, #r-relative-position-is-zero-sum, #r-reading-anothers-couplings-is-pooling, the viability table; 04-LIFE.md rows named in entries; 07-SIGNIFICANCE.md #scope-and-order line and #alignment-without-premise opening",
+   "theories/becoming/results/data/theory-map.json entry for this folder (a dated lead)"
+  ],
+  "searched": [
+   "live account for Klein, 四元群, V_4, R-Family, R_N, symplectic, Arf: only hexagram-world-laws' alias and 06's 四元群",
+   "live account for Yoneda, Hindley, STLC, λ-calc, 系含系, 五行, 诛心, 誅心, 八象, 四象, 大同, 名实, 名實, 白马, 白馬, 命运共同体, 自欺, 工夫, 指月, unclassified, 言行, word and deed, Greek, 希腊, 讲理, 吾, distort, structural coupling, territory: none, or as named in an entry",
+   "live account for early warning, critical slowing, autopoie, 同异交得, 小故, 和而不同, 正名, cooperat, well-founded: hits read at the line",
+   "04-LIFE.md and 05-COLLECTIVES.md for sexual, ornament, peacock, arms race, Red Queen, runaway: none on lineages under conflict",
+   "theories/becoming/history and _process for 五行, 诛心, Yoneda, R-Family, Klein, Hindley, STLC, 系含系, V_4: file lists"
+  ],
+  "not_mapped": [
+   {
+    "en": "《式》《构》《仪》《器》: the Jian Calculus, five architecture layers, wire protocol, reference implementations and eight pitfalls; 《气》's twenty-row table and derived-not-stored rules as code discipline",
+    "why": "A software design; the account holds no such product. Their general claims on history and state are mapped in two entries, the rest is design, not a claim the account could carry."
+   },
+   {
+    "en": "Wen as a programming language: ⊠ as gate-closed value, 道 families, refinement types, quantum layering, the comparison with Silq and Q#, structural poverty, power budgets",
+    "why": "Language design and positioning, pre-alpha by its own word. The one general claim beneath it is mapped under information conservation."
+   },
+   {
+    "en": "The 124/146-character vocabularies, the 138-character derivation statistics (89/27/5/0), Tier L operator inventories across twelve domains, ZFC and MLTT written in 文言",
+    "why": "Inventories, not single claims; their claim is mapped as 'no new primitive' and 'expressive completeness'. Not checked entry by entry."
+   },
+   {
+    "en": "The bilingual documentation kernel, 'a protocol needs a name for every real outcome', 'refusal is a value' (Aug-Sep 2026 engineering practice)",
+    "why": "A practice in other repositories, outside this account's subject."
+   },
+   {
+    "en": "The folder's own philological audit (mis-citations of 中庸 and 韩愈, inconsistent priority figures) and the track-disagreement audit (四本, 征 sets, B/R/M)",
+    "why": "Critique of the folder itself. It bears on no live claim, since the account did not take these up."
+   },
+   {
+    "en": "The 奏折-as-protocol comparative programme, 利 as valence, 子化, 性1/性2/性3, the identity life cycle, 失/塞/误/复 and 假想东方工程学",
+    "why": "Proposals and design directions, searched only by word, not read as absences. A later read could map them."
+   },
+   {
+    "en": "The glyph ontology's own structure: 三本, 三显, 三征, 網/體/流 (composition irreversible), 恒, 吾/我, the semiring 合/和/生, adjunctions for 知行合一, wave-particle as measurement non-commutativity",
+    "why": "Searched by word, none live except 合 in another sense. One architecture among the folder's three disagreeing tracks; only 心 and 開/閉 are entered, since those have live counterparts. The SSBX review §5 calls a law of composition's irreversibility false in another text; not checked for this one."
+   },
+   {
+    "en": "因果互化 and 因果轮回, 白马非马 as subtyping, 离坚白 as bundle theory, 祖暅 as Cavalieri, and the twelve-domain operator tours case by case",
+    "why": "Single readings or inventories; 白马 has no live occurrence. The evidential claim over them is mapped; priority claims are reported in the cross-domain entry."
+   },
+   {
+    "en": "人类命运共同体 as 間's spacetime structure (claim 190), and 'ontology' as a Western category that does not fit (claim 310, question 65)",
+    "why": "No live occurrence of the first; the SSBX review row A10 is a lead only and its readings were not found live. The second is a remark on vocabulary; 06's method sentences bear on it and do not answer it."
+   }
+  ],
+  "coverage": null
+ },
+ "entries": [
+  {
+   "id": "cx-jianwen-grammar-is-surface-syntax",
+   "name": {
+    "en": "文言's grammar is the surface syntax of the ontology"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "The argument, 'The load-bearing novelty'; claims 17-21",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "实词 are polymorphic primitives dispatched by position (王天下, 天下王, 王道); 虚词 are typed edges carrying relation-kind; a passage's type is inferred as Hindley-Milner infers, and 文气 is that inference. Indo-European is nominal typing, 文言 structural typing: a categorical difference. Marked the project's most novel claim."
+   },
+   "quote": "实词 = polymorphic primitives typed structurally; 虚词 = typed edges; 理 = inferred type",
+   "carried": "changed",
+   "relation": "divergence",
+   "reading": {
+    "en": "The account names this scheme and retires it: its grammar is a calculus of relations on a carrier, written from selected sentences, not 文言's own syntax. Where it does use classical names its table runs opposite to polymorphism: one concept, one name. It declines that a language is relational by nature. No position-dispatch, inference or typing claim about 文言 stands live. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#pre-qin",
+     "says": {
+      "en": "Reading [AI, D54]: 「早期以文言为形式语言之方案（九虚词为核、实词按位定型、一原始之“間”）已为根之文法取代，其完备之说未证」."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#does-not-show",
+     "says": {
+      "en": "Not shown: that a language or tradition is by nature relational: 关系的起点 is a leading thread, strongest in the earliest layer, not a property of every system."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#zhonghua",
+     "says": {
+      "en": "Definition (convention) [AI reading, D62]: 名表守六条：「一概念一名，一名一概念」; 名锚于现行主干之 Lean 声明. Stated on the World model, not on `Becoming.Grammar`."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "The grammar forbids nothing as a language, and any carrier serves; classical sentences are tested in it, not treated as it."
+   },
+   "source_adds": {
+    "en": "The whole linguistic thesis, which the folder itself says would be stronger as a gradient (its critique 48)."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-kernel-stlc-complete",
+   "name": {
+    "en": "A nine-particle kernel is STLC-complete; 者 is the λ-binder"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "The λ-calculus test; claims 44-46, 50",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Ren's intuition: grammatical characters are mostly formal-logic operators, and concept characters are built from one root plus operators. The kernel 者 之 非 而 凡 即 也 是 令 is asserted STLC-complete; 者 binds as λ; 古文 is λ plus temporal composition, aspect and effect. Offered as intuition; the evaluators were never designed."
+   },
+   "quote": "文言 may be natively STLC-complete.",
+   "carried": "changed",
+   "relation": "divergence",
+   "reading": {
+    "en": "The live text reports the completeness claim as unproved and leaves one thing standing, a test: fix a sub-language and derivation rules, then try them on historical sentences not used in design. The test has not been run, and nothing live maps 者 to a binder. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#pre-qin",
+     "says": {
+      "en": "「其完备之说未证；所提“小而可检的文言内核”仍是一项检验：固定子语言与派生规则，以未参与设计的历史句子检验。」 A reading, D54."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "A stated acceptance test on sentences outside the design."
+   },
+   "source_adds": {
+    "en": "The λ mapping (之/其/所 as variables, 学而时习之者 as λx), and 而, 也, 矣, 令 as time, aspect and effect beyond λ. Found nowhere live."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-few-operators-many-atoms",
+   "name": {
+    "en": "A finite set of operators acting on unbounded atoms"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Claims 31-32, 46",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "文言 has two layers: a small stable operator kernel supplies topology and a large context-sensitive layer fills content. 而 is sequential composition, ordered and non-commutative (学而时习之). 非 negates. Ren endorsed this as exactly his meaning."
+   },
+   "quote": "古文's generative system is extremely simple — close to a finite set of 虚字 operators acting on an infinite set of 实字 atoms.",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "The form recurs at another object: a few operations on relations, several named with 虚字, 而 being first-R-then-S and 非 complement. The operators act on relations, not on 实字, and the eleven-particle table belongs to a code written for the 中华本. Same word is not same reference, and no live text states descent from this kernel. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/01-ROOT.md#one-kind-of-symbol",
+     "says": {
+      "en": "Definition. A relation (际) with operations: 而 composition, first R then S; 逆, 合, 非 converse, meet, complement; 则, 谓 inclusion and pointwise equivalence; 一, 静 the full relation and identity; 及 reach."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#zhonghua",
+     "says": {
+      "en": "凡例 fixes one structure for each of eleven 虚词 (若、则、故、必、或、皆、莫、莫不、屡、不、未); 「它还不是以未参与设计之句检验过的文言内核」 [AI reading, D62]."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "Lean proves laws of the grammar's operations on every carrier. Separately, the 中华本's 凡例, on the World model, tells 未 from 不 and 故 from 则, which early Lean had merged."
+   },
+   "source_adds": {
+    "en": "者, 之, 也, 凡, 令, 是 as operators, time inside 而, and any claim that the kernel describes 文言 itself."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-particles-as-first-order-logic",
+   "name": {
+    "en": "虚词 as logical operators: 凡 ≅ ∀, 或 ≅ ∨, 非(非 X) ≡ X"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Claims 124, 86, 48",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Full first-order logic is expressible with 虚词 as typed operators: 凡 ∀, 有 ∃, 莫 ¬∃, 若…则 →, 而 ∧, 或 ∨, 者 λ. Tier −1's meta-laws include 非(非 X) ≡ X. The folder also reads 而 as sequential composition (claim 46), so 而 carries two senses in it."
+   },
+   "quote": "Full first-order logic is expressible in 文言",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "Particles do get one fixed structure in the 中华本, on the World model, but constructively: 不 X derives a contradiction from X, 或 must show its branch, 莫不 is weaker than 皆. So the classical equivalences do not hold without decision, and the pure core's 非 is ¬ with no excluded middle. 而 in the grammar is composition only. Tested on no sentence outside the design. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#zhonghua",
+     "says": {
+      "en": "凡例为十一个虚词各定一种结构：「不 X」是由 X 推出矛盾，「未 X」只说到此所读者既不使 X 然、也不排除它；「或」是构造的，须示其为何支；「莫不」弱于「皆」，回到皆须每员定然否."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/01-ROOT.md#one-kind-of-symbol",
+     "says": {
+      "en": "Definition. 而 composition, first R then S; 非 complement. The grammar imports only Lean's prelude."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "The constructive distinctions (未 from 不, 莫不 from 皆), which early Lean had merged."
+   },
+   "source_adds": {
+    "en": "凡, 有, 者, 所 as binders; 非(非 X) ≡ X; a full first-order translation; 而 also as conjunction."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-classical-definitions-mohist",
+   "name": {
+    "en": "墨家 supplies the native minimal logic: 同 is a modern equivalence relation"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Claims 121-123",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "体/兼, 同/异, 类, 故 and 法 are a native minimal logical vocabulary. 同，异而俱处于之 is an equivalence relation. 同异交得 grounds information as distinction. 小故/大故 are necessary versus sufficient condition. 故 carries cause and proof at once."
+   },
+   "quote": "同，异而俱处于之 — sameness as an alignment relation among distinct co-located items, i.e. a modern equivalence relation",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "Here the account did take its grammar from classical definitions, as AI reconstructions tested in Lean: 化 (墨经, 荀子), 成坏, 同, 复, 通, not the folder's 位/际/化/理. Its 同 reads 俱於之一 as belonging to one, which the folder's quotation omits; so 'is an equivalence' is scoped by a three-element counterexample. 小故 and 同异交得 have live forms. 缘 comes from Buddhist texts, not 故. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "classical-definitions-in-the-grammar",
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-classical-definitions-in-the-grammar",
+     "says": {
+      "en": "Theorem (root). 每物恰属一者时，同于是类，一般的所属关系不保证传递（三元之反例，见证）. 「这些读法不是原文自身之义的恢复」. Each reading as a definition is an AI reconstruction following the commentary named."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/01-ROOT.md#class-and-continuation",
+     "says": {
+      "en": "Reading [AI, D69]: the 墨经 names four samenesses, each a class once the whole, place or respect it relies on is fixed; 類同 need not be transitive until its respect is fixed (`«同于不必传递»`, a witness)."
+     }
+    },
+    {
+     "anchor": "theories/becoming/review/CLASSICAL-TEXTS.md#c-01",
+     "says": {
+      "en": "读法 (AI): 小故读为必要而不充分之条件，大故读为充要 (依校本); 小故之读并非新出. 对应之章以小故为脊柱之“依存”. Known weak: 大故一句有异文."
+     }
+    },
+    {
+     "anchor": "theories/becoming/review/CLASSICAL-TEXTS.md#c-07",
+     "says": {
+      "en": "读法 (AI): 一类所分开者，在“一”之类下同、在该类下异 (`«同异交得»`，对一切载体证出). 「此证几乎是定义的重述」."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "The counterexample, that the 通 reading needs both directions, that 大故 on the emended text is 充要, and that Lean checks the given derivation, not the ancients' meaning."
+   },
+   "source_adds": {
+    "en": "故 as cause, proof and program at once (Curry-Howard), 法 as function, 同异交得 as the ground of information, 体/兼 as the native mereology."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-ti-jian-sets",
+   "name": {
+    "en": "ZFC in 文言 from 体/兼, and pairing and power among the axioms"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Mathematics as a facet; claims 121, 145, 53, 148",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "體，分于兼 gives a native mereology, and all eight ZFC axioms are stated in 文言: 偶 for pairing, 体类 for power set (凡兼，立其体之兼). The cumulative hierarchy reads 系含系. The source bounds this: expressive, not proof, equivalence, modulo encoding."
+   },
+   "quote": "All eight ZFC axioms are stated in 文言",
+   "carried": "changed",
+   "relation": "divergence",
+   "reading": {
+    "en": "A live line rejects this very reading of the sentence. 體，分於兼也 and 體，若二之一 speak of part and whole and the end of a measure, not a pair with projections. Whether the corpus gives pairing and power, which fixes how strong the grammar is, stays a conjecture with no witness. The source wrote axioms; the account asks for a use in the texts. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#pairing-and-power",
+     "says": {
+      "en": "Open: 《墨经》「體，分於兼也」「體，若二之一，尺之端也」说的是部分与整体、度之端; 「要有一处语料用例给出带投影的函数性配对，才能表明它」."
+     }
+    },
+    {
+     "anchor": "theories/becoming/review/CLASSICAL-TEXTS.md#c-02",
+     "says": {
+      "en": "读法 (AI): 不是带投影的函数性配对. Known weak: “语料中没有配对”只据第一轮所读八部书; “體”在墨经中多义，未逐一检."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "The test: a corpus use with projections. Why it matters: it decides how strong the grammar is."
+   },
+   "source_adds": {
+    "en": "ZFC, MLTT and category theory written in 文言, with 数 as von Neumann ordinals."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-recovery-not-invention",
+   "name": {
+    "en": "Recovery of an interrupted lineage, not invention"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Claims 3-5, 171",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The book articulates 文言 rather than proposing a framework. The pre-Qin thinkers exhausted how names attach to realities; the formal lineage was cut off after Han Confucianism and 焚书坑儒, and the mission is to recover it. Choosing 間 is recognition, not invention."
+   },
+   "quote": "The work is **recovery (articulation), not invention (proposal)**",
+   "carried": "changed",
+   "relation": "divergence",
+   "reading": {
+    "en": "The account says the reverse of its own classical work: the root's definitions are AI reconstructions, the names a code formed among the theory's users, and the sources evidence for word sense, never the ground of a claim. It does not assess the cut-off history. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#thesis",
+     "says": {
+      "en": "「根之文法的诸定义是从所选古文重构的 AI 读法」; open: 读法是否合于史义, human review."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-civilization-thought-on-the-spine",
+     "says": {
+      "en": "Assessment: 「名是在理论的使用者之间形成的一份码，受所见之义约束，不是从历史中复原的意义」 [AI reading, D62]."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "A not-shown line: 古典之名复原了文本之义."
+   },
+   "source_adds": {
+    "en": "The lineage history and the mission of recovery."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-two-lines-greek-chinese",
+   "name": {
+    "en": "Two lines: Greek being qua being, Chinese names and realities"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Claims 1-3, 16; The theory in one paragraph",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The project is not a Western ontology but the extension of 名实之辨 into the digital age. The two lines differ structurally along six axes, and by the third century BCE the pre-Qin thinkers had exhausted how names attach to realities. The framework is said not to be cross-culturally universal."
+   },
+   "quote": "the Greek line asks",
+   "carried": "not-carried",
+   "relation": null,
+   "reading": {
+    "en": "The live account draws no such line and locates itself in no tradition. It reads 荀子·正名 for one thing and one kind, states laws for every carrier, and names neighbours across fields by result. Whether its self-location as Chinese is lost or corrected, it does not say. A chapter on classical texts is a region of it, not its descent. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "The Greek/Chinese contrast and self-location stand in the folder and in sources/08-jian-wen-language/jian-repo/WENYAN_FOUNDATION_NOTE_v1.0.md §0.1."
+   },
+   "absence": {
+    "searched": [
+     "名实, 名實, Greek, 希腊, being qua being across the live files by grep: no occurrence",
+     "正名 in the live files: 06 and review/CLASSICAL-TEXTS, as a source text only"
+    ],
+    "read": [
+     "06-CLASSICAL-TEXTS.md §一 and #three-layer-verdict"
+    ]
+   },
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-name-is-structure",
+   "name": {
+    "en": "名 is structure, and 古文 is the framework that Lean verifies"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "The λ-calculus test; claims 38, 47, 57-58",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "λ-calculus presupposes separating syntax from semantics; 古文 never did. 名 does not refer, it is structure, so 正名 adjusts structure. Curry-Howard is a default here and a discovery in the West. Hence Lean verifies and 古文 is the framework; first search whether Chinese already has the concept."
+   },
+   "quote": "名 is not reference — 名 *is* structure",
+   "carried": "changed",
+   "relation": "divergence",
+   "reading": {
+    "en": "Two halves. A code is a convention held between formations: the start and the order fix the form reached, on 荀子's 名无固宜. Yet a description makes sense only where it identifies exactly the alike configurations, and naming each makes sense only where alike ones are one, which twins refute. So a name answers to structure and is not it, and having an id is not existing. Lean's statements are the home. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "a-code-formed-between-formations",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations",
+     "says": {
+      "en": "Theorem (any type; runs of hearings, further premises by row). Hearing makes no form; each formation holds the start's form of its origin; the forms that can become shared are exactly the forms in use."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#hanzi",
+     "says": {
+      "en": "Reading [AI, D54]: 「由此读出，理论中的单字术语是约定」."
+     }
+    },
+    {
+     "record": "configurations-alike-by-relation",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-configurations-alike-by-relation",
+     "says": {
+      "en": "Theorem (any process). A description makes sense where it identifies exactly the alike configurations. Naming the configurations makes sense exactly where alike configurations are one, which fails for twin successors of one move (`identifiesAlike_id_iff`)."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "Laws of how a code forms, is imposed and loses distinctions, and a criterion for when a description makes sense."
+   },
+   "source_adds": {
+    "en": "The syntax/semantics argument, which the folder calls the theory's deepest point, and 心即理 at its limit."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-dual-expression-invariant",
+   "name": {
+    "en": "Every law has two faithful forms, Lean and 文言"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Claim 52; open question 27",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Every law, theorem and type signature must have a Lean signature and a 文言 sentence, related 1:1 and faithfully. Totality and faithfulness are listed as unproven, deferred to Phase 7. No Lean in the corpus compiled."
+   },
+   "quote": "Dual expression invariant",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "The 中华本 has the shape 經/說/證 with Lean anchors, compiled, and is in history, while 06 reports it. It is counted, not proved faithful, and states on the World model, not the grammar. Two name systems differ, and in their clash the grammar's names rule. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#zhonghua",
+     "says": {
+      "en": "每一条先立“經”，次“說”，次“證”（Lean 声明与记录）. 449 名中 379 个录有锚. 它陈述在 World 模型上，不在 `Becoming.Grammar` 上. 「中华本不是英文章节的译本」."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#two-name-systems",
+     "says": {
+      "en": "同一字可以不同义；「两者不同之处以文法之名为准」."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "Actual anchors to compiled Lean, and a measured fidelity."
+   },
+   "source_adds": {
+    "en": "A required 1:1 map (the source lists its totality and faithfulness as unproven), and 文言 as the primary form."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-one-ontology-many-projections",
+   "name": {
+    "en": "One ontology, many projections: the script is one of them"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "The same argument, told aloud; claim 308, against claims 57-58 and own words 25",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Spoken, and marked by the folder as a value stance: someone who already understands the ontology does not need the characters, only 'the projection'. So the ontology is shared and the script one projection. It sits against 文言 as primary language and 古文 as the framework itself."
+   },
+   "quote": "One ontology, many projections",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "reading": {
+    "en": "Agreement with this strand, against the other one in the folder. The 中华本 is another expression, not a translation and not the source; Lean is the common home for both; and under one discipline controlled English introduces no more than 經. The count compares referents, not understanding, and no reading test has run. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#zhonghua",
+     "says": {
+      "en": "「中华本不是英文章节的译本，是另一种表达」; 它陈述在 World 模型上."
+     }
+    },
+    {
+     "record": "fidelity-under-one-discipline",
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-fidelity-under-one-discipline",
+     "says": {
+      "en": "Assessment, provisional, coded by a language model: controlled English introduces no more than 經 under one coder (+0.023, [−0.010, +0.055]); another family leaves a residual of −0.27 on 60 pairs."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "A measured comparison of two expressions, provisional."
+   },
+   "source_adds": {
+    "en": "The ontology as shared beyond any language, as a claim about understanding."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-near-optimal-compression",
+   "name": {
+    "en": "文言 is near-globally-optimal for dense relational expression"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Why the compression claim is made; claims 23-25; critique 49",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Source-encoding match, density (道德经 needs about ten times the length in English) and polymorphism as minimal description give near-optimality. It is bounded three times: trained receiver, lossy for procedure, loss-function relative. Grammar alignment does not prove the ontology true. Asserted, never computed."
+   },
+   "quote": "文言 is information-theoretically near-globally-optimal for the dense expression of relational/processual phenomena",
+   "carried": "changed",
+   "relation": "divergence",
+   "reading": {
+    "en": "The account ran a nearby test, not of compression: referents not in the Lean. 經 introduce fewer than the chapters' English, and under one discipline controlled English introduces no more with the same coder, with one residual. So it lists 'best expression' as not shown and attributes nothing finally to the language. Comparing against one English text is its limit. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "fidelity-of-the-classical-statements",
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-fidelity-of-the-classical-statements",
+     "says": {
+      "en": "Assessment, provisional, coded by a language model. On 270 條, 經 introduce fewer referents absent from the Lean than the chapters' English (0.09 against 0.81). 「它不表明古汉语是纯核诸陈述最好的表达」."
+     }
+    },
+    {
+     "record": "fidelity-under-one-discipline",
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-fidelity-under-one-discipline",
+     "says": {
+      "en": "Assessment, provisional. Under the same discipline controlled English introduces no more than 經: +0.023, 95% interval [−0.010, +0.055]; another coder family leaves a residual of −0.27 on 60 pairs. Discipline and genre are not separated."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#does-not-show",
+     "says": {
+      "en": "未示: 「古汉语是纯核诸陈述最好的表达：受控英文在同一编码模型下不多于“經”，另一模型留有余差；纪律与体裁未分开检验。」"
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "A number, with its limits, on a neighbouring question. 06's 成文 evaluates the grammar's operations by total description length, of the grammar, not of 文言, and says this proves no universal minimum."
+   },
+   "source_adds": {
+    "en": "A compression comparison of 文言 with other languages, which the folder's critique 49 asks for: not found live."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-grammar-alignment-not-truth",
+   "name": {
+    "en": "Grammar alignment does not prove the ontology true"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Why the compression claim is made; claim 25; critique 7",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The folder's own limit: alignment between a language's grammar and an ontology shows only that the language suits articulating it, not that the ontology is true. It is called an unusually clean piece of self-limitation."
+   },
+   "quote": "Grammar alignment does not prove ontological truth",
+   "carried": "carried",
+   "relation": "agreement",
+   "reading": {
+    "en": "The account states the same limit, in general and about itself: agreement with a text is no confirmation, the law not resting on the text; whether a passage is relational is a demand of method, not a proof of ontology; and a language's being relational by nature is listed as not shown. This entry keeps the folder's better half beside its claim that cross-domain fit is evidence. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#three-relations",
+     "says": {
+      "en": "「相合不是印证：律的成立不靠原文，原文的意义也不由律穷尽。」 这是方法上的要求，不是本体论的证明，也不是伦理必然性的证明."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#does-not-show",
+     "says": {
+      "en": "未示: 语言或传统天然是关系的."
+     }
+    }
+   ],
+   "account_adds": null,
+   "source_adds": null,
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-every-character-definite",
+   "name": {
+    "en": "Every character has a unique, definite referential structure"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Where it starts; claims 28-30",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Every expression in pre-Qin 文言 encodes a process, and every character has a definite dynamic or topological reference. Told this was too strong, Ren restricted it: not all, a subset, and that subset is complete. Disambiguation follows formal rules."
+   },
+   "quote": "every character has a unique, definite referential structure that is dynamic or topological",
+   "carried": "changed",
+   "relation": "divergence",
+   "reading": {
+    "en": "The script is relational as a reading system, the account says, and form does not encode a relational ontology: most characters are phono-semantic, and the heaviest cosmological graph-readings centre on one controller. A sense stands where every relevant record supplies it, so single-character terms are conventions. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#hanzi",
+     "says": {
+      "en": "Reading [AI, D54]: 「文字作为读法系统是关系的，而且很强……但字形本身不编码一种关系本体：多数字是形声」. 耦合入、归并、拓宽 and others have no exact single character."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "`CrossSituational.stands_iff` as the condition for a sense, and a list of terms for which no single character fits."
+   },
+   "source_adds": {
+    "en": "Disambiguation by formal rules, and each character's process-encoding as a claim about the language."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-restricted-subset-complete",
+   "name": {
+    "en": "Not all characters: a subset, and that subset is complete"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Where it starts; claims 30, 40",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Told the universal claim was too strong, Ren restricted its domain and added a requirement: a subset of characters has definite dynamic or topological reference, and that subset is complete. Purity and completeness are demanded together, minimality found through the attempt at a completeness proof."
+   },
+   "quote": "不说所有，至少一个子集字是这样的，并且它们complete",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "The restricted form lives on as an open hypothesis, with a stricter test: whether some characters and combinations stably keep relations and operations among concepts within a stated range, judged at four levels on samples not used in design. Completeness is not asserted, and the name table is declared built by those levels yet unexamined at the last. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#open",
+     "says": {
+      "en": "未决，汉字之较强假说: 某些字词及其组合，能否在明确的范围内稳定地保留概念之间的关系与操作…; 「按四级验收，须在未参与设计的样本上检验」."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#hanzi",
+     "says": {
+      "en": "Reading [AI, D54]: 一一映射的验收有四级，逐级加强：命名一致，义项忠实，关系保留，组合可在未参与设计的样本上检验."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "An acceptance test with four rising levels."
+   },
+   "source_adds": {
+    "en": "Completeness of the subset as a claim."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-single-character-preference",
+   "name": {
+    "en": "Single characters over compounds and English terms"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Claims 58, 104, 141, 42",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A standing instruction: many English terms and two-character compounds have better single-character counterparts, and many compounds are formal-logic combinations of single characters. The scope is single symbols and their combinations. First search whether Chinese already has the concept."
+   },
+   "quote": "many English terms and two-character compounds have better single-character counterparts",
+   "carried": "changed",
+   "relation": "divergence",
+   "reading": {
+    "en": "The account keeps the search and limits the preference. It looks for attested early use, pre-Qin first, yet records that for 耦合入, 归并, 拓宽 and others no single character is exact, since one would bring in a sense of entity or of power; compounds stay the exact choice. 105 of its 449 names are new combinations by its own convention. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#hanzi",
+     "says": {
+      "en": "Reading [AI, D54]: 耦合入、归并、拓宽、关口、形成体、前段、扣留没有确切的单字: 「以单字代之会带入其文本中的实体之义（物、体、性）或权力之义（定、功、王），二字之词仍是确切的选择」."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#zhonghua",
+     "says": {
+      "en": "能找到出处者引一句冻结原文，先秦优先; 未录引文的 201 个中，105 个是由古字组成的新组合，是本编的约定."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "A stated cost of the single character, term by term, and a count of what the table left uncited."
+   },
+   "source_adds": {
+    "en": "The single-character scope as a method for mathematics and logic."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-overlays-may-be-arbitrary",
+   "name": {
+    "en": "A semantic overlay must preserve structure, not just count"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Claim 294; open question 20",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The revision notes say eight trigrams and eight atoms are not enough. The mapping must preserve independently meaningful structure: inner and outer trigrams, 错/综/互, 本/征, row and column of the sixteen characters. Otherwise names are attached after the fact."
+   },
+   "quote": "Semantic overlays may be arbitrary",
+   "carried": "carried",
+   "relation": "agreement",
+   "reading": {
+    "en": "The same test stands live for characters and theory terms, and in sharper form: an arbitrary numbering is also one-to-one, so four rising levels of acceptance are named. The account applied it to hexagrams too: 序卦's reasons are talk added to a list, not a law. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#hanzi",
+     "says": {
+      "en": "Reading [AI, D54]: 「任意编号也能一一对应概念，所以不重名之字不是充分的发现」; four levels: 命名一致，义项忠实，关系保留，组合可在未参与设计的样本上检验."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#arrangements",
+     "says": {
+      "en": "「序卦在对与对之间给出的理由……是加在清单上的言说，不是构形承载之律」 [AI reading, D55]."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "The fourth level, testing on samples not used in design."
+   },
+   "source_adds": null,
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-zhi-ge-caution",
+   "name": {
+    "en": "止戈为武 is the tradition's gloss, not the graph's history"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "The same argument, told aloud; open question 63",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Ren's spoken example reads 武 as stop plus conflict. The synthesis cautions: on most paleographic readings 止 is a foot, so the graph shows marching with a halberd. The gloss evidences how the tradition read its script and a culture of 和, not how the script formed."
+   },
+   "quote": "On most paleographic readings the 止 in 武 is a foot",
+   "carried": "carried",
+   "relation": "agreement",
+   "reading": {
+    "en": "The account keeps the caution, not Ren's spoken form, and sharpens both halves: components fix no reading (a scoped witness, applied to 武 only by analogy), the 左传 speech's relational content is in the speech, and its frame of power is recorded as divergence. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#zhi-ge",
+     "says": {
+      "en": "Reading [AI, D54]: 「止为足形，武是持戈而行」; “止戈为武” is a value reading in 楚庄王's speech; 「理论不说武的本义是止戈，也不说止戈否定一切武力」. `CodeAcquisition.primitives_no_exact` is used by analogy."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "The witness on reading components, and the recorded divergence of the speech's frame of power."
+   },
+   "source_adds": null,
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-no-i-other-opposition",
+   "name": {
+    "en": "Pre-Qin theories describe social dynamics with no I-other opposition"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "The grammar claim, said again in Chinese; claims 307, 309; own words 83-84",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Spoken, from a translation: some pre-Qin theories describe a universal social dynamics with no I-other opposition, unlike a Western dualistic structure of language and thought; the grammar often lacks subject-object differentiation and tense. The folder flags one word at 13:40 as unsettled by ear."
+   },
+   "quote": "里面没有“我—他”的那种对立",
+   "carried": "changed",
+   "relation": "scope",
+   "reading": {
+    "en": "The account finds a relational root in every line and refuses the generalization. Contest and rank recur as a non-relational layer, not at the margin (二柄, 贵贱有等), and its direction, not its ontology, is what diverges. By domain, divergence runs 1% in 名辩 to 33% in 法. Relational start is a leading thread within each tradition, and a contrast with the West is not drawn. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#three-layer-verdict",
+     "says": {
+      "en": "Reading [AI, D54]: 论题分三层: 在起点与观察上，它成立; 在全称形式上，它常需要定域; 「作为每一体系的性质，它不成立」; 四种非关系之层反复出现，不在边缘."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#four-layers",
+     "says": {
+      "en": "争胜与等级: 不战而屈人之兵；二柄；民弱国强；贵贱有等；亲亲之杀. 后两层立的是关系中的方向，不是先于关系之物."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#zh-mapping",
+     "says": {
+      "en": "Assessment: 按脉络之域，相分在已对应者中所占：名辩 1%……墨 28%，法 33%；合计 19%. 比例是此语料的."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "Counts by domain, and each tradition's own internal reply."
+   },
+   "source_adds": {
+    "en": "The contrast with Western dualism, and grammar lacking tense and subject-object as evidence."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-v4-forced-on-hexagrams",
+   "name": {
+    "en": "The Klein four-group is forced on the hexagram and universal"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Claims 258-260",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A hexagram is a map from six positions to F2 with two symmetry axes, 错 and 综; the group is exactly Z/2×Z/2, and larger candidates break something. 道 as identity is a structural correspondence. Any minimal system carrying meaning has a V4 subgroup: Pauli, CPT, logic, Greimas."
+   },
+   "quote": "$V_4$ is forced, not chosen",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "The account keeps the bare group as a finite fact: 錯 and 綜 with their composite compose as a group, each its own inverse. Forcedness, universality and 道 as identity are dropped: two-valued lines are a named modelling choice. The record cites the 生生不息 review's H4; that repository held the R-Family line (history/lineage/shengsheng-buxi), so the route likely runs through it, though nothing live says so. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "hexagram-world-laws",
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-hexagram-world-laws",
+     "says": {
+      "en": "Theorem (the hexagram world; no added premise). 不变、錯、綜、錯而綜成一四元群. Reading [AI, D51]: 錯、綜之名依后世注家（明来知德），经文「錯綜其數」说的是数，记为定域."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#thesis",
+     "says": {
+      "en": "基与标: 「卦之世界以离散之步与二值之爻为建模之选择」."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#dao",
+     "says": {
+      "en": "Reading [AI, D54]: 理论从不把道等同于任何脊柱之词."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "互 goes alike across the classes, and 錯 keeps runs apart: the group is related to named laws. Discrete steps and two-valued lines are named modelling choices."
+   },
+   "source_adds": {
+    "en": "The forcing argument, the V4 Atlas across nine domains, and the genealogy of partial discoveries (Günther, Spencer-Brown, Greimas)."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-v4-orbit-count",
+   "name": {
+    "en": "How many V4-orbits do the sixty-four hexagrams form?"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Open question 32; loss 39",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The V4 note poses a checkable calculation, says it belongs in the implementation, and no later document reports the number. The note floats 16 if every orbit had size 4, and flags the symmetric hexagrams as the thing to check."
+   },
+   "quote": "how many $V_4$-orbits do the sixty-four hexagrams form?",
+   "carried": "carried",
+   "relation": "agreement",
+   "reading": {
+    "en": "The account answers the folder's open question, though it does not say so: twenty classes, eight of two and twelve of four, so not 16. The Lean is `class_census`. The route was the 生生不息 review; nothing live cites this question. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "hexagram-world-laws",
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-hexagram-world-laws",
+     "says": {
+      "en": "Theorem (the hexagram world). 「二十类，八类各二卦、十二类各四卦」; the classes are a lumping 互 goes alike across and not one 消息 goes alike across."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "Which laws carry these classes."
+   },
+   "source_adds": null,
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-cuozong-privileged",
+   "name": {
+    "en": "Only {e, 错综} preserves structure, so 错综 is primary"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Claims 261-263, 265",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "错 and 综 are each anti-homomorphisms by De Morgan, and their composite a homomorphism; 错综 is the contrapositive's algebraic form. A second argument, on functionals and the annihilator with preserved dimension 8 − dim H, reaches the same subgroup. Classical logic avoids 综. The folder rates this the corpus's best mathematics."
+   },
+   "quote": "Therefore 错综 should be promoted to a primary concept, not derived.",
+   "carried": "changed",
+   "relation": "divergence",
+   "reading": {
+    "en": "The source asks what preserves ∧ and ∨; the account asks what a law carries, and promotes nothing: 錯 pairs go with 消息, 錯綜 classes with 互; laws rearranging places and adding a mask commute with 錯. Hand check, not Lean: with pointwise ∧, reversal preserves ∧ and 錯綜 does not (乾, 坤), so the note's sketched `cuozong_preserves_meet` fails, and its table needs a 綜 other than §1.1's. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#yi-readings",
+     "says": {
+      "en": "「哪一种归并承载律，依律而定，所失较多的归并有时反而承载」. Table: 錯卦之对 is carried by 消息; 錯綜之二十类 is not carried by 消息 and is carried by 互."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#hexagram-laws",
+     "says": {
+      "en": "Theorem (the hexagram world). 诸类是互所同行的归并，不是消息之律所同行的，因为倒转使后者逆行 (`classes_goAlike`, `classes_not_goAlike_waxWane`)."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-hexagram-arrangements-and-laws",
+     "says": {
+      "en": "Theorem (the hexagram world). 「凡重排诸位再加掩码之律都与錯交换，所以无一运行它」 (`rearrange_not_runsOrder`)."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "The relativity of a lumping to a law, with the table across five lumpings and four laws."
+   },
+   "source_adds": {
+    "en": "The De Morgan claim, the Information Preservation Theorem, the {道, 今} parity argument (a separate, mask-level argument), and the hypothesis on why intuitionistic, linear and quantum logics arose."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-nuclear-outside-v4",
+   "name": {
+    "en": "互卦 is not in V4 and iterates to a fixed point"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Claim 266",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "互 is not bijective, has no natural inverse and iterates to a fixed point rather than a cycle, so it must be modelled orthogonally to V4, perhaps as an idempotent or partial morphism on the hexagram lattice."
+   },
+   "quote": "not bijective, no natural inverse, iterating to a fixed point rather than a cycle",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "The account confirms it merges and is outside the group, and corrects the rest. Runs end in 乾, in 坤, or in the alternation of 既濟 and 未濟, a two-cycle. So iteration does not always reach a fixed point, and the law is not idempotent. Basins are counted. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "hexagram-world-laws",
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#hexagram-laws",
+     "says": {
+      "en": "Theorem (the hexagram world). 互: 合并；每一运行自第二步起在乾、坤与既濟、未濟之相代中，不再离开; 十六卦归乾，十六卦归坤，三十二卦入相代. Reading [AI, D51]: 互读作律而迭用，传统多只取一步."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "The counted basins, the third form beside waxing and waning and absorbing, and that this iteration is not the text's own use."
+   },
+   "source_adds": {
+    "en": "The modelling proposal as an idempotent or partial morphism."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-r-family-universal-substrate",
+   "name": {
+    "en": "The R-Family algebra: F2 tower, bilinear layers, Hom-as-content, even ranks"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "The third track; claims 241-257, 284-293",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Seven properties are claimed to force R_N = F2^N: direct sum, three bilinear layers, a squaring tower, Hom-as-content. Only even ranks are interfaces, since only they conserve in both senses; 64 = V4³, so three Klein coordinates, not six lines, are the unit. The biggest hole, in its own words: why two values lead to the F2 family at all."
+   },
+   "quote": "Seven necessary properties are claimed to force R-Family rather than select it",
+   "carried": "history-only",
+   "relation": null,
+   "reading": {
+    "en": "This is the algebra the account dropped. Live hexagram modules use two-valued lines and finite laws with no vector space, form or tower, and six lines stay the unit: 三才之带 and the heights partition six places but are read as no coordinates. 'Why two values' is met by naming them a modelling choice. The 生生不息 review lists the R-family encoding among what it did not take (§5; process, not live). [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "The algebra stands in sources/08-jian-wen-language/downloads-2026-05 and, developed, in history/lineage/shengsheng-buxi/synthesis-b and -c; the genealogy study history/root-foundation/DEEPER-ROOT-GENEALOGY.md weighs its claims."
+   },
+   "absence": {
+    "searched": [
+     "R-Family, R_N, Arf, symplectic, Hom-as-content, 𝔽, F_2, bilinear, vector space across every live file: no occurrence",
+     "V_4, V4, Klein across every live file: only the alias on hexagram-world-laws and false matches; 四元群 in 06",
+     "R-Family and Klein in theories/becoming/history and _process: synthesis-b, synthesis-c, DEEPER-ROOT-GENEALOGY, SSBX review"
+    ],
+    "read": [
+     "06-CLASSICAL-TEXTS.md §五 and its 基与标",
+     "hexagram-world-laws and hexagrams-on-the-spine, JSON fields",
+     "SSBX-REPOSITORY-REVIEW.md §3.1 and §5",
+     "DEEPER-ROOT-GENEALOGY.md table rows on R-Family, by grep line"
+    ]
+   },
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-universal-substrate-claim-z",
+   "name": {
+    "en": "Claim Z: formal means R-Family-articulable"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "The third track; claims 241, 253-254, 285-287; critiques 38-39",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Formality and R-Family articulability are co-extensive by definition, and later one minimal universal normal form with a Z-Principle and a falsifiable Z-Conjecture. It is delimited to formality, not reality. The folder notes this contradicts its own refusal of a totalizing paradigm."
+   },
+   "quote": "co-extensive",
+   "carried": "changed",
+   "relation": "divergence",
+   "reading": {
+    "en": "The account takes up the same place, what any structure can be stated in, and answers otherwise: no alphabet, only a relation on any carrier, a language that forbids nothing. Its own universal is an open representation question, already failing on the World's amounts. A rival universal claim is not stated against R-Family; the account does not mention it. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/01-ROOT.md#one-kind-of-symbol",
+     "says": {
+      "en": "The grammar has one kind of symbol, a relation between occurrences; 「every theorem is stated for every carrier and relation, so no frame or kind of thing is chosen before the relations」."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#what-would-defeat-the-reading",
+     "says": {
+      "en": "「As a language, nothing: any carrier, relation and class will do」."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/01-ROOT.md#open",
+     "says": {
+      "en": "Open: faithful representation in the grammar of every becoming; the World's not faithful on its amounts."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "A universality stated as open, with where it already fails."
+   },
+   "source_adds": {
+    "en": "Claim Z, the six universal claims (grammar, cognition, phenomenology and others) and the minimal normal form."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-cosmological-sequence",
+   "name": {
+    "en": "无极 = R0, 太极 = R1 … the 易 sequence coincides with the tower"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Claim 244, 252",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The family coincides layer by layer with 无极, 太极, 四象, 八卦, spacetime, 六十四卦, 字/文, 万物, offered as discovered alignment, not forced correspondence. Hom-as-content is the precise sense of 道法自然. The revision notes later downgrade the physics."
+   },
+   "quote": "无极 = $R_0$, 太极 = $R_1$, 四象 = $R_2$, 八卦 = $R_3$",
+   "carried": "changed",
+   "relation": "divergence",
+   "reading": {
+    "en": "A live sentence refuses this very move: 无, 一, 二, 三 do not become the empty set, a bit or an operation by comparison. A narrow trace stands in one record: adding one reads the divisions of 太极 as digits, labelled the AI's reading on a counter, with no cosmology. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#dao",
+     "says": {
+      "en": "Reading [AI, D54]: 「旧的形式桥接以一个证人定义两边，只建立了所给定义之间的对应，本章只用已入脊柱之律；“无”“一”“二”“三”不因比较就是空集、比特或运算。」"
+     }
+    },
+    {
+     "record": "hexagram-world-laws",
+     "says": {
+      "en": "Correspondence, reading (the AI's, D51): adding one reads the divisions of 太極 as digits."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "The explicit limit on old formal bridges."
+   },
+   "source_adds": {
+    "en": "The layer-by-layer identification, and 道法自然 given four precise mechanisms."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-information-conservation",
+   "name": {
+    "en": "Conservation and loss of information are a structural property of operators"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Claims 270-273",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Isomorphisms conserve, projections lose a factor of known fibre size, and a collapse is irreversible. So what is lost is readable from the operator; whether a projection is lossless is decidable from the family's structure. This is the shared foundation of five fields. Only on this axis does Wen go beyond existing languages."
+   },
+   "quote": "Every basic operator's information behaviour is intrinsic and visible in its type signature",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "reading": {
+    "en": "The nearest live mechanism: a determined law on a list merges nothing exactly where every configuration returns, and a lumping carries a law exactly where the step goes alike. Merging is the loss; 坤 under the waning law is an absorbing case. These are laws of a process, not a type discipline, and no operator's loss is read from a signature. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "hexagrams-on-the-spine",
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-hexagrams-on-the-spine",
+     "says": {
+      "en": "Theorem (the hexagram world). 对六十四卦上的每一个确定之律，每一构形皆复返，恰当此律不合并 (`every_returns_iff`, an instance of `Law.lossless_iff_returns`)."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#yi-readings",
+     "says": {
+      "en": "一种归并承载一律，恰当此律在其上同行；简化得理，恰当简化是律所同行的归并."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "Return, not reversibility as a type, as what no merging gives; and that no merging guarantees return, not reach."
+   },
+   "source_adds": {
+    "en": "The type-level language, ⊠ as a fourth value, no-cloning by construction, and the five-field unification including power budgets."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-self-articulation",
+   "name": {
+    "en": "The language articulates itself: R8, and the ontology of 文言 in 文言"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Claims 27, 229, 242, 249, 252; own words 45",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Writing 文言's ontology in 文言 makes instrument and object one. Operations on R-Family are members of it, so it needs no external scaffolding, and R-Family alone is self-following. The classification satisfies the structure it describes. Ren asked that the text itself be proof: 文字即是证明，自指."
+   },
+   "quote": "writing the ontology of 文言 in 文言 is self-referential",
+   "carried": "changed",
+   "relation": "divergence",
+   "reading": {
+    "en": "The account's checked laws point the other way. Self-reference certifies nothing by itself, and a family of readings within what it reads is complete only where nothing differs; completing it is an unfolding incomplete at each step. That bears on any claim to closure in one's own terms, not on the algebra as a theorem. Live 文 is a course through a map, not this level. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "self-reference-does-not-certify-itself",
+     "anchor": "theories/becoming/chapters/08-METHOD.md#r-self-reference-does-not-certify-itself",
+     "says": {
+      "en": "Theorem (any type; pre-spine Lean; criteria, fixed-point equivalence and term language supplied). 「So self-reference does not certify itself, and the reference back of a bound use is stipulated rather than derived.」 A metalogic without presuppositions remains open."
+     }
+    },
+    {
+     "record": "readings-within-what-they-read",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read",
+     "says": {
+      "en": "Theorem (any type). With equality of values decided and both types inhabited, a family is complete exactly where all values are equal. Completing it step by step is an unfolding incomplete at every step that never returns."
+     }
+    },
+    {
+     "anchor": "GLOSSARY.md",
+     "says": {
+      "en": "文 (wén): the course of a run's states through a map."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "The diagonal limit as a checked law."
+   },
+   "source_adds": {
+    "en": "R8 as the self-articulating level and the project's name, the Hom-as-content closure, and the demand that text be proof."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-alignment-from-algebra",
+   "name": {
+    "en": "Alignment derived: the virtues as invariants R-Family can preserve"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Claim 255; Relations, keep-the-possibility-space-open",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "If AI cognition is R-Family operations, alignment is a constraint on them: keeping possibility space open means operations preserve information rather than collapse, with 仁 as symplectic, 义 orthogonal, 礼 lattice, 智 mode, 信 information. Its authors mark it a v0.1 attempt."
+   },
+   "quote": "These are not arbitrary virtues",
+   "carried": "changed",
+   "relation": "divergence",
+   "reading": {
+    "en": "The account refuses this form. A statement reading no order entails C only where it fails, so no invariant yields a ranking. Scope comes from the continuation condition and order from C, neither asserted, warrant open. No merging is one form, not a good: closure as form is no loss. Alignment with no premise is what selections reach, not which is right. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+     "says": {
+      "en": "Neither is asserted. A ranking of courses needs C or a premise in its place; a statement reading no order entails C only where it fails (`ReadsNoOrder.not_entails`)."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
+     "says": {
+      "en": "A person, an AI system and a training process are formations within the unfolding; alignment is first what each one's selections reach and how far that can extend, not a bargain among separate owners of value."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#closing-and-opening",
+     "says": {
+      "en": "「闭就其形式而言不是损失」; 一种闭是否支持生生，由比较来说：延续之条件定范围，以广为愈（C）定次序，两个前提都不断言 [AI reading, D49]."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "Why no invariant orders courses, and what alignment is before any premise."
+   },
+   "source_adds": {
+    "en": "The mapping of virtues to algebraic invariants, and cognition as R-Family operations."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-bagua-demotion",
+   "name": {
+    "en": "Eight comes from 2³: the doubling scaffold is renounced"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Idioms are library; claims 8, 99",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "八象 (是 际 感 化 修 约 势 理) were Tier 1 by the 太极→八象 doubling, called no coincidence, then conceded: four primitives plus four idioms. Treating them as Tier 1 was a trace of a borrowed scaffold. The folder calls this demotion the series' most valuable moment, while the R-Family track returns to doubling."
+   },
+   "quote": "基数 8 来自 2³，不来自存在论必然",
+   "carried": "not-carried",
+   "relation": null,
+   "reading": {
+    "en": "Nothing live has 八象 or argues about their number, so neither the scaffold nor its renunciation appears. Live trigrams are three two-valued lines, so eight is 2³ there too, unargued; that is no taking-up of the point. The record's reading of 太极 divisions as digits sits oddly with the folder's refusal. The folder itself returns to doubling on its R-Family track. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "The refusal list of WENYAN v1.0 §0.3, in sources/08-jian-wen-language/jian-repo."
+   },
+   "absence": {
+    "searched": [
+     "八象, 四象, 两仪, 太极, 太極, 八卦 in ONE-PAGE, THE-THEORY-OF-BECOMING, chapters, review, GLOSSARY, records"
+    ],
+    "read": [
+     "06-CLASSICAL-TEXTS.md §五, §八",
+     "hexagram-world-laws correspondence field"
+    ]
+   },
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-claim-strength-calibration",
+   "name": {
+    "en": "Claim strength exceeded proof strength"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "The third track, last paragraph; claims 284, 292",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The revision notes say what was shown (R-Family can express many systems) and what was claimed (all must be so expressed). They replace 'is' with 'can be articulated as', 'forced' with 'motivated', and end: 定理已立，证责已明. The folder calls this the corpus's strongest sign of health."
+   },
+   "quote": "Claim strength exceeded proof strength.",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "reading": {
+    "en": "The account makes this its standing method, stricter than the note: every result carries a label by standing, what Lean proves is said exactly, and readings stay marked. Same discipline, no descent shown; 08 applies it to the account's own results. The folder's own Lean compiled nowhere; this account's does. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#corpus",
+     "says": {
+      "en": "「Lean 检查的是所给的推导，不判定古人的定义之意」. Each classification row is an AI reconstruction with no human review. The chapter's opening marks every result as definition, theorem by base, assessment, reading or open."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#known-results",
+     "says": {
+      "en": "The verdict, from an AI review whose search was not exhaustive: none of the central results is new mathematics."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "Checked proof, and a verdict on itself."
+   },
+   "source_adds": {
+    "en": "The itemized corrections to R-Family, the vocabulary substitution table, Z-Principle against Z-Conjecture, and the nine proof obligations."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-one-self-containing-primitive",
+   "name": {
+    "en": "One primitive, 間 then 系 then 一, whose content is that it contains itself"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "One primitive, and why the number is one; claims 59-73",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Several relational primitives presuppose one another, which 'proves' they are perspectives on one. Hence one primitive: 間 (v0.3-v0.8), 系 (v0.9), finally 一 identified with system. 系含系 is definitional, formally W-types, V_α and μX.F(X). Being definitional, it needs no creation verb."
+   },
+   "quote": "系含系 — recursion is the definitional content of 系, not an operator applied to it",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "'One' stands as one kind of symbol, a two-place relation on a carrier. Self-containment does not: a relation holds between occurrences, nothing contains its own kind, and well-foundedness is replaced by no-cycles as a hypothesis a net may meet. 一 survives as the full relation, a class, not a root. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/01-ROOT.md#one-kind-of-symbol",
+     "says": {
+      "en": "The grammar has one kind of symbol, a relation between occurrences. The carrier is a parameter of the statements, not a claim that its elements exist apart from their relations. Equality on the carrier is a commitment of the model."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#what-would-defeat-the-reading",
+     "says": {
+      "en": "The explanatory reading is a thesis, argued. What it forbids: as a language, nothing; any carrier, relation and class will do. As an explanation, no observation."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "An explicit statement that the one-symbol language has no empirical bite on its own."
+   },
+   "source_adds": {
+    "en": "系含系 and its W-type identification, the choice among 間, 系 and 一 with the ma image, and the circularity argument as proof."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-central-sentence-relations",
+   "name": {
+    "en": "Things manifest in 間, and 間 is constituted in their relations"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "The second track; claims 169, 176-177",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "One sentence is the whole system. No actor exists outside a 間, since existence is relational; no single-actor 間 exists, since relation needs two ends; co-being is the default and solitude derived. A cosmic 間 gathers all as the coherence pattern 理, not a super-container."
+   },
+   "quote": "事物在间中显现，间在事物的关系中成立",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "The account holds the relation-first form as an argued thesis, shown for what is represented, and says it does not show reality has no independent entity. It keeps 'a pair is the least split, not the least relation'. It differs on claim 177: the grammar does not assume that nothing conditions itself, so a one-ended relation is admitted. No cosmic 間. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding",
+     "says": {
+      "en": "Thesis (philosophical, argued). There is one unfolding, and whatever is, is how it relates within it. Configurations, laws and parts, as represented, need no determination beyond relations; that the theory as a whole needs no independent entity is argued, not proved. Neither shows that reality has none."
+     }
+    },
+    {
+     "record": "separation-loses-the-relation",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-separation-loses-the-relation",
+     "says": {
+      "en": "Theorem (any type). Describing two parts separately gives back the whole exactly where the whole is rectangular. Reading [AI, D33]: two are a pair by relation; a pair is the least split, not the least relation."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#conditional-laws",
+     "says": {
+      "en": "「文法不设不自缘：自缘者在每一类下皆住（`«自缘则常»`）」."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "What would defeat the thesis: relata with natures of their own, or what an experience is like. Equality on the carrier is named as its nearest case."
+   },
+   "source_adds": {
+    "en": "The strong existence claim (no 間, no existence), relation needing two ends, the cosmic 間, 間/事/機 as three faces."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-monism-chosen-not-proved",
+   "name": {
+    "en": "Monism is chosen, and every formalism is a finger pointing at the moon"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Claims 7, 15, 72",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Each primitive is a convention, each axiom a choice, each idiom a tool. A framework is judged by 功用, not 真值. Monism cannot be proved; its warrant is how many deep problems it handles. Taking 际 as Layer 1 instead would build a similar ontology."
+   },
+   "quote": "Monism cannot be proved, only chosen",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "reading": {
+    "en": "Agreement on status: the one-unfolding thesis is argued, not proved, and by the section's measure has no strength against observation. The account does not take 功用 as replacing 真值 for its laws, where a proof claim is checked in Lean and says what the Lean proves. Note the folder's counterfactual, 际 as Layer 1, is what the root did. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding",
+     "says": {
+      "en": "「By this section's measure the thesis has no strength: it excludes no observation」, and that the theory as a whole needs no independent entity is argued, not proved."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "Named live arguments that could defeat the thesis, and its nearest internal case."
+   },
+   "source_adds": {
+    "en": "功用 over 真值 as the general criterion of a framework; 一生万物即是真理，乃多元 as a truth claim about pluralism."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-frames-cross-applicable",
+   "name": {
+    "en": "All frames cross-applicable: the one ultimate claim"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Claims 118-119; own words 44",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Ren's statement of the framework's one ultimate claim: truth is universal, frames are articulations, and all articulations are cross-applicable, derivations transferable, so the 理 derived in any frame applies in the others. A second-order question follows on regularity between frames."
+   },
+   "quote": "所有 articulations cross-applicable",
+   "carried": "changed",
+   "relation": "scope",
+   "reading": {
+    "en": "The account gives where transfer holds. A lumping carries a law exactly where the law goes alike across it, and which one carries depends on the law: 錯綜 classes carry 互 and not 消息. What contexts show glues only where contexts agree, and some worlds glue nowhere. So derivations move along a carrying map, not between any two frames, and there is no frame-free truth to underwrite them. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#yi-readings",
+     "says": {
+      "en": "一种归并承载一律，恰当此律在其上同行. 「哪一种归并承载律，依律而定，所失较多的归并有时反而承载」."
+     }
+    },
+    {
+     "record": "claims-shown-in-context",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-claims-shown-in-context",
+     "says": {
+      "en": "Theorem (any type; each claim within some context). A frame of context-free claims fits exactly where it glues everywhere. Some worlds glue nowhere: Specker's three boxes, the Mermin-Peres square."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "The exact condition for a law to pass through a map, and witnesses where no common frame exists."
+   },
+   "source_adds": {
+    "en": "Truth as universal across frames, and the open question of regularity in the transformations between frames."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-position-is-yoneda",
+   "name": {
+    "en": "A locus is exhausted by its relations: Yoneda in 文言"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Claims 80, 147",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "位 is a position with no intrinsic essence: a locus is what it is entirely by the totality of its 际. The text calls this the Yoneda lemma stated in 文言 and refuses to soften it: not a metaphor, the same structure."
+   },
+   "quote": "凡位之是其位，由其际之凡然定",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "The mechanism is bisimulation and the two-way core, not Yoneda: configurations matching step for step are alike, and a position under the two-way core is fixed by its relations before and after. The account gives where this stops: equality is needed to tell twins apart or intervene on one, and it is a model commitment. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "configurations-alike-by-relation",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-configurations-alike-by-relation",
+     "says": {
+      "en": "Theorem (any process). Configurations related by a bisimulation are alike. Naming the configurations makes sense exactly where alike configurations are one, which fails for twin successors of one move (`identifiesAlike_id_iff`)."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/01-ROOT.md#constancy-and-core",
+     "says": {
+      "en": "Definition: the core read both ways (位核). Theorem (root): what shares a position under the two-way core shares beginning, abiding and ending. 「A position is fixed by all its relations, before as well as after.」"
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "The witnessed exceptions: twins, a past no claim tells apart, equality as a commitment of the model."
+   },
+   "source_adds": {
+    "en": "The identification with Yoneda and the category-theory reading; the word Yoneda is not in the live account."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-two-duals-minimum-complete",
+   "name": {
+    "en": "位⟷际 and 化⟷理 span the ontology, minimum-complete"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Two duals; claims 79-85",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Four names, mutually defining but not reducible, span everything: 位/际 lacks time, 化/理 lacks sites. 化 is a trajectory and 理 its time-invariant attractor, one phenomenon under two views. `term : type` is `化 : 理`. The interdefinition is admitted to be slightly circular."
+   },
+   "quote": "Two duals jointly span the ontology",
+   "carried": "changed",
+   "relation": "divergence",
+   "reading": {
+    "en": "The characters stay and their senses move. 化 becomes alteration under a class; 理 becomes a lumping the step goes alike across; the root's marks are beginning, abiding, altering and ending. 06 says the older 理 and the live 理 are not one sense. A likeness remains: 理 models structure and change as one notion. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#glossary-senses",
+     "says": {
+      "en": "Reading [AI, D1, D5]: 「“理”在语料之化／理对偶中是轨迹之不变量，与本理论“建模结构与变化之律”二义不并。」"
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#definitions",
+     "says": {
+      "en": "「“化”在本章只有一义，即 Lean 之 `«化»`：`y` 在物之类下续 `x`，而另一类分开二者；它就是文法之异」."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#li",
+     "says": {
+      "en": "理, the modeling of the laws of structure and change, is one notion, because a model of change is a lumping the step goes alike across, which is a model of structure."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "Theorems of 理 under named premises: where the successor is fixed the core is a 理, and with a successor everywhere the coarsest."
+   },
+   "source_adds": {
+    "en": "The minimum-completeness argument, and the attractor reading of 理."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-shi-as-derivative",
+   "name": {
+    "en": "势 as the derivative of change, natively a gradient"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Claims 94, 130",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "势 is d化/d时, whose shape is 理(化), so at once differential and structural. 孙子's 转圆石于千仞之山者，势也 corresponds to the modern gradient natively, not metaphorically."
+   },
+   "quote": "势 ≡ d化/d时",
+   "carried": "changed",
+   "relation": "divergence",
+   "reading": {
+    "en": "The live name table takes 勢 as a basin: courses that meet, each basin holding one cycle. That keeps the folder's alias 'attractor' and drops its identity with a rate of change. It is a discrete structure of a determined law, and a name-table sense with no declaration in the grammar. No live text claims the gradient identity. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#two-name-systems",
+     "says": {
+      "en": "「勢在名表是吸引之域，度是给诸选项之数，二者在文法中尚无声明。」"
+     }
+    },
+    {
+     "record": "basins-of-a-determined-law",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-basins-of-a-determined-law",
+     "says": {
+      "en": "Theorem (any type). Under any determined law, courses meeting is an equivalence whose classes are basins; a course reaches every returning configuration of its basin; each basin holds one cycle."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "Basin laws on listed configurations, with a bound on entry."
+   },
+   "source_adds": {
+    "en": "势 as a rate of change, and the priority claim for 孙子."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-ji-early-detection",
+   "name": {
+    "en": "几工程: detect the small rising attractor before the threshold"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "The domain sweep; claims 132-133",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Observe the spectrum of 势, find small but rising attractors and intervene before manifestation. This is early-warning detection plus pre-emption, stated by 中医's 治未病 long before the modern literature, against the Western break-alert-fix model."
+   },
+   "quote": "几工程 (incipience engineering) is the distinctive Eastern engineering signature",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "The account takes this up as thesis T6: a break is seen coming only through what couples into what breaks. Warning statistics read a condition's own rate of return, so they work near its own bifurcation and not for a dependent's need. 其未兆易谋 is scoped: what is easiest to change is hard to find unless its couplings are read. Pre-emption as a signature of a civilization is not taken up. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#break-seen-coming",
+     "says": {
+      "en": "Thesis T6. Invisible half proved on the World model; seen half periphery (linearized and logistic models); that the split is one law across domains is conjectured. Three frozen seabird tests did not reject it, none establishing conditional independence."
+     }
+    },
+    {
+     "record": "slowing-down-before-an-own-end",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-slowing-down-before-an-own-end",
+     "says": {
+      "en": "Theorem (periphery, Mathlib; discrete steps, one variable linearized about a rest): a rises to one as the margin shrinks at a fold, so the margin to a condition's own end couples into its fluctuations. A dependent's need enters neither statistic."
+     }
+    },
+    {
+     "record": "runaway-distance-uncoupled",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-runaway-distance-uncoupled",
+     "says": {
+      "en": "Theorem (World). For a stock coupled in by threshold only, the only requirement that may fail up to a horizon, how far off the break is does not couple in before the break."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#three-layer-verdict",
+     "says": {
+      "en": "Reading [AI, D54]: “其安易持，其未兆易谋”定域：对每一过程找出每一失去之机即给出 LPO，「所以易于改变者难于发现，除非读其耦合」."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#yi-readings",
+     "says": {
+      "en": "「咸，感也」「感而遂通」「知幾其神乎」: 定域. 感止于耦合所及. Reading [AI, D47]."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "Theorems of what can and cannot be detected, each under its premises, and a stated way to refute the thesis."
+   },
+   "source_adds": {
+    "en": "Intervention before manifestation as a design signature, a spectrum of 势, 治未病 as early-warning theory, and the priority claim."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-time-inside-the-primitive",
+   "name": {
+    "en": "Time is not a second primitive"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Claim 70",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Inside a 系, one process is conventionally designated the standard (sundial, oscillation, heartbeat) and others measure pace against it. That designated process is 时: a coinductive stream and a Lamport clock, not Newton's t. This lets two duals, not three, span the ontology."
+   },
+   "quote": "时 is not a parallel primitive but a periodic anchoring inside 系",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "reading": {
+    "en": "Same form, not a second primitive; a different mechanism. The account's order is the reach of the condition relation, strict only where no cycle holds, and rates are relative to a reading's unit. It does not make a designated periodic process what time is. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/01-ROOT.md#one-kind-of-symbol",
+     "says": {
+      "en": "「Nor is a time: its order is the reach of the condition relation, a strict order where that relation has no cycle」."
+     }
+    },
+    {
+     "record": "continuous-time-as-tower",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-continuous-time-as-tower",
+     "says": {
+      "en": "Time as a tower of discrete readings: each level reads the next finer at strictly increasing times."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "Reach is a strict order exactly without cycles, a hypothesis a net may meet, and feedback is read as a line returning to a class."
+   },
+   "source_adds": {
+    "en": "The conventionally designated clock as what 时 is."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-no-canonical-linearization",
+   "name": {
+    "en": "History is a DAG with no canonical linearization"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Claims 198, 204, 206",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "In the Jian Calculus any linear order of events is a topological sort, a projection. Two observers can disagree about which of two events came first and both be right. No privileged current exists; causal order is reliable and linear time order is not."
+   },
+   "quote": "Prehension makes history a DAG, not a timeline",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "reading": {
+    "en": "The mechanism has a checked form on causal-set growth: orders of birth of unrelated elements commute, and no one of them is common to all courses. It holds on that model, under a covariance premise and decisions the theorem names, not as a law of every net. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "the-present-on-causal-set-growth",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-the-present-on-causal-set-growth",
+     "says": {
+      "en": "Theorem (causal-set growth, and witnesses). Natural labellings are exactly the orders of birth; with precedence weakly decided, no order of birth of unrelated elements is common to all courses (`Presence.either_order`). Labels carrying no physical meaning is a premise of the model."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "Each reading of 'present' answered exactly, with the decision principle each needs."
+   },
+   "source_adds": {
+    "en": "Prehension as content-carrying, the audit-free reconstruction of a decision, the claim as an engineering commitment."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-state-derived-from-events",
+   "name": {
+    "en": "Events are the truth and state is derived"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Claims 195, 197, 209",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Changing state does not exist ontologically: only a new event occurs and derived state changes. Caveat, visibility, legitimacy and boundary are predicates over configurations, never stored. Event sourcing is an ontological commitment, and a reification error is near impossible to repair."
+   },
+   "quote": "Events are the source of truth and state is a cache",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "reading": {
+    "en": "A general form stands: states and law can be read off a course of values, two moments alike where everything after them agrees. So state needs no prior giving. The account states this of a history read through a map; it gives no rule against storing and no ontological claim about events. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "the-split-that-makes-sense",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-the-split-that-makes-sense",
+     "says": {
+      "en": "Theorem (any type; a determined law read through a map; no premise). Every history of values is a determined law read through a map, two moments alike exactly where everything after them agrees."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#wenli",
+     "says": {
+      "en": "Assessment: 「两个时刻自此起逐步之值皆同，即是一状……所以文不须先给状，也不须文外的立法者。」"
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "The exact criterion, with a list needed to name the classes."
+   },
+   "source_adds": {
+    "en": "The derived-not-stored rule as a design law, and the default against reifying."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-perspectival-no-god-view",
+   "name": {
+    "en": "No view from outside: every observer's view is partial"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Claims 188, 204, 211",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A configuration holds no global state. An observer's view is always a strict subset; bisimulation is relativized and does not transfer between observers. Any monitor is itself a 間 observing from its own place."
+   },
+   "quote": "bisimulation is relativized and does **not** transfer across observers",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "reading": {
+    "en": "Agreement in form: what a formation can select is bounded by its couplings, histories alike through one formation's couplings may differ through another's, and a pool separates what some member separates. That is relativized likeness. Whether a context-free frame fits at all is a further exact question; where one fits, no formation is thereby placed in it. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "selection-through-couplings",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+     "says": {
+      "en": "Theorem (World; no premise). Two histories are selected alike by every selection through a formation's couplings exactly when they are alike through them; the same for a group's pooled coupling. A particular selection may ignore what its couplings carry."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-pooled-coupling-reaches",
+     "says": {
+      "en": "Theorem (World; balance for the gap). With a list holding exactly the members and each member's coupling of two histories decided, a pooled selection separates them exactly when some member does not couple them alike."
+     }
+    },
+    {
+     "record": "claims-shown-in-context",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-claims-shown-in-context",
+     "says": {
+      "en": "Theorem (any type; each claim within some context). What contexts show glues exactly where contexts agree where they meet, and a frame of context-free claims fits exactly where it glues everywhere. Some worlds glue nowhere: Specker's three boxes, the Mermin-Peres square."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "Pooling as the exact form of what a second observer adds, and the condition under which a context-free frame exists, with witnesses from quantum contextuality."
+   },
+   "source_adds": {
+    "en": "Relativized bisimulation as a semantics, and 'no ambient observer' as a design rule."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-map-territory-mutual",
+   "name": {
+    "en": "Map and territory constitute each other; the map can capture its incompleteness"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Claims 237-238; loss 40",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Map ⇄ territory is mutual constitution, fully dual and self-aware, not a map approximating a territory, and deeper than Korzybski. 体 is only ever truncated by some 用, so the map can capture its own incompleteness. The folder lists this among what the conversations hold and the drafts do not."
+   },
+   "quote": "so the map can capture its own incompleteness",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "The account puts knowing inside the unfolding, not beside it, and a formation's map changes what it does. On incompleteness the law is exact and partial: a revising family says its last gap and is incomplete at every step, so it can state each gap, not all. It does not say the two constitute each other, and models stay answerable to tests. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/03-KNOWING.md",
+     "says": {
+      "en": "Thesis. 「Knowing is a relation within the unfolding, not a mirror beside it.」"
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#wenli",
+     "says": {
+      "en": "Reading [AI, D63]: 文理生生把观与证放在模型之外作为元层，「本理论把知放在展开之内」."
+     }
+    },
+    {
+     "record": "readings-within-what-they-read",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read",
+     "says": {
+      "en": "Completing it step by step, each revision keeping every earlier reading and saying the last gap, is an unfolding incomplete at every step that never returns."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "How far a map can state its own gaps, as a theorem."
+   },
+   "source_adds": {
+    "en": "Mutual constitution as the relation of map and territory; the mediation triangle of 理, 心, 事."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-unclassified-space",
+   "name": {
+    "en": "Always leave an unclassified space outside every metric and type"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "The domain sweep; claim 126; Relations, keep-the-possibility-space-open",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "庄子 is the framework's interface to its own limits: 言无言 is the Liar/Russell/Gödel family, 得意忘言 tool-theory, 彼/是 frame-dependence. The engineering consequence is a design rule: always leave an unclassified space outside every metric, type and pattern."
+   },
+   "quote": "always leave an *unclassified* space outside every metric, type and pattern",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "reading": {
+    "en": "The form has a checked law: no family of readings within what it reads says every reading, so the outside is not left by choice but cannot be closed, where a map moves every value. A sequence never revisiting is held by no list. The account gives a limit, not a rule of design; and it does not read 庄子 here. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "readings-within-what-they-read",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read",
+     "says": {
+      "en": "Theorem (any type). Where a map moves every value, no member of a family of readings indexed by what it reads says the diagonal gap. Lawvere's fixed point as an unfolding; coding and provability are not stated."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#closing-and-opening",
+     "says": {
+      "en": "未: 永不重访的序列不为任何清单所含（`unlisted_of_new`）."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "The diagonal limit as a theorem with its hypothesis."
+   },
+   "source_adds": {
+    "en": "The design rule for metrics and types, and the identification with 庄子's 言无言."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-autopoietic-boundary",
+   "name": {
+    "en": "A boundary is the product of a 間's operation; three pathologies"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "The second track; claims 185, 199, 210",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A 間's boundary is the product of its operation, not its precondition: when interaction stops, the 間 dissolves. Health has criteria and three named pathologies, 凝固, 耗散, 自闭. Liveness needs internal activity, self-production and boundary maintenance, and cannot be a stored flag."
+   },
+   "quote": "A 間's boundary is the product of its operation, not its precondition",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "The account has a minimal case and says it is minimal: one constraint with turnover, regenerated from the flow it regulates, below closure of constraints or autopoiesis. Generation is a pattern continuing through renewal of its parts, close to autopoiesis by a correspondence not proved. A boundary drawn is a reading, and what it omits still takes part. The three pathologies are not named. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "the-stock-buys-time-where-the-rebuild-draws-on-it",
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-the-stock-buys-time-where-the-rebuild-draws-on-it",
+     "says": {
+      "en": "Reading [AI, new]: the member rebuilt from the level is a minimal model of an organism: one constraint with turnover, regenerated from the flow it regulates, below closure of constraints, autopoiesis and Rosen's closure, each of which asks more."
+     }
+    },
+    {
+     "record": "generation-and-degeneration-at-two-grains",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-generation-and-degeneration-at-two-grains",
+     "says": {
+      "en": "Correspondence: generation as a pattern continuing through the renewal of its parts is close to autopoiesis. Correspondences not proved."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/01-ROOT.md#boundaries",
+     "says": {
+      "en": "「what a drawn boundary leaves out still takes part in the unfolding」."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "An explicit statement of how far short of autopoiesis its model stops."
+   },
+   "source_adds": {
+    "en": "凝固, 耗散, 自闭 as a health taxonomy; 間 themselves as nested autopoiesis; spawn at first interaction."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-ai-relocated",
+   "name": {
+    "en": "AI is relocated: agency is not inside the agent"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "The second track; claim 187",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "An agent's intelligence, agency and understanding are not located inside the agent but are emergent properties of agent, 間, other actors and protocol structure. 間 is not AI added to the actor model; it re-sites AI."
+   },
+   "quote": "AI is relocated",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "The nearest live move relocates alignment, not intelligence: a person, an AI system and a training process are formations within the unfolding, and alignment is first what each one's selections reach, through couplings. The account states nothing on where intelligence or understanding is located, and agency stays a reading of a law. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
+     "says": {
+      "en": "On the thesis of one relational unfolding, a person, an AI system and a training process are formations within the unfolding, each coupling by threshold into what it depends on and by level into what it observes."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "What a selection by or of an AI can reach, as laws."
+   },
+   "source_adds": {
+    "en": "Intelligence and understanding as located across agent and 間."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-cross-domain-evidence",
+   "name": {
+    "en": "Cross-domain isomorphism is evidence for monism"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "The domain sweep; claims 83, 107, 110, 131, 138, 148",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "位/际/化/理 map natively onto category theory, physics, cybernetics, ecology; 墨经's 异 is Shannon's bit, 祖暅 anticipates Cavalieri. Cross-references among viewings are evidence of monism, not redundancy. The folder concedes that cells admit several mappings and that the fit is not bijection."
+   },
+   "quote": "Cross-domain isomorphism is evidence, not decoration",
+   "carried": "changed",
+   "relation": "divergence",
+   "reading": {
+    "en": "The account's three relations exclude this inference: a matching structure is not confirmation, law and text are independent. It adds that the same word is neither the same referent nor descent, and rates its own central results as known mathematics. It holds no priority claim. Two AI readings sharing one thread are said not to be independent evidence. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#three-relations",
+     "says": {
+      "en": "「相合不是印证：律的成立不靠原文，原文的意义也不由律穷尽。」"
+     }
+    },
+    {
+     "record": "civilization-thought-on-the-spine",
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#zh-mapping",
+     "says": {
+      "en": "Assessment. 读法另有两条界：同语不等于同指，也不等于相承; 每一条目先写原文之义，再写结构之读. 三读是必要的."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#known-results",
+     "says": {
+      "en": "The verdict, from an AI review, search not exhaustive: none of the central results is new mathematics; each is near-definitional or a known result restated."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "Counted divergences by domain (19% overall), and the rule that a second checker changes much."
+   },
+   "source_adds": {
+    "en": "The twelve-domain operator tours as a programme."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-no-new-primitive-needed",
+   "name": {
+    "en": "No domain requires a new primitive; one structure generates the foundations"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Claims 139, 148, 150, 75",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "All twelve domains read through the two duals; 系含系 plus Layer 2 generates ZFC, MLTT and ETCS. Bounded: expressive, not proof, completeness; modulo encoding; monism stipulated. A stronger earlier form ('internal limits: 0') was reversed. Ren wants one axiom, everything else a theorem."
+   },
+   "quote": "no domain requires a new Layer-2 primitive",
+   "carried": "changed",
+   "relation": "scope",
+   "reading": {
+    "en": "The account leaves the universal open and states one failure: processes are represented both ways, the World for its relations and not its amounts. There is no universal minimal concept grammar, only a least reading for a given law and class. Its root laws forbid no relation and take content from hypotheses. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/01-ROOT.md#open",
+     "says": {
+      "en": "Open: 「That every becoming, and the whole theory, has a faithful representation in the grammar.」 Processes' is shown both ways; the World's both ways for its relations and not faithful on its amounts."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#wenli",
+     "says": {
+      "en": "「脊柱只有对某一条律、某一个类的最小之读……没有一个普遍的最小概念语法」."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "The dependency audit and representation theorem a law must pass before it counts as of the grammar."
+   },
+   "source_adds": {
+    "en": "Mathematics written in 文言, with 数 by von Neumann ordinals, and 'one axiom' as a goal."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-quantity-is-relation",
+   "name": {
+    "en": "Quantity is a relation: 数是一个集合的关系"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Claims 54, 97, 149, 295",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Number is constructed, never primitive: von Neumann ordinals over 系, ℕ through ℂ. Units are reference events, dates and averages relations, types detected patterns. Ren's own phrase: number is a relation of a set."
+   },
+   "quote": "Quantity is a relation",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "The account has one exact form of this: count as a perfect pairing of units. Balance is represented on the grammar, 'represented and not derived', and near-definitional under the full relation. Beyond that the World's amounts are not represented, its natural numbers staying as model commitments. So the claim holds for counts, and stops at amounts. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "shared-laws-on-the-grammar",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-shared-laws-on-the-grammar",
+     "says": {
+      "en": "Theorem (root). Balance, represented and not derived: a perfect pairing conserves count (`«守数当且仅当可对»`); under the one a pairing is equal count, so the representation is near-definitional."
+     }
+    },
+    {
+     "record": "the-world-represented-both-ways",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-the-world-represented-both-ways",
+     "says": {
+      "en": "Theorem (World; the grammar for its lemmas). The World represented both ways, its amounts not."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "The exact point of failure."
+   },
+   "source_adds": {
+    "en": "The construction of number at every level, and units as reference events."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-monist-attractor-selection",
+   "name": {
+    "en": "Symbols are selected toward a monist attractor"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "The bridge nobody wrote down; claims 111-112, 306",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Where many groups with different concepts must communicate, surviving symbols are those traceable to a common root: the strongest consensus property and the most robust convergence of a language. Pre-Qin 古文 approximates an ideal 古文. A shared script read across states served as a protocol. Conditional, a conjecture in Ren's speech."
+   },
+   "quote": "the symbols in use are selected toward a monist attractor",
+   "carried": "changed",
+   "relation": "divergence",
+   "reading": {
+    "en": "The account's law of codes gives no such pull on its premises: copying makes no form, the order and start fix what is reached, and a symmetric start never settles unbroken. An order brings every start to agreement where it gives all one origin, but that origin is who was copied, not a concept all derive from. The model does not read traceability to a root, so it neither tests nor refutes this. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "a-code-formed-between-formations",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations",
+     "says": {
+      "en": "Theorem (any type; premises by row). The start and the order fix the form reached; from a symmetric start a law keeping an exchange and a renaming never brings formations it exchanges to agree where the renaming moves every form; in a witness, a preferred form or an order each breaks one symmetry."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#ro-gaps",
+     "says": {
+      "en": "Table row: 在形成之间形成的编码（约定俗成）; 荀子“同则同之”“名无固宜”；止戈之说的写回；书同文; 已证 in 05."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "Imposed codes as a second route: agreement by privileging forms, each formation losing the distinctions merged."
+   },
+   "source_adds": {
+    "en": "The monist attractor, the ideal 古文 postulate, and the tribal history of the script."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-he-not-zheng",
+   "name": {
+    "en": "Only cooperation reasons: selection on being understood needs 和"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Claim 113",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Ren corrects his precondition from egalitarianism to 和 rather than 争. Under contention the self outranks the reasoning and selection runs on winning; only under cooperation does it run on being understood. The folder calls this the missing microfoundation for selection on cognition."
+   },
+   "quote": "一旦争，则'我对'，我大于理；合作才讲理，斗则讲赢.",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "The form stands: a selection reaches what its selector reads, so a selector reading the win selects the win, and one reading what is understood selects that; it is right exactly where what matters is read. What the source adds is the cause, that contention sets the first and cooperation the second. No law has that variable, and in the account cooperation itself is not ranked. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "selection-right-exactly-where-read",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-right-exactly-where-read",
+     "says": {
+      "en": "Theorem (any type; for the selection, the alternatives' equality decided). What matters goes alike across what a map lumps exactly where it is read off the map, and a selection through the map selecting exactly what matters exists exactly there."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#not-shown",
+     "says": {
+      "en": "Not shown: any evaluation: no law says a drain is a harm, restraint better, cooperation good or a shared code worth keeping. That is asked under the two premises of 07, the continuation condition for scope and C for order."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "The exact condition for a selection to be right, and capture laws for a rule reading the share it selects."
+   },
+   "source_adds": {
+    "en": "和 against 争 as what decides whether selection runs on being understood or on winning; the self outranking the reasoning. The saying stands in the folder and sources/12-claude-ai-chats."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-dou-lineages-extinct",
+   "name": {
+    "en": "Lineages optimised for 斗 go extinct when the environment shifts"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Claim 116",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Lineages evolving in the 斗 direction (male over-optimisation of appearance is the example) are more likely to go extinct at a shift, since such traits are not 生 and adapt poorly. What is recognised as 生, accumulated toward the future, is 理. Conditional."
+   },
+   "quote": "lineages that evolve in the 斗 direction",
+   "carried": "changed",
+   "relation": "scope",
+   "reading": {
+    "en": "The account separates what the source joins: position is zero-sum by counting, and a race of joint excess ends a part through its dependence on the condition, not its position; those ahead who do not so depend can continue. Among groups, one whose own condition ran into joint excess leaves none. Calling what remains 理 or 生 is no law here. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "relative-position-is-zero-sum",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-relative-position-is-zero-sum",
+     "says": {
+      "en": "A part's position against the others is zero-sum by counting. 「A race of joint excess ends a part through its dependence on the condition, not its position; where those ahead do not so depend, they can continue.」"
+     }
+    },
+    {
+     "record": "selection-among-groups-by-ending",
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-selection-among-groups-by-ending",
+     "says": {
+      "en": "Theorem (any type; World for the flow laws). Where every group with less of an amount leaves no offspring, nothing is discordant among groups; on the base, a group whose own condition ran into joint excess leaves none."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "The dependence that does the ending, as the variable to read."
+   },
+   "source_adds": {
+    "en": "The empirical claim on lineages with its example: grep of 04 and 05 for sexual, ornament, peacock, arms race and Red Queen finds nothing; those chapters were not read in full for it."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-moloch-not-produced",
+   "name": {
+    "en": "A relational ontology does not produce coordination failure"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Claim 191",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Moloch's coordination failure is not a problem 間 solves but a pathology its ontology does not produce: substance ontology generates coordination failure in distributed reality, and relational ontology bypasses it structurally."
+   },
+   "quote": "Moloch's coordination failure is not a problem 間 solves but a pathology 間's ontology does not produce",
+   "carried": "changed",
+   "relation": "divergence",
+   "reading": {
+    "en": "The account denies this on its own premises: starting from relations removes the frame of a fixed sum among independent owners and does not remove rivalry. Positional goods stay zero-sum, and who restrains stays contested. Method keeps real losses and conflict in. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#8-zero-sum-competition",
+     "says": {
+      "en": "「Starting from relations removes the frame of a fixed sum divided among independent owners. It does not remove rivalry, and both are theorems」. Reading [AI, D45]: positional goods stay zero-sum, and conserved stocks rivalrous."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "Positive-sum and conflicting structure together, each with a law."
+   },
+   "source_adds": null,
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-datong-mechanism-dao-outside",
+   "name": {
+    "en": "大同 is a mechanism, and 道 exists outside the mind"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Claims 114-115, 190",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "From the selection argument: 道 is also a construct but not only one, 道非其他，它存在于心外. 大同 stops being a utopia and becomes a direction in which language and existence automatically manifest toward 理, 善 and 生生不息. Ren marks it as inference ('可能')."
+   },
+   "quote": "Therefore 大同 is a mechanism, not a utopia",
+   "carried": "changed",
+   "relation": "divergence",
+   "reading": {
+    "en": "The source gives unconditionally, by dynamics, what the account holds only under unasserted premises. The continuation condition fixes scope and C fixes order, neither asserted and their warrant open; dynamics decides no significance. The account sets up no formal 道 and does not derive 善. 大同 is absent as a word. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#dao",
+     "says": {
+      "en": "Reading [AI, D54]: is it the one complete 道, with 善 derived from generation? 「否：理论从不把道等同于任何脊柱之词，动力学不决定意义，伦理的两个前提，延续之条件定范围、以广为愈定次序，都不断言」."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#divergences",
+     "says": {
+      "en": "「天地之大德曰生」 reads as a comparative commitment, like C, not a theorem [AI reading, D65]."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "Four questions in 'does this elucidate 道', answered apart. Unasserted premises in place of a mechanism."
+   },
+   "source_adds": {
+    "en": "Automatic direction toward 善, and 道 as mind-independent. The folder also holds the contrary line of claim 182, that 大同 is no destination."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-anti-zhuxin",
+   "name": {
+    "en": "反诛心: no verdict on inferred inner states; 信 is word-deed alignment"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "The ethical constraint; claims 95, 153-158",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Only speech and act are third-party observable, so a metric reads those alone, graded, never Boolean, with observation sovereignty and consent-gated body signals. High alignment is coherence, not truth. Low alignment calls for inquiry, not verdict. 信/诚 are infrastructure, not a moral tribunal. Called the project's one concrete ethical safeguard."
+   },
+   "quote": "反诛心 is a hard constraint",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "reading": {
+    "en": "The epistemic half stands: acts fix only what they tell apart, comparisons beyond the shown reach stay unforced, and asking the one judged is pooling their coupling. The prohibition does not: root laws forbid no relation, and the account treats acts-only reading as limited, not as the only legitimate one. 偏蔽 is diagnosed only from what is excluded, a near rule. Intention itself is not stated. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#what-the-acts-show",
+     "says": {
+      "en": "A selection reading a formation's acts goes through what of those acts couples into it, and it fixes of the formation only what they tell apart. Reading it as a training, helper, overseer or court is a reading."
+     }
+    },
+    {
+     "record": "what-choices-show-of-an-order",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-what-choices-show-of-an-order",
+     "says": {
+      "en": "Theorem (root; no premise; near-definitional). Beyond the shown reach no comparison is forced: with no cycle, some strict order according with the choices puts x above y where y does not reach x."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-what-readings-fix-of-the-unread",
+     "says": {
+      "en": "Reading [AI, new]: a law acting alike everywhere can mislead a reader whose readings miss where it is wrong. 「Intention, anticipation and another's false belief are not stated.」"
+     }
+    },
+    {
+     "record": "reading-anothers-couplings-is-pooling",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-reading-anothers-couplings-is-pooling",
+     "says": {
+      "en": "Theorem (World). A formation coupled by level into everything another couples into selects through at least their pooled coupling. Knowing another's law is no coupling."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-the-boundary-of-enough-under-undetermined-laws",
+     "says": {
+      "en": "Reading [AI, D65]: locked seeking 「is diagnosed only from what is actually excluded before assessment, not from a firm judgment, a stable goal or a disagreement, so the label cannot immunize.」"
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "Exactly what choices and readings fix of a formation, and that the one read adds what no reasoning about them can."
+   },
+   "source_adds": {
+    "en": "诛心 as ill-formed; T+E as the only inputs; graded, never Boolean; observation sovereignty; consent-gated body signals; coherence is not truth; inquiry not verdict. Full text in sources/08-jian-wen-language/jian-repo/JIAN_FOUNDATION_NOTE_v1.0.md §IV.5; history/lineage/shengsheng-buxi holds a later form."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-virtues-as-idioms",
+   "name": {
+    "en": "The five virtues given a relational ontology: 仁 as 感, 信 as alignment"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Idioms are library; claims 91-93, 95, 100, 108",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Layer 3 idioms are reducible but not reduced: 感 is 化 along 际 (仁), 修 is 化 of self (智), 约 a time-locked 理 (义), 礼 the protocol of 际, 信/诚 word-deed alignment. 一以贯之, 忠恕, is called structural unification, not mystical."
+   },
+   "quote": "The five Confucian virtues map onto the framework",
+   "carried": "changed",
+   "relation": "divergence",
+   "reading": {
+    "en": "The account does not give virtues a definition in its structure: 善, 恶, 智 have no formal predicate, and 仁 is not taken as a name because it carries value. 感 is scoped to what couples in. An evaluation enters only through comparison, under the continuation condition for scope and C for order, neither asserted. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#glossary-senses",
+     "says": {
+      "en": "Reading [AI, D1, D5]: 「善、恶、智没有形式谓词」."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#zhonghua",
+     "says": {
+      "en": "不采之字: 仁（带价值）. 「不采不是排斥」: 这些字所在的文字仍按其所言归类."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#divergences",
+     "says": {
+      "en": "动力学不决定意义，生命之义只在延续之条件下是定理，而排序在以广为愈，二者皆不断言."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "The rule that evaluation is not to be written into a definition."
+   },
+   "source_adds": {
+    "en": "The idioms 修 and 约 as derived operators, and the five-virtue table."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-gongfu-and-liangzhi",
+   "name": {
+    "en": "工夫四层 and 致良知: direction, not level, marks genuine change"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "The reader is under the same discipline; claims 159-167",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Reading is 做工夫 through 学, 见, 化, 忘, phases that are non-linear and local. The felt 'I have seen' cannot tell genuine from counterfeit. 良知 is the answer, an acute discomfort you cannot lie past, and the one marker is deepening sensitivity to one's own unseen. The author is bound too."
+   },
+   "quote": "The only stable marker of genuine internalisation is a deepening sensitivity to what one has not seen.",
+   "carried": "changed",
+   "relation": "divergence",
+   "reading": {
+    "en": "On 良知 the account records a divergence of standing: 阳明 states as a recognised fact what the theory holds under an unasserted condition. It also warns the source's marker of a risk: discounting each failed outcome as not real knowledge leaves nothing testable. The four phases are absent. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#wang-yangming",
+     "says": {
+      "en": "Reading [AI, D54]: 「若每一不如预期之果都事后排出“真知”，此说便无可检验之内容」; 「阳明把本然良知当作已认出的事实来陈述，理论只在一个不断言的条件之下持有相近的内容，这是地位上的相分」. “行是知之成”合于实验之律."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "A test-based reading of practice: what was walked is fixed, what was not is not."
+   },
+   "source_adds": {
+    "en": "The four phases, the counterfeit problem, and direction as diagnostic."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-xin-as-fourth-root",
+   "name": {
+    "en": "心 as a fourth irreducible root; 知行合一 as a theorem"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Claims 222, 230-231; critiques 33, 36",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "jian-ontology v7: 事 is the sole ground with four 本 (物, 動, 間, 心). First person cannot be losslessly captured, so 心 is a reflexive aspect and every projection from it is lossy. 知行合一 is five adjunctions. The other tracks disagree: 《气》 forbids representing 心 at all, and R-Family omits it."
+   },
+   "quote": "心 as the fourth root is v7's key move",
+   "carried": "changed",
+   "relation": "divergence",
+   "reading": {
+    "en": "The name table rejects 心 as a name for its overtone of a single controller, and the account treats what an experience is like as a live argument that could defeat its thesis, not as a root. Reflexive centres appear as standpoints in 07. Rejecting a name does not bar the texts that use it. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#zhonghua",
+     "says": {
+      "en": "不采之字 37 个: 道, 气, 天, 心（单一统摄者）, 性, 仁. 「不采不是排斥」."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding",
+     "says": {
+      "en": "What would defeat it: live arguments, that relations need relata with natures of their own, and that what an experience is like is not how it relates."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "Naming the first-person case as a defeater, not absorbing it."
+   },
+   "source_adds": {
+    "en": "四本, 三显, 三征, 恒, 吾/我, the semiring 合/和/生 and the adjunctions."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-open-closed-operator",
+   "name": {
+    "en": "開/閉 as the only two-valued operator, seated on 幾"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Claim 226; Relations, keep-the-possibility-space-open",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "When the about-to becomes the already, that is 開; when it returns to the not-yet, 閉. Gates give 幾開→生, 幾閉→灭, 勢開→成, 勢閉→反, 機開→转, 機閉→守. It is not an added primitive but the only operator surviving the zero-dimensional collapse."
+   },
+   "quote": "開/閉 is the architecture's only two-valued operator and it sits on 幾",
+   "carried": "changed",
+   "relation": "divergence",
+   "reading": {
+    "en": "06 §十 maps the 闭 and 开 of 生生不息论 and 间生论, which the folder's genealogy ties to this operator; it never takes up this gate table. Structure replaces evaluation: closure is an absorbing region, as form no loss, and 可 is reaching a return. Early 'all four needed' reverses. Whether a closure supports 生生 is a comparison, under the continuation condition for scope and C for order, neither asserted. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#closing-and-opening",
+     "says": {
+      "en": "「一种闭是否支持、丰富或损害生生，由比较来说，不由类型来说：延续之条件定范围，以广为愈（C）定拓宽与收窄之序，……两个前提都不断言」 [AI reading, D49]. 闭: 律永不离开的区域，闭就其形式而言不是损失."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "Theorems under each old term, and the non-independence of the four marks of 开."
+   },
+   "source_adds": {
+    "en": "The gate table on 幾, 勢, 機, and the zero-dimensional collapse argument."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-anti-totalization",
+   "name": {
+    "en": "The paradigm must not totalize: elsewhere substance ontology may fit"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Claim 202; critique 38",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "《气》 refuses to totalize: the highest leverage is transcending paradigm, so 間 must not become another totalizing attractor. In pure computation with no coordination, substance ontology may fit better. The folder notes that Claim Z contradicts this and nobody saw the ethical half."
+   },
+   "quote": "在某些场景（比如纯 computational tasks、no inter-actor coordination）substance ontology 可能更 fit——这种时候不要 force jian",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "reading": {
+    "en": "Partial agreement: the one-unfolding thesis keeps its defeaters in view and neighbours named, and 06 records divergences as not errors. The account does not say that a substance reading fits better anywhere; its grammar still takes any domain as a language. So what the source gives as a refusal to apply, the account gives as things that could defeat a reading. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#what-would-defeat-the-reading",
+     "says": {
+      "en": "What would defeat it, by kind of claim: a language, nothing could; the explanatory reading is a thesis, argued, with four things it says, each differing in what could defeat it."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#three-relations",
+     "says": {
+      "en": "相分: 记为相分不是说原文错了."
+     }
+    }
+   ],
+   "account_adds": {
+    "en": "Stated defeaters in place of a stance."
+   },
+   "source_adds": {
+    "en": "A positive statement of where the relational paradigm should not be used, and the highest-leverage argument from Meadows."
+   },
+   "absence": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-jianwen-wuxing-feedback-graph",
+   "name": {
+    "en": "五行 is a five-node feedback graph, not a cosmology"
+   },
+   "domain": "earlier-folders",
+   "group": "jian-and-wenyan-as-formal-language",
+   "source": {
+    "work": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "locator": "Claims 134-135; critique 46",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "生 is a Hamiltonian cycle of positive edges, 克 a skip-cycle of negative ones, every node with in-degree and out-degree two: a mass-balanced negative-feedback ring, a stable oscillatory regime. A strong fence: not substances, not a classification. The folder notes the 中医 section may break that fence."
+   },
+   "quote": "五行 is to be read strictly as a five-node cybernetic feedback graph, not a cosmology",
+   "carried": "history-only",
+   "relation": null,
+   "reading": {
+    "en": "五行 has no live occurrence. It stands in the history 中华本 name table as not adopted, with the reason that the cycles must first pass a test for being real loops and that the cosmic scheme is later; 墨经's 五行毋常胜 is scoped there. The graph itself is not stated even there. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "History: theories/becoming/history/THE-THEORY-OF-BECOMING-ZHONGHUA.md name table, row 五行; history/WENLI-AND-BECOMING.md line on names neither side adopts."
+   },
+   "absence": {
+    "searched": [
+     "五行 in ONE-PAGE, THE-THEORY-OF-BECOMING, chapters, review, GLOSSARY, records: no occurrence",
+     "五行 in theories/becoming/history"
+    ],
+    "read": [
+     "THE-THEORY-OF-BECOMING-ZHONGHUA.md row 五行, by grep line",
+     "06-CLASSICAL-TEXTS.md §未决 (阴阳家 not collected)"
+    ]
+   },
+   "labels": [
+    "AI reading"
+   ]
+  }
+ ],
+ "changes": [
+  {
+   "id": "cx-jianwen-grammar-is-surface-syntax",
+   "what": "changed",
+   "why": "Added the name table's one-concept-one-name rule, the sharpest live contrast with position-dispatched polysemy, which the mapper missed; the claim itself stays retired."
+  },
+  {
+   "id": "cx-jianwen-kernel-stlc-complete",
+   "what": "kept",
+   "why": "Read 06 §九 and critiques 26 and loss 37: the live text reports the completeness claim unproved and keeps only the test; nothing live maps 者 to a binder (grep for binder, λ, STLC in the live files)."
+  },
+  {
+   "id": "cx-jianwen-few-operators-many-atoms",
+   "what": "changed",
+   "why": "account_adds blurred two bases: 未/不 and 故/则 are told apart in the 中华本's code on the World model, not by the grammar's operations."
+  },
+  {
+   "id": "cx-jianwen-classical-definitions-mohist",
+   "what": "changed",
+   "why": "Added what the mapper missed: 同异交得 has a live law, 小故 is read as the spine's dependence, 大故 is read as necessary and sufficient, not sufficient, and the folder drops the 一 of the 墨经's sentence on which the live reading turns."
+  },
+  {
+   "id": "cx-jianwen-recovery-not-invention",
+   "what": "kept",
+   "why": "Checked 06 #thesis and the zh-mapping assessment: the account states the contrary for its own classical work; relation stays divergence."
+  },
+  {
+   "id": "cx-jianwen-name-is-structure",
+   "what": "changed",
+   "why": "Missed half: the account does bind a name to structure, by a criterion, and that criterion directly scopes claim 38 (having an id is to exist). The convention half alone gave too simple a contrast."
+  },
+  {
+   "id": "cx-jianwen-dual-expression-invariant",
+   "what": "changed",
+   "why": "source_adds claimed a proved 1:1 map; the source lists it as required and unproven."
+  },
+  {
+   "id": "cx-jianwen-near-optimal-compression",
+   "what": "changed",
+   "why": "Relation was scope, but the account gives no place where the claim holds: it reports a neighbouring count and lists the claim under what is not shown. That is divergence. Added the direct line in 未示."
+  },
+  {
+   "id": "cx-jianwen-every-character-definite",
+   "what": "changed",
+   "why": "Split: the universal form is changed; the restricted subset has its own live open question, now a separate entry."
+  },
+  {
+   "id": "cx-jianwen-overlays-may-be-arbitrary",
+   "what": "kept",
+   "why": "Checked 06 #hanzi four levels and #arrangements: the same test, for characters and hexagram lists; the R-Family overlay itself is gone with the algebra."
+  },
+  {
+   "id": "cx-jianwen-zhi-ge-caution",
+   "what": "kept",
+   "why": "Checked 06 #zhi-ge: the caution is carried and sharpened; Ren's spoken use is what the account declines."
+  },
+  {
+   "id": "cx-jianwen-v4-forced-on-hexagrams",
+   "what": "changed",
+   "why": "Sharpened: what Lean states of the group, the modelling choice that replaces forcing, and the route. The record names the 生生不息 review's H4, and that repository carried the R-Family line, so descent is likely though not stated live; the mapper said only that none is shown."
+  },
+  {
+   "id": "cx-jianwen-v4-orbit-count",
+   "what": "kept",
+   "why": "Rechecked by Burnside by hand: (64+0+8+8)/4 = 20. The folder's floated 16 is what §10.4 itself doubted; the record gives 20 with `class_census`."
+  },
+  {
+   "id": "cx-jianwen-cuozong-privileged",
+   "what": "changed",
+   "why": "Three corrections. Relation is divergence: the source promotes 錯綜 and the account promotes none. Added 06's finding that rearranging laws commute with 錯. Reading v4-foundation §§1.1, 5.2, 6.1, 7.3 shows the central claim fails for position reversal on pointwise ∧; the mapper read only §§1.5, 10.4 and called the absence neutral."
+  },
+  {
+   "id": "cx-jianwen-nuclear-outside-v4",
+   "what": "kept",
+   "why": "Checked 06 §5.3: merging and outside the group stand; a two-cycle corrects iteration to a fixed point. Lean comment confirms 互 commutes with each symmetry."
+  },
+  {
+   "id": "cx-jianwen-r-family-universal-substrate",
+   "what": "changed",
+   "why": "Reclassified: R-Family stands in history/lineage/shengsheng-buxi and the deeper-root genealogy, so history-only, not not-carried (the mapper searched there and found it). Narrowed to the algebra; Claim Z moves to its own entry, since the account does take up what a universal substrate is."
+  },
+  {
+   "id": "cx-jianwen-cosmological-sequence",
+   "what": "kept",
+   "why": "Checked 06 #dao and the record's correspondence field: the bridge is refused; only the digit reading of 太極 stays, as the AI's reading on a counter."
+  },
+  {
+   "id": "cx-jianwen-information-conservation",
+   "what": "kept",
+   "why": "Checked 06 §5.1 and §5.7: no merging gives return, and a lumping carries a law where it goes alike; the type-level language is absent."
+  },
+  {
+   "id": "cx-jianwen-self-articulation",
+   "what": "changed",
+   "why": "Took in the dropped name entry's one real claim (R8 as the level that can name itself) and the warning that the live 文 is another thing."
+  },
+  {
+   "id": "cx-jianwen-bagua-demotion",
+   "what": "changed",
+   "why": "Added the folder's own tension, that its avoidance list refuses the doubling while the R-Family track returns to it, and why the absence is not agreement."
+  },
+  {
+   "id": "cx-jianwen-claim-strength-calibration",
+   "what": "changed",
+   "why": "Was carried. The target states the discipline in general; the source's itemized corrections, vocabulary table and nine obligations about R-Family are not stated, so carried-in-part."
+  },
+  {
+   "id": "cx-jianwen-one-self-containing-primitive",
+   "what": "kept",
+   "why": "Checked 01 §1 and 08: one symbol stands, self-containment does not; no-cycles is a hypothesis, not the folder's well-foundedness."
+  },
+  {
+   "id": "cx-jianwen-central-sentence-relations",
+   "what": "changed",
+   "why": "Mapper said the account merely does not state that relation needs two ends; 06 says the grammar does not assume no-self-condition and proves what self-conditioning gives, so claim 177 is met by a stated difference."
+  },
+  {
+   "id": "cx-jianwen-monism-chosen-not-proved",
+   "what": "kept",
+   "why": "Checked 08's thesis: argued, excludes no observation. The divergence on 功用 against checked proof is kept in the reading."
+  },
+  {
+   "id": "cx-jianwen-position-is-yoneda",
+   "what": "kept",
+   "why": "Checked 01 §4 and §9.2: bisimulation and the two-way core carry the form, and equality is the stated limit; Yoneda is absent live (it stands only in history/lineage)."
+  },
+  {
+   "id": "cx-jianwen-two-duals-minimum-complete",
+   "what": "kept",
+   "why": "Checked 06 #glossary-senses and #definitions and 03 #li: same characters, senses moved, and 06 says so."
+  },
+  {
+   "id": "cx-jianwen-shi-as-derivative",
+   "what": "changed",
+   "why": "The folder's term table also lists attractor among 势's aliases (claim 130: attractor = potential minimum), so the name table keeps that half and drops the derivative; the mapper presented it as wholly other."
+  },
+  {
+   "id": "cx-jianwen-ji-early-detection",
+   "what": "changed",
+   "why": "Mapper cited only the invisible half and missed thesis T6, whose seen half (critical slowing down) carries early warning on a stated model, and 06's reading of 其未兆易谋."
+  },
+  {
+   "id": "cx-jianwen-time-inside-the-primitive",
+   "what": "kept",
+   "why": "Checked 01 §1: not a second primitive, by a different mechanism; the agreement is on that clause only, as the reading says."
+  },
+  {
+   "id": "cx-jianwen-no-canonical-linearization",
+   "what": "kept",
+   "why": "Checked 01 #r-the-present-on-causal-set-growth: the form stands on one model under covariance, a premise of that model."
+  },
+  {
+   "id": "cx-jianwen-state-derived-from-events",
+   "what": "kept",
+   "why": "Checked 03 #r-the-split-that-makes-sense and 06 #wenli: read-off of states stands; no design rule and no ontological claim on events."
+  },
+  {
+   "id": "cx-jianwen-perspectival-no-god-view",
+   "what": "changed",
+   "why": "The mapper read gluing as scoping the claim to some worlds. A frame existing is not an observer occupying it, so no-outside-view is not scoped by gluing; the direct target, selection through a formation's couplings, was missed, and it is exactly likeness relative to a formation."
+  },
+  {
+   "id": "cx-jianwen-cross-domain-evidence",
+   "what": "kept",
+   "why": "Checked #three-relations, #zh-mapping and #known-results; 19% overall is in §7.1. The folder's own concessions are noted in sense."
+  },
+  {
+   "id": "cx-jianwen-no-new-primitive-needed",
+   "what": "changed",
+   "why": "Replaced the chapter-thesis anchor with 01's Open item, which states the same with its standing."
+  },
+  {
+   "id": "cx-jianwen-quantity-is-relation",
+   "what": "kept",
+   "why": "Checked 01 #r-shared-laws-on-the-grammar and #r-the-world-represented-both-ways: count as pairing holds, amounts are not read."
+  },
+  {
+   "id": "cx-jianwen-monist-attractor-selection",
+   "what": "changed",
+   "why": "Added the likeness to watch: the law's one origin is who was copied, not a concept; without saying so a reader may take it for the source's root."
+  },
+  {
+   "id": "cx-jianwen-he-not-zheng",
+   "what": "changed",
+   "why": "Not-carried missed the general mechanism under another name: a selection separates exactly what its selector couples apart, and is right exactly where what matters is read. The specific variable, cooperation against contention, stays absent, so carried-in-part."
+  },
+  {
+   "id": "cx-jianwen-dou-lineages-extinct",
+   "what": "changed",
+   "why": "Added the group-ending law, which states lineages ended by joint excess; replaced the mapper's not-read note with what was grepped in 04 and 05."
+  },
+  {
+   "id": "cx-jianwen-moloch-not-produced",
+   "what": "kept",
+   "why": "Checked COLLECTIVE-DIRECTION §8: both halves are theorems and rivalry stays; direct divergence."
+  },
+  {
+   "id": "cx-jianwen-datong-mechanism-dao-outside",
+   "what": "changed",
+   "why": "Added the folder's own contrary line (claim 182) so the entry does not read as one position."
+  },
+  {
+   "id": "cx-jianwen-anti-zhuxin",
+   "what": "changed",
+   "why": "Not-carried was wrong in one half. 03 §11 states what a formation's acts fix, and the SSBX review row A4 (a lead, checked here against the live text) maps 反诛心 to selection through couplings. The prohibition and the invariants stay absent, so carried-in-part, and the missed divergence is named: the account limits acts-only reading, it does not forbid reading further."
+  },
+  {
+   "id": "cx-jianwen-gongfu-and-liangzhi",
+   "what": "kept",
+   "why": "Checked 06 #wang-yangming: divergence of standing and the warning on discounting failures. 工夫 and 致良知 do not occur live beyond a chapter README note."
+  },
+  {
+   "id": "cx-jianwen-xin-as-fourth-root",
+   "what": "kept",
+   "why": "Checked 06 #zhonghua and 08: rejected as a name for the overtone of one controller, and experience named as a possible defeater."
+  },
+  {
+   "id": "cx-jianwen-open-closed-operator",
+   "what": "changed",
+   "why": "Made explicit that 06 §十 maps the 生生不息论 and 间生论 terms, not this folder's gate table: the link runs through the ethics pivot of 2 May in the folder's genealogy."
+  },
+  {
+   "id": "cx-jianwen-anti-totalization",
+   "what": "changed",
+   "why": "Removed the mapper's claim that the method records where the thesis distorts: no live text was found saying that (grep for distort across the live files), only a repository instruction, which is not live."
+  },
+  {
+   "id": "cx-jianwen-wuxing-feedback-graph",
+   "what": "kept",
+   "why": "Rechecked by grep: 五行 occurs nowhere live; it stands in the history 中华本 and two history studies, so history-only."
+  },
+  {
+   "id": "cx-jianwen-ti-jian-sets",
+   "what": "added",
+   "why": "Missed direct divergence: 06 and review C-02 reject the very sentence on which the folder's 体/兼 and set axioms rest; the mapper's ZFC mention was a not-mapped inventory."
+  },
+  {
+   "id": "cx-jianwen-particles-as-first-order-logic",
+   "what": "added",
+   "why": "Claim 124 and 非(非 X) ≡ X unmapped; the 凡例's constructive readings are a precise scope the mapper had only as a word in another entry."
+  },
+  {
+   "id": "cx-jianwen-restricted-subset-complete",
+   "what": "added",
+   "why": "The folder's characteristic move, restriction plus completeness, has a live open hypothesis (#open) that the mapper did not cite."
+  },
+  {
+   "id": "cx-jianwen-single-character-preference",
+   "what": "added",
+   "why": "A standing method of Ren's that 06 #hanzi limits explicitly; missing divergence."
+  },
+  {
+   "id": "cx-jianwen-frames-cross-applicable",
+   "what": "added",
+   "why": "Ren called this the framework's one ultimate claim; the file omitted it. Scoped by lumping and gluing laws."
+  },
+  {
+   "id": "cx-jianwen-universal-substrate-claim-z",
+   "what": "added",
+   "why": "Split from the R-Family entry: the algebra is history-only, while the place it claimed is answered otherwise live."
+  },
+  {
+   "id": "cx-jianwen-alignment-from-algebra",
+   "what": "added",
+   "why": "Claim 255, the algebra's ethical reach, was missing; it is the sharpest divergence with the two premises."
+  },
+  {
+   "id": "cx-jianwen-one-ontology-many-projections",
+   "what": "added",
+   "why": "Claim 308 cuts against claims 57-58 inside the folder, and the account sides with it; missing agreement."
+  },
+  {
+   "id": "cx-jianwen-no-i-other-opposition",
+   "what": "added",
+   "why": "Claims 307, 309 and own words 83-84 were unmapped; 06's four layers and domain counts answer them."
+  },
+  {
+   "id": "cx-jianwen-two-lines-greek-chinese",
+   "what": "added",
+   "why": "The folder's self-location, claims 1-3, was unmapped; an honest not-carried."
+  },
+  {
+   "id": "cx-jianwen-unclassified-space",
+   "what": "added",
+   "why": "Claim 126, a commitment the folder names twice; the diagonal law has its form."
+  },
+  {
+   "id": "cx-jianwen-map-territory-mutual",
+   "what": "added",
+   "why": "Claim 238, listed by the folder among its load-bearing conversational losses; partial live form."
+  },
+  {
+   "id": "cx-jianwen-grammar-alignment-not-truth",
+   "what": "added",
+   "why": "The folder's own limit is carried; without it the cross-domain entry showed only its stronger half."
+  },
+  {
+   "id": "cx-jianwen-virtues-as-idioms",
+   "what": "added",
+   "why": "Layer 3 and the virtue table were unmapped apart from 势; the account refuses this form of virtue definition."
+  },
+  {
+   "id": "cx-jianwen-autopoietic-boundary",
+   "what": "added",
+   "why": "Claims 185, 199, 210 unmapped; the account states a minimal case and how far it stops short."
+  },
+  {
+   "id": "cx-jianwen-ai-relocated",
+   "what": "added",
+   "why": "Claim 187 unmapped; nearest live move relocates alignment, not intelligence."
+  },
+  {
+   "id": "cx-jianwen-wen-name",
+   "what": "dropped",
+   "why": "A shared character with no shared mechanism: the brief allows no entry for that. Its one claim, R8 as the self-articulating level, is folded into cx-jianwen-self-articulation with the warning that live 文 differs. The comparison with 系, 开, 闭 was against 文理生生, not this folder."
+  }
+ ]
+}

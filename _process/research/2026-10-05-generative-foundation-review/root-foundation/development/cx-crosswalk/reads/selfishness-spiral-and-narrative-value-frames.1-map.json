@@ -1,0 +1,1913 @@
+{
+  "group": {
+    "id": "selfishness-spiral-and-narrative-value-frames",
+    "domain": "earlier-folders",
+    "title": {
+      "en": "The selfishness spiral and narrative-value frames"
+    },
+    "kind": "theory",
+    "summary": {
+      "en": "Actors act from environment-written ranked frames; a 'selfish' frame compounds through four loops (compounding, rule capture, narrative capture, regulator lag) toward plural endgames. The account takes up the loop's form as conditional capture and commons laws, drops the frame as a unit, the word selfishness and narrative as mechanism, ranks nothing without C, and turns universal collapse into hypotheses. Divergences kept: equality, goodness as rational, delegation, trust, collapse as default."
+    },
+    "read": [
+      "theories/selfishness-spiral-and-narrative-value-frames/README.md (whole file)"
+    ],
+    "skimmed": [
+      "theories/selfishness-spiral-and-narrative-value-frames/synthesis-all.md (headings only; the README is its later form)"
+    ],
+    "searched": [
+      "record-index.tsv by capture, race, lock, ratchet, position, commons, regulator",
+      "live fronts, chapters, review/, GLOSSARY and results/records for: human nature, hypocri, sincer, accelerat, selfish, Moloch, multipolar, totaliz, emotion, affect-first, money, trust, narrative, discourse, myth, hegemon, colonial, Gramsci, Foucault, Meadows, leverage, Rome, Maya, Easter Island, city-state, decorrelat, sample size, opt-out, plurality, deterr, mutual destruct, delegat, guardian, self-fulfil, equality, inequal, propaganda, culture, ideolog, genealog, rationaliz, humiliat, capitalis, religio, financ, costume, consensus code, consensus lag, cognitive lag"
+    ],
+    "not_mapped": [
+      {
+        "en": "The good-bot prompt lineage, the Jesus persona and the 'Architect of Reality' persona",
+        "why": "Designs embodied as system prompts, not claims about how things form; their one testable claim (teaching seeing changes behaviour) is untested in the folder and is mapped under trust and leverage."
+      },
+      {
+        "en": "Lists of policy instruments: quadratic funding, reputation-weighted decisions, DAOs, steward ownership, UBI, Doughnut, regen.md, hyperconnected.md",
+        "why": "Generic catalogues the folder itself calls thematic; the account's nearest forms are exits under hypotheses, and no instrument is claimed or assessed there."
+      },
+      {
+        "en": "Genealogy, 'what was lost', Ren's own words, the salon and teaching programme, 'did I discover it?', the refusal of the pessimism label, novelty verdicts and the research-programme proposal",
+        "why": "Provenance and meta-claims about the folder, not claims about the world; the account's own verdict on novelty is elsewhere."
+      },
+      {
+        "en": "The 2021 Dali field notes (a narrative changing one's own illness; the split modern self with two exits)",
+        "why": "Third-party notes the folder says cannot be attributed; individual-scale material with no selection dynamic, not searched further than the terms above."
+      },
+      {
+        "en": "Claims 120-133 in detail, the five macro futures of selfish_sprial, warning signs, three myths, the fork of abundance against digital feudalism",
+        "why": "AI-elaborated restatements; the first is covered by the entry on goodness as rational, the rest by the entry on history and evidence. The fork was not searched as such."
+      }
+    ],
+    "coverage": null
+  },
+  "entries": [
+    {
+      "id": "cx-sspiral-frame-as-unit",
+      "name": {
+        "en": "The narrative-value frame as the selected unit"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "The unit: the narrative-value frame; claims 18-24",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Every actor interprets and justifies through a constructed ranking of values and licensed strategies. The environment writes it, so it is contingent; it needs a collective of carriers, mutates in transmission and is under selection. It works at individual, collective and dominant levels, the last manufacturing the next generation's frames through six channels."
+      },
+      "quote": "The ordering is not chosen. It is written into the actor by the environment that made it",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "The account has no frame. Its parts are held apart: a target whose forming is not modelled, a standard forming within the unfolding, a pattern lasting through passing. Bundling perception, justification, ranking and strategy into one unit is what the account's four questions refuse. 'Narrative' appears in the live account only in a quotation from the free-energy literature. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#evaluation",
+          "says": {
+            "en": "Positions, regions and standards form within the unfolding, on a thesis argued and not proved; whether a standard so formed gains influence, recognizes its target, has warrant or is followed are four questions."
+          }
+        },
+        {
+          "record": "seeking-boundary",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-seeking-boundary",
+          "says": {
+            "en": "Theorem: a target is any condition on the configuration; how it forms is not modelled."
+          }
+        },
+        {
+          "record": "a-pattern-lasts-through-passing",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-a-pattern-lasts-through-passing",
+          "says": {
+            "en": "Theorem (World): a pattern outlasting brief carriers lasts only while carriers begin; under the passing premise, only while carriers pass it on."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Keeps influence, recognition, warrant and following apart, and says a formed standard can be wrong."
+      },
+      "source_adds": {
+        "en": "The frame as one transmissible, rankable unit; its three levels, three stages of collective formation, six channels, list of failure modes and nine naturalised beliefs."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-spread-not-truth",
+      "name": {
+        "en": "Frames are selected for spread, not truth"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "The unit; claims 25-28; called 'the single most load-bearing claim'",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Traits that win are traits of spread: speed, identity, coordination, legitimising power, hostility. Dominance does not imply benefit, and good narratives are usually less fit than those that do not match reality. This disconnects the winning frame from the true one."
+      },
+      "quote": "The selection traits `NVF.md` lists are traits of *spread*, not of truth",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The form: a selection separates only what couples into its selector, so nothing in it tracks what lies beyond. The account never says what is selected is usually false or less fit than truth; 'less fit' is a stronger, empirical claim. T7 is the nearest thesis: a measure outliving its refutation, conjectured for actual metrics. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "selection-through-couplings",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+          "says": {
+            "en": "Theorem (World; no premise): two histories are selected alike by every selection through a formation's couplings exactly when they are alike through them. A particular selection may ignore what its couplings carry."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/02-MAP.md#t7",
+          "says": {
+            "en": "Thesis T7: a measure read from what it selects outlives its refutation. In the model only invariance under the unread and the lock outliving an unread coordinate are proved, without noise; that actual metrics are so formed is conjectured."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "An exact statement of what a selection cannot reach, for any selector and with no premise."
+      },
+      "source_adds": {
+        "en": "The list of spread traits, mutation of narratives in transmission, and the claim that truthful narratives are usually less fit; these narrative-level claims are not stated."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-externality-ledger",
+      "name": {
+        "en": "Selfishness as a ledger that omits what it spends"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "What selfishness is, first facet; claims 10, 17",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "A frame is selfish when its ledger counts only self-centred measures, so a broken law, degraded norm, drawn-down trust or poisoned river is justifiable whenever the actor's gain exceeds the actor's cost. It is a measurement problem, not greed or malice."
+      },
+      "quote": "It is a *measurement* problem — a ledger whose columns exclude most of what is being spent.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "A ledger omitting columns has the form of a selection reaching only what couples in. The account goes further and away from the word: every order rising with a family, with room, sits at the least level beyond, even one counting the beyond second. 'Selfish' is not its term; it appears only in one record's provenance. Whether a drain is a harm is not said. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "what-an-optimum-does-beyond-what-couples-in",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
+          "says": {
+            "en": "Theorem: with room every optimum of an order rising with a family lies at the least level beyond among eligible outcomes; a lexicographic order counting the beyond after what couples in drains all the same."
+          }
+        },
+        {
+          "record": "own-count-misses-joint-excess",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess",
+          "says": {
+            "en": "Theorem (World: balance): formations can each take within what a step gives while together they take more. Near-definitional arithmetic restating the commons, not who ought to take less."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#markets",
+          "says": {
+            "en": "Reading: 'External' is relative to an accounting's scope; those affected remain in the one unfolding."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The drain does not need self-centred measures: any rising order does it, however benevolent its family."
+      },
+      "source_adds": {
+        "en": "The actor's cost-against-gain calculation, and norms, trust and law as items spent; the word selfishness as the system's name."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-hypocrisy",
+      "name": {
+        "en": "Hypocrisy: sincere people running a self-serving justification"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "What selfishness is, second facet; claim 11",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "An actor may not believe the calculated ideology, behave as if it does, and justify itself by other beliefs, still believing it is good. No cynics are needed: sincere justification gives the same outcome and is harder to argue with. The folder calls this the facet later drafts lose."
+      },
+      "quote": "You do not need cynics. Sincere people running a self-serving justification produce the identical outcome",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "The account's laws are indifferent to sincerity, so they permit this without stating it. Its objections table says deception needs a recipient's belief and an intention to cause one and gives no law of it; a gap between what an actor professes and what it does to itself is nowhere taken up. 伪开 in 06 §十 is mapped as structure, with its 欺 removed. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "Stands in this folder; not found in the live account."
+      },
+      "absence": {
+        "searched": [
+          "hypocri, sincer, self-decep, self-serving over fronts, chapters, review, GLOSSARY, records",
+          "伪开 over the fronts, chapters, review and GLOSSARY"
+        ],
+        "read": [
+          "06 §十 table of closing and opening",
+          "07 §1 how evaluation forms",
+          "07 §9 objections table, row on which function is learned"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-attractor-no-subject",
+      "name": {
+        "en": "An attractor with no seat of decision"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "What selfishness is, third facet; claims 12, 43, 164",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Selfishness is a self-enforcing dynamic that grows stronger against rival attractors, selects agents rather than being chosen by them, and needs no villain: the optimisation of capital itself, the selection pressure itself. The folder names this clause the theory's real content."
+      },
+      "quote": "it is not subject that make decisions like humans",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "Closed capture has the form: a loop whose every level reads only the share, with no chooser in it. GLOSSARY narrows the word: the meta-attractor never means the corpus's working definition, and whether a capture loop is 生成 at some pair of classes is open. Rivalry among attractors has no law; the laws are two-kind counts. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "closed-capture",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+          "says": {
+            "en": "Definition: 元吸引子, a loop of selection whose rule and whose reading of the rule are both formed from the share it selects, nothing in it reading what lies beyond the share. Theorem (any type): courses alike in share and rule stay alike exactly where the beyond is unread."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#collectives",
+          "says": {
+            "en": "Thesis: a collective is a region of formed relations, not a unit with an interest of its own; conflict and difference stay real."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "A proved separation of what the loop reads from what it does not, and a sufficient way out by reading the loss."
+      },
+      "source_adds": {
+        "en": "Attractors strengthening relative to rival attractors, and the claim that this attractor runs through societies; calibration to the present world is not established in the account."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-generator-collapse",
+      "name": {
+        "en": "The loop eats its generator function, so collapse is the default"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "The intensifiers; claims 12, 92, 93, 141",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Gains are drawn from an ecological, social and epistemic base that regenerates on its own terms and is off the ledger; overdraw it and extraction stops. Hence collapse rather than plateau is the default. Such systems, capitalism included, are inherently unstable; the objection is dynamical, not distributional."
+      },
+      "quote": "The reason collapse rather than plateau is the default is the generator function.",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "The account keeps the mechanism and corrects the universal. Joint excess ends the renewal under the gate, where renewal depends on what it renews. Without that, a greatest part not depending on what it draws down continues (the clearing witness), and a lock can outlive any unread loss. Attraction is not continuation, and real loss need not form a loop. So 'kills itself' holds only of the dependent. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "own-count-misses-joint-excess",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess",
+          "says": {
+            "en": "Theorem (World; gate local): n consecutive steps of joint excess from a level below n + m end every formation depending on the condition at a need of at least m. The gated conclusions are proved only for renewal depending on what it renews; a taker not so depending can continue."
+          }
+        },
+        {
+          "record": "relative-position-is-zero-sum",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-relative-position-is-zero-sum",
+          "says": {
+            "en": "Theorem: in the clearing witness a greatest part not depending on what it draws down continues. That a race produces joint excess is a premise, not derived."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#markets",
+          "says": {
+            "en": "Reading: at the original parameters with M < 0 a distinct protected region remains; a negative margin says a degenerate region can appear, not that every history enters it. A real loss need not form a meta-attractor."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Which formations end, at which step, under which hypotheses; that the dominant can outlast what it ends."
+      },
+      "source_adds": {
+        "en": "The universal claim of inherent instability; trust and shared understanding read as commons drawn down like a fishery, which the account does not model."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-zero-sum-position",
+      "name": {
+        "en": "Zero-sum myopia: winning over others as the salient metric"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "What selfishness is, fourth facet; claims 13, 49, 50",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "When winning over others is what counts, short-term optimisation becomes rational for survival, and everyone's local rationality sums to global coordination failure. Agents who look long-term may be eliminated before the benefit arrives."
+      },
+      "quote": "everyone's local rationality sums to a global coordination failure",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "Position is read off counts and sums to zero. A race ranking courses by position keeps nothing. The account does not say a race arises from survival pressure; that a race yields joint excess is a premise, and 'rational' is the field's frame, a best response, as named. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "relative-position-is-zero-sum",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-relative-position-is-zero-sum",
+          "says": {
+            "en": "Theorem: across every change of amounts positions' rises total their falls; position does not protect. It does not derive that a race for position produces joint excess."
+          }
+        },
+        {
+          "record": "a-race-for-position-draws-everything",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-race-for-position-draws-everything",
+          "says": {
+            "en": "Theorem: among two drawers or more, ranking by position, a best response keeps nothing, and every perfect profile draws everything before the horizon. It does not show actual races are so played, or that drawing everything is wrong."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Position bounds the total only from below (what position reads), and with one drawer every profile is perfect."
+      },
+      "source_adds": {
+        "en": "Elimination before long-term gain as the reason short-termism is forced; winning as a metric becoming salient."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-interconnection",
+      "name": {
+        "en": "Disconnection: we are in fact interconnected"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "What selfishness is, fifth facet; claims 14, 137, 149; Terms: larger us",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "The us-versus-others lens misses that we are interconnected, a fact rather than a sentiment. So the pattern destroys value it would itself have wanted. The remedy is an enlarged 'us', the content of the one non-trap endgame."
+      },
+      "quote": "looking at things through us-vs-others lens, missed the fact that we are actually interconnected",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "The account separates three closures and supplies that the Earth is mutually dependent. Mutual dependence is not mutual benefit, so the fact carries no warm content. Self-concern alone ranks one case: ending the coupled cohorts below continuing them. An enlarged 'us' as a unit sits against the thesis that a collective has no interest of its own. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "mutual-dependence-and-its-pace",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-mutual-dependence-and-its-pace",
+          "says": {
+            "en": "Theorem (World): mutual feeding gives mutual dependence, which gives sharing throughout; neither converse holds. That the Earth is mutually dependent is supplied."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-self-concern-alone-ranks",
+          "says": {
+            "en": "Theorem: an order increasing in its own continuation ranks a course ending the coupled cohorts below one continuing them; where the other course keeps an independent copy, some such order reverses."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Which grade of closure is meant, and that self-concern's ranking fails where an independent copy is kept."
+      },
+      "source_adds": {
+        "en": "Seeing oneself as part of a whole as the operative change; superordinate goals and identification with all humanity."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-compounding",
+      "name": {
+        "en": "Loop 1: winnings convert into capacity to win"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "Loop 1; claims 37-44",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "The reward for winning converts into more capacity to win, a positive loop running to an external limit or crash. Balanced frames are removed without being refuted. Three ingredients: what you win is yours, you use it to compete, nothing terminates. Remove one and the loop opens."
+      },
+      "quote": "if you use what you have to compete for more and what you win is yours, and you use that to keep compete",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "target-capture is the selection term: carriers who leave more raise their share, and over steps the ratio grows as a power. This is Price's selection term, not new. The record says it derives neither that taking more yields more offspring, nor that offspring carry the target, nor that winners shape the rule: those are what the source asserts. The three-ingredient opening is not stated. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "target-capture",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-target-capture",
+          "says": {
+            "en": "Theorem (any type): where carriers each leave at least a offspring and others at most b < a, both present, the carriers' offspring stand to the others' strictly more than carriers to others; read as shares where offspring carry the target (a premise)."
+          }
+        },
+        {
+          "record": "mutual-dependence-and-its-pace",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-mutual-dependence-and-its-pace",
+          "says": {
+            "en": "The record adds the pace of a selection under transmission: carriers to others at least (a/b)^n times as at the start."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#markets",
+          "says": {
+            "en": "Reading [AI, D65; a hypothetical case]: where buyers cannot tell future reliability and finance rewards present margins, a provider deferring maintenance can outgrow one maintaining and training successors."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Which premise each step of compounding rests on."
+      },
+      "source_adds": {
+        "en": "Wealth buying influence buying rule-writing as actual; the three removable ingredients; cooperatives converting less of their winnings into advantage; competition intensifying as fewer hold more."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-any-token-any-game",
+      "name": {
+        "en": "Any accumulation game falls into the cycle, in any currency"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "What selfishness is; claim 16",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "The dynamic is currency-independent: capital, power, status or any token. Stated universally, any competitive advantage accumulation game, in nature, will fall for this cycle."
+      },
+      "quote": "any competitive advantage accumulation game, in nature, will fall for this cycle",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "Token-independence holds: the capture laws are for any type. 'Will fall' is corrected: the lock belongs to how the rule reads, that actual rules read the share is the premise, and a rule read against the share does not ratchet. One set of selection laws can admit a protected and a degenerate region at once. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "capture-through-the-rule",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule",
+          "says": {
+            "en": "Theorem (any type): given Raises and ReadsShare, with the start's rule and every rule read favouring, the course locks from the step after its first reading step. That actual rules read the share is the premise. The lock belongs to how the rule reads, not the share it favours."
+          }
+        },
+        {
+          "record": "a-reading-against-the-share-does-not-ratchet",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-a-reading-against-the-share-does-not-ratchet",
+          "says": {
+            "en": "Theorem (any type): where the rule is read against the share, a later reading's rule is not above an earlier one's: the rise the lock rests on does not form."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The exact condition under which the cycle does not form."
+      },
+      "source_adds": {
+        "en": "The empirical universal over games in nature, which the account does not claim."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-rule-capture",
+      "name": {
+        "en": "Loop 2: frames write rules, rules write rewards"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "Loop 2; claims 46, 53, 54",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Winners arrive where rules are written. Those who hold power write the rules, the rules decide who is rewarded, and who is rewarded writes the rules next. That turns inequality into a spiral."
+      },
+      "quote": "NVFs define rules of the game, and the rules of the game determine the rewards of the players",
+      "carried": "carried",
+      "relation": "agreement",
+      "reading": {
+        "en": "Stated at the conditional scope: where winners write the next round's rule the loop is capture through the rule, the record's correspondence names this corpus, and shaping the rule has its own law: selected exactly where what comes back to the shapers alone covers the cost. That actual rules are so read is not established. Agreement of form, not a historical finding. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "capture-through-the-rule",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule",
+          "says": {
+            "en": "Theorem (any type): monotone reading of the share with favouring rules locks the course; only a change of the law, of how the rule reads or of the selection leaves, where the reading favours at every share. ReadsShare is the premise."
+          }
+        },
+        {
+          "record": "shaping-the-rule-selected-by-what-comes-back",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-the-rule-selected-by-what-comes-back",
+          "says": {
+            "en": "Theorem (counts): at a step the rule favours the shapers weakly exactly where c ≤ s, whatever p comes to every member alike; offspring carrying the capacity and what comes back being read from the share are premises; without noise."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#markets",
+          "says": {
+            "en": "Where winners write the next round's rule the loop is capture through the rule. No universal phase threshold is claimed, and no market law ranks arrangements."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The lever of what comes back alone, Hamilton's rule with assortment, and a critical mass without noise, whose locks drift leaves when drawn one at a time."
+      },
+      "source_adds": null,
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-adopt-or-die",
+      "name": {
+        "en": "Adopt or die, and paradigm convergence"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "Loop 2; The intensifiers; claims 45, 47, 51, 89",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Others need not be corrupted, only rational: to compete they copy the winners, or are removed. The system comes to require the pattern. Over iterations all agents become single-value optimisers, which turns a distributional fact into a civilizational one."
+      },
+      "quote": "more and more agents will also becoming single value optimizers through iteration",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "Two forms carry parts. At a mutual best response, restraint beyond one's family is no best response. Drawn one at a time, fixation of shapers has a bound. But the account's share moves by offspring, not by observing and copying; adoption by majority 'makes no form'. Uniform convergence is one reachable state, and drift leaves it. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "several-optimizers-drain-by-their-joint-capacity",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-several-optimizers-drain-by-their-joint-capacity",
+          "says": {
+            "en": "At a mutual best response (existence not shown in general), each optimizing alone takes its whole capacity wherever something stands, so restraint is no mutual best response."
+          }
+        },
+        {
+          "record": "drawn-shaping-drawn-one-at-a-time",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-drawn-shaping-drawn-one-at-a-time",
+          "says": {
+            "en": "Theorem (counts): drawn one member at a time, neither lock holds for good; which state a member arising fixes more often depends on the base and the shared part. Drawing and readers from the selected are premises."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Fixation weights: the state fixing more often need not be the risk-dominant one."
+      },
+      "source_adds": {
+        "en": "Convergence by observation and imitation, unconscious capture, and every agent becoming a single-value optimiser."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-unilateral-restraint",
+      "name": {
+        "en": "Unilateral restraint means losing"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "What 2026 changes; claims 140, 144",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Even actors who understand the danger feel forced to race, since restraint alone means losing, identically in a lab, a country, a company and a platform. So the problem is not only bad people: it is the structure."
+      },
+      "quote": "Even if each actor understands the danger, each actor still feels forced to race, because unilateral restraint means losing.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The nearest law says something narrower and different in kind: where the rest outruns a gated renewal, a member's need ends whatever it takes, and a score reading only from the rest's end cannot select its restraint. That is no gain from restraint, not a loss of standing. Depletion need not be the only equilibrium. Actors' felt compulsion and their understanding are not modelled. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "the-rest-outruns-the-renewal",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-the-rest-outruns-the-renewal",
+          "says": {
+            "en": "Theorem (World; gate local): where the rest takes jointly more than a step gives over n steps from below n + m, every formation depending at need m ends, whatever a member outside takes; no weight on a reading from the rest's end selects restraint. Depletion need not be the only equilibrium."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#the-answer-in-brief",
+          "says": {
+            "en": "No guarantee: among the laws, where the rest outruns a renewal no weighting selects one member's restraint. Named exits hold under stated conditions, none shown to hold of an actual collective."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The exit where each take is within the joint slack: restraint keeps the need met."
+      },
+      "source_adds": {
+        "en": "The three beliefs driving the race, the same structure in four kinds of actor, and the claim that understanding does not free an actor."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-belief-makes-trap",
+      "name": {
+        "en": "The belief manufactures the trap"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "Loop 2; What 2026 changes; claims 48, 52, 66, 142, 143, 148",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Each models the other as a defector, so system-positive trades are refused and people behave as if selfish. Believing others will race creates the race. Political realism and accelerationism are not reality but self-fulfilling gods; believing in Moloch is itself a cult dynamic."
+      },
+      "quote": "this kind of thinking itself creates the trap and reality",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "Two pieces, neither a law of belief. A public prediction is one more input to what it predicts; the reading cites Merton, its witness 'not a model of coordination'. 'Others will deceive me, so I deceive first' is read as withholding with memory, which absorbs. No law says belief in a race produces a race. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "a-prediction-read-by-what-it-predicts",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-a-prediction-read-by-what-it-predicts",
+          "says": {
+            "en": "Theorem (near-definitional, with one general law): a published prediction read by the response before the outcome is right exactly where the response to it is itself. Reading: self-fulfilling prophecy; the witness is a threshold response, not a model of coordination."
+          }
+        },
+        {
+          "record": "giving-that-waits-on-giving",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-giving-that-waits-on-giving",
+          "says": {
+            "en": "Theorem (any type): with memory, one withholding spreads downstream and ends all giving within d waits. Reading: 'Others will deceive me, so I deceive first' is withholding with memory. How waiting forms is not shown."
+          }
+        },
+        {
+          "record": "thresholds-of-waiting",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+          "says": {
+            "en": "Theorem: restoring needs a formation that spares all it waits on; without one, total withholding stays (Tolerance.total_stays)."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "That the absorbing state needs a law change, a source, and not only a change of mind."
+      },
+      "source_adds": {
+        "en": "Belief about others as the operative cause of the trap, and realism, accelerationism and Moloch-belief as named cases; these are not stated."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-narrative-capture",
+      "name": {
+        "en": "Loop 3: winners form the minds that read the rule"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "Loop 3; Said in Chinese; claims 55-61, 73, 161, 165, 166",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Accumulated power buys discourse, which shapes the environment that constructs the next generation. The norm moves from what is acceptable to what is right to what we are, and in 2026 to what counts as reasonable. Winner takes all, and winner justifies all. Facts cannot reach it."
+      },
+      "quote": "If a system reward winner more edge to win, eventually the system go into winner takes all, but also winner justifies all",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "02's reading: winners forming the minds that read the scorecard is ReadsShare on the reading. That readers are minds is itself a reading. The frozen test went against the unreachable form: in LA2 one note of the loss among nine readers turned an LLM judge, so its judge is not a pool counted by kind. T7's case stands as that counterexample; no field test exists. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "readers-drawn-from-the-selected",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-readers-drawn-from-the-selected",
+          "says": {
+            "en": "Theorem (any type): the pool of readers reads the share monotonically exactly where v is not above u. The premise is moved to who reads, not removed: that actual rules are pools so drawn is not shown."
+          }
+        },
+        {
+          "record": "closed-capture",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+          "says": {
+            "en": "Theorem (any type): under its premises the loss passes every bound while the course stays locked; where the reading too is formed monotonically from the share, a change of the reading of any size is absorbed."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/02-MAP.md#t7",
+          "says": {
+            "en": "T7 is conjectured of actual metrics; LA2 in one trained system: one note of the loss turned the judge's reading, a counterexample to one forbidden case as a claim about trained judges. No frozen field test of reform events."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Who reads, and when; a window after which a late reading keeps the lock; a test that went against the bridge."
+      },
+      "source_adds": {
+        "en": "The discourse channel and its rungs (acceptable, right, what we are, what makes sense); the transmission machinery of media, law and ritual; praise as a mechanism. None is stated."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-human-nature",
+      "name": {
+        "en": "'Human nature' as the terminal lock, and biology's underdetermination"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "The question; Loop 3; claims 2-8, 32, 33, 60",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "'People are selfish' is a datable ideology, not a species fact. Biology delivers satiation and cooperation as well as acquisition and does not select between them. At the limit the winners' logic registers as human nature, and then arguments no longer apply."
+      },
+      "quote": "once the pattern is registered as a fact about the species rather than as a property of a game, it stops being the kind of thing that arguments apply to",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "The account makes no claim about human nature, for or against, and has no law of a pattern's being taken for a natural fact. Closed capture gives a lock on the reading but not this reclassification. Its 07 line that later endorsement cannot authorize the formation that produced it is near in spirit, in another register. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "Stands in this folder; the naturalisation step and the biological argument were not found live."
+      },
+      "absence": {
+        "searched": [
+          "human nature, ideolog (no hit in fronts, chapters, review, GLOSSARY, records)",
+          "genealog (two unrelated hits in records), biolog with constru or cooperat, satiat, sated"
+        ],
+        "read": [
+          "02 §9 capture, with its readings",
+          "07 §1 how evaluation forms",
+          "03 seeking boundary"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-lock-see-or-comply",
+      "name": {
+        "en": "Is the lock cognitive or participatory?"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "Loop 3; Said in Chinese: The lock, by population; claims 64, 65, 145, 170, 171",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Undecided in the folder: people cannot see alternatives, or they see the stakes and comply. They call for different interventions. Sorted by population (the folder's AI reading): the public complies or is outvoted, those in power are selected, would-be correctors cannot leave the frame."
+      },
+      "quote": "is the lock cognitive (people cannot see) or is it participatory (people see and comply anyway)?",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "The account says the two cannot be told apart from acts alone, in a witness, and that its institution model says nothing on it: 'holder' merges recognition, compliance and implementation into one count. It keeps these words apart as questions without a law choosing. Selection rather than preference explaining who steers fits readers drawn from the selected, as a premise. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "acts-alike-from-a-model-or-from-an-order",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-acts-alike-from-a-model-or-from-an-order",
+          "says": {
+            "en": "Theorem with a witness: no selection through sensed values and acts tells apart two related laws. Reading: one course can leave an unresolved model and a reversed ranking indistinguishable, the ambiguity between beliefs and preferences."
+          }
+        },
+        {
+          "record": "a-rule-rebuilt-from-the-members-it-limits",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-rule-rebuilt-from-the-members-it-limits",
+          "says": {
+            "en": "Theorem (root; a family of models): holder merges recognition, compliance and implementation into one count, so the laws say nothing of them. Not modelled: why a teacher turns anyone away, sanctions, who decides a revision."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "An exact reason why reading acts cannot settle the question."
+      },
+      "source_adds": {
+        "en": "The sorting by population, and a proposed survey of belief, preference and second-order belief in three groups."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-equality-regulator",
+      "name": {
+        "en": "Equality as the regulator of compounding"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "Loop 4; claims 74, 75; Open questions: equality asserted",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Past societies held honour codes, sufficiency norms and redistribution rituals as balancing loops, so they lasted. So equality is needed: not as an end, but as what keeps compounding inside the system's control range. The folder's own critique: asserted, not derived; the mechanism needs a cap."
+      },
+      "quote": "This is the root cause we need equality",
+      "carried": "changed",
+      "relation": "divergence",
+      "reading": {
+        "en": "The account has the structural form without the word: a rule read against the share does not ratchet; audits and courts are read as carrying acts back into what selects the rule. Equal shares appear only in a counting law about needs, ranking nothing. It nowhere says equality is needed, and any ranking of courses needs C or a premise in its place. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "least-parts-and-equal-shares",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-least-parts-and-equal-shares",
+          "says": {
+            "en": "Theorem: equal shares meet every need exactly where they meet the greatest, giving more than the total need where needs differ."
+          }
+        },
+        {
+          "record": "a-reading-against-the-share-does-not-ratchet",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-a-reading-against-the-share-does-not-ratchet",
+          "says": {
+            "en": "Theorem (any type): read against the share, a later rule is not above an earlier one: the rise the lock rests on does not form."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#not-shown",
+          "says": {
+            "en": "No law says a drain is a harm, restraint better, cooperation good or a shared code worth keeping; asked under the continuation condition for scope and C for order, neither asserted."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Which reading of a rule removes the ratchet, with no comparison of outcomes between members."
+      },
+      "source_adds": {
+        "en": "The historical claim that such value systems lengthened societies' lives, and equality as a stated need."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-game-design-axiom",
+      "name": {
+        "en": "Reward the winner with anything but more advantage"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "Loop 1; claims 41, 139, 162, 167",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "A law from game design: reward winners with anything other than more advantage, or the game converges and the winner takes all. Read backwards it constrains every intervention. Winning is to be redefined so the game continues; a ledger rewarding history's direction over size changes what power is rewarded with."
+      },
+      "quote": "a winner of the game should be rewarded with anything other than more advantages of the game",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "Three laws bound the axiom's forward half. With nothing back and a cost, shapers' share falls. A rule read against the share does not ratchet. A step coupling keeps a need at every horizon above a bound, one optimizer's law. The 'otherwise' is not universal: selection needs transmission and a reading of the share. The law says only what happens, not that winning should be redefined. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "shaping-the-rule-selected-by-what-comes-back",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-the-rule-selected-by-what-comes-back",
+          "says": {
+            "en": "Theorem (counts): with nothing coming back and a cost, the shapers' share falls strictly at every step, the shapers present; premises: carried capacity, no noise."
+          }
+        },
+        {
+          "record": "a-step-coupling-keeps-at-every-horizon",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-step-coupling-keeps-at-every-horizon",
+          "says": {
+            "en": "Added c for each step the need stays met: where r ≤ q + c and e < c, every optimum keeps it at every horizon; where q + c < r, a long horizon outweighs the coupling."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Where what comes back through neighbours counts as a return, so a shared reward can still be an advantage (Hamilton's rule, with assortment)."
+      },
+      "source_adds": {
+        "en": "The design rule itself, the unstated general 'otherwise', and the reward of history's judgement in place of size."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-consensus-lag",
+      "name": {
+        "en": "Loop 4: the regulator's update rate must match the world's"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "Loop 4; claims 76-88",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "A society's consensus code (norms, laws, shared understanding) regulates only if it updates as fast as the world changes; in the gap the other loops run unchecked. The folder notes this needs only change above the update rate, not exponential growth, and that no rate is estimated."
+      },
+      "quote": "the gap between the world's rate of change and the regulator's update rate",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The late-reading law has this form exactly in one respect: the band a rule can keep widens with lateness and with how far rests move the level. A rule's pace needs reading stretches. 05 says in a reading that a regulator lags wherever the world changes faster than it reads. Runaway and collapse from the gap are not derived. 'Consensus code' as a term is absent. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "two-sided-regulation-and-late-reading",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-two-sided-regulation-and-late-reading",
+          "says": {
+            "en": "Theorem (any type; whole numbers): a rule reading ℓ steps late keeps no band [a, b] with 0 < a narrower than 2(ℓ + 1)d against rests moving the level by at most d a step. Which system regulates what is not shown."
+          }
+        },
+        {
+          "record": "how-fast-a-rule-may-change",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-how-fast-a-rule-may-change",
+          "says": {
+            "en": "Theorem (any type): a fast difference reaches the rule only at a reading step; a stretch of L steps fixes held-rule courses with at most N states exactly when L ≥ 2N − 1."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
+          "says": {
+            "en": "Reading [AI, D48]: conflict institutions are links of another kind; a regulator lags wherever the world changes faster than it reads."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "A quantitative bound relating lateness, disturbance and band, and the window of a reading in time."
+      },
+      "source_adds": {
+        "en": "The gap as the space in which selection for selfishness runs; the historical-regulator story; the prediction of runaway and collapse."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-dual-reinforcement",
+      "name": {
+        "en": "The loops widen the lag that shields them"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "Loop 4; claims 84, 87 (AI elaboration, from grok.md)",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Selfishness drives acceleration, since faster tools are advantages, and acceleration shields selfishness by widening the lag. So the lag is an output of the first three loops, self-widening, not an external misfortune."
+      },
+      "quote": "The lag is thus not an external misfortune but an output of the first three loops.",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "The late-reading law takes ℓ and d as given; nothing feeds a loop's success back into them. 'Rewarding those who break the routes of correction' reads a selection narrowing what couples in, as capability grows, which is near but concerns coupling, not pace. 02 lists a runaway's pace among what it does not show. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "Stands in this folder only."
+      },
+      "absence": {
+        "searched": [
+          "accelerat, consensus code, consensus lag, cognitive lag (no hit in fronts, chapters, review, GLOSSARY, records)"
+        ],
+        "read": [
+          "02 §8 regulation and reserves",
+          "02 §9 reading D26 on second and third orders",
+          "02 what this chapter does not show"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-delegate-to-ai",
+      "name": {
+        "en": "Delegate coordination to a faster intelligence"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "Loop 4; claims 78, 113-115; Found by reading: two AI roles",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Under exponential acceleration humans cannot both stay in charge and stay stable; the only seemingly possible resolution is to delegate coordination to a growing intelligence, hedged: not shown to work. The corpus splits AI as governor, teacher and public infrastructure and never adjudicates."
+      },
+      "quote": "(Doesn't mean it can work, only in theory)",
+      "carried": "changed",
+      "relation": "divergence",
+      "reading": {
+        "en": "The account proposes no delegation and gives no forced conclusion: its answer is no guarantee. Its direction is a conditional under the continuation condition for scope, C read as widening for order, and J1-J4, neither premise asserted, and requires effective opportunities to understand, challenge and revise. Reading a system reaches no further than pooling with it. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "alignment-direction-under-widening",
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-alignment-direction-under-widening",
+          "says": {
+            "en": "Conditional (continuation condition, C read as widening, J1-J4, correspondence E): align AI formation, learning, action and revision with actual living and further generation within the whole, with effective opportunities to understand, challenge and revise."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#the-answer-in-brief",
+          "says": {
+            "en": "No guarantee: a selection reaches only what couples into it; what the theory gives is a criterion, exits under hypotheses and six conditions, of which observation is only the first."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Keeps the question of what training reaches apart from what is proposed, and answers 'always' in three senses."
+      },
+      "source_adds": {
+        "en": "A speed argument forcing delegation, and the governor-against-teacher choice, which the account does not pose."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-ai-amplifies",
+      "name": {
+        "en": "AI amplifies what competition rewards"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "What 2026 changes; claims 114, 146, 147",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "AI amplifies capacities competitive systems reward, so it may empower aggressive strategies rather than make us wiser; aligned with winners and trained on their data it turbocharges the spiral. Competitive systems select for power, not wisdom. So it must be governed as public-good infrastructure."
+      },
+      "quote": "instead of making humanity wiser, AI may make the most aggressive strategies more powerful",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "T3 and the joint-capacity law carry the form: more capacity drains more of what lies beyond, whatever the optimizer's purposes. T3's clause on trained systems is claimed, not proved. The account's term is drain, not aggression or wisdom, and 'must be governed as' is a ranking that needs C. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#t3",
+          "says": {
+            "en": "Thesis T3: optimization drains what lies beyond its couplings, where that gives room. The thesis adds that actual trained systems do this in proportion to how near they come to their reward's optimum; claimed, not proved."
+          }
+        },
+        {
+          "record": "several-optimizers-drain-by-their-joint-capacity",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-several-optimizers-drain-by-their-joint-capacity",
+          "says": {
+            "en": "At a mutual best response, a condition beyond every optimizer's family stands at what those outside leave less their joint capacity, or at nothing, as under one optimizer of that capacity."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Drain needs no competitive aim: it follows from a rising order with room."
+      },
+      "source_adds": {
+        "en": "Training data aligning AI with winners; AI as planetary technology; the governance conclusion."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-foundation-erosion",
+      "name": {
+        "en": "Foundation erosion: optimising away the load-bearing walls"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "The intensifiers; claims 90, 91",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Dominant agents sacrifice even the values and rules that keep the system stable and that enabled their rise, since the ledger does not price them. This is why the terminal state is collapse rather than stable tyranny. Competition intensifies as fewer hold more."
+      },
+      "quote": "the optimisation does not know to stop at the load-bearing walls",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "As a reading only: corruption taking over courts, press, statistics and audit is a loop whose rule-reading reaches the routes of 明; rewarding those who break them selects for narrowing what couples in. Unlike the source, the account does not conclude collapse over tyranny: the closed lock outlives every loss it does not read, which is the stable case. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/02-MAP.md#t7",
+          "says": {
+            "en": "Reading [AI, D26]: a second order, corruption taking over courts, press, statistics and audit, is a loop whose rule-reading reaches the routes of 明; a third, rewarding those who break the routes of correction, selects for narrowing what couples in. None of this says whether a locked loop supports or damages 生生."
+          }
+        },
+        {
+          "record": "a-pool-that-recruits-through-itself",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself",
+          "says": {
+            "en": "Theorem (World): a pool recruiting through itself comes to couple into a loss only as its course without the loss would; a reader admitted from outside couples it apart in the witness. Whether an actual pool recruits so is empirical."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "What a route of correction needs structurally: a reader admitted from outside."
+      },
+      "source_adds": {
+        "en": "That erosion makes collapse rather than tyranny the terminal state; the competition intensifier, which has no law here."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-endgames",
+      "name": {
+        "en": "Five endgames, and the third as the only non-trap"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "The endgames; claim 95; Said in Chinese: Loop 4 and the endgames",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "When few players remain they may freeze by mutual destruction, deadlock by frozen consensus, change their narrative to see themselves as a whole, collapse, or converge on one winner. Winner takes all is one absorbing state among several. The third alone is no trap, and it is a change of narrative."
+      },
+      "quote": "\"winner takes all\" is one absorbing state among several, not the theorem",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "Taken up by name and with its standing: an open conjecture in 05, 'from an earlier account; not formalized'. Which ends the laws admit is asked, not answered. The folder's ranking of the third as the only non-trap does not pass: nothing ranks without C, and the account would read 'as one whole' against its thesis on collectives. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#open",
+          "says": {
+            "en": "[Conjecture, from an earlier account; not formalized.] The ends a selection for position can reach: a frozen mutual destruction, a deadlocked structure of power, the parts coming to read themselves as one whole, collapse, and winner takes all; which the laws of position, capture and joint excess admit, and under which hypotheses."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "That the list stands as an open question about which hypotheses admit each end."
+      },
+      "source_adds": {
+        "en": "The conditions on the freezes (each believes the others rational; the consensus believed to hold), the verdict on the third branch, and the freeze slowing evolution until collapse."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-sample-size-hedge",
+      "name": {
+        "en": "Grow sample sizes: decorrelate collapse"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "The endgames; claims 96, 97",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "If change outruns intelligence and coordination, collapse seems inevitable unless the system splits into independent entities, like cells or city-states, so that when some collapse others keep evolving. But now everything is interconnected, with one global civilization, which makes this necessary and hard."
+      },
+      "quote": "split into smaller entities that are independent of each other, for example, like cells do, or something like city states",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The account has the law underneath, not the hedge. Groups on one coupled family end together and ending selects only between families; after excess, every later member descends from one independent of that family. 'Independent' is exact: not sharing the gated family. As a design recommendation for societies it is absent, and that a split is better needs a premise. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "groups-whose-conditions-are-coupled",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-groups-whose-conditions-are-coupled",
+          "says": {
+            "en": "Theorem (World): groups depending on one such family end together, nothing selected among them: ending selects only between families. Under balance, the coupled gate and excess from below n + m."
+          }
+        },
+        {
+          "record": "confined-rise-within-a-whole",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-confined-rise-within-a-whole",
+          "says": {
+            "en": "Theorem (World): where a family ran into excess under the coupled gate, every member of a later cohort of descent is the offspring of a member that depended on no condition of the family at the gate's need."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "What independence must consist of for the hedge to work."
+      },
+      "source_adds": {
+        "en": "The deliberate split as a response to unmanageable pace, and the observation that the fallback has gone."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-external-competition",
+      "name": {
+        "en": "A cooperative frame must also survive expansionist neighbours"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "Counterexamples; claims 26, 104; Raised inside the corpus",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Enduring communal societies contained compounding and were unexposed to external competition; contact with colonisation and global markets absorbed them. Hostile expansionist frames often outcompete others. So a cooperative frame must also solve external competition, and nothing in the corpus shows how."
+      },
+      "quote": "a cooperative frame must additionally solve the external-competition problem, and nothing in the corpus shows how",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The account also says persistence does not select widening: a part can go on while closing what lies beyond its dependence. The dweller's end under a clearer is a witness of this. Nor does it solve the problem. Selection among groups has laws, with assortment; 'hostile', 'expansionist' and contact between societies are unread. Its losses keep standing, unranked without the premises. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/02-MAP.md#open",
+          "says": {
+            "en": "A part can go on while closing what lies beyond its dependence (Clearing.loses_beyond), so persistence alone does not select widening; an empirical target, not a premise."
+          }
+        },
+        {
+          "record": "selection-among-groups-by-ending",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-selection-among-groups-by-ending",
+          "says": {
+            "en": "By ending: groups with less leave nothing. Theorem (any type; World for the flow laws)."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Keeps this counterexample's form open rather than absorbing it: persistence is not a verdict."
+      },
+      "source_adds": {
+        "en": "The historical pattern, the role of colonisation, and the problem as a stated limit on the narrative intervention."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-trust-output",
+      "name": {
+        "en": "Trust is an output of shared seeing"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "The responses; claims 121-125, 173",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Trust is not an input to coordination but arises when people share an understanding and can expect others to act on it. So the bottleneck is alignment of perception, and an intelligence teaching many to see the same loops is a coordination technology. Agreement that this is not inevitable comes first."
+      },
+      "quote": "Trust is not a prerequisite—it is an outcome.",
+      "carried": "changed",
+      "relation": "divergence",
+      "reading": {
+        "en": "The word has no use here beyond 'antitrust'. Where the account reaches cooperation, it says otherwise: giving lost everywhere is restored only by a law changed to give first, and promises alone start no loop. Knowing another's law is no coupling. Shared understanding is named as the work's purpose, not as a result. So seeing-then-trust is unproved, and the laws do not refute it. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "thresholds-of-waiting",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+          "says": {
+            "en": "Theorem (any type): restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start; without one, total withholding stays."
+          }
+        },
+        {
+          "record": "joint-plans-from-a-supported-start",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+          "says": {
+            "en": "Theorem (any process; periphery): promises do not: 'if the other eventually does, I eventually do' holds on both sides where neither ever happens."
+          }
+        },
+        {
+          "record": "reading-anothers-couplings-is-pooling",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-reading-anothers-couplings-is-pooling",
+          "says": {
+            "en": "Theorem (World): knowing another's law is no coupling; reading what another couples into selects through at least the pooled coupling."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "A grounded start: what must already give, before any alignment of views."
+      },
+      "source_adds": {
+        "en": "The causal chain seeing, expectation, trust, coordination, and teaching as its means; the folder itself notes no trial was run."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-leverage-at-attractor",
+      "name": {
+        "en": "Change the dominant attractor or nothing; the frame is the highest lever"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "The responses; claims 109, 110, 136",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Following Meadows, paradigm is the highest leverage point; minor adjustments do not change the outcome. The frame cannot be reached by facts or shame: fight myth with better myth, its antagonists impersonal forces. Incentives and narratives must change together."
+      },
+      "quote": "If we don't solve dominant attractors, focusing on minor adjustments won't change the outcome",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "The account has re-absorption exactly: a perturbed state returns where the next configuration depends on the rule, and a change of the reading is absorbed where it too is formed from the share. Its exits differ: a reader outside the share, a loss read in time, what comes back. Not narrative. And drift and LA2 show that the lock can give without changing a paradigm. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "target-capture",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-target-capture",
+          "says": {
+            "en": "Theorem (any type): where the next configuration depends on the rule, not the state, a perturbed state is re-absorbed in one step."
+          }
+        },
+        {
+          "record": "closed-capture",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+          "says": {
+            "en": "Theorem (any type): a reading favouring at no loss above a bound unlocks the course: a sufficient way out, not shown the only one; where the reading too is formed monotonically from the share, a change of it of any size is absorbed."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/02-MAP.md#which-locks-noise-leaves",
+          "says": {
+            "en": "Reading over proved cases: a lock read from a population drawn anew is kept for good only without noise or where the rule leaves the disfavoured kind nothing; a lock kept in counts that only grow can survive noise."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Which reforms are re-absorbed and which are not, and where the windows close."
+      },
+      "source_adds": {
+        "en": "Paradigm as the highest place to intervene, narrative rewriting as the means, and the manifesto's programme; the leverage hierarchy is not cited."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-direction-setting",
+      "name": {
+        "en": "Direction-setting told from capture only by structure"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "Said in Chinese: The strain; claim 169; Open: Loop 3, approved when the direction is approved",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "The recording grants the shaping of a society's expectations and language the most legitimacy, as Ren's hedged value stance. The folder says this is loop 3 from the side of an endorsed direction, and needs a symmetric test: public contestability, measuring what it selects, not rewarding winners with more capacity."
+      },
+      "quote": "Until the criterion is stated, [39:22] reads as an exception to the theory for one direction.",
+      "carried": "carried-in-part",
+      "relation": "divergence",
+      "reading": {
+        "en": "The account refuses the exception and goes further: it cannot yet tell the two by what shaping changes. Capture and accountable revision part at a reader of the loss beyond the share. A reform is judged by who decides admission, comparison and correction next round. 'Most legitimacy' does not appear; legitimate procedure is J4, a further premise. Nothing ranks these courses without C. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "loss-read-in-time-by-the-others",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-loss-read-in-time-by-the-others",
+          "says": {
+            "en": "Theorem (counts) with reading [AI, D45]: selected control is not thereby capture; since what the rule reads is fixed by the readers' premise, not the shaping, the model does not tell capture from accountable revision by what the shaping changes."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#markets",
+          "says": {
+            "en": "Reading [AI, D65; historical correspondence, no theorem]: a reform is judged by who decides admission, comparison and correction next round, not by removing one named practice."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Where the proposed structural test stops short in a model."
+      },
+      "source_adds": {
+        "en": "The value stance on state-shaped narrative, and three named candidate criteria tested symmetrically on any polity."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-goodness-rational",
+      "name": {
+        "en": "Goodness as rational, and the spiral as destructive"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "Claims 4, 108, 120, 126, 141, 147",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Though 'not a moral claim about individuals', the folder carries a verdict: the dynamic is destructive in nature; goodness is a rational and necessary choice (AI brief); a transcending narrative has to be done; happiness, equality and freedom should rank above financial efficiency."
+      },
+      "quote": "this kind of dynamics is not inherently stable, and is destructive in nature",
+      "carried": "changed",
+      "relation": "divergence",
+      "reading": {
+        "en": "Sharpest difference. No dynamic is good or bad here: the laws are sign-neutral, and nothing ranks open rule-making above capture without C. Scope (whose losses count) is the continuation condition, order is C, both unasserted with warrant open, and C is not derived from the condition. Goodness as rationally forced on any mind is what the account declines to claim. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+          "says": {
+            "en": "Neither premise is asserted. The condition alone ranks nothing; a ranking of courses needs C or a premise in its place; a statement reading no order entails C only where it fails."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#not-shown",
+          "says": {
+            "en": "No law says a drain is a harm, restraint better, cooperation good or a shared code worth keeping."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The relocation of the verdict to two named, unasserted premises."
+      },
+      "source_adds": {
+        "en": "The verdict itself: rationality of goodness, the rank of happiness, equality and freedom over capital return."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-four-conditions",
+      "name": {
+        "en": "Be generative, keep the space open, stop being selfish selves"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "What 2026 changes; claim 149; own words 48",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "The constructive condition handed on to the rest of the corpus: be generative, keep the possibility space open, recognise what leads to an end such as totalizing attractors, and recognise we are not selfish selves competing."
+      },
+      "quote": "as long as we are generative, as long as we keep the possibility space open",
+      "carried": "changed",
+      "relation": "scope",
+      "reading": {
+        "en": "The account keeps the direction and restates it under premises. 'Generative' splits into the map's generation, which allows loss and means no new organization, and 生生 as T8, argued, ranked by widening under C with scope from the condition. Keeping open has one exact limit. 'Recognising' does nothing by itself: a lock holds where its reading is formed from the share. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses",
+          "says": {
+            "en": "Thesis T8: for life, the way is 生生, compared by widening what can form, counted for everything (scope: the continuation condition) and ranked by what every valuer who counts everything shares (order: C); argued, with no verdict binding every possible mind claimed."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#the-answer-in-brief",
+          "says": {
+            "en": "Along a course that makes only the moves of one fixed process from some step on, the possible under that process does not keep widening. Widening is a criterion, silent where a comparison is mixed."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "That an expansion ending forms of life is mixed under C; a criterion's silence."
+      },
+      "source_adds": {
+        "en": "'As long as' as a sufficient stance; the self-understanding clause, which the account treats as a premise step, not a condition on success."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-not-totalizing",
+      "name": {
+        "en": "The theory's own conclusion, believed, is a lock"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "What 2026 changes; claims 143, 150, 174; own words 43",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "The folder's sharpest self-critique: treating this as a totalizing attractor, hope alone with little chance of change, is itself the trap the theory describes. Inevitability is self-fulfilling. If you believe the world is a jungle, you despair. If we do not build it, it will not happen."
+      },
+      "quote": "the theory's own conclusion*, believed, is one of those locks",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The account's answer has two parts: no guarantee, and named exits under hypotheses; drawn, neither lock holds for good. 'Totalizing' is not a live word. What it lacks is the reflexive step applied to itself: nothing asks whether publishing these capture laws changes what readers do, though 03 has the general law of a prediction read by what it predicts. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": null,
+          "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#the-answer-in-brief",
+          "says": {
+            "en": "Always guaranteed: no. Available as a direction: as a criterion only. Achievable under stated conditions: yes, for named exits, each under its hypotheses, none shown to hold of an actual collective."
+          }
+        },
+        {
+          "record": "drawn-shaping-drawn-one-at-a-time",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-drawn-shaping-drawn-one-at-a-time",
+          "says": {
+            "en": "Theorem (counts): drawn one member at a time, neither lock holds for good; a bound on the weight falls across the distance from the critical mass."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "An answer that is neither fatal nor hopeful: a table of what holds under which hypotheses."
+      },
+      "source_adds": {
+        "en": "The reflexive claim that believing the diagnosis strengthens it."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-legitimating-ledger",
+      "name": {
+        "en": "The legitimating vocabulary: a ledger or a costume"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "Said in Chinese: The legitimating vocabulary is a ledger; claim 168; Open: A ledger or a costume (the assistant's reading)",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Even where self-interest has become working rationality, power is justified by 'making life better'. Read by the folder's assistant: that vocabulary is a counter-ledger the spiral has not rewritten, and a lever. It constrains or is emptied, depending on whether the governed can invoke it against the powerful without penalty."
+      },
+      "quote": "Which of the two it is depends on whether those addressed can invoke its terms against the powerful without penalty.",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "Nearest live items are other mechanisms: 伪开 in 06 §十, which removes 欺 and reads it as local or short-term openness, and 'effective opportunities to understand, challenge and revise' as part of a conditional direction. Neither treats a vocabulary of justification as a lever on conduct. A shared word is not this mechanism. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "Stands in this folder, and it points to meta-attractor and OPEN-QUESTIONS, not read here."
+      },
+      "absence": {
+        "searched": [
+          "legitim, 伪开, propaganda, costume, discourse over fronts, chapters, review, GLOSSARY; narrative over records"
+        ],
+        "read": [
+          "06 §十 table",
+          "07 r-alignment-direction-under-widening opening",
+          "ONE-ARGUMENT lines on J4 and the direction"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-reading-across-boundary",
+      "name": {
+        "en": "Frames read across a rivalry: proposals as signals"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "Said in Chinese: Frames are read across the boundary; claims 148, 172",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "One side's safety talk framed as struggle is read by the other as hegemonic, so confrontation looks obviously right; asymmetric proposals read as still aiming to win. Each side's reading becomes the other's evidence, a loop between two sides. Proposals must be symmetric to be believed."
+      },
+      "quote": "A frame becomes legible to a rival through what it proposes",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "The withholding laws and the prediction law give nearby forms, but none has two sides reading each other's proposals as evidence of type; models of actors' beliefs about each other are not in the account's laws. Fits as a possible case of a prediction read by what it predicts, which I do not assert. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "Stands in this folder; it names zhishan-intelligence-must-be-good for the design consequence."
+      },
+      "absence": {
+        "searched": [
+          "symmetric proposal, colonial, hegemon, 'read as a signal', costly signal over fronts, chapters, review, GLOSSARY, records"
+        ],
+        "read": [
+          "05 §5 giving that waits on giving with its reading",
+          "03 a prediction read by what it predicts"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-affect-first",
+      "name": {
+        "en": "Judgment is affect-first, in elites too"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "Counterexamples; claims 81, 82, 134, 135",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Judgments are affect-first and rationalised after, and this scales to politics and economics, among leaders as well as masses. Emotionally resonant narratives beat true but complex explanations; so facts and moral argument are not enough."
+      },
+      "quote": "judgments are affect-first and rationalised after",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "This is the cognitive premise of loop 3, and the account has neither emotion nor rationalisation among its terms: its readers read by counts. T7's 'not on evidence alone' is about what a loop reads, not why. So the folder's reason facts fail is not the account's. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "Stands in this folder only."
+      },
+      "absence": {
+        "searched": [
+          "emotion, affect-first, rationalis/rationaliz (one unrelated hit, 08), humiliat over fronts, chapters, review, GLOSSARY, records"
+        ],
+        "read": [
+          "02 T7",
+          "07 §1 how evaluation forms"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-money-as-narrative",
+      "name": {
+        "en": "Money and finance as narrative"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "Claims 34, 35, 69, 70, 108",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Money is a narrative: belief in its value lets it coordinate; it is a power token giving optionality. Capitalism reads as a religion; stock value is a bet on others' belief. Yet this is no anti-capitalism: markets matter, but financial logic should not be the dominant order."
+      },
+      "quote": "Market and capital are one of the most important human inventions",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "05 §10 treats a market as joint activity whose selection runs through payments, with a periphery model and no reading of money as story. 08 keeps money, payment and ownership for actual economic relations. No market law ranks arrangements, so 'should not be dominant' has no home either. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "Stands in this folder only."
+      },
+      "absence": {
+        "searched": [
+          "money (one hit, 08), financ (05 reading, 08 naming, one periphery record), capitalis, religio over fronts, chapters, review, GLOSSARY, records"
+        ],
+        "read": [
+          "05 §10 opening and its readings",
+          "08 line on money and ownership"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-history-evidence",
+      "name": {
+        "en": "Historical spirals and warning signs"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "Claims 99, 103-105; Found by reading: empirical base",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Rome, the Classic Maya, Easter Island and others: societies that failed to regulate selfishness collapsed, those checking accumulation lasted (AI-sourced, none checked). Warning signs include inequality outrunning GDP and belief that human nature is selfish. The folder says the definition is unfalsifiable as stated and no test was run."
+      },
+      "quote": "The empirical base is AI-sourced and untested.",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "The account makes no historical-collapse claim and says calibration to the present world is not established. Its test design for the nearest thesis, T7F, could not be frozen and held on 5 November 2026; LA2 is one trained system. The folder's reading of counterexamples as temporary alignment is the unfalsifiable form the account's forbids-and-refuted-by method would not admit. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "Stands in this folder; its proposed test (accumulation curves against narrative shifts) was never run."
+      },
+      "absence": {
+        "searched": [
+          "Rome, Roman, Maya, Easter Island, Turchin, Piketty, collapse of, civilization over fronts, chapters, review, GLOSSARY, records"
+        ],
+        "read": [
+          "02 T7 evidence paragraph",
+          "02 reading D65 on calibration"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-sspiral-plurality-exit",
+      "name": {
+        "en": "Plurality with exit as architecture"
+      },
+      "domain": "earlier-folders",
+      "group": "selfishness-spiral-and-narrative-value-frames",
+      "source": {
+        "work": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+        "locator": "The endgames; claim 119",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Build a common layer everyone can agree on and many societies on top, capitalist, libertarian, socialist and others, each with a right to exit and to fail. The developed form of the sample-size hedge."
+      },
+      "quote": "each experimenting with its own path, with the right to exit and the right to fail",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "'Blocked exit' appears once in 07, as a kind of fault kept apart in a reading; the account has no layered architecture of societies or right of exit. 'Exit' elsewhere means leaving a lock or a margin, which is a different sense. A design, and it would need the premises to be ranked. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "Stands in this folder; may stand further in wamotopia, not read here."
+      },
+      "absence": {
+        "searched": [
+          "opt-out, plurality, many societies, federat, polycentric, exit, city-state over fronts, chapters, review, GLOSSARY, records"
+        ],
+        "read": [
+          "07 reading D65 on omission, fault and informed harm",
+          "COLLECTIVE-DIRECTION §2 exits table"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,305 @@
+{
+  "group": {
+    "id": "chinese-classical",
+    "domain": "chinese-classical",
+    "title": {"en": "Chinese classical thought: what the existing maps have not reached"},
+    "kind": "domain",
+    "summary": {"en": "The domain is mapped more than any other (RO 248, ZH 1,300, Y 90, dossier C 39); nothing there is re-mapped. These ten entries take texts the maps do not hold: 诗经, 阴阳家, 农家, 中庸 13, 黄宗羲 on taxes and schools, 孟子 on cycles, 子华子. By relation: four divergence, four scope, two agreement. 06's 未决 line is stale: 老子 34 and 57 and 中庸 1 are mapped."},
+    "read": [
+      "_process/.../aa-attractor-atlas/PLAN.md sections 3.3, 4.2, 4.3, 4.4, 6.3, 6.4, 6.5 and appendix D",
+      "_process/.../aa-attractor-atlas/readers-2026-11-04/correspondences.md in full",
+      "theories/becoming/chapters/06-CLASSICAL-TEXTS.md: header, 二, opening of 六, 7.1, 7.2, 7.3, 十一, 未示, 未决",
+      "sources/chinese-classical-texts/atlas-v9.1/evidence/texts/V3Q02.txt (明夷待訪錄): 學校 and 田制三 in full, 方鎮 one paragraph",
+      "sources/chinese-classical-texts/atlas-v9.1/evidence/texts/R02.txt (孟子): 滕文公上 许行 passage in full; 滕文公下 一治一乱 opening; 公孙丑下 五百年 line; 离娄上 lines citing 《诗》",
+      "sources/chinese-classical-texts/wikisource/禮記正義__52.json: 中庸 13 经 and 郑注 in full, opening of 孔疏",
+      "theories/becoming/history/CHINESE-SOURCES-AND-BECOMING.md section 11, for the passages it lists as worth rereading",
+      "Home statements of the records named as targets, and their JSON hypotheses and does_not_show where the entry leans on them"
+    ],
+    "skimmed": [
+      "theories/becoming/review/CLASSICAL-TEXTS.md: header, section headings, C-26, C-33",
+      "theories/becoming/chapters/07-SIGNIFICANCE.md sections 3, 4 opening, T8, and the D68 readings in section 6",
+      "theories/becoming/chapters/02-MAP.md section 8, section 9 and Open"
+    ],
+    "searched": [
+      "RO, ZH and Y data files, stored texts and live chapters, for about 110 phrases and names; hits are not readings. Full list under coverage.absent and each entry's reading",
+      "record-index.tsv by mechanism: ratchet, cycle, alternat, renew, consum, margin, inherit, division, window, rival and others",
+      "Live account for hysteresis, irreversib, asymmetr, rock-paper, cyclic dominance, intransitive, 相克, 五行, 阴阳家, 农家, 医家"
+    ],
+    "not_mapped": [
+      {"en": "范缜《神灭论》 (形质神用), the other side of the dispute whose 慧远 side ZH holds at huiyuan-xin-huo and huiyuan-wen-shen-xing-ju-hua", "why": "The ten-entry limit; it is close to what those two entries already read through Web.coextinct and Web.ByPassing, so it adds less than the rest."},
+      {"en": "《黄帝内经》: 亢则害，承乃制 and 不治已病治未病 (recalled, not stored)", "why": "A whole tradition absent. 治未病 would repeat 机之前; 亢害承制 deserves its own read with the medical commentaries, and I know them too thinly to give one in a single entry."},
+      {"en": "《太平经》 承负: later generations bear what earlier ones did (recalled, not stored)", "why": "A plausible reading of a loss across lines, but my knowledge of the text's layers is thin; listed under absent for a human or a fuller read."},
+      {"en": "洪亮吉《治平篇》 and 《史记·货殖列传》 计然's 六岁穰，六岁旱 (recalled)", "why": "洪亮吉 would restate an overshoot 08 already calls near-definitional. 计然's period belongs with the cycle entry and is named there only as a lead."},
+      {"en": "柳宗元《封建论》, 顾炎武《郡县论》 and 《日知录》 on 亡国 and 亡天下, 王夫之《读通鉴论》 on 势", "why": "Each has a mechanism worth a read (an institution formed by 势, an ending relative to a grain). The ten-entry limit; none is in the corpus except passing mentions."},
+      {"en": "The 坛经 Dunhuang text", "why": "It belongs to the buddhist item; its 佛性常清淨 against the 宗宝本's 本來無一物 bears on the non-relational layer, and is not read here."},
+      {"en": "Passages 06's 未决 points to in the RO chapter's section 11. By search of the data: 程颐 天地不交, 孟子 交征利, 时中, 明镜, 物化, 指物 now occur in ZH or RO; 黄宗羲 有治法, 陆九渊 宇宙便是吾心, 董仲舒 名生於真, 学记 相观而善 and 发然后禁, 天台 一念三千 occur in neither", "why": "Searched, not read. Those not reached are mostly layers of mind or of name, not dynamics, and were not the priority of PLAN section 6.3 row 1."},
+      {"en": "Designs and products of the domain's maps: the 中华本 name list, the wenli fidelity counts, the hexagram world", "why": "Already in their own files and chapters. They are not claims of the classical sources, and nothing already mapped is re-mapped."}
+    ],
+    "coverage": {
+      "present": [
+        {"what": "RO: nine groups of passages mapped verbatim onto the spine", "where": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/passages.json", "extent": "248 passages: 91 agreement, 98 scope, 59 divergence; 486 fragments; 604 distinct declarations and 122 records cited. By tradition: 老子 50, 儒家 50, 易传 49, 文字 49, 兵法轻重纵横 13, 墨名 12, 庄玄 11, 佛教 10, 其他 4. Counted from the file."},
+        {"what": "ZH triage of 《中华思想脉络》 v1.0", "where": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/coverage.json", "extent": "5,673 verdicts: 3,514 with a cluster, 2,159 with none. First-pass k: a 2,118, s 876, d 520; these are triage and not the final kinds. Counted from the file."},
+        {"what": "ZH entries, in 17 clusters", "where": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json", "extent": "1,300 entries: 453 agreement, 647 scope, 200 divergence; 1,743 parallels, 250 rejected, 35 dropped, 239 name flags. Counted from the file; the 4 November reader's 1,742 and 251 differ by one each."},
+        {"what": "Y: passages of the Changes", "where": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/y1-changes/passages.json", "extent": "90 passages: 51 agreement, 27 scope, 12 divergence. Counted from the file."},
+        {"what": "Dossier C for review by scholars of classical texts", "where": "theories/becoming/review/CLASSICAL-TEXTS.md", "extent": "39 items (C-01 to C-39, counted by heading); 95 questions by its own header. No person has reviewed it."},
+        {"what": "The chapter: corpus, candidates, conditional laws, the hexagram world, names", "where": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md", "extent": "By its text: 2,997 and 1,119 corpus units; 59 乙 candidates tested and 181 not; 219 丙一 read, 128 in 22 families; 449 names. All readings are the AI's, and no person has read them through."}
+      ],
+      "absent": [
+        {"en": "诗经 as a text. It reaches the maps only through other books' citations (烝民 through 孟子, 抑 through 墨子). 06's 未决 says so, and that holds.", "searched": ["《诗经", "《詩經", "木瓜", "碩鼠", "硕鼠", "殷鑒", "殷鉴", "天命靡常", "《诗", "《詩"]},
+        {"en": "阴阳家 and 农家 sources. 阴阳家 occurs once in ZH and 农家 not at all; 许行's own claim survives only in 孟子, which is stored.", "searched": ["阴阳家", "陰陽家", "邹衍", "鄒衍", "农家", "農家", "并耕", "並耕", "許行", "许行", "五德", "相克", "水火木金土"]},
+        {"en": "Medical thought, and Daoist scriptures beyond 老庄 (抱朴 hits are 老子 19's 见素抱朴; the 列子 hits are 庄子's 列子御风).", "searched": ["黄帝内经", "內經", "素問", "素问", "亢則害", "亢则害", "治未病", "太平", "太平經", "承負", "承负", "抱朴", "葛洪", "列子"]},
+        {"en": "Historians and economic writing: 史记 occurs only through 司马谈's 六家要指, with no 货殖, 平准 or 过秦.", "searched": ["史记", "史記", "司马迁", "貨殖", "货殖", "过秦", "過秦", "贾谊", "盐铁", "鹽鐵", "洪亮"]},
+        {"en": "Later political and practical critique: 黄宗羲 occurs once (原君); no 顾炎武, 柳宗元 on 封建, 叶适, 颜元, 李贽, 龚自珍, 章太炎.", "searched": ["明夷待", "积累莫返", "積累莫返", "學校", "顾炎武", "顧炎武", "日知录", "日知錄", "封建论", "封建論", "叶适", "葉適", "颜元", "顏元", "李贽", "童心", "龚自珍", "章太炎", "俱分"]},
+        {"en": "The rest of 吕氏春秋, and 子华子 or a 杨朱 line of 贵己 (杨朱 occurs once, as 荀子's 哭衢涂).", "searched": ["吕氏春秋", "呂氏春秋", "迫生", "子華子", "杨朱", "楊朱", "竭澤", "竭泽", "淮南", "塞翁"]},
+        {"en": "Parts of 中庸 13: 道不远人, 伐柯 and 改而止. Its 施諸己 and 所求乎子 are mapped (C14, zhongyong-shi-zhu-ji-er-bu-yuan).", "searched": ["不遠人", "不远人", "伐柯", "改而止", "施諸己", "忠恕"]},
+        {"en": "Stale in 06's 未决: it says 老子 34 and 57 and 中庸 1 are not in the mapping, but ZH holds lao-34-shi-zhi-er-sheng and lao-57-fa-ling-zi-zhang, four entries on 中庸 首章 (C01, C06, C07, C11), and RO holds ru-zhongyong-zhi-zhong-he.", "searched": ["法令滋彰", "大道氾", "天命之謂性", "致中和"]}
+      ]
+    }
+  },
+  "entries": [
+    {
+      "id": "cx-cc-huang-jilei-mofan",
+      "name": {"en": "黄宗羲: 積累莫返, a burden re-based each time a reform merges its names"},
+      "domain": "chinese-classical",
+      "group": "chinese-classical",
+      "source": {
+        "work": "sources/chinese-classical-texts/atlas-v9.1/evidence/texts/V3Q02.txt",
+        "locator": "《明夷待訪錄·田制三》, the first of three harms",
+        "basis": "read-in-repo"
+      },
+      "sense": {"en": "Each reform (杨炎's 两税, the 一条鞭) folds earlier levies into one base, and their names vanish. Later generations 安之, take the merged sum as the base, and levy the folded items anew (丁身钱米, 杂役). So the burden rises by steps and never returns. He blames the lost names: 使庸、調之名不去，何至是耶. The modern label 黄宗羲定律 is not his."},
+      "quote": "有積累莫返之害",
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {"en": "Only the first of two steps has a law. Merged names are a map that lumps: where what is owed differs across what the name lumps, selection through the name cannot be right. The second step, the re-basing, has none. The nearest law, a rising take, excludes stepwise rises and supplies the rise as a premise. Huang names a route to that premise. It is not capture through the rule: no share is read. [AI reading]"},
+      "targets": [
+        {"record": "selection-right-exactly-where-read", "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-right-exactly-where-read", "says": {"en": "Theorem (any type; for the selection, the alternatives' equality decided): what matters goes alike across what a map lumps exactly where it is read off the map, and a selection through the map selecting exactly what matters exists exactly there. It does not show which map a selector uses."}},
+        {"record": "where-a-rising-take-ends", "anchor": "theories/becoming/chapters/02-MAP.md#r-where-a-rising-take-ends", "says": {"en": "Theorem (World): a take more than now at every step, from a condition given at most B a step, exceeds what is given after B + 1 steps; the seeker ends where it does not resume. Its record excludes takes rising only at some steps, and says the rise is supplied, not derived."}}
+      ],
+      "account_adds": {"en": "The exact condition under which lumping does no harm, and where a take rising at every step ends. Huang gives neither."},
+      "source_adds": {"en": "A ratchet by re-basing: a reform lowers the visible count, the reading forgets what was folded in, and the same item is charged again. I found no law of it, nor of a take rising only at some steps. The chapter also has 所税非所出 (a levy in what the payer does not produce) and a single rate that blocks fallow, 土力之日竭; neither is mapped."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-cc-huang-xuexiao",
+      "name": {"en": "黄宗羲: 公其非是於學校, readers of right and wrong outside the ruler's favour"},
+      "domain": "chinese-classical",
+      "group": "chinese-classical",
+      "source": {
+        "work": "sources/chinese-classical-texts/atlas-v9.1/evidence/texts/V3Q02.txt",
+        "locator": "《明夷待訪錄·學校》",
+        "basis": "read-in-repo"
+      },
+      "sense": {"en": "Under later dynasties 天下之是非一出於朝廷, and people follow what the ruler honours. Examinations turned the schools themselves by 朝廷之勢利. Academies that disagreed were banned. He proposes that local heads of schools not be appointed by the court, that students may replace them, that the emperor sit among the students of the 太学, and that its head state the ruler's faults. He holds this was the 三代's way."},
+      "quote": "天子之所是未必是，天子之所非未必非，天子亦遂不敢自為非是，而公其非是於學校",
+      "carried": "fresh-reading",
+      "relation": "scope",
+      "reading": {"en": "Judgment read from what the ruler's favour selects has the form of a rule read from its share, if ReadsShare is granted, which is a reading. His school is then a reader beyond the share, and his staffing rules act on who reads, where the law moves the premise. Scope: the account gives no general remedy; a reading of the loss is one sufficient way out. 07 reads the examination as a proxy trap; here is that statement from inside the tradition. [AI reading]"},
+      "targets": [
+        {"record": "closed-capture", "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture", "says": {"en": "Theorem (any type): where neither the next share nor the rule read reads the beyond, from a locked configuration, under the listed premises, the loss passes every bound while the course stays locked; a reading favouring at no loss above a bound unlocks it: a sufficient way out. That actual rules read the share is the premise."}},
+        {"record": "readers-drawn-from-the-selected", "anchor": "theories/becoming/chapters/02-MAP.md#r-readers-drawn-from-the-selected", "says": {"en": "Theorem (any type): reading the rule as the pool of its readers' readings, counted as the population counts them, it is a monotone function of the share exactly where the others' reading is not above the carriers'. So the premise is moved to who reads, not removed. That the readers are minds or institutions is a reading (D58, D67)."}},
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md", "says": {"en": "Reading [AI reading, D68] in section 6: a counter-rule read monotonically from its share can lock as the rule it replaced did; the imperial examination, designed to dilute hereditary capture, later became a proxy trap of its own, as read in the meta-attractor line. It rests on the capture laws."}}
+      ],
+      "account_adds": {"en": "With the others' late reading the mirror of the carriers', the lock is kept for good exactly where carriers are at least as many as others when the loss is read. Huang has no such count."},
+      "source_adds": {"en": "The rule-holders acting on the readers (收捕黨人, 偽學之禁), and an office design with a reversal of rank in ritual. Divergence kept: his readers are 士, themselves drawn through a selection he also criticizes, and he warrants the design by a golden 三代, a past the account does not take up."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-cc-mengzi-yizhi-yiluan",
+      "name": {"en": "孟子: 一治一乱, and a period of about five hundred years"},
+      "domain": "chinese-classical",
+      "group": "chinese-classical",
+      "source": {
+        "work": "sources/chinese-classical-texts/atlas-v9.1/evidence/texts/R02.txt",
+        "locator": "《孟子·滕文公下》, the 好辩 passage; period claim at 《公孙丑下》 (五百年必有王者兴)",
+        "basis": "read-in-repo"
+      },
+      "sense": {"en": "Since people were born, order and disorder have alternated: flood and 禹, tyrants and 周公, 《春秋》 and 孔子, and now heterodox talk and himself. Each turn comes through a named person. Elsewhere he says a true king rises every five hundred years, and admits the count has passed: 以其数则过矣，以其时考之则可矣. 治 and 乱 are evaluations."},
+      "quote": "天下之生久矣，一治一乱",
+      "carried": "fresh-reading",
+      "relation": "scope",
+      "reading": {"en": "The account gives where returning holds, not alternation in general. Under a determined law on m listed configurations every course enters what returns, and each basin holds one cycle. That is recurrence without any statement of what recurs or how often. Alternation appears in witnesses and beyond a no-overshoot bound. Mencius's turns come from outside the loop, which a determined law's basin does not read. 治 and 乱 carry no valence here. [AI reading]"},
+      "targets": [
+        {"record": "basins-of-a-determined-law", "anchor": "theories/becoming/chapters/02-MAP.md#r-basins-of-a-determined-law", "says": {"en": "Theorem (any type): under any determined law, within m listed configurations every course enters what returns before step m, and each basin holds one cycle. It does not show how many basins an actual law has."}},
+        {"record": "two-sided-regulation-and-late-reading", "anchor": "theories/becoming/chapters/02-MAP.md#r-two-sided-regulation-and-late-reading", "says": {"en": "Theorem (World): with balance at the condition, the bound on the joint exchange is exactly no overshoot; within it, opposing, the level settles at m; beyond it an opposing exchange crosses and can oscillate for ever."}},
+        {"anchor": "theories/becoming/chapters/02-MAP.md#open", "says": {"en": "Listed as open: a closed form for a turn around a cycle of several conditions. The atlas plan (section 4.2) lists when a regime cycles, and with what period, as absent as a law."}}
+      ],
+      "account_adds": {"en": "An exact bound for when opposing response settles and when it can oscillate, and the return of every course in a finite determined world."},
+      "source_adds": {"en": "A claim about a whole political history; a rough period, offered and then excused by 时 (计然's 六岁穰，六岁旱 in 史记 would be a second such claim, recalled and not read); and agents who change the course from outside. The account has no law of period."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-cc-xuxing-bingeng",
+      "name": {"en": "许行 (农家): 并耕, and the ruler's stores as living off the people; 孟子's reply"},
+      "domain": "chinese-classical",
+      "group": "chinese-classical",
+      "source": {
+        "work": "sources/chinese-classical-texts/atlas-v9.1/evidence/texts/R02.txt",
+        "locator": "《孟子·滕文公上》, 陈相 reports 许行",
+        "basis": "read-in-repo"
+      },
+      "sense": {"en": "许行's position survives only through his opponent's report: a worthy ruler ploughs with the people and cooks his own meals; a state with granaries and treasuries is 厉民而以自养. Mencius answers that 许行 himself trades grain for tools because making them 害于耕, so ruling cannot be combined with ploughing either, and 治于人者食人，治人者食于人 is 天下之通义."},
+      "quote": "贤者与民并耕而食，饔飧而治",
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "Each side asserts what the account does not. 厉 calls a draw a harm, and no law says a loss is a harm. 通义 fixes a rank between those who feed and those fed, and no rank stands in the structure. Mencius's structural point is mutual dependence through exchange; a division by exclusive footprints says nothing of who eats. Ranking the two needs C or a premise in its place; the continuation condition only fixes whose losses count. Neither is asserted. [AI reading]"},
+      "targets": [
+        {"record": "mutual-dependence-and-its-pace", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-mutual-dependence-and-its-pace", "says": {"en": "Theorem (World; no premise for the closures): mutual dependence is every influence closure being the whole: every continuation can be affected, at some remove, by every other. Mutual feeding gives mutual dependence, which gives sharing throughout; neither converse holds."}},
+        {"record": "division-by-exclusive-footprints", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-division-by-exclusive-footprints", "says": {"en": "Theorem (World: balance): where what formations take is what the leaves of a realized joint plan draw, footprints apart and within what is given, the joint draw is within what is given. It does not show that an actual division is by exclusive footprints, or that the level rises."}}
+      ],
+      "account_adds": {"en": "That division by itself gives no rise and names no ranks: what the law reads is footprints. 许行's uniform prices are already read, by 物之不齐, at C07 mengzi-wu-zhi-bu-qi, and are not re-mapped."},
+      "source_adds": {"en": "A test of a ruler by whether he draws without giving of his own kind; a dispute over whether a reader's or coordinator's work is giving. The account does not take up whether ruling is a contribution."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-cc-shi-tianming-michang",
+      "name": {"en": "诗: 天命靡常 and 殷鑒不远, holding does not secure, and a predecessor's end as a mirror"},
+      "domain": "chinese-classical",
+      "group": "chinese-classical",
+      "source": {
+        "work": "sources/chinese-classical-texts/atlas-v9.1/evidence/texts/R02.txt",
+        "locator": "《孟子·离娄上》, citing 《大雅·文王》 and 《大雅·荡》; the 诗经 itself is not stored",
+        "basis": "read-in-repo"
+      },
+      "sense": {"en": "A Zhou poem tells of Shang's descendants now serving Zhou: heaven's mandate is not constant. Another says Yin's mirror is not far, in the end of Xia. Mencius applies these: 暴其民甚，则身弑国亡, and a bad name lasts a hundred generations. The claim as used is that power is held on condition of conduct, and heaven, a willing giver, withdraws it. This is one reading through Mencius, not the poems' whole sense."},
+      "quote": "侯服于周，天命靡常",
+      "carried": "fresh-reading",
+      "relation": "scope",
+      "reading": {"en": "Scope: the source says the hold is lost when conduct fails; closed capture gives a case where it is not. Where nothing in the loop reads the loss, the lock outlives it. So 靡常 holds where something reads the loss in time: the others among the readers, within a window that closes. The mirror is not that law: its others read this course's loss, not a former line's end. Divergence at one layer: 天 as a willing giver is a character 06 does not adopt. [AI reading]"},
+      "targets": [
+        {"record": "closed-capture", "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture", "says": {"en": "Theorem (any type): under Unread and its listed premises, from a locked configuration the loss passes every bound while the course stays locked. That any actual rule is formed from the share it selects is a premise, and that what lies beyond is a loss to anyone is a significance's to say."}},
+        {"record": "loss-read-in-time-by-the-others", "anchor": "theories/becoming/chapters/02-MAP.md#r-loss-read-in-time-by-the-others", "says": {"en": "In the model, with discrete steps, natural counts and no noise: a late reading by the others turns the course for good exactly where it still favours the others at the share a step on; once it would favour the shapers, every later reading keeps the lock. That actual readers read the loss is not shown."}}
+      ],
+      "account_adds": {"en": "That a hold may outlive any loss it does not read, and an exact window, in the model, for when a reading still turns it."},
+      "source_adds": {"en": "Reading the end of another, ended line as a warning about one's own: learning from what is no longer there to report. I did not find a law of it. Also the moral tie of conduct to loss, which the account does not assert."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-cc-shi-mugua",
+      "name": {"en": "诗·木瓜: 匪报也，永以为好也, a return that denies being a return"},
+      "domain": "chinese-classical",
+      "group": "chinese-classical",
+      "source": {
+        "work": "《诗经·卫风·木瓜》",
+        "locator": "the refrain of each stanza, as I recall it; not stored",
+        "basis": "ai-knowledge"
+      },
+      "sense": {"en": "Given a quince, one returns a fine jade and says: this is not repayment, it is to make the tie last. The poem's occasion is disputed: 毛序 reads a thanks of 卫 to 齐桓公, 朱熹 suspects a gift between lovers. The structure I rely on is only the refrain's, and I have not checked it against stored text."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "The laws of waiting take the relation as given and state who gives on what others gave; amounts are out of their scope. The poem claims something those laws do not state: that a giving's sense is the tie, not the answer, and that it exceeds and disclaims what prompted it. The nearest structure is a formation sparing what it waits on, which restores giving; that law reads no motive. No reduction of the poem to it is claimed. [AI reading]"},
+      "targets": [
+        {"record": "giving-that-waits-on-giving", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-giving-that-waits-on-giving", "says": {"en": "Theorem (any type): with memory, a formation gives exactly where every formation within n waits of it gave at the start, so one withholding, where every formation lies within d waits, ends all giving from step d on. It does not show how the relation forms, amounts of giving, or that cooperation is good."}},
+        {"record": "thresholds-of-waiting", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting", "says": {"en": "Theorem (any type): under the tolerating law, restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start; without one, total withholding stays. It does not show amounts of giving, thresholds with memory, how tolerances form, or that tolerance is good."}}
+      ],
+      "account_adds": {"en": "What a withholding does along chains of waits, and that restoring needs a formation that does not wait."},
+      "source_adds": {"en": "A return larger than the gift, and a stated refusal to count it as a return. 礼尚往来 and 投桃报李 count exchange; only the second is mapped (through 墨子, C11)."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-cc-zouyan-wude",
+      "name": {"en": "阴阳家: 五德终始, a fixed order of regimes, used to warrant Qin's law"},
+      "domain": "chinese-classical",
+      "group": "chinese-classical",
+      "source": {
+        "work": "邹衍 (works lost), as reported in 《史记·孟子荀卿列传》, 《史记·秦始皇本纪》 and 《吕氏春秋·应同》",
+        "locator": "locator unverified: from memory of those three places",
+        "basis": "ai-knowledge"
+      },
+      "sense": {"en": "Regimes succeed each other in a fixed ring of five powers, each overcome by the next, with signs announcing the turn, and each with its proper form of rule. By later report Qin took water's power and said harsh law fitted its number. My knowledge is second-hand: 邹衍's own books are lost, and which later correlations are his is uncertain."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "Two divergences. A law standing over history and ordering it in advance is what the account refuses for root laws, which are read off what they hold of; a fixed order could be a hypothesis, and could fail, but signs read after the event do not let it. And Qin's use has the form of a rule's reading supplied by its holder, if ReadsShare is granted; the source offers it as warrant, not as capture. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/08-METHOD.md#law", "says": {"en": "A law of the theory is a statement that holds of every relation, carrier or model its hypotheses admit. It is read off what it holds of and does not stand over it; a law of the root forbids no relation, and a law with content is conditional and forbids through its hypotheses."}},
+        {"record": "capture-through-the-rule", "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule", "says": {"en": "Theorem (any type): on a two-level course, where selection does not lower a share under a favouring rule and the rule read is a monotone function of the share, with favouring rules the course locks from the step after its first reading step. That actual rules read the share is the premise."}}
+      ],
+      "account_adds": {"en": "That a rule's reading can be formed from what the rule selects, and what then follows, under named premises."},
+      "source_adds": {"en": "A ring of parts in which each overcomes the next, with no top: I found no law of cyclic dominance, and 02 lists a turn around a cycle of several conditions as open. Also a correlative scheme (season, colour, number, rule); 06 lists 卦气 and 纳甲 as not done."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-cc-zhongyong13-gai-er-zhi",
+      "name": {"en": "中庸 13: 伐柯 and 改而止, a measure drawn from those corrected, and stopping at it"},
+      "domain": "chinese-classical",
+      "group": "chinese-classical",
+      "source": {
+        "work": "sources/chinese-classical-texts/wikisource/禮記正義__52.json",
+        "locator": "《礼记·中庸》, 子曰道不遠人 to 丘未能一焉, with 郑玄's note",
+        "basis": "read-in-repo"
+      },
+      "sense": {"en": "A way that removes itself from people is no way. As an axe handle is cut with a handle in hand, so the pattern is near. So the 君子 orders people by people and stops when they change; 郑注: 不責以人所不能. 孔子 then names four duties and says of each that he has not met it. 中庸's date is disputed, and its opening 天命之謂性 is a fixed-nature layer ZH records as divergent."},
+      "quote": "故君子以人治人，改而止。",
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {"en": "If the measure is read as a level those corrected can reach, 改而止 has the form of the no-overshoot bound: an exchange within the gap to the set level settles there, and one beyond it can cross and oscillate. A rule holding only within a band its members can carry is a neighbouring form: its take must stay within renewal. Neither law knows a person or a way, and the reading supplies what the level is. [AI reading]"},
+      "targets": [
+        {"record": "two-sided-regulation-and-late-reading", "anchor": "theories/becoming/chapters/02-MAP.md#r-two-sided-regulation-and-late-reading", "says": {"en": "Theorem (World): with balance at the condition, the joint exchange departs from evenness by at most the gap to m on each side exactly where the next level lies between m and the present one: the bound is exactly no overshoot; within it, opposing, the level settles at m."}},
+        {"record": "a-rule-rebuilt-from-the-members-it-limits", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-rule-rebuilt-from-the-members-it-limits", "says": {"en": "Theorem (root; a family of models): taught by members, entrants on offer at every step, no revision, a level of at least one: from the steady state the rule is held at every step exactly where l < s, 1 ≤ q and (q + e q) · s ≤ g. This is the steady state's law and not the rule's."}}
+      ],
+      "account_adds": {"en": "The exact bound, and the arithmetic of a band within which a taught rule holds."},
+      "source_adds": {"en": "That the speaker applies the rule to himself and reports failing it (未能也), and that a standard is disqualified by being far from those it addresses. 施諸己 and 所求乎子's role-reversal are already in ZH (C14) and are not re-mapped. 君子 keeps a rank the laws do not carry."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-cc-zihuazi-posheng",
+      "name": {"en": "子华子: 全生为上，亏生次之，死次之，迫生为下, a forced life ranked below death"},
+      "domain": "chinese-classical",
+      "group": "chinese-classical",
+      "source": {
+        "work": "《吕氏春秋·贵生》, quoting 子华子",
+        "locator": "贵生, as I recall it; not stored",
+        "basis": "ai-knowledge"
+      },
+      "sense": {"en": "Four grades of living. Whole life has all six desires fitly met; diminished life some; death is having no means of knowing, a return to the unborn; forced life has none met and meets what it most hates, and disgrace and 不义 are its forms. So forced life is worse than death. Attributing this line to 杨朱's school is a scholars' inference, and I have not checked the wording against stored text."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "The condition is untouched: its significance is neither graded nor necessarily positive, so a forced life's continuing having significance does not say it is good. The divergence is with order. C ranks a course above each it extends and decides no other pair; on a reading where continuing extends ending, it ranks forced life above death, where the source ranks it below. The source's comparison reads what the one living undergoes; C reads what can form. Both premises are unasserted, their warrant open. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#condition", "says": {"en": "Definition: from every standpoint, the continuation of anything has significance at every step. Not asserted. Reading [AI reading, D16]: significance is neither graded nor necessarily positive."}},
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order", "says": {"en": "The continuation condition fixes whose losses count and does not rank anything. C, widening what can form is better, ranks a course above every course it widens and does not rank mixed comparisons. Two premises, neither asserted."}},
+        {"record": "comparison-by-widening", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-comparison-by-widening", "says": {"en": "Theorem (World): on the frame of level paths an extension with every claim counted is exactly a widening, so with better read as widening, C holds for every reading of living: an unfolding, C's normative content having moved into calling widening better."}}
+      ],
+      "account_adds": {"en": "That scope and order are separate premises, so the source's ranking need not deny that a forced life's continuation counts."},
+      "source_adds": {"en": "An order that reads the state of the one who lives, and puts one continuation below ending. A reader of the account should be told whether C accepts that ranking under some reading of living; I did not find a statement of this case. Practical judgment and the J commitments may bear on it, unread here."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-cc-congshan-rudeng",
+      "name": {"en": "从善如登，从恶如崩; 由俭入奢易，由奢入俭难: the way down is not the way back"},
+      "domain": "chinese-classical",
+      "group": "chinese-classical",
+      "source": {
+        "work": "《国语·周语下》 (a proverb cited there); 司马光《训俭示康》",
+        "locator": "locator unverified: 周语下 as I recall it; 训俭示康 is the whole short letter",
+        "basis": "ai-knowledge"
+      },
+      "sense": {"en": "A proverb: following good is like climbing, following evil like a landslide. 司马光, to his son: going from frugal to lavish is easy, from lavish back to frugal hard. Both are moral teaching: they warn that a change of condition is not undone at the rate or the cost by which it came. Neither states any threshold, and I have not checked the wording against stored text."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "scope",
+      "reading": {"en": "The form is asymmetry between the way out and the way back, the form hysteresis takes. The account gives pieces where they hold: a final ending, itself a premise, finds a late return empty; a recent giving can lower a threshold, shown by one witness; recovery holds with net giving, and does not guarantee maintenance. Distinct thresholds for collapse and recovery have no law. 善 and 恶 carry no valence here: no dynamic is good or bad. [AI reading]"},
+      "targets": [
+        {"record": "webs-with-a-recent-giving", "anchor": "theories/becoming/chapters/02-MAP.md#r-webs-with-a-recent-giving", "says": {"en": "Under mutual support the order is kept, so bounded runs have ending decided and thresholds exact, not rising as any level or recent giving rises; what was given can lower a threshold. Witness: levels up to four, threshold four having given nothing and three having given one."}},
+        {"record": "dormancy-over-a-stretch", "anchor": "theories/becoming/chapters/02-MAP.md#r-dormancy-over-a-stretch", "says": {"en": "Theorem (World): with an ending made final as a separate premise, support returning after the reserve is spent finds no dependent; exhaustion alone does not give it. It does not show that ending is final for actual dependents. Its record lists hysteresis of collapse as a correspondence only."}},
+        {"record": "supported-renewal-recovery", "anchor": "theories/becoming/chapters/02-MAP.md#r-supported-renewal-recovery", "says": {"en": "Theorem (World): in every balanced flow, where giving jointly exceeds taking at each step at which the level is not below its start, m − level steps bring it to at least m. Recovery does not guarantee maintenance."}}
+      ],
+      "account_adds": {"en": "An exact statement of when a late return finds nothing and of how many steps a recovery takes under net giving."},
+      "source_adds": {"en": "The asymmetry itself as a general claim: that return is harder or slower even where it is possible, and that falling outpaces rising. The plan lists hysteresis as absent as a law. 司马光's case also suggests a need raised by what was had; I did not test that against need drift along a lineage."},
+      "absence": null,
+      "labels": ["AI reading"]
+    }
+  ]
+}

@@ -1,0 +1,1154 @@
+{
+  "group": {
+    "id": "modern-philosophy",
+    "domain": "modern-philosophy",
+    "title": {"en": "Modern philosophy: process, recognition, capital, individuation, responsibility, conatus, identity, structure, capability"},
+    "kind": "domain",
+    "summary": {"en": "The account holds modern philosophy only for ethics, personal identity and environmental ethics (dossier P), plus one line of neighbours in 08 §9. Whitehead, Jonas, Spinoza, Hegel and ontic structural realism have one to three mentions each; Bergson, Marx and Simondon none. These 55 entries are mostly fresh readings from AI knowledge, no source text checked: 19 agreement, 10 scope, 15 divergence, 6 contrary reading, 5 with no relation. The sharpest refusals: élan, dialectical necessity, labour value, ought from being, Spinoza's necessity, Bergson's possible, and a leap in place of widening."},
+    "read": [
+      "cx-crosswalk/BRIEF.md",
+      "aa-attractor-atlas/PLAN.md §6 (6.1 to 6.5)",
+      "aa-attractor-atlas/readers-2026-11-04/correspondences.md",
+      "theories/becoming/review/PHILOSOPHY.md: the front, P-01 to P-27 and the references",
+      "theories/becoming/chapters/08-METHOD.md §1; §8's verdict and table; §9 from the theses table through the two philosophical theses and the internal-relations reading",
+      "theories/becoming/chapters/07-SIGNIFICANCE.md §1 and §4.7"
+    ],
+    "skimmed": [
+      "07-SIGNIFICANCE.md §2 (where the possible grows), §3.3, §3.4, §4.2, §4.3, §4.4, §5 (J1/J2 lines), §6 (readings), §8, §9, what the chapter does not show: lines cut to several hundred characters",
+      "01-ROOT.md §1, §2, §4, what internal means, boundaries, §10: lines cut likewise",
+      "02-MAP.md capture section, novelty rows, represented boundary, fed from beyond, T7's head",
+      "05-COLLECTIVES.md joint excess, the rise past the inflow, T3's head, §10's opening and closing lines, the weighting row",
+      "03-KNOWING.md the objectivity assessment, what choices show (first part)",
+      "04-LIFE.md thesis, life and lineage reading, the selection term",
+      "ONE-PAGE.md the ethics; THE-THEORY-OF-BECOMING.md line 47; GLOSSARY.md rows meta-attractor, class, significance, center, widening",
+      "Record fields statement, correspondence, does_not_show: what-self-concern-alone-ranks, continuation-relative-to-a-class, own-good-to-reachable-living-significance, identity-across-steps, closed-capture, what-discrete-steps-and-whole-amounts-represent, widening-as-what-every-positive-weighting-ranks, shaping-the-rule-selected-by-what-comes-back, where-novelty-gain-comes-from, a-rise-past-the-inflow-is-drawn-from-beyond, theory-of-becoming-foundation"
+    ],
+    "searched": [
+      "Live account (.md, records included), by name: Whitehead, Bergson, Hegel, Anerkennung, Marx, Simondon, Jonas, Spinoza, conatus, Parfit, structural realism, Ladyman, Sen, Kant, Heidegger, Deleuze, pragmatis, Dewey, Peirce, Nietzsche, Rawls, Nussbaum, Levinas, Husserl, Merleau, Rescher, Haraway, Barad, enactiv, Arendt, Foucault, Wittgenstein, Quine, Sellars, Nagel, Korsgaard, Scanlon, Gewirth, Darwall, Sartre, Nozick, Hume, Næss, Popper, Kitcher",
+      "Chapters, fronts and glossary, by mechanism: recognition, recogni[sz], mutual, self-defeating, novelty, surplus, exploit, commodit, accumulat, labour, wage, class struggle, metastab, nucleat, crystalli, supersatur, transindividual, duration, lived time, perish, undermin, fetish, alienat, real pattern, Dennett, indiscernib, positional, adaptive pref, Paretian, liberal paradox, panpsych, panexperien, intrinsic value, immanen, élan, vitalis, open society, closed society, non-reciproc, return a loss, precaution, ruin, worst case, stake, suicide, formed by what compares",
+      "record-index.tsv, by mechanism words (capture, lock, fold, formed, giving, novelty, likeness and others)",
+      "Not live, repo-wide by name (theories, _process, sources; files listed, a few lines read in context): Marx, Bergson, Whitehead, Simondon, Hegel, Hegel near recognition or lord, Spinoza, Jonas, capability approach, structural realism, Paretian, heuristic of fear, metastab. Found: history/root-foundation/DEDUCTIVE-FOUNDATION-TEST.md on Bergson (line 276) and Simondon (line 850); GROUNDING-INFERENCE-AND-PRESENTATION.md on Hegel's Logic; BECOMING-SIGNIFICANCE-REVIEW.md rows on Jonas and Spinoza; ig-integration-gaps/GAP-MAP.md §6.2 and CRITIC.md naming the capability approach and Simondon as gaps; foundation-assessment/GOVERNANCE-LITERATURE.md §6 on the Paretian liberal"
+    ],
+    "not_mapped": [
+      {"en": "Dossier P's 27 items and their 44 references (Gewirth, Nagel, Korsgaard, Hare, Taurek, Scheffler, Johnston, Næss, Williams, Goodpaster and others)", "why": "Already mapped there, each with questions for a reviewer; reported under coverage. Only Parfit, Jonas, Spinoza and Sen get entries, as the prompt asked, and these add what P does not hold."},
+      {"en": "Bergson's pure memory against habit memory (Matter and Memory)", "why": "The only link found is `World.forgets_of_bounded`: a bounded family does not carry its history. Bergson agrees the brain stores nothing, so the pairing has no shared mechanism; dropped rather than kept as a word match."},
+      {"en": "Marx's reproduction schemes and the tendency of the rate of profit to fall", "why": "Quantitative economics of a specific form; the account has no rate, value or sector structure to read them against, and a mapping would be a word match on 'reproduction'."},
+      {"en": "Spinoza's theory of the affects and bondage; Hegel's objective spirit and philosophy of right; Whitehead's extensive continuum; Simondon on technical objects; Sen's empirical work on famine and development", "why": "Large bodies I did not read for this frame; a word match would not be a reading. Spinoza's bondage may bear on 无明 in 02 and is left to a reader who knows both."},
+      {"en": "Two uncredited philosophy-of-science neighbours: 08 §9's 'judged by what it forbids' (Popper) and 'deriving many conclusions from few patterns of argument' (Kitcher's unification account of explanation)", "why": "Outside PLAN §6.3's frame for this domain, so no entries. Neither name occurs in the live account, which may be a missing credit; flagged for the coordinator. A second flag: 08's significance row cites 'Sen (1977)' with no title, and the widening record's Sen 1977 is 'On Weights and Measures', not 'Rational Fools'."},
+      {"en": "How thin this is on Simondon, Hegel and Marx scholarship", "why": "I know these through standard readings, and Simondon mainly through the 1958 thesis's introduction and secondary work. The offer of human readers applies here most."}
+    ],
+    "coverage": {
+      "present": [
+        {"what": "Dossier P, for review, read by no person", "where": "theories/becoming/review/PHILOSOPHY.md", "extent": "27 items P-01 to P-27 in six parts; 44 reference lines (counted in the References section). Jonas and Spinoza's conatus each occur once, in P-05's second question, Jonas also in the references; Parfit 1984 and 1997 are credited throughout parts 3 and 5"},
+        {"what": "Known-results row on significance", "where": "theories/becoming/chapters/08-METHOD.md#known-results", "extent": "One table row: is-ought; Gewirth 1978; Parfit 1984; Sen 1977; verdict near-definitional; what it leaves out named (Schurz, Prior, mere addition, Repugnant Conclusion, non-identity)"},
+        {"what": "The neighbours of one relational unfolding", "where": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding", "extent": "One sentence naming ontic structural realism (Ladyman and Ross 2007), process philosophy, dependent arising and the identity of indiscernibles; no argument against or from any of them"},
+        {"what": "Credits inside the crux and the step", "where": "theories/becoming/chapters/07-SIGNIFICANCE.md#crux", "extent": "§4.2 credits Gewirth, Parfit, Siderits; §4.7 credits Williams, Anscombe, Parfit's R and Extreme Claim, Rawls, Scheffler; §4.4 credits Sen's intersection approach and Pareto dominance"},
+        {"what": "Passing correspondences in records", "where": "theories/becoming/results/records/continuation-relative-to-a-class.md", "extent": "Whitehead 1 record (this one); Jonas 1 (what-self-concern-alone-ranks); Kant 1 (derived-extent-limits); Hegel 1 (theory-of-becoming-foundation, pointing to a history study); autopoiesis 3 records and 04; Sen in 4 records' JSON"},
+        {"what": "The study of the step, not live", "where": "theories/becoming/history/THE-STEP-OF-INVARIANCE.md", "extent": "Holds the credits to Nagel, Hare, Korsgaard, Wolf, Castañeda, Perry, Lewis and the conatus remark, as P quotes it. History, so history-only where P does not repeat it. Not read here beyond P's quotations"},
+        {"what": "Primary comparisons in studies, not live: Bergson's Creative Evolution, Simondon's 'The Position of the Problem of Ontogenesis', Hegel's Logic, each a link-only reading of a passage", "where": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/DEDUCTIVE-FOUNDATION-TEST.md", "extent": "A paragraph each (Bergson line 276, Simondon line 850; Hegel also in GROUNDING-INFERENCE-AND-PRESENTATION.md, 'Primary comparison: the category does not already supply a cause'). They test a deduction of the foundation, and map nothing onto the laws"}
+      ],
+      "absent": [
+        {"en": "Process philosophy as an argued comparison: Bergson has no mention; Whitehead one line in a record", "searched": ["Whitehead", "Bergson", "process philosophy", "duration", "lived time", "perish", "élan", "vitalis"]},
+        {"en": "Hegel on recognition; 'recognition' in the account means a holder grasping a reason or an effect, a different sense", "searched": ["Hegel", "Anerkennung", "recognition", "recogni[sz]"]},
+        {"en": "Marx: no mention, nor exploitation, labour value or class; 'capital' occurs only in one software record", "searched": ["Marx", "capital", "surplus", "exploit", "commodit", "accumulat", "labour", "wage", "class struggle", "fetish", "alienat"]},
+        {"en": "Simondon, metastability, the seed, the transindividual; 'individuation' occurs only as the supply of a formation's identity", "searched": ["Simondon", "individuation", "metastab", "nucleat", "crystalli", "supersatur", "transindividual"]},
+        {"en": "Sen's capability approach, process freedom, adaptive preferences, positional objectivity, the Paretian liberal; 'capability' in 07 is reach, a different sense", "searched": ["capabilit", "Sen", "adaptive pref", "Paretian", "liberal paradox", "positional"]},
+        {"en": "Heidegger, Deleuze, Husserl, Merleau-Ponty, Sartre, Levinas, Arendt, Foucault, Nietzsche, Wittgenstein, Quine, Sellars, the pragmatists, Nussbaum, Rescher, Haraway, Barad and enactivism: no mention on the live account. Not read for here", "searched": ["each name", "pragmatis", "Dewey", "Peirce", "enactiv"]},
+        {"en": "Kant has one line, on hypothetical imperatives, in a record", "searched": ["Kant"]}
+      ]
+    }
+  },
+  "entries": [
+    {
+      "id": "cx-modphil-whitehead-enduring-object",
+      "name": {"en": "Whitehead: an enduring object as a society in serial order"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "A. N. Whitehead, Process and Reality (1929)", "locator": "Part I ch. 3 and Part II ch. 3, on societies and personal order; locator from memory", "basis": "ai-knowledge"},
+      "sense": {"en": "An enduring object is a society of actual occasions in serial order, each inheriting a defining form from its predecessor by prehending it. What endures is the inherited pattern, not a substance beneath it; occasions become and perish and do not change."},
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {"en": "续 has this form: a condition met with likeness, as inheritance is prehension with common form, and a line is the serial order. The record says only 'close to'. Nothing is proved of Whitehead, and same form is not same meaning. [AI reading]"},
+      "targets": [
+        {"record": "continuation-relative-to-a-class", "anchor": "theories/becoming/chapters/01-ROOT.md#r-continuation-relative-to-a-class", "says": {"en": "Theorem (root): continuation is `R ⊓ E`, `x` a condition of `y` and the two alike under `E`. Its record: 'close to genidentity (Lewin 1922) and to Whitehead's enduring objects (1929)'; Whitehead's only mention on the live account."}}
+      ],
+      "account_adds": {"en": "The class is named and plural: every single condition is a continuation under some class; fission and merge witnesses; a core, and the law that a class under which a line ends is not constant."},
+      "source_adds": {"en": "The likeness is carried through feeling (subjective form) and is the society's own defining characteristic, which its members reproduce; in the account the class is free and supplied."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-whitehead-immanent-law",
+      "name": {"en": "Whitehead: laws of nature as immanent habits"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "A. N. Whitehead, Adventures of Ideas (1933)", "locator": "Part II ch. VII, Laws of Nature; locator from memory", "basis": "ai-knowledge"},
+      "sense": {"en": "Laws are neither imposed from outside nor bare descriptions of sequence. They are immanent: the characters of what they govern, the habits of the dominant societies of an epoch, expressing how things are related, and so they can change as those societies change."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {"en": "A law read off what it holds of, with an explanation by a law standing outside forbidden, has the immanence half of this. No live page credits the view. The half on laws decaying with their societies is not stated, and on one reading is opposed. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/08-METHOD.md#law", "says": {"en": "A law of the theory 'is read off what it holds of and does not stand over it: a law of the root holds of every carrier, relation and class, so it forbids no relation'."}},
+        {"anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding", "says": {"en": "A thesis, argued: a law is read off the history it holds of (`shown_le_iff`); it forbids an explanation needing 'a law standing outside what it holds of'."}}
+      ],
+      "account_adds": {"en": "An exact statement of the reading-off (`shown_le_iff`), and the sense in which a root law forbids nothing."},
+      "source_adds": {"en": "That the laws of nature are statistical habits of an epoch's societies. The account 'states no science's law of its own yet', and a tower of changing rules adds nothing to its whole possible (07 §2)."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-whitehead-creativity",
+      "name": {"en": "Whitehead: creativity as the ultimate, the creative advance into novelty"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "A. N. Whitehead, Process and Reality (1929)", "locator": "Part I ch. 2, the Category of the Ultimate", "basis": "ai-knowledge"},
+      "sense": {"en": "Creativity is the ultimate category: the many become one and are increased by one. Every occasion is a novel unity, so advance into novelty is a metaphysical generality, holding of whatever is actual, not a contingent fact about some systems."},
+      "quote": null,
+      "carried": "changed",
+      "relation": "scope",
+      "reading": {"en": "The account takes up novelty and gives where it holds: on the World, novelty without end needs gain. Novelty is not its direction either. No ultimate of creativity is asserted; formation covers generation and degeneration alike. Whitehead's novelty is not an amount, so the law may not touch his claim. [AI reading]"},
+      "targets": [
+        {"record": "where-novelty-gain-comes-from", "anchor": "theories/becoming/chapters/02-MAP.md#r-where-novelty-gain-comes-from", "says": {"en": "With the rest of the whole counted, every rise is given net by some relatum; a listed whole the rest gives nothing net is not new at every step. 'Novelty, and formations first supported without end, need gain; gain is not openness.'"}},
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#objections", "says": {"en": "'An expansion producing ever more novelty is generative': answered, the order left open; 'generation is a pattern going on through carrying renewal, and 生生 life in the whole, not novelty or scale'."}}
+      ],
+      "account_adds": {"en": "Where novelty's gain comes from under balance, and that novelty is neither generation nor 生生."},
+      "source_adds": {"en": "Novelty at every occasion and every grain, with no conserved amount to pay it; the many-into-one of concrescence as the form of all becoming."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-whitehead-objective-immortality",
+      "name": {"en": "Whitehead: perishing and objective immortality"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "A. N. Whitehead, Process and Reality (1929)", "locator": "locator unverified; perpetual perishing and objective immortality recur from Part II", "basis": "ai-knowledge"},
+      "sense": {"en": "An occasion perishes as a subject and goes on as a datum for every later occasion, which must take it into account, positively or by exclusion. Its ending is the condition of its further efficacy."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {"en": "'Ends under a finer class while its effects go on under a coarser one' has this shape: «过亡而续» keeps what continues past an ending on the line. Thin where it differs: the law needs a named class, and it says nothing of every occasion being taken up by all later ones. [AI reading]"},
+      "targets": [
+        {"record": "reach-past-ones-own-end", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-reach-past-ones-own-end", "says": {"en": "Theorem (root; witnesses): on a line under `L`, what continues under `L` an occurrence at which the line under `O` ends is reached on the line under `L`, and lies on no line under `O` from that occurrence."}},
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#crux", "says": {"en": "AI reading, argued: 'The reach counts what happens, not what is lost; a loss is read by comparing courses, which the reach does not do.'"}}
+      ],
+      "account_adds": {"en": "The dependence on the class chosen, and that the reach counts no foreclosed occurrence, which bears on scope only under P1 to P4, none shown; ranking needs C or a premise in its place."},
+      "source_adds": {"en": "That the whole past is objectively present to each occasion, a universal feeling of what has perished. The account's net need not join everything: that it does is a correspondence not shown."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-whitehead-experience-and-eternal-objects",
+      "name": {"en": "Whitehead: experience in every occasion, eternal objects and God"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "A. N. Whitehead, Process and Reality (1929)", "locator": "Part II ch. 7 (the reformed subjectivist principle); Part V (God and the World); locator from memory", "basis": "ai-knowledge"},
+      "sense": {"en": "Apart from the experience of subjects there is nothing. Every occasion has a mental pole and subjective aim, and so value in itself. Eternal objects are pure potentials that ingress into occasions, and God's primordial nature orders them. So process philosophy here is not only relations."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "Calling process philosophy a neighbour hides this. The thesis forbids a determination no relation carries, an intrinsic value among them, and denies a cosmic subject. Whitehead's internal relations may answer that eternal objects are relational too, so the distance is mine to argue and a reader's to check. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding", "says": {"en": "Argued, not proved: forbids an explanation needing 'an intrinsic value, a self with a nature of its own, or a law standing outside what it holds of'. Live against it: 'that relations need relata with natures of their own, and that what an experience is like is not how it relates'."}},
+        {"anchor": "theories/becoming/chapters/08-METHOD.md#1-beginning-within-the-one-unfolding", "says": {"en": "'A shared process implies no cosmic subject, no aggregate interest and no administrator entitled to speak for everything.'"}}
+      ],
+      "account_adds": {"en": "It names what would defeat its thesis, and that the thesis excludes no observation."},
+      "source_adds": {"en": "An account of why a form recurs at all (eternal objects), and of what experience is at the lowest grain; in 03, consciousness stands among what cognition has not yet reached."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-bergson-duree",
+      "name": {"en": "Bergson: duration against spatialized time"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "H. Bergson, Time and Free Will (1889); Creative Evolution (1907)", "locator": "Time and Free Will ch. 2; Creative Evolution ch. 4, the cinematographic mechanism of thought", "basis": "ai-knowledge"},
+      "sense": {"en": "Lived duration is qualitative and interpenetrating, not a line of juxtaposed instants. To cut change into states and string them on abstract time is the intellect's cinema: it recovers everything about change except the changing."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "contrary-reading",
+      "reading": {"en": "The strongest test of the form: steps indexed by naturals, a course as a sequence of configurations. The account's replies, that discrete steps are a choice and represent real time exactly for balance, keep instants, so to Bergson they answer nothing. Time as the order of conditions is nearer him and still counts occurrences. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/08-METHOD.md#modelling-commitments", "says": {"en": "A commitment of the representation: 'Discrete steps, one shared index', activity, levels and exchange indexed by one sequence of natural-number steps."}},
+        {"record": "what-discrete-steps-and-whole-amounts-represent", "anchor": "theories/becoming/results/records/what-discrete-steps-and-whole-amounts-represent.md", "says": {"en": "'Discrete steps represent real-valued time exactly for balance.'"}},
+        {"anchor": "theories/becoming/chapters/01-ROOT.md#one-kind-of-symbol", "says": {"en": "No time is chosen before the relations: 'its order is the reach of the condition relation', a strict order where that relation has no cycle."}}
+      ],
+      "account_adds": {"en": "What each discreteness costs, law by law, and time as derived from the net."},
+      "source_adds": {"en": "A claim about what change is that no representation by states can state; free act as no choice among prior options. A history study read Creative Evolution ch. 1 on interpenetrating change as a comparator (DEDUCTIVE-FOUNDATION-TEST), for the foundation's deduction, not against steps."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-bergson-possible-and-real",
+      "name": {"en": "Bergson: the possible is a retrospective shadow of the real"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "H. Bergson, 'The Possible and the Real' (1930), in The Creative Mind", "locator": "essay as a whole", "basis": "ai-knowledge"},
+      "sense": {"en": "We imagine the possible as a stock of pale reals from which one is actualized. Rather, the possible is made after the fact: only once something real and new has come can we project that it was possible. Genuine novelty cannot be prestated."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "contrary-reading",
+      "reading": {"en": "C compares courses by what can form, and its theorem needs a finite listing; the whole possible is read under a stated process. Bergson argues against the form. The account concedes part: its laws do not reach what cannot be prestated. If he is right, a comparison by widening holds only retrospectively. [AI reading]"},
+      "targets": [
+        {"record": "where-the-possible-grows", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-where-the-possible-grows", "says": {"en": "Reading [AI, D45]: 'If the one unfolding were one stated process, nothing would be added to its whole possible along its course: what a course adds is the actual.'"}},
+        {"anchor": "theories/becoming/chapters/08-METHOD.md#beyond-the-table", "says": {"en": "These laws 'do not yet reach the adjacent possible that cannot be prestated (Longo, Montévil and Kauffman 2012): none is stated for a space of rules not given with the carrier'; a limit holding so far."}},
+        {"record": "widening-as-what-every-positive-weighting-ranks", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-positive-weighting-ranks", "says": {"en": "Theorem (any type), on a finite listing with two-valued admission: one course widens another exactly when every positive weighting ranks it higher. C itself, that widening is better, stays a premise."}}
+      ],
+      "account_adds": {"en": "That the possible relative to what is held grows only across a change of what is held; a law, on any process."},
+      "source_adds": {"en": "That the possible is not there to be compared in advance. Stated nowhere, and the account's order would need another reading to survive it."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-bergson-elan-vital",
+      "name": {"en": "Bergson: the élan vital"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "H. Bergson, Creative Evolution (1907)", "locator": "chs. 1 to 3", "basis": "ai-knowledge"},
+      "sense": {"en": "Life is one original impetus dividing along diverging lines, neither mechanism (selection of chance variations alone) nor finalism (a plan). Adaptation explains the windings of evolution, not its general direction."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "生生 as the direction may sound like this, and no mechanism joins them. T8 is an argued way for life, compared by widening, resting on the two unasserted premises (condition for scope, C for order), not an impulse. Evolution in 04 is read through transmission, variation, selection and drift. The account has no impetus. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses", "says": {"en": "T8, argued, open: 'For life, the way is 生生, life in the whole and its continuing generation [AI reading, D1], compared by widening what can form, counted for everything (scope: the continuation condition) and ranked by what every valuer who counts everything shares (order: C).'"}},
+        {"anchor": "theories/becoming/chapters/04-LIFE.md", "says": {"en": "Thesis: 'Evolution is read as change along descent through transmission, variation, selection and drift.'"}}
+      ],
+      "account_adds": {"en": "Checked laws of descent, and a standing for its own direction: argued, with what would refute it."},
+      "source_adds": {"en": "One source for life's divergence, and a direction no selection law explains. The account asserts neither."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-bergson-open-morality-as-leap",
+      "name": {"en": "Bergson: closed and open morality differ in kind"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "H. Bergson, The Two Sources of Morality and Religion (1932)", "locator": "ch. 1", "basis": "ai-knowledge"},
+      "sense": {"en": "Closed morality is social pressure keeping a group cohesive against others. Open morality, love of humanity, comes from exemplary persons as aspiration. One cannot reach humanity by widening from family through nation: between them lies a difference of kind, a leap, not a stage."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "contrary-reading",
+      "reading": {"en": "07 sets egoism, enlightened self-concern and the condition on one scale: closures nest, and the presupposition's scope runs from the empty relation to the total. Bergson argues against that form: widening a closed concern gives a larger closed concern. It is the strongest test of the path of §4.6. Ethics stays under two premises, neither asserted. [AI reading]"},
+      "targets": [
+        {"record": "presupposition-scopes", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-presupposition-scopes", "says": {"en": "Theorem (any type): along a relation, the presupposition sub-true is significance over the closure, super-true the condition; along the empty relation sub-truth is a standpoint's own good, along the total relation the condition."}},
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#future-path", "says": {"en": "Argued joining of root laws: under P1 to P4, none shown, concern for one's own continuation reaches everything downstream with no step of invariance; ranking still needs C or a premise in its place."}}
+      ],
+      "account_adds": {"en": "An exact account of how far a self-held scope reaches, and what it needs at each widening; warrant and motivation kept apart."},
+      "source_adds": {"en": "That the wide concern has a different source (exemplars, emotion) and is not gained by extending the narrow one. If so, the step is a change of kind, which P-10's across-drawings form hides."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-hegel-recognition-constitutive",
+      "name": {"en": "Hegel: self-consciousness exists only in being recognized"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "G. W. F. Hegel, Phenomenology of Spirit (1807)", "locator": "ch. IV.A, about §§178 to 184", "basis": "ai-knowledge"},
+      "sense": {"en": "Self-consciousness is in and for itself only as acknowledged by another self-consciousness. A self is not first there and then related: it is what it is through a mutual movement in which each sees itself in the other."},
+      "quote": null,
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {"en": "Same word, another reference: in the account recognition is a holder grasping a reason or an effect, kept apart from warrant and motivation. A center is a formation, its self a closure along a relation. No law makes a center what it is through another center's reading of it. Mutual closures (P-14) are feeding, not acknowledgment. [AI reading]"},
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {"en": "That selfhood is constituted by being read by another who is read in turn. A repository grep for Hegel near recognition, lord or master found only the atlas plan. The method has actor and patient differentiating within relations, and gives no law of this."},
+      "absence": {"searched": ["Hegel", "Anerkennung", "recognition", "recogni[sz]", "mutual", "GLOSSARY.md rows on center and significance", "record-index for recognition"], "read": ["07 §1", "07 §4.7, Warrant, recognition, motivation", "P-14", "08 §1"]},
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-hegel-lord-bondsman-certifies-nothing",
+      "name": {"en": "Hegel: recognition from the one reduced certifies nothing"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "G. W. F. Hegel, Phenomenology of Spirit (1807)", "locator": "ch. IV.A, lordship and bondage, about §§189 to 193", "basis": "ai-knowledge"},
+      "sense": {"en": "The lord wins acknowledgment from one he has made dependent. But recognition from a consciousness he does not recognize, reduced to a thing, is not the independent confirmation he sought, so his certainty rests on something inessential."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {"en": "The form: a reading drawn from those a selection has formed reads the share, not beyond it. 'Later endorsement cannot authorize the formation that produced it' states the point generally. That readers are minds is a reading, and the law says nothing of certainty or its lack. Structural agreement only. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#evaluation", "says": {"en": "Reading [AI, D65]: 'Later endorsement cannot authorize the formation that produced it.'"}},
+        {"record": "readers-drawn-from-the-selected", "anchor": "theories/becoming/chapters/02-MAP.md#r-readers-drawn-from-the-selected", "says": {"en": "Theorem (any type): the rule read as the pool of its readers' readings is a monotone function of the share exactly where `v` is not above `u`, and where who reads is itself a monotone function of the share, it still reads the share."}}
+      ],
+      "account_adds": {"en": "Exactly when a pool reads the share, and who reading, when, decides whether a reading of the loss turns it."},
+      "source_adds": {"en": "That the lord himself finds the confirmation inadequate: an experience of its failure. The account has no such experience; its loop is not disturbed by what it does not read."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-hegel-reversal-not-forced",
+      "name": {"en": "Hegel: the reversal of lord and bondsman; contradiction moves the relation"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "G. W. F. Hegel, Phenomenology of Spirit (1807)", "locator": "ch. IV.A, about §§193 to 196; introduction on determinate negation", "basis": "ai-knowledge"},
+      "sense": {"en": "The lord depends on the bondsman's labour, while the bondsman, through fear and formative work, comes to see himself in what he makes. The relation turns by its own inner inadequacy. A shape of consciousness passes over through what it itself cannot sustain."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "The account denies this as a general form, under stated premises. Where nothing in the loop reads the loss, the lock outlives it at any size; what leaves is a change of what is read. Dependence can run one way (`Downstream.one_way`, 07 §3.3). Drawn one member at a time, some locks are left by drift. No law has an inner contradiction moving anything. [AI reading]"},
+      "targets": [
+        {"record": "closed-capture", "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture", "says": {"en": "Theorem (any type): where each step adds at least one beyond, selection does not lower the share under a favouring rule and the rule is read monotonically from the share, 'from a locked configuration the loss passes every bound while the course stays locked'; a reading favouring at no loss above a bound unlocks it."}},
+        {"anchor": "theories/becoming/chapters/02-MAP.md#t7", "says": {"en": "T7: in the model, invariance under what the loop does not read and the lock outliving a growing unread coordinate proved, without noise; 'drift aside', dropped only through a change in what the loop reads; that actual metrics are so formed conjectured."}}
+      ],
+      "account_adds": {"en": "The exact premise (`Unread`) under which no loss reaches the loop. In one trained system (LA2) read by nobody the loss grew under a lock, and read by every reader it turned the course; the bridge failed there, so a test of neither side here."},
+      "source_adds": {"en": "Formative work as a route by which the dependent comes to read beyond the share, and a claim that shapes supersede themselves. The account does not state such a tendency."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-hegel-absolute-knowing",
+      "name": {"en": "Hegel: Spirit and absolute knowing"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "G. W. F. Hegel, Phenomenology of Spirit (1807); Encyclopaedia (1817 to 1830)", "locator": "Phenomenology ch. VIII; Encyclopaedia §§6 and 574 to 577; locators from memory", "basis": "ai-knowledge"},
+      "sense": {"en": "Knowing is immanent: criteria are not brought from outside, and each shape tests itself. Yet the movement closes in absolute knowing, with Spirit as the subject of the whole and history as reason's own development."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "The first half agrees: knowing happens inside and has no vantage outside. The second is what the account refuses: no cosmic subject, and self-reference does not certify itself. No formation's course is good by being the course; no dynamic is here read as reason realizing itself. Hegel's readers dispute how closed this is. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/08-METHOD.md#1-beginning-within-the-one-unfolding", "says": {"en": "'Knowing, modelling and criticizing happen inside it too, so their adequacy is part of the inquiry, not a vantage outside it.' 'A shared process implies no cosmic subject.'"}},
+        {"anchor": "theories/becoming/chapters/08-METHOD.md#6-expressible-is-not-derived", "says": {"en": "'So self-reference does not certify itself, and the reference back of a bound use is stipulated rather than derived.' Stated there; the Lean is pre-spine."}}
+      ],
+      "account_adds": {"en": "A statement of what it cannot show about itself; a metalogic without presuppositions stays open."},
+      "source_adds": {"en": "Completion of knowing, and direction in history. Asserted by neither law nor thesis."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-hegel-logic-of-becoming",
+      "name": {"en": "Hegel: being, nothing, becoming"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "G. W. F. Hegel, Science of Logic (1812)", "locator": "Doctrine of Being, ch. 1", "basis": "ai-knowledge"},
+      "sense": {"en": "Pure being and pure nothing are the same; their truth is becoming, the vanishing of each into the other. Becoming here is a category reached by the immanent movement of thought, not a process in time."},
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "divergence",
+      "reading": {"en": "The account's open target takes up the form, determinations as moments of one unfolding, and its record says a Hegel comparison separates a category from a causal mechanism. So the word is shared and the object differs: the account means activity conditioning activity. The comparison itself is in a history study. [AI reading]"},
+      "targets": [
+        {"record": "theory-of-becoming-foundation", "anchor": "theories/becoming/chapters/08-METHOD.md#r-theory-of-becoming-foundation", "says": {"en": "Open target: 'philosophically, its determinations as moments of one unfolding'; the direct whole-inclusion argument 'still lacks the passage to relational constitution; a primary Hegel comparison separates a category of becoming from a causal mechanism'. Hegel's only mention on the live account."}}
+      ],
+      "account_adds": {"en": "Laws with Lean, and an admission that the deduction is not done."},
+      "source_adds": {"en": "A deduction of becoming from being and nothing alone, which the account neither makes nor claims."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-marx-capital-self-valorizing",
+      "name": {"en": "Marx: capital as self-valorizing value, with capitalists as its carriers"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "K. Marx, Capital, vol. I (1867)", "locator": "Preface, on personifications; Part II ch. 4, the general formula M-C-M'; ch. 24, on accumulation (Fowkes numbering)", "basis": "ai-knowledge"},
+      "sense": {"en": "In M-C-M' value is the subject of a process that expands itself and has no end beyond its own repetition. The capitalist acts as its personification, replaceable; what persists through changes of persons and firms is the circuit."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "scope",
+      "reading": {"en": "This is the wide sense the glossary sets aside: reproduction across changes of carriers. The formal 元吸引子 says nothing of carriers, so Marx's claim is not the theorem. What the laws reach: where winners write the next rule, and what returns covers the cost, the loop locks, under premises no actual market is shown to meet. [AI reading]"},
+      "targets": [
+        {"anchor": "GLOSSARY.md", "says": {"en": "Meta-attractor: closed capture; 'It never means the corpus's working definition, a recurrent organization of activity whose consequences help reproduce the conditions selecting that organization across changes in its particular carriers: that sense is wider, and the formal 元吸引子 says nothing of carriers'."}},
+        {"record": "shaping-the-rule-selected-by-what-comes-back", "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-the-rule-selected-by-what-comes-back", "says": {"en": "Where the carriers of a selection shape its rule, at a step the rule favours them exactly where what comes back to them alone covers its cost; monotone in their share and covering the cost, the loop locks."}},
+        {"anchor": "theories/becoming/chapters/05-COLLECTIVES.md#markets", "says": {"en": "'A market is joint activity whose selection runs through payments.' Where winners write the next round's rule the loop is capture through the rule. 'No universal phase threshold is claimed, and no market law ranks arrangements.'"}}
+      ],
+      "account_adds": {"en": "An exact condition on the return, and that a change of the rule's value is absorbed."},
+      "source_adds": {"en": "That expansion without end is the circuit's own form, not a lock on a share; the account has no quantity whose growth is the point of the loop. Of earlier folders, selfishness-spiral only names Marx as prior art on accumulation (its README), and reads nothing."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-marx-surplus-not-from-circulation",
+      "name": {"en": "Marx: surplus cannot arise from the exchange of equivalents"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "K. Marx, Capital, vol. I (1867)", "locator": "Part II ch. 5, contradictions in the general formula", "basis": "ai-knowledge"},
+      "sense": {"en": "If equivalents exchange, circulation creates no surplus value, and if they do not, one party's gain is the other's loss and the class as a whole gains nothing. So the source of the rise must lie outside circulation proper, in a commodity whose use creates value."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {"en": "The accounting form holds in World: a rise past the inflow has a formation drawing from beyond. This matches the argument's shape only if value is read as a conserved amount, itself contested, and 08 says no condition is silently commensurable. The law does not name labour as the source. Accounting, near-definitional. [AI reading]"},
+      "targets": [
+        {"record": "a-rise-past-the-inflow-is-drawn-from-beyond", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-rise-past-the-inflow-is-drawn-from-beyond", "says": {"en": "Theorem (World: balance): where the family rises by more than the inflow of a family containing it, some formation taking part gives it more than it takes, by more than its own part of that inflow, and takes from the containing family more than from the risen one."}},
+        {"anchor": "theories/becoming/chapters/08-METHOD.md#1-beginning-within-the-one-unfolding", "says": {"en": "'no condition is silently taken as owned, transferable, additive, scarce or commensurable; the World's natural-number amounts are a modelling choice'."}}
+      ],
+      "account_adds": {"en": "Every selection holding only where a family rises past its inflow favours a draw on what no member couples into (`Flow.favours_reaching_beyond_inflow`)."},
+      "source_adds": {"en": "The answer: labour-power, sold at its value and yielding more. See the entry on exploitation."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-marx-coercive-competition",
+      "name": {"en": "Marx: competition as an external coercive law"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "K. Marx, Capital, vol. I (1867)", "locator": "ch. 10 §5 ('après moi le déluge'); ch. 24 §3 (Fowkes numbering); locators from memory", "basis": "ai-knowledge"},
+      "sense": {"en": "Competition makes capital's immanent laws act on each capitalist as external compulsion, whatever his personal goodwill. So capital takes no account of the worker's health or length of life unless society forces it to: the exhaustion is foreseen, and each counts on its falling elsewhere."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {"en": "The form: a selection reaches only what couples into its selector, and own counts miss a joint draw. It agrees in form, and differs at once: the law covers any selection, so it reads nothing peculiar to capital, while Marx's whole point is the specific form. No law here calls the drain a harm. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/05-COLLECTIVES.md#t3", "says": {"en": "T3: 'A selection through couplings, whether a reward, a training run, a market or natural selection, reaches only what couples into its selector, and with room its optima drain what lies beyond'. The law for optima proved; the clause on trained systems conjectured."}},
+        {"record": "own-count-misses-joint-excess", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess", "says": {"en": "Theorem (World: balance; for the ending also activity needing support, only active giving, the gate local): formations can each take within what a step gives while together they take more; `n` steps of joint excess from below `n + m` end every formation depending at a need of at least `m`."}}
+      ],
+      "account_adds": {"en": "The exact conditions and the point of no return; near-definitional by 08's verdict."},
+      "source_adds": {"en": "Why this selection compels: separated producers and the wage relation. And its limit by struggle: the Factory Acts as a reading forced from outside."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-marx-metabolic-rift",
+      "name": {"en": "Marx: the rift in the metabolism with the soil"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "K. Marx, Capital, vol. I ch. 15 §10 and vol. III ch. 47; the term 'metabolic rift' is J. B. Foster's reading (2000)", "locator": "as named; locators from memory", "basis": "ai-knowledge"},
+      "sense": {"en": "Capitalist agriculture carries nutrients off to the towns and does not return them. An irreparable rift opens in the metabolism prescribed by natural laws, and production undermines the sources of its own wealth, soil and worker. Value does not represent the soil's renewal."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {"en": "A formation whose represented region omits a required condition can lose its own support through its own draw: same shape, on the World. Marx's rift is a historical claim about one mode of production; the law is a witness and says nothing of value. Whether soil and capital meet the premises is empirical. [AI reading]"},
+      "targets": [
+        {"record": "represented-boundary-against-dependence", "anchor": "theories/becoming/chapters/02-MAP.md#r-represented-boundary-against-dependence", "says": {"en": "Theorem (World): over a region covering what it requires, requirements not tightening, a formation keeps its own support and can still undermine another; 'omitting a required condition, its own draw can lose its own support'. 'How a center represents the region is unmodelled.'"}}
+      ],
+      "account_adds": {"en": "The exact split of self-undermining from undermining another; a test programme on renewable conditions (T1, T2), unmet on any field case."},
+      "source_adds": {"en": "The historical mechanism: town and country, rent, and the value form's blindness to what it does not price."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-marx-fetishism",
+      "name": {"en": "Marx: the fetishism of commodities"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "K. Marx, Capital, vol. I (1867)", "locator": "ch. 1 §4", "basis": "ai-knowledge"},
+      "sense": {"en": "Value is a social relation among producers that appears as a property of things. The appearance is not mere error: under commodity production relations among persons really are mediated as relations among things, so it holds objectively."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {"en": "The method's demand has the same form: state the relation carrying what is cited, take none as an intrinsic value, keep money and ownership for actual economic relations. It is a rule of explanation, with no law of why the appearance forms or persists; Marx's second sentence has no counterpart. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding", "says": {"en": "Argued: forbids an explanation needing 'a determination no relation carries, such as an intrinsic value'. 'Its content is a demand on explanations: state the relation that carries what is cited.'"}},
+        {"anchor": "theories/becoming/chapters/08-METHOD.md#1-beginning-within-the-one-unfolding", "says": {"en": "Wording 'keeps money, payment and ownership for actual economic relations'. 'Before two terms are treated as independently given, the relation said to join them is reconstructed.'"}}
+      ],
+      "account_adds": {"en": "The demand generalized to subject and object, fact and value, with a five-step test of constitutive claims."},
+      "source_adds": {"en": "That the misreading is produced by the relation itself. 02's closed loop comes near in form, and does not state it of value."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-marx-exploitation-labour-value",
+      "name": {"en": "Marx: labour value, exploitation and class"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "K. Marx, Capital, vol. I (1867)", "locator": "Part I ch. 1; Part III chs. 7 to 9", "basis": "ai-knowledge"},
+      "sense": {"en": "The value of commodities is socially necessary labour time. The wage buys labour-power at its value while its use yields more, and the unpaid part is surplus. So exploitation is a structural relation of classes, compatible with equal exchange, and the source of a moral and political critique."},
+      "quote": null,
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {"en": "No such theory stands in the account, and I did not find a reader-level near-equivalent. Who draws from whom is a relation it can state (a drawer, what lies beyond), but 'exploitation' asks for a measure of a due that its amounts do not carry, and it claims no right or duty. Not a defect by itself. [AI reading]"},
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {"en": "Any theory of value or of class. 05 §10 has a market model whose 'vocabulary adds no mathematical advantage' over conventional control, and no class relation."},
+      "absence": {"searched": ["Marx", "capital", "surplus", "exploit", "commodit", "accumulat", "labour", "labor", "wage", "class struggle", "proletar", "working class"], "read": ["05 §10's opening and closing lines", "08 §8's market-model assessment line", "07 what the chapter does not show"]},
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-marx-historical-tendency",
+      "name": {"en": "Marx: the system's contradictions and its supersession"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "K. Marx, Capital, vol. I (1867), ch. 32; Preface to A Contribution to the Critique of Political Economy (1859)", "locator": "as named (Fowkes numbering)", "basis": "ai-knowledge"},
+      "sense": {"en": "Forces of production outgrow the relations that shaped them, and capital produces its own gravediggers. History has a direction from its material contradictions. Critique is warranted partly by this tendency, with communism as the movement abolishing the present state of things."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "The account gives no such tendency and asserts no dynamic good. A loop reading only its share stays locked under its premises; a way out is a change of what is read, and whether anyone makes it is not a law. Ordering arrangements would need the two unasserted premises and more. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/ONE-PAGE.md", "says": {"en": "'No law evaluates: none says a loss is a harm or restraint better.' The ethics adds two premises, neither asserted, warrant open: the continuation condition for scope, C for order."}},
+        {"anchor": "theories/becoming/chapters/05-COLLECTIVES.md#markets", "says": {"en": "'No universal phase threshold is claimed, and no market law ranks arrangements.'"}}
+      ],
+      "account_adds": {"en": "What does turn a loop, by which readers and when, under stated premises."},
+      "source_adds": {"en": "A theory of why those who read the loss come to be many and organized; the account's nearest case is a reading in time by the others, on counts. The shengsheng lineage's synthesis (history) lists 'Marx's historical telos and determinism' as refuted, an earlier sieve, not argued live."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-simondon-individual-as-phase",
+      "name": {"en": "Simondon: the individual as a phase of individuation"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "G. Simondon, L'individuation à la lumière des notions de forme et d'information (1958; 2005)", "locator": "Introduction, against substantialism and hylomorphism", "basis": "ai-knowledge"},
+      "sense": {"en": "To explain the individual from a given principle, substance or form-on-matter, begins from what must be explained. Being is pre-individual; the individual is one result of an operation of individuation, and never exhausts the pre-individual charge it carries."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "contrary-reading",
+      "reading": {"en": "The account's word 'individuation' is the supply of identity, another sense. Its grammar starts from occurrences on a carrier. Classes are free, but which occurrences there are, and their equality, come with the carrier: 'a commitment of the model'. Simondon would count that as beginning from individuals. The method's own test: this is a limit in the model, unshown beyond it. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/01-ROOT.md#one-kind-of-symbol", "says": {"en": "Time and the four positions 'tell two occurrences alike in every relation apart only by equality on the carrier, a commitment of the model'."}},
+        {"record": "identity-across-steps", "anchor": "theories/becoming/chapters/01-ROOT.md#r-identity-across-steps", "says": {"en": "Theorem (World): labels carry nothing; the pattern of names across steps carries identity, 'a correspondence premise the representation supplies'; 'the individuation of formations' is taken up there as who continues whom."}},
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#34-what-the-condition-does-not-settle", "says": {"en": "§3.4: 'Individuation fixes what counts as a loss; the reading of `living` is a choice.'"}}
+      ],
+      "account_adds": {"en": "What depends on identity and what does not: readings of each step do not, readings following a formation do."},
+      "source_adds": {"en": "A being before individuals, with a charge that remains in each; no such layer exists in the account, whose thesis might read it as what no relation carries, or as relation before terms. A history study read his introduction as a comparator for genesis (DEDUCTIVE-FOUNDATION-TEST); nothing live."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-simondon-relation-has-value-of-being",
+      "name": {"en": "Simondon: relation has the rank of being"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "G. Simondon, L'individuation à la lumière des notions de forme et d'information (1958; 2005)", "locator": "Introduction; locator from memory", "basis": "ai-knowledge"},
+      "sense": {"en": "Relation is not a tie added between terms that already exist. It is itself of the order of being, one aspect of the system's internal resonance, and the terms arise with it."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {"en": "The method's rule and the thesis have this form, and one law bears on it: describing parts apart loses exactly the relation. The account's standing differs: argued for explanation, 'neither shows that reality has none'. No live page names him. Terms still are given at the carrier (see the previous entry). [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding", "says": {"en": "Thesis, argued: 'there is one unfolding, and whatever is, is how it relates within it'; that the theory as a whole needs no independent entity 'is argued, not proved. Neither shows that reality has none.'"}},
+        {"record": "separation-loses-the-relation", "anchor": "theories/becoming/chapters/01-ROOT.md#r-separation-loses-the-relation", "says": {"en": "Describing the parts separately gives back the whole exactly where it is rectangular; a relation forms only by joint action."}}
+      ],
+      "account_adds": {"en": "A checked statement of what separation loses, and the arguments that remain live against the thesis."},
+      "source_adds": {"en": "Relation as resonance within a tense system, with no counterpart in a two-place predicate."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-simondon-metastability-seed",
+      "name": {"en": "Simondon: metastability, the seed and transduction"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "G. Simondon, L'individuation à la lumière des notions de forme et d'information (1958; 2005)", "locator": "Part I, the crystal in a supersaturated solution", "basis": "ai-knowledge"},
+      "sense": {"en": "A system charged with potentials it cannot resolve at rest is metastable. A structural seed resolves the tension, and the structure spreads step by step, each part structuring the next (transduction). The information is the disparity the new dimension resolves, not a message from outside."},
+      "quote": null,
+      "carried": "history-only",
+      "relation": null,
+      "reading": {"en": "The account has thresholds, a point of no return, a critical mass of readers, a fold: places where a level ends or a lock holds. I found no law of a structure propagating out of a field holding incompatible potentials. 04's law says where a new dependence comes from, 'not why'. A possible gap for the atlas. [AI reading]"},
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {"en": "A mechanism of forming from tension, and information as disparity. It stands only in a history study's one clause (DEDUCTIVE-FOUNDATION-TEST: 'Pages 11-12 describe transduction'). I did not check PLAN §4.4 against this."},
+      "absence": {"searched": ["Simondon", "metastab", "nucleat", "crystalli", "supersatur", "seed", "transduct", "critical mass", "formed", "forming anew"], "read": ["02 critical-mass lines (cut)", "04 a dependence formed from drawing", "record forming-anew-necessary-and-sufficient statement", "DEDUCTIVE-FOUNDATION-TEST.md line 850"]},
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-simondon-transindividual",
+      "name": {"en": "Simondon: the collective from the pre-individual, not from individuals"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "G. Simondon, L'individuation psychique et collective (1989), part of the same thesis", "locator": "Part on the transindividual; locator from memory", "basis": "ai-knowledge"},
+      "sense": {"en": "A collective is not a sum of constituted individuals nor a mould imposed on them. It individuates from the pre-individual charge they still carry: a further individuation, the transindividual, in which shared meaning is formed and not exchanged between finished parties."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "The account starts joint activity from actual relations, which is near. But its one law of a code forming between formations reaches 'a shared code reached among codes already held'. Simondon denies that form for the collective. The law's premises are its own; it does not claim it exhausts how understanding forms. [AI reading]"},
+      "targets": [
+        {"record": "a-code-formed-between-formations", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations", "says": {"en": "Theorem (any type; runs of hearings, equality of formations and senses decided; each further premise named): the laws of a code formed between formations; summarized at 07 §1 as 'a shared code reached among codes already held'."}},
+        {"anchor": "theories/becoming/chapters/08-METHOD.md#1-beginning-within-the-one-unfolding", "says": {"en": "'Joint activity starts from actual relations, not from opposed interests or a fixed common utility.'"}}
+      ],
+      "account_adds": {"en": "Exact conditions under which a code converges, and what a pool's decision responds to."},
+      "source_adds": {"en": "A shared meaning that neither party held in any form before; this bears directly on the account's aim of a shared understanding, and is not stated."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-jonas-imperative",
+      "name": {"en": "Jonas: the imperative of responsibility"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "H. Jonas, The Imperative of Responsibility (1979; English 1984)", "locator": "ch. 1 §V", "basis": "ai-knowledge"},
+      "sense": {"en": "A categorical imperative for the age of technology: act so that the effects of your action are compatible with the permanence of genuine human life. The existence of humanity may not be staked on any wager, since no comparison of outcomes can offset that loss."},
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {"en": "The record gives the ranking's part: an ending of what everyone needs, with no second copy, is ranked below by every order rising with its own continuation, a hypothesis, with no C and no impartial premise. It obliges no one, and an independent copy makes it mixed. Jonas's categorical form and human object are not taken. [AI reading]"},
+      "targets": [
+        {"record": "what-self-concern-alone-ranks", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-self-concern-alone-ranks", "says": {"en": "Theorem (any type; World): correspondence 'Jonas (1979): the existence of the whole is never to be staked; here a condition everyone needs, with no second copy, has its ending ranked below by every standpoint's self-concern'. Not shown: 'that a ranking obliges anyone: an order is from a standpoint'."}},
+        {"anchor": "theories/becoming/review/PHILOSOPHY.md#p-05", "says": {"en": "Question put to reviewers: how the condition, an unasserted premise of scope, compares with Jonas's imperative, 'whose object is the permanence of genuine human life'."}}
+      ],
+      "account_adds": {"en": "The exact case: one copy, every later generation dependent, stock and gate stated; and a limit: where another course keeps an item beyond, some such order ranks either way."},
+      "source_adds": {"en": "A duty that binds unconditionally; the human object; and a ban on the wager itself, which is about risk. The record: a recurring risk of ending is not formalized."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-jonas-ought-from-being",
+      "name": {"en": "Jonas: an ought founded in being"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "H. Jonas, The Imperative of Responsibility (1979; English 1984)", "locator": "chs. 3 and 4, purposes in nature, the good and the ought", "basis": "ai-knowledge"},
+      "sense": {"en": "Against the is-ought gap as a dogma of a value-stripped nature: purposiveness is real in nature, and having a purpose is a good in itself over purposelessness. Life's self-affirmation is being's emphatic no to not-being, so being itself grounds an ought."},
+      "quote": null,
+      "carried": "changed",
+      "relation": "divergence",
+      "reading": {"en": "The account takes the topic and refuses the form as a law: with significance free, no satisfiable statement reading only the represented dynamics entails the condition, by construction. That does not refute Jonas, since the chapter says it is about the representation. His claim enters only as a warrant the account leaves open for both premises. [AI reading]"},
+      "targets": [
+        {"record": "what-the-dynamics-leave-open", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-the-dynamics-leave-open", "says": {"en": "Theorem (any type); 'the result shows non-entailment by the represented dynamics, not that becoming leaves significance undetermined or needs the condition'."}},
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#what-forms-and-what-is-supplied", "says": {"en": "'No law says that a standard which formed is a significance.' The condition and C are supplied, entering as hypotheses."}}
+      ],
+      "account_adds": {"en": "A map of what is shown, read and supplied, and the near-parallel for C (`ReadsNoOrder.not_entails`)."},
+      "source_adds": {"en": "A positive argument that purpose in nature is itself a value. The account has no claim of this strength and asserts no warrant binding every possible mind."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-jonas-needful-freedom",
+      "name": {"en": "Jonas: metabolism and needful freedom"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "H. Jonas, The Phenomenon of Life (1966)", "locator": "locator unverified; the essays on metabolism and on Is God a Mathematician?", "basis": "ai-knowledge"},
+      "sense": {"en": "An organism is a form that persists through the exchange of its matter: free of any given stuff, yet needing stuff. Its being is its own constant task, with not-being always at hand. So inwardness, concern and freedom begin with metabolism."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {"en": "The structural half has this form: a pattern going on through renewal of what carries it, and a formation that must be fed from beyond. The account does not credit him. The other half it withholds: inwardness and concern are not read off metabolism, and the 'one constraint' model sits below closure of constraints. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/04-LIFE.md#r-life-as-condition-of-life", "says": {"en": "Reading [AI, D65], above that section: 'Life is continuation that renews its own conditions'; the chapter argues this reading from the laws, and it is not one of them."}},
+        {"record": "continuing-self-fed-from-beyond", "anchor": "theories/becoming/chapters/02-MAP.md#r-continuing-self-fed-from-beyond", "says": {"en": "Theorem (World): under balance and dissipation, a finite family enclosed around from some step on and taken from at arbitrarily late steps cannot from any step on be fed from nothing beyond it; it needs a fixed unit, and at a unit that splits it can fail."}}
+      ],
+      "account_adds": {"en": "The two grains (02 §1): at one class sustaining turnover and ending turnover look alike."},
+      "source_adds": {"en": "That concern itself starts here, so that value is not an addition to life. In 07 §1, whether a formed standard gains influence, recognizes its target, has warrant or is followed are four questions, none answered by metabolism."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-jonas-non-reciprocal-responsibility",
+      "name": {"en": "Jonas: responsibility without reciprocity"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "H. Jonas, The Imperative of Responsibility (1979; English 1984)", "locator": "ch. 4, parental responsibility as archetype", "basis": "ai-knowledge"},
+      "sense": {"en": "The duty toward the future cannot rest on reciprocity or on rights of those who do not yet exist. Its archetype is the newborn, whose mere breathing addresses an ought: one-sided responsibility to the vulnerable and to what comes after."},
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "divergence",
+      "reading": {"en": "The asymmetry is stated: self-concern along need reaches nothing active only later. Where Jonas founds a duty there, the account claims none. Scope over later continuations rests on a line (P1 to P4, none shown) or on the step, both unasserted; the condition fixes scope, C order. An unconditional duty against a conditional scope. [AI reading]"},
+      "targets": [
+        {"record": "need-and-feeding-read-with-time", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-need-and-feeding-read-with-time", "says": {"en": "Theorem (World) and witness: over flows in which only active formations give, a formation active at no step of the stretch is needed only vacuously; 'need reaches only what is active within the stretch it is read across, and nothing active only after it'."}},
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show", "says": {"en": "Not shown: 'Any duty, right, recognition, motivation or compliance'; and the value of bringing new lives into existence."}}
+      ],
+      "account_adds": {"en": "The exact route by which the future is and is not reached without a further premise."},
+      "source_adds": {"en": "The vulnerable other as the source of an ought; the account's reading on responsibility names only limited sources, not shown to differentiate."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-jonas-heuristics-of-fear",
+      "name": {"en": "Jonas: the heuristics of fear and the priority of the bad prognosis"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "H. Jonas, The Imperative of Responsibility (1979; English 1984)", "locator": "ch. 2", "basis": "ai-knowledge"},
+      "sense": {"en": "Where the effects of action are vast and uncertain, the prophecy of doom is to be heeded over that of bliss: knowledge of what we stand to lose comes first by fearing it, and decisions must favour the worse prognosis."},
+      "quote": null,
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {"en": "The nearest live text names the gap: ergodicity and systemic ruin are 'not formalized here', and a recurring risk of ending is listed under what the record does not show. 03's 'the stakes of error change what to investigate, not what is true' is compatible and is no rule of decision. No law or premise ranks under uncertainty this way. [AI reading]"},
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {"en": "A decision rule under deep uncertainty. Whether it should enter as a further premise beside A, D, E, L and J1 to J4 is not asked in the account."},
+      "absence": {"searched": ["Jonas", "precaution", "ruin", "worst case", "stake", "risk of ending", "bad prognosis"], "read": ["record what-self-concern-alone-ranks correspondence and does_not_show", "03's assessment on continuity and objectivity", "P-21"]},
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-spinoza-conatus",
+      "name": {"en": "Spinoza: every thing strives to persevere"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "B. Spinoza, Ethics (1677)", "locator": "III p6, p7", "basis": "ai-knowledge"},
+      "sense": {"en": "Each thing, as far as it is in itself, strives to persevere in its being, and this striving is its actual essence. It holds of every thing, a stone or a state as well as a person, as a degree of power."},
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {"en": "On the reading D59 centers are the formations wanting their continuation, and with standpoint-invariance the premises force exactly the centers' continuation, the condition only where every formation is a center. Read with conatus every thing is one, so that gap closes. Spinoza gives no invariance and no 'from every standpoint', and the condition itself stays an unasserted premise of scope. [AI reading]"},
+      "targets": [
+        {"record": "what-the-step-across-standpoints-reaches", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-the-step-across-standpoints-reaches", "says": {"en": "Theorem (any type): each standpoint's presupposition about its own continuation, with standpoint-invariance, forces 'exactly the centers' continuation; the condition only where every formation is a center'."}},
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#objections", "says": {"en": "The centers' scope [AI reading, D59] parts from the condition at a formation that is no center: 'a tumour does not tell the scopes apart, a hurricane only on a stronger reading of wanting'."}},
+        {"anchor": "theories/becoming/review/PHILOSOPHY.md#p-05", "says": {"en": "Only mention: a question comparing the condition with 'a conatus reading of Spinoza', quoting a history study."}}
+      ],
+      "account_adds": {"en": "What is forced at each scope, and that nothing here rules out a formation that is no center."},
+      "source_adds": {"en": "Striving as essence, a nature of its own, which 08's thesis forbids in explanation; and power as degree. The account's 'wanting' is a labelled reading and does not cover every thing."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-spinoza-no-self-destruction",
+      "name": {"en": "Spinoza: no thing is destroyed except by an external cause"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "B. Spinoza, Ethics (1677)", "locator": "III p4; IV p20 scholium, on suicide", "basis": "ai-knowledge"},
+      "sense": {"en": "A thing's definition affirms its essence and does not negate it, so while we attend only to the thing, nothing in it can destroy it. Whatever destroys it, suicide included, comes from outside."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "The laws state formations ending by their own draw: with a required condition left out of the region, or an optimum ending its own stock. Spinoza may reply that the draw's fatality lies with what is outside the thing's essence, so his claim holds by definition. The account makes 'outside' depend on a region drawn along a relation. [AI reading]"},
+      "targets": [
+        {"record": "represented-boundary-against-dependence", "anchor": "theories/becoming/chapters/02-MAP.md#r-represented-boundary-against-dependence", "says": {"en": "Theorem (World): 'omitting a required condition, its own draw can lose its own support' (`Omitted.loses_own`)."}},
+        {"record": "a-weighting-faster-than-renewal-ends-the-base", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-weighting-faster-than-renewal-ends-the-base", "says": {"en": "Where the weighting falls faster than every positive level renews, 'every optimum ends its own stock at the first step': capacity covering, any `R`."}},
+        {"anchor": "theories/becoming/chapters/01-ROOT.md#boundaries", "says": {"en": "Reading [AI, D45, D61]: a boundary is given by a region; 'Which boundaries a formation has depends on the relation followed.'"}}
+      ],
+      "account_adds": {"en": "Which region must be left out, and which conditions make own draw fatal."},
+      "source_adds": {"en": "An essence that fixes what is the thing and what is not, so inside and outside are not chosen."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-spinoza-one-substance",
+      "name": {"en": "Spinoza: one substance, its modes in another"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "B. Spinoza, Ethics (1677)", "locator": "I definitions 3 and 5; I p14, p15", "basis": "ai-knowledge"},
+      "sense": {"en": "There is one substance, God or Nature, in itself and conceived through itself. Everything else is a mode: in another and conceived through another, so finite things are not independent units."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "Modes conceived through what conditions them are near the thesis; 'one unfolding' is near 'one substance'. But the substance is the very case the thesis forbids at the whole: what is in itself, with infinite attributes and its own necessary nature, and it needs no relation. 08 does not name him. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding", "says": {"en": "Thesis, argued: 'there is one unfolding, and whatever is, is how it relates within it'; neighbours named are ontic structural realism, process philosophy, dependent arising, the identity of indiscernibles."}},
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#evaluation", "says": {"en": "On the thesis, argued and not proved, 'positions, regions and standards form within the unfolding; none outside it owns value'."}}
+      ],
+      "account_adds": {"en": "A demand on explanation, with no attributes or necessary being."},
+      "source_adds": {"en": "A ground with a nature of its own, derived by demonstration; and parallel attributes of thought and extension."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-spinoza-necessity",
+      "name": {"en": "Spinoza: only what is actual was possible"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "B. Spinoza, Ethics (1677)", "locator": "I p29, p33 and its scholium", "basis": "ai-knowledge"},
+      "sense": {"en": "Nothing in nature is contingent; things could not have been otherwise or in another order. We call things possible or contingent only through a defect of our knowledge."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "contrary-reading",
+      "reading": {"en": "C ranks courses by what can form, and a counterfactual is the course one law generates from a different act. If only the actual was possible, the comparison ranks what never could be: a comparison within ignorance. The account's reply is partial: its models hold both a net of possibilities and one history, and say the model does not pick. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding", "says": {"en": "'In the net of possibilities every two intact moments of a nucleus are alike ... and each may stay or decay', and 'With one history taken as the net, the time left tells them apart'. 'Which net an actual decay is, the model does not say.'"}},
+        {"anchor": "theories/becoming/chapters/01-ROOT.md#two-courses", "says": {"en": "'a counterfactual being the course the same law generates from a different act'."}}
+      ],
+      "account_adds": {"en": "The two nets side by side, each law keeping to its own."},
+      "source_adds": {"en": "An argument that the single history is the only net; on that the ethics' comparison needs another reading, stated nowhere."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-spinoza-good-from-desire",
+      "name": {"en": "Spinoza: we call good what we desire; comparison is a mode of thinking"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "B. Spinoza, Ethics (1677)", "locator": "III p9 scholium; IV Preface", "basis": "ai-knowledge"},
+      "sense": {"en": "We do not desire a thing because it is good; we judge it good because we desire it. Good and bad indicate nothing positive in things: they are modes of thinking, notions formed by comparing things with one another, though a model of human nature can be retained for use."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {"en": "Agreement with the sorting in 07: standards form within the unfolding and none owns value; 'better' is free in the dynamics. Two distances: 07 adds that a standard can be wrong, and that a disposition is not a reason, which the formed-from-desire claim alone does not give; C, the order premise, is unasserted beside the condition for scope. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#evaluation", "says": {"en": "On the thesis, argued: standards form within the unfolding; 'it can be wrong, and learning a disposition is not learning a reason'."}},
+        {"anchor": "theories/becoming/ONE-PAGE.md", "says": {"en": "'With significance and \"better\" free, and given a standpoint, a formation and a widening, the represented dynamics entail neither premise below, by construction.'"}}
+      ],
+      "account_adds": {"en": "The limit theorems for the free parameters, each by construction."},
+      "source_adds": {"en": "An account of the affects producing the judgments. The account has only what acts show of an order, near-definitional."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-spinoza-nothing-more-useful",
+      "name": {"en": "Spinoza: nothing is more useful to a person than a person"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "B. Spinoza, Ethics (1677)", "locator": "IV p18 scholium, p35, p37 scholium 1", "basis": "ai-knowledge"},
+      "sense": {"en": "Virtue is founded on seeking one's own advantage. So far as people live by reason they agree in nature, and each is most useful to another; rational self-seeking gives the common good. The same reasoning excludes animals: no bond of like nature."},
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {"en": "Route (b) has this form: a loss returns through what feeds one, and where centers feed each other self-concern has one scope. It holds exactly where every center lies within every center's closure, and that humans do is empirical. The clearer's witness marks the limit, and the animals Spinoza leaves out are what the condition, an unasserted premise of scope, counts. [AI reading]"},
+      "targets": [
+        {"record": "self-concern-through-dependence", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-self-concern-through-dependence", "says": {"en": "Theorem (any type; World): held de se, self-concern is the same from every standpoint exactly where every center lies within every center's closure; the whole need not lie within it."}},
+        {"anchor": "theories/becoming/review/PHILOSOPHY.md#p-13", "says": {"en": "Route (b), AI reading D17: 'this gives, without warranting, a reason of its own to retain what lies within its closure'; in `Clearing` the clearer meets every requirement so derived and still ends the dweller."}}
+      ],
+      "account_adds": {"en": "The exact condition, and a witness of who is lost beyond it."},
+      "source_adds": {"en": "Agreement in nature under reason: a claim about what rational beings are, not feeding closures. Stated nowhere."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-parfit-identity-not-what-matters",
+      "name": {"en": "Parfit: reductionism; identity is not what matters"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "D. Parfit, Reasons and Persons (1984)", "locator": "Part III, chs. 10 to 15", "basis": "ai-knowledge"},
+      "sense": {"en": "A person's existence consists in nothing beyond a brain, a body and connected events. Identity is not what matters in survival: Relation R is, psychological connectedness and/or continuity with any cause. This can reduce the difference between my life and others' lives."},
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {"en": "07 states the thesis as a premise of the step across drawings, not asserted and 'coherently denied', and uses R as the live rival to the widest self: connectedness is no class, continuity is one. A line under a class is coarser than R: P-18 asks whether descent, which does not carry R, is what matters at all. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#step", "says": {"en": "Across drawings, 'the reductionist step of Parfit (1984) and Siderits (2003)'; argued, soundness not shown; 'P4, Parfit's thesis that identity is not what matters, is coherently denied'."}},
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#crux", "says": {"en": "AI reading: 'Connectedness comes in degrees and is not transitive, so it is no class ...; continuity, the other part of R, is transitive, and a class drawn on it still needs its own reason for scope.'"}}
+      ],
+      "account_adds": {"en": "Which classes are lines; a self read as a choice of class with its own laws; a path beyond R, resting on P1 to P4."},
+      "source_adds": {"en": "The thought experiments; the claim as one Parfit holds, not a premise; and any-cause R. The live account does not take Parfit's side."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-parfit-fission",
+      "name": {"en": "Parfit: fission"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "D. Parfit, Reasons and Persons (1984)", "locator": "Part III ch. 12", "basis": "ai-knowledge"},
+      "sense": {"en": "If I divide into two who each continue me, I cannot be both, by the logic of identity, and yet nothing that matters is lost. So what matters can hold where identity cannot, because it can take a branching form."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {"en": "The root has the first half as a witness, with Parfit uncredited there: continuation splits, and sameness read along lines is not transitive. The second half, that nothing that matters is lost, belongs to no law; the record on own good calls fission in scope of a correspondence premise. [AI reading]"},
+      "targets": [
+        {"record": "continuation-relative-to-a-class", "anchor": "theories/becoming/chapters/01-ROOT.md#r-continuation-relative-to-a-class", "says": {"en": "Witness: 'where one occurrence is continued by two that go no further, sameness read along lines either way is not transitive (`«分叉»`). The family gathers the branches; it is coarser than identity.'"}},
+        {"record": "own-good-to-reachable-living-significance", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-own-good-to-reachable-living-significance", "says": {"en": "Differentiation is 'a correspondence premise in scope for fission, copying, forking and AI successors'."}}
+      ],
+      "account_adds": {"en": "The family as the class that gathers branches; merges as well as splits."},
+      "source_adds": {"en": "The claim that the branch relation is all that matters in survival."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-parfit-extreme-claim",
+      "name": {"en": "Parfit: the Extreme Claim"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "D. Parfit, Reasons and Persons (1984)", "locator": "Part III ch. 14; the same objection in Wolf 1986", "basis": "ai-knowledge"},
+      "sense": {"en": "If reductionism is true, we may have no reason for special concern about our own futures at all: the view may dissolve concern as well as extend it. Parfit takes it as defensible and does not hold it himself as forced."},
+      "quote": null,
+      "carried": "carried",
+      "relation": "contrary-reading",
+      "reading": {"en": "Kept in 07 as an objection to the widened line, and in P as the standard objection to the step across drawings. The reply, that P1 chooses since it is held fixed, stands in a labelled reading and is argued. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#crux", "says": {"en": "AI reading: 'Stretched to everything downstream, \"my continuation\" keeps the word and can lose the concern (Parfit's Extreme Claim).'"}},
+        {"anchor": "theories/becoming/review/PHILOSOPHY.md#p-10", "says": {"en": "Known weakness: 'reductionism can dissolve concern as easily as extend it (Wolf 1986; Parfit's Extreme Claim)'; the study's answer that P1 chooses is quoted from a history study. 07 §4.2 reading D59: 'P1 chooses'."}}
+      ],
+      "account_adds": {"en": "The dichotomy made exact: invariant, the presupposition holds at no drawing if any continuation lacks significance, and anywhere gives everything."},
+      "source_adds": null,
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-parfit-future-generations",
+      "name": {"en": "Parfit: non-identity, mere addition and the Repugnant Conclusion"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "D. Parfit, Reasons and Persons (1984)", "locator": "Part IV", "basis": "ai-knowledge"},
+      "sense": {"en": "Our choices fix who will exist, so a policy can harm no one and still seem wrong. Adding lives worth living seems not to make things worse, yet that path leads toward the Repugnant Conclusion. No satisfactory Theory X has been found."},
+      "quote": null,
+      "carried": "changed",
+      "relation": "divergence",
+      "reading": {"en": "C, unasserted, is stronger at the first step: a costless addition is better, not merely not worse, even of a life not worth living, as admission reads no quality. It leaves mixed comparisons unranked, so neither yields nor blocks the later steps. 08 lists the results as unstated. The condition fixes scope, C order. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/08-METHOD.md#known-results", "says": {"en": "Stated by prior frameworks and not yet here: 'Parfit's mere addition, the Repugnant Conclusion and the non-identity problem (C ranks a costless addition better; the philosophy dossier keeps what it owes open)'."}},
+        {"anchor": "theories/becoming/review/PHILOSOPHY.md#p-07", "says": {"en": "[this dossier, AI]: C 'also ranks adding a life not worth living as better, against the procreation asymmetry'; 'it neither yields nor blocks the paradox's later steps'."}},
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#crux", "says": {"en": "AI reading: the generations a poisoning forecloses 'occur nowhere on the course taken, so they lie on no line'; a loss is read by comparing courses."}}
+      ],
+      "account_adds": {"en": "Admission as what is compared, which sets this comparison up differently from welfare totals."},
+      "source_adds": {"en": "The puzzles themselves, as tests C has not faced; 07 does not show the value of new lives."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-parfit-self-defeating",
+      "name": {"en": "Parfit: theories directly collectively self-defeating"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "D. Parfit, Reasons and Persons (1984)", "locator": "Part I ch. 4", "basis": "ai-knowledge"},
+      "sense": {"en": "In each-we dilemmas, if each successfully follows an agent-relative theory, the aims it gives each are worse achieved than if none had. Common-sense morality is so self-defeating in many-person cases, and should be revised there."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {"en": "The accounting law has the many-person form for one condition: each within what a step gives, together past it, and the takers can end with the rest. Parfit's is about theories and aims, and the law states neither; no theory is called defeated, and no revision follows. 08 credits the commons, not Parfit. [AI reading]"},
+      "targets": [
+        {"record": "own-count-misses-joint-excess", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess", "says": {"en": "Theorem (World: balance; for the ending, activity needing support, only active giving, the gate local): 'Formations can each take within what a step gives while together they take more' (`Pair.own_not_joint`). Verdict in 08: near-definitional."}}
+      ],
+      "account_adds": {"en": "The point of no return for a gated condition, whatever each drawer's own draw."},
+      "source_adds": {"en": "A criterion for rejecting a moral theory, which could bear on the ethics' own premises and is not asked."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-parfit-present-aim-and-neutrality",
+      "name": {"en": "Parfit: the present-aim theory and the attack from two sides"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "D. Parfit, Reasons and Persons (1984)", "locator": "Part II, chs. 6 to 8", "basis": "ai-knowledge"},
+      "sense": {"en": "Self-interest is temporally neutral yet agent-relative, and so is unstable: it can be attacked from the present-aim side, by those who deny the first, and from the moral side, by those who deny the second. Neither neutrality is forced, and treating them apart is arbitrary."},
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {"en": "The present-aim evaluator stands in a record as who escapes the route from own good, and a significance bounded in time as a rival. The split of the step in two (across drawings, across standpoints) has the shape of the two neutralities. The chapter does not say so; and Parfit's instability argument is not stated. [AI reading]"},
+      "targets": [
+        {"record": "own-good-to-reachable-living-significance", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-own-good-to-reachable-living-significance", "says": {"en": "Not shown: 'a present-aim evaluator meets the other premises and gives the formed other no significance'."}},
+        {"record": "rivals-bounded-in-time", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-rivals-bounded-in-time", "says": {"en": "Theorem (any type; World witness): a significance caring only for continuations up to a step is a rival of the condition wherever there is a standpoint and a formation."}}
+      ],
+      "account_adds": {"en": "Witnesses of each rival; P-15's question on cutoffs against discounting."},
+      "source_adds": {"en": "The argument from instability, which would bear directly on P-11's de se case."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-parfit-on-what-matters",
+      "name": {"en": "Parfit: normative truths and convergence"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "D. Parfit, On What Matters (2011)", "locator": "vol. 1 ch. 16 (Triple Theory); vol. 2 Part Six (non-naturalism); locators from memory", "basis": "ai-knowledge"},
+      "sense": {"en": "There are irreducibly normative truths, not natural facts, and reasons are not given by desires. The best Kantian, contractualist and consequentialist theories converge, climbing one mountain from different sides, and such convergence supports that there are such truths."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "T5 has a convergence claim, and a much narrower one: a bound on where those counting everything positively can disagree. It reduces to a shared partial order, with C's premise relocated, and is proved only for net weightings; mixed cases stay open. No normative fact underlies it; warrant stays open for both premises. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses", "says": {"en": "T5: the reduction proved for net weightings, the bound conjectured; 'That valuers value positively is C's premise relocated'; VD1 failed, VD2 passed in part, role-play, human valuers untested."}},
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show", "says": {"en": "Not shown: 'That the continuation condition, C or the step of invariance is warranted. No warrant binding every possible mind is claimed'."}}
+      ],
+      "account_adds": {"en": "A theorem under the convergence, and frozen tests that failed in part."},
+      "source_adds": {"en": "A realist account of what warrant would be; the account has no metaethical position (P-02's question)."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-osr-no-things",
+      "name": {"en": "Ontic structural realism: there are no things, or none prior to structure"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "J. Ladyman and D. Ross, Every Thing Must Go (2007); S. French, The Structure of the World (2014); M. Esfeld and V. Lam (2008) for the moderate form", "locator": "Ladyman and Ross chs. 1 to 3", "basis": "ai-knowledge"},
+      "sense": {"en": "Physics, especially permutation invariance in quantum theory, supports that the world's structure is what exists: relata either are not self-subsistent or exist only as nodes (eliminative or moderate forms). Structure is modal and objective."},
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {"en": "08 names it as a neighbour with no argument. The representation has this shape: configurations, laws and parts 'need no determination beyond relations'. Scope: shown of what is represented, argued of the theory, and of reality not at all. Where OSR claims the world is so, the account stops at the demand on explanation. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding", "says": {"en": "'These show that configurations, laws and parts, as represented, need no determination beyond relations; that the theory as a whole needs no independent entity is argued, not proved. Neither shows that reality has none.' 'Its neighbours are ontic structural realism (Ladyman and Ross 2007) ...'"}}
+      ],
+      "account_adds": {"en": "Three cases that look like refuters, and the laws that settle them; the nearest case against, equality on the carrier."},
+      "source_adds": {"en": "The arguments from physics, the modal claim, and the debate between eliminative and moderate forms. 'Relations need relata' is named in 08 as live and not worked through."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-osr-naturalistic-closure",
+      "name": {"en": "Ladyman and Ross: the principle of naturalistic closure"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "J. Ladyman and D. Ross, Every Thing Must Go (2007)", "locator": "ch. 1", "basis": "ai-knowledge"},
+      "sense": {"en": "Metaphysics is to be taken seriously only if it unifies hypotheses that current science motivates, and fundamental physics constrains the rest. A metaphysics argued from intuition or from a domestic picture of things is to be discontinued."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "By this rule the account's thesis has a problem it admits: 'By this section's measure the thesis has no strength'. It is argued from representations, and classical texts are among its readings. It answers partly: its content is a demand on explanations, and its named classes can fail. A neighbour who would not accept the neighbourhood. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding", "says": {"en": "'By this section's measure the thesis has no strength: it excludes no observation, and the argument is that none could refute it. That is argued, not proved.'"}},
+        {"anchor": "theories/becoming/chapters/08-METHOD.md#1-beginning-within-the-one-unfolding", "says": {"en": "'Proofs check relations under a representation, empirical work tests realization and correspondence, and philosophy examines constitutive identities. No cultural origin validates or disqualifies a method.'"}}
+      ],
+      "account_adds": {"en": "An open statement of its thesis's strength, and a separate standing for each kind of claim."},
+      "source_adds": {"en": "A rule for what metaphysics may be, which would put the thesis outside; the account does not answer it by name."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-osr-real-patterns",
+      "name": {"en": "Dennett, Ross and Ladyman: to be is to be a real pattern"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "D. Dennett, 'Real Patterns' (1991); J. Ladyman and D. Ross, Every Thing Must Go (2007)", "locator": "Ladyman and Ross ch. 4, rainforest realism", "basis": "ai-knowledge"},
+      "sense": {"en": "A pattern is real if it supports projection and compresses information relative to a physically possible computer, at its scale. What exists is relative to scale and is not reducible to one level; there are many real grains with no privileged one."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {"en": "A class closed under the relation adds nothing when read through: lumpability, here constancy, and grain-relative, as the account's classes are. A class named for a domain can fail by a smaller class explaining more, near to a compression test. No live page names the view; 'real' is not said of any class. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/01-ROOT.md#constancy-and-core", "says": {"en": "Theorem (root): for a class `E`, constancy is exactly that `R` read through the class adds nothing, `E;R;E ⊆ R;E` (`«闭合当且仅当有常»`); the record calls it the relational analogue of lumpability, 'a correspondence not proved here'."}},
+        {"anchor": "theories/becoming/chapters/08-METHOD.md#what-would-defeat-the-reading", "says": {"en": "A class named for a domain can be defeated by 'two members alike under the class going on differently beyond measured error, another class of no more variables leaving less of the next state unaccounted for'. As a language, nothing could."}}
+      ],
+      "account_adds": {"en": "A core for each class, and a named test (T2 has this form, AI reading)."},
+      "source_adds": {"en": "An existence criterion and an information measure. The account's reading does not say which classes are real; 'a class is warranted' is not shown."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-leibniz-identity-of-indiscernibles",
+      "name": {"en": "Leibniz: the identity of indiscernibles"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "G. W. Leibniz, Discourse on Metaphysics (1686) §9; Correspondence with Clarke; M. Black, 'The Identity of Indiscernibles' (1952), for the two spheres", "locator": "as named", "basis": "ai-knowledge"},
+      "sense": {"en": "No two things are exactly alike in every respect. Two things are never merely numerically different; a purely extrinsic difference would make no sense. Black's two spheres in an otherwise empty space is the standard counterexample."},
+      "quote": null,
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {"en": "Asked as a universal, 08's calibrations give where it holds: identity read off relations is identity up to indiscernibility, and that this is decided is excluded middle over every world. Twin successors are Black's spheres in the model, and equality on the carrier separates them. Whether reality has such twins the account does not say. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/08-METHOD.md#r-relata-counted-up-to-indiscernibility", "says": {"en": "Calibration (World): 'Identity read off relations is identity up to indiscernibility'; asked of every world, that indiscernibility is decided is exactly excluded middle; 'names carry one decided identity more than relations do'."}},
+        {"record": "configurations-alike-by-relation", "anchor": "theories/becoming/chapters/01-ROOT.md#r-configurations-alike-by-relation", "says": {"en": "Theorem (any process): 'Naming the configurations makes sense exactly where alike configurations are one, which fails for twin successors of one move (`identifiesAlike_id_iff`).'"}},
+        {"anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding", "says": {"en": "'The thesis would be empty if \"relation\" meant whatever difference turns up, as the identity of indiscernibles is trivial if any property counts.'"}}
+      ],
+      "account_adds": {"en": "The calibration of what deciding identity costs."},
+      "source_adds": {"en": "The principle as true of what exists, and its ground in sufficient reason."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-sen-intersection",
+      "name": {"en": "Sen: the intersection approach"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "A. Sen, Collective Choice and Social Welfare (1970); 'Interpersonal aggregation and partial comparability' (1970); 'On Weights and Measures' (1977)", "locator": "Collective Choice chs. 7 and 7*", "basis": "ai-knowledge"},
+      "sense": {"en": "Where weights are not fully known or agreed, take the judgments every admissible weighting shares. They form a quasi-ordering, incomplete and still usable, with partial comparability as a range between no comparison and full."},
+      "quote": null,
+      "carried": "carried",
+      "relation": "agreement",
+      "reading": {"en": "Credited at the home: widening is what every positive weighting shares, the finite two-valued case. The weighted-ratio law states part of the graded case. C, calling the shared part better, is the account's premise, not Sen's. [AI reading]"},
+      "targets": [
+        {"record": "widening-as-what-every-positive-weighting-ranks", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-positive-weighting-ranks", "says": {"en": "Theorem (any type; finite listing, two-valued admission). 'This is Sen's intersection approach, and Pareto dominance as the unanimity of positive weightings'; 'Monotonicity at the standpoint is C's premise relocated: weaker, still a premise.'"}},
+        {"record": "weights-within-a-ratio-agree-past-it", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-weights-within-a-ratio-agree-past-it", "says": {"en": "Every positive weighting whose weights stand within n/d of each other ranks the course keeping p items above the one keeping q exactly where n q < d p. 08 lists this as Sen's graded comparisons already stated."}}
+      ],
+      "account_adds": {"en": "Any class of orders from positive weightings up to every order ranking each widening higher (`Weighting.widens_iff_every_of_class`)."},
+      "source_adds": null,
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-sen-capability",
+      "name": {"en": "Sen: capability as the space of evaluation"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "A. Sen, 'Equality of What?' (1980); Commodities and Capabilities (1985); Development as Freedom (1999)", "locator": "as named", "basis": "ai-knowledge"},
+      "sense": {"en": "Assess a person's position neither by utility nor resources but by capability: the set of beings and doings she has real freedom to achieve, which she has reason to value. Selecting and weighing functionings is left to public reasoning, and rankings may be partial."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "scope",
+      "reading": {"en": "'What can form' has the shape of a capability set and widening of dominance over such sets; 08 credits opportunity sets, and Sen only for achievement and freedom. 07's 'capability is reach' is another sense. Sen's bearer is a person and his set is valued by reasons; C, unasserted, counts any admitted formation, with scope from the condition. A process study (GAP-MAP §6.2) names the gap. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/08-METHOD.md#known-results", "says": {"en": "How two courses differ in what can form: closest prior 'opportunity sets (Pattanaik and Xu 1990)', near-definitional; the rankings by diversity not stated."}},
+        {"anchor": "theories/becoming/chapters/08-METHOD.md#beyond-the-table", "says": {"en": "'The lexical order is the two-tier order read on realized claims, then reachable ranges, near Sen's achievement and freedom (1985).'; near-definitional or a witness."}},
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show", "says": {"en": "Not shown: 'The value of bringing new lives into existence, well-being beyond admitted continuation, and constraints on acts.'"}},
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise", "says": {"en": "Reading [AI, D45]: 'Capability is reach, and the gap is the reach closure less the coupling closure'; another sense of the word."}}
+      ],
+      "account_adds": {"en": "Widening over courses and steps, not one person's present set; what a course keeps reachable."},
+      "source_adds": {"en": "Functionings valued by reasons, and well-being as what they are for. 07's RP alone mentions 'resources or capabilities', in passing."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-sen-process-freedom",
+      "name": {"en": "Sen: the process aspect of freedom"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "A. Sen, Rationality and Freedom (2002); Development as Freedom (1999)", "locator": "Rationality and Freedom, introductory ch. and chs. 20 to 21; locators from memory", "basis": "ai-knowledge"},
+      "sense": {"en": "Freedom has an opportunity aspect, what one can achieve, and a process aspect, how it comes about. Being forced to do what one would have chosen differs from choosing it, even at the same outcome; opportunity alone misses this."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "Widening reads only what is admitted. Under the priority of basic conditions alternatives realizing the same claims compare alike, unless the acting part is adjoined as a claim. That is Sen's objection, in the account's own terms. A reading in 05 does judge a reform by who decides next round, and it is a historical correspondence, no law. [AI reading]"},
+      "targets": [
+        {"record": "what-the-claims-do-not-read", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-the-claims-do-not-read", "says": {"en": "Conditional (J1/J2): 'alternatives realizing the same claims are compared alike'; adjoined as a basic claim, the acting formation's part orders them. 'Neither which is worse nor that the acting part is basic is shown.'"}},
+        {"anchor": "theories/becoming/chapters/05-COLLECTIVES.md#markets", "says": {"en": "Reading [AI, D65; a historical correspondence, no theorem]: 'a reform is judged by who decides admission, comparison and correction next round'."}}
+      ],
+      "account_adds": {"en": "The exact point at which the comparison goes blind, and what would adjoin it."},
+      "source_adds": {"en": "Process as a value in itself; agency as distinct from well-being. J4's 'legitimate feasible choice' is a premise, not this."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-sen-adaptive-preferences",
+      "name": {"en": "Sen: adapted preferences misreport deprivation"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "A. Sen, Commodities and Capabilities (1985); On Ethics and Economics (1987)", "locator": "locator unverified; the hopeless beggar and tamed housewife passages", "basis": "ai-knowledge"},
+      "sense": {"en": "People long deprived come to want little and take pleasure in small mercies, so a metric of desire or happiness reads their condition as fine. Their reports are formed by what they suffer and cannot serve alone as the measure of it."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {"en": "A reading formed from what the selection has done reads the share, not what lies beyond it; a loss so unread leaves the loop as it was. Endorsement is not authorization. That the readers are minds is a reading; the law says nothing of persons, and 'no law says a loss is a harm'. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#evaluation", "says": {"en": "Reading [AI, D65]: 'Later endorsement cannot authorize the formation that produced it.'"}},
+        {"record": "closed-capture", "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture", "says": {"en": "Theorem (any type): where neither the next share nor the rule read reads the beyond (`Unread`), courses alike in share and rule stay alike; 'a change of the reading of any size is absorbed' where the reading too is formed monotonically from the share. Not shown: that any actual rule is so formed."}},
+        {"anchor": "theories/becoming/review/PHILOSOPHY.md#p-21", "says": {"en": "Premise D, not asserted: 'every position with access to a response securing new living content has a contributory reason for it, whatever its endorsement'."}}
+      ],
+      "account_adds": {"en": "The exact premise under which the reading moves nothing."},
+      "source_adds": {"en": "What to read instead: capability. The account's answer is a reading of what lies beyond the share, by whoever reads it."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-sen-rational-fools",
+      "name": {"en": "Sen: choice does not reveal welfare; commitment"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "A. Sen, 'Behaviour and the Concept of Preference' (1973); 'Rational Fools' (1977)", "locator": "as named", "basis": "ai-knowledge"},
+      "sense": {"en": "Consistency of choice yields a binary relation and no measure of welfare. Commitment, acting against one's own expected welfare, drives a wedge between choice and welfare; a person reduced to a preference ordering is a rational fool."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {"en": "The law on choices stops where Sen does: what acts show is a shown relation and its reach, and nothing whose good it is. 07's separations of warrant, recognition and motivation carry the wedge in words. The account has no commitment as a kind. 08's 'Sen (1977)' is not clearly this paper. [AI reading]"},
+      "targets": [
+        {"record": "what-choices-show-of-an-order", "anchor": "theories/becoming/chapters/03-KNOWING.md#r-what-choices-show-of-an-order", "says": {"en": "Theorem (root; no premise; near-definitional): the choices show `x` above `y` where `x` was chosen while `y` was open; the positive comparisons every such order shares are exactly the shown reach."}},
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#crux", "says": {"en": "AI reading: 'Motivation is apart: that a loss counts from one's standpoint moves no one by itself.'"}}
+      ],
+      "account_adds": {"en": "Revealed preference on the root, with what no choice data separates."},
+      "source_adds": {"en": "Commitment as a distinct ground of action, and the several concepts 'preference' confounds."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-sen-maximal-and-comparative",
+      "name": {"en": "Sen: maximal choice, comparative justice"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "A. Sen, 'Maximization and the Act of Choice' (1997); The Idea of Justice (2009)", "locator": "Idea of Justice, Introduction and ch. 4", "basis": "ai-knowledge"},
+      "sense": {"en": "Reasoned choice does not need a complete ranking: pick an option not worse than any other. Justice needs comparison of feasible alternatives and no account of the perfect arrangement. Incompleteness may be assertive, and is not a defect."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "scope",
+      "reading": {"en": "C has the first half: it decides no mixed comparison. Its use differs: choices 'take more', and J1 asks for complete comparison with retained losses, a premise. Sen would ask why complete. No law here takes the maximal route; one test would be which J's need completeness. Ethics stays under its two premises. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#practical-judgment", "says": {"en": "'On a reading of `living`, C ranks a course above each course it extends there ... and decides no other pair'; 'Choices take more, following from neither the condition nor C'."}},
+        {"anchor": "theories/becoming/review/PHILOSOPHY.md#p-21", "says": {"en": "'J1-J4: complete comparison with retained losses, priority of basic conditions, bounded responsibility, legitimate feasible choice', each a hypothesis where used."}}
+      ],
+      "account_adds": {"en": "A map of what each further premise decides that C leaves."},
+      "source_adds": {"en": "A route from a partial order to choice without completing it."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-sen-paretian-liberal",
+      "name": {"en": "Sen: the impossibility of a Paretian liberal"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "A. Sen, 'The Impossibility of a Paretian Liberal' (1970)", "locator": "article as a whole", "basis": "ai-knowledge"},
+      "sense": {"en": "Unrestricted domain, weak Pareto and a minimal liberty for each person over a personal sphere cannot all hold in a social choice with no cycle. Unanimity can conflict with even minimal rights."},
+      "quote": null,
+      "carried": "history-only",
+      "relation": null,
+      "reading": {"en": "The account's unanimity is on admission, not preferences, so the theorem does not transfer directly. Its relevant line is narrower: a study's words in P-24, that a constraint against closing never conflicts with C. Whether a personal sphere, read as a claim, can conflict with widening is not asked. [AI reading]"},
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {"en": "A proved limit on unanimity plus liberty. It stands in foundation-assessment/GOVERNANCE-LITERATURE.md §6, and is flagged as unstated in ig-integration-gaps/GAP-MAP.md line 311; P-04's question on rights and constraints is where it would go."},
+      "absence": {"searched": ["Paretian", "liberal paradox", "minimal liberal", "Sen", "liberty", "right"], "read": ["P-24", "P-04's questions", "07 what the chapter does not show", "GAP-MAP.md line 311; GOVERNANCE-LITERATURE.md §6's heading and citation line only"]},
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-modphil-sen-positional-objectivity",
+      "name": {"en": "Sen: positional objectivity"},
+      "domain": "modern-philosophy",
+      "group": "modern-philosophy",
+      "source": {"work": "A. Sen, 'Positional Objectivity', Philosophy & Public Affairs 22 (1993)", "locator": "article as a whole", "basis": "ai-knowledge"},
+      "sense": {"en": "What one observes depends on one's position, yet observation from a position is interpersonally checkable by anyone who takes it. Objectivity need not be a view from nowhere; a positional view can still be mistaken as a trans-positional claim."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {"en": "07 and 03 stand near: 'objectivity is answerability to the relations a judgment concerns across differences of access', knowers inside the unfolding, and de se apart from de dicto. Assessment standing, no law. The account has no check of a positional claim by taking the same position. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/03-KNOWING.md", "says": {"en": "Assessment, continuity and objectivity: 'Objectivity is answerability to the relations a judgment concerns across differences of access, not consensus; shared inquiry adds checks only where they are differently vulnerable'."}},
+        {"anchor": "theories/becoming/chapters/08-METHOD.md#1-beginning-within-the-one-unfolding", "says": {"en": "'Knowing, modelling and criticizing happen inside it too, so their adequacy is part of the inquiry, not a vantage outside it.'"}}
+      ],
+      "account_adds": {"en": "The law of copied witnesses: checks count only where differently vulnerable."},
+      "source_adds": {"en": "Positional illusion as a named error, and the transposition test."},
+      "absence": null,
+      "labels": ["AI reading"]
+    }
+  ]
+}

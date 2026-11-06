@@ -1,0 +1,1563 @@
+{
+  "group": {
+    "id": "greek-roman",
+    "domain": "greek-roman",
+    "title": {
+      "en": "Greek and Roman thought"
+    },
+    "kind": "domain",
+    "summary": {
+      "en": "Absent from the live account by name, verified by search: no chapter, front or dossier names Heraclitus, Plato, Aristotle, the Stoics or Polybius. These are first readings from AI knowledge, unchecked against any text. Of 27 entries: 11 agreement, 5 scope, 6 divergence, 4 contrary reading, 1 not carried; 2 stand only in history or a study. Divergence is heavy: substance, Forms, natural ends, the limit of goods against C and Stoic indifferents, with Parmenides and Epicurus on death as contrary tests."
+    },
+    "read": [
+      "cx-crosswalk/BRIEF.md",
+      "aa-attractor-atlas/PLAN.md sections 6.3 to 6.5",
+      "aa-attractor-atlas/readers-2026-11-04/correspondences.md section 4 (the coverage table)",
+      "theories/becoming/ONE-PAGE.md",
+      "GLOSSARY.md",
+      "07-SIGNIFICANCE.md section 1 to the table of what is shown, section 4 head to 4.2, section 4.7, section 5 through the disclosed commitments",
+      "08-METHOD.md: one relational unfolding (thesis, forbids, defeaters), law"
+    ],
+    "skimmed": [
+      "01-ROOT.md opening, sections 1, 2, 3 head, 4 head, present on causal-set growth",
+      "02-MAP.md: branches and the law table head, whole persists, margin, two-sided regulation, capture section with T7 and its readings",
+      "03-KNOWING.md: seeking boundary, wisdom readings, a response common over a reading, obscuration reading",
+      "05-COLLECTIVES.md: relative position, optimum and set point statements, the table of institution rows, a rule rebuilt (first bullets)",
+      "07-SIGNIFICANCE.md: section 3 head, 4.3 table, 4.4 graded significance, 4.6 first theorem, 6 readings D68, T8, objections table",
+      "theories/becoming/results/records: wisdom-root, wisdom-root-without-axiom, whole-persists-through-generation, two-sided-regulation-and-late-reading, presupposition-scopes, what-self-concern-alone-ranks (does_not_show and correspondence only)",
+      "pf-path-and-crux/PHILOSOPHY-ROUND-1.md section 3 head",
+      "theories/meta-attractor/README.md claims 139, 140, 143"
+    ],
+    "searched": [
+      "Live account (fronts, chapters, review, GLOSSARY, records), by name: Heraclit, Aristot, phronesis, oikei, Stoic, Polybius, anacycl, Parmenid, Epicur, Plotin, Lucret, Anaximander, Empedocl, Thucydid, Plato, Socrat, Zeno, Pyrrho, Sextus, Marcus Aurelius, Seneca, Cicero, Hierocles, Epictet, eudaimon, nicomach, Greek, Roman, ancient, 赫拉克利特, 亚里士多德, 柏拉图, 斯多",
+      "Chapters 01-05, 07, 08, the fronts, GLOSSARY and the review's PHILOSOPHY, LOGIC, SCIENCES and ALIGNMENT dossiers, by mechanism (not chapter 06, the Buddhist and classical dossiers or the records): teleolog, telos, final cause, proper function, virtue, friend, another self, concentric, moral circle, death, deprivation, regress, skeptic, democra, tyrann, oligarch, monarch, separation of powers, essence, substance, substrate, Theseus, plank, perspectivis, relativis, cosmopol, citizen, eternal return, cleverness, right desire, flourish, hexis",
+      "theories/becoming/history and _process/research for the same names; earlier folders' READMEs for the same names; only what is listed in coverage was opened"
+    ],
+    "not_mapped": [
+      {
+        "en": "Plutarch's ship of Theseus (Theseus 22-23)",
+        "why": "Same mechanism as the growth entry (carrying renewal under two classes); a second entry adds a word, not a claim."
+      },
+      {
+        "en": "Lucretius, De rerum natura V on forms that failed and forms that lasted; the swerve; atomism",
+        "why": "The survival passage looks like thesis T1 (persistence certifies what was met), but I could not name a law it meets rather than a family resemblance. The revise read should try it. Atomism and the swerve I did not read against the account."
+      },
+      {
+        "en": "Thucydides III.82 on words changing meaning in civil strife; the Melian dialogue",
+        "why": "A candidate for the reading of 02 capture formed from the share. Left for the reviser: as a historian's description it is not a claim of the form the laws state."
+      },
+      {
+        "en": "Aristotle against the Megarians on potentiality (Metaphysics Theta 3) beside the possibility reading of what a course admits",
+        "why": "A promising candidate not worked through: a builder not building can still build, as admitted is not active. Not read closely enough to enter."
+      },
+      {
+        "en": "Stoic conflagration and exact recurrence beside finite recurrence (01)",
+        "why": "Recurrence in the law is a statement of lossless finite laws; the Stoic doctrine is cosmology and providence. A shared word, so no entry."
+      },
+      {
+        "en": "Zeno's paradoxes",
+        "why": "The only hit is the record rest-theorem-in-any-amounts's phrase 'discrete Zeno behaviour', a hybrid-systems term. Reported under coverage. Zeno's own arguments are not taken up."
+      },
+      {
+        "en": "Plotinus, Empedocles, Democritus, Stoic logic, Roman law, Cicero's republic, Augustine",
+        "why": "Not reached in this read. No claim about them is made either way."
+      },
+      {
+        "en": "The Roman historical layer (flywheel of honour, annona, latifundia)",
+        "why": "It stands in theories/meta-attractor/README.md claims 139-140, a folder item, not read here; the folder's own crosswalk read covers it."
+      }
+    ],
+    "coverage": {
+      "present": [
+        {
+          "what": "Name mention: 'limited primary-source readings (Aristotle, ...)' in a record's validation scope",
+          "where": "theories/becoming/results/records/wisdom-root.md",
+          "extent": "one mention, naming no doctrine; the record is an open target"
+        },
+        {
+          "what": "Name mention: 'a discrete Zeno behaviour', a term from hybrid systems",
+          "where": "theories/becoming/results/records/rest-theorem-in-any-amounts.md",
+          "extent": "one phrase; Zeno's arguments are not discussed"
+        },
+        {
+          "what": "An admission of the gap: virtue ethics and particularism 'appear only as objections or not at all'",
+          "where": "theories/becoming/review/PHILOSOPHY.md",
+          "extent": "one line under Known weaknesses; I found no live chapter or front naming any Greek or Roman author"
+        },
+        {
+          "what": "Not live. Aristotle's cleverness, right desire and practical wisdom retained",
+          "where": "theories/becoming/history/WISDOM-AND-CONTEXT.md",
+          "extent": "lines 110 and 132; Aristotle also at GENERATIVE-GROUNDING.md:605 and ASSUMPTION-FREE-FOUNDATION.md:292 in the same history folder"
+        },
+        {
+          "what": "Not live. Primary comparison with the Apology and Nicomachean Ethics VI, read in Ross and Jowett translation",
+          "where": "_process/research/2026-10-05-generative-foundation-review/root-foundation/CORE-CONSTRAINT-AND-WISDOM.md",
+          "extent": "lines 223, 225, 689"
+        },
+        {
+          "what": "Not live. Epicurus named as the narrow position in the crux's study",
+          "where": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pf-path-and-crux/PHILOSOPHY-ROUND-1.md",
+          "extent": "one line, section 3"
+        },
+        {
+          "what": "Not live. 'Polybian anacyclosis' and Rome, indexed",
+          "where": "theories/meta-attractor/README.md",
+          "extent": "claims 139, 140, 143; a list, with no reading of the mechanism"
+        }
+      ],
+      "absent": [
+        {
+          "en": "Any reading of Heraclitus, Parmenides, Plato, Aristotle, the Stoics, Epicurus, the Pyrrhonists or Polybius in the live account",
+          "searched": [
+            "Heraclit",
+            "Parmenid",
+            "Plato",
+            "Aristot",
+            "Stoic",
+            "Epicur",
+            "Sextus",
+            "Pyrrho",
+            "Polybius",
+            "赫拉克利特",
+            "亚里士多德",
+            "柏拉图",
+            "斯多"
+          ]
+        },
+        {
+          "en": "Virtue as character, and practical wisdom as such, in the live account",
+          "searched": [
+            "virtue",
+            "phronesis",
+            "practical wisdom",
+            "cleverness",
+            "eudaimon",
+            "flourish",
+            "hexis"
+          ]
+        },
+        {
+          "en": "Oikeiosis, or any concern for others read as developing from self-concern; friendship",
+          "searched": [
+            "oikei",
+            "Hierocles",
+            "friend",
+            "another self",
+            "concentric",
+            "moral circle",
+            "citizen",
+            "cosmopol"
+          ]
+        },
+        {
+          "en": "Natural ends, or regimes as a kind or a cycle",
+          "searched": [
+            "teleolog",
+            "telos",
+            "final cause",
+            "proper function",
+            "democra",
+            "tyrann",
+            "oligarch",
+            "monarch",
+            "aristocra",
+            "separation of powers",
+            "anacycl"
+          ]
+        },
+        {
+          "en": "Stored source text for this domain: the sources/ listing shows no Greek or Latin text folder and I found only passing mentions by name, so no quote here can be checked and none was fetched",
+          "searched": [
+            "sources/ listing (first 50 folders) and grep by the names above; not read"
+          ]
+        }
+      ]
+    }
+  },
+  "entries": [
+    {
+      "id": "cx-greek-heraclitus-river",
+      "name": {
+        "en": "Heraclitus: other and other waters in the same river"
+      },
+      "domain": "greek-roman",
+      "group": "greek-roman",
+      "source": {
+        "work": "Heraclitus, fragments (Diels-Kranz numbering)",
+        "locator": "DK 22 B12; B49a and B91 are later reports, their authenticity disputed",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "On those stepping into the same rivers, other and other waters flow: the river is called the same while its water differs. 'You cannot step twice' is a later sharpening (Plato, Plutarch) that many scholars doubt is his. Whether the point is sameness through change or flux as such is disputed."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {
+        "en": "Same under one class, other under another: at a coarse class (the river) a line goes on, at a fine class (this water) lines begin and end, which is carrying renewal at two grains. The law holds for every relation and class and forbids none, and no law picks 'river' or 'water'. The account's 火传 comes from 庄子, not from him: a shared form, no lineage. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "continuation-relative-to-a-class",
+          "anchor": "theories/becoming/chapters/01-ROOT.md#r-continuation-relative-to-a-class",
+          "says": {
+            "en": "Theorem (root): continuation is 缘 joined to sameness under a class; 'the criterion is E and no other choice enters'; 'Continuation is a relation, not an identity'. Fission (a witness): sameness read along lines either way is not transitive."
+          }
+        },
+        {
+          "record": "generation-and-degeneration-at-two-grains",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-generation-and-degeneration-at-two-grains",
+          "says": {
+            "en": "Theorem (root), every carrier, relation and pair of classes: a carrying renewal (the pattern continues under L while a fine line begins under E) is an alteration; generation and keeping each exclude degeneration."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Exact statements of what the river only shows: fission, merges, the regions of generation, keeping and degeneration, and that as language the grammar forbids nothing."
+      },
+      "source_adds": {
+        "en": "The saying as paradox: if B49a is his, a thing both is and is not the same. Class-relativity dissolves that, and he may have meant it not to dissolve."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-greek-heraclitus-measure",
+      "name": {
+        "en": "Heraclitus: fire kindling and going out in measures"
+      },
+      "domain": "greek-roman",
+      "group": "greek-roman",
+      "source": {
+        "work": "Heraclitus, fragments (Diels-Kranz numbering)",
+        "locator": "DK 22 B30, B31, B90, B94, as recalled",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "This cosmos, made by no god or man, was, is and will be ever-living fire, kindling in measures and going out in measures. All things are an exchange for fire, as goods for gold. The sun will not overstep its measures, or the Furies, ministers of justice, will find it out."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {
+        "en": "What lasts only while kindling and quenching keep measure has the form of 02's turnover read at two grains and of a regime's margin: a level above an exact point goes on, below it ends. Fire is here the account's illustration, not what all is, and exchange as balance is a model's premise. Form only, on whole-number models. [AI reading]"
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/02-MAP.md#branches",
+          "says": {
+            "en": "'a fire whose embers are replaced and a fire burning out both renew at the grain of their fuel. Read at a fine class E of the parts and a coarse class L of the pattern together, they differ.'"
+          }
+        },
+        {
+          "record": "margin-of-a-regime",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime",
+          "says": {
+            "en": "Theorem (the regime; any giving law, whole numbers): under its hypotheses, a level up to hi ends exactly where it starts below H + y, 'the point of no return is exact'. 'They locate an end, ordering nothing.'"
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "An exact point of no return, that draws add superadditively up to one, and that two draws each held alone can end a condition together."
+      },
+      "source_adds": {
+        "en": "A single ever-living fire as what all is, an unmade eternal cosmos, and a measure that is guarded. The account has no arche and no eternity, and in it a margin can be crossed with nothing pursuing."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-greek-heraclitus-strife",
+      "name": {
+        "en": "Heraclitus: war the father of all, strife as justice"
+      },
+      "domain": "greek-roman",
+      "group": "greek-roman",
+      "source": {
+        "work": "Heraclitus, fragments (Diels-Kranz numbering)",
+        "locator": "DK 22 B53, B80, B51, as recalled",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "War is father of all and king of all; it shows some as gods, some as men, some slaves, some free. All things come to be through strife and necessity, and justice is strife. What differs agrees with itself, an attunement of opposed tension, as of bow and lyre."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "scope",
+      "reading": {
+        "en": "Stated of everything, strife gets narrower places here. What is strictly opposed is relative position: a part's rise needs another's fall, by the counting alone. Totals are not so bound, and position does not protect. A loop closes a difference only through a link giving back less. Conflict is kept as a real relation and not made the root. No law calls it just or unjust. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "relative-position-is-zero-sum",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-relative-position-is-zero-sum",
+          "says": {
+            "en": "Theorem (any type for the counting): 'a part's rise needs another part's fall'. 'Position does not protect': with balance across n steps of joint excess, a part needing more than the level left is not active, its position not entering."
+          }
+        },
+        {
+          "record": "whether-a-loop-closes-a-difference",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-whether-a-loop-closes-a-difference",
+          "says": {
+            "en": "Theorem (any type; World for flows): where every link gives on at least what it receives the difference never falls, so a loop closes a difference only through a link giving back less."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Where opposition is exact and where it stops: positions bound the total from below and never from above; giving that waits on giving (05) needs no strife."
+      },
+      "source_adds": {
+        "en": "Strife as what generates and as justice, and the attunement of opposed tension. Two-sided regulation is the nearest form (02), and it calls nothing attuned or just."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-greek-anaximander-justice",
+      "name": {
+        "en": "Anaximander: things pay penalty to one another in the order of time"
+      },
+      "domain": "greek-roman",
+      "group": "greek-roman",
+      "source": {
+        "work": "Anaximander, fragment, reported by Simplicius",
+        "locator": "DK 12 B1 (Simplicius on Aristotle's Physics); how much of the wording is his is disputed",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "From what things arise, into that they also perish, by necessity; for they pay penalty and retribution to one another for their injustice according to the ordering of time. Arising and ending are read as a settling of accounts, a moral order in nature."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {
+        "en": "Both read arising and ending as a ledger. His ledger is a justice, and the account's evaluates nothing: no law says a loss is a harm, and ending repays no one. The nearest form is balance and the spine's first law (a closed family gets back at most what is taken), on models. Heraclitus's guarded measures (B94) and one divine law (B114) diverge the same way. [AI reading]"
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/ONE-PAGE.md",
+          "says": {
+            "en": "'No law evaluates: none says a loss is a harm or restraint better.' The ethics adds two premises, the continuation condition for scope and C for order, 'neither asserted, warrant open'."
+          }
+        },
+        {
+          "anchor": "GLOSSARY.md#the-map",
+          "says": {
+            "en": "First law: 'the spine's name for Flow.Gainless: a closed family without repetition gets back at most what is taken from it'."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/08-METHOD.md#law",
+          "says": {
+            "en": "A law of the theory 'is read off what it holds of and does not stand over it'; it forbids through its hypotheses."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "That a balance ranks nothing, and that any ranking needs C or a premise in its place, stated and unasserted."
+      },
+      "source_adds": {
+        "en": "Necessity and justice in the becoming itself, and an unbounded (apeiron) from which things arise. He would read the account's silence on what the ledger means as stopping short."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-greek-parmenides-no-becoming",
+      "name": {
+        "en": "Parmenides: what is, is; coming-to-be is extinguished"
+      },
+      "domain": "greek-roman",
+      "group": "greek-roman",
+      "source": {
+        "work": "Parmenides, On Nature",
+        "locator": "DK 28 B8 (with B2, B6), as recalled",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "What is, is: ungenerated, imperishable, whole, unmoved and complete. Coming-to-be is extinguished and perishing unheard of, since what is not can be neither thought nor said. Mortal opinion names change and two forms, and that way deceives. How 'is' is meant here (existential, predicative, veridical) is disputed."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "contrary-reading",
+      "reading": {
+        "en": "The strongest test of the root's own form. The grammar states change tenselessly: a net and its reach, each theorem timeless, with no relation of presence in time. Parmenides can say this concedes his case: a static whole on which change is a pattern read off. The account's reply is only that beginning and ending are positions under a class. 'One unfolding' and his One share a word, not a reference. [AI reading]"
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/01-ROOT.md#four-marks",
+          "says": {
+            "en": "'An occurrence in a line either continues something or not, and is either continued or not. Those two questions fix its position, and the answers depend on the class.'"
+          }
+        },
+        {
+          "record": "the-present-on-causal-set-growth",
+          "anchor": "theories/becoming/chapters/01-ROOT.md#r-the-present-on-causal-set-growth",
+          "says": {
+            "en": "'The grammar has no relation of presence in time'; causal-set growth is one model where one can be read and the question asked, given covariance, a premise of the model."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding",
+          "says": {
+            "en": "Thesis, argued: 'there is one unfolding, and whatever is, is how it relates within it'; that the whole theory needs no independent entity 'is argued, not proved. Neither shows that reality has none.'"
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Answers, per reading of presence, on one growth model; time as the reach of the condition relation, a strict order where that relation has no cycle."
+      },
+      "source_adds": {
+        "en": "The argument from what can be thought to what is, which the account neither answers nor uses; and the claim that plurality itself is incoherent, which a relation needing two relata does not meet."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-greek-plato-forms",
+      "name": {
+        "en": "Plato: Forms, and being set against becoming"
+      },
+      "domain": "greek-roman",
+      "group": "greek-roman",
+      "source": {
+        "work": "Plato, Timaeus, Phaedo, Republic",
+        "locator": "Timaeus 27d-28a; Phaedo 78c-79a; Republic V-VII (the Good, VI 509b); his own objections, Parmenides 130-135, as recalled",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "What always is has no becoming and is grasped by thought; what becomes and perishes never fully is and is grasped by opinion. Particulars are what they are by participating in a Form, and the Good stands beyond being as the source of being and knowing. Plato presses objections to this himself."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {
+        "en": "The account puts sameness in a class, an equivalence supplied as a parameter, and what the relation never tells apart in the core, read off the net. So a stable pattern needs no separate being, and 08 forbids 'a law standing outside what it holds of' as explanation. A Platonist replies that a law proved once of every relation is just such a Form. Argued on both sides, not refuted. [AI reading]"
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/01-ROOT.md#constancy-and-core",
+          "says": {
+            "en": "The core of a class is 'the greatest symmetric relation' inside it that the relation never tells apart, and it 'always exists' (theorem, root). Laws hold for every class, and none picks one."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding",
+          "says": {
+            "en": "Forbids 'an explanation that needs a determination no relation carries, such as an intrinsic value, a self with a nature of its own, or a law standing outside what it holds of'. Argued, not proved."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/08-METHOD.md#law",
+          "says": {
+            "en": "A law of the theory 'holds of every relation, carrier or model its hypotheses admit. It is read off what it holds of and does not stand over it'."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Which pattern a given net carries, exactly, given a class; and the admission that equality on the carrier is used and not derived."
+      },
+      "source_adds": {
+        "en": "The Good at the root of being and knowing, where the account has no value at all; and a reason why classes and proofs hold, which the account takes as given."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-greek-plato-sophist-power",
+      "name": {
+        "en": "Plato's Stranger: being as the power to act or be acted on"
+      },
+      "domain": "greek-roman",
+      "group": "greek-roman",
+      "source": {
+        "work": "Plato, Sophist",
+        "locator": "247d-e, as recalled",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "The Eleatic Stranger offers those who count only bodies a mark of being: whatever has any power to act on anything or be acted on, even slightly and once, really is. It is offered provisionally as a boundary mark, and the dialogue goes on to the friends of Forms."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {
+        "en": "Reality marked by conditioning or being conditioned has the form of 08's demand: a determination making a difference to how anything goes on is carried by a relation, and one making none explains nothing. Configurations alike in every stated relation pass the same tests. The Lean concerns representations; the thesis is argued. Not a descent, and the Stranger does not say all is relation. [AI reading]"
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding",
+          "says": {
+            "en": "'a determination making a difference to how anything goes on is carried by that relation, and one making none explains nothing'. That is argued; 'By this section's measure the thesis has no strength: it excludes no observation'."
+          }
+        },
+        {
+          "record": "configurations-alike-by-relation",
+          "anchor": "theories/becoming/chapters/01-ROOT.md#r-configurations-alike-by-relation",
+          "says": {
+            "en": "Theorem (any process): configurations related by a bisimulation are alike: they realize the same claims and pass the same tests."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "What the thesis forbids, three cases that look like refuters, and two live defeaters."
+      },
+      "source_adds": {
+        "en": "Power as a mark even of soul and Forms, in a dialogue that keeps them; capacity held by what acts, where the account's relation needs no capacity behind it."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-greek-plato-theaetetus-flux",
+      "name": {
+        "en": "Plato's Theaetetus: flux in every respect refutes itself"
+      },
+      "domain": "greek-roman",
+      "group": "greek-roman",
+      "source": {
+        "work": "Plato, Theaetetus",
+        "locator": "181c-183b, as recalled",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "If a thing changes both in place and in quality at once, no name holds of it even while spoken: seeing is no more seeing than not, and no answer is more right than another. So a flux in every respect cannot be stated. It is aimed at followers of Heraclitus, in a version Plato partly constructs."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "contrary-reading",
+      "reading": {
+        "en": "The account escapes by never asserting change in every respect: continuation is relative to a class. But that grants the argument's demand, something held still: in each statement the class is a fixed equivalence, and a changing rule is taken into the occurrence on a larger carrier, under a further class. And every single condition is a continuation under some class, so the class must be chosen. Kept as a test. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "continuation-relative-to-a-class",
+          "anchor": "theories/becoming/chapters/01-ROOT.md#r-continuation-relative-to-a-class",
+          "says": {
+            "en": "'Every single condition is a continuation under some class' (`«任一缘可为续»`): containment in 缘 is necessary only. Under the full class continuation is 缘 itself."
+          }
+        },
+        {
+          "record": "rules-that-change-themselves-in-the-grammar",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-rules-that-change-themselves-in-the-grammar",
+          "says": {
+            "en": "Theorem (root; on processes and the two-level step): a move of a process is a relation; a rule that itself goes on is read in the state's regularity, the state's class constant under every move exactly where the rule makes no difference to the state."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "That the question 'which class' is exact and left open by the laws, and is where the crux lands."
+      },
+      "source_adds": {
+        "en": "That speech and knowledge need stability the speaker cannot merely stipulate. The account stipulates its classes and does not say what licenses that."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-greek-plato-regime-decay",
+      "name": {
+        "en": "Plato's Republic VIII: each regime undone by its own good"
+      },
+      "domain": "greek-roman",
+      "group": "greek-roman",
+      "source": {
+        "work": "Plato, Republic",
+        "locator": "VIII, 546a on all that comes to be perishing; 555b wealth; 562b freedom, as recalled",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Each regime falls through its defining good pursued without limit: oligarchy through insatiable wealth, democracy through insatiable freedom, which ends in tyranny. Even the best city decays, since all that has come to be must perish. How seriously the sequence and its marriage number are meant is disputed."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "scope",
+      "reading": {
+        "en": "A target that cannot be met at rest has an exact form here. But the direction differs: the capture laws lock, and the lock outlives a growing unread loss, so a regime does not fall by its own excess unless the law, the reading or the selection changes. Ending by joint excess is a separate law. Nor must what forms end: under a constant class no continuation ends. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "seeking-boundary",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-seeking-boundary",
+          "says": {
+            "en": "Theorem (any type, determined law for rest): 'More than now' is met only by change, and met at every step needs an open world, no list holding its configurations. How a target forms is not modelled."
+          }
+        },
+        {
+          "record": "closed-capture",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+          "says": {
+            "en": "Theorem (any type): under its premises, from a locked configuration the loss passes every bound while the course stays locked; a reading favouring at no loss above a bound unlocks it, 'a sufficient way out'. That actual rules meet this is a premise."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/01-ROOT.md#constancy-and-core",
+          "says": {
+            "en": "The chapter's thesis, on the root: 'under a class constant for the relation no continuation ends'."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "That a loop can outlast its loss, which his sequence does not allow, and exactly what turns it."
+      },
+      "source_adds": {
+        "en": "A named sequence of regimes, each with a type of soul, and justice as what the decline is measured against. The account has no kinds of regime and no such measure."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-greek-protagoras-measure",
+      "name": {
+        "en": "Protagoras: man the measure"
+      },
+      "domain": "greek-roman",
+      "group": "greek-roman",
+      "source": {
+        "work": "Protagoras, as reported in Plato's Theaetetus",
+        "locator": "Theaetetus 151e-152c; self-refutation 170e-171c, as recalled. His own text is lost",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Man is the measure of all things: of what is, that it is, of what is not, that it is not. Plato reads this as: things are for each as they appear to each, and replies that it must then count its own denier true. Whether the historical Protagoras meant individual relativity is uncertain."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "scope",
+      "reading": {
+        "en": "The account keeps a first half: standards form within the unfolding, none outside owns value, and a perspectivist denies the condition consistently. It refuses a second: a standard so formed 'can be wrong', and a selector's couplings bound what it can read without making that true. Whether a standard has influence, recognition, warrant or compliance are four questions. Protagoras would decline the two premises, which are unasserted, their warrant open. [AI reading]"
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#evaluation",
+          "says": {
+            "en": "'positions, regions and standards form within the unfolding; none outside it owns value.' Whether a standard gains influence, recognizes its target, has warrant or is followed are four questions; 'it can be wrong'. On the thesis of one unfolding, argued, not proved."
+          }
+        },
+        {
+          "record": "universal-practical-warrant",
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-universal-practical-warrant",
+          "says": {
+            "en": "Open. 'a perspectivist denies the condition consistently (bounded_rival)', so a warrant grounding the condition comes neither from the laws of the dynamics alone nor from logic alone; 'these do not show that none exists'."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Scope and order held apart: the continuation condition fixes whose losses count, C gives order, and a measure's reach is exact: what couples in."
+      },
+      "source_adds": {
+        "en": "That each appearance is true for its holder, and a practice of argument built on that. Which the live account does not hold."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-greek-aristotle-substance",
+      "name": {
+        "en": "Aristotle: primary substance, with relation least of all an entity"
+      },
+      "domain": "greek-roman",
+      "group": "greek-roman",
+      "source": {
+        "work": "Aristotle, Categories; Metaphysics",
+        "locator": "Categories 5, 2a11ff; Metaphysics N.1, 1088a22ff; Metaphysics Z on form, as recalled",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Primary substance is neither said of nor in a subject: this man, this horse. All else is said of or in these, so substances ground the other categories. Relation is least of all a substance or entity, an affection of something else. What substance finally is (form, in Metaphysics Z) is argued at length."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {
+        "en": "The direct opposite: here relation is the one kind of symbol, and the carrier 'is a parameter of the statements, not a claim that its elements exist apart from their relations'. Yet 08 names his case without naming him as a live defeater, 'that relations need relata with natures of their own', and equality on the carrier is used and not derived. Nothing here refutes substance. [AI reading]"
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/01-ROOT.md#one-kind-of-symbol",
+          "says": {
+            "en": "'The grammar has one kind of symbol, a relation between occurrences.' The carrier is a parameter; 'Equality on the carrier is a commitment of the model'."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding",
+          "says": {
+            "en": "'Two such arguments are live: that relations need relata with natures of their own, and that what an experience is like is not how it relates.' Equality on the carrier is the nearest case, read as belonging to the representation; 'that reading is not shown'."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "A statement of what the demand is: state the relation carrying what is cited, where a law or a test can read it."
+      },
+      "source_adds": {
+        "en": "That a thing's what-it-is explains its relations and not the reverse, and an independent subject of predication. The account's thesis forbids this as explanation and does not refute it."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-greek-aristotle-growth-form",
+      "name": {
+        "en": "Aristotle: form persisting while matter comes and goes"
+      },
+      "domain": "greek-roman",
+      "group": "greek-roman",
+      "source": {
+        "work": "Aristotle, On Generation and Corruption; Physics",
+        "locator": "GC I.5 (321b-322a); Physics I.7 on a persisting subject, as recalled",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Change needs a subject that persists. In growth and nutrition the form remains while the matter comes and goes: flesh stays flesh in form though each bit of its matter is replaced. Form here is an actuality and a cause of the living thing, not a pattern read off it."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {
+        "en": "The persistence half reads as carrying renewal: a coarse line goes on while fine lines begin and end. A whole active from some step on with brief parts needs parts arising (near-definitional, World, membership fixed per step). The cause half the account refuses: its whole is 'only coincidence of activity', and what persists is under a supplied class, no substrate. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "whole-persists-through-generation",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-whole-persists-through-generation",
+          "says": {
+            "en": "Theorem (World): while the whole stays active from some step on, where parts are brief no d steps pass without one arising. The record: near-definitional; 'That a whole is constituted by its parts does not follow'."
+          }
+        },
+        {
+          "record": "generation-and-degeneration-at-two-grains",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-generation-and-degeneration-at-two-grains",
+          "says": {
+            "en": "Theorem (root), every carrier, relation and pair of classes: generation is where, along some branch, the pattern goes on and from every member a carrying renewal between members lies ahead; keeping goes on with none."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "That persistence can also be by keeping, with no renewal; and the exits: a part that never ends, or infinitely many active at once, lets a whole persist with nothing arising."
+      },
+      "source_adds": {
+        "en": "Form as cause and actuality, the soul as form of the living body, a subject necessary for change at all. Plutarch's ship poses the same puzzle in a made thing."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-greek-aristotle-function",
+      "name": {
+        "en": "Aristotle: natural ends, and the good read from the function"
+      },
+      "domain": "greek-roman",
+      "group": "greek-roman",
+      "source": {
+        "work": "Aristotle, Nicomachean Ethics; Physics; Politics",
+        "locator": "NE I.7, 1097b22-1098a20; Physics II.8; Politics I.2, as recalled",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Nature acts for ends and does nothing in vain. A thing's good lies in its function, and the human function is activity of soul according to reason, so the human good is read from what a human is. Modern readers dispute how much the ethics rests on this."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {
+        "en": "The reverse of 07 §1: with significance free, no satisfiable statement reading only the represented dynamics entails the continuation condition, and a ranking needs C or a premise in its place, both unasserted, warrant open. But the theorem concerns the representation, which has no final cause, and Aristotle denies that nature so described is nature. So this divergence is kept, not settled. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "what-the-dynamics-leave-open",
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-the-dynamics-leave-open",
+          "says": {
+            "en": "Theorem (any type): where there is a standpoint and a formation, a statement reading only the dynamics and entailing the condition holds of no dynamics. 'the result shows non-entailment by the represented dynamics, not that becoming leaves significance undetermined'."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+          "says": {
+            "en": "The continuation condition fixes scope, C gives order; 'Neither is asserted.' 'A ranking of courses needs C or a premise in its place'."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "That the is-ought gap here is 'near-definitional', with scope apart from order as a clarification (08)."
+      },
+      "source_adds": {
+        "en": "Ends in nature, and an ethics from kind. The account's thesis forbids 'a self with a nature of its own' as explanation, and offers its way for life, not from any kind's function."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-greek-aristotle-phronesis",
+      "name": {
+        "en": "Aristotle: practical wisdom and the particular case"
+      },
+      "domain": "greek-roman",
+      "group": "greek-roman",
+      "source": {
+        "work": "Aristotle, Nicomachean Ethics",
+        "locator": "VI.5, VI.8 (1142a), VI.11; II.2 (1103b34-1104a9), as recalled",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Practical wisdom deliberates well about what is good for living as a whole. It grasps particulars as well as universals, since action concerns particulars; ethics admits no exact rule, and the grasp is nearer perception of the case. It takes experience, so the young lack it."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {
+        "en": "One law has part of this shape: a judgment through couplings is one response per class of what they cannot tell apart, existing exactly where the acts' regions cover the situations, so a reading too coarse for the requirement fails. Fineness of reading bounds judgment. But the requirement is supplied, and for him finding it is the wisdom. The account says its match 'proves no coverage of wisdom'. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "a-response-common-over-a-reading",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-a-response-common-over-a-reading",
+          "says": {
+            "en": "Theorem (root; requirement supplied and fixed before the outcome): a common response over a reading exists exactly where the acts' kernels cover the situations. 'which requirement is right it does not say'."
+          }
+        },
+        {
+          "record": "wisdom-root-without-axiom",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-wisdom-root-without-axiom",
+          "says": {
+            "en": "Reading [AI, D26]: checked laws 'match aspects of wisdom', among them judgment (a common response). 'The matching proves no coverage of wisdom, and the warrant of judgment goes through 07.'"
+          }
+        },
+        {
+          "record": "wisdom-root",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-wisdom-root",
+          "says": {
+            "en": "Open. That the core's common relations are indispensable across all wisdom under discussion is a target; it pursues appraisal under the continuation condition for scope and C for order; 'a common operational factor is no sufficient root'."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#practical-judgment",
+          "says": {
+            "en": "'Choices take more, following from neither the condition nor C': a reading of living, the lifting L and the commitments J1-J4."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The exact cost of a coarse reading, and the naming of each premise a choice takes."
+      },
+      "source_adds": {
+        "en": "Deliberation about living well as a whole; perception of the case as not reducible to a rule; formation by experience. Dossier P admits virtue ethics and particularism 'appear only as objections or not at all'."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-greek-aristotle-cleverness",
+      "name": {
+        "en": "Aristotle: cleverness is not practical wisdom"
+      },
+      "domain": "greek-roman",
+      "group": "greek-roman",
+      "source": {
+        "work": "Aristotle, Nicomachean Ethics",
+        "locator": "VI.12-13 (1144a23-1144b32), as recalled",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Cleverness reaches whatever target is set, and is praised only if the target is noble, otherwise it is knavery. Practical wisdom needs it, and also the virtue that makes the aim right: one cannot be fully good without practical wisdom, nor practically wise without virtue."
+      },
+      "quote": null,
+      "carried": "history-only",
+      "relation": "agreement",
+      "reading": {
+        "en": "It stands in history: WISDOM-AND-CONTEXT keeps 'successful cleverness, right desire and practical wisdom' apart 'without identifying his ethical grounds with living significance', from a primary reading in CORE-CONSTRAINT-AND-WISDOM. Live, only the first half has a neighbour: capability settles no aim, as 'accurate prediction does not entail concern'. The reciprocity of wisdom and virtue is nowhere live. [AI reading]"
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#scientific-standing",
+          "says": {
+            "en": "'Stabilizing a belief is not validity, operational compatibility forces no metaphysics, and accurate prediction does not entail concern.'"
+          }
+        },
+        {
+          "record": "a-response-common-over-a-reading",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-a-response-common-over-a-reading",
+          "says": {
+            "en": "Reading [AI]: the law says what a reading must carry for a requirement to be met by one response; 'which requirement is right it does not say'."
+          }
+        }
+      ],
+      "account_adds": null,
+      "source_adds": {
+        "en": "Stands at theories/becoming/history/WISDOM-AND-CONTEXT.md lines 110 and 132, and root-foundation/CORE-CONSTRAINT-AND-WISDOM.md line 225. Not stated live: that right aim and skilled reach are one achievement, formed together."
+      },
+      "absence": {
+        "searched": [
+          "cleverness",
+          "right desire",
+          "practical wisdom",
+          "phronesis",
+          "deinot",
+          "Aristot in chapters, fronts, review, GLOSSARY"
+        ],
+        "read": [
+          "03-KNOWING.md section 9 (scientific standing, wisdom readings)",
+          "history/WISDOM-AND-CONTEXT.md lines 110, 132",
+          "CORE-CONSTRAINT-AND-WISDOM.md lines 223, 225, 689"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-greek-aristotle-mean",
+      "name": {
+        "en": "Aristotle: the mean relative to us"
+      },
+      "domain": "greek-roman",
+      "group": "greek-roman",
+      "source": {
+        "work": "Aristotle, Nicomachean Ethics",
+        "locator": "II.2 (1104a11-27); II.6 (1106a26-1107a27), as recalled",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Too much and too little both ruin, as with food and exercise and health. Virtue is a state of choice lying in a mean relative to us, not the arithmetic middle, fixed by reason as the practically wise person would fix it. Some acts, such as murder or adultery, have no mean."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {
+        "en": "Only the health analogy has a law's form: a level held from two sides, an exchange within the gap to m settling, beyond it able to oscillate for ever, a late rule needing a wider band; and an order single-peaked at a set point. 'Relative to us' reads as a formation's own need, supplied. The record says holding a level is not shown good, so virtue's mean has no target here. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "two-sided-regulation-and-late-reading",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-two-sided-regulation-and-late-reading",
+          "says": {
+            "en": "Theorem (World): within the gap to m, opposing, the level settles at m; beyond it an opposing exchange crosses and can oscillate for ever. Rules reading late need a wider band. Record: not shown 'That holding a level is good'."
+          }
+        },
+        {
+          "record": "what-a-set-point-optimum-does-beyond",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-a-set-point-optimum-does-beyond",
+          "says": {
+            "en": "Theorem: an order 'strictly single-peaked at the set point condition by condition' (any set of outcomes), with what it does beyond the family; the set point is given."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "How wide a band a late reader needs, and that below its set point such an order drains what lies beyond as a rising one does. The record maps 中节 to the same law, also by AI."
+      },
+      "source_adds": {
+        "en": "The mean as excellence of choice and character, fixed by the wise person, and acts with no mean at all. The nearest in the account (priority of basic conditions) is a commitment, not this."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-greek-aristotle-limit-against-more",
+      "name": {
+        "en": "Aristotle: goods have a limit, against a widening with none"
+      },
+      "domain": "greek-roman",
+      "group": "greek-roman",
+      "source": {
+        "work": "Aristotle, Politics",
+        "locator": "I.8-10 (1256b-1258a) on wealth; VII.4 (1326a-b) on the size of a city, as recalled",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "True wealth has a limit, set by what living well needs; acquisition that takes money as its end seeks without limit, mistaking a means for the end. A city too has a right size: past it, like a ship two stades long, it is no longer one. Excess is a fault in what the thing is."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {
+        "en": "C has no such limit: it ranks a course keeping all another's claims and adding a living one, so no further addition can be too much. He would refuse that form. 07 answers only near it: novelty and scale are not 生生, and an expansion ending what another course keeps is mixed. 08 admits C ranks a costless addition better. C is unasserted with its warrant open; so is the condition, for scope. [AI reading]"
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+          "says": {
+            "en": "C 'ranks a course above every course it widens', and does not 'rank mixed comparisons'. Neither C nor the condition is asserted."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#objections",
+          "says": {
+            "en": "An expansion producing ever more novelty: 'answered; the order left open'. '生生 life in the whole, not novelty or scale'; one ending forms of life another course keeps is mixed and C does not rank them."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/08-METHOD.md#known-results",
+          "says": {
+            "en": "Beyond the source field: Parfit's mere addition and the Repugnant Conclusion '(C ranks a costless addition better; the philosophy dossier keeps what it owes open)'."
+          }
+        },
+        {
+          "record": "graded-significance-and-priority",
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-graded-significance-and-priority",
+          "says": {
+            "en": "Theorem (any type): a transform rising no further from a threshold ties courses whose levels at each formation are equal or both at least the threshold, 'a boundary of scope only where a zero increment is read as not counting'. Grades are a further premise."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Why a mixed case stays undecided, and that seeking 'more than now' needs an open world (03)."
+      },
+      "source_adds": {
+        "en": "That more can be worse with nothing lost: excess as a fault of form. Neither widening nor a tie at a threshold says this. Means taken for ends is nearest the reading in 03 of a habit become the fixed measure."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-greek-aristotle-another-self",
+      "name": {
+        "en": "Aristotle: the friend as another self"
+      },
+      "domain": "greek-roman",
+      "group": "greek-roman",
+      "source": {
+        "work": "Aristotle, Nicomachean Ethics",
+        "locator": "IX.4 (1166a31); IX.9 (1170b5-10); VIII.2 (1155b31); IX.10, as recalled",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "A friend is another self: one stands to a friend as to oneself, and perceiving a friend's good is part of one's own living well. Yet a true friend wishes the friend good for the friend's own sake. Such friendship needs shared living, so it is possible with only a few."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {
+        "en": "07 §4.7 asks for a criterion of 'one's own' narrower than all one's effects and stated apart from identity (its question 2). Shared living is one candidate, a relation; along it a presupposition reaches a closure (near-definitional). It bounds concern, and is not shown to bound whose losses count. Its 'for the friend's sake' is what the objection of the wrong bearer asks. P4 stays unshown. Neither ethical premise is asserted. [AI reading]"
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#crux",
+          "says": {
+            "en": "Argued, not proved. 'Is there a criterion of \"one's own\", narrower than all one's effects and stated apart from identity, that bears on whose losses count and not only on what is permitted?' 'The wrong bearer': a village's loss counted on my line counts as mine."
+          }
+        },
+        {
+          "record": "presupposition-scopes",
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-presupposition-scopes",
+          "says": {
+            "en": "Theorem (any type; World instances): along a relation the presupposition sub-true is significance over the closure, super-true it is the condition. The laws derive neither presupposition nor invariance."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "What a choice of relation would then reach and leave out: only the closure, and with the step more."
+      },
+      "source_adds": {
+        "en": "Why friendship and not kin or city; a limit in number; virtue as a condition of the friend. None of this is read in the account: 'friend' returns nothing in the chapters and dossiers searched."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-greek-aristotle-virtue-character",
+      "name": {
+        "en": "Aristotle: virtue as settled character, formed by practice"
+      },
+      "domain": "greek-roman",
+      "group": "greek-roman",
+      "source": {
+        "work": "Aristotle, Nicomachean Ethics",
+        "locator": "II.1 (1103a14-b25); I.7 (1098a16-20), as recalled",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Virtue is a settled state of character formed by habituation: we become just by doing just acts. The good life is activity of soul according to virtue over a complete life, so a person's good is judged across a whole life and through what they have become."
+      },
+      "quote": null,
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "Not taken up. Habit here is value-free, a rule read from counts of its choices; locked seeking is a once-useful habit become the fixed measure. Neither is character as excellence. The account's formation of a standard says 'learning a disposition is not learning a reason' and goes on to warrant, not to excellence. Not a defect by itself: the dossier records the gap. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "An ethics of what a person becomes, where the account's is an appraisal of courses by what they admit."
+      },
+      "absence": {
+        "searched": [
+          "virtue",
+          "character trait",
+          "habit",
+          "eudaimon",
+          "flourish",
+          "hexis",
+          "good character"
+        ],
+        "read": [
+          "review/PHILOSOPHY.md Known weaknesses",
+          "03-KNOWING.md obscuration and reopening",
+          "08-METHOD.md line on the value-free habit",
+          "07-SIGNIFICANCE.md section 1"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-greek-stoic-oikeiosis",
+      "name": {
+        "en": "Stoic oikeiosis: what is one's own, from self to others"
+      },
+      "domain": "greek-roman",
+      "group": "greek-roman",
+      "source": {
+        "work": "Stoic oikeiosis, reported in Diogenes Laertius and Cicero",
+        "locator": "Diogenes Laertius VII.85-86; Cicero, De finibus III.16-22, 62-68; Seneca, Letter 121, as recalled",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "An animal's first impulse is to preserve itself, its own constitution being made its own through self-perception. In humans, with reason, what is one's own comes to include others, grounding justice and a community of rational beings under nature. Reports differ, and how the step from self to others goes was contested in antiquity and is now."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "scope",
+      "reading": {
+        "en": "Same starting point as 07 §4: acting for oneself presupposes, and 'one's own' is drawn along a relation. The account gives scopes: held de se, each center's closure; the condition exactly where each is the whole. It splits routes: need (§4.3), effects (P4, §4.7), invariance (§4.2). Oikeiosis is none of these, a recognition of belonging. C's 'widening' is not this: same word, other reference. Both premises are unasserted, warrant open. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "what-the-step-across-standpoints-reaches",
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-the-step-across-standpoints-reaches",
+          "says": {
+            "en": "Theorem (any type; World witnesses): held de se, each center's closure, 'invariant exactly where the closures agree, the condition exactly where each is the whole'. Whether a self is drawn along a privileged narrower relation 'is not shown'."
+          }
+        },
+        {
+          "record": "self-concern-through-dependence",
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-self-concern-through-dependence",
+          "says": {
+            "en": "Theorem (any type; World): given the means-end step and the de se reading, drawn along need, the presupposition reaches exactly what the continuation needs."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#crux",
+          "says": {
+            "en": "An AI reading, argued, not proved: are all of one's effects one's own, in the sense of whose losses count? 'The laws do not answer it.' 'None is ruled out, and P4 is not shown.'"
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "That the step is exactly locatable, and that a perspectivist denies it consistently. It does not derive the ethics from self-concern: self-concern ranks one case with no C."
+      },
+      "source_adds": {
+        "en": "Development: concern changing as a being comes to reason; one process that is at once recognition, motivation and warrant, which the account keeps apart. Scope for rational beings (Chrysippus denied justice to animals), narrower than 'for anything'. Warrant from providential nature."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-greek-hierocles-circles",
+      "name": {
+        "en": "Hierocles: circles drawn toward the centre"
+      },
+      "domain": "greek-roman",
+      "group": "greek-roman",
+      "source": {
+        "work": "Hierocles the Stoic, fragment on duties, preserved by Stobaeus",
+        "locator": "Stobaeus, Anthology 4.84.23, as recalled; locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Each person stands at the centre of circles: mind, body, parents and siblings, wife and children, kin, neighbours, city, nation, humankind. The well-disposed person draws the circles toward the centre, for instance by calling cousins brothers. So concern comes in degree and can be moved by practice."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {
+        "en": "Nested regions round a center have a form here: closures along relations nest, a smaller relation holding less. Grades of significance exist, supplied. 07 says 'some or all' leaves out holding in degree. But his order is of kinship and custom, not feeding or influence, and nothing here moves a grade: the practice has no law. Grades do not rank without their own premises. [AI reading]"
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#step",
+          "says": {
+            "en": "Against the narrow reading: 'Parfit's R coming in degrees and the closures nesting (Flow.withinInfluence_of_withinFeeding)'. 'A privileged relation is costly, not refuted'."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#crux",
+          "says": {
+            "en": "'Connectedness comes in degrees and is not transitive, so it is no class, and \"some or all\" leaves out holding in degree'. Argued, not proved."
+          }
+        },
+        {
+          "record": "graded-significance-and-priority",
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-graded-significance-and-priority",
+          "says": {
+            "en": "Theorem (any type): a graded significance gives each item a natural grade from each standpoint; an item counts where its grade is positive. Grades are supplied."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "What grades then decide: a concave transform decides transfers C leaves mixed, a further premise."
+      },
+      "source_adds": {
+        "en": "A practice of moving people inward, and degree tied to nearness. The account has neither a law of how concern moves nor a claim that nearness should weigh."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-greek-stoic-indifferents",
+      "name": {
+        "en": "The Stoics: only virtue is good; losses are indifferent"
+      },
+      "domain": "greek-roman",
+      "group": "greek-roman",
+      "source": {
+        "work": "Stoic ethics, reported in Diogenes Laertius and Cicero; Epictetus",
+        "locator": "Diogenes Laertius VII.87-89, 101-105; Cicero, De finibus III; Epictetus, Enchiridion 1, as recalled",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Only virtue is good and only vice bad. Life, health, wealth and their loss are indifferent, some preferred and none good. What is not up to us cannot harm us. Living according to nature, which is reason, suffices for happiness."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {
+        "en": "One clause coincides by accident: no law says a loss is a harm. But the account says so because laws read no order, while the Stoics supply an order with one good. The condition counts every continuation's loss as having significance, not as bad, and C compares what can form; a Stoic ranks neither. Both are unasserted, warrant open, so denying them is consistent. [AI reading]"
+      },
+      "targets": [
+        {
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#condition",
+          "says": {
+            "en": "The continuation condition: from every standpoint, for anything, its continuation has significance; not asserted; 'significance is neither graded nor necessarily positive'."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+          "says": {
+            "en": "Scope 'fixes whose losses count: every continuation's', and C gives order; neither is asserted, each a hypothesis wherever used."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "A theorem-level separation of what counts from what ranks."
+      },
+      "source_adds": {
+        "en": "An order with virtue alone in it, and nature as its warrant; a practice of holding apart what is and is not up to us. The account's nearest is what couples in, which is no ethics."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-greek-epicurus-death",
+      "name": {
+        "en": "Epicurus: death is nothing to us"
+      },
+      "domain": "greek-roman",
+      "group": "greek-roman",
+      "source": {
+        "work": "Epicurus, Letter to Menoeceus; Principal Doctrines; Lucretius, De rerum natura",
+        "locator": "Menoeceus 124-127; Principal Doctrines 2; Lucretius III.830-977, as recalled",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Death is nothing to us: where we are, death is not, and where death is, we are not. All good and bad lie in sensation, and death is its absence. Lucretius adds a symmetry: the time after death is as nothing to us as the time before birth."
+      },
+      "quote": null,
+      "carried": "history-only",
+      "relation": "contrary-reading",
+      "reading": {
+        "en": "The strongest ancient refusal of a loss that returns to no one, which is what the condition's step counts. A significance stopping at a step is already a rival, and 07 says the foreclosed generations lie on no line; his argument, that a loss needs someone to bear it, goes further and live text does not meet it. Only the crux's study names him. Neither ethical premise is asserted. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "rivals-bounded-in-time",
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-rivals-bounded-in-time",
+          "says": {
+            "en": "Theorem (any type; World witness): a significance caring only for continuations up to a step is a rival of the condition wherever there is a standpoint and a formation."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#crux",
+          "says": {
+            "en": "'Losses are not effects.' 'The generations a poisoning forecloses occur nowhere on the course taken, so they lie on no line'; 'a loss is read by comparing courses'. An AI reading, argued, not proved."
+          }
+        },
+        {
+          "record": "whole-and-regions-and-bounded-centers",
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-whole-and-regions-and-bounded-centers",
+          "says": {
+            "en": "'What the condition adds is significance for continuations whose loss returns to no one' [AI reading, D18, D19]."
+          }
+        }
+      ],
+      "account_adds": null,
+      "source_adds": {
+        "en": "Named as the narrow position at pf-path-and-crux/PHILOSOPHY-ROUND-1.md section 3, not argued with there. Not live: the subject requirement on any loss, the symmetry, and calm as the aim of the argument."
+      },
+      "absence": {
+        "searched": [
+          "Epicur",
+          "Lucret",
+          "symmetry argument",
+          "deprivation",
+          "death in fronts, 07, review/PHILOSOPHY.md"
+        ],
+        "read": [
+          "07-SIGNIFICANCE.md section 4.7",
+          "pf-path-and-crux/PHILOSOPHY-ROUND-1.md section 3 head"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-greek-epicurus-limit-of-desire",
+      "name": {
+        "en": "Epicurus: natural desires end; empty ones run without limit"
+      },
+      "domain": "greek-roman",
+      "group": "greek-roman",
+      "source": {
+        "work": "Epicurus, Principal Doctrines; Letter to Menoeceus",
+        "locator": "Principal Doctrines 15, 29, 30; Menoeceus 127-130, as recalled",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Some desires are natural and necessary, some natural only, some empty. Natural wealth is bounded and easily got, while the wealth of empty opinion runs to infinity. Desires for fame and honour without end rest on opinion. The aim is the removal of pain and disturbance."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {
+        "en": "The seeking laws have this form: under a determined law a target is met at rest exactly where an unchanged state meets it, so 'more than now' cannot rest, and 'above all others' is met by at most one seeker. Near the definition, and how a target forms is not modelled. 无明 reads this. His limit comes from what is desired; the law reads only the target's form. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "seeking-boundary",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-seeking-boundary",
+          "says": {
+            "en": "Theorem (any type; determined law for rest): 'More than now' is met only by change; 'above all others' is met by at most one seeker, so no unchanged state meets it for two. 'A target is any condition on the configuration; how it forms is not modelled.'"
+          }
+        },
+        {
+          "anchor": "GLOSSARY.md#knowing",
+          "says": {
+            "en": "无明: 'seeking locked onto a target that cannot be met at rest, grounded in, and not the same as, the position every formation selects from'."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Enough under undetermined laws, and that where what stands runs down, no condition rises at arbitrarily late steps."
+      },
+      "source_adds": {
+        "en": "Pleasure as the end, and that reasoning about limits dissolves an empty desire. No law here says a seeker can drop a target by reasoning, and the account adopts no hedonism. Which desire is empty is a judgment no law gives."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-greek-sextus-suspension",
+      "name": {
+        "en": "Sextus and Agrippa: suspension, and the modes against any proof"
+      },
+      "domain": "greek-roman",
+      "group": "greek-roman",
+      "source": {
+        "work": "Sextus Empiricus, Outlines of Pyrrhonism",
+        "locator": "I.8-12; I.164-177 (the five modes); II.18-20 on the criterion, as recalled",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "To any claim an equally strong opposing claim can be set, so one suspends judgment, and tranquillity follows. Disagreement, regress, relativity, hypothesis and circularity block any proof: a hypothesis taken unproved is as good as its opposite, and a criterion needs a proof that needs a criterion. The Pyrrhonist reports this and asserts no doctrine."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "contrary-reading",
+      "reading": {
+        "en": "The account's form looks like the mode of hypothesis conceded: premises named, neither asserted, warrant open. But it does not suspend. Sextus would press that a machine check is a criterion wanting its own, though 08 limits the empty axiom report to logic. And he would ask why act under an unasserted premise; T8 says the ethics does not wait on a warrant. Kept as a test. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "universal-practical-warrant",
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-universal-practical-warrant",
+          "says": {
+            "en": "Open: whether practical reasons have a warrant binding every possible mind. 'It stays open', and the ethics, life's stance, does not wait on it."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/08-METHOD.md#pure-core-and-periphery",
+          "says": {
+            "en": "The checker asserts that every source declaration in the pure core has an empty axiom report; the account says this 'concerns logic only' and that the real assumptions lie in the modelling."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Standings that separate proof, argument, reading and open question, against his one verdict of equal force; conditional theorems that hold whichever way a premise goes."
+      },
+      "source_adds": {
+        "en": "Tranquillity as the outcome of suspense, and a life by appearances without belief. The account has no such practice, and the question of what acting without warrant is it leaves to T8."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-greek-polybius-anacyclosis",
+      "name": {
+        "en": "Polybius: the cycle of regimes"
+      },
+      "domain": "greek-roman",
+      "group": "greek-roman",
+      "source": {
+        "work": "Polybius, Histories",
+        "locator": "VI.3-9; VI.57, as recalled",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Regimes turn by nature: kingship, tyranny, aristocracy, oligarchy, democracy, mob rule, then a strong man again. Each degrades when successors, with no memory of the abuses that made it, use power for themselves, and falls when others bear it no longer. All that forms decays, so one can foresee a state's course."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "scope",
+      "reading": {
+        "en": "Parts have laws. A rule read from the share it raises locks, and a counter-rule read from its own share can lock too (Reading, D68). In one minimal model a rule held by teaching passes where teachers fail. But no law gives his cycle, and a lock can outlive a growing loss, so the revolt is not a law: a turn needs a change of law, reading or selection. That actual rules read the share is a premise. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "capture-through-the-rule",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule",
+          "says": {
+            "en": "Theorem (any type): under its premises the course locks; only a change of the law, of how the rule reads or of the selection leaves. 'That actual rules read the share is the premise.' A reversal held past the threshold is not absorbed."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
+          "says": {
+            "en": "Reading [AI, D68]: a counter-rule read monotonically from the share it selects 'locks from any start by the step after its second reading step, as the rule it replaced did'. From a start against its reading it may never lock."
+          }
+        },
+        {
+          "record": "a-rule-rebuilt-from-the-members-it-limits",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-rule-rebuilt-from-the-members-it-limits",
+          "says": {
+            "en": "Theorem (root; a family of models): taught by members, at s at most l, or at a quota of 0 with no revision to a nonzero one, no holder is left after s steps; a rule kept in its region is held after s steps 'with nothing of the start among the holders'. One minimal model of one kind of institution [AI reading]."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "That a lock need not fall, and exactly when it does: the turn is decided by the reading and the share, not by a law of decay."
+      },
+      "source_adds": {
+        "en": "A named sequence, its necessity, and forgetting across generations as a cause. theories/meta-attractor/README.md claims 139 and 143 name anacyclosis in a list, without this reading."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-greek-polybius-mixed-constitution",
+      "name": {
+        "en": "Polybius: the mixed constitution, each part checking the others"
+      },
+      "domain": "greek-roman",
+      "group": "greek-roman",
+      "source": {
+        "work": "Polybius, Histories",
+        "locator": "VI.10-18; VI.57, as recalled",
+        "basis": "ai-knowledge"
+      },
+      "sense": {
+        "en": "Lycurgus, and Rome by trial, slowed the cycle by mixing monarchy, aristocracy and democracy, so that each part can block the others and none overreaches. Even so Rome too will decay."
+      },
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {
+        "en": "A rule read by a pool whose readers are not drawn from one share has a form here. The pool reads against the share where carriers' reading is not above the others'; counts decide against a mirrored reading; a reading of the loss turns the course only in time. Two rules read from one share still lock together, so the parts must read differently. Nothing here is about constitutions; the bridge to one trained judge failed. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "readers-drawn-from-the-selected",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-readers-drawn-from-the-selected",
+          "says": {
+            "en": "Theorem (any type): the rule as a pool of its readers' readings; monotone in the share exactly where v is not above u; against a mirrored reading 'the counts decide'."
+          }
+        },
+        {
+          "record": "loss-read-in-time-by-the-others",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-loss-read-in-time-by-the-others",
+          "says": {
+            "en": "Theorem (counts): with others reading a loss once it reaches a bound, whether a reading turns the course for good is decided by the share at the step read and the next; later readings keep the lock."
+          }
+        },
+        {
+          "record": "two-rules-lock-together",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-two-rules-lock-together",
+          "says": {
+            "en": "Theorem (any type): two rules each read monotonically from one share, under its premises, lock together."
+          }
+        },
+        {
+          "anchor": "theories/becoming/chapters/02-MAP.md#t7",
+          "says": {
+            "en": "Thesis T7, conjectured. In one trained system the conjecture that a judge is a pool of readers counted by kind failed: one note of the loss turned its reading. The model's law stands only within its hypotheses."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Exactly when a reader outside the share comes too late, and that 'constitution is slower than law' has a law of pace (05's table, 02)."
+      },
+      "source_adds": {
+        "en": "Blocking powers, which are not readings: a veto stops an act, whatever is read. Offices, and a history of Rome as the evidence. No law here treats a veto."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    }
+  ]
+}

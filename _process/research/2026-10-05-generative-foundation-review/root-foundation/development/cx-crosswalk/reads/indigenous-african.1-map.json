@@ -1,0 +1,291 @@
+{
+  "group": {
+    "id": "indigenous-african",
+    "domain": "indigenous-african",
+    "title": {"en": "Indigenous and African thought"},
+    "kind": "domain",
+    "summary": {"en": "Absent from the live account: a search finds no author or concept of these traditions, and 'ubuntu' only as a Linux distribution. These ten fresh readings rest on my unchecked memory of a few named works, no source text read, so the basis is thin; these are patterns picked from peoples who do not form one tradition. Five are divergences, three agreements in form only, one scope, one not carried. No tradition is spoken for; readers from these traditions should replace this."},
+    "read": [
+      "aa-attractor-atlas/PLAN.md sections 6.3 and 6.4",
+      "aa-attractor-atlas/readers-2026-11-04/correspondences.md",
+      "07-SIGNIFICANCE.md: section 1's opening, section 3's opening, section 4's opening, 4.6 and 4.7 (some long lines cut at 1,400 characters), the theses T4, T5, T8 and the objections table",
+      "05-COLLECTIVES.md: the thesis, r-giving-that-waits-on-giving, r-restoring-giving-from-the-worst-start, r-what-giving-that-waits-draws-on, r-what-taking-all-excludes, the opening of section 7",
+      "08-METHOD.md: the opening of the thesis one-relational-unfolding, and the sentence on consent in 'The start'",
+      "review/PHILOSOPHY.md P-15 and the opening of P-22"
+    ],
+    "skimmed": [
+      "records giving-that-waits-on-giving, what-giving-that-waits-draws-on, support-passed-on, offspring-read-from-giving-that-waits, reach-past-ones-own-end, what-the-step-across-standpoints-reaches, comparison-by-widening: first thirty lines, cut",
+      "07 r-need-and-feeding-read-with-time, r-rivals-bounded-in-time, r-graded-significance-and-priority, r-self-concern-through-dependence: opening lines, cut",
+      "02-MAP.md section on margin: its opening lines"
+    ],
+    "searched": [
+      "Live account with records, for tradition names: ubuntu, indigenous, african, africa, seventh, seven generation, mbiti, ramose, metz, haudenosaunee, iroquois, kimmerer, mauss, potlatch, kula, gyekye, wiredu, menkiti, shona, zulu, akan, whyte, little bear, deloria, hountondji, tutu",
+      "Live account with records, by mechanism: gift, reciproc, personhood, ancestor, descendant, future generation, unborn, kinship, communitarian, colonial, animate, animacy, more-than-human, gratitude, elder, trust, consent, accountab, relational tipping",
+      "Live account without records: community, graded status, separateness, duty, obligation, discount, time preference, harvest, care",
+      "record-index.tsv: words of giving, return, line, descent, self, standpoint, widening"
+    ],
+    "not_mapped": [
+      {"en": "Mbiti's account of time in African Religions and Philosophy (1969): Sasa and Zamani, a long future virtually absent, the living-dead remaining while remembered", "why": "It bears on the condition's 'into the future', but I could name no mechanism beyond the word, and the thesis is itself contested (Gyekye's 1987 Essay, as I recall). A reader who knows the Kikamba and Gikuyu material may find an entry."},
+      {"en": "Wiredu on consensus in Akan politics (Cultural Universals and Particulars, 1996)", "why": "It bears on coordination from actual relations, but my memory is too thin to state its mechanism."},
+      {"en": "Whakapapa and kaitiakitanga, Vine Deloria's God Is Red, Shawn Wilson's Research Is Ceremony, Tutu and restorative justice", "why": "Known to me only by name and summary; an entry would be thin."},
+      {"en": "Hountondji's critique of ethnophilosophy (African Philosophy: Myth and Reality, 1976; English 1983)", "why": "Not a claim to map: it warns against treating a continent as holding one unanimous philosophy, a warning that applies to this file. It is named here and in the entry on the constituted person."},
+      {"en": "Ceremony, language, law, land and sovereignty as practised", "why": "Not claims, and not reducible to structure; nothing here reads them."}
+    ],
+    "coverage": {
+      "present": [
+        {"what": "No work of these traditions. The nearest mechanism is giving that waits on giving, reached from game theory and not from gift scholarship.", "where": "theories/becoming/chapters/05-COLLECTIVES.md#r-giving-that-waits-on-giving", "extent": "'gift' or 'gifts' in 25 live files by grep -l, chapter 05 and records; the hits I opened are all this flow mechanism, and neither Mauss nor any gift author is cited"},
+        {"what": "Those who come after, from Western philosophy only: Parfit and Scheffler", "where": "theories/becoming/review/PHILOSOPHY.md#p-15", "extent": "'future generation' on 3 lines of 1 live file: P-15's known weakness and the Parfit and Scheffler references; with it the argued sections 4.6 and 4.7 of chapter 07"},
+        {"what": "A river and a village, as the crux's own case, with no source in these traditions", "where": "theories/becoming/chapters/07-SIGNIFICANCE.md#crux", "extent": "one worked case, argued, AI reading"}
+      ],
+      "absent": [
+        {"en": "Any Indigenous author, people or concept, seventh-generation reasoning included", "searched": ["indigenous", "seventh", "seven generation", "haudenosaunee", "iroquois", "unborn", "kimmerer", "whyte", "little bear", "deloria"]},
+        {"en": "Any African author, people or concept; the hits for 'ubuntu' are the Linux distribution, in record formed-software-continuation", "searched": ["ubuntu", "african", "africa", "mbiti", "ramose", "metz", "menkiti", "gyekye", "wiredu", "akan", "shona", "zulu", "personhood", "communitarian"]},
+        {"en": "Gift scholarship and gift as a relation forming obligation", "searched": ["mauss", "potlatch", "kula", "gratitude", "reciproc (the hits I opened are reciprocal shares in the arithmetic sense)"]},
+        {"en": "Beings other than humans held as kin or persons, and colonial history as a cause of losses", "searched": ["animate", "animacy", "animis", "more-than-human", "kinship", "colonial, colonis, coloniz, dispossess (2 hits: recolonization of patches, colonial routes of founding wholes)"]}
+      ]
+    }
+  },
+  "entries": [
+    {
+      "id": "cx-indaf-coming-generations",
+      "name": {"en": "Deciding for those not yet born (seventh-generation reasoning)"},
+      "domain": "indigenous-african",
+      "group": "indigenous-african",
+      "source": {
+        "work": "Oren Lyons (Onondaga), 'An Iroquois Perspective', in Vecsey and Venables eds., American Indian Environments (1980); the Great Law of Peace in Arthur C. Parker, The Constitution of the Five Nations (1916)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {"en": "Second-hand, from memory. Haudenosaunee office-holders are charged to keep in view the coming generations, those still beneath the ground. As I recall, Parker's written text names coming generations and no number; 'seven' circulates in later speech and environmental writing, and its sourcing is contested. I cannot settle that. It is a charge on those who decide for a people, not a theory of value."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "Mechanism: a decision counts those who come after every present decider. Need cannot carry this: it reaches nothing active only after its stretch. Scope over that future comes from the continuation condition, or in part from an argued path under P1 to P4; order needs C. Both premises are unasserted, their warrant open. The source holds as a charge what the account gives only under premises. [AI reading]"},
+      "targets": [
+        {"record": "need-and-feeding-read-with-time", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-need-and-feeding-read-with-time", "says": {"en": "Theorem on the World, over flows where only active formations give: need reaches only what is active within the stretch it is read across, and nothing active only after it."}},
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#future-path", "says": {"en": "An argument, AI reading, its steps citing Lean: under P1 to P4, concern for one's own continuation reaches everything downstream of what one conditions, past one's organism's end, with no step of invariance. P2 and P4 are the crux and can be denied."}},
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order", "says": {"en": "The continuation condition fixes scope, whose losses count; C gives order, ranking a course above every course it widens. Neither is asserted."}}
+      ],
+      "account_adds": {"en": "A proved limit on need, and places where the path can be denied. Also 4.7's objection: generations a poisoning forecloses occur nowhere on the course taken, so a loss is read by comparing courses. Read as a literal cutoff at seven, a rule would be a rival bounded in time (r-rivals-bounded-in-time); I doubt the source means a cutoff."},
+      "source_adds": {"en": "An office with a charge, answerable within a living polity. 4.7 says the account's scope does not say what one answers for or must do. The source also does not wait on foresight, while 4.7 leaves open whether scope may depend on what can be foreseen."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-indaf-gift-circulates",
+      "name": {"en": "A gift binds and moves on"},
+      "domain": "indigenous-african",
+      "group": "indigenous-african",
+      "source": {
+        "work": "Robin Wall Kimmerer (Citizen Potawatomi), Braiding Sweetgrass (2013); Marcel Mauss, The Gift (1925), an outsider's comparison, with Sahlins's reading in Stone Age Economics (1972)",
+        "locator": "Kimmerer, chapter 'The Gift of Strawberries'; Mauss on kula, potlatch and hau, locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {"en": "From memory. Kimmerer: what is received as a gift is not simply owned; it opens an ongoing relationship and an obligation to give in turn. Mauss, a French scholar reading others' ethnographies and so second-hand for these peoples: giving, receiving and returning are obligations, and gifts circulate in rings. His reading of the Maori hau is disputed. These authors are not one voice."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {"en": "One part has a checked form: giving that waits on giving around a loop. With memory, one withholding ends all giving in a family it reaches; without memory it returns around every loop; in a ring of three, a source giving whatever it waits on restores giving from every start. So a cycle that lasts needs someone not waiting. That any actual gift cycle runs these laws is not shown. [AI reading]"},
+      "targets": [
+        {"record": "giving-that-waits-on-giving", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-giving-that-waits-on-giving", "says": {"en": "Theorem, any formations and any relation of waiting. With memory a withholding stays and spreads downstream; without memory it returns on a loop at every multiple of its length. It does not show how waiting forms, or that cooperation is good."}},
+        {"record": "restoring-giving-from-the-worst-start", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-restoring-giving-from-the-worst-start", "says": {"en": "Theorem, for laws keeping inclusion. Under giving first, with the sources decided, a formation gives at n from every start exactly where no clear chain of n waits leads into it; a clear loop is never restored."}}
+      ],
+      "account_adds": {"en": "Exact conditions for a withholding to stay, pass out or return, and that more waiting gives no more at any step."},
+      "source_adds": {"en": "What the gift does to those in it: obligation, relationship, gratitude, and a giver who remains in what is given. The law takes the waits as given, with giving on or off, no amounts and no obligation; it says nothing of how a gift forms the relation, which is the source's main claim."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-indaf-gift-abundance",
+      "name": {"en": "Abundance through giving"},
+      "domain": "indigenous-african",
+      "group": "indigenous-african",
+      "source": {
+        "work": "Robin Wall Kimmerer, The Serviceberry: Abundance and Reciprocity in the Natural World (2024); Braiding Sweetgrass (2013)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {"en": "From memory. Kimmerer holds that in a gift economy what is shared multiplies: wealth lies in the flow of giving, and scarcity is often made by hoarding and markets. She draws this from plants, people and harvest together, and reports, as I recall, field work in which sweetgrass harvested in the traditional way did better than sweetgrass left alone."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "scope",
+      "reading": {"en": "The account's witnesses say where a gift brings more than it draws: under balance, through asymmetry of need in the pair or renewal from outside; with equal needs it only moves support. Read so, abundance is not made by giving as such; it has a source, which may be what her earth and plants are. The form is small witnesses, not a general law. [AI reading]"},
+      "targets": [
+        {"record": "what-giving-that-waits-draws-on", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-giving-that-waits-draws-on", "says": {"en": "Theorem, World: balance; single small witnesses, not general laws of renewal or need. Two ways a gift can bring support beyond what it draws on the giver: need asymmetry in the pair, or renewal from outside. Under needs two and two the gift only moves support."}}
+      ],
+      "account_adds": {"en": "Under balance, a bound on what a gift can add: the giver's slack and the inflow, where no dependence is broken."},
+      "source_adds": {"en": "That a condition's own giving can rise under a careful draw, which I did not map onto the map's giving laws; and that scarcity is produced by an order of exchange, which these witnesses do not read."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-indaf-honorable-harvest",
+      "name": {"en": "The Honorable Harvest: rules for taking"},
+      "domain": "indigenous-african",
+      "group": "indigenous-african",
+      "source": {
+        "work": "Robin Wall Kimmerer, Braiding Sweetgrass (2013)",
+        "locator": "chapter 'The Honorable Harvest'",
+        "basis": "ai-knowledge"
+      },
+      "sense": {"en": "From memory. She presents it, as I recall, as a teaching drawn from Indigenous practice: take only what is given, ask permission and abide by the answer, never the first or the last, never more than half, take only what you need, use it well, give back. These are rules of a relationship with the one harvested, and leave some for others."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {"en": "Part of the rule has the form of two laws: taking jointly within what is given keeps the level, and full taking beside another taker ends every formation depending on the condition at the need named, the taker included. An optimizer's best outcome leaves a dweller beyond its couplings as low as allowed. The rule stops short of that without running through the taker's reward. Neither law says restraint is good. [AI reading]"},
+      "targets": [
+        {"record": "what-taking-all-excludes", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-taking-all-excludes", "says": {"en": "Theorem, World: balance, only active giving, activity needing support, the gate at the need. Taking jointly within what is given at every step keeps the level; full taking alongside another taker at each of n steps from a level below n + m ends every formation depending at a need of at least m."}},
+        {"anchor": "theories/becoming/chapters/05-COLLECTIVES.md#optimum", "says": {"en": "An optimizer ranks outcomes by what couples into it; a fisher rewarded by its catch has best outcomes leaving the stock a dweller beyond its couplings depends on as low as any allowed outcome does."}}
+      ],
+      "account_adds": {"en": "Exact thresholds for taking on the World model, and that exclusion acts through the taking, not the levels."},
+      "source_adds": {"en": "Asking permission and abiding by the answer, which treats what is taken as one who can refuse; nothing in these laws reads that. Also that the rule needs no measured level or need, while the laws state theirs by level and need."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-indaf-animate-kin",
+      "name": {"en": "Other beings as kin and persons"},
+      "domain": "indigenous-african",
+      "group": "indigenous-african",
+      "source": {
+        "work": "Robin Wall Kimmerer, Braiding Sweetgrass (2013); Leroy Little Bear (Blackfoot), 'Jagged Worldviews Colliding', in Battiste ed., Reclaiming Indigenous Voice and Vision (2000)",
+        "locator": "Kimmerer, chapter 'Learning the Grammar of Animacy'; Little Bear, locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {"en": "From memory. Kimmerer: Potawatomi grammar marks many beings English calls things as animate, and to speak so is to stand toward them as kin, not resources. Little Bear: a Blackfoot view of constant flux in which everything is animate and related, with relation as what one must keep up. I take both as ways of standing in relation, and may be flattening them; they are not one doctrine."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "The account's question of whose continuation counts turns on what is a center. Standpoint-invariance forces exactly the centers' continuation, the continuation condition only where every formation is some standpoint's center, and its objections table tests that on a tumour and a hurricane, not on a river. C still gives order; both premises are unasserted and their warrant open. The source asserts a relation with such beings that carries obligation; the account asserts neither. [AI reading]"},
+      "targets": [
+        {"record": "what-the-step-across-standpoints-reaches", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-the-step-across-standpoints-reaches", "says": {"en": "Theorem: from each standpoint's presupposition about its own continuation and standpoint-invariance, exactly the centers' continuation is forced to have significance, the continuation condition only where every formation is a center."}},
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#objections", "says": {"en": "Verdict on why 'anything' has significance: sharpened, not answered. The centers' scope parts from the condition at a formation that is no center; a tumour does not tell the scopes apart, a hurricane only on a stronger reading of wanting."}}
+      ],
+      "account_adds": {"en": "The exact point where the two scopes part, and that significance here carries no valence or grade."},
+      "source_adds": {"en": "Kinship as what the relation is, with duties and a way of speaking. The account's center is only a formation as a standpoint, and nothing I read treats a river as one who addresses or answers. I found no hit for animate or animacy, and none for kin in this sense."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-indaf-constituted-person",
+      "name": {"en": "The person formed through others, be-ing as becoming"},
+      "domain": "indigenous-african",
+      "group": "indigenous-african",
+      "source": {
+        "work": "John S. Mbiti, African Religions and Philosophy (1969); Mogobe B. Ramose, African Philosophy through Ubuntu (1999)",
+        "locator": "Mbiti, the chapter on ethnic group, kinship and the individual; Ramose, the chapters on ubuntu; both unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {"en": "From memory. Mbiti: the individual exists only corporately, the person owing being to others living and dead; his well-known formula puts the group's being before the 'I'. Ramose reads ubu-ntu as one word for be-ing becoming, motion and wholeness rather than fixed entities. Hountondji warns against reading any of this as what a continent unanimously holds; Mbiti's generalizing has drawn that charge."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "agreement",
+      "reading": {"en": "Shared form: no self prior to relations. The thesis of one relational unfolding forbids explanation by a self with a nature of its own, and a center's own region is its closure under a relation. Standing differs: the thesis is argued, has no strength by the account's own measure, and is not derived from these authors. Same words, not the same reference: their relation is mostly human community and ancestors. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding", "says": {"en": "Thesis, philosophical, argued: there is one unfolding, and whatever is, is how it relates within it. It forbids explanations needing a determination no relation carries, such as a self with a nature of its own. That the theory needs no independent entity is argued, not proved."}},
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#evaluation", "says": {"en": "A center is a formation; its own region is its closure under some relation of the unfolding. On the thesis, argued and not proved, positions and standards form within the unfolding."}}
+      ],
+      "account_adds": {"en": "A formal side: configurations, laws and parts as represented need no determination beyond relations, in the laws 08 names."},
+      "source_adds": {"en": "The living-dead and the unborn as parties to personhood; rite and name as how one is incorporated; and for Ramose a political use, against conquest and for restitution, that the account does not take up."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-indaf-shared-bearer",
+      "name": {"en": "Whose loss: what befalls the group befalls me"},
+      "domain": "indigenous-african",
+      "group": "indigenous-african",
+      "source": {
+        "work": "John S. Mbiti, African Religions and Philosophy (1969); Kwame Gyekye, Tradition and Modernity (1997), for moderate communitarianism against it",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {"en": "From memory. Mbiti: whatever happens to the individual happens to the whole group, and the reverse, in his account of kinship societies. So a kinsperson's loss is one's own, by shared life, not by what one did or meant. Gyekye, Akan-based, objects that this understates the individual's own will and dignity, and keeps community as constitutive only in part."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "07 section 4.7 draws the self as organism, intention or everything one conditions, and asks for a criterion narrower than all effects. Shared life is a further candidate to test, not an answer: it fails P4 where effects leave the group, and its boundary needs a reason. It meets 'the wrong bearer' by accepting a shared bearer, which the account does not. Scope stays the condition's and order C's, unasserted. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#crux", "says": {"en": "An AI reading, argued, not proved. Are all of one's effects one's own, in the sense of whose losses count? P4 is not shown. Objection: a village's loss counted on my line counts as mine; the condition counts it as the village's own. Open: a criterion of 'one's own', narrower than all effects, stated apart from identity."}},
+        {"anchor": "theories/becoming/chapters/05-COLLECTIVES.md#joint-activity-and-selection", "says": {"en": "Thesis: a collective is a region of formed relations, not a unit with an interest of its own; conflict and difference stay real."}}
+      ],
+      "account_adds": {"en": "The laws that fix what a class must hold for its line to reach something, and 08's guard that a shared process implies no aggregate interest and no one entitled to speak for everything."},
+      "source_adds": {"en": "A loss borne jointly as a fact of how people live, including grief and honour; and an internal dispute, Mbiti and Menkiti against Gyekye, that has the same shape as the wrong-bearer objection and could be read with it."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-indaf-attained-personhood",
+      "name": {"en": "Personhood attained by degrees"},
+      "domain": "indigenous-african",
+      "group": "indigenous-african",
+      "source": {
+        "work": "Ifeanyi Menkiti, 'Person and Community in African Traditional Thought', in R. A. Wright ed., African Philosophy: An Introduction (3rd ed., 1984); Kwame Gyekye, 'Person and Community in African Thought' (1992)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {"en": "From memory. Menkiti: personhood is not given with being human; it is attained through incorporation and the discharge of duties, so one can be more or less a person, and the newborn is not yet one in the full sense. Gyekye rejects this: a person has dignity and rights before and apart from community. I recall this as a normative title, not a statement of whose losses count less."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "The continuation condition, unasserted, gives scope no grade and no earning: from every standpoint, for anything. C gives order, its warrant also open. Graded status enters only as a further premise: every positive grade is a positive weighting. Grades achieved by conduct fit that form; a zero grade would be a rival rule within a region. Whether Menkiti's degrees bear on scope at all is what a reader must say. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#condition", "says": {"en": "Definition, not asserted: from every standpoint, the continuation of anything has significance at every step; AI reading: neither graded nor necessarily positive."}},
+        {"record": "graded-significance-and-priority", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-graded-significance-and-priority", "says": {"en": "Theorem, any type: a graded significance gives each item a natural grade from each standpoint; an item counts where its grade is positive, and its status is the grade. Equal status is not asserted."}}
+      ],
+      "account_adds": {"en": "What grades do to rankings: invariant grades rank alike from every standpoint, and strict concavity decides transfers C leaves mixed."},
+      "source_adds": {"en": "That standing is a work done over a life, in a community, and that its loss or lack means something. The account's formations have no such achievement, and its method forbids hiding a weight in a definition."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-indaf-relational-order",
+      "name": {"en": "A moral theory from identity and solidarity"},
+      "domain": "indigenous-african",
+      "group": "indigenous-african",
+      "source": {
+        "work": "Thaddeus Metz, 'Toward an African Moral Theory', Journal of Political Philosophy 15 (2007); 'An African Theory of Moral Status', Ethical Theory and Moral Practice 15 (2012)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {"en": "From memory. Metz, a South African analytic philosopher, reconstructs ubuntu as a secular principle: an act is right insofar as it prizes communal relationships, those of identity (sharing a way of life) and solidarity (caring for another's good); wrong insofar as it is discordant. Status follows capacity to be party to such relations. It is a reconstruction, not a report of any community, and others may refuse it."},
+      "quote": null,
+      "carried": "fresh-reading",
+      "relation": "divergence",
+      "reading": {"en": "07 says a ranking needs C or a premise in its place. Metz supplies such a premise, and its 'better' reads the quality of relations among those who can commune, where C's reads what can form. It can decide mixed pairs C leaves open, and can rank a course that adds forms while damaging such relations below one that does not. Scope would then not be the condition's. T5's bound is the place to test it. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order", "says": {"en": "A ranking of courses needs C or a premise in its place. The continuation condition fixes scope, C gives order; neither is asserted."}},
+        {"record": "comparison-by-widening", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-comparison-by-widening", "says": {"en": "Theorem: on level paths an extension with every claim counted is exactly a widening of what can form; C's normative content moves into calling widening better, supplied, not shown."}},
+        {"record": "a-narrowing-above-its-widening", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-narrowing-above-its-widening", "says": {"en": "Theorem on net weightings: a ranking of a narrowing above its widening by one item is a misread or framing, or the item weighs at zero or below. That a judgment is such a ranking is a premise."}}
+      ],
+      "account_adds": {"en": "A formal test: whether Metz's order, ranking a narrowing above a widening, must weigh some item at zero or below, or falls outside net weightings; not worked here."},
+      "source_adds": {"en": "An order that reads relations themselves, and treats estrangement as wrong in itself. The account reads relations for what they admit; where C is silent it leaves a mixed pair unranked, while this theory answers."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-indaf-relational-tipping",
+      "name": {"en": "A tipping point in the relations themselves"},
+      "domain": "indigenous-african",
+      "group": "indigenous-african",
+      "source": {
+        "work": "Kyle Whyte (Citizen Potawatomi), 'Too Late for Indigenous Climate Justice: Ecological and Relational Tipping Points', WIREs Climate Change 11 (2020)",
+        "locator": "locator unverified",
+        "basis": "ai-knowledge"
+      },
+      "sense": {"en": "From memory. Whyte: coordinated response to climate change takes relational qualities such as consent, trust, accountability and reciprocity. Colonial history damaged these, and they take long to build. So there can be a relational tipping point: it becomes too late to build them before the harm comes, and fast action without them repeats the damage. For Indigenous peoples much of the feared loss has already happened."},
+      "quote": null,
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {"en": "The account has neighbours and no statement. A regime's point of no return is read on a condition's level; its joint activity starts from actual relations; a record's counterexample names unrestored trust. I found no law or reading taking these relations themselves as what can pass a point of no return, and no reading of colonial history as a cause. Formally it may be statable; that would be new work. [AI reading]"},
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {"en": "A claim that could be read on a condition's level with giving that responds to it, and tested: that a relation needed for coordinated response has a point past which it does not return in the time available. Also that some losses already taken shape who can now coordinate."},
+      "absence": {
+        "searched": ["relational tipping", "trust", "consent", "accountab", "colonial, colonis, coloniz, dispossess", "whyte", "reciproc", "point of no return, in 02-MAP.md"],
+        "read": ["the trust hit in record finite-aggregation-within-restorable-basic-losses (one line)", "the consent hits at 01-ROOT.md line 424 and 08-METHOD.md 'The start'", "the opening of the margin section of 02-MAP.md", "the thesis of 05-COLLECTIVES.md"]
+      },
+      "labels": ["AI reading"]
+    }
+  ]
+}

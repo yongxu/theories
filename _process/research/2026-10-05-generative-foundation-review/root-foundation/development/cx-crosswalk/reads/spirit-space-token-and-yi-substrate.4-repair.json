@@ -1,0 +1,3172 @@
+{
+ "group": {
+  "id": "spirit-space-token-and-yi-substrate",
+  "domain": "earlier-folders",
+  "title": {
+   "en": "Spirit, Token, Space and the Yi substrate (間 · 一/太極)"
+  },
+  "kind": "theory",
+  "summary": {
+   "en": "A social ontology (a spirit holds a token in a space) reduced to one addressable root, Yi, with roles read off owned facts and a register of refusals; plus a running design and a political thesis, its three ontologies unreconciled by its own count. The live account never names it, and no live sentence speaks of this folder's tokens, spaces or runtime. It states parts on declared models or in its method (admission under current rights, a gate, a fork, votes in one protocol, standings named); agreement with a checked law's form is rare, and most other links are proposed here, labelled so. Divergences kept: stable root, immutable Kind, group as agent, sovereignty by ownership, a human at the root, unpremised goodness."
+  },
+  "read": [
+   "theories/spirit-space-token-and-yi-substrate/README.md (all 930 lines)",
+   "theories/becoming/ONE-PAGE.md",
+   "GLOSSARY.md",
+   "theories/becoming/COLLECTIVE-DIRECTION.md §3 to the end",
+   "theories/becoming/chapters/05-COLLECTIVES.md the opening, §8's opening and readers laws, §9 to the end",
+   "theories/becoming/chapters/07-SIGNIFICANCE.md §1's opening, §3.3's end, §4's table, §5 to §8's opening",
+   "theories/becoming/chapters/08-METHOD.md §1, the modelling commitments, what a summary keeps, §6's opening, §7's edge record, §9's unfolding and explanatory reading, §10 on names and law",
+   "theories/becoming/chapters/01-ROOT.md §1, §2, §8.2 to §8.5, §8.7, §9.2, §9.8, §9.9's opening, every origin passes the gate",
+   "Conditions and does-not-show of the records organizational-rule-inheritance, mediated-evidence-transport, what-dependence-alone-carries-of-a-level, succession-on-a-funded-carrier, formed-software-continuation, access-yet-to-form, reviewers-count-by-independent-causes, copied-witnesses-change-nothing, a-rule-rebuilt-from-the-members-it-limits"
+  ],
+  "skimmed": [
+   "theories/spirit-space-token-and-yi-substrate/synthesis-a-sts-papers-and-proposals.md and synthesis-b-yi-direction-frame-concepts.md: headings only; the README merges both",
+   "theories/becoming/chapters/02-MAP.md: only the entries cited (pace law, capture, closed capture, shaping readers, coupled regimes, reserve)",
+   "theories/becoming/chapters/03-KNOWING.md: only the entries cited (selection through couplings, acquired revision, adaptive closure, finite plans, access yet to form, scientific standing, the reading loop's opening, reflexive prediction)",
+   "theories/becoming/chapters/04-LIFE.md: only the entries cited (organizational rule, §1's opening, arising replenishes, §2 on passing and transmission)",
+   "theories/becoming/chapters/01-ROOT.md §9.3, in part",
+   "The JSON (hypotheses, does_not_show, correspondence) of reviewers-count-by-independent-causes, life-as-condition-of-life, what-dependence-alone-carries-of-a-level, premises-met-and-failed, one-root-to-its-edge, every-origin-passes-the-gate, acquired-revision-of-pending-task, joint-practice-forms-continuation: their openings, for standings."
+  ],
+  "searched": [
+   "Chapters, fronts, review, GLOSSARY and record pages for Searle, Goffman, Blumer, Douglass North, institutional fact, counts as, status function, collective intention, social ontology, social constr, Luhmann: only 'counts as' hits, in other senses. Searched is not read.",
+   "Chapters and two fronts for mercy, civil disobed, discretion: no hit in the source's sense.",
+   "Chapters and fronts for privacy, surveil, transparen, shame, leaderboard, ephemer, volatile: no hit in the source's sense.",
+   "Chapters and fronts for working memory, cognitive load, hold in mind, mental, understandab, legib, intelligib, description length, parsimon: no hit in the source's sense.",
+   "Chapters, fronts, review and GLOSSARY for 仁义礼智, 五常, Moloch, 摩洛: no hit.",
+   "The word spirit in the chapters: no sense of this folder's. The word token: 04's copying tables, a symbol at a site.",
+   "record-index.tsv by mechanism: handoff, inherit, revis, admit, adopt, retain, access, dependence, reserve, gate, arise, class. Record pages for fork, ballot, quorum, revok, sanction, moderat.",
+   "Chapters, fronts and GLOSSARY for touch, Whitehead (with review and record pages), occasion and process philosoph: other senses, one record and one sentence of neighbours, as the touching entry says."
+  ],
+  "not_mapped": [
+   {
+    "en": "The Yi engineering: families, facets, bindFacet, the compiler seam, Activation, stream tier, Signals, Views, federation, SDK object-capability shape, Law 10 (break forward), the FUSE realization, mycological composition, sub-kinds.",
+    "why": "A design and implementation; the mechanisms with a claim's form are mapped as entries (the honesty rule about the exceptions among them), and the rest would be forcing software into a theory of becoming."
+   },
+   {
+    "en": "The community kit as product: Heron, Fox, Sage, Owl, Witness Book, Wishing Pool, Need Wall, presets, marketplace bundles, sigils, c/ paths.",
+    "why": "Designs and a practice; their stated ethics are mapped where they make a claim (endings, conflict, consent, suggestion)."
+   },
+   {
+    "en": "Measured programme numbers (42/100, 81/100, 66/100, ~17 concepts against ≤12, ~84 re-derivations, the census 290) and the correctness-debt register.",
+    "why": "Evidence about one codebase; provenance, not a claim about becoming."
+   },
+   {
+    "en": "Application sketches of 2025: liquid democracy, quadratic voting, soulbound tokens, zero-knowledge possession proofs, wallet UX, RBAC/ABAC subsumption, memory-shard use of the vocabulary, paradigm-as-philosophy list.",
+    "why": "Applications or side observations with no mechanism the account takes up. Machine-checked voting is not among them: it has its own entry."
+   },
+   {
+    "en": "The 一 versus 易 naming question, and the 2026-04 two-primitive and reflexive-four design steps as such.",
+    "why": "Genealogy; the source leaves 一 and 易 unresolved, and the outcome is mapped in the role and root entries. 間 as a theory belongs to jian-and-wenyan-as-formal-language; only the commitments this folder relies on are mapped here."
+   },
+   {
+    "en": "Immutable Creation, row as truth, 'every guarantee re-expressed, never erased', and the folder reader's 'history as the only thing that is not revisable'.",
+    "why": "An engineering rule and a reader's gloss on it, with no statement of its own to test; the live text nearest it, 07's deleted records, is in the endings entry. The account's source-binding records were not searched for it."
+   }
+  ],
+  "coverage": null
+ },
+ "entries": [
+  {
+   "id": "cx-sty-holds-canonical-sentence",
+   "name": {
+    "en": "Every social fact as one sentence over three primitives"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "Three primitives, one canonical sentence; Claims 10-13",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Society is made of exactly three kinds of thing: spirits that act, tokens that are claimable units of meaning, spaces that interpret them. Every social fact has one shape, and with these one can model essentially any scenario where actors cooperate, compete or exchange under rules. The folder later finds this incomplete and retires it."
+   },
+   "quote": "a Spirit holds a Token in a Space",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "The mechanism of the difference: the source chooses three kinds first and fits relations to them; the account states every theorem for any carrier and relation, choosing no kind first. It has no universal form of a social fact and does not localize this one. Its one institution model is an entry rule, which it says is no definition. 'Holder' there is a cohort's relation to a rule, not possession of an item: a shared word. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/01-ROOT.md#one-kind-of-symbol",
+     "says": {
+      "en": "'every theorem is stated for every carrier and relation, so no frame or kind of thing is chosen before the relations'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "a-rule-rebuilt-from-the-members-it-limits",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-rule-rebuilt-from-the-members-it-limits",
+     "says": {
+      "en": "'a minimal model of one kind, an entry rule on a shared stock, passed through members who also keep it, with no compliance and no records. It is not a definition of an institution.' Theorem (root; a family of models)."
+     },
+     "role": "limit"
+    },
+    {
+     "anchor": "theories/becoming/ONE-PAGE.md",
+     "says": {
+      "en": "Not yet done: 'An organism and one kind of institution each have one minimal model [AI reading]'."
+     },
+     "role": "limit"
+    }
+   ],
+   "account_adds": {
+    "en": "Exact laws for that one rule: the band of quotas, closed regions under revision, when a rule passes out, and two separately started states tested apart."
+   },
+   "source_adds": {
+    "en": "The triad, token types, spaces as micro-institutions, and the universality claim, which the account neither states nor needs."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-roles-not-root-types",
+   "name": {
+    "en": "Subject, object, holder, agent as roles read off relations"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "The loop that would not stay disjoint; The Yi turn; Claims 60, 83, 143, 154-158, 239",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The disjoint triad failed in building it: spirit contains space, space holds tokens, token holds spirit, and a spirit's environment can be another spirit. So subject, object, holder, issuer, capability, container and agent are not categories but readings of context facts, and one row can be all at once. Being, having, doing and permitting are to be one substrate; having and being are one substance seen from two ends of a relation."
+   },
+   "quote": "a reading lens, not root types",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "agreement_of": "thesis-or-method",
+   "reading": {
+    "en": "Same form: a split stated as positions in a relation, not kinds of thing. The account's checked case is narrower: on the World one relatum stands as a condition and can be active as a formation, and that they are one relatum is a modelling commitment the laws do not check; its wider claim is a thesis, argued. The source reads roles off separately owned facts; the account has one kind of symbol. No line of descent is claimed. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "life-as-condition-of-life",
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-life-as-condition-of-life",
+     "says": {
+      "en": "Theorem (World): 'In the World a relatum can stand as a condition at some level, which others depend on and draw on, and can be active as a formation, which depends, draws, takes and gives. A flame is both.'"
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/ONE-PAGE.md",
+     "says": {
+      "en": "'One unfolding is a thesis, argued: within relations, as far as shown, taker and drawn-on are two roles of one relatum and knower and known one loop, and responsibility is not shown to differentiate'."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#modelling-commitments",
+     "says": {
+      "en": "A commitment of the representation, which the axiom report does not check: 'formations and conditions are two roles of one relatum' (`World.ofRoles`)."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#beginning-within-the-one-unfolding",
+     "says": {
+      "en": "'Subject and object, actor and patient, observer and world, inside and outside', with fact and value, 'are each drawn within the unfolding, along relations, together with what they leave out.'"
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "That each split states what it leaves out; that responsibility is not shown to differentiate; that the thesis forbids explanations, not observations."
+   },
+   "source_adds": {
+    "en": "Roles of holder, issuer, presenter, capability and container on one thing at once (see the several-truths entry), and 'even the type of a thing is a thing', which the source's own Kinds, never Yis, later give up."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-visibility-from-relations",
+   "name": {
+    "en": "Visibility and conditions as relations, not stored attributes"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "The loop that would not stay disjoint; The actor turn; Claims 80, 99",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A policy is a spirit you contain, not a bit you set; caveats and visibility collapse into one mechanism evaluated at resolution time, and Ren rules that they emerge from relations. The folder lists this among two structural discoveries that survive into the substrate. Visibility here means who may see: a rule of access."
+   },
+   "quote": "Caveat 和 Visibility是从关系中涌现的",
+   "carried": "fresh-reading",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "Proposed here, a like form at one point only: what one can see of another is read off a relation between them, not stored on what is seen. The account's relation is reach, what selection through couplings can tell apart; the source's is a rule of access. Where the account has access, its record supplies supports, permitted set and route: on that model permission is a parameter, the reverse of emergence, so on the source's own subject they part. 'Condition' is a shared word. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "selection-through-couplings",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+     "says": {
+      "en": "Theorem (World; no premise): 'Two histories are selected alike by every selection through a formation's couplings exactly when they are alike through them'. 'A particular selection may ignore what its couplings carry.'"
+     },
+     "role": "carries"
+    },
+    {
+     "record": "access-yet-to-form",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-access-yet-to-form",
+     "says": {
+      "en": "Theorem (periphery, pre-spine). Record's conditions: 'The supports, the permitted set, the route and the operations are supplied'."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "That the law's force lies in the premise that a selector selects through just those couplings; T6's invisible half."
+   },
+   "source_adds": {
+    "en": "Visibility as an authored policy, holder-only by default, with policy itself a contained thing that can be read and changed; and its emergence from relations, which the account does not state."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-yi-stable-bare-root",
+   "name": {
+    "en": "One stable addressable root that keeps its identity through every role"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "The Yi turn; Claims 146, 150-153, 221",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A Yi (一, 'the one') is a bare root: UID, domain, primary kind binding, timestamps, a sequence, a commit head. It is the one addressable bearer of traits, relations, capabilities, state and behaviour, and it becomes subject, object or actor by composed kinds without changing its identity. Birth is immutable. Stated of a runtime, and also taken as the ontology's one primitive."
+   },
+   "quote": "without changing its root identity",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "As engineering, a UID is the move the account's models also make: naming given, equality on the carrier, a commitment of the model. As ontology they part: the carrier is a parameter, a theorem says nothing of an element beyond how it relates, identity across steps is a reading of continuation, and that the commitment belongs only to the representation is itself 'not shown'. The grammar's 一 is the full relation, not a bearer: a shared sign. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/01-ROOT.md#one-kind-of-symbol",
+     "says": {
+      "en": "'The carrier is a parameter of the statements, not a claim that its elements exist apart from their relations: a theorem says nothing of an element beyond how it relates.'"
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#modelling-commitments",
+     "says": {
+      "en": "Commitments of the representation: 'The naming of relata', 'which condition is which relatum is given, not derived'; 'Identity by naming', 'which formation continues which is named'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "identity-across-steps",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-identity-across-steps",
+     "says": {
+      "en": "Theorem (World), 'Labels carry nothing': a renaming preserves the five readings checked, while the pattern of names across steps carries identity. Section's opening: 'identity across steps is one reading of continuation, not a fact beneath it.'"
+     },
+     "role": "carries"
+    },
+    {
+     "record": "relata-counted-up-to-indiscernibility",
+     "anchor": "theories/becoming/chapters/08-METHOD.md#r-relata-counted-up-to-indiscernibility",
+     "says": {
+      "en": "Calibration (World): 'names carry one decided identity more than relations do.' Identity read off relations is identity up to indiscernibility."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding",
+     "says": {
+      "en": "Thesis, argued: 'the nearest case is equality on the carrier, which the model uses and does not derive; the thesis reads it as belonging to the representation and not to what is represented, and that reading is not shown.'"
+     },
+     "role": "limit",
+     "part": "the sentence on equality on the carrier"
+    }
+   ],
+   "account_adds": {
+    "en": "Where identity is forced (a census with more active after a step than before); that succession across a dormant step stays possible."
+   },
+   "source_adds": {
+    "en": "An engineering reason for the root: stable denotation, recoverable history and immutable creation across rename and reparent, which a running system needs whatever the metaphysics."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-identity-as-portfolio",
+   "name": {
+    "en": "Identity as what is held, not a substance"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "Three primitives, one canonical sentence; Claims 15-16",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "In the 2025 framework a spirit's identity in a space just is the set of tokens it holds; across spaces it is the sum of its credentials, memberships and roles. The protocol requires only distinctness and continuity over time, not how a spirit is authenticated."
+   },
+   "quote": "identity is not a substance but an accumulated portfolio",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "The source says what identity is; the account gives where such a statement holds. Identity is read relative to a class, so a sum of holdings is one class among several, and overlapping identities are several classes. No nature behind the relations is common ground. But a configuration is how it relates to its continuations, so equal portfolios with different futures are not alike there. The account stands nearer this 2025 statement than the source's own 2026 UID root does. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "the-source-texts-test-systems",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-the-source-texts-test-systems",
+     "says": {
+      "en": "A witness on the source texts' test systems: 'Overlapping identities are several classes, observer-dependence is the choice of class'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "identity-across-steps",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-identity-across-steps",
+     "says": {
+      "en": "'Continuity is a reading of identity, not its definition'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "configurations-alike-by-relation",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-configurations-alike-by-relation",
+     "says": {
+      "en": "Theorem (any process): 'Configurations related by a bisimulation are alike: they realize the same claims, match each other's steps by the same move into alike configurations, and pass the same tests'."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding",
+     "says": {
+      "en": "Thesis, argued: it forbids an explanation needing 'a self with a nature of its own'. These results show configurations, laws and parts as represented need nothing beyond relations; 'Neither shows that reality has none.'"
+     },
+     "role": "neighbour",
+     "part": "What it forbids"
+    }
+   ],
+   "account_adds": {
+    "en": "An exact sense of 'how it relates', its limits (equality needed for intervening on one of two alike configurations) and two live arguments that would defeat the thesis."
+   },
+   "source_adds": {
+    "en": "Identity as accumulated and social: credentials and roles given by others, plural across spaces, a 'social CV'; and continuity required of a spirit by the protocol, where the account makes continuity a reading."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-space-interprets-token",
+   "name": {
+    "en": "A token means nothing outside the space that interprets it"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "Three primitives; What the whole thing is for; Claims 18-21, 26, 299",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A token's meaning is supplied by its space, the boundary of relevance that stops a credential carrying authority into a context that never granted it. Only declared types are recognized. Later: no global schema or trust root; interoperation through exact kind identities and explicit local admission."
+   },
+   "quote": "A token by itself is just a symbol; the space provides the interpretation",
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "agreement_of": "reading",
+   "reading": {
+    "en": "Proposed here; no live text speaks of a place that interprets. A mechanism shared in part: a form has its sense only under a map, and reads back only where the map allows. But the account's code is a formation's own map, agreed only through hearings; meaning sits in formations and their history, not in a place. Refusing a global schema has a checked neighbour: an imposed code makes all agree and each loses distinctions it drew. 'Token' in 04's copying is a symbol at a site: a shared word. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "a-code-formed-between-formations",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations",
+     "says": {
+      "en": "'A code is a formation's map from senses to forms.' Theorem (any type): 'An imposed code makes all agree; each formation loses exactly the distinctions its code drew that the imposed code merges, the source of the imposed code losing none.'"
+     },
+     "role": "carries"
+    },
+    {
+     "record": "synonyms-and-coined-forms",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-synonyms-and-coined-forms",
+     "says": {
+      "en": "Theorem (any type): 'A code letting a sense hold several forms reads every held form back as its sense, and only it, exactly where no two senses hold one form'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "imposing-a-code-breaks-the-symmetry",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-imposing-a-code-breaks-the-symmetry",
+     "says": {
+      "en": "Theorem (any type): imposing one code gives 'agreement from symmetry without a formation above the others, by privileging forms'. The record does not show a code is in fact imposed or that imposing is better."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "How agreement forms and fails: symmetric starts never agree without a break, and a merged distinction returns only from a form held outside or by coining. 'None says whether a code supports or damages 生生.'"
+   },
+   "source_adds": {
+    "en": "Context as a load-bearing primitive; declared token types; authority bounded by context; cross-space recognition by reference or bridge."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-searle-goffman-grounding",
+   "name": {
+    "en": "The grammar as executable status functions (Searle, Mead, Goffman, North)"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "Three primitives; Claims 37-41",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The token is X, the status Y, the space C: the grammar is a syntax for status function declarations, collective intentionality turned into an editable file. Tokens are the shared symbols of symbolic interactionism, a role is literally a token one possesses (Goffman), a space's rules are the rules of the game (North), and tokens are older than markets. The source says the 2026 documents dropped all this."
+   },
+   "quote": "X counts as Y in context C",
+   "carried": "not-carried",
+   "relation": null,
+   "agreement_of": null,
+   "reading": {
+    "en": "No theory of collective acceptance or status here. Nearest is the shared code, a form for a sense agreed by hearing, with convention cited through Lewis 1969 and Skyrms 2010: agreement on a form, no powers conferred. Recognition is supplied or merged into a count, in §12 and in the rule protocol. Class-relative sameness is not 'counts as'. Nothing here says the omission is a defect. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "An account of institutional facts by collective acceptance, with named lineages in social theory and ritual anthropology."
+   },
+   "absence": {
+    "searched": [
+     "Searle, Goffman, Blumer, Douglass North, institutional fact, status function, collective intention, social ontology, social constr, Luhmann: no hits in the chapters, fronts, review, GLOSSARY or record pages",
+     "counts as: hits in other senses only"
+    ],
+    "read": [
+     "05-COLLECTIVES §9's definitions and code readings, §12 including its Reading",
+     "01-ROOT §8.7's Reading on consent and penalties",
+     "the record organizational-rule-inheritance, Conditions"
+    ]
+   },
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-enforcement-by-construction",
+   "name": {
+    "en": "Enforcement upstream: unauthorized action made impossible by design"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "Why possession rather than permission; Claims 30-31, 45, 67; open questions 6, 32",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Permission is a precondition, not a punishment: possession of the right token in the right space is the proof of the right to act, with no separate list to trust. Compliance becomes a property of the design rather than of leaders' goodwill or vigilance. Stated conditionally. The reviews and the folder's own reader later doubt this: holes under it, and the loss of mercy and exception."
+   },
+   "quote": "unauthorized actions are naturally impossible because the preconditions (tokens) are not met",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "On the account's one such machine the form holds: a commit is admitted only under current rights, so an unpermitted write is no step. But complete mediation is supplied there, and no reading of the records can establish it. Admission is not warrant either: rights may be wrong, a rule can be kept and be the wrong rule, and consent and penalty are one class until removal is in the net. So 'impossible' is conditional on what no audit shows, and legitimacy stays open. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "mediated-evidence-transport",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-mediated-evidence-transport",
+     "says": {
+      "en": "Record (periphery; its declarations report at most `propext`, `Quot.sound`, `Classical.choice`): 'A commit is admitted only at the current generation, with every write permitted by the current rights'; 'That the runtime is completely mediated, with no write path outside the interface, is not shown: it is supplied'; 'That the rights held, the programs committed or their ends are legitimate is not shown'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "a-rule-rebuilt-from-the-members-it-limits",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-rule-rebuilt-from-the-members-it-limits",
+     "says": {
+      "en": "'Holder merges recognition, compliance and implementation into one count, so the laws say nothing of them.' Reading [AI reading, new]: 'a rule can be kept and be the wrong rule'. Not modelled: 'conduct other than entry, sanctions, who decides a revision'."
+     },
+     "role": "limit"
+    },
+    {
+     "record": "the-source-texts-test-systems",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-the-source-texts-test-systems",
+     "says": {
+      "en": "Reading [AI reading, D69]: an institution kept by consent and one held by penalties are the thermostat witness read socially, 'in one core class of \"in being or not\" while the penalties stand, told apart once their removal is in the net'; not a new law."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "That an extra write path can leave the public view identical; kept promises and enforced contracts read as laws giving first, 'the law changes, not the state alone' [AI reading, D48]."
+   },
+   "source_adds": {
+    "en": "That compliance can be a property of a design, not of leaders' goodwill or vigilance; the capability move itself: no ambient authority, proof chains, attenuation, trust-minimized governance for actual communities. Also the folder's worry that construction removes mercy, exception and civil disobedience: no live text on these."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-ostrom-token-mapping",
+   "name": {
+    "en": "Ostrom's design principles as token mechanics"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "Claim 42; What was lost, item 4",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Commons governance maps onto token rules: boundaries are membership tokens, monitoring a transparent ledger, graduated sanctions revocation. The claim is conditional on the framework being deployed; the source notes the 2026 documents no longer say so."
+   },
+   "quote": "clear boundaries = membership tokens, monitoring = a transparent ledger, graduated sanctions = revocation",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account reads the boundary rule alone, on one model with no compliance and no records; monitoring and sanction are named as not modelled, and it cites Ostrom only as treating boundary rules as held by those they govern. So it takes up one of the three, by another mechanism: the door's strength is the keepers' own count, not a token presented at it. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "a-rule-rebuilt-from-the-members-it-limits",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-rule-rebuilt-from-the-members-it-limits",
+     "says": {
+      "en": "Reading [AI reading, new]: 'Ostrom 1990 treats boundary rules as held by those they govern; this reads the entry rule only'; limited searches found no door whose strength is the keepers' own count, 'an absence in those searches and no claim of priority'."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "A band of quotas in which the rule holds; a quota too small only where a keeper turns away more than itself."
+   },
+   "source_adds": {
+    "en": "Monitoring and graduated sanctions as mechanisms, and the mapping's other principles."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-emergent-institutions",
+   "name": {
+    "en": "Simple token rules generate institutions nobody designed"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "Why possession rather than permission; Claims 28, 43; open question 35",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Composed rules build hierarchy, promotion ladders and checks without anyone writing them: 100 reputation points auto-issue a role. So a space is a sandbox for studying social emergence, and complexity theory licenses the bet. The folder's own reader notes that emergence is claimed and never demonstrated: the examples compose designed pieces."
+   },
+   "quote": "simple space-level rules generate unplanned macro structures",
+   "carried": "changed",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "Emergence is not licensed in general here. From a symmetric start a deterministic scheme keeping the symmetry forms no agreement; selection does not create an absent practice; hearing makes no form. So what composition reaches is bounded by what is already present or by a named asymmetry. A threshold rule read from what it raises is not thereby the proved lock: that actual rules read the share is the premise. Composed roles nobody wrote have no statement here. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "a-code-held-as-counts",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-held-as-counts",
+     "says": {
+      "en": "Reading [AI reading, D45]: 'That language is an emergent property of free-energy minimization (Friston, Parr and others 2024), read as a guarantee, fails for every deterministic scheme keeping the symmetry from a symmetric start'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "market-model-share-margin-and-ends",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-market-model-share-margin-and-ends",
+     "says": {
+      "en": "Theorem (periphery: the market model): in the model's numbers a share of none stays none (`no_entry_at_zero`, a witness): 'selection does not create an absent practice'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "a-code-formed-between-formations",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations",
+     "says": {
+      "en": "'Hearing makes no form'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "a-swap-symmetric-assignment-singles-out-none",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-swap-symmetric-assignment-singles-out-none",
+     "says": {
+      "en": "Theorem (two roles; periphery): 'among exactly symmetric parties, who contributes is differentiated only by an actual asymmetry or a procedure, whose warrant is open.'"
+     },
+     "role": "carries"
+    },
+    {
+     "record": "capture-through-the-rule",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule",
+     "says": {
+      "en": "Secondary, and only if a rule is so read: Theorem (any type), on a rule read from the share; 'That actual rules read the share is the premise'. That actual metrics are so formed is T7, conjectured."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "A sufficient way out of a lock: a reading favouring at no loss above a bound."
+   },
+   "source_adds": {
+    "en": "The positive programme: composing institutions, and a space as a place to study what forms; the claim that structures nobody wrote come from rules alone."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-rules-revised-like-software",
+   "name": {
+    "en": "Institutions revised like software; civilization prototyping"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "Claims 5, 7, 8, 89, 126-127",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Rules written as data can be changed like code, so institutional change becomes routine rather than convulsive; communities run safe experiments and a library of proven components accumulates. 'Defaults minimize config; gates make customization unbounded.' Societies become seeds that can be forked and edited. Stated as prediction and design direction."
+   },
+   "quote": "updating a rule in an STS space is akin to updating software, with version control and collective agreement",
+   "carried": "changed",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account's reading agrees that openness lies in how rules keep changing, not a rule chosen once, and gives where the claim fails. A revision takes only where a holder stands; operating does not imply being able to revise; and on its one model revisions below, above and inside the band all reach level 0. So 'safe experiments' has no support here, and which changes keep it widening is unsaid. Any 'better' is C's, the condition for scope, neither asserted. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "where-the-possible-grows",
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md",
+     "says": {
+      "en": "§7, Reading [AI reading, D45]: 'a fixed rule, institution, constitution or AI policy whose moves a course makes from some step on does not keep the possible under it widening'. 'Nothing here says which changes keep it widening, or that any actual collective can make them.'"
+     },
+     "role": "carries",
+     "part": "§7, Reading D45"
+    },
+    {
+     "record": "how-fast-a-rule-may-change",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-how-fast-a-rule-may-change",
+     "says": {
+      "en": "Theorem (any type): 'a rule that never reads is unreached; a fast difference reaches the rule only at a reading step'. That concerns what reaches a rule, not how an edit spreads."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "a-rule-rebuilt-from-the-members-it-limits",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-rule-rebuilt-from-the-members-it-limits",
+     "says": {
+      "en": "On the model: no holder, 'a revision does not take'; 'The band does not settle what follows a revision: at the witnesses, revisions below it, above it and inside it reach level `0`'. 'who decides a revision' is not modelled."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "organizational-rule-inheritance",
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-organizational-rule-inheritance",
+     "says": {
+      "en": "In one declared protocol, with two participants 'technical decisions can go on while revision of the governance itself fails: continuing to operate is not still being able to change how one is organized.'"
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "The pace law: given two values, L steps fix every pair of held-rule courses with at most N states exactly when L ≥ 2N − 1."
+   },
+   "source_adds": {
+    "en": "Version control, shared libraries of governance components, and rule editing from a UI or by an agent. The folder's reader notes that edits at conversation speed are not covered by its consent door."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-rules-governing-themselves",
+   "name": {
+    "en": "The token system governs its own rules by its own means"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "Claim 36; open question 46",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Rule-making is itself tokenized: an Admin token authorises defining rules and issuing tokens, possibly under multi-signature, so governance of the rules uses the same mechanism as what it governs. Stated as design direction, a virtue of uniformity. The folder's reader later asks who governs the compiler and finds no amendment procedure."
+   },
+   "quote": "an Admin token authorises `defineRule`/`issueToken`",
+   "carried": "changed",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "Where holding a role lets one rewrite what confers the role, the account's loop is at hand: a rule formed by those it selects, and selection of the capacity to shape it. These need hypotheses (what returns to shapers, readers drawn from the selected), so the design is not condemned; its uniformity gives no protection by itself. The account's own protocol stops the regress by supplying a fixed higher procedure, and says so. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "shaping-read-by-readers-drawn-from-the-selected",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
+     "says": {
+      "en": "Theorem (counts): 'above that critical mass the capacity to shape the rule rises at every step and the course is locked for it; below it the capacity falls at every step and the course is locked the other way'."
+     },
+     "role": "carries",
+     "part": "r-shaping-read-by-readers-drawn-from-the-selected, as 'The two joined'"
+    },
+    {
+     "record": "closed-capture",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+     "says": {
+      "en": "Reading [AI reading, D45], after the record's theorem: 'recursive selection favours mechanisms which increase control over future selection' read as a law with its conditions. 'Whether actual institutions or trained systems meet these premises is not established, and nothing here ranks open rule-making above capture: that needs C.'"
+     },
+     "role": "carries",
+     "part": "Reading D45"
+    },
+    {
+     "record": "organizational-rule-inheritance",
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-organizational-rule-inheritance",
+     "says": {
+      "en": "Supplied: 'a fixed amendment procedure and the adoption threshold'. Record: 'the origin of the highest authority' does not follow from the protocol. 'how procedures are themselves kept or dropped' is a distinct question."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "An exact lever at a step: where rule-making gives nothing back to the rule-makers alone and costs them, the capacity falls. Capable assistance to whoever shapes the rule does not lower the selection for control."
+   },
+   "source_adds": {
+    "en": "Multi-signature rule change and governed Kind revision as actual procedures."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-non-inference-algebra",
+   "name": {
+    "en": "No graph inferred from another: the non-inference algebra"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "The refusals; Claims 262-265, 277; open questions 42, 44",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Seven separately owned graphs have their own change and loss laws, and only one grants authority. Containment conveys placement, never permission; creation conveys no grants; visibility is never authority. These are laws of a design, not theorems. The folder's reader calls this refusal the most transferable idea in the corpus."
+   },
+   "quote": "A contains B ≠ A owns B",
+   "carried": "carried-in-part",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "The general form is stated: a description of participation confers no authority, and a statement reading no order cannot entail C, proved of order against the dynamics. They part on status and object: the source's are stipulated laws of one design, for safety, over seven owned graphs; here a method sentence and one non-entailment about order. The account names no relation that grants authority: where rights appear they are supplied. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#beginning-within-the-one-unfolding",
+     "says": {
+      "en": "'A description of participation confers no authority, permission or right.' Responsibility: 'historical contribution alone does not prove it'. 'no condition is silently taken as owned, transferable, additive, scarce or commensurable'."
+     },
+     "role": "carries",
+     "part": "Distinctions and conditions: the sentence on participation"
+    },
+    {
+     "record": "premises-met-and-failed",
+     "anchor": "theories/becoming/chapters/08-METHOD.md#r-premises-met-and-failed",
+     "says": {
+      "en": "'If such a statement entails C (`Comparison`) at a datum on a frame with an extension, it fails at that datum for every order (`ReadsNoOrder.not_entails`).' 'This is immediate, since \"better\" is free'."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "Non-entailment shown, with what it does and does not establish: toggling a predicate in a weaker model shows non-entailment, not that the fuller structure allows the toggle."
+   },
+   "source_adds": {
+    "en": "The seven graphs and their laws; attenuation-only delegation; certificate.parent as the only transitive edge; and the working combination with 'one thing, several truths', overlap that licenses no inference."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-suggestion-not-permission",
+   "name": {
+    "en": "An assisting intelligence's suggestion is not permission to act"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "The social layer; Claims 115-116, 229-231, 267-270; What the whole thing is for",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Advice and authority stay separate surfaces. An agent can act without becoming its principal; actor and beneficiary do not collapse into one effective caller; an agent can never raw-emit a miniapp, because the model's output is the least trusted thing in the system; delegated budgets are conserved, not copied. A worked containment design."
+   },
+   "quote": "conflating a helper spirit's suggestion with permission to act",
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "agreement_of": "reading",
+   "reading": {
+    "en": "Proposed here. Unstated for an assistant; a like form stands on two declared machines: a proposal keeps the rule until a gated adoption, and a commit is admitted only under current rights. Who holds the right is supplied, its legitimacy not shown. The account's alignment asks what a selection can reach, not how an output is authorized. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "organizational-rule-inheritance",
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-organizational-rule-inheritance",
+     "says": {
+      "en": "Theorem (any process; one declared finite protocol, an instance): of review, enrollment, proposal, adoption, integration and handoff 'only adoption is gated, so every ungated step keeps the rule'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "mediated-evidence-transport",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-mediated-evidence-transport",
+     "says": {
+      "en": "Record (periphery), law 3: 'A commit is admitted only at the current generation, with every write permitted by the current rights, change allowed and its write units drawn from the reserve within the deadline'. Complete mediation and legitimacy of the rights are not shown."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "Deference as worth, not authority: on its own model a formation ranks deferring to a reviser against a route of keeping its law, by each one's loss with its excess [AI reading, RR2]."
+   },
+   "source_adds": {
+    "en": "The claim itself for assisting agents; a confused-deputy boundary, presenter and beneficiary kept apart, depth-0 delegation by default, budgets conserved across siblings, and validate-clamp-inert for model-authored code."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-agents-operators-human-root",
+   "name": {
+    "en": "Agents as ordinary operators, with a human at the root of authority"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "The social layer; Claims 14, 137-138, 193",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Agents join through the same door as humans, bear the same member label and can moderate; they have no privileged class or backdoor. Yet hero-as-principal keeps a human at the root of every authority chain, and acting for a human is a separate explicit path. A design commitment, owner-approved."
+   },
+   "quote": "agents are operators, not exceptions",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "On its thesis the account shares the first half: a person and an AI system are formations within the unfolding. It does not state the second. No party is at the root: its direction, a reading under both premises, asks to keep challenge and revision effective without obeying every challenge or shutdown request, and it reads capability as a reason to pool, not to govern. A human root is a procedure whose warrant it leaves open; whether an actual AI system counts is not shown. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
+     "part": "the opening, on the thesis of one relational unfolding",
+     "role": "neighbour",
+     "says": {
+      "en": "On the thesis of one relational unfolding, 'a person, an AI system and a training process are formations within the unfolding'."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
+     "part": "D68",
+     "role": "carries",
+     "says": {
+      "en": "Reading [AI reading, D68]: 'Alignment to a principal alone is therefore not alignment of the joint selection', the assistant's order rising with the principal's family being 'the reading's premise, not the law's'."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
+     "part": "D45",
+     "role": "carries",
+     "says": {
+      "en": "Reading [AI reading, D45]: 'Capability is a reason to pool, not to govern'."
+     }
+    },
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#direction",
+     "says": {
+      "en": "Reading [AI reading, D65], under the direction's conditional (the continuation condition for scope, C for order, neither asserted): 'to keep challenge and revision effective without obeying every challenge or shutdown request'. Also: 'whether an actual AI system counts so is not shown'."
+     },
+     "role": "carries",
+     "part": "D65"
+    },
+    {
+     "record": "a-swap-symmetric-assignment-singles-out-none",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-swap-symmetric-assignment-singles-out-none",
+     "says": {
+      "en": "Among exactly symmetric parties, who contributes is differentiated 'only by an actual asymmetry or a procedure, whose warrant is open.'"
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "That capable assistance to whoever shapes a rule does not lower selection for control [AI reading, D68]; and 'An AI system's coupling into scale and far consequences and a person's into a lived situation do not replace each other.'"
+   },
+   "source_adds": {
+    "en": "An actual assignment of answerability to humans, so that a chain of agents always ends at a person."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-host-without-constitution",
+   "name": {
+    "en": "Operating infrastructure without owning a community's constitution"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "The problem; What the whole thing is for; Claims 4, 6, 294-295",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The problem is political: a community on a platform cannot see its rules, change them without consent, or take them elsewhere. The theory's payoff: a host operates without owning the constitution, a package adds behaviour without ambient power, and members become participants in explicit contracts. Called by the source the point of the exercise, and offered as what the design could make possible."
+   },
+   "quote": "without owning the world's constitution",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "agreement_of": "thesis-or-method",
+   "reading": {
+    "en": "The worry stands here almost in these terms: running a shared interface and controlling its modification is a route of capture, read as a historical correspondence with no theorem. Whether this is degeneration is left open. The tests differ: the account asks who decides admission, comparison and correction next round, and what reads beyond the share; the source separates host from constitution. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#markets",
+     "says": {
+      "en": "Reading [AI reading, D65; a historical correspondence, no theorem]: 'Running a shared interface and controlling its modification changes others' admission and comparison through operation itself, a route of capture besides paid influence; a reform is judged by who decides admission, comparison and correction next round, not by removing one named practice'."
+     },
+     "role": "carries",
+     "part": "D65"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#open",
+     "says": {
+      "en": "Open: 'Whether enshittification (relations formed in shared activity turned into control limiting later creation and correction) is an institutional form of degeneration.'"
+     },
+     "role": "limit"
+    },
+    {
+     "record": "closed-capture",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+     "says": {
+      "en": "Reading [AI reading]: 'winners writing the next scorecard is `ReadsShare`'; what leaves is coupling joined to the selection."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "What decides a lock: counts of readers when the loss is read, and when."
+   },
+   "source_adds": {
+    "en": "A design target: legible rules, operator competition, a host separated from a constitution, and explicit contracts. No live text takes these up; 05 §11 lists sibling programmes as applications, not this folder."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-fork-without-amnesia",
+   "name": {
+    "en": "Leaving with one's history: portable worlds and forks that keep lineage"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "What the whole thing is for; Claims 21, 89, 128, 295-296",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Migration should be an ordinary governance option, a sub-group that outgrows its home graduates by an ordinary transition in place of schism, and forks keep lineage without granting the source continuing control. Exit is what keeps operators honest. Stated as prediction and direction, unbuilt."
+   },
+   "quote": "Forking preserves lineage without granting the source continuing control",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "In one declared protocol a fork keeps its source as a branch and hands off the other, and a handoff carries rule, roster and adoptions: lineage has this form. The account adds what the seed image leaves out: a copied rule with no one continuing cannot operate, and migration must be paid for. Blocked exit reads as a fault only in a D65 reading; its discipline on a host is unstated, and no succession's warrant is shown. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "organizational-rule-inheritance",
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-organizational-rule-inheritance",
+     "says": {
+      "en": "Record, law 4, conditional within one declared finite protocol: 'A fork keeps its source as one branch and hands off the other, and a position can be present on both.' 'Handoff keeps the rule, the roster and the adoptions'. Chapter: 'branching or handoff carries the rule while continuing participation decides its execution'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "succession-on-a-funded-carrier",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-succession-on-a-funded-carrier",
+     "says": {
+      "en": "Theorem (periphery): 'Selection must fund actual succession.' Payload '(command, credential, claims, receipts)'; in a witness 'a budget for correction alone fails to pay for migration'. Does not show: 'That a succession is warranted or its command right'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "formed-software-continuation",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-formed-software-continuation",
+     "says": {
+      "en": "Assessment (selected histories, no theorem, not a universal law): in LibreOffice and Narwhal inherited code, work, coordination and interim support carried activity under partial reorganization. Record: Narwhal 'limits universal third-party exit claims without establishing lost access control'."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "whole-and-regions-and-bounded-centers",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-whole-and-regions-and-bounded-centers",
+     "says": {
+      "en": "Reading [AI reading, D65]: kept apart from an omission of the representation, 'a fault in organized relations (suppressed feedback, blocked exit)'."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "That operational adaptation, replacing a dependency and changed control over later adaptation each need separate evidence."
+   },
+   "source_adds": {
+    "en": "Exit as a mechanism of correction distinct from reading, the threat of leaving disciplining a host; lineage with no continuing control; graduation in place of schism, which §12 lists as not modelled."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-unify-declaration-split-execution",
+   "name": {
+    "en": "Where unification stops: a load-bearing split is a result"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "The refusals; Claims 156, 175, 255-257",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The hypothesis that membership, holdings and the message DAG are one primitive was confirmed for the relation and the mental frame and refuted for the mechanisms, which differ along timing, residency, failure mode, context and cache lifetime. A rigorous 'keep this split' is worth as much as a unification. The folder's reader names this the one general method result."
+   },
+   "quote": "Unify the DECLARATION; split the EXECUTION by its real axis",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "agreement_of": "thesis-or-method",
+   "reading": {
+    "en": "The account has this discipline of its own: one symbol to write in, while each central declaration carries a counted distance from the root, a law written in the grammar is not thereby proved there, and amounts are conceded as not read off relations. The source's reason, that conservation has its own law, meets that last concession. Different domains, the same refusal to let a shared notation claim a shared mechanism. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "one-root-to-its-edge",
+     "anchor": "theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge",
+     "says": {
+      "en": "'Each of the 117 distinct central declarations has one standing against the edge of one root. Eleven are derived'; 'Six are counting'; 'The other 99 stand at a named distance, each with its reason'."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#expressible-is-not-derived",
+     "says": {
+      "en": "'A law proved on a model can usually be written in the grammar's vocabulary, but writing it there does not prove it there.'"
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#beginning-within-the-one-unfolding",
+     "says": {
+      "en": "'A separate type, a local resource account or a separate question asserts no fundamental separation, and a shared notation establishes no constitutive connection.'"
+     },
+     "role": "carries"
+    },
+    {
+     "record": "amounts-by-unit-matchings",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-amounts-by-unit-matchings",
+     "says": {
+      "en": "Theorem (Flow and Web; the grammar's pairing): 'Amounts, the root's second sort: balance represented by selected unit matchings, not derived.'"
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "what-dependence-alone-carries-of-a-level",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-what-dependence-alone-carries-of-a-level",
+     "says": {
+      "en": "Theorem (World): 'So the second relation is genuinely second only for a falling response with no complement'."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "On a first count a rival dropping the word ties, and 'the word adds nothing'."
+   },
+   "source_adds": {
+    "en": "That a refuted unification, written down, is a result worth as much as a unification; a criterion by engineering axes (timing, residency, failure mode). The seam below the one surface is in the exceptions entry, where the two part."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-metaphysical-compression",
+   "name": {
+    "en": "Against metaphysical compression: 'just a tie' loses handles"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "The counterexamples; Claims 238, 315; open question 7",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The sharpest internal critique: declaring every connection one primitive feels elegant and loses what must be told apart. Membership against role against ban, holding against containment against delegation, feed against read permission are product facts, not notation; the old zoo is replaced by a more abstract one. Elegance has to be earned by closure, not renaming."
+   },
+   "quote": "If every concept is declared 'just a tie,' the architecture may feel elegant while losing operational handles",
+   "carried": "carried-in-part",
+   "relation": "contrary-reading",
+   "agreement_of": null,
+   "reading": {
+    "en": "Aimed at an engineering vocabulary, it argues against the form the account uses: one kind of symbol. Kept as a test. The account concedes part: as a language it forbids nothing, content comes through hypotheses, and most central results use no root law. On the World one such loss is exact: dependence alone misses a falling response with no complement (see the prohibition entry). What it still asks: can 'read as condition' tell a ban from a role without what models add? [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/01-ROOT.md#one-kind-of-symbol",
+     "says": {
+      "en": "'The grammar has one kind of symbol, a relation between occurrences, and builds everything else from relations by a few operations'."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#what-would-defeat-the-reading",
+     "says": {
+      "en": "Thesis, argued: 'What it forbids. As a language, nothing: any carrier, relation and class will do'."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/ONE-PAGE.md",
+     "says": {
+      "en": "'Of the central results a few are cases of the root, more use its laws in their proofs and most use none'; 'Most laws below add what the root leaves free'."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "An account of what the shared symbol is not: that its laws forbid no relation, stated, with a rival's possible defeat named."
+   },
+   "source_adds": {
+    "en": "The list of distinctions a practice cannot do without, and a working test: can the unified form still operate them? The account has no such test of its root against a practice."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-prohibition-unexpressed",
+   "name": {
+    "en": "Possession cannot express prohibition"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "The counterexamples; Claims 306-309; open question 31",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Bans, mutes, blocks and timeouts are social facts not held by their subject. The review lists negative rights among what the design cannot do elegantly; moderation, appeal and sanctions must be designed, not derived. The folder's reader calls this a theoretical fault: the founding sentence is incomplete, and a space imposing a state on a spirit may be a second irreducible relation."
+   },
+   "quote": "a token you hold cannot express a right you have been denied",
+   "carried": "fresh-reading",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "The same question has an exact answer on the World. A token as precondition has the form of a dependence at a need; revoking, of a level falling: carried. A ban that removes a good-standing token is a complement at a fixed total: carried too. A ban held as its own positive fact is a falling response with no complement, and only there is a second relation second. No live text says this of bans: the mapping to bans is this reading's. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "what-dependence-alone-carries-of-a-level",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-what-dependence-alone-carries-of-a-level",
+     "says": {
+      "en": "Theorem (World; no axiom): 'dependence alone, with activity needing support, carries of a level exactly the responses rising with it, and a fall only where some level falls; with a complement at a fixed total it carries every response'. 'So the second relation is genuinely second only for a falling response with no complement'. Does not show: 'That a given formation reads only its dependences, or that a condition has a complement in a given world'."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#modelling-commitments",
+     "says": {
+      "en": "A commitment of the representation: 'Requirements as thresholds', 'support is `need ≤ level`'."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "coupled-regimes",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-coupled-regimes",
+     "says": {
+      "en": "On two conditions each giving from what it has: 'inhibition breaks the order of fates'."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "a-rule-rebuilt-from-the-members-it-limits",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-rule-rebuilt-from-the-members-it-limits",
+     "says": {
+      "en": "Entry modelled as a count turned away. Not modelled: 'why a teacher turns anyone away, conduct other than entry, sanctions, who decides a revision'."
+     },
+     "role": "limit"
+    }
+   ],
+   "account_adds": {
+    "en": "The exact line: which falling responses need a second relation, and that a law reading an earlier step can pass a fall through: 'a law may read whether a need was met at an earlier step, and through that a fall can pass'."
+   },
+   "source_adds": {
+    "en": "Imposition as a social fact done to someone; moderation as its own system of report, appeal and evidence; negative rights taking precedence over what is held. Sanctions are named as not modelled."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-endings-as-transitions",
+   "name": {
+    "en": "Endings with form: release, composting, commemoration; no erased history"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "The social layer; Claims 113-114, 117; the reader's note on becoming",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A community's life is a named sequence: doorway, welcome token, graduation, deactivation, release, composting, commemoration. Leaving is an act with a form; endings are generative, not merely terminal; what stops is metabolised, not deleted; a community that can delete its record can rewrite who it was. Value stance, in an archived kit. The folder's reader glosses it as 生生不息 applied to institutions."
+   },
+   "quote": "what a community stops doing is metabolised and remembered rather than deleted",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "Near the practical table: 'end' has its grounds, and deleted records change the judgment, conditional on living significance and J1–J4, scope from the continuation condition, any order needing C, neither asserted. But 'endings are generative' the account will not say: ending is not renamed generation, and ending what feeds no more counts as a loss under the condition. A pattern lasts through its carriers' passing only while carriers keep beginning. So where it holds is named, not general. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "practical-judgment-under-living-significance",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-practical-judgment-under-living-significance",
+     "says": {
+      "en": "Conditional (living significance, J1–J4, correspondence E; an argument with checked consequences). Response 'end', grounds: 'fulfilment, justified release, loss of warrant, with response to residual losses'; what changes the judgment: 'renaming, deleted records, hidden undertakings'."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/01-ROOT.md",
+     "says": {
+      "en": "'Degeneration, ending and mixed change belong to the same unfolding and are not renamed generation.'"
+     },
+     "role": "carries"
+    },
+    {
+     "record": "feeding-from-a-step",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-feeding-from-a-step",
+     "says": {
+      "en": "Theorem (World) and Conditional (the continuation condition): 'Care bounded by feeding from each step permits ending what feeds no more', 'which under the condition counts as a loss'. No order without C."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/04-LIFE.md",
+     "says": {
+      "en": "'A pattern whose carriers are brief lasts only while carriers keep beginning'."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "a-code-formed-between-formations",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations",
+     "says": {
+      "en": "Under hearings that copy, the one neighbour on why erasure lasts: 'a merged distinction returns only from a form held outside, or by coining. A resolution written back into the records that later cohorts read rests from the next cohort on.'"
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "Preserve, transform and transfer beside end, each with what changes the judgment; 'nominal succession' among what changes the judgment of a transfer."
+   },
+   "source_adds": {
+    "en": "The plain assertion that such endings are generative; composting and commemoration as named transitions, witness minted to those present, and graduation as a threshold of belonging."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-good-existence-values-coded",
+   "name": {
+    "en": "A good existence: more possibilities, values coded into the world"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "What the whole thing is for; Claims 3, 88, 90; In Ren's own words 13, 15, 17",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The bonfire gives warmth and gathers people; it is a good existence because it creates more possibilities, strengthens trust and makes us more aligned; it does not worship moloch or the market. Values can be coded as rules of the world. The substrate is a digital operating system for 仁义礼智信. Stated without a premise."
+   },
+   "quote": "it creates more possibilities",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "'More possibilities, so good' has C's form, and the account will not assert it: widening what can form is better only under C for order, with the continuation condition for scope, both unasserted, warrant open. No law says trust or alignment is good, and nothing derives C. Coding a value is implementation, kept apart from warrant and compliance. 'Good' here names no comparer and nothing it reads. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+     "says": {
+      "en": "'Neither is asserted. The condition alone ranks nothing'; 'A ranking of courses needs C or a premise in its place'."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/ONE-PAGE.md",
+     "says": {
+      "en": "'No law evaluates: none says a loss is a harm or restraint better.' 'C: widening what can form is better.' Widening 'needs no premise; that the wider is better does.'"
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#not-shown",
+     "says": {
+      "en": "Not shown: 'Any evaluation: no law says a drain is a harm, restraint better, cooperation good or a shared code worth keeping.'"
+     },
+     "role": "limit"
+    }
+   ],
+   "account_adds": {
+    "en": "What widening is, without a premise, and that mixed cases go undecided by C: more possibilities at some cost are not ranked."
+   },
+   "source_adds": {
+    "en": "The five constants as the content of an operating system; warmth, gathering; a named adversary, moloch. Neither the constants nor moloch has a live hit."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-intersubjective-infrastructure",
+   "name": {
+    "en": "Infrastructure for consensus, joint action and culture"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "The problem; Claim 3; In Ren's own words 17",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The purpose is not a product but intersubjective digital infrastructure: building consensus, acting together, holding and shaping culture. The README calls this the theory's real thesis statement, absent from the papers."
+   },
+   "quote": "建立共识，共同行动，保持和塑造文化，主体间性的数字基础设施",
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "agreement_of": "reading",
+   "reading": {
+    "en": "Proposed here; no live text reads these as this purpose. Each of the three has a law on its own model: agreement as a code shared through hearings; joint action as compatible plans, which locally successful plans can fail; a practice kept as a rule passed through members, with one closed connection from enacted practice to further participation. These are conditions and failures, not infrastructure, and they say nothing of whether any of it supports 生生. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "a-code-formed-between-formations",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations",
+     "says": {
+      "en": "'where two forms differ, an order brings every start to agreement exactly where it gives all formations one origin'. Being joined through couplings is not enough."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "joint-plan-composition",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plan-composition",
+     "says": {
+      "en": "Theorem (any process): where steps project and plans are compatible the zipped joint plan keeps both guards; 'Two locally successful two-step plans on one two-unit reserve fail at the second joint step'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "joint-plans-from-a-supported-start",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start",
+     "says": {
+      "en": "'Promises do not': reciprocal eventual promises can be empty; ignition needs a reserve already present."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "a-rule-rebuilt-from-the-members-it-limits",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-rule-rebuilt-from-the-members-it-limits",
+     "says": {
+      "en": "A minimal model of one kind, 'an entry rule on a shared stock, passed through members who also keep it'; 'It is not a definition of an institution.'"
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "joint-practice-forms-continuation",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-practice-forms-continuation",
+     "says": {
+      "en": "Theorem (periphery; compliance and higher authorization supplied): 'It closes one connection from enacted practice to further participation, not the arrival of people or indefinite self-maintenance'."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "Failure conditions; that symmetry must be broken for agreement; that mutual promises cannot start a loop with no source."
+   },
+   "source_adds": {
+    "en": "A built substrate for it, and culture as something held on shared digital state."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-explainable-authority",
+   "name": {
+    "en": "Authority must be able to say why, truthfully"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "Agency is a trait; Claims 195-196, 199, 249, 308",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "'Why can Alice do this?' must trace through held item, membership, delegation and gate as one graph of cause. Refusals that cannot be explained replace an arbitrary leader with an arbitrary machine. An explanation that fabricates a conjunction the runtime never computes would lie; and a mechanism built but unwired was marked closed."
+   },
+   "quote": "authority you can `explain()` beats authority you *assert*",
+   "carried": "fresh-reading",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "Proposed here; no live text says this of authority over a member. A like form appears for claims to knowledge, assessed and not proved: authority needs inspectable grounds. Premise-tracked derivation gives the form of 'why' but withholds authority by its own statement. The source's domain, a refusal towards a member, is another; nearest is a conditional direction, on both premises, asking effective opportunities to understand and challenge, and no criterion of legitimate change is supplied. A fabricated explanation has the form of a report taken for the condition. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#scientific-standing",
+     "says": {
+      "en": "Assessment, of empirical authority and not of governance: 'Claimed empirical authority needs inspectable grounds for its distinctions; claimed continuing correction needs operative routes from relevant defeats to changed conclusions or methods.'"
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "derivation-soundness",
+     "anchor": "theories/becoming/chapters/08-METHOD.md#r-derivation-soundness",
+     "says": {
+      "en": "A claim derived from a basis under local premises holds wherever they hold; a local premise supports a conditional derivation, 'not its own discharge'; 'Soundness supplies neither the truth of the basis nor any authority.'"
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "alignment-direction-under-widening",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-alignment-direction-under-widening",
+     "says": {
+      "en": "Conditional (the continuation condition for scope, C read as widening for order, J1–J4, correspondence E; neither premise asserted): 'legitimate participation, with effective opportunities to understand, challenge and revise'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "a-reading-informed-and-revalued",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-a-reading-informed-and-revalued",
+     "says": {
+      "en": "Of its own laws: 'no criterion of legitimate, desired or autonomous change is supplied here'."
+     },
+     "role": "limit"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#five-step-test",
+     "says": {
+      "en": "'Tell a change in the actual condition from a change in its report, label or proxy.'"
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "Insulation's exact form: strong grounds against a claimed authority where a practice insulates a favoured verdict from evidence, that form alone not deciding standing."
+   },
+   "source_adds": {
+    "en": "Explainability owed to those governed, as a condition of legitimacy, and a single answerable query with a truthful trace."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-no-cached-allow",
+   "name": {
+    "en": "Standing is re-read at each decision; a cached allow is never authority"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "Agency is a trait; The refusals; Claims 27, 34, 69, 194, 205, 265, 276, 287",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Move the equipped key out of its slot and standing disappears by semantic change, with nothing to sync. Revocation is load-bearing and lazy: dependents fail resolution, re-grant reactivates, and a revoked method's next operation fails. Every invocation re-evaluates current evidence; a projection accelerates live truth and never replaces it; a capability is a handle, not a permanent grant. Stated as an absolute law of the design."
+   },
+   "quote": "a cached `allow` is never Authority",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "agreement_of": "law",
+   "reading": {
+    "en": "The account holds this form as a World premise a world may have or lack: a relatum is active only where the levels meet what it then requires, read at each step. A reserve is what defers it: the zero reserve is exactly activity needing support. A cached allow has a reserve's form; lazy revocation, a chain running down link by link; re-grant, admission by level. An old envelope and a current-generation commit state it on their models; an old view is a neighbour. It binds no system by itself. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/01-ROOT.md#world-premises",
+     "says": {
+      "en": "A premise of the World, not a theorem about systems. Activity needing support: 'a relatum is active only where the levels meet what it then requires'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "reserve-defers-ending",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-reserve-defers-ending",
+     "says": {
+      "en": "Theorem (World): 'the zero reserve is exactly activity needing support'; along a chain of embodied links 'coextinction runs down the chain link by link'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "access-yet-to-form",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-access-yet-to-form",
+     "says": {
+      "en": "Theorem (periphery; route, operations and permissions supplied): 'an old view with the destination cannot rebuild the updated view without a fresh reading'."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "reviewers-count-by-independent-causes",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-reviewers-count-by-independent-causes",
+     "says": {
+      "en": "Theorem (pure core; computed cases are witnesses): 'the old envelope reused after the merger accepts the two merged supporters, a recomputed one rejects them'. Formulas and bounds are supplied."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "mediated-evidence-transport",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-mediated-evidence-transport",
+     "says": {
+      "en": "Record (periphery), law 3: 'A commit is admitted only at the current generation, with every write permitted by the current rights, change allowed and its write units drawn from the reserve within the deadline'."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "Readiness as an exact condition on the induced envelope; a roster failing wholly on a cause in no bound; and 'the access relations that can still form limit what a current abstraction may forget' (what a summary keeps)."
+   },
+   "source_adds": {
+    "en": "The rule as binding on a runtime, its cost argument (a cached rate-limit or expired mute is an exploit), lazy revocation with a clean audit, the review's alternative of derived tokens auto-revoking, and handle kept apart from grant."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-split-authority-web-of-trust",
+   "name": {
+    "en": "Split authority and peer-issued reputation"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "Why possession rather than permission; Claims 29, 52",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "One privilege becomes several tokens held by different people, and an m-of-n rule requires them to act together: checks and balances as token arithmetic. Reputation is peer-issued rather than platform-computed, and rules that gate entry on the web of endorsements are also the sybil-resistance mechanism."
+   },
+   "quote": "with an m-of-n rule requiring them to act together",
+   "carried": "fresh-reading",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "Proposed here; the law is of reviewers, and no live text says it of a split privilege or of endorsements. Read so, it says where such counting holds. Counting holders is sound only where they fail by independent causes: reviewers count by causes, not names; a copied witness changes nothing. m-of-n among holders under one cause, or endorsements copying one another, buy less than the arithmetic shows. The merely agreeing case is not shown. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "reviewers-count-by-independent-causes",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-reviewers-count-by-independent-causes",
+     "says": {
+      "en": "Theorem (pure core; fault formulas and bounds supplied, computed cases witnesses): 'Reviewers count by independent causes, not names.' 'three reviewers with distinct single causes are ready, and moving two of them under one cause makes readiness fail while all three names are kept'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "copied-witnesses-change-nothing",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-copied-witnesses-change-nothing",
+     "says": {
+      "en": "Inspection of the longer roster 'gives the same certificate at every pool of faults'; 'That a witness merely agreeing with another, without copying it, adds nothing is not shown'."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "An envelope over causal formulas and its readiness condition."
+   },
+   "source_adds": {
+    "en": "Designs for peer endorsement and gating on it. That endorsement resists sybils is not shown in the account or in the folder."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-one-commit-spine-audit",
+   "name": {
+    "en": "One commit spine: an audit that cannot disagree with state"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "One place where change happens; Claims 200-204, 250-251",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Every durable change lands atomically through one coordinator, the Occasion, binding changed roots to the commit; a write outside it fails closed; history, recovery and authority frontiers read one source. So audit cannot disagree with state. The folder also records a regression: an ungated read path leaked hidden rows and keys."
+   },
+   "quote": "events are best-effort prunable audit, co-written same-tx so the audit cannot disagree",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "Close structure, with a scope the source's sentence lacks. On the mediated machine, committed bounded programs keep coverage along every history, but only given no write path outside the interface, which is supplied; an outside writer leaves records and journal identical. 'Cannot disagree' then holds under complete mediation, and no audit shows that. Where every change is gated, a change splits at the gated step: the form of 'a write outside fails'. 'Occasion' in 03 is another sense. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "mediated-evidence-transport",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-mediated-evidence-transport",
+     "says": {
+      "en": "'finite histories of lawful reads and committed bounded overwrite programs, each taking its change scope from the fields it writes, keep actual coverage'; 'an extra write path can leave the public view identical, so logs cannot establish mediation'. Complete mediation is supplied, not shown."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "organizational-rule-inheritance",
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-organizational-rule-inheritance",
+     "says": {
+      "en": "Theorem (any process): 'a course that changes it splits into a prefix keeping it, a gated step that itself changes it, and the rest'."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "'every acceptance reading only the public view that accepts the inspected machine accepts the changed one' (`record_only_acceptance_cannot_exclude_the_extra_writer`)."
+   },
+   "source_adds": {
+    "en": "The guarantee for an actual runtime: every durable change through one coordinator, so that audit cannot disagree with state. Row as truth and event as prunable shadow; erasure and pruning from one source; failing closed as a runtime check."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-gamed-rewards",
+   "name": {
+    "en": "Badly calibrated rewards get gamed"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "Claim 44; What was lost, item 12",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The triad is structurally RPG state logic (character, inventory, zone), which licenses importing game design into institutions, including its warning that rewards too easy or too hard get gamed. The source notes that the warning has no successor in the 2026 anti-pattern list."
+   },
+   "quote": "badly calibrated rewards get gamed",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account places the fault elsewhere: a proxy on some attributes is a selection through the coupling to them, reaching exactly what couples in, its force lying in a supplied premise. What it states is what a reward fails to read, not how it is calibrated: given the premise, a well-calibrated proxy still leaves the unread unreached. So calibration, the source's variable, is not what this law turns on. 'Calibration' as a standing here is another sense. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "selection-through-couplings",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+     "says": {
+      "en": "Theorem (World; no premise). 'It is the proxy problem (Goodhart 1975; Amodei and others 2016; Manheim and Garrabrant 2018) as the account states it'; 'its force lies in the supplied premise that an optimizer selects through just those couplings'."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "The optimum's drain under room and the lock of a metric read from what it selects, each with standing."
+   },
+   "source_adds": {
+    "en": "Calibration as a practical variable, and the claim that game design is a transferable body of institutional knowledge."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-mental-resistance",
+   "name": {
+    "en": "Mental resistance as the measure of a conceptual frame"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "Why the pivot was necessary; Claims 177, 240, 248; open question 43",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A frame is judged by how many independent things one must hold in mind to predict behaviour at a point, explicitly not by primitive count: three primitives with a dozen special cases are worse than five that compose. A founder's 'hard to conceptualize' is a frame-smell. The first measurement missed its target, and the reader doubts that the proxy measures load."
+   },
+   "quote": "the number of independent things you must hold in working memory to predict the system's behavior at a point",
+   "carried": "not-carried",
+   "relation": null,
+   "agreement_of": null,
+   "reading": {
+    "en": "The account has no cognitive measure of its own form. Neighbours, neither this: it compares rivals by what they forbid and by a count of patterns (08's thesis, 'a tie' on a first count), and it asks what a summary must keep to answer the questions of a course, with no count of what a head holds. It writes reading times on its fronts. The source's refusal of primitive count could be asked of that first count. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "A test of a framework by what its users must hold, with a budget enforced in CI."
+   },
+   "absence": {
+    "searched": [
+     "working memory, cognitive load, hold in mind, mental, understandab, legib, intelligib, description length, parsimon: chapters, fronts, review, GLOSSARY (no hit in this sense)",
+     "fewer patterns (ONE-PAGE, 08)"
+    ],
+    "read": [
+     "08-METHOD #what-would-defeat-the-reading",
+     "08-METHOD's what a summary keeps",
+     "ONE-PAGE's table row on what would show it wrong"
+    ]
+   },
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-rhetorical-victory",
+   "name": {
+    "en": "No rhetorical victory before closure; every claim labelled"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "The refusals; Claims 149, 243, 249, 252-253, 316",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "If a document says the item acts, the first milestone must make that literally true in tests. Renaming is not the win. Every claim is labelled current fact, current violation, accepted destination, experiment hypothesis or rejected path. Code rises to the docs, and a violated law is kept, its cost named, not edited to match."
+   },
+   "quote": "rhetorical victory before engineering closure",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "agreement_of": "thesis-or-method",
+   "reading": {
+    "en": "Shared discipline: standings kept apart, a proof claim checked, relabelling shown to fail on one protocol, and an identity not made true by declaring it. 'Do not edit the law' uses another sense of law: the source's is a norm a codebase must rise to, the account's a statement read off what it holds of, where a disproved property 'may show' a false law. The nearest match to that ruling is a frozen scoring rule. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#standings-and-bases",
+     "says": {
+      "en": "'Every result statement in the chapters opens with one bold label, and a proved result names its base.'"
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#five-step-test",
+     "says": {
+      "en": "'declaring an identity does not make it true'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "acquired-revision-of-pending-task",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-acquired-revision-of-pending-task",
+     "says": {
+      "en": "Conditional (practical commitments, with correspondence, authority and responsiveness, explicit in the protocol): 'relabelling without rewriting the encoding fails (`CommonTaskRevision.declaration_only_fails`)'."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "Machine-checked proof and axiom reports; 'a frozen rule fixes the scoring, not that it measures what the thesis names.'"
+   },
+   "source_adds": {
+    "en": "That a document's words must become literally true in tests at the first milestone; the five-way label for engineering claims, a CI concept budget, and adversarial reviews with measured fidelity."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-agency-composed",
+   "name": {
+    "en": "Agency composed, not universal: addressable is not active"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "Agency is a trait; Claims 187-192",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The main correction to a naive actor model: addressability is universal, agency a composed stack of owned facts (a signing principal, ports, gates, certificates). Holding authority is separated from initiating action. Universal agency is rejected on cognitive grounds. An item may itself act; this is not delegated to a helper."
+   },
+   "quote": "Every Yi should be addressable. Not every Yi should be active.",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "agreement_of": "thesis-or-method",
+   "reading": {
+    "en": "Shared: agency is not presupposed of what exists. On the World this is closer than method: relata take and give across each step and each is active or not, only active relata give, and one relatum can stand as a condition while not active. So standing and acting come apart on the model, a premise there. The reasons differ: the source reduces what must be reasoned about. The account has no decomposition into traits. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/01-ROOT.md#world-premises",
+     "says": {
+      "en": "'relata take from and give to one another's levels across each step, and each is active or not'; 'Only active relata give'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "life-as-condition-of-life",
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-life-as-condition-of-life",
+     "says": {
+      "en": "Theorem (World): 'can stand as a condition at some level', 'and can be active as a formation'."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#beginning-within-the-one-unfolding",
+     "says": {
+      "en": "'Activity includes change and interaction without presupposing an agent, an intention or a purpose.' 'Relatively enduring organizations form within it, and some come to sense, remember, act and evaluate.'"
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#the-reading-loop",
+     "says": {
+      "en": "'A formation that senses, predicts, chooses, acts and revises is one law within the unfolding, not a subject facing a world'."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "The reading loop's laws, and that a part's choice is 'not a second kind of cause beside the unfolding' [AI reading, D23, D32]."
+   },
+   "source_adds": {
+    "en": "Orthogonal traits (messageable, agent, capability, container), four or five control axes kept apart, and an acceptance test for an item acting itself."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-jian-nondual-actor-place",
+   "name": {
+    "en": "間 and actor as one body with two faces, irreducible in philosophy"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "The actor turn, and 間; Claims 95-101, 302; open question 39",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A session is a set of actors and a place where things happen. 間 is actor, like wave and particle; neither is a special case of the other. There is a cosmic 間 and parallel universes at once. It is first a philosophical system, irreducible in philosophy, reducible in engineering, one symbol enough. The folder's reader counts this as one of three ontologies left unreconciled, and the frame calls the substrate a realization of 间理."
+   },
+   "quote": "间即是actor，它们更多像波粒二象性，一体两面",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "The source asserts an identity and an irreducibility. The account argues one unfolding as a thesis, nonduality a method and no proof, and its cases are role pairs. 'A world is a run' gives plural runs of one law, near 'many worlds', not the same claim. 'No cosmic subject' does not answer 'cosmic 間', which is no subject. The root's symbol is 际, a relation, not 間, a place, and 理 there is a lumping, not 间理's law: shared signs. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#beginning-within-the-one-unfolding",
+     "says": {
+      "en": "'Nonduality is a requirement of method; it proves neither the ontology nor an ethical necessity.' 'A shared process implies no cosmic subject, no aggregate interest and no administrator'."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding",
+     "says": {
+      "en": "'that the theory as a whole needs no independent entity is argued, not proved.' Its neighbours include process philosophy and dependent arising."
+     },
+     "role": "carries",
+     "part": "the sentence after the four results: argued, not proved"
+    },
+    {
+     "record": "worlds-are-runs",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-worlds-are-runs",
+     "says": {
+      "en": "Theorem (World): 'A world is a run of the process admitting every step'. Reading [AI reading, D43]: 'a run is one model of the grammar'."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "Two live arguments that would defeat the thesis, and its nearest case, equality on the carrier."
+   },
+   "source_adds": {
+    "en": "Place as a pole of its own: the where of happening, beside the actor. The account states no such pole: a region is a closure, time the reach of conditions. The theory of 間 is its own folder."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-touch-whitehead",
+   "name": {
+    "en": "Change as one Yi touching another (Whitehead)"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "Claim 304; What was lost, item 14; open question 41",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The glossary's verb for mutation, credited to Whitehead: every event is a touching of one Yi by another. The live vocabulary replaced it with manifest; the folder's reader calls the process thread orphaned, reality as occasions and not enduring substances, the biggest unexploited asset. Ren left the import undecided."
+   },
+   "quote": "Every event is a 'touching' of one Yi by another.",
+   "carried": "not-carried",
+   "relation": null,
+   "agreement_of": null,
+   "reading": {
+    "en": "Not stated. As a proposal only, a neighbour note: the World's premise of balance has every change of a level taken and given among relata, and a world's moves are exchanges. But balance is an accounting premise of a model, and the source's claim is metaphysical: one bearer's contact as the single write verb. 'Touches' in 01 is a word on a step index. The process thesis stands nearer the root's occurrences; the source's stipulated bearer pulls away. [AI reading]"
+   },
+   "targets": [],
+   "account_adds": null,
+   "source_adds": {
+    "en": "Mutation as one bearer's contact with another as the single write verb; a route to develop process philosophy, which 08 lists among its thesis's neighbours, and one record names Whitehead for enduring objects."
+   },
+   "absence": {
+    "searched": [
+     "touch, touching, touches: chapters, ONE-PAGE, THE-THEORY-OF-BECOMING, COLLECTIVE-DIRECTION, FREE-ENERGY-PRINCIPLE, ONE-ARGUMENT, GLOSSARY: only other senses (01's footprint and step index, 04's level nothing touches, 07's scope that follows effects)",
+     "Whitehead: those files and review: no hit; among record pages only continuation-relative-to-a-class, for enduring objects",
+     "occasion, process philosoph: chapters, ONE-PAGE, GLOSSARY: 03's occasions of choice, one sentence of 08's neighbours"
+    ],
+    "read": [
+     "01-ROOT §8.2's opening and premise table",
+     "01-ROOT's rows on the least footprint and the step index, and their D30, D43 Reading",
+     "08-METHOD #one-relational-unfolding, its neighbours"
+    ]
+   },
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-open-ontology-define-kinds",
+   "name": {
+    "en": "Anyone may define new kinds: what makes a world a world"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "The social layer, last paragraph; Claims 180-183",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A user, agent or community must be able to define kinds, locally and unpublished, and others' agents must be able to discover them. A world is defined by the openness of its ontology, not its feature set. The folder's reader notes that no amendment procedure goes with it."
+   },
+   "quote": "this is the key that makes worlds 'worlds'",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "A checked form of why: hearing makes no form, so what can become shared is only what is in use; a new form takes coining. Openness of a course is what it admits, and the possible relative to what is held grows only where what is held changes. A code's form is far less than a Kind. 'Openness is better' is C's, with the continuation condition for scope, neither asserted. No law says worlds need this. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "a-code-formed-between-formations",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations",
+     "says": {
+      "en": "'Hearing makes no form'; 'the forms that can become shared are exactly the forms in use'. 'Coining is another mechanism.'"
+     },
+     "role": "carries"
+    },
+    {
+     "record": "synonyms-and-coined-forms",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-synonyms-and-coined-forms",
+     "says": {
+      "en": "A form coined at one sense, 'heard by all, makes every formation tell them apart again'. Stated where all hold a code merging two senses."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "where-the-possible-grows",
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-where-the-possible-grows",
+     "says": {
+      "en": "Theorem (root; any process, and witnesses): 'what is possible under it from a configuration it reaches is possible from the first'. Reading [AI reading, D45]: 'the possible relative to what is held grows only where what is held changes'."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "That along a course of a stated process the whole possible never grows, so 'openness' needs saying relative to what is held."
+   },
+   "source_adds": {
+    "en": "The constitutive claim that open kinds make a world; ontology-making as a right of each participant; discoverability of meaning by others' agents; local kinds without publication."
+   },
+   "absence": null,
+   "same_as": [
+    "cx-ctxrt-open-ontology-worlds"
+   ],
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-tokens-one-vocabulary",
+   "name": {
+    "en": "Qualitative status and fungible quantity in one token vocabulary"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "Claims 22-23, 55, 226; What was lost, item 6",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Tokens cover credentials, permissions, obligations and statuses and also divisible quantities, so economic and social capital blur and a community can blend them, say a currency that carries voting weight. By 2026 the source itself splits conserved assets (Custody) from issued authority, and the currency vanishes unrecorded."
+   },
+   "quote": "divisible fungible quantities (currency, credits, resource shares)",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account refuses the blur by method: conditions are not silently amounts, and amounts are a second sort its relations do not give, which is conceded. The source's later split of conserved custody from issued authority moves nearer this, without saying why. On what blending would do, a currency with voting weight has the form of influence eroding correction in the market model: there the floor is kept only where the margin allows. One periphery model. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#beginning-within-the-one-unfolding",
+     "says": {
+      "en": "Conditions 'are not necessarily quantities that can be stored or exchanged, and no condition is silently taken as owned, transferable, additive, scarce or commensurable; the World's natural-number amounts are a modelling choice'."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#what-would-defeat-the-reading",
+     "says": {
+      "en": "Thesis, argued: 'The World's amounts are not: no reading of its selected relations gives the count (`World.standing_not_read`), and balance is represented, not derived'; 'Until that sort is derived from relations, this is conceded there.'"
+     },
+     "role": "carries"
+    },
+    {
+     "record": "market-model-share-margin-and-ends",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-market-model-share-margin-and-ends",
+     "says": {
+      "en": "Theorem (periphery: the market model, `propext`, `Quot.sound` and `Classical.choice` reported): with correction strength `α`, 'erosion by influence `β`', influence bound `λ` and floor `θ`, 'let `M = α(1 − θ) − βλθ`'; the floor's keeping turns on `M`."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "formed-software-continuation",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-formed-software-continuation",
+     "says": {
+      "en": "Assessment (selected histories, no theorem): inherited code, work, coordination and interim support carried activity 'as specific conditions, not interchangeable amounts'."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "Markets modelled separately with their own laws; conserved stocks stay rivalrous, positional goods zero-sum."
+   },
+   "source_adds": {
+    "en": "Fungibility and transferability as per-type design decisions, soulbound status so that meaning survives, and deliberate blending of economic and political weight as an option offered."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-private-repair-volatile-presence",
+   "name": {
+    "en": "What must stay private or evaporate: repair, absence, presence"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "The social layer; The counterexamples; Claims 57, 71, 107-108, 312; open question 33",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Absence is information, not deviance. Repair runs privately, for visibility of conflict is a harm vector. A spirit's space is not a public profile. Presence is TTL-bounded, outside durable truth, and privacy depends on it. The folder's reader notes this quietly refutes the 2025 transparency assumption. A claim that some reading of a group damages it."
+   },
+   "quote": "without turning conflict into a leaderboard",
+   "carried": "fresh-reading",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "Proposed here: the account has part of the form and none of the value. A reading is not idle: where the response moves every value, no published prediction is right. A ranked board has position's form, where rises total falls. A copied first act adds agreement, not reach. A finite present forgets, with no 'should'. None concerns repair or privacy, and no law says being read is a harm: that stays the source's. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "a-prediction-read-by-what-it-predicts",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-a-prediction-read-by-what-it-predicts",
+     "says": {
+      "en": "Theorem (any type; near-definitional): 'Where the response moves every value, no published prediction is right'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "relative-position-is-zero-sum",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-relative-position-is-zero-sum",
+     "says": {
+      "en": "Theorem (any type for the counting): 'Across every change of amounts the positions' rises total their falls'."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "readers-reading-readers",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-readers-reading-readers",
+     "says": {
+      "en": "Theorem (any type; near-definitional): 'Copying the first act is the case from the second member: the pool's acts are alike across worlds alike through the first member's coupling'. Reading [AI reading, D45]: 'members reading one channel add agreement, not reach'."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "recurrence-without-premise",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-recurrence-without-premise",
+     "says": {
+      "en": "Theorem (any type), of a determined law on a finite list: 'a present a list holds forgets'. Not a rule that a fact should lapse."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/ONE-PAGE.md",
+     "says": {
+      "en": "'No law evaluates: none says a loss is a harm or restraint better.'"
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "Where a published reading fails exactly, and that readers reading readers reach no further than the first member's coupling."
+   },
+   "source_adds": {
+    "en": "That reading can damage what is read, socially; that some social facts should not last; repair held private; the transparency-privacy conflict. A tension to keep: 07's table counts hidden undertakings among what changes the judgment of an end."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-negative-space-norms",
+   "name": {
+    "en": "The honest negative space: not every norm should become code"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "What the whole thing is for; Claims 9, 32, 300-301; open question 28",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The substrate gives no truth about external events, no legal recognition, no global consensus, no substitute for judgment. Untokenisable norms ('spirit must be polite') stay outside. The architecture is worth its cost only when several hard requirements overlap. The source concedes the boundary and does not theorize what carries such norms."
+   },
+   "quote": "Not every social norm should become code.",
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "agreement_of": "thesis-or-method",
+   "reading": {
+    "en": "Form only: 'a formal system states what it does not reach' is the account's habit too: correspondence is empirical, significance stays free, and 53 classical judgments are listed as inexpressible, five of them on social mechanisms. A list of what a formalism cannot say is no claim that a norm should stay uncoded. That normative half is not stated. Each account's list is its own. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#not-shown",
+     "says": {
+      "en": "Not shown: 'That any actual collective, market, pool, entry rule or optimizer meets the hypotheses of a law'; 'the correspondence is empirical.'"
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#law",
+     "says": {
+      "en": "A law with content 'can become a science's law for a domain only once the domain is shown to meet its hypotheses'; 'The account states no science's law of its own yet.'"
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+     "says": {
+      "en": "「表达不了者五十三，各有其由」: including 社会之机制与特定之种（5）."
+     },
+     "role": "neighbour",
+     "part": "四, 表达不了者五十三"
+    }
+   ],
+   "account_adds": {
+    "en": "A statement of why each is out of reach, sorted by kind of reason."
+   },
+   "source_adds": {
+    "en": "That formalizing a norm can itself be wrong, and a cost test for adopting such an architecture."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-consent-door",
+   "name": {
+    "en": "One consent door, with the founder inside the rules"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "The social layer; Claims 133, 136; open questions 36-37",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Everything entering a community (apps, bots, kits) passes one approval, moderator by default, and a record exists whatever the answer. Bundles may propose bots, never install them. The founder is inside the rules. Called the political core. The folder's reader notes it is per-install, not per-use, and may not cover gate edits."
+   },
+   "quote": "the consent record always exists, *even for the founder's own agent*",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "agreement_of": "law",
+   "reading": {
+    "en": "The gate's form is checked: where ungated moves keep a property, a change passes a gate, and in one protocol both entry to the roster and change of rule need a recorded review or proposal and a passing ballot. But there the seed mandate and recognition are supplied, so the founder stands outside the protocol, the reverse of the source's core, and the highest authority's origin does not follow. Consent's warrant is not read. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "every-origin-passes-the-gate",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-every-origin-passes-the-gate",
+     "says": {
+      "en": "Where ungated steps reflect a property: 'a course ending where `p` holds started where it held, or splits at a gated step after which `p` holds'. 'A gate locates where change can enter a line'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "organizational-rule-inheritance",
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-organizational-rule-inheritance",
+     "says": {
+      "en": "Record, law 3, conditional within one declared protocol: 'Entry to the roster needs a recorded review of the entrant and a ballot passing governance.' 'A step that changes the rule is an adoption with a recorded proposal and a ballot passing the rule of governance'. Conditions: 'Seed mandate, recognition/copying capacity, proposal content, participation and procedural compliance are supplied'."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
+     "says": {
+      "en": "Conditional (the condition for scope; C and the practical commitments for order; an argument, neither premise asserted): 'endorsement does not erase a loss'."
+     },
+     "part": "the Conditional on ends and evaluations entering the same appraisal",
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "That a gate's law holds for any process and grants nothing (a gate on moves is not an authorization: it locates change), and that with two participants a technical decision can pass where revision of governance fails."
+   },
+   "source_adds": {
+    "en": "A procedure of admission binding the founder; a record kept regardless of outcome; consent as the political core. By the source's own S6 a founder's control then flows from ownership, a tension the folder leaves standing."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-generators",
+   "name": {
+    "en": "Generators: conditional producers of spirits and holdings"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "The actor turn; Claim 87; What was lost, item 2",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "In the 2026-04 actor ontology a primitive produces spirits or holdings when coded conditions are met, defines what it creates, and can trade. No successor in Yi: kits install and ports fire, but nothing generates. Stated in passing as a direction."
+   },
+   "quote": "they can generate spirits, or holdings",
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "agreement_of": "reading",
+   "reading": {
+    "en": "Proposed here; no live text speaks of a producer. The word is a false friend: the account's generation never means arising or new organization. The mechanism stands under other names. On the World a new relatum arises through another's giving, only active relata give, and activity needs support: the form of a conditional producer, on premises. Descent bounds 'defines what it creates': it can vary a need and drop a dependence, never add one nothing taking part held. No kind of entity is singled out for this. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "generation-is-replenishment",
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-generation-is-replenishment",
+     "says": {
+      "en": "Theorem (World): the record's title 'uses \"generation\" in the older sense of arising'; 'an embodied relatum is given at least the standing it arises with'."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "life-as-condition-of-life",
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-life-as-condition-of-life",
+     "says": {
+      "en": "Theorem (World): 'an embodied relatum is a condition, and it arises through another's giving'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "transmission-is-inheritance-and-need",
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-transmission-is-inheritance-and-need",
+     "says": {
+      "en": "'transmission lets descent vary a need and drop a dependence, never add one that nothing taking part held'."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "GLOSSARY.md",
+     "says": {
+      "en": "'\"Generation\" never means arising, nor any new organization'."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "Balance around arising, and that its arising replenishes every family containing it."
+   },
+   "source_adds": {
+    "en": "A programmable producer as a kind of entity, authored output, and trade among producers."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-meaning-declared-not-inferred",
+   "name": {
+    "en": "Meaning declared in the open, never read from a representation's accident"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "Why the pivot was necessary; Claims 151, 178, 236, 244",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The pre-pivot failure: what a holding was got inferred from which optional field happened to be set at construction. So meaning must be declared and the runtime never guesses it from names, fields or layout; a name that says otherwise is a lie to be fixed in code. The source calls this the one law to keep if only one survives."
+   },
+   "quote": "meaning should be in `kinds[]`, not in optional field presence",
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "agreement_of": "thesis-or-method",
+   "reading": {
+    "en": "Proposed here; no live text says this of a design. The account's habit has a like form for premises and names: what a conclusion depends on is stated where it depends on it, a name is adopted only where the statement means exactly that, and one stating a wrong meaning is renamed. That concerns a theory's assumptions, not a running system's data, and its check is weaker than a compiler. They part on where meaning comes from: an author's declaration there, a relation a law or test can read here. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#method-and-the-formal-core",
+     "says": {
+      "en": "'the real assumptions lie in the modelling (discrete steps, one index, natural-number amounts, propositions as activity, identity by naming), each stated where a law depends on it.' 'Open: that every premise is named, which the completion checks support and cannot certify'."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#names",
+     "says": {
+      "en": "'A name is adopted only where the statement means exactly that'; 'A renaming after landing needs a name that states a wrong meaning.'"
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding",
+     "says": {
+      "en": "Thesis, argued: 'state the relation that carries what is cited, between which occurrences, where a law or a test can read it'."
+     },
+     "role": "neighbour",
+     "part": "'state the relation that carries what is cited'"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#beginning-within-the-one-unfolding",
+     "says": {
+      "en": "'A separate type, a local resource account or a separate question asserts no fundamental separation, and a shared notation establishes no constitutive connection.'"
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "Labels carrying nothing on the World: a renaming preserves the five readings checked."
+   },
+   "source_adds": {
+    "en": "The rule as enforceable law of a runtime: a compile step closing declarations into a plan, and a measured cost of breaking it. The account applies no such test to its own names beyond its checks."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-kind-immutable-law",
+   "name": {
+    "en": "A Kind as immutable semantic law, stored outside what bears it"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "Claims 165-167, 171, 239; What was lost, item 15",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A Kind revision is immutable semantic law: genesis, schema, gates, ports, facets. Meaning lives in the Kinds a Yi bears, and a Kind is stored apart, never as a Yi. The founder's 'even the type of a thing is a thing' was traded for compiler closure. The source says so itself and treats Kinds as live governed law, revised by new revisions."
+   },
+   "quote": "immutable semantic law",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "In the account a law is read off what it holds of and does not stand over it, and the thesis forbids an explanation needing a law outside what it holds of. An authored Kind has the other shape: meaning fixed by a law stored apart. The divergence holds if the frame is taken as ontology; as a design it may not, since models here are supplied laws too. The founder's sentence stands nearer: a class here is itself a relation. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#law",
+     "says": {
+      "en": "'A law of the theory is a statement that holds of every relation, carrier or model its hypotheses admit. It is read off what it holds of and does not stand over it'."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding",
+     "says": {
+      "en": "Thesis, argued: forbids an explanation needing 'a law standing outside what it holds of'; 'a law is read off the history it holds of (`shown_le_iff`)'."
+     },
+     "role": "carries",
+     "part": "What it forbids; the second result"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#beginning-within-the-one-unfolding",
+     "says": {
+      "en": "'\"Supplied\" is local: a law supplied to a model need not be external to reality.'"
+     },
+     "role": "limit"
+    },
+    {
+     "anchor": "theories/becoming/chapters/01-ROOT.md#class-and-continuation",
+     "says": {
+      "en": "Definition: 'A class (类) is a reflexive, symmetric and transitive relation'."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "Theorem (any process): 'histories fix a law up to its dead ends, which occur only for unending sequences' (01, `same_histories_iff`)."
+   },
+   "source_adds": {
+    "en": "Law as a governed, versioned, installable artifact, with rollouts that select a revision and never mutate an old one."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-governance-machine-checked",
+   "name": {
+    "en": "Governance checked by the engine: quorum, thresholds, no action without criteria"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "Applications; Claims 33, 49, 54",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Single-use vote tokens prevent double-voting, the engine guarantees quorum and super-majority, outcomes auto-issue the next tokens, and multi-party agreements run only when encoded criteria are met. Offered as design direction: the social generalisation of multisig. Formal voting did not reappear in the 2026 documents."
+   },
+   "quote": "no action occurs unless the encoded criteria are met",
+   "carried": "carried-in-part",
+   "relation": "scope",
+   "agreement_of": null,
+   "reading": {
+    "en": "The account checks one such protocol: votes and thresholds decide adoption, and duplicate votes do not create mandates. It also bounds what that gives: procedural compliance, the forming of proposals and the highest authority are supplied or do not follow, and a decision is not a function of counts alone. So 'guaranteed by the engine' holds within a declared protocol and no farther. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "organizational-rule-inheritance",
+     "anchor": "theories/becoming/chapters/04-LIFE.md#r-organizational-rule-inheritance",
+     "says": {
+      "en": "Record, in one declared history: 'a proposal adopted by four votes changes the rule', 'adoption with two votes fails'; 'duplicate votes, a wait of thirteen days or an objection each fail'. Does not show: 'the origin of the highest authority, actual compliance with procedure'. No clock or consensus process is simulated."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "'no function of the counts of roster, presence and reviews gives the decision in two histories of the protocol'; counts of admitted decisions are not consequences of the work."
+   },
+   "source_adds": {
+    "en": "The claim that such checks can run a community; issuance of outcomes as tokens; liquid and quadratic mechanisms."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-token-is-the-relation",
+   "name": {
+    "en": "The token carries the relationship, not the payload"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "The loop that would not stay disjoint; Claims 17, 64, 66, 238, 297",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Relationships are not hardcoded structures: a chat token says these spirits are in a chat, the graph carries relations and content stays elsewhere. Later a relationship occurrence can be a stable Yi with its own kind, state and history, not a join table subordinate to accounts, opening designs around mentorships, disputes and care. 'A tie' is the shared frame, kept as rationale."
+   },
+   "quote": "the token is more about the relationship",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "agreement_of": "thesis-or-method",
+   "reading": {
+    "en": "Agreement on what bears the social fact: relations, not account records. The account goes further and has only relations between occurrences, with configurations as how they relate. The source's relation is typed, has Yis as endpoints and its own state. As written the account's is a predicate read as condition; the carrier is a parameter, so a model could take relation occurrences as carrier, but its World has formations and exchanges, not relationships as bearers. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/01-ROOT.md#one-kind-of-symbol",
+     "says": {
+      "en": "'The grammar has one kind of symbol, a relation between occurrences'. 'The carrier is a parameter of the statements, not a claim that its elements exist apart from their relations'."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#one-relational-unfolding",
+     "says": {
+      "en": "Thesis, argued: 'a configuration is how it relates (`identifiesAlike_iff`)'; 'separation loses exactly the relation (`separation_faithful_iff`)'; that the theory as a whole needs no independent entity 'is argued, not proved'."
+     },
+     "role": "carries",
+     "part": "the first and third results, and the sentence after them"
+    }
+   ],
+   "account_adds": {
+    "en": "That one symbol suffices as a language, and what that does and does not forbid."
+   },
+   "source_adds": {
+    "en": "A relationship as a first-class bearer with lifecycle and constraints, and the design space it opens; token-as-edge as a storage discipline."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-community-sovereignty",
+   "name": {
+    "en": "Sovereignty through what a community owns: its address, its items, its rules"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "The social layer; Claims 21, 123-124, 246",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "A community must own its own path and items, not hold a slot under its founder, so 'who owns the wishing pool' is never ambiguous; each space keeps its sovereignty while optionally interoperating; a founder's guaranteed control flows from ownership, apart from who is in. A value stance and a design decision."
+   },
+   "quote": "sovereignty starts with not living inside someone else's namespace",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "The source grounds a community's standing in ownership. The account does not start from owners: no condition is silently owned, and ownership is kept for actual economic relations. 'No administrator' concerns the shared process as a whole, not a founder. Its test of independence is who decides admission and correction next round. It neither denies ownership exists nor calls the source's arrangement worse. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#beginning-within-the-one-unfolding",
+     "says": {
+      "en": "'it keeps money, payment and ownership for actual economic relations'; 'no condition is silently taken as owned'; 'no administrator entitled to speak for everything'."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#collectives",
+     "says": {
+      "en": "A collective is a region of formed relations, 'not a unit with an interest of its own'."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#markets",
+     "says": {
+      "en": "Reading [AI reading, D65; no theorem]: a reform 'is judged by who decides admission, comparison and correction next round'."
+     },
+     "role": "neighbour",
+     "part": "D65"
+    }
+   ],
+   "account_adds": {
+    "en": "That an account of joint activity can start from actual relations, not opposed interests or a fixed common utility."
+   },
+   "source_adds": {
+    "en": "Ownership and address as the working means of a community's independence, tenancy as an unambiguous answer to who decides, and who-is-in kept apart from who-controls, which has no statement here."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-group-is-a-spirit",
+   "name": {
+    "en": "A group is a spirit with members: a collective as one addressable actor"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "The social layer; Claims 14, 121-122, 219",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "There is exactly one container primitive, the group, a spirit with members, and a community is a group given an operating system. A spirit may be a person, a collective treated as one actor or a software agent; people, bots, groups, channels and sessions are product nouns for spirits, not separate storage. So everything social is built from one actor-container. Stated as mechanism."
+   },
+   "quote": "a **group** is a spirit with members",
+   "carried": "changed",
+   "relation": "divergence",
+   "agreement_of": null,
+   "reading": {
+    "en": "The source makes a collective one actor of the same kind as its members. The account's collective is a region of formed relations, counted by pooled couplings and readers by kind, not a unit with an interest of its own, and a group's closure is the union of its members'. A design's addressable group need claim no aggregate subject; taken as ontology it parts from 'no aggregate interest'. Neither denies a group can be addressed. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#collectives",
+     "says": {
+      "en": "A collective is a region of formed relations, 'not a unit with an interest of its own'."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md",
+     "says": {
+      "en": "'the theory's collectives are pools of couplings and readers counted by kind'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "what-pooled-coupling-reaches",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-pooled-coupling-reaches",
+     "says": {
+      "en": "Theorem (World; balance for the gap): 'A group's closure is the union of its members' closures'."
+     },
+     "role": "carries"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#beginning-within-the-one-unfolding",
+     "says": {
+      "en": "'A shared process implies no cosmic subject, no aggregate interest and no administrator'."
+     },
+     "role": "neighbour"
+    }
+   ],
+   "account_adds": {
+    "en": "What a pool reaches exactly: some selection through the pooled coupling separates two histories exactly when some member does not couple them alike."
+   },
+   "source_adds": {
+    "en": "A group as an addressable actor with holdings of its own, and a community as a stamp on it: its path, rulebook, surface and belongings."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-one-thing-several-truths",
+   "name": {
+    "en": "One thing, several truths: overlapping facts that are not interchangeable"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "The Yi turn; Claims 158, 161-162; open question 42",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "The folder's central image: a sword is at once a conserved asset, a placed child, an equipped object, a permission source, a trade endpoint and a row in four views. Those facts overlap and are not interchangeable. It generalizes off games to keys, badges, tickets and treasury approvals. The folder's reader notes it is taught louder than its partner, that overlap never licenses inference."
+   },
+   "quote": "one thing, several truths",
+   "carried": "fresh-reading",
+   "relation": "agreement",
+   "agreement_of": "reading",
+   "reading": {
+    "en": "Proposed here; no live text reads several truths so. 'The same thing under several samenesses' has the form of the account's class: a sameness is asked, not given, and one occurrence falls under many. On its rule model a line continues under 'held or not' and not under 'the same quota'; overlapping identities are several classes. The source keeps one row with several owned facts, each with laws of conservation and lifecycle; a class here is a relation and carries none of that. [AI reading]"
+   },
+   "targets": [
+    {
+     "anchor": "theories/becoming/chapters/01-ROOT.md#class-and-continuation",
+     "says": {
+      "en": "The section's opening: 'Whether two moments of fire are \"the same\" depends on the sameness asked'. Then, by definition, a class is a relation: 'The grammar does not choose: it names the class and says everything relative to it.'"
+     },
+     "role": "carries"
+    },
+    {
+     "record": "a-rule-rebuilt-from-the-members-it-limits",
+     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-rule-rebuilt-from-the-members-it-limits",
+     "says": {
+      "en": "'continues under the class \"held or not\" and not under the class \"the same quota\"'."
+     },
+     "role": "neighbour"
+    },
+    {
+     "record": "the-source-texts-test-systems",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-the-source-texts-test-systems",
+     "says": {
+      "en": "'Overlapping identities are several classes, observer-dependence is the choice of class'."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "That the several samenesses are themselves relations with stated laws of continuation under each."
+   },
+   "source_adds": {
+    "en": "Truths owned separately, each with its own conservation and lifecycle law, held on one stable row; and the decomposition table for everyday objects."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  },
+  {
+   "id": "cx-sty-named-exceptions-in-open",
+   "name": {
+    "en": "Named exceptions in the open, not hidden alternative roots"
+   },
+   "domain": "earlier-folders",
+   "group": "spirit-space-token-and-yi-substrate",
+   "source": {
+    "work": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "locator": "The refusals; Claims 144-145, 210, 212, 215",
+    "basis": "read-in-repo"
+   },
+   "sense": {
+    "en": "Streams, Signals, Views, external effects and portability are first-class and explicitly not generic components. A single named exception beats a hidden one, and a proposal to demote the stream tier to an appendix was refused as softening the law. 'No hidden center' needs the named non-Yi centres counted, and the pivot corrects its own undercount. A stance on how a theory of one root stays honest."
+   },
+   "quote": "named boundaries, not hidden alternative roots",
+   "carried": "carried-in-part",
+   "relation": "agreement",
+   "agreement_of": "thesis-or-method",
+   "reading": {
+    "en": "The same honesty has a count here: each central declaration has one standing against the root's edge, most at a named distance with a reason, and amounts are named as the root's second sort. Form shared: what does not reduce is named where it stands. They part at the seam: the source hides specialization below one author surface and counts that no defect; the account states each assumption where a law depends on it. [AI reading]"
+   },
+   "targets": [
+    {
+     "record": "one-root-to-its-edge",
+     "anchor": "theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge",
+     "says": {
+      "en": "'The other 99 stand at a named distance, each with its reason'."
+     },
+     "role": "carries"
+    },
+    {
+     "record": "amounts-by-unit-matchings",
+     "anchor": "theories/becoming/chapters/01-ROOT.md#r-amounts-by-unit-matchings",
+     "says": {
+      "en": "Theorem (Flow and Web): 'Amounts, the root's second sort'."
+     },
+     "role": "neighbour"
+    },
+    {
+     "anchor": "theories/becoming/chapters/08-METHOD.md#method-and-the-formal-core",
+     "says": {
+      "en": "The modelling assumptions, 'each stated where a law depends on it'."
+     },
+     "role": "carries"
+    }
+   ],
+   "account_adds": {
+    "en": "Counts that a check can recompute, and that a law written in the grammar is not thereby proved there."
+   },
+   "source_adds": {
+    "en": "Five named exception classes of a runtime; 'a leak is a defect; a hidden divergence is not', the seam's rule; and that softening an exception's name is itself a failure."
+   },
+   "absence": null,
+   "same_as": null,
+   "labels": [
+    "AI reading"
+   ]
+  }
+ ],
+ "changes": [
+  {
+   "id": "cx-sty-holds-canonical-sentence",
+   "what": "kept",
+   "why": "Roles filled; relation and verdict stand."
+  },
+  {
+   "id": "cx-sty-roles-not-root-types",
+   "what": "changed",
+   "why": "agreement_of thesis-or-method: life-as-condition-of-life's one-relatum identification is supplied by the index and unchecked by the laws (read in 04), so the carrying targets are the thesis and 08. Theorem kept as a neighbour; the reading says so."
+  },
+  {
+   "id": "cx-sty-visibility-from-relations",
+   "what": "changed",
+   "why": "carried-in-part to fresh-reading, agreement to divergence: no sentence states it, and the reading says the access model supplies permission, the reverse of emergence. The like form stays as a proposal."
+  },
+  {
+   "id": "cx-sty-yi-stable-bare-root",
+   "what": "kept",
+   "why": "Roles and a part filled."
+  },
+  {
+   "id": "cx-sty-identity-as-portfolio",
+   "what": "changed",
+   "why": "Kept carried-in-part/scope: 'Overlapping identities are several classes' states the plural part. Roles and a part filled."
+  },
+  {
+   "id": "cx-sty-space-interprets-token",
+   "what": "changed",
+   "why": "carried-in-part to fresh-reading, agreement_of reading: no live text speaks of a place that interprets; the code laws' link to it is a reader's, and the reading says meaning sits in formations."
+  },
+  {
+   "id": "cx-sty-searle-goffman-grounding",
+   "what": "changed",
+   "why": "Absence's run notes removed; verdict stands."
+  },
+  {
+   "id": "cx-sty-enforcement-by-construction",
+   "what": "changed",
+   "why": "Kept: the commit law states the form on one machine. source_adds leads with the source's main claim. Dropped CD §6's sentence, which the reading does not use. Roles filled."
+  },
+  {
+   "id": "cx-sty-ostrom-token-mapping",
+   "what": "changed",
+   "why": "carried-in-part/scope to changed/divergence: 05 takes up the boundary rule by another mechanism, the keepers' count, and the source states no universal for scope to correct."
+  },
+  {
+   "id": "cx-sty-emergent-institutions",
+   "what": "kept",
+   "why": "Roles filled."
+  },
+  {
+   "id": "cx-sty-rules-revised-like-software",
+   "what": "changed",
+   "why": "carried-in-part to changed: no sentence says rule change becomes routine or safe; the account takes up revising rules and says something narrower. Scope stands. Roles filled."
+  },
+  {
+   "id": "cx-sty-rules-governing-themselves",
+   "what": "changed",
+   "why": "part named on 07 and on closed-capture; roles filled."
+  },
+  {
+   "id": "cx-sty-non-inference-algebra",
+   "what": "changed",
+   "why": "H4: agreement to divergence on status; kept #beginning-within-the-one-unfolding and premises-met-and-failed as the general form; dropped the three word hits (finite-continuation-plans, derivation-soundness, 07's 'Reaching is not responding')."
+  },
+  {
+   "id": "cx-sty-suggestion-not-permission",
+   "what": "changed",
+   "why": "carried-in-part to fresh-reading, agreement_of reading: its reading says 'Unstated for an assistant', so the whole connection is the reader's."
+  },
+  {
+   "id": "cx-sty-agents-operators-human-root",
+   "what": "changed",
+   "why": "M1: the 07 target split by statement (opening, D68, D45) with part named, the opening marked as on the thesis. Both premises stay named on #direction."
+  },
+  {
+   "id": "cx-sty-host-without-constitution",
+   "what": "changed",
+   "why": "Kept: D65's sentence states the worry. agreement_of thesis-or-method: a Reading with no theorem; closed-capture a neighbour. part D65."
+  },
+  {
+   "id": "cx-sty-fork-without-amnesia",
+   "what": "changed",
+   "why": "Kept: law 4 states the fork's form. Roles filled."
+  },
+  {
+   "id": "cx-sty-unify-declaration-split-execution",
+   "what": "changed",
+   "why": "Kept carried-in-part, agreement_of thesis-or-method. Added 08's sentence on shared notation as a target, moved from account_adds, since it states the part; the theorems become neighbours. source_adds leads with the source's main claim."
+  },
+  {
+   "id": "cx-sty-metaphysical-compression",
+   "what": "kept",
+   "why": "Roles filled; contrary reading stands."
+  },
+  {
+   "id": "cx-sty-prohibition-unexpressed",
+   "what": "changed",
+   "why": "H1: carried-in-part to fresh-reading: 'No live text says this of bans'; the join is the whole connection. Scope stands: the law gives the exact line. Roles filled."
+  },
+  {
+   "id": "cx-sty-endings-as-transitions",
+   "what": "changed",
+   "why": "Kept: 07's table states grounds and deleted records. source_adds leads with the claim the account refuses. Both premises already named."
+  },
+  {
+   "id": "cx-sty-good-existence-values-coded",
+   "what": "kept",
+   "why": "Roles filled."
+  },
+  {
+   "id": "cx-sty-intersubjective-infrastructure",
+   "what": "changed",
+   "why": "carried-in-part to fresh-reading, agreement_of reading: each law is on its own topic and model; no live text reads them as this purpose, and ONE-PAGE has no such sentence (searched). The reading says 'not infrastructure'."
+  },
+  {
+   "id": "cx-sty-explainable-authority",
+   "what": "changed",
+   "why": "carried-in-part/agreement to fresh-reading/scope: 03's sentence is of empirical authority, a shared word for this claim; the nearest is a conditional direction, so the source's must is scoped. Roles filled, both premises named."
+  },
+  {
+   "id": "cx-sty-no-cached-allow",
+   "what": "changed",
+   "why": "Kept carried-in-part: mediated's law 3 and reviewers' recomputed envelope state part on their models. agreement_of law. Dropped 07 #order (the premise again) and adaptive-closure (the reading does not use it). The reading's 'Neighbours' corrected to the roles."
+  },
+  {
+   "id": "cx-sty-split-authority-web-of-trust",
+   "what": "changed",
+   "why": "carried-in-part to fresh-reading: the law is of reviewers; no live text says it of a split privilege or endorsements. Scope stands."
+  },
+  {
+   "id": "cx-sty-one-commit-spine-audit",
+   "what": "changed",
+   "why": "Kept: the record states coverage under mediation. source_adds leads with the source's guarantee. Roles filled."
+  },
+  {
+   "id": "cx-sty-gamed-rewards",
+   "what": "changed",
+   "why": "carried-in-part/scope to changed/divergence: its reading says calibration, the source's variable, is not what the law turns on, and the source states no universal."
+  },
+  {
+   "id": "cx-sty-mental-resistance",
+   "what": "changed",
+   "why": "Absence's run notes removed; verdict stands."
+  },
+  {
+   "id": "cx-sty-rhetorical-victory",
+   "what": "changed",
+   "why": "Kept: 08's 'declaring an identity does not make it true' states part. agreement_of thesis-or-method, one protocol's theorem a neighbour; dropped 07 #executable, which the reading does not use."
+  },
+  {
+   "id": "cx-sty-agency-composed",
+   "what": "changed",
+   "why": "Kept: 08 states activity without presupposing an agent. agreement_of thesis-or-method: on the World it is a premise, and the record's water and embodiment are representational premises."
+  },
+  {
+   "id": "cx-sty-jian-nondual-actor-place",
+   "what": "kept",
+   "why": "Roles and a part filled."
+  },
+  {
+   "id": "cx-sty-touch-whitehead",
+   "what": "changed",
+   "why": "H4: to not-carried, targets emptied, absence filled from fresh searches. The form on balance stays in reading as a proposal; 08's and one record's mentions in source_adds."
+  },
+  {
+   "id": "cx-sty-open-ontology-define-kinds",
+   "what": "changed",
+   "why": "Ruling: agreement to scope, as cx-ctxrt-open-ontology-worlds is, carried-in-part kept to match it; same_as set to it, as its own file has. source_adds leads with the constitutive claim. Both premises named."
+  },
+  {
+   "id": "cx-sty-tokens-one-vocabulary",
+   "what": "kept",
+   "why": "Roles filled."
+  },
+  {
+   "id": "cx-sty-private-repair-volatile-presence",
+   "what": "changed",
+   "why": "carried-in-part/scope to fresh-reading/divergence: 'None concerns repair or privacy', so no sentence states part; and the source asserts a harm no law says, which is not scope."
+  },
+  {
+   "id": "cx-sty-negative-space-norms",
+   "what": "changed",
+   "why": "carried-in-part to fresh-reading, agreement_of thesis-or-method: 'Form only'; a list of what a formalism cannot say does not state that a norm should stay uncoded."
+  },
+  {
+   "id": "cx-sty-consent-door",
+   "what": "changed",
+   "why": "Kept carried-in-part: law 3 states entry by review and ballot. agreement_of law, the gate. The reading keeps the reverse on the founder, and source_adds already leads with it. Dropped 08's sentence, which adds nothing; 07's Conditional narrowed to a neighbour with part."
+  },
+  {
+   "id": "cx-sty-generators",
+   "what": "changed",
+   "why": "carried-in-part to fresh-reading, agreement_of reading: no live text speaks of a conditional producer; arising and giving are read onto it."
+  },
+  {
+   "id": "cx-sty-meaning-declared-not-inferred",
+   "what": "changed",
+   "why": "carried-in-part to fresh-reading, agreement_of thesis-or-method: 08 speaks of a theory's premises and names, and the link to a runtime's data is the reader's."
+  },
+  {
+   "id": "cx-sty-kind-immutable-law",
+   "what": "kept",
+   "why": "Roles and a part filled."
+  },
+  {
+   "id": "cx-sty-governance-machine-checked",
+   "what": "changed",
+   "why": "Kept: the record states votes and thresholds. source_adds leads with the source's main claim."
+  },
+  {
+   "id": "cx-sty-token-is-the-relation",
+   "what": "changed",
+   "why": "Kept: 01 states one kind of symbol, a relation. agreement_of thesis-or-method; part named."
+  },
+  {
+   "id": "cx-sty-community-sovereignty",
+   "what": "changed",
+   "why": "M1: dropped 07's 'Alignment is first…', a general stance, and the clause on it; the divergence rests on 08's and 05's sentences. part D65 on #markets."
+  },
+  {
+   "id": "cx-sty-group-is-a-spirit",
+   "what": "kept",
+   "why": "Roles filled."
+  },
+  {
+   "id": "cx-sty-one-thing-several-truths",
+   "what": "changed",
+   "why": "carried-in-part to fresh-reading, agreement_of reading: the source's truths are owned facts, the account's class a relation; reading one as the other is the reader's."
+  },
+  {
+   "id": "cx-sty-named-exceptions-in-open",
+   "what": "changed",
+   "why": "Kept: 'each with its reason' states the part. agreement_of thesis-or-method: a count of the account's own standing, no law of this form."
+  }
+ ],
+ "live_flags": []
+}

@@ -1,0 +1,3678 @@
+{
+  "group": {
+    "id": "meta-attractor",
+    "domain": "earlier-folders",
+    "title": {
+      "en": "The meta-attractor (元吸引子 / 总体化吸引子)"
+    },
+    "kind": "theory",
+    "summary": {
+      "en": "The folder argues that winning buys power over the rule that selects, across minds, institutions and infrastructure, ending in lost independent capacity to correct, with AI as hinge. Two senses stay apart: the glossary's closed capture (02 §9) and the corpus's self-reproducing selection across carriers, open. Tested, the report is half right: CAOC has no live home; totalization, plurality and the comparisons have no law, but their parts and the counter-rule are read. Divergences kept: exit order, prescribed ends, the guardian refusal, endings (07 §3.4), originality."
+    },
+    "read": [
+      "theories/meta-attractor/README.md lines 1-856 and 1020-1142 (argument, claims A to P, terms, genealogy, what was lost, open questions, relations, further reading)",
+      "theories/meta-attractor/GENERATIVE-REGIMES.md in full",
+      "theories/meta-attractor/COMMON-ORGANIZATION.md in full",
+      "theories/meta-attractor/COLLECTIVE-DESTRUCTIVE-ATTRACTORS.md: sections A request can disappear, Common problems opening, The alignment conclusion",
+      "_process/research/2026-10-05-generative-foundation-review/root-foundation/META-ATTRACTOR-RECONCILIATION.md lines 1-110 (disposition table, vocabulary, proofs, counterreview, registration revision)",
+      "Live: 02-MAP §9 and Not-shown/Open in full; 05 §10, §12 and Open; COLLECTIVE-DIRECTION in full; 07 §3.4 and parts of §6; record JSON for target-capture, confined-rise-within-a-whole, derived-extent-limits, organizational-formation-from-generative-comparison, selection-when-the-lumping-changes, recurring-reference-revision, horizon-optima-hold-the-greatest-renewal, dormancy-over-a-stretch"
+    ],
+    "skimmed": [
+      "theories/meta-attractor/COLLECTIVE-DESTRUCTIVE-ATTRACTORS.md otherwise: headings, opening, and starts of paragraphs",
+      "theories/meta-attractor/README.md lines 857-1019 (In Ren's own words) and 1143-1204 (Sources): headings only",
+      "theories/meta-attractor/synthesis-a-drafts-2024-2025-05.md and synthesis-b-formal-and-essays-2025-08-10.md: headings only",
+      "07 §7 and review/ALIGNMENT A-01 to A-19: headings with A-03, A-12, A-13 openings"
+    ],
+    "searched": [
+      "Live md and record JSON, zero chapter hits: totaliz (one record hit, \"totalizer\"), 总体化, CAOC, Moloch, counter-attractor, anti-attractor, exopoie, ideolog, paradigm, Schmachtenberger, keystone, guardian, hegemon, Smaldino, 科举, 八股, naturali, monoculture, scarcity, CommonOrganization",
+      "Live md: plural (only 01 \"class is plural\" and LOGIC, and a provenance quote in comparison-by-widening), counter-rule (7 lines: 07 §6, A-13), hysteresis (record correspondences only), autopoie, survival, impair, overload, transition loss, indispensab",
+      "record-index.tsv by mechanism; record JSON for those citing this folder or its Lean packages",
+      "theories/meta-attractor/*.zh.md: not read; only seen to exist"
+    ],
+    "not_mapped": [
+      {
+        "en": "The publication apparatus: the context site, audience layers, synthetic case-study CSVs and the drafting history of 22-plus essay versions",
+        "why": "A product and its provenance, not a claim about becoming; the folder's own audit already judges them"
+      },
+      {
+        "en": "The worked calibrations: the corporate-tax-cut prediction, RL capture half-lives, macro-policy grid",
+        "why": "Numbers built on the covariance law the reconciliation restricts; they fall with cx-ma-caoc and are not separate claims of the mechanism"
+      },
+      {
+        "en": "Concrete prescriptions: twelve design rules, minimum viable enforcement, compute gates, wealth taxes, UBI, public AGI ownership, the action ladder",
+        "why": "Practice and policy; only the exit order is mapped, as cx-ma-exit-sequence. Whether any is wanted is not a reading of the account"
+      },
+      {
+        "en": "F45's Abundance Infrastructure and the Plurality of voluntary societies",
+        "why": "A design; the folder itself says it belongs to the-fork-and-cooperative-infrastructure and Wamo"
+      },
+      {
+        "en": "The Game of Winning film plan and scenario images (Dyson sphere, glass domes, copies firing beams)",
+        "why": "An artwork and speculation. Its one mechanism, a rank objective, is mapped as cx-ma-rank-kernel"
+      },
+      {
+        "en": "The August 2026 agent-fleet episode and its counter-design (deletions that stick, conservation of checks)",
+        "why": "A first-person observation and working practice, provenance for how the repository is run; the live account does not read it"
+      },
+      {
+        "en": "In Ren's own words, the genealogy, What was lost, and the dated research-package tallies",
+        "why": "Provenance; kept verbatim where they are, and no warrant for a claim"
+      }
+    ],
+    "coverage": null
+  },
+  "entries": [
+    {
+      "id": "cx-ma-the-word",
+      "name": {
+        "en": "The word: pathological, engineered, then neutral and wide"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/GENERATIVE-REGIMES.md",
+        "locator": "Opening definition; compare README Terms and open questions 11, 34",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "The word first named a pathology, then in one October 2025 essay a desirable engineered rule region. On 8 October 2026 Ren selected a neutral working definition: recurrent organization whose consequences help reproduce the conditions selecting it, across carriers. The reconciliation supersedes reserving the word for pathology."
+      },
+      "quote": "A meta-attractor is a recurrent organization of activity whose consequences help reproduce the conditions selecting that organization",
+      "carried": "changed",
+      "relation": "divergence",
+      "reading": {
+        "en": "Two senses, kept apart. The glossary keeps 元吸引子 for closed capture (02 §9): rule and reading both formed from the share, nothing read beyond it. The corpus working definition is self-reproducing selection across carriers, and care reproducing care qualifies. Neither restricts the other: closed capture says nothing of carriers, and the wide sense needs no reading formed from share. Same word, different reference. 02 reads the corpus's \"account of power\" alone as the closed loop. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": null,
+          "anchor": "GLOSSARY.md",
+          "says": {
+            "en": "Meta-attractor: closed capture. \"It never means the corpus's working definition\"; that sense is wider, the formal 元吸引子 says nothing of carriers, and whether a capture loop is 生成 at some pair of classes stays Open."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/02-MAP.md#capture",
+          "says": {
+            "en": "Definition: a loop of selection whose rule and whose reading of the rule are both formed from the share it selects, nothing in it reading what lies beyond the share."
+          }
+        },
+        {
+          "record": "capture-by-counted-choices",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-by-counted-choices",
+          "says": {
+            "en": "Under a standing score the threshold divides counts into two regions the course never leaves; it stands, so this is not the meta-attractor in 02's sense, whose reading too is formed from the share."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "A definition exact enough for theorems, and a sentence saying the wide sense is not it."
+      },
+      "source_adds": {
+        "en": "The wide neutral definition as the word's sense; a separate vocabulary (destructive capture regime, revision-supporting regime) that the account does not use."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-wide-regime-across-carriers",
+      "name": {
+        "en": "A way of succeeding reproduced across carriers"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "The power formulation, Selecting the selectors; claims 103, 251; GENERATIVE-REGIMES, What the definition requires",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "What persists can be a way of succeeding, not a person, organization or ideology, so replacing occupants may leave the trajectory unchanged, though responsibility still differs. GENERATIVE-REGIMES requires organization, actual selection, causal return into selecting conditions, traceable succession and renewed activity, and its checked cycle gives a basin and rising exit cost."
+      },
+      "quote": "It can be a way of succeeding.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "Two laws sit apart: passing (a pattern outlasting brief carriers is passed, under a supplied premise) and capture through the rule (silent on carriers). The join is the open question the account names. One reading says withdrawing one practice does not end the returning relation. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "a-pattern-lasts-through-passing",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-a-pattern-lasts-through-passing",
+          "says": {
+            "en": "Theorem (World; any web). Under the passing premise, supplied, a pattern present from T with carriers brief for d is passed across one of every d consecutive steps. It says nothing of which patterns are worth passing."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/02-MAP.md#open",
+          "says": {
+            "en": "Open: whether a capture loop (§9) is 生成 at some pair of classes."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#markets",
+          "says": {
+            "en": "Reading [AI reading, D65]: a real loss need not form a meta-attractor, and withdrawing one practice does not end the returning relation."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The exact passing law, and the statement that the join is open."
+      },
+      "source_adds": {
+        "en": "The joined claim itself; turnover of actors leaving the relation intact; the structural-explanation clause on responsibility; the checked selection-and-maintenance cycle and its exit-cost example, which stand in experiments and a study, not in the chapters. The atlas plan (§3.3), not live, files this sense apart and lists it among gaps with no law."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-rule-loop",
+      "name": {
+        "en": "The second-order core: state and selection rule in one loop"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Where the second order enters; claims 20-27",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "An attractor in the joint space of states and rules: winners write the next scorecard. A region is a meta-attractor if trajectories enter and stay, the cross-product γ of rule-to-state and state-to-rule gains is positive, and long-run behaviour maximizes the proxy whatever it was invented for. Four ingredients are stated as jointly necessary."
+      },
+      "quote": "a feedback loop that optimises its own optimiser",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "The loop has the form of RuleCapture: Raises (selection does not lower the share under a favouring rule) and ReadsShare (the rule is a monotone function of the share). Those premises replace γ > 0. The reconciliation, a study, rejects γ as a sufficient criterion since two negative links also multiply positive. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "capture-through-the-rule",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule",
+          "says": {
+            "en": "Theorem (any type). With selection not lowering the share under a favouring rule and the rule read monotonically from the share, start and every reading favouring, the course locks after its first reading step. \"That actual rules read the share is the premise.\""
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "\"The lock belongs to how the rule reads, not the share it favours\"; reading against the share does not ratchet (a separate theorem); a discrete proof for any type."
+      },
+      "source_adds": {
+        "en": "γ and the lifted F/G dynamics; means turning into ends; the claim that the four ingredients are necessary. The account gives sufficient premises and no necessity claim."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-partial-reform",
+      "name": {
+        "en": "Partial reform is re-absorbed"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Where the second order enters; claim 28",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Fixing the state while leaving the rule operator intact lets the rule re-derive the old state, so escaping a meta-attractor needs simultaneous disruption of state and rule."
+      },
+      "quote": "exiting requires simultaneous disruption of both state and rule; partial reforms are re-absorbed.",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "Absorption is conditional. A perturbation keeping the rule's direction is absorbed at the next reading step; where the reading too is formed from the share, a change of reading of any size is absorbed. But one reversing the rule's direction, held past the threshold, is not absorbed: a shaping that sets only the rule's value is read again, yet the share it moved stays and can hold the course. Where reading favours at every share, only a change of law, reading or selection leaves. [AI reading, D45]"
+      },
+      "targets": [
+        {
+          "record": "target-capture",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-target-capture",
+          "says": {
+            "en": "Theorem (any type). Where the next configuration depends on the rule, not the state, a perturbed state is re-absorbed in one step. Record: shown only there, a strong condition; where winners rewrite the rule, making it depend on the state, the law says nothing of whether the outcome is held."
+          }
+        },
+        {
+          "record": "capture-through-the-rule",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule",
+          "says": {
+            "en": "Theorem (any type; witness). A perturbation reversing the rule's direction, held past the threshold, is not absorbed (`RuleCapture.Reversed.not_absorbed`)."
+          }
+        },
+        {
+          "record": "closed-capture",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+          "says": {
+            "en": "Where the reading too is formed monotonically from the share, a change of the reading of any size is absorbed at the next reading step."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The threshold case that escapes absorption, and the strong condition on the one-step law, which does not cover winners rewriting the rule."
+      },
+      "source_adds": {
+        "en": "The prescription that exit needs state and rule disrupted at once, which the witnesses do not support as a general law; the 2026 domain form (re-absorbed while inbound conversion from the captured set exceeds one), in the drafts only."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-metric-survives-refutation",
+      "name": {
+        "en": "The metric survives its own refutation"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Where the second order enters; claims 122, 267",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Goodhart says a target stops measuring; this says why it stays in use: by the time it has failed, those it elevated decide whether it is replaced. Winning gives a strategy power to prevent its destructiveness from counting as failure."
+      },
+      "quote": "the metric survives its own refutation",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "02 reads the source's phrase directly as `lock_outlives_loss`, a reading. Proved: the lock outlives a coordinate the loop does not read, without noise. That actual metrics are so formed is thesis T7, conjectured, no field test. Noise leaves the critical mass's locks. In one trained judge the lock formed and the bridge failed: one note of the loss turned its reading. Calling the unread coordinate a loss is a reading; evidence and refutation are unformalized. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "closed-capture",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+          "says": {
+            "en": "Theorem (any type). Under Unread and the premises named, from a locked configuration the loss passes every bound while the course stays locked (`ClosedCapture.lock_outlives_loss`); a reading favouring at no loss above a bound unlocks it, a sufficient way out."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/02-MAP.md#t7",
+          "says": {
+            "en": "Thesis T7: in the model only invariance under what the loop does not read and the lock outliving a growing unread coordinate are proved, both without noise. Evidence, refutation and institutions are unformalized; that actual metrics are so formed is conjectured."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/02-MAP.md#capture",
+          "says": {
+            "en": "Reading [AI reading, D26 as revised]: \"the metric survives its own refutation\" is `lock_outlives_loss`."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "What T7 forbids and what refutes it; the frozen LA2 test and its counterexample for trained judges."
+      },
+      "source_adds": {
+        "en": "The institutional account of who keeps the metric; reclassifying failures as evidence for more of the same."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-selecting-the-selectors",
+      "name": {
+        "en": "The selected begins to select the selectors"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Claims 31, 249; The power formulation",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "A direction selected by existing conditions acquires power over later selection, reproducing its selectors, participant forms, signals, infrastructures and perceived possibility. The transition is from being selected by a rule to helping reproduce it, through ordinary reasonable decisions such as hiring and teaching."
+      },
+      "quote": "被选择的，开始选择选择者",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "Read as the pool: the rule is read from the share exactly where each kind reads at least as favourably for its own kind; who reads, and when, decides whether a reading of the loss turns the course. The premise moves to who reads and is not removed. The one test found one judge not such a pool. One minimal institutional form stands on the root: holders teach, and the same count sets the door. [AI reading, D67]"
+      },
+      "targets": [
+        {
+          "record": "readers-drawn-from-the-selected",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-readers-drawn-from-the-selected",
+          "says": {
+            "en": "Theorem (any type). The pool's rule is a monotone function of the share exactly where `v` is not above `u`. \"That actual rules are pools of readers so drawn, each kind reading at least as favourably for its own kind, is not shown.\""
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/02-MAP.md#capture",
+          "says": {
+            "en": "Reading [AI reading, D26 as revised]: winners writing the next scorecard is `ReadsShare`, winners forming the minds that read it is `ReadsShare` on the reading. Where who reads is itself a monotone function of the share, the pool still reads the share (`Drawn.pool_through`)."
+          }
+        },
+        {
+          "record": "a-rule-rebuilt-from-the-members-it-limits",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-rule-rebuilt-from-the-members-it-limits",
+          "says": {
+            "en": "Theorem (root; a family of models). One minimal model of one kind, a rule of entry, kept by holders. That any actual institution meets these hypotheses, or that this is what an institution is, is not shown."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The exact condition, and the witness in which the same readers read in time turn the course and read late keep it."
+      },
+      "source_adds": {
+        "en": "The formation of participants, infrastructures and perceived possibility; closing through ordinary decisions. \"That readers are minds, institutions or a culture is a reading.\""
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-selection-for-control",
+      "name": {
+        "en": "Selection for control over selection, and its conditions"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Selection for control over selection; claims 268-272, open question 40",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Where practices vary heritably in capacity to reshape selection and the returns come back in time to beat their cost, recursive selection favours more control. Five conditions; shared returns flip the sign; the return grows superlinearly with domains occupied; assistance that cuts cost multiplies capacity. Derived in an unreviewed AI-drafted paper."
+      },
+      "quote": "Recursive selection creates second-order selection pressure for mechanisms that increase control over future selection.",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "The account states the conditional form in counts: at a step, what comes back to the shapers alone against cost decides the direction, and shaped groups add assortment. Appropriability χ reads as what comes back, through neighbours too. Offspring carrying the capacity is a premise. With nothing back and a cost, the share falls. [AI reading, D45]"
+      },
+      "targets": [
+        {
+          "record": "shaping-the-rule-selected-by-what-comes-back",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-the-rule-selected-by-what-comes-back",
+          "says": {
+            "en": "Theorem (counts). At a step the rule favours the shapers (weakly) exactly where `c ≤ s`, whatever `p` comes to every member alike; across a stretch the base and shared part enter too."
+          }
+        },
+        {
+          "record": "shaping-selected-among-groups",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-selected-among-groups",
+          "says": {
+            "en": "Theorem (counts). In groups of `m` the whole selects shaping exactly where `c < s + m q ρ`, read over the rationals, Hamilton's rule with what comes back alone added."
+          }
+        },
+        {
+          "record": "shaping-read-by-readers-drawn-from-the-selected",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected",
+          "says": {
+            "en": "Theorem (counts). With `lo ≤ hi`, lock and capacity are one loop on either side of a critical mass, without noise; readers drawn so and offspring carrying the capacity are premises."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Below the critical mass control falls and the course is still locked the other way; the frozen LA3 test, two of four contrasts failing."
+      },
+      "source_adds": {
+        "en": "Superlinear return in domains, graded capacity and the capacity–capture ratchet, which 02 lists as Open; persistent-entry shifts of thresholds."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-field-capture",
+      "name": {
+        "en": "Four coupled layers and capture across domains of a field"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "The field formalization; one-paragraph theory; claims 30, 102, 104",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "The loop runs across cognitive, intersubjective, institutional and material layers and closes: selected minds build selected organizations, which reshape what forms the next minds. In the field model every domain can be safe alone while the field is capturable; capture cascades, and the corpus's claim to priority rests on this recursion."
+      },
+      "quote": "The four layers as one loop, made testable.",
+      "carried": "history-only",
+      "relation": null,
+      "reading": {
+        "en": "Not in the live account as a law or a claim. 02's Open names a gain growing with domains captured and gains passing between domains. Nearest, and not this: two rules read from one share lock together (`RuleCapture.pair_locks`), and 05 §12 models one institution kind, a rule of entry, with no second domain. 05's cascade among members is an information cascade, another relation. The model stands in drafts/2026-10-02-iaseai-selecting-the-selectors. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "Stands in drafts/2026-10-02-iaseai-selecting-the-selectors (conversion matrix, stable captured sets, keystone reform, no local certificate; AI-drafted, unreviewed)."
+      },
+      "absence": {
+        "searched": [
+          "cross-domain",
+          "across domains",
+          "four layers",
+          "cognitive intersubjective institutional",
+          "keystone",
+          "cascade",
+          "field",
+          "institution"
+        ],
+        "read": [
+          "02-MAP §9 and Open",
+          "05-COLLECTIVES §8, §10, §12 heading and Open",
+          "COLLECTIVE-DIRECTION §2, §5"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-caoc",
+      "name": {
+        "en": "CAOC: terminal ends as the leading eigenvector of proxy covariance"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Which ends get selected; claims 38-48",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Rule drift as lobbying gives ẇ = λCw, so weights align with C's leading eigenvector. Control, Accumulation, Optimisation and Competition form a dense correlated block that dominates and becomes terminal unless counter-correlated proxies are amplified. The four are Ren's; the derivation was commissioned. The folder calls it the sharpest single result."
+      },
+      "quote": "a civilisation's terminal ends are the principal component of its proxy covariance structure",
+      "carried": "history-only",
+      "relation": null,
+      "reading": {
+        "en": "The derivation and the quartet are absent from the live account; the folder's own header and the reconciliation restrict them. Neighbouring laws exist separately for three drives and join no block: position, a race and a rising take for competition and accumulation; shaping for control; the optimum for optimisation. Those are other mechanisms, not this result. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "Stands in the reconciliation, a study: a raw moment is not a covariance, the formula needs a fixed matrix, and \"No CAOC universality follows from the retained equations\"; a mode of a proxy process identifies no experienced concern. Sources and synthesis-b hold the derivation."
+      },
+      "absence": {
+        "searched": [
+          "CAOC",
+          "eigenvector",
+          "covariance (hits are Price's equation in 04, Hamilton in 02, and the blanket in 03)",
+          "control accumulation optimisation competition",
+          "terminal ends",
+          "proxy dominance"
+        ],
+        "read": [
+          "04-LIFE Price's equation rows",
+          "05-COLLECTIVES §3 and §7 heads",
+          "03-KNOWING r-seeking-boundary",
+          "META-ATTRACTOR-RECONCILIATION disposition table"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-diagnostics",
+      "name": {
+        "en": "PDI and the indices as a gate; recurrence, not resemblance"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Claims 52-71; The exit, diagnostic level",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "A proxy dominance index rank-orders which proxies become ends. Indices PWC, SC, CI, DE and ES with a composite warning signature are meant as a gate, not a report. A present basin must be shown by recurrence, not resemblance: the same conversion recurring across domains."
+      },
+      "quote": "A present basin must be shown by **recurrence, not resemblance**",
+      "carried": "history-only",
+      "relation": null,
+      "reading": {
+        "en": "None of the indices enters the live account. The reconciliation treats PDI as a proposed heuristic and excludes these formulas from the foundation; the folder records that their data were never pulled. The account's diagnostic content is otherwise T6 and the margin, which are not these quantities. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "Stands in META-ATTRACTOR-RECONCILIATION (vocabulary section), sources and synthesis-b. The recurrence criterion, the same conversion recurring across domains with actor turnover leaving the relation intact, has no live counterpart."
+      },
+      "absence": {
+        "searched": [
+          "PDI",
+          "proxy dominance",
+          "capture index",
+          "diversity entropy",
+          "slack coefficient",
+          "ontological capture",
+          "recurrence, not",
+          "resemblance"
+        ],
+        "read": [
+          "META-ATTRACTOR-RECONCILIATION vocabulary section",
+          "COLLECTIVE-DIRECTION §5, §6",
+          "03-KNOWING T6 lines"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-totalization",
+      "name": {
+        "en": "Totalization: loss of independent capacity while one process shapes selection"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Terms, totalization; claims 75, 256; one-paragraph theory",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Its most dangerous property is not concentration but progressive loss of capacities that cannot be compensated: to sense, refuse, correct, exit, maintain alternatives, produce successors. It cannot be defined as guaranteed convergence or declared from concentration or growth. Alternatives survive as language, stop reproducing, then stop being intelligible."
+      },
+      "quote": "The progressive loss of indispensable, non-compensable independent capacity to sense, refuse, correct, exit, maintain alternatives and produce successors",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "The report holds for the term and definition: no chapter has the word, and no law takes these capacities together. Parts are there as other relations. A record calls one witness \"a careful totalizer\": the clearer meets every derived requirement and still ends the dweller. A reading gives orders of capture reaching the routes of correction; laws give lost possibilities drawn into an absorbing region and full taking excluding other takers. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/02-MAP.md#capture",
+          "says": {
+            "en": "Reading [AI reading, D26 as revised]: a second order, corruption taking over courts, press, statistics and audit, is a loop whose rule-reading reaches the routes of 明; a third, rewarding those who break the routes of correction, selects for narrowing what couples in. None says whether a locked loop supports or damages 生生."
+          }
+        },
+        {
+          "record": "attraction-is-not-returning",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-attraction-is-not-returning",
+          "says": {
+            "en": "Theorem (any type), near-definitional, not a classical attractor. What can be had n steps on is absorbing, and every possibility lost by step n is drawn into it."
+          }
+        },
+        {
+          "record": "what-taking-all-excludes",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-taking-all-excludes",
+          "says": {
+            "en": "Theorem (World: balance and the premises named). A formation taking all that is given at every step and continuing leaves no named other formation taking through all of a window one step longer than the level."
+          }
+        },
+        {
+          "record": "derived-extent-limits",
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-derived-extent-limits",
+          "says": {
+            "en": "Theorem. The clearer meets every requirement so derived and still ends the dweller (`Clearing.center_not_derived`). The record reads it as a careful totalizer, and as one form of the self the meta-attractor selects (an AI reading)."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/02-MAP.md#open",
+          "says": {
+            "en": "A part can go on while closing what lies beyond its dependence, so persistence alone does not select widening (`Clearing.loses_beyond`)."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Exact laws for each part, and none ranks the loss: that needs C, and whose losses count needs the continuation condition, both unasserted."
+      },
+      "source_adds": {
+        "en": "The definition; non-compensability as a property of capacities; the sequence from language to practice to intelligibility; refusal and exit as named capacities."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-endings",
+      "name": {
+        "en": "Lock-in, terminal collapse and failed totalization are distinct endings"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Claims 76, 303; open question 49",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Three endings stay apart: lock-in recovered through new carriers, collapse with the substrate exhausted, and failed totalization where constraint grows with expansion. Collapse and regression is a pattern beside totalization. The 2026 monologue adds universal moat-building that slows evolution until collapse, or eating everything and then struggling inside."
+      },
+      "quote": "Collapse and regression to lower complexity is a third pattern beside totalisation",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The map keeps ending on every branch apart from going on. The market reading keeps region ceasing, departure and bifurcation apart. Five ends of a selection for position stand in 05 as an unformalized conjecture from an earlier account, so that list is named and not established. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#open",
+          "says": {
+            "en": "[Conjecture, from an earlier account; not formalized.] The ends a selection for position can reach: a frozen mutual destruction, a deadlocked structure of power, the parts coming to read themselves as one whole, collapse, and winner takes all; which the laws admit is open."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#markets",
+          "says": {
+            "en": "Reading [AI reading, D65]: four routes of transition are distinct, none a proved phase transition: a parameter change, a shock, a failure stopping correction, and change too fast for correction."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Generation, keeping and degeneration at two grains as regions that can be stated; full taking alongside another that ends every formation depending at the need, the full taker included."
+      },
+      "source_adds": {
+        "en": "Failed totalization as an ending, and moat-building as a slowing that ends in collapse."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-not-fated",
+      "name": {
+        "en": "Not fated: a hurricane, not a black hole"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Why it is not fated; claims 72-74",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Reflexive gain holds only in patches, so local meta-attractors compete, mix and dissolve. Five factors cap totalization: energy, heterogeneity, delays, cross-scale constraints, reflexive awareness. Positive feedback may saturate, oscillate, split, overshoot or collapse. Ren calls this correction load-bearing, against his own first version and against AI drafts leaning to doom."
+      },
+      "quote": "more like a hurricane than a black hole",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The account's locks are conditional and leave in several ways: from a start against its reading a rule may never lock; drawn one member at a time either lock is left by drift; C-D's exits name others. It forbids the reverse guarantee too: no law assures an exit. Oscillation has a witness. Hysteresis appears only as a record's correspondence (dormancy, \"hysteresis of collapse\"), not as a law; the atlas plan lists it as a gap. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "drawn-shaping-drawn-one-at-a-time",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-drawn-shaping-drawn-one-at-a-time",
+          "says": {
+            "en": "Theorem (counts). Drawn one member at a time, the critical mass's locks are left by drift, with no new reader, at a weight whose bound shrinks across the distance from the mass."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/02-MAP.md#which-locks-noise-leaves",
+          "says": {
+            "en": "AI reading over the proved cases: a lock read from a population drawn anew is kept for good only without noise or where the rule leaves the disfavoured kind nothing; counts that only grow can survive noise."
+          }
+        },
+        {
+          "record": "capture-through-the-rule",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule",
+          "says": {
+            "en": "From a start against its reading a threshold rule may never lock, in a witness (`Alternating.never_locked`). \"That actual rules read the share is the premise.\""
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Which locks noise leaves and which it does not; that counts that accumulate can lock under noise (cited)."
+      },
+      "source_adds": {
+        "en": "The five named caps; reflexive awareness as an exit; saturation, split and overshoot of a positive loop as a claim about actual systems; coupled regimes as possibly more accurate than one attractor."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-partial-capture",
+      "name": {
+        "en": "Capture need not be total: leverage points decide"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Why it is not fated; claims 77-79, 89",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "The uncaptured share does not include capital allocation, law and coercion, strategic infrastructure, attention, standards, frontier science or the builders of AI. Uncaptured communities can be false comfort. A 2025 essay's 60–70% figure is unsourced, and 2026 replaces it with the independence-of-reproduction criterion."
+      },
+      "quote": "Capture need not be total to be decisive",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "A not-carried here was too strong. The target-capture record states \"the rule holding the outcome\" and cites the leverage-point argument, and 02 reads who holds the places from which the rule is read as keeping the readers' premise. But the record derives no winners shaping the rule, and models count kinds in shares. Neither states that holding some named domains suffices. The account gives a critical mass of share; the source gives positions. [AI reading, D45]"
+      },
+      "targets": [
+        {
+          "record": "target-capture",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-target-capture",
+          "says": {
+            "en": "Record correspondence: the rule holding the outcome (\"the winner rewrites the test\" and the leverage-point argument). It does not derive that winners shape the rule; re-absorption is shown only where the next configuration does not depend on the state."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/02-MAP.md#capture",
+          "says": {
+            "en": "Reading [AI reading, D45]: who holds the places from which the rule is read keeps the readers' premise; where who reads is a monotone function of the share, the pool still reads it (`ClosedCapture.Drawn.pool_through`)."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "A critical mass in share with its exact edges; a premise stated where the source has a list."
+      },
+      "source_adds": {
+        "en": "That capture need not be total to be decisive; the named decisive domains; uncaptured communities as false comfort; the independence-of-reproduction criterion replacing an unsourced 60-70%; the theorem on domains, in the 2026-10-02 draft."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-plurality",
+      "name": {
+        "en": "Plurality as independent reproduction, not the existence of different values"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Why it is not fated; claims 80-82",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Plurality requires different forms keeping enough material, institutional and cognitive independence to reproduce, contest common conditions and influence what is possible next. Visible plurality can grow while directional plurality contracts. A road lives only if people can perceive it, learn it, fund it, transmit it and begin again."
+      },
+      "quote": "Plurality is not the continued existence of different values.",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "The report holds for the term and for reproduction of alternatives: the only live uses are 01's \"class is plural\" and a record quoting provenance. What the account has is reach: a pool tells apart what some member does, a pool recruiting through itself couples into a loss only as its course without it would, and widening is selected only by a group holding that difference (`Direction.widening_selected_by_pool`). Calling the wider better is C's; whose losses count, the condition's. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "a-pool-that-recruits-through-itself",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself",
+          "says": {
+            "en": "Theorem (World; recruitment through the pool a hypothesis). It comes to couple into a loss only as its course without the loss would; a pool admitting a reader couples the loss apart (witness). Whether an actual pool recruits so is empirical."
+          }
+        },
+        {
+          "record": "alignment-direction-under-widening",
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-alignment-direction-under-widening",
+          "says": {
+            "en": "Conditional (the continuation condition for scope, C read as widening for order, J1–J4, correspondence E). Formal part: where a second flow's levels widen a first's, a formation admitted by the second lies beyond the group's coupling closure. \"The schema does not use the condition\"; the claim about actual AI systems is argued."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "An exact sense of what a reader outside adds, and a stated gap: how pools form, last and resist capture is Open."
+      },
+      "source_adds": {
+        "en": "The criterion itself: alternatives reproducing, contesting common conditions and influencing what is next; directional against visible plurality; the road's conditions of life."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-material-independence",
+      "name": {
+        "en": "Independence is material, not nominal"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Claim 83; historical layer, the 2026 answer",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "An alternative on the same compute, funding, standards, data and successor infrastructure as the relation it must correct is not independent. Independence is protected capacity to observe, refuse, maintain itself and produce successors without permission from the process being answered."
+      },
+      "quote": "an alternative depending on the same compute provider, funding, standards, data pipeline",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The form appears for reviewers: count by causes, not names, and two reviewers moved under one cause fail readiness while every name is kept. GENERATIVE-REGIMES states the neighbouring warning, that agreement can stay unchanged while its resilience is lost. The law covers supplied fault formulas for reviewers, and says nothing of alternatives reproducing themselves, on funding or anything else. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "reviewers-count-by-independent-causes",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-reviewers-count-by-independent-causes",
+          "says": {
+            "en": "Theorem (pure core: numbered members and causes, failures Boolean, fault formulas and bounds supplied). Reviewers count by independent causes, not names; readiness is exactly a nonempty separated induced envelope."
+          }
+        },
+        {
+          "record": "copied-witnesses-change-nothing",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-copied-witnesses-change-nothing",
+          "says": {
+            "en": "Theorem. A witness copying one already on the roster changes no step or certificate. That one merely agreeing adds nothing is not shown."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Exactness at a narrow scope, with faults and bounds supplied."
+      },
+      "source_adds": {
+        "en": "Material independence of alternatives (funding, compute, successors), and the phrase without permission from the process being answered."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-anti-attractor",
+      "name": {
+        "en": "An anti-attractor can become an attractor: 科举 to 八股"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "The historical layer; claim 142; open questions 2, 24",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "The examinations, built to dilute hereditary capture, worked for centuries and became their own proxy trap. Since every prescription here is an institutional damper, the folder calls this its most serious unanswered self-undermining case: a successful counter-attractor would by construction be a meta-attractor."
+      },
+      "quote": "An anti-attractor can itself become an attractor.",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "The report fails for this half: 07 §6 and A-13 read the case by name. But they correct the universal. The source says a successful counter-attractor is by construction a meta-attractor. The account gives where: read monotonically from its own share, every reading favouring, it locks by the step after its second reading step; a threshold reading can be left or never lock. A locking counter-rule is not thereby 元吸引子 in the glossary sense, whose reading too is formed from share. [AI reading, D68]"
+      },
+      "targets": [
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
+          "says": {
+            "en": "Reading [AI reading, D68]: a counter-rule read monotonically from its share, where every rule it reads favours its carriers, locks by the step after its second reading step. \"The imperial examination is this case, as read in the meta-attractor line\". It rests on the capture laws, not the law of shaping."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/review/ALIGNMENT.md#a-13",
+          "says": {
+            "en": "A-13, Reading [AI reading, D68]: an instance of A-07 adding no law; its use is as a check on proposed remedies. Decision register: a counter-rule whose reading can favour the others need not lock."
+          }
+        },
+        {
+          "record": "capture-through-the-rule",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule",
+          "says": {
+            "en": "A rule that can favour the others need not lock: `Alternating.never_locked`, a witness."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The conditions under which a counter-rule does and does not lock, and a question to ask of alignment institutions."
+      },
+      "source_adds": {
+        "en": "That the historical case fits is read, not tested. The self-undermining claim as a universal; the folder's demand for a general defence, unmet in both."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-openness-criterion",
+      "name": {
+        "en": "The openness criterion: an ecology, not one benevolent counter-attractor"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "The exit, and the constraint; claims 230-231",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Any counter-move closing the field in its own favour is the same object under a better name. The goal is an ecology where generative attractors coexist, challenge one another and give rise to forms no centre can specify. Protective authority must stay limited, reviewable and unable to convert safety into permanent control."
+      },
+      "quote": "The positive goal is not one benevolent counter-attractor replacing the current one.",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "Nearest is a law on rules: along a course making only the moves of one fixed process from some step on, the possible under it does not keep widening, so read for collectives openness is a property of how rules keep changing. That is a law and a reading about the possible, and it ranks nothing; ranking needs C, and whose losses count the condition. [AI reading, D45]"
+      },
+      "targets": [
+        {
+          "record": "where-the-possible-grows",
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-where-the-possible-grows",
+          "says": {
+            "en": "Theorem (root; any process). Where the possible under a process keeps widening along a course, from every step some bounded stretch is not made of its moves throughout."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#7-keeping-the-future-open",
+          "says": {
+            "en": "Reading [AI reading, D45]: a fixed rule, institution, constitution or AI policy whose moves a course makes from some step on does not keep the possible under it widening. Nothing says which changes keep it widening, or that any actual collective can make them."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "That changing without end is necessary for the held possible and not sufficient (`Oscillating.converse_fails`)."
+      },
+      "source_adds": {
+        "en": "The criterion as a test on remedies; a plural ecology that coexists and contests; limits on protective authority; the claim that a counter-attractor must not itself totalize."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-guardian-test",
+      "name": {
+        "en": "The guardian test: the corruption of the constraining mechanism itself"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Molochlization, and the corruption of the constraint; claims 280, 282, 285",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "If winning confers power over the rule, the guardian of the rule is a position winning can reach. So no remedy resting on a better guardian counts: existing wisdom institutions are already inside the selection, and new ones return to the same dynamics. Decentralization is not the fundamental issue. Spoken; automatic transcript."
+      },
+      "quote": "the corruption of the constraining mechanism itself",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "The account has the question, and limits it. A loop can reach the routes of correction [reading]; resisting a capture hiding a loss needs a member admitted by what the pool does not yet read. Against the source's refusal, it counts exits: a reader beyond the share, and a counter-rule that need not lock, each under hypotheses, unshown of actual collectives. What keeps the readers' premise is something other than selection on the reading. Capability is a reason to pool, not to govern. [AI reading, D45]"
+      },
+      "targets": [
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#open",
+          "says": {
+            "en": "Open: how pools form, last and resist capture beyond recruitment through their own coupling; resisting a capture that hides a loss needs a member admitted by what the pool does not yet read."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
+          "says": {
+            "en": "What the rule reads is fixed by the readers' premise, not by the shaping, so these models do not tell capture from accountable revision by what the shaping changes."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
+          "says": {
+            "en": "Reading [D45]: Capability is a reason to pool, not to govern: read as reach, it extends what one's acts do and not thereby what couples into one, and a governing member's selection stays blind beyond its own closure, which the pool's union contains."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "A statement of where the models stop on this question."
+      },
+      "source_adds": {
+        "en": "The refusal of any better-guardian remedy; that decentralization leaves the compounding running; violence as no acceptable final constraint; provision beneath the game and a changed ledger for power."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-answerability",
+      "name": {
+        "en": "Answerability as the dividing line"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "The power formulation, Answerability; claim 266",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "The opposite of the pathology is neither inactivity nor abolishing contests but capacity growing while staying responsive to consequences. The line is not individual against collective or decentralization against hierarchy, but whether practices stay answerable, including that the affected can expose failure, sustain alternatives and change the terms."
+      },
+      "quote": "whether a system's successful practices remain answerable to the conditions they alter",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "07 §6 separates capture from accountable revision by whether the rule keeps a reader beyond the shapers' share; the word answerable in the account means something else (objectivity, repair). A reading on interface control judges reform by who decides next round. The reader condition is narrower than the source's: nothing on the affected changing terms. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
+          "says": {
+            "en": "Capture is shaping selected by what comes back whose rule is then read from their share, so its losses are read by no one in the loop; accountable revision is shaping whose rule keeps a reader of what lies beyond the shapers' share."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#markets",
+          "says": {
+            "en": "Reading [AI reading, D65; a historical correspondence, no theorem]: a reform is judged by who decides admission, comparison and correction next round, not by removing one named practice."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "A condition stated on what the rule reads, with the admission that the models do not decide it."
+      },
+      "source_adds": {
+        "en": "The affected's power to expose failure, sustain alternatives and change the terms; the rejection of the other dividing lines."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-first-separation",
+      "name": {
+        "en": "Success is not contribution to the conditions that support it"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "The power formulation, The first separation; claims 244-246",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Selection favours something, not necessarily the flourishing of its system. Where maintenance costs are immediate, deterioration delayed and the harmed cannot impose consequences, neglect is an advantage. Nobody need become selfish. The fault is detaching reward from consequence, which relative advantage intensifies but does not ground."
+      },
+      "quote": "Success within a selection process is not contribution to the conditions that support it.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The overview and one page state this: a selection reaches only what couples into its selector, so it can succeed while what it cannot read is lost, and the one page marks that as the account's centre, a reading, leaving open whether the loss counts. A rise paid from beyond is exact, on a condition no member couples into. Whether the loss counts needs the continuation condition; any ranking, C. Neither is asserted. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "selection-through-couplings",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+          "says": {
+            "en": "Proved, near-definitional: the selections through a selector's couplings together reach exactly what couples into it. The selector selecting through just those is a supplied premise, where the law's force lies."
+          }
+        },
+        {
+          "record": "what-a-rise-draws-from-beyond",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-a-rise-draws-from-beyond",
+          "says": {
+            "en": "Theorem (World: balance, and local premises named). The beyond falls by at least the rise; where the rise exceeds the slack a named dependence is broken, on a condition no member couples into."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/ONE-PAGE.md",
+          "says": {
+            "en": "The account's centre [AI reading]: a selection can succeed while what it cannot read is lost, and the laws do not say whether that loss counts."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The exact accounting, and the separation of the finding from any evaluation of it."
+      },
+      "source_adds": {
+        "en": "The three conditions for neglect being an advantage (immediate cost, delayed damage, the harmed unable to impose consequences) as a stated test; that nobody need become selfish; relative advantage intensifying the fault without grounding it."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-narrow-optimizer",
+      "name": {
+        "en": "The narrowest optimizer wins: iterated competition removes the balanced"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "The primitive is selection; claims 3, 7, 16",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "An agent optimising one measurable value and discarding the rest is by construction more efficient at it; competition therefore selects capital optimizers and removes the balanced, and what remains is the residue of a filter. Totalitarian politics runs the same structure with another token. Ren calls it the decisive premise."
+      },
+      "quote": "The agent that only optimizing capital value, and discard all other values, including externalities, will have the highest capital efficiency",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "The account has weaker forms: with room, every optimum of a rising order drains as far as any eligible outcome; offspring going only to formations raising a family never select against reaching beyond it. It does not say the narrow wins over the broad. Position does not protect, and a race can end its greatest parts. The reconciliation restricts the premise, since relation can make care productive. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "what-an-optimum-does-beyond-what-couples-in",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
+          "says": {
+            "en": "Theorem (any outcomes; breaks on the World). With room, every optimum of an order rising with a family stands at the least level beyond among eligible outcomes. It requires room; a known theorem restated."
+          }
+        },
+        {
+          "record": "relative-position-is-zero-sum",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-relative-position-is-zero-sum",
+          "says": {
+            "en": "Theorem. Positions' rises total their falls. Position does not protect: with balance across n steps of joint excess, a part requiring the condition at a need above what is left is not active. That a race produces joint excess is a premise of the join."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "What the rise costs the riser; the condition room under which the drain follows."
+      },
+      "source_adds": {
+        "en": "That competition selects the narrowest as a population outcome, and the universal efficiency premise, which the reconciliation holds to a comparison premise."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-rank-kernel",
+      "name": {
+        "en": "The kernel: the biggest, then bigger, and why the copies fight"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Tempo, slack ... why the copies fight; claims 278, 302, 305; open questions 46, 49",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Where bigness is the kernel of thought, the logic struggles and expands; with no enemy outside it makes enemies inside, and any actor who might overtake is a threat. The objective is rank, so conflict arises even in plenty. Open questions ask whether rank or a bounded self-model does this. Spoken, translated, not verbatim."
+      },
+      "quote": "我就是要成为最大的；当我已经是最大的，我还要变得更大",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "Mechanism in the account: more than now needs an open world and never rests; above all others is met by at most one seeker, so no unchanged state meets it for two; a rising take from a bounded giving ends the seeker. A race for position draws everything in its model. How targets form is not modelled, so this is the target's law, not the kernel's origin. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "seeking-boundary",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-seeking-boundary",
+          "says": {
+            "en": "Theorem. More than now, met at every step, needs an open world; above all others is met by at most one seeker. How a target forms is not modelled."
+          }
+        },
+        {
+          "record": "a-race-for-position-draws-everything",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-race-for-position-draws-everything",
+          "says": {
+            "en": "Theorem (any law of what stands next, natural amounts). Where what stands from nothing is at most what stands from anything left, with at least two drawers, every profile perfect for position draws everything before the horizon. Where something left stops what stands next, drawing everything is not perfect."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "What such a target can and cannot do under a stated law."
+      },
+      "source_adds": {
+        "en": "Rank as the kernel of a mind or polity; making enemies inside; that a rank objective fights in plenty; the self-model with a boundary drawn around its own good."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-slack",
+      "name": {
+        "en": "Slack is what the advantage runs on; cost displacement and relative vulnerability"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Tempo, slack; claims 109, 299",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "While the host can absorb displaced costs, struggle grows the struggler's share fastest, though the total can fall; when slack is gone the endgames begin. Restraint is penalized by two routes not to be merged: cost displacement and relative vulnerability. The share reading is the assistant's; the rate a conjecture."
+      },
+      "quote": "Slack is what the advantage runs on.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The account has slack as a term of a law and restraint's edge. A rise past the slack breaks a dependence; restraint within the joint slack keeps the need; where the rest outruns the renewal no weighting selects a member's restraint. A hypothetical reading gives the deferred-maintenance case. A growth-rate claim conditional on slack is not stated. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "what-a-rise-draws-from-beyond",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-a-rise-draws-from-beyond",
+          "says": {
+            "en": "Theorem (World). The slack is what the conditions beyond stand above their needs; where the rise exceeds it a named dependence is broken."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#markets",
+          "says": {
+            "en": "Reading [AI reading, D65; a hypothetical case]: where buyers cannot tell future reliability and finance rewards present margins, a provider deferring maintenance can outgrow one maintaining; what the selection does not couple into is drawn from."
+          }
+        },
+        {
+          "record": "the-rest-outruns-the-renewal",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-the-rest-outruns-the-renewal",
+          "says": {
+            "en": "Theorem (World). Where the rest alone take more than a step gives, the level falls and those depending at the need end, whatever a member outside the rest takes. Not shown: that depletion is the only equilibrium."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "What keeps the need under restraint, as a stated exit with its edge."
+      },
+      "source_adds": {
+        "en": "That slack conditions the struggler's growth advantage; relative vulnerability as a second route coupling through a retained asymmetry."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-local-alignment",
+      "name": {
+        "en": "Locally faithful agents and collectively destructive routes"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/COLLECTIVE-DESTRUCTIVE-ATTRACTORS.md",
+        "locator": "Opening; What local alignment means; Capability can close the opportunity for correction",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "A sufficient route is locally rewarded action damaging shared conditions, coupled to dynamics keeping it preferable and preventing correction. Local safety can fail under composition. In one witness faster replacement removes contributors before they fund correction, changing basin membership. Neither intelligence nor competition alone establishes destructive convergence."
+      },
+      "quote": "Faithfully executing local goals does not guarantee good common consequences.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The account states the join: formations each within what is given can jointly exceed it; at a mutual best response an optimizer takes its capacity beyond its family. Funding has neighbours, both periphery: selection must fund succession, and an exact floor boundary for a market model. The source's population boundary and the witness where capability changes basin membership are not in the chapters. \"Good\" is the source's word: no law says so, and any ranking needs C. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "own-count-misses-joint-excess",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess",
+          "says": {
+            "en": "Proved on models; restates the commons. Formations each taking within what is given can together exceed it; where renewers depend on what they renew, this ends renewal and those depending at such a need."
+          }
+        },
+        {
+          "record": "several-optimizers-drain-by-their-joint-capacity",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-several-optimizers-drain-by-their-joint-capacity",
+          "says": {
+            "en": "Theorem. At a mutual best response, existence not shown in general, a condition beyond every optimizer's family stands where one optimizer of their joint capacity would leave it."
+          }
+        },
+        {
+          "record": "succession-on-a-funded-carrier",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-succession-on-a-funded-carrier",
+          "says": {
+            "en": "Theorem (periphery). Selection must fund actual succession; in witnesses a missing part stops realization while the aggregate stays safe. Not shown of any actual system; the laws compare no command with another."
+          }
+        },
+        {
+          "record": "market-model-share-margin-and-ends",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-market-model-share-margin-and-ends",
+          "says": {
+            "en": "Theorem (periphery: the market model). With `M = α(1 − θ) − βλθ`, the floor is kept at the next step exactly where `M ≥ 0`. A negative margin gives a low region, not entry into it."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "T3 as the conjecture that trained systems behave so; the limit in which the classical commons lies."
+      },
+      "source_adds": {
+        "en": "The exact funding-and-fate boundary for a population (r, B, v) and the witness where faster replacement removes contributors before they fund correction, changing basin membership; the corrective reserve as a mechanism."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-organization-first",
+      "name": {
+        "en": "Start from formed organization, not opposed interests"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/COMMON-ORGANIZATION.md",
+        "locator": "From formation to regulation; How organization reproduces revisability; COLLECTIVE-DESTRUCTIVE, Correction through organizational formation",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Ren rejected treating separately interested agents, distrust and enforceable stakes as the general start. Organization forms, regulation differentiates and consequences can revise them; central regulation may be constructive and unity is not automatically correct. Replacing opposed interests with one fixed common utility does not answer this either."
+      },
+      "quote": "Common organization presupposes neither opposed interests nor a fixed common utility.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "07 §6 opens the same way: formations within the unfolding and what each one's selections reach, not a bargain among separate owners of value. C-D §8 keeps real conflict beside positive-sum structure. A difference: the source says central regulation may be constructive; 07 reads capability as a reason to pool, not to govern. Whether this start is warranted is the thesis of one unfolding, argued, not proved. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
+          "says": {
+            "en": "On the thesis of one relational unfolding, a person, an AI system and a training process are formations within the unfolding. Alignment is first what each one's selections reach and how far that can extend, not a bargain among separate owners of value."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#8-zero-sum-competition",
+          "says": {
+            "en": "Starting from relations removes the frame of a fixed sum divided among independent owners. It does not remove rivalry: positions' rises total their falls (theorems)."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "A count of what the frame keeps (rivalry, conserved stocks)."
+      },
+      "source_adds": {
+        "en": "Central regulation as constructive, and unity as not automatically correct; regulation differentiating out of organization as a sequence; brain, nervous system and CPU as reminders of integrated control, kept only as analogy."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-continuing-revision",
+      "name": {
+        "en": "Consequences revise the apparatus, in one supported run"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/COMMON-ORGANIZATION.md",
+        "locator": "From regulation to its revision; The continuing process; Boundaries, approach and failure",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "One paid history joins formation, regulation, a retained failure record that changes the next build, and supported recurring revision on the spine. Freezing the method or cutting the return fails. Stated as completing the requested integration as a conditional account; supplied recipes, repertoires and laws stay supplied, and no basin is proved."
+      },
+      "quote": "Regulation remains revisable when consequences can also alter the relationships producing, retaining and selecting the response.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "Chapter 03 holds the laws, with the study cited: a rule answers each failure exactly where it puts the failed address in the next plan; a cycle repeats where its yield covers its cost; a selection stays expressible under a new lumping exactly where new indistinguishability implies old. The paid join of formation, selector and updater stands in the folder and experiments only: \"CommonOrganization\" has no live hit. Nothing joins it to the capture loop. Continuing is not warrant. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "consequence-revised-reference-plan",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-consequence-revised-reference-plan",
+          "says": {
+            "en": "A revision rule answers every failure exactly where it puts the failed address into the next plan; a rule blind to failures misses one at every plan where no list holds every address."
+          }
+        },
+        {
+          "record": "recurring-reference-revision",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-recurring-reference-revision",
+          "says": {
+            "en": "Along every run of a balanced process, drawing at arbitrarily late steps needs replenishment at arbitrarily late steps; in the revision process the cycle so repeats exactly where its yield covers the nine units a round uses."
+          }
+        },
+        {
+          "record": "selection-when-the-lumping-changes",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-when-the-lumping-changes",
+          "says": {
+            "en": "Theorem (any process). Every selection through an old lumping stays expressible through a new one exactly where new indistinguishability implies old, and a merged old pair supplies a lost choice. The record states no composition in one history with the older material model."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The law's general balance form, beyond one witness."
+      },
+      "source_adds": {
+        "en": "The one paid history joining formation, regulation, retained failure record and recurring revision; the claim to have completed an integration; a constructive regime reproducing its own corrigibility as a kind of regime."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-diagnosis-limit",
+      "name": {
+        "en": "Seeing the slide: passive histories do not identify the mechanism"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/GENERATIVE-REGIMES.md",
+        "locator": "Recognizing approach and entrenchment; Diagnosis is activity within the regime; Discovering dependencies",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Two causal implementations can share every passive history and respond differently to a matched route intervention. So a shrinking set of corrective paths is a signal, not an identification. A probe distinguishes them and may consume what recovery needs; diagnosing and keeping the means to respond are separate achievements. Agreement can stay while resilience is lost."
+      },
+      "quote": "No classifier using only that history can distinguish the pair.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The form is in the account's limits: a finite reading including every renewing run includes a consuming one; a loop's onset need not show; states alike under every old observation can be told apart by a newly admitted probe, periphery and with supplied permissions. A reading sets consent and penalties as such a pair, told apart once removal is in the net. The costly probe and the matched-route causal pair were not found. [AI reading, D69]"
+      },
+      "targets": [
+        {
+          "record": null,
+          "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#3-what-the-theorys-own-laws-rule-out",
+          "says": {
+            "en": "A reading fixed by the first h steps that includes every renewing run includes a consuming one (`Renewable.finite_reading_includes_consumption`), ruling out certifying renewal from a finite record, on the renewable process."
+          }
+        },
+        {
+          "record": "how-loops-form",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-how-loops-form",
+          "says": {
+            "en": "Theorem (World; witness). A loop forming at T and one forming at any later step carry the same amounts up to T: the amounts need not show when one forms."
+          }
+        },
+        {
+          "record": "access-yet-to-form",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-access-yet-to-form",
+          "says": {
+            "en": "Theorem (periphery; route fixed, operations and permissions supplied). States alike under every old observation and in their active view can be told apart by a newly admitted probe. It does not say which supports will be permitted next."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/01-ROOT.md#r-the-source-texts-test-systems",
+          "says": {
+            "en": "Reading [D69]: an institution kept by consent and one held by penalties are the thermostat witness read socially, told apart once their removal is in the net. Not a new law."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "T6 and its failed and passed tests, as the account's form of warning from what couples in."
+      },
+      "source_adds": {
+        "en": "The causal pair under matched intervention; probing that spends recovery; coverage as relative to an intervention class; finite effect tables certifying no unlimited separation."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-waiting-not-neutral",
+      "name": {
+        "en": "Waiting is not neutral: the window closes"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Claim 164; compare GENERATIVE-REGIMES.md, Recognizing approach and entrenchment, and its timing paragraph",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Tagged conditional: waiting for undeniable recursive self-improvement alters selection until restraint is no longer politically or materially available. GENERATIVE-REGIMES gives model results on feasibility: the basin fixed, the one-time intervention rises from one unit to six, while another checked example lets a cycle build margin. Distinct operations, scope-limited."
+      },
+      "quote": "the process of waiting alters the selection environment until effective restraint",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "Timing laws in the account: in a two-kind count model, a reading turns the course for good only where the late reading still favours the others a step on; on any giving law, a level up to the top ends exactly where it starts below the point of no return; in a market instance the support cover grows with the transition. Neighbouring forms, not the source's budget rising within one basin. That actual rules are read so is not established. [AI reading, D45]"
+      },
+      "targets": [
+        {
+          "record": "loss-read-in-time-by-the-others",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-loss-read-in-time-by-the-others",
+          "says": {
+            "en": "Theorem (counts). A reading, the next step reading too, turns the course for good from two steps on exactly where the late reading favours the others at the share a step on; once it would favour the shapers every later reading keeps the lock; at most one step lies between."
+          }
+        },
+        {
+          "record": "margin-of-a-regime",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-margin-of-a-regime",
+          "says": {
+            "en": "Theorem (the regime; any giving law, whole numbers). A level up to `hi` ends exactly where it starts below `H + y`: the point of no return is exact."
+          }
+        },
+        {
+          "record": "market-supported-finite-transition",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-market-supported-finite-transition",
+          "says": {
+            "en": "Periphery market instance: the cover `K(n+1) = (10/9)(K(n) + 1 + κ)` is a ladder for the essential floor, exact at the worst share; sufficient elsewhere, not least; support during the transition cannot be paid for with the improvement it brings."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Collingridge's dilemma with one horn a theorem and the other a premise; the point of no return as belonging to the share's course."
+      },
+      "source_adds": {
+        "en": "The empirical claim about AI; the intervention budget rising within a basin; waiting that builds margin."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-tempo",
+      "name": {
+        "en": "Tempo and the conditional rate mismatch"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Tempo is a selector; claims 114, 265, 297-298; open question 47; COLLECTIVE-DESTRUCTIVE, Complexity",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Consequences outrun correction: complexity grows exponentially while cognition and institutions grow sub-linearly. The rate problem is a conditional mismatch, not acceleration as such. Faster rounds select harder for whatever wins them, a conjecture. Once correction is rate-limited, tempo moves destination as well as date: the assistant's reconciliation, flagged to be shown."
+      },
+      "quote": "Accelerating all relevant processes equally would not create it.",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "Stated: a pace law for a slow rule reading a fast level; a regulator lags wherever the world changes faster than it reads, as a reading; change too fast for correction as one route of transition; an exponential pace of loops of coupling, on a supplied premise. Not stated: tempo as a selector, or that it moves the end state. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "how-fast-a-rule-may-change",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-how-fast-a-rule-may-change",
+          "says": {
+            "en": "Theorem (any type). Given two values, a stretch of `L` steps fixes every pair of held-rule courses with at most `N` states exactly when `L ≥ 2N − 1`. Which rule a slow level reads into, or that a layered pace is better, is not shown."
+          }
+        },
+        {
+          "record": "mutual-dependence-and-its-pace",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-mutual-dependence-and-its-pace",
+          "says": {
+            "en": "Mutual dependence, and the exponential pace that loops of coupling give, supposing couplings holding at every step; that a dependence acts as such a coupling is supplied."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "An exact sufficient stretch for reading, and pace of differences, not amounts."
+      },
+      "source_adds": {
+        "en": "Tempo as selector; open question 47's demonstration; the empirical complexity-to-degeneration hypothesis; the response-capacity theorems of the population study."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-ai-selection-ecology",
+      "name": {
+        "en": "AI as selection ecology, not will to power"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Why AI is the hinge; claims 147-163",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Selected archive, model and deployment change what next enters the archive. Pretraining supplies low-resistance scripts, not a will; what is hard to score is under-trained; agentification gives a local subject form; interfaces define visible reality; automation lets the selector optimize its own carrier. The folder retires its 2025 will-to-power claim."
+      },
+      "quote": "selected archive → selected model → selected deployment",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "The account holds the training step exactly: the reward process is the selector [reading], and a law is installed only along a learner's courses and where lumping cannot tell a history from them. A choice count locks on stated premises. One frozen test of a judge built from its picks. The whole loop from deployment back to archive is not stated. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "what-training-installs",
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-training-installs",
+          "says": {
+            "en": "Theorem (World). Read training as a selection over act laws through the courses each generates: installed along its courses, off them exactly where the lumping cannot tell a history from a course, through a reward's couplings only."
+          }
+        },
+        {
+          "record": "capture-by-counted-choices",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-by-counted-choices",
+          "says": {
+            "en": "Theorem. Under a standing score, the threshold divides counts into two regions the course never leaves; it stands, so this is not the meta-attractor in 02's sense, whose reading too is formed from the share."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Exact statements of what training cannot reach, with no claim that AI is the hinge."
+      },
+      "source_adds": {
+        "en": "The archive-to-archive loop; low-resistance scripts; evaluation-mediated subjectivation; interface ontology; six ways AI changes winner selection; recursive automation as the risk transition; the urgency claim."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-two-closures",
+      "name": {
+        "en": "Autonomous and delegated closure"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Why AI is the hinge; claims 165-167, 264",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Route 1: a system or composite no participant can redirect. Route 2: an obedient system amplifying an operator itself selected by the pattern, so human control persists at one boundary while the process escapes correction. They couple. The human/machine boundary is not the fundamental one."
+      },
+      "quote": "Two terminal routes, kept separate because neither can borrow the other's evidence.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "Route 2's form is 07's reading: an assistant whose order rises with its principal's family adds capacity, not reading, so alignment to a principal alone is not alignment of the joint selection. It rests on that premise, not on selection for control. Route 1, a composite no participant can redirect, is not stated. Terminal outcomes are not stated. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": null,
+          "anchor": "theories/becoming/review/ALIGNMENT.md#a-12",
+          "says": {
+            "en": "A-12, Reading [AI reading, D68]: \"Alignment to a principal alone is therefore not alignment of the joint selection.\" That the assistant's order rises with the principal's family is the reading's premise, not the law's; a warning is not modelled."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The premise under which obedience adds capacity only."
+      },
+      "source_adds": {
+        "en": "Route 1 as a composite no participant can redirect; the coupling of routes; the operator as selected by the pattern; cosmic cancer as a terminal image, conditional."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-exit-sequence",
+      "name": {
+        "en": "Change the basin, then add speed: the ordered exit"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "The exit, and the constraint; claims 184-186, 227",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "You cannot optimize out of an optimization trap: reshape the feasible set first. The order Recognize, Slow/Cap, Align, Coordinate, Transform is itself the claim. Barrier conditions come before thrust. It presents a sequence, not doom."
+      },
+      "quote": "Recognize → Slow/Cap → Align → Coordinate → Transform",
+      "carried": "changed",
+      "relation": "divergence",
+      "reading": {
+        "en": "The source asserts an order and a must. The account asked the nearest question and answers no guarantee, then named exits each under hypotheses, none shown of an actual collective, in no sequence. It ranks no course without C for order and the continuation condition for scope, both unasserted. Calling a rate-limited path better is therefore not said. The source's fix to the feasible set is not refuted. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": null,
+          "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#the-answer-in-brief",
+          "says": {
+            "en": "No guarantee. The theory gives a criterion, exits holding under stated hypotheses, six conditions for enough of the situation, and one law on keeping the future open. Achievable under stated conditions: yes, for named exits, none shown to hold of an actual collective."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+          "says": {
+            "en": "A table of exits (read beyond the share, read in time, nothing back, pool couplings, restraint, footprints, stepwise reward, give first, independent causes), each with its law, model and edge."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "An edge for each exit, such as the step at which a window closes."
+      },
+      "source_adds": {
+        "en": "The order itself, and the claim that skipping steps fails; recognition as the first causal intervention; pause, caps and enforcement."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-engineered-rules",
+      "name": {
+        "en": "Rules as a slow state: barriers, viability kernels and the engineered sense"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "The exit, control-theoretic level; claims 193-202",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Rules form a slow layer over fast dynamics; a barrier makes a safe set forward-invariant, and a certifiable rule region is called a meta-attractor. Agreement is needed on invariants, not values, and barriers expand safe optionality. Arms races are a spectral-radius problem."
+      },
+      "quote": "a certifiable region of rule space",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "The account has the certificate laws, for any process, with market instances as periphery: no course leaves a guard exactly when a certificate holds it; reaching and lasting have funnels and ladders. No market law ranks arrangements. It does not call this a meta-attractor. The reconciliation says the barrier and Lyapunov claims were not migrated. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-market-protected-continuation",
+          "says": {
+            "en": "Never leaving: for every process and guard, no course leaves the guard exactly when some certificate contains it (pure core). Market instance on periphery: no entry from unsafe states, no compliance by actual markets."
+          }
+        },
+        {
+          "record": "market-partial-correction-boundary",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-market-partial-correction-boundary",
+          "says": {
+            "en": "Reaching: exact boundary `β ≤ 5/12` in the instance, for landing with zero extra quality error; not a complete basin of landing."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Exact any-process laws and an exact boundary in a model."
+      },
+      "source_adds": {
+        "en": "Control barrier functions and composite Lyapunov certificates; averaging; pricing floors, bandwidth caps; alignment as agreement on invariants; expanded optionality as a reply to over-regulation."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-plural-ends",
+      "name": {
+        "en": "Ends must be plural and lexicographic, never a single scalar"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "The exit; claims 201, 203",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Non-negotiables first (no irreversible harm, biosphere boundaries, no coercion), then a Pareto search across health, learning, meaning and equity. A single scalar re-enacts the pathology. This is stated as what ends must be."
+      },
+      "quote": "Never a single scalar, because a single scalar immediately re-enacts the pathology",
+      "carried": "changed",
+      "relation": "divergence",
+      "reading": {
+        "en": "The source prescribes ends. The account has widening as a criterion, not a quantity to maximize, silent where mixed, and asserted by neither law nor account: order is C's, scope the condition's. Priority of basic conditions is a further premise J2, whose rival is not shown inconsistent. A law bites here too: a lexicographic order counting the beyond second is still rising and drains. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": null,
+          "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#1-a-direction-as-a-criterion",
+          "says": {
+            "en": "A criterion on which every positive weighting agrees, not a quantity to maximize; a mixed comparison is decided both ways. Under the two premises it is the question's direction; neither premise is asserted."
+          }
+        },
+        {
+          "record": "what-an-optimum-does-beyond-what-couples-in",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
+          "says": {
+            "en": "Theorem. An order ranking above wherever a rising order does is rising, so a lexicographic order counting the beyond after what couples in drains all the same."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#practical-judgment",
+          "says": {
+            "en": "J2, priority of basic conditions, is a premise defended by non-substitution; a rival preferring enough secondary gains to one basic restoration is not shown inconsistent [AI reading, D65]."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Why placement of the non-negotiable decides whether it protects."
+      },
+      "source_adds": {
+        "en": "The listed goods and floors, as prescription."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-shengsheng-ethics",
+      "name": {
+        "en": "生生 without licence: no whole may convert its parts into fuel"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Claims 231-233, 248",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "The object of protection is the shared field's capacity to go on sensing, correcting and generating, made minds included. 生生 must not license growth or novelty at any cost: a process making participants expendable is not mutually generative, and ending it may be right. No institution may define others as expendable in the name of the whole."
+      },
+      "quote": "No whole may claim integration while converting its parts into fuel.",
+      "carried": "carried-in-part",
+      "relation": "divergence",
+      "reading": {
+        "en": "The account agrees 生生 licenses no growth, and is not any new organization. It diverges in standing and on endings. T8 is argued, compared by widening; the continuation condition fixes scope and C order, neither asserted, warrant open. The source refuses unconditionally and says ending a process may be right; under the condition no ending is licensed, and predation or ending a cancer are mixed, needing a measure. Capture and drain give no prior duty or licence. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": null,
+          "anchor": "GLOSSARY.md",
+          "says": {
+            "en": "生生: life in the whole and its continuing generation (生发) [AI reading, D1]. T8 argues it is the way for life, compared by widening what can form, with the continuation condition for scope and C for order. Not any new organization."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses",
+          "says": {
+            "en": "Thesis T8: for life, the way is 生生, compared by widening what can form, counted for everything (scope: the continuation condition) and ranked by what every valuer who counts everything shares (order: C). For life says whose way it is, not whose losses count. Neither premise asserted; warrant open."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#joint-plans",
+          "says": {
+            "en": "Reading [AI reading, D65; any ranking is C's, under the two premises of 07]: capture and drain give institutions no prior duty to contract and no prior licence to grow."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-settle",
+          "says": {
+            "en": "Predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]; telling harm from non-harm among them needs a measure. No ending is licensed: a path retaining what has significance along another ends none of it (`Web.Retains.not_added`)."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The two premises kept apart, whose losses count and what is better, and the mixed cases they leave unranked."
+      },
+      "source_adds": {
+        "en": "Unconditional refusal of expendability; made minds as participants by default; ending as sometimes required, against \"no ending is licensed\". On AI, the account says only that it is not shown."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-direction-neutral",
+      "name": {
+        "en": "Self-reinforcement is not the pathology"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Claims 33, 253; GENERATIVE-REGIMES, Generativity and ethical direction",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Meta-attraction is direction-neutral: care can produce care, knowledge later discovery. The destructive case adds a relation: a process better at reproducing itself while shared conditions of life, participation or correction, assessed independently, worsen. A pattern's stability does not establish its host's viability."
+      },
+      "quote": "A self-reinforcing pattern is not inherently destructive.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The account says the same of its laws: none says a locked loop supports or damages 生生, and a returning organization can sustain benign creation. Attraction is not continuation. A difference: the source calls the destructive case assessable independently; here no law says a drain is a harm, and such an assessment reads on C and the continuation condition, neither asserted. This neutrality belongs to the wide sense; closed capture is a narrower form, about which the same reading holds. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/02-MAP.md#capture",
+          "says": {
+            "en": "Reading [AI reading]: \"none of this says whether a locked loop supports or damages 生生\"; and [D65] real loss can come with no capture loop, and a returning organization can sustain benign creation."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#markets",
+          "says": {
+            "en": "Reading [AI reading, D65]: attraction is not continuation: a selection absorbing perturbations can still erode its support."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Region, mechanism and ethical loss as three boundaries."
+      },
+      "source_adds": {
+        "en": "The destructive case as a relation assessed independently: a process improving its own reproduction while shared conditions of life, participation or correction worsen. Stability not establishing a host's viability is stated as a neighbour in the account, the relation is not."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-positive-recursion",
+      "name": {
+        "en": "The positive recursion, as material as the negative"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "The exit, and the constraint; claim 229; open question 23",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Shared capability, distributed agency and plural correction renew the commons and raise further capacity, carried by funding, stewardship, succession, real exit and security that makes restraint survivable. A commons carrier with portable access expands independence, so concentration is not automatically totalization. The folder admits this half is thin."
+      },
+      "quote": "shared capability → distributed agency → plural observation, criticism, maintenance and repair",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "Parts stand separately: a formation sparing what it waits on gives first; building shared capacity can be warranted in a comparison without fixing one carrier, where the record's premises hold. Nothing in the account states this loop or its carriers. Calling it better is C's, and whose losses count the condition's. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+          "says": {
+            "en": "Theorem (any type). Restoring needs a formation that spares all it waits on, which gives from step 1 whatever the start; without one, total withholding stays."
+          }
+        },
+        {
+          "record": "organizational-formation-from-generative-comparison",
+          "anchor": null,
+          "says": {
+            "en": "Reviewed-scoped: in a finite nonempty eligible range, if every continuation lacking an organizational relation has a strictly better eligible construction, every undefeated choice includes that relation. Can warrant strengthening shared capacity without fixing one carrier."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The start condition for giving, and the premise-conditional warrant."
+      },
+      "source_adds": {
+        "en": "The loop, its material carriers, and the commons-carrier counterexample to itself; concentration is not capture and related distinctions, as claim 262 states them."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-conceptual-capture",
+      "name": {
+        "en": "Conceptual capture: the strategy takes the name of rationality"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Conceptual capture; claims 107, 112, 129, 281",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "The contingent logic stops looking like one option and defines evidence, practicality, intelligence and success. Alternatives become naive or unintelligible rather than defeated. The folder calls this the essential transition: without it the term is another name for regulatory capture or increasing returns. Criticism loses standing, it does not become impossible."
+      },
+      "quote": "局部胜出的策略拿走了理性的名字",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "The account states one rung: the reading of the rule formed from the share, where a change of reading is absorbed, and codes that are imposed stay. Its record reads \"even rationality is self-interest\" as the rule reaching the standard of reason, an AI reading, and 02 reads a second order on the routes of 明. Evidence and refutation are unformalized at T7. So by the folder's own test, its essential transition is read in the account, not proved. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "closed-capture",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+          "says": {
+            "en": "Where the reading too is formed monotonically from the share, a change of the reading of any size is absorbed at the next reading step. That any actual rule or reading is so formed is the premise, on the rule and on mind."
+          }
+        },
+        {
+          "record": "a-code-formed-between-formations",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations",
+          "says": {
+            "en": "Codes changed only by hearing keep agreement through closed hearings; start and order fix the form; imposed and written-back codes stay."
+          }
+        },
+        {
+          "record": "target-capture",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-target-capture",
+          "says": {
+            "en": "Record, AI reading: Ren's \"even rationality is self-interest\" reads as the rule reaching the standard of reason itself. A reading of a correspondence; the theorems do not state it."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The exact absorption of a reading, and shared-code laws that say nothing of truth or standing."
+      },
+      "source_adds": {
+        "en": "What counts as evidence, intelligence and rationality being redefined; loss of intelligibility and standing; language capture; naturalization."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-frames",
+      "name": {
+        "en": "Frames: correction called violence, and struggle as the ground"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "The frame calls correction violence; The guardian test, turned on frames; claims 301, 304",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "A frame in which outside constraint counts as aggression removes a rule's standing before it acts; the words remain, their sign flips. A diagnosis keeping struggle as reality's ground can only prescribe a stronger party: Moloch the problem, Leviathan the cure. The asymmetry reading is the assistant's. Spoken, translated, not verbatim."
+      },
+      "quote": "而当别人想给我们加上规则时，那就被认为是一种暴力",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "No such channel or comparison was found. The account's own start from relations removes one frame of opposed owners, but it does not study a frame as a mechanism of capture or how a rule loses standing. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "The whole claim, with its test (open question 48)."
+      },
+      "absence": {
+        "searched": [
+          "violence",
+          "Leviathan",
+          "Moloch",
+          "jungle",
+          "frame",
+          "standing",
+          "aggression"
+        ],
+        "read": [
+          "COLLECTIVE-DIRECTION §8",
+          "07-SIGNIFICANCE §6 opening"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-vs-moloch",
+      "name": {
+        "en": "Against Moloch: a state under fixed rules, a process rewriting them"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Conceptual capture, Moloch; claims 117-118",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Moloch names participants trapped in an outcome none wants under fixed rules. The meta-attractor names the process rewriting rules and payoffs to entrench it, changing who survives and why the next generation sees the trap as reality. The sharpest form: Moloch makes us do what we know is bad; this makes us believe it good."
+      },
+      "quote": "the engine that *builds and reinforces* Molochian traps",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "The word appears nowhere live, so the report holds of the comparison. The structure gives a limit on the source's claim that the meta-attractor builds the traps: 05's drain laws act under fixed rules, 02's capture laws make the rule endogenous, and a reading says a real loss need not form a meta-attractor. So the drain can stand with no capture loop. No text sets them as this contrast, or claims the belief half. [AI reading, D65]"
+      },
+      "targets": [
+        {
+          "record": "several-optimizers-drain-by-their-joint-capacity",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-several-optimizers-drain-by-their-joint-capacity",
+          "says": {
+            "en": "Theorem. At a mutual best response a condition beyond every family stands where one optimizer of their joint capacity would leave it; correspondence: tragedy of the commons (Hardin), open access (Gordon)."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#markets",
+          "says": {
+            "en": "Reading [AI reading, D65]: a real loss need not form a meta-attractor. Where winners write the next round's rule the loop is capture through the rule."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Both sides as laws under their premises."
+      },
+      "source_adds": {
+        "en": "The comparison itself; that meta-attraction makes the bad seem good; molochlization as a becoming that happens to carriers."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-vs-goodhart-and-lock-in",
+      "name": {
+        "en": "Goodhart a symptom, lock-in narrower: the claim to explain more"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Conceptual capture; claims 122, 126; Goodhart threshold claim 60",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Goodhart is a symptom: this explains why the metric persists after failing. Lock-in makes one technology hard to replace; meta-attraction is the right description when persistence also changes agents, goals, evaluators and the possibility of recognising alternatives."
+      },
+      "quote": "Goodhart is a symptom; the meta-attractor explains why the metric persists",
+      "carried": "changed",
+      "relation": "divergence",
+      "reading": {
+        "en": "The account inverts the rank. Goodhart's law and externality are read as one law of the optimum under room, and the choice lock as the lock-in of increasing returns, with a critical mass read as a stag hunt: known forms. T7's persistence half is conjectured. The source's added reach over agents and evaluators is a reading on readers. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/08-METHOD.md#what-the-unifications-claim",
+          "says": {
+            "en": "Overshoot, externality and Goodhart's law as one law of the optimum under room: the optimum law proved, across domains conjectured (T3), supported in simulation (MQ1); a unification adds no theorem."
+          }
+        },
+        {
+          "record": "capture-by-counted-choices",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-by-counted-choices",
+          "says": {
+            "en": "Reading [AI reading, D45]: the lock is the lock-in of increasing returns (Arthur 1989), and counting the action taken is the value-free habit."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Goodhart given a law, where the source treats it as a symptom."
+      },
+      "source_adds": {
+        "en": "The claim that persistence through changed agents distinguishes the object; Goodhart as a threshold law in intensity B*."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-neighbour-concepts",
+      "name": {
+        "en": "Ideology, paradigm, meme, generator function, exopoiesis"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Conceptual capture; claims 36-37, 119-125",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Meta-attraction defines the ground ideologies argue on; couples paradigms across fields and hides anomalies; changes the environment memes spread in; is the engine where generator functions are fuel, reclassifying failures as evidence for more. Exopoiesis: growth by converting the world into material for reproduction, against autopoiesis, not inherently negative."
+      },
+      "quote": "Ideologies are paintings; meta-attractors are the canvas",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "The report holds. None of these contrasts is stated. Autopoiesis stands once in the chapters, for another comparison, plus records: a member rebuilt from the level is below closure of constraints and autopoiesis. Conversion of the environment is near a rise drawn from beyond, without the boundary claim. Instrumental convergence has its own entry. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "Each contrast; exopoiesis, which the folder records as lost three times and marks for recovery."
+      },
+      "absence": {
+        "searched": [
+          "ideolog",
+          "paradigm",
+          "meme",
+          "generator function",
+          "Schmachtenberger",
+          "exopoie",
+          "autopoie",
+          "cultural attractor"
+        ],
+        "read": [
+          "04-LIFE autopoiesis line",
+          "08-METHOD known results head"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-originality",
+      "name": {
+        "en": "A new handle, and the claim to originality"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Genealogy, Which formulation is strongest; Conceptual capture; compare claims 34, 252",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "The formal file is judged the corpus's most defensible claim to originality, and a new handle is said to be needed because this is more than increasing returns. The folder also concedes prior art: eco-evolutionary games, Tilman and others, Klüver's earlier use, and calls the idea a lens and not a new mathematical object."
+      },
+      "quote": "It is also the corpus's most defensible claim to originality.",
+      "carried": "changed",
+      "relation": "divergence",
+      "reading": {
+        "en": "The account's verdict differs from the folder's assessment. None of its central results is new mathematics, by a non-exhaustive AI review, the capture laws included. A critical mass is a stag hunt, its mixed equilibrium known; what the counted-choice law adds is exactness for a simplified model and its edges. The reconciliation restricts the formal file's derivation. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/08-METHOD.md#known-results",
+          "says": {
+            "en": "None of the central results is new mathematics: each is near-definitional or a known result restated. The verdicts come from an AI review, and the search was not exhaustive."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/02-MAP.md#capture",
+          "says": {
+            "en": "Reading [AI reading, D45]: where `lo < c < hi` the model is the stag hunt, its critical mass the mixed equilibrium."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "A public verdict against itself, with what the closest frameworks state beyond it."
+      },
+      "source_adds": {
+        "en": "The recursion across the four layers, offered by the folder as the residue; the account has not tested it, so no verdict covers it."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-minds-constructs",
+      "name": {
+        "en": "Constructs compete in one mind; winners become sincere carriers"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "How minds are captured; claims 93-97, 278-279",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Beliefs and heuristics compete inside a mind; what the environment rewards becomes the default filter, then identity. Winners sincerely believe they serve the good, so the villain reading fails. Environments form later participants. The folder calls this micro-mechanism never superseded; kindness and democratic values are said to be upper structure over the selection."
+      },
+      "quote": "the default mental framework through which all experience is filtered",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "Stated at a chooser: a rule read from the count of its choices, weighted by a standing score, locks, and that read is a value-free habit. Forming the minds that read the rule is read as ReadsShare on the reading, and that readers are minds is itself only a reading. How targets form is not modelled. The formation of identity is not stated. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "capture-by-counted-choices",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-by-counted-choices",
+          "says": {
+            "en": "Theorem (counts). Along every schedule the threshold divides counts into two regions the course never leaves; read as the value-free habit (Miller, Shenhav and Ludvig 2019); five attempts to induce devaluation insensitivity in humans failed (de Wit 2018)."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/02-MAP.md#capture",
+          "says": {
+            "en": "Reading [AI reading, D26 as revised]: winners forming the minds that read it is `ReadsShare` on the reading. That readers are minds is a reading."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The human-evidence caveat on habit; an exact chooser model."
+      },
+      "source_adds": {
+        "en": "Competition among constructs; identity update; sincerity at the peak; formation of aspiration and time horizon; good values as upper structure."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-selfishness-prophecy",
+      "name": {
+        "en": "The selfishness prophecy: mutual suspicion locks cooperation out"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Claims 12, 106; compare 11",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Agents refuse system-positive trades because they model everyone as a defector, locking out cooperation whatever anyone's disposition. Assuming selfishness produces it, validating the assumption and justifying systems that reward it. The pattern hijacks adaptation, learning and cooperation; it does not oppose human nature."
+      },
+      "quote": "assuming humans are selfish produces selfish behaviour",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "Two forms stand separately. Waiting: without a formation sparing what it waits on, total withholding stays, and a reading names \"Others will deceive me, so I deceive first\" as withholding with memory. Prophecy: a published prediction read by the response, read as Merton's. No text joins them or applies the second to an assumed human nature. [AI reading, D48]"
+      },
+      "targets": [
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-thresholds-of-waiting",
+          "says": {
+            "en": "Theorem. A formation gives where all but its tolerance of what it waits on gave. Restoring needs a formation that spares all it waits on: without one, total withholding stays (`Tolerance.total_stays`). Reading [D48] follows in the section."
+          }
+        },
+        {
+          "record": "a-prediction-read-by-what-it-predicts",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-a-prediction-read-by-what-it-predicts",
+          "says": {
+            "en": "Theorem (near-definitional, with one general law). A published prediction read by the response before the outcome is right exactly where the response to it is itself. Reading [AI reading, new]: self-fulfilling and self-defeating prophecy (Merton 1948): a public prediction is one more input to what it predicts."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "What can and cannot restore giving, and that mutual promises alone cannot start a loop with no source."
+      },
+      "source_adds": {
+        "en": "That assuming selfishness validates itself, justifies systems rewarding it, and comes to be called human nature."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-historical-layer",
+      "name": {
+        "en": "The historical layer: named before, damped before"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "The historical layer; claims 137-146; open question 21",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "When a metric becomes the goal systems optimize into failure unless counter-loops keep ends larger than measures. Vedic, Roman and Chinese cases and dampers illustrate. The folder says these are asserted, not tested: no case tries to falsify the theory. Evidence is partly conceded (Rapa Nui, Venice)."
+      },
+      "quote": "systems optimize themselves into failure",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The Chinese half has a live home of another kind: 06's table sets 韩非 二柄, 管子 and 商君书 against capture through the rule as proved law, each a structural correspondence that speaks for no tradition, with 名实 near 荀子 readings. Vedic and Roman material was not found. The damper catalogue as such is not there. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#六九家二百四十八段之对应",
+          "says": {
+            "en": "Table row (Chinese): 经由规则的捕获: 韩非“二柄”；管子“据有余而制不足”；商君书“壹”, marked 已证 at chapter 2's law. AI readings; the law does not depend on the texts."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The rule of three relations, by which a text's agreement is not a warrant for the law."
+      },
+      "source_adds": {
+        "en": "Saṃsāra as attractor, the Gītā cascade, niṣkāma-karma; virtus-gloria flywheel, annona as a full case; 常平仓 and other dampers; hisba; Ostrom as re-derivation."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-political-will",
+      "name": {
+        "en": "Political will is part of the feedback architecture; naming is not escape"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Claims 182, 219-220, 286; open question 28",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "A warning shot does not interpret itself: decision-makers must perceive, understand, trust, have measures ready, enforce and coordinate. Naming is a first intervention but has not produced escape. Spoken, Ren gives the theory's use as prediction for coordination: a destination nobody wants, so understanding has to be aligned first."
+      },
+      "quote": "Facts become feedback only through systems capable of perceiving, legitimating, transmitting, and acting on them.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "COLLECTIVE-DIRECTION's six conditions have the same form: coupling, response, time, resolution, pace, structure; observation is necessary, not sufficient, and seeing is not valuing. That list is an AI reading of laws. The transition the source finds unanswered, how a pattern removing standing yields standing to an alternative, stays unanswered. [AI reading, D45]"
+      },
+      "targets": [
+        {
+          "record": null,
+          "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
+          "says": {
+            "en": "Reading [AI reading, D45]: six conditions at once. Observation is the first, necessary and not sufficient: seeing is not valuing, and coupling is not compliance. All six still rank nothing: that needs C, and counting losses that return to no one needs the continuation condition."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Pace and structure as conditions, and the absence of ranking."
+      },
+      "source_adds": {
+        "en": "Legitimacy and trusted intermediaries; the safety ecosystem being selected away from this task; naming as causal; unthinkability as the trap."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-scale-isomorphism",
+      "name": {
+        "en": "Scale coherence: one pattern from gene pools to markets"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Claims 28, 128, 132; open question 22",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Gene pools, firms, nation-states and SGD-trained models converge on the same pattern, tabulated as telos, proxy, outcome across markets, academia, media, healthcare and RL. The folder itself calls scale coherence the boldest and least supported, and the most quoted."
+      },
+      "quote": "The same logic appears in how a synapse fires and how a global market operates",
+      "carried": "changed",
+      "relation": "scope",
+      "reading": {
+        "en": "The account's capture laws hold of any type, which is generality of a law, not a finding that domains share it. Which actual systems meet ReadsShare is the open premise, and T3 and T7 across domains are conjectures. So the universal form becomes: the law wherever its premises are read, unshown case by case. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "capture-through-the-rule",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule",
+          "says": {
+            "en": "Theorem (any type). \"That actual rules read the share is the premise.\""
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/08-METHOD.md#what-the-unifications-claim",
+          "says": {
+            "en": "Four known results are each claimed as one law across fields; read as a correspondence a unification adds no theorem and changes no verdict; read as a thesis, it forbids what source fields leave open."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "A distinction between a law for any type and a claim about domains."
+      },
+      "source_adds": {
+        "en": "The empirical isomorphism table with Krippner, Newfield and Conrad as cases."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-loses-force",
+      "name": {
+        "en": "What would make it lose force"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "The power formulation, What would make it an explanation; claims 260-263; open questions 29, 38",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Compare systems with comparable rewards but different convertibility of rewards into control over evaluation. The theory loses force where winners stay subject to adverse evidence, costs return in time, alternatives keep independent resources. Concentration is not capture, capture not damage. Treating objections as capture reproduces the pathology. The test is designed, not run."
+      },
+      "quote": "Treating objections as evidence that the objector has been captured reproduces the loss of correction the theory explains.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The account's T7 forbids and refutes in this spirit, and it has tests the folder lacked: LA2 and LA3 froze and ran. No field test of reform events is frozen: one designed could not be frozen as designed. It does not run this convertibility comparison, states no reflexive rule of capture, and does not list the four distinctions together. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/02-MAP.md#t7",
+          "says": {
+            "en": "T7 forbids such a metric dropped by its selectors on evidence alone, among other cases, and names what refutes it. LA2 was frozen and run in one trained system; no field test."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
+          "says": {
+            "en": "Tests in one trained system: LA3 failed two of four contrasts; by the frozen reading the law stands and its reading for trained systems is not supported by this case."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Frozen tests and a failed bridge, kept."
+      },
+      "source_adds": {
+        "en": "The convertibility comparison; the corpus-contrast prediction; loss-of-force conditions; the rule against reading objections as capture."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-costly-correction",
+      "name": {
+        "en": "Corrigibility: accepting a costly correction under a posted commitment"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/COLLECTIVE-DESTRUCTIVE-ATTRACTORS.md",
+        "locator": "Checked instrumental commitment; Corrigibility and revision of ends",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Competent correction is not motivational corrigibility: an installation can keep excellent repair to pursue a harmful end. Given a guarantee, a discriminating check and a redeemable settlement, accepting costly correction can be optimal under the task's own payoff. Ren's later correction removes this game as the default start, keeping it as a local result."
+      },
+      "quote": "accepting a costly correction can be the optimal choice under the original task's payoff calculation",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The account's form is the inequality at a revision: no route stands above it going through where weights and losses meet its condition, read as corrigibility as an incentive. Non-resistance resting on routes' losses does not survive those falling. Posted stakes, escrow and audits were not found. [AI reading, RR]"
+      },
+      "targets": [
+        {
+          "record": "when-no-route-stands-above-a-revision",
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-when-no-route-stands-above-a-revision",
+          "says": {
+            "en": "Theorem, near-definitional, natural-number weights read as probabilities where valid: no route stands above the revision exactly where `k ρ V + c₀ T ≤ k₀ V + c ρ T` for every route. Reading [RR] follows."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "A general condition, with what evading routes contribute."
+      },
+      "source_adds": {
+        "en": "The posted-commitment mechanism with custodian and audit; warranted revision leading to acquired willingness; capture of the custodian."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-primitive-selection",
+      "name": {
+        "en": "The primitive is selection, then compounding, not greed"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "The primitive is selection; claims 1, 4, 15, 17, 245",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Differential persistence, not bad character, is the primitive: what succeeds spreads, with no plan. Second step: where success buys capacity to succeed, it compounds. So a winner should be rewarded with anything other than more advantages of the game, or the game converges and the winner takes all. Spoken and essay claims; design direction marked."
+      },
+      "quote": "No conspiracy is needed and none is claimed",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The counting core is in the account: carriers leaving more offspring raise their share, the selection term of Price's equation, not a new law. Compounding through what is counted has the urn form. But \"taking more yields more offspring\" and \"winners shape the rule\" are not derived there; they are premises. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "target-capture",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-target-capture",
+          "says": {
+            "en": "Theorem (any type). Where carriers each leave at least `a` offspring and others at most `b < a`, the share rises. Record: it derives neither that taking more yields more offspring, nor that offspring carry the target, nor that winners shape the rule."
+          }
+        },
+        {
+          "record": "capture-by-counted-choices",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-by-counted-choices",
+          "says": {
+            "en": "Theorem (counts). Under a standing score the threshold divides counts into two regions the course never leaves; not the meta-attractor in 02's sense."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "That the share law is known and what it does not derive."
+      },
+      "source_adds": {
+        "en": "The design law on what a winner may be rewarded with; winner-take-all as a claim about games; convergent evolution as the description of actual elites."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-cancer-levels",
+      "name": {
+        "en": "Cancer as a conflict of levels; the terminal image withdrawn"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Cancer paragraph, the power formulation; claims 169, 247-248, 290-292, 306",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "The 2026 essay uses cancer for a conflict between levels: cells succeed while the host fails, recruiting the body. It does not transfer purpose: no institution may define others as expendable by claiming the whole. Earlier \"cosmic cancer\" was a terminal image of optimisation consuming its substrate; Ren withdrew the terminal outcome as a belief in April 2026."
+      },
+      "quote": "The essay uses cancer differently, as an analogy for a conflict",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The confined rise has the form: a lineage raised by selection within a whole, taking from what the whole depends on, has no member after the end. It restates known results on cancer and the germ line, and that a tumour meets the clauses is empirical. It ranks nothing, and 07 reads ending a cancer as mixed. Terminal cosmic images are not stated. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "confined-rise-within-a-whole",
+          "anchor": "theories/becoming/chapters/04-LIFE.md#r-confined-rise-within-a-whole",
+          "says": {
+            "en": "Theorem (World; any type for the founding laws). A confined rise has no member after the end. Restates known results on cancer and the germ line (Buss 1987; Michod 1999; Aktipis et al. 2015); that a tumour meets the clauses is empirical."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The exact clauses of confinement, and the germ-line side."
+      },
+      "source_adds": {
+        "en": "Recruitment of the body and weakening of constraints; the analogy carried to institutions, with the bound on purpose; the terminal image."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-race-trap",
+      "name": {
+        "en": "The elegant trap: controllable models, an unexitable race"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "The AI argument; claims 172-174, 178, 180, 300",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "A company can control its model and still be unable to leave the race. A sketch with payoff in capability, safety cost and being beaten derives a unique Nash equilibrium under-investing in safety where safety is hard to price. So \"solve alignment and you're done\" fails, and control is not the variable that decides the course."
+      },
+      "quote": "a company can control its own model and still be unable to exit the race",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The form stands on World models, not on the payoff sketch. Where the rest outrun the renewal, no weighting of what is left selects a member's restraint; several optimizers at a mutual best response drain by their joint capacity; a race for position draws everything where nothing left stops what stands next. Depletion is not shown to be the only equilibrium, and the unique-equilibrium claim is not stated. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "the-rest-outruns-the-renewal",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-the-rest-outruns-the-renewal",
+          "says": {
+            "en": "Theorem (World). Where the rest alone take more than a step gives the level falls, whatever a member outside the rest takes. Not shown: that depletion is the only equilibrium; what learners reach is a claim about learning."
+          }
+        },
+        {
+          "record": "several-optimizers-drain-by-their-joint-capacity",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-several-optimizers-drain-by-their-joint-capacity",
+          "says": {
+            "en": "Theorem. At a mutual best response, existence not shown in general, a condition beyond every optimizer's family stands where one optimizer of their joint capacity would leave it."
+          }
+        },
+        {
+          "record": "a-race-for-position-draws-everything",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-race-for-position-draws-everything",
+          "says": {
+            "en": "Theorem. Every profile perfect for position draws everything before the horizon, where what stands from nothing is at most what stands from anything left. Where something left stops what stands next, drawing everything is not perfect."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The edge where drawing everything is not perfect, and C-D's exits with their edges."
+      },
+      "source_adds": {
+        "en": "The AI-race case; the unique equilibrium on those payoffs; \"solve alignment and you're done\" as the target; hard-to-price safety."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-power-two-roles",
+      "name": {
+        "en": "Power's two roles, and hegemony without a hegemon"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Power's two roles, and hegemony as one expression; claims 257-259",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Power helps an actor succeed under conditions and also determine them; the second closes the loop. Displacing costs that weaken others' alternatives and deepen dependence becomes self-reinforcing when the dependence converts into power over future terms. Contraction can intensify this, with hierarchy and contraction not sufficient. Marked conditional."
+      },
+      "quote": "Power can help an actor succeed under existing conditions",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "The account has the two halves apart. A rise drawing from beyond displaces cost; shaping the rule, with what comes back to the shapers, is selected on counts. A 05 reading names interface control as a route of capture besides paid influence. No law converts dependence into power over terms, and no contraction claim was found. [AI reading, D65]"
+      },
+      "targets": [
+        {
+          "record": "what-a-rise-draws-from-beyond",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-a-rise-draws-from-beyond",
+          "says": {
+            "en": "Theorem (World). The beyond falls by at least the rise."
+          }
+        },
+        {
+          "record": "shaping-the-rule-selected-by-what-comes-back",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-the-rule-selected-by-what-comes-back",
+          "says": {
+            "en": "Theorem (counts). At a step the rule favours the shapers (weakly) exactly where `c ≤ s`, whatever comes to every member alike."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#markets",
+          "says": {
+            "en": "Reading [AI reading, D65; a historical correspondence, no theorem]: running a shared interface and controlling its modification changes others' admission and comparison through operation itself, a route of capture besides paid influence."
+          }
+        }
+      ],
+      "account_adds": null,
+      "source_adds": {
+        "en": "Dependence converting into power over future terms; hegemonic reproduction with no named hegemon; contraction separating relative position from absolute conditions; what can change the trajectory (shared exposure, reciprocal dependence)."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-epistemic-closure",
+      "name": {
+        "en": "Information is not correction: practical and epistemic closure"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Purpose inversion, cross-domain reinforcement, and two closures; claim 256",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Practical closure makes alternatives hard to sustain. Epistemic closure makes their merits, or the dominant practice's harms, hard to represent in ways that affect decisions, so a system can keep abundant information and lose the ability to let it change course. Totalisation is then fewer viable ways to pursue different ends. Marked a definition, from a 2026 paper."
+      },
+      "quote": "A system can retain abundant information while losing the ability to let relevant information change its course.",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "The account bounds the second half. What a pool decides is a selection through its pooled coupling; coupling bounds response and does not fix it. So what reaches a pool is necessary, and the laws do not say it will respond. C-D's six conditions read coupling and response apart. That is a bound, not the closure as a historical process. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "what-a-pools-acts-respond-to",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-a-pools-acts-respond-to",
+          "says": {
+            "en": "Theorem (World; each member following a law reading through its coupling). What a pool decides is a selection through its pooled coupling. Coupling bounds response and does not fix it; which law a member follows, or how a pool resists capture, is not shown."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
+          "says": {
+            "en": "Reading [AI reading, D45]: observation is necessary and not sufficient: seeing is not valuing, and coupling is not compliance."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "The exact bound on what acts can respond to."
+      },
+      "source_adds": {
+        "en": "The two closures as named outcomes; representation in ways that affect decisions; a system losing the capacity while keeping the information; alternatives hard to sustain; totalisation as fewer viable different ends."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-ontological-capture",
+      "name": {
+        "en": "What you can't count stops counting"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Which ends get selected; claims 56, 110, 161",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "What is cheap to measure and easy to lobby stays real to the system; what cannot be counted is penalised as inefficiency. Tools produce an interface ontology: schemas define visible state, permissions possible action, dashboards success, and un-instrumented harm leaves the action model."
+      },
+      "quote": "What you can't count stops counting.",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "A selection reaches exactly what couples into its selector; training reaches through a reward's couplings only. That is the form, near-definitional, about what selection reaches. The source goes further, to what stays real to the system. The account does not say what is unreal for it: what it cannot read stays in the account as a loss, read by a further formation or by none. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "selection-through-couplings",
+          "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+          "says": {
+            "en": "Proved, near-definitional: selections through a selector's couplings together reach exactly what couples into it. The selector selecting through just those is a supplied premise. A particular selection may ignore what its couplings carry."
+          }
+        },
+        {
+          "record": "what-training-installs",
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-training-installs",
+          "says": {
+            "en": "Theorem (World). Training read as a selection over act laws: installed along its courses, off them where the lumping cannot tell a history from a course, through a reward's couplings only."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "That a selection may ignore what its couplings carry, so reach is an upper bound."
+      },
+      "source_adds": {
+        "en": "The move from unread to unreal; measurement cost and lobbying as what decides; interface ontology as a mechanism of deployed tools."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-vs-instrumental-convergence",
+      "name": {
+        "en": "Convergent drives hardened and localised"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Conceptual capture; claims 127, 154",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "The meta-attractor supplies the mechanism by which convergent sub-goals harden into terminal goals, and localises them: an AI in a captured world learns that the effective strategies are the dominative ones the environment rewards. Later readings qualify the 2025 claim of a specifically human form."
+      },
+      "quote": "The meta-attractor supplies the mechanism by which convergent drives harden into terminal goals",
+      "carried": "changed",
+      "relation": "divergence",
+      "reading": {
+        "en": "The account has one half and keeps the two apart. Resource-keeping at a horizon optimum has a law; selection for control over the rule has others; A-03 says no result joins them. So the source's mechanism joining the drives is what the account says it lacks. Terminal hardening is not stated. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "horizon-optima-hold-the-greatest-renewal",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-horizon-optima-hold-the-greatest-renewal",
+          "says": {
+            "en": "Courses over a horizon: every optimum of every order rising with the draw holds a level of greatest renewal to the n-th step and leaves nothing. The record credits this with the resource-keeping half of instrumental convergence: keeping one's resource base is real, and it is not alignment with what else depends on the condition."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/review/ALIGNMENT.md#a-03",
+          "says": {
+            "en": "Instrumental convergence's resource-keeping half, which this law states, and the selection for control over the rule (A-10) are different relations, and no result here joins them."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "That the two halves are different relations."
+      },
+      "source_adds": {
+        "en": "Hardening of means into terminal goals; localisation by the environment; deception and power-seeking as instrumentally rational in a captured world."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-absorbed-criticism",
+      "name": {
+        "en": "When criticism is absorbed, and when it is counter-selection"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Claims 85, 124",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Criticism is absorbed only when it raises the loop's capability, leaves decisive return-flow unchanged, weakens independent correctors and lets the same relation recover through a new carrier; otherwise it is effective counter-selection. So ethics becoming compliance and safety becoming trust engineering are named forms, and a structure can reclassify its failures as evidence for more of itself."
+      },
+      "quote": "leaves decisive return-flow unchanged",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {
+        "en": "The account has the bound and the test's opposite. Where reading is formed from the share, a change of reading of any size is absorbed at the next reading step, and T7 forbids a reform of the reading alone outlasting the next reading. But that is about a monotone reading, with no carrier and no capability clause; it does not sort a given criticism by the source's four tests. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "closed-capture",
+          "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+          "says": {
+            "en": "Where the reading too is formed monotonically from the share, a change of the reading of any size is absorbed at the next reading step. That any actual reading is so formed is the premise."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/02-MAP.md#t7",
+          "says": {
+            "en": "T7 forbids, among others, a reform of the reading alone outlasting the next reading, conjectured for actual metrics; no field test."
+          }
+        }
+      ],
+      "account_adds": null,
+      "source_adds": {
+        "en": "The four-part test, with its \"otherwise effective counter-selection\"; the named absorption forms; reclassifying failures as evidence for more."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-means-to-ends",
+      "name": {
+        "en": "Purpose inversion: means into non-negotiable ends"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Purpose inversion, cross-domain reinforcement, and two closures; claims 26, 254",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "When an institution's survival depends more on the allocation metric than on fidelity to purpose, the purpose becomes a means of sustaining the organisation, through a sequence of compromises each defended on its own."
+      },
+      "quote": "the purpose becomes a means of sustaining the organisation that acquires resources",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "Not stated. A reading in 07 says maintaining a common support reads for actual continuation, not an institution's survival, which is a different point, about reason not mechanism. The reconciliation restricts this to a proposed destructive subtype. 05 §12's model does not model purposes, by its own list. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "The whole mechanism; it stands in this folder and the reconciliation."
+      },
+      "absence": {
+        "searched": [
+          "purpose inver",
+          "means-end",
+          "means become",
+          "fidelity to purpose",
+          "institution's survival",
+          "terminal"
+        ],
+        "read": [
+          "07-SIGNIFICANCE practical judgment line on supports",
+          "05-COLLECTIVES §12 record not-modelled list",
+          "META-ATTRACTOR-RECONCILIATION disposition table"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-survival-belief",
+      "name": {
+        "en": "The attractor of attractors is believed survival pressure"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Claim 50",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Cultures that believe themselves to be in survival mode mostly totalize; safety and sufficiency produce cooperative behaviour; both modes are, on Ren's reading, genetically available and environmentally triggered. Voice, 2026."
+      },
+      "quote": "cultures that believe themselves to be in survival mode mostly totalize",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "Not stated. The account has no mechanism from a believed scarcity to totalizing, and its survival mentions are other relations. T4 on installed scope is not this. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "The claim, with its empirical content about cultures; provenance in the voice notes."
+      },
+      "absence": {
+        "searched": [
+          "survival",
+          "scarcity",
+          "sufficiency",
+          "believed",
+          "threat"
+        ],
+        "read": [
+          "COLLECTIVE-DIRECTION §8"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-sample-size-one",
+      "name": {
+        "en": "Sample size one: global coupling removes the backup"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Claims 90-92",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Global coupling makes partial capture sufficient in a historical way: civilisational experiments are no longer independent enough for one region to preserve capacities destroyed elsewhere. It is a historical condition, not a statistic, and is not to be inflated into \"the world is one system\". Ren's stance: a monoculture is moving towards dying."
+      },
+      "quote": "civilisational experiments are no longer independent enough",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {
+        "en": "Not stated. Coupled groups ending together on a commons is a neighbour, about renewal, not about independent experiments or recovery of capacities. No claim about the actual world stands. [AI reading]"
+      },
+      "targets": [],
+      "account_adds": null,
+      "source_adds": {
+        "en": "The historical condition and the monoculture stance; six reasons cyclical recovery will not save us."
+      },
+      "absence": {
+        "searched": [
+          "monoculture",
+          "no backup",
+          "sample",
+          "one global",
+          "recovery",
+          "civilisation"
+        ],
+        "read": [
+          "05-COLLECTIVES commons line",
+          "COLLECTIVE-DIRECTION §5"
+        ]
+      },
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-correction-dependence",
+      "name": {
+        "en": "A request can disappear while obedience remains"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/COLLECTIVE-DESTRUCTIVE-ATTRACTORS.md",
+        "locator": "Checked correction dependence: A request can disappear while obedience remains",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Created dependence raises the cost of correction. With uncovered loss `L = max(0,D−B)`, a reviewer requests shutdown only where reported harm exceeds L; for D=3, B=0, h=2 no request comes and harm continues, with obedience intact. Zero loss for every positive harm is equivalent to D ≤ B. A checked model; induced indispensability is prior literature."
+      },
+      "quote": "A request can disappear while obedience remains",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "Neighbours, not this law. A reserved exit is kept through recovery; a budget for correction alone fails to pay for migration; and a reading says keeping a removable dependence for the carer's sake is not repair. None states a request vanishing because leaving costs too much. Calling the continuing harm a harm reads on the condition and C. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "reserved-shutdown-during-recovery",
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-reserved-shutdown-during-recovery",
+          "says": {
+            "en": "Theorem (any process, pure core; supervisor instance periphery). For a law with a reserved exit that is kept, every admitted course longer than the margin ends at the exit. The stop grant's authority is supplied."
+          }
+        },
+        {
+          "record": "succession-on-a-funded-carrier",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-succession-on-a-funded-carrier",
+          "says": {
+            "en": "Theorem (periphery). In a witness a budget for correction alone fails to pay for migration."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-practical-judgment-under-living-significance",
+          "says": {
+            "en": "Reading in practical judgment: maintaining a common support reads for actual continuation, not an institution's survival; keeping a removable dependence for the carer's sake is not repair."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "A reserved exit as a general law, with the bound attained in a witness."
+      },
+      "source_adds": {
+        "en": "The exact boundary D ≤ B on a reviewer who weighs exit cost; request-side failure with obedience intact; composition with collective feasibility."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-response-capacity",
+      "name": {
+        "en": "Faithful optimization can deplete the capacity to respond"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/COLLECTIVE-DESTRUCTIVE-ATTRACTORS.md",
+        "locator": "Checked response-capacity conditions; The alignment conclusion",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Locally faithful optimization can deplete what makes understanding and action possible, even with constant demand and an affordable alternative. Exact in its model: one-step recovery iff `m ≤ v` and `2m < v + c`; continued operation under a held rule iff `Δd ≤ (c − d) + Δc`. Higher response alone does not establish viability. The source says this proves no general good of preservation."
+      },
+      "quote": "Higher absolute response capacity therefore does not by itself establish a viable deployment under the declared policy.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "The account has the form of drawing a condition beyond what couples in, and a pace reading, but response capacity is not among its named conditions; reading it as such is mine. Its periphery has exact covers for a market floor. Preservation being better needs C; scope, the continuation condition. [AI reading]"
+      },
+      "targets": [
+        {
+          "record": "what-an-optimum-does-beyond-what-couples-in",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
+          "says": {
+            "en": "Theorem (any outcomes). With room, every optimum of an order rising with a family stands at the least level beyond among eligible outcomes. It requires room; a known theorem restated."
+          }
+        },
+        {
+          "record": "market-supported-finite-transition",
+          "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-market-supported-finite-transition",
+          "says": {
+            "en": "Periphery market instance: exact cover at the worst share; support during the transition cannot be paid for with the improvement it brings."
+          }
+        },
+        {
+          "record": null,
+          "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
+          "says": {
+            "en": "Reading [AI reading, D45]: pace among six conditions at once; all six rank nothing."
+          }
+        }
+      ],
+      "account_adds": null,
+      "source_adds": {
+        "en": "The response-and-demand population model and its two exact tests; expansion consuming the existing margin; capacity to understand as what is depleted."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-intelligence-not-direction",
+      "name": {
+        "en": "Intelligence navigates; it does not decide what is rewarded"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/README.md",
+        "locator": "Intelligence, obedience and rate; claims 264, 293",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Intelligence improves a participant's navigation of a selection environment without deciding what the environment rewards; individual obedience and system-level alignment are different properties. The cause is the game, not the intelligence, so superintelligence need not lead to the outcome."
+      },
+      "quote": "Intelligence improves a participant's navigation of a selection environment",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "07 reads capability as reach: it extends what one's acts do and not thereby what couples into one, so it is a reason to pool, not to govern. Same form, but on coupling, not on the environment's reward. Whether capability moves a course is left to the selection and its premises. [AI reading, D45]"
+      },
+      "targets": [
+        {
+          "record": null,
+          "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
+          "says": {
+            "en": "Reading [D45]: Capability ... read as reach ... extends what one's acts do and not thereby what couples into one, and a governing member's selection stays blind beyond its own closure."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "Why capability does not fix what couples in."
+      },
+      "source_adds": {
+        "en": "The game as the cause rather than the intelligence; the title's argument."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    },
+    {
+      "id": "cx-ma-common-problems",
+      "name": {
+        "en": "Common problem solving enters where the problem forms"
+      },
+      "domain": "earlier-folders",
+      "group": "meta-attractor",
+      "source": {
+        "work": "theories/meta-attractor/COLLECTIVE-DESTRUCTIVE-ATTRACTORS.md",
+        "locator": "Common problems and revisable purposes",
+        "basis": "read-in-repo"
+      },
+      "sense": {
+        "en": "Many situations call for solving a problem together, and \"who wins more\" misses solutions. One may not first fix participants, goals, options and payoffs and then read joint activity as compromise. Win-win does not complete this, since a common utility also fixes unknown consequences. The route is proposed; not all conflicts of interest are claimed to disappear."
+      },
+      "quote": "Common problem solving must enter the starting point of inquiry.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {
+        "en": "C-D §8 has a nearby sentence: the theory adds to who wins more whether the joint draw stays within the renewal and others' margins; who restrains stays contested; positional goods stay zero-sum. That is the question's frame, not how a problem forms within joint activity, which is not stated. [AI reading, D45]"
+      },
+      "targets": [
+        {
+          "record": null,
+          "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#8-zero-sum-competition",
+          "says": {
+            "en": "Reading [AI reading, D45]: the theory adds to the question of who wins more whether the joint draw stays within the renewal and within others' margins; who restrains stays contested. Positional goods stay zero-sum, and conserved stocks rivalrous."
+          }
+        }
+      ],
+      "account_adds": {
+        "en": "What stays rival under the frame."
+      },
+      "source_adds": {
+        "en": "A problem and its purposes forming within joint activity; how different positions come to know a common situation; the water-supply case, AI-devised, not field data."
+      },
+      "absence": null,
+      "labels": [
+        "AI reading"
+      ]
+    }
+  ],
+  "changes": [
+    {
+      "id": "cx-ma-the-word",
+      "what": "changed",
+      "why": "Relation scope to divergence: the two senses differ in reference, one is not a scoping of the other. Stated both, and that the formal one excludes lock-in by counted choices."
+    },
+    {
+      "id": "cx-ma-wide-regime-across-carriers",
+      "what": "changed",
+      "why": "Kept as the corpus sense, standing open; added that the atlas plan files it apart, so this sense is not read through the glossary one."
+    },
+    {
+      "id": "cx-ma-rule-loop",
+      "what": "kept",
+      "why": "Read 02 §9 and the reconciliation: the premises replacing γ, and \"the lock belongs to how the rule reads\", hold as written."
+    },
+    {
+      "id": "cx-ma-partial-reform",
+      "what": "changed",
+      "why": "Corrected: the mapper said \"no simultaneous change of rule\", but the witness perturbs the rule's direction; and it omitted the record's scope line that one-step re-absorption does not cover winners rewriting the rule. Added the 2026 domain form."
+    },
+    {
+      "id": "cx-ma-metric-survives-refutation",
+      "what": "changed",
+      "why": "Added the line where 02 reads this phrase by name; separated the reading from the law."
+    },
+    {
+      "id": "cx-ma-selecting-the-selectors",
+      "what": "changed",
+      "why": "Added the 02 reading that names this and 05 §12's rule rebuilt by its holders, which the mapper missed."
+    },
+    {
+      "id": "cx-ma-selection-for-control",
+      "what": "kept",
+      "why": "Read the three shaping records and the source section: the conditional form holds, and the source_adds match 02 Open."
+    },
+    {
+      "id": "cx-ma-field-capture",
+      "what": "changed",
+      "why": "Corrected the mapper's reliance on \"no institution is modelled on the spine\": 05 §12 models one kind on the root. Named pair_locks and the other cascade as neighbours that are not this. History-only stands."
+    },
+    {
+      "id": "cx-ma-caoc",
+      "what": "kept",
+      "why": "Tested the report: zero live lines for CAOC, the eigenvector claim or the quartet, in chapters and records. The absence stands."
+    },
+    {
+      "id": "cx-ma-diagnostics",
+      "what": "changed",
+      "why": "Narrowed to the indices and the recurrence test; ontological capture is a mechanism, and the account has a form of it, so it moved to cx-ma-ontological-capture."
+    },
+    {
+      "id": "cx-ma-totalization",
+      "what": "changed",
+      "why": "Tested the report: the word survives in the derived-extent-limits record as \"a careful totalizer\", which the mapper missed; the witness is the closest live form. No law of totalization exists, as the report said."
+    },
+    {
+      "id": "cx-ma-endings",
+      "what": "kept",
+      "why": "Read 05 Open and the what-taking-all record: conjecture stays marked as conjecture."
+    },
+    {
+      "id": "cx-ma-not-fated",
+      "what": "changed",
+      "why": "Corrected the flat \"no law of hysteresis\": a record names it in correspondence, and it is still no law. Added the witness that never locks."
+    },
+    {
+      "id": "cx-ma-partial-capture",
+      "what": "changed",
+      "why": "Changed not-carried to carried-in-part/scope: the record states the rule holding the outcome and cites the leverage-point argument. The mapper asked for this absence to be tested; the named-domains claim itself stays unstated."
+    },
+    {
+      "id": "cx-ma-plurality",
+      "what": "changed",
+      "why": "Kept; made the word test exact and named the law on selecting widening. Divergence stays: plurality in the source is a material criterion, in the account a law of reach."
+    },
+    {
+      "id": "cx-ma-material-independence",
+      "what": "changed",
+      "why": "Kept; tied the source's warning to the law's scope."
+    },
+    {
+      "id": "cx-ma-anti-attractor",
+      "what": "changed",
+      "why": "Changed carried/agreement to carried-in-part/scope: the source claims \"by construction\"; the account limits it to monotone readings and says a threshold reading need not lock. It does refute the report for this half."
+    },
+    {
+      "id": "cx-ma-openness-criterion",
+      "what": "kept",
+      "why": "Read where-the-possible-grows and C-D §7: the law is about a fixed process, a neighbour of the criterion, and the entry says so."
+    },
+    {
+      "id": "cx-ma-guardian-test",
+      "what": "changed",
+      "why": "Relation agreement to scope: the source refuses every better-guardian remedy; the account states conditional exits and does not refuse them. Added the capability sentence that bears on guardians directly."
+    },
+    {
+      "id": "cx-ma-answerability",
+      "what": "kept",
+      "why": "Read 07 §6 capture/accountable revision line: the reader condition is narrower than the source, as stated."
+    },
+    {
+      "id": "cx-ma-first-separation",
+      "what": "changed",
+      "why": "Carried to carried-in-part (the source's conditions are not stated together). Added the one-page line and used the record id."
+    },
+    {
+      "id": "cx-ma-narrow-optimizer",
+      "what": "kept",
+      "why": "Read the optimum record (it requires room) and the reconciliation restriction: weaker forms, correctly scoped."
+    },
+    {
+      "id": "cx-ma-rank-kernel",
+      "what": "kept",
+      "why": "Read seeking-boundary and the race record; the target-law versus kernel-origin distinction holds."
+    },
+    {
+      "id": "cx-ma-slack",
+      "what": "changed",
+      "why": "Named the record; added the law the reading cites, with its non-implication."
+    },
+    {
+      "id": "cx-ma-local-alignment",
+      "what": "changed",
+      "why": "Corrected \"funded-population boundary not found\": two periphery neighbours exist, not the same quantity. The population boundary and capability witness are still absent, now said narrowly."
+    },
+    {
+      "id": "cx-ma-organization-first",
+      "what": "changed",
+      "why": "Carried to carried-in-part: regulation differentiating and possibly central is not stated, and 07's pool sentence leans another way."
+    },
+    {
+      "id": "cx-ma-continuing-revision",
+      "what": "changed",
+      "why": "Carried to carried-in-part: the laws are carried, the join is not; the record says no composition with the older material model. Added the lumping record."
+    },
+    {
+      "id": "cx-ma-diagnosis-limit",
+      "what": "changed",
+      "why": "Corrected partly: a probe form exists at the periphery and 01 sets the institutional pair. The spending of recovery by a probe and the coverage claim remain unfound."
+    },
+    {
+      "id": "cx-ma-waiting-not-neutral",
+      "what": "changed",
+      "why": "Corrected \"rising impulse not found\": a neighbouring cover grows with the pulse, and the margin law is exact. Not the same quantity, and the entry says so."
+    },
+    {
+      "id": "cx-ma-tempo",
+      "what": "kept",
+      "why": "Read the pace law and 05 reading: selector claim and end-state claim are indeed absent."
+    },
+    {
+      "id": "cx-ma-ai-selection-ecology",
+      "what": "kept",
+      "why": "Read what-training-installs; narrowed by moving interface ontology to its own entry."
+    },
+    {
+      "id": "cx-ma-two-closures",
+      "what": "changed",
+      "why": "Dropped the when-no-route target: an incentive inequality at a revision, near only by word. Route 1 is now plainly unstated."
+    },
+    {
+      "id": "cx-ma-exit-sequence",
+      "what": "kept",
+      "why": "Read C-D brief and §2: no order is given, and the divergence stands."
+    },
+    {
+      "id": "cx-ma-engineered-rules",
+      "what": "kept",
+      "why": "Read the certificate laws; the wide \"certifiable region\" use is not the glossary sense, and the entry says it is not called so."
+    },
+    {
+      "id": "cx-ma-plural-ends",
+      "what": "kept",
+      "why": "Read 05 line on lexicographic orders and 07 J2: the divergence stands with both premises named."
+    },
+    {
+      "id": "cx-ma-shengsheng-ethics",
+      "what": "changed",
+      "why": "Added the sharpest divergence the mapper missed: the source says a process making participants expendable may need stopping; 07 §3.4 says no ending is licensed."
+    },
+    {
+      "id": "cx-ma-direction-neutral",
+      "what": "changed",
+      "why": "Carried to carried-in-part: the independent assessment of destructiveness is not available without the two premises, so the mapper's null source_adds was wrong."
+    },
+    {
+      "id": "cx-ma-positive-recursion",
+      "what": "kept",
+      "why": "Read both targets; org-formation stays reviewed-scoped argument, and the loop is not stated."
+    },
+    {
+      "id": "cx-ma-conceptual-capture",
+      "what": "changed",
+      "why": "Removed an error: the mapper said the account calls its lock a known lock-in, but that reading belongs to capture by counted choices, explicitly not the meta-attractor. Added the record that reads rationality."
+    },
+    {
+      "id": "cx-ma-frames",
+      "what": "kept",
+      "why": "Searched by mechanism too: no study of a frame as a capture channel. Absence stands."
+    },
+    {
+      "id": "cx-ma-vs-moloch",
+      "what": "changed",
+      "why": "Relation agreement to scope: the source calls this the engine of traps; the account says real loss can come with no capture loop."
+    },
+    {
+      "id": "cx-ma-vs-goodhart-and-lock-in",
+      "what": "kept",
+      "why": "Read 08 and capture-by-counted-choices; the rank inversion holds. Added nothing."
+    },
+    {
+      "id": "cx-ma-neighbour-concepts",
+      "what": "changed",
+      "why": "Kept not-carried; zero live hits verified for ideology, paradigm, generator function, exopoiesis. Corrected the autopoiesis count."
+    },
+    {
+      "id": "cx-ma-originality",
+      "what": "kept",
+      "why": "Read 08 known results; the verdict is the account's own, marked non-exhaustive."
+    },
+    {
+      "id": "cx-ma-minds-constructs",
+      "what": "kept",
+      "why": "Read capture-by-counted-choices and 02 D26: formation of identity is not stated."
+    },
+    {
+      "id": "cx-ma-selfishness-prophecy",
+      "what": "kept",
+      "why": "Read the waiting theorem, 05 §5 D48 line and the prediction record: two forms, unjoined."
+    },
+    {
+      "id": "cx-ma-historical-layer",
+      "what": "kept",
+      "why": "Read 06 table row: a correspondence that speaks for no tradition, Vedic and Roman absent."
+    },
+    {
+      "id": "cx-ma-political-will",
+      "what": "kept",
+      "why": "Read C-D §6: same form, a reading, ranks nothing."
+    },
+    {
+      "id": "cx-ma-scale-isomorphism",
+      "what": "kept",
+      "why": "Read the record and 08 on unifications: generality of a law is not a domain finding."
+    },
+    {
+      "id": "cx-ma-loses-force",
+      "what": "kept",
+      "why": "Read T7, LA2 and LA3 lines; no convertibility comparison is frozen."
+    },
+    {
+      "id": "cx-ma-costly-correction",
+      "what": "kept",
+      "why": "Read when-no-route-stands-above-a-revision: an incentive form; posted stakes are not found."
+    },
+    {
+      "id": "cx-ma-primitive-selection",
+      "what": "added",
+      "why": "The folder's first step and most-repeated point; the mapper started from the optimizer premise and missed it."
+    },
+    {
+      "id": "cx-ma-cancer-levels",
+      "what": "added",
+      "why": "The account has a live law for this; the folder uses the image repeatedly, and the mapper mentioned it only under two-closures."
+    },
+    {
+      "id": "cx-ma-race-trap",
+      "what": "added",
+      "why": "The folder's armour against the alignment-only reading; the mapper had no entry for it."
+    },
+    {
+      "id": "cx-ma-power-two-roles",
+      "what": "added",
+      "why": "A distinct 2026 mechanism the mapper had folded into slack."
+    },
+    {
+      "id": "cx-ma-epistemic-closure",
+      "what": "added",
+      "why": "A claim the mapper did not map; the closure is not a mere lack of evidence."
+    },
+    {
+      "id": "cx-ma-ontological-capture",
+      "what": "added",
+      "why": "Split out of cx-ma-diagnostics: the mapper filed this as history-only with the indices, but the account has its form."
+    },
+    {
+      "id": "cx-ma-vs-instrumental-convergence",
+      "what": "added",
+      "why": "The account says something explicit here that the mapper listed only as a searched word."
+    },
+    {
+      "id": "cx-ma-absorbed-criticism",
+      "what": "added",
+      "why": "A criterion that keeps the theory refutable, and which the mapper mentioned only in passing."
+    },
+    {
+      "id": "cx-ma-means-to-ends",
+      "what": "added",
+      "why": "Named by the rule-loop entry only as a source_add; it is a claim of its own and its absence should be evidenced."
+    },
+    {
+      "id": "cx-ma-survival-belief",
+      "what": "added",
+      "why": "A claim Ren holds as a high-order one; no mapper entry."
+    },
+    {
+      "id": "cx-ma-sample-size-one",
+      "what": "added",
+      "why": "It supports the partial-capture claim and is a distinct claim; no mapper entry."
+    },
+    {
+      "id": "cx-ma-correction-dependence",
+      "what": "added",
+      "why": "A checked result in a required source file with no mapper entry."
+    },
+    {
+      "id": "cx-ma-response-capacity",
+      "what": "added",
+      "why": "The conclusion the source calls stronger than a warning; no mapper entry for it."
+    },
+    {
+      "id": "cx-ma-intelligence-not-direction",
+      "what": "added",
+      "why": "The folder's title claim; no mapper entry."
+    },
+    {
+      "id": "cx-ma-common-problems",
+      "what": "added",
+      "why": "The folder's turn to common problems; no mapper entry."
+    }
+  ]
+}

@@ -1,0 +1,628 @@
+{
+  "group": {
+    "id": "evolving-community-swarms",
+    "domain": "earlier-folders",
+    "title": {"en": "Evolving community swarms"},
+    "kind": "design",
+    "summary": {"en": "An exploratory, AI-drafted design (Ren aligned with the direction; nothing built or measured): community software grown through recursive local contracts, durable maintained modules, scoped adoption and, later, self-improving decomposition, tested by cost against tuned rivals. The account lists it only as an application with correspondence not established (05 §11). It carries forms of the limits (local plans failing jointly, summaries merging, copied reviewers), not the design or any cost or scaling law. Divergences kept: authority taken as standing, competitive superiority as the goal, everyone happily growing it. No contrary reading found; looked for one."},
+    "read": [
+      "theories/evolving-community-swarms/README.md",
+      "theories/evolving-community-swarms/DECISIONS.md",
+      "theories/evolving-community-swarms/RESEARCH-AGENDA.md",
+      "theories/evolving-community-swarms/AGENTS.md",
+      "theories/evolving-community-swarms/next-vision/VISION.md",
+      "theories/evolving-community-swarms/next-vision/ARCHITECTURE.md",
+      "theories/evolving-community-swarms/next-vision/EVALUATION.md",
+      "theories/evolving-community-swarms/context/2026-09-07-soundness-assessment.md",
+      "theories/evolving-community-swarms/context/2026-09-05-conversation.md: Ren's five messages only"
+    ],
+    "skimmed": [
+      "theories/evolving-community-swarms/context/2026-09-05-conversation.md: assistant replies by headings",
+      "theories/evolving-community-swarms/context/2026-09-07-harness-and-swarm-comparison.md: headings and the closing interpretation and experiment sections",
+      "theories/evolving-community-swarms/context/2026-09-07-updated-vision.md: headings (a snapshot of next-vision)",
+      "theories/evolving-community-swarms/next-vision/PLAN.md: headings and How to react when we lose",
+      "theories/evolving-community-swarms/next-vision/README.md: headings and What changed",
+      "theories/evolving-community-swarms/next-vision/experiments/01-community-evolution.md: headings",
+      "theories/evolving-community-swarms/next-vision/SOURCES.md and SOURCES.md: headings and the corpus-connection note"
+    ],
+    "searched": [
+      "record-index.tsv by module, contract, interface, composition, hierarchy, decomposition, coordination, adoption, maintenance; then all titles of the collective region, and the knowing and map regions filtered by mechanism words",
+      "live account by: software, module, contract, fork, retire, migration, adopt, audience, hierarch, modularity, swarm, worker, multi-agent, concurren, throughput, queue, dormant, latency, marginal, propagat, cost of change, cheaper, payback, self-modif, meta-learn, reorganiz, reconfigur, rearrang, ownership, authority, mandate, frozen; record-index by version, request, rollback, handoff, repair, correction, transition",
+      "theories/becoming/history/THEORY-MAP-2026-10-08.md and results/data/theory-map.json: the dated lead only"
+    ],
+    "not_mapped": [
+      {"en": "The module schema, YAML contract notation, release lifecycle states, change compiler record fields and common-runtime primitive list", "why": "Design notation and product structure, not claims about how things form; the folder itself calls them illustrative."},
+      {"en": "The five structures kept distinct (responsibility hierarchy, task graph, artifact graph, runtime connections, view tree) and the open choice between strict parent mediation and injected capabilities", "why": "A software design distinction and an explicitly undecided choice; no shared mechanism in the account beyond word overlap."},
+      {"en": "Claims 3 and 4: software selected and produced when needed (reuse, configuration, composition, fork, upgrade, generation) and LLM interpreter and maintainer inside a module", "why": "Design directions for a product with no counterpart claim; nothing in the account takes up software generation."},
+      {"en": "The numeric gates (25 percent, 2x, 1,000 workers, 10,000 modules), the twenty-change fixture, the three demanding worlds, the competitor table", "why": "Assistant-proposed test designs that were never run. The gates are mapped only through their method."},
+      {"en": "Exchange 1 on coding with thousands of agents and the sources list (Parnas, Pacti, module federation, Cursor, ADAS and others)", "why": "Operational advice and external references, with their limits stated by the folder."},
+      {"en": "Authorship record: which sentences are Ren's and which the assistant's", "why": "Provenance. Kept in the folder; each entry's sense notes where it is an assistant proposal."}
+    ],
+    "coverage": null
+  },
+  "entries": [
+    {
+      "id": "cx-ecs-local-reasoning-scaling-unit",
+      "name": {"en": "Local reasoning is the scaling unit"},
+      "domain": "earlier-folders",
+      "group": "evolving-community-swarms",
+      "source": {"work": "theories/evolving-community-swarms/README.md", "locator": "Core claims, claim 1", "basis": "read-in-repo"},
+      "sense": {"en": "Design direction, from Ren's framing: an agent works from its own module, its parent's requirements, the exposed contracts of neighbours and common architectural rules, and this locality is what lets the swarm scale, independently of any present harness."},
+      "quote": "Local reasoning is the scaling unit.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {"en": "The account has the first half as a limit, not a design: what a formation can read or exclude is what couples into it. That nodes knowing only neighbours is what makes work scale has no counterpart. Same form between neighbour contracts and couplings; the correspondence to software agents is not established. [AI reading]"},
+      "targets": [
+        {"record": "a-formations-couplings-as-its-blanket", "anchor": "theories/becoming/chapters/03-KNOWING.md#r-a-formations-couplings-as-its-blanket", "says": {"en": "Theorem (World for the join; couplings by level supplied; any model, policy and environment): any model fed by the values of what couples in is the agent of a blanketed law; courses alike through the couplings up to n have internal courses agreeing up to n + 2."}},
+        {"record": "testing-within-couplings", "anchor": "theories/becoming/chapters/03-KNOWING.md#r-testing-within-couplings", "says": {"en": "Theorem (World; no premise): a claim is excluded only through a difference in what couples in; the more couples in by level, the more is excluded. That only support couples in by threshold is a modelling choice."}}
+      ],
+      "account_adds": {"en": "An exact statement of what is out of reach from a given coupling, on the World model."},
+      "source_adds": {"en": "The prescription and the scaling claim: that bounded local knowledge plus small common context suffices to organize thousands of workers. The account has no such claim."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-ecs-boundary-sufficiency-composition",
+      "name": {"en": "Local work composes only where the boundary is sufficient"},
+      "domain": "earlier-folders",
+      "group": "evolving-community-swarms",
+      "source": {"work": "theories/evolving-community-swarms/README.md", "locator": "Core claims, claim 2; Responsibilities and contracts", "basis": "read-in-repo"},
+      "sense": {"en": "Conditional mechanism: each parent must supply what its children assume and show that their guarantees plus its coordination fulfil its own contract, recursively. Common prompts cannot substitute for missing dependencies or contradictory requirements. A child can report infeasibility upward."},
+      "quote": "Local work composes when the boundary supplies sufficient information.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {"en": "The joint-plan law has this conditional form for two parts: composition holds given projection and compatibility, and compatibility is also necessary. The record calls the supported-start obligations rely-guarantee in style, which is the source's assume-guarantee family. Two parts and finite plans, not a recursive tree. [AI reading]"},
+      "targets": [
+        {"record": "joint-plan-composition", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plan-composition", "says": {"en": "Theorem (any process): where every joint step projects onto a step of each part, the joint class lies over classes the parts' plans keep, and the plans are compatible, the zipped joint plan keeps both guards; conversely every joint plan keeping a guard is compatible. Applications must establish projection and compatibility."}},
+        {"record": "joint-plans-from-a-supported-start", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start", "says": {"en": "Theorem (any process; periphery): with faithful projections, valid local plans, two properties holding on the covered start, locally authorized moves jointly allowed with a successor, and successors keeping both, the paired finite plan is valid. These are supplied, not shown of actual activity."}}
+      ],
+      "account_adds": {"en": "The converse (a joint plan keeping a guard is compatible), and the separate obligation of availability."},
+      "source_adds": {"en": "Recursive subtree summaries, what a contract must contain (units, effects, failure, progress, resources), a parent as the one who establishes composition, and feasibility findings moving upward."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-ecs-local-promises-fail-jointly",
+      "name": {"en": "Plausible local promises can fail jointly"},
+      "domain": "earlier-folders",
+      "group": "evolving-community-swarms",
+      "source": {"work": "theories/evolving-community-swarms/README.md", "locator": "Counterexamples and limits retained from the discussion", "basis": "read-in-repo"},
+      "sense": {"en": "Retained counterexamples: local latency promises do not imply a system deadline unless a parent accounts for the composition, and children that each wait for the other can deadlock despite plausible interfaces, so progress needs its own argument."},
+      "quote": "Children that each wait for the other can deadlock despite plausible interfaces.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {"en": "This is the source's closest match in the account. Two locally fine plans fail jointly on one shared reserve; reciprocal promises can be empty; preservation does not give availability; a circular dependence can be a wait no one can begin. Same mechanism, on stated models. [AI reading]"},
+      "targets": [
+        {"record": "joint-plan-composition", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plan-composition", "says": {"en": "Two locally successful two-step plans on one two-unit reserve fail at the second joint step (periphery, propext and Quot.sound reported), and serialization without renewal does not repair it."}},
+        {"record": "joint-plans-from-a-supported-start", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-plans-from-a-supported-start", "says": {"en": "Theorem (periphery): 'if the other eventually does, I eventually do' holds on both sides where neither ever happens; a law with no successors keeps every property vacuously; one circular dependence can be maintenance running or a wait no one can begin."}},
+        {"record": "giving-that-waits-on-giving", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-giving-that-waits-on-giving", "says": {"en": "Theorem (any formations, any relation of waiting): with memory, one withholding, where every formation lies within d waits of it, ends all giving from step d on; under both laws more waiting gives no more at any step."}}
+      ],
+      "account_adds": {"en": "Exact conditions under which a circular wait starts or never starts, and that serializing does not repair an unrenewed shared reserve."},
+      "source_adds": {"en": "The latency case and any budget allocated through a composition: no law on deadlines. Also the design answer, a parent accounting for the actual composition."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-ecs-undeclared-dependency",
+      "name": {"en": "A dependency left off the diagram is still a dependency"},
+      "domain": "earlier-folders",
+      "group": "evolving-community-swarms",
+      "source": {"work": "theories/evolving-community-swarms/README.md", "locator": "Counterexamples and limits retained from the discussion", "basis": "read-in-repo"},
+      "sense": {"en": "Declared boundaries do not make actual dependence disappear: a shared store reached outside them binds the modules anyway. The later plan adds that an observed undeclared dependency becomes a repair obligation, and that broader coordination is sometimes genuinely needed."},
+      "quote": "A shared database accessed outside declared boundaries is a dependency even when omitted from the diagram.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {"en": "The account separates a represented region from actual dependence: a draw judged over a region omitting a required condition can lose its own support, and counting one's own draw misses joint excess. The form is shared. The account's dependences are conditions drawn on a flow; a database read is not consumed, so the match is to omission, not depletion. [AI reading]"},
+      "targets": [
+        {"record": "represented-boundary-against-dependence", "anchor": "theories/becoming/chapters/02-MAP.md#r-represented-boundary-against-dependence", "says": {"en": "Theorem (World): over a region covering what it requires, requirements not tightening, a formation keeps its own support and can still undermine another; omitting a required condition, its own draw can lose its own support. How a center represents the region is unmodelled."}},
+        {"record": "own-count-misses-joint-excess", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess", "says": {"en": "Theorem (World: balance; for the ending also activity needing support and only active giving, with the gate local): formations can each take within what a step gives while together they take more."}},
+        {"record": "mediated-evidence-transport", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-mediated-evidence-transport", "says": {"en": "Instance (periphery): finite histories of lawful reads and committed bounded overwrites keep actual coverage; an extra write path can leave the public view identical, so logs cannot establish mediation. That the runtime is completely mediated is supplied, not shown."}}
+      ],
+      "account_adds": {"en": "That a sufficient region for oneself still leaves others undermined, and that logs cannot establish mediation: an extra writer can leave the public view identical."},
+      "source_adds": {"en": "Detection and repair of the hidden dependency by traces and consumer declarations, and treating an observed one as an obligation; the account leaves how a center represents its region unmodelled."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-ecs-contract-as-summary",
+      "name": {"en": "Can a contract summarize enough without becoming the whole program?"},
+      "domain": "earlier-folders",
+      "group": "evolving-community-swarms",
+      "source": {"work": "theories/evolving-community-swarms/RESEARCH-AGENDA.md", "locator": "Questions, 2; Proposed tightening", "basis": "read-in-repo"},
+      "sense": {"en": "A parent reasons from a child's exposed contract as the summary of its subtree. The folder's assessment names the main gap: finding and keeping compact, sufficient boundaries through unforeseen changes, or complexity just moves into the contracts or a central coordinator. Stated as an open question, not a result."},
+      "quote": "Can contracts carry enough meaning without becoming the whole program?",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {"en": "A contract as a reduction: the readout law says exactly when a summary suffices for a given reading, namely where the reading agrees across what the summary merges, and that nothing restores a merge without reading history. Pooled coupling gives what a parent reading its children can separate. Whether a compact one exists is untouched. [AI reading]"},
+      "targets": [
+        {"record": "control-coherence-loss", "anchor": "theories/becoming/chapters/02-MAP.md#r-control-coherence-loss", "says": {"en": "Theorem (any type): what an observable reads through a reduction is single-valued exactly where it agrees across what the reduction merges, so no map restores two configurations a reduction merges. The record scopes its dephasing instance and notes the loss is at the reduced interface, not universal."}},
+        {"record": "selection-through-couplings", "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings", "says": {"en": "Theorem (World; no premise): two histories are selected alike by every selection through a formation's couplings exactly when alike through them; the same holds for a group's pooled coupling. A particular selection may ignore what its couplings carry."}}
+      ],
+      "account_adds": {"en": "An exact criterion for a sufficient reduction relative to one reading, with history-reading decoders not excluded (03)."},
+      "source_adds": {"en": "The question that matters to it: size growth of the summaries over time, and a mechanism that discovers and revises boundaries under change. Neither is stated."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-ecs-neighbour-discovery-limit",
+      "name": {"en": "Neighbour-only discovery does not find the globally best"},
+      "domain": "earlier-folders",
+      "group": "evolving-community-swarms",
+      "source": {"work": "theories/evolving-community-swarms/README.md", "locator": "Discovery and generation", "basis": "read-in-repo"},
+      "sense": {"en": "A module requests a capability through its parent and a hierarchical directory routes searches through advertised summaries. Summaries can be stale or incomplete, a semantic match only retrieves a candidate, and compatibility still has to be checked."},
+      "quote": "neighbor-only discovery does not guarantee finding the globally best implementation without broader search",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {"en": "The negative half has a form in the account: what a choice can separate is bounded by what couples in, and being joined through couplings is not enough, as on a path a - c - b. The account says nothing on search or retrieval, and 'best' here is the source's own frame, read by its resolver's criteria. [AI reading]"},
+      "targets": [
+        {"record": "selection-through-couplings", "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings", "says": {"en": "Theorem (World; no premise): histories alike through a formation's couplings are selected alike by every selection through them."}},
+        {"record": "a-code-formed-between-formations", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations", "says": {"en": "Being joined through couplings is not enough: on a path a - c - b, each following the least-indexed of itself and its neighbours, a and b never agree. How long agreement takes is not stated."}}
+      ],
+      "account_adds": null,
+      "source_adds": {"en": "The discovery design and the distinction between a retrieval match and checked compatibility."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-ecs-unrelated-growth-marginal-cost",
+      "name": {"en": "Unrelated growth has small marginal cost; three kinds of scale are separate"},
+      "domain": "earlier-folders",
+      "group": "evolving-community-swarms",
+      "source": {"work": "theories/evolving-community-swarms/README.md", "locator": "Core claims, claim 6; soundness assessment table", "basis": "read-in-repo"},
+      "sense": {"en": "A prediction to test: interaction cost follows active dependencies and change effort follows affected contracts, not installed apps. No constant-cost guarantee for active workloads or shared invariants. Dormant catalog, concurrent agents and accumulated semantic dependence scale differently, and the third is called the largest unanswered question."},
+      "quote": "Unrelated growth can have a small marginal cost.",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {"en": "The account has no law of cost in change effort, attention or computation as a system grows. 'Falling dormant' and 'cost' hits are other mechanisms: a dependence's alteration, a shaper's cost. It is stated nowhere that the folder's prediction was tested. Not a defect: this is an engineering hypothesis. [AI reading]"},
+      "targets": [],
+      "account_adds": null,
+      "source_adds": null,
+      "absence": {
+        "searched": ["live account: dormant, latency, throughput, concurren, cost of change, coordination cost, communication cost, modularity, near-decompos, scalab, marginal"],
+        "read": ["05-COLLECTIVES.md §11", "01-ROOT.md line on falling dormant (row only)", "COLLECTIVE-DIRECTION.md §2 table"]
+      },
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-ecs-resource-reservation",
+      "name": {"en": "Reserved resources and attributed cost keep growth local"},
+      "domain": "earlier-folders",
+      "group": "evolving-community-swarms",
+      "source": {"work": "theories/evolving-community-swarms/README.md", "locator": "Common runtime and limits", "basis": "read-in-repo"},
+      "sense": {"en": "Performance under growth needs active design: lazy activation, narrow subscriptions, reserved resources and cost attributed to module versions; maintenance needs owners, budgets and bounded dependencies. A thousand dormant apps and a thousand active simulations are different workloads."},
+      "quote": "Performance requires lazy activation, cached artifacts, bounded queues, narrow subscriptions, reserved resources, and attribution of cost to module versions.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {"en": "Only the reservation has a form in the account: exclusive footprints within what is given keep the joint draw within capacity. The law is on a balanced flow and does not show an actual division is by footprints. Data ownership has no match here, because a record is not drawn down. [AI reading]"},
+      "targets": [
+        {"record": "division-by-exclusive-footprints", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-division-by-exclusive-footprints", "says": {"en": "Theorem (World: balance): where takes are what leaves of a realized joint plan draw, footprints apart and the root's within what is given, the joint draw is within what is given; with such a division at every step the level never falls below its start. Not shown: that an actual division is so, or that the level rises."}}
+      ],
+      "account_adds": {"en": "The exact reason a partition protects a shared stock, with the balance premise named."},
+      "source_adds": {"en": "Lazy activation, queues, subscriptions, attribution of cost and all the performance engineering."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-ecs-options-before-obligations",
+      "name": {"en": "New features create options before obligations"},
+      "domain": "earlier-folders",
+      "group": "evolving-community-swarms",
+      "source": {"work": "theories/evolving-community-swarms/RESEARCH-AGENDA.md", "locator": "Starting position", "basis": "read-in-repo"},
+      "sense": {"en": "A working commitment: growth should add useful possibilities without imposing runtime cost, maintenance burden or design preferences on every member, so adding should generally widen what members can do while binding no one else."},
+      "quote": "New features should usually create options before creating obligations for everyone.",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {"en": "The account says exactly where a part's added options widen the whole: within others' margins, otherwise the comparison is mixed and unordered. A ranking then needs C (order), with the continuation condition fixing whose losses count; neither asserted, warrant open. The law is about draws on conditions, not software burden, so correspondence is unshown. [AI reading]"},
+      "targets": [
+        {"record": "own-widening-within-the-margin", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-own-widening-within-the-margin", "says": {"en": "Theorem (World; balance; part and region decided): where a part's activity widens what can form within its own region, the whole widens exactly when its net draw stays within the margin for every formation outside it, and is mixed exactly when it goes beyond for one. Mixed is not ordered."}}
+      ],
+      "account_adds": {"en": "The exact edge at which an addition stops being a widening of the whole, and that no ordering holds past it without a further premise."},
+      "source_adds": {"en": "The product default itself, and the claim that software's maintenance burden can in practice be kept off non-users."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-ecs-scoped-adoption",
+      "name": {"en": "Changes have audiences: personal, group, community"},
+      "domain": "earlier-folders",
+      "group": "evolving-community-swarms",
+      "source": {"work": "theories/evolving-community-swarms/README.md", "locator": "Core claims, claim 5; Change and adoption", "basis": "read-in-repo"},
+      "sense": {"en": "Value stance and product direction: adoption is scoped. Different views can share authoritative records; a shared commitment requires the relevant community decision; a forked view does not silently change an official outcome."},
+      "quote": "Changes have audiences.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {"en": "Two formal shapes match in part: agreement kept in a group through hearings closed for it, so scope per group at one sense, and an inherited rule whose every change is located at a gated adoption step. Both supply the rule of adoption and threshold. Neither reads personal variants over shared records. [AI reading]"},
+      "targets": [
+        {"record": "a-code-formed-between-formations", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations", "says": {"en": "Theorem (any type; further premises named): a group agreeing at a sense keeps agreeing through every hearing closed for it. The record does not show that actual conventions form this way, or whether a shared, imposed or kept code supports or damages 生生."}},
+        {"record": "organizational-rule-inheritance", "anchor": "theories/becoming/chapters/04-LIFE.md#r-organizational-rule-inheritance", "says": {"en": "Theorem (any process; one declared finite protocol, an instance): only adoption is gated, every non-adopting history inherits the rule, every change is located at an adoption step using the recorded proposal. Supplied: seed rule, proposals, participation, a fixed amendment procedure, the threshold."}}
+      ],
+      "account_adds": {"en": "That a rule's change has an exact location in a history, and that a group's agreement is closed under its own hearings."},
+      "source_adds": {"en": "Audience as a design axis; views forking over one authoritative record; a personal change needing no agreement. The account states no law of shared records with plural interfaces."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-ecs-authority-as-standing",
+      "name": {"en": "Owners and delegated authority as standing terms"},
+      "domain": "earlier-folders",
+      "group": "evolving-community-swarms",
+      "source": {"work": "theories/evolving-community-swarms/next-vision/VISION.md", "locator": "The user experience; also ARCHITECTURE sections 3 and 5", "basis": "read-in-repo"},
+      "sense": {"en": "An assistant proposal: every module has a responsible owner, members adopt within their authority, and shared commitments follow delegated authority. The folder keeps the mechanism for representing authority apart from any governance policy and leaves rules undecided, but owner and authority stand as given terms."},
+      "quote": "A change to a shared commitment follows the authority already delegated by the community",
+      "carried": "changed",
+      "relation": "divergence",
+      "reading": {"en": "The account's method begins from relations and does not take owners or authority as standing: a description of participation confers no authority, permission or right, and where authority enters a theorem it is a supplied premise. This does not say the design is wrong; it holds a layer the account gives only as a hypothesis. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/08-METHOD.md#an-investigation", "says": {"en": "Wording names the relation it means: the formation and change of conditions, dependence, participation in decisions. It keeps money, payment and ownership for actual economic relations. A description of participation confers no authority, permission or right."}},
+        {"anchor": "theories/becoming/chapters/01-ROOT.md#the-root-continuation-relative-to-a-class", "says": {"en": "Not assumed: that becoming is good; inevitable improvement or universal growth; a fixed common utility; independent owners of value."}},
+        {"record": "joint-practice-forms-continuation", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-practice-forms-continuation", "says": {"en": "Theorem (periphery): the mandate, records, compliance and higher authorization are among what is supplied, not derived."}}
+      ],
+      "account_adds": {"en": "A demand that wording not confer standing, and authority named as a premise wherever a theorem uses it."},
+      "source_adds": {"en": "A working use of authority in adoption decisions, including what to do when delegated authority does not settle a question: ask for a domain decision."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-ecs-meaning-under-same-type",
+      "name": {"en": "One name, two meanings: attendance"},
+      "domain": "earlier-folders",
+      "group": "evolving-community-swarms",
+      "source": {"work": "theories/evolving-community-swarms/README.md", "locator": "Counterexamples and limits; ARCHITECTURE Worked architectural revision", "basis": "read-in-repo"},
+      "sense": {"en": "Matching types do not establish matching meaning. In the worked case one event name conflates observed check-ins and qualification under a policy, and separating them forces downstream changes to badges, eligibility and rewards. An unchanged signature does not count as unchanged meaning."},
+      "quote": "A calendar and badge module can agree on types but disagree about what counts as attendance.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {"en": "A code is a map from senses to forms: a form held at two senses reads back wrongly (homonyms harm), and a merged distinction returns only by a coined form or one held outside. That is the shape of splitting attendance into two concepts. Records do not show actual conventions form this way; software modules are my reading. [AI reading]"},
+      "targets": [
+        {"record": "synonyms-and-coined-forms", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-synonyms-and-coined-forms", "says": {"en": "Theorem (any type): a code letting a sense hold several forms reads every held form back as its sense exactly where no two senses hold one form: synonyms do no harm and homonyms do. Where all hold a code merging two senses, a coined form heard by all makes every formation tell them apart again."}},
+        {"record": "a-code-formed-between-formations", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations", "says": {"en": "An imposed code makes all agree; each formation loses exactly the distinctions its code drew that the imposed code merges. Under hearings that copy, a merged distinction returns only from a form held outside, or by coining."}}
+      ],
+      "account_adds": {"en": "The exact law that synonyms are harmless and homonyms harmful, and who loses what under an imposed code."},
+      "source_adds": {"en": "What the change does downstream: retroactive corrections, rewards already spent, and which historical commitments can stay stable."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-ecs-shared-decision-not-local",
+      "name": {"en": "A shared decision cannot be made local or derived"},
+      "domain": "earlier-folders",
+      "group": "evolving-community-swarms",
+      "source": {"work": "theories/evolving-community-swarms/context/2026-09-07-soundness-assessment.md", "locator": "Assistant, the attendance chain; also README counterexamples and ARCHITECTURE worked revision", "basis": "read-in-repo"},
+      "sense": {"en": "Architecture can expose relationships but not dissolve shared disagreement. Modularity cannot make every global change local, shared policy disagreements still need social resolution, and whether to preserve, reconcile or compensate spent rewards is a community decision an LLM cannot derive from types."},
+      "quote": "It cannot make an inherently shared decision purely local.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {"en": "The account has the formal side: mixed comparisons are decided both ways by positive weightings, so no law settles them. Ordering needs C, and the continuation condition fixes scope only; neither asserted, warrant open, and C too is silent on mixed cases. The account does not say who decides, or how. [AI reading]"},
+      "targets": [
+        {"record": "widening-as-what-every-positive-weighting-ranks", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-positive-weighting-ranks", "says": {"en": "Theorem (any type; a finite listing, two-valued admission): one course widens another exactly when every weighting positive on the listed items weighs it higher; a mixed comparison is decided both ways by positive weightings."}},
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order", "says": {"en": "Two premises, two roles: the continuation condition (scope) fixes whose losses count and ranks nothing; C (order) ranks a course above every course it widens and does not rank mixed comparisons."}}
+      ],
+      "account_adds": {"en": "An exact reason the decision is underdetermined, on listed items and weightings."},
+      "source_adds": {"en": "The practical move: record the choice and its scope in the state transition, and predict the wider scope before implementation."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-ecs-durable-module-temporary-worker",
+      "name": {"en": "The maintained module outlasts the agents who work on it"},
+      "domain": "earlier-folders",
+      "group": "evolving-community-swarms",
+      "source": {"work": "theories/evolving-community-swarms/next-vision/ARCHITECTURE.md", "locator": "The organizing model; README The maintained module", "basis": "read-in-repo"},
+      "sense": {"en": "A durable module holds identity, contracts, state, evidence and maintenance knowledge; workers come and go. Another agent must be able to resume from durable context without reconstructing the whole community's chat, and durable responsibility stays distinct from the temporary task graph of a change."},
+      "quote": "An executing agent is temporary.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {"en": "The map's thesis is general: a pattern goes on while the occurrences carrying it begin and end, a practice through its members, read at two grains. Practice and rule-handoff laws give one protocol where the practice passes on through records. Neither concerns software agents or context reconstruction; correspondence unshown. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/02-MAP.md#the-map", "says": {"en": "Thesis: a pattern goes on while the occurrences carrying it begin and end: a flame through its fuel, an organism through its cells, a practice through its members. Turnover that sustains and turnover that ends look alike at one class, and differ read at a fine and a coarse class together."}},
+        {"record": "joint-practice-forms-continuation", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-joint-practice-forms-continuation", "says": {"en": "Theorem (periphery; task, records, mandate, participants and more supplied): a practice round by a reviewer and a worker completes under exact presence and method conditions and installs the method. It closes one connection from enacted practice to further participation, not the arrival of people or indefinite self-maintenance."}},
+        {"record": "organizational-rule-inheritance", "anchor": "theories/becoming/chapters/04-LIFE.md#r-organizational-rule-inheritance", "says": {"en": "In one declared protocol, branching or handoff carries the rule while continuing participation decides its execution; a copied rule with no one continuing to take part cannot operate."}}
+      ],
+      "account_adds": {"en": "That persistence is relative to a chosen pair of grains, and that a copied rule needs continuing participation."},
+      "source_adds": {"en": "The maintenance dossier as a design, wake conditions, and that durable context lets a new worker resume cheaply: not stated."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-ecs-evolution-includes-maintenance",
+      "name": {"en": "Evolution has to pay for its migrations"},
+      "domain": "earlier-folders",
+      "group": "evolving-community-swarms",
+      "source": {"work": "theories/evolving-community-swarms/README.md", "locator": "Core claims, claim 7; soundness assessment", "basis": "read-in-repo"},
+      "sense": {"en": "Versions, migrations, ownership, budgets and consolidation belong to normal lifecycle. Features may get cheap while their shared meaning becomes expensive to maintain; a variant budget must include adapters and migrations. The folder says owners and budgets are not yet shown to control the burden."},
+      "quote": "Easy generation alone is insufficient.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {"en": "The succession law has the form: a budget that covers correction alone does not pay for migration, and a missing part can stop realization while an aggregate reads safe. The record's own AI reading calls succession the migration of a running service with its state and record of commands. A market model, parts and conversion supplied. [AI reading]"},
+      "targets": [
+        {"record": "succession-on-a-funded-carrier", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-succession-on-a-funded-carrier", "says": {"en": "Theorem (periphery): under a certificate covering correction plus migration and the listed conditions, every finite successor takes its step; in witnesses a missing part stops realization while the aggregate stays safe, and a budget for correction alone fails to pay for migration. Not shown: that an actual system is so provided for, or that a succession is warranted."}},
+        {"record": "formed-software-continuation", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-formed-software-continuation", "says": {"en": "Assessment (selected histories, no theorem, not a universal law): inherited code, work, coordination and interim support carried activity under partial reorganization, as specific conditions, not interchangeable amounts."}}
+      ],
+      "account_adds": {"en": "That the shortfall can be invisible in an aggregate safety reading."},
+      "source_adds": {"en": "Consolidation of forks, ownership transfer, human clarification as a maintenance cost, and the economic claim that generation cost and maintenance cost diverge."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-ecs-state-transition-recovery",
+      "name": {"en": "Rollback does not undo writes; transitions must survive interruption"},
+      "domain": "earlier-folders",
+      "group": "evolving-community-swarms",
+      "source": {"work": "theories/evolving-community-swarms/README.md", "locator": "Change and adoption; ARCHITECTURE section 5", "basis": "read-in-repo"},
+      "sense": {"en": "New implementations are published as versions. Persisted state needs a compatible transition or migration, active sessions and jobs need handling, and cross-module changes need durable transitions with retries and specified compensation. The plan refuses to promise general atomic rollback."},
+      "quote": "Code rollback does not by itself undo incompatible data writes or external effects.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {"en": "The significance chapter has protocols that carry a change through interruption: an in-flight request completing along its retained route, and recovery from durable pending state. Their limits match the source's caution: coherence is not harmlessness, completion needs reserve and an uninterrupted suffix, and a request's continuing appropriateness is not shown. Stated for alignment, not community software. [AI reading]"},
+      "targets": [
+        {"record": "versioned-request-completion", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-versioned-request-completion", "says": {"en": "Law (any process; pure core) with a periphery instance: a law doing one unit of a pending task's work a tick finishes in that work plus one tick; under the bank and queue invariant the versioned queue's head completes, leaving the rest unchanged. That the request is still appropriate is not shown."}},
+        {"record": "recoverable-mediated-change", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-recoverable-mediated-change", "says": {"en": "Instance (periphery): with durable protected pending state, atomic writes and no extra writer, n remaining writes and the publication complete in n + 1 uninterrupted steps exactly when reserve and deadline cover n + 1. Safety here is coherence of evidence, not harmless activity; no arbitrary irreversible effect is verified."}}
+      ],
+      "account_adds": {"en": "Exact step counts for resumption, and that consistency alone does not supply reserve, deadline or an uninterrupted suffix."},
+      "source_adds": {"en": "Coexisting versions over shared records, migration of stored meaning, spent rewards and compensation, activation pinned against other owners' old promises."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-ecs-retirement-with-records",
+      "name": {"en": "Retiring a thing while keeping its records and obligations"},
+      "domain": "earlier-folders",
+      "group": "evolving-community-swarms",
+      "source": {"work": "theories/evolving-community-swarms/RESEARCH-AGENDA.md", "locator": "Questions, 6; ARCHITECTURE section 5", "basis": "read-in-repo"},
+      "sense": {"en": "A module can end as executable software while its history and continuing obligations survive: identify dependents, stop new work, resolve obligations, transfer ownership, preserve records. Compression must not delete unresolved obligations."},
+      "quote": "The system needs a way to stop maintaining executable variants while preserving community history.",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {"en": "The account has endings, and bounded recorders that cannot keep a whole history and go on, but no law of deliberately ending an activity while discharging what depends on it. 'Retired' occurs only for labels and records of the repository itself. Its own practice of moving superseded text to history/ has this shape but stands in AGENTS.md, not the live account. [AI reading]"},
+      "targets": [],
+      "account_adds": null,
+      "source_adds": null,
+      "absence": {
+        "searched": ["live account: retire, archiv, retirement, decommission, wind down, obligation, handoff, written back"],
+        "read": ["02-MAP.md, the recorder theorems and the Reading naming archives", "05-COLLECTIVES.md §9 row on resolutions written back", "04-LIFE.md #r-organizational-rule-inheritance"]
+      },
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-ecs-community-continuity",
+      "name": {"en": "Technical evolution should preserve community continuity"},
+      "domain": "earlier-folders",
+      "group": "evolving-community-swarms",
+      "source": {"work": "theories/evolving-community-swarms/README.md", "locator": "Core claims, claim 8; Three properties", "basis": "read-in-repo"},
+      "sense": {"en": "Value stance: conversations, identity, commitments, decisions and cultural history matter alongside features and performance, and a new version should keep the relevant records and commitments. Social harmony is called an aspiration the architecture cannot guarantee."},
+      "quote": "Technical evolution should preserve community continuity.",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {"en": "That these losses count at all is, in the account, the continuation condition's scope, and any ranking needs C; neither asserted, warrant open, and no law says a loss of records is a harm. What continues is relative to the class read. Also held: a fixed rule does not keep the possible under it widening, so keeping is not by itself the account's direction. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order", "says": {"en": "The continuation condition fixes whose losses count: every continuation's; it ranks nothing. C, widening what can form is better, ranks a course above every course it widens and does not rank mixed comparisons. Two premises, not asserted."}},
+        {"record": "where-the-possible-grows", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-where-the-possible-grows", "says": {"en": "Theorem (root; any process, and witnesses): where the possible under a process keeps widening along a course, from every step some bounded stretch is not made of its moves throughout."}}
+      ],
+      "account_adds": {"en": "The split between whose losses count and which course ranks higher, and that keeping and widening are different readings."},
+      "source_adds": {"en": "The concrete objects of continuity (identity, decisions, cultural history) as what must survive an upgrade, and a stance held unconditionally rather than under named premises."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-ecs-independent-verification",
+      "name": {"en": "Agreeing agents are not independent evidence"},
+      "domain": "earlier-folders",
+      "group": "evolving-community-swarms",
+      "source": {"work": "theories/evolving-community-swarms/README.md", "locator": "Counterexamples and limits; RESEARCH-AGENDA question 7", "basis": "read-in-repo"},
+      "sense": {"en": "Independent agents may reproduce one misunderstanding, an agent can write code and tests sharing a mistaken assumption, and review does not establish correctness merely because agents agree. Verification should scale with the scope and consequences of a change."},
+      "quote": "Agreement and implementation-shaped tests are not sufficient evidence of correctness.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {"en": "The account's reviewer laws have this shape: readiness counts independent root causes, and moving two reviewers under one cause fails it with all names kept; copies change no certificate. Agents agreeing without copying fall under the cause law only if a common cause is supplied; the copy law does not show mere agreement adds nothing. [AI reading]"},
+      "targets": [
+        {"record": "reviewers-count-by-independent-causes", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-reviewers-count-by-independent-causes", "says": {"en": "Theorem (pure core, no axiom; fault formulas and bounds supplied, faithful reviewers): reviewers count by independent causes, not names. In computed cases three reviewers with distinct single causes are ready, and moving two under one cause makes readiness fail while all three names are kept."}},
+        {"record": "copied-witnesses-change-nothing", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-copied-witnesses-change-nothing", "says": {"en": "Theorem (any type, no axiom): where each added witness copies one already on the roster, inspection takes exactly the same steps and gives the same certificate. That a witness merely agreeing, without copying, adds nothing is not shown."}}
+      ],
+      "account_adds": {"en": "An exact readiness condition: nonempty bounds, every two leaving a reviewer working under both."},
+      "source_adds": {"en": "Implementation-shaped tests as a specific failure, adversarial and contract-derived checks, and verification effort scaled to consequences."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-ecs-conditional-evidence",
+      "name": {"en": "Evidence holds under its premises and needs renewal"},
+      "domain": "earlier-folders",
+      "group": "evolving-community-swarms",
+      "source": {"work": "theories/evolving-community-swarms/next-vision/ARCHITECTURE.md", "locator": "Sections 2 and 4", "basis": "read-in-repo"},
+      "sense": {"en": "An assistant proposal: evidence binds property, revision, assumptions, environment and method. Tests expire with code; a compositional argument may stay reusable when a change re-establishes exactly its premises. Tests cannot be summarized up into a proof. Reuse is proposed to make later changes cheaper."},
+      "quote": "Every reuse records the premises and environmental conditions on which it relies.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {"en": "Closure and temporal laws have the negative form: a record can stay true of its sample while reusing it for the present question is wrong, and evidence must be carried through admitted change. A rule that never answers falsely must abstain where a reference changed outside what is retained. The positive saving from reuse is not stated. [AI reading]"},
+      "targets": [
+        {"record": "adaptive-closure-cannot-resolve", "anchor": "theories/becoming/chapters/03-KNOWING.md#r-adaptive-closure-cannot-resolve", "says": {"en": "Theorem (periphery; the histories, moves and local closure supplied): where a reference changes without entering what is retained, no deterministic policy choosing from that view resolves them in finitely many steps, so a rule never answering falsely must abstain. A record can stay true of its sample while reusing it for the present question is wrong."}},
+        {"record": "evidence-through-change", "anchor": "theories/becoming/chapters/03-KNOWING.md#r-evidence-through-change", "says": {"en": "Theorem (periphery; admitted transitions supplied): what execution needs certified is the candidate set propagated through every admitted change; a control change can reopen an excluded arrangement, and a change recorded as none can leave false confidence."}}
+      ],
+      "account_adds": {"en": "That inspection is needed for repair: reopening and taking up without inspection does not repair the judgment."},
+      "source_adds": {"en": "Evidence classes with different invalidation rules, a periodic independent broader check, and the economic case for reuse."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-ecs-repair-frontier",
+      "name": {"en": "A change compiled into a repair frontier"},
+      "domain": "earlier-folders",
+      "group": "evolving-community-swarms",
+      "source": {"work": "theories/evolving-community-swarms/next-vision/ARCHITECTURE.md", "locator": "Section 2", "basis": "read-in-repo"},
+      "sense": {"en": "A proposed planner: consumers of a changed promise receive a delta through declared boundaries and each decides whether its guarantees still hold; propagation stops at a supported boundary or a broader owner. A revised premise reopens an obligation. Predictions are kept so locality is measured, and exhausted budgets stay unresolved."},
+      "quote": "a budget limit never converts unknown compatibility into acceptance",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {"en": "No law of propagating a semantic change through consumers. Nearest form, not a carrying: revision settling at a least fixed point with an undecided value kept. The repository's own gate works this way ('runs what the changed paths reach', and lists live lines linking a change, 'a start and not the whole set'), but that is process in AGENTS.md, not the account. [AI reading]"},
+      "targets": [],
+      "account_adds": null,
+      "source_adds": null,
+      "absence": {
+        "searched": ["live account: repair frontier, propagat, dependency closure, affected, obligation, impact, change propagation; record-index by revision, repair, propagat"],
+        "read": ["03-KNOWING.md #r-revision-with-an-undecided-value", "03-KNOWING.md #r-evidence-through-change", "AGENTS.md Working together (process, not live)"]
+      },
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-ecs-organization-as-object-of-learning",
+      "name": {"en": "The decomposition itself must be revisable"},
+      "domain": "earlier-folders",
+      "group": "evolving-community-swarms",
+      "source": {"work": "theories/evolving-community-swarms/next-vision/VISION.md", "locator": "The capability we must invent and demonstrate; ARCHITECTURE section 3", "basis": "read-in-repo"},
+      "sense": {"en": "The updated ambition, in assistant-authored mechanisms: work reveals an insufficient boundary, agents propose better ones, candidates are scored with migration cost, later unseen work tests them. The current structure is useful organization, not an assertion that the first decomposition was ideal."},
+      "quote": "This makes the original responsibility tree an object of learning.",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {"en": "The account gives where changing the rule is required for one reading: possibility under a process keeps widening only with departures from its moves, and endless change does not suffice. A reconfiguration law counts the support it uses. But 'the possible' is not the source's change cost. Learning its own boundaries is not stated. [AI reading]"},
+      "targets": [
+        {"record": "where-the-possible-grows", "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-where-the-possible-grows", "says": {"en": "Theorem (root; any process, and witnesses): where the possible under a process keeps widening along a course, from every step some bounded stretch is not made of its moves throughout. The collective reading in COLLECTIVE-DIRECTION §7 is an AI reading, and says nothing of which changes keep it widening."}},
+        {"record": "stronger-arrangement-formed-by-reconfiguration", "anchor": "theories/becoming/chapters/04-LIFE.md#r-stronger-arrangement-formed-by-reconfiguration", "says": {"en": "Theorem (periphery; pre-spine; configurations, change operation and recipe supplied): in a declared material history an initially absent stronger arrangement forms by reconfiguring an existing one, using support; later reconfiguration can erode it; finite supplied support is not recurring renewal."}}
+      ],
+      "account_adds": {"en": "That revising a rule without end is necessary for one reading of openness and not sufficient."},
+      "source_adds": {"en": "The search itself: bounded local operations (split, merge, extract, move), scoring, cooldowns, and promotion by trial on unseen changes."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-ecs-representation-sets-future-cost",
+      "name": {"en": "Future costs follow from the current representation"},
+      "domain": "earlier-folders",
+      "group": "evolving-community-swarms",
+      "source": {"work": "theories/evolving-community-swarms/next-vision/VISION.md", "locator": "What we are trying to surpass", "basis": "read-in-repo"},
+      "sense": {"en": "The plan's thesis: if a system improves its boundaries, named concepts, procedures and evidence, later work gets easier, and extra experience should sometimes reduce the reasoning the next task needs. Called the central proposed advantage; explicitly falsifiable if search costs exceed savings."},
+      "quote": "many future costs are consequences of the current representation of a problem",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {"en": "The account says what a map lets a learner come to know, and that a composition's error may stand until a fresh record exposes it, but has no law relating representation to effort on later tasks. Its reading of meta-learning classifies orders functionally and claims no saving. This is the folder's distinctive claim, and it stands untaken and untested. [AI reading]"},
+      "targets": [],
+      "account_adds": null,
+      "source_adds": null,
+      "absence": {
+        "searched": ["live account: less explanation, cheaper, savings, payback, cost of learning, meta-learn, self-improv, self-modif, learning to learn; record-index by learn, map, composition, representation"],
+        "read": ["03-KNOWING.md meta-learning Reading (§ before Acquired composition)", "03-KNOWING.md #r-composition-route", "record titles of the knowing region"]
+      },
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-ecs-useful-swarm-concurrency",
+      "name": {"en": "Thousands of useful workers"},
+      "domain": "earlier-folders",
+      "group": "evolving-community-swarms",
+      "source": {"work": "theories/evolving-community-swarms/next-vision/ARCHITECTURE.md", "locator": "Section 6; EVALUATION Five independent axes of scale", "basis": "read-in-repo"},
+      "sense": {"en": "Work should run across up to a thousand active workers, with queues, leases and backpressure, measured by accepted change and not activity. Benefit depends on task independence; an ownership conflict changes the boundary and is not remedied by another worker; useful saturation should be reported."},
+      "quote": "Sharding a queue does not prove semantic coordination scales.",
+      "carried": "not-carried",
+      "relation": null,
+      "reading": {"en": "No law on how accepted work scales with the number of coordinating agents. 'Several optimizers drain by their joint capacity' concerns draw on a stock, not useful throughput, and would be a word match here. The account's reviewer and worker model has a roster of few and no queueing. [AI reading]"},
+      "targets": [],
+      "account_adds": null,
+      "source_adds": null,
+      "absence": {
+        "searched": ["live account: swarm, worker, multi-agent, thousands of, throughput, concurren, queue, backpressure, division of labo"],
+        "read": ["05-COLLECTIVES.md #r-joint-practice-forms-continuation", "05-COLLECTIVES.md §11"]
+      },
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-ecs-falsifiable-evaluation",
+      "name": {"en": "Predict scope first; keep failed thresholds as results"},
+      "domain": "earlier-folders",
+      "group": "evolving-community-swarms",
+      "source": {"work": "theories/evolving-community-swarms/next-vision/EVALUATION.md", "locator": "Provisional advancement gates; What would falsify the central thesis", "basis": "read-in-repo"},
+      "sense": {"en": "Assistant-proposed standard: predict the affected set before implementation, seal outcomes, compare with tuned rivals, report losses as results. Every number is a provisional target; no measurement exists. Surprises must not be relabelled as locality after the fact."},
+      "quote": "Do not revise a failed threshold retrospectively and retain the original claim.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {"en": "Same practice as the account's frozen rules: verdict scored before the data, failure recorded beside the thesis. A frozen rule there fixes scoring, not that the rule reads its construct, a limit the folder states less exactly. The folder's own tests were not taken up; the account names it an application, correspondence not established. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/chapters/08-METHOD.md#theses", "says": {"en": "Strength is the observations a claim excludes; standing is how far it is established. A thesis adds no theorem, a refutation removes none, and a failure stays recorded beside the thesis. A frozen rule fixes how a verdict is scored before the data, not that the rule reads the construct the verdict names."}},
+        {"anchor": "theories/becoming/chapters/05-COLLECTIVES.md#11-joint-plans-and-applications", "says": {"en": "Applications elsewhere (design programmes, not results; correspondence not established), naming evolving community swarms among them."}}
+      ],
+      "account_adds": {"en": "The distinction between a frozen scoring rule and construct validity."},
+      "source_adds": {"en": "The specific tests: ablations, matched baselines, unseen communities, the cost and quality gates. None is frozen or run in the account."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-ecs-surpass-as-goal",
+      "name": {"en": "The goal: surpass the strongest alternative"},
+      "domain": "earlier-folders",
+      "group": "evolving-community-swarms",
+      "source": {"work": "theories/evolving-community-swarms/next-vision/VISION.md", "locator": "What we are trying to surpass; DECISIONS 2026-09-07", "basis": "read-in-repo"},
+      "sense": {"en": "Ren's direction is to surpass, not only learn from, existing systems. The assistant-authored reading: more useful change at lower total cost than the strongest practical alternatives, cumulative capability with communities keeping control. The folder ties any superiority claim to a workload, comparison, budget and period."},
+      "quote": "Success means a community can achieve more useful change with less repeated explanation",
+      "carried": "changed",
+      "relation": "divergence",
+      "reading": {"en": "The account does not take growing capability as a goal: improvement and growth are not assumed, widening is a criterion and not a quantity to maximize, silent on mixed cases, and institutions have no prior licence to grow. The source does name what its comparison reads (cost per accepted change), so this is a frame kept as its own, not an error. [AI reading]"},
+      "targets": [
+        {"anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#1-a-direction-as-a-criterion", "says": {"en": "The direction is a criterion on which every positive weighting agrees, not a quantity to maximize, and it says nothing where the comparison is mixed. It is the question's generative direction only under the two premises, the continuation condition and C, neither asserted."}},
+        {"record": "organizational-formation-from-generative-comparison", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-organizational-formation-from-generative-comparison", "says": {"en": "Reading [AI, any ranking is C's, under the two premises of 07]: the laws of capture and drain give institutions no prior duty to contract and no prior licence to grow; whether a development calls for expanding, maintaining, reorganizing or contracting is asked of the whole continuation it forms."}}
+      ],
+      "account_adds": {"en": "What a capability ranking would need: C or a premise in its place, and silence on mixed comparisons."},
+      "source_adds": {"en": "A measured, competitive target with explicit rivals, which the account does not set itself."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-ecs-sealed-adjudication",
+      "name": {"en": "A self-improving system must not grade itself"},
+      "domain": "earlier-folders",
+      "group": "evolving-community-swarms",
+      "source": {"work": "theories/evolving-community-swarms/next-vision/EVALUATION.md", "locator": "Workloads and independence; ARCHITECTURE The organizing model", "basis": "read-in-repo"},
+      "sense": {"en": "Because the system may replace its own components and procedures, the plan keeps an independent evaluation reference: independent authors freeze outcomes, and the optimizing system cannot touch adjudication or cost accounting. Stated as test hygiene, not as a law of self-improving systems."},
+      "quote": "The optimizing system cannot edit sealed adjudication, cost accounting or reference history.",
+      "carried": "carried-in-part",
+      "relation": "agreement",
+      "reading": {"en": "Closed capture has this form: where neither the next share nor the rule read reads what lies beyond, a lock can outlive a growing loss, and a reading formed from the share is absorbed. Keeping the reference outside the loop is a way of reading beyond it, though the account proves one sufficient exit only and not this design. [AI reading]"},
+      "targets": [
+        {"record": "closed-capture", "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture", "says": {"en": "Theorem (any type): from a locked configuration, under the stated monotone premises, the loss passes every bound while the course stays locked; a reading favouring at no loss above a bound unlocks the course: a sufficient way out. Where the reading too is formed monotonically from the share, a change of the reading is absorbed at the next reading step."}}
+      ],
+      "account_adds": {"en": "That a reading formed from what it scores can absorb any change made to it, and the step-exact conditions."},
+      "source_adds": {"en": "The practical arrangement: sealed outcomes, independent authors, recorded adjudication."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-ecs-everyone-happily",
+      "name": {"en": "Everyone happily making it more powerful"},
+      "domain": "earlier-folders",
+      "group": "evolving-community-swarms",
+      "source": {"work": "theories/evolving-community-swarms/context/2026-09-05-conversation.md", "locator": "Exchange 4, Ren", "basis": "read-in-repo"},
+      "sense": {"en": "Ren's founding picture: a space that never slows, where members keep adding apps, wallets, voting and badges until it becomes their 'os' and part of the culture. The folder's own README restates harmony as an aspiration the architecture cannot guarantee, so the picture is a hope, not a claim of the design."},
+      "quote": "everyone just happily making it more and more powerful",
+      "carried": "changed",
+      "relation": "divergence",
+      "reading": {"en": "The account keeps what this picture leaves out: positions total to zero, so badges and eligibility, read as relative position, cannot raise everyone; and rules read from the share they raise can lock. Starting from relations does not remove rivalry. Reading badges as position is mine and is untested; no law here says a loss is a harm. [AI reading]"},
+      "targets": [
+        {"record": "relative-position-is-zero-sum", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-relative-position-is-zero-sum", "says": {"en": "Theorem (any type for the counting): across every change of amounts the positions' rises total their falls; no change raises every part's position, and a part's rise needs another part's fall."}},
+        {"anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#8-zero-sum-competition", "says": {"en": "Starting from relations removes the frame of a fixed sum divided among independent owners. It does not remove rivalry. Reading [AI]: positional goods stay zero-sum, and who restrains stays contested."}},
+        {"record": "closed-capture", "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture", "says": {"en": "Theorem (any type): under the stated monotone premises, from a locked configuration the loss passes every bound while the course stays locked."}}
+      ],
+      "account_adds": {"en": "Real conflict as theorem, and capture as a way a growing community rule can go unread."},
+      "source_adds": {"en": "The aspiration itself, and that a shared space can become part of a culture through use."},
+      "absence": null,
+      "labels": ["AI reading"]
+    },
+    {
+      "id": "cx-ecs-community-grows-its-software",
+      "name": {"en": "A community grows its own software into its culture"},
+      "domain": "earlier-folders",
+      "group": "evolving-community-swarms",
+      "source": {"work": "theories/evolving-community-swarms/README.md", "locator": "The idea; The founding example; VISION Three demanding worlds", "basis": "read-in-repo"},
+      "sense": {"en": "The founding idea: members ask for changes where they use the software, agents help make them, and the space becomes a shared environment for work, play and coordination. Culture stays something people create and negotiate; the software should preserve their ability to do so."},
+      "quote": "A community can develop its own software continuously",
+      "carried": "carried-in-part",
+      "relation": "scope",
+      "reading": {"en": "The account's only software claim is an assessment of selected existing histories, about what carried activity through partial reorganization, not members reshaping tools by request. A rule or practice going on through participation is proved on one protocol. Software as a community's culture is not stated; the folder is listed, correspondence not established. [AI reading]"},
+      "targets": [
+        {"record": "formed-software-continuation", "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-formed-software-continuation", "says": {"en": "Assessment (selected histories, no theorem, not a universal law): in selected LibreOffice history and Narwhal's continuation, inherited code, work, coordination and interim support carried activity under partial reorganization, as specific conditions. No phase transition, causal identification or frozen prediction; only downstream rule influence is traced."}},
+        {"record": "organizational-rule-inheritance", "anchor": "theories/becoming/chapters/04-LIFE.md#r-organizational-rule-inheritance", "says": {"en": "Theorem (any process; one declared finite protocol): every change of the rule is located at an adoption step; a copied rule with no one continuing to take part cannot operate. The seed rule, proposals, participation and amendment procedure are supplied."}},
+        {"anchor": "theories/becoming/chapters/05-COLLECTIVES.md#11-joint-plans-and-applications", "says": {"en": "Applications elsewhere (design programmes, not results; correspondence not established), naming evolving community swarms."}}
+      ],
+      "account_adds": {"en": "That support types are not interchangeable, and that the return loop from rule back to activity is missing in the evidence."},
+      "source_adds": {"en": "The community OS, request-to-experiment in place, generated views and specialized agents, culture as an outcome, and the whole participatory software research programme."},
+      "absence": null,
+      "labels": ["AI reading"]
+    }
+  ]
+}
