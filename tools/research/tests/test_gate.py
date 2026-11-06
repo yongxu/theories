@@ -657,7 +657,7 @@ class SlotTests(GateCase):
         self.assertEqual([h['run'] for h in gate.status()['held']], ['holder'])
         second = self.waiter('second')
         self.assertFalse(second.got.wait(0.5), 'took a slot while the only one was held')
-        self.assertIn('waiting for a slot for second', self.said.getvalue())
+        self.assertTrue(self.until(lambda: 'waiting for a slot for second' in self.said.getvalue()))
         holder.kill()  # a slot is released when its process ends, however it ends
         self.assertTrue(second.got.wait(20), 'still waiting after the holder ended')
         self.assertEqual(second.index, 0)
@@ -721,7 +721,10 @@ class SlotTests(GateCase):
         self.addCleanup(lambda: (self.end(holder), worker.join(60)))  # before the patches are undone
         worker.start()
         self.assertTrue(self.until(lambda: self.runs('tools') == 1), 'the light check did not run')
-        time.sleep(0.3)
+        # Wait on the line, not on a fixed sleep: under load the worker may not have reached the slot in 0.3 s, and
+        # then takes it unwaited once the holder ends (a red on 6 November 2026 that passed alone).
+        self.assertTrue(self.until(lambda: 'waiting for a slot for drafts' in self.said.getvalue()),
+                        'the heavy check did not wait for a slot')
         self.assertEqual(self.runs('drafts'), 0, 'the heavy check ran while every slot was held')
         self.assertTrue(worker.is_alive())
         holder.kill()
