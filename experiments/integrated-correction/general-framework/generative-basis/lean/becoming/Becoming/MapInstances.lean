@@ -66,10 +66,11 @@ Results.
   - consumption of a condition whose dependence the line still holds at a later step at no lower
     need, where activity needs support (`Web.consumed_held_gone`, `Web.consumed_held_degenerates`,
     so `Web.consumed_held_not_endless`);
-  - a whole drawing beyond renewal: a family of conditions whose gated renewal ran into excess, as
-    in `Flow.family_excess_ends`, ending every line that depends on the family at the step the
-    excess reaches (`Web.family_excess_gone`, `Web.family_excess_degenerates`, so
-    `Web.family_excess_not_endless`);
+  - a whole drawing beyond renewal: a family of conditions whose renewal, whatever gives it, ran
+    into excess, ending every line that depends on the family at the step the excess reaches
+    (`Web.family_excess_gone`, `Web.family_excess_degenerates`, so `Web.family_excess_not_endless`);
+    a gate on the renewal, with only active formations giving, makes the formations' end last
+    (`Flow.family_excess_ends`), which these do not use;
   - passing that stops, with brief carriers, as in `Web.ByPassing.ends_within`
     (`Web.stopped_gone`, `Web.stopped_degenerates`, so `Web.stopped_not_endless`).
 * **Witnesses on the base.** The carriers in shifts of `PatternRelay.shifted` generate at every
@@ -394,50 +395,44 @@ theorem consumed_held_not_endless (dependent : W.Dependent) {c : C} {g : F} {T N
   «尽则非不穷» (consumed_held_degenerates dependent below after start le held)
 
 /-- **A whole drawing beyond renewal makes an occurrence at the step the excess reaches inactive**
-where it depends on a member of the family at a need of at least `m`. -/
-theorem family_excess_gone {L : Flow F C} (balances : L.Balances W) (acting : L.Acting W)
+where it depends on a member of the family at a need of at least `m`: under balance and where
+activity needs support, whatever renews the family. -/
+theorem family_excess_gone {L : Flow F C} (balances : L.Balances W)
     (dependent : W.Dependent) {ds : List C} {m : Nat}
-    (gated : ∀ t f, f ∈ L.present t → ∀ d, d ∈ ds → 0 < L.give t f d →
-      ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e)
     {T n : Nat} (excess : ∀ k, k < n → L.replenishment ds (T + k) < L.uptake ds (T + k))
     (stock : W.stock ds T < n + m) {y : Nat × F} (at_ : y.1 = T + n)
     (held : ∃ e, e ∈ ds ∧ W.requires (T + n) y.2 e ∧ m ≤ W.need (T + n) y.2 e) :
     ¬ W.active y.1 y.2 :=
   match held with
-  | ⟨e, inside, depends, high⟩ =>
+  | ⟨_, inside, depends, high⟩ =>
     Eq.subst (motive := fun s => ¬ W.active s y.2) at_.symm
-      (Becoming.Flow.family_excess_ends balances acting dependent gated excess stock 0 y.2 e
-        inside depends high)
+      (Becoming.Flow.family_ends_below_at (dependent (T + n) y.2)
+        (Becoming.Flow.below_of_excess balances excess stock) inside depends high)
 
 /-- **A whole drawing beyond renewal degenerates the lines that depend on it**, under the
 hypotheses of `Web.family_excess_not_endless`. -/
 theorem family_excess_degenerates {L : Flow F C} (balances : L.Balances W)
-    (acting : L.Acting W) (dependent : W.Dependent) {ds : List C} {m : Nat}
-    (gated : ∀ t f, f ∈ L.present t → ∀ d, d ∈ ds → 0 < L.give t f d →
-      ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e)
+    (dependent : W.Dependent) {ds : List C} {m : Nat}
     {T n : Nat} (excess : ∀ k, k < n → L.replenishment ds (T + k) < L.uptake ds (T + k))
     (stock : W.stock ds T < n + m) {x : Nat × F} (start : W.active x.1 x.2) (le : x.1 ≤ T + n)
     (held : ∀ y, «所及» (continuationStep R) W.activityClass x y → y.1 = T + n →
       ∃ e, e ∈ ds ∧ W.requires (T + n) y.2 e ∧ m ≤ W.need (T + n) y.2 e) :
     «退化» (continuationStep R) W.activityClass x :=
   activity_every_branch_ends_of_gone start le fun y hy at_ =>
-    family_excess_gone balances acting dependent gated excess stock at_ (held y hy at_)
+    family_excess_gone balances dependent excess stock at_ (held y hy at_)
 
-/-- **A whole drawing beyond renewal ends the lines that depend on it.** Under the premises of
-`Flow.family_excess_ends` (balance, only active formations giving, activity needing support, the
-family's renewal gated on it, `n` steps of excess from a stock below `n + m`), a line from an
-active occurrence every occurrence of which at step `T + n` depends on a member of the family at a
-need of at least `m` does not go on. -/
+/-- **A whole drawing beyond renewal ends the lines that depend on it.** Under balance, with activity
+needing support and `n` steps of excess from a stock below `n + m`, a line from an active occurrence
+every occurrence of which at step `T + n` depends on a member of the family at a need of at least
+`m` does not go on. -/
 theorem family_excess_not_endless {L : Flow F C} (balances : L.Balances W)
-    (acting : L.Acting W) (dependent : W.Dependent) {ds : List C} {m : Nat}
-    (gated : ∀ t f, f ∈ L.present t → ∀ d, d ∈ ds → 0 < L.give t f d →
-      ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e)
+    (dependent : W.Dependent) {ds : List C} {m : Nat}
     {T n : Nat} (excess : ∀ k, k < n → L.replenishment ds (T + k) < L.uptake ds (T + k))
     (stock : W.stock ds T < n + m) {x : Nat × F} (start : W.active x.1 x.2) (le : x.1 ≤ T + n)
     (held : ∀ y, «所及» (continuationStep R) W.activityClass x y → y.1 = T + n →
       ∃ e, e ∈ ds ∧ W.requires (T + n) y.2 e ∧ m ≤ W.need (T + n) y.2 e) :
     ¬ «不穷» (continuationStep R) W.activityClass x :=
-  «尽则非不穷» (family_excess_degenerates balances acting dependent gated excess stock start le held)
+  «尽则非不穷» (family_excess_degenerates balances dependent excess stock start le held)
 
 /-- **Passing that stops makes every occurrence at step `T + d` inactive**, `d` the span for which
 carriers are brief and `T` the step from which nothing passes. -/
@@ -603,8 +598,8 @@ line, along every continuation, degenerates. -/
 theorem coupled_degenerates :
     «退化» (Web.continuationStep (fun _ _ _ => True)) Coupled.web.activityClass
       (0, Coupled.Formation.taker) :=
-  Web.family_excess_degenerates (T := 0) (n := 3) Coupled.balances Coupled.acting Coupled.dependent
-    Coupled.gated Coupled.excess (show 1 + (2 + 0) < 3 + 1 from Nat.lt_succ_self 3) trivial
+  Web.family_excess_degenerates (T := 0) (n := 3) Coupled.balances Coupled.dependent
+    Coupled.excess (show 1 + (2 + 0) < 3 + 1 from Nat.lt_succ_self 3) trivial
     (Nat.zero_le 3) fun y _ _ => match y with
       | (_, .taker) => ⟨.patch, .head _, trivial, Nat.le_refl 1⟩
       | (_, .renewer) => ⟨.neighbour, .tail _ (.head _), trivial, Nat.le_refl 1⟩

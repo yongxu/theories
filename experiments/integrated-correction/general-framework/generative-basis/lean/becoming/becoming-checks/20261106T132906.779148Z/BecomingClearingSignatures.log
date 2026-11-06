@@ -1,0 +1,58 @@
+Becoming.Clearing.balances : Becoming.Clearing.flow.Balances Becoming.Clearing.web
+Becoming.Clearing.dependent : Becoming.Clearing.web.Dependent
+Becoming.Clearing.dissipative : Becoming.Clearing.flow.Dissipative
+Becoming.Clearing.fed : ∀ (t : Nat), Becoming.Clearing.flow.FedFromBeyond [Becoming.Clearing.Place.resource] t
+Becoming.Clearing.undermines_within_renewal : Becoming.Clearing.flow.Balances Becoming.Clearing.web ∧
+  Becoming.Clearing.flow.Dissipative ∧
+    Becoming.Clearing.web.Dependent ∧
+      (∀ (t : Nat) (c : Becoming.Clearing.Place),
+          Becoming.Clearing.web.requires t Becoming.Clearing.Formation.clearer c →
+            c = Becoming.Clearing.Place.resource) ∧
+        (∀ (t : Nat),
+            Becoming.Clearing.web.active t Becoming.Clearing.Formation.clearer ∧
+              Becoming.Clearing.web.Supported t Becoming.Clearing.Formation.clearer) ∧
+          Becoming.Clearing.web.Renewed Becoming.Clearing.Place.resource ∧
+            (∀ (t : Nat), Becoming.Clearing.flow.FedFromBeyond [Becoming.Clearing.Place.resource] t) ∧
+              (∀ (t : Nat), Becoming.Clearing.flow.WithinJoint t Becoming.Clearing.Place.resource) ∧
+                Becoming.Web.UnderminingAt 1 Becoming.Clearing.Formation.clearer ∧
+                  ∀ (n : Nat), ¬Becoming.Clearing.web.active (n + 2) Becoming.Clearing.Formation.dweller
+@Becoming.Clearing.fedBy_source : ∀ {e e' : Becoming.Clearing.Formation × Nat},
+  Becoming.Clearing.flow.FedBy Becoming.Clearing.web e e' →
+    e.fst = Becoming.Clearing.Formation.clearer ∧ e'.fst = Becoming.Clearing.Formation.source
+Becoming.Clearing.withheld : Becoming.Clearing.flow.WithheldLevels Becoming.Clearing.clearerPart Becoming.Clearing.web
+  Becoming.Clearing.withheldLevel
+@Becoming.Clearing.admitted_without : ∀ {l : Nat → Becoming.Clearing.Place → Nat},
+  Becoming.Clearing.flow.WithheldLevels Becoming.Clearing.clearerPart Becoming.Clearing.web l →
+    ∀ (t : Nat), Becoming.Clearing.web.Admits (l t) t Becoming.Clearing.Formation.dweller
+Becoming.Clearing.unsupported_with : ∀ (n : Nat),
+  ¬Becoming.Clearing.web.Supported (n + 2) Becoming.Clearing.Formation.dweller
+@Becoming.Clearing.narrows : ∀ {l : Nat → Becoming.Clearing.Place → Nat},
+  Becoming.Clearing.flow.WithheldLevels Becoming.Clearing.clearerPart Becoming.Clearing.web l →
+    Becoming.Clearing.web.Includes l Becoming.Clearing.web.level ∧
+      Becoming.Clearing.web.Exceeds l Becoming.Clearing.web.level
+@Becoming.Clearing.loses_beyond : ∀ {l : Nat → Becoming.Clearing.Place → Nat},
+  Becoming.Clearing.flow.WithheldLevels Becoming.Clearing.clearerPart Becoming.Clearing.web l →
+    (∀ (t : Nat),
+        Becoming.Clearing.web.active t Becoming.Clearing.Formation.clearer ∧
+          Becoming.Clearing.web.Supported t Becoming.Clearing.Formation.clearer ∧
+            Becoming.Clearing.web.AdmitsWithin Becoming.Clearing.alongDependence (Becoming.Clearing.web.level t) (l t)
+              t) ∧
+      ∀ (n : Nat),
+        Becoming.Clearing.web.LosesBeyond Becoming.Clearing.alongDependence (Becoming.Clearing.web.level (n + 2))
+          (l (n + 2)) (n + 2)
+Becoming.Clearing.renewing_over_resource : (∀ (t : Nat),
+    Becoming.Clearing.web.RenewingOver (fun x => x = Becoming.Clearing.Place.resource) t
+      Becoming.Clearing.Formation.clearer) ∧
+  (∀ (t : Nat) (c : Becoming.Clearing.Place),
+      Becoming.Clearing.web.requires t Becoming.Clearing.Formation.clearer c → c = Becoming.Clearing.Place.resource) ∧
+    Becoming.Web.UnderminingAt 1 Becoming.Clearing.Formation.clearer ∧
+      ¬Becoming.Web.RenewingAt 1 Becoming.Clearing.Formation.clearer
+@Becoming.Clearing.admitted_all_without : ∀ {l : Nat → Becoming.Clearing.Place → Nat},
+  Becoming.Clearing.flow.WithheldLevels Becoming.Clearing.clearerPart Becoming.Clearing.web l →
+    ∀ (t : Nat) (f : Becoming.Clearing.Formation), Becoming.Clearing.web.Admits (l t) t f
+@Becoming.Clearing.centers_disagree : ∀ {l : Nat → Becoming.Clearing.Place → Nat},
+  Becoming.Clearing.flow.WithheldLevels Becoming.Clearing.clearerPart Becoming.Clearing.web l →
+    Becoming.Clearing.web.Retains (Becoming.bounded Becoming.Clearing.dependenceRegion)
+        Becoming.Clearing.Formation.clearer Becoming.Clearing.web.level l ∧
+      Becoming.Clearing.web.Adds (Becoming.bounded Becoming.Clearing.dependenceRegion)
+        Becoming.Clearing.Formation.dweller l Becoming.Clearing.web.level

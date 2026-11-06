@@ -90,6 +90,7 @@ Request and supporting route belong to one transmission history; warranted meani
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261020T161926.448088Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261031T132223.713396Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `CorrectionVersioned.valid_head_completes`, `Becoming.Countdown.Advances.completes`, `Becoming.Countdown.pending_before`, `Becoming.VersionedTaskInstances.head_completes`, `Becoming.VersionedTaskInstances.valid_head_instance`, `Becoming.Courses.Advances.completes_plan`, `Becoming.Courses.pending_before_course`
 

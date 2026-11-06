@@ -329,10 +329,8 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Stuttering.lean",
       "role": "proof",
-      "sha256": "a5bb713a4cb5f4e7ff653af254484a0a56ef0c1583c60555099c5783b30416de",
+      "sha256": "1a50f7f842eb8664090c0a9482398d2d725cf5d668d7778ecd882a72a6e7e219",
       "declarations": [
-        "Becoming.excess_self",
-        "Becoming.excess_add_right",
         "Becoming.excess_of_sum",
         "Becoming.Stutter",
         "Becoming.Stutter.le_succ",
@@ -417,7 +415,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
       "role": "proof",
-      "sha256": "3aadd812b74b7b0563aa3f7daa19a7d5b8da6f1bc55af5cc6bf64fb824f385d7",
+      "sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
       "declarations": [
         "Becoming.succ_sub_self",
         "Becoming.total_steps_add"
@@ -532,6 +530,21 @@
       "role": "receipt",
       "sha256": "36435e774abc5c046539fef86812e4ba5a89d9a18899d51a3efae6363e89064a",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
+      "role": "proof",
+      "sha256": "537e5f614427fbb047400d2dc901a1ead289724ad69d7fe1e803d5522e1248a9",
+      "declarations": [
+        "Becoming.excess_self",
+        "Becoming.excess_add_right"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -551,15 +564,22 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Stuttering.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Stuttering",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Change",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -646,6 +666,10 @@
     {
       "en": "28 October 2026: migrated to schema 2 (DF3, study section 436): title, statement, hypotheses and counterexample kept; the claim split into fourteen laws, each read against its declarations in Stuttering.lean, IdleRemoval.lean and Sampling.lean, with the decided equality of relata each law about reading a flow or world takes written in (a hypothesis added for it) and each relatum listed once where the theorem takes it; the limitations to three does-not-show items, the hypotheses (the supplied moving steps) and the shared boundaries names-provisional and no-evaluation, with decidability, discrete-steps and no-ethical-premise; a does-not-show item says recurrence is proved for inserting idle steps only; Flow.Once added to Sampling.lean's references; the section number left the limitation and the next step, which gains a third item, stating recurrence under removing idle steps, and the work-item labels and section number the correspondence, where the quotation keeps its date, which names its source; no premise, status or source hash changed. Every earlier sentence is mapped in [only-the-order-of-change-shows.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/only-the-order-of-change-shows.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the statement, laws, the correspondence, each read against the Lean it cites.",
       "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 436 节）：标题、陈述、前提与反例保留；主张拆为十四条规律，各条对照 Stuttering.lean、IdleRemoval.lean 与 Sampling.lean 中的声明核读，凡关于读出流或世界的规律写明其所取的关系项相等可判定（并为此新增一条前提），凡定理取每个关系项只列一次处写明；限制分入三条“未表明”、前提（给定的移动步）与通用边界 names-provisional、no-evaluation，并引用 decidability、discrete-steps 与 no-ethical-premise；一条“未表明”写明复现只对插入空步证明；Flow.Once 加入 Sampling.lean 的引用；限制与下一步去掉节号，下一步并增加第三项“陈述移除空步下的复现”，对应去掉工作项标签与节号，引文保留日期以示出处；前提、状态与来源哈希均未改变。每句旧文本的去向见 [only-the-order-of-change-shows.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/only-the-order-of-change-shows.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及陈述、规律、对应，各条对照所引 Lean 核读。"
+    },
+    {
+      "en": "6 November 2026, board item LM: declarations this record lists moved with the helpers stated once; its references follow them, and no law changed.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列之声明随只陈述一次之辅助引理而移；其引用从之，诸律不变。"
     }
   ],
   "text_versions": [

@@ -20,8 +20,8 @@
       "declarations": [
         "Becoming.RelativePosition.Keeps",
         "Becoming.RelativePosition.keeps_iff_common",
-        "Becoming.RelativePosition.length_pos_of_mem",
-        "Becoming.RelativePosition.regroup"
+        "Becoming.length_pos_of_mem",
+        "Becoming.Naturals.add_regroup"
       ]
     },
     {
@@ -185,12 +185,10 @@
         "Becoming.RelativePosition.keeps_exceeds",
         "Becoming.RelativePosition.keeps_iff_common",
         "Becoming.RelativePosition.keeps_least",
-        "Becoming.RelativePosition.length_pos_of_mem",
-        "Becoming.RelativePosition.regroup",
         "Becoming.RelativePosition.riseCount",
         "Becoming.RelativePosition.spread_le"
       ],
-      "sha256": "e81542b402d13537801a820ae58251b8ef43852aaa993bbec39282fd6c9363c3"
+      "sha256": "485e49e5fb6a530a699aad9aca1f2903915f68fcdb29c3da9fb50cc7d1ca466a"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T133248.097273Z/verification.json",
@@ -216,13 +214,35 @@
       "path": "sources/15-codex-theory-conversations/2026-10-22-aim-frontier-not-past-understanding.md",
       "role": "provenance",
       "sha256": "a4b86669015288f0b6aa5aaa14ae7f8c8a5f678ee0c38e1b90c34cddc2bbe3c8"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
+      "declarations": [
+        "Becoming.length_pos_of_mem",
+        "Becoming.Naturals.add_regroup"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RelativePosition.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T133248.097273Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RelativePosition",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -231,6 +251,10 @@
     {
       "en": "22 October 2026, NL1 (asked whether OPENING's note [^no-law] could be pushed further): created; study section 361; the note states the laws, and each of the three features, read as a law, is refuted by a constructed flow; on Ren's word the opening's body sentence was brought to the law (version 12).",
       "zh": "2026年10月22日，NL1（问开篇注 [^no-law] 能否更进一步）：新建；研究第 361 节；该注陈述诸律，三项特征各读作一律，均由构造的流驳倒；依 Ren 之言，开篇正文该句改到此律（第十二版）。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }

@@ -424,7 +424,7 @@ continues nothing. -/
 theorem keeps_widening_along_merge : web.KeepsWidening merge steady 0 :=
   ⟨fun S _ _ le => fun f _ => match Nat.eq_or_lt_of_le le with
      | .inl same => ⟨f, same ▸ .here S f, admits _ _ _⟩
-     | .inr lt => match Web.exists_steps_between (Nat.succ_le_of_lt lt) with
+     | .inr lt => match le_dest (Nat.succ_le_of_lt lt) with
        | ⟨k, apart⟩ => ⟨false, apart ▸ to_false k S f, admits _ _ _⟩,
    fun S _ => ⟨S + 1, Nat.le_succ S, ⟨true, admits _ _ _, fun _ linked _ =>
      Nat.succ_ne_self S (into_true linked).1.symm⟩⟩⟩
@@ -608,10 +608,6 @@ theorem mark_not_left : ∀ a : Bool, mark (!a) a = 0
   | true => rfl
   | false => rfl
 
-theorem not_ne : ∀ a : Bool, (!a) ≠ a
-  | true => fun same => nomatch same
-  | false => fun same => nomatch same
-
 /-- Two formations, each requiring its own condition at need one. At step `t` the unit stands at the
 condition of `parity t`, and that formation alone is active. -/
 def web : Web Bool Bool :=
@@ -631,7 +627,7 @@ theorem supported_iff {t : Nat} {f : Bool} : web.Supported t f ↔ f = parity t 
 /-- A gain of support across the step from `t` is the other formation's. -/
 theorem gains_iff {t : Nat} {f : Bool} : web.GainsSupport t f ↔ f = parity (t + 1) :=
   ⟨fun ⟨_, after⟩ => supported_iff.mp after,
-   fun same => ⟨fun supported => not_ne (parity t) (same.symm.trans (supported_iff.mp supported)),
+   fun same => ⟨fun supported => ListTests.not_ne_self (parity t) (same.symm.trans (supported_iff.mp supported)),
      supported_iff.mpr same⟩⟩
 
 /-- The cycle balances: the unit moves, nothing is made. -/
@@ -681,7 +677,7 @@ theorem linked_parity : ∀ (k S : Nat), Web.Linked passing S (parity S) (S + k)
         (Nat.succ_add S k) (linked_parity k (S + 1)))
 
 theorem linked_to {S U : Nat} (le : S ≤ U) : Web.Linked passing S (parity S) U (parity U) :=
-  match Web.exists_steps_between le with
+  match le_dest le with
   | ⟨k, apart⟩ => Eq.subst (motive := fun x => Web.Linked passing S (parity S) x (parity x))
       apart.symm (linked_parity k S)
 

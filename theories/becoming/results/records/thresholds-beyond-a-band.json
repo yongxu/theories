@@ -238,7 +238,6 @@
         "Becoming.RegimeMargin.Coupled.Relay.cycles",
         "Becoming.RegimeMargin.Coupled.Relay.ends_set",
         "Becoming.RegimeMargin.Coupled.Relay.threshold_beyond_band",
-        "Becoming.RegimeMargin.Coupled.covers_pair",
         "Becoming.RegimeMargin.Coupled.ends_pair",
         "Becoming.RegimeMargin.Coupled.pair_rises",
         "Becoming.RegimeMargin.Coupled.pair_run",
@@ -250,7 +249,7 @@
         "Becoming.RegimeMargin.leading_le",
         "Becoming.RegimeMargin.leading_true"
       ],
-      "sha256": "8969413f28246ba831f13cc98b429d67c81e0fa734bf0f9d6dc30edb96e222e8"
+      "sha256": "45ac217899f53aecb97cb9ea4d714f91deee3506a69b1a38227c18a708dc17b8"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T215226.263303Z/verification.json",
@@ -301,13 +300,34 @@
       "role": "receipt",
       "sha256": "8a71fe367f8a7ebedec0790e1f50e267422bd703a7d51b0da81d0972dff2dca6",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
+      "declarations": [
+        "Becoming.ListTests.mem_bools"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RegimeMargin",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -320,6 +340,10 @@
     {
       "en": "22 October 2026, RM10: its bounded laws are now stated for any law of states read condition by condition, the web's step an instance, and applied to webs with a recent giving (record webs-with-a-recent-giving, study section 331). Their content for the web is unchanged.",
       "zh": "2026年10月22日，RM10：其有界之律今对任何逐条件读取状态之律陈述，网之步是其实例，并用于带近来所给的网（记录 webs-with-a-recent-giving，研究第 331 节）。其对网的内容不变。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }

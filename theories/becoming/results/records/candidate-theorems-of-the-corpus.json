@@ -93,8 +93,8 @@
     "formal-not-empirical"
   ],
   "validation_scope": {
-    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.GrammarCandidates, 66 theorems in 90 declarations, each with an empty axiom report. Written by an Opus coder from the first-batch classification; no human audit of the readings.",
-    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.GrammarCandidates，90 个声明中 66 条定理，公理报告皆空。由一位 Opus 编者据第一批分类写成；读法无人审。"
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.GrammarCandidates, 69 theorems in 93 declarations, each with an empty axiom report. Written by an Opus coder from the first-batch classification; no human audit of the readings.",
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.GrammarCandidates，93 个声明中 69 条定理，公理报告皆空。由一位 Opus 编者据第一批分类写成；读法无人审。"
   },
   "next_delta": {
     "en": "Test the second round's candidates (中论 chapters 10, 17, 19, 24, 成唯识论, 五教章), and decide with the classical review whether 不自生 is a premise of the texts or a reading of them.",
@@ -152,7 +152,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean",
       "role": "proof",
-      "sha256": "31937ba8e22025e79e505cfa9d6d8fb54d4952ead1cf91f2ae294f1666f1c3b6",
+      "sha256": "d3abca975408d6e01c26174d5ca68376acd2a9c6888b400afda8853dca7d037b",
       "declarations": [
         "Becoming.«三法相因待»",
         "Becoming.«不可致诘而有常则混而为一»",
@@ -174,7 +174,6 @@
         "Becoming.«及之两端»",
         "Becoming.«同异交得»",
         "Becoming.«同根则不可偏举»",
-        "Becoming.«四相俱时»",
         "Becoming.«因果互即»",
         "Becoming.«坚白之体»",
         "Becoming.«处所»",
@@ -222,7 +221,6 @@
         "Becoming.«离非无相»",
         "Becoming.«端»",
         "Becoming.«端与端俱尽»",
-        "Becoming.«缕之无定性»",
         "Becoming.«缘先果后当且仅当无环»",
         "Becoming.«缘生而不自生则无定性»",
         "Becoming.«能»",
@@ -261,13 +259,40 @@
       "role": "receipt",
       "sha256": "a5cb4731b0f3b56beb3a500867a344c56542b5091315b81fcd6184adbd46c4ad",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
+      "role": "proof",
+      "sha256": "247dc207637fd2878b48187bad6824ceb4f795da93db91a3f971cafb796d5cf1",
+      "declarations": [
+        "Becoming.«四相俱时»"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T170123.418765Z/verification.json",
+      "role": "receipt",
+      "sha256": "65ea4a1e6b35020a27ade1d94dbbdc614477054b423f6d85ce73396c37494c44",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T170123.418765Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarCandidates",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Grammar",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -284,6 +309,10 @@
     {
       "en": "31 October 2026, board item HE2, items 6 and 7 (study section 474): «从缘生非文法之理» renamed to «从缘生非文法之律», with no alias kept: its 理 meant a law of the grammar, and the two conditions it names are conditions on a model; no statement's content changes.",
       "zh": "2026年10月31日，工作板条目 HE2 之第 6、7 项（研究第 474 节）：«从缘生非文法之理» 改为 «从缘生非文法之律»，不留别名：其理意为文法之律，所言二者是对模型之条件；所述之义皆不变。"
+    },
+    {
+      "en": "6 November 2026, board item LM: `«四相俱时»` moves to Grammar, where `«四相无自立»` is proved from it, and `«缕之无定性»`, three of its four positions, is removed; the names change here and no law does.",
+      "zh": "2026年11月6日，工作板条目 LM：`«四相俱时»` 移至 Grammar，`«四相无自立»` 由之得证；`«缕之无定性»` 为其四相之三，删去；此处改名，诸律不变。"
     }
   ]
 }

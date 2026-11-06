@@ -1,0 +1,111 @@
+@Becoming.sameValue_class : ∀ {S : Type u_1} {R : Type u_2} (o : S → R), Becoming.«类» (Becoming.sameValue o)
+@Becoming.core_within_core_iff : ∀ {α : Type u_1} {R E E' : Becoming.«际» α},
+  Becoming.«则» (Becoming.«核» R E) (Becoming.«核» R E') ↔ Becoming.«则» (Becoming.«核» R E) E'
+@Becoming.contains_core_iff : ∀ {α : Type u_1} {R E S : Becoming.«际» α},
+  Becoming.«则» S E →
+    Becoming.«则» S (Becoming.«逆» S) →
+      Becoming.«有常» R S → (Becoming.«则» (Becoming.«核» R E) S ↔ Becoming.«谓» S (Becoming.«核» R E))
+@Becoming.Law.step_hasSucc_iff : ∀ {S : Type u_1} {next : S → S} {E : Becoming.«际» S} {s : S},
+  Becoming.«有后» (Becoming.Law.step next) E s ↔ E s (next s)
+@Becoming.Law.constant_iff_keeps : ∀ {S : Type u_1} {next : S → S} {E : Becoming.«际» S},
+  Becoming.«有常» (Becoming.Law.step next) E ↔ Becoming.Law.KeepsRelation next E
+@Becoming.Law.kept_along : ∀ {S : Type u_1} {next : S → S} {E : Becoming.«际» S},
+  Becoming.Law.KeepsRelation next E →
+    ∀ {s s' : S}, E s s' → ∀ (n : Nat), E (Becoming.Law.orbit next s n) (Becoming.Law.orbit next s' n)
+@Becoming.Law.core_is_sameFuture : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {o : S → R},
+  Becoming.«谓» (Becoming.«核» (Becoming.Law.step next) (Becoming.sameValue o)) (Becoming.Law.SameFuture next o)
+@Becoming.Law.alike_iff_core : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {o : S → R} {s s' : S},
+  Becoming.Alike (Becoming.Law.frameBy next o) (Becoming.Law.frameBy next o) s s' ↔
+    Becoming.«核» (Becoming.Law.step next) (Becoming.sameValue o) s s'
+@Becoming.Law.keepsAndCarries_iff : ∀ {S : Type u_1} {R : Type u_2} {K : Type u_3} {next : S → S} {o : S → R}
+  {π : S → K},
+  Becoming.Law.KeepsAndCarries next o π ↔
+    Becoming.«则» (Becoming.sameValue π) (Becoming.sameValue o) ∧
+      Becoming.«有常» (Becoming.Law.step next) (Becoming.sameValue π)
+@Becoming.Law.coarsest_iff_core : ∀ {S : Type u_1} {R : Type u_2} {K : Type u_3} {next : S → S} {o : S → R} {π : S → K},
+  Becoming.Law.KeepsAndCarries next o π →
+    (Becoming.«则» (Becoming.«核» (Becoming.Law.step next) (Becoming.sameValue o)) (Becoming.sameValue π) ↔
+      Becoming.«谓» (Becoming.sameValue π) (Becoming.«核» (Becoming.Law.step next) (Becoming.sameValue o)))
+@Becoming.Law.ends_iff_changes : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {o : S → R} {s : S},
+  Becoming.«亡» (Becoming.Law.step next) (Becoming.sameValue o) s ↔ ¬o s = o (next s)
+@Becoming.Law.line_on_orbit : ∀ {S : Type u_1} {next : S → S} {E : Becoming.«际» S} {s y : S},
+  Becoming.«相续» (Becoming.Law.step next) E s y → ∃ n, y = Becoming.Law.orbit next s (n + 1)
+@Becoming.Law.reached_while_same : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {o : S → R} {s : S},
+  Becoming.«不穷» (Becoming.Law.step next) (Becoming.sameValue o) s →
+    ∀ (n : Nat),
+      (s = Becoming.Law.orbit next s n ∨
+          Becoming.«相续» (Becoming.Law.step next) (Becoming.sameValue o) s (Becoming.Law.orbit next s n)) ∧
+        o (Becoming.Law.orbit next s n) = o s
+@Becoming.Law.unending_iff : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {o : S → R} {s : S},
+  Becoming.«不穷» (Becoming.Law.step next) (Becoming.sameValue o) s ↔ ∀ (n : Nat), o (Becoming.Law.orbit next s n) = o s
+@Becoming.Law.continues_in_core_iff : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {o : S → R} {s : S},
+  Becoming.«续» (Becoming.Law.step next) (Becoming.«核» (Becoming.Law.step next) (Becoming.sameValue o)) s (next s) ↔
+    Becoming.«不穷» (Becoming.Law.step next) (Becoming.sameValue o) s
+@Becoming.Law.constant_iff_core : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {o : S → R},
+  Becoming.«有常» (Becoming.Law.step next) (Becoming.sameValue o) ↔
+    Becoming.«谓» (Becoming.sameValue o) (Becoming.«核» (Becoming.Law.step next) (Becoming.sameValue o))
+@Becoming.Law.stays_of_constant : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {o : S → R},
+  Becoming.«有常» (Becoming.Law.step next) (Becoming.sameValue o) →
+    ∀ {s : S}, o s = o (next s) → ∀ (n : Nat), o (Becoming.Law.orbit next s n) = o s
+@Becoming.Law.core_iff_below : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {o : S → R} {l : List S},
+  (∀ (s : S), s ∈ l → next s ∈ l) →
+    ∀ {s s' : S},
+      s ∈ l →
+        s' ∈ l →
+          (Becoming.«核» (Becoming.Law.step next) (Becoming.sameValue o) s s' ↔
+            ∀ (n : Nat),
+              n < l.length + l.length - 1 → o (Becoming.Law.orbit next s n) = o (Becoming.Law.orbit next s' n))
+@Becoming.Law.learnable_iff_core : ∀ {S : Type} {R : Type u_1} {V : Type u_2} [DecidableEq R] {next : S → S}
+  {reg : S → R} {val : S → V} {l : List S},
+  (∀ (s : S), s ∈ l) →
+    ((∃ pred, ∀ (s : S), Becoming.Learnable.Predicts next reg val pred s) ↔
+      ∀ (s s' : S),
+        Becoming.«核» (Becoming.Law.step next) (Becoming.sameValue reg) s s' →
+          ∃ T, ∀ (t : Nat), T ≤ t → Becoming.sameValue val (Becoming.Law.orbit next s t) (Becoming.Law.orbit next s' t))
+@Becoming.Law.learnable_of_core_within : ∀ {S : Type} {R : Type u_1} {V : Type u_2} [DecidableEq R] {next : S → S}
+  {reg : S → R} {val : S → V} {l : List S},
+  (∀ (s : S), s ∈ l) →
+    Becoming.«则» (Becoming.«核» (Becoming.Law.step next) (Becoming.sameValue reg)) (Becoming.sameValue val) →
+      ∃ pred, ∀ (s : S), Becoming.Learnable.Predicts next reg val pred s
+Becoming.Steps.next_is_step : Becoming.«谓» Becoming.Steps.next (Becoming.Law.step Nat.succ)
+@Becoming.SameAhead.is_core : ∀ {O : Type u_1} {o : Nat → O},
+  Becoming.«谓» (Becoming.«核» Becoming.Steps.next (Becoming.sameValue o)) (Becoming.SameAhead o)
+@Becoming.SameAhead.next_by_root : ∀ {O : Type u_1} {o : Nat → O} {t t' : Nat},
+  Becoming.SameAhead o t t' → Becoming.SameAhead o (t + 1) (t' + 1)
+@Becoming.course_core_iff : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {o : S → R} {s : S} {t t' : Nat},
+  Becoming.«核» Becoming.Steps.next (Becoming.sameValue (Becoming.Learnable.course next o s)) t t' ↔
+    Becoming.«核» (Becoming.Law.step next) (Becoming.sameValue o) (Becoming.Law.orbit next s t)
+      (Becoming.Law.orbit next s t')
+@Becoming.SameAhead.no_continuation : ∀ {O : Type u_1} {o : Nat → O},
+  (∀ (t t' : Nat), o t = o t' → t = t') →
+    ∀ (t t' : Nat), ¬Becoming.«续» Becoming.Steps.next (Becoming.«核» Becoming.Steps.next (Becoming.sameValue o)) t t'
+@Becoming.core_iff_below : ∀ {O : Type u_1} {o : Nat → O} {N : Nat},
+  Becoming.StatesBelow o N →
+    ∀ {t t' : Nat},
+      Becoming.«核» Becoming.Steps.next (Becoming.sameValue o) t t' ↔ ∀ (n : Nat), n < N + N - 1 → o (t + n) = o (t' + n)
+@Becoming.statesBelow_iff_core : ∀ {O : Type u_1} {o : Nat → O} {N : Nat},
+  Becoming.StatesBelow o N ↔ ∀ (t : Nat), ∃ i, i < N ∧ Becoming.«核» Becoming.Steps.next (Becoming.sameValue o) t i
+Becoming.TwoCourses.orbit_inl : ∀ (t n : Nat),
+  Becoming.Law.orbit Becoming.TwoCourses.next (Sum.inl t) n = Sum.inl (t + n)
+Becoming.TwoCourses.orbit_inr : ∀ (t n : Nat),
+  Becoming.Law.orbit Becoming.TwoCourses.next (Sum.inr t) n = Sum.inr (t + n)
+@Becoming.TwoCourses.core_iff : ∀ {O : Type u_1} {o o' : Nat → O} {t t' : Nat},
+  Becoming.«核» (Becoming.Law.step Becoming.TwoCourses.next) (Becoming.sameValue (Becoming.TwoCourses.value o o'))
+      (Sum.inl t) (Sum.inr t') ↔
+    ∀ (n : Nat), o (t + n) = o' (t' + n)
+@Becoming.TwoCourses.core_iff_bounded : ∀ {O : Type u_1} {o o' : Nat → O} {N N' : Nat},
+  Becoming.StatesBelow o N →
+    Becoming.StatesBelow o' N' →
+      ∀ {t t' : Nat},
+        Becoming.«核» (Becoming.Law.step Becoming.TwoCourses.next) (Becoming.sameValue (Becoming.TwoCourses.value o o'))
+            (Sum.inl t) (Sum.inr t') ↔
+          ∀ (n : Nat), n < N + N' - 1 → o (t + n) = o' (t' + n)
+@Becoming.TwoCourses.core_exact : ∀ {O : Type u_1} {x y : O},
+  x ≠ y →
+    ∀ (M M' : Nat),
+      ∃ o o',
+        Becoming.StatesBelow o (M + 1) ∧
+          Becoming.StatesBelow o' (M' + 1) ∧
+            (∀ (n : Nat), n < M + M' → o n = o' n) ∧
+              ¬Becoming.«核» (Becoming.Law.step Becoming.TwoCourses.next)
+                  (Becoming.sameValue (Becoming.TwoCourses.value o o')) (Sum.inl 0) (Sum.inr 0)

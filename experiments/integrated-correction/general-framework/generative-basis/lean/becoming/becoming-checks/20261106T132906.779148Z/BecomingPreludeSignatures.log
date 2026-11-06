@@ -1,0 +1,237 @@
+@Becoming.le_dest : ∀ {a b : Nat}, a ≤ b → ∃ m, b = a + m
+@Becoming.le_of_add_le_add_right : ∀ {a b : Nat} (k : Nat), a + k ≤ b + k → a ≤ b
+@Becoming.add_right_cancel : ∀ {a b : Nat} (k : Nat), a + k = b + k → a = b
+Becoming.add_sub_turn : ∀ (x y : Nat), y + (x - y) = x + (y - x)
+Becoming.add_sub_turn_add : ∀ (x y u : Nat), y + (x - y + u) = x + (y - x + u)
+@Becoming.add_sub_of_le : ∀ {m k : Nat}, m ≤ k → m + (k - m) = k
+@Becoming.sub_eq_zero_of_le : ∀ {n m : Nat}, n ≤ m → n - m = 0
+Becoming.succ_sub_self : ∀ (a : Nat), a + 1 - a = 1
+@Becoming.exists_add_of_le : ∀ {c n : Nat}, c ≤ n → ∃ k, n = k + c
+Becoming.mul_assoc_nat : ∀ (a b c : Nat), a * b * c = a * (b * c)
+Becoming.mul_turn : ∀ (a b c : Nat), a * (b * c) = b * (a * c)
+Becoming.add_mul_split : ∀ (a b c : Nat), (a + b) * c = a * c + b * c
+Becoming.beq_self : ∀ (n : Nat), n.beq n = true
+Becoming.Naturals.succ_sub_succ : ∀ (n m : Nat), n + 1 - (m + 1) = n - m
+Becoming.Naturals.add_sub_cancel : ∀ (a c : Nat), a + c - c = a
+Becoming.Naturals.add_sub_cancel_left : ∀ (c a : Nat), c + a - c = a
+@Becoming.Naturals.sub_add_cancel : ∀ {a c : Nat}, c ≤ a → a - c + c = a
+@Becoming.Naturals.add_sub_of_le : ∀ {a c : Nat}, c ≤ a → c + (a - c) = a
+Becoming.Naturals.sub_sub : ∀ (n a b : Nat), n - a - b = n - (a + b)
+@Becoming.Naturals.le_of_add_le_left : ∀ {a b c : Nat}, a + b ≤ c → b ≤ c
+@Becoming.Naturals.le_of_add_le_right : ∀ {a b c : Nat}, a + b ≤ c → a ≤ c
+@Becoming.Naturals.add_left_cancel : ∀ {a b k : Nat}, k + a = k + b → a = b
+@Becoming.Naturals.le_of_add_le_add_left : ∀ {a b k : Nat}, k + a ≤ k + b → a ≤ b
+@Becoming.Naturals.le_sub_of_add_le : ∀ {a b n : Nat}, a + b ≤ n → b ≤ n - a
+@Becoming.Naturals.add_le_of_le_sub : ∀ {a b n : Nat}, a ≤ n → b ≤ n - a → a + b ≤ n
+@Becoming.Naturals.sub_add_add : ∀ {r d c : Nat}, c ≤ r → r - c + (d + c) = r + d
+Becoming.Naturals.lt_irrefl : ∀ (n : Nat), ¬n < n
+@Becoming.Naturals.ne_of_lt : ∀ {a b : Nat}, a < b → a ≠ b
+Becoming.Naturals.succ_ne_self : ∀ (n : Nat), n + 1 ≠ n
+Becoming.Naturals.succ_ne_zero : ∀ (n : Nat), n + 1 ≠ 0
+Becoming.Naturals.two_mul : ∀ (n : Nat), 2 * n = n + n
+Becoming.Naturals.pow_add : ∀ (b x y : Nat), b ^ (x + y) = b ^ x * b ^ y
+Becoming.Naturals.mul_right_comm : ∀ (a b c : Nat), a * b * c = a * c * b
+Becoming.Naturals.mul_mul_mul_comm : ∀ (a b c d : Nat), a * b * (c * d) = a * c * (b * d)
+@Becoming.Naturals.add_congr : ∀ {a b c d : Nat}, a = b → c = d → a + c = b + d
+@Becoming.Naturals.ble_false_of_lt : ∀ {a b : Nat}, b < a → a.ble b = false
+@Becoming.ListTests.and_true_iff : ∀ {a b : Bool}, (a && b) = true ↔ a = true ∧ b = true
+@Becoming.ListTests.or_true_iff : ∀ {a b : Bool}, (a || b) = true ↔ a = true ∨ b = true
+@Becoming.ListTests.not_true_iff : ∀ {a : Bool}, (!a) = true ↔ a = false
+@Becoming.ListTests.false_iff_not : ∀ {b : Bool}, b = false ↔ ¬b = true
+@Becoming.ListTests.and_left : ∀ {a b : Bool}, (a && b) = true → a = true
+@Becoming.ListTests.and_right : ∀ {a b : Bool}, (a && b) = true → b = true
+@Becoming.ListTests.decide_true_iff : ∀ {p : Prop} [inst : Decidable p], decide p = true ↔ p
+@Becoming.ListTests.beq_false_iff : ∀ {α : Type u_1} [inst : DecidableEq α] {a b : α}, (a == b) = false ↔ a ≠ b
+@Becoming.ListTests.mem_cons_iff : ∀ {α : Type u_1} {a b : α} {l : List α}, a ∈ b :: l ↔ a = b ∨ a ∈ l
+@Becoming.ListTests.not_mem_nil : ∀ {α : Type u_1} {a : α}, ¬a ∈ []
+@Becoming.ListTests.mem_singleton_iff : ∀ {α : Type u_1} {a b : α}, a ∈ [b] ↔ a = b
+@Becoming.ListTests.mem_append_iff : ∀ {α : Type u_1} {a : α} {l m : List α}, a ∈ l ++ m ↔ a ∈ l ∨ a ∈ m
+@Becoming.ListTests.all_true_iff : ∀ {α : Type u_1} {p : α → Bool} {l : List α},
+  l.all p = true ↔ ∀ (x : α), x ∈ l → p x = true
+@Becoming.ListTests.any_true_iff : ∀ {α : Type u_1} {p : α → Bool} {l : List α},
+  l.any p = true ↔ ∃ x, x ∈ l ∧ p x = true
+@Becoming.ListTests.all_mem : ∀ {α : Type u_1} {p : α → Bool} {l : List α},
+  l.all p = true → ∀ {x : α}, x ∈ l → p x = true
+@Becoming.ListTests.contains_true_iff : ∀ {α : Type u_1} [inst : DecidableEq α] {a : α} {l : List α},
+  l.contains a = true ↔ a ∈ l
+@Becoming.ListTests.contains_false_iff : ∀ {α : Type u_1} [inst : DecidableEq α] {a : α} {l : List α},
+  l.contains a = false ↔ ¬a ∈ l
+@Becoming.ListTests.isEmpty_false_iff : ∀ {α : Type u_1} {l : List α}, l.isEmpty = false ↔ l ≠ []
+@Becoming.ListTests.not_isEmpty_true_iff : ∀ {α : Type u_1} {l : List α}, (!l.isEmpty) = true ↔ l ≠ []
+@Becoming.ListTests.mem_filter_iff : ∀ {α : Type u_1} {p : α → Bool} {x : α} {l : List α},
+  x ∈ List.filter p l ↔ x ∈ l ∧ p x = true
+@Becoming.ListTests.filter_of_all : ∀ {α : Type u_1} {p : α → Bool} {l : List α},
+  (∀ (x : α), x ∈ l → p x = true) → List.filter p l = l
+@Becoming.ListTests.mem_map_iff : ∀ {α : Type u_1} {β : Type u_2} {f : α → β} {y : β} {l : List α},
+  y ∈ List.map f l ↔ ∃ x, x ∈ l ∧ f x = y
+@Becoming.ListTests.mem_map_of : ∀ {α : Type u_1} {β : Type u_2} {f : α → β} {x : α} {l : List α},
+  x ∈ l → f x ∈ List.map f l
+@Becoming.ListTests.mem_flatten_iff : ∀ {β : Type u_1} {y : β} {ls : List (List β)},
+  y ∈ ls.flatten ↔ ∃ l, l ∈ ls ∧ y ∈ l
+@Becoming.ListTests.mem_flatMap_iff : ∀ {α : Type u_1} {β : Type u_2} {f : α → List β} {y : β} {l : List α},
+  y ∈ List.flatMap f l ↔ ∃ x, x ∈ l ∧ y ∈ f x
+@Becoming.ListTests.length_append : ∀ {α : Type u_1} (l m : List α), (l ++ m).length = l.length + m.length
+@Becoming.ListTests.find_some : ∀ {α : Type u_1} {p : α → Bool} {l : List α} {a : α},
+  List.find? p l = some a → p a = true
+@Becoming.ListTests.mem_of_find_some : ∀ {α : Type u_1} {p : α → Bool} {l : List α} {a : α},
+  List.find? p l = some a → a ∈ l
+@Becoming.ListTests.find_none_iff : ∀ {α : Type u_1} {p : α → Bool} {l : List α},
+  List.find? p l = none ↔ ∀ (x : α), x ∈ l → p x = false
+@Becoming.ListTests.find_isSome_iff : ∀ {α : Type u_1} {p : α → Bool} {l : List α},
+  (List.find? p l).isSome = true ↔ ∃ x, x ∈ l ∧ p x = true
+@Becoming.ListTests.bind_eq_some : ∀ {γ δ : Type} {o : Option γ} {f : γ → Option δ} {b : δ},
+  o >>= f = some b ↔ ∃ a, o = some a ∧ f a = some b
+@Becoming.ListTests.map_eq_some : ∀ {α : Type u_1} {β : Type u_2} {f : α → β} {b : β} {o : Option α},
+  Option.map f o = some b ↔ ∃ a, o = some a ∧ f a = b
+@Becoming.ListTests.option_any_true_iff : ∀ {α : Type u_1} {f : α → Bool} {o : Option α},
+  Option.any f o = true ↔ ∃ a, o = some a ∧ f a = true
+@Becoming.ListTests.isSome_iff : ∀ {α : Type u_1} {o : Option α}, o.isSome = true ↔ ∃ a, o = some a
+@Becoming.ListTests.none_ne_some : ∀ {α : Type u_1} {a : α}, none ≠ some a
+Becoming.ListTests.not_ne_self : ∀ (b : Bool), (!b) ≠ b
+Becoming.ListTests.ne_not : ∀ (b : Bool), b ≠ !b
+Becoming.ListTests.not_not : ∀ (b : Bool), (!!b) = b
+@Becoming.ListTests.false_of_not : ∀ {b : Bool}, (!b) = true → b = false
+@Becoming.ListTests.false_of_not_true : ∀ {b : Bool}, ¬b = true → b = false
+@Becoming.ListTests.not_eq_true_of_false : ∀ {b : Bool}, b = false → (!b) = true
+@Becoming.ListTests.or_cases : ∀ {a b : Bool}, (a || b) = true → a = true ∨ b = true
+@Becoming.ListTests.or_left : ∀ {a : Bool} (b : Bool), a = true → (a || b) = true
+Becoming.ListTests.or_right : ∀ (a : Bool) {b : Bool}, b = true → (a || b) = true
+Becoming.ListTests.mem_bools : ∀ (b : Bool), b ∈ [true, false]
+@Becoming.ListTests.append_nil : ∀ {α : Type u_1} (l : List α), l ++ [] = l
+@Becoming.ListTests.append_assoc : ∀ {α : Type u_1} (l m n : List α), l ++ m ++ n = l ++ (m ++ n)
+@Becoming.bool_eq_of_iff : ∀ {a b : Bool}, (a = true ↔ b = true) → a = b
+@Becoming.bool_and_true : ∀ {b c : Bool}, b = true → c = true → (b && c) = true
+@Becoming.bool_of_and_true : ∀ {b c : Bool}, (b && c) = true → b = true ∧ c = true
+@Becoming.mem_cons_cases : ∀ {α : Type u_1} {a b : α} {q : List α}, b ∈ a :: q → b = a ∨ b ∈ q
+@Becoming.mem_append_cases : ∀ {α : Type} {a : α} {l m : List α}, a ∈ l ++ m → a ∈ l ∨ a ∈ m
+@Becoming.mem_append_of_left : ∀ {α : Type} {a : α} {l : List α} (m : List α), a ∈ l → a ∈ l ++ m
+@Becoming.mem_append_of_right : ∀ {α : Type} {a : α} (l : List α) {m : List α}, a ∈ m → a ∈ l ++ m
+@Becoming.mem_middle : ∀ {α : Type} {a : α} {q : List α} (p : List α), a ∈ p ++ a :: q
+@Becoming.length_map : ∀ {α β : Type} (g : α → β) (l : List α), (List.map g l).length = l.length
+@Becoming.map_comp_eq : ∀ {α β γ : Type} (g : α → β) (h : β → γ) (l : List α),
+  List.map h (List.map g l) = List.map (fun a => h (g a)) l
+@Becoming.map_eq_of : ∀ {α β : Type} {g h : α → β}, (∀ (a : α), g a = h a) → ∀ (l : List α), List.map g l = List.map h l
+@Becoming.map_eq_singleton : ∀ {α β : Type} {g : α → β} {b : β} {l : List α},
+  List.map g l = [b] → ∃ a, l = [a] ∧ g a = b
+@Becoming.preimage_of_mem_map : ∀ {α β : Type} {g : α → β} {b : β} {l : List α}, b ∈ List.map g l → ∃ a, a ∈ l ∧ g a = b
+@Becoming.mem_map_prodMk : ∀ {α : Type} {t : Nat} {zs : List α} {y : Nat × α},
+  y ∈ List.map (fun a => (t, a)) zs → y.fst = t ∧ y.snd ∈ zs
+@Becoming.prodMk_mem_map : ∀ {α : Type} {t : Nat} {a : α} {zs : List α}, a ∈ zs → (t, a) ∈ List.map (fun a => (t, a)) zs
+@Becoming.not_decide_iff : ∀ {q : Prop} [inst : Decidable q], (!decide q) = true ↔ ¬q
+Becoming.ChanceFloors.or_true : ∀ (b : Bool), (b || true) = true
+@Becoming.CrossSituational.mem_singleton : ∀ {M : Type u_1} {m e : M}, m ∈ [e] → m = e
+Becoming.cond_le_one : ∀ (b : Bool), (bif b then 1 else 0) ≤ 1
+@Becoming.mem_appended_left : ∀ {α : Type u_1} {a : α} {l : List α} (l' : List α), a ∈ l → a ∈ l ++ l'
+@Becoming.Hexagram.and_false_of_true : ∀ {x y : Bool}, (x && y) = false → x = true → y = false
+Becoming.Integers.zero_add : ∀ (a : Int), 0 + a = a
+Becoming.Integers.zero_mul : ∀ (a : Int), 0 * a = 0
+@Becoming.SupportGated.sub_pos_of_lt : ∀ {d c : Nat}, d < c → 0 < c - d
+@Becoming.TreeSearch.append_nil : ∀ {α : Type} (a : List α), a ++ [] = a
+@Becoming.distinct_append : ∀ {α : Type u_1} {l m : List α},
+  Becoming.Distinct l → Becoming.Distinct m → (∀ (a : α), a ∈ l → ¬a ∈ m) → Becoming.Distinct (l ++ m)
+@Becoming.mem_remove : ∀ {α : Type u_1} {a b : α}, ¬b = a → ∀ {p q : List α}, b ∈ p ++ a :: q → b ∈ p ++ q
+@Becoming.length_le_of_matched : ∀ {α : Type u_1} {β : Type u_2} {S : α → β → Prop} {l : List α} {m : List β},
+  Becoming.Distinct l →
+    (∀ (a : α), a ∈ l → ∃ b, b ∈ m ∧ S a b) →
+      (∀ (a a' : α) (b : β), a ∈ l → a' ∈ l → S a b → S a' b → a = a') → l.length ≤ m.length
+@Becoming.not_not_all : ∀ {β : Type u_1} {P : β → Prop} {E : List β},
+  (∀ (b : β), b ∈ E → ¬¬P b) → ¬¬∀ (b : β), b ∈ E → P b
+@Becoming.not_mem_of_middle : ∀ {α : Type} {a : α} {p q : List α}, Becoming.Distinct (p ++ a :: q) → ¬a ∈ p ++ q
+@Becoming.distinct_map_on : ∀ {α β : Type} {g : α → β} {l : List α},
+  (∀ (a b : α), a ∈ l → b ∈ l → g a = g b → a = b) → Becoming.Distinct l → Becoming.Distinct (List.map g l)
+@Becoming.distinct_of_map : ∀ {α β : Type} {f : α → β} {l : List α},
+  Becoming.Distinct (List.map f l) → Becoming.Distinct l
+@Becoming.exists_pairs_over : ∀ {α β : Type} {Q : α → β → Prop} {l : List α},
+  (∀ (a : α), a ∈ l → ∃ b, Q a b) → ∃ D, List.map Prod.fst D = l ∧ ∀ (x : α × β), x ∈ D → Q x.fst x.snd
+@Becoming.total_pos : ∀ {α : Type} {q : α → Nat} (as : List α), 0 < Becoming.total as q → ∃ a, a ∈ as ∧ 0 < q a
+Becoming.total_steps_succ : ∀ (q : Nat → Nat) (T n : Nat),
+  Becoming.total (Becoming.steps (T + 1) n) q = Becoming.total (Becoming.steps T n) fun i => q (i + 1)
+Becoming.total_steps_add : ∀ (q : Nat → Nat) (S a b : Nat),
+  Becoming.total (Becoming.steps S (a + b)) q =
+    Becoming.total (Becoming.steps S a) q + Becoming.total (Becoming.steps (S + a) b) q
+@Becoming.between_of_mem_steps : ∀ {T N j : Nat}, j ∈ Becoming.steps T N → T ≤ j ∧ j < T + N
+Becoming.Naturals.mul_pow_eq : ∀ (x y n : Nat), (x * y) ^ n = x ^ n * y ^ n
+@Becoming.Naturals.lt_of_mul_lt_mul_right : ∀ {a b v : Nat}, a * v < b * v → a < b
+@Becoming.Naturals.lt_of_mul_lt_mul_left : ∀ {m a b : Nat}, m * a < m * b → a < b
+@Becoming.Naturals.mul_lt_mul_of_pos : ∀ {m a b : Nat}, 0 < m → a < b → m * a < m * b
+Becoming.Naturals.two_pow_pos : ∀ (a : Nat), 0 < 2 ^ a
+Becoming.Naturals.lt_two_pow : ∀ (n : Nat), n < 2 ^ n
+Becoming.Naturals.sub_antitone : ∀ (k : Nat) {v w : Nat}, v ≤ w → k - w ≤ k - v
+@Becoming.Naturals.twice_le_of_le : ∀ {x y : Nat}, x ≤ y → 2 * (x * y) ≤ x * x + y * y
+Becoming.Naturals.twice_le : ∀ (x y : Nat), 2 * (x * y) ≤ x * x + y * y
+@Becoming.Naturals.add_lt_add_left_iff : ∀ {k m n : Nat}, k + m < k + n ↔ m < n
+@Becoming.Naturals.lt_of_add_lt_add_left : ∀ {k a b : Nat}, k + a < k + b → a < b
+@Becoming.Naturals.sub_le_of_le_add : ∀ {x y c : Nat}, x ≤ y + c → x - y ≤ c
+@Becoming.Naturals.pos_or_of_add_pos : ∀ {a b : Nat}, 0 < a + b → 0 < a ∨ 0 < b
+Becoming.Naturals.add_regroup : ∀ (x y u v : Nat), x + y + (u + v) = x + v + (y + u)
+@Becoming.Naturals.sub_add_refill : ∀ {n d : Nat} (r : Nat), d ≤ n → n - d + r + d = n + r
+@Becoming.ListTests.all_sound : ∀ {α : Type} (p : α → Bool) {l : List α}, l.all p = true → ∀ (x : α), x ∈ l → p x = true
+@Becoming.ListTests.all_complete : ∀ {α : Type} (p : α → Bool) {l : List α},
+  (∀ (x : α), x ∈ l → p x = true) → l.all p = true
+@Becoming.ListTests.not_false_of_true : ∀ {b : Bool}, b = true → (!b) = false
+@Becoming.ListTests.true_of_cond_pos : ∀ {b : Bool} {x : Nat}, (0 < bif b then x else 0) → b = true
+@Becoming.ListTests.cond_zero_le : ∀ {x y : Nat} {b : Bool},
+  (b = true → x ≤ y) → (bif b then x else 0) ≤ bif b then y else 0
+Becoming.ListTests.bif_le : ∀ (M : Nat) (b : Bool), (bif b then M else 0) ≤ M
+@Becoming.ListTests.some_inj : ∀ {a b : Nat}, some a = some b → a = b
+@Becoming.ListTests.none_not_mem_map_some : ∀ {α : Type} {l : List α}, ¬none ∈ List.map some l
+@Becoming.ListTests.beq_false_of_ne : ∀ {a b : Nat}, a ≠ b → a.beq b = false
+@Becoming.ListTests.bool_absurd : ∀ {b : Bool}, b = true → b = false → False
+@Becoming.le_of_sub_eq_zero : ∀ {n m : Nat}, n - m = 0 → n ≤ m
+@Becoming.length_pos_of_mem : ∀ {α : Type u_1} {a : α} {l : List α}, a ∈ l → 0 < l.length
+@Becoming.nil_of_length_zero : ∀ {α : Type u_1} {g : List α}, g.length = 0 → g = []
+@Becoming.total_congr : ∀ {α : Type} {p q : α → Nat},
+  (∀ (a : α), p a = q a) → ∀ (as : List α), Becoming.total as p = Becoming.total as q
+@Becoming.total_eq_zero : ∀ {α : Type} {q : α → Nat} {as : List α},
+  (∀ (a : α), a ∈ as → q a = 0) → Becoming.total as q = 0
+@Becoming.le_succ_cases : ∀ {n K : Nat}, n ≤ K + 1 → n ≤ K ∨ n = K + 1
+@Becoming.gap_of_lt : ∀ {i j : Nat}, i < j → ∃ d, j = i + (d + 1)
+Becoming.skipAt_ne : ∀ (m n : Nat), Becoming.skipAt m n ≠ m
+Becoming.skipAt_le : ∀ (m n : Nat), Becoming.skipAt m n ≤ n + 1
+Becoming.skipAt_lt : ∀ (m : Nat) {i j : Nat}, i < j → Becoming.skipAt m i < Becoming.skipAt m j
+@Becoming.split_at_head : ∀ {α : Type u_1} {g : Nat → α} {a : α} {l : List α} (K : Nat),
+  (∀ (n : Nat), n ≤ K → g n = a ∨ g n ∈ l) →
+    (∃ i j, i < j ∧ j ≤ K ∧ g i = g j) ∨
+      (∀ (n : Nat), n ≤ K → g n ∈ l) ∨ ∃ m, m ≤ K ∧ g m = a ∧ ∀ (n : Nat), n ≤ K → n ≠ m → g n ∈ l
+@Becoming.revisits_within : ∀ {α : Type u_1} (l : List α) (g : Nat → α),
+  (∀ (n : Nat), n ≤ l.length → g n ∈ l) → ∃ i j, i < j ∧ j ≤ l.length ∧ g i = g j
+@Becoming.steps_mem : ∀ {T n t : Nat}, t ∈ Becoming.steps T n → T ≤ t
+Becoming.steps_last : ∀ (q : Nat → Nat) (T n : Nat),
+  Becoming.total (Becoming.steps T (n + 1)) q = Becoming.total (Becoming.steps T n) q + q (T + n)
+Becoming.steps_mono : ∀ (q : Nat → Nat) (T n m : Nat),
+  Becoming.total (Becoming.steps T n) q ≤ Becoming.total (Becoming.steps T (n + m)) q
+@Becoming.recurring_accumulates : ∀ {q : Nat → Nat},
+  (∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < q t) → ∀ (N K : Nat), ∃ n, K ≤ Becoming.total (Becoming.steps N n) q
+@Becoming.pos_of_exceeds : ∀ {K X R : Nat}, K + 1 ≤ X → X ≤ K + R → 0 < R
+@Becoming.balance_over_stretch_on : ∀ {q x y : Nat → Nat} (S n : Nat),
+  (∀ (t : Nat), S ≤ t → t < S + n → q (t + 1) + x t = q t + y t) →
+    q (S + n) + Becoming.total (Becoming.steps S n) x = q S + Becoming.total (Becoming.steps S n) y
+@Becoming.balance_over_stretch : ∀ {q x y : Nat → Nat},
+  (∀ (t : Nat), q (t + 1) + x t = q t + y t) →
+    ∀ (S n : Nat), q (S + n) + Becoming.total (Becoming.steps S n) x = q S + Becoming.total (Becoming.steps S n) y
+@Becoming.le_over_stretch : ∀ {q x y : Nat → Nat},
+  (∀ (t : Nat), q (t + 1) + x t ≤ q t + y t) →
+    ∀ (S n : Nat), q (S + n) + Becoming.total (Becoming.steps S n) x ≤ q S + Becoming.total (Becoming.steps S n) y
+@Becoming.ge_over_stretch : ∀ {q x y : Nat → Nat},
+  (∀ (t : Nat), q t + y t ≤ q (t + 1) + x t) →
+    ∀ (S n : Nat), q S + Becoming.total (Becoming.steps S n) y ≤ q (S + n) + Becoming.total (Becoming.steps S n) x
+@Becoming.gaining_of_losing : ∀ {q x y : Nat → Nat},
+  (∀ (t : Nat), q (t + 1) + x t ≤ q t + y t) → (∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < x t) → ∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < y t
+@Becoming.losing_of_gaining : ∀ {q x y : Nat → Nat},
+  (∀ (t : Nat), q t + y t ≤ q (t + 1) + x t) →
+    ∀ {T B : Nat},
+      (∀ (t : Nat), T ≤ t → q t ≤ B) → (∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < y t) → ∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < x t
+@Becoming.recurs_shift : ∀ {r : Nat → Prop} (T : Nat),
+  (∀ (N : Nat), ∃ t, N ≤ t ∧ r t) → ∀ (N : Nat), ∃ m, N ≤ m ∧ r (T + m)
+@Becoming.recurs_unshift : ∀ {r : Nat → Prop} (T : Nat),
+  (∀ (N : Nat), ∃ m, N ≤ m ∧ r (T + m)) → ∀ (N : Nat), ∃ t, N ≤ t ∧ r t
+@Becoming.gaining_of_losing_from : ∀ {q x y : Nat → Nat} {T : Nat},
+  (∀ (t : Nat), T ≤ t → q (t + 1) + x t ≤ q t + y t) →
+    (∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < x t) → ∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < y t
+@Becoming.losing_of_gaining_from : ∀ {q x y : Nat → Nat} {T B : Nat},
+  (∀ (t : Nat), T ≤ t → q t + y t ≤ q (t + 1) + x t) →
+    (∀ (t : Nat), T ≤ t → q t ≤ B) → (∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < y t) → ∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < x t
+@Becoming.RouteTraces.nonzero_of_le : ∀ {a b : Nat}, a ≤ b → Becoming.nonzero a = true → Becoming.nonzero b = true
+@Becoming.mem_downFrom : ∀ {k K : Nat}, k ≤ K → k ∈ Becoming.downFrom K
+@Becoming.le_of_mem_downFrom : ∀ {K k : Nat}, k ∈ Becoming.downFrom K → k ≤ K
+@Becoming.Undecided.mem_upto : ∀ {n i : Nat}, i < n → i ∈ Becoming.Undecided.upto n

@@ -1,5 +1,6 @@
 import Becoming.Retaining
 import Becoming.Witnesses
+import Becoming.Continuation
 
 /-!
 # Clearing: a source, a clearer and a dweller (a model witness)

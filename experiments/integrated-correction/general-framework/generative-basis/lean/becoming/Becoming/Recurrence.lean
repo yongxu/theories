@@ -154,41 +154,6 @@ Pigeonhole, a lemma on numbers and lists, is proved once in `Becoming.GrammarLaw
 of finite runs needs it below the frame; the declarations here are its aliases, each with its
 statement there. -/
 
-/-- A step that comes no later than `K + 1` is no later than `K` or is `K + 1`. -/
-theorem le_succ_cases {n K : Nat} (le : n ≤ K + 1) : n ≤ K ∨ n = K + 1 :=
-  GrammarLaws.le_succ_cases le
-
-/-- How far `j` lies beyond `i`, at least one step. -/
-theorem gap_of_lt {i j : Nat} (lt : i < j) : ∃ d, j = i + (d + 1) :=
-  GrammarLaws.gap_of_lt lt
-
-theorem mem_cons_split {x a : S} {l : List S} (mem : x ∈ a :: l) : x = a ∨ x ∈ l :=
-  GrammarLaws.mem_cons_split mem
-
-/-- The `n`-th number other than `m`, counting from zero. -/
-def skipAt : Nat → Nat → Nat := GrammarLaws.skipAt
-
-theorem skipAt_ne : ∀ m n, skipAt m n ≠ m := GrammarLaws.skipAt_ne
-
-theorem skipAt_le : ∀ m n, skipAt m n ≤ n + 1 := GrammarLaws.skipAt_le
-
-theorem skipAt_lt : ∀ m {i j : Nat}, i < j → skipAt m i < skipAt m j := GrammarLaws.skipAt_lt
-
-/-- Sorting the first `K + 1` values of a sequence held by `a :: l`: two of them coincide, or
-all of them lie in `l`, or all but one, which is `a`, lie in `l`. -/
-theorem split_at_head {g : Nat → S} {a : S} {l : List S} :
-    ∀ K, (∀ n, n ≤ K → g n = a ∨ g n ∈ l) →
-      (∃ i j, i < j ∧ j ≤ K ∧ g i = g j) ∨ (∀ n, n ≤ K → g n ∈ l) ∨
-        (∃ m, m ≤ K ∧ g m = a ∧ ∀ n, n ≤ K → n ≠ m → g n ∈ l) :=
-  GrammarLaws.split_at_head
-
-/-- **Pigeonhole, with no decidability.** If a list holds the first `l.length + 1` values of a
-sequence, two of them coincide. Nothing is decided about the configurations: membership
-in the list is used as it is given. -/
-theorem revisits_within : ∀ (l : List S) (g : Nat → S), (∀ n, n ≤ l.length → g n ∈ l) →
-    ∃ i j, i < j ∧ j ≤ l.length ∧ g i = g j :=
-  GrammarLaws.revisits_within
-
 /-- Two steps of a sequence at one configuration. -/
 def Revisits (g : Nat → S) : Prop := ∃ i j, i < j ∧ g i = g j
 

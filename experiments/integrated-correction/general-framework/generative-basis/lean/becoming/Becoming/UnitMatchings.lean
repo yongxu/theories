@@ -90,12 +90,12 @@ structure FrameMatch (N M : Nat) where
   fwd_bwd : ∀ j, j < M → fwd (bwd j) = j
 
 /-- A selected matching has no more in-positions than out-positions: pigeonhole, through the
-grammar's `GrammarLaws.revisits_within`, with no decidability. -/
+grammar's `revisits_within`, with no decidability. -/
 theorem FrameMatch.le {N M : Nat} (m : FrameMatch N M) : N ≤ M :=
   match Nat.lt_or_ge M N with
   | Or.inr ge => ge
   | Or.inl lt =>
-    match GrammarLaws.revisits_within (upto M) m.fwd (fun n le =>
+    match revisits_within (upto M) m.fwd (fun n le =>
         mem_upto (m.fwd_lt n (Nat.lt_of_le_of_lt ((upto_length M) ▸ le) lt))) with
     | ⟨i, j, ij, jle, same⟩ => by
       have jN : j < N := Nat.lt_of_le_of_lt ((upto_length M) ▸ jle) lt
@@ -225,12 +225,12 @@ def givenUnits (L : Flow F C) (f : F) (cs : List C) (t : Nat) : List (Exchange C
 
 theorem length_takenUnits (L : Flow F C) (f : F) (cs : List C) (t : Nat) :
     (takenUnits L f cs t).length = total cs (L.take t f) :=
-  («聚之长» _ cs).trans (GrammarLaws.total_congr
+  («聚之长» _ cs).trans (total_congr
     (fun _ => (length_map _ _).trans (upto_length _)) cs)
 
 theorem length_givenUnits (L : Flow F C) (f : F) (cs : List C) (t : Nat) :
     (givenUnits L f cs t).length = total cs (L.give t f) :=
-  («聚之长» _ cs).trans (GrammarLaws.total_congr
+  («聚之长» _ cs).trans (total_congr
     (fun _ => (length_map _ _).trans (upto_length _)) cs)
 
 /-- **The crossing joined to the World, weak form**: where a family's stock rises past the inflow

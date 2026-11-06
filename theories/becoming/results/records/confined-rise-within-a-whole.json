@@ -348,7 +348,7 @@
         "Becoming.Founding.uniform_until",
         "Becoming.Founding.varied_before"
       ],
-      "sha256": "17b5ac1fe3bde2b9ba32b578f03df84bf280849d61946812bb9fca687961f390"
+      "sha256": "e03551a335779b600cf2a620c485ed3d6b8d9dd11b01a4b7f11b21f1bea70cc5"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean",
@@ -356,17 +356,16 @@
       "declarations": [
         "Becoming.GroupEnding.Flow.family_childless"
       ],
-      "sha256": "91afbb5b74ec6c8b35c21c6728f4f9a8bd778e41ce5be6ddfca2744e76b345ec"
+      "sha256": "761859c3d43144530cea2e922f9fc41238c86f356aff7ea53d4cff56e87f857f"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean",
       "role": "proof",
       "declarations": [
         "Becoming.SelectionLevels.lineage",
-        "Becoming.SelectionLevels.lineage_within",
-        "Becoming.SelectionLevels.total_eq_of_mem"
+        "Becoming.SelectionLevels.lineage_within"
       ],
-      "sha256": "63330f2fc76504fe103090b7e773d44b7149fd09373086e3ab4c800b61fa62a5"
+      "sha256": "ea9d8944a79dbde1b94b75921b88716f0a39c5f181af873617a7d4b9e3a57fb8"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean",
@@ -379,7 +378,7 @@
         "Becoming.SelectionTerm.concord_alike",
         "Becoming.SelectionTerm.discord_alike"
       ],
-      "sha256": "d15e7af183adb0363e93f83759c0e2a9f4d1f94b40f331067e6d339d431dc8fe"
+      "sha256": "8b990ef2bdabd78168685b33930779185f54bcaf475ac8252613324b662bf628"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean",
@@ -387,7 +386,7 @@
       "declarations": [
         "Becoming.Reproduction.le_of_excess_zero"
       ],
-      "sha256": "4327fef97099532b6ca8d429c04274a025ab6ea52ebe1c0c129fa4a0fa542506"
+      "sha256": "0f8d91e7d9b6292e176e88806452cc4de86365047e9f8ca11d66556c3ece1d3c"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
@@ -395,7 +394,7 @@
       "declarations": [
         "Becoming.Flow.family_excess_ends"
       ],
-      "sha256": "3100cfdb5668db77d208d34986472af7511b880439132be7a45e56e42e7ba439"
+      "sha256": "1dd6689be3bbb140edbece6ca8fa0a86049c260c9643c6ea7422fbd30e43d204"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T142108.117415Z/verification.json",
@@ -437,7 +436,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json",
       "role": "receipt",
-      "sha256": "203db133120a220bbea7aadb2a4105dc8365581528e0a66c1cd0a55e5bc84523",
+      "sha256": "d47dc3cb4e2dae4149217a173b1e6e6d89598115dcd75979054a58c2b670ed3f",
       "declarations": []
     },
     {
@@ -445,48 +444,69 @@
       "role": "receipt",
       "sha256": "a95e583c9e495140d23e2599a6ce8c2d6e710a3887421375e6e7a2ca5eb191fe",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
+      "role": "proof",
+      "sha256": "852a5491313223e5de476027cd98408c196db67ac2c263d776dd28e6d050ac3c",
+      "declarations": [
+        "Becoming.total_congr_on"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Founding.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T142108.117415Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Founding",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T142108.117415Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GroupEnding",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T203838.375122Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.SelectionLevels",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T142108.117415Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.SelectionTerm",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Reproduction",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T142108.117415Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Continuation",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Population",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -495,6 +515,10 @@
     {
       "en": "22 October 2026: added (CA1), what cancer is and what keeps a part from turning back: a confined rise has no member once the conditions it draws on end, selection within a whole founded uniform needs variation arisen in it, and where next founders carry their founder's value the mean founding value rises exactly where selection among wholes goes for it; an independent review applied; OPENING [^transitions] restated; study section 366.",
       "zh": "2026年10月22日：新增（CA1），癌是什么以及什么使部分不回头：局限的上升在其所汲取的条件终结后不再有成员，由均匀者奠基的整体内的选择需要在其中产生的变异，下一批奠基者携带原奠基者之值时，平均奠基值恰在整体间选择为它时上升；已采纳独立审查；OPENING [^transitions] 重述；研究第 366 节。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }

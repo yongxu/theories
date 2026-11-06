@@ -96,6 +96,7 @@ Blocks are Trace paths of the same native process with actual shared boundaries.
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Generative.ExplanatoryGranularity.cross_granularity_history_matches (retired module)`, `Becoming.Frame.holds_blocks`, `Becoming.Frame.blocks_history_matches_of_em`, `Becoming.cross_granularity_history_matches_of_em (retired module)`
 

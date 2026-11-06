@@ -103,6 +103,7 @@ Choice reads retained access, bindings and attempted locations rather than actua
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261020T161859.257200Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261031T131812.213702Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Generative.EncounterChoice.selected_encounters_transfer_to_all_sequences`, `Becoming.MachineInstances.acquired_interprets_every`, `Becoming.CrossSituational.candidates_append`, `Becoming.MachineInstances.naming_narrows`, `Becoming.Courses.run_candidates_append`, `Becoming.Courses.run_narrows`, `Becoming.Courses.run_stays_iff`
 

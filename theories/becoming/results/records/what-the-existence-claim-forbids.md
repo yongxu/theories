@@ -74,6 +74,7 @@ The existence claim (Friston 2013; 2019, arXiv:1906.10184): whatever persists ap
 | integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue18-blanket-and-existence/NOTE.md) | — |
 | integration | [REVIEW-UE18.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue18-blanket-and-existence/REVIEW-UE18.md) | — |
 | statement | [03-KNOWING.md](../../chapters/03-KNOWING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `What the existence claim forbids`, `存在之主张所禁者`, `existence claim`, `as-if reading`, `Becoming.Blanket.point_is_restrict`, `Becoming.Blanket.forbids_iff`
 

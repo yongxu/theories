@@ -32,7 +32,7 @@
       "en": "No change raises every part's position, and a part's rise needs another part's fall, found by a decided comparison, not by contradiction.",
       "zh": "没有一个变化使每个部分的位置都升；一个部分升需要另一部分降，后者由可判定的比较找到，而非由反证。",
       "declarations": [
-        "Becoming.RelativePosition.total_lt_of_mem",
+        "Becoming.total_lt_of_mem",
         "Becoming.RelativePosition.not_all_rise",
         "Becoming.RelativePosition.below_somewhere_or_not",
         "Becoming.RelativePosition.rise_needs_fall"
@@ -315,7 +315,6 @@
         "Becoming.RelativePosition.rest_falls_of_rises",
         "Becoming.RelativePosition.riseCount",
         "Becoming.RelativePosition.rise_needs_fall",
-        "Becoming.RelativePosition.total_lt_of_mem",
         "Becoming.RelativePosition.total_split",
         "Becoming.Restored.Member",
         "Becoming.Restored.acting",
@@ -330,7 +329,7 @@
         "Becoming.Restored.takeAt",
         "Becoming.Restored.web"
       ],
-      "sha256": "e81542b402d13537801a820ae58251b8ef43852aaa993bbec39282fd6c9363c3"
+      "sha256": "485e49e5fb6a530a699aad9aca1f2903915f68fcdb29c3da9fb50cc7d1ca466a"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Evolution.lean",
@@ -346,7 +345,7 @@
       "declarations": [
         "Becoming.Flow.joint_excess_ends"
       ],
-      "sha256": "3100cfdb5668db77d208d34986472af7511b880439132be7a45e56e42e7ba439"
+      "sha256": "1dd6689be3bbb140edbece6ca8fa0a86049c260c9643c6ea7422fbd30e43d204"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean",
@@ -421,12 +420,26 @@
       "role": "receipt",
       "sha256": "67438a4250795993c0b215b4891d7d83788ee830e41db1e945319b76b3c45904",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+      "role": "proof",
+      "sha256": "94e9be0baad1667d0d06acdfa757543c292c054c3a7eeaefccbe10b43bd321b5",
+      "declarations": [
+        "Becoming.total_lt_of_mem"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RelativePosition.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T133248.097273Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RelativePosition",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -435,6 +448,27 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Evolution.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Evolution",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Continuation",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Flow",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T133248.097273Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Significance",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -455,6 +489,10 @@
     {
       "en": "2026-10-20: 8 bookkeeping notes condensed from 19 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/cbdaf426e1920240/relative-position-is-zero-sum.json and in git.",
       "zh": "2026-10-20：8 条记账性说明合并（19 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/cbdaf426e1920240/relative-position-is-zero-sum.json 和 git 中。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ],
   "text_versions": [

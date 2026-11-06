@@ -80,6 +80,7 @@ Kolmogorov's maximal inequality (1928), restated in counting form for a balanced
 | integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue2-conditional-weights/NOTE.md) | — |
 | statement | [02-MAP.md](../../chapters/02-MAP.md) | — |
 | statement | [03-KNOWING.md](../../chapters/03-KNOWING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `The exit from a margin, and what a record of the course says of it`, `离开边距，及历程之记录对其所言`, `the exit from a margin`, `Becoming.ConditionalWeights.fallsWithin_share`, `Becoming.ConditionalWeights.record_share`
 

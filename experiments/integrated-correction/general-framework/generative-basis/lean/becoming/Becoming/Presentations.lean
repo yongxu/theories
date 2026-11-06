@@ -437,13 +437,6 @@ end Tests
 
 /-! ### The joint relation of a joint frame -/
 
-section Joint
-
-variable {S : Type u} {A : Type v} {C : Type w} {K : Type x} {F : JointFrame S A C}
-  {p : Presentation S (BranchingTest A C) K}
-
-end Joint
-
 /-! ### A frame realizing every predicate -/
 
 section EveryPredicate

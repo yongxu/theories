@@ -46,7 +46,7 @@ module reads that on the grammar's `«不出»` and on its closure, `«所闭»`
   symmetric, the closures are those of every relatum, listed or not
   (`Continuity.pairing_iff_closures`).
 * **The two grains joined.** Read a level as units on its relata, each listed relatum repeated as
-  often as its level, gathered by the grammar's `«聚»` (`Continuity.unitsOn`); a test counts them
+  often as its level, gathered by the grammar's `«聚»` (`unitsOn`); a test counts them
   on its family as the level's total there (`Continuity.count_unitsOn`). So, with equality
   decided, conservation on every family the relation closes is the units before paired one to one
   with the units after under the closure (`Continuity.conservedOn_iff_units_paired`), and, relata
@@ -183,27 +183,6 @@ theorem counted_of_count {p : R → Bool} {l : List R} (all : l.length ≤ «计
   (Bool.eq_false_or_eq_true (p x)).elim id fun h => (Nat.lt_irrefl _ (Nat.lt_of_lt_of_le
     (count_lt_count (q := fun _ => true) (fun _ _ => rfl) h rfl m)
     (Nat.le_trans (Nat.le_of_eq (count_true l)) all))).elim
-
-/-- A test counts two lists joined as the sum of its counts of each. -/
-theorem count_append (p : R → Bool) (l₂ : List R) :
-    ∀ l₁ : List R, «计» p (l₁ ++ l₂) = «计» p l₁ + «计» p l₂
-  | [] => (Nat.zero_add _).symm
-  | x :: l₁ => (congrArg (cond (p x) 1 0 + ·) (count_append p l₂ l₁)).trans
-      (Nat.add_assoc _ _ _).symm
-
-/-- A test holding at a relatum counts each entry of it repeated. -/
-theorem count_replicate_true {p : R → Bool} {x : R} (holds : p x = true) :
-    ∀ n, «计» p (List.replicate n x) = n
-  | 0 => rfl
-  | n + 1 => (congrArg (cond (p x) 1 0 + ·) (count_replicate_true holds n)).trans
-      ((congrArg (fun b => cond b 1 0 + n) holds).trans (Nat.add_comm 1 n))
-
-/-- A test failing at a relatum counts no entry of it repeated. -/
-theorem count_replicate_false {p : R → Bool} {x : R} (fails : p x = false) :
-    ∀ n, «计» p (List.replicate n x) = 0
-  | 0 => rfl
-  | n + 1 => (congrArg (cond (p x) 1 0 + ·) (count_replicate_false fails n)).trans
-      ((congrArg (fun b => cond b 1 0 + 0) fails).trans (Nat.add_zero 0))
 
 /-! ## Splitting a family -/
 
@@ -501,21 +480,15 @@ theorem pairing_iff_closures [DecidableEq R] {rel : R → R → Bool} {us : List
 
 /-! ## The two grains joined -/
 
-/-- The units of a quantity on a list of relata, gathered by the grammar's `«聚»`: each relatum
-repeated as often as the quantity there. `Weightings.unitsOf` reads a quantity as units the same
-way. -/
-def unitsOn (q : R → Nat) : List R → List R :=
-  «聚» fun x => List.replicate (q x) x
-
 /-- A test counts a quantity's units on a list of relata as the quantity's total there on its
 family. -/
 theorem count_unitsOn (p : R → Bool) (q : R → Nat) :
     ∀ l : List R, «计» p (unitsOn q l) = total l (within p q)
   | [] => rfl
-  | x :: l => (count_append p (unitsOn q l) (List.replicate (q x) x)).trans (Naturals.add_congr
+  | x :: l => (GrammarLaws.count_append p (unitsOn q l) (List.replicate (q x) x)).trans (Naturals.add_congr
       ((Bool.eq_false_or_eq_true (p x)).elim
-        (fun holds => (count_replicate_true holds (q x)).trans (within_true q holds).symm)
-        (fun fails => (count_replicate_false fails (q x)).trans (within_false q fails).symm))
+        (fun holds => (GrammarLaws.count_replicate_true holds (q x)).trans (within_true q holds).symm)
+        (fun fails => (GrammarLaws.count_replicate_false fails (q x)).trans (within_false q fails).symm))
       (count_unitsOn p q l))
 
 /-- Conservation on the closure of each listed relatum, along `adjacentListed rel us`, is the
@@ -543,7 +516,7 @@ theorem closures_iff_unit_counts [DecidableEq R] {rel : R → R → Bool} {us : 
       ((counts a).symm.trans (count_unitsOn (closureListed rel us a) prev us))⟩
 
 /-- **Conservation on every family the relation closes is the units paired under the closure.**
-With equality decided, the units before (`Continuity.unitsOn`) are paired one to one with the
+With equality decided, the units before (`unitsOn`) are paired one to one with the
 units after under the closure, the grammar's `«所闭»` along adjacency among the listed relata,
 exactly where the total is conserved on every family the relation closes. -/
 theorem conservedOn_iff_units_paired [DecidableEq R] {rel : R → R → Bool} {us : List R}
@@ -581,21 +554,6 @@ theorem balancesOn_iff_units_paired [DecidableEq R] {us : List R} {rel : Nat →
 
 /-! ## A pairing within a closure need not be along one step -/
 
-/-- A list paired one to one with a single entry is a single entry related to it, under any
-relation of the grammar. -/
-theorem paired_single {α : Type} {S : «际» α} {x : α} {a b : List α} (paired : «对» S a b)
-    (single : a = [x]) : ∃ y, S x y ∧ b = [y] := by
-  cases paired with
-  | nil => exact nomatch single
-  | @cons _ y _ b₁ b₂ related rest =>
-    cases single
-    cases b₁ with
-    | nil =>
-      cases b₂ with
-      | nil => exact ⟨y, related, rfl⟩
-      | cons _ _ => exact Nat.noConfusion («对之长» rest)
-    | cons _ _ => exact Nat.noConfusion («对之长» rest)
-
 namespace PathOfThree
 
 /-- Each natural related to the next: listed as `[0, 1, 2]`, the path `0 — 1 — 2`. -/
@@ -612,7 +570,7 @@ theorem paired_within : «对» («所闭» (adjacentListed rel [0, 1, 2])) [0] 
 `[2]`. -/
 theorem not_paired_along_step : ¬ «对» (adjacentListed rel [0, 1, 2]) [0] [2] := by
   intro paired
-  obtain ⟨_, adjacent, single⟩ := paired_single paired rfl
+  obtain ⟨_, adjacent, single⟩ := GrammarLaws.paired_single paired rfl
   cases single
   exact Bool.noConfusion adjacent.2.2
 

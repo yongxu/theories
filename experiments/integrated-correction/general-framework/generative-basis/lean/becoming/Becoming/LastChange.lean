@@ -339,7 +339,7 @@ theorem still_succ {s : S} {N : Nat} (still : StillFrom (Law.run next (next s)) 
 
 /-- What a bound leaves above a mark, with the mark's rise, is what it left above the mark before. -/
 theorem room_balance {a b B : Nat} (le : a ≤ b) (top : b ≤ B) : B - b + (b - a) = B - a :=
-  Naturals.add_right_cancel (k := a)
+  add_right_cancel (a)
     ((Nat.add_assoc _ _ _).trans ((congrArg (B - b + ·) (Naturals.sub_add_cancel le)).trans
       ((Naturals.sub_add_cancel top).trans (Naturals.sub_add_cancel (Nat.le_trans le top)).symm)))
 
@@ -377,7 +377,7 @@ theorem still_within [DecidableEq S] {q : S → Nat} {B : Nat} :
           (Naturals.le_sub_of_add_le ((marks n).2 moves))) with
     | ⟨N, _, within, unmoved⟩ =>
       ⟨N, Nat.le_trans within (Nat.le_trans (Nat.le_of_eq (Nat.zero_add _))
-          (Naturals.le_of_add_le_add_right (k := q s)
+          (le_of_add_le_add_right (q s)
             (Nat.le_trans (Nat.le_of_eq (Naturals.sub_add_cancel (bounded 0))) fuel))),
         still_of_fixed_at (Decidable.byContradiction unmoved)⟩
 

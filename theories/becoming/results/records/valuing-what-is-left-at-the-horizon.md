@@ -100,6 +100,7 @@ A terminal or salvage value in a finite-horizon problem: the payoff counts the s
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T173410.671057Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T044249.876816Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `valuing what is left at the horizon`, `a terminal value at the worth of the draw`, `对视野末所留的计值`, `Becoming.Optimum.frontier_holds_left`, `Becoming.Optimum.frontier_left_iff`
 

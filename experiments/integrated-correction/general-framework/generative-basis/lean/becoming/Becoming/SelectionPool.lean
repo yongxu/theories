@@ -241,14 +241,6 @@ theorem holdsCount_add_not (p : F → Bool) :
       ((congrArg (· + _) (toNat_add_not (p g))).trans
         ((congrArg (1 + ·) (holdsCount_add_not p gs)).trans (Nat.add_comm 1 gs.length)))
 
-theorem and_left_true : ∀ {a b : Bool}, (a && b) = true → a = true
-  | true, _, _ => rfl
-  | false, _, h => h
-
-theorem and_right_true : ∀ {a b : Bool}, (a && b) = true → b = true
-  | true, _, h => h
-  | false, _, h => Bool.noConfusion h
-
 /-- **Taking what most of the members read**: a history is selected where more than half the
 listed members' readings hold of it. -/
 def MajorityHolds (members : List F) (read : F → (Nat → C → Nat) → Bool) (l : Nat → C → Nat) :
@@ -281,9 +273,9 @@ theorem majority_outvoted {members : List F} {read : F → (Nat → C → Nat) �
   match most with
   | .inl hold =>
     have at_l := Nat.lt_of_lt_of_le hold (Nat.mul_le_mul_left 2
-      (holdsCount_le_of_imp fun _ _ both => and_left_true both))
+      (holdsCount_le_of_imp fun _ _ both => ListTests.and_left both))
     have at_l' := Nat.lt_of_lt_of_le hold (Nat.mul_le_mul_left 2
-      (holdsCount_le_of_imp fun _ _ both => and_right_true both))
+      (holdsCount_le_of_imp fun _ _ both => ListTests.and_right both))
     ⟨fun _ => at_l', fun _ => at_l⟩
   | .inr fail =>
     have fails : ∀ m : Nat → C → Nat,
@@ -295,8 +287,8 @@ theorem majority_outvoted {members : List F} {read : F → (Nat → C → Nat) �
           (Nat.le_of_eq ((Nat.left_distrib 2 _ _).symm.trans
             ((congrArg (2 * ·) ((Nat.add_comm _ _).trans (holdsCount_add_not (fun g => read g m) members))).trans
               (Nat.two_mul _)))))
-    ⟨fun holds => absurd holds (fails l fun _ _ both => and_left_true both),
-     fun holds => absurd holds (fails l' fun _ _ both => and_right_true both)⟩
+    ⟨fun holds => absurd holds (fails l fun _ _ both => ListTests.and_left both),
+     fun holds => absurd holds (fails l' fun _ _ both => ListTests.and_right both)⟩
 
 end Web
 

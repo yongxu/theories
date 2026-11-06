@@ -197,17 +197,10 @@ theorem whole_length (gs : List (List α)) : (whole gs).length = total gs fun g 
   (total_ones (whole gs)).symm.trans
     ((whole_total gs fun _ => 1).trans (total_congr (fun g => total_ones g) gs))
 
-/-- Totals agreeing at every member agree. -/
-theorem total_eq_of_mem {p q : α → Nat} : ∀ {as : List α}, (∀ a, a ∈ as → p a = q a) →
-    total as p = total as q
-  | [], _ => rfl
-  | a :: _, same => Naturals.add_congr (same a (.head _))
-      (total_eq_of_mem fun b mem => same b (.tail a mem))
-
 /-- With groups of `m` members each, the family has `k` times `m`. -/
 theorem whole_length_of_equal {gs : List (List α)} {m : Nat} (equal : ∀ g, g ∈ gs → g.length = m) :
     (whole gs).length = gs.length * m :=
-  (whole_length gs).trans ((total_eq_of_mem equal).trans (total_const m gs))
+  (whole_length gs).trans ((total_congr_on equal).trans (total_const m gs))
 
 /-- The groups' own concordance, summed over the groups. -/
 def concordWithin (gs : List (List α)) (w a : α → Nat) : Nat := total gs fun g => concord g w a
@@ -283,7 +276,7 @@ theorem shuffle_right (s d p cw q c' : Nat) :
 /-- Three balances meeting: the whole's, the groups' and the means'. -/
 theorem meet {s d q c dw p cw d' c' : Nat} (whole : s + d = q + c) (groups : s + dw = p + cw)
     (means : p + d' = q + c') : c + (dw + d') = d + (cw + c') :=
-  Naturals.add_right_cancel (k := q + (s + p)) ((shuffle_left c dw d' q s p).trans
+  add_right_cancel (q + (s + p)) ((shuffle_left c dw d' q s p).trans
     ((Naturals.add_congr whole.symm (Naturals.add_congr groups means)).trans
       (shuffle_right s d p cw q c')))
 
@@ -313,7 +306,7 @@ theorem levels_sized (gs : List (List α)) (w a : α → Nat) (c : List α → N
   have groups : n * (total gs fun g => weighted g w a) + discordWithinBy gs c w a =
       (total gs fun g => c g * (total g w * total g a)) + concordWithinBy gs c w a :=
     (Naturals.add_congr (total_mul n _ gs).symm rfl).trans ((total_add _ _ gs).symm.trans
-      ((total_eq_of_mem fun g mg =>
+      ((total_congr_on fun g mg =>
         have h := congrArg (c g * ·) (covariation g w a)
         have own : c g * (g.length * weighted g w a) = n * weighted g w a :=
           (mul_assoc_nat _ _ _).symm.trans (congrArg (· * weighted g w a)
@@ -327,14 +320,14 @@ theorem levels_sized (gs : List (List α)) (w a : α → Nat) (c : List α → N
     have h := covariation (context gs) (fun g => c g * total g w) (fun g => c g * total g a)
     have wt : weighted (context gs) (fun g => c g * total g w) (fun g => c g * total g a) =
         n * total gs fun g => c g * (total g w * total g a) :=
-      (context_total _ gs).trans ((total_eq_of_mem fun g mg =>
+      (context_total _ gs).trans ((total_congr_on fun g mg =>
         ((congrArg (g.length * ·) (square_split (c g) (total g w) (total g a))).trans
           ((mul_assoc_nat _ _ _).symm.trans ((congrArg (· * (total g w * total g a))
             ((mul_assoc_nat _ _ _).symm.trans (congrArg (· * c g) (common g mg)))).trans
             (mul_assoc_nat _ _ _))))).trans (total_mul n _ gs))
     have tw : ∀ q : α → Nat, total (context gs) (fun g => c g * total g q) =
         n * total gs fun g => total g q := fun q =>
-      (context_total _ gs).trans ((total_eq_of_mem fun g mg =>
+      (context_total _ gs).trans ((total_congr_on fun g mg =>
         (mul_assoc_nat _ _ _).symm.trans (congrArg (· * total g q) (common g mg))).trans
         (total_mul n _ gs))
     rw [context_length, wt, tw w, tw a] at h
@@ -379,9 +372,9 @@ theorem pairs_context {gs : List (List α)} {m : Nat} (equal : ∀ g, g ∈ gs �
     (F : List α → List α → Nat) :
     (total (context gs) fun x => total (context gs) (F x)) =
       m * m * total gs fun g => total gs (F g) :=
-  (total_congr (fun x => (context_total (F x) gs).trans ((total_eq_of_mem fun h mh =>
+  (total_congr (fun x => (context_total (F x) gs).trans ((total_congr_on fun h mh =>
       congrArg (· * F x h) (equal h mh)).trans (total_mul m _ gs))) (context gs)).trans
-    ((context_total _ gs).trans ((total_eq_of_mem fun g mg =>
+    ((context_total _ gs).trans ((total_congr_on fun g mg =>
       (congrArg (· * (m * total gs (F g))) (equal g mg)).trans (mul_assoc_nat _ _ _).symm).trans
       (total_mul (m * m) _ gs)))
 
@@ -407,11 +400,6 @@ theorem among_by_one (gs : List (List α)) (w a : α → Nat) :
       rw [Nat.one_mul (total g w), Nat.one_mul (total h w), Nat.one_mul (total g a),
         Nat.one_mul (total h a)]) gs) gs⟩
 
-/-- An empty group adds nothing and has no members. -/
-theorem nil_of_length_zero : ∀ {g : List α}, g.length = 0 → g = []
-  | [], _ => rfl
-  | _ :: _, len => Nat.noConfusion len
-
 /-- Groups all empty leave the family empty. -/
 theorem whole_nil : ∀ {gs : List (List α)}, (∀ g, g ∈ gs → g.length = 0) → whole gs = []
   | [], _ => rfl
@@ -435,8 +423,8 @@ theorem levels (gs : List (List α)) (w a : α → Nat) {m : Nat}
       rw [nil_of_length_zero (equal g mg)]; rfl
     have within : ∀ g, g ∈ gs → concord g w a = 0 ∧ discord g w a = 0 := fun g mg => by
       rw [nil_of_length_zero (equal g mg)]; exact ⟨rfl, rfl⟩
-    have cw : concordWithin gs w a = 0 := total_zero_of fun g mg => (within g mg).1
-    have dw : discordWithin gs w a = 0 := total_zero_of fun g mg => (within g mg).2
+    have cw : concordWithin gs w a = 0 := total_eq_zero fun g mg => (within g mg).1
+    have dw : discordWithin gs w a = 0 := total_eq_zero fun g mg => (within g mg).2
     have ca : concordAmong gs w a = 0 := concord_uniform zero _
     have da : discordAmong gs w a = 0 := discord_uniform zero _
     by rw [nil, cw, dw, ca, da]; rfl
@@ -482,7 +470,7 @@ theorem none_iff (gs : List (List α)) (w a : α → Nat) {m : Nat}
 
 /-- A positive square keeps the order both ways. -/
 theorem square_lt_iff {n x y : Nat} (pos : 0 < n) : n * n * x < n * n * y ↔ x < y :=
-  ⟨lt_of_mul_lt_mul, fun lt => Nat.mul_lt_mul_of_pos_left lt (Nat.mul_pos pos pos)⟩
+  ⟨Naturals.lt_of_mul_lt_mul_left, fun lt => Nat.mul_lt_mul_of_pos_left lt (Nat.mul_pos pos pos)⟩
 
 /-- And equality. -/
 theorem square_eq_iff {n x y : Nat} (pos : 0 < n) : n * n * x = n * n * y ↔ x = y :=
@@ -524,7 +512,7 @@ theorem rises_iff_within_of_alike (gs : List (List α)) (w a : α → Nat) (c : 
   have h := rises_iff_sized gs w a c common (pos_of_mul_pos pos)
   rw [(means_none_of_alike alike).1, (means_none_of_alike alike).2, Nat.add_zero,
     Nat.add_zero] at h
-  exact h.trans ⟨lt_of_mul_lt_mul, fun lt => Nat.mul_lt_mul_of_pos_left lt pos⟩
+  exact h.trans ⟨Naturals.lt_of_mul_lt_mul_left, fun lt => Nat.mul_lt_mul_of_pos_left lt pos⟩
 
 /-- Where selection within the groups goes against the amount, the whole selects for it only
 where selection among the groups goes for it. -/
@@ -544,16 +532,16 @@ theorem within_for_of_rises (gs : List (List α)) (w a : α → Nat) {m : Nat}
     (against : concordAmong gs w a ≤ discordAmong gs w a)
     (rises : discord (whole gs) w a < concord (whole gs) w a) :
     discordWithin gs w a < concordWithin gs w a :=
-  lt_of_mul_lt_mul (m := gs.length) (Nat.lt_of_add_lt_add_right (Nat.lt_of_le_of_lt
+  Naturals.lt_of_mul_lt_mul_left (m := gs.length) (Nat.lt_of_add_lt_add_right (Nat.lt_of_le_of_lt
     (Nat.add_le_add_left against _) ((rises_iff gs w a equal).mp rises)))
 
 /-- Where every group is uniform in amount, nothing is selected within the groups. -/
 theorem within_none_of_uniform {gs : List (List α)} {w a : α → Nat}
     (uniform : ∀ g, g ∈ gs → ∃ c, ∀ p, p ∈ g → a p = c) :
     concordWithin gs w a = 0 ∧ discordWithin gs w a = 0 :=
-  ⟨total_zero_of fun g mg => match uniform g mg with
+  ⟨total_eq_zero fun g mg => match uniform g mg with
       | ⟨_, same⟩ => concord_alike same w,
-    total_zero_of fun g mg => match uniform g mg with
+    total_eq_zero fun g mg => match uniform g mg with
       | ⟨_, same⟩ => discord_alike same w⟩
 
 /-- So the whole's selection is selection among groups alone. -/
@@ -656,9 +644,9 @@ factor of its own. -/
 theorem within_by_none_of_uniform {gs : List (List α)} {c : List α → Nat} {w a : α → Nat}
     (uniform : ∀ g, g ∈ gs → ∃ v, ∀ p, p ∈ g → a p = v) :
     concordWithinBy gs c w a = 0 ∧ discordWithinBy gs c w a = 0 :=
-  ⟨total_zero_of fun g mg => match uniform g mg with
+  ⟨total_eq_zero fun g mg => match uniform g mg with
       | ⟨_, same⟩ => (congrArg (c g * ·) (concord_alike same w)).trans (Nat.mul_zero _),
-    total_zero_of fun g mg => match uniform g mg with
+    total_eq_zero fun g mg => match uniform g mg with
       | ⟨_, same⟩ => (congrArg (c g * ·) (discord_alike same w)).trans (Nat.mul_zero _)⟩
 
 /-- So, for groups of any sizes each uniform in amount, the whole selects for the amount exactly
@@ -740,7 +728,7 @@ theorem lineage_total (G : Generations α) {g : List α} {v : Nat}
     (exact : ∀ t, Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)))
     (founded : ∀ p, p ∈ g → G.amount 0 p = v) (t : Nat) :
     total (lineage G g t) (G.amount t) = (lineage G g t).length * v :=
-  (total_eq_of_mem (lineage_keeps G within exact founded t)).trans (total_const v _)
+  (total_congr_on (lineage_keeps G within exact founded t)).trans (total_const v _)
 
 /-- Read by groups of the first generation each founded at a value, with exact transmission:
 every member of a group's lineage, at every generation, carries the value its group was founded
@@ -809,7 +797,7 @@ theorem returns_total {ps : List α} {w a o : α → Nat} {B b k : Nat}
     (returns : ∀ p, p ∈ ps → w p + k * a p = B + b * o p) :
     total ps w + k * total ps a = ps.length * B + b * total ps o :=
   (Naturals.add_congr rfl (total_mul k a ps).symm).trans
-    ((total_add w (fun p => k * a p) ps).symm.trans ((total_eq_of_mem returns).trans
+    ((total_add w (fun p => k * a p) ps).symm.trans ((total_congr_on returns).trans
       ((total_add (fun _ => B) (fun p => b * o p) ps).trans
         (Naturals.add_congr (total_const B ps) (total_mul b o ps)))))
 
@@ -819,7 +807,7 @@ theorem returns_weighted {ps : List α} {w a o : α → Nat} {B b k : Nat}
     weighted ps w a + k * weighted ps a a = B * total ps a + b * weighted ps o a :=
   (Naturals.add_congr rfl (total_mul k (fun p => a p * a p) ps).symm).trans
     ((total_add (fun p => w p * a p) (fun p => k * (a p * a p)) ps).symm.trans
-      ((total_eq_of_mem fun p mp =>
+      ((total_congr_on fun p mp =>
         (congrArg (w p * a p + ·) (mul_assoc_nat k (a p) (a p)).symm).trans
           ((add_mul_split (w p) (k * a p) (a p)).symm.trans
             ((congrArg (· * a p) (returns p mp)).trans
@@ -881,7 +869,7 @@ theorem spread_levels (gs : List (List α)) (a : α → Nat) {m : Nat}
     concord (whole gs) a a = gs.length * concordWithin gs a a + concordAmong gs a a := by
   have h := levels gs a a equal
   have dw : discordWithin gs a a = 0 :=
-    total_zero_of fun g _ => Reproduction.discord_self g a
+    total_eq_zero fun g _ => Reproduction.discord_self g a
   have da : discordAmong gs a a = 0 := Reproduction.discord_self gs fun g => total g a
   rw [dw, da, Reproduction.discord_self, Nat.mul_zero, Nat.zero_add, Nat.add_zero,
     Nat.zero_add] at h
@@ -898,7 +886,7 @@ theorem within_kept {gs : List (List α)} {w a : α → Nat} {B s q K : Nat}
       discordWithin gs w a + s * concordWithin gs a a :=
   (Naturals.add_congr rfl (total_mul K (fun g => concord g a a) gs).symm).trans
     ((total_add (fun g => concord g w a) (fun g => K * concord g a a) gs).symm.trans
-      ((total_eq_of_mem fun g mg =>
+      ((total_congr_on fun g mg =>
           have h := returns_balance g w a a (B := B + q * total g a) (b := s) (k := K)
             fun p mp => (returns g mg p mp).trans (Nat.add_right_comm _ _ _)
           by rw [Reproduction.discord_self, Nat.mul_zero, Nat.add_zero] at h; exact h).trans
@@ -1019,7 +1007,7 @@ theorem rises_iff_returns_of_uniform (gs : List (List α)) (w a : α → Nat) {B
   have h := rises_iff_returns gs w a equal returns
   rw [spread_levels gs a equal, (within_none_of_uniform (w := a) uniform).1, Nat.mul_zero,
     Nat.zero_add, Nat.mul_comm (b + c), Nat.mul_comm (m * b)] at h
-  exact h.trans ⟨lt_of_mul_lt_mul, fun lt => Nat.mul_lt_mul_of_pos_left lt differ⟩
+  exact h.trans ⟨Naturals.lt_of_mul_lt_mul_left, fun lt => Nat.mul_lt_mul_of_pos_left lt differ⟩
 
 /-- Groups alike in their totals of the amount (assortment none): the whole never selects for it,
 whatever the returns. -/
@@ -1120,7 +1108,7 @@ theorem within_shared_by {gs : List (List α)} {w a : α → Nat} (c R : List α
     rw [mul_turn K (c g), mul_turn s (c g), ← Nat.left_distrib, ← Nat.left_distrib, h]
   exact (Naturals.add_congr rfl (total_mul K (fun g => c g * concord g a a) gs).symm).trans
     ((total_add (fun g => c g * concord g w a) (fun g => K * (c g * concord g a a)) gs).symm.trans
-      ((total_eq_of_mem per).trans
+      ((total_congr_on per).trans
         ((total_add (fun g => c g * discord g w a) (fun g => s * (c g * concord g a a)) gs).trans
           (Naturals.add_congr rfl (total_mul s (fun g => c g * concord g a a) gs)))))
 
@@ -1169,7 +1157,7 @@ theorem rises_iff_shared_sized (gs : List (List α)) (w a : α → Nat) (c R : L
   have wb := within_shared_by c R returns
   have mk := means_shared c R common returns
   have z1 : discordWithinBy gs c a a = 0 :=
-    total_zero_of fun g _ => by rw [Reproduction.discord_self, Nat.mul_zero]
+    total_eq_zero fun g _ => by rw [Reproduction.discord_self, Nat.mul_zero]
   have z2 : discordMeans gs c a a = 0 := Reproduction.discord_self _ _
   have z3 : discord (whole gs) a a = 0 := Reproduction.discord_self _ _
   rw [z1, z2, z3, Nat.mul_zero, Nat.mul_zero] at e2
@@ -1212,7 +1200,7 @@ theorem rises_iff_shared_sized (gs : List (List α)) (w a : α → Nat) (c R : L
     rw [mul_assoc_nat n n, mul_turn s n]
   rw [k1, s1, mul_assoc_nat n q, mul_assoc_nat n q, ← Nat.left_distrib, ← Nat.left_distrib] at bal
   exact (square_lt_iff pos).symm.trans ((lt_iff_of_balance bal).trans
-    ⟨lt_of_mul_lt_mul, fun lt => Nat.mul_lt_mul_of_pos_left lt pos⟩)
+    ⟨Naturals.lt_of_mul_lt_mul_left, fun lt => Nat.mul_lt_mul_of_pos_left lt pos⟩)
 
 /-- **Each member gaining `q` for every unit its group holds**, groups of any sizes: the reading
 is the group's total, so the verdict goes through the covariance, member by member, of each

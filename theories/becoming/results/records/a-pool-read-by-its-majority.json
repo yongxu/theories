@@ -24,8 +24,8 @@
         "Becoming.Web.holdsCount_congr",
         "Becoming.Web.toNat_add_not",
         "Becoming.Web.holdsCount_add_not",
-        "Becoming.Web.and_left_true",
-        "Becoming.Web.and_right_true"
+        "Becoming.ListTests.and_left",
+        "Becoming.ListTests.and_right"
       ]
     },
     {
@@ -103,8 +103,6 @@
       "role": "proof",
       "declarations": [
         "Becoming.Web.MajorityHolds",
-        "Becoming.Web.and_left_true",
-        "Becoming.Web.and_right_true",
         "Becoming.Web.holdsCount",
         "Becoming.Web.holdsCount_add_not",
         "Becoming.Web.holdsCount_congr",
@@ -114,7 +112,7 @@
         "Becoming.Web.toNat_add_not",
         "Becoming.Web.toNat_le_of_imp"
       ],
-      "sha256": "7bf239fcf1c4b5d03729549d1744e3180e93a0e372bac3511461eb15a44e2e0b"
+      "sha256": "e37053931ccbd5f984cb8533aa7b32bd6b9cd105a8d974e3a2acd167b8ff5d93"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json",
@@ -169,13 +167,35 @@
       "role": "receipt",
       "sha256": "4331b95fd551f781d435b9a3ad5f05fb95cbdeb2f7ed119459297fe80639044a",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
+      "declarations": [
+        "Becoming.ListTests.and_left",
+        "Becoming.ListTests.and_right"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionPool.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.SelectionPool",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -188,6 +208,10 @@
     {
       "en": "1 November 2026: the statement's \"however many members tell them apart\" corrected to \"though the fewer than half left may tell them apart\": the premise has more than half reading alike, so fewer than half can tell the histories apart (quick Lean review; the docstring of Web.majority_outvoted corrected with it). No law, declaration or scope changed.",
       "zh": "2026年11月1日：陈述中「无论多少成员能分开二者」更正为「余下不足半数之成员或能分开二者」：前提为过半成员读法相同，故能分开二历程者不足半数（Lean 快审；Web.majority_outvoted 之文档同改）。法、声明与范围皆未改。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ],
   "text_versions": [

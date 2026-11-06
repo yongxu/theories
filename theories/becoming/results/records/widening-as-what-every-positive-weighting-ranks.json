@@ -279,8 +279,6 @@
         "Becoming.Weighting.StandingInvariant",
         "Becoming.Weighting.SufficientAt",
         "Becoming.Weighting.WidensOn",
-        "Becoming.Weighting.and_of_parts",
-        "Becoming.Weighting.and_parts",
         "Becoming.Weighting.concave_gap",
         "Becoming.Weighting.cond_mul",
         "Becoming.Weighting.cond_one_pos",
@@ -296,13 +294,10 @@
         "Becoming.Weighting.level_le_of_includes",
         "Becoming.Weighting.level_lt_of_includes_at",
         "Becoming.Weighting.lexical",
-        "Becoming.Weighting.lt_of_mul_lt",
         "Becoming.Weighting.mixed_either_way",
         "Becoming.Weighting.mixed_either_way_of_class",
-        "Becoming.Weighting.mul_lt_mul_pos",
         "Becoming.Weighting.neutral_ranks_by_number",
         "Becoming.Weighting.outweighs",
-        "Becoming.Weighting.perm4",
         "Becoming.Weighting.prior",
         "Becoming.Weighting.prior_lt_of_widens",
         "Becoming.Weighting.prior_transfer",
@@ -314,7 +309,6 @@
         "Becoming.Weighting.term_le",
         "Becoming.Weighting.term_lt",
         "Becoming.Weighting.tilted",
-        "Becoming.Weighting.total_congr_on",
         "Becoming.Weighting.total_lt",
         "Becoming.Weighting.weighed",
         "Becoming.Weighting.weighed_const",
@@ -349,12 +343,12 @@
         "Becoming.unrestricted_atCenters_iff",
         "Becoming.withinSome"
       ],
-      "sha256": "b26fdf41eb04ff899beb2bead6bafe5e3a6ede5e9030ba0f68a532214d4bd6e6"
+      "sha256": "fe523d3396a4e3387458b0aeda4904813b29c7c7e8785e3a33e45fab351af009"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean",
       "role": "proof",
-      "sha256": "42022bafd4ad708f38914393017450031c1ab300bf4d9745bb190d4429b7ad01"
+      "sha256": "a82ca6d62d75b05443152ea54fbaac5b636aef88321bd2e8c35ae030cf12df0c"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T111912.398950Z/verification.json",
@@ -489,13 +483,67 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T131028.245732Z/verification.json",
       "role": "receipt",
       "sha256": "37b752112e19d77ba717f771c6057c5516c1ec47ff247889baeb36374104db54"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
+      "declarations": [
+        "Becoming.bool_and_true",
+        "Becoming.bool_of_and_true",
+        "Becoming.Naturals.lt_of_mul_lt_mul_left",
+        "Becoming.Naturals.mul_lt_mul_of_pos"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Integers.lean",
+      "role": "proof",
+      "sha256": "82c9948198f3d18805df7a1a452d2dd567da2a81fc311341238b05e087eaa122",
+      "declarations": [
+        "Becoming.Integers.nat_rearrange"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
+      "role": "proof",
+      "sha256": "852a5491313223e5de476027cd98408c196db67ac2c263d776dd28e6d050ac3c",
+      "declarations": [
+        "Becoming.total_congr_on"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T131028.245732Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Weightings",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Integers.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Integers",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Population",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -532,6 +580,10 @@
     {
       "en": "3 November 2026, CD (board item CD): retitled \"Widening as what every positive weighting ranks\", and the id renamed to widening-as-what-every-positive-weighting-ranks, the old id kept. A weighting is any natural weight on the listed items and a zero weight ties, as the statement says, so \"every weighting\" stated a universal the record refutes; positivity is where C's premise is relocated. Its alias \"C as the order every weighting shares\" says \"every positive weighting\"; the former title stays an alias for search. The claim is unchanged.",
       "zh": "2026年11月3日，工作板条目 CD：标题改为“扩大即每个正的加权所排者”，标识改为 widening-as-what-every-positive-weighting-ranks，旧标识保留。加权是所列诸项上的任意自然数权重，零权持平，如陈述所言，故“每个加权”所说的全称为本记录所否；正性正是 C 之前提的移置之处。其别名“C as the order every weighting shares”改作“every positive weighting”；旧标题留作检索之别名。主张不变。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ],
   "former_ids": [

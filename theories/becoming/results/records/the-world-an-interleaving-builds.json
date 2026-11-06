@@ -193,8 +193,8 @@
         "Becoming.Interleavings.LocalLaw.touchAround",
         "Becoming.Interleavings.LocalLaw.bool_or_false_left",
         "Becoming.Interleavings.LocalLaw.bool_or_false_right",
-        "Becoming.Interleavings.LocalLaw.bool_or_of_left",
-        "Becoming.Interleavings.LocalLaw.bool_or_of_right",
+        "Becoming.ListTests.or_left",
+        "Becoming.ListTests.or_right",
         "Becoming.Interleavings.LocalLaw.untouched_unmoved",
         "Becoming.Interleavings.LocalLaw.touch_contains_iff",
         "Becoming.Interleavings.LocalLaw.around_contains",
@@ -371,7 +371,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Interleavings.lean",
       "role": "proof",
-      "sha256": "a0a17038af5ced70e8a6489b4aaaa604c939a0938b40e27b68f56f739e257928",
+      "sha256": "6090076a096f50b6baa2c9e42b4b885ea5f9cc013aa3d0b6da166575d48cf092",
       "declarations": [
         "Becoming.Interleavings.LocalLaw.exchangeAt",
         "Becoming.Interleavings.LocalLaw.runUpTo",
@@ -482,8 +482,6 @@
         "Becoming.Interleavings.LocalLaw.touchAround",
         "Becoming.Interleavings.LocalLaw.bool_or_false_left",
         "Becoming.Interleavings.LocalLaw.bool_or_false_right",
-        "Becoming.Interleavings.LocalLaw.bool_or_of_left",
-        "Becoming.Interleavings.LocalLaw.bool_or_of_right",
         "Becoming.Interleavings.LocalLaw.untouched_unmoved",
         "Becoming.Interleavings.LocalLaw.touch_contains_iff",
         "Becoming.Interleavings.LocalLaw.around_contains",
@@ -556,7 +554,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reordering.lean",
       "role": "proof",
-      "sha256": "72adbc08546ed505f267db376a96975728150ed719f941491095075bfe688f93",
+      "sha256": "cf8c20c4f4f8c9f38c095495c6423238270a428f38a42dd9c98e189275afb193",
       "declarations": [
         "Becoming.Reindexes",
         "Becoming.Footprinted",
@@ -572,12 +570,27 @@
       "role": "receipt",
       "sha256": "c56e26f7444a97d0dbd32ff8ab6face957af8a5ce13382fc4317eb56c96033a2",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
+      "declarations": [
+        "Becoming.ListTests.or_left",
+        "Becoming.ListTests.or_right"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Interleavings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Interleavings",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -586,6 +599,20 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.World",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reordering.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Reordering",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -606,6 +633,10 @@
     {
       "en": "20 October 2026, R46 (the open part R38 left): three laws added (one renumbering of all the steps, matching each taking of an exchange at every relatum it touches, each such relatum's index map one step back, a Reindexes of the steps; activity, the exchange and the standings of what it touches agreeing through it, so every relation read at one step on those relata agrees; the correspondence with Reordering: the touch footprint's order kept, its containment exactly characterized, and the footprint around each step containing the exchanges but leaving only the identity renumbering), the premise Touching, three counterexamples, a dependency on order-of-exchanges-is-the-invariant; the world's activity restated as the decided touch (touchAt), equivalent to the earlier form (world_active_iff); the open parts replaced by what stays open; the correspondence's last sentence rewritten. Proof binding (Interleavings.lean) rebound to core receipt 20261020T101723.692082Z. Study section 252.",
       "zh": "2026年10月20日，R46（R38 所留的开放部分）：新增三条规律（所有步的一个重编号，在交换所触及的每个关系项处相配其每次取用，对每个这样的关系项是其索引映射退后一步，对诸步构成 Reindexes；经由它活跃、交换与其所触及者的所立相同，故在一步就这些关系项读出的每个关系相同；与 Reordering 的对应：保持触及足迹的次序，其包含关系被确切刻画，每步周围的足迹包含诸交换却只留下恒等重编号），前提 Touching，三个反例，对 order-of-exchanges-is-the-invariant 的依赖；世界的活跃改述为已判定的触及（touchAt），与先前形式等价（world_active_iff）；开放部分换为仍开放者；对应部分末句改写。证明绑定（Interleavings.lean）改到核心回执 20261020T101723.692082Z。研究第 252 节。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ],
   "text_versions": [

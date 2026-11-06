@@ -14,7 +14,7 @@
    - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 2. With balance, a joint exchange beyond the gap to m leaves the next level off m, so beyond it at every step from T the level is off m at every later step. (`Becoming.Flow.not_at_of_beyond`, `Becoming.Flow.never_at_of_beyond`)
    - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
-3. Each formation weakly opposing departure from m on its condition, some strictly on each side, makes the joint exchange oppose; shares of the gap bounding each formation's departure, totalling at most the gap, keep the joint exchange within it. (`Becoming.Flow.total_lt_of_le_of_mem`, `Becoming.Flow.opposes_of_each`, `Becoming.Flow.withinGap_of_shares`)
+3. Each formation weakly opposing departure from m on its condition, some strictly on each side, makes the joint exchange oppose; shares of the gap bounding each formation's departure, totalling at most the gap, keep the joint exchange within it. (`Becoming.total_lt_of_mem`, `Becoming.Flow.opposes_of_each`, `Becoming.Flow.withinGap_of_shares`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. Under balance, each condition of a family within the gap to its own level and opposing at every step from T, the family's stock is the total of those levels from the step by which each has settled; no formation reads the stock. (`Becoming.Flow.stock_settles`)
    - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
@@ -63,7 +63,7 @@ Decentralized control: local feedback loops whose sum regulates the aggregate; o
 
 | Role | Source | Declarations |
 |---|---|---|
-| proof | [Regulation.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regulation.lean) | `Becoming.Flow.never_at_of_beyond`, `Becoming.Flow.not_at_of_beyond`, `Becoming.Flow.opposes_of_each`, `Becoming.Flow.stock_settles`, `Becoming.Flow.total_lt_of_le_of_mem`, `Becoming.Flow.withinGap_of_shares` |
+| proof | [Regulation.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regulation.lean) | `Becoming.Flow.never_at_of_beyond`, `Becoming.Flow.not_at_of_beyond`, `Becoming.Flow.opposes_of_each`, `Becoming.Flow.stock_settles`, `Becoming.Flow.withinGap_of_shares` |
 | proof | [Continuation.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean) | `Becoming.Flow.given_zero_below`, `Becoming.Flow.held_below`, `Becoming.Flow.never_returns_below` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
@@ -71,6 +71,8 @@ Decentralized control: local feedback loops whose sum regulates the aggregate; o
 | integration | [passages.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json) | — |
 | statement | [CIVILIZATION-THOUGHT-AND-BECOMING.md](../../history/CIVILIZATION-THOUGHT-AND-BECOMING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
+| proof | [Flow.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean) | `Becoming.total_lt_of_mem` |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Regulation from one side, beyond the gap, and locally`, `单侧、越界与局部之调节`, `Becoming.Flow.held_below`
 
@@ -78,6 +80,7 @@ Aliases: `Regulation from one side, beyond the gap, and locally`, `单侧、越�
 ### History
 
 - 22 October 2026: added (ZG), for the gap the ZH reading raised; study section 339.
+- 6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.
 
 </details>
 

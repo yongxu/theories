@@ -1,4 +1,5 @@
 import Becoming.Fragments
+import Becoming.Joining
 
 /-!
 # Local units: where a joining recovers the ends of what it joins

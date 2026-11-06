@@ -107,6 +107,7 @@ The zero-premise plan lists whole units as a commitment of the representation (R
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Becoming.Flow.BalancesAtOn`, `Becoming.Web.RisesAt`, `Becoming.Web.FallsAt`, `Becoming.Flow.BalancesAtOn.comesToStand_iff`, `Becoming.Flow.BalancesAtOn.ceasesToStand_iff`, `Becoming.Flow.BalancesAtOn.rises_iff_gives`, `Becoming.Flow.BalancesAtOn.arises_given`, `Becoming.Flow.BalancesAtOn.comes_from_standing`, `Becoming.Flow.RunsDownOnAt`, `Becoming.Flow.RunsDownOnAt.changes_iff`, `Becoming.Doubling.raw_reading_fails`, `Becoming.Web.supported_unchanged_by_split`, `Becoming.Feeding.endless`
 

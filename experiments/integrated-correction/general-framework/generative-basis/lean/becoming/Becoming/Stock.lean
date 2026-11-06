@@ -120,17 +120,13 @@ def after (draw replenish : A → Nat) : Nat → List A → Nat
 def process (draw replenish : A → Nat) : Process Nat A :=
   ⟨fun n a m => draw a ≤ n ∧ m + draw a = n + replenish a⟩
 
-theorem refill {n d : Nat} (r : Nat) (le : d ≤ n) : n - d + r + d = n + r :=
-  (Nat.add_right_comm (n - d) r d).trans
-    (congrArg (· + r) ((Nat.add_comm (n - d) d).trans (add_sub_of_le le)))
-
 theorem process_next {draw replenish : A → Nat} {n m : Nat} {a : A}
     (step : (process draw replenish).step n a m) : m = n - draw a + replenish a :=
-  add_right_cancel (draw a) (step.2.trans (refill (replenish a) step.1).symm)
+  add_right_cancel (draw a) (step.2.trans (Naturals.sub_add_refill (replenish a) step.1).symm)
 
 theorem process_step {draw replenish : A → Nat} {n : Nat} {a : A} (le : draw a ≤ n) :
     (process draw replenish).step n a (n - draw a + replenish a) :=
-  ⟨le, refill (replenish a) le⟩
+  ⟨le, Naturals.sub_add_refill (replenish a) le⟩
 
 theorem process_balanced (draw replenish : A → Nat) :
     Balanced (process draw replenish) (fun n => n) draw replenish :=
@@ -150,7 +146,7 @@ theorem feasible_iff_covered {draw replenish : A → Nat} :
 theorem draw_turn {n d r : Nat} (R : Nat) (le : d ≤ n) :
     d + ((n - d + r) + R) = n + (r + R) :=
   (Nat.add_left_comm _ _ _).trans ((Nat.add_assoc _ _ _).symm.trans
-    ((congrArg (· + R) (refill r le)).trans (Nat.add_assoc _ _ _)))
+    ((congrArg (· + R) (Naturals.sub_add_refill r le)).trans (Nat.add_assoc _ _ _)))
 
 theorem nil_ne_split : ∀ (u : List A) (a : A) (v : List A), [] ≠ u ++ a :: v
   | [], _, _, h => nomatch h
@@ -246,7 +242,7 @@ theorem after_balance {draw replenish : A → Nat} :
       _ = (n - draw a + replenish a + draw a) + total as replenish :=
           (Nat.add_left_comm _ _ _).trans (Nat.add_assoc _ _ _).symm
       _ = (n + replenish a) + total as replenish :=
-          congrArg (· + total as replenish) (refill (replenish a) h)
+          congrArg (· + total as replenish) (Naturals.sub_add_refill (replenish a) h)
       _ = n + (replenish a + total as replenish) := Nat.add_assoc _ _ _
 
 /-- A covered course ends at no less than it began exactly where it replenishes at least what

@@ -54,7 +54,7 @@
         "Becoming.BlanketCouplings.ThresholdCase.env",
         "Becoming.BlanketCouplings.ThresholdCase.update",
         "Becoming.BlanketCouplings.ThresholdCase.policy",
-        "Becoming.BlanketCouplings.ThresholdCase.band_congr",
+        "Becoming.Limit.and_congr2",
         "Becoming.BlanketCouplings.ThresholdCase.admits_iff",
         "Becoming.BlanketCouplings.ThresholdCase.values",
         "Becoming.BlanketCouplings.ThresholdCase.corr",
@@ -505,7 +505,6 @@
         "Becoming.BlanketCouplings.ReadsExternal.step",
         "Becoming.BlanketCouplings.ReadsExternal.whole_consistent",
         "Becoming.BlanketCouplings.ThresholdCase.admits_iff",
-        "Becoming.BlanketCouplings.ThresholdCase.band_congr",
         "Becoming.BlanketCouplings.ThresholdCase.corr",
         "Becoming.BlanketCouplings.ThresholdCase.env",
         "Becoming.BlanketCouplings.ThresholdCase.lev",
@@ -578,7 +577,7 @@
         "Becoming.BlanketCouplings.worldParts",
         "Becoming.BlanketCouplings.worldReads"
       ],
-      "sha256": "86dbebdcf48613232ab37dc9effffed3b9211698503787b98637a76170bea3ea"
+      "sha256": "d906ec9522df7d41e44d4b2025a1b3d8003a586eb9f5ae420eca48d3b8bb6c9e"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T044825.244995Z/verification.json",
@@ -645,13 +644,34 @@
       "role": "receipt",
       "sha256": "58ba9213b37a9bb07551fb1fe5e0f5e49c60458002a28a3a55fb5faa0eda33a2",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LimitVerification.lean",
+      "role": "proof",
+      "sha256": "95e8eb619b9e504e23e251477b4baf34c8b02743028f35b02689950ab17b8c1a",
+      "declarations": [
+        "Becoming.Limit.and_congr2"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T185431.953044Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.BlanketCouplings",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LimitVerification.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.LimitVerification",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -664,6 +684,10 @@
     {
       "en": "1 November 2026, board item UE28 (study section 491): a formation's level as the internal part along one run, the step external: admitted by a law determined part by part exactly where its next level and act agree wherever its level, a value across steps of what couples in and its act agree, on the World's records an equation between what is given to it and taken from it at the two steps, tested only where these recur; a drain in three phases fails it, a drain and feed in two phases meets it; six laws (64 declarations) added, the statement, a hypothesis, the correspondence, does_not_show, a dependency and the next step brought to it; after reviews of the design and the Lean and of the landing texts, every finding taken.",
       "zh": "2026年11月1日，工作板条目 UE28（研究第 491 节）：形成之层级沿一运行为内部部分，步为外部：为某逐部分确定之律所容，恰当其层级、耦合入者跨步之值与作为相合之处，其次层级与次作为皆相合，于世界之记录即二步所予所取之等式，唯于诸态复现处受检；三相之耗不满足之，二相之耗与供满足之；新增六律（64 项声明），陈述、一前提、对应、所不示、一依赖与下一步随之；经设计与 Lean 及落地文本之审查，凡所见皆取。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }

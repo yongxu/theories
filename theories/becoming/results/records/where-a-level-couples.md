@@ -118,6 +118,7 @@ The naming study of 17-18 October (N1, study section 6.2) adopted "couples into"
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T005554.047169Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T204155.924362Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `where a level couples`, `水平在何处耦合`, `coupling by level`, `经水平耦合`, `coupled by threshold`, `经阈耦合`, `response is a coupling`, `回应即耦合`, `strength zero is no response`, `强度为零即不回应`, `only a crossing passes`, `只过跨越`, `observing is where a level couples`, `观察即水平耦合之处`, `a crossing passes`, `跨越得过`, `crossing passes`, `threshold law`, `阈之律`, `crossing through the conjunction`, `经合取而过`, `admission law`, `容许之律`, `decided admission`
 

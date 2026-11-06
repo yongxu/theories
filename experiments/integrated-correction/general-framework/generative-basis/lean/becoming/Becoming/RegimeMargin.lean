@@ -465,7 +465,7 @@ theorem left_falls {d a H : Nat} (gives : a < H) : d + a - H ≤ d - 1 :=
       have lt : d + a - H + 1 + H ≤ d + H := by
         rw [Nat.add_right_comm, sum]; exact Nat.add_lt_add_left gives d
       have one : 1 + (d + a - H) ≤ d := by
-        rw [Nat.add_comm]; exact Naturals.le_of_add_le_add_right lt
+        rw [Nat.add_comm]; exact le_of_add_le_add_right _ lt
       exact Naturals.le_sub_of_add_le one)
 
 /-- Below the point of no return, what the draw leaves is below the point's distance above the
@@ -1310,7 +1310,7 @@ theorem unordered_falls {H x r a : Nat} (le : r ≤ x) (notUp : ¬ (x ≤ x - H 
             rw [Nat.add_right_comm, Naturals.sub_add_cancel met,
               Naturals.sub_add_cancel (Nat.le_trans met (Nat.le_of_lt fell))]
             exact fell
-          exact Naturals.le_of_add_le_add_right shifted
+          exact le_of_add_le_add_right _ shifted
         rw [if_pos (Nat.le_trans at_least raised), sub_eq_zero_of_le met,
           sub_eq_zero_of_le (Nat.le_trans met (Nat.le_of_lt fell)), Nat.add_zero, Nat.add_zero]
         exact Nat.add_lt_add_right closer 2)
@@ -3235,11 +3235,6 @@ end Indexed
 
 /-! ### Coupled conditions in whole numbers -/
 
-/-- Each of the two conditions is listed. -/
-theorem covers_pair : ∀ b : Bool, b ∈ [true, false]
-  | true => .head _
-  | false => .tail _ (.head _)
-
 /-- The two conditions counted, times `hi`, are `hi` twice. -/
 theorem pair_count (hi : Nat) : [true, false].length * hi = hi + hi :=
   (Nat.succ_mul 1 hi).trans (congrArg (· + hi) (Nat.one_mul hi))
@@ -3277,7 +3272,7 @@ theorem rests_by {g₁ g₂ : Nat → Nat → Nat} {H₁ H₂ hi : Nat} (rises�
     ∀ (d : Nat) (s : Nat × Nat), s.1 ≤ hi → s.2 ≤ hi → (s.1 - H₁) + (s.2 - H₂) ≤ d →
       ∃ N, N ≤ d + 1 ∧ LastChange.StillFrom (Law.run (step Drawn.whole g₁ g₂ H₁ H₂) s) N :=
   fun d s high high' fuel =>
-    match Indexed.rests_by (pair_rises rises₁ rises₂) (band_web band) covers_pair d (ofPair s)
+    match Indexed.rests_by (pair_rises rises₁ rises₂) (band_web band) ListTests.mem_bools d (ofPair s)
         (pair_within high high') fuel with
     | ⟨N, le, still⟩ => ⟨N, le, pair_still still⟩
 
@@ -3308,7 +3303,7 @@ theorem ends_iff {g₁ g₂ : Nat → Nat → Nat} {H₁ H₂ hi x y : Nat} (ris
     Ends Drawn.whole g₁ g₂ H₁ H₂ Prod.fst (x, y) ↔
       ((Law.run (step Drawn.whole g₁ g₂ H₁ H₂) (x, y)).state (hi + hi + 1)).1 = 0 :=
   (ends_pair (D := Drawn.whole)).trans ((Indexed.ends_iff (pair_rises rises₁ rises₂) (band_web band)
-    covers_pair (pair_within (s := (x, y)) high high') true).trans
+    ListTests.mem_bools (pair_within (s := (x, y)) high high') true).trans
     ⟨fun zero => (pair_at (x, y)).symm.trans zero, fun zero => (pair_at (x, y)).trans zero⟩)
 
 /-- Whether the first condition, from level `x` with its partner at `y`, is nothing at step `2 hi + 1`. -/
@@ -3344,7 +3339,7 @@ theorem ends_iff_below {g₁ g₂ : Nat → Nat → Nat} {H₁ H₂ hi x y : Nat
   rw [threshold_pair rises₁ rises₂]
   exact (ends_pair (D := Drawn.whole)).trans
     ((Indexed.ends_alike (Indexed.pointwise_of_rises (pair_rises rises₁ rises₂)) (setAt_pair x y) true).symm.trans
-      (Indexed.ends_iff_below (pair_rises rises₁ rises₂) (band_web band) covers_pair high
+      (Indexed.ends_iff_below (pair_rises rises₁ rises₂) (band_web band) ListTests.mem_bools high
         (pair_within (s := (0, y)) (Nat.zero_le hi) high')))
 
 /-- **The point of no return falls as the partner rises.** Within a band under mutual support, a
@@ -3354,7 +3349,7 @@ theorem threshold_falls {g₁ g₂ : Nat → Nat → Nat} {H₁ H₂ hi y y' : N
     (rises₂ : Drawn.whole.Rises g₂) (band : Band Drawn.whole g₁ g₂ H₁ H₂ hi) (le : y ≤ y')
     (high' : y' ≤ hi) : threshold g₁ g₂ H₁ H₂ hi y' ≤ threshold g₁ g₂ H₁ H₂ hi y := by
   rw [threshold_pair rises₁ rises₂, threshold_pair rises₁ rises₂]
-  exact Indexed.threshold_falls (pair_rises rises₁ rises₂) (band_web band) covers_pair
+  exact Indexed.threshold_falls (pair_rises rises₁ rises₂) (band_web band) ListTests.mem_bools
     (fun b => match b with
       | true => Nat.le_refl 0
       | false => le)
@@ -3374,7 +3369,7 @@ theorem fates {g₁ g₂ : Nat → Nat → Nat} {H₁ H₂ hi x y : Nat} (rises�
         0 < ((Law.run (step Drawn.whole g₁ g₂ H₁ H₂) (x, y)).state N).1) :=
   have rises := pair_rises (D := Drawn.whole) rises₁ rises₂
   have alike := Indexed.run_alike (H := pairDraw H₁ H₂) (Indexed.pointwise_of_rises rises) (setAt_pair x y)
-  match Indexed.fates rises (band_web band) covers_pair high
+  match Indexed.fates rises (band_web band) ListTests.mem_bools high
       (pair_within (s := (0, y)) (Nat.zero_le hi) high') with
   | ⟨N, le, still, below, above⟩ =>
     have toPair : (Law.run (Indexed.step Drawn.whole (pairGiving g₁ g₂) (pairDraw H₁ H₂))
@@ -3704,13 +3699,13 @@ theorem threshold_beyond_band :
         (Nat.add_assoc (hi - 1) 1 1)).trans (congrArg (hi - 1 + ·) gives.symm))) up),
    within,
    Nat.le_antisymm (leading_le _ _)
-    ((Indexed.ends_iff_below_within (Indexed.step_keepsBelow rises) covers_pair within₂ (Nat.le_refl 2)).1 (ends_set.1 endsTwo)),
+    ((Indexed.ends_iff_below_within (Indexed.step_keepsBelow rises) ListTests.mem_bools within₂ (Nat.le_refl 2)).1 (ends_set.1 endsTwo)),
    Nat.le_antisymm
     ((Nat.lt_or_ge 2 (Indexed.thresholdWithin (Indexed.step Drawn.whole (pairGiving first second) (pairDraw 1 1)) [true, false] 3 2
         (ofPair (0, 3)) true)).elim
-      (fun lt => absurd (ends_set.2 ((Indexed.ends_iff_below_within (Indexed.step_keepsBelow rises) covers_pair within
+      (fun lt => absurd (ends_set.2 ((Indexed.ends_iff_below_within (Indexed.step_keepsBelow rises) ListTests.mem_bools within
         (Nat.le_refl 2)).2 lt)) holds) id)
-    ((Indexed.ends_iff_below_within (Indexed.step_keepsBelow rises) covers_pair within (Nat.le_succ 1)).1 (ends_set.1 endsOne))⟩
+    ((Indexed.ends_iff_below_within (Indexed.step_keepsBelow rises) ListTests.mem_bools within (Nat.le_succ 1)).1 (ends_set.1 endsOne))⟩
 
 end Relay
 

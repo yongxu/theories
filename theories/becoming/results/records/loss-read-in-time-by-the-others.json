@@ -281,8 +281,8 @@
       "id": "shaping-read-by-readers-drawn-from-the-selected",
       "relation": "formal-reuse",
       "detail": {
-        "en": "DrawnShaping.drawn, drawnRead, drawnCourse, drawn_favours_iff, critical_iff, shaped_le_iff, drawn_reads_iff, drawn_locks and drawn_from_below; the witnesses CriticalMass.one_pos, even, oneToTwo and oneToThree.",
-        "zh": "DrawnShaping.drawn、drawnRead、drawnCourse、drawn_favours_iff、critical_iff、shaped_le_iff、drawn_reads_iff、drawn_locks 与 drawn_from_below；见证 CriticalMass.one_pos、even、oneToTwo 与 oneToThree。"
+        "en": "DrawnShaping.drawn, drawnRead, drawnCourse, drawn_favours_iff, critical_iff, shaped_le_iff, drawn_reads_iff, drawn_locks and drawn_from_below; the witnesses CriticalMass.even, oneToTwo and oneToThree.",
+        "zh": "DrawnShaping.drawn、drawnRead、drawnCourse、drawn_favours_iff、critical_iff、shaped_le_iff、drawn_reads_iff、drawn_locks 与 drawn_from_below；见证 CriticalMass.even、oneToTwo 与 oneToThree。"
       }
     },
     {
@@ -356,22 +356,22 @@
         "Becoming.ReadInTime.turned_early_iff",
         "Becoming.ReadInTime.turned_iff"
       ],
-      "sha256": "831daf41605a3eed8309e250460d70969dccd1e577b04164f16d2619bfda5dc0"
+      "sha256": "44c3852dad1806b4d425584101ba4efc2276194ce9f6e90afda9e5858dee3fef"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean",
       "role": "proof",
-      "sha256": "f6264373f914de09e17599b58dd6d76065e184ebeed1d1c7b6f13166372f1e55"
+      "sha256": "7ff4aed1c48ce486bd02fb994ad7ca73823cbf8faf6594153b4ae1093075e7b9"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean",
       "role": "proof",
-      "sha256": "8f0d8630a48b24088e17f50af7c95619f85191d2ce96f0e7837a38c506a7a74f"
+      "sha256": "64ef0f80da3be8166cf87c62b5dec33716d55f781cce43fd784698972fcca23c"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean",
       "role": "proof",
-      "sha256": "b88590f154ad3779eaf7d6ef5f05d2e6427d2c6b2681736cf36715aa2c081130"
+      "sha256": "0d748eedc571ebcd09900b4fca837e68faa66cf5d31d7a24050e6850aee10ee7"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean",
@@ -381,12 +381,12 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Resolution.lean",
       "role": "proof",
-      "sha256": "61a9fbb7c3624f887afd09df8c43b59a5ec08209811b3e1b9f20e7efa1e20fbb"
+      "sha256": "683fc3406a4803da63e87011909d012a301a48918d877dca3ae685cc1bee3fde"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
       "role": "proof",
-      "sha256": "536e2a32c187c540f3f86a69742722375bc384831fb2d3f763be1e5f15fb29d0"
+      "sha256": "a0039b199331110185dd666ce67dfc960dc6658511044568a2dd8548e4469dbe"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T200926.001323Z/verification.json",
@@ -427,12 +427,18 @@
       "path": "theories/meta-attractor/README.md",
       "role": "statement",
       "sha256": "cd64296038fb55b06c2cea215494bec4bdf09a41d1ea8945018ba87b337acdd0"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadInTime.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T200926.001323Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.ReadInTime",
       "success_pointer": "/status",
       "success_value": "passed"

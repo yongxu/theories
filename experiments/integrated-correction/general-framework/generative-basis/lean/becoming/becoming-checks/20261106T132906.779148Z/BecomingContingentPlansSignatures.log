@@ -1,0 +1,57 @@
+@Becoming.ContingentPlans.mem_repertoire : ∀ {Q A : Type} (qs : List Q) (as : List A)
+  (p : Becoming.ContingentPlans.Plan Q A),
+  p.query ∈ qs → p.negative ∈ as → p.positive ∈ as → p ∈ Becoming.ContingentPlans.repertoire qs as
+@Becoming.ContingentPlans.run_none : ∀ {S Q A : Type} {m : Becoming.ContingentPlans.Interface S Q A}
+  {p : Becoming.ContingentPlans.Plan Q A} {s : S}, m.probe s p.query = none → Becoming.ContingentPlans.run m p s = none
+@Becoming.ContingentPlans.run_some : ∀ {S Q A : Type} {m : Becoming.ContingentPlans.Interface S Q A}
+  {p : Becoming.ContingentPlans.Plan Q A} {s after : S} {answer : Bool},
+  m.probe s p.query = some (answer, after) →
+    Becoming.ContingentPlans.run m p s = m.respond after (Becoming.ContingentPlans.branch p answer)
+@Becoming.ContingentPlans.run_iff_trace : ∀ {S Q A : Type} (m : Becoming.ContingentPlans.Interface S Q A)
+  (p : Becoming.ContingentPlans.Plan Q A) (s t : S),
+  Becoming.ContingentPlans.run m p s = some t ↔
+    ∃ answer, Generative.Trace (Becoming.ContingentPlans.process m) s (Becoming.ContingentPlans.moves p answer) t
+@Becoming.ContingentPlans.passes_iff_completes : ∀ {S Q A : Type} (m : Becoming.ContingentPlans.Interface S Q A)
+  (p : Becoming.ContingentPlans.Plan Q A) (s : S),
+  Becoming.ContingentPlans.passes m p s = true ↔ Becoming.ContingentPlans.Completes m p s
+@Becoming.ContingentPlans.valid_iff : ∀ {S Q A : Type} (m : Becoming.ContingentPlans.Interface S Q A) (states : List S)
+  (p : Becoming.ContingentPlans.Plan Q A),
+  Becoming.ContingentPlans.valid m states p = true ↔
+    states ≠ [] ∧ ∀ (s : S), s ∈ states → Becoming.ContingentPlans.Completes m p s
+@Becoming.ContingentPlans.valid_iff_passes : ∀ {S Q A : Type} (m : Becoming.ContingentPlans.Interface S Q A)
+  (states : List S) (p : Becoming.ContingentPlans.Plan Q A),
+  Becoming.ContingentPlans.valid m states p = true ↔
+    states ≠ [] ∧ ∀ (s : S), s ∈ states → Becoming.ContingentPlans.passes m p s = true
+@Becoming.ContingentPlans.chosen_sound : ∀ {S Q A : Type} (m : Becoming.ContingentPlans.Interface S Q A)
+  (states : List S) (plans : List (Becoming.ContingentPlans.Plan Q A)) (p : Becoming.ContingentPlans.Plan Q A),
+  Becoming.ContingentPlans.choose m states plans = some p →
+    states ≠ [] ∧
+      p ∈ plans ∧ ∀ (s : S), s ∈ states → ∃ t, Becoming.ContingentPlans.run m p s = some t ∧ m.achieved t = true
+@Becoming.ContingentPlans.empty_belief_none : ∀ {S Q A : Type} (m : Becoming.ContingentPlans.Interface S Q A)
+  (plans : List (Becoming.ContingentPlans.Plan Q A)), Becoming.ContingentPlans.choose m [] plans = none
+@Becoming.ContingentPlans.selected_executes : ∀ {S Q A : Type} (m : Becoming.ContingentPlans.Interface S Q A)
+  (states : List S) (plans : List (Becoming.ContingentPlans.Plan Q A)) (p : Becoming.ContingentPlans.Plan Q A) (s : S),
+  Becoming.ContingentPlans.choose m states plans = some p →
+    s ∈ states →
+      ∃ answer after final,
+        m.probe s p.query = some (answer, after) ∧
+          m.respond after (Becoming.ContingentPlans.branch p answer) = some final ∧ m.achieved final = true
+@Becoming.ContingentPlans.selected_iff_completes : ∀ {S Q A : Type} (m : Becoming.ContingentPlans.Interface S Q A)
+  (states : List S) (plans : List (Becoming.ContingentPlans.Plan Q A)),
+  (Becoming.ContingentPlans.choose m states plans).isSome = true ↔
+    ∃ p, p ∈ plans ∧ states ≠ [] ∧ ∀ (s : S), s ∈ states → Becoming.ContingentPlans.Completes m p s
+@Becoming.ContingentPlans.none_selected_iff : ∀ {S Q A : Type} (m : Becoming.ContingentPlans.Interface S Q A)
+  (states : List S) (plans : List (Becoming.ContingentPlans.Plan Q A)),
+  Becoming.ContingentPlans.choose m states plans = none ↔
+    ∀ (p : Becoming.ContingentPlans.Plan Q A),
+      p ∈ plans → ¬(states ≠ [] ∧ ∀ (s : S), s ∈ states → Becoming.ContingentPlans.Completes m p s)
+@Becoming.ContingentPlans.selected_completes : ∀ {S Q A : Type} (m : Becoming.ContingentPlans.Interface S Q A)
+  (states : List S) (plans : List (Becoming.ContingentPlans.Plan Q A)) {p : Becoming.ContingentPlans.Plan Q A},
+  Becoming.ContingentPlans.choose m states plans = some p →
+    states ≠ [] ∧ p ∈ plans ∧ ∀ (s : S), s ∈ states → Becoming.ContingentPlans.Completes m p s
+@Becoming.ContingentPlans.branch_congr : ∀ {Q A : Type} (p : Becoming.ContingentPlans.Plan Q A) {a b : Bool},
+  a = b → Becoming.ContingentPlans.branch p a = Becoming.ContingentPlans.branch p b
+@Becoming.ContingentPlans.branch_incompatible : ∀ {Q A : Type} (p : Becoming.ContingentPlans.Plan Q A) (answer : Bool)
+  (required₁ required₂ : A → Prop),
+  (∀ (a : A), required₁ a → ¬required₂ a) →
+    ¬(required₁ (Becoming.ContingentPlans.branch p answer) ∧ required₂ (Becoming.ContingentPlans.branch p answer))

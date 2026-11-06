@@ -299,7 +299,6 @@
         "Becoming.SelectionTerm.Generations.moved_by_selection",
         "Becoming.SelectionTerm.Generations.moved_by_transmission",
         "Becoming.SelectionTerm.Generations.moved_unbalanced",
-        "Becoming.SelectionTerm.Generations.nil_of_length_zero",
         "Becoming.SelectionTerm.Generations.not_lower",
         "Becoming.SelectionTerm.Generations.not_lower_step",
         "Becoming.SelectionTerm.Generations.offspringNumber",
@@ -336,14 +335,11 @@
         "Becoming.SelectionTerm.eq_iff_of_balance",
         "Becoming.SelectionTerm.exceeds_iff",
         "Becoming.SelectionTerm.excess_add_left",
-        "Becoming.SelectionTerm.excess_of_le",
-        "Becoming.SelectionTerm.excess_same",
         "Becoming.SelectionTerm.excess_self_add",
         "Becoming.SelectionTerm.half",
         "Becoming.SelectionTerm.le_of_mul_le_mul",
         "Becoming.SelectionTerm.lowered_exact",
         "Becoming.SelectionTerm.lt_iff_of_balance",
-        "Becoming.SelectionTerm.lt_of_mul_lt_mul",
         "Becoming.SelectionTerm.none_iff",
         "Becoming.SelectionTerm.offspring_covariation",
         "Becoming.SelectionTerm.pair_balance",
@@ -361,10 +357,9 @@
         "Becoming.SelectionTerm.selection_none_iff",
         "Becoming.SelectionTerm.share_le_of_below",
         "Becoming.SelectionTerm.swap_both",
-        "Becoming.SelectionTerm.total_zero_of",
         "Becoming.SelectionTerm.weighted"
       ],
-      "sha256": "d15e7af183adb0363e93f83759c0e2a9f4d1f94b40f331067e6d339d431dc8fe"
+      "sha256": "8b990ef2bdabd78168685b33930779185f54bcaf475ac8252613324b662bf628"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Evolution.lean",
@@ -374,12 +369,16 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
       "role": "proof",
-      "sha256": "3a3b9b0150342960d89b376698984b369fc192e93a7c261db6908ca63f5a9d0d"
+      "sha256": "537e5f614427fbb047400d2dc901a1ead289724ad69d7fe1e803d5522e1248a9",
+      "declarations": [
+        "Becoming.Flow.excess_zero_of_le",
+        "Becoming.excess_self"
+      ]
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
       "role": "proof",
-      "sha256": "25317ae599247630ed2e2884f7a756ab29e9d2514623ed32d6f977551cbce0f6"
+      "sha256": "94e9be0baad1667d0d06acdfa757543c292c054c3a7eeaefccbe10b43bd321b5"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T072647.879143Z/verification.json",
@@ -395,13 +394,43 @@
       "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
       "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
+      "declarations": [
+        "Becoming.nil_of_length_zero",
+        "Becoming.Naturals.lt_of_mul_lt_mul_left",
+        "Becoming.total_eq_zero"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T072647.879143Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.SelectionTerm",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Change",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -426,6 +455,10 @@
     {
       "en": "20 October 2026, EV8: Becoming.Drift bounds the samplings undoing a step that Raises (record drift-offspring-sampled, study section 276); this record's laws and their statements are unchanged.",
       "zh": "2026年10月20日，EV8：Becoming.Drift 为撤销一步 Raises 的抽样给出界（记录 drift-offspring-sampled，研究第 276 节）；本记录的定律及其陈述不变。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }

@@ -273,7 +273,9 @@ def hear (p : I → I) (rule : M → (F → V) → (F → V) → F → V) (X : I
     I → M → F → V :=
   fun i m w => rule m (X i m) (X (p i) m) w
 
-/-- The rule reads the counts count by count. -/
+/-- The rule reads the counts count by count: counts that agree at every word give one result. This
+is extensionality of the rule in its counts, stated because no axiom of function extensionality is
+used; it restricts nothing else. -/
 def ReadsCountByCount (rule : M → (F → V) → (F → V) → F → V) : Prop :=
   ∀ m c c' d d', (∀ w, c w = c' w) → (∀ w, d w = d' w) → ∀ w, rule m c d w = rule m c' d' w
 
@@ -470,16 +472,6 @@ end FreeEnergy
 
 namespace Witness
 
-/-- The exchange swaps the agents, an involution. -/
-theorem swap_involution : ∀ i : Bool, (!!i) = i
-  | false => rfl
-  | true => rfl
-
-/-- The renaming swaps the words, moving each. -/
-theorem swap_moves : ∀ y : Bool, (!y) ≠ y
-  | false => Bool.noConfusion
-  | true => Bool.noConfusion
-
 /-- Opposite counts: agent `false` counts `2` for `false` and `1` for `true`, agent `true` the
 reverse. -/
 def opposite : Bool → Unit → Bool → Nat := fun i _ w => bif i == w then 2 else 1
@@ -508,7 +500,7 @@ theorem added_tie :
     | false, true => rfl
     | true, false => rfl
     | true, true => rfl,
-   fun i => (addSpeaker_tied swap_involution opposite_symmetric (m := ()) swap_moves 0 i).2⟩
+   fun i => (addSpeaker_tied ListTests.not_not opposite_symmetric (m := ()) ListTests.not_ne_self 0 i).2⟩
 
 /-- No counts at all. -/
 def zero : Bool → Unit → Bool → Nat := fun _ _ _ => 0

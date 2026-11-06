@@ -1,7 +1,5 @@
 import Becoming.Typicality
 import Becoming.Parting
-import Becoming.CrossSituational
-import Becoming.FinerTraces
 
 /-!
 # Typical runs: what counting says of the prefixes of runs of free branching
@@ -180,7 +178,7 @@ theorem distinct_extend : ∀ {ws : List (List Bool)}, Distinct ws →
     show ¬ (true :: w) ∈ (false :: w) :: Typicality.extend ws ∧
         (¬ (false :: w) ∈ Typicality.extend ws ∧
           Distinct (Typicality.extend ws)) from
-    ⟨fun mem => match mem_cons_split mem with
+    ⟨fun mem => match mem_cons_cases mem with
       | .inl same => Bool.noConfusion (List.cons.inj same).1
       | .inr inside => fresh true inside,
      ⟨fresh false, distinct_extend rest⟩⟩

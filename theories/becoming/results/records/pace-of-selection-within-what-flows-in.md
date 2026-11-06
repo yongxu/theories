@@ -137,6 +137,7 @@ Malthus (1798), the main neighbour: reproduction limited by what sustains it, re
 | integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue5-pace-of-selection/NOTE.md) | — |
 | review | [REVIEW-UE5.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue5-pace-of-selection/REVIEW-UE5.md) | — |
 | statement | [04-LIFE.md](../../chapters/04-LIFE.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `The pace of selection, within what flows into the lineages carrying an amount`, `选择之速，不过流入携带该量之谱系者`, `pace of selection within the inflow`, `one substitution under a cap on each parent`, `Becoming.SelectionPace.response_within_carried`
 

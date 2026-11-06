@@ -161,7 +161,7 @@ def drawnCourse (a p c hi lo : Nat) (pos : 0 < a) (reads : Nat → Bool) (x : Ca
 the share order than the other exactly where what comes back in it is not less. -/
 theorem shaped_le_iff {a s s' p c : Nat} {pos : 0 < a} :
     CarrierCounts.order.le (RuleShaping.shaped a s p c pos) (RuleShaping.shaped a s' p c pos) ↔ s ≤ s' :=
-  ⟨fun le => Naturals.le_of_add_le_add_left (Naturals.le_of_add_le_add_right
+  ⟨fun le => Naturals.le_of_add_le_add_left (le_of_add_le_add_right _
       (Nat.le_of_mul_le_mul_right (show (a + s + p) * (a + c + p) ≤ (a + s' + p) * (a + c + p) from le)
         (RuleShaping.shaped a s p c pos).other_pos)),
    fun le => Nat.mul_le_mul_right _ (Nat.add_le_add_right (Nat.add_le_add_left le a) p)⟩
@@ -203,7 +203,7 @@ theorem drawn_favours_iff {a p c hi lo : Nat} {pos : 0 < a} {x : CarrierCounts} 
   show x.carrier * (a + c + p) + x.other * (a + c + p) ≤ x.carrier * (a + hi + p) + x.other * (a + lo + p) ↔
     x.carrier * c + x.other * c ≤ x.carrier * hi + x.other * lo
   rw [drawn_split x.carrier x.other a p c c, drawn_split x.carrier x.other a p hi lo]
-  exact ⟨Naturals.le_of_add_le_add_right, fun le => Nat.add_le_add_right le _⟩
+  exact ⟨le_of_add_le_add_right _, fun le => Nat.add_le_add_right le _⟩
 
 /-- **At a share, the rule read favours the others strictly exactly where what the readers read as
 coming back to the shapers is short of the cost**: `x.carrier * hi + x.other * lo < x.carrier * c +
@@ -467,8 +467,6 @@ theorem drawn_falls {a p c hi lo : Nat} {pos : 0 < a} (step : lo ≤ hi) {reads 
 
 namespace CriticalMass
 
-theorem one_pos : 0 < 1 := Nat.zero_lt_one
-
 /-- One shaper to each other. -/
 def even : CarrierCounts := ⟨1, 1, Nat.zero_lt_one⟩
 
@@ -481,58 +479,58 @@ def oneToThree : CarrierCounts := ⟨1, 3, Nat.zero_lt_succ 2⟩
 /-- **From one to one, the rule read favours the shapers strictly**: with `a = 1`, nothing shared, a
 cost of one, three read as coming back where a shaper reads and none where another does, each shaper
 leaves five and each other four. -/
-theorem even_favours : (drawn 1 0 1 3 0 one_pos even).other < (drawn 1 0 1 3 0 one_pos even).carrier := by
+theorem even_favours : (drawn 1 0 1 3 0 Nat.one_pos even).other < (drawn 1 0 1 3 0 Nat.one_pos even).carrier := by
   decide
 
 /-- **From one to three, it favours the others strictly**: each shaper leaves seven and each other
 eight. -/
 theorem few_disfavours :
-    (drawn 1 0 1 3 0 one_pos oneToThree).carrier < (drawn 1 0 1 3 0 one_pos oneToThree).other := by
+    (drawn 1 0 1 3 0 Nat.one_pos oneToThree).carrier < (drawn 1 0 1 3 0 Nat.one_pos oneToThree).other := by
   decide
 
 /-- **At one to two, each kind leaves alike**, six each: the critical mass. -/
-theorem at_mass : (drawn 1 0 1 3 0 one_pos oneToTwo).carrier = (drawn 1 0 1 3 0 one_pos oneToTwo).other :=
+theorem at_mass : (drawn 1 0 1 3 0 Nat.one_pos oneToTwo).carrier = (drawn 1 0 1 3 0 Nat.one_pos oneToTwo).other :=
   rfl
 
 /-- From one to one the course is locked from the start and the shapers' share is never below one to
 one, under every schedule of reading. -/
 theorem even_locks {reads : Nat → Bool} (k : Nat) :
-    Locked CarrierCounts.order CarrierCounts.favours (drawnRead 1 0 1 3 0 one_pos)
-        (drawnCourse 1 0 1 3 0 one_pos reads even k) ∧
-      CarrierCounts.order.le even (drawnCourse 1 0 1 3 0 one_pos reads even k).1 :=
+    Locked CarrierCounts.order CarrierCounts.favours (drawnRead 1 0 1 3 0 Nat.one_pos)
+        (drawnCourse 1 0 1 3 0 Nat.one_pos reads even k) ∧
+      CarrierCounts.order.le even (drawnCourse 1 0 1 3 0 Nat.one_pos reads even k).1 :=
   have locks := drawn_locks (reads := reads) (Nat.zero_le 3) (Nat.le_of_lt even_favours) k
   ⟨locks.1, locks.2.1⟩
 
 /-- From one to one the shapers' share rises strictly at every step. -/
 theorem even_rises {reads : Nat → Bool} (t : Nat) :
-    (drawnCourse 1 0 1 3 0 one_pos reads even t).1.carrier *
-        (drawnCourse 1 0 1 3 0 one_pos reads even (t + 1)).1.other <
-      (drawnCourse 1 0 1 3 0 one_pos reads even (t + 1)).1.carrier *
-        (drawnCourse 1 0 1 3 0 one_pos reads even t).1.other :=
+    (drawnCourse 1 0 1 3 0 Nat.one_pos reads even t).1.carrier *
+        (drawnCourse 1 0 1 3 0 Nat.one_pos reads even (t + 1)).1.other <
+      (drawnCourse 1 0 1 3 0 Nat.one_pos reads even (t + 1)).1.carrier *
+        (drawnCourse 1 0 1 3 0 Nat.one_pos reads even t).1.other :=
   drawn_rises (Nat.zero_le 3) even_favours Nat.zero_lt_one t
 
 /-- From one to three the course is locked the other way at every step and the shapers' share is
 never above one to three, under every schedule of reading. -/
 theorem few_locks {reads : Nat → Bool} (k : Nat) :
-    Locked (reverse CarrierCounts.order) CarrierCounts.disfavours (drawnRead 1 0 1 3 0 one_pos)
-        (drawnCourse 1 0 1 3 0 one_pos reads oneToThree k) ∧
-      CarrierCounts.order.le (drawnCourse 1 0 1 3 0 one_pos reads oneToThree k).1 oneToThree :=
+    Locked (reverse CarrierCounts.order) CarrierCounts.disfavours (drawnRead 1 0 1 3 0 Nat.one_pos)
+        (drawnCourse 1 0 1 3 0 Nat.one_pos reads oneToThree k) ∧
+      CarrierCounts.order.le (drawnCourse 1 0 1 3 0 Nat.one_pos reads oneToThree k).1 oneToThree :=
   have locks := drawn_from_below (reads := reads) (Nat.zero_le 3) (Nat.le_of_lt few_disfavours) k
   ⟨locks.1, locks.2.1⟩
 
 /-- From one to three the shapers' share falls strictly at every step. -/
 theorem few_falls {reads : Nat → Bool} (t : Nat) :
-    (drawnCourse 1 0 1 3 0 one_pos reads oneToThree (t + 1)).1.carrier *
-        (drawnCourse 1 0 1 3 0 one_pos reads oneToThree t).1.other <
-      (drawnCourse 1 0 1 3 0 one_pos reads oneToThree t).1.carrier *
-        (drawnCourse 1 0 1 3 0 one_pos reads oneToThree (t + 1)).1.other :=
+    (drawnCourse 1 0 1 3 0 Nat.one_pos reads oneToThree (t + 1)).1.carrier *
+        (drawnCourse 1 0 1 3 0 Nat.one_pos reads oneToThree t).1.other <
+      (drawnCourse 1 0 1 3 0 Nat.one_pos reads oneToThree t).1.carrier *
+        (drawnCourse 1 0 1 3 0 Nat.one_pos reads oneToThree (t + 1)).1.other :=
   drawn_falls (Nat.zero_le 3) few_disfavours Nat.zero_lt_one t
 
 /-- **At the critical mass the share stays where it is**: from one to two the shapers' share is
 neither below nor above one to two at any step, under every schedule of reading. -/
 theorem at_mass_stays {reads : Nat → Bool} (k : Nat) :
-    CarrierCounts.order.le oneToTwo (drawnCourse 1 0 1 3 0 one_pos reads oneToTwo k).1 ∧
-      CarrierCounts.order.le (drawnCourse 1 0 1 3 0 one_pos reads oneToTwo k).1 oneToTwo :=
+    CarrierCounts.order.le oneToTwo (drawnCourse 1 0 1 3 0 Nat.one_pos reads oneToTwo k).1 ∧
+      CarrierCounts.order.le (drawnCourse 1 0 1 3 0 Nat.one_pos reads oneToTwo k).1 oneToTwo :=
   ⟨(drawn_locks (reads := reads) (Nat.zero_le 3) (Nat.le_of_eq at_mass.symm) k).2.1,
    (drawn_from_below (reads := reads) (Nat.zero_le 3) (Nat.le_of_eq at_mass) k).2.1⟩
 
@@ -549,26 +547,26 @@ the shapers strictly, five offspring to four; read at every step, the course is 
 and the rule in force at step 2, twenty-one to eighteen, is below the start's. `drawn_locks` needs
 `lo ≤ hi`. -/
 theorem not_locked :
-    (drawn 1 0 1 0 3 CriticalMass.one_pos CriticalMass.even).other <
-        (drawn 1 0 1 0 3 CriticalMass.one_pos CriticalMass.even).carrier ∧
-      ¬ Locked CarrierCounts.order CarrierCounts.favours (drawnRead 1 0 1 0 3 CriticalMass.one_pos)
-          (drawnCourse 1 0 1 0 3 CriticalMass.one_pos (fun _ => true) CriticalMass.even 1) ∧
-      ¬ CarrierCounts.order.le (drawn 1 0 1 0 3 CriticalMass.one_pos CriticalMass.even)
-          (drawnCourse 1 0 1 0 3 CriticalMass.one_pos (fun _ => true) CriticalMass.even 2).2 :=
+    (drawn 1 0 1 0 3 Nat.one_pos CriticalMass.even).other <
+        (drawn 1 0 1 0 3 Nat.one_pos CriticalMass.even).carrier ∧
+      ¬ Locked CarrierCounts.order CarrierCounts.favours (drawnRead 1 0 1 0 3 Nat.one_pos)
+          (drawnCourse 1 0 1 0 3 Nat.one_pos (fun _ => true) CriticalMass.even 1) ∧
+      ¬ CarrierCounts.order.le (drawn 1 0 1 0 3 Nat.one_pos CriticalMass.even)
+          (drawnCourse 1 0 1 0 3 Nat.one_pos (fun _ => true) CriticalMass.even 2).2 :=
   ⟨by decide,
    fun lock =>
-    (show ¬ ((drawnCourse 1 0 1 0 3 CriticalMass.one_pos (fun _ => true) CriticalMass.even 1).2.carrier *
-          (drawn 1 0 1 0 3 CriticalMass.one_pos
-            (drawnCourse 1 0 1 0 3 CriticalMass.one_pos (fun _ => true) CriticalMass.even 1).1).other ≤
-        (drawn 1 0 1 0 3 CriticalMass.one_pos
-            (drawnCourse 1 0 1 0 3 CriticalMass.one_pos (fun _ => true) CriticalMass.even 1).1).carrier *
-          (drawnCourse 1 0 1 0 3 CriticalMass.one_pos (fun _ => true) CriticalMass.even 1).2.other)
+    (show ¬ ((drawnCourse 1 0 1 0 3 Nat.one_pos (fun _ => true) CriticalMass.even 1).2.carrier *
+          (drawn 1 0 1 0 3 Nat.one_pos
+            (drawnCourse 1 0 1 0 3 Nat.one_pos (fun _ => true) CriticalMass.even 1).1).other ≤
+        (drawn 1 0 1 0 3 Nat.one_pos
+            (drawnCourse 1 0 1 0 3 Nat.one_pos (fun _ => true) CriticalMass.even 1).1).carrier *
+          (drawnCourse 1 0 1 0 3 Nat.one_pos (fun _ => true) CriticalMass.even 1).2.other)
       by decide) lock.2,
    fun le =>
-    (show ¬ ((drawn 1 0 1 0 3 CriticalMass.one_pos CriticalMass.even).carrier *
-          (drawnCourse 1 0 1 0 3 CriticalMass.one_pos (fun _ => true) CriticalMass.even 2).2.other ≤
-        (drawnCourse 1 0 1 0 3 CriticalMass.one_pos (fun _ => true) CriticalMass.even 2).2.carrier *
-          (drawn 1 0 1 0 3 CriticalMass.one_pos CriticalMass.even).other)
+    (show ¬ ((drawn 1 0 1 0 3 Nat.one_pos CriticalMass.even).carrier *
+          (drawnCourse 1 0 1 0 3 Nat.one_pos (fun _ => true) CriticalMass.even 2).2.other ≤
+        (drawnCourse 1 0 1 0 3 Nat.one_pos (fun _ => true) CriticalMass.even 2).2.carrier *
+          (drawn 1 0 1 0 3 Nat.one_pos CriticalMass.even).other)
       by decide) le⟩
 
 end Against

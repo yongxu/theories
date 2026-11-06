@@ -130,6 +130,7 @@ Formations and conditions are analytic roles in one unfolding, not independent e
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T085101.429997Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T185431.953044Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Becoming.falls_not_recurring`, `Becoming.Run.not_of_depletion`, `Becoming.no_execution_of_depletion`, `Becoming.Run.renewal_recurs`, `Becoming.Conditions.drawdown_not_recurring`, `Becoming.Renewable.class_belongs_to_the_run`, `Becoming.Conditions.living_iff_relational`
 

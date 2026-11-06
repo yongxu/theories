@@ -1,0 +1,29 @@
+@Becoming.«不出当且仅当不外者闭» : ∀ {α : Type u_1} {R : Becoming.«际» α} {P : α → Prop},
+  Becoming.«不出» R P ↔ Becoming.«闭» R fun y => ¬¬P y
+@Becoming.«不外者内则不出当且仅当闭» : ∀ {α : Type u_1} {R : Becoming.«际» α} {P : α → Prop},
+  (∀ (y : α), ¬¬P y → P y) → (Becoming.«不出» R P ↔ Becoming.«闭» R P)
+Becoming.«不出皆闭当且仅当排中» : (∀ (α : Type) (R : Becoming.«际» α) (P : α → Prop), Becoming.«不出» R P → Becoming.«闭» R P) ↔
+  ∀ (Q : Prop), Q ∨ ¬Q
+@Becoming.«逆之不出当且仅当外者不出» : ∀ {α : Type u_1} {R : Becoming.«际» α} {P : α → Prop},
+  Becoming.«不出» (Becoming.«逆» R) P ↔ Becoming.«不出» R fun y => ¬P y
+@Becoming.«对称则不出当且仅当逆不出» : ∀ {α : Type u_1} {R : Becoming.«际» α} {P : α → Prop},
+  Becoming.«则» R (Becoming.«逆» R) → (Becoming.«不出» R P ↔ Becoming.«不出» (Becoming.«逆» R) P)
+Becoming.«闭而有入之例» : ∃ R P, Becoming.«闭» R P ∧ (∃ x y, ¬P x ∧ P y ∧ R x y) ∧ ¬Becoming.«则» R (Becoming.«逆» R)
+@Becoming.«内至外之线则非不出» : ∀ {α : Type u_1} {R E : Becoming.«际» α} {P : α → Prop} {x y : α},
+  Becoming.«相续» R E x y → P x → ¬P y → ¬Becoming.«不出» R P
+@Becoming.«内至外之线有出步» : ∀ {α : Type u_1} {R E : Becoming.«际» α} {P : α → Prop},
+  (∀ (u v : α), Becoming.«续» R E u v → (P u → P v) ∨ P u ∧ ¬P v) →
+    ∀ {x y : α},
+      Becoming.«相续» R E x y →
+        P x →
+          ¬P y →
+            ∃ u v,
+              Becoming.«续» R E u v ∧ (P u ∧ ¬P v) ∧ (x = u ∨ Becoming.«相续» R E x u) ∧ (v = y ∨ Becoming.«相续» R E v y)
+@Becoming.«定则内至外之线有出步» : ∀ {α : Type u_1} {R E : Becoming.«际» α} {P : α → Prop},
+  (∀ (a : α), P a ∨ ¬P a) →
+    ∀ {x y : α},
+      Becoming.«相续» R E x y →
+        P x →
+          ¬P y →
+            ∃ u v,
+              Becoming.«续» R E u v ∧ (P u ∧ ¬P v) ∧ (x = u ∨ Becoming.«相续» R E x u) ∧ (v = y ∨ Becoming.«相续» R E v y)

@@ -1,0 +1,14 @@
+import Becoming.GrammarReadings
+#check @Becoming.«化之二说同形»
+#check @Becoming.«化为有缘之成坏»
+#check @Becoming.«同于为类»
+#check @Becoming.«同于不必传递»
+#check @Becoming.«相续之末有前»
+#check @Becoming.«复者住»
+#check @Becoming.«有常则往不穷»
+#check @Becoming.«两向有常有前则通»
+#check @Becoming.«两向有常则通»
+#check @Becoming.«有常而不通»
+#check @Becoming.«昼夜往来不穷»
+#check @Becoming.«非一非异»
+#check @Becoming.«因灭而续»

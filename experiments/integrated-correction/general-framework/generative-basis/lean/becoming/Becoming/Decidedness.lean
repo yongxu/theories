@@ -1,5 +1,4 @@
 import Becoming.Space
-import Becoming.Recurrence
 
 /-!
 # Decidedness: what a count needs, and where
@@ -1054,7 +1053,7 @@ theorem Decided.exists_listed {β : Type u} {P : β → Prop} :
     | .inl holds => .inl ⟨b, .head l, holds⟩
     | .inr fails => match Decided.exists_listed (l := l) fun c mem => decided c (.tail b mem) with
       | .inl ⟨c, mem, holds⟩ => .inl ⟨c, .tail b mem, holds⟩
-      | .inr absent => .inr fun ⟨c, mem, holds⟩ => match mem_cons_split mem with
+      | .inr absent => .inr fun ⟨c, mem, holds⟩ => match mem_cons_cases mem with
         | .inl same => fails (Eq.subst (motive := P) same holds)
         | .inr mem => absent ⟨c, mem, holds⟩
 
@@ -1077,18 +1076,6 @@ end Outcomes
 end Becoming
 
 /-! ## Lists joined in either grouping (moved from `Becoming.Joining`) -/
-
-namespace Becoming
-
-universe u v w u' v'
-
-namespace Joining
-
-variable {F : Type u} {G : Type v} {K : Type u'} {K' : Type v'}
-
-end Joining
-
-end Becoming
 
 /-! ## Membership kept under reordering (moved from `Becoming.Coverage`) -/
 

@@ -81,8 +81,8 @@
         "Becoming.Presence.count_inj",
         "Becoming.Presence.count_reaches",
         "Becoming.Presence.count_add_not",
-        "Becoming.Presence.not_false_of_true",
-        "Becoming.Presence.bool_absurd"
+        "Becoming.ListTests.not_false_of_true",
+        "Becoming.ListTests.bool_absurd"
       ]
     },
     {
@@ -119,7 +119,7 @@
       "zh": "检验之表：前 n 数上之每一检验，其有表不可否证，可判定者有表，向下封闭之检验之表给出自然编号（Tabulates、table_yes、table_no、table_not_not、table_of、natural_of_table 等）；界下某数具一性质，各数弱可判定则此亦弱可判定（decided_true、weakly_exists_below）。",
       "declarations": [
         "Becoming.Presence.Tabulates",
-        "Becoming.Presence.beq_false_of_ne",
+        "Becoming.ListTests.beq_false_of_ne",
         "Becoming.Presence.table_yes",
         "Becoming.Presence.table_no",
         "Becoming.Presence.table_not_not",
@@ -127,7 +127,7 @@
         "Becoming.Presence.natural_of_table",
         "Becoming.Presence.table_false",
         "Becoming.Presence.down_closed",
-        "Becoming.Presence.decided_true",
+        "Becoming.LLPO.decided_true",
         "Becoming.Presence.weakly_exists_below"
       ]
     },
@@ -627,8 +627,6 @@
         "Becoming.Presence.before_some_iff_weakly",
         "Becoming.Presence.below_four",
         "Becoming.Presence.below_three",
-        "Becoming.Presence.beq_false_of_ne",
-        "Becoming.Presence.bool_absurd",
         "Becoming.Presence.bornBy",
         "Becoming.Presence.born_closed",
         "Becoming.Presence.born_stem",
@@ -647,7 +645,6 @@
         "Becoming.Presence.courseOf",
         "Becoming.Presence.courseOf_grows",
         "Becoming.Presence.courseOf_isomorphic",
-        "Becoming.Presence.decided_true",
         "Becoming.Presence.downTo",
         "Becoming.Presence.downTo_before",
         "Becoming.Presence.downTo_closed",
@@ -699,7 +696,6 @@
         "Becoming.Presence.natural_of_table",
         "Becoming.Presence.natural_orients",
         "Becoming.Presence.natural_relabels",
-        "Becoming.Presence.not_false_of_true",
         "Becoming.Presence.of_lt_zero_add",
         "Becoming.Presence.only_link_least_iff_em",
         "Becoming.Presence.only_link_of_present_every",
@@ -758,7 +754,7 @@
         "Becoming.Presence.weakly_exists_below",
         "Becoming.Presence.weakly_of_deMorgan"
       ],
-      "sha256": "e4f148e78595549e6f7f2cc3cb9ef907fbd158cac7aaca8b3eaddf2fe8603189"
+      "sha256": "eeb8408c26c071c616b4d916793247d27e732c48bd4e8de2092b5455f61047fb"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CausalGrowth.lean",
@@ -768,22 +764,22 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OrderNormal.lean",
       "role": "proof",
-      "sha256": "f233c6800d90c4554f572a85d5ce73b7e48107bfc1b9012ec4a8490d6f78f1e1"
+      "sha256": "1a6b75237782cf9eeb7522a4064f48bee38fae2c4c97cd5b536c6a3eedcc727b"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reordering.lean",
       "role": "proof",
-      "sha256": "72adbc08546ed505f267db376a96975728150ed719f941491095075bfe688f93"
+      "sha256": "cf8c20c4f4f8c9f38c095495c6423238270a428f38a42dd9c98e189275afb193"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
       "role": "proof",
-      "sha256": "0052020d3cb699d79ff953af85d43535fbfa6b652e23c152cbac00723b83463c"
+      "sha256": "247dc207637fd2878b48187bad6824ceb4f795da93db91a3f971cafb796d5cf1"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Decidedness.lean",
       "role": "proof",
-      "sha256": "374d95c6cc5745fc01efc86814f07c6a9826aa95d20571ad80e1f9ba737e8eca"
+      "sha256": "e40baeb8f754619ce00f33a1fc47635a00e4e29b1ba9428e3a2c8a54df66c20c"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T054831.888463Z/verification.json",
@@ -809,13 +805,51 @@
       "path": "theories/becoming/chapters/01-ROOT.md",
       "role": "statement",
       "sha256": "9a0ede895d2df94d04b13c439fa14bd54685adc28611a5090b6daec57298a781"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
+      "declarations": [
+        "Becoming.ListTests.beq_false_of_ne",
+        "Becoming.ListTests.bool_absurd",
+        "Becoming.ListTests.not_false_of_true"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Likeness.lean",
+      "role": "proof",
+      "sha256": "a96c46f67bdb2588153b738a8f8b3a8fe0eae069a68a2dbb476652b30e021020",
+      "declarations": [
+        "Becoming.LLPO.decided_true"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Presence.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T054831.888463Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Presence",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Likeness.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Likeness",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -828,6 +862,10 @@
     {
       "en": "28 October 2026, board item UE15 (study section 438): related to reorderings-as-courses-of-growth; no statement, next step or declaration changed.",
       "zh": "2026年10月28日，工作板条目 UE15（研究第 438 节）：与 reorderings-as-courses-of-growth 相关联；无一陈述、下一步或声明改变。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }

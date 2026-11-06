@@ -256,7 +256,7 @@ theorem born_within_inflow {t m : Nat} {es ps : List X} {kids : X → List X}
         (Nat.le_of_eq (total_append (W.level (t + 1)) (ps.flatMap kids) es).symm))
   have rises : W.stock (es ++ ps.flatMap kids) (t + 1) ≤
       W.stock (es ++ ps.flatMap kids) t + L.inflow (es ++ ps.flatMap kids) t :=
-    Naturals.le_of_add_le_add_right (k := L.uptake (es ++ ps.flatMap kids) t)
+    le_of_add_le_add_right (L.uptake (es ++ ps.flatMap kids) t)
       (Nat.le_trans (Nat.le_of_eq balanced.over)
         (Nat.le_trans (Nat.add_le_add_left (L.replenishment_le_inflow _ t) _)
           (Nat.le_of_eq ((congrArg (W.stock (es ++ ps.flatMap kids) t + ·)
@@ -484,8 +484,8 @@ theorem total_lineage (q : X → Nat) (kids : X → List X) (ps : List X) :
 
 /-- The excess of two sums is at most the sum of the excesses. -/
 theorem excess_add_le (a b c d : Nat) : excess (a + b) (c + d) ≤ excess a c + excess b d :=
-  Flow.excess_le_of_le_add
-    (Nat.le_trans (Nat.add_le_add (Flow.le_add_excess a c) (Flow.le_add_excess b d))
+  excess_le_of_le_add
+    (Nat.le_trans (Nat.add_le_add (le_add_excess a c) (le_add_excess b d))
       (Nat.le_of_eq (Nat.add_add_add_comm c (excess a c) d (excess b d))))
 
 /-- The excess of two totals over a list is at most the total of the excesses. -/

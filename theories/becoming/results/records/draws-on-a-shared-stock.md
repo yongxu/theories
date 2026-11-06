@@ -84,6 +84,7 @@ In the source model, each draw is the work an activity needs to stop without its
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/market-generativity/meta-attractor/shared-stock-instances-checks/20261020T161930.665727Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/market-generativity/meta-attractor/shared-stock-instances-checks/20261031T132907.790736Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `CorrectionDependence.every_selection_within_iff_total_within`, `aggregate-exit-funding`, `Becoming.every_event_within_iff`, `Becoming.entries_within_not_together`, `Becoming.Courses.supported_not_together`
 

@@ -1061,7 +1061,7 @@ theorem change_bound : ChangeBound 0 2 (fun _ => 1) (change s) (change s) := fun
 
 /-- At the first `true`, one leaves and one joins. -/
 theorem at_first {m : Nat} (c : clear s m = true) (yes : s m = true) : change s m = 1 :=
-  congrArg (fun b => mark (b = true)) (Clear.and_both _ _ c yes)
+  congrArg (fun b => mark (b = true)) (bool_and_true c yes)
 
 /-- A step after which no first `true` comes decides `s`. -/
 theorem decide_of_end {E : Nat} (quiet : ∀ m, E ≤ m → clear s m = true → s m = true → False) :

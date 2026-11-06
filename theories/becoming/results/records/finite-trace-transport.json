@@ -116,8 +116,8 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/GenerativeCore.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261014T100026.593496Z/verification.json",
-      "sha256_pointer": "/source_sha256/GenerativeCore",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/verification.json",
+      "sha256_pointer": "/modules/0/source_sha256",
       "success_pointer": "/status",
       "success_value": "passed"
     }

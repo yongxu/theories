@@ -1,0 +1,24 @@
+import Becoming.Retrodiction
+#print axioms Becoming.Retrodiction.Record
+#print axioms Becoming.Retrodiction.Fits
+#print axioms Becoming.Retrodiction.acquire
+#print axioms Becoming.Retrodiction.Separated
+#print axioms Becoming.Retrodiction.actual_candidate
+#print axioms Becoming.Retrodiction.fits_iff_same
+#print axioms Becoming.Retrodiction.not_fits_of_separated
+#print axioms Becoming.Retrodiction.fits_or_separated
+#print axioms Becoming.Retrodiction.reading_right_iff
+#print axioms Becoming.Retrodiction.agreed_reading_actual
+#print axioms Becoming.Retrodiction.look_right_iff
+#print axioms Becoming.Retrodiction.changes
+#print axioms Becoming.Retrodiction.changes_split
+#print axioms Becoming.Retrodiction.changes_le
+#print axioms Becoming.Retrodiction.moved_changes
+#print axioms Becoming.Retrodiction.changes_const
+#print axioms Becoming.Retrodiction.bracket
+#print axioms Becoming.Retrodiction.excursion
+#print axioms Becoming.Retrodiction.excursion_changes
+#print axioms Becoming.Retrodiction.bracket_settles_iff
+#print axioms Becoming.Retrodiction.stepAt
+#print axioms Becoming.Retrodiction.step_changes
+#print axioms Becoming.Retrodiction.change_unlocated

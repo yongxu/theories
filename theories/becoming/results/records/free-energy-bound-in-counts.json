@@ -18,10 +18,10 @@
       "en": "Arithmetic in counts proved without the prelude's propositional extensionality: powers of a product, a count to its own power positive, strict cancellation, a power of nothing, strict powers (mul_pow_eq and five more).",
       "zh": "不依前奏之命题外延而证之计数算术：积之幂、计数自乘为正、严格消去、幂为零、严格之幂（mul_pow_eq 等六项）。",
       "declarations": [
-        "Becoming.FreeEnergyCounting.mul_pow_eq",
+        "Becoming.Naturals.mul_pow_eq",
         "Becoming.FreeEnergyCounting.self_pow_pos",
         "Becoming.FreeEnergyCounting.lt_cancel_mul_left",
-        "Becoming.FreeEnergyCounting.lt_cancel_mul_right",
+        "Becoming.Naturals.lt_of_mul_lt_mul_right",
         "Becoming.FreeEnergyCounting.base_zero_of_pow_zero",
         "Becoming.FreeEnergyCounting.pow_succ_lt_pow_succ"
       ]
@@ -314,7 +314,6 @@
         "Becoming.FreeEnergyCounting.given_record_eq_iff_share",
         "Becoming.FreeEnergyCounting.joint",
         "Becoming.FreeEnergyCounting.lt_cancel_mul_left",
-        "Becoming.FreeEnergyCounting.lt_cancel_mul_right",
         "Becoming.FreeEnergyCounting.mean_step",
         "Becoming.FreeEnergyCounting.mean_step_identity",
         "Becoming.FreeEnergyCounting.mean_step_lhs",
@@ -324,7 +323,6 @@
         "Becoming.FreeEnergyCounting.mean_two_ident",
         "Becoming.FreeEnergyCounting.mean_two_strict",
         "Becoming.FreeEnergyCounting.mean_two_sum",
-        "Becoming.FreeEnergyCounting.mul_pow_eq",
         "Becoming.FreeEnergyCounting.no_counts_reach",
         "Becoming.FreeEnergyCounting.nothing_record_reach_all",
         "Becoming.FreeEnergyCounting.posterior_counts_reach",
@@ -348,7 +346,7 @@
         "Becoming.FreeEnergyCounting.zero_of_total_zero",
         "Becoming.FreeEnergyCounting.zero_weights_reach"
       ],
-      "sha256": "02621f3b01f7ced5818e004f95798dbdc76cb3da1d26f224092bb3c68a74fb50"
+      "sha256": "0e73703e239e2bb2a11d256b13aefe9fc2c3eb06f3be7f3041fddc8aefcf2f77"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionalWeights.lean",
@@ -358,7 +356,11 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
       "role": "proof",
-      "sha256": "3aadd812b74b7b0563aa3f7daa19a7d5b8da6f1bc55af5cc6bf64fb824f385d7"
+      "sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
+      "declarations": [
+        "Becoming.Naturals.lt_of_mul_lt_mul_right",
+        "Becoming.Naturals.mul_pow_eq"
+      ]
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T210603.495422Z/verification.json",
@@ -412,13 +414,32 @@
       "role": "receipt",
       "sha256": "58ba9213b37a9bb07551fb1fe5e0f5e49c60458002a28a3a55fb5faa0eda33a2",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T135137.430317Z/verification.json",
+      "role": "receipt",
+      "sha256": "a81a117f34fdfa4d44ecee3da8ab63099a7febb99c2accbd7b6fc4ec325f2add",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FreeEnergyCounting.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T185431.953044Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T135137.430317Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.FreeEnergyCounting",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -431,6 +452,10 @@
     {
       "en": "30 October 2026, board item UE22 (study section 462): the theorem joining this bound to FreeEnergyReals' is proved there (gap_counts, in free-energy-bounds-surprisal); the first does-not-show item becomes the boundary off the support, the next step drops the join, and the second hypothesis, the correspondence and the related entry name the theorem. No statement, law or declaration changed.",
       "zh": "2026年10月30日，工作板条目 UE22（研究第 462 节）：此界与 FreeEnergyReals 之界相接之定理证于彼处（gap_counts，见 free-energy-bounds-surprisal）；所不示之第一项改为离支撑之界限，下一步删去相接，第二前提、对应与关联条目指明此定理。无一陈述、律或声明改变。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }

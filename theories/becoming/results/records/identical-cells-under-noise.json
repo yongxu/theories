@@ -405,16 +405,16 @@
   ],
   "proof_bindings": [
     {
-      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FreeEnergyGuarantees.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T152859.871907Z/verification.json",
-      "sha256_pointer": "/source_sha256/Becoming.FreeEnergyGuarantees",
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/cells-under-noise-checks/20261031T134056.109386Z/verification.json",
+      "sha256_pointer": "/source_sha256/CellsUnderNoise",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
-      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/cells-under-noise-checks/20261031T134056.109386Z/verification.json",
-      "sha256_pointer": "/source_sha256/CellsUnderNoise",
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FreeEnergyGuarantees.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T152859.871907Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.FreeEnergyGuarantees",
       "success_pointer": "/status",
       "success_value": "passed"
     }

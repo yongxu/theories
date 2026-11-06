@@ -262,7 +262,7 @@ theorem risk_dominant_iff {n : Nat} (some : 0 < n) {pos : 0 < a} :
   show n * (a + c + p) + n * (a + c + p) < n * (a + hi + p) + n * (a + lo + p) ↔ _
   rw [DrawnShaping.drawn_split n n a p c c, DrawnShaping.drawn_split n n a p hi lo,
     ← Nat.left_distrib n c c, ← Nat.left_distrib n hi lo, Nat.two_mul]
-  exact ⟨fun lt => SelectionTerm.lt_of_mul_lt_mul (Nat.lt_of_add_lt_add_right lt),
+  exact ⟨fun lt => Naturals.lt_of_mul_lt_mul_left (Nat.lt_of_add_lt_add_right lt),
     fun lt => Nat.add_lt_add_right (Nat.mul_lt_mul_of_pos_left lt some) _⟩
 
 end Drawn

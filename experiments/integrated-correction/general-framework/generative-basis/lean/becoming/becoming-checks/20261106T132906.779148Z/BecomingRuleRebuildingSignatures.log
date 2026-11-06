@@ -1,0 +1,642 @@
+Becoming.RuleRebuilding.le_add_sub : ∀ (a : Nat) {g t : Nat}, t ≤ g → a ≤ a + g - t
+Becoming.RuleRebuilding.le_add_sub_of_le : ∀ (f : Nat) {t q : Nat}, t ≤ q → f ≤ q + (f - t)
+@Becoming.RuleRebuilding.exists_div : ∀ {d : Nat}, 1 ≤ d → ∀ (L : Nat), ∃ r k, L = r + k * d ∧ r < d
+Becoming.RuleRebuilding.sumL_replicate : ∀ (n a : Nat), Becoming.RuleRebuilding.sumL (List.replicate n a) = n * a
+@Becoming.RuleRebuilding.length_replicate' : ∀ {α : Type} (n : Nat) (a : α), (List.replicate n a).length = n
+@Becoming.RuleRebuilding.keep_cons_replicate : ∀ {α : Type} (n : Nat) (a : α),
+  Becoming.RuleRebuilding.keep n (a :: List.replicate n a) = List.replicate n a
+Becoming.RuleRebuilding.after_replicate : ∀ (l s q : Nat),
+  Becoming.RuleRebuilding.after l (List.replicate s q) = (s - l) * q
+Becoming.RuleRebuilding.after_le_sum : ∀ (l : Nat) (xs : List Nat),
+  Becoming.RuleRebuilding.after l xs ≤ Becoming.RuleRebuilding.sumL xs
+@Becoming.RuleRebuilding.after_zero_of_sum : ∀ {l : Nat} {xs : List Nat},
+  Becoming.RuleRebuilding.sumL xs = 0 → Becoming.RuleRebuilding.after l xs = 0
+@Becoming.RuleRebuilding.after_short : ∀ {l : Nat} {xs : List Nat},
+  xs.length ≤ l → Becoming.RuleRebuilding.after l xs = 0
+Becoming.RuleRebuilding.sum_keep_le : ∀ (n : Nat) (xs : List Nat),
+  Becoming.RuleRebuilding.sumL (Becoming.RuleRebuilding.keep n xs) ≤ Becoming.RuleRebuilding.sumL xs
+@Becoming.RuleRebuilding.length_keep_le : ∀ {α : Type} (n : Nat) (xs : List α),
+  (Becoming.RuleRebuilding.keep n xs).length ≤ n
+@Becoming.RuleRebuilding.length_keep_eq : ∀ {α : Type} (n : Nat) (xs : List α),
+  n ≤ xs.length → (Becoming.RuleRebuilding.keep n xs).length = n
+@Becoming.RuleRebuilding.keep_of_length_le : ∀ {α : Type} (n : Nat) (xs : List α),
+  xs.length ≤ n → Becoming.RuleRebuilding.keep n xs = xs
+@Becoming.RuleRebuilding.keep_keep : ∀ {α : Type} {i n : Nat} (xs : List α),
+  i ≤ n → Becoming.RuleRebuilding.keep i (Becoming.RuleRebuilding.keep n xs) = Becoming.RuleRebuilding.keep i xs
+@Becoming.RuleRebuilding.keep_cons_keep : ∀ {α : Type} (n : Nat) (a : α) (xs : List α),
+  Becoming.RuleRebuilding.keep n (a :: Becoming.RuleRebuilding.keep n xs) = Becoming.RuleRebuilding.keep n (a :: xs)
+@Becoming.RuleRebuilding.keep_append_length : ∀ {α : Type} (l t : List α),
+  Becoming.RuleRebuilding.keep l.length (l ++ t) = l
+@Becoming.RuleRebuilding.each_keep : ∀ {p : Nat → Prop} (n : Nat) {xs : List Nat},
+  Becoming.RuleRebuilding.Each p xs → Becoming.RuleRebuilding.Each p (Becoming.RuleRebuilding.keep n xs)
+@Becoming.RuleRebuilding.sum_le_of_each : ∀ {b n : Nat} {xs : List Nat},
+  Becoming.RuleRebuilding.Each (fun x => x ≤ b) xs → xs.length ≤ n → Becoming.RuleRebuilding.sumL xs ≤ n * b
+@Becoming.RuleRebuilding.sum_ge_of_each : ∀ {b : Nat} {xs : List Nat},
+  Becoming.RuleRebuilding.Each (fun x => b ≤ x) xs → xs.length * b ≤ Becoming.RuleRebuilding.sumL xs
+@Becoming.RuleRebuilding.after_ge_of_each : ∀ {b : Nat} (l : Nat) {xs : List Nat},
+  Becoming.RuleRebuilding.Each (fun x => b ≤ x) xs → (xs.length - l) * b ≤ Becoming.RuleRebuilding.after l xs
+@Becoming.RuleRebuilding.step_ends : ∀ {r : Becoming.RuleRebuilding.Rule} {x : Becoming.RuleRebuilding.St}
+  (m : Becoming.RuleRebuilding.Move),
+  Becoming.RuleRebuilding.Ends r x →
+    Becoming.RuleRebuilding.step r m x = { quota := x.quota, level := 0, holders := [], others := [] }
+@Becoming.RuleRebuilding.step_onward : ∀ {r : Becoming.RuleRebuilding.Rule} {x : Becoming.RuleRebuilding.St}
+  (m : Becoming.RuleRebuilding.Move),
+  ¬Becoming.RuleRebuilding.Ends r x → Becoming.RuleRebuilding.step r m x = Becoming.RuleRebuilding.onward r m x
+@Becoming.RuleRebuilding.not_ends : ∀ {r : Becoming.RuleRebuilding.Rule} {x : Becoming.RuleRebuilding.St},
+  1 ≤ x.level → Becoming.RuleRebuilding.take x ≤ x.level + r.renewal → ¬Becoming.RuleRebuilding.Ends r x
+Becoming.RuleRebuilding.gone_ended : ∀ (q : Nat),
+  Becoming.RuleRebuilding.Gone { quota := q, level := 0, holders := [], others := [] }
+@Becoming.RuleRebuilding.step_gone : ∀ {r : Becoming.RuleRebuilding.Rule} {x : Becoming.RuleRebuilding.St}
+  (m : Becoming.RuleRebuilding.Move),
+  Becoming.RuleRebuilding.Ends r x → Becoming.RuleRebuilding.Gone (Becoming.RuleRebuilding.step r m x)
+@Becoming.RuleRebuilding.level_onward_kept : ∀ {r : Becoming.RuleRebuilding.Rule} {x : Becoming.RuleRebuilding.St}
+  (m : Becoming.RuleRebuilding.Move),
+  Becoming.RuleRebuilding.take x ≤ r.renewal → x.level ≤ (Becoming.RuleRebuilding.onward r m x).level
+Becoming.RuleRebuilding.«尽而不复» : ∀ (r : Becoming.RuleRebuilding.Rule),
+  Becoming.«闭» (Becoming.RuleRebuilding.net r) Becoming.RuleRebuilding.Gone
+@Becoming.RuleRebuilding.run_gone : ∀ {r : Becoming.RuleRebuilding.Rule} {c : Nat → Becoming.RuleRebuilding.Move}
+  {x : Becoming.RuleRebuilding.St},
+  Becoming.RuleRebuilding.Gone x → ∀ (k : Nat), Becoming.RuleRebuilding.Gone (Becoming.RuleRebuilding.run r c k x)
+@Becoming.RuleRebuilding.not_held_of_gone : ∀ {x : Becoming.RuleRebuilding.St},
+  Becoming.RuleRebuilding.Gone x → ¬Becoming.RuleRebuilding.Held x
+Becoming.RuleRebuilding.run_add : ∀ (r : Becoming.RuleRebuilding.Rule) (c : Nat → Becoming.RuleRebuilding.Move)
+  (a : Nat) (x : Becoming.RuleRebuilding.St) (b : Nat),
+  Becoming.RuleRebuilding.run r c (a + b) x =
+    Becoming.RuleRebuilding.run r (fun i => c (a + i)) b (Becoming.RuleRebuilding.run r c a x)
+@Becoming.RuleRebuilding.«恒取不逾生则存» : ∀ {r : Becoming.RuleRebuilding.Rule} {c : Nat → Becoming.RuleRebuilding.Move}
+  {F : Becoming.RuleRebuilding.St → Prop} {A : Nat},
+  Becoming.RuleRebuilding.Closed r c F →
+    (∀ (y : Becoming.RuleRebuilding.St), F y → Becoming.RuleRebuilding.take y = A) →
+      A ≤ r.renewal →
+        ∀ {x : Becoming.RuleRebuilding.St},
+          F x →
+            1 ≤ x.level →
+              ∀ (k : Nat),
+                F (Becoming.RuleRebuilding.run r c k x) ∧ x.level ≤ (Becoming.RuleRebuilding.run r c k x).level
+@Becoming.RuleRebuilding.«恒取逾生则减» : ∀ {r : Becoming.RuleRebuilding.Rule} {c : Nat → Becoming.RuleRebuilding.Move}
+  {F : Becoming.RuleRebuilding.St → Prop} {d : Nat},
+  Becoming.RuleRebuilding.Closed r c F →
+    (∀ (y : Becoming.RuleRebuilding.St), F y → Becoming.RuleRebuilding.take y = r.renewal + d) →
+      1 ≤ d →
+        ∀ {x : Becoming.RuleRebuilding.St},
+          F x →
+            ∀ {r₀ k : Nat},
+              x.level = r₀ + k * d →
+                ∀ (i m : Nat),
+                  i + m = k →
+                    F (Becoming.RuleRebuilding.run r c i x) ∧ (Becoming.RuleRebuilding.run r c i x).level = r₀ + m * d
+@Becoming.RuleRebuilding.«恒取逾生则尽» : ∀ {r : Becoming.RuleRebuilding.Rule} {c : Nat → Becoming.RuleRebuilding.Move}
+  {F : Becoming.RuleRebuilding.St → Prop} {d : Nat},
+  Becoming.RuleRebuilding.Closed r c F →
+    (∀ (y : Becoming.RuleRebuilding.St), F y → Becoming.RuleRebuilding.take y = r.renewal + d) →
+      1 ≤ d →
+        ∀ {x : Becoming.RuleRebuilding.St},
+          F x →
+            ∃ k,
+              Becoming.RuleRebuilding.Gone (Becoming.RuleRebuilding.run r c (k + 1) x) ∧
+                ∀ (i : Nat), i ≤ k → F (Becoming.RuleRebuilding.run r c i x)
+Becoming.RuleRebuilding.zeroUpTo_nil : ∀ (i : Nat), Becoming.RuleRebuilding.ZeroUpTo i []
+Becoming.RuleRebuilding.zeroUpTo_keep : ∀ (i n : Nat) {xs : List Nat},
+  Becoming.RuleRebuilding.ZeroUpTo i xs → Becoming.RuleRebuilding.ZeroUpTo i (Becoming.RuleRebuilding.keep n xs)
+Becoming.RuleRebuilding.zeroUpTo_step : ∀ (i n : Nat) {xs : List Nat},
+  Becoming.RuleRebuilding.ZeroUpTo i xs →
+    Becoming.RuleRebuilding.ZeroUpTo (i + 1) (Becoming.RuleRebuilding.keep n (0 :: xs))
+Becoming.RuleRebuilding.sum_zero_of_zeroUpTo : ∀ (k : Nat) {xs : List Nat},
+  Becoming.RuleRebuilding.ZeroUpTo k xs → xs.length ≤ k → Becoming.RuleRebuilding.sumL xs = 0
+@Becoming.RuleRebuilding.entrant_of_teachers_zero : ∀ {r : Becoming.RuleRebuilding.Rule}
+  {x : Becoming.RuleRebuilding.St},
+  r.source = Becoming.RuleRebuilding.Source.members →
+    Becoming.RuleRebuilding.teachers r x = 0 → ∀ (on : Bool), Becoming.RuleRebuilding.entrant r on x = 0
+@Becoming.RuleRebuilding.entrant_of_quota_zero : ∀ {r : Becoming.RuleRebuilding.Rule} {x : Becoming.RuleRebuilding.St},
+  r.source = Becoming.RuleRebuilding.Source.members →
+    x.quota = 0 → ∀ (on : Bool), Becoming.RuleRebuilding.entrant r on x = 0
+@Becoming.RuleRebuilding.entrant_no_holder : ∀ {r : Becoming.RuleRebuilding.Rule} {x : Becoming.RuleRebuilding.St},
+  r.source = Becoming.RuleRebuilding.Source.members ∨ r.source = Becoming.RuleRebuilding.Source.none →
+    Becoming.RuleRebuilding.NoHolder x → ∀ (on : Bool), Becoming.RuleRebuilding.entrant r on x = 0
+@Becoming.RuleRebuilding.length_holders_step : ∀ {r : Becoming.RuleRebuilding.Rule} (m : Becoming.RuleRebuilding.Move)
+  (x : Becoming.RuleRebuilding.St), (Becoming.RuleRebuilding.step r m x).holders.length ≤ r.tenure
+@Becoming.RuleRebuilding.length_others_step : ∀ {r : Becoming.RuleRebuilding.Rule} (m : Becoming.RuleRebuilding.Move)
+  (x : Becoming.RuleRebuilding.St), (Becoming.RuleRebuilding.step r m x).others.length ≤ r.tenure
+@Becoming.RuleRebuilding.drain_of : ∀ {r : Becoming.RuleRebuilding.Rule} {c : Nat → Becoming.RuleRebuilding.Move}
+  {x : Becoming.RuleRebuilding.St} (inv : Becoming.RuleRebuilding.St → Prop),
+  (∀ (i : Nat) (y : Becoming.RuleRebuilding.St), inv y → inv (Becoming.RuleRebuilding.step r (c i) y)) →
+    (∀ (i : Nat) (y : Becoming.RuleRebuilding.St),
+        inv y → ¬Becoming.RuleRebuilding.Ends r y → Becoming.RuleRebuilding.entrant r (c i).on y = 0) →
+      (∀ (y : Becoming.RuleRebuilding.St), inv y → y.holders.length ≤ r.tenure) →
+        inv x →
+          ∀ (k : Nat), r.tenure ≤ k → Becoming.RuleRebuilding.sumL (Becoming.RuleRebuilding.run r c k x).holders = 0
+@Becoming.RuleRebuilding.«不及任则持尽» : ∀ {r : Becoming.RuleRebuilding.Rule},
+  r.source = Becoming.RuleRebuilding.Source.members →
+    r.tenure ≤ r.teachingAge →
+      ∀ (c : Nat → Becoming.RuleRebuilding.Move) {x : Becoming.RuleRebuilding.St},
+        x.holders.length ≤ r.tenure →
+          ∀ (k : Nat), r.tenure ≤ k → Becoming.RuleRebuilding.sumL (Becoming.RuleRebuilding.run r c k x).holders = 0
+@Becoming.RuleRebuilding.reviseHeld_zero : ∀ {rev : Option Nat},
+  (∀ (v : Nat), rev = some v → v = 0) → ∀ (n : Nat), Becoming.RuleRebuilding.reviseHeld n 0 rev = 0
+@Becoming.RuleRebuilding.«额零则持尽» : ∀ {r : Becoming.RuleRebuilding.Rule},
+  r.source = Becoming.RuleRebuilding.Source.members →
+    ∀ {c : Nat → Becoming.RuleRebuilding.Move},
+      (∀ (i v : Nat), (c i).rev = some v → v = 0) →
+        ∀ {x : Becoming.RuleRebuilding.St},
+          x.quota = 0 →
+            x.holders.length ≤ r.tenure →
+              ∀ (k : Nat), r.tenure ≤ k → Becoming.RuleRebuilding.sumL (Becoming.RuleRebuilding.run r c k x).holders = 0
+@Becoming.RuleRebuilding.«无持者不复» : ∀ {r : Becoming.RuleRebuilding.Rule},
+  r.source = Becoming.RuleRebuilding.Source.members ∨ r.source = Becoming.RuleRebuilding.Source.none →
+    Becoming.«闭» (Becoming.RuleRebuilding.net r) Becoming.RuleRebuilding.NoHolder
+@Becoming.RuleRebuilding.run_no_holder : ∀ {r : Becoming.RuleRebuilding.Rule},
+  r.source = Becoming.RuleRebuilding.Source.members ∨ r.source = Becoming.RuleRebuilding.Source.none →
+    ∀ (c : Nat → Becoming.RuleRebuilding.Move) {x : Becoming.RuleRebuilding.St},
+      Becoming.RuleRebuilding.NoHolder x →
+        ∀ (k : Nat), Becoming.RuleRebuilding.NoHolder (Becoming.RuleRebuilding.run r c k x)
+@Becoming.RuleRebuilding.revised_no_holder : ∀ {r : Becoming.RuleRebuilding.Rule} {x : Becoming.RuleRebuilding.St},
+  Becoming.RuleRebuilding.NoHolder x → ∀ (rev : Option Nat), Becoming.RuleRebuilding.revised r rev x = x.quota
+@Becoming.RuleRebuilding.«无持者改不行» : ∀ {r : Becoming.RuleRebuilding.Rule} {x : Becoming.RuleRebuilding.St},
+  Becoming.RuleRebuilding.NoHolder x →
+    ∀ (m : Becoming.RuleRebuilding.Move), (Becoming.RuleRebuilding.step r m x).quota = x.quota
+@Becoming.RuleRebuilding.step_same_fields : ∀ {r : Becoming.RuleRebuilding.Rule},
+  r.source = Becoming.RuleRebuilding.Source.members ∨ r.source = Becoming.RuleRebuilding.Source.none →
+    ∀ (m : Becoming.RuleRebuilding.Move) {x y : Becoming.RuleRebuilding.St},
+      x.level = y.level →
+        x.holders = y.holders →
+          x.others = y.others →
+            Becoming.RuleRebuilding.NoHolder x →
+              (Becoming.RuleRebuilding.step r m x).level = (Becoming.RuleRebuilding.step r m y).level ∧
+                (Becoming.RuleRebuilding.step r m x).holders = (Becoming.RuleRebuilding.step r m y).holders ∧
+                  (Becoming.RuleRebuilding.step r m x).others = (Becoming.RuleRebuilding.step r m y).others
+@Becoming.RuleRebuilding.«无持者额不与» : ∀ {r : Becoming.RuleRebuilding.Rule},
+  r.source = Becoming.RuleRebuilding.Source.members ∨ r.source = Becoming.RuleRebuilding.Source.none →
+    ∀ (c : Nat → Becoming.RuleRebuilding.Move) {x y : Becoming.RuleRebuilding.St},
+      x.level = y.level →
+        x.holders = y.holders →
+          x.others = y.others →
+            Becoming.RuleRebuilding.NoHolder x →
+              ∀ (k : Nat),
+                (Becoming.RuleRebuilding.run r c k x).level = (Becoming.RuleRebuilding.run r c k y).level ∧
+                  (Becoming.RuleRebuilding.run r c k x).holders = (Becoming.RuleRebuilding.run r c k y).holders ∧
+                    (Becoming.RuleRebuilding.run r c k x).others = (Becoming.RuleRebuilding.run r c k y).others
+Becoming.RuleRebuilding.taught_members_pos : ∀ (q : Nat) {T : Nat},
+  0 < T → Becoming.RuleRebuilding.taught Becoming.RuleRebuilding.Source.members q T = q
+@Becoming.RuleRebuilding.revised_none : ∀ {r : Becoming.RuleRebuilding.Rule} (x : Becoming.RuleRebuilding.St),
+  Becoming.RuleRebuilding.revised r none x = x.quota
+Becoming.RuleRebuilding.take_steady : ∀ (r : Becoming.RuleRebuilding.Rule) (q L : Nat),
+  Becoming.RuleRebuilding.take (Becoming.RuleRebuilding.steady r q L) =
+    (q + Becoming.RuleRebuilding.leak r q) * r.tenure
+Becoming.RuleRebuilding.teachers_mul : ∀ (c q n : Nat), c * (n * q) = c * q * n
+@Becoming.RuleRebuilding.onward_steady : ∀ {r : Becoming.RuleRebuilding.Rule},
+  r.source = Becoming.RuleRebuilding.Source.members ∨ r.source = Becoming.RuleRebuilding.Source.outside →
+    r.teachingAge < r.tenure →
+      ∀ {q : Nat},
+        1 ≤ q →
+          ∀ (L : Nat),
+            Becoming.RuleRebuilding.onward r { on := true, rev := none } (Becoming.RuleRebuilding.steady r q L) =
+              Becoming.RuleRebuilding.steady r q
+                (L + r.renewal - Becoming.RuleRebuilding.take (Becoming.RuleRebuilding.steady r q L))
+@Becoming.RuleRebuilding.steady_closed : ∀ {r : Becoming.RuleRebuilding.Rule},
+  r.source = Becoming.RuleRebuilding.Source.members ∨ r.source = Becoming.RuleRebuilding.Source.outside →
+    r.teachingAge < r.tenure →
+      ∀ {q : Nat},
+        1 ≤ q → Becoming.RuleRebuilding.Closed r Becoming.RuleRebuilding.always (Becoming.RuleRebuilding.Steady r q)
+@Becoming.RuleRebuilding.steady_take : ∀ {r : Becoming.RuleRebuilding.Rule} {q : Nat} (y : Becoming.RuleRebuilding.St),
+  Becoming.RuleRebuilding.Steady r q y →
+    Becoming.RuleRebuilding.take y = (q + Becoming.RuleRebuilding.leak r q) * r.tenure
+@Becoming.RuleRebuilding.held_steady : ∀ {r : Becoming.RuleRebuilding.Rule},
+  r.teachingAge < r.tenure →
+    ∀ {q : Nat}, 1 ≤ q → ∀ (L : Nat), Becoming.RuleRebuilding.Held (Becoming.RuleRebuilding.steady r q L)
+@Becoming.RuleRebuilding.excess : ∀ {g A : Nat}, g < A → ∃ d, A = g + d ∧ 1 ≤ d
+@Becoming.RuleRebuilding.steady_kept : ∀ {r : Becoming.RuleRebuilding.Rule},
+  r.source = Becoming.RuleRebuilding.Source.members ∨ r.source = Becoming.RuleRebuilding.Source.outside →
+    r.teachingAge < r.tenure →
+      ∀ {q : Nat},
+        1 ≤ q →
+          (q + Becoming.RuleRebuilding.leak r q) * r.tenure ≤ r.renewal →
+            ∀ {L : Nat},
+              1 ≤ L →
+                ∀ (k : Nat),
+                  Becoming.RuleRebuilding.Steady r q
+                      (Becoming.RuleRebuilding.run r Becoming.RuleRebuilding.always k
+                        (Becoming.RuleRebuilding.steady r q L)) ∧
+                    L ≤
+                      (Becoming.RuleRebuilding.run r Becoming.RuleRebuilding.always k
+                          (Becoming.RuleRebuilding.steady r q L)).level
+@Becoming.RuleRebuilding.steady_ends : ∀ {r : Becoming.RuleRebuilding.Rule},
+  r.source = Becoming.RuleRebuilding.Source.members ∨ r.source = Becoming.RuleRebuilding.Source.outside →
+    r.teachingAge < r.tenure →
+      ∀ {q : Nat},
+        1 ≤ q →
+          r.renewal < (q + Becoming.RuleRebuilding.leak r q) * r.tenure →
+            ∀ (L : Nat),
+              ∃ k,
+                Becoming.RuleRebuilding.Gone
+                    (Becoming.RuleRebuilding.run r Becoming.RuleRebuilding.always (k + 1)
+                      (Becoming.RuleRebuilding.steady r q L)) ∧
+                  ∀ (i : Nat),
+                    i ≤ k →
+                      Becoming.RuleRebuilding.Held
+                        (Becoming.RuleRebuilding.run r Becoming.RuleRebuilding.always i
+                          (Becoming.RuleRebuilding.steady r q L))
+@Becoming.RuleRebuilding.one_le_of_held_steady : ∀ {r : Becoming.RuleRebuilding.Rule} {q L : Nat},
+  Becoming.RuleRebuilding.Held (Becoming.RuleRebuilding.steady r q L) → 1 ≤ q
+@Becoming.RuleRebuilding.«稳者恒持当且仅当在带» : ∀ {r : Becoming.RuleRebuilding.Rule},
+  r.source = Becoming.RuleRebuilding.Source.members →
+    ∀ {q L : Nat},
+      1 ≤ L →
+        ((∀ (k : Nat),
+            Becoming.RuleRebuilding.Held
+              (Becoming.RuleRebuilding.run r Becoming.RuleRebuilding.always k (Becoming.RuleRebuilding.steady r q L))) ↔
+          Becoming.RuleRebuilding.Band r q)
+@Becoming.RuleRebuilding.«外授之稳同带» : ∀ {r : Becoming.RuleRebuilding.Rule},
+  r.source = Becoming.RuleRebuilding.Source.outside →
+    r.teachingAge < r.tenure →
+      ∀ {q L : Nat},
+        1 ≤ L →
+          ((∀ (k : Nat),
+              Becoming.RuleRebuilding.Held
+                (Becoming.RuleRebuilding.run r Becoming.RuleRebuilding.always k
+                  (Becoming.RuleRebuilding.steady r q L))) ↔
+            Becoming.RuleRebuilding.Band r q)
+Becoming.RuleRebuilding.band_closed : ∀ (f q t s g : Nat), (q + (f - t)) * s ≤ g ↔ q * s ≤ g ∧ (f + q) * s ≤ g + t * s
+Becoming.RuleRebuilding.leak_eq : ∀ (r : Becoming.RuleRebuilding.Rule) (q : Nat),
+  Becoming.RuleRebuilding.leak r q = r.untaught - r.strength * (r.tenure - r.teachingAge) * q
+Becoming.RuleRebuilding.«带之二式» : ∀ (r : Becoming.RuleRebuilding.Rule) (q : Nat),
+  (q + Becoming.RuleRebuilding.leak r q) * r.tenure ≤ r.renewal ↔
+    q * r.tenure ≤ r.renewal ∧
+      (r.untaught + q) * r.tenure ≤ r.renewal + r.strength * (r.tenure - r.teachingAge) * q * r.tenure
+Becoming.RuleRebuilding.add_sub_mono : ∀ (f : Nat) {a b : Nat}, a ≤ b → a + (f - a) ≤ b + (f - b)
+@Becoming.RuleRebuilding.«额小而不足者门必过一» : ∀ {r : Becoming.RuleRebuilding.Rule} {q p : Nat},
+  r.strength * (r.tenure - r.teachingAge) ≤ 1 →
+    1 ≤ p → p ≤ q → Becoming.RuleRebuilding.Band r q → Becoming.RuleRebuilding.Band r p
+@Becoming.RuleRebuilding.band_bound : ∀ {r : Becoming.RuleRebuilding.Rule} {q : Nat},
+  Becoming.RuleRebuilding.Band r q → q * r.tenure ≤ r.renewal
+Becoming.RuleRebuilding.«带唯二» : ∀ (q : Nat), Becoming.RuleRebuilding.Band Becoming.RuleRebuilding.rA q ↔ q = 2
+Becoming.RuleRebuilding.«带一至五» : ∀ (q : Nat), Becoming.RuleRebuilding.Band Becoming.RuleRebuilding.rB q ↔ 1 ≤ q ∧ q ≤ 5
+Becoming.RuleRebuilding.«带无» : Becoming.RuleRebuilding.rC.teachingAge < Becoming.RuleRebuilding.rC.tenure ∧
+  ∀ (q : Nat), ¬Becoming.RuleRebuilding.Band Becoming.RuleRebuilding.rC q
+@Becoming.RuleRebuilding.each_weaken : ∀ {p p' : Nat → Prop},
+  (∀ (a : Nat), p a → p' a) → ∀ {xs : List Nat}, Becoming.RuleRebuilding.Each p xs → Becoming.RuleRebuilding.Each p' xs
+@Becoming.RuleRebuilding.each_replicate : ∀ {p : Nat → Prop} {a : Nat},
+  p a → ∀ (n : Nat), Becoming.RuleRebuilding.Each p (List.replicate n a)
+@Becoming.RuleRebuilding.within_take : ∀ {r : Becoming.RuleRebuilding.Rule} {P Q : Nat}
+  {x : Becoming.RuleRebuilding.St},
+  Becoming.RuleRebuilding.Within r P Q x →
+    Becoming.RuleRebuilding.take x ≤ (Q + Becoming.RuleRebuilding.leak r P) * r.tenure
+@Becoming.RuleRebuilding.within_teachers : ∀ {r : Becoming.RuleRebuilding.Rule} {P Q : Nat}
+  {x : Becoming.RuleRebuilding.St},
+  Becoming.RuleRebuilding.Within r P Q x → (r.tenure - r.teachingAge) * P ≤ Becoming.RuleRebuilding.teachers r x
+@Becoming.RuleRebuilding.within_not_ends : ∀ {r : Becoming.RuleRebuilding.Rule} {P Q : Nat}
+  {x : Becoming.RuleRebuilding.St},
+  Becoming.RuleRebuilding.Fits r P Q → Becoming.RuleRebuilding.Within r P Q x → ¬Becoming.RuleRebuilding.Ends r x
+@Becoming.RuleRebuilding.within_entrant : ∀ {r : Becoming.RuleRebuilding.Rule} {P Q : Nat}
+  {x : Becoming.RuleRebuilding.St},
+  Becoming.RuleRebuilding.Fits r P Q →
+    Becoming.RuleRebuilding.Within r P Q x → Becoming.RuleRebuilding.entrant r true x = x.quota
+@Becoming.RuleRebuilding.within_door : ∀ {r : Becoming.RuleRebuilding.Rule} {P Q : Nat}
+  {x : Becoming.RuleRebuilding.St},
+  Becoming.RuleRebuilding.Within r P Q x → Becoming.RuleRebuilding.door r true x ≤ Becoming.RuleRebuilding.leak r P
+@Becoming.RuleRebuilding.reviseHeld_in : ∀ {P Q q : Nat} {rev : Option Nat},
+  P ≤ q →
+    q ≤ Q →
+      Becoming.RuleRebuilding.RevIn P Q rev →
+        ∀ (n : Nat), P ≤ Becoming.RuleRebuilding.reviseHeld n q rev ∧ Becoming.RuleRebuilding.reviseHeld n q rev ≤ Q
+@Becoming.RuleRebuilding.within_step : ∀ {r : Becoming.RuleRebuilding.Rule} {P Q : Nat}
+  {x : Becoming.RuleRebuilding.St},
+  Becoming.RuleRebuilding.Fits r P Q →
+    Becoming.RuleRebuilding.Within r P Q x →
+      ∀ {m : Becoming.RuleRebuilding.Move},
+        m.on = true →
+          Becoming.RuleRebuilding.RevIn P Q m.rev →
+            Becoming.RuleRebuilding.Within r P Q (Becoming.RuleRebuilding.step r m x) ∧
+              x.level ≤ (Becoming.RuleRebuilding.step r m x).level
+@Becoming.RuleRebuilding.«域闭» : ∀ {r : Becoming.RuleRebuilding.Rule} {P Q : Nat},
+  Becoming.RuleRebuilding.Fits r P Q →
+    Becoming.«闭» (Becoming.RuleRebuilding.onIn r P Q) (Becoming.RuleRebuilding.Within r P Q)
+@Becoming.RuleRebuilding.«域中储不减» : ∀ {r : Becoming.RuleRebuilding.Rule} {P Q : Nat},
+  Becoming.RuleRebuilding.Fits r P Q →
+    ∀ {x y : Becoming.RuleRebuilding.St},
+      Becoming.RuleRebuilding.Within r P Q x → Becoming.RuleRebuilding.onIn r P Q x y → x.level ≤ y.level
+@Becoming.RuleRebuilding.within_held : ∀ {r : Becoming.RuleRebuilding.Rule} {P Q : Nat}
+  {x : Becoming.RuleRebuilding.St},
+  Becoming.RuleRebuilding.Fits r P Q → Becoming.RuleRebuilding.Within r P Q x → Becoming.RuleRebuilding.Held x
+@Becoming.RuleRebuilding.«稳为域之例» : ∀ {r : Becoming.RuleRebuilding.Rule},
+  r.source = Becoming.RuleRebuilding.Source.members →
+    ∀ {q L : Nat},
+      Becoming.RuleRebuilding.Band r q →
+        1 ≤ L →
+          Becoming.RuleRebuilding.Fits r q q ∧
+            Becoming.RuleRebuilding.Within r q q (Becoming.RuleRebuilding.steady r q L)
+Becoming.RuleRebuilding.«域可得» : Becoming.RuleRebuilding.Fits Becoming.RuleRebuilding.rB 3 5
+@Becoming.RuleRebuilding.door_no_holder : ∀ {r : Becoming.RuleRebuilding.Rule} {x : Becoming.RuleRebuilding.St},
+  Becoming.RuleRebuilding.NoHolder x → Becoming.RuleRebuilding.door r true x = r.untaught
+@Becoming.RuleRebuilding.sum_keep_cons_pos : ∀ {s a : Nat} (xs : List Nat),
+  1 ≤ s → 1 ≤ a → 0 < Becoming.RuleRebuilding.sumL (Becoming.RuleRebuilding.keep s (a :: xs))
+@Becoming.RuleRebuilding.open_not_ends : ∀ {r : Becoming.RuleRebuilding.Rule},
+  r.untaught * r.tenure ≤ r.renewal →
+    ∀ {y : Becoming.RuleRebuilding.St},
+      Becoming.RuleRebuilding.NoHolder y →
+        y.others.length ≤ r.tenure →
+          Becoming.RuleRebuilding.Each (fun x => x ≤ r.untaught) y.others →
+            1 ≤ y.level → ¬Becoming.RuleRebuilding.Ends r y ∧ Becoming.RuleRebuilding.take y ≤ r.renewal
+@Becoming.RuleRebuilding.«无持而门开不逾生则存» : ∀ {r : Becoming.RuleRebuilding.Rule},
+  r.source = Becoming.RuleRebuilding.Source.members ∨ r.source = Becoming.RuleRebuilding.Source.none →
+    ∀ {c : Nat → Becoming.RuleRebuilding.Move},
+      (∀ (i : Nat), (c i).on = true) →
+        r.untaught * r.tenure ≤ r.renewal →
+          ∀ {x : Becoming.RuleRebuilding.St},
+            Becoming.RuleRebuilding.NoHolder x →
+              x.others.length ≤ r.tenure →
+                Becoming.RuleRebuilding.Each (fun x => x ≤ r.untaught) x.others →
+                  1 ≤ x.level →
+                    ∀ (k : Nat),
+                      x.level ≤ (Becoming.RuleRebuilding.run r c k x).level ∧
+                        (Becoming.RuleRebuilding.run r c k x).others.length ≤ r.tenure ∧
+                          Becoming.RuleRebuilding.Each (fun x => x ≤ r.untaught)
+                            (Becoming.RuleRebuilding.run r c k x).others
+@Becoming.RuleRebuilding.«无持而门开众在» : ∀ {r : Becoming.RuleRebuilding.Rule},
+  r.source = Becoming.RuleRebuilding.Source.members ∨ r.source = Becoming.RuleRebuilding.Source.none →
+    ∀ {c : Nat → Becoming.RuleRebuilding.Move},
+      (∀ (i : Nat), (c i).on = true) →
+        1 ≤ r.tenure →
+          1 ≤ r.untaught →
+            r.untaught * r.tenure ≤ r.renewal →
+              ∀ {x : Becoming.RuleRebuilding.St},
+                Becoming.RuleRebuilding.NoHolder x →
+                  x.others.length ≤ r.tenure →
+                    Becoming.RuleRebuilding.Each (fun x => x ≤ r.untaught) x.others →
+                      1 ≤ x.level →
+                        ∀ (k : Nat), 0 < Becoming.RuleRebuilding.sumL (Becoming.RuleRebuilding.run r c (k + 1) x).others
+@Becoming.RuleRebuilding.«无持而门开逾生则尽» : ∀ {r : Becoming.RuleRebuilding.Rule},
+  r.source = Becoming.RuleRebuilding.Source.members ∨ r.source = Becoming.RuleRebuilding.Source.none →
+    ∀ {c : Nat → Becoming.RuleRebuilding.Move},
+      (∀ (i : Nat), (c i).on = true) →
+        1 ≤ r.tenure →
+          r.renewal < r.untaught * r.tenure →
+            ∀ {x : Becoming.RuleRebuilding.St},
+              Becoming.RuleRebuilding.NoHolder x →
+                ∃ k, Becoming.RuleRebuilding.Gone (Becoming.RuleRebuilding.run r c k x)
+@Becoming.RuleRebuilding.«存尽相斥» : ∀ {r : Becoming.RuleRebuilding.Rule} {x : Becoming.RuleRebuilding.St},
+  Becoming.RuleRebuilding.Goes r x → ¬Becoming.RuleRebuilding.EndsUp r x
+Becoming.RuleRebuilding.nobody_no_holder : ∀ (r : Becoming.RuleRebuilding.Rule) (q L : Nat),
+  Becoming.RuleRebuilding.NoHolder (Becoming.RuleRebuilding.nobody r q L)
+@Becoming.RuleRebuilding.«稳开二试» : ∀ {r : Becoming.RuleRebuilding.Rule},
+  r.source = Becoming.RuleRebuilding.Source.members →
+    r.teachingAge < r.tenure →
+      ∀ {q L : Nat},
+        1 ≤ q →
+          1 ≤ L →
+            (Becoming.RuleRebuilding.Goes r (Becoming.RuleRebuilding.steady r q L) ↔
+                (q + Becoming.RuleRebuilding.leak r q) * r.tenure ≤ r.renewal) ∧
+              (Becoming.RuleRebuilding.Goes r (Becoming.RuleRebuilding.nobody r q L) ↔
+                  r.untaught * r.tenure ≤ r.renewal) ∧
+                (r.renewal < (q + Becoming.RuleRebuilding.leak r q) * r.tenure →
+                    Becoming.RuleRebuilding.EndsUp r (Becoming.RuleRebuilding.steady r q L)) ∧
+                  (r.renewal < r.untaught * r.tenure →
+                    Becoming.RuleRebuilding.EndsUp r (Becoming.RuleRebuilding.nobody r q L))
+@Becoming.RuleRebuilding.«稳存而开不存则门过一» : ∀ {r : Becoming.RuleRebuilding.Rule} {q : Nat},
+  (q + Becoming.RuleRebuilding.leak r q) * r.tenure ≤ r.renewal →
+    r.renewal < r.untaught * r.tenure → 2 ≤ r.strength * (r.tenure - r.teachingAge)
+Becoming.RuleRebuilding.«入过来者之式» : ∀ (r : Becoming.RuleRebuilding.Rule) {q : Nat},
+  1 ≤ q →
+    (r.untaught < q + Becoming.RuleRebuilding.leak r q ↔ r.untaught < q ∨ r.strength * (r.tenure - r.teachingAge) = 0)
+@Becoming.RuleRebuilding.«开存而稳不存之式» : ∀ {r : Becoming.RuleRebuilding.Rule} {q : Nat},
+  1 ≤ q →
+    r.renewal < (q + Becoming.RuleRebuilding.leak r q) * r.tenure →
+      r.untaught * r.tenure ≤ r.renewal → r.untaught < q ∨ r.strength * (r.tenure - r.teachingAge) = 0
+@Becoming.RuleRebuilding.reviseHeld_some : ∀ {n : Nat},
+  0 < n → ∀ (q v : Nat), Becoming.RuleRebuilding.reviseHeld n q (some v) = v
+@Becoming.RuleRebuilding.«改额为零则持尽» : ∀ {r : Becoming.RuleRebuilding.Rule},
+  r.source = Becoming.RuleRebuilding.Source.members →
+    ∀ {x : Becoming.RuleRebuilding.St},
+      Becoming.RuleRebuilding.Held x →
+        ∀ (on : Bool) {c : Nat → Becoming.RuleRebuilding.Move},
+          (∀ (i v : Nat), (c i).rev = some v → v = 0) →
+            ∀ (k : Nat),
+              r.tenure ≤ k →
+                Becoming.RuleRebuilding.sumL
+                    (Becoming.RuleRebuilding.run r c k
+                        (Becoming.RuleRebuilding.step r { on := on, rev := some 0 } x)).holders =
+                  0
+Becoming.RuleRebuilding.«带不定改后» : (Becoming.RuleRebuilding.run Becoming.RuleRebuilding.rA
+        (Becoming.RuleRebuilding.onceAt 1) 5 (Becoming.RuleRebuilding.steady Becoming.RuleRebuilding.rA 2 1)).level =
+    0 ∧
+  (Becoming.RuleRebuilding.run Becoming.RuleRebuilding.rA (Becoming.RuleRebuilding.onceAt 3) 3
+          (Becoming.RuleRebuilding.steady Becoming.RuleRebuilding.rA 2 1)).level =
+      0 ∧
+    1 ≤
+        (Becoming.RuleRebuilding.run Becoming.RuleRebuilding.rF (Becoming.RuleRebuilding.onceAt 0) 20
+            (Becoming.RuleRebuilding.steady Becoming.RuleRebuilding.rF 1 1)).level ∧
+      Becoming.RuleRebuilding.Band Becoming.RuleRebuilding.rB 1 ∧
+        Becoming.RuleRebuilding.Band Becoming.RuleRebuilding.rB 5 ∧
+          ¬Becoming.RuleRebuilding.Fits Becoming.RuleRebuilding.rB 1 5 ∧
+            (Becoming.RuleRebuilding.run Becoming.RuleRebuilding.rB (Becoming.RuleRebuilding.onceAt 5) 4
+                  (Becoming.RuleRebuilding.steady Becoming.RuleRebuilding.rB 1 1)).level =
+              0
+@Becoming.RuleRebuilding.not_held_of_no_holder : ∀ {x : Becoming.RuleRebuilding.St},
+  Becoming.RuleRebuilding.NoHolder x → ¬Becoming.RuleRebuilding.Held x
+@Becoming.RuleRebuilding.«外授者即入» : ∀ {r : Becoming.RuleRebuilding.Rule},
+  r.source = Becoming.RuleRebuilding.Source.outside →
+    1 ≤ r.tenure →
+      ∀ {x : Becoming.RuleRebuilding.St},
+        1 ≤ x.quota →
+          ¬Becoming.RuleRebuilding.Ends r x →
+            ∀ (rev : Option Nat),
+              (Becoming.RuleRebuilding.step r { on := true, rev := rev } x).holders =
+                  Becoming.RuleRebuilding.keep r.tenure (x.quota :: x.holders) ∧
+                Becoming.RuleRebuilding.Held (Becoming.RuleRebuilding.step r { on := true, rev := rev } x)
+@Becoming.RuleRebuilding.«三源之表» : ∀ {r : Becoming.RuleRebuilding.Rule},
+  1 ≤ r.tenure →
+    ∀ {x : Becoming.RuleRebuilding.St},
+      1 ≤ x.quota →
+        1 ≤ x.level →
+          Becoming.RuleRebuilding.sumL x.holders = 0 →
+            Becoming.RuleRebuilding.sumL x.others = 0 →
+              ∀ (rev : Option Nat),
+                (r.source = Becoming.RuleRebuilding.Source.outside →
+                    Becoming.RuleRebuilding.Held (Becoming.RuleRebuilding.step r { on := true, rev := rev } x)) ∧
+                  (r.source = Becoming.RuleRebuilding.Source.members →
+                      ¬Becoming.RuleRebuilding.Held (Becoming.RuleRebuilding.step r { on := true, rev := rev } x)) ∧
+                    (r.source = Becoming.RuleRebuilding.Source.none →
+                      ¬Becoming.RuleRebuilding.Held (Becoming.RuleRebuilding.step r { on := true, rev := rev } x))
+Becoming.RuleRebuilding.length_entered : ∀ (r : Becoming.RuleRebuilding.Rule) (c : Nat → Becoming.RuleRebuilding.Move)
+  (x : Becoming.RuleRebuilding.St) (n : Nat), (Becoming.RuleRebuilding.entered r c n x).length = n
+@Becoming.RuleRebuilding.«任满皆新» : ∀ {r : Becoming.RuleRebuilding.Rule} (c : Nat → Becoming.RuleRebuilding.Move)
+  {x : Becoming.RuleRebuilding.St},
+  x.holders.length ≤ r.tenure →
+    (∀ (i : Nat), i < r.tenure → ¬Becoming.RuleRebuilding.Ends r (Becoming.RuleRebuilding.run r c i x)) →
+      (Becoming.RuleRebuilding.run r c r.tenure x).holders = Becoming.RuleRebuilding.entered r c r.tenure x
+@Becoming.RuleRebuilding.within_run : ∀ {r : Becoming.RuleRebuilding.Rule} {P Q : Nat},
+  Becoming.RuleRebuilding.Fits r P Q →
+    ∀ {c : Nat → Becoming.RuleRebuilding.Move},
+      (∀ (i : Nat), (c i).on = true) →
+        (∀ (i : Nat), Becoming.RuleRebuilding.RevIn P Q (c i).rev) →
+          ∀ {x : Becoming.RuleRebuilding.St},
+            Becoming.RuleRebuilding.Within r P Q x →
+              ∀ (k : Nat), Becoming.RuleRebuilding.Within r P Q (Becoming.RuleRebuilding.run r c k x)
+@Becoming.RuleRebuilding.«域中任满皆新» : ∀ {r : Becoming.RuleRebuilding.Rule} {P Q : Nat},
+  Becoming.RuleRebuilding.Fits r P Q →
+    ∀ {c : Nat → Becoming.RuleRebuilding.Move},
+      (∀ (i : Nat), (c i).on = true) →
+        (∀ (i : Nat), Becoming.RuleRebuilding.RevIn P Q (c i).rev) →
+          ∀ {x : Becoming.RuleRebuilding.St},
+            Becoming.RuleRebuilding.Within r P Q x →
+              (Becoming.RuleRebuilding.run r c r.tenure x).holders = Becoming.RuleRebuilding.quotas r c r.tenure x ∧
+                Becoming.RuleRebuilding.Held (Becoming.RuleRebuilding.run r c r.tenure x) ∧
+                  Becoming.RuleRebuilding.Within r P Q (Becoming.RuleRebuilding.run r c r.tenure x)
+@Becoming.RuleRebuilding.keep_map : ∀ {β : Type} (h : Bool → β) (n : Nat) (b : List Bool),
+  Becoming.RuleRebuilding.keep n (List.map h b) = List.map h (Becoming.RuleRebuilding.keep n b)
+Becoming.RuleRebuilding.after_map_last : ∀ (h : Bool → Nat) (l : Nat) (b : List Bool),
+  b.length = l + 1 → Becoming.RuleRebuilding.after l (List.map h b) = h (Becoming.RuleRebuilding.lastOf b)
+Becoming.RuleRebuilding.countW_rot : ∀ (w : Bool → Nat) (l : Nat) (b : List Bool),
+  b.length = l + 1 →
+    Becoming.RuleRebuilding.countW w (Becoming.RuleRebuilding.lastOf b :: Becoming.RuleRebuilding.keep l b) =
+      Becoming.RuleRebuilding.countW w b
+Becoming.RuleRebuilding.take_strands : ∀ (r : Becoming.RuleRebuilding.Rule) (q L : Nat) (b : List Bool),
+  Becoming.RuleRebuilding.take (Becoming.RuleRebuilding.strands r q b L) =
+    Becoming.RuleRebuilding.heldCount b * (q + (r.untaught - r.strength * q)) +
+      Becoming.RuleRebuilding.emptyCount b * r.untaught
+Becoming.RuleRebuilding.sum_strandH : ∀ (q : Nat) (b : List Bool),
+  Becoming.RuleRebuilding.sumL (List.map (Becoming.RuleRebuilding.strandH q) b) =
+    Becoming.RuleRebuilding.heldCount b * q
+@Becoming.RuleRebuilding.onward_strands : ∀ {r : Becoming.RuleRebuilding.Rule},
+  r.source = Becoming.RuleRebuilding.Source.members →
+    r.tenure = r.teachingAge + 1 →
+      ∀ {q : Nat},
+        1 ≤ q →
+          ∀ {b : List Bool},
+            b.length = r.tenure →
+              ∀ (L : Nat),
+                Becoming.RuleRebuilding.onward r { on := true, rev := none } (Becoming.RuleRebuilding.strands r q b L) =
+                  Becoming.RuleRebuilding.strands r q
+                    (Becoming.RuleRebuilding.lastOf b :: Becoming.RuleRebuilding.keep r.teachingAge b)
+                    (L + r.renewal - Becoming.RuleRebuilding.take (Becoming.RuleRebuilding.strands r q b L))
+@Becoming.RuleRebuilding.strands_closed : ∀ {r : Becoming.RuleRebuilding.Rule} {q : Nat} {b : List Bool},
+  r.source = Becoming.RuleRebuilding.Source.members →
+    r.tenure = r.teachingAge + 1 →
+      1 ≤ q → Becoming.RuleRebuilding.Closed r Becoming.RuleRebuilding.always (Becoming.RuleRebuilding.Strands r q b)
+@Becoming.RuleRebuilding.strands_take : ∀ {r : Becoming.RuleRebuilding.Rule} {q : Nat} {b : List Bool}
+  (y : Becoming.RuleRebuilding.St),
+  Becoming.RuleRebuilding.Strands r q b y →
+    Becoming.RuleRebuilding.take y =
+      Becoming.RuleRebuilding.heldCount b * (q + (r.untaught - r.strength * q)) +
+        Becoming.RuleRebuilding.emptyCount b * r.untaught
+@Becoming.RuleRebuilding.strands_held : ∀ {r : Becoming.RuleRebuilding.Rule} {q : Nat} {b : List Bool},
+  1 ≤ q →
+    1 ≤ Becoming.RuleRebuilding.heldCount b →
+      ∀ (y : Becoming.RuleRebuilding.St), Becoming.RuleRebuilding.Strands r q b y → Becoming.RuleRebuilding.Held y
+@Becoming.RuleRebuilding.«隙之律» : ∀ {r : Becoming.RuleRebuilding.Rule},
+  r.source = Becoming.RuleRebuilding.Source.members →
+    r.tenure = r.teachingAge + 1 →
+      ∀ {q L : Nat},
+        1 ≤ q →
+          1 ≤ L →
+            ∀ {b : List Bool},
+              b.length = r.tenure →
+                1 ≤ Becoming.RuleRebuilding.heldCount b →
+                  ((∀ (n : Nat),
+                      Becoming.RuleRebuilding.Held
+                        (Becoming.RuleRebuilding.run r Becoming.RuleRebuilding.always n
+                          (Becoming.RuleRebuilding.strands r q b L))) ↔
+                    Becoming.RuleRebuilding.heldCount b * (q + (r.untaught - r.strength * q)) +
+                        Becoming.RuleRebuilding.emptyCount b * r.untaught ≤
+                      r.renewal)
+@Becoming.RuleRebuilding.«隙过生持至尽» : ∀ {r : Becoming.RuleRebuilding.Rule},
+  r.source = Becoming.RuleRebuilding.Source.members →
+    r.tenure = r.teachingAge + 1 →
+      ∀ {q : Nat},
+        1 ≤ q →
+          ∀ (L : Nat) {b : List Bool},
+            b.length = r.tenure →
+              1 ≤ Becoming.RuleRebuilding.heldCount b →
+                r.renewal <
+                    Becoming.RuleRebuilding.heldCount b * (q + (r.untaught - r.strength * q)) +
+                      Becoming.RuleRebuilding.emptyCount b * r.untaught →
+                  ∃ k,
+                    Becoming.RuleRebuilding.Gone
+                        (Becoming.RuleRebuilding.run r Becoming.RuleRebuilding.always (k + 1)
+                          (Becoming.RuleRebuilding.strands r q b L)) ∧
+                      ∀ (i : Nat),
+                        i ≤ k →
+                          Becoming.RuleRebuilding.Held
+                            (Becoming.RuleRebuilding.run r Becoming.RuleRebuilding.always i
+                              (Becoming.RuleRebuilding.strands r q b L))
+Becoming.RuleRebuilding.count_total : ∀ (b : List Bool),
+  Becoming.RuleRebuilding.heldCount b + Becoming.RuleRebuilding.emptyCount b = b.length
+@Becoming.RuleRebuilding.mul_lt_mul_of_pos' : ∀ {k a b : Nat}, 1 ≤ k → a < b → k * a < k * b
+@Becoming.RuleRebuilding.«隙存而稳不存之式» : ∀ {f X g k z : Nat},
+  1 ≤ k → k * X + z * f ≤ g → g < X * (k + z) → f < X ∧ f * (k + z) < g
+@Becoming.RuleRebuilding.«稳存而隙不存之式» : ∀ {f q t g k z : Nat},
+  (q + (f - t)) * (k + z) ≤ g → g < k * (q + (f - t)) + z * f → q + (f - t) < f ∧ g < f * (k + z) ∧ q < t
+Becoming.RuleRebuilding.«隙存而稳不存» : (∀ (n : Nat),
+    Becoming.RuleRebuilding.Held
+      (Becoming.RuleRebuilding.run Becoming.RuleRebuilding.rD Becoming.RuleRebuilding.always n
+        (Becoming.RuleRebuilding.strands Becoming.RuleRebuilding.rD 3 [true, false] 1))) ∧
+  ¬Becoming.RuleRebuilding.Band Becoming.RuleRebuilding.rD 3
+Becoming.RuleRebuilding.«稳存而隙不存» : Becoming.RuleRebuilding.Band Becoming.RuleRebuilding.rE 2 ∧
+  ∃ k,
+    Becoming.RuleRebuilding.Gone
+        (Becoming.RuleRebuilding.run Becoming.RuleRebuilding.rE Becoming.RuleRebuilding.always (k + 1)
+          (Becoming.RuleRebuilding.strands Becoming.RuleRebuilding.rE 2 [true, false, false] 1)) ∧
+      ∀ (i : Nat),
+        i ≤ k →
+          Becoming.RuleRebuilding.Held
+            (Becoming.RuleRebuilding.run Becoming.RuleRebuilding.rE Becoming.RuleRebuilding.always i
+              (Becoming.RuleRebuilding.strands Becoming.RuleRebuilding.rE 2 [true, false, false] 1))
+Becoming.RuleRebuilding.«改而成隙则尽» : Becoming.RuleRebuilding.Band Becoming.RuleRebuilding.rE 2 ∧
+  Becoming.RuleRebuilding.run Becoming.RuleRebuilding.rE Becoming.RuleRebuilding.outAndBack 8
+        (Becoming.RuleRebuilding.steady Becoming.RuleRebuilding.rE 2 30) =
+      Becoming.RuleRebuilding.strands Becoming.RuleRebuilding.rE 2 [true, false, false] 36 ∧
+    (∀ (i : Nat),
+        i < 18 →
+          0 <
+            Becoming.RuleRebuilding.sumL
+              (Becoming.RuleRebuilding.run Becoming.RuleRebuilding.rE Becoming.RuleRebuilding.outAndBack i
+                  (Becoming.RuleRebuilding.steady Becoming.RuleRebuilding.rE 2 30)).holders) ∧
+      Becoming.RuleRebuilding.Gone
+        (Becoming.RuleRebuilding.run Becoming.RuleRebuilding.rE Becoming.RuleRebuilding.outAndBack 18
+          (Becoming.RuleRebuilding.steady Becoming.RuleRebuilding.rE 2 30))
+Becoming.RuleRebuilding.«同规随类» : (Becoming.«类» fun x y =>
+    Becoming.RuleRebuilding.Held x ↔ Becoming.RuleRebuilding.Held y) ∧
+  (Becoming.«类» fun x y => x.quota = y.quota) ∧
+    Becoming.RuleRebuilding.Within Becoming.RuleRebuilding.rB 3 5
+        (Becoming.RuleRebuilding.steady Becoming.RuleRebuilding.rB 3 1) ∧
+      Becoming.RuleRebuilding.onIn Becoming.RuleRebuilding.rB 3 5
+          (Becoming.RuleRebuilding.steady Becoming.RuleRebuilding.rB 3 1)
+          (Becoming.RuleRebuilding.step Becoming.RuleRebuilding.rB { on := true, rev := some 5 }
+            (Becoming.RuleRebuilding.steady Becoming.RuleRebuilding.rB 3 1)) ∧
+        Becoming.«续» (Becoming.RuleRebuilding.net Becoming.RuleRebuilding.rB)
+            (fun x y => Becoming.RuleRebuilding.Held x ↔ Becoming.RuleRebuilding.Held y)
+            (Becoming.RuleRebuilding.steady Becoming.RuleRebuilding.rB 3 1)
+            (Becoming.RuleRebuilding.step Becoming.RuleRebuilding.rB { on := true, rev := some 5 }
+              (Becoming.RuleRebuilding.steady Becoming.RuleRebuilding.rB 3 1)) ∧
+          ¬Becoming.«续» (Becoming.RuleRebuilding.net Becoming.RuleRebuilding.rB) (fun x y => x.quota = y.quota)
+              (Becoming.RuleRebuilding.steady Becoming.RuleRebuilding.rB 3 1)
+              (Becoming.RuleRebuilding.step Becoming.RuleRebuilding.rB { on := true, rev := some 5 }
+                (Becoming.RuleRebuilding.steady Becoming.RuleRebuilding.rB 3 1))
+Becoming.RuleRebuilding.«弃而储增» : have r :=
+  { tenure := 2, teachingAge := 1, renewal := 3, untaught := 0, strength := 1,
+    source := Becoming.RuleRebuilding.Source.members };
+have x := { quota := 0, level := 2, holders := [1, 1], others := [] };
+Becoming.RuleRebuilding.sumL (Becoming.RuleRebuilding.run r Becoming.RuleRebuilding.always 2 x).holders = 0 ∧
+  Becoming.RuleRebuilding.sumL (Becoming.RuleRebuilding.run r Becoming.RuleRebuilding.always 3 x).others = 0 ∧
+    x.level < (Becoming.RuleRebuilding.run r Becoming.RuleRebuilding.always 3 x).level
+Becoming.RuleRebuilding.«四境皆有» : (Becoming.RuleRebuilding.rF.teachingAge < Becoming.RuleRebuilding.rF.tenure ∧
+    (1 + Becoming.RuleRebuilding.leak Becoming.RuleRebuilding.rF 1) * Becoming.RuleRebuilding.rF.tenure ≤
+        Becoming.RuleRebuilding.rF.renewal ∧
+      Becoming.RuleRebuilding.rF.untaught * Becoming.RuleRebuilding.rF.tenure ≤ Becoming.RuleRebuilding.rF.renewal) ∧
+  (Becoming.RuleRebuilding.rA.teachingAge < Becoming.RuleRebuilding.rA.tenure ∧
+      (2 + Becoming.RuleRebuilding.leak Becoming.RuleRebuilding.rA 2) * Becoming.RuleRebuilding.rA.tenure ≤
+          Becoming.RuleRebuilding.rA.renewal ∧
+        Becoming.RuleRebuilding.rA.renewal < Becoming.RuleRebuilding.rA.untaught * Becoming.RuleRebuilding.rA.tenure) ∧
+    (Becoming.RuleRebuilding.rG.teachingAge < Becoming.RuleRebuilding.rG.tenure ∧
+        Becoming.RuleRebuilding.rG.renewal <
+            (3 + Becoming.RuleRebuilding.leak Becoming.RuleRebuilding.rG 3) * Becoming.RuleRebuilding.rG.tenure ∧
+          Becoming.RuleRebuilding.rG.untaught * Becoming.RuleRebuilding.rG.tenure ≤
+            Becoming.RuleRebuilding.rG.renewal) ∧
+      Becoming.RuleRebuilding.rH.teachingAge < Becoming.RuleRebuilding.rH.tenure ∧
+        Becoming.RuleRebuilding.rH.renewal <
+            (1 + Becoming.RuleRebuilding.leak Becoming.RuleRebuilding.rH 1) * Becoming.RuleRebuilding.rH.tenure ∧
+          Becoming.RuleRebuilding.rH.renewal < Becoming.RuleRebuilding.rH.untaught * Becoming.RuleRebuilding.rH.tenure
+Becoming.RuleRebuilding.«及任之前持尽之例» : Becoming.RuleRebuilding.Held
+    (Becoming.RuleRebuilding.steady Becoming.RuleRebuilding.rI 5 50) ∧
+  Becoming.RuleRebuilding.NoHolder
+    (Becoming.RuleRebuilding.run Becoming.RuleRebuilding.rI Becoming.RuleRebuilding.always 2
+      (Becoming.RuleRebuilding.steady Becoming.RuleRebuilding.rI 5 50))

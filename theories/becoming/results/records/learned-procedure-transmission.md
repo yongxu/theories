@@ -106,6 +106,7 @@ Consequences of one organized activity affect reconstruction of its operative co
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/transmission-correspondence-checks/20261031T133044.516133Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `LearnedProcedureTransmission.complete_formation_transmission_use`, `LearnedProcedureTransmission.reconstructed_record_enters_use`, `LearnedProcedureTransmission.expose_isSome_iff`, `LearnedProcedureTransmission.reconstruct_isSome_iff`, `LearnedProcedureTransmission.reconstruct_inherits`, `LearnedProcedureTransmission.cycle_transmits`, `LearnedProcedureTransmission.history_transmits`, `Becoming.Stock.trace_balance`
 

@@ -462,7 +462,7 @@ theorem runs_away {g : Nat → Nat} {gs : List (Nat → Nat)}
 
 /-- A positive number times two to an exponent exceeds the exponent. -/
 theorem lt_two_pow_mul {d : Nat} (pos : 0 < d) (n : Nat) : n < 2 ^ n * d :=
-  Nat.lt_of_lt_of_le (Loops.lt_two_pow n)
+  Nat.lt_of_lt_of_le (Naturals.lt_two_pow n)
     (Nat.le_trans (Nat.le_of_eq (Nat.mul_one _).symm) (Nat.mul_le_mul_left _ pos))
 
 /-- **From a positive start, doubling links exceed every bound.** -/
@@ -911,7 +911,7 @@ theorem exceeds_course (m : Nat) {w D : Nat} (pos : 0 < w) (posD : 0 < D) :
     (congrArg (fun t => amount (m + 1) w D t 0) ((Nat.zero_add _).trans (Nat.mul_one _))).trans
       ((amount_eq (m + 1) w D (m + 2) 0 (Propagation.mem_steps_upto (Nat.zero_le _))).trans (Nat.mul_comm _ D))
   Nat.lt_of_le_of_lt (Nat.le_of_eq bound)
-    (Nat.lt_of_lt_of_le (Loops.mul_lt_mul_of_pos posD (one_add_pow_lt pos m))
+    (Nat.lt_of_lt_of_le (Naturals.mul_lt_mul_of_pos posD (one_add_pow_lt pos m))
       (Nat.le_of_eq turn.symm))
 
 /-- **And the ring meets the bound's hypotheses**: the cycle from `0` back to `0` is coupled with

@@ -103,16 +103,13 @@
       "en": "Witnesses: with s + p = 5 to each shaper and a cost of one, the rule favours the shapers where two of the five come back to them alone and disfavours them where none does, and from one shaper to each other their share rises in the first case and falls in the second. With a = 1, c = 1, s = 2, two steps before and three with what comes back lower the shapers' share with nothing shared and raise it with one to every member. With a = 2, c = 1, s = 2: one step before and two with it raise the share; two and two, or one and one, lower it; after five steps before, seven with it lower the share and eight raise it.",
       "zh": "见证：每塑规者 s + p = 5、成本为一，五中二独返于塑规者时规则偏向之，无一独返时偏向他者；自一对一起，前者份额升，后者降。a = 1、c = 1、s = 2 时，先二步无所返、后三步有之：无同得则塑规者份额降，每人同得一则升。a = 2、c = 1、s = 2 时：先一后二则升；二与二、或一与一则降；先五步后，有所返七步则降，八步则升。",
       "declarations": [
-        "Becoming.RuleShaping.Split.one_pos",
         "Becoming.RuleShaping.Split.even",
         "Becoming.RuleShaping.Split.favours",
         "Becoming.RuleShaping.Split.shared_disfavours",
         "Becoming.RuleShaping.Split.rises",
         "Becoming.RuleShaping.Split.falls",
-        "Becoming.RuleShaping.SharedFlips.one_pos",
         "Becoming.RuleShaping.SharedFlips.without_falls",
         "Becoming.RuleShaping.SharedFlips.with_rises",
-        "Becoming.RuleShaping.Timing.two_pos",
         "Becoming.RuleShaping.Timing.soon_rises",
         "Becoming.RuleShaping.Timing.late_falls",
         "Becoming.RuleShaping.Timing.shorter_falls",
@@ -282,13 +279,11 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean",
       "role": "proof",
       "declarations": [
-        "Becoming.RuleShaping.SharedFlips.one_pos",
         "Becoming.RuleShaping.SharedFlips.with_rises",
         "Becoming.RuleShaping.SharedFlips.without_falls",
         "Becoming.RuleShaping.Split.even",
         "Becoming.RuleShaping.Split.falls",
         "Becoming.RuleShaping.Split.favours",
-        "Becoming.RuleShaping.Split.one_pos",
         "Becoming.RuleShaping.Split.rises",
         "Becoming.RuleShaping.Split.shared_disfavours",
         "Becoming.RuleShaping.Timing.eight_rises",
@@ -296,7 +291,6 @@
         "Becoming.RuleShaping.Timing.seven_falls",
         "Becoming.RuleShaping.Timing.shorter_falls",
         "Becoming.RuleShaping.Timing.soon_rises",
-        "Becoming.RuleShaping.Timing.two_pos",
         "Becoming.RuleShaping.back_longer_not_less",
         "Becoming.RuleShaping.byBack",
         "Becoming.RuleShaping.byBack_reads_iff",
@@ -341,7 +335,7 @@
         "Becoming.RuleShaping.threshold_rule_below",
         "Becoming.RuleShaping.wait_not_more"
       ],
-      "sha256": "8f0d8630a48b24088e17f50af7c95619f85191d2ce96f0e7837a38c506a7a74f"
+      "sha256": "64ef0f80da3be8166cf87c62b5dec33716d55f781cce43fd784698972fcca23c"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean",
@@ -382,7 +376,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json",
       "role": "receipt",
-      "sha256": "203db133120a220bbea7aadb2a4105dc8365581528e0a66c1cd0a55e5bc84523",
+      "sha256": "d47dc3cb4e2dae4149217a173b1e6e6d89598115dcd75979054a58c2b670ed3f",
       "declarations": []
     },
     {
@@ -390,12 +384,18 @@
       "role": "receipt",
       "sha256": "a95e583c9e495140d23e2599a6ce8c2d6e710a3887421375e6e7a2ca5eb191fe",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T203838.375122Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RuleShaping",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -421,6 +421,10 @@
     {
       "en": "3 November 2026, board item AJ8 (study section 503): the step's direction scoped to a shared part coming to every member alike, the gain divided among the shapers' groups now stated in shaping-selected-among-groups, and noise in drawn-shaping-drawn-one-at-a-time; the laws are otherwise unchanged.",
       "zh": "2026年11月3日，工作板条目 AJ8（研究第 503 节）：一步之方向限于众人同得之同得部分；塑规者所得而分于其群者今述于 shaping-selected-among-groups，噪声述于 drawn-shaping-drawn-one-at-a-time；诸律余皆不变。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }

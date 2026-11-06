@@ -248,7 +248,7 @@ theorem total_blocks {F G : List Bool → Nat} (one : F [] = 1)
   | k + 1 =>
     (total_courses_split (4 * k) 4 F).trans
       ((Typicality.total_congr (g := fun w => total (Typicality.courses 4) G * F w)
-        (fun w => (SelectionLevels.total_eq_of_mem
+        (fun w => (total_congr_on
           (fun u mu => mul u w mu)).trans
           (Typicality.total_mul_right (F w) G (Typicality.courses 4)))
         (Typicality.courses (4 * k))).trans

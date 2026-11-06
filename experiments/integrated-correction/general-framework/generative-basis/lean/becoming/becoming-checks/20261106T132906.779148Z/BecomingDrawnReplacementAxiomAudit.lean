@@ -1,0 +1,25 @@
+import Becoming.DrawnReplacement
+#print axioms Becoming.DrawnReplacement.up
+#print axioms Becoming.DrawnReplacement.down
+#print axioms Becoming.DrawnReplacement.stay
+#print axioms Becoming.DrawnReplacement.whole
+#print axioms Becoming.DrawnReplacement.at_
+#print axioms Becoming.DrawnReplacement.sub_split
+#print axioms Becoming.DrawnReplacement.drawn_carrier
+#print axioms Becoming.DrawnReplacement.drawn_other
+#print axioms Becoming.DrawnReplacement.favours_iff
+#print axioms Becoming.DrawnReplacement.up_mono
+#print axioms Becoming.DrawnReplacement.steps
+#print axioms Becoming.DrawnReplacement.up_ge
+#print axioms Becoming.DrawnReplacement.up_pos
+#print axioms Becoming.DrawnReplacement.a_le_whole
+#print axioms Becoming.DrawnReplacement.fixation
+#print axioms Becoming.DrawnReplacement.lost_ge
+#print axioms Becoming.DrawnReplacement.fixed_ge
+#print axioms Becoming.DrawnReplacement.lost_above
+#print axioms Becoming.DrawnReplacement.fixed_below
+#print axioms Becoming.DrawnReplacement.one_each
+#print axioms Becoming.DrawnReplacement.risk_dominant_iff
+#print axioms Becoming.DrawnReplacement.Strong.other_first
+#print axioms Becoming.DrawnReplacement.Weak.shapers_first
+#print axioms Becoming.DrawnReplacement.Weak.shared_decides

@@ -90,6 +90,7 @@ Well-foundedness of a strict order, read for dissipative worlds: with dependent 
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `rest exactly where falls stop`, `恰在下降停止之处停息`, `no endless fall`, `没有无尽的下降`, `one premise of rest`, `停息的唯一前提`, `Becoming.World.InAmounts.change_stops_iff`, `Becoming.Amounts.NoEndlessFall`, `Becoming.Pass.endless_keeps_from_rest`
 

@@ -18,8 +18,8 @@
       "en": "Cauchy-Schwarz, counted: over any finite list the square of the total of products is at most the product of the totals of the squares.",
       "zh": "计数形式的 Cauchy-Schwarz：在任一有限列表上，乘积之和的平方至多为平方之和的乘积。",
       "declarations": [
-        "Becoming.Reproduction.twice_le_of_le",
-        "Becoming.Reproduction.twice_le",
+        "Becoming.Naturals.twice_le_of_le",
+        "Becoming.Naturals.twice_le",
         "Becoming.Reproduction.square_mul",
         "Becoming.Reproduction.cross_mul",
         "Becoming.Reproduction.bound_sq"
@@ -51,7 +51,7 @@
       "en": "Over generations with exact transmission of the amount, the cross-multiplied rise or fall of its mean, squared, is at most that product.",
       "zh": "世代上该量传递精确时，其均值经交叉相乘的升或降之平方至多为该乘积。",
       "declarations": [
-        "Becoming.Reproduction.sub_le_of_le_add",
+        "Becoming.Naturals.sub_le_of_le_add",
         "Becoming.Reproduction.Generations.response_sq_le"
       ]
     },
@@ -282,7 +282,6 @@
         "Becoming.Reproduction.excess_cross",
         "Becoming.Reproduction.exists_mem_of_length_pos",
         "Becoming.Reproduction.le_of_excess_zero",
-        "Becoming.Reproduction.mem_append_cases",
         "Becoming.Reproduction.mem_flatMap_cases",
         "Becoming.Reproduction.never_against",
         "Becoming.Reproduction.none_iff_uniform",
@@ -292,16 +291,13 @@
         "Becoming.Reproduction.pairsOf",
         "Becoming.Reproduction.search",
         "Becoming.Reproduction.square_mul",
-        "Becoming.Reproduction.sub_le_of_le_add",
         "Becoming.Reproduction.total_bind",
         "Becoming.Reproduction.total_dist",
         "Becoming.Reproduction.total_pairsOf",
-        "Becoming.Reproduction.twice_le",
-        "Becoming.Reproduction.twice_le_of_le",
         "Becoming.Reproduction.twice_mul",
         "Becoming.Reproduction.variation"
       ],
-      "sha256": "4327fef97099532b6ca8d429c04274a025ab6ea52ebe1c0c129fa4a0fa542506"
+      "sha256": "0f8d91e7d9b6292e176e88806452cc4de86365047e9f8ca11d66556c3ece1d3c"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean",
@@ -318,7 +314,7 @@
         "Becoming.SelectionTerm.raised_exact",
         "Becoming.SelectionTerm.lowered_exact"
       ],
-      "sha256": "d15e7af183adb0363e93f83759c0e2a9f4d1f94b40f331067e6d339d431dc8fe"
+      "sha256": "8b990ef2bdabd78168685b33930779185f54bcaf475ac8252613324b662bf628"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T170500.588275Z/verification.json",
@@ -345,20 +341,44 @@
       "role": "receipt",
       "sha256": "3f5c0cd3499ddfca02340834abc705087799101afdb234d23398d5cb44470b0a",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
+      "declarations": [
+        "Becoming.mem_append_cases",
+        "Becoming.Naturals.sub_le_of_le_add",
+        "Becoming.Naturals.twice_le",
+        "Becoming.Naturals.twice_le_of_le"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Reproduction",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T170500.588275Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.SelectionTerm",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -379,6 +399,10 @@
     {
       "en": "3 November 2026, board item KS (found by KD's readers): the does-not-show said Fisher's identity needs a ratio and is not stated, and the next delta asked for several carried amounts; record the-breeding-value (EV15) states both, cross-multiplied, and is now named in both places; its laws and their statements are unchanged.",
       "zh": "2026年11月3日，工作板条目 KS（KD 的读者发现）：“未表明”曾说 Fisher 恒等式需要比值而未陈述，“下一步”曾求同时经由多个所载之量；记录 the-breeding-value（EV15）以交叉相乘陈述二者，今两处均指名；定律及其陈述不变。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }

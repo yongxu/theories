@@ -761,8 +761,8 @@ theorem exactly_responses_trace (ground response : S → A → S → Nat) (moves
 /-- Every labelled move is listed where every move is. -/
 theorem mem_labelled {moves : List A} (every_move : ∀ a, a ∈ moves) :
     ∀ ab : A × Bool, ab ∈ labelled moves
-  | (a, false) => mem_appended_left _ (mem_mapped (fun a => (a, false)) (every_move a))
-  | (a, true) => mem_appended_right (mem_mapped (fun a => (a, true)) (every_move a)) _
+  | (a, false) => mem_appended_left _ (ListTests.mem_map_of (f := fun a => (a, false)) (every_move a))
+  | (a, true) => mem_appended_right (ListTests.mem_map_of (f := fun a => (a, true)) (every_move a)) _
 
 /-- **Taking each step through one part loses no trace.** Where the counts of the two parts
 together are not zero exactly at the steps of `P`, with every move and configuration listed, the

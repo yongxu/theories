@@ -1,0 +1,50 @@
+@Becoming.Contextual.Glues.agree : ∀ {S : Type u_1} {K : Type u_2} {C : Type u_3} {V : Type u_4}
+  {X : Becoming.Contextual S K C V} {s : S}, X.Glues s → X.Agree s
+@Becoming.Contextual.glues_iff_agree : ∀ {S : Type u_1} {K : Type u_2} {C : Type u_3} {V : Type u_4}
+  (X : Becoming.Contextual S K C V) (home : C → K), (∀ (c : C), X.within (home c) c) → ∀ (s : S), X.Glues s ↔ X.Agree s
+@Becoming.Contextual.not_glues : ∀ {S : Type u_1} {K : Type u_2} {C : Type u_3} {V : Type u_4}
+  (X : Becoming.Contextual S K C V) {support : K → (C → V) → Prop},
+  Becoming.Local X.within support → Becoming.NoGlobal support → ∀ {s : S}, X.Respects support s → ¬X.Glues s
+@Becoming.glued_of_whole : ∀ {K : Type u_1} {C : Type u_2} {V : Type u_3} {within : K → C → Prop} {W : (C → V) → Prop}
+  {v : C → V}, W v → Becoming.Glued (Becoming.restrict within W) v
+@Becoming.restrict_local : ∀ {K : Type u_1} {C : Type u_2} {V : Type u_3} (within : K → C → Prop) (W : (C → V) → Prop),
+  Becoming.Local within (Becoming.restrict within W)
+@Becoming.no_whole : ∀ {K : Type u_1} {C : Type u_2} {V : Type u_3} {within : K → C → Prop}
+  {support : K → (C → V) → Prop},
+  Becoming.NoGlobal support →
+    (∃ k u, support k u) → ¬∃ W, ∀ (k : K) (u : C → V), support k u ↔ Becoming.restrict within W k u
+Becoming.Specker.local_ : Becoming.Local Becoming.Specker.within Becoming.Specker.support
+Becoming.Specker.three_do_not : ∀ (x y z : Bool), ¬(x ≠ y ∧ y ≠ z ∧ z ≠ x)
+Becoming.Specker.noGlobal : Becoming.NoGlobal Becoming.Specker.support
+Becoming.Specker.marks_self : ∀ (x : Becoming.Specker.Box), Becoming.Specker.marks x x = true
+Becoming.Specker.marks_other : ∀ (k : Becoming.Specker.Opening),
+  Becoming.Specker.marks (Becoming.Specker.first k) (Becoming.Specker.second k) = false ∧
+    Becoming.Specker.marks (Becoming.Specker.second k) (Becoming.Specker.first k) = false
+Becoming.Specker.unforced : Becoming.Unforced Becoming.Specker.within Becoming.Specker.support
+Becoming.Specker.respects : Becoming.Specker.world.Respects Becoming.Specker.support ()
+Becoming.Specker.not_glues : ¬Becoming.Specker.world.Glues ()
+Becoming.Specker.no_whole : ¬∃ W,
+    ∀ (k : Becoming.Specker.Opening) (u : Becoming.Specker.Box → Bool),
+      Becoming.Specker.support k u ↔ Becoming.restrict Becoming.Specker.within W k u
+Becoming.Square.within_at : ∀ (l : Becoming.Square.Line) (q : Fin 3), Becoming.Square.within l (Becoming.Square.at_ l q)
+Becoming.Square.local_ : Becoming.Local Becoming.Square.within Becoming.Square.support
+Becoming.Square.nine : ∀ (a b c d e f g h i : Bool),
+  ¬(Becoming.Square.parity a b c = false ∧
+      Becoming.Square.parity d e f = false ∧
+        Becoming.Square.parity g h i = false ∧
+          Becoming.Square.parity a d g = false ∧
+            Becoming.Square.parity b e h = false ∧ Becoming.Square.parity c f i = true)
+Becoming.Square.noGlobal : Becoming.NoGlobal Becoming.Square.support
+Becoming.Square.pos_at : ∀ (l : Becoming.Square.Line) (q : Fin 3), Becoming.Square.pos l (Becoming.Square.at_ l q) = q
+Becoming.Square.at_pos : ∀ (l : Becoming.Square.Line) (p : Becoming.Square.Cell),
+  Becoming.Square.within l p → Becoming.Square.at_ l (Becoming.Square.pos l p) = p
+Becoming.Square.fill_parity : ∀ (q : Fin 3) (b t : Bool),
+  Becoming.Square.parity (Becoming.Square.fill q b t Becoming.Square.i0) (Becoming.Square.fill q b t Becoming.Square.i1)
+        (Becoming.Square.fill q b t Becoming.Square.i2) =
+      t ∧
+    Becoming.Square.fill q b t q = b
+Becoming.Square.unforced : Becoming.Unforced Becoming.Square.within Becoming.Square.support
+Becoming.Square.no_whole : ¬∃ W,
+    ∀ (l : Becoming.Square.Line) (u : Becoming.Square.Cell → Bool),
+      Becoming.Square.support l u ↔ Becoming.restrict Becoming.Square.within W l u
+Becoming.ChangingContext.ends : ∀ (j : Bool) (t : Nat), ¬Becoming.ChangingContext.relation true 2 () j t

@@ -366,17 +366,10 @@ def Web.withRecord (W : Web F C) (L : Flow F C) (ρ : Nat → F → Nat) : Web F
      | none => False
      | some d => W.draws t f d⟩
 
-/-- The record is no member of a family of the flow's own conditions. -/
-theorem none_not_mem : ∀ cs : List C, ¬ (none : Option C) ∈ cs.map some
-  | [], mem => nomatch mem
-  | _ :: cs, mem => match mem_cons_cases mem with
-    | .inl same => nomatch same
-    | .inr mem => none_not_mem cs mem
-
 /-- A family without repetition, with the record, is without repetition. -/
 theorem distinct_withRecord {cs : List C} (distinct : Distinct cs) :
     Distinct ((none : Option C) :: cs.map some) :=
-  ⟨none_not_mem cs, distinct_map (fun _ _ same => Option.some.inj same) distinct⟩
+  ⟨ListTests.none_not_mem_map_some, distinct_map (fun _ _ same => Option.some.inj same) distinct⟩
 
 /-- A total over a family with the record is the record's value with the family's total. -/
 theorem total_withRecord (q : Option C → Nat) (cs : List C) :
@@ -583,17 +576,6 @@ nothing (`Flow.gainlessOn_iff_inflow`), and what the family gains across the ste
 (`Flow.gained_le_inflow`). -/
 def inflow (L : Flow F C) (cs : List C) (t : Nat) : Nat :=
   total (L.present t) fun f => excess (total cs (L.give t f)) (total cs (L.take t f))
-
-/-- An amount is at most another with its excess over it. -/
-theorem le_add_excess (a b : Nat) : a ≤ b + excess a b :=
-  Nat.le_trans (Nat.le_add_right a (excess b a)) (Nat.le_of_eq (excess_balance a b))
-
-/-- What exceeds `x` by at most `y` has excess over `x` at most `y`. -/
-theorem excess_le_of_le_add : ∀ {u x y : Nat}, u ≤ x + y → excess u x ≤ y
-  | 0, _, _, _ => Nat.zero_le _
-  | _ + 1, 0, y, le => Nat.le_trans le (Nat.le_of_eq (Nat.zero_add y))
-  | u + 1, x + 1, y, le => excess_le_of_le_add (u := u) (x := x) (y := y)
-      (Nat.le_of_succ_le_succ (Nat.le_trans le (Nat.le_of_eq (Nat.add_right_comm x 1 y))))
 
 /-- **A family gains nothing exactly where its inflow is zero.** -/
 theorem gainlessOn_iff_inflow : L.GainlessOn cs t ↔ L.inflow cs t = 0 :=
@@ -1548,11 +1530,6 @@ theorem mark_mono {p q : Prop} [Decidable p] [Decidable q] (imp : p → q) : mar
   mark_cases (q := fun m => m ≤ mark q) (fun holds => Nat.le_of_eq (mark_one (imp holds)).symm)
     (fun _ => Nat.zero_le _)
 
-/-- Adding on the left preserves no more than order. -/
-theorem le_of_add_le_add_left {a b : Nat} (k : Nat) (le : k + a ≤ k + b) : a ≤ b :=
-  le_of_add_le_add_right k (Nat.le_trans (Nat.le_of_eq (Nat.add_comm a k))
-    (Nat.le_trans le (Nat.le_of_eq (Nat.add_comm k b))))
-
 namespace Flow
 
 variable {L : Flow F C} {W : Web F C} {cs : List C}
@@ -1605,9 +1582,9 @@ theorem Balances.never_revisits_of_carries (balances : L.Balances W) {T : Nat}
     match le_dest from_, le_dest (Nat.le_trans from_ sv),
       le_dest (Nat.le_trans from_ (Nat.le_trans sv (Nat.le_of_lt vu))) with
     | ⟨a, sa⟩, ⟨c, vc⟩, ⟨b, ub⟩ =>
-      have ac : a ≤ c := le_of_add_le_add_left T
+      have ac : a ≤ c := Naturals.le_of_add_le_add_left (k := T)
         (Nat.le_trans (Nat.le_of_eq sa.symm) (Nat.le_trans sv (Nat.le_of_eq vc)))
-      have cb : c + 1 ≤ b := le_of_add_le_add_left T
+      have cb : c + 1 ≤ b := Naturals.le_of_add_le_add_left (k := T)
         (Nat.le_trans (Nat.le_of_eq (congrArg (· + 1) vc).symm) (Nat.le_trans vu (Nat.le_of_eq ub)))
       have exchanged : 0 < L.exchanges cs (T + c) :=
         match Web.changes_member (Eq.subst (motive := fun x => W.Changes cs x) vc changes) with

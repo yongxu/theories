@@ -1272,7 +1272,7 @@ theorem not_linked_succ {s f g : Nat} (linked : Linked intoZero s f (s + 1) (g +
 stretch. -/
 theorem includesAcross_of_zero {l : Nat → Nat → Nat} (zero : ∀ t, 0 < l t 0) :
     web.IncludesAcrossFrom intoZero l 0 :=
-  fun S U _ le f admitted => match exists_steps_between le with
+  fun S U _ le f admitted => match le_dest le with
     | ⟨0, same⟩ => ⟨f, Eq.subst (motive := fun x => Linked intoZero S f x f) same.symm (.here S f),
         Eq.subst (motive := fun x => web.Admits (l x) x f) same.symm admitted⟩
     | ⟨k + 1, same⟩ =>

@@ -144,6 +144,7 @@ In the law of a finite family (coming-and-ceasing-keep-pace: coming_recurs_iff, 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Becoming.Listed.coming_of_ceasing`, `Becoming.Web.StandingCensus.coming_of_ceasing`, `Becoming.World.arising_of_ceasing`, `Becoming.World.census_one_way`, `Becoming.Accretion.census`, `Becoming.Web.DependenceCensus.forming_of_dissolving`
 

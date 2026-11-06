@@ -105,6 +105,7 @@ The Ornstein–Uhlenbeck steady state: the Lyapunov equation and the Helmholtz f
 | integration | [REVIEW-UE26-LANDING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue26-blankets-at-a-steady-state/REVIEW-UE26-LANDING.md) | — |
 | statement | [03-KNOWING.md](../../chapters/03-KNOWING.md) | — |
 | integration | [FREE-ENERGY-PRINCIPLE.md](../../FREE-ENERGY-PRINCIPLE.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `The blanket in a linear steady state`, `线性稳态之毯`, `Helmholtz decomposition`, `footnote 13`, `sparse coupling term by term`, `Euler–Maruyama steady law`, `Becoming.LinearBlankets.precision_zero_of_footnote13`, `Becoming.LinearBlankets.Autonomous.em_loses_internal_external`
 

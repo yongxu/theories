@@ -818,7 +818,7 @@ theorem LocallyFinite.outcomes {J : Joining F} (finite : J.LocallyFinite) :
     | ⟨es, listed⟩ => ⟨es.map Sum.inr, fun t => match t with
       | .inl _ => ⟨fun step => (nomatch step), fun mem => match exists_of_mem_map mem with
           | ⟨_, _, same⟩ => nomatch same⟩
-      | .inr e => ⟨fun at_r => mem_mapped Sum.inr ((listed e).mp at_r),
+      | .inr e => ⟨fun at_r => ListTests.mem_map_of (f := Sum.inr) ((listed e).mp at_r),
           fun mem => match exists_of_mem_map mem with
           | ⟨_, mem', same⟩ => (listed e).mpr
               (Eq.subst (motive := fun d => d ∈ es) (Sum.inr.inj same) mem')⟩⟩
@@ -926,7 +926,7 @@ theorem FiniteOutcomes.retained_outcomes {J : Joining F} (finite : J.FiniteOutco
           cases Option.some.inj (at_i.symm.trans at_a)
           cases Option.some.inj (at_j.symm.trans at_b)
           subst formed
-          exact mem_mapped (fun z => xs ++ [z]) ((listed z).mp joined),
+          exact ListTests.mem_map_of (f := fun z => xs ++ [z]) ((listed z).mp joined),
          fun mem => match exists_of_mem_map mem with
           | ⟨z, mem', formed⟩ => ⟨a, b, z, at_i, at_j, (listed z).mpr mem', formed.symm⟩⟩⟩
     | none, _ => ⟨[], fun _ => ⟨fun ⟨_, _, _, at_a, _⟩ => (nomatch at_i.symm.trans at_a),

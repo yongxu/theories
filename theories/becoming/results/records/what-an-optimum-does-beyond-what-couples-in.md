@@ -131,6 +131,7 @@ Zhuang and Hadfield-Menell (2020). Their Theorem 1, optimizing a proxy that refe
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zh-proxy-problem/NOTE.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T044249.876816Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `what an optimum does beyond what couples in`, `the drive to the least level`, `optimizing a proxy`, `最优对耦合入者之外做什么`, `Becoming.Optimum.least_iff`, `Becoming.Web.optimum_broken_iff`, `Becoming.Flow.keeping_optimum_takes_slack`
 

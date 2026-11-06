@@ -27,7 +27,7 @@
       "declarations": [
         "Becoming.ReflexivePrediction.none_right_of_moves",
         "Becoming.ReflexivePrediction.no_predictor_right",
-        "Becoming.ReflexivePrediction.not_moves"
+        "Becoming.ListTests.not_ne_self"
       ]
     },
     {
@@ -83,7 +83,7 @@
       "zh": "例，于 0、1、2 之反射 2 − v：减多者所余不多，故其倒序，且不移 1：倒序之应可有是之预言。",
       "declarations": [
         "Becoming.ReflexivePrediction.Reflecting.reflect",
-        "Becoming.ReflexivePrediction.Reflecting.sub_antitone",
+        "Becoming.Naturals.sub_antitone",
         "Becoming.ReflexivePrediction.Reflecting.reverses",
         "Becoming.ReflexivePrediction.Reflecting.middle_right"
       ]
@@ -194,7 +194,6 @@
         "Becoming.ReflexivePrediction.Reflecting.middle_right",
         "Becoming.ReflexivePrediction.Reflecting.reflect",
         "Becoming.ReflexivePrediction.Reflecting.reverses",
-        "Becoming.ReflexivePrediction.Reflecting.sub_antitone",
         "Becoming.ReflexivePrediction.Right",
         "Becoming.ReflexivePrediction.ThresholdResponse.both_right",
         "Becoming.ReflexivePrediction.ThresholdResponse.keeps",
@@ -206,7 +205,6 @@
         "Becoming.ReflexivePrediction.bottom_rests",
         "Becoming.ReflexivePrediction.no_predictor_right",
         "Becoming.ReflexivePrediction.none_right_of_moves",
-        "Becoming.ReflexivePrediction.not_moves",
         "Becoming.ReflexivePrediction.on_chain",
         "Becoming.ReflexivePrediction.predictor_iff",
         "Becoming.ReflexivePrediction.reached_rests",
@@ -215,7 +213,7 @@
         "Becoming.ReflexivePrediction.rises",
         "Becoming.ReflexivePrediction.stays_from"
       ],
-      "sha256": "4eb919e7bb105c90b4eb6dd40467601fa94e160d6ed8674faa376c378be40b3f"
+      "sha256": "acb5cf2bb2825cb6c8d5664ec5835bfc2be44e5be4e1689cdb867ef55b43bdd7"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Diagonal.lean",
@@ -225,7 +223,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean",
       "role": "integration",
-      "sha256": "3f65e832ea3a9fb9359d3a6d77a45ac039ea86bfb93ac5207fbc857fac1adf74"
+      "sha256": "9a13040de7a80fe16f30c471a6e03fea5db9a60852b33eda881293f6e8d0029b"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T191748.070149Z/verification.json",
@@ -250,14 +248,36 @@
     {
       "path": "theories/becoming/chapters/03-KNOWING.md",
       "role": "statement",
-      "sha256": "4d31fc275e668e5be333efa04aec448a02d0dba2affb35e395ef3f66fb298852"
+      "sha256": "28717135374069d3b494de1430ed53a9021ac98be95beb1563409b830a733bba"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
+      "declarations": [
+        "Becoming.Naturals.sub_antitone",
+        "Becoming.ListTests.not_ne_self"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T191748.070149Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.ReflexivePrediction",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -274,6 +294,10 @@
     {
       "en": "4 November 2026, board item RFZ: the test TR6 frozen before any call to a model (experiments/formations-that-read/FREEZE-6.md), its verdict on the bridge resting on the rounds whose count differs from the offline table's, a public shown its course against one shown only its frame, never on the law's forbidden cases; not run. The law is unchanged; next_delta's step is now the frozen test's run, which waits on Ren's yes.",
       "zh": "2026年11月4日，工作板条目 RFZ：检验 TR6 于任一模型调用之前冻结（experiments/formations-that-read/FREEZE-6.md），其于桥之判依其数异于离线之表之轮，示其历之公众对唯示其框者，从不依律所禁之况；未运行。律不变；next_delta 之步今为冻结检验之运行，待 Ren 之可。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }

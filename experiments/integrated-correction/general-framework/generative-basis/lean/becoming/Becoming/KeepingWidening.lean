@@ -332,7 +332,7 @@ end Web
 
 namespace Flow
 
-/-- **In a finite balanced world under the first law nothing keeps widening.** Where a list without
+/-- **In a finite balanced world under the first law nothing keeps widening by name.** Where a list without
 repetition holds every condition, the flow balances on it from `T₀` on and nothing comes from
 nothing, no course keeps widening by name on the actual levels with what its formations require
 fixed: the whole has no boundary to be given across. -/
@@ -1516,7 +1516,7 @@ theorem gainless : flow.Gainless := fun cs _ distinct closed g mem =>
 theorem keeps_opening_by_name : web.KeepsOpening Web.itself web.level 0 :=
   fun S _ => ⟨S + 1, Nat.le_succ S, (Web.exceedsAcross_itself_iff (Nat.le_succ S)).mpr
     ⟨parity (S + 1), supported_iff.mpr rfl,
-     fun supported => not_ne (parity S) (supported_iff.mp supported)⟩⟩
+     fun supported => ListTests.not_ne_self (parity S) (supported_iff.mp supported)⟩⟩
 
 theorem requiresWithin : ∀ f, web.RequiresWithin [false, true] f :=
   fun _ _ _ c req => ⟨req, rfl, listed c⟩
@@ -1565,7 +1565,7 @@ theorem renewers_bounded_while_opening :
 
 /-- No formation of the cycle is supported at two consecutive steps. -/
 theorem brief : ∀ t g, ¬ ∀ i, i ≤ 1 → web.Supported (t + i) g := fun t _ all =>
-  not_ne (parity t) ((supported_iff.mp (all 1 (Nat.le_refl 1))).symm.trans
+  ListTests.not_ne_self (parity t) ((supported_iff.mp (all 1 (Nat.le_refl 1))).symm.trans
     (supported_iff.mp (all 0 (Nat.zero_le 1))))
 
 theorem unloosened : ∀ t f, web.Unloosened t f := fun _ _ _ req => ⟨req, Nat.le_refl 1⟩

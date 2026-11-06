@@ -115,6 +115,7 @@ Provenance as for the record of listing once. Reading (the AI's): identity itsel
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Becoming.listsOnce_all_iff`, `Becoming.World.Indiscernible`, `Becoming.NumbersBy`, `Becoming.numbersBy_iff_decided`, `Becoming.World.indiscernible_decided_iff_em`, `Becoming.World.numbers_indiscernible_iff_em`, `Becoming.World.probe`, `Becoming.World.probe_named_apart`, `Becoming.Flow.byOccurrence`, `Becoming.Flow.byOccurrence_once`, `Becoming.Flow.byOccurrence_uncounted`, `indiscernible`, `不可分辨`, `by occurrence`, `按出现`, `counting by name`, `按名字计数`
 

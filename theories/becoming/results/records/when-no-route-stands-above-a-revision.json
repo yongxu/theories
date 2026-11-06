@@ -52,7 +52,7 @@
         "Becoming.RevisionRoutes.revised_maximal_iff",
         "Becoming.RevisionRoutes.above_needs",
         "Becoming.RevisionRoutes.pos_of_mul_lt_mul",
-        "Becoming.RevisionRoutes.lt_of_mul_lt_mul"
+        "Becoming.Naturals.lt_of_mul_lt_mul_right"
       ]
     },
     {
@@ -139,8 +139,8 @@
     "names-provisional"
   ],
   "validation_scope": {
-    "en": "Pure core, every axiom report empty: RevisionRoutes imports only the prelude, a leaf because it is a model; its comparisons are cross-added, with no subtraction; it proves its own lt_of_mul_lt_mul and eq_zero_of_mul_eq_zero, Lean's Nat.lt_of_mul_lt_mul_right reporting propext, Quot.sound and Classical.choice; the witnesses evaluate by decide. ReadStages imports it and takes its order from GainLoss, every statement and name kept.",
-    "zh": "纯核，公理报告皆空：RevisionRoutes 仅引前导，为模型故为叶；比较交叉相加，不减；自证 lt_of_mul_lt_mul 与 eq_zero_of_mul_eq_zero，Lean 之 Nat.lt_of_mul_lt_mul_right 报告 propext、Quot.sound 与 Classical.choice；例以 decide 算。ReadStages 引之，取其序于 GainLoss，诸陈述与名皆不变。"
+    "en": "Pure core, every axiom report empty: RevisionRoutes imports only the prelude, a leaf because it is a model; its comparisons are cross-added, with no subtraction; the prelude's Naturals.lt_of_mul_lt_mul_right stands for Lean's Nat.lt_of_mul_lt_mul_right, which reports propext, Quot.sound and Classical.choice, and it proves its own eq_zero_of_mul_eq_zero; the witnesses evaluate by decide. ReadStages imports it and takes its order from GainLoss, every statement and name kept.",
+    "zh": "纯核，公理报告皆空：RevisionRoutes 仅引前导，为模型故为叶；比较交叉相加，不减；前导之 Naturals.lt_of_mul_lt_mul_right 代 Lean 之 Nat.lt_of_mul_lt_mul_right（其报告 propext、Quot.sound 与 Classical.choice），并自证 eq_zero_of_mul_eq_zero；例以 decide 算。ReadStages 引之，取其序于 GainLoss，诸陈述与名皆不变。"
   },
   "next_delta": {
     "en": "Uncertainty over routes and value; incomplete orders (Thornley's same-length preferences, the widening order); a frozen test of whether resistance falls with stated restoration and closing a route moves use to another; Acceptance as a case of Optimum.least_of_shared; review by a person.",
@@ -231,7 +231,6 @@
         "Becoming.RevisionRoutes.every_value_iff",
         "Becoming.RevisionRoutes.every_value_loss_iff",
         "Becoming.RevisionRoutes.every_value_loss_iff_of_route",
-        "Becoming.RevisionRoutes.lt_of_mul_lt_mul",
         "Becoming.RevisionRoutes.maximal_of_certain",
         "Becoming.RevisionRoutes.maximal_of_kept_le",
         "Becoming.RevisionRoutes.maximal_of_more_restored",
@@ -240,7 +239,7 @@
         "Becoming.RevisionRoutes.revised_maximal_iff",
         "Becoming.RevisionRoutes.route_above_iff"
       ],
-      "sha256": "891e6398dddb9079808212df766eb6f7ff583df2513e1edaa47020c1d2f937a5"
+      "sha256": "58bb094fb4aa70fd26034d7745e9abeb26bf5bd79a78984b4a0a80080398df4b"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T164445.569791Z/verification.json",
@@ -266,13 +265,34 @@
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
       "sha256": "885bf0202402ef3f56c21a317e444bd5e7535d669226607768c789ebc4e3c0c6"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
+      "declarations": [
+        "Becoming.Naturals.lt_of_mul_lt_mul_right"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T164445.569791Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RevisionRoutes",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -285,6 +305,10 @@
     {
       "en": "31 October 2026: joined with RF-M.2's value of holding for a reading on one order (RR2), the join gone from its next step; its statements and names unchanged.",
       "zh": "2026年10月31日：与 RF-M.2 之待读之值同居一序（RR2），相接一项去于其下一步；其陈述与名不变。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }

@@ -278,17 +278,8 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
       "role": "proof",
-      "sha256": "536e2a32c187c540f3f86a69742722375bc384831fb2d3f763be1e5f15fb29d0",
+      "sha256": "a0039b199331110185dd666ce67dfc960dc6658511044568a2dd8548e4469dbe",
       "declarations": [
-        "Becoming.le_succ_cases",
-        "Becoming.gap_of_lt",
-        "Becoming.mem_cons_split",
-        "Becoming.skipAt",
-        "Becoming.skipAt_ne",
-        "Becoming.skipAt_le",
-        "Becoming.skipAt_lt",
-        "Becoming.split_at_head",
-        "Becoming.revisits_within",
         "Becoming.Revisits",
         "Becoming.revisits_of_held",
         "Becoming.revisits_from",
@@ -354,9 +345,18 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
       "role": "proof",
-      "sha256": "3aadd812b74b7b0563aa3f7daa19a7d5b8da6f1bc55af5cc6bf64fb824f385d7",
+      "sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
       "declarations": [
-        "Becoming.le_dest"
+        "Becoming.le_dest",
+        "Becoming.le_succ_cases",
+        "Becoming.gap_of_lt",
+        "Becoming.mem_cons_cases",
+        "Becoming.skipAt",
+        "Becoming.skipAt_ne",
+        "Becoming.skipAt_le",
+        "Becoming.skipAt_lt",
+        "Becoming.split_at_head",
+        "Becoming.revisits_within"
       ]
     },
     {
@@ -504,12 +504,18 @@
       "role": "receipt",
       "sha256": "36435e774abc5c046539fef86812e4ba5a89d9a18899d51a3efae6363e89064a",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Recurrence",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -530,7 +536,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -618,6 +624,10 @@
     {
       "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): the statement narrowed to determined laws, as the Lean states the equivalence and the home section says, and “a rise needs a merge” to “a rise rules out merging nothing”, Law.rise_not_lossless concluding that the law does not merge nothing, which exhibits no merge; the claim split into thirteen laws, each read against its declarations in Recurrence.lean, Labelled.lean and Frame.lean, negated universals kept as such (unheld_of_new, the change that does not recur, Merges.loses); the limitations to five does-not-show items and the shared boundaries no-evaluation, no-ethical-premise and discrete-steps, the readings' label moved into the correspondence and the reused mathematics into the evidence paragraph; in the hypotheses “change stopping” corrected to “change not recurring”, as the Lean states it; the next step's independent review left to the evidence paragraph; the correspondence's waiting note on the entropy instances, which Becoming.Entropy gives, cut; no premise, status, reference or source hash changed. Every earlier sentence is mapped in [recurrence-without-premise.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/recurrence-without-premise.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, the statement, the correspondence, does-not-show items, related entries, each read against the Lean it cites.",
       "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：陈述按 Lean 陈述等价的方式并与归属节一致，收窄到确定的律，“上升需要合并”收窄为“上升排除不合并”，因为 Law.rise_not_lossless 的结论是并非律不合并，并不给出合并；主张拆为十三条规律，各条对照 Recurrence.lean、Labelled.lean 与 Frame.lean 中的声明核读，否定的全称保持为否定的全称（unheld_of_new、变化不复现、Merges.loses）；限制改为五条“未表明”与通用边界 no-evaluation、no-ethical-premise、discrete-steps，读法的标注移入对应说明，复用的数学移入证据段；前提中的“变化停止”按 Lean 改正为“变化不复现”；下一步中的独立审查留给证据段；对应说明中关于熵的实例待落地的说明删去（Becoming.Entropy 已给出它们）；前提、状态、引用与来源哈希均未改变。每句旧文本的去向见 [recurrence-without-premise.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/recurrence-without-premise.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律、陈述、对应、“未表明”各项、相关条目，各条对照所引 Lean 核读。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ],
   "text_versions": [

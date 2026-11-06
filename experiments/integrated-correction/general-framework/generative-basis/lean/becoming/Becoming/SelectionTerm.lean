@@ -100,8 +100,6 @@ theorem excess_self_add : ∀ x d : Nat, excess x (x + d) = 0
   | 0, _ => rfl
   | x + 1, d => (congrArg (excess (x + 1)) (Nat.succ_add x d)).trans (excess_self_add x d)
 
-theorem excess_same (x : Nat) : excess x x = 0 := excess_self_add x 0
-
 /-- Halves of equal doubles are equal. -/
 theorem half : ∀ {a b : Nat}, a + a = b + b → a = b
   | 0, 0, _ => rfl
@@ -124,12 +122,6 @@ theorem lt_iff_of_balance {x p y q : Nat} (same : x + p = y + q) : y < x ↔ p <
 theorem eq_iff_of_balance {x p y q : Nat} (same : x + p = y + q) : y = x ↔ p = q :=
   ⟨fun eq => Naturals.add_left_cancel ((congrArg (· + p) eq).trans same),
     fun eq => (add_right_cancel p (same.trans (congrArg (y + ·) eq.symm))).symm⟩
-
-/-- A product below another with the same positive factor has the smaller other factor. -/
-theorem lt_of_mul_lt_mul {m a b : Nat} (below : m * a < m * b) : a < b :=
-  match Nat.lt_or_ge a b with
-  | .inl lt => lt
-  | .inr ge => absurd (Nat.lt_of_lt_of_le below (Nat.mul_le_mul_left m ge)) (Nat.lt_irrefl _)
 
 /-- And at most alike. -/
 theorem le_of_mul_le_mul {m a b : Nat} (pos : 0 < m) (le : m * a ≤ m * b) : a ≤ b :=
@@ -291,36 +283,31 @@ theorem none_iff (ps : List α) (w a : α → Nat) :
     total ps w * total ps a = ps.length * weighted ps w a ↔ discord ps w a = concord ps w a :=
   eq_iff_of_balance (covariation ps w a)
 
-theorem total_zero_of {q : α → Nat} : ∀ {ps : List α}, (∀ p, p ∈ ps → q p = 0) → total ps q = 0
-  | [], _ => rfl
-  | p :: ps, zero => (congrArg (· + total ps q) (zero p (.head ps))).trans
-      ((Nat.zero_add _).trans (total_zero_of fun r mem => zero r (.tail p mem)))
-
 theorem pairs_zero {ps : List α} {F : α → α → Nat}
     (zero : ∀ p q, p ∈ ps → q ∈ ps → F p q = 0) : (total ps fun p => total ps (F p)) = 0 :=
-  total_zero_of fun p mp => total_zero_of fun q mq => zero p q mp mq
+  total_eq_zero fun p mp => total_eq_zero fun q mq => zero p q mp mq
 
 /-- With uniform weights nothing is concordant. -/
 theorem concord_uniform {ps : List α} {w : α → Nat} {k : Nat} (same : ∀ p, p ∈ ps → w p = k)
     (a : α → Nat) : concord ps w a = 0 :=
   pairs_zero fun p q mp mq => by
-    rw [same p mp, same q mq, excess_same, Nat.zero_mul]
+    rw [same p mp, same q mq, excess_self, Nat.zero_mul]
 
 theorem discord_uniform {ps : List α} {w : α → Nat} {k : Nat} (same : ∀ p, p ∈ ps → w p = k)
     (a : α → Nat) : discord ps w a = 0 :=
   pairs_zero fun p q mp mq => by
-    rw [same p mp, same q mq, excess_same, Nat.zero_mul]
+    rw [same p mp, same q mq, excess_self, Nat.zero_mul]
 
 /-- With uniform amounts nothing is concordant. -/
 theorem concord_alike {ps : List α} {a : α → Nat} {k : Nat} (same : ∀ p, p ∈ ps → a p = k)
     (w : α → Nat) : concord ps w a = 0 :=
   pairs_zero fun p q mp mq => by
-    rw [same p mp, same q mq, excess_same]; rfl
+    rw [same p mp, same q mq, excess_self]; rfl
 
 theorem discord_alike {ps : List α} {a : α → Nat} {k : Nat} (same : ∀ p, p ∈ ps → a p = k)
     (w : α → Nat) : discord ps w a = 0 :=
   pairs_zero fun p q mp mq => by
-    rw [same p mp, same q mq, excess_same]; rfl
+    rw [same p mp, same q mq, excess_self]; rfl
 
 /-! ## The selection term proper -/
 
@@ -367,26 +354,21 @@ def Exact (ps : List α) (kids : α → List α) (a b : α → Nat) : Prop :=
 
 theorem raised_exact {ps : List α} {kids : α → List α} {a b : α → Nat}
     (exact : Exact ps kids a b) : raised ps kids a b = 0 :=
-  total_zero_of fun p mp => total_zero_of fun k mk =>
-    (congrArg (excess · (a p)) (exact p mp k mk)).trans (excess_same (a p))
+  total_eq_zero fun p mp => total_eq_zero fun k mk =>
+    (congrArg (excess · (a p)) (exact p mp k mk)).trans (excess_self (a p))
 
 theorem lowered_exact {ps : List α} {kids : α → List α} {a b : α → Nat}
     (exact : Exact ps kids a b) : lowered ps kids a b = 0 :=
-  total_zero_of fun p mp => total_zero_of fun k mk =>
-    (congrArg (excess (a p)) (exact p mp k mk)).trans (excess_same (a p))
-
-/-- Nothing exceeds what it is at most. -/
-theorem excess_of_le {x y : Nat} (le : x ≤ y) : excess x y = 0 :=
-  match le_dest le with
-  | ⟨d, eq⟩ => eq ▸ excess_self_add x d
+  total_eq_zero fun p mp => total_eq_zero fun k mk =>
+    (congrArg (excess (a p)) (exact p mp k mk)).trans (excess_self (a p))
 
 /-- Where a member below another in amount has no more weight, nothing is discordant. -/
 theorem discord_zero_of_below {ps : List α} {w a : α → Nat}
     (below : ∀ p q, p ∈ ps → q ∈ ps → a p < a q → w p ≤ w q) : discord ps w a = 0 :=
   pairs_zero fun p q mp mq =>
     match Nat.lt_or_ge (a p) (a q) with
-    | .inl lt => by rw [excess_of_le (below p q mp mq lt)]; exact Nat.zero_mul _
-    | .inr ge => by rw [excess_of_le ge]; rfl
+    | .inl lt => by rw [Flow.excess_zero_of_le (below p q mp mq lt)]; exact Nat.zero_mul _
+    | .inr ge => by rw [Flow.excess_zero_of_le ge]; rfl
 
 /-- So the weighted total is at least its uniform share. -/
 theorem share_le_of_below {ps : List α} {w a : α → Nat}
@@ -507,10 +489,6 @@ theorem rises_step_iff (t : Nat) :
     G.size (t + 1) * G.sum t < G.size t * G.sum (t + 1) ↔ G.Raises t :=
   lt_iff_of_balance (G.mean_step t)
 
-theorem nil_of_length_zero : ∀ {ps : List α}, ps.length = 0 → ps = []
-  | [], _ => rfl
-  | _ :: _, len => Nat.noConfusion len
-
 /-- An empty generation leaves the next one empty. -/
 theorem empty_after {t : Nat} (empty : G.size t = 0) : G.size (t + 1) = 0 ∧ G.sum (t + 1) = 0 :=
   have nil : G.family t = [] := nil_of_length_zero empty
@@ -559,7 +537,7 @@ theorem rises : ∀ (T : Nat), (∀ t, t < T + 1 → G.Raises t) →
           rw [G.empty_sum pos]
           exact Nat.not_lt_zero _)
       | _ + 1 => Nat.succ_pos _
-    apply lt_of_mul_lt_mul (m := G.size (T + 1))
+    apply Naturals.lt_of_mul_lt_mul_left (m := G.size (T + 1))
     rw [mul_turn (G.size (T + 1)) (G.size (T + 1 + 1)) (G.sum 0)]
     apply Nat.lt_of_lt_of_le (Nat.mul_lt_mul_of_pos_left before last)
     rw [mul_turn (G.size (T + 1 + 1)) (G.size 0) (G.sum (T + 1)),

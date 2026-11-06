@@ -1,0 +1,4 @@
+import Becoming.ClassifiedBeliefProcesses
+#print axioms Becoming.ClassifiedBeliefProcesses.after_empty_or_inhabited
+#print axioms Becoming.ClassifiedBeliefProcesses.classified_of_decidable
+#print axioms Becoming.ClassifiedBeliefProcesses.sufficiency_iff_implication_of_decidable

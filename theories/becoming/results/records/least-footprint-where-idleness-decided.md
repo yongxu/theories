@@ -92,6 +92,7 @@ This result connects the footprint supplied in the laws of the order of exchange
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Becoming.Footprinted.DecidesIdle`, `Becoming.Footprinted.least`, `Becoming.Footprinted.least_contains`, `Becoming.Footprinted.least_touch_iff`, `Becoming.Footprinted.least_le`, `Becoming.Footprinted.least_joined`, `Becoming.Footprinted.least_precedes`, `Becoming.Footprinted.least_keeps`, `Becoming.Footprinted.least_exists_iff`, `Becoming.Footprinted.decidesIdle_iff`, `least containing footprint`, `最小包含足迹`
 

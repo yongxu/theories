@@ -40,7 +40,7 @@
         "Becoming.SelectionLevels.pairs_context",
         "Becoming.SelectionLevels.within_by_one",
         "Becoming.SelectionLevels.among_by_one",
-        "Becoming.SelectionLevels.nil_of_length_zero",
+        "Becoming.nil_of_length_zero",
         "Becoming.SelectionLevels.whole_nil",
         "Becoming.SelectionLevels.levels"
       ]
@@ -289,7 +289,6 @@
         "Becoming.SelectionLevels.means_none_of_alike",
         "Becoming.SelectionLevels.meet",
         "Becoming.SelectionLevels.mem_of_mem_context",
-        "Becoming.SelectionLevels.nil_of_length_zero",
         "Becoming.SelectionLevels.none_iff",
         "Becoming.SelectionLevels.none_iff_sized",
         "Becoming.SelectionLevels.pairs_context",
@@ -304,7 +303,6 @@
         "Becoming.SelectionLevels.square_eq_iff",
         "Becoming.SelectionLevels.square_lt_iff",
         "Becoming.SelectionLevels.square_split",
-        "Becoming.SelectionLevels.total_eq_of_mem",
         "Becoming.SelectionLevels.whole",
         "Becoming.SelectionLevels.whole_length",
         "Becoming.SelectionLevels.whole_length_of_equal",
@@ -315,7 +313,7 @@
         "Becoming.SelectionLevels.within_for_of_rises",
         "Becoming.SelectionLevels.within_none_of_uniform"
       ],
-      "sha256": "63330f2fc76504fe103090b7e773d44b7149fd09373086e3ab4c800b61fa62a5"
+      "sha256": "ea9d8944a79dbde1b94b75921b88716f0a39c5f181af873617a7d4b9e3a57fb8"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean",
@@ -367,7 +365,7 @@
         "Becoming.GroupEnding.rises_of_ended",
         "Becoming.GroupEnding.uniform"
       ],
-      "sha256": "91afbb5b74ec6c8b35c21c6728f4f9a8bd778e41ce5be6ddfca2744e76b345ec"
+      "sha256": "761859c3d43144530cea2e922f9fc41238c86f356aff7ea53d4cff56e87f857f"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T155100.105164Z/verification.json",
@@ -410,7 +408,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json",
       "role": "receipt",
-      "sha256": "203db133120a220bbea7aadb2a4105dc8365581528e0a66c1cd0a55e5bc84523",
+      "sha256": "d47dc3cb4e2dae4149217a173b1e6e6d89598115dcd75979054a58c2b670ed3f",
       "declarations": []
     },
     {
@@ -418,20 +416,56 @@
       "role": "receipt",
       "sha256": "a95e583c9e495140d23e2599a6ce8c2d6e710a3887421375e6e7a2ca5eb191fe",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
+      "declarations": [
+        "Becoming.nil_of_length_zero"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
+      "role": "proof",
+      "sha256": "852a5491313223e5de476027cd98408c196db67ac2c263d776dd28e6d050ac3c",
+      "declarations": [
+        "Becoming.total_congr_on"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T203838.375122Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.SelectionLevels",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T181337.294917Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GroupEnding",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Population",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -444,6 +478,10 @@
     {
       "en": "21 October 2026, EV11: groups formed by descent from uniform groups keep their differences (record groups-formed-by-descent, study section 281); this record's does-not-show item on assortment and next delta updated; its laws and their statements are unchanged.",
       "zh": "2026年10月21日，EV11：由均匀之组的世系形成的组保持其差异（记录 groups-formed-by-descent，研究第 281 节）；本记录关于同类聚合的“未表明”项与下一步已更新；定律及其陈述不变。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }

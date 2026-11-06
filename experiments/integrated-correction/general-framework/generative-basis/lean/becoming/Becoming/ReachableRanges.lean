@@ -716,7 +716,7 @@ theorem Web.KeepsWidening.chain {T : Nat} (keeps : W.KeepsWidening Web.itself l 
          admitted),
    fun n => match keeps.2 (T + n) (Nat.le_add_right T n) with
     | ⟨_, later, exceeds⟩ =>
-      match Web.exists_steps_between later, (Web.exceedsAcross_itself_iff later).mp exceeds with
+      match le_dest later, (Web.exceedsAcross_itself_iff later).mp exceeds with
       | ⟨d, apart⟩, ⟨g, admitted, before⟩ =>
         ⟨d, g, Eq.subst (motive := fun m => W.Admits (l m) m g)
           (apart.trans (Nat.add_assoc T n d)) admitted, before⟩⟩
@@ -727,14 +727,14 @@ theorem Web.KeepsWidening.of_chain {T : Nat}
     (chain : Reaching.KeepsWidening (fun n f => W.Admits (l (T + n)) (T + n) f)) :
     W.KeepsWidening Web.itself l T :=
   ⟨fun _ U from_ le => (Web.includesAcross_itself_iff le).mpr fun f admitted =>
-     match Web.exists_steps_between from_, Web.exists_steps_between le with
+     match le_dest from_, le_dest le with
      | ⟨n, atS⟩, ⟨d, atU⟩ =>
        have here : W.Admits (l (T + n)) (T + n) f :=
          Eq.subst (motive := fun m => W.Admits (l m) m f) atS admitted
        have there : T + (n + d) = U :=
          (Nat.add_assoc T n d).symm.trans ((congrArg (· + d) atS).symm.trans atU.symm)
        Eq.subst (motive := fun m => W.Admits (l m) m f) there (chain.1 n d f here),
-   fun S from_ => match Web.exists_steps_between from_ with
+   fun S from_ => match le_dest from_ with
     | ⟨n, atS⟩ => match chain.2 n with
       | ⟨d, g, now, before⟩ =>
         ⟨S + d, Nat.le_add_right S d, (Web.exceedsAcross_itself_iff (Nat.le_add_right S d)).mpr

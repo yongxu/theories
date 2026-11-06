@@ -237,7 +237,7 @@
         "Becoming.Optimum.Coupled.perfect_uncoupled",
         "Becoming.Optimum.Coupled.stepCoupling"
       ],
-      "sha256": "945f458f685e4bdd02b3fe99ae19af5eae40f55f28514229c43f41fc8167be1e"
+      "sha256": "f019384c7c8a0a949e6763e5601aec3293a54f745bde4c3442dddcd7f99c42aa"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T111154.021802Z/verification.json",
@@ -258,12 +258,18 @@
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cdr-coupled-drawers/REVIEW-1.md",
       "role": "review",
       "sha256": "884ed3b5b099e5d172c0f977607df67beb762dde08d72761a344ce75b67e61f4"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CoupledDrawers.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T111154.021802Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.CoupledDrawers",
       "success_pointer": "/status",
       "success_value": "passed"

@@ -426,7 +426,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Blanket.lean",
       "role": "proof",
-      "sha256": "517d21ed20f59fce954e4f007eee54a9342bb1908a487ce9bd1b2d307d390677"
+      "sha256": "772cdae63f20f6ec5c42f84f090ebc4978083d4e00159e6aa9421d7b8a335458"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T183655.254131Z/verification.json",
@@ -472,20 +472,26 @@
       "path": "theories/becoming/FREE-ENERGY-PRINCIPLE.md",
       "role": "integration",
       "sha256": "4bdb238e84ebccab164b7ee7e402e6cf88a85d4c71ef963170de960fd7c27f09"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
-      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Blanket.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T183655.254131Z/verification.json",
-      "sha256_pointer": "/source_sha256/Becoming.Blanket",
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/linear-blankets-checks/20261031T183915.457765Z/verification.json",
+      "sha256_pointer": "/source_sha256/LinearBlankets",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
-      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/linear-blankets-checks/20261031T183915.457765Z/verification.json",
-      "sha256_pointer": "/source_sha256/LinearBlankets",
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Blanket.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Blanket",
       "success_pointer": "/status",
       "success_value": "passed"
     }

@@ -176,7 +176,7 @@ theorem conserved_of_balancing {rel : R → R → Bool} {us : List R} {prev next
       total us (fun c => total us (fun a => inside p move a c)) :=
     total_congr_on fun c mem => within_received along closes mem
   rw [sent, received, total_swap (inside p move) us us] at each
-  exact Naturals.add_right_cancel each
+  exact add_right_cancel _ each
 
 /-! ## A law that reads only adjacent relata -/
 
@@ -267,11 +267,6 @@ theorem joined_apart {rel : R → R → Bool} {x u v : R} (j : adj (joined rel x
 
 theorem not_eq_of_mem_rest {x a : R} {rest : List R} (distinct : Distinct (x :: rest))
     (mem : a ∈ rest) : a ≠ x := fun e => distinct.1 (e ▸ mem)
-
-theorem add_pos_cases {a b : Nat} (pos : 0 < a + b) : 0 < a ∨ 0 < b := by
-  cases a with
-  | zero => exact .inr ((Nat.zero_add b) ▸ pos)
-  | succ n => exact .inl (Nat.succ_pos n)
 
 /-- A move that `via` passes on joins two neighbours of `x`. -/
 theorem via_through {rel : R → R → Bool} {x : R} {rest : List R} {move : R → R → Nat}
@@ -468,7 +463,7 @@ theorem expand_along {rel : R → R → Bool} {x : R} {rest : List R} {move : R 
           total rest (fun u => via rel move u b) + edge (rest.find? fun u => adj rel u x) lx b := by
         unfold expand; rw [if_pos ha, if_neg hb]
       rw [e] at pos
-      rcases add_pos_cases pos with p1 | p2
+      rcases Naturals.pos_or_of_add_pos pos with p1 | p2
       · obtain ⟨u, _, viapos⟩ := total_pos rest p1
         obtain ⟨_, hbx, _, memb⟩ := via_through along support viapos
         refine ⟨?_, ?_, .tail x memb⟩
@@ -484,7 +479,7 @@ theorem expand_along {rel : R → R → Bool} {x : R} {rest : List R} {move : R 
           total rest (fun v => via rel move a v) + edge (rest.find? fun u => adj rel u x) gx a := by
         unfold expand; rw [if_neg ha, if_pos hb]
       rw [e] at pos
-      rcases add_pos_cases pos with p1 | p2
+      rcases Naturals.pos_or_of_add_pos pos with p1 | p2
       · obtain ⟨v, _, viapos⟩ := total_pos rest p1
         obtain ⟨hax, _, mema, _⟩ := via_through along support viapos
         refine ⟨?_, .tail x mema, ?_⟩

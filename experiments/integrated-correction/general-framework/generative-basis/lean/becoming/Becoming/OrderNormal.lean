@@ -258,7 +258,7 @@ theorem sorts_step_by {m S d : Nat} {J : Nat → Nat → Prop} {π σ : Nat → 
   have hS := (reindex S (Nat.le_refl S) (Nat.lt_add_of_pos_right (Nat.succ_pos m))).2
   have top : S + d < S + (m + 1) := Eq.subst (motive := (· < S + (m + 1))) hk hS.2.1
   have dm : d ≤ m :=
-    Nat.le_of_lt_succ (le_of_add_le_add_left_core (S := S) (a := d + 1) (b := m + 1) top)
+    Nat.le_of_lt_succ (Naturals.le_of_add_le_add_left (k := S) (a := d + 1) (b := m + 1) top)
   have free : ∀ p, S ≤ p → p < S + d → ¬ J p (S + d) := fun p from_ below =>
     Eq.subst (motive := fun k => ¬ J p k) hk
       (KeepsOrder.first_free reindex keeps from_ (Eq.subst (motive := (p < ·)) hk.symm below))
@@ -1013,7 +1013,7 @@ theorem reorder_determined (contains : r.Contains) {us₁ us₂ : List Nat}
        (origins a ha ha') (reorder_exchange r us₂ a)),
    fun _ x from_ upto => match le_dest from_ with
      | ⟨e, hk⟩ => Eq.subst (motive := fun j => (r.reorder us₁).web.SameAt j (r.reorder us₂).web j x)
-         hk.symm (webs e (le_of_add_le_add_left_core
+         hk.symm (webs e (Naturals.le_of_add_le_add_left
            (Eq.subst (motive := (· ≤ S + m)) hk upto)) x)⟩
 
 /-- **A world's exchanges over a stretch in normal form**: commuted, two consecutive exchanges not

@@ -81,6 +81,7 @@ The Moran process (Moran 1958) of a two-strategy game in a finite population (No
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [02-MAP.md](../../chapters/02-MAP.md) | — |
 | statement | [04-LIFE.md](../../chapters/04-LIFE.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `The critical mass, drawn one member at a time`, `临界量，逐一而抽`, `the stag hunt of drawn shaping with drift`, `Becoming.DrawnReplacement.one_each`
 

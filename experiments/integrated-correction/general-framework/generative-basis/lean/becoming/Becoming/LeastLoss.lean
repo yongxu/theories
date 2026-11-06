@@ -1,5 +1,4 @@
 import Becoming.Amounts
-import Becoming.Resolution
 import Becoming.Recurrence
 import Becoming.Branching
 import Becoming.Likeness

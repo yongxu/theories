@@ -127,8 +127,8 @@
       "id": "shared-laws-on-the-grammar",
       "relation": "formal-reuse",
       "detail": {
-        "en": "«对», «对之逆», «对之取», «对之长», «聚之长», GrammarLaws.revisits_within, mem_middle, split_append and total_congr; the rest is arithmetic (excess_balance, excess_pos, Flow.excess_zero_of_le).",
-        "zh": "«对»、«对之逆»、«对之取»、«对之长»、«聚之长»、GrammarLaws.revisits_within、mem_middle、split_append 与 total_congr；余为算术（excess_balance、excess_pos、Flow.excess_zero_of_le）。"
+        "en": "«对», «对之逆», «对之取», «对之长», «聚之长», revisits_within, mem_middle, split_append and total_congr; the rest is arithmetic (excess_balance, excess_pos, Flow.excess_zero_of_le).",
+        "zh": "«对»、«对之逆»、«对之取»、«对之长»、«聚之长»、revisits_within、mem_middle、split_append 与 total_congr；余为算术（excess_balance、excess_pos、Flow.excess_zero_of_le）。"
       }
     },
     {
@@ -179,7 +179,7 @@
         "Becoming.UnitMatchings.residual_pos_of_dissipates",
         "Becoming.UnitMatchings.lossless_not_dissipative"
       ],
-      "sha256": "60958422e2b9a63a374dbd26b655bd19de026d44dbf0599b04d0b0eda580fc23"
+      "sha256": "30c588c34bb20c10bb3579451fed4c32eb203cb161fcaa8b4cbb68aeb88e0ed3"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T152525.956467Z/verification.json",
@@ -228,12 +228,18 @@
       "role": "receipt",
       "sha256": "4331b95fd551f781d435b9a3ad5f05fb95cbdeb2f7ed119459297fe80639044a",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/UnitMatchings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.UnitMatchings",
       "success_pointer": "/status",
       "success_value": "passed"

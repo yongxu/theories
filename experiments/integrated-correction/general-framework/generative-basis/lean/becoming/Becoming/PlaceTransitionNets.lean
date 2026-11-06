@@ -190,11 +190,6 @@ theorem law_nonanticipating : (N.law y).Nonanticipating :=
 theorem course_eq (start : P → Nat) : (N.law y).course σ start = N.flow y σ :=
   rfl
 
-/-- What stands, less what is taken, with what is given, added back what was taken. -/
-theorem fire_add_back {M k g : Nat} (le : k ≤ M) : M - k + g + k = M + g :=
-  (Nat.add_right_comm (M - k) g k).trans
-    (congrArg (· + g) (Naturals.sub_add_cancel le))
-
 theorem le_of_fire_add_back {M k g : Nat} (back : M - k + g + k = M + g) : k ≤ M :=
   ExchangeLaw.sub_add_back_iff.mp
     (add_right_cancel g ((Nat.add_right_comm (M - k) k g).trans back))
@@ -217,11 +212,11 @@ theorem balance_at_iff {u M k g : Nat} (positive : 0 < u) :
   ⟨fun balance => le_of_fire_add_back (Nat.eq_of_mul_eq_mul_left positive
       ((Nat.left_distrib u _ k).trans (balance.trans (Nat.left_distrib u M g).symm))),
    fun le => (Nat.left_distrib u _ k).symm.trans
-      ((congrArg (u * ·) (fire_add_back le)).trans (Nat.left_distrib u M g))⟩
+      ((congrArg (u * ·) (Naturals.sub_add_refill _ le)).trans (Nat.left_distrib u M g))⟩
 
 theorem balance_at_iff' {u M k g : Nat} (le : k ≤ M) :
     u * (M - k + g) + u * k = u * M + u * g :=
-  (Nat.left_distrib u _ k).symm.trans ((congrArg (u * ·) (fire_add_back le)).trans (Nat.left_distrib u M g))
+  (Nat.left_distrib u _ k).symm.trans ((congrArg (u * ·) (Naturals.sub_add_refill _ le)).trans (Nat.left_distrib u M g))
 
 /-- **Along a firing sequence the net's flow balances its markings**, in any units. -/
 theorem Fires.balances (fires : N.Fires σ M₀) (y : P → Nat) :

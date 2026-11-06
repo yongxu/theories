@@ -107,6 +107,7 @@ Actual witnesses and joint failures must be covered; surviving-report fidelity, 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `FallibleInspection.complete_diagnosability_iff_cross_separation`, `Becoming.complete_diagnosability_iff_by_core`, `Becoming.Courses.dates_no_common_report_envelopes_iff`, `Becoming.Courses.dates_no_common_report_iff`, `Becoming.Courses.run_reports_apart`, `Becoming.WitnessRefinementRuns.diagnosable_iff`, `Becoming.WitnessRefinementRuns.complete_run_agrees`, `inspection by fallible witnesses as a process`, `可失实见证的检视过程`
 

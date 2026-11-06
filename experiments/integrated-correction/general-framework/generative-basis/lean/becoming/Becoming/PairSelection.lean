@@ -824,8 +824,8 @@ def ClockMatches (x : State) (y : Nat × (Pair × Nat → Prop)) : Prop :=
 theorem window_gives_iff (b0 b1 c : Bool) :
     (windowTwo b0 b1 && !c) = true ↔ ¬ c = true ∧ (b0 = true ∨ b1 = true) :=
   ListTests.and_true_iff.trans
-    ⟨fun ⟨w, n⟩ => ⟨ListTests.false_iff_not.mp (ListTests.not_true_iff.mp n), boolOr_true_iff b0 b1 |>.mp w⟩,
-     fun ⟨n, w⟩ => ⟨(boolOr_true_iff b0 b1).mpr w,
+    ⟨fun ⟨w, n⟩ => ⟨ListTests.false_iff_not.mp (ListTests.not_true_iff.mp n), ListTests.or_true_iff.mp w⟩,
+     fun ⟨n, w⟩ => ⟨ListTests.or_true_iff.mpr w,
       ListTests.not_true_iff.mpr (ListTests.false_iff_not.mpr n)⟩⟩
 
 theorem start_gives_iff (c : Bool) : (windowTwo true true && !c) = true ↔ ¬ c = true :=
@@ -989,7 +989,7 @@ theorem kind_not_rises_of_below {ps : List α} {w : α → Nat} {kind : α → B
   have zero : concord ps w (amountOf kind) = 0 := pairs_zero fun p q mp mq => by
     show excess (w p) (w q) * excess (cond (kind p) 1 0) (cond (kind q) 1 0) = 0
     match hp : kind p, hq : kind q with
-    | true, false => rw [excess_of_le (below p q mp mq hp hq), Nat.zero_mul]
+    | true, false => rw [Flow.excess_zero_of_le (below p q mp mq hp hq), Nat.zero_mul]
     | true, true => rfl
     | false, true => rfl
     | false, false => rfl
@@ -1060,10 +1060,6 @@ theorem Place.withheld_of_withholding (s : Place) (h : s.law s.side = withholdin
     rw [h']
     exact tally_true (fun t => by rw [gives_withholding_second]; rfl) n
 
-theorem and_true_eq : ∀ b : Bool, (b && true) = b
-  | true => rfl
-  | false => rfl
-
 theorem tally_le_succ (p : Nat → Bool) (n : Nat) : tally p (n + 1) ≤ tally p n + 1 :=
   Nat.add_le_add_left (by cases p n <;> decide) _
 
@@ -1091,7 +1087,7 @@ theorem Place.answering_le (s : Place) (h : s.law s.side = answering)
       tally (fun t => !gives (law first) (law second) errs first t) n ≤ n
     rw [h']
     exact answering_sum_le (show (true && !errs 0 first) = true by rw [own 0]; rfl)
-      (fun t => (gives_answering_first _ _ t).trans (by rw [own (t + 1)]; exact and_true_eq _)) n
+      (fun t => (gives_answering_first _ _ t).trans (by rw [own (t + 1)]; exact Bool.and_true _)) n
   | ⟨law, _, errs, second⟩, h, own => by
     have h' : law second = answering := h
     have own : ∀ t, errs t second = false := own
@@ -1099,7 +1095,7 @@ theorem Place.answering_le (s : Place) (h : s.law s.side = answering)
       tally (fun t => !gives (law first) (law second) errs second t) n ≤ n
     rw [h']
     exact answering_sum_le (show (true && !errs 0 second) = true by rw [own 0]; rfl)
-      (fun t => (gives_answering_second _ _ t).trans (by rw [own (t + 1)]; exact and_true_eq _)) n
+      (fun t => (gives_answering_second _ _ t).trans (by rw [own (t + 1)]; exact Bool.and_true _)) n
 
 /-- With `β ≤ γ`, a withholder leaves at least `a + γ n`. -/
 theorem Place.withholder_ge {β γ : Nat} (a n : Nat) (s : Place) (h : s.law s.side = withholding) :
@@ -1207,12 +1203,6 @@ def withholdPair : Place := ⟨fun _ => withholding, fun _ => false, noErrors, f
 def cohort (x y z : Nat) : List (List Place) :=
   List.replicate x [answerPair, answerPair.other] ++ List.replicate y [mixedPair, mixedPair.other] ++
     List.replicate z [withholdPair, withholdPair.other]
-
-theorem total_replicate {β : Type} (q : β → Nat) (c : β) : ∀ k, total (List.replicate k c) q = k * q c
-  | 0 => (Nat.zero_mul _).symm
-  | k + 1 => by
-    show q c + total (List.replicate k c) q = (k + 1) * q c
-    rw [total_replicate q c k, Nat.succ_mul, Nat.add_comm]
 
 theorem mem_replicate_eq {β : Type} {c g : β} : ∀ {k : Nat}, g ∈ List.replicate k c → g = c
   | 0, mem => nomatch mem
@@ -1354,7 +1344,7 @@ theorem mixed_exceeds_iff (a β γ d : Nat) :
   have Dpos : 0 < d + (1 + d) := Nat.lt_of_lt_of_le (Nat.zero_lt_succ d)
     (Nat.le_trans (Nat.le_of_eq (Nat.add_comm d 1)) (Nat.le_add_left (1 + d) d))
   rw [hA, hM]
-  exact ⟨fun h => SelectionTerm.lt_of_mul_lt_mul (m := d + (1 + d))
+  exact ⟨fun h => Naturals.lt_of_mul_lt_mul_left (m := d + (1 + d))
       (Nat.lt_of_le_of_lt (Nat.le_of_eq (Nat.mul_comm _ _))
         (Nat.lt_of_lt_of_le (Nat.lt_of_add_lt_add_left h) (Nat.le_of_eq (Nat.mul_comm _ _)))),
     fun h => Nat.add_lt_add_left (Nat.mul_lt_mul_of_pos_right h Dpos) _⟩
@@ -1388,7 +1378,7 @@ theorem assorted_raises_iff {a β γ n : Nat} (pos : 0 < a) (npos : 0 < n) {x : 
     x.carrier * (CarrierCounts.select x (shaped a (β * n) 0 (γ * n) pos)).other <
         (CarrierCounts.select x (shaped a (β * n) 0 (γ * n) pos)).carrier * x.other ↔ γ < β :=
   (lt_select_iff some).trans
-    ⟨fun h => SelectionTerm.lt_of_mul_lt_mul (m := n)
+    ⟨fun h => Naturals.lt_of_mul_lt_mul_left (m := n)
         (Nat.lt_of_le_of_lt (Nat.le_of_eq (Nat.mul_comm n γ))
           (Nat.lt_of_lt_of_le (Nat.lt_of_add_lt_add_left (h : a + γ * n < a + β * n))
             (Nat.le_of_eq (Nat.mul_comm β n)))),
@@ -1412,12 +1402,12 @@ theorem assorted_lowers_iff {a β γ n : Nat} (pos : 0 < a) (npos : 0 < n) {x : 
     (CarrierCounts.select x (shaped a (β * n) 0 (γ * n) pos)).carrier * x.other <
         x.carrier * (CarrierCounts.select x (shaped a (β * n) 0 (γ * n) pos)).other ↔ β < γ :=
   ⟨fun lt =>
-    have below : a + β * n < a + γ * n := SelectionTerm.lt_of_mul_lt_mul (m := x.carrier * x.other)
+    have below : a + β * n < a + γ * n := Naturals.lt_of_mul_lt_mul_left (m := x.carrier * x.other)
       (calc x.carrier * x.other * (a + β * n)
           = x.carrier * (a + β * n) * x.other := Naturals.mul_right_comm _ _ _
         _ < x.carrier * (x.other * (a + γ * n)) := lt
         _ = x.carrier * x.other * (a + γ * n) := (mul_assoc_nat _ _ _).symm)
-    SelectionTerm.lt_of_mul_lt_mul (m := n)
+    Naturals.lt_of_mul_lt_mul_left (m := n)
       (Nat.lt_of_le_of_lt (Nat.le_of_eq (Nat.mul_comm n β))
         (Nat.lt_of_lt_of_le (Nat.lt_of_add_lt_add_left below) (Nat.le_of_eq (Nat.mul_comm γ n)))),
    fun h => falls_strictly some
@@ -1719,11 +1709,11 @@ theorem window_echo_lt_iff (a β γ t m : Nat) (mpos : 0 < m) :
         (answerErrAt t).offspring a β γ (t + (m + 1)) + (answerErrAt t).other.offspring a β γ (t + (m + 1))
         ↔ β < γ) := by
   rw [(echo_pair_sums a β γ t m).1, (echo_pair_sums a β γ t m).2]
-  exact ⟨⟨fun h => SelectionTerm.lt_of_mul_lt_mul (m := m)
+  exact ⟨⟨fun h => Naturals.lt_of_mul_lt_mul_left (m := m)
       (Nat.lt_of_le_of_lt (Nat.le_of_eq (Nat.mul_comm m γ))
         (Nat.lt_of_lt_of_le (Nat.lt_of_add_lt_add_left h) (Nat.le_of_eq (Nat.mul_comm β m)))),
     fun h => Nat.add_lt_add_left (Nat.mul_lt_mul_of_pos_right h mpos) _⟩,
-   ⟨fun h => SelectionTerm.lt_of_mul_lt_mul (m := m)
+   ⟨fun h => Naturals.lt_of_mul_lt_mul_left (m := m)
       (Nat.lt_of_le_of_lt (Nat.le_of_eq (Nat.mul_comm m β))
         (Nat.lt_of_lt_of_le (Nat.lt_of_add_lt_add_left h) (Nat.le_of_eq (Nat.mul_comm γ m)))),
     fun h => Nat.add_lt_add_left (Nat.mul_lt_mul_of_pos_right h mpos) _⟩⟩

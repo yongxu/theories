@@ -212,7 +212,7 @@ theorem leaves_nothing {L : Nat → Nat} {a r W : Nat} (below : c < m) (pos : 0 
   match Nat.lt_or_ge r m with
   | .inl lt =>
     rw [stepCoupling_of_lt lt, Nat.add_zero] at best
-    exact zero_of_le_sub le (Naturals.le_of_add_le_add_right best)
+    exact zero_of_le_sub le (le_of_add_le_add_right _ best)
   | .inr ge =>
     rw [stepCoupling_of_le ge] at best
     have less : a - r + (W + c) < a + W :=
@@ -235,7 +235,7 @@ theorem leaves_need {L : Nat → Nat} {a r V W : Nat} (pos : 0 < m)
     rw [keep_of_lt am]
     have h := best 0 (Nat.zero_le a)
     rw [below 0 pos, below r (Nat.lt_of_le_of_lt le am), Nat.sub_zero] at h
-    exact zero_of_le_sub le (Naturals.le_of_add_le_add_right h)
+    exact zero_of_le_sub le (le_of_add_le_add_right _ h)
   | .inr ma => by
     rw [keep_of_le ma]
     have h := best m ma
@@ -251,7 +251,7 @@ theorem leaves_need {L : Nat → Nat} {a r V W : Nat} (pos : 0 < m)
       exact absurd h (Nat.not_le_of_gt less)
     | .inr mr =>
       rw [above r mr] at h
-      exact Nat.le_antisymm (le_of_sub_le_sub ma le (Naturals.le_of_add_le_add_right h)) mr
+      exact Nat.le_antisymm (le_of_sub_le_sub ma le (le_of_add_le_add_right _ h)) mr
 
 /-- **Leaving the need is a best response** where leaving it brings at least the need beyond
 leaving less: the non-strict converse of `leaves_need`. -/
@@ -723,7 +723,7 @@ theorem one_perfect {q : Nat} (pos : 0 < m) (within : c ≤ m) :
     subst isZero
     match j, at_ with
     | 0, at_ =>
-      have one : t = 1 := Naturals.add_right_cancel (k := 1) at_
+      have one : t = 1 := add_right_cancel (1) at_
       subst one
       show a - b + (stepCoupling c m b + 0) ≤ a - 0 + (stepCoupling c m 0 + 0)
       rw [Nat.add_zero, Nat.add_zero, stepCoupling_of_lt pos, Nat.sub_zero, Nat.add_zero]
@@ -734,7 +734,7 @@ theorem one_perfect {q : Nat} (pos : 0 < m) (within : c ≤ m) :
         exact Nat.le_trans (Nat.add_le_add_left (Nat.le_trans within mb) _)
           (Nat.le_of_eq (Naturals.sub_add_cancel ba))
     | 1, at_ =>
-      have zero : t = 0 := Naturals.add_right_cancel (k := 2) at_
+      have zero : t = 0 := add_right_cancel (2) at_
       subst zero
       have worth : ∀ b', later (gatedRenewal m q) (fun _ t a => if t = 0 then keep m a else 0) 1 0 c m 1 0 b' =
           stepCoupling c m b' + gatedRenewal m q 0 b' := fun b' => by
@@ -923,7 +923,7 @@ theorem drain_perfect_iff (pos : 0 < m) :
         rw [unfold_ d dk, unfold_ d dk, drawn_drained_step pos, drawn_drained_step pos, stepCoupling_of_lt pos,
           Nat.sub_zero, Nat.zero_add, ← Nat.add_assoc (stepCoupling c m b), ← Nat.add_assoc (portion d t z - b),
           ← Nat.add_assoc (portion d t z)] at h
-        exact cancel_left_sub le (Naturals.le_of_add_le_add_right h)⟩,
+        exact cancel_left_sub le (le_of_add_le_add_right _ h)⟩,
    fun ⟨atLast, earlier⟩ => ⟨fun _ _ a => ⟨Nat.le_refl 0, Nat.zero_le a⟩, fun t j at_ d dk z b _ le => by
     show portion d t z - b + later G portion (fun _ _ _ => 0) k d c m j t z b ≤
       portion d t z - 0 + later G portion (fun _ _ _ => 0) k d c m j t z 0

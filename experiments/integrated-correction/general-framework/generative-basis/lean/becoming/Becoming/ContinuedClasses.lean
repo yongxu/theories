@@ -394,18 +394,12 @@ theorem Linked.itself_onward {c : C} {g : F} :
             (Nat.le_trans before (Nat.le_of_eq (Nat.succ_add s k))) :
         Linked (W.holdingOn itself c) (s + 1) g (Nat.succ (s + k)) g))
 
-/-- A later step is an earlier one with some number of steps added. -/
-theorem exists_steps_between : ∀ {s t : Nat}, s ≤ t → ∃ k, t = s + k
-  | _, _, .refl => ⟨0, rfl⟩
-  | _, _, .step earlier => match exists_steps_between earlier with
-    | ⟨k, apart⟩ => ⟨k + 1, congrArg Nat.succ apart⟩
-
 /-- **Tenure along each formation continuing itself is tenure as named.** -/
 theorem metAboveAlong_itself_iff {t : Nat} {g : F} {c : C} {m : Nat} :
     W.MetAboveAlong itself t g c m ↔ W.MetAbove t g c m :=
   ⟨fun ⟨s, _, linked, held, met, above⟩ => match Linked.itself_held linked held with
      | ⟨same, earlier, holds⟩ => ⟨s, earlier, holds, same ▸ met, same ▸ above⟩,
-   fun ⟨s, earlier, holds, met, above⟩ => match exists_steps_between earlier with
+   fun ⟨s, earlier, holds, met, above⟩ => match le_dest earlier with
      | ⟨k, apart⟩ =>
        ⟨s, g, apart ▸ Linked.itself_onward k s (apart ▸ holds),
         holds s (Nat.le_refl s) earlier, met, above⟩⟩
@@ -532,7 +526,7 @@ theorem Linked.itself_steps {g : F} : ∀ (k s : Nat), Linked (itself (F := F)) 
       Linked (itself (F := F)) (s + 1) g (Nat.succ (s + k)) g))
 
 theorem Linked.itself_of_le {s t : Nat} {g : F} (later : s ≤ t) : Linked (itself (F := F)) s g t g :=
-  match exists_steps_between later with
+  match le_dest later with
   | ⟨k, apart⟩ => apart ▸ Linked.itself_steps k s
 
 /-- **Along each formation continuing itself, inclusion across a stretch is inclusion as named.** -/

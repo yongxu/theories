@@ -188,12 +188,6 @@ theorem count_reaches (p : Nat → Bool) : ∀ m r, r < count p m → ∃ i, i <
     | false => match count_reaches p m r (Nat.lt_of_lt_of_le lt (Nat.le_of_eq (count_succ_of_false h))) with
       | ⟨i, below, passes, counted⟩ => ⟨i, Nat.lt_succ_of_lt below, passes, counted⟩
 
-theorem not_false_of_true {b : Bool} (h : b = true) : (!b) = false :=
-  congrArg (fun c => !c) h
-
-theorem bool_absurd {b : Bool} (h : b = true) (h' : b = false) : False :=
-  absurd (h.symm.trans h') (by decide)
-
 /-- **What passes and what fails together are all**: below `m`, the numbers passing and the
 numbers failing make `m`. -/
 theorem count_add_not (p : Nat → Bool) : ∀ m, count p m + count (fun x => !p x) m = m
@@ -203,7 +197,7 @@ theorem count_add_not (p : Nat → Bool) : ∀ m, count p m + count (fun x => !p
       calc count p (m + 1) + count (fun x => !p x) (m + 1)
           = (count p m + 1) + count (fun x => !p x) m :=
             congr (congrArg HAdd.hAdd (count_succ_of_true h))
-              (count_succ_of_false (p := fun x => !p x) (not_false_of_true h))
+              (count_succ_of_false (p := fun x => !p x) (ListTests.not_false_of_true h))
         _ = (count p m + count (fun x => !p x) m) + 1 := Nat.add_right_comm _ _ _
         _ = m + 1 := congrArg (· + 1) (count_add_not p m)
     | false =>
@@ -558,11 +552,6 @@ decision, or with a weak one. -/
 def Tabulates (f : Nat → Bool) (Q : Nat → Prop) (n : Nat) : Prop :=
   ∀ x, x < n → (f x = true ↔ Q x)
 
-theorem beq_false_of_ne {a b : Nat} (ne : a ≠ b) : Nat.beq a b = false :=
-  match h : Nat.beq a b with
-  | true => absurd (Nat.eq_of_beq_eq_true h) ne
-  | false => rfl
-
 theorem table_yes {Q : Nat → Prop} {n : Nat} {f : Nat → Bool} (spec : Tabulates f Q n) (yes : Q n) :
     Tabulates (fun x => Nat.beq x n || f x) Q (n + 1) :=
   fun x below => match Nat.decEq x n with
@@ -581,14 +570,14 @@ theorem table_no {Q : Nat → Prop} {n : Nat} {f : Nat → Bool} (spec : Tabulat
   fun x below => match Nat.decEq x n with
   | .isTrue e => by
     subst e
-    exact ⟨fun h => (bool_absurd (beq_self _)
+    exact ⟨fun h => (ListTests.bool_absurd (beq_self _)
         (ListTests.false_of_not (ListTests.and_true_iff.mp h).1)).elim,
       fun q => absurd q no⟩
   | .isFalse ne =>
     have lt := lt_of_le_ne (Nat.le_of_lt_succ below) ne
     ⟨fun h => (spec x lt).mp (ListTests.and_true_iff.mp h).2,
      fun q => ListTests.and_true_iff.mpr
-       ⟨ListTests.not_eq_true_of_false (beq_false_of_ne ne), (spec x lt).mpr q⟩⟩
+       ⟨ListTests.not_eq_true_of_false (ListTests.beq_false_of_ne ne), (spec x lt).mpr q⟩⟩
 
 /-- **Every test has a table, doubly negated.** -/
 theorem table_not_not (Q : Nat → Prop) : ∀ n, ¬ ¬ ∃ f, Tabulates f Q n
@@ -624,12 +613,6 @@ theorem down_closed {c : Causet} (ordered : c.Ordered) (j : Nat) {x y : Nat} (pa
   match inside with
   | .inl p => .inl (ordered.trans pair p)
   | .inr e => .inl (Eq.subst (motive := fun k => c.prec x k) e pair)
-
-/-- A Boolean test's verdict is decided. -/
-theorem decided_true (b : Bool) : Decided (b = true) :=
-  match decEq b true with
-  | .isTrue e => .inl e
-  | .isFalse ne => .inr ne
 
 /-- **Whether some number below `U` has `P` is weakly decided** where it is for each. -/
 theorem weakly_exists_below {P : Nat → Prop} :
@@ -959,7 +942,7 @@ theorem maximalBorn_front {c : Causet} (ordered : c.Ordered) (d : Nat → Bool) 
       | false => rfl⟩,
    fun ⟨hx, passes, top⟩ => ⟨hx, (front_lt_count_iff hx).mpr passes, fun k pair =>
       match Nat.lt_or_ge (front d c.size k) (count d c.size) with
-      | .inl lt => (bool_absurd ((front_lt_count_iff (ordered.within pair)).mp lt) (top k pair)).elim
+      | .inl lt => (ListTests.bool_absurd ((front_lt_count_iff (ordered.within pair)).mp lt) (top k pair)).elim
       | .inr ge => ge⟩⟩
 
 section Antichains
@@ -972,7 +955,7 @@ theorem weakly_above (weakly : ∀ a b, WeaklyDecided (c.prec a b)) (q : Nat →
     (inside : ∀ {x}, q x = true → x < c.size) (z : Nat) :
     WeaklyDecided (∃ y, q y = true ∧ (z = y ∨ c.prec z y)) :=
   have each : ∀ y, y < c.size → WeaklyDecided (q y = true ∧ (z = y ∨ c.prec z y)) := fun y _ =>
-    match decided_true (q y), Nat.decEq z y, weakly z y with
+    match LLPO.decided_true (q y), Nat.decEq z y, weakly z y with
     | .inr fails, _, _ => .inl fun both => fails both.1
     | .inl passes, .isTrue e, _ => .inr fun absent => absent ⟨passes, .inl e⟩
     | .inl _, .isFalse ne, .inl fails => .inl fun both => both.2.elim ne fails
@@ -1003,8 +986,8 @@ theorem antichain_present (weakly : ∀ a b, WeaklyDecided (c.prec a b)) (ordere
         | ⟨hx, fx, top⟩ => match h : q x with
           | true => rfl
           | false => (((spec x hx).mp fx) fun ⟨y, qy, hxy⟩ => match hxy with
-            | .inl e => bool_absurd (Eq.subst (motive := fun w => q w = true) e.symm qy) h
-            | .inr p => bool_absurd ((spec y (ordered.within p)).mpr fun no => no ⟨y, qy, .inl rfl⟩)
+            | .inl e => ListTests.bool_absurd (Eq.subst (motive := fun w => q w = true) e.symm qy) h
+            | .inr p => ListTests.bool_absurd ((spec y (ordered.within p)).mpr fun no => no ⟨y, qy, .inl rfl⟩)
                 (top y p)).elim,
       fun qx => (maximalBorn_front ordered f).mpr
         ⟨inside qx, (spec x (inside qx)).mpr fun no => no ⟨x, qx, .inl rfl⟩,

@@ -106,6 +106,7 @@ Following Ren's “push the frontier, as far as possible” of 12 October 2026, 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | review | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Becoming.Rectangular`, `Becoming.Separated`, `Becoming.separation_faithful_iff`, `Becoming.separation_admits_extra`, `Becoming.whole_not_in_pairs`, `Becoming.evenBoxes_not_determined`, `Becoming.imageOf`, `Becoming.Rectangular.image_of_separate`, `Becoming.copy_relates`, `Becoming.relation_persists`, `Becoming.forgetting_unrelates`, `Becoming.coupling_relates_and_unrelates`, `rectangular whole`, `矩形的整体`, `separation`, `分离`, `relation held by no part`, `不在任何部分中的关系`, `Becoming.Courses.relation_persists_courses`, `Becoming.Courses.courses_keep_unrelated`, `Becoming.Courses.copy_relates_course`, `Becoming.Courses.forgetting_unrelates_courses`, `Becoming.Courses.coupling_course`
 

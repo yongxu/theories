@@ -157,8 +157,8 @@ variable {α β : Type}
 /-- Of two numbers, one does not exceed the other: the crossed excesses multiply to nothing. -/
 theorem excess_cross (x y : Nat) : excess x y * excess y x = 0 :=
   match Nat.le_total x y with
-  | .inl le => (congrArg (· * excess y x) (excess_of_le le)).trans (Nat.zero_mul _)
-  | .inr le => (congrArg (excess x y * ·) (excess_of_le le)).trans (Nat.mul_zero _)
+  | .inl le => (congrArg (· * excess y x) (Flow.excess_zero_of_le le)).trans (Nat.zero_mul _)
+  | .inr le => (congrArg (excess x y * ·) (Flow.excess_zero_of_le le)).trans (Nat.mul_zero _)
 
 /-- What exceeds nothing is at most. -/
 theorem le_of_excess_zero {a b : Nat} (zero : excess a b = 0) : a ≤ b :=
@@ -209,7 +209,7 @@ theorem concord_self_zero_iff (ps : List α) (w : α → Nat) :
       (le_of_excess_zero (excess_zero zero q p mq mp)),
     fun same => pairs_zero fun p q mp mq => by
       show excess (w p) (w q) * excess (w p) (w q) = 0
-      rw [same p q mp mq, excess_same, Nat.zero_mul]⟩
+      rw [same p q mp mq, excess_self, Nat.zero_mul]⟩
 
 /-- The number of members times the total of the squared weights is the square of the total
 weight exactly where the weights are uniform. -/
@@ -244,24 +244,6 @@ theorem number_none_iff (ps : List α) (kids : α → List α) :
 
 /-! ## The additive part -/
 
-theorem twice_le_of_le {x y : Nat} (le : x ≤ y) : 2 * (x * y) ≤ x * x + y * y :=
-  match le_dest le with
-  | ⟨e, at_y⟩ => by
-    rw [at_y]
-    have same : x * x + (x + e) * (x + e) = 2 * (x * (x + e)) + e * e := by
-      rw [add_mul_split x e (x + e), Nat.mul_add e x e, Nat.mul_comm e x, Nat.add_left_comm,
-        ← Nat.add_assoc (x * x) (x * e) (e * e), ← Nat.mul_add x x e, ← Nat.add_assoc, Nat.two_mul]
-    rw [same]
-    exact Nat.le_add_right _ _
-
-/-- Twice a product is at most the sum of the squares. -/
-theorem twice_le (x y : Nat) : 2 * (x * y) ≤ x * x + y * y :=
-  match Nat.le_total x y with
-  | .inl le => twice_le_of_le le
-  | .inr le => by
-    rw [Nat.mul_comm x y, Nat.add_comm (x * x)]
-    exact twice_le_of_le le
-
 theorem square_mul (a b : Nat) : a * b * (a * b) = a * a * (b * b) :=
   (mul_assoc_nat a b (a * b)).trans ((congrArg (a * ·) (mul_turn b a b)).trans (mul_assoc_nat a a (b * b)).symm)
 
@@ -280,7 +262,7 @@ theorem bound_sq (L : List β) (x y : β → Nat) :
       total L (fun i => x i * x i) * total L (fun i => y i * y i) :=
   have point : ∀ i j, 2 * (x i * y i * (x j * y j)) ≤ x i * x i * (y j * y j) + x j * x j * (y i * y i) :=
     fun i j => Nat.le_trans (Nat.le_of_eq (congrArg (2 * ·) (cross_mul (x i) (y j) (x j) (y i)).symm))
-      (Nat.le_trans (twice_le (x i * y j) (x j * y i))
+      (Nat.le_trans (Naturals.twice_le (x i * y j) (x j * y i))
         (Nat.le_of_eq (by rw [square_mul, square_mul])))
   have summed := total_le L fun i _ => total_le L fun j _ => point i j
   have left : (total L fun i => total L fun j => 2 * (x i * y i * (x j * y j))) =
@@ -364,12 +346,6 @@ theorem additive_self (ps : List α) (w : α → Nat) :
     (concord ps w w + discord ps w w) * (concord ps w w + discord ps w w) = concord ps w w * concord ps w w := by
   rw [discord_self, Nat.add_zero]
 
-theorem sub_le_of_le_add : ∀ {x y c : Nat}, x ≤ y + c → x - y ≤ c
-  | _, 0, _, le => Nat.le_trans le (Nat.le_of_eq (Nat.zero_add _))
-  | 0, _ + 1, _, _ => Nat.le_trans (Nat.le_of_eq (Nat.zero_sub _)) (Nat.zero_le _)
-  | x + 1, y + 1, _, le => (Nat.succ_sub_succ x y).symm ▸
-      sub_le_of_le_add (Nat.le_of_succ_le_succ (Nat.le_trans le (Nat.le_of_eq (Nat.succ_add y _))))
-
 /-! ## Over generations -/
 
 /-- A bounded search: a decidable property that does not fail at every number below `T` holds
@@ -433,11 +409,11 @@ theorem response_sq_le {t : Nat}
   rw [raised_exact exact, lowered_exact exact, Nat.mul_zero, Nat.zero_add, Nat.add_zero] at step
   have up : G.size t * G.sum (t + 1) - G.size (t + 1) * G.sum t ≤
       G.concordAt t + G.discordAt t :=
-    Nat.le_trans (sub_le_of_le_add (Nat.le_trans (Nat.le_add_right _ (G.discordAt t)) (Nat.le_of_eq step)))
+    Nat.le_trans (Naturals.sub_le_of_le_add (Nat.le_trans (Nat.le_add_right _ (G.discordAt t)) (Nat.le_of_eq step)))
       (Nat.le_add_right _ _)
   have down : G.size (t + 1) * G.sum t - G.size t * G.sum (t + 1) ≤
       G.concordAt t + G.discordAt t :=
-    Nat.le_trans (sub_le_of_le_add (Nat.le_trans (Nat.le_add_right _ (G.concordAt t))
+    Nat.le_trans (Naturals.sub_le_of_le_add (Nat.le_trans (Nat.le_add_right _ (G.concordAt t))
       (Nat.le_of_eq (step.symm.trans (Nat.add_comm _ _) |>.trans (Nat.add_comm _ _)))))
       (Nat.le_add_left _ _)
   exact ⟨Nat.le_trans (Nat.mul_le_mul up up) (additive_le _ _ _),
@@ -513,14 +489,6 @@ end ByNumber
 end Generations
 
 /-! ## What bounds offspring numbers -/
-
-theorem mem_append_cases {a : α} : ∀ {l m : List α}, a ∈ l ++ m → a ∈ l ∨ a ∈ m
-  | [], _, mem => .inr mem
-  | b :: l, m, mem => match mem_cons_cases (q := l ++ m) mem with
-    | .inl same => .inl (Eq.subst (motive := fun x => x ∈ b :: l) same.symm (.head l))
-    | .inr rest => match mem_append_cases rest with
-      | .inl here => .inl (.tail b here)
-      | .inr there => .inr there
 
 theorem mem_flatMap_cases {f : α → List β} {k : β} :
     ∀ {ps : List α}, k ∈ ps.flatMap f → ∃ p, p ∈ ps ∧ k ∈ f p
@@ -740,7 +708,7 @@ places, `d · k`, outnumber what the step gives the others, `c · m + d · w`. -
 theorem rises_iff (k m w : Nat) {c : Nat} (d : Nat) (pos : 0 < c) :
     c * (c * k + (c * m + d * w)) < c * k * (c + d) ↔ c * m + d * w < d * k :=
   (lt_iff_of_balance (step_balance k m w c d)).trans
-    ⟨lt_of_mul_lt_mul, fun lt => Nat.mul_lt_mul_of_pos_left lt pos⟩
+    ⟨Naturals.lt_of_mul_lt_mul_left, fun lt => Nat.mul_lt_mul_of_pos_left lt pos⟩
 
 /-- It is kept exactly where they are equal. -/
 theorem kept_iff (k m w : Nat) {c : Nat} (d : Nat) (pos : 0 < c) :
@@ -752,7 +720,7 @@ theorem kept_iff (k m w : Nat) {c : Nat} (d : Nat) (pos : 0 < c) :
 theorem falls_iff (k m w : Nat) {c : Nat} (d : Nat) (pos : 0 < c) :
     c * k * (c + d) < c * (c * k + (c * m + d * w)) ↔ d * k < c * m + d * w :=
   (lt_iff_of_balance (step_balance k m w c d).symm).trans
-    ⟨lt_of_mul_lt_mul, fun lt => Nat.mul_lt_mul_of_pos_left lt pos⟩
+    ⟨Naturals.lt_of_mul_lt_mul_left, fun lt => Nat.mul_lt_mul_of_pos_left lt pos⟩
 
 /-- **The threshold.** Where a carrier's carrying offspring do not outnumber another's offspring
 (`k ≤ w`), the carriers' share never rises, whatever it is. -/
@@ -776,7 +744,7 @@ theorem kept_share (m w s c d : Nat) :
   have right : c * (s + m) = (c + d) * s ↔ c * m = d * s := by
     rw [Nat.left_distrib, add_mul_split]
     exact ⟨Naturals.add_left_cancel, congrArg (c * s + ·)⟩
-  exact ⟨fun same => right.mpr (Naturals.add_right_cancel ((same.trans left).trans (Nat.add_comm _ _))),
+  exact ⟨fun same => right.mpr (add_right_cancel _ ((same.trans left).trans (Nat.add_comm _ _))),
     fun same => ((congrArg (· + d * w) (right.mp same)).trans (Nat.add_comm _ _)).trans left.symm⟩
 
 /-- **No overshoot.** At or below the balance (`c · m + d · w ≤ d · k`) the next generation is at
@@ -810,7 +778,7 @@ theorem not_falls_below {k m w c d : Nat} (below : c * m + d * w ≤ d * k) (n :
     (run k m w c d n).1 * ((run k m w c d (n + 1)).1 + (run k m w c d (n + 1)).2) ≤
       (run k m w c d (n + 1)).1 * ((run k m w c d n).1 + (run k m w c d n).2) :=
   have b := step_balance k m w (run k m w c d n).1 (run k m w c d n).2
-  Naturals.le_of_add_le_add_right (Nat.le_trans
+  le_of_add_le_add_right _ (Nat.le_trans
     (Nat.add_le_add_left (Nat.mul_le_mul_left _ (below_always below n)) _) (Nat.le_of_eq b.symm))
 
 /-- Started at or above the balance, every generation is at or above it. -/
@@ -836,11 +804,6 @@ def generations (k m w c d : Nat) : SelectionTerm.Generations Bool where
   first := List.replicate c true ++ List.replicate d false
   kids _ := offspring k m w
   amount _ := holds
-
-theorem total_replicate (f : Bool → Nat) (x : Bool) : ∀ n, total (List.replicate n x) f = n * f x
-  | 0 => (Nat.zero_mul _).symm
-  | n + 1 => (congrArg (f x + ·) (total_replicate f x n)).trans
-      ((Nat.add_comm _ _).trans (Nat.succ_mul n (f x)).symm)
 
 theorem total_kinds (f : Bool → Nat) (c d : Nat) :
     total (List.replicate c true ++ List.replicate d false) f = c * f true + d * f false :=
@@ -994,8 +957,8 @@ theorem covPair_add (ps : List α) (f h₁ h₂ : α → Nat) :
 /-- Excess scales with its amounts. -/
 theorem excess_mul (c x y : Nat) : excess (c * x) (c * y) = c * excess x y :=
   match Nat.le_total x y with
-  | .inl le => (excess_of_le (Nat.mul_le_mul_left c le)).trans
-      ((Nat.mul_zero c).symm.trans (congrArg (c * ·) (excess_of_le le).symm))
+  | .inl le => (Flow.excess_zero_of_le (Nat.mul_le_mul_left c le)).trans
+      ((Nat.mul_zero c).symm.trans (congrArg (c * ·) (Flow.excess_zero_of_le le).symm))
   | .inr le => match le_dest le with
     | ⟨e, at_x⟩ => by rw [at_x, Nat.left_distrib, excess_add_left, excess_add_left]
 
@@ -1170,7 +1133,7 @@ theorem response {G : Generations α} {t : Nat} {B d : Nat}
   unfold SelectionTerm.Generations.raisedAt SelectionTerm.Generations.loweredAt at step
   rw [raised_exact exact, lowered_exact exact, Nat.mul_zero, Nat.zero_add, Nat.add_zero] at step
   have bal := breeding_balance comb normal
-  exact Naturals.add_right_cancel (calc
+  exact add_right_cancel _ (calc
     d * (G.size t * G.sum (t + 1)) + d * G.discordAt t
         = d * (G.size (t + 1) * G.sum t + G.concordAt t) :=
           (Nat.left_distrib d _ _).symm.trans
@@ -1199,7 +1162,7 @@ theorem response_rises_iff {G : Generations α} {t : Nat} {B d : Nat}
     response exact comb normal
   ⟨le_of_mul_le_mul positive (Nat.le_trans (Nat.le_add_right _ _) (Nat.le_of_eq same.symm)),
     ⟨fun lt => (lt_iff_of_balance same).mp (Nat.mul_lt_mul_of_pos_left lt positive),
-      fun pos => lt_of_mul_lt_mul ((lt_iff_of_balance same).mpr pos)⟩⟩
+      fun pos => Naturals.lt_of_mul_lt_mul_left ((lt_iff_of_balance same).mpr pos)⟩⟩
 
 end Breeding
 

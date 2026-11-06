@@ -674,10 +674,6 @@ theorem rises_between (p : Nat → Bool) : ∀ n a, p a = false → p (a + n) = 
 theorem not_true_of_false {b : Bool} (h : b = false) : ¬ b = true :=
   fun t => Bool.noConfusion (h.symm.trans t)
 
-theorem opposite_false : ∀ {b : Bool}, b = true → (!b) = false
-  | true, _ => rfl
-  | false, h => Bool.noConfusion h
-
 /-- **Along every run of the law, a line comes to be unbroken at arbitrarily late steps.** -/
 theorem arising_recurs (s : Hexagram) :
     Recurs places (fun k => ComesToBe (fun n => lines.realized ((Law.run waxWane s).state n) k)) :=
@@ -694,7 +690,7 @@ theorem arising_recurs (s : Hexagram) :
         have low : p (N + 6) = false := by
           show (Law.orbit waxWane s (N + 6)).l1 = false
           rw [bottom_turns s N]
-          exact opposite_false v
+          exact ListTests.not_false_of_true v
         match rises_between p 6 (N + 6) low (by
             show (Law.orbit waxWane s (N + 6 + 6)).l1 = true
             rw [bottom_turns s (N + 6)]

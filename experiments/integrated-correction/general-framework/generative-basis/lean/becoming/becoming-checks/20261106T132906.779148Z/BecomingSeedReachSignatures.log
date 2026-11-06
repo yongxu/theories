@@ -1,0 +1,50 @@
+@Becoming.SeedReachProcesses.FromSeed.step : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {seed : S → Prop} {x y : S} {a : A},
+  Becoming.SeedReachProcesses.FromSeed P seed x → P.step x a y → Becoming.SeedReachProcesses.FromSeed P seed y
+@Becoming.SeedReachProcesses.fromSeed_invariant : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A)
+  (seed : S → Prop),
+  (∀ (s : S), seed s → Becoming.SeedReachProcesses.FromSeed P seed s) ∧
+    Becoming.Invariant P (Becoming.SeedReachProcesses.FromSeed P seed)
+@Becoming.SeedReachProcesses.fromSeed_iff_closure : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {seed : S → Prop} {x : S},
+  Becoming.SeedReachProcesses.FromSeed P seed x ↔ Becoming.Closure seed (Becoming.SeedReachProcesses.Moves P) x
+@Becoming.SeedReachProcesses.fromSeed_iff_invariant : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {seed : S → Prop} {p : S},
+  Becoming.SeedReachProcesses.FromSeed P seed p ↔
+    ∀ (I : S → Prop), (∀ (s : S), seed s → I s) → Becoming.Invariant P I → I p
+@Becoming.SeedReachProcesses.covers_iff_invariant : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {seed target : S → Prop},
+  (∀ (p : S), target p → Becoming.SeedReachProcesses.FromSeed P seed p) ↔
+    ∀ (I : S → Prop), (∀ (s : S), seed s → I s) → Becoming.Invariant P I → ∀ (p : S), target p → I p
+@Becoming.SeedReachProcesses.unreached_has_invariant : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {seed : S → Prop} {p : S},
+  ¬Becoming.SeedReachProcesses.FromSeed P seed p → ∃ I, (∀ (s : S), seed s → I s) ∧ Becoming.Invariant P I ∧ ¬I p
+@Becoming.SeedReachProcesses.substitute_seeds : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {seed seed' : S → Prop},
+  (∀ (p : S), seed' p → Becoming.SeedReachProcesses.FromSeed P seed p) →
+    ∀ {p : S}, Becoming.SeedReachProcesses.FromSeed P seed' p → Becoming.SeedReachProcesses.FromSeed P seed p
+@Becoming.SeedReachProcesses.fromSeed_iff_seed_of_no_moves : ∀ {S : Type u_1} {A : Type u_2}
+  {P : Generative.Process S A},
+  (∀ (x y : S), ¬Becoming.SeedReachProcesses.Moves P x y) →
+    ∀ {seed : S → Prop} {x : S}, Becoming.SeedReachProcesses.FromSeed P seed x ↔ seed x
+@Becoming.SeedReachProcesses.separated_iff_not_fromSeed : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {seed : S → Prop} {x : S},
+  Becoming.SeedReachProcesses.Separated P seed x ↔ ¬Becoming.SeedReachProcesses.FromSeed P seed x
+@Becoming.SeedReachProcesses.not_not_fromSeed_of_not_separated : ∀ {S : Type u_1} {A : Type u_2}
+  {P : Generative.Process S A} {seed : S → Prop} {x : S},
+  ¬Becoming.SeedReachProcesses.Separated P seed x → ¬¬Becoming.SeedReachProcesses.FromSeed P seed x
+@Becoming.SeedReachProcesses.not_separated_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {seed : S → Prop} {x : S},
+  ¬Becoming.SeedReachProcesses.Separated P seed x ↔ ¬¬Becoming.SeedReachProcesses.FromSeed P seed x
+@Becoming.SeedReachProcesses.fromSeed_iff_not_separated_of_decidable : ∀ {S : Type u_1} {A : Type u_2}
+  {P : Generative.Process S A} {seed : S → Prop} {x : S}
+  (decision : Decidable (Becoming.SeedReachProcesses.FromSeed P seed x)),
+  Becoming.SeedReachProcesses.FromSeed P seed x ↔ ¬Becoming.SeedReachProcesses.Separated P seed x
+@Becoming.SeedReach.conditional_not_separated : ∀ {p : Prop},
+  ¬¬p → ¬Becoming.SeedReachProcesses.Separated (Becoming.SeedReach.conditional p) (fun x => x = none) (some PUnit.unit)
+@Becoming.SeedReach.conditional_reach : ∀ {p : Prop},
+  Becoming.SeedReachProcesses.FromSeed (Becoming.SeedReach.conditional p) (fun x => x = none) (some PUnit.unit) → p
+Becoming.SeedReachProcesses.fromSeed_of_not_separated_iff_dne : (∀ (S A : Type u_1) (P : Generative.Process S A)
+    (seed : S → Prop) (x : S),
+    ¬Becoming.SeedReachProcesses.Separated P seed x → Becoming.SeedReachProcesses.FromSeed P seed x) ↔
+  ∀ (p : Prop), ¬¬p → p

@@ -86,6 +86,7 @@ Each node retains a common witness; leaf identities and cross-branch sharing are
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | proof | [Likeness.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Likeness.lean) | `Becoming.MatchesParts` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261027T195912.152773Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 
 Aliases: `Generative.ExplanatoryJointness.joint_plan_lifts (periphery module)`, `Becoming.joint_plan_lifts_of_stable (retired module)`, `Becoming.JointPlan.realizes_image_iff`
 

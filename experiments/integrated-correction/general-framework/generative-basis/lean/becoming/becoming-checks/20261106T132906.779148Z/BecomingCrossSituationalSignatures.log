@@ -1,0 +1,126 @@
+@Becoming.CrossSituational.unique_eq_some_iff : ∀ {M : Type u_1} {l : List M} {e : M},
+  Becoming.CrossSituational.unique l = some e ↔ l = [e]
+@Becoming.CrossSituational.filter_true : ∀ {M : Type u_1} {p : M → Bool} {m : M} (ms : List M),
+  p m = true → List.filter p (m :: ms) = m :: List.filter p ms
+@Becoming.CrossSituational.filter_false : ∀ {M : Type u_1} {p : M → Bool} {m : M} (ms : List M),
+  p m = false → List.filter p (m :: ms) = List.filter p ms
+Becoming.CrossSituational.false_ne_true : false = true → False
+@Becoming.CrossSituational.filter_nil_of : ∀ {M : Type u_1} {p : M → Bool} {l : List M},
+  (∀ (m : M), m ∈ l → p m = true → False) → List.filter p l = []
+@Becoming.CrossSituational.filter_singleton_of : ∀ {M : Type u_1} {p : M → Bool} {e : M} (l : List M),
+  Becoming.Distinct l → e ∈ l → p e = true → (∀ (m : M), m ∈ l → p m = true → m = e) → List.filter p l = [e]
+@Becoming.CrossSituational.filter_eq_singleton_iff : ∀ {M : Type u_1} {p : M → Bool} {l : List M},
+  Becoming.Distinct l → ∀ {e : M}, List.filter p l = [e] ↔ e ∈ l ∧ p e = true ∧ ∀ (m : M), m ∈ l → p m = true → m = e
+@Becoming.CrossSituational.filter_congr : ∀ {M : Type u_1} {p q : M → Bool},
+  (∀ (m : M), p m = q m) → ∀ (l : List M), List.filter p l = List.filter q l
+@Becoming.CrossSituational.filter_filter : ∀ {M : Type u_1} (p q : M → Bool) (l : List M),
+  List.filter q (List.filter p l) = List.filter (fun m => p m && q m) l
+@Becoming.CrossSituational.filter_all_true : ∀ {M : Type u_1} {p : M → Bool},
+  (∀ (m : M), p m = true) → ∀ (l : List M), List.filter p l = l
+@Becoming.CrossSituational.implies_eq_true : ∀ {a c : Bool}, (!a || c) = true ↔ a = true → c = true
+Becoming.CrossSituational.and_assoc : ∀ (a b c : Bool), (a && b && c) = (a && (b && c))
+@Becoming.CrossSituational.stands_cons : ∀ {R : Type u_1} {M : Type u_2} {bears : R → Bool} {offers : R → M → Bool}
+  (r : R) (rs : List R) (m : M),
+  Becoming.CrossSituational.stands bears offers (r :: rs) m =
+    ((!bears r || offers r m) && Becoming.CrossSituational.stands bears offers rs m)
+@Becoming.CrossSituational.stands_iff : ∀ {R : Type u_1} {M : Type u_2} {bears : R → Bool} {offers : R → M → Bool}
+  {m : M} {rs : List R},
+  Becoming.CrossSituational.stands bears offers rs m = true ↔ ∀ (r : R), r ∈ rs → bears r = true → offers r m = true
+@Becoming.CrossSituational.stands_false_iff : ∀ {R : Type u_1} {M : Type u_2} {bears : R → Bool} {offers : R → M → Bool}
+  {m : M} {rs : List R},
+  Becoming.CrossSituational.stands bears offers rs m = false ↔ ∃ r, r ∈ rs ∧ bears r = true ∧ offers r m = false
+@Becoming.CrossSituational.mem_candidates : ∀ {R : Type u_1} {M : Type u_2} {bears : R → Bool} {offers : R → M → Bool}
+  {rep : List M} {rs : List R} {m : M},
+  m ∈ Becoming.CrossSituational.candidates bears offers rep rs ↔
+    m ∈ rep ∧ ∀ (r : R), r ∈ rs → bears r = true → offers r m = true
+@Becoming.CrossSituational.candidates_eq_iff : ∀ {R : Type u_1} {M : Type u_2} {bears : R → Bool}
+  {offers : R → M → Bool} [DecidableEq M] {rep : List M},
+  Becoming.Distinct rep →
+    ∀ {rs : List R} {e : M},
+      Becoming.CrossSituational.candidates bears offers rep rs = [e] ↔
+        e ∈ rep ∧
+          (∀ (r : R), r ∈ rs → bears r = true → offers r e = true) ∧
+            ∀ (m : M), m ∈ rep → m ≠ e → ∃ r, r ∈ rs ∧ bears r = true ∧ offers r m = false
+@Becoming.CrossSituational.resolves_iff : ∀ {R : Type u_1} {M : Type u_2} {bears : R → Bool} {offers : R → M → Bool}
+  [DecidableEq M] {rep : List M},
+  Becoming.Distinct rep →
+    ∀ {rs : List R} {e : M},
+      Becoming.CrossSituational.unique (Becoming.CrossSituational.candidates bears offers rep rs) = some e ↔
+        e ∈ rep ∧
+          (∀ (r : R), r ∈ rs → bears r = true → offers r e = true) ∧
+            ∀ (m : M), m ∈ rep → m ≠ e → ∃ r, r ∈ rs ∧ bears r = true ∧ offers r m = false
+@Becoming.CrossSituational.stands_append : ∀ {R : Type u_1} {M : Type u_2} {bears : R → Bool} {offers : R → M → Bool}
+  (m : M) (rs more : List R),
+  Becoming.CrossSituational.stands bears offers (rs ++ more) m =
+    (Becoming.CrossSituational.stands bears offers rs m && Becoming.CrossSituational.stands bears offers more m)
+@Becoming.CrossSituational.candidates_append : ∀ {R : Type u_1} {M : Type u_2} {bears : R → Bool}
+  {offers : R → M → Bool} (rep : List M) (rs more : List R),
+  Becoming.CrossSituational.candidates bears offers rep (rs ++ more) =
+    List.filter (Becoming.CrossSituational.stands bears offers more)
+      (Becoming.CrossSituational.candidates bears offers rep rs)
+@Becoming.CrossSituational.stands_single : ∀ {R : Type u_1} {M : Type u_2} {bears : R → Bool} {offers : R → M → Bool}
+  (r : R) (m : M), Becoming.CrossSituational.stands bears offers [r] m = (!bears r || offers r m)
+@Becoming.CrossSituational.candidates_snoc_bearing : ∀ {R : Type u_1} {M : Type u_2} {bears : R → Bool}
+  {offers : R → M → Bool} (rep : List M) (rs : List R) {r : R},
+  bears r = true →
+    Becoming.CrossSituational.candidates bears offers rep (rs ++ [r]) =
+      List.filter (offers r) (Becoming.CrossSituational.candidates bears offers rep rs)
+@Becoming.CrossSituational.candidates_snoc_other : ∀ {R : Type u_1} {M : Type u_2} {bears : R → Bool}
+  {offers : R → M → Bool} (rep : List M) (rs : List R) {r : R},
+  bears r = false →
+    Becoming.CrossSituational.candidates bears offers rep (rs ++ [r]) =
+      Becoming.CrossSituational.candidates bears offers rep rs
+@Becoming.CrossSituational.narrows : ∀ {R : Type u_1} {M : Type u_2} {bears : R → Bool} {offers : R → M → Bool}
+  {rep : List M} {rs more : List R} {m : M},
+  m ∈ Becoming.CrossSituational.candidates bears offers rep (rs ++ more) →
+    m ∈ Becoming.CrossSituational.candidates bears offers rep rs
+@Becoming.CrossSituational.stays_iff : ∀ {R : Type u_1} {M : Type u_2} {bears : R → Bool} {offers : R → M → Bool}
+  {rep : List M} {rs more : List R} {m : M},
+  m ∈ Becoming.CrossSituational.candidates bears offers rep (rs ++ more) ↔
+    m ∈ Becoming.CrossSituational.candidates bears offers rep rs ∧
+      ∀ (r : R), r ∈ more → bears r = true → offers r m = true
+@Becoming.CrossSituational.resolved_is_target : ∀ {R : Type u_1} {M : Type u_2} {bears : R → Bool}
+  {offers : R → M → Bool} {rep : List M} {rs : List R} {t e : M},
+  t ∈ rep →
+    (∀ (r : R), r ∈ rs → bears r = true → offers r t = true) →
+      Becoming.CrossSituational.candidates bears offers rep rs = [e] → e = t
+@Becoming.CrossSituational.resolves_explained_iff : ∀ {R : Type u_1} {M : Type u_2} {bears : R → Bool}
+  {offers : R → M → Bool} [DecidableEq M] {W : Type u_3} (family : W → Prop) (target : W → M) (explains : R → W → Prop),
+  (∀ (r : R) (m : M), offers r m = true ↔ ∃ w, family w ∧ target w = m ∧ explains r w) →
+    ∀ {rep : List M},
+      Becoming.Distinct rep →
+        ∀ {rs : List R} {t : M},
+          t ∈ rep →
+            (∀ (r : R), r ∈ rs → bears r = true → ∃ w, family w ∧ target w = t ∧ explains r w) →
+              (Becoming.CrossSituational.candidates bears offers rep rs = [t] ↔
+                ∀ (m : M),
+                  m ∈ rep → m ≠ t → ∃ r, r ∈ rs ∧ bears r = true ∧ ∀ (w : W), family w → target w = m → ¬explains r w)
+@Becoming.CrossSituational.reads_every_iff : ∀ {α : Type u_1} {W : Type u_2} {R : Type u_3} {M : Type u_4}
+  [DecidableEq M] (r : α → α → Bool) (word : W → List α) (meaning : W → M) (bears : List α → R → Bool)
+  (offers : R → M → Bool) {rep : List M},
+  Becoming.Distinct rep →
+    ∀ (rs : List R),
+      (∀ (ws : List W), Becoming.Segmentation.chunks r (Becoming.Segmentation.encode word ws) = List.map word ws) →
+        ((∀ (ws : List W),
+            Becoming.Segmentation.readAll
+                (fun f =>
+                  Becoming.CrossSituational.unique (Becoming.CrossSituational.candidates (bears f) offers rep rs))
+                (Becoming.Segmentation.chunks r (Becoming.Segmentation.encode word ws)) =
+              some (List.map meaning ws)) ↔
+          ∀ (w : W),
+            meaning w ∈ rep ∧
+              (∀ (x : R), x ∈ rs → bears (word w) x = true → offers x (meaning w) = true) ∧
+                ∀ (m : M), m ∈ rep → m ≠ meaning w → ∃ x, x ∈ rs ∧ bears (word w) x = true ∧ offers x m = false)
+Becoming.CrossSituational.Repeated.only_zero : ∀ (m : Nat), m ∈ Becoming.CrossSituational.Repeated.rep → m = 0
+Becoming.CrossSituational.Repeated.separated : 0 ∈ Becoming.CrossSituational.Repeated.rep ∧
+  (∀ (r : Unit), r ∈ [] → (fun x => true) r = true → (fun x x_1 => true) r 0 = true) ∧
+    ∀ (m : Nat),
+      m ∈ Becoming.CrossSituational.Repeated.rep →
+        m ≠ 0 → ∃ r, r ∈ [] ∧ (fun x => true) r = true ∧ (fun x x_1 => true) r m = false
+Becoming.CrossSituational.Repeated.not_resolved : Becoming.CrossSituational.candidates (fun x => true)
+    (fun x x_1 => true) Becoming.CrossSituational.Repeated.rep [] =
+  [0, 0]
+Becoming.CrossSituational.Omitted.wrong_unique : Becoming.CrossSituational.candidates (fun x => true)
+    Becoming.CrossSituational.Omitted.offers [0, 1] [()] =
+  [1]
+Becoming.CrossSituational.Omitted.target_uncovered : Becoming.CrossSituational.Omitted.offers () 0 = false

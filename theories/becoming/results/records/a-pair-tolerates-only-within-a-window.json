@@ -384,7 +384,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WindowedWaiting.lean",
       "role": "proof",
-      "sha256": "04489fb85bf432f4e90fd23b34cefba89f81e8503ffd2516a4da00c78699f744",
+      "sha256": "af1306429e75843495bcc1a126a2540f03377849d67d80d68836d17e8d349a34",
       "declarations": [
         "Becoming.WindowedWaiting.AnswersWithholder",
         "Becoming.WindowedWaiting.Line",
@@ -491,8 +491,6 @@
         "Becoming.WindowedWaiting.answersWithin_into",
         "Becoming.WindowedWaiting.answersWithin_keeps",
         "Becoming.WindowedWaiting.apart",
-        "Becoming.WindowedWaiting.boolNot_true_iff",
-        "Becoming.WindowedWaiting.boolOr_true_iff",
         "Becoming.WindowedWaiting.bothGave",
         "Becoming.WindowedWaiting.bothGave_keeps",
         "Becoming.WindowedWaiting.bothGave_never_restores",
@@ -574,13 +572,35 @@
       "role": "receipt",
       "sha256": "6cb4a68370172fd4c176044750899c0aa5164987d57c7f7061255145c2213b1c",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
+      "declarations": [
+        "Becoming.ListTests.not_true_iff",
+        "Becoming.ListTests.or_true_iff"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WindowedWaiting.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T024359.312453Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.WindowedWaiting",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -597,6 +617,10 @@
     {
       "en": "6 November 2026, board item EL7, correction: the window was read as a deterministic relative of forgiveness without saying that under chance errors it ends in total withholding; that is now said, and the next step narrowed.",
       "zh": "2026年11月6日，工作板条目 EL7，更正：窗口曾被读作宽恕的确定性亲属，而未说明随机差错下它终于全面扣留；现已说明，下一步相应收窄。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }

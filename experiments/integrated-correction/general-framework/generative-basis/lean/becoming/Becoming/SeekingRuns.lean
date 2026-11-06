@@ -64,12 +64,6 @@ universe u v
 
 namespace SeekingRuns
 
-section AnyProcess
-
-variable {S : Type u} {A : Type v} {P : Process S A}
-
-end AnyProcess
-
 section Determined
 
 variable {S : Type u} {next : S → S}

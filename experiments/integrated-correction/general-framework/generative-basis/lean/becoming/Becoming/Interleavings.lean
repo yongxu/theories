@@ -2326,15 +2326,6 @@ theorem bool_or_false_right : ∀ {a b : Bool}, (a || b) = false → b = false
   | false, true, h => Bool.noConfusion h
   | true, true, h => Bool.noConfusion h
 
-omit [DecidableEq X] in
-theorem bool_or_of_left : ∀ {a : Bool} (b : Bool), a = true → (a || b) = true
-  | true, _, _ => rfl
-
-omit [DecidableEq X] in
-theorem bool_or_of_right : ∀ (a : Bool) {b : Bool}, b = true → (a || b) = true
-  | false, true, _ => rfl
-  | true, true, _ => rfl
-
 /-- A relatum untouched at a step and at the next takes no part in the step and is unmoved
 across it, activity included. -/
 theorem untouched_unmoved {xs : List X} {L : List E} {s : X → Nat} {touch : Nat → X → Bool}
@@ -2381,7 +2372,7 @@ theorem around_joined (xs : List X) {L : List E} (s : X → Nat) (touchL : law'.
   | ⟨e, at_next⟩ => match touchL (t + 1) e at_next with
     | ⟨x, touch⟩ =>
       have next : law'.touchAt L (t + 1) x = true := (touchAt_some at_next x).trans touch
-      .inl ⟨x, bool_or_of_right _ next, bool_or_of_left _ next⟩
+      .inl ⟨x, ListTests.or_right _ next, ListTests.or_left _ next⟩
 
 omit [DecidableEq X] in
 /-- **Where every two consecutive steps of a stretch from `0` are joined, the only renumbering

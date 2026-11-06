@@ -881,16 +881,11 @@ theorem forgone_through_lt_iff {K L : Type} [DecidableEq K] [DecidableEq L] (m :
   (forgone_lt_iff m gain loss (fun c => s (π c)) (fun c => s' (π' c)) k k').trans (by
     rw [shortfall_split m gain loss π once covers s, shortfall_split m gain loss π' once' covers' s'])
 
-/-- Adding one amount to both sides keeps a strict order, and only it. -/
-theorem add_lt_add_left_iff (a x y : Nat) : a + x < a + y ↔ x < y :=
-  ⟨fun lt => le_of_add_le_add_left_core (show a + (x + 1) ≤ a + y from lt),
-   fun lt => Nat.add_lt_add_left lt a⟩
-
 /-- Where `a'` is at most `a`, adding `r` to `a` and `r'` to `a'` keeps a strict order exactly where
 `r` with the excess of `a` over `a'` falls below `r'`. -/
 theorem add_lt_iff_sub_add_lt {a a' r r' k : Nat} (le : a' ≤ a) :
     a + r + k < a' + r' + k ↔ a - a' + r < r' :=
-  ⟨fun lt => (add_lt_add_left_iff a' _ _).mp (by
+  ⟨fun lt => (Naturals.add_lt_add_left_iff (k := a')).mp (by
       rw [← Nat.add_assoc, Becoming.add_sub_of_le le]
       exact Nat.lt_of_add_lt_add_right lt),
    fun lt => Nat.add_lt_add_right (by
@@ -1102,7 +1097,7 @@ theorem revalued_forgone_lt_iff (m pm : Model C) (gain loss g l g' l' : C → Na
   (forgone_through_lt_iff m gain loss π π once covers once covers (answer pm g' l' π) (answer pm g l π)
     k' k).trans (by
       rw [Nat.add_assoc, Nat.add_assoc]
-      exact add_lt_add_left_iff _ _ _)
+      exact Naturals.add_lt_add_left_iff)
 
 end Revalued
 
@@ -1234,12 +1229,6 @@ theorem total_lt_of_mem {α : Type} {p q : α → Nat} {a : α} :
     Nat.lt_of_le_of_lt (Nat.add_le_add_right (le b (.head _)) _)
       (Nat.add_lt_add_left (total_lt_of_mem (fun b' mem' => le b' (.tail _ mem')) mem lt) _)
 
-/-- An amount kept where a set holds is at most another so kept, where it is at most it there (as
-`Weighting.term_le_of`, outside this module's imports). -/
-theorem cond_zero_le {x y : Nat} : ∀ {b : Bool}, (b = true → x ≤ y) → cond b x 0 ≤ cond b y 0
-  | true, le => le rfl
-  | false, _ => Nat.le_refl 0
-
 /-- Deciding a whole cell is worth at most splitting it, where the part the split moves gains. -/
 theorem split_cell_le {BL DL BG DG : Nat} : ∀ {b : Bool}, (b = false → DG ≤ DL) →
     (b = true → BL ≤ BG) → cond b (BL + DL) (BG + DG) ≤ DL + BG
@@ -1273,7 +1262,7 @@ theorem cell_refined_le {K L : Type} [DecidableEq K] [DecidableEq L] (m pm : Mod
   have released_le : weightedOn pm (fun c => decide (π c = z) && !answer pm g l π' (π' c)) l ≤
       weightedOn pm (fun c => decide (π c = z) && !answer pm g l π' (π' c)) g :=
     Nat.le_trans (Nat.le_of_eq (released_cells l))
-      (Nat.le_trans (total_le zs' fun y _ => cond_zero_le fun yes => Nat.ge_of_not_lt
+      (Nat.le_trans (total_le zs' fun y _ => ListTests.cond_zero_le fun yes => Nat.ge_of_not_lt
           ((answer_false_iff pm g l π' y).mp (ListTests.false_of_not (ListTests.and_right yes))))
         (Nat.le_of_eq (released_cells g).symm))
   -- over the part stopped, it is below where a candidate the holding formation lists is stopped
@@ -1283,7 +1272,7 @@ theorem cell_refined_le {K L : Type} [DecidableEq K] [DecidableEq L] (m pm : Mod
     fun c mem at_z stops =>
       Nat.lt_of_le_of_lt (Nat.le_of_eq (stopped_cells g))
         (Nat.lt_of_lt_of_le
-          (total_lt_of_mem (fun y _ => cond_zero_le fun yes =>
+          (total_lt_of_mem (fun y _ => ListTests.cond_zero_le fun yes =>
               Nat.le_of_lt ((answer_true_iff pm g l π' y).mp (ListTests.and_right yes)))
             (covers' c mem)
             (show cond (decide (f (π' c) = z) && answer pm g l π' (π' c))
@@ -1517,7 +1506,7 @@ off is nowhere above that of going on at a candidate it lists, whatever the refe
 theorem splitsKeep_of_off_le_go (m pm : Model C) (gain loss g l : C → Nat)
     (never : ∀ c, c ∈ pm.listed → l c ≤ g c) : SplitsKeep m pm gain loss g l :=
   fun _ D _ _ stopped => absurd stopped fun lt => Nat.lt_irrefl _ (Nat.lt_of_lt_of_le lt
-    (total_le pm.listed fun c mem => cond_zero_le (b := D c) fun _ =>
+    (total_le pm.listed fun c mem => ListTests.cond_zero_le (b := D c) fun _ =>
       Nat.mul_le_mul_left (pm.weight c) (never c mem)))
 
 /-- **Over every refinement, the exact criterion** (the design review's finding 17): over every pair

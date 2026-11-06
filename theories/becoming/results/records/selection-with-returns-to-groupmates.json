@@ -348,7 +348,6 @@
         "Becoming.SelectionLevels.means_shared",
         "Becoming.SelectionLevels.meet",
         "Becoming.SelectionLevels.mem_of_mem_context",
-        "Becoming.SelectionLevels.nil_of_length_zero",
         "Becoming.SelectionLevels.none_iff",
         "Becoming.SelectionLevels.none_iff_sized",
         "Becoming.SelectionLevels.not_rises_of_alike",
@@ -378,7 +377,6 @@
         "Becoming.SelectionLevels.square_eq_iff",
         "Becoming.SelectionLevels.square_lt_iff",
         "Becoming.SelectionLevels.square_split",
-        "Becoming.SelectionLevels.total_eq_of_mem",
         "Becoming.SelectionLevels.whole",
         "Becoming.SelectionLevels.whole_length",
         "Becoming.SelectionLevels.whole_length_of_equal",
@@ -395,7 +393,7 @@
         "Becoming.SelectionLevels.within_returns",
         "Becoming.SelectionLevels.within_shared_by"
       ],
-      "sha256": "63330f2fc76504fe103090b7e773d44b7149fd09373086e3ab4c800b61fa62a5"
+      "sha256": "ea9d8944a79dbde1b94b75921b88716f0a39c5f181af873617a7d4b9e3a57fb8"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean",
@@ -408,7 +406,7 @@
         "Becoming.SelectionTerm.Exact",
         "Becoming.SelectionTerm.Generations.raises_exact_iff"
       ],
-      "sha256": "d15e7af183adb0363e93f83759c0e2a9f4d1f94b40f331067e6d339d431dc8fe"
+      "sha256": "8b990ef2bdabd78168685b33930779185f54bcaf475ac8252613324b662bf628"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean",
@@ -417,7 +415,7 @@
         "Becoming.Reproduction.variation",
         "Becoming.Reproduction.discord_self"
       ],
-      "sha256": "4327fef97099532b6ca8d429c04274a025ab6ea52ebe1c0c129fa4a0fa542506"
+      "sha256": "0f8d91e7d9b6292e176e88806452cc4de86365047e9f8ca11d66556c3ece1d3c"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T122330.896153Z/verification.json",
@@ -464,7 +462,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json",
       "role": "receipt",
-      "sha256": "203db133120a220bbea7aadb2a4105dc8365581528e0a66c1cd0a55e5bc84523",
+      "sha256": "d47dc3cb4e2dae4149217a173b1e6e6d89598115dcd75979054a58c2b670ed3f",
       "declarations": []
     },
     {
@@ -476,27 +474,63 @@
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/us-unequal-sizes/NOTE.md",
       "role": "integration",
       "sha256": "c8f2fc6ed39edcf9759012205c72665f7dc5d623423d99911569483a65cbe6e9"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
+      "declarations": [
+        "Becoming.nil_of_length_zero"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
+      "role": "proof",
+      "sha256": "852a5491313223e5de476027cd98408c196db67ac2c263d776dd28e6d050ac3c",
+      "declarations": [
+        "Becoming.total_congr_on"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T203838.375122Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.SelectionLevels",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T122330.896153Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.SelectionTerm",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Reproduction",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Population",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -521,6 +555,10 @@
     {
       "en": "4 November 2026, board item US (study section 506): the returns stated in groups of any sizes through a reading of the group (rises_iff_shared_sized), with the kept and divided readings and a witness either way; the open item on the among-group part for unequal sizes answered.",
       "zh": "2026年11月4日，工作板条目 US（研究第 506 节）：所返于各组大小任意时经组之读数陈述（rises_iff_shared_sized），附有所自留与均分二读数及两可之见证；大小不等时组间部分之未决项已答。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }

@@ -1,4 +1,3 @@
-import Becoming.Identification
 import Becoming.Weighted
 
 /-!
@@ -72,7 +71,7 @@ by weighting each one (`concentrated`) is the exponential-moment method of Chern
 they are stated over natural weights, with no real numbers and no probability measure: the counts
 are of courses, or, in `Becoming.Situations`, of situations.
 
-The AM–GM step `2·x·y ≤ x·x + y·y` is proved on the way (`two_mul_le`), as the case at margin
+The AM–GM step `2·x·y ≤ x·x + y·y` is proved on the way (`Naturals.twice_le`), as the case at margin
 zero of the margin square: where `x + m ≤ y`, `m·m + 2·x·y ≤ x·x + y·y` (`margin_square`, through
 the identity `square_gap`). The arithmetic uses
 the core's inductive forms of distributivity, associativity and powers in `Becoming.Prelude`
@@ -125,9 +124,9 @@ theorem of_mem_extend {v : List Bool} : ∀ {ws : List (List Bool)}, v ∈ exten
   | [], mem => nomatch (mem : v ∈ ([] : List (List Bool)))
   | w :: ws, mem =>
     have listed : v ∈ (true :: w) :: (false :: w) :: extend ws := mem
-    match mem_cons_split listed with
+    match mem_cons_cases listed with
     | .inl eq => ⟨true, w, eq, .head _⟩
-    | .inr later => match mem_cons_split later with
+    | .inr later => match mem_cons_cases later with
       | .inl eq => ⟨false, w, eq, .head _⟩
       | .inr inside => match of_mem_extend inside with
         | ⟨b, w', eq, inside'⟩ => ⟨b, w', eq, .tail _ inside'⟩
@@ -343,18 +342,6 @@ theorem margin_square {x y m : Nat} (le : x + m ≤ y) : m * m + 2 * (x * y) ≤
     exact Nat.add_le_add_left
       (Nat.mul_self_le_mul_self (Naturals.le_of_add_le_add_left (at_y ▸ le))) _
 
-/-- `2·x·y ≤ x·x + y·y` where `x ≤ y`: the margin square at margin zero. -/
-theorem two_mul_le_of_le {x y : Nat} (le : x ≤ y) : 2 * (x * y) ≤ x * x + y * y :=
-  Nat.le_trans (Nat.le_of_eq (Nat.zero_add _).symm) (margin_square (m := 0) le)
-
-/-- **`2·x·y ≤ x·x + y·y`.** -/
-theorem two_mul_le (x y : Nat) : 2 * (x * y) ≤ x * x + y * y :=
-  match Nat.le_total x y with
-  | .inl le => two_mul_le_of_le le
-  | .inr le => by
-    rw [Nat.mul_comm x y, Nat.add_comm (x * x)]
-    exact two_mul_le_of_le le
-
 /-- The weight of a course whose squared deviation is at least `d`, and nothing otherwise. -/
 def offBy (p q d : Nat) (w : List Bool) : Nat :=
   if d + cross p q w ≤ square p q w then weight p q w else 0
@@ -542,7 +529,7 @@ theorem offByWithin_le (p q d : Nat) (w : List Bool) :
   | .inl ⟨unreached, _, _⟩ => by
     show (if reachesBy p q d w = true then weight p q w else 0) * d + _ ≤ _
     rw [unreached, if_neg (fun same => Bool.noConfusion same), Nat.zero_mul, Nat.zero_add]
-    exact Nat.mul_le_mul_left _ (two_mul_le _ _)
+    exact Nat.mul_le_mul_left _ (Naturals.twice_le _ _)
 
 /-- **The deviation stays within the bound at every step.** The courses of `n` steps whose squared
 deviation reaches `d` at some step weigh, times `d`, at most `n·p·q·(p + q)^n`, the bound `typical`

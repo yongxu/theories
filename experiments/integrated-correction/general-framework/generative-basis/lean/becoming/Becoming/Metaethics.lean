@@ -217,13 +217,6 @@ section Reading
 
 open RelationalRenewal
 
-namespace Conditions
-
-variable {F Cond : Type} (K : Conditions S F Cond)
-  (own sig : Pos → F × Nat → Prop)
-
-end Conditions
-
 /-! Two formations, each participating only in its own condition: both are living
 and nothing consumes, yet no formed relation links them. -/
 

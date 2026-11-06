@@ -1,0 +1,16 @@
+Becoming.Hexagram.complement_moves : Becoming.Diagonal.Moves Eq Becoming.Hexagram.complement
+Becoming.Hexagram.waxWane_apart : ∀ (s : Becoming.Hexagram) (n : Nat),
+  (Becoming.Law.run Becoming.Hexagram.waxWane s.complement).state n ≠
+    (Becoming.Law.run Becoming.Hexagram.waxWane s).state n
+Becoming.Hexagram.waxWane_halfway : ∀ (s : Becoming.Hexagram),
+  (∀ (n : Nat),
+      (Becoming.Law.run Becoming.Hexagram.waxWane s).state (6 + n) =
+        ((Becoming.Law.run Becoming.Hexagram.waxWane s).state n).complement) ∧
+    (Becoming.Law.run Becoming.Hexagram.waxWane s).state 12 = s
+Becoming.Hexagram.wane_breaks : ¬Becoming.Law.Commutes Becoming.Hexagram.wane Becoming.Hexagram.complement
+Becoming.Hexagram.flip_complement : ∀ (k : Becoming.Hexagram.Place) (s : Becoming.Hexagram),
+  Becoming.Hexagram.flip k s.complement = (Becoming.Hexagram.flip k s).complement
+Becoming.Hexagram.changes_symmetric : Becoming.Branching.Symmetric Becoming.Hexagram.changes
+  Becoming.Hexagram.complement
+Becoming.Hexagram.changes_mirror_apart : ∀ (r : Becoming.Run Becoming.Hexagram.changes) (n : Nat),
+  (Becoming.Branching.mirror Becoming.Hexagram.changes_symmetric r).state n ≠ r.state n

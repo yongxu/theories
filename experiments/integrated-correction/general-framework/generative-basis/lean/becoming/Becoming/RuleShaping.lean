@@ -159,14 +159,14 @@ comes back to them alone.** -/
 theorem favours_iff {a s p c : Nat} {pos : 0 < a} :
     CarrierCounts.favours (shaped a s p c pos) ↔ c ≤ s :=
   ⟨fun fav => Naturals.le_of_add_le_add_left
-      (Naturals.le_of_add_le_add_right (show a + c + p ≤ a + s + p from fav)),
+      (le_of_add_le_add_right _ (show a + c + p ≤ a + s + p from fav)),
    fun le => Nat.add_le_add_right (Nat.add_le_add_left le a) p⟩
 
 /-- **It disfavours them (weakly) exactly where what comes back is at most the cost.** -/
 theorem disfavours_iff {a s p c : Nat} {pos : 0 < a} :
     CarrierCounts.disfavours (shaped a s p c pos) ↔ s ≤ c :=
   ⟨fun dis => Naturals.le_of_add_le_add_left
-      (Naturals.le_of_add_le_add_right (show a + s + p ≤ a + c + p from dis)),
+      (le_of_add_le_add_right _ (show a + s + p ≤ a + c + p from dis)),
    fun le => Nat.add_le_add_right (Nat.add_le_add_left le a) p⟩
 
 /-- **What comes to every member alike does not decide the direction**: with any two shared parts,
@@ -349,7 +349,7 @@ strictly.** -/
 theorem lt_select_iff {x g : CarrierCounts} (some : 0 < x.carrier) :
     x.carrier * (CarrierCounts.select x g).other < (CarrierCounts.select x g).carrier * x.other ↔
       g.other < g.carrier :=
-  ⟨fun lt => SelectionTerm.lt_of_mul_lt_mul
+  ⟨fun lt => Naturals.lt_of_mul_lt_mul_left
       (calc x.carrier * x.other * g.other
           = x.carrier * (x.other * g.other) := mul_assoc_nat _ _ _
         _ < x.carrier * g.carrier * x.other := lt
@@ -430,7 +430,7 @@ def byBack (a p c : Nat) (pos : 0 < a) (σ : CarrierCounts → Nat) (x _ : Carri
 theorem byBack_reads_iff {a p c : Nat} {pos : 0 < a} {σ : CarrierCounts → Nat} :
     ReadsShare CarrierCounts.order CarrierCounts.order (byBack a p c pos σ) ↔
       ∀ x y, CarrierCounts.order.le x y → σ x ≤ σ y :=
-  ⟨fun reads x y le => Naturals.le_of_add_le_add_left (Naturals.le_of_add_le_add_right
+  ⟨fun reads x y le => Naturals.le_of_add_le_add_left (le_of_add_le_add_right _
       (Nat.le_of_mul_le_mul_right (show (a + σ x + p) * (a + c + p) ≤ (a + σ y + p) * (a + c + p)
         from reads x y x y le) (shaped a (σ x) p c pos).other_pos)),
    fun mono x y _ _ le =>
@@ -695,7 +695,7 @@ theorem grouped_alike_iff {gs : List (List α)} {w shapes : α → Nat} {a s q c
   (grouped_rises_iff equal grouped).trans (by
     rw [(among_none_of_alike (w := shapes) alike).1, Nat.mul_zero, Nat.add_zero, Nat.mul_comm c,
       Nat.mul_comm s]
-    exact ⟨SelectionTerm.lt_of_mul_lt_mul, fun lt => Nat.mul_lt_mul_of_pos_left lt varies⟩)
+    exact ⟨Naturals.lt_of_mul_lt_mul_left, fun lt => Nat.mul_lt_mul_of_pos_left lt varies⟩)
 
 /-- **What comes back alone is not undone by assortment.** Where it exceeds the cost (`c < s`) and
 shaping varies, the whole selects for shaping however the groups are formed and whatever is
@@ -718,7 +718,7 @@ theorem grouped_uniform_iff {gs : List (List α)} {w shapes : α → Nat} {a s q
   (grouped_rises_iff equal grouped).trans (by
     rw [spread_levels gs shapes equal, (within_none_of_uniform (w := shapes) uniform).1,
       Nat.mul_zero, Nat.zero_add, ← add_mul_split, Nat.mul_comm c, Nat.mul_comm (s + m * q)]
-    exact ⟨SelectionTerm.lt_of_mul_lt_mul, fun lt => Nat.mul_lt_mul_of_pos_left lt differ⟩)
+    exact ⟨Naturals.lt_of_mul_lt_mul_left, fun lt => Nat.mul_lt_mul_of_pos_left lt differ⟩)
 
 end Groups
 
@@ -726,88 +726,82 @@ end Groups
 
 namespace Split
 
-theorem one_pos : 0 < 1 := Nat.zero_lt_one
-
 /-- One to one: one shaper to each other. -/
 def even : CarrierCounts := ⟨1, 1, Nat.zero_lt_one⟩
 
 /-- **Two of five come back**: with `s + p = 5` to each shaper, two of them to the shapers alone and
 three to every member, at a cost of one, each shaper leaves six and each other five. -/
-theorem favours : CarrierCounts.favours (shaped 1 2 3 1 one_pos) := favours_iff.mpr (Nat.le_succ 1)
+theorem favours : CarrierCounts.favours (shaped 1 2 3 1 Nat.one_pos) := favours_iff.mpr (Nat.le_succ 1)
 
 /-- **None of five comes back**: with all five to every member, at the same cost, each shaper leaves
 six and each other seven. -/
-theorem shared_disfavours : ¬ CarrierCounts.favours (shaped 1 0 5 1 one_pos) :=
+theorem shared_disfavours : ¬ CarrierCounts.favours (shaped 1 0 5 1 Nat.one_pos) :=
   fun fav => absurd (favours_iff.mp fav) (by decide)
 
 /-- From one to one, the shapers' share rises where two of the five come back to them. -/
-theorem rises : even.carrier * (CarrierCounts.select even (shaped 1 2 3 1 one_pos)).other <
-    (CarrierCounts.select even (shaped 1 2 3 1 one_pos)).carrier * even.other := by decide
+theorem rises : even.carrier * (CarrierCounts.select even (shaped 1 2 3 1 Nat.one_pos)).other <
+    (CarrierCounts.select even (shaped 1 2 3 1 Nat.one_pos)).carrier * even.other := by decide
 
 /-- From one to one, it falls where none of the five does. -/
-theorem falls : (CarrierCounts.select even (shaped 1 0 5 1 one_pos)).carrier * even.other <
-    even.carrier * (CarrierCounts.select even (shaped 1 0 5 1 one_pos)).other := by decide
+theorem falls : (CarrierCounts.select even (shaped 1 0 5 1 Nat.one_pos)).carrier * even.other <
+    even.carrier * (CarrierCounts.select even (shaped 1 0 5 1 Nat.one_pos)).other := by decide
 
 end Split
 
 namespace SharedFlips
 
-theorem one_pos : 0 < 1 := Nat.zero_lt_one
-
 /-- **With nothing shared, two steps before and three with what comes back lower the shapers' share**
 (`a = 1`, `c = 1`, `s = 2`). -/
 theorem without_falls {x : CarrierCounts} (some : 0 < x.carrier) :
-    ¬ CarrierCounts.order.le x (Law.orbit (fun y => CarrierCounts.select y (shaped 1 2 0 1 one_pos))
-        (Law.orbit (fun y => CarrierCounts.select y (shaped 1 0 0 1 one_pos)) x 2) 3) :=
+    ¬ CarrierCounts.order.le x (Law.orbit (fun y => CarrierCounts.select y (shaped 1 2 0 1 Nat.one_pos))
+        (Law.orbit (fun y => CarrierCounts.select y (shaped 1 0 0 1 Nat.one_pos)) x 2) 3) :=
   fun le => absurd ((stretch_iff some 2 3).mp le) (by decide)
 
 /-- **With one to every member, the same steps raise it.** -/
 theorem with_rises {x : CarrierCounts} (some : 0 < x.carrier) :
-    x.carrier * (Law.orbit (fun y => CarrierCounts.select y (shaped 1 2 1 1 one_pos))
-        (Law.orbit (fun y => CarrierCounts.select y (shaped 1 0 1 1 one_pos)) x 2) 3).other <
-      (Law.orbit (fun y => CarrierCounts.select y (shaped 1 2 1 1 one_pos))
-        (Law.orbit (fun y => CarrierCounts.select y (shaped 1 0 1 1 one_pos)) x 2) 3).carrier * x.other :=
+    x.carrier * (Law.orbit (fun y => CarrierCounts.select y (shaped 1 2 1 1 Nat.one_pos))
+        (Law.orbit (fun y => CarrierCounts.select y (shaped 1 0 1 1 Nat.one_pos)) x 2) 3).other <
+      (Law.orbit (fun y => CarrierCounts.select y (shaped 1 2 1 1 Nat.one_pos))
+        (Law.orbit (fun y => CarrierCounts.select y (shaped 1 0 1 1 Nat.one_pos)) x 2) 3).carrier * x.other :=
   (stretch_lt_iff some 2 3).mpr (by decide)
 
 end SharedFlips
 
 namespace Timing
 
-theorem two_pos : 0 < 2 := Nat.zero_lt_succ 1
-
 /-- **Soon enough**: one step before what comes back and two with it (`a = 2`, `c = 1`, `s = 2`,
 nothing shared), the shapers present, raise their share. -/
 theorem soon_rises {x : CarrierCounts} (some : 0 < x.carrier) :
-    x.carrier * (Law.orbit (fun y => CarrierCounts.select y (shaped 2 2 0 1 two_pos))
-        (Law.orbit (fun y => CarrierCounts.select y (shaped 2 0 0 1 two_pos)) x 1) 2).other <
-      (Law.orbit (fun y => CarrierCounts.select y (shaped 2 2 0 1 two_pos))
-        (Law.orbit (fun y => CarrierCounts.select y (shaped 2 0 0 1 two_pos)) x 1) 2).carrier * x.other :=
+    x.carrier * (Law.orbit (fun y => CarrierCounts.select y (shaped 2 2 0 1 Nat.two_pos))
+        (Law.orbit (fun y => CarrierCounts.select y (shaped 2 0 0 1 Nat.two_pos)) x 1) 2).other <
+      (Law.orbit (fun y => CarrierCounts.select y (shaped 2 2 0 1 Nat.two_pos))
+        (Law.orbit (fun y => CarrierCounts.select y (shaped 2 0 0 1 Nat.two_pos)) x 1) 2).carrier * x.other :=
   (stretch_lt_iff some 1 2).mpr (by decide)
 
 /-- **Two steps before and two with it lower the share.** -/
 theorem late_falls {x : CarrierCounts} (some : 0 < x.carrier) :
-    ¬ CarrierCounts.order.le x (Law.orbit (fun y => CarrierCounts.select y (shaped 2 2 0 1 two_pos))
-        (Law.orbit (fun y => CarrierCounts.select y (shaped 2 0 0 1 two_pos)) x 2) 2) :=
+    ¬ CarrierCounts.order.le x (Law.orbit (fun y => CarrierCounts.select y (shaped 2 2 0 1 Nat.two_pos))
+        (Law.orbit (fun y => CarrierCounts.select y (shaped 2 0 0 1 Nat.two_pos)) x 2) 2) :=
   fun le => absurd ((stretch_iff some 2 2).mp le) (by decide)
 
 /-- **One step before and one with it lower the share too.** -/
 theorem shorter_falls {x : CarrierCounts} (some : 0 < x.carrier) :
-    ¬ CarrierCounts.order.le x (Law.orbit (fun y => CarrierCounts.select y (shaped 2 2 0 1 two_pos))
-        (Law.orbit (fun y => CarrierCounts.select y (shaped 2 0 0 1 two_pos)) x 1) 1) :=
+    ¬ CarrierCounts.order.le x (Law.orbit (fun y => CarrierCounts.select y (shaped 2 2 0 1 Nat.two_pos))
+        (Law.orbit (fun y => CarrierCounts.select y (shaped 2 0 0 1 Nat.two_pos)) x 1) 1) :=
   fun le => absurd ((stretch_iff some 1 1).mp le) (by decide)
 
 /-- **After five steps before, seven with what comes back lower the share** ... -/
 theorem seven_falls {x : CarrierCounts} (some : 0 < x.carrier) :
-    ¬ CarrierCounts.order.le x (Law.orbit (fun y => CarrierCounts.select y (shaped 2 2 0 1 two_pos))
-        (Law.orbit (fun y => CarrierCounts.select y (shaped 2 0 0 1 two_pos)) x 5) 7) :=
+    ¬ CarrierCounts.order.le x (Law.orbit (fun y => CarrierCounts.select y (shaped 2 2 0 1 Nat.two_pos))
+        (Law.orbit (fun y => CarrierCounts.select y (shaped 2 0 0 1 Nat.two_pos)) x 5) 7) :=
   fun le => absurd ((stretch_iff some 5 7).mp le) (by decide)
 
 /-- ... **and eight raise it**: enough steps with what comes back outweigh the steps before it. -/
 theorem eight_rises {x : CarrierCounts} (some : 0 < x.carrier) :
-    x.carrier * (Law.orbit (fun y => CarrierCounts.select y (shaped 2 2 0 1 two_pos))
-        (Law.orbit (fun y => CarrierCounts.select y (shaped 2 0 0 1 two_pos)) x 5) 8).other <
-      (Law.orbit (fun y => CarrierCounts.select y (shaped 2 2 0 1 two_pos))
-        (Law.orbit (fun y => CarrierCounts.select y (shaped 2 0 0 1 two_pos)) x 5) 8).carrier * x.other :=
+    x.carrier * (Law.orbit (fun y => CarrierCounts.select y (shaped 2 2 0 1 Nat.two_pos))
+        (Law.orbit (fun y => CarrierCounts.select y (shaped 2 0 0 1 Nat.two_pos)) x 5) 8).other <
+      (Law.orbit (fun y => CarrierCounts.select y (shaped 2 2 0 1 Nat.two_pos))
+        (Law.orbit (fun y => CarrierCounts.select y (shaped 2 0 0 1 Nat.two_pos)) x 5) 8).carrier * x.other :=
   (stretch_lt_iff some 5 8).mpr (by decide)
 
 end Timing
@@ -815,8 +809,6 @@ end Timing
 namespace Assorting
 
 open SelectionTerm SelectionLevels SelectionLevels.Member SelectionLevels.Founding
-
-theorem one_pos : 0 < 1 := Nat.zero_lt_one
 
 /-- Two shapers and two others, one coming back to each shaper alone, two the cost, one to every
 member of its group for each shaper in it. With the shapers together each leaves four and each
@@ -834,7 +826,7 @@ def mixedOffspring : SelectionLevels.Member → Nat
   | .first => 4
   | .second => 4
 
-theorem assorted_grouped : Grouped assorted assortedOffspring keeps 1 1 1 2 one_pos
+theorem assorted_grouped : Grouped assorted assortedOffspring keeps 1 1 1 2 Nat.one_pos
   | _, .head _, _, .head _ => .inl ⟨rfl, rfl⟩
   | _, .head _, _, .tail _ (.head _) => .inl ⟨rfl, rfl⟩
   | _, .head _, _, .tail _ (.tail _ mem) => nomatch mem
@@ -843,7 +835,7 @@ theorem assorted_grouped : Grouped assorted assortedOffspring keeps 1 1 1 2 one_
   | _, .tail _ (.head _), _, .tail _ (.tail _ mem) => nomatch mem
   | _, .tail _ (.tail _ mem), _, _ => nomatch mem
 
-theorem mixed_grouped : Grouped mixed mixedOffspring keeps 1 1 1 2 one_pos
+theorem mixed_grouped : Grouped mixed mixedOffspring keeps 1 1 1 2 Nat.one_pos
   | _, .head _, _, .head _ => .inl ⟨rfl, rfl⟩
   | _, .head _, _, .tail _ (.head _) => .inr ⟨rfl, rfl⟩
   | _, .head _, _, .tail _ (.tail _ mem) => nomatch mem
@@ -858,7 +850,7 @@ disfavours the shapers (`favours_iff` fails), the whole selects for shaping wher
 grouped together, eight falling short of four with eight, and against it where they are apart,
 nothing then lying among the groups. -/
 theorem either_verdict :
-    ¬ CarrierCounts.favours (shaped 1 1 2 2 one_pos) ∧
+    ¬ CarrierCounts.favours (shaped 1 1 2 2 Nat.one_pos) ∧
       discord (whole assorted) assortedOffspring keeps <
         concord (whole assorted) assortedOffspring keeps ∧
       2 * concord (whole assorted) keeps keeps = 8 ∧
@@ -874,13 +866,11 @@ namespace Sized
 
 open SelectionTerm SelectionLevels SelectionLevels.Member SelectionLevels.Founding
 
-theorem one_pos : 0 < 1 := Nat.zero_lt_one
-
 /-- With the shapers as a pair and each of the others alone, a base of one, nothing coming back to a shaper alone, a
 cost of three and two to every member of its group for each shaper in it, each shaper leaves five
 and each other four: `SelectionLevels.Sized`'s first listing and offspring. -/
 theorem together_grouped :
-    Grouped SelectionLevels.Sized.together SelectionLevels.Sized.togetherOffspring keeps 1 0 2 3 one_pos
+    Grouped SelectionLevels.Sized.together SelectionLevels.Sized.togetherOffspring keeps 1 0 2 3 Nat.one_pos
   | _, .head _, _, .head _ => .inl ⟨rfl, rfl⟩
   | _, .head _, _, .tail _ (.head _) => .inl ⟨rfl, rfl⟩
   | _, .head _, _, .tail _ (.tail _ mem) => nomatch mem
@@ -893,7 +883,7 @@ theorem together_grouped :
 /-- With each shaper alone beside the others' pair, the same rule gives each shaper three and each
 other four: the second listing and offspring. -/
 theorem apart_grouped :
-    Grouped SelectionLevels.Sized.apart SelectionLevels.Sized.apartOffspring keeps 1 0 2 3 one_pos
+    Grouped SelectionLevels.Sized.apart SelectionLevels.Sized.apartOffspring keeps 1 0 2 3 Nat.one_pos
   | _, .head _, _, .head _ => .inl ⟨rfl, rfl⟩
   | _, .head _, _, .tail _ mem => nomatch mem
   | _, .tail _ (.head _), _, .head _ => .inl ⟨rfl, rfl⟩
@@ -909,7 +899,7 @@ the same spread of shaping over the whole and the same size-weighted spread of t
 (`SelectionLevels.Sized.either_verdict`); with the shapers together the whole selects for shaping,
 and with each alone against it. -/
 theorem either_verdict :
-    ¬ CarrierCounts.favours (shaped 1 0 0 3 one_pos) ∧
+    ¬ CarrierCounts.favours (shaped 1 0 0 3 Nat.one_pos) ∧
       discord (whole SelectionLevels.Sized.together) SelectionLevels.Sized.togetherOffspring keeps <
         concord (whole SelectionLevels.Sized.together) SelectionLevels.Sized.togetherOffspring keeps ∧
       concord (whole SelectionLevels.Sized.apart) SelectionLevels.Sized.apartOffspring keeps <

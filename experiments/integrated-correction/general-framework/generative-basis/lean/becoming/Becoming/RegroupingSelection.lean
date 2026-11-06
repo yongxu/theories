@@ -1,6 +1,5 @@
 import Becoming.Regrouping
 import Becoming.Revision
-import Becoming.Unfolding
 
 /-!
 # Regrouping content and retaining selections

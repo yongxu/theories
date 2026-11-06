@@ -259,8 +259,6 @@
         "Becoming.ReadingSchedule.leaves_mem",
         "Becoming.ReadingSchedule.lg",
         "Becoming.ReadingSchedule.lg_spec",
-        "Becoming.ReadingSchedule.lt_of_mul_lt_mul",
-        "Becoming.ReadingSchedule.lt_two_pow",
         "Becoming.ReadingSchedule.mul_lt_mul_left'",
         "Becoming.ReadingSchedule.no_two_three",
         "Becoming.ReadingSchedule.odd_add",
@@ -283,7 +281,6 @@
         "Becoming.ReadingSchedule.total_prefix_le",
         "Becoming.ReadingSchedule.total_steps_ge",
         "Becoming.ReadingSchedule.two_pow_le",
-        "Becoming.ReadingSchedule.two_pow_pos",
         "Becoming.ReadingSchedule.two_three_room",
         "Becoming.ReadingSchedule.weave",
         "Becoming.ReadingSchedule.weave_even",
@@ -296,7 +293,7 @@
         "Becoming.ReadingSchedule.within_iff",
         "Becoming.ReadingSchedule.within_of_keeps"
       ],
-      "sha256": "4bcbf3509a156cbb279bdfaadecc956c1ec46842f89e5062ba3a24ac12938473"
+      "sha256": "587dc3b0d6ae26db30829e030320fdeb8749660b86b8fd2846fe35ad1b1155e9"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
@@ -306,7 +303,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regulation.lean",
       "role": "proof",
-      "sha256": "05a308a0dfd56e9be23e40a7a649dd78aa14b0a75aefd9bebedb0a932452419f"
+      "sha256": "50b891a9e3918e9b54f15144d01c9cd16aca4d7688abe93423f855e466cd0d1c"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T130926.237994Z/verification.json",
@@ -327,13 +324,36 @@
       "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
       "sha256": "e9c7cf980a8ec9c0e6cbf83a838853a8deac0225d2dfaa9fabe286ba4399ee39"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
+      "declarations": [
+        "Becoming.Naturals.lt_of_mul_lt_mul_right",
+        "Becoming.Naturals.lt_two_pow",
+        "Becoming.Naturals.two_pow_pos"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingSchedule.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T130926.237994Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.ReadingSchedule",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -346,6 +366,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the statement and the half law say what the Lean proves: one half suffices where whole weights certify it (positive windows, weights q with 2^(D+1) <= q a, totalling at most 2^D, margins fitting), which need not exist for every list of windows with reciprocals at most one half; the statement also names the conditions distinct by name. No law changed in its declarations.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：陈述与半数规律只说 Lean 所证：有整数权重为证时二分之一足够（窗口为正、权重 q 满足 2^(D+1) <= q a、其和至多为 2^D、合于余量），而窗口倒数之和至多为二分之一的每个列表未必有这样的权重；陈述也写明诸条件按名相异。规律的声明未变。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }

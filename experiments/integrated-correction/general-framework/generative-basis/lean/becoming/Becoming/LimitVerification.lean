@@ -105,9 +105,6 @@ def Verifies (m : Method P) (K : Run P → Prop) : Prop := ∀ r, K r ↔ Conver
 yes recurs. -/
 def Refutes (m : Method P) (K : Run P → Prop) : Prop := ∀ r, K r ↔ YesRecurs m r
 
-theorem true_ne_false' {b : Bool} (yes : b = true) (no : b = false) : False :=
-  nomatch yes.symm.trans no
-
 /-- **A method converges to at most one guess.** -/
 theorem converges_unique {m : Method P} {r : Run P} {b c : Bool} (to_b : Converges m r b)
     (to_c : Converges m r c) : b = c :=
@@ -120,7 +117,7 @@ theorem not_recurs_of_no {m : Method P} {r : Run P} (no : Converges m r false) :
     ¬ YesRecurs m r :=
   fun recurs => match no, recurs with
   | ⟨n, at_no⟩, recurs => match recurs n with
-    | ⟨k, le, yes⟩ => true_ne_false' yes (at_no k le)
+    | ⟨k, le, yes⟩ => ListTests.bool_absurd yes (at_no k le)
 
 /-- **A method verifying a reading in the limit and converging to no puts the run outside.** -/
 theorem Verifies.outside_of_no {m : Method P} {K : Run P → Prop} (verifies : Verifies m K)
@@ -164,7 +161,7 @@ theorem clear_of_below (s : Nat → Bool) : ∀ {k : Nat}, (∀ j, j < k → s j
     clear s k = true
   | 0, _ => rfl
   | k + 1, below =>
-    Clear.and_both _ _ (clear_of_below s fun j lt => below j (Nat.lt_succ_of_lt lt))
+    bool_and_true (clear_of_below s fun j lt => below j (Nat.lt_succ_of_lt lt))
       (Eq.subst (motive := fun b => (!b) = true) (below k (Nat.lt_succ_self k)).symm rfl)
 
 theorem and_congr2 {a a' b b' : Bool} (e : a = a') (e' : b = b') : (a && b) = (a' && b') := by
@@ -179,11 +176,11 @@ theorem clear_congr {s s' : Nat → Bool} : ∀ {k : Nat}, (∀ j, j < k → s j
 
 theorem clear_false_of_true {s : Nat → Bool} {j k : Nat} (yes : s j = true) (lt : j < k) :
     clear s k = false :=
-  Clear.false_of_not _ fun c => true_ne_false' yes (Clear.false_before s c lt)
+  Clear.false_of_not _ fun c => ListTests.bool_absurd yes (Clear.false_before s c lt)
 
 theorem true_of_not_clear {s : Nat → Bool} {k : Nat} (no : clear s k = false) : ∃ j, s j = true :=
   match Clear.or_first s k with
-  | .inl c => (true_ne_false' c no).elim
+  | .inl c => (ListTests.bool_absurd c no).elim
   | .inr ⟨j, _, _, yes⟩ => ⟨j, yes⟩
 
 theorem eq_true_of_not_false : ∀ {b : Bool}, (!b) = false → b = true
@@ -269,18 +266,11 @@ of the guesses.** -/
 theorem both_verifies {m m' : Method P} {K K' : Run P → Prop} (verifies : Verifies m K)
     (verifies' : Verifies m' K') : Verifies (both m m') fun r => K r ∧ K' r :=
   fun r => ⟨fun ⟨inside, inside'⟩ => match (verifies r).mp inside, (verifies' r).mp inside' with
-      | ⟨n, yes⟩, ⟨n', yes'⟩ => ⟨n + n', fun k le => Clear.and_both _ _
+      | ⟨n, yes⟩, ⟨n', yes'⟩ => ⟨n + n', fun k le => bool_and_true
           (yes k (Nat.le_trans (Nat.le_add_right n n') le))
           (yes' k (Nat.le_trans (Nat.le_add_left n' n) le))⟩,
     fun ⟨n, yes⟩ => ⟨(verifies r).mpr ⟨n, fun k le => ListTests.and_left (yes k le)⟩,
       (verifies' r).mpr ⟨n, fun k le => ListTests.and_right (yes k le)⟩⟩⟩
-
-theorem or_left' {a b : Bool} (yes : a = true) : (a || b) = true :=
-  Eq.subst (motive := fun x => (x || b) = true) yes.symm rfl
-
-theorem or_right' : ∀ {a b : Bool}, b = true → (a || b) = true
-  | true, _, _ => rfl
-  | false, _, yes => yes
 
 /-- Each guess has said yes since the last joint yes: the pending marks and the guesses now. -/
 def joint (p : Bool × Bool) (a b : Bool) : Bool := (p.1 || a) && (p.2 || b)
@@ -330,15 +320,15 @@ theorem mark_origin {p g : Nat → Bool} {c : Nat} (origin : ∀ k, p (k + 1) = 
   | d, said => match ListTests.or_cases said with
     | .inr yes => ⟨c + d, Nat.le_add_right c d, yes⟩
     | .inl marked => match d with
-      | 0 => (true_ne_false' marked cleared).elim
+      | 0 => (ListTests.bool_absurd marked cleared).elim
       | d + 1 => mark_origin origin cleared d (origin (c + d) marked)
 
 /-- A yes of a guess at `a`, with no joint yes from `a` before `a + d`, is still marked at `a + d`. -/
 theorem mark_kept {p g J : Nat → Bool} {a : Nat}
     (carry : ∀ k, J k = false → p (k + 1) = (p k || g k)) (yes : g a = true) :
     ∀ d, (∀ k, a ≤ k → k < a + d → J k = false) → (p (a + d) || g (a + d)) = true
-  | 0, _ => or_right' yes
-  | d + 1, none_ => or_left' ((carry (a + d) (none_ (a + d) (Nat.le_add_right a d)
+  | 0, _ => ListTests.or_right _ yes
+  | d + 1, none_ => ListTests.or_left _ ((carry (a + d) (none_ (a + d) (Nat.le_add_right a d)
       (Nat.lt_succ_self _))).trans
       (mark_kept carry yes d fun k le lt => none_ k le (Nat.lt_succ_of_lt lt)))
 
@@ -400,7 +390,7 @@ theorem jointly_refutes {m m' : Method P} {K K' : Run P → Prop} (refutes : Ref
             have kept₂ := mark_kept (p := fun k => (pending m m' k r).2) (J := J) (g := fun k => m' k r) carry₂ yes_b db
               fun k le lt => none_ k (Nat.le_trans le_b le)
                 (Eq.subst (motive := fun x => k < x) gap_b.symm lt)
-            (true_ne_false' (Clear.and_both _ _
+            (ListTests.bool_absurd (bool_and_true
               (Eq.subst (motive := fun x => ((pending m m' x r).1 || m x r) = true) gap_a.symm
                 kept₁)
               (Eq.subst (motive := fun x => ((pending m m' x r).2 || m' x r) = true) gap_b.symm
@@ -568,7 +558,7 @@ theorem not_recurs_of_eventuallyFalse {r : Run (process Bool)} (eventually : Eve
     ¬ Recurs r :=
   fun recurs => match eventually with
   | ⟨n, no⟩ => match recurs n with
-    | ⟨k, le, yes⟩ => true_ne_false' yes (no k le)
+    | ⟨k, le, yes⟩ => ListTests.bool_absurd yes (no k le)
 
 /-- The next move against a method: the negation of its guess on the run so far. -/
 def againstNext (m : Method (process Bool)) (k : Nat) (p : Nat → Bool) : Bool := !m k (run p)
@@ -594,7 +584,7 @@ theorem recurs_not_verified (markov : Markov) {m : Method (process Bool)} (byRec
     have not_yes : ¬ Converges m (against m) true := fun ⟨n, yes⟩ =>
       match (verifies (against m)).mpr ⟨n, yes⟩ n with
       | ⟨k, le, played⟩ =>
-        true_ne_false' played ((flip k).trans (congrArg not (yes k le)))
+        ListTests.bool_absurd played ((flip k).trans (congrArg not (yes k le)))
     not_yes ((verifies (against m)).mp fun n =>
       match markov (fun j => (against m).act (n + j)) (fun all => not_yes ⟨n, fun k le =>
           match le_dest le with
@@ -624,8 +614,8 @@ theorem eventuallyFalse_lpo
       | .inl c => .inr fun _ => ListTests.false_of_not_true fun yes =>
         match Clear.first_of_true s yes with
         | ⟨j, cj, yj⟩ => match Nat.lt_or_ge j N with
-          | .inl lt => true_ne_false' yj (Clear.false_before s c lt)
-          | .inr ge => true_ne_false' (Clear.and_both _ _ yj cj) (after j ge)
+          | .inl lt => ListTests.bool_absurd yj (Clear.false_before s c lt)
+          | .inr ge => ListTests.bool_absurd (bool_and_true yj cj) (after j ge)
 
 theorem or_not_self : ∀ b : Bool, (b || !b) = true
   | true => rfl

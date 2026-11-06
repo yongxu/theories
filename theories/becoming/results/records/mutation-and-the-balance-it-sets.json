@@ -52,7 +52,7 @@
         "Becoming.Reproduction.Mutation.holds",
         "Becoming.Reproduction.Mutation.offspring",
         "Becoming.Reproduction.Mutation.generations",
-        "Becoming.Reproduction.Mutation.total_replicate",
+        "Becoming.total_replicate",
         "Becoming.Reproduction.Mutation.total_kinds",
         "Becoming.Reproduction.Mutation.lowered_count",
         "Becoming.Reproduction.Mutation.size_first",
@@ -266,7 +266,6 @@
         "Becoming.Reproduction.Mutation.sum_first",
         "Becoming.Reproduction.Mutation.sum_next",
         "Becoming.Reproduction.Mutation.total_kinds",
-        "Becoming.Reproduction.Mutation.total_replicate",
         "Becoming.Reproduction.OnePool.Relatum",
         "Becoming.Reproduction.OnePool.balances",
         "Becoming.Reproduction.OnePool.descended",
@@ -318,7 +317,6 @@
         "Becoming.Reproduction.excess_cross",
         "Becoming.Reproduction.exists_mem_of_length_pos",
         "Becoming.Reproduction.le_of_excess_zero",
-        "Becoming.Reproduction.mem_append_cases",
         "Becoming.Reproduction.mem_flatMap_cases",
         "Becoming.Reproduction.never_against",
         "Becoming.Reproduction.none_iff_uniform",
@@ -328,16 +326,13 @@
         "Becoming.Reproduction.pairsOf",
         "Becoming.Reproduction.search",
         "Becoming.Reproduction.square_mul",
-        "Becoming.Reproduction.sub_le_of_le_add",
         "Becoming.Reproduction.total_bind",
         "Becoming.Reproduction.total_dist",
         "Becoming.Reproduction.total_pairsOf",
-        "Becoming.Reproduction.twice_le",
-        "Becoming.Reproduction.twice_le_of_le",
         "Becoming.Reproduction.twice_mul",
         "Becoming.Reproduction.variation"
       ],
-      "sha256": "4327fef97099532b6ca8d429c04274a025ab6ea52ebe1c0c129fa4a0fa542506"
+      "sha256": "0f8d91e7d9b6292e176e88806452cc4de86365047e9f8ca11d66556c3ece1d3c"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json",
@@ -366,21 +361,60 @@
         "Becoming.SelectionTerm.Generations.kept_step_iff",
         "Becoming.SelectionTerm.Generations.total_flatMap"
       ],
-      "sha256": "d15e7af183adb0363e93f83759c0e2a9f4d1f94b40f331067e6d339d431dc8fe"
+      "sha256": "8b990ef2bdabd78168685b33930779185f54bcaf475ac8252613324b662bf628"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+      "role": "proof",
+      "sha256": "94e9be0baad1667d0d06acdfa757543c292c054c3a7eeaefccbe10b43bd321b5",
+      "declarations": [
+        "Becoming.total_replicate"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
+      "declarations": [
+        "Becoming.mem_append_cases",
+        "Becoming.Naturals.sub_le_of_le_add",
+        "Becoming.Naturals.twice_le",
+        "Becoming.Naturals.twice_le_of_le"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Reproduction",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T145016.701975Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.SelectionTerm",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Flow",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -393,6 +427,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the statement no longer says the balance is approached from below (no convergence is proved): a run at or below it stays there with its share never falling, one at or above stays at or above; the carriers' presence the balance and the fall take is named; the law of the balance said that a run above stays above and now says at or above, as proved; the other laws are unchanged.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：陈述不再说平衡自下方被趋近（没有证明收敛）：在其处或其下的过程留在其处或其下、份额从不下降，在其处或其上者留在其处或其上；写明平衡与下降所需的携带者存在；平衡之定律原说在其上者保持在其上，现依所证改为在其处或其上；其余定律不变。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }

@@ -24754,3 +24754,29 @@ Integration: 02 §5 (T2's statement, Forbids, Standing, the beetle's account), 0
 Review: see the board's RUN6 row; an independent AI reader read the result and the changed texts against the output
        and the design.
 ```
+
+## 510. The Lean made whole (LM)
+
+Board item LM, on [Ren's word](../../../../sources/15-codex-theory-conversations/2026-11-06-lean-elegant-and-whole.md). One near-full rebuild: [what rode it and what stays open](development/ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md#lm-what-rode-the-near-full-rebuild-and-what-stays-open-6-november-2026).
+
+```text
+Result(s): testing-within-the-net, ending-laws-as-regimes-on-a-lineage, degeneration-from-a-horizon,
+       candidate-theorems-of-the-corpus, conditional-laws-of-the-corpus, shared-laws-on-the-grammar and
+       premises-met-and-failed amended; 100 others re-named only. No new result.
+Delta: a stronger law with fewer premises (a family drawn past its renewal, no gate, no only-active giving: the law
+       itself in place of the restatement beside it); an open item closed (层 and 诘 are one relation, and the
+       conditional converse of testing stated on 层); witnesses with content where the old ones were degenerate
+       («止而不入之例» with a real fall, generation under a coarser class, «两火火薪相须»); premises named shown to hold
+       together in small models (the link to C between listed paths, idle removal, mutual feeding, joining and
+       others, what reads no order and a choice through the map, `Becoming.PremisesTogether`; laws asking more of those
+       models are not met there). Helpers stated once: statements proved twice from 113 groups to 21 groups.
+Not moved: no central result is new mathematics; the link to C stays between listed paths; what the small models
+       show is that premises can hold together, nothing of how often. No test, run or design, nothing under RUNHOLD.
+Check: core receipt 20261106T174854.382527Z, 391 modules, every axiom report empty. Focused checks and the gate on the merged tree; the full gate before the push.
+Review: one independent AI reader read the chapters' and records' changes and the new leaf against the Lean (one high: mutual
+       feeding had been shown unfolded, so "no proof had" was too strong; eight medium, on dropped premises and standings;
+       all taken); the same reader on the corrections and the note (two high: the catalogue rows read reversed, and twins
+       said to live on separate carriers when each is one definition under several names; three medium; all taken; it also
+       named `ReadsNoOrder` and `Relabel.EquivariantChoice` as unmet, which the leaf now meets); and on that diff (three medium,
+       taken in the words it proposed; no fourth read).
+```

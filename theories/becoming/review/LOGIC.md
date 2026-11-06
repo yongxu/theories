@@ -410,11 +410,11 @@ theorem «致诘不尽» :
 
 File: `Becoming/GrammarCandidates.lean`. **Meaning.** The core is separated at no stage of inquiry. The converse fails unconditionally: in an infinitely branching net (one node to every finite chain, another also to an endless one) two nodes agree at every finite stage and are not related by the core (no one class of the core holds both); this is the standard image-infinite example (Hennessy and Milner 1985; Milner 1989). It holds where the class is symmetric and the relation *separated at no stage* is itself constant, by the usual coinduction step (that relation is put into the core's definition). Classically, image-finiteness makes the limit relation constant: the convergence of the approximants, which is distinct from the modal characterization by Hennessy–Milner logic. **Standing and use.** Root theorems and a witness ([03 §3](../chapters/03-KNOWING.md#r-testing-within-the-net)). **Reading and class.** Source [LZ-14-002]: "此三者，不可致詰，故混而為一。" (*these three cannot be inquired into to the end, and so they merge into one*; 老子 14) classified 乙 and proved under a premise: 致詰 is read as inquiry by finite stages. The reading is the classical dossier's.
 
+`«诘»` asks `E` at each stage and `«层»` the previous stage; at every stage the two are one relation (`«层即诘»`).
+
 **Known weaknesses.**
-- Two stage notions coexist: `«诘»` asks `E` at each stage, `«层»` the previous stage; Quote [theories/becoming/chapters/03-KNOWING.md]: "which no theorem yet relates to the stages 层".
 - [this dossier, AI] The premise (the limit relation is constant) is global and the conclusion concerns one pair; no theorem derives the premise from an independently stated condition such as image-finiteness with decided steps.
 - [this dossier, AI] Neither the module nor the chapter credits the countermodel.
-- [this dossier, AI] 03 §3 describes the two nodes loosely: Quote [theories/becoming/chapters/03-KNOWING.md]: "lie in no class of the core". The core of a class is itself a class (`«核为类»`), so each node lies in its own core class; what is proved is that no one class of the core holds both.
 
 **Questions.**
 33. (optional) Which independently stated conditions ensure that the limit relation is constant, and can one be proved in the pure core?

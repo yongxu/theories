@@ -69,8 +69,8 @@
       ]
     },
     {
-      "en": "What has ended under one class passes through under another only by altering; where that other is constant both ways, it alters exactly where it passes through, and exactly where it has a successor there. The constancy is sufficient, not necessary; without it what alters can fail to pass through. What has not ended under the parting class can pass through unaltered; where every step is parted, everything has ended.",
-      "zh": "亡于一类者，于他类通必经异；他类两向有常时，恰于异处通，亦恰于有后处异。有常足之而非必要，不有常则异可不通。未亡于所分之类者可不异而通；步皆分则皆亡。",
+      "en": "What has ended under one class passes through under another only by altering; where that other is constant both ways, it alters exactly where it passes through, and exactly where it has a successor there. The constancy is sufficient, not necessary; without it what alters can fail to pass through. What has not ended under the parting class can pass through unaltered, and can alter; where every step is parted, everything has ended.",
+      "zh": "亡于一类者，于他类通必经异；他类两向有常时，恰于异处通，亦恰于有后处异。有常足之而非必要，不有常则异可不通。未亡于所分之类者可不异而通，亦可异；步皆分则皆亡。",
       "declarations": [
         "Becoming.«亡而通则异»",
         "Becoming.«异而两向有常则通»",
@@ -79,7 +79,8 @@
         "Becoming.«通而不异之例»",
         "Becoming.«有后而两向有常则通»",
         "Becoming.«步皆分则皆亡»",
-        "Becoming.«不有常而异且通之例»"
+        "Becoming.«不有常而异且通之例»",
+        "Becoming.«异而未亡之例»"
       ]
     },
     {
@@ -358,9 +359,10 @@
         "Becoming.«逆核不含于核之例»",
         "Becoming.«无始而有终之例»",
         "Becoming.«依于无始而有始之例»",
-        "Becoming.«相须之例»"
+        "Becoming.«相须之例»",
+        "Becoming.«异而未亡之例»"
       ],
-      "sha256": "d4b3389f371c671e56022f696fcc3d893a82c67e7c3acba4ea53d89029c8e893"
+      "sha256": "035339b4fa6fb0d31ffff03ef3a68ec991c8844d81a229964dbe9b5d4f22d3cb"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json",
@@ -371,7 +373,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou7-conditional-laws/data/groups.tsv",
       "role": "statement",
-      "sha256": "037c1808ba5eea2b6b83ca961d5a3f6cc7a6906aa8d374655d1998a2e2361437",
+      "sha256": "9dcb60b90ceee9939437d28e5b9f55900e316d62c3b0fe4dd26b2efd8ad87072",
       "declarations": []
     },
     {
@@ -397,12 +399,18 @@
       "role": "receipt",
       "sha256": "5db1e7a65fab3461c8eb58498262c6b938bba051e8e51d0c7f87541afaa80183",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T032257.782389Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarConditionals",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -424,6 +432,10 @@
     {
       "en": "6 November 2026, board item RAE5 (ED4's classical reader's E4C-01, E4C-02, E4C-20 to E4C-55): a correction. OU7 and RAE3 said that in the grammar the three of 穷 → 变 → 通 are only a conjunction with no order to find, and that 變 does nothing for 通. That was not so: what has ended under one class passes through under another only by altering; altering gives passing through where that class is constant both ways, a sufficient premise; and for what has ended, under it, having a successor, altering, passing through and never ending going are one. The grammar gives the steps as implications, with no order in time; each step with only its own premise need not reverse. What survives of the earlier claim is that what has not ended under the parting class can pass through unaltered, that the parting does no work in the step to 通, and, for what has ended with the premises joined, that the four have no direction among them. Eight short theorems say so in GrammarConditionals, three of them witnesses, and the record's laws, premises and non-implications follow; the premises are the reading's, the text not stating them, and the proofs are short derivations, not new mathematics. G01 is also read at the sentence's own place, 系辞下, whose 注 and 疏 lie outside the corpus; the passage is kept in the review packet's editions folder from an electronic copy of 《周易注疏》 (四库全书本, Wikisource revision 9685969), not collated with a print. 孔疏 there states the order with a reason and reads change at the limit, as its gloss on 通其變 above it does and as the commentators who borrow the sentence do; 孔疏's example at 上十二 runs from 亢 to 通. Under alternation at every step every place has ended under the parting class, so 窮 holds everywhere and selects no place. So RAE3's balance, that the text does not settle, became that the text does not say whether 窮 lies at the limit or at every step and the glosses lean; the text's 變 is written change at the limit, not one alteration, the 疏 having 隨時 and 日新. The 音義 there records a recension without 變則通, so the step from 變 to 通 is the received text's. groups.tsv's rows for XCX-02-008, QXL-JS-326, XZ-ZM-164 and XZ-ZM-165 now give §四's readings. Each [AI reading, new] in 06; no count of the corpus or standing changed.",
       "zh": "2026年11月6日，看板项 RAE5（ED4 古典读者之 E4C-01、E4C-02、E4C-20 至 E4C-55）：更正。OU7 与 RAE3 言文法中穷 → 变 → 通三者只是合取、无序可求，变于通无所为；不实：亡于一类者于他类通必经异；他类两向有常足以使异者通；于亡者，其下有后、异、通、往不穷四者相当。文法给其步以蕴含，不给时序；各步只带其前提时其逆不必成。前言所余者：未亡于所分之类者可不异而通，一类之分于至通之一步不出力，而于亡者、他类两向有常时，四者之间无方向。GrammarConditionals 增八条短定理言之，其三为见证，记录之律、前提与不示随之；前提是此读之前提，文本不言；证皆定义之短推导，不是新数学。G01 亦依此句本处（系辞下）而读，其注疏在语料之外；其段存于审查包之 editions，录自《周易注疏》（四库全书本）之电子本（维基文库修订版 9685969），未与刻本对校。孔疏彼处陈其序与其由，读作窮極之变，其释上文「通其變」与注家借此句者亦然；孔疏于上十二之例自亢至通。每步交替之读下每处皆亡于所分之类，窮无处不在，不拣选何处。故 RAE3 之两可，今为文本未明言窮在极处还是每步而注疏有所近；文本之變写作窮極之变，不写一次之异，疏有「隨時」「日新」。彼处音義记一本无「變則通」，故自變至通之一步只就通行本而言。groups.tsv 中 XCX-02-008、QXL-JS-326、XZ-ZM-164、XZ-ZM-165 之行今依 §四。皆 06 中之 [AI reading, new]；语料之计数与地位不变。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the witness that what alters need not have ended (`«异而未亡之例»`) joins law 6; `«亡而两向有常则异当且仅当通»`'s docstring says its scope; `«缕之无定性»` is `«四相俱时»` in groups.tsv, three of its four positions.",
+      "zh": "2026年11月6日，工作板条目 LM：异者未必亡之见证（`«异而未亡之例»`）入律 6；`«亡而两向有常则异当且仅当通»` 之说明言其范围；groups.tsv 中 `«缕之无定性»` 作 `«四相俱时»`，其四相之三。"
     }
   ]
 }

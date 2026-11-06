@@ -25,7 +25,7 @@
         "Becoming.Weighting.weighed_split",
         "Becoming.Weighting.weighed_shared",
         "Becoming.Weighting.weighed_split_right",
-        "Becoming.Weighting.add_lt_add_iff",
+        "Becoming.Naturals.add_lt_add_left_iff",
         "Becoming.Weighting.add_le_add_iff",
         "Becoming.Weighting.weighed_lt_iff_beyond",
         "Becoming.Weighting.weighed_le_iff_beyond",
@@ -33,7 +33,7 @@
         "Becoming.Weighting.weighed_beyond_of_includes",
         "Becoming.Weighting.ranksNet",
         "Becoming.Weighting.ranksNet_iff_beyond",
-        "Becoming.Weighting.not_of_neg",
+        "Becoming.ListTests.false_of_not",
         "Becoming.Weighting.beyond_lt",
         "Becoming.Weighting.ranksNet_lt_of_widens",
         "Becoming.Weighting.cond_zero",
@@ -227,9 +227,6 @@
         "Becoming.Weighting.ReadsSetsOn",
         "Becoming.Weighting.WidensBy",
         "Becoming.Weighting.add_le_add_iff",
-        "Becoming.Weighting.add_lt_add_iff",
-        "Becoming.Weighting.and_of_parts",
-        "Becoming.Weighting.and_parts",
         "Becoming.Weighting.and_swap",
         "Becoming.Weighting.beyond",
         "Becoming.Weighting.beyond_lt",
@@ -239,7 +236,6 @@
         "Becoming.Weighting.increment_transfer",
         "Becoming.Weighting.mul_lt_mul_iff",
         "Becoming.Weighting.narrower_above_net",
-        "Becoming.Weighting.not_of_neg",
         "Becoming.Weighting.ranksNet",
         "Becoming.Weighting.ranksNet_iff_beyond",
         "Becoming.Weighting.ranksNet_increasingAt",
@@ -255,7 +251,6 @@
         "Becoming.Weighting.size",
         "Becoming.Weighting.size_widensBy_pos",
         "Becoming.Weighting.term_eq_at",
-        "Becoming.Weighting.term_le_of",
         "Becoming.Weighting.term_lt_of",
         "Becoming.Weighting.term_split",
         "Becoming.Weighting.weighed_beyond_of_includes",
@@ -269,7 +264,7 @@
         "Becoming.Weighting.weighed_zero",
         "Becoming.Weighting.widensOn_of_widensBy"
       ],
-      "sha256": "b26fdf41eb04ff899beb2bead6bafe5e3a6ede5e9030ba0f68a532214d4bd6e6"
+      "sha256": "fe523d3396a4e3387458b0aeda4904813b29c7c7e8785e3a33e45fab351af009"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T143810.042893Z/verification.json",
@@ -385,13 +380,38 @@
       "role": "receipt",
       "sha256": "37b752112e19d77ba717f771c6057c5516c1ec47ff247889baeb36374104db54",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "sha256": "cb2c9c8ba8e16916b41a36e1c392f3cd4840a7436b2817c12796c866908020a7",
+      "declarations": [
+        "Becoming.Naturals.add_lt_add_left_iff",
+        "Becoming.bool_and_true",
+        "Becoming.bool_of_and_true",
+        "Becoming.ListTests.false_of_not",
+        "Becoming.ListTests.cond_zero_le"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "role": "receipt",
+      "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T131028.245732Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Weightings",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -400,6 +420,10 @@
     {
       "en": "22 October 2026: added (VT1): what VD1 and VD2 tested of T5's exception, stated as theorems with presentation invariance and the link of a sign measured apart as named premises, after a literature check (significance review, valuer-theorems check); weighed_lt_of_widens derived as the case with nothing against; study section 367.",
       "zh": "2026年10月22日：新增（VT1）：VD1 与 VD2 就 T5 的例外所检验者，陈述为定理，以表述不变与分开测得的正负号的联系为指名的前提，此前做了文献核查（显著性审查“评价者定理”核查）；weighed_lt_of_widens 作为无负份的情形导出；研究第 367 节。"
+    },
+    {
+      "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
+      "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
     }
   ]
 }

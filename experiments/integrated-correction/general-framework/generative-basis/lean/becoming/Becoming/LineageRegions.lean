@@ -500,7 +500,7 @@ theorem degeneration_of_empty {R : Nat → X → X → Prop} {Lc : «际» (Nat 
   Web.ends_of_ends_at le fun y hy at_ => absurd
     (Eq.subst (motive := fun n => y.2 ∈ G.family n) at_ (reached_listed listed mx hy))
     (fun mem => nomatch (Eq.subst (motive := fun l => y.2 ∈ l)
-      (SelectionTerm.Generations.nil_of_length_zero (ps := G.family N) empty) mem))
+      (nil_of_length_zero (g := G.family N) empty) mem))
 
 /-- What the line from an active occurrence reaches under the kind class is active: the kind class
 is finer than activity. -/
@@ -719,10 +719,10 @@ theorem nonempty_of_positive {t : Nat} (pos : ∀ s, t ≤ s → 0 < G.concordAt
     (N : Nat) (le : t ≤ N) : 0 < G.size N :=
   match le_dest le with
   | ⟨0, at_⟩ => match reproducing_of_term (pos t (Nat.le_refl t)) with
-    | ⟨_, mp, _⟩ => Eq.subst (motive := fun n => 0 < G.size n) at_.symm (SelectionShift.length_pos_of_mem mp)
+    | ⟨_, mp, _⟩ => Eq.subst (motive := fun n => 0 < G.size n) at_.symm (length_pos_of_mem mp)
   | ⟨e + 1, at_⟩ => match reproducing_of_term (pos (t + e) (Nat.le_add_right t e)) with
     | ⟨q, mq, _, mk⟩ => Eq.subst (motive := fun n => 0 < G.size n) at_.symm
-        (SelectionShift.length_pos_of_mem (ListTests.mem_flatMap_iff.mpr ⟨q, mq, mk⟩))
+        (length_pos_of_mem (ListTests.mem_flatMap_iff.mpr ⟨q, mq, mk⟩))
 
 /-- **Positive while it lasts, so it lasts, from step `t`.** From a nonempty generation `t`, a
 selection term proper positive at every nonempty generation from `t` on keeps every generation
@@ -733,7 +733,7 @@ theorem nonempty_while {t : Nat} (first : 0 < G.size t)
     ∀ e, 0 < G.size (t + e)
   | 0 => first
   | e + 1 => match reproducing_of_term (pos (t + e) (Nat.le_add_right t e) (nonempty_while first pos e)) with
-    | ⟨q, mq, _, mk⟩ => SelectionShift.length_pos_of_mem (ListTests.mem_flatMap_iff.mpr ⟨q, mq, mk⟩)
+    | ⟨q, mq, _, mk⟩ => length_pos_of_mem (ListTests.mem_flatMap_iff.mpr ⟨q, mq, mk⟩)
 
 /-- **No whole generation degenerates with a term positive while it lasts, where listed offspring
 continue their parents.** Where listed offspring continue their parents on the coarse line
@@ -914,10 +914,8 @@ theorem children_other {t p : Nat} (other : ¬ p = t + 1) : children t p = [] :=
 
 theorem level_self (t : Nat) : level t (t + 1) = 1 := if_pos rfl
 
-theorem succ_ne_zero (n : Nat) : n + 1 ≠ 0 := fun h => Nat.noConfusion h
-
 theorem level_next (t : Nat) : level t (t + 2) = 0 :=
-  (if_neg (Nat.succ_ne_self (t + 1))).trans (if_neg (succ_ne_zero (t + 1)))
+  (if_neg (Nat.succ_ne_self (t + 1))).trans (if_neg (Naturals.succ_ne_zero (t + 1)))
 
 theorem give_self (t : Nat) : give t (t + 1) (t + 2) = 1 := (if_pos rfl).trans (if_pos rfl)
 
@@ -1013,7 +1011,7 @@ theorem childless_degenerates :
       Nat.lt_irrefl 0 (Eq.subst (motive := fun n => 0 < level n 0) at_
         (Eq.subst (motive := fun f => 0 < level y.1 f) same.symm now))
     | .inr ⟨d, _⟩ => match mem_cons_cases d.1 with
-      | .inl e => succ_ne_zero 0 e.symm
+      | .inl e => Naturals.succ_ne_zero 0 e.symm
       | .inr m => nomatch m)
 
 /-- **Every generation nonempty, a positive term with exact transmission, and the regions at
@@ -1060,13 +1058,13 @@ theorem stands_once {t x : Nat} (now : 0 < level t x) (next : 0 < level (t + 1) 
   | .isTrue e =>
     have z : level (t + 1) x = 0 :=
       (if_neg (fun h : x = t + 1 + 1 => Nat.succ_ne_self (t + 1) (h.symm.trans e))).trans
-        (if_neg (fun h : x = 0 => succ_ne_zero t (e.symm.trans h)))
+        (if_neg (fun h : x = 0 => Naturals.succ_ne_zero t (e.symm.trans h)))
     Nat.lt_irrefl 0 (Nat.lt_of_lt_of_le next (Nat.le_of_eq z))
   | .isFalse ne => match Nat.decEq x 0 with
     | .isTrue z0 =>
       have z : level (t + 1) x = 0 :=
-        (if_neg (fun h : x = t + 1 + 1 => succ_ne_zero (t + 1) (h.symm.trans z0))).trans
-          ((if_pos z0).trans (if_neg (succ_ne_zero t)))
+        (if_neg (fun h : x = t + 1 + 1 => Naturals.succ_ne_zero (t + 1) (h.symm.trans z0))).trans
+          ((if_pos z0).trans (if_neg (Naturals.succ_ne_zero t)))
       Nat.lt_irrefl 0 (Nat.lt_of_lt_of_le next (Nat.le_of_eq z))
     | .isFalse n0 =>
       have z : level t x = 0 := (if_neg ne).trans (if_neg n0)
@@ -1401,19 +1399,10 @@ def always : Nat → Bool := fun _ => true
 /-- Reproduction on at every step up to `H`, and off after. -/
 def upTo (H : Nat) : Nat → Bool := fun t => decide (t ≤ H)
 
-theorem cond_pos : ∀ {b : Bool} {x : Nat}, 0 < cond b x 0 → b = true ∧ 0 < x
-  | true, _, pos => ⟨rfl, pos⟩
-  | false, _, pos => absurd pos (Nat.lt_irrefl 0)
-
 theorem mem_cond : ∀ {b : Bool} {l : List Formation} {k : Formation}, k ∈ cond b l [] →
     b = true ∧ k ∈ l
   | true, _, _, mk => ⟨rfl, mk⟩
   | false, _, _, mk => nomatch mk
-
-theorem and_split : ∀ {a b : Bool}, (a && b) = true → a = true ∧ b = true
-  | true, true, _ => ⟨rfl, rfl⟩
-  | true, false, h => Bool.noConfusion h
-  | false, _, h => Bool.noConfusion h
 
 theorem fst_of_mem {n : Nat} {k : Formation} (mk : k ∈ [(n, true), (n, false)]) : k.1 = n :=
   match mem_cons_cases mk with
@@ -1443,8 +1432,8 @@ theorem kids_off {on : Nat → Bool} {t : Nat} (h : on t = false) : ∀ p, kids 
 
 theorem give_pos {on : Nat → Bool} {t : Nat} {p k : Formation} (pos : 0 < give on t p k) :
     p.2 = true ∧ on t = true ∧ k.1 = t + 1 :=
-  match cond_pos pos with
-  | ⟨both, positive⟩ => ⟨(and_split both).1, (and_split both).2,
+  match Thresholds.cond_pos pos with
+  | ⟨both, positive⟩ => ⟨(bool_of_and_true both).1, (bool_of_and_true both).2,
       match Nat.decEq k.1 (t + 1) with
       | .isTrue e => e
       | .isFalse n => absurd (Nat.lt_of_lt_of_le positive (Nat.le_of_eq (if_neg n)))
@@ -1485,7 +1474,7 @@ theorem member_of {on : Nat → Bool} : ∀ {t : Nat} {p : Formation},
   | _ + 1, _, mp => match ListTests.mem_flatMap_iff.mp mp with
     | ⟨_, _, mk⟩ => match mem_cond mk with
       | ⟨both, ml⟩ => ⟨fst_of_mem ml, Nat.lt_of_lt_of_le (Nat.succ_pos 0)
-          (Nat.le_of_eq (born_on (and_split both).2).symm)⟩
+          (Nat.le_of_eq (born_on (bool_of_and_true both).2).symm)⟩
 
 theorem descends {on : Nat → Bool} {t : Nat} (h : on t = true) {k : Formation} (e : k.1 = t + 1) :
     (flow on).DescendsAt (web on) t k (t, true) :=
@@ -1514,7 +1503,7 @@ theorem descended (on : Nat → Bool) :
   fun t p k mp mk => match p, mp, mk with
   | (_, true), mp, mk => match mem_cond mk with
     | ⟨both, ml⟩ => Eq.subst (motive := fun n => (flow on).DescendsAt (web on) t k (n, true))
-        (member_of mp).1.symm (descends (and_split both).2 (fst_of_mem ml))
+        (member_of mp).1.symm (descends (bool_of_and_true both).2 (fst_of_mem ml))
   | (_, false), _, mk => nomatch mk
 
 /-- Every continuation of a member's occurrence at the kind grain is one of its listed offspring:
