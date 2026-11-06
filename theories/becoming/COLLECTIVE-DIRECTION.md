@@ -113,7 +113,7 @@ Observation is the first condition, necessary and not sufficient: seeing is not 
 ## 8. Zero-sum competition
 
 Starting from relations removes the frame of a fixed sum divided among independent owners. It does not remove rivalry, and both are theorems:
-- **Positive-sum structure.** A difference parts make only together is made by no part alone, and the relational reading still counts each drawer (`Pool.difference_only_together`, [home](chapters/05-COLLECTIVES.md#r-joint-difference-making)); a part's own widening widens the whole exactly within others' margins (§1); self-concern, a premise weaker than C, ranks a coupled ending below (§1).
+- **Positive-sum structure.** A difference parts make only together is made by no part alone, and in the witness Pool the relational reading still counts the first drawer as consuming (`Pool.difference_only_together`, [home](chapters/05-COLLECTIVES.md#r-joint-difference-making)); a part's own widening widens the whole exactly within others' margins (§1); self-concern, a premise weaker than C, ranks a coupled ending below (§1).
 - **Real conflict.** Positions' rises total their falls, so no change raises every part's position and a rise needs a fall (`RelativePosition.change_balances`, `RelativePosition.rise_needs_fall`, [home](chapters/05-COLLECTIVES.md#r-relative-position-is-zero-sum)); mixed comparisons stay unranked (§1).
 
 **Reading** [AI reading, D45]. The theory adds to the question of who wins more whether the joint draw stays within the renewal and within others' margins; who restrains stays contested. Positional goods stay zero-sum, and conserved stocks rivalrous.
