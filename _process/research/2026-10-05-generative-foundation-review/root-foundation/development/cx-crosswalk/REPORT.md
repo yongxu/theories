@@ -119,7 +119,7 @@ Since then:
   The same reader found the error elsewhere, and each correction uses the reader's words:
   - six entry fields and one group summary that gave ranking to C alone in their own words;
   - four lines in AA's atlas (`entries/dynamics.json`) that copied the eight records' old line. AA's session was told.
-- The edition to send, `review-packet-4`, carries most of the corrected sentences in their old wording. Whether it goes out as it is is Ren's decision.
+- The edition to send, `review-packet-4`, carries most of the corrected sentences in their old wording. Checked against MAP.md's correction, as the board's row asked: its MAP.md says fifteen earlier folders where its own table lists sixteen, and calls each a stratum the Theory of Becoming gathers. Whether it goes out as it is is Ren's decision.
 
 **Not changed, and listed.** A-10 and the record `shaping-the-rule-selected-by-what-comes-back` list the persistence of elites (Acemoglu and Robinson 2008) as a known form of shaping selected by what comes back. Whether their mechanism is that form turns on a reading of their paper that no source here can check.
 
