@@ -1,5 +1,7 @@
 # Glossary
 
+[中文](GLOSSARY.zh.md)
+
 The words of the Theory of Becoming, each in one sense and with one home: the section of the chapter that defines it. Elsewhere a word is used in that sense and linked there. Chinese terms are glossed once, with their pinyin, where they are introduced. Every concept of the grammar, with its Lean name, is listed in [the theory graph](theories/becoming/results/THEORY-GRAPH.md#the-grammars-concepts); labels that earlier texts used are mapped to the current terms in [the method chapter](theories/becoming/chapters/08-METHOD.md#names). The glossary this page replaces (the canonical chapter's §10, with its index of formal terms and its crosswalk to the corpus vocabulary) is kept in history with that chapter, and the September corpus glossary (192 headwords) [in its own history](_process/history/2026-09-consolidation/GLOSSARY.md).
 
 ## The root

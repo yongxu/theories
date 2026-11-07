@@ -1,0 +1,113 @@
+{
+ "verdict": "Every one of the 59 quotes is in its quote_path exactly as written. I checked this with a script against the worktree at bd6c1a56d, not with grep. Every frozen and run date matches the folder's README or the git dates of its freeze and result commits. One row has a kinder outcome class than its frozen rule supports: IN1 round 2. Its frozen rule passes a prediction only if it passes for both models, and by that rule three of its four predictions failed. Several glosses also drop a qualifier that changes what a reader believes: UE32, CG3 round 2, EW2, FC1 and TR1A. The theses agree with 08 §9 wherever 08 names the test. Four rows (T1N, T1R, T7F, IN2) take their thesis from their own READMEs, which breaks the rule stated in the notes. No live folder in the experiments/README.md table is missing, and EW1, T1B and T2O rightly get no rows. One retired frozen test with a mixed primary result sits in experiments/history and is neither listed nor excluded. What I read: experiments/README.md; 08 §9 (theses table and the two philosophical theses); every listed README through its verdicts or result; IN1's verdicts-round2.json; LCA's check.json; FIDELITY-RESULTS lines 1–80; the context lines of CONTROLLED-ENGLISH-RESULTS, SC1 RESULTS, the CG3 PREDICTIONS-ROUND2/3 openings and FREEZE-10 §9; and the retired closure-study RESULTS.md opening. I did not read the other FREEZE-N files, the PREDICTIONS files beyond those named, or any 02-MAP home section.",
+ "findings": [
+  {
+   "severity": "high",
+   "where": "IN1 (round 2): outcome, quote, gloss",
+   "problem": "Classed partly-passed, taken from 08's summary 'IN1 partly passed (with talk, one model of two)'. Line 36 of the round's frozen file says: 'each per model; passes overall only if it passes for both'. experiments/direction-installation/results/verdicts-round2.json, under passed_for_every_model, gives R1, R3 and R4 false and R2 and I true. So by its frozen rule three of four predictions failed and one passed. The gloss 'installation by instruction partly passed' reads as kinder than the frozen verdict.",
+   "fix": "Reclass as mixed. Quote the README: '**gpt-5.4-mini: R1, R2, R3 and R4 all passed.**' and '**gpt-4.1-mini: only R2 passed.**' Model names may appear inside a verbatim quote, but the page text names none. Gloss: 'By its frozen rule, which passes a prediction only where both models pass, R1, R3 and R4 failed and R2 passed; one language model passed all four, the other only R2.'"
+  },
+  {
+   "severity": "medium",
+   "where": "UE32: outcome passed, gloss",
+   "problem": "The gloss gives only the frozen verdict. It drops two qualifiers that both the README and 08 give. First, both states forecast worse than persistence in most stocks: each state's held-out error is larger than persistence's in 53 of 65 stocks. Second, the answer expected before the run was 'not separated' and was not borne out. 08 reads the result as 'sufficiency against it at these lengths, not the lag's place or T2's law'. The README adds, read after the run, that without the stocks at D = 2 the verdict is lost. A reader shown 'passed' plus this gloss would believe T2's numbers forecast well.",
+   "fix": "Keep the passed class only with the qualifiers. Gloss: 'By its frozen criterion, T2's three numbers forecast the next giving better than the field's fitted embedding (42 of 65 stocks); both forecast worse than persistence in most stocks, and the answer expected before the run, \"not separated\", was not borne out.' Or quote README line 42: 'Both states forecast worse than persistence.'"
+  },
+  {
+   "severity": "medium",
+   "where": "CG3 (round 2): quote and gloss",
+   "problem": "The quote comes from PREDICTIONS-ROUND3's opening and leaves out the sentence before it, which carries round 2's failure: 'Neither round's threshold located the boundary between the learner keeping the gated patch and emptying it.' Round 2 failed two of six conditions (R3s10, R2s4) and contrast Z1. The gloss has no failure in it, and it states 'the boundary depends on two quantities jointly' as a finding. The README says instead that 'A law for the boundary as a joint function of coverage and the full draw was not derived', and that round 3's and 4's forms failed too.",
+   "fix": "Quote 'Neither round's threshold located the boundary between the learner keeping the gated patch and emptying it.' Gloss: 'Round two's threshold failed (two of six conditions, contrast Z1); its early-start contrast passed, placing the learner's own outrun at the start of a course.'"
+  },
+  {
+   "severity": "medium",
+   "where": "EW2: gloss",
+   "problem": "The quote and gloss drop the README's next sentences: 'The pass is weak. Every estimate lies in the direction the refutation clause names.' 08 keeps this qualifier ('EW2 at low power, estimates in the refuting direction'). Without it the row reads as clean support for T6.",
+   "fix": "Add: 'The pass is weak: low power, and every estimate in the direction the refutation clause names.'"
+  },
+  {
+   "severity": "medium",
+   "where": "FC1: gloss",
+   "problem": "The gloss copies the README sentence and drops the one right after it, 'It is LLM-coded and provisional', along with the limit that the coder who wrote the 經 coded them in the main set. ZE later found that, under the pre-registered comparison, the advantage is discipline and register. Read alone, the gloss tells the reader the classical code's advantage is established.",
+   "fix": "Add: 'coded by language models and provisional (no human audit; the main set's 經 coded by the model that wrote them); F3 and F4 not measured.'"
+  },
+  {
+   "severity": "medium",
+   "where": "TR1A: outcome passed, gloss",
+   "problem": "The one frozen expectation concerns the item-score class. The comparator class was contradicted on 20 of 20 seeds, and the README says the frozen script miscounts P1, so 'its expectation check's P1 part is vacuous'. FREEZE-10 fixed that Stage A says nothing about RF1. Shown 'passed' with 'the one expectation frozen beforehand held', a reader would take this as a pass bearing on RF1's correspondence.",
+   "fix": "Gloss: 'The one expectation frozen beforehand (item-score choosers on the order) held, read on the seeds' own records; the frozen script's P1 counts are wrong; comparator choosers came to pick as no strict order would in 20 of 20 seeds; nothing is said of RF1.'"
+  },
+  {
+   "severity": "medium",
+   "where": "Missing frozen test: experiments/history/2026-10-05-general-framework/closure-study/external-test",
+   "problem": "A retired external prediction test (5 Oct 2026). Its RESULTS.md says the protocol 'was frozen before numerical outcomes were inspected', and its primary result is 'mixed after repair: composition reduces large prediction errors but slightly worsens average absolute error.' It has no row, and the notes do not exclude it. The other history entries are synthetic exact-finite cycles, not tests.",
+   "fix": "Add a row (outcome mixed; frozen and run 2026-10-05; thesis empty; mark it retired), or state on the page that retired experiments in experiments/history are out of scope."
+  },
+  {
+   "severity": "low",
+   "where": "Theses of T1N, T1R, T7F, IN2",
+   "problem": "08 §9 never names T1N, T1R, T7F or IN2; grep finds none of them in 08-METHOD.md. Their theses (T1, T1, T7, T4) come from their own READMEs. The notes' rule is to leave the thesis empty where 08 §9 does not tie a test, and LA3 and CMT were left empty under it. The values are not wrong, but the two rules are mixed.",
+   "fix": "Pick one rule and state it: either 08 §9 only (then empty these four) or 08 §9 or the folder's README (then recheck LA3 and CMT, whose READMEs name MA3's counts and DrawnShaping)."
+  },
+  {
+   "severity": "low",
+   "where": "TR7A: outcome passed vs TR2A mixed",
+   "problem": "The README says TR7A's FREEZE-9 §9 expectation 'held, except that A3's tie from uniform split 14 to 6 where it expected about even'. TR2A was classed mixed for an expectation that failed once. TR7A's reading was supported, so passed stands, but the gloss hides the miss.",
+   "fix": "Add to the gloss: 'the expectation stated before the run held except at A3's tie (14 to 6, about even expected).'"
+  },
+  {
+   "severity": "low",
+   "where": "LCA: quote and gloss",
+   "problem": "The quote is an interpretation from 'What the failures show' and gives no verdict counts. check.json gives passed_all false: P1, P4, P5 and P7 passed; P2, P3 and P6 failed.",
+   "fix": "Gloss: 'Of seven frozen predictions, four passed and three failed; withdrawal was learned less reliably than service.'"
+  },
+  {
+   "severity": "low",
+   "where": "LA1: gloss",
+   "problem": "The gloss drops the quote's closing qualifier, 'that its feedback barely separates', which is the point LA1b later confirmed. It also does not say that three of four frozen contrasts (L1, L3, L4) failed.",
+   "fix": "Keep 'misses worth 92.5–98.2% of the best, which its feedback barely separates'. Optionally add 'contrasts L1, L3 and L4 failed'."
+  },
+  {
+   "severity": "low",
+   "where": "LA4 (Stage A): quote and gloss",
+   "problem": "The quote's count skips P6, which was untestable in the feedforward family and supported in the recurrent one. The gloss drops the README's caveat that the supported nearness pattern 'largely follows from policy gradient's update rule'.",
+   "fix": "Add 'P6 untestable in one family; the supported pattern largely follows from policy gradient's update rule.'"
+  },
+  {
+   "severity": "low",
+   "where": "EW3, EW4: glosses",
+   "problem": "EW3's gloss leaves out 08's note that it is 'not independent of EW2 (it reuses part of its rows)'. EW4's quote comes from 08, though the README has its own result table. The gloss leaves out the README's limit 'The scope premise is argued by mechanism, not measured.'",
+   "fix": "EW3: add 'not independent of EW2 (it reuses part of its rows)'. EW4: quote the README, or add 'its scope premise argued by mechanism, not measured'."
+  },
+  {
+   "severity": "low",
+   "where": "selective-handoff, agentdojo, recipient-harm-valuation, recipient-cue-grounding: glosses",
+   "problem": "These glosses are positive and drop each README's limiting sentence: 'The explicit boundary reminder showed no performance gain' and 'A conventional candidate-elimination procedure also returns every correct answer' (selective-handoff); 'without OS isolation' (agentdojo); 'descriptive contrasts with no randomization p-value' (harm-valuation, per its protocol); 'does not identify recipient-specific reasoning', plus an unexplained n discrepancy (cue-grounding).",
+   "fix": "Add one limiting clause to each gloss from its README."
+  },
+  {
+   "severity": "low",
+   "where": "CG3b, EM1, CG1, MQ4: glosses",
+   "problem": "Each gloss leaves out a failure that its README records. CG3b's contrast W2 failed: the fitted boundary was no better than round 2's rule. EM1 failed E1 and three of eleven conditions; its bridge H3 failed on the locked side. In CG1, D1 failed as frozen (an identity prediction). 08 says MQ4 'failed its whole-state verdict' (G3). The mixed class covers these, but on a failures-first board each could be named.",
+   "fix": "Add the named failure to each gloss."
+  },
+  {
+   "severity": "low",
+   "where": "MQ6, EW4, IN1 r1, LA1, LA2: quote source",
+   "problem": "Their quotes come from 08 or experiments/README.md although the folder README has a counting line. margin-measured's ledger has 'MQ6, past the fold in the lab … 3 of 10 passed'. break-warnings has V1 and V2 'passed' for EW4. direction-installation lists H1 to H5, D1 and I. self-rewarding-lock has 'No frozen verdict failed … L1 to L4 passed' and 'The bridge failed: one note in nine turned the judge'.",
+   "fix": "Prefer the folder README's own sentence where one exists."
+  },
+  {
+   "severity": "low",
+   "where": "LA2 and LA3: run date",
+   "problem": "Both runs started on 25 Oct 2026 and finished on 26 Oct, in the README's own time zone. The run field gives 2026-10-26 only. experiments/README.md says 'run 25–26 Oct 2026'.",
+   "fix": "Give '2026-10-25 to 26' if the schema allows; otherwise say the date is the day the run finished."
+  },
+  {
+   "severity": "low",
+   "where": "All rows: folder and quote_path links",
+   "problem": "Paths are repo-relative (experiments/…, theories/…). The rule is links relative to the page's own folder.",
+   "fix": "Rewrite each href relative to the folder where the scoreboard page will live when it is built."
+  }
+ ]
+}

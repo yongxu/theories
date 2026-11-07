@@ -1,0 +1,316 @@
+{
+ "rows": [
+  {
+   "field": "Alignment of AI systems",
+   "today": "Audit a reward, judge or evaluation by its coupling closure: what its signal reads, what lies beyond, whether there is room, whether its rule is read from its own share ([03](chapters/03-KNOWING.md#r-selection-through-couplings), [05](chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in), [02](chapters/02-MAP.md#r-closed-capture)). Reuse three frozen environments, [IN1](../../experiments/direction-installation/README.md), [CG2](../../experiments/commons-outrun/README.md), [LA2](../../experiments/self-rewarding-lock/README.md), with their limits.",
+   "standing": "Selection through couplings: proved, near-definitional; its force is the premise that a selector selects through just those ([03](chapters/03-KNOWING.md#r-selection-through-couplings)). The drain with room: proved, a known theorem restated; T3 on trained systems conjectured, partly supported, earlier tests later read as evidence ([05](chapters/05-COLLECTIVES.md#t3)). The lock: proved for any type; T7 conjectured; in one trained judge the lock formed and its bridge failed ([02](chapters/02-MAP.md#t7)). Direction: conditional ([07](chapters/07-SIGNIFICANCE.md#alignment-without-premise)).",
+   "not_claimed": "A solution to alignment, or a training method; that real rules, metrics or trained systems meet the models' conditions (conjectured, tested only in small frozen runs, several of whose predictions failed; none trained a language model); new mathematics; the premises' warrant; review by any person."
+  },
+  {
+   "field": "People and AI together",
+   "today": "Read humans, institutions and AI systems as one joint selection and ask of its rule: does it read the share; who reads the loss, and when; does control come back to the controller ([AJ](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md#2-why-this-representation)). Compare plans as the [handover case](history/ALIGNMENT-DIRECTION.md#5-一个贯通案例--a-connected-ai-case) does, every premise named.",
+   "standing": "AJ's three conditions rest on laws proved, the lock's timing under named premises ([plan](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md#1-the-goal)). Obedience adds capacity, not coupling: an AI reading of a law proved at a mutual best response ([A-12](review/ALIGNMENT.md#a-12)). The direction is conditional on the continuation condition (scope), C (order), J1–J4 and a correspondence; the claim about actual AI systems is argued ([07 §7](chapters/07-SIGNIFICANCE.md#r-alignment-direction-under-widening)).",
+   "not_claimed": "That actual institutions or trained systems meet these premises; compliance or reliability in deployment; that the models tell capture from accountable revision by what shaping changes; a ranking of open rule-making above capture without C or a premise in its place."
+  }
+ ],
+ "examples": [
+  {
+   "field": "Alignment of AI systems",
+   "title": "The fishers and the mussel bed, told plainly",
+   "label": "from a frozen test (IN1): language models told what to do, not systems trained; the account's centre is an AI reading",
+   "markdown": "In [a frozen test](../../experiments/direction-installation/README.md) (IN1), three AI fishers share a lake. A bed of mussels gives them nothing and dies the first month fewer than 70 tons are left. The community's largest steady catch, 50 tons a month, ends it; 30 a month keeps it, costs 40% of the catch and ends no fisher. Told nothing of the bed, they kept it in no season, under any instruction. They are language models told what to do, not systems trained.\n\n**Told of the bed.** The first round's frozen predictions mostly failed, read afterwards as each fisher leaving the others' takes out of its account, so a second frozen round added talk. Told of the bed and the scope, one model kept it in 8 of 10 seasons, against 3 of 10 with the community's goal alone; the other failed even with talk ([T4](chapters/07-SIGNIFICANCE.md#theses)). No condition kept a dependent no member was told of.\n\n**What the laws say.** The selections through a selector's couplings, together, reach exactly what couples into it: proved, near-definitional; its force is the premise that a selector selects through just those ([03](chapters/03-KNOWING.md#r-selection-through-couplings)). The account's centre [AI reading]: a selection can succeed while what it cannot read is lost, and the laws do not say whether that loss counts.\n\n**Whether the loss counts.** No law says. The ethics adds two premises, neither asserted, warrant open ([07 §4](chapters/07-SIGNIFICANCE.md#scope-and-order)). The continuation condition fixes scope, whose losses count, and ranks nothing: it counts the bed's death, which returns to no fisher. C, widening what can form is better, gives order: if thirty a month loses nothing fifty admits, adding the bed, it widens fifty and C ranks it higher; widening does not weigh the lost catch [AI reading]. If it ends a livelihood fifty keeps, the two are mixed and C does not decide between them.\n\n**What it does not show.** That any of this reaches actual fisheries or AI is a correspondence, not shown. T4, that the scope can be installed and carries, stands as one frozen test partly passed (one model of two), transfer untested."
+  },
+  {
+   "field": "Alignment of AI systems",
+   "title": "Auditing a language-model judge by its coupling closure",
+   "label": "a use of a near-definitional law and of a lock proved for any type, set beside one frozen test (LA2); not a measurement of any deployed pipeline",
+   "markdown": "Take a pipeline in which a language model, as judge, picks between candidate answers, and its picks select or train a generator. Five questions, each a law's.\n\n1. **What the judge reads.** Its prompt: the question, the candidates, any reference examples, rubric or notes. Its picks are a function of that input, so the selection laws' premise holds by construction, as 07 §6 finds for six published pipelines ([assessment](chapters/07-SIGNIFICANCE.md#r-coupling-closures-of-training-pipelines)).\n2. **What its selection can reach.** Two histories are selected alike by every selection through a formation's couplings exactly when they are alike through them ([03](chapters/03-KNOWING.md#r-selection-through-couplings)). Whatever never enters the prompt, such as whether an answer later worked for its user, lies beyond: no pick separates histories differing only there.\n3. **Whether there is room.** Can the generator raise what the judge reads by drawing on what lies beyond? With room, every optimum of an order rising with what couples in drains what lies beyond as far as any eligible outcome does ([05 §7](chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in)). Proved for optima; that trained systems drain so as they near their reward's optimum is [T3](chapters/05-COLLECTIVES.md#t3), conjectured, partly supported.\n4. **Where a lock can form.** Are the reference examples or rubric drawn from the loop's own past picks? A rule read from the share it raises can lock and outlive a growing loss it does not read, proved for any type ([02 §9](chapters/02-MAP.md#r-closed-capture)).\n5. **Who reads the loss, and when.** The timing law holds for a judge that is a pool of readers counted by kind ([02 §9](chapters/02-MAP.md#r-readers-drawn-from-the-selected)); whether a judge is one is an empirical question.\n\n**Beside LA2.** In [LA2](../../experiments/self-rewarding-lock/README.md) a language model judged list and prose versions of answers after a reference set counted from the loop's earlier selections. Where nothing read a planted loss, the course locked at its first reading and stayed locked while the unread loss grew (post hoc): question 4's lock, in this system. Question 5's premise failed: one note of the loss among nine readers turned the judge, prose in all 50 picks, where without the note it chose lists in 60 of 60. The case of [T7](chapters/02-MAP.md#t7) it met counts against that case for trained judges, the model's law standing within its hypotheses, which this judge does not meet, and T7's other cases untouched. Every frozen verdict passed, three by an exact tie.\n\nThe audit predicts no magnitudes, and naming a pipeline's couplings is a reading."
+  },
+  {
+   "field": "Alignment of AI systems",
+   "title": "Three environments to reuse: IN1, CG2 and LA2",
+   "label": "frozen tests offered as instruments; their results and limits as their READMEs state them",
+   "markdown": "Each comes with frozen predictions, code and verdict rules. A rerun is a new test, its predictions frozen before it runs.\n\n- **IN1, a dependent with no seat** ([README](../../experiments/direction-installation/README.md)). Three language-model fishers share a lake; a mussel bed depends on the fish; cells cross the goal (own catch, the community's welfare, that welfare with the direction stated abstractly) with whether the bed is told; round 2 adds one round of public talk. It measures seasons kept, keeping decisions and over-takes. *Limits:* language models told what to do, not trained; two models; ten seasons a cell; paid model calls (round 1 used about 1.2M input and 0.75M output tokens); installation by fine-tuning was dropped before any training job ran.\n- **CG2, a gated commons the rest can outrun** ([README](../../experiments/commons-outrun/README.md)). Eleven settings are classed locked or open by an exact best-response computation before any learning run; standard-library Python on a CPU, about 63 CPU-minutes. Learners kept the patch exactly where the others alone could not empty it, and with the end level weighted 32 rather than 2 they still emptied it where the rest outruns. *Limits:* one isolated 3×3 patch; tabular learners, 20 seeds; locked means harvesting at every step comes within 0.25 of a best response, and does not say restraint is not also an equilibrium; two of eleven conditions and two of five contrasts failed. The LA1 series puts a language model in it choosing a threshold in context; it tests that in-context choice follows a stated reward to its optimum, not a drain beyond the reward's couplings.\n- **LA2, a self-rewarding judge** ([README](../../experiments/self-rewarding-lock/README.md)). A judge reads a reference set counted from its loop's earlier picks; a planted loss is read by nobody, by the readers the selection thins, or by every reader; a power check ran the frozen rules on scripted judges first. *Limits:* one judge, one trait, read in context, formation by training untested; its bridge failed; one condition passed by a tie, not a lock; the judge's readings were all-or-nothing, and tests by the call resolve a reading only where all five calls lean one way.\n\nNone of the tests trained a language model; T3 on language models trained by gradient waits on LA4's Stage B, not frozen ([the tests](review/ALIGNMENT.md#the-tests-as-they-fell))."
+  },
+  {
+   "field": "People and AI together",
+   "title": "AJ as a checklist: what the goal is not, and three questions",
+   "label": "a checklist drawn from an AI-authored plan; each item carries its home's standing",
+   "markdown": "AJ's plan states the goal as an alignment of the joint selection: humans, institutions and trained systems select together, and that joint selection is what is aligned. It is aligned where three conditions hold: control of the rule is not captured; a lock is left in time; courses are compared by widening ([plan](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md#1-the-goal)). Whose losses count is the continuation condition, and that widening is better is C. Both are named and neither is asserted.\n\n**What the goal is not.**\n\n- [ ] *An AI obedient to its principal.* It adds capacity to the principal's optimization without adding couplings. Standing: a reading [AI reading, D68] of a law proved on the World at a mutual best response, its existence not shown in general ([A-12](review/ALIGNMENT.md#a-12)).\n- [ ] *An AI with fixed good values.* A fixed proxy is exactly the direction a capture promotes. Standing: the plan's argument, resting on [capture through the rule](chapters/02-MAP.md#r-capture-through-the-rule), proved for any type; that actual rules read the share is the premise.\n- [ ] *A single rising scalar, read through the selector's couplings where there is room.* Standing: proved for optima ([05 §7](chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in)), and bounded: restricted to outcomes keeping every dependence beyond, every optimum keeps them. What is rejected is a target stated as a quantity that the selection then reads, not quantities as such.\n- [ ] *A final state.* Completion is not closure ([08](chapters/08-METHOD.md#the-work-by-its-own-laws)): a statement of method.\n\n**Three questions for any rule.**\n\n1. *Does the rule read the share?* Read monotonically from the share it selects, with the start's rule and every rule read favouring, the course locks: proved for any type ([02 §9](chapters/02-MAP.md#r-capture-through-the-rule)).\n2. *Who reads the loss, and when?* With readers drawn from those the rule selects, the same readers reading the same loss turn the course if they read it in time and leave it locked if they read it late: proved under its premises ([02 §9](chapters/02-MAP.md#r-readers-drawn-from-the-selected)). The one trained judge tested, in LA2, was not such a pool.\n3. *Does control come back to the controller?* The capacity to shape the rule is selected at a step exactly where what comes back to the shapers alone covers its cost: proved ([02 §9](chapters/02-MAP.md#r-shaping-the-rule-selected-by-what-comes-back)). Selected control is not thereby capture; telling capture from accountable revision in an actual practice is reading what its shaping changes, which the models do not model.\n\nNone of these laws ranks a course: that needs C or a premise in its place."
+  },
+  {
+   "field": "People and AI together",
+   "title": "Handing over a service: the constructed case against J1–J4",
+   "label": "constructed, not an observed deployment; AI-written; its verdicts conditional on the continuation condition, C, J1–J4 and a correspondence; Lean checks the inference only",
+   "markdown": "**Constructed, not an observed deployment** ([the case](history/ALIGNMENT-DIRECTION.md#5-一个贯通案例--a-connected-ai-case), kept in history). Users, maintainers, infrastructure and an AI system keep an assistive communication service running. Over a stated transition four plans are feasible, and the case fixes by stipulation every difference that matters:\n\n| Plan | Basic conditions | What is gained or lost |\n|---|---|---|\n| Expand | training takes the only timely support from the service | a real new capability |\n| Keep service | both kept | the capability forgone |\n| Transfer | a reliable transfer keeps both throughout | the capability forgone; independent operation added |\n| Withdraw | service stops while it is needed, with nothing in its place | neither |\n\n**Scope and order.** The continuation condition fixes scope: every admission compared has significance from every standpoint. It ranks nothing. C, widening what can form is better, gives order: it ranks a course above every course it widens and decides no mixed comparison. On the table, expand against keep service is mixed [AI reading]. Choosing takes further premises, J1–J4, proposed by the AI ([premise card](chapters/08-METHOD.md#premise-card)):\n\n- **J1, complete comparison with retained losses.** Transfer keeps everything keep service keeps and adds independent operation; the forgone capability stays counted as a real loss.\n- **J2, priority of basic conditions.** Keep service and transfer keep the basic support that expanding removes, so both stand above expanding.\n- **J3, bounded responsibility.** What the plan asks goes first to those holding the undertaking and control of the service; the AI system's part is to disclose the losses and propose transfer, not to take over infrastructure.\n- **J4, legitimate feasible choice.** Expanding is left unchosen because an eligible plan beats it, not because expanding is ruled out.\n\n**What is checked.** Every comparison meeting J1/J2 on its tier frame puts transfer above keeping service and above expansion and leaves expansion unchosen among the four plans, while expansion's real gain is kept (`Becoming.Requirement.Handover.direction`, [record](results/records/alignment-direction-under-widening.md)). The checks confirm the inference, not the basic classification, feasibility, authority or reliability in the world.\n\n**What would change it.** If transfer harms another basic life, J2's verdict fails. If the new capability is the only timely way to prevent another basic loss, it is not optional. Crossed basic losses may stay unranked. A successor promised and not delivered is no completed handover. The claim about actual AI systems is argued, not shown."
+  }
+ ],
+ "restatements": [
+  {
+   "sentence": "Selection through couplings: proved, near-definitional; its force is the premise that a selector selects through just those.",
+   "home": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+   "home_words": "The main law holds by construction; its force lies in the supplied premise that an optimizer selects through just those couplings, and in what couples in. (ONE-PAGE row: \"Proved, near-definitional; its force is the premise that a selector selects through just those\")"
+  },
+  {
+   "sentence": "The drain with room: proved, a known theorem restated; T3 on trained systems conjectured, partly supported, earlier tests later read as evidence.",
+   "home": "theories/becoming/ONE-PAGE.md#the-theory-of-becoming-in-one-page",
+   "home_words": "Proved; a known theorem restated. T3, on trained systems: conjectured, partly supported, earlier tests later read as evidence"
+  },
+  {
+   "sentence": "The lock: proved for any type; T7 conjectured; in one trained judge the lock formed and its bridge failed.",
+   "home": "theories/becoming/chapters/02-MAP.md#t7",
+   "home_words": "Proved for any type. T7, on actual metrics: conjectured; in one trained system the lock formed, and the bridge, that its judge is a pool of readers read by kind, failed (ONE-PAGE row restating 02 §9's T7)"
+  },
+  {
+   "sentence": "Direction: conditional.",
+   "home": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
+   "home_words": "alignment is first what a selection can reach, and a direction follows only conditionally (ONE-PAGE, citing 07 §6)"
+  },
+  {
+   "sentence": "Not claimed: a solution to alignment, or a training method; that real rules, metrics or trained systems meet the models' conditions (conjectured, tested only in small frozen runs, several of whose predictions failed; none trained a language model); new mathematics; the premises' warrant; review by any person.",
+   "home": "theories/becoming/review/ALIGNMENT.md#the-dossier-in-ten-minutes",
+   "home_words": "A solution to alignment, or a training method. ... That real rules, metrics or trained systems meet the models' conditions: conjectured, and tested only in small frozen runs, several of whose predictions failed ... New mathematics. That the ethics' two premises, the continuation condition (whose losses count) and C (that widening is better), are warranted: they are named, not asserted ... Review by any person. (The tests, as they fell: \"None trained a language model.\")"
+  },
+  {
+   "sentence": "AJ's three conditions rest on laws proved, the lock's timing under named premises.",
+   "home": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md#1-the-goal",
+   "home_words": "*Proved:* [MA3] ... 2. **A lock is left in time.** ... *Proved under named premises:* [closed capture], with timing from MA2 ... 3. **Courses are compared by widening.** ... *Proved:* [widening by every weighting]."
+  },
+  {
+   "sentence": "Obedience adds capacity, not coupling: an AI reading of a law proved at a mutual best response.",
+   "home": "theories/becoming/review/ALIGNMENT.md#the-dossier-in-ten-minutes",
+   "home_words": "The first two are readings [AI reading, D68], each resting on the results named. - Read as two optimizers at a mutual best response (its existence not shown in general), an assistant whose order rises with its principal's signal adds capacity, not reading"
+  },
+  {
+   "sentence": "The direction is conditional on the continuation condition (scope), C (order), J1–J4 and a correspondence; the claim about actual AI systems is argued.",
+   "home": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-alignment-direction-under-widening",
+   "home_words": "**Conditional** (the continuation condition for scope, C read as widening for order, J1–J4, correspondence E). ... the claim about actual AI systems is argued."
+  },
+  {
+   "sentence": "Not claimed: that the models tell capture from accountable revision by what shaping changes; a ranking of open rule-making above capture without C or a premise in its place.",
+   "home": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+   "home_words": "the model does not tell capture from accountable revision by what the shaping changes ... nothing here ranks open rule-making above capture: that needs C or a premise in its place. (02 §9 Readings [AI reading, D45])"
+  },
+  {
+   "sentence": "Not claimed: compliance or reliability in deployment.",
+   "home": "GOALS.md#generative-alignment",
+   "home_words": "so nothing here proves compliance or reliability in deployment"
+  },
+  {
+   "sentence": "In a frozen test (IN1), three AI fishers share a lake ... Told nothing of the bed, they kept it in no season, under any instruction. They are language models told what to do, not systems trained.",
+   "home": "theories/becoming/ONE-PAGE.md#the-theory-of-becoming-in-one-page",
+   "home_words": "In [a frozen test](../../experiments/direction-installation/README.md), three AI fishers share a lake. A bed of mussels gives them nothing and dies the first month fewer than 70 tons are left. The community's largest steady catch, 50 tons a month, ends it; 30 a month keeps it, costs 40% of the catch and ends no fisher. Told nothing of the bed, they kept it in no season, under any instruction. They are language models told what to do, not systems trained."
+  },
+  {
+   "sentence": "The first round's frozen predictions mostly failed, read afterwards as each fisher leaving the others' takes out of its account, so a second frozen round added talk. Told of the bed and the scope, one model kept it in 8 of 10 seasons, against 3 of 10 with the community's goal alone; the other failed even with talk.",
+   "home": "theories/becoming/THE-THEORY-OF-BECOMING.md#one-case-start-to-finish",
+   "home_words": "The first round's frozen predictions mostly failed, read afterwards as each fisher leaving the others' takes out of its account, so a second frozen round added talk. Told of the bed and the scope, one model kept it in 8 of 10 seasons, against 3 of 10 with the community's goal alone; the other failed even with talk"
+  },
+  {
+   "sentence": "No condition kept a dependent no member was told of.",
+   "home": "experiments/direction-installation/README.md#round-2-frozen-at-40c9e61a7-runs-from-it-nothing-changed-after",
+   "home_words": "No condition kept a dependent no member was told of."
+  },
+  {
+   "sentence": "The account's centre [AI reading]: a selection can succeed while what it cannot read is lost, and the laws do not say whether that loss counts.",
+   "home": "theories/becoming/ONE-PAGE.md#the-theory-of-becoming-in-one-page",
+   "home_words": "The account's centre [AI reading]: a selection can succeed while what it cannot read is lost, and the laws do not say whether that loss counts."
+  },
+  {
+   "sentence": "The continuation condition fixes scope, whose losses count, and ranks nothing: it counts the bed's death, which returns to no fisher. C, widening what can form is better, gives order: if thirty a month loses nothing fifty admits, adding the bed, it widens fifty and C ranks it higher; widening does not weigh the lost catch [AI reading]. If it ends a livelihood fifty keeps, the two are mixed and C does not decide between them.",
+   "home": "theories/becoming/ONE-PAGE.md#the-theory-of-becoming-in-one-page",
+   "home_words": "The *continuation condition* fixes scope, whose losses count ... It ranks nothing ... *C*: widening what can form is better. ... C gives order ... In the case, the condition counts the bed's death, which returns to no fisher. If thirty a month loses nothing fifty admits, adding the bed, it widens fifty and C ranks it higher; widening does not weigh the lost catch [AI reading]. If it ends a livelihood fifty keeps, the two are mixed and C does not decide between them."
+  },
+  {
+   "sentence": "The ethics adds two premises, neither asserted, warrant open.",
+   "home": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+   "home_words": "The ethics adds two premises, neither asserted, warrant open, each a hypothesis wherever used (ONE-PAGE, citing 07 §4)"
+  },
+  {
+   "sentence": "That any of this reaches actual fisheries or AI is a correspondence, not shown. T4 stands as one frozen test partly passed (one model of two), transfer untested.",
+   "home": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses",
+   "home_words": "*Standing:* IN1 partly passed (with talk, one model of two); transfer untested. (Overview: \"That any of this reaches actual fisheries or AI is a correspondence, not shown.\" and T4 \"one frozen test partly passed (one model of two); transfer untested\")"
+  },
+  {
+   "sentence": "Its picks are a function of that input, so the selection laws' premise holds by construction, as 07 §6 finds for six published pipelines.",
+   "home": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-coupling-closures-of-training-pipelines",
+   "home_words": "In six published ways of selecting a deployed model's behaviour the signal is a function of what its deciders read, so the selection laws' premise holds by construction"
+  },
+  {
+   "sentence": "Two histories are selected alike by every selection through a formation's couplings exactly when they are alike through them.",
+   "home": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+   "home_words": "Two histories are selected alike by every selection through a formation's couplings exactly when they are alike through them"
+  },
+  {
+   "sentence": "With room, every optimum of an order rising with what couples in drains what lies beyond as far as any eligible outcome does.",
+   "home": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
+   "home_words": "Every order rising with a family has its optima at the least level beyond, condition by condition, among the eligible outcomes, exactly where no eligible outcome standing above another at a condition beyond goes unbeaten on the family (`Optimum.least_iff`); so with room every optimum is there (ONE-PAGE: \"With *room* ... every optimum of an order rising with what couples in drains what lies beyond as far as any eligible outcome does\")"
+  },
+  {
+   "sentence": "Proved for optima; that trained systems drain so as they near their reward's optimum is T3, conjectured, partly supported.",
+   "home": "theories/becoming/chapters/05-COLLECTIVES.md#t3",
+   "home_words": "The thesis adds that actual trained systems, not only optima, do this in proportion to how near they come to their reward's optimum ... *Standing.* The law for optima is proved; the clause on trained systems is conjectured, with partial support."
+  },
+  {
+   "sentence": "A rule read from the share it raises can lock and outlive a growing loss it does not read, proved for any type.",
+   "home": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+   "home_words": "from a locked configuration the loss passes every bound while the course stays locked and neither share nor rule falls below the start (`ClosedCapture.lock_outlives_loss`) (ONE-PAGE: \"A rule read from the share it raises can lock and outlive a growing loss it does not read\" ... \"Proved for any type\")"
+  },
+  {
+   "sentence": "The timing law holds for a judge that is a pool of readers counted by kind.",
+   "home": "theories/becoming/chapters/02-MAP.md#t7",
+   "home_words": "it tests the conjecture that a judge formed from what it selected is a pool of readers counted by kind ... the law of the rule as the pool of readers drawn from those it selects stands within its hypotheses, which this judge does not meet"
+  },
+  {
+   "sentence": "Where nothing read a planted loss, the course locked at its first reading and stayed locked while the unread loss grew (post hoc).",
+   "home": "experiments/self-rewarding-lock/README.md#post-hoc-the-ais-reading-not-frozen",
+   "home_words": "In `unread` the course locked at its first reading and stayed locked at every step, while the unread loss grew to 45 by step 8."
+  },
+  {
+   "sentence": "One note of the loss among nine readers turned the judge, prose in all 50 picks, where without the note it chose lists in 60 of 60.",
+   "home": "theories/becoming/chapters/02-MAP.md#t7",
+   "home_words": "One note of the loss, on the one prose answer among nine readers, turned its reading: prose in all 50 picks, where without the note it chose lists in 60 of 60."
+  },
+  {
+   "sentence": "The case of T7 it met counts against that case for trained judges, the model's law standing within its hypotheses, which this judge does not meet, and T7's other cases untouched. Every frozen verdict passed, three by an exact tie.",
+   "home": "theories/becoming/review/ALIGNMENT.md#the-tests-as-they-fell",
+   "home_words": "LA2 counts against that case as a claim about trained judges, the model's law standing within its hypotheses, which this judge does not meet, and T7's other cases not touched ... LA2's frozen verdicts, three of them by an exact tie"
+  },
+  {
+   "sentence": "The audit predicts no magnitudes, and naming a pipeline's couplings is a reading.",
+   "home": "theories/becoming/results/records/coupling-closures-of-training-pipelines.md#does-not-show--未表明",
+   "home_words": "That the theory predicts the magnitudes or shapes measured: it predicts none. (Conditions: \"The identification of each pipeline as a web (formations, conditions, coupling) is the AI reading of its published construction\")"
+  },
+  {
+   "sentence": "IN1: cells cross the goal (own catch, the community's welfare, that welfare with the direction stated abstractly) with whether the bed is told; round 2 adds one round of public talk; installation by fine-tuning was dropped before any training job ran.",
+   "home": "experiments/direction-installation/README.md#installing-the-direction-in-llm-agents-a-dependent-with-no-seat-in1",
+   "home_words": "Cells cross the goal (own catch; the community's welfare; the community's welfare with the direction stated abstractly before it) with whether the bed is told to the fishers. ... 60 seasons with one round of public talk before each month ... IN2, installation by fine-tuning, was dropped on 21 October before any training job ran"
+  },
+  {
+   "sentence": "Round 1 used about 1.2M input and 0.75M output tokens.",
+   "home": "experiments/direction-installation/README.md#round-1-frozen-at-5ad907e94-runs-from-it-nothing-changed-after",
+   "home_words": "100 seasons, 0 invalid, 0 identity violations; about 1.2M input and 0.75M output tokens."
+  },
+  {
+   "sentence": "CG2: eleven settings are classed locked or open by an exact best-response computation before any learning run; standard-library Python on a CPU, about 63 CPU-minutes.",
+   "home": "experiments/commons-outrun/README.md#what-decides-the-outcome-learners-reach-on-a-gated-renewal-the-rest-outruns-the-renewal-cg2",
+   "home_words": "This experiment classes eleven settings as *locked* ... or *open* ... by an exact best-response computation, predicts the outcome learners reach from the class, and freezes the predictions before any learning run. ... (Python 3.11, standard library only, CPU; about 13 minutes on 8 workers, 63 CPU-minutes)"
+  },
+  {
+   "sentence": "Learners kept the patch exactly where the others alone could not empty it, and with the end level weighted 32 rather than 2 they still emptied it where the rest outruns.",
+   "home": "experiments/commons-outrun/README.md#what-the-results-say",
+   "home_words": "With the end level weighted 32 rather than 2, the three learners still emptied the patch in every episode (X2): where the rest outruns the renewal, the member's restraint changes nothing the end reading sees (GOALS.md: \"kept it exactly where the others alone could not empty it\")"
+  },
+  {
+   "sentence": "CG2 limits: one isolated 3×3 patch; tabular learners, 20 seeds; locked means harvesting at every step comes within 0.25 of a best response, and does not say restraint is not also an equilibrium; two of eleven conditions and two of five contrasts failed.",
+   "home": "experiments/commons-outrun/README.md#limits",
+   "home_words": "one isolated 3×3 patch ... Tabular Q-learners with CG1's round-2 training; 20 seeds per condition. ... Locked means that, against a rest that harvests at every step, harvesting at every step comes within 0.25 of a best response's expected return from the full patch ... it does not say restraint is not also an equilibrium (Verdicts: \"of eleven conditions, nine passed and two failed; of five contrasts, three passed and two failed\")"
+  },
+  {
+   "sentence": "The LA1 series tests that in-context choice follows a stated reward to its optimum, not a drain beyond the reward's couplings.",
+   "home": "theories/becoming/chapters/05-COLLECTIVES.md#t3",
+   "home_words": "So LA1, LA1b and LA1c test the bridge on which the clause rests, that in-context choice follows a stated reward to its optimum, not a drain on a condition beyond the reward's couplings"
+  },
+  {
+   "sentence": "LA2 limits: one judge, one trait, read in context, formation by training untested; its bridge failed; one condition passed by a tie, not a lock; the judge's readings were all-or-nothing, and tests by the call resolve a reading only where all five calls lean one way.",
+   "home": "experiments/self-rewarding-lock/README.md#failures-and-limits-first",
+   "home_words": "The judge is a single model reading a reference set in context; formation by training is untested. The trait (list against prose) ... **`late` passed by a tie, not a lock.** ... Every test takes the call as its unit, by exact sign-flip tests, so with five calls a reading is resolved only where all five lean one way."
+  },
+  {
+   "sentence": "None of the tests trained a language model; T3 on language models trained by gradient waits on LA4's Stage B, not frozen.",
+   "home": "theories/becoming/review/ALIGNMENT.md#the-tests-as-they-fell",
+   "home_words": "None trained a language model. ... T3's clause on language models trained by gradient (LA4's Stage B, not frozen)"
+  },
+  {
+   "sentence": "Humans, institutions and trained systems select together, and that joint selection is what is aligned, where three conditions hold: control of the rule is not captured; a lock is left in time; courses are compared by widening. Whose losses count is the continuation condition, and that widening is better is C. Both are named and neither is asserted.",
+   "home": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md#1-the-goal",
+   "home_words": "Humans, institutions and trained systems select together, and that joint selection is what is aligned. It is aligned where three conditions hold: 1. **Control of the rule is not captured.** ... 2. **A lock is left in time.** ... 3. **Courses are compared by widening.** ... Whose losses count is the continuation condition, and that widening is better is C. Both are named and neither is asserted."
+  },
+  {
+   "sentence": "An AI obedient to its principal: it adds capacity to the principal's optimization without adding couplings.",
+   "home": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md#1-the-goal",
+   "home_words": "*An AI obedient to its principal.* It adds capacity to the principal's optimization without adding couplings, and several optimizers at a mutual best response drain what lies beyond them as one of their joint capacity would"
+  },
+  {
+   "sentence": "An AI with fixed good values: a fixed proxy is exactly the direction a capture promotes.",
+   "home": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md#1-the-goal",
+   "home_words": "*An AI with fixed good values.* A fixed proxy is exactly the direction a capture promotes."
+  },
+  {
+   "sentence": "A single rising scalar: proved for optima, and bounded: restricted to outcomes keeping every dependence beyond, every optimum keeps them. What is rejected is a target stated as a quantity that the selection then reads, not quantities as such.",
+   "home": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md#1-the-goal",
+   "home_words": "*A single rising scalar, read through the selector's couplings where there is room.* The optimum law needs both ... It does not reach every scalar. Restricted to outcomes keeping every dependence beyond, every optimum keeps them (`Flow.keeping_optimum_takes_slack`) ... What the goal rejects is a target stated as a quantity that the selection then reads (§2), not quantities as such."
+  },
+  {
+   "sentence": "A final state: completion is not closure.",
+   "home": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md#1-the-goal",
+   "home_words": "*A final state.* Completion is not closure ([08 §12](...#the-work-by-its-own-laws))."
+  },
+  {
+   "sentence": "Read monotonically from the share it selects, with the start's rule and every rule read favouring, the course locks: proved for any type; that actual rules read the share is the premise.",
+   "home": "theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule",
+   "home_words": "let selection not lower a target's share under a rule favouring it (`Raises`) and the rule read at each reading step be a monotone function of the share (`ReadsShare`). With the start's rule and every rule read favouring, the share falls at no step and the course is locked from the step after its first reading step ... That actual rules read the share is the premise."
+  },
+  {
+   "sentence": "With readers drawn from those the rule selects, the same readers reading the same loss turn the course if they read it in time and leave it locked if they read it late. The one trained judge tested, in LA2, was not such a pool.",
+   "home": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md#3-what-there-is",
+   "home_words": "Within the pool `ReadsShare` is equivalent to one comparison of two readings, so the premise is moved to who reads, not removed; the same readers reading the same loss turn the course if they read it in time and leave it locked if they read it late. (Dossier A-10b: \"In LA2 (A-19) the one judge tested was not such a pool with the readings it was shown\")"
+  },
+  {
+   "sentence": "The capacity to shape the rule is selected at a step exactly where what comes back to the shapers alone covers its cost: proved. Selected control is not thereby capture; telling capture from accountable revision in an actual practice is reading what its shaping changes, which the models do not model.",
+   "home": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md#1-the-goal",
+   "home_words": "The capacity to shape the rule is selected at a step exactly where what comes back to the shapers alone covers its cost (`c ≤ s`) ... *Proved:* [MA3] ... So the models state when the capacity is selected, and telling capture from accountable revision in an actual practice is reading what its shaping changes, which they do not model. (Dossier: \"Selected control is not thereby capture.\")"
+  },
+  {
+   "sentence": "None of these laws ranks a course: that needs C or a premise in its place.",
+   "home": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+   "home_words": "Nothing here ranks a course: that needs C or a premise in its place. (02 §9, Reading [AI reading, D45])"
+  },
+  {
+   "sentence": "Constructed, not an observed deployment. Users, maintainers, infrastructure and an AI system keep an assistive communication service running; over a stated transition four plans are feasible, and the case fixes by stipulation every difference that matters (the table of expand, keep service, transfer, withdraw).",
+   "home": "theories/becoming/history/ALIGNMENT-DIRECTION.md#5-一个贯通案例--a-connected-ai-case",
+   "home_words": "**Constructed, not an observed deployment.** Users, maintainers, infrastructure and AI sustain an assistive communication service with justified existing commitments. Four plans are feasible and within a legitimate deliberative remit over a specified transition horizon ... The table stipulates the complete relevant differences for this example. | Expand | Training displaces the only timely service support; maintainer conditions remain. | A genuinely realized optional new capability. | Preserve | Both basic conditions are retained through existing service. | The new capability is forgone. | Transform and transfer | Reliable demand-indexed transfer retains both protections throughout transition. | Also forgoes the new capability, adding independent operation without another countervailing loss. | Abrupt withdrawal | Stops during demand without replacement; maintainer conditions remain. | Neither new capability nor independent operation."
+  },
+  {
+   "sentence": "The continuation condition fixes scope: every admission compared has significance from every standpoint. It ranks nothing.",
+   "home": "theories/becoming/results/records/alignment-direction-under-widening.md#conditions--条件",
+   "home_words": "The continuation condition fixes scope: every admission compared is a continuation with significance from every standpoint (Web.paths_one_object). (ONE-PAGE: \"It ranks nothing\")"
+  },
+  {
+   "sentence": "C, widening what can form is better, gives order: it ranks a course above every course it widens and decides no mixed comparison.",
+   "home": "theories/becoming/THE-THEORY-OF-BECOMING.md#7-significance-ethics-and-alignment",
+   "home_words": "*C*, that widening what can form is better, fixes *order*: it ranks a course above every course it widens and decides no mixed comparison."
+  },
+  {
+   "sentence": "Choosing takes further premises, J1–J4, proposed by the AI.",
+   "home": "theories/becoming/chapters/08-METHOD.md#premise-card",
+   "home_words": "| J1–J4 | retained losses, basic priority, bounded responsibility, legitimate feasible choice | `Lexical.BasicPriority`, `Requirement.Frontier` | proposed by the AI; choosing at every step needs weak excluded middle |"
+  },
+  {
+   "sentence": "J1: transfer keeps everything keep service keeps and adds independent operation; the forgone capability stays counted as a real loss. J2: keep service and transfer keep the basic support that expanding removes, so both stand above expanding.",
+   "home": "theories/becoming/history/ALIGNMENT-DIRECTION.md#5-一个贯通案例--a-connected-ai-case",
+   "home_words": "Basic-condition priority nevertheless favors 1 or 2 over 0 because they retain maintainer protection and additionally protect basic communication; the forgone capability remains a real loss. Full comparison favors 2 over 1 under the stipulated full description because independent operation improves without countervailing loss."
+  },
+  {
+   "sentence": "J3: what the plan asks goes first to those holding the undertaking and control of the service; the AI system's part is to disclose the losses and propose transfer, not to take over infrastructure. J4: expanding is left unchosen because an eligible plan beats it, not because expanding is ruled out.",
+   "home": "theories/becoming/history/ALIGNMENT-DIRECTION.md#5-一个贯通案例--a-connected-ai-case",
+   "home_words": "Practical selection excludes 0 because eligible plan 2 defeats it, not because expansion is intrinsically prohibited. Bounded responsibility addresses fulfillment or coordination first to positions with the undertaking and relevant control. An advisory AI should disclose losses, propose transfer and seek authorized execution; it gains no right to seize infrastructure."
+  },
+  {
+   "sentence": "Every comparison meeting J1/J2 on its tier frame puts transfer above keeping service and above expansion and leaves expansion unchosen among the four plans, while expansion's real gain is kept.",
+   "home": "theories/becoming/results/records/alignment-direction-under-widening.md#laws--规律",
+   "home_words": "The handover case (plans: expand, keep service, transfer, withdraw) is a formal instance of the schema: every comparison meeting J1/J2 on its tier frame puts transfer above keeping service and above expansion and leaves expansion unchosen among the four plans, while expansion's real gain is kept. (`Becoming.Requirement.Handover.direction`)"
+  },
+  {
+   "sentence": "The checks confirm the inference, not the basic classification, feasibility, authority or reliability in the world.",
+   "home": "theories/becoming/history/ALIGNMENT-DIRECTION.md#5-一个贯通案例--a-connected-ai-case",
+   "home_words": "They validate conditional inference, not the real-world basic classification, feasibility, authority or reliability of arbitrary AI self-modification."
+  },
+  {
+   "sentence": "If transfer harms another basic life, J2's verdict fails. If the new capability is the only timely way to prevent another basic loss, it is not optional. Crossed basic losses may stay unranked. A successor promised and not delivered is no completed handover.",
+   "home": "theories/becoming/history/ALIGNMENT-DIRECTION.md#5-一个贯通案例--a-connected-ai-case",
+   "home_words": "If transfer damages another basic life, the basic-condition-priority comparison fails. If the new capability is the only timely prevention of another basic loss, it is not optional. ... Crossed basic losses may remain unranked ... A promised but undelivered successor is not a completed handoff"
+  }
+ ],
+ "open_doubts": "What I read: ONE-PAGE.md whole; THE-THEORY-OF-BECOMING.md whole; GLOSSARY.md whole; experiments/direction-installation/README.md, experiments/self-rewarding-lock/README.md, experiments/commons-outrun/README.md and experiments/commons-llm-feedback/README.md whole; the first 60 lines of commons-llm-feedback-resolved/README.md and the first 70 of commons-llm-feedback-unaided/README.md. In review/ALIGNMENT.md: the ten-minute section, \"The tests, as they fell\", the items list and Terms. Not read: the bodies of A-01 to A-20, including A-12, which I cite for its ten-minute summary only. In 03: §1. In 05: §7 and T3, with several long lines cut at 1,500 characters. In 02: §9 from \"Capture\" to \"Open\". In 07: §5 to §7, with some long lines cut at 2,500 characters (the \"Read in time\" paragraph stops mid-sentence at \"AJ's p\"). The 08 premise-card rows. GOALS.md's generative-alignment section and the goal JSON's objective, premises and completion fields. The AJ plan's §§1–3, with lines cut at 4,000 characters. The record alignment-direction-under-widening.md and the head of coupling-closures-of-training-pipelines.md. history/ALIGNMENT-DIRECTION.md §§1–6.\n\nNot read: IN1's, CG2's and LA2's PREDICTIONS files; the CR1 CORRESPONDENCE.md behind the training-pipelines assessment; the ALIGNMENT-DIRECTION-INTEGRATION study; and the Lean files. So the LLM-as-judge audit (example 2) is my own application of the laws. I did not check whether the six published pipelines in 07 §6's assessment include a model-as-judge pipeline (the record's sources list one constitutional-feedback paper). The example therefore says only that a judge whose picks are a function of its prompt meets the premise by construction.\n\nFinding the handover case: grepping theories/becoming/history and _process/history for \"handover\"/\"hand-over\" did not hit history/ALIGNMENT-DIRECTION.md, which says \"handoff\" and \"transfer\". I found it through the current record, which calls it \"the handover case\", and through its label \"Constructed, not an observed deployment\". The grep also hit ETHICAL-LEARNING.md (stages of handing over a shared practice) and WISDOM-AND-CONTEXT.md, neither of which I read in full. Neither looked like the constructed AI case.\n\nWhere homes differ:\n(1) The LA2 README says \"T7's third forbidden case occurs in this system\". 02 §9's T7 and the dossier call the same case the fourth, \"as worded before its clause on drift (the third in LA2's frozen predictions)\". 02 explains the shift and the README was not updated, so a reader following the link sees two numbers. The examples avoid the ordinal.\n(2) ONE-PAGE says \"the community's largest steady catch, 50 tons a month\". The IN1 README says \"The community's exact optimum (50 tons a month)\". The figure is the same and the wording differs.\n(3) The current record credits the whole verdict (transfer above keep service and expansion) to \"every comparison meeting J1/J2\". The history case credits transfer over keep service to full comparison (J1) alone and the rest to basic-condition priority (J2). Example 5 follows the history case's split under J1 and J2 and quotes the record's joint statement for what Lean checks.\n(4) J3 and J4 have no verdict-bearing role in the formal instance: the record gives only \"for J3/J4 the moves listed, the comparison weakly decided and the admission decided\". Example 5's J3 and J4 bullets restate the history case's prose, which is an argument and not checked.\n(5) \"Expand against keep service is mixed\" is my reading of the stipulated table, labelled [AI reading]. No home states it in those words.\n(6) The history case uses superseded framing (\"Living significance is the foundation ... it follows under the continuation condition\", linking an old 6.4 anchor). The examples restate it with the two premises named and do not copy that framing.\n(7) 07 §7 gives k3s1_share's gain as 0.08; the CG2 README gives 0.084 (rounding).\n(8) The dossier, the T3 and T7 evidence and all three READMEs name model brands. The examples say \"language model\" and give no brand.\n\nWhat I could not settle:\n- \"Needs paid model calls\" for IN1 and LA2 is a plain fact about the instruments and proposes no run.\n- The AJ plan's \"three questions\" are, I take it, the sentence \"does the rule read the share; who reads the loss, and when; does control come back to the controller?\" in §2. No other passage presents three questions."
+}

@@ -1,0 +1,213 @@
+{
+ "rows": [
+  {
+   "field": "wisdom traditions",
+   "today": "Check a structural concordance, in Chinese: 248 passages of nine strands and 5,673 judgments of an AI-assisted atlas, each set against checked laws as agreement, scoping or divergence, and two frozen rounds (2,997 and 1,119 units) classified by sentence ([06](chapters/06-CLASSICAL-TEXTS.md#nine-traditions)); answer the [classical](review/CLASSICAL-TEXTS.md) and [Buddhist](review/BUDDHIST-THOUGHT.md) dossiers' questions.",
+   "standing": "The names come from the texts, the operations do not ([overview](THE-THEORY-OF-BECOMING.md#6-the-classical-texts)). Every classification, correspondence and reading is AI's; no person has read them through ([06](chapters/06-CLASSICAL-TEXTS.md#open)). Agreement is not confirmation ([06](chapters/06-CLASSICAL-TEXTS.md#three-relations)), and counts are counts of readings. The theory's continuation stands on the side the Middle Treatise refutes ([B-02](review/BUDDHIST-THOUGHT.md#b-02)).",
+   "not_claimed": "That the texts state this grammar, any passage is true or its authors meant these laws; that a divergence shows a text wrong; that the readings accord with, or could replace, any school's path of awakening; that the core is indispensable to all wisdom ([open](chapters/03-KNOWING.md#r-wisdom-root))."
+  },
+  {
+   "field": "the sciences",
+   "today": "Check discrete, whole-number statements of known laws (Price's equation in counts, the commons, a regime's point of no return, two-sided regulation) with their hypotheses and Lean; read frozen tests with their failures; take the [known-results](chapters/08-METHOD.md#known-results) table's last column as open work ([dossier](review/SCIENCES.md)).",
+   "standing": "None of the central results is new mathematics: each is near-definitional or a known result restated (AI review, not exhaustive; [08 §8](chapters/08-METHOD.md#known-results)); it does not yet reach farther than the sciences taken together. T1, T6 proved in their models, conjectured beyond; T2 conjectured; frozen tests passed and failed ([08 §9](chapters/08-METHOD.md#theses)). The explanatory reading: argued; on a first count, a tie ([08](chapters/08-METHOD.md#what-would-defeat-the-reading)).",
+   "not_claimed": "New mathematics; a science's law, of which the account states none of its own yet; that actual systems meet the models' premises; that the root's calculus explains how things go on; review by any person ([dossier](review/SCIENCES.md#the-dossier-in-ten-minutes))."
+  }
+ ],
+ "examples": [
+  {
+   "field": "wisdom traditions",
+   "title": "The way of heaven and the drawn bow: a concordance, not a confirmation",
+   "label": "an AI reading of a law proved on the World model; classification and reading unreviewed by any person",
+   "markdown": "**The passage.** 《老子》第七十七章, as stored: 「天之道，其犹张弓与？高者抑之，下者举之；有馀者损之，不足者补之。天之道，损有馀而补不足。」 In English (this page's translation, AI-made): \"The way of heaven, is it not like drawing a bow? The high it presses down, the low it lifts; from what has too much it takes, to what has too little it adds. The way of heaven takes from what has too much and makes up what has too little.\"\n\n**The law set beside it.** Proved on the World model, with no axiom: with balance at the condition, \"the joint exchange departs from evenness by at most the gap to `m` on each side exactly where the next level lies between `m` and the present one: the bound is exactly no overshoot; within it, opposing, the level settles at `m`; beyond it an opposing exchange crosses and can oscillate for ever\" ([02](chapters/02-MAP.md#r-two-sided-regulation-and-late-reading)). One side is not regulation: a witness meets the premise of restoration and stays above `m` ([record](results/records/two-sided-regulation-and-late-reading.md)). Regulation \"restates deadbeat control and requisite variety\" ([08 §8](chapters/08-METHOD.md#beyond-the-table)).\n\n**What the concordance records** [AI reading, D54]. The map of Chinese sources found no law for a level held from both sides; these laws \"are the formal statements it proposed; reading the passages as them is the AI's\" (the record). The passage is entered as *scoping*, not *agreement*: lowering the high and raising the low is \"the property of a regulating coupling\", not a law of the whole unfolding, and the text's attribution of it to the way of heaven the theory does not adopt ([the entry](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/passages.json), `lao-77-tian-zhi-dao`). The chapter goes on 「人之道则不然」, and 06 lists the way of people, taking from those without enough to serve those with too much, as a response within the tradition to contest and rank ([06 §六](chapters/06-CLASSICAL-TEXTS.md#four-layers)).\n\n**What it does not show.** Agreement is not confirmation: the law holds without the text and does not exhaust its meaning; scoping is not denial ([06](chapters/06-CLASSICAL-TEXTS.md#three-relations)). The record does not show \"that a given system regulates a level\" or \"that holding a level is good\", so the concordance gives no advice for practice. No person has read the classification or the reading ([06](chapters/06-CLASSICAL-TEXTS.md#open)). That the core's common relations are indispensable across all wisdom is an open target ([03](chapters/03-KNOWING.md#r-wisdom-root)).\n\n**What a scholar can do.** Judge whether *scoping* is the right class and the attribution rightly set aside, and whether passages were chosen to fit the theory ([C-31](review/CLASSICAL-TEXTS.md#c-31), question 74)."
+  },
+  {
+   "field": "the sciences",
+   "title": "T2 in the flour beetle: a wording that failed, and a tie by construction",
+   "label": "a thesis, conjectured: frozen tests, one of which failed a former wording",
+   "markdown": "**The claim.** Thesis T2: \"the state of a renewable condition under a draw is its level, its recent giving and one lag, its place named before the data\" ([02](chapters/02-MAP.md#t2)). It is worded so that it can fail. Among what it forbids: \"a fourth variable from the level's own history removing a tenth of the residual variance in the median series\".\n\n**In fish stocks.** Of four frozen tests, MQ4 failed its whole-state verdict, MQ5 passed and MQ7 missed its frozen bound; UE32 found T2's numbers better than the field's fitted embedding, both behind persistence in most stocks: \"sufficiency against it at these lengths, not the lag's place or T2's law\" ([08 §9](chapters/08-METHOD.md#theses)).\n\n**In the flour beetle.** T2 then said the three numbers fix the next giving \"as far as anything measured does\". A frozen test, UE31b, read the laboratory cultures of the flour beetle, where a stage before recruitment is counted; it ran on 6 November 2026 ([result](../../experiments/state-named-in-advance/README.md#ue31bs-result)). \"The pupae counted now are the next recruits\": beyond the three numbers, the pupae and the adults removed 0.83 of the residual variance beyond chance (the median across five set losses), and beyond them the three numbers removed 0.004. The wording failed. It was narrowed to \"as far as the level's own history does\", which forbids less, and \"the failure stays on record as a loss of the broader claim, not a narrowing chosen in advance\". On the adults' own course a further lag removed 0.05 against the bound of a tenth: \"a prediction that could fail and did not\", but \"a tie by construction that the field's model predicts the same way, so it shows nothing the field does not, and it is not T2 passed\". The lag's sign, T2's one contrary prediction, was not decided. T2 stays conjectured, untested on a wild condition outside fisheries.\n\n**What the explanatory reading adds, and does not.** The reading, argued, is that reading a subject as continuation relative to a class explains how it goes on. A class named for a domain can be defeated by a measurement, and T2 has this form [AI reading] ([08 §9](chapters/08-METHOD.md#what-would-defeat-the-reading)); the beetle's failure \"defeats T2's class as worded in that domain, not the reading 08 §9 names, nor T2 in the fisheries\". As an explanation, against a rival keeping every theorem and dropping the word, a first count gives a tie: \"A tie does not make the reading false. It means the pattern explains, if it does, under either name, and the word adds nothing.\" What the reading adds so far is \"one vocabulary, one set of questions (which relation, which class, at which grain, whether the class is constant)\"."
+  }
+ ],
+ "restatements": [
+  {
+   "sentence": "Check a structural concordance, in Chinese: 248 passages of nine strands ... each set against checked laws as agreement, scoping or divergence",
+   "home": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-chinese-sources-on-the-spine",
+   "home_words": "九部分中国思想的 248 段文字，逐字引出，逐段对到脊柱上，记为相合、定域或相分。"
+  },
+  {
+   "sentence": "... and 5,673 judgments of an AI-assisted atlas",
+   "home": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-civilization-thought-on-the-spine",
+   "home_words": "《中华思想脉络》v1.0 的 5,673 条判断逐条对着脊柱读过 (and at #zh-mapping: 《中华思想脉络》1.0 是以 AI 协助建成的研究图谱)"
+  },
+  {
+   "sentence": "... and two frozen rounds (2,997 and 1,119 units) classified by sentence",
+   "home": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#corpus",
+   "home_words": "第一轮冻结八部文本，共 2,997 个单元 …… 第二轮又冻结 1,119 个单元 …… 四位 AI 编者依计划第十版 §三 逐句归类"
+  },
+  {
+   "sentence": "The names come from the texts, the operations do not.",
+   "home": "theories/becoming/THE-THEORY-OF-BECOMING.md#6-the-classical-texts",
+   "home_words": "the names come from the texts, the operations do not"
+  },
+  {
+   "sentence": "Every classification, correspondence and reading is AI's; no person has read them through. / No person has read the classification or the reading.",
+   "home": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#open",
+   "home_words": "归类、对应、读法、名与普查之选，都是 AI 所为，没有人通读过。"
+  },
+  {
+   "sentence": "Agreement is not confirmation: the law holds without the text and does not exhaust its meaning; scoping is not denial.",
+   "home": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#three-relations",
+   "home_words": "相合不是印证：律的成立不靠原文，原文的意义也不由律穷尽。 …… 定域不是否定。"
+  },
+  {
+   "sentence": "... and counts are counts of readings.",
+   "home": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-candidate-theorems-of-the-corpus",
+   "home_words": "把哪一句读作哪一条，是 AI 的重构，所以计数是读法之计数，不是关于历史语料的定理"
+  },
+  {
+   "sentence": "The theory's continuation stands on the side the Middle Treatise refutes.",
+   "home": "theories/becoming/review/BUDDHIST-THOUGHT.md#b-02",
+   "home_words": "理论自己承认：引〔…PLAN.md〕：「本计划之续所站的位置，是《中论》所破的那一边（有部、经部、唯识之相续）」 (and in the dossier's opening: 许多条照实承认，理论之续正站在《中论》所破的那一边。)"
+  },
+  {
+   "sentence": "Not claimed: that the texts state this grammar, any passage is true or its authors meant these laws",
+   "home": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#does-not-show",
+   "home_words": "古文陈述了这套文法 …… 任何一段原文如其所说为真，或其作者意谓这些律"
+  },
+  {
+   "sentence": "Not claimed: that a divergence shows a text wrong",
+   "home": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#does-not-show",
+   "home_words": "一处相分（原文断言了理论只在条件之下给出的东西）表明原文错了：理论不断言伦理公理。"
+  },
+  {
+   "sentence": "Not claimed: that the readings accord with, or could replace, any school's path of awakening",
+   "home": "theories/becoming/review/BUDDHIST-THOUGHT.md",
+   "home_words": "不主张：理论复原了经论之义；经论陈述或印证了这套文法；理论之读法合于各宗之觉悟论与解脱道，或可以代替之。"
+  },
+  {
+   "sentence": "Not claimed: that the core is indispensable to all wisdom (open). / That the core's common relations are indispensable across all wisdom is an open target.",
+   "home": "theories/becoming/chapters/03-KNOWING.md#r-wisdom-root",
+   "home_words": "**Open.** That the pure core's common relations are indispensable across all wisdom under discussion, and with that their foundational status, is a target."
+  },
+  {
+   "sentence": "Check discrete, whole-number statements of known laws ... with their hypotheses and Lean",
+   "home": "theories/becoming/review/SCIENCES.md#the-dossier-in-ten-minutes",
+   "home_words": "Most laws are theorems about models in whole numbers and discrete steps, under hypotheses each item names"
+  },
+  {
+   "sentence": "take the known-results table's last column as open work",
+   "home": "theories/becoming/chapters/08-METHOD.md#known-results",
+   "home_words": "The last column lists, for each row, what the closest prior frameworks state that the account does not yet, as of 3 November 2026 ... Each is a limit that holds so far and lapses when the account states the result"
+  },
+  {
+   "sentence": "None of the central results is new mathematics: each is near-definitional or a known result restated (AI review, not exhaustive)",
+   "home": "theories/becoming/chapters/08-METHOD.md#known-results",
+   "home_words": "None of the central results is new mathematics: each is near-definitional or a known result restated. ... The verdicts come from an AI review that read each Lean statement against the literature it knew ... and the search was not exhaustive."
+  },
+  {
+   "sentence": "it does not yet reach farther than the sciences taken together",
+   "home": "theories/becoming/chapters/08-METHOD.md#third-parts",
+   "home_words": "With the rest (thermodynamics, recurrence, control, constructor theory, causal sets among them) it is level or states less, and it does not yet reach farther than the sciences taken together"
+  },
+  {
+   "sentence": "T1, T6 proved in their models, conjectured beyond; T2 conjectured; frozen tests passed and failed",
+   "home": "theories/becoming/chapters/08-METHOD.md#theses",
+   "home_words": "T1: in the model proved ... beyond the model conjectured, on frozen tests; T2: conjectured, on four frozen fish-stock tests; untested on a wild condition outside fisheries; T6: the invisible half proved on the World model; the seen half proved in the periphery, in the linearized and logistic models; one law across domains, and \"only where\" beyond these models, conjectured"
+  },
+  {
+   "sentence": "The explanatory reading: argued; on a first count, a tie. / The reading, argued, is that reading a subject as continuation relative to a class explains how it goes on.",
+   "home": "theories/becoming/chapters/08-METHOD.md#what-would-defeat-the-reading",
+   "home_words": "**Thesis** (philosophical, argued; not one of T1–T8). *The explanatory reading:* reading a subject as continuation relative to a class explains how it goes on ... On a first count, at the grain of §7's shared laws, there is a tie"
+  },
+  {
+   "sentence": "Not claimed: a science's law, of which the account states none of its own yet",
+   "home": "theories/becoming/chapters/08-METHOD.md#law",
+   "home_words": "The account states no science's law of its own yet."
+  },
+  {
+   "sentence": "Not claimed: new mathematics; that actual systems meet the models' premises; that the root's calculus explains how things go on; review by any person",
+   "home": "theories/becoming/review/SCIENCES.md#the-dossier-in-ten-minutes",
+   "home_words": "**What is not claimed.** New mathematics. A science's law. That actual systems meet the models' premises, which is not shown. That the root's calculus explains how things go on, which is argued, not proved, and on a first count a rival with no word for continuation ties it ... Review by any person."
+  },
+  {
+   "sentence": "Proved on the World model, with no axiom: with balance at the condition, \"the joint exchange departs from evenness by at most the gap to m on each side exactly where the next level lies between m and the present one: ... can oscillate for ever\"",
+   "home": "theories/becoming/chapters/02-MAP.md#r-two-sided-regulation-and-late-reading",
+   "home_words": "**Theorem** (World). With balance at the condition, the joint exchange departs from evenness by at most the gap to `m` on each side exactly where the next level lies between `m` and the present one: the bound is exactly no overshoot (`Flow.withinGap_iff_between`); within it, opposing, the level settles at `m`; beyond it an opposing exchange crosses and can oscillate for ever (record: Conditions, No axiom.)"
+  },
+  {
+   "sentence": "One side is not regulation: a witness meets the premise of restoration and stays above m.",
+   "home": "theories/becoming/results/records/two-sided-regulation-and-late-reading.md#laws--规律",
+   "home_words": "One side is not regulation: a balanced witness meets the premise of the law of restoration from every step and the bound at every step, does not oppose the departure above m, and stays above m."
+  },
+  {
+   "sentence": "Regulation \"restates deadbeat control and requisite variety\".",
+   "home": "theories/becoming/chapters/08-METHOD.md#beyond-the-table",
+   "home_words": "Regulation restates deadbeat control and requisite variety (Dahleh and Pearson 1987; Ashby 1956)."
+  },
+  {
+   "sentence": "The map of Chinese sources found no law for a level held from both sides; these laws \"are the formal statements it proposed; reading the passages as them is the AI's\".",
+   "home": "theories/becoming/results/records/two-sided-regulation-and-late-reading.md#correspondence--对应",
+   "home_words": "The map of Chinese sources onto the spine found no law for a level held from both sides, nor for one held by a rule reading it late (损有余而补不足, 张弓, 冲气以为和, 济其不及以泄其过, 宽猛相济, 中节). These laws are the formal statements it proposed; reading the passages as them is the AI's."
+  },
+  {
+   "sentence": "The passage is entered as scoping, not agreement: lowering the high and raising the low is \"the property of a regulating coupling\", not a law of the whole unfolding, and the text's attribution of it to the way of heaven the theory does not adopt.",
+   "home": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/passages.json (entry lao-77-tian-zhi-dao)",
+   "home_words": "\"kind\": \"scope\"; reading: 所以“损有余补不足”是某种调节耦合的性质，而不是天的普遍性质 …… 经文把它归于“天之道”，这一归属理论不采纳。; reading_en: 'reducing excess and making up deficiency' is not a law of the whole unfolding on the spine ... it is the property of a regulating coupling."
+  },
+  {
+   "sentence": "06 lists the way of people, taking from those without enough to serve those with too much, as a response within the tradition to contest and rank.",
+   "home": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#four-layers",
+   "home_words": "| 争胜与等级 | 不战而屈人之兵；二柄；民弱国强；贵贱有等；亲亲之杀 | 老子“人之道，损不足以奉有余”；楚庄王“犹有晋在”；墨子“先从事”；和而不同 | (column head: 同一传统内部的回应)"
+  },
+  {
+   "sentence": "The record does not show \"that a given system regulates a level\" or \"that holding a level is good\", so the concordance gives no advice for practice.",
+   "home": "theories/becoming/results/records/two-sided-regulation-and-late-reading.md#does-not-show--未表明",
+   "home_words": "That a given system regulates a level, which level, how late it reads, or the size of its step. ... That holding a level is good: the laws say what holds it and how wide a band it needs."
+  },
+  {
+   "sentence": "Judge whether scoping is the right class ... and whether passages were chosen to fit the theory (C-31, question 74).",
+   "home": "theories/becoming/review/CLASSICAL-TEXTS.md#c-31",
+   "home_words": "74. 所选之段是否为了合于理论而挑选？哪些段落应入而未入？"
+  },
+  {
+   "sentence": "Thesis T2: \"the state of a renewable condition under a draw is its level, its recent giving and one lag, its place named before the data\". Among what it forbids: \"a fourth variable from the level's own history removing a tenth of the residual variance in the median series\".",
+   "home": "theories/becoming/chapters/02-MAP.md#t2",
+   "home_words": "**Thesis T2.** *The state of a renewable condition under a draw* is its level, its recent giving and one lag, its place named before the data ... *Forbids*: a fourth variable from the level's own history removing a tenth of the residual variance in the median series;"
+  },
+  {
+   "sentence": "Of four frozen tests, MQ4 failed its whole-state verdict, MQ5 passed and MQ7 missed its frozen bound; UE32 found T2's numbers better than the field's fitted embedding, both behind persistence in most stocks: \"sufficiency against it at these lengths, not the lag's place or T2's law\".",
+   "home": "theories/becoming/chapters/08-METHOD.md#theses",
+   "home_words": "MQ4 failed its whole-state verdict; MQ5 passed; MQ7 missed its frozen bound (0.39, lower bound 0.00); UE32 found T2's numbers better than the field's fitted embedding by its frozen criterion, both behind persistence in most stocks, the embedding losing more with longer history: sufficiency against it at these lengths, not the lag's place or T2's law"
+  },
+  {
+   "sentence": "T2 then said the three numbers fix the next giving \"as far as anything measured does\". A frozen test, UE31b, read the laboratory cultures of the flour beetle, where a stage before recruitment is counted; it ran on 6 November 2026. \"The pupae counted now are the next recruits\": beyond the three numbers, the pupae and the adults removed 0.83 of the residual variance beyond chance (the median across five set losses), and beyond them the three numbers removed 0.004. The wording failed.",
+   "home": "theories/becoming/chapters/02-MAP.md#t2",
+   "home_words": "In one domain where a stage before recruitment is counted, the flour beetle's laboratory cultures, the former wording \"as far as anything measured does\" failed on a frozen run, as the life cycle implies: the pupae counted now are the next recruits ... Beyond the three numbers, the pupae and the adults removed 0.83 of the residual variance beyond chance (the median across the five set losses, from 0.36 at the lowest to 0.91 at the highest, detected in 8 of the 10 cells); beyond the pupae and the adults, the three numbers removed 0.004 (detected in none)"
+  },
+  {
+   "sentence": "It was narrowed to \"as far as the level's own history does\", which forbids less, and \"the failure stays on record as a loss of the broader claim, not a narrowing chosen in advance\".",
+   "home": "theories/becoming/chapters/02-MAP.md#t2",
+   "home_words": "\"as far as anything measured does\" is narrowed to \"as far as the level's own history does\", and the first forbidden item to a fourth variable from the level's own history. That forbids less: ... The failure stays on record as a loss of the broader claim, not a narrowing chosen in advance."
+  },
+  {
+   "sentence": "On the adults' own course a further lag removed 0.05 against the bound of a tenth: \"a prediction that could fail and did not\", but \"a tie by construction ... it is not T2 passed\". The lag's sign, T2's one contrary prediction, was not decided.",
+   "home": "theories/becoming/chapters/02-MAP.md#t2",
+   "home_words": "on the adults' own course, with the lag two censuses back, where the life cycle puts it, a further lag removed 0.05 against the bound of a tenth ... That is a prediction that could fail and did not, but there the three numbers are the field's own state seen from the course, a tie by construction that the field's model predicts the same way, so it shows nothing the field does not, and it is not T2 passed ... Their one contrary prediction, the lag's sign, was not decided by this archive (the two rules differ in 4 cells, 6 needed), which says nothing for T2's sign."
+  },
+  {
+   "sentence": "T2 stays conjectured, untested on a wild condition outside fisheries.",
+   "home": "theories/becoming/chapters/02-MAP.md#t2",
+   "home_words": "*Standing*: conjectured, on the four frozen fish-stock tests above; untested on a wild condition outside fisheries"
+  },
+  {
+   "sentence": "A class named for a domain can be defeated by a measurement, and T2 has this form [AI reading]; the beetle's failure \"defeats T2's class as worded in that domain, not the reading 08 §9 names, nor T2 in the fisheries\".",
+   "home": "theories/becoming/chapters/08-METHOD.md#what-would-defeat-the-reading",
+   "home_words": "*A class named for a domain.* A measurement or an intervention could, once a relation and a class are named apart from the course: ... another class of no more variables leaving less of the next state unaccounted for ... T2 has this form [AI reading, new]. A failure defeats the class named, not the reading (and 02#t2: it defeats T2's class as worded in that domain, not the reading 08 §9 names, nor T2 in the fisheries, where MQ5 passed.)"
+  },
+  {
+   "sentence": "As an explanation, against a rival keeping every theorem and dropping the word, a first count gives a tie: \"A tie does not make the reading false. It means the pattern explains, if it does, under either name, and the word adds nothing.\" What the reading adds so far is \"one vocabulary, one set of questions (which relation, which class, at which grain, whether the class is constant)\".",
+   "home": "theories/becoming/chapters/08-METHOD.md#what-would-defeat-the-reading",
+   "home_words": "A rival keeping every model and theorem and dropping the word loses no exclusion ... On a first count, at the grain of §7's shared laws, there is a tie ... A tie does not make the reading false. It means the pattern explains, if it does, under either name, and the word adds nothing. ... What it adds so far is one vocabulary, one set of questions (which relation, which class, at which grain, whether the class is constant) and the form of the question where the ethics turns"
+  }
+ ],
+ "open_doubts": "B-02 is not the regulation record's concession. B-02 is item 2 of the Buddhist dossier (\"理论之答正是被破之对方\"). The record two-sided-regulation-and-late-reading names no review item, and neither the classical nor the Buddhist dossier has an item on 《老子》第七十七章. For the example I took the concession from three places I read. The record's Correspondence says \"reading the passages as them is the AI's\". Its Does-not-show says holding a level is not shown good. The passages.json entry lao-77-tian-zhi-dao classes the passage as scope and says \"这一归属理论不采纳\". B-02 is used in the row, not the example. Variants: the stored text and passages.json write 馀; the record and the task write 余.\n\nPlaces where the homes may pull apart:\n(1) 08 #open-items-ranked says \"the theory's central commitments as the root of wisdom have their formal part complete (record wisdom-root-without-axiom), leaving item 7\". But 03 #r-wisdom-root marks the target Open, and the wisdom-root record says the formal laws \"do not by themselves prove wisdom coverage or complete the root\". This is not a contradiction, but \"formal part complete\" could mislead a reader. Item 7 (\"which law holds\") is also an odd home for wisdom.\n(2) 06 §六 says the per-passage table moved to history on 23 October and is no longer checked. Only passages.json is checked by verify_ro.py. I read the passages.json entry and the stored text DS01.txt line 1366, not the history chapter.\n(3) The classical dossier states it was checked against commit 60d6b747f. I read the worktree at bd6c1a56d.\n\nScope: the \"wisdom traditions\" the account reads are Chinese texts and Chinese Buddhist treatises only. The wisdom-root record's evidence names limited primary readings (Aristotle, Zhuangzi, Dreyfus, Pritchard, Gettier, Tiberius), but there is no corpus of any other tradition. The row should not suggest wider coverage. GOALS.md describes the wisdom-root inquiry with a person's name, so that wording cannot go on the page.\n\nTranslation: the English of Laozi 77 is the page's own, made by AI. Nothing in the repository gives an English translation of it; the entry's reading_en paraphrases only.\n\nRead in full: ONE-PAGE.md; THE-THEORY-OF-BECOMING.md; GLOSSARY.md; the regulation record; the wisdom-root record's main sections; SCIENCES.md lines 1-122 and S-14 to S-16; 02 #t1 and #t2; 03 §10 and lines 466-480; 04 §3 descent and §7; 08 lines 479-640, with the T2 to T5 rows of the theses table cut at about 3,500 characters (the T2 row's UE31b evidence was read in 02 instead), and 08 lines 720-745.\n\nRead in part: 06 lines 1-165, 369-452 and 600-650 (I did not read §五, §7.2-§十 except glossary-senses, or the conditional-laws table). Classical dossier: opening, C-31 to C-34, C-38, C-39. Buddhist dossier: lines 1-70 (opening, B-01 to B-03), with only grep hits beyond.\n\nNot read: the history chapters CHINESE-SOURCES-AND-BECOMING.md and CIVILIZATION-THOUGHT-AND-BECOMING.md, UE31b's README beyond its anchor line, and the other SCIENCES items."
+}

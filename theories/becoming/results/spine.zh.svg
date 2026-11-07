@@ -213,8 +213,8 @@
 <text x="982" y="981" font-size="11" fill="#1c1917"><tspan font-weight="bold">T7</tspan> 一个从它所选择者读出的度量，存续得比对它的驳倒</text>
 <text x="982" y="995" font-size="11" text-anchor="start" fill="#1c1917">更久（02）：实际的度量是猜想；在一个训练出的系统中，</text>
 <text x="982" y="1009" font-size="11" text-anchor="start" fill="#1c1917">每一冻结裁决都通过；桥接不成立；故 T7 所禁止的一种</text>
-<text x="982" y="1023" font-size="11" text-anchor="start" fill="#1c1917">情形发生了，计入此情形作为关于训练出的评判者之主张</text>
-<text x="982" y="1037" font-size="11" text-anchor="start" fill="#1c1917">的反证</text>
+<text x="982" y="1023" font-size="11" text-anchor="start" fill="#1c1917">情形，按其加入漂移之条款以前的表述，发生了，计入此</text>
+<text x="982" y="1037" font-size="11" text-anchor="start" fill="#1c1917">情形作为关于训练出的评判者之主张的反证</text>
 <text x="982" y="1058" font-size="11" fill="#1c1917"><tspan font-weight="bold">T8</tspan> 对生命而言，道是生生（07）：已论证；未决：……P2</text>
 <text x="982" y="1072" font-size="11" text-anchor="start" fill="#1c1917">与 P4……以及 C 的理由</text>
 <text x="28" y="1103" font-size="10.5" text-anchor="start" fill="#57534e">由 tools/research/spine.py 依 theory-graph.json 与 spine.json 生成。它显示什么、不显示什么：见 THEORY-GRAPH.md 的“The spine”。</text>

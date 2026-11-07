@@ -6,13 +6,12 @@
     "RESULTS.md": {
       "title": "Canonical results",
       "local_links": [
-        "DEPENDENCIES.md",
-        "GOALS.md",
+        "GLOSSARY.md",
         "MAP.md",
         "OPEN-QUESTIONS.md",
         "README.md",
         "RESULTS.md",
-        "_process/RESULT-WORKFLOW.md",
+        "TESTS.md",
         "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/FIXED-FINISH-LINE-AUDIT.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/CORE-CONSTRAINT-AND-WISDOM.md",
@@ -362,7 +361,9 @@
         "experiments/wenli-reading-transfer/CONTROLLED-ENGLISH-RESULTS.md",
         "experiments/wenli-reading-transfer/FIDELITY-RESULTS.md",
         "theories/becoming/ONE-PAGE.md",
+        "theories/becoming/ONE-PAGE.zh.md",
         "theories/becoming/THE-THEORY-OF-BECOMING.md",
+        "theories/becoming/USES.md",
         "theories/becoming/chapters/README.md",
         "theories/becoming/history/ALIGNMENT-DIRECTION.md",
         "theories/becoming/history/BECOMING-FOUNDATION.md",
@@ -374,7 +375,8 @@
         "theories/becoming/history/PRACTICAL-JUDGMENT.md",
         "theories/becoming/history/SCIENTIFIC-PHILOSOPHY.md",
         "theories/becoming/history/WENLI-AND-BECOMING.md",
-        "theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md"
+        "theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md",
+        "theories/becoming/review/README.md"
       ]
     },
     "_process/research/2026-10-05-generative-foundation-review/foundation-assessment/MARKET-INTERNET-DEGENERATION.md": {
