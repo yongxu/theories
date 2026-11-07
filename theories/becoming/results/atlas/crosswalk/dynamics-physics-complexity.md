@@ -27,7 +27,7 @@ The account restates thresholds, rest, recurrence, merges and openness in discre
 - Thermodynamic correspondences in records ([least-loss-from-entropy-production.md](../../records/least-loss-from-entropy-production.md)): Landauer named in 3 records; Prigogine in 1 record and in 08 and S-04/S-06; stated as correspondences, 'not physical derivations' in entropy-history-and-record
 - Named bifurcations ([03-KNOWING.md](../../../chapters/03-KNOWING.md#r-slowing-down-before-an-own-end)): fold and transcritical end in one periphery record; the word 'bifurcation' in 5 live lines and in 4 records, 3 of them saying none is stated or follows
 - How much a difference grows, and whether a loop closes it ([02-MAP.md](../../../chapters/02-MAP.md#r-how-much-difference-arrives)): three record groups in section 7: a worst case over laws attained, polynomial exactly with no loop upstream, whole factors never closing gradually; none links itself to Lyapunov or chaos
-- A band read in a parameter: critical mass ([02-MAP.md](../../../chapters/02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected)): one law with its three cases of c against lo and hi, constants fixed; no live text reads a loop across them (proposed in cx-dpc-hysteresis)
+- A band read in a parameter: critical mass ([02-MAP.md](../../../chapters/02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected)): one law with its three cases of c against lo and hi, constants fixed; no live text reads a loop across them (proposed in [cx-dpc-hysteresis](#cx-dpc-hysteresis))
 - Laws read at coarser steps ([01-ROOT.md](../../../chapters/01-ROOT.md#r-laws-at-coarser-steps)): one row: what composes over a coarse step and what need not; refinement of a step is not treated
 - Lumping as the mathematics of simulation ([SCIENCES.md](../../../review/SCIENCES.md#s-23)): one dossier item; lumpability of Markov chains an analogue, not proved; no renormalization flow; quoted from its study, 'Every root law holds in every model, so it forbids no observation'
 
@@ -36,7 +36,7 @@ The account restates thresholds, rest, recurrence, merges and openness in discre
 - Self-organized criticality, sandpile dynamics as such (only chip-firing termination is credited, and its order independence listed as not stated)
 - Percolation: a sharp threshold of connection or tolerance over an ensemble of webs (per-graph threshold laws are present)
 - Hopf bifurcation by name or as eigenvalue crossing; a law of when a regime cycles and with what period
-- Hysteresis in the live chapters (0 hits); 2 records use the word in correspondence fields. A band in a parameter is only proposed, in cx-dpc-hysteresis, and no law runs a path through one
+- Hysteresis in the live chapters (0 hits); 2 records use the word in correspondence fields. A band in a parameter is only proposed, in [cx-dpc-hysteresis](#cx-dpc-hysteresis), and no law runs a path through one
 - Rate-induced tipping by name, a critical rate of a regime, noise-induced transition, escape times beyond one pair's geometric bound
 - Bounded chaos: aperiodicity, one law's sensitive dependence, Lyapunov exponents in the live account (the live hits for 'Lyapunov' are the Lyapunov equation and stability credits; 'sensitivity' is coupling strength; the growth of a difference is present; chaos stands in history/SYSTEMS-COMPLEXITY-CHAOS.md)
 - Scaling, universality, renormalization, critical exponents, the thermodynamic limit, order parameters

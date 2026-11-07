@@ -12,7 +12,7 @@ On each part, theorems and lemmas are individually listed and definitions and ty
 <a id="规范根据与生成方向--normative-grounding-and-generative-direction"></a>
 ## Normative grounding and generative direction
 
-This group's 139 modules are listed on 2 parts, each at most 800,000 bytes, well under the size at which GitHub stops showing a Markdown file. Browser find on a part finds the names on that part only; the module table below says which part holds each module.
+This group's 139 modules are listed on 2 parts of about equal size, the largest 512,316 bytes, under the size at which GitHub stops showing a Markdown file. Browser find on a part finds the names on that part only; the module table below says which part holds each module.
 
 | Page | Modules, in the catalogue's order | theorem/lemma occurrences |
 |---|---|---:|

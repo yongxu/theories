@@ -628,12 +628,12 @@ The folder argues winning buys power over the rule that selects, across minds, i
 **Found and not mapped:**
 
 - The publication apparatus: the context site, audience layers, synthetic case-study CSVs and the drafting history of 22-plus essay versions (A product and its provenance, not a claim about becoming; the folder's own audit already judges them)
-- The worked calibrations: the corporate-tax-cut prediction, RL capture half-lives, macro-policy grid (Numbers built on the covariance law the reconciliation restricts; they fall with cx-ma-caoc and are not separate claims of the mechanism)
-- Concrete prescriptions: twelve design rules, minimum viable enforcement, compute gates, wealth taxes, UBI, public AGI ownership, the action ladder (Practice and policy; only the exit order is mapped, as cx-ma-exit-sequence. Whether any is wanted is not a reading of the account)
+- The worked calibrations: the corporate-tax-cut prediction, RL capture half-lives, macro-policy grid (Numbers built on the covariance law the reconciliation restricts; they fall with [cx-ma-caoc](#cx-ma-caoc) and are not separate claims of the mechanism)
+- Concrete prescriptions: twelve design rules, minimum viable enforcement, compute gates, wealth taxes, UBI, public AGI ownership, the action ladder (Practice and policy; only the exit order is mapped, as [cx-ma-exit-sequence](#cx-ma-exit-sequence). Whether any is wanted is not a reading of the account)
 - F45's Abundance Infrastructure and the Plurality of voluntary societies (A design; the folder itself says it belongs to the-fork-and-cooperative-infrastructure and Wamo)
-- The Game of Winning film plan and scenario images (Dyson sphere, glass domes, copies firing beams) (An artwork and speculation. Its one mechanism, a rank objective, is mapped as cx-ma-rank-kernel)
+- The Game of Winning film plan and scenario images (Dyson sphere, glass domes, copies firing beams) (An artwork and speculation. Its one mechanism, a rank objective, is mapped as [cx-ma-rank-kernel](#cx-ma-rank-kernel))
 - The August 2026 agent-fleet episode and its counter-design (deletions that stick, conservation of checks) (A first-person observation and working practice, provenance for how the repository is run; the live account does not read it)
 - In Ren's own words, the genealogy, What was lost, and the dated research-package tallies (Provenance; kept verbatim where they are, and no warrant for a claim)
-- The date and destination lever tables and macro-policy classes (claims 187-190, open question 31) (Worked from λ₁ = ηg′f′λ_max(C); they fall with cx-ma-caoc, and the one mechanism claim is in cx-ma-tempo)
+- The date and destination lever tables and macro-policy classes (claims 187-190, open question 31) (Worked from λ₁ = ηg′f′λ_max(C); they fall with [cx-ma-caoc](#cx-ma-caoc), and the one mechanism claim is in [cx-ma-tempo](#cx-ma-tempo))
 
 [The crosswalk](../CROSSWALK.md), with every folder and domain and their counts.

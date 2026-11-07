@@ -503,8 +503,8 @@ A mind is what an environment makes of ancient drive systems: narrative is the d
 - The two missing artifacts, Architecture of Wanting and Territory Without Border, and the five drive profiles (Named as lost in the source; nothing readable to map. The five profiles are held only in a chat the README summarizes, which this read did not open.)
 - The 2021 Dali field notes (中医 narrative to body; 现代人的分裂) (A companion's notes, with turns not separated; provenance in the genealogy, not an authored claim.)
 - The Genealogy, Where this material lives, Relations and Terms sections (Provenance and pointers. Terms are used inside the entries.)
-- Claims 78, 82 (the bioengineered companion and living sofa as proposals) (Design proposals in a spoken exchange; the disagreement they raise is mapped in cx-drives-happy-servant.)
-- Affect-first cognition, elites not exempt (Genealogy 2024-10 to 2025-02); collective trauma and cult appeal as named conversations (One line each in the genealogy, with no mechanism beyond what cx-drives-post-hoc-narrative and cx-drives-two-mechanisms carry.)
+- Claims 78, 82 (the bioengineered companion and living sofa as proposals) (Design proposals in a spoken exchange; the disagreement they raise is mapped in [cx-drives-happy-servant](#cx-drives-happy-servant).)
+- Affect-first cognition, elites not exempt (Genealogy 2024-10 to 2025-02); collective trauma and cult appeal as named conversations (One line each in the genealogy, with no mechanism beyond what [cx-drives-post-hoc-narrative](#cx-drives-post-hoc-narrative) and [cx-drives-two-mechanisms](#cx-drives-two-mechanisms) carry.)
 - Claims 83 and 86 (兽性 and 人性 as two sides; harmony and flow in a high-dimensional cognitive space) (A framing and a value stance, without a mechanism beyond the regulator entry. The source warns 兽性 has two senses in the corpus.)
 
 [The crosswalk](../CROSSWALK.md), with every folder and domain and their counts.
