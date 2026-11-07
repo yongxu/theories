@@ -5,19 +5,19 @@
 
 [Return to navigation](../LEAN-INDEX.md). Working sources and audit entries appear here; imported archives and development attempts are in the [JSON inventory](../data/lean-index.json), and saved copies are bound by their runs' receipts. These are explicit declaration locations, not substitutes for statements, hypotheses and correspondence arguments.
 
-Theorems and lemmas are individually listed; definitions and type declarations share each module's foldout. Namespace-qualified names are textual hints; Lean determines private, internal and generated names.
+On each part, theorems and lemmas are individually listed and definitions and type declarations share each module's foldout; this page lists the modules.
 
 [All topics and modules](../LEAN-DECLARATIONS.md)
 
 <a id="规范根据与生成方向--normative-grounding-and-generative-direction"></a>
 ## Normative grounding and generative direction
 
-This group's 139 modules are listed on 2 pages, each at most 800,000 bytes so that GitHub shows it in full; each module below links its foldout.
+This group's 139 modules are listed on 2 parts, each at most 800,000 bytes, well under the size at which GitHub stops showing a Markdown file. Browser find on a part finds the names on that part only; the module table below says which part holds each module.
 
-| Page | Modules | theorem/lemma occurrences |
+| Page | Modules, in the catalogue's order | theorem/lemma occurrences |
 |---|---|---:|
-| [Part 1 of 2](../lean-declarations/ethics-part-1.md) | AssemblyDerivedSelection.lean to CorrectionReconfigurationCases.lean (74) | 1,354 |
-| [Part 2 of 2](../lean-declarations/ethics-part-2.md) | CorrectionRelations.lean to WisdomGoalGrounds.lean (65) | 1,179 |
+| [Part 1 of 2](../lean-declarations/ethics-part-1.md) | 74, from AssemblyDerivedSelection.lean to CorrectionReconfigurationCases.lean | 1,354 |
+| [Part 2 of 2](../lean-declarations/ethics-part-2.md) | 65, from CorrectionRelations.lean to WisdomGoalGrounds.lean | 1,179 |
 
 | Module | Page | theorem/lemma |
 |---|---|---:|

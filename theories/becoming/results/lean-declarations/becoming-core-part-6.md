@@ -5408,3 +5408,5 @@ Contains 17 textual `#print axioms` commands; their results belong to the origin
 
 </details>
 
+[All topics and modules](../LEAN-DECLARATIONS.md) · [Becoming pure core, all parts](../lean-declarations/becoming-core.md) · [part 5](../lean-declarations/becoming-core-part-5.md)
+

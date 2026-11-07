@@ -2,15 +2,15 @@
 
 # The crosswalk: Cooperative abundance and freely built worlds (historical home: The Fork)
 
-[The crosswalk](../CROSSWALK.md), with every folder and domain and their counts.
+[The crosswalk](../CROSSWALK.md), with every folder and domain and their counts. The folder itself: [its README](../../../../the-fork-and-cooperative-infrastructure/README.md).
 
 Each earlier theory folder and each domain of thought: what it claimed in its own terms, and what became of that in the live account. The evidence layer, not for reading through. It creates no result, and every entry is an AI reading with no person's behind it. A shared word is not a correspondence, structural agreement is not agreement in meaning, and no tradition is spoken for. Not carried is an outcome, not a defect. Where a source is not stored here, what is said of it comes from the AI's knowledge and has not been checked against a text.
 
 **What became of it:** *carried*; *carried-in-part*; *changed*; *history-only*; *not-carried*; *fresh-reading*. *Fresh-reading* means the account does not state the connection and a reader proposes it here. **Relations**, from [06](../../../chapters/06-CLASSICAL-TEXTS.md#three-relations): *agreement*; *scope*; *divergence*; *contrary-reading*. Agreement says what it is agreement with: a checked **law**, a **thesis or method**, or a **reading**, where the join is a reader's or descends from the source. Only what a target carries counts as a connection.
 
-**How far to trust it.** Each item had a mapper, a reviser, a checker told to refute, a repair after a critic and a comparison across items. A second critic then read 100 entries drawn at random, up to 6 from each kind of verdict, against both sides: 83 held, 15 had a label or a target's role wrong and 2 had a wrong reading. Weighted by how many entries each kind holds, that estimates 82.6% holding, 14.2% with a label or role wrong and 3.2% with a wrong reading over all 1183; its fixes are applied, and the other entries were not read again. The first critic's sample (59) was aimed at suspects and gives no rate. Where the source is not stored here, a critic's check was memory against memory.
+**How far to trust it.** Each item had a mapper, a reviser, a checker told to refute, a repair after a critic and a comparison across items. A second critic then read 100 entries drawn at random, up to 6 from each kind of verdict, against both sides: 83 held, 15 had a label or a target's role wrong and 2 had a wrong reading. Weighted by how many entries each kind of verdict holds, that estimates 82.6% holding, 14.2% with a label or role wrong and 3.2% with a wrong reading over all 1183; its fixes are applied, and the other entries were not read again. The first critic's sample (59) was aimed at suspects and gives no rate. Where the source is not stored here, a critic's check was memory against memory.
 
-## What was read
+## Summary and what was read
 
 A constructive programme: productive recursion, shared provision, freedom from livelihood coercion, voluntary creation, with the 2026 fork (automated feudalism or commons) kept in its history and rejected by Ren because the futures are far more numerous. The live account never names the fork or its rejection, and links the folder once, as a design programme, correspondence not established. It has no abundance layer or provision and no ownership variable, and many connections here are proposed by this crosswalk, not stated there; what it states in part are general lines, such as a limit going by what it does, not its name. No agreement here is of a law. Divergences kept: two fates, the only stable equilibrium, the winner's loss, captured dependence as the problem, one forced rule, generative as a criterion, a layer held by no one. One hinge, commons or collar and the floor are not taken up.
 
@@ -372,3 +372,5 @@ A constructive programme: productive recursion, shared provision, freedom from l
 - Open questions 12, 13, 14, 17, 18 (verification of non-capture, the threshold where a parallel layer attacks the old system, the thin distribution theory, what a demonstration must show, Alex's deliverables), and the 2026-06 corrections on hierarchy and status (Critiques and tasks internal to the programme. They would change if the programme were taken up; the account does not take them up.)
 - The whitepaper's coordinated-turn programme item by item (registry, third-party verification, pause protocols, latecomer capability) (Institutional design, mapped only through the assurance entry's mechanism.)
 - The sections In Ren's own words, Relations and Where this material lives (Provenance and navigation. Quotes from them are used as sources in entries; the relations are the folder's own claims about other folders and, except the line on becoming, were not checked here.)
+
+[The crosswalk](../CROSSWALK.md), with every folder and domain and their counts.

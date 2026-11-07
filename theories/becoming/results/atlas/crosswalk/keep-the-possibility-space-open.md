@@ -2,15 +2,15 @@
 
 # The crosswalk: Keep the possibility space open (开, 护开不闭)
 
-[The crosswalk](../CROSSWALK.md), with every folder and domain and their counts.
+[The crosswalk](../CROSSWALK.md), with every folder and domain and their counts. The folder itself: [its README](../../../../keep-the-possibility-space-open/README.md).
 
 Each earlier theory folder and each domain of thought: what it claimed in its own terms, and what became of that in the live account. The evidence layer, not for reading through. It creates no result, and every entry is an AI reading with no person's behind it. A shared word is not a correspondence, structural agreement is not agreement in meaning, and no tradition is spoken for. Not carried is an outcome, not a defect. Where a source is not stored here, what is said of it comes from the AI's knowledge and has not been checked against a text.
 
 **What became of it:** *carried*; *carried-in-part*; *changed*; *history-only*; *not-carried*; *fresh-reading*. *Fresh-reading* means the account does not state the connection and a reader proposes it here. **Relations**, from [06](../../../chapters/06-CLASSICAL-TEXTS.md#three-relations): *agreement*; *scope*; *divergence*; *contrary-reading*. Agreement says what it is agreement with: a checked **law**, a **thesis or method**, or a **reading**, where the join is a reader's or descends from the source. Only what a target carries counts as a connection.
 
-**How far to trust it.** Each item had a mapper, a reviser, a checker told to refute, a repair after a critic and a comparison across items. A second critic then read 100 entries drawn at random, up to 6 from each kind of verdict, against both sides: 83 held, 15 had a label or a target's role wrong and 2 had a wrong reading. Weighted by how many entries each kind holds, that estimates 82.6% holding, 14.2% with a label or role wrong and 3.2% with a wrong reading over all 1183; its fixes are applied, and the other entries were not read again. The first critic's sample (59) was aimed at suspects and gives no rate. Where the source is not stored here, a critic's check was memory against memory.
+**How far to trust it.** Each item had a mapper, a reviser, a checker told to refute, a repair after a critic and a comparison across items. A second critic then read 100 entries drawn at random, up to 6 from each kind of verdict, against both sides: 83 held, 15 had a label or a target's role wrong and 2 had a wrong reading. Weighted by how many entries each kind of verdict holds, that estimates 82.6% holding, 14.2% with a label or role wrong and 3.2% with a wrong reading over all 1183; its fixes are applied, and the other entries were not read again. The first critic's sample (59) was aimed at suspects and gives no rate. Where the source is not stored here, a critic's check was memory against memory.
 
-## What was read
+## Summary and what was read
 
 Holds one line, that the generating go on, with 开 as a process-state and not a quantity; a diagnosis of how worlds close; and a constructive programme (exit, abundance commons, assurance, plurality). The account states parts of the diagnosis as laws on stated models, that actual systems meet them unshown; a few connections are proposed here and not stated there (exit's network failure, paradigm coherence, trust before verification). It reverses the four marks' independence, refuses 'same theory, other language', removes good and evil from closure's definitions, and answers 'do not use AI to compete' only with a conditional direction. It does not derive keeping open: the continuation condition (scope) ranks nothing, C (order) is a comparison the folder's 开 was coined to replace, neither asserted, warrant open; self-concern gives what C asks only on listed paths, one way, which the account says does not derive C. The programme is largely not carried. Where agreement is of a law it is with a mechanism, never with the folder's aim or with anything as a requirement; what 06 reads of the early texts' own words comes by descent.
 
@@ -628,3 +628,5 @@ Holds one line, that the generating go on, with 开 as a process-state and not a
 - 'Parts of a whole, not selfish selves competing' (claim 1) (Its home is the relational-self lineage, read separately; the lens-not-source entry keeps this folder's own demotion of interdependence.)
 - Moloch-belief as cult dynamics (claim 71); forkable prototyped societies (claim 168); anti-inevitability, hope as infrastructure, the future already here (claims 172-174); unpredictability under acceleration (claim 182); demonstration over essays (claim 219) (Observations, stances or methods with no mechanism to name; a shared word would be the only link.)
 - 'That the game itself can continue' (claim 96) (The README flags it as not Ren's words, from a candidate prompt he pasted; the one-chosen-premise entry rests on claim 94 instead.)
+
+[The crosswalk](../CROSSWALK.md), with every folder and domain and their counts.

@@ -5,22 +5,22 @@
 
 [Return to navigation](../LEAN-INDEX.md). Working sources and audit entries appear here; imported archives and development attempts are in the [JSON inventory](../data/lean-index.json), and saved copies are bound by their runs' receipts. These are explicit declaration locations, not substitutes for statements, hypotheses and correspondence arguments.
 
-Theorems and lemmas are individually listed; definitions and type declarations share each module's foldout. Namespace-qualified names are textual hints; Lean determines private, internal and generated names.
+On each part, theorems and lemmas are individually listed and definitions and type declarations share each module's foldout; this page lists the modules.
 
 [All topics and modules](../LEAN-DECLARATIONS.md)
 
 ## Becoming pure core
 
-This group's 373 modules are listed on 6 pages, each at most 800,000 bytes so that GitHub shows it in full; each module below links its foldout.
+This group's 373 modules are listed on 6 parts, each at most 800,000 bytes, well under the size at which GitHub stops showing a Markdown file. Browser find on a part finds the names on that part only; the module table below says which part holds each module.
 
-| Page | Modules | theorem/lemma occurrences |
+| Page | Modules, in the catalogue's order | theorem/lemma occurrences |
 |---|---|---:|
-| [Part 1 of 6](../lean-declarations/becoming-core-part-1.md) | GenerativeCore.lean to Decidedness.lean (72) | 2,991 |
-| [Part 2 of 6](../lean-declarations/becoming-core-part-2.md) | Dependence.lean to HistoryIdeals.lean (64) | 3,137 |
-| [Part 3 of 6](../lean-declarations/becoming-core-part-3.md) | HistoryIdealsTraces.lean to Loops.lean (63) | 3,178 |
-| [Part 4 of 6](../lean-declarations/becoming-core-part-4.md) | LossMatching.lean to Ranking.lean (50) | 3,130 |
-| [Part 5 of 6](../lean-declarations/becoming-core-part-5.md) | ReachableRanges.lean to SelectionLevels.lean (59) | 3,042 |
-| [Part 6 of 6](../lean-declarations/becoming-core-part-6.md) | SelectionPace.lean to InquirySufficiency.lean (65) | 2,970 |
+| [Part 1 of 6](../lean-declarations/becoming-core-part-1.md) | 72, from GenerativeCore.lean to Decidedness.lean | 2,991 |
+| [Part 2 of 6](../lean-declarations/becoming-core-part-2.md) | 64, from Dependence.lean to HistoryIdeals.lean | 3,137 |
+| [Part 3 of 6](../lean-declarations/becoming-core-part-3.md) | 63, from HistoryIdealsTraces.lean to Loops.lean | 3,178 |
+| [Part 4 of 6](../lean-declarations/becoming-core-part-4.md) | 50, from LossMatching.lean to Ranking.lean | 3,130 |
+| [Part 5 of 6](../lean-declarations/becoming-core-part-5.md) | 59, from ReachableRanges.lean to SelectionLevels.lean | 3,042 |
+| [Part 6 of 6](../lean-declarations/becoming-core-part-6.md) | 65, from SelectionPace.lean to InquirySufficiency.lean | 2,970 |
 
 | Module | Page | theorem/lemma |
 |---|---|---:|

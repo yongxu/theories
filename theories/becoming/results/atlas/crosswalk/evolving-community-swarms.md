@@ -2,15 +2,15 @@
 
 # The crosswalk: Evolving community swarms
 
-[The crosswalk](../CROSSWALK.md), with every folder and domain and their counts.
+[The crosswalk](../CROSSWALK.md), with every folder and domain and their counts. The folder itself: [its README](../../../../evolving-community-swarms/README.md).
 
 Each earlier theory folder and each domain of thought: what it claimed in its own terms, and what became of that in the live account. The evidence layer, not for reading through. It creates no result, and every entry is an AI reading with no person's behind it. A shared word is not a correspondence, structural agreement is not agreement in meaning, and no tradition is spoken for. Not carried is an outcome, not a defect. Where a source is not stored here, what is said of it comes from the AI's knowledge and has not been checked against a text.
 
 **What became of it:** *carried*; *carried-in-part*; *changed*; *history-only*; *not-carried*; *fresh-reading*. *Fresh-reading* means the account does not state the connection and a reader proposes it here. **Relations**, from [06](../../../chapters/06-CLASSICAL-TEXTS.md#three-relations): *agreement*; *scope*; *divergence*; *contrary-reading*. Agreement says what it is agreement with: a checked **law**, a **thesis or method**, or a **reading**, where the join is a reader's or descends from the source. Only what a target carries counts as a connection.
 
-**How far to trust it.** Each item had a mapper, a reviser, a checker told to refute, a repair after a critic and a comparison across items. A second critic then read 100 entries drawn at random, up to 6 from each kind of verdict, against both sides: 83 held, 15 had a label or a target's role wrong and 2 had a wrong reading. Weighted by how many entries each kind holds, that estimates 82.6% holding, 14.2% with a label or role wrong and 3.2% with a wrong reading over all 1183; its fixes are applied, and the other entries were not read again. The first critic's sample (59) was aimed at suspects and gives no rate. Where the source is not stored here, a critic's check was memory against memory.
+**How far to trust it.** Each item had a mapper, a reviser, a checker told to refute, a repair after a critic and a comparison across items. A second critic then read 100 entries drawn at random, up to 6 from each kind of verdict, against both sides: 83 held, 15 had a label or a target's role wrong and 2 had a wrong reading. Weighted by how many entries each kind of verdict holds, that estimates 82.6% holding, 14.2% with a label or role wrong and 3.2% with a wrong reading over all 1183; its fixes are applied, and the other entries were not read again. The first critic's sample (59) was aimed at suspects and gives no rate. Where the source is not stored here, a critic's check was memory against memory.
 
-## What was read
+## Summary and what was read
 
 An exploratory, AI-drafted design (Ren aligned with the direction; nothing built or measured): community software grown through recursive local contracts, durable modules, scoped adoption and, later, self-improving decomposition. The account names it once, among applications: design programmes, not results, correspondence not established. Where an entry is carried in part, a general sentence of the account states that part on its own model, and none states it of community software; other links are joins proposed here, and say so. The account has no law of change effort under growth or of savings from a representation. Divergences kept: authority as given, surpassing as goal, whose losses a ledger reads, continuity without premises, everyone happily growing it. No contrary reading found; looked.
 
@@ -374,3 +374,5 @@ An exploratory, AI-drafted design (Ren aligned with the direction; nothing built
 - The numeric gates (25 percent, 2x, 1,000 workers, 10,000 modules), the twenty-change fixture, the three demanding worlds as scenarios, the competitor table (Assistant-proposed test designs that were never run. The gates are mapped only through their method.)
 - Exchange 1 on coding with thousands of agents, the three large examples of exchange 3, the sources list (Parnas, Pacti, module federation, Cursor, ADAS and others) and the pointers to other corpus theories (Operational advice, comparison cases and external references, with their limits stated by the folder; the folder says the corpus connections are not reconciled.)
 - Authorship record: which sentences are Ren's and which the assistant's (Provenance. Kept in the folder; each entry's sense notes where it is an assistant proposal.)
+
+[The crosswalk](../CROSSWALK.md), with every folder and domain and their counts.

@@ -5265,3 +5265,5 @@ Definitions and types:
 
 </details>
 
+[All topics and modules](../LEAN-DECLARATIONS.md) · [Becoming pure core, all parts](../lean-declarations/becoming-core.md) · [part 4](../lean-declarations/becoming-core-part-4.md) · [part 6](../lean-declarations/becoming-core-part-6.md)
+

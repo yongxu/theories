@@ -2,15 +2,15 @@
 
 # The crosswalk: The relational self and 大同
 
-[The crosswalk](../CROSSWALK.md), with every folder and domain and their counts.
+[The crosswalk](../CROSSWALK.md), with every folder and domain and their counts. The folder itself: [its README](../../../../relational-self-and-datong/README.md).
 
 Each earlier theory folder and each domain of thought: what it claimed in its own terms, and what became of that in the live account. The evidence layer, not for reading through. It creates no result, and every entry is an AI reading with no person's behind it. A shared word is not a correspondence, structural agreement is not agreement in meaning, and no tradition is spoken for. Not carried is an outcome, not a defect. Where a source is not stored here, what is said of it comes from the AI's knowledge and has not been checked against a text.
 
 **What became of it:** *carried*; *carried-in-part*; *changed*; *history-only*; *not-carried*; *fresh-reading*. *Fresh-reading* means the account does not state the connection and a reader proposes it here. **Relations**, from [06](../../../chapters/06-CLASSICAL-TEXTS.md#three-relations): *agreement*; *scope*; *divergence*; *contrary-reading*. Agreement says what it is agreement with: a checked **law**, a **thesis or method**, or a **reading**, where the join is a reader's or descends from the source. Only what a target carries counts as a connection.
 
-**How far to trust it.** Each item had a mapper, a reviser, a checker told to refute, a repair after a critic and a comparison across items. A second critic then read 100 entries drawn at random, up to 6 from each kind of verdict, against both sides: 83 held, 15 had a label or a target's role wrong and 2 had a wrong reading. Weighted by how many entries each kind holds, that estimates 82.6% holding, 14.2% with a label or role wrong and 3.2% with a wrong reading over all 1183; its fixes are applied, and the other entries were not read again. The first critic's sample (59) was aimed at suspects and gives no rate. Where the source is not stored here, a critic's check was memory against memory.
+**How far to trust it.** Each item had a mapper, a reviser, a checker told to refute, a repair after a critic and a comparison across items. A second critic then read 100 entries drawn at random, up to 6 from each kind of verdict, against both sides: 83 held, 15 had a label or a target's role wrong and 2 had a wrong reading. Weighted by how many entries each kind of verdict holds, that estimates 82.6% holding, 14.2% with a label or role wrong and 3.2% with a wrong reading over all 1183; its fixes are applied, and the other entries were not read again. The first critic's sample (59) was aimed at suspects and gives no rate. Where the source is not stored here, a critic's check was memory against memory.
 
-## What was read
+## Summary and what was read
 
 The folder holds a self as what a knot of relations is doing, a false split of individual and collective, and 大同 as a direction reachable by mechanism. The self's form stands in 07 §1 and §4, 03 and 08, as a thesis, conditional and with the crux open. Agreement with the form of a law is narrow: that relation does not generate ethics, and what closes a loop. 大同, 五常 and the 人类命运共同体 formalism are absent, and what links to 大同 is mostly proposed here. Divergence was looked for and is prominent: no law evaluates, relation gives no cooperation, and the folder's wider self is P4, not shown.
 
@@ -578,3 +578,5 @@ The folder holds a self as what a knot of relations is doing, a false split of i
 - Terms: 谐 (no single force expands without limit and swallows the rest), 仁 as 己续 ⊆ 共续, 共开 in its own definition, 家国天下 as nested scaling. (SSBX terms with no live hit. Their forms are read under the feedback, false-split and three-axes entries; 夺 has a live place at 06 closing-and-opening, read under three-axes.)
 - 让人民过好日子 (own words 19-20, 31) as the plain statement of direction, and claim 45's status-seeking and greed as 'social invariances'. (A value stance and a passing observation; the nearest account terms are the further premises on basic living conditions among J1 to J4, which are not this sentence.)
 - Alex's objections in the 2026-10-02 critiques: a planetary boundary with a cancerous part, and the non-dual insight as common to many traditions. (Objections recorded by the folder, unanswered there. Neighbours for the domain reads: 07 §3.4 'No ending is licensed' and 06's row on 护闭 for the first; 06 and review/BUDDHIST-THOUGHT for the second.)
+
+[The crosswalk](../CROSSWALK.md), with every folder and domain and their counts.

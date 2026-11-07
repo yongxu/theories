@@ -6,6 +6,8 @@
 
 The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](../vocabulary.json), [entries](../entries)); it creates no result and strengthens no proof. It holds no standing of its own: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. No entry marks a dynamic good or bad; what one does to what lies beyond its couplings is under *Beyond its couplings*.
 
+29 of the atlas's 177 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
+
 | Dynamic | Records | Base | Standing | Exits | Open |
 |---|---|---|---|---:|---:|
 | [Drawn exactly where it does not return](#attraction-is-not-returning) | [attraction-is-not-returning](../../records/attraction-is-not-returning.md) | any type | recorded-checked (theorem) | 2 | 3 |
@@ -683,7 +685,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 <a id="four-routes-of-transition"></a>
 ### Four routes of transition, none a proved phase transition
 
-- **Mechanism.** Reading [AI reading, D65; of the boundary and attraction results of the market model, family B's market-model-share-margin-and-ends], in 05's words: "At the original parameters with M < 0 a distinct protected region remains: a negative margin says a degenerate region can appear, not that every history enters it. Four routes of transition are distinct, none a proved phase transition: a parameter change removing a region's retention, a shock into another retained region, a failure stopping correction, and change too fast for correction. Attraction is not continuation: a selection absorbing perturbations can still erode its support, and a lost capacity needs actual entry, which the share law lacks. A real loss need not form a meta-attractor, and withdrawing one practice does not end the returning relation."
+- **Mechanism.** Reading [AI reading, D65; of the boundary and attraction results of the market model, family A's market-model-share-margin-and-ends], in 05's words: "At the original parameters with M < 0 a distinct protected region remains: a negative margin says a degenerate region can appear, not that every history enters it. Four routes of transition are distinct, none a proved phase transition: a parameter change removing a region's retention, a shock into another retained region, a failure stopping correction, and change too fast for correction. Attraction is not continuation: a selection absorbing perturbations can still erode its support, and a lost capacity needs actual entry, which the share law lacks. A real loss need not form a meta-attractor, and withdrawing one practice does not end the returning relation."
 - **Base.** none: no theorem states it yet
 - **Standing.** reading, with no record
 - **Declarations.** None.
@@ -801,3 +803,5 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Beyond its couplings.** Attraction is not continuation: a selection absorbing perturbations can still erode its support ([AI reading, D65]); computations in the model refute overstrong readings, in the home's words: "profits coexist with support failure the next round".
 - **Valence.** none asserted
 - **Sources.** [05-COLLECTIVES.md#r-market-model-share-margin-and-ends](../../../chapters/05-COLLECTIVES.md#r-market-model-share-margin-and-ends)
+
+[The atlas](../ATLAS.md), with every family's index. Families: **A**, [B](b.md), [C](c.md), [D](d.md), [E](e.md), [F](f.md), [G](g.md), [H](h.md).

@@ -28,7 +28,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 <a id="按名称查找--find-by-name"></a>
 ## Find by name
 
-Use browser find within a topic page, or an editor's cross-file search for every name. From the repository root:
+Use browser find within a topic page (a topic too large for one page is listed on parts, and its page lists its modules: search its parts), or an editor's cross-file search for every name. From the repository root:
 
 ```sh
 rg -n 'theorem_name' theories/becoming/results/lean-declarations/

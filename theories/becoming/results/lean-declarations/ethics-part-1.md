@@ -3659,3 +3659,5 @@ Definitions and types:
 
 </details>
 
+[All topics and modules](../LEAN-DECLARATIONS.md) · [Normative grounding and generative direction, all parts](../lean-declarations/ethics.md) · [part 2](../lean-declarations/ethics-part-2.md)
+

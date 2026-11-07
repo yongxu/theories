@@ -2,15 +2,15 @@
 
 # The crosswalk: 間 and 文言 as formal language (間 · 文言 · 文), with the algebra of hexagrams
 
-[The crosswalk](../CROSSWALK.md), with every folder and domain and their counts.
+[The crosswalk](../CROSSWALK.md), with every folder and domain and their counts. The folder itself: [its README](../../../../jian-and-wenyan-as-formal-language/README.md).
 
 Each earlier theory folder and each domain of thought: what it claimed in its own terms, and what became of that in the live account. The evidence layer, not for reading through. It creates no result, and every entry is an AI reading with no person's behind it. A shared word is not a correspondence, structural agreement is not agreement in meaning, and no tradition is spoken for. Not carried is an outcome, not a defect. Where a source is not stored here, what is said of it comes from the AI's knowledge and has not been checked against a text.
 
 **What became of it:** *carried*; *carried-in-part*; *changed*; *history-only*; *not-carried*; *fresh-reading*. *Fresh-reading* means the account does not state the connection and a reader proposes it here. **Relations**, from [06](../../../chapters/06-CLASSICAL-TEXTS.md#three-relations): *agreement*; *scope*; *divergence*; *contrary-reading*. Agreement says what it is agreement with: a checked **law**, a **thesis or method**, or a **reading**, where the join is a reader's or descends from the source. Only what a target carries counts as a connection.
 
-**How far to trust it.** Each item had a mapper, a reviser, a checker told to refute, a repair after a critic and a comparison across items. A second critic then read 100 entries drawn at random, up to 6 from each kind of verdict, against both sides: 83 held, 15 had a label or a target's role wrong and 2 had a wrong reading. Weighted by how many entries each kind holds, that estimates 82.6% holding, 14.2% with a label or role wrong and 3.2% with a wrong reading over all 1183; its fixes are applied, and the other entries were not read again. The first critic's sample (59) was aimed at suspects and gives no rate. Where the source is not stored here, a critic's check was memory against memory.
+**How far to trust it.** Each item had a mapper, a reviser, a checker told to refute, a repair after a critic and a comparison across items. A second critic then read 100 entries drawn at random, up to 6 from each kind of verdict, against both sides: 83 held, 15 had a label or a target's role wrong and 2 had a wrong reading. Weighted by how many entries each kind of verdict holds, that estimates 82.6% holding, 14.2% with a label or role wrong and 3.2% with a wrong reading over all 1183; its fixes are applied, and the other entries were not read again. The first critic's sample (59) was aimed at suspects and gives no rate. Where the source is not stored here, a critic's check was memory against memory.
 
-## What was read
+## Summary and what was read
 
 文言's grammar as already a formal system, on one self-containing primitive, with an F2/V4 algebra of hexagrams, is what the folder claims. The account mostly stands apart: 06 says the 文言 scheme was replaced, its completeness unproved, and its operations are Tarski's relation calculus named with characters (名取自古文，不表示运算出自古文). From classical definitions it took, as AI reconstructions tested in Lean, the form of 缘 (墨经 故; the word from Buddhist texts), 化, 成坏, 同, 复, 通. Of the algebra only the four-element group and twenty-class census stay; the F2 tower, Claim Z, even ranks, De Morgan privilege are dropped. Divergence outweighs agreement. Agreement with a checked law is narrow: the orbit census, merges, orders of birth, states read off a course, each on its model and none as the folder's type discipline or ontology. The other agreements are with a method section or a reading, and several joins are this crosswalk's proposals, marked as such.
 
@@ -620,3 +620,5 @@ Each earlier theory folder and each domain of thought: what it claimed in its ow
 - Humans decide what is unhealthy, in the counter-势 protocol (loss 8), a governance commitment the folder says vanished with its algorithms ('unhealthy' has no live hit and the search went no further. Who restrains stays contested is not this commitment. A later read of 05 and 07 could map it.)
 - 文: the folder's language, renamed from 間, and live 文, the course of a run's states through a map (Same character, no shared mechanism, so no entry. Its one claim is in cx-jianwen-self-articulation, with the warning.)
 - Own words 27 (意图其实即是结构) and 16 (internalizing the language gives a view of 道 in one's environment) (A remark, and a report of what the language gives a reader, with no mechanism stated; 16 sits near the entry on 工夫. Not searched separately.)
+
+[The crosswalk](../CROSSWALK.md), with every folder and domain and their counts.
