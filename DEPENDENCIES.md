@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [One page](theories/becoming/ONE-PAGE.md) · [一页（中文）](theories/becoming/ONE-PAGE.zh.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Uses](theories/becoming/USES.md) · [Tests](TESTS.md) · [Graph](theories/becoming/results/THEORY-GRAPH.md) · [How it grew](theories/LINEAGE.md) · [Results](RESULTS.md) · [Glossary](GLOSSARY.md) · [Reviewers](theories/becoming/review/README.md) · [Open questions](OPEN-QUESTIONS.md)
 
-536 registered results: 505 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 1271 curated edges join 462 results to the results they draw on.
+536 registered results: 505 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`), 4 open targets (`open`) and 7 superseded (`superseded`). 1271 curated edges join 462 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 

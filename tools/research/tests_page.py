@@ -151,7 +151,14 @@ def day(iso):
     return f'{int(d)} {MONTHS[int(m) - 1]} {y}'
 
 
-def by_thesis(rows):
+def thesis_names(root=ROOT):
+    """Each thesis's name as method §9's table gives it ("T1. Persistence certifies the joint draw"), read at render."""
+    f = Path(root) / METHOD
+    text = f.read_text() if f.is_file() else ''
+    return dict(re.findall(r'^\| (T[1-8])\. ([^|]+?) \|', text, flags=re.M))
+
+
+def by_thesis(rows, names=None):
     """A table of the theses against the classes: how many tests of each came out each way (a test bearing on two
     theses counts under both; tests bearing on none are a row of their own)."""
     shown = [k for k in CLASS_KEYS if any(r['outcome'] == k for r in rows)]
@@ -162,7 +169,7 @@ def by_thesis(rows):
         mine = [r for r in rows if (t in [x.strip() for x in r['thesis'].split(',')] if t else not r['thesis'].strip())]
         if not mine:
             continue
-        name = f'[{t}]({METHOD}#theses)' if t else 'none named'
+        name = (f'[{t}]({METHOD}#theses)' + (f' {cell(names[t])}' if names and t in names else '')) if t else 'none named'
         cells = [sum(r['outcome'] == k for r in mine) for k in shown]
         out.append(f'| {name} | ' + ' | '.join(str(n) if n else '·' for n in cells) + ' |')
     return out
@@ -191,7 +198,7 @@ def render_page(data):
         'How many tests of each thesis came out each way (a test bearing on two theses counts under both; "·" is none). '
         'What each thesis says and forbids is in [method §9](theories/becoming/chapters/08-METHOD.md#theses).',
         '',
-    ] + by_thesis(rows) + ['']
+    ] + by_thesis(rows, thesis_names()) + ['']
     body = []
     for key, label, gloss in CLASSES:
         group = by[key]

@@ -1,6 +1,6 @@
 # Can a collective's course always widen what can form?
 
-*About 35 minutes to read; the answer in brief, about four.*
+*About 35 minutes to read; the answer in brief, about four. Field by field, what the account is for and how far is on [the uses page](USES.md).*
 
 *AI-written, 29 October 2026 (board item AJ5), and retitled 1 November 2026 from its first paraphrase of the question, "Can a collective always move the world toward generation?". No human has reviewed it. It adds no result: every law it names is stated once, in the home section it links, and it says no more than that statement. It answers one question, asked of the theory on 29 October 2026 ([source](../../sources/15-codex-theory-conversations/2026-10-29-a-comprehensive-review.md)) and answered first in the [twenty-first review](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-TWENTY-FIRST-REVIEW.md#44-can-a-collective-always-move-the-world-toward-generation):*
 

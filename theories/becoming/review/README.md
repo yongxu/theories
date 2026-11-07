@@ -1,6 +1,6 @@
 # Review packet
 
-[中文](README.zh.md) · [The theory in one page](../ONE-PAGE.md) · [The overview](../THE-THEORY-OF-BECOMING.md) · [The chapters](../chapters/README.md)
+[中文](README.zh.md) · [The theory in one page](../ONE-PAGE.md) · [What it is for, and how far](../USES.md) · [The overview](../THE-THEORY-OF-BECOMING.md) · [The chapters](../chapters/README.md)
 
 *This cover takes eight to eleven minutes to read; each dossier gives its own times in its opening section.*
 

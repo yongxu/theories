@@ -223,7 +223,12 @@ class RepositoryConfigTests(unittest.TestCase):
         cfg = site.site_config()
         private = site.private_pattern()
         files = site.tracked_files()
+        import re
         for p in cfg['pages'] + cfg.get('assets', []):
+            if '*' in p:  # a pattern names at least one tracked file, within one folder
+                pattern = re.compile(re.escape(p).replace(r'\*', '[^/]*'))
+                self.assertTrue(any(pattern.fullmatch(f) for f in files), 'site.pages names a pattern matching nothing: ' + p)
+                continue
             self.assertTrue(p in files, 'site.pages names an untracked file: ' + p)
             self.assertFalse(site.refused(p, private), p)
         for target, _ in cfg['nav']:

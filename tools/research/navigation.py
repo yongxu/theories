@@ -405,9 +405,15 @@ def law_family_table(records, base):
 
 
 def counts(records):
+    """The register's counts by status, every status named so that the parts add up to the whole (RW)."""
     n = lambda status: sum(r['status'] == status for r in records)
-    return (f'{len(records)} registered results: {n("recorded-checked")} with a recorded Lean receipt (`recorded-checked`), '
-            f'{n("reviewed-scoped")} reviewed at their stated scope (`reviewed-scoped`) and {n("open")} open targets (`open`).')
+    parts = [f'{n("recorded-checked")} with a recorded Lean receipt (`recorded-checked`)',
+             f'{n("reviewed-scoped")} reviewed at their stated scope (`reviewed-scoped`)', f'{n("open")} open targets (`open`)']
+    parts += [f'{n(s)} {s} (`{s}`)' for s in ('superseded', 'withdrawn') if n(s)]
+    others = len(records) - sum(n(s) for s in ('recorded-checked', 'reviewed-scoped', 'open', 'superseded', 'withdrawn'))
+    if others:
+        parts.append(f'{others} of other statuses')
+    return f'{len(records)} registered results: ' + ', '.join(parts[:-1]) + ' and ' + parts[-1] + '.'
 
 
 def anchor_lines(*anchors):
@@ -447,6 +453,22 @@ WHERE_TO_LOOK = [
     '- Similar statements with different semantics: `branching-target-uniqueness`, `joint-target-uniqueness`. Their local test languages differ.',
     '- Three shared-support results: `draws-on-a-shared-stock`, `exclusive-footprint-support`, `joint-plan-composition`. Their common obstruction does not establish a verified translation between them.',
     '- Completed conditional alignment argument and its AI application: `practical-judgment-under-living-significance`, `alignment-direction-under-widening`. The question `universal-practical-warrant` and the independent target `wisdom-root` remain open.']
+
+
+def research_lines(ongoing, records_by_id, path):
+    """The directions under way, in the configured order: each one's summary, next step, scope and source, and the results
+    it has established (RW, 8 November 2026: moved here from README, whose landing names them)."""
+    en = registry.en
+    lines = [registry.heading('##', 'Ongoing research and current progress', 'Ongoing research and current progress'), '']
+    for g in ongoing:
+        overview = g['overview']
+        lines += anchor_lines(g['id']) + ['### ' + en(overview['title']), '', en(overview['summary']), '',
+                                         '**Next:** ' + en(overview['next_step']), '',
+                                         link('GOALS.md#' + g['id'], path, 'Scope and authorization') + ' · ' + link(g['sources'][0], path, 'Primary source'), '']
+        established = [records_by_id[ident] for ident in g.get('result_ids', []) if ident in records_by_id and records_by_id[ident]['status'] in COMPLETED and records_by_id[ident]['kind'] != 'target']
+        if established:
+            lines += ['**Established results:** ' + ' · '.join(link(page_of(r), path, en(r['title'])) for r in established), '']
+    return lines
 
 
 def stub_lines(path, kind, goal_records):
@@ -553,15 +575,10 @@ def render_views(records):
                     lines += ['Further results under the same condition and disclosed practical premises: '
                               + ' · '.join(link(page_of(r), path, en(r['title'])) + f' (`{r["status"]}`)' for r in rest) + '.', '']
             if ongoing:
-                lines += ['## Ongoing research and current progress', '']
-                for g in ongoing:
-                    overview = g['overview']
-                    lines += ['### ' + en(overview['title']), '', en(overview['summary']), '',
-                              '**Next:** ' + en(overview['next_step']), '',
-                              link('GOALS.md#' + g['id'], path, 'Scope and authorization') + ' · ' + link(g['sources'][0], path, 'Primary source'), '']
-                    established = [records_by_id[ident] for ident in g.get('result_ids', []) if ident in records_by_id and records_by_id[ident]['status'] in COMPLETED and records_by_id[ident]['kind'] != 'target']
-                    if established:
-                        lines += ['**Established results:** ' + ' · '.join(link(page_of(r), path, en(r['title'])) for r in established), '']
+                # The directions' summaries, next steps and established results are on RESEARCH.md; the landing names them (RW).
+                lines += ['## Ongoing research', '', 'The directions under way, each with its summary, its next step and the results it '
+                          'has established, are on ' + link('RESEARCH.md', path, 'the research page') + ': '
+                          + ' · '.join(link('RESEARCH.md#' + g['id'], path, en(g['overview']['title'])) for g in ongoing) + '.', '']
             lines += ['## Research and repository', '']
         if kind in ('home', 'brief'):
             if kind == 'brief':
@@ -579,6 +596,8 @@ def render_views(records):
                       H('##', 'Where to look first', 'Where to look first'), ''] + WHERE_TO_LOOK + ['']
         if kind in ('stub', 'roadmap'):
             lines += stub_lines(path, kind, goal_records)
+        if path == 'RESEARCH.md' and ongoing:
+            lines += research_lines(ongoing, records_by_id, path)
         if kind == 'open':
             groups = open_question_links(config)
             targets = [r for r in records if r['kind'] == 'target']

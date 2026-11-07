@@ -96,3 +96,9 @@ ul.cards a.zh { position: absolute; top: .9rem; right: 1rem; font-family: var(--
   header.top, footer, a.here { display: none; }
   body { background: #fff; color: #000; }
 }
+/* a picture opens at full size and is shown wider than the text column */
+a.picture { display: block; width: min(calc(100vw - 32px), 64rem); margin: 1.2rem 0 1.4rem 50%; transform: translateX(-50%);
+  background: #fff; border: 1px solid var(--rule); border-radius: 6px; padding: .6rem; cursor: zoom-in; }
+a.picture img { display: block; width: 100%; height: auto; }
+/* the navigation line scrolls sideways; a fade at its edge says there is more */
+header.top nav { -webkit-mask-image: linear-gradient(to right, #000 85%, transparent); mask-image: linear-gradient(to right, #000 85%, transparent); padding-right: 2rem; }

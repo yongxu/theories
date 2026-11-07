@@ -4,7 +4,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [One page](theories/becoming/ONE-PAGE.md) · [一页（中文）](theories/becoming/ONE-PAGE.zh.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Uses](theories/becoming/USES.md) · [Tests](TESTS.md) · [Graph](theories/becoming/results/THEORY-GRAPH.md) · [How it grew](theories/LINEAGE.md) · [Results](RESULTS.md) · [Glossary](GLOSSARY.md) · [Reviewers](theories/becoming/review/README.md) · [Open questions](OPEN-QUESTIONS.md)
 
-*The lead and the summary by thesis: 3–4 minutes to read; every row: 32–41 minutes.*
+*The lead and the summary by thesis: 3–4 minutes to read; every row: 32–42 minutes.*
 
 Every test in [experiments](experiments/README.md) by how it came out, the failures first: 66 in all (4 failed; 20 mixed; 2 refused before scoring; 1 decided nothing; 2 partly passed; 3 not rejected; 5 passed; 2 decided by a registered rule; 2 reported without a verdict; 11 frozen, not run; 3 held; 1 dropped; 10 no prediction of the account), as of 8 November 2026. Each row links its folder and quotes the outcome from its pages (one, where they have no sentence to quote, from method §9), the source linked; its class is read from the folder's verdicts, and its plain gloss is a restatement [AI reading]. The rows were drafted from the folders by an AI reader and checked against them by a second; no person has checked them. A row's thesis is the one method §9 or the test's folder names; Frozen is the day its prediction, rule or plan was fixed, and Run the day the run finished. Experiments retired to [experiments/history](experiments/history/INDEX.md) are not listed. T8 is argued, and no test bears on it.
 
@@ -16,13 +16,13 @@ How many tests of each thesis came out each way (a test bearing on two theses co
 
 | Thesis | Failed | Mixed | Refused before scoring | Decided nothing | Partly passed | Not rejected | Passed | Decided by a registered rule | Reported without a verdict | Frozen, not run | Held | Dropped | No prediction of the account |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| [T1](theories/becoming/chapters/08-METHOD.md#theses) | 1 | 5 | 2 | · | · | · | · | · | · | · | · | · | · |
-| [T2](theories/becoming/chapters/08-METHOD.md#theses) | 2 | 3 | · | 1 | · | · | 1 | · | · | · | · | · | · |
-| [T3](theories/becoming/chapters/08-METHOD.md#theses) | · | 11 | · | · | 1 | · | 3 | · | · | · | 1 | · | · |
-| [T4](theories/becoming/chapters/08-METHOD.md#theses) | · | 2 | · | · | · | · | · | · | · | · | · | 1 | · |
-| [T5](theories/becoming/chapters/08-METHOD.md#theses) | 1 | 1 | · | · | · | · | · | · | · | · | · | · | · |
-| [T6](theories/becoming/chapters/08-METHOD.md#theses) | · | · | · | · | · | 3 | · | · | · | · | · | · | · |
-| [T7](theories/becoming/chapters/08-METHOD.md#theses) | · | 1 | · | · | · | · | · | · | · | · | 1 | · | · |
+| [T1](theories/becoming/chapters/08-METHOD.md#theses) Persistence certifies the joint draw | 1 | 5 | 2 | · | · | · | · | · | · | · | · | · | · |
+| [T2](theories/becoming/chapters/08-METHOD.md#theses) The state of a renewable condition under a draw is its level, its recent giving and one lag, its place named before the data | 2 | 3 | · | 1 | · | · | 1 | · | · | · | · | · | · |
+| [T3](theories/becoming/chapters/08-METHOD.md#theses) Optimization drains what lies beyond its couplings, where that gives room | · | 11 | · | · | 1 | · | 3 | · | · | · | 1 | · | · |
+| [T4](theories/becoming/chapters/08-METHOD.md#theses) The scope can be installed, and it carries | · | 2 | · | · | · | · | · | · | · | · | · | 1 | · |
+| [T5](theories/becoming/chapters/08-METHOD.md#theses) The order is shared by every valuer who counts everything positively | 1 | 1 | · | · | · | · | · | · | · | · | · | · | · |
+| [T6](theories/becoming/chapters/08-METHOD.md#theses) A break is seen coming only through what couples into what breaks | · | · | · | · | · | 3 | · | · | · | · | · | · | · |
+| [T7](theories/becoming/chapters/08-METHOD.md#theses) A measure read from what it selects outlives its refutation | · | 1 | · | · | · | · | · | · | · | · | 1 | · | · |
 | none named | · | 2 | · | · | 1 | · | 1 | 2 | 2 | 11 | 1 | · | 10 |
 
 ## Failed
