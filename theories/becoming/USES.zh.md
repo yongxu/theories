@@ -3,11 +3,13 @@
 <a id="what-the-account-is-for-and-how-far"></a>
 # 本说明有什么用，用到多远
 
-[English](USES.md) · [一页](ONE-PAGE.zh.md) · [总览](THE-THEORY-OF-BECOMING.zh.md) · [检验](../../TESTS.md) · [术语表](../../GLOSSARY.zh.md)
+[English](USES.md) · [首页](../../README.zh.md) · [一页](ONE-PAGE.zh.md) · **用途** · [实例](USES-EXAMPLES.zh.md) · [总览](THE-THEORY-OF-BECOMING.zh.md) · [第六章](chapters/06-CLASSICAL-TEXTS.md) · [怎样长成](../LINEAGE.zh.md) · [术语表](../../GLOSSARY.zh.md) · [审查包](review/README.zh.md)
 
 *约十二至十六分钟读完，其中表格约十分钟；实例另成一页，还需三十五至四十五分钟。*
 
 *2026 年 11 月 8 日由 AI 据其所链接的所属之处写成；每一处重述都由 AI 读者与其所属之处核对过；无人读过。它与所属之处不一致时，以所属之处为准。*
+
+*本页所链接的各章（第六章除外）、记录、检验与多数审查材料是英文的；古文与佛学两份审查材料是中文的。*
 
 本页逐个领域说明，读者今天能用本说明做什么，能做到多远。本说明的律，是在已指名的前提之下关于模型的定理。把其中一条用在一个实际系统上，需要一个对应：在对应已表明之处，该行陈述它；否则它是一种 AI 读法，或未决。动力学没有一条律给诸进程排序。伦理加上两个前提，都不被断言，根据未决：*延续条件*确定范围，即谁的损失算数，它不排任何次序；*C*，即扩大可形成者更好，给出次序。对诸进程的排序需要 C，或一个代替它的前提（[07 §4](chapters/07-SIGNIFICANCE.md#scope-and-order)）。地位按 [08](chapters/08-METHOD.md#standings-and-bases) 所定。本说明不作任何主张之处，该行写“不作主张”。
 

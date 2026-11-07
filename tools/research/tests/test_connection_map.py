@@ -1,4 +1,5 @@
 import contextlib
+import html
 import io
 import json
 import re
@@ -201,6 +202,27 @@ class SiteTests(unittest.TestCase):
                      ['--site', str(self.out), '--link-base', 'no-slash']):
             with self.subTest(argv=argv), contextlib.redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
                 cm.main(argv)
+
+    def test_the_site_page_has_its_line_home_and_a_summary_without_script(self):
+        page = cm.site_map(self.out, self.base, {cm.CROSSWALK_PATH: 'crosswalk.html'}, nav=[('Chapters', 'chapters.html')]).read_text()
+        body = page.split('<body>', 1)[1]
+        self.assertTrue(body.lstrip().startswith('<nav class="sitebar" aria-label="Site"><a class="home" href="index.html">The Theory of Becoming</a>'
+                                                 '<a href="chapters.html">Chapters</a></nav>'))
+        noscript = re.search(r'<noscript>(.*?)</noscript>', page, re.S).group(1)
+        data = self.data(page)
+        self.assertIn(html.escape(data['lede']), noscript)
+        self.assertIn(html.escape(data['sublede']), noscript)
+        self.assertTrue(data['lede'].startswith('1 claims from 1 earlier folders and 1 domains of thought'))
+        self.assertIn('<a href="crosswalk.html">the crosswalk</a>', noscript)  # the site's page for the crosswalk
+        self.assertNotIn('<script', noscript)
+
+    def test_the_repository_page_has_the_summary_and_no_site_line(self):
+        page = cm.page(cm.payload(atlas(entry('cx-a', 'cxg-early')), GRAPH, SHARED))
+        self.assertNotIn('class="sitebar"', page)
+        self.assertIn('<a href="../../../../' + cm.CROSSWALK_PATH + '">the crosswalk</a>', page)
+        self.assertIn("textContent=D.lede", page)
+        fragment = cm.fragment(cm.payload(atlas(entry('cx-a', 'cxg-early')), GRAPH, SHARED, base=None))
+        self.assertIn('the crosswalk (CROSSWALK.md)', fragment)  # no repository links where links are text
 
     @unittest.skipUnless(shutil.which('node'), 'node is not installed')
     def test_a_link_goes_to_the_site_where_it_has_the_page_and_keeps_its_anchor(self):

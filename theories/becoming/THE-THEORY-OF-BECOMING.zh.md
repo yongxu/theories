@@ -2,7 +2,7 @@
 
 一种说明：在一个关系性的展开之中，任何东西如何出现、持续、变化与消逝，生命、演化与认知如何在其中成形，评价又到什么程度；它不预先假定生灭变化是好的。
 
-[English](THE-THEORY-OF-BECOMING.md) · [一页](ONE-PAGE.zh.md) · [八章](chapters/README.md) · [理论图](results/THEORY-GRAPH.md)
+[English](THE-THEORY-OF-BECOMING.md) · [首页](../../README.zh.md) · [一页](ONE-PAGE.zh.md) · [用途](USES.zh.md) · [实例](USES-EXAMPLES.zh.md) · **总览** · [第六章](chapters/06-CLASSICAL-TEXTS.md) · [怎样长成](../LINEAGE.zh.md) · [术语表](../../GLOSSARY.zh.md) · [审查包](review/README.zh.md)
 
 *约五十分钟至一小时十分钟读完。*
 
