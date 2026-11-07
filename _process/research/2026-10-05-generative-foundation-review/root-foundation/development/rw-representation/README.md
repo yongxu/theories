@@ -36,7 +36,7 @@ Ren, 8 November 2026 ([his words](../../../../../../sources/15-codex-theory-conv
   - The alignment goal's summary said learners "kept it exactly where the others alone could not empty it". It now keeps CG1 and CG2 apart, in chapter 5's and their folders' words, in both languages.
   - Questions in the classical and logic dossiers that GitHub ran together are now lists: a blank line, nothing else.
 - **The connection map** is on the site as `connections.html`, written by the atlas's site mode, which (b)'s piece landed.
-- **What stays as it was.** The README keeps the opening at its top, as Ren asked on 10 October 2026 ([source](../../../../../../sources/15-codex-theory-conversations/2026-10-10-truth-exists-opening.md)); the site's own landing links it. The first screen grew from 187 to 307 words, recorded with its reasons in [READING-BUDGETS](../aj4-alignment-readers/READING-BUDGETS.md).
+- **What stays as it was.** The README keeps the opening at its top, as Ren asked on 10 October 2026 ([source](../../../../../../sources/15-codex-theory-conversations/2026-10-10-truth-exists-opening.md)); the site's own landing links it. The first screen grew from 187 to 331 words, the picture's caption included, recorded with its reasons in [READING-BUDGETS](../aj4-alignment-readers/READING-BUDGETS.md).
 
 ## The integration (after (b), (c) and the Chinese uses pages landed)
 
