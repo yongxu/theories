@@ -73,7 +73,7 @@ class SiteTests(unittest.TestCase):
         self.assertIn(f'href="https://github.com/o/r/blob/{COMMIT}/a/results/records/closed-capture.md"', one)
         self.assertIn(f'href="https://github.com/o/r/tree/{COMMIT}/experiments"', one)
         self.assertIn('<span class="nolink" title="Not in the public repository">a scratch note</span>', one)
-        self.assertEqual(report['untracked'], [('a/ONE.md', '../tmp/notes.md')])
+        self.assertEqual(report['untracked'], [('a/ONE.md', '../tmp/notes.md')])  # private (tmp/) and untracked alike
         self.assertIn('href="../ONE.html#what-it-is"', self.page('a/chapters/index.html'))
 
     def test_the_home_is_the_first_screen_with_the_ways_in(self):
@@ -122,6 +122,51 @@ class SiteTests(unittest.TestCase):
     def test_an_untracked_page_is_refused(self):
         with self.assertRaisesRegex(site.SiteError, 'does not track'):
             self.build(pages=SITE['pages'] + ['a/NEW.md'])
+
+    def test_nothing_that_could_run_reaches_the_page(self):
+        bad = ('[a](javascript:alert(1)) [b]( JaVaScRiPt:alert(2)) [c](&#106;avascript:alert(3)) [d](data:text/html,x) '
+               '<a href=\'javascript:alert(4)\'>e</a> <a href=javascript:alert(5)>f</a> <a href="&#106;avascript:alert(6)">g</a> '
+               '<img/src="x"/onerror="alert(7)"> <a href="#what-it-is" style="x" onmouseover="alert(8)">h</a>\n')
+        (self.tmp / 'a/ONE.md').write_text(ONE + '\n' + bad)
+        report = self.build()
+        one = self.page('a/ONE.html')
+        for word in ('javascript', 'JaVaScRiPt', 'data:text', 'onerror', 'onmouseover', 'style=', 'alert(', '&#106;'):
+            self.assertNotIn(word, one.split('<main>')[1].split('</main>')[0].replace('&lt;', '<').split('<script>no')[0], word)
+        self.assertIn('<a href="#what-it-is">h</a>', one)
+        self.assertEqual(report['links']['refused'], 8)  # seven here and the fixture's own
+
+    def test_a_link_to_a_private_path_is_text(self):
+        self.files.add('.claude/launch.json')
+        (self.tmp / 'a/ONE.md').write_text(ONE + '\nSee [config](../.claude/launch.json).\n')
+        self.build()
+        self.assertIn('<span class="nolink" title="Not in the public repository">config</span>', self.page('a/ONE.html'))
+
+    def test_the_home_keeps_the_status_line(self):
+        self.build()
+        self.assertIn('<blockquote><p>This version is still being revised.</p></blockquote>', self.page('index.html'))
+
+    def test_headings_and_footnotes_as_github_has_them(self):
+        (self.tmp / 'a/ONE.md').write_text('# One page\n\n## What it is\n\n## In C#\n\nSecond.[^b] First.[^a] Again.[^b]\n\n'
+                                           '```\n<!-- kept in code -->\n[^a]: not a note\n```\n\n[^a]: Note a.\n[^b]: Note b.\n')
+        self.build()
+        one = self.page('a/ONE.html')
+        self.assertIn('id="in-c"', one)
+        self.assertIn('>In C#<', one)
+        self.assertIn('<a id="fnref-b" href="#fn-b">1</a>', one)  # numbered by first reference
+        self.assertIn('<a id="fnref-a" href="#fn-a">2</a>', one)
+        self.assertIn('<a id="fnref-b-2" href="#fn-b">1</a>', one)
+        self.assertIn('&lt;!-- kept in code --&gt;', one)
+        self.assertIn('[^a]: not a note', one)
+        self.assertLess(one.index('id="fn-b"'), one.index('id="fn-a"'))
+
+    def test_the_map_is_built_only_with_its_site_mode(self):
+        from tools.research import connection_map
+        if hasattr(connection_map, 'site_map'):
+            self.skipTest('this checkout has the site mode; the build writes the map')
+        with self.assertRaisesRegex(site.SiteError, 'no site mode'):
+            self.build(map=True, nav=SITE['nav'] + [['connections.html', 'Map']])
+        self.build(nav=SITE['nav'] + [['connections.html', 'Map']])
+        self.assertNotIn('connections.html', self.page('a/ONE.html'))
 
     def test_a_key_in_a_page_fails_the_build(self):
         (self.tmp / 'a/ONE.md').write_text(ONE + '\nsk-ant-' + 'a' * 30 + '\n')

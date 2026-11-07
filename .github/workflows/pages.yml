@@ -1,19 +1,18 @@
 # The reader's site (tools/publishing/build_site.py): built from main's allow-list (site.pages in
 # _process/research-config.json) and deployed to GitHub Pages. It runs only when dispatched by hand (Actions → Site → Run
 # workflow): publishing is a decision, so no push deploys it. Enabling Pages for the repository (Settings → Pages →
-# Source: GitHub Actions) comes first. The checkout fetches only the blobs the build reads; nothing it builds is committed.
+# Source: GitHub Actions) comes first. Only a run from main builds; only the deploy step holds the rights to publish. The checkout fetches only the blobs the build reads; nothing it builds is committed.
 name: Site
 on:
   workflow_dispatch:
 permissions:
   contents: read
-  pages: write
-  id-token: write
 concurrency:
   group: pages
   cancel-in-progress: false
 jobs:
   build:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -41,6 +40,9 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

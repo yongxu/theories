@@ -1,0 +1,107 @@
+{
+ "verdict": "Mostly faithful. I opened every cited home and every anchor exists. All the links resolve from theories/becoming/, and every number in the standards-body example checks against DrawnShaping: 90 vs 102, 90 vs 78, 90 vs 90, the 2-to-4 ratio, the 1/3 share (10 of 30), the cost-2 mass at 1 to 5 (5 of 30), and 6 < 8 for risk dominance, which agrees with a mass below one half. The human-development row correctly opens with \"Nothing claimed\". Both premises are named, with their roles, wherever the ethics is summarized, and nowhere is it said to derive from the condition. CMT's freeze is real: round 8 had no high or medium finding, and FROZEN.sha256 was committed on 5 November. One high error: the example states the model's inheritance premise wrongly. Several medium gaps: the critical mass's standing omits that it restates a known equilibrium; the correspondence to people is not labelled as an AI reading; the test's description omits the bridge premise and implies more than CMT measures; and the human-development \"today\" offers widening with no listing caveat. Read: ONE-PAGE and GLOSSARY in full; 05 §1, §11, §12, not-shown and Open; COLLECTIVE-DIRECTION's answer in brief and §4 to the end; 02 §9's DrawnShaping and drawn-one-at-a-time theorems, T7 and its Readings; the DrawnShaping module docstring; the record's Correspondence; CMT DESIGN §0 to §4; the closing round (8) of REVIEW-FREEZE; 07 §4's head and table, §4.4's theorem table, §5's head, §8, §9 and does-not-show; OPENING's coordination sentence and header. Not read: the rest of 07 §5, the overview beyond a search, CMT §5 on.",
+ "findings": [
+  {
+   "severity": "high",
+   "where": "Example 'A constructed standards body', paragraph 2: 'each new seat carries the practice of the one it replaces'",
+   "problem": "This misstates the model's premise. In DrawnShaping, offspring carry the capacity of their parent, and the next counts are offspring counts weighted by the rule read, so the population is not a fixed 30. In DrawnReplacement, a step 'replaces an other by a shaper's offspring' (02 §9), so the new member carries its parent's practice, not that of the one it replaces. If seats inherited from the member they replace, the share would never move, and a reader would take the proved laws to be about a dynamics they do not describe.",
+   "fix": "Use the home's words: 'That the rule's readers are drawn from the members it selects, and that offspring carry the capacity (each new member the practice of the member it is drawn from), are the model's premises, not facts about any body; hi, lo, p and c are constants.' Then add: 'Without noise the model's counts are offspring counts, which grow; only the share is read here. Drawn one member at a time, a step replaces a member of one kind by an offspring of the other, among a fixed 30.'"
+  },
+  {
+   "severity": "medium",
+   "where": "Coordination row, standing: 'The critical mass: proved in counts, without noise'",
+   "problem": "A qualifier is dropped. The joint-excess entry carries 'restates the commons', but the critical mass does not say that it is a known result. The record says the model 'is the stag hunt', with the critical mass at 'its mixed equilibrium', and adds that 'what is new on the spine is the critical-mass computation, which is elementary'. Without this, a new reader may take it for a new finding. AGENTS.md puts first what a reader would wrongly believe about novelty.",
+   "fix": "'The critical mass: proved in counts, without noise; read as the stag hunt's mixed equilibrium [AI reading], the computation elementary ([record](results/records/shaping-read-by-readers-drawn-from-the-selected.md#correspondence--对应)).'"
+  },
+  {
+   "severity": "medium",
+   "where": "Coordination row, today ('locate a two-kind critical mass from hi, lo and c') and standing",
+   "problem": "No AI-reading label on the correspondence. Applied to people, locating the mass needs CMT's bridge premise (revision read as the drawn model's selection, payoffs as read) and the correspondence itself. The DrawnShaping docstring labels that correspondence an AI reading, and CMT says 'The correspondence is itself an AI reading'. The row gives no such label, so the use reads as already established for people.",
+   "fix": "In the standing cell, add: 'Its correspondence to people's adoption is an AI reading, under a bridge premise (revision read as selection); CMT tests that reading and the payoff mapping together, never the law ([CMT](../../experiments/critical-mass-located/DESIGN.md#what-is-frozen-and-what-it-can-refute)).'"
+  },
+  {
+   "severity": "medium",
+   "where": "Example 1, 'Its test.': 'CMT would read this location on people's groups in published laboratory stag hunts...'",
+   "problem": "This says more than the home. CMT computes the location from the payoff tables before any choice is seen; the data give only the direction of the share's change from starts on either side. The home says 'no verdict says that the data found the mass at f*', and that a run moves one reading, 'never ... a theorem'. The draft also omits the bridge premise, so a reader may think a run could refute the law or locate the mass in the data.",
+   "fix": "'CMT would test, in published laboratory stag hunts whose payoffs the experimenter set, screened before any choice is seen, the direction in which people's groups move from starts on either side of the location the payoff tables give, under a bridge premise that revision acts as the model's selection. Its verdicts are on that correspondence, an AI reading, never on the law; a pass would bound the mass on the side of one half only. It was frozen on 5 November 2026 and has not run.'"
+  },
+  {
+   "severity": "medium",
+   "where": "Human development row, today: 'A reader can check whether one course widens another...'",
+   "problem": "Hypotheses are dropped. The widening theorem is on a finite listing, with two-valued admission and natural weights. Which formations an actual course admits is a correspondence the account does not show. As written, the cell invites the reader to apply widening to real courses of human development, a use no home claims for this field.",
+   "fix": "'Nothing claimed of how a person develops or fares. The account's one general tool here: on a finite listing of what each course admits, supplied by the reader, whether one course widens another (at every step it admits all the other admits and at some step more), which needs no premise; that the wider is better is C's, and a mixed comparison is decided both ways by weightings ([07 §4.4](chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-positive-weighting-ranks)). That a listing matches an actual course is not shown.'"
+  },
+  {
+   "severity": "medium",
+   "where": "Coordination row, today: 'ask which of six conditions for enough of the situation a collective lacks'",
+   "problem": "The home's limits are dropped. Its §6 says observation is 'necessary and not sufficient' and that 'all six together still rank nothing'. Whether an actual collective meets them is empirical (§5). Without these limits the cell reads as a sufficient checklist for coordination.",
+   "fix": "Append the home's words: '...; all six together still rank nothing: calling the widening course better needs C or a premise in its place, and counting the losses that return to no one needs the continuation condition.'"
+  },
+  {
+   "severity": "low",
+   "where": "Coordination row, standing ('No test has human participants') and Example 1 ('No test of the account has had human participants')",
+   "problem": "Placed next to CMT, the sentence can confuse. If run, CMT would read existing laboratory data on human groups, and the reader is not told how the two statements fit. The link text 'why' is also wrong: the section says what is empirical, not why.",
+   "fix": "'No test run so far has human participants; CMT, if run, would read existing laboratory data on people's groups ([what is empirical](COLLECTIVE-DIRECTION.md#5-what-is-empirical)).'"
+  },
+  {
+   "severity": "low",
+   "where": "Example 1, 'Without noise the start decides.' cited to 02-MAP.md#t7",
+   "problem": "The sentence comes from a Reading paragraph labelled [AI reading, D45], not from T7. The draft gives it as plain fact under the heading 'What it predicts'. The module also says the laws 'prove the direction at every step on each side of the mass ... not convergence to either boundary state'.",
+   "fix": "'In the model, without noise, the start decides the direction at every step and the lock, not convergence to either end [AI reading of the theorems].'"
+  },
+  {
+   "severity": "low",
+   "where": "Example 1, the risk-dominance sentence: 'risk dominance can part from which state fixes more often'",
+   "problem": "A qualifier is dropped. The home's witness shows the parting 'in a small population under strong selection' (five members). It also says the base and the shared part 'move nothing without noise'.",
+   "fix": "'...and in a small population under strong selection risk dominance can part from which state one member arising fixes more often; the base and the shared part, which move nothing without noise, can turn that order.'"
+  },
+  {
+   "severity": "low",
+   "where": "Example 1 label: 'proved laws in counts, without noise'",
+   "problem": "The drawn-one-at-a-time laws the example uses are counts with drift (weights on histories), not noiseless.",
+   "fix": "'constructed, not observed: laws proved in counts, without noise and drawn one member at a time, read on people by an AI reading; ...'"
+  },
+  {
+   "severity": "low",
+   "where": "Example 1: the share '(c − lo)/(hi − lo) = 1/3 ([record]...#correspondence--对应)'",
+   "problem": "This cites the Correspondence, which the module labels an AI reading, for what is algebra from critical_iff. Citing the reading makes the share look less secure than the ratio; leaving the label off makes the identification as a stag-hunt equilibrium look more secure than it is.",
+   "fix": "'Here that is 2 to 4 (`critical_iff`), a shapers' share of 2/(2+4) = 1/3: 10 of 30; read as the stag hunt's mixed equilibrium, that share is the record's correspondence [AI reading].'"
+  },
+  {
+   "severity": "low",
+   "where": "Human development row, not_claimed: 'a complete ranking of mixed comparisons'",
+   "problem": "Shortened from the home in a way that misleads. The home reads 'an unconditional or complete ranking of mixed comparisons (priority and transfer rank some, under named premises)'. It also lists 'constraints on acts' and 'which reading of living, lifting rule or practical commitment is right', which the cell omits.",
+   "fix": "'...an unconditional or complete ranking of mixed comparisons (priority and transfer rank some, under named premises); constraints on acts; which reading of `living`, lifting rule or practical commitment is right ([07](chapters/07-SIGNIFICANCE.md#does-not-show)).'"
+  },
+  {
+   "severity": "low",
+   "where": "Human development row, standing: 'T8, argued: ...'",
+   "problem": "ONE-PAGE gives the premises as 'neither asserted, warrant open'. The row cell drops 'warrant open' and T8's open items. The example keeps them, but the ten-minute table is what most readers see.",
+   "fix": "Add: '; warrant open: P2 and P4 with P3, the step of invariance and a reason for C ([07 §8](chapters/07-SIGNIFICANCE.md#theses)).'"
+  },
+  {
+   "severity": "low",
+   "where": "Human development row, standing: 'The earlier programmes: design programmes, not results...'",
+   "problem": "The cell never says which programmes are meant. Placing them under human development is the page's framing, not 05's.",
+   "fix": "'The five applications elsewhere that 05 §11 lists (the Wamo protocol, evolving community swarms, the human solutions museum, cooperative infrastructure, architecture for a living Earth): design programmes, not results; correspondence not established.'"
+  },
+  {
+   "severity": "low",
+   "where": "Example 2, 'What it does not show': '07 shows no well-being beyond admitted continuation...'",
+   "problem": "'Shows no well-being' can be read as asserting that there is none. The home says only that 07 does not show it.",
+   "fix": "'07 does not show well-being beyond admitted continuation, the value of bringing new lives into existence, constraints on acts, or any duty, right, recognition, motivation or compliance.'"
+  },
+  {
+   "severity": "low",
+   "where": "Example 2, 'C leaves A against D unranked...'",
+   "problem": "An omission. 07 §9's same verdict goes on to say that where what an expansion ends is needed by everything, itself included, self-concern alone ranks that ending below. ONE-PAGE: 'Self-concern alone ranks one stated case, under a narrower premise'.",
+   "fix": "Add after the J1–J4 sentence: 'Where what D ends were needed by everything, D itself included, self-concern alone, a narrower premise, would rank that ending below ([07 §4.4](chapters/07-SIGNIFICANCE.md#r-what-self-concern-alone-ranks)).'"
+  },
+  {
+   "severity": "low",
+   "where": "Example 2: 'Proved for any type on a finite listing'",
+   "problem": "Hypotheses are dropped: two-valued admission and natural weights.",
+   "fix": "'Proved for any type, on a finite listing with two-valued admission and natural weights: ...'"
+  }
+ ]
+}

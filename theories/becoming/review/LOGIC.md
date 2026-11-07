@@ -89,6 +89,7 @@ Files: `Becoming/Grammar.lean`, `Becoming/GrammarCandidates.lean`, `Becoming/Cau
 - Co-presence is mutual reach, not presence in time; the grammar has no relation of presence in time, and adding one is a choice of model, so whether a condition must still be there when what it conditions arises is not expressible ([01, Open](../chapters/01-ROOT.md#open)). Since 28 October 2026 one model answers that question: on causal-set growth, the present read as the maximal elements of what a course has born, a condition is present at the birth of what it conditions on some course exactly at a link, precedence weakly decided (`Presence.present_some_iff_link`), and on every course exactly at the one link (`Presence.present_every_iff_only_link`; [01 §1](../chapters/01-ROOT.md#r-the-present-on-causal-set-growth)). That answer rests on this reading of the present, other readings not varying with the course, and on the model's premise that labels carry no physical meaning; it adds no relation to the grammar.
 
 **Questions.**
+
 4. Is taking precedence as the transitive closure of an arbitrary condition relation, strict only where acyclic, a sound basis for an order of time (compare causal sets, which assume acyclicity)?
 5. Is treating equality on the carrier as a commitment of the model a coherent stance in a type theory where every type carries an equality?
 
@@ -112,6 +113,7 @@ File: `Becoming/Grammar.lean`. **Meaning.** `y` continues `x` under `E` where `R
 - Containment in the condition relation is necessary only: by that class, continuation cannot by itself tell a fire passed on from one fire ending and another lighting ([01, does not show](../chapters/01-ROOT.md#does-not-show)).
 
 **Questions.**
+
 6. Is the meet `R ⊓ E` the natural formal choice for *conditioned and alike*, against alternatives such as `E;R;E` or a named sub-relation of `R`?
 7. Does this construction show that the admissible classes must be restricted (for instance, to classes definable without parameters), and is that a known problem for criteria of persistence?
 8. Is this construction known, for example as genidentity (Lewin 1922; on Lewin's and Reichenbach's uses, Padovani 2013) or a relational form of it?
@@ -139,6 +141,7 @@ File: `Becoming/Grammar.lean`. **Meaning.** Under a class, an occurrence begins 
 - The definition of `«异»` does not require the second class to be finer than the first; 01 §3 says only that in use it is.
 
 **Questions.**
+
 9. Is `«四相无自立»` correctly described by the chapter's statement (irreflexive `R`, the full class and identity) and by its gloss?
 10. Are one-step predecessor and successor an adequate formalization of beginning and ending, given cycles and two-way infinite lines, where nothing begins or ends?
 11. Is `«两端分则中有标»` a known discrete intermediate-value form, and should it be credited?
@@ -162,6 +165,7 @@ File: `Becoming/Grammar.lean`. **Meaning.** `E` is constant under `R` where it i
 - Constancy warrants no class ([01, does not show](../chapters/01-ROOT.md#does-not-show)): Quote [theories/becoming/chapters/01-ROOT.md]: "identity is constant under every relation" (`«静有常»`). A class's being constant says only that it agrees with the relation, and the finest class always qualifies; this bears on Q13 and on the reading of the core (L-06).
 
 **Questions.**
+
 12. Is that description of the theorem and its proof accurate?
 13. Does the name *constancy* fit a condition that no class of an ending line meets and that identity always meets?
 14. (optional) Would a weaker notion (simulation restricted to pairs not related by `R`, or relative to a sub-relation) capture regularity of patterns that end, and is such a notion known?
@@ -198,6 +202,7 @@ Files: `Becoming/Grammar.lean`, `Becoming/GrammarLaws.lean`. **Meaning.** The co
 - In one flame the witnesses that use the core single out nothing ([01 §5](../chapters/01-ROOT.md#fire-and-fuel)): the joint class of its two descriptions is identity on the four moments, so each suffices for the other's regularity, and since neither is constant (a line under each ends) the two need each other through the core (`«火薪相须»`), and every description that with "burning or not" tells the moments apart suffices (`«火之见证不择类»`). In two flames side by side the fuel left suffices while sameness of flame does not (`«两火以薪定理»`, `«两火同火不足以定理»`): a decision against one named alternative, not in general.
 
 **Questions.**
+
 15. Is the credit above accurate and sufficient, and is the restriction to `E ∩ E˘` stated correctly?
 16. Does the existence of the core for every relation and class depend on impredicativity, and should that be stated as a commitment in a predicative or coinductive setting?
 17. Does the mathematics support the D65 reading of the core?
@@ -223,6 +228,7 @@ Files: `Becoming/Grammar.lean`, `Becoming/GrammarCourse.lean`, `Becoming/Change.
 - Lumpability is probabilistic and computational closure concerns ε-machines. Lumpability (Kemeny and Snell 1960; as probabilistic bisimulation, Larsen and Skou 1991) asks equal transition-probability totals from a block's members into each block, which nothing here expresses; both stay analogies, as the chapter says.
 
 **Questions.**
+
 18. In an intuitionistic setting, where a block's lying inside or outside a preimage is not decided, is `E;R;E ⊆ R;E` the right form of stability?
 19. Should the correspondence for branching processes be proved before the chapter calls the core the familiar invariant on the models?
 20. Is the chapter's wording of the two analogies accurate?
@@ -250,6 +256,7 @@ Files: `Becoming/Grammar.lean`, `Becoming/GrammarConditionals.lean`. **Meaning.*
 - Two moments of a stationary process lie in one two-way core class and are separated only by carrier equality (L-02).
 
 **Questions.**
+
 21. Is that identification with temporal bisimulation correct?
 22. (optional) Altering is read as a relation between two occurrences with a finer class. Is there a sense in which it should be read off the two-way core, and if so, under which hypothesis on the finer class?
 
@@ -282,6 +289,7 @@ Files: `Becoming/GrammarMap.lean` (`fork` and `«生守相杂»` in namespace `M
 - Renewing and ceasing do not exclude each other: by «自不复生则息» at each occurrence it renews into, an occurrence that renews ceases where nothing renews again on the lines its renewals begin (a hand step, 01 §6). The chapter: Quote [theories/becoming/chapters/01-ROOT.md]: "the definitions do not make renewing and ceasing exclude each other, though no model of both is given in Lean." That what does not renew without end ceases is not proved (01 §6).
 
 **Questions.**
+
 23. Is 尽, inductive accessibility, the right constructive reading of *ends on every branch*, and under which hypotheses (finite or decided branching, decidable bars, bar induction, the fan theorem) should its relation to *every path is finite* be stated?
 24. Is 延, a union of post-fixed predicates, the right coinductive reading where dependent choice is not assumed?
 25. Are generation and keeping well defined as stated, and is the mixed region `«生守相杂»` the expected consequence?
@@ -309,6 +317,7 @@ File: `Becoming/GrammarMap.lean`. **Meaning.** Three forms read the whole coarse
 - The some-branch regions do not cover, and the chapter's counterexample is now in the Lean. The two keepings differ: Quote [theories/becoming/chapters/02-MAP.md]: "守 forbids renewal throughout its family where 全守 allows an earlier one". So: Quote [theories/becoming/chapters/02-MAP.md]: "The line that renews once and then stays is, at its start, none of 生成, 守 and 退化, and is 后守 and 全守." (`Map.Once.not_generates`, `Map.Once.not_keeps`, `Map.Once.not_degenerates`, `Map.Once.keepsAfter`, `Map.Once.keeping`). Keeping from some point on (`«后守»`) closes the gap: with excluded middle every point is 生成, 后守 or 退化 (`«三域之周»`), and that every point of every model is one of them is exactly excluded middle (`«三域之定当且仅当排中»`).
 
 **Questions.**
+
 26. (optional) Would local decidedness (of having a successor and of carrying renewal at each reached point) suffice for `«全三域之周»`, and is that its exact strength?
 27. Is keeping from some point on (`«后守»`) the right fourth region for the gap `Map.Once` shows, and is its name exact?
 28. Do the names generation, keeping and degeneration fit regions that may not cover every point?
@@ -356,6 +365,7 @@ Files: `Becoming/Grammar.lean`, `Becoming/GrammarMap.lean`, `Becoming/Space.lean
 - Since 30 October 2026 the chapter separates these from a need on one line: Quote [theories/becoming/chapters/02-MAP.md]: "On a single line the need is not of the logic alone." [this dossier, AI] `Map.«后守之定则LPO»`, `Map.«生成之定则WLPO»` and `Map.«生成后守之定则LPO»` reduce a Boolean sequence, as the Markov calibration of L-17 does, and encode no arbitrary proposition, so the first weakness above does not reach them. As stated each gives its principle one way; the proofs show the equivalence at each coded sequence, which no theorem states. By the two equivalences above, the placement is the decision of a Σ⁰₂ statement, and LPO is the part derived: Quote [theories/becoming/chapters/02-MAP.md]: "is itself the stronger decision whether each changes without end or settles". The module header adds that without countable choice the core does not give the placement back from LPO; that is not proved in Lean.
 
 **Questions.**
+
 29. By the theory's own criterion (a calibration says something about the unfolding), are these calibrations or lemmas?
 30. (optional) Are local forms (decidedness of having a predecessor at a given point) the exact strength the marks and regions need?
 
@@ -386,6 +396,7 @@ File: `Becoming/GrammarTesting.lean`. **Meaning.** Finite stages approximate the
 - [this dossier, AI] The witness is two relations on four elements, the second containing the first, under which one class has different cores; it shows that a larger relation can have a finer core. Reading the second relation as the first with the window's opening added is the model's. Since 1 November 2026 this is less bare: at a margin of one draw the two relations, from the two rooms compared, are the steps of one rule of rooms, with the window's opening in its net (`Rooms.toy_branches`, `Rooms.toy_verdict`, in `Becoming/RoomNet.lean`), and at a margin of `n + 1` draws *warm or not* first tells the unheated room from any heated one at stage `n + 1`, while two heated rooms stay in one core class ([03 §3](../chapters/03-KNOWING.md#r-rooms-tested-by-a-window)). Stipulating the branches is removed; that a net read so is a test is still the model's.
 
 **Questions.**
+
 31. Is that credit accurate for stages started from a class?
 32. Does the module's claim, Quote [experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarTesting.lean]: "A wider net tells apart what a narrower one does not", say more than that two relations have different bisimilarities?
 
@@ -417,6 +428,7 @@ File: `Becoming/GrammarCandidates.lean`. **Meaning.** The core is separated at n
 - [this dossier, AI] Neither the module nor the chapter credits the countermodel.
 
 **Questions.**
+
 33. (optional) Which independently stated conditions ensure that the limit relation is constant, and can one be proved in the pure core?
 34. Is the countermodel described correctly?
 35. Should `«诘»` and `«层»` be merged, or proved to agree?
@@ -455,6 +467,7 @@ theorem sameBranchingTests_fix_iff_llpoForDecided :
 - 03 says of the principle on processes Quote [theories/becoming/chapters/03-KNOWING.md]: "whether that principle is weaker is not shown". That stands for `EitherThroughout` against excluded middle; the Likeness module says showing it would take a model outside the pure core. 03 omits the principle's name: the pure core proves it exactly LLPO for decided families (`eitherThroughout_iff_llpoForDecided`, `sameBranchingTests_fix_iff_llpoForDecided`), which uses Prop-valued decidedness; the pure core derives standard LLPO from it, and the converse only where decisions are data (`LLPO.decidable`).
 
 **Questions.**
+
 36. Is the calibration stated at its exact strength?
 37. (optional) Does the converse direction hold: LLPO giving the limit form for finitely branching decided unfoldings?
 38. (optional) Is LLPO for Prop-decided families equivalent to LLPO without a choice principle?
@@ -487,6 +500,7 @@ Files: `Becoming/Change.lean` (the definition of `LPO`), `Becoming/LastChange.le
 - Worlds that no list holds are outside these laws. That WLPO does not give LPO is cited (Akama, Berardi, Hayashi and Kohlenbach 2004, in 08 §5) and not checked.
 
 **Questions.**
+
 42. Is the equivalence stated at its exact strength, and is the credit adequate?
 43. Is that gloss an accurate description of what the need says?
 
@@ -513,6 +527,7 @@ File: `Becoming/Tail.lean`. **Meaning.** A number read off a sequence of levels 
 - Since 3 November 2026, after edition 1, 08's table of known results lists separations among what the closest prior frameworks state that the account does not yet: Quote [theories/becoming/chapters/08-METHOD.md]: "separations by realizability and Kripke models: WLPO does not give LPO (... cites it, not checked), LLPO does not give WLPO, Markov's principle is independent of LLPO (here implications and equivalences only)".
 
 **Questions.**
+
 44. Is calling these WLPO and LPO accurate, or should they carry the names of the rule forms only?
 45. Is the first equivalence a form of a known link between discontinuous functionals and WLPO, and should it be credited?
 
@@ -535,6 +550,7 @@ Files: `Becoming/HistoryIdeals.lean` (namespace Stretches; beside it `Stretches.
 - [this dossier, AI] Each is asked of every process. The double-negation calibrations fix the process (the process of `()`s, or of Boolean sequences) and encode an arbitrary proposition `φ` in what is asked about: the class of histories or the reading (`… ∨ φ`), or a history extended where `φ` holds. So the L-11 question applies to them, though there the proposition is the relation itself (`fun _ _ => P`); the Markov calibration instead reduces a Boolean sequence (the test at `n` fails where its move is `true`).
 
 **Questions.**
+
 46. Are these known in constructive topology or formal topology (closed sublocales, the double-negation nucleus), and how should they be credited?
 47. Are calibrations universal over all processes informative, or would a calibration at a fixed process be the exact strength?
 48. (optional) Do the two diagonal limit laws, `Limit.Free.settles_not_refuted` and `Limit.Sequences.recurs_not_verified` (no method fixed by the record refutes settling, or verifies recurrence, in the limit), need Markov's principle, under which each is proved? 03 §5 records this as open: Quote [theories/becoming/chapters/03-KNOWING.md]: "whether the two diagonal laws need Markov's principle is open". Separately, two other laws each imply LPO, one way only (`Limit.Sequences.eventuallyFalse_lpo`, `Limit.Sequences.either_recurs_lpo`).
@@ -562,6 +578,7 @@ Files: `Becoming/Onward.lean`, `Becoming/Lasting.lean` (namespaces `Onward`, `La
 - `choose` is data-level choice; `lifting` gives a run's existence, not an effective selection (the chapter says so). Weak König's lemma is credited in the Likeness and Lasting docstrings, not in the chapter.
 
 **Questions.**
+
 49. (optional) Is the hypothesis set of `lifting` minimal? `choose` acts only on a proof that an unbounded successor exists, which `EitherThroughout` with finite branching supplies; can that proof be had with less?
 50. Should the relation of `step_iff_either` to König's lemma and weak König's lemma be stated in the chapter?
 
@@ -588,6 +605,7 @@ assert name not in SPINE + PURE or not axioms, (full, axioms)
 - Some cited results are outside it (the HM script, L-14; periphery modules with Mathlib).
 
 **Questions.**
+
 51. Is the discipline meaningful as stated? Is the strictness beyond constructivity about computation, and should the chapter give a reason for excluding quotient soundness and function extensionality?
 52. Should the report also list impredicativity and other kernel features a declaration depends on?
 
@@ -610,6 +628,7 @@ File: `Becoming/PropositionIdentity.lean` (namespace `PropositionIdentity`). **M
 - Function extensionality and quotient soundness are not treated.
 
 **Questions.**
+
 53. Is the equivalence anything beyond the folklore that propext is congruence of every predicate on `Prop` under `↔`, and does the word *lumping* add content?
 54. Is the argument from loss of computation a sound reason to exclude propext from a core whose claims are propositions?
 
@@ -632,6 +651,7 @@ Files: `Becoming/Arising.lean`, `Becoming/MapInstances.lean` (namespace `Web`), 
 - The sentences of 08 §6 on pairing, power and three-variable logic are cited from the literature and not checked there (L-01).
 
 **Questions.**
+
 55. Is audit, lifting and representation a sound criterion for a law of the grammar, and what form should the representation theorem take (a faithful functor, an equivalence of categories of models, an interpretation)?
 56. In what sense is the grammar the theory's root while most laws are not lifted, and what would have to be lifted for the name to fit?
 57. (optional) Can mutual interpretation with a named fragment of Lean (each compiled into the other, provability kept both ways), which 08 §6 leaves open, be shown, and which fragment is natural?
@@ -657,6 +677,7 @@ Files: `Becoming/Reading.lean` (namespace `World`), `Becoming/ExchangePremises.l
 - Counting the difference as a relatum makes balance hold by construction; the chapter grants it, Quote [theories/becoming/chapters/01-ROOT.md]: "Balance is not removed: nothing comes from nothing becomes feasibility, a premise located in the law."
 
 **Questions.**
+
 58. Is holding by the reading a derivation, or a definitional extension that relocates the premise?
 59. Is `Flow.listed_iff_lpo` stated at its exact strength, and does it say something about exchange rather than about listing?
 
@@ -694,6 +715,7 @@ Files: `Becoming/Significance.lean`, `Becoming/PremiseWitnesses.lean`. **Meaning
 - The first two theorems here quantify over the free significance, which is not stated on the grammar: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "The free significance of §1 is not lifted onto the root." Only the own-closure reading above is on the root, where 07 proves one of the condition's consequences; three more are proved on a web's level paths.
 
 **Questions.**
+
 60. Is invariance under change of significance the right formalization of reading only the dynamics, against syntactic forms of Hume's law (Prior 1960; Schurz 1997)? 08's table now says what they state that the account does not yet: is that accurate, and should 07 credit them at the theorem?
 61. Is the double-negation calibration informative about evaluation, or a lemma of the logic?
 
@@ -717,6 +739,7 @@ Files: `Becoming/Weightings.lean`, `Becoming/PremiseWitnesses.lean` (namespace `
 - Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Monotonicity at the standpoint is C's premise relocated: weaker, still a premise." Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "On a listing's frame, every claim counted, an order is increasing in admission exactly when it meets C, so monotonicity at the standpoint is weaker only in scope, a listing and not all of what can form" ([07 §4.4, what would give C's order](../chapters/07-SIGNIFICANCE.md#r-what-would-give-c)). Weights are natural numbers and the listing finite.
 
 **Questions.**
+
 62. Is the credit above accurate, and what does the class version state beyond monotonicity?
 63. Do natural weights and a finite listing limit the result in a way the chapter should state?
 
@@ -744,6 +767,7 @@ File: `Becoming/Diagonal.lean` (namespace `Diagonal`). **Meaning.** For a map mo
 - [this dossier, AI] The gap theorem is Cantor's diagonal in Lawvere's form (Lawvere 1969), which 03 credits; the unfolding iterates it. Neither the chapter nor the module credits revision theory for the rhythm.
 
 **Questions.**
+
 64. What does the unfolding (completion that never returns) state beyond iterating the diagonal argument?
 65. How does the reading of the liar as a rhythm relate to the revision theory's treatment of it? The three-valued counterpart, where the liar rests undecided, is L-27.
 
@@ -756,6 +780,7 @@ No Lean statement: a tool, `tools/research/completion.py`, run whenever the resu
 - Quote [tools/research/completion.py]: "so patterns match source text, not elaborated terms: a premise named only through a definition the statement unfolds is not found." K4 and K5 look only at the patterns their coverage file lists; Quote [theories/becoming/chapters/08-METHOD.md]: "So the criterion is completion in a qualified sense, not a proof that every premise is named, and not a proof of necessity."
 
 **Questions.**
+
 66. Is a check on source text a meaningful criterion of completion, and what would a logician require instead (for example, an audit of hypotheses on elaborated terms)?
 67. Is K3's treatment of logical premises (a witness meeting decidedness, a proof it is never refuted, a calibration) sound?
 
@@ -789,6 +814,7 @@ File: `Becoming/Undecided.lean` (namespace `Undecided`). **Meaning.** With an un
 - Infinitely many sentences, where the least fixed point needs a limit stage, and fixed points other than the least are not derived (module header).
 
 **Questions.**
+
 68. Is the finite specialization stated correctly, and is the module's credit adequate for the chapter?
 69. Is the exact bound (`Undecided.chain_exact`) recorded in the literature?
 70. Taken with L-25, how does the reading of the liar on both sides (two values, a rhythm that never rests; three values, resting undecided) relate to revision theory and to Kripke's fixed point?
@@ -811,6 +837,7 @@ Files: `experiments/integrated-correction/general-framework/generative-basis/lea
 - [this dossier, AI] The Curry statement, which 08 credits to Curry, is the propositional form of Curry's paradox with the fixed point taken as a hypothesis; no self-referential sentence is constructed.
 
 **Questions.**
+
 71. Is the contraction theorem a known fact of substructural or resource logics (linear logic, bunched implications, Petri-net semantics), and how should it be credited?
 72. Does 08's conclusion about self-reference follow from these statements?
 
@@ -832,6 +859,7 @@ No Lean block: the statements are long; each is named and linked, and the third 
 - [this dossier, AI] 08's gloss of the double-negation row read "reach without a path" until 7 November 2026, which misdescribed the law: its conclusion is reach, which carries a path; what needs the principle is the step from the absence of an invariant separation to such a path. 08 now says so.
 
 **Questions.**
+
 73. By the criterion of L-11, which of these are calibrations and which lemmas?
 74. Is each stated at its exact strength, and is any a known equivalence of constructive reverse mathematics that should be credited?
 

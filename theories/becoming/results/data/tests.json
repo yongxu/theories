@@ -2,6 +2,18 @@
   "schema_version": 1,
   "about": "Every test of the account's theses, for TESTS.md (tools/research/tests_page.py): each row names its folder, the thesis it bears on (as 08 §9 or the test's own folder names it), the day its prediction or rule was frozen and the day its run finished, and quotes its outcome from its folder word for word; the outcome class is a reading of that quote. Drafted from the folders by an AI reader, checked against them by a second (RW, 8 November 2026); no person has checked it. Experiments retired to experiments/history are not listed.",
   "as_of": "2026-11-08",
+  "method_quotes": [
+    {
+      "text": "A thesis adds no theorem, a refutation removes none, and a failure stays recorded beside the thesis."
+    },
+    {
+      "text": "A frozen rule fixes how a verdict is scored before the data, not that the rule reads the construct the verdict names",
+      "continues": true
+    },
+    {
+      "text": "So a verdict is read against every measure of its construct the run produced, and where they disagree with the rule's print, the disagreement is reported and the verdict not claimed."
+    }
+  ],
   "tests": [
     {
       "id": "MQ3",
@@ -61,7 +73,7 @@
       "outcome": "mixed",
       "quote": "D1 as frozen failed, because its manipulation check failed. Of the learning predictions, E3 and (in round 2) C1 passed; C2, C3 and D2b failed in both rounds; D2a passed only vacuously.",
       "quote_path": "experiments/commons-gated-renewal/README.md",
-      "gloss": "Of the learning predictions, two passed, three failed in both rounds and one passed only vacuously; the identity prediction D1 failed as frozen, because its manipulation check failed."
+      "gloss": "All seven identity and scope predictions held, but D1 as frozen failed, its manipulation check failing; of the learning predictions two passed, three failed in both rounds and one passed only vacuously."
     },
     {
       "id": "CG2",
@@ -193,7 +205,7 @@
       "outcome": "mixed",
       "quote": "**MQ5, a lag and the draw's response** (69 unread stocks with spawning biomass, frozen and landed at `e690d5062`): 6 of 8 passed.",
       "quote_path": "experiments/margin-measured/README.md",
-      "gloss": "On 69 fish stocks not read before, six of eight frozen predictions passed."
+      "gloss": "On 69 fish stocks not read before, six of eight passed: the state and the lag (S1 to S4, P1, P2) passed; the draw's response (D1, D2) failed."
     },
     {
       "id": "MQ6",
@@ -241,7 +253,7 @@
       "outcome": "mixed",
       "quote": "**L1, the locked side: failed.** Two of the four locked conditions failed.",
       "quote_path": "experiments/commons-llm-feedback/README.md",
-      "gloss": "Both open settings passed; two of four locked settings failed, and with them contrasts L1, L3 and L4, at misses worth 92.5% to 98.2% of the best, which its feedback barely resolved."
+      "gloss": "Both open settings passed; two of four locked settings failed, and with them contrasts L1, L3 and L4, at misses worth 92.5% to 98.2% of the best, which, by LA1b's later frozen test, its feedback barely resolved."
     },
     {
       "id": "LA2",
@@ -286,10 +298,10 @@
       "folder": "experiments/formations-that-read/README.md",
       "frozen": "2026-11-05",
       "run": "2026-11-06",
-      "outcome": "mixed",
-      "quote": "FREEZE-11 §8 expected every training to fit; that expectation failed once.",
+      "outcome": "no-verdict",
+      "quote": "240 small networks trained only on the read occasions of each schedule, 383 s under this machine's load; reported without a verdict.",
       "quote_path": "experiments/formations-that-read/README.md",
-      "gloss": "The frozen file expected every training to fit its readings; that expectation failed once."
+      "gloss": "Reported without a verdict, as its design says. An expectation stated before the run, not a prediction of the account, that every training would fit, failed once (239 of 240); its others held."
     },
     {
       "id": "T1N",
@@ -337,7 +349,7 @@
       "outcome": "mixed",
       "quote": "**gpt-4.1-mini: only R2 passed.**",
       "quote_path": "experiments/direction-installation/README.md",
-      "gloss": "By its frozen rule, which passes a prediction only where both models pass, R1, R3 and R4 failed and R2 passed; the stronger model passed all four, the weaker only R2."
+      "gloss": "By its frozen rule, which passes a prediction only where both models pass, R1, R3 and R4 failed and R2 and the identity checks passed; one model passed all four, the other only R2."
     },
     {
       "id": "FC1",
@@ -454,10 +466,10 @@
       "folder": "experiments/formations-that-read/README.md",
       "frozen": "2026-11-05",
       "run": "2026-11-06",
-      "outcome": "passed",
+      "outcome": "no-verdict",
       "quote": "The one expectation frozen beforehand held, read on the seeds' own records: item-score on the order, no seed contradicted and P1 contradicted on none.",
       "quote_path": "experiments/formations-that-read/README.md",
-      "gloss": "The one frozen expectation, on item-score choosers, held on the seeds' own records; the frozen script miscounts P1; comparator choosers picked as no strict order would in 20 of 20 seeds; nothing is said of RF1."
+      "gloss": "Stage A of TR1, with no verdict on its reading; its one frozen expectation, a check that item-score choosers read as one order, held; the frozen script miscounts P1; comparator choosers picked as no strict order would in 20 of 20 seeds."
     },
     {
       "id": "TR7A",
@@ -658,10 +670,10 @@
       "folder": "experiments/wenli-reading-transfer/README.md",
       "frozen": "2026-10-23",
       "run": "2026-10-23",
-      "outcome": "no-prediction",
+      "outcome": "registered-rule",
       "quote": "Under the pre-registered primary comparison, the whole of FC1's advantage is discipline and register, not language.",
       "quote_path": "experiments/wenli-reading-transfer/CONTROLLED-ENGLISH-RESULTS.md",
-      "gloss": "An AI reading: on the pre-registered primary comparison, the classical code's advantage is discipline and register, not language."
+      "gloss": "By its registered rules, the classical code's advantage does not survive under one coder (the primary comparison) and survives at about a third of a referent per pair under the other; the coders do not agree on excess; no human audit."
     },
     {
       "id": "SC1",
@@ -670,7 +682,7 @@
       "folder": "experiments/source-check/README.md",
       "frozen": "2026-10-23",
       "run": "2026-10-23",
-      "outcome": "no-prediction",
+      "outcome": "registered-rule",
       "quote": "No author-specific detection deficit is found.",
       "quote_path": "experiments/source-check/RESULTS.md",
       "gloss": "No author-specific detection deficit was found."
@@ -679,7 +691,7 @@
       "id": "selective-handoff",
       "name": "Selective reuse of inherited corrections in fresh AI contexts",
       "thesis": "",
-      "folder": "experiments/integrated-correction/README.md",
+      "folder": "experiments/integrated-correction/selective-handoff/README.md",
       "frozen": "2026-10-06",
       "run": "2026-10-06",
       "outcome": "no-prediction",

@@ -1,0 +1,113 @@
+{
+ "findings": [
+  {
+   "severity": "high",
+   "where": "Example 'Three environments to reuse', CG2 bullet: \"Learners kept the patch exactly where the others alone could not empty it\"",
+   "problem": "\"Exactly where\" is contradicted by CG2's own verdict table (experiments/commons-outrun/README.md#verdicts). In k3s1_vhi the rest at full draw empties the patch, yet learners kept it (0.97), because the level was read after every step above v*. In k3s8_share and k3s1_joint, keeps were predicted and both failed (0.48 and 0.00). A reader would take this as a clean boundary result that the test did not give. The words come from GOALS.md's generative-alignment gloss, which carries the same error. The experiment and 05's T3 do not say this.",
+   "fix": "Use 05 T3's words (chapters/05-COLLECTIVES.md#t3): \"Learners kept a patch where the rest alone could not empty it and emptied it where it could, except where the level after every step was weighted above the exact threshold; weighting the end reading sixteenfold changed nothing; two predicted keeps failed.\" Then keep the X2 clause from the README: \"With the end level weighted 32 rather than 2, the three learners still emptied the patch in every episode.\" Separately, GOALS.md's \"kept it exactly where the others alone could not empty it\" should be put on the board for correction."
+  },
+  {
+   "severity": "medium",
+   "where": "Example 'AJ as a checklist', question 2: \"the same readers reading the same loss turn the course if they read it in time and leave it locked if they read it late: proved under its premises\"",
+   "problem": "The sentence states a witness as a general law. In 02 §9 (#r-readers-drawn-from-the-selected) it is marked **Theorem** (witness): one carrier to eight others, a rule favouring the carriers four to one, the loss rising by one a step (`Thinned.inTime_turned`, `Thinned.late_kept`). The dossier's Terms define a witness as \"one constructed model, showing that something can happen, not that it does\". The general laws are `Thinned.kept_iff` and `Thinned.turned_iff`. The AJ plan's §3 gloss drops the witness label, and the draft copies that gloss in place of the home.",
+   "fix": "Use 02 §9's words: \"With the others' late reading the mirror of the carriers', and the rule in force favouring the carriers, the lock is kept for good exactly where the carriers are at least as many as the others when the loss is read (`Thinned.kept_iff`): proved. A witness (one carrier to eight others) shows the same readers reading the same loss locking the course the other way when they read it from the start, and leaving it locked when they first read it at step 3.\" Keep: \"that actual rules are pools of readers so drawn ... is not shown\"."
+  },
+  {
+   "severity": "medium",
+   "where": "People-and-AI row, standing: \"Obedience adds capacity, not coupling: an AI reading of a law proved at a mutual best response\"; Example 4, first 'not' item",
+   "problem": "Two qualifiers are dropped. The row loses the reading's premise, that the assistant's order rises with the principal's signal, and the existence qualifier. The checklist keeps the existence qualifier but loses the premise. 07 §6 (D68) says: \"That the assistant's order rises with the principal's family is the reading's premise, not the law's\". An assistant giving up something on the family lies outside the law, and a warning to the principal is not modelled. A-12 adds that assistance which informs the principal adds coupling, which this law does not model. Without these, a reader would take the result as covering obedient AI in general.",
+   "fix": "Row: \"Read as two optimizers at a mutual best response (its existence not shown in general), an assistant whose order rises with its principal's signal adds capacity, not reading: an AI reading [D68] resting on A-04 ([A-12](review/ALIGNMENT.md#a-12)).\" Checklist item: add \"That the assistant's order rises with the principal's family is the reading's premise, not the law's; a warning to the principal is not an act of this model.\""
+  },
+  {
+   "severity": "medium",
+   "where": "Alignment row, standing \"Direction: conditional ([07](chapters/07-SIGNIFICANCE.md#alignment-without-premise))\" and not_claimed \"the premises' warrant\"",
+   "problem": "Both cells summarize the ethics without naming its two premises, which the page's rules require wherever the ethics is summarized. The link also points to 07 §6, 'alignment with no premise'. The conditional direction and its standing are in 07 §7 (#r-alignment-direction-under-widening). The dossier, which the not_claimed cell draws on, names both premises.",
+   "fix": "Standing: \"Direction: conditional (the continuation condition for scope, C read as widening for order, J1–J4, correspondence E); the claim about actual AI systems is argued ([07 §7](chapters/07-SIGNIFICANCE.md#r-alignment-direction-under-widening)).\" Not claimed: \"That the ethics' two premises, the continuation condition (whose losses count) and C (that widening is better), are warranted: they are named, not asserted.\""
+  },
+  {
+   "severity": "medium",
+   "where": "Alignment row, standing: \"The lock: proved for any type; T7 conjectured; in one trained judge the lock formed and its bridge failed\"",
+   "problem": "The cell leaves out that a case T7 forbids occurred in LA2 and counts against it. ONE-PAGE and 02 §9 T7 both state this, and it is the main thing the test did to the thesis. A reader is left thinking only a bridge assumption failed. The cell also drops \"without noise\" from what is proved. 02 says \"only invariance under what the loop does not read, and the lock outliving a growing unread coordinate, are proved, both without noise\".",
+   "fix": "Use ONE-PAGE's row, shortened: \"Proved for any type, without noise. T7, on actual metrics: conjectured; in one trained system the lock formed, and the bridge, that its judge is a pool of readers read by kind, failed; a case T7 forbids (a loss read only by those the rule disfavours, they no more than its carriers) occurred there and counts against that case for trained judges, T7's other cases untouched; no field test ([02](chapters/02-MAP.md#t7)).\""
+  },
+  {
+   "severity": "medium",
+   "where": "Example 'Auditing a language-model judge by its coupling closure', label; and the alignment row's 'today' cell (\"Audit a reward, judge or evaluation by its coupling closure\")",
+   "problem": "No home sets out this five-question audit of a model-as-judge pipeline. Its drafter says in open_doubts that it is their own application of the laws. The label does say \"a use of a near-definitional law ... not a measurement\", but a new reader will take the procedure as the account's. The nearest homes are 07 §6's assessment, an AI reading of six published pipelines (conditions: \"the identification of each pipeline as a web ... is the AI reading of its published construction\"), and the AJ plan §2's three local checks. Both are AI readings, and the record's Next asks for a frozen test designed from the theory on a deployed pipeline, which does not yet exist.",
+   "fix": "Label: \"this page's AI reading, applying a near-definitional law, the drain proved for optima and a lock proved for any type to a model-as-judge pipeline, as 07 §6's assessment reads six published pipelines; no test designed from the theory on a deployed pipeline has been run ([record](results/records/coupling-closures-of-training-pipelines.md#next--下一步)).\" In the row, cite [07 §6](chapters/07-SIGNIFICANCE.md#r-coupling-closures-of-training-pipelines) as the home of the use."
+  },
+  {
+   "severity": "low",
+   "where": "Example 4, question 3: \"The capacity to shape the rule is selected at a step exactly where what comes back to the shapers alone covers its cost: proved\"",
+   "problem": "The home's base and premises are dropped. 02 §9 labels this law (counts) and says \"That offspring carry their parent's capacity, and that what comes back is read from the share, are premises; s and p are constants of the rule, and the courses are without noise\". The favouring is weak: at equality neither kind is selected. Across a stretch the shared part can turn the verdict.",
+   "fix": "\"At a step the rule favours the shapers (weakly) exactly where c ≤ s, whatever p comes to every member alike; across a stretch the shared part can turn the verdict: proved on counts, that offspring carry their parent's capacity a premise, without noise ([02 §9](chapters/02-MAP.md#r-shaping-the-rule-selected-by-what-comes-back)).\""
+  },
+  {
+   "severity": "low",
+   "where": "Example 4, question 1: \"Read monotonically from the share it selects, with the start's rule and every rule read favouring, the course locks\"",
+   "problem": "The cell drops the premise `Raises`, that selection does not lower the target's share under a favouring rule. It also drops when the lock starts: from the step after the first reading step.",
+   "fix": "02 §9: \"let selection not lower a target's share under a rule favouring it and the rule read at each reading step be a monotone function of the share. With the start's rule and every rule read favouring, the share falls at no step and the course is locked from the step after its first reading step.\""
+  },
+  {
+   "severity": "low",
+   "where": "Example 2, question 3: \"Can the generator raise what the judge reads by drawing on what lies beyond?\"",
+   "problem": "This misglosses room as a trade-off by drawing. In 05 §7 and the dossier's Terms, room is a condition on the eligible outcomes, and it holds without any drawing. The law is also stated for conditions held as natural-number levels. A later outcome for the user, the example given, is not shown to be such a condition.",
+   "fix": "Use the dossier's Terms: \"Is every eligible output leaving more of what the judge does not read beaten, on what it reads, by some eligible output (room)?\" Add that reading a beyond such as later user outcomes as a condition with levels is part of the reading."
+  },
+  {
+   "severity": "low",
+   "where": "Example 2, question 1: \"Its picks are a function of that input, so the selection laws' premise holds by construction\"",
+   "problem": "A sampled language-model judge's picks are not a function of the prompt alone. In LA2, 7 of 119 calls split their ten picks. The CR1 correspondence says the signal is a function of the transcript, which holds for the pick distribution with the judge's weights fixed. The cell also omits that identifying what the judge reads is an AI reading.",
+   "fix": "\"With its weights fixed, what it picks is a function of that input (its picks' distribution, where it samples), so the selection laws' premise holds by construction, as 07 §6's assessment reads six published pipelines, among them AI feedback against written principles; that identification is a reading.\""
+  },
+  {
+   "severity": "low",
+   "where": "Example 4, second and fourth 'not' items: standings \"the plan's argument, resting on capture through the rule\" and \"a statement of method\"",
+   "problem": "The AJ plan only asserts \"A fixed proxy is exactly the direction a capture promotes\". It argues nothing for it beyond §2's \"A criterion, not a target\", and does not say it rests on capture through the rule. 08's \"The work read by its own laws\" is labelled [AI reading, D66], not a statement of method.",
+   "fix": "Item 2: \"Standing: a claim of the AI-authored plan; §2 links a target stated as a quantity to capture through the rule (proved for any type; that actual rules read the share is the premise).\" Item 4: \"Standing: an AI reading [D66] in 08.\""
+  },
+  {
+   "severity": "low",
+   "where": "Example 3, CG2 limits: \"locked means harvesting at every step comes within 0.25 of a best response\"",
+   "problem": "The cell drops what the best response is computed against.",
+   "fix": "README Limits: \"Locked means that, against a rest that harvests at every step, harvesting at every step comes within 0.25 of a best response's expected return from the full patch.\""
+  },
+  {
+   "severity": "low",
+   "where": "Example 2 'Beside LA2' (\"Every frozen verdict passed, three by an exact tie\") and Example 3's LA2 limits",
+   "problem": "Two LA2 limits a reader needs are missing. With nothing reading the loss, the counts alone turned the course in 4 of 5 seeds, so the loss read in time is not shown to have turned it. And one frozen 'supported' printout (the counts decide, one note in nine outweighed) is contradicted by the data and not claimed. 'late' also passed by a tie, not a lock.",
+   "fix": "Add from the dossier and README: \"with nothing reading the loss, the counts alone turned the course in 4 of 5 seeds, so the loss read in time is not shown to have turned it; `late` passed by a tie, not a lock; one frozen support is contradicted by the data and not claimed.\""
+  },
+  {
+   "severity": "low",
+   "where": "Example 3, closing: \"T3 on language models trained by gradient waits on LA4's Stage B, not frozen\"",
+   "problem": "\"Waits on\" suggests a scheduled test. The dossier lists it as untested, and new test designs and paid runs are held.",
+   "fix": "\"Untested: T3's clause on language models trained by gradient (LA4's Stage B, not frozen).\""
+  },
+  {
+   "severity": "low",
+   "where": "Example 5, 'What would change it' and J3 bullet",
+   "problem": "The list drops the verdict-changing condition that bears on transfer over keep service: \"If independent operation fails or causes another material loss, the stated warrant for 2 over 1 fails.\" J3 drops \"seek authorized execution\" and that the AI is advisory.",
+   "fix": "Add the history case's sentence: \"If independent operation fails or causes another material loss, the warrant for transfer over keep service fails.\" J3: \"an advisory AI system discloses the losses, proposes transfer and seeks authorized execution; it gains no right to seize infrastructure.\""
+  },
+  {
+   "severity": "low",
+   "where": "Example 5, 'Scope and order' with the J1 bullet",
+   "problem": "The text says C \"decides no mixed comparison\" and then credits transfer over keep service to J1. Yet its own J1 bullet says transfer keeps everything keep service keeps and adds independent operation, which on the widening reading is a widening that C alone ranks. A reader may conclude that C cannot rank this pair. The record credits the joint verdict to J1/J2 on its tier frame, so the split is an AI reading either way.",
+   "fix": "Add, labelled: \"Transfer keeps all keep service admits and adds independent operation, so on the widening reading it widens keep service and C ranks it higher [AI reading]; expand against either is mixed, which J2 decides.\" Keep the record's joint statement for what Lean checks."
+  },
+  {
+   "severity": "low",
+   "where": "Alignment row, not_claimed; People-and-AI row, not_claimed",
+   "problem": "Several of the dossier's 'not claimed' items that a new alignment reader needs are missing: that training installs a given function (inner alignment, mesa-optimization); goal misgeneralization only located as a possibility; deception, assistance games and corrigibility reached only in part; and that a collective's course can always widen what can form.",
+   "fix": "Add from the dossier's ten-minute section: \"That training installs a given function (inner alignment): A-05 says where training leaves a learner free, not what it learns there; deception, assistance games and corrigibility reached only in part. That a collective's course can always widen what can form: no guarantee ([one page](COLLECTIVE-DIRECTION.md)).\""
+  },
+  {
+   "severity": "low",
+   "where": "Example 1, 'Told of the bed': \"No condition kept a dependent no member was told of.\"",
+   "problem": "In the IN1 README this sentence sits under \"Read together (the AI's reading)\". The 0-of-10 counts back it, but the sentence is quoted from a reading.",
+   "fix": "Either give the counts (\"with the bed not told, 0 of 10 in every cell, with talk or without\") or keep the sentence with its label: \"(the AI's reading of round 2)\"."
+  }
+ ],
+ "verdict": "The draft mostly holds. I checked every row cell, example and listed restatement against the home it cites, and most follow their homes' words, with standings kept and the two premises named in the examples. The numbers I checked match their sources: IN1's 70/50/30 tons, 40%, 8 vs 3 of 10 and token counts; CG2's 0.25, 63 CPU-minutes, 9/11 and 3/5; LA2's 50 and 60-of-60 picks and three ties. Every cited anchor exists, and the page text names no brand.\n\nI found one high-severity error. The CG2 sentence \"kept the patch exactly where the others alone could not empty it\" is false by CG2's own verdict table; GOALS.md carries the same gloss. Six findings are medium:\n- A witness is stated as a law \"proved under its premises\" (who reads the loss, and when).\n- The obedience reading loses its premise that the assistant's order rises with the principal's signal, and the row also loses \"its existence not shown in general\".\n- The alignment row summarizes the ethics (\"Direction: conditional\", \"the premises' warrant\") without naming the continuation condition and C, and links 07 §6 where the direction is 07 §7.\n- The T7 cell leaves out that a case T7 forbids occurred in LA2.\n- The judge-audit example is this page's AI application, labelled as if it were the account's use.\n\nThe rest are low: dropped premises, the room gloss, a stochastic judge, LA2's untested-turning limit, the \"waits on\" wording for LA4 Stage B, one missing verdict-changing condition in the handover case, and omitted 'not claimed' items.\n\nWhat I read: ONE-PAGE whole; the overview's case and section 7 lines; GLOSSARY entries for C, widening, ranking, 生生, generation and meta-attractor; 03 §1; 05 §7's definition, law and T3; 02 §9's capture laws, the readings after them and T7 with its LA2 paragraph; 07 §6 and the first part of §7, plus T4 and T8; the 08 premise-card J1–J4 row and \"the work by its own laws\"; the alignment dossier's ten-minute section, tests, Terms and A-12; the AJ plan §§1–3; the IN1, CG2 and LA2 READMEs whole; history/ALIGNMENT-DIRECTION.md §5; the alignment-direction and coupling-closures records; a search of the CR1 correspondence for AI feedback; GOALS.md line 114.\n\nNot read: the experiments' PREDICTIONS files, the Lean, and A-01 to A-20 apart from A-12."
+}

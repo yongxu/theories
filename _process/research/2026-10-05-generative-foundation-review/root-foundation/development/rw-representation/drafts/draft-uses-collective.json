@@ -1,0 +1,203 @@
+{
+ "rows": [
+  {
+   "field": "Coordination among people",
+   "today": "Check a shared draw by the joint take, not each member's own count ([05 §1](chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess)); locate a two-kind critical mass from `hi`, `lo` and `c` ([02 §9](chapters/02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected)); ask which of six conditions for enough of the situation a collective lacks ([AI reading](COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean)).",
+   "standing": "Joint excess: proved on models; restates the commons ([one page](ONE-PAGE.md)). The critical mass: proved in counts, without noise; its test, [CMT](../../experiments/critical-mass-located/DESIGN.md), frozen 5 November 2026, not run. One kind of institution has one minimal model [AI reading] ([05 §12](chapters/05-COLLECTIVES.md#r-a-rule-rebuilt-from-the-members-it-limits)). No test has human participants ([why](COLLECTIVE-DIRECTION.md#5-what-is-empirical)). That coordination needs understanding shared first: a thesis, not a theorem, untested here ([opening](OPENING.md)).",
+   "not_claimed": "That any actual collective, market, pool, entry rule or optimizer meets a law's hypotheses ([05](chapters/05-COLLECTIVES.md#not-shown)); any evaluation: no law says restraint better or cooperation good; a guarantee that a collective's course widens what can form ([no guarantee](COLLECTIVE-DIRECTION.md#the-answer-in-brief)); who ought to take less."
+  },
+  {
+   "field": "Human development (生生, life in the whole and its continuing generation, not any new organization)",
+   "today": "Nothing claimed of how a person develops or fares. A reader can check whether one course widens another (admits all the other admits, and at some step more), which needs no premise; calling it better is C's, and a mixed comparison stays unranked ([07 §4.4](chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-positive-weighting-ranks)).",
+   "standing": "T8, argued: for life, the way is 生生, life in the whole and its continuing generation [AI reading], compared by widening, scope from the continuation condition, order from C, neither asserted; no verdict binding every possible mind is claimed ([07 §8](chapters/07-SIGNIFICANCE.md#theses)). The earlier programmes: design programmes, not results; correspondence not established ([05 §11](chapters/05-COLLECTIVES.md#joint-plans)).",
+   "not_claimed": "Well-being beyond admitted continuation, the value of bringing new lives into existence, any duty, right, recognition, motivation or compliance, a complete ranking of mixed comparisons ([07](chapters/07-SIGNIFICANCE.md#does-not-show)); that the ethics derives from the condition. 生生 is not any new organization."
+  }
+ ],
+ "examples": [
+  {
+   "field": "Coordination among people",
+   "title": "A constructed standards body: where the critical mass falls",
+   "label": "constructed, not observed: proved laws in counts, without noise, read on people by an AI reading; its test, CMT, frozen 5 November 2026 and not run; no test has human participants",
+   "markdown": "*Constructed, not observed. The numbers are illustrative. The laws are proved in counts, without noise ([02 §9](chapters/02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected)); reading them on a body of people is an AI reading.*\n\nA standards body of 30 members decides each round which practice its rule favours. Some members are *shapers*: they back a new shared format and carry the capacity to shape the rule; the others keep the status quo. That the rule's readers are drawn from the members it selects, and that each new seat carries the practice of the one it replaces, are the model's premises, not facts about any body.\n\nTake `a = 1`, `p = 0`, `c = 3`, `hi = 7`, `lo = 1`: each shaper among the readers reads 7 coming back to the shapers, each other reads 1, and backing the format costs 3. The rule read favours the shapers (weakly) exactly where `x.carrier · c + x.other · c ≤ x.carrier · hi + x.other · lo`, whatever `a` and `p`; with `lo ≤ c ≤ hi`, exactly where the shapers stand to the others at least as `c − lo` to `hi − c`. Here that is 2 to 4, the shapers' share `(c − lo)/(hi − lo)` = 1/3 ([record](results/records/shaping-read-by-readers-drawn-from-the-selected.md#correspondence--对应)): 10 of 30.\n\n- 12 shapers: 90 against 84 + 18 = 102. Strictly favoured, their share rises strictly at every step, every configuration locked.\n- 8 shapers: 90 against 56 + 22 = 78. Strictly disfavoured, it falls strictly at every step.\n- 10 shapers: 90 against 90, a tie; the share stays.\n- A cost of 2 puts the mass at 1 to 5, 5 of 30. Adding `p` to every member moves it nowhere.\n\n**What it predicts, and how far.** Without noise the start decides. Drawn one member at a time, neither lock holds for good: either is left by drift, at a weight whose bound shrinks across the distance from the mass, and which state one member arising fixes more often depends on `a` and `p` as well as `hi`, `lo` and `c` ([drawn one at a time](chapters/02-MAP.md#r-drawn-shaping-drawn-one-at-a-time)). At an even count the shapers are risk dominant exactly where `2c < hi + lo` (6 < 8 here), and risk dominance can part from which state fixes more often.\n\n**Its test.** [CMT](../../experiments/critical-mass-located/DESIGN.md) would read this location on people's groups in published laboratory stag hunts whose payoffs the experimenter set, screened before any choice is seen. It was frozen on 5 November 2026 and has not run; a pass would bound the mass on the side of one half only. No test of the account has had human participants ([what is empirical](COLLECTIVE-DIRECTION.md#5-what-is-empirical)). Nothing here ranks a course: that needs C or a premise in its place."
+  },
+  {
+   "field": "Human development (生生)",
+   "title": "Two courses for a valley: T8 under its two premises",
+   "label": "constructed, not observed: a use of an argued thesis (T8) under two unasserted premises, beside a proved law of widening (any type, finite listing)",
+   "markdown": "*Constructed, not observed. T8 is argued, not proved; its two premises are stated, not asserted.*\n\nA valley weighs three courses. Course A keeps the river's fishery, its wetland and the village school, and adds a clinic. Course B keeps the same, with no clinic. Course D adds a factory and new trades, and ends the wetland and the reed-cutters' way of life, which A keeps.\n\n**What needs no premise.** A *widens* B: at every step it admits all that B admits, and at some step more. Proved for any type on a finite listing: one course widens another exactly when every positive weighting ranks it higher, and a mixed comparison is decided both ways ([07 §4.4](chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-positive-weighting-ranks)). A and D are mixed: each admits something the other does not.\n\n**What the two premises add** ([07 §4](chapters/07-SIGNIFICANCE.md#scope-and-order)). The *continuation condition* fixes scope, whose losses count: every continuation's, the reed-cutters' and the wetland's among them; its step of invariance extends scope to losses that return to no one. It ranks nothing. *C*, widening what can form is better, gives order: it ranks A above B. Neither is asserted. C leaves A against D unranked: an expansion that ends forms of life another course keeps both exceeds that course and fails to include it, so the two are mixed ([07 §9](chapters/07-SIGNIFICANCE.md#objections)). Choosing between them takes further premises, each named: a reading of `living`, the lifting L and the commitments J1–J4 ([07 §5](chapters/07-SIGNIFICANCE.md#practical-judgment)).\n\n**T8** reads this as the way for life: 生生, life in the whole and its continuing generation [AI reading], compared by widening, scope from the condition and order from C ([07 §8](chapters/07-SIGNIFICANCE.md#theses)). *For life* says whose way it is, not whose losses count. Its standing is argued; open are P2 and P4 with P3, the step of invariance and a reason for C; no verdict binding every possible mind is claimed. It falls to a mixed case argued better from every standpoint counting everything positively, with no further premise, or a pure closing argued good for life.\n\n**What it does not show.** Whether anyone in the valley fares better: 07 shows no well-being beyond admitted continuation, no value of bringing new lives into existence, and no duty, right, recognition, motivation or compliance ([07](chapters/07-SIGNIFICANCE.md#does-not-show)). 生生 is not any new organization, nor the map's generation, which allows loss ([glossary](../../GLOSSARY.md)). The five earlier folders chapter 5 lists as applications elsewhere, community and cooperative designs among them, are design programmes, not results; correspondence not established ([05 §11](chapters/05-COLLECTIVES.md#joint-plans), [the earlier folders](../README.md))."
+  }
+ ],
+ "restatements": [
+  {
+   "sentence": "Check a shared draw by the joint take, not each member's own count.",
+   "home": "theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess",
+   "home_words": "Formations can each take within what a step gives while together they take more (`Pair.own_not_joint`). In a balanced flow each step of joint excess lowers the level by at least one, so `n` consecutive such steps need a level of at least `n` at the start. Under the gate at need `m`, `n` consecutive steps of joint excess from a level below `n + m` leave the level below `m` for good and end every formation depending on the condition at a need of at least `m`"
+  },
+  {
+   "sentence": "Joint excess: proved on models; restates the commons.",
+   "home": "theories/becoming/ONE-PAGE.md",
+   "home_words": "Proved on models; restates the commons."
+  },
+  {
+   "sentence": "who ought to take less (not claimed)",
+   "home": "theories/becoming/chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess",
+   "home_words": "It restates the tragedy of the commons and overshoot (Lloyd 1833; Hardin 1968; Meadows and others 1972) in near-definitional arithmetic, not who ought to take less"
+  },
+  {
+   "sentence": "The rule read favours the shapers (weakly) exactly where `x.carrier · c + x.other · c ≤ x.carrier · hi + x.other · lo`, whatever `a` and `p`; with `lo ≤ c ≤ hi`, exactly where the shapers stand to the others at least as `c − lo` to `hi − c`.",
+   "home": "theories/becoming/chapters/02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected",
+   "home_words": "At a share it favours the shapers (weakly) exactly where `x.carrier · c + x.other · c ≤ x.carrier · hi + x.other · lo`, whatever `a` and `p` (`DrawnShaping.drawn_favours_iff`, `DrawnShaping.drawn_favours_alike`), and with `lo ≤ c ≤ hi` exactly where the shapers stand to the others at least as `c − lo` to `hi − c` (`DrawnShaping.critical_iff`)."
+  },
+  {
+   "sentence": "Here that is 2 to 4, the shapers' share `(c − lo)/(hi − lo)` = 1/3.",
+   "home": "theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.md#correspondence--对应",
+   "home_words": "Where lo < c < hi the model is the stag hunt in which the second strategy's payoff does not depend on the partner: a shaper meeting a shaper leaves a + p + hi, a shaper meeting an other a + p + lo, an other meeting anyone a + p + c. The critical mass is its mixed equilibrium, at the shapers' share (c − lo)/(hi − lo)"
+  },
+  {
+   "sentence": "Strictly favoured, their share rises strictly at every step, every configuration locked. / Strictly disfavoured, it falls strictly at every step.",
+   "home": "theories/becoming/chapters/02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected",
+   "home_words": "where that rule favours the shapers, every configuration of the course is locked and neither the share nor the rule in force is ever below the start (`DrawnShaping.drawn_locks`); ... Strictly favoured at the start, the shapers' share rises strictly at every step; strictly disfavoured, it falls strictly at every step, the shapers present (`DrawnShaping.drawn_rises`, `DrawnShaping.drawn_falls`)."
+  },
+  {
+   "sentence": "That the rule's readers are drawn from the members it selects, and that each new seat carries the practice of the one it replaces, are the model's premises, not facts about any body. / The laws are proved in counts, without noise.",
+   "home": "theories/becoming/chapters/02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected",
+   "home_words": "That the readers are drawn from those the rule selects and read with `lo ≤ hi`, and that offspring carry the capacity, are premises; `hi`, `lo`, `p` and `c` are constants, and the courses are without noise"
+  },
+  {
+   "sentence": "Without noise the start decides.",
+   "home": "theories/becoming/chapters/02-MAP.md#t7",
+   "home_words": "Where `lo < c < hi` the model is the stag hunt, its critical mass the mixed equilibrium; without noise the start decides."
+  },
+  {
+   "sentence": "Drawn one member at a time, neither lock holds for good: either is left by drift, at a weight whose bound shrinks across the distance from the mass, and which state one member arising fixes more often depends on `a` and `p` as well as `hi`, `lo` and `c`.",
+   "home": "theories/becoming/chapters/02-MAP.md#r-drawn-shaping-drawn-one-at-a-time",
+   "home_words": "So, drawn, neither lock holds for good, and which state a member arising fixes more often depends on the base and on the part that comes to every member alike, which move nothing without noise."
+  },
+  {
+   "sentence": "(either lock is left by drift, at a weight whose bound shrinks across the distance from the mass)",
+   "home": "theories/becoming/chapters/02-MAP.md#capture",
+   "home_words": "while drawn one member at a time either lock is left by drift, at a weight whose bound shrinks across the distance from the mass"
+  },
+  {
+   "sentence": "At an even count the shapers are risk dominant exactly where `2c < hi + lo`, and risk dominance can part from which state fixes more often.",
+   "home": "theories/becoming/chapters/02-MAP.md#r-drawn-shaping-drawn-one-at-a-time",
+   "home_words": "at an even population the rule read favours the shapers strictly exactly where `2c < hi + lo` (`DrawnReplacement.risk_dominant_iff`), risk dominance in counts. The two can part"
+  },
+  {
+   "sentence": "Nothing here ranks a course: that needs C or a premise in its place.",
+   "home": "theories/becoming/chapters/02-MAP.md#t7",
+   "home_words": "Whether actual rules are read so is not established, and nothing here ranks a course: that needs C or a premise in its place."
+  },
+  {
+   "sentence": "CMT would read this location on people's groups in published laboratory stag hunts whose payoffs the experimenter set, screened before any choice is seen. It was frozen on 5 November 2026 and has not run.",
+   "home": "experiments/README.md",
+   "home_words": "The critical mass located before the adoption data, for `DrawnShaping` (board item CMT, frozen 5 Nov 2026, not run): laboratory stag hunts whose payoffs the experimenter set, screened by their design documents before any choice is seen; the mass at the shapers' share `(c - lo)/(hi - lo)`"
+  },
+  {
+   "sentence": "A pass would bound the mass on the side of one half only.",
+   "home": "experiments/critical-mass-located/DESIGN.md#what-is-frozen-and-what-it-can-refute",
+   "home_words": "The test bounds the mass on the side of one half only."
+  },
+  {
+   "sentence": "The critical mass: proved in counts, without noise.",
+   "home": "experiments/critical-mass-located/DESIGN.md#what-is-frozen-and-what-it-can-refute",
+   "home_words": "Nothing of the law. The theorems this design reads are proved in Lean with empty axiom reports ... No run can move them. A run moves one reading: the correspondence of [`DrawnShaping`] to human adoption in laboratory stag hunts, under a bridge premise stated in section 2. The correspondence is itself an AI reading."
+  },
+  {
+   "sentence": "No test has human participants. / No test of the account has had human participants.",
+   "home": "theories/becoming/COLLECTIVE-DIRECTION.md#5-what-is-empirical",
+   "home_words": "One kind of institution has one minimal model on the root [AI reading], a rule rebuilt from the members it limits ([05 §12]), and no actual institution is shown to meet its hypotheses; no field test of reform events is frozen (one designed could not be frozen as designed, [02]); no test has human participants."
+  },
+  {
+   "sentence": "One kind of institution has one minimal model [AI reading].",
+   "home": "theories/becoming/ONE-PAGE.md",
+   "home_words": "An organism and one kind of institution each have one minimal model [AI reading]"
+  },
+  {
+   "sentence": "That coordination needs understanding shared first: a thesis, not a theorem, untested here.",
+   "home": "theories/becoming/OPENING.md",
+   "home_words": "Coordination needs understanding to be shared first, a thesis about how coordination forms, not a theorem, and untested here"
+  },
+  {
+   "sentence": "ask which of six conditions for enough of the situation a collective lacks [AI reading]",
+   "home": "theories/becoming/COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean",
+   "home_words": "**Reading** [AI reading, D45]. Read in the theory's terms, enough of the situation, for a given collective and condition, is all of the following at once"
+  },
+  {
+   "sentence": "That any actual collective, market, pool, entry rule or optimizer meets a law's hypotheses; any evaluation: no law says restraint better or cooperation good.",
+   "home": "theories/becoming/chapters/05-COLLECTIVES.md#not-shown",
+   "home_words": "That any actual collective, market, pool, entry rule or optimizer meets the hypotheses of a law ... Any evaluation: no law says a drain is a harm, restraint better, cooperation good or a shared code worth keeping."
+  },
+  {
+   "sentence": "a guarantee that a collective's course widens what can form (not claimed)",
+   "home": "theories/becoming/COLLECTIVE-DIRECTION.md#the-answer-in-brief",
+   "home_words": "**No guarantee.** The theory's own laws, each on its stated model, show why (§3)"
+  },
+  {
+   "sentence": "Proved for any type on a finite listing: one course widens another exactly when every positive weighting ranks it higher, and a mixed comparison is decided both ways.",
+   "home": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-positive-weighting-ranks",
+   "home_words": "**Theorem** (any type, the last two rows World; a finite listing, two-valued admission, natural weights). | one course widens another exactly when every positive weighting ranks it higher | ... | a mixed comparison is decided both ways |"
+  },
+  {
+   "sentence": "A reader can check whether one course widens another (admits all the other admits, and at some step more), which needs no premise; calling it better is C's.",
+   "home": "theories/becoming/ONE-PAGE.md",
+   "home_words": "One course *widens* another where at every step it admits all the other admits and at some step more, which needs no premise; that the wider is better does. C gives order; a ranking needs it or a premise in its place."
+  },
+  {
+   "sentence": "The continuation condition fixes scope, whose losses count: every continuation's; its step of invariance extends scope to losses that return to no one. It ranks nothing. C, widening what can form is better, gives order. Neither is asserted.",
+   "home": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
+   "home_words": "| the continuation condition | **scope** | fixes whose losses count: every continuation's; its content beyond the self's presupposition, the step of invariance, extends scope to losses that return to no one | rank anything | | C: widening what can form is better | **order** | ranks a course above every course it widens | rank mixed comparisons | Neither is asserted."
+  },
+  {
+   "sentence": "C leaves A against D unranked: an expansion that ends forms of life another course keeps both exceeds that course and fails to include it, so the two are mixed.",
+   "home": "theories/becoming/chapters/07-SIGNIFICANCE.md#objections",
+   "home_words": "an expansion that ends forms of life another course keeps both exceeds that course and fails to include it, so the two are mixed and C does not rank them"
+  },
+  {
+   "sentence": "Choosing between them takes further premises, each named: a reading of `living`, the lifting L and the commitments J1–J4.",
+   "home": "theories/becoming/chapters/07-SIGNIFICANCE.md#practical-judgment",
+   "home_words": "Choices take more, following from neither the condition nor C: which reading of `living` (which events a course includes), the lifting L and the commitments J1–J4."
+  },
+  {
+   "sentence": "T8, argued: for life, the way is 生生, life in the whole and its continuing generation [AI reading], compared by widening, scope from the continuation condition, order from C, neither asserted; no verdict binding every possible mind is claimed.",
+   "home": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses",
+   "home_words": "For life, the way is 生生, life in the whole and its continuing generation [AI reading, D1], compared by widening what can form, counted for everything (scope: the continuation condition) and ranked by what every valuer who counts everything shares (order: C). ... No verdict binding every possible mind is claimed. ... *Standing:* argued."
+  },
+  {
+   "sentence": "For life says whose way it is, not whose losses count.",
+   "home": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses",
+   "home_words": "*For life* says whose way it is, not whose losses count: every continuation's still does."
+  },
+  {
+   "sentence": "Its standing is argued; open are P2 and P4 with P3, the step of invariance and a reason for C.",
+   "home": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses",
+   "home_words": "*Standing:* argued. Open: P2 and P4, the crux of §4.6's path, with P3, a correspondence not shown for actual selves; the step of invariance, for what that path does not reach; and a reason for C."
+  },
+  {
+   "sentence": "It falls to a mixed case argued better from every standpoint counting everything positively, with no further premise, or a pure closing argued good for life.",
+   "home": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses",
+   "home_words": "*Forbids and refuted by:* a mixed case argued better from every standpoint counting everything positively, with no further premise; a pure closing argued good for life."
+  },
+  {
+   "sentence": "07 shows no well-being beyond admitted continuation, no value of bringing new lives into existence, and no duty, right, recognition, motivation or compliance; nor a complete ranking of mixed comparisons; nor that the ethics derives from the condition.",
+   "home": "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show",
+   "home_words": "That the ethics derives from the condition: the condition fixes scope and orders nothing; C gives order, and a ranking of courses needs C or a premise in its place. - Any duty, right, recognition, motivation or compliance, or an unconditional or complete ranking of mixed comparisons (priority and transfer rank some, under named premises). ... - The value of bringing new lives into existence, well-being beyond admitted continuation, and constraints on acts."
+  },
+  {
+   "sentence": "生生 is not any new organization, nor the map's generation, which allows loss.",
+   "home": "GLOSSARY.md",
+   "home_words": "Neither the grammar's `«生生»` (renewal without end), nor 02's generation (生成) as such, which allows loss, nor any new organization."
+  },
+  {
+   "sentence": "The five earlier folders chapter 5 lists as applications elsewhere are design programmes, not results; correspondence not established.",
+   "home": "theories/becoming/chapters/05-COLLECTIVES.md#joint-plans",
+   "home_words": "*Applications elsewhere* (design programmes, not results; correspondence not established): the [Wamo protocol], [evolving community swarms], the [human solutions museum], [cooperative infrastructure], [architecture for a living Earth]."
+  },
+  {
+   "sentence": "(the earlier folders, linked) design programmes, not results; correspondence not established",
+   "home": "theories/README.md",
+   "home_words": "[Chapter 5] counts five of them among applications elsewhere: design programmes, not results; correspondence not established."
+  }
+ ],
+ "open_doubts": "What I read: ONE-PAGE.md in full; GLOSSARY.md in full; theories/README.md in full (it is the atlas-generated folder table); COLLECTIVE-DIRECTION.md in full (it is at theories/becoming/COLLECTIVE-DIRECTION.md); 05-COLLECTIVES.md §1 (all of it), §11, §12, \"What this chapter does not show\" and \"Open\"; 02-MAP.md §9's opening paragraph, the RuleShaping, DrawnShaping, drawn-one-at-a-time and read-in-time theorems, T7 and the two Readings after it, and \"Which locks noise leaves\"; the record shaping-read-by-readers-drawn-from-the-selected.md, its Correspondence and Dependencies only; CMT's DESIGN.md §0 to §5, §7, §10 to §13 and §15 (not §6's verdict rule, §8, §9's dry-run tables or §14), and REVIEW-FREEZE.md round 1 only; 07-SIGNIFICANCE.md §4's head and table, §4.4's opening theorem and the self-concern theorem, §5's head, the ranking table and the four-responses conditional, §8 (T4, T5, T8), §9, \"does not show\" and \"Open\"; OPENING.md's \"This is a foundation\" paragraph, its notes [^alignment] and [^guardian], and its header; the overview's §5 and part of §7. I did not read the DrawnShaping Lean module.\n\nSymbols. The brief names `s` among the drawn-shaping model's parameters. DrawnShaping has no `s`: `s` is RuleShaping's (what comes back to the shapers alone), and DrawnShaping puts `hi` (read by shapers) and `lo` (read by others) in its place. DrawnReplacement also uses `s` as a count (\"the rule read at `s`\"). So the example uses `a`, `p`, `c`, `hi`, `lo`, `x.carrier`, `x.other`. The share `(c − lo)/(hi − lo)` is not in 02's theorem text, which gives the ratio `c − lo` to `hi − c` (`critical_iff`). The share appears in the record's Correspondence (an AI reading), in the module docstring as CMT quotes it, and in experiments/README.md. The example cites the record for it.\n\nAnchors. The stag-hunt Reading (\"without noise the start decides\"; \"nothing here ranks a course\") has no anchor of its own. It sits after T7 under `#t7`, so I cite it as 02-MAP.md#t7. The COLLECTIVE-DIRECTION and CMT anchors assume GitHub-style heading slugs (#5-what-is-empirical, #6-what-enough-situationality-would-have-to-mean, #the-answer-in-brief, #what-is-frozen-and-what-it-can-refute). I did not check them against the renderer. theories/README.md links 05 as #11-joint-plans-and-applications; I used the explicit anchor #joint-plans instead.\n\nWhere the homes differ in wording or could pull apart:\n(1) ONE-PAGE says the commons law is \"Proved on models; restates the commons\". 05 says \"restates the tragedy of the commons and overshoot ... in near-definitional arithmetic, not who ought to take less\". These are consistent; I quoted both.\n(2) COLLECTIVE-DIRECTION says \"no test has human participants\". CMT, if run, would read existing laboratory data from human groups. That would be human data, not participants recruited by the account. The line is true while CMT is not run, but it may need rewording once CMT runs.\n(3) CMT's freeze record has a sixth round with one medium finding, and on 5 November a seventh round was approved, on that change's diff. experiments/README.md says simply \"frozen 5 Nov 2026, not run\". I did not check whether the seventh round finished before FROZEN.sha256 was committed.\n(4) The opening's coordination sentence is in the first person (\"I hold that this foundation supplies that too\"). I restated only its thesis clause, impersonally. The OPENING header says that sentence is \"now held in the first person\".\n\nNaming. CMT's design names specific AI model pins as possible coders, and it names the person whose call the run is. The drafted text names neither. It says only \"has not run\".\n\nMapping. 07 never uses the phrase \"human development\". Mapping the row to T8 and to 07's \"does not show\" list is the page's framing, not a home's. The valley and the standards body are constructed. Calling the standards body's members \"shapers\" and \"readers drawn from the selected\" is my AI reading, labelled as such in the example."
+}

@@ -33,6 +33,10 @@ from tools.research import navigation  # noqa: E402  (reading times and the stat
 CONFIG = ROOT / '_process' / 'research-config.json'
 PUSH_SCREEN = ROOT / 'tools' / 'research' / 'push_screen.sh'
 ASSET_TYPES = {'.svg', '.png', '.jpg', '.jpeg', '.gif', '.webp'}
+SAFE_SCHEMES = {'http', 'https', 'mailto'}  # any other scheme (javascript:, data:, vbscript:) is not linked
+# Attributes a raw tag may keep; everything else (handlers, style, srcdoc, formaction) is dropped.
+SAFE_ATTRS = {'href', 'src', 'id', 'name', 'alt', 'title', 'class', 'align', 'colspan', 'rowspan', 'start', 'open', 'width',
+              'height', 'lang'}
 MAX_PAGE = 2_000_000  # bytes of one built page; the connection map, which carries its data inline, is exempt
 STATUS_MARK = {'recorded-checked': 'Lean receipt', 'reviewed-scoped': 'reviewed at its scope', 'open': 'open target',
                'superseded': 'superseded', 'withdrawn': 'withdrawn'}
@@ -104,7 +108,8 @@ class Links:
         self.aliases = aliases or {}
         self.repo, self.commit = repo, commit
         self.internal = []  # (page, target page, anchor) for the anchor check
-        self.counts = {'site': 0, 'github': 0, 'untracked': 0, 'external': 0}
+        self.counts = {'site': 0, 'github': 0, 'untracked': 0, 'external': 0, 'private': 0, 'refused': 0}
+        self.private = None  # the push screen's pattern, set by build: a link to a private path is shown as text
         self.untracked = []
 
     def github(self, path: str, anchor: str = '') -> str:
@@ -113,10 +118,15 @@ class Links:
 
     def resolve(self, href: str, page: str):
         """The rewritten href, or None where the target is not in the public repository."""
-        href = href.strip()
+        href = html.unescape(href).strip()
         if href.startswith('<') and href.endswith('>'):
             href = href[1:-1]
-        if re.match(r'^[a-z][a-z0-9+.-]*:', href, re.I):
+        probe = ''.join(href.split())  # a browser ignores whitespace and control characters in a scheme
+        scheme = re.match(r'^([a-z][a-z0-9+.-]*):', probe, re.I)
+        if scheme:
+            if scheme.group(1).lower() not in SAFE_SCHEMES:
+                self.counts['refused'] += 1
+                return None
             self.counts['external'] += 1
             return href
         path, _, anchor = href.partition('#')
@@ -142,6 +152,10 @@ class Links:
         if target in self.assets:
             self.counts['site'] += 1
             return relative(target, page)
+        if self.private is not None and refused(target, self.private) and not target.startswith('sources/'):
+            self.counts['private'] += 1
+            self.untracked.append((page, href))
+            return None
         if target in self.files or target in self.dirs:
             self.counts['github'] += 1
             return self.github(target, anchor)
@@ -166,7 +180,8 @@ class Page:
         self.path, self.links, self.records = path, links, records
         self.ids, self.slugs, self.footnotes, self.refdefs = set(), {}, {}, {}
         self.title = None
-        text = re.sub(r'<!--.*?-->', '', text, flags=re.S)
+        self.fn_order, self.fn_refs = [], {}
+        text = strip_comments(text)
         lines = text.split('\n')
         lines = self._definitions(lines)
         self.html = self._blocks(lines) + self._footnote_list()
@@ -174,8 +189,15 @@ class Page:
 
     # -- definitions: link references and footnotes, collected before the blocks
     def _definitions(self, lines):
-        out, i = [], 0
+        out, i, fence = [], 0, None
         while i < len(lines):
+            f = re.match(r'^\s*(```+|~~~+)', lines[i])
+            if f and (fence is None or f.group(1).startswith(fence)):
+                fence = None if fence else f.group(1)
+            if fence or f:
+                out.append(lines[i])
+                i += 1
+                continue
             m = re.match(r'^\[\^([^\]]+)\]:\s?(.*)$', lines[i])
             if m:
                 body = [m.group(2)]
@@ -255,7 +277,7 @@ class Page:
                             out.append(f'<div class="marks">{mark}</div>')
                 i += 1
                 continue
-            h = re.match(r'^(#{1,6})\s+(.*?)\s*#*\s*$', line)
+            h = re.match(r'^(#{1,6})\s+(.*?)(?:\s+#+)?\s*$', line)
             if h:
                 flush()
                 out.append(self._heading(len(h.group(1)), h.group(2)))
@@ -379,7 +401,9 @@ class Page:
         if not self.footnotes:
             return ''
         items = []
-        for k, (name, body) in enumerate(self.footnotes.items(), 1):
+        order = self.fn_order + [n for n in self.footnotes if n not in self.fn_order]
+        for name in order:
+            body = self.footnotes[name]
             ident = self._id(f'fn-{slug_id(name)}')
             items.append(f'<li id="{ident}">{self.inline(body)} <a class="back" href="#fnref-{slug_id(name)}" aria-label="Back">↩</a></li>')
         return '\n<section class="footnotes"><ol>' + ''.join(items) + '</ol></section>'
@@ -439,24 +463,58 @@ class Page:
         return f'<img src="{html.escape(new)}" alt="{html.escape(alt)}" loading="lazy">'
 
     def _fnref(self, name):
-        ident = self._id(f'fnref-{slug_id(name)}')
-        n = list(self.footnotes).index(name) + 1 if name in self.footnotes else '?'
-        return f'<sup class="fnref"><a id="{ident}" href="#fn-{slug_id(name)}">{n}</a></sup>'
+        """A footnote reference, numbered by first reference as GitHub numbers it; a second reference gets an id of its own."""
+        if name not in self.footnotes:
+            return f'[^{html.escape(name)}]'
+        if name not in self.fn_order:
+            self.fn_order.append(name)
+        k = self.fn_refs[name] = self.fn_refs.get(name, 0) + 1
+        ident = self._id(f'fnref-{slug_id(name)}' + (f'-{k}' if k > 1 else ''))
+        return f'<sup class="fnref"><a id="{ident}" href="#fn-{slug_id(name)}">{self.fn_order.index(name) + 1}</a></sup>'
 
     def _raw_tag(self, tag):
-        """A raw inline tag: an anchor's id recorded, an href or src rewritten like a Markdown link's, nothing else kept
-        that could run (no on* handler, no javascript: URL)."""
-        tag = re.sub(r'\s+on\w+\s*=\s*("[^"]*"|\'[^\']*\'|\S+)', '', tag)
-        for ident in re.findall(r'\b(?:id|name)="([^"]+)"', tag):
-            self._id(ident)
+        """A raw tag of the allowed kinds, rebuilt from its parsed attributes: only SAFE_ATTRS are kept, an href or src is
+        rewritten as a Markdown link's is (a scheme other than http, https or mailto dropped), an id recorded."""
+        m = re.match(r'</\s*([a-zA-Z]+)', tag)
+        if m:
+            return f'</{m.group(1).lower()}>'
+        parser = _TagParser()
+        parser.feed(tag)
+        parser.close()
+        if not parser.tag:
+            return html.escape(tag)
+        name, attrs = parser.tag
+        kept = []
+        for key, value in attrs:
+            key = key.lower()
+            if key not in SAFE_ATTRS:
+                continue
+            value = value or ''
+            if key in ('href', 'src'):
+                new = self.links.resolve(value, self.path)
+                if new is None:
+                    continue
+                if key == 'src' and new.startswith('https://github.com/'):
+                    new = new.replace('/blob/', '/raw/', 1)
+                value = new
+            if key in ('id', 'name') and name == 'a':
+                self._id(value)
+            kept.append(f' {key}="{html.escape(value)}"')
+        return f'<{name}{"".join(kept)}>'
 
-        def attr(m):
-            name, value = m.group(1), m.group(2)
-            if value.lower().startswith('javascript:'):
-                return ''
-            new = self.links.resolve(html.unescape(value), self.path)
-            return f' {name}="{html.escape(new)}"' if new is not None else ''
-        return re.sub(r'\s(href|src)="([^"]*)"', attr, tag)
+
+class _TagParser(__import__('html.parser').parser.HTMLParser):
+    """Reads one start tag's name and attributes as a browser would."""
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.tag = None
+
+    def handle_starttag(self, tag, attrs):
+        if self.tag is None:
+            self.tag = (tag.lower(), attrs)
+
+    handle_startendtag = handle_starttag
 
 
 def emphasis(t):
@@ -466,6 +524,12 @@ def emphasis(t):
     t = re.sub(r'(?<![\w\\])__(?!\s)(.+?)(?<!\s)__(?!\w)', r'<strong>\1</strong>', t)
     t = re.sub(r'(?<![\w\\])_(?![\s_])(.+?)(?<![\s\\])_(?!\w)', r'<em>\1</em>', t)
     return re.sub(r'~~(?!\s)(.+?)(?<!\s)~~', r'<del>\1</del>', t)
+
+
+def strip_comments(text):
+    """HTML comments removed outside fenced code, as GitHub hides them."""
+    parts = re.split(r'(^\s*(?:```+|~~~+)[^\n]*\n.*?^\s*(?:```+|~~~+)\s*$)', text, flags=re.S | re.M)
+    return ''.join(p if k % 2 else re.sub(r'<!--.*?-->', '', p, flags=re.S) for k, p in enumerate(parts))
 
 
 def join_lines(lines):
@@ -541,14 +605,15 @@ def records(root=ROOT):
 
 
 def first_screen(readme: str) -> str:
-    """README's generated first screen: from below its status line to the opening's heading."""
+    """README's generated first screen: from its status line (README's title, generated comment and navigation line left
+    out, since the site has its own) to the opening's heading."""
     lines = readme.split('\n')
-    start = next(k for k, l in enumerate(lines) if l.startswith('> ')) + 1
+    start = next(k for k, l in enumerate(lines) if l.startswith('> '))
     end = next(k for k, l in enumerate(lines) if k > start and l.startswith('## '))
     return '\n'.join(lines[start:end]).strip()
 
 
-def template(page_path, title, body, lang, cfg, commit, date, nav_html, source_href, home=False):
+def template(page_path, title, body, lang, cfg, commit, date, nav_html, source_href, home=False, dirty=False):
     css = relative('assets/site.css', page_path) if page_path != 'index.html' else 'assets/site.css'
     home_href = relative('index.html', page_path) if page_path != 'index.html' else 'index.html'
     short = commit[:9]
@@ -568,13 +633,14 @@ def template(page_path, title, body, lang, cfg, commit, date, nav_html, source_h
 <main>
 {body}
 </main>
-<footer><p>Built from commit <a href="https://github.com/{cfg['repository']}/tree/{commit}"><code>{short}</code></a> of <a href="https://github.com/{cfg['repository']}">the repository</a> ({date}). Every page is converted from the repository's text; a link that leaves the site goes to the file as it stood at that commit. <a href="{html.escape(source_href)}">This page's source</a>.</p></footer>
+<footer><p>Built from {'uncommitted edits on top of ' if dirty else ''}commit <a href="https://github.com/{cfg['repository']}/tree/{commit}"><code>{short}</code></a> of <a href="https://github.com/{cfg['repository']}">the repository</a> ({date}). Every page is converted from the repository's text; a link that leaves the site goes to the file as it stood at that commit. <a href="{html.escape(source_href)}">This page's source</a>.</p></footer>
 </body>
 </html>
 '''
 
 
-SPECIAL = ('index.html', 'map.html')  # the home, and the connection map when the build writes it
+MAP_PAGE = 'connections.html'  # the connection map; not map.html, which a case-blind disk would confuse with MAP.html
+SPECIAL = ('index.html', MAP_PAGE)  # the home, and the connection map
 
 
 def nav(cfg, page_path, pages):
@@ -634,11 +700,14 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
         if not p.endswith('.md'):
             raise SiteError('site.pages lists Markdown pages only: ' + p)
     links = Links(set(pages), assets, files, dirs, cfg['repository'], commit, cfg.get('aliases'))
+    links.private = private
     from tools.research import connection_map
-    map_ok = bool(cfg.get('map')) and hasattr(connection_map, 'site_map')
+    map_ok = bool(cfg.get('map'))
+    if map_ok and not hasattr(connection_map, 'site_map'):
+        raise SiteError('site.map is on, and this checkout\'s connection_map has no site mode (site_map)')
     if not map_ok:  # no link to a map this build does not write
-        cfg = dict(cfg, nav=[n for n in cfg.get('nav', []) if n[0] != 'map.html'],
-                   ways_in=[w for w in cfg.get('ways_in', []) if w['path'] != 'map.html'])
+        cfg = dict(cfg, nav=[n for n in cfg.get('nav', []) if n[0] != MAP_PAGE],
+                   ways_in=[w for w in cfg.get('ways_in', []) if w['path'] != MAP_PAGE])
     recs = records(root)
     date = subprocess.run(['git', 'show', '-s', '--format=%cs', commit], cwd=root, capture_output=True, text=True).stdout.strip() or commit
     if out.exists():
@@ -659,15 +728,18 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
             broken.append(f'{src} → {target}#{anchor}')
     if broken:
         raise SiteError('links between pages of the site that do not resolve:\n  ' + '\n  '.join(sorted(set(broken))))
+    status = subprocess.run(['git', 'status', '--porcelain', '--'] + pages + ['README.md', str(pathlib.Path(config_path).resolve())],
+                            cwd=root, capture_output=True, text=True)
+    dirty = status.returncode == 0 and bool(status.stdout.strip())
     written = []
     for p, page in built.items():
         dest = out / out_path(p)
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(template(p, page.title or posixpath.basename(p), page.html, page.lang, cfg, commit, date,
-                                 nav(cfg, p, set(pages)), links.github(p)))
+                                 nav(cfg, p, set(pages)), links.github(p), dirty=dirty))
         written.append(dest)
     (out / 'index.html').write_text(template('index.html', cfg.get('title', ''), home, home_lang, cfg, commit, date,
-                                             nav(cfg, 'index.html', set(pages)), links.github('README.md'), home=True))
+                                             nav(cfg, 'index.html', set(pages)), links.github('README.md'), home=True, dirty=dirty))
     written.append(out / 'index.html')
     for a in sorted(assets):
         dest = out / a
@@ -675,10 +747,15 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
         shutil.copy(root / a, dest)
         written.append(dest)
     # the connection map (tools/research/connection_map.py's site mode), its links to pages of the site kept on the site
-    map_note = 'not built: site.map is off' if not cfg.get('map') else 'not built: this checkout\'s connection_map has no site mode'
+    map_note = 'not built: site.map is off'
     if map_ok:
         on_site = {p: out_path(p) for p in pages}
-        written.append(pathlib.Path(connection_map.site_map(out, f"https://github.com/{cfg['repository']}/blob/{commit}/", on_site)))
+        tmp = out / '_map'
+        made = pathlib.Path(connection_map.site_map(tmp, f"https://github.com/{cfg['repository']}/blob/{commit}/",
+                                                    on_site))
+        made.rename(out / MAP_PAGE)
+        tmp.rmdir()
+        written.append(out / MAP_PAGE)
         map_note = 'built'
     (out / '.nojekyll').write_text('')
     # what was written: no page too large, no private path, nothing the push screen reads as a key
@@ -687,12 +764,20 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
         rel = str(w.relative_to(out))
         if refused(rel, private):
             problems.append('a private path was written: ' + rel)
-        if w.suffix == '.html' and w.name != 'map.html' and w.stat().st_size > MAX_PAGE:
+        if w.suffix == '.html' and w.name != MAP_PAGE and w.stat().st_size > MAX_PAGE:
             problems.append(f'{rel} is {w.stat().st_size} bytes, over {MAX_PAGE}')
         if w.suffix in ('.html', '.svg', '.css'):
-            hit = secrets.search(w.read_text())
+            text = w.read_text()
+            hit = secrets.search(text)
             if hit:
-                problems.append(f'{rel} holds what the push screen reads as a key: {hit.group(0)[:24]}…')
+                problems.append(f'{rel} holds what the push screen reads as a key, at line {text[:hit.start()].count(chr(10)) + 1}')
+            for ref in re.findall(r'\b(?:href|src)="([^"]+)"', text):
+                target = ref.split('#')[0]
+                gh = re.match(r'https://github\.com/[^/]+/[^/]+/(?:blob|tree|raw)/[0-9a-f]+/(.*)', target)
+                if gh and refused(gh.group(1), private) and not gh.group(1).startswith('sources/'):
+                    problems.append(f'{rel} links a private path: {gh.group(1)}')
+                if w.name != MAP_PAGE and re.match(r'\s*(javascript|data|vbscript):', html.unescape(ref), re.I):
+                    problems.append(f'{rel} has a link with a refused scheme')
     if problems:
         raise SiteError('\n'.join(problems))
     return {'pages': len(built) + 1, 'assets': len(assets), 'links': dict(links.counts), 'map': map_note,

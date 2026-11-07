@@ -1,0 +1,107 @@
+{
+ "findings": [
+  {
+   "severity": "medium",
+   "where": "wisdom row, today: \"5,673 judgments of an AI-assisted atlas, each set against checked laws as agreement, scoping or divergence\"",
+   "problem": "This misstates the atlas count. 06 #r-civilization-thought-on-the-spine says only 3,514 of the 5,673 judgments bear on the spine's structure. They form 1,300 entries (相合 453, 定域 647, 相分 200), and 2,159 have no structure the spine can read. A reader would believe that every one of the 5,673 judgments received one of the three classes. The cell's only link is #nine-traditions, which covers the 248 passages, not the atlas (#zh-mapping) or the two frozen rounds (#corpus).",
+   "fix": "Write: \"5,673 judgments of an AI-assisted atlas, read one by one against the spine: 3,514 bear on its structure, in 1,300 checked entries (453 agreement, 647 scoping, 200 divergence), and 2,159 have no structure the spine can read ([06 §7.1](chapters/06-CLASSICAL-TEXTS.md#r-civilization-thought-on-the-spine))\". Link the two rounds to [06 §二](chapters/06-CLASSICAL-TEXTS.md#corpus)."
+  },
+  {
+   "severity": "medium",
+   "where": "wisdom row, standing (and today's \"248 passages of nine strands\")",
+   "problem": "The row drops the selection limit and the three-layer verdict that its homes attach to the 248-passage concordance. 06 #r-chinese-sources-on-the-spine says the mapping favours passages with structure to read, and that the passages most likely to diverge are under-represented. C-31 adds that five AI mappers chose the passages from two AI-assisted atlases and Wikisource, that divergence is underestimated, and that '文字' and '其他' are mapping groups, not schools. 06 #three-layer-verdict says the relational thesis does not hold as a property of each system, because four non-relational layers recur. Without these qualifiers a reader may take the counts as representative and the traditions as relational throughout.",
+   "fix": "Add to standing, in the homes' words: \"The passages were chosen by AI mappers and lean toward those with structure to read, so divergence is undercounted ([C-31](review/CLASSICAL-TEXTS.md#c-31)); the relational starting point holds in every strand, its universal forms mostly need scoping, and it is not a property of each system: four non-relational layers recur ([06](chapters/06-CLASSICAL-TEXTS.md#three-layer-verdict))\". Change \"nine strands\" to \"nine groups (a mapping's groups, not schools)\". Add to not_claimed: \"that a language or tradition is relational by nature ([06](chapters/06-CLASSICAL-TEXTS.md#does-not-show))\"."
+  },
+  {
+   "severity": "medium",
+   "where": "wisdom row, field scope",
+   "problem": "The field is named 'wisdom traditions', but every text the account reads is Chinese, including the Buddhist treatises in their Chinese versions. 06 #open lists texts the atlas does not hold as unread. No corpus of any other tradition exists. A reader new to the work would assume the coverage is wider than it is.",
+   "fix": "Open the today cell with: \"Chinese texts only, the Buddhist treatises in their Chinese versions; no other tradition is read ([06](chapters/06-CLASSICAL-TEXTS.md#open))\"."
+  },
+  {
+   "severity": "medium",
+   "where": "wisdom example, 'What the concordance records': \"06 lists the way of people, taking from those without enough to serve those with too much, as a response within the tradition to contest and rank\"",
+   "problem": "This misreads the four-layers table. The table's response column lists Laozi's line 「人之道，损不足以奉有余」, which names the way of people in order to set it aside (「则不然」). It does not list the way of people itself as a response. The draft also skips the concordance's own entry for this sentence. That entry, lao-77-ren-zhi-dao in passages.json, classes the sentence as agreement with laws of direction and source (every rise is given; one member rises only as another falls). Its reading says these laws carry no evaluation, and that judging the way of people '不然' needs the continuation condition and the comparison commitment. Leaving this out also leaves out the two premises at the point where the passage turns ethical.",
+   "fix": "Replace with: \"The chapter goes on 「人之道则不然，损不足以奉有馀」. The concordance enters this as agreement: every rise is given and one member rises only as another falls; 'these are laws of direction and source, with no evaluation', and judging it 'not so' needs the continuation condition (scope, whose losses count) and C (widening what can form is better, order), which the theory does not assert ([the entry](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/passages.json), `lao-77-ren-zhi-dao`; [06 §六](chapters/06-CLASSICAL-TEXTS.md#laozi-51)). 06 lists Laozi's line among the tradition's own responses to contest and rank ([06](chapters/06-CLASSICAL-TEXTS.md#four-layers))\"."
+  },
+  {
+   "severity": "medium",
+   "where": "wisdom example, 'What it does not show': \"so the concordance gives no advice for practice\"",
+   "problem": "No home has this conclusion; it is the page's own inference. It also leaves out the two premises the account would need before any ranking of practice. 06 #laozi-51 states the premise point directly: going from '不宰' to '应当不宰' needs the continuation condition for scope and C for order, and neither the text nor the spine supplies them.",
+   "fix": "Write: \"The record does not show that a given system regulates a level, or that holding a level is good: the laws say what holds it and how wide a band it needs. To read the passage as advice would need the continuation condition (scope) and C (order), which neither the text nor the spine supplies and the theory does not assert ([06](chapters/06-CLASSICAL-TEXTS.md#laozi-51))\"."
+  },
+  {
+   "severity": "medium",
+   "where": "sciences row, standing: \"T1, T6 proved in their models, conjectured beyond; T2 conjectured; frozen tests passed and failed\"",
+   "problem": "The cell drops qualifiers that tell a reader how far testing has gone. For T1, SCIENCES and 08 §9 say three settings passed: one real-data yeast setting, whose regimes were not held out from the analyst, and two simulations. T1 failed in four settings, and there is no field test of a need measured in advance, because both walleye designs refused before reading a row. T6's three seabird tests did not reject it, one at low power with estimates in the refuting direction, and 'none establishes conditional independence'. The word 'passed' for T6 says more than its home. For T2, the cell leaves out that its former wording failed in the flour beetle and that it is untested on a wild condition outside fisheries. T3's 'law for optima proved, across domains conjectured' is missing.",
+   "fix": "Write, in the homes' words: \"T1 in the model proved, beyond it conjectured: three settings passed (one real-data yeast, two simulations), four failed, no field test of a need measured in advance; T2 conjectured, its former wording failed in the flour beetle, untested on a wild condition outside fisheries; T6 proved on the World model and in the linearized and logistic models, beyond them conjectured, three seabird tests not rejecting it, none establishing conditional independence; T3's law for optima proved, across domains conjectured ([08 §9](chapters/08-METHOD.md#theses); [dossier](review/SCIENCES.md#the-dossier-in-ten-minutes))\"."
+  },
+  {
+   "severity": "medium",
+   "where": "sciences example, label: \"a thesis, conjectured: frozen tests, one of which failed a former wording\"",
+   "problem": "The label implies that only one frozen test failed. 02 #t2 shows MQ4 failed its whole-state verdict, MQ7 missed its frozen bound, and UE31b failed the former wording. MQ5 passed, and UE32 bears only on sufficiency against the embedding.",
+   "fix": "Write: \"a thesis, conjectured: of five frozen tests, MQ4 failed its state verdict, MQ5 passed, MQ7 missed its bound, UE32 bears on sufficiency only, and UE31b failed its former wording\"."
+  },
+  {
+   "severity": "medium",
+   "where": "sciences example, flour beetle: \"On the adults' own course a further lag removed 0.05 against the bound of a tenth\"",
+   "problem": "The sentence leaves out the home's parenthesis \"(detected in one cell; 0.18 at a set loss of 0.27)\". In that cell, 0.18 is above the bound. It also leaves out that, of T2's own items, the lag's change of sign was not testable (3 cells detected, 6 needed) and the level alone at five steps was not decided. Without these the median reads as a clean pass.",
+   "fix": "Write: \"a further lag removed 0.05 against the bound of a tenth (detected in one cell; 0.18 at a set loss of 0.27)\". Add: \"of T2's own items the lag's change of sign was not testable (detected in 3 cells, 6 needed) and the level alone at five steps was not decided\" ([02](chapters/02-MAP.md#t2))."
+  },
+  {
+   "severity": "medium",
+   "where": "sciences example, last sentence: \"What the reading adds so far is 'one vocabulary, one set of questions (...)'\"",
+   "problem": "The quotation stops inside the home's list without marking the cut. In 08 the sentence goes on 'and the form of the question where the ethics turns (07 §4.6)', and the next sentence is 'The ethics rests on its two premises either way, the continuation condition for scope and C for order.' This misquotes the home and drops both premises at the point where the home names them.",
+   "fix": "Quote in full: \"one vocabulary, one set of questions (which relation, which class, at which grain, whether the class is constant) and the form of the question where the ethics turns\". Add: \"The ethics rests on its two premises either way, the continuation condition for scope and C for order\" ([08](chapters/08-METHOD.md#what-would-defeat-the-reading))."
+  },
+  {
+   "severity": "low",
+   "where": "wisdom row, standing: \"counts are counts of readings\"",
+   "problem": "The home of these words is 06 #r-candidate-theorems-of-the-corpus, where they are said of the 59 乙-class candidates checked in Lean, not of the concordance counts. The draft gives no link. Applying the words to the concordance is defensible, because 06 says its classes and readings are the AI's, but the home's own result is missing from the row. That result is a Lean check: 38 proved for every carrier and relation, 15 only under a premise, 3 with countermodels; 181 new candidates are untested.",
+   "fix": "Add to today: \"check the Lean outcome of the first round's 59 candidate theorems: 38 proved for every carrier and relation, 15 only under a premise, 3 with countermodels; which sentence is read as which is the AI's, so the counts are counts of readings ([06](chapters/06-CLASSICAL-TEXTS.md#r-candidate-theorems-of-the-corpus)); the second round's 181 are untested ([06](chapters/06-CLASSICAL-TEXTS.md#open))\"."
+  },
+  {
+   "severity": "low",
+   "where": "wisdom row, standing: \"The theory's continuation stands on the side the Middle Treatise refutes (B-02)\"",
+   "problem": "B-02 attaches a weakness to this concession that the row leaves out: 定理只说三者可以同时成立，并不处理龙树'因断'之论证所依之前提 (the theorem says only that the three can hold at once and does not take up the premises of Nāgārjuna's argument). Without it, a reader may think the theorem answers the refutation.",
+   "fix": "Add: \"the theorem says only that the three can hold at once, and does not take up the premises of Nāgārjuna's argument that the cause is cut off ([B-02](review/BUDDHIST-THOUGHT.md#b-02))\"."
+  },
+  {
+   "severity": "low",
+   "where": "wisdom row, not_claimed: \"that the core is indispensable to all wisdom ([open])\"",
+   "problem": "The qualifiers are dropped. 03 says 'the pure core's common relations are indispensable across all wisdom under discussion', and marks it a target that is Open. The row also does not say that 03 §9's matching of checked laws to aspects of wisdom is an AI reading that 'proves no coverage of wisdom'. 08 #open-items-ranked says the formal part is 'complete'; the page should not follow that wording, because 03 and the wisdom-root record keep the target open.",
+   "fix": "Write: \"that the pure core's common relations are indispensable across all wisdom under discussion (a target, open: [03](chapters/03-KNOWING.md#r-wisdom-root)); an AI reading matches checked laws to aspects of wisdom, which proves no coverage of wisdom ([03](chapters/03-KNOWING.md#r-wisdom-root-without-axiom))\"."
+  },
+  {
+   "severity": "low",
+   "where": "wisdom example, 'The law set beside it': the quotation from 02",
+   "problem": "The quotation silently cuts '(`Flow.withinGap_iff_between`)' from the middle of the home's sentence. The example also leaves out the record's standing boundaries: discrete steps, whole-number amounts, and that the law's correspondence to actual systems is a separate obligation. The scoping verdict's own reason is cut as well: a loop closes a difference only through a link that gives back less, and closing is not lossless.",
+   "fix": "Mark the cut with an ellipsis or keep the Lean name. Add: \"stated for discrete steps in whole numbers; its correspondence to actual systems is a separate obligation ([record](results/records/two-sided-regulation-and-late-reading.md))\". Add the entry's reason: \"not a law of the whole unfolding (a loop closes a difference only through a link giving back less, and closing is not lossless)\"."
+  },
+  {
+   "severity": "low",
+   "where": "wisdom example, 'What a scholar can do' (C-31, question 74)",
+   "problem": "Question 74 asks only whether passages were chosen to fit the theory. Judging a passage's class is what questions 75 and 76 ask: whether the three-way split is workable in commentary practice, and a spot check of the per-passage verdicts. C-32 also notes that the choice of 'inner responses' may lean toward the theory.",
+   "fix": "Cite \"[C-31](review/CLASSICAL-TEXTS.md#c-31), questions 74 to 76\", and for the four layers [C-32](review/CLASSICAL-TEXTS.md#c-32)."
+  },
+  {
+   "severity": "low",
+   "where": "sciences row, today: \"Check discrete, whole-number statements of known laws\"",
+   "problem": "The home says 'Most laws are theorems about models in whole numbers and discrete steps'. The periphery's laws are over Mathlib's reals, with their axioms reported. Separately, the known-results table's last column is dated 'as of 3 November 2026' and was drafted by AI readers from the literature they knew; the cell drops both.",
+   "fix": "Write \"Check statements, most in whole numbers and discrete steps (the periphery's over the reals, axioms reported), of known laws ...\". Write \"the last column (as of 3 November 2026, drafted by AI readers) as open work\"."
+  },
+  {
+   "severity": "low",
+   "where": "sciences row, standing: \"it does not yet reach farther than the sciences taken together\"; \"on a first count, a tie\"",
+   "problem": "The cell keeps only the negative half of the home's comparison. The home says the theory reaches farther than the few contained frameworks that lack conservation, renewal or a threshold, and farther than the free-energy principle alone in what it forbids: five statements, each already known elsewhere. The tie also loses its grain, 'at the grain of §7's shared laws', and the reading loses 'not one of T1–T8'.",
+   "fix": "Write: \"it reaches farther than the few contained frameworks lacking conservation, renewal or a threshold, and than the free-energy principle alone, each statement so forbidden known in a neighbouring field; it does not yet reach farther than the sciences taken together ([dossier](review/SCIENCES.md#the-dossier-in-ten-minutes)). The explanatory reading (philosophical, argued, not one of T1–T8): on a first count at the grain of §7's shared laws, a tie\"."
+  },
+  {
+   "severity": "low",
+   "where": "sciences example: \"the beetle's failure 'defeats T2's class as worded in that domain ...'\" cited to 08 §9; \"T2's one contrary prediction\"; \"a rival keeping every theorem\"",
+   "problem": "There are three small mismatches with the homes. The quoted words are from 02 #t2, not 08, and the home goes on 'where MQ5 passed'. In 02 the contrary prediction is 'their' one, meaning the point where T2's rule and the field model's rule differ (4 cells, 6 needed), and the home adds that this 'says nothing for T2's sign'. And 08's rival keeps 'every model and theorem', not only every theorem.",
+   "fix": "Cite the quotation to [02](chapters/02-MAP.md#t2) and keep \"nor T2 in the fisheries, where MQ5 passed\". Write \"the lag's sign, the one prediction where T2 and the field's model differ, was not decided (they differ in 4 cells, 6 needed), which says nothing for T2's sign\". Write \"a rival keeping every model and theorem and dropping the word\"."
+  }
+ ],
+ "verdict": "The draft mostly holds up against its homes. Every quotation I checked matches its home, apart from the cuts listed below. These are the 06 sections, the overview's sentence, the regulation record and its 02 statement, the passages.json entry for lao-77-tian-zhi-dao (kind scope, '这一归属理论不采纳'), the stored text DS01.txt line 1366 (identical to the draft's passage), 08's known-results, beyond-the-table, theses, defeat-the-reading and law sections, 02 #t2, C-31, B-02, the Buddhist dossier's 不主张, 03 #r-wisdom-root, and the SCIENCES ten-minute part. Every link I checked points at an existing anchor, though some cite the wrong one (see below).\n\nThere are no high-severity errors. Nine medium findings would change what a reader believes:\n- **Atlas count:** the 5,673 atlas judgments are not each classed (only 3,514 bear on structure, 2,159 have none).\n- **Concordance limits:** the 248-passage concordance leans toward passages with structure to read, undercounts divergence, and finds the relational thesis false as a property of each system; the row says none of this.\n- **Scope:** \"wisdom traditions\" means Chinese texts only.\n- **Way of people:** the four-layers table lists Laozi's line rejecting the way of people, not the way of people itself, as a response. The draft also skips the agreement entry lao-77-ren-zhi-dao, whose reading says a verdict on it needs the continuation condition and C.\n- **\"No advice for practice\":** this is the page's own conclusion and names neither premise.\n- **Thesis standings:** in the sciences row, T1's lack of any field test, T6's \"none establishes conditional independence\" and T2's failed wording are missing.\n- **T2 label:** it implies only one frozen test failed.\n- **The 0.05 lag result:** it drops the cell at 0.18, above the bound.\n- **Cut quotation:** the \"what it adds so far\" quote is cut before the ethics clause and the two premises.\n\nThe rest are low-severity precision fixes: citations, dropped qualifiers, and an unmarked cut inside a quotation.\n\n\"Nothing claimed\" is correctly absent from both rows, since the homes do claim checkable concordances and laws in both fields. For wisdom itself, the row should keep 03's wording, a target that is Open, and not use 08's \"formal part complete\". No number in the constructed examples conflicts with its model or record. The translation of Laozi 77 is accurate and correctly labelled as made by AI.\n\nNot read: the history chapters, UE31b's README beyond its anchor, and the SCIENCES items beyond the ten-minute part."
+}

@@ -1,0 +1,90 @@
+{
+ "verdict": "Nearly ready, but two sentences need fixing before it lands. In the sciences row, \"T1 has no field test\" leaves out that T1 failed in four settings, fish stocks under held catches among them. In the judge audit, question 4 states the capture lock without its hypothesis that the start's rule and every rule read favour the target. Without that hypothesis the lock is false, as RuleCapture.Alternating.never_locked shows, and LA2's `late` condition alternated in just that way. Four medium points follow: the opening says a ranking needs both premises, when the homes say C or a premise in its place; the alignment row drops what T7's LA2 counterexample is limited to; the TESTS.md link resolves only if that page lands too; and \"59 candidate theorems checked in Lean\" overstates, since 3 of the 59 were misfiled or could not be expressed. Every other link and anchor resolves. The quotations I checked are word for word: the T2 wording, the narrowing sentence, the tie sentence, the vocabulary sentence, the two-sided regulation law, the record's sentence on the formal statements proposed, the Laozi 77 text as stored, and the IN1, LA2, CG2, CMT and handover details. The standards-body numbers match DrawnShaping: 90 against 102, 78 and 90; 2 to 4 is 10 of 30; a cost of 2 gives 5 of 30; 6 < 8. Both premises are named, with their roles, wherever the ethics is summarized. The page never says the ethics derives from the condition, and it names no person and no AI system. As a reader new to the work, I find the worked examples concrete and true. The table cells are very dense for a ten-minute part, and the table alone is about 1,160 words before link targets.",
+ "findings": [
+  {
+   "severity": "high",
+   "where": "Table, The sciences row, 'How it stands': 'T1, T3 and T6 proved in their models, conjectured beyond; ... T1 has no field test'",
+   "problem": "The home (02 T1, 08 §9, and SCIENCES.md's ten-minute table) says T1 passed in three settings and 'failed in four, among them fish stocks under held catches' (MQ3, a field setting) and a salt shock. It also says what is missing is 'no field test of a need measured in advance': two were designed on the walleye lakes, and each run was refused before it read a row. 'T1 has no field test' drops the four failures and the qualifier, so a reader would think T1 was never tested in the field and never failed.",
+   "fix": "Copy the home's words, then shorten: 'T1, conjectured beyond its models: passed in two simulations and on held-out yeast regimes the analyst had seen, failed in four settings, fish stocks under held catches among them; no field test of a need measured in advance has run (two designed, each refused before reading a row).'"
+  },
+  {
+   "severity": "high",
+   "where": "Worked example 'Auditing a language-model judge', question 4 (cites 02 §9 r-closed-capture)",
+   "problem": "The sentence says that where selection does not lower a target's share under a favouring rule, and the rule is read monotonically from that share, 'the course is locked from the step after its first reading step'. That drops RuleCapture.favouring_locks' hypothesis 'with the start's rule and every rule read favouring'. Without it the lock fails: a threshold reading read one step late, from a start against it, never locks (RuleCapture.Alternating.never_locked). That is what LA2's `late` condition did. The second clause also drops closed capture's premises 'each step adds at least one beyond' and 'favouring is kept upward'. As written, 'proved for any type, without noise' is said of a statement that is false.",
+   "fix": "Restore the hypotheses as 02 states them: '... With the start's rule and every rule read favouring, the share falls at no step and the course is locked from the step after its first reading step (capture through the rule); where each step adds at least one to what it does not read and favouring is kept upward, from a locked configuration that loss passes every bound while the course stays locked (closed capture).' Cite r-capture-through-the-rule for the first half."
+  },
+  {
+   "severity": "medium",
+   "where": "Opening paragraph: 'No law ranks anything. A ranking needs the ethics' two premises ...'",
+   "problem": "The homes (07 §4, GLOSSARY 'C', ONE-PAGE) say that a ranking of courses needs C or a premise in its place, that the condition ranks nothing, and that self-concern ranks one case with no C (07 §4.4). Saying a ranking needs both premises contradicts the same sentence's 'the continuation condition ... ranks nothing'. It also drops 'or a premise in its place', which the page's own last section keeps. 'No law ranks anything' goes past ONE-PAGE's 'No law evaluates', since Weighting.ended_below ranks one case under self-concern taken as a hypothesis.",
+   "fix": "'No law of the dynamics ranks courses. The ethics adds two premises, neither asserted, warrant open: the continuation condition fixes scope, whose losses count, and ranks nothing; C, widening what can form is better, gives order. A ranking of courses needs C or a premise in its place (07 §4).'"
+  },
+  {
+   "severity": "medium",
+   "where": "Table, Alignment row, 'How it stands': 'in one trained judge the lock formed, its bridge failed and a case T7 forbids occurred (02)'",
+   "problem": "The home (02 T7; ONE-PAGE; the alignment dossier) limits what the case shows. LA2 counts against that one case, worded before its clause on drift, as a claim about trained judges. The model's law stands within its hypotheses, which the judge does not meet, and T7's other forbidden cases are untouched. Without these limits a reader can take T7 as refuted, or the law as failed. The worked example keeps the limits, but the ten-minute row drops them.",
+   "fix": "Add from the home: '... a case T7 forbids occurred, counting against that case for trained judges; the model's law stands within its hypotheses, which this judge does not meet, and T7's other cases are untouched.'"
+  },
+  {
+   "severity": "medium",
+   "where": "Line 5, the navigation link '[The tests](../../TESTS.md)'",
+   "problem": "In the worktree /Users/ren/tmp/rw/wt, theories/becoming/../../TESTS.md (the repository root) does not exist; it is not on main either. Only /Users/ren/tmp/rw/drafts/TESTS-preview.md exists. Every other link and anchor resolves.",
+   "fix": "Land TESTS.md at the root in the same train, before or with USES.md, or point the link at an existing page (for example review/ALIGNMENT.md#the-tests-as-they-fell or 08-METHOD.md#theses) until it lands."
+  },
+  {
+   "severity": "medium",
+   "where": "Table, Wisdom traditions row: '59 candidate theorems checked in Lean'",
+   "problem": "06 §三/§四 (r-candidate-theorems-of-the-corpus, and 06's thesis paragraph) give these numbers. Of the 59 class-B candidates, 38 are proved for every carrier and relation, 15 under one premise, and 3 have counter-models. The remaining 3 were not Lean statements: 2 were misfiled and 1 could not be expressed. The counts are counts of readings, and which sentence is read as which statement is the AI's reconstruction. 'Checked in Lean' of all 59, with 'theorems', overstates.",
+   "fix": "'59 class-B candidates read as statements: 38 proved for every carrier and relation, 15 under one premise, 3 with counter-models, 3 misfiled or not expressible; the readings, and so the counts, are AI's.'"
+  },
+  {
+   "severity": "low",
+   "where": "Table, Alignment row, 'What you can do': '... whether its rule is read from its own share, as 07 §6 reads six published pipelines [AI reading]'",
+   "problem": "07 §6's Assessment reads only one thing for the six pipelines: that the signal is a function of what the deciders read, so the premise holds by construction. Room, the lock and the judge audit are this page's reading, as the worked example's header says. The row credits the whole audit to 07 §6.",
+   "fix": "'... (this page's AI reading; 07 §6 reads the first question, what the signal reads, for six published pipelines).'"
+  },
+  {
+   "severity": "low",
+   "where": "CG2 bullet: 'Learners kept a patch where the rest alone could not empty it and emptied it where it could, except where the level after every step was weighted above the exact threshold'",
+   "problem": "By CG2's README the absolute claim fails in two settings, the two failures the bullet itself names next. In k3s1_joint there is no rest, keeping was predicted, and the learners emptied the patch in every episode. In k3s8_share learners split, 0.48 on average. Read in order, the sentence overstates and the next clause corrects it.",
+   "fix": "Scope it to the contrasts that held: 'In X1–X3, learners kept the patch where the rest alone could not empty it and emptied it where it could, except where the level after every step was weighted above the exact threshold; the sharing and joint-learner keeps failed.'"
+  },
+  {
+   "severity": "low",
+   "where": "'Beside LA2' paragraph",
+   "problem": "Two clarity problems. (a) 'The case of T7 it met, ..., counts against that case' makes the case its own counterexample; the home says LA2 counts against it. (b) 'Where nothing read a planted loss, the course locked ... and stayed locked' is followed by 'with nothing reading the loss, the counts alone turned the course in 4 of 5 seeds'. These are different conditions (`unread`, and the `in_time_unread` control started at 1 list to 8 prose), and a new reader sees a contradiction.",
+   "fix": "(a) 'LA2 met the case of T7 ... and counts against that case for trained judges ...'. (b) 'in the in-time condition's control, started at one list to eight prose with nothing reading the loss, the counts alone turned the course in 4 of 5 seeds'."
+  },
+  {
+   "severity": "low",
+   "where": "Field label 'Human development (生生)'",
+   "problem": "In GLOSSARY.md, 生生 is life in the whole and its continuing generation [AI reading, D1], not human development. The row then says 'Nothing claimed' of how a person develops. Pairing the two in a label suggests 生生 means a person's development.",
+   "fix": "Label the row 'Human development; 生生 (T8)', or 'Human development, and 生生 as the way for life', so that the two stay apart."
+  },
+  {
+   "severity": "low",
+   "where": "Table, Human development row, 'What is not claimed': 'an unconditional or complete ranking of mixed comparisons'",
+   "problem": "07's does-not-show list adds '(priority and transfer rank some, under named premises)'. Without it a reader may think no mixed comparison is ever ranked, which the page's own J1–J4 handover case contradicts.",
+   "fix": "Append '(priority and transfer rank some, under named premises)'."
+  },
+  {
+   "severity": "low",
+   "where": "Table, People and AI row, 'What is not claimed': '... a ranking of open rule-making above capture without C or a premise in its place (02 §9, #t7)'",
+   "problem": "The sentence is from the Reading [AI reading, D45] after the T7 thesis, not from T7, so the link lands on a different claim.",
+   "fix": "Cite it as '02 §9, the reading after T7', or link the nearest anchor (r-shaping-the-rule-selected-by-what-comes-back) and keep the D45 label."
+  },
+  {
+   "severity": "low",
+   "where": "T2 worked example header: 'of five, MQ4 failed ..., MQ5 passed, MQ7 missed ..., UE32 bears on sufficiency only, and UE31b failed ...'",
+   "problem": "02 T2 also records UE31, which ran on 3 November 2026 and decided nothing. 'Of five' leaves it out. In the beetle paragraph the lag's sign comes up twice (once as 'not testable', once as 'not decided'), and a new reader may not see that these are two different items.",
+   "fix": "'Of six frozen tests (UE31 decided nothing)'. Name the two sign items apart: 'T2's forbidden item, the lag's coefficients changing sign between series, was not testable; the lag's sign, where T2 and the field's model differ, was not decided'."
+  },
+  {
+   "severity": "low",
+   "where": "Line 1 (an HTML comment) and the page body",
+   "problem": "The AI-written label sits only in an HTML comment, which does not show when the page is rendered. A reader sees no label until the last section's 'written and checked by AI readers'. AGENTS asks that AI-written text keep its label.",
+   "fix": "Add one visible line under the reading time: 'AI-written from the homes it links, 8 November 2026; each restatement checked against its home by AI readers; no person has read it. Where it and a home differ, the home governs.'"
+  }
+ ],
+ "read": "Read in full: /Users/ren/tmp/rw/drafts/USES.md. I ran a script that resolved every link and anchor in it against /Users/ren/tmp/rw/wt/theories/becoming/ (explicit ids and heading slugs). All resolve except ../../TESTS.md. Read in full: theories/becoming/ONE-PAGE.md; the READMEs of experiments/direction-installation (IN1), self-rewarding-lock (LA2) and commons-outrun (CG2); records alignment-direction-under-widening.md and two-sided-regulation-and-late-reading.md (Laws, Conditions, Does not show); history/ALIGNMENT-DIRECTION.md §5; AJ PLAN.md §1–§2. Read in part, by the anchored sections cited: 07 §4 (scope-and-order and the self-concern block), §4.4 (widening, comparison by widening, weights, self-concern alone), the start of §5 practical judgment, §6 r-coupling-closures (the full block through the LA2/LA3 tests), §7 direction, §8 theses (T4, T5, T8), §9 objections, does-not-show; 02 t1, t2 (full paragraph), r-two-sided-regulation, §9's r-capture-through-the-rule through t7 and the readings after it; 03 r-selection-through-couplings and r-wisdom-root; 05 r-own-count-misses-joint-excess, r-what-an-optimum (law and restriction), t3 (standing, forbids, the LA1 lines), not-shown, the applications line of §11; 06 thesis paragraph, three-relations, r-candidate-theorems, r-chinese-sources, r-civilization-thought, three-layer-verdict, laozi-51, the 人之道 row of four-layers, does-not-show, open; 08 standings table head, premise-card's J1–J4 row (by grep), known-results table, beyond-the-table, third parts, §9 table rows T1–T7 and what-would-defeat-the-reading, the law paragraph, the-work-by-its-own-laws; review/ALIGNMENT.md ten-minute part, tests-as-they-fell, A-12; review/SCIENCES.md ten-minute part; review/CLASSICAL-TEXTS.md C-31 and C-32 with their questions; review/BUDDHIST-THOUGHT.md B-02; COLLECTIVE-DIRECTION.md intro, the answer in brief, §5, §6; CMT DESIGN.md's 'What is frozen' section; record coupling-closures (Conditions, Next, the evidence line) and the CORRESPONDENCE.md heading on AI feedback against principles; passages.json entries lao-77-tian-zhi-dao and lao-77-ren-zhi-dao; DS01.txt lines 1366–1370; GLOSSARY.md rows found by grep for generation, 生生, widening, ranking, C and standing. Not read: CMT §2 bridge in full (only its summary in 'What is frozen'); the record shaping-read-by-readers-drawn-from-the-selected.md beyond its anchor's existence (the 'elementary' word was checked through the CMT design's quote); the drafts TESTS-preview.md; 08 premise-card beyond the J1–J4 row; 06 §七 history pages; any Lean. I ran no tests and edited nothing."
+}

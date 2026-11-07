@@ -65,7 +65,7 @@ A fresh run compiles more than a thousand Lean steps and takes a while; `BECOMIN
 | `drafts/` | Papers and long drafts by date |
 | `worldbuilding/` | The constructive half: worlds, atlas, causal engine |
 | `tools/research/` | Rendering, checking, moves, evidence store |
-| `tools/publishing/` | PDF builders for the exports in `output/`, and the builder of the reader's site from an allow-list of these pages |
+| `tools/publishing/` | PDF builders for the exports in `output/`, and the builder of the reader's site, from the allow-list `site.pages` in `_process/research-config.json` |
 | `output/` | Exported PDFs and images |
 
 [REPOSITORY-LAYOUT](_process/REPOSITORY-LAYOUT.md) gives the rules for where new material goes.

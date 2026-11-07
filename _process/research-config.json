@@ -218,10 +218,10 @@
     }
   },
   "site": {
-    "note": "The reader's site (tools/publishing/build_site.py): pages is the allow-list, nothing else is published; a path the push screen keeps private, or under sources/, is refused. nav and ways_in are AI-written navigation and name only pages listed here. The Pages job (.github/workflows/pages.yml) runs only when dispatched; enabling Pages is Ren's.",
+    "note": "The reader's site (tools/publishing/build_site.py): pages is the allow-list, nothing else is published; a path the push screen keeps private, or under sources/, is refused. nav and ways_in are AI-written navigation and name only pages listed here. The Pages job (.github/workflows/pages.yml) runs only when dispatched; enabling Pages is Ren's. site.map stays off until connection_map's site mode is on main; the map is then written as connections.html.",
     "repository": "yongxu/theories",
     "title": "The Theory of Becoming",
-    "description": "One account of how things form, persist, change and end: Lean-checked models, frozen tests, and an ethics on two unasserted premises.",
+    "description": "One account of how things form, persist, change and end: Lean-checked models, tests frozen before scoring, and an ethics on two unasserted premises, the continuation condition for scope and C for order.",
     "pages": [
       "MAP.md",
       "theories/becoming/ONE-PAGE.md",
@@ -292,7 +292,7 @@
         "Graph"
       ],
       [
-        "map.html",
+        "connections.html",
         "Map"
       ],
       [
@@ -338,7 +338,7 @@
       {
         "path": "TESTS.md",
         "label": "The tests",
-        "text": "Every test frozen before scoring, by how it came out, the failures first."
+        "text": "Every test in the experiments by how it came out, the failures first, with when each was frozen and run."
       },
       {
         "path": "theories/becoming/results/THEORY-GRAPH.md",
@@ -346,7 +346,7 @@
         "text": "Results, Lean modules, sections and texts, with their edges kept apart by kind."
       },
       {
-        "path": "map.html",
+        "path": "connections.html",
         "label": "The connection map",
         "text": "The earlier folders and twelve domains of thought set against the account, claim by claim, with the theory's own graph; every thread an AI reading."
       },
@@ -383,6 +383,6 @@
         "text": "Where everything is in the repository, and how to check it."
       }
     ],
-    "map": true
+    "map": false
   }
 }

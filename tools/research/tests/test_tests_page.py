@@ -26,7 +26,7 @@ class TestsPageTests(unittest.TestCase):
         (self.root / 'experiments/x/README.md').write_text('# X\n\nIn VD1 every frozen\nrule failed.\n')
 
     def check(self, **change):
-        return tests_page.validate({'tests': [dict(ROW, **change)]}, self.root)
+        return tests_page.validate({'as_of': '2026-11-08', 'tests': [dict(ROW, **change)]}, self.root)
 
     def test_a_quote_its_folder_holds_passes_across_line_breaks(self):
         self.assertEqual(self.check(), [])
@@ -39,7 +39,22 @@ class TestsPageTests(unittest.TestCase):
         self.assertRegex(' '.join(self.check(frozen='20 Oct')), 'frozen is not a date')
         self.assertRegex(' '.join(self.check(thesis='T9')), 'thesis is not T1 to T8')
         self.assertRegex(' '.join(self.check(folder='experiments/y/README.md')), "folder's page is missing")
-        self.assertRegex(' '.join(tests_page.validate({'tests': [ROW, ROW]}, self.root)), 'a second row')
+        self.assertRegex(' '.join(tests_page.validate({'as_of': '2026-11-08', 'tests': [ROW, ROW]}, self.root)), 'a second row')
+
+    def test_dates_must_fit_the_class(self):
+        self.assertRegex(' '.join(self.check(outcome='not-run')), 'do not fit the class not-run')
+        self.assertRegex(' '.join(self.check(outcome='held')), 'do not fit the class held')
+        self.assertRegex(' '.join(self.check(frozen='2026-10-22')), 'do not fit the class failed')  # frozen after the run
+        self.assertEqual(self.check(outcome='not-run', run=''), [])
+
+    def test_paths_must_be_public_and_inside(self):
+        self.assertRegex(' '.join(self.check(quote_path='../x/README.md')), 'not a public path')
+        self.assertRegex(' '.join(self.check(folder='tmp/x/README.md')), 'not a public path')
+
+    def test_as_of_and_method_quotes_are_checked(self):
+        errors = tests_page.validate({'as_of': 'today', 'tests': [ROW], 'method_quotes': [{'text': 'no such sentence'}]}, self.root)
+        self.assertRegex(' '.join(errors), 'as_of is not a date')
+        self.assertRegex(' '.join(errors), 'method §9 no longer says')
 
     def test_the_failures_come_first(self):
         rows = [dict(ROW, id='P', outcome='passed'), dict(ROW, id='F', outcome='failed'), dict(ROW, id='M', outcome='mixed')]
