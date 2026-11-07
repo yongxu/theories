@@ -2,7 +2,7 @@
 
 # What the account is for, and how far
 
-[One page](ONE-PAGE.md) · [The overview](THE-THEORY-OF-BECOMING.md) · [The tests](../../TESTS.md) · [Glossary](../../GLOSSARY.md)
+[中文](USES.zh.md) · [One page](ONE-PAGE.md) · [The overview](THE-THEORY-OF-BECOMING.md) · [The tests](../../TESTS.md) · [Glossary](../../GLOSSARY.md)
 
 *Thirteen to seventeen minutes to read, the table about ten; the worked examples, on their own page, thirty-eight to forty-nine more.*
 
