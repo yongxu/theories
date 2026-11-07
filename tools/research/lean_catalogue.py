@@ -553,8 +553,9 @@ def layout(manifest: dict, sources: dict) -> dict[str, list[list[dict]]]:
         members = [f for f in _active(manifest) if f["group"] == key]
         if not members:
             continue
-        sizes = [len(_relink(finish(_module_rows(f, manifest, sources))).encode()) + 1 for f in members]
-        if len(_single(manifest, sources, key, []).encode()) + 200 + sum(sizes) <= PART_LIMIT:
+        sizes = [len(_relink(finish(_module_rows(f, manifest, sources))).encode()) for f in members]
+        # A module's foldout takes the same bytes on the page as alone, so the page is its one-module page and the rest.
+        if len(_single(manifest, sources, key, members[:1]).encode()) + sum(sizes[1:]) <= PART_LIMIT:
             out[key] = [members]
             continue
         out[key] = _pack(members, sizes)
@@ -601,13 +602,14 @@ def _single(manifest: dict, sources: dict, key: str, members: list) -> str:
     return _relink(finish(rows))
 
 
-def _group_index(manifest: dict, key: str, group: list) -> str:
-    """A split group's page: its parts, then each module with the anchor it had on the group's single page."""
+def _group_index(manifest: dict, key: str, group: list, largest: int) -> str:
+    """A split group's page: its parts, then each module with the anchor it had on the group's single page. `largest`
+    is the largest part's size in bytes."""
     H = heading
     title = GROUPS[key][0]
     rows = [H("#", "Named Lean declarations", "Lean 具名声明 / Named Lean declarations"), "", GENERATED, "", *DECLARATIONS_LEAD[:2], INDEX_LEAD, "",
             "[All topics and modules](LEAN-DECLARATIONS.md)", "", H("##", title, FORMER.get(key)), "",
-            f"This group's {sum(map(len, group))} modules are listed on {len(group)} parts, each at most {PART_LIMIT:,} bytes, well under the size at which GitHub stops showing a Markdown file. Browser find on a part finds the names on that part only; the module table below says which part holds each module.", "",
+            f"This group's {sum(map(len, group))} modules are listed on {len(group)} parts of about equal size, the largest {largest:,} bytes, under the size at which GitHub stops showing a Markdown file. Browser find on a part finds the names on that part only; the module table below says which part holds each module.", "",
             "| Page | Modules, in the catalogue's order | theorem/lemma occurrences |", "|---|---|---:|"]
     for n, members in enumerate(group, 1):
         span = f"{len(members)}, from {Path(members[0]['path']).name} to {Path(members[-1]['path']).name}" if len(members) > 1 else Path(members[0]["path"]).name
@@ -640,7 +642,10 @@ def render_declarations(manifest: dict, sources: dict, selected_group: str | Non
     parts = layout(manifest, sources) if parts is None else parts
     if selected_group is not None:
         group = parts.get(selected_group) or [[]]
-        return _single(manifest, sources, selected_group, group[0]) if len(group) == 1 else _group_index(manifest, selected_group, group)
+        if len(group) == 1:
+            return _single(manifest, sources, selected_group, group[0])
+        largest = max(len(_part(manifest, sources, selected_group, group, n).encode()) for n in range(1, len(group) + 1))
+        return _group_index(manifest, selected_group, group, largest)
     where = module_pages(parts)
     active = _active(manifest)
     rows = [H("#", "Named Lean declarations", "Lean 具名声明 / Named Lean declarations"), "", GENERATED, "", *DECLARATIONS_LEAD,
@@ -666,11 +671,13 @@ def outputs(manifest: dict, sources: dict) -> dict[str, str]:
         base + "/LEAN-DECLARATIONS.md": render_declarations(manifest, sources, parts=parts),
     }
     for key in GROUPS:
-        files[base + f"/lean-declarations/{key}.md"] = render_declarations(manifest, sources, key, parts)
         group = parts.get(key, [])
         if len(group) > 1:
-            for n in range(1, len(group) + 1):
-                files[base + f"/lean-declarations/{page_name(key, n, len(group))}"] = _part(manifest, sources, key, group, n)
+            bodies = {page_name(key, n, len(group)): _part(manifest, sources, key, group, n) for n in range(1, len(group) + 1)}
+            files[base + f"/lean-declarations/{key}.md"] = _group_index(manifest, key, group, max(len(b.encode()) for b in bodies.values()))
+            files.update({base + f"/lean-declarations/{name}": body for name, body in bodies.items()})
+        else:
+            files[base + f"/lean-declarations/{key}.md"] = render_declarations(manifest, sources, key, parts)
     return files
 
 
@@ -678,7 +685,7 @@ def problems(files: dict[str, str]) -> list[str]:
     """What stops the catalogue being written: a Markdown page over PAGE_LIMIT, or a page under lean-declarations/ that
     this catalogue no longer writes (a part left by a group that now needs fewer), to be removed by name."""
     base = OUT.relative_to(ROOT).as_posix()
-    out = [f"{path}: {len(body.encode()):,} bytes, more than the {PAGE_LIMIT:,} GitHub shows"
+    out = [f"{path}: {len(body.encode()):,} bytes, more than the {PAGE_LIMIT:,} this catalogue allows (GitHub showed a page of 1,035,845 bytes and not one of 3,742,459)"
            for path, body in files.items() if path.endswith(".md") and len(body.encode()) > PAGE_LIMIT]
     return out + [f"{path}: a page the catalogue no longer writes; remove it by name"
                   for path in sorted(f"{base}/lean-declarations/{p.name}" for p in (OUT / "lean-declarations").glob("*.md"))

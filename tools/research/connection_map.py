@@ -244,17 +244,23 @@ def page(data: dict) -> str:
             f'<style>{CSS}</style>\n</head>\n<body>\n{_body(data)}</body>\n</html>\n')
 
 
+def check_site(link_base: str, site_paths: dict[str, str] | None = None) -> None:
+    """Refuse, with a ValueError, a base not ending in / or a site path that is not a repository path (no #anchor)
+    mapped to a URL string."""
+    if not isinstance(link_base, str) or not link_base.endswith('/'):
+        raise ValueError(f'link_base must be a string ending in /: {link_base!r}')
+    bad = [k for k, v in (site_paths or {}).items() if not isinstance(k, str) or '#' in k or not isinstance(v, str)]
+    if bad:
+        raise ValueError(f'site_paths maps repository paths, without #anchor, to URL strings: {bad[:3]!r}')
+
+
 def site_map(out_dir: str | Path, link_base: str, site_paths: dict[str, str] | None = None) -> Path:
     """Write OUT_DIR/map.html for a site and return its path. A link that leaves the map goes to `link_base` followed by
     the repository path, `link_base` ending in / (a permalink prefix such as https://github.com/<owner>/<repo>/blob/<sha>/,
     or a relative path to a copy of the repository); a repository path in `site_paths` goes instead to the URL the site
     gives it (relative to map.html, or absolute), the link's #anchor kept. The page reads the atlas's, the graph's and
     the shared laws' data as rendered in this checkout, so a site is built after a render."""
-    if not isinstance(link_base, str) or not link_base.endswith('/'):
-        raise ValueError(f'link_base must be a string ending in /: {link_base!r}')
-    bad = [k for k, v in (site_paths or {}).items() if not isinstance(k, str) or '#' in k or not isinstance(v, str)]
-    if bad:
-        raise ValueError(f'site_paths maps repository paths, without #anchor, to URL strings: {bad[:3]!r}')
+    check_site(link_base, site_paths)
     atlas_data = json.loads((ROOT / atlas_tool.DATA).read_text(encoding='utf-8'))
     graph = json.loads((ROOT / theory_graph.GRAPH).read_text(encoding='utf-8'))
     data = payload(atlas_data, graph, _shared(), base=link_base)
@@ -578,9 +584,10 @@ def main(argv=None) -> int:
         ap.error('--site and --link-base go together')
     if a.site:
         try:
-            print(site_map(a.site, a.link_base))
+            check_site(a.link_base)
         except ValueError as e:
             ap.error(str(e))
+        print(site_map(a.site, a.link_base))
         return 0
     atlas_data = json.loads((ROOT / atlas_tool.DATA).read_text(encoding='utf-8'))
     graph = json.loads((ROOT / theory_graph.GRAPH).read_text(encoding='utf-8'))

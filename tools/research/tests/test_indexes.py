@@ -171,8 +171,28 @@ class LeanPageTests(unittest.TestCase):
             with patch.object(lean_catalogue, 'ROOT', root), patch.object(lean_catalogue, 'OUT', out), \
                     patch.object(lean_catalogue, 'PAGE_LIMIT', 100):
                 found = lean_catalogue.problems({f'{base}/lean-declarations/ethics.md': 'x' * 101, f'{base}/data/big.json': 'x' * 500})
-        self.assertEqual(found, [f'{base}/lean-declarations/ethics.md: 101 bytes, more than the 100 GitHub shows',
+        self.assertEqual(found, [f'{base}/lean-declarations/ethics.md: 101 bytes, more than the 100 this catalogue allows '
+                                 '(GitHub showed a page of 1,035,845 bytes and not one of 3,742,459)',
                                  f'{base}/lean-declarations/ethics-part-3.md: a page the catalogue no longer writes; remove it by name'])
+
+
+    def test_a_render_carries_the_catalogues_problems_into_its_errors(self):
+        from tools.research import research
+        with patch.object(research.indexes, 'render', lambda: {}), \
+                patch.object(research.reading_catalogue, 'render', lambda: ({}, [], [])), \
+                patch.object(lean_catalogue, 'render', lambda: {'x.md': 'x'}), \
+                patch.object(lean_catalogue, 'problems', lambda files: [f'{sorted(files)[0]}: left behind']):
+            self.assertEqual(research.index_outputs(render=False)[1], [])
+            out, errors, _ = research.index_outputs(render=True)
+        self.assertEqual((out, errors), ({'x.md': 'x'}, ['lean catalogue: x.md: left behind']))
+
+    def test_a_split_groups_page_gives_its_largest_part(self):
+        manifest = _lean(12, 40)
+        parts = lean_catalogue.layout(manifest, {})['becoming-core']
+        bodies = [lean_catalogue._part(manifest, {}, 'becoming-core', parts, n) for n in range(1, len(parts) + 1)]
+        largest = max(len(b.encode()) for b in bodies)
+        page = lean_catalogue.render_declarations(manifest, {}, 'becoming-core', {'becoming-core': parts})
+        self.assertIn(f'the largest {largest:,} bytes', page)
 
 
 class LeanPageSizeTests(unittest.TestCase):

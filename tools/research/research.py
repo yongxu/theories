@@ -308,9 +308,11 @@ def check_or_render(render=False, base=None, ids=None, strict_fresh=False):
             # them (README links Lean files), as they were before this write; a second pass
             # over it makes one render a fixed point, so a strict check passes after it.
             if not errors:
-                settled = {path: body for path, body in lean_catalogue.render().items()
+                again = lean_catalogue.render()
+                errors += ['lean catalogue: ' + e for e in lean_catalogue.problems(again)]
+                settled = {path: body for path, body in again.items()
                            if not (ROOT / path).is_file() or (ROOT / path).read_text() != body}
-                if settled:
+                if settled and not errors:
                     errors += navigation.write_views(settled, initial)
     elif not render:
         for path, body in {**outputs, **record_outputs}.items():

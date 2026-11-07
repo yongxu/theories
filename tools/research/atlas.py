@@ -851,6 +851,8 @@ def crosswalk_page(atlas: dict) -> str:
                    + ' | '.join(str(g['by_carried'][c]) for c in carried) + ' | '
                    + ' | '.join(str(g['by_relation'][r]) for r in relations) + ' | '
                    + ' | '.join(str(g['by_agreement_of'][a]) for a in agreements) + ' |')
+    out += ['', 'A link to a correspondence made while the crosswalk was one page lands on its group\'s row here; on the group\'s '
+            'page the correspondence has the same id (`crosswalk/<group>.md#<id>`).']
     return _finish(out + ['', _navigation(CROSSWALK)])
 
 
@@ -861,18 +863,22 @@ def group_page(atlas: dict, g: dict) -> str:
     folder = (f' The folder itself: [its README]({_href(FOLDERS.rpartition("/")[0] + "/" + g["id"].removeprefix("cxg-") + "/README.md", CROSSWALK_PAGES)}).'
               if g['domain'] == EARLIER else '')
     homes = {e['id']: group_path(next(x for x in atlas['correspondence_groups'] if x['id'] == e['group'])) for e in atlas['correspondences']}
+
+    def linked(line: str) -> str:
+        return _linked(line, homes, here)
+
     out = [GENERATED, '', f'# The crosswalk: {g["title"]["en"]}', '', back + folder, '',
-           *_crosswalk_lead(atlas, CROSSWALK_PAGES), '## Summary and what was read', '', _line(g['summary']), '',
-           f'*Kind: {g["kind"]}. Read in full: {"; ".join(g["read"]) or "none listed"}. Skimmed: {"; ".join(g["skimmed"]) or "none listed"}. '
-           f'Searched only: {"; ".join(g["searched"]) or "none listed"}.*', '']
+           *_crosswalk_lead(atlas, CROSSWALK_PAGES), '## Summary and what was read', '', linked(_line(g['summary'])), '',
+           linked(f'*Kind: {g["kind"]}. Read in full: {"; ".join(g["read"]) or "none listed"}. Skimmed: {"; ".join(g["skimmed"]) or "none listed"}. '
+                  f'Searched only: {"; ".join(g["searched"]) or "none listed"}.*'), '']
     if g['coverage']:
         out += ['**Present in the account:**', '']
         for item in g['coverage'].get('present', []):
             where = item.get('where') or ''
             link = f' ([{posixpath.basename(where.partition("#")[0])}]({_href(where, CROSSWALK_PAGES)}))' if where and (ROOT / where.partition('#')[0]).exists() else ''
-            out.append(f'- {item.get("what", "")}{link}: {item.get("extent", "")}')
+            out.append(linked(f'- {item.get("what", "")}{link}: {item.get("extent", "")}'))
         out += ['', '**Absent:**', '']
-        out += [f'- {_line(item)}' for item in g['coverage'].get('absent', [])] or ['- Nothing listed.']
+        out += [linked(f'- {_line(item)}') for item in g['coverage'].get('absent', [])] or ['- Nothing listed.']
         out.append('')
     listed = [e for e in atlas['correspondences'] if e['group'] == g['id']]
     out += ['## Its entries', '', f'{len(listed)} entries.', '']
@@ -880,7 +886,7 @@ def group_page(atlas: dict, g: dict) -> str:
         out += _correspondence_lines(e, CROSSWALK_PAGES, homes, here)
     if g['not_mapped']:
         out += ['', '**Found and not mapped:**', '']
-        out += [f'- {_line(item)}' + (f' ({item["why"]})' if item.get('why') else '') for item in g['not_mapped']]
+        out += [linked(f'- {_line(item)}' + (f' ({item["why"]})' if item.get('why') else '')) for item in g['not_mapped']]
     return _finish(out + ['', back])
 
 
@@ -967,7 +973,8 @@ def render(records: list) -> tuple[dict, list[str]]:
              DATA: json.dumps(atlas, ensure_ascii=False, indent=1) + '\n'}
     pages.update({family_path(f): family_page(atlas, f) for f in vocabulary['families']})
     pages.update({group_path(g): group_page(atlas, g) for g in atlas['correspondence_groups']})
-    errors = [f'{path}: {len(body.encode()):,} bytes, more than the {PAGE_LIMIT:,} GitHub renders; split it further'
+    errors = [f'{path}: {len(body.encode()):,} bytes, more than the {PAGE_LIMIT:,} this render allows (GitHub showed a page of '
+              f'1,035,845 bytes and not one of 3,742,459); split it further'
               for path, body in pages.items() if path.endswith('.md') and len(body.encode()) > PAGE_LIMIT]
     errors += [f'{path}: a page the atlas no longer writes; remove it by name'
                for folder in (FAMILY_PAGES, CROSSWALK_PAGES) for path in sorted(p.relative_to(ROOT).as_posix() for p in (ROOT / folder).glob('*.md'))

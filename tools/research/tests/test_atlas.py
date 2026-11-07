@@ -331,7 +331,7 @@ class RenderTests(AtlasCase):
             pages, errors = atlas.render(RECORDS)
         self.assertEqual(pages, {})
         self.assertTrue(errors)
-        self.assertTrue(all('more than the 2,000 GitHub renders' in e for e in errors), errors)
+        self.assertTrue(all('more than the 2,000 this render allows' in e for e in errors), errors)
         self.assertTrue(any(e.startswith(f'atlas: {atlas.FAMILY_PAGES}/c.md: ') for e in errors), errors)
 
     def test_the_data_holds_the_resolved_entries(self):
@@ -484,7 +484,7 @@ class CorrespondenceTests(AtlasCase):
         (self.root / atlas.ENTRIES / 'dynamics.json').write_text('[]\n')
         greek = group(id='cxg-greek', domain='greek-roman', title={'en': 'Greek thought'}, kind='domain',
                       coverage={'present': [], 'absent': [{'en': 'Nothing here.', 'searched': ['x']}]})
-        (self.root / atlas.ENTRIES / 'correspondence_groups.json').write_text(json.dumps([group(), greek]))
+        (self.root / atlas.ENTRIES / 'correspondence_groups.json').write_text(json.dumps([group(not_mapped=[{'en': 'Read beside cx-greek-one.'}]), greek]))
         (self.root / atlas.ENTRIES / 'correspondences.json').write_text(json.dumps(
             [reading(reading={'en': 'Beside cx-greek-one and cx-early-other, not cx-nowhere.'}),
              reading(id='cx-early-other', relation='divergence', agreement_of=None),
@@ -494,6 +494,8 @@ class CorrespondenceTests(AtlasCase):
         page = pages[atlas.CROSSWALK_PAGES + '/early.md']
         self.assertIn('Beside [cx-greek-one](greek.md#cx-greek-one) and [cx-early-other](#cx-early-other), not cx-nowhere.', page)
         self.assertIn('<a id="cx-early-claim"></a>', page)  # its own anchor is left as it is
+        self.assertIn('- Read beside [cx-greek-one](greek.md#cx-greek-one).', page)  # in the group's own lists too
+        self.assertIn('lands on its group\'s row here', pages[atlas.CROSSWALK])
 
 
     def test_the_index_lists_only_the_earlier_folders(self):
