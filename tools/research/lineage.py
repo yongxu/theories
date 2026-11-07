@@ -207,8 +207,8 @@ def svg(s, lang, weeks):
             h = 50 * n / top
             out.append(f'<rect x="{x:.1f}" y="{base + 28:.1f}" width="6" height="{h:.1f}" fill="{FAINT}"/>')
         out.append(t(W - 60, base + 92, words['growth'].format(top=top), 10.5, anchor='end', fill=MUTED))
-    # the points, numbered, in lanes above the axis
-    lanes = []
+    # the points, numbered, in lanes above the axis; the thread's path first, so the markers sit on it
+    lanes, placed = [], []
     thread = set(s.get('thread', {}).get('points', []))
     marks = {}
     for n, p in enumerate(s['points'], 1):
@@ -220,16 +220,18 @@ def svg(s, lang, weeks):
         lanes[lane] = x
         y = base - 18 - 22 * lane
         marks[p['id']] = (x, y)
-        out.append(f'<line x1="{x:.1f}" y1="{base}" x2="{x:.1f}" y2="{y:.1f}" stroke="{FAINT}" stroke-width="0.8"/>')
+        placed.append((n, p, x, y))
+    path = [marks[i] for i in s.get('thread', {}).get('points', []) if i in marks]
+    if len(path) > 1:
+        d = 'M' + ' L'.join(f'{x:.1f},{y:.1f}' for x, y in path)
+        out.append(f'<path d="{d}" fill="none" stroke="{THREAD}" stroke-width="1.6" stroke-dasharray="5 3"/>')
+    for n, p, x, y in placed:
+        out.append(f'<line x1="{x:.1f}" y1="{base}" x2="{x:.1f}" y2="{y + 9:.1f}" stroke="{FAINT}" stroke-width="0.8"/>')
         fill = {'public': INK, 'private': '#ffffff', 'reconstruction': '#ffffff'}[p['label']]
         dash = ' stroke-dasharray="2.5 2"' if p['label'] == 'reconstruction' else ''
         ring = f' stroke="{THREAD}" stroke-width="2.4"' if p['id'] in thread else f' stroke="{INK}" stroke-width="1.2"'
         out.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="9" fill="{fill}"{ring}{dash}/>')
         out.append(t(x, y + 3.5, str(n), 9, 'bold', 'middle', '#ffffff' if p['label'] == 'public' else INK))
-    path = [marks[i] for i in s.get('thread', {}).get('points', []) if i in marks]
-    if len(path) > 1:
-        d = 'M' + ' L'.join(f'{x:.1f},{y - 12:.1f}' for x, y in path)
-        out.append(f'<path d="{d}" fill="none" stroke="{THREAD}" stroke-width="1.6" stroke-dasharray="5 3"/>')
     # legend
     y = H - 92
     for i, key in enumerate(LABELS):
