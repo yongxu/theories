@@ -246,9 +246,12 @@ def index_outputs(render=False):
     out = dict(indexes.render())
     pages, errors, drift = reading_catalogue.render()
     out.update(pages)
+    errors = ['reading catalogue: ' + e for e in errors]
     if render:
-        out.update(lean_catalogue.render())
-    return out, ['reading catalogue: ' + e for e in errors], drift
+        lean = lean_catalogue.render()
+        out.update(lean)
+        errors += ['lean catalogue: ' + e for e in lean_catalogue.problems(lean)]
+    return out, errors, drift
 
 
 def check_or_render(render=False, base=None, ids=None, strict_fresh=False):

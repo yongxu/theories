@@ -18,8 +18,10 @@ Curated: theories/becoming/results/atlas/vocabulary.json, the closed lists, and 
 correspondences and their groups; transitions, exits, premises, theses and tests, and open items come as files of their
 own). Generated: theories/becoming/results/atlas/ATLAS.md with a page per family under families/, CROSSWALK.md with a
 page per group under crosswalk/, theories/becoming/results/data/atlas.json and the index of the earlier theory folders,
-theories/README.md, from the crosswalk's groups. Each Markdown page stays within PAGE_LIMIT, the size GitHub renders,
-and each index keeps the anchors its pages once held, so a link made before a split still lands. What they say
+theories/README.md, from the crosswalk's groups. No Markdown page exceeds PAGE_LIMIT, and a page the render no longer
+writes is an error until it is removed by name. Each index keeps every anchor its single page had (the families' and
+groups' ids and headings, each dynamic's id and heading and each correspondence's id), so a link made before the split
+still lands. What they say
 is a function of the curated files and the records; that declarations, anchors and test paths resolve is checked, not
 rendered, so a chapter or Lean edit does not make the pages stale. `research.py check` fails on an error and on a page
 a render would change; `research.py render` writes them.
@@ -50,11 +52,11 @@ ATLAS = 'theories/becoming/results/atlas'
 VOCABULARY = ATLAS + '/vocabulary.json'
 ENTRIES = ATLAS + '/entries'
 PAGE = ATLAS + '/ATLAS.md'
-FAMILIES = ATLAS + '/families'
+FAMILY_PAGES = ATLAS + '/families'
 CROSSWALK = ATLAS + '/CROSSWALK.md'
-GROUPS = ATLAS + '/crosswalk'
-# GitHub shows a Markdown file of up to this many bytes and none larger (checked on 8 November 2026 against its blob
-# view: ATLAS.md at 1,035,845 bytes rendered, CROSSWALK.md at 3,742,459 did not), so no page written here exceeds it.
+CROSSWALK_PAGES = ATLAS + '/crosswalk'
+# GitHub stops showing a Markdown file somewhere between 1,035,845 bytes (ATLAS.md, shown on 8 November 2026) and
+# 3,742,459 (CROSSWALK.md, not shown); no page written here exceeds 1 MiB. lean_catalogue.PAGE_LIMIT is the same bound.
 PAGE_LIMIT = 1_048_576
 # The index of the earlier theory folders, one row per folder from the crosswalk's groups of the earlier-folders domain.
 FOLDERS = 'theories/README.md'
@@ -585,6 +587,30 @@ def _name(d: dict) -> str:
     return d['name']['en'] + (f' ({d["name"]["zh"]})' if d['name'].get('zh') else '')
 
 
+def _headings(titles: list[str]) -> list[str]:
+    """GitHub's anchors for these headings in order, repeats numbered as GitHub numbers them."""
+    return reading_catalogue.numbered([reading_catalogue.slug(t) for t in titles])
+
+
+def _marks(ids: list[str], taken: set) -> str:
+    """Anchors for a row, each once and none the page has already."""
+    out = []
+    for i in ids:
+        if i not in taken:
+            taken.add(i)
+            out.append(f'<a id="{i}"></a>')
+    return ''.join(out)
+
+
+NAVIGATION = (('the results', 'theories/becoming/results/README.md'), ('the atlas of dynamics', PAGE),
+              ('the crosswalk', CROSSWALK), ('the connection map', ATLAS + '/map.html'))
+
+
+def _navigation(here: str) -> str:
+    """The line that opens and closes each index: where it stands among the results' views."""
+    return ' · '.join(f'**{label}**' if path == here else f'[{label}]({_href(path, posixpath.dirname(here))})' for label, path in NAVIGATION)
+
+
 def _finish(out: list[str]) -> str:
     """The page's lines, one blank line between sections and one newline at the end."""
     return re.sub(r'\n{3,}', '\n\n', '\n'.join(out)).rstrip('\n') + '\n'
@@ -594,7 +620,7 @@ def _finish(out: list[str]) -> str:
 
 def family_path(family: dict) -> str:
     """A family's page: families/<its letter>.md."""
-    return f'{FAMILIES}/{family["id"].lower()}.md'
+    return f'{FAMILY_PAGES}/{family["id"].lower()}.md'
 
 
 def _homes(atlas: dict) -> dict:
@@ -619,14 +645,14 @@ def _atlas_lead(at: str) -> str:
             'entry marks a dynamic good or bad; what one does to what lies beyond its couplings is under *Beyond its couplings*.')
 
 
-def _family_table(listed: list, homes: dict, here: str, keep: bool = False) -> list[str]:
-    """A family's index: a row for each dynamic, linking its section. With `keep`, each row holds the anchor its
-    dynamic's section had when the atlas was one page, so that a link made then still lands."""
+def _family_table(listed: list, homes: dict, here: str, keep: dict | None = None) -> list[str]:
+    """A family's index: a row for each dynamic, linking its section. `keep` gives, by dynamic, the anchors its section
+    had when the atlas was one page (its id and its heading's), which its row then holds, so a link made then still lands."""
     at = posixpath.dirname(here)
     rows = ['| Dynamic | Records | Base | Standing | Exits | Open |', '|---|---|---|---|---:|---:|']
     for d in listed:
         standing = '; '.join(f'{s["status"]} ({s["kind"]})' for s in d['standing']) or f'{d["standing_without_record"]}, no record'
-        mark = f'<a id="{d["id"]}"></a>' if keep else ''
+        mark = keep[d['id']] if keep else ''
         rows.append(f'| {mark}[{_cell(_name(d))}]({_section(d["id"], homes, here)}) | '
                     + (', '.join(_record(r, at) for r in d['records']) or '—')
                     + f' | {d["base"] or "—"} | {standing} | {len(d["exits"])} | {len(d["open"])} |')
@@ -673,17 +699,27 @@ def _entry(d: dict, names: dict, homes: dict, here: str) -> list[str]:
 def page(atlas: dict) -> str:
     """ATLAS.md, the atlas's index: each family's table, its rows linking the sections on the family's page."""
     families, homes = atlas['vocabulary']['families'], _homes(atlas)
-    out = [GENERATED, '', '# The atlas of dynamics', '', _atlas_lead(ATLAS), '',
+    listed = {f['id']: [d for d in atlas['dynamics'] if d['family'] == f['id']] for f in families}
+    # The single page's headings: its title, then each family's, then each of its dynamics'.
+    titles = ['The atlas of dynamics'] + [t for f in families for t in [f'{f["id"]}. {f["en"]}'] + [_name(d) for d in listed[f['id']]]]
+    old, slugs, at = {}, _headings(titles), 1
+    for f in families:
+        at += 1
+        for d in listed[f['id']]:
+            old[d['id']] = slugs[at]
+            at += 1
+    taken = set(_headings(['The atlas of dynamics'] + [f'{f["id"]}. {f["en"]}' for f in families])) | {f'family-{f["id"].lower()}' for f in families}
+    keep = {d['id']: _marks([d['id'], old[d['id']]], taken) for d in atlas['dynamics']}
+    out = [GENERATED, '', '# The atlas of dynamics', '', _navigation(PAGE), '', _atlas_lead(ATLAS), '',
            f'{len(atlas["dynamics"])} dynamics, by family. It is a catalogue to look things up in, not to read through: each '
            "family has a page, which opens with its index, and an entry's section there holds the rest.", '',
            '| Family | Dynamics |', '|---|---:|']
     out += [f'| [{f["id"]}. {f["en"]}]({_href(family_path(f))}) | {atlas["counts"][f["id"]]} |' for f in families]
     for f in families:
-        listed = [d for d in atlas['dynamics'] if d['family'] == f['id']]
         out += ['', f'<a id="family-{f["id"].lower()}"></a>', f'## {f["id"]}. {f["en"]}', '',
                 f'[Its page]({_href(family_path(f))}), with each entry\'s section.', '']
-        out += _family_table(listed, homes, PAGE, keep=True) if listed else ['No dynamic listed yet.']
-    return _finish(out)
+        out += _family_table(listed[f['id']], homes, PAGE, keep) if listed[f['id']] else ['No dynamic listed yet.']
+    return _finish(out + ['', _navigation(PAGE)])
 
 
 def family_page(atlas: dict, family: dict) -> str:
@@ -692,15 +728,17 @@ def family_page(atlas: dict, family: dict) -> str:
     here = family_path(family)
     names = {d['id']: _name(d) for d in atlas['dynamics']}
     listed = [d for d in atlas['dynamics'] if d['family'] == family['id']]
-    others = ', '.join(f'**{f["id"]}**' if f is family else f'[{f["id"]}]({_href(family_path(f), FAMILIES)})' for f in families)
-    out = [GENERATED, '', f'# The atlas of dynamics: {family["id"]}. {family["en"]}', '',
-           f'[The atlas]({_href(PAGE, FAMILIES)}), with every family\'s index. Families: {others}.', '', _atlas_lead(FAMILIES), '']
+    others = ', '.join(f'**{f["id"]}**' if f['id'] == family['id'] else f'[{f["id"]}]({_href(family_path(f), FAMILY_PAGES)})' for f in families)
+    nav = f'[The atlas]({_href(PAGE, FAMILY_PAGES)}), with every family\'s index. Families: {others}.'
+    out = [GENERATED, '', f'# The atlas of dynamics: {family["id"]}. {family["en"]}', '', nav, '', _atlas_lead(FAMILY_PAGES), '']
     if not listed:
-        return _finish(out + ['No dynamic listed yet.'])
+        return _finish(out + ['No dynamic listed yet.', '', nav])
+    out += [f'{len(listed)} of the atlas\'s {len(atlas["dynamics"])} dynamics. A catalogue to look things up in, not to read '
+            'through: the table is its index, and an entry\'s section holds the rest.', '']
     out += _family_table(listed, homes, here) + ['']
     for d in listed:
         out += _entry(d, names, homes, here)
-    return _finish(out)
+    return _finish(out + ['', nav])
 
 
 # --- the crosswalk: an index, and a page for each folder and domain ------------------------------------------------
@@ -715,11 +753,25 @@ AGREEMENT_WORD = {'law': 'a law', 'thesis-or-method': 'a thesis or method', 'rea
 
 def group_path(group: dict) -> str:
     """A folder's or domain's page: crosswalk/<its id without cxg->.md."""
-    return f'{GROUPS}/{group["id"].removeprefix("cxg-")}.md'
+    return f'{CROSSWALK_PAGES}/{group["id"].removeprefix("cxg-")}.md'
 
 
-def _correspondence_lines(e: dict, at: str = ATLAS) -> list[str]:
-    """One correspondence: the source's own sense first, then what became of it."""
+ENTRY_ID = re.compile(r'(?<![\w#/\[-])(cx-[a-z0-9]+(?:-[a-z0-9]+)*)(?![\w-])')
+
+
+def _linked(line: str, homes: dict, here: str) -> str:
+    """A line whose mentions of other correspondences, by id, link their sections, on whichever page they are."""
+    def link(m):
+        i = m.group(1)
+        if i not in homes:
+            return i
+        return f'[{i}](#{i})' if homes[i] == here else f'[{i}]({_href(homes[i] + "#" + i, posixpath.dirname(here))})'
+    return ENTRY_ID.sub(link, line)
+
+
+def _correspondence_lines(e: dict, at: str = ATLAS, homes: dict | None = None, here: str | None = None) -> list[str]:
+    """One correspondence: the source's own sense first, then what became of it. With `homes` (each correspondence's
+    page) and `here` (this page), a mention of another correspondence by its id links it."""
     source = e['source']
     work = f'[{source["work"]}]({_href(source["work"], at)})' if source['basis'] == 'read-in-repo' else source['work']
     where = f'{work}, {source["locator"]}' + ('' if source['basis'] == 'read-in-repo' else ' (from the AI\'s knowledge, not checked against a text)')
@@ -741,6 +793,8 @@ def _correspondence_lines(e: dict, at: str = ATLAS) -> list[str]:
     if e['absence']:
         lines.append('  - Searched: ' + '; '.join(map(str, e['absence'].get('searched', [])))
                      + ('. Read: ' + '; '.join(map(str, e['absence']['read'])) if e['absence'].get('read') else ''))
+    if homes is not None:
+        lines = lines[:1] + [_linked(line, homes, here) for line in lines[1:]]
     return lines
 
 
@@ -753,7 +807,7 @@ def _checks_lines(checks: dict | None) -> list[str]:
     return [f'**How far to trust it.** Each item had a mapper, a reviser, a checker told to refute, a repair after a critic and a '
             f'comparison across items. A second critic then read {second["sampled"]} entries drawn at random, up to {second["per_stratum"]} '
             f'from each kind of verdict, against both sides: {v["holds"]} held, {v["label"]} had a label or a target\'s role wrong '
-            f'and {v["fails"]} had a wrong reading. Weighted by how many entries each kind holds, that estimates {est["holds"]}% '
+            f'and {v["fails"]} had a wrong reading. Weighted by how many entries each kind of verdict holds, that estimates {est["holds"]}% '
             f'holding, {est["label"]}% with a label or role wrong and {est["fails"]}% with a wrong reading over all {second["entries"]}; its fixes are '
             f'applied, and the other entries were not read again. The first critic\'s sample ({first["sampled"]}) was aimed at '
             f'suspects and gives no rate. Where the source is not stored here, a critic\'s check was memory against memory.', '']
@@ -784,30 +838,38 @@ def crosswalk_page(atlas: dict) -> str:
     carried = [c['en'] for c in vocabulary['carried']]
     relations = [r['en'] for r in vocabulary['relations']]
     agreements = [a['en'] for a in vocabulary['agreement_of']]
-    out = [GENERATED, '', '# The crosswalk', '', *_crosswalk_lead(atlas, ATLAS),
+    # The single page's headings: its title, then each group's; and each entry's id, now on its group's page.
+    old = dict(zip((g['id'] for g in groups), _headings(['The crosswalk'] + [g['title']['en'] for g in groups])[1:]))
+    taken = set(_headings(['The crosswalk']))
+    out = [GENERATED, '', '# The crosswalk', '', _navigation(CROSSWALK), '', *_crosswalk_lead(atlas, ATLAS),
            f'{len(entries)} entries in {len(groups)} groups, each on its own page:', '',
            '| Group | Entries | ' + ' | '.join(carried) + ' | ' + ' | '.join(relations) + ' | ' + ' | '.join(f'agreement of {a}' for a in agreements) + ' |',
            '|---|---:|' + '---:|' * (len(carried) + len(relations) + len(agreements))]
     for g in groups:
-        out.append(f'| <a id="{g["id"]}"></a>[{_cell(g["title"]["en"])}]({_href(group_path(g))}) | {g["entries"]} | '
+        marks = _marks([g['id'], old[g['id']]] + [e['id'] for e in entries if e['group'] == g['id']], taken)
+        out.append(f'| {marks}[{_cell(g["title"]["en"])}]({_href(group_path(g))}) | {g["entries"]} | '
                    + ' | '.join(str(g['by_carried'][c]) for c in carried) + ' | '
                    + ' | '.join(str(g['by_relation'][r]) for r in relations) + ' | '
                    + ' | '.join(str(g['by_agreement_of'][a]) for a in agreements) + ' |')
-    return _finish(out)
+    return _finish(out + ['', _navigation(CROSSWALK)])
 
 
 def group_page(atlas: dict, g: dict) -> str:
     """A folder's or domain's page: what was read, what is present and absent, its entries and what was not mapped."""
-    out = [GENERATED, '', f'# The crosswalk: {g["title"]["en"]}', '',
-           f'[The crosswalk]({_href(CROSSWALK, GROUPS)}), with every folder and domain and their counts.', '',
-           *_crosswalk_lead(atlas, GROUPS), '## What was read', '', _line(g['summary']), '',
+    here = group_path(g)
+    back = f'[The crosswalk]({_href(CROSSWALK, CROSSWALK_PAGES)}), with every folder and domain and their counts.'
+    folder = (f' The folder itself: [its README]({_href(FOLDERS.rpartition("/")[0] + "/" + g["id"].removeprefix("cxg-") + "/README.md", CROSSWALK_PAGES)}).'
+              if g['domain'] == EARLIER else '')
+    homes = {e['id']: group_path(next(x for x in atlas['correspondence_groups'] if x['id'] == e['group'])) for e in atlas['correspondences']}
+    out = [GENERATED, '', f'# The crosswalk: {g["title"]["en"]}', '', back + folder, '',
+           *_crosswalk_lead(atlas, CROSSWALK_PAGES), '## Summary and what was read', '', _line(g['summary']), '',
            f'*Kind: {g["kind"]}. Read in full: {"; ".join(g["read"]) or "none listed"}. Skimmed: {"; ".join(g["skimmed"]) or "none listed"}. '
            f'Searched only: {"; ".join(g["searched"]) or "none listed"}.*', '']
     if g['coverage']:
         out += ['**Present in the account:**', '']
         for item in g['coverage'].get('present', []):
             where = item.get('where') or ''
-            link = f' ([{posixpath.basename(where.partition("#")[0])}]({_href(where, GROUPS)}))' if where and (ROOT / where.partition('#')[0]).exists() else ''
+            link = f' ([{posixpath.basename(where.partition("#")[0])}]({_href(where, CROSSWALK_PAGES)}))' if where and (ROOT / where.partition('#')[0]).exists() else ''
             out.append(f'- {item.get("what", "")}{link}: {item.get("extent", "")}')
         out += ['', '**Absent:**', '']
         out += [f'- {_line(item)}' for item in g['coverage'].get('absent', [])] or ['- Nothing listed.']
@@ -815,11 +877,11 @@ def group_page(atlas: dict, g: dict) -> str:
     listed = [e for e in atlas['correspondences'] if e['group'] == g['id']]
     out += ['## Its entries', '', f'{len(listed)} entries.', '']
     for e in listed:
-        out += _correspondence_lines(e, GROUPS)
+        out += _correspondence_lines(e, CROSSWALK_PAGES, homes, here)
     if g['not_mapped']:
         out += ['', '**Found and not mapped:**', '']
         out += [f'- {_line(item)}' + (f' ({item["why"]})' if item.get('why') else '') for item in g['not_mapped']]
-    return _finish(out)
+    return _finish(out + ['', back])
 
 
 def folders_page(atlas: dict) -> str:
@@ -829,8 +891,8 @@ def folders_page(atlas: dict) -> str:
     folders = [g for g in groups if g['domain'] == EARLIER]
     est = ((atlas.get('crosswalk_checks') or {}).get('second_critic') or {}).get('estimate_percent')
     critic = (atlas.get('crosswalk_checks') or {}).get('second_critic') or {}
-    trust = (f' A second critic read {critic["sampled"]} entries drawn at random, up to {critic["per_stratum"]} from each kind of '
-             f'verdict, against both sides; weighted by how many entries each kind holds, that estimates {est["holds"]}% holding, '
+    trust = (f' A critic, the second of two, read {critic["sampled"]} entries drawn at random, up to {critic["per_stratum"]} from each kind of '
+             f'verdict, against both sides; weighted by how many entries each kind of verdict holds, that estimates {est["holds"]}% holding, '
              f'{est["label"]}% with a label or a target\'s role wrong and {est["fails"]}% with a wrong reading over all '
              f'{critic["entries"]} entries, folders and domains together; its fixes are applied, and the other entries were not '
              f'read again.') if est else ''
@@ -907,6 +969,9 @@ def render(records: list) -> tuple[dict, list[str]]:
     pages.update({group_path(g): group_page(atlas, g) for g in atlas['correspondence_groups']})
     errors = [f'{path}: {len(body.encode()):,} bytes, more than the {PAGE_LIMIT:,} GitHub renders; split it further'
               for path, body in pages.items() if path.endswith('.md') and len(body.encode()) > PAGE_LIMIT]
+    errors += [f'{path}: a page the atlas no longer writes; remove it by name'
+               for folder in (FAMILY_PAGES, CROSSWALK_PAGES) for path in sorted(p.relative_to(ROOT).as_posix() for p in (ROOT / folder).glob('*.md'))
+               if path not in pages]
     return ({}, ['atlas: ' + e for e in errors]) if errors else (pages, [])
 
 

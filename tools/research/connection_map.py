@@ -223,8 +223,9 @@ def payload(atlas: dict, graph: dict, shared: dict, base: str | None = BASE) -> 
 
 
 def _blob(data: dict) -> str:
-    """The data as text safe inside a script element, and safe from the render's link check, which reads every `](`."""
-    return json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/').replace('](', ']\\u0028')
+    """The data as text safe inside a script element (no `<` at all, so neither `</script` nor `<!--` can end or
+    change it), and safe from the render's link check, which reads every `](`."""
+    return json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c').replace('](', ']\\u0028')
 
 
 def _body(data: dict) -> str:
@@ -249,8 +250,11 @@ def site_map(out_dir: str | Path, link_base: str, site_paths: dict[str, str] | N
     or a relative path to a copy of the repository); a repository path in `site_paths` goes instead to the URL the site
     gives it (relative to map.html, or absolute), the link's #anchor kept. The page reads the atlas's, the graph's and
     the shared laws' data as rendered in this checkout, so a site is built after a render."""
-    if not link_base.endswith('/'):
-        raise ValueError(f'link_base must end in /: {link_base!r}')
+    if not isinstance(link_base, str) or not link_base.endswith('/'):
+        raise ValueError(f'link_base must be a string ending in /: {link_base!r}')
+    bad = [k for k, v in (site_paths or {}).items() if not isinstance(k, str) or '#' in k or not isinstance(v, str)]
+    if bad:
+        raise ValueError(f'site_paths maps repository paths, without #anchor, to URL strings: {bad[:3]!r}')
     atlas_data = json.loads((ROOT / atlas_tool.DATA).read_text(encoding='utf-8'))
     graph = json.loads((ROOT / theory_graph.GRAPH).read_text(encoding='utf-8'))
     data = payload(atlas_data, graph, _shared(), base=link_base)
@@ -570,10 +574,13 @@ def main(argv=None) -> int:
     mode.add_argument('--site', metavar='OUT_DIR', help='write OUT_DIR/map.html for a site, its links going to --link-base')
     ap.add_argument('--link-base', metavar='URL', help='with --site: the prefix of a repository path, ending in /')
     a = ap.parse_args(argv)
+    if bool(a.site) != bool(a.link_base):
+        ap.error('--site and --link-base go together')
     if a.site:
-        if not a.link_base:
-            ap.error('--site needs --link-base')
-        print(site_map(a.site, a.link_base))
+        try:
+            print(site_map(a.site, a.link_base))
+        except ValueError as e:
+            ap.error(str(e))
         return 0
     atlas_data = json.loads((ROOT / atlas_tool.DATA).read_text(encoding='utf-8'))
     graph = json.loads((ROOT / theory_graph.GRAPH).read_text(encoding='utf-8'))

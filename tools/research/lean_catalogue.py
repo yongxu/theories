@@ -21,9 +21,10 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "theories/becoming/results"
 MANIFEST = ROOT / "_process/architecture/generated-manifest.json"
-# GitHub shows a Markdown file of up to PAGE_LIMIT bytes and none larger (checked on 8 November 2026 against its blob
-# view). A group whose declarations would fill more than PART_LIMIT is listed on pages of at most PART_LIMIT each,
-# `<group>-part-<n>.md`, and its own page becomes their index, keeping each module's anchor.
+# GitHub stops showing a Markdown file somewhere between 1,035,845 bytes (shown on 8 November 2026) and 3,742,459 (not
+# shown); no page written here exceeds 1 MiB, the same bound as atlas.PAGE_LIMIT, and `problems` reports one that would.
+# A group whose page would pass PART_LIMIT is listed on parts, `<group>-part-<n>.md`, of about equal size and each at
+# most PART_LIMIT unless one module alone is larger, and its own page becomes their index, keeping each module's anchor.
 PAGE_LIMIT = 1_048_576
 PART_LIMIT = 800_000
 SCRIPT = Path(__file__).resolve().relative_to(ROOT).as_posix()
@@ -394,10 +395,21 @@ def catalogue() -> tuple[dict, dict]:
     return manifest, source_index
 
 
+def _stamp(path: Path) -> tuple:
+    stat = path.stat()
+    return str(path), stat.st_mtime_ns, stat.st_size
+
+
+@lru_cache(maxsize=4)
+def _generated(path: str, mtime: int, size: int) -> frozenset:
+    """The generated files the manifest lists, read once for each version of it."""
+    return frozenset(json.loads(Path(path).read_text())["files"])
+
+
 def doc_links(file: dict, sources: dict) -> str:
     refs = file["direct_documentation_links_from"]
     # A theory's own argument outranks generated navigation that merely lists it.
-    generated = set(json.loads(MANIFEST.read_text())["files"])
+    generated = _generated(*_stamp(MANIFEST))
     canonical = sorted((r for r in refs if r.startswith("theories/")), key=lambda r: (r in generated, r))
     research = sorted((r for r in refs if r.startswith("_process/")), key=lambda r: ("INTEGRATION" not in r, "MATH" not in r, "ARGUMENT" not in r, r))
     chosen = canonical[:1] + research[:1]
@@ -523,6 +535,7 @@ def _theorems(file: dict, manifest: dict) -> int:
     return sum(d["kind"] in ("theorem", "lemma") for d in manifest["contents_by_sha256"][file["sha256"]]["declarations"])
 
 
+INDEX_LEAD = "On each part, theorems and lemmas are individually listed and definitions and type declarations share each module's foldout; this page lists the modules."
 DECLARATIONS_LEAD = ["[Return to navigation](LEAN-INDEX.md). Working sources and audit entries appear here; imported archives and development attempts are in the [JSON inventory](data/lean-index.json), and saved copies are bound by their runs' receipts. These are explicit declaration locations, not substitutes for statements, hypotheses and correspondence arguments.", "", "Theorems and lemmas are individually listed; definitions and type declarations share each module's foldout. Namespace-qualified names are textual hints; Lean determines private, internal and generated names.", ""]
 
 
@@ -533,14 +546,15 @@ def page_name(key: str, part: int, parts: int) -> str:
 
 def layout(manifest: dict, sources: dict) -> dict[str, list[list[dict]]]:
     """Each group's modules, as the pages that list them: one page where the group's page stays within PART_LIMIT,
-    else parts of at most PART_LIMIT each, packed in the group's order (a part's own lines take at most 4,000 bytes)."""
+    else parts in the group's order, each within PART_LIMIT unless one module alone is larger (a part's own lines take
+    at most 4,000 bytes; `problems` reports any page over PAGE_LIMIT)."""
     out = {}
     for key in GROUPS:
         members = [f for f in _active(manifest) if f["group"] == key]
         if not members:
             continue
-        sizes = [len(_relink(finish(_module_rows(f, manifest, sources))).encode()) for f in members]
-        if len(_single(manifest, sources, key, members).encode()) <= PART_LIMIT:
+        sizes = [len(_relink(finish(_module_rows(f, manifest, sources))).encode()) + 1 for f in members]
+        if len(_single(manifest, sources, key, []).encode()) + 200 + sum(sizes) <= PART_LIMIT:
             out[key] = [members]
             continue
         out[key] = _pack(members, sizes)
@@ -591,13 +605,13 @@ def _group_index(manifest: dict, key: str, group: list) -> str:
     """A split group's page: its parts, then each module with the anchor it had on the group's single page."""
     H = heading
     title = GROUPS[key][0]
-    rows = [H("#", "Named Lean declarations", "Lean 具名声明 / Named Lean declarations"), "", GENERATED, "", *DECLARATIONS_LEAD,
+    rows = [H("#", "Named Lean declarations", "Lean 具名声明 / Named Lean declarations"), "", GENERATED, "", *DECLARATIONS_LEAD[:2], INDEX_LEAD, "",
             "[All topics and modules](LEAN-DECLARATIONS.md)", "", H("##", title, FORMER.get(key)), "",
-            f"This group's {sum(map(len, group))} modules are listed on {len(group)} pages, each at most {PART_LIMIT:,} bytes so that GitHub shows it in full; each module below links its foldout.", "",
-            "| Page | Modules | theorem/lemma occurrences |", "|---|---|---:|"]
+            f"This group's {sum(map(len, group))} modules are listed on {len(group)} parts, each at most {PART_LIMIT:,} bytes, well under the size at which GitHub stops showing a Markdown file. Browser find on a part finds the names on that part only; the module table below says which part holds each module.", "",
+            "| Page | Modules, in the catalogue's order | theorem/lemma occurrences |", "|---|---|---:|"]
     for n, members in enumerate(group, 1):
-        span = f"{Path(members[0]['path']).name} to {Path(members[-1]['path']).name}" if len(members) > 1 else Path(members[0]["path"]).name
-        rows.append(f"| [Part {n} of {len(group)}](lean-declarations/{page_name(key, n, len(group))}) | {span} ({len(members)}) | {sum(_theorems(f, manifest) for f in members):,} |")
+        span = f"{len(members)}, from {Path(members[0]['path']).name} to {Path(members[-1]['path']).name}" if len(members) > 1 else Path(members[0]["path"]).name
+        rows.append(f"| [Part {n} of {len(group)}](lean-declarations/{page_name(key, n, len(group))}) | {span} | {sum(_theorems(f, manifest) for f in members):,} |")
     rows += ["", "| Module | Page | theorem/lemma |", "|---|---|---:|"]
     for n, members in enumerate(group, 1):
         for file in members:
@@ -610,14 +624,14 @@ def _part(manifest: dict, sources: dict, key: str, group: list, n: int) -> str:
     """One part of a split group: its modules' foldouts."""
     H = heading
     title = GROUPS[key][0]
-    rows = [H("#", "Named Lean declarations", "Lean 具名声明 / Named Lean declarations"), "", GENERATED, "", *DECLARATIONS_LEAD,
-            f"[All topics and modules](LEAN-DECLARATIONS.md) · [{title}, all parts](lean-declarations/{key}.md)"
-            + (f" · [part {n - 1}](lean-declarations/{page_name(key, n - 1, len(group))})" if n > 1 else "")
-            + (f" · [part {n + 1}](lean-declarations/{page_name(key, n + 1, len(group))})" if n < len(group) else ""), "",
+    nav = (f"[All topics and modules](LEAN-DECLARATIONS.md) · [{title}, all parts](lean-declarations/{key}.md)"
+           + (f" · [part {n - 1}](lean-declarations/{page_name(key, n - 1, len(group))})" if n > 1 else "")
+           + (f" · [part {n + 1}](lean-declarations/{page_name(key, n + 1, len(group))})" if n < len(group) else ""))
+    rows = [H("#", "Named Lean declarations", "Lean 具名声明 / Named Lean declarations"), "", GENERATED, "", *DECLARATIONS_LEAD, nav, "",
             H("##", f"{title}, part {n} of {len(group)}"), ""]
     for file in group[n - 1]:
         rows += _module_rows(file, manifest, sources)
-    return _relink(finish(rows))
+    return _relink(finish(rows + [nav, ""]))
 
 
 def render_declarations(manifest: dict, sources: dict, selected_group: str | None = None, parts: dict | None = None) -> str:
@@ -635,7 +649,7 @@ def render_declarations(manifest: dict, sources: dict, selected_group: str | Non
         members = [f for f in active if f["group"] == key]
         count = sum(_theorems(f, manifest) for f in members)
         rows.append(f"| [{title}](lean-declarations/{key}.md) | {len(members)} | {count:,} |")
-    rows += ["", H("##", "Find by name", "按名称查找 / Find by name"), "", "Use browser find within a topic page, or an editor's cross-file search for every name. From the repository root:", "", "```sh", "rg -n 'theorem_name' theories/becoming/results/lean-declarations/", "```", "", H("##", "Module list", "模块清单 / Module list"), "", "| Module | Topic |", "|---|---|"]
+    rows += ["", H("##", "Find by name", "按名称查找 / Find by name"), "", "Use browser find within a topic page (a topic too large for one page is listed on parts, and its page lists its modules: search its parts), or an editor's cross-file search for every name. From the repository root:", "", "```sh", "rg -n 'theorem_name' theories/becoming/results/lean-declarations/", "```", "", H("##", "Module list", "模块清单 / Module list"), "", "| Module | Topic |", "|---|---|"]
     for file in sorted(active, key=lambda f: (Path(f["path"]).name, f["path"])):
         rows.append(f"| [{Path(file['path']).name}](lean-declarations/{where[file['path']]}#{anchor(file['path'])}) | {GROUPS[file['group']][0]} |")
     return finish(rows)
@@ -660,6 +674,17 @@ def outputs(manifest: dict, sources: dict) -> dict[str, str]:
     return files
 
 
+def problems(files: dict[str, str]) -> list[str]:
+    """What stops the catalogue being written: a Markdown page over PAGE_LIMIT, or a page under lean-declarations/ that
+    this catalogue no longer writes (a part left by a group that now needs fewer), to be removed by name."""
+    base = OUT.relative_to(ROOT).as_posix()
+    out = [f"{path}: {len(body.encode()):,} bytes, more than the {PAGE_LIMIT:,} GitHub shows"
+           for path, body in files.items() if path.endswith(".md") and len(body.encode()) > PAGE_LIMIT]
+    return out + [f"{path}: a page the catalogue no longer writes; remove it by name"
+                  for path in sorted(f"{base}/lean-declarations/{p.name}" for p in (OUT / "lean-declarations").glob("*.md"))
+                  if path not in files]
+
+
 def render() -> dict[str, str]:
     """The catalogue for `research.py render`: one inventory, every output."""
     return outputs(*catalogue())
@@ -671,6 +696,10 @@ def main() -> int:
     args = parser.parse_args()
     manifest, sources = catalogue()
     files = outputs(manifest, sources)
+    found = problems(files)
+    if found:
+        print("The catalogue is not written:\n" + "\n".join(found))
+        return 1
     stale = []
     for name, body in files.items():
         path = ROOT / name

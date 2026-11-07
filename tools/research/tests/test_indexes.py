@@ -154,7 +154,32 @@ class LeanPageTests(unittest.TestCase):
         self.assertEqual([[f['path'] for f in p] for p in parts], [['0'], ['1'], ['2']])
 
 
+    def test_one_module_larger_than_a_part_takes_a_part_alone(self):
+        room = lean_catalogue.PART_LIMIT - 4_000
+        members = [{'path': str(i)} for i in range(3)]
+        parts = lean_catalogue._pack(members, [10, room * 2, 10])
+        self.assertEqual([[f['path'] for f in p] for p in parts], [['0'], ['1'], ['2']])
+
+    def test_a_page_over_the_limit_or_left_behind_stops_the_catalogue(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            out = root / 'theories/becoming/results'
+            (out / 'lean-declarations').mkdir(parents=True)
+            (out / 'lean-declarations/ethics-part-3.md').write_text('left by a group that needs fewer parts\n')
+            (out / 'lean-declarations/ethics.md').write_text('written\n')
+            base = 'theories/becoming/results'
+            with patch.object(lean_catalogue, 'ROOT', root), patch.object(lean_catalogue, 'OUT', out), \
+                    patch.object(lean_catalogue, 'PAGE_LIMIT', 100):
+                found = lean_catalogue.problems({f'{base}/lean-declarations/ethics.md': 'x' * 101, f'{base}/data/big.json': 'x' * 500})
+        self.assertEqual(found, [f'{base}/lean-declarations/ethics.md: 101 bytes, more than the 100 GitHub shows',
+                                 f'{base}/lean-declarations/ethics-part-3.md: a page the catalogue no longer writes; remove it by name'])
+
+
 class LeanPageSizeTests(unittest.TestCase):
+    def test_the_bound_is_the_atlas_bound(self):
+        from tools.research import atlas
+        self.assertEqual(lean_catalogue.PAGE_LIMIT, atlas.PAGE_LIMIT)
+
     def test_every_declaration_page_in_this_checkout_is_within_what_github_shows(self):
         folder = lean_catalogue.OUT / 'lean-declarations'
         pages = sorted(folder.glob('*.md')) + [lean_catalogue.OUT / 'LEAN-INDEX.md', lean_catalogue.OUT / 'LEAN-DECLARATIONS.md']
