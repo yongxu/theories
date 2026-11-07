@@ -2,7 +2,7 @@
 
 [中文](ONE-PAGE.zh.md) · [The overview](THE-THEORY-OF-BECOMING.md) · [The eight chapters](chapters/README.md) · [The theory graph](results/THEORY-GRAPH.md)
 
-*Eleven to fifteen minutes to read.*
+*Twelve to fifteen minutes to read.*
 
 **What it is.** An account of how anything comes to be, lasts, changes and passes away within one relational unfolding, of how life and knowing take shape there and how far evaluation does, without assuming that becoming is good. Made with AI, proofs included; the proofs are checked by machine, everything else only by AI review, and no person has yet reviewed it ([the review packet](review/README.md)).
 

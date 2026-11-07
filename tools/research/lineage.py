@@ -25,7 +25,7 @@ from collections import Counter
 from pathlib import Path
 from xml.sax.saxutils import escape
 
-from tools.research import registry
+from tools.research import navigation, registry
 
 ROOT = registry.ROOT
 DATA = 'theories/becoming/results/data/lineage.json'
@@ -276,20 +276,14 @@ def page(s, lang, weeks, undated, by_folder, totals):
     other = PAGE['zh' if lang == 'en' else 'en']
     cut = s['cut']
     lines = [HEADER, '', f'# {words["title"]}', '',
-             f'[{words["other_language"]}]({os.path.basename(other)}) · {words["reading_time"]}', '',
+             f'[{words["other_language"]}]({os.path.basename(other)}) · {{time}}', '',
              words['intro'].format(commits=f'{cut["commits"]:,}' if lang == 'en' else cut['commits'],
                                    date=cut['date_' + lang], commit=cut['commit'][:9]), '',
              f'![{words["title"]}]({os.path.basename(SVG[lang])})', '',
              words['labels_intro'], '']
     for key in LABELS:
         lines.append(f'- **{s["labels"][key][lang]}**: {s["labels"][key]["means_" + lang]}')
-    lines += ['', f'## {words["points_heading"]}', '',
-              f'| # | {words["date"]} | {words["what"]} | {words["evidence"]} | {words["label"]} |', '|---:|---|---|---|---|']
-    for n, p in enumerate(s['points'], 1):
-        ev = '; '.join(f'[`{e["path"]}`]({link(e["path"], here)})' + (f' ({cell(e["locator"])})' if e.get('locator') else '')
-                       if not e.get('private') else f'`{e["path"]}` ({words["not_in_repository"]})' for e in p['evidence'])
-        lines.append(f'| {n} | {p["date"]} | **{cell(p["title"][lang])}.** {cell(p["what"][lang])} | {ev} | '
-                     f'{s["labels"][p["label"]][lang]} |')
+    lines.append('')
     th = s.get('thread', {})
     if th:
         lines += ['', f'## {th["title"][lang]}', '', th['intro'][lang], '']
@@ -298,6 +292,14 @@ def page(s, lang, weeks, undated, by_folder, totals):
             p = next(x for x in s['points'] if x['id'] == pid)
             lines.append(f'{number[pid]}. **{p["date"]}, {cell(p["title"][lang])}.** {p["what"][lang]}')
         lines.append('')
+    part = '\n'.join(lines)
+    lines += [f'## {words["points_heading"]}', '',
+              f'| # | {words["date"]} | {words["what"]} | {words["evidence"]} | {words["label"]} |', '|---:|---|---|---|---|']
+    for n, p in enumerate(s['points'], 1):
+        ev = '; '.join(f'[`{e["path"]}`]({link(e["path"], here)})' + (f' ({cell(e["locator"])})' if e.get('locator') else '')
+                       if not e.get('private') else f'`{e["path"]}` ({words["not_in_repository"]})' for e in p['evidence'])
+        lines.append(f'| {n} | {p["date"]} | **{cell(p["title"][lang])}.** {cell(p["what"][lang])} | {ev} | '
+                     f'{s["labels"][p["label"]][lang]} |')
     if s.get('renames'):
         lines += [f'## {words["renames_heading"]}', '', words['renames_intro'], '',
                   f'| {words["date"]} | {words["from"]} | {words["to"]} | {words["where"]} | {words["evidence"]} | {words["label"]} |',
@@ -332,7 +334,11 @@ def page(s, lang, weeks, undated, by_folder, totals):
             lines.append(f'| {monday.isoformat()} | {n} |')
         lines.append('')
     lines += [f'## {words["sources_heading"]}', '', words['sources']]
-    return '\n'.join(lines).rstrip() + '\n'
+    body = '\n'.join(lines).rstrip() + '\n'
+    full, first = navigation.reading_time(body), navigation.reading_time(part)
+    if lang == 'zh':
+        full, first = full.replace(' minutes', ' 分钟').replace('a minute', '一分钟'), first.replace(' minutes', ' 分钟').replace('a minute', '一分钟')
+    return body.replace('{time}', words['reading_time'].format(full=full, first=first), 1)
 
 
 def render():
