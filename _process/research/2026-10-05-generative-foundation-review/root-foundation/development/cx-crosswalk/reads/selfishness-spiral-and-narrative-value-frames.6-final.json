@@ -210,7 +210,7 @@
      "role": "neighbour",
      "part": "§4 row, Information true to the world",
      "says": {
-      "en": "§4 row, Information true to the world: a selection separates exactly what its selector couples apart."
+      "en": "§4 row, Information true to the world: selections through a selector's couplings, together, separate exactly what it couples apart."
      }
     }
    ],
@@ -3506,6 +3506,11 @@
   }
  ],
  "changes": [
+  {
+   "id": "cx-sspiral-spread-not-truth",
+   "what": "changed",
+   "why": "CX corrected 05 §4's row on information true to the world (selections through a selector's couplings, together, separate exactly what it couples apart) (7 November 2026), and the re-read of what links it found this field without the correction: targets[4].says states what it says now"
+  },
   {
    "id": "cx-sspiral-externality-ledger",
    "what": "changed",

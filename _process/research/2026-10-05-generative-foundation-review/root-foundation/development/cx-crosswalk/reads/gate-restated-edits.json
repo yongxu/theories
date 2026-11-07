@@ -1,0 +1,68 @@
+[
+ {
+  "line": "theories/becoming/THE-THEORY-OF-BECOMING.md:85",
+  "file": "theories/becoming/THE-THEORY-OF-BECOMING.md",
+  "old": "It is the proxy problem, stated more weakly than its known quantitative form",
+  "new": "It is the proxy problem in its blindness to what a proxy does not register, not its regressional or causal kinds, stated more weakly than its known quantitative form"
+ },
+ {
+  "line": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md:85",
+  "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+  "old": "它就是代理问题，所述弱于其已知的定量形式",
+  "new": "它就是代理问题中对代理所不记录者之不见，不及其回归与因果两类，所述弱于其已知的定量形式"
+ },
+ {
+  "line": "theories/becoming/chapters/01-ROOT.md:612",
+  "file": "theories/becoming/chapters/01-ROOT.md",
+  "old": "and, under balance on what couples in, selections through a formation's couplings treat alike",
+  "new": "and, with the rest of the exchange fixed and balance on what couples in, selections through a formation's couplings treat alike"
+ },
+ {
+  "line": "theories/becoming/chapters/04-LIFE.md:239",
+  "file": "theories/becoming/chapters/04-LIFE.md",
+  "old": "Counts of offspring see only what the selection couples into: a [selection through couplings]",
+  "new": "Counts of offspring see only what the selection couples into: with the rest of the exchange fixed and balance on what couples in, a [selection through couplings]"
+ },
+ {
+  "line": "theories/becoming/chapters/05-COLLECTIVES.md:93",
+  "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+  "old": "| Information true to the world | a selection separates exactly what its selector couples apart |",
+  "new": "| Information true to the world | selections through a selector's couplings, together, separate exactly what it couples apart |"
+ },
+ {
+  "line": "theories/becoming/chapters/07-SIGNIFICANCE.md:666",
+  "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+  "old": "what lies beyond its coupling closure ([03](03-KNOWING.md#r-selection-through-couplings));",
+  "new": "what lies beyond its coupling closure, with the rest of the exchange fixed and balance on what couples in ([03](03-KNOWING.md#r-selection-through-couplings));"
+ },
+ {
+  "line": "theories/becoming/chapters/08-METHOD.md:491",
+  "file": "theories/becoming/chapters/08-METHOD.md",
+  "old": "Pearl (2000); the proxy problem (Zhuang and Hadfield-Menell 2020) |",
+  "new": "Pearl (2000); the proxy problem in its blindness to what a proxy does not register (Zhuang and Hadfield-Menell 2020) |"
+ },
+ {
+  "line": "theories/becoming/chapters/08-METHOD.md:491",
+  "file": "theories/becoming/review/SCIENCES.md",
+  "old": "Pearl (2000); the proxy problem (Zhuang and Hadfield-Menell 2020)\"",
+  "new": "Pearl (2000); the proxy problem in its blindness to what a proxy does not register (Zhuang and Hadfield-Menell 2020)\""
+ },
+ {
+  "line": "theories/becoming/chapters/08-METHOD.md:542",
+  "file": "theories/becoming/chapters/08-METHOD.md",
+  "old": "In fact they restate the proxy problem, Zhuang and Hadfield-Menell's (2020) Theorem 1,",
+  "new": "In fact they restate the proxy problem (in its blindness to what a proxy does not register, not its regressional or causal kinds), Zhuang and Hadfield-Menell's (2020) Theorem 1,"
+ },
+ {
+  "line": "theories/becoming/OPENING.md:103",
+  "file": "theories/becoming/OPENING.md",
+  "old": "drawing on the body's conditions beyond their renewal, its descent confined to them",
+  "new": "drawing on the body's conditions while they are drawn beyond their renewal, its descent confined to them"
+ },
+ {
+  "line": "theories/becoming/chapters/04-LIFE.md:198",
+  "file": "theories/becoming/chapters/04-LIFE.md",
+  "old": "leaves no descendant from then on (`Becoming.GroupEnding.Flow.ended_of_family`, through `Becoming.Flow.family_excess_ends`)",
+  "new": "leaves no descendant from then on (`Becoming.GroupEnding.Flow.excess_childless`, through `Becoming.Flow.family_excess_ends`)"
+ }
+]

@@ -242,7 +242,7 @@
      "record": "selection-through-couplings",
      "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
      "says": {
-      "en": "'It is the proxy problem (Goodhart 1975; Amodei and others 2016; Manheim and Garrabrant 2018) as the account states it'. 'The main law holds by construction; its force lies in the supplied premise'."
+      "en": "'It is the proxy problem (Goodhart 1975; Amodei and others 2016; Manheim and Garrabrant 2018) as the account states it'; 'What is stated is its blindness to what the proxy does not register; Manheim and Garrabrant's regressional and causal kinds, which turn on noise and on intervention, are not stated'. 'The main law holds by construction; its force lies in the supplied premise'."
      },
      "role": "carries"
     },
@@ -1823,7 +1823,7 @@
   {
    "id": "cx-econ-goodhart-regularity",
    "what": "changed",
-   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026 / CX corrected 03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated) (7 November 2026), and the re-read of what links it found this field without the correction: targets[0].says states what it says now"
   },
   {
    "id": "cx-econ-campbell-corruption",

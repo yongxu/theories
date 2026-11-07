@@ -119,17 +119,27 @@ Since then:
   The same reader found the error elsewhere, and each correction uses the reader's words:
   - six entry fields and one group summary that gave ranking to C alone in their own words;
   - four lines in AA's atlas (`entries/dynamics.json`) that copied the eight records' old line. AA's session was told.
+- **At the landing,** the gate listed 54 live lines that link the homes CX changed (56 line-and-record pairs). A reader who wrote none of them re-read each against its home as it is now, and a second reader checked every verdict (`reads/gate-restated.json`). Ten needed a change:
+  - four still called the result the proxy problem whole, where 03 and the record now state only its blindness to what a proxy does not register: THE-THEORY §3 in both editions, and 08 §8's table and its text. SCIENCES quotes the table and follows it.
+  - six were errors CX did not make:
+    - blindness stated without its hypotheses (the rest of the exchange fixed, balance on what couples in), in 01, 04 §7 and 07;
+    - 05 §4's row saying that one selection separates all that its selector couples apart, where only the selections through its couplings together do;
+    - OPENING's note making the lineage's own draw exceed renewal, where it takes from the conditions while they are drawn beyond it;
+    - 04 §5 citing `ended_of_family` for the clause that `excess_childless` states, the theorem its record binds.
+
+  The readers of the entries (below) found one more: 05's ZH reading opened "This is the proxy problem as the account's law". It now takes the same limit, and a third reader asked that it also say what 05's own law adds: with room, an optimum takes the beyond to the floor. Each correction is made as they gave it (`reads/gate-restated-edits.json`).
 - The edition to send, `review-packet-4`, carries most of the corrected sentences in their old wording. Checked against MAP.md's correction, as the board's row asked: its MAP.md says fifteen earlier folders where its own table lists sixteen, and calls each a stratum the Theory of Becoming gathers. Whether it goes out as it is is Ren's decision.
 
 **Not changed, and listed.** A-10 and the record `shaping-the-rule-selected-by-what-comes-back` list the persistence of elites (Acemoglu and Robinson 2008) as a known form of shaping selected by what comes back. Whether their mechanism is that form turns on a reading of their paper that no source here can check.
 
 ## Kept in step with what the homes say
 
-A crosswalk entry quotes its homes, so it goes stale when a home changes, and nothing in the render or the gate catches that. Three passes found such entries by searching every entry for the words each change removed:
+A crosswalk entry quotes its homes, so it goes stale when a home changes, and nothing in the render or the gate catches that. Four passes found such entries:
 
 - **This crosswalk's own corrections:** five entries quoting COLLECTIVE-DIRECTION §5, and 30 more quoting the other corrections.
 - **AA's errata on main:** six entries named COLLECTIVE-DIRECTION's exit "Give first, with a reserve", now "Spare all one waits on", since the law has no reserve in it.
 - **LM2 on main:** one entry said that the title of the record `generation-is-replenishment` keeps the older sense of "generation". 04 now says that its id keeps the older word.
+- **The homes corrected at the landing:** 23 fields in 17 entries restated the proxy problem without its new limit, 05 §4's old row, or 07's list without blindness's hypotheses. One AI author read them and another AI checked every verdict, amending one (`reads/restated-gate*.json`, applied last by the late pass).
 - **Everything else main changed since this branch began,** LM1 and AA's errata and restatements among it, in two rounds ([MAIN-DRIFT.md](MAIN-DRIFT.md)). In each, one AI author per group read the fields against their homes as they are now, and another AI checked every verdict.
   - **Round one, by words** (`main_drift.py`, `reads/main-drift-*.json`): every entry field quoting words that main removed.
   - **Round two, by claim** (`reads/claims-*.json`): its checkers found that a word search misses an ending changed at a sentence's close ("needs C." became "needs C or a premise in its place.") and misses paraphrases. Round two read every field stating one of the changed claims, whatever its words: C's order, waiting and sparing, promises and ignition, CD's edges, joint ending, optima, and AA's eleven restated lines.

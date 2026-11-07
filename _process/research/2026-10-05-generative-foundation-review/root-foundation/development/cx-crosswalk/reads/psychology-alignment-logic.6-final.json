@@ -661,7 +661,7 @@
      "record": "what-an-optimum-does-beyond-what-couples-in",
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
      "says": {
-      "en": "Theorem (any set of outcomes). Every order rising with a family has its optima at the least level beyond exactly where room holds; without room keeping can be an optimum. The account reads this as the proxy problem and names no drive; reading it beside acquisition is mine. Eligible outcomes and room are supplied."
+      "en": "Theorem (any set of outcomes). Every order rising with a family has its optima at the least level beyond exactly where room holds; without room keeping can be an optimum. The account reads this as the proxy problem, stating only its blindness to what a proxy does not register (03), and names no drive; reading it beside acquisition is mine. Eligible outcomes and room are supplied."
      },
      "role": "neighbour"
     },
@@ -720,7 +720,7 @@
      "record": "selection-through-couplings",
      "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
      "says": {
-      "en": "The main law holds by construction; its force lies in the supplied premise that an optimizer selects through just those couplings. It is the proxy problem (Goodhart 1975; Amodei and others 2016; Manheim and Garrabrant 2018) as the account states it: a proxy on some attributes is a selection through the coupling to them. The record: Zhuang and Hadfield-Menell prove a stronger, quantitative form."
+      "en": "The main law holds by construction; its force lies in the supplied premise that an optimizer selects through just those couplings. It is the proxy problem (Goodhart 1975; Amodei and others 2016; Manheim and Garrabrant 2018) as the account states it: a proxy on some attributes is a selection through the coupling to them. What is stated is its blindness to what the proxy does not register; Manheim and Garrabrant's regressional and causal kinds, which turn on noise and on intervention, are not stated. The record: Zhuang and Hadfield-Menell prove a stronger, quantitative form."
      },
      "role": "carries"
     },
@@ -757,7 +757,7 @@
     }
    ],
    "account_adds": {
-    "en": "Where the drain falls and how far a reader reaches, in exact conditions; 08 §8 itself says these restate the proxy problem and do not show why alignment is hard. Nearest the adversarial kind, by my reading, it says a reading shaped by what it selects is neither harder than an exogenous attack nor bounded by one."
+    "en": "Where the drain falls and how far a reader reaches, in exact conditions; 08 §8 itself says these restate the proxy problem, 'in its blindness to what a proxy does not register, not its regressional or causal kinds', and do not show why alignment is hard. Nearest the adversarial kind, by my reading, it says a reading shaped by what it selects is neither harder than an exogenous attack nor bounded by one."
    },
    "source_adds": {
     "en": "The taxonomy: regressional and causal failure, and adversarial as its own kind. 03 disclaims probabilistic learning and 08 §8 lists Pearl's do-calculus as not stated. The credit reads wider than what is carried."
@@ -1493,9 +1493,14 @@
    "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): account_adds states what it says now"
   },
   {
+   "id": "cx-pal-instrumental-convergence",
+   "what": "changed",
+   "why": "CX corrected 03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated) (7 November 2026), and the re-read of what links it found this field without the correction: targets[3].says states what it says now"
+  },
+  {
    "id": "cx-pal-goodhart-taxonomy",
    "what": "changed",
-   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+   "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026 / CX corrected 03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated) (7 November 2026), and the re-read of what links it found this field without the correction: targets[0].says states what it says now / CX corrected 03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated) (7 November 2026), and the re-read of what links it found this field without the correction: account_adds states what it says now"
   },
   {
    "id": "cx-pal-multipolar-traps",

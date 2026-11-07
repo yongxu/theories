@@ -1,0 +1,212 @@
+{
+ "group": "gate",
+ "items": [
+  {
+   "id": "cx-asc-contention-microfoundation",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+   "text": "The main law holds by construction; its force lies in the supplied premise that an optimizer selects through just those couplings. 'It is the proxy problem (Goodhart 1975; Amodei and others 2016; Manheim and Garrabrant 2018) as the account states it'.",
+   "matched": "proxy",
+   "family": "proxy",
+   "home": "03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated)"
+  },
+  {
+   "id": "cx-asc-metric-capture",
+   "field": "reading",
+   "anchor": null,
+   "text": "The account states the proxy problem as law and the persistence of a self-read metric as T7. It scopes 'central': the proxy law is a known theorem at optima; that actual metrics are so formed is conjectured, T7 has one trained-system test, and it could not freeze a field test of reform events. [AI reading]",
+   "matched": "proxy",
+   "family": "proxy",
+   "home": "03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated)"
+  },
+  {
+   "id": "cx-asc-metric-capture",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+   "text": "The main law holds by construction; its force lies in the supplied premise that an optimizer selects through just those couplings. 'It is the proxy problem (Goodhart 1975; Amodei and others 2016; Manheim and Garrabrant 2018) as the account states it'.",
+   "matched": "proxy",
+   "family": "proxy",
+   "home": "03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated)"
+  },
+  {
+   "id": "cx-asc-metric-capture",
+   "field": "targets[3].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
+   "text": "A reading after this anchor [AI reading, ZH]: 'This is the proxy problem as the account's law.'",
+   "matched": "proxy",
+   "family": "proxy",
+   "home": "03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated)"
+  },
+  {
+   "id": "cx-archearth-points-game-revised",
+   "field": "reading",
+   "anchor": null,
+   "text": "The first half is the proxy problem as the account states it. The revision fits a rule that reads failures, which answers one exactly where the failed item enters the next plan. It fits T7's stated way out, not a case against it: a loss enters and an outside reader is admitted; and no rule here is read from a share, so T7's premise fails. It is a story, so it is no evidence for T7 or against it. [AI reading]",
+   "matched": "proxy",
+   "family": "proxy",
+   "home": "03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated)"
+  },
+  {
+   "id": "cx-archearth-points-game-revised",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+   "text": "It is the proxy problem (Goodhart 1975; Amodei and others 2016; Manheim and Garrabrant 2018) as the account states it: a proxy on some attributes is a selection through the coupling to them. The main law holds by construction; its force lies in the supplied premise.",
+   "matched": "proxy",
+   "family": "proxy",
+   "home": "03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated)"
+  },
+  {
+   "id": "cx-hsm-information-upward",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#kept-together",
+   "text": "Reading [AI reading, D48], a row: “Information true to the world | a selection separates exactly what its selector couples apart”. “The constraints are not survival axioms.”",
+   "matched": "row-93",
+   "family": "row-93",
+   "home": "05 §4's row on information true to the world (selections through a selector's couplings, together, separate exactly what it couples apart)"
+  },
+  {
+   "id": "cx-kpso-model-smaller-than-its-system",
+   "field": "reading",
+   "anchor": null,
+   "text": "Three checked forms. A selection reaches exactly what couples into its selector, stated as the proxy problem. With room, an optimum drains what lies beyond. A region's comparison takes the region as input: the smaller it is the more lies beyond, and going on is no sign nothing is lost. Each is on its model, the first near-definitional, its force the premise that a selector selects through just those couplings. [AI reading]",
+   "matched": "proxy",
+   "family": "proxy",
+   "home": "03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated)"
+  },
+  {
+   "id": "cx-kpso-model-smaller-than-its-system",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+   "text": "Theorem (World; no premise): two histories are selected alike by every selection through a formation's couplings exactly when they are alike through them. A particular selection may ignore what its couplings carry. 03 reads it as the proxy problem (Goodhart 1975).",
+   "matched": "proxy",
+   "family": "proxy",
+   "home": "03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated)"
+  },
+  {
+   "id": "cx-sspiral-spread-not-truth",
+   "field": "targets[4].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#kept-together",
+   "text": "§4 row, Information true to the world: a selection separates exactly what its selector couples apart.",
+   "matched": "row-93",
+   "family": "row-93",
+   "home": "05 §4's row on information true to the world (selections through a selector's couplings, together, separate exactly what it couples apart)"
+  },
+  {
+   "id": "cx-sty-gamed-rewards",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+   "text": "Theorem (World; no premise). 'It is the proxy problem (Goodhart 1975; Amodei and others 2016; Manheim and Garrabrant 2018) as the account states it'; 'its force lies in the supplied premise that an optimizer selects through just those couplings'.",
+   "matched": "proxy",
+   "family": "proxy",
+   "home": "03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated)"
+  },
+  {
+   "id": "cx-zhishan-liangzhi",
+   "field": "targets[1].says",
+   "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+   "text": "Reaches exactly what couples into the selector; it is the proxy problem (Goodhart 1975 and others). Near-definitional; its force is the premise that a selector selects through just those.",
+   "matched": "proxy",
+   "family": "proxy",
+   "home": "03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated)"
+  },
+  {
+   "id": "cx-zhishan-failure-modes-one-structure",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
+   "text": "What a selection through its own couplings cannot reach, one law in eight cases, without the condition: beyond its coupling closure, its own act's difference there, where what it raises is drawn from, how far off its break is, what a finite history leaves open, and others.",
+   "matched": "list-666",
+   "family": "list-666",
+   "home": "07's list of what a selection through its own couplings cannot reach (blindness with the rest of the exchange fixed and balance on what couples in)"
+  },
+  {
+   "id": "cx-cc-shuxiang-xingshu",
+   "field": "targets[2].says",
+   "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+   "text": "Theorem (World; no premise). Two histories are selected alike by every selection through a formation's couplings exactly when they are alike through them. The main law holds by construction; its force lies in the supplied premise that an optimizer selects through just those couplings, and in what couples in. It is the proxy problem. Whether an actual selection goes through the couplings is not derived.",
+   "matched": "proxy",
+   "family": "proxy",
+   "home": "03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated)"
+  },
+  {
+   "id": "cx-syscyb-trap-wrong-goal",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
+   "text": "Theorem. Every order rising with what couples in has its optima least beyond exactly where no eligible outcome above another beyond is unbeaten on it; room is a hypothesis. No evaluation: not that the fall beyond is a harm. Read as the proxy problem (Zhuang and Hadfield-Menell 2020) [AI reading].",
+   "matched": "proxy",
+   "family": "proxy",
+   "home": "03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated)"
+  },
+  {
+   "id": "cx-syscyb-trap-rule-beating",
+   "field": "reading",
+   "anchor": null,
+   "text": "A rule is a selection through what couples into it, so acts it couples alike are selected alike: that gap is the room, and 03 reads it as the proxy problem (Goodhart). With room, optima of what the letter reads drain what it omits. Her budget spent by year's end has a row: what is valued only at the horizon is held, then regrown at the last step. Agreement holds of the room only: no law gives evasion's learning, and PLAN §6.3 names no target. [AI reading]",
+   "matched": "proxy",
+   "family": "proxy",
+   "home": "03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated)"
+  },
+  {
+   "id": "cx-syscyb-trap-rule-beating",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+   "text": "Theorem (World; no premise). Two histories are selected alike by every selection through a formation's couplings exactly when they are alike through them. A particular selection may ignore what its couplings carry. The main law holds by construction; its force lies in supplied premises. It is the proxy problem (Goodhart 1975 and others) as the account states it.",
+   "matched": "proxy",
+   "family": "proxy",
+   "home": "03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated)"
+  },
+  {
+   "id": "cx-ecoevo-evolutionary-traps",
+   "field": "account_adds",
+   "anchor": null,
+   "text": "Proved: three choices to one keep a policy against a score weighing the other twice as much, one count moved locks the other way, and an older rule in force can carry a course against the counts; and an exact reason a selection cannot react beyond its couplings, near-definitional by its record's word, 'Known as the proxy problem'.",
+   "matched": "proxy",
+   "family": "proxy",
+   "home": "03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated)"
+  },
+  {
+   "id": "cx-ecoevo-selection-without-foresight",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+   "text": "Theorem (World): 'Every selection through a selector's couplings selects histories alike exactly when they are alike through them. With the rest fixed, selection is blind beyond the coupling closure.' Not derived: 'whether an actual selection goes through the couplings, whether offspring follow the selection'. 'Known as the proxy problem'.",
+   "matched": "proxy",
+   "family": "proxy",
+   "home": "03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated)"
+  },
+  {
+   "id": "cx-econ-goodhart-regularity",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+   "text": "'It is the proxy problem (Goodhart 1975; Amodei and others 2016; Manheim and Garrabrant 2018) as the account states it'. 'The main law holds by construction; its force lies in the supplied premise'.",
+   "matched": "proxy",
+   "family": "proxy",
+   "home": "03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated)"
+  },
+  {
+   "id": "cx-pal-instrumental-convergence",
+   "field": "targets[3].says",
+   "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
+   "text": "Theorem (any set of outcomes). Every order rising with a family has its optima at the least level beyond exactly where room holds; without room keeping can be an optimum. The account reads this as the proxy problem and names no drive; reading it beside acquisition is mine. Eligible outcomes and room are supplied.",
+   "matched": "proxy",
+   "family": "proxy",
+   "home": "03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated)"
+  },
+  {
+   "id": "cx-pal-goodhart-taxonomy",
+   "field": "targets[0].says",
+   "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+   "text": "The main law holds by construction; its force lies in the supplied premise that an optimizer selects through just those couplings. It is the proxy problem (Goodhart 1975; Amodei and others 2016; Manheim and Garrabrant 2018) as the account states it: a proxy on some attributes is a selection through the coupling to them. The record: Zhuang and Hadfield-Menell prove a stronger, quantitative form.",
+   "matched": "proxy",
+   "family": "proxy",
+   "home": "03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated)"
+  },
+  {
+   "id": "cx-pal-goodhart-taxonomy",
+   "field": "account_adds",
+   "anchor": null,
+   "text": "Where the drain falls and how far a reader reaches, in exact conditions; 08 §8 itself says these restate the proxy problem and do not show why alignment is hard. Nearest the adversarial kind, by my reading, it says a reading shaped by what it selects is neither harder than an exogenous attack nor bounded by one.",
+   "matched": "proxy",
+   "family": "proxy",
+   "home": "03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated)"
+  }
+ ]
+}

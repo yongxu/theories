@@ -1349,14 +1349,14 @@
    "relation": "agreement",
    "agreement_of": "law",
    "reading": {
-    "en": "The first half is the proxy problem as the account states it. The revision fits a rule that reads failures, which answers one exactly where the failed item enters the next plan. It fits T7's stated way out, not a case against it: a loss enters and an outside reader is admitted; and no rule here is read from a share, so T7's premise fails. It is a story, so it is no evidence for T7 or against it. [AI reading]"
+    "en": "The first half is the proxy problem as the account states it, in its blindness to what a proxy does not register. The revision fits a rule that reads failures, which answers one exactly where the failed item enters the next plan. It fits T7's stated way out, not a case against it: a loss enters and an outside reader is admitted; and no rule here is read from a share, so T7's premise fails. It is a story, so it is no evidence for T7 or against it. [AI reading]"
    },
    "targets": [
     {
      "record": "selection-through-couplings",
      "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
      "says": {
-      "en": "It is the proxy problem (Goodhart 1975; Amodei and others 2016; Manheim and Garrabrant 2018) as the account states it: a proxy on some attributes is a selection through the coupling to them. The main law holds by construction; its force lies in the supplied premise."
+      "en": "It is the proxy problem (Goodhart 1975; Amodei and others 2016; Manheim and Garrabrant 2018) as the account states it: a proxy on some attributes is a selection through the coupling to them. What is stated is its blindness to what the proxy does not register; Manheim and Garrabrant's regressional and causal kinds are not stated. The main law holds by construction; its force lies in the supplied premise."
      },
      "role": "carries"
     },
@@ -1980,6 +1980,11 @@
    "id": "cx-archearth-worthwhile-chain",
    "what": "changed",
    "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): targets[1].says states what it says now"
+  },
+  {
+   "id": "cx-archearth-points-game-revised",
+   "what": "changed",
+   "why": "CX corrected 03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated) (7 November 2026), and the re-read of what links it found this field without the correction: reading states what it says now / CX corrected 03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated) (7 November 2026), and the re-read of what links it found this field without the correction: targets[0].says states what it says now"
   },
   {
    "id": "cx-archearth-security-and-cooperation",

@@ -1758,7 +1758,7 @@
      "record": "selection-through-couplings",
      "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
      "says": {
-      "en": "Theorem (World; no premise). 'It is the proxy problem (Goodhart 1975; Amodei and others 2016; Manheim and Garrabrant 2018) as the account states it'; 'its force lies in the supplied premise that an optimizer selects through just those couplings'."
+      "en": "Theorem (World; no premise). 'It is the proxy problem (Goodhart 1975; Amodei and others 2016; Manheim and Garrabrant 2018) as the account states it'; 'What is stated is its blindness to what the proxy does not register', not Manheim and Garrabrant's regressional and causal kinds; 'its force lies in the supplied premise that an optimizer selects through just those couplings'."
      },
      "role": "carries"
     }
@@ -2919,6 +2919,11 @@
    "id": "cx-sty-intersubjective-infrastructure",
    "what": "changed",
    "why": "second critic (fails): The source states a purpose (a value stance) with no mechanism, so mapping consensus, acting together and culture onto three laws on those topics is a word match standing in for a structure; the reading itself says they are 'conditions and failures, not infrastructure'. No live text takes up the purpose, so not-carried, the proposal kept in the reading. / main changed the waiting claims (LM1 or AA, 7 November 2026): account_adds states what it says now"
+  },
+  {
+   "id": "cx-sty-gamed-rewards",
+   "what": "changed",
+   "why": "CX corrected 03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated) (7 November 2026), and the re-read of what links it found this field without the correction: targets[0].says states what it says now"
   },
   {
    "id": "cx-sty-generators",

@@ -1,0 +1,395 @@
+{
+ "cluster": "gate",
+ "items": [
+  {
+   "id": "cx-asc-contention-microfoundation",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "as the account states it'.",
+     "new": "as the account states it'; 'What is stated is its blindness to what the proxy does not register', not Manheim and Garrabrant's regressional and causal kinds."
+    }
+   ],
+   "labels": null,
+   "why": "The quote stops at the sentence that 03 §1 now limits in its next sentence, so a reader would take the account to state the whole proxy problem, Goodhart's taxonomy included; the home's limit is added. The labels (fresh-reading, scope) rest on the scoreboard's blindness, which is the stated kind, so they stand (the entry's reading, not in this set, still says 'reaches exactly', which row-93's correction would make 'only').",
+   "read": [
+    "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+    "theories/becoming/results/records/selection-through-couplings.json"
+   ]
+  },
+  {
+   "id": "cx-asc-metric-capture",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "The account states the proxy problem as law and",
+     "new": "The account states the proxy problem as law (in its blindness to what a proxy does not register, not its regressional or causal kinds) and"
+    }
+   ],
+   "labels": null,
+   "why": "'The account states the proxy problem as law' is wider than 03 §1 and 08 §8 now say; the limit is added in 08 §8's words. The source's metric capture (metrics rising while flourishing falls) is the blindness kind, so carried-in-part and scope stand.",
+   "read": [
+    "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+    "theories/becoming/chapters/08-METHOD.md#known-results",
+    "theories/becoming/results/records/selection-through-couplings.json"
+   ]
+  },
+  {
+   "id": "cx-asc-metric-capture",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "as the account states it'.",
+     "new": "as the account states it'; 'What is stated is its blindness to what the proxy does not register', not Manheim and Garrabrant's regressional and causal kinds."
+    }
+   ],
+   "labels": null,
+   "why": "Same text as the contention entry's target: the quote drops the limit 03 §1's next sentence now gives, and the edit adds it in the home's words. Role carries stands.",
+   "read": [
+    "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings"
+   ]
+  },
+  {
+   "id": "cx-asc-metric-capture",
+   "field": "targets[3].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "'This is the proxy problem as the account's law.'",
+     "new": "'This is the proxy problem as the account's law', Zhuang and Hadfield-Menell's (2020) Theorem 1 at optima; 03 §1 states only the problem's blindness to what a proxy does not register, not its regressional or causal kinds."
+    }
+   ],
+   "labels": null,
+   "why": "The quote is faithful to 05's ZH reading, which still opens with that unqualified sentence, but on its own it says more than the account now does; the quote stays and the edit adds what 05's next sentences pin it to (their Theorem 1, 'at optima rather than limits of paths') and 03 §1's limit. 05's opening sentence there may itself want 03's limit, which is a home edit outside this field.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
+    "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings"
+   ]
+  },
+  {
+   "id": "cx-archearth-points-game-revised",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "The first half is the proxy problem as the account states it.",
+     "new": "The first half is the proxy problem as the account states it, in its blindness to what a proxy does not register."
+    }
+   ],
+   "labels": null,
+   "why": "The story's first half (points hiding patient care) is exactly the kind 03 §1 now says is stated, so the edit names that kind and does not widen the account's statement. Agreement of law stands.",
+   "read": [
+    "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings"
+   ]
+  },
+  {
+   "id": "cx-archearth-points-game-revised",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "coupling to them. The main law",
+     "new": "coupling to them. What is stated is its blindness to what the proxy does not register; Manheim and Garrabrant's regressional and causal kinds are not stated. The main law"
+    }
+   ],
+   "labels": null,
+   "why": "The field copies 03 §1's sentence but skips the sentence that now follows it and limits it; that sentence is inserted, shortened only by dropping 'which turn on noise and on intervention'. Role carries stands.",
+   "read": [
+    "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings"
+   ]
+  },
+  {
+   "id": "cx-kpso-model-smaller-than-its-system",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "A selection reaches exactly what couples into its selector, stated as the proxy problem.",
+     "new": "A selection reaches only what couples into its selector, stated as the proxy problem in its blindness to what a proxy does not register."
+    }
+   ],
+   "labels": null,
+   "why": "'Stated as the proxy problem' takes the limit 03 §1 now gives. 'A selection reaches exactly' is the claim row-93 corrected (03: selections through the couplings together separate what is apart, and 'A particular selection may ignore what its couplings carry'), so it becomes 'only', as 03's title, T3 and the target's own second sentence have it.",
+   "read": [
+    "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+    "theories/becoming/chapters/05-COLLECTIVES.md (§4 table row, diff against main)"
+   ]
+  },
+  {
+   "id": "cx-kpso-model-smaller-than-its-system",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "03 reads it as the proxy problem (Goodhart 1975).",
+     "new": "03 reads it as the proxy problem (Goodhart 1975) in its blindness to what a proxy does not register, not its regressional or causal kinds."
+    }
+   ],
+   "labels": null,
+   "why": "03 now limits its reading of the proxy problem to the blindness kind; the record's words are added. The theorem's statement and its 'particular selection' clause already match 03.",
+   "read": [
+    "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+    "theories/becoming/results/records/selection-through-couplings.json"
+   ]
+  },
+  {
+   "id": "cx-sty-gamed-rewards",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "as the account states it'; 'its force",
+     "new": "as the account states it'; 'What is stated is its blindness to what the proxy does not register', not Manheim and Garrabrant's regressional and causal kinds; 'its force"
+    }
+   ],
+   "labels": null,
+   "why": "The quote drops 03 §1's new limit; it is added in the home's words. The limit backs the entry's divergence (what a reward fails to read, not how it is calibrated), so changed and divergence stand.",
+   "read": [
+    "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings"
+   ]
+  },
+  {
+   "id": "cx-zhishan-liangzhi",
+   "field": "targets[1].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "Reaches exactly what couples into the selector; it is the proxy problem (Goodhart 1975 and others).",
+     "new": "Reaches only what couples into the selector; it is the proxy problem (Goodhart 1975 and others) in its blindness to what a proxy does not register, not its regressional or causal kinds."
+    }
+   ],
+   "labels": null,
+   "why": "'It is the proxy problem' takes the record's limit. 'Reaches exactly' is row-93's corrected claim (a particular selection may ignore what its couplings carry), so it becomes 'only', as D54 and the entry's reading say.",
+   "read": [
+    "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+    "theories/becoming/results/records/selection-through-couplings.json"
+   ]
+  },
+  {
+   "id": "cx-cc-shuxiang-xingshu",
+   "field": "targets[2].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "It is the proxy problem. Whether",
+     "new": "It is the proxy problem as the account states it, in its blindness to what the proxy does not register; the regressional and causal kinds are not stated. Whether"
+    }
+   ],
+   "labels": null,
+   "why": "The bare 'It is the proxy problem' is wider than 03 §1, which now states only the blindness kind; the home's qualifier and limit are restored, shortened. The rest of the field matches 03, and role carries stands.",
+   "read": [
+    "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings"
+   ]
+  },
+  {
+   "id": "cx-syscyb-trap-wrong-goal",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "Read as the proxy problem (Zhuang and Hadfield-Menell 2020) [AI reading].",
+     "new": "Read as the proxy problem (Zhuang and Hadfield-Menell 2020) [AI reading]; 03 states only its blindness to what a proxy does not register."
+    }
+   ],
+   "labels": null,
+   "why": "The field glosses 05's ZH reading, which still says it unqualified, so the gloss stays as attributed and the edit adds 03's limit after it, which is also how 08's corrected known-results row now ties Zhuang and Hadfield-Menell to the proxy problem. The theorem part matches 05 (room is the least_iff condition), and the labels stand.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
+    "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+    "theories/becoming/chapters/08-METHOD.md#known-results"
+   ]
+  },
+  {
+   "id": "cx-syscyb-trap-rule-beating",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "03 reads it as the proxy problem (Goodhart).",
+     "new": "03 reads it as the proxy problem (Goodhart), stating only its blindness to what a proxy does not register."
+    }
+   ],
+   "labels": null,
+   "why": "03 now limits what it states of the proxy problem; the limit is added. The reading already confines agreement to the room and leaves evasion's learning (the adversarial response) unmodelled, so fresh-reading, agreement and reading stand.",
+   "read": [
+    "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings"
+   ]
+  },
+  {
+   "id": "cx-syscyb-trap-rule-beating",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "as the account states it.",
+     "new": "as the account states it: what is stated is its blindness to what the proxy does not register, not Manheim and Garrabrant's regressional and causal kinds."
+    }
+   ],
+   "labels": null,
+   "why": "The field ends at the sentence that 03 §1's next sentence now limits; the limit is added in the home's words, shortened. Role carries stands.",
+   "read": [
+    "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings"
+   ]
+  },
+  {
+   "id": "cx-ecoevo-evolutionary-traps",
+   "field": "account_adds",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "'Known as the proxy problem'.",
+     "new": "'Known as the proxy problem' only 'in its blindness to what a proxy does not register, not its regressional or causal kinds'."
+    }
+   ],
+   "labels": null,
+   "why": "The record's correspondence line now carries the limit, and the field's quote stopped before it. 'Cannot react beyond its couplings' is the no-premise main law, so it needs no blindness hypotheses; the labels stand.",
+   "read": [
+    "theories/becoming/results/records/selection-through-couplings.json",
+    "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings"
+   ]
+  },
+  {
+   "id": "cx-ecoevo-selection-without-foresight",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "selection is blind beyond the coupling closure.'",
+     "new": "selection is blind beyond the coupling closure', with balance on what couples in (03's hypothesis)."
+    },
+    {
+     "old": "'Known as the proxy problem'.",
+     "new": "'Known as the proxy problem' only 'in its blindness to what a proxy does not register, not its regressional or causal kinds'."
+    }
+   ],
+   "labels": null,
+   "why": "The record's statement, quoted faithfully, leaves out the blindness theorem's balance hypothesis, the same omission list-666 corrected in 07; the hypothesis is added outside the quote, and the proxy line takes the record's new limit. The entry's reading (not in this set) has the same balance omission; agreement of law on the blindness stands.",
+   "read": [
+    "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+    "theories/becoming/results/records/selection-through-couplings.json",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md (list 'What a selection through its own couplings cannot reach', diff against main)"
+   ]
+  },
+  {
+   "id": "cx-econ-goodhart-regularity",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "as the account states it'.",
+     "new": "as the account states it'; 'What is stated is its blindness to what the proxy does not register; Manheim and Garrabrant's regressional and causal kinds, which turn on noise and on intervention, are not stated'."
+    }
+   ],
+   "labels": null,
+   "why": "The quote drops 03 §1's new limit; it is added in full because Goodhart's own case (a regularity broken by the conduct of those controlled) lies nearest the kinds not stated. That agrees with the entry's source_adds, so carried-in-part and scope (the popular wording, not his regularity) stand.",
+   "read": [
+    "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings"
+   ]
+  },
+  {
+   "id": "cx-pal-instrumental-convergence",
+   "field": "targets[3].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "The account reads this as the proxy problem and names no drive;",
+     "new": "The account reads this as the proxy problem, stating only its blindness to what a proxy does not register (03), and names no drive;"
+    }
+   ],
+   "labels": null,
+   "why": "'The account reads this as the proxy problem' glosses 05's ZH reading, which still says it unqualified; 03 §1's limit is added. The theorem part matches 05 (room is least_iff's condition), and role neighbour stands.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
+    "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings"
+   ]
+  },
+  {
+   "id": "cx-pal-goodhart-taxonomy",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "coupling to them. The record:",
+     "new": "coupling to them. What is stated is its blindness to what the proxy does not register; Manheim and Garrabrant's regressional and causal kinds, which turn on noise and on intervention, are not stated. The record:"
+    }
+   ],
+   "labels": null,
+   "why": "03 §1's limiting sentence is inserted whole, since it is this entry's subject. The labels stand: carried-in-part, because 03 now names the part stated (the blindness kind, nearest extremal); scope, with room and optima; and this target carries. The entry's reading ('It credits the paper whole') and source_adds ('The credit reads wider than what is carried'), not in this set, now need an until: 03 credited the paper whole until 7 November 2026 and now states the limit.",
+   "read": [
+    "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+    "theories/becoming/results/records/selection-through-couplings.json",
+    "theories/becoming/chapters/08-METHOD.md#known-results"
+   ]
+  },
+  {
+   "id": "cx-pal-goodhart-taxonomy",
+   "field": "account_adds",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "08 §8 itself says these restate the proxy problem and do not show",
+     "new": "08 §8 itself says these restate the proxy problem, 'in its blindness to what a proxy does not register, not its regressional or causal kinds', and do not show"
+    }
+   ],
+   "labels": null,
+   "why": "08 §8's sentence now carries this parenthesis, and the field's restatement dropped it. The adversarial remark is the reader's own and is marked so; the labels stand.",
+   "read": [
+    "theories/becoming/chapters/08-METHOD.md#known-results"
+   ]
+  },
+  {
+   "id": "cx-hsm-information-upward",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "a selection separates exactly what its selector couples apart",
+     "new": "selections through a selector's couplings, together, separate exactly what it couples apart"
+    }
+   ],
+   "labels": null,
+   "why": "The field quotes, in quotation marks, the §4 row's old law, which said a single selection separates exactly what its selector couples apart. 03 contradicts that ('whatever is apart is separated by some', 'A particular selection may ignore what its couplings carry'), so the quote now gives the row's current words verbatim. 'The constraints are not survival axioms.' still stands in §4 (05 line 103), and carried-in-part, scope and carries still hold, since the row is still a bound on what any reader through its couplings can reach.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#kept-together",
+    "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings"
+   ]
+  },
+  {
+   "id": "cx-sspiral-spread-not-truth",
+   "field": "targets[4].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "a selection separates exactly what its selector couples apart.",
+     "new": "selections through a selector's couplings, together, separate exactly what it couples apart."
+    }
+   ],
+   "labels": null,
+   "why": "The field restates the §4 row's old wording, which credits one selection with separating everything its selector couples apart, more widely than 03 now allows. It now copies the row as it stands. The neighbour role and the entry's fresh-reading/agreement/reading labels do not depend on that difference.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#kept-together",
+    "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings"
+   ]
+  },
+  {
+   "id": "cx-zhishan-failure-modes-one-structure",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "beyond its coupling closure, its own act's difference there, where what it raises is drawn from, how far off its break is, what a finite history leaves open, and others.",
+     "new": "what lies beyond its coupling closure, with the rest of the exchange fixed and balance on what couples in; its own act's difference there; where what it raises is drawn from; how far off its break is; what a finite history leaves open; and others."
+    }
+   ],
+   "labels": null,
+   "why": "The field gives the first case, blindness beyond the coupling closure, without the hypotheses 07's list now carries from 03 §1's blindness theorem (the rest of the exchange fixed, balance on what couples in). The edit puts them back in the home's own words and semicolons, and the divergence, carried-in-part and carries labels still hold. This item does not cover it, but for the coordinator: the same entry's reading says the eight cases gather 'proxy failure among them', and that may need the limit that the account states only the proxy problem's blindness kind.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
+    "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings"
+   ]
+  }
+ ]
+}

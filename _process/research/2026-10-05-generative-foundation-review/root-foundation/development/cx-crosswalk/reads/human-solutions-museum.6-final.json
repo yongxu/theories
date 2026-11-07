@@ -1588,7 +1588,7 @@
     {
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#kept-together",
      "says": {
-      "en": "Reading [AI reading, D48], a row: “Information true to the world | a selection separates exactly what its selector couples apart”. “The constraints are not survival axioms.”"
+      "en": "Reading [AI reading, D48], a row: “Information true to the world | selections through a selector's couplings, together, separate exactly what it couples apart”. “The constraints are not survival axioms.”"
      },
      "role": "carries",
      "part": "Reading D48, a row"
@@ -2197,6 +2197,11 @@
    "id": "cx-hsm-coordination-protocols",
    "what": "changed",
    "why": "main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): targets[0].says states what it says now"
+  },
+  {
+   "id": "cx-hsm-information-upward",
+   "what": "changed",
+   "why": "CX corrected 05 §4's row on information true to the world (selections through a selector's couplings, together, separate exactly what it couples apart) (7 November 2026), and the re-read of what links it found this field without the correction: targets[0].says states what it says now"
   },
   {
    "id": "cx-hsm-threshold-review",

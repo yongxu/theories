@@ -851,7 +851,7 @@
     }
    ],
    "account_adds": {
-    "en": "Proved: three choices to one keep a policy against a score weighing the other twice as much, one count moved locks the other way, and an older rule in force can carry a course against the counts; and an exact reason a selection cannot react beyond its couplings, near-definitional by its record's word, 'Known as the proxy problem'."
+    "en": "Proved: three choices to one keep a policy against a score weighing the other twice as much, one count moved locks the other way, and an older rule in force can carry a course against the counts; and an exact reason a selection cannot react beyond its couplings, near-definitional by its record's word, 'Known as the proxy problem' only 'in its blindness to what a proxy does not register, not its regressional or causal kinds'."
    },
    "source_adds": {
     "en": "The trap itself: a cue evolved over generations, a preference measured across options by fitness, rapid environmental change, and conservation practice. No law here has an inherited preference turned against offspring number across generations; that actual choosers count so is not shown, and the record credits 'five failures to induce it in humans' (de Wit and others 2018), it being insensitivity to devaluation."
@@ -2146,7 +2146,7 @@
      "record": "selection-through-couplings",
      "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
      "says": {
-      "en": "Theorem (World): 'Every selection through a selector's couplings selects histories alike exactly when they are alike through them. With the rest fixed, selection is blind beyond the coupling closure.' Not derived: 'whether an actual selection goes through the couplings, whether offspring follow the selection'. 'Known as the proxy problem'."
+      "en": "Theorem (World): 'Every selection through a selector's couplings selects histories alike exactly when they are alike through them. With the rest fixed, selection is blind beyond the coupling closure', with balance on what couples in (03's hypothesis). Not derived: 'whether an actual selection goes through the couplings, whether offspring follow the selection'. 'Known as the proxy problem' only 'in its blindness to what a proxy does not register, not its regressional or causal kinds'."
      },
      "role": "carries"
     },
@@ -2286,6 +2286,11 @@
    "why": "02's margin of a regime is exact under its premises on giving, which the entry dropped (round two's checker, 7 November 2026)"
   },
   {
+   "id": "cx-ecoevo-evolutionary-traps",
+   "what": "changed",
+   "why": "CX corrected 03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated) (7 November 2026), and the re-read of what links it found this field without the correction: account_adds states what it says now"
+  },
+  {
    "id": "cx-ecoevo-red-queen-relative-race",
    "what": "changed",
    "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): targets[3].says states what it says now"
@@ -2314,6 +2319,11 @@
    "id": "cx-ecoevo-trophic-cascades",
    "what": "changed",
    "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): account_adds states what it says now"
+  },
+  {
+   "id": "cx-ecoevo-selection-without-foresight",
+   "what": "changed",
+   "why": "CX corrected 03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated) (7 November 2026), and the re-read of what links it found this field without the correction: targets[0].says states what it says now"
   }
  ],
  "live_flags": [

@@ -1,0 +1,1279 @@
+{
+ "read:ranking-b": {
+  "group": "ranking-b",
+  "items": [
+   {
+    "line": "theories/becoming/THE-THEORY-OF-BECOMING.md:99",
+    "record": "selection-with-returns-to-groupmates",
+    "verdict": "ok",
+    "why": "The line says only that with additive returns in groups of equal size Hamilton's rule holds in counts, proved for every type, which is what 04 §5's home says (Theorem (any type), groups of equal size m, offspring numbers additive). CX changed only the record's non-implication (ranking goes through C or a premise in its place), and the line ranks nothing.",
+    "edits": [],
+    "read": [
+     "theories/becoming/THE-THEORY-OF-BECOMING.md:97-100",
+     "theories/becoming/chapters/04-LIFE.md#r-selection-with-returns-to-groupmates",
+     "theories/becoming/chapters/04-LIFE.md#r-what-bounds-offspring-numbers",
+     "theories/becoming/results/records/selection-with-returns-to-groupmates.json"
+    ]
+   },
+   {
+    "line": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md:99",
+    "record": "selection-with-returns-to-groupmates",
+    "verdict": "ok",
+    "why": "The Chinese edition says the same as the English line: in groups of equal size with additive returns, Hamilton's rule holds in counts, which matches 04 §5's home. It makes no ranking claim, so CX's change to the non-implication does not reach it.",
+    "edits": [],
+    "read": [
+     "theories/becoming/THE-THEORY-OF-BECOMING.zh.md:97-100",
+     "theories/becoming/chapters/04-LIFE.md#r-selection-with-returns-to-groupmates",
+     "theories/becoming/results/records/selection-with-returns-to-groupmates.json"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/02-MAP.md:414",
+    "record": "selection-with-returns-to-groupmates",
+    "verdict": "ok",
+    "why": "It cites the home's laws, not the changed sentence: shaping as a case of returns kept and shared within the group (whole selects where c times the spread falls short of s times it with m q times the spread among groups), and at any sizes the verdict through the covariance of a member's group's shapers with its group's share, as 04 §5 states (rises_iff_kept, rises_iff_kept_sized, 02 §9 named as a case). It ranks nothing.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/02-MAP.md:412-415",
+     "theories/becoming/chapters/04-LIFE.md#r-selection-with-returns-to-groupmates",
+     "theories/becoming/results/records/selection-with-returns-to-groupmates.json"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/04-LIFE.md:207",
+    "record": "selection-with-returns-to-groupmates",
+    "verdict": "ok",
+    "why": "This is the home section itself, and git diff main HEAD shows CX left it untouched; it states the laws and their scope (synergy not stated, which sharing actual groups have a premise) and never said ranking goes through C. The record's corrected non-implication (ranking goes through the comparison C or a premise in its place) contradicts nothing here.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/04-LIFE.md:206-207",
+     "theories/becoming/results/records/selection-with-returns-to-groupmates.json",
+     "git diff main HEAD -- theories/becoming/chapters/04-LIFE.md theories/becoming/results/records/selection-with-returns-to-groupmates.json"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/04-LIFE.md:210",
+    "record": "selection-with-returns-to-groupmates",
+    "verdict": "ok",
+    "why": "It links the home for the law it cites: where each member gains for every unit its group holds, the verdict goes through the covariance of a member's group total with its group's mean, and the home says the same (rises_iff_kept_sized), with unequal sizes not a function of the two spreads. It ranks nothing.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/04-LIFE.md:209-210",
+     "theories/becoming/chapters/04-LIFE.md#r-selection-with-returns-to-groupmates",
+     "theories/becoming/results/records/selection-with-returns-to-groupmates.json"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/08-METHOD.md:497",
+    "record": "selection-with-returns-to-groupmates",
+    "verdict": "ok",
+    "why": "The known-results row lists as not yet stated Hamilton's rule with synergy and with assortment changing over generations, its general additive form being stated (rises_iff_reading). That matches the record's does_not_show (synergy not stated; the share of the spread among groups over generations enters as given) and the home. It ranks nothing.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/08-METHOD.md:484-497",
+     "theories/becoming/chapters/04-LIFE.md#r-selection-with-returns-to-groupmates",
+     "theories/becoming/results/records/selection-with-returns-to-groupmates.json"
+    ]
+   },
+   {
+    "line": "theories/becoming/review/SCIENCES.md:211",
+    "record": "selection-with-returns-to-groupmates",
+    "verdict": "ok",
+    "why": "Its restatement of Hamilton's rule matches 04 §5's home in every clause I checked: the general additive form (rises_iff_reading), the quoted any-sizes clause, equal sizes with additive returns, the kept and divided readings at any sizes, which sharing actual groups have being a premise, and the record's 4 November history date. Its Breeding.response gloss (mean breeding value rises by the additive variance over the mean offspring number) matches the Lean docstring; the line ranks nothing.",
+    "edits": [],
+    "read": [
+     "theories/becoming/review/SCIENCES.md:209-212",
+     "theories/becoming/chapters/04-LIFE.md#r-selection-with-returns-to-groupmates",
+     "theories/becoming/chapters/04-LIFE.md#r-the-breeding-value",
+     "theories/becoming/results/records/selection-with-returns-to-groupmates.json",
+     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean:1117-1165"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/04-LIFE.md:191",
+    "record": "selection-within-and-among-groups",
+    "verdict": "ok",
+    "why": "This is the home section itself, unchanged by CX: the multilevel division in counts (levels), among_for_of_rises, and two witnesses giving either verdict, with 'Which level wins is read off the counts, not explained.' It never said ranking goes through C, so the record's corrected non-implication (C or a premise in its place, not through the division) contradicts nothing here.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/04-LIFE.md:190-191",
+     "theories/becoming/results/records/selection-within-and-among-groups.json",
+     "git diff main HEAD -- theories/becoming/results/records/selection-within-and-among-groups.json"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/04-LIFE.md:177",
+    "record": "the-breeding-value",
+    "verdict": "ok",
+    "why": "It links the breeding value for Fisher's identity cross-multiplied (breeding_balance), the mean's rise under exact transmission (response), and one amount as the case of a single pair (Breeding.one_amount, a rising line, since its coefficient is natural). This matches the home and the Lean, and the line ranks nothing.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/04-LIFE.md:176-177",
+     "theories/becoming/chapters/04-LIFE.md#r-the-breeding-value",
+     "theories/becoming/results/records/the-breeding-value.json",
+     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean:1100-1116"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/04-LIFE.md:180",
+    "record": "the-breeding-value",
+    "verdict": "ok",
+    "why": "This is the home section itself, unchanged by CX. It states the identity, the bound, the response for positive d, the 32-against-48 witness, and the record's two scope limits (solution of the normal equations given, inexact transmission not stated). It makes no claim that a larger additive part is better, so the corrected non-implication (C or a premise in its place) contradicts nothing.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/04-LIFE.md:179-180",
+     "theories/becoming/results/records/the-breeding-value.json",
+     "git diff main HEAD -- theories/becoming/results/records/the-breeding-value.json"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/08-METHOD.md:497",
+    "record": "the-breeding-value",
+    "verdict": "ok",
+    "why": "The row links the breeding value only to say that a solution of the normal equations is here given, and that Fisher's theorem under inexact transmission with the environment term is not stated. This matches the home ('That the normal equations have such a solution is given, not shown; inexact transmission of the breeding value is not stated'), and the row ranks nothing.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/08-METHOD.md:484-497",
+     "theories/becoming/chapters/04-LIFE.md#r-the-breeding-value",
+     "theories/becoming/results/records/the-breeding-value.json"
+    ]
+   }
+  ]
+ },
+ "read:ranking-a": {
+  "group": "ranking-a",
+  "items": [
+   {
+    "line": "theories/becoming/OPENING.md:103",
+    "record": "confined-rise-within-a-whole",
+    "verdict": "fix",
+    "why": "The footnote says nothing about ranking, and its other clauses match the record (confined lineage ends, two ways, Sequestered read as a germ line, known results, empirical and judgment standings). A fix that CX did not make: 'drawing on the body's conditions beyond their renewal' says the lineage's own draw goes beyond renewal, but the home's rise is 'taking from the family during its excess', and the record's does_not_show says 'during the excess, not that it causes it'.",
+    "edits": [
+     {
+      "file": "theories/becoming/OPENING.md",
+      "old": "drawing on the body's conditions beyond their renewal, its descent confined to them",
+      "new": "drawing on the body's conditions while they are drawn beyond their renewal, its descent confined to them"
+     }
+    ],
+    "read": [
+     "theories/becoming/OPENING.md:43",
+     "theories/becoming/OPENING.md:103",
+     "theories/becoming/results/records/confined-rise-within-a-whole.json#statement,laws,hypotheses,does_not_show,correspondence",
+     "theories/becoming/chapters/04-LIFE.md:211-220",
+     "theories/becoming/chapters/04-LIFE.md:310-318",
+     "git diff main HEAD -- confined-rise-within-a-whole.json OPENING.md 04-LIFE.md"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/04-LIFE.md:220",
+    "record": "confined-rise-within-a-whole",
+    "verdict": "ok",
+    "why": "This is the home section's own hypotheses paragraph, and CX did not change it. It says nothing about ranking, and its hypotheses, known-result standing and empirical clauses (tumour, germ line) match the record's hypotheses and does_not_show; 04's 'does not show' also says no lineage or level is better.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/04-LIFE.md:211-220",
+     "theories/becoming/chapters/04-LIFE.md:310-318",
+     "theories/becoming/results/records/confined-rise-within-a-whole.json#statement,hypotheses,does_not_show,correspondence"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/02-MAP.md:420",
+    "record": "fixation-with-selection",
+    "verdict": "ok",
+    "why": "The line links fixation-with-selection only for the bounds of the replacement chain with weights read from the count. The record gives those bounds where each up is at least a positive c, and that holds here because up >= a and a is positive (the drawn record's hypotheses, DrawnReplacement.fixation via fixationBy); the line says nothing about ranking.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/02-MAP.md:415-420",
+     "theories/becoming/chapters/04-LIFE.md:231",
+     "theories/becoming/results/records/fixation-with-selection.json#statement,laws,hypotheses,does_not_show,correspondence",
+     "theories/becoming/results/records/drawn-shaping-drawn-one-at-a-time.json#hypotheses",
+     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnReplacement.lean:192-207"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/04-LIFE.md:231",
+    "record": "fixation-with-selection",
+    "verdict": "ok",
+    "why": "This is the home row itself, and CX did not change it. Each clause matches the record's laws and limits (neutral and favoured shares, lost_ge, fixationBy, lostBy_favoured, Wright-Fisher with selection not stated), it says nothing about ranking, and §6's intro says counting does not say which history happens.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/04-LIFE.md:223-234",
+     "theories/becoming/results/records/fixation-with-selection.json#statement,laws,hypotheses,does_not_show,correspondence"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/08-METHOD.md:498",
+    "record": "fixation-with-selection",
+    "verdict": "ok",
+    "why": "The known-results row cites Moran (1958) and says the result is 'restated as finite weighted bounds', which matches the record's correspondence and laws. Its not-stated column (selection in sampled generations, mutation with drift) matches the record's scope; it says nothing about ranking.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/08-METHOD.md:498",
+     "theories/becoming/results/records/fixation-with-selection.json#does_not_show,correspondence"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/04-LIFE.md:197",
+    "record": "groups-formed-by-descent",
+    "verdict": "ok",
+    "why": "This is the home row itself, and CX did not change it. lineage_value, rises exactly where the lineages' means select, lineages_not_lower and the Assorted witness (the exhausting witness's groups re-founded by descent, GroupEnding.lean:599-637) match the record with its hypotheses; it says nothing about ranking.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/04-LIFE.md:183-200",
+     "theories/becoming/results/records/groups-formed-by-descent.json#statement,laws,hypotheses,does_not_show,correspondence",
+     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean:599-639"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/04-LIFE.md:232",
+    "record": "mutation-and-the-balance-it-sets",
+    "verdict": "ok",
+    "why": "This is the home row itself, and CX did not change it. rises_iff, never_rises, falls_of_outrun, kept_iff, below_always, not_falls_below and balanced_iff match the record, and so do its limits (convergence, back mutation and mutation with drift not shown); it says nothing about ranking.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/04-LIFE.md:223-234",
+     "theories/becoming/results/records/mutation-and-the-balance-it-sets.json#statement,laws,hypotheses,does_not_show,correspondence"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/08-METHOD.md:498",
+    "record": "mutation-and-the-balance-it-sets",
+    "verdict": "ok",
+    "why": "The row's correspondences, mutation-selection balance (Haldane) and the error threshold (Eigen 1971), are the record's correspondence. Its not-stated items (Eigen's threshold by sequence length, quasispecies of many classes, mutation with drift) match the record's two-kind scope, and it says nothing about ranking.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/08-METHOD.md:498",
+     "theories/becoming/results/records/mutation-and-the-balance-it-sets.json#does_not_show,correspondence"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/04-LIFE.md:198",
+    "record": "selection-among-groups-by-ending",
+    "verdict": "ok",
+    "why": "This is the home row itself, and CX did not change it. rises_iff_ended, the member that leaves no descendant after joint excess, and all_end's shared condition that supplies no selection among groups match the record's laws and statement, and it says nothing about ranking. It cites Flow.ended_of_family, the coupled-family law, for the member clause, which excess_childless states directly; the clause is true.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/04-LIFE.md:183-202",
+     "theories/becoming/results/records/selection-among-groups-by-ending.json#statement,laws,hypotheses,does_not_show,correspondence",
+     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean:218-230,354-381"
+    ]
+   }
+  ]
+ },
+ "check:ranking-b": {
+  "group": "ranking-b",
+  "items": [
+   {
+    "line": "theories/becoming/THE-THEORY-OF-BECOMING.md:99",
+    "record": "selection-with-returns-to-groupmates",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "The line says Hamilton's rule holds in counts with additive returns in groups of equal size, proved for every type. 04 §5 (line 207, Theorem (any type)) says the same and also states more: the general additive form and any sizes. So the line is narrower than its home, not wider. CX only changed the record's non-implication, from 'ranking goes through the comparison C' to 'C or a premise in its place'. The line ranks nothing, and a search of it for better/rank/order/C found nothing. The file is not listed in generated-manifest.json.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md:99",
+    "record": "selection-with-returns-to-groupmates",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "Clause for clause this matches the English line, including '在等大的群中回报可加时，汉密尔顿法则以计数成立' and '对一切类型证明'. Both agree with 04 §5. It makes no ranking claim, so the corrected non-implication does not reach it. The file is not generated.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/02-MAP.md:414",
+    "record": "selection-with-returns-to-groupmates",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "The line cites 04 §5's law, not the changed sentence. It reads shaping as returns kept and shared, with cost c in K's place, then gives the verdict c < s + m q rho, which matches 04's K < s + mq rho (rises_iff_kept). I checked the any-sizes clause by hand: Cov(w,a) = (s-K)Var + q Cov(group total, group mean), taken member by member. That is 04's rises_iff_kept_sized. The clause 'not a function of the whole's spread and the size-weighted spread of the group means' at unequal sizes matches 04 §5 and its section on unequal groups. CX's 02 hunks (lines 438 and 453) do not touch this line, and it ranks nothing.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/04-LIFE.md:207",
+    "record": "selection-with-returns-to-groupmates",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "This is the home section, and git diff main HEAD shows no change to 04-LIFE.md. It agrees with the record's statement: the whole selects for keeping exactly where b + c times the whole's spread falls short of mb times the spread among groups. It also agrees with does_not_show[0] (synergy not stated; which sharing actual groups have is a premise) and does_not_show[1] (how groups are founded gives either verdict). It never said ranking goes through C, so the corrected non-implication contradicts nothing here.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/04-LIFE.md:210",
+    "record": "selection-with-returns-to-groupmates",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "The line links r-selection-with-returns ('above') for one law: where each member gains for every unit its group holds, the verdict goes through the covariance of a member's group total with its group's mean. 04 §5 states that (rises_iff_kept_sized). Its parameters K = 3, q = 2, s = 0 are the home's case s = 0, K = b + c, q = b, here with b = 2 and c = 1. It ranks nothing.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/08-METHOD.md:497",
+    "record": "selection-with-returns-to-groupmates",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "CX did not change this row; it appears only as context in the 08 diff. The row says the account does not yet state Hamilton's rule with synergy or with assortment changing over generations, and that its general additive form is stated (rises_iff_reading). The record agrees: does_not_show says synergy is not stated and the share of the spread among groups over generations enters as given, and next_delta lists both. The row ranks nothing.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/review/SCIENCES.md:211",
+    "record": "selection-with-returns-to-groupmates",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "Its two quotes match 04 §5's text exactly. Its other clauses match the home: the general additive form on any list (rises_iff_reading); the kept law at any sizes through the covariance of group total with group mean (rises_iff_kept_sized); the divided reading K < s + Q rho (rises_iff_divided_sized); either verdict at unequal sizes (Sized.either_verdict); and the general split weighted by size (rises_iff_sized, as in 04's any-sizes section). The record's history confirms the date 'since 4 November 2026' (item US). The Breeding.response gloss matches the Lean docstring and 04's breeding-value section. Nothing in the line ranks, and the file is not generated.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/04-LIFE.md:191",
+    "record": "selection-within-and-among-groups",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "This is the home section, unchanged by CX. It matches the record's statement: the multilevel division (levels) and among_for_of_rises. It also matches the scope line 'which level wins is read off the counts, not explained', and gives two witnesses with either verdict. It never said ranking goes through C, so the corrected non-implication ('C or a premise in its place, not through the division') contradicts nothing.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/04-LIFE.md:177",
+    "record": "the-breeding-value",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "The line links the breeding value for three things: Fisher's identity cross-multiplied (breeding_balance), the mean's rise under exact transmission (response), and one amount as the case of a single pair (one_amount). I read the Lean. one_amount assumes g = B + beta*z with beta natural, so 'a rising line' describes its hypothesis. The Lean also admits beta = 0, so the line states less than is proved, not more. The line ranks nothing.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/04-LIFE.md:180",
+    "record": "the-breeding-value",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "This is the home section, unchanged by CX. The Lean docstrings and the record agree with it: breeding_balance, additive_part_le, response, and response_rises_iff for positive d. So do both scope fields: 'That the normal equations have such a solution is given, not shown; inexact transmission of the breeding value is not stated'. It never claims a larger additive part is better, so the corrected non-implication contradicts nothing.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/08-METHOD.md:497",
+    "record": "the-breeding-value",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "The row's last column is headed 'What it states that the account does not yet'. There it links the breeding value only to say the account takes a solution of the normal equations as given, and does not state Fisher's theorem under inexact transmission with the environment term. Both match the record's does_not_show[0] and [1] and the home's closing sentence. The row ranks nothing.",
+    "edits": []
+   }
+  ]
+ },
+ "read:proxy": {
+  "group": "proxy",
+  "items": [
+   {
+    "line": "experiments/shaping-what-comes-back/README.md:50",
+    "record": "selection-through-couplings",
+    "verdict": "ok",
+    "why": "The line says a selection reaches only what couples into its selector. That matches the main law with no premise (03 §1) and the record's reading, and the line makes no proxy-problem claim.",
+    "edits": [],
+    "read": [
+     "experiments/shaping-what-comes-back/README.md:49-51",
+     "theories/becoming/chapters/03-KNOWING.md:16-29",
+     "theories/becoming/results/records/selection-through-couplings.json#statement,does_not_show,hypotheses,correspondence"
+    ]
+   },
+   {
+    "line": "theories/becoming/COLLECTIVE-DIRECTION.md:63",
+    "record": "selection-through-couplings",
+    "verdict": "ok",
+    "why": "For this record the row cites only the main law (`Web.selects_alike_iff`): a selection reaches exactly what couples into it, which the home states with no premise. The pooled act's hypotheses belong to 05's home, which is outside this group.",
+    "edits": [],
+    "read": [
+     "theories/becoming/COLLECTIVE-DIRECTION.md:55-64",
+     "theories/becoming/chapters/03-KNOWING.md:22-29",
+     "theories/becoming/chapters/05-COLLECTIVES.md:261"
+    ]
+   },
+   {
+    "line": "theories/becoming/FREE-ENERGY-PRINCIPLE.md:57",
+    "record": "selection-through-couplings",
+    "verdict": "ok",
+    "why": "The line cites selection through couplings as the law that a determined policy on a blanketed law selects through the sensory course, stated for the deterministic case. Nothing in it touches the changed correspondence, and the home does not contradict it.",
+    "edits": [],
+    "read": [
+     "theories/becoming/FREE-ENERGY-PRINCIPLE.md:56-58",
+     "theories/becoming/chapters/03-KNOWING.md:22-29"
+    ]
+   },
+   {
+    "line": "theories/becoming/ONE-PAGE.md:18",
+    "record": "selection-through-couplings",
+    "verdict": "ok",
+    "why": "'The selections ... together, reach exactly what couples into it' matches the home theorem (World; no premise). 'Proved, near-definitional; its force is the premise that a selector selects through just those' shortens the home's 'its force lies in the supplied premise ... and in what couples in' without contradicting it, and the line makes no proxy-problem claim.",
+    "edits": [],
+    "read": [
+     "theories/becoming/ONE-PAGE.md:17-19",
+     "theories/becoming/chapters/03-KNOWING.md:22-29"
+    ]
+   },
+   {
+    "line": "theories/becoming/ONE-PAGE.zh.md:18",
+    "record": "selection-through-couplings",
+    "verdict": "ok",
+    "why": "This is the zh edition of the same row: 'together they reach exactly what couples in; proved, near-definitional; its force is the premise'. It agrees with the home and makes no proxy-problem claim.",
+    "edits": [],
+    "read": [
+     "theories/becoming/ONE-PAGE.zh.md:17-19",
+     "theories/becoming/chapters/03-KNOWING.md:22-29"
+    ]
+   },
+   {
+    "line": "theories/becoming/THE-THEORY-OF-BECOMING.md:85",
+    "record": "selection-through-couplings",
+    "verdict": "fix",
+    "why": "'It is the proxy problem' restates the record's pre-CX correspondence, which named the proxy problem in general. The home now says it is the proxy problem in its blindness to what a proxy does not register, and that the regressional and causal kinds are not stated.",
+    "edits": [
+     {
+      "file": "theories/becoming/THE-THEORY-OF-BECOMING.md",
+      "old": "It is the proxy problem, stated more weakly than its known quantitative form",
+      "new": "It is the proxy problem in its blindness to what a proxy does not register, not its regressional or causal kinds, stated more weakly than its known quantitative form"
+     }
+    ],
+    "read": [
+     "theories/becoming/THE-THEORY-OF-BECOMING.md:84-86",
+     "theories/becoming/chapters/03-KNOWING.md:29",
+     "theories/becoming/results/records/selection-through-couplings.json#does_not_show[5]",
+     "git diff main HEAD -- record and 03-KNOWING.md"
+    ]
+   },
+   {
+    "line": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md:85",
+    "record": "selection-through-couplings",
+    "verdict": "fix",
+    "why": "'它就是代理问题' is the zh form of the pre-CX wording, which named the proxy problem in general. The record's zh now reads '即代理问题（…）中对代理所不记录者之不见，不及其回归与因果两类'.",
+    "edits": [
+     {
+      "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+      "old": "它就是代理问题，所述弱于其已知的定量形式",
+      "new": "它就是代理问题中对代理所不记录者之不见，不及其回归与因果两类，所述弱于其已知的定量形式"
+     }
+    ],
+    "read": [
+     "theories/becoming/THE-THEORY-OF-BECOMING.zh.md:84-86",
+     "theories/becoming/results/records/selection-through-couplings.json#does_not_show[5].zh"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/01-ROOT.md:612",
+    "record": "selection-through-couplings",
+    "verdict": "fix",
+    "why": "CX did not change this. The line names balance on what couples in as the condition for blindness, but the home theorem also needs the rest of the exchange fixed (or the responsive form's hypotheses), so as written it states the law under a weaker condition than the one proved. 03:349 already uses the full wording.",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/01-ROOT.md",
+      "old": "and, under balance on what couples in, selections through a formation's couplings treat alike",
+      "new": "and, with the rest of the exchange fixed and balance on what couples in, selections through a formation's couplings treat alike"
+     }
+    ],
+    "read": [
+     "theories/becoming/chapters/01-ROOT.md:606-612",
+     "theories/becoming/chapters/03-KNOWING.md:25",
+     "theories/becoming/results/records/selection-through-couplings.json#hypotheses[1],[2]"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/03-KNOWING.md:349",
+    "record": "selection-through-couplings",
+    "verdict": "ok",
+    "why": "The line keeps the blindness theorem's hypotheses ('with the rest of the exchange fixed and balance on what couples in') and reads its losses as not returning through its own feedback. That agrees with §1, and the line does not touch the proxy correspondence.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/03-KNOWING.md:347-351",
+     "theories/becoming/chapters/03-KNOWING.md:25"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/04-LIFE.md:239",
+    "record": "selection-through-couplings",
+    "verdict": "fix",
+    "why": "CX did not change this. 'A selection through couplings is blind beyond their closure' drops the hypotheses the home and the record's statement give ('With the rest fixed'; balance on what couples in). The next clause then flags 05's law 'with its hypotheses', which makes the first law read as unconditional.",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/04-LIFE.md",
+      "old": "Counts of offspring see only what the selection couples into: a [selection through couplings]",
+      "new": "Counts of offspring see only what the selection couples into: with the rest of the exchange fixed and balance on what couples in, a [selection through couplings]"
+     }
+    ],
+    "read": [
+     "theories/becoming/chapters/04-LIFE.md:235-241",
+     "theories/becoming/chapters/03-KNOWING.md:25",
+     "theories/becoming/results/records/selection-through-couplings.json#statement,hypotheses"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/05-COLLECTIVES.md:7",
+    "record": "selection-through-couplings",
+    "verdict": "ok",
+    "why": "'A selection reaches exactly what couples into its selector' is the main law as the record's own reading words it ('reaches exactly what couples into it'). Reach here is the bound on what a selection can depend on, which the home states with no premise.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/05-COLLECTIVES.md:7",
+     "theories/becoming/chapters/03-KNOWING.md:16-23",
+     "theories/becoming/results/records/selection-through-couplings.json#correspondence"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/05-COLLECTIVES.md:93",
+    "record": "selection-through-couplings",
+    "verdict": "fix",
+    "why": "CX did not change this. 'A selection separates exactly what its selector couples apart' says one selection tells apart everything its couplings carry, but the home says 'whatever is apart is separated by some' and 'A particular selection may ignore what its couplings carry'. Only the selections through the couplings together separate exactly that.",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+      "old": "| Information true to the world | a selection separates exactly what its selector couples apart |",
+      "new": "| Information true to the world | selections through a selector's couplings, together, separate exactly what it couples apart |"
+     }
+    ],
+    "read": [
+     "theories/becoming/chapters/05-COLLECTIVES.md:84-100",
+     "theories/becoming/chapters/03-KNOWING.md:22-23"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/05-COLLECTIVES.md:258",
+    "record": "selection-through-couplings",
+    "verdict": "ok",
+    "why": "The line only says that selection through couplings is 03's, next to the pool's definition, and states nothing of the record beyond that.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/05-COLLECTIVES.md:257-261"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/07-SIGNIFICANCE.md:5",
+    "record": "selection-through-couplings",
+    "verdict": "ok",
+    "why": "A pointer to 'the reach of a selection' in knowing. It claims nothing the home contradicts.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/07-SIGNIFICANCE.md:5"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/07-SIGNIFICANCE.md:532",
+    "record": "selection-through-couplings",
+    "verdict": "ok",
+    "why": "It uses 'couple in' as a concept for a candidate scope rule and leaves open whether scope may depend on what can couple in. It states no law wider than the home and does not summarize the ethics' premises.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/07-SIGNIFICANCE.md:531-533"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/07-SIGNIFICANCE.md:647",
+    "record": "selection-through-couplings",
+    "verdict": "ok",
+    "why": "It gives the home's definition (any claim about level histories, through the couplings where histories alike through them are selected alike) and its main law in the record's reading, 'reaches exactly what couples into the selector'. It makes no proxy-problem claim.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/07-SIGNIFICANCE.md:643-649",
+     "theories/becoming/chapters/03-KNOWING.md:20-23"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/07-SIGNIFICANCE.md:666",
+    "record": "selection-through-couplings",
+    "verdict": "ok",
+    "why": "A list of eight cases, each a pointer to its home where its hypotheses are stated; 'what lies beyond its coupling closure' names the blindness case by its home. It states nothing the home contradicts.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/07-SIGNIFICANCE.md:664-668",
+     "theories/becoming/chapters/03-KNOWING.md:25"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/08-METHOD.md:18",
+    "record": "selection-through-couplings",
+    "verdict": "ok",
+    "why": "It applies the law of selection to an account that takes in no objection: nothing could then reach it. That uses the main law and claims nothing the home contradicts.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/08-METHOD.md:17-19"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/08-METHOD.md:491",
+    "record": "selection-through-couplings",
+    "verdict": "fix",
+    "why": "The row names 'the proxy problem' as the closest prior result with the verdict 'restated', but the home now says the account states only its blindness to what a proxy does not register, not Manheim and Garrabrant's regressional and causal kinds. The row's other cells, on Zhuang and Hadfield-Menell's theorems, hold against the home.",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/08-METHOD.md",
+      "old": "Pearl (2000); the proxy problem (Zhuang and Hadfield-Menell 2020) |",
+      "new": "Pearl (2000); the proxy problem in its blindness to what a proxy does not register (Zhuang and Hadfield-Menell 2020) |"
+     }
+    ],
+    "read": [
+     "theories/becoming/chapters/08-METHOD.md:480-491",
+     "theories/becoming/chapters/03-KNOWING.md:29",
+     "theories/becoming/results/records/selection-through-couplings.json#does_not_show[5]"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/08-METHOD.md:542",
+    "record": "selection-through-couplings",
+    "verdict": "fix",
+    "why": "'In fact they restate the proxy problem' gives the pre-CX wider reading of the proxy problem in general. The home now limits it to the blindness to what a proxy does not register, not the regressional or causal kinds. The rest of the sentence (Theorem 1, a discrete analogue at optima, more weakly than their continuous results) agrees with the home.",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/08-METHOD.md",
+      "old": "In fact they restate the proxy problem, Zhuang and Hadfield-Menell's (2020) Theorem 1,",
+      "new": "In fact they restate the proxy problem (in its blindness to what a proxy does not register, not its regressional or causal kinds), Zhuang and Hadfield-Menell's (2020) Theorem 1,"
+     }
+    ],
+    "read": [
+     "theories/becoming/chapters/08-METHOD.md:541-543",
+     "theories/becoming/chapters/03-KNOWING.md:29",
+     "theories/becoming/results/records/selection-through-couplings.json#does_not_show[5]"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/08-METHOD.md:706",
+    "record": "selection-through-couplings",
+    "verdict": "ok",
+    "why": "'A selection reaches exactly what couples into its selector' is the main law in the record's reading, applied to the work's own checks. It makes no proxy-problem claim.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/08-METHOD.md:705-707",
+     "theories/becoming/results/records/selection-through-couplings.json#correspondence"
+    ]
+   },
+   {
+    "line": "theories/becoming/review/ALIGNMENT.md:77",
+    "record": "selection-through-couplings",
+    "verdict": "ok",
+    "why": "The quote matches does_not_show[2] word for word ('The main law is near-definitional and the blindness a one-line corollary ...; the contribution is conceptual'), and that field did not change.",
+    "edits": [],
+    "read": [
+     "theories/becoming/review/ALIGNMENT.md:76-79",
+     "theories/becoming/results/records/selection-through-couplings.json#does_not_show[2]"
+    ]
+   },
+   {
+    "line": "theories/becoming/review/ALIGNMENT.md:78",
+    "record": "selection-through-couplings",
+    "verdict": "ok",
+    "why": "The quote is an exact prefix of does_not_show[0] ('The laws do not derive who selects, ...'). 'The work lies in measuring what actually couples in' agrees with does_not_show[1], 'the law's force lies entirely in what actually couples into the selector'.",
+    "edits": [],
+    "read": [
+     "theories/becoming/review/ALIGNMENT.md:76-79",
+     "theories/becoming/results/records/selection-through-couplings.json#does_not_show[0],[1]"
+    ]
+   }
+  ]
+ },
+ "read:homes": {
+  "group": "homes",
+  "items": [
+   {
+    "line": "theories/becoming/review/ALIGNMENT.md:169",
+    "record": "coupling-closures-of-training-pipelines",
+    "verdict": "ok",
+    "why": "The line calls it an assessment, not a theorem, which matches the record (kind assessment, reviewed-scoped). Its quote of the record's correspondence (\"Gao, Schulman and Hilton 2023; Wen et al. 2024; Sharma et al. 2023 (measurements)\") is verbatim. CX changed only the imperial-examination reading at 07:702, and this line says nothing about it.",
+    "edits": [],
+    "read": [
+     "theories/becoming/review/ALIGNMENT.md:162-176",
+     "theories/becoming/results/records/coupling-closures-of-training-pipelines.json",
+     "theories/becoming/results/records/coupling-closures-of-training-pipelines.md (grep of both quotes)",
+     "theories/becoming/chapters/07-SIGNIFICANCE.md:643,680-712",
+     "git diff main HEAD -- theories/becoming/chapters/07-SIGNIFICANCE.md theories/becoming/review/ALIGNMENT.md"
+    ]
+   },
+   {
+    "line": "theories/becoming/review/ALIGNMENT.md:173",
+    "record": "coupling-closures-of-training-pipelines",
+    "verdict": "ok",
+    "why": "\"figures are from the papers abstracts\" is verbatim from the record's hypothesis, which goes on to give the reading date of 22 October 2026. The 07 home section's only change, the imperial-examination reading, does not bear on it.",
+    "edits": [],
+    "read": [
+     "theories/becoming/review/ALIGNMENT.md:170-174",
+     "theories/becoming/results/records/coupling-closures-of-training-pipelines.json#hypotheses",
+     "theories/becoming/chapters/07-SIGNIFICANCE.md:685-712"
+    ]
+   },
+   {
+    "line": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/README.md:21",
+    "record": "organizational-formation-from-generative-comparison",
+    "verdict": "ok",
+    "why": "The line only lists the record among the \"Records binding files here\". The record does bind files in this folder's generative-capacity subfolder (OrganizationCorrespondence.lean, RelationalOrganization.lean and their receipts). The line says nothing about the ranking label CX changed in 05's D65 reading.",
+    "edits": [],
+    "read": [
+     "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/README.md:1-25",
+     "theories/becoming/results/records/organizational-formation-from-generative-comparison.json#references",
+     "_process/architecture/generated-manifest.json (file not listed as generated)"
+    ]
+   },
+   {
+    "line": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md:29",
+    "record": "organizational-formation-from-generative-comparison",
+    "verdict": "ok",
+    "why": "The line only lists the record under \"Records binding files here\". The record's references name OrganizationCorrespondence.lean, check_organization_correspondence.py, RelationalOrganization.lean and their receipts in this folder. It restates no claim of the home.",
+    "edits": [],
+    "read": [
+     "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md:20-31",
+     "theories/becoming/results/records/organizational-formation-from-generative-comparison.json#references"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/04-LIFE.md:288",
+    "record": "organizational-formation-from-generative-comparison",
+    "verdict": "ok",
+    "why": "\"Required organization under the comparison, a conditional result on building shared capacity\" matches the home: a Conditional titled \"Required organization under the comparison C\" that \"under these premises ... can warrant building shared capacity\". It says nothing wider, and gives no ranking to C alone.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/04-LIFE.md:283-292",
+     "theories/becoming/chapters/05-COLLECTIVES.md:391-396",
+     "git diff main HEAD -- theories/becoming/chapters/05-COLLECTIVES.md",
+     "theories/becoming/results/records/organizational-formation-from-generative-comparison.json"
+    ]
+   },
+   {
+    "line": "theories/becoming/results/GENERATIVITY-CHAIN.md:101",
+    "record": "organizational-formation-from-generative-comparison",
+    "verdict": "ok",
+    "why": "This 84,000-character M20 row was read only where it bears on this record and on 05's D65 reading, not in full. There it says the argument \"derives a formation requirement from whole improvement witnesses, supporting constructive capacity with carrier latitude\" (the record's statement), and its status cell matches the record's validation scope. Its passage on §§75–77 (\"no a priori duty to contract ... no preset ranking\") is framed \"under the G0 route then taken\", gives no ranking to C alone, and the page's preamble names both premises.",
+    "edits": [],
+    "read": [
+     "theories/becoming/results/GENERATIVITY-CHAIN.md:1-29 (preamble, line 9 in full)",
+     "theories/becoming/results/GENERATIVITY-CHAIN.md:101 (cells 2-5 around each organization/carrier mention; scan for 'C alone', \"C's\", 'ranking is', 'C ranks', 'from the condition')",
+     "theories/becoming/chapters/05-COLLECTIVES.md:391-396",
+     "theories/becoming/results/records/organizational-formation-from-generative-comparison.json"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/08-METHOD.md:409",
+    "record": "revision-with-an-undecided-value",
+    "verdict": "ok",
+    "why": "The line is a pointer: it says that how far a description made within what it describes can complete itself is bounded by the diagonal and by revision with an undecided value. It gives the revision result no 'any type' scope, so the home's relabelling to \"Kleene's three-valued sentences, a named model\" contradicts nothing in it. The home's \"a family within what it reads stays incomplete with three values\" is the bound it points to.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/08-METHOD.md:371,405-416",
+     "theories/becoming/chapters/03-KNOWING.md:282-286",
+     "git diff main HEAD -- theories/becoming/chapters/03-KNOWING.md theories/becoming/chapters/08-METHOD.md",
+     "theories/becoming/results/records/revision-with-an-undecided-value.json"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/08-METHOD.md:806",
+    "record": "revision-with-an-undecided-value",
+    "verdict": "ok",
+    "why": "The line lists \"Revision with an undecided value over infinitely many sentences\" as open. That matches the record's does_not_show (\"Infinitely many sentences, where the least fixed point needs a limit stage\") and the home's scope (\"finitely many closed among themselves\").",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/08-METHOD.md:800-807",
+     "theories/becoming/results/records/revision-with-an-undecided-value.json#does_not_show",
+     "theories/becoming/chapters/03-KNOWING.md:285-286"
+    ]
+   },
+   {
+    "line": "theories/becoming/review/LOGIC.md:785",
+    "record": "revision-with-an-undecided-value",
+    "verdict": "ok",
+    "why": "CX already updated this line: it now says \"03 labels it a named model (until 7 November 2026 'any type')\", which matches the home's new parenthesis and the commit date. Its meaning statement (Kleene's strong tables, Kripke 1975 for finitely many sentences, the exact bound, the liar resting undecided, monotone_not_moves) matches the home and the module's credit, and `Undecided.settles_within` exists in the Undecided namespace.",
+    "edits": [],
+    "read": [
+     "theories/becoming/review/LOGIC.md:765-795",
+     "git diff main HEAD -- theories/becoming/review/LOGIC.md",
+     "theories/becoming/chapters/03-KNOWING.md:224,285-286",
+     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Undecided.lean:60-62,76,317,401,766",
+     "git log main..HEAD -- theories/becoming/chapters/03-KNOWING.md"
+    ]
+   },
+   {
+    "line": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md:231",
+    "record": "the-boundary-of-enough-under-undetermined-laws",
+    "verdict": "ok",
+    "why": "The module row restates the home's law: some run rests where a reachable configuration can stay and meet the target, every run rests where every reachable staying configuration meets it and every run settles, staying and meeting do not give settling, and under a determined law the two are one. Every Lean name it cites exists in Enough.lean. CX's change in this home section (the 无明 reading at 03:351) is not touched by the line.",
+    "edits": [],
+    "read": [
+     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md:226-234",
+     "theories/becoming/chapters/03-KNOWING.md:343-353",
+     "git diff main HEAD -- theories/becoming/chapters/03-KNOWING.md",
+     "theories/becoming/results/records/the-boundary-of-enough-under-undetermined-laws.json",
+     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Enough.lean (grep of the seven theorem names)"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/01-ROOT.md:606",
+    "record": "the-boundary-of-enough-under-undetermined-laws",
+    "verdict": "ok",
+    "why": "It says the boundary of enough (03 §8) delimits regions of configurations where a law's verdict holds. The home does part configurations by whether some run, or every run, rests with the target met. The section number (03 §8, Learning and seeking) is right, and the line says nothing about 无明.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/01-ROOT.md:602-610",
+     "theories/becoming/chapters/03-KNOWING.md:316,346-351",
+     "theories/becoming/chapters/05-COLLECTIVES.md:348-349"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/02-MAP.md:388",
+    "record": "the-boundary-of-enough-under-undetermined-laws",
+    "verdict": "ok",
+    "why": "The line points to \"the boundary of enough under undetermined laws\" alongside 03's seeking-boundary results, and claims nothing more of it. CX's changes to 02 are in other paragraphs, and this line does not restate the changed 无明 reading.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/02-MAP.md:383-391",
+     "git diff main HEAD -- theories/becoming/chapters/02-MAP.md",
+     "theories/becoming/chapters/03-KNOWING.md:344-351"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/03-KNOWING.md:344",
+    "record": "the-boundary-of-enough-under-undetermined-laws",
+    "verdict": "ok",
+    "why": "The seeking-boundary theorem refers to the next section with \"For undetermined laws see the boundary of enough\", and that section is exactly the undetermined-law case (\"Under a determined law they are one\"). The line's own \"any type\" label belongs to seeking-boundary, not to the revision record CX relabelled.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/03-KNOWING.md:343-351",
+     "theories/becoming/results/records/the-boundary-of-enough-under-undetermined-laws.json"
+    ]
+   }
+  ]
+ },
+ "check:ranking-a": {
+  "group": "ranking-a",
+  "items": [
+   {
+    "line": "theories/becoming/OPENING.md:103",
+    "record": "confined-rise-within-a-whole",
+    "verdict": "fix",
+    "agrees": true,
+    "why": "CX's change does not reach this line: the footnote says nothing about ranking, and the hunks CX made in OPENING are at line 92. The fix is for something CX did not change. 'drawing on the body's conditions beyond their renewal' makes the lineage's own draw exceed renewal. In the home a rise is 'taking from the family during its excess'. The Lean field Rise.draws asks only for a positive take while uptake exceeds replenishment, and its docstring says 'takes from the family while its uptake exceeds its renewal'. The record's does_not_show says the clause means 'during the excess, not that it causes it'. The first reader's edit says exactly that, keeps '(a reading)' and the confinement clause, and its old text occurs once (I counted). I also looked at 'descends only from parts that did not depend on them', which leaves out 'at the gate's need'. I kept it, because the home's own definition of confined ('every later member depends on the family') and the record's law use the same shorthand. The rest of the footnote matches the home: the other clauses, the standings and the citations. The file is not in the generated manifest, and there is no zh edition of OPENING.",
+    "edits": [
+     {
+      "file": "theories/becoming/OPENING.md",
+      "old": "drawing on the body's conditions beyond their renewal, its descent confined to them",
+      "new": "drawing on the body's conditions while they are drawn beyond their renewal, its descent confined to them"
+     }
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/04-LIFE.md:220",
+    "record": "confined-rise-within-a-whole",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "This is the home section's own hypotheses paragraph, and CX did not change it (04-LIFE has no diff against main). It never mentions ranking, so it restates no 'ranking goes through C' wording. Its hypotheses match the record: balance, only active formations giving, activity needing support, descent, the coupled gate, n steps of excess from below n + m, confinement for the lineage law and one founder per whole. The uniform first generation and Sequestered appear as hypotheses in the bullets above it. The known-results standing and the empirical clauses (a tumour, a sequestered germ line) match the record's does_not_show. 04's 'does not show' (line 316) says only that no lineage or level is better and assigns no order to C, so it is not wider than the home.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/02-MAP.md:420",
+    "record": "fixation-with-selection",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "The line links fixation-with-selection only to say that the drawn chain is 04's replacement chain with weights read from the count, so its bounds hold. The record's law gives those bounds 'where each up is at least a positive c'. DrawnReplacement.fixation applies fixationBy with up_ge (each up is at least a) under the drawn model's premise that a is positive. CX's hunks in 02-MAP are at lines 438 and 453, not here, and the line says nothing about ranking or about which history happens.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/04-LIFE.md:231",
+    "record": "fixation-with-selection",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "This is the home row itself, and CX did not change it. Its clauses match the record's statement and laws: the potential's ratio for positive a, neutral_share, favoured_share_above, lost_ge at b^i, valueBy/fixationBy where each up is at least a positive c, lost_geBy and lostBy_favoured. Its limits (weights read from the count only, no mutation, Wright-Fisher with selection not stated) match does_not_show. It says nothing about ranking, and §6's opening says that counting does not say which history happens.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/08-METHOD.md:498",
+    "record": "fixation-with-selection",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "CX did not change this row (08's hunks are at 329, 494, 567, 573, 588 and 622). It cites Moran (1958), as the record's correspondence does, and 'restated as finite weighted bounds' matches the record's laws. Its not-stated column (Kimura's fixation with selection in sampled generations, mutation with drift) matches the record's does_not_show. It says nothing about ranking.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/04-LIFE.md:197",
+    "record": "groups-formed-by-descent",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "This is the home row itself, and CX did not change it. lineage_value, the claim that the mean rises exactly where the lineages' means select, lineages_not_lower (lower lineages not active as a hypothesis) and the Assorted witness all match the record's laws, with exact transmission and the World premises in its hypothesis column. It never mentions ranking or says that keeping what ending selected is better.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/04-LIFE.md:232",
+    "record": "mutation-and-the-balance-it-sets",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "This is the home row itself, and CX did not change it. rises_iff (with c positive), never_rises, falls_of_outrun as the error threshold, kept_iff/kept_share at s/(s + m), below_always, not_falls_below and balanced_iff all match the record. Its limits (loss one way, constant offspring numbers, and convergence, back mutation and mutation with drift not shown) match does_not_show. It never mentions ranking or says that keeping the carriers is better.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/08-METHOD.md:498",
+    "record": "mutation-and-the-balance-it-sets",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "The row's correspondences, mutation-selection balance (Haldane) and the error threshold (Eigen 1971), are the record's correspondence. Its not-stated items (Eigen's threshold by sequence length, the quasispecies of many classes, mutation with drift) are consistent with the record's two-kind scope. 'Restated as finite weighted bounds' fits the drift and fixation records better than this exact count law, but it claims less, not more, and it still says this is a restatement. The row says nothing about ranking.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/04-LIFE.md:198",
+    "record": "selection-among-groups-by-ending",
+    "verdict": "fix",
+    "agrees": false,
+    "why": "CX did not change this row, and it says nothing about ranking. The ending law, all_end and the hypothesis column match the record. This is a fix CX did not make, and the first reader saw the issue but called it ok. The member clause, 'a member depending at a need of at least m on a condition whose gated renewal ran into joint excess leaves no descendant from then on', cites Becoming.GroupEnding.Flow.ended_of_family. That theorem does not state the clause. It concludes Ended for groups whose less-amount members depend on a coupled family (GroupEnding.lean:354-358), and it belongs to the record groups-whose-conditions-are-coupled, not to this one. The record's law for this clause binds Becoming.GroupEnding.Flow.excess_childless (record json line 41). Its docstring (GroupEnding.lean:217-221) is the row's clause nearly word for word, and it goes through family_childless to Flow.family_excess_ends. So the 'through' clause stays true. The clause is true but its proof reference is wrong, and a proof claim must say exactly what the Lean proves. The old text occurs once (I counted). 04-LIFE is not in the generated manifest.",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/04-LIFE.md",
+      "old": "leaves no descendant from then on (`Becoming.GroupEnding.Flow.ended_of_family`, through `Becoming.Flow.family_excess_ends`)",
+      "new": "leaves no descendant from then on (`Becoming.GroupEnding.Flow.excess_childless`, through `Becoming.Flow.family_excess_ends`)"
+     }
+    ]
+   }
+  ]
+ },
+ "check:homes": {
+  "group": "homes",
+  "items": [
+   {
+    "line": "theories/becoming/review/ALIGNMENT.md:169",
+    "record": "coupling-closures-of-training-pipelines",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "Both assessments in A-06 are kind assessment, status reviewed-scoped, so \"Assessment, not theorem\" holds. The quoted measurement citations appear verbatim, once, in the record page and match the JSON correspondence field. The 07 §6 link resolves (the anchor sits in §6, lines 643-712). CX's only change in this home section is the imperial-examination reading at 07:702 ('read, not tested'), and this line does not restate it.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/review/ALIGNMENT.md:173",
+    "record": "coupling-closures-of-training-pipelines",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "The quote \"figures are from the papers abstracts\" is verbatim from the record's hypothesis and appears once in the record page. It is listed as a known weakness and claims nothing beyond it. The record has no record_changes, and the 07:702 change does not bear on it.",
+    "edits": []
+   },
+   {
+    "line": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/README.md:21",
+    "record": "organizational-formation-from-generative-comparison",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "With the links stripped, the line is only a list of record ids under \"Records binding files here (47)\". The record's references bind RelationalOrganization.lean, OrganizationCorrespondence.lean, check_organization_correspondence.py and their receipts in this folder's generative-capacity subfolder. The line restates no claim, so CX's change to 05's D65 label (from 'any ranking is C's' to 'scope by the continuation condition, and a ranking needs C or a premise in its place') does not touch it. The file is not in generated-manifest.json.",
+    "edits": []
+   },
+   {
+    "line": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/README.md:29",
+    "record": "organizational-formation-from-generative-comparison",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "A pure list of record ids (39), with no prose. The record binds files in this folder: OrganizationCorrespondence.lean, RelationalOrganization.lean, the checker and their receipts. The file is not generated.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/04-LIFE.md:288",
+    "record": "organizational-formation-from-generative-comparison",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "\"Required organization under the comparison, a conditional result on building shared capacity\" matches the home. The home is labelled Conditional, titled \"Required organization under the comparison C\", and says \"Under these premises it can warrant building shared capacity without fixing one carrier\". The line gives no ranking to C alone and does not restate the D65 reading CX changed.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/results/GENERATIVITY-CHAIN.md:101",
+    "record": "organizational-formation-from-generative-comparison",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "I did not read the 84,012-character row in full. I searched it for the record link and for every 'ranking', \"C's\", 'C alone', 'from the condition', 'duty to contract' and 'premise', and read each hit in context. The passage on §§75-77 that restates the D65 content is framed \"under the G0 route then taken\" and says \"expansion, maintenance and contraction have no preset ranking\". The other three 'ranking' hits are 'complete ranking of the whole', 'universal normative ranking' and 'quadratic ranking reversal'. None gives a ranking to C alone, and none restates the old 'any ranking is C's'. The organizational sentence (\"derives a formation requirement from whole improvement witnesses, supporting constructive capacity with carrier latitude\") matches the home's formal step and \"without fixing one carrier\". The status sentence (13 new declarations/29 audits, 30 inherited/46, overbuilding kept, author counterreview, no independent acceptance) matches validation_scope. The preamble names both premises, unasserted, with C for order. The file is not generated.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/08-METHOD.md:409",
+    "record": "revision-with-an-undecided-value",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "A pointer saying that how far a description made within what it describes can complete itself is bounded by two results in 03. It gives neither result a scope, so it does not repeat the 'any type' label CX removed. The home's own sentence \"a family within what it reads stays incomplete with three values\" is the bound it points to, now within Kleene's named model. CX's 08 hunks are at lines 329, 494, 567, 573, 588 and 622, not here. A stricter reader could add the named-model scope, but the line states nothing the home contradicts or that goes beyond it.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/08-METHOD.md:806",
+    "record": "revision-with-an-undecided-value",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "Listing \"Revision with an undecided value over infinitely many sentences\" as open matches the record's does_not_show (\"Infinitely many sentences, where the least fixed point needs a limit stage\"), the home's scope (\"finitely many closed among themselves\") and the module header's 'What is not derived'.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/review/LOGIC.md:785",
+    "record": "revision-with-an-undecided-value",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "CX updated this line to \"03 labels it a named model (until 7 November 2026 'any type')\", which matches the home's new label. The CX commits to 03 are dated 7 November 2026. The meaning matches the home: Kleene's strong tables, settling within N at the least fixed point, the exact bound, every three-valued fixed point leaving a sentence undecided, the liar resting undecided, and monotone_not_moves. The Kripke 1975 credit is the module's own. Every cited name exists in namespace Undecided (settles_within at line 401, monotone_not_moves at 711). The 03 §6 and 08 §6 links resolve. Minor point: the auxiliary count settles_within is generic in `{X : Type u}`, but 'no type parameter occurs' is said of the revision theorem on the module's own syntax (settles, least_fixed, chain_exact and the rest), where it holds. It is not misleading.",
+    "edits": []
+   },
+   {
+    "line": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md:231",
+    "record": "the-boundary-of-enough-under-undetermined-laws",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "The row restates the home law exactly: possible enough at a reachable stay meeting the target, assured enough when every reachable stay meets it and every run settles, staying and meeting not giving settling, and the two being one under a determined law. 'a run may never settle' matches the Free witness (the alternating run, ¬ Settles). All seven names exist in Enough.lean (trace_then_stay, possibly_rests_iff, assured_stays_meet, assured_iff, Free.stays_meet_not_assured, law_possibly_iff, law_possibly_iff_assured). The row says nothing of the 无明 reading CX changed at 03:351. The file is not generated.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/01-ROOT.md:606",
+    "record": "the-boundary-of-enough-under-undetermined-laws",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "\"the boundary of enough (03 §8) ... delimit regions of configurations ... where a law's verdict holds\" fits the home, which parts configurations by whether some run or every run rests with the target met. The anchor is in 03 §8 (Learning and seeking, lines 316-386). Nothing here touches the 无明 reading.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/02-MAP.md:388",
+    "record": "the-boundary-of-enough-under-undetermined-laws",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "The line only points to \"the boundary of enough under undetermined laws\" next to 03's seeking-boundary results and claims nothing more of it. CX's 02 hunks are elsewhere. I also checked the line's \"ties aside\" for the read-in-time case: 02's own home at line 423 uses the same words, so it is consistent.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/03-KNOWING.md:344",
+    "record": "the-boundary-of-enough-under-undetermined-laws",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "Inside seeking-boundary's own theorem, \"For undetermined laws see the boundary of enough\" points correctly to the next result, which is the undetermined case (\"Under a determined law they are one\"). The 'any type' label at the head of line 344 belongs to seeking-boundary, not to the revision record CX relabelled. The line does not restate the 无明 reading.",
+    "edits": []
+   }
+  ]
+ },
+ "check:proxy": {
+  "group": "proxy",
+  "items": [
+   {
+    "line": "experiments/shaping-what-comes-back/README.md:50",
+    "record": "selection-through-couplings",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "'A selection reaches only what couples into its selector' is the upper bound of the main law (03 §1, World; no premise). The line makes no proxy-problem claim, so the CX change does not touch it.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/COLLECTIVE-DIRECTION.md:63",
+    "record": "selection-through-couplings",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "For this record the row cites only `Web.selects_alike_iff`, in the record's own reading ('reaches exactly what couples into it'), and gives its scope as 'any web'. Nothing in it restates the proxy correspondence. The pooled act's hypotheses belong to 05's home.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/FREE-ENERGY-PRINCIPLE.md:57",
+    "record": "selection-through-couplings",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "The row cites the record as the law under the blanket reading, and its standing is 'stated for the deterministic case'. Nothing in it concerns the changed correspondence, and the home does not contradict it.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/ONE-PAGE.md:18",
+    "record": "selection-through-couplings",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "'The selections ..., together, reach exactly what couples into it' respects the home's 'A particular selection may ignore what its couplings carry'. 'Its force is the premise that a selector selects through just those' shortens the home's 'its force lies in the supplied premise ... and in what couples in' without contradicting it (that premise already names those couplings). The row makes no proxy-problem claim.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/ONE-PAGE.zh.md:18",
+    "record": "selection-through-couplings",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "This is the zh edition of the same row (合起来恰好到达; 已证明，近乎依定义; 其力量就是这一前提). It agrees with the home and makes no proxy-problem claim.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/THE-THEORY-OF-BECOMING.md:85",
+    "record": "selection-through-couplings",
+    "verdict": "fix",
+    "agrees": true,
+    "why": "'It is the proxy problem' restates the record's pre-CX correspondence, which named the proxy problem whole. The home now says that what is stated is its blindness to what the proxy does not register, and that Manheim and Garrabrant's regressional and causal kinds are not stated. The edit copies does_not_show[5]'s words and keeps 'stated more weakly than its known quantitative form'. The rest of the line (World, balance, the rest's exchange held, holds by construction) agrees with the home. Outside this line, for the coordinator: several atlas entries in theories/becoming/results/atlas/entries/correspondences.json restate the home's unchanged proxy sentence without the new limit. Lines 55397 and 58194 shorten it to 'it is the proxy problem'. A scan by removed words will not find them, because the home only added words.",
+    "edits": [
+     {
+      "file": "theories/becoming/THE-THEORY-OF-BECOMING.md",
+      "old": "It is the proxy problem, stated more weakly than its known quantitative form",
+      "new": "It is the proxy problem in its blindness to what a proxy does not register, not its regressional or causal kinds, stated more weakly than its known quantitative form"
+     }
+    ]
+   },
+   {
+    "line": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md:85",
+    "record": "selection-through-couplings",
+    "verdict": "fix",
+    "agrees": true,
+    "why": "'它就是代理问题' is the zh form of the pre-CX wording, which named the proxy problem whole. The edit copies the record's zh, '中对代理所不记录者之不见，不及其回归与因果两类', and keeps '所述弱于其已知的定量形式'. Matches once.",
+    "edits": [
+     {
+      "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+      "old": "它就是代理问题，所述弱于其已知的定量形式",
+      "new": "它就是代理问题中对代理所不记录者之不见，不及其回归与因果两类，所述弱于其已知的定量形式"
+     }
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/01-ROOT.md:612",
+    "record": "selection-through-couplings",
+    "verdict": "fix",
+    "agrees": true,
+    "why": "CX did not change this. The line gives blindness under balance alone. The home theorem also needs 'a part withheld and the rest of the exchange fixed', or the responsive form's further hypotheses, and the record's statement too reads 'With the rest fixed'. As written, the line states the law under a weaker condition than the one proved. The edit uses 03:349's wording. Matches once, and no dossier quotes it.",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/01-ROOT.md",
+      "old": "and, under balance on what couples in, selections through a formation's couplings treat alike",
+      "new": "and, with the rest of the exchange fixed and balance on what couples in, selections through a formation's couplings treat alike"
+     }
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/03-KNOWING.md:349",
+    "record": "selection-through-couplings",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "The line keeps both of blindness's hypotheses ('with the rest of the exchange fixed and balance on what couples in'). It reads its consequence as losses beyond the coupling closure not returning through the seeker's own feedback, which agrees with §1. CX changed the reading on the next line (351), not this one, and this line has no proxy claim.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/04-LIFE.md:239",
+    "record": "selection-through-couplings",
+    "verdict": "fix",
+    "agrees": true,
+    "why": "CX did not change this. 'A selection through couplings is blind beyond their closure' drops the hypotheses that the home and the record's statement ('With the rest fixed') give. The next clause marks 05's law 'with its hypotheses', so the first law reads as unconditional. The first reader's edit inserts the qualifier after the colon and leaves the opening clause intact, so the verbatim quote in theories/becoming/review/SCIENCES.md:564 still matches. A wording note only, with no edit: 'what the selection couples into' runs against the glossary's sense ('couples into: what reaches a selector through its couplings'). Changing it would need SCIENCES.md:564's quote changed too.",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/04-LIFE.md",
+      "old": "Counts of offspring see only what the selection couples into: a [selection through couplings]",
+      "new": "Counts of offspring see only what the selection couples into: with the rest of the exchange fixed and balance on what couples in, a [selection through couplings]"
+     }
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/05-COLLECTIVES.md:7",
+    "record": "selection-through-couplings",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "'A selection reaches exactly what couples into its selector' is the record's own reading ('reaches exactly what couples into it'). It is also the home's opening prose: what a selection can depend on is fixed by its selector's couplings. 'Reach' here is that bound on what the selection can depend on, not a claim that each selection separates everything the couplings carry. There is no proxy claim.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/05-COLLECTIVES.md:93",
+    "record": "selection-through-couplings",
+    "verdict": "fix",
+    "agrees": false,
+    "why": "CX did not change this. 'A selection separates exactly what its selector couples apart' says one selection separates everything apart. The home says 'whatever is apart is separated by some' and 'A particular selection may ignore what its couplings carry'. Only the selections through the couplings, together, separate exactly that. I accept the first reader's edit unchanged and add two knock-on edits. Two atlas entries in theories/becoming/results/atlas/entries/correspondences.json (lines 17885 and 39528, not generated) quote the old row and would go stale. Their generated copies (theories/becoming/results/data/atlas.json, results/atlas/CROSSWALK.md, results/atlas/map.html, all in the generated manifest) are rebuilt from the entries, not edited. Each old text matches once.",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+      "old": "| Information true to the world | a selection separates exactly what its selector couples apart |",
+      "new": "| Information true to the world | selections through a selector's couplings, together, separate exactly what it couples apart |"
+     },
+     {
+      "file": "theories/becoming/results/atlas/entries/correspondences.json",
+      "old": "a row: “Information true to the world | a selection separates exactly what its selector couples apart”",
+      "new": "a row: “Information true to the world | selections through a selector's couplings, together, separate exactly what it couples apart”"
+     },
+     {
+      "file": "theories/becoming/results/atlas/entries/correspondences.json",
+      "old": "§4 row, Information true to the world: a selection separates exactly what its selector couples apart.",
+      "new": "§4 row, Information true to the world: selections through a selector's couplings, together, separate exactly what it couples apart."
+     }
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/05-COLLECTIVES.md:258",
+    "record": "selection-through-couplings",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "The line only places selection through couplings in 03, beside the pool's definition. It states nothing of the record that the home contradicts.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/07-SIGNIFICANCE.md:5",
+    "record": "selection-through-couplings",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "A pointer to 'the reach of a selection' in 03. It makes no claim the home contradicts.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/07-SIGNIFICANCE.md:532",
+    "record": "selection-through-couplings",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "The line uses 'couple in' as a concept in a candidate scope rule and leaves open whether scope may depend on what can couple in. It states no law wider than the home and does not summarize the ethics' premises.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/07-SIGNIFICANCE.md:647",
+    "record": "selection-through-couplings",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "It gives the home's definition (any claim about level histories, going through the couplings where histories alike through them are selected alike). Its consequence is in the record's reading, 'reaches exactly what couples into the selector'. There is no proxy claim.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/07-SIGNIFICANCE.md:666",
+    "record": "selection-through-couplings",
+    "verdict": "fix",
+    "agrees": false,
+    "why": "CX did not change this, and I change the first reader's ok. The line tells the reader, with no qualifier, that a selection through its own couplings cannot reach 'what lies beyond its coupling closure'. That is the blindness theorem, which the home proves only with the rest of the exchange fixed and balance on what couples in (or under the responsive form's further hypotheses), and which the record states 'With the rest fixed'. It is the same omission the first reader fixed at 04:239 and 01:612, and a pointer to the home does not bring the qualifier into what the line says. The qualifier goes after the case, so the list's framing ('one law in eight cases, without the condition') is untouched. Matches once. The atlas entry correspondences.json:56308 paraphrases this list ('beyond its coupling closure'). It needs no edit for the line to hold, but the coordinator may want it to follow.",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "old": "what lies beyond its coupling closure ([03](03-KNOWING.md#r-selection-through-couplings));",
+      "new": "what lies beyond its coupling closure, with the rest of the exchange fixed and balance on what couples in ([03](03-KNOWING.md#r-selection-through-couplings));"
+     }
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/08-METHOD.md:18",
+    "record": "selection-through-couplings",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "The line applies the main law to an account that takes in no objection: nothing an objector says could reach it. It claims nothing the home contradicts and makes no proxy claim.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/08-METHOD.md:491",
+    "record": "selection-through-couplings",
+    "verdict": "fix",
+    "agrees": false,
+    "why": "The row names 'the proxy problem' as the closest prior result, with the verdict 'restated'. The home now says only its blindness to what the proxy does not register is stated, not Manheim and Garrabrant's regressional and causal kinds. I accept the first reader's edit unchanged and add one knock-on edit. theories/becoming/review/SCIENCES.md:66 (not generated) quotes this cell verbatim, and check_dossiers.py matches each quotation against the file it names, so without the companion edit the dossier check would fail. The other cells (Theorem 1 on natural-number amounts, a discrete analogue of Theorem 2 at optima, the continuous setting not stated) hold against the home. Each old text matches once.",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/08-METHOD.md",
+      "old": "Pearl (2000); the proxy problem (Zhuang and Hadfield-Menell 2020) |",
+      "new": "Pearl (2000); the proxy problem in its blindness to what a proxy does not register (Zhuang and Hadfield-Menell 2020) |"
+     },
+     {
+      "file": "theories/becoming/review/SCIENCES.md",
+      "old": "Pearl (2000); the proxy problem (Zhuang and Hadfield-Menell 2020)\"",
+      "new": "Pearl (2000); the proxy problem in its blindness to what a proxy does not register (Zhuang and Hadfield-Menell 2020)\""
+     }
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/08-METHOD.md:542",
+    "record": "selection-through-couplings",
+    "verdict": "fix",
+    "agrees": true,
+    "why": "'In fact they restate the proxy problem' gives the pre-CX, wider reading of the proxy problem whole. The edit limits it as the home and does_not_show[5] now do. The rest agrees with the home. That includes 'a discrete analogue at optima of their Theorem 2's first direction', which fits the home's 'whose converse is not theirs', and 'more weakly than their continuous results'. No dossier quotes the changed text. The atlas entry correspondences.json:81132 paraphrases this line as 'these restate the proxy problem' and may want the same limit (a note only).",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/08-METHOD.md",
+      "old": "In fact they restate the proxy problem, Zhuang and Hadfield-Menell's (2020) Theorem 1,",
+      "new": "In fact they restate the proxy problem (in its blindness to what a proxy does not register, not its regressional or causal kinds), Zhuang and Hadfield-Menell's (2020) Theorem 1,"
+     }
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/08-METHOD.md:706",
+    "record": "selection-through-couplings",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "'A selection reaches exactly what couples into its selector' is the record's reading of the main law, applied to the work's own checks. There is no proxy claim.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/review/ALIGNMENT.md:77",
+    "record": "selection-through-couplings",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "The quotation matches does_not_show[2] word for word, and that field did not change. A note outside the listed lines, with no edit: ALIGNMENT.md:74 quotes the home's 'It is the proxy problem (...) as the account states it: ...'. That sentence still stands verbatim, so the quotation check passes, but the quote omits the limit the home now adds right after it. A reader of the dossier would take the credit as given to the proxy problem whole. The coordinator may want to add a quotation of 'What is stated is its blindness to what the proxy does not register; Manheim and Garrabrant's regressional and causal kinds, which turn on noise and on intervention, are not stated.'",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/review/ALIGNMENT.md:78",
+    "record": "selection-through-couplings",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "The quotation is an exact prefix of does_not_show[0]. 'So the work lies in measuring what actually couples in' agrees with does_not_show[1] ('the law's force lies entirely in what actually couples into the selector'). Neither field changed.",
+    "edits": []
+   }
+  ]
+ }
+}

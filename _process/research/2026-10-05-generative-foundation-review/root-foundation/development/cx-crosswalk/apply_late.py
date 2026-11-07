@@ -150,7 +150,7 @@ WHY_LM2 = "LM2 (7 November 2026): 04 says the record's id, not its title, keeps 
 LIVE_LM2 = {'cx-sty-generators': [("the record's title 'uses \\\"generation\\\" in the older sense of arising'",
                                    "the record's id, `generation-is-replenishment`, 'keeps the older word'")]}
 # Words the corrections removed at home; no entry may still state them as what the home says.
-GONE = ['keeps its standing after it stops measuring. T7', 'account of power is the closed loop', 'that sense is wider',
+GONE = ['a selection separates exactly what its selector couples apart', 'keeps its standing after it stops measuring. T7', 'account of power is the closed loop', 'that sense is wider',
         'working definition is wider', 'imperial examination is this case', 'imperial examination is read', 'supported in simulation (MQ1;',
         'conjectured (T3), supported in simulation', 'says a measure made a target stops measuring', 'two earlier phase results',
         'supplies is the beginning of the kept history', 'Correspondence: hysteresis of collapse', "Jonas (1979): the existence of the whole",
@@ -168,12 +168,13 @@ def _field(entry, path):
 
 
 def main_drift(entries, why, problems):
-    """Apply reads/main-drift-<cluster>.json and reads/claims-<group>.json (the second round, searched by claim), as their
+    """Apply reads/main-drift-<cluster>.json, reads/claims-<group>.json (the second round, searched by claim) and
+    reads/restated-<group>.json (fields restating what CX corrected, found when the landing gate's list was re-read), as their
     checkers' .check.json amend them: each entry field that stated what main changed at its home (LM1, AA's errata and
     restatements) states what the home says now. The checker's edits replace the author's where it
     says fix. Stops on an edit that does not match exactly once, or on a label it cannot set."""
     # Round one (by words) before round two (by claim): the second was read against the text the first left.
-    for path in [*sorted(READS.glob('main-drift-*.json')), *sorted(READS.glob('claims-*.json'))]:
+    for path in [*sorted(READS.glob('main-drift-*.json')), *sorted(READS.glob('claims-*.json')), *sorted(READS.glob('restated-*.json'))]:
         if path.name.endswith(('.in.json', '.check.json')):
             continue
         author = json.loads(path.read_text(encoding='utf-8'))
@@ -213,7 +214,9 @@ def main_drift(entries, why, problems):
             home = json.loads(path.with_name(path.name.replace('.json', '.in.json')).read_text(encoding='utf-8'))
             given = next((i for i in home['items'] if (i['id'], i['field']) == (item['id'], item['field'])), {})
             src = given.get('home') or (f"the {given['family']} claims" if given.get('family') else 'a home its checker read')
-            why.setdefault(item['id'], []).append(f'main changed {src} (LM1 or AA, 7 November 2026): {item["field"]} states what it says now'
+            lead = (f'CX corrected {src} (7 November 2026), and the re-read of what links it found this field without the correction'
+                    if path.name.startswith('restated-') else f'main changed {src} (LM1 or AA, 7 November 2026)')
+            why.setdefault(item['id'], []).append(f'{lead}: {item["field"]} states what it says now'
                                                   + (' (as its checker amended)' if fixed else '') + (f'; labels {labels}' if labels else ''))
 
 def main(argv=None):

@@ -1525,14 +1525,14 @@
    "carried": "carried-in-part",
    "relation": "scope",
    "reading": {
-    "en": "Three checked forms. A selection reaches exactly what couples into its selector, stated as the proxy problem. With room, an optimum drains what lies beyond. A region's comparison takes the region as input: the smaller it is the more lies beyond, and going on is no sign nothing is lost. Each is on its model, the first near-definitional, its force the premise that a selector selects through just those couplings. [AI reading]"
+    "en": "Three checked forms. A selection reaches only what couples into its selector, stated as the proxy problem in its blindness to what a proxy does not register. With room, an optimum drains what lies beyond. A region's comparison takes the region as input: the smaller it is the more lies beyond, and going on is no sign nothing is lost. Each is on its model, the first near-definitional, its force the premise that a selector selects through just those couplings. [AI reading]"
    },
    "targets": [
     {
      "record": "selection-through-couplings",
      "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
      "says": {
-      "en": "Theorem (World; no premise): two histories are selected alike by every selection through a formation's couplings exactly when they are alike through them. A particular selection may ignore what its couplings carry. 03 reads it as the proxy problem (Goodhart 1975)."
+      "en": "Theorem (World; no premise): two histories are selected alike by every selection through a formation's couplings exactly when they are alike through them. A particular selection may ignore what its couplings carry. 03 reads it as the proxy problem (Goodhart 1975) in its blindness to what a proxy does not register, not its regressional or causal kinds."
      },
      "role": "carries"
     },
@@ -4093,6 +4093,11 @@
    "id": "cx-kpso-three-shapes-of-collapse",
    "what": "changed",
    "why": "main changed the edges claims (LM1 or AA, 7 November 2026): reading states what it says now"
+  },
+  {
+   "id": "cx-kpso-model-smaller-than-its-system",
+   "what": "changed",
+   "why": "CX corrected 03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated) (7 November 2026), and the re-read of what links it found this field without the correction: reading states what it says now / CX corrected 03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated) (7 November 2026), and the re-read of what links it found this field without the correction: targets[0].says states what it says now"
   },
   {
    "id": "cx-kpso-death-as-feature",

@@ -2469,7 +2469,7 @@
      "record": "selection-through-couplings",
      "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
      "says": {
-      "en": "Reaches exactly what couples into the selector; it is the proxy problem (Goodhart 1975 and others). Near-definitional; its force is the premise that a selector selects through just those."
+      "en": "Reaches only what couples into the selector; it is the proxy problem (Goodhart 1975 and others) in its blindness to what a proxy does not register, not its regressional or causal kinds. Near-definitional; its force is the premise that a selector selects through just those."
      },
      "role": "carries"
     }
@@ -3282,7 +3282,7 @@
      "record": null,
      "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
      "says": {
-      "en": "What a selection through its own couplings cannot reach, one law in eight cases, without the condition: beyond its coupling closure, its own act's difference there, where what it raises is drawn from, how far off its break is, what a finite history leaves open, and others."
+      "en": "What a selection through its own couplings cannot reach, one law in eight cases, without the condition: what lies beyond its coupling closure, with the rest of the exchange fixed and balance on what couples in; its own act's difference there; where what it raises is drawn from; how far off its break is; what a finite history leaves open; and others."
      },
      "role": "carries",
      "part": "one law in eight cases"
@@ -4554,6 +4554,11 @@
    "why": "05's D65 label and eight records gave ranking to C alone; corrected at home (apply_ranking.py, 7 November 2026): the entry quotes what it says now"
   },
   {
+   "id": "cx-zhishan-liangzhi",
+   "what": "changed",
+   "why": "CX corrected 03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated) (7 November 2026), and the re-read of what links it found this field without the correction: targets[1].says states what it says now"
+  },
+  {
    "id": "cx-zhishan-not-a-master-good",
    "what": "changed",
    "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): targets[5].says states what it says now / main changed the ethics claims (LM1 or AA, 7 November 2026): reading states what it says now / main changed a home its checker read (LM1 or AA, 7 November 2026): account_adds states what it says now (as its checker amended)"
@@ -4572,6 +4577,11 @@
    "id": "cx-zhishan-present-diagnosis",
    "what": "changed",
    "why": "COLLECTIVE-DIRECTION §5 corrected by this crosswalk: the entry quotes what it says now"
+  },
+  {
+   "id": "cx-zhishan-failure-modes-one-structure",
+   "what": "changed",
+   "why": "CX corrected 07's list of what a selection through its own couplings cannot reach (blindness with the rest of the exchange fixed and balance on what couples in) (7 November 2026), and the re-read of what links it found this field without the correction: targets[0].says states what it says now"
   },
   {
    "id": "cx-zhishan-guardian-test",

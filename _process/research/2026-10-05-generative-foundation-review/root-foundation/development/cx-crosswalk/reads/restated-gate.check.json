@@ -1,0 +1,194 @@
+{
+ "cluster": "gate",
+ "items": [
+  {
+   "id": "cx-asc-contention-microfoundation",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "The old occurs once. The added quotation matches 03 §1's new sentence word for word, and the limit is restored. Fresh-reading and scope rest on the scoreboard's blindness, which is the kind the account states. The quote 'its force lies in the supplied premise...' was already missing 'and in what couples in' on main, so it is outside this round. The entry's reading, not in this set, still says 'reaches exactly'."
+  },
+  {
+   "id": "cx-asc-metric-capture",
+   "field": "reading",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "The old occurs once. The parenthesis copies 08 §8's corrected words exactly, so the reading no longer says the account states the whole proxy problem. The source's metric capture (metrics rising while function hollows) is the blindness kind, so carried-in-part and scope stand."
+  },
+  {
+   "id": "cx-asc-metric-capture",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "This field has the same text and the same edit as the contention entry's target. The old occurs once, the quotation is verbatim, and the carries role stands."
+  },
+  {
+   "id": "cx-asc-metric-capture",
+   "field": "targets[3].says",
+   "verdict": "fix",
+   "edits": [
+    {
+     "old": "'This is the proxy problem as the account's law.'",
+     "new": "'This is the proxy problem as the account's law'; Zhuang and Hadfield-Menell's (2020) Theorem 1 is this anchor's drive 'at optima rather than limits of paths, with shared units for room'. 03 §1 states the proxy problem's blindness to what a proxy does not register, not its regressional or causal kinds."
+    }
+   ],
+   "labels": null,
+   "why": "The author was right to keep the quote and pin it to their Theorem 1 with 03's limit. But 'Theorem 1 at optima' dropped 05's qualifiers on room ('rather than limits of paths, with shared units for room'), which are now quoted verbatim. The edit also takes the record's own form ('not its regressional or causal kinds') in place of 'states only'. 05's ZH reading still opens unqualified; that is a home edit, not this field's."
+  },
+  {
+   "id": "cx-archearth-points-game-revised",
+   "field": "reading",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "The old occurs once. Points making care less visible is exactly the blindness kind 03 §1 now says is stated, so naming it narrows the claim and widens nothing. Carried-in-part, agreement and law stand."
+  },
+  {
+   "id": "cx-archearth-points-game-revised",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "The old occurs once. 03 §1's new limiting sentence is inserted in the home's words, shortened only by dropping the clause on noise and intervention, and Manheim and Garrabrant are already cited earlier in the field. The carries role stands."
+  },
+  {
+   "id": "cx-kpso-model-smaller-than-its-system",
+   "field": "reading",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "The old occurs once. 'Reaches exactly' becomes 'only', which follows row-93's correction and 03 ('A particular selection may ignore what its couplings carry'), and the proxy limit is added. Flag for the coordinator: the same 'reaches exactly' wording stands live at COLLECTIVE-DIRECTION.md:63, 05-COLLECTIVES.md:7, 07-SIGNIFICANCE.md:647, 08-METHOD.md:706, review/PHILOSOPHY.md:556, and in the record's correspondence reading."
+  },
+  {
+   "id": "cx-kpso-model-smaller-than-its-system",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "The old occurs once. The added words are the record's does_not_show[5] limit. The theorem and its 'particular selection' clause already match 03."
+  },
+  {
+   "id": "cx-sty-gamed-rewards",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "The old occurs once, and the inserted quotation is verbatim from 03 §1. The limit fits the entry's divergence (what a reward fails to read, not its calibration), so changed and divergence stand. The entry's reading, not in this set, still says 'reaching exactly what couples in'."
+  },
+  {
+   "id": "cx-zhishan-liangzhi",
+   "field": "targets[1].says",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "The old occurs once. 'Only' matches 03's particular-selection clause and the entry's own D54 target ('selection reaches only what couples in'). The limit is the record's wording, and changed and divergence are untouched."
+  },
+  {
+   "id": "cx-cc-shuxiang-xingshu",
+   "field": "targets[2].says",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "The old occurs once. The bare 'It is the proxy problem' gets back the home's 'as the account states it' and its limit, shortened faithfully. The rest of the field already copies 03, 'and in what couples in' included."
+  },
+  {
+   "id": "cx-syscyb-trap-wrong-goal",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "The old occurs once. The gloss of 05's ZH reading stays attributed, and 03's limit follows it. 'States only' is a fair shortening of 'What is stated is its blindness'. The theorem part matches least_iff. The entry's reading, not in this set, still says 'reaches exactly'."
+  },
+  {
+   "id": "cx-syscyb-trap-rule-beating",
+   "field": "reading",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "The old occurs once and the limit is right. Rule beating's gaming is nearest the adversarial kind, and the reading already confines agreement to the room and leaves evasion's learning unmodelled, so fresh-reading, agreement and reading stand. The field is now about 98 words, over the soft 80."
+  },
+  {
+   "id": "cx-syscyb-trap-rule-beating",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "The old ('as the account states it.') occurs once, at the field's end. The limit is added in the home's words, shortened, and Manheim and Garrabrant are named where the field cited only 'Goodhart 1975 and others'."
+  },
+  {
+   "id": "cx-ecoevo-evolutionary-traps",
+   "field": "account_adds",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "The old occurs once. Both quoted fragments are verbatim spans of the record's does_not_show[5], and 'only' stands outside the quotation marks. The main law needs no blindness hypotheses, so the labels stand."
+  },
+  {
+   "id": "cx-ecoevo-selection-without-foresight",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "Each old occurs once. The quoted sentence is the record's statement verbatim, and it omits balance. The author adds balance outside the quote, as list-666 did in 07, and the proxy line takes the record's limit. The entry's reading, not in this set, still states blindness with the rest fixed and no balance."
+  },
+  {
+   "id": "cx-econ-goodhart-regularity",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "The old occurs once, and the added sentence is verbatim from 03 §1. Goodhart's own case (conduct of the controlled breaking a regularity) is not the kind stated, which agrees with the reading ('scopes the popular wording, not his regularity') and with source_adds. Carried-in-part and scope stand."
+  },
+  {
+   "id": "cx-pal-instrumental-convergence",
+   "field": "targets[3].says",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "The old occurs once. 03's limit is added to the gloss of 05's reading, and the theorem part matches least_iff, whose condition is room. The neighbour role stands."
+  },
+  {
+   "id": "cx-pal-goodhart-taxonomy",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "The old occurs once, and the insertion is 03 §1's sentence verbatim, rightly kept whole for the taxonomy entry. Labels checked: 03 now names the kind it states (blindness, nearest extremal) and says regressional and causal are not stated. So carried-in-part, scope and this target's carries role stand, and the causal-models limit stays apt. As the author says, the entry's reading ('It credits the paper whole') and source_adds ('The credit reads wider than what is carried') now need an until: 03 credited the paper whole until 7 November 2026 and now states the limit."
+  },
+  {
+   "id": "cx-pal-goodhart-taxonomy",
+   "field": "account_adds",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "The old occurs once, and the quoted parenthesis is verbatim from 08's corrected sentence at line 542, which is in §8 (Known results). The adversarial remark stays marked as the reader's own, and the labels stand."
+  },
+  {
+   "id": "cx-hsm-information-upward",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "The old string occurs exactly once in the field. The new string is 05 §4's row as it now stands at line 93, word for word, so the row no longer credits one selection with what 03 gives only to all selections through the couplings together ('whatever is apart is separated by some'; 'A particular selection may ignore what its couplings carry'). 'The constraints are not survival axioms.' still occurs once in §4, and the [AI reading, D48] label, the carries role, carried-in-part and scope all still hold."
+  },
+  {
+   "id": "cx-sspiral-spread-not-truth",
+   "field": "targets[4].says",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "The old string, with its full stop, occurs exactly once. The new wording copies the corrected row, and the neighbour role and the fresh-reading/agreement/reading labels do not turn on the single-versus-joint difference. For the coordinator, outside this field: the entry's reading says 'a selection separates only what couples into its selector' and leaves out 'through its couplings', the supplied premise on which 03 says the law's force rests. That direction is not widened by this correction, so it is left to whoever holds the reading."
+  },
+  {
+   "id": "cx-zhishan-failure-modes-one-structure",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "The old string occurs exactly once. The new first case copies 07's corrected list word for word ('what lies beyond its coupling closure, with the rest of the exchange fixed and balance on what couples in'), and the home's semicolons are carried over; shortening the rest to 'and others' drops list items without widening any of them. carried-in-part, divergence and carries still hold. I agree with the author's flag on the reading: 'gathers what a selection cannot reach, proxy failure among them' presents the account as covering proxy failure in general, while 03 §1 now states only its blindness to what a proxy does not register, not the regressional or causal kinds. That reading needs the limit in a separate item."
+  }
+ ]
+}

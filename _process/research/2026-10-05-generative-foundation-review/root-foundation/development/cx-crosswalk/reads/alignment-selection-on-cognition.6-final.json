@@ -2846,7 +2846,7 @@
      "record": "selection-through-couplings",
      "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
      "says": {
-      "en": "The main law holds by construction; its force lies in the supplied premise that an optimizer selects through just those couplings. 'It is the proxy problem (Goodhart 1975; Amodei and others 2016; Manheim and Garrabrant 2018) as the account states it'."
+      "en": "The main law holds by construction; its force lies in the supplied premise that an optimizer selects through just those couplings. 'It is the proxy problem (Goodhart 1975; Amodei and others 2016; Manheim and Garrabrant 2018) as the account states it'; 'What is stated is its blindness to what the proxy does not register', not Manheim and Garrabrant's regressional and causal kinds."
      },
      "role": "carries"
     },
@@ -2953,14 +2953,14 @@
    "relation": "scope",
    "agreement_of": null,
    "reading": {
-    "en": "The account states the proxy problem as law and the persistence of a self-read metric as T7. It scopes 'central': the proxy law is a known theorem at optima; that actual metrics are so formed is conjectured, T7 has one trained-system test, and it could not freeze a field test of reform events. [AI reading]"
+    "en": "The account states the proxy problem as law (in its blindness to what a proxy does not register, not its regressional or causal kinds) and the persistence of a self-read metric as T7. It scopes 'central': the proxy law is a known theorem at optima; that actual metrics are so formed is conjectured, T7 has one trained-system test, and it could not freeze a field test of reform events. [AI reading]"
    },
    "targets": [
     {
      "record": "selection-through-couplings",
      "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
      "says": {
-      "en": "The main law holds by construction; its force lies in the supplied premise that an optimizer selects through just those couplings. 'It is the proxy problem (Goodhart 1975; Amodei and others 2016; Manheim and Garrabrant 2018) as the account states it'."
+      "en": "The main law holds by construction; its force lies in the supplied premise that an optimizer selects through just those couplings. 'It is the proxy problem (Goodhart 1975; Amodei and others 2016; Manheim and Garrabrant 2018) as the account states it'; 'What is stated is its blindness to what the proxy does not register', not Manheim and Garrabrant's regressional and causal kinds."
      },
      "role": "carries"
     },
@@ -2983,7 +2983,7 @@
     {
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
      "says": {
-      "en": "A reading after this anchor [AI reading, ZH]: 'This is the proxy problem as the account's law.'"
+      "en": "A reading after this anchor [AI reading, ZH]: 'This is the proxy problem as the account's law'; Zhuang and Hadfield-Menell's (2020) Theorem 1 is this anchor's drive 'at optima rather than limits of paths, with shared units for room'. 03 §1 states the proxy problem's blindness to what a proxy does not register, not its regressional or causal kinds."
      },
      "role": "carries",
      "part": "ZH"
@@ -3965,6 +3965,16 @@
    "id": "cx-asc-founding-restraint-armored",
    "what": "changed",
    "why": "COLLECTIVE-DIRECTION's exit 'Give first, with a reserve' is 'Spare all one waits on' since AA's errata (7 November 2026): the law has no reserve in it / main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): targets[2].says states what it says now / main changed theories/becoming/chapters/05-COLLECTIVES.md (LM1 or AA, 7 November 2026): reading states what it says now / main changed theories/becoming/COLLECTIVE-DIRECTION.md (LM1 or AA, 7 November 2026): targets[3].says states what it says now / main changed the waiting claims (LM1 or AA, 7 November 2026): reading states what it says now (as its checker amended)"
+  },
+  {
+   "id": "cx-asc-contention-microfoundation",
+   "what": "changed",
+   "why": "CX corrected 03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated) (7 November 2026), and the re-read of what links it found this field without the correction: targets[0].says states what it says now"
+  },
+  {
+   "id": "cx-asc-metric-capture",
+   "what": "changed",
+   "why": "CX corrected 03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated) (7 November 2026), and the re-read of what links it found this field without the correction: reading states what it says now / CX corrected 03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated) (7 November 2026), and the re-read of what links it found this field without the correction: targets[0].says states what it says now / CX corrected 03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated) (7 November 2026), and the re-read of what links it found this field without the correction: targets[3].says states what it says now (as its checker amended)"
   },
   {
    "id": "cx-asc-horizon-and-slack",

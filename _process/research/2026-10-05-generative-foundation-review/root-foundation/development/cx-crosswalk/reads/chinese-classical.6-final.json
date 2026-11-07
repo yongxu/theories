@@ -756,7 +756,7 @@
      "record": "selection-through-couplings",
      "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
      "says": {
-      "en": "Theorem (World; no premise). Two histories are selected alike by every selection through a formation's couplings exactly when they are alike through them. The main law holds by construction; its force lies in the supplied premise that an optimizer selects through just those couplings, and in what couples in. It is the proxy problem. Whether an actual selection goes through the couplings is not derived."
+      "en": "Theorem (World; no premise). Two histories are selected alike by every selection through a formation's couplings exactly when they are alike through them. The main law holds by construction; its force lies in the supplied premise that an optimizer selects through just those couplings, and in what couples in. It is the proxy problem as the account states it, in its blindness to what the proxy does not register; the regressional and causal kinds are not stated. Whether an actual selection goes through the couplings is not derived."
      },
      "role": "carries"
     },
@@ -1027,6 +1027,11 @@
    "id": "cx-cc-huang-xuexiao",
    "what": "changed",
    "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  },
+  {
+   "id": "cx-cc-shuxiang-xingshu",
+   "what": "changed",
+   "why": "CX corrected 03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated) (7 November 2026), and the re-read of what links it found this field without the correction: targets[2].says states what it says now"
   }
  ],
  "live_flags": [

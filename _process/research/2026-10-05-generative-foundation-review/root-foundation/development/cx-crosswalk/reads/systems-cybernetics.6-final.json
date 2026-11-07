@@ -404,7 +404,7 @@
      "record": "what-an-optimum-does-beyond-what-couples-in",
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
      "says": {
-      "en": "Theorem. Every order rising with what couples in has its optima least beyond exactly where no eligible outcome above another beyond is unbeaten on it; room is a hypothesis. No evaluation: not that the fall beyond is a harm. Read as the proxy problem (Zhuang and Hadfield-Menell 2020) [AI reading]."
+      "en": "Theorem. Every order rising with what couples in has its optima least beyond exactly where no eligible outcome above another beyond is unbeaten on it; room is a hypothesis. No evaluation: not that the fall beyond is a harm. Read as the proxy problem (Zhuang and Hadfield-Menell 2020) [AI reading]; 03 states only its blindness to what a proxy does not register."
      },
      "role": "carries"
     },
@@ -473,14 +473,14 @@
    "carried": "fresh-reading",
    "relation": "agreement",
    "reading": {
-    "en": "A rule is a selection through what couples into it, so acts it couples alike are selected alike: that gap is the room, and 03 reads it as the proxy problem (Goodhart). With room, optima of what the letter reads drain what it omits. Her budget spent by year's end has a row: what is valued only at the horizon is held, then regrown at the last step. Agreement holds of the room only: no law gives evasion's learning, and PLAN §6.3 names no target. [AI reading]"
+    "en": "A rule is a selection through what couples into it, so acts it couples alike are selected alike: that gap is the room, and 03 reads it as the proxy problem (Goodhart), stating only its blindness to what a proxy does not register. With room, optima of what the letter reads drain what it omits. Her budget spent by year's end has a row: what is valued only at the horizon is held, then regrown at the last step. Agreement holds of the room only: no law gives evasion's learning, and PLAN §6.3 names no target. [AI reading]"
    },
    "targets": [
     {
      "record": "selection-through-couplings",
      "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
      "says": {
-      "en": "Theorem (World; no premise). Two histories are selected alike by every selection through a formation's couplings exactly when they are alike through them. A particular selection may ignore what its couplings carry. The main law holds by construction; its force lies in supplied premises. It is the proxy problem (Goodhart 1975 and others) as the account states it."
+      "en": "Theorem (World; no premise). Two histories are selected alike by every selection through a formation's couplings exactly when they are alike through them. A particular selection may ignore what its couplings carry. The main law holds by construction; its force lies in supplied premises. It is the proxy problem (Goodhart 1975 and others) as the account states it: what is stated is its blindness to what the proxy does not register, not Manheim and Garrabrant's regressional and causal kinds."
      },
      "role": "carries"
     },
@@ -2743,6 +2743,16 @@
   }
  ],
  "changes": [
+  {
+   "id": "cx-syscyb-trap-wrong-goal",
+   "what": "changed",
+   "why": "CX corrected 03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated) (7 November 2026), and the re-read of what links it found this field without the correction: targets[0].says states what it says now"
+  },
+  {
+   "id": "cx-syscyb-trap-rule-beating",
+   "what": "changed",
+   "why": "CX corrected 03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated) (7 November 2026), and the re-read of what links it found this field without the correction: reading states what it says now / CX corrected 03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated) (7 November 2026), and the re-read of what links it found this field without the correction: targets[0].says states what it says now"
+  },
   {
    "id": "cx-syscyb-trap-escalation",
    "what": "changed",
