@@ -2,7 +2,7 @@
 
 # What the account is for: worked examples
 
-[What it is for, and how far](USES.md) · [One page](ONE-PAGE.md) · [The tests](../../TESTS.md) · [Glossary](../../GLOSSARY.md)
+[中文](USES-EXAMPLES.zh.md) · [What it is for, and how far](USES.md) · [One page](ONE-PAGE.md) · [The tests](../../TESTS.md) · [Glossary](../../GLOSSARY.md)
 
 *Thirty-eight to forty-nine minutes to read, one example at a time; [the table, field by field](USES.md#field-by-field), comes first.*
 
