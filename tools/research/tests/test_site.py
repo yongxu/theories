@@ -148,10 +148,10 @@ class RepositoryConfigTests(unittest.TestCase):
         private = site.private_pattern()
         files = site.tracked_files()
         for p in cfg['pages'] + cfg.get('assets', []):
-            self.assertIn(p, files, p)
+            self.assertTrue(p in files, 'site.pages names an untracked file: ' + p)
             self.assertFalse(site.refused(p, private), p)
         for target, _ in cfg['nav']:
-            self.assertTrue(target == 'index.html' or target in cfg['pages'], target)
+            self.assertTrue(target in site.SPECIAL or target in cfg['pages'], target)
         for w in cfg['ways_in']:
             self.assertTrue((ROOT / w['path'].split('#')[0]).is_file(), w['path'])
 

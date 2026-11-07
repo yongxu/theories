@@ -8,7 +8,8 @@ another page of the site becomes a link to its HTML; a link to any other tracked
 stood at the build commit; a link to a path the repository does not track is shown as its text. Every link between pages
 of the site, anchor included, must resolve, or the build fails. At each result's anchor (`r-<record id>`) the page gets a
 small mark of the record's status, linked to the record. The home is README's generated first screen, verbatim, then
-the ways in that `site.ways_in` lists, each with its page's reading time. Nothing generated is committed: the site is
+the ways in that `site.ways_in` lists, each with its page's reading time. With `site.map`, the connection map is written
+by its generator's site mode (tools/research/connection_map.py), its links to pages of the site kept there. Nothing generated is committed: the site is
 written to tmp/site/ (untracked) or --out, and the Pages job builds it from main.
 
 Run from the repository's root:  python3 tools/publishing/build_site.py [--out DIR] [--commit SHA]
@@ -32,7 +33,7 @@ from tools.research import navigation  # noqa: E402  (reading times and the stat
 CONFIG = ROOT / '_process' / 'research-config.json'
 PUSH_SCREEN = ROOT / 'tools' / 'research' / 'push_screen.sh'
 ASSET_TYPES = {'.svg', '.png', '.jpg', '.jpeg', '.gif', '.webp'}
-MAX_PAGE = 2_000_000  # bytes of one built page; the map's data is a file of its own
+MAX_PAGE = 2_000_000  # bytes of one built page; the connection map, which carries its data inline, is exempt
 STATUS_MARK = {'recorded-checked': 'Lean receipt', 'reviewed-scoped': 'reviewed at its scope', 'open': 'open target',
                'superseded': 'superseded', 'withdrawn': 'withdrawn'}
 
@@ -573,14 +574,17 @@ def template(page_path, title, body, lang, cfg, commit, date, nav_html, source_h
 '''
 
 
+SPECIAL = ('index.html', 'map.html')  # the home, and the connection map when the build writes it
+
+
 def nav(cfg, page_path, pages):
     items = []
     for target, label in cfg.get('nav', []):
-        if target not in pages and target != 'index.html':
+        if target not in pages and target not in SPECIAL:
             raise SiteError('site.nav names a page not in site.pages: ' + target)
-        built = 'index.html' if target == 'index.html' else out_path(target)
-        here = built == (page_path if page_path == 'index.html' else out_path(page_path))
-        href = relative(built, page_path) if page_path != 'index.html' else built
+        built = target if target in SPECIAL else out_path(target)
+        here = built == (page_path if page_path in SPECIAL else out_path(page_path))
+        href = relative(built, page_path) if page_path not in SPECIAL else built
         items.append(f'<a href="{href}"' + (' aria-current="page"' if here else '') + f'>{html.escape(label)}</a>')
     return ''.join(items)
 
@@ -598,8 +602,8 @@ def home_body(cfg, links, recs, root):
     for w in cfg.get('ways_in', []):
         target = w['path']
         p = root / target.split('#')[0]
-        time = navigation.reading_time(p.read_text()) if p.is_file() and target.endswith('.md') else ''
-        href = links.resolve(target, 'README.md')
+        time = navigation.reading_time(p.read_text()) if p.is_file() and target.split('#')[0].endswith('.md') else ''
+        href = target if target in SPECIAL else links.resolve(target, 'README.md')
         if href is None:
             raise SiteError('site.ways_in names a path not in the repository: ' + target)
         zh = ''
@@ -630,6 +634,11 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
         if not p.endswith('.md'):
             raise SiteError('site.pages lists Markdown pages only: ' + p)
     links = Links(set(pages), assets, files, dirs, cfg['repository'], commit, cfg.get('aliases'))
+    from tools.research import connection_map
+    map_ok = bool(cfg.get('map')) and hasattr(connection_map, 'site_map')
+    if not map_ok:  # no link to a map this build does not write
+        cfg = dict(cfg, nav=[n for n in cfg.get('nav', []) if n[0] != 'map.html'],
+                   ways_in=[w for w in cfg.get('ways_in', []) if w['path'] != 'map.html'])
     recs = records(root)
     date = subprocess.run(['git', 'show', '-s', '--format=%cs', commit], cwd=root, capture_output=True, text=True).stdout.strip() or commit
     if out.exists():
@@ -665,6 +674,12 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
         dest.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy(root / a, dest)
         written.append(dest)
+    # the connection map (tools/research/connection_map.py's site mode), its links to pages of the site kept on the site
+    map_note = 'not built: site.map is off' if not cfg.get('map') else 'not built: this checkout\'s connection_map has no site mode'
+    if map_ok:
+        on_site = {p: out_path(p) for p in pages}
+        written.append(pathlib.Path(connection_map.site_map(out, f"https://github.com/{cfg['repository']}/blob/{commit}/", on_site)))
+        map_note = 'built'
     (out / '.nojekyll').write_text('')
     # what was written: no page too large, no private path, nothing the push screen reads as a key
     problems = []
@@ -672,7 +687,7 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
         rel = str(w.relative_to(out))
         if refused(rel, private):
             problems.append('a private path was written: ' + rel)
-        if w.suffix == '.html' and w.stat().st_size > MAX_PAGE:
+        if w.suffix == '.html' and w.name != 'map.html' and w.stat().st_size > MAX_PAGE:
             problems.append(f'{rel} is {w.stat().st_size} bytes, over {MAX_PAGE}')
         if w.suffix in ('.html', '.svg', '.css'):
             hit = secrets.search(w.read_text())
@@ -680,7 +695,7 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
                 problems.append(f'{rel} holds what the push screen reads as a key: {hit.group(0)[:24]}…')
     if problems:
         raise SiteError('\n'.join(problems))
-    return {'pages': len(built) + 1, 'assets': len(assets), 'links': dict(links.counts),
+    return {'pages': len(built) + 1, 'assets': len(assets), 'links': dict(links.counts), 'map': map_note,
             'untracked': links.untracked, 'out': str(out), 'commit': commit}
 
 
@@ -696,7 +711,7 @@ def main(argv=None):
         print('site not built:', e, file=sys.stderr)
         return 1
     print(f"built {report['pages']} pages and {report['assets']} assets in {report['out']} at {commit[:9]}; links: "
-          + ', '.join(f'{k} {v}' for k, v in report['links'].items()))
+          + ', '.join(f'{k} {v}' for k, v in report['links'].items()) + f"; the map {report['map']}")
     for page, href in report['untracked'][:20]:
         print(f'  shown as text (not in the public repository): {page} → {href}')
     if len(report['untracked']) > 20:

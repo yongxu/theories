@@ -124,7 +124,9 @@ def render_page(data):
     lead = [
         f'Every test in [experiments](experiments/README.md) by how it came out, the failures first: {len(rows)} in all '
         f'({counts}), as of {day(data["as_of"])}. Each row quotes the test\'s own folder; the class beside it is a reading of '
-        'that quote [AI reading], checked against the folder by a second reader, not by a person.',
+        'that quote [AI reading], checked against the folder by a second reader, not by a person. A row\'s thesis is the one '
+        'method §9 or the test\'s folder names, and its run date the day the run finished. Experiments retired to '
+        '[experiments/history](experiments/history/INDEX.md) are not listed.',
         '',
         'How to read a verdict, in [method §9](theories/becoming/chapters/08-METHOD.md#theses)\'s words: "A thesis adds '
         'no theorem, a refutation removes none, and a failure stays recorded beside the thesis." "A frozen rule fixes how a '

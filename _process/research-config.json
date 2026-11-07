@@ -244,6 +244,7 @@
       "RESULTS.md",
       "experiments/README.md",
       "GLOSSARY.md",
+      "GLOSSARY.zh.md",
       "OPEN-QUESTIONS.md",
       "theories/README.md",
       "theories/becoming/review/README.md",
@@ -288,6 +289,10 @@
       [
         "theories/becoming/results/THEORY-GRAPH.md",
         "Graph"
+      ],
+      [
+        "map.html",
+        "Map"
       ],
       [
         "GLOSSARY.md",
@@ -340,6 +345,11 @@
         "text": "Results, Lean modules, sections and texts, with their edges kept apart by kind."
       },
       {
+        "path": "map.html",
+        "label": "The connection map",
+        "text": "The earlier folders and twelve domains of thought set against the account, claim by claim, with the theory's own graph; every thread an AI reading."
+      },
+      {
         "path": "MAP.md#check-the-proofs-yourself",
         "label": "Check the proofs",
         "text": "Build the Lean package and read its axiom report yourself."
@@ -352,7 +362,8 @@
       {
         "path": "GLOSSARY.md",
         "label": "Glossary",
-        "text": "Each term in its one sense."
+        "text": "Each term in its one sense.",
+        "zh": "GLOSSARY.zh.md"
       },
       {
         "path": "theories/becoming/review/README.md",
@@ -370,6 +381,7 @@
         "label": "Start here",
         "text": "Where everything is in the repository, and how to check it."
       }
-    ]
+    ],
+    "map": true
   }
 }
