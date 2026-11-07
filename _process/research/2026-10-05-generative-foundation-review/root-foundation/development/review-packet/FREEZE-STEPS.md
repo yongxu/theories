@@ -36,7 +36,7 @@ KIT=_process/research/2026-10-05-generative-foundation-review/root-foundation/de
 
 Call C the commit of main you read the dossiers against, at first this branch's start. Keep your reports outside the tree.
 
-**1. Report each dossier's drift (run).** The pin is the table's second column, but for those re-read since: every dossier's, now `bf81aba7b`, which edition 4 read them against. Under half a minute for all six.
+**1. Report each dossier's drift (run).** The pin is the table's second column, but for those re-read since: every dossier's, now `60d6b747f`, which edition 5 read them against. Under half a minute for all six.
 
 ```bash
 python3 -B $KIT/resync_report.py 3f294b01c theories/becoming/review/CLASSICAL-TEXTS.md --out <scratch>/CLASSICAL-TEXTS.md
