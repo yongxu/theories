@@ -16,7 +16,7 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
-from tools.research import registry, navigation, completion, lean_catalogue, reading_catalogue, style, paths, moves, indexes, session_map, history_notes, rename_ids, theory_graph, atlas, connection_map
+from tools.research import registry, navigation, completion, lean_catalogue, reading_catalogue, style, paths, moves, indexes, session_map, history_notes, rename_ids, theory_graph, atlas, connection_map, spine, lineage
 from tools.research import tests_page  # the tests, failures first (RW)
 
 
@@ -282,6 +282,17 @@ def check_or_render(render=False, base=None, ids=None, strict_fresh=False):
     errors += tests_errors
     # The theory graph (RA): one graph of concepts, results, modules, texts and chapter sections, and its index.
     outputs.update(theory_graph.render(records))
+    # The spine picture (RW): the chapters around the grammar, drawn from that graph; a phrase it quotes that has
+    # left its home is an error, so the picture follows the text.
+    if theory_graph.GRAPH in outputs:
+        spine_pages, spine_errors = spine.render(outputs[theory_graph.GRAPH])
+        outputs.update(spine_pages)
+        errors += spine_errors
+    # The lineage (RW): how the account grew, from its curated turning points, the records' history and the
+    # crosswalk; an evidence path the tree lacks or a quotation its file no longer holds is an error.
+    lineage_pages, lineage_errors = lineage.render()
+    outputs.update(lineage_pages)
+    errors += lineage_errors
     # The atlas (AA): the dynamics as a curated layer beside the records; a broken entry is an error, as a record is.
     atlas_pages, atlas_errors = atlas.render(records)
     outputs.update(atlas_pages)

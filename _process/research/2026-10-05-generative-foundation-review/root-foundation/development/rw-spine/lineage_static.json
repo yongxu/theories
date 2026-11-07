@@ -1,0 +1,191 @@
+{
+ "schema_version": 1,
+ "about": "Curated input of theories/LINEAGE.md and its Chinese edition (tools/research/lineage.py, board item RW (c)): the turning points with their evidence and labels, the selection thread, the renames, the papers, the time axis and the commit count cut at a commit. Gathered and checked by AI readers from the repository (development/rw-spine/), no person's; the render checks every evidence path and quotation again.",
+ "cut": {
+  "date_en": "8 November 2026",
+  "date_zh": "2026 年 11 月 8 日",
+  "commits": 6087,
+  "commit": "7040940cd",
+  "how": "git rev-list --count 7040940cd"
+ },
+ "axis": [
+  {
+   "from": "2021-01-01",
+   "to": "2025-12-31",
+   "share": 0.24,
+   "label": {
+    "en": "2021 to 2025, compressed",
+    "zh": "2021 至 2025（压缩）"
+   },
+   "ticks": [
+    "2021",
+    "2022",
+    "2023",
+    "2024",
+    "2025"
+   ]
+  },
+  {
+   "from": "2026-01-01",
+   "to": "2026-08-31",
+   "share": 0.22,
+   "label": {
+    "en": "January to August 2026",
+    "zh": "2026 年 1 月至 8 月"
+   },
+   "ticks": [
+    "2026-01",
+    "2026-03",
+    "2026-05",
+    "2026-07"
+   ]
+  },
+  {
+   "from": "2026-09-01",
+   "to": "2026-11-08",
+   "share": 0.54,
+   "label": {
+    "en": "1 September to 8 November 2026, widened",
+    "zh": "2026 年 9 月 1 日至 11 月 8 日（放大）"
+   },
+   "ticks": [
+    "2026-09-01",
+    "2026-09-15",
+    "2026-10-01",
+    "2026-10-15",
+    "2026-11-01",
+    "2026-11-08"
+   ]
+  }
+ ],
+ "labels": {
+  "public": {
+   "en": "public",
+   "zh": "公开",
+   "means_en": "a file tracked in this repository states it.",
+   "means_zh": "本仓库中一个受跟踪的文件陈述了它。"
+  },
+  "private": {
+   "en": "private and unpublished",
+   "zh": "私人、未发表",
+   "means_en": "only material not published here states it (private notes and conversations, or material not stored here), and a public text cites it.",
+   "means_zh": "只有未在此发表的材料陈述了它（私人笔记与对话，或未存于此的材料），并有一个公开文本引用它。"
+  },
+  "reconstruction": {
+   "en": "AI reconstruction",
+   "zh": "AI 重构",
+   "means_en": "no source states it; it is inferred from the material, by an AI reader or by a narrative such as the September timeline, which is itself reconstructed from the material.",
+   "means_zh": "没有来源陈述它；它是从材料中推断的，由 AI 读者推断，或由九月时间线这样的叙述推断，而那份叙述本身也是从材料中重构的。"
+  }
+ },
+ "carried_order": [
+  "carried",
+  "carried-in-part",
+  "changed",
+  "history-only",
+  "not-carried",
+  "fresh-reading"
+ ],
+ "carried_words": {
+  "carried": {
+   "en": "carried",
+   "zh": "承继"
+  },
+  "carried-in-part": {
+   "en": "carried-in-part",
+   "zh": "部分承继"
+  },
+  "changed": {
+   "en": "changed",
+   "zh": "改变"
+  },
+  "history-only": {
+   "en": "history-only",
+   "zh": "仅在历史中"
+  },
+  "not-carried": {
+   "en": "not-carried",
+   "zh": "未承继"
+  },
+  "fresh-reading": {
+   "en": "fresh-reading",
+   "zh": "新读法"
+  }
+ },
+ "words": {
+  "en": {
+   "title": "How the account grew",
+   "subtitle": "Turning points from the first writings (2021) to the live account (8 November 2026), numbered as in the table below, each marked by what states it.",
+   "other_language": "中文",
+   "reading_time": "{full} to read in full; the picture, the labels and the thread in {first}.",
+   "intro": "How the account grew: from the writings of 2021, through the earlier theory folders it read and carried or set aside, to [the theory of becoming](becoming/ONE-PAGE.md) as it stands. Generated from [the lineage data](becoming/results/data/lineage.json), the records' history and [the crosswalk](becoming/results/atlas/CROSSWALK.md). The repository holds {commits} commits at `{commit}` ({date}); its first commit is of 6 September 2026, and what came before is material brought into it. This page carries forward [the September timeline](../_process/history/2026-09-consolidation/TIMELINE.md), \"a narrative, not an index\", which stops on 4 October 2026. Its turning points were gathered and checked by AI readers, no person's.",
+   "labels_intro": "Each turning point carries one label, by what states it:",
+   "points_heading": "Turning points",
+   "date": "Date",
+   "what": "What changed",
+   "evidence": "Evidence",
+   "label": "Label",
+   "not_in_repository": "not in this repository",
+   "renames_heading": "Renames",
+   "renames_intro": "A term replaced by another for the same thing: the nine to September 2026 carried forward from the September timeline, its ledger and its narrative; the rest from the drafts' notes, the records and rename receipts; each checked against the files, whose evidence column names the source. Where only the timeline's ledger states a rename, it is marked a reconstruction.",
+   "from": "From",
+   "to": "To",
+   "where": "Where and why",
+   "folders_heading": "What became of the earlier folders",
+   "folders_intro": "The crosswalk reads the sixteen earlier theory folders and twelve domains of thought against the live account: {total} entries, each an AI reading no person has read. Its own check of a random sample \"estimates 82.6% holding, 14.2% with a label or role wrong and 3.2% with a wrong reading over all 1183\" ([how it was checked]({crosswalk})). [The index of the folders]({index}) gives each folder's counts, and [the crosswalk]({crosswalk}) each entry. *Fresh-reading* means the account does not state the connection and a reader proposes it there.",
+   "papers_heading": "Papers",
+   "papers_intro": "Drafts written for readers outside the repository, and what of each stands in the live account. What [output/](../output/README.md) holds is described there.",
+   "paper": "Paper",
+   "claimed": "What it claimed",
+   "stands": "What of it stands",
+   "growth_heading": "Growth in the records",
+   "growth_intro": "The records' history entries by the week of their leading date: {total} dated entries, and {undated} with no leading date, left out. An entry is a dated note of a change to a result, so the count measures changes recorded, not results.",
+   "week_of": "Week of (Monday)",
+   "entries": "Entries",
+   "growth": "Grey bars: the records' history entries by week (largest week {top}).",
+   "thread_legend": "the selection thread, below",
+   "sources_heading": "What this page rests on",
+   "sources": "The September timeline (to 4 October 2026); the earlier folders' READMEs and their genealogies; the dated words in `sources/`; the board and its history file; the records' history; the freeze steps of the reader editions; the experiments' READMEs; the crosswalk; and git history. Every quotation was checked against its file by an AI reader. The render checks again the quotation each evidence entry names, not the others in a row's text. A quotation from a Chinese source is given in English as a translation unless the Chinese is kept beside it, and translations are not checked; what a private source says is given only as a public text reports it.",
+   "footer": "Generated by tools/research/lineage.py from lineage.json, the records and the crosswalk."
+  },
+  "zh": {
+   "title": "本说明是怎样长成的",
+   "subtitle": "从最早的文字（2021）到现行的说明（2026 年 11 月 8 日）的转折点，编号同下表，每一个都标明是什么陈述了它。",
+   "other_language": "English",
+   "reading_time": "全文约 {full}；图、标签与这条线索约 {first}。",
+   "intro": "本说明是怎样长成的：从 2021 年的文字，经由它读过、承继或放下的早先各理论文件夹，到现在的[生成变化之论](becoming/ONE-PAGE.zh.md)。本页由[谱系数据](becoming/results/data/lineage.json)、各记录的历史与[对照](becoming/results/atlas/CROSSWALK.md)生成。本仓库在 `{commit}`（{date}）共有 {commits} 次提交；其第一次提交是 2026 年 9 月 6 日的，此前的东西都是带入仓库的材料。本页接续[九月时间线](../_process/history/2026-09-consolidation/TIMELINE.md)，那是「a narrative, not an index」（一份叙述，不是索引），止于 2026 年 10 月 4 日。本页的转折点由 AI 读者收集并核对，没有人读过。",
+   "labels_intro": "每个转折点按陈述它的东西带一个标签。引自英文来源的话，以「」保留英文原文、附中文释义，或标明为译文；原文见[英文版](LINEAGE.md)。",
+   "points_heading": "转折点",
+   "date": "日期",
+   "what": "改变了什么",
+   "evidence": "证据",
+   "label": "标签",
+   "not_in_repository": "不在本仓库中",
+   "renames_heading": "改名",
+   "renames_intro": "一个术语被另一个术语取代，所指不变：2026 年 9 月及以前的九条，接续九月时间线（其账目与叙述）；其余取自草稿的笔记、各记录与改名回执；每一条都对照文件核对，证据一栏注明来源。只有时间线的账目陈述的改名，标为重构。",
+   "from": "原名",
+   "to": "新名",
+   "where": "在哪里、为什么",
+   "folders_heading": "早先各文件夹后来如何",
+   "folders_intro": "对照把十六个早先的理论文件夹与十二个思想领域对着现行的说明来读：共 {total} 条，每一条都是 AI 的读法，没有人读过。它对一份随机样本的复核「estimates 82.6% holding, 14.2% with a label or role wrong and 3.2% with a wrong reading over all 1183」（估计全部 1183 条中 82.6% 成立，14.2% 标签或角色有误，3.2% 读法有误；[怎样核对的]({crosswalk})）。[文件夹索引]({index})给出每个文件夹的计数，[对照]({crosswalk})给出每一条。*新读法*（fresh-reading）是说本说明并不陈述这一联系，而是读者在那里提出它。",
+   "papers_heading": "论文",
+   "papers_intro": "为仓库之外的读者写的草稿，以及其中什么在现行的说明里仍成立。[output/](../output/README.md) 中有什么，在那里说明。",
+   "paper": "论文",
+   "claimed": "它主张什么",
+   "stands": "其中什么仍成立",
+   "growth_heading": "记录中的增长",
+   "growth_intro": "各记录的历史条目，按其开头日期所在的周计：有日期的 {total} 条；没有开头日期的 {undated} 条，不计。一个条目是对一项结果之改动的一条带日期的记载，所以这个计数量的是记下的改动，而不是结果。",
+   "week_of": "周（自周一）",
+   "entries": "条目",
+   "growth": "灰条：各记录的历史条目，按周计（最多的一周 {top} 条）。",
+   "thread_legend": "选择机制这条线索，见下文",
+   "sources_heading": "本页所依据的",
+   "sources": "九月时间线（止于 2026 年 10 月 4 日）；早先各文件夹的 README 及其谱系；`sources/` 中带日期的原话；工作板及其历史文件；各记录的历史；各读者版的冻结步骤；各实验的 README；对照；以及 git 历史。每一处引文的原文都由一位 AI 读者对照其文件核对过；生成时又核对每个证据条目所注明的那一处引文，行文中的其他引文不在其列。引自英文来源者，本页给出英文原文并附中文释义，或明说是译文；译文未经核对。私人来源所说的，只按一个公开文本所转述的给出。",
+   "footer": "由 tools/research/lineage.py 依 lineage.json、各记录与对照生成。"
+  }
+ },
+ "folders_trust": {
+  "path": "theories/becoming/results/atlas/CROSSWALK.md",
+  "quote": "estimates 82.6% holding, 14.2% with a label or role wrong and 3.2% with a wrong reading over all 1183"
+ }
+}
