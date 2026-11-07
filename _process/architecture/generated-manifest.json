@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "files": {
-    "README.md": "baaf1162be846bc58ab18a35eff6b9b7f2892f8450542f4c1be575ded5e67bbf",
+    "README.md": "ce9e3c42282a76233156d82859b5e07e78de32da42426f9bed1e8e7cde2e9d6e",
     "RESEARCH.md": "d045c52bf4a5058d6e0ca5a1452d73540bbaf8a29a5ecf4f1e0d5c234f9870db",
     "RESULTS.md": "4e19b660b447072f4ecd91779d4932d921f12afca4c07a308e25a54c54c10544",
-    "GOALS.md": "d9c3445c11c874ebf393a4ab2337415972fb162d2503e892059eee2799a78330",
+    "GOALS.md": "aca0e9a52c54b0429122ecc5b32e737cc942c77b3e55364ee9233e4ee01a98d1",
     "DEPENDENCIES.md": "dd2b699e9cb2f43c1e84d4e9d01dfab5b400a3c6e27720b1827fbadcb2ec5908",
     "_process/BRIEF.md": "3a888154078fa5d5c2daca4899cc94c529bd231c4d25d13257b0fca753f6fa0f",
     "theories/becoming/README.md": "2737d243fabe1fbff80afff543d1d44011ca13d3f44459977d100f14620b5f3e",
     "theories/becoming/results/ROADMAP.md": "ec1ffee17fd4b44c2ac9b5304c01f545441e012eb3a26b465c5fac9f08aaf6f0",
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md": "16ed884bef67bcbb4178905624c530ffc962b7d3e626624d4ec8cb4aadd629fa",
-    "OPEN-QUESTIONS.md": "5fa1a7828e640a109d586d70dd9b9f4fddf13f39aa78de848f810e7e67b723b0",
+    "OPEN-QUESTIONS.md": "811690bc113649c31b6eb74a37616e6199f16ceddb89a8723c5173f8861f1344",
     "theories/becoming/chapters/CLAIMS.md": "91903796d8afaf3cba93fa483c83e988375e42202319ce496827b6c910d73fce",
     "theories/becoming/results/records/acquired-binding-compositional-use.md": "d11a976490dba7793ad3bacb2cd3c5caf9a1cddd93c2a5e73dba64bcaf915684",
     "theories/becoming/results/records/alignment-direction-g0-j.md": "69ce0c02807f202fc9d09477f9cc604af8260487d34dfa5f946b728f0b67127a",
@@ -244,8 +244,8 @@
     "theories/becoming/results/records/two-act-worlds-carry-the-difference.md": "c3621193468b0d5207e24d680519e2f0af67a4d18130af3ce46b15889a16e1cb",
     "theories/becoming/results/records/worlds-are-runs.md": "aed2bb06229953f98bcbd991753f42844ce99263b0e98dee61d5c082ff53c1fe",
     "theories/becoming/chapters/README.md": "364166501aa6ae4dc508896cd91bbf906c6c5ae6cd867c4f4452312021a108e2",
-    "_process/research/README.md": "8414175809ec0142306bd492cb2cb85bb37555fb6f044cfe3284943c11a01285",
-    "_process/research/2026-10-05-generative-foundation-review/root-foundation/INDEX.md": "563b6626f6a5bf45423cc57ef8725e0c39119fe170c612155c8c8d48fa7e97d9",
+    "_process/research/README.md": "44936a13c0429dfb4d0f67b8e6e03f58b517c92aa0bf6f4dac39e75cab591628",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/INDEX.md": "00294874755e3a8b6c79718819b5104a1d3158fbb8c437a17c072c6d5ee9ea48",
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/REVIEWS.md": "0ccef05c0f94ed738029b8aa50c19901bcddb80807925beeb2dca83cb56dc687",
     "sources/README.md": "0f93ef30f6158caeed4f170d4f22ae1fdf53cbcf0d238bacbb35e406610b0ed3",
     "_process/DIRECTIVE-INDEX.md": "3e87289f6c52a9a229ef208ce737bbbec3660a0a5583e09d81e5da0bfa2b6252",
@@ -605,6 +605,6 @@
     "theories/becoming/results/records/what-would-give-c.md": "fbb52efeaeed2c9a430820d0c949dbe53ea12bb7bb1ab715ab69938e15a6e3b5",
     "theories/becoming/results/atlas/CROSSWALK.md": "5a13a956a5c1669416f6dc9684db6f2c3840d5c58106ee6bbdd4598afa50566b",
     "theories/becoming/results/atlas/map.html": "eb7240e8f542ece0e7f8053b967d36685b59eead7de307fc4e891c11d72463b8",
-    "theories/README.md": "d72eedad7957e17e7a22d4619645a79ae2a2c631d0780b91897a9ec99e5dbba0"
+    "theories/README.md": "2f6011a844f8e8d054739da798fd58fa1ef87f2c0d94858858886d097609e5cb"
   }
 }
