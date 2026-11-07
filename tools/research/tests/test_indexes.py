@@ -97,6 +97,118 @@ class LeanGroupTests(unittest.TestCase):
             self.assertNotRegex(label, r'[一-鿿]')
 
 
+def _lean(modules: int, theorems: int) -> dict:
+    """A manifest of one group's modules, each with `theorems` theorems."""
+    files = [{'path': f'x/lean/becoming/Becoming/M{i:02}.lean', 'role': 'working-source', 'group': 'becoming-core', 'sha256': f's{i}'}
+             for i in range(modules)]
+    contents = {f's{i}': {'declarations': [{'kind': 'theorem', 'qualified_name_hint': f'M{i:02}.t{j}', 'line': j + 1} for j in range(theorems)],
+                          'imports': [], 'print_axioms_commands': 0} for i in range(modules)}
+    return {'files': files, 'contents_by_sha256': contents}
+
+
+class LeanPageTests(unittest.TestCase):
+    """A group too large for one page GitHub shows is listed on parts, its own page their index."""
+
+    def setUp(self):
+        for patcher in (patch.object(lean_catalogue, 'doc_links', lambda file, sources: 'Theory'),
+                        patch.object(lean_catalogue, 'PART_LIMIT', 20_000)):
+            patcher.start()
+            self.addCleanup(patcher.stop)
+
+    def test_a_group_that_fits_keeps_one_page(self):
+        manifest = _lean(3, 5)
+        parts = lean_catalogue.layout(manifest, {})
+        self.assertEqual([len(p) for p in parts['becoming-core']], [3])
+        page = lean_catalogue.render_declarations(manifest, {}, 'becoming-core', parts)
+        self.assertIn('<summary>M00.lean', page)
+        self.assertEqual(lean_catalogue.module_pages(parts)['x/lean/becoming/Becoming/M02.lean'], 'becoming-core.md')
+
+    def test_a_large_group_is_split_into_parts_each_within_the_limit_and_its_page_keeps_every_anchor(self):
+        manifest = _lean(12, 40)
+        parts = lean_catalogue.layout(manifest, {})['becoming-core']
+        self.assertGreater(len(parts), 1)
+        self.assertEqual([f['path'] for p in parts for f in p], [f['path'] for f in manifest['files']])  # contiguous, in order
+        index = lean_catalogue.render_declarations(manifest, {}, 'becoming-core', {'becoming-core': parts})
+        anchors = reading_catalogue.anchors_from_text(index)
+        for f in manifest['files']:
+            self.assertIn(lean_catalogue.anchor(f['path']), anchors)
+        self.assertNotIn('<summary>', index)
+        self.assertIn(f'(../lean-declarations/becoming-core-part-2.md#{lean_catalogue.anchor(parts[1][0]["path"])})', index)
+        sizes = []
+        for n in range(1, len(parts) + 1):
+            body = lean_catalogue._part(manifest, {}, 'becoming-core', parts, n)
+            sizes.append(len(body.encode()))
+            self.assertLessEqual(sizes[-1], lean_catalogue.PART_LIMIT)
+            for f in parts[n - 1]:
+                self.assertIn(f'<a id="{lean_catalogue.anchor(f["path"])}"></a>', body)
+            self.assertIn('(../lean-declarations/becoming-core.md)', body)  # the group's page
+        self.assertLess(max(sizes) - min(sizes), lean_catalogue.PART_LIMIT // 3)  # about equal
+        listing = lean_catalogue.render_declarations(manifest, {}, parts={'becoming-core': parts})
+        self.assertIn(f'(lean-declarations/becoming-core-part-1.md#{lean_catalogue.anchor(parts[0][0]["path"])})', listing)
+
+    def test_pack_falls_back_to_filling_in_order_where_equal_parts_would_overflow(self):
+        members = [{'path': str(i)} for i in range(4)]
+        room = lean_catalogue.PART_LIMIT - 4_000
+        third = room * 6 // 10
+        parts = lean_catalogue._pack(members[:3], [third] * 3)  # equal halves would put two in one part, over the room
+        self.assertEqual([[f['path'] for f in p] for p in parts], [['0'], ['1'], ['2']])
+
+
+    def test_one_module_larger_than_a_part_takes_a_part_alone(self):
+        room = lean_catalogue.PART_LIMIT - 4_000
+        members = [{'path': str(i)} for i in range(3)]
+        parts = lean_catalogue._pack(members, [10, room * 2, 10])
+        self.assertEqual([[f['path'] for f in p] for p in parts], [['0'], ['1'], ['2']])
+
+    def test_a_page_over_the_limit_or_left_behind_stops_the_catalogue(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            out = root / 'theories/becoming/results'
+            (out / 'lean-declarations').mkdir(parents=True)
+            (out / 'lean-declarations/ethics-part-3.md').write_text('left by a group that needs fewer parts\n')
+            (out / 'lean-declarations/ethics.md').write_text('written\n')
+            base = 'theories/becoming/results'
+            with patch.object(lean_catalogue, 'ROOT', root), patch.object(lean_catalogue, 'OUT', out), \
+                    patch.object(lean_catalogue, 'PAGE_LIMIT', 100):
+                found = lean_catalogue.problems({f'{base}/lean-declarations/ethics.md': 'x' * 101, f'{base}/data/big.json': 'x' * 500})
+        self.assertEqual(found, [f'{base}/lean-declarations/ethics.md: 101 bytes, more than the 100 this catalogue allows '
+                                 '(GitHub showed a page of 1,035,845 bytes and not one of 3,742,459)',
+                                 f'{base}/lean-declarations/ethics-part-3.md: a page the catalogue no longer writes; remove it by name'])
+
+
+    def test_a_render_carries_the_catalogues_problems_into_its_errors(self):
+        from tools.research import research
+        with patch.object(research.indexes, 'render', lambda: {}), \
+                patch.object(research.reading_catalogue, 'render', lambda: ({}, [], [])), \
+                patch.object(lean_catalogue, 'render', lambda: {'x.md': 'x'}), \
+                patch.object(lean_catalogue, 'problems', lambda files: [f'{sorted(files)[0]}: left behind']):
+            self.assertEqual(research.index_outputs(render=False)[1], [])
+            out, errors, _ = research.index_outputs(render=True)
+        self.assertEqual((out, errors), ({'x.md': 'x'}, ['lean catalogue: x.md: left behind']))
+
+    def test_a_split_groups_page_gives_its_largest_part(self):
+        manifest = _lean(12, 40)
+        parts = lean_catalogue.layout(manifest, {})['becoming-core']
+        bodies = [lean_catalogue._part(manifest, {}, 'becoming-core', parts, n) for n in range(1, len(parts) + 1)]
+        largest = max(len(b.encode()) for b in bodies)
+        page = lean_catalogue.render_declarations(manifest, {}, 'becoming-core', {'becoming-core': parts})
+        self.assertIn(f'the largest {largest:,} bytes', page)
+
+
+class LeanPageSizeTests(unittest.TestCase):
+    def test_the_bound_is_the_atlas_bound(self):
+        from tools.research import atlas
+        self.assertEqual(lean_catalogue.PAGE_LIMIT, atlas.PAGE_LIMIT)
+
+    def test_every_declaration_page_in_this_checkout_is_within_what_github_shows(self):
+        folder = lean_catalogue.OUT / 'lean-declarations'
+        pages = sorted(folder.glob('*.md')) + [lean_catalogue.OUT / 'LEAN-INDEX.md', lean_catalogue.OUT / 'LEAN-DECLARATIONS.md']
+        self.assertGreater(len(pages), 10)
+        for page in pages:
+            with self.subTest(page=page.name):
+                self.assertLessEqual(page.stat().st_size, lean_catalogue.PAGE_LIMIT)
+
+
 class IndexTests(unittest.TestCase):
     def test_directive_kind_heuristic(self):
         self.assertEqual(indexes.kind_of("decision to fold Part II"), 'decision')

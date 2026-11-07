@@ -9,6 +9,7 @@ import io
 import json
 import os
 from pathlib import Path
+import posixpath
 import re
 import subprocess
 import sys
@@ -35,6 +36,8 @@ FILES = {
     'experiments/periphery/Draft.lean': 'theorem never_added : True := trivial\n',
     'experiments/tests/t7/FROZEN.sha256': '0 design.md\n',
     'theories/early/README.md': '# An earlier folder\n',
+    'theories/becoming/results/README.md': '# The results\n',
+    atlas.ATLAS + '/map.html': '<!doctype html>\n',
 }
 TRACKED = (LEAF, 'experiments/history/Old.lean')
 RECORDS = [
@@ -257,30 +260,79 @@ class RenderTests(AtlasCase):
         self.assertEqual(pages, {})
         self.assertOne(errors, 'atlas: dynamics: closed-capture: family:')
 
-    def test_the_table_links_entries_and_records_and_every_link_resolves(self):
-        self.write_atlas(capture(), carriers(exits=[exit_(to='closed-capture')]))
+    def test_the_pages_link_entries_and_records_and_every_link_resolves(self):
+        self.write_atlas(capture(), carriers(family='G', exits=[exit_(to='closed-capture')]))
         pages, errors = atlas.render(RECORDS)
         self.assertEqual(errors, [])
-        page = pages[atlas.PAGE]
-        self.assertTrue(page.startswith(atlas.GENERATED + '\n'))
-        self.assertIn('| [Closed capture (元吸引子)](#closed-capture) | [closed-capture](../records/closed-capture.md), [loss-read-in-time]'
-                      '(../records/loss-read-in-time.md) | any type | recorded-checked (theorem); reviewed-scoped (assessment) | 1 | 1 |', page)
-        self.assertIn('| [Self-reproducing selection across carriers](#self-reproducing-selection) |', page)
-        self.assertIn('| [C. Capture of the selection](#family-c) | 2 |', page)
-        self.assertIn('hypothesis 2: Modelling choices: two kinds, counted.', page)
-        targets = re.findall(r'\]\((<[^>]+>|[^\s)]+)\)', page)
-        self.assertGreater(len(targets), 10)
-        own = reading_catalogue.anchors_from_text(page)
-        for target in targets:
-            path, _, anchor = target.strip('<>').partition('#')
-            with self.subTest(target=target):
-                if not path:
-                    self.assertIn(anchor, own)
-                    continue
-                p = (self.root / atlas.ATLAS / unquote(path)).resolve()
-                self.assertTrue(p.exists())
-                if anchor and p.suffix == '.md':
-                    self.assertIn(unquote(anchor), reading_catalogue.anchors(p))
+        index, family, other = pages[atlas.PAGE], pages[atlas.FAMILY_PAGES + '/c.md'], pages[atlas.FAMILY_PAGES + '/g.md']
+        for body in (index, family, other):
+            self.assertTrue(body.startswith(atlas.GENERATED + '\n'))
+        self.assertIn('| <a id="closed-capture"></a><a id="closed-capture-元吸引子"></a>[Closed capture (元吸引子)](families/c.md#closed-capture) | '
+                      '[closed-capture](../records/closed-capture.md), [loss-read-in-time](../records/loss-read-in-time.md) | any type | '
+                      'recorded-checked (theorem); reviewed-scoped (assessment) | 1 | 1 |', index)
+        self.assertIn('| [Closed capture (元吸引子)](#closed-capture) | [closed-capture](../../records/closed-capture.md), '
+                      '[loss-read-in-time](../../records/loss-read-in-time.md) | any type |', family)
+        self.assertIn('| [C. Capture of the selection](families/c.md) | 1 |', index)
+        self.assertIn('| [G. Closure and stagnation](families/g.md) | 1 |', index)
+        self.assertIn('hypothesis 2: Modelling choices: two kinds, counted.', family)
+        self.assertIn('To [Closed capture (元吸引子)](c.md#closed-capture): sufficient', other)  # an exit to another family's page
+        self.assertNotIn('- **Mechanism.**', index)  # the sections are on the families' pages
+        self.assertIn('Families: **C**, [G](g.md).', family)
+        checked = 0
+        for name in (atlas.PAGE, atlas.FAMILY_PAGES + '/c.md', atlas.FAMILY_PAGES + '/g.md'):
+            for target in re.findall(r'\]\((<[^>]+>|[^\s)]+)\)', pages[name]):
+                path, _, anchor = target.strip('<>').partition('#')
+                with self.subTest(page=name, target=target):
+                    resolved = posixpath.normpath(posixpath.join(posixpath.dirname(name), unquote(path))) if path else name
+                    if resolved in pages:
+                        own = reading_catalogue.anchors_from_text(pages[resolved])
+                    else:
+                        self.assertTrue((self.root / resolved).exists())
+                        own = reading_catalogue.anchors(self.root / resolved) if resolved.endswith('.md') else set()
+                    if anchor:
+                        self.assertIn(unquote(anchor), own)
+                    checked += 1
+        self.assertGreater(checked, 30)
+
+    def test_the_index_keeps_every_anchor_the_single_page_had(self):
+        self.write_atlas(capture(), carriers(family='G'), carriers(id='twin', name={'en': 'Closed capture (元吸引子)'}))
+        pages, _ = atlas.render(RECORDS)
+        own = reading_catalogue.anchors_from_text(pages[atlas.PAGE])
+        slug = reading_catalogue.slug
+        single = {'closed-capture', 'self-reproducing-selection', 'twin', 'family-c', 'family-g', 'the-atlas-of-dynamics',
+                  slug('C. Capture of the selection'), slug('G. Closure and stagnation'), slug('Closed capture (元吸引子)'),
+                  slug('Closed capture (元吸引子)') + '-1', slug('Self-reproducing selection across carriers')}
+        self.assertEqual(single - own, set())  # the single page's ids and headings, a repeated heading numbered as GitHub does
+        self.assertEqual(pages[atlas.PAGE].count('<a id="closed-capture-元吸引子"></a>'), 1)
+
+    def test_a_page_the_atlas_no_longer_writes_is_an_error_until_it_is_removed(self):
+        self.write_atlas(capture())
+        left = self.root / atlas.FAMILY_PAGES / 'z.md'
+        left.parent.mkdir(parents=True, exist_ok=True)
+        left.write_text('# A family since removed\n')
+        pages, errors = atlas.render(RECORDS)
+        self.assertEqual((pages, errors), ({}, [f'atlas: {atlas.FAMILY_PAGES}/z.md: a page the atlas no longer writes; remove it by name']))
+        left.unlink()
+        self.assertEqual(atlas.render(RECORDS)[1], [])
+
+    def test_the_indexes_open_and_close_with_the_results_views(self):
+        self.write_atlas(capture())
+        pages, _ = atlas.render(RECORDS)
+        for path in (atlas.PAGE, atlas.CROSSWALK):
+            lines = pages[path].rstrip('\n').split('\n')
+            with self.subTest(page=path):
+                self.assertIn('[the connection map](map.html)', lines[-1])
+                self.assertIn(lines[-1], lines[:6])
+
+    def test_a_page_larger_than_github_shows_is_an_error_and_no_page_is_written(self):
+        self.write_atlas(capture())
+        self.assertEqual(atlas.render(RECORDS)[1], [])
+        with mock.patch.object(atlas, 'PAGE_LIMIT', 2_000):
+            pages, errors = atlas.render(RECORDS)
+        self.assertEqual(pages, {})
+        self.assertTrue(errors)
+        self.assertTrue(all('more than the 2,000 this render allows' in e for e in errors), errors)
+        self.assertTrue(any(e.startswith(f'atlas: {atlas.FAMILY_PAGES}/c.md: ') for e in errors), errors)
 
     def test_the_data_holds_the_resolved_entries(self):
         self.write_atlas(capture())
@@ -401,11 +453,22 @@ class CorrespondenceTests(AtlasCase):
              reading(id='cx-early-gone', carried='not-carried', relation=None, agreement_of=None, targets=[], absence={'searched': ['grep x'], 'read': []})]))
         pages, errors = atlas.render(RECORDS)
         self.assertEqual(errors, [])
-        page = pages[atlas.CROSSWALK]
-        self.assertTrue(page.startswith(atlas.GENERATED + '\n'))
+        index, page = pages[atlas.CROSSWALK], pages[atlas.CROSSWALK_PAGES + '/early.md']
+        for body in (index, page):
+            self.assertTrue(body.startswith(atlas.GENERATED + '\n'))
+            self.assertIn('A shared word is not a correspondence', body)  # a reader may come to a folder's page first
         self.assertLess(page.index('Its own sense'), page.index('Reading [AI reading]'))
-        self.assertIn('| [An earlier folder](#cxg-early) | 3 | 2 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 1 | 0 | 1 | 0 | 0 |', page)
+        self.assertIn('| <a id="cxg-early"></a><a id="an-earlier-folder"></a><a id="cx-early-claim"></a><a id="cx-early-other"></a>'
+                      '<a id="cx-early-gone"></a>[An earlier folder](crosswalk/early.md) | 3 | 2 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 1 | 0 | 1 | 0 | 0 |', index)
+        self.assertNotIn('Its own sense', index)
         self.assertIn('Searched: grep x', page)
+        self.assertIn('[The crosswalk](../CROSSWALK.md)', page)
+        self.assertIn('[06](../../../chapters/06-CLASSICAL-TEXTS.md#three-relations)', page)
+        self.assertEqual(reading_catalogue.anchors_from_text(page) >= {'cx-early-other', 'cx-early-gone'}, True)
+        kept = reading_catalogue.anchors_from_text(index)
+        self.assertEqual({'cxg-early', reading_catalogue.slug('An earlier folder'), 'cx-early-claim', 'cx-early-other', 'cx-early-gone'} - kept, set())
+        self.assertIn('[its README](../../../../early/README.md)', page)  # an earlier folder's page names the folder
+        self.assertIn('## Summary and what was read', page)
         data = json.loads(pages[atlas.DATA])
         self.assertEqual(data['correspondence_groups'][0]['by_carried']['not-carried'], 1)
         self.assertEqual(data['correspondences'][0]['targets'][0]['standing']['status'], 'recorded-checked')
@@ -413,7 +476,26 @@ class CorrespondenceTests(AtlasCase):
         self.assertIn('The one folders beside', folders)  # the count is the groups'
         self.assertTrue(folders.startswith(atlas.GENERATED + '\n'))
         self.assertIn('| [An earlier folder](early/README.md) | theory | 3 | 2 | 0 | 0 | 0 | 1 | 0 | '
-                      '[what became of it](becoming/results/atlas/CROSSWALK.md#cxg-early) |', folders)
+                      '[what became of it](becoming/results/atlas/crosswalk/early.md) |', folders)
+
+    def test_a_mention_of_another_entry_links_it_on_its_page(self):
+        (self.root / atlas.ENTRIES).mkdir(parents=True, exist_ok=True)
+        (self.root / atlas.VOCABULARY).write_text(json.dumps(VOCABULARY, ensure_ascii=False) + '\n')
+        (self.root / atlas.ENTRIES / 'dynamics.json').write_text('[]\n')
+        greek = group(id='cxg-greek', domain='greek-roman', title={'en': 'Greek thought'}, kind='domain',
+                      coverage={'present': [], 'absent': [{'en': 'Nothing here.', 'searched': ['x']}]})
+        (self.root / atlas.ENTRIES / 'correspondence_groups.json').write_text(json.dumps([group(not_mapped=[{'en': 'Read beside cx-greek-one.'}]), greek]))
+        (self.root / atlas.ENTRIES / 'correspondences.json').write_text(json.dumps(
+            [reading(reading={'en': 'Beside cx-greek-one and cx-early-other, not cx-nowhere.'}),
+             reading(id='cx-early-other', relation='divergence', agreement_of=None),
+             reading(id='cx-greek-one', group='cxg-greek', domain='greek-roman')]))
+        pages, errors = atlas.render(RECORDS)
+        self.assertEqual(errors, [])
+        page = pages[atlas.CROSSWALK_PAGES + '/early.md']
+        self.assertIn('Beside [cx-greek-one](greek.md#cx-greek-one) and [cx-early-other](#cx-early-other), not cx-nowhere.', page)
+        self.assertIn('<a id="cx-early-claim"></a>', page)  # its own anchor is left as it is
+        self.assertIn('- Read beside [cx-greek-one](greek.md#cx-greek-one).', page)  # in the group's own lists too
+        self.assertIn('lands on its group\'s row here', pages[atlas.CROSSWALK])
 
 
     def test_the_index_lists_only_the_earlier_folders(self):
@@ -465,7 +547,8 @@ class MainTests(AtlasCase):
     def test_check_fails_on_a_page_that_differs_and_passes_on_a_fresh_one(self):
         self.write_atlas(capture())
         code, result = self.main('--check')
-        self.assertEqual((code, result['errors'], result['differs']), (1, [], [atlas.PAGE, atlas.CROSSWALK, atlas.FOLDERS, atlas.DATA]))
+        self.assertEqual((code, result['errors'], result['differs']), (1, [], [atlas.PAGE, atlas.CROSSWALK, atlas.FOLDERS, atlas.DATA,
+                                                                       atlas.FAMILY_PAGES + '/c.md', atlas.FAMILY_PAGES + '/g.md']))
         pages, _ = atlas.render(RECORDS)
         for path, body in pages.items():
             (self.root / path).parent.mkdir(parents=True, exist_ok=True)
@@ -481,6 +564,18 @@ class MainTests(AtlasCase):
         code, result = self.main()
         self.assertEqual(code, 1)
         self.assertTrue(result['errors'])
+
+
+class PageSizeTests(unittest.TestCase):
+    """The atlas's Markdown pages as they stand in this checkout, each within what GitHub shows."""
+
+    def test_every_page_the_atlas_writes_is_within_what_github_shows(self):
+        files = json.loads((ROOT / '_process/architecture/generated-manifest.json').read_text())['files']
+        written = [p for p in files if p.endswith('.md') and (p.startswith(atlas.ATLAS + '/') or p == atlas.FOLDERS) and (ROOT / p).is_file()]
+        self.assertIn(atlas.CROSSWALK, written)
+        for p in written:
+            with self.subTest(page=p):
+                self.assertLessEqual((ROOT / p).stat().st_size, atlas.PAGE_LIMIT)
 
 
 if __name__ == '__main__':
