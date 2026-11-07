@@ -218,7 +218,7 @@
     }
   },
   "site": {
-    "note": "The reader's site (tools/publishing/build_site.py): pages is the allow-list, nothing else is published; a path the push screen keeps private, or under sources/, is refused. nav and ways_in are AI-written navigation and name only pages listed here. The Pages job (.github/workflows/pages.yml) runs only when dispatched; enabling Pages is Ren's. site.map stays off until connection_map's site mode is on main; the map is then written as connections.html.",
+    "note": "The reader's site (tools/publishing/build_site.py): pages is the allow-list, nothing else is published; a path the push screen keeps private, or under sources/, is refused. nav and ways_in are AI-written navigation and name only pages listed here. The Pages job (.github/workflows/pages.yml) runs only when dispatched; enabling Pages is Ren's. With site.map on, the connection map is written as connections.html by connection_map's site mode.",
     "repository": "yongxu/theories",
     "title": "The Theory of Becoming",
     "description": "One account of how things form, persist, change and end, with Lean-checked models and frozen tests; its ethics rests on two unasserted premises: the continuation condition (scope) and C, widening what can form is better (order).",
@@ -383,6 +383,6 @@
         "text": "Where everything is in the repository, and how to check it."
       }
     ],
-    "map": false
+    "map": true
   }
 }
