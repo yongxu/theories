@@ -76,7 +76,8 @@ FOLDERS_LEAD = ('The {n} folders beside `becoming/` hold the earlier theories: s
 FOLDERS_FOOT = ('*Kind* is the crosswalk\'s: a theory, a design, an exploration or a method. The domains of thought the '
                 'crosswalk also reads, from Chinese classical thought to psychology and logic, are in its own table. The originals the '
                 'folders draw on are in `sources/`, except the chat logs, memory exports and recorded conversations '
-                '(`sources/12-`, `13-` and `18-`), which the repository has not tracked since 19 October 2026.')
+                '(`sources/12-`, `13-` and `18-`, and the conversation\'s transcript in `drafts/2026-10-02-friend-conversation/`), which the '
+                'repository has not tracked since 19 October 2026.')
 
 # The entries' files and the kind each lists. Each further kind of the plan's §3.2 (transition, exit, premise, thesis
 # and test, open item) adds its file here, its fields and its check.

@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "files": {
-    "README.md": "ce9e3c42282a76233156d82859b5e07e78de32da42426f9bed1e8e7cde2e9d6e",
+    "README.md": "2be3d41ee4c7ecfa2901ee9114a910623c128f20c62da76e5252910f5b9dd0d3",
     "RESEARCH.md": "d045c52bf4a5058d6e0ca5a1452d73540bbaf8a29a5ecf4f1e0d5c234f9870db",
     "RESULTS.md": "4e19b660b447072f4ecd91779d4932d921f12afca4c07a308e25a54c54c10544",
-    "GOALS.md": "aca0e9a52c54b0429122ecc5b32e737cc942c77b3e55364ee9233e4ee01a98d1",
+    "GOALS.md": "60a481141ea4919a9d9b1ffc0d320175b1f8e1a0eb6e6bf4201b1790e44b62e9",
     "DEPENDENCIES.md": "dd2b699e9cb2f43c1e84d4e9d01dfab5b400a3c6e27720b1827fbadcb2ec5908",
     "_process/BRIEF.md": "3a888154078fa5d5c2daca4899cc94c529bd231c4d25d13257b0fca753f6fa0f",
     "theories/becoming/README.md": "2737d243fabe1fbff80afff543d1d44011ca13d3f44459977d100f14620b5f3e",
@@ -605,6 +605,6 @@
     "theories/becoming/results/records/what-would-give-c.md": "fbb52efeaeed2c9a430820d0c949dbe53ea12bb7bb1ab715ab69938e15a6e3b5",
     "theories/becoming/results/atlas/CROSSWALK.md": "5a13a956a5c1669416f6dc9684db6f2c3840d5c58106ee6bbdd4598afa50566b",
     "theories/becoming/results/atlas/map.html": "eb7240e8f542ece0e7f8053b967d36685b59eead7de307fc4e891c11d72463b8",
-    "theories/README.md": "2f6011a844f8e8d054739da798fd58fa1ef87f2c0d94858858886d097609e5cb"
+    "theories/README.md": "7c756ad1afc95d16a39b44eb1e96bb43019a133f4eb7176f18ec722f8c9a86a5"
   }
 }
