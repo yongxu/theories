@@ -1,5 +1,5 @@
 <!-- Banner of 7 November 2026 (RV), AI-written navigation; the folder's text below it is unchanged. -->
-> An earlier folder, first written before the live account, [the theory of becoming](../becoming/ONE-PAGE.md). Its own assessments of standing and readiness are its view as of 25 September 2026, not the live account's. What became of its claims is in [the crosswalk](../becoming/results/atlas/crosswalk/memories-and-working-style.md), where every entry is an AI reading with no person's behind it and not carried is an outcome, not a defect; [the index](../README.md) lists the sixteen earlier folders.
+> An earlier folder, first written before the live account, [the theory of becoming](../becoming/ONE-PAGE.md). Its own assessments of standing and readiness are its view as of 25 September 2026, not the live account's. What became of its claims is in [the crosswalk](../becoming/results/atlas/crosswalk/memories-and-working-style.md), where every entry is an AI reading with no person's behind it and not carried is an outcome, not a defect; [the index](../README.md) lists the sixteen earlier folders. How the account grew from these folders and the writing before them is in [the lineage](../LINEAGE.md).
 
 # How Ren works, and what only the memories record
 
