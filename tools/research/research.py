@@ -189,7 +189,8 @@ def check_links(outputs, planned=()):
             p = ((ROOT / name).parent / unquote(part.path)).resolve()
             if not p.exists() and p not in available:
                 errors.append(f'{name}: missing link {target}')
-            elif part.fragment and p.suffix == '.md':
+            elif part.fragment and p.suffix == '.md' and not re.fullmatch(r'L\d+(-L\d+)?', part.fragment):
+                # a line (#L12) is GitHub's, not a heading's, as moves.check_links reads it
                 relative = str(p.relative_to(ROOT)) if p.is_relative_to(ROOT) else None
                 body = outputs.get(relative) if relative in planned else None
                 found = reading_catalogue.anchors_from_text(body) if body is not None else reading_catalogue.anchors(p)

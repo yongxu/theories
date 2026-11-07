@@ -1,203 +1,116 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 560" width="1300" height="560" role="img" aria-labelledby="lineage-title" font-family="Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 715" width="1000" height="715" role="img" aria-labelledby="lineage-title" font-family="Helvetica, Arial, sans-serif">
 <title id="lineage-title">How the account grew</title>
-<rect x="0.5" y="0.5" width="1299" height="559" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
-<text x="28.0" y="40.0" font-size="20" font-weight="bold" text-anchor="start" fill="#1c1917">How the account grew</text>
-<text x="28.0" y="62.0" font-size="12.5" text-anchor="start" fill="#57534e">Turning points from the first writings (2021) to the live account (8 November 2026), numbered as in the table below, each marked by what states it.</text>
-<rect x="60.0" y="150" width="283.2" height="210" fill="#f0eee9"/>
-<text x="201.6" y="142.0" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#57534e">2021 to 2025, compressed</text>
-<line x1="60.0" y1="300" x2="60.0" y2="306" stroke="#57534e"/>
-<text x="60.0" y="320.0" font-size="10.5" text-anchor="middle" fill="#57534e">2021</text>
-<line x1="116.6" y1="300" x2="116.6" y2="306" stroke="#57534e"/>
-<text x="116.6" y="320.0" font-size="10.5" text-anchor="middle" fill="#57534e">2022</text>
-<line x1="173.3" y1="300" x2="173.3" y2="306" stroke="#57534e"/>
-<text x="173.3" y="320.0" font-size="10.5" text-anchor="middle" fill="#57534e">2023</text>
-<line x1="229.9" y1="300" x2="229.9" y2="306" stroke="#57534e"/>
-<text x="229.9" y="320.0" font-size="10.5" text-anchor="middle" fill="#57534e">2024</text>
-<line x1="286.7" y1="300" x2="286.7" y2="306" stroke="#57534e"/>
-<text x="286.7" y="320.0" font-size="10.5" text-anchor="middle" fill="#57534e">2025</text>
-<rect x="343.2" y="150" width="259.6" height="210" fill="#f7f5f0"/>
-<text x="473.0" y="142.0" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#57534e">January to August 2026</text>
-<line x1="343.2" y1="300" x2="343.2" y2="306" stroke="#57534e"/>
-<text x="343.2" y="320.0" font-size="10.5" text-anchor="middle" fill="#57534e">2026-01</text>
-<line x1="406.5" y1="300" x2="406.5" y2="306" stroke="#57534e"/>
-<text x="406.5" y="320.0" font-size="10.5" text-anchor="middle" fill="#57534e">Mar</text>
-<line x1="471.9" y1="300" x2="471.9" y2="306" stroke="#57534e"/>
-<text x="471.9" y="320.0" font-size="10.5" text-anchor="middle" fill="#57534e">May</text>
-<line x1="537.4" y1="300" x2="537.4" y2="306" stroke="#57534e"/>
-<text x="537.4" y="320.0" font-size="10.5" text-anchor="middle" fill="#57534e">Jul</text>
-<rect x="602.8" y="150" width="637.2" height="210" fill="#f0eee9"/>
-<text x="921.4" y="142.0" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#57534e">1 September to 8 November 2026, widened</text>
-<line x1="602.8" y1="300" x2="602.8" y2="306" stroke="#57534e"/>
-<text x="602.8" y="320.0" font-size="10.5" text-anchor="middle" fill="#57534e">1 Sep</text>
-<line x1="734.0" y1="300" x2="734.0" y2="306" stroke="#57534e"/>
-<text x="734.0" y="320.0" font-size="10.5" text-anchor="middle" fill="#57534e">15 Sep</text>
-<line x1="883.9" y1="300" x2="883.9" y2="306" stroke="#57534e"/>
-<text x="883.9" y="320.0" font-size="10.5" text-anchor="middle" fill="#57534e">1 Oct</text>
-<line x1="1015.1" y1="300" x2="1015.1" y2="306" stroke="#57534e"/>
-<text x="1015.1" y="320.0" font-size="10.5" text-anchor="middle" fill="#57534e">15 Oct</text>
-<line x1="1174.4" y1="300" x2="1174.4" y2="306" stroke="#57534e"/>
-<text x="1174.4" y="320.0" font-size="10.5" text-anchor="middle" fill="#57534e">1 Nov</text>
-<line x1="1240.0" y1="300" x2="1240.0" y2="306" stroke="#57534e"/>
-<text x="1240.0" y="320.0" font-size="10.5" text-anchor="middle" fill="#57534e">8 Nov</text>
-<line x1="60" y1="300" x2="1240" y2="300" stroke="#1c1917" stroke-width="1.5"/>
-<rect x="921.4" y="328.0" width="6" height="12.7" fill="#a8a29e"/>
-<rect x="987.0" y="328.0" width="6" height="50.0" fill="#a8a29e"/>
-<rect x="1052.6" y="328.0" width="6" height="49.0" fill="#a8a29e"/>
-<rect x="1118.2" y="328.0" width="6" height="12.6" fill="#a8a29e"/>
-<rect x="1183.8" y="328.0" width="6" height="8.4" fill="#a8a29e"/>
-<text x="1240.0" y="392.0" font-size="10.5" text-anchor="end" fill="#57534e">Grey bars: the records' history entries by week (largest week 1810).</text>
-<path d="M260.2,282.0 L276.9,260.0 L309.8,260.0 L321.0,238.0 L500.9,282.0 L1052.6,238.0 L1118.2,282.0" fill="none" stroke="#2a78d6" stroke-width="1.6" stroke-dasharray="5 3"/>
-<line x1="105.0" y1="300" x2="105.0" y2="291.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="105.0" cy="282.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="105.0" y="285.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">1</text>
-<line x1="131.5" y1="300" x2="131.5" y2="291.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="131.5" cy="282.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="131.5" y="285.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">2</text>
-<line x1="225.1" y1="300" x2="225.1" y2="291.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="225.1" cy="282.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="225.1" y="285.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">3</text>
-<line x1="241.9" y1="300" x2="241.9" y2="269.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="241.9" cy="260.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="241.9" y="263.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">4</text>
-<line x1="246.4" y1="300" x2="246.4" y2="247.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="246.4" cy="238.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="246.4" y="241.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">5</text>
-<line x1="260.2" y1="300" x2="260.2" y2="291.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="260.2" cy="282.0" r="9" fill="#1c1917" stroke="#2a78d6" stroke-width="2.4"/>
-<text x="260.2" y="285.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">6</text>
-<line x1="262.4" y1="300" x2="262.4" y2="225.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="262.4" cy="216.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="262.4" y="219.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">7</text>
-<line x1="276.9" y1="300" x2="276.9" y2="269.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="276.9" cy="260.0" r="9" fill="#1c1917" stroke="#2a78d6" stroke-width="2.4"/>
-<text x="276.9" y="263.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">8</text>
-<line x1="277.9" y1="300" x2="277.9" y2="247.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="277.9" cy="238.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="277.9" y="241.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">9</text>
-<line x1="292.5" y1="300" x2="292.5" y2="291.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="292.5" cy="282.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="292.5" y="285.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">10</text>
-<line x1="309.8" y1="300" x2="309.8" y2="269.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="309.8" cy="260.0" r="9" fill="#1c1917" stroke="#2a78d6" stroke-width="2.4"/>
-<text x="309.8" y="263.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">11</text>
-<line x1="321.0" y1="300" x2="321.0" y2="291.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="321.0" cy="282.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="321.0" y="285.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">12</text>
-<line x1="321.0" y1="300" x2="321.0" y2="247.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="321.0" cy="238.0" r="9" fill="#1c1917" stroke="#2a78d6" stroke-width="2.4"/>
-<text x="321.0" y="241.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">13</text>
-<line x1="385.0" y1="300" x2="385.0" y2="291.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="385.0" cy="282.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="385.0" y="285.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">14</text>
-<line x1="455.8" y1="300" x2="455.8" y2="291.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="455.8" cy="282.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="455.8" y="285.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">15</text>
-<line x1="471.9" y1="300" x2="471.9" y2="269.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="471.9" cy="260.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="471.9" y="263.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">16</text>
-<line x1="475.1" y1="300" x2="475.1" y2="247.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="475.1" cy="238.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="475.1" y="241.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">17</text>
-<line x1="477.3" y1="300" x2="477.3" y2="225.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="477.3" cy="216.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="477.3" y="219.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">18</text>
-<line x1="500.9" y1="300" x2="500.9" y2="291.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="500.9" cy="282.0" r="9" fill="#1c1917" stroke="#2a78d6" stroke-width="2.4"/>
-<text x="500.9" y="285.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">19</text>
-<line x1="510.5" y1="300" x2="510.5" y2="269.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="510.5" cy="260.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="510.5" y="263.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">20</text>
-<line x1="552.4" y1="300" x2="552.4" y2="291.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="552.4" cy="282.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="552.4" y="285.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">21</text>
-<line x1="621.5" y1="300" x2="621.5" y2="291.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="621.5" cy="282.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="621.5" y="285.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">22</text>
-<line x1="865.2" y1="300" x2="865.2" y2="291.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="865.2" cy="282.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="865.2" y="285.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">23</text>
-<line x1="893.3" y1="300" x2="893.3" y2="291.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="893.3" cy="282.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="893.3" y="285.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">24</text>
-<line x1="893.3" y1="300" x2="893.3" y2="269.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="893.3" cy="260.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="893.3" y="263.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">25</text>
-<line x1="930.8" y1="300" x2="930.8" y2="291.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="930.8" cy="282.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="930.8" y="285.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">26</text>
-<line x1="958.9" y1="300" x2="958.9" y2="291.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="958.9" cy="282.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="958.9" y="285.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">27</text>
-<line x1="958.9" y1="300" x2="958.9" y2="269.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="958.9" cy="260.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="958.9" y="263.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">28</text>
-<line x1="977.6" y1="300" x2="977.6" y2="247.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="977.6" cy="238.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="977.6" y="241.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">29</text>
-<line x1="1033.8" y1="300" x2="1033.8" y2="291.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="1033.8" cy="282.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="1033.8" y="285.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">30</text>
-<line x1="1043.2" y1="300" x2="1043.2" y2="269.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="1043.2" cy="260.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="1043.2" y="263.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">31</text>
-<line x1="1052.6" y1="300" x2="1052.6" y2="247.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="1052.6" cy="238.0" r="9" fill="#1c1917" stroke="#2a78d6" stroke-width="2.4"/>
-<text x="1052.6" y="241.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">32</text>
-<line x1="1062.0" y1="300" x2="1062.0" y2="291.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="1062.0" cy="282.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="1062.0" y="285.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">33</text>
-<line x1="1062.0" y1="300" x2="1062.0" y2="225.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="1062.0" cy="216.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="1062.0" y="219.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">34</text>
-<line x1="1090.1" y1="300" x2="1090.1" y2="291.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="1090.1" cy="282.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="1090.1" y="285.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">35</text>
-<line x1="1090.1" y1="300" x2="1090.1" y2="269.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="1090.1" cy="260.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="1090.1" y="263.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">36</text>
-<line x1="1099.4" y1="300" x2="1099.4" y2="247.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="1099.4" cy="238.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="1099.4" y="241.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">37</text>
-<line x1="1118.2" y1="300" x2="1118.2" y2="291.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="1118.2" cy="282.0" r="9" fill="#1c1917" stroke="#2a78d6" stroke-width="2.4"/>
-<text x="1118.2" y="285.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">38</text>
-<line x1="1155.7" y1="300" x2="1155.7" y2="291.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="1155.7" cy="282.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="1155.7" y="285.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">39</text>
-<line x1="1174.4" y1="300" x2="1174.4" y2="269.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="1174.4" cy="260.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="1174.4" y="263.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">40</text>
-<line x1="1174.4" y1="300" x2="1174.4" y2="247.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="1174.4" cy="238.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="1174.4" y="241.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">41</text>
-<line x1="1193.1" y1="300" x2="1193.1" y2="291.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="1193.1" cy="282.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="1193.1" y="285.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">42</text>
-<line x1="1193.1" y1="300" x2="1193.1" y2="225.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="1193.1" cy="216.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="1193.1" y="219.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">43</text>
-<line x1="1202.5" y1="300" x2="1202.5" y2="269.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="1202.5" cy="260.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="1202.5" y="263.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">44</text>
-<line x1="1202.5" y1="300" x2="1202.5" y2="247.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="1202.5" cy="238.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="1202.5" y="241.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">45</text>
-<line x1="1221.3" y1="300" x2="1221.3" y2="291.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="1221.3" cy="282.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="1221.3" y="285.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">46</text>
-<line x1="1230.6" y1="300" x2="1230.6" y2="269.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="1230.6" cy="260.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="1230.6" y="263.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">47</text>
-<line x1="1230.6" y1="300" x2="1230.6" y2="247.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="1230.6" cy="238.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="1230.6" y="241.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">48</text>
-<circle cx="69" cy="464" r="8" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="84.0" y="468.0" font-size="11.5" text-anchor="start" fill="#1c1917">public</text>
-<circle cx="369" cy="464" r="8" fill="#ffffff" stroke="#1c1917" stroke-width="1.2"/>
-<text x="384.0" y="468.0" font-size="11.5" text-anchor="start" fill="#1c1917">private and unpublished</text>
-<circle cx="669" cy="464" r="8" fill="#ffffff" stroke="#1c1917" stroke-width="1.2" stroke-dasharray="2.5 2"/>
-<text x="684.0" y="468.0" font-size="11.5" text-anchor="start" fill="#1c1917">AI reconstruction</text>
-<circle cx="69" cy="490" r="8" fill="#ffffff" stroke="#2a78d6" stroke-width="2.4"/>
-<text x="84.0" y="494.0" font-size="11.5" text-anchor="start" fill="#1c1917">the selection thread, below</text>
-<text x="28.0" y="538.0" font-size="10.5" text-anchor="start" fill="#57534e">Generated by tools/research/lineage.py from lineage.json, the records and the crosswalk.</text>
+<rect x="0.5" y="0.5" width="999" height="714" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
+<text x="24.0" y="38.0" font-size="22" font-weight="bold" text-anchor="start" fill="#1c1917">How the account grew</text>
+<text x="24.0" y="64.0" font-size="15" text-anchor="start" fill="#57534e">Turning points from the first writings (2021) to the live account (8 November 2026) in six phases, each marked</text>
+<text x="24.0" y="83.0" font-size="15" text-anchor="start" fill="#57534e">by what states it; the major points titled and numbered as in the table below.</text>
+<rect x="50.0" y="150" width="73.6" height="360" fill="#efece6"/>
+<text x="86.8" y="170.0" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c1917">Early</text>
+<text x="86.8" y="188.0" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c1917">writings</text>
+<text x="86.8" y="496.0" font-size="12.5" text-anchor="middle" fill="#57534e">2021-10</text>
+<text x="86.8" y="511.0" font-size="12.5" text-anchor="middle" fill="#57534e">– 2023-12</text>
+<rect x="141.6" y="150" width="159.5" height="360" fill="#f6f3ed"/>
+<text x="221.4" y="170.0" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c1917">The selection</text>
+<text x="221.4" y="188.0" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c1917">mechanism</text>
+<text x="221.4" y="516.0" font-size="12.5" text-anchor="middle" fill="#57534e">2024-03 – 2025-08</text>
+<rect x="319.2" y="150" width="135.0" height="360" fill="#efece6"/>
+<text x="386.7" y="170.0" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c1917">The turns of</text>
+<text x="386.7" y="188.0" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c1917">2026</text>
+<text x="386.7" y="500.0" font-size="12.5" text-anchor="middle" fill="#57534e">2026-02 – 2026-07</text>
+<rect x="472.2" y="150" width="98.2" height="360" fill="#f6f3ed"/>
+<text x="521.3" y="170.0" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c1917">Folders,</text>
+<text x="521.3" y="188.0" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c1917">papers,</text>
+<text x="521.3" y="206.0" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c1917">predictions</text>
+<text x="521.3" y="496.0" font-size="12.5" text-anchor="middle" fill="#57534e">2026-09</text>
+<text x="521.3" y="511.0" font-size="12.5" text-anchor="middle" fill="#57534e">– 2026-10-06</text>
+<rect x="588.4" y="150" width="196.4" height="360" fill="#efece6"/>
+<text x="686.5" y="170.0" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c1917">The theory of</text>
+<text x="686.5" y="188.0" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c1917">becoming</text>
+<text x="686.5" y="500.0" font-size="12.5" text-anchor="middle" fill="#57534e">2026-10-09 – 2026-10-30</text>
+<rect x="802.7" y="150" width="147.3" height="360" fill="#f6f3ed"/>
+<text x="876.4" y="170.0" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c1917">Tests, editions,</text>
+<text x="876.4" y="188.0" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c1917">crosswalk</text>
+<text x="876.4" y="496.0" font-size="12.5" text-anchor="middle" fill="#57534e">2026-11-01</text>
+<text x="876.4" y="511.0" font-size="12.5" text-anchor="middle" fill="#57534e">– 2026-11-07</text>
+<line x1="50" y1="470" x2="950" y2="470" stroke="#1c1917" stroke-width="1.5"/>
+<rect x="567.6" y="540.0" width="7" height="14.0" fill="#a8a29e"/>
+<rect x="616.4" y="540.0" width="7" height="55.0" fill="#a8a29e"/>
+<rect x="681.9" y="540.0" width="7" height="53.9" fill="#a8a29e"/>
+<rect x="747.3" y="540.0" width="7" height="13.9" fill="#a8a29e"/>
+<rect x="827.3" y="540.0" width="7" height="9.2" fill="#a8a29e"/>
+<text x="950.0" y="615.0" font-size="13" text-anchor="end" fill="#57534e">Grey bars: the records' history entries by week (largest week 1810).</text>
+<path d="M180.9,454.0 L212.4,454.0 L274.1,454.0 L295.1,437.0 L406.2,454.0 L681.9,454.0 L747.3,454.0" fill="none" stroke="#2a78d6" stroke-width="1.8" stroke-dasharray="5 3"/>
+<circle cx="51.5" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="66.9" cy="437.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="120.9" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="146.6" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="155.0" cy="437.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="180.9" cy="454.0" r="7" fill="#1c1917" stroke="#2a78d6" stroke-width="2.4"/>
+<circle cx="185.0" cy="437.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="212.4" cy="454.0" r="7" fill="#1c1917" stroke="#2a78d6" stroke-width="2.4"/>
+<circle cx="214.1" cy="437.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="241.5" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="274.1" cy="454.0" r="7" fill="#1c1917" stroke="#2a78d6" stroke-width="2.4"/>
+<circle cx="295.1" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="295.1" cy="437.0" r="7" fill="#1c1917" stroke="#2a78d6" stroke-width="2.4"/>
+<circle cx="325.2" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="374.7" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="385.9" cy="437.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="388.2" cy="420.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="389.7" cy="403.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="406.2" cy="454.0" r="7" fill="#1c1917" stroke="#2a78d6" stroke-width="2.4"/>
+<circle cx="412.9" cy="437.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="442.2" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="477.8" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="550.7" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="559.1" cy="437.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="559.1" cy="420.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="570.4" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="588.4" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="588.4" cy="437.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="607.1" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="663.2" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="672.5" cy="437.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="681.9" cy="454.0" r="7" fill="#1c1917" stroke="#2a78d6" stroke-width="2.4"/>
+<circle cx="691.2" cy="437.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="691.2" cy="420.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="719.3" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="719.3" cy="437.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="728.6" cy="420.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="747.3" cy="454.0" r="7" fill="#1c1917" stroke="#2a78d6" stroke-width="2.4"/>
+<circle cx="784.7" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="802.7" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="802.7" cy="437.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="851.8" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="851.8" cy="437.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="876.4" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="876.4" cy="437.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="925.5" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="950.0" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="950.0" cy="437.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<line x1="180.9" y1="445.0" x2="180.9" y2="377.0" stroke="#2a78d6" stroke-width="1"/>
+<text x="180.9" y="372.0" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">6 · One value as power</text>
+<line x1="212.4" y1="445.0" x2="212.4" y2="355.0" stroke="#2a78d6" stroke-width="1"/>
+<text x="212.4" y="350.0" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">8 · The loop written down</text>
+<line x1="274.1" y1="445.0" x2="274.1" y2="333.0" stroke="#2a78d6" stroke-width="1"/>
+<text x="274.1" y="328.0" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">11 · Meta-attractor captures selection</text>
+<line x1="295.1" y1="428.0" x2="295.1" y2="311.0" stroke="#2a78d6" stroke-width="1"/>
+<text x="295.1" y="306.0" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">13 · A second-order attractor</text>
+<line x1="406.2" y1="445.0" x2="406.2" y2="377.0" stroke="#2a78d6" stroke-width="1"/>
+<text x="406.2" y="372.0" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">19 · Moloch in the mind</text>
+<line x1="588.4" y1="445.0" x2="588.4" y2="355.0" stroke="#57534e" stroke-width="1"/>
+<text x="588.4" y="350.0" font-size="14" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">27 · The theory of becoming named</text>
+<line x1="681.9" y1="445.0" x2="681.9" y2="377.0" stroke="#2a78d6" stroke-width="1"/>
+<text x="681.9" y="372.0" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">32 · Capture on the spine</text>
+<line x1="747.3" y1="445.0" x2="747.3" y2="333.0" stroke="#2a78d6" stroke-width="1"/>
+<text x="747.3" y="328.0" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">38 · T7's bridge fails</text>
+<circle cx="59.0" cy="640.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<text x="76.0" y="645.0" font-size="14" text-anchor="start" fill="#1c1917">public (48)</text>
+<path d="M359.0,632.0 L367.0,640.0 L359.0,648.0 L351.0,640.0 z" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
+<text x="376.0" y="645.0" font-size="14" text-anchor="start" fill="#1c1917">private and unpublished (none so far)</text>
+<rect x="652.0" y="633.0" width="14" height="14" fill="#ffffff" stroke="#1c1917" stroke-width="1.3" stroke-dasharray="3 2"/>
+<text x="676.0" y="645.0" font-size="14" text-anchor="start" fill="#1c1917">AI reconstruction (none so far)</text>
+<circle cx="59.0" cy="667.0" r="7" fill="#1c1917" stroke="#2a78d6" stroke-width="2.4"/>
+<text x="76.0" y="672.0" font-size="14" text-anchor="start" fill="#1c1917">the selection thread, below</text>
+<text x="24.0" y="697.0" font-size="12" text-anchor="start" fill="#57534e">Generated by tools/research/lineage.py from lineage.json, the records and the crosswalk.</text>
 </svg>
