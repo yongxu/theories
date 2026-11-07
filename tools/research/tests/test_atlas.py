@@ -34,6 +34,7 @@ FILES = {
     'experiments/history/Old.lean': 'theorem only_in_history : True := trivial\n',
     'experiments/periphery/Draft.lean': 'theorem never_added : True := trivial\n',
     'experiments/tests/t7/FROZEN.sha256': '0 design.md\n',
+    'theories/early/README.md': '# An earlier folder\n',
 }
 TRACKED = (LEAF, 'experiments/history/Old.lean')
 RECORDS = [
@@ -409,9 +410,22 @@ class CorrespondenceTests(AtlasCase):
         self.assertEqual(data['correspondence_groups'][0]['by_carried']['not-carried'], 1)
         self.assertEqual(data['correspondences'][0]['targets'][0]['standing']['status'], 'recorded-checked')
         folders = pages[atlas.FOLDERS]
+        self.assertIn('The one folders beside', folders)  # the count is the groups'
         self.assertTrue(folders.startswith(atlas.GENERATED + '\n'))
         self.assertIn('| [An earlier folder](early/README.md) | theory | 3 | 2 | 0 | 0 | 0 | 1 | 0 | '
                       '[what became of it](becoming/results/atlas/CROSSWALK.md#cxg-early) |', folders)
+
+
+    def test_the_index_lists_only_the_earlier_folders(self):
+        domain = group(id='cxg-greek', domain='greek-roman', title={'en': 'Greek thought'}, kind='domain',
+                       coverage={'present': [], 'absent': []})
+        built = atlas.build({'dynamics': [], 'correspondences': [], 'correspondence_groups': [group(), domain]}, VOCABULARY, RECORDS)
+        page = atlas.folders_page(built)
+        self.assertIn('(early/README.md)', page)
+        self.assertNotIn('Greek thought', page)
+
+    def test_an_earlier_folder_group_names_its_folder(self):
+        self.assertTrue(any('cxg-<its folder>' in e for e in self.problems(reading(group='cxg-gone'), groups=[group(id='cxg-gone')])))
 
 
 class CheckTests(AtlasCase):

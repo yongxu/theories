@@ -458,7 +458,7 @@ def stub_lines(path, kind, goal_records):
             lines += ['- ' + ''.join(anchor_lines(*keep)) + link('GOALS.md#' + g['id'], path, registry.en(t)) + f' (`{g["state"]}`)']
         return lines + ['']
     if path == THEORY + '/README.md':
-        lines += ['The canonical entry is ' + link(CANONICAL, path, 'The Theory of Becoming') + '; the opening, in its author\'s first person and revised in place since (each revised passage named under its heading), is ' + link(THEORY + '/OPENING.md', path, 'OPENING.md') + '.', '']
+        lines += ['The canonical entry is ' + link(CANONICAL, path, 'The Theory of Becoming') + '; the opening, in its author\'s first person and revised in place since 1 November 2026 (each revised passage named under its heading), is ' + link(THEORY + '/OPENING.md', path, 'OPENING.md') + '.', '']
     lines += ['This page earlier repeated the register of results. It is kept so that links to it resolve. The single register is '
               + link('RESULTS.md', path, 'RESULTS.md') + '; directions and authorized scopes are in ' + link('GOALS.md', path, 'GOALS.md')
               + ', open questions in ' + link('OPEN-QUESTIONS.md', path, 'OPEN-QUESTIONS.md') + ' and connections between results in '
@@ -593,8 +593,9 @@ def render_views(records):
             unmarked = [g for g in goal_records if g.get('state') == 'unmarked']
             lines += anchor_lines('decisions-pending-ren')
             lines += [H('##', 'Beyond the readings', 'Beyond the readings'), '',
-                      'The readings are decided by argument and can be revised by a better one. What changes only through a proposal is the author\'s authorizations: the goal scopes and their states, and the licence. '
-                      'The body of the opening and the curated generativity chain began as the author\'s text and are revised on argument, each revision named where it is made. The choice of results featured on the home page is open to revision on argument.', '']
+                      'The readings are decided by argument and can be revised by a better one. What waits on the author is his authorizations and releases: the goal scopes and their states, the licence, pushing to the public remote, '
+                      'who is sent what, and money or machine time for runs. The body of the opening and the curated generativity chain began as the author\'s text '
+                      'and are revised on argument, the opening\'s revisions named under its heading and the chain\'s in its maintenance record. The choice of results featured on the home page is open to revision on argument.', '']
             lines += ['- ' + link(x['path'], path, x['label']) for x in groups['pending_ren']]
             if unmarked:
                 lines += ['- The state of each scope not yet marked: ' + ', '.join(link('GOALS.md#' + g['id'], path, en(g['title'])) for g in unmarked) + '.']

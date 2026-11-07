@@ -19,9 +19,9 @@ The theory is written in four layers, each of which can be read through on its o
 1. [One page](theories/becoming/ONE-PAGE.md) ([中文](theories/becoming/ONE-PAGE.zh.md)): one case, the root, the whole at a glance, with how each part stands and what would show it wrong, then the ethics' two premises, the open question, the evidence and what is not yet done.
 2. [The Theory of Becoming](theories/becoming/THE-THEORY-OF-BECOMING.md) ([中文](theories/becoming/THE-THEORY-OF-BECOMING.zh.md)): the overview, the whole argument in one account, with one case start to finish, each paragraph linking to the chapter that states it.
 3. Eight chapters, in order: [the root](theories/becoming/chapters/01-ROOT.md) (continuation relative to a class), [the map](theories/becoming/chapters/02-MAP.md) (generation, keeping and degeneration), [knowing](theories/becoming/chapters/03-KNOWING.md), [life](theories/becoming/chapters/04-LIFE.md), [collectives](theories/becoming/chapters/05-COLLECTIVES.md), [the classical texts](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) (in Chinese), [significance](theories/becoming/chapters/07-SIGNIFICANCE.md) (ethics and alignment) and [method](theories/becoming/chapters/08-METHOD.md). Each result is stated once, in its home section.
-4. The evidence, not for reading through: [the theory graph](theories/becoming/results/THEORY-GRAPH.md) (the grammar's concepts, the results, the Lean modules and the corpus texts, with the edges between them), [the results](RESULTS.md) with their records, [open questions](OPEN-QUESTIONS.md), the Lean package, the studies.
+4. The evidence, not for reading through: [the theory graph](theories/becoming/results/THEORY-GRAPH.md) (the grammar's concepts, the results, the Lean modules, the corpus texts, the chapter sections that state results and the review dossiers, with the edges between them: a dependence, a citation or a registered reading, not an agreement in meaning), [the results](RESULTS.md) with their records, [open questions](OPEN-QUESTIONS.md), the Lean package, the studies.
 
-Pages for a reader who arrives with one question or field hang off this path and add no result: [one argument, end to end](theories/becoming/ONE-ARGUMENT.md), about twenty-five to thirty-five minutes, [the free-energy principle](theories/becoming/FREE-ENERGY-PRINCIPLE.md), [a collective's course](theories/becoming/COLLECTIVE-DIRECTION.md) and [the sciences](theories/becoming/review/SCIENCES.md).
+Pages for a reader who arrives with one question or field hang off this path and add no result: [one argument, end to end](theories/becoming/ONE-ARGUMENT.md), about twenty-eight to thirty-seven minutes, [the free-energy principle](theories/becoming/FREE-ENERGY-PRINCIPLE.md), [a collective's course](theories/becoming/COLLECTIVE-DIRECTION.md) and [the sciences](theories/becoming/review/SCIENCES.md).
 
 Reviewers start with [the review packet](theories/becoming/review/README.md) ([中文](theories/becoming/review/README.zh.md)): a dossier for scholars of classical Chinese texts, one for scholars of Buddhist thought, one for logicians, one for philosophers on the ethics, one for researchers in AI alignment, one for scientists, and a blind re-coding of a sample of the corpus classification.
 
@@ -29,7 +29,7 @@ The [README](README.md) opens with a statement of the whole in the first person.
 
 ## How it got here
 
-The ideas began in writing from 2021 on: the sixteen earlier theory folders below, with their originals in `sources/`. The repository's first commit is from 6 September 2026, and it holds 6,074 commits in all by 7 November 2026; the formal theory has been built since October 2026. The history is part of the work, and nothing is deleted:
+The ideas began in writing from 2021 on: the sixteen earlier theory folders below, with their originals in `sources/` but for the chat logs, memory exports and recorded conversations, which are not published. The repository's first commit is from 6 September 2026, and it holds more than 6,000 commits by 7 November 2026; the formal theory has been built since October 2026. The history is part of the work, and nothing is deleted:
 
 - **Commits.** `git log` shows each step. Where an instruction governed a step, the commit message quotes it.
 - **`history/` folders.** Only the latest version of a document stays live. What it replaces moves byte for byte to a sibling `history/` folder, recorded in a manifest under [`_process/architecture/`](_process/architecture/), so earlier versions stay readable and linked.
@@ -58,7 +58,7 @@ A fresh run compiles more than a thousand Lean steps and takes a while; `BECOMIN
 | Path | What it holds |
 |---|---|
 | `theories/becoming/` | The current theory: the one page, the overview, the eight chapters (`chapters/`), records (`results/records/`), the theory graph and generated results pages, `history/` |
-| `theories/<folder>/` | The earlier theory folders (below), not live; what each claimed and what became of it is in [the crosswalk](theories/becoming/results/atlas/CROSSWALK.md) |
+| `theories/<folder>/` | The earlier theory folders (below, and [their index](theories/README.md)), not live; what each claimed and what became of it is in [the crosswalk](theories/becoming/results/atlas/CROSSWALK.md) |
 | `experiments/` | Executable research; the Lean package Becoming is under `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/` |
 | `_process/` | Studies (`research/`), the work board, directives, workflow, architecture receipts, `history/` |
 | `sources/` | Imported originals and directive records, byte-preserved |
@@ -72,7 +72,7 @@ A fresh run compiles more than a thousand Lean steps and takes a while; `BECOMIN
 
 ## The earlier theory folders
 
-The live account does not gather them whole. What each claimed in its own terms, and whether the account states it, takes it up and says otherwise, or does not state it, is in [the crosswalk](theories/becoming/results/atlas/CROSSWALK.md), claim by claim, with the twelve domains of thought read the same way; [the connection map](theories/becoming/results/atlas/map.html) draws it. Every entry is an AI reading, and no person has read them.
+The live account does not gather them whole. What each claimed in its own terms, and whether the account states it, takes it up and says otherwise, or does not state it, is in [the crosswalk](theories/becoming/results/atlas/CROSSWALK.md), claim by claim, with the twelve domains of thought read the same way; [the index of the folders](theories/README.md) counts what became of each, and [the connection map](theories/becoming/results/atlas/map.html) draws it. Every entry is an AI reading, and no person has read them.
 
 | Folder | In one line |
 |---|---|

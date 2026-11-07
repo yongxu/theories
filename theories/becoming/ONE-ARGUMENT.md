@@ -1,6 +1,6 @@
 # One argument, end to end
 
-*About twenty-five to thirty-five minutes to read.*
+*About twenty-eight to thirty-seven minutes to read.*
 
 *AI-written, 2 November 2026, revised 3 November. No human has reviewed it. It adds no result: every law it names is stated once, in the home section it links, and beyond applying those laws to the fishery it says no more of them.*
 
