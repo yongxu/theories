@@ -29,6 +29,9 @@ jobs:
             /_process/research-config.json
             /_process/navigation/
             /experiments/README.md
+            /experiments/*/README.md
+            /experiments/critical-mass-located/DESIGN.md
+            /experiments/reform-events/HOLD.md
       - name: Test the site builder
         run: python3 -B -m unittest tools.research.tests.test_site
       - name: Build the site
