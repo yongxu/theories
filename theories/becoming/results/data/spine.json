@@ -84,6 +84,7 @@
     "words": [
      "in the model proved",
      "beyond the model conjectured, on frozen tests: of the three settings passed, one of real data",
+     "failed at the instrument's floor (MQ1), after a salt shock (MQ2 C1), in fish stocks under held catches (MQ3), in yeast at constant regimes and past the fold",
      "on yeast values not read before no frozen test of the need or its fates has passed",
      "no field test of a need measured in advance"
     ]
@@ -92,7 +93,7 @@
     "title": "持续担保联合取用",
     "words": [
      "在模型中已证明",
-     "模型之外是猜想：在三种情形中通过",
+     "模型之外是猜想：在三种情形中通过，即一项酵母实验中对拟合留出、但未对分析者留出的诸体制，以及两项模拟",
      "在四种中未通过，三种在真实酵母中，一种在鱼类种群中",
      "没有对事先测得之需要的实地检验"
     ]
@@ -114,7 +115,7 @@
     "title": "一个可更新的缘在取用之下的状态，就是它的水平、近来的给予与一个滞后，其位置在读数据之前定下",
     "words": [
      "猜想；四项冻结的鱼类种群检验中，一项通过，一项未通过其整体状态裁决，一项未达其冻结界限",
-     "其原先的措辞“凡量度所及”败于蛹与成虫这一变量更少的类"
+     "在面粉甲虫的培养物上，其原先的措辞“凡量度所及”败于蛹与成虫这一变量更少的类"
     ]
    }
   },
@@ -127,7 +128,7 @@
     "words": [
      "the law for optima proved",
      "the clause on trained systems conjectured, with partial support",
-     "as first worded for any condition sharing no units, failing where the learner reads the condition"
+     "its second forbidden case … as first worded for any condition sharing no units, failing where the learner reads the condition"
     ]
    },
    "zh": {
@@ -135,7 +136,7 @@
     "words": [
      "对最优解已证明",
      "对训练出的系统是猜想，得到部分支持",
-     "关于学习者会保住存量的预测未通过"
+     "所禁止的情形之一，最初就任何不共单位之缘而措辞，在学习者读取该缘的一次计算流中不成立"
     ]
    }
   },
@@ -173,8 +174,8 @@
    "zh": {
     "title": "次序为每一个把一切都计为正的评价者所共有",
     "words": [
-     "对净加权已证明归约；界是猜想",
-     "在角色扮演的判断上，第一项冻结检验每条规则都未通过，第二项四条中通过两条"
+     "对净加权已证明归约；界是猜想；把一切都计为正，是 C 的前提换了位置",
+     "在角色扮演的判断上，第一项冻结检验每条规则都未通过，第二项四条中通过两条；人类评价者未经检验"
     ]
    }
   },
@@ -186,7 +187,7 @@
     "title": "A break is seen coming only through what couples into what breaks",
     "words": [
      "the invisible half proved on the World model",
-     "beyond these models, conjectured",
+     "one law across domains, and \"only where\" beyond these models, conjectured",
      "three frozen seabird tests did not reject it at their thresholds",
      "EW2 at low power, estimates in the refuting direction",
      "none establishes conditional independence"
@@ -208,17 +209,17 @@
    "en": {
     "title": "A measure read from what it selects outlives its refutation",
     "words": [
-     "the lock outliving a growing unread coordinate, proved",
+     "in the model only invariance under what the loop does not read, and the lock outliving a growing unread coordinate, proved, both without noise",
      "that actual metrics are so formed conjectured",
      "every frozen verdict passed and the bridge failed",
-     "occurred in this system, counting against that case as a claim about trained judges"
+     "02's fourth forbidden case … occurred in this system, counting against that case as a claim about trained judges"
     ]
    },
    "zh": {
     "title": "一个从它所选择者读出的度量，存续得比对它的驳倒更久",
     "words": [
-     "锁定对任何类型证明；实际的度量是猜想",
-     "每一冻结裁决都通过",
+     "实际的度量是猜想",
+     "在一个训练出的系统中，每一冻结裁决都通过",
      "桥接不成立",
      "故 T7 所禁止的一种情形发生了，计入此情形作为关于训练出的评判者之主张的反证"
     ]
@@ -239,8 +240,7 @@
    "zh": {
     "title": "对生命而言，道是生生",
     "words": [
-     "已论证；未决",
-     "以及 C 的理由"
+     "已论证；未决： … P2 与 P4 … 以及 C 的理由"
     ]
    }
   }

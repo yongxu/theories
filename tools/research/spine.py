@@ -117,8 +117,14 @@ def check(s):
         if text is None:
             errors.append(f'spine.json: home missing: {path}')
             return
-        if norm(phrase) not in norm(where if where is not None else text):
-            errors.append(f'spine.json: {path} no longer holds: {phrase!r}')
+        # a phrase elided with " … " holds where each of its parts stands in the home, in order
+        body, at = norm(where if where is not None else text), 0
+        for part in norm(phrase).split(' … '):
+            found = body.find(part.strip(), at)
+            if found < 0:
+                errors.append(f'spine.json: {path} no longer holds: {phrase!r}')
+                break
+            at = found + len(part.strip())
 
     for key in s.get('order', []):
         if key not in theory_graph.REGION_TITLES:
@@ -188,6 +194,7 @@ def radius(n):
 
 
 NO_LINE_START = set('，。；：、）」”！？》')
+NO_LINE_END = set('（「“《')
 
 
 def wrap(text, width, lang):
@@ -202,7 +209,12 @@ def wrap(text, width, lang):
                 line, size = '', 0
             line += token
             size += w
-        return lines + ([line] if line else [])
+        lines += [line] if line else []
+        # nor ends with an opening bracket: it moves to the next line
+        for i in range(len(lines) - 1):
+            while lines[i] and lines[i][-1] in NO_LINE_END:
+                lines[i], lines[i + 1] = lines[i][:-1], lines[i][-1] + lines[i + 1]
+        return [l for l in lines if l]
     lines, line = [], ''
     for word in text.split():
         if line and len(line) + 1 + len(word) > width:
