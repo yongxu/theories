@@ -153,7 +153,7 @@ class RepositoryConfigTests(unittest.TestCase):
         for target, _ in cfg['nav']:
             self.assertTrue(target in site.SPECIAL or target in cfg['pages'], target)
         for w in cfg['ways_in']:
-            self.assertTrue((ROOT / w['path'].split('#')[0]).is_file(), w['path'])
+            self.assertTrue(w['path'] in site.SPECIAL or (ROOT / w['path'].split('#')[0]).is_file(), w['path'])
 
 
 if __name__ == '__main__':
