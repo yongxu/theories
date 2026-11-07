@@ -165,6 +165,10 @@ ROOTF = '_process/research/2026-10-05-generative-foundation-review/root-foundati
 TESTS = {
     'test_atlas': (),
     'test_connection_map': (DATA + 'shared-laws.json',),
+    # the Chinese fronts' navigation line: the fronts, their English editions and the line's targets
+    'test_chinese_fronts': ('README.zh.md', 'README.md', 'GLOSSARY.zh.md', 'GLOSSARY.md', 'theories/LINEAGE.zh.md', 'theories/LINEAGE.md',
+                            'theories/becoming/*.md', 'theories/becoming/review/README*.md',
+                            'theories/becoming/chapters/06-CLASSICAL-TEXTS.md'),
     # spine.json's phrases at their homes are checked by every render; the test's live check repeats that one
     'test_spine': (),
     # lineage.json's evidence is checked by every render; the test reads fixtures and the live data's shape

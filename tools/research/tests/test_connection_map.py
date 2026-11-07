@@ -209,18 +209,22 @@ class SiteTests(unittest.TestCase):
         self.assertTrue(body.lstrip().startswith('<nav class="sitebar" aria-label="Site"><a class="home" href="index.html">The Theory of Becoming</a>'
                                                  '<a href="chapters.html">Chapters</a></nav>'))
         noscript = re.search(r'<noscript>(.*?)</noscript>', page, re.S).group(1)
-        data = self.data(page)
-        self.assertIn(html.escape(data['lede']), noscript)
-        self.assertIn(html.escape(data['sublede']), noscript)
-        self.assertTrue(data['lede'].startswith('1 claims from 1 earlier folders and 1 domains of thought'))
+        lede, sub = cm._ledes(self.data(page))
+        self.assertIn(f'<p class="lede" id="lede">{html.escape(lede)}</p>', page)  # written in, the same with or without script
+        self.assertIn(f'<p class="note small" id="sublede">{html.escape(sub)}</p>', page)
+        self.assertIn('<li><b>1</b>carried</li>', page)
+        self.assertTrue(lede.startswith('1 claims from 1 earlier folders and 1 domains of thought'))
+        self.assertEqual(page.count('<h1>'), 1)
         self.assertIn('<a href="crosswalk.html">the crosswalk</a>', noscript)  # the site's page for the crosswalk
         self.assertNotIn('<script', noscript)
+        with self.assertRaises(ValueError):
+            cm.site_map(self.out, self.base, nav=[('Chapters',)])
 
     def test_the_repository_page_has_the_summary_and_no_site_line(self):
         page = cm.page(cm.payload(atlas(entry('cx-a', 'cxg-early')), GRAPH, SHARED))
         self.assertNotIn('class="sitebar"', page)
         self.assertIn('<a href="../../../../' + cm.CROSSWALK_PATH + '">the crosswalk</a>', page)
-        self.assertIn("textContent=D.lede", page)
+        self.assertNotIn("getElementById('lede').textContent", page)  # the header is written in, not by the script
         fragment = cm.fragment(cm.payload(atlas(entry('cx-a', 'cxg-early')), GRAPH, SHARED, base=None))
         self.assertIn('the crosswalk (CROSSWALK.md)', fragment)  # no repository links where links are text
 

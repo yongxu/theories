@@ -240,8 +240,8 @@ def _ledes(data: dict) -> tuple[str, str]:
            'that text.')
     second = (checks or {}).get('second_critic')
     if second:
-        sub += (f' A random check of {second["sampled"]} entries estimates that about {second["estimate_percent"]["label"]}% of all carry '
-                f'a wrong label or target role and {second["estimate_percent"]["fails"]}% a wrong reading (How it was read).')
+        sub += (f' A random check of {second["sampled"]} entries estimates that about {second["estimate_percent"]["label"]:g}% of all carry '
+                f'a wrong label or target role and {second["estimate_percent"]["fails"]:g}% a wrong reading (How it was read).')
     return lede, sub
 
 
@@ -259,17 +259,22 @@ def _href(data: dict, path: str) -> str | None:
     return (site[file] + mark + anchor) if file in site else data['base'] + path
 
 
-def _noscript(data: dict) -> str:
-    """What the page says without its script: the lede, the line under it, the counts, and where the same claims are
-    listed as text."""
+def _header(data: dict) -> str:
+    """The page's header with its lede, counts and the line under it written in: the same with or without script."""
     lede, sub = _ledes(data)
     stats = ''.join(f'<li><b>{data["totals"]["carried"].get(k, 0):,}</b>{label}</li>' for k, label in STATS)
+    return (BODY.replace('<p class="lede" id="lede"></p>', f'<p class="lede" id="lede">{html.escape(lede)}</p>')
+            .replace('<ul class="stats" id="stats"></ul>', f'<ul class="stats" id="stats">{stats}</ul>')
+            .replace('<p class="note small" id="sublede"></p>', f'<p class="note small" id="sublede">{html.escape(sub)}</p>'))
+
+
+def _noscript(data: dict) -> str:
+    """What a reader without script is told beyond the header: that the map is drawn by its script, and where the same
+    claims are listed as text."""
     href = _href(data, CROSSWALK_PATH)
     crosswalk = f'<a href="{html.escape(href)}">the crosswalk</a>' if href else 'the crosswalk (CROSSWALK.md)'
-    return (f'<noscript><div class="wrap"><p class="eyebrow">The Theory of Becoming · connection map</p>'
-            f'<h1>How it connects, and where it does not</h1><p class="lede">{html.escape(lede)}</p><ul class="stats">{stats}</ul>'
-            f'<p class="note small">{html.escape(sub)}</p><p class="note">This map is drawn by its script. Without it, the same claims '
-            f'are listed as text, with each target’s standing, in {crosswalk}.</p></div></noscript>')
+    return (f'<noscript><div class="wrap"><p class="note">This map is drawn by its script. Without it, the same claims are listed '
+            f'as text, with each target’s standing, in {crosswalk}.</p></div></noscript>')
 
 
 def _blob(data: dict) -> str:
@@ -279,9 +284,7 @@ def _blob(data: dict) -> str:
 
 
 def _body(data: dict) -> str:
-    lede, sub = _ledes(data)
-    data = {**data, 'lede': lede, 'sublede': sub}
-    return f'{_noscript(data)}\n{BODY}\n<script type="application/json" id="cx-data">{_blob(data)}</script>\n<script>{SCRIPT}</script>\n'
+    return f'{_header(data)}\n{_noscript(data)}\n<script type="application/json" id="cx-data">{_blob(data)}</script>\n<script>{SCRIPT}</script>\n'
 
 
 def fragment(data: dict) -> str:
@@ -323,6 +326,9 @@ def site_map(out_dir: str | Path, link_base: str, site_paths: dict[str, str] | N
     the shared laws' data as rendered in this checkout, so a site is built after a render. Above the map stands the site's
     line: its name linking `home`, then `nav`'s (label, href) pairs, each href relative to map.html."""
     check_site(link_base, site_paths)
+    if not isinstance(home, str) or any(not (isinstance(pair, (tuple, list)) and len(pair) == 2 and all(isinstance(x, str) for x in pair))
+                                         for pair in (nav or [])):
+        raise ValueError('home is a string and nav a list of (label, href) strings')
     atlas_data = json.loads((ROOT / atlas_tool.DATA).read_text(encoding='utf-8'))
     graph = json.loads((ROOT / theory_graph.GRAPH).read_text(encoding='utf-8'))
     data = payload(atlas_data, graph, _shared(), base=link_base)
@@ -504,10 +510,6 @@ function link(path,label){const text=label||path;if(!path)return text;return D.b
 function shown(e){return S.out.has(e.carried)&&(!e.relation||S.rel.has(e.relation))&&(e.relation!=='agreement'||S.of.has(e.agreement_of));}
 
 const stated=(T.carried['carried']||0)+(T.carried['carried-in-part']||0);const of=T.agreement_of;
-document.getElementById('lede').textContent=D.lede;
-document.getElementById('sublede').textContent=D.sublede;
-const stats=document.getElementById('stats');
-[['carried','carried'],['carried-in-part','in part'],['changed','changed'],['fresh-reading','proposed here'],['history-only','only in history'],['not-carried','not carried']].forEach(p=>stats.append(el('li',{},el('b',{},fmt(T.carried[p[0]]||0)),p[1])));
 
 const VIEWS=[['loom','The loom'],['meet','Where they meet'],['root','The root’s reach'],['corpus','The corpus'],['loose','Loose ends'],['method','How it was read']];
 const nav=document.getElementById('views');VIEWS.forEach(v=>nav.append(el('a',{href:'#'+v[0],'data-v':v[0]},v[1])));

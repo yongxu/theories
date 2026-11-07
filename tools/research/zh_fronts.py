@@ -3,8 +3,8 @@
 
 Every Chinese front opens with the same line: its English edition, then the Chinese ways in in one order, the page
 itself in bold and not linked. The line is built here, so the hand-written pages, the generated lineage (lineage.py
-calls `nav_line`) and the check agree. Chapter 6 is written in Chinese and is linked, but it is a chapter, not a front,
-and carries no such line.
+is to call `nav_line`, and its test to check it) and the check agree. Chapter 6 is written in Chinese and is linked,
+but it is a chapter, not a front, and carries no such line.
 
 usage: python3 -B tools/research/zh_fronts.py   (prints each front whose line differs, exits 1 if any)
 """
@@ -52,9 +52,16 @@ def nav_line(page: str) -> str:
     return ' · '.join(items)
 
 
+OPENING = 12  # the line stands among a front's opening lines, under its title
+
+
 def current(page: str, root: Path = ROOT) -> str | None:
-    """The page's navigation line as it stands: its first line opening with its English link."""
-    lines = (root / page).read_text(encoding='utf-8').split('\n')
+    """The page's navigation line as it stands: the first of its opening lines that opens with its English link, or
+    None where it has none or the page is missing."""
+    path = root / page
+    if not path.is_file():
+        return None
+    lines = path.read_text(encoding='utf-8').split('\n')[:OPENING]
     return next((line for line in lines if line.startswith('[English](')), None)
 
 
