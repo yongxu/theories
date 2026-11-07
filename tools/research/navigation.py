@@ -436,8 +436,12 @@ PAGES = [('README.md', 'The Theory of Becoming', None, 'home'),
          (THEORY + '/README.md', 'The Theory of Becoming', 'The Theory of Becoming / 生成／变化之论', 'stub'),
          (CHAPTERS + '/CLAIMS.md', 'Registered claims and historical ledger', '已登记主张与历史账本 / Registered claims and historical ledger', 'stub'),
          (THEORY + '/results/ROADMAP.md', 'Current research directions', '当前研究路线 / Current research directions', 'roadmap')]
-NAV = [('README.md', 'Home'), ('MAP.md', 'Start here'), (THEORY + '/ONE-PAGE.md', 'One page'), (CANONICAL, 'The theory'), (CHAPTERS + '/README.md', 'Chapters'), ('RESULTS.md', 'Results'), ('GOALS.md', 'Scopes'), ('DEPENDENCIES.md', 'Connections'),
-       ('OPEN-QUESTIONS.md', 'Open questions'), ('_process/RESULT-WORKFLOW.md', 'Contribute')]
+# The navigation line on every generated page: the ways a reader goes, then the register and what is open. The scopes, the
+# connections list and the workflow for contributors are linked from README's lower sections (RW, 8 November 2026).
+NAV = [('README.md', 'Home'), ('MAP.md', 'Start here'), (THEORY + '/ONE-PAGE.md', 'One page'), (THEORY + '/ONE-PAGE.zh.md', '中文'),
+       (CANONICAL, 'The theory'), (CHAPTERS + '/README.md', 'Chapters'), (THEORY + '/USES.md', 'Uses'), ('TESTS.md', 'Tests'),
+       (THEORY + '/results/THEORY-GRAPH.md', 'Graph'), ('RESULTS.md', 'Results'), ('GLOSSARY.md', 'Glossary'),
+       (THEORY + '/review/README.md', 'Reviewers'), ('OPEN-QUESTIONS.md', 'Open questions')]
 WHERE_TO_LOOK = [
     '- Same theorem under two names: `trace-law-equivalence`, `derivation-soundness`. Preserve historical names and receipts; count the underlying result once.',
     '- Similar statements with different semantics: `branching-target-uniqueness`, `joint-target-uniqueness`. Their local test languages differ.',

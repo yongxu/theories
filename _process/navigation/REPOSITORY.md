@@ -3,7 +3,7 @@ We investigate how relations form, persist and change within one unfolding of be
 
 Read [the shared method](../../theories/becoming/chapters/08-METHOD.md#beginning-within-the-one-unfolding) before foundational work. [Working rules](../../AGENTS.md) apply throughout; [the scope directory](../../GOALS.md) preserves independently authorized goals.
 
-The [map](../../MAP.md) says where to start and what each top-level directory holds; [REPOSITORY-LAYOUT](../REPOSITORY-LAYOUT.md) gives the rules for where new material goes.
+The [map](../../MAP.md) says where to start and what each top-level directory holds; [REPOSITORY-LAYOUT](../REPOSITORY-LAYOUT.md) gives the rules for where new material goes. To add or change a result, follow [the result workflow](../RESULT-WORKFLOW.md); [the connections](../../DEPENDENCIES.md) list every recorded dependence between results.
 
 ### Running the checks
 

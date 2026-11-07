@@ -17,6 +17,7 @@ ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 from tools.research import registry, navigation, completion, lean_catalogue, reading_catalogue, style, paths, moves, indexes, session_map, history_notes, rename_ids, theory_graph, atlas, connection_map
+from tools.research import tests_page  # the tests, failures first (RW)
 
 
 @contextmanager
@@ -46,6 +47,7 @@ def input_snapshot():
         paths.add(ROOT / registry.standard_boundaries_path(config))
     paths.update((ROOT / config['goal_directory']).glob('*.json'))
     paths.update(atlas.inputs())
+    paths.update(tests_page.inputs())
     for directory in config['record_directories']:
         for path in (ROOT / directory).glob('*.json'):
             paths.add(path)
@@ -271,6 +273,10 @@ def check_or_render(render=False, base=None, ids=None, strict_fresh=False):
     completion_pages, completion_errors = completion.render()
     outputs.update(completion_pages)
     errors += completion_errors
+    # The tests (RW): every frozen test by how it came out, the failures first; a quote its folder no longer holds is an error.
+    tests_pages, tests_errors = tests_page.render()
+    outputs.update(tests_pages)
+    errors += tests_errors
     # The theory graph (RA): one graph of concepts, results, modules, texts and chapter sections, and its index.
     outputs.update(theory_graph.render(records))
     # The atlas (AA): the dynamics as a curated layer beside the records; a broken entry is an error, as a record is.

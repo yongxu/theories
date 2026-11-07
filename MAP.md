@@ -21,7 +21,7 @@ The theory is written in four layers, each of which can be read through on its o
 3. Eight chapters, in order: [the root](theories/becoming/chapters/01-ROOT.md) (continuation relative to a class), [the map](theories/becoming/chapters/02-MAP.md) (generation, keeping and degeneration), [knowing](theories/becoming/chapters/03-KNOWING.md), [life](theories/becoming/chapters/04-LIFE.md), [collectives](theories/becoming/chapters/05-COLLECTIVES.md), [the classical texts](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) (in Chinese), [significance](theories/becoming/chapters/07-SIGNIFICANCE.md) (ethics and alignment) and [method](theories/becoming/chapters/08-METHOD.md). Each result is stated once, in its home section.
 4. The evidence, not for reading through: [the theory graph](theories/becoming/results/THEORY-GRAPH.md) (the grammar's concepts, the results, the Lean modules, the corpus texts, the chapter sections that state results and the review dossiers, with the edges between them: a dependence, a citation or a registered reading, not an agreement in meaning), [the results](RESULTS.md) with their records, [open questions](OPEN-QUESTIONS.md), the Lean package, the studies.
 
-Pages for a reader who arrives with one question or field hang off this path and add no result: [one argument, end to end](theories/becoming/ONE-ARGUMENT.md), about twenty-eight to thirty-seven minutes, [the free-energy principle](theories/becoming/FREE-ENERGY-PRINCIPLE.md), [a collective's course](theories/becoming/COLLECTIVE-DIRECTION.md) and [the sciences](theories/becoming/review/SCIENCES.md).
+Pages for a reader who arrives with one question or field hang off this path and add no result: [one argument, end to end](theories/becoming/ONE-ARGUMENT.md), about twenty-eight to thirty-seven minutes, [the free-energy principle](theories/becoming/FREE-ENERGY-PRINCIPLE.md), [a collective's course](theories/becoming/COLLECTIVE-DIRECTION.md) and [the sciences](theories/becoming/review/SCIENCES.md). [What it is for, and how far](theories/becoming/USES.md) says, field by field, what can be done with the account today and what is not claimed; [the tests](TESTS.md) list every test by how it came out, the failures first.
 
 Reviewers start with [the review packet](theories/becoming/review/README.md) ([中文](theories/becoming/review/README.zh.md)): a dossier for scholars of classical Chinese texts, one for scholars of Buddhist thought, one for logicians, one for philosophers on the ethics, one for researchers in AI alignment, one for scientists, and a blind re-coding of a sample of the corpus classification.
 
@@ -65,14 +65,14 @@ A fresh run compiles more than a thousand Lean steps and takes a while; `BECOMIN
 | `drafts/` | Papers and long drafts by date |
 | `worldbuilding/` | The constructive half: worlds, atlas, causal engine |
 | `tools/research/` | Rendering, checking, moves, evidence store |
-| `tools/publishing/` | PDF builders for the exports in `output/` |
+| `tools/publishing/` | PDF builders for the exports in `output/`, and the builder of the reader's site from an allow-list of these pages |
 | `output/` | Exported PDFs and images |
 
 [REPOSITORY-LAYOUT](_process/REPOSITORY-LAYOUT.md) gives the rules for where new material goes.
 
 ## The earlier theory folders
 
-The live account does not gather them whole. What each claimed in its own terms, and whether the account states it, takes it up and says otherwise, or does not state it, is in [the crosswalk](theories/becoming/results/atlas/CROSSWALK.md), claim by claim, with the twelve domains of thought read the same way; [the index of the folders](theories/README.md) counts what became of each, and [the connection map](theories/becoming/results/atlas/map.html) draws it. Every entry is an AI reading, and no person has read them.
+The live account does not gather them whole. What each claimed in its own terms, and whether the account states it, takes it up and says otherwise, or does not state it, is in [the crosswalk](theories/becoming/results/atlas/CROSSWALK.md), claim by claim, with the twelve domains of thought read the same way; [the index of the folders](theories/README.md) counts what became of each, and [the connection map](theories/becoming/results/atlas/map.html) draws it (a page for a browser: open it from a clone of the repository, since GitHub shows only its source). Every entry is an AI reading, and no person has read them.
 
 | Folder | In one line |
 |---|---|

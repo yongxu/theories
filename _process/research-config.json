@@ -226,6 +226,7 @@
       "MAP.md",
       "theories/becoming/ONE-PAGE.md",
       "theories/becoming/ONE-PAGE.zh.md",
+      "theories/becoming/USES.md",
       "theories/becoming/THE-THEORY-OF-BECOMING.md",
       "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
       "theories/becoming/OPENING.md",
@@ -252,7 +253,8 @@
       "theories/becoming/review/ALIGNMENT.md",
       "theories/becoming/review/SCIENCES.md",
       "theories/becoming/review/CLASSICAL-TEXTS.md",
-      "theories/becoming/review/BUDDHIST-THOUGHT.md"
+      "theories/becoming/review/BUDDHIST-THOUGHT.md",
+      "TESTS.md"
     ],
     "assets": [],
     "aliases": {
@@ -268,6 +270,10 @@
         "One page"
       ],
       [
+        "theories/becoming/USES.md",
+        "Uses"
+      ],
+      [
         "theories/becoming/THE-THEORY-OF-BECOMING.md",
         "Overview"
       ],
@@ -276,7 +282,7 @@
         "Chapters"
       ],
       [
-        "experiments/README.md",
+        "TESTS.md",
         "Tests"
       ],
       [
@@ -308,6 +314,11 @@
         "text": "What the account claims, how each claim stands, and what would show it wrong."
       },
       {
+        "path": "theories/becoming/USES.md",
+        "label": "What it is for, and how far",
+        "text": "Alignment, coordination, people and AI, wisdom traditions, human development and the sciences: what can be done today, and what is not claimed."
+      },
+      {
         "path": "theories/becoming/THE-THEORY-OF-BECOMING.md",
         "zh": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
         "label": "The overview",
@@ -319,9 +330,9 @@
         "text": "Each result stated once, in its home section, with a mark of its record's status."
       },
       {
-        "path": "experiments/README.md",
+        "path": "TESTS.md",
         "label": "The tests",
-        "text": "Every experiment, with its predictions frozen before the runs and what they found, failures included."
+        "text": "Every test frozen before scoring, by how it came out, the failures first."
       },
       {
         "path": "theories/becoming/results/THEORY-GRAPH.md",
