@@ -1,3 +1,6 @@
+<!-- Banner of 7 November 2026 (RV), AI-written navigation; the folder's text below it is unchanged. -->
+> An earlier theory folder, first written before the live account, [the theory of becoming](../becoming/ONE-PAGE.md). Its own assessments of standing and readiness are its view as of 29 September 2026, not the live account's. What became of its claims is in [the crosswalk](../becoming/results/atlas/CROSSWALK.md#cxg-alignment-selection-on-cognition), where every entry is an AI reading with no person's behind it and not carried is an outcome, not a defect; [the index](../README.md) lists the sixteen earlier folders.
+
 # Alignment as selection on cognition (心中的摩洛克)
 
 *The Chinese in the title is a reading gloss, not a term Ren wrote. He has no single Chinese name for this theory; his nearest own-language formulations are 总体化吸引子 (totalizing attractor), 竞争性主体形式 (the competitive form of subjecthood), and the 2024 sentence about a society that "选择了某一种value作为权利的象征" — chooses one value as the token of power.*

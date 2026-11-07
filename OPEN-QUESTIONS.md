@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-Where the theory is open: the open targets, the open programme of the canonical chapter, and what lies beyond the readings. No reading waits on anyone: each is decided by its place in one account of the theory (decision D45). A completed result's own next step is on its record page.
+Where the theory is open: the open targets, the open programme in method (chapter 8), and what lies beyond the readings. No reading waits on anyone: each is decided by its place in one account of the theory (decision D45). A completed result's own next step is on its record page.
 
 <a id="registered-results"></a>
 <a id="已登记成果--registered-results"></a>
@@ -55,7 +55,7 @@ Target: establish that the core’s common relations are indispensable across al
 <a id="decisions-pending-ren"></a>
 ## Beyond the readings
 
-The readings are decided by argument and can be revised by a better one. What changes only through a proposal is the author's own text and authorizations: the body of the opening, the curated generativity chain, the goal scopes and their states, and the licence. The choice of results featured on the home page is open to revision on argument.
+The readings are decided by argument and can be revised by a better one. What changes only through a proposal is the author's authorizations: the goal scopes and their states, and the licence. The body of the opening and the curated generativity chain began as the author's text and are revised on argument, each revision named where it is made. The choice of results featured on the home page is open to revision on argument.
 
 - [Method, readings adopted, each with its argument](theories/becoming/chapters/08-METHOD.md#readings-adopted)
 - [Method, no reading open; the texts that change only by proposal](theories/becoming/chapters/08-METHOD.md#no-reading-open)
@@ -65,7 +65,7 @@ The readings are decided by argument and can be revised by a better one. What ch
 <a id="discovery-and-evidence--检索与证据"></a>
 ## Discovery and evidence
 
-[Full reading catalogue](theories/becoming/results/README.md) · [Curated generativity chain](theories/becoming/results/GENERATIVITY-CHAIN.md) · [Broader theory map](MAP.md)
+[The one page](theories/becoming/ONE-PAGE.md) · [The overview](theories/becoming/THE-THEORY-OF-BECOMING.md) · [The eight chapters](theories/becoming/chapters/README.md) · [The theory graph](theories/becoming/results/THEORY-GRAPH.md) · [Broader theory map](MAP.md). Earlier catalogues: [chapter readings of 8 October 2026 and later](theories/becoming/results/README.md) · [the generativity chain, kept since 8 October 2026](theories/becoming/results/GENERATIVITY-CHAIN.md).
 
 ```sh
 make research-check

@@ -15,7 +15,7 @@ Now in [the register](../../../RESULTS.md#registered-results).
 <a id="discovery-and-evidence--检索与证据"></a>
 ## Discovery and evidence
 
-[Full reading catalogue](../results/README.md) · [Curated generativity chain](../results/GENERATIVITY-CHAIN.md) · [Broader theory map](../../../MAP.md)
+[The one page](../ONE-PAGE.md) · [The overview](../THE-THEORY-OF-BECOMING.md) · [The eight chapters](README.md) · [The theory graph](../results/THEORY-GRAPH.md) · [Broader theory map](../../../MAP.md). Earlier catalogues: [chapter readings of 8 October 2026 and later](../results/README.md) · [the generativity chain, kept since 8 October 2026](../results/GENERATIVITY-CHAIN.md).
 
 ```sh
 make research-check

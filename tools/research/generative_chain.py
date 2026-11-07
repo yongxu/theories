@@ -131,9 +131,12 @@ def link(reference, label):
 
 def render(data):
     total = sum(len(section["entries"]) for section in data["sections"])
-    lines = ["# 生成、共同实现与伦理：完整理论链对照表 / Generativity, co-realization and ethics: the connected theory", "",
+    record_zh, record_en = link(data["maintenance_record"], "维护记录"), link(data["maintenance_record"], "maintenance record")
+    lines = ["# 生成、共同实现与伦理：自 2026 年 10 月起维护的一条理论链 / Generativity, co-realization and ethics: a curated chain kept since October 2026", "",
              f"内容更新 / Content updated: **{data['updated']}** · Asia/Bangkok · **{total} 条导航项 / {total} indexed entries**", "",
-             "[总成果目录 / Results catalogue](README.md) · [全部章节 / All chapters](ARGUMENTS-A-L.md) · [后半章节 / More chapters](ARGUMENTS-M-Z.md) · [Lean 声明 / Lean declarations](LEAN-DECLARATIONS.md)", "",
+             f"本页是一条策展的理论链，共 {total} 条，自 2026 年 10 月 8 日起维护，沿用当时的词汇（如 G0），与现行陈述并列，而不是现行陈述。现行陈述见[一页](../ONE-PAGE.zh.md)、[总览](../THE-THEORY-OF-BECOMING.zh.md)与[八章](../chapters/README.md)。上面的日期是最近一次改动之日，不是逐一重读所链来源之日（{record_zh}）。", "",
+             f"This page is a curated chain of {total} entries, kept since 8 October 2026 in the vocabulary of its time (G0 among it), beside the live account and not a statement of it. The account is stated in [the one page](../ONE-PAGE.md), [the overview](../THE-THEORY-OF-BECOMING.md) and [the eight chapters](../chapters/README.md). The date above is that of its last change, not of a reading of every linked source ({record_en}).", "",
+             "[10 月 8 日起的章节读法 / Chapter readings of 8 October 2026 and later](README.md) · [A–L](ARGUMENTS-A-L.md) · [M–Z](ARGUMENTS-M-Z.md) · [Lean 声明 / Lean declarations](LEAN-DECLARATIONS.md)", "",
              data["scope_zh"], "", data["scope_en"], "",
              "## 核心论断 / The central claim", "",
              "> " + data["quote_zh"], "", "> " + data["quote_en"], "",

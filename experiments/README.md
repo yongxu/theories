@@ -2,7 +2,7 @@
 
 Executable research. Rewritten 17 October 2026 in the repository restructure; the hand index it replaces (6–7 October status paragraphs) is in [history](history/README-2026-10-07.md), and superseded experiments are listed in [history/INDEX.md](history/INDEX.md).
 
-**The Lean package Becoming**, the formal spine of [the canonical chapter](../theories/becoming/history/THE-THEORY-OF-BECOMING.md#9-the-formal-spine), is at [`integrated-correction/general-framework/generative-basis/lean/becoming/`](integrated-correction/general-framework/generative-basis/lean/becoming/README.md). The path is historical and is kept because receipts and records bind it.
+**The Lean package Becoming**, the formal spine of [the account](../theories/becoming/THE-THEORY-OF-BECOMING.md) (its pure core and periphery are in [method §3](../theories/becoming/chapters/08-METHOD.md#pure-core-and-periphery)), is at [`integrated-correction/general-framework/generative-basis/lean/becoming/`](integrated-correction/general-framework/generative-basis/lean/becoming/README.md). The path is historical and is kept because receipts and records bind it.
 
 | Experiment | What it is |
 |---|---|

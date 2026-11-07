@@ -1,8 +1,12 @@
-# 生成、共同实现与伦理：完整理论链对照表 / Generativity, co-realization and ethics: the connected theory
+# 生成、共同实现与伦理：自 2026 年 10 月起维护的一条理论链 / Generativity, co-realization and ethics: a curated chain kept since October 2026
 
 内容更新 / Content updated: **2026-11-07** · Asia/Bangkok · **94 条导航项 / 94 indexed entries**
 
-[总成果目录 / Results catalogue](README.md) · [全部章节 / All chapters](ARGUMENTS-A-L.md) · [后半章节 / More chapters](ARGUMENTS-M-Z.md) · [Lean 声明 / Lean declarations](LEAN-DECLARATIONS.md)
+本页是一条策展的理论链，共 94 条，自 2026 年 10 月 8 日起维护，沿用当时的词汇（如 G0），与现行陈述并列，而不是现行陈述。现行陈述见[一页](../ONE-PAGE.zh.md)、[总览](../THE-THEORY-OF-BECOMING.zh.md)与[八章](../chapters/README.md)。上面的日期是最近一次改动之日，不是逐一重读所链来源之日（[维护记录](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/GENERATIVITY-CHAIN-INDEX-RECORD.md)）。
+
+This page is a curated chain of 94 entries, kept since 8 October 2026 in the vocabulary of its time (G0 among it), beside the live account and not a statement of it. The account is stated in [the one page](../ONE-PAGE.md), [the overview](../THE-THEORY-OF-BECOMING.md) and [the eight chapters](../chapters/README.md). The date above is that of its last change, not of a reading of every linked source ([maintenance record](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/GENERATIVITY-CHAIN-INDEX-RECORD.md)).
+
+[10 月 8 日起的章节读法 / Chapter readings of 8 October 2026 and later](README.md) · [A–L](ARGUMENTS-A-L.md) · [M–Z](ARGUMENTS-M-Z.md) · [Lean 声明 / Lean declarations](LEAN-DECLARATIONS.md)
 
 本表覆盖一条相连的理论链：生成根基、共同实现、生生伦理、情境判断、学习、良知与智慧，以及相关证明、评审和来源。它按论证关系整理，完整列出这条链的主要命题与支撑入口；不把整个仓库的其他理论分支或每个辅助引理逐行混入。精细章节与声明可由总成果目录继续查阅。各条目保留其时的标签，[08 §10](../chapters/08-METHOD.md#retired-labels) 一次说明。该处 G0 对应存活之意义（`LivingSignificance`），即 Lean `G0` 的今名；条目文字中的 G0 也指它所述者，即整体中的生及继续生成的正面意义，曾取作起点，所说更多。存活之意义在延续条件之下得出；G0 所述多于它者不是现论的前提：活的任一读法都不含继续生发；生生作为方向之所向，以扩大相比较；C，即扩大可形成者更好，给出次序（自我关切无需 C 即可给一种情形排序），延续条件与 C 都不断言（[07 §3](../chapters/07-SIGNIFICANCE.md#condition)、[07 §4](../chapters/07-SIGNIFICANCE.md#scope-and-order)）。J1–J4 是实践承诺，P 编号是其时的工作板条目。本理论的核心成果（08 §8 所列）都不是新数学：每项近于定义，或是已知成果的重述；这一判断出自一次 AI 审查，其检索并不穷尽（[08 §8](../chapters/08-METHOD.md#known-results)）。请求某一步的原话保存在所链来源中，只作来源，不作任何一步的根据。条目给出的论证是工作在条目所述范围内的理由，未必是这一步当时所以走的原因。条目标明尚无论证之处，写“未给论证”或“应请求，未给论证”；既未论证也未标明的步骤，尚未为此读过。
 

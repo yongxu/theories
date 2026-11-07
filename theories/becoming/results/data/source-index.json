@@ -5571,6 +5571,7 @@
     "theories/becoming/chapters/01-ROOT.md": {
       "title": "The root: continuation relative to a class",
       "local_links": [
+        "DEPENDENCIES.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/bd-boundaries/NOTE.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/DESIGN.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue13-causal-sets/NOTE.md",

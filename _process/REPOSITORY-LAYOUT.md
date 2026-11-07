@@ -26,7 +26,7 @@ theories/becoming/            the canonical theory, in four layers: one page, ov
   review/                     the review packet: cover (README, README.zh), six dossiers, recoding/
   results/                    records/, data/, atlas/, generated views
   history/                    retired chapters (the canonical chapter among them), verification/, lineage/, lean-declarations/
-theories/<branch folders>/    September syntheses, in place, with a generated status header
+theories/<branch folders>/    September syntheses, in place, each under a banner; their index, theories/README.md, is generated from the crosswalk
 
 experiments/integrated-correction/general-framework/generative-basis/lean/   the Lean root
   becoming/                   pure core + bridge package, check_becoming.py, receipt
@@ -101,7 +101,7 @@ New imports larger than 10–20 MB go to LFS or an external store with a committ
 
 | Material | Place |
 |---|---|
-| A new or changed result | its record in `theories/becoming/results/records/`; the argument in the canonical chapter or the live study |
+| A new or changed result | its record in `theories/becoming/results/records/`; the argument in its home section of the eight chapters, or the live study |
 | New Lean | the Becoming spine (`lean/becoming/`), or the periphery package it extends |
 | A study step, review or landing note | the live study (`_process/research/2026-10-05-generative-foundation-review/root-foundation/`), not a new dated workspace |
 | A dynamic in the atlas | `theories/becoming/results/atlas/entries/`, its standing read from its records ([the workflow](RESULT-WORKFLOW.md)) |

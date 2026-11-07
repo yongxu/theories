@@ -1,3 +1,6 @@
+<!-- Banner of 7 November 2026 (RV), AI-written navigation; the folder's text below it is unchanged. -->
+> An earlier theory folder, first written before the live account, [the theory of becoming](../becoming/ONE-PAGE.md). Its own assessments of standing and readiness are its view as of 25 September 2026, not the live account's. What became of its claims is in [the crosswalk](../becoming/results/atlas/CROSSWALK.md#cxg-jian-and-wenyan-as-formal-language), where every entry is an AI reading with no person's behind it and not carried is an outcome, not a defect; [the index](../README.md) lists the sixteen earlier folders.
+
 # 間 and 文言 as formal language (間 · 文言 · 文)
 
 **Cognition, theory and 理, 6 October 2026:** [the continuation](../becoming/history/COGNITION-LI-AND-RECIPROCITY.md) distinguishes an object’s structure, cognitive activity and a revisable theory, and treats 恕 as a candidate compositional connection into action. Classical text and current mathematical reconstruction remain distinct; the conditional bounds do not establish language completeness. [Genealogy and source attribution](../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/COGNITION-THEORY-MAP.md) preserve the prior Chinese formulations.

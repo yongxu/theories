@@ -458,7 +458,7 @@ def stub_lines(path, kind, goal_records):
             lines += ['- ' + ''.join(anchor_lines(*keep)) + link('GOALS.md#' + g['id'], path, registry.en(t)) + f' (`{g["state"]}`)']
         return lines + ['']
     if path == THEORY + '/README.md':
-        lines += ['The canonical entry is ' + link(CANONICAL, path, 'The Theory of Becoming') + '; Ren\'s opening is ' + link(THEORY + '/OPENING.md', path, 'OPENING.md') + '.', '']
+        lines += ['The canonical entry is ' + link(CANONICAL, path, 'The Theory of Becoming') + '; the opening, in its author\'s first person and revised in place since (each revised passage named under its heading), is ' + link(THEORY + '/OPENING.md', path, 'OPENING.md') + '.', '']
     lines += ['This page earlier repeated the register of results. It is kept so that links to it resolve. The single register is '
               + link('RESULTS.md', path, 'RESULTS.md') + '; directions and authorized scopes are in ' + link('GOALS.md', path, 'GOALS.md')
               + ', open questions in ' + link('OPEN-QUESTIONS.md', path, 'OPEN-QUESTIONS.md') + ' and connections between results in '
@@ -578,7 +578,7 @@ def render_views(records):
         if kind == 'open':
             groups = open_question_links(config)
             targets = [r for r in records if r['kind'] == 'target']
-            lines += ['Where the theory is open: the open targets, the open programme of the canonical chapter, and what lies beyond the readings. '
+            lines += ['Where the theory is open: the open targets, the open programme in method (chapter 8), and what lies beyond the readings. '
                       'No reading waits on anyone: each is decided by its place in one account of the theory (decision D45). '
                       'A completed result\'s own next step is on its record page.', '']
             lines += anchor_lines('registered-results', '已登记成果--registered-results')
@@ -593,8 +593,8 @@ def render_views(records):
             unmarked = [g for g in goal_records if g.get('state') == 'unmarked']
             lines += anchor_lines('decisions-pending-ren')
             lines += [H('##', 'Beyond the readings', 'Beyond the readings'), '',
-                      'The readings are decided by argument and can be revised by a better one. What changes only through a proposal is the author\'s own text and authorizations: '
-                      'the body of the opening, the curated generativity chain, the goal scopes and their states, and the licence. The choice of results featured on the home page is open to revision on argument.', '']
+                      'The readings are decided by argument and can be revised by a better one. What changes only through a proposal is the author\'s authorizations: the goal scopes and their states, and the licence. '
+                      'The body of the opening and the curated generativity chain began as the author\'s text and are revised on argument, each revision named where it is made. The choice of results featured on the home page is open to revision on argument.', '']
             lines += ['- ' + link(x['path'], path, x['label']) for x in groups['pending_ren']]
             if unmarked:
                 lines += ['- The state of each scope not yet marked: ' + ', '.join(link('GOALS.md#' + g['id'], path, en(g['title'])) for g in unmarked) + '.']
@@ -622,7 +622,8 @@ def render_views(records):
             lines += dependency_lines(records, path)
             lines += [H('##', 'Wider composition evidence', 'Wider composition evidence / 更广组合证据'), '', link(moves.current_path(FOUNDATION_COMPOSITION, ROOT), path, 'Documented joined histories, conditional transport, separate realizations and unresolved interfaces'), '', 'These historical connections retain their own source cutoff and validation scope; they are not automatically upgraded by this index.', '']
         lines += [H('##', 'Discovery and evidence', 'Discovery and evidence / 检索与证据'), '',
-                  ' · '.join(link(p, path, label) for p, label in [(THEORY + '/results/README.md', 'Full reading catalogue'), (THEORY + '/results/GENERATIVITY-CHAIN.md', 'Curated generativity chain'), (moves.current_path('MAP.md', ROOT), 'Broader theory map')]), '',
+                  ' · '.join(link(p, path, label) for p, label in [(THEORY + '/ONE-PAGE.md', 'The one page'), (CANONICAL, 'The overview'), (CHAPTERS + '/README.md', 'The eight chapters'), (THEORY + '/results/THEORY-GRAPH.md', 'The theory graph'), (moves.current_path('MAP.md', ROOT), 'Broader theory map')])
+                  + '. Earlier catalogues: ' + ' · '.join(link(p, path, label) for p, label in [(THEORY + '/results/README.md', 'chapter readings of 8 October 2026 and later'), (THEORY + '/results/GENERATIVITY-CHAIN.md', 'the generativity chain, kept since 8 October 2026')]) + '.', '',
                   '```sh', 'make research-check', 'make research-find QUERY=your-topic', 'make research-render', '```', '',
                   'Default discovery excludes frozen copies and failed build attempts. Use `--archives` deliberately to include them. Checks concern metadata and evidence bindings; mathematical changes retain their actual Lean-build requirement.', '']
         if path in history['documents']:

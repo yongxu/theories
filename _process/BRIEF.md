@@ -24,7 +24,7 @@ You need Python 3.9 or later (standard library only), git, and ripgrep for the s
 <a id="discovery-and-evidence--检索与证据"></a>
 ## Discovery and evidence
 
-[Full reading catalogue](../theories/becoming/results/README.md) · [Curated generativity chain](../theories/becoming/results/GENERATIVITY-CHAIN.md) · [Broader theory map](../MAP.md)
+[The one page](../theories/becoming/ONE-PAGE.md) · [The overview](../theories/becoming/THE-THEORY-OF-BECOMING.md) · [The eight chapters](../theories/becoming/chapters/README.md) · [The theory graph](../theories/becoming/results/THEORY-GRAPH.md) · [Broader theory map](../MAP.md). Earlier catalogues: [chapter readings of 8 October 2026 and later](../theories/becoming/results/README.md) · [the generativity chain, kept since 8 October 2026](../theories/becoming/results/GENERATIVITY-CHAIN.md).
 
 ```sh
 make research-check

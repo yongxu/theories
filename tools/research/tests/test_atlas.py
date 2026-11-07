@@ -408,6 +408,10 @@ class CorrespondenceTests(AtlasCase):
         data = json.loads(pages[atlas.DATA])
         self.assertEqual(data['correspondence_groups'][0]['by_carried']['not-carried'], 1)
         self.assertEqual(data['correspondences'][0]['targets'][0]['standing']['status'], 'recorded-checked')
+        folders = pages[atlas.FOLDERS]
+        self.assertTrue(folders.startswith(atlas.GENERATED + '\n'))
+        self.assertIn('| [An earlier folder](early/README.md) | theory | 3 | 2 | 0 | 0 | 0 | 1 | 0 | '
+                      '[what became of it](becoming/results/atlas/CROSSWALK.md#cxg-early) |', folders)
 
 
 class CheckTests(AtlasCase):
@@ -447,7 +451,7 @@ class MainTests(AtlasCase):
     def test_check_fails_on_a_page_that_differs_and_passes_on_a_fresh_one(self):
         self.write_atlas(capture())
         code, result = self.main('--check')
-        self.assertEqual((code, result['errors'], result['differs']), (1, [], [atlas.PAGE, atlas.CROSSWALK, atlas.DATA]))
+        self.assertEqual((code, result['errors'], result['differs']), (1, [], [atlas.PAGE, atlas.CROSSWALK, atlas.FOLDERS, atlas.DATA]))
         pages, _ = atlas.render(RECORDS)
         for path, body in pages.items():
             (self.root / path).parent.mkdir(parents=True, exist_ok=True)

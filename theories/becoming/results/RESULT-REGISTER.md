@@ -5,7 +5,7 @@
 
 This page earlier repeated the register of results. It is kept so that links to it resolve. The single register is [RESULTS.md](../../../RESULTS.md) (536 records); each record page is generated next to its JSON record in [records](records/).
 
-[Contribution workflow](../../../_process/RESULT-WORKFLOW.md) · [Full catalogue](README.md)
+[Contribution workflow](../../../_process/RESULT-WORKFLOW.md) · [Chapter readings of 8 October 2026 and later](README.md)
 
 <a id="先查哪一项-where-to-look-first"></a>
 ## Where to look first

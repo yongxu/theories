@@ -27,7 +27,7 @@ This page earlier repeated the scope list. Directions, their authorization and t
 <a id="discovery-and-evidence--检索与证据"></a>
 ## Discovery and evidence
 
-[Full reading catalogue](README.md) · [Curated generativity chain](GENERATIVITY-CHAIN.md) · [Broader theory map](../../../MAP.md)
+[The one page](../ONE-PAGE.md) · [The overview](../THE-THEORY-OF-BECOMING.md) · [The eight chapters](../chapters/README.md) · [The theory graph](THEORY-GRAPH.md) · [Broader theory map](../../../MAP.md). Earlier catalogues: [chapter readings of 8 October 2026 and later](README.md) · [the generativity chain, kept since 8 October 2026](GENERATIVITY-CHAIN.md).
 
 ```sh
 make research-check

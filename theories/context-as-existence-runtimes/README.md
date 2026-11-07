@@ -1,3 +1,6 @@
+<!-- Banner of 7 November 2026 (RV), AI-written navigation; the folder's text below it is unchanged. -->
+> An earlier theory folder, first written before the live account, [the theory of becoming](../becoming/ONE-PAGE.md). Its own assessments of standing and readiness are its view as of 25 September 2026, not the live account's. What became of its claims is in [the crosswalk](../becoming/results/atlas/CROSSWALK.md#cxg-context-as-existence-runtimes), where every entry is an AI reading with no person's behind it and not carried is an outcome, not a defect; [the index](../README.md) lists the sixteen earlier folders.
+
 # Context as existence — the runtimes (语境即存在 · 上下文运行时)
 
 > Note on the Chinese name: 语境即存在 is the reading drafts' rendering of Ren's English slogan `llm is operator, context is existence`. Ren's own Chinese vocabulary for this theory is the spec's word-list — 拍 (moment) / 相续 (lineage) / 算子 (operator) / 名 (ref) / 视野 (fold) / 膜 (membrane) — and its epigraph, 系统里没有"改"，只有"生" ("in this system there is no *altering*, only *generating*").

@@ -1,0 +1,332 @@
+{
+ "first-contact-1": {
+  "id": "first-contact-1",
+  "holds": "partly",
+  "severity_after": "medium",
+  "note": "Confirmed absent: grep 'new mathematics' gives 0 hits in README.md and MAP.md; README.md:17 leads with '505 of 536'. 'Buried on the one page' is overstated. ONE-PAGE's own table gives the verdict row by row near the top: ONE-PAGE.md:18 'Proved, near-definitional', :19 'Proved; a known theorem restated', :17 'restates the commons'. The full sentence is at :30, and the README first screen links ONE-PAGE (README.md:15). 08-METHOD.md:482 quote exact. Overview :158 is in §8 (line 158 of 198), but overview :53 already says 'counting identities and known results restated'. Proposal sound (copy from ONE-PAGE.md:30, link 08#known-results). README is generated: the edit goes in readme_first_screen."
+ },
+ "first-contact-2": {
+  "id": "first-contact-2",
+  "holds": "partly",
+  "severity_after": "medium",
+  "note": "Quotes exist, but the line numbers are off: 'universal invariants' is README.md:27 (not 29), 'the dharma, the Dao' :41 (not 45), 'foundation for AI alignment' :43 (not 47). Note 3 (:87) and note 11 (:103) quotes are exact. theories/becoming/README.md:8 'Ren's opening is OPENING.md' is confirmed. The fallback proposal ('one line above it') largely exists already: README.md:15 'The opening is a first-person conviction (21–28 minutes)', and :25 'Each note says how far its sentence is proved'. The real issue is length and placement on the landing (README has 12,684 words; notes run :81-139), not missing labels. Changing the opening's placement is a decision for Ren."
+ },
+ "first-contact-3": {
+  "id": "first-contact-3",
+  "holds": "partly",
+  "severity_after": "medium",
+  "note": "The first screen (README.md:9-17) has no value sentence, confirmed. But 'the landing never states the value' is wrong: README.md:43 (the opening, rendered right below) says 'A selection, whether a reward, a training run, a market or a vote, reaches only what couples into its selector'. MAP.md:7 gives it in one clause. Overview :26 and ONE-PAGE.md:9 quotes are exact, both labelled [AI reading]. Proposal fine if the label is kept."
+ },
+ "first-contact-4": {
+  "id": "first-contact-4",
+  "holds": "holds",
+  "severity_after": "medium",
+  "note": "Verified by gh api: description 'Generative foundations, theory, and research', topics [], homepage null, has_pages false; GET /pages returns 404. map.html is 4,954,810 bytes. raw.githubusercontent serves it as text/plain with nosniff (curl -I). The blob page JSON shows truncated:true and 'View raw'. No mermaid, image or svg in README, MAP, GLOSSARY, RESULTS, theories/becoming/*.md, chapters, review or results/*.md; mermaid appears only in theories/becoming/history/*. THEORY-GRAPH.md is tables and lists. Medium, not higher: the gap blocks seeing, it does not mislead. Enabling Pages publishes to the public remote, which is Ren's decision."
+ },
+ "first-contact-5": {
+  "id": "first-contact-5",
+  "holds": "holds",
+  "severity_after": "medium",
+  "note": "ONE-PAGE.md is 1,512 words timed '11–15 minutes'. The T7 standing cell at :20 is 117 words, not ~150, in essentially one sentence. Quotes at :19 and :36 are exact. Coined terms (room, couples into, admits) go unglossed in everyday words. The proposed short T7 cell must keep 'every frozen verdict passed, three by one tie' and 'no field test' so that nothing drops."
+ },
+ "first-contact-6": {
+  "id": "first-contact-6",
+  "holds": "holds",
+  "severity_after": "medium",
+  "note": "ONE-PAGE.md:26 quote is exact. README.md:188 says 'Still to do: AJ4's one page for alignment researchers, now in draft', which is stale (see navigation-39). COLLECTIVE-DIRECTION.md:3 says 'About 35 minutes to read' and its title is a question. 'wisdom', 'coordinat' and 'human development/education' each count 0 in ONE-PAGE, the overview, GLOSSARY and MAP. A uses table must copy the homes' standings, e.g. COLLECTIVE-DIRECTION.md:87 'no actual institution is shown to meet its hypotheses… no test has human participants'. It is the same gap as uses-28 and navigation-38; merge them."
+ },
+ "first-contact-7": {
+  "id": "first-contact-7",
+  "holds": "holds",
+  "severity_after": "low",
+  "note": "README.md:142-192 is 2,354 words of programme status with five '**Next:**' paragraphs. :188 quote is exact; 'Deductive necessity lies…' is README.md:146. MAP.md:3 provenance line confirmed. It sits below the 12k-word opening, so few first-time readers reach it: low."
+ },
+ "site-8": {
+  "id": "site-8",
+  "holds": "holds",
+  "severity_after": "medium",
+  "note": "curl -I on raw: 'content-type: text/plain; charset=utf-8', 'x-content-type-options: nosniff', content-length 4954810. The blob page returns truncated:true / 'View raw'. Among live .md pages, only MAP.md:75 links map.html; the others are _process/BECOMING-WORKBOARD.md, RESULT-WORKFLOW.md and tools/research/README.md. Per the session memory there is a private claude.ai artifact copy of the map (not verified here). Proposal sound. Note that links inside map.html are repo-relative ('base':'../../../../'), so a local open works and a hosted copy needs its base rewritten."
+ },
+ "site-9": {
+  "id": "site-9",
+  "holds": "holds",
+  "severity_after": "medium",
+  "note": "Sizes confirmed: CROSSWALK.md 3,742,459, ATLAS.md 1,035,845, GENERATIVITY-CHAIN.md 615,112, LEAN-INDEX.md 436,115. GitHub blob JSON: CROSSWALK richText null; ATLAS, GENERATIVITY-CHAIN and LEAN-INDEX richText null with richTextTruncated true. 07-SIGNIFICANCE (270,339) renders (truncated false). Links at README.md:212, RESULTS.md:575 and MAP.md:61 are confirmed. Splitting in the generators is the right place; never hand-edit."
+ },
+ "site-10": {
+  "id": "site-10",
+  "holds": "holds",
+  "severity_after": "medium",
+  "note": "No `![`, mermaid, <svg> or <img> in any reading page (grep over README, MAP, GLOSSARY, RESULTS, theories/becoming/*.md, chapters, review, results/*.md returned nothing). Mermaid exists in history/START-HERE.md:25 and history/JOINT-FORMATION.md:23. The promise is at MAP.md:22, not :27. The formal-reuse counts are confirmed from theory-graph.json (root→map 60, map→root 42, knowing→root 40, significance→root 35, significance→map 29). The proposed legend already exists as THEORY-GRAPH.md:5 'An edge records a dependence, a citation or a registered reading, not an agreement in meaning'. A generated Mermaid block is the cheapest true picture."
+ },
+ "site-11": {
+  "id": "site-11",
+  "holds": "holds",
+  "severity_after": "medium",
+  "note": "The quote is at MAP.md:32, not :41. git rev-list --count HEAD = 6073 (Sep 11, Oct 4,472, Nov 1,590), confirmed. _process/history/INDEX.md:9 reason confirmed. Tags review-packet-1..5 are dated 3, 5, 5, 6, 7 Nov. MAP's '1,568 in all by 19 October' is correct as a dated figure but leaves out November. Same gap as growth-21 and navigation-47."
+ },
+ "site-12": {
+  "id": "site-12",
+  "holds": "partly",
+  "severity_after": "low",
+  "note": "60 tracked .html files, 47 under sources/ (third-party copies): confirmed. .claude/launch.json is tracked and on origin/main (5ede15c45; a harmless dev-server config) while push_screen.sh:10 lists \\.claude/. The screen only checks diffs, so a file committed earlier slips by. The other private paths (sources/12-, 13-, 18-, drafts/…friend-conversation, tmp, work, experiments/guardian-anarchy, .lake) have 0 tracked files, so a branch build could not leak them. The risk is prospective, for a site not yet built. As a constraint on any site the allow-list proposal is right."
+ },
+ "site-13": {
+  "id": "site-13",
+  "holds": "partly",
+  "severity_after": "low",
+  "note": "theory-graph.json text nodes carry 'class' (e.g. text:CWS-P1-001 class '甲'), confirmed, and review/README.md:23 quote is exact. The data is already public, and review/README.md:27 already handles exposure by order: 'If you will re-code, do the re-coding first… the dossiers quote some sampled sentences with the AI's class beside them'. Showing counts only on a site is a reasonable dated limit, but it matters little."
+ },
+ "unification-14": {
+  "id": "unification-14",
+  "holds": "holds",
+  "severity_after": "medium",
+  "note": "connection_map.py views are loom, meet, root, corpus, loose and method (lines 366-378). The loom's warp is the fronts and chapters (FRONTS line 30); 'The theory's own graph' is one sentence of counts ('…joined by N edges computed at render'). No live front has a picture. map.html is linked only from MAP.md:75. A generated SVG embedded in ONE-PAGE would render on GitHub without Pages. Overlaps site-10."
+ },
+ "unification-15": {
+  "id": "unification-15",
+  "holds": "holds",
+  "severity_after": "medium",
+  "note": "01-ROOT.md:5 'It takes nothing from the others and hands its grammar, classes and models to all of them' is confirmed. From theory-graph.json formal-reuse (navigation.py: 'the consumer's proof uses the producer's theorem'): 45 root results, 119 edges to other regions (map 60, knowing 26, life 10, significance 9, method 7, collective 6, classical 1). 467 cross-chapter edges among 01-07, 196 of them to a later chapter: exact. Becoming/Courses.lean (region root) imports Readout, Description and Feedback (region knowing): confirmed. levels-of-closure.md:85 quote exact. The proposed rewording is accurate."
+ },
+ "unification-16": {
+  "id": "unification-16",
+  "holds": "partly",
+  "severity_after": "low",
+  "note": "MAP.md:22 'with how they connect' is confirmed, and THEORY-GRAPH.md shows no edges or kind breakdown. But the page does separate meaning from dependence at :5 ('not an agreement in meaning'). Edge types confirmed: related 1420, formal-reuse 1162, interpretive 98, application 11; RESULT-WORKFLOW.md:38 'related for analogy'. A generated per-pair kind table is a good fix."
+ },
+ "unification-17": {
+  "id": "unification-17",
+  "holds": "holds",
+  "severity_after": "medium",
+  "note": "results/README.md 'Read by question' rows (:29-34) all point to ../history/ARGUMENTS-*-2026-10-08.md and THEORY-MAP-2026-10-08.md; the file was last changed 2026-10-26, and its header at :6 says 'Readings of 8 October 2026 and later'. GENERATIVITY-CHAIN.md:1 title, :15 and :25 quotes exact; :3 says 'Content updated 2026-11-07', which makes it look current, and G0 appears 17 times. Linked as 'Curated generativity chain' from README.md:212, RESULTS.md:575, theories/becoming/README.md:20 and chapters/CLAIMS.md:18. :9 and :25 carry caveats ('labels of their time', 'not a completed one-way derivation'), but placement and title present it as current."
+ },
+ "unification-18": {
+  "id": "unification-18",
+  "holds": "partly",
+  "severity_after": "low",
+  "note": "Atlas families A-H confirmed (ATLAS.md:7-18, '177 dynamics, by family'). DEPENDENCIES has 1271 curated edges. The three questions are not unmapped: each ONE-PAGE table row (ONE-PAGE.md:15-22) links its chapters (01, 02, 05, 03, 05, 02, 07). ATLAS is linked from no live front and GENERATIVITY-CHAIN is a legacy page, so few readers meet the competing schemes. A generated family-by-chapter table is a cheap fix."
+ },
+ "unification-19": {
+  "id": "unification-19",
+  "holds": "partly",
+  "severity_after": "low",
+  "note": "08-METHOD.md:440 confirmed: '117 distinct central declarations… Eleven are derived… The other 99 stand at a named distance… 22 connected… 32 with balance… 18 on amounts; 16 at a represented model and 6 on their own carrier'. The map's reach bars (45 'Reaching the grammar') come with the note 'A measurement of Lean dependency only'. Not wholly buried: ONE-PAGE.md:11 states the qualitative result ('a few are cases of the root, more use its laws in their proofs and most use none'). The reconciling sentence is worth adding where both counts appear."
+ },
+ "unification-20": {
+  "id": "unification-20",
+  "holds": "partly",
+  "severity_after": "low",
+  "note": "MAP.md:30-38 prose is confirmed. Crosswalk totals verified from correspondences.json: carried-in-part 488, fresh-reading 376, changed 189, not-carried 105, history-only 22, carried 3. theories/becoming/history/ has 199 files, but it does have an INDEX.md (186 lines, generated from MANIFEST): by file and reason, not by date or lineage. Duplicates growth-21; the SVG strip is one way to meet it."
+ },
+ "growth-21": {
+  "id": "growth-21",
+  "holds": "partly",
+  "severity_after": "medium",
+  "note": "Confirmed: MAP.md:32 is the only live growth narrative. TIMELINE.md (11,564 words, 'from the Dali field notes of May 2021 to Ren's ruling of 2026-09-25') is linked only from history. _process/history/INDEX.md:9 reason is quoted exactly. Commits are 11, 4,472 and 1,590. 'No such record exists' is too strong: the board, commits and research notes are the Becoming-era record, just not a narrative. High overstates it: a missing lineage leaves readers unable to see how the work grew, but tells them nothing false. It does answer one of Ren's questions directly. A generated LINEAGE page is sound if each stage carries crosswalk counts, failures included."
+ },
+ "growth-22": {
+  "id": "growth-22",
+  "holds": "holds",
+  "severity_after": "high",
+  "note": "keep-the-possibility-space-open/README.md:5 quote is exact ('rigorous 29-proposition proof-sketch… survived a 56-criticism adversarial review… Near-publishable'). CROSSWALK.md has 0 hits for 29-proposition, proof-sketch or 56-critic, though the folder's group has 64 entries. None of the 16 folder READMEs links CROSSWALK. 14 of 16 have no Markdown link to theories/becoming; the reviewer's '10' is an undercount. meta-attractor/README.md:21 and :1131 ('most defensible claim to originality') are confirmed. No folder README has a banner or date header (keep-open opens straight into 'The theory in one paragraph'). A visitor arriving directly takes dated self-assessments ('rigorous', 'publishable') as the project's current standing. A generated banner from correspondences.json is the right fix; keep the bytes below it."
+ },
+ "growth-23": {
+  "id": "growth-23",
+  "holds": "holds",
+  "severity_after": "low",
+  "note": "correspondences.json fields are exactly as listed, with no date field. CROSSWALK.md:5 says 'The evidence layer, not for reading through' and the page runs to 486,583 words. connection_map.py has no time dimension; line 503 is the corpus-reading bar chart, not verdict kinds. Subsumed by growth-21. Joining group to folder dates via timeline-raw.tsv is feasible."
+ },
+ "growth-24": {
+  "id": "growth-24",
+  "holds": "partly",
+  "severity_after": "low",
+  "note": "Detail wrong: tracked mermaid blocks outside history and sources also exist in drafts/ (drafts/2026-09-05-generative-foundations/WHITEPAPER-v1.1.md and _v11-parts), not only _process/research/…/concern-theory/THEORY.md. 'The shape of the arc' is TIMELINE.md:319, and the 2024-07…2026-07 mechanism passage is :325, not :262. closed-capture.json history quote ('20 October 2026: added (MA1)…') is confirmed. No lineage picture exists: holds in substance. The river SVG is a large build; the generated Mermaid or SVG of site-10 and unification-14 comes first."
+ },
+ "growth-25": {
+  "id": "growth-25",
+  "holds": "holds",
+  "severity_after": "low",
+  "note": "output/pdf/ holds From-Xiaokang-to-Datong-v0.3-en.pdf, No-Viable-Race-IASEAI27-v3.1-draft.pdf, Shengsheng-Buxi-EN-2026-10.pdf, generative-chiang-mai-2045(.pdf and -english.pdf) and 从小康到大同-v0.3-zh.pdf. There is no output/README.md or output/pdf/README.md. IASEAI README:5 quote is exact. No front says 'no viable race' or 'no safe way to win'. A generated output/README is cheap; the papers carry no live claims, so low."
+ },
+ "growth-26": {
+  "id": "growth-26",
+  "holds": "partly",
+  "severity_after": "low",
+  "note": "git ls-files gives 0 files for sources/12-, 18- and drafts/2026-10-02-friend-conversation, so those citations cannot be checked publicly. But they are backticked paths, not Markdown links: a regex for ](…12-claude-ai-chats…) finds 0 links in any folder README or CROSSWALK, so 'links are dead' is wrong. CROSSWALK.md:6560 cites `drafts/2026-10-02-friend-conversation/transcript.md` as text. Line counts are close to the claimed ones (selfishness 115, keep-open 24, the-fork 51 lines). Evidence labels on a lineage page are a good idea."
+ },
+ "uses-27": {
+  "id": "uses-27",
+  "holds": "holds",
+  "severity_after": "high",
+  "note": "Duplicate of growth-22. Quotes verified: wamotopia/README.md:5 'Substantially complete and already field-tested as a movement' and 'The protocol is publishable today and was published'; alignment-selection-on-cognition/README.md 'Publishable now: the position paper, after citation verification'. The reviewer's exact grep (crosswalk|not live|Theory of Becoming|theories/becoming) gives 0 hits in 12 of 16 READMEs, confirmed. 05-COLLECTIVES.md:398 'design programmes… correspondence not established' is the right banner wording. Crosswalk counts in the proposal are verified: architecture 30 entries, 11 carried-in-part, 13 fresh-reading."
+ },
+ "uses-28": {
+  "id": "uses-28",
+  "holds": "partly",
+  "severity_after": "medium",
+  "note": "Counts confirmed: wisdom and coordinat are 0 in ONE-PAGE, the overview, GLOSSARY, MAP and 07; human development/education 0 everywhere checked. MAP.md:7 and :24 quotes are exact. The levers are COLLECTIVE-DIRECTION.md:43-53 theorem rows. Partly: for wisdom traditions and human development the account claims almost nothing (03-KNOWING.md:477 wisdom-root is a target; record wisdom-root.json status 'open'; 07 'What this chapter does not show' excludes well-being, duty and rights). Those rows must say 'nothing claimed', not invent uses. Not high: ONE-PAGE.md:9 and overview :26 do state the main value."
+ },
+ "uses-29": {
+  "id": "uses-29",
+  "holds": "partly",
+  "severity_after": "low",
+  "note": "ALIGNMENT.md:7 does define the unit through the PLAN link. PLAN.md:22-24 has 'What the goal is not' and :12-13 the who-receives and who-bears questions. But the goal itself is live: GOALS.md:104 and :114, and README.md:186 'The goal is an alignment of the joint selection… control of the selection's rule not captured, a lock left in time… courses compared by widening'. Obedience is covered by dossier A-12 'Obedience adds capacity, not coupling'. What is missing live is the 'is not' list and the questions as a checklist."
+ },
+ "uses-30": {
+  "id": "uses-30",
+  "holds": "holds",
+  "severity_after": "low",
+  "note": "22 'Standing and use' paragraphs (ALIGNMENT.md:74-627). Nearly all give standing and quote only, e.g. :462. :152 is the exception ('the formal side of \"training does not fix behaviour off its distribution\"'), and A-14's use sentence sits under Known weaknesses (:466). The dossier's ten minutes does have 'What follows for alignment' (ALIGNMENT.md:20-23) and 'What is not claimed'. Splitting Standing and Use is cheap. Low: the dossier asks reviewers to judge strength."
+ },
+ "uses-31": {
+  "id": "uses-31",
+  "holds": "partly",
+  "severity_after": "low",
+  "note": "history/ALIGNMENT-DIRECTION.md:48-66 case is confirmed, with 'Constructed, not an observed deployment' and the verdict-changing conditions. It is reached not only from ONE-ARGUMENT.md:114: 07-SIGNIFICANCE.md:724 ('In the handover case every comparison meeting J1/J2 leaves expansion unchosen') and :726 also link it. The case uses older vocabulary (living significance, basic-condition priority), so a restatement must be checked against 07 §5/§7's current premises (J1-J4), not copied verbatim."
+ },
+ "uses-32": {
+  "id": "uses-32",
+  "holds": "holds",
+  "severity_after": "low",
+  "note": "COLLECTIVE-DIRECTION.md:46 row quote and :87 'no actual institution is shown to meet its hypotheses… no test has human participants' are confirmed. CMT is 'frozen 5 Nov 2026, not run' in experiments/README.md. The example should be purely constructed, not estimate s, p, c for a real standards body: such estimates would be new empirical claims without data. Label it constructed and say CMT is unrun."
+ },
+ "uses-33": {
+  "id": "uses-33",
+  "holds": "holds",
+  "severity_after": "medium",
+  "note": "README.md:43 'To achieve alignment, we need a foundation that makes coordination possible, and this foundation supplies that too' is confirmed. Note 13 (README.md:107) says 'That shared understanding makes coordination possible is a thesis about how coordination forms, not a theorem'. COLLECTIVE-DIRECTION.md:87 'no test has human participants'. The main sentence is stronger than its note; per OPENING's revision header the first person can be revised in place. Proposal sound."
+ },
+ "uses-34": {
+  "id": "uses-34",
+  "holds": "partly",
+  "severity_after": "medium",
+  "note": "Facts hold: CLASSICAL-TEXTS and BUDDHIST-THOUGHT are Chinese (review/README.md:17-18), 06 is Chinese, overview §6 is :117-123. 03-KNOWING.md:5 '无明… and 明 is coupling joined to a selection' and :477 wisdom-root target are confirmed; record status 'open'. GOALS.md:341 anchor confirmed. The proposal's worked passage is misattributed: 天之道损有余而补不足 is read in record two-sided-regulation-and-late-reading.md:70/:88 (two-sided regulation), not Becoming.RuleCapture. README.md:156 ties RuleCapture to 二柄, 据有余而制不足. Writing the proposed pairing would state a reading no home makes. B-02 '理论之答正是被破之对方' is confirmed."
+ },
+ "uses-35": {
+  "id": "uses-35",
+  "holds": "partly",
+  "severity_after": "low",
+  "note": "README.md:67 quote is exact, but its 'it' is 'almost godlike technology', not the account, so the sentence does not claim the account delivers abundance. Note 19 calls such present-world claims a judgment. 07 'What this chapter does not show' quote is confirmed (07:796-803). worldbuilding/ is linked only from MAP.md:66 among the fronts checked: confirmed. A uses-page row stating T8's standing and the design programmes' separate status is right."
+ },
+ "navigation-36": {
+  "id": "navigation-36",
+  "holds": "holds",
+  "severity_after": "medium",
+  "note": "Same facts as site-8 and first-contact-4, all verified. DEPENDENCIES.md is 6,113 words with '1271 curated edges'. The reviewer's 'not verified' on CROSSWALK and ATLAS rendering is now verified (richText null). Proposal sound: rewriting map.html's base to blob URLs is correct, since links are repo-relative. Enabling Pages and setting the homepage are publication steps for Ren to release."
+ },
+ "navigation-37": {
+  "id": "navigation-37",
+  "holds": "partly",
+  "severity_after": "medium",
+  "note": "Same as first-contact-1. 'new mathematics' is absent from README.md and MAP.md; README.md:17 quote is exact. Two details are wrong: ONE-PAGE is one click from the first screen (README.md:15), not two; and the verdict appears earlier on ONE-PAGE as row standings ('near-definitional', 'a known theorem restated', :18-19). The 08 heading is :480 and the verdict sentence :482. Merge with first-contact-1."
+ },
+ "navigation-38": {
+  "id": "navigation-38",
+  "holds": "partly",
+  "severity_after": "medium",
+  "note": "The first screen (README.md:9-17) has 0 mentions of alignment, coordination or wisdom: confirmed. AGENTS.md:7 quote exact. No README link to review/ALIGNMENT.md or COLLECTIVE-DIRECTION.md (grep 0). ALIGNMENT.md:5 '## The dossier in ten minutes' and :28 'The tests, as they fell' are confirmed. 'Invisible from the front page' is overstated: README.md:43 (the opening) and §'Advancing AI alignment' (:184-190, goal at :186) discuss alignment at length. Proposal sound; it is the same remedy as first-contact-6 and uses-28."
+ },
+ "navigation-39": {
+  "id": "navigation-39",
+  "holds": "holds",
+  "severity_after": "medium",
+  "note": "README.md:188 says 'Still to do: AJ4's one page for alignment researchers, now in draft'. moves-2026-10-31-aj4-page-retire.json moved DRAFT-ONE-PAGE.md to history with reason 'superseded by the alignment dossier's opening section, The dossier in ten minutes (31 October 2026)'. This is a false status line aimed at the alignment audience. README is generated, so fix the goal or record text and re-render."
+ },
+ "navigation-40": {
+  "id": "navigation-40",
+  "holds": "holds",
+  "severity_after": "medium",
+  "note": "experiments/README.md (4,847 words, a per-test table with frozen and run dates and outcomes) has no link from README.md or MAP.md. MAP.md:22 ends 'the Lean package, the studies' unlinked, and MAP.md:62 gives `experiments/` as code only. 08 §9 starts at :565. ALIGNMENT.md:28-34 covers the alignment tests only. A generated TESTS page leading with failures is the clearest 'what could fail' surface."
+ },
+ "navigation-41": {
+  "id": "navigation-41",
+  "holds": "holds",
+  "severity_after": "low",
+  "note": "ATLAS.md is not linked from README, MAP, GLOSSARY, RESULTS, theories/becoming/*.md, chapters, review or results/*.md (grep empty). ATLAS.md:5-18 quote confirmed. Low: ATLAS.md itself does not render on GitHub (richTextTruncated true), so linking it helps little until it is split (site-9)."
+ },
+ "navigation-42": {
+  "id": "navigation-42",
+  "holds": "holds",
+  "severity_after": "low",
+  "note": "review/README.md and README.zh.md: 0 hits for pdf or edition. MAP.md:69 says only 'Exported PDFs and images'. There is no output/README. MANIFEST.txt names commit 3395e82ee, committed 2026-11-07. Low: Ren sends the edition directly to readers with the letter, and GitHub visitors read the Markdown."
+ },
+ "navigation-43": {
+  "id": "navigation-43",
+  "holds": "holds",
+  "severity_after": "medium",
+  "note": "Nav (README.md:5) is confirmed: Home, Start here, One page, The theory, Chapters, Results, Scopes, Connections, Open questions, Contribute; no Tests, Lean, Reviewers, Map or Glossary. GOALS.md:10 '## Scopes not yet marked by Ren', RESEARCH.md:8 and theories/becoming/README.md:10 stub text are confirmed. theories/becoming/README.md has 74 historical-section mentions. results/README.md:6 and :29-34 route to 8 October pages. The nav is generated, so change the generator config."
+ },
+ "navigation-44": {
+  "id": "navigation-44",
+  "holds": "holds",
+  "severity_after": "medium",
+  "note": "theories/README.md does not exist; 17 folders. meta-attractor/README.md:3 opens in dense classical Chinese (2026-10-26 reading). keep-open/README.md:5 quote exact. MAP.md:61 'not live' is confirmed. Crosswalk counts in the proposal are verified: alignment-selection-on-cognition 62 entries, 36 carried-in-part, 6 not-carried. Complements growth-22 and uses-27."
+ },
+ "navigation-45": {
+  "id": "navigation-45",
+  "holds": "partly",
+  "severity_after": "low",
+  "note": "The path is six levels deep, and experiments/README.md:5 says 'The path is historical and is kept because receipts and records bind it'. Package README is 52,703 words and opens with 'Three rings'. LEAN-INDEX is linked only from chapters/README.md, results/README.md and LEAN-DECLARATIONS.md. But MAP.md:41-54 'Check the proofs yourself' is a clear, prominent start for verification, with exact commands. The missing piece is a short table of central declarations. Separately, experiments/README.md:5 calls a history copy 'the canonical chapter', a stale link."
+ },
+ "navigation-46": {
+  "id": "navigation-46",
+  "holds": "holds",
+  "severity_after": "medium",
+  "note": "README.md is 12,684 words. The first screen (:9-17) is good. The opening runs from :21 and its notes from :81-139 (about 6,500 words with the list), before the layers at :136-140. The 'Next' paragraphs run to hundreds of words and preserved history starts at :222. Overlaps first-contact-2: a decision for Ren on how the opening sits on the landing."
+ },
+ "chinese-48": {
+  "id": "chinese-48",
+  "holds": "partly",
+  "severity_after": "medium",
+  "note": "README nav (:5) and first screen (:9-17) have no 中文 link. The first is README.md:137, after 9,431 words (awk count confirmed). There is no root README.zh.md. Overstated as 'no Chinese entry point': the nav's 'Start here' leads to MAP.md, whose 'Where to start' gives 中文 links at :19, :20 and :26 within its first screen. So a Chinese reader is one click away, not 9,400 words."
+ },
+ "chinese-49": {
+  "id": "chinese-49",
+  "holds": "holds",
+  "severity_after": "medium",
+  "note": "ONE-PAGE.zh.md:3 links chapters/README.md and results/THEORY-GRAPH.md, both English. The overview zh :11 marks ONE-ARGUMENT '（英文）' but not FREE-ENERGY-PRINCIPLE, COLLECTIVE-DIRECTION or review/SCIENCES. The live zh editions are ONE-PAGE, the overview, review/README and the Lean README. 智慧 and 合作 count 0 in ONE-PAGE.zh and overview zh. GLOSSARY and OPENING have no zh edition."
+ },
+ "chinese-50": {
+  "id": "chinese-50",
+  "holds": "partly",
+  "severity_after": "low",
+  "note": "06:494 heading and :496 present-tense sentence are confirmed. The history file header (:3) says '中华本，2026年10月21日… 说同一个理论'. But §7.3 already states its status near the link: 06:500 '它陈述在 World 模型（World、Flow 与依存之网）上，不在 Becoming.Grammar 上（见未决）', and :650 lists it as open. What is missing is its date and that it is a superseded history copy."
+ },
+ "chinese-51": {
+  "id": "chinese-51",
+  "holds": "partly",
+  "severity_after": "low",
+  "note": "01-ROOT.md:147 '(`«生生不息»`)' as a theorem for every relation is confirmed. GLOSSARY.md:17 ('it is not the ethics' 生生') and 01-ROOT.md:151 disambiguate in English; 06:602 '同字而不同义，不可合并' does so in Chinese. The 06:113 cite is wrong (that line is about «通»/«息»). ONE-PAGE.zh and overview zh contain «生生» 0 times, so the zh fronts do not themselves create the confusion. The rename is arguable, not clearly a 'wrong meaning' under AGENTS: the guillemets mark the grammar's sense by design."
+ },
+ "chinese-52": {
+  "id": "chinese-52",
+  "holds": "holds",
+  "severity_after": "low",
+  "note": "ONE-PAGE.zh.md:7 '它是什么' does not name 生生; it appears once, in the T8 row (:22). 「生生之谓易」 appears in no front (only 06 and review/CLASSICAL-TEXTS). The 孔疏 two senses are at 06:86 ('「生生」有二义'), not :89. Proposal sound if it keeps T8's standing and both premises."
+ },
+ "chinese-53": {
+  "id": "chinese-53",
+  "holds": "holds",
+  "severity_after": "medium",
+  "note": "README.md:156 'The relational start holds across the lines' is stronger than 06:4 '关系之起点是主导线索，全称形式多须定域' and 06:628 '关系的起点是一条主导线索，在最早一层最强，不是每一体系的性质'. README gives '91 agree' without 06:50 '相合不是印证'. README.md:158 'Next: … tolerance compared across laws (柔弱者生之徒)' is stale: 06:466 (not :460) lists 柔弱胜刚强 → 容忍跨律单调 as answered, and 06:455 says '无一仍开'. Fix the README/GOALS source text, not the view."
+ },
+ "chinese-54": {
+  "id": "chinese-54",
+  "holds": "holds",
+  "severity_after": "low",
+  "note": "0 hits for 248, 5,673, 脉络 or 卦/hexagram in ONE-PAGE (en and zh) and both overviews: confirmed. The counts live at 06:444 ('相合 453，定域 647，相分 200') and README.md:156. Low: ONE-PAGE links 06, whose opening thesis (06:4) states the mapping. Any added sentence must carry '相合不是印证' and 'AI classification, unreviewed'."
+ },
+ "chinese-55": {
+  "id": "chinese-55",
+  "holds": "partly",
+  "severity_after": "low",
+  "note": "Counts confirmed: 扩大 ONE-PAGE.zh 6 and overview zh 19, 以广为愈 06 7 and BUDDHIST 3, 拓宽 06 4; 延续条件 on the fronts, 延续之条件 in 06 (11). The overview zh itself mixes 模式 (1) and 样式 (5). Partly: 06 and the dossiers are written in a deliberately more classical register, and AGENTS' rule is one sense per term, not one rendering. Still, a zh glossary column with 又名 would help."
+ },
+ "chinese-56": {
+  "id": "chinese-56",
+  "holds": "partly",
+  "severity_after": "low",
+  "note": "The ONE-PAGE.zh T7 cell (:20) is 269 characters, with a 155-character clause; '部分与模式' and '少数是根的情形' are present at :11; the :30 sentence is confirmed. The 欧化 is real in the long cells, but '情形' for 'case' is acceptable mathematical Chinese, so the claim that 特例 is meant is debatable. Rewriting from the homes with a native reader, as AGENTS requires, is right."
+ }
+}

@@ -1,3 +1,6 @@
+<!-- Banner of 7 November 2026 (RV), AI-written navigation; the folder's text below it is unchanged. -->
+> An earlier theory folder, first written before the live account, [the theory of becoming](../becoming/ONE-PAGE.md). Its own assessments of standing and readiness are its view as of 25 September 2026, not the live account's. [Chapter 5](../becoming/chapters/05-COLLECTIVES.md#11-joint-plans-and-applications) counts it among applications elsewhere: design programmes, not results; correspondence not established. What became of its claims is in [the crosswalk](../becoming/results/atlas/CROSSWALK.md#cxg-architecture-for-a-living-earth), where every entry is an AI reading with no person's behind it and not carried is an outcome, not a defect; [the index](../README.md) lists the sixteen earlier folders.
+
 # Architecture for a living Earth
 
 Opened 2026-09-13 · Working exploration · AI-drafted from Ren’s [founding message](../../sources/15-codex-theory-conversations/2026-09-13-architecture-for-a-living-earth.md). The title, organization, and design elaborations are assistant proposals. This is a possible future to investigate, not a validated building design or a prediction with a fixed date.

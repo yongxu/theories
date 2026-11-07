@@ -1,0 +1,1910 @@
+{
+ "folders": {
+  "summary": "I worked read-only in /Users/ren/tmp/rv/wt at 804028391. I edited nothing and ran no tests.\n\nThere are sixteen earlier folders, all with a crosswalk group cxg-<slug>: 1,183 entries in all and 865 across these groups. Each README was first committed on 2026-09-25 (\"Track the full theories corpus\"). The last substantive revisions are the dates in data.folders. Commits that only moved or re-pointed paths were set aside: R35, H1, H4, H5, RB, K1, the 10-09 rename, the RA link re-point and R19's plain-text links. Most status paragraphs (the \"Status.\" paragraph near the top) are byte-unchanged since 2026-09-25. The exceptions are alignment (2026-09-29), relational (2026-10-04, plus a link fix on 10-09) and meta-attractor's line 21 (2026-10-08).\n\nThe standing sentences were found by keyword search (publishable, rigorous, survived, ready, validated, mature, strongest, defensible, most developed, machine-checked and the like). I also read every status paragraph and the reading guides. I did not read every sentence. Two folders, architecture-for-a-living-earth and evolving-community-swarms, carry only disclaimers.\n\n05-COLLECTIVES.md:398 covers five folders: wamotopia, evolving-community-swarms, human-solutions-museum, the-fork, architecture-for-a-living-earth.\n\nThe banner is one 68-word template, 70 words once the date is filled in. Its crosswalk clause copies CROSSWALK.md:5 word for word. It reads \"first written before the live account\" because meta-attractor and jian have dated additions written after it.\n\nEach edit puts the banner, a blank line, then the README's unchanged first line, which occurs once in each file. Adding text breaks no atlas quote check: atlas.py:252 only tests that each quote is a substring of its source. Three records hash meta-attractor/README.md (cd64296038fb, matching the current file). registry.scoped_drift ignores lines that were only added, so their hashes need no refresh. I read this in the code and did not run it.\n\nThe open items below need the coordinator. They are: line-number locators in the atlas data, a false line in REPOSITORY-LAYOUT, the new ../README.md link and some README sentences the banner does not correct.",
+  "edits": [
+   {
+    "file": "theories/alignment-selection-on-cognition/README.md",
+    "old": "# Alignment as selection on cognition (心中的摩洛克)",
+    "new": "> This is an earlier theory folder, first written before the live account, which is [theories/becoming/](../becoming/ONE-PAGE.md). Its own assessments of standing and readiness are its view as of 4 October 2026, not the live account's. What became of its claims is in [the crosswalk](../becoming/results/atlas/CROSSWALK.md#cxg-alignment-selection-on-cognition), where every entry is an AI reading with no person's behind it and not carried is an outcome, not a defect. [The index](../README.md) lists the earlier folders.\n\n# Alignment as selection on cognition (心中的摩洛克)",
+    "kind": "text",
+    "why": "Its README presents its September and October self-assessments as current, for example line 9: 'Publishable now'. It does not link the crosswalk.",
+    "home": "theories/becoming/results/atlas/CROSSWALK.md:5",
+    "home_quote": "It creates no result, and every entry is an AI reading with no person's behind it. A shared word is not a correspondence, structural agreement is not agreement in meaning, and no tradition is spoken for. Not carried is an outcome, not a defect."
+   },
+   {
+    "file": "theories/architecture-for-a-living-earth/README.md",
+    "old": "# Architecture for a living Earth",
+    "new": "> This is an earlier theory folder, first written before the live account, which is [theories/becoming/](../becoming/ONE-PAGE.md). Its own assessments of standing and readiness are its view as of 25 September 2026, not the live account's. What became of its claims is in [the crosswalk](../becoming/results/atlas/CROSSWALK.md#cxg-architecture-for-a-living-earth), where every entry is an AI reading with no person's behind it and not carried is an outcome, not a defect. [The index](../README.md) lists the earlier folders.\n\n# Architecture for a living Earth",
+    "kind": "text",
+    "why": "The same banner on all sixteen. This folder's own text only disclaims (line 3), but it does not link the live account's one page or the crosswalk.",
+    "home": "theories/becoming/results/atlas/CROSSWALK.md:5",
+    "home_quote": "It creates no result, and every entry is an AI reading with no person's behind it. ... Not carried is an outcome, not a defect."
+   },
+   {
+    "file": "theories/context-as-existence-runtimes/README.md",
+    "old": "# Context as existence — the runtimes (语境即存在 · 上下文运行时)",
+    "new": "> This is an earlier theory folder, first written before the live account, which is [theories/becoming/](../becoming/ONE-PAGE.md). Its own assessments of standing and readiness are its view as of 25 September 2026, not the live account's. What became of its claims is in [the crosswalk](../becoming/results/atlas/CROSSWALK.md#cxg-context-as-existence-runtimes), where every entry is an AI reading with no person's behind it and not carried is an outcome, not a defect. [The index](../README.md) lists the earlier folders.\n\n# Context as existence — the runtimes (语境即存在 · 上下文运行时)",
+    "kind": "text",
+    "why": "Line 7 says 'Strong-draft to near-publishable' and 'Four or five essays are publishable now' as current. There is no crosswalk link.",
+    "home": "theories/becoming/results/atlas/CROSSWALK.md:5",
+    "home_quote": "It creates no result, and every entry is an AI reading with no person's behind it. ... Not carried is an outcome, not a defect."
+   },
+   {
+    "file": "theories/drives-narrative-attractors-and-mind/README.md",
+    "old": "# Drives, narrative attractors and the construction of mind",
+    "new": "> This is an earlier theory folder, first written before the live account, which is [theories/becoming/](../becoming/ONE-PAGE.md). Its own assessments of standing and readiness are its view as of 4 October 2026, not the live account's. What became of its claims is in [the crosswalk](../becoming/results/atlas/CROSSWALK.md#cxg-drives-narrative-attractors-and-mind), where every entry is an AI reading with no person's behind it and not carried is an outcome, not a defect. [The index](../README.md) lists the earlier folders.\n\n# Drives, narrative attractors and the construction of mind",
+    "kind": "text",
+    "why": "Line 5 says 'the mechanism is settled enough to teach' as current. There is no crosswalk link.",
+    "home": "theories/becoming/results/atlas/CROSSWALK.md:5",
+    "home_quote": "It creates no result, and every entry is an AI reading with no person's behind it. ... Not carried is an outcome, not a defect."
+   },
+   {
+    "file": "theories/evolving-community-swarms/README.md",
+    "old": "# Evolving community swarms",
+    "new": "> This is an earlier theory folder, first written before the live account, which is [theories/becoming/](../becoming/ONE-PAGE.md). Its own assessments of standing and readiness are its view as of 25 September 2026, not the live account's. What became of its claims is in [the crosswalk](../becoming/results/atlas/CROSSWALK.md#cxg-evolving-community-swarms), where every entry is an AI reading with no person's behind it and not carried is an outcome, not a defect. [The index](../README.md) lists the earlier folders.\n\n# Evolving community swarms",
+    "kind": "text",
+    "why": "The same banner on all sixteen. This folder is one of the five that 05 §11 names as a design programme. It does not link the crosswalk.",
+    "home": "theories/becoming/results/atlas/CROSSWALK.md:5",
+    "home_quote": "It creates no result, and every entry is an AI reading with no person's behind it. ... Not carried is an outcome, not a defect."
+   },
+   {
+    "file": "theories/human-solutions-museum/README.md",
+    "old": "# The Human Solutions Museum (人类解决问题的方法博物馆 / 文明方法博物馆)",
+    "new": "> This is an earlier theory folder, first written before the live account, which is [theories/becoming/](../becoming/ONE-PAGE.md). Its own assessments of standing and readiness are its view as of 25 September 2026, not the live account's. What became of its claims is in [the crosswalk](../becoming/results/atlas/CROSSWALK.md#cxg-human-solutions-museum), where every entry is an AI reading with no person's behind it and not carried is an outcome, not a defect. [The index](../README.md) lists the earlier folders.\n\n# The Human Solutions Museum (人类解决问题的方法博物馆 / 文明方法博物馆)",
+    "kind": "text",
+    "why": "Line 5 says 'essentially publishable today' and 'Verdict: strong draft, one document publishable' as current.",
+    "home": "theories/becoming/results/atlas/CROSSWALK.md:5",
+    "home_quote": "It creates no result, and every entry is an AI reading with no person's behind it. ... Not carried is an outcome, not a defect."
+   },
+   {
+    "file": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "old": "# 間 and 文言 as formal language (間 · 文言 · 文)",
+    "new": "> This is an earlier theory folder, first written before the live account, which is [theories/becoming/](../becoming/ONE-PAGE.md). Its own assessments of standing and readiness are its view as of 6 October 2026, not the live account's. What became of its claims is in [the crosswalk](../becoming/results/atlas/CROSSWALK.md#cxg-jian-and-wenyan-as-formal-language), where every entry is an AI reading with no person's behind it and not carried is an outcome, not a defect. [The index](../README.md) lists the earlier folders.\n\n# 間 and 文言 as formal language (間 · 文言 · 文)",
+    "kind": "text",
+    "why": "Line 11 says 'Four or five pieces are publishable essentially as-is' as current. Its top paragraphs link becoming history pages, not the one page.",
+    "home": "theories/becoming/results/atlas/CROSSWALK.md:5",
+    "home_quote": "It creates no result, and every entry is an AI reading with no person's behind it. ... Not carried is an outcome, not a defect."
+   },
+   {
+    "file": "theories/keep-the-possibility-space-open/README.md",
+    "old": "# Keep the Possibility Space Open (开 — 护开不闭)",
+    "new": "> This is an earlier theory folder, first written before the live account, which is [theories/becoming/](../becoming/ONE-PAGE.md). Its own assessments of standing and readiness are its view as of 4 October 2026, not the live account's. What became of its claims is in [the crosswalk](../becoming/results/atlas/CROSSWALK.md#cxg-keep-the-possibility-space-open), where every entry is an AI reading with no person's behind it and not carried is an outcome, not a defect. [The index](../README.md) lists the earlier folders.\n\n# Keep the Possibility Space Open (开 — 护开不闭)",
+    "kind": "text",
+    "why": "Line 5 says 'rigorous', 'survived a 56-criticism adversarial review' and 'Near-publishable' as current.",
+    "home": "theories/becoming/results/atlas/CROSSWALK.md:5",
+    "home_quote": "It creates no result, and every entry is an AI reading with no person's behind it. ... Not carried is an outcome, not a defect."
+   },
+   {
+    "file": "theories/memories-and-working-style/README.md",
+    "old": "# How Ren works, and what only the memories record",
+    "new": "> This is an earlier theory folder, first written before the live account, which is [theories/becoming/](../becoming/ONE-PAGE.md). Its own assessments of standing and readiness are its view as of 25 September 2026, not the live account's. What became of its claims is in [the crosswalk](../becoming/results/atlas/CROSSWALK.md#cxg-memories-and-working-style), where every entry is an AI reading with no person's behind it and not carried is an outcome, not a defect. [The index](../README.md) lists the earlier folders.\n\n# How Ren works, and what only the memories record",
+    "kind": "text",
+    "why": "The same banner on all sixteen. Line 219 records the verdict 'the foundation holds' with no date context for the reader, and line 169 states a machine-checked Lean result. There is no crosswalk link.",
+    "home": "theories/becoming/results/atlas/CROSSWALK.md:5",
+    "home_quote": "It creates no result, and every entry is an AI reading with no person's behind it. ... Not carried is an outcome, not a defect."
+   },
+   {
+    "file": "theories/meta-attractor/README.md",
+    "old": "# The Meta-Attractor (元吸引子 / 总体化吸引子)",
+    "new": "> This is an earlier theory folder, first written before the live account, which is [theories/becoming/](../becoming/ONE-PAGE.md). Its own assessments of standing and readiness are its view as of 4 November 2026, not the live account's. What became of its claims is in [the crosswalk](../becoming/results/atlas/CROSSWALK.md#cxg-meta-attractor), where every entry is an AI reading with no person's behind it and not carried is an outcome, not a defect. [The index](../README.md) lists the earlier folders.\n\n# The Meta-Attractor (元吸引子 / 总体化吸引子)",
+    "kind": "text",
+    "why": "Lines 772, 773 and 1134 call artifacts 'Strongest publishable' and 'the readiest publishable artifact'. Line 21 calls the folder 'the most developed theory in the corpus'.",
+    "home": "theories/becoming/results/atlas/CROSSWALK.md:5",
+    "home_quote": "It creates no result, and every entry is an AI reading with no person's behind it. ... Not carried is an outcome, not a defect."
+   },
+   {
+    "file": "theories/relational-self-and-datong/README.md",
+    "old": "# The relational self and 大同",
+    "new": "> This is an earlier theory folder, first written before the live account, which is [theories/becoming/](../becoming/ONE-PAGE.md). Its own assessments of standing and readiness are its view as of 4 October 2026, not the live account's. What became of its claims is in [the crosswalk](../becoming/results/atlas/CROSSWALK.md#cxg-relational-self-and-datong), where every entry is an AI reading with no person's behind it and not carried is an outcome, not a defect. [The index](../README.md) lists the earlier folders.\n\n# The relational self and 大同",
+    "kind": "text",
+    "why": "Lines 499 and 536 call texts 'the mature statement' and 'the best single formulation for a reader' as current. There is no crosswalk link.",
+    "home": "theories/becoming/results/atlas/CROSSWALK.md:5",
+    "home_quote": "It creates no result, and every entry is an AI reading with no person's behind it. ... Not carried is an outcome, not a defect."
+   },
+   {
+    "file": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+    "old": "# The Selfishness Spiral and Narrative-Value Frames (no fixed Chinese name in the sources; the Chinese draft names the parts 赢家通吃机制 \"winner-takes-all mechanism\", 权力最大化者的自我强化选择 \"self-reinforcing selection of power-maximisers\", 主导的吸引子 \"dominant attractor\")",
+    "new": "> This is an earlier theory folder, first written before the live account, which is [theories/becoming/](../becoming/ONE-PAGE.md). Its own assessments of standing and readiness are its view as of 4 October 2026, not the live account's. What became of its claims is in [the crosswalk](../becoming/results/atlas/CROSSWALK.md#cxg-selfishness-spiral-and-narrative-value-frames), where every entry is an AI reading with no person's behind it and not carried is an outcome, not a defect. [The index](../README.md) lists the earlier folders.\n\n# The Selfishness Spiral and Narrative-Value Frames (no fixed Chinese name in the sources; the Chinese draft names the parts 赢家通吃机制 \"winner-takes-all mechanism\", 权力最大化者的自我强化选择 \"self-reinforcing selection of power-maximisers\", 主导的吸引子 \"dominant attractor\")",
+    "kind": "text",
+    "why": "Line 5 says 'Substantially complete as an argument' and 'Near-publishable at chapter length' as current.",
+    "home": "theories/becoming/results/atlas/CROSSWALK.md:5",
+    "home_quote": "It creates no result, and every entry is an AI reading with no person's behind it. ... Not carried is an outcome, not a defect."
+   },
+   {
+    "file": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "old": "# Spirit, Token, Space and the Yi substrate (間 · 一/太極)",
+    "new": "> This is an earlier theory folder, first written before the live account, which is [theories/becoming/](../becoming/ONE-PAGE.md). Its own assessments of standing and readiness are its view as of 25 September 2026, not the live account's. What became of its claims is in [the crosswalk](../becoming/results/atlas/CROSSWALK.md#cxg-spirit-space-token-and-yi-substrate), where every entry is an AI reading with no person's behind it and not carried is an outcome, not a defect. [The index](../README.md) lists the earlier folders.\n\n# Spirit, Token, Space and the Yi substrate (間 · 一/太極)",
+    "kind": "text",
+    "why": "Line 5 says 'publishable close to as-is' and 'one essay away from publishable' as current.",
+    "home": "theories/becoming/results/atlas/CROSSWALK.md:5",
+    "home_quote": "It creates no result, and every entry is an AI reading with no person's behind it. ... Not carried is an outcome, not a defect."
+   },
+   {
+    "file": "theories/the-fork-and-cooperative-infrastructure/README.md",
+    "old": "# Cooperative abundance and freely built worlds",
+    "new": "> This is an earlier theory folder, first written before the live account, which is [theories/becoming/](../becoming/ONE-PAGE.md). Its own assessments of standing and readiness are its view as of 3 October 2026, not the live account's. What became of its claims is in [the crosswalk](../becoming/results/atlas/CROSSWALK.md#cxg-the-fork-and-cooperative-infrastructure), where every entry is an AI reading with no person's behind it and not carried is an outcome, not a defect. [The index](../README.md) lists the earlier folders.\n\n# Cooperative abundance and freely built worlds",
+    "kind": "text",
+    "why": "The same banner on all sixteen. This is one of the five folders that 05 §11 names as a design programme. There is no crosswalk link.",
+    "home": "theories/becoming/results/atlas/CROSSWALK.md:5",
+    "home_quote": "It creates no result, and every entry is an AI reading with no person's behind it. ... Not carried is an outcome, not a defect."
+   },
+   {
+    "file": "theories/wamotopia-and-the-wamo-protocol/README.md",
+    "old": "# Wamotopia and the Wamo Protocol (瓦猫 / Wamotopia / Wamo 协议)",
+    "new": "> This is an earlier theory folder, first written before the live account, which is [theories/becoming/](../becoming/ONE-PAGE.md). Its own assessments of standing and readiness are its view as of 25 September 2026, not the live account's. What became of its claims is in [the crosswalk](../becoming/results/atlas/CROSSWALK.md#cxg-wamotopia-and-the-wamo-protocol), where every entry is an AI reading with no person's behind it and not carried is an outcome, not a defect. [The index](../README.md) lists the earlier folders.\n\n# Wamotopia and the Wamo Protocol (瓦猫 / Wamotopia / Wamo 协议)",
+    "kind": "text",
+    "why": "Line 5 says 'Substantially complete' and 'The *protocol* is publishable today' as current.",
+    "home": "theories/becoming/results/atlas/CROSSWALK.md:5",
+    "home_quote": "It creates no result, and every entry is an AI reading with no person's behind it. ... Not carried is an outcome, not a defect."
+   },
+   {
+    "file": "theories/zhishan-intelligence-must-be-good/README.md",
+    "old": "# Intelligence Must Be Good (智善 / Zhishan)",
+    "new": "> This is an earlier theory folder, first written before the live account, which is [theories/becoming/](../becoming/ONE-PAGE.md). Its own assessments of standing and readiness are its view as of 4 October 2026, not the live account's. What became of its claims is in [the crosswalk](../becoming/results/atlas/CROSSWALK.md#cxg-zhishan-intelligence-must-be-good), where every entry is an AI reading with no person's behind it and not carried is an outcome, not a defect. [The index](../README.md) lists the earlier folders.\n\n# Intelligence Must Be Good (智善 / Zhishan)",
+    "kind": "text",
+    "why": "Line 5 says 'Individual artifacts are publishable today' and 'The theory as a whole is **near-publishable**' as current.",
+    "home": "theories/becoming/results/atlas/CROSSWALK.md:5",
+    "home_quote": "It creates no result, and every entry is an AI reading with no person's behind it. ... Not carried is an outcome, not a defect."
+   }
+  ],
+  "restatements": [
+   {
+    "file": "theories/becoming/results/atlas/CROSSWALK.md",
+    "line": 5,
+    "text": "It creates no result, and every entry is an AI reading with no person's behind it. A shared word is not a correspondence, structural agreement is not agreement in meaning, and no tradition is spoken for. Not carried is an outcome, not a defect.",
+    "verdict": "fine",
+    "note": "The banner and index copy this. It is a generated page (atlas.py), so it was not edited."
+   },
+   {
+    "file": "theories/becoming/results/atlas/CROSSWALK.md",
+    "line": 9,
+    "text": "A second critic then read 100 entries drawn at random ... that estimates 82.6% holding, 14.2% with a label or a target's role wrong and 3.2% with a wrong reading over all 1183; its fixes are applied, and the other entries were not read again.",
+    "verdict": "fine",
+    "note": "The index lead copies this, with its figures taken from crosswalk-checks.json at generation time."
+   },
+   {
+    "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+    "line": 398,
+    "text": "*Applications elsewhere* (design programmes, not results; correspondence not established): the Wamo protocol, evolving community swarms, the human solutions museum, cooperative infrastructure, architecture for a living Earth.",
+    "verdict": "fine",
+    "note": "It covers wamotopia-and-the-wamo-protocol, evolving-community-swarms, human-solutions-museum, the-fork-and-cooperative-infrastructure and architecture-for-a-living-earth. The banner says nothing that conflicts with it, and the index lead quotes it."
+   },
+   {
+    "file": "theories/keep-the-possibility-space-open/README.md",
+    "line": 5,
+    "text": "Two publishable artifacts already exist — a rigorous 29-proposition proof-sketch (..., which survived a 56-criticism adversarial review) ... Near-publishable, not yet published.",
+    "verdict": "fine",
+    "note": "Left as it is. The banner dates it as the folder's own view."
+   },
+   {
+    "file": "theories/alignment-selection-on-cognition/README.md",
+    "line": 9,
+    "text": "Publishable now: the position paper, after citation verification; the essay trilogy, with authorship disclosure.",
+    "verdict": "fine",
+    "note": "Left. The banner dates it."
+   },
+   {
+    "file": "theories/wamotopia-and-the-wamo-protocol/README.md",
+    "line": 5,
+    "text": "The *protocol* is publishable today and was published; the *theory* behind it is a strong draft ...",
+    "verdict": "fine",
+    "note": "Left. The banner dates it."
+   },
+   {
+    "file": "theories/human-solutions-museum/README.md",
+    "line": 5,
+    "text": "The concept document ... is essentially publishable today as an essay ...",
+    "verdict": "fine",
+    "note": "Left. The banner dates it."
+   },
+   {
+    "file": "theories/zhishan-intelligence-must-be-good/README.md",
+    "line": 5,
+    "text": "Individual artifacts are publishable today (...). The theory as a whole is **near-publishable** ...",
+    "verdict": "fine",
+    "note": "Left. The banner dates it."
+   },
+   {
+    "file": "theories/context-as-existence-runtimes/README.md",
+    "line": 7,
+    "text": "Strong-draft to near-publishable ... Four or five essays are publishable now; the theory as a validated result is not.",
+    "verdict": "fine",
+    "note": "Left. The banner dates it."
+   },
+   {
+    "file": "theories/spirit-space-token-and-yi-substrate/README.md",
+    "line": 5,
+    "text": "Two things are publishable close to as-is ... The theory as a whole is one essay away from publishable ...",
+    "verdict": "fine",
+    "note": "Left. The banner dates it."
+   },
+   {
+    "file": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+    "line": 5,
+    "text": "Substantially complete as an argument ... Near-publishable at chapter length with one essay of writing.",
+    "verdict": "fine",
+    "note": "Left. The banner dates it."
+   },
+   {
+    "file": "theories/jian-and-wenyan-as-formal-language/README.md",
+    "line": 11,
+    "text": "Not publishable as a whole. Four or five pieces are publishable essentially as-is: ...",
+    "verdict": "fine",
+    "note": "Left. The banner dates it."
+   },
+   {
+    "file": "theories/meta-attractor/README.md",
+    "line": 21,
+    "text": "Historical inventory and assessment (current corrections below). Diagnostically the most developed theory in the corpus ... The earlier inventory called three artifacts “publishable close to as-is” (the August technical paper no longer has that status after the present audit)",
+    "verdict": "fine",
+    "note": "Left. The banner dates it. Lines 772 and 1131 still call the August paper 'the corpus's most defensible claim to originality', against line 21's audit. This is listed under open."
+   }
+  ],
+  "open": [
+   "Atlas line-number locators move by 2 once the banner and its blank line are added. All of them are correct today. They live in source data, not generated files: theories/becoming/results/atlas/entries/correspondence_groups.json and correspondences.json. CROSSWALK.md, map.html and results/data/atlas.json are generated from them. The locators are: cxg-keep-the-possibility-space-open read[0] 'lines 1-869' and skimmed[0] 'lines 870-921'; cxg-meta-attractor read[0] 'lines 1-733 and 1020-1144' and skimmed[1] 'lines 733-1019'; cxg-zhishan-intelligence-must-be-good read[0] 'lines 1 to 1087'; cxg-other-indian read[14] and entry cx-oi-meta-attractor-reading absence.read[0] 'theories/meta-attractor/README.md lines 101 and 462'; the same entry's source.locator 'claim 138, and the paragraph at line 101'; cxg-abrahamic-islamic not_mapped[0] 'selfishness-spiral README line 117; meta-attractor README line 808' and coverage.absent[0] 'line 1115' and 'line 69'; cxg-modern-philosophy searched[4] 'selfishness-spiral's README on Marx (lines 365, 570, 611)'; entries cx-abr-jubilee-return-of-land 'line 69' and cx-abr-hisba-office 'line 1115'. atlas.py checks none of these line numbers. They describe what was read at a given time, not current positions. You can add 2 to each and rerun the render, or state that they are read at 804028391. Any 'claim N' locator counts the README's own numbered claims, not lines, and does not move.",
+   "No record under theories/becoming/results/records/ cites a folder README by line. Three records (loss-read-in-time-by-the-others, shaping-read-by-readers-drawn-from-the-selected, readers-drawn-from-the-selected) hash theories/meta-attractor/README.md as cd64296038fb..., which matches the current file. registry.changed_lines lists only replace and delete opcodes, so a pure insertion above the first heading yields no scoped drift. I read this in the code and did not run it. Do not refresh those hashes.",
+   "_process/REPOSITORY-LAYOUT.md:29 reads 'theories/<branch folders>/    September syntheses, in place, with a generated status header'. No tool in tools/ writes such a header, and no folder has one. You can make the banner generated, with one template and slots filled from git and the crosswalk, and add theories/README.md and the banners to the generator and manifest. Or correct that line, for example to 'with a status banner'. That file is outside my group, so I left it.",
+   "Every banner links ../README.md (theories/README.md), which does not exist yet. Land the index in the same train, or the link check fails.",
+   "Date slot: I used each folder's last substantive commit, as asked. Most status paragraphs have not changed since 2026-09-25. Alignment line 9 last changed on 2026-09-29, meta-attractor line 21 on 2026-10-08 and relational line 5 on 2026-10-04. To date the assessments themselves rather than the folder, use those dates. The 2026-09-25 commit is an import, so the content may be older. Architecture's own header says 'Opened 2026-09-13'.",
+   "meta-attractor: its first paragraphs (lines 3-11) are dated restatements of results on the live spine, revised up to 2026-11-04. The banner says 'first written before the live account', which is true. Even so, a reader may take those paragraphs as the folder's own view. They should match their records, and checking that falls outside this pass. jian has dated paragraphs from 6 October at lines 3-7 that link history pages.",
+   "Sentences the banner does not correct, because they misstate the live account rather than giving a dated self-assessment: relational-self-and-datong/README.md:499 says '`becoming` — **the current home of this theory's best writing.** 第七章 ..., 第八章 ..., 第十五章 ..., 第十八章 ...', but those are chapters of the 2026-07-14 生生不息论 book, and theories/becoming has chapters 01-08. relational:5, 'The theory's centre of gravity has migrated into `becoming`', may need the same check. A correction is outside this banner task. It needs one reader against the live chapters.",
+   "Proof claims with no check in this repository: relational-self-and-datong/README.md:5 and :47, and memories-and-working-style/README.md:169, state a 'machine-checked' Lean characterisation 'with 0 sorry and 0 axioms' of a file under sources/. AGENTS.md says proof claims are checked. Decide whether these sentences should say that the result is not checked here.",
+   "Contradicting self-assessments: keep-the-possibility-space-open:5 and meta-attractor:21 each call themselves 'the most developed theory in the corpus'. meta-attractor:772 and :1131 call the August paper 'the corpus's most defensible claim to originality', while :21 says it lost its 'publishable' status after the audit. The banner dates both sides. Fixing them would mean editing the folders' own assessments.",
+   "The banner is AI-written navigation text, and I added no AI label. Decide whether it should carry one, such as '[AI note]'. That would take it past 70 words unless 'The index lists the earlier folders' is shortened.",
+   "theories/README.md as a page: it will be a front, so it needs a reading time (I proposed two minutes) and a generator with a generated-manifest entry. The trust figures should be read from crosswalk-checks.json at generation, not typed by hand. A NAME.zh.md edition is not needed unless you want one.",
+   "Scope of the search: the standing sentences come from a keyword search plus reading each status paragraph and reading guide. I did not read every sentence of the 16 READMEs (about 12,000 lines in all). The drives line 499 entry in data.folders is the clause 'and its most rigorous written form' from that line."
+  ],
+  "data": {
+   "banner_template": "> This is an earlier theory folder, first written before the live account, which is [theories/becoming/](../becoming/ONE-PAGE.md). Its own assessments of standing and readiness are its view as of {date}, not the live account's. What became of its claims is in [the crosswalk](../becoming/results/atlas/CROSSWALK.md#{anchor}), where every entry is an AI reading with no person's behind it and not carried is an outcome, not a defect. [The index](../README.md) lists the earlier folders.",
+   "banner_words": "68 in the template; 70 with a three-word date such as '4 October 2026'",
+   "date_format": "day month year, as in '6 October 2026' at jian-and-wenyan-as-formal-language/README.md:3",
+   "index_lead": "# The earlier theory folders\n\nReading time: two minutes.\n\nThese sixteen folders hold the earlier theories: syntheses first written in September 2026 and kept in place, some with later additions. Each was first written before the live account. The canonical theory is [theories/becoming/](becoming/ONE-PAGE.md). A folder's own assessments of standing and readiness are its view as of the date in its row, not the live account's. Five of them are named in [chapter 05](becoming/chapters/05-COLLECTIVES.md#11-joint-plans-and-applications) as applications elsewhere: \"design programmes, not results; correspondence not established\".\n\nEach row links that folder's section of [the crosswalk](becoming/results/atlas/CROSSWALK.md): what it claimed in its own terms, and what became of that in the live account. The crosswalk creates no result, and every entry is an AI reading with no person's behind it. A shared word is not a correspondence, structural agreement is not agreement in meaning, and not carried is an outcome, not a defect. A second critic read {sampled} entries drawn at random against both sides. Weighted by how many entries each kind holds, that estimates {holds}% holding, {label}% with a label or a target's role wrong and {fails}% with a wrong reading over all {entries}; the other entries were not read again.",
+   "index_lead_sources": {
+    "syntheses ... kept in place": "_process/REPOSITORY-LAYOUT.md:29 'September syntheses, in place'",
+    "canonical theory": "_process/REPOSITORY-LAYOUT.md:19 'theories/becoming/  the canonical theory'",
+    "applications elsewhere": "theories/becoming/chapters/05-COLLECTIVES.md:398",
+    "crosswalk wording": "theories/becoming/results/atlas/CROSSWALK.md:5 and :9",
+    "figures": "theories/becoming/results/atlas/crosswalk-checks.json second_critic (sampled 100, estimate_percent holds 82.6, label 14.2, fails 3.2, entries 1183)"
+   },
+   "index_columns": [
+    "Folder: the crosswalk group's title (correspondence_groups.json title.en), linking theories/<slug>/README.md",
+    "Own assessments as of: the last substantive revision (the banner's date)",
+    "Crosswalk: number of entries, linking becoming/results/atlas/CROSSWALK.md#cxg-<slug>",
+    "carried",
+    "carried-in-part",
+    "changed",
+    "history-only",
+    "not-carried",
+    "fresh-reading"
+   ],
+   "index_row_order": "as in CROSSWALK.md's table: alphabetical by slug",
+   "collectives_398": {
+    "quote": "*Applications elsewhere* (design programmes, not results; correspondence not established): the [Wamo protocol](../../wamotopia-and-the-wamo-protocol/README.md), [evolving community swarms](../../evolving-community-swarms/README.md), the [human solutions museum](../../human-solutions-museum/README.md), [cooperative infrastructure](../../the-fork-and-cooperative-infrastructure/README.md), [architecture for a living Earth](../../architecture-for-a-living-earth/README.md).",
+    "section": "## 11. Joint plans and applications (05-COLLECTIVES.md:379)",
+    "covers": [
+     "wamotopia-and-the-wamo-protocol",
+     "evolving-community-swarms",
+     "human-solutions-museum",
+     "the-fork-and-cooperative-infrastructure",
+     "architecture-for-a-living-earth"
+    ]
+   },
+   "crosswalk_self_description": "CROSSWALK.md:5 reads: 'The evidence layer, not for reading through. It creates no result, and every entry is an AI reading with no person's behind it. A shared word is not a correspondence, structural agreement is not agreement in meaning, and no tradition is spoken for. Not carried is an outcome, not a defect. Where a source is not stored here, what is said of it comes from the AI's knowledge and has not been checked against a text.' :9 gives the trust figures. The banner claims no more than this.",
+   "checks_by_reading": {
+    "atlas_quote_check": "tools/research/atlas.py:252-254 tests that e['quote'] is a substring of the source file. Prepending text cannot break it.",
+    "scoped_drift": "tools/research/registry.py:111-125 and 166-187: lines that are only added are not listed. This was read, not run.",
+    "heading_anchors": "A blockquote and a blank line before the H1 leave every heading anchor unchanged (moves.anchors).",
+    "generated": "No theories/<slug>/ path is a key of generated-manifest 'files'. theories/README.md does not exist."
+   },
+   "folders": [
+    {
+     "slug": "alignment-selection-on-cognition",
+     "title": "Alignment as selection on cognition (心中的摩洛克)",
+     "readme_first_commit": "2026-09-25",
+     "readme_last_commit": "2026-10-20",
+     "last_substantive": "2026-10-04 (deabb7c2f)",
+     "status_paragraph_last_changed": "line 9, 2026-09-29",
+     "crosswalk_group": "cxg-alignment-selection-on-cognition",
+     "entries": 62,
+     "outcomes": {
+      "carried": 0,
+      "carried-in-part": 36,
+      "changed": 11,
+      "history-only": 0,
+      "not-carried": 6,
+      "fresh-reading": 9
+     },
+     "standing_sentences": [
+      {
+       "line": 9,
+       "words": "The prescription exists as a complete, publishable position paper (`2026-08-22-development-within-understanding-position-paper.md`) that drops the diagnosis."
+      },
+      {
+       "line": 9,
+       "words": "Publishable now: the position paper, after citation verification; the essay trilogy, with authorship disclosure."
+      },
+      {
+       "line": 646,
+       "words": "For the prescription, the 2026-08-22 paper is the most developed and defensible, because it converts pause from a moral appeal into a measurable ratio with a falsifiable meta-signal, a founding act, and a criterion (\"metabolic rate of rules\") that sharpens \"zero-sum against humans.\""
+      },
+      {
+       "line": 663,
+       "words": "They are the strongest form of the theory and they are the part that would most change the prescription."
+      },
+      {
+       "line": 840,
+       "words": "- `05-alignment-and-moloch/2026-08-22-development-within-understanding-position-paper.md` — the prescription, complete and publishable; read sections 3 to 5 for the signal argument and 7 for the semantics of pause."
+      },
+      {
+       "line": 846,
+       "words": "The best citation for publication."
+      },
+      {
+       "line": 847,
+       "words": "The strongest and least-developed material in the theory."
+      }
+     ]
+    },
+    {
+     "slug": "architecture-for-a-living-earth",
+     "title": "Architecture for a living Earth",
+     "readme_first_commit": "2026-09-25",
+     "readme_last_commit": "2026-09-25",
+     "last_substantive": "2026-09-25 (b8591afbf; the 2026-10-19 commit touched only chiang-mai-2025/ links)",
+     "status_paragraph_last_changed": "none",
+     "crosswalk_group": "cxg-architecture-for-a-living-earth",
+     "entries": 30,
+     "outcomes": {
+      "carried": 0,
+      "carried-in-part": 11,
+      "changed": 4,
+      "history-only": 1,
+      "not-carried": 1,
+      "fresh-reading": 13
+     },
+     "standing_sentences": [
+      {
+       "line": 3,
+       "words": "This is a possible future to investigate, not a validated building design or a prediction with a fixed date.",
+       "note": "a disclaimer; no positive standing claim was found"
+      }
+     ]
+    },
+    {
+     "slug": "context-as-existence-runtimes",
+     "title": "Context as existence — the runtimes (语境即存在 · 上下文运行时)",
+     "readme_first_commit": "2026-09-25",
+     "readme_last_commit": "2026-10-20",
+     "last_substantive": "2026-09-25 (b8591afbf)",
+     "status_paragraph_last_changed": "line 7, 2026-09-25",
+     "crosswalk_group": "cxg-context-as-existence-runtimes",
+     "entries": 53,
+     "outcomes": {
+      "carried": 0,
+      "carried-in-part": 18,
+      "changed": 11,
+      "history-only": 3,
+      "not-carried": 4,
+      "fresh-reading": 17
+     },
+     "standing_sentences": [
+      {
+       "line": 7,
+       "words": "**Status.** Strong-draft to near-publishable: two self-contained specifications (the Chinese process-ontology spec and ember's SPEC v0.4), a mediated-runtime architecture that survived independent review, an implemented Postgres engine plus a shipped ~4,800-line git-native kernel, nineteen ADRs with a reversal ledger, […]"
+      },
+      {
+       "line": 7,
+       "words": "Four or five essays are publishable now; the theory as a validated result is not."
+      },
+      {
+       "line": 815,
+       "words": "**This is the strongest constitutional formulation in the corpus.**"
+      },
+      {
+       "line": 870,
+       "words": "For the *ontology and its philosophical commitments*, `crs/context-runtime-spec-v0.1.md` is the strongest single text — complete, self-attacking, executable, and the only place the process-ontology mapping is written down."
+      },
+      {
+       "line": 1133,
+       "words": "- **The retracted probe is the corpus's best publishable artifact and is buried.**"
+      },
+      {
+       "line": 1175,
+       "words": "**What could be published as it stands** (carried from the reading drafts so it is not lost): the Chinese spec, translated and paired with a reference kernel, is already a systems-and-philosophy paper; the intent document is publishable almost unchanged as an essay […]"
+      }
+     ]
+    },
+    {
+     "slug": "drives-narrative-attractors-and-mind",
+     "title": "Drives, narrative attractors and the construction of mind",
+     "readme_first_commit": "2026-09-25",
+     "readme_last_commit": "2026-10-20",
+     "last_substantive": "2026-10-04 (deabb7c2f)",
+     "status_paragraph_last_changed": "line 5, 2026-09-25",
+     "crosswalk_group": "cxg-drives-narrative-attractors-and-mind",
+     "entries": 52,
+     "outcomes": {
+      "carried": 0,
+      "carried-in-part": 15,
+      "changed": 13,
+      "history-only": 1,
+      "not-carried": 11,
+      "fresh-reading": 12
+     },
+     "standing_sentences": [
+      {
+       "line": 5,
+       "words": "**Status.** This is a real theory by its mechanism and a theme by its archive."
+      },
+      {
+       "line": 5,
+       "words": "Until then the honest description is: the mechanism is settled enough to teach; the document does not exist."
+      },
+      {
+       "line": 49,
+       "words": "its independent derivation there is the strongest evidence the theory is about minds in general rather than about human psychology."
+      },
+      {
+       "line": 499,
+       "words": "`无身之我` is the machine-scale instance of this theory's mechanism and its most rigorous written form"
+      }
+     ]
+    },
+    {
+     "slug": "evolving-community-swarms",
+     "title": "Evolving community swarms",
+     "readme_first_commit": "2026-09-25",
+     "readme_last_commit": "2026-09-25",
+     "last_substantive": "2026-09-25 (b8591afbf)",
+     "status_paragraph_last_changed": "none",
+     "crosswalk_group": "cxg-evolving-community-swarms",
+     "entries": 37,
+     "outcomes": {
+      "carried": 0,
+      "carried-in-part": 18,
+      "changed": 2,
+      "history-only": 0,
+      "not-carried": 3,
+      "fresh-reading": 14
+     },
+     "standing_sentences": [
+      {
+       "line": 3,
+       "words": "**Working title · established 2026-09-05 · exploratory theory and design direction**",
+       "note": "'established' gives a founding date, not a standing"
+      },
+      {
+       "line": 5,
+       "words": "That establishes the shared direction; it does not make the architecture a proven result or the assistant’s wording Ren-authored.",
+       "note": "a disclaimer"
+      },
+      {
+       "line": 161,
+       "words": "No prototype, performance benchmark, formal proof, deployment decision, implementation stack, community constitution, wallet model, or numerical resource budget has been established in this exploration.",
+       "note": "a disclaimer"
+      }
+     ]
+    },
+    {
+     "slug": "human-solutions-museum",
+     "title": "The Human Solutions Museum (人类解决问题的方法博物馆 / 文明方法博物馆)",
+     "readme_first_commit": "2026-09-25",
+     "readme_last_commit": "2026-10-20",
+     "last_substantive": "2026-09-25 (b8591afbf)",
+     "status_paragraph_last_changed": "line 5, 2026-09-25",
+     "crosswalk_group": "cxg-human-solutions-museum",
+     "entries": 31,
+     "outcomes": {
+      "carried": 0,
+      "carried-in-part": 9,
+      "changed": 7,
+      "history-only": 0,
+      "not-carried": 6,
+      "fresh-reading": 9
+     },
+     "standing_sentences": [
+      {
+       "line": 5,
+       "words": "The concept document `11-human-solutions-museum/人类解决问题的方法博物馆-方向定稿.md` is essentially publishable today as an essay, needing only a note that it describes a direction rather than a live museum."
+      },
+      {
+       "line": 5,
+       "words": "Verdict: strong draft, one document publishable, the empirical half unbuilt, and the research question that motivated it has not yet been folded back into the museum's own collection."
+      },
+      {
+       "line": 332,
+       "words": "For the *theory*, `人类解决问题的方法博物馆-方向定稿.md` §一–§六 remains the strongest text: it argues rather than specifies, and holds the reframing thesis, the mechanism-substrate list, the diffusion question and the condom method in one arc."
+      },
+      {
+       "line": 469,
+       "words": "Publishable as an essay with one added note."
+      }
+     ]
+    },
+    {
+     "slug": "jian-and-wenyan-as-formal-language",
+     "title": "間 and 文言 as formal language (間 · 文言 · 文)",
+     "readme_first_commit": "2026-09-25",
+     "readme_last_commit": "2026-10-23",
+     "last_substantive": "2026-10-06 (79f36bb29; the 2026-10-23 commit only re-pointed links)",
+     "status_paragraph_last_changed": "line 11, 2026-09-25",
+     "crosswalk_group": "cxg-jian-and-wenyan-as-formal-language",
+     "entries": 66,
+     "outcomes": {
+      "carried": 1,
+      "carried-in-part": 27,
+      "changed": 29,
+      "history-only": 2,
+      "not-carried": 2,
+      "fresh-reading": 5
+     },
+     "standing_sentences": [
+      {
+       "line": 11,
+       "words": "Not publishable as a whole."
+      },
+      {
+       "line": 11,
+       "words": "Four or five pieces are publishable essentially as-is: the §0 self-location essay, the §I.3 grammar argument, the 反诛心 treatment, 《间》/《理：间》 as a philosophical essay, 《气》 as an engineering discipline, and the $V_4$ information-preservation mathematics."
+      },
+      {
+       "line": 129,
+       "words": "On top sits the information result, which is the most defensible mathematics in the corpus."
+      },
+      {
+       "line": 1207,
+       "words": "§I.3's grammar argument (the genuinely novel contribution)"
+      },
+      {
+       "line": 1207,
+       "words": "§0 is publishable as a standalone essay today; §I.3 is publishable as a linguistics paper without committing to any of the ontology."
+      },
+      {
+       "line": 1211,
+       "words": "The high-risk vocabulary substitution table and the nine proof obligations are a publishable methodology artefact in their own right."
+      }
+     ]
+    },
+    {
+     "slug": "keep-the-possibility-space-open",
+     "title": "Keep the Possibility Space Open (开 — 护开不闭)",
+     "readme_first_commit": "2026-09-25",
+     "readme_last_commit": "2026-10-20",
+     "last_substantive": "2026-10-04 (deabb7c2f)",
+     "status_paragraph_last_changed": "line 5, 2026-09-25",
+     "crosswalk_group": "cxg-keep-the-possibility-space-open",
+     "entries": 64,
+     "outcomes": {
+      "carried": 0,
+      "carried-in-part": 46,
+      "changed": 10,
+      "history-only": 0,
+      "not-carried": 5,
+      "fresh-reading": 3
+     },
+     "standing_sentences": [
+      {
+       "line": 5,
+       "words": "**Status.** The most developed theory in the corpus and the one Ren says the rest reduces to (\"我们其实主要把keep possibilities space open说清楚就行\", 2026-07-07)."
+      },
+      {
+       "line": 5,
+       "words": "Two publishable artifacts already exist — a rigorous 29-proposition proof-sketch (`04-speculative-future/history-recovered-from-git/FOUNDATION-PRINCIPLES.md`, which survived a 56-criticism adversarial review) and a readable public manifesto (`04-speculative-future/current/FOUNDATION-PRINCIPLES-DRAFT.md`) — plus a formal Chinese treatment in 文言 with a Lean-adjacent apparatus (`07-shengsheng-buxi/…/卷六_开、闭、稳、真.md`)."
+      },
+      {
+       "line": 5,
+       "words": "Near-publishable, not yet published."
+      },
+      {
+       "line": 33,
+       "words": "The 开 version is the most defensible and the least legible to a Western audience."
+      },
+      {
+       "line": 585,
+       "words": "A seven-lens adversarial review (`thinking_06`) raises 56 criticisms, 43 survive, and two load-bearing fixes land."
+      },
+      {
+       "line": 859,
+       "words": "Everything defensible in the theory survived these; read them to know what has already been tried."
+      }
+     ]
+    },
+    {
+     "slug": "memories-and-working-style",
+     "title": "How Ren works, and what only the memories record",
+     "readme_first_commit": "2026-09-25",
+     "readme_last_commit": "2026-10-20",
+     "last_substantive": "2026-09-25 (b8591afbf)",
+     "status_paragraph_last_changed": "none",
+     "crosswalk_group": "cxg-memories-and-working-style",
+     "entries": 49,
+     "outcomes": {
+      "carried": 0,
+      "carried-in-part": 27,
+      "changed": 16,
+      "history-only": 0,
+      "not-carried": 3,
+      "fresh-reading": 3
+     },
+     "standing_sentences": [
+      {
+       "line": 55,
+       "words": "He had earlier flagged that the coding harness's terseness defaults actively fight essay work; this is the validated answer."
+      },
+      {
+       "line": 61,
+       "words": "This is a content gate, not a style gate, and it survived the manifesto turn that voided the style law grown from it."
+      },
+      {
+       "line": 169,
+       "words": "The concept has since been given a machine-checked characterization in Lean — three Bool axes, an iff over all eight states, ... 0 sorry and 0 axioms, 2026-05-07 — so a recovered manifesto would now have a formal companion."
+      },
+      {
+       "line": 219,
+       "words": "| 2026-06-06 | The 7-lens, 64-agent adversarial review: 56 findings, 43 survived steelmanning, verdict \"the foundation holds\" |"
+      }
+     ]
+    },
+    {
+     "slug": "meta-attractor",
+     "title": "The Meta-Attractor (元吸引子 / 总体化吸引子)",
+     "readme_first_commit": "2026-09-25",
+     "readme_last_commit": "2026-11-04",
+     "last_substantive": "2026-11-04 (dda2ecfbe, restatement of the group law in a top paragraph)",
+     "status_paragraph_last_changed": "line 21, 2026-10-08",
+     "crosswalk_group": "cxg-meta-attractor",
+     "entries": 69,
+     "outcomes": {
+      "carried": 2,
+      "carried-in-part": 48,
+      "changed": 5,
+      "history-only": 3,
+      "not-carried": 2,
+      "fresh-reading": 9
+     },
+     "standing_sentences": [
+      {
+       "line": 11,
+       "words": "The original integration is complete as a conditional account with actual formation and continuing revision, not a universal empirical or normative certificate."
+      },
+      {
+       "line": 21,
+       "words": "**Historical inventory and assessment (current corrections below).** Diagnostically the most developed theory in the corpus and the most drafted — four 2024 precursor notes, […]"
+      },
+      {
+       "line": 21,
+       "words": "The earlier inventory called three artifacts “publishable close to as-is” (the August technical paper no longer has that status after the present audit): […]"
+      },
+      {
+       "line": 772,
+       "words": "It is also the corpus's most defensible claim to originality."
+      },
+      {
+       "line": 773,
+       "words": "- **Strongest publishable article:** `03-meta-attractor/2025-10-essays/meta-attractor-essay-full-draft.md`."
+      },
+      {
+       "line": 1131,
+       "words": "- **`03-meta-attractor/2025-08-formal/2025-08-10-comprehensive-mathematical-definition.md`** — the formal core, and the corpus's most defensible claim to originality: […]"
+      },
+      {
+       "line": 1134,
+       "words": "- **`03-meta-attractor/2025-10-essays/meta-attractor-essay-full-draft.md`** — the readiest publishable artifact: complete arc, humane pacing, measurable diagnostics, twelve rules, honest objections."
+      }
+     ]
+    },
+    {
+     "slug": "relational-self-and-datong",
+     "title": "The relational self and 大同",
+     "readme_first_commit": "2026-09-25",
+     "readme_last_commit": "2026-10-20",
+     "last_substantive": "2026-10-04 (deabb7c2f)",
+     "status_paragraph_last_changed": "line 5, 2026-10-04 (a link fix on 2026-10-09)",
+     "crosswalk_group": "cxg-relational-self-and-datong",
+     "entries": 56,
+     "outcomes": {
+      "carried": 0,
+      "carried-in-part": 23,
+      "changed": 14,
+      "history-only": 1,
+      "not-carried": 9,
+      "fresh-reading": 9
+     },
+     "standing_sentences": [
+      {
+       "line": 5,
+       "words": "**Status.** More than a theme, less than a written theory."
+      },
+      {
+       "line": 5,
+       "words": "and a machine-checked Lean characterisation of 人类命运共同体 with 0 sorry and 0 axioms (`07-shengsheng-buxi/ssbx-repo/义理/人类命运共同体_共同体之证.md`)"
+      },
+      {
+       "line": 47,
+       "words": "That phrase is the one place where the theory has a machine-checked artifact."
+      },
+      {
+       "line": 499,
+       "words": "- `becoming` — **the current home of this theory's best writing.** 第七章 (relational 我), 第八章 (五常 rebuilt generatively), 第十五章 (和/谐/大同 as maintained condition), 第十八章 (位 as causal radius) are the mature statement; […]"
+      },
+      {
+       "line": 536,
+       "words": "The mature statement; the best single formulation for a reader."
+      }
+     ]
+    },
+    {
+     "slug": "selfishness-spiral-and-narrative-value-frames",
+     "title": "The Selfishness Spiral and Narrative-Value Frames (no fixed Chinese name in the sources; ...)",
+     "readme_first_commit": "2026-09-25",
+     "readme_last_commit": "2026-10-20",
+     "last_substantive": "2026-10-04 (deabb7c2f)",
+     "status_paragraph_last_changed": "line 5, 2026-09-25",
+     "crosswalk_group": "cxg-selfishness-spiral-and-narrative-value-frames",
+     "entries": 52,
+     "outcomes": {
+      "carried": 0,
+      "carried-in-part": 30,
+      "changed": 5,
+      "history-only": 0,
+      "not-carried": 10,
+      "fresh-reading": 7
+     },
+     "standing_sentences": [
+      {
+       "line": 5,
+       "words": "**Status.** Substantially complete as an argument and unusually well documented as a genealogy — […] — but not publishable as it stands: […]"
+      },
+      {
+       "line": 5,
+       "words": "Near-publishable at chapter length with one essay of writing."
+      },
+      {
+       "line": 621,
+       "words": "Publishable with light editing."
+      }
+     ]
+    },
+    {
+     "slug": "spirit-space-token-and-yi-substrate",
+     "title": "Spirit, Token, Space and the Yi substrate (間 · 一/太極)",
+     "readme_first_commit": "2026-09-25",
+     "readme_last_commit": "2026-10-20",
+     "last_substantive": "2026-09-25 (b8591afbf)",
+     "status_paragraph_last_changed": "line 5, 2026-09-25",
+     "crosswalk_group": "cxg-spirit-space-token-and-yi-substrate",
+     "entries": 47,
+     "outcomes": {
+      "carried": 0,
+      "carried-in-part": 18,
+      "changed": 13,
+      "history-only": 0,
+      "not-carried": 4,
+      "fresh-reading": 12
+     },
+     "standing_sentences": [
+      {
+       "line": 5,
+       "words": "**Status.** Substantial and unusually well-evidenced, but split across two ontologies that have never been formally reconciled, and unpublished as theory."
+      },
+      {
+       "line": 5,
+       "words": "Two things are publishable close to as-is — the 2025 STS paper (strip its duplicated pass and its `file://` citations) and `bonfire-docs-yi/00-direction.md` as an essay on unifying a data model without totalizing it."
+      },
+      {
+       "line": 5,
+       "words": "The theory as a whole is one essay away from publishable and that essay has not been written."
+      },
+      {
+       "line": 618,
+       "words": "This is the most philosophically mature document in the corpus: it is the one that says where unification must stop and gives a criterion for saying so."
+      }
+     ]
+    },
+    {
+     "slug": "the-fork-and-cooperative-infrastructure",
+     "title": "Cooperative abundance and freely built worlds",
+     "readme_first_commit": "2026-09-25",
+     "readme_last_commit": "2026-10-20",
+     "last_substantive": "2026-10-03 (a6e63bdcf; the later commits are moves and plain-text links)",
+     "status_paragraph_last_changed": "line 9, 2026-09-25",
+     "crosswalk_group": "cxg-the-fork-and-cooperative-infrastructure",
+     "entries": 37,
+     "outcomes": {
+      "carried": 0,
+      "carried-in-part": 13,
+      "changed": 5,
+      "history-only": 0,
+      "not-carried": 7,
+      "fresh-reading": 12
+     },
+     "standing_sentences": [
+      {
+       "line": 9,
+       "words": "**Status.** A constructive civilizational program with proposed technical and institutional mechanisms, supported by a growing but bounded body of component evidence."
+      },
+      {
+       "line": 425,
+       "words": "**Drafted from Ren's ideas, and the most developed writing.**"
+      }
+     ]
+    },
+    {
+     "slug": "wamotopia-and-the-wamo-protocol",
+     "title": "Wamotopia and the Wamo Protocol (瓦猫 / Wamotopia / Wamo 协议)",
+     "readme_first_commit": "2026-09-25",
+     "readme_last_commit": "2026-10-20",
+     "last_substantive": "2026-09-25 (b8591afbf)",
+     "status_paragraph_last_changed": "line 5, 2026-09-25",
+     "crosswalk_group": "cxg-wamotopia-and-the-wamo-protocol",
+     "entries": 58,
+     "outcomes": {
+      "carried": 0,
+      "carried-in-part": 18,
+      "changed": 13,
+      "history-only": 0,
+      "not-carried": 9,
+      "fresh-reading": 18
+     },
+     "standing_sentences": [
+      {
+       "line": 5,
+       "words": "**Status.** Substantially complete and already field-tested as a movement: eight manifesto and operational documents exist (2025-11 to 2025-12), the festival ran in Chiang Mai in January–February 2026, and the 2022 Dali precedent is documented in Ren's own hand from 2024."
+      },
+      {
+       "line": 5,
+       "words": "The *protocol* is publishable today and was published; the *theory* behind it is a strong draft whose best mechanism lives in spoken transcripts and chat logs rather than in the published prose, […]"
+      },
+      {
+       "line": 537,
+       "words": "- `02-wamotopia/2025-wamo-protocol/wamo_long_version.md` — the complete manifesto and the best single statement of the protocol; […]"
+      }
+     ]
+    },
+    {
+     "slug": "zhishan-intelligence-must-be-good",
+     "title": "Intelligence Must Be Good (智善 / Zhishan)",
+     "readme_first_commit": "2026-09-25",
+     "readme_last_commit": "2026-10-20",
+     "last_substantive": "2026-10-04 (deabb7c2f)",
+     "status_paragraph_last_changed": "line 5, 2026-09-25",
+     "crosswalk_group": "cxg-zhishan-intelligence-must-be-good",
+     "entries": 75,
+     "outcomes": {
+      "carried": 0,
+      "carried-in-part": 47,
+      "changed": 16,
+      "history-only": 1,
+      "not-carried": 3,
+      "fresh-reading": 8
+     },
+     "standing_sentences": [
+      {
+       "line": 5,
+       "words": "**Status.** Substantially worked and unfinished as a public act."
+      },
+      {
+       "line": 5,
+       "words": "Three mature bodies exist — the Chinese whitepaper line (v0.2 → v0.3 → v0.4 with a nine-reviewer audit, a second professional review and an unexecuted v0.5 plan) plus the 2026-07-08 manifesto; […]"
+      },
+      {
+       "line": 5,
+       "words": "Individual artifacts are publishable today (the recovered record, *Why the System Keeps Reproducing Itself*, *The First Principle for Artificial Intelligence*, *Freedom You Cannot Use Is Not Yet Freedom*, the manifesto, 《无身之我》, 总体化吸引子 v0.9, the baseline English draft)."
+      },
+      {
+       "line": 5,
+       "words": "The theory as a whole is **near-publishable**: what blocks it is not argument but four missing artifacts — […]"
+      },
+      {
+       "line": 726,
+       "words": "The **editorial notes** are the best single document of method in the corpus: […]"
+      },
+      {
+       "line": 742,
+       "words": "- **Most rigorous method statement:** `shengsheng/生生不息论v2/PLAN-v2.md`, including §14."
+      },
+      {
+       "line": 1080,
+       "words": "Publishable as method."
+      },
+      {
+       "line": 1081,
+       "words": "- `06-zhishan/shengsheng/生生不息论v2/PLAN-v2.md` — the most rigorous method statement, including §14, the theory's own failure conditions."
+      }
+     ]
+    }
+   ],
+   "totals": {
+    "folders": 16,
+    "entries_in_folder_groups": 865,
+    "all_entries": 1183,
+    "groups": 28
+   }
+  },
+  "new_files": []
+ },
+ "root": {
+  "summary": "The finding holds, and the edges point the way that makes 01:5 false. In tools/research/theory_graph.py a record-to-record edge goes from a record to an entry in its own `dependencies`. RESULT-WORKFLOW.md:37 and navigation.py:477 define `formal-reuse` as \"the consumer's proof uses the producer's theorem\". So an edge from a root result to a map result means the root result's proof uses the map result. Example: census-balance and ceasing-needs-arising reuse more-needs-renewers (Web.Census) from 02.\n\nI recounted from the records and regions.json directly, and again from theory-graph.json; both give the same figures. The root region has 86 results, every one with its home anchor in 01-ROOT.md. 45 of them have a formal-reuse edge to a result homed in a later chapter. Counting edges, there are 119 from those 45 results: 60 to 02, 26 to 03, 10 to 04, 9 to 07, 7 to 08, 6 to 05 and 1 to 06. 30 of the 45 use a map result.\n\nIn the Lean, Becoming.Grammar has no import line, so it builds on Lean's prelude alone. That part of \"takes nothing\" is true. But 51 of the 74 root-region modules import a module of another region, and 40 of them import one of the regions map to significance. Becoming.Courses imports twelve such modules, eight of them in the knowing region. Even GrammarLaws (L0) imports GrammarMap (map) and Prelude (method). By 08 §3 the pure core is the whole package, every chapter's modules included. So \"the pure core\" cannot be how the claim is narrowed; only the grammar module itself can.\n\nThe edit to 01:5 does four things:\n- It narrows \"takes nothing from the others\" to the grammar module.\n- It keeps \"hands its grammar, classes and models to all of them\", which is true, since every chapter's base is the grammar, processes or the World.\n- It says the chapters are numbered for reading, not as an order of proof, and that about half of the chapter's results are proved with results homed later, most often the map's. It links DEPENDENCIES.md.\n- It qualifies \"Every later chapter reads its subject…\" with the one page's sentence on 08 §7's edge.\n\n01-ROOT.md is not in the generated manifest, so it can be edited by hand.\n\nSearching by the claim, I found no other live sentence that says or implies the root depends on nothing, that the chapter order is a derivation order, or that every chapter rests on the root. The overview, the one page and both Chinese editions already say the argument does not derive everything from the root. The other chapters' placement paragraphs name what they take and do not claim to take nothing else.",
+  "edits": [
+   {
+    "file": "theories/becoming/chapters/01-ROOT.md",
+    "home": "theories/becoming/chapters/08-METHOD.md:440 (r-one-root-to-its-edge); theories/becoming/ONE-PAGE.md:11; theories/becoming/THE-THEORY-OF-BECOMING.md:11",
+    "home_quote": "Of the central results a few are cases of the root, more use its laws in their proofs and most use none ([08 §7](chapters/08-METHOD.md#r-one-root-to-its-edge)).",
+    "old": "**Where this chapter sits.** It takes nothing from the others and hands its grammar, classes and models to all of them: first to [the map](02-MAP.md), which reads renewal at two grains as generation, keeping and degeneration, and to [knowing](03-KNOWING.md), which takes the core and likeness into testing within the net. Every later chapter reads its subject as continuation relative to some class: which relation, which class, at which grain, constant or not.",
+    "new": "**Where this chapter sits.** Its grammar, [`Becoming.Grammar`][Grammar], imports no other module, and the chapter hands its grammar, classes and models to all the others: first to [the map](02-MAP.md), which reads renewal at two grains as generation, keeping and degeneration, and to [knowing](03-KNOWING.md), which takes the core and likeness into testing within the net. The chapters are numbered for reading, not in an order of proof: about half of this chapter's results are proved with results whose homes are later chapters, most often the map's ([the dependencies](../../../DEPENDENCIES.md)). Every later chapter reads its subject as continuation relative to some class: which relation, which class, at which grain, constant or not. Of the central results a few are cases of the root, more use its laws in their proofs and most use none ([08 §7](08-METHOD.md#r-one-root-to-its-edge)).",
+    "kind": "text",
+    "why": "'It takes nothing from the others' is false. By the curated formal-reuse edges (consumer's proof uses producer's theorem), 45 of the chapter's 86 results use results homed in 02 to 08 (119 edges, 60 of them to 02). 51 of 74 root-region modules import other regions' modules. Only Becoming.Grammar imports nothing. The last added sentence copies the one page's gloss of 08 §7, so 'every later chapter reads…' does not imply that every chapter rests on the root. [Grammar] is already defined at 01-ROOT.md:670, and DEPENDENCIES.md is at the repository root (anchors such as census-balance--more-needs-renewers)."
+   }
+  ],
+  "new_files": [],
+  "restatements": [
+   {
+    "file": "theories/becoming/chapters/01-ROOT.md",
+    "line": 5,
+    "text": "It takes nothing from the others and hands its grammar, classes and models to all of them … Every later chapter reads its subject as continuation relative to some class",
+    "verdict": "changed",
+    "note": "The claim's home sentence; edit drafted."
+   },
+   {
+    "file": "theories/becoming/chapters/01-ROOT.md",
+    "line": 16,
+    "text": "The grammar has one kind of symbol, a relation between occurrences, and builds everything else from relations by a few operations",
+    "verdict": "fine",
+    "note": "About how the grammar's terms are built, not about the chapters depending on one another."
+   },
+   {
+    "file": "theories/becoming/THE-THEORY-OF-BECOMING.md",
+    "line": 11,
+    "text": "This overview gives the theory's claims as one argument, in the order of the eight chapters … The argument does not derive everything from the root: of the declarations 08 §7 takes as central, a few are cases of the root, more use its laws in their proofs and most use none (§10).",
+    "verdict": "fine",
+    "note": "Already denies that everything is derived from the root."
+   },
+   {
+    "file": "theories/becoming/THE-THEORY-OF-BECOMING.md",
+    "line": 61,
+    "text": "Everything else is built from relations by a few operations, and every theorem holds for every carrier and relation",
+    "verdict": "fine",
+    "note": "About the grammar's operations."
+   },
+   {
+    "file": "theories/becoming/THE-THEORY-OF-BECOMING.md",
+    "line": 190,
+    "text": "Most laws are proved on the World or on processes and are not stated on the grammar … Each central declaration has one standing against the root's edge",
+    "verdict": "fine"
+   },
+   {
+    "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+    "line": 11,
+    "text": "本总览按八章的顺序……这个论证并不是把一切都从根推出：……少数是根的情形，较多在证明中用到根之律，多数不用（§10）",
+    "verdict": "fine"
+   },
+   {
+    "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+    "line": 48,
+    "text": "根之律对每一个关系都成立，因而不禁止任何关系，所以下面多数律靠加上根所留空者才说得更多",
+    "verdict": "fine"
+   },
+   {
+    "file": "theories/becoming/ONE-PAGE.md",
+    "line": 11,
+    "text": "Of the central results a few are cases of the root, more use its laws in their proofs and most use none",
+    "verdict": "fine"
+   },
+   {
+    "file": "theories/becoming/ONE-PAGE.md",
+    "line": 16,
+    "text": "Most laws below add what the root leaves free: amounts and a model's premises",
+    "verdict": "fine"
+   },
+   {
+    "file": "theories/becoming/ONE-PAGE.zh.md",
+    "line": 11,
+    "text": "核心结果中，少数是根的情形，较多在证明中用到根之律，多数不用",
+    "verdict": "fine"
+   },
+   {
+    "file": "MAP.md",
+    "line": 21,
+    "text": "Eight chapters, in order: the root … method. Each result is stated once, in its home section.",
+    "verdict": "fine",
+    "note": "Lists the chapters in sequence. It claims no derivation order. MAP.md is not generated."
+   },
+   {
+    "file": "_process/navigation/README-LEAD.md",
+    "line": 8,
+    "text": "Eight chapters: the root, the map, knowing, life, collectives, the classical texts, significance …",
+    "verdict": "fine",
+    "note": "A list of chapters only."
+   },
+   {
+    "file": "theories/becoming/chapters/02-MAP.md",
+    "line": 7,
+    "text": "It takes from the root its grammar of continuation and its bases: models, processes and the World. It hands couplings … to knowing",
+    "verdict": "fine",
+    "note": "It does not say the map takes nothing else, or that the root takes nothing from the map. The root does reuse 30 of the map's results' outputs, which this sentence does not deny."
+   },
+   {
+    "file": "theories/becoming/chapters/03-KNOWING.md",
+    "line": 7,
+    "text": "The chapter takes from 01 the core and likeness, and from 02 the couplings …",
+    "verdict": "fine"
+   },
+   {
+    "file": "theories/becoming/chapters/04-LIFE.md",
+    "line": 5,
+    "text": "It takes continuation and its marks from 01, renewal, consumption and rest from the map …",
+    "verdict": "fine"
+   },
+   {
+    "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+    "line": 7,
+    "text": "It takes from 03 … from 04 … and from 02 the margin of a regime",
+    "verdict": "fine"
+   },
+   {
+    "file": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+    "line": 6,
+    "text": "本章取第一章之文法（根、续、类、核），第二章之地图……第七章之意义与两个前提；交给第八章",
+    "verdict": "fine",
+    "note": "It takes from 07, so it states no order of proof."
+   },
+   {
+    "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+    "line": 5,
+    "text": "It takes the margin of a part from the map, the reach of a selection from knowing, and pools and mutual dependence from collectives",
+    "verdict": "fine"
+   },
+   {
+    "file": "theories/becoming/chapters/08-METHOD.md",
+    "line": 7,
+    "text": "It takes the results of 01–07 as its material and gives back the standing of each claim",
+    "verdict": "fine"
+   },
+   {
+    "file": "theories/becoming/chapters/08-METHOD.md",
+    "line": 440,
+    "text": "Each of the 117 distinct central declarations has one standing against the edge of one root. Eleven are derived … The other 99 stand at a named distance",
+    "verdict": "fine",
+    "note": "The home the edit's last sentence glosses."
+   },
+   {
+    "file": "theories/becoming/chapters/README.md",
+    "line": 15,
+    "text": "Chapter 1 of the theory: each result of its region stated once, in its home section.",
+    "verdict": "fine",
+    "note": "A generated page; its sentence claims no dependence order."
+   },
+   {
+    "file": "theories/becoming/review/README.md",
+    "line": 11,
+    "text": "Its root is a small relational grammar whose terms are named and read from classical Chinese texts",
+    "verdict": "fine"
+   },
+   {
+    "file": "theories/becoming/FREE-ENERGY-PRINCIPLE.md",
+    "line": 43,
+    "text": "Nor do the theory's own root laws … they hold of every carrier, relation and class, so they forbid no relation",
+    "verdict": "fine"
+   },
+   {
+    "file": "GLOSSARY.md",
+    "line": 77,
+    "text": "spine … A law on the spine stands on the base its label names and is not thereby on the root",
+    "verdict": "fine"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+    "line": 21,
+    "text": "`import Becoming` brings in every layer. The core has one base, the run, in L0 … (`Run`, `Becoming.Frame`, on the foundation's `Generative.Process`)",
+    "verdict": "fine",
+    "note": "About Lean layers. It does not say that chapter 1 takes nothing."
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
+    "line": 244,
+    "text": "L0 是基底，即 Becoming.World 及其导入的本包每个模块",
+    "verdict": "fine"
+   },
+   {
+    "file": "_process/goals/theory-of-becoming.json",
+    "line": 66,
+    "text": "Measured instead against the root, the grammar the World and processes are models of, of the 117 central declarations 11 are derived",
+    "verdict": "fine"
+   }
+  ],
+  "open": [
+   "Wording choice: the edit says 'about half' (45 of 86 on main 804028391) rather than a dated exact count, so the text survives small drift. If the coordinator prefers a dated count, write '45 of its 86 results by the curated dependencies on 7 November 2026'.",
+   "'The chapters are numbered for reading, not in an order of proof' is new wording. No home states the chapters' order in these terms; the overview says only 'in the order of the eight chapters'. It is drafted from the counted facts. A reader other than its author should check it against the dependency data.",
+   "Regions are a curated assignment (regions.json). Some 'later' modules that root modules import are general tools: Becoming.Witnesses, Becoming.Decidedness and Becoming.Prelude are assigned to method. The module-level count (51 of 74, or 40 excluding method) overstates the dependence on chapter content. The record-level count (45 of 86) does not depend on that. Whether such utility modules should be reassigned in regions.json is outside this group's task.",
+   "Chapter 02's placement sentence (02-MAP.md:7) is not false. But the dependence also runs the other way: 30 root results use map results. The coordinator may want 02 to say so; I drafted no edit because nothing there says more than its home.",
+   "No Chinese edition restates 01:5's claim, and the chapters have no .zh editions. The Chinese one page and overview already carry the '少数是根的情形' gloss. So no Chinese edit is drafted."
+  ],
+  "data": {
+   "facts": {
+    "edge_direction": "A record-to-record edge goes from the record to an entry in its own `dependencies` (theory_graph.py build()). `formal-reuse` means the consumer's proof uses the producer's theorem (RESULT-WORKFLOW.md:37, navigation.py:477). An edge from a root result to a map result therefore means the root result's proof uses the map result.",
+    "root_results": 86,
+    "root_results_homed_in_01": 86,
+    "root_results_with_formal_reuse_to_later_region": 45,
+    "root_results_with_any_formal_reuse_dependency": 76,
+    "edges_root_to_later_by_home_chapter": {
+     "02": 60,
+     "03": 26,
+     "04": 10,
+     "07": 9,
+     "08": 7,
+     "05": 6,
+     "06": 1
+    },
+    "edges_root_to_later_total": 119,
+    "root_results_using_a_map_result": 30,
+    "root_results_used_by_later_results": 33,
+    "recount_from_records_and_regions_json": "45 of 86, the same as theory-graph.json",
+    "examples": [
+     "census-balance uses more-needs-renewers and becoming-dependence-dynamics (02)",
+     "ceasing-needs-arising uses more-needs-renewers (02; reuses Web.Census)",
+     "processes-represented-both-ways uses experiment-needs-return (03), generation-and-degeneration-at-two-grains (02), becoming-spine-instances (08), candidate-theorems-of-the-corpus (06)",
+     "the-world-represented-both-ways uses counts-exist-where-decided (08), least-loss-rest (02), readings-within-what-they-read (03)",
+     "map-of-premises uses evolution-on-descent and life-as-condition-of-life (04)",
+     "levels-of-closure uses continuation-condition-yields-living-significance and loss-beyond-a-region (07)"
+    ],
+    "lean_grammar_imports": "Becoming.Grammar has no import line, so it builds on Lean's prelude alone. GrammarMap, GrammarReadings and GrammarTesting import only Becoming.Grammar.",
+    "lean_grammarlaws_imports": "Becoming.GrammarLaws (root, L0) imports Grammar, GrammarMap (map) and Prelude (method). Frame imports GrammarLaws and Prelude. World imports Frame.",
+    "root_modules": 74,
+    "root_modules_importing_other_region_modules": 51,
+    "root_modules_importing_map_to_significance_modules": 40,
+    "courses_imports": "Becoming.Courses (root) imports Lasting (map), Countdown (map), Retrodiction (knowing), Copying (life), CrossSituational (knowing), Readout (knowing), Weighted (knowing), Description (knowing), Feedback (knowing), Decidedness (method), Parting (knowing), Extension (significance). Its transitive closure has 66 modules: 19 knowing, 18 map, 15 root, 5 method, 5 significance, 3 life, 1 collective.",
+    "pure_core_scope": "By 08 §3 and GLOSSARY:76 the pure core is all core modules of Becoming (365 at receipt 20261103T211917), every chapter's included. 'The pure core' therefore cannot narrow what chapter 1 takes; only Becoming.Grammar does.",
+    "claim_true": false,
+    "generated": "01-ROOT.md is not in _process/architecture/generated-manifest.json; it is edited by hand."
+   }
+  }
+ },
+ "fronts": {
+  "summary": "I read all four items against their homes and drafted edits. I made no file changes. I ran no tests, renders or gates. Counts came from git, python and navigation.prose_counts.\n\n1. The coordination sentence on README:43 comes from OPENING.md:25. Note 13 already calls it a thesis, and so do 08 §12 (\"no check run inside the work can show…\") and COLLECTIVE-DIRECTION §5 (\"no test has human participants\"). The body sentence now says \"I hold\" and carries that standing. The italic revised-passages line, the dateline and the header comment each get the new date, and the versions record in drafts/2026-10-10-opening/README.md gets a paragraph.\n\n2. The fix for README:156/158 goes into the goal JSON's overview fields, and both README and GOALS.md (lines 28, 30) render from them. In the summary I added 06's own qualifiers: agreement is not confirmation, and the relational start is a leading thread (主导线索), not a property of every system. \"Next\" was stale. Tolerance (柔弱者生之徒) is proved on both sides. Every gap from the full reading is answered (06 §7.2: 无一仍开). Two gaps stay open: 分's Hall-type condition and the 亲亲之杀 order. Human review was missing, so I added it.\n\n3. README:188 now says AJ4's page was retired on 31 October and replaced by the dossier's opening section, in the move receipt's own words. I also took Ren's name out of \"run on Ren's yes\", in both en and zh, because front text names no person.\nFor 2 and 3: navigation.py renders overview.title, summary and next_step in English into README (lines 554–556) and into GOALS.md's \"README overview\" (615–617). No record, check or hash cites these fields. Only readme_research_goals in research-config.json lists the ids. The zh fields are corrected in parallel.\n\n4. First screen: I added 08 §8's verdict to the \"Lean receipts\" point with its \"not exhaustive\" qualifier. It has no \"AI\", because test_the_repository_first_screen_fills forbids that word on the screen. The screen goes from 157 to 180 words. It was 7 over the 150-word budget and is now 30 over. The reading time stays at 1–2 minutes. The word bound is WHAT-REMAINS item 6. Amendment 1 lets \"what is not claimed\" stay even over budget. Amendment 2 says the measure (kit/measure_layers.py) only warns, and the gate does not run it. I updated the header comment to match.\n\n5. MAP: THEORY-GRAPH lists the grammar's 41 concepts, and the texts are the 1,724 of 4,116 units that state something. The edges are only in its data file, so I used the page's own phrase. Main has 6,074 commits on 7 November. Other MAP fixes: ONE-ARGUMENT now states 25–35 minutes, the verdict sentence is added under \"What this is\", and the condition's gloss got back \"from every standpoint\".",
+  "edits": [
+   {
+    "file": "theories/becoming/OPENING.md",
+    "old": "To achieve alignment, we need a foundation that makes coordination possible, and this foundation supplies that too.",
+    "new": "To achieve alignment, we need a foundation that makes coordination possible, and I hold that this foundation supplies that too. That is a thesis about how coordination forms, not a theorem: no check run inside the work can show it, and no test yet has human participants.",
+    "kind": "source-of-generated",
+    "home": "theories/becoming/OPENING.md#[^guardian] (OPENING:86); theories/becoming/chapters/08-METHOD.md#the-work-by-its-own-laws (08:706); theories/becoming/COLLECTIVE-DIRECTION.md:87",
+    "home_quote": "That shared understanding makes coordination possible is a thesis about how coordination forms, not a theorem. / So no check run inside the work can show that the work serves what it is for: a truth anyone can check, and through it shared understanding and coordination. / no test has human participants.",
+    "why": "README.md:43 (rendered from OPENING) states as settled what its own note calls a thesis, not a theorem; the body now carries the standing in the opening's first person. README is generated; this is its source."
+   },
+   {
+    "file": "theories/becoming/OPENING.md",
+    "old": "Revised in place on 1 and 3 November 2026",
+    "new": "Revised in place on 1, 3 and 7 November 2026",
+    "kind": "source-of-generated",
+    "why": "The italic line names when the body was revised; this revision is dated by the clock (Sat 7 Nov 2026). Use the landing date if it differs."
+   },
+   {
+    "file": "theories/becoming/OPENING.md",
+    "old": "what an optimized selection draws down, and the sentence that the selection laws restate the proxy problem (\"This is a foundation\")",
+    "new": "what an optimized selection draws down, the sentence that the selection laws restate the proxy problem, and the standing of the claim that this foundation makes coordination possible, held as a thesis and not a theorem (\"This is a foundation\")",
+    "kind": "source-of-generated",
+    "why": "The italic line names each passage revised since version 12, so the revised sentence does not pass for the author's words; follows the line's existing pattern for the same paragraph."
+   },
+   {
+    "file": "theories/becoming/OPENING.md",
+    "old": "and further on 3 November. [Original wording]",
+    "new": "and further on 3 and 7 November. [Original wording]",
+    "kind": "source-of-generated",
+    "why": "The dateline lists the in-place revisions; adds this one."
+   },
+   {
+    "file": "theories/becoming/OPENING.md",
+    "old": "to version 13 of 1 November 2026 and further on 3 November, its revised passages AI-written",
+    "new": "to version 13 of 1 November 2026 and further on 3 and 7 November, its revised passages AI-written",
+    "kind": "source-of-generated",
+    "why": "The header comment's history of revisions; adds this one."
+   },
+   {
+    "file": "drafts/2026-10-10-opening/README.md",
+    "old": "the note grows by 72 words, for the frozen tests as they fell. The body is unchanged.",
+    "new": "the note grows by 72 words, for the frozen tests as they fell. The body is unchanged.\n\nOn 7 November one sentence of the body was revised in place, on argument, from a review of what the pages around the account tell a reader (board item RV), which found the opening saying, as if settled, that this foundation supplies what makes coordination possible, where [^guardian] calls that a thesis about how coordination forms, not a theorem. The sentence now says \"I hold\" and states its standing in the body, in the words of [^guardian], of 08 §12's reading of the work by its own laws (no check run inside the work can show that the work serves shared understanding and coordination) and of COLLECTIVE-DIRECTION §5 (no test has human participants) (the paragraph beginning \"This is a foundation\"). The notes are unchanged.",
+    "kind": "text",
+    "why": "OPENING's header says the versions and what each changed are recorded in drafts/2026-10-10-opening/; line 23 is the last paragraph and records the 3 November revision in the same way."
+   },
+   {
+    "file": "_process/goals/chinese-sources-and-becoming.json",
+    "old": "tied to checked laws of the spine: 91 agree, 98 hold within an exact scope, 59 diverge. The relational start holds across the lines; their universal forms mostly need a scope;",
+    "new": "tied to checked laws of the spine: 91 agree, 98 hold within an exact scope, 59 diverge. Agreement means the spine has a law of the same structure, often only under premises the reading states, not that a passage is true as it says or that its authors meant the law. The relational start holds in every line and is a leading thread, not a property of every system; their universal forms mostly need a scope;",
+    "kind": "source-of-generated",
+    "home": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#does-not-show and #three-layer-verdict",
+    "home_quote": "任何一段原文如其所说为真，或其作者意谓这些律：相合说的是脊柱有一条结构相同的律，常常只在读法所写明的前提下。 / 语言或传统天然是关系的：关系的起点是一条主导线索，在最早一层最强，不是每一体系的性质 / 关系的起点在诸线中都成立",
+    "why": "README.md:156 and GOALS.md:28 render overview.summary.en; they gave the counts without 06's 'agreement is not confirmation' and the relational start without 'a leading thread, not a property of every system'."
+   },
+   {
+    "file": "_process/goals/chinese-sources-and-becoming.json",
+    "old": "相合 91 段，定域 98 段，相分 59 段。关系性的起点贯穿诸线；其全称形式大多需要定域；",
+    "new": "相合 91 段，定域 98 段，相分 59 段。相合是说脊柱有一条结构相同的律，常常只在读法所写明的前提下，不是说原文如其所说为真，或其作者意谓此律。关系性的起点在诸线中都成立，是一条主导线索，不是每一体系的性质；其全称形式大多需要定域；",
+    "kind": "source-of-generated",
+    "home": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#does-not-show",
+    "home_quote": "相合说的是脊柱有一条结构相同的律，常常只在读法所写明的前提下。",
+    "why": "Keeps the zh field the same as the en correction (not rendered on README, but the same goal field)."
+   },
+   {
+    "file": "_process/goals/chinese-sources-and-becoming.json",
+    "old": "\"en\": \"The three open gaps: a graded order by closure level and whether it is the same from every standpoint (亲亲之杀), division across several conditions (分), and tolerance compared across laws (柔弱者生之徒). From the full reading: a conjunctive or graded whole, saturation of a coupling, one-sided and local regulation, equal division, copying growth, witnesses that are functions of one another, measures of a juncture.\"",
+    "new": "\"en\": \"Review by people, the line's last step: the classifications, mappings, readings and names are all AI's, and no person has read them through. Two gaps stay open: the Hall-type existence condition for division across several conditions (分), of which a sufficient condition is proved, and a law grading by the least closure level from a centre, with whether that order is the same from every standpoint (亲亲之杀), now a note of scope with no law. Tolerance compared across laws (柔弱者生之徒) is proved on both sides proposed, and every gap the full reading named is answered by a law or marked a note of scope. Also open: the 181 later candidates, untested, and whether the corpus gives pairing and power.\"",
+    "kind": "source-of-generated",
+    "home": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#ro-gaps, #zh-gaps (06:455), #open",
+    "home_quote": "所拟两面皆已证 (跨律比较容忍) / 一个充分条件已证；所拟的霍尔型存在条件未证，仍开 / 就《脉络》的缺口之注而言，无一仍开 / 归类、对应、读法、名与普查之选，都是 AI 所为，没有人通读过。古文学者、佛学学者、逻辑学者的审读是这条线的最后一步",
+    "why": "README.md:158 and GOALS.md:30 listed as open a gap 06 reports proved (tolerance) and seven full-reading gaps 06 reports all answered (06:455: none remains open), and omitted human review, which 06 names as the line's last step."
+   },
+   {
+    "file": "_process/goals/chinese-sources-and-becoming.json",
+    "old": "\"zh\": \"三项开放缺口：以闭包层级分等的次序及其是否对每一立场相同（亲亲之杀），跨多个条件的分（分），以及跨律比较容忍（柔弱者生之徒）。全读所得：合取或分级的整体、耦合之饱和、单侧与局部的调节、均分、抄录之增、互为函数的见证、机之度量。\"",
+    "new": "\"zh\": \"人审是这条线的最后一步：归类、对应、读法与名都是 AI 所为，没有人通读过。两项缺口仍开：跨多个条件之“分”的霍尔型存在条件（一个充分条件已证），以及从中心按最小闭包层级分等之律及此序是否对每一立场相同（亲亲之杀，今标为范围之注，无律）。跨律比较容忍（柔弱者生之徒）所拟两面皆已证；全读所提之缺口，或得其律，或标为范围之注。另有未决：后加的 181 条乙类候选尚未检验，语料是否给出配对与幂。\"",
+    "kind": "source-of-generated",
+    "home": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#open",
+    "home_quote": "以闭包层级分等的次序是否对每一立场相同（从中心按最小闭包层级分等之律尚无，[§六](#ro-gaps)）；跨多个条件之“分”的霍尔型存在条件。",
+    "why": "zh field kept in step with the en correction."
+   },
+   {
+    "file": "_process/goals/generative-alignment.json",
+    "old": "Still to do: AJ4's one page for alignment researchers, now in draft; the test",
+    "new": "AJ4's one page for alignment researchers was retired on 31 October 2026, superseded by the alignment dossier's opening section, The dossier in ten minutes. Still to do: the test",
+    "kind": "source-of-generated",
+    "home": "_process/architecture/moves/moves-2026-10-31-aj4-page-retire.json",
+    "home_quote": "superseded by the alignment dossier's opening section, The dossier in ten minutes (31 October 2026)",
+    "why": "README.md:188 and GOALS.md:116 render next_step.en; the page 'now in draft' was moved to history on 31 October, replaced by theories/becoming/review/ALIGNMENT.md's first section."
+   },
+   {
+    "file": "_process/goals/generative-alignment.json",
+    "old": "its Stage A on small neural policies frozen and run on Ren's yes on 3 November",
+    "new": "its Stage A on small neural policies frozen and run on 3 November",
+    "kind": "source-of-generated",
+    "why": "Live front text names no person (AGENTS: Commit and fronts; first-screen header). README:188 rendered 'Ren's yes'. The approval is kept in the board and LA4's record."
+   },
+   {
+    "file": "_process/goals/generative-alignment.json",
+    "old": "尚待：AJ4 面向对齐研究者的一页（草稿中）；",
+    "new": "AJ4 面向对齐研究者的一页已于 2026 年 10 月 31 日退下，由对齐档案的开篇一节（The dossier in ten minutes）取代。尚待：",
+    "kind": "source-of-generated",
+    "home": "_process/architecture/moves/moves-2026-10-31-aj4-page-retire.json",
+    "home_quote": "superseded by the alignment dossier's opening section, The dossier in ten minutes (31 October 2026)",
+    "why": "zh field kept in step with the en correction."
+   },
+   {
+    "file": "_process/goals/generative-alignment.json",
+    "old": "已于 11 月 3 日冻结并经 Ren 同意运行",
+    "new": "已于 11 月 3 日冻结并运行",
+    "kind": "source-of-generated",
+    "why": "zh field kept in step: names no person."
+   },
+   {
+    "file": "_process/navigation/README-FIRST-SCREEN.md",
+    "old": "showing each Lean statement follows from its premises, not that they hold.",
+    "new": "showing each Lean statement follows from its premises, not that they hold. A review of prior work, not exhaustive, finds [none of the central results new mathematics](../../theories/becoming/chapters/08-METHOD.md#known-results): each is near-definitional or a known result restated.",
+    "kind": "source-of-generated",
+    "home": "theories/becoming/chapters/08-METHOD.md:482 (#known-results); theories/becoming/ONE-PAGE.md:30",
+    "home_quote": "None of the central results is new mathematics: each is near-definitional or a known result restated. … and the search was not exhaustive. / An AI review of prior work, not exhaustive, finds none of the central results new mathematics",
+    "why": "The first screen had no sentence of 08 §8's verdict, which is what is not claimed (never cut under amendment 1). 'AI' is left out because the screen names no AI (test_the_repository_first_screen_fills asserts no \\bAI\\b), and 'No human review yet' follows in the same point. Screen: 157 to 180 words, time stays 1–2 minutes."
+   },
+   {
+    "file": "_process/navigation/README-FIRST-SCREEN.md",
+    "old": "READING-BUDGETS records what stays over and why.",
+    "new": "READING-BUDGETS records what stays over and why. RV of 7 November 2026 added 08 section 8's verdict to the receipts point (23 words, what is not claimed, with its search not exhaustive), bringing the screen to 180 words.",
+    "kind": "source-of-generated",
+    "why": "The header comment says what keeps the screen over its budget. It now records this addition and the new count."
+   },
+   {
+    "file": "MAP.md",
+    "old": "(every concept, result, Lean module and text, with how they connect)",
+    "new": "(the grammar's concepts, the results, the Lean modules and the corpus texts, with the edges between them)",
+    "kind": "text",
+    "home": "theories/becoming/results/THEORY-GRAPH.md:5",
+    "home_quote": "One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts, the chapter sections that state results and the review dossiers, with the edges between them",
+    "why": "Overstated. The concepts are the grammar's 41, and the texts are the 1,724 of 4,116 classified units that state something, 1,330 of them with no edge. The page lists nodes by region. Its edges are counted and kept in its data file."
+   },
+   {
+    "file": "MAP.md",
+    "old": "The repository's first commit is from 6 September 2026; the formal theory was built in October 2026, in more than 1,550 commits (1,568 in all by 19 October 2026).",
+    "new": "The repository's first commit is from 6 September 2026, and it holds 6,074 commits in all by 7 November 2026; the formal theory has been built since October 2026.",
+    "kind": "text",
+    "why": "Stale. git rev-list --count HEAD at 804028391 gives 6,074, and building went on into November (1,352 commits since 1 November). Recount at landing."
+   },
+   {
+    "file": "MAP.md",
+    "old": "about twenty-five to thirty minutes,",
+    "new": "about twenty-five to thirty-five minutes,",
+    "kind": "text",
+    "home": "theories/becoming/ONE-ARGUMENT.md:3",
+    "home_quote": "*About twenty-five to thirty-five minutes to read.*",
+    "why": "Stale reading time. The page states 25 to 35 minutes, and REVIEW-RESYNC.md:424 had already flagged the shorter figure."
+   },
+   {
+    "file": "MAP.md",
+    "old": "and the real assumptions lie in the modelling, stated where a law depends on them.",
+    "new": "and the real assumptions lie in the modelling, stated where a law depends on them. An AI review of prior work, not exhaustive, finds [none of the central results new mathematics](theories/becoming/chapters/08-METHOD.md#known-results): each is near-definitional or a known result restated.",
+    "kind": "text",
+    "home": "theories/becoming/ONE-PAGE.md:30; theories/becoming/chapters/08-METHOD.md:482",
+    "home_quote": "An AI review of prior work, not exhaustive, finds none of the central results new mathematics / None of the central results is new mathematics: each is near-definitional or a known result restated.",
+    "why": "MAP's 'What this is' lacked 08 §8's verdict. The sentence is copied from ONE-PAGE and keeps the review's AI label and its 'not exhaustive', as ONE-PAGE does."
+   },
+   {
+    "file": "MAP.md",
+    "old": "the continuation condition (that the continuation of anything has significance) fixes whose losses count",
+    "new": "the continuation condition (from every standpoint, for anything, its continuation into the future has significance) fixes whose losses count",
+    "kind": "text",
+    "home": "theories/becoming/ONE-PAGE.md:24",
+    "home_quote": "The *continuation condition* fixes scope, whose losses count: from every standpoint, for anything, its continuation into the future has significance.",
+    "why": "The gloss dropped 'from every standpoint', which is the step of invariance that the crux turns on. The fix copies the home's statement."
+   }
+  ],
+  "restatements": [
+   {
+    "file": "README.md",
+    "line": 43,
+    "text": "To achieve alignment, we need a foundation that makes coordination possible, and this foundation supplies that too.",
+    "verdict": "changed",
+    "note": "generated from theories/becoming/OPENING.md:25; edited there"
+   },
+   {
+    "file": "README.md",
+    "line": 107,
+    "text": "That shared understanding makes coordination possible is a thesis about how coordination forms, not a theorem.",
+    "verdict": "fine",
+    "note": "OPENING [^guardian]; the source of the qualifier, unchanged"
+   },
+   {
+    "file": "theories/becoming/COLLECTIVE-DIRECTION.md",
+    "line": 87,
+    "text": "no test has human participants.",
+    "verdict": "fine"
+   },
+   {
+    "file": "theories/becoming/chapters/08-METHOD.md",
+    "line": 706,
+    "text": "So no check run inside the work can show that the work serves what it is for: a truth anyone can check, and through it shared understanding and coordination",
+    "verdict": "fine"
+   },
+   {
+    "file": "theories/relational-self-and-datong/README.md",
+    "line": 147,
+    "text": "信 the temporal consistency that makes coordination possible",
+    "verdict": "frozen-or-history",
+    "note": "earlier theory folder, not live; matched the search only"
+   },
+   {
+    "file": "README.md",
+    "line": 156,
+    "text": "The relational start holds across the lines; their universal forms mostly need a scope",
+    "verdict": "changed",
+    "note": "generated from the goal's overview.summary; GOALS.md:28 renders the same field"
+   },
+   {
+    "file": "README.md",
+    "line": 158,
+    "text": "**Next:** The three open gaps: … From the full reading: …",
+    "verdict": "changed",
+    "note": "generated from overview.next_step; GOALS.md:30 the same field"
+   },
+   {
+    "file": "theories/becoming/results/records/chinese-sources-on-the-spine.json",
+    "line": 13,
+    "text": "The relational start holds across the lines",
+    "verdict": "fine",
+    "note": "the record matches its home 06 §6 (关系的起点在诸线中都成立) and says agreement is structural elsewhere; not in this group"
+   },
+   {
+    "file": "theories/becoming/results/atlas/entries/correspondences.json",
+    "line": 13335,
+    "text": "the relational start holds across lines",
+    "verdict": "fine",
+    "note": "crosswalk entry quoting the record; data/atlas.json:44026 too; outside this group, not changed"
+   },
+   {
+    "file": "README.md",
+    "line": 188,
+    "text": "Still to do: AJ4's one page for alignment researchers, now in draft",
+    "verdict": "changed",
+    "note": "generated from generative-alignment.json next_step; GOALS.md:116 the same; already flagged in aa-attractor-atlas/readers-2026-11-04/significance-alignment-gaps.md:234"
+   },
+   {
+    "file": "README.md",
+    "line": 188,
+    "text": "frozen and run on Ren's yes on 3 November",
+    "verdict": "changed",
+    "note": "front text names no person"
+   },
+   {
+    "file": "theories/becoming/chapters/08-METHOD.md",
+    "line": 482,
+    "text": "None of the central results is new mathematics: each is near-definitional or a known result restated.",
+    "verdict": "fine",
+    "note": "home of the verdict"
+   },
+   {
+    "file": "theories/becoming/ONE-PAGE.md",
+    "line": 30,
+    "text": "An AI review of prior work, not exhaustive, finds none of the central results new mathematics",
+    "verdict": "fine"
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/READING-BUDGETS.md",
+    "line": 27,
+    "text": "157 words (1.2 to 1.6 minutes), 7 over a screen",
+    "verdict": "fine",
+    "note": "true now; goes stale when the first-screen edit lands (180 words, 30 over); not edited here"
+   },
+   {
+    "file": "MAP.md",
+    "line": 22,
+    "text": "(every concept, result, Lean module and text, with how they connect)",
+    "verdict": "changed"
+   },
+   {
+    "file": "MAP.md",
+    "line": 24,
+    "text": "about twenty-five to thirty minutes",
+    "verdict": "changed",
+    "note": "ONE-ARGUMENT states 25 to 35"
+   },
+   {
+    "file": "MAP.md",
+    "line": 32,
+    "text": "in more than 1,550 commits (1,568 in all by 19 October 2026)",
+    "verdict": "changed",
+    "note": "6,074 at 804028391"
+   },
+   {
+    "file": "MAP.md",
+    "line": 32,
+    "text": "the sixteen earlier theory folders below",
+    "verdict": "fine",
+    "note": "16 folders besides becoming/, 16 table rows"
+   },
+   {
+    "file": "MAP.md",
+    "line": 32,
+    "text": "The ideas began in writing from 2021 on",
+    "verdict": "fine",
+    "note": "sources/00-early-2021-2022"
+   },
+   {
+    "file": "MAP.md",
+    "line": 32,
+    "text": "The repository's first commit is from 6 September 2026",
+    "verdict": "fine",
+    "note": "d3c0ef89a 2026-09-06"
+   },
+   {
+    "file": "MAP.md",
+    "line": 11,
+    "text": "the continuation condition (that the continuation of anything has significance)",
+    "verdict": "changed",
+    "note": "dropped 'from every standpoint'"
+   },
+   {
+    "file": "MAP.md",
+    "line": 20,
+    "text": "Eight chapters, in order",
+    "verdict": "fine"
+   },
+   {
+    "file": "MAP.md",
+    "line": 26,
+    "text": "a dossier for scholars of classical Chinese texts, one for scholars of Buddhist thought, one for logicians, one for philosophers on the ethics, one for researchers in AI alignment, one for scientists, and a blind re-coding",
+    "verdict": "fine",
+    "note": "review/ holds CLASSICAL-TEXTS, BUDDHIST-THOUGHT, LOGIC, PHILOSOPHY, ALIGNMENT, SCIENCES and recoding/"
+   },
+   {
+    "file": "MAP.md",
+    "line": 41,
+    "text": "the only generated constants that depend on an axiom are constructor injectivity lemmas, on propext",
+    "verdict": "fine",
+    "note": "becoming-verification.json generated_axiom_dependencies: all *.injEq, only propext"
+   },
+   {
+    "file": "MAP.md",
+    "line": 41,
+    "text": "Its core imports nothing outside itself",
+    "verdict": "fine",
+    "note": "the core imports only Init (Lean's prelude); a loose gloss, not changed"
+   },
+   {
+    "file": "MAP.md",
+    "line": 43,
+    "text": "leanprover/lean4:v4.29.1",
+    "verdict": "fine",
+    "note": "matches lean-toolchain"
+   },
+   {
+    "file": "MAP.md",
+    "line": 53,
+    "text": "A fresh run compiles more than a thousand Lean steps",
+    "verdict": "fine",
+    "note": "receipt lean_steps.keys 1563"
+   },
+   {
+    "file": "MAP.md",
+    "line": 36,
+    "text": "Personal and third-party material (private chats, memories and conversations with friends) is not tracked from 19 October 2026.",
+    "verdict": "fine",
+    "note": "dated; not verified against the tree"
+   }
+  ],
+  "open": [
+   "Before landing, recount MAP's commit figure (git rev-list --count HEAD) and put the landing date in OPENING's three date edits and in the drafts README paragraph.",
+   "The OPENING edits revise its first-person body, and its header says that body is revised in place on argument. Live text decides whether this needs more than the italic-line entry. The board lists 'the body of the opening' among what changes only through a proposal (navigation.py:597), and the coordinator should weigh that against OPENING's header and AGENTS ('revised in place on argument').",
+   "The first-screen sentence says 'A review' without 'AI', because the screen's test forbids the word. 'No human review yet' follows in the same point. If that is not enough as a label, the other way is to leave the verdict off the screen and link 08 §8 from the receipts sentence.",
+   "The first screen goes to 180 words, 30 over budget. Amendment 1 keeps what is not claimed, and the measure only warns. READING-BUDGETS.md row 27 ('157 words … 7 over') will then be stale. Its owner, AJ4's development folder, should update it, or the coordinator can add a line to the FS section.",
+   "The goal JSON's scope fields, which GOALS.md renders, name Ren ('Requested by Ren…'). They were left alone: scopes are his and fall outside this group.",
+   "Removing \"on Ren's yes\" from generative-alignment drops a mention of approval. The approval is on record in the board and LA4's record. I did not verify that it is recorded there by date.",
+   "After the edits, run make research-render to regenerate README.md and GOALS.md, then the first-screen tests (test_featured_results). Neither was run here."
+  ]
+ },
+ "catalogues": {
+  "summary": "Nothing was edited. These are drafted edits, each old string checked to occur once (python count). I patched the generators in memory to check the output: rendering them changes nothing else, and all 25 links on the new catalogue page and the chain's new lines resolve, anchors included.\n\n1. results/README.md (reading_catalogue.py index()): the six 'Read by question' rows all went to frozen pages of 8 October, and two questions said more than the homes ('What foundation has been established?', 'Why does generativity matter ethically?'). Each row now has a 'Current home' column (01, the overview §1, 02, 03, 04, 06, 07, 08 anchors, RESULTS.md, the crosswalk). The frozen links stay, in a labelled third column, and the two questions are reworded. Retitled 'Reading catalogue of 8 October 2026 and later', with the old anchor kept through heading(former). A lead names the account's homes. The route rows that described stub pages (RESULT-REGISTER, ROADMAP, CLAIMS) as live now point to RESULTS.md and GOALS.md. The A–L and M–Z stubs and RESULT-REGISTER's 'Full catalogue' label now point to and name the real pages.\n\n2. GENERATIVITY-CHAIN: the chain is still kept, by board sessions (AI-authored) through its maintenance record: GC2 to GC4 on 2 November, and LM1 today changed one sentence and the date. 58 linked sources are not reread. New title in both languages: 'a curated chain kept since October 2026'. A bilingual lead says it has 94 entries in its own vocabulary of its time (G0), stands beside the live account and is not a statement of it, names the homes, and says the date is of its last change, not of a reading of every source. 'All chapters' linked only A–L and is relabelled. The shared nav line (navigation.py:625) now gives the four current homes first, then 'Earlier catalogues:' with the two legacy pages named by what they are. A dated section is appended to the chain's maintenance record. The chain's data is untouched.\n\n3. experiments/README.md is hand-written, not generated. Its link now goes to the live overview and to 08 §3 (#pure-core-and-periphery).\n\n4. 06 §7.3 now dates the 中华本 (21 October 2026), says it moved to history on 23 October with the eight chapters carrying what it states, and says later chapter revisions are not in it. The same present-tense claim on README.md:156 and GOALS.md:28 is fixed at its source (the goal JSON, en and zh).\n\n5. theories/becoming/README.md: line 8 names a person and calls a text revised in place by AI 'Ren's opening'. It now says how the opening stands, in its header's words. The line-20 nav is fixed by edit 2. The rest is accurate.",
+  "edits": [
+   {
+    "file": "tools/research/reading_catalogue.py",
+    "old": "H('#', 'Results and argument catalogue', '理论成果与论证目录 / Results and argument catalogue')",
+    "new": "H('#', 'Reading catalogue of 8 October 2026 and later', '理论成果与论证目录 / Results and argument catalogue')",
+    "kind": "generator",
+    "why": "The page is the catalogue of chapter readings of 8 October 2026 and later (its own first line), not the account's results catalogue. The former text keeps the existing bilingual anchor.",
+    "home": "theories/becoming/results/README.md:6",
+    "home_quote": "Readings of 8 October 2026 and later"
+   },
+   {
+    "file": "tools/research/reading_catalogue.py",
+    "old": "'Readings of 8 October 2026 and later · [Repository home](../../../README.md) · [Roadmap](ROADMAP.md) · [Research record](../../../RESEARCH.md)'",
+    "new": "'[Repository home](../../../README.md) · [Result register](../../../RESULTS.md) · [Scopes](../../../GOALS.md)'",
+    "kind": "generator",
+    "why": "ROADMAP.md and RESEARCH.md are stubs ('This page earlier repeated...'). The date moves into the title. The line now links the live register and scopes.",
+    "home": "theories/becoming/results/ROADMAP.md:8",
+    "home_quote": "This page earlier repeated the scope list. Directions, their authorization and their state are in GOALS.md."
+   },
+   {
+    "file": "tools/research/reading_catalogue.py",
+    "old": "'**Use this directory to find the argument, its significance, its Lean correspondence and its remaining questions.**'",
+    "new": "'**The account is stated in [the one page](../ONE-PAGE.md), [the overview](../THE-THEORY-OF-BECOMING.md) and [the eight chapters](../chapters/README.md), each result in its home section and its record in [the register](../../../RESULTS.md).** This page catalogues the chapter readings of 8 October 2026 and later. Each reading describes the version of its source it read; one whose source changed since is marked and awaits a reread. Use this directory to find the argument, its significance, its Lean correspondence and its remaining questions.'",
+    "kind": "generator",
+    "why": "A reader should see the current homes first. The catalogue's standing is copied from its own coverage paragraph and reading note.",
+    "home": "tools/research/navigation.py:564 (BRIEF) and theories/becoming/results/README.md:39",
+    "home_quote": "each result stated once in its home section ... 99 entries name a source that changed after the reading; they are marked on their pages and await a reread."
+   },
+   {
+    "file": "tools/research/reading_catalogue.py",
+    "old": "'| [Canonical result register](RESULT-REGISTER.md) | One editable record per migrated claim, with premises, evidence, status, dependencies, counterexamples and aliases; reading views are generated. |'",
+    "new": "'| [Result register](../../../RESULTS.md) | The single register of results: one editable JSON record per migrated claim, from which the register and each record page are generated. |'",
+    "kind": "generator",
+    "why": "RESULT-REGISTER.md is a stub; the row described it as the live register. The new text copies RESULTS.md's own description.",
+    "home": "RESULTS.md (navigation.py register text)",
+    "home_quote": "The single register of results: one editable JSON record per migrated claim, from which this page and each record page are generated."
+   },
+   {
+    "file": "tools/research/reading_catalogue.py",
+    "old": "'| [Roadmap](ROADMAP.md) | Established results, ongoing directions and proposed tests. |',",
+    "new": "'| [Scopes](../../../GOALS.md) | Directions, their authorization and their state. |',",
+    "kind": "generator",
+    "why": "ROADMAP.md is a stub listing scopes, not 'established results'. The row now links GOALS.md, in the stub's own words.",
+    "home": "theories/becoming/results/ROADMAP.md:8",
+    "home_quote": "Directions, their authorization and their state are in GOALS.md."
+   },
+   {
+    "file": "tools/research/reading_catalogue.py",
+    "old": "             '| [Claim register](../chapters/CLAIMS.md) | Existing detailed claims, evidence classes and counterexamples. |', '',",
+    "new": "             '',",
+    "kind": "generator",
+    "why": "CLAIMS.md is a stub pointing to RESULTS.md, which the first row now links. The row described contents the page no longer has.",
+    "home": "theories/becoming/chapters/CLAIMS.md:8",
+    "home_quote": "This page earlier repeated the register of results. It is kept so that links to it resolve. The single register is RESULTS.md"
+   },
+   {
+    "file": "tools/research/reading_catalogue.py",
+    "old": "'| Question | Entry points |', '|---|---|',",
+    "new": "'Each question goes first to its current home in the account. The third column keeps the frozen readings of 8 October 2026, which describe the versions they read.', '',\n             '| Question | Current home | Readings of 8 October 2026 (frozen) |', '|---|---|---|',",
+    "kind": "generator",
+    "why": "Every route went only to frozen pages of 8 October. The current home now comes first, and the frozen links are kept and labelled.",
+    "home": "tools/research/reading_catalogue.py:188 (reading_note)",
+    "home_quote": "The entry describes that earlier version; it awaits a reread before its hash is refreshed."
+   },
+   {
+    "file": "tools/research/reading_catalogue.py",
+    "old": "'| What foundation has been established? | ",
+    "new": "'| What does the account start from, and how does it stand? | [The root](../chapters/01-ROOT.md) · [Overview §1](../THE-THEORY-OF-BECOMING.md#1-the-root-continuation-relative-to-a-class) · [Standings and bases](../chapters/08-METHOD.md#standings-and-bases) | ",
+    "kind": "generator",
+    "why": "'Established foundation' says more than the home. The root's laws forbid no relation; that they explain is argued, and that every becoming fits them is open. Anchors checked.",
+    "home": "theories/becoming/ONE-PAGE.md:13",
+    "home_quote": "Theorems for every relation and class, so they forbid no relation. That this explains how things go on: argued. That every becoming fits it: open"
+   },
+   {
+    "file": "tools/research/reading_catalogue.py",
+    "old": "'| How do organization, learning and revision form? | ",
+    "new": "'| How do organization, learning and revision form? | [Generation, keeping and degeneration](../chapters/02-MAP.md) · [Learning and seeking](../chapters/03-KNOWING.md#learning) · [Organization within organisms](../chapters/04-LIFE.md#organization) | ",
+    "kind": "generator",
+    "why": "Adds the current homes. The question is unchanged. Anchors #learning and #organization checked.",
+    "home": "theories/becoming/chapters/03-KNOWING.md §8; 04-LIFE.md §8",
+    "home_quote": "## 8. Learning and seeking / ## 8. Organization within organisms"
+   },
+   {
+    "file": "tools/research/reading_catalogue.py",
+    "old": "'| Why does generativity matter ethically? | ",
+    "new": "'| What does the ethics add, and on what premises? | [Scope and order: two premises](../chapters/07-SIGNIFICANCE.md#scope-and-order) · [The continuation condition](../chapters/07-SIGNIFICANCE.md#condition) · [Theses](../chapters/07-SIGNIFICANCE.md#theses) | ",
+    "kind": "generator",
+    "why": "The old question presumes that generativity matters ethically. In the home, no law evaluates and the ethics adds two unasserted premises. Anchors checked.",
+    "home": "theories/becoming/ONE-PAGE.md:24",
+    "home_quote": "No law evaluates: none says a loss is a harm or restraint better. The ethics adds two premises, neither asserted, warrant open, each a hypothesis wherever used"
+   },
+   {
+    "file": "tools/research/reading_catalogue.py",
+    "old": "'| How far do mathematical and general results reach? | ",
+    "new": "'| How far do mathematical and general results reach? | [The pure core and the periphery](../chapters/08-METHOD.md#pure-core-and-periphery) · [Known results](../chapters/08-METHOD.md#known-results) · [Result register](../../../RESULTS.md) | ",
+    "kind": "generator",
+    "why": "Adds the current homes. Anchors checked.",
+    "home": "theories/becoming/ONE-PAGE.md:30",
+    "home_quote": "An AI review of prior work, not exhaustive, finds none of the central results new mathematics"
+   },
+   {
+    "file": "tools/research/reading_catalogue.py",
+    "old": "'| How can the theory be tested or revised? | ",
+    "new": "'| How can the theory be tested or revised? | [Theses](../chapters/08-METHOD.md#theses) · [What would defeat the reading](../chapters/08-METHOD.md#what-would-defeat-the-reading) · [Refutation and verification](../chapters/03-KNOWING.md#refutation) | ",
+    "kind": "generator",
+    "why": "Adds the current homes. Anchors checked.",
+    "home": "theories/becoming/ONE-PAGE.md:30",
+    "home_quote": "T1 to T7 have tests frozen before scoring, some passed and some failed"
+   },
+   {
+    "file": "tools/research/reading_catalogue.py",
+    "old": "'| How does it connect to earlier theories and practice? | ",
+    "new": "'| How does it connect to earlier theories and practice? | [The classical texts](../chapters/06-CLASSICAL-TEXTS.md) (in Chinese) · [The crosswalk](atlas/CROSSWALK.md) · [Known results](../chapters/08-METHOD.md#known-results) | ",
+    "kind": "generator",
+    "why": "Adds the current homes. The crosswalk reads each earlier theory folder against the live account.",
+    "home": "theories/becoming/results/atlas/CROSSWALK.md:5",
+    "home_quote": "Each earlier theory folder and each domain of thought: what it claimed in its own terms, and what became of that in the live account."
+   },
+   {
+    "file": "tools/research/reading_catalogue.py",
+    "old": "'results is the [result register](RESULT-REGISTER.md), and every chapter with its status is in the '",
+    "new": "'results is [the register](../../../RESULTS.md), and every chapter with its status is in the '",
+    "kind": "generator",
+    "why": "The ARGUMENTS-A-L/M-Z stubs call RESULT-REGISTER.md, itself a stub, the live register. The live register is RESULTS.md.",
+    "home": "theories/becoming/results/RESULT-REGISTER.md:6",
+    "home_quote": "The single register is RESULTS.md (536 records)"
+   },
+   {
+    "file": "tools/research/generative_chain.py",
+    "old": "    lines = [\"# 生成、共同实现与伦理：完整理论链对照表 / Generativity, co-realization and ethics: the connected theory\", \"\",\n             f\"内容更新 / Content updated: **{data['updated']}** · Asia/Bangkok · **{total} 条导航项 / {total} indexed entries**\", \"\",\n             \"[总成果目录 / Results catalogue](README.md) · [全部章节 / All chapters](ARGUMENTS-A-L.md) · [后半章节 / More chapters](ARGUMENTS-M-Z.md) · [Lean 声明 / Lean declarations](LEAN-DECLARATIONS.md)\", \"\",\n",
+    "new": "    record_zh, record_en = link(data[\"maintenance_record\"], \"维护记录\"), link(data[\"maintenance_record\"], \"maintenance record\")\n    lines = [\"# 生成、共同实现与伦理：自 2026 年 10 月起维护的一条理论链 / Generativity, co-realization and ethics: a curated chain kept since October 2026\", \"\",\n             f\"内容更新 / Content updated: **{data['updated']}** · Asia/Bangkok · **{total} 条导航项 / {total} indexed entries**\", \"\",\n             f\"本页是一条策展的理论链，共 {total} 条，自 2026 年 10 月 8 日起维护，沿用当时的词汇（如 G0），与现行陈述并列，而不是现行陈述。现行陈述见[一页](../ONE-PAGE.zh.md)、[总览](../THE-THEORY-OF-BECOMING.zh.md)与[八章](../chapters/README.md)。上面的日期是最近一次改动之日，不是逐一重读所链来源之日（{record_zh}）。\", \"\",\n             f\"This page is a curated chain of {total} entries, kept since 8 October 2026 in the vocabulary of its time (G0 among it), beside the live account and not a statement of it. The account is stated in [the one page](../ONE-PAGE.md), [the overview](../THE-THEORY-OF-BECOMING.md) and [the eight chapters](../chapters/README.md). The date above is that of its last change, not of a reading of every linked source ({record_en}).\", \"\",\n             \"[10 月 8 日起的章节读法 / Chapter readings of 8 October 2026 and later](README.md) · [A–L](ARGUMENTS-A-L.md) · [M–Z](ARGUMENTS-M-Z.md) · [Lean 声明 / Lean declarations](LEAN-DECLARATIONS.md)\", \"\",\n",
+    "kind": "generator",
+    "why": "The title 'the connected theory' / 完整理论链对照表 presented the chain as the account. The lead says what it is, in both languages. 'All chapters' linked only A–L. The date line looked like freshness although 58 linked sources are not reread (LM1). The rendered diff against the current page is exactly these lines (simulated with render(data)).",
+    "home": "theories/becoming/results/data/generativity-chain.json scope_en; GENERATIVITY-CHAIN-INDEX-RECORD.md LM1 and GC4 'Left'",
+    "home_quote": "The entries keep the labels of their time ... what G0 stated beyond it is no premise of the current account / 58 had when this was done ... The next reading of those sources is still owed."
+   },
+   {
+    "file": "tools/research/navigation.py",
+    "old": "                  ' · '.join(link(p, path, label) for p, label in [(THEORY + '/results/README.md', 'Full reading catalogue'), (THEORY + '/results/GENERATIVITY-CHAIN.md', 'Curated generativity chain'), (moves.current_path('MAP.md', ROOT), 'Broader theory map')]), '',\n",
+    "new": "                  ' · '.join(link(p, path, label) for p, label in [(THEORY + '/ONE-PAGE.md', 'The one page'), (CANONICAL, 'The overview'), (CHAPTERS + '/README.md', 'The eight chapters'), (THEORY + '/results/THEORY-GRAPH.md', 'The theory graph'), (moves.current_path('MAP.md', ROOT), 'Broader theory map')])\n                  + '. Earlier catalogues: ' + ' · '.join(link(p, path, label) for p, label in [(THEORY + '/results/README.md', 'chapter readings of 8 October 2026 and later'), (THEORY + '/results/GENERATIVITY-CHAIN.md', 'the generativity chain, kept since 8 October 2026')]) + '.', '',\n",
+    "kind": "generator",
+    "why": "This one line writes the 'Discovery and evidence' nav into README.md:212, RESULTS.md:575, RESEARCH.md:18, GOALS.md:401, DEPENDENCIES.md:990, OPEN-QUESTIONS.md:68, _process/BRIEF.md:27, root-foundation/README.md:11, theories/becoming/README.md:20, chapters/CLAIMS.md:18 and results/ROADMAP.md:30. The current homes now come first. The two legacy_catalogues are labelled as earlier catalogues by what they are. Output simulated for three page depths.",
+    "home": "_process/research-config.json legacy_catalogues; theories/becoming/ONE-PAGE.md:3",
+    "home_quote": "[The overview](THE-THEORY-OF-BECOMING.md) · [The eight chapters](chapters/README.md) · [The theory graph](results/THEORY-GRAPH.md)"
+   },
+   {
+    "file": "tools/research/navigation.py",
+    "old": "'; Ren\\'s opening is ' + link(THEORY + '/OPENING.md', path, 'OPENING.md') + '.'",
+    "new": "'; the opening, in its author\\'s first person and revised in place since (each revised passage named under its heading), is ' + link(THEORY + '/OPENING.md', path, 'OPENING.md') + '.'",
+    "kind": "generator",
+    "why": "theories/becoming/README.md:8 names a person on a front page and presents a text revised in place by the work, its revised passages AI-written, as his. A review of 1 November flagged the same line (text-review-2026-11-01 REVIEW.md:161).",
+    "home": "theories/becoming/OPENING.md:1 (header comment)",
+    "home_quote": "The opening of the work, in its author's first person: ... then revised in place by the work ... the line under its heading names each passage revised since version 12"
+   },
+   {
+    "file": "experiments/README.md",
+    "old": "the formal spine of [the canonical chapter](../theories/becoming/history/THE-THEORY-OF-BECOMING.md#9-the-formal-spine), is at",
+    "new": "the formal spine of [the account](../theories/becoming/THE-THEORY-OF-BECOMING.md) (its pure core and periphery are in [method §3](../theories/becoming/chapters/08-METHOD.md#pure-core-and-periphery)), is at",
+    "kind": "text",
+    "why": "The linked copy has been history since RA, replaced by the overview and the eight chapters. experiments/README.md is not in the generated manifest. The anchor pure-core-and-periphery exists.",
+    "home": "theories/becoming/THE-THEORY-OF-BECOMING.md:156; _process/architecture/moves/moves-2026-10-23-moves-ra.json",
+    "home_quote": "the canonical chapter, replaced by the overview (theories/becoming/THE-THEORY-OF-BECOMING.md) and the eight chapters, which state each of its results once"
+   },
+   {
+    "file": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+    "old": "中华本《变化论》（[全书](../history/THE-THEORY-OF-BECOMING-ZHONGHUA.md)）以这些名把理论重述一遍：",
+    "new": "中华本《变化论》（2026 年 10 月 21 日之本，[全书](../history/THE-THEORY-OF-BECOMING-ZHONGHUA.md)；10 月 23 日移入 history/，其所述由八章承担，此后各章的修订未入其中）以这些名把当时的理论重述一遍：",
+    "kind": "text",
+    "why": "§7.3 presented the 中华本 in the present tense as the theory restated. It is the text of 21 October, moved to history on 23 October with its bytes unchanged. The wording follows 06's own form for a moved chapter ('对应之章于 2026 年 10 月 23 日移入 history/').",
+    "home": "theories/becoming/history/THE-THEORY-OF-BECOMING-ZHONGHUA.md:3; moves-2026-10-23-moves-ra.json",
+    "home_quote": "中华本，2026年10月21日。 / RA (23 October 2026): the eight chapters of the restructured account state what this chapter carries; kept at its original scope, bytes unchanged"
+   },
+   {
+    "file": "_process/goals/chinese-sources-and-becoming.json",
+    "old": "and the theory is stated in them in the 中华本《变化论》, with 經, 說 and 證 for each law.",
+    "new": "and the theory as it stood on 21 October 2026 was stated in them in the 中华本《变化论》, with 經, 說 and 證 for each law (in history since 23 October 2026, the eight chapters carrying what it states).",
+    "kind": "source-of-generated",
+    "why": "The source of README.md:156 and GOALS.md:28 (overview.summary.en) says in the present tense that the theory 'is stated' in the 中华本, which is superseded.",
+    "home": "moves-2026-10-23-moves-ra.json; ZHONGHUA.md:3",
+    "home_quote": "中华本，2026年10月21日。 / the eight chapters of the restructured account state what this chapter carries"
+   },
+   {
+    "file": "_process/goals/chinese-sources-and-becoming.json",
+    "old": "理论以这些名写成中华本《变化论》，每条律有经、说、证。",
+    "new": "理论以这些名写成中华本《变化论》（2026年10月21日之本，10月23日移入 history/，其所述由八章承担），每条律有经、说、证。",
+    "kind": "source-of-generated",
+    "why": "The Chinese of the same summary (overview.summary.zh), kept matching the English.",
+    "home": "theories/becoming/history/THE-THEORY-OF-BECOMING-ZHONGHUA.md:3",
+    "home_quote": "中华本，2026年10月21日。"
+   },
+   {
+    "file": "tools/research/registry.py",
+    "old": "' · [Full catalogue](README.md)'",
+    "new": "' · [Chapter readings of 8 October 2026 and later](README.md)'",
+    "kind": "generator",
+    "why": "RESULT-REGISTER.md:8 shows the legacy reading catalogue under a current-looking name.",
+    "home": "_process/research-config.json legacy_catalogues.reading",
+    "home_quote": "\"reading\": \"theories/becoming/results/README.md\""
+   },
+   {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/GENERATIVITY-CHAIN-INDEX-RECORD.md",
+    "old": "The next reading of those sources is still owed.\n",
+    "new": "The next reading of those sources is still owed.\n\n## RV: the page's title and lead (7 November 2026)\n\nBoard item RV, AI-authored. A review of how the repository presents itself found that the page's title, \"the connected theory\" (完整理论链对照表), and its place in the navigation beside the account's homes presented the chain as the account's current statement. The title now says what the page is, a curated chain kept since October 2026. A lead in both languages says that it has its number of entries, kept since 8 October 2026 in the vocabulary of its time, that it stands beside the live account and is not a statement of it, where the account is stated, and that the date is that of its last change, not of a reading of every linked source. The nav line names the chapter readings of 8 October 2026 by what they are; \"All chapters\" linked only A–L. These lines are in `generative_chain.py`, not in the data: no entry, link, fingerprint or the date changes. `--render` still refuses while linked sources have changed, so the page is written from the data with the tool's own `render`, as in LM1, and the diff against the page before is these lines. The next reading of those sources is still owed.\n",
+    "kind": "text",
+    "why": "The chain is revised on argument through its maintenance record (board line 92; CD's row routes changes the same way). The section is appended at the end, so no section already cited changes.",
+    "home": "_process/BECOMING-WORKBOARD.md:92",
+    "home_quote": "His texts, OPENING's body and the generativity chain, and wording that stood on his yes, goal scopes included, are revised by the work on argument"
+   }
+  ],
+  "restatements": [
+   {
+    "file": "README.md",
+    "line": 212,
+    "text": "[Full reading catalogue](...) · [Curated generativity chain](...) · [Broader theory map](MAP.md)",
+    "verdict": "changed",
+    "note": "Through navigation.py:625. The same line, from the same generator, is at RESEARCH.md:18, GOALS.md:401, DEPENDENCIES.md:990, RESULTS.md:575, OPEN-QUESTIONS.md:68, _process/BRIEF.md:27, root-foundation/README.md:11, theories/becoming/README.md:20, chapters/CLAIMS.md:18, results/ROADMAP.md:30"
+   },
+   {
+    "file": "theories/becoming/results/RESULT-REGISTER.md",
+    "line": 8,
+    "text": "[Contribution workflow](...) · [Full catalogue](README.md)",
+    "verdict": "changed",
+    "note": "Through registry.py:1331"
+   },
+   {
+    "file": "theories/becoming/results/ARGUMENTS-A-L.md",
+    "line": 7,
+    "text": "the live register of results is the [result register](RESULT-REGISTER.md)",
+    "verdict": "changed",
+    "note": "RESULT-REGISTER.md is itself a stub. Fixed through reading_catalogue.stub(), which also writes ARGUMENTS-M-Z.md"
+   },
+   {
+    "file": "theories/becoming/results/README.md",
+    "line": 29,
+    "text": "What foundation has been established? | [Generative grounding](../history/ARGUMENTS-A-L-2026-10-08.md#generative-grounding) ...",
+    "verdict": "changed",
+    "note": "All six rows (29-34) are re-routed, with the frozen links kept in a labelled column"
+   },
+   {
+    "file": "theories/becoming/results/GENERATIVITY-CHAIN.md",
+    "line": 1,
+    "text": "# 生成、共同实现与伦理：完整理论链对照表 / Generativity, co-realization and ethics: the connected theory",
+    "verdict": "changed"
+   },
+   {
+    "file": "theories/becoming/results/GENERATIVITY-CHAIN.md",
+    "line": 5,
+    "text": "[总成果目录 / Results catalogue](README.md) · [全部章节 / All chapters](ARGUMENTS-A-L.md) · [后半章节 / More chapters](ARGUMENTS-M-Z.md)",
+    "verdict": "changed"
+   },
+   {
+    "file": "theories/becoming/results/GENERATIVITY-CHAIN.md",
+    "line": 15,
+    "text": "its favorable significance may lie in this co-formation itself",
+    "verdict": "fine",
+    "note": "In the chain's data, labelled on the page as an AI-authored candidate argument. Under the new lead it reads as the chain's own text. The data is not changed"
+   },
+   {
+    "file": "theories/becoming/README.md",
+    "line": 8,
+    "text": "The canonical entry is [The Theory of Becoming](THE-THEORY-OF-BECOMING.md); Ren's opening is [OPENING.md](OPENING.md).",
+    "verdict": "changed",
+    "note": "Names a person on a front page and calls a text revised in place 'his'. Fixed through navigation.py:461"
+   },
+   {
+    "file": "theories/becoming/README.md",
+    "line": 10,
+    "text": "This page earlier repeated the register of results. It is kept so that links to it resolve.",
+    "verdict": "fine"
+   },
+   {
+    "file": "theories/becoming/README.md",
+    "line": 43,
+    "text": "<details><summary>Historical section links</summary> ... 73 'Historical section' links",
+    "verdict": "fine",
+    "note": "Collapsed and labelled as history. It does not present itself as current. Making the page a real folder front is a design change, not a correction"
+   },
+   {
+    "file": "theories/becoming/README.md",
+    "line": 6,
+    "text": "[Home] · [Start here] · [One page] · [The theory] · [Chapters] · [Results] · [Scopes] · [Connections] · [Open questions] · [Contribute]",
+    "verdict": "fine",
+    "note": "The shared NAV, not false. The review's point that 'Scopes' leads to a page opening with 'Scopes not yet marked by Ren' belongs to another group"
+   },
+   {
+    "file": "experiments/README.md",
+    "line": 5,
+    "text": "the formal spine of [the canonical chapter](../theories/becoming/history/THE-THEORY-OF-BECOMING.md#9-the-formal-spine)",
+    "verdict": "changed"
+   },
+   {
+    "file": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+    "line": 496,
+    "text": "中华本《变化论》（[全书](../history/THE-THEORY-OF-BECOMING-ZHONGHUA.md)）以这些名把理论重述一遍",
+    "verdict": "changed"
+   },
+   {
+    "file": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+    "line": 500,
+    "text": "它陈述在 World 模型（World、Flow 与依存之网）上，不在 `Becoming.Grammar` 上",
+    "verdict": "fine",
+    "note": "Already states its basis"
+   },
+   {
+    "file": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+    "line": 116,
+    "text": "中华本之名表（§7.3，锚于 World 模型与诸世界之声明）",
+    "verdict": "fine"
+   },
+   {
+    "file": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+    "line": 650,
+    "text": "中华本之根基。它陈述在 World 模型上；规范之章改以根为基后，它须随之改写。",
+    "verdict": "fine"
+   },
+   {
+    "file": "README.md",
+    "line": 156,
+    "text": "and the theory is stated in them in the 中华本《变化论》, with 經, 說 and 證 for each law",
+    "verdict": "changed",
+    "note": "Through _process/goals/chinese-sources-and-becoming.json overview.summary (en and zh). Also renders at GOALS.md:28"
+   },
+   {
+    "file": "theories/becoming/history/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
+    "line": 3,
+    "text": "它与英文本及其现代汉语版说同一个理论",
+    "verdict": "frozen-or-history",
+    "note": "In history; bytes unchanged by the move receipt"
+   },
+   {
+    "file": "OPEN-QUESTIONS.md",
+    "line": 58,
+    "text": "What changes only through a proposal is the author's own text and authorizations: the body of the opening, the curated generativity chain, the goal scopes and their states, and the licence.",
+    "verdict": "fine",
+    "note": "NOT fine, but outside this group and not edited. It contradicts board line 92 and D45 (6), now marked history: the chain and OPENING are revised by the work on argument. See open"
+   },
+   {
+    "file": "OPEN-QUESTIONS.md",
+    "line": 8,
+    "text": "the open programme of the canonical chapter",
+    "verdict": "fine",
+    "note": "Outside this group and not edited. The links go to 08-METHOD, so 'canonical chapter' is a stale name (navigation.py:581). See open"
+   },
+   {
+    "file": "_process/REPOSITORY-LAYOUT.md",
+    "line": 104,
+    "text": "the argument in the canonical chapter or the live study",
+    "verdict": "fine",
+    "note": "Process text, stale name for where an argument goes. Not edited. See open"
+   },
+   {
+    "file": "theories/becoming/results/README.md",
+    "line": 39,
+    "text": "This reading edition covers 154 chapters ... 99 entries name a source that changed after the reading",
+    "verdict": "fine"
+   }
+  ],
+  "open": [
+   "Writing GENERATIVITY-CHAIN.md: `generative_chain.py --render` refuses while 58 linked sources have changed. Write the page with the module's own `render(read_data())`, as LM1 did. I simulated it in memory: the diff against the current page is only the title, the two lead paragraphs and the nav line. make research-render does not run this generator.",
+   "After applying, make research-render rewrites results/README.md, the ARGUMENTS stubs, RESULT-REGISTER.md, README.md, GOALS.md and every page carrying the Discovery nav line. Then run the focused checks: `reading_catalogue.py --check` (it already exits 2 for 99 drifted readings; editing 06 adds none, because 06's reading is already drifted) and research-check.",
+   "The English slug of results/README.md's old title ('results-and-argument-catalogue') disappears. The bilingual anchor is kept, and a grep found no inbound 'results/README.md#' link.",
+   "Not edited, outside this group: OPEN-QUESTIONS.md:58 (navigation.py, 'Beyond the readings') says the opening's body and the curated chain change 'only through a proposal'. Board line 92 and AGENTS say they are revised by the work on argument. It also lists 'the goal scopes and their states, and the licence'. Which of those still stay the author's is for the coordinator. AGENTS lists the push, the licence, who is sent what, and money or machine time.",
+   "Not edited: OPEN-QUESTIONS.md:8 (navigation.py:581) 'the open programme of the canonical chapter'. Its links all go to 08-METHOD, so a fix such as 'the open programme in method (chapter 8)' would do. _process/REPOSITORY-LAYOUT.md:104 also still sends arguments to 'the canonical chapter'.",
+   "The chain page's lead says the chain is 'not a statement' of the account. That rests on the chain's own scope key and the record's 'Left' note (82 entries link no record or chapter). Per AGENTS, a reader other than this drafter should check the lead and the re-routed rows against their homes.",
+   "The chain page is 615 KB and does not render on GitHub (another review finding). Not addressed here.",
+   "Kept: MAP.md is still labelled 'Broader theory map' on the nav line, though the top nav calls it 'Start here'. That label is not false, so I left it."
+  ]
+ }
+}

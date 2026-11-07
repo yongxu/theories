@@ -5,7 +5,7 @@
 
 [Home](../../README.md) · [Start here](../../MAP.md) · [One page](ONE-PAGE.md) · [The theory](THE-THEORY-OF-BECOMING.md) · [Chapters](chapters/README.md) · [Results](../../RESULTS.md) · [Scopes](../../GOALS.md) · [Connections](../../DEPENDENCIES.md) · [Open questions](../../OPEN-QUESTIONS.md) · [Contribute](../../_process/RESULT-WORKFLOW.md)
 
-The canonical entry is [The Theory of Becoming](THE-THEORY-OF-BECOMING.md); Ren's opening is [OPENING.md](OPENING.md).
+The canonical entry is [The Theory of Becoming](THE-THEORY-OF-BECOMING.md); the opening, in its author's first person and revised in place since (each revised passage named under its heading), is [OPENING.md](OPENING.md).
 
 This page earlier repeated the register of results. It is kept so that links to it resolve. The single register is [RESULTS.md](../../RESULTS.md); directions and authorized scopes are in [GOALS.md](../../GOALS.md), open questions in [OPEN-QUESTIONS.md](../../OPEN-QUESTIONS.md) and connections between results in [DEPENDENCIES.md](../../DEPENDENCIES.md).
 
@@ -17,7 +17,7 @@ Now in [the register](../../RESULTS.md#registered-results).
 <a id="discovery-and-evidence--检索与证据"></a>
 ## Discovery and evidence
 
-[Full reading catalogue](results/README.md) · [Curated generativity chain](results/GENERATIVITY-CHAIN.md) · [Broader theory map](../../MAP.md)
+[The one page](ONE-PAGE.md) · [The overview](THE-THEORY-OF-BECOMING.md) · [The eight chapters](chapters/README.md) · [The theory graph](results/THEORY-GRAPH.md) · [Broader theory map](../../MAP.md). Earlier catalogues: [chapter readings of 8 October 2026 and later](results/README.md) · [the generativity chain, kept since 8 October 2026](results/GENERATIVITY-CHAIN.md).
 
 ```sh
 make research-check

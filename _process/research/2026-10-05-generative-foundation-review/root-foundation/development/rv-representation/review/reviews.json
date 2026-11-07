@@ -1,0 +1,1079 @@
+[
+ {
+  "key": "first-contact",
+  "answer": "After 10 minutes, a smart outsider who lands on github.com/yongxu/theories would most likely believe the project is a large, sincere, AI-made philosophical system. It sets out to give \"universal invariants\" of becoming, it is backed by hundreds of Lean proofs, and it offers itself as \"a foundation for AI alignment\" and \"the truth, the dharma, the Dao\". The first screen of README.md (lines 9-17) is careful: it says no human has reviewed it, the ethics rests on unasserted premises and some tests failed. But GitHub shows the whole README, and almost all of it is the first-person opening (README:21-71). The qualifiers that make the opening's claims true sit in long footnotes. The one sentence that would set the reader's expectations correctly is \"none of the central results is new mathematics\" (08-METHOD.md:482). It does not appear in README or MAP. ONE-PAGE.md has it only near the end (line 30). The overview places it in section 8 (line 158).\n\nAfter an hour (MAP, ONE-PAGE, overview to section 1 and section 7), a careful reader can tell what is proved, what is conjectured and what failed. The standings tables (ONE-PAGE:13-22, overview:28-57) are a real strength, and so are \"What would show it wrong\" and the fisher case. They would then see the project's actual value, which is narrower than the opening suggests and real. It has three parts:\n- a machine-checked ledger of premises, each shown holding in one model and failing in another;\n- one precise statement of the proxy problem: a selection reaches only what couples into its selector, so it can succeed while what it cannot read is lost;\n- an ethics that keeps scope and order apart as two stated premises, plus frozen tests that can fail.\n\nThe prose is so dense with coined terms (class, grains, room, couples into, admits, widening, joins) and long sentences (the T7 cell at ONE-PAGE:20) that most policy readers will not get that far.\n\nThe GitHub landing does not do its job:\n- The repo description is generic (\"Generative foundations, theory, and research\").\n- It has no topics and no homepage, and Pages is off.\n- The 4.9 MB map.html cannot render on GitHub.\n- No entry page has a diagram (0 mermaid blocks).\n- README's lower half is board process-talk (\"Steps 1 to 7 of AJ's plan have landed (MA2, MA3, AJ2...\", README:188).\n\nThere is no static website, and nothing shows visually how the work grew.\n\nThe three sentences a newcomer most needs:\n1. **What it is and why it matters.** The selection-reach sentence exists at ONE-PAGE:9 and overview:26, but not on the README first screen or in MAP's \"What this is\".\n2. **How strong it is.** Machine-checked, but by its own verdict nothing in it is new mathematics; its value is the premise ledger and the testable theses. This exists at 08-METHOD:482, ONE-PAGE:30 (buried) and overview:158, and is absent from README and MAP.\n3. **What would change the verdict, and how to help.** A theorem a specialist would not foresee, a prediction that could fail and does not, or a premise derived from something weaker; plus no human review yet, and the reviewer dossiers. This exists at 08-METHOD:553, overview:185 and MAP:26, and is absent from the README first screen.\n\nUses in alignment, coordination, wisdom and human development are not shown as things a reader can do. Alignment is stated honestly but only abstractly (ONE-PAGE:26). Its researcher page is \"in draft\" (README:188). Wisdom and human development do not appear on any front page.",
+  "score": 4,
+  "strengths": [
+   "The README first screen is short and states its limits honestly: \"No human review yet\" and \"Lean receipts credit 505 of 536 registered results, showing each Lean statement follows from its premises, not that they hold\" (README.md:17); it says the ethics rests on \"two unasserted premises, their warrant open\" (README.md:13) and labels the opening \"a first-person conviction\" (README.md:15).",
+   "ONE-PAGE.md and the overview give every claim a standing and a 'What would show it wrong' column (ONE-PAGE.md:13-22; THE-THEORY-OF-BECOMING.md:28-57), and they say plainly where tests failed: \"T1, conjectured: passed in two simulations ... failed in four settings\" (ONE-PAGE.md:17).",
+   "The fisher case is a strong concrete hook: \"Told nothing of the bed, they kept it in no season, under any instruction. They are language models told what to do, not systems trained\" (ONE-PAGE.md:9). It is concrete, honest about its limits and memorable.",
+   "\"The account's centre [AI reading]: a selection can succeed while what it cannot read is lost, and the laws do not say whether that loss counts\" (ONE-PAGE.md:9) is an excellent one-line statement of value. It exists; it is just not on the landing.",
+   "The opening's footnotes say how far each sentence is proved (README.md:25, e.g. note 11: \"that it is the foundation is a judgment\"). That is unusually rigorous provenance for a manifesto.",
+   "MAP.md gives layered reading paths with reading times, per-audience dossiers (MAP.md:26), a reproducible Lean check in three steps (MAP.md:41-54), and a one-line table of the earlier theory folders (MAP.md:77-94) that partly shows how the work grew.",
+   "The account reports on itself: 08-METHOD.md:482 gives the 'not new mathematics' verdict with a closest-prior-result table, and THEORY-GRAPH.md shows how much of the corpus is still unread (1330 of 1724 statement units read against nothing)."
+  ],
+  "findings": [
+   {
+    "title": "The account's own 'not new mathematics' verdict is missing from the landing and buried on the one page",
+    "severity": "high",
+    "kind": "buried",
+    "where": [
+     "README.md:9-17",
+     "MAP.md:5-13",
+     "theories/becoming/ONE-PAGE.md:30",
+     "theories/becoming/THE-THEORY-OF-BECOMING.md:158",
+     "theories/becoming/chapters/08-METHOD.md:482"
+    ],
+    "evidence": "08-METHOD.md:482: \"None of the central results is new mathematics: each is near-definitional or a known result restated.\" A grep for 'new mathematics' finds it in neither README.md nor MAP.md. On ONE-PAGE.md it appears only in the closing 'The evidence' paragraph (line 30). The overview gives it in section 8 (line 158), about 80% of the way through an hour-long read. The first screen instead leads with volume: \"Lean receipts credit 505 of 536 registered results\" (README.md:17).",
+    "proposal": "Add one sentence to the README first screen and to MAP 'What this is', copied from the home's words first: \"By its own verdict (an AI review, not exhaustive), none of the central results is new mathematics; each is near-definitional or a known result restated. What it offers is one ledger of premises, each shown holding in one model and failing in another, and an ethics with scope and order apart.\" Move ONE-PAGE's verdict sentence up beside 'What it is' (line 7)."
+   },
+   {
+    "title": "The GitHub landing is mostly the first-person opening, whose sweeping sentences are qualified only in footnotes",
+    "severity": "high",
+    "kind": "oversold",
+    "where": [
+     "README.md:21-71",
+     "README.md:29",
+     "README.md:45",
+     "README.md:47",
+     "README.md:86",
+     "theories/becoming/OPENING.md"
+    ],
+    "evidence": "After a 1-2 minute screen, GitHub renders the opening in full (README.md is 12,684 words). README.md:29: \"There is a set of universal invariants ... in any universe, nothing that unfolds can break them, because they are what coming to be and ceasing to be are.\" README.md:45: \"I take it to be the truth, the dharma, the Dao.\" README.md:47: \"This is a foundation for AI alignment, the most important matter at this moment in the whole history of the Earth.\" The limits are in notes: note 3 says \"'None of this uses an axiom of logic' says this, and no more\"; note 11 says \"that it is the foundation is a judgment\". theories/becoming/README.md already says \"Ren's opening is OPENING.md\", so the opening has a home of its own.",
+    "proposal": "Prepare, as a decision pending Ren (the opening is his), a README that keeps the first screen plus the three newcomer sentences, a five-line 'what you will find', and a link to the opening in OPENING.md, instead of inlining the whole opening on the landing. If the opening stays inline, put one line above it that a scientist will read: 'What follows is a conviction; the account below and the one page state what is proved; nothing in it is new mathematics.'"
+   },
+   {
+    "title": "The landing never states the project's value in plain words; the best sentence lives only on ONE-PAGE and in the overview",
+    "severity": "high",
+    "kind": "undersold",
+    "where": [
+     "README.md:11",
+     "MAP.md:7",
+     "theories/becoming/ONE-PAGE.md:9",
+     "theories/becoming/THE-THEORY-OF-BECOMING.md:26"
+    ],
+    "evidence": "README.md:11 gives only \"An account of how anything comes to be, lasts, changes and passes away within one relational unfolding, not assumed good\", which tells a scientist nothing they can use. The value sentence is ONE-PAGE.md:9: \"The account's centre [AI reading]: a selection can succeed while what it cannot read is lost, and the laws do not say whether that loss counts.\" The fuller form is at THE-THEORY-OF-BECOMING.md:26: \"a selection, whether a knower, a training run, a market or an optimizer, reaches only what couples into its selector\". MAP.md:7 gestures at it only as \"for AI alignment it shows first what a selection can reach\".",
+    "proposal": "Put the overview:26 sentence, with its [AI reading] label, and the fisher case in two sentences on the README first screen, before the ethics line. Say who it is for: alignment, commons, institutions."
+   },
+   {
+    "title": "No static website, no rendered visual, and the connection map cannot be viewed on GitHub",
+    "severity": "medium",
+    "kind": "missing",
+    "where": [
+     "GitHub repo settings (description, topics, homepage, Pages)",
+     "MAP.md:75",
+     "theories/becoming/results/atlas/map.html",
+     "theories/becoming/results/THEORY-GRAPH.md:1-30"
+    ],
+    "evidence": "gh api: description \"Generative foundations, theory, and research\", topics [], homepage null, has_pages false. map.html is 4,954,810 bytes; GitHub shows .html as source, and files of this size are not displayed. Yet MAP.md:75 sends readers there: \"[the connection map](theories/becoming/results/atlas/map.html) draws it\". No entry page contains a diagram (0 mermaid blocks under theories/becoming). THEORY-GRAPH.md is count tables (\"3220 nodes, 6892 edge[s]\") with no picture.",
+    "proposal": "Prepare a small GitHub Pages site built only from generated, public files (a separate gh-pages branch or a docs/ output with an allow-list, never the whole tree, so that sources/12-, 13-, 18-, tmp/, work/ etc. cannot leak). Contents: the one page, a rendered theory graph (theory-graph.json already exists), map.html, and one diagram of the three questions and two joins. Set a specific description (e.g. 'A Lean-checked account of what selections can and cannot see, with an ethics on two stated premises') and topics (lean4, ai-alignment, commons, philosophy). Pushing and enabling Pages are Ren's. Until then, add one mermaid diagram of the three questions and two joins to ONE-PAGE.md, and a note at MAP.md:75 that map.html must be downloaded or viewed via the site."
+   },
+   {
+    "title": "ONE-PAGE is too dense for its stated 11-15 minutes; coined terms and 150-word table cells block the outsider",
+    "severity": "medium",
+    "kind": "unclear",
+    "where": [
+     "theories/becoming/ONE-PAGE.md:11",
+     "theories/becoming/ONE-PAGE.md:19",
+     "theories/becoming/ONE-PAGE.md:20",
+     "theories/becoming/ONE-PAGE.md:24",
+     "theories/becoming/ONE-PAGE.md:36"
+    ],
+    "evidence": "ONE-PAGE.md:19: \"With *room* (every eligible outcome left higher beyond is beaten on what couples in), every optimum of an order rising with what couples in drains what lies beyond...\". The T7 cell at ONE-PAGE.md:20 is a single sentence of about 150 words (\"...turned its rule at each reading where they were read, so a case T7 forbids ... counts against that case for trained judges, the model's law standing only within its hypotheses...\"). ONE-PAGE.md:36: \"Significance stays a free parameter, which no satisfiable statement reading only the represented dynamics fixes, or is read along a relation no law here picks\".",
+    "proposal": "Cut each table cell to standing plus one clause and link the detail (for example the T7 cell: 'Conjectured. In one trained system the lock formed; the bridge to judges as pools of readers failed. No field test.'). Gloss each coined term the first time it appears in everyday words (room, couples into, admits, widen). Have a non-author reader time the page."
+   },
+   {
+    "title": "Uses in alignment, coordination, wisdom and human development are not shown as things a reader can do",
+    "severity": "medium",
+    "kind": "missing",
+    "where": [
+     "theories/becoming/ONE-PAGE.md:26",
+     "theories/becoming/THE-THEORY-OF-BECOMING.md:151",
+     "README.md:188",
+     "theories/becoming/COLLECTIVE-DIRECTION.md:1-3",
+     "MAP.md:24-26"
+    ],
+    "evidence": "Alignment is stated honestly but abstractly: \"alignment is first what a selection can reach, and a direction follows only conditionally\" (ONE-PAGE.md:26). The researcher-facing page is not done: \"Still to do: AJ4's one page for alignment researchers, now in draft\" (README.md:188). Coordination has COLLECTIVE-DIRECTION.md, a 35-minute page phrased as a question. Wisdom and human development appear on no front page; the opening's practical sentences (README.md:55-71) are conviction, not use.",
+    "proposal": "Add one 'What it is for' table to ONE-PAGE or MAP with one row per domain (AI alignment, commons and institutions, collective coordination, personal practice). Each row gives the concrete question the account sharpens, its standing, and what it does not yet give, using the home's words so nothing is oversold. Finish AJ4 and link it from the first screen. Route readers by audience to the dossiers already listed at MAP.md:26."
+   },
+   {
+    "title": "README's lower half is board process-talk and internal codes on a public landing",
+    "severity": "medium",
+    "kind": "inelegant",
+    "where": [
+     "README.md:142-192",
+     "MAP.md:3"
+    ],
+    "evidence": "README.md:188: \"Steps 1 to 7 of AJ's plan have landed (MA2, MA3, AJ2, the tests LA1 to LA3, the dossier, MA4, MA4b) ... run on Ren's yes on 3 November\". The first-priority paragraph opens: \"Deductive necessity lies in the Theory of Becoming as a whole; generativity is within its manifold.\" MAP.md:3, the first line of 'Start here': \"It extends the map of 17 October 2026; the September corpus map ... is kept verbatim in history\".",
+    "proposal": "Move 'Ongoing research and current progress' to a ROADMAP or status page and keep at most one plain line per front on the README (what is being worked on, why it matters). Put MAP's provenance line at the end of MAP."
+   },
+   {
+    "title": "How the work grew is told only as dated counts and a folder list, with no timeline",
+    "severity": "low",
+    "kind": "missing",
+    "where": [
+     "MAP.md:30-39",
+     "MAP.md:73-96"
+    ],
+    "evidence": "MAP.md:32: \"The ideas began in writing from 2021 on ... in more than 1,550 commits (1,568 in all by 19 October 2026)\". The repository now has 6,073 commits. The crosswalk that relates earlier folders to the account is 487k words and \"Every entry is an AI reading, and no person has read them\" (MAP.md:75).",
+    "proposal": "Add a short timeline (2021 writings -> 16 folders -> Sept consolidation -> Oct formal account -> Nov frozen tests and reader editions), with one line per stage on what was kept, dropped or refuted (e.g. 'the two-outcome fork framing was later rejected', MAP.md:92). Render it on the proposed site; refresh or remove the stale commit count."
+   },
+   {
+    "title": "The theories/becoming/ folder landing is a legacy register page",
+    "severity": "low",
+    "kind": "unclear",
+    "where": [
+     "theories/becoming/README.md:1-14"
+    ],
+    "evidence": "A visitor browsing into theories/becoming/ first sees: \"This page earlier repeated the register of results. It is kept so that links to it resolve.\" It names the overview as canonical but not the one page, which is the stated first read.",
+    "proposal": "Make its first line point to ONE-PAGE.md (11-15 min) and then the overview, in the same order as MAP's four layers."
+   },
+   {
+    "title": "Tracked guardian-anarchy images in output/ (check against the private list)",
+    "severity": "low",
+    "kind": "unclear",
+    "where": [
+     "output/guardian-anarchy-preview.jpg",
+     "output/guardian-anarchy-edition-02/",
+     "output/guardian-anarchy-images/"
+    ],
+    "evidence": "git ls-files shows 8 tracked files under output/guardian-anarchy*, last touched in deabb7c2f (2026-10-04). experiments/guardian-anarchy/ is on the never-publish list and tracks 0 files.",
+    "proposal": "The coordinator should confirm these exports are meant to be public (earlier pushed material may stay public by Ren's word) and that no future site build includes them by accident."
+   }
+  ],
+  "read": "Read in full: README.md first screen and opening body (lines 1-71); footnotes 1-24 of the opening, mostly truncated to their first ~600 characters (notes 3-9 in full or nearly); the later README sections, truncated (142-240); MAP.md (all 96 lines); theories/becoming/ONE-PAGE.md (all); THE-THEORY-OF-BECOMING.md lines 1-72 (how to read, the fisher case, the whole at a glance, section 1) and 125-151 (section 7); theories/becoming/README.md lines 1-14; the headers of ONE-ARGUMENT.md and COLLECTIVE-DIRECTION.md; the 08-METHOD.md known-results verdict (line 482) plus the first rows of its table; the top of THEORY-GRAPH.md. Checked with gh api (read-only) that the repo has no topics, no homepage and no Pages; checked map.html's size, that entry pages have no mermaid diagrams, where 'new mathematics' and 'would not foresee' appear, the commit count, and the tracked images in output/. Not read: the eight chapters beyond the anchors cited, the rest of the overview (sections 2-6, 8-10), the dossiers, RESULTS.md, GOALS.md, OPEN-QUESTIONS.md, the atlas and crosswalk, map.html's content, the Chinese editions, and the Lean package. I did not render pages or open GitHub in a browser; the claim that GitHub does not display map.html rests on the file's size and type."
+ },
+ {
+  "key": "site",
+  "answer": "The project has no website today, and on GitHub a visitor sees no picture at all. The only visualization, the connection map (theories/becoming/results/atlas/map.html, 4.9 MB, generated by connection_map.py), is linked once, from MAP.md:75. On GitHub that link opens \"Sorry about that, but we can't show files that are this big right now\", and the raw file is served as text/plain with nosniff. GitHub also leaves four evidence pages unrendered (richTextTruncated:true): CROSSWALK.md (3.7 MB, \"can't show\"), ATLAS.md (1.0 MB), GENERATIVITY-CHAIN.md (615 KB) and LEAN-INDEX.md (436 KB). No live reading page (fronts, chapters, review) has an image or a Mermaid diagram. THEORY-GRAPH.md says \"3220 nodes, 6892 edges\" but shows only tables.\n\nThe material for a good site is already there, and it is honest. Every generated page names its generator. CI already fails a stale generated page (research.yml, `make research-check-strict`). The map is self-contained (one inline JSON, one inline script, no external requests, 1.27 MB gzipped) and frames itself carefully: \"Every thread is an AI reading, and no person's\". theory-graph.json carries regions and each result's standing (505 recorded-checked, 20 reviewed-scoped, 4 open, 7 superseded). The records carry does_not_show and dated history. A Markdown-to-HTML converter that needs only the Python standard library already exists in build_review_packet.py.\n\nThe most elegant site would be one new builder, tools/publishing/build_site.py, extending that converter, plus one Actions workflow that deploys to Pages from a sparse, allow-listed checkout. It would commit no generated HTML: not to /docs, not to a gh-pages branch.\n\nIts pages:\n- **Home:** the README first screen, standings verbatim.\n- **Reading:** one page, overview, chapters (with standing badges at each r- anchor), results and record pages.\n- **Graph:** a 9-region diagram of formal-reuse counts, and each region's result DAG from DEPENDENCIES.\n- **Map:** map.html with a site base.\n- **Growth:** a timeline built from git, the records' first notes, edition tags and the crosswalk outcomes per earlier folder.\n- **Check:** how to verify the Lean.\n- **Review:** the edition-5 PDFs.\n\nLarge pages would be split per group or module. Links outside the site would become GitHub permalinks at the build commit; 68,650 of about 90,000 links go there. A gate check would refuse any path outside the allow-list or matching push_screen's private regex, and would check links, anchors and standing badges.\n\nTwo cheaper steps work on GitHub today: a generated Mermaid region diagram, and per-group crosswalk pages.\n\nTurning Pages on is Ren's call. It changes a repository setting, and the site would be served at yongxu.ren/theories/, because yongxu.github.io/theories/ redirects there.",
+  "score": 3,
+  "strengths": [
+   "Generated, never hand-edited, already enforced. Every generated page states its generator in a header (e.g. map.html: \"Generated by tools/research/connection_map.py ... do not edit\"; THEORY-GRAPH.md:1). CI runs `make research-check-strict` on every push (.github/workflows/research.yml), which \"fails here\" when a render would change a generated page. A site built from main in CI is therefore in step with main by construction.",
+   "The connection map is self-contained and portable. It has one `<script type=\"application/json\" id=\"cx-data\">` (4.87 MB) and one inline script (25.6 KB), no external URL except the SVG namespace, light and dark tokens on :root, and gzips to 1.27 MB. It opens from a local clone today, and connection_map.py already has a `--fragment` mode \"for hosting outside the repository\".",
+   "The map frames itself honestly: \"Every thread is an AI reading, and no person's... A thread is not proof, a shared word is not a correspondence, and agreement is drawn no more prominently than divergence\". It shows its critics' sample: 100 drawn, holds 82.6%, label 14.2%, fails 3.2%. It also reports \"Not carried is an outcome, not a defect\". This is the right model for every visual on a site.",
+   "The data layer is rich and structured, so visuals need no new curation. theory-graph.json has 3,220 nodes and 6,892 edges, 10 regions, and status and kind on every result node (505 recorded-checked, 20 reviewed-scoped, 4 open, 7 superseded). DEPENDENCIES.md has 1,271 curated edges among 462 results. atlas.json has 1,183 crosswalk entries with carried/changed/not-carried outcomes. 1,094 record files hold status, does_not_show and dated history.",
+   "Standings already sit where a site needs them. Chapter sections open with their standing (07-SIGNIFICANCE.md:21 \"**Theorem** (any type)\", :30 \"**Theorem** (any type; World witness)\"). Record pages carry \"**recorded-checked** · theorem\". The README first screen states \"No human review yet\" and that Lean receipts show \"each Lean statement follows from its premises, not that they hold\".",
+   "Least-machinery building blocks exist. build_review_packet.py has a converter that needs only the Python standard library (headings, lists, code, blockquotes, tables) and a print pipeline. push_screen.sh already encodes the private-path regex. generated-manifest.json lists 604 generated files. Links mostly use explicit bilingual anchors (9,884 of 10,580 anchored links in the reader pages), which survive any renderer.",
+   "The review edition is versioned and verifiable. The PDFs are about 1 MB each and display in GitHub's PDF viewer. output/pdf/review-packet/MANIFEST.txt names commit 3395e82ee and sha256 sums. Editions 1–4 are kept under output/pdf/history/."
+  ],
+  "findings": [
+   {
+    "title": "The one visualization cannot be opened from GitHub",
+    "severity": "high",
+    "kind": "broken",
+    "where": [
+     "MAP.md:75",
+     "theories/becoming/results/atlas/map.html"
+    ],
+    "evidence": "MAP.md:75: \"[the connection map](theories/becoming/results/atlas/map.html) draws it\". This is the only link to map.html from any front (git grep). The GitHub blob page for map.html returns \"View raw ... (Sorry about that, but we can't show files that are this big right now\", with truncated:true. raw.githubusercontent.com serves it as \"content-type: text/plain; charset=utf-8\" with \"x-content-type-options: nosniff\", so it does not render even as raw. Every visitor who follows the link sees an error, so in practice nobody sees the project's connections drawn.",
+    "proposal": "Until a site exists, change MAP.md:75 to say plainly that the map opens from a local clone (open the file in a browser). It needs no server: the file is self-contained. Give the one line of instructions. Once Pages is decided, link the hosted /map/ page instead. Do not use third-party HTML preview proxies: they fetch a 4.9 MB file and serve it from another origin."
+   },
+   {
+    "title": "Four linked evidence pages do not render on GitHub",
+    "severity": "medium",
+    "kind": "broken",
+    "where": [
+     "theories/becoming/results/atlas/CROSSWALK.md",
+     "theories/becoming/results/atlas/ATLAS.md",
+     "theories/becoming/results/GENERATIVITY-CHAIN.md",
+     "theories/becoming/results/LEAN-INDEX.md",
+     "README.md:212",
+     "RESULTS.md:575",
+     "MAP.md:61"
+    ],
+    "evidence": "Fetched GitHub blob pages: CROSSWALK.md (3,742,459 bytes) shows \"we can't show files that are this big right now\". ATLAS.md (1,035,845), GENERATIVITY-CHAIN.md (615,112) and LEAN-INDEX.md (436,115) each show \"richText\":null,\"richTextTruncated\":true. For comparison, 07-SIGNIFICANCE.md (270,339), RESULTS.md (174,117) and THEORY-GRAPH.md (71,275) render (richTextTruncated:false). README.md:212 links \"[Curated generativity chain](theories/becoming/results/GENERATIVITY-CHAIN.md)\", and MAP.md:61 links the crosswalk as where \"what each claimed and what became of it\" is.",
+    "proposal": "Have the generators split these pages at their natural seams, keeping the monolith only if a check still needs it: atlas.py writes one crosswalk page per correspondence group (28 groups in atlas.json) plus an index; ATLAS one page per family; GENERATIVITY-CHAIN one per section; LEAN-INDEX one per module. Keep every page under about 250 KB. This fixes GitHub now and gives the site its pages for free. Add a strict check that fails any generated Markdown page over the size where GitHub stops rendering."
+   },
+   {
+    "title": "No reading page carries a figure; the 'theory graph' is tables",
+    "severity": "medium",
+    "kind": "missing",
+    "where": [
+     "theories/becoming/results/THEORY-GRAPH.md:5",
+     "MAP.md:27",
+     "theories/becoming/ONE-PAGE.md",
+     "theories/becoming/THE-THEORY-OF-BECOMING.md"
+    ],
+    "evidence": "git grep for `![`, mermaid, `<svg` or `<img` across README.md, MAP.md, theories/becoming/*.md, chapters/*.md, review/*.md, GLOSSARY.md and RESULTS.md matches only files under theories/becoming/history/. MAP.md:27 promises \"[the theory graph] (every concept, result, Lean module and text, with how they connect)\". THEORY-GRAPH.md:5 says \"3220 nodes, 6892 edges\" and then gives only tables. Earlier pages did draw: history/START-HERE.md:25 and history/JOINT-FORMATION.md:23 have Mermaid blocks. The data supports a real picture: the cross-region formal-reuse counts include root→map 60, map→root 42, knowing→root 40, significance→root 35, significance→map 29.",
+    "proposal": "Have theory_graph.py emit a Mermaid block at the top of THEORY-GRAPH.md, generated, never drawn by hand. It would show nine region nodes with result counts and edges weighted by formal-reuse counts, plus a legend: \"an edge is a dependence or citation, not an agreement in meaning\". GitHub renders Mermaid natively, so this is the cheapest true picture of the unification. The site's /graph/ page can then expand each region into its result DAG, coloured by status."
+   },
+   {
+    "title": "How the system grew is told only in stale prose",
+    "severity": "medium",
+    "kind": "missing",
+    "where": [
+     "MAP.md:41",
+     "_process/history/INDEX.md"
+    ],
+    "evidence": "MAP.md \"How it got here\": \"the formal theory was built in October 2026, in more than 1,550 commits (1,568 in all by 19 October 2026)\". `git rev-list --count HEAD` gives 6,073 (Sep 11, Oct 4,472, Nov 1,590). _process/history/INDEX.md retires TIMELINE.md as a \"September narrative timeline, stops 2026-10-04; superseded by the Becoming-era record\". No live page is a timeline. The edition tags are dated 3, 5, 5, 6 and 7 November.",
+    "proposal": "Generate a growth page from data, never by hand. It would show: the 16 earlier folders (dates from their READMEs, e.g. \"opened 2026-09-13\"); the first commit (2026-09-06); results per month by region, from each record's first history note; frozen tests and their outcomes; and the edition tags. Pair it with the crosswalk outcome per earlier folder (carried, in part, changed, not carried), so the growth shows what was dropped as well as what was kept. In MAP.md, replace the commit count with the generated figure."
+   },
+   {
+    "title": "A site that serves the branch would publish third-party copies and private-listed paths",
+    "severity": "medium",
+    "kind": "missing",
+    "where": [
+     "sources/31-agentic-misalignment-public-2026-10-06/original/teaching-claude-why.html",
+     "sources/32-shared-affect-action-2026-10-06/original/Carrillo2019-PMC6488290.html",
+     ".claude/launch.json",
+     "tools/research/push_screen.sh:10"
+    ],
+    "evidence": "60 tracked .html files, most of them publishers' articles under sources/, e.g. sources/34-memory-correction-2026-10-06/original/CoMemBench-2609.32192v2.html. Deploying from the branch root (Jekyll's default) would serve these as web pages under Ren's domain. .claude/launch.json is tracked and on origin/main (commit 5ede15c45), even though push_screen.sh:10 lists `\\.claude/` among private paths. The repository has 117,934 tracked files and a 4.1 GB .git.",
+    "proposal": "Build only by allow-list. Add a `site_paths` list to _process/research-config.json: the root fronts, theories/becoming/ minus history/, review/, output/pdf/review-packet/ and the earlier folders' README.md files. The builder reads nothing else, and its check also runs push_screen's private regex over every input and output path. Deploy with actions/upload-pages-artifact from a sparse checkout without LFS, never from the branch. Separately, decide whether .claude/launch.json should stay tracked (harmless content, but it contradicts the private list)."
+   },
+   {
+    "title": "A graph site could put the AI's classes in front of blind coders",
+    "severity": "medium",
+    "kind": "unclear",
+    "where": [
+     "theories/becoming/results/data/theory-graph.json",
+     "theories/becoming/review/README.md:23"
+    ],
+    "evidence": "review/README.md:23: coders \"classify 237 sampled sentences by the codebook, blind to the AI's classes, so that agreement can be measured\". theory-graph.json text nodes carry the class, e.g. {\"id\": \"text:CWS-P1-001\", ... \"class\": \"甲\", \"role\": \"definition\"}. The data is already public in the repository, but a browsable site graph with tooltips would make each unit's AI class one hover away.",
+    "proposal": "On the site, until the re-coding returns, show text nodes only as counts per class and reading state, as the map's corpus view already does, and omit per-unit class for the frozen sample. Record this as a dated limit with its reason (the blind coding), lapsing when the coding is back."
+   },
+   {
+    "title": "The map's links assume the repository layout",
+    "severity": "low",
+    "kind": "inelegant",
+    "where": [
+     "tools/research/connection_map.py:27",
+     "tools/research/connection_map.py:401",
+     "tools/research/connection_map.py:544"
+    ],
+    "evidence": "`BASE = '../../../../'` and `link(path,label){... D.base===null?el('code',{},text):el('a',{href:D.base+path},text)}`. Only two modes exist: repository-relative links to .md sources, or plain text (`--fragment`, base=None). On a static site the first points at Markdown sources the site does not serve; the second loses every link. The page also puts `<title>` and `<meta name=\"claude:viewport-fit-sides\">` inside `<body>`, leaving `<head>` with only charset and viewport.",
+    "proposal": "Add a third mode, `--site BASE`, mapping each path through the site's own path map: in-site .md to its .html page, everything else to a GitHub permalink at the build commit. Move the title into head. For phone loading, write `entries` (3.94 MB of the payload) to a separate JSON fetched when a thread is opened, keeping the 290 points and 28 groups inline."
+   },
+   {
+    "title": "Most reader-page links lead outside any reader site",
+    "severity": "low",
+    "kind": "inelegant",
+    "where": [
+     "theories/becoming/chapters/05-COLLECTIVES.md:14",
+     "theories/becoming/results/records/"
+    ],
+    "evidence": "In 635 candidate site pages: 20,537 links stay in the site, 68,650 go to tracked files outside it (55,961 into experiments/integrated-correction, i.e. the Lean package; 2,796 into _process/research), 696 rely on GitHub's auto-generated heading slugs only, and 3 are missing. An example from 05-COLLECTIVES.md:14 is `](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Joint.lean)`.",
+    "proposal": "The builder rewrites every outside link to https://github.com/yongxu/theories/blob/<build sha>/<path>. A permalink keeps the claim and its proof in step. It uses GitHub's slug algorithm for headings without an explicit anchor, and the site check fails on any anchor that resolves on GitHub but not on the site."
+   },
+   {
+    "title": "generative-core.html is a host-dependent fragment of a pre-spine model",
+    "severity": "low",
+    "kind": "inelegant",
+    "where": [
+     "experiments/integrated-correction/general-framework/generative-basis/lean/illustrations/generative-core.html"
+    ],
+    "evidence": "The file begins `<div id=\"generative-core-explorer\">` with no document skeleton. Its styles use host variables (`fill: var(--foreground)`, `stroke: var(--viz-series-1)`) and host classes (`form-select`). The subtitle reads \"Five-phase witness · continuing external provision assumed\". Its only commit is 106c4c191 (2026-10-06), it illustrates the older GenerativeCore.lean rather than the Becoming spine, and no Markdown file links it (git grep).",
+    "proposal": "Do not put it on the site as it stands. Keep it as a pattern: a small, generated explorer of one finite Lean witness. A live witness, e.g. the lake case on ONE-PAGE.md or a World witness from 07, could be rendered this way with its standing stated. Leave this file where it is, or move it to history/ with research.py move."
+   },
+   {
+    "title": "Hosting would publish under Ren's domain, which is his decision",
+    "severity": "low",
+    "kind": "unclear",
+    "where": [
+     "AGENTS.md",
+     "_process/BECOMING-WORKBOARD.md:78"
+    ],
+    "evidence": "The GitHub API reports has_pages: False, homepage: None, topics: []. https://yongxu.github.io/theories/ returns 301 to http://yongxu.ren/theories/, so a project site would appear under the personal domain (that domain did not resolve from here, possibly a network issue). AGENTS.md: \"Still his: pushing to the public remote, the licence, who is sent what\". Enabling Pages changes a repository setting and makes the edition-5 PDFs a public download beside the letter's planned readers.",
+    "proposal": "Prepare it fully: builder, workflow with `permissions: pages: write, id-token: write` and workflow_dispatch only, the gate check and a local preview build into tmp/. Then list \"enable Pages (site at yongxu.ren/theories/); whether the review PDFs are on it before the letter goes\" under the board's Decisions pending Ren. Do not turn it on."
+   }
+  ],
+  "read": "Read in full: MAP.md; .github/workflows/lean.yml and research.yml; Makefile; tools/research/push_screen.sh; .gitattributes; .claude/launch.json; output/pdf/review-packet/MANIFEST.txt.\n\nRead in part:\n- README.md lines 1–60 (cut at 700 characters per line).\n- Headers or first 14 lines of ONE-PAGE, DEPENDENCIES, RESULTS, GOALS, results/README and theories/becoming/README.\n- connection_map.py lines 1–60, plus a grep of its base, link and main.\n- build_review_packet.py lines 1–50, plus a grep of its converter (tables, code, blockquotes).\n- paths.py and navigation.py headers; history_notes.py header.\n- The record page a-cascade-at-the-histories-reached.md (first 30 lines) and its JSON keys.\n- 07-SIGNIFICANCE.md: three r- sections.\n- The board's Decisions pending Ren section (lines 78–89, cut).\n- review/README.md: grep of lines 7, 23 and 37.\n- _process/history/INDEX.md: first 1,500 characters.\n\nmap.html: inspected structurally. I parsed its static body, the VIEWS list, the payload keys with sizes, sample entries, points, groups and checks, and the first 4 KB of its script, and counted its external URLs and gzip size.\n\nSkimmed: generative-core.html (first 40 lines plus greps); theory-graph.json (structure, one node per type, status counts, cross-region edge counts); the atlas folder (sizes and entries/); CROSSWALK.md (first 1,200 characters).\n\nComputed with python3 and git: tracked file counts and sizes by area; commit counts by month; edition tag dates; a link classification over 635 candidate site pages; anchor kinds; Liquid-brace occurrences.\n\nNetwork reads (no writes): GitHub blob pages for rendering flags of 13 files, the repository API metadata, the raw content type of map.html, and the yongxu.github.io redirect.\n\nNot read: the chapters, overview, ATLAS, CROSSWALK and GENERATIVITY-CHAIN contents; gate.py, atlas.py and theory_graph.py beyond greps; the review dossiers; the PDFs' contents."
+ },
+ {
+  "key": "unification",
+  "answer": "Partly, and honestly, but not in a form a person can hold. The prose is careful about how strong each connection is. Every chapter opens with a \"Where this chapter sits\" paragraph saying what it takes and hands on (01-ROOT.md:5, 02-MAP.md, 05-COLLECTIVES.md and the rest). The overview's \"whole at a glance\" (THE-THEORY-OF-BECOMING.md:24-57) is three questions with two marked joins, and each row carries a standing and a refuter. 08 §7 gives the real degree of unification: of 117 central declarations, 11 are derived on the root and 99 \"stand at a named distance\". The data has typed edges with defined meanings: formal-reuse (the consumer's proof uses the producer's theorem), application, interpretive, and related as analogy (_process/RESULT-WORKFLOW.md:36-38). Atlas exits carry a strength (sufficient, necessary, exact, witness).\n\nWhat is missing is the picture.\n- **THEORY-GRAPH.md draws no edges.** It is a list of what belongs to each region, though MAP.md:22 says it shows \"how they connect\".\n- **The only drawing shows the outside, not the inside.** map.html threads the earlier folders and the domains of thought to the chapters, not the chapters to each other. It is a 4.9 MB HTML file, linked once, deep in MAP.md:75. GitHub serves it as source text, and Pages is not enabled (the coordinator's check; I did not re-check it).\n- **The prose layering is not the proof structure.** 01's \"It takes nothing from the others\" is false of the chapter's results: 45 of its 86 results reuse later chapters' theorems. Of 467 formal-reuse edges between chapters 01 to 07, 196 run backward. The chapter order is a reading order, not a derivation order.\n- **There are four organising schemes and nothing relates them.** The eight chapters, the overview's three questions, the atlas's eight families, and GENERATIVITY-CHAIN. GENERATIVITY-CHAIN is titled \"the connected theory\", uses the old G0-era labels, and states a different central claim. The \"Full reading catalogue\" sends readers asking \"What foundation has been established?\" to frozen 8 October pages.\n\nThe most elegant picture the existing data supports is one generated SVG of the spine. It can be built from theory-graph.json without new data:\n- **The grammar at the centre:** its 41 concepts, ringed by the edge standings (11 derived, 1 under a hypothesis, 6 counting, 99 at a named distance).\n- **Eight chapter nodes:** sized by results, joined by formal-reuse counts as solid lines (backward edges drawn too), interpretive edges dashed, and analogy edges hidden by default.\n- **The two premises:** the continuation condition and C drawn entering chapter 7 from outside, as inputs rather than derivations.\n- **The theses:** T1 to T8 pinned at their home chapters and coloured by test state.\n\nIt needs a small extension to theory_graph.py or connection_map.py that writes a static SVG, which GitHub renders inline. It belongs in ONE-PAGE and the overview, with a caption a second reader checks, and with 01:5 corrected. Hosting map.html on Pages is a publishing step, so that one is Ren's decision.",
+  "score": 5,
+  "strengths": [
+   "Every chapter opens with a 'Where this chapter sits' paragraph naming what it takes and what it hands on (01-ROOT.md:5, 02-MAP.md, 03-KNOWING.md, 05-COLLECTIVES.md, 06 本章所在, 07, 08). That is a chapter-level connection map in prose.",
+   "The overview's 'The whole at a glance' (THE-THEORY-OF-BECOMING.md:24-57) is the closest thing to one holdable picture: three questions, each claim with its standing and what would show it wrong, and two italic 'Join' rows marking exactly where one level does not follow from the last.",
+   "The degree of unification is stated, not oversold. Overview §10 'Lifting' (THE-THEORY-OF-BECOMING.md:190) and 08 §7 (08-METHOD.md:440): of the 117 central declarations, 11 are derived, 1 holds under a stated hypothesis, 6 are counting and 99 'stand at a named distance, each with its reason'. The overview's preface already says 'most use none' of the root's laws.",
+   "Connection kinds are defined with distinct meanings: formal-reuse is 'a verified inference using the cited result', application names added premises, and interpretive or related are 'not a checked adapter' (_process/RESULT-WORKFLOW.md:36-38). The data keeps them apart: 1162 formal-reuse, 11 application, 98 interpretive and 1420 related edges in theory-graph.json. DEPENDENCIES.md marks the non-formal edges.",
+   "The atlas types its transitions by kind and by strength (sufficient, necessary, exact, witness; atlas/vocabulary.json 'exit_strengths') and never merges standings into one scale (ATLAS.md:5).",
+   "map.html is careful and well designed: 'agreement is drawn no more prominently than divergence', faint threads for connections a reader proposed, a 'Loose ends' view, and a 'root's reach' view saying 'The strictest sense of unified is a law derived on that edge ... 11 are'. It has light and dark themes and filters.",
+   "THEORY-GRAPH.md:5 states what an edge does not mean: 'An edge records a dependence, a citation or a registered reading, not an agreement in meaning'. Line 30 says the 1330 unread corpus units have no edge and agree or disagree with nothing."
+  ],
+  "findings": [
+   {
+    "title": "No picture of the account's internal unification exists, and the one drawing is unreachable on GitHub",
+    "severity": "high",
+    "kind": "missing",
+    "where": [
+     "theories/becoming/results/THEORY-GRAPH.md",
+     "theories/becoming/results/atlas/map.html",
+     "MAP.md:75",
+     "theories/becoming/THE-THEORY-OF-BECOMING.md:24"
+    ],
+    "evidence": "The fronts contain no diagram: no SVG, PNG or mermaid in README.md, MAP.md, theories/becoming/*.md or chapters/*.md, as far as a search for image links and SVG or mermaid tags found. THEORY-GRAPH.md is lists of what belongs to each region ('Results (86): ...', 'Modules (74 ...)'), with no edge shown. map.html (4,954,810 bytes; '<!-- Generated by tools/research/connection_map.py ... -->') draws a 'loom': 16 earlier folders and 12 domains threaded to 15 'warp' items (one-page, overview, ch-01..ch-08, fronts). That is the outside's relation to the account, not the chapters' relation to each other. Its 'The theory's own graph' is one sentence of counts ('... joined by N edges computed at render'). It is linked once, from MAP.md:75 ('[the connection map](theories/becoming/results/atlas/map.html) draws it'), and not from README, ONE-PAGE or the overview. GitHub shows .html as source, and Pages is not enabled (coordinator's API check).",
+    "proposal": "Generate one static SVG of the spine from theory-graph.json (see the answer): eight chapter nodes around the grammar, with edges drawn by kind and count. Embed it in ONE-PAGE.md and the overview's 'whole at a glance', where GitHub renders it inline without Pages. Link map.html from the overview, labelled 'how the earlier folders and other traditions meet the account (open locally)'. Enabling Pages or publishing a hosted copy is prepared, and its release is Ren's decision."
+   },
+   {
+    "title": "01's 'takes nothing from the others' is false of the chapter's results; the chapter order is a reading order, not a derivation order",
+    "severity": "medium",
+    "kind": "misleading",
+    "where": [
+     "theories/becoming/chapters/01-ROOT.md:5",
+     "theories/becoming/results/records/levels-of-closure.md:85"
+    ],
+    "evidence": "01-ROOT.md:5: 'It takes nothing from the others and hands its grammar, classes and models to all of them'. In theory-graph.json, formal-reuse runs from consumer to producer (tools/research/navigation.py:477: 'the consumer's proof uses the producer's theorem'). 45 of 01's 86 results formally reuse results whose home is a later chapter, 119 edges in all: 60 to 02, 26 to 03, 10 to 04, 9 to 07. Example: levels-of-closure.md:85 '**formal-reuse**: [continuation-condition-yields-living-significance] ... some bounded significance is exactly the continuation condition'. Among chapters 01 to 07, 196 of 467 cross-chapter formal-reuse edges run backward. Module imports do the same: Becoming.Courses (region root) imports Feedback, Readout and Description (region knowing).",
+    "proposal": "Restrict the sentence to what is true, e.g. 'Its grammar (Becoming.Grammar) takes nothing from the others; some of its results on the models use laws stated later, linked where used.' In any connection picture, draw backward edges, so a reader sees a grammar core inside a web rather than a strict tower."
+   },
+   {
+    "title": "MAP.md says the theory graph shows how things connect; the page shows no connections and does not separate analogy from proof",
+    "severity": "medium",
+    "kind": "misleading",
+    "where": [
+     "MAP.md:22",
+     "theories/becoming/results/THEORY-GRAPH.md:5-17"
+    ],
+    "evidence": "MAP.md:22: 'the theory graph (every concept, result, Lean module and text, with how they connect)'. THEORY-GRAPH.md gives node counts per region and membership lists. The only edge statement is '3220 nodes, 6892 edges' (line 5), with no breakdown by kind. The data's largest result-to-result kind is 'related' (1420, analogy by RESULT-WORKFLOW.md:38), ahead of 'formal-reuse' (1162). A reader who goes to the data to find 'how they connect' meets analogy and proof edges with nothing on the page to tell them apart.",
+    "proposal": "Add a generated chapter-by-chapter table to THEORY-GRAPH.md, one cell per pair, giving formal-reuse / interpretive / application / related counts, with the kinds' definitions from RESULT-WORKFLOW quoted. Put the SVG above it. Until then, reword MAP.md:22 to 'lists each region's concepts, results and modules; the edges are in the data'."
+   },
+   {
+    "title": "Links to the 'Full reading catalogue' and 'Curated generativity chain' lead to an older unification story under current-looking names",
+    "severity": "medium",
+    "kind": "misleading",
+    "where": [
+     "README.md:212",
+     "theories/becoming/README.md:20",
+     "theories/becoming/results/README.md:29-34",
+     "theories/becoming/results/GENERATIVITY-CHAIN.md:1",
+     "theories/becoming/results/GENERATIVITY-CHAIN.md:15",
+     "theories/becoming/results/GENERATIVITY-CHAIN.md:25"
+    ],
+    "evidence": "results/README.md:29 'What foundation has been established? | [Generative grounding](../history/ARGUMENTS-A-L-2026-10-08.md#generative-grounding)'. Line 34: 'How does it connect to earlier theories and practice? | [Theory map](../history/THEORY-MAP-2026-10-08.md)'. Every 'Read by question' route goes to frozen 8 October pages, not to the chapters, the crosswalk or the graph. GENERATIVITY-CHAIN.md:1 is titled 'Generativity, co-realization and ethics: the connected theory'. Its central claim (line 15) is 'its favorable significance may lie in this co-formation itself'. Its chain (line 25) runs 'One unfolding → ... → learning, concern, Liangzhi and wisdom → practice'. The overview's centre (THE-THEORY-OF-BECOMING.md:26) is instead 'a selection ... reaches only what couples into its selector'. GENERATIVITY-CHAIN's caveat (line 9) does say the entries keep G0-era labels, but the title, the placement and README.md:212's 'Curated' present it as current.",
+    "proposal": "Re-route results/README.md's 'Read by question' rows to the current homes: chapters, overview §10, 08 §7, CROSSWALK. Keep the 8 October links as a 'history' column. Retitle GENERATIVITY-CHAIN as a historical chain ('the chain as read in October, with its labels of that time') and move its links on README.md:212 and theories/becoming/README.md:20 under a history label."
+   },
+   {
+    "title": "Four organising schemes, with no page relating them",
+    "severity": "medium",
+    "kind": "unclear",
+    "where": [
+     "theories/becoming/THE-THEORY-OF-BECOMING.md:24",
+     "theories/becoming/results/atlas/ATLAS.md:7-18",
+     "theories/becoming/results/GENERATIVITY-CHAIN.md:31-144",
+     "DEPENDENCIES.md:9"
+    ],
+    "evidence": "The schemes are: (1) the eight chapters, which equal the graph's regions exactly (each chapter's sections state only its own region's results); (2) the overview's three questions with two joins; (3) the atlas's eight families A to H (ATLAS.md:7: '177 dynamics, by family'), which cut across chapters (from atlas.json records: family F spans eight regions, H spans six, A takes 25 from 02 and 11 from 04); (4) GENERATIVITY-CHAIN's six numbered sections. Besides these, DEPENDENCIES.md is alphabetical ('Each line names a result, then, after ←, the results it draws on'). No page says how the families or the three questions map onto the chapters.",
+    "proposal": "Name the chapters as the one spine everywhere. On ATLAS.md's opening, add a generated family-by-chapter count table: 'the families cut across the chapters; here is where each lives'. In the overview, mark which chapters each of the three questions draws on, which is already implicit in its § references."
+   },
+   {
+    "title": "The strength of unification is buried, and two measures of it sit side by side without reconciliation",
+    "severity": "medium",
+    "kind": "buried",
+    "where": [
+     "theories/becoming/chapters/08-METHOD.md:440",
+     "theories/becoming/results/atlas/map.html"
+    ],
+    "evidence": "The most informative single fact about unification, '11 are derived ... The other 99 stand at a named distance, each with its reason', sits in a long paragraph at 08-METHOD.md:440 and in map.html's 'root's reach' view. In that view, the standings bars (Derived 11, Connected 22, Balance 32, Amounts 18, ...) are followed by 'The same declarations, by Lean dependency' bars ('Reaching the grammar' 45, 'Stated at a represented model' 16, 'own carrier' 6, 'The rest' 50). The only note is 'A measurement of Lean dependency only'. A reader sees 11 or 33 against 45 and is not told why they differ.",
+    "proposal": "Lift the 117-declaration standings into ONE-PAGE and the overview's first join row as a small bar. Add one sentence where both measures appear: 'a Lean dependency reaching the grammar is weaker than being a case of a grammar law; 45 reach it, 11 are cases'."
+   },
+   {
+    "title": "How the whole grew into today's account has no visual or dated lineage",
+    "severity": "medium",
+    "kind": "missing",
+    "where": [
+     "MAP.md:30-38",
+     "theories/becoming/results/atlas/CROSSWALK.md",
+     "theories/becoming/history/"
+    ],
+    "evidence": "MAP.md 'How it got here' is prose: 'The ideas began in writing from 2021 on: the sixteen earlier theory folders ... the formal theory was built in October 2026, in more than 1,550 commits'. The lineage data is the crosswalk's carried-status per entry (atlas.json correspondences: carried-in-part 488, fresh-reading 376, changed 189, not-carried 105, history-only 22, carried 3), shown only inside map.html. theories/becoming/history/ holds 199 files with no index by date or lineage.",
+    "proposal": "Generate a lineage strip: the 16 folders by date opened, each bar split by carried / carried-in-part / changed / not-carried, pointing to the chapter that took each up, with October's formalisation as one band. It can be a second static SVG in MAP.md's 'How it got here', labelled 'AI readings; no person has read them', as map.html already says."
+   },
+   {
+    "title": "Atlas exits mostly lead nowhere the atlas names",
+    "severity": "low",
+    "kind": "unclear",
+    "where": [
+     "theories/becoming/results/atlas/ATLAS.md:71"
+    ],
+    "evidence": "Of 284 exits in atlas.json, 22 have a target dynamic ('to' non-null); the rest read 'To a state the atlas does not name' (ATLAS.md:71). The 'Exits' column (e.g. 'Drawn exactly where it does not return ... | 2') reads like a transition count between dynamics, but it is not one.",
+    "proposal": "State on the ATLAS opening that exits are conditions for leaving a dynamic and that 22 lead to another named dynamic. Or split the column into 'exits' and 'exits to a named dynamic'."
+   },
+   {
+    "title": "map.html markup and size",
+    "severity": "low",
+    "kind": "inelegant",
+    "where": [
+     "theories/becoming/results/atlas/map.html:7-10"
+    ],
+    "evidence": "The file closes </head> before '<title>Becoming Connection Map</title>' and the meta tags, which sit in <body>. 4.87 MB of its 4.91 MB is one embedded JSON block (cx-data), which makes it heavy to host or preview.",
+    "proposal": "Emit <title> and meta tags inside <head> in connection_map.py. Consider splitting the entry texts into a lazily loaded JSON file if it is ever hosted."
+   }
+  ],
+  "read": "Read in full or in the parts that matter. THEORY-GRAPH.md: header, region table, grammar concepts, first region list, the closing 'Not yet on the root' section and all headings. The overview: lines 1-72 (preface, the case, the whole at a glance, §1) and §10, lines 187-200. ONE-ARGUMENT.md: lines 1-40 and headings. MAP.md: lines 1-80. The opening 'Thesis / Where this chapter sits / Bases' paragraphs of chapters 01-08. The 08-METHOD.md §7 edge-standings paragraph (line 440) and the premises-met section. results/README.md: routes and 'Read by question'. GENERATIVITY-CHAIN.md: lines 1-60 and headings. ATLAS.md: lines 1-40 and headings. DEPENDENCIES.md: lines 1-30. The relevant lines of README.md (205-214) and theories/becoming/README.md (1-22). RESULT-WORKFLOW.md lines 36-38. The record-edge code in tools/research/theory_graph.py (lines 225-255). Parsed with python3: theory-graph.json (node and edge kinds, edges between regions by kind, forward and backward reuse, module import closures); atlas.json (families, exits and strengths, correspondences, family-by-region matrix); atlas/vocabulary.json; map.html's embedded cx-data (warp, totals, standings, reach) and its view code (loom, meet, root, corpus). Checked one record (levels-of-closure.json and .md) to confirm the direction of formal-reuse. Listed but not read: results/data/*.json other than these, CROSSWALK.md (I relied on the atlas.json correspondences instead), LEAN-INDEX, ROADMAP, completion/, ONE-PAGE.md beyond its headings, the chapter bodies beyond their openings, and theories/becoming/history/ (file list only). I did not view map.html in a browser and did not check GitHub's rendering or Pages myself."
+ },
+ {
+  "key": "growth",
+  "answer": "No, not yet, not for a reader arriving today. The growth was recorded with care and with unusual honesty, but the record is scattered, cut off at 4 October 2026, and kept away from the pages readers open. The best narrative in the repository is _process/history/2026-09-consolidation/TIMELINE.md (11.5k words). It runs from the Dali notes of May 2021 to 4 October 2026, with a dated ledger of renames, \"Where the vocabulary turned\", that explains why each name changed (\"Every rename in this corpus is a change of claim, not of packaging\", TIMELINE.md:293). Its \"shape of the arc\" traces one mechanism through seven names. The history INDEX marks it \"superseded by the Becoming-era record\" (_process/history/INDEX.md:9), and no such record exists. No live page links it: MAP.md:3 links only the September MAP. The Becoming era is not told as a story anywhere: 5 October to 7 November, about 6,060 of the 6,073 commits, the pure core, the first frozen tests, the failures and five reader editions. The dated material for that story does exist: 3,767 dated history entries across the 536 record JSONs, a dated and frank experiments index, change logs in the dossiers, and git tags review-packet-1 to 5.\n\nWhat survives from each earlier folder is answered claim by claim in CROSSWALK.md, 1,183 AI readings with an error rate it states itself (82.6% hold). That is honest, but it has no dates, no order of events and no picture, and map.html has no time axis. The 16 folder READMEs mostly keep their September self-assessments with no banner. keep-the-possibility-space-open/README.md:5 still calls its proof-sketch \"rigorous\" and \"Near-publishable\". None of the 16 links to the crosswalk, and their genealogies cite chat and conversation records that are not tracked, so a public reader cannot check them. The paper line (the IASEAI drafts v1 to v7.3, the 2026-09 whitepaper, 从小康到大同, and the No-Viable-Race and Shengsheng-Buxi PDFs) has no page stating what of it stands.\n\nWhere the lineage is told it is honest: the Fork's retirement, the T1, T2 and T7 failures on ONE-PAGE, VD1 \"every frozen rule failed\". The gap is that it cannot be found and was never put together.\n\nThe most elegant representation would be one generated page and picture, LINEAGE (the strata), built from data. A time axis that compresses 2021 to 2025 and widens October to November 2026. One lane per earlier folder, flowing into the Becoming trunk. Marks on the lanes for renames from the ledger, for theorems landed (from record history), for tests frozen, passed or failed (experiments), and for editions (tags). Each stratum gets a card: dates, what it contributed, what survives with the crosswalk counts and links, what was corrected or dropped and why. Build it with a tools/research script from timeline-raw.tsv, the ledger, the genealogy sections, the correspondence JSON, record history and the experiments READMEs. Use only tracked sources, label AI readings, and follow the repository's rule against names on front pages.",
+  "score": 4,
+  "strengths": [
+   "A rich, honest lineage narrative exists for 2021 to 4 October 2026: _process/history/2026-09-consolidation/TIMELINE.md. It has dating caveats (TIMELINE.md:7) and corrects its own earlier misreadings ('The correction runs in one direction: there is more argument in 2021 than this timeline previously credited', TIMELINE.md:17).",
+   "The dated ledger of renames, 'Where the vocabulary turned' (TIMELINE.md:291-314), already serves as a strata table. For each name it gives the date, what it replaced and why it changed; for example, The Fork 'Retired 2026-03-19 (falsifies the size of the possibility space)'.",
+   "Each earlier folder README has a dated Genealogy section that separates the author's words from AI-drafted ones (for example meta-attractor/README.md:733ff notes that NP's Table 2.1 'carries the tell \"[Implicit from query context]\"').",
+   "The crosswalk answers 'what became of it' claim by claim, with defined verdicts (carried, carried-in-part, changed, history-only, not-carried) and its own measured error rate: 'estimates 82.6% holding, 14.2% with a label or role wrong and 3.2% with a wrong reading' (CROSSWALK.md:9). 'carried' is almost always 0, which is honest.",
+   "Failures are shown on the front pages, not hidden: ONE-PAGE.md:17 says T1 'failed in four settings', and ONE-PAGE.md:20 says T7's bridge 'failed'. The experiments index is dated, with verdicts such as 'VD1, 21 Oct 2026: every frozen rule failed' (experiments/README.md:17) and 'the bridge failed' (experiments/README.md:26).",
+   "Nothing is deleted. Superseded text moves byte for byte into history/ folders with manifests, and each of the 536 record JSONs carries a dated history array (3,767 dated entries, 486 of them mentioning a correction or failure). The data for a timeline is already machine-readable.",
+   "The dossiers log their changes from edition to edition (for example SCIENCES.md:702: 'UE31b's run failed T2's former wording in the flour beetle's adult-loss cultures, so the front ... give T2 as chapters 2 and 8 now word it').",
+   "MAP.md has a 'How it got here' section (MAP.md:30-39) and lists the 16 earlier folders, each with a one-line gist (MAP.md:73-96)."
+  ],
+  "findings": [
+   {
+    "title": "No live, linked account of how the work grew; the only narrative is buried in history and stops at 4 October 2026",
+    "severity": "high",
+    "kind": "missing",
+    "where": [
+     "MAP.md",
+     "_process/history/2026-09-consolidation/TIMELINE.md",
+     "_process/history/INDEX.md",
+     "README.md",
+     "theories/becoming/ONE-PAGE.md",
+     "theories/becoming/THE-THEORY-OF-BECOMING.md"
+    ],
+    "evidence": "MAP.md:32: 'The ideas began in writing from 2021 on: the sixteen earlier theory folders below ... the formal theory was built in October 2026, in more than 1,550 commits'. That is the whole growth story on the live pages, and it is followed only by where history is kept (commits, history/ folders, the board). MAP.md:3 links only the September MAP in history, not TIMELINE.md. git grep finds no live page linking TIMELINE.md, only history copies. _process/history/INDEX.md:9 gives TIMELINE.md's reason as 'September narrative timeline, stops 2026-10-04; superseded by the Becoming-era record', and no such record exists. git log counts 11 commits in September, 4,472 in October and 1,590 in November (6,073 in all), so nearly the whole formal account (pure core, first frozen tests from 20 October, the UN/FU unification, 'ethics for life' on 30 October, editions 1 to 5 from 3 to 7 November) has no narrative. ONE-PAGE and the overview contain no lineage section (grep for lineage, earlier, crosswalk and history finds none in either).",
+    "proposal": "Make one live front, theories/becoming/LINEAGE.md (with a .zh edition), linked from MAP's 'How it got here', from the README first screen ('How it grew', with a reading time) and from the theories/becoming README. Generate it with a tool, not by hand. Carry TIMELINE.md's strata forward through the Becoming era, using the record history arrays, the experiments index, the editions and the dated directive register as provenance. Correct the INDEX reason so it names this page, or say plainly that no Becoming-era narrative exists yet."
+   },
+   {
+    "title": "Earlier folder READMEs present September self-assessments as current, with no banner pointing to the account's present verdict",
+    "severity": "high",
+    "kind": "misleading",
+    "where": [
+     "theories/keep-the-possibility-space-open/README.md",
+     "theories/wamotopia-and-the-wamo-protocol/README.md",
+     "theories/spirit-space-token-and-yi-substrate/README.md",
+     "theories/zhishan-intelligence-must-be-good/README.md",
+     "MAP.md"
+    ],
+    "evidence": "keep-the-possibility-space-open/README.md:5: 'The most developed theory in the corpus ... Two publishable artifacts already exist — a rigorous 29-proposition proof-sketch (... which survived a 56-criticism adversarial review) ... Near-publishable, not yet published.' The crosswalk has no entry on that proof-sketch (grep for '29-proposition', 'proof-sketch' and '56-critic' finds nothing in CROSSWALK.md). Set against 08-METHOD's verdict that no central result is new mathematics, a reader could believe that a rigorous earlier proof stands. A count shows that none of the 16 folder READMEs links to CROSSWALK.md, and 10 of 16 do not link to theories/becoming at all. The exception is meta-attractor/README.md:21, which labels its assessment 'Historical inventory and assessment (current corrections below)', yet keeps 'the corpus's most defensible claim to originality' at :1131. MAP.md:61 says the folders are 'not live', but a reader who arrives at a folder directly (from GitHub search or a shared link) never sees that.",
+    "proposal": "Generate a two- or three-line banner at the top of each earlier folder README from the crosswalk data. It would say: not live, dated <last edit>; what the live account carries (counts by verdict, with the group's anchor link); and the main corrections or divergences, linking the records. Each folder's own self-assessment ('rigorous', 'publishable', 'originality') would be marked as that folder's dated view. Keep the bytes below the banner unchanged, or move the old text to history/ with research.py move."
+   },
+   {
+    "title": "The crosswalk answers 'what was kept' but not 'when' or 'in what order'; it has no dates, no narrative and no picture of growth",
+    "severity": "medium",
+    "kind": "unclear",
+    "where": [
+     "theories/becoming/results/atlas/CROSSWALK.md",
+     "theories/becoming/results/atlas/entries/correspondences.json",
+     "theories/becoming/results/atlas/map.html",
+     "tools/research/connection_map.py"
+    ],
+    "evidence": "CROSSWALK.md:5: 'The evidence layer, not for reading through.' It runs to 487k words. The fields of correspondences.json (id, name, domain, group, source, sense, quote, carried, relation, agreement_of, reading, targets, account_adds, source_adds, absence, same_as, labels, reads) include no date. grep for date, year or time in connection_map.py finds only a bar chart of verdict kinds (line 503), so map.html has no time dimension. Entry prose is dense ('Divergence stands on minds as root, common knowledge, measurement replacing values, generativity, impossibility and the rate gap', CROSSWALK.md:41), so a lay reader cannot get a lineage from it.",
+    "proposal": "Join each crosswalk group to its folder's dates (the first and last dated source from timeline-raw.tsv, plus the genealogy headings). In the lineage page, give each folder a card in plain words: what it contributed, the 3 to 5 carried-in-part entries with their target records, and what was not carried and why, each linking to the crosswalk anchor. Add a time axis to map.html, or a second generated SVG, so connections can be seen over time."
+   },
+   {
+    "title": "There is no timeline picture or diagram of the growth anywhere",
+    "severity": "medium",
+    "kind": "missing",
+    "where": [
+     "MAP.md",
+     "theories/becoming/",
+     "output/"
+    ],
+    "evidence": "Outside history and sources, only one tracked mermaid block exists, in _process/research/2026-10-05-concern-theory/THEORY.md, and the tracked SVGs are all under _process/history or research. None shows lineage. Picture-ready material does exist: TIMELINE.md:262ff ('The shape of the arc') states that one mechanism 'is stated in 2024-07 as the law by which societies select power-holders, in 2024-11 as the Ouroboros cycle, in 2025-02 as the selfishness spiral, in 2025-05 as the meta-attractor, in 2026-05 as selection-on-cognition, in 2026-07 as 总体化吸引子'. On the spine it continues as closed capture (records/closed-capture.json history: '20 October 2026: added (MA1), the meta-attractor's loop closed on the spine') and DrawnShaping (26 October and 3 November 2026), to T7's test (experiments/README.md:26, run 25-26 Oct: 'the bridge failed').",
+    "proposal": "Draw one generated 'river of strata' SVG. The time axis would be piecewise: 2021-2025 compressed, September to November 2026 widened, since that is where the commits are. Each earlier folder gets a lane that merges into the Becoming trunk where its records landed. Mark renames (from the ledger), theorems landed (from the first entry of each record's history), tests (frozen, passed or failed, in distinct marks, from the experiments READMEs) and editions (tags review-packet-1 to 5). Feature one traced thread, the selection mechanism from 2024-07 to the failed T7 bridge in October 2026, as the worked example."
+   },
+   {
+    "title": "The paper lineage has no page saying what each paper was and what of it stands",
+    "severity": "medium",
+    "kind": "missing",
+    "where": [
+     "output/pdf/",
+     "drafts/2026-10-02-iaseai-selecting-the-selectors/README.md",
+     "drafts/"
+    ],
+    "evidence": "Tracked top-level PDFs: output/pdf/No-Viable-Race-IASEAI27-v3.1-draft.pdf, Shengsheng-Buxi-EN-2026-10.pdf, From-Xiaokang-to-Datong-v0.3-en.pdf, 从小康到大同-v0.3-zh.pdf and generative-chiang-mai-2045.pdf. git grep finds them mentioned only in drafts/2026-10-02-shengsheng-en/NOTES.md, and output/ has no index. The IASEAI README lists 'eleven earlier editions' and says 'No file here states which edition was submitted' (drafts/2026-10-02-iaseai-selecting-the-selectors/README.md:5). No live chapter, front or crosswalk entry says 'no viable race' or 'no safe way to win' (git grep finds nothing). The crosswalk mentions the IASEAI drafts twice, as AI readings. The history INDEX notes the 'publication line dropped by Ren 10-10' only as a move reason (_process/history/INDEX.md:8).",
+    "proposal": "Add a 'Papers and editions' stratum to the lineage page: one row per paper or edition (date, title, venue or purpose, status such as not submitted or superseded, what of it the account carries or corrects, with links). Add a generated output/README.md that gives each public PDF's date and standing, and marks the earlier papers as predating the account."
+   },
+   {
+    "title": "The genealogy evidence rests on untracked private records, so the public cannot check it and links are dead",
+    "severity": "medium",
+    "kind": "broken",
+    "where": [
+     "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+     "theories/drives-narrative-attractors-and-mind/README.md",
+     "theories/relational-self-and-datong/README.md",
+     "theories/the-fork-and-cooperative-infrastructure/README.md",
+     "theories/becoming/results/atlas/CROSSWALK.md",
+     "_process/history/2026-09-consolidation/TIMELINE.md"
+    ],
+    "evidence": "git ls-files sources/12-claude-ai-chats returns 0 files, and the same holds for sources/18-friend-conversations and drafts/2026-10-02-friend-conversation. MAP.md:39: 'Personal and third-party material ... is not tracked from 19 October 2026.' Mentions of these paths per README: selfishness-spiral 112, drives-narrative 57, relational-self 56, the-fork 48, spirit-space 28, human-solutions-museum 26, keep-open 20. CROSSWALK.md links drafts/2026-10-02-friend-conversation. TIMELINE.md's key 2024 turning points cite 12-claude-ai-chats files (for example '12-claude-ai-chats/2024-07-29_Balancing_Ideological_Diversity_in_Society_1b72f4a8.md').",
+    "proposal": "In the lineage page, give each turning point an evidence label: public source (a link), private record not published (an unlinked description of what it is), or AI reconstruction. Do not quote private material further on new fronts. Add one note to each folder's Genealogy heading saying which of its citations are private and unreachable. Have the generator flag dead links into untracked paths."
+   },
+   {
+    "title": "The five reader editions in five days are recorded only as dossier footnotes and a move manifest",
+    "severity": "low",
+    "kind": "buried",
+    "where": [
+     "output/pdf/history/INDEX.md",
+     "theories/becoming/review/SCIENCES.md",
+     "theories/becoming/review/ALIGNMENT.md"
+    ],
+    "evidence": "Every reason in output/pdf/history/INDEX.md has the form 'edition 3 (review-packet-3, D 6d221555a) kept as history before edition 4 is built in its place (ED4)', 16 times per edition, and none says why. The reason appears only deep in a dossier, for example SCIENCES.md:702: 'UE31b's run failed T2's former wording ... so the front ... give T2 as chapters 2 and 8 now word it'. That a superseded edition (3) states T2 in wording a test failed is said nowhere near the PDFs.",
+    "proposal": "Give each edition one generated row on the lineage page: date, tag, what changed and why (above all the corrections forced by failed tests). Add a one-line reason to each manifest entry, for example 'superseded: states T2 in the wording UE31b failed'."
+   },
+   {
+    "title": "MAP's history numbers are dated but stale, and 'built in October' undercounts November",
+    "severity": "low",
+    "kind": "misleading",
+    "where": [
+     "MAP.md"
+    ],
+    "evidence": "MAP.md:32: 'the formal theory was built in October 2026, in more than 1,550 commits (1,568 in all by 19 October 2026)'. git rev-list --count HEAD gives 6,073: 4,472 commits in October and 1,590 in November so far.",
+    "proposal": "Generate the count and date range at render time, or replace them with a link to the lineage page's commit-density strip."
+   },
+   {
+    "title": "The 'Preserved history' blocks are machine link lists, not an account",
+    "severity": "low",
+    "kind": "inelegant",
+    "where": [
+     "README.md",
+     "theories/becoming/README.md",
+     "theories/becoming/history/INDEX.md"
+    ],
+    "evidence": "README.md has 87 lines of the form '[Historical section: …](_process/architecture/history/3142e18e33fe4812/README.reading.md#…)', and theories/becoming/README.md has 72 (inside a details element). theories/becoming/history/INDEX.md (199 files) gives reasons such as 'earlier chapter (record of argument at its original scope); not a current statement source; superseded or historical per section 11'.",
+    "proposal": "Keep these as receipts, but head each with one sentence pointing to the lineage page as the readable account of what changed."
+   },
+   {
+    "title": "The experiments index calls a history copy 'the canonical chapter'",
+    "severity": "low",
+    "kind": "misleading",
+    "where": [
+     "experiments/README.md"
+    ],
+    "evidence": "experiments/README.md:5: 'the formal spine of [the canonical chapter](../theories/becoming/history/THE-THEORY-OF-BECOMING.md#9-the-formal-spine)'. It links a retired history file while the live overview is theories/becoming/THE-THEORY-OF-BECOMING.md.",
+    "proposal": "Point the link at the live overview or 08-METHOD's pure-core section, and mark the history copy as history."
+   }
+  ],
+  "read": "Read in full: MAP.md lines 1-120 (the whole page). Read in part: README.md (first screen, lines 1-21, the opening's history-related lines, the Preserved history block); theories/becoming/ONE-PAGE.md lines 15-32; _process/history/2026-09-consolidation/TIMELINE.md (lines 1-60, all section headings, lines 260-343 including the vocabulary ledger and the arc); the September MAP.md in history (grep: line 3, the strata framing at line 67, line 127); _process/history/INDEX.md (lines 1-40); theories/becoming/history/INDEX.md (lines 1-30); output/pdf/history/INDEX.md (reasons tallied); CROSSWALK.md (lines 1-60, plus greps for failed and refused verdicts, dates, the proof-sketch and private paths); sources/README.md (lines 1-30); _process/research/README.md (lines 1-20); THEORY-MAP-2026-10-08.md (lines 1-15); experiments/README.md (the index table); 08-METHOD.md (headings, §11 Reviews, the theses rows at lines 571-577); the opening of RESEARCH-DIRECTIVES.md; the IASEAI draft README; the first 6 lines of every theories/*/README.md, their Status lines, and the dated Genealogy entries of meta-attractor, keep-open and zhishan. Dossier edition logs via grep (ALIGNMENT.md:706-708, SCIENCES.md:702-703, PHILOSOPHY.md:693). Counted with scripts: record JSON history arrays (536 records, 3,767 dated entries), correspondences.json fields, git commits by month, tags, tracked files under the private paths, and links from the folder READMEs to the crosswalk and to theories/becoming. Not read: the body of the crosswalk beyond its opening; the full genealogies; atlas/ATLAS.md; GENERATIVITY-CHAIN.md; map.html's rendered view (only connection_map.py was grepped); the workboard beyond its headings; the review PDFs; OPENING beyond grep. I ran no builds, renders or tests."
+ },
+ {
+  "key": "uses",
+  "answer": "Partly, and better for AI alignment than for anything else. In every domain the repository is honest about standing. It almost never says what a practitioner could do with a result.\n\nAI alignment. The material exists: the coupling-closure audit (A-01: whatever does not couple into the reward is unselected), the finding that counting side effects second does not help (A-02), the capture conditions (s against c, who reads the rule, reading the loss before the window closes), widening as a Pareto-style criterion, and reusable environments with frozen predictions (IN1, LA2, the commons series). Standing: theorems on toy models plus mixed tests. All of it is written for reviewers. Under each 'Standing and use' heading the dossier gives the standing and almost never a use. The best practical statement, the three conditions of 'alignment of the joint selection' and 'what the goal is not', sits in a _process plan.\n\nCoordination among people, and between people and AI. COLLECTIVE-DIRECTION states plainly that there is no guarantee and gives a table of exits with their edges. These are real design levers, all proved on models, none shown to hold in an actual institution, and no test has had human participants. There is no worked institutional example. The README's main text says 'this foundation supplies' what coordination needs; its own note calls that a thesis, and no test of it exists.\n\nWisdom traditions. The use is a structural concordance for scholars: 248 passages, each marked as agreeing, holding within a scope, or diverging. The two dossiers are honestly limited (the theory's continuation is the side the Middle Treatise refutes), but they are in Chinese only. 'Wisdom' does not appear in ONE-PAGE, the overview, chapter 7 or GLOSSARY, and the wisdom-root record is open.\n\nHuman development (生生). It appears only as T8, argued, plus premises. Chapter 7 says it does not show well-being, duties or rights. The applied programmes (worldbuilding, architecture, the-fork, wamotopia) are 'design programmes, not results'. Yet their READMEs carry older self-assessments ('Publishable today', 'Substantially complete'), and most have no pointer back to the live account. That is the one place a reader is actively misled.\n\nWorked examples that would make the value visible without overselling:\n- **Alignment:** the coupling-closure audit of an LLM-as-judge pipeline, set beside what LA2 actually showed.\n- **Coordination:** the s/c/critical-mass reading of an open standards body.\n- **People and AI:** the handover case of an assistive service, which currently sits in history/.\n- **Wisdom:** one passage traced through agreement, scope and divergence in English.\n- **Human development:** the river-and-village question worked as a decision exercise.",
+  "score": 4,
+  "strengths": [
+   "Standings are stated everywhere a use is mentioned, so the account rarely oversells: COLLECTIVE-DIRECTION opens 'No guarantee' and separates three senses of 'always' (theories/becoming/COLLECTIVE-DIRECTION.md:15-28), each exit with its own 'edge' column (:43-53).",
+   "The alignment dossier's ten-minute section has an explicit 'What is not claimed' paragraph ('A solution to alignment, or a training method… New mathematics… Review by any person', theories/becoming/review/ALIGNMENT.md:22). Its test summary lists the failures first (ALIGNMENT.md:28-34).",
+   "The one worked case on the front pages, a fished stock plus three AI fishers and a mussel bed, shows the account's central value and where it stops: 'Told nothing of the bed, they kept it in no season, under any instruction… They are language models told what to do, not systems trained' (theories/becoming/ONE-PAGE.md:9; THE-THEORY-OF-BECOMING.md:13-22).",
+   "ONE-ARGUMENT §6 shows practical judgment honestly: where C goes silent on a mixed case and which named premise (a weight bound, J2, J4) would decide it (theories/becoming/ONE-ARGUMENT.md:92-116).",
+   "The README's first-person claims about use carry notes with their standing: 'That it is the foundation, and alignment the most pressing matter now, are judgments' (README.md:103). The sages and Dao lines are labelled 'A reading… not as proof' (README.md:95, 99).",
+   "The wisdom-tradition dossiers state their limits up front: no claim that the theory recovers the texts' meaning or substitutes for their path, and 'the theory's continuation stands on the side the 中论 refutes' (theories/becoming/review/BUDDHIST-THOUGHT.md:9).",
+   "The crosswalk tells each earlier folder what became of each claim and gives a sampled trust rate: '82.6% holding… 3.2% with a wrong reading' (theories/becoming/results/atlas/CROSSWALK.md:9). For architecture it says plainly 'The live account links it once… and never discusses it' (CROSSWALK.md:638).",
+   "The experiments are real, reusable instruments: code, exact selectors and verdict rules frozen before any model call (experiments/direction-installation/README.md:3-15; experiments/README.md table)."
+  ],
+  "findings": [
+   {
+    "title": "Earlier applied folders keep stale self-assessments and do not point to the live account",
+    "severity": "high",
+    "kind": "misleading",
+    "where": [
+     "theories/wamotopia-and-the-wamo-protocol/README.md",
+     "theories/alignment-selection-on-cognition/README.md",
+     "theories/the-fork-and-cooperative-infrastructure/README.md",
+     "theories/architecture-for-a-living-earth/README.md",
+     "theories/zhishan-intelligence-must-be-good/README.md",
+     "theories/human-solutions-museum/README.md",
+     "theories/evolving-community-swarms/README.md"
+    ],
+    "evidence": "MAP.md:61 calls these folders 'not live' and chapter 5 lists them as 'Applications elsewhere (design programmes, not results; correspondence not established)' (theories/becoming/chapters/05-COLLECTIVES.md:398). But a reader who lands in a folder from GitHub sees 'Status. Substantially complete and already field-tested as a movement… The protocol is publishable today' (theories/wamotopia-and-the-wamo-protocol/README.md, Status paragraph) and 'Publishable now: the position paper, after citation verification' (theories/alignment-selection-on-cognition/README.md, Status paragraph). A grep for 'crosswalk|not live|Theory of Becoming|theories/becoming' finds 0 hits in 12 of the 16 earlier folder READMEs (including architecture, the-fork, wamotopia, alignment-selection, human-solutions-museum, evolving-community-swarms). The four with hits mention it only deep in the text, not as a header.",
+    "proposal": "Generate a two-line banner at the top of each earlier folder's README. It should say the folder is earlier work, not the live account, and that it is a design programme whose correspondence to the account is not established. It should link the folder's crosswalk group and give the group's counts (e.g. 'Architecture: 30 entries, 11 carried in part, 13 fresh readings'). Mark 'publishable today' and 'substantially complete' as the folder's own assessment as of its date."
+   },
+   {
+    "title": "No page says what a practitioner can do with the account, domain by domain, at what standing",
+    "severity": "high",
+    "kind": "missing",
+    "where": [
+     "MAP.md",
+     "README.md",
+     "theories/becoming/ONE-PAGE.md",
+     "theories/becoming/THE-THEORY-OF-BECOMING.md"
+    ],
+    "evidence": "MAP.md:7 gives the uses in one clause: 'for AI alignment it shows first what a selection can reach, and a direction only conditionally'. Pages for a reader arriving with one question cover only FEP, a collective's course and the sciences (MAP.md:24). Exact-word counts: 'wisdom' and 'coordinat' are each 0 in ONE-PAGE.md, THE-THEORY-OF-BECOMING.md and GLOSSARY.md, and 'wisdom' is 0 in 07-SIGNIFICANCE.md; 'human development'/'education' is 0 on every front checked. The levers that do exist (the coupling-closure audit, s against c, reading the loss in time, dividing by exclusive footprints, counting reviewers by independent causes) appear only as theorem rows (COLLECTIVE-DIRECTION.md:43-53).",
+    "proposal": "Add a short front page, 'What it can be used for, and how far'. Give it one row per domain: AI alignment, coordination among people, people and AI, wisdom traditions, human development (生生), science. For each row: what a practitioner can do today (one sentence), the standing (proved on a model, frozen test passed or failed, conjectured, argued, open), one worked example, and what is not claimed. Copy wording from the homes first, then shorten. Link it from README's first screen and MAP's 'Where to start'."
+   },
+   {
+    "title": "The account's alignment goal (joint selection, three conditions, 'what the goal is not') lives in a _process plan",
+    "severity": "medium",
+    "kind": "buried",
+    "where": [
+     "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md",
+     "theories/becoming/review/ALIGNMENT.md"
+    ],
+    "evidence": "ALIGNMENT.md:7 defines its unit through a working-plan link: 'aligned, in [AJ's plan](../../../_process/…/aj-joint-selection/PLAN.md#1-the-goal), where control of the rule is not captured, a lock is left in time, and courses are compared by widening'. The plan holds the clearest practitioner material: 'What the goal is not: An AI obedient to its principal… An AI with fixed good values. A fixed proxy is exactly the direction a capture promotes' (PLAN.md §1). It also holds the three questions to ask of any selected shaping: who receives what comes back, who bears the cost and the losses, what the shaping changes. No front or chapter states this as a diagnostic.",
+    "proposal": "Move the goal's statement and its 'what the goal is not' list into chapter 7 §6 (its home) and into a boxed opening of the alignment dossier. Phrase the three questions as a checklist an evaluation or governance team could apply to its own pipeline, each marked with its standing (e.g. 'proved in two-kind counts without noise; no actual institution shown to meet it')."
+   },
+   {
+    "title": "'Standing and use' headings in the alignment dossier give standing and credit, almost never a use",
+    "severity": "medium",
+    "kind": "undersold",
+    "where": [
+     "theories/becoming/review/ALIGNMENT.md"
+    ],
+    "evidence": "Of 21 'Standing and use' paragraphs (ALIGNMENT.md:74-627), nearly all state only a standing and a quote, e.g. 'Reading [AI reading, D68]. Quote […]: \"so shared rule-making is not shown to remove the selection for control however large its shared part\"' (:462). A-14's actual use sits under Known weaknesses: '[this dossier, AI] This is the formal side of making the returns to rule-making non-excludable. Whether actual open processes (open standards, public evaluation, shared model specifications) keep what comes back to their rule-makers below the cost is the empirical question' (:466). A-05 is the rare exception: 'the formal side of \"training does not fix behaviour off its distribution\"' (:152).",
+    "proposal": "Split each heading into 'Standing' and 'Use'. Under 'Use' give one sentence on what an alignment, evaluation or governance practitioner could check or design differently, labelled [this dossier, AI], or write 'no use claimed'. Move A-14's open-standards sentence there."
+   },
+   {
+    "title": "The best worked case of AI practical judgment (the assistive-service handover) is in history/",
+    "severity": "medium",
+    "kind": "buried",
+    "where": [
+     "theories/becoming/history/ALIGNMENT-DIRECTION.md",
+     "theories/becoming/ONE-ARGUMENT.md"
+    ],
+    "evidence": "theories/becoming/history/ALIGNMENT-DIRECTION.md:48-66 gives 'A connected AI case' (Expand / Preserve / Transform and transfer / Abrupt withdrawal). It shows what an advisory AI should do ('disclose losses, propose transfer and seek authorized execution; it gains no right to seize infrastructure') and the 'Verdict-changing conditions', with Lean checks that 'validate conditional inference, not the real-world basic classification'. The live text reaches it only as 'in [a constructed handover](history/ALIGNMENT-DIRECTION.md#5-…)' (theories/becoming/ONE-ARGUMENT.md, §6).",
+    "proposal": "Restate the case in the live account, in chapter 7 §7 beside `Requirement.Handover.direction`, and use it as the people-and-AI worked example on the proposed uses page. Keep its 'Constructed, not an observed deployment' and verdict-changing conditions verbatim."
+   },
+   {
+    "title": "The coordination exits are real design levers, but no worked institutional example shows one in use",
+    "severity": "medium",
+    "kind": "unclear",
+    "where": [
+     "theories/becoming/COLLECTIVE-DIRECTION.md",
+     "experiments/critical-mass-located/DESIGN.md"
+    ],
+    "evidence": "The exits table rows are dense theorem prose, e.g. 'With the readers drawn from the selected, `lo ≤ hi` and `lo' ≤ hi`, the loss growing by one a step, from a start favouring the shapers: a reading, the next step reading too, turns the course for good exactly where…' (COLLECTIVE-DIRECTION.md:46). §5 admits 'no actual institution is shown to meet its hypotheses… no test has human participants' (:87). The one quantity a practitioner could estimate, the critical mass '(c - lo)/(hi - lo)', appears only in the experiments index for CMT, 'frozen 5 Nov 2026, not run' (experiments/README.md).",
+    "proposal": "Add one constructed, clearly labelled example: a standards body or open-source governance board. Estimate s, p and c for its rule-makers and compute the critical mass. Show what A-14 says (open rule-making does not by itself remove selection for control) and when a loss must be read to turn a lock. State that the numbers are illustrative and that CMT has not run."
+   },
+   {
+    "title": "The README's opening asserts the foundation 'supplies' coordination; its own note calls that a thesis and no test exists",
+    "severity": "medium",
+    "kind": "oversold",
+    "where": [
+     "README.md"
+    ],
+    "evidence": "README.md:43: 'To achieve alignment, we need a foundation that makes coordination possible, and this foundation supplies that too.' Note 13 (README.md:107): 'That shared understanding makes coordination possible is a thesis about how coordination forms, not a theorem.' COLLECTIVE-DIRECTION.md:87: 'no test has human participants.'",
+    "proposal": "Keep the first-person voice, but make the main sentence carry the qualifier, e.g. 'and I hold that this foundation can supply that too: anyone can check each law…'. Have note 13 state that the coordination thesis has no test yet. Put that standing in the coordination row of the proposed uses page."
+   },
+   {
+    "title": "Use in wisdom traditions has no English statement, and 'wisdom' is nearly absent from the live account",
+    "severity": "medium",
+    "kind": "missing",
+    "where": [
+     "theories/becoming/review/CLASSICAL-TEXTS.md",
+     "theories/becoming/review/BUDDHIST-THOUGHT.md",
+     "theories/becoming/chapters/03-KNOWING.md",
+     "GOALS.md"
+    ],
+    "evidence": "Both dossiers and chapter 6 are in Chinese only (review/README.md table: 'Language: Chinese'). The English overview §6 gives three paragraphs (THE-THEORY-OF-BECOMING.md:117-123). The only live wisdom content is a reading and an open target: '无明 … and 明 is coupling joined to a selection' (03-KNOWING.md:5); 'That the pure core's common relations are indispensable across all wisdom under discussion… is a target' (03-KNOWING.md:477), record wisdom-root 'open'. GOALS.md keeps 'Constitution and formation of wisdom' as a scope (GOALS.md:342).",
+    "proposal": "On the proposed uses page, say plainly in English: what the account offers wisdom traditions is a structural concordance for scholars (counts of agreement, scope and divergence, with their trust standing), and the 无明/明 reading [AI reading]. It claims no use for practice or cultivation, and wisdom-root is open. Add one worked passage in English: 天之道损有余而补不足 read against `Becoming.RuleCapture`, together with B-02's admission that the theory stands on the side the Middle Treatise refutes."
+   },
+   {
+    "title": "The human-development vision on the front is not visibly separated from what the account delivers",
+    "severity": "medium",
+    "kind": "unclear",
+    "where": [
+     "README.md",
+     "theories/becoming/chapters/07-SIGNIFICANCE.md",
+     "worldbuilding/README.md"
+    ],
+    "evidence": "README.md:67: 'If we use it wisely, we can create a substrate of plenty, of peace and of freedom, for every one of us.' The account's limit is stated only in chapter 7: 'The value of bringing new lives into existence, well-being beyond admitted continuation, and constraints on acts' are not shown, nor 'Any duty, right, recognition, motivation or compliance' (07-SIGNIFICANCE.md, 'What this chapter does not show'). The constructive half ('worldbuilding/ The constructive half', MAP.md:66) is linked from no Becoming front or chapter. A grep for 'worldbuilding' over theories/becoming/*.md, chapters, README.md and MAP.md finds only MAP.md.",
+    "proposal": "In the human-development row of the proposed uses page, state that 生生 as direction is T8 (argued, under two unasserted premises). Say the account shows no well-being, duty or rights, and that the abundance and settlement programmes are separate design programmes whose correspondence is not established, linking worldbuilding/ and the crosswalk groups."
+   },
+   {
+    "title": "Frozen test environments are not presented as instruments others can reuse",
+    "severity": "low",
+    "kind": "undersold",
+    "where": [
+     "experiments/README.md",
+     "theories/becoming/review/ALIGNMENT.md"
+    ],
+    "evidence": "experiments/direction-installation/README.md:7-15 lists lake.py, agents.py, exact.py, run.py and analyze.py with frozen verdict rules. experiments/self-rewarding-lock and experiments/commons-outrun are similar. The fronts cite them only as evidence for theses, never as benchmarks an alignment team could run on its own models.",
+    "proposal": "In the alignment row of the uses page and in the dossier's tests section, name three environments as reusable: the IN1 lake with an unseated dependent, the LA2 self-rewarding judge, and the CG2 commons with exact best responses. For each give what it measures, how to run it, and its known limits (role-play, small models)."
+   },
+   {
+    "title": "The alignment dossier's ten-minute section is too dense to show the value it lists",
+    "severity": "low",
+    "kind": "unclear",
+    "where": [
+     "theories/becoming/review/ALIGNMENT.md"
+    ],
+    "evidence": "Item 4 is one paragraph of several clauses: 'Let shapers be carriers whose shaping of the rule returns s to themselves alone and p to every member alike, at a cost c counted as extra offspring to the others. At a step the rule favours them exactly where c ≤ s, selecting neither kind at equality; a p reaching every member alike never changes that direction…' (ALIGNMENT.md:14). The 'What follows for alignment' bullets (:19-21) are where the value lies, and they come after seven theorem statements.",
+    "proposal": "Open the ten-minute section with the three 'What follows for alignment' readings in plain sentences, each with its standing. Then give the seven results, each in one sentence of at most about 40 words, with the exact statement left to the item."
+   }
+  ],
+  "read": "Read in full: theories/becoming/review/ALIGNMENT.md lines 1-64 (header, ten-minute section, tests, items, terms), A-06 (163-180), A-14 (453-472), and every 'Standing and use' line (grep); theories/becoming/COLLECTIVE-DIRECTION.md (whole, about 4,600 words); theories/becoming/ONE-PAGE.md (whole); THE-THEORY-OF-BECOMING.md lines 1-58 (how to read, the one case, the whole at a glance) and §§5-7 (105-151); chapter 7 (07-SIGNIFICANCE.md) opening and §1 (1-30), §5 opening (553-575), §6 opening (643-660), §8 theses, §9 objections and 'What this chapter does not show' (764-806); ONE-ARGUMENT.md §6; MAP.md (whole); README.md lines 1-80 (first screen and opening) and notes 7, 9, 11, 13, 20; GOALS.md opening and the generative-alignment and wisdom scopes; AJ PLAN.md §1; history/ALIGNMENT-DIRECTION.md §5; review/README.md lines 1-40; CROSSWALK.md intro, counts table and the opening of the architecture group. Skimmed: the fronts of the classical and Buddhist dossiers (CLASSICAL-TEXTS.md first section, BUDDHIST-THOUGHT.md lines 1-30); the first 10-15 lines of the READMEs of architecture-for-a-living-earth, the-fork-and-cooperative-infrastructure, relational-self-and-datong, wamotopia, evolving-community-swarms, human-solutions-museum, zhishan and alignment-selection-on-cognition; worldbuilding/README.md first 20 lines; experiments/README.md table; experiments/direction-installation/README.md first 30 lines; 03-KNOWING.md and 08-METHOD.md wisdom lines; 05-COLLECTIVES.md 380-398. Searched by grep only, not read: term counts for wisdom, coordination, development and governance across the fronts; links from earlier folders to the live account. Not read: chapters 1-6 and 8 beyond the lines named, the rest of the dossier items, records, Lean, the connection map (map.html), PDFs."
+ },
+ {
+  "key": "navigation",
+  "answer": "The honest material is there. A visitor on GitHub just can't see most of it, and the project's value isn't shown on the front page. Most of what matters sits two or three clicks from README.md, behind names a newcomer can't guess. The things that would show connections and growth either don't render on GitHub or aren't linked at all.\n\nClick paths from README.md:\n- One page, the overview, the theses table (08 §9), the register and the open questions: one click each.\n- The account's own verdict that none of its central results is new mathematics (08 §8): two clicks, through ONE-PAGE line 30. It is absent from the README and MAP.\n- The best statement of what this means for alignment (review/ALIGNMENT.md, \"The dossier in ten minutes\" and \"The tests, as they fell\"): three clicks (README, MAP, review cover, dossier). The README's own alignment section doesn't link it.\n- The coordination page (COLLECTIVE-DIRECTION), the glossary and the reviewer packet: two clicks, through MAP.\n- The edition-5 PDFs in output/pdf/review-packet/: no live page links them.\n- The Lean package README: two clicks, under a six-level path.\n- The index of frozen tests (experiments/README.md): no link from README or MAP, only the file tree.\n- The connection map: two clicks, but GitHub shows a 4.9 MB HTML file as source code, and Pages is off.\n- The atlas of 177 dynamics: no live page links it.\n- The 2021-to-September growth story (TIMELINE.md): buried in _process/history.\n\nThere is no static site. The one finished visualization, map.html, is self-contained and would work on Pages almost as it is. Its links are relative .md paths, so they would need rewriting.\n\nOn GitHub, tmp/, work/ and scratchpad/ are untracked, so visitors never see them. What they do see is AGENTS.md, a RESEARCH.md stub, theories/ with no README (16 earlier folders beside becoming/ with no status banners), output/ opening on guardian-anarchy images and older papers, and drafts/ with no README.\n\nReading times are mostly accurate (ONE-PAGE 1,512 words for 11–15 min; overview 7,947 words for 60–80 min). MAP states none. The README is 12,684 words, and only its first screen is timed.\n\nOf the ten most valuable things, three are one click away (ONE-PAGE, the overview, the theses table) and one partly (the Lean checker). The rest need two clicks or more, or aren't linked anywhere. The value for alignment and coordination, the honest verdict and the visual map are the most buried. Fix those first: a front table of the ten things, a Pages site with the map, and the verdict on the first screen.",
+  "score": 4,
+  "strengths": [
+   "ONE-PAGE.md is a strong, honest ten-minute entry: one concrete frozen test (the LLM fishers and the mussel bed, line 9), a table of claim, standing and what would show it wrong (lines 13-22), the two premises named (line 24), and the known-results verdict (line 30). It is one click from README.",
+   "Every generated page carries the same nav bar, and MAP.md 'Where to start' (lines 17-28) gives a clean four-layer path, with Chinese editions of the one page and the overview.",
+   "Reading times are stated on most fronts and are internally consistent: ONE-PAGE 1,512 words for 11-15 minutes, overview 7,947 words for 60-80, COLLECTIVE-DIRECTION 4,607 words for 35, the review cover 1,103 for 8-11, and each dossier gives a ten-minute section and an hour's path.",
+   "The alignment dossier's opening (review/ALIGNMENT.md:5-34) is the clearest statement of value for a field: seven proved results with their known forms credited, what follows as readings, what is not claimed, and the tests sorted into failed, held, varied and untested.",
+   "The connection map (atlas/map.html) is self-contained, has no external scripts, supports dark mode, and carries the crosswalk's honest labels (carried, carried-in-part, not-carried, divergence), so it could be published as is.",
+   "CROSSWALK.md states its own error rate (82.6% of entries holding, from a 100-entry critic sample) in its first screen. That is calibrated representation, not overselling.",
+   "Scratch folders (tmp/, work/, scratchpad/) and the private sources are untracked, so a GitHub visitor never sees them."
+  ],
+  "findings": [
+   {
+    "title": "No rendered visual surface: Pages is off, and the one connection map shows as raw HTML on GitHub",
+    "severity": "high",
+    "kind": "missing",
+    "where": [
+     "theories/becoming/results/atlas/map.html",
+     "MAP.md:75",
+     "theories/becoming/results/THEORY-GRAPH.md",
+     "DEPENDENCIES.md",
+     "README.md:5"
+    ],
+    "evidence": "MAP.md:75 \"[the connection map](theories/becoming/results/atlas/map.html) draws it\". map.html is 4,954,810 bytes, and GitHub shows HTML files as source, never as a page. GitHub Pages is not enabled (the coordinator's API check returned 404). Inside the file, links are relative to the repository (\"base\":\"../../../../\", 5,747 '.md' references). The 'graph' a visitor can open is a table: THEORY-GRAPH.md:5 \"3220 nodes, 6892 edges\" followed by Markdown tables. 'Connections' in the nav bar (README.md:5) is DEPENDENCIES.md, a 6,113-word bulleted edge list (\"1271 curated edges\"). CROSSWALK.md is 3.7 MB and ATLAS.md 1.0 MB, sizes GitHub's file view may not render (not verified). No live front has a diagram: no mermaid block or image in README, MAP, ONE-PAGE, the overview, the chapters or the dossiers.",
+    "proposal": "Enable GitHub Pages from a generated `site/` (or `docs/`) folder that connection_map.py writes. Publish map.html there with its base rewritten to https://github.com/yongxu/theories/blob/main/ so entry links open the rendered Markdown. Add the ONE-PAGE as HTML and one small static SVG of the spine (root, then the map, knowing, life, collectives, significance, with the theses T1-T8 hung on their homes). Link the site from the README first screen and set it as the repository's homepage. Add a 'How to open' line beside every link to map.html, for readers who stay on GitHub."
+   },
+   {
+    "title": "The account's own verdict (no new mathematics) is missing from README and MAP, while the first screen leads with 505 Lean receipts",
+    "severity": "high",
+    "kind": "buried",
+    "where": [
+     "README.md:17",
+     "MAP.md:5-13",
+     "theories/becoming/ONE-PAGE.md:30",
+     "theories/becoming/chapters/08-METHOD.md:479-480"
+    ],
+    "evidence": "README.md:17 \"**Lean receipts** credit 505 of [536 registered results](RESULTS.md), showing each Lean statement follows from its premises, not that they hold.\" The phrase 'new mathematics' appears 0 times in README.md and MAP.md. The verdict first appears at ONE-PAGE.md:30, \"finds none of the central results new mathematics\", two clicks in. A first-screen reader gets a large count of proved results and not the fact that each is near-definitional or a known result restated. By AGENTS.md's first priority, that would change what they believe the 505 are worth.",
+    "proposal": "Add one sentence to the README first screen (readme_first_screen in _process/research-config.json), copied from ONE-PAGE.md:30 first: by the account's own review, none of the central results is new mathematics, each being near-definitional or a known result restated, and what would change that is a theorem a specialist would not foresee, a prediction that could fail and does not, or a premise derived from something weaker. Link it to 08-METHOD.md#known-results. Put the same sentence in MAP.md 'What this is'."
+   },
+   {
+    "title": "What the work is for, and its use in alignment and coordination, is invisible from the front page",
+    "severity": "high",
+    "kind": "buried",
+    "where": [
+     "README.md:9-17",
+     "README.md:184-190",
+     "AGENTS.md:5-7",
+     "theories/becoming/review/ALIGNMENT.md:5-34",
+     "theories/becoming/COLLECTIVE-DIRECTION.md",
+     "MAP.md:24-26"
+    ],
+    "evidence": "The README first screen (lines 9-17) never mentions alignment, coordination or wisdom (grep count 0). The plainest purpose statement is in the agents' instructions: AGENTS.md:7 \"in which people and AI can predict, come to share an understanding and coordinate.\" README's 'Advancing AI alignment' section (184-190) links GOALS.md#generative-alignment, a sources/ conversation and eleven records, but not the alignment dossier. That dossier's 'The dossier in ten minutes' (ALIGNMENT.md:5) and 'The tests, as they fell' (ALIGNMENT.md:28) say what the work offers alignment and what failed. They sit three clicks deep (README, MAP:26, review/README, ALIGNMENT) and are framed as 'Review dossier A' for reviewers. COLLECTIVE-DIRECTION.md, the coordination question, is reached only from MAP.md:24 as a side page.",
+    "proposal": "Add a 'What it offers, by field' block to the README first screen: one line each for alignment (linking ALIGNMENT.md#the-dossier-in-ten-minutes and #the-tests-as-they-fell), coordination of collectives (COLLECTIVE-DIRECTION.md), ethics (07 #scope-and-order), the sciences (review/SCIENCES.md and FREE-ENERGY-PRINCIPLE.md) and classical thought (06, review/CLASSICAL-TEXTS.md). Each line gives its standing in the home's words, e.g. 'proved on models; that real systems meet the premises, conjectured'. Link the alignment dossier's ten minutes from the README alignment section."
+   },
+   {
+    "title": "README says the alignment one-pager is 'now in draft', but it was retired on 30-31 October",
+    "severity": "medium",
+    "kind": "misleading",
+    "where": [
+     "README.md:188",
+     "_process/architecture/moves/moves-2026-10-31-aj4-page-retire.json"
+    ],
+    "evidence": "README.md:188 \"Still to do: AJ4's one page for alignment researchers, now in draft\". The move receipt records DRAFT-ONE-PAGE.md moved to history with the reason \"superseded by the alignment dossier's opening section, The dossier in ten minutes (31 October 2026)\". A reader looks for a draft that no longer exists and is not told the replacement is live.",
+    "proposal": "Correct the AJ next-step text in its goal or record (README is generated): 'AJ4's page for alignment researchers is the alignment dossier's opening, The dossier in ten minutes (review/ALIGNMENT.md)', with the link. Then re-render."
+   },
+   {
+    "title": "No scoreboard of tests that could fail; the experiments index is linked from neither README nor MAP",
+    "severity": "medium",
+    "kind": "buried",
+    "where": [
+     "README.md:17",
+     "theories/becoming/chapters/08-METHOD.md:565-576",
+     "experiments/README.md",
+     "MAP.md:22",
+     "MAP.md:62"
+    ],
+    "evidence": "README.md:17 links '[Empirical theses](...08-METHOD.md#theses)', a table whose Standing cells run to hundreds of words (the T1 cell begins \"in the model proved: on the regime, in whole numbers, for one condition under a standing draw `H`...\"). experiments/README.md (4,847 words, 30+ tests) has no link from README.md or MAP.md: MAP.md:22 ends \"the Lean package, the studies\" without links, and MAP.md:62 gives `experiments/` as code. The clearest outcome summary (failed / held / varied / untested) is ALIGNMENT.md:28-34, which covers the alignment tests only.",
+    "proposal": "Generate a TESTS.md from the experiment READMEs or records: one row per frozen test with thesis, frozen date, run date, verdict in one word (passed / failed / mixed / not testable / refused / held / not run) and a link. Lead it with the failures. Put it in the nav bar and on the README first screen beside 'Empirical theses', and keep 08 §9 as the full statement."
+   },
+   {
+    "title": "The atlas of 177 dynamics is linked from no live front",
+    "severity": "medium",
+    "kind": "buried",
+    "where": [
+     "theories/becoming/results/atlas/ATLAS.md",
+     "MAP.md",
+     "README.md"
+    ],
+    "evidence": "ATLAS.md:5-9: \"177 dynamics, by family... A. Absorption and ending 29, B. Drains beyond what couples in 24, C. Capture of the selection 16...\". A search of README.md, MAP.md, GLOSSARY.md, theories/becoming/*.md, the chapters and the dossiers for 'ATLAS.md' finds only _process/BECOMING-WORKBOARD.md and map.html. This is the catalogue a reader asking about locks, drains and capture would want, and it can only be found by browsing.",
+    "proposal": "Link ATLAS.md from MAP.md's evidence layer (line 22) and from the README's four layers (line 140), described as 'the account's dynamics (locks, drains, captures, cycles) by family, each with its records and standing; a catalogue to look things up in'. Link family C (capture) from the alignment dossier."
+   },
+   {
+    "title": "The edition-5 reader PDFs ('the one to send') are linked from no page; output/ has no README",
+    "severity": "medium",
+    "kind": "buried",
+    "where": [
+     "output/pdf/review-packet/MANIFEST.txt",
+     "theories/becoming/review/README.md",
+     "MAP.md:26",
+     "MAP.md:69"
+    ],
+    "evidence": "A case-insensitive grep for 'pdf' or 'edition' in theories/becoming/review/README.md finds nothing. MAP.md:69 says only \"`output/` | Exported PDFs and images\". output/ has no README, and its first entries on GitHub are guardian-anarchy-edition-02/, guardian-anarchy-images/ and guardian-anarchy-preview.jpg, with older papers (No-Viable-Race-IASEAI27-v3.1-draft.pdf, Shengsheng-Buxi-EN-2026-10.pdf) beside review-packet/. MANIFEST.txt names commit 3395e82ee, but no page points a reader to it.",
+    "proposal": "Add a short 'Read as PDF' line to review/README.md (and the .zh) linking output/pdf/review-packet/ with its MANIFEST commit, and the same line in MAP.md beside the review packet. Give output/ and output/pdf/ READMEs that say which PDFs are current (the review packet) and which are earlier papers kept as history."
+   },
+   {
+    "title": "Nav bar labels and stub pages send newcomers to process material or legacy catalogues",
+    "severity": "medium",
+    "kind": "unclear",
+    "where": [
+     "README.md:5",
+     "GOALS.md:10",
+     "RESEARCH.md:8",
+     "theories/becoming/README.md:10",
+     "theories/becoming/results/README.md:6",
+     "README.md:212"
+    ],
+    "evidence": "Nav bar (README.md:5): 'Scopes' leads to GOALS.md, which opens with \"## Scopes not yet marked by Ren\" (GOALS.md:10), a record of authorizations rather than the project's goals. 'Connections' leads to an edge list, 'Contribute' to an internal workflow. RESEARCH.md:8 and theories/becoming/README.md:10 both say \"This page earlier repeated the register of results. It is kept so that links to it resolve\". theories/becoming/README.md, the page GitHub shows when a visitor opens the theory's folder, is then 73 'Historical section' links. README.md:212 offers as discovery routes the 'Full reading catalogue' (results/README.md:6 \"Readings of 8 October 2026 and later\", last changed 26 Oct, routing to frozen 8 October pages) and the 'Curated generativity chain' (615 KB, bilingual, still using the retired label G0). The nav bar has no Tests, Lean, Reviewers, Map or Glossary.",
+    "proposal": "Change the generated nav to: One page · The theory · Chapters · Tests · Results · Lean · Map · Reviewers · Glossary · Open questions. Move Scopes and Contribute to a 'Working on it' line. Rewrite theories/becoming/README.md as a real folder front (the four layers, with the historical anchors collapsed below, as README.md already does). In README 'Discovery and evidence', mark the reading catalogue and the generativity chain as earlier catalogues kept for their links."
+   },
+   {
+    "title": "theories/ has no README, and earlier folders carry no 'not live' banner",
+    "severity": "medium",
+    "kind": "unclear",
+    "where": [
+     "theories/",
+     "theories/meta-attractor/README.md:3",
+     "theories/keep-the-possibility-space-open/README.md:5",
+     "MAP.md:61"
+    ],
+    "evidence": "On GitHub, theories/ lists 17 folders alphabetically, with becoming third and no README to say it is the live account. MAP.md:61 calls the others \"The earlier theory folders (below), not live\", but their own pages don't: meta-attractor/README.md:3 opens with \"**主干上的及时之读 / A reading in time on the spine，2026-10-26。**\" in dense classical Chinese, and keep-the-possibility-space-open/README.md:5 says \"The most developed theory in the corpus\". A visitor arriving from search can take an earlier folder for the current theory.",
+    "proposal": "Add theories/README.md: 'becoming/ is the live account; the sixteen others are earlier work, not live; what became of each claim is in the crosswalk', with the MAP table. Give each earlier README a generated one-line banner at the top with its crosswalk counts (e.g. alignment-selection-on-cognition: 62 entries, 36 carried in part, 6 not carried) and a link to its crosswalk group."
+   },
+   {
+    "title": "The Lean is hard to find and has no 'start here'",
+    "severity": "medium",
+    "kind": "buried",
+    "where": [
+     "README.md:204-208",
+     "MAP.md:43",
+     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+     "theories/becoming/results/LEAN-INDEX.md"
+    ],
+    "evidence": "The package sits at experiments/integrated-correction/general-framework/generative-basis/lean/becoming/, six levels down, a path experiments/README.md:5 itself calls \"historical\". README links only lean-toolchain and check_becoming.py (204, 208). The package README is reached through MAP.md:43, and it is 52,703 words whose first section, 'Three rings', is dense. LEAN-INDEX.md (436 KB) is linked from neither README nor MAP. Nowhere does a reader get 'the ten central declarations: file, line, one sentence, which record'.",
+    "proposal": "Add a top-level LEAN.md, or a 'Lean' nav entry pointing to the package README. Open the package README with a ten-minute section: what the core proves and does not, how to verify, and a table of about ten central declarations (from 08 §7's 117 central ones, chosen by the ONE-PAGE rows) linked to source lines and records."
+   },
+   {
+    "title": "The GitHub landing page is 12,684 words; the essay and its notes sit before the map of the work",
+    "severity": "medium",
+    "kind": "inelegant",
+    "where": [
+     "README.md:9-19",
+     "README.md:21-139",
+     "README.md:140",
+     "README.md:142-192",
+     "README.md:222-493"
+    ],
+    "evidence": "The first screen (lines 9-17) is good and timed \"1–2 minutes\". Then come 'Truth exists' (body 2,711 words, timed 21-28 minutes) and 24 notes (6,264 words, untimed, lines 81-139), before the 'four layers' list at line 140. The 'Ongoing research' sections carry 'Next:' paragraphs of several hundred words, and lines 222-493 hold 88 historical anchors. The opening is also its own page (theories/becoming/OPENING.md), so the README copy only lengthens the landing page.",
+    "proposal": "Keep the first screen. Follow it with the ten-things table and the four layers. Link the opening (OPENING.md, or #truth-exists) rather than printing it in full, or print only its body and move the notes to OPENING.md. Cut each programme's 'Next' to one sentence with a link to its goal."
+   },
+   {
+    "title": "How the system grew into today is told only in buried or stale places",
+    "severity": "medium",
+    "kind": "buried",
+    "where": [
+     "_process/history/2026-09-consolidation/TIMELINE.md",
+     "MAP.md:30-39",
+     "theories/becoming/history/THEORY-MAP-2026-10-08.md"
+    ],
+    "evidence": "TIMELINE.md is an 11,564-word narrative \"from the Dali field notes of May 2021 to Ren's ruling of 2026-09-25\". It is linked only from the September history MAP and stops before the October formal build. MAP.md:32 \"in more than 1,550 commits (1,568 in all by 19 October 2026)\": git rev-list now counts 6,073, and work runs through 7 November. No page shows the line from 2021 notes to the sixteen folders, the October spine, and the November tests and editions.",
+    "proposal": "Generate a 'How it grew' page linked from MAP and the site, about 10 minutes long: dated stages (2021-22 notes; 2023-26 folders; Sept 2026 consolidation; Oct 2026 spine and Lean; late Oct-Nov frozen tests, failures included, and reader editions), each with crosswalk counts and links. Draw it on the site as a timeline beside the connection map, and refresh MAP's commit counts from git at render."
+   },
+   {
+    "title": "MAP states no reading time, and the opening's time omits its notes",
+    "severity": "low",
+    "kind": "missing",
+    "where": [
+     "MAP.md:1-28",
+     "README.md:15",
+     "AGENTS.md"
+    ],
+    "evidence": "AGENTS.md requires that \"Fronts state their reading time, with a ten-minute part and an hour's path\". MAP.md (1,431 words) gives no time of its own; its only time (line 24) is for ONE-ARGUMENT. README.md:15 times the opening at \"21–28 minutes\", which matches its 2,711-word body but not the 6,264 words of notes, and no total is given for the README.",
+    "proposal": "Give MAP a time line (about 10 minutes) and an explicit 'ten minutes: ONE-PAGE; an hour: the overview; the rest: chapters and dossiers'. Say 'notes optional, about 50 minutes more' beside the opening's time."
+   },
+   {
+    "title": "Lessons from freezing tests on trained systems are buried in an index page",
+    "severity": "low",
+    "kind": "undersold",
+    "where": [
+     "experiments/README.md ('Freezing a test on a trained system')"
+    ],
+    "evidence": "experiments/README.md, after its table: \"Set a verdict only on a difference the feedback resolves... Give each verdict rule the law's own quantifier... Make the reading refuse a run it was not frozen for...\", about twenty lessons, each tied to a failure. This is method an evaluations researcher could use directly, and it is unlinked from the alignment dossier and the fronts.",
+    "proposal": "Move it to its own page (e.g. experiments/FREEZING.md, keeping a before-copy) and link it from the alignment dossier's tests section, TESTS.md and 08 §9."
+   },
+   {
+    "title": "Before any Pages site: allow-list what it publishes",
+    "severity": "low",
+    "kind": "unclear",
+    "where": [
+     ".claude/launch.json",
+     "drafts/2026-10-03-the-game-of-winning/SCRIPT.md:3",
+     "output/guardian-anarchy-preview.jpg"
+    ],
+    "evidence": "The coordinator lists .claude/ as never to be published, yet .claude/launch.json is tracked (a dev-server config for drafts/2026-10-03-the-game-of-winning; contents harmless). SCRIPT.md:3 cites `sources/18-friend-conversations/2026-10-01-airplane/`, a path untracked since 19 October, and its storyboard quotes that conversation. Who is speaking, and whether that is fine to publish, was not checked. output/ tracks guardian-anarchy images while experiments/guardian-anarchy/ is local by Ren's instruction.",
+    "proposal": "Build the site only from an explicit allow-list (the fronts, chapters, dossiers, map, atlas and records), never by publishing the whole tree. List the three items above under the board's decisions pending Ren, rather than deciding them."
+   }
+  ],
+  "read": "Read in full: MAP.md; theories/becoming/ONE-PAGE.md; README.md lines 1-19 and 120-224 (first screen, end of notes, four layers, ongoing research, running the checks, discovery, history headers), with the opening body sampled at lines 21-43 and 57; theories/becoming/README.md; RESEARCH.md; COMMONS.md; review/README.md lines 1-25; review/ALIGNMENT.md lines 1-36; 08-METHOD.md §9 (lines 564-632) and its heading list; experiments/README.md (table and freezing lessons, long cells truncated). Read heads only (first 1-3 KB): DEPENDENCIES.md, RESULTS.md, GOALS.md, OPEN-QUESTIONS.md, GLOSSARY.md, THEORY-GRAPH.md, ATLAS.md, CROSSWALK.md, GENERATIVITY-CHAIN.md, results/README.md, the Lean package README (head and section list), COLLECTIVE-DIRECTION, ONE-ARGUMENT, FREE-ENERGY-PRINCIPLE, the overview, chapters/README, TIMELINE.md, three earlier-folder READMEs, game-of-winning SCRIPT.md, and map.html (header, embedded text and link targets parsed with python). Counted: word counts of all fronts, chapters and dossiers; file sizes; tracked files per top-level folder; tracked status of private paths; inbound links to ATLAS, map.html, CROSSWALK, LEAN-INDEX, review-packet PDFs and experiments/README from the fronts; commit count; the AJ4 move receipt. Not read: the chapters' bodies, the dossiers beyond ALIGNMENT's opening, records, the work board beyond grep hits, sources/ and _process/research. GitHub rendering limits for large Markdown files were not verified (stated as likely). That Pages is off and the repo has no topics or homepage is taken from the coordinator, not re-checked."
+ },
+ {
+  "key": "chinese",
+  "answer": "In part. A Chinese reader gets the same account and the same standings, but only through three front pages. Almost everything else is in English or out of date. On honesty the Chinese side is the strongest part of the repository. On access it is the weakest.\n\nSame account: ONE-PAGE.zh.md and THE-THEORY-OF-BECOMING.zh.md are complete, faithful editions. Both have 198 lines and the same ten sections as the English, with every standing, every [AI 读法] tag, both premises (延续条件 and C) and T8's \"不主张对一切可能的心智都有约束力的裁断\". The prose, though, is close translation from English (欧化), and the T7 row is a single sentence of about 250 characters. Every link out of these pages leads into English: 八章, 理论图, chapters 01–05, 07 and 08, GLOSSARY, OPENING, ONE-ARGUMENT, COLLECTIVE-DIRECTION and the alignment and philosophy dossiers. On GitHub, README.md's first screen and nav bar have no 中文 link. The first one comes at line 137, after about 9,400 English words, and there is no root README.zh.md.\n\nThe relation to the texts is stated honestly, and the two Chinese dossiers are exemplary:\n- They list the commentaries not consulted.\n- They record textual variants.\n- They concede that \"理论之续正站在《中论》所破的那一边\" (the theory's continuation sits on the side the 中论 refutes).\n- They label the 中华本 經 \"AI 所撰之仿古文，不是古文\" (pseudo-classical text written by AI, not classical text).\n- They keep \"相合不是印证\" (agreement is not confirmation).\n\nTwo weaker spots. Chapter 06's thesis words the origin more strongly than the front pages do (\"诸定义是从所选古文重构\", the definitions are reconstructed from the chosen texts). And README's English gloss \"The relational start holds across the lines\" goes past chapter 06's own \"主导线索\" (main thread) and its list of what is not shown.\n\n生生 is shown honestly as T8, an argued thesis, but not clearly as the work's aim. It appears once on ONE-PAGE.zh, in a table cell. 「生生之谓易」 and the two senses in 孔颖达's commentary appear only in chapter 06 and dossier item C-13. Worse, the same characters carry three senses:\n- the ethics' 生生;\n- the grammar's «生生» and «生生不息» (Lean theorems about renewal without end);\n- OPENING's closing line 生生不息.\n\nThe warning that these differ sits only in the English GLOSSARY, chapter 01 and deep in chapter 06.\n\nWhat is missing on the Chinese side:\n- a Chinese entry on GitHub;\n- Chinese editions of the chapters, GLOSSARY and OPENING (the value statement);\n- the 中华本 itself, the one full Chinese statement, which is a 637k-character text dated 10-21 in history/. Chapter 06 §7.3 still presents it in the present tense as \"以古名重述全论\" (the whole account restated in classical names), and only chapter 06's 未决 list says it must be rewritten;\n- the work on Chinese thought (248 passages, 5,673 judgments, the hexagram world), which is in neither overview;\n- one fixed Chinese term each: widening appears as 扩大, 广 and 拓宽, and C as 扩大可形成者更好 and 以广为愈.",
+  "score": 5,
+  "strengths": [
+   "ONE-PAGE.zh.md and THE-THEORY-OF-BECOMING.zh.md are full, faithful editions: same 198 lines and the same ten sections as the English (## 1. 根 … ## 10. 尚未表明者与未决者), carrying every standing, each [AI 读法] tag, both unasserted premises and T8's 不主张对一切可能的心智都有约束力的裁断 (ONE-PAGE.zh.md:22, 24).",
+   "The front formula for the texts' role is honest and repeated: '古文为文法的术语命名，运算则不出自古文；其读法出自 AI' (ONE-PAGE.zh.md:32); '名取自古文，运算不出自古文' (THE-THEORY-OF-BECOMING.zh.md:119; review/README.zh.md:11).",
+   "Three named relations with explicit disclaimers: '相合不是印证：律的成立不靠原文，原文的意义也不由律穷尽 … 记为相分不是说原文错了' (chapters/06-CLASSICAL-TEXTS.md:46-49).",
+   "The Buddhist dossier refuses to overclaim: '不主张：理论复原了经论之义；经论陈述或印证了这套文法；理论之读法合于各宗之觉悟论与解脱道 … 许多条照实承认，理论之续正站在《中论》所破的那一边' (review/BUDDHIST-THOUGHT.md:9).",
+   "The classical dossier lists what it did not use (孙诒让《墨子间诂》注, 谭戒甫, 高亨, Graham 1978; review/CLASSICAL-TEXTS.md:31), records the 四库本 variant of 大故 that undercuts its own reading (C-01, :43), and C-13 concedes '“易比生生宽”可能与「生生之謂易」的等同句法相反' (:~C-13).",
+   "The two senses of 生生 are handled with care in chapter 06: 孔疏「後生次於前生」 versus 《老子》「生生之厚」, and '文法之 «生生» 只名无尽之复生 … 是另一词' (chapters/06-CLASSICAL-TEXTS.md:89); §十 says same characters, different senses, '不可合并' (:602).",
+   "Chapter 06's 未示 list blocks the attractive overreadings: '语言或传统天然是关系的 … 不是每一体系的性质', '古汉语是纯核诸陈述最好的表达' not shown, '吉凶 … 是好的 … 或支持生生的：诸卦模块没有任何伦理谓词' (chapters/06-CLASSICAL-TEXTS.md:626-631).",
+   "A blind re-coding task for readers of classical Chinese, frozen beforehand, with 'do it first' guidance (review/README.zh.md:23, 27); the 中华本 經 is labelled 'AI 所撰之仿古文，不是古文' (review/CLASSICAL-TEXTS.md:423).",
+   "The 經-versus-English fidelity counts are reported with their limits (same model coding, genre not separated, no reader trial) rather than as proof that classical Chinese suits the core (chapters/06-CLASSICAL-TEXTS.md §7.3)."
+  ],
+  "findings": [
+   {
+    "title": "No Chinese entry point on GitHub: first 中文 link comes after ~9,400 English words",
+    "severity": "high",
+    "kind": "missing",
+    "where": [
+     "README.md:5",
+     "README.md:9-17",
+     "README.md:137",
+     "MAP.md:19"
+    ],
+    "evidence": "README.md:5 nav bar: '[Home](README.md) · [Start here](MAP.md) · [One page](theories/becoming/ONE-PAGE.md) · …' with no 中文; first screen README.md:9-17 has none; the first Chinese link is README.md:137 '[One page](theories/becoming/ONE-PAGE.md) ([中文](theories/becoming/ONE-PAGE.zh.md))', after the 21–28-minute English opening (awk count: 9,431 words before line 137). There is no root README.zh.md (ls *.zh.md at root: none).",
+    "proposal": "Put '中文：[一页](theories/becoming/ONE-PAGE.zh.md) · [总览](…zh.md) · [审查包](…/review/README.zh.md) · [古文之章](…/06-CLASSICAL-TEXTS.md)' in the nav bar and on the first screen (via readme_first_screen in research-config, since README is generated). Add a short generated README.zh.md: the four Chinese pages, reading times, and a line saying which pages are English only."
+   },
+   {
+    "title": "A Chinese reader gets only three front pages; every link out leads to English",
+    "severity": "medium",
+    "kind": "missing",
+    "where": [
+     "theories/becoming/ONE-PAGE.zh.md:3",
+     "theories/becoming/THE-THEORY-OF-BECOMING.zh.md:5",
+     "theories/becoming/THE-THEORY-OF-BECOMING.zh.md:11",
+     "theories/becoming/review/README.zh.md:3",
+     "GLOSSARY.md",
+     "theories/becoming/OPENING.md"
+    ],
+    "evidence": "ONE-PAGE.zh.md:3 '[八章](chapters/README.md) · [理论图](results/THEORY-GRAPH.md)' both English (chapters/README.md is a 271-line English index, mostly history moves). Live .zh.md outside history: only ONE-PAGE, THE-THEORY-OF-BECOMING, review/README and the Lean READMEs. Overview zh :11 marks ONE-ARGUMENT '（英文）' but not FREE-ENERGY-PRINCIPLE, COLLECTIVE-DIRECTION or review/SCIENCES. OPENING (the value statement, ending 道法自然 / 生生不息) and GLOSSARY have no Chinese edition. Alignment value in Chinese is the one-page's single 对齐 sentence (:26) and overview §7; 智慧 and 合作 never occur in the zh pages (grep count 0).",
+    "proposal": "Mark every English target '（英文）' on the zh pages. Make GLOSSARY.zh.md (or a 中文 column) the first priority, since it fixes terms, then OPENING.zh.md under OPENING's own revision header, then 07-SIGNIFICANCE §6 (alignment) as a short Chinese section. Say on ONE-PAGE.zh which parts exist only in English."
+   },
+   {
+    "title": "The one full Chinese statement (中华本) is a superseded 10-21 text that chapter 06 still presents as current",
+    "severity": "medium",
+    "kind": "misleading",
+    "where": [
+     "theories/becoming/chapters/06-CLASSICAL-TEXTS.md:494-500",
+     "theories/becoming/chapters/06-CLASSICAL-TEXTS.md:650",
+     "theories/becoming/history/THE-THEORY-OF-BECOMING-ZHONGHUA.md:3",
+     "README.md:162"
+    ],
+    "evidence": "06 §7.3 heading '中华本：以古名重述全论' and '中华本《变化论》（[全书](../history/THE-THEORY-OF-BECOMING-ZHONGHUA.md)）以这些名把理论重述一遍', in the present tense. The file (637,514 chars) is in history/, dated '中华本，2026年10月21日', and its header still says '它与英文本及其现代汉语版说同一个理论' (:3). It was moved there in the 10-23 RA landing. Only the last item of 06's 未决 says '中华本之根基。它陈述在 World 模型上；规范之章改以根为基后，它须随之改写' (:650).",
+    "proposal": "In §7.3, say at the link that it is dated 2026-10-21, superseded, stated on the World model and not the current root, and that it predates later corrections. Do not offer it as the Chinese way in. Put a regenerated 中华本 (or a short 經 edition built from the current chapters' records) on the board as work."
+   },
+   {
+    "title": "Three senses on the same characters 生生 / 生生不息, with the warning missing from the Chinese fronts",
+    "severity": "medium",
+    "kind": "misleading",
+    "where": [
+     "theories/becoming/chapters/06-CLASSICAL-TEXTS.md:113",
+     "theories/becoming/chapters/01-ROOT.md:147",
+     "README.md:74-75",
+     "theories/becoming/ONE-PAGE.zh.md:22",
+     "GLOSSARY.md:17",
+     "GLOSSARY.md:68"
+    ],
+    "evidence": "Lean theorem names: '«生生» 是持续复生之最大之族，息是其归纳之对偶：二者相斥（«生生不息»）' (06:113); 01-ROOT.md:147 '(«生生不息»)' = renewal without end does not cease, proved for every relation. OPENING/README:74-75 close with '生生不息 / Life in the whole, generating without ceasing' (the ethics' sense). The disambiguation is in English only (GLOSSARY.md:17 'it is not the ethics' 生生'; 01-ROOT.md:151) and deep in 06 (:89, :602 '同字而不同义，不可合并'). ONE-PAGE.zh.md:22 separates 生生 from 图上的生成 but not from the grammar's «生生».",
+    "proposal": "Add one sentence to ONE-PAGE.zh and overview zh §1/§7: '文法中以 «» 书写的 «生生»、«生生不息» 只说无尽之复生，是对一切关系的定理；伦理之生生是另一义，未被证明.' Consider renaming the grammar declarations (e.g. «复生不尽»): to a Chinese reader the name «生生不息» says the classical sense has been proved. That is a wrong meaning, so AGENTS allows the rename."
+   },
+   {
+    "title": "生生 as the work's aim appears once, in a table cell, with its classical source off the fronts",
+    "severity": "medium",
+    "kind": "buried",
+    "where": [
+     "theories/becoming/ONE-PAGE.zh.md:7",
+     "theories/becoming/ONE-PAGE.zh.md:22",
+     "theories/becoming/THE-THEORY-OF-BECOMING.zh.md:57",
+     "theories/becoming/review/CLASSICAL-TEXTS.md (C-13)"
+    ],
+    "evidence": "ONE-PAGE.zh '它是什么' (:7) does not name 生生; its only occurrence is the T8 row '对生命而言，道是生生，即整体之中的生命及其持续的生发（不是图上的生成）［AI 读法］' (:22). Neither overview cites 「生生之谓易」 (grep: absent). The source and its two senses (孔疏 '後生次於前生' and '故云生不云死', 《老子》'生生之厚') appear only in 06:89 and dossier C-13.",
+    "proposal": "In '它是什么' on both one pages, add a sentence copying the home's words: the ethics compares courses toward 生生 (T8, argued, under the continuation condition and C, not derived), linked to 07 §8 and C-13. In overview zh §6, name 「生生之谓易」 as where the word comes from and note 孔疏's evaluative sense, so that the classical weight of the word is visible and not borrowed silently."
+   },
+   {
+    "title": "README's English gloss of the Chinese-thought mapping is stronger than chapter 06, and its 'Next' is stale",
+    "severity": "medium",
+    "kind": "oversold",
+    "where": [
+     "README.md:156",
+     "README.md:158",
+     "GOALS.md:28",
+     "theories/becoming/chapters/06-CLASSICAL-TEXTS.md:4",
+     "theories/becoming/chapters/06-CLASSICAL-TEXTS.md:628",
+     "theories/becoming/chapters/06-CLASSICAL-TEXTS.md:460"
+    ],
+    "evidence": "README.md:156: '91 agree, 98 hold within an exact scope, 59 diverge. The relational start holds across the lines'. The home says '关系之起点是主导线索，全称形式多须定域' (06:4), and its 未示 says '语言或传统天然是关系的：关系的起点是一条主导线索 … 不是每一体系的性质' (06:628). README gives the 'agree' count without '相合不是印证'. README:158 'Next: … tolerance compared across laws (柔弱者生之徒)', but 06 §7.2 lists 老子「柔弱胜刚强」 → [容忍跨律单调] as answered (:460) and '无一仍开'.",
+    "proposal": "Edit the source of the README/GOALS lines (not the generated view) so they copy 06's words: 'a main thread, strongest in the earliest layer; universal forms mostly need a scope; agreement confirms nothing.' Refresh 'Next' from 06's 未决 (亲亲之杀 order, 分's Hall-type condition)."
+   },
+   {
+    "title": "Chinese work is absent from both overviews and one-pages in either language",
+    "severity": "medium",
+    "kind": "undersold",
+    "where": [
+     "theories/becoming/THE-THEORY-OF-BECOMING.zh.md:117-123",
+     "theories/becoming/ONE-PAGE.zh.md:32",
+     "theories/becoming/chapters/06-CLASSICAL-TEXTS.md:215-560"
+    ],
+    "evidence": "grep for 248, 5673, 脉络 and 六十四卦 in both overviews and one-pages: no hits. Overview §6 covers only the eight-text corpus and the 成唯识论 and 中论 divergence. The 248-passage map, the 5,673 judgments of 《中华思想脉络》 (相合 453, 定域 647, 相分 200), the hexagram world (`Becoming.Hexagrams`), 文理生生 and the 中华本 are reachable only through 06 §五–§八 or README's English research section.",
+    "proposal": "Add two sentences to overview §6 (both languages), copied from 06's 评估 with their standings: what was mapped, the agreement/scope/divergence split, '相合不是印证', and that the classifications are AI's and unreviewed. Link 06 §六/§七. This is what a 中华思想 reader would come for."
+   },
+   {
+    "title": "Chinese terms drift across pages, and there is no Chinese glossary",
+    "severity": "medium",
+    "kind": "unclear",
+    "where": [
+     "theories/becoming/ONE-PAGE.zh.md:24",
+     "theories/becoming/chapters/06-CLASSICAL-TEXTS.md:14",
+     "theories/becoming/review/BUDDHIST-THOUGHT.md",
+     "theories/becoming/ONE-PAGE.zh.md:11",
+     "theories/becoming/THE-THEORY-OF-BECOMING.zh.md:75"
+    ],
+    "evidence": "Widening and C: fronts use '扩大' (ONE-PAGE.zh 6×, overview zh 19×) and 'C：扩大可形成者更好' (:24); chapter 06 and the dossiers use '以广为愈（C）' (06 7×, BUDDHIST 3×) and '拓宽' (06 4×). Continuation condition: '延续条件' (fronts) versus '延续之条件' (06 11×). Pattern: '模式' (ONE-PAGE.zh:11 '部分与模式') versus '样式' (overview zh:75, 06, dossiers). GLOSSARY.md (one sense per term, per AGENTS) is English only.",
+    "proposal": "Fix one Chinese rendering per glossary term (e.g. 扩大/以广为愈: choose one, give the other as a 又名) in a GLOSSARY.zh.md or a 中文 column. Run a term check over the four zh pages and 06 at render."
+   },
+   {
+    "title": "The Chinese front pages read as close translation (欧化) rather than Chinese prose",
+    "severity": "medium",
+    "kind": "inelegant",
+    "where": [
+     "theories/becoming/ONE-PAGE.zh.md:11",
+     "theories/becoming/ONE-PAGE.zh.md:20",
+     "theories/becoming/ONE-PAGE.zh.md:30"
+    ],
+    "evidence": "':11 以两种粒度，部分与模式，去读' and '少数是根的情形' (for 'cases of the root', where 特例 is meant). The T7 cell (:20) is one sentence of about 250 characters: '…关于损失的批注附于不利者的回答之上，九中有一、后又有二，在被读到的每次读取上都扭转了其规则，故 T7 所禁止的一种情形…'. Also :30 '与本理论的一个前提或一条律相接，少数框架在模型上禁止它们单独时留作开放之事'.",
+    "proposal": "Write ONE-PAGE.zh from the home sections in Chinese, not from the English sentences. Keep every standing and qualifier, split long cells, and use 特例/情形 consistently. Have a native reader other than its author check it against the homes, as AGENTS requires for front restatements."
+   },
+   {
+    "title": "Chapter 06 words the texts' role more strongly than the fronts' 'names, not operations'",
+    "severity": "low",
+    "kind": "unclear",
+    "where": [
+     "theories/becoming/chapters/06-CLASSICAL-TEXTS.md:4",
+     "theories/becoming/chapters/06-CLASSICAL-TEXTS.md:25",
+     "theories/becoming/review/CLASSICAL-TEXTS.md:43",
+     "theories/becoming/review/BUDDHIST-THOUGHT.md:13"
+    ],
+    "evidence": "06:4 '根之文法的诸定义是从所选古文重构的 AI 读法'; 06:25 '这套文法是否只是今人的构造？检验之法，是读那些…古文'. But the fronts say a standard relational calculus named from the texts. The dossiers show the order was the reverse: '“缘”字取自佛典；计划明言不取《荀子》“缘天官”' (CLASSICAL C-01), and '亡取自根所依之来源文本（其四位作“生、存、变、亡”）' (BUDDHIST:13), i.e. the grammar was drafted in AI conversations and then named.",
+    "proposal": "Open 06's thesis with the fronts' formula, copied verbatim. Say the grammar was drafted first (link the two source texts) and the texts then read against it. Note that reading can show divergence but, by 06's own rule, agreement confirms nothing, so the 'test' can only find where the grammar fails to fit."
+   },
+   {
+    "title": "Chapter 06 has no short way in for a general Chinese reader",
+    "severity": "low",
+    "kind": "buried",
+    "where": [
+     "theories/becoming/chapters/06-CLASSICAL-TEXTS.md:1-18"
+    ],
+    "evidence": "58,776 characters and 52 «» Lean names. No reading time or 十分钟之路 (grep 分钟/小时: none). The thesis paragraph (:4) is a run of counts ('59 条乙类候选中，56 条…丙一 219 条…128 条入 22 族…'), and three paragraphs of standings follow before the first passage. The dossiers, by contrast, give 'if you have one hour' paths.",
+    "proposal": "Add a reading time and a ten-minute part to 06's head: three sample passages (化, 生生之谓易, 中论 一异之两难), each with its reading, its relation (相合/定域/相分) and what the reading does not claim. Then the counts."
+   },
+   {
+    "title": "The reader edition sends Chinese reviewers into chapter 06 without including it",
+    "severity": "low",
+    "kind": "missing",
+    "where": [
+     "output/pdf/review-packet/MANIFEST.txt",
+     "theories/becoming/review/CLASSICAL-TEXTS.md:3"
+    ],
+    "evidence": "output/pdf/review-packet/ has CLASSICAL-TEXTS.pdf, BUDDHIST-THOUGHT.pdf, README.zh.pdf, ONE-PAGE.zh.pdf and THE-THEORY-OF-BECOMING.zh.pdf, but no 06-CLASSICAL-TEXTS.pdf, while both dossiers link it in their nav ('[古文之章](../chapters/06-CLASSICAL-TEXTS.md)') and in nearly every item's 用途.",
+    "proposal": "In the next edition (sending stays Ren's), add 06 as a PDF, or make the dossiers' 06 links absolute GitHub URLs at a fixed commit, so the links work from the PDF."
+   }
+  ],
+  "read": "Read in full: theories/becoming/ONE-PAGE.zh.md, ONE-PAGE.md (for comparison), theories/becoming/review/README.zh.md, review/README.md (lines 1-37).\n\nRead in part:\n- THE-THEORY-OF-BECOMING.zh.md lines 1-40 plus the 生生 lines, §6 (117-123), §7's alignment paragraph and §10's open items; the English §6.\n- chapters/06-CLASSICAL-TEXTS.md: §一 to §三 (lines 1-125), §七 and §八 (436-560), §九's opening, 未示 and 未决 (624-650), plus grep hits for 生生不息 and 亲亲之杀.\n- review/CLASSICAL-TEXTS.md: front (lines 1-45, through C-01) and C-13.\n- review/BUDDHIST-THOUGHT.md: front and 怎样读 (lines 1-30).\n- GLOSSARY.md: lines with Chinese terms (grep), including the 生生 and «生生» rows.\n- 01-ROOT.md: the 生生 lines (145-151).\n- README.md: lines 1-30, 60-80 and 137-160.\n- 08-METHOD #no-reading-open.\n- history/THE-THEORY-OF-BECOMING-ZHONGHUA.md: header only (lines 1-30) and its git date.\n- The source text of the opening: its first 1,500 bytes.\n\nCounted with read-only commands: words and characters per page, Chinese term variants across six pages, live .zh.md files, Chinese characters in map.html, and the contents of the reader edition's PDF folder.\n\nNot read: the rest of the overview zh, chapter 06 §四–§六 and §十–§十一, the dossiers' remaining items, the 中华本's body, CIVILIZATION-THOUGHT-AND-BECOMING.md, the recoding codebook and the covering letter. Nothing was run beyond read-only shell."
+ }
+]
