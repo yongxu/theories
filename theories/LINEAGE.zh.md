@@ -81,7 +81,7 @@
 | 48 | 2026-11-07 | **对照表：以现行说明读此前各文件夹与各思想领域。** 1,183 条条目以现行说明读此前的 16 个理论文件夹与 12 个思想领域，旁附一张关联图；该对照表「creates no result, and every entry is an AI reading with no person's behind it」（不产生任何结果，每一条都是 AI 的读法，背后没有任何人的读法）。第二位批评者读了随机抽取的 100 条，据此「estimates 82.6% holding」（估计 82.6% 成立），其余条目未再读；读者标出之处中，有 26 处在现行文本中于其所属之处改正，另有九处「gave ranking to C alone in other words」（换了说法，把排序单单交给 C）。 | [`_process/BECOMING-WORKBOARD.md`](../_process/BECOMING-WORKBOARD.md) (Queue line, CX landed clause (line 39)); [`theories/becoming/results/atlas/CROSSWALK.md`](becoming/results/atlas/CROSSWALK.md) (opening (line 5)); [`theories/becoming/results/atlas/CROSSWALK.md`](becoming/results/atlas/CROSSWALK.md) (How far to trust it (line 9)); [`_process/BECOMING-WORKBOARD.md`](../_process/BECOMING-WORKBOARD.md) (Queue line, CX landed clause (line 39)) | 公开 |
 ## 改名
 
-一个术语被另一个术语取代，所指不变；接续九月时间线的改名账目，并对照文件核对。只有那份账目陈述的改名，标为重构。
+一个术语被另一个术语取代，所指不变：2026 年 10 月 3 日以前的，接续九月时间线的改名账目；此后的，取自各记录与改名回执；每一条都对照文件核对。只有那份账目陈述的改名，标为重构。
 
 | 日期 | 原名 | 新名 | 在哪里、为什么 | 证据 | 标签 |
 |---|---|---|---|---|---|
