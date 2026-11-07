@@ -60,7 +60,7 @@ class StrictFreshTests(unittest.TestCase):
             writes.append(dict(outputs))
             return []
 
-        for later, expected in [(catalogue, 2), ({}, 1)]:
+        for later, expected, found in [(catalogue, 2, []), ({}, 1, []), (catalogue, 1, ['x.md: a page the catalogue no longer writes'])]:
             writes.clear()
             with patch.object(research, 'input_snapshot', lambda: None), \
                     patch.object(research, 'unchanged_inputs', lambda before: True), \
@@ -68,6 +68,7 @@ class StrictFreshTests(unittest.TestCase):
                     patch.object(research, 'check_links', lambda outputs, planned=(): []), \
                     patch.object(research.indexes, 'adopted', lambda: {}), \
                     patch.object(research.lean_catalogue, 'render', lambda: later), \
+                    patch.object(research.lean_catalogue, 'problems', lambda files: found), \
                     patch.object(registry, 'load_records', lambda: ([], [])), \
                     patch.object(registry, 'validate', lambda records: ([], [])), \
                     patch.object(registry, 'orphan_pages', lambda records: []), \
@@ -78,7 +79,7 @@ class StrictFreshTests(unittest.TestCase):
                     patch.object(research.atlas, 'render', lambda records: ({}, [])), \
                     patch.object(navigation, 'write_views', write_views):
                 code, result = research.check_or_render(True)
-            self.assertEqual(result['errors'], [])
+            self.assertEqual(result['errors'], ['lean catalogue: ' + e for e in found])  # a problem on the second pass writes nothing more
             self.assertEqual(len(writes), expected)
             if expected == 2:
                 self.assertEqual(writes[1], catalogue)

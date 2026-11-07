@@ -1,12 +1,18 @@
+import contextlib
+import io
 import json
 import re
+import shutil
+import subprocess
 import sys
+import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
 ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT))
-from tools.research import connection_map as cm  # noqa: E402
+from tools.research import connection_map as cm, registry, theory_graph  # noqa: E402
 
 VOCABULARY = {'relations': [{'en': 'agreement', 'zh': '相合'}, {'en': 'divergence', 'zh': '相分'}],
               'carried': [{'en': c} for c in ('carried', 'not-carried', 'history-only', 'fresh-reading')],
@@ -137,6 +143,72 @@ class PageTests(unittest.TestCase):
         self.assertIn('the continuation condition for scope and C for order', self.page)
         self.assertIn('their warrant is open', self.page)
         self.assertNotIn('derives from the condition', self.page)
+
+
+class SiteTests(unittest.TestCase):
+    """The map for a site: a whole document from the data a render wrote, its links going to the base the builder gives."""
+
+    def setUp(self):
+        temporary = tempfile.TemporaryDirectory()
+        self.addCleanup(temporary.cleanup)
+        self.root = Path(temporary.name)
+        hostile = entry('cx-a', 'cxg-early')
+        hostile['reading'] = {'en': 'Ends <!--<script> and </script> here.'}
+        for path, data in ((cm.atlas_tool.DATA, atlas(hostile)), (theory_graph.GRAPH, GRAPH), (registry.SHARED_LAWS, SHARED)):
+            (self.root / path).parent.mkdir(parents=True, exist_ok=True)
+            (self.root / path).write_text(json.dumps(data, ensure_ascii=False))
+        patcher = mock.patch.object(cm, 'ROOT', self.root)
+        patcher.start()
+        self.addCleanup(patcher.stop)
+        self.out = self.root / 'site'
+        self.base = 'https://github.com/o/r/blob/0123abc/'
+
+    def data(self, page):
+        return json.loads(re.search(r'<script type="application/json" id="cx-data">(.*?)</script>', page, re.S).group(1))
+
+    def test_it_writes_a_whole_document_with_its_title_in_its_head(self):
+        path = cm.site_map(self.out, self.base, {'theories/becoming/ONE-PAGE.md': 'becoming/ONE-PAGE.html'})
+        self.assertEqual(path, self.out / 'map.html')
+        page = path.read_text()
+        head, body = page.split('</head>', 1)
+        self.assertTrue(page.startswith('<!doctype html>'))
+        self.assertIn(f'<title>{cm.TITLE}</title>', head)
+        self.assertNotIn('<title>', body)
+        data = self.data(page)
+        self.assertEqual((data['base'], data['site']), (self.base, {'theories/becoming/ONE-PAGE.md': 'becoming/ONE-PAGE.html'}))
+        self.assertEqual(data['entries'][0]['reading'], 'Ends <!--<script> and </script> here.')
+        self.assertEqual(page.count('<script'), 2)  # the data cannot open or close one
+
+    def test_the_repository_page_has_its_title_in_its_head_and_no_site(self):
+        page = cm.page(cm.payload(atlas(), GRAPH, SHARED))
+        self.assertIn(f'<title>{cm.TITLE}</title>', page.split('</head>', 1)[0])
+        self.assertNotIn('site', self.data(page))
+
+    def test_a_base_without_a_slash_or_a_path_with_an_anchor_is_refused(self):
+        with self.assertRaises(ValueError):
+            cm.site_map(self.out, 'https://github.com/o/r/blob/0123abc')
+        with self.assertRaises(ValueError):
+            cm.site_map(self.out, self.base, {'theories/becoming/ONE-PAGE.md#x': 'a.html'})
+        with self.assertRaises(ValueError):
+            cm.site_map(self.out, self.base, {'theories/becoming/ONE-PAGE.md': None})
+        self.assertFalse((self.out / 'map.html').exists())
+
+    def test_the_command_line_writes_it_and_refuses_half_a_request(self):
+        with contextlib.redirect_stdout(io.StringIO()) as printed:
+            self.assertEqual(cm.main(['--site', str(self.out), '--link-base', self.base]), 0)
+        self.assertEqual(printed.getvalue().strip(), str(self.out / 'map.html'))
+        for argv in (['--site', str(self.out)], ['--fragment', str(self.root / 'f.html'), '--link-base', self.base],
+                     ['--site', str(self.out), '--link-base', 'no-slash']):
+            with self.subTest(argv=argv), contextlib.redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
+                cm.main(argv)
+
+    @unittest.skipUnless(shutil.which('node'), 'node is not installed')
+    def test_a_link_goes_to_the_site_where_it_has_the_page_and_keeps_its_anchor(self):
+        to = re.search(r'function to\(path\)\{.*?\}\n', cm.SCRIPT).group(0)
+        script = ("const D={base:'B/',site:{'a.md':'a.html'}};" + to
+                  + "console.log(JSON.stringify(['a.md#x','a.md','b.md#y','constructor'].map(to)));")
+        out = subprocess.run(['node', '-e', script], capture_output=True, text=True, check=True).stdout
+        self.assertEqual(json.loads(out), ['a.html#x', 'a.html', 'B/b.md#y', 'B/constructor'])
 
 
 if __name__ == '__main__':
