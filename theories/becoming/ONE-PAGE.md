@@ -2,7 +2,7 @@
 
 [中文](ONE-PAGE.zh.md) · [The overview](THE-THEORY-OF-BECOMING.md) · [The eight chapters](chapters/README.md) · [The theory graph](results/THEORY-GRAPH.md)
 
-*Twelve to fifteen minutes to read.*
+*Twelve to sixteen minutes to read.*
 
 **What it is.** An account of how anything comes to be, lasts, changes and passes away within one relational unfolding, of how life and knowing take shape there and how far evaluation does, without assuming that becoming is good. Made with AI, proofs included; the proofs are checked by machine, everything else only by AI review, and no person has yet reviewed it ([the review packet](review/README.md)).
 
@@ -12,7 +12,7 @@
 
 ![The eight chapters around the grammar: circles sized by their results, curves counting the uses between chapters' results, the two premises coming into chapter 7 as hypotheses where used, and T1 to T8 at their homes coloured by test outcome](results/spine.svg)
 
-*The chapters around the grammar, drawn from [the theory graph](results/THEORY-GRAPH.md) by a tool; what the picture shows and does not show is under [The spine](results/THEORY-GRAPH.md#the-spine).*
+*The chapters around the grammar, drawn from [the theory graph](results/THEORY-GRAPH.md) by a tool: a curve counts how often one chapter's results use another's in a verified inference, a dependence, not an agreement in meaning. Of the 117 central declarations, 11 are derived from the grammar, 1 is under a stated hypothesis, 6 count below it and 99 stand at a named distance ([08 §7](chapters/08-METHOD.md#r-one-root-to-its-edge)). What the picture shows and does not: [The spine](results/THEORY-GRAPH.md#the-spine).*
 
 | | What the account says | [How it stands](chapters/08-METHOD.md#standings-and-bases) | What would show it wrong |
 |---|---|---|---|

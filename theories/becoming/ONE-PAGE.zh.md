@@ -12,7 +12,7 @@
 
 ![围绕文法的八章：圆按结果数定大小，曲线计各章结果之间的使用，两个前提进入第七章，各在所用之处为假设，T1 到 T8 在其所属之处按检验结局着色](results/spine.zh.svg)
 
-*围绕文法的各章，由工具依[理论图](results/THEORY-GRAPH.md)画出；这幅图显示什么、不显示什么，见理论图的 [The spine](results/THEORY-GRAPH.md#the-spine)（英文）。*
+*围绕文法的各章，由工具依[理论图](results/THEORY-GRAPH.md)画出：一条曲线计一章的结果在已核验的推理中使用另一章结果的次数，是一种依赖，不是意义上的一致。117 项核心声明中，11 项推导自文法，1 项在一个明示的假设下，6 项为计数、在文法之下，99 项处于一个指明的距离（[08 §7](chapters/08-METHOD.md#r-one-root-to-its-edge)）。这幅图显示什么、不显示什么，见理论图的 [The spine](results/THEORY-GRAPH.md#the-spine)（英文）。*
 
 | | 本说明说什么 | [地位](chapters/08-METHOD.md#standings-and-bases) | 什么会表明它错 |
 |---|---|---|---|
