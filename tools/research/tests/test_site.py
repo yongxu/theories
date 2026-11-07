@@ -141,6 +141,37 @@ class SiteTests(unittest.TestCase):
         self.build()
         self.assertIn('<span class="nolink" title="Not in the public repository">config</span>', self.page('a/ONE.html'))
 
+    def test_a_link_into_private_sources_is_text(self):
+        (self.tmp / 'a/ONE.md').write_text(ONE + '\nSee [a chat](../sources/12-claude-ai-chats/c.md).\n')
+        self.build()
+        self.assertIn('<span class="nolink" title="Not in the public repository">a chat</span>', self.page('a/ONE.html'))
+
+    def test_the_map_is_written_by_its_site_mode(self):
+        from tools.research import connection_map
+        calls = []
+
+        def stub(out_dir, link_base, site_paths=None):
+            calls.append((link_base, dict(site_paths)))
+            out_dir = Path(out_dir)
+            out_dir.mkdir(parents=True, exist_ok=True)
+            (out_dir / 'map.html').write_text('<!doctype html><title>map</title><a href="a/ONE.html">one</a>')
+            return out_dir / 'map.html'
+        had = hasattr(connection_map, 'site_map')
+        old = getattr(connection_map, 'site_map', None)
+        connection_map.site_map = stub
+        try:
+            self.build(map=True, nav=SITE['nav'] + [['connections.html', 'Map']])
+        finally:
+            if had:
+                connection_map.site_map = old
+            else:
+                del connection_map.site_map
+        self.assertTrue((self.out / 'connections.html').is_file())
+        self.assertFalse((self.out / '_map').exists())
+        self.assertEqual(calls[0][0], f'https://github.com/o/r/blob/{COMMIT}/')
+        self.assertEqual(calls[0][1]['a/ONE.md'], 'a/ONE.html')
+        self.assertIn('href="../../connections.html"', self.page('a/chapters/index.html'))
+
     def test_the_home_keeps_the_status_line(self):
         self.build()
         self.assertIn('<blockquote><p>This version is still being revised.</p></blockquote>', self.page('index.html'))

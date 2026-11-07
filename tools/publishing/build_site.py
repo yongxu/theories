@@ -118,10 +118,10 @@ class Links:
 
     def resolve(self, href: str, page: str):
         """The rewritten href, or None where the target is not in the public repository."""
-        href = html.unescape(href).strip()
+        href = href.strip()
         if href.startswith('<') and href.endswith('>'):
             href = href[1:-1]
-        probe = ''.join(href.split())  # a browser ignores whitespace and control characters in a scheme
+        probe = ''.join(html.unescape(href).split())  # a browser undoes entities and ignores whitespace in a scheme
         scheme = re.match(r'^([a-z][a-z0-9+.-]*):', probe, re.I)
         if scheme:
             if scheme.group(1).lower() not in SAFE_SCHEMES:
@@ -152,7 +152,7 @@ class Links:
         if target in self.assets:
             self.counts['site'] += 1
             return relative(target, page)
-        if self.private is not None and refused(target, self.private) and not target.startswith('sources/'):
+        if self.private is not None and self.private.search(target):
             self.counts['private'] += 1
             self.untracked.append((page, href))
             return None
@@ -226,7 +226,7 @@ class Page:
         self.slugs[base] = n + 1
         ident = self._id(base if not n else f'{base}-{n}')
         if level == 1 and self.title is None:
-            self.title = strip_tags(self.inline(text))
+            self.title = plain_title(text)
         return f'<h{level} id="{html.escape(ident)}">{self.inline(text)}<a class="here" href="#{html.escape(ident)}" aria-label="Link to this section">#</a></h{level}>'
 
     def _record_mark(self, ident):
@@ -329,14 +329,15 @@ class Page:
         base = len(m.group(1).expandtabs(4))
         ordered = m.group(2)[0].isdigit()
         start = int(re.match(r'\d+', m.group(2)).group(0)) if ordered else 1
-        items = []
+        items, width = [], base + 2
         while i < len(lines):
             line = lines[i]
-            m = re.match(r'^(\s*)([-*+]|\d+[.)])\s+(.*)$', line)
+            m = re.match(r'^(\s*)([-*+]|\d+[.)])(\s+)(.*)$', line)
             if m and len(m.group(1).expandtabs(4)) == base:
                 if m.group(2)[0].isdigit() != ordered:
                     break
-                items.append([m.group(3)])
+                width = len(m.group(1)) + len(m.group(2)) + len(m.group(3))
+                items.append([m.group(4)])
                 i += 1
                 continue
             if not line.strip():
@@ -348,7 +349,7 @@ class Page:
                 break
             indent = len(line) - len(line.lstrip(' '))
             if indent > base and items:
-                items[-1].append(line[min(indent, base + 2):] if indent >= base + 2 else line.strip())
+                items[-1].append(line[min(indent, width):] if indent >= width else line.strip())
                 i += 1
                 continue
             if m and len(m.group(1).expandtabs(4)) < base:
@@ -497,7 +498,7 @@ class Page:
                 if key == 'src' and new.startswith('https://github.com/'):
                     new = new.replace('/blob/', '/raw/', 1)
                 value = new
-            if key in ('id', 'name') and name == 'a':
+            if key == 'id' or (key == 'name' and name == 'a'):
                 self._id(value)
             kept.append(f' {key}="{html.escape(value)}"')
         return f'<{name}{"".join(kept)}>'
@@ -527,9 +528,12 @@ def emphasis(t):
 
 
 def strip_comments(text):
-    """HTML comments removed outside fenced code, as GitHub hides them."""
-    parts = re.split(r'(^\s*(?:```+|~~~+)[^\n]*\n.*?^\s*(?:```+|~~~+)\s*$)', text, flags=re.S | re.M)
-    return ''.join(p if k % 2 else re.sub(r'<!--.*?-->', '', p, flags=re.S) for k, p in enumerate(parts))
+    """HTML comments removed outside fenced code, as GitHub hides them; a fence closes on its own mark."""
+    out, last = [], 0
+    for m in re.finditer(r'^[ \t]*(`{3,}|~{3,})[^\n]*\n.*?^[ \t]*\1[ \t]*$', text, flags=re.S | re.M):
+        out += [re.sub(r'<!--.*?-->', '', text[last:m.start()], flags=re.S), m.group(0)]
+        last = m.end()
+    return ''.join(out) + re.sub(r'<!--.*?-->', '', text[last:], flags=re.S)
 
 
 def join_lines(lines):
@@ -572,7 +576,14 @@ def split_row(line):
 
 
 def strip_tags(s):
-    return html.unescape(re.sub(r'<[^>]+>', '', s)).replace('#', '').strip()
+    return html.unescape(re.sub(r'<[^>]+>', '', s)).strip()
+
+
+def plain_title(text):
+    """A heading's text for <title>: links to their text, code and emphasis marks and footnote references dropped."""
+    t = re.sub(r'\[\^[^\]]+\]', '', text)
+    t = re.sub(r'!?\[([^\]]*)\]\([^)]*\)', r'\1', t)
+    return re.sub(r'[`*_]', '', re.sub(r'<[^>]+>', '', t)).strip()
 
 
 def slug_id(name):
@@ -728,7 +739,8 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
             broken.append(f'{src} → {target}#{anchor}')
     if broken:
         raise SiteError('links between pages of the site that do not resolve:\n  ' + '\n  '.join(sorted(set(broken))))
-    status = subprocess.run(['git', 'status', '--porcelain', '--'] + pages + ['README.md', str(pathlib.Path(config_path).resolve())],
+    status = subprocess.run(['git', 'status', '--porcelain', '--'] + pages + sorted(assets) + [
+        'README.md', str(pathlib.Path(config_path).resolve()), 'theories/becoming/results/records', 'tools/publishing'],
                             cwd=root, capture_output=True, text=True)
     dirty = status.returncode == 0 and bool(status.stdout.strip())
     written = []
@@ -774,7 +786,7 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
             for ref in re.findall(r'\b(?:href|src)="([^"]+)"', text):
                 target = ref.split('#')[0]
                 gh = re.match(r'https://github\.com/[^/]+/[^/]+/(?:blob|tree|raw)/[0-9a-f]+/(.*)', target)
-                if gh and refused(gh.group(1), private) and not gh.group(1).startswith('sources/'):
+                if gh and private.search(gh.group(1)):
                     problems.append(f'{rel} links a private path: {gh.group(1)}')
                 if w.name != MAP_PAGE and re.match(r'\s*(javascript|data|vbscript):', html.unescape(ref), re.I):
                     problems.append(f'{rel} has a link with a refused scheme')

@@ -1,7 +1,7 @@
 # The reader's site (tools/publishing/build_site.py): built from main's allow-list (site.pages in
 # _process/research-config.json) and deployed to GitHub Pages. It runs only when dispatched by hand (Actions → Site → Run
 # workflow): publishing is a decision, so no push deploys it. Enabling Pages for the repository (Settings → Pages →
-# Source: GitHub Actions) comes first. Only a run from main builds; only the deploy step holds the rights to publish. The checkout fetches only the blobs the build reads; nothing it builds is committed.
+# Source: GitHub Actions) comes first. Only a run from main builds; only the deploy job holds the rights to publish. The checkout fetches only the blobs the build reads; nothing it builds is committed.
 name: Site
 on:
   workflow_dispatch:
@@ -33,7 +33,6 @@ jobs:
         run: python3 -B -m unittest tools.research.tests.test_site
       - name: Build the site
         run: python3 -B tools/publishing/build_site.py --out _site --commit "$GITHUB_SHA"
-      - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

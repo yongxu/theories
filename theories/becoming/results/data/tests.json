@@ -301,7 +301,7 @@
       "outcome": "no-verdict",
       "quote": "240 small networks trained only on the read occasions of each schedule, 383 s under this machine's load; reported without a verdict.",
       "quote_path": "experiments/formations-that-read/README.md",
-      "gloss": "Reported without a verdict, as its design says. An expectation stated before the run, not a prediction of the account, that every training would fit, failed once (239 of 240); its others held."
+      "gloss": "Reported without a verdict, as its design says. An AI expectation stated before the run, with the development runs in view and not a prediction of the account, that every training would fit, failed once (239 of 240); its others held."
     },
     {
       "id": "T1N",
@@ -349,7 +349,7 @@
       "outcome": "mixed",
       "quote": "**gpt-4.1-mini: only R2 passed.**",
       "quote_path": "experiments/direction-installation/README.md",
-      "gloss": "By its frozen rule, which passes a prediction only where both models pass, R1, R3 and R4 failed and R2 and the identity checks passed; one model passed all four, the other only R2."
+      "gloss": "By its frozen rule, which passes a prediction only where both models pass, R1, R3 and R4 failed and R2 and the identity checks passed; one model passed all four, the other only R2. T4's standing in 07 and 08 counts it per model, as partly passed."
     },
     {
       "id": "FC1",
@@ -469,7 +469,7 @@
       "outcome": "no-verdict",
       "quote": "The one expectation frozen beforehand held, read on the seeds' own records: item-score on the order, no seed contradicted and P1 contradicted on none.",
       "quote_path": "experiments/formations-that-read/README.md",
-      "gloss": "Stage A of TR1, with no verdict on its reading; its one frozen expectation, a check that item-score choosers read as one order, held; the frozen script miscounts P1; comparator choosers picked as no strict order would in 20 of 20 seeds."
+      "gloss": "Stage A of TR1, with no verdict (its design's one verdict is V1); by its frozen class reading the comparator class was contradicted on 20 of 20 seeds; its one frozen expectation, a pipeline check on item-score choosers, held, its P1 part vacuous since the frozen script miscounts P1; nothing said of RF1."
     },
     {
       "id": "TR7A",
@@ -671,9 +671,9 @@
       "frozen": "2026-10-23",
       "run": "2026-10-23",
       "outcome": "registered-rule",
-      "quote": "Under the pre-registered primary comparison, the whole of FC1's advantage is discipline and register, not language.",
+      "quote": "The 經's advantage over the controlled English **does not survive** under the Claude coder.",
       "quote_path": "experiments/wenli-reading-transfer/CONTROLLED-ENGLISH-RESULTS.md",
-      "gloss": "By its registered rules, the classical code's advantage does not survive under one coder (the primary comparison) and survives at about a third of a referent per pair under the other; the coders do not agree on excess; no human audit."
+      "gloss": "By its registered rules, the classical code's advantage does not survive under one coder (the primary comparison) and survives at about a third of a referent per pair under the other, on a 60-pair check its plan names not a second primary test; the coders do not agree on excess; no human audit."
     },
     {
       "id": "SC1",

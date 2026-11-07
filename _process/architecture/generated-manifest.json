@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "files": {
-    "README.md": "bb27b8dc2d402bbd3160ab5662c158a7bb17d15eea8a268cb04c3b6ddba8919c",
+    "README.md": "56725bfd451b27515933ee39cd227eed85cabfb0e6d88ff3b9f344f5862ac086",
     "RESEARCH.md": "2b9a0c63ca2615fba5808da76fb46314ac7e97dbcbdb240f0a12d769c50b2f1a",
     "RESULTS.md": "edc7df02348bbf0e6f8651aa5769c47c2207abbe38dc237bc1179f6016704e88",
-    "GOALS.md": "9ced96fe7ac45f33814e10fcf1b08ef70fafd57153eff433571b9151af19da51",
+    "GOALS.md": "97a74493d5a302ce4bad590da4a1d788a70fabcf5611b890d86bdfd6baba2693",
     "DEPENDENCIES.md": "e168734b9ace9521def0f5268e110c9ef4f98f8d2436396c271261f05dc5f58a",
     "_process/BRIEF.md": "2d678236137825b16c7a1d78eedbba8d53deb8ee238f26b69ec8bdc6f3a6b8cc",
     "theories/becoming/README.md": "02c3a798aa9667a865502c57c8e243d05a1b6b59b53efd0074181d0fd6bc31f9",
@@ -244,8 +244,8 @@
     "theories/becoming/results/records/two-act-worlds-carry-the-difference.md": "c3621193468b0d5207e24d680519e2f0af67a4d18130af3ce46b15889a16e1cb",
     "theories/becoming/results/records/worlds-are-runs.md": "aed2bb06229953f98bcbd991753f42844ce99263b0e98dee61d5c082ff53c1fe",
     "theories/becoming/chapters/README.md": "364166501aa6ae4dc508896cd91bbf906c6c5ae6cd867c4f4452312021a108e2",
-    "_process/research/README.md": "0d31d0c7e14b76420ea49e64e57dd0c2ccbd2d5aa794f03edd4c9bb2fa46b276",
-    "_process/research/2026-10-05-generative-foundation-review/root-foundation/INDEX.md": "eb019a27d45a7b0e990247c4ef57a5a076d02a3ac461f47c4ed2198251a0eb4b",
+    "_process/research/README.md": "caa346b4e2ee857f6a384b19cfac62fcd7bb6be080b7b95b8269259f0f70a650",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/INDEX.md": "7cdd1fb536ff7b9f94217ecbed58e615576eb2b85a4048b6d99de4a1ac96e5e0",
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/REVIEWS.md": "0ccef05c0f94ed738029b8aa50c19901bcddb80807925beeb2dca83cb56dc687",
     "sources/README.md": "7d7f527445db2f40df09fbfd363c9ec321c410b4f4a4b08cfe857f804482c1e6",
     "_process/DIRECTIVE-INDEX.md": "e7d9e74c8879d1163b236495f53ba9750b19afdee7050eecb1136c964e683efd",
@@ -606,6 +606,6 @@
     "theories/becoming/results/atlas/CROSSWALK.md": "5a13a956a5c1669416f6dc9684db6f2c3840d5c58106ee6bbdd4598afa50566b",
     "theories/becoming/results/atlas/map.html": "eb7240e8f542ece0e7f8053b967d36685b59eead7de307fc4e891c11d72463b8",
     "theories/README.md": "7c756ad1afc95d16a39b44eb1e96bb43019a133f4eb7176f18ec722f8c9a86a5",
-    "TESTS.md": "1aa38c79ea3bf24dbf6df492a8edec6603fcab9c5a2dc53f373522440da15e19"
+    "TESTS.md": "0c648288cec1b9cad08880f0ca68c9020ae17c0bea541dcebf46fd1ac15f18b8"
   }
 }

@@ -49,7 +49,10 @@ def private_pattern(root=ROOT):
 
 def tracked(paths, root=ROOT):
     """Those of paths the repository tracks, or None where root is not a repository (a test's throwaway folder)."""
-    out = subprocess.run(['git', 'ls-files', '-z', '--'] + sorted(paths), cwd=root, capture_output=True)
+    try:
+        out = subprocess.run(['git', 'ls-files', '-z', '--'] + sorted(paths), cwd=root, capture_output=True)
+    except OSError:
+        return None
     if out.returncode:
         return None
     return {p for p in out.stdout.decode().split('\0') if p}
@@ -80,6 +83,9 @@ def validate(data, root=ROOT):
     if not re.fullmatch(r'\d{4}-\d{2}-\d{2}', str(data.get('as_of', ''))):
         errors.append(DATA + ': as_of is not a date')
     method = (Path(root) / METHOD).read_text() if (Path(root) / METHOD).is_file() else ''
+    if '<a id="theses"></a>' in method:  # §9 alone, from its anchor to the next section
+        section = method.split('<a id="theses"></a>', 1)[1]
+        method = re.split(r'\n## ', section.split('\n', 2)[-1], 1)[0]
     for q in data.get('method_quotes', []):
         if not isinstance(q, dict) or not isinstance(q.get('text'), str) or squash(q['text']) not in squash(method):
             errors.append(f'{DATA}: method §9 no longer says, word for word: {str(q)[:80]}…')
