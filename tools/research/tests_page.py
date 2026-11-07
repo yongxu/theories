@@ -83,9 +83,11 @@ def validate(data, root=ROOT):
     if not re.fullmatch(r'\d{4}-\d{2}-\d{2}', str(data.get('as_of', ''))):
         errors.append(DATA + ': as_of is not a date')
     method = (Path(root) / METHOD).read_text() if (Path(root) / METHOD).is_file() else ''
-    if '<a id="theses"></a>' in method:  # §9 alone, from its anchor to the next section
+    if method and '<a id="theses"></a>' not in method:
+        errors.append(f'{METHOD}: the anchor of method §9 (theses) is missing')
+    elif method:  # §9 alone, from its anchor to the next section
         section = method.split('<a id="theses"></a>', 1)[1]
-        method = re.split(r'\n## ', section.split('\n', 2)[-1], 1)[0]
+        method = re.split(r'\n## ', section.split('\n', 2)[-1], maxsplit=1)[0]
     for q in data.get('method_quotes', []):
         if not isinstance(q, dict) or not isinstance(q.get('text'), str) or squash(q['text']) not in squash(method):
             errors.append(f'{DATA}: method §9 no longer says, word for word: {str(q)[:80]}…')

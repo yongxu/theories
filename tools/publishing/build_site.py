@@ -152,7 +152,7 @@ class Links:
         if target in self.assets:
             self.counts['site'] += 1
             return relative(target, page)
-        if self.private is not None and self.private.search(target):
+        if self.private is not None and (self.private.search(target) or (target in self.dirs and self.private.search(target + '/'))):
             self.counts['private'] += 1
             self.untracked.append((page, href))
             return None
@@ -583,7 +583,8 @@ def plain_title(text):
     """A heading's text for <title>: links to their text, code and emphasis marks and footnote references dropped."""
     t = re.sub(r'\[\^[^\]]+\]', '', text)
     t = re.sub(r'!?\[([^\]]*)\]\([^)]*\)', r'\1', t)
-    return re.sub(r'[`*_]', '', re.sub(r'<[^>]+>', '', t)).strip()
+    t = re.sub(r'(\*\*|\*|`)(.+?)\1', r'\2', re.sub(r'<[^>]+>', '', t))
+    return html.unescape(re.sub(r'\\(.)', r'\1', t)).strip()
 
 
 def slug_id(name):
@@ -740,7 +741,8 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
     if broken:
         raise SiteError('links between pages of the site that do not resolve:\n  ' + '\n  '.join(sorted(set(broken))))
     status = subprocess.run(['git', 'status', '--porcelain', '--'] + pages + sorted(assets) + [
-        'README.md', str(pathlib.Path(config_path).resolve()), 'theories/becoming/results/records', 'tools/publishing'],
+        'README.md', str(pathlib.Path(config_path).resolve()), 'theories/becoming/results/records', 'tools/publishing',
+        'tools/research/push_screen.sh', 'tools/research/reading_catalogue.py', 'tools/research/navigation.py'],
                             cwd=root, capture_output=True, text=True)
     dirty = status.returncode == 0 and bool(status.stdout.strip())
     written = []
@@ -786,7 +788,7 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
             for ref in re.findall(r'\b(?:href|src)="([^"]+)"', text):
                 target = ref.split('#')[0]
                 gh = re.match(r'https://github\.com/[^/]+/[^/]+/(?:blob|tree|raw)/[0-9a-f]+/(.*)', target)
-                if gh and private.search(gh.group(1)):
+                if gh and (private.search(gh.group(1)) or private.search(gh.group(1).rstrip('/') + '/')):
                     problems.append(f'{rel} links a private path: {gh.group(1)}')
                 if w.name != MAP_PAGE and re.match(r'\s*(javascript|data|vbscript):', html.unescape(ref), re.I):
                     problems.append(f'{rel} has a link with a refused scheme')

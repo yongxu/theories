@@ -349,7 +349,7 @@
       "outcome": "mixed",
       "quote": "**gpt-4.1-mini: only R2 passed.**",
       "quote_path": "experiments/direction-installation/README.md",
-      "gloss": "By its frozen rule, which passes a prediction only where both models pass, R1, R3 and R4 failed and R2 and the identity checks passed; one model passed all four, the other only R2. T4's standing in 07 and 08 counts it per model, as partly passed."
+      "gloss": "By its frozen rule, which passes a prediction only where both models pass, R1, R3 and R4 failed and R2 and the identity checks passed; one model passed all four, the other only R2. T4's standing in [07](theories/becoming/chapters/07-SIGNIFICANCE.md#theses) and [08](theories/becoming/chapters/08-METHOD.md#theses) counts it per model, as partly passed."
     },
     {
       "id": "FC1",
@@ -469,7 +469,7 @@
       "outcome": "no-verdict",
       "quote": "The one expectation frozen beforehand held, read on the seeds' own records: item-score on the order, no seed contradicted and P1 contradicted on none.",
       "quote_path": "experiments/formations-that-read/README.md",
-      "gloss": "Stage A of TR1, with no verdict (its design's one verdict is V1); by its frozen class reading the comparator class was contradicted on 20 of 20 seeds; its one frozen expectation, a pipeline check on item-score choosers, held, its P1 part vacuous since the frozen script miscounts P1; nothing said of RF1."
+      "gloss": "Stage A of TR1, with no verdict (its design's one verdict is V1); by its frozen class reading the comparator class was contradicted on 20 of 20 seeds; its one frozen expectation, a pipeline check on item-score choosers, held on the seeds' own records (the frozen script miscounts P1, so its own check of P1 is vacuous); nothing said of RF1."
     },
     {
       "id": "TR7A",
@@ -673,7 +673,7 @@
       "outcome": "registered-rule",
       "quote": "The 經's advantage over the controlled English **does not survive** under the Claude coder.",
       "quote_path": "experiments/wenli-reading-transfer/CONTROLLED-ENGLISH-RESULTS.md",
-      "gloss": "By its registered rules, the classical code's advantage does not survive under one coder (the primary comparison) and survives at about a third of a referent per pair under the other, on a 60-pair check its plan names not a second primary test; the coders do not agree on excess; no human audit."
+      "gloss": "By its registered rules, the classical code's advantage does not survive under one coder (the primary comparison) and survives at about a third of a referent per pair under the other, on a 60-pair check that its plan says is not a second primary test; the coders do not agree on excess; no human audit."
     },
     {
       "id": "SC1",
