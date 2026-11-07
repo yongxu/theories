@@ -284,9 +284,10 @@ def check_or_render(render=False, base=None, ids=None, strict_fresh=False):
     outputs.update(theory_graph.render(records))
     # The spine picture (RW): the chapters around the grammar, drawn from that graph; a phrase it quotes that has
     # left its home is an error, so the picture follows the text.
-    spine_pages, spine_errors = spine.render(outputs[theory_graph.GRAPH])
-    outputs.update(spine_pages)
-    errors += spine_errors
+    if theory_graph.GRAPH in outputs:
+        spine_pages, spine_errors = spine.render(outputs[theory_graph.GRAPH])
+        outputs.update(spine_pages)
+        errors += spine_errors
     # The lineage (RW): how the account grew, from its curated turning points, the records' history and the
     # crosswalk; an evidence path the tree lacks or a quotation its file no longer holds is an error.
     lineage_pages, lineage_errors = lineage.render()
