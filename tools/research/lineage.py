@@ -105,6 +105,9 @@ def check(s):
     for t in s.get('thread', {}).get('points', []):
         if t not in ids:
             errors.append(f'lineage.json: the thread names no point {t}')
+    trust = s.get('folders_trust')
+    if trust:
+        errors += evidence_errors('lineage.json: the crosswalk\'s estimate', [trust])
     cut = s.get('cut', {})
     if not (cut.get('date_en') and cut.get('date_zh') and isinstance(cut.get('commits'), int) and cut.get('commit')):
         errors.append('lineage.json: the commit count needs its date, count and commit')
@@ -281,8 +284,9 @@ def page(s, lang, weeks, undated, by_folder, totals):
                                    date=cut['date_' + lang], commit=cut['commit'][:9]), '',
              f'![{words["title"]}]({os.path.basename(SVG[lang])})', '',
              words['labels_intro'], '']
+    colon = '：' if lang == 'zh' else ': '
     for key in LABELS:
-        lines.append(f'- **{s["labels"][key][lang]}**: {s["labels"][key]["means_" + lang]}')
+        lines.append(f'- **{s["labels"][key][lang]}**{colon}{s["labels"][key]["means_" + lang]}')
     lines.append('')
     th = s.get('thread', {})
     if th:
@@ -290,7 +294,7 @@ def page(s, lang, weeks, undated, by_folder, totals):
         number = {p['id']: n for n, p in enumerate(s['points'], 1)}
         for pid in th['points']:
             p = next(x for x in s['points'] if x['id'] == pid)
-            lines.append(f'{number[pid]}. **{p["date"]}, {cell(p["title"][lang])}.** {p["what"][lang]}')
+            lines.append(f'{number[pid]}. **{p["date"]}{"，" if lang == "zh" else ", "}{cell(p["title"][lang])}{"。" if lang == "zh" else "."}** {p["what"][lang]}')
         lines.append('')
     part = '\n'.join(lines)
     lines += [f'## {words["points_heading"]}', '',
@@ -298,7 +302,8 @@ def page(s, lang, weeks, undated, by_folder, totals):
     for n, p in enumerate(s['points'], 1):
         ev = '; '.join(f'[`{e["path"]}`]({link(e["path"], here)})' + (f' ({cell(e["locator"])})' if e.get('locator') else '')
                        if not e.get('private') else f'`{e["path"]}` ({words["not_in_repository"]})' for e in p['evidence'])
-        lines.append(f'| {n} | {p["date"]} | **{cell(p["title"][lang])}.** {cell(p["what"][lang])} | {ev} | '
+        stop = '。' if lang == 'zh' else '.'
+        lines.append(f'| {n} | {p["date"]} | **{cell(p["title"][lang])}{stop}** {cell(p["what"][lang])} | {ev} | '
                      f'{s["labels"][p["label"]][lang]} |')
     if s.get('renames'):
         lines += [f'## {words["renames_heading"]}', '', words['renames_intro'], '',

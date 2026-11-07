@@ -134,7 +134,7 @@ class Drawing(unittest.TestCase):
         self.assertIn('| The map | The root | 3 | 0 | 0 | 0 |', body)
         self.assertIn('| Life and evolution | The root | 0 | 0 | 0 | 1 |', body)
         self.assertIn('1 pair with fewer than 10 formal-reuse uses (3 uses)', body)
-        rows = [l for l in lines if l.startswith('| ') and not l.startswith('| Results of')]
+        rows = [l for l in lines if l.startswith('| ') and not l.startswith('| Edges from results of')]
         total = sum(int(c) for l in rows for c in l.strip('|').split('|')[2:])
         kinds = sum(1 for e in g['edges'] if e['type'] in spine.KINDS)
         self.assertEqual(total, kinds)

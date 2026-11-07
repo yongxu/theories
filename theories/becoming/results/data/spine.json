@@ -51,8 +51,8 @@
  "outcomes": {
   "mixed": {
    "colour": "#eb6834",
-   "en": "frozen tests passed and failed",
-   "zh": "冻结检验有通过也有未通过"
+   "en": "frozen tests passed and failed, or a bridge failed",
+   "zh": "冻结检验有通过也有未通过，或桥接不成立"
   },
   "partial": {
    "colour": "#2a78d6",
@@ -82,15 +82,19 @@
    "en": {
     "title": "Persistence certifies the joint draw",
     "words": [
-     "passed on held-out yeast regimes",
-     "failed at the instrument's floor"
+     "in the model proved",
+     "beyond the model conjectured, on frozen tests: of the three settings passed, one of real data",
+     "on yeast values not read before no frozen test of the need or its fates has passed",
+     "no field test of a need measured in advance"
     ]
    },
    "zh": {
     "title": "持续担保联合取用",
     "words": [
-     "在三种情形中通过",
-     "在四种中未通过"
+     "在模型中已证明",
+     "模型之外是猜想：在三种情形中通过",
+     "在四种中未通过，三种在真实酵母中，一种在鱼类种群中",
+     "没有对事先测得之需要的实地检验"
     ]
    }
   },
@@ -101,13 +105,16 @@
    "en": {
     "title": "The state of a renewable condition under a draw is its level, its recent giving and one lag, its place named before the data",
     "words": [
-     "MQ4 failed its whole-state verdict; MQ5 passed"
+     "conjectured, on four frozen fish-stock tests",
+     "MQ4 failed its whole-state verdict; MQ5 passed; MQ7 missed its frozen bound",
+     "UE31b (run on 6 November 2026) failed its former wording"
     ]
    },
    "zh": {
     "title": "一个可更新的缘在取用之下的状态，就是它的水平、近来的给予与一个滞后，其位置在读数据之前定下",
     "words": [
-     "一项通过，一项未通过其状态裁决"
+     "猜想；四项冻结的鱼类种群检验中，一项通过，一项未通过其整体状态裁决，一项未达其冻结界限",
+     "其原先的措辞“凡量度所及”败于蛹与成虫这一变量更少的类"
     ]
    }
   },
@@ -118,13 +125,17 @@
    "en": {
     "title": "Optimization drains what lies beyond its couplings, where that gives room",
     "words": [
-     "the clause on trained systems conjectured, with partial support"
+     "the law for optima proved",
+     "the clause on trained systems conjectured, with partial support",
+     "as first worded for any condition sharing no units, failing where the learner reads the condition"
     ]
    },
    "zh": {
     "title": "在有余地之处，优化耗竭其耦合之外者",
     "words": [
-     "对训练出的系统是猜想，得到部分支持"
+     "对最优解已证明",
+     "对训练出的系统是猜想，得到部分支持",
+     "关于学习者会保住存量的预测未通过"
     ]
    }
   },
@@ -135,13 +146,13 @@
    "en": {
     "title": "The scope can be installed, and it carries",
     "words": [
-     "IN1 partly passed (with talk, one model of two)"
+     "IN1 partly passed (with talk, one model of two); transfer untested"
     ]
    },
    "zh": {
     "title": "范围可以被安装，并且它能迁移",
     "words": [
-     "一项冻结检验部分通过（两个模型中的一个）"
+     "一项冻结检验部分通过（有交谈时，两个模型中的一个）；迁移未经检验"
     ]
    }
   },
@@ -152,14 +163,18 @@
    "en": {
     "title": "The order is shared by every valuer who counts everything positively",
     "words": [
-     "VD1: every frozen rule failed",
-     "X1s and X2 passed, X1 and X3 failed"
+     "reduction proved under net weightings",
+     "the bound conjectured",
+     "valuing positively is C's premise relocated",
+     "VD1: every frozen rule failed; VD2, sign measured apart: X1s and X2 passed, X1 and X3 failed",
+     "role-play judgments, human valuers untested"
     ]
    },
    "zh": {
     "title": "次序为每一个把一切都计为正的评价者所共有",
     "words": [
-     "第一项冻结检验每条规则都未通过，第二项四条中通过两条"
+     "对净加权已证明归约；界是猜想",
+     "在角色扮演的判断上，第一项冻结检验每条规则都未通过，第二项四条中通过两条"
     ]
    }
   },
@@ -170,13 +185,19 @@
    "en": {
     "title": "A break is seen coming only through what couples into what breaks",
     "words": [
-     "three frozen seabird tests did not reject it at their thresholds"
+     "the invisible half proved on the World model",
+     "beyond these models, conjectured",
+     "three frozen seabird tests did not reject it at their thresholds",
+     "EW2 at low power, estimates in the refuting direction",
+     "none establishes conditional independence"
     ]
    },
    "zh": {
     "title": "断裂只有经由耦合进断裂者的东西才能被预见",
     "words": [
-     "三项冻结的海鸟检验在其阈值上没有拒绝它"
+     "不可见的一半在世界模型上证明",
+     "跨领域是猜想",
+     "三项冻结的海鸟检验在其阈值上没有拒绝它，第一项功效很低，估计值在反驳的方向上；没有一项确立它"
     ]
    }
   },
@@ -187,14 +208,19 @@
    "en": {
     "title": "A measure read from what it selects outlives its refutation",
     "words": [
-     "every frozen verdict passed and the bridge failed"
+     "the lock outliving a growing unread coordinate, proved",
+     "that actual metrics are so formed conjectured",
+     "every frozen verdict passed and the bridge failed",
+     "occurred in this system, counting against that case as a claim about trained judges"
     ]
    },
    "zh": {
     "title": "一个从它所选择者读出的度量，存续得比对它的驳倒更久",
     "words": [
+     "锁定对任何类型证明；实际的度量是猜想",
      "每一冻结裁决都通过",
-     "桥接不成立"
+     "桥接不成立",
+     "故 T7 所禁止的一种情形发生了，计入此情形作为关于训练出的评判者之主张的反证"
     ]
    }
   },
@@ -205,13 +231,16 @@
    "en": {
     "title": "生生 as the direction",
     "words": [
-     "argued"
+     "argued",
+     "open: P2 and P4",
+     "and a reason for C"
     ]
    },
    "zh": {
     "title": "对生命而言，道是生生",
     "words": [
-     "已论证"
+     "已论证；未决",
+     "以及 C 的理由"
     ]
    }
   }
@@ -222,8 +251,8 @@
    "en": {
     "lines": [
      "The continuation condition",
-     "scope: fixes whose losses count",
-     "a premise, not asserted"
+     "scope: fixes whose losses count; does not rank anything",
+     "a premise, not asserted; warrant open"
     ],
     "quotes": [
      [
@@ -231,16 +260,20 @@
       "fixes whose losses count"
      ],
      [
+      "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "| rank anything |"
+     ],
+     [
       "theories/becoming/THE-THEORY-OF-BECOMING.md",
-      "Scope: the continuation condition (§7) | A premise, not asserted"
+      "Scope: the continuation condition (§7) | A premise, not asserted; warrant open"
      ]
     ]
    },
    "zh": {
     "lines": [
      "延续条件",
-     "确定范围：谁的损失算数",
-     "本理论不断言"
+     "确定范围：谁的损失算数；它不对任何东西排序",
+     "前提，不断言；根据未决"
     ],
     "quotes": [
      [
@@ -249,7 +282,11 @@
      ],
      [
       "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
-      "本理论对二者都不断言"
+      "它不对任何东西排序"
+     ],
+     [
+      "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+      "前提，不断言；根据未决"
      ]
     ]
    }
@@ -259,34 +296,38 @@
    "en": {
     "lines": [
      "C, widening what can form is better",
-     "order: ranks a course above every course it widens",
-     "a premise, not asserted"
+     "order: ranks a course above every course it widens; does not rank mixed comparisons",
+     "a premise, not asserted; warrant open"
     ],
     "quotes": [
      [
       "theories/becoming/THE-THEORY-OF-BECOMING.md",
-      "Order: C, widening what can form is better (§7) | A premise, not asserted"
+      "Order: C, widening what can form is better (§7) | A premise, not asserted; warrant open"
      ],
      [
       "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "ranks a course above every course it widens"
+     ],
+     [
+      "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "| rank mixed comparisons |"
      ]
     ]
    },
    "zh": {
     "lines": [
      "C，即扩大可形成者更好",
-     "确定次序：把一个进程排在它所扩大的每一个进程之上",
-     "本理论不断言"
+     "确定次序：把一个进程排在它所扩大的每一个进程之上，而不判定任何混合的比较",
+     "前提，不断言；根据未决"
     ],
     "quotes": [
      [
       "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
-      "C，即扩大可形成者更好，确定次序：它把一个进程排在它所扩大的每一个进程之上"
+      "C，即扩大可形成者更好，确定次序：它把一个进程排在它所扩大的每一个进程之上，而不判定任何混合的比较"
      ],
      [
       "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
-      "本理论对二者都不断言"
+      "前提，不断言；根据未决"
      ]
     ]
    }
@@ -296,7 +337,12 @@
   {
    "home": "theories/becoming/chapters/08-METHOD.md",
    "anchor": "r-one-root-to-its-edge",
-   "text": "Each of the 117 distinct central declarations has one standing against the edge of one root. Eleven are derived, each a case of grammar laws, through bridges checked in Lean as equivalences"
+   "text": "Each of the 117 distinct central declarations has one standing against the edge of one root. Eleven are derived, each a case of grammar laws, through bridges checked in Lean as equivalences and support the review reads where a row has them"
+  },
+  {
+   "home": "theories/becoming/chapters/08-METHOD.md",
+   "anchor": "r-one-root-to-its-edge",
+   "text": "One, `GroupEnding.Flow.all_end`, is under a stated hypothesis"
   },
   {
    "home": "theories/becoming/chapters/08-METHOD.md",
@@ -306,12 +352,17 @@
   {
    "home": "theories/becoming/chapters/08-METHOD.md",
    "anchor": "shared-laws-and-connectivity",
-   "text": "Counted once each, the 117 distinct declarations fall four ways: 45 reach the grammar; 30 rest on balance"
+   "text": "Counted once each, the 117 distinct declarations fall four ways: 45 reach the grammar; 30 rest on balance, which the grammar represents both ways and cannot state without amounts, so they are no gap"
   },
   {
    "home": "theories/becoming/chapters/07-SIGNIFICANCE.md",
    "anchor": "",
    "text": "Evaluation enters through the ethics' two premises, each a hypothesis where used and neither asserted: the continuation condition for scope, C for order"
+  },
+  {
+   "home": "theories/becoming/chapters/08-METHOD.md",
+   "anchor": "shared-laws-and-connectivity",
+   "text": "The connectivity measure counts, at each landing, the shared laws that a central declaration's compiled type or value reaches"
   }
  ]
 }

@@ -10,7 +10,7 @@
 
 **The root.** One kind of symbol: a relation read as condition. Sameness is in some respect, a *class*. Where one occurrence conditions another alike under the class, the second *continues* it. At two grains, parts and pattern, a course can *generate* (go on through renewals of its parts), *keep* (go on with none) or *degenerate* (end on every branch); generation and keeping each exclude degeneration. Of the central results a few are cases of the root, more use its laws in their proofs and most use none ([08 §7](chapters/08-METHOD.md#r-one-root-to-its-edge)). One unfolding is a thesis, argued: within relations, as far as shown, taker and drawn-on are two roles of one relatum and knower and known one [loop](chapters/03-KNOWING.md#the-reading-loop), and responsibility is [not shown to differentiate](chapters/07-SIGNIFICANCE.md#practical-judgment). It forbids explanations, not observations ([08](chapters/08-METHOD.md#one-relational-unfolding)).
 
-![The eight chapters around the grammar: circles sized by their results, curves counting the uses between chapters' results, the two premises entering chapter 7 from outside, and T1 to T8 at their homes coloured by outcome](results/spine.svg)
+![The eight chapters around the grammar: circles sized by their results, curves counting the uses between chapters' results, the two premises coming into chapter 7 as hypotheses where used, and T1 to T8 at their homes coloured by test outcome](results/spine.svg)
 
 *The chapters around the grammar, drawn from [the theory graph](results/THEORY-GRAPH.md) by a tool; what the picture shows and does not show is under [The spine](results/THEORY-GRAPH.md#the-spine).*
 

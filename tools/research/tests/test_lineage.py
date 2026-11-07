@@ -32,6 +32,8 @@ class Tree(unittest.TestCase):
         (root / Path(lineage.CORRESPONDENCES).parent).mkdir(parents=True)
         (root / lineage.CORRESPONDENCES).write_text(json.dumps([
             {'group': 'g1', 'carried': 'carried'}, {'group': 'g1', 'carried': 'changed'}, {'group': 'g2', 'carried': 'changed'}]))
+        (root / 'theories/becoming/results/atlas/CROSSWALK.md').write_text(
+            'Weighted, that estimates 82.6% holding, 14.2% with a label or role wrong and 3.2% with a wrong reading over all 1183.\n')
         (root / 'notes').mkdir()
         (root / 'notes/a.md').write_text('Here are *the first* words of a note.\n')
         self.root = root

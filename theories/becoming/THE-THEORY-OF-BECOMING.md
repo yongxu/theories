@@ -25,7 +25,7 @@ A fished stock, with what depends on it and gives the boats nothing, carries the
 
 Its centre [AI reading]: a selection, whether a knower, a training run, a market or an optimizer, reaches only what couples into its selector, so it can succeed while what it cannot read is lost, and a rule read from its own results can hold itself there. Whether such a loss counts the dynamics leave open.
 
-![The eight chapters around the grammar: circles sized by their results, curves counting the uses between chapters' results, the two premises entering chapter 7 from outside, and T1 to T8 at their homes coloured by outcome](results/spine.svg)
+![The eight chapters around the grammar: circles sized by their results, curves counting the uses between chapters' results, the two premises coming into chapter 7 as hypotheses where used, and T1 to T8 at their homes coloured by test outcome](results/spine.svg)
 
 *The chapters around the grammar, drawn from [the theory graph](results/THEORY-GRAPH.md) by a tool; what the picture shows and does not show is under [The spine](results/THEORY-GRAPH.md#the-spine).*
 
