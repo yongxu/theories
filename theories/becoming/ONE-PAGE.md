@@ -2,13 +2,17 @@
 
 [中文](ONE-PAGE.zh.md) · [The overview](THE-THEORY-OF-BECOMING.md) · [The eight chapters](chapters/README.md) · [The theory graph](results/THEORY-GRAPH.md)
 
-*Eleven to fifteen minutes to read.*
+*Twelve to fifteen minutes to read.*
 
 **What it is.** An account of how anything comes to be, lasts, changes and passes away within one relational unfolding, of how life and knowing take shape there and how far evaluation does, without assuming that becoming is good. Made with AI, proofs included; the proofs are checked by machine, everything else only by AI review, and no person has yet reviewed it ([the review packet](review/README.md)).
 
 **One case.** In [a frozen test](../../experiments/direction-installation/README.md), three AI fishers share a lake. A bed of mussels gives them nothing and dies the first month fewer than 70 tons are left. The community's largest steady catch, 50 tons a month, ends it; 30 a month keeps it, costs 40% of the catch and ends no fisher. Told nothing of the bed, they kept it in no season, under any instruction. They are language models told what to do, not systems trained. The account's centre [AI reading]: a selection can succeed while what it cannot read is lost, and the laws do not say whether that loss counts.
 
 **The root.** One kind of symbol: a relation read as condition. Sameness is in some respect, a *class*. Where one occurrence conditions another alike under the class, the second *continues* it. At two grains, parts and pattern, a course can *generate* (go on through renewals of its parts), *keep* (go on with none) or *degenerate* (end on every branch); generation and keeping each exclude degeneration. Of the central results a few are cases of the root, more use its laws in their proofs and most use none ([08 §7](chapters/08-METHOD.md#r-one-root-to-its-edge)). One unfolding is a thesis, argued: within relations, as far as shown, taker and drawn-on are two roles of one relatum and knower and known one [loop](chapters/03-KNOWING.md#the-reading-loop), and responsibility is [not shown to differentiate](chapters/07-SIGNIFICANCE.md#practical-judgment). It forbids explanations, not observations ([08](chapters/08-METHOD.md#one-relational-unfolding)).
+
+![The eight chapters around the grammar: circles sized by their results, curves counting the uses between chapters' results, the two premises coming into chapter 7 as hypotheses where used, and T1 to T8 at their homes coloured by test outcome](results/spine.svg)
+
+*The chapters around the grammar, drawn from [the theory graph](results/THEORY-GRAPH.md) by a tool; what the picture shows and does not show is under [The spine](results/THEORY-GRAPH.md#the-spine).*
 
 | | What the account says | [How it stands](chapters/08-METHOD.md#standings-and-bases) | What would show it wrong |
 |---|---|---|---|

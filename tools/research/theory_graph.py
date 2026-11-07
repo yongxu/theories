@@ -374,6 +374,8 @@ def page(graph):
         c = counts[k]
         if sum(c.values()):
             lines.append(f'| {REGION_TITLES[k]} | {c["concept"]} | {c["result"]} | {c["module"]} | {c["text"]} |')
+    from tools.research import spine  # the picture's section reads this module's regions, so it is imported here
+    lines += spine.section(graph, PAGE)
     lines += corpus_section(graph)
     lines += ['', '## The grammar\'s concepts', '', '| Name | Gloss | Module |', '|---|---|---|']
     rows = {}
