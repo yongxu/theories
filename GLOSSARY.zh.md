@@ -1,7 +1,7 @@
 <!-- GLOSSARY.md 的中文版（RW，2026 年 11 月 8 日，AI 译自英文版，未经人工审读）。义以英文版为准；英文版改动时，本版随之修订。 -->
 # 术语表
 
-[English](GLOSSARY.md) · [首页](README.zh.md) · [一页](theories/becoming/ONE-PAGE.zh.md) · [用途](theories/becoming/USES.zh.md) · [实例](theories/becoming/USES-EXAMPLES.zh.md) · [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) · [第六章](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) · [怎样长成](theories/LINEAGE.zh.md) · **术语表** · [审查包](theories/becoming/review/README.zh.md)
+[English](GLOSSARY.md) · [首页](README.zh.md) · [一页](theories/becoming/ONE-PAGE.zh.md) · [用途](theories/becoming/USES.zh.md) · [实例](theories/becoming/USES-EXAMPLES.zh.md) · [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) · [八章](theories/becoming/chapters/README.md) · [第六章](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) · [检验](TESTS.md) · [怎样长成](theories/LINEAGE.zh.md) · **术语表** · [审查包](theories/becoming/review/README.zh.md)
 
 生成变化之论的词语，每一个只有一义、一个所属之处：定义它的那一章的那一节。别处用到一个词，都取这一义，并链接到那里。汉语术语在引入之处释义一次，并附拼音。除第六章外，各章与理论图皆为英文。文法的每一个概念及其 Lean 名称，都列在[理论图](theories/becoming/results/THEORY-GRAPH.md#the-grammars-concepts)中；较早文本所用的标签与现行术语的对照，见[方法一章](theories/becoming/chapters/08-METHOD.md#names)。本页所取代的术语表（规范章的 §10，连同其形式术语索引及其与语料词汇的对照）与该章一同保存在历史之中；九月的语料术语表（192 个词条）保存在[它自己的历史](_process/history/2026-09-consolidation/GLOSSARY.md)中。
 
@@ -66,8 +66,8 @@
 | 延续条件（the continuation condition）`Unrestricted` | 从每一个立场看，对任何东西，其延续到未来都有意义；陈述而不断言；它确定范围 | [第七章 §3](theories/becoming/chapters/07-SIGNIFICANCE.md#condition) |
 | 自闭包读法、全闭包条件（the own-closure reading, the whole-closure condition） | 把“有意义”读作位于一个中心沿一个关系与之一同继续的东西之内；延续条件在这一读法之下所成为的：每一个中心沿该关系的闭包都是整体。这是一个关于关系的陈述，有的网满足它，有的网不满足，而不是意义保持自由时的那个前提 | [第七章 §4.5](theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-continuation-condition-on-the-root) |
 | C | 扩大之比较：扩大可形成者更好；它给出次序；对诸进程的排序需要它，或一个代替它的前提（单凭自我关切，无需 C 便排定一种情形） | [第七章 §4](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order) |
-| 延续之条件（第六章之名） | 第六章以古典之词称延续条件；义即延续条件（见上），只有一义 | [第六章](theories/becoming/chapters/06-CLASSICAL-TEXTS.md#thesis) |
-| 以广为愈（第六章之名） | 第六章以古典之词称 C（扩大可形成者更好）；义即 C（见上），只有一义 | [第六章](theories/becoming/chapters/06-CLASSICAL-TEXTS.md#thesis) |
+| 延续之条件、凡续皆有顾（第六章之名） | 第六章称延续条件为延续之条件，它在 §7.3 所述的中华本以古名称之为凡续皆有顾；义即延续条件（见上），只有一义 | [第六章](theories/becoming/chapters/06-CLASSICAL-TEXTS.md#thesis)、[§7.3](theories/becoming/chapters/06-CLASSICAL-TEXTS.md#zhonghua) |
+| 以广为愈（第六章之名） | 第六章与中华本称 C（扩大可形成者更好）为以广为愈；义即 C（见上），只有一义 | [第六章](theories/becoming/chapters/06-CLASSICAL-TEXTS.md#thesis)、[§7.3](theories/becoming/chapters/06-CLASSICAL-TEXTS.md#zhonghua) |
 | 不变之步（the step of invariance） | 延续条件在自我之预设以外的内容 | [第七章 §4](theories/becoming/chapters/07-SIGNIFICANCE.md#step) |
 | 存活之意义（living significance） | 该条件所给出的：活下去者的意义 | [第七章 §3](theories/becoming/chapters/07-SIGNIFICANCE.md#living-significance) |
 | 生生（*shēngshēng*） | 整体之中的生命及其持续的生发［AI 读法，D1］。T8 论证，它就是对生命而言的道，以扩大可形成者来比较，以延续条件定范围，以 C 定次序。它既不是文法的 `«生生»`（无尽的复生），也不是第二章的生成本身（生成容许损失），也不是任何新的组织。读作扩大时，在一个进程的诸时刻上、在判定的前提之下，它是可能者的生成，且不失去其中任何一个［AI 读法，D45］ | [第七章 §2](theories/becoming/chapters/07-SIGNIFICANCE.md#order) |

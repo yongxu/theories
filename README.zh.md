@@ -2,11 +2,11 @@
 
 # 生成变化之论
 
-[English](README.md) · **首页** · [一页](theories/becoming/ONE-PAGE.zh.md) · [用途](theories/becoming/USES.zh.md) · [实例](theories/becoming/USES-EXAMPLES.zh.md) · [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) · [第六章](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) · [怎样长成](theories/LINEAGE.zh.md) · [术语表](GLOSSARY.zh.md) · [审查包](theories/becoming/review/README.zh.md)
+[English](README.md) · **首页** · [一页](theories/becoming/ONE-PAGE.zh.md) · [用途](theories/becoming/USES.zh.md) · [实例](theories/becoming/USES-EXAMPLES.zh.md) · [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) · [八章](theories/becoming/chapters/README.md) · [第六章](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) · [检验](TESTS.md) · [怎样长成](theories/LINEAGE.zh.md) · [术语表](GLOSSARY.zh.md) · [审查包](theories/becoming/review/README.zh.md)
 
 > 这一版仍在修订之中。
 
-*约三至四分钟读完；下面各个入口各注明所需时间。*
+*这一屏约三至四分钟（全页约五至六分钟）；下面各个入口各注明所需时间。*
 
 *AI 依英文首页与[一页](theories/becoming/ONE-PAGE.zh.md)写成，2026 年 11 月 8 日；无人读过。与它所链接之处不一致时，以所链接之处为准。*
 
@@ -22,7 +22,7 @@
 
 ## 从哪里读起
 
-十分钟，读[一页](theories/becoming/ONE-PAGE.zh.md)；一小时，再读[用途](theories/becoming/USES.zh.md)与[总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md)。
+十分钟，读[一页](theories/becoming/ONE-PAGE.zh.md)；一小时，再读[用途](theories/becoming/USES.zh.md)与[实例](theories/becoming/USES-EXAMPLES.zh.md)中你所在领域的一两例；一个半小时左右，读一页、用途与[总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md)。
 
 | 入口 | 是什么 | 读多久 |
 |---|---|---|
@@ -30,12 +30,12 @@
 | [用途](theories/becoming/USES.zh.md) | 逐个领域：今天能用它做什么，能做到多远，不主张什么 | 约十二至十六分钟 |
 | [实例](theories/becoming/USES-EXAMPLES.zh.md) | 每个领域一例或数例，各在其真实的地位上 | 约三十五至四十五分钟 |
 | [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) | 整个说明的一小时层，按八章的顺序 | 约五十分钟至一小时十分钟 |
-| [八章](theories/becoming/chapters/README.md) | 各章正文，诸结果的所属之处；除第六章外为英文 | 每章约两至六小时 |
+| [八章](theories/becoming/chapters/README.md) | 各章正文，诸结果的所属之处；除第六章外为英文 | 每章约两至六个半小时 |
 | [第六章](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) | 古文：读出、检验与分歧；中文 | 约两小时至两小时四十分钟 |
 | [检验](TESTS.md) | 冻结的检验，按结局排列，未通过者在前；英文 | 约三十二至四十二分钟 |
 | [理论图](theories/becoming/results/THEORY-GRAPH.md) | 概念、结果、模块、文本与各章之间的连接；英文 | 约五十二至六十八分钟 |
 | [怎样长成](theories/LINEAGE.zh.md) | 本说明怎样从更早的文字与理论文件夹长成 | 全文约九十二至一百二十分钟，图、标签与一条线索约十至十三分钟 |
-| [术语表](GLOSSARY.zh.md) | 每个词的一义与其所属之处 | 约十六至二十分钟 |
-| [审查包](theories/becoming/review/README.zh.md) | 给审读者的材料与问题；古文与佛学两份为中文 | 封面约六到九分钟 |
+| [术语表](GLOSSARY.zh.md) | 每个词的一义与其所属之处 | 约十六至二十一分钟 |
+| [审查包](theories/becoming/review/README.zh.md) | 给审读者的材料与问题；古文、佛学两份与重新归类的编码手册为中文 | 封面约六到九分钟 |
 
-**语言。** 除第六章与古文、佛学两份审查材料外，各章、记录、检验与理论图都是英文。各中文版由 AI 译自英文，未经人工审读；义以英文版为准。
+**语言。** 除第六章、古文与佛学两份审查材料及重新归类的编码手册外，各章、记录、检验与理论图都是英文。各中文版由 AI 译自英文，未经人工审读；义以英文版为准。

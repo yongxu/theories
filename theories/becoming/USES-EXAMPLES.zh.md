@@ -3,13 +3,13 @@
 <a id="what-the-account-is-for-worked-examples"></a>
 # 本说明有什么用：实例
 
-[English](USES-EXAMPLES.md) · [首页](../../README.zh.md) · [一页](ONE-PAGE.zh.md) · [用途](USES.zh.md) · **实例** · [总览](THE-THEORY-OF-BECOMING.zh.md) · [第六章](chapters/06-CLASSICAL-TEXTS.md) · [怎样长成](../LINEAGE.zh.md) · [术语表](../../GLOSSARY.zh.md) · [审查包](review/README.zh.md)
+[English](USES-EXAMPLES.md) · [首页](../../README.zh.md) · [一页](ONE-PAGE.zh.md) · [用途](USES.zh.md) · **实例** · [总览](THE-THEORY-OF-BECOMING.zh.md) · [八章](chapters/README.md) · [第六章](chapters/06-CLASSICAL-TEXTS.md) · [检验](../../TESTS.md) · [怎样长成](../LINEAGE.zh.md) · [术语表](../../GLOSSARY.zh.md) · [审查包](review/README.zh.md)
 
 *约三十五至四十五分钟读完，一次一个实例；[逐领域的那张表](USES.zh.md#field-by-field)在先。*
 
 *由 AI 依其所链接的所属之处写成，2026 年 11 月 8 日；每一处重述都由 AI 读者与其所属之处核对过；无人读过。它与所属之处不一致时，以所属之处为准。这不是建议，也不是对任何实际系统的应用：见[用途页不做什么](USES.zh.md#what-this-page-does-not-do)。*
 
-*引自英文所属之处的话，译成中文并标为（译文）；原文见[英文版](USES-EXAMPLES.md)。古文与第六章之名照原文引。*
+*引自英文所属之处的话，译成中文并标为（译文）；原文见[英文版](USES-EXAMPLES.md)。古文、第六章之名与条目自身的中文照原文引。*
 
 
 <a id="alignment-of-ai-systems"></a>
@@ -164,7 +164,7 @@ AJ 的计划把目标陈述为联合选择的对齐：人类、制度与训练�
 
 **与之并列的律。** 在世界模型上证明，不加公理，就离散步与整数之量而言：在该缘处平衡时，「联合交换在每一侧对均等的偏离至多是到 `m` 的差距，恰在下一水平位于 `m` 与当前水平之间之处：这个界恰是不越过（……）；在界内且相反时，水平定于 `m`；超出界，一个相反的交换便越过，并可以永远振荡」（译文）（[02](chapters/02-MAP.md#r-two-sided-regulation-and-late-reading)）。一侧不是调节：一个见证满足恢复的前提，却停留在 `m` 之上。它与实际系统的对应是另一项义务（[记录](results/records/two-sided-regulation-and-late-reading.md)）。调节重述的是无差拍控制与必要多样性（[08](chapters/08-METHOD.md#beyond-the-table)）。
 
-**这一对照记下了什么**［AI 读法，D54］。中国思想之映射没有找到一个水平从两侧得到保持之律；这些律「是它所拟的形式陈述；把这些段落读作这些律，是 AI 的读法」（记录）。这段文字被记为*定域*，而非*相合*：压低高者、抬高低者，不是整个展开之律（一个环只经由一个返还较少的环节才闭合一个差异，而闭合不是无损的），而是「某种调节耦合的性质」；而经文把它归于天之道，这一归属本理论不采纳（[该条目](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/passages.json)，`lao-77-tian-zhi-dao`）。该章接着说「人之道则不然，损不足以奉有馀」。该对照把这一句记为相合：每一次上升都是被给予的，一员上升只在另一员下降之时；这些是关于方向与来源的律，不含评价，而判定这是错的，「需要延续条件与比较承诺」（`lao-77-ren-zhi-dao`），用 06 的话说，即「延续之条件」定范围、「以广为愈」（C）定次序，本理论对二者都不断言（[06](chapters/06-CLASSICAL-TEXTS.md#laozi-51)）。06 把这一句列为该传统自身对争胜与等级的回应之一（[06](chapters/06-CLASSICAL-TEXTS.md#four-layers)）。
+**这一对照记下了什么**［AI 读法，D54］。中国思想之映射没有找到一个水平从两侧得到保持之律；这些律「是它所拟的形式陈述；把这些段落读作这些律，是 AI 的读法」（译文）（记录）。这段文字被记为*定域*，而非*相合*：压低高者、抬高低者，不是整个展开之律（一个环只经由一个返还较少的环节才闭合一个差异，而闭合不是无损的），而是「某种调节耦合的性质」；而经文把它归于天之道，这一归属本理论不采纳（[该条目](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/passages.json)，`lao-77-tian-zhi-dao`）。该章接着说「人之道则不然，损不足以奉有馀」。该对照把这一句记为相合：每一次上升都是被给予的，一员上升只在另一员下降之时；这些是关于方向与来源的律，不含评价，而判定这是错的，「需要延续条件与比较承诺」（`lao-77-ren-zhi-dao`），用 06 的话说，即「延续之条件」定范围、「以广为愈」（C）定次序，本理论对二者都不断言（[06](chapters/06-CLASSICAL-TEXTS.md#laozi-51)）。06 把这一句列为该传统自身对争胜与等级的回应之一（[06](chapters/06-CLASSICAL-TEXTS.md#four-layers)）。
 
 **它不表明什么。** 相合不是印证：律的成立不靠原文，原文的意义也不由律穷尽；定域不是否定（[06](chapters/06-CLASSICAL-TEXTS.md#three-relations)）。该记录不表明某个给定的系统调节一个水平，也不表明保持一个水平是好的：这些律说的是什么保持它、它需要多宽的带。把这段文字读作劝告，需要延续条件（范围）与 C（次序），而经文与脊柱都不提供它们。没有人读过其所归之类或读法（[06](chapters/06-CLASSICAL-TEXTS.md#open)）。
 
