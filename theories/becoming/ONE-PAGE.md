@@ -10,6 +10,10 @@
 
 **The root.** One kind of symbol: a relation read as condition. Sameness is in some respect, a *class*. Where one occurrence conditions another alike under the class, the second *continues* it. At two grains, parts and pattern, a course can *generate* (go on through renewals of its parts), *keep* (go on with none) or *degenerate* (end on every branch); generation and keeping each exclude degeneration. Of the central results a few are cases of the root, more use its laws in their proofs and most use none ([08 §7](chapters/08-METHOD.md#r-one-root-to-its-edge)). One unfolding is a thesis, argued: within relations, as far as shown, taker and drawn-on are two roles of one relatum and knower and known one [loop](chapters/03-KNOWING.md#the-reading-loop), and responsibility is [not shown to differentiate](chapters/07-SIGNIFICANCE.md#practical-judgment). It forbids explanations, not observations ([08](chapters/08-METHOD.md#one-relational-unfolding)).
 
+![The eight chapters around the grammar: circles sized by their results, curves counting the uses between chapters' results, the two premises entering chapter 7 from outside, and T1 to T8 at their homes coloured by outcome](results/spine.svg)
+
+*The chapters around the grammar, drawn from [the theory graph](results/THEORY-GRAPH.md) by a tool; what the picture shows and does not show is under [The spine](results/THEORY-GRAPH.md#the-spine).*
+
 | | What the account says | [How it stands](chapters/08-METHOD.md#standings-and-bases) | What would show it wrong |
 |---|---|---|---|
 | **What makes something go on?** | Continuation relative to a class, at two grains ([01](chapters/01-ROOT.md#r-continuation-relative-to-a-class), [02](chapters/02-MAP.md#r-generation-and-degeneration-at-two-grains)) | Theorems for every relation and class, so they forbid no relation. That this explains how things go on: argued. That every becoming fits it: open | A failed check. As language, nothing. As explanation, a rival deriving the laws from fewer patterns; on a first count, a tie ([08 §9](chapters/08-METHOD.md#what-would-defeat-the-reading)) |

@@ -6,7 +6,7 @@ Retired material, moved here with its bytes unchanged. Each file's former path, 
 | Here | Came from | Files | Reason | Batch |
 |---|---|---|---|---|
 | [2026-09-consolidation/BOOKS.md](2026-09-consolidation/BOOKS.md) | `BOOKS.md` | 1 | September book plan (09-04/09-25); publication line dropped by Ren 10-10 | H1 |
-| [2026-09-consolidation/TIMELINE.md](2026-09-consolidation/TIMELINE.md) | `TIMELINE.md` | 1 | September narrative timeline, stops 2026-10-04; superseded by the Becoming-era record | H1 |
+| [2026-09-consolidation/TIMELINE.md](2026-09-consolidation/TIMELINE.md) | `TIMELINE.md` | 1 | September narrative timeline, stops 2026-10-04; carried forward by theories/LINEAGE.md (8 November 2026). What came after it is recorded on the board and in the commits, not as a narrative | H1 |
 | [2026-10-07-handoffs/CLOUD-HANDOFF-2026-10-07.md](2026-10-07-handoffs/CLOUD-HANDOFF-2026-10-07.md) | `_process/CLOUD-HANDOFF-2026-10-07.md` | 1 | dated 10-07 cloud handoff; merges executed (1fe1c2d1a, f0fc8818f); frontier superseded by the 10-08 Becoming priority | H1 |
 | [2026-09-consolidation/COVERAGE.md](2026-09-consolidation/COVERAGE.md) | `_process/COVERAGE.md` | 1 | what the 09-03 reading passes did and did not read; evidence | H1 |
 | [2026-09-consolidation/CRITIQUE-FINDINGS.md](2026-09-consolidation/CRITIQUE-FINDINGS.md) | `_process/CRITIQUE-FINDINGS.md` | 1 | five-critic audit of the September organisation (09-04); evidence | H1 |

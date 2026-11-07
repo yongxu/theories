@@ -1,0 +1,317 @@
+{
+ "schema_version": 1,
+ "about": "Curated input of the spine picture (tools/research/spine.py, board item RW (c)): the chapters' short labels, the theses' homes and the words each copies from 08 §9 and the overview's Chinese table, the two premises' words from 07 and the overview, and the caption's quotations with their homes (THEORY-GRAPH.md's section on the picture). Every quoted phrase is checked at its home on each render; a phrase its home no longer holds stops the render. The counts come from the theory graph.",
+ "order": [
+  "root",
+  "map",
+  "knowing",
+  "life",
+  "collective",
+  "classical",
+  "significance",
+  "method"
+ ],
+ "chapters": {
+  "root": {
+   "file": "01-ROOT.md",
+   "zh": "根"
+  },
+  "map": {
+   "file": "02-MAP.md",
+   "zh": "生成、守与退化"
+  },
+  "knowing": {
+   "file": "03-KNOWING.md",
+   "zh": "认知、学习与检验"
+  },
+  "life": {
+   "file": "04-LIFE.md",
+   "zh": "生命与演化"
+  },
+  "collective": {
+   "file": "05-COLLECTIVES.md",
+   "zh": "联合活动与选择"
+  },
+  "classical": {
+   "file": "06-CLASSICAL-TEXTS.md",
+   "zh": "古文"
+  },
+  "significance": {
+   "file": "07-SIGNIFICANCE.md",
+   "zh": "意义、伦理与对齐"
+  },
+  "method": {
+   "file": "08-METHOD.md",
+   "zh": "方法"
+  }
+ },
+ "chapter_label_homes": {
+  "zh": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md"
+ },
+ "outcomes": {
+  "mixed": {
+   "colour": "#eb6834",
+   "en": "frozen tests passed and failed",
+   "zh": "冻结检验有通过也有未通过"
+  },
+  "partial": {
+   "colour": "#2a78d6",
+   "en": "partly passed, or partial support",
+   "zh": "部分通过，或部分支持"
+  },
+  "not-rejected": {
+   "colour": "#1baf7a",
+   "en": "not rejected by frozen tests",
+   "zh": "未被冻结检验拒绝"
+  },
+  "argued": {
+   "colour": "#ffffff",
+   "en": "argued; no test",
+   "zh": "已论证；无检验"
+  }
+ },
+ "theses_homes": {
+  "en": "theories/becoming/chapters/08-METHOD.md",
+  "zh": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md"
+ },
+ "theses": [
+  {
+   "id": "T1",
+   "home": "map",
+   "outcome": "mixed",
+   "en": {
+    "title": "Persistence certifies the joint draw",
+    "words": [
+     "passed on held-out yeast regimes",
+     "failed at the instrument's floor"
+    ]
+   },
+   "zh": {
+    "title": "持续担保联合取用",
+    "words": [
+     "在三种情形中通过",
+     "在四种中未通过"
+    ]
+   }
+  },
+  {
+   "id": "T2",
+   "home": "map",
+   "outcome": "mixed",
+   "en": {
+    "title": "The state of a renewable condition under a draw is its level, its recent giving and one lag, its place named before the data",
+    "words": [
+     "MQ4 failed its whole-state verdict; MQ5 passed"
+    ]
+   },
+   "zh": {
+    "title": "一个可更新的缘在取用之下的状态，就是它的水平、近来的给予与一个滞后，其位置在读数据之前定下",
+    "words": [
+     "一项通过，一项未通过其状态裁决"
+    ]
+   }
+  },
+  {
+   "id": "T3",
+   "home": "collective",
+   "outcome": "partial",
+   "en": {
+    "title": "Optimization drains what lies beyond its couplings, where that gives room",
+    "words": [
+     "the clause on trained systems conjectured, with partial support"
+    ]
+   },
+   "zh": {
+    "title": "在有余地之处，优化耗竭其耦合之外者",
+    "words": [
+     "对训练出的系统是猜想，得到部分支持"
+    ]
+   }
+  },
+  {
+   "id": "T4",
+   "home": "significance",
+   "outcome": "partial",
+   "en": {
+    "title": "The scope can be installed, and it carries",
+    "words": [
+     "IN1 partly passed (with talk, one model of two)"
+    ]
+   },
+   "zh": {
+    "title": "范围可以被安装，并且它能迁移",
+    "words": [
+     "一项冻结检验部分通过（两个模型中的一个）"
+    ]
+   }
+  },
+  {
+   "id": "T5",
+   "home": "significance",
+   "outcome": "mixed",
+   "en": {
+    "title": "The order is shared by every valuer who counts everything positively",
+    "words": [
+     "VD1: every frozen rule failed",
+     "X1s and X2 passed, X1 and X3 failed"
+    ]
+   },
+   "zh": {
+    "title": "次序为每一个把一切都计为正的评价者所共有",
+    "words": [
+     "第一项冻结检验每条规则都未通过，第二项四条中通过两条"
+    ]
+   }
+  },
+  {
+   "id": "T6",
+   "home": "knowing",
+   "outcome": "not-rejected",
+   "en": {
+    "title": "A break is seen coming only through what couples into what breaks",
+    "words": [
+     "three frozen seabird tests did not reject it at their thresholds"
+    ]
+   },
+   "zh": {
+    "title": "断裂只有经由耦合进断裂者的东西才能被预见",
+    "words": [
+     "三项冻结的海鸟检验在其阈值上没有拒绝它"
+    ]
+   }
+  },
+  {
+   "id": "T7",
+   "home": "map",
+   "outcome": "mixed",
+   "en": {
+    "title": "A measure read from what it selects outlives its refutation",
+    "words": [
+     "every frozen verdict passed and the bridge failed"
+    ]
+   },
+   "zh": {
+    "title": "一个从它所选择者读出的度量，存续得比对它的驳倒更久",
+    "words": [
+     "每一冻结裁决都通过",
+     "桥接不成立"
+    ]
+   }
+  },
+  {
+   "id": "T8",
+   "home": "significance",
+   "outcome": "argued",
+   "en": {
+    "title": "生生 as the direction",
+    "words": [
+     "argued"
+    ]
+   },
+   "zh": {
+    "title": "对生命而言，道是生生",
+    "words": [
+     "已论证"
+    ]
+   }
+  }
+ ],
+ "premises": [
+  {
+   "id": "condition",
+   "en": {
+    "lines": [
+     "The continuation condition",
+     "scope: fixes whose losses count",
+     "a premise, not asserted"
+    ],
+    "quotes": [
+     [
+      "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "fixes whose losses count"
+     ],
+     [
+      "theories/becoming/THE-THEORY-OF-BECOMING.md",
+      "Scope: the continuation condition (§7) | A premise, not asserted"
+     ]
+    ]
+   },
+   "zh": {
+    "lines": [
+     "延续条件",
+     "确定范围：谁的损失算数",
+     "本理论不断言"
+    ],
+    "quotes": [
+     [
+      "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+      "确定范围：谁的损失算数"
+     ],
+     [
+      "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+      "本理论对二者都不断言"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "C",
+   "en": {
+    "lines": [
+     "C, widening what can form is better",
+     "order: ranks a course above every course it widens",
+     "a premise, not asserted"
+    ],
+    "quotes": [
+     [
+      "theories/becoming/THE-THEORY-OF-BECOMING.md",
+      "Order: C, widening what can form is better (§7) | A premise, not asserted"
+     ],
+     [
+      "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "ranks a course above every course it widens"
+     ]
+    ]
+   },
+   "zh": {
+    "lines": [
+     "C，即扩大可形成者更好",
+     "确定次序：把一个进程排在它所扩大的每一个进程之上",
+     "本理论不断言"
+    ],
+    "quotes": [
+     [
+      "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+      "C，即扩大可形成者更好，确定次序：它把一个进程排在它所扩大的每一个进程之上"
+     ],
+     [
+      "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+      "本理论对二者都不断言"
+     ]
+    ]
+   }
+  }
+ ],
+ "caption": [
+  {
+   "home": "theories/becoming/chapters/08-METHOD.md",
+   "anchor": "r-one-root-to-its-edge",
+   "text": "Each of the 117 distinct central declarations has one standing against the edge of one root. Eleven are derived, each a case of grammar laws, through bridges checked in Lean as equivalences"
+  },
+  {
+   "home": "theories/becoming/chapters/08-METHOD.md",
+   "anchor": "r-one-root-to-its-edge",
+   "text": "Six are counting, below the grammar. The other 99 stand at a named distance, each with its reason: 22 connected, reaching grammar laws without being declared a case of one"
+  },
+  {
+   "home": "theories/becoming/chapters/08-METHOD.md",
+   "anchor": "shared-laws-and-connectivity",
+   "text": "Counted once each, the 117 distinct declarations fall four ways: 45 reach the grammar; 30 rest on balance"
+  },
+  {
+   "home": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "",
+   "text": "Evaluation enters through the ethics' two premises, each a hypothesis where used and neither asserted: the continuation condition for scope, C for order"
+  }
+ ]
+}

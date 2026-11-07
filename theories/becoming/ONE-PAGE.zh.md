@@ -10,6 +10,10 @@
 
 **根。** 一种符号：关系，读作缘。同一总是某一方面的同一，即一个*类*。一个发生是另一个的缘、且二者在该类下相似，后者便*续*前者。以两种粒度，部分与模式，去读，一个进程可以*生成*（经由部分的复生而继续）、*守*（不经复生而继续）或*退化*（在每一分支上都终止）；生成与守各自排除退化。核心结果中，少数是根的情形，较多在证明中用到根之律，多数不用（[08 §7](chapters/08-METHOD.md#r-one-root-to-its-edge)）。展开是一个，这是一个论题，已论证：在关系之内，只到已表明之处，取者与被取者是同一关系项的两种角色，知者与所知是同一个[环](chapters/03-KNOWING.md#the-reading-loop)，而责任[未被表明是这样分化出来的](chapters/07-SIGNIFICANCE.md#practical-judgment)。它禁止的是解释，不是观察（[08](chapters/08-METHOD.md#one-relational-unfolding)）。
 
+![围绕文法的八章：圆按结果数定大小，曲线计各章结果之间的使用，两个前提从外部进入第七章，T1 到 T8 在其所属之处按结果着色](results/spine.zh.svg)
+
+*围绕文法的各章，由工具依[理论图](results/THEORY-GRAPH.md)画出；这幅图显示什么、不显示什么，见理论图的 [The spine](results/THEORY-GRAPH.md#the-spine)（英文）。*
+
 | | 本说明说什么 | [地位](chapters/08-METHOD.md#standings-and-bases) | 什么会表明它错 |
 |---|---|---|---|
 | **什么使一个东西继续下去？** | 相对于一个类的续，以两种粒度（[01](chapters/01-ROOT.md#r-continuation-relative-to-a-class)，[02](chapters/02-MAP.md#r-generation-and-degeneration-at-two-grains)） | 对一切关系与类成立的定理，所以它们不禁止任何关系。这能说明事物如何继续下去：已论证。每一种生灭变化都合于此：未决 | 一次失败的检查。作为语言，没有什么能。作为说明，一个从更少的模式推出诸律的对手；按初步计数，是平局（[08 §9](chapters/08-METHOD.md#what-would-defeat-the-reading)） |
