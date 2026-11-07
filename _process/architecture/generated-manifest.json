@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
   "files": {
-    "README.md": "2be3d41ee4c7ecfa2901ee9114a910623c128f20c62da76e5252910f5b9dd0d3",
-    "RESEARCH.md": "d045c52bf4a5058d6e0ca5a1452d73540bbaf8a29a5ecf4f1e0d5c234f9870db",
-    "RESULTS.md": "4e19b660b447072f4ecd91779d4932d921f12afca4c07a308e25a54c54c10544",
-    "GOALS.md": "60a481141ea4919a9d9b1ffc0d320175b1f8e1a0eb6e6bf4201b1790e44b62e9",
-    "DEPENDENCIES.md": "dd2b699e9cb2f43c1e84d4e9d01dfab5b400a3c6e27720b1827fbadcb2ec5908",
-    "_process/BRIEF.md": "3a888154078fa5d5c2daca4899cc94c529bd231c4d25d13257b0fca753f6fa0f",
-    "theories/becoming/README.md": "2737d243fabe1fbff80afff543d1d44011ca13d3f44459977d100f14620b5f3e",
-    "theories/becoming/results/ROADMAP.md": "ec1ffee17fd4b44c2ac9b5304c01f545441e012eb3a26b465c5fac9f08aaf6f0",
-    "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md": "16ed884bef67bcbb4178905624c530ffc962b7d3e626624d4ec8cb4aadd629fa",
-    "OPEN-QUESTIONS.md": "811690bc113649c31b6eb74a37616e6199f16ceddb89a8723c5173f8861f1344",
-    "theories/becoming/chapters/CLAIMS.md": "91903796d8afaf3cba93fa483c83e988375e42202319ce496827b6c910d73fce",
+    "README.md": "47648f4e98d82c033ea9f1cf60c5d56e7243d9d9b9bf79e7e69f485cac5910ef",
+    "RESEARCH.md": "e27460c9c7578d72de0e66c0a79396434984a72798d60498b75337d8287433e2",
+    "RESULTS.md": "13fe574b184d7da6cd9e2eaa818c813fb1841ddafdcd496ab241077067ceefb5",
+    "GOALS.md": "5cf208aa04cda21226e120aa5948050d0738b628f0c370c023cbd1a991db7753",
+    "DEPENDENCIES.md": "5963bf673f7bb6990628ee894ba5c21aa87625d22c9b89ec1a32dafe4223f558",
+    "_process/BRIEF.md": "b5a6a5f3426d212c0951d81f76251ada4ab0ef79a63c128661474358896ce413",
+    "theories/becoming/README.md": "43317bf769546fb7ec94d2be62f5bbcef06a645c9d8f80fef3389112d1c0e05b",
+    "theories/becoming/results/ROADMAP.md": "6a999ab4ad392be21216f3992881e479134591bb669d639c8daa26f4d02798c2",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md": "3c54d72bea4de6a68c1512cd620cc7bbc17281008c20655113564b1fd00bb61c",
+    "OPEN-QUESTIONS.md": "464319c3652e785732a55f65f83f04323a261300345b9d451290e11b7ff21af4",
+    "theories/becoming/chapters/CLAIMS.md": "d8ce23e1f0b159b18ffeb5b4360f6591c3e2cda6bd6e93ad5d0b6702b952b005",
     "theories/becoming/results/records/acquired-binding-compositional-use.md": "d11a976490dba7793ad3bacb2cd3c5caf9a1cddd93c2a5e73dba64bcaf915684",
     "theories/becoming/results/records/alignment-direction-g0-j.md": "69ce0c02807f202fc9d09477f9cc604af8260487d34dfa5f946b728f0b67127a",
     "theories/becoming/results/records/assured-route-criterion.md": "a0ee5347a0a50ed05fd025491b250f07ef6f94b03429bde3ca814cce59102f3c",
@@ -253,7 +253,7 @@
     "theories/becoming/results/ARGUMENTS-A-L.md": "140a9dc07690fd01db3855b8095b5c1f8aca6aa1e33f464a90b2f0250da2a8dc",
     "theories/becoming/results/ARGUMENTS-M-Z.md": "66be730d6e970ca6d7031c3c31b91b970dceca719c038ff4b7529dca552c7371",
     "theories/becoming/results/data/lean-index.json": "d5ed3eeb68faca7f79e8b48991fd5a7607c0fccdfc02ad98a4e8601bbbaa8ed5",
-    "theories/becoming/results/data/source-index.json": "be3f1c4f10c441d8c366105513bd9a3c6129c5d6b88f3eb4d8d7797c0ed3ff57",
+    "theories/becoming/results/data/source-index.json": "bac0fb6355d328e01f2fe9644aa5cd5333a16b0473a47856a847347f9119d004",
     "theories/becoming/results/LEAN-INDEX.md": "c48adc57895f5ef8e60616d4fde6cda03655060eea1b8735d0dbda0ba45bc26e",
     "theories/becoming/results/LEAN-DECLARATIONS.md": "40a8797e138863159de906b5049daec69aee43c853ea051c2b10d51a70e1c6af",
     "theories/becoming/results/lean-declarations/becoming-core.md": "2000be2d36ddfca24ac3a0ddea327a93b52ae8d2ce4ea9cb533a4b960e4c4ff8",
@@ -605,6 +605,7 @@
     "theories/becoming/results/records/what-would-give-c.md": "fbb52efeaeed2c9a430820d0c949dbe53ea12bb7bb1ab715ab69938e15a6e3b5",
     "theories/becoming/results/atlas/CROSSWALK.md": "5a13a956a5c1669416f6dc9684db6f2c3840d5c58106ee6bbdd4598afa50566b",
     "theories/becoming/results/atlas/map.html": "eb7240e8f542ece0e7f8053b967d36685b59eead7de307fc4e891c11d72463b8",
-    "theories/README.md": "7c756ad1afc95d16a39b44eb1e96bb43019a133f4eb7176f18ec722f8c9a86a5"
+    "theories/README.md": "7c756ad1afc95d16a39b44eb1e96bb43019a133f4eb7176f18ec722f8c9a86a5",
+    "TESTS.md": "04200f9acf4ab8c193187ca622a3e80ef1418e186eb955ce83387d4330ab2e00"
   }
 }

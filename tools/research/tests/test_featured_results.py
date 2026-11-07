@@ -112,6 +112,8 @@ class FeaturedResultsTests(unittest.TestCase):
         for path, body in views.items():
             with self.subTest(path=path):
                 prose = re.sub(r'<a id="[^"]*"></a>', '', body)  # kept anchors may spell the earlier Chinese heading
+                # the navigation line's link to the Chinese edition is named in its own language, as the English fronts name it
+                prose = re.sub(r'\[中文\]\([^)]*\.zh\.md\)', '', prose)
                 self.assertNotRegex(prose, '[\u4e00-\u9fff]', 'generated views render English only')
 
     def test_optional_overview_is_validated_and_visible_on_record_page(self):
