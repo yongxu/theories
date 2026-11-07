@@ -87,11 +87,11 @@
 <circle cx="321.0" cy="238.0" r="9" fill="#1c1917" stroke="#2a78d6" stroke-width="2.4"/>
 <text x="321.0" y="241.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">13</text>
 <line x1="385.0" y1="300" x2="385.0" y2="291.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="385.0" cy="282.0" r="9" fill="#ffffff" stroke="#1c1917" stroke-width="1.2"/>
-<text x="385.0" y="285.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#1c1917">14</text>
+<circle cx="385.0" cy="282.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
+<text x="385.0" y="285.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">14</text>
 <line x1="455.8" y1="300" x2="455.8" y2="291.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="455.8" cy="282.0" r="9" fill="#ffffff" stroke="#1c1917" stroke-width="1.2"/>
-<text x="455.8" y="285.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#1c1917">15</text>
+<circle cx="455.8" cy="282.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
+<text x="455.8" y="285.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">15</text>
 <line x1="471.9" y1="300" x2="471.9" y2="269.0" stroke="#a8a29e" stroke-width="0.8"/>
 <circle cx="471.9" cy="260.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
 <text x="471.9" y="263.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">16</text>
@@ -117,8 +117,8 @@
 <circle cx="865.2" cy="282.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
 <text x="865.2" y="285.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">23</text>
 <line x1="893.3" y1="300" x2="893.3" y2="291.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="893.3" cy="282.0" r="9" fill="#ffffff" stroke="#1c1917" stroke-width="1.2"/>
-<text x="893.3" y="285.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#1c1917">24</text>
+<circle cx="893.3" cy="282.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
+<text x="893.3" y="285.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">24</text>
 <line x1="893.3" y1="300" x2="893.3" y2="269.0" stroke="#a8a29e" stroke-width="0.8"/>
 <circle cx="893.3" cy="260.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
 <text x="893.3" y="263.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">25</text>
@@ -185,18 +185,12 @@
 <line x1="1221.3" y1="300" x2="1221.3" y2="291.0" stroke="#a8a29e" stroke-width="0.8"/>
 <circle cx="1221.3" cy="282.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
 <text x="1221.3" y="285.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">46</text>
-<line x1="1221.3" y1="300" x2="1221.3" y2="225.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="1221.3" cy="216.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="1221.3" y="219.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">47</text>
 <line x1="1230.6" y1="300" x2="1230.6" y2="269.0" stroke="#a8a29e" stroke-width="0.8"/>
 <circle cx="1230.6" cy="260.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="1230.6" y="263.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">48</text>
+<text x="1230.6" y="263.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">47</text>
 <line x1="1230.6" y1="300" x2="1230.6" y2="247.0" stroke="#a8a29e" stroke-width="0.8"/>
 <circle cx="1230.6" cy="238.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="1230.6" y="241.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">49</text>
-<line x1="1230.6" y1="300" x2="1230.6" y2="203.0" stroke="#a8a29e" stroke-width="0.8"/>
-<circle cx="1230.6" cy="194.0" r="9" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
-<text x="1230.6" y="197.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">50</text>
+<text x="1230.6" y="241.5" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">48</text>
 <circle cx="69" cy="464" r="8" fill="#1c1917" stroke="#1c1917" stroke-width="1.2"/>
 <text x="84.0" y="468.0" font-size="11.5" text-anchor="start" fill="#1c1917">公开</text>
 <circle cx="369" cy="464" r="8" fill="#ffffff" stroke="#1c1917" stroke-width="1.2"/>
@@ -204,6 +198,6 @@
 <circle cx="669" cy="464" r="8" fill="#ffffff" stroke="#1c1917" stroke-width="1.2" stroke-dasharray="2.5 2"/>
 <text x="684.0" y="468.0" font-size="11.5" text-anchor="start" fill="#1c1917">AI 重构</text>
 <circle cx="69" cy="490" r="8" fill="#ffffff" stroke="#2a78d6" stroke-width="2.4"/>
-<text x="84.0" y="494.0" font-size="11.5" text-anchor="start" fill="#1c1917">选择这条线索，见下</text>
+<text x="84.0" y="494.0" font-size="11.5" text-anchor="start" fill="#1c1917">选择机制这条线索，见下文</text>
 <text x="28.0" y="538.0" font-size="10.5" text-anchor="start" fill="#57534e">由 tools/research/lineage.py 依 lineage.json、各记录与对照生成。</text>
 </svg>

@@ -244,8 +244,8 @@
     "theories/becoming/results/records/two-act-worlds-carry-the-difference.md": "c3621193468b0d5207e24d680519e2f0af67a4d18130af3ce46b15889a16e1cb",
     "theories/becoming/results/records/worlds-are-runs.md": "aed2bb06229953f98bcbd991753f42844ce99263b0e98dee61d5c082ff53c1fe",
     "theories/becoming/chapters/README.md": "364166501aa6ae4dc508896cd91bbf906c6c5ae6cd867c4f4452312021a108e2",
-    "_process/research/README.md": "a87a0057db561ae912b12f4597743cd5e0285f1641ff5da18d5ef3a0201ee921",
-    "_process/research/2026-10-05-generative-foundation-review/root-foundation/INDEX.md": "46c9c6f0c08dac9dc7ceefb385c1d2d749b9762611fd66ae0da15d50f36bde2d",
+    "_process/research/README.md": "ea237b965028f7b48ceaff6990bf0acbb7263e63e8dad35d4db397f9ba0d10cb",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/INDEX.md": "950b4aa1d7e2359f21318afc88b8b536b3c51b094b842bc008259681a049a473",
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/REVIEWS.md": "0ccef05c0f94ed738029b8aa50c19901bcddb80807925beeb2dca83cb56dc687",
     "sources/README.md": "0f93ef30f6158caeed4f170d4f22ae1fdf53cbcf0d238bacbb35e406610b0ed3",
     "_process/DIRECTIVE-INDEX.md": "3e87289f6c52a9a229ef208ce737bbbec3660a0a5583e09d81e5da0bfa2b6252",
@@ -477,7 +477,7 @@
     "theories/becoming/results/records/generation-and-degeneration-at-two-grains.md": "4390d5c5d291047e20c12e8d88a9e5e9ed1de53c3a8ccba147452d1f193b3a5e",
     "theories/becoming/results/records/testing-within-the-net.md": "741df207b537e7eddf17b8b71743d45bd63180b1136b76015fbea6c22f9d80ee",
     "theories/becoming/results/data/theory-graph.json": "e886ce5f55a7bed76284e5c897f59816651abafa91f13af8dc884c80c572e6cb",
-    "theories/becoming/results/THEORY-GRAPH.md": "7d83ea674461c9adfaacbc57c3be96b00cf4132041b0333836e26c72da3184ec",
+    "theories/becoming/results/THEORY-GRAPH.md": "c1169a1de9053ee2d643d4f9b34991ab9547ff866a6675f75aa38a7d350c2c3b",
     "theories/becoming/results/records/a-regularity-kept-and-changed.md": "cbcad0091e92d2678194df5105befd68331c999d827a9e96a5c8c64b905f9130",
     "theories/becoming/results/records/rules-that-change-themselves-in-the-grammar.md": "66f9a838d9c59fddde4e63c17b0c1b22ce9c6865d5a0e15abbec3374d7a80b2b",
     "theories/becoming/results/records/reach-past-ones-own-end.md": "d1aa3ae821ccb555b16bf3169a364faaade5eb3a83460c6116e36f8fb110df3c",
@@ -606,11 +606,11 @@
     "theories/becoming/results/atlas/CROSSWALK.md": "5a13a956a5c1669416f6dc9684db6f2c3840d5c58106ee6bbdd4598afa50566b",
     "theories/becoming/results/atlas/map.html": "eb7240e8f542ece0e7f8053b967d36685b59eead7de307fc4e891c11d72463b8",
     "theories/README.md": "7c756ad1afc95d16a39b44eb1e96bb43019a133f4eb7176f18ec722f8c9a86a5",
-    "theories/becoming/results/spine.svg": "24bdb4c0ea74bb64df5f41a864dcc52327707b840d96b1014129fd9095f7df24",
-    "theories/becoming/results/spine.zh.svg": "721db97eb9d4a377135b51e26eccabeef6802936fba4962edf5a823ae4007389",
-    "theories/LINEAGE.md": "367298fe660e2a553bdb0b771d57a1a21baa54ee3034a3137e7b188d7fd20570",
-    "theories/lineage.svg": "65a99086519d5c4c3ee7ccffa97a99e6642a6d765b1fa908089583dbf738fa13",
-    "theories/LINEAGE.zh.md": "aa2b4df0edbccb2279e9a77a5e44deadd8a3558e4fe7947b8e67982ac5288bce",
-    "theories/lineage.zh.svg": "b0985937ea25a0dde6befb3b6a347ade0de86de59b8104fb332ddeacdc1a4d16"
+    "theories/becoming/results/spine.svg": "47013f56ed3155515fb6c7492a62a56796e2ce556dd2e85a660b6c0d5fbcf221",
+    "theories/becoming/results/spine.zh.svg": "753f7aea1996556ec2a1fc572b4b654a6f32b74deb8c863e57cebc9896aaf234",
+    "theories/LINEAGE.md": "0fe2927f5decd7340037f0a5489ca0d31fbc7428877e03f6f0a06a27b7ba0cf3",
+    "theories/lineage.svg": "53c9013799ae6be6e477c41ad917b80de495706ff3e2c72e582c452b23ee6aa1",
+    "theories/LINEAGE.zh.md": "ed90b617808e67fb210f7da860691cc24f35be088e1186db0b3e4f639c7f4227",
+    "theories/lineage.zh.svg": "b16d4ca4b94f0c50cce9949c9a428492956c5574865e95b0ecd671e5e0b95145"
   }
 }

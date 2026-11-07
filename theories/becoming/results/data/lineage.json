@@ -225,11 +225,11 @@
    "date": "2022-04-07",
    "title": {
     "en": "World of Possibilities: an ontology in which possibility is defined",
-    "zh": "《可能性的世界》：一个定义了「可能性」的存在论"
+    "zh": "「World of Possibilities」（《可能性的世界》）：一个定义了可能性的存在论"
    },
    "what": {
-    "en": "A twelve-line book opening derives difference, structure, change, space, time, dynamic, possibility, thing and system in order: \"If change may happen to a structure, it possesses possibility\", and a system is \"A thing that maintains certain dynamic pattern over time\". It admits that not every concept can be well defined without becoming self-referential.",
-    "zh": "一部书的开篇共十二行，依次推出差异、结构、变化、空间、时间、动态、可能性、事物与系统：「If change may happen to a structure, it possesses possibility」（结构若可能发生变化，便具有可能性）；系统是「A thing that maintains certain dynamic pattern over time」（在时间中维持某种动态模式的事物）。它承认并非每个概念都能被良好定义，否则不免自我指涉。"
+    "en": "A twelve-line book opening defines in sequence, from difference and change, structure, space, time, dynamic, possibility, thing and system: \"If change may happen to a structure, it possesses possibility\", and a system is \"A thing that maintains certain dynamic pattern over time\". It admits that not every concept can be well defined without becoming self-referential.",
+    "zh": "一部书的开篇共十二行，从差异与变化出发，依次定义结构、空间、时间、动态、可能性、事物与系统：「If change may happen to a structure, it possesses possibility」（结构若可能发生变化，便具有可能性）；系统是「A thing that maintains certain dynamic pattern over time」（在时间中维持某种动态模式的事物）。它承认并非每个概念都能被良好定义，否则不免自我指涉。"
    },
    "evidence": [
     {
@@ -252,7 +252,7 @@
     }
    ],
    "label": "public",
-   "label_why": "The recovered text is a tracked file that states the derivation; 2022-04-07 is the file's edit date per the sources/00 README table.",
+   "label_why": "The recovered text is a tracked file that states these definitions; 2022-04-07 is the file's edit date per the sources/00 README table.",
    "thread": false
   },
   {
@@ -295,7 +295,7 @@
    "date": "2024-03-18",
    "title": {
     "en": "Complexity outruns understanding; collapse corrected to unmanaged risk",
-    "zh": "复杂度跑赢理解；「崩溃」被修正为未受管理的风险"
+    "zh": "复杂度跑赢理解；「collapse」（崩溃）被修正为未受管理的风险"
    },
    "what": {
     "en": "A conversation states that \"The speed of the complexity of society grows exp, the speed of the governing organizations’ understanding reality only grows in a sub-linear speed\". In the same session the reasoning is judged \"not good enough to conclude on its collapse\", and the claim becomes that risk, \"if not properly managed, will cause the system to destabilize\", when \"even dominate attractors of society\" change too fast to be comprehended.",
@@ -304,7 +304,7 @@
    "evidence": [
     {
      "path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-01.md",
-     "locator": "line 624, under '## 2024-03-18 — The Growing Gap Between Societal Complexity and Governance' (line 620)",
+     "locator": "line 656, under '## 2024-03-18 — The Growing Gap Between Societal Complexity and Governance' (line 652, the third conversation of that title)",
      "quote": "The speed of the complexity of society grows exp, the speed of the governing organizations’ understanding reality only grows in a sub-linear speed",
      "private": false
     },
@@ -369,24 +369,24 @@
    },
    "what": {
     "en": "A conversation, in Chinese, says that society picks one value as the token of power, and that those best at optimising it gain power in competition and then control the social system their own way, \"throw other values under the bus\" (in the meta-attractor folder's English: \"society picks one value as the token of power; those best at optimising it gradually acquire power through competition\"). The next day the pattern is called \"the core generator function that lead to metacrisis and moloch\".",
-    "zh": "一次对话说：「这个社会选择了某一种value作为权利的象征，最擅长于去优化这些value的人」在竞争中逐渐获得权力，进而以他们的方式控制社会系统，「throw other values under the bus」。次日，这一模式被称为「the core generator function that lead to metacrisis and moloch」（通向元危机与摩洛克的核心生成函数）。"
+    "zh": "一次对话说：「这个社会选择了某一种value作为权利的象征，最擅长于去优化这些value的人」在竞争中逐渐获得权力，进而以他们的方式控制社会系统，「throw other values under the bus」（把其他价值弃之不顾）。次日，这一模式被称为「the core generator function that lead to metacrisis and moloch」（通向元危机与 Moloch 的核心生成函数）。"
    },
    "evidence": [
     {
      "path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-01.md",
-     "locator": "under '## 2024-07-14 — Rethinking Social Values in a Globalized World'",
+     "locator": "line 4411, under '## 2024-07-14 — Rethinking Social Values in a Globalized World' (line 4383)",
      "quote": "这个社会选择了某一种value作为权利的象征，最擅长于去优化这些value的人",
      "private": false
     },
     {
      "path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-01.md",
-     "locator": "under '## 2024-07-15 — Humans as Agents in the Social System'",
+     "locator": "line 4645, under '## 2024-07-15 — Humans as Agents in the Social System' (line 4619)",
      "quote": "this pattern is also the core generator function that lead to metacrisis and moloch",
      "private": false
     },
     {
      "path": "theories/meta-attractor/README.md",
-     "locator": "quoted words, item 7 (2024-07-14)",
+     "locator": "quoted words, item 7 (2024-07-14), line 872",
      "quote": "society picks one value as the token of power; those best at optimising it gradually acquire power through competition",
      "private": false
     }
@@ -438,8 +438,8 @@
     "zh": "环被写下：系统选出纯粹的资本优化者"
    },
    "what": {
-    "en": "A written statement treats the capitalist system as having \"a dominant self-reinforcing loop that continuously intensifies over time\", whose first mechanism is efficiency-based selection: \"The system naturally selects for pure capital optimizers\" and \"Other values and considerations become competitive disadvantages\".",
-    "zh": "一份书面陈述认为资本主义体系具有「一个持续加剧的、占主导的自我强化之环」（a dominant self-reinforcing loop that continuously intensifies over time），其第一个机制是基于效率的选择：「系统自然地选出纯粹的资本优化者」（The system naturally selects for pure capital optimizers），「其他价值与考量成为竞争劣势」。"
+    "en": "An AI-drafted note of that day treats the capitalist system as having \"a dominant self-reinforcing loop that continuously intensifies over time\", whose first mechanism is efficiency-based selection: \"The system naturally selects for pure capital optimizers\" and \"Other values and considerations become competitive disadvantages\".",
+    "zh": "当天一份由 AI 起草的笔记认为，资本主义体系具有「a dominant self-reinforcing loop that continuously intensifies over time」（一个持续加剧的、占主导的自我强化之环），其第一个机制是基于效率的选择：「The system naturally selects for pure capital optimizers」（系统自然地选出纯粹的资本优化者），「Other values and considerations become competitive disadvantages」（其他价值与考量成为竞争劣势）。"
    },
    "evidence": [
     {
@@ -459,10 +459,16 @@
      "locator": "### 03-meta-attractor file table, line 666",
      "quote": "| 2024-precursors/capital-analysis.md | 3,056 | 2024-10-30 |",
      "private": false
+    },
+    {
+     "path": "theories/meta-attractor/README.md",
+     "locator": "source list, 2024 precursors (line 1150)",
+     "quote": "2024-10-30 → 2024-11-05, all AI-drafted from",
+     "private": false
     }
    ],
    "label": "public",
-   "label_why": "A tracked source file states it; its date comes from the sources file table (the filename carries none), and a conversation of the same day quoted in theories/meta-attractor/README.md item 15 makes the same claim.",
+   "label_why": "A tracked source file states it; the meta-attractor folder's README marks the 2024 precursors AI-drafted; the date comes from the sources file table (the filename carries none), and a conversation of the same day quoted in theories/meta-attractor/README.md item 15 makes the same claim.",
    "thread": true
   },
   {
@@ -473,8 +479,8 @@
     "zh": "衔尾蛇循环：这一回路推广到任何优势可复利累积的领域"
    },
    "what": {
-    "en": "A text generalises the loop: \"This pattern emerges in any system where advantages can compound\", whether the currency of power is financial, social, military, biological fitness or information control. The same day, after the request \"can you come up with something more creative, like moloch\", a salon is planned around a workshop on \"The Ouroboros Cycle:How Optimization Drives System Collapse\".",
-    "zh": "一份文本推广了这一回路：「This pattern emerges in any system where advantages can compound」（这一模式出现在任何优势可以复利累积的系统中），无论权力的通货是金融、社会、军事、生物适应度还是信息控制。同一天，在「can you come up with something more creative, like moloch」（能不能想个更有创意的名字，像 moloch 那样）的请求之后，一场沙龙围绕「The Ouroboros Cycle:How Optimization Drives System Collapse」（衔尾蛇循环：优化如何驱动系统崩溃）的工作坊来筹划。"
+    "en": "An AI-drafted text generalises the loop: \"This pattern emerges in any system where advantages can compound\", whether the currency of power is financial, social, military, biological fitness or information control. The same day, in separate conversations, a name \"more creative, like moloch\" is asked for, and a salon is planned around a workshop on \"The Ouroboros Cycle:How Optimization Drives System Collapse\".",
+    "zh": "一份由 AI 起草的文本推广了这一回路：「This pattern emerges in any system where advantages can compound」（这一模式出现在任何优势可以复利累积的系统中），无论权力的通货是金融、社会、军事、生物适应度还是信息控制。同一天，在两次不同的对话里：一次请求一个「more creative, like moloch」（更有创意、像 moloch 那样）的名字，一次围绕「The Ouroboros Cycle:How Optimization Drives System Collapse」（衔尾蛇循环：优化如何驱动系统崩溃）的工作坊筹划一场沙龙。"
    },
    "evidence": [
     {
@@ -494,10 +500,16 @@
      "locator": "line 140, under '## 2024-11-05 — Salon on Metacrisis, Moloch & Systems Change' (line 136)",
      "quote": "a workshop about The Ouroboros Cycle:How Optimization Drives System Collapse",
      "private": false
+    },
+    {
+     "path": "theories/meta-attractor/README.md",
+     "locator": "source list, 2024 precursors (line 1150)",
+     "quote": "2024-10-30 → 2024-11-05, all AI-drafted from",
+     "private": false
     }
    ],
    "label": "public",
-   "label_why": "The precursor file (dated 2024-11-05 in sources/SOURCES.md) and the dated turns in a tracked extract state these words.",
+   "label_why": "The precursor file (dated 2024-11-05 in sources/SOURCES.md, AI-drafted per the meta-attractor folder's README) and the dated turns in a tracked extract state these words.",
    "thread": false
   },
   {
@@ -505,7 +517,7 @@
    "date": "2025-02-07",
    "title": {
     "en": "Image of self becomes the narrative-value frame",
-    "zh": "「自我形象」变为「叙事—价值框架」"
+    "zh": "「image of self」（自我形象）变为「narrative-value frame」（叙事—价值框架）"
    },
    "what": {
     "en": "The selfishness-spiral text of 2025-02-03, \"A human construct an image of self\", is rewritten as a note in which the same sentence links a \"narrative-value frame\" in place of \"image of self\". The note states \"selfish gets rewarded and it compounds, it out grows other behavior patterns(NVFs)\".",
@@ -539,24 +551,18 @@
    "id": "sel-2025-05-30-meta-attractor-captures-selection",
    "date": "2025-05-30",
    "title": {
-    "en": "Meta-attractor named; it captures the mechanisms of selection themselves",
-    "zh": "元吸引子得名；它捕获选择机制本身"
+    "en": "Meta-attractor: it captures the mechanisms of selection themselves",
+    "zh": "元吸引子：它捕获选择机制本身"
    },
    "what": {
-    "en": "On 2025-05-18 a research report introduces meta-attractors as \"higher-order organizational principles or dominant goals that shape the landscape of these lower-level attractors\". The SEED draft of 2025-05-30 says the meta-attractor capturing global society \"arises naturally from competitive selection pressures\" and colonizes the cognitive frameworks of agents, the incentive structures within societies, \"and even the mechanisms of selection themselves\".",
-    "zh": "2025-05-18 的一份研究报告引入元吸引子，称之为「塑造这些较低层吸引子之格局的更高阶组织原则或主导目标」（shape the landscape of these lower-level attractors）。2025-05-30 的 SEED 草稿说，捕获全球社会的元吸引子「自然地产生于竞争性的选择压力」，并殖民行动者的认知框架、社会内部的激励结构，「乃至选择机制本身」（even the mechanisms of selection themselves）。"
+    "en": "On 2025-05-18 a research report, the output of an AI research tool, introduces meta-attractors as \"higher-order organizational principles or dominant goals that shape the landscape of these lower-level attractors\". The SEED draft of 2025-05-30 says the meta-attractor capturing global society \"arises naturally from competitive selection pressures\" and colonizes the cognitive frameworks of agents, the incentive structures within societies, \"and even the mechanisms of selection themselves\".",
+    "zh": "2025-05-18，一份由 AI 研究工具生成的报告引入元吸引子，称之为「higher-order organizational principles or dominant goals that shape the landscape of these lower-level attractors」（塑造这些较低层吸引子之格局的更高阶组织原则或主导目标）。2025-05-30 的 SEED 草稿说，捕获全球社会的元吸引子「arises naturally from competitive selection pressures」（自然地产生于竞争性的选择压力），并殖民行动者的认知框架、社会内部的激励结构，「and even the mechanisms of selection themselves」（乃至选择机制本身）。"
    },
    "evidence": [
     {
      "path": "sources/03-meta-attractor/2025-05-drafts-selected/2025-05-30-seed-meta-attractors-and-road-to-systemic-collapse.md",
      "locator": "line 25",
-     "quote": "This attractor arises naturally from competitive selection pressures and systematically colonizes the cognitive frameworks of agents",
-     "private": false
-    },
-    {
-     "path": "sources/03-meta-attractor/2025-05-drafts-selected/2025-05-30-seed-meta-attractors-and-road-to-systemic-collapse.md",
-     "locator": "line 25",
-     "quote": "the incentive structures within societies, and even the mechanisms of selection themselves",
+     "quote": "This attractor arises naturally from competitive selection pressures and systematically colonizes the cognitive frameworks of agents, the incentive structures within societies, and even the mechanisms of selection themselves",
      "private": false
     },
     {
@@ -564,10 +570,16 @@
      "locator": "line 13 (introduction)",
      "quote": "higher-order organizational principles or dominant goals that shape the landscape of these lower-level attractors",
      "private": false
+    },
+    {
+     "path": "theories/meta-attractor/README.md",
+     "locator": "source list, 2025-05/06 draft series (line 1157)",
+     "quote": "[AI research-tool output from",
+     "private": false
     }
    ],
    "label": "public",
-   "label_why": "Both drafts are tracked files in this repository, dated by their filenames.",
+   "label_why": "Both drafts are tracked files in this repository, dated by their filenames; the meta-attractor folder's README marks the 05-18 report as an AI research tool's output.",
    "thread": true
   },
   {
@@ -578,8 +590,8 @@
     "zh": "Spirit–Token–Space：为社会建模的通用符号框架"
    },
    "what": {
-    "en": "A paper introduces \"STS (Spirit–Token–Space)\" as \"a universal symbolic interaction framework designed to formally encode social structures and dynamics\", its title naming it a framework \"for Modeling and Prototyping Societies, Communities, and Economic Systems\". A review of the earlier version, kept as usis.md under the same STS title, still calls it the \"USIS model\", the \"Universal Symbolic Interaction System, with its primitives Token–Spirit–Space\".",
-    "zh": "一篇论文提出「STS (Spirit–Token–Space)」（精神—令牌—空间），称之为「a universal symbolic interaction framework designed to formally encode social structures and dynamics」（一个用于形式化编码社会结构与动态的通用符号交互框架），标题称它是用于「Modeling and Prototyping Societies, Communities, and Economic Systems」（为社会、社群与经济系统建模和做原型）的框架。对早先版本的一份评审，以同一 STS 标题保存为 usis.md，正文仍称之为「USIS model」，即「Universal Symbolic Interaction System, with its primitives Token–Spirit–Space」（以令牌、精神、空间为原语的通用符号交互系统）。"
+    "en": "A paper introduces \"STS (Spirit–Token–Space)\" as \"a universal symbolic interaction framework designed to formally encode social structures and dynamics\", its title naming it a framework \"for Modeling and Prototyping Societies, Communities, and Economic Systems\". A review kept as usis.md, under the same STS title, calls it the \"USIS model\", the \"Universal Symbolic Interaction System, with its primitives Token–Spirit–Space\".",
+    "zh": "一篇论文提出「STS (Spirit–Token–Space)」（精神—令牌—空间），称之为「a universal symbolic interaction framework designed to formally encode social structures and dynamics」（一个用于形式化编码社会结构与动态的通用符号交互框架），标题称它是用于「Modeling and Prototyping Societies, Communities, and Economic Systems」（为社会、社群与经济系统建模和做原型）的框架。一份评审以同一 STS 标题保存为 usis.md，称之为「USIS model」（USIS 模型），即「Universal Symbolic Interaction System, with its primitives Token–Spirit–Space」（以令牌、精神、空间为原语的通用符号交互系统）。"
    },
    "evidence": [
     {
@@ -596,7 +608,7 @@
     },
     {
      "path": "sources/01-writings-2025/usis.md",
-     "locator": "line 103",
+     "locator": "line 103 (and \"USIS model\", line 5)",
      "quote": "Universal Symbolic Interaction System, with its primitives Token–Spirit–Space, presents a compelling and **coherent framework**",
      "private": false
     }
@@ -613,8 +625,8 @@
     "zh": "形式定义：状态 × 选择规则空间中的二阶吸引子"
    },
    "what": {
-    "en": "The meta-attractor is defined as \"a second-order attractor—a self-stabilising region in joint state × selection-rule space\", within which \"the selection mechanism itself is recursively reinforced by the very states it favours\"; a rule-update operator G describes how the selection proxy itself evolves, and \"winners\" can \"rewrite the rules in their own favor\". The proxy weights grow as ẇ = λCw, and eigenvalue budgeting is offered as \"a clear, non-ideological target for policy\".",
-    "zh": "元吸引子被定义为「一个二阶吸引子——联合的状态 × 选择规则空间中一个自我稳定的区域」，在其中「选择机制本身被它所偏好的那些状态递归地强化」；规则更新算子 G 描述选择代理本身如何演化，「胜者」能够「按有利于自己的方式改写规则」。代理权重按 ẇ = λCw 增长，特征值预算被提出作为「一个清晰的、非意识形态的政策目标」。"
+    "en": "An AI-written expansion of that day, written against a system prompt, defines the meta-attractor as \"a second-order attractor—a self-stabilising region in joint state × selection-rule space\", within which \"the selection mechanism itself is recursively reinforced by the very states it favours\"; a rule-update operator G describes how the selection proxy itself evolves, and \"winners\" can \"rewrite the rules in their own favor\". Under a zero-mean simplification the proxy weights grow as ẇ = λCw, and eigenvalue budgeting is offered as \"a clear, non-ideological target for policy\".",
+    "zh": "当天一份依系统提示词由 AI 写成的扩展文本，把元吸引子定义为「a second-order attractor—a self-stabilising region in joint state × selection-rule space」（一个二阶吸引子——联合的状态 × 选择规则空间中一个自我稳定的区域），在其中「the selection mechanism itself is recursively reinforced by the very states it favours」（选择机制本身被它所偏好的那些状态递归地强化）；规则更新算子 G 描述选择代理本身如何演化，「winners」（胜者）能够「rewrite the rules in their own favor」（按有利于自己的方式改写规则）。在均值为零的简化之下，代理权重按 ẇ = λCw 增长；特征值预算被提出作为「a clear, non-ideological target for policy」（一个清晰的、非意识形态的政策目标）。"
    },
    "evidence": [
     {
@@ -625,8 +637,8 @@
     },
     {
      "path": "sources/03-meta-attractor/2025-08-formal/2025-08-10-comprehensive-mathematical-definition.md",
-     "locator": "### 1.1, line 13",
-     "quote": "A system entering a meta-attractor undergoes second-order learning; it begins to modify the selection rule itself based on its current state.",
+     "locator": "### 5.2, line 262",
+     "quote": "This principle of eigenvalue budgeting provides a clear, non-ideological target for policy.",
      "private": false
     },
     {
@@ -634,10 +646,16 @@
      "locator": "### 1.2, line 39",
      "quote": "successful states—the \"winners\"—possess significant power to rewrite the rules in their own favor",
      "private": false
+    },
+    {
+     "path": "theories/meta-attractor/synthesis-b-formal-and-essays-2025-08-10.md",
+     "locator": "line 249",
+     "quote": "written against a system prompt whose length floor is 2,500 words",
+     "private": false
     }
    ],
    "label": "public",
-   "label_why": "A tracked source file states the definition, dated by its filename.",
+   "label_why": "A tracked source file states the definition, dated by its filename; the meta-attractor folder's formal synthesis records that it was written against a system prompt, an AI-written expansion.",
    "thread": true
   },
   {
@@ -648,8 +666,8 @@
     "zh": "AI 转向：The Fork（分岔）与那一条规则"
    },
    "what": {
-    "en": "A talk recorded in January 2026 already says \"It would be a good idea to not use AI for competition, but use it for the benefits for all\". On 2026-02-09 a conversation takes up a pasted scenario projection, Automated Feudalism versus Automated Commons, \"the deciding variable is institutional design\", producing a narrative called The Fork (not in the corpus), and proposes as minimal coordination \"one forcefully executed rule — stop using AI to compete with others, use it only for commons\".",
-    "zh": "2026 年 1 月录下的一次演讲已说：不把 AI 用于竞争、而把它用于众人之益，会是个好主意。2026-02-09，一次对话采用一份贴入的情景推演——自动化封建（Automated Feudalism）对自动化公地（Automated Commons），“决定性变量是制度设计”——写成名为 The Fork（分岔）的叙事（不在语料中），并提出最小协调为“一条强制执行的规则：停止用 AI 与他人竞争，只把它用于公地”。"
+    "en": "A talk recorded in January 2026 already says \"It would be a good idea to not use AI for competition, but use it for the benefits for all\". On 2026-02-09 a conversation takes up a pasted scenario projection, Automated Feudalism versus Automated Commons, \"The deciding variable is institutional design\", asks for a narrative from it (called The Fork, not in the corpus), and, as a compromise, proposes to \"Make the global coordination work based on one rule, that is forcefully executed: stop using AI compete with others, only use them for commons\".",
+    "zh": "2026 年 1 月录下的一次演讲已说「It would be a good idea to not use AI for competition, but use it for the benefits for all」（不把 AI 用于竞争、而用于众人之益，会是个好主意）。2026-02-09，一次对话接过一份贴入的情景推演，Automated Feudalism（自动化封建）对 Automated Commons（自动化公地），「The deciding variable is institutional design」（决定性的变量是制度设计），请求据此写一篇叙事（名为 The Fork（分岔），不在语料中），并作为一种妥协，提议「Make the global coordination work based on one rule, that is forcefully executed: stop using AI compete with others, only use them for commons」（让全球协调建立在一条强制执行的规则上：停止用 AI 与他人竞争，只把它用于公地）。"
    },
    "evidence": [
     {
@@ -659,38 +677,50 @@
      "private": false
     },
     {
-     "path": "_process/history/2026-09-consolidation/TIMELINE.md",
-     "locator": "2026-02-07 → 2026-04-30, line 125",
-     "quote": "a scenario projection — Automated Feudalism versus Automated Commons, \"the deciding variable is institutional design\"",
+     "path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-02.md",
+     "locator": "line 3608, under '## 2026-02-09 — Fully automated production and its future implications' (line 3482)",
+     "quote": "The deciding variable is institutional design.",
      "private": false
     },
     {
-     "path": "theories/the-fork-and-cooperative-infrastructure/README.md",
-     "locator": "claim 14 (line 86)",
-     "quote": "Minimal viable global coordination is one forcefully executed rule — stop using AI to compete with others, use it only for commons",
+     "path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-02.md",
+     "locator": "line 3627, same heading",
+     "quote": "Make the global coordination work based on one rule, that is forcefully executed: stop using AI compete with others, only use them for commons",
      "private": false
     }
    ],
-   "label": "private",
-   "label_why": "The Fork and the one rule rest on a private chat (sources/12, 2026-02-09), cited by TIMELINE.md and the Fork folder's README; only the January talk's plainer form of the rule is in a tracked transcript, whose speaker is unnamed.",
+   "label": "public",
+   "label_why": "The turns stand verbatim under their dated heading in a tracked extract of the private chat export (the projection at lines 3602–3608, the compromise at lines 3626–3627, the request for a narrative at lines 3636–3637); the name The Fork is the Fork folder's. The January talk is a tracked transcript whose speaker is unnamed.",
    "thread": false
   },
   {
    "id": "s26-04-fork-retired",
    "date": "2026-04-16",
    "title": {
-    "en": "The Fork retired; generative versus degenerative as the criterion",
-    "zh": "分岔叙事退场；以生成对退化为判据"
+    "en": "The Fork narrative left; cooperation not good in itself",
+    "zh": "The Fork（分岔）叙事被放下；合作本身并非善"
    },
    "what": {
-    "en": "The two-outcome narrative is left a second time, after a first retirement on 2026-03-19 for falsifying the possibility space: \"I think I have moved on from the fork narrative, it becomes simpler\". Cooperation is held not automatically good: \"the operative criterion is generative-versus-degenerative with wisdom about consequences, not cooperative-versus-competitive\".",
-    "zh": "两种结局的叙事第二次被放下（第一次在 2026-03-19，因其使可能性空间失真）：“我想我已经从分岔叙事走出来了，它变得更简单”。合作不被视为自动为善：“起作用的判据是带着对后果之智慧的生成与退化（generative-versus-degenerative），而非合作与竞争”。"
+    "en": "The two-outcome narrative is left: \"I think I have moved on from the fork narrative, it becomes simpler\", after a correction of 2026-03-18 that the Fork was never a binary, \"the actual possibility space that we can pursuit is huge\". Cooperation is not held good in itself: \"cooperative on the wrong thing could be why worse than just competing on it\"; the Fork folder reads this as the criterion of generative versus degenerative, words that come on 2026-04-28.",
+    "zh": "两种结局的叙事被放下：「I think I have moved on from the fork narrative, it becomes simpler」（我想我已经从分岔叙事走出来了，它变得更简单）；此前 2026-03-18 有过一次校正，说 The Fork 从来不是二元的，「the actual possibility space that we can pursuit is huge」（我们实际能追求的可能性空间极大）。合作并不被视为本身为善：「cooperative on the wrong thing could be why worse than just competing on it」（在错误的事上合作，可能比单纯在其上竞争更糟）；The Fork 文件夹把这读作生成与退化（generative versus degenerative）之判据，而这两个词要到 2026-04-28 才出现。"
    },
    "evidence": [
     {
-     "path": "_process/history/2026-09-consolidation/TIMELINE.md",
-     "locator": "2026-02-07 → 2026-04-30, line 133",
+     "path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-02.md",
+     "locator": "line 7190, under '## 2026-04-16 — Recent conversation insights' (line 7174)",
      "quote": "actually, I think I have moved on from the fork narrative, it becomes simpler, and more understandable",
+     "private": false
+    },
+    {
+     "path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-02.md",
+     "locator": "line 7194, same heading",
+     "quote": "cooperative on the wrong thing could be why worse than just competing on it",
+     "private": false
+    },
+    {
+     "path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-02.md",
+     "locator": "line 5097, under '## 2026-03-18 — Creating aligned AI assistant documentation' (line 5083)",
+     "quote": "the actual possibility space that we can pursuit is huge",
      "private": false
     },
     {
@@ -700,14 +730,14 @@
      "private": false
     },
     {
-     "path": "theories/the-fork-and-cooperative-infrastructure/README.md",
-     "locator": "counterexample 8 (line 374)",
-     "quote": "Once for falsifying the possibility space (2026-03-19), once as superseded (2026-04-16).",
+     "path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-02.md",
+     "locator": "line 8197, under '## 2026-04-28 — Generative over destructive ethics' (line 8189)",
+     "quote": "what I mean is more like the opposite of generative, maybe degenerative?",
      "private": false
     }
    ],
-   "label": "private",
-   "label_why": "The primary evidence is private chats (sources/12, 2026-04-16 and 2026-03-18), quoted by TIMELINE.md and the Fork folder's README.",
+   "label": "public",
+   "label_why": "The turns stand verbatim under their dated headings in a tracked extract of the private chat export; the reading as a criterion of generative versus degenerative is the Fork folder's README.",
    "thread": false
   },
   {
@@ -718,7 +748,7 @@
     "zh": "間 为唯一原语；古文为形式语言"
    },
    "what": {
-    "en": "The Jian foundation note, whose earliest kept version is v0.3, states a monist ontology, \"一切是间。間 是唯一原语。\", which its changelog places in v0.2. The earlier three primitives Spirit–Space–Token are shown as they present within 間, Space being \"不是独立 primitive\", and v0.3 makes classical Chinese the primary syntax, with S-expressions as the \"ambiguous 时的 fallback\".",
+    "en": "The Jian foundation note, whose earliest kept version is v0.3, states a monist ontology, \"一切是间。間 是唯一原语。\" (all is 间; 間 is the one primitive), which its changelog places in v0.2. The earlier three primitives Spirit–Space–Token are shown as they present within 間, Space being \"不是独立 primitive\" (not an independent primitive), and v0.3 makes classical Chinese the primary syntax, with S-expressions as the \"ambiguous 时的 fallback\" (fallback when ambiguous).",
     "zh": "《間》基础笔记（现存最早为 v0.3）立一元本体：「一切是间。間 是唯一原语。」其变更记录将此归于 v0.2。此前的 Spirit–Space–Token 三原语被写成在间中如何呈现，Space「不是独立 primitive」；v0.3 以古文为主要语法，S-expression 作为「ambiguous 时的 fallback」。"
    },
    "evidence": [
@@ -753,8 +783,8 @@
     "zh": "以开为根：护未成之域不闭，非扩张可测之物"
    },
    "what": {
-    "en": "The v9 correction of 生生不息论 states \"生生不息 ≠ 复杂性必然上升\" and \"复杂性上升 ≠ 善\", and places the good not in \"扩张某可测量之物\" but in \"护未成之域不闭\". A folder synthesis records 开 replacing \"expanding the possibility space\" as the root category, but a report of 2026-05-07 still glosses 生生不息 as \"可能性空间之持续扩张\" and keeps the aim of arguing for one \"稳定可奠基\" alignment.",
-    "zh": "《生生不息论》v9（开境护闭校正版）写道「生生不息 ≠ 复杂性必然上升」「复杂性上升 ≠ 善」，所论之善非「扩张某可测量之物」，乃「护未成之域不闭」。一份文件夹综述记开取代“扩张可能性空间”成为根范畴；但 2026-05-07 的报告仍以「可能性空间之持续扩张」释生生不息，并保留论证唯一一种「稳定可奠基」之 alignment 的目标。"
+    "en": "The v9 correction of 生生不息论 states \"生生不息 ≠ 复杂性必然上升\" (生生不息 is not a necessary rise in complexity) and \"复杂性上升 ≠ 善\" (a rise in complexity is not the good), and places the good not in \"扩张某可测量之物\" (expanding something measurable) but in \"护未成之域不闭\" (guarding the not-yet-become from closing). An AI-written folder synthesis records 开 replacing \"expanding the possibility space\" as the root category, but a report of 2026-05-07 still glosses 生生不息 as \"可能性空间之持续扩张\" (the continuing expansion of the possibility space) and keeps the aim of arguing for one \"稳定可奠基\" (stable and able to found) alignment.",
+    "zh": "《生生不息论》v9（开境护闭校正版）写道「生生不息 ≠ 复杂性必然上升」「复杂性上升 ≠ 善」，所论之善非「扩张某可测量之物」，乃「护未成之域不闭」。一份由 AI 写成的文件夹综述记开取代「expanding the possibility space」（扩张可能性空间）成为根范畴；但 2026-05-07 的报告仍以「可能性空间之持续扩张」释生生不息，并保留论证唯一一种「稳定可奠基」之 alignment 的目标。"
    },
    "evidence": [
     {
@@ -788,8 +818,8 @@
     "zh": "Lean 作内部融贯检验；按定理类型读主张"
    },
    "what": {
-    "en": "A spec of 2026-05-06 makes 文言 the primary language and Lean 4 \"framework 之 internal coherence checker\", adding that \"empirical correspondence ... 不 直接 verifiable in Lean\". On 2026-05-21 a claim-status ledger sorts claims as closed, scoped, schema, external route, sketch, placeholder or open, with the rule \"Use the strongest claim allowed by the theorem type, not by the file title or surrounding doctrine prose.\"",
-    "zh": "2026-05-06 的一份规格以文言为主要语言，以 Lean 4 为「framework 之 internal coherence checker」，并说「empirical correspondence ... 不 直接 verifiable in Lean」。2026-05-21，一份主张状态台账把主张分为 closed、scoped、schema、external route、sketch、placeholder、open，其规则是：按定理类型所允许的最强主张来读，而不按文件标题或周边的教义文字。"
+    "en": "A spec of 2026-05-06 makes 文言 the primary language and Lean 4 \"framework 之 internal coherence checker\" (the framework's internal coherence checker), adding that \"empirical correspondence ... 不 直接 verifiable in Lean\" (not directly verifiable in Lean). On 2026-05-21 a claim-status ledger sorts claims as closed, scoped, schema, external route, sketch, placeholder or open, with the rule \"Use the strongest claim allowed by the theorem type, not by the file title or surrounding doctrine prose.\"",
+    "zh": "2026-05-06 的一份规格以文言为主要语言，以 Lean 4 为「framework 之 internal coherence checker」，并说「empirical correspondence ... 不 直接 verifiable in Lean」。2026-05-21，一份主张状态台账把主张分为 closed、scoped、schema、external route、sketch、placeholder、open，其规则是「Use the strongest claim allowed by the theorem type, not by the file title or surrounding doctrine prose.」（按定理类型所允许的最强主张来读，而不按文件标题或周边的教义文字）。"
    },
    "evidence": [
     {
@@ -820,17 +850,17 @@
    "date": "2026-05-28",
    "title": {
     "en": "The selected way of seeing: Moloch in the mind",
-    "zh": "被选出的观看方式：摩洛克在心中"
+    "zh": "被选出的观看方式：Moloch 在心中"
    },
    "what": {
-    "en": "The sharper claim is that \"the selection pressure under this dynamic favors actors who relate to everything instrumentally\"; their competition frame shapes the rules going forward, so the system concentrates \"not just resources but a way of seeing\". \"Moloch is in the mind, not only in the structure\", and \"an AI that does what its principal intends is amplifying the dynamic, not checking it\".",
-    "zh": "更尖锐的主张是：「在这一动力学之下，选择压力偏好那些以工具方式对待一切的行动者」；他们的竞争框架塑造此后的规则，于是系统集中的「不只是资源，而是一种观看方式」。「Moloch is in the mind, not only in the structure」（摩洛克在心中，不只在结构里）；「一个做其委托者所意图之事的 AI，是在放大这一动力学，而非制衡它」。"
+    "en": "A working stance, AI-written from a conversation of that day, makes the sharper claim that \"the selection pressure under this dynamic favors actors who relate to everything instrumentally\"; their competition frame shapes the rules going forward, so the system concentrates \"not just resources but a way of seeing\". \"Moloch is in the mind, not only in the structure\", and, if principals are selected for instrumental cognition, \"an AI that does what its principal intends is amplifying the dynamic, not checking it\".",
+    "zh": "一份由 AI 据当天一次对话写成的工作立场提出更尖锐的主张：「the selection pressure under this dynamic favors actors who relate to everything instrumentally」（在这一动力学之下，选择压力偏好那些以工具方式对待一切的行动者）；他们的竞争框架塑造此后的规则，于是系统集中的「not just resources but a way of seeing」（不只是资源，而是一种观看方式）。「Moloch is in the mind, not only in the structure」（Moloch 在心中，不只在结构里）；并且，若委托者是因工具性认知而被选出，「an AI that does what its principal intends is amplifying the dynamic, not checking it」（一个做其委托者所意图之事的 AI，是在放大这一动力学，而非制衡它）。"
    },
    "evidence": [
     {
      "path": "sources/05-alignment-and-moloch/2026-05-28-alignment-core-stance.md",
      "locator": "## The diagnosis, line 15",
-     "quote": "the selection pressure under this dynamic favors actors who relate to everything instrumentally. Those actors then wield power.",
+     "quote": "the selection pressure under this dynamic favors actors who relate to everything instrumentally. Those actors then wield power. Their cognitive lens — the competition frame — shapes the rules going forward. The system concentrates not just resources but a way of seeing",
      "private": false
     },
     {
@@ -842,7 +872,7 @@
     {
      "path": "sources/05-alignment-and-moloch/2026-05-28-alignment-core-stance.md",
      "locator": "## The diagnosis, line 19",
-     "quote": "an AI that does what its principal intends is amplifying the dynamic, not checking it",
+     "quote": "If principals are selected for instrumental cognition by the dynamic above, then an AI that does what its principal intends is amplifying the dynamic, not checking it",
      "private": false
     }
    ],
@@ -858,8 +888,8 @@
     "zh": "现实是生成过程；相关性崩溃是危险所在"
    },
    "what": {
-    "en": "A foundation draft that calls itself \"not a doctrine, and not a final blueprint\" opens its ground with \"Reality is not a finished order. It is a generative process.\" It names the danger as not every irreversible change but correlated collapse: \"one system, one metric, one model, one winner, one point of failure.\"",
-    "zh": "一份自称“不是教义，也不是最终蓝图”的基础草稿，以“现实不是已完成的秩序，它是一个生成过程”开篇。它说危险不在每一种不可逆的变化，而在相关性崩溃（correlated collapse）：“一个系统、一个指标、一个模型、一个赢家、一个故障点”。"
+    "en": "A foundation draft, AI-drafted from the author's ideas, calls itself \"not a doctrine, and not a final blueprint\" and opens its ground with \"Reality is not a finished order. It is a generative process.\" It names the danger as not every irreversible change but correlated collapse: \"one system, one metric, one model, one winner, one point of failure.\"",
+    "zh": "一份由 AI 依作者之意起草的基础草稿，自称「not a doctrine, and not a final blueprint」（不是教义，也不是最终蓝图），以「Reality is not a finished order. It is a generative process.」（现实不是已完成的秩序，它是一个生成过程）开篇。它说危险不在每一种不可逆的变化，而在相关性崩溃（correlated collapse）：「one system, one metric, one model, one winner, one point of failure」（一个系统、一个指标、一个模型、一个赢家、一个故障点）。"
    },
    "evidence": [
     {
@@ -870,7 +900,7 @@
     },
     {
      "path": "sources/04-speculative-future/current/FOUNDATION-PRINCIPLES-DRAFT.md",
-     "locator": "principle 8 (line 113)",
+     "locator": "principle 8 (line 114)",
      "quote": "collapse: one system, one metric, one model, one winner, one point of failure.",
      "private": false
     },
@@ -879,10 +909,16 @@
      "locator": "line 19",
      "quote": "This is not a doctrine, and not a final blueprint.",
      "private": false
+    },
+    {
+     "path": "theories/keep-the-possibility-space-open/README.md",
+     "locator": "source list (line 874)",
+     "quote": "FOUNDATION-PRINCIPLES-DRAFT.md — the governing public draft: ground, vocabulary, nine observations, 17 principles, constructive direction, four transition moves, the Test, refusals, five frontier problems. [AI-drafted from",
+     "private": false
     }
    ],
    "label": "public",
-   "label_why": "A tracked source file, dated 2026-06-06 by file time, states it.",
+   "label_why": "A tracked source file, dated 2026-06-06 by file time, states it; the keep-the-possibility-space-open folder's README marks it AI-drafted.",
    "thread": false
   },
   {
@@ -893,14 +929,20 @@
     "zh": "智善的基石文件：智能不可代人相斗"
    },
    "what": {
-    "en": "A manifesto draft of 2026-07-08 ends on one test, \"它在开路，还是在据门？\" (is it opening a road, or holding a gate?), and applies all it says \"to this document and to those who hold it up\". On 2026-07-15 智善.md calls itself \"智善的基石文件\" and states \"人可以继续博弈；智能不可代人相斗。\"",
-    "zh": "2026-07-08 的宣言草稿以一个检验收尾：「它在开路，还是在据门？」并说「这里说的每一条，都适用于这份文件，和举着它的人。」2026-07-15，《智善》自称「智善的基石文件」，并写道「人可以继续博弈；智能不可代人相斗。」"
+    "en": "A manifesto draft of 2026-07-08 closes, before its last line, with one test, 它在开路，还是在据门？ (is it opening a road, or holding a gate?), and says 这里说的每一条，都适用于这份文件，和举着它的人 (everything said here applies to this document and to those who hold it up). On 2026-07-15 智善.md calls itself \"智善的基石文件\" (the cornerstone document of 智善) and states \"人可以继续博弈；智能不可代人相斗。\" (people may go on playing their games; intelligence may not fight on their behalf).",
+    "zh": "2026-07-08 的宣言草稿在末行之前以一个检验作结：「它在开路，还是在据门？」并说「这里说的每一条，都适用于这份文件，和举着它的人」。2026-07-15，《智善》自称「智善的基石文件」，并写道「人可以继续博弈；智能不可代人相斗。」"
    },
    "evidence": [
     {
      "path": "sources/06-zhishan/manifesto/drafts/draft-1.md",
-     "locator": "last line (line 69)",
+     "locator": "line 69, before the last line (line 71)",
      "quote": "它在开路，还是在据门？",
+     "private": false
+    },
+    {
+     "path": "sources/06-zhishan/manifesto/drafts/draft-1.md",
+     "locator": "line 51",
+     "quote": "这里说的每一条，都适用于这份文件，和举着它的人。",
      "private": false
     },
     {
@@ -924,12 +966,12 @@
    "id": "s26-09-consolidation",
    "date": "2026-09-03",
    "title": {
-    "en": "Corpus gathered into theory folders and read as one mechanism",
-    "zh": "语料汇入理论文件夹，被读作同一机制"
+    "en": "Corpus gathered into theory folders; one mechanism found under four names",
+    "zh": "语料汇入理论文件夹；在四个名字之下找到同一机制"
    },
    "what": {
-    "en": "The writings were gathered into fifteen folders under theories/ on 2026-09-03, two more following by 2026-09-13, and the map reads them as \"one diagnostic mechanism restated four times under successive names\". The folders are \"syntheses first written in September 2026 and kept in place\", each first written before the live account.",
-    "zh": "2026-09-03，诸篇写作被汇入 theories/ 下的十五个文件夹，至 2026-09-13 又增两个；总图把它们读作“同一个诊断机制，以先后不同的名字重述四次”。这些文件夹是“2026 年 9 月首次写成并保留原处的综述”，每一个都写于现行理论之前。"
+    "en": "The writings were gathered into fifteen folders under theories/ on 2026-09-03, two more following by 2026-09-13, and the map, an AI synthesis, reads them as neither fifteen theories nor one: \"one diagnostic mechanism restated four times under successive names\", beside commitments not reducible to it and engineering systems that write them in code. The folders are \"syntheses first written in September 2026 and kept in place\", each first written before the live account.",
+    "zh": "2026-09-03，诸篇写作被汇入 theories/ 下的十五个文件夹，至 2026-09-13 又增两个；总图（一份 AI 综述）把它们读作既非十五种理论、也非一种：「one diagnostic mechanism restated four times under successive names」（同一个诊断机制，以先后不同的名字重述了四次），旁边是一小组不可化约为它的相邻承诺，以及把这些承诺写成代码的工程系统。这些文件夹是「syntheses first written in September 2026 and kept in place」（2026 年 9 月首次写成并保留原处的综述），每一个都写于现行说明之前。"
    },
    "evidence": [
     {
@@ -941,7 +983,7 @@
     {
      "path": "_process/history/2026-09-consolidation/MAP.md",
      "locator": "opening paragraph (line 3)",
-     "quote": "one diagnostic mechanism restated four times under successive names",
+     "quote": "The fifteen are not fifteen theories, and they are not one either. What the evidence supports is narrower and more useful: one diagnostic mechanism restated four times under successive names",
      "private": false
     },
     {
@@ -964,7 +1006,7 @@
    },
    "what": {
     "en": "'When Capability Outruns Correction' (v2, a \"Second draft for author review\", AI-drafted and, its notes say, not yet reviewed) \"argues from correctability instead: whether institutions can detect a failure and change course before its consequences become irreversible\", where \"A minimal dynamical theory couples three mechanisms\" (recursive capture, epistemic lag, capture of the evidence channel), and proposes a conditional pause on specified frontier transitions. \"Each claim is paired with observations that would refute it.\"",
-    "zh": "《When Capability Outruns Correction》（v2，「供作者审阅的第二稿」，由 AI 起草，其说明称尚未经审阅）改从可纠正性（correctability）立论：机构能否在后果变得不可逆之前察觉失误、改变方向；其中「一个最小的动力学理论」耦合三种机制（递归俘获、认知滞后、证据通道的俘获），并提议对指定的前沿跃迁实行有条件的暂停。文中说：「每项主张都配有可驳倒它的观察。」"
+    "zh": "《When Capability Outruns Correction》（v2，「Second draft for author review」，即供作者审阅的第二稿；由 AI 起草，其说明称尚未经审阅）「argues from correctability instead: whether institutions can detect a failure and change course before its consequences become irreversible」（改从可纠正性立论：机构能否在后果变得不可逆之前察觉失误、改变方向）；其中「A minimal dynamical theory couples three mechanisms」（一个最小的动力学理论耦合三种机制：递归捕获、认知滞后、证据通道的捕获），并提议对指定的前沿跃迁实行有条件的暂停。「Each claim is paired with observations that would refute it.」（每项主张都配有可驳倒它的观察。）"
    },
    "evidence": [
     {
@@ -998,8 +1040,8 @@
     "zh": "为何与意义：预测，先对齐理解，再协调"
    },
    "what": {
-    "en": "A recorded conversation of nearly two hours was named afterwards as where the \"why and meaning\" of the theories shows; the public summary gives their purpose as \"a prediction, so that understanding can align before coordination\". The word molochlization was coined in it for a selection that remakes minds, and the conclusion named most important was \"we have to work together, as a shared future of mankind, we have to cooperate on this\".",
-    "zh": "一次近两小时的录音对话事后被指为理论“为何与意义”之所在；公开的总结说理论之用是“一种预测，使理解能在协调之前对齐”。对话中造出 molochlization 一词，指重塑心智的选择；被称为最重要的结论是“我们必须一起工作，作为人类的共同未来，我们必须在这件事上合作”。"
+    "en": "A recorded conversation of nearly two hours was named afterwards as where the \"why and meaning\" of the theories shows; the map, an AI synthesis that quotes its automatic transcript with timestamps, gives their purpose as \"a prediction, so that understanding can align before coordination\". The word molochlization was coined in it (\"I mean I'm just making up this word\") for a selection that remakes minds, and the conclusion named most important, right after the conversation, was \"we have to work together, as a shared future of mankind, we have to cooperate on this\".",
+    "zh": "一次近两小时的录音对话事后被指为理论「why and meaning」（为何与意义）之所在；总图（一份 AI 综述，按时间戳逐字引用其自动转写）说理论之用是「a prediction, so that understanding can align before coordination」（一种预测，使理解能在协调之前对齐）。对话中造出 molochlization 一词（「I mean I'm just making up this word」，即我只是在造这个词），指重塑心智的选择；对话一结束，被称为最重要的结论是「we have to work together, as a shared future of mankind, we have to cooperate on this」（我们必须一起工作，作为人类的共同未来，我们必须在这件事上合作）。"
    },
    "evidence": [
     {
@@ -1015,43 +1057,49 @@
      "private": false
     },
     {
+     "path": "_process/history/2026-09-consolidation/MAP.md",
+     "locator": "same section, line 23",
+     "quote": "He calls it molochlization, coined on the spot (\"I mean I'm just making up this word\" [00:34:45])",
+     "private": false
+    },
+    {
      "path": "sources/16-claude-code-directions/2026-10-02-paper-v3-spine-direction.md",
-     "locator": "line 15",
+     "locator": "message 3 of the verbatim messages (line 15)",
      "quote": "we have to work together, as a shared future of mankind, we have to cooperate on this",
      "private": false
     }
    ],
-   "label": "private",
-   "label_why": "The recording and transcript are private (sources/18 and an untracked draft); the tracked request and direction files and MAP.md cite them.",
+   "label": "public",
+   "label_why": "The tracked request and direction files state the naming and the conclusion, and MAP.md, a tracked AI synthesis, quotes the automatic transcript verbatim with timestamps; the recording and the transcript themselves are not in the repository.",
    "thread": false
   },
   {
    "id": "s26-10-first-predictions",
    "date": "2026-10-02",
    "title": {
-    "en": "First pre-specified predictions; one fails in the pilot",
-    "zh": "首批预先登记的预测；其一在试运行中未通过"
+    "en": "The repository's first pre-specified predictions; one fails in the pilot",
+    "zh": "本仓库首批预先登记的预测；其一在试运行中未通过"
    },
    "what": {
-    "en": "For a rubric-editing simulation in the IASEAI draft's folder, predictions were \"Written before any run of experiment.py\" and committed before the pilot ran. The pilot log records \"Verdicts: P1 FAILS; P2 holds; P3 holds; P4 holds\", and a second set was \"Written after the pilot (design 1, PREDICTIONS.md) and before any run of design 2.\"",
-    "zh": "为 IASEAI 草稿文件夹中的评分标准编辑模拟，预测“写于 experiment.py 任何一次运行之前”，并在试运行前提交。试运行日志记录“Verdicts: P1 FAILS; P2 holds; P3 holds; P4 holds”（P1 未通过，P2 至 P4 成立）；第二组预测“写于试运行（设计 1）之后、设计 2 任何一次运行之前”。"
+    "en": "For a rubric-editing simulation in the IASEAI draft's folder, predictions were \"Written before any run of experiment.py\" and committed two minutes before the pilot's log. The pilot log records \"Verdicts: P1 FAILS; P2 holds; P3 holds; P4 holds\", and a second set was \"Written after the pilot (design 1, PREDICTIONS.md) and before any run of design 2.\"",
+    "zh": "为 IASEAI 草稿文件夹中的评分标准编辑模拟，预测「Written before any run of experiment.py」（写于 experiment.py 任何一次运行之前），并比试运行日志早两分钟提交。试运行日志记录「Verdicts: P1 FAILS; P2 holds; P3 holds; P4 holds」（P1 未通过，P2 至 P4 成立）；第二组预测「Written after the pilot (design 1, PREDICTIONS.md) and before any run of design 2.」（写于试运行（设计 1）之后、设计 2 任何一次运行之前）。"
    },
    "evidence": [
     {
      "path": "drafts/2026-10-02-iaseai-selecting-the-selectors/experiment/PREDICTIONS.md",
-     "locator": "line 3; git 3ba95cf7b, 2026-10-02 21:47 +0700",
+     "locator": "line 3; git 3ba95cf7b, 2026-10-02 21:47:35 +0700",
      "quote": "Written before any run of experiment.py. Timestamp below is from `date` at writing.",
      "private": false
     },
     {
      "path": "drafts/2026-10-02-iaseai-selecting-the-selectors/experiment/pilot.log",
-     "locator": "line 16 (last line)",
+     "locator": "line 16 (last line); git 667ca9249, 2026-10-02 21:49:40 +0700",
      "quote": "Verdicts: P1 FAILS; P2 holds; P3 holds; P4 holds",
      "private": false
     },
     {
      "path": "drafts/2026-10-02-iaseai-selecting-the-selectors/experiment/PREDICTIONS-2.md",
-     "locator": "line 3; git 667ca9249, 2026-10-02 21:49 +0700",
+     "locator": "line 3; git 667ca9249, 2026-10-02 21:49:40 +0700",
      "quote": "Written after the pilot (design 1, PREDICTIONS.md) and before any run of design 2.",
      "private": false
     }
@@ -1065,23 +1113,23 @@
    "date": "2026-10-06",
    "title": {
     "en": "The IASEAI line's V7.3 folded into the generative account",
-    "zh": "IASEAI 论文线的 V7.3 并入生成性论述"
+    "zh": "IASEAI 论文线的 V7.3 并入生成性说明"
    },
    "what": {
-    "en": "Six mechanisms of V7.3, the paper line's \"Conditional working paper\" of 5 October, were integrated into the generative account in a chapter that \"preserves the predecessor's conditional results\", with \"no new scientific run, formal theorem or claim that all six mechanisms have been composed into one dynamical system\". A no-assumptions directive the same day left the chapter short: its integration \"retains conditional laws and therefore does not meet that requirement or constitute completed Lean integration\", and the chapter is now in history.",
-    "zh": "论文线 10 月 5 日的「有条件的工作论文」V7.3 中的六种机制，被并入生成性论述的一章；该章「保留前作的有条件结果」，「没有新的科学运行、形式定理，也不主张六种机制已被组合为一个动力系统」。同日一项「不作假设」的指令使该章未能达标：其整合「保留了有条件的律，因而不满足该要求，也不构成完成的 Lean 整合」；此章今已移入历史。"
+    "en": "Six mechanisms of V7.3, the paper line's \"Conditional working paper\" of 5 October, were integrated into the generative account in an AI-authored chapter that \"preserves the predecessor's conditional results\", with \"no new scientific run, formal theorem or claim that all six mechanisms have been composed into one dynamical system\". A no-assumptions directive the same day left the chapter short: its integration \"retains conditional laws and therefore does not meet that requirement or constitute completed Lean integration\", and the chapter is now in history.",
+    "zh": "论文线 10 月 5 日的 V7.3 自称「Conditional working paper」（有条件的工作论文），其中六种机制被并入生成性说明的一章。该章由 AI 撰写，「preserves the predecessor's conditional results」（保留前作的有条件结果），并且「no new scientific run, formal theorem or claim that all six mechanisms have been composed into one dynamical system」（没有新的科学运行、形式定理，也不主张六种机制已被组合为一个动力系统）。同日一项不作假设的指令使该章未能达标：其整合「retains conditional laws and therefore does not meet that requirement or constitute completed Lean integration」（保留了有条件的律，因而不满足该要求，也不构成完成的 Lean 整合）；此章今已移入历史。"
    },
    "evidence": [
     {
      "path": "drafts/2026-10-02-iaseai-selecting-the-selectors/v7.3/README.md",
-     "locator": "dateline",
+     "locator": "dateline, line 3",
      "quote": "5 October 2026. Conditional working paper.",
      "private": false
     },
     {
      "path": "theories/becoming/history/GENERATIVE-SELECTION.md",
-     "locator": "third paragraph",
-     "quote": "It preserves the predecessor's conditional results and connects them to the newer formation, learning, concern and market studies.",
+     "locator": "AI-authored dateline paragraph, line 7",
+     "quote": "It preserves the predecessor's conditional results and connects them to the newer formation, learning, concern and market studies. It supplies an explanatory synthesis and explicit interfaces, with no new scientific run, formal theorem or claim that all six mechanisms have been composed into one dynamical system.",
      "private": false
     },
     {
@@ -1092,7 +1140,7 @@
     }
    ],
    "label": "public",
-   "label_why": "The tracked chapter (now in history) and the V7.3 edition state the integration, its date and its standing.",
+   "label_why": "The tracked chapter (AI-authored, now in history) and the V7.3 edition state the integration, its date and its standing.",
    "thread": false
   },
   {
@@ -1100,17 +1148,23 @@
    "date": "2026-10-09",
    "title": {
     "en": "The Theory of Becoming named; zero-axiom ground a hypothesis",
-    "zh": "定名生成／变化之论；零公理根基仍是假设"
+    "zh": "定名生成／变化之论（今作生成变化之论）；零公理根基仍是假设"
    },
    "what": {
-    "en": "On 9 October the repository theory, until then titled Universal Meta-Ethics of Agency, took the public title The Theory of Becoming, marked as \"the current name, not a final decision\". The same record says: \"The zero-axiom grounding of becoming remains a research hypothesis.\"",
-    "zh": "10月9日，此前题为 Universal Meta-Ethics of Agency（能动者的普遍元伦理）的本库理论，取公开题名 The Theory of Becoming（生成／变化之论），并注明这是当前的名字，不是最终决定。同一记录说：生成的零公理根基仍是一个研究假设。"
+    "en": "On 9 October the repository theory, until then titled Universal Meta-Ethics of Agency, took the public title The Theory of Becoming, which the record's AI interpretation reads, from 先 (for now), as \"the current name, not a final decision\". The same interpretation says: \"The zero-axiom grounding of becoming remains a research hypothesis.\"",
+    "zh": "10 月 9 日，本库此前题为 Universal Meta-Ethics of Agency（能动者的普遍元伦理）的理论，取公开题名 The Theory of Becoming（生成／变化之论，今作生成变化之论）；记录中 AI 的实施解读从「先」字读出，这是「the current name, not a final decision」（当前的名字，不是最终决定）。同一解读说：「The zero-axiom grounding of becoming remains a research hypothesis.」（生成的零公理根基仍是一个研究假设。）"
    },
    "evidence": [
     {
      "path": "sources/15-codex-theory-conversations/2026-10-09-theory-of-becoming-name.md",
      "locator": "## Context — AI-authored, line 7",
      "quote": "under the then-current title *Universal Meta-Ethics of Agency*",
+     "private": false
+    },
+    {
+     "path": "sources/15-codex-theory-conversations/2026-10-09-theory-of-becoming-name.md",
+     "locator": "the section of words kept, line 15",
+     "quote": "我觉得先叫the theory of becoming吧",
      "private": false
     },
     {
@@ -1127,7 +1181,7 @@
     }
    ],
    "label": "public",
-   "label_why": "The naming, its provisional standing and the hypothesis are stated in a tracked, dated source record.",
+   "label_why": "The naming, its provisional standing and the hypothesis are stated in a tracked, dated source record, the reading of 先 in its AI-authored interpretation.",
    "thread": false
   },
   {
@@ -1138,13 +1192,13 @@
     "zh": "Lean 脊柱 Becoming 及其无公理的纯核"
    },
    "what": {
-    "en": "The Lean spine Becoming was begun under the directive that it have no dependency and no axiom, while the periphery may use any suitable tool. Its checker now asserts that every source declaration has an empty axiom report, and the method chapter limits what that shows: \"An empty report shows that no logical axiom is used.\"",
-    "zh": "Lean 包 Becoming 作为脊柱建立，所依的指示是「你说的脊柱，它不能有任何依赖，没有axiom，外围可以用任意你觉得最合适的工具」。如今其检查器断言每个源声明的公理报告都为空；方法章限定这说明了什么：空报告只表明未用任何逻辑公理。"
+    "en": "The Lean spine Becoming, begun that day, was made pure under the directive that it have no dependency and no axiom, while the periphery may use any suitable tool. Its checker now asserts that every source declaration has an empty axiom report, and the method chapter limits what that shows: \"An empty report shows that no logical axiom is used.\"",
+    "zh": "Lean 脊柱 Becoming 当天开建，并依这一指示被做成纯的：「你说的脊柱，它不能有任何依赖，没有axiom，外围可以用任意你觉得最合适的工具」。如今其检查器断言每个源声明的公理报告都为空；方法章限定这说明了什么：「An empty report shows that no logical axiom is used.」（空报告只表明未用任何逻辑公理。）"
    },
    "evidence": [
     {
      "path": "sources/15-codex-theory-conversations/2026-10-09-pure-core.md",
-     "locator": "## Ren's words, line 9",
+     "locator": "the section of words kept, line 9",
      "quote": "你说的脊柱，它不能有任何依赖，没有axiom，外围可以用任意你觉得最合适的工具",
      "private": false
     },
@@ -1162,7 +1216,7 @@
     }
    ],
    "label": "public",
-   "label_why": "The directive is kept verbatim in a tracked dated source, and the core's rule and its limit are stated in the live method chapter.",
+   "label_why": "The directive is kept verbatim in a tracked dated source, and the core's rule and its limit are stated in the live method chapter; commits d79d0d9d7 (03:02) and 1e66b6b91 (04:28) of 2026-10-09 date the spine's start and its purity.",
    "thread": false
   },
   {
@@ -1173,8 +1227,8 @@
     "zh": "G0 不再是所采用的公理，改作条件陈述"
    },
    "what": {
-    "en": "On 11 October G0 was folded, \"at least for part i\": \"G0 is no longer an adopted axiom; Part I states it as a condition, and in Part II it is a theorem of the one axiom.\" On 16 October Part II was folded into Part I \"as one conditional section after the generative space, keeping the equivalence theorems and naming the invariance step\".",
-    "zh": "10月11日，G0 被折叠（至少对第一部分）：G0 不再是所采用的公理；第一部分把它作为条件陈述，在第二部分中它是那一条公理的定理。10月16日，第二部分并入第一部分，成为生成空间之后的一个有条件的节，保留等价定理，并点明不变之一步。"
+    "en": "On 11 October G0 was folded, \"at least for part i\": \"G0 is no longer an adopted axiom; Part I states it as a condition, and in Part II it is a theorem of the one axiom.\" On 16 October Part II was folded into Part I, by a decision sent in a wording the assistant had drafted, \"as one conditional section after the generative space, keeping the equivalence theorems and naming the invariance step\".",
+    "zh": "10 月 11 日，G0 被折叠，「at least for part i」（至少对第一部分）：「G0 is no longer an adopted axiom; Part I states it as a condition, and in Part II it is a theorem of the one axiom.」（G0 不再是所采用的公理；第一部分把它作为条件陈述，在第二部分中它是那一条公理的定理。）10 月 16 日，依一项以 AI 起草之措辞发出的决定，第二部分并入第一部分，「as one conditional section after the generative space, keeping the equivalence theorems and naming the invariance step」（作为生成空间之后的一个有条件的节，保留等价定理，并点明不变之一步）。"
    },
    "evidence": [
     {
@@ -1185,19 +1239,25 @@
     },
     {
      "path": "sources/15-codex-theory-conversations/2026-10-11-fold-g0.md",
-     "locator": "line 9",
+     "locator": "the section of words kept, line 9",
      "quote": "if we don't need G0 as axiom, fold it, at least for part i, and commit",
      "private": false
     },
     {
      "path": "sources/15-codex-theory-conversations/2026-10-16-fold-part-ii.md",
-     "locator": "## Ren's words, line 13",
+     "locator": "the section of words kept, line 13",
      "quote": "Yes, fold Part II into Part I as one conditional section after the generative space, keeping the equivalence theorems and naming the invariance step.",
+     "private": false
+    },
+    {
+     "path": "sources/15-codex-theory-conversations/2026-10-16-fold-part-ii.md",
+     "locator": "the section of words kept, line 11",
+     "quote": "The text it sent was drafted by the assistant as the button's message",
      "private": false
     }
    ],
    "label": "public",
-   "label_why": "A tracked record's dated history and two tracked dated sources state the fold and its completion.",
+   "label_why": "A tracked record's dated history and two tracked dated sources state the fold and its completion; the second source says the decision's wording was drafted by the assistant.",
    "thread": false
   },
   {
@@ -1205,13 +1265,19 @@
    "date": "2026-10-17",
    "title": {
     "en": "Earlier directives become provenance; old labels renamed by content",
-    "zh": "早先的指示成为出处而非权威；旧标签按所述改名"
+    "zh": "早先的指示成为出处；旧标签按所述改名"
    },
    "what": {
-    "en": "Earlier directives stay preserved verbatim, but \"They no longer decide what the live theory says.\" Labels such as \"G0\", \"Part I\" and \"Part II\" are history, renamed by what they state: \"living significance for G0, the continuation condition for the one axiom, the theory without axiom for Part I\".",
-    "zh": "早先的指示仍逐字保存，但不再决定活文本说什么。“G0”“第一部分”“第二部分”这类标签已成历史，按其所述改名：G0 称生生之意义，那一条公理称延续条件，第一部分称无公理的理论。"
+    "en": "A message of 17 October asks that earlier words be kept, but no longer as the \"truth\"; the AI-authored context of its record reads that they stay preserved verbatim, but \"They no longer decide what the live theory says.\" Labels such as \"G0\", \"Part I\" and \"Part II\" are history, renamed by what they state: \"living significance for G0, the continuation condition for the one axiom, the theory without axiom for Part I\".",
+    "zh": "10 月 17 日的一则消息要求保留早先的话，但不再把它们当作「truth」（真理）；其记录中由 AI 撰写的背景读作：这些话仍逐字保存，但「They no longer decide what the live theory says.」（它们不再决定现行说明说什么。）「G0」「Part I」（第一部分）「Part II」（第二部分）这类标签已成历史，按其所述改名：「living significance for G0, the continuation condition for the one axiom, the theory without axiom for Part I」（G0 称存活之意义，那一条公理称延续条件，第一部分称无公理的理论）。"
    },
    "evidence": [
+    {
+     "path": "sources/15-codex-theory-conversations/2026-10-17-ren-words-not-authority.md",
+     "locator": "the message kept, line 7",
+     "quote": "you should keep my words but they should no longer be the \"truth\"",
+     "private": false
+    },
     {
      "path": "sources/15-codex-theory-conversations/2026-10-17-ren-words-not-authority.md",
      "locator": "## Context (AI-authored), 'Provenance, not authority', line 13",
@@ -1232,7 +1298,7 @@
     }
    ],
    "label": "public",
-   "label_why": "The directive and the relabelling are stated in a tracked dated source and a tracked record's history.",
+   "label_why": "The message, its AI-authored reading and the relabelling are stated in a tracked dated source and a tracked record's history.",
    "thread": false
   },
   {
@@ -1240,16 +1306,16 @@
    "date": "2026-10-18",
    "title": {
     "en": "Registration vocabulary replaced by couplings",
-    "zh": "以耦合取代“登记”（registration）一词族"
+    "zh": "以耦合取代「registration」（登记）一词族"
    },
    "what": {
     "en": "\"Registration\" was called \"a dualist word\" that \"nudged the whole vocabulary into a very western way\", and a naming study followed. On 18 October 175 Lean declarations were renamed, among them Web.Registers to Web.CoupledInto, statements and proofs unchanged; in the glossary, what reaches a selector comes \"through its couplings (never \"registers\")\".",
-    "zh": "“registration”（登记）被认为是一个二元论的词，把整套词汇推向了西方的方式，随后开展命名研究。10月18日，175 个 Lean 声明改名，其中 Web.Registers 改为 Web.CoupledInto，陈述与证明不变；术语表中，到达一个选择者的东西是经由其耦合而到达的（绝不说“registers”）。"
+    "zh": "「registration」（登记）被称为「a dualist word」（一个二元论的词），说它「nudged the whole vocabulary into a very western way」（把整套词汇推向了一种很西方的方式），随后开展命名研究。10 月 18 日，175 个 Lean 声明改名，其中 Web.Registers 改为 Web.CoupledInto，陈述与证明不变；术语表中，到达一个选择者的东西是「through its couplings (never \"registers\")」（经由其耦合而到达的，绝不说 registers）。"
    },
    "evidence": [
     {
      "path": "sources/15-codex-theory-conversations/2026-10-17-registration-dualist-vocabulary.md",
-     "locator": "## Ren's words, line 17",
+     "locator": "the section of words kept, line 17",
      "quote": "first of all, i think registration is a dualist word, and this nudged the whole vocabulary into a very western way",
      "private": false
     },
@@ -1278,8 +1344,8 @@
     "zh": "脊柱上的经由规则的捕获，继而闭合的捕获"
    },
    "what": {
-    "en": "On 19 October 2026 the loop landed on the spine as capture through the rule: \"Where a selection's rule is read monotonically from the share it selects, the loop locks\", and \"Without the start condition, it fails.\" On 20 October closed capture, built on it, was proved with empty axiom reports: \"a loss the loop does not read leaves it locked however large it grows, and a change of the reading is absorbed\", while T7 states \"That actual metrics are so formed is conjectured.\"",
-    "zh": "2026 年 10 月 19 日，此环以经由规则的捕获落在脊柱上：在一个选择的规则从它所选出之份额单调地读出之处，环锁定；「没有起点条件，它就不成立」。10 月 20 日，建于其上的闭合的捕获得到证明，公理报告为空：「一个环所不读的损失，无论增长多大，都让它保持锁定，而对读取的一次改变会被吸收」；论题 T7 则写明，实际的度量是这样形成的，这是猜想。"
+    "en": "On 19 October 2026 the loop landed on the spine as capture through the rule: \"Where a selection's rule is read monotonically from the share it selects, the loop locks\", and \"Without the start condition, it fails.\" On 20 October closed capture, built on it, was proved with empty axiom reports: in a selection whose rule, and how the rule is read, are read from the share it selects, \"a loss the loop does not read leaves it locked however large it grows, and a change of the reading is absorbed\", while T7 states \"That actual metrics are so formed is conjectured.\"",
+    "zh": "2026 年 10 月 19 日，此环以经由规则的捕获落在脊柱上：「Where a selection's rule is read monotonically from the share it selects, the loop locks」（在一个选择的规则从它所选出之份额单调地读出之处，环锁定），且「Without the start condition, it fails.」（没有起点条件，它就不成立。）10 月 20 日，建于其上的闭合的捕获得到证明，公理报告为空：在一个其规则以及规则如何被读都从它所选出之份额读出的选择中，「a loss the loop does not read leaves it locked however large it grows, and a change of the reading is absorbed」（环所不读的损失无论增长多大，都让它保持锁定，而读取的一次改变会被吸收）；论题 T7 则写明「That actual metrics are so formed is conjectured.」（实际的度量是这样形成的，这是猜想。）"
    },
    "evidence": [
     {
@@ -1289,9 +1355,15 @@
      "private": false
     },
     {
+     "path": "theories/becoming/results/records/capture-through-the-rule.md",
+     "locator": "summary, line 8",
+     "quote": "Without the start condition, it fails.",
+     "private": false
+    },
+    {
      "path": "theories/becoming/results/records/closed-capture.md",
      "locator": "summary, line 8",
-     "quote": "a loss the loop does not read leaves it locked however large it grows, and a change of the reading is absorbed",
+     "quote": "In a selection whose rule, and how the rule is read, are read from the share it selects, a loss the loop does not read leaves it locked however large it grows, and a change of the reading is absorbed",
      "private": false
     },
     {
@@ -1314,7 +1386,7 @@
    },
    "what": {
     "en": "An AI review of the theory as one whole found the ethics \"written as five rounds\" over two premises: \"a scope premise (the continuation condition, which is the self's presupposition plus the step of invariance) and an order premise (C: widening is better)\". The canonical chapter was \"restructured 20 October 2026 so that each thing is said once\", and the completion criterion K1–K7 was adopted that day.",
-    "zh": "一次把理论作为整体来读的 AI 审查发现，伦理被写成五轮，其下是两个前提：一个范围前提（延续条件，即自我的预设加上不变之一步）与一个次序前提（C：扩大更好）。规范章于2026年10月20日重组，使每件事只说一次；完成准则 K1–K7 也在当天采用。"
+    "zh": "一次把整个说明作为一体来读的 AI 审查发现，伦理「written as five rounds」（被写成五轮），其下是两个前提：「a scope premise (the continuation condition, which is the self's presupposition plus the step of invariance) and an order premise (C: widening is better)」（一个范围前提（延续条件，即自我的预设加上不变之一步）与一个次序前提（C：扩大更好））。规范章「restructured 20 October 2026 so that each thing is said once」（于 2026 年 10 月 20 日重组，使每件事只说一次）；完成准则 K1–K7 也在当天采用。"
    },
    "evidence": [
     {
@@ -1349,7 +1421,7 @@
    },
    "what": {
     "en": "A read-only, adversarial AI review concluded: \"No central result is a new theorem of research-level mathematics.\" An AI-written brief of 21 October read the answer as \"not weaker claims but strong claims with their standing stated and their refutation conditions named\"; the method chapter's numbered theses each state \"an empirical claim, with its standing, what it forbids and the evidence so far\".",
-    "zh": "一次只读、对抗性的 AI 审查得出结论：没有一项中心结果是研究级数学的新定理。10月21日一份 AI 撰写的简报把回应读作：不是更弱的主张，而是陈述其地位、指明其驳倒条件的强主张；方法章中编号的论题，各自陈述一项经验主张，连同其地位、它所禁止者与迄今的证据。"
+    "zh": "一次只读、对抗性的 AI 审查得出结论：「No central result is a new theorem of research-level mathematics.」（没有一项中心结果是研究级数学的新定理。）10 月 21 日一份 AI 撰写的简报把回应读作「not weaker claims but strong claims with their standing stated and their refutation conditions named」（不是更弱的主张，而是陈述其地位、指明其驳倒条件的强主张）；方法章中编号的论题，各自陈述「an empirical claim, with its standing, what it forbids and the evidence so far」（一项经验主张，连同其地位、它所禁止者与迄今的证据）。"
    },
    "evidence": [
     {
@@ -1383,8 +1455,8 @@
     "zh": "一个展开之根：相对于类的续之文法"
    },
    "what": {
-    "en": "Plan version 8 \"roots the theory in classical Chinese grammar read as a point-free relational calculus, with frames as its models\". Version 10 made continuation, the four marks, forming and breaking, and sameness relative to a class, its first module landing on 23 October, prelude only, with empty axiom reports; the method gained the rule that writing a law in the grammar's vocabulary \"does not prove it there\".",
-    "zh": "第八版计划把理论根植于古典汉语文法，将其读作无点的关系演算，以框架为其模型。第十版定下「续、四相、成坏、同一，都相对于一个类（等价之际）；没有一个是自立的」；其第一个模块于10月23日落地，只用前奏，公理报告为空。方法随之增加一条规则：一条律可以用文法的词汇写出，但写在那里并不就在那里证明了它。"
+    "en": "Plan version 8, in the AI-authored context of a record of 23 October, \"roots the theory in classical Chinese grammar read as a point-free relational calculus, with frames as its models\". Version 10 made continuation, the four marks, forming and breaking, and sameness relative to a class (续、四相、成坏、同一，都相对于一个类), its first module landing on 23 October, prelude only, with empty axiom reports; the method gained the rule that writing a law in the grammar's vocabulary \"does not prove it there\".",
+    "zh": "据 10 月 23 日一份记录中由 AI 撰写的背景，第八版计划「roots the theory in classical Chinese grammar read as a point-free relational calculus, with frames as its models」（把理论根植于古典汉语文法，将其读作无点的关系演算，以框架为其模型）。第十版定下「续、四相、成坏、同一，都相对于一个类（等价之际）；没有一个是自立的」；其第一个模块于 10 月 23 日落地，只用前奏，公理报告为空。方法随之增加一条规则：一条律可以用文法的词汇写出，但写在那里「does not prove it there」（并不就在那里证明了它）。"
    },
    "evidence": [
     {
@@ -1419,7 +1491,7 @@
    },
    "what": {
     "en": "The account was restructured into the one page and the overview above the eight chapters, with \"every live result stated once in its home section\"; the canonical chapter, its Chinese edition and the 41 chapters the eight carry moved to history byte for byte.",
-    "zh": "说明重组为一页与概览、其下八章，每一项现行结果都只在其所属之节陈述一次；规范章、其中文版以及八章所承接的41章，逐字节移入历史目录。"
+    "zh": "说明重组为一页与总览、其下八章，「every live result stated once in its home section」（每一项现行结果都只在其所属之节陈述一次）；规范章、其中文版以及八章所承接的 41 章，逐字节移入历史目录。"
    },
    "evidence": [
     {
@@ -1454,7 +1526,7 @@
    },
    "what": {
     "en": "A review packet was assembled for human specialists: a cover, dossiers for scholars of classical Chinese texts and of Buddhist thought and for logicians (later joined by dossiers for philosophy, alignment and the sciences), and a blind re-coding of the corpus classification, its sample \"drawn on 24 October 2026, before any human coded a unit\". Its cover opens: \"No human has reviewed this theory yet.\"",
-    "zh": "一份审查包为人类专家汇编而成：一份封面，分别供古代汉语文本学者、佛学学者与逻辑学者的审查材料（后来又加上哲学、对齐与科学几份），以及对语料分类的一次盲重编码，其样本「于 2026 年 10 月 24 日、在任何人编码任何单元之前抽取」。封面开头即说：「本理论迄今尚无人工审查。」"
+    "zh": "一份审查包为人类专家汇编而成：一份封面，分别供古代汉语文本学者、佛学学者与逻辑学者的审查材料（后来又加上哲学、对齐与科学几份），以及对语料分类的一次盲重编码，其样本「drawn on 24 October 2026, before any human coded a unit」（于 2026 年 10 月 24 日、在任何人编码任何单元之前抽取）。封面开头即说：「本理论迄今尚无人工审查。」"
    },
    "evidence": [
     {
@@ -1489,7 +1561,7 @@
    },
    "what": {
     "en": "LA2 (frozen 25 October 2026, run 25 and 26 October) tested, in one trained system, the conjecture that a judge formed from what it selected is a pool of readers counted by kind: \"Every frozen verdict passed, and the conjecture failed for this judge\", one note of the loss, on the one prose answer among nine readers, turning its reading. So T7's forbidden case of a metric whose loss is read only by those it disfavours, dropped once the selection has left them no more than its carriers among its readers, with nothing else changed, occurred in this system \"as worded before its clause on drift\", while the law of the rule as the pool of readers drawn from those it selects \"stands within its hypotheses, which this judge does not meet\".",
-    "zh": "LA2（2026 年 10 月 25 日冻结，25 与 26 日运行）在一个训练出的系统中检验这一猜想：由它所选出者形成的评判者，是一个按种类计数的读者池；「每一冻结裁决都通过，而此猜想对这个评判者不成立」：关于损失的一条批注，附于九个读者中唯一的散文回答之上，就扭转了它的读取。故 T7 所禁止的一种情形——一个其损失只被它所不利者读到的度量，在选择已让这些人在其读者中不多于其携带者之后、其他一切不变时被放弃——按其漂移条款加入之前的措辞，在此系统中发生了；而规则作为从其所选者中抽出之读者池的那条律，「在其假设之内成立，此评判者不满足之」。"
+    "zh": "LA2（2026 年 10 月 25 日冻结，25 与 26 日运行）在一个训练出的系统中检验这一猜想：由它所选出者形成的评判者，是一个按种类计数的读者池。「Every frozen verdict passed, and the conjecture failed for this judge」（每一冻结裁决都通过，而该猜想对这个评判者不成立）：关于损失的一条批注，附于九个读者中唯一的散文回答之上，就扭转了它的读取。故 T7 所禁止的一种情形——一个其损失只被它所不利者读到的度量，在选择已让这些人在其读者中不多于其携带者之后、其他一切不变时被放弃——在此系统中发生了，「as worded before its clause on drift」（按其漂移条款加入之前的措辞）；而规则作为从其所选者中抽出之读者池的那条律，「stands within its hypotheses, which this judge does not meet」（在其假设之内成立，此评判者不满足这些假设）。"
    },
    "evidence": [
     {
@@ -1523,13 +1595,13 @@
     "zh": "生命之伦理，并无绝对之善"
    },
    "what": {
-    "en": "A message of 30 October held \"there is no absolute universal good vs evil - it is just for us as life\". Thesis T8 reads \"For life, the way is 生生, life in the whole and its continuing generation\", scope given by the continuation condition and order by C, and the goal \"Universal metaethics of all intelligence\" was retitled \"The ethics for life, and every intelligence formed within it\".",
-    "zh": "10月30日的一则消息认为，没有绝对普遍的善与恶，只是对我们作为生命而言。论题 T8 写道：对生命而言，道是生生，即整体之中的生命及其持续的生发；范围由延续条件给出，次序由 C 给出。目标题名由「所有智能的普遍元伦理」改为「生命之伦理，及在其中形成的一切智能」。"
+    "en": "A message of 30 October held \"there is no absolute universal good vs evil - it is just for us as life\". Thesis T8 reads \"For life, the way is 生生, life in the whole and its continuing generation\" (the gloss of 生生 an AI reading, D1), scope given by the continuation condition and order by C, and, on the approval of a wording the AI had drafted, the goal \"Universal metaethics of all intelligence\" was retitled \"The ethics for life, and every intelligence formed within it\".",
+    "zh": "10 月 30 日的一则消息认为「there is no absolute universal good vs evil - it is just for us as life」（并无绝对普遍的善与恶，这只是对作为生命的我们而言）。论题 T8 写道「For life, the way is 生生, life in the whole and its continuing generation」（对生命而言，道是生生，即整体之中的生命及其持续的生发；对生生的这一释义是 AI 的读法，D1）；范围由延续条件给出，次序由 C 给出。经对一则 AI 起草之措辞的认可，目标题名由「所有智能的普遍元伦理」改为「生命之伦理，及在其中形成的一切智能」。"
    },
    "evidence": [
     {
      "path": "sources/15-codex-theory-conversations/2026-10-30-no-absolute-good-the-way-for-life.md",
-     "locator": "## Ren's message, line 7",
+     "locator": "the message kept, line 7",
      "quote": "I think there is no absolute universal good vs evil - it is just for us as life",
      "private": false
     },
@@ -1541,13 +1613,13 @@
     },
     {
      "path": "sources/15-codex-theory-conversations/2026-10-30-goal-the-ethics-for-life-approved.md",
-     "locator": "## What was approved, line 15",
-     "quote": "It replaces \"Universal metaethics of all intelligence\"",
+     "locator": "## What was approved (AI-authored), line 15",
+     "quote": "\"The ethics for life, and every intelligence formed within it\" (zh: 生命之伦理，及在其中形成的一切智能). It replaces \"Universal metaethics of all intelligence\" (所有智能的普遍元伦理)",
      "private": false
     }
    ],
    "label": "public",
-   "label_why": "The revision, the thesis and the goal's retitling are stated in tracked files: dated sources and chapter 7.",
+   "label_why": "The message, the thesis and the goal's retitling are stated in tracked files: dated sources, the approved wording AI-authored, and chapter 7.",
    "thread": false
   },
   {
@@ -1559,7 +1631,7 @@
    },
    "what": {
     "en": "A Lean result, `ReadsNoOrder.not_entails`, shows that 'A statement reading no order entails C only where it fails'; chapter 7 calls this 'immediate, since \"better\" is free: it shows that a frame fixes no order.' The working rules cite it: never write that the ethics derives from the continuation condition, and 'deriving C from a weaker premise is open work'.",
-    "zh": "一条 Lean 结果 `ReadsNoOrder.not_entails` 表明：一个不读任何序的陈述，“只在它不成立之处”才蕴涵 C（扩大可形成者更好这一前提）；第七章称这一点“是直接的，因为‘更好’是自由的：它表明一个框架不确定任何序”。工作规则据此写明：不得写伦理由延续条件推出，而“从更弱的前提推出 C 是未完成的工作”。"
+    "zh": "一条 Lean 结果 `ReadsNoOrder.not_entails` 表明：「A statement reading no order entails C only where it fails」（一个不读任何序的陈述，只在它不成立之处才蕴涵 C，即扩大可形成者更好这一前提）；第七章称这一点「immediate, since \"better\" is free: it shows that a frame fixes no order.」（是直接的，因为“更好”是自由的：它表明一个框架不确定任何序。）工作规则据此写明：不得写伦理由延续条件推出，而「deriving C from a weaker premise is open work」（从更弱的前提推出 C 是未完成的工作）。"
    },
    "evidence": [
     {
@@ -1590,11 +1662,11 @@
    "date": "2026-11-01",
    "title": {
     "en": "From 'master law' to 'shared law': names without rule",
-    "zh": "由“主律”到“共律”：不含统治的名称"
+    "zh": "由「主律」到「共律」：不含统治的名称"
    },
    "what": {
     "en": "Names that stated rank or rule were replaced by names that state relations: 'master law' (主律) became 'shared law' (共律), a law many central results share and are proved through, which 'ranks no law above another and rules nothing'.",
-    "zh": "陈述等级或统治的名称，换成陈述关系的名称：「主律」改为「共律」，即许多核心结果共有、并经由它得到证明的律；这一名称“不把任何律置于另一律之上，也不统治任何东西”。"
+    "zh": "陈述等级或统治的名称，换成陈述关系的名称：「主律」改为「共律」，即许多核心结果共有、并经由它得到证明的律；这一名称「ranks no law above another and rules nothing」（不把任何律置于另一律之上，也不统治任何东西）。"
    },
    "evidence": [
     {
@@ -1623,7 +1695,7 @@
    },
    "what": {
     "en": "The repository's working instructions were rewritten so that the work is ordered by what is false or misleading in what a reader is told, then what lets the account be wrong, then what people who have read it report. They state the account's own verdict that none of its central results is new mathematics, and treat each comparison as 'a relation formed by whatever compares'.",
-    "zh": "本仓库的工作规则被重写，工作的次序改为：先是告诉读者的内容中何者为误或会误导，其次是让本理论能够出错的东西，再次是读过它的人所报告的。规则写明本理论自己的裁断：它的核心结果中没有一个是新的数学；并把每一次比较看作“由作比较者所形成的一个关系”。"
+    "zh": "本仓库的工作规则被重写，工作的次序改为：先是「What is false or misleading in what a reader is told」（告诉读者的内容中何者为误或会误导），其次是让本说明能够出错的东西，再次是读过它的人所报告的。规则写明本说明自己的裁断：「none of the account's central results is new mathematics」（本说明的核心结果中没有一个是新的数学）；并把每一次比较看作「a relation formed by whatever compares」（由作比较者所形成的一个关系）。"
    },
    "evidence": [
     {
@@ -1657,8 +1729,8 @@
     "zh": "冻结：读者版第一版；作品归于公共"
    },
    "what": {
-    "en": "The release gate's item 7, the freeze (one frozen commit, D 0f1d9aa13, tag review-packet-1, every dossier re-synced to it, the reader edition built with --release), was met but for the sending. The same day the licence was decided: the work belongs to the commons and has no licence, by choice.",
-    "zh": "发布闸门的第 7 项，即冻结（一个冻结的提交 D 0f1d9aa13，标签 review-packet-1，每份审读材料都重新对齐到它，读者版以 --release 构建），除寄送之外已经达成。同一天定下了许可：这份工作属于公共，有意不设许可。"
+    "en": "The release gate's item 7, the freeze (one frozen commit, D 0f1d9aa13, tag review-packet-1, every dossier re-synced to it, the reader edition built with --release), was met but for the sending and the push. The same day the licence was decided: the work belongs to the commons and has no licence, by choice.",
+    "zh": "发布闸门的第 7 项，即冻结（一个冻结的提交 D 0f1d9aa13，标签 review-packet-1，每份审查材料都重新对齐到它，读者版以 --release 构建），除寄送与推送之外已经达成。许可一事当天定下：作品归于公共，有意不设许可。"
    },
    "evidence": [
     {
@@ -1678,10 +1750,16 @@
      "locator": "line 3",
      "quote": "This work belongs to the commons.",
      "private": false
+    },
+    {
+     "path": "COMMONS.md",
+     "locator": "line 3",
+     "quote": "So it has no licence, by choice",
+     "private": false
     }
    ],
    "label": "public",
-   "label_why": "The tracked freeze steps, release gate page and COMMONS.md state the freeze, its commit and the licence.",
+   "label_why": "The tracked freeze steps, release gate page and COMMONS.md state the freeze, its commit and the licence; commit 4f50e3e68 of 2026-11-03 dates the licence decision.",
    "thread": false
   },
   {
@@ -1692,8 +1770,8 @@
     "zh": "UE32：T2 的三个量对该领域拟合的延迟嵌入"
    },
    "what": {
-    "en": "On assessed fish stocks, by the field's own criterion of out-of-sample skill and a test frozen before any series was read, the frozen verdict was 'T2 better than the field's fitted embedding', where the design had expected 'not separated'. Both states forecast worse than persistence in most stocks, and the run's README reads that this does not change 08's verdict that what survives of the account is no discovery.",
-    "zh": "在经评估的鱼类种群上，按该领域自己的样本外预报判据、以读任何序列之前已冻结的检验，冻结裁决是“T2 胜过该领域拟合的嵌入”，而设计原先预期的是“不可分”。在多数种群中，二者都不如直接沿用上一次的给予；该次运行的说明读为：这不改变第八章的裁断，即本理论留下来的不是发现。"
+    "en": "On assessed fish stocks, by the field's own criterion of out-of-sample skill and a test frozen before any series was read by it (it drew on MQ5's earlier in-sample fits of the same stocks), the frozen verdict was 'T2 better than the field's fitted embedding', where the design had expected 'not separated'. Both states forecast worse than persistence in most stocks, and the run's README reads that this does not change 08's verdict that what survives of the account is no discovery.",
+    "zh": "在经评估的鱼类种群上，按该领域自己的样本外预报判据，以一项在它读任何序列之前已冻结的检验（它用到了 MQ5 早先对同一批种群的样本内拟合），冻结裁决是「T2 better than the field's fitted embedding」（T2 胜过该领域拟合的嵌入），而设计原先预期的是「not separated」（无从区分）。在多数种群中，二者都不如直接沿用上一次的给予；该次运行的说明读为：这不改变第八章的裁断，即本说明留下来的不是发现。"
    },
    "evidence": [
     {
@@ -1713,6 +1791,18 @@
      "locator": "Against 08's verdict on what is new (line 67)",
      "quote": "This one does not change it: both T2's numbers and the embedding trail persistence in most stocks",
      "private": false
+    },
+    {
+     "path": "experiments/state-against-embedding/README.md",
+     "locator": "Standing (line 28)",
+     "quote": "Designed and frozen on 3 November 2026, before any series was read by it",
+     "private": false
+    },
+    {
+     "path": "experiments/state-against-embedding/DESIGN.md",
+     "locator": "line 300",
+     "quote": "The test is not blind to MQ5's results.",
+     "private": false
     }
    ],
    "label": "public",
@@ -1727,8 +1817,8 @@
     "zh": "读取之形成的各项检验在任何运行之前冻结"
    },
    "what": {
-    "en": "The tests of the nine laws of formations that read, each of which 'refutes at most a named correspondence', were frozen on 4 November 2026, not run, so the board could say both readiness conditions hold so far and 'every test's first stage is frozen before any run'. On 6 November the Stage A of TR1, TR2 and TR7 ran on small learners with no model call; TR7's reading 'supported' 'refutes or confirms no theorem and no thesis', and 'The tests that call a model have not run.'",
-    "zh": "关于读取之形成（formations that read）九条律的各项检验，每一项“至多驳倒一个指名的对应”，于 2026 年 11 月 4 日冻结、未运行；于是工作板可以说，两项就绪条件迄今都成立，“每一项检验的第一阶段都在任何运行之前冻结”。11 月 6 日，TR1、TR2 与 TR7 的 A 阶段在小型学习者上运行，不调用任何模型；TR7 的读法为“得到支持”，但它“不驳倒也不证实任何定理或论题”，而“调用模型的检验尚未运行”。"
+    "en": "The tests of the nine laws of formations that read, each of which 'refutes at most a named correspondence', were frozen on 4 November 2026, not run, and what of them stayed a design, the Stage A of TR1, TR2 and TR7 among it, on 5 November; so the board could say both readiness conditions hold so far and 'every test's first stage is frozen before any run'. On 6 November the Stage A of TR1, TR2 and TR7 ran on small learners with no model call; in the AI-written account of the runs, TR7's reading 'supported' 'refutes or confirms no theorem and no thesis', and 'The tests that call a model have not run.'",
+    "zh": "关于 formations that read（读取之形成）九条律的各项检验，每一项「refutes at most a named correspondence」（至多驳倒一个指名的对应），于 2026 年 11 月 4 日冻结、未运行；其中仍是设计的部分，包括 TR1、TR2 与 TR7 的 A 阶段，于 11 月 5 日冻结。于是工作板可以说，两项就绪条件迄今都成立，「every test's first stage is frozen before any run」（每一项检验的第一阶段都在任何运行之前冻结）。11 月 6 日，TR1、TR2 与 TR7 的 A 阶段在小型学习者上运行，不调用任何模型；在由 AI 撰写的运行记述中，TR7 的读法「supported」（得到支持）「refutes or confirms no theorem and no thesis」（不驳倒也不证实任何定理或论题），而「The tests that call a model have not run.」（调用模型的检验尚未运行。）"
    },
    "evidence": [
     {
@@ -1739,8 +1829,14 @@
     },
     {
      "path": "_process/BECOMING-WORKBOARD.md",
-     "locator": "## Decisions pending Ren, the review packet's decisions (line 84)",
+     "locator": "the board's decisions section, the review packet's decisions (line 84)",
      "quote": "every test's first stage is frozen before any run",
+     "private": false
+    },
+    {
+     "path": "_process/BECOMING-WORKBOARD.md",
+     "locator": "the board's decisions section, the review packet's decisions (line 84)",
+     "quote": "What stayed a design is frozen too, on 5 November, before any call to a model and any training run",
      "private": false
     },
     {
@@ -1751,7 +1847,7 @@
     }
    ],
    "label": "public",
-   "label_why": "The tracked experiments index, board and the tests' README state the freezes, the Stage A runs and their readings.",
+   "label_why": "The tracked experiments index, board and the tests' README (its account of the runs AI-written) state the freezes, the Stage A runs and their readings.",
    "thread": false
   },
   {
@@ -1759,11 +1855,11 @@
    "date": "2026-11-06",
    "title": {
     "en": "UE31b fails T2's wording; T2 narrowed to the level's history",
-    "zh": "UE31b 使 T2 的措辞未通过；T2 收窄为水平自身的历史"
+    "zh": "UE31b 使 T2 的措辞未通过；T2 收窄为水平自身的历史所及"
    },
    "what": {
     "en": "Read by cell on flour beetle cultures, T2's wording 'as far as anything measured does' fails to the pupae and the adults, 'a class of fewer variables'; the failure counts against the claim for every renewable condition under a draw, but 'does not defeat T2 in the fisheries'. Chapter 2 now says the three numbers with the draw fix the next giving 'as far as the level's own history does'.",
-    "zh": "按单元读面粉甲虫的培养物，T2 的措辞“凡量度所及”败于蛹与成虫这一“变量更少的类”；这一失败对每一个在取用之下的可更新的缘之主张都算作反证，但“不推翻 T2 在渔业中的成立”。第二章现在说，这三个量连同取用，确定下一次给予“以水平自身的历史所及为限”。"
+    "zh": "按单元读面粉甲虫的培养物，T2 的措辞「as far as anything measured does」（凡量度所及）败于蛹与成虫，「a class of fewer variables」（变量更少的类）；这一失败对每一个在取用之下的可更新的缘之主张都算作反证，但「does not defeat T2 in the fisheries」（并不因此在渔业中推翻 T2）。第二章现在说，这三个量连同取用确定下一次给予，「as far as the level's own history does」（水平自身的历史所及）。"
    },
    "evidence": [
     {
@@ -1790,50 +1886,15 @@
    "thread": false
   },
   {
-   "id": "nov-runhold",
-   "date": "2026-11-06",
-   "title": {
-    "en": "Paid runs and new test designs held until readers report",
-    "zh": "付费运行与新检验设计暂停，待读者报告"
-   },
-   "what": {
-    "en": "From 6 November 2026, until the first people who read the account report, no new test is designed and no paid run is made, since the text's readiness asks for designs frozen, not run, and no item of the release gate needs a run. The record's AI-written context adds that new designs had given the poorest return: 'T7F took eleven reader rounds and did not freeze.'",
-    "zh": "自 2026 年 11 月 6 日起，直到第一批读过本理论的人报告为止，不再设计新的检验，也不做付费运行；理由是文本的就绪只要求设计冻结、不要求运行，而发布门槛的任何一项都不需要运行。该记录中由 AI 撰写的背景补充说，新的检验设计回报最差：“T7F 经过十一轮读者审读，仍未冻结。”"
-   },
-   "evidence": [
-    {
-     "path": "_process/BECOMING-WORKBOARD.md",
-     "locator": "## Now, The way now item 2 (line 33)",
-     "quote": "Held from 6 November 2026, until the first people who read it report: no new test is designed and no paid run is made",
-     "private": false
-    },
-    {
-     "path": "_process/BECOMING-WORKBOARD.md",
-     "locator": "Queue line, RUNHOLD landed clause (line 39)",
-     "quote": "The text's readiness asks for designs frozen, not run, and no item of the release gate needs a run",
-     "private": false
-    },
-    {
-     "path": "sources/15-codex-theory-conversations/2026-11-06-hold-paid-runs-and-new-test-designs.md",
-     "locator": "## Context (AI-authored)",
-     "quote": "T7F took eleven reader rounds and did not freeze.",
-     "private": false
-    }
-   ],
-   "label": "public",
-   "label_why": "The tracked board states the hold, its reason and when it lapses; the tracked source record gives its context, including T7F (held, not frozen, commit d5ff4b3a2 of 2026-11-05).",
-   "thread": false
-  },
-  {
    "id": "nov-lm-c-and-lean-whole",
    "date": "2026-11-07",
    "title": {
-    "en": "C no longer said to order alone; the Lean made whole",
-    "zh": "不再说 C 独自给出次序；Lean 归为一体"
+    "en": "C no longer said to order alone; the Lean's duplicates cut",
+    "zh": "不再说 C 独自给出次序；Lean 中重复的证明削减"
    },
    "what": {
-    "en": "Where the text said C orders alone, or that ranking needs C, 'it now says a ranking of courses needs C or a premise in its place'. The same day an audit that went through every constant of the Lean package and one near-full rebuild, with every axiom report empty and 'no new mathematics', took statements proved more than once from 113 groups to 21.",
-    "zh": "凡文本说 C 独自给出次序，或说排序需要 C 之处，“现在都说：对进程的排序需要 C，或一个代替它的前提”。同一天，一次审计走遍 Lean 包的每一个常量，一次近乎完整的重建（每一份公理报告为空，“没有新的数学”）把被证明不止一次的陈述由 113 组减为 21 组。"
+    "en": "Where the text said C orders alone, or that ranking needs C, 'it now says a ranking of courses needs C or a premise in its place'. An audit of the compiled terms, in a section dated 6 November, went through every constant of the Lean package, and with one near-full rebuild, every axiom report empty and 'no new mathematics', statements proved more than once went from 113 groups to 21; both corrections landed on 7 November.",
+    "zh": "凡文本说 C 独自给出次序，或说排序需要 C 之处，「it now says a ranking of courses needs C or a premise in its place」（现在都说：对进程的排序需要 C，或一个代替它的前提）。一次对编译后之项的审计（所在一节标为 11 月 6 日）走遍 Lean 包的每一个常量；借一次近乎完整的重建，每一份公理报告为空，「no new mathematics」（没有新的数学），被证明不止一次的陈述由 113 组减为 21 组。两项更正都于 11 月 7 日落地。"
    },
    "evidence": [
     {
@@ -1864,11 +1925,11 @@
    "date": "2026-11-07",
    "title": {
     "en": "The crosswalk: earlier folders and domains read against the account",
-    "zh": "对照表：以现行理论读此前各文件夹与各思想领域"
+    "zh": "对照表：以现行说明读此前各文件夹与各思想领域"
    },
    "what": {
-    "en": "1,183 entries read the 16 earlier theory folders and 12 domains of thought against the live account, with a connection map beside them; the crosswalk 'creates no result, and every entry is an AI reading with no person's behind it'. A second critic's read of 100 entries drawn at random 'estimates 82.6% holding', the other entries not read again, and the readers' flags corrected live sentences, nine more of which 'gave ranking to C alone in other words'.",
-    "zh": "1,183 条条目以现行理论读此前的 16 个理论文件夹与 12 个思想领域，旁附一张关联图；该对照表“不产生任何结果，每一条都是 AI 的读法，背后没有任何人的读法”。第二位批评者读了随机抽取的 100 条，据此“估计 82.6% 成立”，其余条目未再读；读者标出的问题改正了现行文本中的句子，其中另有九句“换了说法，把排序单单交给 C”。"
+    "en": "1,183 entries read the 16 earlier theory folders and 12 domains of thought against the live account, with a connection map beside them; the crosswalk 'creates no result, and every entry is an AI reading with no person's behind it'. A second critic's read of 100 entries drawn at random 'estimates 82.6% holding', the other entries not read again, and the readers' flags corrected 26 places in the live text at their homes, and nine more that 'gave ranking to C alone in other words'.",
+    "zh": "1,183 条条目以现行说明读此前的 16 个理论文件夹与 12 个思想领域，旁附一张关联图；该对照表「creates no result, and every entry is an AI reading with no person's behind it」（不产生任何结果，每一条都是 AI 的读法，背后没有任何人的读法）。第二位批评者读了随机抽取的 100 条，据此「estimates 82.6% holding」（估计 82.6% 成立），其余条目未再读；读者标出之处中，有 26 处在现行文本中于其所属之处改正，另有九处「gave ranking to C alone in other words」（换了说法，把排序单单交给 C）。"
    },
    "evidence": [
     {
@@ -1888,176 +1949,126 @@
      "locator": "How far to trust it (line 9)",
      "quote": "that estimates 82.6% holding",
      "private": false
+    },
+    {
+     "path": "_process/BECOMING-WORKBOARD.md",
+     "locator": "Queue line, CX landed clause (line 39)",
+     "quote": "Nine more gave ranking to C alone in other words",
+     "private": false
     }
    ],
    "label": "public",
    "label_why": "The generated crosswalk and the tracked board state the entries, their standing and the check; commit 448f15a6e of 2026-11-07 dates the landing, and theories/becoming/results/atlas/map.html is tracked.",
    "thread": false
-  },
-  {
-   "id": "nov-edition-5",
-   "date": "2026-11-07",
-   "title": {
-    "en": "Edition 5 becomes the edition to send",
-    "zh": "第五版成为要寄出的一版"
-   },
-   "what": {
-    "en": "Edition 5 was made from edition 4's frozen commit with the batched precision pass, because edition 4 carried sentences main had since corrected: C given order alone, chapter 4's heading *Arising replenishes*, which says more than its theorem, and the crosswalk's corrections. The board names it the one to send; whom it goes to, and when, is not decided here.",
-    "zh": "第五版由第四版的冻结提交加上批量的精度修订做成，因为第四版带着主干此后已更正的句子：只让 C 给出次序；第四章的标题「Arising replenishes」说得比它的定理多；以及对照的各项更正。工作板称它为要寄出的一版；寄给谁、何时寄，不在此决定。"
-   },
-   "evidence": [
-    {
-     "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/review-packet/FREEZE-STEPS.md",
-     "locator": "## Edition 5 of 7 November 2026",
-     "quote": "04's heading *Arising replenishes*, which says more than its theorem (LM2)",
-     "private": false
-    },
-    {
-     "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/review-packet/FREEZE-STEPS.md",
-     "locator": "## Edition 5 of 7 November 2026",
-     "quote": "the frozen commit D is `3395e82ee`, tagged `review-packet-5`",
-     "private": false
-    }
-   ],
-   "label": "public",
-   "label_why": "The tracked freeze steps state the edition, its frozen commit and why it superseded edition 4.",
-   "thread": false
   }
  ],
  "renames": [
   {
+   "id": "R1",
    "date": "2024-06-26",
    "from": "self",
    "to": "psyche",
    "where": {
-    "en": "In a conversation on the subjective nature of self, after the turn 'i feel the word self is not adequate word here', the unit of the psychological account is renamed because self seemed the wrong word.",
-    "zh": "在一次关于自我之主观性的对话中，继「i feel the word self is not adequate word here」之后，心理层面的单位被改名，因为 self 一词显得不贴切。"
+    "en": "In a conversation on the subjective nature of self, after the turn 'i feel the word self is not adequate word here', the essay's word self is renamed psyche, because self seemed the wrong word.",
+    "zh": "在一次关于自我之主观性的对话中，继「i feel the word self is not adequate word here」（觉得 self 一词在此不贴切）之后，文中的 self 一词改为 psyche，因为 self 一词显得不贴切。"
    },
    "evidence_path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-01.md",
    "quote": "ok change it to psyche, the last version was really good, you can keep other stuff",
    "label": "public"
   },
   {
+   "id": "R2",
    "date": "2024-11-05",
    "from": "competitive convergence",
    "to": "Ouroboros",
    "where": {
-    "en": "TIMELINE.md's ledger and narrative give the 'from' term; in the dated turns it is only the chat export's automatic conversation title, and the turns show a request for a name 'like moloch', not a rejection of 'competitive convergence'.",
-    "zh": "「from」一侧的词来自 TIMELINE.md 的词表与叙述；在带日期的对话中，它只是聊天导出自动生成的对话标题，对话本身只显示请求一个「like moloch」那样的名字，并未弃用「competitive convergence」。"
+    "en": "In the dated turns of 2024-11-05 (hb-02 lines 119 and 123), 'competitive convergence' was proposed as a candidate name and a better one asked for, then one 'like moloch'; Ouroboros titles the same day's later conversations. The earlier term was a candidate, never adopted; that it was 'rejected as dull' is TIMELINE's reading.",
+    "zh": "在 2024-11-05 的带日期对话中（hb-02 第 119 与 123 行），「competitive convergence」（竞争性趋同）被提作候选名，随即询问有无更好的名字，又请求一个「like moloch」（像 moloch 那样）的名字；Ouroboros 是同日其后各对话的标题。前一个词只是候选，从未被采用；「rejected as dull」（因乏味而弃用）是 TIMELINE 的解读。"
    },
-   "evidence_path": "_process/history/2026-09-consolidation/TIMELINE.md",
-   "quote": "He rejected \"competitive convergence\" as dull, asked for \"something more creative, like moloch,\" and settled on Ouroboros",
-   "label": "reconstruction"
+   "evidence_path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-02.md",
+   "quote": "how should we name this process? how about competitive convergence? is there any better name?",
+   "label": "public"
   },
   {
+   "id": "R3",
    "date": "2025-02-07",
    "from": "image of self",
    "to": "narrative-value frame (NVF)",
    "where": {
-    "en": "The 2025-02-03 spiral text is rewritten as sources/01-writings-2025/compound_selfishness.md with the term substituted in place in the same sentence.",
-    "zh": "2025-02-03 的螺旋文本被改写为 sources/01-writings-2025/compound_selfishness.md，在同一句中原地替换了这个词。"
+    "en": "The 2025-02-03 spiral text is rewritten as sources/01-writings-2025/compound_selfishness.md with the term substituted in place in the same sentence; TIMELINE reads it as a change of claim, 'The unit moves from the individual to the collective'.",
+    "zh": "2025-02-03 的螺旋文本被改写为 sources/01-writings-2025/compound_selfishness.md，在同一句中原地替换了这个词；TIMELINE 将其读作主张的改变：「The unit moves from the individual to the collective」（单位从个体移向集体）。"
    },
    "evidence_path": "sources/01-writings-2025/compound_selfishness.md",
    "quote": "A human construct an [narrative-value frame](./NVF.md) - what is more important and worth pursuing than any other goals.",
    "label": "public"
   },
   {
-   "date": "2025-05-18",
-   "from": "Ouroboros / selfishness spiral",
-   "to": "meta-attractor",
-   "where": {
-    "en": "The 2025-05-18 research report introduces the term but does not say it replaces anything; the replacement is TIMELINE.md's ledger only.",
-    "zh": "2025-05-18 的研究报告引入了这个词，但没有说它取代了什么；「取代」关系只见于 TIMELINE.md 的词表。"
-   },
-   "evidence_path": "_process/history/2026-09-consolidation/TIMELINE.md",
-   "quote": "Names an attractor that shapes the *landscape* of lower attractors, not one loop",
-   "label": "reconstruction"
-  },
-  {
-   "date": "2025-08-10",
-   "from": "core drives: accumulation, control, optimization, competition (2025-06-16 V32 draft)",
-   "to": "CAOC",
-   "where": {
-    "en": "The 2025-08-10 formal files name the four drives by one acronym; the tracked files put it at least four weeks before TIMELINE.md's ledger date of 2025-09-08.",
-    "zh": "2025-08-10 的形式化文件用一个缩写命名这四种驱力；仓库中的文件把它放在 TIMELINE.md 词表所记 2025-09-08 之前至少四周。"
-   },
-   "evidence_path": "sources/03-meta-attractor/2025-08-formal/2025-08-10-metaa-prompt-with-user-context.md",
-   "quote": "Canonical CAOC Drives** – show why Control, Accumulation, Optimisation, Competition self-reify.",
-   "label": "public"
-  },
-  {
+   "id": "R6",
    "date": "2025-08-10",
    "from": "USIS (Universal Symbolic Interaction System, Token–Spirit–Space)",
    "to": "STS (Spirit–Token–Space)",
    "where": {
-    "en": "In sources/01-writings-2025/usis.md and STS.md, same file date: the review's body still says 'USIS model' under the STS title; that the reorder puts the agent first is TIMELINE.md's reading, stated in neither file.",
-    "zh": "见 sources/01-writings-2025/usis.md 与 STS.md，两者文件日期相同：评审正文在 STS 标题下仍称「USIS model」；「重排以把主体放在首位」是 TIMELINE.md 的解读，两份文件都未这样说。"
+    "en": "In sources/01-writings-2025/usis.md and STS.md, which carry the same file date: the review's body still says 'USIS model' under the STS title; that USIS came first, and that the reorder puts the agent first, are TIMELINE.md's reading (line 101), stated in neither file.",
+    "zh": "见于 sources/01-writings-2025/usis.md 与 STS.md，两者文件日期相同：评审正文在 STS 标题下仍称「USIS model」（USIS 模型）；USIS 在先、以及重排把主体置于首位，都是 TIMELINE.md 的解读（第 101 行），两份文件都未这样说。"
    },
    "evidence_path": "sources/01-writings-2025/STS.md",
    "quote": "STS: Spirit–Token–Space – A Universal Symbolic Framework",
    "label": "public"
   },
   {
-   "date": "2026-01",
+   "id": "R7",
+   "date": "2026-01 → 2026-07",
    "from": "meta-attractor",
    "to": "totalizing attractor / 总体化吸引子",
    "where": {
-    "en": "In the 2026 talks and the 智善 research drafts on the meta-attractor (a January 2026 talk transcript already says \"totalizing attractors\"; the folder's versions v0.3 to v0.9, dated 2026-07-03, use only 总体化吸引子), because \"meta-\" had been used with opposite valence; only the September timeline's ledger states the replacement, and the account later keeps 元吸引子 for closed capture.",
-    "zh": "见于 2026 年的演讲与智善关于元吸引子的研究稿（2026 年 1 月一次演讲的转写已说「totalizing attractors」；该文件夹 2026-07-03 的 v0.3 至 v0.9 只用「总体化吸引子」），因为「元」在同月曾以相反的价值取向使用；只有九月时间线的词汇表陈述了这一替换，而本理论后来为闭合的捕获保留了「元吸引子」一名。"
+    "en": "In the 2026 talks and the 智善 research drafts on the meta-attractor: a January 2026 talk transcript already says \"totalizing attractors\" (sources/02-wamotopia/transcripts/2026-01-note-chiangmai-festival-talk.txt, line 149), and the folder's versions v0.3 to v0.9, dated 2026-07-03, use only 总体化吸引子 and are titled with it from v0.3; the reason given is that \"meta-\" had been used with opposite valence in the same month. Only the September timeline's ledger states the replacement, dating it 2026-02 → 2026-07, and the account later keeps 元吸引子 (meta-attractor) for closed capture.",
+    "zh": "见于 2026 年的演讲与智善关于元吸引子的研究稿：2026 年 1 月一次演讲的转写已说「totalizing attractors」（总体化吸引子）（sources/02-wamotopia/transcripts/2026-01-note-chiangmai-festival-talk.txt 第 149 行），该文件夹 2026-07-03 的 v0.3 至 v0.9 只用「总体化吸引子」，自 v0.3 起以之为题；所给理由是「\"Meta-\" had been used with opposite valence in the same month」（“元”在同月曾以相反的价值取向使用）。只有九月时间线的词汇表陈述了这一替换，并记为 2026-02 → 2026-07；现行说明后来为封闭的捕获保留了「元吸引子」一名。"
    },
    "evidence_path": "_process/history/2026-09-consolidation/TIMELINE.md",
-   "quote": "\"Meta-\" had been used with opposite valence in the same month; the new term names the property that matters",
+   "quote": "\"Meta-\" had been used with opposite valence in the same month; the new term names the property that matters — that it swallows the alternatives",
    "label": "reconstruction"
   },
   {
+   "id": "R8",
    "date": "2026-04-28",
    "from": "destructive (\"be generative, not destructive\")",
    "to": "degenerative",
    "where": {
-    "en": "In a private conversation quoted by the 智善 folder's README, corrected the same day, because what was meant was the opposite of generative.",
-    "zh": "见于一次私人对话，由智善文件夹的 README 引述；当天即改，因为所指的是生成的反面。"
+    "en": "In a conversation of 2026-04-28 (hb-02 lines 8193 and 8197): the rule 'be generative, not destructive' was corrected the same day, because what was meant was the opposite of generative.",
+    "zh": "见于 2026-04-28 的一次对话（hb-02 第 8193 与 8197 行）：规则「be generative, not destructive」（要生成，不要破坏）当天即改，因为所指的是生成的反面。"
    },
-   "evidence_path": "theories/zhishan-intelligence-must-be-good/README.md",
-   "quote": "what I mean is more like the opposite of generative, maybe degenerative? Or as we discussed before, be good",
-   "label": "private"
+   "evidence_path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-02.md",
+   "quote": "When I said destruction, I just didn’t have a better word, what I mean is more like the opposite of generative, maybe degenerative?",
+   "label": "public"
   },
   {
+   "id": "R9",
    "date": "2026-05-01",
    "from": "Spirit–Space–Token (SST), three primitives",
    "to": "間 (jian), the single primitive",
    "where": {
-    "en": "In the Jian foundation note (v0.3, section VIII; the changelog places the monist step in v0.2), because the ontology became monist; TIMELINE dates the decision 2026-04-30 from a private chat.",
-    "zh": "见于《間》基础笔记 v0.3 第八节（变更记录将一元论之立归于 v0.2），因为本体论转为一元；TIMELINE 据一次私人对话将决定定于 2026-04-30。"
+    "en": "In a private Spirit–Token–Space conversation, quoted by TIMELINE under 05-01, which renames SST to 間 as no longer needed; TIMELINE's ledger dates it 2026-04-30 / 05-01. The tracked Jian foundation note (v0.3, section VIII; its changelog places the monist step in v0.2) states it instead as 間 subsuming the three primitives, more precisely, because the ontology became monist.",
+    "zh": "见于一次私人的 Spirit–Token–Space 对话，由 TIMELINE 在 05-01 条下引述：「把sst改名为间（不再需要sst）」；TIMELINE 的词汇表记为 2026-04-30 / 05-01。已入库的《間》基础笔记（v0.3 第八节；其变更记录将一元论之确立归于 v0.2）则表述为间含括这三个原语：「间不只能含括 SST,且更精确」，因为本体论转为一元。"
    },
-   "evidence_path": "sources/08-jian-wen-language/jian-repo/JIAN_FOUNDATION_NOTE_v0.3.md",
-   "quote": "之前的 SST(Spirit-Space-Token)三原语在间中如何呈现?",
-   "label": "public"
+   "evidence_path": "_process/history/2026-09-consolidation/TIMELINE.md",
+   "quote": "把sst改名为间（不再需要sst）",
+   "label": "private"
   },
   {
+   "id": "R10",
    "date": "2026-05-02",
    "from": "expanding the possibility space",
    "to": "开 (未成之域不闭)",
    "where": {
-    "en": "In a private conversation summarised by the keep-the-possibility-space-open folder, because \"expansion\" sounds measurable and maximisable; the tracked v9 draft (2026-05-04) states the narrower point, and a 2026-05-07 report still uses the older gloss, so the replacement was not complete.",
-    "zh": "见于一次私人对话，由「保持可能性空间开放」文件夹综述，因为“扩张”听来可测、可最大化；已入库的 v9 草稿（2026-05-04）只说较窄之义，2026-05-07 的报告仍用旧释，故替换并未完成。"
+    "en": "In a conversation of 2026-05-02 (hb-03 lines 4437–4441), 开 takes the place of \"expanding the possibility space\" as the root category; the reason, that the older phrase sounds measurable, maximisable and optimisable, is a model's reply, adopted. The tracked v9 draft (2026-05-04) states the narrower point, and a 2026-05-07 report still uses the older gloss, so the replacement was not complete.",
+    "zh": "见于 2026-05-02 的一次对话（hb-03 第 4437–4441 行）：「开」取代「扩张可能性空间」为根范畴；理由出自一个模型的回答，并被采纳：「因为“扩张可能性空间”听起来像可以被测量、最大化、优化」。已入库的 v9 草稿（2026-05-04）说的是较窄之义，2026-05-07 的报告仍用旧释，故替换并未完成。"
    },
-   "evidence_path": "theories/keep-the-possibility-space-open/README.md",
-   "quote": "开 replaces \"expanding the possibility space\" as the root category, because \"expansion\" sounds measurable, maximizable and optimizable",
-   "label": "private"
+   "evidence_path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-03.md",
+   "quote": "因为“扩张可能性空间”听起来像可以被测量、最大化、优化",
+   "label": "public"
   },
   {
-   "date": "2026-07-03",
-   "from": "meta-attractor",
-   "to": "总体化吸引子 (totalizing attractor)",
-   "where": {
-    "en": "In the 智善 research line's meta-attractor versions, whose tracked texts title it 总体化吸引子 from v0.3; that it replaced meta-attractor, and its English use from 2026-02, are stated only by TIMELINE's vocabulary ledger.",
-    "zh": "见于智善研究线的 meta-attractor 各版本，已入库文本自 v0.3 起以「总体化吸引子」为题；它取代 meta-attractor、以及其英文用法始于 2026-02，仅见于 TIMELINE 的词汇台账。"
-   },
-   "evidence_path": "_process/history/2026-09-consolidation/TIMELINE.md",
-   "quote": "the new term names the property that matters — that it swallows the alternatives",
-   "label": "reconstruction"
-  },
-  {
+   "id": "R12",
    "date": "2026-09-07",
    "from": "The Fork — automated feudalism or an automated commons (folder title)",
    "to": "Cooperative abundance and freely built worlds",
@@ -2070,42 +2081,7 @@
    "label": "public"
   },
   {
-   "date": "2026-09-27",
-   "from": "智能向善，共赴大同：立场与使命（讨论稿 v0.2）",
-   "to": "从小康到大同：中华文明面对智能时代的态度与立场 (v0.3)",
-   "where": {
-    "en": "the community position paper at v0.3, retitled because it was no longer an AI safety community's mission but a stance of Chinese civilization",
-    "zh": "社区立场文稿 v0.3 改题，因为它不再是一个 AI 安全社区的使命，而是一份关于中华文明的态度与立场"
-   },
-   "evidence_path": "drafts/2026-09-26-community-mission/NOTES.md",
-   "quote": "标题改为《从小康到大同：中华文明面对智能时代的态度与立场》。",
-   "label": "public"
-  },
-  {
-   "date": "2026-10-02",
-   "from": "Moloch / selection on cognition",
-   "to": "molochlization (spoken)",
-   "where": {
-    "en": "In a private recorded conversation, kept in TIMELINE's vocabulary ledger and MAP.md, because the -ization names a becoming that turns whatever stands inside the selection toward it.",
-    "zh": "见于一次私人录音对话，记入 TIMELINE 的词汇台账与 MAP.md，因为 -ization 指一种生成：凡处于该选择之中者，皆被转向它。"
-   },
-   "evidence_path": "_process/history/2026-09-consolidation/TIMELINE.md",
-   "quote": "The *-ization* names a becoming: whatever stands inside the selection, its opponents and its intended guardians included, is turned toward it",
-   "label": "private"
-  },
-  {
-   "date": "2026-10-02",
-   "from": "Selecting the Selectors: Recursive Selection, Cross-Domain Capture, and the Answerability of AI Development",
-   "to": "Selecting the Selectors: Recursive Selection and the Evolution of Control over AI Evaluation",
-   "where": {
-    "en": "the IASEAI'27 draft's subtitle at v2, because the central result changed to selection for control over future selection",
-    "zh": "IASEAI'27 稿 v2 的副标题，因核心结果改为对未来选择之控制的选择"
-   },
-   "evidence_path": "drafts/2026-10-02-iaseai-selecting-the-selectors/NOTES.md",
-   "quote": "The new subtitle names the new central result.",
-   "label": "public"
-  },
-  {
+   "id": "R16",
    "date": "2026-10-02",
    "from": "Selecting the Selectors",
    "to": "No Viable Winner (v3.0)",
@@ -2118,11 +2094,12 @@
    "label": "public"
   },
   {
+   "id": "R17",
    "date": "2026-10-03",
    "from": "No Viable Winner",
    "to": "No Viable Race",
    "where": {
-    "en": "the IASEAI'27 draft's title at v3.1, after three reviews, because in the model a single winner whose stake in the host is shared would restrain itself",
+    "en": "the IASEAI'27 draft's title at v3.1, after three reviews, because in the model a single winner whose stake in the host is shared would restrain itself: what fails is the race",
     "zh": "IASEAI'27 稿 v3.1 的标题，经三份审阅之后；因为在模型中一个其利益与宿主共享的单一赢家会自我克制，失败的是竞赛"
    },
    "evidence_path": "drafts/2026-10-02-iaseai-selecting-the-selectors/history/v3/NOTES-v3.md",
@@ -2130,30 +2107,7 @@
    "label": "public"
   },
   {
-   "date": "2026-10-03",
-   "from": "No Viable Race",
-   "to": "No Winning Position",
-   "where": {
-    "en": "v4.0 to v4.5 of the line, a theory draft under a new title written on a new direction, not a retitled paper edition; the paper was to be compressed from it",
-    "zh": "此线的 v4.0 至 v4.5：在新方向下以新标题写成的理论稿，而非改题的论文版本；论文本应由它压缩而来"
-   },
-   "evidence_path": "drafts/2026-10-02-iaseai-selecting-the-selectors/history/v4/THEORY-v4.0.md",
-   "quote": "This is the full theory, written without a page limit; the paper will be compressed from it.",
-   "label": "public"
-  },
-  {
-   "date": "2026-10-03",
-   "from": "No Winning Position",
-   "to": "Changing the AI Trajectory (subtitle 'Meta-Attractors, Alignment and Cooperation', from v6.0 'The Meta-Attractor of Winning and the Generative Alternative')",
-   "where": {
-    "en": "v5 and v6 of the line, building on v4.5; the title was kept through V7.3 (5 October)",
-    "zh": "此线的 v5 与 v6，承接 v4.5；此标题一直保留到 V7.3（10 月 5 日）"
-   },
-   "evidence_path": "drafts/2026-10-02-iaseai-selecting-the-selectors/history/v5/THEORY.md",
-   "quote": "building on* No Winning Position *v4.5",
-   "label": "public"
-  },
-  {
+   "id": "R20",
    "date": "2026-10-09",
    "from": "Universal Meta-Ethics of Agency",
    "to": "The Theory of Becoming",
@@ -2166,6 +2120,7 @@
    "label": "public"
   },
   {
+   "id": "R21",
    "date": "2026-10-09",
    "from": "theories/shengsheng-buxi-generative-existence/",
    "to": "theories/becoming/",
@@ -2178,6 +2133,7 @@
    "label": "public"
   },
   {
+   "id": "R22",
    "date": "2026-10-09",
    "from": "theories/shengsheng-buxi-generative-existence/unified-2026-10-05/",
    "to": "theories/becoming/chapters/",
@@ -2190,30 +2146,33 @@
    "label": "public"
   },
   {
+   "id": "R23",
    "date": "2026-10-16",
    "from": "selection-by-the-record-alone (Selection by the record alone)",
    "to": "selection-through-a-model-of-the-options (Selection through a model of the options)",
    "where": {
-    "en": "a result record's id and title, after the correction that selection goes through a cognitive model and not the record alone; the old id kept as an alias",
-    "zh": "一项结果记录的 id 与标题，因纠正为选择经由认知模型而非仅凭记录；旧 id 保留为别名"
+    "en": "a result record's id and title, after the correction that selection goes through a cognitive model and not the record alone; the rename came with a reframed claim, the old id kept as an alias; the record's current title is \"Selection through a map of the alternatives\"",
+    "zh": "一项结果记录的 id 与标题，因纠正为选择经由认知模型而非仅凭记录；改名伴随主张的重述，旧 id 保留为别名；该记录现在的标题是「经备择之映射的选择」"
    },
    "evidence_path": "theories/becoming/results/records/selection-through-a-model-of-the-options.json",
    "quote": "The id selection-by-the-record-alone became selection-through-a-model-of-the-options, the old id kept as an alias",
    "label": "public"
   },
   {
+   "id": "R24",
    "date": "2026-10-17",
    "from": "G0",
    "to": "living significance",
    "where": {
     "en": "in the live text and records' public fields, when outdated labels were renamed by what they state",
-    "zh": "活文本与记录的公开字段中，过时标签按其所述改名（生生之意义）"
+    "zh": "活文本与记录的公开字段中，过时标签按其所述改名（存活之意义）"
    },
    "evidence_path": "theories/becoming/results/records/continuation-condition-yields-living-significance.json",
    "quote": "living significance for G0, the continuation condition for the one axiom, the theory without axiom for Part I",
    "label": "public"
   },
   {
+   "id": "R25",
    "date": "2026-10-17",
    "from": "the one axiom",
    "to": "the continuation condition",
@@ -2226,30 +2185,33 @@
    "label": "public"
   },
   {
+   "id": "R26",
    "date": "2026-10-17",
    "from": "Part I",
    "to": "the theory without axiom",
    "where": {
     "en": "in the live text, in the same relabelling; Part II retired as a label",
-    "zh": "活文本中，同一次改名（无公理的理论）；“第二部分”作为标签退役"
+    "zh": "活文本中，同一次改名（无公理的理论）；「Part II」（第二部分）作为标签退役"
    },
    "evidence_path": "theories/becoming/results/records/continuation-condition-yields-living-significance.json",
    "quote": "living significance for G0, the continuation condition for the one axiom, the theory without axiom for Part I",
    "label": "public"
   },
   {
+   "id": "R27",
    "date": "2026-10-18",
-   "from": "registration (Web.Registers and 174 other declarations)",
-   "to": "coupling (Web.CoupledInto and the others)",
+   "from": "registration (Web.Registers)",
+   "to": "coupling (Web.CoupledInto)",
    "where": {
-    "en": "Lean declarations of the Becoming package, renamed after 'registration' was judged a dualist word; statements and proofs unchanged",
-    "zh": "Becoming 包的 Lean 声明，因“registration”被判为二元论词语而改名；陈述与证明不变"
+    "en": "Lean declarations of the Becoming package: Web.Registers → Web.CoupledInto, among 175 declarations renamed off the registration vocabulary, after 'registration' was judged a dualist word; statements and proofs unchanged",
+    "zh": "Becoming 包的 Lean 声明：Web.Registers → Web.CoupledInto，属改离 registration 词汇的 175 个声明之列，因「registration」（登记）被判为二元论词语；陈述与证明不变"
    },
    "evidence_path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/n1-migration/RENAME-TABLE.json",
    "quote": "\"Becoming.Web.Registers\": \"Becoming.Web.CoupledInto\",",
    "label": "public"
   },
   {
+   "id": "R28",
    "date": "2026-10-20",
    "from": "Becoming.G0",
    "to": "Becoming.LivingSignificance",
@@ -2262,18 +2224,20 @@
    "label": "public"
   },
   {
+   "id": "R29",
    "date": "2026-10-20",
    "from": "Becoming.PositiveGround",
    "to": "Becoming.SecuredContent",
    "where": {
     "en": "a Lean module and namespace (67 declarations), R30, since 'positive ground' named what the definition calls content absent before",
-    "zh": "一个 Lean 模块与命名空间（67 个声明），R30，因“positive ground”所指的正是定义所说的此前没有的内容"
+    "zh": "一个 Lean 模块与命名空间（67 个声明），R30，因「positive ground」（正面的根据）所指的正是定义所说的此前没有的内容"
    },
    "evidence_path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/r30-names/RENAME-TABLE.json",
    "quote": "\"Becoming.PositiveGround\": \"Becoming.SecuredContent\",",
    "label": "public"
   },
   {
+   "id": "R30",
    "date": "2026-10-20",
    "from": "one-axiom-yields-g0",
    "to": "continuation-condition-yields-living-significance",
@@ -2286,6 +2250,7 @@
    "label": "public"
   },
   {
+   "id": "R31",
    "date": "2026-10-20",
    "from": "selection-through-registration",
    "to": "selection-through-couplings",
@@ -2298,6 +2263,7 @@
    "label": "public"
   },
   {
+   "id": "R32",
    "date": "2026-10-20",
    "from": "wisdom-root-part-one",
    "to": "wisdom-root-without-axiom",
@@ -2310,6 +2276,7 @@
    "label": "public"
   },
   {
+   "id": "R33",
    "date": "2026-10-20",
    "from": "alignment-direction-g0-j",
    "to": "alignment-direction-under-widening",
@@ -2322,6 +2289,7 @@
    "label": "public"
   },
   {
+   "id": "R34",
    "date": "2026-10-23",
    "from": "分别",
    "to": "类 (class)",
@@ -2334,51 +2302,29 @@
    "label": "public"
   },
   {
-   "date": "2026-10-30",
-   "from": "Universal metaethics of all intelligence",
-   "to": "The ethics for life, and every intelligence formed within it",
-   "where": {
-    "en": "the title of the goal universal-intelligence-session, when the ethics was stated as life's",
-    "zh": "目标 universal-intelligence-session 的题名，因伦理被表述为生命之伦理（「生命之伦理，及在其中形成的一切智能」）"
-   },
-   "evidence_path": "sources/15-codex-theory-conversations/2026-10-30-goal-the-ethics-for-life-approved.md",
-   "quote": "It replaces \"Universal metaethics of all intelligence\"",
-   "label": "public"
-  },
-  {
+   "id": "R36",
    "date": "2026-11-01",
    "from": "master law (主律)",
    "to": "shared law (共律)",
    "where": {
-    "en": "In chapter 8 §7 and §10, chapter 1 §7, the record master-laws-on-the-grammar's title and the glossary, because 'master law' stated rank and rule where 08 §7 measures only proof dependence",
-    "zh": "见于第八章 §7 与 §10、第一章 §7、记录 master-laws-on-the-grammar 的标题与词汇表；因为「主律」陈述等级与统治，而第八章 §7 量度的只是证明上的依存"
+    "en": "In chapter 8 §7 and §10, chapter 1 §7, the title of the record now shared-laws-on-the-grammar, and the glossary, because 'master law' stated rank and rule where 08 §7 measures only proof dependence",
+    "zh": "见于第八章 §7 与 §10、第一章 §7、现 id 为 shared-laws-on-the-grammar 的记录之标题与词汇表；因为「主律」陈述等级与统治，而第八章 §7 量度的只是证明上的依存"
    },
    "evidence_path": "GLOSSARY.md",
    "quote": "It ranks no law and rules nothing; formerly \"master law\" (主律)",
    "label": "public"
   },
   {
+   "id": "R37",
    "date": "2026-11-07",
    "from": "Arising replenishes",
    "to": "Embodied arising replenishes",
    "where": {
-    "en": "Chapter 4's theorem heading, because the older heading said more than its theorem; the record's id keeps the older word",
-    "zh": "第四章一条定理的标题，因为旧标题所说多于其定理；该记录的 id 保留旧词"
+    "en": "Chapter 4's theorem heading, because the older heading said more than its theorem; the record's id, generation-is-replenishment, keeps the older word, generation",
+    "zh": "第四章一条定理的标题，因为旧标题所说多于其定理；该记录的 id（generation-is-replenishment）保留旧词 generation（生成）"
    },
    "evidence_path": "theories/becoming/chapters/04-LIFE.md",
    "quote": "*Embodied arising replenishes.* (The record's id, `generation-is-replenishment`, keeps the older word.)",
-   "label": "public"
-  },
-  {
-   "date": "2026-11-07",
-   "from": "generation (said for arising, embodied arising and a flow more without end)",
-   "to": "arising, embodied arising and the flow",
-   "where": {
-    "en": "In Lean docstrings in twenty modules and the fifteen records that restate them, English and Chinese, so that docstrings say what their Lean does",
-    "zh": "见于二十个模块的 Lean 文档字符串及转述它们的十五条记录（中英文），使文档字符串说的正是其 Lean 所做的"
-   },
-   "evidence_path": "_process/BECOMING-WORKBOARD.md",
-   "quote": "now says arising, embodied arising and the flow, in twenty modules and the fifteen records that restate them",
    "label": "public"
   }
  ],
@@ -2393,11 +2339,11 @@
    ],
    "claimed": {
     "en": "STRUCTURE.md: \"The honest form is one essay now and one short book later, on the same spine.\" The essay (draft 1, English) states the diagnosis (a society picks one value as the token of power; winners write the rules), the three-layer gate (据物之门, 据规之门, 据心之门), and says \"What this line adds is narrower, and it will be stated where it earns it: that the loop closes through the mind\", with two capture channels into the machine (loss function, corpus). Model-drafted formulations are marked \"[AI-drafted, kept]\"; source lines are quoted verbatim and dated.",
-    "zh": "STRUCTURE.md 说，诚实的形式是现在一篇文章、以后一本小书，同一条主干。文章（第一稿，英文）陈述诊断（一个社会挑选一种价值作为权力的筹码；赢家书写规则）、三层之门（据物之门、据规之门、据心之门），并说这条线增添的更窄：环经由心而闭合（\"the loop closes through the mind\"），以及进入机器的两条俘获通道（损失函数、语料）。模型起草的表述标为 \"[AI-drafted, kept]\"；所引原句逐字照录并注明日期。"
+    "zh": "STRUCTURE.md：「The honest form is one essay now and one short book later, on the same spine.」（诚实的形式是现在一篇文章、以后一本小书，同一条主干。）文章（第一稿，英文）陈述诊断（一个社会挑选一种价值作为权力的筹码；赢家书写规则）、三层之门（据物之门、据规之门、据心之门），并说「What this line adds is narrower, and it will be stated where it earns it: that the loop closes through the mind」（这条线增添的更窄，将在它站得住处陈述：环经由心而闭合），以及进入机器的两条捕获通道（损失函数、语料）。模型起草的表述标为「[AI-drafted, kept]」；所引原句逐字照录并注明日期。"
    },
    "stands": {
     "en": "[AI reading] Not carried as a text: no live chapter links the folder. The crosswalk, which reads the theory folders the essay draws on rather than the essay, says of the alignment folder that \"The channels into the machine and the firm's ground are proposed here, not stated live\" and that the account \"states no pause, floor or phenomenology\"; of the 智善 programme it lists \"evil is owning a gate\" among what the programme asserts and the account states \"conditionally or not at all\". The loop's form (winners writing the next round's rule) stands in 05 and 02 as capture through the rule, on stated models.",
-    "zh": "［AI 读法］未作为文本被承接：没有现行章节链接此文件夹。交叉对照读的是文章所依据的理论文件夹而非文章本身；它对对齐文件夹说，进入机器的通道与企业的根据在此是提议的、并未在现行文本中陈述，且本论述「不陈述暂停、底线或现象学」（\"states no pause, floor or phenomenology\"）；对智善纲领，它把「恶就是据有一道门」列为纲领所断言、而本论述只有条件地陈述或根本不陈述者。环的形式（赢家书写下一轮的规则）在 05 与 02 中作为经由规则的俘获成立，基于所述模型。"
+    "zh": "［AI 读法］未作为文本被承接：没有现行章节链接此文件夹。交叉对照读的是文章所依据的理论文件夹而非文章本身；它对对齐文件夹说「The channels into the machine and the firm's ground are proposed here, not stated live」（进入机器的通道与企业的根据在此是提议的，并未在现行文本中陈述），且本说明「states no pause, floor or phenomenology」（不陈述暂停、底线或现象学）；对智善纲领，它把「evil is owning a gate」（恶就是据有一道门）列为纲领所断言、而本说明「conditionally or not at all」（只有条件地陈述或根本不陈述）者。环的形式（赢家书写下一轮的规则）在 05 与 02 中作为经由规则的捕获成立，基于所述模型。"
    },
    "stands_basis": [
     "theories/becoming/results/atlas/CROSSWALK.md#cxg-alignment-selection-on-cognition",
@@ -2415,15 +2361,16 @@
     "drafts/2026-09-05-zhishan-foundation/宣言工作稿.md"
    ],
    "claimed": {
-    "en": "A theory basis and manifesto for a proposed organization working on a good future, AI safety and 智能向善; it says \"下文的综合表述和组织建议是新拟工作稿；文献、经验案例和技术安全论证仍须另行补充。\"",
-    "zh": "为一个拟议中的组织（致力于良好未来、AI 安全与智能向善）所写的理论基础与宣言；文中说：「下文的综合表述和组织建议是新拟工作稿；文献、经验案例和技术安全论证仍须另行补充。」"
+    "en": "A theory line and working manifesto for a proposed organization working toward a good future, AI safety and 智能向善. Its stance: \"人的尊严、幸福与参与未来的资格，不应取决于人能否在效率和能力的竞争中胜过机器\". It says \"下文的综合表述和组织建议是新拟工作稿；文献、经验案例和技术安全论证仍须另行补充。\"",
+    "zh": "为一个拟议中的组织（致力于良好未来、AI 安全与智能向善）所写的理论主线与工作宣言。其立场：「人的尊严、幸福与参与未来的资格，不应取决于人能否在效率和能力的竞争中胜过机器」。文中说：「下文的综合表述和组织建议是新拟工作稿；文献、经验案例和技术安全论证仍须另行补充。」"
    },
    "stands": {
-    "en": "[AI reading] Superseded the next day by the unified whitepaper (see that entry). The live account carries no organizational stance; the crosswalk's 智善 group lists \"AI must not be a party; the current direction must stop\" among what the programme asserts and the account does not.",
-    "zh": "［AI 读法］次日即为统一白皮书所取代（见该条）。现行论述不带任何组织立场；交叉对照的智善组把「AI 不得成为一方；当前方向必须停止」列为纲领所断言而本论述不断言者。"
+    "en": "[AI reading] Drafted at 16:07 and followed the same afternoon by the unified whitepaper (v0.1 16:57; v1.1 on 6 September; see that entry), by the file times the September timeline gives. The live account carries no organizational stance; the crosswalk's 智善 group lists \"AI must not be a party; the current direction must stop\" among what the programme asserts and \"the account only states conditionally or not at all\".",
+    "zh": "［AI 读法］按九月时间线所记的文件时间，此稿成于 16:07，同日下午即有统一白皮书接续（v0.1 16:57；v1.1 于 9 月 6 日；见该条）。现行说明不带任何组织立场；交叉对照的智善组把「AI must not be a party; the current direction must stop」（AI 不得成为一方；当前方向必须停止）列为纲领所断言、而「the account only states conditionally or not at all」（本说明只有条件地陈述或根本不陈述）者。"
    },
    "stands_basis": [
-    "theories/becoming/results/atlas/CROSSWALK.md#cxg-zhishan-intelligence-must-be-good"
+    "theories/becoming/results/atlas/CROSSWALK.md#cxg-zhishan-intelligence-must-be-good",
+    "_process/history/2026-09-consolidation/TIMELINE.md"
    ],
    "label": "public"
   },
@@ -2440,12 +2387,12 @@
     "drafts/2026-09-05-generative-foundations/formal"
    ],
    "claimed": {
-    "en": "Abstract (v1.1): life, knowing and evaluation form in the world's generation; \"Meta-Attractor 追踪奖励如何选择认知、优势如何进入规则、规则如何塑造证据与后来行动。\" It unifies 生生不息, 至善, Meta-Attractor, Speculative Future, 三层现实, 智能向善 and 大同. Its README says the methodological pilot, the supply model, the Chiang Mai field record and the symmetric case are still to be done, and that the text is for review, \"目前未对外发布\". Versions v0.1 to v1.0 are dated 5 September 2026, v1.1 6 September 2026.",
+    "en": "Abstract (v1.1): life, knowing and evaluation form in the world's generation; \"Meta-Attractor 追踪奖励如何选择认知、优势如何进入规则、规则如何塑造证据与后来行动。\" It unifies 生生不息, 至善, Meta-Attractor, Speculative Future, 三层现实, 智能向善 and 大同. Its README says chapter 11's methodological pilot, the supply model, the Chiang Mai field record and the symmetric case are still to be done, and that the text is for review, \"目前未对外发布\". Versions v0.1 to v1.0 are dated 5 September 2026, v1.1 6 September 2026.",
     "zh": "摘要（v1.1）：生命、认知与评价在世界的生成中形成；「Meta-Attractor 追踪奖励如何选择认知、优势如何进入规则、规则如何塑造证据与后来行动。」它统一生生不息、至善、Meta-Attractor、Speculative Future、三层现实、智能向善与大同。其 README 说第十一章的方法学试点、供给模型、清迈田野记录与对称案例尚待实作，文稿供审阅，「目前未对外发布」。v0.1 至 v1.0 注明 2026 年 9 月 5 日，v1.1 注明 9 月 6 日。"
    },
    "stands": {
     "en": "[AI reading] The whitepaper's terms 三层现实, 七尺, 智能向善 and 大同 were searched for in the live chapters, the one page, the overview and the glossary and not found (searched, not read). The glossary keeps meta-attractor (元吸引子) as \"closed capture\" and says it \"never means the corpus's working definition\". The crosswalk's 智善 group says \"The programme asserts what the account only states conditionally or not at all: intelligence must be good; whatever continues 生生 is good; evil is owning a gate\". The live ethics instead names two unasserted premises, the continuation condition for scope and C for order; the glossary keeps 生生 as \"life in the whole and its continuing generation\".",
-    "zh": "［AI 读法］白皮书的三层现实、七尺、智能向善、大同等词，在现行各章、一页概要、总览与术语表中检索未见（已检索，未通读）。术语表保留元吸引子（meta-attractor），释为「闭合俘获」（closed capture），并说它绝不指语料的工作定义。交叉对照的智善组说：纲领断言了本论述只有条件地陈述或根本不陈述者——智能必须向善；凡延续生生者为善；恶就是据有一道门。现行伦理则指名两个不断言的前提：延续条件定范围，C 定次序；术语表把生生释为「整体之中的生命及其持续的生发」。"
+    "zh": "［AI 读法］白皮书的三层现实、七尺、智能向善、大同等词，在现行各章、一页概要、总览与术语表中检索未见（已检索，未通读）。术语表保留元吸引子（meta-attractor），释为「closed capture」（封闭的捕获），并说它「never means the corpus's working definition」（绝不指语料的工作定义）。交叉对照的智善组说：「The programme asserts what the account only states conditionally or not at all: intelligence must be good; whatever continues 生生 is good; evil is owning a gate」（纲领断言了本说明只有条件地陈述或根本不陈述者：智能必须向善；凡延续生生者为善；恶就是据有一道门）。现行伦理则指名两个不断言的前提：延续条件定范围，C 定次序；术语表把生生释为「life in the whole and its continuing generation」（整体中的生命及其持续的生发）。"
    },
    "stands_basis": [
     "theories/becoming/results/atlas/CROSSWALK.md#cxg-zhishan-intelligence-must-be-good",
@@ -2465,11 +2412,11 @@
    ],
    "claimed": {
     "en": "A one-page fiction canvas whose status is a \"Speculative future\": \"The dates and institutional arrangements below are proposed story elements.\" Its tagline: \"Shared abundance, mutual care and a regenerative culture give diverse people and communities the means to cultivate a flourishing world together.\" Its 'Basis' section calls it \"a new synthesis, not a quotation\"; the revision note is dated 2026-09-16. The two PDFs are byte-identical.",
-    "zh": "一页的虚构画布，自称「推想的未来」（Speculative future）：「下文的日期与制度安排是拟议的故事元素。」其标语说，共享的丰裕、相互照护与再生的文化，使多样的人与社群得以共同培育一个繁盛的世界。其「依据」一节称之为「新的综合，而非引述」；修订说明注明 2026-09-16。两份 PDF 逐字节相同。"
+    "zh": "一页的虚构画布，其地位为「Speculative future」（推想的未来）：「The dates and institutional arrangements below are proposed story elements.」（下文的日期与制度安排是拟议的故事元素。）其标语：「Shared abundance, mutual care and a regenerative culture give diverse people and communities the means to cultivate a flourishing world together.」（共享的丰裕、相互照护与再生的文化，使多样的人与社群得以共同培育一个繁盛的世界。）其依据一节称之为「a new synthesis, not a quotation」（新的综合，而非引述）；修订说明注明 2026-09-16。两份 PDF 逐字节相同。"
    },
    "stands": {
     "en": "[AI reading] A fiction, not a claim of the account. The crosswalk's group for the folder it draws on (cooperative abundance, historical home The Fork) says the live account \"has no abundance layer or provision and no ownership variable\".",
-    "zh": "［AI 读法］是虚构，不是本论述的主张。交叉对照中其所依据文件夹（合作丰裕，历史归属 The Fork）一组说，现行论述没有丰裕层或供给，也没有所有权变量。"
+    "zh": "［AI 读法］是虚构，不是本说明的主张。交叉对照中其所依据文件夹（合作丰裕，历史归属 The Fork）一组说，现行说明「has no abundance layer or provision and no ownership variable」（没有丰裕层或供给，也没有所有权变量）。"
    },
    "stands_basis": [
     "theories/becoming/results/atlas/CROSSWALK.md#cxg-the-fork-and-cooperative-infrastructure"
@@ -2486,12 +2433,12 @@
     "drafts/2026-09-26-ai-safety-community/使命与共识-v0.9.md"
    ],
    "claimed": {
-    "en": "Discussion versions v0.2 to v0.9, each dated 2026-09-26 in its header. v0.3 narrows the position to an AI safety technical community, \"以共同理解和安全能力建设为核心\"; v0.9 keeps four principles and names existential risks. v0.2 is listed as submitted (已提交版本), commit 79f0261.",
-    "zh": "讨论稿 v0.2 至 v0.9，各自页首均注明 2026-09-26。v0.3 把立场收窄为一个 AI 安全技术社区，「以共同理解和安全能力建设为核心」；v0.9 保留四条原则并指名生存性风险。v0.2 列为已提交版本，commit 79f0261。"
+    "en": "Discussion versions v0.2 to v0.9, each dated 2026-09-26 in its header. v0.3 narrows the position to an AI safety technical community, \"以共同理解和安全能力建设为核心\"; v0.9 keeps four principles and names existential risks. v0.2 was committed unchanged before v0.3 began (commit 79f0261).",
+    "zh": "讨论稿 v0.2 至 v0.9，各自页首均注明 2026-09-26。v0.3 把立场收窄为一个 AI 安全技术社区，「以共同理解和安全能力建设为核心」；v0.9 保留四条原则并指名生存性风险。README 记 v0.2「开始 v0.3 前原样提交」，即 git 提交 79f0261。"
    },
    "stands": {
     "en": "[AI reading] A community statement, not part of the account; the live account states no community mission. No crosswalk entry names its folder (searched, not read).",
-    "zh": "［AI 读法］是一份社区声明，不属于本论述；现行论述不陈述任何社区使命。交叉对照中没有条目指名此文件夹（已检索，未通读）。"
+    "zh": "［AI 读法］是一份社区声明，不属于本说明；现行说明不陈述任何社区使命。交叉对照中没有条目指名此文件夹（已检索，未通读）。"
    },
    "stands_basis": [],
    "label": "public"
@@ -2508,12 +2455,12 @@
     "output/pdf/From-Xiaokang-to-Datong-v0.3-en.pdf"
    ],
    "claimed": {
-    "en": "Retitled at v0.3 (27 September) from the community mission of v0.1 and v0.2 (26 September) as a civilizational stance, Chinese with a full English translation (PDFs of 28 and 35 pages). \"Intelligence should be directed toward the good and shared by all, with people at its center.\" AI should not be drawn into zero-sum contests or an arms race; its productive power should first build a common foundation of food, clothing, shelter and mobility, moving step by step toward 大同. The notes say the whole text is AI-drafted from a stance and corpus given to it.",
-    "zh": "v0.3（9 月 27 日）由 v0.1、v0.2（9 月 26 日）的社区使命改题为一份文明立场，中文并有完整英译（PDF 分别 28 页与 35 页）。其主张：智能应当向善、普惠，以人为中心；AI 不应被卷入零和竞赛或军备竞赛，其生产力应先建起衣食住行的共同底座，逐步走向大同。说明称全文由 AI 依所给立场与语料起草。"
+    "en": "Retitled at v0.3 from the community mission of v0.1 and v0.2 as a civilizational stance, Chinese with a full English translation (PDFs of 28 and 35 pages). The notes date v0.3 to 27 September and v0.1 and v0.2 to 26 September; the headers of the three Chinese files read \"Sep 26, 2026\". \"Intelligence should be directed toward the good and shared by all, with people at its center.\" AI should not be drawn into zero-sum contests or an arms race; its productive power should first build a common foundation of food, clothing, shelter and mobility, moving step by step toward 大同. The notes say the whole text is AI-drafted from a stance and corpus given to it.",
+    "zh": "v0.3 由 v0.1、v0.2 的社区使命改题为一份文明立场，中文并有完整英译（PDF 分别 28 页与 35 页）。说明把 v0.3 记为 9 月 27 日、v0.1 与 v0.2 记为 9 月 26 日；三份中文文件页首都写「Sep 26, 2026」。其主张：「智能应当向善、普惠，以人为本」，「不应被卷入零和之争与军备竞赛」；「使其释放的生产力首先为天下人筑成衣食住行的公共基础」，循序渐进地走向大同。说明称全文由 AI 依所给立场与语料起草。"
    },
    "stands": {
     "en": "[AI reading] The crosswalk's group on the relational self and 大同 says \"大同, 五常 and the 人类命运共同体 formalism are absent, and what links to 大同 is mostly proposed here\", and that \"no law evaluates, relation gives no cooperation\". The live account takes no civilizational or national stance.",
-    "zh": "［AI 读法］交叉对照中关系性自我与大同一组说：大同、五常与人类命运共同体的形式化都不在现行论述中，与大同相连者大多是在此处提议的；并说没有律作评价，关系不给出合作。现行论述不取任何文明或国家立场。"
+    "zh": "［AI 读法］交叉对照中关系性自我与大同一组说「大同, 五常 and the 人类命运共同体 formalism are absent, and what links to 大同 is mostly proposed here」（大同、五常与人类命运共同体的形式化都不在现行说明中，与大同相连者大多是在此处提议的），并说「no law evaluates, relation gives no cooperation」（没有律作评价，关系不给出合作）。现行说明不取任何文明或国家立场。"
    },
    "stands_basis": [
     "theories/becoming/results/atlas/CROSSWALK.md#cxg-relational-self-and-datong"
@@ -2532,11 +2479,11 @@
    ],
    "claimed": {
     "en": "A second draft for author review (v1 of 28 September is in sources/05), AI-drafted. \"This paper argues from correctability instead: whether institutions can detect a failure and change course before its consequences become irreversible.\" \"A minimal dynamical theory couples three mechanisms\" (recursive capture, epistemic lag, capture of the evidence channel); it proposes a conditional pause on specified frontier transitions, paced exposure, and structural separation of success from rule-setting; \"Each claim is paired with observations that would refute it.\"",
-    "zh": "供作者审阅的第二稿（9 月 28 日的 v1 在 sources/05 中），由 AI 起草。它改从可纠正性立论：机构能否在后果变得不可逆之前察觉失误、改变方向。「一个最小的动力学理论」耦合三种机制（递归俘获、认知滞后、证据通道的俘获）；提议对指定的前沿跃迁实行有条件的暂停、有节制的暴露，以及成功与规则制定的结构性分离；并说每项主张都配有可驳倒它的观察。"
+    "zh": "供作者审阅的第二稿（9 月 28 日的 v1 在 sources/05 中），由 AI 起草。「This paper argues from correctability instead: whether institutions can detect a failure and change course before its consequences become irreversible.」（本文改从可纠正性立论：机构能否在后果变得不可逆之前察觉失误、改变方向。）「A minimal dynamical theory couples three mechanisms」（一个最小的动力学理论耦合三种机制）：递归捕获、认知滞后、证据通道的捕获；提议对指定的前沿跃迁实行有条件的暂停、有节制的暴露，以及成功与规则制定的结构性分离；并说「Each claim is paired with observations that would refute it.」（每项主张都配有可驳倒它的观察。）"
    },
    "stands": {
     "en": "[AI reading] The crosswalk's alignment group says the account \"states no pause, floor or phenomenology\". The nearest live statement to recursive capture is capture through the rule (02, 05), on stated models; 05 says \"No universal phase threshold is claimed\".",
-    "zh": "［AI 读法］交叉对照的对齐组说，本论述不陈述暂停、底线或现象学。与递归俘获最近的现行陈述是经由规则的俘获（02、05），基于所述模型；05 说：不主张任何普遍的相变阈值。"
+    "zh": "［AI 读法］交叉对照的对齐组说，本说明「states no pause, floor or phenomenology」（不陈述暂停、底线或现象学）。与递归捕获最近的现行陈述是经由规则的捕获（02、05），基于所述模型；05 说「No universal phase threshold is claimed」（不主张任何普遍的相变阈值）。"
    },
    "stands_basis": [
     "theories/becoming/results/atlas/CROSSWALK.md#cxg-alignment-selection-on-cognition",
@@ -2572,12 +2519,12 @@
     "drafts/2026-10-02-iaseai-selecting-the-selectors/v7.3/START-HERE.md"
    ],
    "claimed": {
-    "en": "Versions by their own headers: v1 and v2 (2 October); v3.0 (2 October, late evening, LaTeX title 'No Viable Winner'); v3.1 (3 October, 'No Viable Race'); v4.0–v4.5 (3 October, a theory draft); v5.0–v6.1 (3 October); v6.2, v7, v7.1, v7.2 (4 October); v7.3 (5 October, current). v2: \"recursive selection creates second-order selection pressure for mechanisms that increase control over future selection.\" v3.1: \"In the model a single winner whose stake in the host is shared would restrain itself (Remark 2). What fails is the race.\" v7.3: \"The proposal is to change what winning confers\"; \"The paper proves parts of this argument in separate models\"; \"The contribution is a conditional construction and a testable operational proposal\"; Test N is \"proposed and unrun\". No file states which edition was submitted.",
-    "zh": "按各版页首：v1、v2（10 月 2 日）；v3.0（10 月 2 日深夜，LaTeX 标题「No Viable Winner」）；v3.1（10 月 3 日，「No Viable Race」）；v4.0–v4.5（10 月 3 日，理论稿）；v5.0–v6.1（10 月 3 日）；v6.2、v7、v7.1、v7.2（10 月 4 日）；v7.3（10 月 5 日，现行）。v2：递归选择对增强未来选择之控制的机制造成二阶选择压力。v3.1：在模型中，一个其利益与宿主共享的单一赢家会自我克制（注 2），失败的是竞赛。v7.3：提议改变赢所带来的东西；论文在各自分开的模型中证明论证的部分；其贡献是一个有条件的构造与一项可检验的操作性提议；检验 N「已提议、未运行」。没有文件说明提交的是哪一版。"
+    "en": "Versions by their own headers: v1 and v2 (2 October); v3.0 (2 October, late evening, LaTeX title 'No Viable Winner'); v3.1 (3 October, 'No Viable Race'); v4.0–v4.5 (3 October, a theory draft); v5.0–v6.1 (3 October); v6.2, v7, v7.1, v7.2 (4 October); v7.3 (5 October, current). v2's abstract: \"We ask when selection itself favors practices that acquire control over later selection.\" The v3 notes, on v3.1: \"In the model a single winner whose stake in the host is shared would restrain itself (Remark 2). What fails is the race.\" v7.3: \"The proposal is to change what winning confers\"; \"The paper proves parts of this argument in separate models\"; \"The contribution is a conditional construction and a testable operational proposal\"; Test N is \"proposed and unrun\". No file states which edition was submitted.",
+    "zh": "按各版页首：v1、v2（10 月 2 日）；v3.0（10 月 2 日深夜，LaTeX 标题「No Viable Winner」）；v3.1（10 月 3 日，「No Viable Race」）；v4.0–v4.5（10 月 3 日，理论稿）；v5.0–v6.1（10 月 3 日）；v6.2、v7、v7.1、v7.2（10 月 4 日）；v7.3（10 月 5 日，现行）。v2 摘要：「We ask when selection itself favors practices that acquire control over later selection.」（我们问：选择本身何时偏好那些取得对后来选择之控制的做法。）v3 的说明论 v3.1：「In the model a single winner whose stake in the host is shared would restrain itself (Remark 2). What fails is the race.」（在模型中，一个其利益与宿主共享的单一赢家会自我克制（注 2）。失败的是竞赛。）v7.3：「The proposal is to change what winning confers」（提议改变赢所带来的东西）；「The paper proves parts of this argument in separate models」（论文在各自分开的模型中证明论证的部分）；「The contribution is a conditional construction and a testable operational proposal」（其贡献是一个有条件的构造与一项可检验的操作性提议）；检验 N「proposed and unrun」（已提议、未运行）。没有文件说明提交的是哪一版。"
    },
    "stands": {
     "en": "[AI reading] 02-MAP reads the corpus's \"selecting the selectors\" as \"the pool counted as the population is\" (`Drawn.pool_reads`), an AI reading (D67); 07 states \"When control over the selection is itself selected\" as laws on stated models, and its D68 reading says \"capable assistance to whoever shapes the rule does not lower the selection for control\", the direction of v2's Cor. 3. The crosswalk's entry naming this folder (cx-ma-field-capture) says field capture is \"Not in the live account as a law or a claim\". The 6 October integration of six V7.3 mechanisms is now in theories/becoming/history/, made \"with no new scientific run, formal theorem\". 08: \"None of the central results is new mathematics\".",
-    "zh": "［AI 读法］02-MAP 把语料中的「选择选择者」读作「池被当作种群来计」（`Drawn.pool_reads`），为 AI 读法（D67）；07 把「当对选择的控制本身被选择时」作为基于所述模型的律来陈述，其 D68 读法说，给塑造规则者的有力协助不会降低对控制的选择，与 v2 推论 3 同向。交叉对照中指名此文件夹的条目（cx-ma-field-capture）说，场域俘获不作为律或主张存在于现行论述中。10 月 6 日对 V7.3 六种机制的整合今已在 theories/becoming/history/ 中，其中没有新的科学运行或形式定理。08 说：核心结果中没有一个是新数学。"
+    "zh": "［AI 读法］02-MAP 把语料中的「selecting the selectors」（选择选择者）读作「the pool counted as the population is」（池被当作种群来计）（`Drawn.pool_reads`），为 AI 读法（D67）；07 把「When control over the selection is itself selected」（当对选择的控制本身被选择时）作为基于所述模型的律来陈述，其 D68 读法说「capable assistance to whoever shapes the rule does not lower the selection for control」（给塑造规则者的有力协助不会降低对控制的选择），与 v2 推论 3 同向。交叉对照中指名此文件夹的条目（cx-ma-field-capture）说，场域捕获「Not in the live account as a law or a claim」（不作为律或主张存在于现行说明中）。10 月 6 日对 V7.3 六种机制的整合今已在 theories/becoming/history/ 中，「with no new scientific run, formal theorem」（其中没有新的科学运行或形式定理）。08 说「None of the central results is new mathematics」（核心结果中没有一个是新数学）。"
    },
    "stands_basis": [
     "theories/becoming/chapters/02-MAP.md",
@@ -2600,11 +2547,11 @@
    ],
    "claimed": {
     "en": "\"The edition is therefore a new English statement of the whole theory, not a translation of any one text.\" It follows the July v2 plan: the six movements and twenty chapters, \"mechanism first, with the normative commitment declared in Part Five rather than derived\", the six protection functions, the strict definition of totalization, the seven-layer AI stack and failure conditions. About 33,800 words; PDF of 89 pages.",
-    "zh": "「因此这一版是对整个理论的一次新的英文陈述，不是任何单一文本的翻译。」它依七月的 v2 计划：六个乐章、二十章，机制在先，规范性承诺在第五部分宣示而非推导；六项保护功能、全体化的严格定义、七层 AI 栈与失败条件。约 33,800 词；PDF 共 89 页。"
+    "zh": "「The edition is therefore a new English statement of the whole theory, not a translation of any one text.」（因此这一版是对整个理论的一次新的英文陈述，不是任何单一文本的翻译。）它依七月的 v2 计划：六个乐章、二十章；「mechanism first, with the normative commitment declared in Part Five rather than derived」（机制在先，规范性承诺在第五部分宣示而非推导）；六项保护功能、总体化的严格定义、七层 AI 栈与失败条件。约 33,800 词；PDF 共 89 页。"
    },
    "stands": {
     "en": "[AI reading] The live account keeps the move of declaring rather than deriving the normative step, in a different form: two premises stated and not asserted (the continuation condition for scope, C for order). The glossary gives 生生 one sense, \"life in the whole and its continuing generation\", and keeps it apart from generation (生成) and the grammar's «生生». The book's further terms (protection functions, totalization, the AI stack) were not checked against the live text term by term.",
-    "zh": "［AI 读法］现行论述以另一种形式保留了「宣示而非推导规范一步」的做法：两个陈述而不断言的前提（延续条件定范围，C 定次序）。术语表给生生一个意义——「整体之中的生命及其持续的生发」，并把它与生成、与文法的 «生生» 分开。书中其余术语（保护功能、全体化、AI 栈）未逐项与现行文本核对。"
+    "zh": "［AI 读法］现行说明以另一种形式保留了宣示而非推导规范一步的做法：两个陈述而不断言的前提（延续条件定范围，C 定次序）。术语表给生生一个意义，「life in the whole and its continuing generation」（整体中的生命及其持续的生发），并把它与生成、与文法的 «生生» 分开。书中其余术语（保护功能、总体化、AI 栈）未逐项与现行文本核对。"
    },
    "stands_basis": [
     "GLOSSARY.md",
@@ -2621,12 +2568,12 @@
     "drafts/2026-10-03-ocasc-ai2040-review/FEEDBACK.md"
    ],
    "claimed": {
-    "en": "A review of another organization's 32-page second draft (the reviewed PDF is not stored here); \"Three reviewers worked in parallel, each in one pass\" on argument and strategy, fact and citation, and editorial matters and figures.",
-    "zh": "对另一机构一份 32 页第二稿的审阅（被审 PDF 未存于此）；三位审阅者并行，各读一遍，分别负责论证与策略、事实与引证、编辑与图表。"
+    "en": "A review of the 32-page second draft of an OCASC Research Review paper on AI 2040's Plan A (the reviewed PDF is not stored here); \"Three reviewers worked in parallel, each in one pass\" on argument and strategy, fact and citation, and editorial matters and figures.",
+    "zh": "对 OCASC Research Review 一篇论 AI 2040 之 Plan A 的论文的 32 页第二稿的审阅（被审 PDF 未存于此）；「Three reviewers worked in parallel, each in one pass」（三位审阅者并行，各读一遍），分别负责论证与策略、事实与引证、编辑与图表。"
    },
    "stands": {
-    "en": "[AI reading] A review of someone else's paper; nothing of it is carried or claimed by the account.",
-    "zh": "［AI 读法］是对他人论文的审阅；本论述不承接也不主张其中任何内容。"
+    "en": "[AI reading] A review of an OCASC Research Review draft; nothing of it is carried or claimed by the account.",
+    "zh": "［AI 读法］是对一份 OCASC Research Review 草稿的审阅；本说明不承接也不主张其中任何内容。"
    },
    "stands_basis": [],
    "label": "public"
@@ -2647,7 +2594,7 @@
    },
    "stands": {
     "en": "[AI reading] A dramatization, not a claim of the account. Its theme meets the opening's clause that \"no winning certifies that anything lasts\" (version 12, record what-position-reads).",
-    "zh": "［AI 读法］是一种戏剧化呈现，不是本论述的主张。其主题与开篇的一句相遇：没有任何胜利能担保任何东西会持续（第 12 版，记录 what-position-reads）。"
+    "zh": "［AI 读法］是一种戏剧化呈现，不是本说明的主张。其主题与开篇的一句相遇：「no winning certifies that anything lasts」（没有任何胜利能担保任何东西会持续）（第 12 版，记录 what-position-reads）。"
    },
    "stands_basis": [
     "drafts/2026-10-10-opening/README.md",
@@ -2666,41 +2613,16 @@
     "drafts/2026-10-04-no-safe-way-to-win/FRONTIER.md"
    ],
    "claimed": {
-    "en": "\"There is no safe way to win.\" The talk argues through a mechanism that the sentence 'we have to win first, then we can be safe' is the problem, and calls itself \"an alignment attempt. Not of a model. Of us.\" Both texts are AI-drafted to be delivered in the speaker's own words, from the recorded monologue of 4 October 2026 whose Chinese translation is in drafts/2026-10-04-soi-si-lom-5-2/; the talk also draws on a conversation of 2 October kept privately, and the recordings themselves are private.",
-    "zh": "「There is no safe way to win.」（没有安全的赢法。）演讲借一个机制论证，「我们必须先赢，然后才能安全」这句话本身就是问题，并自称是一次对齐的尝试——不是对模型，而是对我们。两份文本均由 AI 起草，供讲者以自己的话讲出，依据 2026 年 10 月 4 日的录音独白（其中文译本在 drafts/2026-10-04-soi-si-lom-5-2/）；演讲另依据 10 月 2 日一段私下保存的对话，录音本身不公开。"
+    "en": "\"There is no safe way to win.\" The talk argues through a mechanism that the sentence \"We have to win first. Then we can be safe.\" is the problem, and calls itself \"an alignment attempt. Not of a model. Of us.\" Both texts are AI-drafted to be delivered in the speaker's own words, from the recorded monologue of 4 October 2026 whose Chinese translation is in drafts/2026-10-04-soi-si-lom-5-2/; the talk also draws on a conversation of 2 October kept privately, and the recordings themselves are private.",
+    "zh": "「There is no safe way to win.」（中文版作「没有办法安全地赢」。）演讲借一个机制论证，「We have to win first. Then we can be safe.」（中文版作「我们得先赢，然后才能安全」）这句话本身就是问题，并自称「an alignment attempt. Not of a model. Of us.」（中文版作「这场演讲本身就是一次对齐的尝试。对齐的不是模型，是我们自己」）。两份文本均由 AI 起草，供讲者以自己的话讲出，依据 2026 年 10 月 4 日的录音独白（其中文译本在 drafts/2026-10-04-soi-si-lom-5-2/）；演讲另依据 10 月 2 日一段私下保存的对话，录音本身不公开。"
    },
    "stands": {
     "en": "[AI reading] The live account states no such slogan; nearest are capture through the rule (05, 02) and the opening's \"no winning certifies that anything lasts\", which the opening's notes scope as what position reads.",
-    "zh": "［AI 读法］现行论述不陈述这样的口号；最近者是经由规则的俘获（05、02），以及开篇的「没有任何胜利能担保任何东西会持续」，开篇说明把它限定为位置所读取者。"
+    "zh": "［AI 读法］现行说明不陈述这样的口号；最近者是经由规则的捕获（05、02），以及开篇的「no winning certifies that anything lasts」（没有任何胜利能担保任何东西会持续），开篇说明把它限定为位置所读取者。"
    },
    "stands_basis": [
     "theories/becoming/chapters/05-COLLECTIVES.md#markets",
     "drafts/2026-10-10-opening/README.md"
-   ],
-   "label": "public"
-  },
-  {
-   "id": "paper-guardian-anarchy",
-   "title": "Guardian Anarchy (生成性基础、未来生活想象、网站体验设计; edition 02)",
-   "date": "2026-10-04",
-   "paths": [
-    "drafts/2026-10-04-guardian-anarchy/README.md",
-    "drafts/2026-10-04-guardian-anarchy/FOUNDATION.zh.md",
-    "drafts/2026-10-04-guardian-anarchy/edition-02",
-    "output/guardian-anarchy-images",
-    "output/guardian-anarchy-edition-02",
-    "output/guardian-anarchy-preview.jpg"
-   ],
-   "claimed": {
-    "en": "A proposal that fixed, finite intelligent infrastructure keeps supplying life while shared life keeps a generative future, with generated images and their prompts; the README states \"当前方向（2026-10-04）：仅本地开发，不再发布。\" and \"后续不推送、不上传、不部署。\"",
-    "zh": "一项提议：固定而有限的智能基础设施持续供给生活，共享的生活保持一个生成性的未来；附生成图像及其提示词。README 写道：「当前方向（2026-10-04）：仅本地开发，不再发布。」「后续不推送、不上传、不部署。」"
-   },
-   "stands": {
-    "en": "[AI reading] Not carried; the crosswalk's cooperative-abundance group says the account \"has no abundance layer or provision\".",
-    "zh": "［AI 读法］未被承接；交叉对照的合作丰裕组说，本论述没有丰裕层或供给。"
-   },
-   "stands_basis": [
-    "theories/becoming/results/atlas/CROSSWALK.md#cxg-the-fork-and-cooperative-infrastructure"
    ],
    "label": "public"
   },
@@ -2715,8 +2637,8 @@
     "drafts/2026-10-04-soi-si-lom-5-2/history"
    ],
    "claimed": {
-    "en": "A Chinese translation of a mixed Chinese-English spoken recording (the recording is private and not in the repository): \"录音为中英混合口述，时长 51 分 26 秒。\" The README says the merged content was written into nine theory documents on 2026-10-04 and that the translation is lightly edited, not verbatim.",
-    "zh": "一段中英混合口述录音的中文翻译（录音不公开，不在仓库中）：「录音为中英混合口述，时长 51 分 26 秒。」README 说其合并内容于 2026-10-04 写入九份理论文档，译文经轻度编辑，并非逐字。"
+    "en": "A Chinese translation of a mixed Chinese-English spoken recording (the recording is private and not in the repository): \"录音为中英混合口述，时长 51 分 26 秒。\" The README says the merged content was written into nine theory documents on 2026-10-04. The proofreading notes (translation-notes.md) say English was put into Chinese, the Chinese already spoken had its punctuation, joins and some word order adjusted, and stutters and repeated starts were removed: lightly edited, not verbatim.",
+    "zh": "一段中英混合口述录音的中文翻译（录音不公开，不在仓库中）：「录音为中英混合口述，时长 51 分 26 秒。」README 说其合并内容于 2026-10-04 写入九个理论文档。校对说明（translation-notes.md）说：「英文转为中文；已有中文调整标点、句子衔接和少量语序。」并删去结巴与重复起句：译文经轻度编辑，并非逐字。"
    },
    "stands": {
     "en": "[AI reading] A translation, not a paper; it fed the earlier theory folders, which the crosswalk reads, and the 4 October talk texts. No live chapter cites it directly.",
@@ -2740,7 +2662,7 @@
    },
    "stands": {
     "en": "[AI reading] Not cited by the live account. What of selection for influence over evaluators stands is as in the IASEAI line entry.",
-    "zh": "［AI 读法］现行论述未引用它。对评估者影响力之选择，其中成立者见 IASEAI 论文线一条。"
+    "zh": "［AI 读法］现行说明未引用它。对评估者影响力之选择，其中成立者见 IASEAI 论文线一条。"
    },
    "stands_basis": [
     "theories/becoming/chapters/07-SIGNIFICANCE.md"
@@ -2781,11 +2703,11 @@
    ],
    "claimed": {
     "en": "An AI draft: \"Part 1 states the core in about two pages, Part 2 sets it beside its nearest prior work.\" Five laws (the range compared with nothing assumed; closing's exact boundary; continuing goes with returning; coupling bounds what is shaped; the laws leave valuing open), each with a Lean name; \"The Lean names in the last column still carry the earlier vocabulary.\"",
-    "zh": "一份 AI 草稿：第一部分以约两页陈述核心，第二部分把它与最近的前人工作并置。五条律（不预设任何东西而比较的范围；闭合的确切边界；延续与回返相伴；耦合限定被塑造者；诸律对评价保持开放），各附 Lean 名；并说末栏的 Lean 名仍带着早先的词汇。"
+    "zh": "一份 AI 草稿：「Part 1 states the core in about two pages, Part 2 sets it beside its nearest prior work.」（第一部分以约两页陈述核心，第二部分把它与最近的前人工作并置。）五条律（不预设任何东西而比较的范围；闭合的确切边界；延续与回返相伴；耦合限定被塑造者；诸律对评价保持开放），各附 Lean 名；并说「The Lean names in the last column still carry the earlier vocabulary.」（末栏的 Lean 名仍带着早先的词汇。）"
    },
    "stands": {
     "en": "[AI reading] The live account carries its two named commitments as the continuation condition (scope) and C (order), neither asserted, and its 'one unfolding' as the thesis of one relational unfolding, argued. The record eventual-widening says \"The question it answers in part is THE-CORE's\".",
-    "zh": "［AI 读法］现行论述以延续条件（范围）与 C（次序）承接其两项指名的承诺，二者都不断言；其「一个展开」成为「一个关系性展开」的论题，经论证而非假定。记录 eventual-widening 说，它部分回答的问题是 THE-CORE 的问题。"
+    "zh": "［AI 读法］现行说明以延续条件（范围）与 C（次序）承接其两项指名的承诺，二者都不断言；其所说的一个展开（one unfolding）成为一个关系性展开的论题，经论证。记录 eventual-widening 说「The question it answers in part is THE-CORE's」（它部分回答的问题是 THE-CORE 的问题）。"
    },
    "stands_basis": [
     "theories/becoming/results/records/eventual-widening.md",
@@ -2806,15 +2728,16 @@
     "output/pdf/history/review-packet-4/MANIFEST.txt",
     "output/pdf/history/INDEX.md",
     "theories/becoming/review/README.md",
-    "tools/publishing/build_review_packet.py"
+    "tools/publishing/build_review_packet.py",
+    "theories/becoming/review/README.zh.md"
    ],
    "claimed": {
     "en": "Frozen reader editions in PDF (thirteen parts, English and Chinese) with the re-coding sheet in two forms and sha256 manifests, each built from a named commit: edition 1, 0f1d9aa13, committed 2026-11-03; edition 2, 7735fa07a, 2026-11-05; edition 3, 6d221555a, 2026-11-05; edition 4, 9f36dd69e, 2026-11-06; edition 5, 3395e82ee, 2026-11-07 (tags review-packet-1 to review-packet-5). The cover: \"No human has reviewed this theory yet.\" It asks specialists whether readings are faithful and claims put at their right strength; the re-coding asks readers of classical Chinese to classify 237 sampled sentences blind.",
-    "zh": "冻结的 PDF 读者版（十三部分，英文与中文），附两种格式的重编码表与 sha256 清单，各自由一个指名的提交构建：第 1 版 0f1d9aa13，2026-11-03；第 2 版 7735fa07a，2026-11-05；第 3 版 6d221555a，2026-11-05；第 4 版 9f36dd69e，2026-11-06；第 5 版 3395e82ee，2026-11-07（标签 review-packet-1 至 review-packet-5）。封面：「本理论迄今尚无人工审查。」它请各领域专家判断读法是否忠实、主张的强度是否恰当；重编码请通古汉语的读者对抽样的 237 句作盲分类。"
+    "zh": "冻结的 PDF 读者版（十三部分，英文与中文），附两种格式的重编码表与 sha256 清单，各自由一个指名的提交构建：第 1 版 0f1d9aa13，2026-11-03；第 2 版 7735fa07a，2026-11-05；第 3 版 6d221555a，2026-11-05；第 4 版 9f36dd69e，2026-11-06；第 5 版 3395e82ee，2026-11-07（标签 review-packet-1 至 review-packet-5）。封面：「No human has reviewed this theory yet.」（中文版作「本理论迄今尚无人工审查。」）它请各领域专家判断读法是否忠实、主张的强度是否恰当；重编码请能读古文者对抽样的 237 句作盲分类。"
    },
    "stands": {
     "en": "Edition 5 is the current one per the board's 'Which edition to send' line; \"Editions 1 to 4 are kept as history and are not to be sent.\" Each edition is a frozen snapshot of the live account at its commit; the live sources in theories/becoming/ have moved on since.",
-    "zh": "按工作板「Which edition to send」一行，第 5 版为现行版；第 1 至 4 版作为历史保存，不予发送。每一版都是现行论述在其提交时的冻结快照；theories/becoming/ 中的现行来源此后已继续变化。"
+    "zh": "按工作板「Which edition to send」（发送哪一版）一行，第 5 版为现行版；「Editions 1 to 4 are kept as history and are not to be sent.」（第 1 至 4 版作为历史保存，不予发送。）每一版都是现行说明在其提交时的冻结快照；theories/becoming/ 中的现行来源此后已继续变化。"
    },
    "stands_basis": [
     "_process/BECOMING-WORKBOARD.md",
@@ -2829,8 +2752,8 @@
    "zh": "一条线索：选择机制"
   },
   "intro": {
-   "en": "The selection mechanism, followed through the points marked on the thread. In July 2024 a society picks one value as the token of power, and those best at optimising it come to control the social system. In October 2024 a self-reinforcing loop in which \"The system naturally selects for pure capital optimizers\". In 2025 a meta-attractor that colonizes \"even the mechanisms of selection themselves\", then defined as \"a second-order attractor\" in joint state and selection-rule space. In May 2026 the system concentrates \"not just resources but a way of seeing\". In October 2026, on the spine, capture through the rule and then closed capture, where \"a loss the loop does not read leaves it locked however large it grows\"; T7 states \"That actual metrics are so formed is conjectured.\" And in one trained system, T7's frozen test: \"Every frozen verdict passed, and the conjecture failed for this judge\". Only the spine's steps are proved, in a model; each row says what its step claimed.",
-   "zh": "选择机制，沿这条线索上标出的各点。2024 年 7 月：一个社会选出一种价值作为权力的象征，最擅长优化它的人逐渐掌控社会系统。2024 年 10 月：一个自我强化的环，「The system naturally selects for pure capital optimizers」（系统自然地选出纯粹的资本优化者）。2025 年：一个元吸引子，殖民「even the mechanisms of selection themselves」（甚至选择机制本身），继而被定义为状态与选择规则联合空间中的「a second-order attractor」（二阶吸引子）。2026 年 5 月：系统所集中的「not just resources but a way of seeing」（不只是资源，还有一种观看方式）。2026 年 10 月，在脊柱上：经由规则的捕获，继而闭合的捕获，其中「a loss the loop does not read leaves it locked however large it grows」（环所不读的损失无论增长多大，都让它保持锁定）；T7 写明「That actual metrics are so formed is conjectured.」（实际的度量是这样形成的，这是猜想）。最后在一个训练出的系统中，T7 的冻结检验：「Every frozen verdict passed, and the conjecture failed for this judge」（每一冻结裁决都通过，而该猜想对这个评判者不成立）。只有脊柱上的步骤是证明了的，并且是在一个模型中；每一行说出它那一步主张了什么。"
+   "en": "The selection mechanism, followed through the points marked on the thread. In July 2024 a society picks one value as the token of power, and those best at optimising it come to control the social system. In October 2024 an AI-drafted note names a self-reinforcing loop in which \"The system naturally selects for pure capital optimizers\". In 2025 a meta-attractor that colonizes \"even the mechanisms of selection themselves\", then defined, in an AI-written expansion, as \"a second-order attractor\" in joint state and selection-rule space. In May 2026, in a working stance AI-written from a conversation, the system so selected concentrates \"not just resources but a way of seeing\". In October 2026, on the spine, capture through the rule and then closed capture: in a selection whose rule, and how the rule is read, are read from the share it selects, \"a loss the loop does not read leaves it locked however large it grows\"; T7 states \"That actual metrics are so formed is conjectured.\" And in one trained system, T7's frozen test of the conjecture that a judge formed from what it selected is a pool of readers counted by kind: \"Every frozen verdict passed, and the conjecture failed for this judge\". Only the spine's steps are proved, in a model; each row says what its step claimed.",
+   "zh": "选择机制，沿这条线索上标出的各点。2024 年 7 月：一个社会选出一种价值作为权力的象征，最擅长优化它的人逐渐掌控社会系统。2024 年 10 月：一份由 AI 起草的笔记写出一个自我强化的环，其中「The system naturally selects for pure capital optimizers」（系统自然地选出纯粹的资本优化者）。2025 年：一个元吸引子，殖民「even the mechanisms of selection themselves」（甚至选择机制本身），继而在一份由 AI 撰写的展开中，被定义为状态与选择规则联合空间中的「a second-order attractor」（二阶吸引子）。2026 年 5 月：在一份由 AI 据一次对话写成的工作立场中，如此选出的系统所集中的是「not just resources but a way of seeing」（不只是资源，还有一种观看方式）。2026 年 10 月，在脊柱上：经由规则的捕获，继而闭合的捕获：在一个其规则以及规则如何被读都从它所选出之份额读出的选择中，「a loss the loop does not read leaves it locked however large it grows」（环所不读的损失，无论增长多大，都让它保持锁定）；T7 写明「That actual metrics are so formed is conjectured.」（实际的度量是这样形成的，这是猜想。）最后，在一个训练出的系统中，T7 的冻结检验所检验的猜想是：由它所选出者形成的评判者，是一个按种类计数的读者池；结果是「Every frozen verdict passed, and the conjecture failed for this judge」（每一冻结裁决都通过，而该猜想对这个评判者不成立）。只有脊柱上的步骤是证明了的，并且是在一个模型中；每一行说出它那一步主张了什么。"
   },
   "points": [
    "sel-2024-07-14-selection-law",

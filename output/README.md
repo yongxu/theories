@@ -26,10 +26,10 @@ Each folder holds the same parts as edition 5 and its own `MANIFEST.txt`. `INDEX
 Earlier papers and a fiction canvas, kept as history of how the account grew. None is part of the live account.
 
 - `No-Viable-Race-IASEAI27-v3.1-draft.pdf`: "No Viable Race: Competitive Selection, Captured Correction, and the Necessity of Cooperation in AI Development", v3.1 of the IASEAI'27 draft (2026-10-03, anonymous AAAI format). Later editions run to v7.3 (2026-10-05). The sources are in `drafts/2026-10-02-iaseai-selecting-the-selectors/` (v3 in its `history/v3/`).
-- `从小康到大同-v0.3-zh.pdf` (28 pages) and `From-Xiaokang-to-Datong-v0.3-en.pdf` (35 pages): discussion draft v0.3 (2026-09-27), in Chinese and in English translation. The sources are in `drafts/2026-09-26-community-mission/`; the build script is `tools/publishing/build_xiaokang_datong.py`.
+- `从小康到大同-v0.3-zh.pdf` (28 pages) and `From-Xiaokang-to-Datong-v0.3-en.pdf` (35 pages): discussion draft v0.3, in Chinese and in English translation (dated 2026-09-27 in the folder's notes; the Chinese file's header reads Sep 26, 2026). The sources are in `drafts/2026-09-26-community-mission/`; the build script is `tools/publishing/build_xiaokang_datong.py`.
 - `Shengsheng-Buxi-EN-2026-10.pdf`: the English edition of 生生不息论, *Shengsheng Buxi: A Theory of Unceasing Generation* (October 2026, 89 pages), built by `tools/publishing/build_shengsheng_en.py` from `drafts/2026-10-02-shengsheng-en/`.
 - `generative-chiang-mai-2045.md`, `generative-chiang-mai-2045.pdf` and `generative-chiang-mai-2045-english.pdf`: a one-page speculative-future fiction canvas, *Generative Chiang Mai 2045: A City of Many Beginnings* (revision note dated 2026-09-16). The `.md` is the source, the build script is `tools/publishing/build_chiang_mai_canvas.py`, and the two PDFs are byte-identical. It is a story, not a claim of the account.
 
 ## output/guardian-anarchy-images/, output/guardian-anarchy-edition-02/, output/guardian-anarchy-preview.jpg
 
-Images generated for the Guardian Anarchy proposal (`drafts/2026-10-04-guardian-anarchy/`), which entered the repository on 2026-10-04; each folder's `prompts.json` holds the prompts that made its images.
+Images generated on 4 October 2026 for a proposal drafted that day; each folder's `prompts.json` holds the prompts that made its images.

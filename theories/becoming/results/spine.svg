@@ -1,13 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 900" width="1300" height="900" role="img" aria-labelledby="spine-title spine-desc" font-family="Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 1221" width="1300" height="1221" role="img" aria-labelledby="spine-title spine-desc" font-family="Helvetica, Arial, sans-serif">
 <title id="spine-title">The eight chapters around one grammar</title>
-<desc id="spine-desc">Eight chapters on a ring around the grammar, sized by their results (The root 86, The map 94, Knowing and testing 110, Life and evolution 46, Collectives and selection 74, The classical texts 16, Significance and alignment 82, Method and the formal core 21); 497 formal-reuse uses between chapters, 17 pairs with at least 10 drawn; the continuation condition and C enter chapter 7 from outside, neither asserted; T1 to T8 at their homes, coloured by outcome.</desc>
+<desc id="spine-desc">Eight chapters on a ring around the grammar, sized by their results (The root 86, The map 94, Knowing and testing 110, Life and evolution 46, Collectives and selection 74, The classical texts 16, Significance and alignment 82, Method and the formal core 21); 497 formal-reuse uses between chapters, 17 pairs with at least 10 drawn; the continuation condition and C come into chapter 7 as premises, each a hypothesis where used, neither asserted; T1 to T8 at their homes, coloured by test outcome.</desc>
 <defs>
 <marker id="fwd" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8a817c"/></marker>
 <marker id="back" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c1917"/></marker>
 <marker id="thin" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#57534e" stroke-width="1.5"/></marker>
 <marker id="diamond" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path d="M5,0 L10,5 L5,10 L0,5 z" fill="#57534e"/></marker>
 </defs>
-<rect x="0.5" y="0.5" width="1299" height="899" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
+<rect x="0.5" y="0.5" width="1299" height="1220" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
 <text x="28" y="42" font-size="22" font-weight="bold" text-anchor="start" fill="#1c1917">The eight chapters around one grammar</text>
 <text x="28" y="66" font-size="13" text-anchor="start" fill="#57534e">Generated from the theory graph: each circle sized by the results its chapter holds, each curve counting uses between two</text>
 <text x="28" y="82" font-size="13" text-anchor="start" fill="#57534e">chapters’ results.</text>
@@ -116,20 +116,25 @@
 <text x="508.3" y="397.9" font-size="10.5" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">1</text>
 <text x="545.5" y="588" font-size="11" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">12</text>
 <text x="445.5" y="593.2" font-size="10.5" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">3</text>
-<text x="18" y="268" font-size="12" font-weight="bold" text-anchor="start" fill="#57534e">Premises from outside the dynamics</text>
-<rect x="18" y="280" width="186" height="74" rx="6" fill="#ffffff" stroke="#1c1917" stroke-dasharray="5 3"/>
-<text x="27" y="299" font-size="12" font-weight="bold" text-anchor="start" fill="#1c1917">The continuation condition</text>
-<text x="27" y="314" font-size="11.5" text-anchor="start" fill="#57534e">scope: fixes whose losses</text>
-<text x="27" y="329" font-size="11.5" text-anchor="start" fill="#57534e">count</text>
-<text x="27" y="344" font-size="11.5" text-anchor="start" fill="#57534e">a premise, not asserted</text>
-<path d="M204,317 Q210.5,317 201,462.3" fill="none" stroke="#1c1917" stroke-width="1.4" stroke-dasharray="5 3" marker-end="url(#back)"/>
-<rect x="18" y="368" width="186" height="89" rx="6" fill="#ffffff" stroke="#1c1917" stroke-dasharray="5 3"/>
-<text x="27" y="387" font-size="12" font-weight="bold" text-anchor="start" fill="#1c1917">C, widening what can form</text>
-<text x="27" y="402" font-size="12" font-weight="bold" text-anchor="start" fill="#1c1917">is better</text>
-<text x="27" y="417" font-size="11.5" text-anchor="start" fill="#57534e">order: ranks a course above</text>
-<text x="27" y="432" font-size="11.5" text-anchor="start" fill="#57534e">every course it widens</text>
-<text x="27" y="447" font-size="11.5" text-anchor="start" fill="#57534e">a premise, not asserted</text>
-<path d="M204,412.5 Q217.3,412.5 214.6,439.7" fill="none" stroke="#1c1917" stroke-width="1.4" stroke-dasharray="5 3" marker-end="url(#back)"/>
+<text x="16" y="292" font-size="12" font-weight="bold" text-anchor="start" fill="#57534e">Two premises, each a hypothesis where used</text>
+<rect x="14" y="302" width="174" height="119" rx="6" fill="#ffffff" stroke="#1c1917" stroke-dasharray="5 3"/>
+<text x="23" y="321" font-size="12" font-weight="bold" text-anchor="start" fill="#1c1917">The continuation</text>
+<text x="23" y="336" font-size="12" font-weight="bold" text-anchor="start" fill="#1c1917">condition</text>
+<text x="23" y="351" font-size="11.5" text-anchor="start" fill="#57534e">scope: fixes whose losses</text>
+<text x="23" y="366" font-size="11.5" text-anchor="start" fill="#57534e">count; does not rank</text>
+<text x="23" y="381" font-size="11.5" text-anchor="start" fill="#57534e">anything</text>
+<text x="23" y="396" font-size="11.5" text-anchor="start" fill="#57534e">a premise, not asserted;</text>
+<text x="23" y="411" font-size="11.5" text-anchor="start" fill="#57534e">warrant open</text>
+<path d="M188,361.5 Q202.5,361.5 201,462.3" fill="none" stroke="#1c1917" stroke-width="1.4" stroke-dasharray="5 3" marker-end="url(#back)"/>
+<rect x="14" y="433" width="174" height="119" rx="6" fill="#ffffff" stroke="#1c1917" stroke-dasharray="5 3"/>
+<text x="23" y="452" font-size="12" font-weight="bold" text-anchor="start" fill="#1c1917">C, widening what can</text>
+<text x="23" y="467" font-size="12" font-weight="bold" text-anchor="start" fill="#1c1917">form is better</text>
+<text x="23" y="482" font-size="11.5" text-anchor="start" fill="#57534e">order: ranks a course above</text>
+<text x="23" y="497" font-size="11.5" text-anchor="start" fill="#57534e">every course it widens; does</text>
+<text x="23" y="512" font-size="11.5" text-anchor="start" fill="#57534e">not rank mixed comparisons</text>
+<text x="23" y="527" font-size="11.5" text-anchor="start" fill="#57534e">a premise, not asserted;</text>
+<text x="23" y="542" font-size="11.5" text-anchor="start" fill="#57534e">warrant open</text>
+<path d="M188,492.5 Q209.3,492.5 214.6,439.7" fill="none" stroke="#1c1917" stroke-width="1.4" stroke-dasharray="5 3" marker-end="url(#back)"/>
 <circle cx="773.8" cy="217.7" r="13" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>
 <text x="773.8" y="221.7" font-size="10.5" font-weight="bold" text-anchor="middle" fill="#1c1917">T1</text>
 <circle cx="799.6" cy="234.4" r="13" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>
@@ -150,51 +155,75 @@
 <circle cx="962" cy="130" r="9" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
 <text x="984" y="134" font-size="11.5" text-anchor="start" fill="#1c1917">Circle area: the results in the chapter.</text>
 <line x1="948" y1="149" x2="976" y2="149" stroke="#8a817c" stroke-width="3" marker-end="url(#fwd)"/>
-<text x="984" y="153" font-size="11.5" text-anchor="start" fill="#1c1917">formal-reuse, “a verified inference using the</text>
-<text x="984" y="168" font-size="11.5" text-anchor="start" fill="#1c1917">cited result”: the count of uses (pairs with</text>
-<text x="984" y="183" font-size="11.5" text-anchor="start" fill="#1c1917">fewer than 10: in the table).</text>
-<line x1="948" y1="198" x2="976" y2="198" stroke="#1c1917" stroke-width="3" marker-end="url(#back)"/>
-<text x="984" y="202" font-size="11.5" text-anchor="start" fill="#1c1917">The same, where an earlier chapter’s results</text>
-<text x="984" y="217" font-size="11.5" text-anchor="start" fill="#1c1917">use a later one’s.</text>
-<line x1="948" y1="232" x2="976" y2="232" stroke="#57534e" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#thin)"/>
-<text x="984" y="236" font-size="11.5" text-anchor="start" fill="#1c1917">interpretive, “an argument dependency” (pairs</text>
-<text x="984" y="251" font-size="11.5" text-anchor="start" fill="#1c1917">with 3 or more).</text>
-<line x1="948" y1="266" x2="976" y2="266" stroke="#57534e" stroke-width="1.6" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
-<text x="984" y="270" font-size="11.5" text-anchor="start" fill="#1c1917">application: a reused result with its</text>
-<text x="984" y="285" font-size="11.5" text-anchor="start" fill="#1c1917">correspondence and added premises.</text>
-<line x1="948" y1="300" x2="976" y2="300" stroke="#a8a29e" stroke-width="1.2"/>
-<text x="984" y="304" font-size="11.5" text-anchor="start" fill="#1c1917">On the grammar k/m: of the chapter’s m core</text>
-<text x="984" y="319" font-size="11.5" text-anchor="start" fill="#1c1917">modules, k state their laws on the grammar.</text>
-<text x="984" y="338" font-size="11.5" text-anchor="start" fill="#1c1917">related, for analogy (1,420 edges): not drawn.</text>
-<text x="948" y="367" font-size="14" font-weight="bold" text-anchor="start" fill="#1c1917">The theses, at their homes</text>
-<circle cx="962" cy="385" r="8" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>
-<text x="984" y="389" font-size="11.5" text-anchor="start" fill="#1c1917">frozen tests passed and failed</text>
-<circle cx="962" cy="407" r="8" fill="#2a78d6" stroke="#1c1917" stroke-width="1.2"/>
-<text x="984" y="411" font-size="11.5" text-anchor="start" fill="#1c1917">partly passed, or partial support</text>
-<circle cx="962" cy="429" r="8" fill="#1baf7a" stroke="#1c1917" stroke-width="1.2"/>
-<text x="984" y="433" font-size="11.5" text-anchor="start" fill="#1c1917">not rejected by frozen tests</text>
-<circle cx="962" cy="451" r="8" fill="#ffffff" stroke="#1c1917" stroke-width="1.2"/>
-<text x="984" y="455" font-size="11.5" text-anchor="start" fill="#1c1917">argued; no test</text>
-<text x="982" y="483" font-size="11" fill="#1c1917"><tspan font-weight="bold">T1</tspan> Persistence certifies the joint draw (02): passed on</text>
-<text x="982" y="497" font-size="11" text-anchor="start" fill="#1c1917">held-out yeast regimes; failed at the instrument's floor</text>
-<text x="982" y="518" font-size="11" fill="#1c1917"><tspan font-weight="bold">T2</tspan> The state of a renewable condition under a draw is</text>
-<text x="982" y="532" font-size="11" text-anchor="start" fill="#1c1917">its level, its recent giving and one lag, its place</text>
-<text x="982" y="546" font-size="11" text-anchor="start" fill="#1c1917">named before the data (02): MQ4 failed its whole-state</text>
-<text x="982" y="560" font-size="11" text-anchor="start" fill="#1c1917">verdict; MQ5 passed</text>
-<text x="982" y="581" font-size="11" fill="#1c1917"><tspan font-weight="bold">T3</tspan> Optimization drains what lies beyond its couplings,</text>
-<text x="982" y="595" font-size="11" text-anchor="start" fill="#1c1917">where that gives room (05): the clause on trained</text>
-<text x="982" y="609" font-size="11" text-anchor="start" fill="#1c1917">systems conjectured, with partial support</text>
-<text x="982" y="630" font-size="11" fill="#1c1917"><tspan font-weight="bold">T4</tspan> The scope can be installed, and it carries (07): IN1</text>
-<text x="982" y="644" font-size="11" text-anchor="start" fill="#1c1917">partly passed (with talk, one model of two)</text>
-<text x="982" y="665" font-size="11" fill="#1c1917"><tspan font-weight="bold">T5</tspan> The order is shared by every valuer who counts</text>
-<text x="982" y="679" font-size="11" text-anchor="start" fill="#1c1917">everything positively (07): VD1: every frozen rule</text>
-<text x="982" y="693" font-size="11" text-anchor="start" fill="#1c1917">failed; X1s and X2 passed, X1 and X3 failed</text>
-<text x="982" y="714" font-size="11" fill="#1c1917"><tspan font-weight="bold">T6</tspan> A break is seen coming only through what couples into</text>
-<text x="982" y="728" font-size="11" text-anchor="start" fill="#1c1917">what breaks (03): three frozen seabird tests did not</text>
-<text x="982" y="742" font-size="11" text-anchor="start" fill="#1c1917">reject it at their thresholds</text>
-<text x="982" y="763" font-size="11" fill="#1c1917"><tspan font-weight="bold">T7</tspan> A measure read from what it selects outlives its</text>
-<text x="982" y="777" font-size="11" text-anchor="start" fill="#1c1917">refutation (02): every frozen verdict passed and the</text>
-<text x="982" y="791" font-size="11" text-anchor="start" fill="#1c1917">bridge failed</text>
-<text x="982" y="812" font-size="11" fill="#1c1917"><tspan font-weight="bold">T8</tspan> 生生 as the direction (07): argued</text>
-<text x="28" y="870" font-size="10.5" text-anchor="start" fill="#57534e">Generated by tools/research/spine.py from theory-graph.json and spine.json. What it does and does not show: THEORY-GRAPH.md, “The spine”.</text>
+<text x="984" y="153" font-size="11.5" text-anchor="start" fill="#1c1917">formal-reuse, which RESULT-WORKFLOW keeps for</text>
+<text x="984" y="168" font-size="11.5" text-anchor="start" fill="#1c1917">“a verified inference using the cited result”:</text>
+<text x="984" y="183" font-size="11.5" text-anchor="start" fill="#1c1917">the count of uses (pairs with fewer than 10:</text>
+<text x="984" y="198" font-size="11.5" text-anchor="start" fill="#1c1917">in the table).</text>
+<line x1="948" y1="213" x2="976" y2="213" stroke="#1c1917" stroke-width="3" marker-end="url(#back)"/>
+<text x="984" y="217" font-size="11.5" text-anchor="start" fill="#1c1917">The same, where an earlier chapter’s results</text>
+<text x="984" y="232" font-size="11.5" text-anchor="start" fill="#1c1917">use a later one’s.</text>
+<line x1="948" y1="247" x2="976" y2="247" stroke="#57534e" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#thin)"/>
+<text x="984" y="251" font-size="11.5" text-anchor="start" fill="#1c1917">interpretive, kept for “an argument</text>
+<text x="984" y="266" font-size="11.5" text-anchor="start" fill="#1c1917">dependency” (pairs with 3 or more).</text>
+<line x1="948" y1="281" x2="976" y2="281" stroke="#57534e" stroke-width="1.6" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
+<text x="984" y="285" font-size="11.5" text-anchor="start" fill="#1c1917">application: a reused result with its</text>
+<text x="984" y="300" font-size="11.5" text-anchor="start" fill="#1c1917">correspondence and added premises.</text>
+<line x1="948" y1="315" x2="976" y2="315" stroke="#a8a29e" stroke-width="1.2"/>
+<text x="984" y="319" font-size="11.5" text-anchor="start" fill="#1c1917">On the grammar k/m: of the chapter’s m core</text>
+<text x="984" y="334" font-size="11.5" text-anchor="start" fill="#1c1917">modules, k state their laws on the grammar.</text>
+<text x="984" y="353" font-size="11.5" text-anchor="start" fill="#1c1917">related, for analogy (1,420 edges): not drawn.</text>
+<text x="984" y="372" font-size="11.5" text-anchor="start" fill="#1c1917">In a circle, “uses within” counts formal-reuse</text>
+<text x="984" y="387" font-size="11.5" text-anchor="start" fill="#1c1917">between results of the same chapter, and “+N</text>
+<text x="984" y="402" font-size="11.5" text-anchor="start" fill="#1c1917">interpretive” its interpretive edges.</text>
+<text x="948" y="431" font-size="14" font-weight="bold" text-anchor="start" fill="#1c1917">The theses, at their homes</text>
+<circle cx="962" cy="449" r="8" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>
+<text x="984" y="453" font-size="11.5" text-anchor="start" fill="#1c1917">frozen tests passed and failed, or a bridge</text>
+<text x="984" y="471" font-size="11.5" text-anchor="start" fill="#1c1917">failed</text>
+<circle cx="962" cy="489" r="8" fill="#2a78d6" stroke="#1c1917" stroke-width="1.2"/>
+<text x="984" y="493" font-size="11.5" text-anchor="start" fill="#1c1917">partly passed, or partial support</text>
+<circle cx="962" cy="511" r="8" fill="#1baf7a" stroke="#1c1917" stroke-width="1.2"/>
+<text x="984" y="515" font-size="11.5" text-anchor="start" fill="#1c1917">not rejected by frozen tests</text>
+<circle cx="962" cy="533" r="8" fill="#ffffff" stroke="#1c1917" stroke-width="1.2"/>
+<text x="984" y="537" font-size="11.5" text-anchor="start" fill="#1c1917">argued; no test</text>
+<text x="982" y="565" font-size="11" fill="#1c1917"><tspan font-weight="bold">T1</tspan> Persistence certifies the joint draw (02): in the</text>
+<text x="982" y="579" font-size="11" text-anchor="start" fill="#1c1917">model proved; beyond the model conjectured, on frozen</text>
+<text x="982" y="593" font-size="11" text-anchor="start" fill="#1c1917">tests: of the three settings passed, one of real data;</text>
+<text x="982" y="607" font-size="11" text-anchor="start" fill="#1c1917">on yeast values not read before no frozen test of the</text>
+<text x="982" y="621" font-size="11" text-anchor="start" fill="#1c1917">need or its fates has passed; no field test of a need</text>
+<text x="982" y="635" font-size="11" text-anchor="start" fill="#1c1917">measured in advance</text>
+<text x="982" y="656" font-size="11" fill="#1c1917"><tspan font-weight="bold">T2</tspan> The state of a renewable condition under a draw is</text>
+<text x="982" y="670" font-size="11" text-anchor="start" fill="#1c1917">its level, its recent giving and one lag, its place</text>
+<text x="982" y="684" font-size="11" text-anchor="start" fill="#1c1917">named before the data (02): conjectured, on four frozen</text>
+<text x="982" y="698" font-size="11" text-anchor="start" fill="#1c1917">fish-stock tests; MQ4 failed its whole-state verdict;</text>
+<text x="982" y="712" font-size="11" text-anchor="start" fill="#1c1917">MQ5 passed; MQ7 missed its frozen bound; UE31b (run on 6</text>
+<text x="982" y="726" font-size="11" text-anchor="start" fill="#1c1917">November 2026) failed its former wording</text>
+<text x="982" y="747" font-size="11" fill="#1c1917"><tspan font-weight="bold">T3</tspan> Optimization drains what lies beyond its couplings,</text>
+<text x="982" y="761" font-size="11" text-anchor="start" fill="#1c1917">where that gives room (05): the law for optima proved;</text>
+<text x="982" y="775" font-size="11" text-anchor="start" fill="#1c1917">the clause on trained systems conjectured, with partial</text>
+<text x="982" y="789" font-size="11" text-anchor="start" fill="#1c1917">support; as first worded for any condition sharing no</text>
+<text x="982" y="803" font-size="11" text-anchor="start" fill="#1c1917">units, failing where the learner reads the condition</text>
+<text x="982" y="824" font-size="11" fill="#1c1917"><tspan font-weight="bold">T4</tspan> The scope can be installed, and it carries (07): IN1</text>
+<text x="982" y="838" font-size="11" text-anchor="start" fill="#1c1917">partly passed (with talk, one model of two); transfer</text>
+<text x="982" y="852" font-size="11" text-anchor="start" fill="#1c1917">untested</text>
+<text x="982" y="873" font-size="11" fill="#1c1917"><tspan font-weight="bold">T5</tspan> The order is shared by every valuer who counts</text>
+<text x="982" y="887" font-size="11" text-anchor="start" fill="#1c1917">everything positively (07): reduction proved under net</text>
+<text x="982" y="901" font-size="11" text-anchor="start" fill="#1c1917">weightings; the bound conjectured; valuing positively is</text>
+<text x="982" y="915" font-size="11" text-anchor="start" fill="#1c1917">C's premise relocated; VD1: every frozen rule failed;</text>
+<text x="982" y="929" font-size="11" text-anchor="start" fill="#1c1917">VD2, sign measured apart: X1s and X2 passed, X1 and X3</text>
+<text x="982" y="943" font-size="11" text-anchor="start" fill="#1c1917">failed; role-play judgments, human valuers untested</text>
+<text x="982" y="964" font-size="11" fill="#1c1917"><tspan font-weight="bold">T6</tspan> A break is seen coming only through what couples into</text>
+<text x="982" y="978" font-size="11" text-anchor="start" fill="#1c1917">what breaks (03): the invisible half proved on the World</text>
+<text x="982" y="992" font-size="11" text-anchor="start" fill="#1c1917">model; beyond these models, conjectured; three frozen</text>
+<text x="982" y="1006" font-size="11" text-anchor="start" fill="#1c1917">seabird tests did not reject it at their thresholds; EW2</text>
+<text x="982" y="1020" font-size="11" text-anchor="start" fill="#1c1917">at low power, estimates in the refuting direction; none</text>
+<text x="982" y="1034" font-size="11" text-anchor="start" fill="#1c1917">establishes conditional independence</text>
+<text x="982" y="1055" font-size="11" fill="#1c1917"><tspan font-weight="bold">T7</tspan> A measure read from what it selects outlives its</text>
+<text x="982" y="1069" font-size="11" text-anchor="start" fill="#1c1917">refutation (02): the lock outliving a growing unread</text>
+<text x="982" y="1083" font-size="11" text-anchor="start" fill="#1c1917">coordinate, proved; that actual metrics are so formed</text>
+<text x="982" y="1097" font-size="11" text-anchor="start" fill="#1c1917">conjectured; every frozen verdict passed and the bridge</text>
+<text x="982" y="1111" font-size="11" text-anchor="start" fill="#1c1917">failed; occurred in this system, counting against that</text>
+<text x="982" y="1125" font-size="11" text-anchor="start" fill="#1c1917">case as a claim about trained judges</text>
+<text x="982" y="1146" font-size="11" fill="#1c1917"><tspan font-weight="bold">T8</tspan> 生生 as the direction (07): argued; open: P2 and P4;</text>
+<text x="982" y="1160" font-size="11" text-anchor="start" fill="#1c1917">and a reason for C</text>
+<text x="28" y="1191" font-size="10.5" text-anchor="start" fill="#57534e">Generated by tools/research/spine.py from theory-graph.json and spine.json. What it does and does not show: THEORY-GRAPH.md, “The spine”.</text>
 </svg>
