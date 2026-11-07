@@ -27,8 +27,8 @@
 | 入口 | 是什么 | 读多久 |
 |---|---|---|
 | [一页](theories/becoming/ONE-PAGE.zh.md) | 整个说明的十分钟层：它是什么，一个情形，根，诸律与其地位、什么会表明它错，伦理 | 约十一至十四分钟 |
-| [用途](theories/becoming/USES.zh.md) | 逐个领域：今天能用它做什么，能做到多远，不主张什么 | 约十二至十六分钟 |
-| [实例](theories/becoming/USES-EXAMPLES.zh.md) | 每个领域一例或数例，各在其真实的地位上 | 约三十五至四十五分钟 |
+| [用途](theories/becoming/USES.zh.md) | 逐个领域：今天能用它做什么，能做到多远，不主张什么 | 约十四至十八分钟 |
+| [实例](theories/becoming/USES-EXAMPLES.zh.md) | 每个领域一例或数例，各在其真实的地位上 | 约三十六至四十六分钟 |
 | [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) | 整个说明的一小时层，按八章的顺序 | 约五十分钟至一小时十分钟 |
 | [八章](theories/becoming/chapters/README.md) | 各章正文，诸结果的所属之处；除第六章外为英文 | 每章约两至六个半小时 |
 | [第六章](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) | 古文：读出、检验与分歧；中文 | 约两小时至两小时四十分钟 |
