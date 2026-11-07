@@ -214,7 +214,7 @@ def wrap(text, width, lang):
         for i in range(len(lines) - 1):
             while lines[i] and lines[i][-1] in NO_LINE_END:
                 lines[i], lines[i + 1] = lines[i][:-1], lines[i][-1] + lines[i + 1]
-        return [l for l in lines if l]
+        return [l.strip() for l in lines if l.strip()]
     lines, line = [], ''
     for word in text.split():
         if line and len(line) + 1 + len(word) > width:
@@ -447,7 +447,7 @@ def svg(graph, s, lang):
     for t in s['theses']:
         home = s['chapters'][t['home']]['file'][:2]
         body = (f'{t["id"]} {t[lang]["title"]} ({home}): ' + '; '.join(t[lang]['words']) if lang == 'en' else
-                f'{t["id"]} {t[lang]["title"]}（{home}）：' + '；'.join(t[lang]['words']))
+                f'{t["id"]} {t[lang]["title"]}（{home}）：' + '；'.join(w.replace(' … ', '……') for w in t[lang]['words']))
         y = legend_line(out, x0 - 2, y, body, lang, size=11, width=56 if lang == 'en' else 50, step=14, first_bold=len(t['id']))
         y += 3
     height = max(H, int(y) + 40)  # the key of the theses sets the height where it runs below the ring

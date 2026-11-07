@@ -801,8 +801,8 @@
     "zh": "以开为根：护未成之域不闭，非扩张可测之物"
    },
    "what": {
-    "en": "The v9 correction of 生生不息论, whose 文言 the folder says was largely drafted by a model, states \"生生不息 ≠ 复杂性必然上升\" (生生不息 is not a necessary rise in complexity) and \"复杂性上升 ≠ 善\" (a rise in complexity is not the good), and places the good not in \"扩张某可测量之物\" (expanding something measurable) but in \"护未成之域不闭\" (guarding the not-yet-become from closing). An AI-written folder synthesis records 开 replacing \"expanding the possibility space\" as the root category, but a report of 2026-05-07 still glosses 生生不息 as \"可能性空间之持续扩张\" (the continuing expansion of the possibility space) and keeps the aim of arguing for one \"稳定可奠基\" (stable and able to found) alignment.",
-    "zh": "《生生不息论》v9（开境护闭校正版；据该文件夹，其文言大多由模型起草）写道「生生不息 ≠ 复杂性必然上升」「复杂性上升 ≠ 善」，所论之善非「扩张某可测量之物」，乃「护未成之域不闭」。一份由 AI 写成的文件夹综述记开取代「expanding the possibility space」（扩张可能性空间）成为根范畴；但 2026-05-07 的报告仍以「可能性空间之持续扩张」释生生不息，并保留论证唯一一种「稳定可奠基」之 alignment 的目标。"
+    "en": "The v9 correction of 生生不息论, into which, the folder says, 文言 formulations largely drafted by a model were carried, states \"生生不息 ≠ 复杂性必然上升\" (生生不息 is not a necessary rise in complexity) and \"复杂性上升 ≠ 善\" (a rise in complexity is not the good), and places the good not in \"扩张某可测量之物\" (expanding something measurable) but in \"护未成之域不闭\" (guarding the not-yet-become from closing). An AI-written folder synthesis records 开 replacing \"expanding the possibility space\" as the root category, but a report of 2026-05-07 still glosses 生生不息 as \"可能性空间之持续扩张\" (the continuing expansion of the possibility space) and keeps the aim of arguing for one \"稳定可奠基\" (stable and able to found) alignment.",
+    "zh": "《生生不息论》v9（开境护闭校正版；据该文件夹，大多由模型起草的文言表述被带入其中）写道「生生不息 ≠ 复杂性必然上升」「复杂性上升 ≠ 善」，所论之善非「扩张某可测量之物」，乃「护未成之域不闭」。一份由 AI 写成的文件夹综述记开取代「expanding the possibility space」（扩张可能性空间）成为根范畴；但 2026-05-07 的报告仍以「可能性空间之持续扩张」释生生不息，并保留论证唯一一种「稳定可奠基」之 alignment 的目标。"
    },
    "evidence": [
     {
@@ -990,7 +990,7 @@
     {
      "path": "theories/zhishan-intelligence-must-be-good/README.md",
      "locator": "line 1108",
-     "quote": "the Chinese foundational statement",
+     "quote": "the Chinese foundational statement, closing on 共同富裕 / 人类命运共同体 / 大同 / 和谐 / 繁荣 / 稳定. [AI-drafted from",
      "private": false
     }
    ],
@@ -1030,7 +1030,7 @@
     }
    ],
    "label": "public",
-   "label_why": "Tracked files state the date and the structure; the date rests on MAP.md (git first commits theories/ on 2026-09-25), and the reading as one mechanism is the map's.",
+   "label_why": "Tracked files state the date and the structure; the date rests on MAP.md (git first commits theories/ on 2026-09-25), and the reading as one mechanism under four names, beside commitments not reducible to it, is the map's.",
    "thread": false
   },
   {
@@ -1663,7 +1663,7 @@
    "date": "2026-11-01",
    "title": {
     "en": "C shown not entailed by what reads no order",
-    "zh": "C 不为不读任何序者所蕴涵"
+    "zh": "C 不为不读任何次序者所蕴涵"
    },
    "what": {
     "en": "A Lean result, `ReadsNoOrder.not_entails`, shows that 'A statement reading no order entails C only where it fails'; chapter 7 calls this 'immediate, since \"better\" is free: it shows that a frame fixes no order.' The working rules cite it: never write that the ethics derives from the continuation condition, and 'deriving C from a weaker premise is open work'.",
@@ -1854,7 +1854,7 @@
    },
    "what": {
     "en": "The tests of the nine laws of formations that read, each of which 'refutes at most a named correspondence', were frozen on 4 November 2026, not run, so that, with XR's reading of the fronts, the board could say that day that both readiness conditions hold so far and 'every test's first stage is frozen before any run'; what of them stayed a design, the Stage A of TR1, TR2 and TR7 among it, was frozen on 5 November. On 6 November the Stage A of TR1, TR2 and TR7 ran on small learners with no model call; in the AI-written account of the runs, TR7's reading 'supported' 'refutes or confirms no theorem and no thesis', and 'The tests that call a model have not run.'",
-    "zh": "关于 formations that read（读取之形成）九条律的各项检验，每一项「refutes at most a named correspondence」（至多驳倒一个指名的对应），于 2026 年 11 月 4 日冻结、未运行；于是，连同 XR 对各前页的阅读，工作板当天可以说，两项就绪条件迄今都成立，「every test's first stage is frozen before any run」（每一项检验的第一阶段都在任何运行之前冻结）；其中仍是设计的部分，包括 TR1、TR2 与 TR7 的 A 阶段，于 11 月 5 日冻结。11 月 6 日，TR1、TR2 与 TR7 的 A 阶段在小型学习者上运行，不调用任何模型；在由 AI 撰写的运行记述中，TR7 的读法「supported」（得到支持）「refutes or confirms no theorem and no thesis」（不驳倒也不证实任何定理或论题），而「The tests that call a model have not run.」（调用模型的检验尚未运行。）"
+    "zh": "关于 formations that read（读取之形成）九条律的各项检验，每一项「refutes at most a named correspondence」（至多驳倒一个指名的对应），于 2026 年 11 月 4 日冻结、未运行；于是，连同 XR 对各面向读者之页（fronts）的阅读，工作板当天可以说，两项就绪条件迄今都成立，「every test's first stage is frozen before any run」（每一项检验的第一阶段都在任何运行之前冻结）；其中仍是设计的部分，包括 TR1、TR2 与 TR7 的 A 阶段，于 11 月 5 日冻结。11 月 6 日，TR1、TR2 与 TR7 的 A 阶段在小型学习者上运行，不调用任何模型；在由 AI 撰写的运行记述中，TR7 的读法「supported」（得到支持）「refutes or confirms no theorem and no thesis」（不驳倒也不证实任何定理或论题），而「The tests that call a model have not run.」（调用模型的检验尚未运行。）"
    },
    "evidence": [
     {
@@ -2018,8 +2018,8 @@
    "from": "competitive convergence",
    "to": "Ouroboros",
    "where": {
-    "en": "In the dated turns of 2024-11-05 (hb-02 lines 119 and 123), 'competitive convergence' was proposed as a candidate name and a better one asked for, then one 'like moloch'; the conversations listed after it that day are titled Ouroboros. The earlier term was a candidate, never adopted; that it was 'rejected as dull' is TIMELINE's reading.",
-    "zh": "在 2024-11-05 的带日期对话中（hb-02 第 119 与 123 行），「competitive convergence」（竞争性趋同）被提作候选名，随即询问有无更好的名字，又请求一个「like moloch」（像 moloch 那样）的名字；当日列在其后的各次对话都以 Ouroboros 为题。前一个词只是候选，从未被采用；「rejected as dull」（因乏味而弃用）是 TIMELINE 的解读。"
+    "en": "In the dated turns of 2024-11-05 (hb-02 lines 119 and 123), 'competitive convergence' was proposed as a candidate name and a better one asked for, then one 'like moloch'; of the six conversations listed after it that day, five are titled The Ouroboros Cycle and the sixth plans a workshop on it. The earlier term was a candidate, never adopted; that it was 'rejected as dull' is TIMELINE's reading.",
+    "zh": "在 2024-11-05 的带日期对话中（hb-02 第 119 与 123 行），「competitive convergence」（竞争性趋同）被提作候选名，随即询问有无更好的名字，又请求一个「like moloch」（像 moloch 那样）的名字；当日列在其后的六次对话中，五次以 The Ouroboros Cycle 为题，第六次筹划一场以它为题的工作坊。前一个词只是候选，从未被采用；「rejected as dull」（因乏味而弃用）是 TIMELINE 的解读。"
    },
    "evidence_path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-02.md",
    "quote": "how should we name this process? how about competitive convergence? is there any better name?",
@@ -2047,8 +2047,8 @@
     "en": "In sources/01-writings-2025/usis.md and STS.md, which carry the same file date: the review's body still says 'USIS model' under the STS title; that USIS came first, and that the reorder puts the agent first, are TIMELINE.md's reading (line 101), stated in neither file.",
     "zh": "见于 sources/01-writings-2025/usis.md 与 STS.md，两者文件日期相同：评审正文在 STS 标题下仍称「USIS model」（USIS 模型）；USIS 在先、以及重排把主体置于首位，都是 TIMELINE.md 的解读（第 101 行），两份文件都未这样说。"
    },
-   "evidence_path": "sources/01-writings-2025/STS.md",
-   "quote": "STS: Spirit–Token–Space – A Universal Symbolic Framework",
+   "evidence_path": "_process/history/2026-09-consolidation/TIMELINE.md",
+   "quote": "renamed from USIS and reordered to put the agent first",
    "label": "reconstruction"
   },
   {
@@ -2789,7 +2789,7 @@
   },
   "intro": {
    "en": "The selection mechanism, followed through the points marked on the thread. In July 2024 a society picks one value as the token of power, and those best at optimising it come to control the social system. In October 2024 an AI-drafted note names a self-reinforcing loop in which \"The system naturally selects for pure capital optimizers\". In 2025 a meta-attractor that colonizes \"even the mechanisms of selection themselves\", then defined, in an AI-written expansion, as \"a second-order attractor\" in joint state and selection-rule space. In May 2026, in a working stance AI-written from a conversation, the system concentrates \"not just resources but a way of seeing\". In October 2026, on the spine, capture through the rule and then closed capture: in a selection whose rule, and how the rule is read, are read from the share it selects, \"a loss the loop does not read leaves it locked however large it grows\"; T7 states \"That actual metrics are so formed is conjectured.\" And in one trained system, T7's frozen test of the conjecture that a judge formed from what it selected is a pool of readers counted by kind: \"Every frozen verdict passed, and the conjecture failed for this judge\". Only the spine's steps are proved, in a model; each row says what its step claimed.",
-   "zh": "选择机制，沿这条线索上标出的各点。2024 年 7 月：一个社会选出一种价值作为权力的象征，最擅长优化它的人逐渐掌控社会系统。2024 年 10 月：一份由 AI 起草的笔记写出一个自我强化的环，其中「The system naturally selects for pure capital optimizers」（系统自然地选出纯粹的资本优化者）。2025 年：一个元吸引子，殖民「even the mechanisms of selection themselves」（甚至选择机制本身），继而在一份由 AI 撰写的展开中，被定义为状态与选择规则联合空间中的「a second-order attractor」（二阶吸引子）。2026 年 5 月：在一份由 AI 据一次对话写成的工作立场中，如此选出的系统所集中的是「not just resources but a way of seeing」（不只是资源，还有一种观看方式）。2026 年 10 月，在脊柱上：经由规则的捕获，继而闭合的捕获：在一个其规则以及规则如何被读都从它所选出之份额读出的选择中，「a loss the loop does not read leaves it locked however large it grows」（环所不读的损失，无论增长多大，都让它保持锁定）；T7 写明「That actual metrics are so formed is conjectured.」（实际的度量是这样形成的，这是猜想。）最后，在一个训练出的系统中，T7 的冻结检验所检验的猜想是：由它所选出者形成的评判者，是一个按种类计数的读者池；结果是「Every frozen verdict passed, and the conjecture failed for this judge」（每一冻结裁决都通过，而该猜想对这个评判者不成立）。只有脊柱上的步骤是证明了的，并且是在一个模型中；每一行说出它那一步主张了什么。"
+   "zh": "选择机制，沿这条线索上标出的各点。2024 年 7 月：一个社会选出一种价值作为权力的象征，最擅长优化它的人逐渐掌控社会系统。2024 年 10 月：一份由 AI 起草的笔记写出一个自我强化的环，其中「The system naturally selects for pure capital optimizers」（系统自然地选出纯粹的资本优化者）。2025 年：一个元吸引子，殖民「even the mechanisms of selection themselves」（甚至选择机制本身），继而在一份由 AI 撰写的展开中，被定义为状态与选择规则联合空间中的「a second-order attractor」（二阶吸引子）。2026 年 5 月：在一份由 AI 据一次对话写成的工作立场中，该系统所集中的是「not just resources but a way of seeing」（不只是资源，还有一种观看方式）。2026 年 10 月，在脊柱上：经由规则的捕获，继而闭合的捕获：在一个其规则以及规则如何被读都从它所选出之份额读出的选择中，「a loss the loop does not read leaves it locked however large it grows」（环所不读的损失，无论增长多大，都让它保持锁定）；T7 写明「That actual metrics are so formed is conjectured.」（实际的度量是这样形成的，这是猜想。）最后，在一个训练出的系统中，T7 的冻结检验所检验的猜想是：由它所选出者形成的评判者，是一个按种类计数的读者池；结果是「Every frozen verdict passed, and the conjecture failed for this judge」（每一冻结裁决都通过，而该猜想对这个评判者不成立）。只有脊柱上的步骤是证明了的，并且是在一个模型中；每一行说出它那一步主张了什么。"
   },
   "points": [
    "sel-2024-07-14-selection-law",
