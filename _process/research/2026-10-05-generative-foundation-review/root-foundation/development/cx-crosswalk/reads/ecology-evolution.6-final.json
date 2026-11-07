@@ -1878,7 +1878,7 @@
      "record": "selection-through-couplings",
      "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
      "says": {
-      "en": "Theorem (World): with the rest fixed, selection is blind beyond the coupling closure. Near-definitional by its record's word."
+      "en": "Theorem (World; balance on what couples in): with the rest fixed, selection is blind beyond the coupling closure. Near-definitional by its record's word."
      },
      "role": "carries"
     },
@@ -2139,7 +2139,7 @@
    "carried": "carried-in-part",
    "relation": "agreement",
    "reading": {
-    "en": "The law of this form: histories alike through a formation's couplings are selected alike, so with the rest fixed selection is blind beyond its coupling closure. Its record calls this near-definitional, 'the blindness a one-line corollary', and whether an actual selection goes through the couplings is underived. On the flow a selection rewarding a rise does not see what it breaks beyond. The form agrees; Darwin's cumulative adaptation is no consequence stated here. [AI reading]"
+    "en": "The law of this form: histories alike through a formation's couplings are selected alike, so with the rest fixed and balance on what couples in, selection is blind beyond its coupling closure. Its record calls this near-definitional, 'the blindness a one-line corollary', and whether an actual selection goes through the couplings is underived. On the flow a selection rewarding a rise does not see what it breaks beyond. The form agrees; Darwin's cumulative adaptation is no consequence stated here. [AI reading]"
    },
    "targets": [
     {
@@ -2311,6 +2311,11 @@
    "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
   },
   {
+   "id": "cx-ecoevo-gaia-and-persistence-selection",
+   "what": "changed",
+   "why": "CX corrected 03 §1's blindness theorem: with a part withheld and the rest of the exchange fixed, and balance on what couples in (7 November 2026), and the re-read of what links it found this field without the correction: targets[1].says states what it says now"
+  },
+  {
    "id": "cx-ecoevo-msy-and-open-access",
    "what": "changed",
    "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): account_adds states what it says now"
@@ -2323,7 +2328,7 @@
   {
    "id": "cx-ecoevo-selection-without-foresight",
    "what": "changed",
-   "why": "CX corrected 03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated) (7 November 2026), and the re-read of what links it found this field without the correction: targets[0].says states what it says now"
+   "why": "CX corrected 03 §1's blindness theorem: with a part withheld and the rest of the exchange fixed, and balance on what couples in (7 November 2026), and the re-read of what links it found this field without the correction: reading states what it says now / CX corrected 03 §1's reading of the proxy problem and the record selection-through-couplings (only its blindness to what a proxy does not register is stated) (7 November 2026), and the re-read of what links it found this field without the correction: targets[0].says states what it says now"
   }
  ],
  "live_flags": [

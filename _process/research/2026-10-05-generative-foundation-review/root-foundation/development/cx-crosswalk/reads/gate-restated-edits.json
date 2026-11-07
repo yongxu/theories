@@ -64,5 +64,68 @@
   "file": "theories/becoming/chapters/04-LIFE.md",
   "old": "leaves no descendant from then on (`Becoming.GroupEnding.Flow.ended_of_family`, through `Becoming.Flow.family_excess_ends`)",
   "new": "leaves no descendant from then on (`Becoming.GroupEnding.Flow.excess_childless`, through `Becoming.Flow.family_excess_ends`)"
+ },
+ {
+  "line": "theories/becoming/OPENING.md:83",
+  "round": 2,
+  "file": "theories/becoming/OPENING.md",
+  "old": "They restate harvesting theory and the proxy problem, Zhuang and Hadfield-Menell's (2020) Theorem 1,",
+  "new": "They restate harvesting theory and the proxy problem (in its blindness to what a proxy does not register, not its regressional or causal kinds), Zhuang and Hadfield-Menell's (2020) Theorem 1,"
+ },
+ {
+  "line": "theories/becoming/OPENING.md:83",
+  "round": 2,
+  "file": "theories/becoming/OPENING.md",
+  "old": "at the least level any eligible outcome leaves, wherever lowering it leaves room,",
+  "new": "at the least level any eligible outcome leaves, wherever there is room,"
+ },
+ {
+  "line": "theories/becoming/chapters/05-COLLECTIVES.md:233",
+  "round": 2,
+  "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+  "old": "and with room its optima drain what lies beyond as far as any eligible outcome does ([the law](#r-what-an-optimum-does-beyond-what-couples-in)).",
+  "new": "and with room its optima drain what lies beyond as far as any eligible outcome does, where it ranks outcomes by an order rising with what couples in ([the law](#r-what-an-optimum-does-beyond-what-couples-in))."
+ },
+ {
+  "line": "theories/becoming/chapters/07-SIGNIFICANCE.md:666",
+  "round": 2,
+  "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+  "old": "and an optimum's drain wherever there is room (",
+  "new": "and the drain of an optimum of an order rising with what couples in, wherever there is room ("
+ },
+ {
+  "line": "theories/becoming/chapters/08-METHOD.md:491",
+  "round": 2,
+  "file": "theories/becoming/chapters/08-METHOD.md",
+  "old": "Zhuang and Hadfield-Menell's continuous setting, and the gain a re-read proxy brings ([record]",
+  "new": "Zhuang and Hadfield-Menell's continuous setting, the non-convergent case and converse of their Theorem 2, their sensitivities, and the gain a re-read proxy brings ([record]"
+ },
+ {
+  "line": "theories/becoming/THE-THEORY-OF-BECOMING.md:150",
+  "round": 2,
+  "file": "theories/becoming/THE-THEORY-OF-BECOMING.md",
+  "old": "is selected alike by every selection through any member's couplings (under hypotheses the chapter states)",
+  "new": "is selected alike by every selection through the coupling of any member of that closure, the actor among them (under hypotheses the chapter states)"
+ },
+ {
+  "line": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md:150",
+  "round": 2,
+  "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+  "old": "被经由任何成员之耦合的每一个选择同样选择",
+  "new": "被经由该闭包任何成员（行动者在内）之耦合的每一个选择同样选择"
+ },
+ {
+  "line": "theories/becoming/review/ALIGNMENT.md:152",
+  "round": 2,
+  "file": "theories/becoming/review/ALIGNMENT.md",
+  "old": "It gives the formal side of \"training does not fix behaviour off its distribution\".",
+  "new": "It gives the formal side of \"training does not fix behaviour off its distribution\", except where the lumping cannot tell a history from a course."
+ },
+ {
+  "line": "theories/becoming/chapters/05-COLLECTIVES.md:182",
+  "round": 3,
+  "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+  "old": "and with room, which shared units give, an optimum takes it to the floor.",
+  "new": "and with room, which shared units give, an optimum of an order rising with what couples in takes it to the floor."
  }
 ]

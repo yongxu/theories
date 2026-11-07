@@ -1337,7 +1337,7 @@
      "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#t3",
      "role": "carries",
      "says": {
-      "en": "Thesis T3: a selection through couplings, whether a reward, a training run, a market or natural selection, reaches only what couples into its selector, and with room its optima drain what lies beyond. The law for optima is proved; the clause on trained systems is conjectured."
+      "en": "Thesis T3: a selection through couplings, whether a reward, a training run, a market or natural selection, reaches only what couples into its selector, and with room its optima drain what lies beyond as far as any eligible outcome does, where it ranks outcomes by an order rising with what couples in. The law for optima is proved; the clause on trained systems is conjectured."
      }
     }
    ],
@@ -3540,6 +3540,11 @@
    "id": "cx-sspiral-regenerative-interdependence",
    "what": "changed",
    "why": "main changed the ethics claims (LM1 or AA, 7 November 2026): reading states what it says now"
+  },
+  {
+   "id": "cx-sspiral-any-token-any-game",
+   "what": "changed",
+   "why": "CX corrected 05's law of the optimum (#r-what-an-optimum-does-beyond-what-couples-in) and T3 (#t3): with room, every optimum of an order rising with what couples in drains what lies beyond as far as any eligible outcome does; a target-only (satisficing) or set-point order need not (7 November 2026), and the re-read of what links it found this field without the correction: targets[3].says states what it says now"
   },
   {
    "id": "cx-sspiral-unilateral-restraint",

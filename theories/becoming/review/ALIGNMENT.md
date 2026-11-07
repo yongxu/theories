@@ -149,7 +149,7 @@ File: `Becoming/Optimum.lean`.
 - Where it tells them apart: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "where it tells a history from every course, with laws reading what has stood and lumping decided, a law with the same courses takes any amount there" (`Training.free_where_unlumped`). Whether the installed law responds there is fixed by no training (`Training.response_free_where_unlumped`).
 - Through a reward, training installs only where the reward's couplings separate (`Training.trained_alike_iff`).
 
-**Standing and use.** Theorem (World): [07 §6](../chapters/07-SIGNIFICANCE.md#r-what-training-installs). It gives the formal side of "training does not fix behaviour off its distribution".
+**Standing and use.** Theorem (World): [07 §6](../chapters/07-SIGNIFICANCE.md#r-what-training-installs). It gives the formal side of "training does not fix behaviour off its distribution", except where the lumping cannot tell a history from a course.
 
 **Known weaknesses.**
 - Quote [theories/becoming/results/records/what-training-installs.md]: "the laws say what any lumping installs and where any neighbourhood rests, not which a given system has, which is read empirically".

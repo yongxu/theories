@@ -142,6 +142,14 @@ LIVE_RANKING_MORE = {
     'cx-pal-natural-selection-among-ais': [('a ranking would need C with the continuation condition,', 'a ranking would need C, or a premise in its place, with the continuation condition for scope,')],
 }
 WHY_RANKING_MORE = "the entry gave ranking to C alone in its own words, where 07 §4 says a ranking of courses needs C or a premise in its place (LM1); found by the ranking corrections' checker, 7 November 2026"
+# Two fields the landing round's checkers named outside their groups, made in the record's words (7 November 2026).
+LIVE_GATE_NOTES = {
+    'cx-econ-goodhart-regularity': [('a satisficing order neither drives nor keeps.', 'an order rising only to a target need not drive or keep.')],
+    'cx-greek-aristotle-cleverness': [('with room, at optima, as low beyond as any eligible outcome.',
+                                       'with room, at optima of an order rising with what couples in, as low beyond as any eligible outcome.')],
+}
+WHY_GATE_NOTES = ("the field stated the optimum's law more widely than 05 and its record (an order rising only to a target need not drive or keep); "
+                  "named by the checkers of the landing round, 7 November 2026")
 GROUP_RANKING = {'systems-cybernetics': ('where any order needs C and scope the continuation condition', 'where any order needs C or a premise in its place and scope the continuation condition')}
 
 # LM2, landed on main on 7 November 2026, wrote "arising" for "generation" where the Lean meant arising; 04 now says the
@@ -288,6 +296,16 @@ def main(argv=None):
         entries[id_].clear()
         entries[id_].update(json.loads(text))
         why.setdefault(id_, []).append(WHY_RANKING_MORE)
+    for id_, pairs in LIVE_GATE_NOTES.items():
+        text = json.dumps(entries[id_], ensure_ascii=False)
+        for old, new in pairs:
+            if old not in text:
+                problems.append(f'{id_}: {old[:60]!r} not found')
+                continue
+            text = text.replace(old, json.dumps(new, ensure_ascii=False)[1:-1])
+        entries[id_].clear()
+        entries[id_].update(json.loads(text))
+        why.setdefault(id_, []).append(WHY_GATE_NOTES)
     for item, (old, new) in GROUP_RANKING.items():
         group = files[item]['group']
         if group['summary']['en'].count(old) != 1:

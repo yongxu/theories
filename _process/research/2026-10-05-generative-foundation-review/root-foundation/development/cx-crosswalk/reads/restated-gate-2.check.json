@@ -1,0 +1,189 @@
+{
+ "cluster": "gate-2",
+ "items": [
+  {
+   "id": "cx-drives-dimensional-collapse",
+   "field": "reading",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "Both olds occur once. 'Only' is what 03 gives for one selection ('A particular selection may ignore what its couplings carry'), and the rising order is 05's own qualifier, so the sentence now matches 05 #r-what-an-optimum-does-beyond-what-couples-in; 'C for order' is the form MAIN-DRIFT keeps. For the coordinator: three live homes still say 'reaches exactly what couples into its selector' of a selection: 05 line 7, 07 line 647 and 08 line 706."
+  },
+  {
+   "id": "cx-drives-dimensional-collapse",
+   "field": "targets[3].says",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "It quotes T3's unchanged italic line as T3's own words, and the standing matches 05 #t3: proved for optima, conjectured with partial support, locus unresolved. The omitted 'as policy gradient's update rule largely gives' is a shortening that keeps 'partial support', and this round did not change it."
+  },
+  {
+   "id": "cx-kpso-every-extreme-closes",
+   "field": "reading",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "The old occurs once. In 05's table r is the greatest renewal, q the greatest at or above the need and e the end the capacity reaches, so 'r ≤ q + c and e < c' are both lower bounds on c, and 'large enough' says exactly that; where q + c < r a long horizon outweighs the coupling. The drain sentence and 'without room keeping can be an optimum' already use the home's words."
+  },
+  {
+   "id": "cx-kpso-model-smaller-than-its-system",
+   "field": "reading",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "The old occurs once, and the edit adds the rising order that 05's law and ONE-PAGE row 19 require. Its first sentence already says 'only', and 03 reads the main law as the proxy problem 'in its blindness to what the proxy does not register'."
+  },
+  {
+   "id": "cx-kpso-model-smaller-than-its-system",
+   "field": "targets[2].says",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "It copies ONE-PAGE row 19 word for word, the rising order and 'as far as any eligible outcome does' included. It keeps the standing: proved, a known theorem restated, T3 conjectured and partly supported."
+  },
+  {
+   "id": "cx-rsd-bounded-self-disease",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "The old occurs once, and the result reproduces 05 #t3's second sentence as it now stands, ending in 'where it ranks outcomes by an order rising with what couples in'."
+  },
+  {
+   "id": "cx-sspiral-any-token-any-game",
+   "field": "targets[3].says",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "The old occurs once, and the result is T3's second sentence verbatim, with both limits restored. That matters because this field lists markets and natural selection, which need not rank by a rising order."
+  },
+  {
+   "id": "cx-sspiral-ai-amplifies",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "It quotes T3's unchanged italic line, and its standing sentence copies 05 #t3's Standing word for word, including 'as policy gradient's update rule largely gives'."
+  },
+  {
+   "id": "cx-sty-gamed-rewards",
+   "field": "account_adds",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "The entry is about rewards that get gamed, which are maximized, so the rising order is implied. The field only names what the account adds and restates no law more widely. For the coordinator: this entry's reading (not in this group) says a proxy is a selection 'reaching exactly what couples in'; 03 gives 'only' for one selection, since 'A particular selection may ignore what its couplings carry'."
+  },
+  {
+   "id": "cx-wamo-city-machine",
+   "field": "reading",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "The field names a city read 'as an optimum draining what does not couple in' only as a reading the account does not make, and rejects it. It states no law of the optimum."
+  },
+  {
+   "id": "cx-greek-aristotle-cleverness",
+   "field": "reading",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "The old occurs once. 'Whatever it aims at' contradicted 05, where an order rising only to a target has both the keeping and the ending outcome among its optima. 'Every order rising with a family' holds for any family, so 'whatever couples in' keeps the field's point that reach is apart from aim. As the author said, this entry's account_adds ('with room, at optima, as low beyond as any eligible outcome') also lacks the rising order and needs the same fix."
+  },
+  {
+   "id": "cx-greek-aristotle-mean",
+   "field": "account_adds",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "'Such an order' is the reading's single-peaked set-point order. 05 #r-what-a-set-point-optimum-does-beyond says 'Below the set point it rises', with its optima least beyond 'exactly where room holds there' and every optimum below the set point standing 'where every rising optimum stands'. So 'as a rising one does' carries the room condition."
+  },
+  {
+   "id": "cx-modphil-marx-coercive-competition",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "The old, closing quote included, occurs once, and the completed quotation matches 05 #t3's second sentence verbatim. The role 'carries' with part 'T3, the law for optima' still holds."
+  },
+  {
+   "id": "cx-syscyb-trap-wrong-goal",
+   "field": "reading",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "The old occurs once. 'Only ... its selector' follows 03, and the rising-order clause is T3's own words, which matters because a goal can be a target, as this entry's account_adds itself leaves open. The T7 and locked-seeking glosses match their homes."
+  },
+  {
+   "id": "cx-syscyb-trap-wrong-goal",
+   "field": "targets[1].says",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "It quotes T3's unchanged italic line, with the standing 05 #t3 gives: proved for optima, conjectured with partial support, locus unresolved."
+  },
+  {
+   "id": "cx-econ-goodhart-regularity",
+   "field": "targets[2].says",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "Both quotations are verbatim, the italic line and the standing sentence, and the gloss of LA4's Stage A matches 05 #t3. For the coordinator: this entry's reading (not in this group) says 'a satisficing order neither drives nor keeps'. 05 says 'an order rising only to a target has both the keeping and the ending outcome among its optima', and the record says 'need not drive or keep', so 'neither ... nor keeps' reads as not keeping and is worth checking."
+  },
+  {
+   "id": "cx-econ-campbell-corruption",
+   "field": "reading",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "The old occurs once, and the edit attaches the rising order to the optima, as 05's law requires. The raising law's gloss is the record's own statement in raising-what-couples-in-draws-from-beyond: 'every selection holding only where what couples in rises holds only on flows reaching beyond the coupling'."
+  },
+  {
+   "id": "cx-drives-dimensional-collapse",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "The old string occurs once. The field paraphrases the record (it is not verbatim) under the standing 'Theorem on the World', and 03 gives the blindness theorem the standing '(World; balance on what couples in)'. Adding 'and balance on what couples in' copies the home's words and makes the field exact. The last sentence is the record's own does-not-show wording, and the field's subject, a selection through a selector's couplings, already carries 03's supplied premise, so it can stay."
+  },
+  {
+   "id": "cx-fork-no-real-externality",
+   "field": "reading",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "Both old strings occur once. 'Selection stays blind beyond its closure' gave blindness with no hypothesis and an unnamed closure. The first edit copies 07's list exactly: 'beyond its coupling closure, with the rest of the exchange fixed and balance on what couples in'. 'C gives any order' read as C alone ordering, which LM1 corrected. The second edit takes 07 §4's words, 'C gives order' and 'a ranking of courses needs C or a premise in its place'. The continuation condition is still named for scope, with both premises unasserted and their warrant open."
+  },
+  {
+   "id": "cx-oi-karma-return",
+   "field": "targets[1].says",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "Both old strings occur once. The field lists the theorem's hypotheses but left out two that 07 and the record's law 2 have: the same formations present and a common start. It also shortened what selects. The edits copy 07 #r-the-gap-for-ones-own-act word for word ('in two balanced flows with the same formations present and a common start', 'through the coupling of any member of the closure, the actor among them'). The not-shown sentence matches the record's does-not-show list."
+  },
+  {
+   "id": "cx-ecoevo-gaia-and-persistence-selection",
+   "field": "targets[1].says",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "The old string occurs once. The sentence is the record's statement word for word, but it sits under a standing '(World)' given as the theorem's own. 03's standing for blindness is '(World; balance on what couples in)', so the field dropped a standing word. Copying 03's parenthesis is the smallest fix. 'Near-definitional' is the record's word."
+  },
+  {
+   "id": "cx-ecoevo-selection-without-foresight",
+   "field": "reading",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "The old string occurs once. The reading derives blindness ('so') from the first law and the rest fixed alone, and 03 also needs balance on what couples in, so the replace is right and uses 03's words. The rest checks against the record: 'the blindness a one-line corollary' and the underived going-through are both there. 'Does not see what it breaks beyond' assumes a break rather than asserting one, so it does not go beyond 05's rise theorem."
+  },
+  {
+   "id": "cx-ecoevo-selection-without-foresight",
+   "field": "targets[0].says",
+   "verdict": "ok",
+   "edits": [],
+   "labels": null,
+   "why": "Leave is right. Both quoted sentences are the record's statement word for word, and the field adds balance as 03's hypothesis. 'Whether an actual selection goes through the couplings, whether offspring follow the selection' is a word-for-word substring of the record's does-not-show list. The proxy-problem quote matches the record and 03's new limit ('its blindness to what a proxy does not register', not the regressional or causal kinds). No changed claim is stated more widely."
+  }
+ ]
+}

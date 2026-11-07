@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "files": {
-    "README.md": "b7d5d30690c66bbe3a50db47a0b7b53d8904fefd84794c3fa396f5025ccb1c80",
+    "README.md": "124d2f22d5634779b76a7207f6e0a1b121c16a950a5526feab0e8ebbcd553de7",
     "RESEARCH.md": "f75adb57c11bab500a8ade7d34827e36b6372438220465e229aff2b89ad56bd6",
     "RESULTS.md": "1560626a88a55e948ad3619d5189f3fdc4c1f12019276e75c60710fdfd2c8fbb",
     "GOALS.md": "f66c496674b6570f5f3cca401afba904e2142731d827d64545439bc141bf2c0f",
@@ -244,8 +244,8 @@
     "theories/becoming/results/records/two-act-worlds-carry-the-difference.md": "c3621193468b0d5207e24d680519e2f0af67a4d18130af3ce46b15889a16e1cb",
     "theories/becoming/results/records/worlds-are-runs.md": "f607e8f2169b170dc9c0edc972405dcba003511d7bbed5ce390d30a2ebe41648",
     "theories/becoming/chapters/README.md": "364166501aa6ae4dc508896cd91bbf906c6c5ae6cd867c4f4452312021a108e2",
-    "_process/research/README.md": "51d900f5edcebfc13dd8b153a98e56622d2e1380fa6d3db2cad42b1e0aa3eea5",
-    "_process/research/2026-10-05-generative-foundation-review/root-foundation/INDEX.md": "d549785b9f0aa4b0695118940f1354b982a4dc2ca413ccda1352952f6676953b",
+    "_process/research/README.md": "629f4e97e1a034fec7e48d3798bfbd658d57d1a34f6f394ab4d32b191592e9ad",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/INDEX.md": "b762f3c5e6c496126f68b21848246a7e63b85797710f1c1d976c301077cd1dcb",
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/REVIEWS.md": "0ccef05c0f94ed738029b8aa50c19901bcddb80807925beeb2dca83cb56dc687",
     "sources/README.md": "af77005d52f0c42b87a11a25612d7fce711cfa1c89da239a16bd19cfbd13cf64",
     "_process/DIRECTIVE-INDEX.md": "7dd3a2a0531108a7802b2aacb4f2475220c4f394e72add3a26562c24b06f6c93",
@@ -601,9 +601,9 @@
     "theories/becoming/results/records/what-decides-giving-against-keeping-on-a-flow.md": "0d2232e53ea33d30ccfb63a16f4abb64bb0b434e9ff005359cac10805dbd4716",
     "theories/becoming/results/records/errors-by-chance-in-a-pair-keeping-mutual-withholding.md": "f81971da034b1472e6cc82baffc870f739b182d5013ae1d87b6c48597ae31964",
     "theories/becoming/results/atlas/ATLAS.md": "696d127d38e6ab9967f26ab4797cc464dfc6f19df6144995eed0976c6bb9c389",
-    "theories/becoming/results/data/atlas.json": "c31bc3f9e231508332c4c4a94a6a0867edf7ea9ff25f696796e6819b1712d9d7",
+    "theories/becoming/results/data/atlas.json": "d1637fdd5f1c5ef096d1d457501ed98ea5794ef9f6f77e77181c1a8c6e4d2139",
     "theories/becoming/results/records/what-would-give-c.md": "fbb52efeaeed2c9a430820d0c949dbe53ea12bb7bb1ab715ab69938e15a6e3b5",
-    "theories/becoming/results/atlas/CROSSWALK.md": "2cccfef74ccec97db08cd1e8dcbfaa72b09e159fa467d8a03f33627cdc06c079",
-    "theories/becoming/results/atlas/map.html": "485fde2b8b8339af2a9bdba5df9f245c3bf5289943e5fb761a1f13bde0e37294"
+    "theories/becoming/results/atlas/CROSSWALK.md": "2b28d6a1bcd5731e548d47d58e135f0b9eef28e37e4442f0ea75b7be6b11fe87",
+    "theories/becoming/results/atlas/map.html": "15a871199b716ea5d58a54608bec841518e16a68a6c4fd545288664a4b63d14c"
   }
 }

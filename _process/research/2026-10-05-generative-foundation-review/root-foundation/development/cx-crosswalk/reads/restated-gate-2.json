@@ -1,0 +1,368 @@
+{
+ "cluster": "gate-2",
+ "items": [
+  {
+   "id": "cx-drives-dimensional-collapse",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "A selection reaches exactly what couples into its selector.",
+     "new": "A selection reaches only what couples into its selector."
+    },
+    {
+     "old": "An optimum drains what lies beyond",
+     "new": "An optimum of an order rising with what couples in drains what lies beyond"
+    }
+   ],
+   "labels": null,
+   "why": "03 says whatever is apart is separated by some selection, and a particular one may ignore what its couplings carry, so one selection reaches only what couples into its selector. The field also stated the drain of any optimum, but 05's law holds for an order rising with what couples in, since one rising only to a target has the keeping outcome among its optima too.",
+   "read": [
+    "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
+    "theories/becoming/chapters/05-COLLECTIVES.md#t3",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-a-weighting-faster-than-renewal-ends-the-base"
+   ]
+  },
+  {
+   "id": "cx-drives-dimensional-collapse",
+   "field": "targets[3].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It quotes T3's unchanged italic thesis line as T3's own words, and its standing matches 05 #t3: proved for optima, conjectured with partial support, LA4's Stage A leaving the locus unresolved.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#t3"
+   ]
+  },
+  {
+   "id": "cx-kpso-every-extreme-closes",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "with a coupling for each step a need stays met, every optimum",
+     "new": "with a large enough coupling for each step a need stays met, every optimum"
+    }
+   ],
+   "labels": null,
+   "why": "Its drain sentence already uses the home's words and qualifier, and 'without room keeping can be an optimum' is the home's own sentence. But the step-coupling law keeps the need at every horizon only where r ≤ q + c and e < c, and where q + c < r a long horizon outweighs the coupling, so 'large enough' restores the condition that was dropped.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-a-step-coupling-keeps-at-every-horizon",
+    "theories/becoming/chapters/05-COLLECTIVES.md#t3"
+   ]
+  },
+  {
+   "id": "cx-kpso-model-smaller-than-its-system",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "With room, an optimum drains what lies beyond.",
+     "new": "With room, an optimum of an order rising with what couples in drains what lies beyond."
+    }
+   ],
+   "labels": null,
+   "why": "As a 'checked form', the field stated the drain of any optimum. 05's law and ONE-PAGE state it of an optimum of an order rising with what couples in, and 'a target' alone has keeping among its optima. Its first sentence already says 'only', and 03 reads the main law as the proxy problem in its blindness.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
+    "theories/becoming/ONE-PAGE.md",
+    "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings"
+   ]
+  },
+  {
+   "id": "cx-kpso-model-smaller-than-its-system",
+   "field": "targets[2].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It copies ONE-PAGE's row word for word, rising order included, and keeps its standing (proved; a known theorem restated; T3 conjectured, partly supported).",
+   "read": [
+    "theories/becoming/ONE-PAGE.md",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in"
+   ]
+  },
+  {
+   "id": "cx-rsd-bounded-self-disease",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "as far as any eligible outcome does. The law",
+     "new": "as far as any eligible outcome does, where it ranks outcomes by an order rising with what couples in. The law"
+    }
+   ],
+   "labels": null,
+   "why": "The field restates T3's second sentence, and 05 #t3 now adds that the drain holds where the selection ranks outcomes by an order rising with what couples in. Without that, it says more than the law.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#t3",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in"
+   ]
+  },
+  {
+   "id": "cx-sspiral-any-token-any-game",
+   "field": "targets[3].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "and with room its optima drain what lies beyond. The law",
+     "new": "and with room its optima drain what lies beyond as far as any eligible outcome does, where it ranks outcomes by an order rising with what couples in. The law"
+    }
+   ],
+   "labels": null,
+   "why": "It quotes T3's second sentence but stops before both of its limits: 'as far as any eligible outcome does' and, now, 'where it ranks outcomes by an order rising with what couples in'. This field is a selection of any kind (reward, market, natural selection), so it needs both.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#t3",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in"
+   ]
+  },
+  {
+   "id": "cx-sspiral-ai-amplifies",
+   "field": "targets[0].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It quotes T3's unchanged italic thesis line as T3's own words, and its standing copies 05 #t3 in full, including 'as policy gradient's update rule largely gives'.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#t3"
+   ]
+  },
+  {
+   "id": "cx-sty-gamed-rewards",
+   "field": "account_adds",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "The entry is about rewards that get gamed, and a reward maximized is a rising order, so here 'the optimum's drain under room' is the drain of a rising order's optimum. The field only points to what the account adds, each with its standing, and restates no law more widely.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
+    "theories/becoming/chapters/02-MAP.md#t7"
+   ]
+  },
+  {
+   "id": "cx-wamo-city-machine",
+   "field": "reading",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "The field mentions a city read 'as an optimum draining what does not couple in' only as a reading the account does not make, and rejects it. It states no law of the optimum, so the match is a coincidence.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in"
+   ]
+  },
+  {
+   "id": "cx-greek-aristotle-cleverness",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "and with room every optimum drains what lies beyond whatever it aims at.",
+     "new": "and with room every optimum of an order rising with what couples in drains what lies beyond, whatever couples in."
+    }
+   ],
+   "labels": null,
+   "why": "'Every optimum ... whatever it aims at' contradicts 05: 'an order rising only to a target has both the keeping and the ending outcome among its optima', and this field has just said a target is any condition. The entry's account_adds ('with room, at optima, as low beyond as any eligible outcome') lacks the rising order too, but it is not among these fields; the coordinator should check it.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
+    "theories/becoming/chapters/03-KNOWING.md#r-a-response-common-over-a-reading",
+    "theories/becoming/chapters/03-KNOWING.md#scientific-standing"
+   ]
+  },
+  {
+   "id": "cx-greek-aristotle-mean",
+   "field": "account_adds",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "'Such an order' is the reading's set-point order, which has its own law. 05 says 'Below the set point it rises', its optima at the least level beyond 'exactly where room holds there', and that an unreached set point 'drains as a rising order does', so 'as a rising one does' carries the room condition in the home's own phrase.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-what-a-set-point-optimum-does-beyond",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in"
+   ]
+  },
+  {
+   "id": "cx-modphil-marx-coercive-competition",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "and with room its optima drain what lies beyond'",
+     "new": "and with room its optima drain what lies beyond as far as any eligible outcome does, where it ranks outcomes by an order rising with what couples in'"
+    }
+   ],
+   "labels": null,
+   "why": "The field is a verbatim quotation of T3's second sentence, cut off before 'as far as any eligible outcome does' and before the rising-order clause 05 #t3 now adds. A market need not rank by a rising order, so the quotation is completed.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#t3",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in"
+   ]
+  },
+  {
+   "id": "cx-syscyb-trap-wrong-goal",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "A selection reaches exactly what couples into it, and with room its optima drain what lies beyond as far as any eligible outcome does:",
+     "new": "A selection reaches only what couples into its selector, and with room its optima drain what lies beyond as far as any eligible outcome does, where it ranks outcomes by an order rising with what couples in:"
+    }
+   ],
+   "labels": null,
+   "why": "One selection reaches only what couples into its selector: 03 says 'a particular selection may ignore what its couplings carry'. The drain holds for an order rising with what couples in, which matters because a goal may be a target, and the entry's account_adds already leaves open which order a goal must rise in. T7 and 03's locked-seeking gloss match their homes.",
+   "read": [
+    "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
+    "theories/becoming/chapters/05-COLLECTIVES.md#t3",
+    "theories/becoming/chapters/02-MAP.md#t7"
+   ]
+  },
+  {
+   "id": "cx-syscyb-trap-wrong-goal",
+   "field": "targets[1].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It quotes T3's unchanged italic thesis line as T3's own words, with its standing (proved for optima, conjectured with partial support, locus unresolved) as 05 #t3 gives it.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#t3"
+   ]
+  },
+  {
+   "id": "cx-econ-goodhart-regularity",
+   "field": "targets[2].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It quotes T3's unchanged italic line and its standing sentence verbatim, and glosses LA4's Stage A as 05 #t3 states it.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#t3"
+   ]
+  },
+  {
+   "id": "cx-econ-campbell-corruption",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "and with room optima drain the beyond.",
+     "new": "and with room the optima of an order rising with what couples in drain the beyond."
+    }
+   ],
+   "labels": null,
+   "why": "'Optima' had no order attached: the selection before it is a selection, not an order, and 05's drain holds for an order rising with what couples in, since a score aimed only at a target need not drain. The raising law's gloss matches 05 #r-raising-what-couples-in-draws-from-beyond.",
+   "read": [
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-raising-what-couples-in-draws-from-beyond",
+    "theories/becoming/chapters/05-COLLECTIVES.md#t3"
+   ]
+  },
+  {
+   "id": "cx-drives-dimensional-collapse",
+   "field": "targets[0].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "with the rest fixed it is blind beyond",
+     "new": "with the rest fixed and balance on what couples in, it is blind beyond"
+    }
+   ],
+   "labels": null,
+   "why": "The field follows the record's statement, but it gives a standing ('Theorem on the World') and the rest fixed as if those were the premises. 03's blindness theorem is '(World; balance on what couples in)', and the record's law 6 needs balance too, so the edit adds the home's words, as this group's selection-without-foresight target already does.",
+   "read": [
+    "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+    "theories/becoming/results/records/selection-through-couplings.md"
+   ]
+  },
+  {
+   "id": "cx-fork-no-real-externality",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "selection stays blind beyond its closure,",
+     "new": "selection stays blind beyond its coupling closure (with the rest of the exchange fixed and balance on what couples in),"
+    },
+    {
+     "old": "C gives any order; neither is asserted, warrant open.",
+     "new": "C gives order, and a ranking of courses needs C or a premise in its place; neither is asserted, warrant open."
+    }
+   ],
+   "labels": null,
+   "why": "'Selection stays blind beyond its closure' gives no hypothesis, and 'closure' could be read as the reach closure; the home says coupling closure, with the rest of the exchange fixed and balance on what couples in. 'C gives any order' reads as saying only C orders, but 07 §4 says a ranking of courses needs C or a premise in its place, so it takes the home's words.",
+   "read": [
+    "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-the-dynamics-leave-open",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order"
+   ]
+  },
+  {
+   "id": "cx-oi-karma-return",
+   "field": "targets[1].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "in two balanced flows, an act",
+     "new": "in two balanced flows with the same formations present and a common start, an act"
+    },
+    {
+     "old": "by every selection through any member of the closure.",
+     "new": "by every selection through the coupling of any member of the closure, the actor among them."
+    }
+   ],
+   "labels": null,
+   "why": "The field lists the theorem's hypotheses but leaves out two that the home and the record's law 2 have: the same formations present and a common start. It also shortens what selects; the edits copy 07's words: 'through the coupling of any member of the closure, the actor among them'.",
+   "read": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-gap-for-ones-own-act",
+    "theories/becoming/results/records/the-gap-for-ones-own-act.md"
+   ]
+  },
+  {
+   "id": "cx-ecoevo-gaia-and-persistence-selection",
+   "field": "targets[1].says",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "Theorem (World): with the rest fixed,",
+     "new": "Theorem (World; balance on what couples in): with the rest fixed,"
+    }
+   ],
+   "labels": null,
+   "why": "The field quotes the record's statement word for word, but its standing '(World)' is the place where the account lists premises, so it reads as the full set. 03's standing is '(World; balance on what couples in)', and the edit copies it.",
+   "read": [
+    "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+    "theories/becoming/results/records/selection-through-couplings.md"
+   ]
+  },
+  {
+   "id": "cx-ecoevo-selection-without-foresight",
+   "field": "reading",
+   "verdict": "replace",
+   "edits": [
+    {
+     "old": "so with the rest fixed selection is blind",
+     "new": "so with the rest fixed and balance on what couples in, selection is blind"
+    }
+   ],
+   "labels": null,
+   "why": "The reading derives blindness ('so') from the first law plus only the rest fixed. The home's blindness theorem also needs balance on what couples in, which the same entry's target already names as 03's hypothesis; the rest of the reading matches the record's words.",
+   "read": [
+    "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+    "theories/becoming/results/records/selection-through-couplings.md",
+    "theories/becoming/chapters/05-COLLECTIVES.md#r-what-a-rise-draws-from-beyond"
+   ]
+  },
+  {
+   "id": "cx-ecoevo-selection-without-foresight",
+   "field": "targets[0].says",
+   "verdict": "leave",
+   "edits": [],
+   "labels": null,
+   "why": "It quotes the record's statement word for word and adds 'with balance on what couples in (03's hypothesis)'. Its 'not derived' and proxy-problem quotes appear word for word in the record's does-not-show list, matching 03's new limit.",
+   "read": [
+    "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
+    "theories/becoming/results/records/selection-through-couplings.md"
+   ]
+  }
+ ]
+}

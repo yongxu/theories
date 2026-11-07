@@ -739,7 +739,7 @@
      "record": "the-gap-for-ones-own-act",
      "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-gap-for-ones-own-act",
      "says": {
-      "en": "Theorem (World): where the rest follows one law of exchange reading through coupling, in two balanced flows, an act whose difference stays beyond the actor's coupling closure is selected alike by every selection through any member of the closure. Not shown: how large such consequences are, or that any act is wrong."
+      "en": "Theorem (World): where the rest follows one law of exchange reading through coupling, in two balanced flows with the same formations present and a common start, an act whose difference stays beyond the actor's coupling closure is selected alike by every selection through the coupling of any member of the closure, the actor among them. Not shown: how large such consequences are, or that any act is wrong."
      },
      "role": "carries"
     },
@@ -2080,6 +2080,11 @@
    "id": "cx-oi-karma-across-carriers",
    "what": "changed",
    "why": "a correction this crosswalk made at the home: the entry quotes what the home says now, or says what it said until 7 November 2026"
+  },
+  {
+   "id": "cx-oi-karma-return",
+   "what": "changed",
+   "why": "CX corrected 07 #r-the-gap-for-ones-own-act: selected alike by every selection through the coupling of any member of the closure, the actor among them (7 November 2026), and the re-read of what links it found this field without the correction: targets[1].says states what it says now"
   },
   {
    "id": "cx-oi-kevala",

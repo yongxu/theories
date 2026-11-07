@@ -1189,14 +1189,14 @@
    "relation": "scope",
    "agreement_of": null,
    "reading": {
-    "en": "Three kin, narrower than the claim. A selection reaches exactly what couples into its selector. An optimum drains what lies beyond its couplings where there is room, to the least level, breaking exactly the dependences some eligible outcome breaks: that much of \"cease, not weaken\" has form. A weighting faster than renewal ends the stock at once. All concern stocks; proved for optima, conjectured for trained systems. Reading meaning so is mine. A loss needs the continuation condition for scope and C for order, neither asserted. [AI reading]"
+    "en": "Three kin, narrower than the claim. A selection reaches only what couples into its selector. An optimum of an order rising with what couples in drains what lies beyond its couplings where there is room, to the least level, breaking exactly the dependences some eligible outcome breaks: that much of \"cease, not weaken\" has form. A weighting faster than renewal ends the stock at once. All concern stocks; proved for optima, conjectured for trained systems. Reading meaning so is mine. A loss needs the continuation condition for scope and C for order, neither asserted. [AI reading]"
    },
    "targets": [
     {
      "record": "selection-through-couplings",
      "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
      "says": {
-      "en": "Theorem on the World: every selection through a selector's couplings selects histories alike exactly when they are alike through them; with the rest fixed it is blind beyond the coupling closure. The law's force lies entirely in what actually couples into the selector."
+      "en": "Theorem on the World: every selection through a selector's couplings selects histories alike exactly when they are alike through them; with the rest fixed and balance on what couples in, it is blind beyond the coupling closure. The law's force lies entirely in what actually couples into the selector."
      },
      "role": "carries"
     },
@@ -3356,6 +3356,11 @@
    "id": "cx-drives-belief-makes-dynamic",
    "what": "changed",
    "why": "main changed the waiting claims (LM1 or AA, 7 November 2026): targets[2].says states what it says now (as its checker amended)"
+  },
+  {
+   "id": "cx-drives-dimensional-collapse",
+   "what": "changed",
+   "why": "CX corrected 05's law of the optimum (#r-what-an-optimum-does-beyond-what-couples-in) and T3 (#t3): with room, every optimum of an order rising with what couples in drains what lies beyond as far as any eligible outcome does; a target-only (satisficing) or set-point order need not (7 November 2026), and the re-read of what links it found this field without the correction: reading states what it says now / CX corrected 03 §1's blindness theorem: with a part withheld and the rest of the exchange fixed, and balance on what couples in (7 November 2026), and the re-read of what links it found this field without the correction: targets[0].says states what it says now"
   },
   {
    "id": "cx-drives-virtue-does-not-self-install",

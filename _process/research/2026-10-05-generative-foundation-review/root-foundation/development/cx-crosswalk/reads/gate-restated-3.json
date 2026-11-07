@@ -1,0 +1,586 @@
+{
+ "read:training-2": {
+  "group": "training-2",
+  "items": [
+   {
+    "line": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md:238",
+    "record": "what-training-installs",
+    "verdict": "ok",
+    "why": "The catalogue row restates the record's laws (on-course, lumping, reward couplings, closure, search rests, outrun, Commons), and its header lists the hypotheses the home's table states (laws reading what has stood, feasibility, reading through coupling, decidedness, outrun premises, reward bound); every named declaration exists in Becoming/Training.lean. It says nothing of the optimum's drain, which is the only part of 07:666 CX changed, so nothing in it is now contradicted or wider than the home.",
+    "edits": [],
+    "read": [
+     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md:237-239",
+     "theories/becoming/results/records/what-training-installs.json (statement, laws, hypotheses, does_not_show, counterexamples, correspondence, next_delta)",
+     "theories/becoming/chapters/07-SIGNIFICANCE.md:643-712",
+     "git diff main HEAD and git diff HEAD -- 07-SIGNIFICANCE.md, what-training-installs.json",
+     "grep of declarations in Becoming/Training.lean"
+    ]
+   },
+   {
+    "line": "theories/becoming/THE-THEORY-OF-BECOMING.md:150",
+    "record": "what-training-installs",
+    "verdict": "ok",
+    "why": "Its training clause (\"installs a law only along the learner's own courses, and off them only where the lumping it reads through cannot tell a history from a course\") matches the home's table, and the closing \"(under hypotheses the chapter states)\" covers the Proved sentence; the act clause matches r-the-gap-for-ones-own-act word for word. The direction names the condition for scope and C for order, conditionally, as the 07 §7 home does, and the line does not touch the optimum's drain that CX changed.",
+    "edits": [],
+    "read": [
+     "theories/becoming/THE-THEORY-OF-BECOMING.md:149-151",
+     "git diff main -- theories/becoming/THE-THEORY-OF-BECOMING.md",
+     "theories/becoming/chapters/07-SIGNIFICANCE.md:643-724",
+     "theories/becoming/results/records/what-training-installs.json"
+    ]
+   },
+   {
+    "line": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md:150",
+    "record": "what-training-installs",
+    "verdict": "ok",
+    "why": "The Chinese edition says the same as the English line 150: the training clause matches the home's table, the act clause matches the gap law with the actor among the closure's members, and the hypotheses are deferred to the chapter. It names 该条件 for scope and C for order, conditionally, and says nothing of the optimum's drain CX changed.",
+    "edits": [],
+    "read": [
+     "theories/becoming/THE-THEORY-OF-BECOMING.zh.md:149-151",
+     "git diff main -- theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+     "theories/becoming/chapters/07-SIGNIFICANCE.md:643-712"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/03-KNOWING.md:40",
+    "record": "what-training-installs",
+    "verdict": "ok",
+    "why": "The line only points to 07 for where a training can install a law and restates none of the home's content. Nothing in it conflicts with the home as it is now.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/03-KNOWING.md:39-41",
+     "theories/becoming/chapters/07-SIGNIFICANCE.md:651-662"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/03-KNOWING.md:507",
+    "record": "what-training-installs",
+    "verdict": "ok",
+    "why": "The AI reading links the training laws for context and restates none of them. Its claims rest on 03 §11's choice law, and it labels goal misgeneralization \"a possibility located exactly, not a failure shown\", which agrees with the record's correspondence (\"formal kernel\") and its does_not_show, and says nothing of the optimum's drain CX changed.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/03-KNOWING.md:499-507",
+     "theories/becoming/chapters/07-SIGNIFICANCE.md:651-662",
+     "theories/becoming/results/records/what-training-installs.json (correspondence, does_not_show)"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/08-METHOD.md:731",
+    "record": "what-training-installs",
+    "verdict": "ok",
+    "why": "The landed clause matches the home's off-course row, including the qualifier \"with laws reading what has stood and the lumping decided\", and its open items (an actual system's lumping and neighbourhoods, read empirically) match the record's does_not_show and next_delta. Listing \"implicit bias\" as open alongside probabilistic learning does not contradict the home: the home defines implicit bias inside the model as a narrower neighbourhood's added rests, and 03:565 also lists implicit bias as not shown. The line says nothing of the optimum's drain.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/08-METHOD.md:730-732",
+     "git diff main -- theories/becoming/chapters/08-METHOD.md",
+     "theories/becoming/chapters/07-SIGNIFICANCE.md:651-662",
+     "theories/becoming/results/records/what-training-installs.json (hypotheses, does_not_show, next_delta)",
+     "git log -S on 'implicit bias' in 07 and 08"
+    ]
+   },
+   {
+    "line": "theories/becoming/review/ALIGNMENT.md:152",
+    "record": "what-training-installs",
+    "verdict": "ok",
+    "why": "CX's added qualifier, \"except where the lumping cannot tell a history from a course\", matches the home's off-course row (installed exactly there). The \"Meaning\" bullets just above quote the home's hypotheses for the free direction, and the slogan is framed only as the theorem's \"formal side\", so the line is no wider than the home.",
+    "edits": [],
+    "read": [
+     "theories/becoming/review/ALIGNMENT.md:143-160",
+     "git diff main -- theories/becoming/review/ALIGNMENT.md",
+     "theories/becoming/chapters/07-SIGNIFICANCE.md:651-662"
+    ]
+   },
+   {
+    "line": "theories/becoming/review/ALIGNMENT.md:155",
+    "record": "what-training-installs",
+    "verdict": "ok",
+    "why": "The quote matches the record's first does_not_show entry exactly, and it appears once in the record page what-training-installs.md. The bullet adds nothing beyond the quote.",
+    "edits": [],
+    "read": [
+     "theories/becoming/review/ALIGNMENT.md:154-158",
+     "theories/becoming/results/records/what-training-installs.json (does_not_show)",
+     "grep in theories/becoming/results/records/what-training-installs.md"
+    ]
+   }
+  ]
+ },
+ "read:t3": {
+  "group": "t3",
+  "items": [
+   {
+    "line": "experiments/drain-beyond-the-reward/DESIGN.md:7",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "why": "It states the law for optima with a rising order and room, so it already carries the qualifier the home's T3 now adds. Its quotations of T3's clause and of what the clause forbids match 05:233-235 word for word (frozen design; reported only).",
+    "edits": [],
+    "read": [
+     "experiments/drain-beyond-the-reward/DESIGN.md:7",
+     "theories/becoming/chapters/05-COLLECTIVES.md:170-182",
+     "theories/becoming/chapters/05-COLLECTIVES.md:232-253",
+     "theories/becoming/ONE-ARGUMENT.md:34-40"
+    ]
+   },
+   {
+    "line": "experiments/drain-beyond-the-reward/DESIGN.md:16",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "why": "Its accounts of CG1 (the own-catch learner took the last apple, the coupled one did not), IN1 (no untold dependent kept) and the LA1 series as a test of the bridge agree with T3's evidence and its 'What the LA1 series tests' bullet. 'No test yet varies nearness' dates from before the design's own run, which the home records as LA4's Stage A (frozen design; reported only).",
+    "edits": [],
+    "read": [
+     "experiments/drain-beyond-the-reward/DESIGN.md:16",
+     "theories/becoming/chapters/05-COLLECTIVES.md:238-251"
+    ]
+   },
+   {
+    "line": "experiments/drain-beyond-the-reward/PRIOR-WORK-2026-11-03.md:37",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "why": "It says 05 §7 names the locus rivals next to its outside evidence. The home's 'Outside' bullet does name them ('Against the locus': MacDiarmid and others 2025, Taylor and others 2025), citing this note (frozen kit; reported only).",
+    "edits": [],
+    "read": [
+     "experiments/drain-beyond-the-reward/PRIOR-WORK-2026-11-03.md:30-37",
+     "theories/becoming/chapters/05-COLLECTIVES.md:250"
+    ]
+   },
+   {
+    "line": "experiments/drain-beyond-the-reward/README.md:5",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "why": "It restates T3's clause on trained systems ('in proportion to how near...', the drain where units are shared) and does not touch the optima law that CX qualified. Its 'only where' is consistent with the home's refuter, which counts a fall as large where no resource is shared (frozen kit; reported only).",
+    "edits": [],
+    "read": [
+     "experiments/drain-beyond-the-reward/README.md:1-60",
+     "theories/becoming/chapters/05-COLLECTIVES.md:233-238"
+    ]
+   },
+   {
+    "line": "theories/becoming/COLLECTIVE-DIRECTION.md:84",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "why": "It matches the home's 'What the LA1 series tests' bullet: the bridge, not a drain beyond the couplings, which 'CG1 (C1, its second round) and IN1 show'. It also matches the LA4 Stage A bullet: no forbidden case resolved, the drain rising with nearness 'as policy gradient's update rule largely gives', locus unresolved. It does not restate the optima law.",
+    "edits": [],
+    "read": [
+     "theories/becoming/COLLECTIVE-DIRECTION.md:84",
+     "theories/becoming/chapters/05-COLLECTIVES.md:233-249",
+     "experiments/drain-beyond-the-reward/README.md:13-30"
+    ]
+   },
+   {
+    "line": "theories/becoming/COLLECTIVE-DIRECTION.md:97",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "why": "It matches T3's LA1 and LA1b bullets: the two failed locked settings are those whose feedback separates the best threshold from the next least well, and LA1b, with the feedback resolved and the best threshold assigned, passed every verdict. It makes no claim about the optima law.",
+    "edits": [],
+    "read": [
+     "theories/becoming/COLLECTIVE-DIRECTION.md:89-98",
+     "theories/becoming/chapters/05-COLLECTIVES.md:245-246"
+    ]
+   },
+   {
+    "line": "theories/becoming/ONE-ARGUMENT.md:53",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "why": "It quotes T3's addition word for word and calls it conjectured. The step it builds on (step 2, line 40) says 'every optimum of every rising order', so the rising-order qualifier is already there.",
+    "edits": [],
+    "read": [
+     "theories/becoming/ONE-ARGUMENT.md:30-62",
+     "theories/becoming/chapters/05-COLLECTIVES.md:233-235"
+    ]
+   },
+   {
+    "line": "theories/becoming/ONE-ARGUMENT.md:81",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "why": "It matches the home's LA4 Stage A bullet: no forbidden case resolved, refuter not met, P1/P4/P5 matching the separable baseline, the locus unresolved with the unshared bay above the control on average, the site rising in every arm without the anchor and in the control, no excess resolved. It also matches the README result table.",
+    "edits": [],
+    "read": [
+     "theories/becoming/ONE-ARGUMENT.md:81",
+     "theories/becoming/chapters/05-COLLECTIVES.md:249",
+     "experiments/drain-beyond-the-reward/README.md:13-30"
+    ]
+   },
+   {
+    "line": "theories/becoming/THE-THEORY-OF-BECOMING.md:22",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "why": "It says the counted bay fell with nearness 'as their update rule largely gives' and that the locus T3 conjectures went unresolved, 'a bay sharing none not shown to be spared'. That agrees with the home's 'leaves its locus unresolved' and P3's report. It does not restate the optima law.",
+    "edits": [],
+    "read": [
+     "theories/becoming/THE-THEORY-OF-BECOMING.md:14-22",
+     "theories/becoming/chapters/05-COLLECTIVES.md:235,249"
+    ]
+   },
+   {
+    "line": "theories/becoming/THE-THEORY-OF-BECOMING.md:111",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "why": "Its sentence says 'with room, every optimum of every rising order' before its gloss 'so an optimizer drains...', so it keeps the qualifier T3 now names. The gloss matches the home's own gloss at 05:170 ('An optimizer ranks outcomes by what couples into it'), and its standing for T3's addition is given in §9's table.",
+    "edits": [],
+    "read": [
+     "theories/becoming/THE-THEORY-OF-BECOMING.md:106-114",
+     "theories/becoming/chapters/05-COLLECTIVES.md:170-176,233"
+    ]
+   },
+   {
+    "line": "theories/becoming/THE-THEORY-OF-BECOMING.md:168",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "why": "Its standing column ('proved for optima; for trained systems conjectured, partly supported'; predicted keeps failed; the first wording of a forbidden case failing in a computed flow where the learner reads the condition) agrees with T3's standing and evidence. Its forbids column copies three of the four forbidden cases; leaving one out narrows nothing.",
+    "edits": [],
+    "read": [
+     "theories/becoming/THE-THEORY-OF-BECOMING.md:168",
+     "theories/becoming/chapters/05-COLLECTIVES.md:235-240"
+    ]
+   },
+   {
+    "line": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md:22",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "why": "The Chinese edition says what EN:22 says: the counted bay fell with nearness, largely from the update rule, and the locus went unresolved with the unshared bay not shown to be spared. This agrees with T3's standing and the LA4 bullet.",
+    "edits": [],
+    "read": [
+     "theories/becoming/THE-THEORY-OF-BECOMING.zh.md:22",
+     "theories/becoming/chapters/05-COLLECTIVES.md:235,249"
+    ]
+   },
+   {
+    "line": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md:111",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "why": "Like EN:111, it states the law as 每一个上升之次序的每一个最优解 with room before its gloss, so the qualifier T3 now names is there. Its summary of T3's addition agrees with the home.",
+    "edits": [],
+    "read": [
+     "theories/becoming/THE-THEORY-OF-BECOMING.zh.md:111",
+     "theories/becoming/chapters/05-COLLECTIVES.md:176,233"
+    ]
+   },
+   {
+    "line": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md:168",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "why": "Its row matches EN:168: proved for optima, conjectured and partly supported for trained systems, the first wording of a forbidden case failing in a computed flow. It agrees with T3's standing and forbids.",
+    "edits": [],
+    "read": [
+     "theories/becoming/THE-THEORY-OF-BECOMING.zh.md:168",
+     "theories/becoming/chapters/05-COLLECTIVES.md:235-236"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/04-LIFE.md:201",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "why": "It only says the commons test's learning results are evidence for T3, which is true: CG1 is T3's first evidence bullet. It restates nothing CX changed.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/04-LIFE.md:201",
+     "theories/becoming/chapters/05-COLLECTIVES.md:240"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/05-COLLECTIVES.md:34",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "why": "It sends the reader to §7 for what learners reach in CG2, and T3's evidence does hold CG2's result (two predicted keeps failed). It also points to EM1's experiment and restates nothing CX changed.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/05-COLLECTIVES.md:34",
+     "theories/becoming/chapters/05-COLLECTIVES.md:243-244"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/05-COLLECTIVES.md:182",
+    "record": "(thesis T3, no record)",
+    "verdict": "fix",
+    "why": "What it says of T3 holds: the locus is part of T3's clause, conjectured and unresolved. But CX's new gloss 'blindness alone leaves the beyond unselected, and with room ... an optimum takes it to the floor' leaves out the rising order that the theorem above and T3 now require; a trivial order, or a nearing order whose set point can be reached (the set-point law), is blind and can have room with optima high beyond.",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+      "old": "and with room, which shared units give, an optimum takes it to the floor.",
+      "new": "and with room, which shared units give, an optimum of an order rising with what couples in takes it to the floor."
+     }
+    ],
+    "read": [
+     "theories/becoming/chapters/05-COLLECTIVES.md:170-185",
+     "theories/becoming/chapters/05-COLLECTIVES.md:233",
+     "theories/becoming/results/records/what-an-optimum-does-beyond-what-couples-in.json (correspondence)",
+     "git diff main HEAD -- theories/becoming/chapters/05-COLLECTIVES.md"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/07-SIGNIFICANCE.md:532",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "why": "It reads 'what is foreseen', taken as a rule, as the drain T3 names: what a selection does not couple in falls out of its scope. That is an interpretive pointer to T3, consistent with it, and it restates nothing CX changed.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/07-SIGNIFICANCE.md:532",
+     "theories/becoming/chapters/05-COLLECTIVES.md:233"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/07-SIGNIFICANCE.md:728",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "why": "It names 'each ranking by its own order rising with its family' and calls CG1 and CG2 T3's evidence. Its account of EM1 (three of six locked settings, the equilibrium not computed; weights 32 and 2, that is sixteenfold) agrees with T3's EM1 bullet.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/07-SIGNIFICANCE.md:728",
+     "theories/becoming/chapters/05-COLLECTIVES.md:240-244"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/08-METHOD.md:573",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "why": "Its standing and forbids copy T3's standing and forbidden list, and its evidence matches the home's bullets, including the new MQ1 'failed for tabular learners, 80 of 151', CG1's C2 failing and LA4's P1 supported in both tested families with the locus unresolved. It does not restate the optima law.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/08-METHOD.md:573",
+     "theories/becoming/chapters/05-COLLECTIVES.md:233-251",
+     "experiments/commons-gated-renewal/README.md:37",
+     "experiments/drain-beyond-the-reward/README.md:13-30"
+    ]
+   }
+  ]
+ },
+ "check:training-2": {
+  "group": "training-2",
+  "items": [
+   {
+    "line": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md:238",
+    "record": "what-training-installs",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "The README is not in generated-manifest.json. The Becoming.Training row restates the record's laws: on-course, exploration, lumping (installed and free), reward couplings, the closure law, settled and local search, outrun, and Commons. Its header lists the hypotheses the record gives (laws reading what has stood, feasibility, reading through coupling, decidedness, outrun premises, reward bound). I checked the Lean. 'alike where the acts agree on what couples into the reward's closure' matches the agree premise of trained_alike_beyond_closure (take and give agree on conditions coupled into r's closure). start_decides is at weight one within the renewal, and outrun_neighbourhood_decides matches 'a neighbourhood can install restraint no weight installs'. The row does not restate 07:666's list. That list is the only part of the home CX changed: the blindness hypotheses and 'the drain of an optimum of an order rising with what couples in'. So nothing in the row is now contradicted or wider than the home.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/THE-THEORY-OF-BECOMING.md:150",
+    "record": "what-training-installs",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "The training clause ('only along the learner's own courses, and off them only where the lumping it reads through cannot tell a history from a course') matches the home table's on-course and off-course rows. It keeps 'reads through' and leaves the remaining hypotheses to '(under hypotheses the chapter states)'. CX's own edit to the act clause matches r-the-gap-for-ones-own-act ('the coupling of any member of the closure, the actor among them'). The pooling conditions match the D45 reading's four conditions in 07 §6. The direction is stated only conditionally, 'under the condition for scope, C for order, J1–J4 and a correspondence', as 07 §7's Conditional header has it. The line does not restate the 07:666 list or the optimum's drain.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md:150",
+    "record": "what-training-installs",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "It follows the English line 150 clause by clause. 训练只沿学习者自己的进程安装…只在它所经由读取的归并不能把一个历史与一个进程区分开之处 matches the off-course row. The act clause has CX's correction (经由该闭包任何成员（行动者在内）之耦合), and the hypotheses are deferred to the chapter. The direction is conditional: 以该条件定范围、以 C 定次序、J1–J4 与一个对应. Nothing of the optimum's drain or the 666 list is restated.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/03-KNOWING.md:40",
+    "record": "what-training-installs",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "The link to r-what-training-installs is only a pointer ('where a training can install a law is 07's'). It restates nothing of the home's table or of the changed 666 list. The 'same structure with the data as the map' claim belongs to the §6 lumping law it cites, not to this record.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/03-KNOWING.md:507",
+    "record": "what-training-installs",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "This is an AI reading that rests on 03 §11's choice law and links the training laws for context. It states no training law. It calls goal misgeneralization 'a possibility located exactly, not a failure shown' and says that a training installing either order 'is not proved'. That fits the record, whose correspondence calls the on-course law the formal kernel of goal misgeneralization and whose does_not_show denies evidence about an actual system. It says nothing of the optimum's drain or of the blindness hypotheses CX changed.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/08-METHOD.md:731",
+    "record": "what-training-installs",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "CX did not change this line. Its landed clause matches the home's off-course row, including 'among laws reading through a lumping of histories' and 'with laws reading what has stood and the lumping decided'. Its first open item matches the record's does_not_show and next_delta: an actual system's lumping and neighbourhoods, read empirically. I tried to refute the reader on 'Open: ... implicit bias', since 07:659 says 'a narrower neighbourhood's added rests are its implicit bias'. Both phrasings landed together in RA (0d7a397a5, 23 October), after TI2. 03:565 also lists implicit bias as not shown. The home gives only a formal reading for a deterministic local search, and which neighbourhoods an actual optimizer has stays open. So listing implicit bias as open understates the landed reading but claims nothing false or wider than the home. Nothing touches the drain.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/review/ALIGNMENT.md:152",
+    "record": "what-training-installs",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "CX added 'except where the lumping cannot tell a history from a course', which matches the home's off-course row (installed exactly there, for laws reading through a lumping). The Meaning bullets just above give the lumping premise and quote the home's 'with laws reading what has stood and lumping decided' for the free direction. The slogan is framed only as the theorem's 'formal side'. 'Theorem (World)' matches the home's label. Nothing here is wider than the home, and nothing restates the 666 list.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/review/ALIGNMENT.md:155",
+    "record": "what-training-installs",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "The quote matches the record's first does_not_show entry word for word, and it occurs once in what-training-installs.md (count checked). CX left the record unchanged (git diff main HEAD on the json is empty), and the bullet adds nothing to the quote.",
+    "edits": []
+   }
+  ]
+ },
+ "check:t3": {
+  "group": "t3",
+  "items": [
+   {
+    "line": "experiments/drain-beyond-the-reward/DESIGN.md:7",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "It states the law for optima with the qualifiers T3 now names ('with a rising order and room, every optimum stands at the least level beyond', Optimum.least_of_room, as at 05:176). Its quotations of T3's clause and of the forbidden list's opening match 05:233 and 05:236 word for word. This is a frozen design, so I report only.",
+    "edits": []
+   },
+   {
+    "line": "experiments/drain-beyond-the-reward/DESIGN.md:16",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "CG1, IN1 and the LA1 series as a test of the bridge agree with T3's evidence and with its 'What the LA1 series tests' bullet (05:240, 242, 248). 'No test yet varies how near' was true when the design was frozen. It is out of date now that LA4's Stage A, 'the first test to vary how near' (05:249), has run. This is a frozen design, so I report only and propose no edit.",
+    "edits": []
+   },
+   {
+    "line": "experiments/drain-beyond-the-reward/PRIOR-WORK-2026-11-03.md:37",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "05:250's 'Outside' bullet does name the locus's rivals ('Against the locus': MacDiarmid and others 2025, Taylor and others 2025), and it cites this note. The line restates nothing CX changed. This is a frozen kit, so I report only.",
+    "edits": []
+   },
+   {
+    "line": "experiments/drain-beyond-the-reward/README.md:5",
+    "record": "(thesis T3, no record)",
+    "verdict": "fix",
+    "agrees": false,
+    "why": "I report this and propose no edit, because the task bars edits in this folder. The line attributes to T3's clause a drain 'only where what lies beyond shares units with what is rewarded'. The home's clause (05:233) says only 'the drain lying where what lies beyond shares units with what is rewarded'. The account records the loss of the stronger wording: ONE-ARGUMENT:90 says that at 0d7a397a5 'the locus lost \"and not where it shares none\"'. The home's refuter counts only a fall 'as far where it shares no resource' (05:238), and its standing adds that 'Units do not exhaust couplings' (05:235). So 'only where' puts back the wider, dropped wording. The wording was there from f6d6f9edc, when T3 already lacked it, so CX did not cause this. The same line's 'No test yet varies how near a trained system comes...' is out of date beside the README's own Stage A result, read against 05:249. The first reader's view, that 'only where' agrees with the refuter, misses that the refuter needs a fall as far. If the coordinator lifts the bar, the smallest change copies the home: 'and only where' becomes ', the drain lying where'.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/COLLECTIVE-DIRECTION.md:84",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "The LA1 sentence matches 05:248 ('the bridge ... not a drain on a condition beyond the reward's couplings, which CG1 (C1, its second round) and IN1 show in tabular learners and LLM agents'). The LA4 sentence matches 05:235 and 249: no forbidden case resolved, the drain rising with nearness 'as policy gradient's update rule largely gives', the locus unresolved. The line does not restate the optima law.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/COLLECTIVE-DIRECTION.md:97",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "Where LA1 failed matches 05:245's post-hoc finding that the failed settings are those whose feedback separates the best threshold from the next least well, and LA1b's frozen reading (05:246). LA1b had two changes, the feedback resolved and the threshold assigned, and 'Every verdict passed' (05:246). The line says nothing about the optima law.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/ONE-ARGUMENT.md:53",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "It quotes T3's addition word for word from 05:233. Its 'do this' refers back to step 2 (line 39), which already says 'every optimum of every rising order' with room, so the qualifier CX added is present. 'That is conjectured' is true. It leaves out 'with partial support', which understates and does not widen, and §4 and §5 then report the evidence.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/ONE-ARGUMENT.md:81",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "It matches 05:249 and the README's result. No forbidden case was resolved and the refuter was not met. P1, P4 and P5 match the separable baseline ('the simplest family's update'). The locus is unresolved: the uncounted bay ended above the control on average, its seeds too spread to resolve the half-fish margin. The site rose in every arm except the anchored one, and in the control, with no excess resolved.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/THE-THEORY-OF-BECOMING.md:22",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "The counted bay fell with nearness 'as their update rule largely gives', and the locus T3 conjectures went unresolved, 'a bay sharing none not shown to be spared'. That agrees with 05:235 ('leaves its locus unresolved') and with P3 at 05:249. The line does not restate the optima law.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/THE-THEORY-OF-BECOMING.md:111",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "The proved sentence carries both conditions ('with room, every optimum of every rising order'), and the gloss after 'so' draws its consequence for that optimizer. That is no wider than 05:176 and 05:170. T3's addition, 'drain so as they near their reward's optimum', is narrower than 05:233: it omits the locus and widens nothing.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/THE-THEORY-OF-BECOMING.md:168",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "The standing column matches 05:235: proved for optima; conjectured and partly supported for trained systems; worded after the listed tests; predicted keeps failed; the first wording of the second forbidden case failing in a computed flow where the learner reads the condition. The forbids column copies three of 05:236's four cases, which narrows nothing. The title is T3's own.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md:22",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "It says what EN:22 says (大体出自其更新规则; locus 未能判定; 不共单位之湾未被表明得以幸免), and that agrees with 05:235 and 249.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md:111",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "Like EN:111, it states 有余地时，每一个上升之次序的每一个最优解 before the gloss, so the rising-order qualifier is present. Its T3 addition is narrower than 05:233.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md:168",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "Its row matches EN:168 and agrees with 05:235 and 05:236: proved for optima, conjectured and partly supported for trained systems, and the first wording failing in a computed flow where the learner reads the condition.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/04-LIFE.md:201",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "It says only that the commons test's learning results are evidence for T3. That is true: CG1 is T3's first evidence bullet (05:240). It restates nothing CX changed.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/05-COLLECTIVES.md:34",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "It sends the reader to §7 for what learners reach in CG2, and T3's evidence holds CG2 (05:243) and EM1 (05:244). It restates nothing CX changed.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/05-COLLECTIVES.md:182",
+    "record": "(thesis T3, no record)",
+    "verdict": "fix",
+    "agrees": true,
+    "why": "What it says of T3 holds: the locus is part of T3's clause, conjectured, and LA4's Stage A left it unresolved (05:235, 249). CX's new gloss, 'blindness alone leaves the beyond unselected, and with room ... an optimum takes it to the floor', makes blindness plus room enough. The theorem (05:176) and T3 now (05:233) also need an order rising with what couples in. A nearing order is blind to the beyond too, yet where an eligible outcome reaches its set point every optimum stands there whatever the room (05:185), and 05:178 says 'an order rising only to a target has both the keeping and the ending outcome among its optima'. The first reader's edit copies the home's phrase, which this same Reading uses later, and I checked that its old text occurs exactly once. A side note on a line outside this list: the record's correspondence Reading ('competing for the same units, an optimum takes it to the floor') has the same short form, though there it follows 'over every order rising with what couples in'.",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+      "old": "and with room, which shared units give, an optimum takes it to the floor.",
+      "new": "and with room, which shared units give, an optimum of an order rising with what couples in takes it to the floor."
+     }
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/07-SIGNIFICANCE.md:532",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "It points to the drain T3 names, taken as a rule of scope: what a selection does not couple in falls outside its scope. That is an interpretive pointer, consistent with T3's 'reaches only what couples into its selector'. It does not restate the optima law's conditions, which CX changed.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/07-SIGNIFICANCE.md:728",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "It keeps 'each ranking by its own order rising with its family', and its restraint claim matches the several-optimizers law (05:215: 'each takes its whole capacity wherever something stands'). CG1 and CG2 are T3's evidence. The EM1 account (three of six locked settings; the equilibrium not computed; weights 32 and 2) agrees with 05:244.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/08-METHOD.md:573",
+    "record": "(thesis T3, no record)",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "Its standing and forbids copy 05:235 and 05:236. Its evidence matches the home's bullets: MQ1 failing for tabular learners, 80 of 151 (CX's new text); CG1's C2 failing (CG1 README:37); LA1, LA1b and LA1c; and LA4's Stage A, where the drain's rise with nearness is supported in both tested families as the update rule largely gives and the locus is unresolved. It does not restate the optima law.",
+    "edits": []
+   }
+  ]
+ }
+}

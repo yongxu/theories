@@ -2283,7 +2283,7 @@
    "carried": "carried-in-part",
    "relation": "scope",
    "reading": {
-    "en": "The first half is stated as a reading: 'external' is relative to an accounting's scope, and those affected stay in the one unfolding. But interconnection does the ethical work only in part: selection stays blind beyond its closure, a loss returning to no one counts only under the continuation condition, and informed harm tests the step from one unfolding to goodwill. C gives any order; neither is asserted, warrant open. [AI reading]"
+    "en": "The first half is stated as a reading: 'external' is relative to an accounting's scope, and those affected stay in the one unfolding. But interconnection does the ethical work only in part: selection stays blind beyond its coupling closure (with the rest of the exchange fixed and balance on what couples in), a loss returning to no one counts only under the continuation condition, and informed harm tests the step from one unfolding to goodwill. C gives order, and a ranking of courses needs C or a premise in its place; neither is asserted, warrant open. [AI reading]"
    },
    "targets": [
     {
@@ -2502,6 +2502,11 @@
    "id": "cx-fork-infrastructure-upstream",
    "what": "changed",
    "why": "main changed the waiting claims (LM1 or AA, 7 November 2026): reading states what it says now (as its checker amended) / main changed a home its checker read (LM1 or AA, 7 November 2026): targets[3].says states what it says now (as its checker amended)"
+  },
+  {
+   "id": "cx-fork-no-real-externality",
+   "what": "changed",
+   "why": "CX corrected 03 §1's blindness theorem: with a part withheld and the rest of the exchange fixed, and balance on what couples in (7 November 2026), and the re-read of what links it found this field without the correction: reading states what it says now"
   },
   {
    "id": "cx-fork-trust-from-shared-understanding",

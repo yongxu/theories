@@ -1,0 +1,611 @@
+{
+ "read:kept-together": {
+  "group": "kept-together",
+  "items": [
+   {
+    "line": "theories/becoming/chapters/02-MAP.md:291",
+    "record": "conditions-kept-together",
+    "verdict": "ok",
+    "why": "The line cites the record's laws, not the changed table row: 'Keeping conditions together, keeping a part not being renewal' are collective laws homed in 05. The home still says exactly that (Viability.kernel_and_iff and the rest, and 'Keeping a part is not renewal (witness Renewable)'). The changed row, 'Information true to the world', links 03 and is not restated here, and 02-MAP.md is not in the generated manifest.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/02-MAP.md:284-293",
+     "theories/becoming/chapters/05-COLLECTIVES.md:80-100",
+     "theories/becoming/results/records/conditions-kept-together.json (statement, laws, hypotheses, does_not_show, correspondence)",
+     "git diff main HEAD -- theories/becoming/chapters/05-COLLECTIVES.md theories/becoming/chapters/02-MAP.md theories/becoming/results/records/conditions-kept-together.json (record unchanged; 05:93 row changed)",
+     "_process/architecture/generated-manifest.json (02-MAP and 05-COLLECTIVES not listed)"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/05-COLLECTIVES.md:182",
+    "record": "selection-through-couplings",
+    "verdict": "ok",
+    "why": "The line now limits the proxy problem as the home does: 03 says 'What is stated is its blindness to what the proxy does not register; Manheim and Garrabrant's regressional and causal kinds ... are not stated', and the record's correspondence reads 'in its blindness to what a proxy does not register, not its regressional or causal kinds'. The added clause 'with room, which shared units give, an optimum takes it to the floor' matches 05's law of the optimum (with room every optimum stands at the least eligible level beyond; shared units give room, with the beyond apart from the family) and its record's AI reading. The rest (the four limits, and that a principal's improvement 'needs a ranking of courses, so C or a premise in its place') holds against their homes.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/05-COLLECTIVES.md:168-182",
+     "theories/becoming/chapters/05-COLLECTIVES.md:214-216",
+     "theories/becoming/chapters/03-KNOWING.md:20-29",
+     "theories/becoming/results/records/selection-through-couplings.json (statement, hypotheses, does_not_show incl. the correspondence entry, correspondence)",
+     "theories/becoming/results/records/what-an-optimum-does-beyond-what-couples-in.json (statement, hypotheses, does_not_show, correspondence)",
+     "git diff main HEAD -- theories/becoming/results/records/selection-through-couplings.json theories/becoming/chapters/03-KNOWING.md theories/becoming/chapters/05-COLLECTIVES.md"
+    ]
+   }
+  ]
+ },
+ "read:training": {
+  "group": "training",
+  "items": [
+   {
+    "line": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md:238",
+    "record": "what-training-installs",
+    "verdict": "ok",
+    "why": "The Training row's laws match the home table and the record's laws, with its hypotheses (laws reading what has stood, feasibility, reading through coupling, decidedness, outrun premises, reward bound) named as entering where they do; `trained_alike_beyond_closure` is stated as the Lean has it (the acts agreeing on what couples into the reward's closure). CX's change to the blindness case's premises in 07's list is not restated here.",
+    "edits": [],
+    "read": [
+     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md:238",
+     "theories/becoming/chapters/07-SIGNIFICANCE.md:651-668",
+     "theories/becoming/results/records/what-training-installs.json#laws,hypotheses,does_not_show,counterexamples",
+     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Training.lean:712-735"
+    ]
+   },
+   {
+    "line": "theories/becoming/THE-THEORY-OF-BECOMING.md:150",
+    "record": "what-training-installs",
+    "verdict": "fix",
+    "why": "The training clause matches the home (only along its own courses, off them exactly where the lumping cannot tell a history from a course), and the ethics is named conditionally with the condition for scope and C for order. Not a CX change: the gap sentence says 'through any member's couplings', where 07's home says 'through the coupling of any member of the closure, the actor among them'. Without that qualifier it seems to rule out the pooling route the next sentence offers.",
+    "edits": [
+     {
+      "file": "theories/becoming/THE-THEORY-OF-BECOMING.md",
+      "old": "is selected alike by every selection through any member's couplings (under hypotheses the chapter states)",
+      "new": "is selected alike by every selection through the coupling of any member of that closure, the actor among them (under hypotheses the chapter states)"
+     }
+    ],
+    "read": [
+     "theories/becoming/THE-THEORY-OF-BECOMING.md:146-150",
+     "theories/becoming/chapters/07-SIGNIFICANCE.md:640-690",
+     "theories/becoming/chapters/07-SIGNIFICANCE.md:717-718",
+     "theories/becoming/results/records/what-training-installs.json#statement,does_not_show"
+    ]
+   },
+   {
+    "line": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md:150",
+    "record": "what-training-installs",
+    "verdict": "fix",
+    "why": "This is the zh edition of the same line: the training clause and the conditional direction hold against the home. Not a CX change: '经由任何成员之耦合' drops 07's 'of any member of the closure, the actor among them' for the gap for one's own act.",
+    "edits": [
+     {
+      "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+      "old": "被经由任何成员之耦合的每一个选择同样选择",
+      "new": "被经由该闭包任何成员（行动者在内）之耦合的每一个选择同样选择"
+     }
+    ],
+    "read": [
+     "theories/becoming/THE-THEORY-OF-BECOMING.zh.md:146-150",
+     "theories/becoming/chapters/07-SIGNIFICANCE.md:674-675"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/03-KNOWING.md:40",
+    "record": "what-training-installs",
+    "verdict": "ok",
+    "why": "The line only points to 07 for where a training can install a law and says training has §6's structure with the data as the map; it claims nothing the home contradicts. It does not restate the blindness case whose premises CX added to 07's list.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/03-KNOWING.md:22-40",
+     "theories/becoming/chapters/07-SIGNIFICANCE.md:651-666"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/03-KNOWING.md:507",
+    "record": "what-training-installs",
+    "verdict": "ok",
+    "why": "The AI reading leaves open whether a training installs either witness order ('not proved'; goal misgeneralization 'a possibility located exactly, not a failure shown'). That agrees with the home's laws and with the record's does_not_show (which lumping or neighbourhood an actual system has is read empirically). Nothing it says touches the changed sentence.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/03-KNOWING.md:503-507",
+     "theories/becoming/chapters/07-SIGNIFICANCE.md:651-662",
+     "theories/becoming/results/records/what-training-installs.json#does_not_show,correspondence"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/08-METHOD.md:731",
+    "record": "what-training-installs",
+    "verdict": "ok",
+    "why": "Item 7 copies the home table's off-course row with its qualifiers (laws reading through a lumping; free elsewhere with laws reading what has stood and the lumping decided), and its Open list matches next_delta (an actual system's lumping and neighbourhoods, read empirically). Its 'implicit bias' left open understates rather than widens: the home states a narrower neighbourhood's added rests as its implicit bias only abstractly.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/08-METHOD.md:731",
+     "theories/becoming/chapters/07-SIGNIFICANCE.md:651-662",
+     "theories/becoming/results/records/what-training-installs.json#laws,next_delta"
+    ]
+   },
+   {
+    "line": "theories/becoming/review/ALIGNMENT.md:152",
+    "record": "what-training-installs",
+    "verdict": "fix",
+    "why": "Not a CX change: the line calls the theorem the formal side of 'training does not fix behaviour off its distribution', but the home's off-course row says training does install there, exactly where the lumping cannot tell a history from a course (`Training.installed_where_lumped`). The edit adds that exception in the home's own words.",
+    "edits": [
+     {
+      "file": "theories/becoming/review/ALIGNMENT.md",
+      "old": "It gives the formal side of \"training does not fix behaviour off its distribution\".",
+      "new": "It gives the formal side of \"training does not fix behaviour off its distribution\", except where the lumping cannot tell a history from a course."
+     }
+    ],
+    "read": [
+     "theories/becoming/review/ALIGNMENT.md:144-160",
+     "theories/becoming/chapters/07-SIGNIFICANCE.md:651-662",
+     "theories/becoming/results/records/what-training-installs.json#statement,laws"
+    ]
+   },
+   {
+    "line": "theories/becoming/review/ALIGNMENT.md:155",
+    "record": "what-training-installs",
+    "verdict": "ok",
+    "why": "The quoted weakness is word for word the record's does_not_show entry (checked as present once in what-training-installs.md), and the home's laws still bear it out. The line does not restate the changed 07 sentence.",
+    "edits": [],
+    "read": [
+     "theories/becoming/review/ALIGNMENT.md:154-157",
+     "theories/becoming/results/records/what-training-installs.json#does_not_show",
+     "theories/becoming/results/records/what-training-installs.md"
+    ]
+   }
+  ]
+ },
+ "check:kept-together": {
+  "group": "kept-together",
+  "items": [
+   {
+    "line": "theories/becoming/chapters/02-MAP.md:291",
+    "record": "conditions-kept-together",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "The line points to the record's laws, not to the changed table row. Its clause 'Keeping conditions together, keeping a part not being renewal' matches 05 §4 now: the decomposition (Viability.kernel_and_iff, kernel_allOf_iff) and 'Keeping a part is not renewal (witness Renewable)'. It also matches the record (title 'Conditions kept together, and keeping a part', laws unchanged, record not in the diff). CX changed only the 05:93 row 'Information true to the world', which links 03, and 02:291 does not restate it. The line calls them 'collective laws'. That is a filing by home, and 05 §4 opens 'A collective's continuation is asked of runs...'. It does not claim more than the record, whose reading onto collectives is labelled the AI's (D48). The three anchors it links exist in 05. 02-MAP.md is not listed in generated-manifest.json.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/05-COLLECTIVES.md:182",
+    "record": "selection-through-couplings",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "The new limit copies the home and the record. 03:29 now says 'What is stated is its blindness to what the proxy does not register; Manheim and Garrabrant's regressional and causal kinds ... are not stated.' The record's does_not_show correspondence entry has the same words as the line: 'in its blindness to what a proxy does not register, not its regressional or causal kinds'. The next clause, 'blindness alone leaves the beyond unselected, and with room, which shared units give, an optimum takes it to the floor', rewords the AI reading in the correspondence of what-an-optimum-does-beyond-what-couples-in ('blindness alone leaves the beyond unselected; competing for the same units, an optimum takes it to the floor'). It agrees with 05:176 (a): with room every optimum stands at the least eligible level beyond, and shared units give room. 'Which shared units give' leaves out the home's side conditions: equality decided, the beyond apart from the family, the family holding a condition. In this AI reading, though, the beyond means what lies apart from what couples in, and the sentence after it already says 'with shared units for room', so a reader is not misled. I checked the rest of the line against its homes. The ZH Theorem 1 and 2 glosses match 03:29 and 05:178 (optima_lack_of_bound, converse not theirs). The first of the four limits matches the room-read-off-the-exchange row at 05:214: the optimum stands at what the rest leaves less the part's capacity, or at nothing. The re-reading limit matches 05:216 ('a later re-reading restores nothing'), and the pooled-coupling limit matches 05:261. The ethics clause, 'the last needs a ranking of courses, so C or a premise in its place', meets 07 §4. 05-COLLECTIVES.md is not a generated page.",
+    "edits": []
+   }
+  ]
+ },
+ "read:optimum": {
+  "group": "optimum",
+  "items": [
+   {
+    "line": "theories/becoming/ONE-ARGUMENT.md:39",
+    "record": "what-an-optimum-does-beyond-what-couples-in",
+    "verdict": "ok",
+    "why": "This line states Optimum.least_of_room in the home's own terms: with room, every optimum of every rising order stands at the least level beyond among the eligible outcomes. The home's '(a) ... so with room every optimum is there' says the same, and the line says nothing about the proxy problem.",
+    "edits": [],
+    "read": [
+     "theories/becoming/ONE-ARGUMENT.md:25-50",
+     "theories/becoming/results/records/what-an-optimum-does-beyond-what-couples-in.json#statement,laws,does_not_show,correspondence",
+     "theories/becoming/chapters/05-COLLECTIVES.md:172-182",
+     "git diff main HEAD -- record (empty) and 05-COLLECTIVES.md (line 182)"
+    ]
+   },
+   {
+    "line": "theories/becoming/ONE-PAGE.md:19",
+    "record": "what-an-optimum-does-beyond-what-couples-in",
+    "verdict": "ok",
+    "why": "The row keeps room and the rising order, and says the drain goes 'as far as any eligible outcome does', which is the home's least level among eligible outcomes. 'Proved; a known theorem restated' matches the home's Theorem 1 correspondence, and the row does not call the result the proxy problem.",
+    "edits": [],
+    "read": [
+     "theories/becoming/ONE-PAGE.md:17-21",
+     "theories/becoming/chapters/05-COLLECTIVES.md:173-182",
+     "theories/becoming/results/records/what-an-optimum-does-beyond-what-couples-in.json#correspondence"
+    ]
+   },
+   {
+    "line": "theories/becoming/ONE-PAGE.zh.md:19",
+    "record": "what-an-optimum-does-beyond-what-couples-in",
+    "verdict": "ok",
+    "why": "The Chinese row matches the English one: it keeps room (余地), the rising order and the drain as far as any eligible outcome goes. It gives the standing as proved and a known theorem restated, and it does not mention the proxy problem.",
+    "edits": [],
+    "read": [
+     "theories/becoming/ONE-PAGE.zh.md:17-21",
+     "theories/becoming/chapters/05-COLLECTIVES.md:176-182"
+    ]
+   },
+   {
+    "line": "theories/becoming/OPENING.md:83",
+    "record": "what-an-optimum-does-beyond-what-couples-in",
+    "verdict": "fix",
+    "why": "'They restate ... the proxy problem' still calls the result the whole proxy problem, but the home now says it is the proxy problem only 'in its blindness to what a proxy does not register, not its regressional or causal kinds'. 08 §8 already took that wording. Separately, and not something CX changed: 'wherever lowering it leaves room' misstates room, which the home defines as a property of the eligible outcomes; the earlier DF sweep corrected 07 the same way to 'wherever there is room'.",
+    "edits": [
+     {
+      "file": "theories/becoming/OPENING.md",
+      "old": "They restate harvesting theory and the proxy problem, Zhuang and Hadfield-Menell's (2020) Theorem 1,",
+      "new": "They restate harvesting theory and the proxy problem (in its blindness to what a proxy does not register, not its regressional or causal kinds), Zhuang and Hadfield-Menell's (2020) Theorem 1,"
+     },
+     {
+      "file": "theories/becoming/OPENING.md",
+      "old": "at the least level any eligible outcome leaves, wherever lowering it leaves room,",
+      "new": "at the least level any eligible outcome leaves, wherever there is room,"
+     }
+    ],
+    "read": [
+     "theories/becoming/OPENING.md:81-85",
+     "theories/becoming/chapters/05-COLLECTIVES.md:173-182",
+     "theories/becoming/chapters/03-KNOWING.md:22-29",
+     "theories/becoming/chapters/08-METHOD.md:542",
+     "_process/research/2026-10-05-repository-reconciliation/architecture/df/reports/sweep.json:824",
+     "_process/architecture/generated-manifest.json (OPENING not generated; README.md is)"
+    ]
+   },
+   {
+    "line": "theories/becoming/THE-THEORY-OF-BECOMING.md:111",
+    "record": "what-an-optimum-does-beyond-what-couples-in",
+    "verdict": "ok",
+    "why": "The line keeps room, the rising order and 'every optimum' at the least level among eligible outcomes. It calls the result Theorem 1 'in discrete, conserved form', which is the record's correspondence wording, and the optima context stands in for the record's 'at optima rather than limits'. The line does not mention the proxy problem; the line CX corrected is §3 at line 85.",
+    "edits": [],
+    "read": [
+     "theories/becoming/THE-THEORY-OF-BECOMING.md:85,111",
+     "git diff main HEAD -- THE-THEORY-OF-BECOMING.md",
+     "theories/becoming/results/records/what-an-optimum-does-beyond-what-couples-in.json#correspondence"
+    ]
+   },
+   {
+    "line": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md:111",
+    "record": "what-an-optimum-does-beyond-what-couples-in",
+    "verdict": "ok",
+    "why": "The Chinese edition says what the English line 111 says: room, the rising order, the least level among eligible outcomes, and Theorem 1's discrete, conserved form. Nothing in it conflicts with the home, and it does not mention the proxy problem.",
+    "edits": [],
+    "read": [
+     "theories/becoming/THE-THEORY-OF-BECOMING.zh.md:85,111",
+     "theories/becoming/chapters/05-COLLECTIVES.md:176-182"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/03-KNOWING.md:29",
+    "record": "what-an-optimum-does-beyond-what-couples-in",
+    "verdict": "ok",
+    "why": "CX already gave this line the blindness limit, without the regressional or causal kinds. Its account of Theorem 1 (05's law on natural-number amounts, at optima rather than limits) and of the Theorem 2 analogue (a converse not theirs) matches the home's reading and the record. It points to 05 for what an optimum does beyond what couples in.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/03-KNOWING.md:22-29",
+     "git diff main HEAD -- theories/becoming/chapters/03-KNOWING.md",
+     "theories/becoming/chapters/05-COLLECTIVES.md:182"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/05-COLLECTIVES.md:233",
+    "record": "what-an-optimum-does-beyond-what-couples-in",
+    "verdict": "fix",
+    "why": "CX did not change this line. 'With room its optima drain' is said of any selection, but the law holds only for an order rising with what couples in, and the home itself records that a target-only (satisficing) order has both the keeping and the ending outcome among its optima, even in the Diversion witness, which has room. The edit leaves the clauses that correspondences.json quotes intact, but its paraphrases of T3 there (lines 38377, 40767, 71867) leave out the same qualifier.",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+      "old": "and with room its optima drain what lies beyond as far as any eligible outcome does ([the law](#r-what-an-optimum-does-beyond-what-couples-in)).",
+      "new": "and with room its optima drain what lies beyond as far as any eligible outcome does, where it ranks outcomes by an order rising with what couples in ([the law](#r-what-an-optimum-does-beyond-what-couples-in))."
+     }
+    ],
+    "read": [
+     "theories/becoming/chapters/05-COLLECTIVES.md:176-185,232-233",
+     "theories/becoming/results/records/what-an-optimum-does-beyond-what-couples-in.json#laws(Drain witnesses),does_not_show",
+     "theories/becoming/results/atlas/entries/correspondences.json:38377,40767,69077,71867"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/07-SIGNIFICANCE.md:666",
+    "record": "what-an-optimum-does-beyond-what-couples-in",
+    "verdict": "fix",
+    "why": "CX gave this line blindness's hypotheses, but the optimum case still reads 'an optimum's drain wherever there is room' without the hypothesis the home's law needs, an order rising with what couples in; with room, a satisficing order's optima include keeping (Optimum.Drain.satisficing_either). This predates CX, and the edit adds the hypothesis the same way CX did for the 03 case.",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "old": "and an optimum's drain wherever there is room (",
+      "new": "and the drain of an optimum of an order rising with what couples in, wherever there is room ("
+     }
+    ],
+    "read": [
+     "theories/becoming/chapters/07-SIGNIFICANCE.md:664-666",
+     "git diff main HEAD -- theories/becoming/chapters/07-SIGNIFICANCE.md",
+     "theories/becoming/chapters/05-COLLECTIVES.md:176-178"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/08-METHOD.md:491",
+    "record": "what-an-optimum-does-beyond-what-couples-in",
+    "verdict": "fix",
+    "why": "CX's change to the second column, 'the proxy problem in its blindness to what a proxy does not register', matches the home. The last column, which CX did not change, links the record as the source of the gap but lists only the continuous setting and the gain; the record and the home also name 'the non-convergent case and converse of their Theorem 2, their sensitivities', so a reader could take Theorem 2's converse as reached.",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/08-METHOD.md",
+      "old": "Zhuang and Hadfield-Menell's continuous setting, and the gain a re-read proxy brings ([record]",
+      "new": "Zhuang and Hadfield-Menell's continuous setting, the non-convergent case and converse of their Theorem 2, their sensitivities, and the gain a re-read proxy brings ([record]"
+     }
+    ],
+    "read": [
+     "theories/becoming/chapters/08-METHOD.md:480-491",
+     "git diff main HEAD -- theories/becoming/chapters/08-METHOD.md",
+     "theories/becoming/results/records/what-an-optimum-does-beyond-what-couples-in.json#does_not_show",
+     "theories/becoming/chapters/05-COLLECTIVES.md:182"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/08-METHOD.md:542",
+    "record": "what-an-optimum-does-beyond-what-couples-in",
+    "verdict": "ok",
+    "why": "CX corrected this line to 'the proxy problem (in its blindness to what a proxy does not register, not its regressional or causal kinds)', as the home now says. The rest also matches the home: Theorem 1 on natural-number amounts and a discrete analogue at optima of Theorem 2's first direction, more weakly than their continuous results.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/08-METHOD.md:542",
+     "git diff main HEAD -- theories/becoming/chapters/08-METHOD.md",
+     "theories/becoming/chapters/05-COLLECTIVES.md:182"
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/08-METHOD.md:560",
+    "record": "what-an-optimum-does-beyond-what-couples-in",
+    "verdict": "ok",
+    "why": "The line only names the optimum laws as carrying the drain in §9's first and fourth unifications, as the third-parts audit found. It restates none of the home's changed sentence and claims nothing wider.",
+    "edits": [],
+    "read": [
+     "theories/becoming/chapters/08-METHOD.md:548-562"
+    ]
+   },
+   {
+    "line": "theories/becoming/review/ALIGNMENT.md:100",
+    "record": "what-an-optimum-does-beyond-what-couples-in",
+    "verdict": "ok",
+    "why": "The quoted does_not_show sentence matches the record word for word, so it states the record's limit exactly. The record was not changed against main, and the line does not call the result the proxy problem.",
+    "edits": [],
+    "read": [
+     "theories/becoming/review/ALIGNMENT.md:93-103",
+     "theories/becoming/results/records/what-an-optimum-does-beyond-what-couples-in.json#does_not_show",
+     "_process/architecture/generated-manifest.json (ALIGNMENT not generated)"
+    ]
+   },
+   {
+    "line": "theories/becoming/review/ALIGNMENT.md:101",
+    "record": "what-an-optimum-does-beyond-what-couples-in",
+    "verdict": "ok",
+    "why": "'room is a hypothesis (derived for one step in room-read-off-the-exchange, SG2)' matches the record's scope entry word for word. The surrounding bullets (Optimum.Above.room, Shared.room, room_needed) agree with the home.",
+    "edits": [],
+    "read": [
+     "theories/becoming/review/ALIGNMENT.md:99-103",
+     "theories/becoming/results/records/what-an-optimum-does-beyond-what-couples-in.json#does_not_show"
+    ]
+   }
+  ]
+ },
+ "check:training": {
+  "group": "training",
+  "items": [
+   {
+    "line": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md:238",
+    "record": "what-training-installs",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "Checked against 07's table, the record and Training.lean. The row names its hypotheses where they enter: laws reading what has stood, feasibility, reading through coupling, decidedness, the outrun premises and the reward bound. trained_alike_beyond_closure is described as the Lean states it: agreement on what couples into the reward's closure, under through, actThrough and feasibility. The Commons clauses match renewed_restraint_settles_iff (1 ≤ w), outrun_restraint_unsettled, start_decides (at reward 1 1) and outrun_neighbourhood_decides. The row does not restate the blindness case whose premises CX added to 07's list. The file is not in the generated manifest.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/THE-THEORY-OF-BECOMING.md:150",
+    "record": "what-training-installs",
+    "verdict": "fix",
+    "agrees": true,
+    "why": "CX did not touch this line. The training clause holds against the home, and the clause's hypotheses are marked by '(under hypotheses the chapter states)'. The ethics is stated conditionally: the condition for scope, C for order. The gap clause says 'through any member's couplings'. The home (07 r-the-gap-for-ones-own-act, and the record) says 'through the coupling of any member of the closure, the actor among them'. Without 'of the closure' the clause is wider than the home. It would also seem to rule out the next sentence's pooling route, since a formation outside the closure can select the act. The first reader's edit copies the home's words, and its old text occurs exactly once (checked).",
+    "edits": [
+     {
+      "file": "theories/becoming/THE-THEORY-OF-BECOMING.md",
+      "old": "is selected alike by every selection through any member's couplings (under hypotheses the chapter states)",
+      "new": "is selected alike by every selection through the coupling of any member of that closure, the actor among them (under hypotheses the chapter states)"
+     }
+    ]
+   },
+   {
+    "line": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md:150",
+    "record": "what-training-installs",
+    "verdict": "fix",
+    "agrees": true,
+    "why": "This is the zh edition of the same line and has the same defect, which predates CX: '经由任何成员之耦合' drops 'of the closure, the actor among them'. The edit follows the record's own zh wording ('经闭包任一成员（行动者在内）之耦合的每个选择') and keeps the en and zh editions in step. Its old text occurs exactly once (checked).",
+    "edits": [
+     {
+      "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+      "old": "被经由任何成员之耦合的每一个选择同样选择",
+      "new": "被经由该闭包任何成员（行动者在内）之耦合的每一个选择同样选择"
+     }
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/03-KNOWING.md:40",
+    "record": "what-training-installs",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "The line only points to 07 for where a training can install a law, and says training is §6's structure with the data as the map. Nothing in it is contradicted by or wider than the home. It does not restate the blindness case CX qualified.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/03-KNOWING.md:507",
+    "record": "what-training-installs",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "This is an AI reading. It leaves open whether a training installs either witness order ('not proved') and calls goal misgeneralization 'a possibility located exactly, not a failure shown'. That agrees with the home's laws, with the record's correspondence (the on-course law as goal misgeneralization's formal kernel) and with does_not_show (an actual system's lumping is read empirically). It does not touch the changed sentence.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/08-METHOD.md:731",
+    "record": "what-training-installs",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "Item 7 copies the off-course row with its qualifiers: among laws reading through a lumping, installed exactly where the lumping cannot tell a history from a course; free elsewhere with laws reading what has stood and the lumping decided. installed_where_lumped indeed needs no reading-what-has-stood premise, given the same courses. The on-course 'only along its own courses' omits the premise of laws reading what has stood, but so does the record's own statement field, so the line is not wider than its home. The Open list matches next_delta. 'Implicit bias' left open understates rather than widens, since the home names a narrower neighbourhood's added rests as its implicit bias only abstractly. CX did not touch this line.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/review/ALIGNMENT.md:152",
+    "record": "what-training-installs",
+    "verdict": "fix",
+    "agrees": true,
+    "why": "CX did not change this line. It calls the theorem the formal side of 'training does not fix behaviour off its distribution'. But the home's off-course row says training does install there, exactly where the lumping cannot tell a history from a course (Training.installed_where_lumped), and the Meaning bullets just above say so. Alone, the line endorses a claim the theorem partly refutes. The first reader's edit adds the exception in the home's words. Its old text occurs exactly once (checked). There is no zh edition of the dossier.",
+    "edits": [
+     {
+      "file": "theories/becoming/review/ALIGNMENT.md",
+      "old": "It gives the formal side of \"training does not fix behaviour off its distribution\".",
+      "new": "It gives the formal side of \"training does not fix behaviour off its distribution\", except where the lumping cannot tell a history from a course."
+     }
+    ]
+   },
+   {
+    "line": "theories/becoming/review/ALIGNMENT.md:155",
+    "record": "what-training-installs",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "The quote is word for word from the record's first does_not_show entry ('the laws say what any lumping installs and where any neighbourhood rests, not which a given system has, which is read empirically'). The record is unchanged by CX, and the home's laws still bear it out.",
+    "edits": []
+   }
+  ]
+ },
+ "check:optimum": {
+  "group": "optimum",
+  "items": [
+   {
+    "line": "theories/becoming/ONE-ARGUMENT.md:39",
+    "record": "what-an-optimum-does-beyond-what-couples-in",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "This is Optimum.least_of_room stated exactly, and it matches the Lean signature quoted just above it (rising, room, optimum, so Least rest eligible o) and the home's '(a) ... so with room every optimum is there'. It does not mention the proxy problem. The record is unchanged against main, and nothing in the line restates the reading CX changed.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/ONE-PAGE.md:19",
+    "record": "what-an-optimum-does-beyond-what-couples-in",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "The row keeps both of the law's hypotheses: room, glossed close to the home's definition ('beaten' for 'exceeded on the family by an eligible one'), and 'an order rising with what couples in'. Its 'as far as any eligible outcome does' is the home's least level among the eligible outcomes. 'Proved; a known theorem restated' matches the correspondence, and T3's standing (conjectured, partly supported) matches 05. The row does not call the result the proxy problem.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/ONE-PAGE.zh.md:19",
+    "record": "what-an-optimum-does-beyond-what-couples-in",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "This is the English row in Chinese. It keeps 余地 with its gloss, 随耦合进来者而上升之序 (the rising order) and the drain to what any eligible outcome reaches, and its standing is 已证明；重述一条已知定理 with T3 猜想，得到部分支持. It does not mention the proxy problem.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/OPENING.md:83",
+    "record": "what-an-optimum-does-beyond-what-couples-in",
+    "verdict": "fix",
+    "agrees": true,
+    "why": "I agree with both edits. (1) 'They restate harvesting theory and the proxy problem, Zhuang and Hadfield-Menell's (2020) Theorem 1' still gives the old, wider claim. The home now says 'the proxy problem as the account's law, in its blindness to what a proxy does not register, not its regressional or causal kinds', and the edit copies the parenthetical CX gave 08:542 word for word. (2) 'wherever lowering it leaves room' misstates room. In the home, room is a property of the eligible outcomes: every one standing above another beyond is exceeded on the family by an eligible one. DEFECTS-FOUND.md:112 records this phrase as a defect, and the DF sweep corrected 07 to 'wherever there is room'. CX did not cause this second error. The rest of the line holds against the home: both premises are named, scope and order, as conditions; the breaks 'exactly the dependences there that some eligible outcome breaks' hold, since being broken already needs the need met; and the lexicographic clause matches. OPENING is not generated. README.md:103, which is generated, carries it through make research-render, so OPENING is the place to edit. Outside this line, and not edited because it is not listed: OPENING.md:25, the first-person body of the opening, still says 'The work's selection laws restate the proxy problem' without the blindness limit. Its footnote now carries the limit, but the sentence itself still states more than the home, and the coordinator may want to qualify it, with the header line already naming that passage as revised. Separately, the paraphrases of T3 in correspondences.json (lines 38377, 40767, 71867) leave out the rising-order qualifier, as the first reader noted.",
+    "edits": [
+     {
+      "file": "theories/becoming/OPENING.md",
+      "old": "They restate harvesting theory and the proxy problem, Zhuang and Hadfield-Menell's (2020) Theorem 1,",
+      "new": "They restate harvesting theory and the proxy problem (in its blindness to what a proxy does not register, not its regressional or causal kinds), Zhuang and Hadfield-Menell's (2020) Theorem 1,"
+     },
+     {
+      "file": "theories/becoming/OPENING.md",
+      "old": "at the least level any eligible outcome leaves, wherever lowering it leaves room,",
+      "new": "at the least level any eligible outcome leaves, wherever there is room,"
+     }
+    ]
+   },
+   {
+    "line": "theories/becoming/THE-THEORY-OF-BECOMING.md:111",
+    "record": "what-an-optimum-does-beyond-what-couples-in",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "It defines rising and room as the home does and states least_of_room for every rising order. Its 'This is Zhuang and Hadfield-Menell's Theorem 1 in discrete, conserved form' is the record's correspondence wording, with 'every optimum' standing for 'at optima rather than limits'. 'so an optimizer drains...' is bare of the rising qualifier, but the 'so' makes it a consequence of the rising-order sentence before it, and the home's own lead paragraph says 'An optimizer ranks outcomes by what couples into it' the same way, so the line is not wider than its home. It does not mention the proxy problem; CX's correction in this file is at line 85.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md:111",
+    "record": "what-an-optimum-does-beyond-what-couples-in",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "It matches the English line 111 clause for clause: 上升, 余地, every optimum of every rising order at the least level among the eligible outcomes, and 定理 1 的离散、守恒形式. Nothing in it conflicts with the home, and it does not mention the proxy problem.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/03-KNOWING.md:29",
+    "record": "what-an-optimum-does-beyond-what-couples-in",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "CX already narrowed this to 'What is stated is its blindness to what the proxy does not register; Manheim and Garrabrant's regressional and causal kinds ... are not stated', which agrees with 05's new reading, and that reading points back to this anchor. Theorem 1 as 05's law at optima rather than limits, and Theorem 2's discrete analogue 'whose converse is not theirs', both match the home. The pointer to 05 for what an optimum does beyond is a link only.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/05-COLLECTIVES.md:233",
+    "record": "what-an-optimum-does-beyond-what-couples-in",
+    "verdict": "fix",
+    "agrees": true,
+    "why": "I agree. T3 says 'with room its optima drain' of any selection through couplings, but the law it cites holds for an order rising with what couples in. Optimum.Drain.satisficing_either shows a target-only order whose optima among the Split outcomes, which have shared units and so room, include both the keeping and the draining outcome. A set-point (nearing) order also stands at its set point whatever the room. CX did not change this line. The edit adds the home's qualifier and keeps the prefix that correspondences.json:69077 quotes ('... and with room its optima drain what lies beyond'), so that quote still matches. The old text occurs once.",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+      "old": "and with room its optima drain what lies beyond as far as any eligible outcome does ([the law](#r-what-an-optimum-does-beyond-what-couples-in)).",
+      "new": "and with room its optima drain what lies beyond as far as any eligible outcome does, where it ranks outcomes by an order rising with what couples in ([the law](#r-what-an-optimum-does-beyond-what-couples-in))."
+     }
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/07-SIGNIFICANCE.md:666",
+    "record": "what-an-optimum-does-beyond-what-couples-in",
+    "verdict": "fix",
+    "agrees": true,
+    "why": "I agree. CX added blindness's hypotheses to the 03 case, but the optimum case still reads 'an optimum's drain wherever there is room' without the order rising with what couples in that the home's law needs; with room, a satisficing order's optima include keeping (satisficing_either, on a set of outcomes with room). This predates CX. The edit uses the home's words and occurs once.",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "old": "and an optimum's drain wherever there is room (",
+      "new": "and the drain of an optimum of an order rising with what couples in, wherever there is room ("
+     }
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/08-METHOD.md:491",
+    "record": "what-an-optimum-does-beyond-what-couples-in",
+    "verdict": "fix",
+    "agrees": true,
+    "why": "I agree. CX's 'the proxy problem in its blindness to what a proxy does not register' matches the home. The last column, 'What it states that the account does not yet', cites this record but lists only the continuous setting and the re-read proxy's gain. The home says 'Their continuous setting, the non-convergent case and converse of their Theorem 2, their sensitivities and the improvement of a principal's utility are not reached', and the record says the same. With the verdict column reading 'a discrete analogue of their Theorem 2 at optima', a reader could take Theorem 2's converse as reached. The edit copies the home's words and occurs once. CX did not change this column.",
+    "edits": [
+     {
+      "file": "theories/becoming/chapters/08-METHOD.md",
+      "old": "Zhuang and Hadfield-Menell's continuous setting, and the gain a re-read proxy brings ([record]",
+      "new": "Zhuang and Hadfield-Menell's continuous setting, the non-convergent case and converse of their Theorem 2, their sensitivities, and the gain a re-read proxy brings ([record]"
+     }
+    ]
+   },
+   {
+    "line": "theories/becoming/chapters/08-METHOD.md:542",
+    "record": "what-an-optimum-does-beyond-what-couples-in",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "CX corrected this line to 'the proxy problem (in its blindness to what a proxy does not register, not its regressional or causal kinds)', which is the home's new wording. 'a discrete analogue at optima of their Theorem 2's first direction, on natural-number amounts, more weakly than their continuous results' matches the home's 'it gives their first direction where an optimum is reached ... its converse is not theirs'.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/chapters/08-METHOD.md:560",
+    "record": "what-an-optimum-does-beyond-what-couples-in",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "The line only names the optimum laws as carrying the drain in §9's first and fourth unifications, as the third-parts audit found. It restates none of the changed reading and claims nothing about the proxy problem or about room.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/review/ALIGNMENT.md:100",
+    "record": "what-an-optimum-does-beyond-what-couples-in",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "The quoted does_not_show sentence matches the record's English word for word, and the record is unchanged against main. 'names its known form, Zhuang and Hadfield-Menell's Theorem 1' agrees with the correspondence, and the line does not call the result the proxy problem in general. ALIGNMENT.md is not generated.",
+    "edits": []
+   },
+   {
+    "line": "theories/becoming/review/ALIGNMENT.md:101",
+    "record": "what-an-optimum-does-beyond-what-couples-in",
+    "verdict": "ok",
+    "agrees": true,
+    "why": "The quote 'room is a hypothesis (derived for one step in room-read-off-the-exchange, SG2)' matches the record's first does_not_show entry exactly. The sub-bullets (Optimum.Above.room, Optimum.Shared.room, Drain.room_needed) agree with the home's statement that shared units give room and that without room keeping can be an optimum.",
+    "edits": []
+   }
+  ]
+ }
+}
