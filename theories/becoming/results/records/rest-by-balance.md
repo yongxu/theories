@@ -96,6 +96,7 @@ The whole-number, decided form of the least-loss law of rest, stated through bal
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T044249.876816Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261107T050428.932891Z/verification.json) | — |
 
 Aliases: `Becoming.Amounts.falls_by_stretch`, `Becoming.Amounts.unmarked_within`, `Becoming.Amounts.le_by_exchange`
 

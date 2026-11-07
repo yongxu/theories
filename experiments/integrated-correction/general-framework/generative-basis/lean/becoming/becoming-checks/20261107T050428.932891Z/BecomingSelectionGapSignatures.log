@@ -1,0 +1,78 @@
+@Becoming.Flow.ActsAlikeOnCoupled.within : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool} {f : F},
+  L.ActsAlikeOnCoupled L' W obs part f → L.ActsAlikeWithin L' W W' obs part f
+@Becoming.Flow.act_unselected : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {L L' : Becoming.Flow F C}
+  {W W' : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool} {f : F} {select : (Nat → C → Nat) → Prop},
+  law.Through W obs part →
+    L.Follows law part W.level →
+      L'.Follows law part W'.level →
+        L.Balances W →
+          L'.Balances W' →
+            (∀ (t : Nat), L.present t = L'.present t) →
+              (∀ (c : C), W.level 0 c = W'.level 0 c) →
+                L.ActsAlikeWithin L' W W' obs part f →
+                  ∀ {g : F},
+                    Becoming.WithinClosure (L.CoupledFromEither W L' obs) f g →
+                      ∀ {t : Nat}, W.SelectsThrough obs g t select → (select W.level ↔ select W'.level)
+@Becoming.Flow.act_unselected_of_coupled : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {L L' : Becoming.Flow F C}
+  {W W' : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool} {f : F} {select : (Nat → C → Nat) → Prop},
+  law.Through W obs part →
+    L.Follows law part W.level →
+      L'.Follows law part W'.level →
+        L.Balances W →
+          L'.Balances W' →
+            (∀ (t : Nat), L.present t = L'.present t) →
+              (∀ (c : C), W.level 0 c = W'.level 0 c) →
+                L.ActsAlikeOnCoupled L' W obs part f →
+                  ∀ {g : F},
+                    Becoming.WithinClosure (L.CoupledFromEither W L' obs) f g →
+                      ∀ {t : Nat}, W.SelectsThrough obs g t select → (select W.level ↔ select W'.level)
+@Becoming.Flow.consequence_unselected : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {L L' : Becoming.Flow F C}
+  {W W' : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool} {f : F} {select : (Nat → C → Nat) → Prop},
+  law.Through W obs part →
+    L.Follows law part W.level →
+      L'.Follows law part W'.level →
+        L.Balances W →
+          L'.Balances W' →
+            (∀ (t : Nat), L.present t = L'.present t) →
+              (∀ (c : C), W.level 0 c = W'.level 0 c) →
+                L.ActsAlikeWithin L' W W' obs part f →
+                  select W.level →
+                    ¬select W'.level →
+                      ∀ {g : F},
+                        Becoming.WithinClosure (L.CoupledFromEither W L' obs) f g →
+                          ∀ (t : Nat), ¬W.SelectsThrough obs g t select
+@Becoming.ExchangeLaw.withAct_take_of_part : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {part : F → Bool}
+  {act : Becoming.ExchangeLaw F C} {h : F},
+  part h = true → ∀ (t : Nat) (l : Nat → C → Nat) (c : C), (law.withAct part act).take t h l c = act.take t h l c
+@Becoming.ExchangeLaw.withAct_give_of_part : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {part : F → Bool}
+  {act : Becoming.ExchangeLaw F C} {h : F},
+  part h = true → ∀ (t : Nat) (l : Nat → C → Nat) (c : C), (law.withAct part act).give t h l c = act.give t h l c
+@Becoming.act_courses_unselected : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool} {f : F} {select : (Nat → C → Nat) → Prop} {act act' : Becoming.ExchangeLaw F C}
+  {present : Nat → List F} {start : C → Nat},
+  law.Nonanticipating →
+    act.Nonanticipating →
+      act'.Nonanticipating →
+        law.Through W obs part →
+          (act.Through W obs fun h => !part h) →
+            (law.withAct part act).Feasible present start →
+              (law.withAct part act').Feasible present start →
+                (∀ (t : Nat) (h : F) (l : Nat → C → Nat) (c : C),
+                    part h = true →
+                      (∃ g,
+                          Becoming.WithinClosure
+                              (((law.withAct part act).course present start).CoupledFromEither W
+                                ((law.withAct part act').course present start) obs)
+                              f g ∧
+                            W.CoupledInto obs g c) →
+                        act.take t h l c = act'.take t h l c ∧ act.give t h l c = act'.give t h l c) →
+                  ∀ {g : F},
+                    Becoming.WithinClosure
+                        (((law.withAct part act).course present start).CoupledFromEither W
+                          ((law.withAct part act').course present start) obs)
+                        f g →
+                      ∀ {t : Nat},
+                        W.SelectsThrough obs g t select →
+                          (select ((law.withAct part act).levels present start) ↔
+                            select ((law.withAct part act').levels present start))

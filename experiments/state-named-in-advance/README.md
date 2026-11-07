@@ -2,7 +2,7 @@
 
 AI-written (a Claude Code session), 3 November 2026. Board item UE31.
 
-Thesis T2 ([02 §5](../../theories/becoming/chapters/02-MAP.md#t2)) names the state of every renewable condition under a draw in advance: its level, its recent giving and one lag. The flour beetle's field names its life stages instead (the LPA model). This folder holds a test that sets the two against each other. It uses the Beetle Team archive's complete biweekly censuses of laboratory cultures whose adult loss was set by hand. The test is the route [08 §9](../../theories/becoming/chapters/08-METHOD.md#what-would-defeat-the-reading) leaves for showing that the explanatory reading does more than tie a field's state.
+Thesis T2 ([02 §5](../../theories/becoming/chapters/02-MAP.md#t2)) names the state of every renewable condition under a draw in advance: its level, its recent giving and one lag, the lag's place named before the data. The flour beetle's field names its life stages instead (the LPA model). This folder holds a test that sets the two against each other. It uses the Beetle Team archive's complete biweekly censuses of laboratory cultures whose adult loss was set by hand. The test is the route [08 §9](../../theories/becoming/chapters/08-METHOD.md#what-would-defeat-the-reading) leaves for showing that the explanatory reading does more than tie a field's state.
 
 **The answer expected, stated before the run.**
 - **On the next giving,** the field's state does better, by the life cycle alone. The pupae counted now are the next recruits, so T2's class as worded is defeated by a class of fewer variables.

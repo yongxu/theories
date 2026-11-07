@@ -114,6 +114,7 @@ Ren, 12 October 2026, the goal: “move towards 100%, you can spawn a few agents
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261107T050428.932891Z/verification.json) | — |
 
 Aliases: `least registration`, `最小的识`, `reads finitely many conditions`, `读有限多个条件`, `tail law`, `尾之律`, `what depends on the whole depends on some part`, `依存于整体者依存于某个部分`, `weak limited principle of omniscience`, `弱有限全知原则`
 

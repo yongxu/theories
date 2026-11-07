@@ -40,8 +40,8 @@
       ]
     },
     {
-      "en": "The need is the regime's. Where giving stops below a need m, every level at which giving meets a positive draw is at least m, so the point of no return is at least the draw above the need; it is more than that exactly where giving at the need falls short of the draw; and a larger draw, giving no more, raises it by at least the difference.",
-      "zh": "需求属于体制。所给在需求 m 之下停止时，所给满足正汲取的每个水平不低于 m，故不可回返点至少高出需求一份汲取；恰在需求处所给不足汲取时更高；更大的汲取、所给不增时，使之至少升高两者之差。",
+      "en": "The need is the regime's. Where giving stops below a need m, every level at which giving meets a positive draw is at least m, and where giving meets it at y, the point of no return, the draw above the least level whose giving meets it, is at least the draw above the need; it is more than that exactly where giving at the need falls short of the draw; and a larger draw, giving no more, raises it by at least the difference.",
+      "zh": "需求属于体制。所给在需求 m 之下停止时，所给满足正汲取的每个水平不低于 m，且所给在 y 处满足汲取时，不可回返点，即所给满足汲取的最低水平之上一份汲取，至少高出需求一份汲取；恰在需求处所给不足汲取时更高；更大的汲取、所给不增时，使之至少升高两者之差。",
       "declarations": [
         "Becoming.RegimeMargin.Gated",
         "Becoming.RegimeMargin.Root",
@@ -61,8 +61,8 @@
       ]
     },
     {
-      "en": "Draws add, and their rises at the point are superadditive up to one. Where giving under the joint draw is subadditive above the need and no greater than under either draw, and the least levels meeting H1, H2 and H1 + H2 lie a, b and c above the need, a + b <= c + 1: the rise of the point of no return under the joint draw is at least the sum of the rises under each, less one whole unit.",
-      "zh": "汲取相加，其于该点之升高为超可加，至多差一。联合汲取下的所给在需求之上次可加且不大于各自汲取下的所给，且满足 H1、H2 与 H1 + H2 的最低水平高出需求 a、b、c 时，a + b <= c + 1：联合汲取下不可回返点的升高至少是各自升高之和减一个整单位。",
+      "en": "Draws add, and their rises at the point are superadditive up to one. Where giving under the joint draw is subadditive above the need and at each amount left no greater than under either draw, and the least levels meeting H1, H2 and H1 + H2 lie a, b and c above the need, a + b <= c + 1: the rise of the point of no return under the joint draw is at least the sum of the rises under each, less one whole unit.",
+      "zh": "汲取相加，其于该点之升高为超可加，至多差一。联合汲取下的所给在需求之上次可加且在每一所留量处不大于各自汲取下的所给，且满足 H1、H2 与 H1 + H2 的最低水平高出需求 a、b、c 时，a + b <= c + 1：联合汲取下不可回返点的升高至少是各自升高之和减一个整单位。",
       "declarations": [
         "Becoming.RegimeMargin.SubadditiveAbove",
         "Becoming.RegimeMargin.rises_superadditive"
@@ -97,8 +97,8 @@
   ],
   "hypotheses": [
     {
-      "en": "No axiom. Whole-number amounts and discrete steps; one condition; the draw taken first, as much as there is; giving a function of what is left, with no hidden state; each law's own premises (Short, Meets, Keeps, Gated, SubadditiveAbove, AtMost) as hypotheses.",
-      "zh": "不加公理。整数量与离散步；一个条件；汲取先取，有多少取多少；所给是所留者的函数，无隐藏状态；各规律自身的前提（Short、Meets、Keeps、Gated、SubadditiveAbove、AtMost）为假设。"
+      "en": "No axiom. Whole-number amounts and discrete steps; one condition; the draw taken first, as much as there is; giving a function of what is left, with no hidden state; each law's own premises (Short, FromNothing, Meets, Keeps, Root, Gated, Lowered, SubadditiveAbove, AtMost, and a positive draw or 0 < H + y where a law asks it) as hypotheses.",
+      "zh": "不加公理。整数量与离散步；一个条件；汲取先取，有多少取多少；所给是所留者的函数，无隐藏状态；各规律自身的前提（Short、FromNothing、Meets、Keeps、Root、Gated、Lowered、SubadditiveAbove、AtMost，以及某规律所要求的正汲取或 0 < H + y）为假设。"
     }
   ],
   "does_not_show": [
@@ -173,8 +173,8 @@
     "zh": "在恶化体制下紧邻折叠测量折叠，以分辨折叠附近的拟合偏差与体制历史的效应；以调查序列或年龄结构读法分开滞后的三种读法；先读各序列的时点；与 Flow.Balances 相接；阿基米德量上的折叠；独立审查。"
   },
   "correspondence": {
-    "en": "Harvesting theory: depensation and critical depensation, the fold of the harvested equilibrium (Clark, Mathematical Bioeconomics, 1976; May, Nature 1977); Allee effects under harvest (Courchamp, Berec and Gascoigne 2008); catastrophic shifts (Scheffer et al. 2001). Super-additive joint harm is the convexity of the inverse of a concave, increasing renewal. Each law was measured in a simulated Allee yeast and a gridworld, and the step on Dai et al.'s real yeast and on the RAM Legacy Stock Assessment Database v4.66 with frozen predictions, then a state of level and recent giving, whose ends are this step and the frozen rest, on assessed stocks no analysis had read, then a state with a lag and the draw read as a law of the stock on spawning-stock series no analysis had read, then its time to break on yeast driven past its fold (Dai, Korolev and Gore 2015); in assessed stocks productivity regime shifts are known (Vert-pre et al. 2013, PNAS), and delay-difference models carry the lag from recruitment (Deriso 1980).",
-    "zh": "收获理论：减损性与临界减损性，被收获平衡的折叠（Clark《数学生物经济学》1976；May，Nature 1977）；收获下的 Allee 效应（Courchamp、Berec 与 Gascoigne 2008）；灾变性转变（Scheffer 等 2001）。联合损害的超可加即凹的增函数更新之逆的凸性。每条规律都在模拟的 Allee 酵母与网格世界中测量过，这一步又以冻结的预测在 Dai 等的真实酵母与 RAM Legacy 种群评估数据库 v4.66 上检验过，再在无人读过的已评估种群上检验了以这一步与冻结其余为两端的、由水平与近期所给构成的状态，又在无人读过的产卵种群序列上检验了带滞后的状态与读作种群规律的汲取，再在被推过折叠的酵母上检验了其破断时间（Dai、Korolev 与 Gore 2015）；已评估种群中生产力的体制转换是已知的（Vert-pre 等 2013，PNAS），延迟差分模型显式带有来自补充的滞后（Deriso 1980）。"
+    "en": "Harvesting theory: depensation and critical depensation, the fold of the harvested equilibrium (Clark, Mathematical Bioeconomics, 1976; May, Nature 1977); Allee effects under harvest (Courchamp, Berec and Gascoigne 2008); catastrophic shifts (Scheffer et al. 2001). The superadditive rise of the point under a joint draw is the convexity of the inverse of a concave, increasing renewal. Each law was measured in a simulated Allee yeast and a gridworld, and the step on Dai et al.'s real yeast and on the RAM Legacy Stock Assessment Database v4.66 with frozen predictions, then a state of level and recent giving, whose ends are this step and the frozen rest, on assessed stocks no analysis had read, then a state with a lag and the draw read as a law of the stock on spawning-stock series no analysis had read, then its time to break on yeast driven past its fold (Dai, Korolev and Gore 2015); in assessed stocks productivity regime shifts are known (Vert-pre et al. 2013, PNAS), and delay-difference models carry the lag from recruitment (Deriso 1980).",
+    "zh": "收获理论：减损性与临界减损性，被收获平衡的折叠（Clark《数学生物经济学》1976；May，Nature 1977）；收获下的 Allee 效应（Courchamp、Berec 与 Gascoigne 2008）；灾变性转变（Scheffer 等 2001）。联合汲取下临界点升高的超可加即凹的增函数更新之逆的凸性。每条规律都在模拟的 Allee 酵母与网格世界中测量过，这一步又以冻结的预测在 Dai 等的真实酵母与 RAM Legacy 种群评估数据库 v4.66 上检验过，再在无人读过的已评估种群上检验了以这一步与冻结其余为两端的、由水平与近期所给构成的状态，又在无人读过的产卵种群序列上检验了带滞后的状态与读作种群规律的汲取，再在被推过折叠的酵母上检验了其破断时间（Dai、Korolev 与 Gore 2015）；已评估种群中生产力的体制转换是已知的（Vert-pre 等 2013，PNAS），延迟差分模型显式带有来自补充的滞后（Deriso 1980）。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
   "aliases": [
@@ -277,7 +277,7 @@
         "Becoming.RegimeMargin.step_ge",
         "Becoming.RegimeMargin.Adjusted.step_holds"
       ],
-      "sha256": "45ac217899f53aecb97cb9ea4d714f91deee3506a69b1a38227c18a708dc17b8"
+      "sha256": "cd86c3bc55536a7d0019c96725d36df2766e7921fc0dec8db07da735aa800afb"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
@@ -393,12 +393,18 @@
       "role": "receipt",
       "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261107T050428.932891Z/verification.json",
+      "role": "receipt",
+      "sha256": "8d56dee2241c3b5a952ee01a10b785640ae6078f1bceb94828bb21cef8e137d0",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261107T050428.932891Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RegimeMargin",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -464,6 +470,10 @@
     {
       "en": "4 November 2026, RGP (a correction from TS3's reader, recorded in the review packet's T1-STANDING.md, \"The regime's home\"): the statement said the condition holds exactly from a least level up, with no top, though law 2's exactness reaches only the levels up to a top the step keeps, and above the top a level can end (giving 5 at 5, 6 and 7 and nothing elsewhere, a draw of 5, y = 5, a top of 12: 14 ends and 10 holds). It now names the point of no return, the draw above the least level meeting it, as exact up to a top the step keeps, and reads each clause under its law's premises. It also said harms of joint draws are super-additive, the evaluative word law 5 dropped on 1 November; it now says the point rises. The laws are unchanged.",
       "zh": "2026年11月4日，RGP（TS3 读者所见之更正，记于审阅包 T1-STANDING.md 之“The regime's home”）：陈述原说条件恰从一个最低水平起成立，未言上限；而第二律的确切性只及步所保持之上限内的水平，上限之上的水平可以终结（所给在 5、6、7 处为 5、他处为无，汲取 5，y = 5，上限 12：14 终结而 10 成立）。今说不可回返点即满足汲取的最低水平加上汲取，在步所保持之上限内确切，各句在其律之前提下读。原文又说联合汲取的损害超可加，此评价之词第五律已于11月1日去掉；今说此点的升高。诸律不变。"
+    },
+    {
+      "en": "7 November 2026, board item ED5 (the batched pass, after RGP): the law on the need defines the point of no return and names giving met at y; law 4 compares giving at each amount left; the hypotheses name FromNothing, Root, Lowered and the positivity premises; the correspondence drops \"harm\". No law, premise or proof changed.",
+      "zh": "2026年11月7日，工作板条目 ED5（批量精确化，承 RGP）：关于需要的规律界定不归点并写明所给在 y 处满足汲取；规律 4 在每一所留量处比较所给；假设写明 FromNothing、Root、Lowered 与正性前提；对应中去掉“损害”。诸律、前提与证明皆不变。"
     }
   ]
 }

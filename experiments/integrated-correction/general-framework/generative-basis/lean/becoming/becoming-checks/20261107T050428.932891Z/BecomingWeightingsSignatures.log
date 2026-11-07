@@ -1,0 +1,1865 @@
+@Becoming.Weighting.includesOn_iff : ∀ {X : Type} {items : List X} {a b : X → Bool},
+  Becoming.Weighting.IncludesOn items a b ↔
+    Becoming.«则» (Becoming.Weighting.admittedOn items b) (Becoming.Weighting.admittedOn items a)
+@Becoming.Weighting.exceedsOn_iff : ∀ {X : Type} {items : List X} {a b : X → Bool},
+  Becoming.Weighting.ExceedsOn items a b ↔
+    Becoming.«逾» (Becoming.Weighting.admittedOn items a) (Becoming.Weighting.admittedOn items b)
+@Becoming.Weighting.widensOn_iff : ∀ {X : Type} {items : List X} {a b : X → Bool},
+  Becoming.Weighting.WidensOn items a b ↔
+    Becoming.«广» (Becoming.Weighting.admittedOn items a) (Becoming.Weighting.admittedOn items b)
+@Becoming.Weighting.mixedOn_iff : ∀ {X : Type} {items : List X} {a b : X → Bool},
+  Becoming.Weighting.MixedOn items a b ↔
+    Becoming.«杂» (Becoming.Weighting.admittedOn items a) (Becoming.Weighting.admittedOn items b)
+@Becoming.Weighting.WidensOn.not_reverse : ∀ {X : Type} {items : List X} {a b : X → Bool},
+  Becoming.Weighting.WidensOn items a b → ¬Becoming.Weighting.WidensOn items b a
+@Becoming.Weighting.WidensOn.trans : ∀ {X : Type} {items : List X} {a b c : X → Bool},
+  Becoming.Weighting.WidensOn items a b → Becoming.Weighting.WidensOn items b c → Becoming.Weighting.WidensOn items a c
+@Becoming.Weighting.term_le : ∀ {w : Nat} {a b : Bool},
+  (b = true → a = true) → (bif b then w else 0) ≤ bif a then w else 0
+@Becoming.Weighting.term_lt : ∀ {w : Nat},
+  0 < w → ∀ {a b : Bool}, a = true → b = false → (bif b then w else 0) < bif a then w else 0
+@Becoming.Weighting.term_lt_of : ∀ {m n : Nat} {v : Bool},
+  v = true → m < n → (bif v then m else 0) < bif v then n else 0
+@Becoming.Weighting.term_eq_at : ∀ {m n : Nat} {v : Bool},
+  (v = true → m = n) → (bif v then m else 0) = bif v then n else 0
+@Becoming.Weighting.cond_one_pos : ∀ {v : Bool}, v = true → 0 < bif v then 1 else 0
+@Becoming.Weighting.total_lt : ∀ {X : Type} {p q : X → Nat} {as : List X},
+  (∀ (a : X), a ∈ as → p a ≤ q a) → (∃ a, a ∈ as ∧ p a < q a) → Becoming.total as p < Becoming.total as q
+@Becoming.Weighting.weighed_le_of_includes : ∀ {X : Type} {items : List X} {a b : X → Bool} (w : X → Nat),
+  Becoming.Weighting.IncludesOn items a b → Becoming.Weighting.weighed items w b ≤ Becoming.Weighting.weighed items w a
+Becoming.Weighting.term_split : ∀ (v : Nat) (p q : Bool),
+  (bif p then v else 0) = (bif p && q then v else 0) + bif p && !q then v else 0
+Becoming.Weighting.and_swap : ∀ (p q : Bool), (p && q) = (q && p)
+@Becoming.Weighting.weighed_split : ∀ {X : Type} (items : List X) (w : X → Nat) (a b : X → Bool),
+  Becoming.Weighting.weighed items w a =
+    (Becoming.Weighting.weighed items w fun x => a x && b x) +
+      Becoming.Weighting.weighed items w (Becoming.Weighting.beyond a b)
+@Becoming.Weighting.weighed_shared : ∀ {X : Type} (items : List X) (w : X → Nat) (a b : X → Bool),
+  (Becoming.Weighting.weighed items w fun x => a x && b x) = Becoming.Weighting.weighed items w fun x => b x && a x
+@Becoming.Weighting.weighed_split_right : ∀ {X : Type} (items : List X) (w : X → Nat) (a b : X → Bool),
+  Becoming.Weighting.weighed items w b =
+    (Becoming.Weighting.weighed items w fun x => a x && b x) +
+      Becoming.Weighting.weighed items w (Becoming.Weighting.beyond b a)
+@Becoming.Weighting.add_le_add_iff : ∀ {k m n : Nat}, k + m ≤ k + n ↔ m ≤ n
+@Becoming.Weighting.weighed_lt_iff_beyond : ∀ {X : Type} (items : List X) (w : X → Nat) (a b : X → Bool),
+  Becoming.Weighting.weighed items w b < Becoming.Weighting.weighed items w a ↔
+    Becoming.Weighting.weighed items w (Becoming.Weighting.beyond b a) <
+      Becoming.Weighting.weighed items w (Becoming.Weighting.beyond a b)
+@Becoming.Weighting.weighed_le_iff_beyond : ∀ {X : Type} (items : List X) (w : X → Nat) (a b : X → Bool),
+  Becoming.Weighting.weighed items w b ≤ Becoming.Weighting.weighed items w a ↔
+    Becoming.Weighting.weighed items w (Becoming.Weighting.beyond b a) ≤
+      Becoming.Weighting.weighed items w (Becoming.Weighting.beyond a b)
+Becoming.Weighting.beyond_term_zero : ∀ (v : Nat) {p q : Bool}, (q = true → p = true) → (bif q && !p then v else 0) = 0
+@Becoming.Weighting.weighed_beyond_of_includes : ∀ {X : Type} {items : List X} {a b : X → Bool} (w : X → Nat),
+  Becoming.Weighting.IncludesOn items a b → Becoming.Weighting.weighed items w (Becoming.Weighting.beyond b a) = 0
+Becoming.Weighting.cond_mul : ∀ (k : Nat) (v : Bool), (bif v then k else 0) = k * bif v then 1 else 0
+@Becoming.Weighting.weighed_const : ∀ {X : Type} (k : Nat) (items : List X) (a : X → Bool),
+  Becoming.Weighting.weighed items (fun x => k) a = k * Becoming.Weighting.weighed items (fun x => 1) a
+@Becoming.Weighting.mul_lt_mul_iff : ∀ {k m n : Nat}, 0 < k → (m * k < n * k ↔ m < n)
+@Becoming.Weighting.ranksNet_iff_beyond : ∀ {X : Type} (items : List X) (pos neg : X → Nat) (a b : X → Bool),
+  Becoming.Weighting.ranksNet items pos neg b a ↔
+    Becoming.Weighting.weighed items pos (Becoming.Weighting.beyond b a) +
+        Becoming.Weighting.weighed items neg (Becoming.Weighting.beyond a b) <
+      Becoming.Weighting.weighed items pos (Becoming.Weighting.beyond a b) +
+        Becoming.Weighting.weighed items neg (Becoming.Weighting.beyond b a)
+@Becoming.Weighting.beyond_lt : ∀ {X : Type} {items : List X} {pos neg : X → Nat} {a b : X → Bool},
+  (∀ (x : X), x ∈ items → a x = true → b x = false → neg x < pos x) →
+    Becoming.Weighting.ExceedsOn items a b →
+      Becoming.Weighting.weighed items neg (Becoming.Weighting.beyond a b) <
+        Becoming.Weighting.weighed items pos (Becoming.Weighting.beyond a b)
+@Becoming.Weighting.ranksNet_lt_of_widens : ∀ {X : Type} {items : List X} {pos neg : X → Nat} {a b : X → Bool},
+  (∀ (x : X), x ∈ items → a x = true → b x = false → neg x < pos x) →
+    Becoming.Weighting.WidensOn items a b → Becoming.Weighting.ranksNet items pos neg b a
+Becoming.Weighting.cond_zero : ∀ (v : Bool), (bif v then 0 else 0) = 0
+@Becoming.Weighting.weighed_zero : ∀ {X : Type} (items : List X) (a : X → Bool),
+  Becoming.Weighting.weighed items (fun x => 0) a = 0
+@Becoming.Weighting.weighed_lt_of_widens : ∀ {X : Type} {items : List X} {a b : X → Bool} {w : X → Nat},
+  Becoming.Weighting.Positive items w →
+    Becoming.Weighting.WidensOn items a b → Becoming.Weighting.weighed items w b < Becoming.Weighting.weighed items w a
+@Becoming.Weighting.weighed_eq_of_unweighted : ∀ {X : Type} {items : List X} {a b : X → Bool} {w : X → Nat},
+  Becoming.Weighting.IncludesOn items a b →
+    (∀ (x : X), x ∈ items → a x = true → b x = false → w x = 0) →
+      Becoming.Weighting.weighed items w a = Becoming.Weighting.weighed items w b
+@Becoming.Weighting.widensOn_of_widensBy : ∀ {X : Type} {items : List X} {x : X} {a b : X → Bool},
+  Becoming.Weighting.WidensBy items x a b → Becoming.Weighting.WidensOn items a b
+@Becoming.Weighting.weighed_widensBy : ∀ {X : Type} {items : List X} {x : X} {a b : X → Bool} (w : X → Nat),
+  Becoming.Weighting.WidensBy items x a b →
+    Becoming.Weighting.weighed items w (Becoming.Weighting.beyond a b) =
+      w x * Becoming.Weighting.size items (Becoming.Weighting.beyond a b)
+@Becoming.Weighting.size_widensBy_pos : ∀ {X : Type} {items : List X} {x : X} {a b : X → Bool},
+  Becoming.Weighting.WidensBy items x a b → 0 < Becoming.Weighting.size items (Becoming.Weighting.beyond a b)
+@Becoming.Weighting.ranksNet_widensBy : ∀ {X : Type} {items : List X} {pos neg : X → Nat} {x : X} {a b : X → Bool},
+  Becoming.Weighting.WidensBy items x a b →
+    (Becoming.Weighting.ranksNet items pos neg b a ↔ neg x < pos x) ∧
+      (Becoming.Weighting.ranksNet items pos neg a b ↔ pos x < neg x)
+@Becoming.Weighting.ranksNet_ties : ∀ {X : Type} {items : List X} {pos neg : X → Nat} {x : X} {a b : X → Bool},
+  Becoming.Weighting.WidensBy items x a b →
+    pos x = neg x → ¬Becoming.Weighting.ranksNet items pos neg b a ∧ ¬Becoming.Weighting.ranksNet items pos neg a b
+@Becoming.Weighting.ranksNet_increasingAt : ∀ {X : Type} {items : List X} {pos neg : X → Nat} {x : X},
+  neg x < pos x → Becoming.Weighting.IncreasingAt items (Becoming.Weighting.ranksNet items pos neg) x
+@Becoming.Weighting.increment_transfer : ∀ {X : Type} {O O' : (X → Bool) → (X → Bool) → Prop} {a b a' b' : X → Bool},
+  (O b a ↔ O' b' a') →
+    (O a b ↔ O' a' b') →
+      ∀ {o : Ordering}, Becoming.Weighting.IncrementIs O b a o → Becoming.Weighting.IncrementIs O' b' a' o
+@Becoming.Weighting.ranksNet_increment_alike : ∀ {X : Type} {items : List X} {pos neg : X → Nat} {x : X}
+  {a b a' b' : X → Bool},
+  Becoming.Weighting.WidensBy items x a b →
+    Becoming.Weighting.WidensBy items x a' b' →
+      ∀ {o : Ordering},
+        Becoming.Weighting.IncrementIs (Becoming.Weighting.ranksNet items pos neg) b a o →
+          Becoming.Weighting.IncrementIs (Becoming.Weighting.ranksNet items pos neg) b' a' o
+@Becoming.Weighting.reads_increasingAt : ∀ {X P : Type} {kept : P → X → Bool} {R : P → P → Prop}
+  {O : (X → Bool) → (X → Bool) → Prop} {items : List X} {x : X} {n w : P},
+  Becoming.Weighting.WidensBy items x (kept w) (kept n) →
+    Becoming.Weighting.ReadsSetsOn kept R O w n → Becoming.Weighting.IncreasingAt items O x → R n w ∧ ¬R w n
+@Becoming.Weighting.narrower_above_net : ∀ {X P : Type} {kept : P → X → Bool} {R : P → P → Prop} {items : List X}
+  {pos neg : X → Nat} {x : X} {n w : P},
+  Becoming.Weighting.WidensBy items x (kept w) (kept n) →
+    R w n → ¬Becoming.Weighting.ReadsSetsOn kept R (Becoming.Weighting.ranksNet items pos neg) w n ∨ pos x ≤ neg x
+@Becoming.Weighting.reads_ranksNet : ∀ {X P : Type} {kept : P → X → Bool} {R : P → P → Prop} {items : List X}
+  {pos neg : X → Nat} {x : X} {n w : P},
+  Becoming.Weighting.WidensBy items x (kept w) (kept n) →
+    Becoming.Weighting.ReadsSetsOn kept R (Becoming.Weighting.ranksNet items pos neg) w n →
+      (R w n ↔ pos x < neg x) ∧ (R n w ↔ neg x < pos x)
+@Becoming.Weighting.reads_ranksNet_widens : ∀ {X P : Type} {kept : P → X → Bool} {R : P → P → Prop} {items : List X}
+  {pos neg : X → Nat} {n w : P},
+  Becoming.Weighting.ReadsSets kept R (Becoming.Weighting.ranksNet items pos neg) →
+    (∀ (x : X), x ∈ items → neg x < pos x) → Becoming.Weighting.WidensOn items (kept w) (kept n) → R n w ∧ ¬R w n
+@Becoming.Weighting.reads_increment_of : ∀ {X P : Type} {kept : P → X → Bool} {R : P → P → Prop}
+  {O : (X → Bool) → (X → Bool) → Prop} {n w : P},
+  Becoming.Weighting.ReadsSetsOn kept R O w n →
+    ∀ {o : Ordering},
+      Becoming.Weighting.IncrementIs O (kept n) (kept w) o →
+        (R w n ↔ o = Ordering.lt) ∧ (R n w ↔ o = Ordering.gt) ∧ (¬R w n ∧ ¬R n w ↔ o = Ordering.eq)
+@Becoming.Weighting.reads_increment : ∀ {X P : Type} {kept : P → X → Bool} {R : P → P → Prop}
+  {O : (X → Bool) → (X → Bool) → Prop} {apart : X → Ordering} {x : X} {n w : P},
+  Becoming.Weighting.ReadsSetsOn kept R O w n →
+    Becoming.Weighting.IncrementIs O (kept n) (kept w) (apart x) →
+      (R w n ↔ apart x = Ordering.lt) ∧ (R n w ↔ apart x = Ordering.gt) ∧ (¬R w n ∧ ¬R n w ↔ apart x = Ordering.eq)
+Becoming.Weighting.cond_scale : ∀ (k : Nat) (v : Bool) (u : Nat), (bif v then k * u else 0) = k * bif v then u else 0
+@Becoming.Weighting.weighed_scale : ∀ {X : Type} (k : Nat) (items : List X) (w : X → Nat) (a : X → Bool),
+  Becoming.Weighting.weighed items (fun x => k * w x) a = k * Becoming.Weighting.weighed items w a
+@Becoming.Weighting.beyond_within : ∀ {X : Type} {items : List X} {n d : Nat} {w : X → Nat} {a b : X → Bool},
+  Becoming.Weighting.RatioWithin items n d w →
+    d * Becoming.Weighting.weighed items w (Becoming.Weighting.beyond b a) *
+        Becoming.Weighting.size items (Becoming.Weighting.beyond a b) ≤
+      n * Becoming.Weighting.size items (Becoming.Weighting.beyond b a) *
+        Becoming.Weighting.weighed items w (Becoming.Weighting.beyond a b)
+@Becoming.Weighting.pos_of_lt_mul : ∀ {m d p : Nat}, m < d * p → 0 < p
+@Becoming.Weighting.cond_pos_of : ∀ {m : Nat}, 0 < m → ∀ {v : Bool}, (0 < bif v then 1 else 0) → 0 < bif v then m else 0
+@Becoming.Weighting.weighed_pos_of_size : ∀ {X : Type} {items : List X} {w : X → Nat} {a : X → Bool},
+  Becoming.Weighting.Positive items w → 0 < Becoming.Weighting.size items a → 0 < Becoming.Weighting.weighed items w a
+@Becoming.Weighting.weighed_zero_of_size : ∀ {X : Type} {w : X → Nat} {a : X → Bool} {items : List X},
+  Becoming.Weighting.size items a = 0 → Becoming.Weighting.weighed items w a = 0
+@Becoming.Weighting.ranks_past_ratio : ∀ {X : Type} {items : List X} {n d : Nat} {w : X → Nat} {a b : X → Bool},
+  Becoming.Weighting.Positive items w →
+    Becoming.Weighting.RatioWithin items n d w →
+      n * Becoming.Weighting.size items (Becoming.Weighting.beyond b a) <
+          d * Becoming.Weighting.size items (Becoming.Weighting.beyond a b) →
+        Becoming.Weighting.weighed items w b < Becoming.Weighting.weighed items w a
+@Becoming.Weighting.ranks_le_past_ratio : ∀ {X : Type} {items : List X} {n d : Nat} {w : X → Nat} {a b : X → Bool},
+  0 < n →
+    Becoming.Weighting.RatioWithin items n d w →
+      n * Becoming.Weighting.size items (Becoming.Weighting.beyond b a) ≤
+          d * Becoming.Weighting.size items (Becoming.Weighting.beyond a b) →
+        Becoming.Weighting.weighed items w b ≤ Becoming.Weighting.weighed items w a
+@Becoming.Weighting.cond_between : ∀ {n d : Nat},
+  d ≤ n → ∀ (v : Bool), (d ≤ bif v then n else d) ∧ (bif v then n else d) ≤ n
+@Becoming.Weighting.tilted_positive : ∀ {X : Type} {n d : Nat},
+  0 < d →
+    d ≤ n → ∀ (items : List X) (a b : X → Bool), Becoming.Weighting.Positive items (Becoming.Weighting.tilted n d a b)
+@Becoming.Weighting.tilted_within : ∀ {X : Type} {n d : Nat},
+  d ≤ n →
+    ∀ (items : List X) (a b : X → Bool), Becoming.Weighting.RatioWithin items n d (Becoming.Weighting.tilted n d a b)
+Becoming.Weighting.tilt_beyond : ∀ (n d : Nat) (p q : Bool),
+  (bif p && !q then bif q && !p then n else d else 0) = bif p && !q then d else 0
+Becoming.Weighting.tilt_toward : ∀ (n d : Nat) (v : Bool), (bif v then bif v then n else d else 0) = bif v then n else 0
+@Becoming.Weighting.weighed_tilted_beyond : ∀ {X : Type} (n d : Nat) (items : List X) (a b : X → Bool),
+  Becoming.Weighting.weighed items (Becoming.Weighting.tilted n d a b) (Becoming.Weighting.beyond a b) =
+    d * Becoming.Weighting.size items (Becoming.Weighting.beyond a b)
+@Becoming.Weighting.weighed_tilted_toward : ∀ {X : Type} (n d : Nat) (items : List X) (a b : X → Bool),
+  Becoming.Weighting.weighed items (Becoming.Weighting.tilted n d a b) (Becoming.Weighting.beyond b a) =
+    n * Becoming.Weighting.size items (Becoming.Weighting.beyond b a)
+@Becoming.Weighting.tilted_lt_iff : ∀ {X : Type} (n d : Nat) (items : List X) (a b : X → Bool),
+  Becoming.Weighting.weighed items (Becoming.Weighting.tilted n d a b) b <
+      Becoming.Weighting.weighed items (Becoming.Weighting.tilted n d a b) a ↔
+    n * Becoming.Weighting.size items (Becoming.Weighting.beyond b a) <
+      d * Becoming.Weighting.size items (Becoming.Weighting.beyond a b)
+@Becoming.Weighting.tilted_gt_iff : ∀ {X : Type} (n d : Nat) (items : List X) (a b : X → Bool),
+  Becoming.Weighting.weighed items (Becoming.Weighting.tilted n d a b) a <
+      Becoming.Weighting.weighed items (Becoming.Weighting.tilted n d a b) b ↔
+    d * Becoming.Weighting.size items (Becoming.Weighting.beyond a b) <
+      n * Becoming.Weighting.size items (Becoming.Weighting.beyond b a)
+@Becoming.Weighting.tilted_ties : ∀ {X : Type} {n d : Nat} {items : List X} {a b : X → Bool},
+  n * Becoming.Weighting.size items (Becoming.Weighting.beyond b a) =
+      d * Becoming.Weighting.size items (Becoming.Weighting.beyond a b) →
+    Becoming.Weighting.weighed items (Becoming.Weighting.tilted n d a b) a =
+      Becoming.Weighting.weighed items (Becoming.Weighting.tilted n d a b) b
+@Becoming.Weighting.every_within_iff : ∀ {X : Type} {items : List X} {n d : Nat} {a b : X → Bool},
+  0 < d →
+    d ≤ n →
+      ((∀ (w : X → Nat),
+          Becoming.Weighting.Positive items w →
+            Becoming.Weighting.RatioWithin items n d w →
+              Becoming.Weighting.weighed items w b < Becoming.Weighting.weighed items w a) ↔
+        n * Becoming.Weighting.size items (Becoming.Weighting.beyond b a) <
+          d * Becoming.Weighting.size items (Becoming.Weighting.beyond a b))
+@Becoming.Weighting.some_within_reverses_iff : ∀ {X : Type} {items : List X} {n d : Nat} {a b : X → Bool},
+  0 < d →
+    d ≤ n →
+      ((∃ w,
+          Becoming.Weighting.Positive items w ∧
+            Becoming.Weighting.RatioWithin items n d w ∧
+              Becoming.Weighting.weighed items w a < Becoming.Weighting.weighed items w b) ↔
+        d * Becoming.Weighting.size items (Becoming.Weighting.beyond a b) <
+          n * Becoming.Weighting.size items (Becoming.Weighting.beyond b a))
+@Becoming.Weighting.opposite_within_iff : ∀ {X : Type} {items : List X} {n d : Nat} {a b : X → Bool},
+  0 < d →
+    d ≤ n →
+      (((∃ w,
+            Becoming.Weighting.Positive items w ∧
+              Becoming.Weighting.RatioWithin items n d w ∧
+                Becoming.Weighting.weighed items w b < Becoming.Weighting.weighed items w a) ∧
+          ∃ w,
+            Becoming.Weighting.Positive items w ∧
+              Becoming.Weighting.RatioWithin items n d w ∧
+                Becoming.Weighting.weighed items w a < Becoming.Weighting.weighed items w b) ↔
+        d * Becoming.Weighting.size items (Becoming.Weighting.beyond b a) <
+            n * Becoming.Weighting.size items (Becoming.Weighting.beyond a b) ∧
+          d * Becoming.Weighting.size items (Becoming.Weighting.beyond a b) <
+            n * Becoming.Weighting.size items (Becoming.Weighting.beyond b a))
+@Becoming.Weighting.const_lt_iff_beyond : ∀ {X : Type} {k : Nat},
+  0 < k →
+    ∀ (items : List X) (a b : X → Bool),
+      Becoming.Weighting.weighed items (fun x => k) b < Becoming.Weighting.weighed items (fun x => k) a ↔
+        Becoming.Weighting.size items (Becoming.Weighting.beyond b a) <
+          Becoming.Weighting.size items (Becoming.Weighting.beyond a b)
+@Becoming.Weighting.exceeds_or_includes : ∀ {X : Type} (a b : X → Bool) (items : List X),
+  Becoming.Weighting.ExceedsOn items a b ∨ Becoming.Weighting.IncludesOn items b a
+@Becoming.Weighting.size_le_length : ∀ {X : Type} (items : List X) (a : X → Bool),
+  Becoming.Weighting.size items a ≤ items.length
+@Becoming.Weighting.size_pos_of_exceeds : ∀ {X : Type} {items : List X} {a b : X → Bool},
+  Becoming.Weighting.ExceedsOn items a b → 0 < Becoming.Weighting.size items (Becoming.Weighting.beyond a b)
+@Becoming.Weighting.outweighs : ∀ {X : Type} {items : List X} {a b : X → Bool},
+  Becoming.Weighting.ExceedsOn items b a →
+    ∃ w,
+      Becoming.Weighting.Positive items w ∧ Becoming.Weighting.weighed items w a < Becoming.Weighting.weighed items w b
+@Becoming.Weighting.mixed_either_way : ∀ {X : Type} {items : List X} {a b : X → Bool},
+  Becoming.Weighting.MixedOn items a b →
+    (∃ w,
+        Becoming.Weighting.Positive items w ∧
+          Becoming.Weighting.weighed items w b < Becoming.Weighting.weighed items w a) ∧
+      ∃ w,
+        Becoming.Weighting.Positive items w ∧
+          Becoming.Weighting.weighed items w a < Becoming.Weighting.weighed items w b
+@Becoming.Weighting.widens_iff_every_positive : ∀ {X : Type} {items : List X} {a b : X → Bool},
+  Becoming.Weighting.WidensOn items a b ↔
+    ∀ (w : X → Nat),
+      Becoming.Weighting.Positive items w → Becoming.Weighting.weighed items w b < Becoming.Weighting.weighed items w a
+@Becoming.Weighting.grammar_widens_iff_every_positive : ∀ {X : Type} {items : List X} {a b : X → Bool},
+  Becoming.«广» (Becoming.Weighting.admittedOn items a) (Becoming.Weighting.admittedOn items b) ↔
+    ∀ (w : X → Nat),
+      Becoming.Weighting.Positive items w → Becoming.Weighting.weighed items w b < Becoming.Weighting.weighed items w a
+@Becoming.Weighting.neutral_ranks_by_number : ∀ {X : Type} {k : Nat},
+  0 < k →
+    ∀ (items : List X) (a b : X → Bool),
+      Becoming.Weighting.weighed items (fun x => k) b < Becoming.Weighting.weighed items (fun x => k) a ↔
+        Becoming.Weighting.weighed items (fun x => 1) b < Becoming.Weighting.weighed items (fun x => 1) a
+@Becoming.Weighting.increasing_ranks : ∀ {X : Type} {items : List X} {w : X → Nat},
+  Becoming.Weighting.Positive items w → Becoming.Weighting.Increasing items (Becoming.Weighting.ranks items w)
+@Becoming.Weighting.widens_iff_every_of_class : ∀ {X : Type} {items : List X} {a b : X → Bool}
+  {K : ((X → Bool) → (X → Bool) → Prop) → Prop},
+  (∀ (w : X → Nat), Becoming.Weighting.Positive items w → K (Becoming.Weighting.ranks items w)) →
+    (∀ (R : (X → Bool) → (X → Bool) → Prop), K R → Becoming.Weighting.Increasing items R) →
+      (Becoming.Weighting.WidensOn items a b ↔ ∀ (R : (X → Bool) → (X → Bool) → Prop), K R → R b a)
+@Becoming.Weighting.widens_iff_every_increasing : ∀ {X : Type} {items : List X} {a b : X → Bool},
+  Becoming.Weighting.WidensOn items a b ↔
+    ∀ (R : (X → Bool) → (X → Bool) → Prop), Becoming.Weighting.Increasing items R → R b a
+@Becoming.Weighting.widens_iff_every_score : ∀ {X : Type} {items : List X} {a b : X → Bool},
+  Becoming.Weighting.WidensOn items a b ↔
+    ∀ (s : (X → Bool) → Nat), (Becoming.Weighting.Increasing items fun c d => s c < s d) → s b < s a
+@Becoming.Weighting.mixed_either_way_of_class : ∀ {X : Type} {items : List X} {a b : X → Bool}
+  {K : ((X → Bool) → (X → Bool) → Prop) → Prop},
+  (∀ (w : X → Nat), Becoming.Weighting.Positive items w → K (Becoming.Weighting.ranks items w)) →
+    Becoming.Weighting.MixedOn items a b → (∃ R, K R ∧ R b a) ∧ ∃ R, K R ∧ R a b
+@Becoming.Weighting.includes_restrict : ∀ {X : Type} (p : X → Bool) {items : List X} {a b : X → Bool},
+  Becoming.Weighting.IncludesOn items a b →
+    Becoming.Weighting.IncludesOn items (Becoming.Weighting.restrict p a) (Becoming.Weighting.restrict p b)
+@Becoming.Weighting.gain_at : ∀ {bx ax bbx : Bool},
+  ax = true → bbx = false → ((bx && ax) = true → (bx && bbx) = true) → (!bx && ax) = true ∧ (!bx && bbx) = false
+@Becoming.Weighting.increasing_lexical : ∀ {X : Type} (items : List X) (basic : X → Bool),
+  Becoming.Weighting.Increasing items (Becoming.Weighting.lexical items basic)
+@Becoming.Web.widens_iff_every_weighting : ∀ {F C : Type} {W : Becoming.Web F C}
+  {admitted : (Nat → C → Nat) → Nat × F → Bool},
+  W.DecidesAdmission admitted →
+    ∀ {items : List (Nat × F)} {l l' : Nat → C → Nat},
+      W.ListsAdmitted items l →
+        W.ListsAdmitted items l' →
+          (W.Widens l l' ↔
+            ∀ (w : Nat × F → Nat),
+              Becoming.Weighting.Positive items w →
+                Becoming.Weighting.weighed items w (admitted l') < Becoming.Weighting.weighed items w (admitted l))
+@Becoming.Web.widens_iff_every_of_class : ∀ {F C : Type} {W : Becoming.Web F C}
+  {admitted : (Nat → C → Nat) → Nat × F → Bool},
+  W.DecidesAdmission admitted →
+    ∀ {items : List (Nat × F)} {l l' : Nat → C → Nat},
+      W.ListsAdmitted items l →
+        W.ListsAdmitted items l' →
+          ∀ {K : ((Nat × F → Bool) → (Nat × F → Bool) → Prop) → Prop},
+            (∀ (w : Nat × F → Nat), Becoming.Weighting.Positive items w → K (Becoming.Weighting.ranks items w)) →
+              (∀ (R : (Nat × F → Bool) → (Nat × F → Bool) → Prop), K R → Becoming.Weighting.Increasing items R) →
+                (W.Widens l l' ↔ ∀ (R : (Nat × F → Bool) → (Nat × F → Bool) → Prop), K R → R (admitted l') (admitted l))
+@Becoming.Web.not_widens_of_closes : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat} {t : Nat} {f : F},
+  W.Admits (l' t) t f → ¬W.Admits (l t) t f → ¬W.Widens l l' ∧ ¬W.Keeps l l'
+@Becoming.atCenters_standpointInvariant : ∀ {F Pos : Type} (center : Pos → F),
+  Becoming.StandpointInvariant (Becoming.atCenters center)
+@Becoming.atCenters_presupposed : ∀ {F Pos : Type} (center : Pos → F) (p : Pos),
+  Becoming.SubTrue (Becoming.Boundary (fun x x_1 => False) (center p))
+    (Becoming.SignificantWithin (Becoming.atCenters center) p)
+@Becoming.atCenters_least : ∀ {F Pos : Type} {center : Pos → F} {sig : Pos → Nat → F → Prop},
+  (∀ (p : Pos),
+      Becoming.SubTrue (Becoming.Boundary (fun x x_1 => False) (center p)) (Becoming.SignificantWithin sig p)) →
+    Becoming.StandpointInvariant sig → ∀ (p : Pos) (t : Nat) (g : F), Becoming.atCenters center p t g → sig p t g
+@Becoming.forced_iff_center : ∀ {F Pos : Type} (center : Pos → F) (p : Pos) (t : Nat) (g : F),
+  (∀ (sig : Pos → Nat → F → Prop),
+      (∀ (q : Pos),
+          Becoming.SubTrue (Becoming.Boundary (fun x x_1 => False) (center q)) (Becoming.SignificantWithin sig q)) →
+        Becoming.StandpointInvariant sig → sig p t g) ↔
+    ∃ q, center q = g
+@Becoming.unrestricted_atCenters_iff : ∀ {F Pos : Type} {center : Pos → F} (some : Pos),
+  Becoming.Unrestricted (Becoming.atCenters center) ↔ ∀ (g : F), ∃ q, center q = g
+@Becoming.forced_iff_within : ∀ {F Pos : Type} (rel : F → F → Prop) (f : F) (p : Pos) (t : Nat) (g : F),
+  (∀ (sig : Pos → Nat → F → Prop),
+      Becoming.SubTrue (Becoming.Boundary rel f) (Becoming.SignificantWithin sig p) → sig p t g) ↔
+    Becoming.WithinClosure rel f g
+@Becoming.Web.retains_atCenters_iff : ∀ {F Pos C : Type} {W : Becoming.Web F C} {center : Pos → F} {p : Pos}
+  {l l' : Nat → C → Nat},
+  W.Retains (Becoming.atCenters center) p l l' ↔ ∀ (t : Nat), W.AdmitsWithin (fun g => ∃ q, center q = g) (l t) (l' t) t
+@Becoming.Web.admitsWithin_forced_iff : ∀ {F Pos C : Type} {W : Becoming.Web F C} {center : Pos → F} {p : Pos}
+  {s t : Nat} {l l' : C → Nat},
+  W.AdmitsWithin
+      (fun g =>
+        ∀ (sig : Pos → Nat → F → Prop),
+          (∀ (q : Pos),
+              Becoming.SubTrue (Becoming.Boundary (fun x x_1 => False) (center q)) (Becoming.SignificantWithin sig q)) →
+            Becoming.StandpointInvariant sig → sig p s g)
+      l l' t ↔
+    W.AdmitsWithin (fun g => ∃ q, center q = g) l l' t
+@Becoming.subTrue_every_iff : ∀ {F Pos ι : Type} {rel : ι → F → F → Prop} {f : F} {sig : Pos → Nat → F → Prop}
+  {p : Pos},
+  (∀ (i : ι), Becoming.SubTrue (Becoming.Boundary (rel i) f) (Becoming.SignificantWithin sig p)) ↔
+    ∀ (t : Nat) (g : F), (∃ i, Becoming.WithinClosure (rel i) f g) → sig p t g
+@Becoming.subTrue_every_of_related : ∀ {F Pos ι : Type} {rel : ι → F → F → Prop} {f : F} {sig : Pos → Nat → F → Prop}
+  {p : Pos},
+  Becoming.SubTrue (Becoming.Boundary (Becoming.Related rel) f) (Becoming.SignificantWithin sig p) →
+    ∀ (i : ι), Becoming.SubTrue (Becoming.Boundary (rel i) f) (Becoming.SignificantWithin sig p)
+Becoming.Chain.third_related : Becoming.WithinClosure (Becoming.Related Becoming.Chain.rel)
+  Becoming.Chain.Formation.first Becoming.Chain.Formation.third
+Becoming.Chain.third_not_within : ∀ (i : Bool),
+  ¬Becoming.WithinClosure (Becoming.Chain.rel i) Becoming.Chain.Formation.first Becoming.Chain.Formation.third
+Becoming.Chain.every_not_related : (∀ (i : Bool),
+    Becoming.SubTrue (Becoming.Boundary (Becoming.Chain.rel i) Becoming.Chain.Formation.first)
+      (Becoming.SignificantWithin
+        (fun x x_1 g => ∃ i, Becoming.WithinClosure (Becoming.Chain.rel i) Becoming.Chain.Formation.first g) ())) ∧
+  ¬Becoming.SubTrue (Becoming.Boundary (Becoming.Related Becoming.Chain.rel) Becoming.Chain.Formation.first)
+      (Becoming.SignificantWithin
+        (fun x x_1 g => ∃ i, Becoming.WithinClosure (Becoming.Chain.rel i) Becoming.Chain.Formation.first g) ())
+@Becoming.Clearing.centers_retain_yet_loses : ∀ {l : Nat → Becoming.Clearing.Place → Nat},
+  Becoming.Clearing.flow.WithheldLevels Becoming.Clearing.clearerPart Becoming.Clearing.web l →
+    ∀ {sig : Unit → Nat → Becoming.Clearing.Formation → Prop},
+      Becoming.Unrestricted sig →
+        Becoming.Clearing.web.Retains (Becoming.atCenters fun x => Becoming.Clearing.Formation.clearer) ()
+            Becoming.Clearing.web.level l ∧
+          ¬Becoming.Clearing.web.Retains sig () Becoming.Clearing.web.level l
+@Becoming.shared_standpointInvariant : ∀ {F Pos : Type} (content : Nat → F → Prop),
+  Becoming.StandpointInvariant (Becoming.shared content)
+@Becoming.standpointInvariant_iff_shared : ∀ {F Pos : Type} {sig : Pos → Nat → F → Prop},
+  Becoming.StandpointInvariant sig ↔ ∃ content, ∀ (p : Pos) (t : Nat) (g : F), sig p t g ↔ content t g
+@Becoming.selfAscribed_standpointInvariant_iff : ∀ {F Pos : Type} {content : F → Nat → F → Prop} {center : Pos → F},
+  Becoming.StandpointInvariant (Becoming.selfAscribed content center) ↔
+    ∀ (p q : Pos) (t : Nat) (g : F), content (center p) t g → content (center q) t g
+@Becoming.ownClosure_presupposed : ∀ {F Pos : Type} (rel : F → F → Prop) (center : Pos → F) (p : Pos),
+  Becoming.SubTrue (Becoming.Boundary rel (center p))
+    (Becoming.SignificantWithin (Becoming.selfAscribed (Becoming.ownClosure rel) center) p)
+@Becoming.ownClosure_standpointInvariant_iff : ∀ {F Pos : Type} {rel : F → F → Prop} {center : Pos → F},
+  Becoming.StandpointInvariant (Becoming.selfAscribed (Becoming.ownClosure rel) center) ↔
+    ∀ (p q : Pos) (g : F), Becoming.WithinClosure rel (center p) g → Becoming.WithinClosure rel (center q) g
+@Becoming.ownClosure_unrestricted_iff : ∀ {F Pos : Type} {rel : F → F → Prop} {center : Pos → F},
+  Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure rel) center) ↔
+    ∀ (p : Pos) (g : F), Becoming.WithinClosure rel (center p) g
+@Becoming.forced_iff_within_some : ∀ {F Pos : Type} (rel : F → F → Prop) (center : Pos → F) (p : Pos) (t : Nat) (g : F),
+  (∀ (sig : Pos → Nat → F → Prop),
+      (∀ (q : Pos), Becoming.SubTrue (Becoming.Boundary rel (center q)) (Becoming.SignificantWithin sig q)) →
+        Becoming.StandpointInvariant sig → sig p t g) ↔
+    ∃ q, Becoming.WithinClosure rel (center q) g
+@Becoming.Web.admitsWithin_forced_within_some_iff : ∀ {F Pos C : Type} {W : Becoming.Web F C} {rel : F → F → Prop}
+  {center : Pos → F} {p : Pos} {s t : Nat} {l l' : C → Nat},
+  W.AdmitsWithin
+      (fun g =>
+        ∀ (sig : Pos → Nat → F → Prop),
+          (∀ (q : Pos), Becoming.SubTrue (Becoming.Boundary rel (center q)) (Becoming.SignificantWithin sig q)) →
+            Becoming.StandpointInvariant sig → sig p s g)
+      l l' t ↔
+    W.AdmitsWithin (fun g => ∃ q, Becoming.WithinClosure rel (center q) g) l l' t
+@Becoming.selfAscribed_iff_withinSome : ∀ {F Pos : Type} {rel : F → F → Prop} {center : Pos → F},
+  (∀ (p : Pos) (t : Nat) (g : F),
+      Becoming.selfAscribed (Becoming.ownClosure rel) center p t g ↔ Becoming.withinSome rel center p t g) ↔
+    ∀ (p q : Pos) (g : F), Becoming.WithinClosure rel (center q) g → Becoming.WithinClosure rel (center p) g
+@Becoming.ownClosure_unrestricted_of_whole : ∀ {F Pos : Type} {rel : F → F → Prop} {center : Pos → F},
+  (∀ (p : Pos) (g : F), Becoming.WithinClosure rel (center p) g) →
+    Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure rel) center)
+@Becoming.withinClosure_iff_of_centersWithin : ∀ {F Pos : Type} {rel : F → F → Prop} {center : Pos → F},
+  Becoming.CentersWithin rel center →
+    ∀ (p q : Pos) (g : F), Becoming.WithinClosure rel (center p) g ↔ Becoming.WithinClosure rel (center q) g
+@Becoming.ownClosure_standpointInvariant_iff_centersWithin : ∀ {F Pos : Type} {rel : F → F → Prop} {center : Pos → F},
+  Becoming.StandpointInvariant (Becoming.selfAscribed (Becoming.ownClosure rel) center) ↔
+    Becoming.CentersWithin rel center
+@Becoming.selfAscribed_iff_withinSome_iff_centersWithin : ∀ {F Pos : Type} {rel : F → F → Prop} {center : Pos → F},
+  (∀ (p : Pos) (t : Nat) (g : F),
+      Becoming.selfAscribed (Becoming.ownClosure rel) center p t g ↔ Becoming.withinSome rel center p t g) ↔
+    Becoming.CentersWithin rel center
+@Becoming.Flow.centersWithin_influence_of_common : ∀ {F Pos C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {center : Pos → F} {c : C},
+  (∀ (p : Pos), W.DependsOn (center p) c ∧ L.Exchanges (center p) c) → Becoming.CentersWithin (L.AffectedBy W) center
+@Becoming.Flow.centersWithin_feeding_of_common : ∀ {F Pos C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {center : Pos → F} {t : Nat} {c : C},
+  (∀ (p : Pos), center p ∈ L.present t ∧ W.requires t (center p) c ∧ 0 < L.give t (center p) c) →
+    Becoming.CentersWithin (L.FedFrom W) center
+@Becoming.Flow.ownClosure_influence_invariant_of_common : ∀ {F Pos C : Type} {L : Becoming.Flow F C}
+  {W : Becoming.Web F C} {center : Pos → F} {c : C},
+  (∀ (p : Pos), W.DependsOn (center p) c ∧ L.Exchanges (center p) c) →
+    Becoming.StandpointInvariant (Becoming.selfAscribed (Becoming.ownClosure (L.AffectedBy W)) center)
+@Becoming.Flow.ownClosure_feeding_invariant_of_common : ∀ {F Pos C : Type} {L : Becoming.Flow F C}
+  {W : Becoming.Web F C} {center : Pos → F} {t : Nat} {c : C},
+  (∀ (p : Pos), center p ∈ L.present t ∧ W.requires t (center p) c ∧ 0 < L.give t (center p) c) →
+    Becoming.StandpointInvariant (Becoming.selfAscribed (Becoming.ownClosure (L.FedFrom W)) center)
+Becoming.Divided.not_within : ¬Becoming.WithinClosure (fun x x_1 => False) false true
+Becoming.Divided.selfAscribed_not_invariant : ¬Becoming.StandpointInvariant
+    (Becoming.selfAscribed (Becoming.ownClosure fun x x_1 => False) fun p => p)
+Becoming.Divided.withinSome_both : ∀ (p : Bool) (t : Nat) (g : Bool),
+  Becoming.withinSome (fun x x_1 => False) (fun p => p) p t g
+@Becoming.needsPart_iff_only : ∀ {F Ω : Type} {possible : Ω → Prop} {continues part : Ω → F → Prop} {f g : F}
+  {K : F → Prop},
+  Becoming.NeedsSomePart possible continues part f K →
+    Becoming.PartAlone possible continues part f K →
+      K g → (Becoming.NeedsPart possible continues part f g ↔ ∀ (h : F), K h → h = g)
+@Becoming.Needs.refl : ∀ {F : Type} (possible : (F → Bool) → Prop) (f : F), Becoming.Needs possible f f
+@Becoming.Needs.trans : ∀ {F : Type} {possible : (F → Bool) → Prop} {f g h : F},
+  Becoming.Needs possible f g → Becoming.Needs possible g h → Becoming.Needs possible f h
+@Becoming.withinClosure_needs_iff : ∀ {F : Type} {possible : (F → Bool) → Prop} {f g : F},
+  Becoming.WithinClosure (Becoming.Needs possible) f g ↔ Becoming.Needs possible f g
+@Becoming.forced_needs_iff : ∀ {F Pos : Type} (possible : (F → Bool) → Prop) (f : F) (p : Pos) (t : Nat) (g : F),
+  (∀ (sig : Pos → Nat → F → Prop),
+      Becoming.SubTrue (Becoming.Boundary (Becoming.Needs possible) f) (Becoming.SignificantWithin sig p) → sig p t g) ↔
+    Becoming.Needs possible f g
+@Becoming.needs_iff_only : ∀ {F : Type} {possible : (F → Bool) → Prop} {f g : F} {K : F → Prop},
+  Becoming.NeedsSome possible f K →
+    Becoming.CarriesAlone possible f K → K g → (Becoming.Needs possible f g ↔ ∀ (h : F), K h → h = g)
+@Becoming.forced_member_iff_only : ∀ {F Pos : Type} {possible : (F → Bool) → Prop} {f g : F} {K : F → Prop},
+  Becoming.NeedsSome possible f K →
+    Becoming.CarriesAlone possible f K →
+      K g →
+        ∀ (p : Pos) (t : Nat),
+          (∀ (sig : Pos → Nat → F → Prop),
+              Becoming.SubTrue (Becoming.Boundary (Becoming.Needs possible) f) (Becoming.SignificantWithin sig p) →
+                sig p t g) ↔
+            ∀ (h : F), K h → h = g
+Becoming.Copies.needsSome : Becoming.NeedsSome Becoming.Copies.possible Becoming.Copies.Part.user Becoming.Copies.copies
+Becoming.Copies.user_not_copy : ¬Becoming.Copies.copies Becoming.Copies.Part.user
+Becoming.Copies.carriesAlone : Becoming.CarriesAlone Becoming.Copies.possible Becoming.Copies.Part.user
+  Becoming.Copies.copies
+Becoming.Copies.two_copies : Becoming.NeedsSome Becoming.Copies.possible Becoming.Copies.Part.user
+    Becoming.Copies.copies ∧
+  ¬Becoming.Needs Becoming.Copies.possible Becoming.Copies.Part.user Becoming.Copies.Part.first ∧
+    ¬Becoming.Needs Becoming.Copies.possible Becoming.Copies.Part.user Becoming.Copies.Part.second
+@Becoming.Flow.needsSome_on : ∀ {F C : Type} (W : Becoming.Web F C) (cs : List C) (K : F → Prop) (T n : Nat) (f : F),
+  Becoming.NeedsSomePart (Becoming.Flow.FedOnlyOn W cs K T n) (fun L => Becoming.Flow.DrawsPast cs T n (L, W))
+    (fun L => Becoming.Flow.GivesWithin cs T n (L, W)) f K
+@Becoming.Flow.needsSome_of_drawsPast : ∀ {F C : Type} (cs : List C) (K : F → Prop) (T n : Nat) (f : F),
+  Becoming.NeedsSomePart (Becoming.Flow.FedOnlyBy cs K) (Becoming.Flow.DrawsPast cs T n)
+    (Becoming.Flow.GivesWithin cs T n) f K
+@Becoming.Flow.needs_giver_iff_only : ∀ {F C : Type} {cs : List C} {K : F → Prop} {T n : Nat} {f g : F},
+  Becoming.PartAlone (Becoming.Flow.FedOnlyBy cs K) (Becoming.Flow.DrawsPast cs T n) (Becoming.Flow.GivesWithin cs T n)
+      f K →
+    K g →
+      (Becoming.NeedsPart (Becoming.Flow.FedOnlyBy cs K) (Becoming.Flow.DrawsPast cs T n)
+          (Becoming.Flow.GivesWithin cs T n) f g ↔
+        ∀ (h : F), K h → h = g)
+@Becoming.total_two : ∀ {α : Type} (q : α → Nat) (a b : α), Becoming.total [a, b] q = q a + q b
+@Becoming.Flow.given_pos_of_calls : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {t : Nat} {f : F},
+  L.BalancesOn W cs t →
+    f ∈ L.present t → 0 < Becoming.total cs (L.take t f) → W.CallsForGiving cs t → ∃ c, c ∈ cs ∧ 0 < L.given t c
+@Becoming.Flow.drawnAcross_gives : ∀ {F C : Type} [inst : DecidableEq F] {W : Becoming.Web F C} {cs : List C}
+  {T n : Nat} {f : F} {pick : Nat → F} {t : Nat} {x : F} {c : C},
+  0 < (Becoming.Flow.drawnAcross W cs T n f pick).give t x c → x = pick t ∧ W.CallsForGiving cs t
+@Becoming.Flow.drawnAcross_balancesOn : ∀ {F C : Type} [inst : DecidableEq F] {W : Becoming.Web F C} {cs : List C}
+  {T n : Nat} {f : F} {pick : Nat → F},
+  (∀ (t : Nat), pick t ≠ f) →
+    ∀ (t : Nat), T ≤ t → t < T + n → (Becoming.Flow.drawnAcross W cs T n f pick).BalancesOn W cs t
+@Becoming.Flow.drawnAcross_acting : ∀ {F C : Type} [inst : DecidableEq F] {W : Becoming.Web F C} {cs : List C}
+  {T n : Nat} {f : F} {pick : Nat → F},
+  (∀ (t : Nat), T ≤ t → t < T + n → W.CallsForGiving cs t → W.active t (pick t)) →
+    (Becoming.Flow.drawnAcross W cs T n f pick).Acting W
+@Becoming.Flow.drawnAcross_fedOnlyOn : ∀ {F C : Type} [inst : DecidableEq F] {W : Becoming.Web F C} {cs : List C}
+  {T n : Nat} {f : F} {pick : Nat → F} {K : F → Prop},
+  (∀ (t : Nat), pick t ≠ f) →
+    (∀ (t : Nat), T ≤ t → t < T + n → W.CallsForGiving cs t → W.active t (pick t)) →
+      (∀ (t : Nat), K (pick t)) → Becoming.Flow.FedOnlyOn W cs K T n (Becoming.Flow.drawnAcross W cs T n f pick)
+@Becoming.Flow.drawnAcross_drawsPast : ∀ {F C : Type} [inst : DecidableEq F] {W : Becoming.Web F C} {cs : List C}
+  {T n : Nat} {f : F} {pick : Nat → F} {c₀ : C},
+  c₀ ∈ cs →
+    (∀ (t : Nat), T ≤ t → t < T + n → W.active t f) →
+      W.stock cs T < n → Becoming.Flow.DrawsPast cs T n (Becoming.Flow.drawnAcross W cs T n f pick, W) f
+@Becoming.Flow.partAlone_on : ∀ {F C : Type} [DecidableEq F] {W : Becoming.Web F C} {cs : List C} {c₀ : C},
+  c₀ ∈ cs →
+    ∀ {K : F → Prop} {T n : Nat} {f : F},
+      ¬K f →
+        (∀ (t : Nat), T ≤ t → t < T + n → W.active t f) →
+          W.stock cs T < n →
+            (∀ (g : F), K g → ∀ (t : Nat), T ≤ t → t < T + n → W.CallsForGiving cs t → W.active t g) →
+              Becoming.PartAlone (Becoming.Flow.FedOnlyOn W cs K T n) (fun L => Becoming.Flow.DrawsPast cs T n (L, W))
+                (fun L => Becoming.Flow.GivesWithin cs T n (L, W)) f K
+@Becoming.Flow.needs_giver_iff_only_on : ∀ {F C : Type} [DecidableEq F] {W : Becoming.Web F C} {cs : List C} {c₀ : C},
+  c₀ ∈ cs →
+    ∀ {K : F → Prop} {T n : Nat} {f g : F},
+      ¬K f →
+        (∀ (t : Nat), T ≤ t → t < T + n → W.active t f) →
+          W.stock cs T < n →
+            (∀ (g : F), K g → ∀ (t : Nat), T ≤ t → t < T + n → W.CallsForGiving cs t → W.active t g) →
+              K g →
+                (Becoming.NeedsPart (Becoming.Flow.FedOnlyOn W cs K T n)
+                    (fun L => Becoming.Flow.DrawsPast cs T n (L, W)) (fun L => Becoming.Flow.GivesWithin cs T n (L, W))
+                    f g ↔
+                  ∀ (h : F), K h → h = g)
+@Becoming.Flow.firstActiveOther_mem : ∀ {F C : Type} [inst : DecidableEq F] {W : Becoming.Web F C}
+  [inst_1 : (t : Nat) → (x : F) → Decidable (W.active t x)] {g : F} {t : Nat} (ks : List F),
+  Becoming.Flow.firstActiveOther W g t ks ∈ ks ∨ Becoming.Flow.firstActiveOther W g t ks = g
+@Becoming.Flow.firstActiveOther_active : ∀ {F C : Type} [inst : DecidableEq F] {W : Becoming.Web F C}
+  [inst_1 : (t : Nat) → (x : F) → Decidable (W.active t x)] {g : F} {t : Nat} (ks : List F),
+  (∃ h, h ∈ ks ∧ W.active t h ∧ h ≠ g) →
+    W.active t (Becoming.Flow.firstActiveOther W g t ks) ∧ Becoming.Flow.firstActiveOther W g t ks ≠ g
+@Becoming.Flow.needs_giver_iff_alone : ∀ {F C : Type} [DecidableEq F] {W : Becoming.Web F C}
+  [(t : Nat) → (x : F) → Decidable (W.active t x)] {cs : List C} {c₀ : C},
+  c₀ ∈ cs →
+    ∀ {ks : List F} {T n : Nat} {f g : F},
+      ¬f ∈ ks →
+        g ∈ ks →
+          (∀ (t : Nat), T ≤ t → t < T + n → W.active t f) →
+            W.stock cs T < n →
+              (Becoming.NeedsPart (Becoming.Flow.FedOnlyOn W cs (fun x => x ∈ ks) T n)
+                  (fun L => Becoming.Flow.DrawsPast cs T n (L, W)) (fun L => Becoming.Flow.GivesWithin cs T n (L, W)) f
+                  g ↔
+                ∃ t, T ≤ t ∧ t < T + n ∧ W.CallsForGiving cs t ∧ ∀ (h : F), h ∈ ks → W.active t h → h = g)
+@Becoming.Web.callsForGiving_iff_demand_pos : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} {t : Nat},
+  W.CallsForGiving cs t ↔ 0 < W.demand cs t
+@Becoming.Web.total_drawnUnit : ∀ {F C : Type} {W : Becoming.Web F C} [inst : DecidableEq C] {cs : List C},
+  Becoming.Distinct cs →
+    ∀ {c₀ : C},
+      c₀ ∈ cs → ∀ (t : Nat), Becoming.total cs (W.drawnUnit cs c₀ t) = if ¬∃ c, c ∈ cs ∧ W.Falls t c then 1 else 0
+@Becoming.Flow.given_of_steady : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C} {t : Nat}
+  {c : C},
+  L.BalancesOn W cs t → c ∈ cs → ¬W.Falls t c → L.given t c = Becoming.rise (fun s => W.level s c) t + L.taken t c
+@Becoming.Flow.rise_le_given : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C} {t : Nat}
+  {c : C}, L.BalancesOn W cs t → c ∈ cs → Becoming.rise (fun s => W.level s c) t ≤ L.given t c
+@Becoming.Flow.demand_le_replenishment : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {t : Nat} {f : F},
+  L.BalancesOn W cs t → f ∈ L.present t → 0 < Becoming.total cs (L.take t f) → W.demand cs t ≤ L.replenishment cs t
+@Becoming.Flow.needsSome_within : ∀ {F C : Type} (W : Becoming.Web F C) (cap : Nat → F → Nat) (cs : List C)
+  (K : F → Prop) (T n : Nat) (f : F),
+  Becoming.NeedsSomePart (Becoming.Flow.FedOnlyWithin W cap cs K T n) (fun L => Becoming.Flow.DrawsPast cs T n (L, W))
+    (fun L => Becoming.Flow.GivesWithin cs T n (L, W)) f K
+@Becoming.Flow.leastDrawn_gives : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C] {W : Becoming.Web F C}
+  {cs : List C} {c₀ : C} {T n : Nat} {f : F} {pick : Nat → F} {t : Nat} {x : F} {c : C},
+  0 < (Becoming.Flow.leastDrawn W cs c₀ T n f pick).give t x c → x = pick t ∧ W.CallsForGiving cs t
+@Becoming.Flow.leastDrawn_balancesOn : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C]
+  {W : Becoming.Web F C} {cs : List C} {c₀ : C} {T n : Nat} {f : F} {pick : Nat → F},
+  (∀ (t : Nat), pick t ≠ f) →
+    ∀ (t : Nat), T ≤ t → t < T + n → (Becoming.Flow.leastDrawn W cs c₀ T n f pick).BalancesOn W cs t
+@Becoming.Flow.leastDrawn_acting : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C] {W : Becoming.Web F C}
+  {cs : List C} {c₀ : C} {T n : Nat} {f : F} {pick : Nat → F},
+  (∀ (t : Nat), T ≤ t → t < T + n → W.CallsForGiving cs t → W.active t (pick t)) →
+    (Becoming.Flow.leastDrawn W cs c₀ T n f pick).Acting W
+@Becoming.Flow.leastDrawn_given_total : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C]
+  {W : Becoming.Web F C} {cs : List C} {c₀ : C} {T n : Nat} {f : F} {pick : Nat → F},
+  Becoming.Distinct cs →
+    c₀ ∈ cs →
+      ∀ (t : Nat), Becoming.total cs ((Becoming.Flow.leastDrawn W cs c₀ T n f pick).give t (pick t)) = W.demand cs t
+@Becoming.Flow.leastDrawn_drawsPast : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C]
+  {W : Becoming.Web F C} {cs : List C} {c₀ : C} {T n : Nat} {f : F} {pick : Nat → F},
+  c₀ ∈ cs →
+    (∀ (t : Nat), T ≤ t → t < T + n → W.active t f) →
+      W.stock cs T < n → Becoming.Flow.DrawsPast cs T n (Becoming.Flow.leastDrawn W cs c₀ T n f pick, W) f
+@Becoming.Flow.leastDrawn_fedOnlyWithin : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C]
+  {W : Becoming.Web F C} {cs : List C} {c₀ : C} {T n : Nat} {f : F} {pick : Nat → F} {cap : Nat → F → Nat}
+  {K : F → Prop},
+  Becoming.Distinct cs →
+    c₀ ∈ cs →
+      (∀ (t : Nat), pick t ≠ f) →
+        (∀ (t : Nat),
+            T ≤ t → t < T + n → W.CallsForGiving cs t → W.active t (pick t) ∧ W.demand cs t ≤ cap t (pick t)) →
+          (∀ (t : Nat), K (pick t)) →
+            Becoming.Flow.FedOnlyWithin W cap cs K T n (Becoming.Flow.leastDrawn W cs c₀ T n f pick)
+@Becoming.Flow.feedsAlone_iff : ∀ {F C : Type} [DecidableEq F] [DecidableEq C] {W : Becoming.Web F C}
+  {cap : Nat → F → Nat} {cs : List C},
+  Becoming.Distinct cs →
+    ∀ {c₀ : C},
+      c₀ ∈ cs →
+        ∀ {K : F → Prop} {T n : Nat} {f g : F},
+          ¬K f →
+            K g →
+              (∀ (t : Nat), T ≤ t → t < T + n → W.active t f) →
+                W.stock cs T < n →
+                  ((∃ L,
+                      Becoming.Flow.FedOnlyWithin W cap cs K T n L ∧
+                        Becoming.Flow.DrawsPast cs T n (L, W) f ∧
+                          Becoming.Flow.GivesWithin cs T n (L, W) g ∧
+                            ∀ (h : F), K h → Becoming.Flow.GivesWithin cs T n (L, W) h → h = g) ↔
+                    W.CanFeedAlone cap cs T n g)
+@Becoming.Flow.partAlone_within_iff : ∀ {F C : Type} [DecidableEq F] [DecidableEq C] {W : Becoming.Web F C}
+  {cap : Nat → F → Nat} {cs : List C},
+  Becoming.Distinct cs →
+    ∀ {c₀ : C},
+      c₀ ∈ cs →
+        ∀ {K : F → Prop} {T n : Nat} {f : F},
+          ¬K f →
+            (∀ (t : Nat), T ≤ t → t < T + n → W.active t f) →
+              W.stock cs T < n →
+                (Becoming.PartAlone (Becoming.Flow.FedOnlyWithin W cap cs K T n)
+                    (fun L => Becoming.Flow.DrawsPast cs T n (L, W)) (fun L => Becoming.Flow.GivesWithin cs T n (L, W))
+                    f K ↔
+                  ∀ (g : F), K g → W.CanFeedAlone cap cs T n g)
+@Becoming.Flow.needs_giver_iff_only_within : ∀ {F C : Type} [DecidableEq F] [DecidableEq C] {W : Becoming.Web F C}
+  {cap : Nat → F → Nat} {cs : List C},
+  Becoming.Distinct cs →
+    ∀ {c₀ : C},
+      c₀ ∈ cs →
+        ∀ {K : F → Prop} {T n : Nat} {f g : F},
+          ¬K f →
+            (∀ (t : Nat), T ≤ t → t < T + n → W.active t f) →
+              W.stock cs T < n →
+                (∀ (g : F), K g → W.CanFeedAlone cap cs T n g) →
+                  K g →
+                    (Becoming.NeedsPart (Becoming.Flow.FedOnlyWithin W cap cs K T n)
+                        (fun L => Becoming.Flow.DrawsPast cs T n (L, W))
+                        (fun L => Becoming.Flow.GivesWithin cs T n (L, W)) f g ↔
+                      ∀ (h : F), K h → h = g)
+@Becoming.Flow.needs_giver_of_short : ∀ {F C : Type} [inst : DecidableEq F] {W : Becoming.Web F C}
+  [inst_1 : (t : Nat) → (x : F) → Decidable (W.active t x)] {cap : Nat → F → Nat} {cs : List C} {ks : List F}
+  {T n : Nat} {f g : F},
+  (∃ t, T ≤ t ∧ t < T + n ∧ (Becoming.total ks fun h => if W.active t h ∧ h ≠ g then cap t h else 0) < W.demand cs t) →
+    Becoming.NeedsPart (Becoming.Flow.FedOnlyWithin W cap cs (fun x => x ∈ ks) T n)
+      (fun L => Becoming.Flow.DrawsPast cs T n (L, W)) (fun L => Becoming.Flow.GivesWithin cs T n (L, W)) f g
+@Becoming.total_unitsOn : ∀ {α : Type} (q r : α → Nat) (as : List α),
+  Becoming.total (Becoming.unitsOn r as) q = Becoming.total as fun a => r a * q a
+@Becoming.mem_replicate_pos : ∀ {α : Type} {a x : α} {k : Nat}, x ∈ List.replicate k a → x = a ∧ 0 < k
+@Becoming.mem_unitsOn : ∀ {α : Type} {r : α → Nat} {x : α} {as : List α}, x ∈ Becoming.unitsOn r as → x ∈ as ∧ 0 < r x
+@Becoming.total_pairUp_fst : ∀ {α β : Type} (q : α → Nat) (as : List α) (bs : List β),
+  ((Becoming.total as fun x => 1) ≤ Becoming.total bs fun x => 1) →
+    (Becoming.total (Becoming.pairUp as bs) fun z => q z.fst) = Becoming.total as q
+@Becoming.total_pairUp_snd_le : ∀ {α β : Type} (q : β → Nat) (as : List α) (bs : List β),
+  (Becoming.total (Becoming.pairUp as bs) fun z => q z.snd) ≤ Becoming.total bs q
+@Becoming.mem_pairUp : ∀ {α β : Type} {z : α × β} {as : List α} {bs : List β},
+  z ∈ Becoming.pairUp as bs → z.fst ∈ as ∧ z.snd ∈ bs
+@Becoming.total_eq_at : ∀ {α : Type} {q : α → Nat} {a : α} {as : List α},
+  (∀ (b : α), 0 < q b → b = a) → Becoming.Distinct as → a ∈ as → Becoming.total as q = q a
+@Becoming.Web.total_demandAt : ∀ {F C : Type} {W : Becoming.Web F C} [inst : DecidableEq C] {cs : List C},
+  Becoming.Distinct cs → ∀ {c₀ : C}, c₀ ∈ cs → ∀ (t : Nat), Becoming.total cs (W.demandAt cs c₀ t) = W.demand cs t
+@Becoming.Web.otherCapacity_le : ∀ {F C : Type} {W : Becoming.Web F C}
+  [inst : (t : Nat) → (x : F) → Decidable (W.active t x)] [inst_1 : DecidableEq F] (cap : Nat → F → Nat) (g : F)
+  (t : Nat) (h : F), W.otherCapacity cap g t h ≤ cap t h
+@Becoming.Web.mem_shares : ∀ {F C : Type} {W : Becoming.Web F C} [inst : DecidableEq C]
+  [inst_1 : (t : Nat) → (x : F) → Decidable (W.active t x)] [inst_2 : DecidableEq F] {cap : Nat → F → Nat} {cs : List C}
+  {c₀ : C} {ks : List F} {g : F} {t : Nat} {z : C × F},
+  z ∈ W.shares cap cs c₀ ks g t → z.fst ∈ cs ∧ 0 < W.demandAt cs c₀ t z.fst ∧ z.snd ∈ ks ∧ W.active t z.snd ∧ z.snd ≠ g
+@Becoming.Flow.sharedDrawn_gives : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C] {W : Becoming.Web F C}
+  [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {cap : Nat → F → Nat} {cs : List C} {c₀ : C} {ks : List F}
+  {T n : Nat} {f g : F} {t : Nat} {x : F} {c : C},
+  0 < (Becoming.Flow.sharedDrawn W cap cs c₀ ks T n f g).give t x c → c ∈ cs ∧ x ∈ ks ∧ W.active t x ∧ x ≠ g
+@Becoming.Flow.sharedDrawn_given_members : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C]
+  {W : Becoming.Web F C} [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {cap : Nat → F → Nat} {cs : List C}
+  {c₀ : C} {ks : List F} {T n : Nat} {f g : F},
+  Becoming.Distinct cs →
+    c₀ ∈ cs →
+      Becoming.Distinct ks →
+        ∀ {t : Nat},
+          W.demand cs t ≤ W.capacityWithout cap ks g t →
+            ∀ {c : C},
+              c ∈ cs →
+                (Becoming.total ks fun x => (Becoming.Flow.sharedDrawn W cap cs c₀ ks T n f g).give t x c) =
+                  W.demandAt cs c₀ t c
+@Becoming.Flow.sharedDrawn_balancesOn : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C]
+  {W : Becoming.Web F C} [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {cap : Nat → F → Nat} {cs : List C}
+  {c₀ : C} {ks : List F} {T n : Nat} {f g : F},
+  Becoming.Distinct cs →
+    c₀ ∈ cs →
+      Becoming.Distinct ks →
+        ¬f ∈ ks →
+          (∀ (t : Nat), T ≤ t → t < T + n → W.demand cs t ≤ W.capacityWithout cap ks g t) →
+            ∀ (t : Nat), T ≤ t → t < T + n → (Becoming.Flow.sharedDrawn W cap cs c₀ ks T n f g).BalancesOn W cs t
+@Becoming.Flow.sharedDrawn_acting : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C]
+  {W : Becoming.Web F C} [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {cap : Nat → F → Nat} {cs : List C}
+  {c₀ : C} {ks : List F} {T n : Nat} {f g : F}, (Becoming.Flow.sharedDrawn W cap cs c₀ ks T n f g).Acting W
+@Becoming.Flow.sharedDrawn_given_le : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C]
+  {W : Becoming.Web F C} [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {cap : Nat → F → Nat} {cs : List C}
+  {c₀ : C} {ks : List F} {T n : Nat} {f g : F},
+  Becoming.Distinct cs →
+    Becoming.Distinct ks →
+      ∀ (t : Nat) (x : F),
+        Becoming.total cs ((Becoming.Flow.sharedDrawn W cap cs c₀ ks T n f g).give t x) ≤ W.otherCapacity cap g t x
+@Becoming.Flow.sharedDrawn_quiet : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C] {W : Becoming.Web F C}
+  [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {cap : Nat → F → Nat} {cs : List C} {c₀ : C} {ks : List F}
+  {T n : Nat} {f g : F},
+  Becoming.Distinct cs →
+    Becoming.Distinct ks →
+      ∀ (t : Nat), Becoming.total cs ((Becoming.Flow.sharedDrawn W cap cs c₀ ks T n f g).give t g) = 0
+@Becoming.Flow.sharedDrawn_fedOnlyWithin : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C]
+  {W : Becoming.Web F C} [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {cap : Nat → F → Nat} {cs : List C}
+  {c₀ : C} {ks : List F} {T n : Nat} {f g : F},
+  Becoming.Distinct cs →
+    c₀ ∈ cs →
+      Becoming.Distinct ks →
+        ¬f ∈ ks →
+          (∀ (t : Nat), T ≤ t → t < T + n → W.demand cs t ≤ W.capacityWithout cap ks g t) →
+            Becoming.Flow.FedOnlyWithin W cap cs (fun x => x ∈ ks) T n
+              (Becoming.Flow.sharedDrawn W cap cs c₀ ks T n f g)
+@Becoming.Flow.sharedDrawn_drawsPast : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C]
+  {W : Becoming.Web F C} [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {cap : Nat → F → Nat} {cs : List C}
+  {c₀ : C} {ks : List F} {T n : Nat} {f g : F},
+  c₀ ∈ cs →
+    (∀ (t : Nat), T ≤ t → t < T + n → W.active t f) →
+      W.stock cs T < n → Becoming.Flow.DrawsPast cs T n (Becoming.Flow.sharedDrawn W cap cs c₀ ks T n f g, W) f
+@Becoming.Flow.sharedDrawn_not_gives : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C]
+  {W : Becoming.Web F C} [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {cap : Nat → F → Nat} {cs : List C}
+  {c₀ : C} {ks : List F} {T n : Nat} {f g : F},
+  Becoming.Distinct cs →
+    Becoming.Distinct ks → ¬Becoming.Flow.GivesWithin cs T n (Becoming.Flow.sharedDrawn W cap cs c₀ ks T n f g, W) g
+@Becoming.Flow.needs_giver_iff_short : ∀ {F C : Type} [inst : DecidableEq F] [DecidableEq C] {W : Becoming.Web F C}
+  [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {cap : Nat → F → Nat} {cs : List C},
+  Becoming.Distinct cs →
+    ∀ {c₀ : C},
+      c₀ ∈ cs →
+        ∀ {ks : List F},
+          Becoming.Distinct ks →
+            ∀ {T n : Nat} {f g : F},
+              ¬f ∈ ks →
+                (∀ (t : Nat), T ≤ t → t < T + n → W.active t f) →
+                  W.stock cs T < n →
+                    (Becoming.NeedsPart (Becoming.Flow.FedOnlyWithin W cap cs (fun x => x ∈ ks) T n)
+                        (fun L => Becoming.Flow.DrawsPast cs T n (L, W))
+                        (fun L => Becoming.Flow.GivesWithin cs T n (L, W)) f g ↔
+                      ∃ t, T ≤ t ∧ t < T + n ∧ W.capacityWithout cap ks g t < W.demand cs t)
+@Becoming.Flow.replenishment_le_uptake : ∀ {F C : Type} {L : Becoming.Flow F C} {cs ds : List C} {t : Nat},
+  L.PassesOn cs ds t → L.replenishment cs t ≤ L.uptake ds t
+@Becoming.Flow.passed_le_supply : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs ds : List C}
+  {t : Nat},
+  L.BalancesOn W ds t →
+    L.PassesOn cs ds t → W.stock ds (t + 1) + L.replenishment cs t ≤ W.stock ds t + L.replenishment ds t
+@Becoming.Flow.passed_le_drop : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs ds : List C}
+  {t : Nat},
+  L.BalancesOn W ds t →
+    L.PassesOn cs ds t → L.replenishment ds t = 0 → W.stock ds (t + 1) + L.replenishment cs t ≤ W.stock ds t
+@Becoming.Flow.passed_zero_of_exhausted : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs ds : List C}
+  {t : Nat},
+  L.BalancesOn W ds t → L.PassesOn cs ds t → L.replenishment ds t = 0 → W.stock ds t = 0 → L.replenishment cs t = 0
+@Becoming.Flow.uptake_le_tiers : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} (T N : Nat) (cs : List C)
+  (ups : List (List C)),
+  (∀ (t : Nat), T ≤ t → t < T + N → L.BalancesTiers W t cs ups) →
+    (∀ (t : Nat), T ≤ t → t < T + N → L.PassesTiers t cs ups) →
+      Becoming.total (Becoming.steps T N) (L.uptake cs) ≤
+        W.stockTiers T cs ups + Becoming.total (Becoming.steps T N) (L.replenishment (Becoming.topTier cs ups))
+@Becoming.Flow.needsSome_tiers : ∀ {F C : Type} (W : Becoming.Web F C) (cs : List C) (ups : List (List C))
+  (K : F → Prop) (T n : Nat) (f : F),
+  Becoming.NeedsSomePart (Becoming.Flow.FedThroughTiers W cs ups K T n)
+    (fun L => Becoming.Flow.DrawsPastTiers cs ups T n (L, W))
+    (fun L => Becoming.Flow.GivesWithin (Becoming.topTier cs ups) T n (L, W)) f K
+@Becoming.Flow.take_le_storeFall : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {store : F → C}
+  {t : Nat} {h : F},
+  L.BalancesOn W [store h] t → L.given t (store h) = 0 → h ∈ L.present t → L.take t h (store h) ≤ W.storeFall store t h
+@Becoming.Flow.fedFromStores_within : ∀ {F C : Type} {W : Becoming.Web F C} {store : F → C} {cs : List C} {ks : List F}
+  {T n : Nat} {L : Becoming.Flow F C},
+  Becoming.Flow.FedFromStores W store cs ks T n L →
+    Becoming.Flow.FedOnlyWithin W (W.storeFall store) cs (fun x => x ∈ ks) T n L
+@Becoming.Flow.storeDrawn_balancesOn : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C]
+  {W : Becoming.Web F C} [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C} {cs : List C}
+  {c₀ : C} {ks : List F} {T n : Nat} {f g : F},
+  Becoming.Distinct cs →
+    c₀ ∈ cs →
+      Becoming.Distinct ks →
+        ¬f ∈ ks →
+          (∀ (h : F), h ∈ ks → ¬store h ∈ cs) →
+            (∀ (t : Nat), T ≤ t → t < T + n → W.demand cs t ≤ W.capacityWithout (W.storeFall store) ks g t) →
+              ∀ (t : Nat), T ≤ t → t < T + n → (Becoming.Flow.storeDrawn W store cs c₀ ks T n f g).BalancesOn W cs t
+@Becoming.Flow.storeDrawn_given_store : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C]
+  {W : Becoming.Web F C} [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C} {cs : List C}
+  {c₀ : C} {ks : List F} {T n : Nat} {f g : F},
+  (∀ (h : F), h ∈ ks → ¬store h ∈ cs) →
+    ∀ {t : Nat} {h : F}, h ∈ ks → (Becoming.Flow.storeDrawn W store cs c₀ ks T n f g).given t (store h) = 0
+@Becoming.Flow.storeDrawn_taken_store : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C]
+  {W : Becoming.Web F C} [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C} {cs : List C}
+  {c₀ : C} {ks : List F} {T n : Nat} {f g : F},
+  Becoming.Distinct ks →
+    ¬f ∈ ks →
+      (∀ (h h' : F), h ∈ ks → h' ∈ ks → store h = store h' → h = h') →
+        (∀ (h : F), h ∈ ks → ¬store h ∈ cs) →
+          ∀ {t : Nat} {h : F},
+            h ∈ ks →
+              (Becoming.total ks fun x => (Becoming.Flow.storeDrawn W store cs c₀ ks T n f g).take t x (store h)) =
+                W.storeFall store t h
+@Becoming.Flow.storeDrawn_balances_store : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C]
+  {W : Becoming.Web F C} [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C} {cs : List C}
+  {c₀ : C} {ks : List F} {T n : Nat} {f g : F},
+  Becoming.Distinct ks →
+    ¬f ∈ ks →
+      (∀ (h h' : F), h ∈ ks → h' ∈ ks → store h = store h' → h = h') →
+        (∀ (h : F), h ∈ ks → ¬store h ∈ cs) →
+          ∀ {t : Nat},
+            T ≤ t →
+              t < T + n →
+                ∀ {h : F},
+                  h ∈ ks →
+                    ¬W.Rises t (store h) → (Becoming.Flow.storeDrawn W store cs c₀ ks T n f g).BalancesOn W [store h] t
+@Becoming.Flow.storeDrawn_fedFromStores : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C]
+  {W : Becoming.Web F C} [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C} {cs : List C}
+  {c₀ : C} {ks : List F} {T n : Nat} {f g : F},
+  Becoming.Distinct cs →
+    c₀ ∈ cs →
+      Becoming.Distinct ks →
+        ¬f ∈ ks →
+          (∀ (h h' : F), h ∈ ks → h' ∈ ks → store h = store h' → h = h') →
+            (∀ (h : F), h ∈ ks → ¬store h ∈ cs) →
+              (∀ (t : Nat), T ≤ t → t < T + n → ∀ (h : F), h ∈ ks → ¬W.Rises t (store h)) →
+                (∀ (t : Nat), T ≤ t → t < T + n → W.demand cs t ≤ W.capacityWithout (W.storeFall store) ks g t) →
+                  Becoming.Flow.FedFromStores W store cs ks T n (Becoming.Flow.storeDrawn W store cs c₀ ks T n f g)
+@Becoming.Flow.storeDrawn_drawsPast : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C]
+  {W : Becoming.Web F C} [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C} {cs : List C}
+  {c₀ : C} {ks : List F} {T n : Nat} {f g : F},
+  c₀ ∈ cs →
+    (∀ (t : Nat), T ≤ t → t < T + n → W.active t f) →
+      W.stock cs T < n → Becoming.Flow.DrawsPast cs T n (Becoming.Flow.storeDrawn W store cs c₀ ks T n f g, W) f
+@Becoming.Flow.storeDrawn_not_gives : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C]
+  {W : Becoming.Web F C} [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C} {cs : List C}
+  {c₀ : C} {ks : List F} {T n : Nat} {f g : F},
+  Becoming.Distinct cs →
+    Becoming.Distinct ks → ¬Becoming.Flow.GivesWithin cs T n (Becoming.Flow.storeDrawn W store cs c₀ ks T n f g, W) g
+@Becoming.Flow.needs_giver_iff_store_short : ∀ {F C : Type} [inst : DecidableEq F] [DecidableEq C]
+  {W : Becoming.Web F C} [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C} {cs : List C},
+  Becoming.Distinct cs →
+    ∀ {c₀ : C},
+      c₀ ∈ cs →
+        ∀ {ks : List F},
+          Becoming.Distinct ks →
+            ∀ {T n : Nat} {f g : F},
+              ¬f ∈ ks →
+                (∀ (t : Nat), T ≤ t → t < T + n → W.active t f) →
+                  W.stock cs T < n →
+                    (∀ (h h' : F), h ∈ ks → h' ∈ ks → store h = store h' → h = h') →
+                      (∀ (h : F), h ∈ ks → ¬store h ∈ cs) →
+                        (∀ (t : Nat), T ≤ t → t < T + n → ∀ (h : F), h ∈ ks → ¬W.Rises t (store h)) →
+                          (Becoming.NeedsPart (Becoming.Flow.FedFromStores W store cs ks T n)
+                              (fun L => Becoming.Flow.DrawsPast cs T n (L, W))
+                              (fun L => Becoming.Flow.GivesWithin cs T n (L, W)) f g ↔
+                            ∃ t, T ≤ t ∧ t < T + n ∧ W.capacityWithout (W.storeFall store) ks g t < W.demand cs t)
+@Becoming.split_by : ∀ {p : Prop} [d : Decidable p] (v : Nat), v = (if p then 0 else v) + if p then v else 0
+@Becoming.Flow.replenishment_split : ∀ {F C : Type} [inst : DecidableEq F] {cs : List C} {g : F} (L : Becoming.Flow F C)
+  (t : Nat),
+  L.replenishment cs t =
+    (Becoming.total (L.present t) fun x => if x = g then 0 else Becoming.total cs (L.give t x)) + L.givenFrom cs t g
+@Becoming.Flow.others_le_capacityWithout : ∀ {F C : Type} [inst : DecidableEq F] {W : Becoming.Web F C}
+  [inst_1 : (t : Nat) → (x : F) → Decidable (W.active t x)] {cap : Nat → F → Nat} {cs : List C} {ks : List F}
+  {T n : Nat} {g : F} {L : Becoming.Flow F C},
+  Becoming.Flow.FedOnlyWithin W cap cs (fun x => x ∈ ks) T n L →
+    ∀ {t : Nat},
+      T ≤ t →
+        t < T + n →
+          (Becoming.total (L.present t) fun x => if x = g then 0 else Becoming.total cs (L.give t x)) ≤
+            W.capacityWithout cap ks g t
+@Becoming.Flow.shortfall_le_givenFrom : ∀ {F C : Type} [inst : DecidableEq F] {W : Becoming.Web F C}
+  [inst_1 : (t : Nat) → (x : F) → Decidable (W.active t x)] {cap : Nat → F → Nat} {cs : List C} {ks : List F}
+  {T n : Nat} {f g : F} {L : Becoming.Flow F C},
+  Becoming.Flow.FedOnlyWithin W cap cs (fun x => x ∈ ks) T n L →
+    ∀ {t : Nat},
+      T ≤ t →
+        t < T + n →
+          f ∈ L.present t → 0 < Becoming.total cs (L.take t f) → W.shortfall cap cs ks g t ≤ L.givenFrom cs t g
+@Becoming.Flow.shortfalls_le_given : ∀ {F C : Type} [inst : DecidableEq F] {W : Becoming.Web F C}
+  [inst_1 : (t : Nat) → (x : F) → Decidable (W.active t x)] {cap : Nat → F → Nat} {cs : List C} {ks : List F}
+  {T n : Nat} {f g : F} {L : Becoming.Flow F C},
+  Becoming.Flow.FedOnlyWithin W cap cs (fun x => x ∈ ks) T n L →
+    Becoming.Flow.DrawsPast cs T n (L, W) f →
+      Becoming.total (Becoming.steps T n) (W.shortfall cap cs ks g) ≤
+        Becoming.total (Becoming.steps T n) fun t => L.givenFrom cs t g
+@Becoming.Flow.otherCapacity_short : ∀ {F C : Type} [inst : DecidableEq F] {W : Becoming.Web F C}
+  [inst_1 : (t : Nat) → (x : F) → Decidable (W.active t x)] {cap : Nat → F → Nat} {cs : List C} {ks : List F} {f g : F},
+  ¬f ∈ ks →
+    ∀ {t : Nat},
+      W.shortfall cap cs ks g t ≤ W.otherCapacity cap f t g →
+        ∀ {h : F},
+          h ∈ ks →
+            W.otherCapacity (W.shortCapacity cap cs ks g) f t h =
+              W.otherCapacity cap g t h + if h = g then W.shortfall cap cs ks g t else 0
+@Becoming.Flow.capacityWithout_short : ∀ {F C : Type} [inst : DecidableEq F] {W : Becoming.Web F C}
+  [inst_1 : (t : Nat) → (x : F) → Decidable (W.active t x)] {cap : Nat → F → Nat} {cs : List C} {ks : List F} {f g : F},
+  Becoming.Distinct ks →
+    ¬f ∈ ks →
+      g ∈ ks →
+        ∀ {t : Nat},
+          W.shortfall cap cs ks g t ≤ W.otherCapacity cap f t g →
+            W.capacityWithout (W.shortCapacity cap cs ks g) ks f t =
+              W.capacityWithout cap ks g t + W.shortfall cap cs ks g t
+@Becoming.Flow.shortCapacity_le : ∀ {F C : Type} [inst : DecidableEq F] {W : Becoming.Web F C}
+  [inst_1 : (t : Nat) → (x : F) → Decidable (W.active t x)] {cap : Nat → F → Nat} {cs : List C} {ks : List F} {f g : F}
+  {t : Nat},
+  W.shortfall cap cs ks g t ≤ W.otherCapacity cap f t g → ∀ (x : F), W.shortCapacity cap cs ks g t x ≤ cap t x
+@Becoming.Flow.gradedDrawn_fedOnlyWithin : ∀ {F C : Type} [inst : DecidableEq F] {W : Becoming.Web F C}
+  [inst_1 : (t : Nat) → (x : F) → Decidable (W.active t x)] {cap : Nat → F → Nat} {cs : List C} {ks : List F}
+  {T n : Nat} {f g : F} [inst_2 : DecidableEq C] {c₀ : C},
+  Becoming.Distinct cs →
+    c₀ ∈ cs →
+      Becoming.Distinct ks →
+        ¬f ∈ ks →
+          g ∈ ks →
+            (∀ (t : Nat), T ≤ t → t < T + n → W.shortfall cap cs ks g t ≤ W.otherCapacity cap f t g) →
+              Becoming.Flow.FedOnlyWithin W cap cs (fun x => x ∈ ks) T n
+                (Becoming.Flow.gradedDrawn W cap cs c₀ ks T n f g)
+@Becoming.Flow.gradedDrawn_givenFrom_le : ∀ {F C : Type} [inst : DecidableEq F] {W : Becoming.Web F C}
+  [inst_1 : (t : Nat) → (x : F) → Decidable (W.active t x)] {cap : Nat → F → Nat} {cs : List C} {ks : List F}
+  {T n : Nat} {f g : F} [inst_2 : DecidableEq C] {c₀ : C},
+  Becoming.Distinct cs →
+    Becoming.Distinct ks →
+      ¬f ∈ ks →
+        g ∈ ks →
+          ∀ {t : Nat},
+            T ≤ t →
+              t < T + n →
+                (Becoming.Flow.gradedDrawn W cap cs c₀ ks T n f g).givenFrom cs t g ≤ W.shortfall cap cs ks g t
+@Becoming.Flow.least_giving : ∀ {F C : Type} [inst : DecidableEq F] [DecidableEq C] {W : Becoming.Web F C}
+  [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {cap : Nat → F → Nat} {cs : List C},
+  Becoming.Distinct cs →
+    ∀ {c₀ : C},
+      c₀ ∈ cs →
+        ∀ {ks : List F},
+          Becoming.Distinct ks →
+            ∀ {T n : Nat} {f g : F},
+              ¬f ∈ ks →
+                g ∈ ks →
+                  (∀ (t : Nat), T ≤ t → t < T + n → W.active t f) →
+                    W.stock cs T < n →
+                      (∀ (L : Becoming.Flow F C),
+                          Becoming.Flow.FedOnlyWithin W cap cs (fun x => x ∈ ks) T n L →
+                            Becoming.Flow.DrawsPast cs T n (L, W) f →
+                              Becoming.total (Becoming.steps T n) (W.shortfall cap cs ks g) ≤
+                                Becoming.total (Becoming.steps T n) fun t => L.givenFrom cs t g) ∧
+                        ((∀ (t : Nat), T ≤ t → t < T + n → W.shortfall cap cs ks g t ≤ W.otherCapacity cap f t g) →
+                          ∃ L,
+                            Becoming.Flow.FedOnlyWithin W cap cs (fun x => x ∈ ks) T n L ∧
+                              Becoming.Flow.DrawsPast cs T n (L, W) f ∧
+                                (Becoming.total (Becoming.steps T n) fun t => L.givenFrom cs t g) =
+                                  Becoming.total (Becoming.steps T n) (W.shortfall cap cs ks g))
+@Becoming.Flow.needs_giver_iff_shortfalls_pos : ∀ {F C : Type} [inst : DecidableEq F] [DecidableEq C]
+  {W : Becoming.Web F C} [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {cap : Nat → F → Nat} {cs : List C},
+  Becoming.Distinct cs →
+    ∀ {c₀ : C},
+      c₀ ∈ cs →
+        ∀ {ks : List F},
+          Becoming.Distinct ks →
+            ∀ {T n : Nat} {f g : F},
+              ¬f ∈ ks →
+                (∀ (t : Nat), T ≤ t → t < T + n → W.active t f) →
+                  W.stock cs T < n →
+                    (Becoming.NeedsPart (Becoming.Flow.FedOnlyWithin W cap cs (fun x => x ∈ ks) T n)
+                        (fun L => Becoming.Flow.DrawsPast cs T n (L, W))
+                        (fun L => Becoming.Flow.GivesWithin cs T n (L, W)) f g ↔
+                      0 < Becoming.total (Becoming.steps T n) (W.shortfall cap cs ks g))
+@Becoming.needsPart_of_none : ∀ {F Ω : Type} {possible : Ω → Prop} {continues part : Ω → F → Prop} {f g : F},
+  (∀ (ω : Ω), possible ω → ¬continues ω f) → Becoming.NeedsPart possible continues part f g
+@Becoming.Flow.givenFrom_outside : ∀ {F C : Type} [inst : DecidableEq F] {W : Becoming.Web F C} {cap : Nat → F → Nat}
+  {cs : List C} {ks : List F} {T n : Nat} {f : F} {L : Becoming.Flow F C},
+  Becoming.Flow.FedOnlyWithin W cap cs (fun x => x ∈ ks) T n L → ¬f ∈ ks → ∀ (t : Nat), L.givenFrom cs t f = 0
+@Becoming.Flow.otherCapacity_split : ∀ {F C : Type} [inst : DecidableEq F] {W : Becoming.Web F C}
+  [inst_1 : (t : Nat) → (x : F) → Decidable (W.active t x)] {cap : Nat → F → Nat} {ks : List F} {f g : F},
+  ¬f ∈ ks →
+    ∀ (t : Nat) {h : F},
+      h ∈ ks → W.otherCapacity cap f t h = W.otherCapacity cap g t h + if h = g then W.otherCapacity cap f t g else 0
+@Becoming.Flow.capacityWithout_split : ∀ {F C : Type} [inst : DecidableEq F] {W : Becoming.Web F C}
+  [inst_1 : (t : Nat) → (x : F) → Decidable (W.active t x)] {cap : Nat → F → Nat} {ks : List F} {f g : F},
+  Becoming.Distinct ks →
+    ¬f ∈ ks →
+      g ∈ ks → ∀ (t : Nat), W.capacityWithout cap ks f t = W.capacityWithout cap ks g t + W.otherCapacity cap f t g
+@Becoming.Flow.able_of_covers : ∀ {F C : Type} [inst : DecidableEq F] {W : Becoming.Web F C}
+  [inst_1 : (t : Nat) → (x : F) → Decidable (W.active t x)] {cap : Nat → F → Nat} {cs : List C} {ks : List F} {f g : F},
+  Becoming.Distinct ks →
+    ¬f ∈ ks →
+      g ∈ ks →
+        ∀ {t : Nat},
+          W.demand cs t ≤ W.capacityWithout cap ks f t → W.shortfall cap cs ks g t ≤ W.otherCapacity cap f t g
+@Becoming.Flow.covers_of_drawsPast : ∀ {F C : Type} [inst : DecidableEq F] {W : Becoming.Web F C}
+  [inst_1 : (t : Nat) → (x : F) → Decidable (W.active t x)] {cap : Nat → F → Nat} {cs : List C} {ks : List F}
+  {T n : Nat} {f : F} {L : Becoming.Flow F C},
+  Becoming.Flow.FedOnlyWithin W cap cs (fun x => x ∈ ks) T n L →
+    ¬f ∈ ks →
+      ∀ {t : Nat},
+        T ≤ t →
+          t < T + n →
+            f ∈ L.present t → 0 < Becoming.total cs (L.take t f) → W.demand cs t ≤ W.capacityWithout cap ks f t
+@Becoming.Flow.needs_of_class_short : ∀ {F C : Type} [inst : DecidableEq F] {W : Becoming.Web F C}
+  [inst_1 : (t : Nat) → (x : F) → Decidable (W.active t x)] {cap : Nat → F → Nat} {cs : List C} {ks : List F}
+  {T n : Nat} {f : F},
+  ¬f ∈ ks →
+    ∀ {t : Nat},
+      T ≤ t →
+        t < T + n →
+          W.capacityWithout cap ks f t < W.demand cs t →
+            ∀ (h : F),
+              Becoming.NeedsPart (Becoming.Flow.FedOnlyWithin W cap cs (fun x => x ∈ ks) T n)
+                (fun L => Becoming.Flow.DrawsPast cs T n (L, W)) (fun L => Becoming.Flow.GivesWithin cs T n (L, W)) f h
+@Becoming.Flow.possible_iff_covers : ∀ {F C : Type} [inst : DecidableEq F] [DecidableEq C] {W : Becoming.Web F C}
+  [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {cap : Nat → F → Nat} {cs : List C},
+  Becoming.Distinct cs →
+    ∀ {c₀ : C},
+      c₀ ∈ cs →
+        ∀ {ks : List F},
+          Becoming.Distinct ks →
+            ∀ {T n : Nat} {f : F},
+              ¬f ∈ ks →
+                (∀ (t : Nat), T ≤ t → t < T + n → W.active t f) →
+                  W.stock cs T < n →
+                    ((∃ L,
+                        Becoming.Flow.FedOnlyWithin W cap cs (fun x => x ∈ ks) T n L ∧
+                          Becoming.Flow.DrawsPast cs T n (L, W) f) ↔
+                      ∀ (t : Nat), T ≤ t → t < T + n → W.demand cs t ≤ W.capacityWithout cap ks f t)
+@Becoming.Flow.least_giving_of_possible : ∀ {F C : Type} [inst : DecidableEq F] [DecidableEq C] {W : Becoming.Web F C}
+  [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {cap : Nat → F → Nat} {cs : List C},
+  Becoming.Distinct cs →
+    ∀ {c₀ : C},
+      c₀ ∈ cs →
+        ∀ {ks : List F},
+          Becoming.Distinct ks →
+            ∀ {T n : Nat} {f g : F},
+              ¬f ∈ ks →
+                g ∈ ks →
+                  (∀ (t : Nat), T ≤ t → t < T + n → W.active t f) →
+                    W.stock cs T < n →
+                      (∃ L,
+                          Becoming.Flow.FedOnlyWithin W cap cs (fun x => x ∈ ks) T n L ∧
+                            Becoming.Flow.DrawsPast cs T n (L, W) f) →
+                        ∃ L,
+                          Becoming.Flow.FedOnlyWithin W cap cs (fun x => x ∈ ks) T n L ∧
+                            Becoming.Flow.DrawsPast cs T n (L, W) f ∧
+                              (Becoming.total (Becoming.steps T n) fun t => L.givenFrom cs t g) =
+                                Becoming.total (Becoming.steps T n) (W.shortfall cap cs ks g)
+@Becoming.Flow.needsSome_without_end : ∀ {F C : Type} (W : Becoming.Web F C) (cs : List C) (K : F → Prop) (T : Nat)
+  (f : F) (L : Becoming.Flow F C),
+  (∀ (t : Nat), T ≤ t → L.BalancesOn W cs t) →
+    L.Acting W →
+      (∀ (t : Nat) (g : F) (c : C), c ∈ cs → g ∈ L.present t → 0 < L.give t g c → K g) →
+        (∀ (t : Nat), T ≤ t → W.active t f ∧ f ∈ L.present t ∧ 0 < Becoming.total cs (L.take t f)) →
+          ∀ (N : Nat), T ≤ N → ∃ g, K g ∧ Becoming.Flow.GivesWithin cs N (W.stock cs N + 1) (L, W) g
+@Becoming.Flow.gradedStoreDrawn_gives : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C]
+  {W : Becoming.Web F C} [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C} {cs : List C}
+  {c₀ : C} {ks : List F} {T n : Nat} {f g : F} {t : Nat} {x : F} {c : C},
+  0 < (Becoming.Flow.gradedStoreDrawn W store cs c₀ ks T n f g).give t x c → c ∈ cs ∧ x ∈ ks ∧ W.active t x ∧ x ≠ f
+@Becoming.Flow.gradedStoreDrawn_balancesOn : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C]
+  {W : Becoming.Web F C} [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C} {cs : List C}
+  {c₀ : C} {ks : List F} {T n : Nat} {f g : F},
+  Becoming.Distinct cs →
+    c₀ ∈ cs →
+      Becoming.Distinct ks →
+        ¬f ∈ ks →
+          g ∈ ks →
+            (∀ (h : F), h ∈ ks → ¬store h ∈ cs) →
+              (∀ (t : Nat),
+                  T ≤ t →
+                    t < T + n → W.shortfall (W.storeFall store) cs ks g t ≤ W.otherCapacity (W.storeFall store) f t g) →
+                ∀ (t : Nat),
+                  T ≤ t → t < T + n → (Becoming.Flow.gradedStoreDrawn W store cs c₀ ks T n f g).BalancesOn W cs t
+@Becoming.Flow.gradedStoreDrawn_balances_store : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C]
+  {W : Becoming.Web F C} [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C} {cs : List C}
+  {c₀ : C} {ks : List F} {T n : Nat} {f g : F},
+  Becoming.Distinct ks →
+    ¬f ∈ ks →
+      (∀ (h h' : F), h ∈ ks → h' ∈ ks → store h = store h' → h = h') →
+        (∀ (h : F), h ∈ ks → ¬store h ∈ cs) →
+          ∀ {t : Nat},
+            T ≤ t →
+              t < T + n →
+                ∀ {h : F},
+                  h ∈ ks →
+                    ¬W.Rises t (store h) →
+                      (Becoming.Flow.gradedStoreDrawn W store cs c₀ ks T n f g).BalancesOn W [store h] t
+@Becoming.Flow.gradedStoreDrawn_fedFromStores : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C]
+  {W : Becoming.Web F C} [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C} {cs : List C}
+  {c₀ : C} {ks : List F} {T n : Nat} {f g : F},
+  Becoming.Distinct cs →
+    c₀ ∈ cs →
+      Becoming.Distinct ks →
+        ¬f ∈ ks →
+          g ∈ ks →
+            (∀ (h h' : F), h ∈ ks → h' ∈ ks → store h = store h' → h = h') →
+              (∀ (h : F), h ∈ ks → ¬store h ∈ cs) →
+                (∀ (t : Nat), T ≤ t → t < T + n → ∀ (h : F), h ∈ ks → ¬W.Rises t (store h)) →
+                  (∀ (t : Nat),
+                      T ≤ t →
+                        t < T + n →
+                          W.shortfall (W.storeFall store) cs ks g t ≤ W.otherCapacity (W.storeFall store) f t g) →
+                    Becoming.Flow.FedFromStores W store cs ks T n
+                      (Becoming.Flow.gradedStoreDrawn W store cs c₀ ks T n f g)
+@Becoming.Flow.gradedStoreDrawn_drawsPast : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C]
+  {W : Becoming.Web F C} [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C} {cs : List C}
+  {c₀ : C} {ks : List F} {T n : Nat} {f g : F},
+  c₀ ∈ cs →
+    (∀ (t : Nat), T ≤ t → t < T + n → W.active t f) →
+      W.stock cs T < n → Becoming.Flow.DrawsPast cs T n (Becoming.Flow.gradedStoreDrawn W store cs c₀ ks T n f g, W) f
+@Becoming.Flow.gradedStoreDrawn_givenFrom_le : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C]
+  {W : Becoming.Web F C} [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C} {cs : List C}
+  {c₀ : C} {ks : List F} {T n : Nat} {f g : F},
+  Becoming.Distinct cs →
+    Becoming.Distinct ks →
+      ¬f ∈ ks →
+        g ∈ ks →
+          ∀ {t : Nat},
+            T ≤ t →
+              t < T + n →
+                (Becoming.Flow.gradedStoreDrawn W store cs c₀ ks T n f g).givenFrom cs t g ≤
+                  W.shortfall (W.storeFall store) cs ks g t
+@Becoming.Flow.least_giving_from_stores : ∀ {F C : Type} [inst : DecidableEq F] [DecidableEq C] {W : Becoming.Web F C}
+  [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C} {cs : List C},
+  Becoming.Distinct cs →
+    ∀ {c₀ : C},
+      c₀ ∈ cs →
+        ∀ {ks : List F},
+          Becoming.Distinct ks →
+            ∀ {T n : Nat} {f g : F},
+              ¬f ∈ ks →
+                g ∈ ks →
+                  (∀ (t : Nat), T ≤ t → t < T + n → W.active t f) →
+                    W.stock cs T < n →
+                      (∀ (h h' : F), h ∈ ks → h' ∈ ks → store h = store h' → h = h') →
+                        (∀ (h : F), h ∈ ks → ¬store h ∈ cs) →
+                          (∀ (t : Nat), T ≤ t → t < T + n → ∀ (h : F), h ∈ ks → ¬W.Rises t (store h)) →
+                            (∀ (L : Becoming.Flow F C),
+                                Becoming.Flow.FedFromStores W store cs ks T n L →
+                                  Becoming.Flow.DrawsPast cs T n (L, W) f →
+                                    Becoming.total (Becoming.steps T n) (W.shortfall (W.storeFall store) cs ks g) ≤
+                                      Becoming.total (Becoming.steps T n) fun t => L.givenFrom cs t g) ∧
+                              ((∀ (t : Nat),
+                                  T ≤ t →
+                                    t < T + n →
+                                      W.shortfall (W.storeFall store) cs ks g t ≤
+                                        W.otherCapacity (W.storeFall store) f t g) →
+                                ∃ L,
+                                  Becoming.Flow.FedFromStores W store cs ks T n L ∧
+                                    Becoming.Flow.DrawsPast cs T n (L, W) f ∧
+                                      (Becoming.total (Becoming.steps T n) fun t => L.givenFrom cs t g) =
+                                        Becoming.total (Becoming.steps T n) (W.shortfall (W.storeFall store) cs ks g))
+@Becoming.total_le_at_on : ∀ {α : Type} {q : α → Nat} {a : α} {as : List α},
+  (∀ (b : α), b ∈ as → 0 < q b → b = a) → Becoming.Distinct as → Becoming.total as q ≤ q a
+@Becoming.le_excess_of_add_le : ∀ {a b c : Nat}, a + b ≤ c → a ≤ Becoming.excess c b
+@Becoming.excess_add_of_le : ∀ {a b : Nat}, b ≤ a → Becoming.excess a b + b = a
+@Becoming.Flow.taken_store : ∀ {F C : Type} {W : Becoming.Web F C} {store : F → C} {L : Becoming.Flow F C} {t : Nat}
+  {h : F},
+  L.BalancesOn W [store h] t →
+    L.taken t (store h) = W.storeFall store t h + Becoming.excess (L.given t (store h)) (W.storeRise store t h)
+@Becoming.Flow.replenishment_le_taken : ∀ {F C : Type} [inst : DecidableEq F] {W : Becoming.Web F C}
+  [inst_1 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C} {cs : List C} {ks js : List F}
+  {cap₂ : Nat → F → Nat} {T n : Nat} {e : F} {L : Becoming.Flow F C},
+  Becoming.Flow.FedThroughStores W store cs ks js cap₂ T n L →
+    ∀ {t : Nat},
+      T ≤ t →
+        t < T + n →
+          (e ∈ L.present t → Becoming.total cs (L.give t e) = 0) →
+            L.replenishment cs t ≤ Becoming.total ks fun h => if W.active t h ∧ h ≠ e then L.taken t (store h) else 0
+@Becoming.Flow.stores_given_le : ∀ {F C : Type} [inst : DecidableEq F] {W : Becoming.Web F C}
+  [inst_1 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C} {cs : List C} {ks js : List F}
+  {cap₂ : Nat → F → Nat} {T n : Nat} {e : F} {L : Becoming.Flow F C},
+  Becoming.Flow.FedThroughStores W store cs ks js cap₂ T n L →
+    ∀ {t : Nat},
+      T ≤ t →
+        t < T + n →
+          (e ∈ L.present t → (Becoming.total ks fun h => L.give t e (store h)) = 0) →
+            (Becoming.total ks fun h => L.given t (store h)) ≤ W.capacityWithout cap₂ js e t
+@Becoming.Flow.storesRisen_le_given : ∀ {F C : Type} {W : Becoming.Web F C} {store : F → C} {cs : List C}
+  {ks js : List F} {cap₂ : Nat → F → Nat} {T n : Nat} {L : Becoming.Flow F C},
+  Becoming.Flow.FedThroughStores W store cs ks js cap₂ T n L →
+    ∀ {t : Nat}, T ≤ t → t < T + n → W.storesRisen store ks t ≤ Becoming.total ks fun h => L.given t (store h)
+@Becoming.Flow.storesRisen_le_capacity : ∀ {F C : Type} [inst : DecidableEq F] {W : Becoming.Web F C}
+  [inst_1 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C} {cs : List C} {ks js : List F}
+  {cap₂ : Nat → F → Nat} {T n : Nat} {e : F} {L : Becoming.Flow F C},
+  Becoming.Flow.FedThroughStores W store cs ks js cap₂ T n L →
+    ∀ {t : Nat},
+      T ≤ t →
+        t < T + n →
+          (e ∈ L.present t → (Becoming.total ks fun h => L.give t e (store h)) = 0) →
+            W.storesRisen store ks t ≤ W.capacityWithout cap₂ js e t
+@Becoming.Flow.replenishment_le_othersThrough : ∀ {F C : Type} [inst : DecidableEq F] {W : Becoming.Web F C}
+  [inst_1 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C} {cs : List C} {ks js : List F}
+  {cap₂ : Nat → F → Nat} {T n : Nat} {e : F} {L : Becoming.Flow F C},
+  Becoming.Flow.FedThroughStores W store cs ks js cap₂ T n L →
+    ∀ {t : Nat},
+      T ≤ t →
+        t < T + n →
+          (e ∈ L.present t → (Becoming.total cs (L.give t e) + Becoming.total ks fun h => L.give t e (store h)) = 0) →
+            L.replenishment cs t ≤ W.othersThrough store cap₂ ks js e t
+@Becoming.Flow.routed_zero : ∀ {F C : Type} [inst : DecidableEq F] {W : Becoming.Web F C}
+  [inst_1 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C} {cap₂ : Nat → F → Nat} {cs : List C}
+  {ks js : List F} {e : F} {t : Nat},
+  W.demand cs t ≤ W.othersThrough store cap₂ ks js e t → ¬W.RoutesAt ks e t → W.routed store cs ks e t = 0
+@Becoming.Flow.routed_le : ∀ {F C : Type} [inst : DecidableEq F] {W : Becoming.Web F C}
+  [inst_1 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C} {cap₂ : Nat → F → Nat} {cs : List C}
+  {ks js : List F} {e : F} {t : Nat},
+  W.demand cs t ≤ W.othersThrough store cap₂ ks js e t →
+    W.RoutesAt ks e t →
+      W.routed store cs ks e t ≤ Becoming.excess (W.capacityWithout cap₂ js e t) (W.storesRisen store ks t)
+@Becoming.Flow.router_of_routed : ∀ {F C : Type} [inst : DecidableEq F] {W : Becoming.Web F C}
+  [inst_1 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C} {cap₂ : Nat → F → Nat} {cs : List C}
+  {ks js : List F} {e : F} {t : Nat},
+  W.demand cs t ≤ W.othersThrough store cap₂ ks js e t →
+    0 < W.routed store cs ks e t →
+      Becoming.Flow.firstActiveOther W e t ks ∈ ks ∧
+        W.active t (Becoming.Flow.firstActiveOther W e t ks) ∧ Becoming.Flow.firstActiveOther W e t ks ≠ e
+@Becoming.Flow.storeNeed_total_le : ∀ {F C : Type} [inst : DecidableEq F] {W : Becoming.Web F C}
+  [inst_1 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C} {cap₂ : Nat → F → Nat} {cs : List C}
+  {ks js : List F} {e : F},
+  Becoming.Distinct ks →
+    ∀ {t : Nat},
+      W.storesRisen store ks t ≤ W.capacityWithout cap₂ js e t →
+        W.demand cs t ≤ W.othersThrough store cap₂ ks js e t →
+          Becoming.total ks (W.storeNeed store cs ks e t) ≤ W.capacityWithout cap₂ js e t
+@Becoming.Flow.routedGive_pos : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C] {W : Becoming.Web F C}
+  [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C} {cap₂ : Nat → F → Nat} {cs : List C}
+  {ks js : List F} {e : F} {t : Nat} {x : F} {c : C},
+  0 < W.routedGive store cap₂ cs ks js e t x c → (∃ h, h ∈ ks ∧ store h = c) ∧ x ∈ js ∧ W.active t x ∧ x ≠ e
+@Becoming.Flow.routedGive_family : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C] {W : Becoming.Web F C}
+  [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C} {cap₂ : Nat → F → Nat} {cs : List C}
+  {ks js : List F} {e : F},
+  (∀ (h : F), h ∈ ks → ¬store h ∈ cs) →
+    ∀ {t : Nat} {x : F} {c : C}, c ∈ cs → W.routedGive store cap₂ cs ks js e t x c = 0
+@Becoming.Flow.routedGive_store : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C] {W : Becoming.Web F C}
+  [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C} {cap₂ : Nat → F → Nat} {cs : List C}
+  {ks js : List F} {e : F},
+  Becoming.Distinct ks →
+    Becoming.Distinct js →
+      (∀ (h h' : F), h ∈ ks → h' ∈ ks → store h = store h' → h = h') →
+        ∀ {t : Nat},
+          W.storesRisen store ks t ≤ W.capacityWithout cap₂ js e t →
+            W.demand cs t ≤ W.othersThrough store cap₂ ks js e t →
+              ∀ {h : F},
+                h ∈ ks →
+                  (Becoming.total js fun x => W.routedGive store cap₂ cs ks js e t x (store h)) =
+                    W.storeNeed store cs ks e t h
+@Becoming.Flow.routedGive_le : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C] {W : Becoming.Web F C}
+  [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C} {cap₂ : Nat → F → Nat} {cs : List C}
+  {ks js : List F} {e : F},
+  Becoming.Distinct ks →
+    Becoming.Distinct js →
+      (∀ (h h' : F), h ∈ ks → h' ∈ ks → store h = store h' → h = h') →
+        ∀ (t : Nat) (x : F), (Becoming.total ks fun h => W.routedGive store cap₂ cs ks js e t x (store h)) ≤ cap₂ t x
+@Becoming.Flow.routedCapacity_covers : ∀ {F C : Type} [inst : DecidableEq F] {W : Becoming.Web F C}
+  [inst_1 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C} {cap₂ : Nat → F → Nat} {cs : List C}
+  {ks js : List F} {e : F} {t : Nat},
+  W.demand cs t ≤ W.othersThrough store cap₂ ks js e t →
+    W.demand cs t ≤ W.capacityWithout (W.routedCapacity store cs ks e) ks e t
+@Becoming.Flow.routedDrawn_give_family : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C]
+  {W : Becoming.Web F C} [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C}
+  {cap₂ : Nat → F → Nat} {cs : List C} {c₀ : C} {ks js : List F} {T n : Nat} {f e : F},
+  (∀ (h : F), h ∈ ks → ¬store h ∈ cs) →
+    ∀ {t : Nat} {x : F} {c : C},
+      c ∈ cs →
+        (Becoming.Flow.routedDrawn W store cap₂ cs c₀ ks js T n f e).give t x c =
+          (Becoming.Flow.sharedDrawn W (W.routedCapacity store cs ks e) cs c₀ ks T n f e).give t x c
+@Becoming.Flow.routedDrawn_give_store : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C]
+  {W : Becoming.Web F C} [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C}
+  {cap₂ : Nat → F → Nat} {cs : List C} {c₀ : C} {ks js : List F} {T n : Nat} {f e : F},
+  (∀ (h : F), h ∈ ks → ¬store h ∈ cs) →
+    ∀ {t : Nat} {x h : F},
+      h ∈ ks →
+        (Becoming.Flow.routedDrawn W store cap₂ cs c₀ ks js T n f e).give t x (store h) =
+          W.routedGive store cap₂ cs ks js e t x (store h)
+@Becoming.Flow.routedDrawn_balancesOn : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C]
+  {W : Becoming.Web F C} [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C}
+  {cap₂ : Nat → F → Nat} {cs : List C} {c₀ : C} {ks js : List F} {T n : Nat} {f e : F},
+  Becoming.Distinct cs →
+    c₀ ∈ cs →
+      Becoming.Distinct ks →
+        ¬f ∈ ks →
+          ¬f ∈ js →
+            (∀ (h : F), h ∈ ks → ¬h ∈ js) →
+              (∀ (h : F), h ∈ ks → ¬store h ∈ cs) →
+                (∀ (t : Nat), T ≤ t → t < T + n → W.demand cs t ≤ W.othersThrough store cap₂ ks js e t) →
+                  ∀ (t : Nat),
+                    T ≤ t → t < T + n → (Becoming.Flow.routedDrawn W store cap₂ cs c₀ ks js T n f e).BalancesOn W cs t
+@Becoming.Flow.routedDrawn_taken_store : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C]
+  {W : Becoming.Web F C} [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C}
+  {cap₂ : Nat → F → Nat} {cs : List C} {c₀ : C} {ks js : List F} {T n : Nat} {f e : F},
+  Becoming.Distinct ks →
+    ¬f ∈ ks →
+      (∀ (h : F), h ∈ ks → ¬h ∈ js) →
+        (∀ (h h' : F), h ∈ ks → h' ∈ ks → store h = store h' → h = h') →
+          (∀ (h : F), h ∈ ks → ¬store h ∈ cs) →
+            ∀ {t : Nat},
+              T ≤ t →
+                t < T + n →
+                  ∀ {h : F},
+                    h ∈ ks →
+                      (Becoming.Flow.routedDrawn W store cap₂ cs c₀ ks js T n f e).taken t (store h) =
+                        W.routedCapacity store cs ks e t h
+@Becoming.Flow.routedDrawn_given_store : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C]
+  {W : Becoming.Web F C} [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C}
+  {cap₂ : Nat → F → Nat} {cs : List C} {c₀ : C} {ks js : List F} {T n : Nat} {f e : F},
+  Becoming.Distinct ks →
+    Becoming.Distinct js →
+      ¬f ∈ js →
+        (∀ (h : F), h ∈ ks → ¬h ∈ js) →
+          (∀ (h h' : F), h ∈ ks → h' ∈ ks → store h = store h' → h = h') →
+            (∀ (h : F), h ∈ ks → ¬store h ∈ cs) →
+              ∀ {t : Nat},
+                T ≤ t →
+                  t < T + n →
+                    W.storesRisen store ks t ≤ W.capacityWithout cap₂ js e t →
+                      W.demand cs t ≤ W.othersThrough store cap₂ ks js e t →
+                        ∀ {h : F},
+                          h ∈ ks →
+                            (Becoming.Flow.routedDrawn W store cap₂ cs c₀ ks js T n f e).given t (store h) =
+                              W.storeNeed store cs ks e t h
+@Becoming.Flow.routedDrawn_balances_store : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C]
+  {W : Becoming.Web F C} [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C}
+  {cap₂ : Nat → F → Nat} {cs : List C} {c₀ : C} {ks js : List F} {T n : Nat} {f e : F},
+  Becoming.Distinct ks →
+    Becoming.Distinct js →
+      ¬f ∈ ks →
+        ¬f ∈ js →
+          (∀ (h : F), h ∈ ks → ¬h ∈ js) →
+            (∀ (h h' : F), h ∈ ks → h' ∈ ks → store h = store h' → h = h') →
+              (∀ (h : F), h ∈ ks → ¬store h ∈ cs) →
+                ∀ {t : Nat},
+                  T ≤ t →
+                    t < T + n →
+                      W.storesRisen store ks t ≤ W.capacityWithout cap₂ js e t →
+                        W.demand cs t ≤ W.othersThrough store cap₂ ks js e t →
+                          ∀ {h : F},
+                            h ∈ ks →
+                              (Becoming.Flow.routedDrawn W store cap₂ cs c₀ ks js T n f e).BalancesOn W [store h] t
+@Becoming.Flow.routedDrawn_fedThroughStores : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C]
+  {W : Becoming.Web F C} [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C}
+  {cap₂ : Nat → F → Nat} {cs : List C} {c₀ : C} {ks js : List F} {T n : Nat} {f e : F},
+  Becoming.Distinct cs →
+    c₀ ∈ cs →
+      Becoming.Distinct ks →
+        Becoming.Distinct js →
+          ¬f ∈ ks →
+            ¬f ∈ js →
+              (∀ (h : F), h ∈ ks → ¬h ∈ js) →
+                (∀ (h h' : F), h ∈ ks → h' ∈ ks → store h = store h' → h = h') →
+                  (∀ (h : F), h ∈ ks → ¬store h ∈ cs) →
+                    (∀ (t : Nat), T ≤ t → t < T + n → W.storesRisen store ks t ≤ W.capacityWithout cap₂ js e t) →
+                      (∀ (t : Nat), T ≤ t → t < T + n → W.demand cs t ≤ W.othersThrough store cap₂ ks js e t) →
+                        Becoming.Flow.FedThroughStores W store cs ks js cap₂ T n
+                          (Becoming.Flow.routedDrawn W store cap₂ cs c₀ ks js T n f e)
+@Becoming.Flow.routedDrawn_drawsPast : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C]
+  {W : Becoming.Web F C} [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C}
+  {cap₂ : Nat → F → Nat} {cs : List C} {c₀ : C} {ks js : List F} {T n : Nat} {f e : F},
+  c₀ ∈ cs →
+    (∀ (t : Nat), T ≤ t → t < T + n → W.active t f) →
+      W.stock cs T < n →
+        Becoming.Flow.DrawsPast cs T n (Becoming.Flow.routedDrawn W store cap₂ cs c₀ ks js T n f e, W) f
+@Becoming.Flow.routedDrawn_not_gives : ∀ {F C : Type} [inst : DecidableEq F] [inst_1 : DecidableEq C]
+  {W : Becoming.Web F C} [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C}
+  {cap₂ : Nat → F → Nat} {cs : List C} {c₀ : C} {ks js : List F} {T n : Nat} {f e : F},
+  Becoming.Distinct cs →
+    Becoming.Distinct ks →
+      (∀ (h : F), h ∈ ks → ¬store h ∈ cs) →
+        ¬Becoming.Flow.GivesInto cs ks store T n (Becoming.Flow.routedDrawn W store cap₂ cs c₀ ks js T n f e, W) e
+@Becoming.Flow.needs_iff_through_short : ∀ {F C : Type} [inst : DecidableEq F] [DecidableEq C] {W : Becoming.Web F C}
+  [inst_2 : (t : Nat) → (x : F) → Decidable (W.active t x)] {store : F → C} {cap₂ : Nat → F → Nat} {cs : List C},
+  Becoming.Distinct cs →
+    ∀ {c₀ : C},
+      c₀ ∈ cs →
+        ∀ {ks js : List F},
+          Becoming.Distinct ks →
+            Becoming.Distinct js →
+              (∀ (h : F), h ∈ ks → ¬h ∈ js) →
+                ∀ {T n : Nat} {f e : F},
+                  ¬f ∈ ks →
+                    ¬f ∈ js →
+                      (∀ (t : Nat), T ≤ t → t < T + n → W.active t f) →
+                        W.stock cs T < n →
+                          (∀ (h h' : F), h ∈ ks → h' ∈ ks → store h = store h' → h = h') →
+                            (∀ (h : F), h ∈ ks → ¬store h ∈ cs) →
+                              (Becoming.NeedsPart (Becoming.Flow.FedThroughStores W store cs ks js cap₂ T n)
+                                  (fun L => Becoming.Flow.DrawsPast cs T n (L, W))
+                                  (fun L => Becoming.Flow.GivesInto cs ks store T n (L, W)) f e ↔
+                                ∃ t,
+                                  T ≤ t ∧
+                                    t < T + n ∧
+                                      (W.capacityWithout cap₂ js e t < W.storesRisen store ks t ∨
+                                        W.othersThrough store cap₂ ks js e t < W.demand cs t))
+@Becoming.Flow.active_of_givesWithin : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Acting W →
+    ∀ {cs : List C} {T n : Nat} {e : F},
+      Becoming.Flow.GivesWithin cs T n (L, W) e → ∃ t, T ≤ t ∧ t < T + n ∧ W.active t e
+@Becoming.Flow.active_of_givesInto : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Acting W →
+    ∀ {cs : List C} {ks : List F} {store : F → C} {T n : Nat} {e : F},
+      Becoming.Flow.GivesInto cs ks store T n (L, W) e → ∃ t, T ≤ t ∧ t < T + n ∧ W.active t e
+@Becoming.Flow.needs_iff_none_of_inactive : ∀ {F C : Type} {W : Becoming.Web F C} {possible : Becoming.Flow F C → Prop},
+  (∀ (L : Becoming.Flow F C), possible L → L.Acting W) →
+    ∀ {cs : List C} {T n : Nat} {f e : F},
+      (∀ (t : Nat), T ≤ t → t < T + n → ¬W.active t e) →
+        (Becoming.NeedsPart possible (fun L => Becoming.Flow.DrawsPast cs T n (L, W))
+            (fun L => Becoming.Flow.GivesWithin cs T n (L, W)) f e ↔
+          ¬∃ L, possible L ∧ Becoming.Flow.DrawsPast cs T n (L, W) f)
+@Becoming.Flow.needs_into_iff_none_of_inactive : ∀ {F C : Type} {W : Becoming.Web F C} {store : F → C} {cs : List C}
+  {ks js : List F} {cap₂ : Nat → F → Nat} {T n : Nat} {f e : F},
+  (∀ (t : Nat), T ≤ t → t < T + n → ¬W.active t e) →
+    (Becoming.NeedsPart (Becoming.Flow.FedThroughStores W store cs ks js cap₂ T n)
+        (fun L => Becoming.Flow.DrawsPast cs T n (L, W)) (fun L => Becoming.Flow.GivesInto cs ks store T n (L, W)) f e ↔
+      ¬∃ L, Becoming.Flow.FedThroughStores W store cs ks js cap₂ T n L ∧ Becoming.Flow.DrawsPast cs T n (L, W) f)
+@Becoming.Flow.gives_of_withinFeedingUpTo : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {f : F}
+  {T : Nat} {g : F}, L.WithinFeedingUpTo W f T g → g = f ∨ ∃ s, s ≤ T ∧ g ∈ L.present s ∧ ∃ c, 0 < L.give s g c
+@Becoming.Flow.active_of_withinFeedingUpTo : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Acting W → ∀ {f : F} {T : Nat} {g : F}, L.WithinFeedingUpTo W f T g → g = f ∨ ∃ s, s ≤ T ∧ W.active s g
+@Becoming.Flow.withinFeeding_of_upTo : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {f : F} {T : Nat}
+  {g : F}, L.WithinFeedingUpTo W f T g → L.WithinFeeding W f g
+@Becoming.Feeders.mem_pair : ∀ {x a b : Becoming.Copies.Part}, x ∈ [a, b] → x = a ∨ x = b
+Becoming.Feeders.fedOnlyBy_withFirst : Becoming.Flow.FedOnlyBy [()] Becoming.Copies.copies
+  (Becoming.Feeders.withFirst, Becoming.Feeders.web)
+Becoming.Feeders.fedOnlyBy_withSecond : Becoming.Flow.FedOnlyBy [()] Becoming.Copies.copies
+  (Becoming.Feeders.withSecond, Becoming.Feeders.web)
+Becoming.Feeders.drawsPast_withFirst : Becoming.Flow.DrawsPast [()] 0 1
+  (Becoming.Feeders.withFirst, Becoming.Feeders.web) Becoming.Copies.Part.user
+Becoming.Feeders.drawsPast_withSecond : Becoming.Flow.DrawsPast [()] 0 1
+  (Becoming.Feeders.withSecond, Becoming.Feeders.web) Becoming.Copies.Part.user
+Becoming.Feeders.partAlone : Becoming.PartAlone (Becoming.Flow.FedOnlyBy [()] Becoming.Copies.copies)
+  (Becoming.Flow.DrawsPast [()] 0 1) (Becoming.Flow.GivesWithin [()] 0 1) Becoming.Copies.Part.user
+  Becoming.Copies.copies
+Becoming.Feeders.two_feeders : Becoming.NeedsSomePart (Becoming.Flow.FedOnlyBy [()] Becoming.Copies.copies)
+    (Becoming.Flow.DrawsPast [()] 0 1) (Becoming.Flow.GivesWithin [()] 0 1) Becoming.Copies.Part.user
+    Becoming.Copies.copies ∧
+  ¬Becoming.NeedsPart (Becoming.Flow.FedOnlyBy [()] Becoming.Copies.copies) (Becoming.Flow.DrawsPast [()] 0 1)
+        (Becoming.Flow.GivesWithin [()] 0 1) Becoming.Copies.Part.user Becoming.Copies.Part.first ∧
+    ¬Becoming.NeedsPart (Becoming.Flow.FedOnlyBy [()] Becoming.Copies.copies) (Becoming.Flow.DrawsPast [()] 0 1)
+        (Becoming.Flow.GivesWithin [()] 0 1) Becoming.Copies.Part.user Becoming.Copies.Part.second
+Becoming.Feeders.user_outside : ¬Becoming.Copies.Part.user ∈ [Becoming.Copies.Part.first, Becoming.Copies.Part.second]
+Becoming.Feeders.two_feeders_on : ¬Becoming.NeedsPart
+      (Becoming.Flow.FedOnlyOn Becoming.Feeders.web [()]
+        (fun x => x ∈ [Becoming.Copies.Part.first, Becoming.Copies.Part.second]) 0 1)
+      (fun L => Becoming.Flow.DrawsPast [()] 0 1 (L, Becoming.Feeders.web))
+      (fun L => Becoming.Flow.GivesWithin [()] 0 1 (L, Becoming.Feeders.web)) Becoming.Copies.Part.user
+      Becoming.Copies.Part.first ∧
+  ¬Becoming.NeedsPart
+      (Becoming.Flow.FedOnlyOn Becoming.Feeders.web [()]
+        (fun x => x ∈ [Becoming.Copies.Part.first, Becoming.Copies.Part.second]) 0 1)
+      (fun L => Becoming.Flow.DrawsPast [()] 0 1 (L, Becoming.Feeders.web))
+      (fun L => Becoming.Flow.GivesWithin [()] 0 1 (L, Becoming.Feeders.web)) Becoming.Copies.Part.user
+      Becoming.Copies.Part.second
+Becoming.FeedersInTurn.calls : ∀ (t : Nat), Becoming.FeedersInTurn.web.CallsForGiving [()] t
+Becoming.FeedersInTurn.needs_both : Becoming.NeedsPart
+    (Becoming.Flow.FedOnlyOn Becoming.FeedersInTurn.web [()]
+      (fun x => x ∈ [Becoming.Copies.Part.first, Becoming.Copies.Part.second]) 0 2)
+    (fun L => Becoming.Flow.DrawsPast [()] 0 2 (L, Becoming.FeedersInTurn.web))
+    (fun L => Becoming.Flow.GivesWithin [()] 0 2 (L, Becoming.FeedersInTurn.web)) Becoming.Copies.Part.user
+    Becoming.Copies.Part.first ∧
+  Becoming.NeedsPart
+    (Becoming.Flow.FedOnlyOn Becoming.FeedersInTurn.web [()]
+      (fun x => x ∈ [Becoming.Copies.Part.first, Becoming.Copies.Part.second]) 0 2)
+    (fun L => Becoming.Flow.DrawsPast [()] 0 2 (L, Becoming.FeedersInTurn.web))
+    (fun L => Becoming.Flow.GivesWithin [()] 0 2 (L, Becoming.FeedersInTurn.web)) Becoming.Copies.Part.user
+    Becoming.Copies.Part.second
+Becoming.Capacities.excess_succ : ∀ (t : Nat), Becoming.excess (t + 1) t = 1
+Becoming.Capacities.steady : ∀ (t : Nat), ¬∃ d, d ∈ [()] ∧ Becoming.Capacities.web.Falls t d
+Becoming.Capacities.demand_two : ∀ (t : Nat), Becoming.Capacities.web.demand [()] t = 2
+Becoming.Capacities.calls : ∀ (t : Nat), Becoming.Capacities.web.CallsForGiving [()] t
+Becoming.Capacities.distinct : Becoming.Distinct [()]
+Becoming.Capacities.second_alone_first_not : (∃ L,
+    Becoming.Flow.FedOnlyWithin Becoming.Capacities.web Becoming.Capacities.cap [()]
+        (fun x => x ∈ [Becoming.Copies.Part.first, Becoming.Copies.Part.second]) 0 1 L ∧
+      Becoming.Flow.DrawsPast [()] 0 1 (L, Becoming.Capacities.web) Becoming.Copies.Part.user ∧
+        Becoming.Flow.GivesWithin [()] 0 1 (L, Becoming.Capacities.web) Becoming.Copies.Part.second ∧
+          ∀ (h : Becoming.Copies.Part),
+            h ∈ [Becoming.Copies.Part.first, Becoming.Copies.Part.second] →
+              Becoming.Flow.GivesWithin [()] 0 1 (L, Becoming.Capacities.web) h → h = Becoming.Copies.Part.second) ∧
+  ¬∃ L,
+      Becoming.Flow.FedOnlyWithin Becoming.Capacities.web Becoming.Capacities.cap [()]
+          (fun x => x ∈ [Becoming.Copies.Part.first, Becoming.Copies.Part.second]) 0 1 L ∧
+        Becoming.Flow.DrawsPast [()] 0 1 (L, Becoming.Capacities.web) Becoming.Copies.Part.user ∧
+          Becoming.Flow.GivesWithin [()] 0 1 (L, Becoming.Capacities.web) Becoming.Copies.Part.first ∧
+            ∀ (h : Becoming.Copies.Part),
+              h ∈ [Becoming.Copies.Part.first, Becoming.Copies.Part.second] →
+                Becoming.Flow.GivesWithin [()] 0 1 (L, Becoming.Capacities.web) h → h = Becoming.Copies.Part.first
+Becoming.Capacities.needs_second : Becoming.NeedsPart
+  (Becoming.Flow.FedOnlyWithin Becoming.Capacities.web Becoming.Capacities.cap [()]
+    (fun x => x ∈ [Becoming.Copies.Part.first, Becoming.Copies.Part.second]) 0 1)
+  (fun L => Becoming.Flow.DrawsPast [()] 0 1 (L, Becoming.Capacities.web))
+  (fun L => Becoming.Flow.GivesWithin [()] 0 1 (L, Becoming.Capacities.web)) Becoming.Copies.Part.user
+  Becoming.Copies.Part.second
+Becoming.Capacities.not_needs_first : ¬Becoming.NeedsPart
+    (Becoming.Flow.FedOnlyWithin Becoming.Capacities.web Becoming.Capacities.cap [()]
+      (fun x => x ∈ [Becoming.Copies.Part.first, Becoming.Copies.Part.second]) 0 1)
+    (fun L => Becoming.Flow.DrawsPast [()] 0 1 (L, Becoming.Capacities.web))
+    (fun L => Becoming.Flow.GivesWithin [()] 0 1 (L, Becoming.Capacities.web)) Becoming.Copies.Part.user
+    Becoming.Copies.Part.first
+Becoming.Capacities.jointly_feeds : Becoming.Flow.FedOnlyWithin Becoming.Capacities.web Becoming.Capacities.capOne [()]
+    (fun x => x ∈ [Becoming.Copies.Part.first, Becoming.Copies.Part.second]) 0 1 Becoming.Capacities.jointly ∧
+  Becoming.Flow.DrawsPast [()] 0 1 (Becoming.Capacities.jointly, Becoming.Capacities.web) Becoming.Copies.Part.user
+Becoming.Capacities.neither_alone : ¬Becoming.Capacities.web.CanFeedAlone Becoming.Capacities.capOne [()] 0 1
+      Becoming.Copies.Part.first ∧
+  ¬Becoming.Capacities.web.CanFeedAlone Becoming.Capacities.capOne [()] 0 1 Becoming.Copies.Part.second
+Becoming.Capacities.needs_both : Becoming.NeedsPart
+    (Becoming.Flow.FedOnlyWithin Becoming.Capacities.web Becoming.Capacities.capOne [()]
+      (fun x => x ∈ [Becoming.Copies.Part.first, Becoming.Copies.Part.second]) 0 1)
+    (fun L => Becoming.Flow.DrawsPast [()] 0 1 (L, Becoming.Capacities.web))
+    (fun L => Becoming.Flow.GivesWithin [()] 0 1 (L, Becoming.Capacities.web)) Becoming.Copies.Part.user
+    Becoming.Copies.Part.first ∧
+  Becoming.NeedsPart
+    (Becoming.Flow.FedOnlyWithin Becoming.Capacities.web Becoming.Capacities.capOne [()]
+      (fun x => x ∈ [Becoming.Copies.Part.first, Becoming.Copies.Part.second]) 0 1)
+    (fun L => Becoming.Flow.DrawsPast [()] 0 1 (L, Becoming.Capacities.web))
+    (fun L => Becoming.Flow.GivesWithin [()] 0 1 (L, Becoming.Capacities.web)) Becoming.Copies.Part.user
+    Becoming.Copies.Part.second
+Becoming.SharedCopies.cap_le_one : ∀ (t x : Nat), Becoming.SharedCopies.cap t x ≤ 1
+Becoming.SharedCopies.steady : ∀ (t : Nat), ¬∃ d, d ∈ [()] ∧ Becoming.SharedCopies.web.Falls t d
+Becoming.SharedCopies.demand_two : ∀ (t : Nat), Becoming.SharedCopies.web.demand [()] t = 2
+Becoming.SharedCopies.calls : ∀ (t : Nat), Becoming.SharedCopies.web.CallsForGiving [()] t
+Becoming.SharedCopies.distinct : Becoming.Distinct [()]
+Becoming.SharedCopies.apart : Becoming.Distinct [1, 2, 3]
+Becoming.SharedCopies.user_outside : ¬0 ∈ [1, 2, 3]
+@Becoming.SharedCopies.without_two : ∀ {g : Nat},
+  g ∈ [1, 2, 3] → ∀ (t : Nat), Becoming.SharedCopies.web.capacityWithout Becoming.SharedCopies.cap [1, 2, 3] g t = 2
+Becoming.SharedCopies.none_alone : ∀ (g : Nat),
+  ¬Becoming.SharedCopies.web.CanFeedAlone Becoming.SharedCopies.cap [()] 0 1 g
+Becoming.SharedCopies.needs_some : Becoming.NeedsSomePart
+  (Becoming.Flow.FedOnlyWithin Becoming.SharedCopies.web Becoming.SharedCopies.cap [()] (fun x => x ∈ [1, 2, 3]) 0 1)
+  (fun L => Becoming.Flow.DrawsPast [()] 0 1 (L, Becoming.SharedCopies.web))
+  (fun L => Becoming.Flow.GivesWithin [()] 0 1 (L, Becoming.SharedCopies.web)) 0 fun x => x ∈ [1, 2, 3]
+@Becoming.SharedCopies.none_needed : ∀ {g : Nat},
+  g ∈ [1, 2, 3] →
+    ¬Becoming.NeedsPart
+        (Becoming.Flow.FedOnlyWithin Becoming.SharedCopies.web Becoming.SharedCopies.cap [()] (fun x => x ∈ [1, 2, 3]) 0
+          1)
+        (fun L => Becoming.Flow.DrawsPast [()] 0 1 (L, Becoming.SharedCopies.web))
+        (fun L => Becoming.Flow.GivesWithin [()] 0 1 (L, Becoming.SharedCopies.web)) 0 g
+Becoming.TwoTiers.drawn_not_supply : ¬Becoming.TwoTiers.Place.drawn ∈ [Becoming.TwoTiers.Place.supply]
+Becoming.TwoTiers.possible : Becoming.Flow.FedThroughTiers Becoming.TwoTiers.web [Becoming.TwoTiers.Place.drawn]
+    [[Becoming.TwoTiers.Place.supply]] (fun x => x = Becoming.TwoTiers.Part.source) 0 1 Becoming.TwoTiers.chain ∧
+  Becoming.Flow.DrawsPastTiers [Becoming.TwoTiers.Place.drawn] [[Becoming.TwoTiers.Place.supply]] 0 1
+    (Becoming.TwoTiers.chain, Becoming.TwoTiers.web) Becoming.TwoTiers.Part.user
+Becoming.TwoTiers.needs_source : Becoming.NeedsPart
+  (Becoming.Flow.FedThroughTiers Becoming.TwoTiers.web [Becoming.TwoTiers.Place.drawn]
+    [[Becoming.TwoTiers.Place.supply]] (fun x => x = Becoming.TwoTiers.Part.source) 0 1)
+  (fun L =>
+    Becoming.Flow.DrawsPastTiers [Becoming.TwoTiers.Place.drawn] [[Becoming.TwoTiers.Place.supply]] 0 1
+      (L, Becoming.TwoTiers.web))
+  (fun L => Becoming.Flow.GivesWithin [Becoming.TwoTiers.Place.supply] 0 1 (L, Becoming.TwoTiers.web))
+  Becoming.TwoTiers.Part.user Becoming.TwoTiers.Part.source
+Becoming.OwnStores.distinct : Becoming.Distinct [0]
+Becoming.OwnStores.apart : Becoming.Distinct [1, 2]
+Becoming.OwnStores.user_outside : ¬0 ∈ [1, 2]
+Becoming.OwnStores.own : ∀ (h h' : Nat),
+  h ∈ [1, 2] → h' ∈ [1, 2] → Becoming.OwnStores.store h = Becoming.OwnStores.store h' → h = h'
+Becoming.OwnStores.separate : ∀ (h : Nat), h ∈ [1, 2] → ¬Becoming.OwnStores.store h ∈ [0]
+Becoming.OwnStores.first_steady : ∀ (t : Nat), t < 0 + 3 → ¬Becoming.OwnStores.web.Rises t (Becoming.OwnStores.store 1)
+Becoming.OwnStores.second_steady : ∀ (t : Nat), t < 0 + 3 → ¬Becoming.OwnStores.web.Rises t (Becoming.OwnStores.store 2)
+Becoming.OwnStores.steady : ∀ (t : Nat),
+  0 ≤ t → t < 0 + 3 → ∀ (h : Nat), h ∈ [1, 2] → ¬Becoming.OwnStores.web.Rises t (Becoming.OwnStores.store h)
+Becoming.OwnStores.second_store_spent : ∀ (t : Nat),
+  1 ≤ t → Becoming.OwnStores.web.storeFall Becoming.OwnStores.store t 2 = 0
+@Becoming.OwnStores.second_spent : ∀ {L : Becoming.Flow Nat Nat},
+  Becoming.Flow.FedFromStores Becoming.OwnStores.web Becoming.OwnStores.store [0] [1, 2] 0 3 L →
+    ∀ {t : Nat}, 1 ≤ t → t < 0 + 3 → 2 ∈ L.present t → Becoming.total [0] (L.give t 2) = 0
+Becoming.OwnStores.needs_first : Becoming.NeedsPart
+  (Becoming.Flow.FedFromStores Becoming.OwnStores.web Becoming.OwnStores.store [0] [1, 2] 0 3)
+  (fun L => Becoming.Flow.DrawsPast [0] 0 3 (L, Becoming.OwnStores.web))
+  (fun L => Becoming.Flow.GivesWithin [0] 0 3 (L, Becoming.OwnStores.web)) 0 1
+Becoming.OwnStores.not_needs_second : ¬Becoming.NeedsPart
+    (Becoming.Flow.FedFromStores Becoming.OwnStores.web Becoming.OwnStores.store [0] [1, 2] 0 3)
+    (fun L => Becoming.Flow.DrawsPast [0] 0 3 (L, Becoming.OwnStores.web))
+    (fun L => Becoming.Flow.GivesWithin [0] 0 3 (L, Becoming.OwnStores.web)) 0 2
+Becoming.Capacities.copies_apart : Becoming.Distinct [Becoming.Copies.Part.first, Becoming.Copies.Part.second]
+Becoming.Capacities.second_in_degree : (∀ (L : Becoming.Flow Becoming.Copies.Part Unit),
+    Becoming.Flow.FedOnlyWithin Becoming.Capacities.web Becoming.Capacities.cap [()]
+        (fun x => x ∈ [Becoming.Copies.Part.first, Becoming.Copies.Part.second]) 0 1 L →
+      Becoming.Flow.DrawsPast [()] 0 1 (L, Becoming.Capacities.web) Becoming.Copies.Part.user →
+        1 ≤ Becoming.total (Becoming.steps 0 1) fun t => L.givenFrom [()] t Becoming.Copies.Part.second) ∧
+  (∃ L,
+      Becoming.Flow.FedOnlyWithin Becoming.Capacities.web Becoming.Capacities.cap [()]
+          (fun x => x ∈ [Becoming.Copies.Part.first, Becoming.Copies.Part.second]) 0 1 L ∧
+        Becoming.Flow.DrawsPast [()] 0 1 (L, Becoming.Capacities.web) Becoming.Copies.Part.user ∧
+          (Becoming.total (Becoming.steps 0 1) fun t => L.givenFrom [()] t Becoming.Copies.Part.second) = 1) ∧
+    Becoming.total (Becoming.steps 0 1)
+        (Becoming.Capacities.web.shortfall Becoming.Capacities.cap [()]
+          [Becoming.Copies.Part.first, Becoming.Copies.Part.second] Becoming.Copies.Part.first) =
+      0
+Becoming.FeedersInTurn.possible : Becoming.Flow.FedOnlyOn Becoming.FeedersInTurn.web [()]
+    (fun x => x ∈ [Becoming.Copies.Part.first, Becoming.Copies.Part.second]) 0 2
+    (Becoming.Flow.drawnAcross Becoming.FeedersInTurn.web [()] 0 2 Becoming.Copies.Part.user
+      Becoming.FeedersInTurn.turn) ∧
+  Becoming.Flow.DrawsPast [()] 0 2
+    (Becoming.Flow.drawnAcross Becoming.FeedersInTurn.web [()] 0 2 Becoming.Copies.Part.user
+        Becoming.FeedersInTurn.turn,
+      Becoming.FeedersInTurn.web)
+    Becoming.Copies.Part.user
+Becoming.OwnStores.first_in_degree : (∀ (L : Becoming.Flow Nat Nat),
+    Becoming.Flow.FedFromStores Becoming.OwnStores.web Becoming.OwnStores.store [0] [1, 2] 0 3 L →
+      Becoming.Flow.DrawsPast [0] 0 3 (L, Becoming.OwnStores.web) 0 →
+        2 ≤ Becoming.total (Becoming.steps 0 3) fun t => L.givenFrom [0] t 1) ∧
+  (∃ L,
+      Becoming.Flow.FedFromStores Becoming.OwnStores.web Becoming.OwnStores.store [0] [1, 2] 0 3 L ∧
+        Becoming.Flow.DrawsPast [0] 0 3 (L, Becoming.OwnStores.web) 0 ∧
+          (Becoming.total (Becoming.steps 0 3) fun t => L.givenFrom [0] t 1) = 2) ∧
+    Becoming.total (Becoming.steps 0 3)
+        (Becoming.OwnStores.web.shortfall (Becoming.OwnStores.web.storeFall Becoming.OwnStores.store) [0] [1, 2] 2) =
+      0
+@Becoming.Routing.absent : ∀ {a b : Nat} {l : List Nat}, a ≠ b → ¬a ∈ l → ¬a ∈ b :: l
+@Becoming.Routing.absent_nil : ∀ {a : Nat}, ¬a ∈ []
+@Becoming.Routing.every : ∀ {P : Nat → Prop} {b : Nat} {l : List Nat},
+  P b → (∀ (h : Nat), h ∈ l → P h) → ∀ (h : Nat), h ∈ b :: l → P h
+@Becoming.Routing.every_nil : ∀ {P : Nat → Prop} (h : Nat), h ∈ [] → P h
+Becoming.Routing.distinct : Becoming.Distinct [0]
+Becoming.Routing.apart_one : Becoming.Distinct [1]
+Becoming.Routing.apart_two : Becoming.Distinct [1, 2]
+Becoming.Routing.apart_three : Becoming.Distinct [3]
+Becoming.Routing.apart_four : Becoming.Distinct [3, 4]
+Becoming.Routing.tiers : ∀ (h : Nat), h ∈ [1, 2] → ¬h ∈ [3, 4]
+Becoming.Routing.tiers_three : ∀ (h : Nat), h ∈ [1, 2] → ¬h ∈ [3]
+Becoming.Routing.tiers_one : ∀ (h : Nat), h ∈ [1] → ¬h ∈ [3]
+@Becoming.Routing.own : ∀ {ks : List Nat} (h h' : Nat),
+  h ∈ ks → h' ∈ ks → Becoming.Routing.store h = Becoming.Routing.store h' → h = h'
+Becoming.Routing.separate : ∀ (h : Nat), h ∈ [1, 2] → ¬Becoming.Routing.store h ∈ [0]
+Becoming.Routing.separate_one : ∀ (h : Nat), h ∈ [1] → ¬Becoming.Routing.store h ∈ [0]
+Becoming.Routing.top_needed : Becoming.NeedsPart
+  (Becoming.Flow.FedThroughStores Becoming.Routing.still Becoming.Routing.store [0] [1, 2] [3] Becoming.Routing.cap 0 1)
+  (fun L => Becoming.Flow.DrawsPast [0] 0 1 (L, Becoming.Routing.still))
+  (fun L => Becoming.Flow.GivesInto [0] [1, 2] Becoming.Routing.store 0 1 (L, Becoming.Routing.still)) 0 3
+@Becoming.Routing.still_law : ∀ {ks js : List Nat},
+  Becoming.Distinct ks →
+    Becoming.Distinct js →
+      (∀ (h : Nat), h ∈ ks → ¬h ∈ js) →
+        ¬0 ∈ ks →
+          ¬0 ∈ js →
+            (∀ (h : Nat), h ∈ ks → ¬Becoming.Routing.store h ∈ [0]) →
+              ∀ (e : Nat),
+                Becoming.NeedsPart
+                    (Becoming.Flow.FedThroughStores Becoming.Routing.still Becoming.Routing.store [0] ks js
+                      Becoming.Routing.cap 0 1)
+                    (fun L => Becoming.Flow.DrawsPast [0] 0 1 (L, Becoming.Routing.still))
+                    (fun L => Becoming.Flow.GivesInto [0] ks Becoming.Routing.store 0 1 (L, Becoming.Routing.still)) 0
+                    e ↔
+                  ∃ t,
+                    0 ≤ t ∧
+                      t < 0 + 1 ∧
+                        (Becoming.Routing.still.capacityWithout Becoming.Routing.cap js e t <
+                            Becoming.Routing.still.storesRisen Becoming.Routing.store ks t ∨
+                          Becoming.Routing.still.othersThrough Becoming.Routing.store Becoming.Routing.cap ks js e t <
+                            Becoming.Routing.still.demand [0] t)
+Becoming.Routing.router_not_needed : ¬Becoming.NeedsPart
+      (Becoming.Flow.FedThroughStores Becoming.Routing.still Becoming.Routing.store [0] [1, 2] [3] Becoming.Routing.cap
+        0 1)
+      (fun L => Becoming.Flow.DrawsPast [0] 0 1 (L, Becoming.Routing.still))
+      (fun L => Becoming.Flow.GivesInto [0] [1, 2] Becoming.Routing.store 0 1 (L, Becoming.Routing.still)) 0 1 ∧
+  ¬Becoming.NeedsPart
+      (Becoming.Flow.FedThroughStores Becoming.Routing.still Becoming.Routing.store [0] [1, 2] [3] Becoming.Routing.cap
+        0 1)
+      (fun L => Becoming.Flow.DrawsPast [0] 0 1 (L, Becoming.Routing.still))
+      (fun L => Becoming.Flow.GivesInto [0] [1, 2] Becoming.Routing.store 0 1 (L, Becoming.Routing.still)) 0 2
+Becoming.Routing.lone_router_needed : Becoming.NeedsPart
+  (Becoming.Flow.FedThroughStores Becoming.Routing.still Becoming.Routing.store [0] [1] [3] Becoming.Routing.cap 0 1)
+  (fun L => Becoming.Flow.DrawsPast [0] 0 1 (L, Becoming.Routing.still))
+  (fun L => Becoming.Flow.GivesInto [0] [1] Becoming.Routing.store 0 1 (L, Becoming.Routing.still)) 0 1
+Becoming.Routing.tops_not_needed : ¬Becoming.NeedsPart
+      (Becoming.Flow.FedThroughStores Becoming.Routing.still Becoming.Routing.store [0] [1, 2] [3, 4]
+        Becoming.Routing.cap 0 1)
+      (fun L => Becoming.Flow.DrawsPast [0] 0 1 (L, Becoming.Routing.still))
+      (fun L => Becoming.Flow.GivesInto [0] [1, 2] Becoming.Routing.store 0 1 (L, Becoming.Routing.still)) 0 3 ∧
+  ¬Becoming.NeedsPart
+      (Becoming.Flow.FedThroughStores Becoming.Routing.still Becoming.Routing.store [0] [1, 2] [3, 4]
+        Becoming.Routing.cap 0 1)
+      (fun L => Becoming.Flow.DrawsPast [0] 0 1 (L, Becoming.Routing.still))
+      (fun L => Becoming.Flow.GivesInto [0] [1, 2] Becoming.Routing.store 0 1 (L, Becoming.Routing.still)) 0 4
+Becoming.Routing.rise_needs_top : Becoming.NeedsPart
+    (Becoming.Flow.FedThroughStores Becoming.Routing.rising Becoming.Routing.store [0] [1, 2] [3, 4]
+      Becoming.Routing.cap 0 1)
+    (fun L => Becoming.Flow.DrawsPast [0] 0 1 (L, Becoming.Routing.rising))
+    (fun L => Becoming.Flow.GivesInto [0] [1, 2] Becoming.Routing.store 0 1 (L, Becoming.Routing.rising)) 0 3 ∧
+  Becoming.NeedsPart
+    (Becoming.Flow.FedThroughStores Becoming.Routing.rising Becoming.Routing.store [0] [1, 2] [3, 4]
+      Becoming.Routing.cap 0 1)
+    (fun L => Becoming.Flow.DrawsPast [0] 0 1 (L, Becoming.Routing.rising))
+    (fun L => Becoming.Flow.GivesInto [0] [1, 2] Becoming.Routing.store 0 1 (L, Becoming.Routing.rising)) 0 4
+Becoming.Routing.fill_needs_top : Becoming.NeedsPart
+    (Becoming.Flow.FedThroughStores Becoming.Routing.filling Becoming.Routing.store [0] [1, 2] [3] Becoming.Routing.cap
+      0 1)
+    (fun L => Becoming.Flow.DrawsPast [0] 0 1 (L, Becoming.Routing.filling))
+    (fun L => Becoming.Flow.GivesInto [0] [1, 2] Becoming.Routing.store 0 1 (L, Becoming.Routing.filling)) 0 3 ∧
+  Becoming.Routing.filling.demand [0] 0 ≤
+    Becoming.Routing.filling.othersThrough Becoming.Routing.store Becoming.Routing.cap [1, 2] [3] 3 0
+Becoming.Routing.possible : (∃ L,
+    Becoming.Flow.FedThroughStores Becoming.Routing.still Becoming.Routing.store [0] [1] [3] Becoming.Routing.cap 0 1
+        L ∧
+      Becoming.Flow.DrawsPast [0] 0 1 (L, Becoming.Routing.still) 0) ∧
+  (∃ L,
+      Becoming.Flow.FedThroughStores Becoming.Routing.rising Becoming.Routing.store [0] [1, 2] [3, 4]
+          Becoming.Routing.cap 0 1 L ∧
+        Becoming.Flow.DrawsPast [0] 0 1 (L, Becoming.Routing.rising) 0) ∧
+    ∃ L,
+      Becoming.Flow.FedThroughStores Becoming.Routing.filling Becoming.Routing.store [0] [1, 2] [3] Becoming.Routing.cap
+          0 1 L ∧
+        Becoming.Flow.DrawsPast [0] 0 1 (L, Becoming.Routing.filling) 0
+@Becoming.Overlapping.give_pos : ∀ {t x c : Nat},
+  0 < Becoming.Overlapping.flow.give t x c → x = 1 ∧ c = 0 ∧ t = 1 ∨ x = 2 ∧ c = 1 ∧ t = 2
+Becoming.Overlapping.acting : Becoming.Overlapping.flow.Acting Becoming.Overlapping.web
+Becoming.Overlapping.fed : Becoming.Flow.FedOnlyOn Becoming.Overlapping.web [0] (fun x => x ∈ [1, 2]) 0 2
+  Becoming.Overlapping.flow
+Becoming.Overlapping.draws : Becoming.Flow.DrawsPast [0] 0 2 (Becoming.Overlapping.flow, Becoming.Overlapping.web) 0
+Becoming.Overlapping.fed_first : Becoming.Overlapping.flow.FedBy Becoming.Overlapping.web (0, 1) (1, 1)
+Becoming.Overlapping.fed_middle : Becoming.Overlapping.flow.FedBy Becoming.Overlapping.web (1, 2) (2, 2)
+Becoming.Overlapping.last_quiet : ∀ (s c : Nat), s ≤ 1 → Becoming.Overlapping.flow.give s 2 c = 0
+Becoming.Overlapping.closure_overreaches : Becoming.Overlapping.flow.WithinFeeding Becoming.Overlapping.web 0 2 ∧
+  ¬Becoming.Overlapping.flow.WithinFeedingUpTo Becoming.Overlapping.web 0 1 2 ∧
+    Becoming.Overlapping.flow.WithinFeedingUpTo Becoming.Overlapping.web 0 1 1 ∧
+      ¬Becoming.NeedsPart (Becoming.Flow.FedOnlyOn Becoming.Overlapping.web [0] (fun x => x ∈ [1, 2]) 0 2)
+          (fun L => Becoming.Flow.DrawsPast [0] 0 2 (L, Becoming.Overlapping.web))
+          (fun L => Becoming.Flow.GivesWithin [0] 0 2 (L, Becoming.Overlapping.web)) 0 2
+@Becoming.Weighting.increasingInOwn_of_increasing : ∀ {X : Type} {items : List X} {own : X → Bool}
+  {R : (X → Bool) → (X → Bool) → Prop},
+  Becoming.Weighting.Increasing items R → Becoming.Weighting.IncreasingInOwn items own R
+@Becoming.Weighting.increasingInOwn_iff_increasing : ∀ {X : Type} {items : List X} {own : X → Bool}
+  {R : (X → Bool) → (X → Bool) → Prop},
+  (∀ (x : X), x ∈ items → own x = true) →
+    (Becoming.Weighting.IncreasingInOwn items own R ↔ Becoming.Weighting.Increasing items R)
+@Becoming.Weighting.widensOwn_iff_every_increasingInOwn : ∀ {X : Type} {items : List X} {own a b : X → Bool},
+  Becoming.Weighting.WidensOn items a b ∧ Becoming.Weighting.AddsOwn items own a b ↔
+    ∀ (R : (X → Bool) → (X → Bool) → Prop), Becoming.Weighting.IncreasingInOwn items own R → R b a
+@Becoming.Weighting.every_increasingInOwn_iff_includes : ∀ {X : Type} {items : List X} {own a b : X → Bool},
+  Becoming.Weighting.AddsOwn items own a b →
+    ((∀ (R : (X → Bool) → (X → Bool) → Prop), Becoming.Weighting.IncreasingInOwn items own R → R b a) ↔
+      Becoming.Weighting.IncludesOn items a b)
+@Becoming.Weighting.some_increasingInOwn_reverses : ∀ {X : Type} {items : List X} {own a b : X → Bool},
+  Becoming.Weighting.ExceedsOn items b a → ∃ R, Becoming.Weighting.IncreasingInOwn items own R ∧ R a b ∧ ¬R b a
+@Becoming.Weighting.includes_of_ended : ∀ {X : Type} {items : List X} {late a b : X → Bool},
+  (∀ (x : X), x ∈ items → late x = true → b x = false) →
+    (∀ (x : X), x ∈ items → late x = false → a x = b x) → Becoming.Weighting.IncludesOn items a b
+@Becoming.Weighting.ended_below : ∀ {Pos X : Type} {items : List X} {own : Pos → X → Bool} {late a b : X → Bool},
+  (∀ (x : X), x ∈ items → late x = true → b x = false) →
+    (∀ (x : X), x ∈ items → late x = false → a x = b x) →
+      ∀ (p : Pos),
+        Becoming.Weighting.AddsOwn items (own p) a b →
+          ∀ (R : (X → Bool) → (X → Bool) → Prop), Becoming.Weighting.IncreasingInOwn items (own p) R → R b a
+@Becoming.Flow.coupled_ending_ranked_below : ∀ {Pos X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {G : Becoming.SelectionTerm.Generations X},
+          Becoming.SelectionTerm.Flow.Descended L W G →
+            ∀ {ds : List X} {m : Nat},
+              (∀ (t : Nat) (f : X),
+                  f ∈ L.present t →
+                    ∀ (d : X), d ∈ ds → 0 < L.give t f d → ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e) →
+                ∀ {T n : Nat},
+                  (∀ (k : Nat), k < n → L.replenishment ds (T + k) < L.uptake ds (T + k)) →
+                    W.stock ds T < n + m →
+                      (∀ (k : Nat) (p : X),
+                          p ∈ G.family (T + n + k) →
+                            ∃ e, e ∈ ds ∧ W.requires (T + n + k) p e ∧ m ≤ W.need (T + n + k) p e) →
+                        ∀ {items : List (Nat × X)} {a b : Nat × X → Bool},
+                          (∀ (x : Nat × X), x ∈ items → b x = true → x.snd ∈ G.family x.fst) →
+                            (∀ (x : Nat × X), x ∈ items → x.fst ≤ T + n → a x = b x) →
+                              ∀ {own : Pos → Nat × X → Bool} (p : Pos),
+                                Becoming.Weighting.AddsOwn items (own p) a b →
+                                  ∀ (R : (Nat × X → Bool) → (Nat × X → Bool) → Prop),
+                                    Becoming.Weighting.IncreasingInOwn items (own p) R → R b a
+@Becoming.Weighting.standingInvariant_of_gradeInvariant : ∀ {Pos X : Type} {grade : Pos → X → Nat},
+  Becoming.Weighting.GradeInvariant grade → Becoming.Weighting.StandingInvariant grade
+@Becoming.Weighting.weighed_eq_of_gradeInvariant : ∀ {Pos X : Type} {grade : Pos → X → Nat},
+  Becoming.Weighting.GradeInvariant grade →
+    ∀ (items : List X) (a : X → Bool) (p q : Pos),
+      Becoming.Weighting.weighed items (grade p) a = Becoming.Weighting.weighed items (grade q) a
+@Becoming.Weighting.ranks_alike_of_gradeInvariant : ∀ {Pos X : Type} {grade : Pos → X → Nat},
+  Becoming.Weighting.GradeInvariant grade →
+    ∀ (items : List X) (a b : X → Bool) (p q : Pos),
+      Becoming.Weighting.weighed items (grade p) b < Becoming.Weighting.weighed items (grade p) a ↔
+        Becoming.Weighting.weighed items (grade q) b < Becoming.Weighting.weighed items (grade q) a
+@Becoming.Weighting.level_le_of_includes : ∀ {X : Type} {items : List X} {a b : X → Bool} (of : X → Bool),
+  Becoming.Weighting.IncludesOn items a b → Becoming.Weighting.level items of b ≤ Becoming.Weighting.level items of a
+@Becoming.Weighting.level_lt_of_includes_at : ∀ {X : Type} {items : List X} {a b of : X → Bool},
+  Becoming.Weighting.IncludesOn items a b →
+    ∀ {x : X},
+      x ∈ items →
+        a x = true →
+          b x = false → of x = true → Becoming.Weighting.level items of b < Becoming.Weighting.level items of a
+@Becoming.Weighting.le_of_strict : ∀ {f : Nat → Nat},
+  (∀ (m n : Nat), m < n → f m < f n) → ∀ {m n : Nat}, m ≤ n → f m ≤ f n
+@Becoming.Weighting.prior_lt_of_widens : ∀ {F X : Type} {gs : List F} {owner : F → X → Bool} {items : List X}
+  {f : Nat → Nat},
+  (∀ (m n : Nat), m < n → f m < f n) →
+    (∀ (x : X), x ∈ items → ∃ g, g ∈ gs ∧ owner g x = true) →
+      ∀ {a b : X → Bool},
+        Becoming.Weighting.WidensOn items a b →
+          Becoming.Weighting.prior gs owner items f b < Becoming.Weighting.prior gs owner items f a
+@Becoming.Weighting.increasing_prior : ∀ {F X : Type} {gs : List F} {owner : F → X → Bool} {items : List X}
+  {f : Nat → Nat},
+  (∀ (m n : Nat), m < n → f m < f n) →
+    (∀ (x : X), x ∈ items → ∃ g, g ∈ gs ∧ owner g x = true) →
+      Becoming.Weighting.Increasing items fun b a =>
+        Becoming.Weighting.prior gs owner items f b < Becoming.Weighting.prior gs owner items f a
+@Becoming.Weighting.concave_gap : ∀ {n : Nat} {f : Nat → Nat},
+  Becoming.Weighting.ConcaveTo n f → ∀ (a d : Nat), a + d + 2 ≤ n → f a + f (a + d + 2) < f (a + 1) + f (a + d + 1)
+@Becoming.Weighting.prior_transfer : ∀ {F : Type} {n : Nat} {f : Nat → Nat},
+  Becoming.Weighting.ConcaveTo n f →
+    ∀ {g h : F} {rest : List F} {L L' : F → Nat} (a d : Nat),
+      a + d + 2 ≤ n →
+        L g = a + 1 →
+          L h = a + d + 1 →
+            L' g = a →
+              L' h = a + d + 2 →
+                (∀ (k : F), k ∈ rest → L k = L' k) →
+                  (Becoming.total (g :: h :: rest) fun k => f (L' k)) < Becoming.total (g :: h :: rest) fun k => f (L k)
+@Becoming.Weighting.sufficient_ties : ∀ {F : Type} {θ : Nat} {f : Nat → Nat},
+  Becoming.Weighting.SufficientAt θ f →
+    ∀ {gs : List F} {L L' : F → Nat},
+      (∀ (k : F), k ∈ gs → L k = L' k ∨ θ ≤ L k ∧ θ ≤ L' k) →
+        (Becoming.total gs fun k => f (L k)) = Becoming.total gs fun k => f (L' k)
+Becoming.Partial.cond_pos : ∀ (v : Bool), 0 < bif v then 2 else 1
+Becoming.Partial.standing : Becoming.Weighting.StandingInvariant Becoming.Partial.grade
+Becoming.Partial.not_gradeInvariant : ¬Becoming.Weighting.GradeInvariant Becoming.Partial.grade
+Becoming.Partial.ranks_differ : ((Becoming.Weighting.weighed [true, false] (Becoming.Partial.grade true) fun x => !x) <
+    Becoming.Weighting.weighed [true, false] (Becoming.Partial.grade true) fun x => x) ∧
+  (Becoming.Weighting.weighed [true, false] (Becoming.Partial.grade false) fun x => x) <
+    Becoming.Weighting.weighed [true, false] (Becoming.Partial.grade false) fun x => !x
+Becoming.LevelTransfer.mixed : Becoming.Weighting.MixedOn Becoming.LevelTransfer.items Becoming.LevelTransfer.even
+  Becoming.LevelTransfer.uneven
+Becoming.LevelTransfer.concave_to : Becoming.Weighting.ConcaveTo 3 Becoming.LevelTransfer.concave
+Becoming.LevelTransfer.by_law : Becoming.Weighting.prior [false, true] Becoming.LevelTransfer.owner
+    Becoming.LevelTransfer.items Becoming.LevelTransfer.concave Becoming.LevelTransfer.uneven <
+  Becoming.Weighting.prior [false, true] Becoming.LevelTransfer.owner Becoming.LevelTransfer.items
+    Becoming.LevelTransfer.concave Becoming.LevelTransfer.even
+Becoming.LevelTransfer.decided : Becoming.Weighting.prior [true, false] Becoming.LevelTransfer.owner
+      Becoming.LevelTransfer.items Becoming.LevelTransfer.concave Becoming.LevelTransfer.uneven <
+    Becoming.Weighting.prior [true, false] Becoming.LevelTransfer.owner Becoming.LevelTransfer.items
+      Becoming.LevelTransfer.concave Becoming.LevelTransfer.even ∧
+  Becoming.Weighting.prior [true, false] Becoming.LevelTransfer.owner Becoming.LevelTransfer.items (fun k => k)
+        Becoming.LevelTransfer.uneven =
+      Becoming.Weighting.prior [true, false] Becoming.LevelTransfer.owner Becoming.LevelTransfer.items (fun k => k)
+        Becoming.LevelTransfer.even ∧
+    Becoming.Weighting.prior [true, false] Becoming.LevelTransfer.owner Becoming.LevelTransfer.items (fun k => k * k)
+        Becoming.LevelTransfer.even <
+      Becoming.Weighting.prior [true, false] Becoming.LevelTransfer.owner Becoming.LevelTransfer.items (fun k => k * k)
+        Becoming.LevelTransfer.uneven
+Becoming.Framed.increasing : Becoming.Weighting.IncreasingAt [()]
+  (Becoming.Weighting.ranksNet [()] (fun x => 1) fun x => 0) ()
+Becoming.Framed.widensBy : Becoming.Weighting.WidensBy [()] () (Becoming.Framed.kept (true, false))
+  (Becoming.Framed.kept (false, true))
+Becoming.Framed.framing_alone : Becoming.Framed.ranks (true, false) (false, true) ∧
+  ¬Becoming.Weighting.ReadsSetsOn Becoming.Framed.kept Becoming.Framed.ranks
+      (Becoming.Weighting.ranksNet [()] (fun x => 1) fun x => 0) (true, false) (false, true)
+@Becoming.Interacting.eq_true_of_not_false : ∀ {v : Bool}, (!v) = false → v = true
+Becoming.Interacting.alone : Becoming.Weighting.WidensBy Becoming.Interacting.items true Becoming.Interacting.onlyTrue
+  Becoming.Interacting.neither
+Becoming.Interacting.jointly : Becoming.Weighting.WidensBy Becoming.Interacting.items true Becoming.Interacting.both
+  Becoming.Interacting.onlyFalse
+Becoming.Interacting.increment_differs : Becoming.Weighting.IncrementIs Becoming.Interacting.order
+    Becoming.Interacting.neither Becoming.Interacting.onlyTrue Ordering.gt ∧
+  Becoming.Weighting.IncrementIs Becoming.Interacting.order Becoming.Interacting.onlyFalse Becoming.Interacting.both
+    Ordering.lt
+Becoming.Interacting.not_net : ¬∃ pos neg,
+    ∀ (b a : Bool → Bool),
+      Becoming.Interacting.order b a ↔ Becoming.Weighting.ranksNet Becoming.Interacting.items pos neg b a

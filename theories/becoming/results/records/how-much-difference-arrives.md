@@ -125,6 +125,7 @@ Ren, 12 October 2026, the goal: “move towards 100%, you can spawn a few agents
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261107T050428.932891Z/verification.json) | — |
 
 Aliases: `how much difference arrives`, `差别到达多少`, `coupling strength`, `耦合强度`, `carried amount`, `所携带的量`, `measure of coupling`, `耦合的度量`, `measure of sensitivity`, `敏感的度量`, `most difference that can arrive`, `能到达的最大差别`, `incremental gain`, `增量增益`, `comparison system`, `比较系统`
 

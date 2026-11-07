@@ -21,11 +21,11 @@ the regime's and not the level's alone.
   every level below `y` (`Short g H y`) and nothing gives from nothing (`FromNothing g`), a positive
   level below `H + y` falls at every step (`Adjusted.step_below`), is nothing after as many steps
   as it stood (`ends_below`) and stays nothing (`stays_ended`).
-* **At or above it, the condition holds.** Where giving meets the draw from `y` up to a top `hi`
-  (`Meets g H y hi`) and the step keeps every level up to `hi` within it (`Keeps g H hi`), a level
-  from `H + y` up to `hi` never falls below where it started (`holds`). The point is exact: from a
-  level up to `hi`, the condition ends exactly where the level starts below `H + y`
-  (`ends_iff_below`).
+* **At or above it, the condition holds.** Where giving meets the draw at every level from `y`
+  that, with the draw added back, is within a top `hi` (`Meets g H y hi`) and the step keeps every
+  level up to `hi` within it (`Keeps g H hi`), a level from `H + y` up to `hi` never falls below
+  where it started (`holds`). The point is exact: from a level up to `hi`, the condition ends
+  exactly where the level starts below `H + y` (`ends_iff_below`).
 * **Giving that adjusts.** A condition can carry what it gave before: its state is its level and its
   recent giving, and the giving at a step is any law `A` of what is left and of the recent giving
   (`Adjusted.step`). The regime's step is the case where `A` reads what is left alone, and the laws
@@ -1721,9 +1721,9 @@ theorem fates {A : Nat → Nat → Nat} {g : Nat → Nat} {H hi x r : Nat} (rise
 end Adjusted
 
 /-- **Under the regime's step the threshold is the point of no return.** Where giving rises with what
-is left, falls short of the draw below `y`, meets it from `y` up to the band's top, gives nothing from
-nothing, and the step keeps the band up to `hi`, which reaches the point, the threshold is `H + y` at
-every recent giving up to `hi`. -/
+is left, falls short of the draw below `y`, meets it at every level from `y` that, with the draw
+added back, is within the band's top, gives nothing from nothing, and the step keeps the band up to
+`hi`, which reaches the point, the threshold is `H + y` at every recent giving up to `hi`. -/
 theorem threshold_regime {g : Nat → Nat} {H y hi r : Nat} (grows : ∀ a b, a ≤ b → g a ≤ g b)
     (short : Short g H y) (nothing : FromNothing g) (meets : Meets g H y hi)
     (keeps : Keeps g H hi) (given : r ≤ hi) (reach : H + y ≤ hi + 1) :

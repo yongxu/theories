@@ -180,6 +180,7 @@ Closes the seventh gap the record chinese-sources-on-the-spine found (the hexagr
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261107T050428.932891Z/verification.json) | — |
 
 Aliases: `序卦`, `雜卦`, `杂卦`, `卦變`, `卦变`, `損下益上`, `損上益下`, `陽卦奇`, `陰卦偶`, `帝出乎震`, `天地交`, `泰否之交`, `終止則亂`, `the received order as a run`, `exchange of two lines`, `parity of the count`, `Becoming.Hexagram.runsOrder_reads`, `Becoming.Hexagram.runsOrder_not_commutes`, `Becoming.Hexagram.across_exchange`, `Becoming.Hexagram.yangOdd_goAlike`, `Becoming.Hexagram.zagua_partners`, `Becoming.Hexagram.never_comes_to_rest`
 

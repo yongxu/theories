@@ -1,0 +1,81 @@
+@Becoming.more_accumulates : ∀ {g : Nat → Nat} {T n : Nat},
+  (∀ (i : Nat), i < n → Becoming.MoreThanNow id g (T + i)) → g T + n ≤ g (T + n)
+Becoming.all_or_below : ∀ (h : Nat → Nat) (m N : Nat), (∀ (j : Nat), j < N → m ≤ h j) ∨ ∃ j, j < N ∧ h j < m
+@Becoming.Flow.take_le_taken : ∀ {F C : Type} {L : Becoming.Flow F C} {t : Nat} {f : F} {c : C},
+  f ∈ L.present t → L.take t f c ≤ L.taken t c
+@Becoming.Flow.exceeds_of_more : ∀ {F C : Type} {L : Becoming.Flow F C} {f : F} {c : C} {B T n : Nat},
+  (∀ (t : Nat), L.given t c ≤ B) →
+    (∀ (i : Nat), i < n → Becoming.MoreThanNow id (fun s => L.take s f c) (T + i)) →
+      B < n → L.given (T + n) c < L.take (T + n) f c
+@Becoming.Flow.takesAll_of_more : ∀ {F C : Type} {L : Becoming.Flow F C} {f : F} {c : C} {B T n : Nat},
+  (∀ (t : Nat), L.given t c ≤ B) →
+    (∀ (i : Nat), i < n → Becoming.MoreThanNow id (fun s => L.take s f c) (T + i)) →
+      B < n → f ∈ L.present (T + n) → L.TakesAll (T + n) f c
+@Becoming.Flow.excess_of_more : ∀ {F C : Type} {L : Becoming.Flow F C} {f : F} {c : C} {B T n : Nat},
+  (∀ (t : Nat), L.given t c ≤ B) →
+    (∀ (i : Nat), i < n → Becoming.MoreThanNow id (fun s => L.take s f c) (T + i)) →
+      B < n → f ∈ L.present (T + n) → L.given (T + n) c < L.taken (T + n) c
+@Becoming.Flow.beyond_given_bounded : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {f : F} {c : C} (T : Nat),
+      ¬∀ (j : Nat), j < W.level T c + 1 → f ∈ L.present (T + j) ∧ L.given (T + j) c < L.take (T + j) f c
+@Becoming.Flow.seeking_bounded : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {f : F} {c : C} {B : Nat},
+      (∀ (t : Nat), L.given t c ≤ B) →
+        (∀ (t : Nat), W.active t f → f ∈ L.present t ∧ Becoming.MoreThanNow id (fun s => L.take s f c) t) →
+          ∀ (T : Nat), ¬∀ (j : Nat), j < B + 1 + (W.level (T + (B + 1)) c + 1) → W.active (T + j) f
+@Becoming.Flow.seeking_not_continues : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {f : F} {c : C} {B : Nat},
+      (∀ (t : Nat), L.given t c ≤ B) →
+        (∀ (t : Nat), W.active t f → f ∈ L.present t ∧ Becoming.MoreThanNow id (fun s => L.take s f c) t) →
+          ∀ (T : Nat), ¬∀ (j : Nat), W.active (T + j) f
+@Becoming.Flow.seeking_ends : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {f : F} {c : C} {B : Nat},
+      (∀ (t : Nat), L.given t c ≤ B) →
+        (∀ (t : Nat), W.active t f → f ∈ L.present t ∧ Becoming.MoreThanNow id (fun s => L.take s f c) t) →
+          ∀ {T : Nat},
+            (∀ (i : Nat), W.active (T + i + 1) f → W.active (T + i) f) →
+              ∀ (k : Nat), ¬W.active (T + (B + 1 + W.level (T + (B + 1)) c + k)) f
+@Becoming.Flow.seeking_exhausts : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {f : F} {c : C} {m B T : Nat},
+          (∀ (t : Nat) (g : F), g ∈ L.present t → 0 < L.give t g c → W.requires t g c ∧ m ≤ W.need t g c) →
+            (∀ (t : Nat), L.given t c ≤ B) →
+              (∀ (t : Nat), W.active t f → f ∈ L.present t ∧ Becoming.MoreThanNow id (fun s => L.take s f c) t) →
+                (∀ (j : Nat), m ≤ W.level (T + j) c → W.active (T + j) f) →
+                  ∃ j,
+                    j < B + 1 + (W.level (T + (B + 1)) c + 1) ∧
+                      ∀ (n : Nat) (g : F),
+                        W.requires (T + j + n) g c → m ≤ W.need (T + j + n) g c → ¬W.active (T + j + n) g
+Becoming.Seeker.balances : Becoming.Seeker.flow.Balances Becoming.Seeker.web
+Becoming.Seeker.bounded : ∀ (t : Nat), Becoming.Seeker.flow.given t () ≤ 2
+Becoming.Seeker.level_pos : ∀ (t : Nat), 1 ≤ Becoming.Seeker.level t
+Becoming.Seeker.dependent : Becoming.Seeker.web.Dependent
+Becoming.Seeker.present_first : ∀ (t : Nat), t < 4 → Becoming.Witnesses.Member.first ∈ Becoming.Seeker.present t
+Becoming.Seeker.seeks : ∀ (t : Nat),
+  Becoming.Seeker.web.active t Becoming.Witnesses.Member.first →
+    Becoming.Witnesses.Member.first ∈ Becoming.Seeker.flow.present t ∧
+      Becoming.MoreThanNow id (fun s => Becoming.Seeker.flow.take s Becoming.Witnesses.Member.first ()) t
+Becoming.Seeker.lasting : ∀ (i : Nat),
+  Becoming.Seeker.web.active (0 + i + 1) Becoming.Witnesses.Member.first →
+    Becoming.Seeker.web.active (0 + i) Becoming.Witnesses.Member.first
+Becoming.Seeker.takes_all : ∀ (t : Nat),
+  1 ≤ t → t < 4 → Becoming.Seeker.flow.TakesAll t Becoming.Witnesses.Member.first ()
+Becoming.Seeker.ends : ∀ (k : Nat), ¬Becoming.Seeker.web.active (4 + k) Becoming.Witnesses.Member.first
+Becoming.Seeker.ends_by_law : ∀ (k : Nat),
+  ¬Becoming.Seeker.web.active (0 + (2 + 1 + Becoming.Seeker.web.level (0 + (2 + 1)) () + k))
+      Becoming.Witnesses.Member.first
+Becoming.Seeker.course : Becoming.Seeker.flow.Balances Becoming.Seeker.web ∧
+  Becoming.Seeker.web.Dependent ∧
+    (∀ (t : Nat), Becoming.Seeker.web.active t Becoming.Witnesses.Member.renewer) ∧
+      (∀ (t : Nat), t < 4 → Becoming.Seeker.web.active t Becoming.Witnesses.Member.first) ∧
+        (∀ (t : Nat), 1 ≤ t → t < 4 → Becoming.Seeker.flow.TakesAll t Becoming.Witnesses.Member.first ()) ∧
+          ∀ (k : Nat), ¬Becoming.Seeker.web.active (4 + k) Becoming.Witnesses.Member.first
+Becoming.Alone.takes_all : ∀ (t : Nat),
+  Becoming.Alone.flow.TakesAll t Becoming.Witnesses.Member.first () ∧
+    Becoming.Alone.web.active t Becoming.Witnesses.Member.first

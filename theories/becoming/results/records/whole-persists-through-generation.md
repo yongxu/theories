@@ -137,6 +137,7 @@ The fifth independent review found that a lineage and its members are two levels
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261107T050428.932891Z/verification.json) | — |
 
 Aliases: `Becoming.Web.Whole`, `Becoming.Web.Listed`, `Becoming.Web.Ends`, `Becoming.Web.Brief`, `Becoming.Web.Whole.arises_part`, `Becoming.Web.Whole.parts_unceasing`, `Becoming.Web.Whole.arises_within`, `Becoming.Web.Whole.needs_arising`, `Becoming.Generations.generations`, `Becoming.Shifts.shifts`, `Becoming.Immortal.immortal`, `Becoming.Countless.countless`, `Becoming.Gaps.gaps`, `Becoming.Layered.composed`, `Becoming.Web.Covered`, `Becoming.Web.whole_self`, `Becoming.Web.Covered.needs_new`, `Becoming.Web.Whole.needs_new`, `Becoming.Layered.arise_again`
 

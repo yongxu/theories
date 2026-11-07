@@ -1,0 +1,30 @@
+@Becoming.PropositionIdentity.lumped_iff : ∀ {V : Type u_1} (g : Prop → V),
+  (Becoming.Learning.Lumped Becoming.PropositionIdentity.relation fun i => g (Becoming.PropositionIdentity.endOf i)) ↔
+    ∀ (a b : Prop), (a ↔ b) → g a = g b
+Becoming.PropositionIdentity.extensional_iff_lumped : Becoming.PropositionIdentity.Extensional ↔
+  ∀ (g : Prop → Prop),
+    Becoming.Learning.Lumped Becoming.PropositionIdentity.relation fun i => g (Becoming.PropositionIdentity.endOf i)
+Becoming.PropositionIdentity.lumped_of_extensional : Becoming.PropositionIdentity.Extensional →
+  ∀ {V : Type u_1} (g : Prop → V),
+    Becoming.Learning.Lumped Becoming.PropositionIdentity.relation fun i => g (Becoming.PropositionIdentity.endOf i)
+@Becoming.PropositionIdentity.Formula.eval_congr : ∀ {α : Type u_1} {ρ σ : α → Prop},
+  (∀ (x : α), ρ x ↔ σ x) →
+    ∀ (φ : Becoming.PropositionIdentity.Formula α),
+      Becoming.PropositionIdentity.Formula.eval ρ φ ↔ Becoming.PropositionIdentity.Formula.eval σ φ
+@Becoming.PropositionIdentity.Formula.read_congr : ∀ {β : Type u_1}
+  (φ : Becoming.PropositionIdentity.Formula (Option β)) (fixed : β → Prop) {a b : Prop},
+  (a ↔ b) → (φ.read fixed a ↔ φ.read fixed b)
+Becoming.PropositionIdentity.byName_lumped_iff : (Becoming.Learning.Lumped Becoming.PropositionIdentity.relation
+    fun i => Becoming.PropositionIdentity.byName (Becoming.PropositionIdentity.endOf i)) ↔
+  Becoming.PropositionIdentity.Extensional
+Becoming.PropositionIdentity.lumped_of_byName : (Becoming.Learning.Lumped Becoming.PropositionIdentity.relation fun i =>
+    Becoming.PropositionIdentity.byName (Becoming.PropositionIdentity.endOf i)) →
+  ∀ {V : Type u_1} (g : Prop → V),
+    Becoming.Learning.Lumped Becoming.PropositionIdentity.relation fun i => g (Becoming.PropositionIdentity.endOf i)
+@Becoming.PropositionIdentity.iff_witness_unique : ∀ {a b : Prop} (h h' : a ↔ b), h = h'
+@Becoming.PropositionIdentity.derivation_unique : ∀ {a b : Prop} (f f' : a → b), f = f'
+Becoming.PropositionIdentity.two_equivalences : (∀ (x : Bool), (fun y => y) ((fun y => y) x) = x) ∧
+  (∀ (x : Bool), Becoming.PropositionIdentity.flip (Becoming.PropositionIdentity.flip x) = x) ∧
+    (fun y => y) ≠ Becoming.PropositionIdentity.flip
+@Becoming.PropositionIdentity.transport_const : ∀ {V : Sort u_1} {a b : Prop} (e : a = b) (x : V), e ▸ x = x
+@Becoming.PropositionIdentity.transport_refl : ∀ {V : Sort u_1} {a : Prop} (x : V), ⋯ ▸ x = x

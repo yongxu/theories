@@ -1,0 +1,11 @@
+import Becoming.JoiningCodes
+#check @Becoming.Joining.codes_apart_of_possible
+#check @Becoming.Joining.image_domain_iff
+#check @Becoming.Joining.image_realized_iff
+#check @Becoming.Joining.image_functional
+#check @Becoming.Joining.image_transport
+#check @Becoming.Joining.image_iff_of_matches
+#check @Becoming.Joining.Context.holds_ask
+#check @Becoming.Joining.ContextSame.of_sameBranchingTests
+#check @Becoming.Joining.FiniteOutcomes.joined_sameBranchingTests_of_em
+#check @Becoming.Joining.FiniteOutcomes.lifts_of_exact

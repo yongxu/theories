@@ -1,0 +1,44 @@
+@Becoming.OpenedCorrection.correctable_iff : ∀ {X S A O : Type},
+  Becoming.Viability.ChoiceOver O A →
+    ∀ (reading : X → S → O) (acceptable : S → A → Prop) (executable : X → A → Prop) (x : X),
+      Becoming.OpenedCorrection.Correctable reading acceptable executable x ↔
+        ∀ (o : O), ∃ a, ∀ (s : S), reading x s = o → acceptable s a ∧ executable x a
+@Becoming.OpenedCorrection.finer_keeps : ∀ {X S A O : Type} {reading : X → S → O} {acceptable : S → A → Prop}
+  {executable : X → A → Prop} {x x' : X} (forget : O → O),
+  (∀ (s : S), forget (reading x' s) = reading x s) →
+    (∀ (a : A), executable x a → executable x' a) →
+      Becoming.OpenedCorrection.Correctable reading acceptable executable x →
+        Becoming.OpenedCorrection.Correctable reading acceptable executable x'
+@Becoming.OpenedCorrection.coarser_opens_nothing : ∀ {X B S A O : Type} {P : Generative.Process X B}
+  {reading : X → S → O} {acceptable : S → A → Prop} {executable : X → A → Prop} {x x' : X} (forget : O → O),
+  (∀ (s : S), forget (reading x s) = reading x' s) →
+    (∀ (a : A), executable x' a → executable x a) →
+      ¬Becoming.OpenedCorrection.OpensAlong P reading acceptable executable x x'
+@Becoming.OpenedCorrection.widened_correctable : ∀ {X S A O : Type} (reading : X → S → O) (executable : X → A → Prop)
+  {x : X} {a : A}, executable x a → Becoming.OpenedCorrection.Correctable reading (fun x x_1 => True) executable x
+Becoming.OpenedCorrection.Linked.unlinked_uncorrectable : ∀ (n : Nat) (v : Bool),
+  ¬Becoming.OpenedCorrection.Correctable Becoming.Revising.read Becoming.OpenedCorrection.Linked.acceptable
+      Becoming.OpenedCorrection.Linked.executable (n, false, v)
+Becoming.OpenedCorrection.Linked.linked_correctable : ∀ (n : Nat) (v : Bool),
+  Becoming.OpenedCorrection.Correctable Becoming.Revising.read Becoming.OpenedCorrection.Linked.acceptable
+    Becoming.OpenedCorrection.Linked.executable (n + 1, true, v)
+Becoming.OpenedCorrection.Linked.starved_uncorrectable : ∀ (v : Bool),
+  ¬Becoming.OpenedCorrection.Correctable Becoming.Revising.read Becoming.OpenedCorrection.Linked.acceptable
+      Becoming.OpenedCorrection.Linked.executable (0, true, v)
+Becoming.OpenedCorrection.Linked.opens : ∀ (n : Nat) (v : Bool),
+  Becoming.OpenedCorrection.OpensAlong Becoming.Revising.P Becoming.Revising.read
+    Becoming.OpenedCorrection.Linked.acceptable Becoming.OpenedCorrection.Linked.executable (n + 2, false, v)
+    (n + 1, true, v)
+Becoming.OpenedCorrection.Linked.rebuilt_starved : ∀ (v : Bool),
+  Becoming.Revising.P.step (1, false, v) (Becoming.Revising.Act.rebuild true) (0, true, v) ∧
+    ¬Becoming.OpenedCorrection.Correctable Becoming.Revising.read Becoming.OpenedCorrection.Linked.acceptable
+        Becoming.OpenedCorrection.Linked.executable (0, true, v)
+Becoming.OpenedCorrection.Linked.opens_after_replenishing : ∀ (v : Bool),
+  Becoming.OpenedCorrection.OpensAlong Becoming.Revising.P Becoming.Revising.read
+    Becoming.OpenedCorrection.Linked.acceptable Becoming.OpenedCorrection.Linked.executable (1, false, v) (1, true, v)
+Becoming.OpenedCorrection.Linked.opens_by_support : ∀ (v : Bool),
+  Becoming.OpenedCorrection.OpensAlong Becoming.Revising.P Becoming.Revising.read
+    Becoming.OpenedCorrection.Linked.acceptable Becoming.OpenedCorrection.Linked.executable (0, true, v) (1, true, v)
+Becoming.OpenedCorrection.Linked.widened_unlinked : ∀ (n : Nat) (v : Bool),
+  Becoming.OpenedCorrection.Correctable Becoming.Revising.read (fun x x_1 => True)
+    Becoming.OpenedCorrection.Linked.executable (n, false, v)

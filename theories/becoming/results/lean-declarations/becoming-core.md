@@ -31860,24 +31860,24 @@ Imports: `Becoming.Frame`
 
 | Theorem or lemma | Line |
 |---|---:|
-| [Becoming.World.of_web](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L129) | 129 |
-| [Becoming.World.of_flow](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L133) | 133 |
+| [Becoming.World.of_web](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L130) | 130 |
+| [Becoming.World.of_flow](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L134) | 134 |
 
 Definitions and types:
 
-- `structure` [Becoming.Dependence](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L47) (L47)
-- `abbrev` [Becoming.Web](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L56) (L56)
-- `structure` [Becoming.Flow](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L60) (L60)
-- `structure` [Becoming.Exchange](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L70) (L70)
-- `def` [Becoming.Exchange.taken](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L76) (L76)
-- `def` [Becoming.Exchange.given](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L80) (L80)
-- `structure` [Becoming.WebAt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L87) (L87)
-- `def` [Becoming.everyStep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L95) (L95)
-- `structure` [Becoming.World](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L99) (L99)
-- `def` [Becoming.World.web](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L108) (L108)
-- `def` [Becoming.World.flow](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L114) (L114)
-- `def` [Becoming.World.move](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L118) (L118)
-- `def` [Becoming.World.of](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L124) (L124)
+- `structure` [Becoming.Dependence](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L48) (L48)
+- `abbrev` [Becoming.Web](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L57) (L57)
+- `structure` [Becoming.Flow](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L61) (L61)
+- `structure` [Becoming.Exchange](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L71) (L71)
+- `def` [Becoming.Exchange.taken](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L77) (L77)
+- `def` [Becoming.Exchange.given](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L81) (L81)
+- `structure` [Becoming.WebAt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L88) (L88)
+- `def` [Becoming.everyStep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L96) (L96)
+- `structure` [Becoming.World](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L100) (L100)
+- `def` [Becoming.World.web](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L109) (L109)
+- `def` [Becoming.World.flow](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L115) (L115)
+- `def` [Becoming.World.move](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L119) (L119)
+- `def` [Becoming.World.of](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L125) (L125)
 
 </details>
 

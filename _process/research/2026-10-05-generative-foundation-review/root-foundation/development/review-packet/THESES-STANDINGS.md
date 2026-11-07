@@ -1,6 +1,6 @@
 # The sciences front's theses given their standings
 
-*AI-written, 3 November 2026 (board item TS, after the freeze, for the next edition). No person has reviewed it. 7.4 to 9.6 minutes to read; [the read](#the-read), 19.6 to 25.4 more; [after T1S](#after-t1s), 23.1 to 30.0 more; [the point's top](#the-points-top), 3.4 to 4.5 more.*
+*AI-written, 3 November 2026 (board item TS, after the freeze, for the next edition). No person has reviewed it. 7.4 to 9.6 minutes to read; [the read](#the-read), 19.6 to 25.4 more; [after T1S](#after-t1s), 23.1 to 30.0 more; [the point's top](#the-points-top), 3.4 to 4.5 more; [after T1P](#after-t1p), 26.1 to 33.8 more.*
 
 The sciences dossier's front gives three theses in a table, with what each forbids and its frozen tests so far, and T3 in a line after it. It did not say how far each is established. [08 §9](../../../../../../theories/becoming/chapters/08-METHOD.md#theses) calls this a thesis's standing and keeps it apart from what the thesis forbids: "standing is how far it is established (proved under named premises, supported by frozen tests, conjectured, argued)". The line after the table gave T3's law for optima its standing but not its clause on trained systems. HP's reader found the gap ([finding 8](HOUR-PATHS.md#findings)), and the coordinator gave it to TS. TS gave each thesis its standing in the words of 08 §9, which copies each standing from the thesis's home chapter. An independent reader then checked the change and the fixes. Its findings were taken, passed on, or left with their reasons ([the read](#the-read)). After T1S gave T1 its standing in its home, TS2 brought the front's T1 row, S-03 and S-14 to it ([after T1S](#after-t1s)).
 
@@ -162,7 +162,7 @@ The front grew from 1,179 words to 1,376, 10.6 to 13.8 minutes, 276 over its ten
 
 ### Left to others
 
-- **"Exact" and its premises.** "The point of no return is exact" names none of S-12's premises, in 02 and 08 as on the front, which copies them. The reader found it, minor and older than TS2. It belongs in the home first, so it went to T1's home's owner.
+- **"Exact" and its premises.** "The point of no return is exact" names none of S-12's premises, in 02 and 08 as on the front, which copies them. The reader found it, minor and older than TS2. It belongs in the home first, so it went to T1's home's owner. T1P has since given them there, and TS3 followed ([after T1P](#after-t1p)).
 - **Alignment's hour sentence.** The alignment front says "With an hour, read" of a path READING-BUDGETS records as past the hour at the slower rate, the gap the reader found on this front. That dossier is not TS2's, so it went to the coordinator. The coordinator gave it back, to be taken the same way, and AH did ([HP's record](HOUR-PATHS.md#the-times-stated)).
 
 ### The read after T1S
@@ -288,3 +288,144 @@ The coordinator's rule for T1 after T1FP2: a finding that would make a reader be
 The front's T1 row said "the point of no return is exact", with no bound on the levels. The front defines the point as the least level from which the condition does not end ([reading the items](../../../../../../theories/becoming/review/SCIENCES.md#reading-the-items)), so a bare "exact" tells a reader that from the point up every level persists. T1's home's owner found that false, in an example this dossier's owner then ran step by step: a draw of 5, `y` of 5, a top of 12, and giving of 5 where the draw leaves 5, 6 or 7 and nothing elsewhere. Every premise of the regime's theorem holds, giving meets the draw at `y`, and up to the top a level ends exactly where it starts below 10. Yet 13 and 14 end, and so do 18 and 19, 23 and 24, and so on: from 14 what is left is 9, which gives nothing. High levels that crash are what giving that overcompensates produces, so the belief would matter to a scientist. `RegimeMargin.ends_iff_below` proves exactness only for levels up to a top the step keeps, and [02 §5](../../../../../../theories/becoming/chapters/02-MAP.md#t1) and 08's row bound it there: "a level up to `hi` ending exactly where it starts below `H + y`".
 
 TS4 bounds the row in that owner's words: "the [point of no return](../../../../../../theories/becoming/review/SCIENCES.md#reading-the-items) is exact up to a top the step keeps". This dossier's owner checked them against 02 §5, 08's row and the Lean. T1's home's owner then read the change, read-only, and found the words as meant and true under the front's definition of the point, and this section and the dossier's sentence true to what was found and done. Its one point, that the example's giving is read off what the draw leaves and not off the level, was taken. The front grew from 1,376 words to 1,383, 10.6 to 13.8 minutes, and ecology's path from 6,324 words to 6,331, 48.7 to 63.3 minutes; the stated times hold, 45 to 65 minutes for the path, on the front, and 140 to 190 for the whole, on the front and both covers.
+
+## After T1P
+
+*Board item TS3, T1P's follow-on, 4 November 2026. AI-written; no person has reviewed it.*
+
+*Kept for the batched pass, as the board's rule for T1 asked, and taken in edition 5 (board item ED5, 7 November 2026), checked again against `RegimeMargin`'s Lean. One change from what follows: S-12's rises keep the wording main had given them since, after T1FP2's reader, "at each amount left, no greater than under either draw" (`Lowered`), which this section's quotation of law 5 lacks. TS4's bound, landed on its own ([the point's top](#the-points-top)), is the line the front's cell replaces.*
+
+TS2's reader found that the front's regime clause, "the point of no return is exact", names none of the premises it is proved under, in T1's home and 08's row as on the front, which copies them ([left to others](#left-to-others)). T1P gave the premises in the home and 08's row; of the five points its reader found, two bear on this dossier: the clause on the need takes giving met at `y`, and "from `y` up to a top `hi`" asked more than `Meets` ([T1P's record](T1-STANDING.md#after-ts2s-reader)). TS3 brought the dossier to the home in its words. An independent AI reader checked the change and then the fixes. Its finding on the home, that 02's theorem on the rises omits premises the Lean takes, went to T1's home's owner. Its two examples also meet the hypotheses of [COLLECTIVE-DIRECTION's](../../../../../../theories/becoming/COLLECTIVE-DIRECTION.md) row on the regime, which T1FP had just given, so they went to that row's owner.
+
+### What TS3 changed
+
+- **The front's T1 Standing cell** now reads "in the model proved: on the regime, in whole numbers, under the premises [S-12's](../../../../../../theories/becoming/review/SCIENCES.md#s-12) block names, a level up to a top `hi` ends exactly where it starts below `H + y`, `y` a level below which giving falls short of the draw, and the [point of no return](../../../../../../theories/becoming/review/SCIENCES.md#reading-the-items), where `H + y` is at most `hi`, is `H + y`, and, the draw positive and met at `y`, the point lies at least the draw above a need where giving stops below it, and on the World, under the gate at need `m` and the premises [S-11](../../../../../../theories/becoming/review/SCIENCES.md#s-11) names, …". These are 08's words, "a top" from its premise clause, with the premises of S-12's block named as S-11's are and `y` glossed. Where 08 says the point "is exact" and gives its appositive, the cell states the appositive as its own clause and then where the point lies, under the top. The front defines the point as the least level from which the condition does not end; where the top stops below `H + y` there may be none, and levels above the top can end even though the point does not, as T1's home's owner showed with giving that overcompensates. The cell keeps "in whole numbers", as 08 does, and "met at `y`", the premise T1P found the clause on the need takes.
+- **S-12's Meaning**:
+  - glosses `Meets` as the Lean states it, "giving meets the draw at every `z` from `y` with `z + H` at most a top `hi`", where it had said "from `y` up to a top `hi`";
+  - adds `0 < H + y`, "that the draw and `y` are not both zero";
+  - says, after the band, "where that is at most `hi`, the point of no return is `H + y`, exact up to `hi`";
+  - gives `root_above_need` and `beyond_draw_iff` their premises in the home theorem's words, "giving meets it at `y`" and "`y` the least level meeting the draw";
+  - gives `rises_superadditive` its premises and its conclusion in the words of its record's law 5: "the least levels meeting `H₁`, `H₂` and `H₁ + H₂` lie `a`, `b` and `c` above the need, `a + b ≤ c + 1`", before the reading law 5 gives it.
+- **How this dossier was made** ends with what TS3 did.
+
+### What TS3 cost
+
+The front grew from 1,376 words to 1,427, 11.0 to 14.3 minutes, 327 over its ten minutes; ecology's path from 6,324 words to 6,438, 49.5 to 64.4 minutes; and the whole from 18,571 words to 18,768, 144.5 to 187.8 minutes. The stated times hold: 45 to 65 minutes for the path, on the front, and 140 to 190 for the whole, on the front and both covers. The words are premises of a standing, which [amendment 1](../aj4-alignment-readers/READING-BUDGETS.md) has a front keep, so READING-BUDGETS records the excess.
+
+### The read after T1P
+
+An independent AI reader, read-only and new to this work, read the change against 08's row, T1's home and its theorem on the regime, the Lean of `RegimeMargin` and T1P's record. Its brief asked three things:
+- whether the front's cell is at the strength of 08 and the home, with nothing beyond the Lean, every premise named by S-12 or stated, "met at `y`" placed so the clause holds, and `y` usable on the front;
+- whether each of S-12's glosses says what the Lean says, no more and no less, and its sentences on the need and beyond it are true to their premises;
+- what else on the front, in S-12 or in S-14 the change leaves inconsistent.
+
+Its report stands below verbatim. Its line numbers are those of the change it read. Then comes how each finding was taken, and the same reader's re-check of the fixes.
+
+I found two substantive problems and three minor ones. The first substantive one only bites when the band `hi` stops below `H + y`. That is also true of the record's own counterexample, so I mark both substantive by the standard T1P applied there.
+
+**What I read.** The diff; SCIENCES.md lines 1–48 and S-11 to S-14; 08's T1 row; 02 §5's two regime theorems and T1; `RegimeMargin.lean` lines 1–292 and 700–860; T1-STANDING's "After TS2's reader"; laws 2, 3 and 5 of margin-of-a-regime; the sciences row of READING-BUDGETS. I ran only `git diff`, `grep`, `sed` and `wc`.
+
+**1. The front cell (:18)**
+- **No error on premises or placement.** Every premise is covered. `ends_iff_below`'s six premises are S-12's five glosses plus "a level up to `hi`". `root_above_need`'s three are stated in the cell: "the draw positive", "met at `y`", "a need where giving stops below it". "In whole numbers" is stated. The placement holds against the record's counterexample: there `g 3 = 0 < H = 1`, so the second conjunct claims nothing.
+- **Substantive.** The cell drops 08's appositive, "a level up to `hi` ending exactly where it starts below `H + y`". So "exact" rests on the link to :40, "the least level from which it does not end". The Lean makes `H + y` that level only where `H + y ≤ hi`.
+  - Example: `g` is 5 at 10 and 0 elsewhere, `H = 3`, `y = 10`, `hi = 5`, need 10. Every premise, "met at `y`" and the need hold.
+  - Yet every level ends (13 → 15 → 12 → … → 0), so no such least level exists.
+  - S-12 at :349 ("below `H + y`: the point of no return is exact"), read with :40, has the same gap.
+  - Fix in S-12: "is exact, at `H + y` where that is at most `hi`". This is `ends_iff_below` at `x = H + y`.
+- **Minor.** Nothing in lines 1–48 introduces `y`, so a reader of the front cannot use "met at `y`". A gloss would fix it, for example "met at `y`, the level below which giving falls short of it". Also, "the premises S-12 names" takes in the premises of S-12's later theorems too; "S-12's block" would be exact.
+- **Minor.** The cell copies the home's "; on the World", but its own "; beyond the model conjectured" already uses a semicolon to separate the two standings. That is why record item 5 gave 08's row ", and on the World" instead.
+
+**2. S-12's Meaning (:349)**
+- **No error in the glosses.** Each matches its definition exactly, `Meets` with `z + H ≤ hi` and `0 < H + y` as "not both zero" included.
+- **No error in the two theorem sentences.** `root_above_need` (Gated, `0 < H`, `H ≤ g y` ⊢ `m ≤ y`) and `beyond_draw_iff` (Gated, `0 < H`, `Root` ⊢ `m < y ↔ g m < H`) are stated true to their premises.
+- **Substantive.** The `rises_superadditive` sentence leaves out three of the theorem's five premises: `Root g₁ H₁ (m + a)`, `Root g₂ H₂ (m + b)` and `Root g (H₁ + H₂) (m + c)`. The record's law 5 states them: "the least levels meeting H1, H2 and H1 + H2 lie a, b and c above the need".
+  - Read the way the paragraph reads "the point" (as `H + y`), the sentence fails just as the record's first point showed for the other clause.
+  - Example: `g` is zero below 10 and `z − 9` from 10, need 10, `H₁ = H₂ = 3`, so each point is 15 and each rise 5; the sum less one is 9.
+  - For the joint draw 6, `y = 10` with `hi = 5` meets every premise in the block, and the "point" 16 lies only 6 above the need.
+  - The sentence agrees with 02's theorem, which has the same omission (that one is for 02's owner), but not with the Lean.
+
+**3. Elsewhere**
+- **No error in S-14 or the rest of the front.** Both agree with the change; S-14's "In the model this is S-12 with S-11" matches the cell.
+- **Minor.** The reading times the front states still hold: by raw `wc`, the cell gains 12 words and S-12 gains 33. Ecology's hour comes to about 6,369 words, within "45 to 65 minutes", and the whole stays within "140 to 190". But the counts in READING-BUDGETS' sciences row (front 1,376 words, hour 6,324) are now out of date.
+
+#### How each was taken, after T1P
+
+Each finding was checked against its source before it was taken or left. Both of the reader's examples were run, step by step, on whole numbers, and each meets the premises it says it meets.
+
+1. **The cell's premises and where "met at `y`" stands** (1). Holds.
+2. **08's appositive** (1, substantive). True: in the reader's first example every premise holds and every level ends, so there is no least level from which the condition does not end, and "exact", read with the front's definition of the point, says there is one. Taken on the front in 08's words, "a level up to a top `hi` ending exactly where it starts below `H + y`", and in S-12 as the reader proposed, "the point of no return is exact, at `H + y` where that is at most `hi`", which is `ends_iff_below` at that level. 02's theorem gives the same appositive before its "the point of no return is exact", and 02 does not define the point as a least level, as the front does. The record's summary does speak of "a least level", without the top, so it went to T1's home's owner with the next.
+3. **`y` on the front and "the premises S-12 names"** (1, minor). True. Taken: "`y` a level below which giving falls short of the draw", S-12's gloss of `Short`, and "the premises S-12's block names".
+4. **"; on the World"** (1, minor). True. Taken: ", and on the World", as 08's row has it.
+5. **S-12's glosses and its sentences on the need and beyond it** (2). Hold.
+6. **The rises' premises** (2, substantive). True: `rises_superadditive` takes the three `Root` premises, and in the reader's second example the block's premises hold at `y` 10 for the joint draw while the rise there is 6, less than the 9 the sentence gives. Taken in the words of the record's law 5: "and the least levels meeting `H₁`, `H₂` and `H₁ + H₂` lie `a`, `b` and `c` above the need, `a + b ≤ c + 1`". 02's theorem on the rises omits the same premises, so that went to T1's home's owner too.
+7. **S-14 and the rest of the front** (3). Hold.
+8. **READING-BUDGETS' counts** (3, minor). True. Taken: the sciences parts of its fronts row, hour sentence and wholes line now come from the measure on the changed tree, and the first two name the regime's premises among what the excess holds. The stated times hold by the measure, 45 to 65 minutes for ecology's path and 140 to 190 for the whole.
+
+### The re-check after T1P
+
+The same reader, under the same rules, with the measure added, then read the fixes on the uncommitted tree: the front's cell and S-12's changed sentences against the Lean and the record's laws, the how-made sentence, and READING-BUDGETS' sciences sentences against the measure. Its report stands below verbatim. Its line numbers and figures are those of the tree it read, before its own notes were taken.
+
+Most of TS3's fixes hold, but one substantive gap remains, in the front cell and in my own wording for S-12.
+
+**What I ran.** `git status`, `git diff` (stat, `-U0`, word-diff), `grep`, `sed`, `cut`, `tr`, `head`, `wc` and the measure. I also used `python3 -I` snippets that only read and print, because grep failed on the UTF-8 lines. I read :18, :349 and :694; 02's :252 and :262; the record's summary and law 5; READING-BUDGETS :31–35; THESES-STANDINGS :3, :163–165 and :282–360; and both covers' sciences rows. For the Lean I relied on my first-round read.
+
+**(a) The cell (:18)**
+- It is at 08's strength. The words are 08's, with "a top" taken from 08's premise clause. "S-12's block" names exactly `ends_iff_below`'s premises, and ", and on the World" matches 08.
+- The gloss reads correctly. It glosses `y` where it first appears, as S-12 glosses `Short`. "A level", not "the least", is right, since `ends_iff_below`'s `y` need not be the least; "met at `y`" then makes it the least, as `Root` does.
+- **Substantive, by item 2's own reasoning.** The cell still links "point of no return" to :40 and says "the point lies", but has no qualifier like S-12's. In my first example (`hi = 5 < H + y = 13`) it still says a point exists where none does.
+  - My S-12 wording has the same flaw in a weaker form: "the point of no return is exact, at `H + y` where that is at most `hi`" still presupposes a point when `H + y > hi`.
+  - Fix: put the qualifier first. S-12: "below `H + y`: where that is at most `hi`, the point of no return is exact, at `H + y`".
+  - In the cell, about eight words more: "a level up to a top `hi` ends exactly where it starts below `H + y`, and the point of no return, where `H + y` is at most `hi`, is `H + y`". Alternatively, qualify the definition once at :40.
+
+**(b) S-12 (:349).** No error.
+- The qualifier is `ends_iff_below` at `x = H + y`, no more; the residual presupposition is in (a).
+- The rises sentence takes exactly `SubadditiveAbove`, both `Lowered`, the three `Root`s and `a + b ≤ c + 1`. The text after its colon reads them as the Lean docstring does. "The need" is the docstring's own name for `m`; the theorem takes no gate and the sentence states none.
+
+**(c) How-made (:694).** True once these notes are taken, with two minor gaps.
+- "Its findings were … taken": the finding on 02's rises theorem went to its owner instead. TS2's sentence records the same for its own case; this one should too.
+- "Against the home and the Lean" leaves out chapter 8's row.
+
+**(d) READING-BUDGETS.** No error. The measure on this tree gives:
+- the front, 1,418 words, 10.9–14.2 minutes;
+- ecology's hour, 6,427 words, 49.4–64.3 minutes;
+- the whole, 18,741 words and 27 characters, 144.3–187.5 minutes.
+
+All three passages match: 318 and 427 over, and "144 to 188". Both stated times hold; the path has 73 words of room at 100 words a minute.
+
+**(e) The record (:282–360).** My first report stands verbatim, but its "What I read" is inexact (minor). Of `RegimeMargin.lean` 1–292 I read 1–32 and 196–292 and only searched 33–195. I also ran `git status`, `awk`, `cut`, `head` and `tr`.
+- Item 2's judgement on 02 holds. 02's only "least level"s are "`y` the least level meeting the draw" (:252) and "the least level up to a bound" (:262), and its appositive comes first. The summary's "holds exactly from a least level up" does lack the top, as item 2 says. But item 2's "taken on the front in 08's words" misses what its own reasoning asks of the front; see (a).
+- Item 6 holds.
+- Minor, :290–296:
+  - The quote of the cell drops its :40 link, which is the link that matters.
+  - "08's words": the "a top" comes from 08's premise clause, not its appositive.
+  - "In whole numbers" is not what T1P's counterexample needs; that is "met at `y`".
+  - The rises bullet omits that the conclusion also took law 5's words and gained `a + b ≤ c + 1`.
+- Minor, elsewhere:
+  - :301 places "45 to 65" "on the front and both covers", but the covers state only "140 to 190".
+  - Item 8 (:350) does not mention the wholes line, which also changed.
+  - :354's "under the same rules" leaves out that the measure was added.
+  - :286's "two more points": T1P's record lists five.
+
+**(f) What the fixes broke.** Nothing I could find by reading.
+- The anchors `#s-12`, `#after-t1p`, `#after-ts2s-reader` and `#left-to-others` resolve, and S-12's quote of 02 is unchanged.
+- Once the placeholders are filled, the record header's time (:3, "14.6 to 19.0 more") needs re-measuring. So do (d)'s figures if the fix in (a) lands.
+- I ran no link or quote checker.
+
+#### How each was taken, in the re-check after T1P
+
+Each note was checked against its source before it was taken or left.
+
+1. **The cell** (a). At 08's strength, its gloss reading correctly. The substantive note is true: read with the front's definition of the point at :40, the cell's "the point of no return is exact" still says there is a point in the reader's first example, where every level ends. Taken as the reader proposed: the cell states 08's appositive as its own clause, "a level up to a top `hi` ends exactly where it starts below `H + y`", and then "the point of no return, where `H + y` is at most `hi`, is `H + y`". The first list's item 2 took 08's words; this takes what its reasoning asked of the front.
+2. **S-12** (b). Holds; the presupposition its first note names is taken with the cell's. S-12 now reads "where that is at most `hi`, the point of no return is `H + y`, exact up to `hi`". "Exact up to `hi`" is there because T1's home's owner then showed, with giving that overcompensates, a top above the point and levels above the top that end, so "exact" alone reads as a threshold over every level.
+3. **How this dossier was made** (c). True. Taken: the reader checked the change "against the home, chapter 8's row and the Lean", and "one on the home's theorem on the rises went to its owner".
+4. **READING-BUDGETS** (d). Holds. The figures were rerun after these fixes.
+5. **The record** (e). The first report stands verbatim, with the reader's own correction of what it read here. Items 2 and 6 hold. The minor notes are true and taken:
+   - the cell's quote keeps its link to the front's definition of the point;
+   - "a top" is from 08's premise clause;
+   - the cell keeps "in whole numbers" as 08 does, and "met at `y`" is the premise T1P found the clause on the need takes;
+   - the rises bullet says the conclusion, with `a + b ≤ c + 1`, also took law 5's words;
+   - the cost paragraph gives the path's time on the front only;
+   - item 8 names the wholes line;
+   - this section's opening says the measure was added;
+   - the opening of this part says two of the five points T1P's reader found bear on the dossier.
+6. **Anything broken** (f). Nothing. The record's reading times and the figures were measured again after these fixes.

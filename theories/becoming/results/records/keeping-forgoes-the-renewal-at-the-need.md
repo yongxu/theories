@@ -129,6 +129,7 @@ The exact penalty: a penalty beyond the value of a constraint makes the constrai
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261107T050428.932891Z/verification.json) | — |
 
 Aliases: `keeping forgoes the renewal at the need`, `what keeping a dependence forgoes over a horizon`, `the coupling needed to keep a dependence`, `far-sight outweighs a fixed coupling`, `保持依存放弃其所需处的更新`, `Becoming.Optimum.frontier_breaks_below`, `Becoming.Optimum.frontier_keeps_above`, `Becoming.Web.frontier_breaks_long`
 

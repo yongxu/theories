@@ -1,0 +1,17 @@
+import Becoming.ContextualRuns
+#check @Becoming.ContextualRuns.along_le
+#check @Becoming.ContextualRuns.chsh_run_le
+#check @Becoming.ContextualRuns.specker_run_le
+#check @Becoming.ContextualRuns.square_run_le
+#check @Becoming.ContextualRuns.cycle_run_le
+#check @Becoming.ContextualRuns.cycle_run_iff
+#check @Becoming.ContextualRuns.chsh_in_context_not_free
+#check @Becoming.ContextualRuns.square_in_context_not_free
+#check @Becoming.ContextualRuns.specker_not_free
+#check @Becoming.ContextualRuns.specker_respecting_not_free
+#check @Becoming.ContextualRuns.square_respecting_not_free
+#check @Becoming.ContextualRuns.noGlobal_run_iff
+#check @Becoming.ContextualRuns.passes_glued
+#check @Becoming.ContextualRuns.passes_local
+#check @Becoming.ContextualRuns.specker_not_passes
+#check @Becoming.ContextualRuns.square_not_passes

@@ -96,6 +96,7 @@ The partial order of exchanges as an object, and the converse, following Ren's �
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261107T050428.932891Z/verification.json) | — |
 
 Aliases: `Becoming.Footprinted.Joined`, `Becoming.Footprinted.Precedes`, `Becoming.Footprinted.Precedes.lt`, `Becoming.Footprinted.Precedes.irrefl`, `Becoming.Footprinted.Precedes.asymm`, `Becoming.Footprinted.contains_everything`, `Becoming.Footprinted.commute_contains`, `Becoming.Footprinted.commute_precedes`, `Becoming.Footprinted.reorder_precedes`, `Becoming.Footprinted.Independent.keeps`, `Becoming.Footprinted.reorder_reorders`, `Becoming.Footprinted.sorts_iff`, `Becoming.Footprinted.converse`, `Becoming.Reindexes`, `Becoming.Footprinted.Keeps`, `Becoming.Web.Unmoved`, `Becoming.Web.SameAt`, `partial order of exchanges`, `交换的偏序`, `bubble sort`, `冒泡排序`
 

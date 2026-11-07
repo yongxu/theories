@@ -1358,8 +1358,8 @@
      "record": "margin-of-a-regime",
      "index": 1,
      "text": {
-      "en": "No axiom. Whole-number amounts and discrete steps; one condition; the draw taken first, as much as there is; giving a function of what is left, with no hidden state; each law's own premises (Short, Meets, Keeps, Gated, SubadditiveAbove, AtMost) as hypotheses.",
-      "zh": "不加公理。整数量与离散步；一个条件；汲取先取，有多少取多少；所给是所留者的函数，无隐藏状态；各规律自身的前提（Short、Meets、Keeps、Gated、SubadditiveAbove、AtMost）为假设。"
+      "en": "No axiom. Whole-number amounts and discrete steps; one condition; the draw taken first, as much as there is; giving a function of what is left, with no hidden state; each law's own premises (Short, FromNothing, Meets, Keeps, Root, Gated, Lowered, SubadditiveAbove, AtMost, and a positive draw or 0 < H + y where a law asks it) as hypotheses.",
+      "zh": "不加公理。整数量与离散步；一个条件；汲取先取，有多少取多少；所给是所留者的函数，无隐藏状态；各规律自身的前提（Short、FromNothing、Meets、Keeps、Root、Gated、Lowered、SubadditiveAbove、AtMost，以及某规律所要求的正汲取或 0 < H + y）为假设。"
      }
     }
    ],

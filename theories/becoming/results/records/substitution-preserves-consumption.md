@@ -106,6 +106,7 @@ On the whole-run reading substitution preserves the classification, nearly by th
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261107T050428.932891Z/verification.json) | — |
 
 Aliases: `Becoming.ceasing_step`, `Becoming.Substitution.web_dependent`, `Becoming.Substitution.persists_consuming`, `Becoming.Substitution.extracting_persists_consuming`, `Becoming.Substitution.stepwise_includes_substitution`, `Becoming.Substitution.slow_withheld_two_steps`, `Becoming.Web.consumingIn_kept_iff`, `Becoming.Web.consuming_survives_iff`, `Becoming.Substitution.consuming_through_sustaining`, `Becoming.Substitution.Lone.own_witness_lost`
 

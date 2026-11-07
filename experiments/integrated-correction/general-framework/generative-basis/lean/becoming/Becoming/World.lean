@@ -29,9 +29,10 @@ and with nothing glued, are one world (`Contextual.world` of `Becoming.Readings`
 `Frame.world`, which keeps neither moves nor standings). What the records do commit to is a shared
 index of steps and amounts counted in `Nat` (`Becoming.Sampling`, `Becoming.Interleavings`).
 
-These are records over `Nat` and `Prop`. This module imports the frame (`Becoming.Frame`, with the
-foundation `GenerativeCore`), so the core's import tree starts at the process and its runs, and the
-world's records stand on them. The definitions moved here unchanged, with their names, from
+These are records over `Nat` and `Prop`. This module imports the frame (`Becoming.Frame`), which
+rests on the grammar (`Becoming.Grammar`, `Becoming.GrammarMap`, `Becoming.GrammarLaws`),
+`Becoming.Prelude` and the foundation's `GenerativeCore`; the core's one base is the run, in L0, and
+the world's records stand on it. The definitions moved here unchanged, with their names, from
 `Becoming.Dependence` (`Dependence`, and `Web`, now its reading along the steps),
 `Becoming.Flow` (`Flow`), `Becoming.Arising` (`total`), `Becoming.Space` (`World`, now a
 history), `Becoming.Runs` (`WebAt`) and `Becoming.Unfolding` (`Exchange`, `Exchange.taken`,

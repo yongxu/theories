@@ -1,0 +1,104 @@
+@Becoming.LearnableRuns.prefix_eq : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} (reg : S → R)
+  (r : Becoming.Run (Becoming.Law.process next)) (t : Nat),
+  Becoming.Learning.prefixOf (Becoming.LearnableRuns.course reg r) t =
+    Becoming.Learning.prefixOf (Becoming.Learnable.course next reg (r.state 0)) t
+@Becoming.LearnableRuns.predictsFrom_iff : ∀ {S : Type u_1} {R : Type u_2} {V : Type u_3} {next : S → S} {reg : S → R}
+  {val : S → V} {pred : List R → Option V} (r : Becoming.Run (Becoming.Law.process next)) (T : Nat),
+  Becoming.LearnableRuns.PredictsFrom reg val pred r T ↔ Becoming.Learnable.PredictsFrom next reg val pred (r.state 0) T
+@Becoming.LearnableRuns.predicts_iff : ∀ {S : Type u_1} {R : Type u_2} {V : Type u_3} {next : S → S} {reg : S → R}
+  {val : S → V} {pred : List R → Option V} (r : Becoming.Run (Becoming.Law.process next)),
+  Becoming.LearnableRuns.Predicts reg val pred r ↔ Becoming.Learnable.Predicts next reg val pred (r.state 0)
+@Becoming.LearnableRuns.course_same : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {reg : S → R}
+  {r r' : Becoming.Run (Becoming.Law.process next)},
+  Becoming.Alike (Becoming.Law.frameBy next reg) (Becoming.Law.frameBy next reg) (r.state 0) (r'.state 0) →
+    ∀ (n : Nat), reg (r.state n) = reg (r'.state n)
+@Becoming.LearnableRuns.prefixes_same : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {reg : S → R}
+  {r r' : Becoming.Run (Becoming.Law.process next)},
+  Becoming.Alike (Becoming.Law.frameBy next reg) (Becoming.Law.frameBy next reg) (r.state 0) (r'.state 0) →
+    ∀ (t : Nat),
+      Becoming.Learning.prefixOf (Becoming.LearnableRuns.course reg r) t =
+        Becoming.Learning.prefixOf (Becoming.LearnableRuns.course reg r') t
+@Becoming.LearnableRuns.agree_of_predicts_both : ∀ {S : Type u_1} {R : Type u_2} {V : Type u_3} {next : S → S}
+  {reg : S → R} {val : S → V} {pred : List R → Option V} {r r' : Becoming.Run (Becoming.Law.process next)},
+  Becoming.Alike (Becoming.Law.frameBy next reg) (Becoming.Law.frameBy next reg) (r.state 0) (r'.state 0) →
+    ∀ {T T' : Nat},
+      Becoming.LearnableRuns.PredictsFrom reg val pred r T →
+        Becoming.LearnableRuns.PredictsFrom reg val pred r' T' →
+          ∀ (t : Nat), T + T' ≤ t → val (r.state t) = val (r'.state t)
+@Becoming.LearnableRuns.not_predicts_on_both : ∀ {S : Type u_1} {R : Type u_2} {V : Type u_3} {next : S → S}
+  {reg : S → R} {val : S → V} (pred : List R → Option V) {r r' : Becoming.Run (Becoming.Law.process next)},
+  Becoming.Alike (Becoming.Law.frameBy next reg) (Becoming.Law.frameBy next reg) (r.state 0) (r'.state 0) →
+    (∀ (T : Nat), ∃ t, T ≤ t ∧ val (r.state t) ≠ val (r'.state t)) →
+      ¬(Becoming.LearnableRuns.Predicts reg val pred r ∧ Becoming.LearnableRuns.Predicts reg val pred r')
+@Becoming.LearnableRuns.predicts_through : ∀ {S : Type u_1} {R : Type u_2} {V : Type u_3} [inst : DecidableEq R]
+  {next : S → S} (r : Becoming.Run (Becoming.Law.process next)) {l : List S},
+  (∀ (n : Nat), r.state n ∈ l) →
+    ∀ {reg : S → R} {val : S → V} {g : R → V},
+      (∀ (s : S), val s = g (reg s)) →
+        Becoming.LearnableRuns.PredictsFrom reg val
+          (fun x => Option.map g (Becoming.Learning.byElimination Becoming.Learning.lassos x)) r
+          (l.length + (l.length + l.length - 1) * Becoming.Learning.tri l.length)
+@Becoming.LearnableRuns.learnable_iff : ∀ {S : Type} {R : Type u_1} {V : Type u_2} [DecidableEq R] {next : S → S}
+  {reg : S → R} {val : S → V} {l : List S},
+  (∀ (s : S), s ∈ l) →
+    ((∃ pred, ∀ (r : Becoming.Run (Becoming.Law.process next)), Becoming.LearnableRuns.Predicts reg val pred r) ↔
+      ∀ (r r' : Becoming.Run (Becoming.Law.process next)),
+        Becoming.Alike (Becoming.Law.frameBy next reg) (Becoming.Law.frameBy next reg) (r.state 0) (r'.state 0) →
+          ∃ T, ∀ (t : Nat), T ≤ t → val (r.state t) = val (r'.state t))
+@Becoming.LearnableRuns.still_learnable_iff_lumped : ∀ {S : Type} {R : Type u_1} {V : Type u_2} [DecidableEq R]
+  {next : S → S},
+  (∀ (s : S), next s = s) →
+    ∀ {reg : S → R} {val : S → V} {l : List S},
+      (∀ (s : S), s ∈ l) →
+        ((∃ pred, ∀ (r : Becoming.Run (Becoming.Law.process next)), Becoming.LearnableRuns.Predicts reg val pred r) ↔
+          Becoming.Learning.Lumped reg val)
+@Becoming.LearnableRuns.guess_fixedThrough : ∀ {S : Type u_1} {R : Type u_2} {V : Type u_3} {next : S → S} (reg : S → R)
+  (pred : List R → Option V), Becoming.LearnableRuns.FixedThrough reg (Becoming.LearnableRuns.guess reg pred)
+@Becoming.LearnableRuns.FixedThrough.byRecord : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {W : Type u_3}
+  {reg : S → R} {g : Nat → Becoming.Run (Becoming.Law.process next) → W},
+  Becoming.LearnableRuns.FixedThrough reg g →
+    ∀ (k : Nat) (r r' : Becoming.Run (Becoming.Law.process next)), Becoming.Run.AgreeUpTo k r r' → g k r = g k r'
+@Becoming.LearnableRuns.predicts_iff_tracks : ∀ {S : Type u_1} {R : Type u_2} {V : Type u_3} {next : S → S}
+  {reg : S → R} {val : S → V} {pred : List R → Option V},
+  (∀ (r : Becoming.Run (Becoming.Law.process next)), Becoming.LearnableRuns.Predicts reg val pred r) ↔
+    Becoming.Limit.Tracks (Becoming.LearnableRuns.guess reg pred) fun k r => some (val (r.state k))
+@Becoming.LearnableRuns.agree_of_tracks : ∀ {S : Type u_1} {R : Type u_2} {V : Type u_3} {next : S → S} {reg : S → R}
+  {val : S → V} {g : Nat → Becoming.Run (Becoming.Law.process next) → Option V},
+  Becoming.LearnableRuns.FixedThrough reg g →
+    (Becoming.Limit.Tracks g fun k r => some (val (r.state k))) →
+      ∀ {r r' : Becoming.Run (Becoming.Law.process next)},
+        Becoming.Alike (Becoming.Law.frameBy next reg) (Becoming.Law.frameBy next reg) (r.state 0) (r'.state 0) →
+          ∃ T, ∀ (t : Nat), T ≤ t → val (r.state t) = val (r'.state t)
+@Becoming.LearnableRuns.tracks_of_learnable : ∀ {S : Type u_1} {R : Type u_2} {V : Type u_3} {next : S → S}
+  {reg : S → R} {val : S → V},
+  (∃ pred, ∀ (r : Becoming.Run (Becoming.Law.process next)), Becoming.LearnableRuns.Predicts reg val pred r) →
+    ∃ g, Becoming.LearnableRuns.FixedThrough reg g ∧ Becoming.Limit.Tracks g fun k r => some (val (r.state k))
+@Becoming.LearnableRuns.val_invariant : ∀ {S : Type u_1} {V : Type u_2} {next : S → S} {val : S → V},
+  (∀ (s : S), val (next s) = val s) →
+    ∀ (r : Becoming.Run (Becoming.Law.process next)) (k : Nat), val (r.state k) = val (r.state 0)
+@Becoming.LearnableRuns.learnable_iff_tracks : ∀ {S : Type} {R : Type u_1} {V : Type u_2} [DecidableEq R] {next : S → S}
+  {reg : S → R} {val : S → V} {l : List S},
+  (∀ (s : S), s ∈ l) →
+    ((∃ pred, ∀ (r : Becoming.Run (Becoming.Law.process next)), Becoming.LearnableRuns.Predicts reg val pred r) ↔
+      ∃ g, Becoming.LearnableRuns.FixedThrough reg g ∧ Becoming.Limit.Tracks g fun k r => some (val (r.state k)))
+@Becoming.LearnableRuns.learnable_iff_identifies : ∀ {S : Type} {R : Type u_1} {V : Type u_2} [DecidableEq R]
+  {next : S → S} {reg : S → R} {val : S → V} {l : List S},
+  (∀ (s : S), s ∈ l) →
+    (∀ (s : S), val (next s) = val s) →
+      ((∃ pred, ∀ (r : Becoming.Run (Becoming.Law.process next)), Becoming.LearnableRuns.Predicts reg val pred r) ↔
+        ∃ g, Becoming.LearnableRuns.FixedThrough reg g ∧ Becoming.Limit.Identifies g fun r => some (val (r.state 0)))
+Becoming.LearnableRuns.Merge.at_zero : ∀ (r : Becoming.Run (Becoming.Law.process Becoming.LearnableRuns.Merge.next))
+  (t : Nat), r.state (t + 1) = 0
+Becoming.LearnableRuns.Merge.learnable : ∃ pred,
+  ∀ (r : Becoming.Run (Becoming.Law.process Becoming.LearnableRuns.Merge.next)),
+    Becoming.LearnableRuns.Predicts (fun x => ()) Becoming.LearnableRuns.Merge.val pred r
+Becoming.LearnableRuns.Merge.not_identifies : ¬∃ g,
+    Becoming.LearnableRuns.FixedThrough (fun x => ()) g ∧
+      Becoming.Limit.Identifies g fun r => some (Becoming.LearnableRuns.Merge.val (r.state 0))
+Becoming.LearnableRuns.Merge.learnable_not_identifies : (∃ pred,
+    ∀ (r : Becoming.Run (Becoming.Law.process Becoming.LearnableRuns.Merge.next)),
+      Becoming.LearnableRuns.Predicts (fun x => ()) Becoming.LearnableRuns.Merge.val pred r) ∧
+  Becoming.LearnableRuns.Merge.val (Becoming.LearnableRuns.Merge.next 1) ≠ Becoming.LearnableRuns.Merge.val 1 ∧
+    ¬∃ g,
+        Becoming.LearnableRuns.FixedThrough (fun x => ()) g ∧
+          Becoming.Limit.Identifies g fun r => some (Becoming.LearnableRuns.Merge.val (r.state 0))
