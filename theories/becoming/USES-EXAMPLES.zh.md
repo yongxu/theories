@@ -133,7 +133,8 @@ AJ 的计划把目标陈述为联合选择的对齐：人类、制度与训练�
 ## 人的发展，以及生生作为对生命而言的道
 
 <a id="two-courses-for-a-valley-t8-under-its-two-premises"></a>
-### 一个山谷的两个进程：在其两个前提之下的 T8
+<a id="three-courses-for-a-valley-t8-under-its-two-premises"></a>
+### 一个山谷的三个进程：在其两个前提之下的 T8
 
 *构造的，不是观察到的：一条已证明的扩大之律的一个用法，与一个已论证的论题 T8 并列，依于两个不被断言的前提。*
 

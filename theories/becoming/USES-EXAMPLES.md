@@ -121,7 +121,8 @@ Take `a = 1`, `p = 0`, `c = 3`, `hi = 7`, `lo = 1`: each shaper among the reader
 
 ## Human development, and 生生 as the way for life
 
-### Two courses for a valley: T8 under its two premises
+<a id="two-courses-for-a-valley-t8-under-its-two-premises"></a>
+### Three courses for a valley: T8 under its two premises
 
 *Constructed, not observed: a use of a proved law of widening beside an argued thesis, T8, under two unasserted premises.*
 
