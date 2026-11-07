@@ -29,6 +29,8 @@ The [README](README.md) opens with a statement of the whole in the first person.
 
 ## How it got here
 
+[How the account grew](theories/LINEAGE.md) ([中文](theories/LINEAGE.zh.md)) tells it turning point by turning point, from the writings of 2021 to the account today, each point labelled by what states it (public, private and unpublished, or an AI reconstruction), with one thread, the selection mechanism, followed through; its picture, labels and thread come first.
+
 The ideas began in writing from 2021 on: the sixteen earlier theory folders below, with their originals in `sources/` but for the chat logs, memory exports and recorded conversations, with a conversation's transcript in `drafts/`, which the repository has not tracked since 19 October 2026. The repository's first commit is from 6 September 2026, and it holds more than 6,000 commits by 7 November 2026; the formal theory has been built since October 2026. The history is part of the work, and nothing is deleted:
 
 - **Commits.** `git log` shows each step. Where an instruction governed a step, the commit message quotes it.
