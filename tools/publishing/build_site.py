@@ -369,7 +369,7 @@ class Page:
                 continue
             if m and len(m.group(1).expandtabs(4)) < base:
                 break
-            if re.match(r'^\s{0,3}(#{1,6}(\s|$)|```|~~~|>)', line) or re.fullmatch(r'\s{0,3}([-*_])(\s*\1){2,}\s*', line):
+            if re.match(r'^\s{0,3}(#{1,6}(\s|$)|```[^`]*$|~~~|>)', line) or re.fullmatch(r'\s{0,3}([-*_])(\s*\1){2,}\s*', line):
                 break  # a heading, fence, quote or rule ends the list, as on GitHub
             if items and not m:
                 items[-1].append(line.strip())  # a lazy continuation line

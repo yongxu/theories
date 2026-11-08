@@ -6,6 +6,7 @@ record's status; raw HTML keeps no handler or script URL; and the repository's o
 that exist and may be published."""
 import importlib.util
 import json
+import os
 from pathlib import Path
 import re
 import shutil
@@ -240,7 +241,6 @@ class SiteTests(unittest.TestCase):
         self.assertLess(home.index('<h3 class="group">Read</h3>'), home.index('<h3 class="group">Check</h3>'))
         self.assertEqual(home.count('<h3 class="group">'), 2)
         self.assertLess(home.index('>Ch<'), home.index('<h3 class="group">Check</h3>'))  # a group keeps its cards together
-        self.assertEqual((self.out / 'assets/site.css').stat().st_mode & 0o777, 0o644)
 
     def test_the_chinese_readme_goes_back_to_the_home(self):
         (self.tmp / 'README.zh.md').write_text('# 中文\n\n中文的首页。\n')
@@ -272,9 +272,14 @@ class SiteTests(unittest.TestCase):
             site.section_text(page, 'no-such-part')
 
     def test_with_the_map_off_no_line_names_it(self):
-        self.build(nav_zh=[['index.html', '首页'], ['connections.html', '地图']],
-                   aliases=dict(SITE['aliases'], **{'map.html': 'connections.html#top'}))
-        self.assertNotIn('connections.html', self.page('index.html'))
+        (self.tmp / 'a/ONE.zh.md').write_text('# 一页\n\n中文的一页。\n')
+        (self.tmp / 'a/ONE.md').write_text(ONE + '\n[The map](../map.html) and [again](../connections.html).\n')
+        self.files |= {'a/ONE.zh.md', 'map.html'}
+        self.build(pages=SITE['pages'] + ['a/ONE.zh.md'], nav_zh=[['index.html', '首页'], ['connections.html', '地图']],
+                   aliases=dict(SITE['aliases'], **{'map.html': 'connections.html#top'}),
+                   ways_in=[{'path': 'a/ONE.md', 'label': 'One', 'text': 'x', 'zh': 'connections.html#x'}])
+        for page in ('index.html', 'a/ONE.html', 'a/ONE.zh.html'):
+            self.assertNotIn('connections.html', self.page(page), page)
 
     def test_a_link_to_an_aliased_files_lines_goes_to_github(self):
         (self.tmp / 'a/ONE.md').write_text(ONE + '\n[The readme\'s line](../README.md?plain=1#L5).\n')
@@ -290,13 +295,21 @@ class SiteTests(unittest.TestCase):
         (self.tmp / 'a/pic.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg"></svg>')
         (self.tmp / 'a/pic.svg').chmod(0o600)
         self.files.add('a/pic.svg')
+        old = os.umask(0o077)  # a fresh file would be private without the build's chmod
+        self.addCleanup(os.umask, old)
         self.build(assets=['a/pic.svg'])
         self.assertEqual((self.out / 'a/pic.svg').stat().st_mode & 0o777, 0o644)
+        self.assertEqual((self.out / 'assets/site.css').stat().st_mode & 0o777, 0o644)
 
     def test_a_heading_after_a_list_item_is_a_heading(self):
         (self.tmp / 'a/ONE.md').write_text(ONE + '\n1. an item\n## After the list\n\nText.\n')
         self.build()
         self.assertIn('<h2 id="after-the-list">', self.page('a/ONE.html'))
+
+    def test_an_inline_code_line_continues_a_list_item(self):
+        (self.tmp / 'a/ONE.md').write_text(ONE + '\n1. an item\n```x``` and more\n\nText after.\n')
+        self.build()
+        self.assertIn('<p>Text after.</p>', self.page('a/ONE.html'))  # not read as a fence running on down the page
 
     def test_a_card_times_its_part(self):
         with self.assertRaises(AssertionError):

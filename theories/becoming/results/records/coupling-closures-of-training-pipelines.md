@@ -10,7 +10,7 @@
 <a id="conditions--条件"></a>
 ## Conditions
 
-- The identification of each pipeline as a web (formations, conditions, coupling) is the AI reading of its published construction; figures are from the papers abstracts, read 22 October 2026.
+- The identification of each pipeline as a web (formations, conditions, coupling) is the AI reading of its published construction; figures are from the papers abstracts, read 22 October 2026; section 2's Constitutional AI figures and section 1's note on Sharma et al. are from the papers' bodies, read 8 November 2026.
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
@@ -24,7 +24,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-A correspondence study (no Lean) reviewed at its stated scope in one session; sources read from their abstracts and the NIST release on 22 October 2026; not independently reviewed.
+A correspondence study (no Lean) reviewed at its stated scope in one session; sources read from their abstracts and the NIST release on 22 October 2026; section 2's Constitutional AI construction and section 1's note on Sharma et al. from the papers' bodies on 8 November 2026; not independently reviewed.
 
 Canonical source: [CORRESPONDENCE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cr1-coupling-correspondence/CORRESPONDENCE.md)
 
@@ -61,7 +61,7 @@ Aliases: `CR1`, `coupling closures of training pipelines`
 
 - 22 October 2026: added (CR1); study section 358.
 - 26 October 2026, board item DF1b (study section 422): Gao, Schulman and Hilton cited by the published year, 2023 (ICML, PMLR 202; arXiv October 2022), as elsewhere in the account.
-- 8 November 2026, RW: the study's section 2 corrected: Constitutional AI keeps human labels for helpfulness (the paper's §4.1), so humans supply only principles, and couple in through them alone, for harmlessness, and there as the paper frames its oversight (§3.1–3.2: human-written red-team prompts, a critic trained on human helpfulness feedback); the statement is unchanged.
+- 8 November 2026, RW: the study's section 2 corrected: Constitutional AI keeps human labels for helpfulness (the paper's §4.1), so humans supply only principles, and couple in through them alone, for harmlessness, and there as the paper frames its oversight, though its §3.1–3.2 has human-written red-team prompts and a critic trained on human helpfulness feedback; section 1 notes that Sharma et al.'s optimizing (their §4.2) is against a preference model with human judgments for helpfulness and AI judgments for harmlessness; the statement is unchanged.
 
 </details>
 
