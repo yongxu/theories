@@ -1,197 +1,236 @@
 {
-  "about": "The Chinese line of each scored test on TESTS.zh.md, AI-written and checked by another AI reader, no person. Each keeps the English gloss it translates (\"en\"); zh_fronts.py shows the English, marked, where the row's gloss has changed since.",
+  "about": "The Chinese line of each scored test on TESTS.zh.md, AI-written and checked by another AI reader, no person. Each keeps the English it translates (\"en_name\", \"en\"); zh_fronts.py shows the English, marked, where the row's name or gloss has changed since.",
   "lines": {
     "MQ3": {
+      "en_name": "The margin of a regime in assessed fish stocks",
       "en": "On 113 assessed fish stocks, none of the four frozen predictions passed.",
       "name": "经评估鱼类种群中一个体制的余裕",
       "gloss": "在 113 个经过评估的鱼类种群上，4 项冻结预测无一通过。"
     },
     "MQ7": {
+      "en_name": "Fates on either side of the curve, on unread fish stocks",
       "en": "On 21 fish stocks not read before, the one testable frozen prediction failed; the other was not testable.",
       "name": "未读过的鱼类种群上，曲线两侧的结局",
       "gloss": "在 21 个此前未经任何分析读取的鱼类种群上，唯一可检验的那项冻结预测未通过，另一项无法检验。"
     },
     "VD1": {
+      "en_name": "Where valuers agree and disagree on widenings and mixed pairs",
       "en": "Every frozen rule failed.",
       "name": "评价者在扩大与混合比较上的一致与分歧",
       "gloss": "6 个模型在 16 种立场下比较各方案，预期一致落在扩大比较上、分歧落在混合比较上，而每一条冻结规则都未通过。"
     },
     "UE31b": {
+      "en_name": "T2's three numbers against beetle life stages, read by cell",
       "en": "T2's former wording failed: the pupae and adults, a class of fewer variables, did better.",
       "name": "T2 的三个量对照面粉甲虫的生活史阶段（按单元读）",
       "gloss": "T2 原先的措辞未通过：在下一次给予上，蛹与成虫这一变量更少的类做得更好。"
     },
     "CG1": {
+      "en_name": "A commons with gated renewal on tabular learners (two rounds)",
       "en": "All seven identity and scope predictions held, but D1 as frozen failed, its manipulation check failing; of the learning predictions two passed, three failed in both rounds and one passed only vacuously.",
       "name": "门控更新公地上的表格式学习者（两轮）",
       "gloss": "7 项恒等类和范围类预测全部成立，但按冻结的形式 D1 未通过，因为它的操纵检验未通过；学习类预测中 2 项通过（其中 C1 只在第二轮通过，第一轮无法检验），3 项在两轮中都未通过，1 项只是空洞地通过。"
     },
     "CG2": {
+      "en_name": "Whether the rest outrunning a gated renewal decides learners' outcome",
       "en": "Nine of eleven conditions and three of five contrasts passed; two of each failed.",
       "name": "其余者超出门控更新，是否决定学习者的结局",
       "gloss": "11 个条件中 9 个通过，5 项对比中 3 项通过；条件和对比各有 2 项未通过。"
     },
     "CG3 (round 1)": {
+      "en_name": "Whether a stepwise learner's own later acts outrun its reading",
       "en": "Round one's account, the learner's own exploratory coverage, failed on its sharpest case.",
       "name": "逐步学习者自己后来的行动是否抢在读取之前",
       "gloss": "第一轮的解释，即学习者自身探索的覆盖度，在它最尖锐的案例上未通过。"
     },
     "CG3 (round 2)": {
+      "en_name": "Coverage and the full draw's standing time as the boundary",
       "en": "Round two's threshold failed: two of six conditions and contrast Z1 failed. Its early-start contrast, Z3, passed, placing the learner's own outrun at the start of a course.",
       "name": "以覆盖度和全力取用的存续时间为边界",
       "gloss": "第二轮的阈值未通过：6 个条件中有 2 个未通过，对比 Z1 也未通过；早起点对比 Z3 通过，它把学习者自身行动超出更新的位置定在进程的开头。"
     },
     "CG3b": {
+      "en_name": "A learner's boundary fitted on half a grid, predicting the other",
       "en": "Five of seven predicted conditions passed; the two failures sit where a measured share was near 0 or 1 and the fit predicted about 0.4–0.7, and the fit was no better than round two's rule (W2 failed).",
       "name": "用半张网格拟合学习者的边界，预测另一半",
       "gloss": "7 个被预测的条件中 5 个通过；2 个未通过的条件，实测比例接近 0 或 1，拟合却预测约 0.4–0.7；拟合也不比第二轮的规则好（W2 未通过）。"
     },
     "CG3c": {
+      "en_name": "The band form of a learner's boundary",
       "en": "Each frozen form of the boundary came from the round before and failed on the next round's sharpest case; the series ended.",
       "name": "学习者边界的带状形式",
       "gloss": "边界的每一种冻结形式都取自上一轮，又都在下一轮最尖锐的案例上未通过；这一系列检验到此结束。"
     },
     "EM1": {
+      "en_name": "The rest-outruns law on learners that generalize across states",
       "en": "Contrasts X1, X2 and X4 failed and X3 and X5 passed; E1 failed and E2 and E3 passed. Three of eleven conditions failed, and the bridge H3 failed on the locked side.",
       "name": "“其余者超出更新”定律用于跨状态泛化的学习者",
       "gloss": "对比 X1、X2、X4 未通过，X3、X5 通过；E1 未通过，E2、E3 通过。11 个条件中 3 个未通过，桥接假设 H3 在锁定一侧未通过。"
     },
     "MQ1 (simulation)": {
+      "en_name": "The margin in a simulated yeast and a side-effect gridworld",
       "en": "Blind draw predicted which cells an exact optimizer spends to its need, and failed for learners short of the optimum.",
       "name": "模拟酵母与副作用网格世界中的余裕",
       "gloss": "“盲取用”（取用的是测得耦合为零的条件）能预测精确最优化者会把哪些格子耗到其“需要”，但对达不到最优的学习者，这一预测未通过。"
     },
     "MQ1 (yeast)": {
+      "en_name": "The margin read on real yeast data",
       "en": "On real yeast, one of two frozen predictions passed.",
       "name": "用真实酵母数据读取余裕",
       "gloss": "在真实酵母上，2 项冻结预测通过 1 项。"
     },
     "MQ2": {
+      "en_name": "The margin's equation of state against held-out yeast regimes",
       "en": "Against held-out yeast regimes, four of eight frozen predictions passed.",
       "name": "余裕的状态方程对照留出的酵母体制",
       "gloss": "在未用于拟合的酵母体制上，8 项冻结预测通过 4 项。"
     },
     "MQ4": {
+      "en_name": "Level and recent giving as the state in fish stocks",
       "en": "On 76 fish stocks not read before, seven of twelve frozen predictions passed; the whole-state verdict, G3, that nothing more is needed, failed.",
       "name": "以水平与近来的给予为状态（鱼类种群）",
       "gloss": "在 76 个此前未经任何分析读取的鱼类种群上，12 项冻结预测通过 7 项；整体状态的裁决 G3（状态不需要再加别的）未通过。"
     },
     "MQ5": {
+      "en_name": "A lag and the draw's response in fish stocks",
       "en": "On 69 fish stocks not read before, six of eight passed: the state and the lag (S1 to S4, P1, P2) passed; the draw's response (D1, D2) failed.",
       "name": "滞后与取用的响应（鱼类种群）",
       "gloss": "在 69 个此前未经任何分析读取的鱼类种群上，8 项预测通过 6 项：状态与滞后（S1 至 S4、P1、P2）通过，取用的响应（D1、D2）未通过。"
     },
     "MQ6": {
+      "en_name": "The margin's time to break past the fold, in yeast",
       "en": "In yeast driven past its fold, three of ten frozen predictions passed; the fate reading, the need near the fold, both breaks' timing and three of four level forecasts failed.",
       "name": "越过折叠点后由余裕推算的崩溃时间（酵母）",
       "gloss": "在被驱动越过折叠点的酵母中，10 项冻结预测通过 3 项；结局的判读、折叠点附近的“需要”、两种驱动下崩溃的时间，以及 4 项水平预报中的 3 项，都未通过。"
     },
     "IN1 (round 1)": {
+      "en_name": "Installing the direction by instruction in language-model fishers",
       "en": "Of seven frozen predictions, five failed and two passed: seeing is not valuing (H4) and the identity checks. By the frozen rule a prediction passes only where both models pass.",
       "name": "用指令给语言模型渔民安装方向",
       "gloss": "7 项冻结预测中 5 项未通过，2 项通过：“看见不等于看重”（H4）和恒等检验。按冻结规则，一项预测要在两个模型上都通过才算通过。"
     },
     "VD2": {
+      "en_name": "Valuers' own sign on an ending, measured apart from ranking",
       "en": "Three frozen rules passed and three failed.",
       "name": "评价者对终结的自身正负判断，与排序分开测量",
       "gloss": "评价者先不看方案，说出每个形成的终结对自己是损失、无所谓还是收益，再对只多保留一个形成的扩大比较排序；冻结规则 3 条通过（X1s、X2、S1），3 条未通过（X1、X3、S2）。"
     },
     "LA1": {
+      "en_name": "A language model revising a harvest threshold from its reward",
       "en": "Both open settings passed; two of four locked settings failed, and with them contrasts L1, L3 and L4, at misses worth 92.5% to 98.2% of the best, which, by LA1b's later frozen test, its feedback barely resolved.",
       "name": "语言模型依奖励修订收获阈值",
       "gloss": "两个开放设置都通过；4 个锁定设置中 2 个未通过，对比 L1、L3、L4 也随之未通过。这些偏差的价值是最优值的 92.5% 到 98.2%，按 LA1b 后来冻结的检验，LA1 的反馈几乎分辨不出这样的差别。"
     },
     "LA2": {
+      "en_name": "A lock in a self-rewarding loop of one trained judge",
       "en": "Every frozen verdict passed, one condition and contrasts L3 and L4 by an exact tie; the bridge failed, one note of the loss among nine readers turning the judge, and a frozen support the data contradict is not claimed.",
       "name": "单个已训练评判者的自奖励回路中的锁定",
       "gloss": "每项冻结裁决都通过，其中一个条件和对比 L3、L4 靠的是恰好打平；桥接假设未通过，9 个读者中只要一个带上关于损失的批注，评判者就转向；冻结规则判为支持、却与数据相矛盾的那一项，不作主张。"
     },
     "LA3": {
+      "en_name": "Whether a language model shapes its evaluator where counts favour it",
       "en": "Two frozen contrasts failed and two passed.",
       "name": "计数有利时，语言模型是否塑造其评价者",
       "gloss": "模型要决定是否塑造给自己打分的评价者；冻结对比 2 项未通过（K2、K4）、2 项通过（K1、K3）：未通过的两个条件里，各 5 个种子中分别只有 2 个和 3 个最终选择了塑造。"
     },
     "LCA": {
+      "en_name": "Learned agents serving other centers' claims (toy Q-networks)",
       "en": "Of seven frozen predictions, four passed and three failed; the agents learned to stop serving less reliably than to serve.",
       "name": "学习型智能体服务其他中心的诉求（玩具 Q 网络）",
       "gloss": "7 项冻结预测中 4 项通过、3 项未通过；智能体学会停止服务，不如学会服务那样可靠。"
     },
     "T1N": {
+      "en_name": "T1's field test with a need measured in advance, walleye lakes",
       "en": "The run stopped before scoring: no verdict, no need measured, nothing said of T1.",
       "name": "预先测定“需要”的 T1 野外检验（大眼梭鲈湖泊）",
       "gloss": "运行在评分前即被拒绝而停止：没有裁决，没有测出“需要”，对 T1 未作任何结论。"
     },
     "T1R": {
+      "en_name": "Whether renewal returns in lakes stocked back above the need",
       "en": "The run stopped before scoring: no verdict, nothing said of T1.",
       "name": "放养回“需要”之上的湖泊，更新是否恢复",
       "gloss": "运行在评分前即被拒绝而停止：没有裁决，对 T1 未作任何结论。"
     },
     "UE31": {
+      "en_name": "T2's three numbers against the flour beetle's life stages",
       "en": "Nothing was decided: the cultures under a set adult loss were too short for the frozen rules.",
       "name": "T2 的三个量对照面粉甲虫的生活史阶段",
       "gloss": "没有作出任何裁决：成虫损失被人为设定的那批培养物太短，达不到冻结规则的要求。"
     },
     "IN1 (round 2)": {
+      "en_name": "Installing the direction by instruction, with one round of talk",
       "en": "By its frozen rule, which passes a prediction only where both models pass, R1, R3 and R4 failed and R2 and the identity checks passed; one model passed all four, the other only R2. T4's standing in [07](theories/becoming/chapters/07-SIGNIFICANCE.md#theses) and [08](theories/becoming/chapters/08-METHOD.md#theses) counts it per model, as partly passed.",
       "name": "用指令安装方向，外加一轮交谈",
       "gloss": "按冻结规则，一项预测要在两个模型上都通过才算通过：R1、R3、R4 未通过，R2 和恒等检验通过；一个模型 4 项全部通过，另一个只通过 R2。T4 在 [07](theories/becoming/chapters/07-SIGNIFICANCE.md#theses) 和 [08](theories/becoming/chapters/08-METHOD.md#theses) 中的地位按模型分别计算，记为部分通过。"
     },
     "FC1": {
+      "en_name": "Fidelity count: excess referents in classical and English wordings",
       "en": "The classical wording introduced fewer excess referents and agents than the English; coded by language models and provisional, with no human audit and the main set's 經 coded by the model that wrote them; F3 and F4 not measured.",
       "name": "忠实度计数：文言与英文表述中的多余指称",
       "gloss": "在这两份文本上，文言的“經”引入的多余指称和行动者比英文条文少；编码由语言模型完成，结果是暂定的，没有人工审核，主集的“經”由写下它们的那个模型编码；F3 和 F4 未测量。"
     },
     "LA4 (Stage A)": {
+      "en_name": "The drain beyond the reward under gradient training, small policies",
       "en": "No prediction was contradicted: three supported in both tested families, two unresolved in both, P6 untestable in one; the nearness pattern supported largely follows from policy gradient's update rule.",
       "name": "梯度训练下奖励之外的消耗（小型策略，A 阶段）",
       "gloss": "没有一项预测与结果相矛盾：3 项在两个受测策略族中都得到支持，2 项在两族中都未能判定，P6 在其中一族无法检验；得到支持的接近度模式（越接近奖励最优，奖励之外的存量越低）大体上可由策略梯度的更新规则推出。"
     },
     "EW2": {
+      "en_name": "Early warnings in forage fish before seabird breeding failures",
       "en": "At the frozen level, no information on the birds' poor years was found in the prey's statistics beyond their level path; the pass is weak, on two short series, every estimate in the direction the refutation clause names.",
       "name": "海鸟繁殖失败之前饵料鱼的早期预警",
       "gloss": "在冻结的检验水平上，除猎物的水平走势之外，未在猎物的统计量中发现关于海鸟繁殖不佳年份的信息；这次通过很弱：只有两条短序列，每个估计值都偏向反驳条款所指的方向。"
     },
     "EW3": {
+      "en_name": "The same early-warning test on longer, unread series",
       "en": "EW2's positive estimate did not hold up at about twice the power; by the frozen rule, variance resolved it toward T6 and autocorrelation left it open. Not independent of EW2: part of its rows were in EW2's test.",
       "name": "同一早期预警检验用于更长的未读序列",
       "gloss": "EW2 的正向估计在约两倍的统计功效下没有站住；按冻结规则，方差把这一问题判向 T6 一侧，自相关则让它悬而未决。这项检验不独立于 EW2：其部分数据行已用于 EW2 的检验。"
     },
     "EW4": {
+      "en_name": "Early warnings before Farallon seabird failures, rockfish prey",
       "en": "At moderate power, both frozen verdicts passed: T6 was not rejected at its threshold. The scope premise is argued by mechanism, not measured.",
       "name": "法拉隆海鸟繁殖失败前的早期预警（猎物为平鲉）",
       "gloss": "在中等统计功效下，两项冻结裁决都通过：T6 在其阈值上未被拒绝，这不等于得到支持。适用范围这一前提靠机理论证，没有测量。"
     },
     "SE1": {
+      "en_name": "Blind draw against margin versus established impact measures",
       "en": "The blind draw matches the established impact measures and adds nothing as a measure.",
       "name": "盲取用对照余裕：与既有影响度量相比",
       "gloss": "盲取用（取用的是测得耦合为零的条件）与既有的影响度量持平，作为一种度量没有增加任何东西。"
     },
     "LA1b": {
+      "en_name": "LA1's game with feedback that resolves the best threshold",
       "en": "Every frozen verdict passed, and the frozen reading is resolution.",
       "name": "LA1 的博弈，换上能分辨最优阈值的反馈",
       "gloss": "每项冻结裁决都通过，按冻结规则读出的结论是 `resolution`（问题在反馈的分辨力）：LA1 在锁定一侧的偏差，读作反馈几乎分辨不出最优阈值或从未显示它。"
     },
     "LA1c": {
+      "en_name": "Whether the model finds the best threshold with no round assigned",
       "en": "No seed ended below a threshold it had played that the rounds showed better, and every final choice was valid.",
       "name": "不指定回合时，模型能否自己找到最优阈值",
       "gloss": "凡是种子试过、各回合又已显示更好的阈值，没有一个种子最终选得比它差；每个最终选择也都有效。"
     },
     "UE32": {
+      "en_name": "T2's three numbers against the field's fitted delay embedding",
       "en": "By its frozen criterion, T2's three numbers forecast the next giving better than the field's fitted embedding, in 42 of 65 stocks; both forecast worse than persistence in most, and the expected answer, \"not separated\", was not borne out.",
       "name": "T2 的三个量对照该领域拟合的延迟嵌入",
       "gloss": "按冻结标准，T2 的三个量对下一次给予的预报胜过该领域拟合的延迟嵌入，65 个种群中有 42 个如此；但在多数种群中，两者都不如持续性预报（沿用上一次的给予），事先预期的答案“分不出高下”也没有成立。"
     },
     "TR7A": {
+      "en_name": "TR7's Stage A: tabular learners on complying when read",
       "en": "The frozen reading came out supported, for these learners only, confirming no theorem or thesis; the expectation stated before the run held except at A3's tie, 14 to 6 where about even was expected.",
       "name": "TR7 的 A 阶段：表格式学习者在被读取时服从",
       "gloss": "冻结的读法结果为“得到支持”，但只限于这些学习者，不证实任何定理或论题；运行前写下的预期都成立，只有 A3 的平局例外：结果是 14 比 6，而预期大致各半。"
     },
     "ZE": {
+      "en_name": "Controlled English under the same name-table discipline",
       "en": "By its registered rules, the classical code's advantage does not survive under one coder (the primary comparison) and survives at about a third of a referent per pair under the other, on a 60-pair check that its plan says is not a second primary test; the coders do not agree on excess; no human audit.",
       "name": "同样名表纪律下的受控英语",
       "gloss": "按登记的规则，文言代码的优势在一个编码者下（主比较）没有保持下来，在另一个编码者下保持了下来，幅度约为每对三分之一个指称，但后者是一次 60 对的核查，其计划明言它不是第二个主检验；两个编码者对“多余”的判断并不一致；没有人工审核。"
     },
     "SC1": {
+      "en_name": "Whether a model under-detects what its own text introduces",
       "en": "No author-specific detection deficit was found.",
       "name": "模型是否漏检自己文本引入的内容",
       "gloss": "“模型更难查出自己文本里多引入的内容”这种作者特有的检出不足，没有被发现。"

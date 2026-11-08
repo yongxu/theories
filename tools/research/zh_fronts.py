@@ -148,29 +148,47 @@ OTHER_ZH = (('no-verdict', '只作报告、没有判定'), ('not-run', '已冻�
 
 
 def _cell(text: str) -> str:
-    return ' '.join(text.split()).replace('|', '\\|')
+    return re.sub(r'(?<!\\)\|', r'\\|', ' '.join(text.split()))
 
 
-def tests_page(root: Path = ROOT) -> tuple[dict, list[str]]:
+def _lines_problems(held, ids) -> list[str]:
+    """What is wrong with the Chinese lines: not an object, a line for no test, a field missing or empty."""
+    if not isinstance(held, dict):
+        return [f'zh fronts: {TESTS_LINES}: "lines" is not an object']
+    found = [f'zh fronts: {TESTS_LINES} has a line for a test that does not exist: {k}' for k in held if k not in ids]
+    for k, line in held.items():
+        if not isinstance(line, dict) or not all(isinstance(line.get(f), str) and line[f].strip() for f in ('en', 'en_name', 'name', 'gloss')):
+            found.append(f'zh fronts: {TESTS_LINES}: the line for {k} needs non-empty en, en_name, name and gloss')
+    return found
+
+
+def tests_page(root: Path = ROOT, checked: bool = True) -> tuple[dict, list[str]]:
     """({TESTS.zh.md: page}, errors): the tests that scored something, failures first, a line of Chinese each. A row with
-    no Chinese line, or whose English line has changed since it was translated, shows the English, marked, so the page
-    cannot say what the row no longer says. A Chinese line naming no test is an error."""
+    no Chinese line, or whose English name or line has changed since it was translated, shows the English, marked, so
+    the page cannot say what the row no longer says. `checked` is false where TESTS.md's own render refused the data;
+    then there is no page, and that render has said why. Malformed Chinese lines, a line naming no test, and an outcome
+    neither list here knows are errors."""
     import json
-    from tools.research import navigation
+    from tools.research import tests_page as english_tests
     data, lines = root / TESTS_DATA, root / TESTS_LINES
-    if not data.is_file():
+    if not data.is_file() or not checked:
         return {}, []
     rows = json.loads(data.read_text(encoding='utf-8'))['tests']
-    held = json.loads(lines.read_text(encoding='utf-8'))['lines'] if lines.is_file() else {}
-    ids = {r['id'] for r in rows}
-    errors = [f'zh fronts: {TESTS_LINES} has a line for a test that does not exist: {k}' for k in held if k not in ids]
+    try:
+        held = json.loads(lines.read_text(encoding='utf-8')).get('lines', {}) if lines.is_file() else {}
+    except (ValueError, AttributeError) as e:
+        return {}, [f'zh fronts: {TESTS_LINES} is not a JSON object with "lines": {e}']
+    errors = _lines_problems(held, {r['id'] for r in rows})
+    known = {k for k, _, _ in SCORED_ZH} | {k for k, _ in OTHER_ZH}
+    errors += [f'zh fronts: no Chinese class for the outcome {k!r} (tests_page.py has it)' for k in english_tests.CLASS_KEYS if k not in known]
+    if errors:
+        return {}, errors
     by = {}
     for r in rows:
         by.setdefault(r['outcome'], []).append(r)
     counts = '，'.join(f'{label} {len(by[k])}' for k, label, _ in SCORED_ZH if by.get(k))
     others = '，'.join(f'{label} {len(by[k])}' for k, label in OTHER_ZH if by.get(k))
     scored = sum(len(by.get(k, [])) for k, _, _ in SCORED_ZH)
-    english = 0
     body = []
     for key, label, gloss in SCORED_ZH:
         if not by.get(key):
@@ -178,12 +196,11 @@ def tests_page(root: Path = ROOT) -> tuple[dict, list[str]]:
         body += [f'## {label}', '', gloss, '', '| 检验 | 论题 | 冻结 | 运行 | 一句话［AI 读法］ |', '|---|---|---|---|---|']
         for r in sorted(by[key], key=lambda r: (r['run'] or r['frozen'] or '9999', r['id'])):
             line = held.get(r['id'])
-            if line and line.get('en') == r['gloss']:
+            if line and line['en'] == r['gloss'] and line['en_name'] == r['name']:
                 name, said = line['name'], line['gloss']
             else:
                 name, said = r['name'] + '（英文）', r['gloss'] + '（英文）'
-                english += 1
-            theses = r['thesis'] if isinstance(r['thesis'], str) else '、'.join(r['thesis'])
+            theses = '、'.join(t.strip() for t in r['thesis'].split(',') if t.strip())
             body.append(f"| [**{_cell(r['id'])}**]({r['folder']}) {_cell(name)} | {_cell(theses or '—')} | {r['frozen'] or '—'} | {r['run'] or '—'} | {_cell(said)} |")
         body.append('')
     lead = [f'本论的经验论题接受评分之前就已冻结的检验。这里按结局列出已经评分的 {scored} 项，未通过的在前（全部 {len(rows)} 项中：{counts}；'
@@ -219,7 +236,8 @@ def render(records: list, outputs: dict, root: Path = ROOT) -> tuple[dict, list[
     if not template.is_file():
         return {}, [f'{TEMPLATE} is missing']
     errors, stated = [], {}
-    tests, tests_errors = tests_page(root)
+    from tools.research import tests_page as english_tests
+    tests, tests_errors = tests_page(root, checked=english_tests.PAGE in outputs or not (root / TESTS_DATA).is_file())
     outputs = {**outputs, **tests}  # the landing page times the tests page as it is about to be written
 
     def text_of(path):

@@ -288,6 +288,8 @@ def local_link(doc: str, target: str) -> str | None:
 
 
 def documents() -> tuple[dict, dict]:
+    # A page this render writes did not exist at the first scan; the cached answer would keep it missing.
+    local_link.cache_clear()
     docs = {}
     backlinks = defaultdict(list)
     mirrored = tuple(f + "/" for f in set(_mirror_folders().values()))

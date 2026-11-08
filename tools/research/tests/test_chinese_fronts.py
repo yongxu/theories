@@ -63,7 +63,8 @@ class TestsPageTests(unittest.TestCase):
         import tempfile
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
-            self.write(root, self.ROWS, {'F1': {'en': 'It failed.', 'name': '一项失败', 'gloss': '它未通过。'}, 'P1': {'en': 'It passed.', 'name': '一项通过', 'gloss': '它通过了。'}})
+            self.write(root, self.ROWS, {'F1': {'en_name': 'A failure', 'en': 'It failed.', 'name': '一项失败', 'gloss': '它未通过。'},
+                                         'P1': {'en_name': 'A pass', 'en': 'It passed.', 'name': '一项通过 | 以竖线', 'gloss': '它通过了。'}})
             pages, errors = zh_fronts.tests_page(root)
         page = pages[zh_fronts.TESTS_PAGE]
         self.assertEqual(errors, [])
@@ -72,25 +73,53 @@ class TestsPageTests(unittest.TestCase):
         self.assertNotIn('N1', page)
         self.assertIn('全部 3 项中：未通过 1，通过 1；此外 已冻结、尚未运行 1', page)
         self.assertIn(zh_fronts.nav_line(zh_fronts.TESTS_PAGE), page)
+        self.assertIn('一项通过 \\| 以竖线', page)
+
+    def test_the_landing_page_render_writes_and_times_it(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.write(root, self.ROWS, {})
+            (root / zh_fronts.TEMPLATE).parent.mkdir(parents=True, exist_ok=True)
+            (root / zh_fronts.TEMPLATE).write_text('<!-- note -->\n# 首页\n\n{{nav}}\n\n检验约 {{time:TESTS.zh.md}}。\n', encoding='utf-8')
+            for c in zh_fronts.CHAPTERS:
+                (root / c).parent.mkdir(parents=True, exist_ok=True)
+                (root / c).write_text('# c\n', encoding='utf-8')
+            pages, errors = zh_fronts.render([], {'TESTS.md': 'x'}, root)
+            refused, _ = zh_fronts.render([], {}, root)  # TESTS.md's own render refused the data: no Chinese page
+            inputs = {str(p.relative_to(root)) for p in zh_fronts.inputs(root)}
+        self.assertEqual(errors, [])
+        self.assertIn(zh_fronts.TESTS_PAGE, pages)
+        self.assertNotIn('{{time:', pages['README.zh.md'])
+        self.assertNotIn(zh_fronts.TESTS_PAGE, refused)
+        self.assertIn(zh_fronts.TESTS_DATA, inputs)
+        self.assertIn(zh_fronts.TESTS_LINES, inputs)
 
     def test_a_row_whose_english_changed_shows_the_english_marked(self):
         import tempfile
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
-            self.write(root, self.ROWS, {'F1': {'en': 'An older line.', 'name': '一项失败', 'gloss': '旧的中文。'}})
+            self.write(root, self.ROWS, {'F1': {'en_name': 'A failure', 'en': 'An older line.', 'name': '一项失败', 'gloss': '旧的中文。'},
+                                         'P1': {'en_name': 'An older name', 'en': 'It passed.', 'name': '旧名', 'gloss': '它通过了。'}})
             pages, _ = zh_fronts.tests_page(root)
         page = pages[zh_fronts.TESTS_PAGE]
         self.assertNotIn('旧的中文', page)
+        self.assertNotIn('旧名', page)
         self.assertIn('A failure（英文）', page)
         self.assertIn('It failed.（英文）', page)
+        self.assertIn('A pass（英文）', page)
 
     def test_a_line_for_no_test_is_an_error(self):
         import tempfile
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
-            self.write(root, self.ROWS, {'GONE': {'en': 'x', 'name': 'y', 'gloss': 'z'}})
-            _, errors = zh_fronts.tests_page(root)
+            self.write(root, self.ROWS, {'GONE': {'en_name': 'w', 'en': 'x', 'name': 'y', 'gloss': 'z'}})
+            pages, errors = zh_fronts.tests_page(root)
+            self.write(root, self.ROWS, {'F1': {'en_name': 'A failure', 'en': 'It failed.', 'name': '', 'gloss': '它未通过。'}})
+            _, empty = zh_fronts.tests_page(root)
         self.assertEqual(errors, [f'zh fronts: {zh_fronts.TESTS_LINES} has a line for a test that does not exist: GONE'])
+        self.assertEqual(pages, {})
+        self.assertEqual(empty, [f'zh fronts: {zh_fronts.TESTS_LINES}: the line for F1 needs non-empty en, en_name, name and gloss'])
 
 
 class LandingPageTests(unittest.TestCase):
