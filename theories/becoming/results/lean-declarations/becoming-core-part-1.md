@@ -2690,7 +2690,7 @@ Definitions and types:
 <details>
 <summary>CommonResponse.lean — 50 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CommonResponse.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CommonResponse.lean) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wb-within-becoming/readings/16-astra-round3.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CommonResponse.lean`
 
