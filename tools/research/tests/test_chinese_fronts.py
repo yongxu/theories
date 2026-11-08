@@ -176,6 +176,23 @@ class LandingPageTests(unittest.TestCase):
         self.assertIn('检验约 31–40 分钟', page)  # timed as the render is about to write it
         self.assertNotIn('{{', page)
 
+    def test_the_tests_counts_are_the_english_screens(self):
+        import json
+        from tools.research import tests_page as english_tests
+        rows = [{'thesis': 'T1', 'outcome': 'mixed'}, {'thesis': 'T2, T3', 'outcome': 'failed'}, {'thesis': 'T3', 'outcome': 'held'},
+                {'thesis': '', 'outcome': 'passed'}, {'thesis': 'T5', 'outcome': 'not-run'}, {'thesis': 'T6', 'outcome': 'refused'},
+                {'thesis': 'T7', 'outcome': 'passed'}]
+        rows = [{'id': f'X{i}', 'name': 'n', 'folder': 'experiments/x/README.md', 'frozen': '', 'run': '', 'gloss': 'g', **r} for i, r in enumerate(rows)]
+        data = self.root / zh_fronts.TESTS_DATA
+        data.parent.mkdir(parents=True, exist_ok=True)
+        data.write_text(json.dumps({'tests': rows}), encoding='utf-8')
+        fields = ('ran', 'mixed', 'passed', 'failed', 'other', 'unrun', 'total')
+        pages, errors = self.render('# 首\n\n' + ' '.join('{{tests:%s}}' % f for f in fields) + '\n', {english_tests.PAGE: 'word'})
+        self.assertEqual(errors, [])
+        # six name a thesis; held and not-run never ran; of the four that ran, the refused one is 'other'
+        self.assertIn('4 1 1 1 1 2 6', pages[zh_fronts.PAGE])
+        self.assertEqual([english_tests.screen_count(f, self.root) for f in fields], [4, 1, 1, 1, 1, 2, 6])
+
     def test_links_are_written_from_the_template_and_a_generated_page_on_disk_is_refused(self):
         pages, errors = self.render('# 首\n\n{{nav}}\n\n[一页](../../theories/becoming/ONE-PAGE.zh.md) 与 [术语](../../GLOSSARY.zh.md#锁定)。\n')
         self.assertEqual(errors, [])
@@ -198,7 +215,8 @@ class LandingPageTests(unittest.TestCase):
 
     def test_an_unknown_field_or_a_missing_page_renders_nothing(self):
         for body, word in (('{{when:now}}', 'unknown field'), ('{{time:theories/none.md}}', 'missing page'),
-                           ('{{count:invented}}', 'unknown status'), ('{{stated:theories/becoming/ONE-PAGE.zh.md}}', 'states no reading time')):
+                           ('{{count:invented}}', 'unknown status'), ('{{stated:theories/becoming/ONE-PAGE.zh.md}}', 'states no reading time'),
+                           ('{{tests:nearly}}', 'unknown count of tests'), ('{{tests:ran}}', 'cannot be read')):
             with self.subTest(body=body):
                 pages, errors = self.render('# 首\n\n' + body + '\n')
                 self.assertEqual(pages, {})

@@ -382,7 +382,7 @@ class FirstScreenTests(unittest.TestCase):
             (root / 'LEAD.md').write_text('{{tests:total}} {{tests:mixed}} {{tests:failed}} {{tests:passed}} {{tests:other}} {{tests:unrun}}')
             filled = navigation.first_screen([], 'x', {'readme_first_screen': 'LEAD.md'}, root)
             (root / 'LEAD.md').write_text('{{tests:nearly}}')
-            with self.assertRaisesRegex(ValueError, 'unknown class of test'):
+            with self.assertRaisesRegex(ValueError, 'unknown count of tests'):
                 navigation.first_screen([], 'x', {'readme_first_screen': 'LEAD.md'}, root)
         # seven name a thesis: held, dropped and not-run never ran, so 'other' is only the refused and the not rejected
         self.assertEqual(filled, '7 1 1 0 2 3')

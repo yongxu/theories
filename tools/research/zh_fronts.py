@@ -13,7 +13,8 @@ counts of results and its navigation line are filled at render (`render`), by th
 so no figure on it is copied by hand. Fields: {{nav}}; {{time:PATH}}, a page's reading time (a page the render writes
 is timed as it is about to be written); {{time:chapters}}, the eight chapters' span in hours; {{time:screen}} and
 {{time:page}}, the page's first screen (above its first `## `) and the whole page; {{stated:PATH}}, the reading time a
-page states of itself in its opening lines; {{count:registered}} and {{count:STATUS}}.
+page states of itself in its opening lines; {{count:registered}} and {{count:STATUS}}; {{tests:ARG}}, README.md's
+first screen's counts of the tests naming a thesis (tests_page.screen_count).
 
 usage: python3 -B tools/research/zh_fronts.py   (prints each front whose line differs, exits 1 if any)
 """
@@ -271,6 +272,16 @@ def render(records: list, outputs: dict, root: Path = ROOT) -> tuple[dict, list[
                 errors.append(f'{TEMPLATE} names an unknown status: {arg}')
                 return m.group(0)
             return str(sum(r['status'] == arg for r in records))
+        if kind == 'tests':  # README.md's first screen's counts, by the same function
+            from tools.research import tests_page as english_tests
+            try:
+                return str(english_tests.screen_count(arg, root))
+            except ValueError as e:
+                errors.append(f'{TEMPLATE} {e}')
+                return m.group(0)
+            except (OSError, KeyError) as e:
+                errors.append(f'{TEMPLATE} counts the tests, which cannot be read: {e!r}')
+                return m.group(0)
         if kind == 'time' and arg in ('screen', 'page'):
             return m.group(0)
         if kind == 'time' and arg == 'opening':  # the opening's body, without its notes, as README.md's first screen times it
