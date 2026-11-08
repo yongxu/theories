@@ -239,7 +239,7 @@
     {
       "path": "theories/becoming/chapters/04-LIFE.md",
       "role": "statement",
-      "sha256": "ba45d06c2d1165fc4ed6afd0dd7d1d8ac34405415a17892ed0e6a15b8d78a0e3"
+      "sha256": "367b3dded5071f2244043097974f2c06aa848c26b3a476f416ea071513cd15a7"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T203838.375122Z/verification.json",

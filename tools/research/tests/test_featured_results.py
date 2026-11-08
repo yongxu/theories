@@ -179,12 +179,18 @@ class ResearchGoalsTests(unittest.TestCase):
         with patch.object(navigation, 'read', side_effect=read), patch.object(navigation, 'goals', return_value=goals):
             views = navigation.render_views(records)
         root = views['README.md']
-        self.assertLess(root.index('## What is established'), root.index('## Ongoing research and current progress'))
-        self.assertLess(root.index('### evolution direction'), root.index('### ethics direction'))
-        self.assertLess(root.index('### ethics direction'), root.index('## Research and repository'))
-        self.assertIn('**Next:** ethics next investigation', root)
-        self.assertIn('[Scope and authorization](GOALS.md#ethics)', root)
-        self.assertIn('[Primary source](README.md)', root)
+        # the landing names the directions, in order, and links them on RESEARCH.md, which carries their details (RW)
+        self.assertLess(root.index('## What is established'), root.index('## Ongoing research'))
+        self.assertLess(root.index('[evolution direction](RESEARCH.md#evolution)'), root.index('[ethics direction](RESEARCH.md#ethics)'))
+        self.assertLess(root.index('## Ongoing research'), root.index('## Research and repository'))
+        self.assertNotIn('**Next:**', root)
+        research = views['RESEARCH.md']
+        self.assertLess(research.index('<a id="evolution"></a>'), research.index('<a id="ethics"></a>'))
+        self.assertLess(research.index('### evolution direction'), research.index('### ethics direction'))
+        self.assertIn('**Next:** ethics next investigation', research)
+        self.assertIn('[Scope and authorization](GOALS.md#ethics)', research)
+        self.assertIn('[Primary source](README.md)', research)
+        root = research
         established = next(line for line in root.splitlines() if line.startswith('**Established results:**'))
         self.assertIn('[checked claim](theories/results/records/checked.md)', established)
         self.assertIn('[reviewed claim](theories/results/records/reviewed.md)', established)

@@ -223,6 +223,7 @@
     "title": "The Theory of Becoming",
     "description": "One account of how things form, persist, change and end, with Lean-checked models and frozen tests; its ethics rests on two unasserted premises: the continuation condition (scope) and C, widening what can form is better (order).",
     "pages": [
+      "README.zh.md",
       "MAP.md",
       "theories/becoming/ONE-PAGE.md",
       "theories/becoming/ONE-PAGE.zh.md",
@@ -260,7 +261,14 @@
       "theories/becoming/review/SCIENCES.md",
       "theories/becoming/review/CLASSICAL-TEXTS.md",
       "theories/becoming/review/BUDDHIST-THOUGHT.md",
-      "TESTS.md"
+      "TESTS.md",
+      "theories/becoming/COLLECTIVE-DIRECTION.md",
+      "theories/becoming/ONE-ARGUMENT.md",
+      "theories/becoming/FREE-ENERGY-PRINCIPLE.md",
+      "theories/becoming/results/records/*.md",
+      "experiments/*/README.md",
+      "experiments/critical-mass-located/DESIGN.md",
+      "experiments/reform-events/HOLD.md"
     ],
     "assets": [
       "theories/becoming/results/spine.svg",
@@ -269,12 +277,17 @@
       "theories/lineage.zh.svg"
     ],
     "aliases": {
-      "README.md#truth-exists": "theories/becoming/OPENING.md#truth-exists"
+      "README.md#truth-exists": "theories/becoming/OPENING.md#truth-exists",
+      "README.md": "index.html"
     },
     "nav": [
       [
         "index.html",
         "Home"
+      ],
+      [
+        "MAP.md",
+        "Start here"
       ],
       [
         "theories/becoming/ONE-PAGE.md",
@@ -297,16 +310,24 @@
         "Tests"
       ],
       [
+        "RESULTS.md",
+        "Results"
+      ],
+      [
         "theories/becoming/results/THEORY-GRAPH.md",
         "Graph"
       ],
       [
         "connections.html",
-        "Map"
+        "Connections"
       ],
       [
         "theories/LINEAGE.md",
         "How it grew"
+      ],
+      [
+        "OPEN-QUESTIONS.md",
+        "Open questions"
       ],
       [
         "GLOSSARY.md",
@@ -317,11 +338,7 @@
         "Reviewers"
       ],
       [
-        "MAP.md",
-        "Start here"
-      ],
-      [
-        "theories/becoming/ONE-PAGE.zh.md",
+        "README.zh.md",
         "中文"
       ]
     ],
@@ -355,20 +372,32 @@
         "text": "Every test in the experiments by how it came out, the failures first, with when each was frozen and run."
       },
       {
+        "path": "RESULTS.md",
+        "label": "The register of results",
+        "text": "Every registered result with its status and its record, which names its premises, evidence and boundary."
+      },
+      {
+        "path": "OPEN-QUESTIONS.md",
+        "label": "What is open",
+        "text": "The open targets, the open programme in method, and what lies beyond the readings."
+      },
+      {
         "path": "theories/becoming/results/THEORY-GRAPH.md",
         "label": "The theory graph",
         "text": "Results, Lean modules, sections and texts, with their edges kept apart by kind."
       },
       {
         "path": "connections.html",
-        "label": "The connection map",
+        "label": "The connections",
         "text": "The earlier folders and twelve domains of thought set against the account, claim by claim, with the theory's own graph; every thread an AI reading."
       },
       {
         "path": "theories/LINEAGE.md",
         "zh": "theories/LINEAGE.zh.md",
         "label": "How it grew",
-        "text": "From the writings of 2021 to the account today: turning points, each labelled by what states it, gathered by AI readers, and one thread followed through."
+        "text": "From the writings of 2021 to the account today: turning points, each labelled by what states it, gathered by AI readers, and one thread followed through.",
+        "time_until": "## Turning points",
+        "time_note": "the picture, the labels and the thread"
       },
       {
         "path": "MAP.md#check-the-proofs-yourself",
@@ -378,7 +407,9 @@
       {
         "path": "theories/becoming/OPENING.md",
         "label": "The opening",
-        "text": "A first-person conviction, with a note on how far each sentence is proved."
+        "text": "A first-person conviction, with a note on how far each sentence is proved.",
+        "time_until": "[^law]:",
+        "time_note": "without its notes"
       },
       {
         "path": "GLOSSARY.md",
@@ -403,6 +434,48 @@
         "text": "Where everything is in the repository, and how to check it."
       }
     ],
-    "map": true
+    "map": true,
+    "nav_zh": [
+      [
+        "README.zh.md",
+        "首页"
+      ],
+      [
+        "theories/becoming/ONE-PAGE.zh.md",
+        "一页"
+      ],
+      [
+        "theories/becoming/USES.zh.md",
+        "用途"
+      ],
+      [
+        "theories/becoming/USES-EXAMPLES.zh.md",
+        "实例"
+      ],
+      [
+        "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+        "总览"
+      ],
+      [
+        "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+        "第六章"
+      ],
+      [
+        "theories/LINEAGE.zh.md",
+        "怎样长成"
+      ],
+      [
+        "GLOSSARY.zh.md",
+        "术语表"
+      ],
+      [
+        "theories/becoming/review/README.zh.md",
+        "审查包"
+      ],
+      [
+        "theories/becoming/ONE-PAGE.md",
+        "English"
+      ]
+    ]
   }
 }

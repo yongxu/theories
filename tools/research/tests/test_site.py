@@ -150,8 +150,8 @@ class SiteTests(unittest.TestCase):
         from tools.research import connection_map
         calls = []
 
-        def stub(out_dir, link_base, site_paths=None):
-            calls.append((link_base, dict(site_paths)))
+        def stub(out_dir, link_base, site_paths=None, home='index.html', nav=None):
+            calls.append((link_base, dict(site_paths), home, list(nav or [])))
             out_dir = Path(out_dir)
             out_dir.mkdir(parents=True, exist_ok=True)
             (out_dir / 'map.html').write_text('<!doctype html><title>map</title><a href="a/ONE.html">one</a>')
@@ -170,6 +170,8 @@ class SiteTests(unittest.TestCase):
         self.assertFalse((self.out / '_map').exists())
         self.assertEqual(calls[0][0], f'https://github.com/o/r/blob/{COMMIT}/')
         self.assertEqual(calls[0][1]['a/ONE.md'], 'a/ONE.html')
+        self.assertEqual(calls[0][2], 'index.html')
+        self.assertIn(('One page', 'a/ONE.html'), calls[0][3])  # the map carries the site's line, hrefs from the root
         self.assertIn('href="../../connections.html"', self.page('a/chapters/index.html'))
 
     def test_the_home_keeps_the_status_line(self):
@@ -199,6 +201,25 @@ class SiteTests(unittest.TestCase):
         self.build(nav=SITE['nav'] + [['connections.html', 'Map']])
         self.assertNotIn('connections.html', self.page('a/ONE.html'))
 
+    def test_editions_pictures_and_titles(self):
+        (self.tmp / 'a/ONE.zh.md').write_text('# 一页\n\n中文的一页。\n')
+        (self.tmp / 'a/OPENING.md').write_text('## Truth exists\n\n![The picture](pic.svg)\n')
+        (self.tmp / 'a/pic.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg"></svg>')
+        self.files |= {'a/ONE.zh.md', 'a/pic.svg'}
+        self.build(pages=SITE['pages'] + ['a/ONE.zh.md'], assets=['a/pic.svg'],
+                   nav=[['index.html', 'Home'], ['a/ONE.zh.md', '中文']], nav_zh=[['index.html', '首页'], ['a/ONE.md', 'English']])
+        one, zh, opening = self.page('a/ONE.html'), self.page('a/ONE.zh.html'), self.page('a/OPENING.html')
+        self.assertIn('<a href="ONE.zh.html"', one)  # the language link goes to this page's own edition
+        self.assertIn('lang="zh-Hans"', zh)
+        self.assertIn('首页', zh)
+        self.assertIn('<a href="ONE.html"', zh)
+        self.assertIn('<a class="picture" href="pic.svg"', opening)
+        self.assertIn('<title>Truth exists · T</title>', opening)  # a page with no h1 takes its first heading
+
+    def test_a_card_times_its_part(self):
+        with self.assertRaises(AssertionError):
+            self.build(ways_in=[{'path': 'a/ONE.md', 'label': 'One page', 'text': 'x', 'time_until': '## No such part'}])
+
     def test_a_key_in_a_page_fails_the_build(self):
         (self.tmp / 'a/ONE.md').write_text(ONE + '\nsk-ant-' + 'a' * 30 + '\n')
         with self.assertRaisesRegex(site.SiteError, 'what the push screen reads as a key'):
@@ -223,14 +244,20 @@ class RepositoryConfigTests(unittest.TestCase):
         cfg = site.site_config()
         private = site.private_pattern()
         files = site.tracked_files()
-        for p in cfg['pages'] + cfg.get('assets', []):
+        pages = site.expand_pages(cfg['pages'], files)
+        for entry in cfg['pages']:
+            self.assertTrue(site.expand_pages([entry], files), 'site.pages names nothing tracked: ' + entry)
+        for p in pages + cfg.get('assets', []):
             self.assertTrue(p in files, 'site.pages names an untracked file: ' + p)
             self.assertFalse(site.refused(p, private), p)
-        for target, _ in cfg['nav']:
-            self.assertTrue(target in site.SPECIAL or target in cfg['pages'], target)
+        for target, _ in cfg['nav'] + cfg.get('nav_zh', []):
+            self.assertTrue(target in site.SPECIAL or target in pages, target)
         for w in cfg['ways_in']:
             self.assertTrue(w['path'] in site.SPECIAL or (ROOT / w['path'].split('#')[0]).is_file(), w['path'])
 
+    def test_patterns_stay_in_one_folder(self):
+        files = {'a/x.md', 'a/b/y.md', 'a/README.md'}
+        self.assertEqual(site.expand_pages(['a/*.md'], files), ['a/README.md', 'a/x.md'])
 
 if __name__ == '__main__':
     unittest.main()

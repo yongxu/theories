@@ -2,7 +2,7 @@
 
 [English](ONE-PAGE.md) · [首页](../../README.zh.md) · **一页** · [用途](USES.zh.md) · [实例](USES-EXAMPLES.zh.md) · [总览](THE-THEORY-OF-BECOMING.zh.md) · [八章](chapters/README.md) · [第六章](chapters/06-CLASSICAL-TEXTS.md) · [检验](../../TESTS.md) · [怎样长成](../LINEAGE.zh.md) · [术语表](../../GLOSSARY.zh.md) · [审查包](review/README.zh.md)
 
-*约十一至十四分钟读完。*
+*约十一至十五分钟读完。*
 
 **它是什么。** 一种说明：在一个关系性的展开之中，任何东西如何出现、持续、变化与消逝，生命与认知如何在那里成形，评价又到什么程度；它不预先假定生灭变化是好的。它借助 AI 做成，证明也在内；证明由机器检验，其余一切只经过 AI 的复审，迄今无人审查（[审查包](review/README.zh.md)）。本说明的中心［AI 读法］：一个选择可以成功，而它读不到的东西却失去了；诸律不说这一损失算不算数（[本说明有什么用，用到多远](USES.zh.md)）。
 

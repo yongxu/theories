@@ -139,6 +139,9 @@ class Links:
         if target == page:
             self.internal.append((page, page, anchor))
             return '#' + anchor
+        if target in SPECIAL:
+            self.counts['site'] += 1
+            return relative(target, page) + (f'#{anchor}' if anchor else '')
         if target.startswith('../') or target == '..':
             self.counts['untracked'] += 1
             self.untracked.append((page, href))
@@ -181,11 +184,13 @@ class Page:
         self.ids, self.slugs, self.footnotes, self.refdefs = set(), {}, {}, {}
         self.title = None
         self.fn_order, self.fn_refs = [], {}
+        self.first_heading = None
         text = strip_comments(text)
         lines = text.split('\n')
         lines = self._definitions(lines)
         self.html = self._blocks(lines) + self._footnote_list()
-        self.lang = 'zh' if cjk_share(text) > 0.3 else 'en'
+        self.title = self.title or self.first_heading
+        self.lang = 'zh' if path.endswith('.zh.md') or cjk_share(text) > 0.3 else 'en'
 
     # -- definitions: link references and footnotes, collected before the blocks
     def _definitions(self, lines):
@@ -227,6 +232,8 @@ class Page:
         ident = self._id(base if not n else f'{base}-{n}')
         if level == 1 and self.title is None:
             self.title = plain_title(text)
+        if self.first_heading is None:
+            self.first_heading = plain_title(text)
         return f'<h{level} id="{html.escape(ident)}">{self.inline(text)}<a class="here" href="#{html.escape(ident)}" aria-label="Link to this section">#</a></h{level}>'
 
     def _record_mark(self, ident):
@@ -461,7 +468,10 @@ class Page:
             return html.escape(alt)
         if new.startswith('https://github.com/'):
             new = new.replace('/blob/', '/raw/', 1)
-        return f'<img src="{html.escape(new)}" alt="{html.escape(alt)}" loading="lazy">'
+        img = f'<img src="{html.escape(new)}" alt="{html.escape(alt)}" loading="lazy">'
+        if src.split('#')[0].lower().endswith('.svg'):  # a picture opens at full size, and is shown wider than the text
+            return f'<a class="picture" href="{html.escape(new)}" title="Open the picture at full size">{img}</a>'
+        return img
 
     def _fnref(self, name):
         """A footnote reference, numbered by first reference as GitHub numbers it; a second reference gets an id of its own."""
@@ -655,9 +665,26 @@ MAP_PAGE = 'connections.html'  # the connection map; not map.html, which a case-
 SPECIAL = ('index.html', MAP_PAGE)  # the home, and the connection map
 
 
-def nav(cfg, page_path, pages):
+def edition(page_path, pages):
+    """A page's other-language edition on the site, if it has one: X.md and X.zh.md."""
+    if page_path.endswith('.zh.md'):
+        other = page_path[:-len('.zh.md')] + '.md'
+    elif page_path.endswith('.md'):
+        other = page_path[:-3] + '.zh.md'
+    else:
+        return None
+    return other if other in pages else None
+
+
+def nav(cfg, page_path, pages, lang='en'):
+    """The site's navigation line: on a page in Chinese its Chinese line, and the language link goes to this page's own
+    other edition where it has one."""
     items = []
-    for target, label in cfg.get('nav', []):
+    zh = lang == 'zh' or page_path.endswith('.zh.md')
+    other = edition(page_path, pages)
+    for target, label in cfg.get('nav_zh' if zh and cfg.get('nav_zh') else 'nav', []):
+        if label in ('中文', 'English') and other:
+            target = other
         if target not in pages and target not in SPECIAL:
             raise SiteError('site.nav names a page not in site.pages: ' + target)
         built = target if target in SPECIAL else out_path(target)
@@ -680,7 +707,13 @@ def home_body(cfg, links, recs, root):
     for w in cfg.get('ways_in', []):
         target = w['path']
         p = root / target.split('#')[0]
-        time = navigation.reading_time(p.read_text()) if p.is_file() and target.split('#')[0].endswith('.md') else ''
+        time = ''
+        if p.is_file() and target.split('#')[0].endswith('.md'):
+            text = p.read_text()
+            if w.get('time_until'):  # the part a reader is sent to: up to the named heading line
+                assert w['time_until'] in text, ('site.ways_in times up to a heading the page lacks', target, w['time_until'])
+                text = text.split(w['time_until'], 1)[0]
+            time = navigation.reading_time(text) + (f", {w['time_note']}" if w.get('time_note') else '')
         href = target if target in SPECIAL else links.resolve(target, 'README.md')
         if href is None:
             raise SiteError('site.ways_in names a path not in the repository: ' + target)
@@ -695,13 +728,27 @@ def home_body(cfg, links, recs, root):
     return '\n'.join(parts), page.lang
 
 
+def expand_pages(entries, files):
+    """The allow-list as pages: an entry with * names every tracked file it matches within one folder, still an allow-list."""
+    pages = []
+    for entry in entries:
+        if '*' in entry:
+            pattern = re.compile(re.escape(entry).replace(r'\*', '[^/]*'))
+            pages += sorted(f for f in files if pattern.fullmatch(f))
+        else:
+            pages.append(entry)
+    return list(dict.fromkeys(pages))
+
+
 def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path=CONFIG, files=None):
     cfg = site_config(config_path)
     private = private_pattern(root / 'tools/research/push_screen.sh')
     secrets = secret_pattern(root / 'tools/research/push_screen.sh')
     files = tracked_files(root) if files is None else files
     dirs = tracked_dirs(files)
-    pages = list(dict.fromkeys(cfg['pages']))
+    pages = expand_pages(cfg['pages'], files)
+    if not pages:
+        raise SiteError('site.pages names no page')
     assets = set(cfg.get('assets', []))
     for p in pages + sorted(assets):
         if refused(p, private):
@@ -750,7 +797,7 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
         dest = out / out_path(p)
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(template(p, page.title or posixpath.basename(p), page.html, page.lang, cfg, commit, date,
-                                 nav(cfg, p, set(pages)), links.github(p), dirty=dirty))
+                                 nav(cfg, p, set(pages), page.lang), links.github(p), dirty=dirty))
         written.append(dest)
     (out / 'index.html').write_text(template('index.html', cfg.get('title', ''), home, home_lang, cfg, commit, date,
                                              nav(cfg, 'index.html', set(pages)), links.github('README.md'), home=True, dirty=dirty))
@@ -765,8 +812,10 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
     if map_ok:
         on_site = {p: out_path(p) for p in pages}
         tmp = out / '_map'
+        map_nav = [(label, target if target in SPECIAL else out_path(target)) for target, label in cfg.get('nav', [])
+                   if target in SPECIAL or target in pages]
         made = pathlib.Path(connection_map.site_map(tmp, f"https://github.com/{cfg['repository']}/blob/{commit}/",
-                                                    on_site))
+                                                    on_site, home='index.html', nav=map_nav))
         made.rename(out / MAP_PAGE)
         tmp.rmdir()
         written.append(out / MAP_PAGE)

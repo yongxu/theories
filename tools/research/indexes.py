@@ -133,6 +133,30 @@ def chapter_status(name: str, table: dict, generated: set[str]) -> tuple[str, st
     return 'kept', note or 'Not listed in the canonical chapter’s section 11.'
 
 
+READING_ORDER = [('01-ROOT.md', 'root'), ('02-MAP.md', 'map'), ('03-KNOWING.md', 'knowing'), ('04-LIFE.md', 'life'),
+                 ('05-COLLECTIVES.md', 'collective'), ('06-CLASSICAL-TEXTS.md', 'classical'), ('07-SIGNIFICANCE.md', 'significance'),
+                 ('08-METHOD.md', 'method')]
+
+
+def reader_list(root: Path = ROOT) -> list[str]:
+    """The eight chapters as a reader meets them: in reading order, each by its title, what it covers (the theory graph's
+    region of its results), how many results it states and its reading time (RW, 8 November 2026)."""
+    from tools.research import navigation, theory_graph
+    lines = ['## The eight chapters', '', 'In reading order; the numbering is for reading, not an order of proof.', '',
+             '| | Chapter | What its results concern | Results stated | Reading time |', '|---|---|---|---|---|']
+    for k, (name, region) in enumerate(READING_ORDER, 1):
+        f = root / CHAPTERS / name
+        if not f.is_file():
+            continue
+        text = f.read_text()
+        t = title(CHAPTERS + '/' + name, root) + (' (the classical texts: what they read out, how it is tested and where they '
+                                                   'diverge; in Chinese)' if name.startswith('06-') else '')
+        stated = text.count('<a id="r-')
+        lines.append(f'| {k} | [{cell(t)}]({name}) | {cell(theory_graph.REGION_TITLES[region])} | {stated} | '
+                     f'{navigation.reading_time(text)} |')
+    return lines + ['']
+
+
 def chapters_index(root: Path = ROOT, generated: set[str] | None = None) -> str:
     page = CHAPTERS + '/README.md'
     generated = set() if generated is None else generated
@@ -146,6 +170,7 @@ def chapters_index(root: Path = ROOT, generated: set[str] | None = None) -> str:
     counts = Counter(r[2] for r in rows)
     lines = ['# Chapters of the Theory of Becoming', '', marker('Edit the chapters or the move receipts, not this page.'), '',
              f'The [overview](../THE-THEORY-OF-BECOMING.md) states the theory in one account, and [the one page](../ONE-PAGE.md) in a page. The eight numbered chapters below state every result once, in its home section, anchored by its record id; [the theory graph](../results/THEORY-GRAPH.md) joins sections, results, Lean modules and texts. The chapters they replace are in history (below), bytes unchanged.', '',
+             ] + reader_list(root) + [
              'Status: **chapter** is one of the eight chapters of the theory; **canonical** is the entry that states the theory; **reference** keeps material moved out of a chapter; **kept** is a live chapter kept at its own scope; **generated** is written by `make research-render`; **Chinese edition** is a `NAME.zh.md` split from a bilingual original, not maintained in step with the English file, which governs.', '',
              '## Files in this directory', '',
              ', '.join(f'{counts[k]} {k}' for k in sorted(counts, key=lambda k: order[k])) + '.', '',
