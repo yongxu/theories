@@ -18,7 +18,7 @@
 
 **有什么用。** 对任何这样的选择，可以问四个问题：它读取或需要什么（[耦合进](../../GLOSSARY.zh.md#耦合进)它的东西）；什么在这之外；它能不能靠压低外部之物，在所读之物上做得更好；它的规则能不能锁定在它已选中的东西上，如无噪声的模型中那样（[用途](../../theories/becoming/USES.zh.md)；[以一个语言模型评判者为例逐问走一遍，还多一问](../../theories/becoming/USES-EXAMPLES.zh.md#auditing-a-language-model-judge)）。比如一个只看点击量的推荐系统，可以在点击量上成功，同时让读者的时间、作者的生计流失（一种 AI 读法，不是检验过的应用）。迄今没有一项依它设计的检验在已部署的流水线上运行过。本论的律是关于模型的定理，在写明的前提下成立；把律用到实际系统上，需要表明模型与系统相对应，而对实际的制度、训练出的系统或人，迄今都没有表明。
 
-**古文。** 文法的名字取自古文，运算不取自古文；读法都是 AI 的，没有人通读过。[第六章](../../theories/becoming/chapters/06-CLASSICAL-TEXTS.md)用中文写成，把九家 248 段文字与已检查的律并读，逐段记为相合、定域或相分；相合不是印证，记为相分也不是说原文错了。例如[天之道与张弓](../../theories/becoming/USES-EXAMPLES.zh.md#the-way-of-heaven-and-the-drawn-bow-a-concordance-not-a-confirmation)。本论的延续站在《中论》所破的一边，其定理没有处理那一论证的前提（[B-02](../../theories/becoming/review/BUDDHIST-THOUGHT.md#b-02)）。
+**古文。** 文法的名字取自古文，运算不取自古文；读法都是 AI 的，没有人通读过。[第六章](../../theories/becoming/chapters/06-CLASSICAL-TEXTS.md)用中文写成，把九家 248 段文字与已检查的律并读，逐段记为相合、定域或相分；相合不是印证，记为相分也不是说原文错了。例如[天之道与张弓](../../theories/becoming/USES-EXAMPLES.zh.md#the-way-of-heaven-and-the-drawn-bow-a-concordance-not-a-confirmation)。本论的“续”站在《中论》所破的一边，其定理没有处理那一论证的前提（[B-02](../../theories/becoming/review/BUDDHIST-THOUGHT.md#b-02)）。
 
 **伦理。** 本论的伦理立在[两个不被断言的前提](../../theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order)上，根据都还未决。*延续条件*：从每一个立场看，对任何东西，其延续到未来都有意义。它确定范围，即谁的损失算数，不给任何东西排序。*C*：扩大可形成者（一个进程让什么能够形成）更好，它给出次序。给进程排出好坏，需要 C 或一个代替它的前提。[论题 T8](../../theories/becoming/chapters/07-SIGNIFICANCE.md#theses) 论证这一伦理是对生命而言的道，但不主张任何裁断对一切可能的心智都有约束力。
 
@@ -38,7 +38,7 @@
 | [用途](../../theories/becoming/USES.zh.md) | 逐个领域：今天能用它做什么，能做到多远，不主张什么 | 约 {{time:theories/becoming/USES.zh.md}} |
 | [实例](../../theories/becoming/USES-EXAMPLES.zh.md) | 每个领域一例或数例，各在其真实的地位上 | 约 {{time:theories/becoming/USES-EXAMPLES.zh.md}} |
 | [总览](../../theories/becoming/THE-THEORY-OF-BECOMING.zh.md) | 全论的一小时层，按八章的顺序 | 约 {{time:theories/becoming/THE-THEORY-OF-BECOMING.zh.md}} |
-| [开篇](../../theories/becoming/OPENING.md) | 第一人称写下的信念：这件事为什么要紧；英文，尚无中文版 | 约 {{time:theories/becoming/OPENING.md}} |
+| [开篇](../../theories/becoming/OPENING.md) | 第一人称写下的信念：这件事为什么要紧；英文，尚无中文版 | 正文约 {{time:opening}}，注释另计 |
 | [八章](../../theories/becoming/chapters/README.md) | 各章正文，诸结果的所属之处；除第六章外为英文 | 每章约 {{time:chapters}} |
 | [古文（第六章）](../../theories/becoming/chapters/06-CLASSICAL-TEXTS.md) | 从古文读出文法，检验它，记下分歧；中文 | 约 {{time:theories/becoming/chapters/06-CLASSICAL-TEXTS.md}} |
 | [检验](../../TESTS.zh.md) | 冻结的检验，按结局排列，未通过者在前，每项一句话（[全表](../../TESTS.md)为英文） | 约 {{time:TESTS.zh.md}} |

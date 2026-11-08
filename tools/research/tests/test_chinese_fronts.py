@@ -71,7 +71,7 @@ class TestsPageTests(unittest.TestCase):
         self.assertLess(page.index('## 未通过'), page.index('## 通过'))
         self.assertIn('| [**F1**](experiments/f/README.md) 一项失败 | T2 | 2026-10-01 | 2026-10-02 | 它未通过。 |', page)
         self.assertNotIn('N1', page)
-        self.assertIn('全部 3 项中：未通过 1，通过 1；此外 已冻结、尚未运行 1', page)
+        self.assertIn('全部 3 项中：「未通过」1，「通过」1；此外「已冻结、尚未运行」1', page)
         self.assertIn(zh_fronts.nav_line(zh_fronts.TESTS_PAGE), page)
         self.assertIn('一项通过 \\| 以竖线', page)
 

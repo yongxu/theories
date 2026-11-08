@@ -186,8 +186,8 @@ def tests_page(root: Path = ROOT, checked: bool = True) -> tuple[dict, list[str]
     by = {}
     for r in rows:
         by.setdefault(r['outcome'], []).append(r)
-    counts = '，'.join(f'{label} {len(by[k])}' for k, label, _ in SCORED_ZH if by.get(k))
-    others = '，'.join(f'{label} {len(by[k])}' for k, label in OTHER_ZH if by.get(k))
+    counts = '，'.join(f'「{label}」{len(by[k])}' for k, label, _ in SCORED_ZH if by.get(k))
+    others = '，'.join(f'「{label}」{len(by[k])}' for k, label in OTHER_ZH if by.get(k))
     scored = sum(len(by.get(k, [])) for k, _, _ in SCORED_ZH)
     body = []
     for key, label, gloss in SCORED_ZH:
@@ -204,7 +204,7 @@ def tests_page(root: Path = ROOT, checked: bool = True) -> tuple[dict, list[str]
             body.append(f"| [**{_cell(r['id'])}**]({r['folder']}) {_cell(name)} | {_cell(theses or '—')} | {r['frozen'] or '—'} | {r['run'] or '—'} | {_cell(said)} |")
         body.append('')
     lead = [f'本论的经验论题接受评分之前就已冻结的检验。这里按结局列出已经评分的 {scored} 项，未通过的在前（全部 {len(rows)} 项中：{counts}；'
-            f'此外 {others}，见[英文的全表](TESTS.md)）。', '',
+            f'此外{others}，见[英文的全表](TESTS.md)）。', '',
             f'每行链接该项检验的文件夹（英文）；那句话由 AI 读取其记录写成，是一种读法。冻结，指预测或规则定下的那一天。各项检验的结局按所在文件夹的判定归类，'
             f'引文与来源在英文的全表里。论题各说什么、禁止什么，见[方法一章的论题]({METHOD_THESES})（英文）。',
             '']
@@ -266,6 +266,12 @@ def render(records: list, outputs: dict, root: Path = ROOT) -> tuple[dict, list[
             return str(sum(r['status'] == arg for r in records))
         if kind == 'time' and arg in ('screen', 'page'):
             return m.group(0)
+        if kind == 'time' and arg == 'opening':  # the opening's body, without its notes, as README.md's first screen times it
+            body_of_opening = navigation.readme_opening(root=root).partition('\n### Notes\n')[0]
+            if not body_of_opening.strip():
+                errors.append(f'{TEMPLATE} times the opening, which has no body')
+                return m.group(0)
+            return zh_time(body_of_opening)
         if kind == 'time' and arg == 'chapters':
             spans = [navigation.span(navigation.reading_time(text_of(c))) for c in CHAPTERS]
             return f'{_hours(min(lo for _, lo in spans))}–{_hours(max(hi for hi, _ in spans))} 小时'
