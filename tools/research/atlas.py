@@ -848,7 +848,7 @@ def crosswalk_page(atlas: dict) -> str:
            f'![How the earlier folders and the domains of thought meet the live account]({_href(OVERVIEW)})', '',
            '*Drawn by connection_map.py from the crosswalk’s claims, on the pages its table links: each thread joins a folder or domain to the part of the account its '
            'claims are read against, coloured by relation, and every thread is an AI reading, no person’s. To explore the same data, '
-           f'open [the connection map]({_href(ATLAS + "/map.html")}) from a clone; GitHub shows it only as source.*', '',
+           f'open [the connection map]({_href(ATLAS + "/map.html")}) on the reader’s site, once it is published, or from a clone; GitHub shows it only as source.*', '',
            *_crosswalk_lead(atlas, ATLAS),
            f'{len(entries)} entries in {len(groups)} groups, each on its own page:', '',
            '| Group | Entries | ' + ' | '.join(carried) + ' | ' + ' | '.join(relations) + ' | ' + ' | '.join(f'agreement of {a}' for a in agreements) + ' |',

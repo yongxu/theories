@@ -1,0 +1,129 @@
+[
+ {
+  "verdict": "The round does not close: one medium and four lows, no high. Of the six prior items, five are closed and one is partly closed. The medium is a false negative in the worked audit's item 3: it says none of the three measurements was made on this pipeline, but Sharma et al. section 4.2 optimized against a preference model with this pipeline's human/AI split. Checked and correct: the screen recount (535 words, 4.1 to 5.4 minutes, 385 over, 44 more than the 491 before the third round), the 45 to 59 minute line, the study's hash, and every Constitutional AI figure (42,496 of 182,831; 135,296; 182,831). Both ethics premises are present where summarized. Papers were read through WebFetch's model-summarized output (Constitutional AI and Sharma: first 100,000 characters, which hold the cited sections; Gao: the abstract page). Nothing was edited, tested or built; the word counts were a read-only script in the scratchpad.",
+  "prior": [
+   {
+    "item": "(1) READING-BUDGETS' first-screen row gave 517 words where the screen had 547",
+    "state": "closed",
+    "why": "Applying prose_counts' rules to the rendered README from title to the opening's heading gives 535 words, 4.12 to 5.35 minutes, 385 over 150, and the rule's '4–5 minutes', as the row says. The earlier figures check against the commits: 187, 307, about 331, 391, 491, then 491 to 535 = the row's 44 more on balance."
+   },
+   {
+    "item": "(2) The screen said four questions but linked a page listing five",
+    "state": "closed",
+    "why": "The link now reads 'worked on a language-model judge, with a fifth'. The anchor resolves, and that section's items 1 to 4 match the screen's four, with item 5 the fifth."
+   },
+   {
+    "item": "(3) The study and audit left out other human inputs on the harmlessness side",
+    "state": "partly",
+    "why": "Human-written red-team prompts and the critic trained on human helpfulness feedback are now in the study's Construction, its Corrected note, the audit's lead and the record's history, and match the paper's sections 3.1 to 3.2. But 'through the principles alone' still stands without the frame qualifier in the study's Laws paragraph and in audit item 2 (see the low below)."
+   },
+   {
+    "item": "(4) Audit item 1 named the feedback model's judgment as the function where the RL signal is the preference model's reward",
+    "state": "closed",
+    "why": "Item 1 now names the preference model's reward, trained on the feedback model's harmlessness judgments and human helpfulness comparisons. A residual wording point about 'transcript pair' is a new low below."
+   },
+   {
+    "item": "(5) Item 3 called Gao, Schulman and Hilton's synthetic setup a human-preference measurement",
+    "state": "closed",
+    "why": "'One with a gold reward model standing in for the humans' matches that paper's abstract. The same clause has a different error about Sharma et al., reported as the medium below."
+   },
+   {
+    "item": "(6) The plain lead was one 95-word sentence",
+    "state": "closed",
+    "why": "It is now four sentences of about 45, 30, 30 and 17 words. No qualifier was lost: the frozen tests moved to the receipts line, which says some passed and some failed, and the case says its predictions mostly failed."
+   }
+  ],
+  "findings": [
+   {
+    "severity": "medium",
+    "where": "/Users/ren/tmp/rw/wt2/theories/becoming/USES-EXAMPLES.md, 'A worked audit: AI feedback against written principles', item 3 (also the study's section 1, Sharma bullet, in /Users/ren/tmp/rw/wt2/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cr1-coupling-correspondence/CORRESPONDENCE.md)",
+    "problem": "Item 3 says none of 07 §6's three measurements was made on this pipeline, that they measured pipelines trained on human preference, and that their bearing here is an analogy. For the sycophancy measurement this does not hold. Sharma et al. 2023 section 4.2 optimizes (best-of-N, and tracking Claude 2's RL) against the Claude 2 preference model, trained on 'a mix of human preference judgments and AI preference judgments', human for helpfulness and AI for harmlessness. That is this pipeline's split. A reader is told no measurement of this kind exists when one of the three is of it. The error comes from reading the paper by its abstract and filing it under RLHF. The part of the paper read does not say those AI judgments were made against written principles, so 'this pipeline' should not be asserted outright either.",
+    "fix": "Say two of the three (Gao's gold-model setup, Wen's RLHF) were made on pipelines trained on human preference and bear on this one by analogy. Say the third optimized against a preference model with this pipeline's human-helpfulness, AI-harmlessness split (Sharma et al. section 4.2), whether its AI judgments read written principles not being stated there, and label its bearing a reading. This clause then comes from the paper's body, so keep it out of 'figures read from the papers' abstracts'. Add the same dated correction to the study and rebind its hash."
+   },
+   {
+    "severity": "low",
+    "where": "CORRESPONDENCE.md section 2, Laws paragraph and Corrected note; /Users/ren/tmp/rw/wt2/theories/becoming/USES-EXAMPLES.md audit item 2; history line of /Users/ren/tmp/rw/wt2/theories/becoming/results/records/coupling-closures-of-training-pipelines.md",
+    "problem": "The Laws paragraph and item 2 still say humans couple in for harmlessness 'through the principles alone', without the 'as the paper frames it' now given in Construction and the audit's lead. Section 4.1 also adds an input neither names: in the chain-of-thought runs the harmlessness feedback model is itself the helpful RLHF model. Separately, in the note and history line the parenthetical after 'as the paper frames its oversight' lists what the frame omits, but reads as the frame's content.",
+    "fix": "Carry the qualifier into both sentences, e.g. 'as the paper frames it, through the principles alone', and name the chain-of-thought feedback model. Make the parenthetical read 'though its §3.1–3.2 has human-written red-team prompts and a critic trained on human helpfulness feedback'."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/ren/tmp/rw/wt2/theories/becoming/USES-EXAMPLES.md audit item 1",
+    "problem": "With its subject now the preference model's reward, 'is a function of the transcript pair' is imprecise. The paper's section 1.2 has the preference model score a given sample; the pair is what the feedback model compares to make training labels. The premise holds either way, but the sentence misdescribes what the reward reads, and the 'Against it' clause still speaks of picks separating pairs.",
+    "fix": "Write 'is a function of the transcript it scores (the prompt and the response)', and in 'Against it' say a reward or pick separating transcripts that differ only after the transcript."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/ren/tmp/rw/wt2/theories/becoming/results/records/coupling-closures-of-training-pipelines.md, Conditions and Evidence",
+    "problem": "The record says figures are from the papers' abstracts and sources were read from abstracts on 22 October 2026. The study's section 2 now gives figures from the paper's body (sections 3.2 and 4.2), read 8 November. The history line cites the sections but does not qualify that statement.",
+    "fix": "Add a dated clause in the JSON, in both languages: section 2's Constitutional AI figures are from the paper's sections 3.2 and 4.2, read 8 November 2026."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/ren/tmp/rw/wt2/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/READING-BUDGETS.md, first-screen row",
+    "problem": "The row's corrected count is right, but its figure for the opening, 21.2 to 27.5 minutes, is stale. The rendered opening measures 2,823 words and 43 characters, 21.9 to 28.5 minutes, which is the README's '22–28 minutes'.",
+    "fix": "Update the parenthetical to 21.9 to 28.5 minutes."
+   }
+  ]
+ },
+ {
+  "verdict": "The round closes: no high, no medium, three lows. Prior items 1, 2, 3, 5 and 6 are closed and item 4 is partly closed.\n\nHow this was checked: I read the diff in full context and confirmed it equals the commit's change to build_site.py. No test ran and no site was built. I did call the old and new converter functions in memory from my scratchpad, on the 665 pages site.pages expands to, and wrote nothing to the worktree.\n\nDoes the new break in _list end a list where GitHub would continue it? Only in one case nothing reaches, finding 3.\n- An indented heading or quote is taken by the earlier indent > base branch, so it behaves as before.\n- A column-0 '>', '---', '***' or '___' after an item ends the list on GitHub too: a quote interrupts a paragraph, and a rule is not a lazy line.\n- '#hashtag' has no space after the marks, so it stays a lazy continuation.\n- Across the 665 pages exactly one list item is directly followed by a heading, fence, quote or rule at any indent: theories/LINEAGE.zh.md:150. The old and new HTML differ on that page alone, and only by dropping ' ## 改名' from the list's last item and adding its h2.\n\nsection_text against the builder's ids: all 6,562 heading ids were found at the heading the builder gave them, and all 9,111 other ids were found.\n\nLinks: link counts are unchanged between old and new. No page links the home at an anchor, so the new home check fails nothing today, and README's first screen has no README.md# link either.\n\nPrivate paths: no new route. A line link that now skips its alias still passes the private check at build_site.py:163 before any GitHub URL is written. The diff adds no other way to publish a file or key.",
+  "prior": [
+   {
+    "item": "1. section_text ignored fences, comments, GitHub's numbering and <a id> anchors",
+    "state": "closed",
+    "why": "It now strips comments, skips fences as _blocks does, numbers with reading_catalogue.numbered (the same scheme as Page._heading) and reads <a id> lines. In memory it found every id the builder writes on the 665 pages, each heading id at its own heading. Two unreached edges remain: a heading inside a blockquote or list item gets an id from the builder but is not counted here, and no page has one. The comment stripping has no test."
+   },
+   {
+    "item": "2. With site.map off, nav_zh, a ways_in zh field and anchored targets were not filtered, and Links.resolve's SPECIAL branch wrote a map link",
+    "state": "closed",
+    "why": "unbuilt() drops anchors before comparing and is applied to aliases, nav, nav_zh, ways_in paths and zh fields. Links.resolve now excludes self.unbuilt. The code is right; its test is finding 1."
+   },
+   {
+    "item": "3. An alias to a SPECIAL page skipped the lines check and the anchor check",
+    "state": "closed",
+    "why": "lines is computed before the alias and suppresses it, so README.md?plain=1#L5 reaches GitHub through the private check at line 163. A link to index.html with an anchor now joins links.internal and is checked against home_ids. Both new tests would fail on the old code."
+   },
+   {
+    "item": "4. The asset-mode test could not fail",
+    "state": "partly",
+    "why": "It can now fail if copyfile is replaced by a mode-copying copy. It still cannot fail if dest.chmod(0o644) is removed: copyfile opens the destination with 'wb' and copies data only (read in shutil's source), so at this machine's umask 022 the file is 0o644 whatever the source's mode. See finding 2."
+   },
+   {
+    "item": "5. Page._list swallowed an ATX heading directly after a list item",
+    "state": "closed",
+    "why": "The break sits after the indent branch and before the lazy-continuation branch. On the real pages it changes only theories/LINEAGE.zh.md, which gains its h2 改名 and loses the text ' ## 改名' from the last item."
+   },
+   {
+    "item": "6. A CSS comment gave a wrong reason",
+    "state": "closed",
+    "why": "The comment now says only that the picture stays inside the hero's column. That matches the rule and the home, where the a.picture sits in the README first screen."
+   }
+  ],
+  "findings": [
+   {
+    "severity": "low",
+    "where": "/Users/ren/tmp/rw/wt2/tools/research/tests/test_site.py:274 (test_with_the_map_off_no_line_names_it)",
+    "problem": "The test cannot fail. It asserts only on index.html, and the home is built with nav(cfg, 'index.html', set(pages)) with no lang (build_site.py:864), so nav_zh is never read there (lines 726-728). No fixture page is Chinese, no fixture page links map.html so the 'connections.html#top' alias is unused, and no card has a zh field. It passes on the old code. The zh-card filter and the `target not in self.unbuilt` branch of Links.resolve have no test that can run: test_the_map_is_built_only_with_its_site_mode skips when site_map exists and links no map from a page anyway.",
+    "fix": "Add a page a/ONE.zh.md to the fixture and assert 'connections.html' is absent from a/ONE.zh.html. Make one page link ../map.html and one ../connections.html, and give a card 'zh': 'connections.html#x'. Assert none of them produces a site link to the map."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/ren/tmp/rw/wt2/tools/research/tests/test_site.py:289 (test_an_asset_is_readable_whatever_its_mode), and :243",
+    "problem": "Deleting dest.chmod(0o644) at build_site.py:870 leaves this test green at umask 022, because copyfile never carries the source's 0o600 to the copy (prior item 4). The site.css mode assertion also stayed at line 243, in a test renamed to test_cards_grouped_in_their_order, which no longer names it, and that assertion cannot fail at umask 022 either.",
+    "fix": "In the asset test set os.umask(0o077) around self.build and restore it with addCleanup, so a fresh file would be 0o600 without the chmod. Assert assets/site.css's mode there too and remove line 243."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/ren/tmp/rw/wt2/tools/publishing/build_site.py:372",
+    "problem": "The new break matches any line starting with three backticks, so a lazy line opening with an inline code span, such as '```x``` and more', now ends the list. _blocks then reads it as a fence and consumes the page up to the next line starting with three backticks. GitHub does not read it as a fence, since a backtick fence's info string cannot contain a backtick, and continues the item; the old code did too. No page among the 665 has such a line, so nothing renders wrongly today.",
+    "fix": "Break only on a real opening fence, for example ```[^`]*$ in place of ``` in that pattern."
+   }
+  ]
+ },
+ {
+  "real": true,
+  "severity": "medium",
+  "why": "The finding holds. I checked it against the raw ar5iv text of arXiv:2310.13548; the latest PDF's text could not be extracted here.\n\nWhat the paper says: Section 4.2 reads \"We use the Claude 2 PM, which was trained on a mix of human preference judgments and AI preference judgments (Anthropic 2023). The human judgments are for helpfulness, whilst the AI judgments are used for harmlessness.\" It then optimizes against that PM by best-of-N and tracks \"the reinforcement learning (RL) phase of Claude 2 finetuning\". Section 4.3.2 also uses this PM and variants of it. \"Constitution\" appears only in the bibliography entry for Bai et al. 2022b, and that paper is cited only in section 2, as a general remark on AI-generated preference judgments. So the finding's caveat is right: the paper does not say these AI judgments read written principles.\n\nWhy item 3 is wrong: USES-EXAMPLES item 3 says none of the three measurements was on this pipeline and that \"they measured pipelines trained on human preference\". The refutation I tried was that Sharma's five assistants (section 3) and the hh-rlhf analysis (section 4.1) are human feedback. That is true, but 07 §6 cites the measurement for \"optimizing through it\", and the only optimizing in Sharma is the PM work in 4.2 and 4.3.2. The study's own sentence, \"Optimizing against preference models sometimes traded truthfulness for agreement\", comes from there. That PM has the same human-helpfulness, AI-harmlessness split the audit itself describes for this pipeline, so the contrast fails on the very respect the sentence draws it. The flag \"figures read from the papers' abstracts\" covers figures, not this flat description of what was measured. Filing Sharma under the study's section 1 heading, \"Reward models trained on human preference (RLHF)\", carries the same error, and item 3 links that section as its support. The Sharma bullet's own sentences are not false; they are silent on the split and misfiled.\n\nSeverity: medium, at its lower end. It misdescribes a cited paper in a categorical negative on a reader-facing page, and a specialist would catch it. It understates rather than overstates the evidence, and no law or standing changes: T3 stays conjectured and the bearing stays a reading.\n\nLimits the fix should keep:\n- \"Of this kind\" holds only for the split, not for written principles.\n- The PM is \"trained in part using the data analyzed in §4.1\", and the paper does not separate which half drives sycophancy, so the AI half is not shown to matter.\n- Section 4.2 reports \"mixed effects\": best-of-N reduces answer and mimicry sycophancy, and RL increases some forms, so \"sometimes\" should stay.\n- Gao should keep the page's existing clause about a gold reward model standing in for the humans, rather than being called simply trained on human preference.\n- The English and Chinese fronts' \"Beside published measurements\" paragraphs and 07 §6 do not make the false contrast. A grep of the Chinese edition for the audit's terms found no matching item, so it may not carry this audit at all.\n- The record's history should gain a line, as with the 8 November section 2 correction."
+ }
+]
