@@ -18,7 +18,7 @@ The account holds modern philosophy only for ethics, personal identity and envir
 
 **Present in the account:**
 
-- Dossier P, for review, read by no person ([PHILOSOPHY.md](../../../review/PHILOSOPHY.md)): 27 items P-01 to P-27 in six parts; 44 reference lines (counted in the References section). Jonas and Spinoza's conatus each occur once, in P-05's second question, Jonas also in the references; Parfit 1984 and 1997 are credited throughout parts 3 and 5
+- Dossier P, for review; no person's review of it is recorded ([PHILOSOPHY.md](../../../review/PHILOSOPHY.md)): 27 items P-01 to P-27 in six parts; 44 reference lines (counted in the References section). Jonas and Spinoza's conatus each occur once, in P-05's second question, Jonas also in the references; Parfit 1984 and 1997 are credited throughout parts 3 and 5
 - Known-results row on significance ([08-METHOD.md](../../../chapters/08-METHOD.md#known-results)): One table row: is-ought; Gewirth 1978; Parfit 1984; Sen 1977; verdict near-definitional; what it leaves out named (Schurz, Prior, mere addition, Repugnant Conclusion, non-identity)
 - The neighbours of one relational unfolding ([08-METHOD.md](../../../chapters/08-METHOD.md#one-relational-unfolding)): One sentence naming ontic structural realism (Ladyman and Ross 2007), process philosophy, dependent arising and the identity of indiscernibles; no argument against or from any of them
 - Credits inside the crux and the step ([07-SIGNIFICANCE.md](../../../chapters/07-SIGNIFICANCE.md#crux)): §4.2 credits Gewirth, Parfit, Siderits; §4.7 credits Williams, Anscombe, Parfit's R and Extreme Claim, Rawls, Scheffler; §4.4 credits Sen's intersection approach and Pareto dominance
