@@ -139,8 +139,10 @@ class Checking(unittest.TestCase):
         svg = spine.standings_svg(spine.spec(), 'en')
         self.assertIn('It is GroupEnding.Flow.all_end:', svg)
         self.assertIn('For example, Flow.beyond_gives_nothing:', svg)
-        self.assertIn('the case rests on the review', svg)
-        self.assertIn('126 rows, nine declarations in two, so 117 distinct', spine.standings_svg(spine.spec(), 'en').replace('\n', ' '))
+        self.assertIn('the case rests on the review (the', svg)
+        self.assertIn('review is AI-written)', svg)
+        self.assertIn("RelativePosition.rise_needs_fall, in its record's law:", svg)
+        self.assertIn('rows list 126, nine declarations twice, so 117 distinct', spine.standings_svg(spine.spec(), 'en').replace('\n', ' '))
 
     def test_an_unknown_outcome_is_an_error(self):
         s = spine.spec()

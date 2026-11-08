@@ -4,14 +4,14 @@
 
 [English](THEORY-GRAPH.md) · [首页](../../../README.zh.md) · [一页](../ONE-PAGE.zh.md) · [用途](../USES.zh.md) · [实例](../USES-EXAMPLES.zh.md) · [总览](../THE-THEORY-OF-BECOMING.zh.md) · [八章（英文）](../chapters/README.md) · [古文（第六章）](../chapters/06-CLASSICAL-TEXTS.md) · [检验](../../../TESTS.zh.md) · [对照表](atlas/CROSSWALK.zh.md) · [怎样长成](../../LINEAGE.zh.md) · [术语表](../../../GLOSSARY.zh.md) · [审查包](../review/README.zh.md)
 
-*约 29–37 分钟读完。*
+*约 29–38 分钟读完。*
 
 本页是[理论图](THEORY-GRAPH.md)中“各章一览”的中文版：这幅图、怎样读它、核心声明的地位、五条共律与论题、它显示什么与不显示什么，以及各章之间边的种类表；各区域的结果、模块与文本的列表只在英文版中。本页由 AI 翻译；引自英文文本的话，除标明为英文原文者外，都是译文，未经核对，以英文原文为准。
 
 ## 各章一览
 <a id="the-spine"></a>
 
-**怎样读它。** 每个圆是一章，按其结果数定大小；从一章到另一章的实线，计其结果使用另一章结果、记为 formal-reuse（[RESULT-WORKFLOW](../../../_process/RESULT-WORKFLOW.md) 把这一类留给已核验的推理；它由 AI 写成的记录指定，没有任何检查核对一次使用是否见于 Lean）的次数，章与章之间的虚线与点线是别种依赖；辐条的粗细与章旁的计数，标出该章有多少核心模块在中央的文法上陈述其律（计的是模块，不是推导而得的结果）。章的编号是为阅读，不是证明的次序，使用也是双向的：较深的曲线是章序在前的一章的结果使用章序在后的一章的结果；登记检查拒绝会闭合其已声明依赖之环的记录（[这是入册的条件，不是一项发现](THEORY-GRAPH.zh.md#do-the-recorded-uses-form-a-cycle)）。117 项核心声明中，约十分之一被读作在文法上陈述之律的情形：11 项[推导而得](../../../GLOSSARY.zh.md#derived)，各为文法之律的一个情形，1 项为根上一形式（root form）的一步情形，在一个所述的假设之下；其余或为计数之律，位于文法以下（6 项），或处于一个[指明的距离](../../../GLOSSARY.zh.md#named-distance)，不被读作这样的情形，各有其指明的理由（99 项）。章与章之间共 497 次使用，其中 291 次进入「根」与「生成、守与退化」两章，212 次是逆向的。地位一行之下的条带给出五条共律：依于每一条的核心行，斜线部分是其编译后的类型或值达到文法的行（[其表](#the-five-shared-laws)）。两个方框是伦理的两个前提，各在所用之处为假设，二者都不断言；徽标 T1 到 T8 是各论题，位于陈述它们的那一章，按其冻结检验的结局着色，下表以各自所在行的话给出它们。曲线是一种依赖，不是意义上的一致。
+**怎样读它。** 每个圆是一章，按其结果数定大小；从一章到另一章的实线，计其结果使用另一章结果、记为 formal-reuse（[RESULT-WORKFLOW](../../../_process/RESULT-WORKFLOW.md) 把这一类留给已核验的推理；它由 AI 写成的记录指定，没有任何检查核对一次使用是否见于 Lean）的次数，章与章之间的虚线与点线是别种依赖；辐条的粗细与章旁的计数，标出该章有多少核心模块在中央的文法上陈述其律（计的是模块，不是推导而得的结果）。章的编号是为阅读，不是证明的次序，使用也是双向的：较深的曲线是章序在前的一章的结果使用章序在后的一章的结果；登记检查拒绝会闭合其已声明依赖之环的记录（[这是入册的条件，不是一项发现](THEORY-GRAPH.zh.md#do-the-recorded-uses-form-a-cycle)）。117 项核心声明中，约十分之一被读作文法之律或根形式的情形：11 项[推导而得](../../../GLOSSARY.zh.md#derived)，为文法之律的情形，1 项为根上一形式（root form）的一步情形，在一个所述的假设之下；其余或为计数之律，位于文法以下（6 项），或处于一个[指明的距离](../../../GLOSSARY.zh.md#named-distance)，不被读作这样的情形，各有其指明的理由（99 项）。章与章之间共 497 次使用，其中 291 次进入「根」与「生成、守与退化」两章，212 次是逆向的。地位一行之下的条带给出五条共律：依于每一条的核心行，斜线部分是其编译后的类型或值达到文法的行（[其表](#the-five-shared-laws)）。两个方框是伦理的两个前提，各在所用之处为假设，二者都不断言；徽标 T1 到 T8 是各论题，位于陈述它们的那一章，按其冻结检验的结局着色，下表以各自所在行的话给出它们。曲线是一种依赖，不是意义上的一致。
 
 ![八章及其彼此记录下的使用：圆按结果数定大小，实线计各章结果之间记为 formal-reuse 的使用，章与章之间的虚线与点线是别种依赖，地位之下是五条共律，两个前提进入第七章，各在所用之处为假设，T1 到 T8 在其所属之处按检验结局着色](spine.zh.svg)
 
@@ -29,7 +29,7 @@
 
 每项声明及其地位，见[根之边的记录](records/one-root-to-its-edge.md)（英文）：42 项有文字的依据，在[其数据](records/one-root-to-its-edge.json)（`boundary.standings`）中，其余 75 项是规则所给的标签。凡其律中列有某项声明的记录，其页面印出该声明的地位：推导而得者印出其律、桥接与支持，在一个所述的假设之下的那一行印出其形式、假设与反模型，读法印出其依据，其余印出规则的理由。99 项中每一项都有其指明的理由：其类别，其中 24 项另有文字的依据。一项[核心声明](../../../GLOSSARY.zh.md#核心声明)是覆盖文件的某一行所指明的 Lean 陈述；一项结果的平实说法在其记录中。
 
-![117 项核心声明，每项一个方块，按其相对于根之边的地位排列：推导而得、在一个所述的假设之下、计数，以及按理由分列的处于一个指明的距离者，其中 4 类各附一例，用其记录的话](standings.zh.svg)
+![117 项核心声明，每项一个方块，按其相对于根之边的地位排列：推导而得、在一个所述的假设之下、计数，以及按理由分列的处于一个指明的距离者，其中 3 类各附一例，单独一项的那一类写出该项，皆用其记录的话](standings.zh.svg)
 
 *由 `tools/research/spine.py` 依[共律数据](data/shared-laws.json)与 [spine.json](data/spine.json) 画出，图中文字为 AI 所译；[英文图](standings.svg)。*
 
@@ -37,7 +37,7 @@
 
 | 声明 | 所属情形（律名；其文档字符串的开头，英文原文） | 记录依据的第一句（末行另引其地位一句；英文原文） | 其律中列有它的结果 |
 |---|---|---|---|
-| `Flow.beyond_gives_nothing` | `«所闭之界»`（Nothing within a closure bears the relation to what lies beyond it） | A case of «所闭之界» at feeding from: what lies beyond a formation's feeding closure gives nothing, at any step, to a condition that a member of the closure then requires. | [feeding-closure](records/feeding-closure.md) |
+| `Flow.beyond_gives_nothing` | `«所闭之界»`（Nothing within a closure bears the relation to what lies beyond it） | A case of «所闭之界» at feeding from: a formation beyond the feeding closure that takes part at a step gives nothing at that step to a condition a member of the closure then requires. | [feeding-closure](records/feeding-closure.md) |
 | `Flow.withinSystem_of_withinInfluence` | `«所闭之单调»`（A larger relation has a larger closure） | A case of «所闭之单调» at being affected within sharing: Flow.shares_of_affectedBy, an unfolding, meets the law's inclusion, and WithinClosure.mono is the law at the frame's closure, applied past its conclusion. | [levels-of-closure](records/levels-of-closure.md) |
 | `Law.drawn_iff_not_returns` | `«定后有后则入当且仅当不返»`（With a fixed successor and some successor, drawn is not reaching itself） | A case of «定后有后则入当且仅当不返» at the relation of the law's next configuration, its successor fixed and total. | [attraction-is-not-returning](records/attraction-is-not-returning.md)、[necessarily-drawn-is-not-returning](records/necessarily-drawn-is-not-returning.md) |
 | `Law.lossless_iff_returns` | `«有限遍后定后则定前当且仅当皆返»`（Within finitely many occurrences, each with a successor, under a fixed successor, merging nothing is every occurrence reaching itself） | A case of «有限遍后定后则定前当且仅当皆返» at the law's next configuration over the listed ones: lossless is the predecessor fixed (two bridges), the other five bridges are among those of Law.drawn_iff_not_returns, and the support is its support. | [recurrence-without-premise](records/recurrence-without-premise.md) |

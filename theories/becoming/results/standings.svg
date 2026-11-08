@@ -1,13 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 962" width="900" height="962" role="img" aria-labelledby="standings-title standings-desc" font-family="Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1030" width="900" height="1030" role="img" aria-labelledby="standings-title standings-desc" font-family="Helvetica, Arial, sans-serif">
 <title id="standings-title">The 117 central declarations and the grammar’s laws</title>
-<desc id="standings-desc">Each square is one central declaration, a Lean statement that a row of the coverage file names as central (126 rows, nine declarations in two, so 117 distinct), placed by its standing against the edge of one root, how far the one root reaches (08 §7). 11 are read as cases of grammar laws and 1 as a root form under a stated hypothesis; the rest are counting, below the grammar, or stand at a named distance, each with its reason.</desc>
-<rect x="0.5" y="0.5" width="899" height="961" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
+<desc id="standings-desc">Each square is one central declaration, a Lean statement that a row of the coverage file names as central (its 17 rows list 126, nine declarations twice, so 117 distinct), placed by its standing against the edge of one root, how far the one root reaches (08 §7). 11 are read as cases of grammar laws and 1 as a root form at one step, under a stated hypothesis; the rest are counting, below the grammar, or stand at a named distance, each with its reason.</desc>
+<rect x="0.5" y="0.5" width="899" height="1029" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
 <text x="24" y="40" font-size="22" font-weight="bold" text-anchor="start" fill="#1c1917">The 117 central declarations and the grammar’s laws</text>
 <text x="24" y="64" font-size="14" text-anchor="start" fill="#57534e">Each square is one central declaration, a Lean statement that a row of the coverage file names as</text>
-<text x="24" y="82" font-size="14" text-anchor="start" fill="#57534e">central (126 rows, nine declarations in two, so 117 distinct), placed by its standing against the edge</text>
-<text x="24" y="100" font-size="14" text-anchor="start" fill="#57534e">of one root, how far the one root reaches (08 §7). 11 are read as cases of grammar laws and 1 as a root</text>
-<text x="24" y="118" font-size="14" text-anchor="start" fill="#57534e">form under a stated hypothesis; the rest are counting, below the grammar, or stand at a named distance,</text>
-<text x="24" y="136" font-size="14" text-anchor="start" fill="#57534e">each with its reason.</text>
+<text x="24" y="82" font-size="14" text-anchor="start" fill="#57534e">central (its 17 rows list 126, nine declarations twice, so 117 distinct), placed by its standing against</text>
+<text x="24" y="100" font-size="14" text-anchor="start" fill="#57534e">the edge of one root, how far the one root reaches (08 §7). 11 are read as cases of grammar laws and 1</text>
+<text x="24" y="118" font-size="14" text-anchor="start" fill="#57534e">as a root form at one step, under a stated hypothesis; the rest are counting, below the grammar, or</text>
+<text x="24" y="136" font-size="14" text-anchor="start" fill="#57534e">stand at a named distance, each with its reason.</text>
 <rect x="24" y="172" width="12" height="12" rx="1.5" fill="#1c1917" stroke="#57534e" stroke-width="0.6"/>
 <rect x="39" y="172" width="12" height="12" rx="1.5" fill="#1c1917" stroke="#57534e" stroke-width="0.6"/>
 <rect x="54" y="172" width="12" height="12" rx="1.5" fill="#1c1917" stroke="#57534e" stroke-width="0.6"/>
@@ -21,143 +21,147 @@
 <rect x="174" y="172" width="12" height="12" rx="1.5" fill="#1c1917" stroke="#57534e" stroke-width="0.6"/>
 <text x="286" y="183" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">11 derived</text>
 <text x="286" y="201" font-size="14" text-anchor="start" fill="#57534e">each a case of grammar laws, through bridges checked in Lean as equivalences and</text>
-<text x="286" y="219" font-size="14" text-anchor="start" fill="#57534e">support the review reads where a row has them; the case rests on the review</text>
-<text x="286" y="237" font-size="14" text-anchor="start" fill="#1c1917">For example, Flow.beyond_gives_nothing: A formation beyond the closure that takes</text>
-<text x="286" y="255" font-size="14" text-anchor="start" fill="#1c1917">part at a step gives nothing at that step to a condition a member of the closure</text>
-<text x="286" y="273" font-size="14" text-anchor="start" fill="#1c1917">then requires</text>
-<rect x="24" y="296" width="12" height="12" rx="1.5" fill="#57534e" stroke="#57534e" stroke-width="0.6"/>
-<text x="286" y="307" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">1 under a stated hypothesis</text>
-<text x="286" y="325" font-size="14" text-anchor="start" fill="#57534e">the root form RootForms.outside_leaves_no_offspring at one step</text>
-<text x="286" y="343" font-size="14" text-anchor="start" fill="#1c1917">It is GroupEnding.Flow.all_end: Where every member of a generation is not active,</text>
-<text x="286" y="361" font-size="14" text-anchor="start" fill="#1c1917">as where every group depends on one condition that ran into joint excess, the next</text>
-<text x="286" y="379" font-size="14" text-anchor="start" fill="#1c1917">generation is empty</text>
-<rect x="24" y="402" width="12" height="12" rx="1.5" fill="#a8a29e" stroke="#57534e" stroke-width="0.6"/>
-<rect x="39" y="402" width="12" height="12" rx="1.5" fill="#a8a29e" stroke="#57534e" stroke-width="0.6"/>
-<rect x="54" y="402" width="12" height="12" rx="1.5" fill="#a8a29e" stroke="#57534e" stroke-width="0.6"/>
-<rect x="69" y="402" width="12" height="12" rx="1.5" fill="#a8a29e" stroke="#57534e" stroke-width="0.6"/>
-<rect x="84" y="402" width="12" height="12" rx="1.5" fill="#a8a29e" stroke="#57534e" stroke-width="0.6"/>
-<rect x="99" y="402" width="12" height="12" rx="1.5" fill="#a8a29e" stroke="#57534e" stroke-width="0.6"/>
-<text x="286" y="413" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">6 counting</text>
-<text x="286" y="431" font-size="14" text-anchor="start" fill="#57534e">below the grammar</text>
-<text x="286" y="449" font-size="14" text-anchor="start" fill="#1c1917">For example, RelativePosition.rise_needs_fall: No change raises every part's</text>
-<text x="286" y="467" font-size="14" text-anchor="start" fill="#1c1917">position, and a part's rise needs another part's fall</text>
-<line x1="24" y1="484" x2="876" y2="484" stroke="#e7e5e4"/>
-<text x="24" y="504" font-size="16" font-weight="bold" text-anchor="start" fill="#1c1917">99 at a named distance, each with its reason</text>
-<rect x="24" y="520" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="39" y="520" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="54" y="520" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="69" y="520" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="84" y="520" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="99" y="520" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="114" y="520" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="129" y="520" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="144" y="520" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="159" y="520" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="174" y="520" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="189" y="520" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="204" y="520" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="219" y="520" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="234" y="520" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="249" y="520" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="24" y="535" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="39" y="535" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="54" y="535" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="69" y="535" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="84" y="535" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="99" y="535" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<text x="286" y="531" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">22 connected</text>
-<text x="286" y="549" font-size="14" text-anchor="start" fill="#57534e">reaching grammar laws without being declared a case of one</text>
-<rect x="24" y="568" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="39" y="568" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="54" y="568" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="69" y="568" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="84" y="568" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="99" y="568" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="114" y="568" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="129" y="568" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="144" y="568" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="159" y="568" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="174" y="568" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="189" y="568" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="204" y="568" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="219" y="568" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="234" y="568" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="249" y="568" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="24" y="583" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="39" y="583" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="54" y="583" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="69" y="583" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="84" y="583" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="99" y="583" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="114" y="583" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="129" y="583" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="144" y="583" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="159" y="583" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="174" y="583" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="189" y="583" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="204" y="583" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="219" y="583" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="234" y="583" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="249" y="583" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<text x="286" y="579" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">32 with balance in their statements</text>
-<text x="286" y="597" font-size="14" text-anchor="start" fill="#1c1917">For example, Flow.no_new_dependence: Under balance and inheritance descent forms</text>
-<text x="286" y="615" font-size="14" text-anchor="start" fill="#1c1917">no new dependence</text>
-<rect x="24" y="634" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="39" y="634" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="54" y="634" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="69" y="634" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="84" y="634" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="99" y="634" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="114" y="634" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="129" y="634" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="144" y="634" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="159" y="634" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="174" y="634" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="189" y="634" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="204" y="634" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="219" y="634" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="234" y="634" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="249" y="634" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="24" y="649" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="39" y="649" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<text x="286" y="645" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">18 on amounts</text>
-<rect x="24" y="676" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="39" y="676" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="54" y="676" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="69" y="676" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="84" y="676" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="99" y="676" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="114" y="676" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="129" y="676" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="144" y="676" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="159" y="676" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="174" y="676" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="189" y="676" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="204" y="676" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="219" y="676" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="234" y="676" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="249" y="676" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<text x="286" y="687" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">16 at a represented model</text>
-<text x="286" y="705" font-size="14" text-anchor="start" fill="#57534e">representations and not derivations</text>
-<rect x="24" y="724" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="39" y="724" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="54" y="724" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="69" y="724" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="84" y="724" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="99" y="724" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<text x="286" y="735" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">6 on their own carrier</text>
-<rect x="24" y="754" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="39" y="754" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<text x="286" y="765" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">2 laws of their models</text>
-<rect x="24" y="784" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="39" y="784" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="54" y="784" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<text x="286" y="795" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">3 keeping significance free</text>
-<text x="286" y="813" font-size="14" text-anchor="start" fill="#57534e">as chapter 7 intends</text>
-<text x="24" y="840" font-size="12.5" text-anchor="start" fill="#57534e">A named distance says why a declaration is not read as a case of grammar laws; the edge record does not show that a</text>
-<text x="24" y="856" font-size="12.5" text-anchor="start" fill="#57534e">distance is a gap or a failure. The ethics’ two premises, the continuation condition for scope and C for order, are</text>
-<text x="24" y="872" font-size="12.5" text-anchor="start" fill="#57534e">not among these: neither stands on the edge.</text>
-<text x="24" y="892" font-size="12.5" text-anchor="start" fill="#57534e">The reasons not glossed here are in the edge record, one-root-to-its-edge, beside each declaration; the terms edge of</text>
-<text x="24" y="908" font-size="12.5" text-anchor="start" fill="#57534e">one root, derived and named distance are in GLOSSARY.md.</text>
-<text x="24" y="928" font-size="12.5" text-anchor="start" fill="#57534e">Generated by tools/research/spine.py from shared-laws.json and spine.json.</text>
+<text x="286" y="219" font-size="14" text-anchor="start" fill="#57534e">support the review reads where a row has them; the case rests on the review (the</text>
+<text x="286" y="237" font-size="14" text-anchor="start" fill="#57534e">review is AI-written)</text>
+<text x="286" y="255" font-size="14" text-anchor="start" fill="#1c1917">For example, Flow.beyond_gives_nothing: A formation beyond the closure that takes</text>
+<text x="286" y="273" font-size="14" text-anchor="start" fill="#1c1917">part at a step gives nothing at that step to a condition a member of the closure</text>
+<text x="286" y="291" font-size="14" text-anchor="start" fill="#1c1917">then requires</text>
+<rect x="24" y="314" width="12" height="12" rx="1.5" fill="#57534e" stroke="#57534e" stroke-width="0.6"/>
+<text x="286" y="325" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">1 under a stated hypothesis</text>
+<text x="286" y="343" font-size="14" text-anchor="start" fill="#57534e">the root form RootForms.outside_leaves_no_offspring at one step</text>
+<text x="286" y="361" font-size="14" text-anchor="start" fill="#1c1917">It is GroupEnding.Flow.all_end: Where every member of a generation is not active,</text>
+<text x="286" y="379" font-size="14" text-anchor="start" fill="#1c1917">as where every group depends on one condition that ran into joint excess, the next</text>
+<text x="286" y="397" font-size="14" text-anchor="start" fill="#1c1917">generation is empty</text>
+<rect x="24" y="420" width="12" height="12" rx="1.5" fill="#a8a29e" stroke="#57534e" stroke-width="0.6"/>
+<rect x="39" y="420" width="12" height="12" rx="1.5" fill="#a8a29e" stroke="#57534e" stroke-width="0.6"/>
+<rect x="54" y="420" width="12" height="12" rx="1.5" fill="#a8a29e" stroke="#57534e" stroke-width="0.6"/>
+<rect x="69" y="420" width="12" height="12" rx="1.5" fill="#a8a29e" stroke="#57534e" stroke-width="0.6"/>
+<rect x="84" y="420" width="12" height="12" rx="1.5" fill="#a8a29e" stroke="#57534e" stroke-width="0.6"/>
+<rect x="99" y="420" width="12" height="12" rx="1.5" fill="#a8a29e" stroke="#57534e" stroke-width="0.6"/>
+<text x="286" y="431" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">6 counting</text>
+<text x="286" y="449" font-size="14" text-anchor="start" fill="#57534e">below the grammar</text>
+<text x="286" y="467" font-size="14" text-anchor="start" fill="#1c1917">For example, RelativePosition.rise_needs_fall, in its record's law: No change</text>
+<text x="286" y="485" font-size="14" text-anchor="start" fill="#1c1917">raises every part's position, and a part's rise needs another part's fall</text>
+<line x1="24" y1="502" x2="876" y2="502" stroke="#e7e5e4"/>
+<text x="24" y="522" font-size="16" font-weight="bold" text-anchor="start" fill="#1c1917">99 at a named distance, each with its reason</text>
+<rect x="24" y="538" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="39" y="538" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="54" y="538" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="69" y="538" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="84" y="538" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="99" y="538" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="114" y="538" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="129" y="538" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="144" y="538" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="159" y="538" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="174" y="538" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="189" y="538" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="204" y="538" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="219" y="538" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="234" y="538" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="249" y="538" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="24" y="553" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="39" y="553" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="54" y="553" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="69" y="553" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="84" y="553" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="99" y="553" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<text x="286" y="549" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">22 connected</text>
+<text x="286" y="567" font-size="14" text-anchor="start" fill="#57534e">reaching grammar laws without being declared a case of one</text>
+<rect x="24" y="586" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="39" y="586" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="54" y="586" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="69" y="586" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="84" y="586" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="99" y="586" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="114" y="586" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="129" y="586" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="144" y="586" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="159" y="586" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="174" y="586" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="189" y="586" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="204" y="586" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="219" y="586" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="234" y="586" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="249" y="586" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="24" y="601" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="39" y="601" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="54" y="601" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="69" y="601" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="84" y="601" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="99" y="601" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="114" y="601" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="129" y="601" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="144" y="601" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="159" y="601" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="174" y="601" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="189" y="601" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="204" y="601" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="219" y="601" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="234" y="601" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="249" y="601" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<text x="286" y="597" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">32 with balance in their statements</text>
+<text x="286" y="615" font-size="14" text-anchor="start" fill="#1c1917">For example, Flow.no_new_dependence: Under balance and inheritance descent forms</text>
+<text x="286" y="633" font-size="14" text-anchor="start" fill="#1c1917">no new dependence</text>
+<rect x="24" y="652" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="39" y="652" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="54" y="652" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="69" y="652" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="84" y="652" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="99" y="652" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="114" y="652" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="129" y="652" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="144" y="652" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="159" y="652" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="174" y="652" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="189" y="652" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="204" y="652" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="219" y="652" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="234" y="652" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="249" y="652" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="24" y="667" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="39" y="667" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<text x="286" y="663" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">18 on amounts</text>
+<rect x="24" y="694" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="39" y="694" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="54" y="694" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="69" y="694" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="84" y="694" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="99" y="694" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="114" y="694" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="129" y="694" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="144" y="694" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="159" y="694" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="174" y="694" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="189" y="694" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="204" y="694" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="219" y="694" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="234" y="694" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="249" y="694" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<text x="286" y="705" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">16 at a represented model</text>
+<text x="286" y="723" font-size="14" text-anchor="start" fill="#57534e">representations and not derivations</text>
+<rect x="24" y="742" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="39" y="742" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="54" y="742" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="69" y="742" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="84" y="742" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="99" y="742" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<text x="286" y="753" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">6 on their own carrier</text>
+<text x="286" y="771" font-size="14" text-anchor="start" fill="#57534e">by F5's verified items</text>
+<rect x="24" y="790" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="39" y="790" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<text x="286" y="801" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">2 laws of their models</text>
+<rect x="24" y="820" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="39" y="820" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="54" y="820" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<text x="286" y="831" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">3 keeping significance free</text>
+<text x="286" y="849" font-size="14" text-anchor="start" fill="#57534e">as chapter 7 intends</text>
+<text x="24" y="876" font-size="12.5" text-anchor="start" fill="#57534e">A named distance says why a declaration is not read as a case of grammar laws; the edge record does not show that a</text>
+<text x="24" y="892" font-size="12.5" text-anchor="start" fill="#57534e">distance is a gap or a failure. The ethics’ two premises, the continuation condition for scope and C for order, are</text>
+<text x="24" y="908" font-size="12.5" text-anchor="start" fill="#57534e">not among these: neither stands on the edge.</text>
+<text x="24" y="928" font-size="12.5" text-anchor="start" fill="#57534e">Each declaration's standing is in the edge record, one-root-to-its-edge: 42 have a basis in words, in its data, and</text>
+<text x="24" y="944" font-size="12.5" text-anchor="start" fill="#57534e">the other 75 the label a rule gives; the page of each record whose laws name a declaration prints its standing, with</text>
+<text x="24" y="960" font-size="12.5" text-anchor="start" fill="#57534e">its basis or the rule's reason. 08 §7 gives the classes on amounts and laws of their models no further words. The</text>
+<text x="24" y="976" font-size="12.5" text-anchor="start" fill="#57534e">terms edge of one root, derived and named distance are in GLOSSARY.md.</text>
+<text x="24" y="996" font-size="12.5" text-anchor="start" fill="#57534e">Generated by tools/research/spine.py from shared-laws.json and spine.json.</text>
 </svg>

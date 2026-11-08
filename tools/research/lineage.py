@@ -194,8 +194,9 @@ def evidence_errors(where, evidence):
     return errors
 
 
-def history_by_week():
-    """Record history entries by the Monday of their week, and how many carry no leading date."""
+def history_by_week(until=None):
+    """Record history entries by the Monday of their week, and how many carry no leading date; with `until`, only those
+    dated on or before it (the page's cut), so an entry written after the cut waits for the next one."""
     weeks, undated = Counter(), 0
     for f in sorted((ROOT / RECORDS).glob('*.json')):
         for h in json.loads(f.read_text(encoding='utf-8')).get('history', []):
@@ -207,7 +208,8 @@ def history_by_week():
                 day = dt.date(int(m.group(3)), MONTHS.index(m.group(2)) + 1, int(m.group(1)))
             else:
                 day = dt.date(int(m.group(4)), int(m.group(5)), int(m.group(6)))
-            weeks[day - dt.timedelta(days=day.weekday())] += 1
+            if until is None or day <= until:
+                weeks[day - dt.timedelta(days=day.weekday())] += 1
     return dict(sorted(weeks.items())), undated
 
 
@@ -844,7 +846,8 @@ def render(atlas_json=None, against=None):
     errors = check(s)
     if errors:
         return {}, errors
-    weeks, undated = history_by_week()
+    day, month, year = s['cut']['date_en'].split()
+    weeks, undated = history_by_week(dt.date(int(year), MONTHS.index(month) + 1, int(day)))
     by_folder, totals = crosswalk_outcomes()
     out = {}
     for lang in ('en', 'zh'):

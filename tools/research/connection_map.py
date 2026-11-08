@@ -253,12 +253,11 @@ def _ledes_zh(data: dict) -> str:
     """The English ledes in Chinese, with the same counts, for the Chinese picture's accessible description."""
     T, checks = data['totals'], data.get('checks')
     carried, of = T['carried'], T['agreement_of']
-    stated = carried.get('carried', 0) + carried.get('carried-in-part', 0)
     num = str
     out = (f'{num(T["entries"])} 条主张，出自 {T["folders"]} 个早先的文件夹与 {T["domains"]} 个思想领域，每一条都对照现行的本论来读。'
-           f'本论全部或部分陈述其中 {num(stated)} 条，承接 {num(carried.get("changed", 0))} 条而另有说法。'
-           f'{num(carried.get("fresh-reading", 0))} 条本论没有陈述：由读者在此提出这一连接。'
-           f'{num(carried.get("not-carried", 0))} 条本论没有承接，{num(carried.get("history-only", 0))} 条仅存于其历史。'
+           f'其中 {num(carried.get("carried", 0))} 条承继，{num(carried.get("carried-in-part", 0))} 条部分承继，{num(carried.get("changed", 0))} 条改变（本论另有说法）；'
+           f'{num(carried.get("fresh-reading", 0))} 条是此处提出的新读法：本论没有陈述，由读者在此提出这一连接；'
+           f'{num(carried.get("not-carried", 0))} 条未承继，{num(carried.get("history-only", 0))} 条仅存于历史。'
            f'每一条线都是 AI 的读法，不是人的。{num(T["relation"].get("agreement", 0))} 处相合中，{num(of.get("law", 0))} 处与一条已核验的律相合，'
            f'{num(of.get("thesis-or-method", 0))} 处与一个论题或方法相合，{num(of.get("reading", 0))} 处依于读者的接合。'
            '一条线不是证明，共用一个词不是对应，相合画得并不比相分更显眼。'

@@ -1,5 +1,5 @@
 {
- "about": "The dated span of each earlier folder's material, for LINEAGE's per-folder table (RW (c), round 4, 9 November 2026). An AI reader, the session that built the table, read each folder's README and, where it dates its material elsewhere, the folder's own files, and gave each end with the line that states it and a quotation from that line; the render checks every quotation at its line. A second AI reader, the lineage reader of round 4 (round-4-readers-1.json, scope 'lineage'), found that nine folders' own text dates material later than the first read's end, spoken recordings of 2 and 4 October 2026 that each folder presents as its own material, and that the memories folder's start was the date of its first export rather than the span its README gives; its checker confirmed all ten. The ends below are the corrected ones. Later notes in the folders, of 6 October 2026 onward, are notes on the later work, not material, and are left out. No person's review of these dates is recorded.",
+ "about": "The dated span of each earlier folder's material, for LINEAGE's per-folder table (RW (c), round 4, 9 November 2026). An AI reader, the session that built the table, read each folder's README and, where it dates its material elsewhere, the folder's own files, and gave each end with the line that states it and a quotation from that line; the render checks every quotation at its line. A second AI reader, the lineage reader of round 4 (round-4-readers-1.json, scope 'lineage'), found that nine folders' own text dates material later than the first read's end, spoken recordings of 2 and 4 October 2026 that each folder presents as its own material, and that the memories folder's start was the date of its first export rather than the span its README gives; its checker confirmed the nine ends, and judged the memories start defensible but its rule mixed; the start now takes the span the folder's README gives. A third AI reader, the lineage reader of round 4's second reading (round-4-readers-2.json), found Wamotopia's end earlier than its source list's span (2026-08-13 to 2026-09-03), now its end. The ends below are the corrected ones. Later notes in the folders, of 6 October 2026 onward, are notes on the later work, not material, and are left out. No person's review of these dates is recorded.",
  "rule": "from: the earliest date the folder's own text gives for material it draws on; to: the latest such date. A date is as exact as its line gives it.",
  "corrected_in_round_4": {
   "to": [
@@ -11,7 +11,8 @@
    "jian-and-wenyan-as-formal-language",
    "keep-the-possibility-space-open",
    "the-fork-and-cooperative-infrastructure",
-   "alignment-selection-on-cognition"
+   "alignment-selection-on-cognition",
+   "wamotopia-and-the-wamo-protocol"
   ],
   "from": [
    "memories-and-working-style"
@@ -289,7 +290,7 @@
   {
    "folder": "wamotopia-and-the-wamo-protocol",
    "from": "2021-10-18",
-   "to": "2026-06-04",
+   "to": "2026-09-03",
    "basis": "folder",
    "evidence": [
     {
@@ -299,8 +300,8 @@
     },
     {
      "path": "theories/wamotopia-and-the-wamo-protocol/README.md",
-     "line": 376,
-     "quote": "and the hierarchy correction (2026-06-04)."
+     "line": 583,
+     "quote": "2026-08-13 → 2026-09-03"
     }
    ]
   },

@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 874" width="900" height="874" role="img" aria-labelledby="standings-title standings-desc" font-family="'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 908" width="900" height="908" role="img" aria-labelledby="standings-title standings-desc" font-family="'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif">
 <title id="standings-title">117 项核心声明与文法之律</title>
-<desc id="standings-desc">每个方块是一项核心声明，即覆盖文件的某一行列为核心的一个 Lean 陈述（共 126 行，九项声明各占两行，故为 117 项不同的声明），按其相对于根之边（本根所及之远）的地位排列（08 §7）。11 项被读作文法之律的情形，1 项被读作在一个所述的假设之下的根形式；其余或为计数，位于文法以下，或处于一个指明的距离，各有其理由。</desc>
-<rect x="0.5" y="0.5" width="899" height="873" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
+<desc id="standings-desc">每个方块是一项核心声明，即覆盖文件的某一行列为核心的一个 Lean 陈述（17 行共列 126 项，其中九项列了两次，故为 117 项不同的声明），按其相对于根之边（单一之根所达到之处）的地位排列（08 §7）。11 项被读作文法之律的情形，1 项被读作一个根形式的一步，在一个所述的假设之下；其余或为计数，位于文法以下，或处于一个指明的距离，各有其理由。</desc>
+<rect x="0.5" y="0.5" width="899" height="907" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
 <text x="24" y="40" font-size="22" font-weight="bold" text-anchor="start" fill="#1c1917">117 项核心声明与文法之律</text>
-<text x="24" y="64" font-size="14" text-anchor="start" fill="#57534e">每个方块是一项核心声明，即覆盖文件的某一行列为核心的一个 Lean 陈述（共 126 行，九项声明各占两行，</text>
-<text x="24" y="82" font-size="14" text-anchor="start" fill="#57534e">故为 117 项不同的声明），按其相对于根之边（本根所及之远）的地位排列（08 §7）。11 项被读作文法之</text>
-<text x="24" y="100" font-size="14" text-anchor="start" fill="#57534e">律的情形，1 项被读作在一个所述的假设之下的根形式；其余或为计数，位于文法以下，或处于一个指明的距</text>
-<text x="24" y="118" font-size="14" text-anchor="start" fill="#57534e">离，各有其理由。</text>
+<text x="24" y="64" font-size="14" text-anchor="start" fill="#57534e">每个方块是一项核心声明，即覆盖文件的某一行列为核心的一个 Lean 陈述（17 行共列 126 项，其中九项列</text>
+<text x="24" y="82" font-size="14" text-anchor="start" fill="#57534e">了两次，故为 117 项不同的声明），按其相对于根之边（单一之根所达到之处）的地位排列（08 §7）。11</text>
+<text x="24" y="100" font-size="14" text-anchor="start" fill="#57534e">项被读作文法之律的情形，1 项被读作一个根形式的一步，在一个所述的假设之下；其余或为计数，位于文法</text>
+<text x="24" y="118" font-size="14" text-anchor="start" fill="#57534e">以下，或处于一个指明的距离，各有其理由。</text>
 <rect x="24" y="154" width="12" height="12" rx="1.5" fill="#1c1917" stroke="#57534e" stroke-width="0.6"/>
 <rect x="39" y="154" width="12" height="12" rx="1.5" fill="#1c1917" stroke="#57534e" stroke-width="0.6"/>
 <rect x="54" y="154" width="12" height="12" rx="1.5" fill="#1c1917" stroke="#57534e" stroke-width="0.6"/>
@@ -20,7 +20,7 @@
 <rect x="174" y="154" width="12" height="12" rx="1.5" fill="#1c1917" stroke="#57534e" stroke-width="0.6"/>
 <text x="286" y="165" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">11 项推导而得</text>
 <text x="286" y="183" font-size="14" text-anchor="start" fill="#57534e">各为文法之律的一个情形，经由在 Lean 中作为等价核验的桥接与审阅所读的支持（某行</text>
-<text x="286" y="201" font-size="14" text-anchor="start" fill="#57534e">载有它们之处）；这一情形依于审阅</text>
+<text x="286" y="201" font-size="14" text-anchor="start" fill="#57534e">载有它们之处）；这一情形依于审阅（审阅为 AI 所写）</text>
 <text x="286" y="219" font-size="14" text-anchor="start" fill="#1c1917">例如 Flow.beyond_gives_nothing：闭包之外的形成在某步在场时，在该步不向闭包成员</text>
 <text x="286" y="237" font-size="14" text-anchor="start" fill="#1c1917">当时所需的条件给予</text>
 <rect x="24" y="260" width="12" height="12" rx="1.5" fill="#57534e" stroke="#57534e" stroke-width="0.6"/>
@@ -36,8 +36,8 @@
 <rect x="99" y="348" width="12" height="12" rx="1.5" fill="#a8a29e" stroke="#57534e" stroke-width="0.6"/>
 <text x="286" y="359" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">6 项为计数</text>
 <text x="286" y="377" font-size="14" text-anchor="start" fill="#57534e">位于文法以下</text>
-<text x="286" y="395" font-size="14" text-anchor="start" fill="#1c1917">例如 RelativePosition.rise_needs_fall：没有一个变化使每个部分的位置都升；一个</text>
-<text x="286" y="413" font-size="14" text-anchor="start" fill="#1c1917">部分升需要另一部分降</text>
+<text x="286" y="395" font-size="14" text-anchor="start" fill="#1c1917">例如 RelativePosition.rise_needs_fall，见其记录中的律：没有一个变化使每个部分</text>
+<text x="286" y="413" font-size="14" text-anchor="start" fill="#1c1917">的位置都升；一个部分升需要另一部分降</text>
 <line x1="24" y1="430" x2="876" y2="430" stroke="#e7e5e4"/>
 <text x="24" y="450" font-size="16" font-weight="bold" text-anchor="start" fill="#1c1917">99 项处于一个指明的距离，各有其理由</text>
 <rect x="24" y="466" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
@@ -142,17 +142,19 @@
 <rect x="84" y="652" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
 <rect x="99" y="652" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
 <text x="286" y="663" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">6 项在其自身的载体上</text>
-<rect x="24" y="682" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="39" y="682" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<text x="286" y="693" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">2 项为其模型之律</text>
-<rect x="24" y="712" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="39" y="712" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="54" y="712" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<text x="286" y="723" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">3 项保持意义为自由</text>
-<text x="286" y="741" font-size="14" text-anchor="start" fill="#57534e">如第七章所意图</text>
-<text x="24" y="768" font-size="12.5" text-anchor="start" fill="#57534e">指明的距离说的是一项声明为何不被读作文法之律的情形；根之边的记录并不表明有距离就是缺口或失败。伦理的两个前提，</text>
-<text x="24" y="784" font-size="12.5" text-anchor="start" fill="#57534e">定范围的延续条件与定次序的 C，不在其中：二者都不在根之边上。</text>
-<text x="24" y="804" font-size="12.5" text-anchor="start" fill="#57534e">这里未加说明的理由，见根之边的记录（one-root-to-its-edge）中各项声明旁；根之边、推导而得、指明的距离这几个词，</text>
-<text x="24" y="820" font-size="12.5" text-anchor="start" fill="#57534e">见 GLOSSARY.zh.md。</text>
-<text x="24" y="840" font-size="12.5" text-anchor="start" fill="#57534e">图中文字为 AI 所译，义以英文版为准。由 tools/research/spine.py 依 shared-laws.json 与 spine.json 画出。</text>
+<text x="286" y="681" font-size="14" text-anchor="start" fill="#57534e">依 F5 已核验的项</text>
+<rect x="24" y="700" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="39" y="700" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<text x="286" y="711" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">2 项为其模型之律</text>
+<rect x="24" y="730" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="39" y="730" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="54" y="730" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<text x="286" y="741" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">3 项保持意义为自由</text>
+<text x="286" y="759" font-size="14" text-anchor="start" fill="#57534e">如第七章所意图</text>
+<text x="24" y="786" font-size="12.5" text-anchor="start" fill="#57534e">指明的距离说的是一项声明为何不被读作文法之律的情形；根之边的记录并不表明有距离就是缺口或失败。伦理的两个前提，</text>
+<text x="24" y="802" font-size="12.5" text-anchor="start" fill="#57534e">定范围的延续条件与定次序的 C，不在其中：二者都不在根之边上。</text>
+<text x="24" y="822" font-size="12.5" text-anchor="start" fill="#57534e">每项声明的地位见根之边的记录（one-root-to-its-edge）：42 项有文字的依据，在其数据中，其余 75 项是规则所给的</text>
+<text x="24" y="838" font-size="12.5" text-anchor="start" fill="#57534e">标签；凡其律中列有某项声明的记录，其页面印出该声明的地位，附其依据或规则的理由。08 §7 对“依于数量”与“为其模</text>
+<text x="24" y="854" font-size="12.5" text-anchor="start" fill="#57534e">型之律”两类未再加说明。根之边、推导而得、指明的距离这几个词，见 GLOSSARY.zh.md。</text>
+<text x="24" y="874" font-size="12.5" text-anchor="start" fill="#57534e">图中文字为 AI 所译，义以英文版为准。由 tools/research/spine.py 依 shared-laws.json 与 spine.json 画出。</text>
 </svg>
