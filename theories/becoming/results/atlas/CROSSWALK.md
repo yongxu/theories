@@ -6,7 +6,7 @@
 
 ![How the earlier folders and the domains of thought meet the live account](connections.svg)
 
-*Drawn by connection_map.py from the claims below: each thread joins a folder or domain to the part of the account its claims are read against, coloured by relation, and every thread is an AI reading, no person’s. To explore the same data, open [the connection map](map.html) from a clone; GitHub shows it only as source.*
+*Drawn by connection_map.py from the crosswalk’s claims, on the pages its table links: each thread joins a folder or domain to the part of the account its claims are read against, coloured by relation, and every thread is an AI reading, no person’s. To explore the same data, open [the connection map](map.html) from a clone; GitHub shows it only as source.*
 
 Each earlier theory folder and each domain of thought: what it claimed in its own terms, and what became of that in the live account. The evidence layer, not for reading through. It creates no result, and every entry is an AI reading with no person's behind it. A shared word is not a correspondence, structural agreement is not agreement in meaning, and no tradition is spoken for. Not carried is an outcome, not a defect. Where a source is not stored here, what is said of it comes from the AI's knowledge and has not been checked against a text.
 
