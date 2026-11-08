@@ -287,11 +287,12 @@ class OpenQuestionsHeadTests(unittest.TestCase):
 
     def test_the_page_opens_with_the_crux_and_the_warrant_in_their_homes_words(self):
         page = self.views()['OPEN-QUESTIONS.md']
-        self.assertLess(page.index('## The crux and the warrant of C'), page.index('## Open targets'))
+        # WB, 9 November 2026: the heading names how scope and order form; no warrant from outside is sought
+        self.assertLess(page.index('## The crux, and how scope and order form'), page.index('## Open targets'))
         for key in navigation.OPEN_LEAD:
             self.assertIn(navigation.OPEN_LEAD[key][1][1:].rstrip('.'), page)
         self.assertIn('the continuation condition for scope and C for order', page)
-        self.assertIn('Neither is asserted.', page)
+        self.assertIn("Neither is asserted, and neither is the account's own", page)
 
     def test_the_repository_homes_still_say_the_lead(self):
         self.assertEqual(navigation.open_lead_errors(), [])

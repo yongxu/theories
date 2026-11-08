@@ -25,7 +25,7 @@
 - No axiom. A finite listing; two-valued admission; an order a relation on courses, not assumed complete or transitive; each standpoint's marking supplied, read as each law states (where a law uses one half of a reading, only that half).
 - Self-concern (Weighting.IncreasingInOwn) and the condition, on the root («续无外») or held de se (Unrestricted of the own closure), are hypotheses: neither is asserted, and the condition varies with the net, the class and the direction.
 - For the ranking on a web: admission decided by a supplied two-valued reading, what both level paths admit listed as (step, formation) items, every claim counted as living, each item marked by the marking of its formation.
-- The ethics rests on two premises with two roles: the continuation condition for scope and C (Comparison) for order. A ranking of courses still needs C or a premise in its place; this result locates where self-concern gives what C asks, one way: between two listed level paths, courses whose admissions end, where the de se condition holds and admission is decided.
+- The ranking results rest on two readings with two roles: the continuation condition for scope and C (Comparison) for order. Whoever ranks courses still holds C or another order; this result locates where self-concern gives what C asks, one way: between two listed level paths, courses whose admissions end, where the de se condition holds and admission is decided.
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
@@ -34,7 +34,7 @@
 - The converse, that C on level paths makes an order increasing in admission on a listing: a course on a listing need not be what any level path admits.
 - That self-concern fails to rank an extension on a web where the condition fails: that half is proved on listings only.
 - Any property of reach: the joins to the root are near-definitional, and locate where the two coincide.
-- That the condition holds, that self-concern is warranted, or that C is derived: the condition and C stay the ethics' premises and self-concern a hypothesis; C's warrant is open.
+- That the condition holds, that self-concern is warranted, or that C is derived: the condition and C stay the ethics' premises and self-concern a hypothesis; C is a reading the account does not assert.
 
 **Standard boundaries:** States how significance relates to structure, for any significance or under the continuation condition (Unrestricted: the continuation of anything has significance); it asserts no significance and does not assert the condition. · Uses decidability of the named determinations, a logical commitment written as a hypothesis. · A conditional law does not make its antecedent universal; a theorem's premise is not thereby necessary for every achievement. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision.
 
@@ -89,6 +89,7 @@ Aliases: `self-concern gives what C asks between listed level paths, one way`, `
 
 - 1 November 2026, board item DU (study section 489): added. Self-concern joined to the condition on the root and held de se, and one way to C between listed level paths, from Becoming.PremiseWitnesses; the vacuous form on every level path replaced at the third look by the pairwise one, its vacuity proved; every finding of the leaf's reviews taken.
 - 7 November 2026, board item LM1: a reader of LM found the law on the nets named no center, and that this said C orders alone. The law now says the endless line coincides along the net from its first birth, every later member failing the condition, and descent that ends along the converse from its last occurrence, as the Lean states; a ranking of courses needs C or a premise in its place (07 §4.4). No proof changed.
+- 9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.
 
 </details>
 

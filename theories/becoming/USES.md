@@ -4,7 +4,7 @@
 
 [中文](USES.zh.md) · [One page](ONE-PAGE.md) · [Worked examples](USES-EXAMPLES.md) · [The overview](THE-THEORY-OF-BECOMING.md) · [The tests](../../TESTS.md) · [Glossary](../../GLOSSARY.md)
 
-*Twenty-two to twenty-nine minutes to read, the table eleven to fourteen of them; the worked examples, on their own page, fifty to sixty-five more.*
+*Twenty-two to twenty-nine minutes to read, the table eleven to fourteen of them; the worked examples, on their own page, fifty-one to sixty-six more.*
 
 *AI-written from the homes it links, 8 November 2026; each restatement checked against its home by AI readers; no person's review of it is recorded. Where it and a home differ, the home governs.*
 

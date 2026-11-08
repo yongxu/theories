@@ -32,7 +32,7 @@
 - How groups form, and assortment changing over generations or with the share: they enter as given at the step.
 - The verdict through the spread among groups for groups of unequal size, which holds only where what is shared is divided among the members; graded capacities to shape, and returns with synergy.
 - That a shared part given to those near the shapers leaves the step's direction: through assortment it becomes a return to them. Witness: `Becoming.RuleShaping.Assorting.either_verdict`.
-- That shaping is better where it is selected: no evaluation enters, and ranking courses needs C or a premise in its place.
+- That shaping is better where it is selected: no evaluation enters, and a ranking of courses holds C or another order.
 - **Counterexample:** A cost above what comes back alone need not leave shaping unselected: with a = s = q = 1 and a cost of two, the shapers together are selected for and apart against (Assorting.either_verdict). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean)
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
@@ -88,6 +88,7 @@ Aliases: `The capacity to shape the rule, selected among groups`, `塑规之能�
 - 4 November 2026, board item US (study section 506): shaping in groups of any sizes stated (grouped_rises_iff_sized), the case of returns kept in groups of any sizes, with a witness either way at unequal sizes (Sized.either_verdict); the equal-size limit narrowed to the spread form.
 - 6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.
 - 7 November 2026, board item LM1: this said ranking needs C, where a ranking of courses needs C or a premise in its place (07 §4); corrected. No law, premise or proof changed.
+- 9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.
 
 </details>
 

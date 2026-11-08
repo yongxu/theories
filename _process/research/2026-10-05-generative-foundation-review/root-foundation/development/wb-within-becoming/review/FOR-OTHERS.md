@@ -11,6 +11,7 @@
 - **A88**: USES' "Six conditions for enough of the situation" presents six diagnostics from different models as a package of necessary conditions. They are six questions these models raise.
 - **A82**: the glossary's "lock" says a configuration in which the course stays. A locked course can change share while the unread loss grows; what stays is the rule's favouring.
 - **A4**: T1's "many renewal cycles" (02:278) has no quantified horizon.
+- **The one page's Chinese lead** (ONE-PAGE.zh 9, on main too): "其余一切只经过 AI 的复审，迄今无人审查" says no one has reviewed it. The English says the person who directs the work has read its important parts and no independent human review is recorded yet; the Chinese should say the same.
 
 ## For Ren (goal wording, prepared and listed under decisions pending him)
 

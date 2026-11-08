@@ -76,7 +76,7 @@
 - That a move above n changes a rule: the tower's law locates moves that can change a rule from height n up, not a change.
 - A change of the law of change with no fixed scheme, or a space of rules not given with the carrier: the tower's scheme is fixed, as the law of any stated process is.
 - Whether the actual unfolding is a course of a process statable in advance; the possible that cannot be prestated is outside.
-- That growth relative to what is held is better or is the direction of 生生: ranking needs C or a premise in its place, and the reading of 生生不息 here is an AI reading.
+- That growth relative to what is held is better or is the direction of 生生: a ranking holds C or another order, and the reading of 生生不息 here is an AI reading.
 - A result no neighbouring field states: the held law restates open-ended novelty's innovation, and the tower law the finite degree of introspection of reflective towers.
 - **Counterexample:** The rule changes at every step and every formation is possible everywhere, yet the possible with the rule held does not keep widening (Oscillating.converse_fails). Every moment is 全生成 under the rule held, so 全生成 does not give keeping widening (Oscillating.generation_without_widening). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldPossible.lean)
 - **Counterexample:** With every rule changed at once, 2 is possible from all rules at 1 but not with the rules from any height up held (Synchronous.tower_law_fails). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldPossible.lean)
@@ -164,6 +164,7 @@ Aliases: `Where the possible grows`, `可能者于何处增长`, `the held possi
 - 29 October 2026, board item GW (study section 448): the held possible read on the map: 全生成 at (the one, what is held) exactly where a line under the part begins after every moment, so wherever the held possible keeps widening with holding decided; the witnesses read so. A law added; statement and next step unchanged.
 - 30 October 2026: wording only, for the twenty-first review's item 13 (生生 in one sense): the grammar's «生生» and the theorem «生生不息» marked in the Chinese of laws 13 and 24 and of the dependency detail listing the grammar's names, as the English writes them; nothing the record states changed.
 - 7 November 2026, board item LM1: this said ranking needs C, where a ranking of courses needs C or a premise in its place (07 §4); corrected. No law, premise or proof changed.
+- 9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.
 
 </details>
 
