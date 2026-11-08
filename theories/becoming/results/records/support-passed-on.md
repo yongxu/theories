@@ -23,7 +23,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- A direction: a chain of support is not yet 生生, which asks widening as well.
+- A direction: relating this chain of support to 生生, the continuation of life, requires a further reading; widening is not its defining condition.
 - A witness of the chain: the conclusion is a double negation.
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
@@ -78,6 +78,7 @@ Aliases: `Support passed on by later gainers`, `支持由后得者传下`, `Beco
 
 - 22 October 2026: added (ZG), for the gap the ZH reading raised; study section 342.
 - 26 October 2026, board item UE7 (study section 419): the uniform form added as a second law (Flow.gain_given_by_recent_gainer_at, Flow.gain_given_by_recent_gainer) and the statement restated with it; support_passes_on is re-proved from it, its statement unchanged (board rule 9); related to what-keeping-widening-needs.
+- 9 November 2026, board item WB (the readers' fifth round): the does-not-show line on a direction re-said, since 生生 is read as the continuation of life and widening is not its defining condition; no change to the claim, its hypotheses or its Lean (Becoming/Admission.lean keeps its comment until the next Lean landing).
 
 </details>
 

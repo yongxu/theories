@@ -110,7 +110,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Transitions.** None.
 - **Tests.** None.
 - **Open.**
-  - A chain of support is not yet 生生, which asks widening as well. ([support-passed-on.md#does-not-show--未表明](../../records/support-passed-on.md#does-not-show--未表明))
+  - Relating this chain of support to 生生, the continuation of life, requires a further reading; widening is not its defining condition. ([support-passed-on.md#does-not-show--未表明](../../records/support-passed-on.md#does-not-show--未表明))
   - A witness of the chain: the conclusion is a double negation. ([support-passed-on.md#does-not-show--未表明](../../records/support-passed-on.md#does-not-show--未表明))
   - The witnesses are minimal: their activity and requirements are stipulated, and each is shown consistent with balance, support and dependence, or missing one premise. ([support-from-the-supported.md#does-not-show--未表明](../../records/support-from-the-supported.md#does-not-show--未表明))
   - “The whole” is all the formations of a web, the represented whole. ([support-from-the-supported.md#does-not-show--未表明](../../records/support-from-the-supported.md#does-not-show--未表明))
