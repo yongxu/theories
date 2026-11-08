@@ -4,7 +4,7 @@
 
 [中文](USES-EXAMPLES.zh.md) · [What it is for, and how far](USES.md) · [One page](ONE-PAGE.md) · [The tests](../../TESTS.md) · [Glossary](../../GLOSSARY.md)
 
-*Fifty-five to seventy-one minutes to read, one example at a time; [the table, field by field](USES.md#field-by-field), comes first.*
+*Fifty-six to seventy-two minutes to read, one example at a time; [the table, field by field](USES.md#field-by-field), comes first.*
 
 *AI-written from the homes it links, 8 November 2026; each restatement checked against its home by AI readers; no person's review of it is recorded. Where it and a home differ, the home governs. Not advice, and not an application to any actual system: see [what the uses page does not do](USES.md#what-this-page-does-not-do).*
 

@@ -11,7 +11,7 @@
   "reviewed_at_utc": "2026-10-25T15:28:33+00:00",
   "statement": {
     "en": "Eventual widening is first-order widening on late tails: with widening a strict partial order, never reversing it, reading only tails, dense both ways and insulable against every record. Widening sees neither keeping widening nor what carries a range. Near-definitional; 生生's second order stays open.",
-    "zh": "最终扩大是晚期尾段上的一阶扩大：与扩大合为严格偏序，从不逆转扩大，只读尾段，其判定两向皆稠密、可对一切记录隔绝。扩大既看不见持续扩大，也看不见承载一个范围者。近乎定义；生生的二阶方向仍未定。"
+    "zh": "最终扩大是晚期尾段上的一阶扩大：与扩大合为严格偏序，从不逆转扩大，只读尾段，其判定两向皆稠密、可对一切记录隔绝。扩大既看不见持续扩大，也看不见承载一个范围者。近乎定义；扩大的二阶方向仍未定。"
   },
   "laws": [
     {
@@ -243,8 +243,8 @@
   ],
   "does_not_show": [
     {
-      "en": "The second-order direction of 生生, a range whose widening keeps widening compared with one merely wider now: eventual widening needs no growth (a steady course eventually widens one that collapses) and is silent on a lag. It stays open, and the study names what a next attempt needs.",
-      "zh": "生生的二阶方向，即扩大持续扩大的范围与仅当下更宽者之比较：最终扩大无需增长（稳定的进程最终扩大崩溃者），且对滞后不置一词。它仍未定，研究列出下一次尝试所需。",
+      "en": "The second-order direction of widening, a range whose widening keeps widening compared with one merely wider now: eventual widening needs no growth (a steady course eventually widens one that collapses) and is silent on a lag. It stays open, and the study names what a next attempt needs.",
+      "zh": "扩大的二阶方向，即扩大持续扩大的范围与仅当下更宽者之比较：最终扩大无需增长（稳定的进程最终扩大崩溃者），且对滞后不置一词。它仍未定，研究列出下一次尝试所需。",
       "kind": "scope"
     },
     {
@@ -697,6 +697,10 @@
     {
       "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
       "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
+    },
+    {
+      "en": "9 November 2026, board item WB: 'the second-order direction of 生生' re-said as the second-order direction of widening, since 生生 is read as the continuation of life and widening is not its measure; no change to the claim, its hypotheses or its Lean.",
+      "zh": "2026 年 11 月 9 日，工作板条目 WB：「生生的二阶方向」改说为扩大的二阶方向，因生生读作生命之延续，扩大不是它的尺度；主张、假设与 Lean 皆不变。"
     }
   ]
 }

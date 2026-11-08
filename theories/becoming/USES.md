@@ -4,7 +4,7 @@
 
 [中文](USES.zh.md) · [One page](ONE-PAGE.md) · [Worked examples](USES-EXAMPLES.md) · [The overview](THE-THEORY-OF-BECOMING.md) · [The tests](../../TESTS.md) · [Glossary](../../GLOSSARY.md)
 
-*Thirty-two to forty-two minutes to read, the table eleven to fourteen of them. The ten-minute part: **In brief**, the line on standings, your field's row, the opening of **What each field already has** and your field's line under it (eight to ten minutes for the longest). For an hour: this page, then [the audit of a language-model judge](USES-EXAMPLES.md#auditing-a-language-model-judge) and [its sheet](USES-EXAMPLES.md#the-judge-audit-as-a-sheet), or one worked example of your own field (forty-five to fifty-eight minutes at the most). The worked examples, on their own page, fifty-five to seventy-one more.*
+*Thirty-two to forty-two minutes to read, the table eleven to fourteen of them. The ten-minute part: **In brief**, the line on standings, your field's row, the opening of **What each field already has** and your field's line under it (eight to ten minutes for the longest). For an hour: this page, then [the audit of a language-model judge](USES-EXAMPLES.md#auditing-a-language-model-judge) and [its sheet](USES-EXAMPLES.md#the-judge-audit-as-a-sheet), or one worked example of your own field (forty-five to fifty-eight minutes at the most). The worked examples, on their own page, fifty-six to seventy-two more.*
 
 *AI-written from the homes it links, 8 November 2026; each restatement checked against its home by AI readers; no person's review of it is recorded. Where it and a home differ, the home governs.*
 
