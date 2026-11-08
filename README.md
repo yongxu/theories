@@ -12,7 +12,7 @@
 
 **One case.** In [a frozen test](experiments/direction-installation/README.md), three fishers, language models told what to do, share a lake whose bed of mussels gives them nothing and dies the first month fewer than 70 tons are left. Told nothing of the bed, they kept it in no season, under each instruction tried; told of it and of the scope, with talk, one model of two kept it in 8 of 10 seasons; the test's own frozen predictions mostly failed ([the tests](TESTS.md)).
 
-**What it is for.** Its centre, a reading and not a theorem: a selection can succeed while what it cannot read is lost, and no law says whether that loss counts. It asks of a reward, a judge, a market or a vote what it reads, what lies beyond, and where its rule can lock ([what it is for, and how far](theories/becoming/USES.md)); none of this is yet tested on a deployed system.
+**What it is for.** To audit a selection, whether a reward, a judge, a market or a vote: what it reads (takes in or needs), what lies beyond that, and where its rule can lock on what it already chose ([what it is for, and how far](theories/becoming/USES.md)); no test designed from it has yet run on a deployed pipeline. Its centre, a reading and not a theorem: a selection can succeed while what it cannot read is lost, and no law says whether that loss counts.
 
 **Its ethics** rests on [two unasserted premises](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order), their warrant open: the continuation condition (from every standpoint, for anything, its continuation into the future has significance) fixes scope, whose losses count, ranking nothing; C (widening what can form is better) gives order. [Thesis T8](theories/becoming/chapters/07-SIGNIFICANCE.md#theses) argues this ethics as life's way, claiming no verdict binding every possible mind.
 
@@ -22,7 +22,7 @@
 
 ![The eight chapters around one grammar](theories/becoming/results/spine.svg)
 
-*Of 117 central declarations, 11 are derived from the grammar, 1 under a hypothesis, 6 counting and 99 at a named distance ([08 §7](theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge)); [what the picture shows and does not show](theories/becoming/results/THEORY-GRAPH.md#the-spine); [how the account grew](theories/LINEAGE.md).*
+*11 of 117 central declarations are derived from the grammar ([08 §7](theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge) gives the other standings); [what the picture shows and does not show](theories/becoming/results/THEORY-GRAPH.md#the-spine); [how the account grew](theories/LINEAGE.md).*
 
 ---
 

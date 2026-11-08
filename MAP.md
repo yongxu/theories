@@ -25,7 +25,7 @@ Pages for a reader who arrives with one question or field hang off this path and
 
 Reviewers start with [the review packet](theories/becoming/review/README.md) ([中文](theories/becoming/review/README.zh.md)): a dossier for scholars of classical Chinese texts, one for scholars of Buddhist thought, one for logicians, one for philosophers on the ethics, one for researchers in AI alignment, one for scientists, and a blind re-coding of a sample of the corpus classification.
 
-The [README](README.md) opens with a statement of the whole in the first person. [Goals](GOALS.md) and the [directive register](_process/RESEARCH-DIRECTIVES.md) give scope and the directions behind it; the [glossary](GLOSSARY.md) gives each word its one sense.
+The [README](README.md) opens with [a statement of the whole in the first person](theories/becoming/OPENING.md). [Goals](GOALS.md) and the [directive register](_process/RESEARCH-DIRECTIVES.md) give scope and the directions behind it; the [glossary](GLOSSARY.md) gives each word its one sense.
 
 ## How it got here
 

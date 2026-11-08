@@ -485,6 +485,12 @@ def stub_lines(path, kind, goal_records):
         return lines + ['']
     if path == THEORY + '/README.md':
         lines += ['The canonical entry is ' + link(CANONICAL, path, 'The Theory of Becoming') + '; the opening, in its author\'s first person and revised in place since 1 November 2026 (each revised passage named under its heading), is ' + link(THEORY + '/OPENING.md', path, 'OPENING.md') + '.', '']
+    if path == 'RESEARCH.md':  # since RW, the home of the directions under way, which README names
+        return lines + ['The directions under way, each with its summary, its next step and the results it has established, follow. '
+                        'The register of results is ' + link('RESULTS.md', path, 'RESULTS.md') + '; scopes and their authorization are in '
+                        + link('GOALS.md', path, 'GOALS.md') + ', open questions in ' + link('OPEN-QUESTIONS.md', path, 'OPEN-QUESTIONS.md')
+                        + ' and connections between results in ' + link('DEPENDENCIES.md', path, 'DEPENDENCIES.md') + '.', '',
+                        H('##', 'Registered results', '已登记成果 / Registered results'), '', 'Now in ' + link('RESULTS.md#registered-results', path, 'the register') + '.', '']
     lines += ['This page earlier repeated the register of results. It is kept so that links to it resolve. The single register is '
               + link('RESULTS.md', path, 'RESULTS.md') + '; directions and authorized scopes are in ' + link('GOALS.md', path, 'GOALS.md')
               + ', open questions in ' + link('OPEN-QUESTIONS.md', path, 'OPEN-QUESTIONS.md') + ' and connections between results in '

@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [One page](theories/becoming/ONE-PAGE.md) · [一页（中文）](theories/becoming/ONE-PAGE.zh.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Uses](theories/becoming/USES.md) · [Tests](TESTS.md) · [Graph](theories/becoming/results/THEORY-GRAPH.md) · [How it grew](theories/LINEAGE.md) · [Results](RESULTS.md) · [Glossary](GLOSSARY.md) · [Reviewers](theories/becoming/review/README.md) · [Open questions](OPEN-QUESTIONS.md)
 
-This page earlier repeated the register of results. It is kept so that links to it resolve. The single register is [RESULTS.md](RESULTS.md); directions and authorized scopes are in [GOALS.md](GOALS.md), open questions in [OPEN-QUESTIONS.md](OPEN-QUESTIONS.md) and connections between results in [DEPENDENCIES.md](DEPENDENCIES.md).
+The directions under way, each with its summary, its next step and the results it has established, follow. The register of results is [RESULTS.md](RESULTS.md); scopes and their authorization are in [GOALS.md](GOALS.md), open questions in [OPEN-QUESTIONS.md](OPEN-QUESTIONS.md) and connections between results in [DEPENDENCIES.md](DEPENDENCIES.md).
 
 <a id="已登记成果--registered-results"></a>
 ## Registered results

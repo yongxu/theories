@@ -199,6 +199,25 @@ class SiteTests(unittest.TestCase):
         self.build(nav=SITE['nav'] + [['connections.html', 'Map']])
         self.assertNotIn('connections.html', self.page('a/ONE.html'))
 
+    def test_editions_pictures_and_titles(self):
+        (self.tmp / 'a/ONE.zh.md').write_text('# 一页\n\n中文的一页。\n')
+        (self.tmp / 'a/OPENING.md').write_text('## Truth exists\n\n![The picture](pic.svg)\n')
+        (self.tmp / 'a/pic.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg"></svg>')
+        self.files |= {'a/ONE.zh.md', 'a/pic.svg'}
+        self.build(pages=SITE['pages'] + ['a/ONE.zh.md'], assets=['a/pic.svg'],
+                   nav=[['index.html', 'Home'], ['a/ONE.zh.md', '中文']], nav_zh=[['index.html', '首页'], ['a/ONE.md', 'English']])
+        one, zh, opening = self.page('a/ONE.html'), self.page('a/ONE.zh.html'), self.page('a/OPENING.html')
+        self.assertIn('<a href="ONE.zh.html"', one)  # the language link goes to this page's own edition
+        self.assertIn('lang="zh-Hans"', zh)
+        self.assertIn('首页', zh)
+        self.assertIn('<a href="ONE.html"', zh)
+        self.assertIn('<a class="picture" href="pic.svg"', opening)
+        self.assertIn('<title>Truth exists · T</title>', opening)  # a page with no h1 takes its first heading
+
+    def test_a_card_times_its_part(self):
+        with self.assertRaises(AssertionError):
+            self.build(ways_in=[{'path': 'a/ONE.md', 'label': 'One page', 'text': 'x', 'time_until': '## No such part'}])
+
     def test_a_key_in_a_page_fails_the_build(self):
         (self.tmp / 'a/ONE.md').write_text(ONE + '\nsk-ant-' + 'a' * 30 + '\n')
         with self.assertRaisesRegex(site.SiteError, 'what the push screen reads as a key'):
@@ -223,19 +242,20 @@ class RepositoryConfigTests(unittest.TestCase):
         cfg = site.site_config()
         private = site.private_pattern()
         files = site.tracked_files()
-        import re
-        for p in cfg['pages'] + cfg.get('assets', []):
-            if '*' in p:  # a pattern names at least one tracked file, within one folder
-                pattern = re.compile(re.escape(p).replace(r'\*', '[^/]*'))
-                self.assertTrue(any(pattern.fullmatch(f) for f in files), 'site.pages names a pattern matching nothing: ' + p)
-                continue
+        pages = site.expand_pages(cfg['pages'], files)
+        for entry in cfg['pages']:
+            self.assertTrue(site.expand_pages([entry], files), 'site.pages names nothing tracked: ' + entry)
+        for p in pages + cfg.get('assets', []):
             self.assertTrue(p in files, 'site.pages names an untracked file: ' + p)
             self.assertFalse(site.refused(p, private), p)
-        for target, _ in cfg['nav']:
-            self.assertTrue(target in site.SPECIAL or target in cfg['pages'], target)
+        for target, _ in cfg['nav'] + cfg.get('nav_zh', []):
+            self.assertTrue(target in site.SPECIAL or target in pages, target)
         for w in cfg['ways_in']:
             self.assertTrue(w['path'] in site.SPECIAL or (ROOT / w['path'].split('#')[0]).is_file(), w['path'])
 
+    def test_patterns_stay_in_one_folder(self):
+        files = {'a/x.md', 'a/b/y.md', 'a/README.md'}
+        self.assertEqual(site.expand_pages(['a/*.md'], files), ['a/README.md', 'a/x.md'])
 
 if __name__ == '__main__':
     unittest.main()

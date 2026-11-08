@@ -676,11 +676,11 @@ def edition(page_path, pages):
     return other if other in pages else None
 
 
-def nav(cfg, page_path, pages):
-    """The site's navigation line: on a Chinese page its Chinese line, and the language link goes to this page's own other
-    edition where it has one."""
+def nav(cfg, page_path, pages, lang='en'):
+    """The site's navigation line: on a page in Chinese its Chinese line, and the language link goes to this page's own
+    other edition where it has one."""
     items = []
-    zh = page_path.endswith('.zh.md')
+    zh = lang == 'zh' or page_path.endswith('.zh.md')
     other = edition(page_path, pages)
     for target, label in cfg.get('nav_zh' if zh and cfg.get('nav_zh') else 'nav', []):
         if label in ('中文', 'English') and other:
@@ -728,20 +728,25 @@ def home_body(cfg, links, recs, root):
     return '\n'.join(parts), page.lang
 
 
+def expand_pages(entries, files):
+    """The allow-list as pages: an entry with * names every tracked file it matches within one folder, still an allow-list."""
+    pages = []
+    for entry in entries:
+        if '*' in entry:
+            pattern = re.compile(re.escape(entry).replace(r'\*', '[^/]*'))
+            pages += sorted(f for f in files if pattern.fullmatch(f))
+        else:
+            pages.append(entry)
+    return list(dict.fromkeys(pages))
+
+
 def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path=CONFIG, files=None):
     cfg = site_config(config_path)
     private = private_pattern(root / 'tools/research/push_screen.sh')
     secrets = secret_pattern(root / 'tools/research/push_screen.sh')
     files = tracked_files(root) if files is None else files
     dirs = tracked_dirs(files)
-    pages = []
-    for entry in cfg['pages']:  # an entry with * names every tracked file it matches within one folder: still an allow-list
-        if '*' in entry:
-            pattern = re.compile(re.escape(entry).replace(r'\*', '[^/]*'))
-            pages += sorted(f for f in files if pattern.fullmatch(f))
-        else:
-            pages.append(entry)
-    pages = list(dict.fromkeys(pages))
+    pages = expand_pages(cfg['pages'], files)
     if not pages:
         raise SiteError('site.pages names no page')
     assets = set(cfg.get('assets', []))
@@ -792,7 +797,7 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
         dest = out / out_path(p)
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(template(p, page.title or posixpath.basename(p), page.html, page.lang, cfg, commit, date,
-                                 nav(cfg, p, set(pages)), links.github(p), dirty=dirty))
+                                 nav(cfg, p, set(pages), page.lang), links.github(p), dirty=dirty))
         written.append(dest)
     (out / 'index.html').write_text(template('index.html', cfg.get('title', ''), home, home_lang, cfg, commit, date,
                                              nav(cfg, 'index.html', set(pages)), links.github('README.md'), home=True, dirty=dirty))
