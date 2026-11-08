@@ -55,6 +55,8 @@ PAGE = ATLAS + '/ATLAS.md'
 FAMILY_PAGES = ATLAS + '/families'
 CROSSWALK = ATLAS + '/CROSSWALK.md'
 CROSSWALK_PAGES = ATLAS + '/crosswalk'
+# The map's overview as a picture, drawn by connection_map.py, which the crosswalk's index shows first.
+OVERVIEW = ATLAS + '/connections.svg'
 # GitHub stops showing a Markdown file somewhere between 1,035,845 bytes (ATLAS.md, shown on 8 November 2026) and
 # 3,742,459 (CROSSWALK.md, not shown); no page written here exceeds 1 MiB. lean_catalogue.PAGE_LIMIT is the same bound.
 PAGE_LIMIT = 1_048_576
@@ -842,7 +844,12 @@ def crosswalk_page(atlas: dict) -> str:
     # The single page's headings: its title, then each group's; and each entry's id, now on its group's page.
     old = dict(zip((g['id'] for g in groups), _headings(['The crosswalk'] + [g['title']['en'] for g in groups])[1:]))
     taken = set(_headings(['The crosswalk']))
-    out = [GENERATED, '', '# The crosswalk', '', _navigation(CROSSWALK), '', *_crosswalk_lead(atlas, ATLAS),
+    out = [GENERATED, '', '# The crosswalk', '', _navigation(CROSSWALK), '',
+           f'![How the earlier folders and the domains of thought meet the live account]({_href(OVERVIEW)})', '',
+           '*Drawn by connection_map.py from the crosswalk’s claims, on the pages its table links: each thread joins a folder or domain to the part of the account its '
+           'claims are read against, coloured by relation, and every thread is an AI reading, no person’s. To explore the same data, '
+           f'open [the connection map]({_href(ATLAS + "/map.html")}) from a clone; GitHub shows it only as source.*', '',
+           *_crosswalk_lead(atlas, ATLAS),
            f'{len(entries)} entries in {len(groups)} groups, each on its own page:', '',
            '| Group | Entries | ' + ' | '.join(carried) + ' | ' + ' | '.join(relations) + ' | ' + ' | '.join(f'agreement of {a}' for a in agreements) + ' |',
            '|---|---:|' + '---:|' * (len(carried) + len(relations) + len(agreements))]
