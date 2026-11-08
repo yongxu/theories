@@ -533,7 +533,7 @@ def start_here_lines(records, path, homes):
              'Each opens with the one page\'s plain line, then its record\'s statement and its standing in its homes\' words, and holds under the hypotheses its record states. An automated review against the literature it knew, not exhaustive, finds '
              + link(CHAPTERS + '/08-METHOD.md#known-results', path, 'none of the central results new mathematics') + '.', '']
     lines += [start_item(r, path, homes) for r in chosen]
-    return lines + ['', 'The ethics rests on two premises it does not assert: ' + link(CHAPTERS + '/07-SIGNIFICANCE.md#scope-and-order', path, 'the continuation condition fixes scope, and C gives order') + '.', '']
+    return lines + ['', 'No law here evaluates; where a result ranks courses, it names the two readings it ranks under, neither asserted: ' + link(CHAPTERS + '/07-SIGNIFICANCE.md#scope-and-order', path, 'the continuation condition fixes scope, and C gives order') + '.', '']
 
 
 def law_family_table(records, base):
@@ -624,14 +624,14 @@ WHERE_TO_LOOK = [
 CH07, CH08 = CHAPTERS + '/07-SIGNIFICANCE.md', CHAPTERS + '/08-METHOD.md'
 # OPEN-QUESTIONS opens with these, each in its home's words; a sentence its home no longer holds is an error at render.
 OPEN_LEAD = {
-    'premises': (CH07, 'The ethics rests on its two premises with two roles, the continuation condition for scope and C for order.'),
-    'unasserted': (CH07, 'Neither is asserted.'),
+    'premises': (CH07, 'The ranking results rest on their two readings, the continuation condition for scope and C for order, each named where used.'),
+    'unasserted': (CH07, 'Neither is asserted, and neither is the account\'s own: each is an order or scope some formations hold, and the results say what follows where it is held.'),
     'crux': (CH07, 'whether all of one\'s effects are one\'s own, in the sense of whose losses count, argued for and against and not settled.'),
     'crux-laws': (CH07, 'The laws do not answer it.'),
     'crux-standing': (CH07, 'An AI reading throughout: argued, not proved.'),
-    'c-question': (CH08, 'Is widening better (C, which orders), and does significance stop at no boundary (the step of invariance, which fixes scope)?'),
-    'c-definition': (CH08, 'C\'s no-loss extension is widening by definition, so the definition carries no warrant'),
-    'c-open': (CH08, 'a reason for C, and whether a stronger practical warrant exists, with no warrant binding every possible mind claimed (T8)'),
+    'c-question': (CH08, 'Which formations hold C, which count past their own line (the step of invariance, which fixes scope), and how such orders form, spread, lock and fare; no warrant from outside is sought.'),
+    'c-definition': (CH08, 'C\'s no-loss extension is widening by definition, so the definition carries no "better"'),
+    'c-open': (CH08, 'how C-like orders form; whether a universal practical warrant exists is kept as a question the account does not pursue (T8)'),
     'readings': (CH08, 'The readings stand as one account; where two did not fit, the account decided between them'),
 }
 OPEN_KEPT = '_process/OPEN-QUESTIONS-KEPT.md'  # what keeps OPEN-QUESTIONS.md, off the reader's page
@@ -661,11 +661,11 @@ def render_inputs():
 def open_lead_lines(path):
     """The opening of OPEN-QUESTIONS.md: what the ethics leaves most open, in its homes' words."""
     q = lambda key: OPEN_LEAD[key][1]
-    return ['## The crux and the warrant of C', '',
+    return ['## The crux, and how scope and order form', '',
             f'{q("premises")} {q("unasserted")} (' + link(CH07 + '#scope-and-order', path, 'chapter 7, section 4') + ')', '',
             '- **The crux** (' + link(CH07 + '#crux', path, 'chapter 7, section 4.7') + f'; {q("crux-standing")[0].lower() + q("crux-standing")[1:-1]}). "{q("crux")}" "{q("crux-laws")}"',
-            f'- **The warrant of C.** "{q("c-question")}" (' + link(CH08 + '#open-items-ranked', path, 'method, open item 12') + f') "{q("c-definition")}" ('
-            + link(CH08 + '#philosophical-warrant', path, 'method, philosophical warrant') + f'). Open: "{q("c-open")}" (' + link(CH08 + '#open-items-ranked', path, 'item 12') + ').', '']
+            f'- **How C and the scope form.** "{q("c-question")}" (' + link(CH08 + '#open-items-ranked', path, 'method, open item 12') + f') "{q("c-definition")}" ('
+            + link(CH08 + '#philosophical-warrant', path, 'method, philosophical questions') + f'). Open: "{q("c-open")}" (' + link(CH08 + '#open-items-ranked', path, 'item 12') + ').', '']
 
 
 def discovery_lines(path):
@@ -828,9 +828,9 @@ def render_views(records):
                           'The theory does not assert this condition; ' + link(CHAPTERS + '/07-SIGNIFICANCE.md#condition', path, 'chapter 7, section 3')
                           + ' states what follows from it. The condition gives the continuation of everything significance from every standpoint, so the results under it '
                           'are the case of a significance that covers everything; the rules of comparison are derived without it, and the condition adds none. '
-                          'The ethics rests on two premises with two roles: the condition fixes scope, whose losses count, and C, calling widening better, gives order, and a ranking of courses needs C or a premise in its place; '
+                          'The ranking results rest on two readings, neither asserted: the condition fixes scope, whose losses count, and C, calling widening better, gives order; whoever ranks courses holds C or another order; '
                           'C\'s no-loss extension on level paths is widening by definition. '
-                          'Open: the warrant of the condition, of C, and of the step of invariance from what one\'s own continuation needs to the continuation of anything.', '']
+                          'Open: how the condition, C and the step of invariance, from what one\'s own continuation needs to the continuation of anything, come to be held; no warrant from outside is sought.', '']
                 lines += result_block(first, path, '####')
                 if rest:
                     lines += ['Further results under the same condition and disclosed practical premises: '

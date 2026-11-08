@@ -78,7 +78,7 @@
         },
         "conditions": {
           "en": "The reading that better is widening, an open warrant.",
-          "zh": "“更好”即扩大的读法，其根据开放。"
+          "zh": "“更好”即扩大的读法，不求外来之根据。"
         },
         "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Direction.lean"
       }
@@ -527,6 +527,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the law on kept basic admissions states what the Lean proves with no decision, that the admission is not refuted at a chosen option (a double negation), under the premise that one move's outcome admits every basic admission any move's outcome admits; and G0 in a related detail reads living significance, the zh paraphrase of §3 no longer in quotation marks. The declarations are unchanged. The overview's 'stated axiomatic scope' names the premises: the continuation condition for scope, C for order and the practical commitments.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：关于所保持之基本接纳的定律陈述 Lean 不用判定所证者：在某个动作的结果接纳任何动作结果所接纳的每个基本接纳的前提下，该接纳在被选的选项上不被否证（双重否定）；一条相关说明中的 G0 改为生生之意义，§3 之意转述不再加引号。声明不变。概览的“明示的公理范围”改为写出前提：延续条件定范围，C 定次序，加上实践承诺。"
+    },
+    {
+      "en": "9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.",
+      "zh": "2026年11月9日，工作板条目 WB：据 Ren 11 月 8–9 日之言重述伦理之框架：两个前提称为排序之果所用之两种读法，排序为排序者所持，不求外来之根据；主张、假设与 Lean 皆不变。"
     }
   ],
   "text_versions": [

@@ -96,7 +96,7 @@
     },
     {
       "kind": "non-implication",
-      "en": "That either premise of the ethics is warranted: neither is entailed by statements of the dynamics (the condition given a standpoint and a formation, C given a frame with an extension), and each warrant is open.",
+      "en": "That anyone must hold either reading the ranking results use: neither is entailed by statements of the dynamics (the condition given a standpoint and a formation, C given a frame with an extension), and no warrant from outside is sought.",
       "zh": "伦理之二前提有其据：二者皆不为动力之陈述所蕴涵（条件于有立场与成形处，C 于框架有扩展处）；二者之据皆开放。"
     },
     {
@@ -381,6 +381,10 @@
     {
       "en": "7 November 2026, board item LM1: a reader of LM found this said C orders alone, where a ranking of courses needs C or a premise in its place (07 §4.4); corrected. No law, premise or proof changed.",
       "zh": "2026年11月7日，工作板条目 LM1：LM 之读者指出此处谓唯 C 定序，而对进程的排序需要 C 或一个代替它的前提（07 §4.4）；已更正。诸律、前提与证明皆不变。"
+    },
+    {
+      "en": "9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.",
+      "zh": "2026年11月9日，工作板条目 WB：据 Ren 11 月 8–9 日之言重述伦理之框架：两个前提称为排序之果所用之两种读法，排序为排序者所持，不求外来之根据；主张、假设与 Lean 皆不变。"
     }
   ],
   "boundary": {
@@ -879,7 +883,7 @@
         "premise": "Becoming.Unrestricted",
         "not_entailed": "Becoming.ReadsOnlyDynamics.not_entails",
         "basis": {
-          "en": "For anything, its continuation into the future has significance: the condition fixes scope, whose losses count, and its content beyond the self's presupposition, the step of invariance, extends that scope to losses that return to no one. Where there is a standpoint and a formation, no statement reading only the dynamics and holding of some dynamics entails it. Its warrant is open, and no warrant binding every possible mind is claimed (chapter 7: its §3 for the condition, T8 in its §8 for the warrant)."
+          "en": "For anything, its continuation into the future has significance: the condition fixes scope, whose losses count, and its content beyond the self's presupposition, the step of invariance, extends that scope to losses that return to no one. Where there is a standpoint and a formation, no statement reading only the dynamics and holding of some dynamics entails it. No warrant from outside is sought, and none binding every possible mind is claimed (chapter 7: its §3 for the condition, T8 in its §8 for the warrant)."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
       },
@@ -892,7 +896,7 @@
         "premise": "Becoming.Comparison",
         "not_entailed": "Becoming.ReadsNoOrder.not_entails",
         "basis": {
-          "en": "What ranks lies in C or a premise in its place: the condition by itself orders nothing. Where a frame has an extension, no statement reading no order and holding at some order entails C; this is immediate, since \"better\" is free. A reason for C is open apart from the condition."
+          "en": "What ranks is an order a reader holds, C or another: the condition by itself orders nothing. Where a frame has an extension, no statement reading no order and holding at some order entails C; this is immediate, since \"better\" is free. A reason for C is open apart from the condition."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-PREMISE-C.md"
       }

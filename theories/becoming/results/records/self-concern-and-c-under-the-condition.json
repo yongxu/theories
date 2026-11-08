@@ -72,8 +72,8 @@
       "zh": "就网上之排序：接纳由所予之二值读法判定，二层径所接纳者列为（步，构成）之项，每一主张计为活，每项以其构成之标记标之。"
     },
     {
-      "en": "The ethics rests on two premises with two roles: the continuation condition for scope and C (Comparison) for order. A ranking of courses still needs C or a premise in its place; this result locates where self-concern gives what C asks, one way: between two listed level paths, courses whose admissions end, where the de se condition holds and admission is decided.",
-      "zh": "伦理依二前提，各有其职：延续条件定范围，C（Comparison）定序。对进程的排序仍需要 C 或一个代替它的前提；此结果指出自关切单向给出 C 之所求之处：于自承之条件成立、接纳可判定之处，二所列且接纳有终之层径之间。"
+      "en": "The ranking results rest on two readings with two roles: the continuation condition for scope and C (Comparison) for order. Whoever ranks courses still holds C or another order; this result locates where self-concern gives what C asks, one way: between two listed level paths, courses whose admissions end, where the de se condition holds and admission is decided.",
+      "zh": "伦理依二前提，各有其职：延续条件定范围，C（Comparison）定序。凡对进程排序者，仍持 C 或别一种次序；此结果指出自关切单向给出 C 之所求之处：于自承之条件成立、接纳可判定之处，二所列且接纳有终之层径之间。"
     }
   ],
   "does_not_show": [
@@ -99,7 +99,7 @@
       "kind": "non-implication"
     },
     {
-      "en": "That the condition holds, that self-concern is warranted, or that C is derived: the condition and C stay the ethics' premises and self-concern a hypothesis; C's warrant is open.",
+      "en": "That the condition holds, that self-concern is warranted, or that C is derived: the condition and C stay the ethics' premises and self-concern a hypothesis; C is a reading the account does not assert.",
       "zh": "条件成立、自关切有据，或 C 被推出：条件与 C 仍为伦理之前提，自关切为假设；C 之依据仍开放。",
       "kind": "non-implication"
     }
@@ -276,6 +276,10 @@
     {
       "en": "7 November 2026, board item LM1: a reader of LM found the law on the nets named no center, and that this said C orders alone. The law now says the endless line coincides along the net from its first birth, every later member failing the condition, and descent that ends along the converse from its last occurrence, as the Lean states; a ranking of courses needs C or a premise in its place (07 §4.4). No proof changed.",
       "zh": "2026年11月7日，工作板条目 LM1：LM 之读者指出网上之律未言中心，且此处谓唯 C 定序。今言无尽之线沿网自其初生相合，每一后来之员不满足条件；有终之传承沿其逆自其末出现相合，如 Lean 所述；对进程的排序需要 C 或一个代替它的前提（07 §4.4）。证明不变。"
+    },
+    {
+      "en": "9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.",
+      "zh": "2026年11月9日，工作板条目 WB：据 Ren 11 月 8–9 日之言重述伦理之框架：两个前提称为排序之果所用之两种读法，排序为排序者所持，不求外来之根据；主张、假设与 Lean 皆不变。"
     }
   ]
 }

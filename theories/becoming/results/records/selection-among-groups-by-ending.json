@@ -98,8 +98,8 @@
       "kind": "scope"
     },
     {
-      "en": "How groups form, or that keeping a condition is better: ending is read in the counts; ranking goes through the comparison C or a premise in its place.",
-      "zh": "组如何形成，或维持条件更好：终止在计数中读出；排序经由比较 C 或代替它的前提。",
+      "en": "How groups form, or that keeping a condition is better: ending is read in the counts; a ranking holds the comparison C or another order.",
+      "zh": "组如何形成，或维持条件更好：终止在计数中读出；排序者持比较 C 或别一种次序。",
       "kind": "non-implication"
     }
   ],
@@ -343,6 +343,10 @@
     {
       "en": "7 November 2026, CX: this said ranking goes through the comparison C, where a ranking of courses needs C or a premise in its place (07 §4), the correction LM1 made in other records; corrected. No law, premise or proof changed.",
       "zh": "2026年11月7日，CX：此处谓排序经由比较 C，而对进程的排序需要 C 或代替它的前提（07 §4），即 LM1 在其他记录所作之更正；已更正。诸律、前提与证明皆不变。"
+    },
+    {
+      "en": "9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.",
+      "zh": "2026年11月9日，工作板条目 WB：据 Ren 11 月 8–9 日之言重述伦理之框架：两个前提称为排序之果所用之两种读法，排序为排序者所持，不求外来之根据；主张、假设与 Lean 皆不变。"
     }
   ]
 }

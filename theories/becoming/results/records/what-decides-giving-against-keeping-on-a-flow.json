@@ -128,8 +128,8 @@
   ],
   "does_not_show": [
     {
-      "en": "That giving or keeping is better: the laws count levels and lines, and a ranking is asked under the ethics' two premises, the continuation condition for scope and C for order.",
-      "zh": "给出或保留更好：诸律计数水平与线，排序要在伦理的两个前提下才问及，延续条件定范围，C 定次序。",
+      "en": "That giving or keeping is better: the laws count levels and lines, and a ranking is asked only under the two readings 07 names, the continuation condition for scope and C for order.",
+      "zh": "给出或保留更好：诸律计数水平与线，排序只在第七章所指名的两种读法之下，延续条件定范围，C 定次序。",
       "kind": "non-implication"
     },
     {
@@ -299,6 +299,10 @@
     {
       "en": "6 November 2026, board item EL7: added from EL7's investigation of the factors (el7/b), its scratch Lean moved to the core; a skeptic's reading narrowed it to a near-definitional derivation with single witnesses at the shortfall.",
       "zh": "2026年11月6日，工作板条目 EL7：据 EL7 对因子的调查（el7/b）新增，其草稿 Lean 移入核心；怀疑者的读法把它收窄为近乎定义的推导，短缺处只有单一见证。"
+    },
+    {
+      "en": "9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.",
+      "zh": "2026年11月9日，工作板条目 WB：据 Ren 11 月 8–9 日之言重述伦理之框架：两个前提称为排序之果所用之两种读法，排序为排序者所持，不求外来之根据；主张、假设与 Lean 皆不变。"
     }
   ]
 }

@@ -258,8 +258,8 @@
   ],
   "does_not_show": [
     {
-      "en": "That giving, a window or any law of giving is better: that is asked under the ethics' two premises, the continuation condition for scope and C for order.",
-      "zh": "给出、窗口或任何给出之律更好：这在伦理的两个前提下才被问及，延续条件定范围，C 定次序。",
+      "en": "That giving, a window or any law of giving is better: that is ranked only under the two readings 07 names, the continuation condition for scope and C for order.",
+      "zh": "给出、窗口或任何给出之律更好：这只在第七章所指名的两种读法之下才被排定，延续条件定范围，C 定次序。",
       "kind": "non-implication"
     },
     {
@@ -621,6 +621,10 @@
     {
       "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
       "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
+    },
+    {
+      "en": "9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.",
+      "zh": "2026年11月9日，工作板条目 WB：据 Ren 11 月 8–9 日之言重述伦理之框架：两个前提称为排序之果所用之两种读法，排序为排序者所持，不求外来之根据；主张、假设与 Lean 皆不变。"
     }
   ]
 }

@@ -221,7 +221,7 @@
     "note": "The reader's site (tools/publishing/build_site.py): pages is the allow-list, nothing else is published; a path the push screen keeps private, or under sources/, is refused. nav and ways_in are AI-written navigation and name only pages listed here. The Pages job (.github/workflows/pages.yml) runs only when dispatched; enabling Pages is Ren's. With site.map on, the connection map is written as connections.html by connection_map's site mode. A card's time says what it is of; its fields are computed by the builder (card_time). chapters get contents and previous and next links. rewrites change the site's text only: two experiment READMEs print a local path and review receipts bind their hash, so they are redacted at build; words true only off the site are dropped there; the Chinese crosswalk, a generated page, is given a link to the map under its title. The opening's card times the text README's first screen times as {{time:opening}} ({body}), so the two agree.",
     "repository": "yongxu/theories",
     "title": "The Theory of Becoming",
-    "description": "One account of how things form, persist, change and end, with Lean-checked models and frozen tests; its ethics rests on two unasserted premises: the continuation condition (scope) and C, widening what can form is better (order).",
+    "description": "One account of how things form, persist, change and end, with Lean-checked models and frozen tests; it asserts no should, and ranks courses only under two readings it names: the continuation condition (scope) and C, widening what can form is better (order).",
     "pages": [
       "README.zh.md",
       "MAP.md",
