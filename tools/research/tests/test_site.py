@@ -459,14 +459,21 @@ class SiteTests(unittest.TestCase):
     # -- tables
     def test_a_wide_table_widens_and_a_text_table_stacks(self):
         wide = '| A | B | C | D | E |\n|---|---|---|---|---|\n' + '| 1 | 2 | 3 | 4 | 5 |\n'
-        text = '| Name | **Standing** | What |\n|---|---|---|\n| n | s | ' + 'word ' * 30 + '|\n| | | |\n'
+        text = '| Name | **Standing** | What |\n|---|---|---|\n| n | s ' + 'word ' * 9 + '| ' + 'word ' * 30 + '|\n| | | |\n'
         (self.tmp / 'a/ONE.md').write_text(f'# One\n\n## What it is\n\n{wide}\n{text}\n')
         self.build()
         one = self.page('a/ONE.html')
         self.assertIn('<div class="table wide"><table>', one)  # numbers: scrolled, not stacked, and so unlabelled
         self.assertIn('<td>1</td>', one)
         self.assertIn('<div class="table stack"><table>', one)
-        self.assertIn('<td data-label="Name">n</td><td data-label="Standing">s</td>', one)  # the label is the heading's plain text
+        self.assertIn('<td data-label="Name">n</td><td data-label="Standing">s word', one)  # the label is the heading's plain text
+
+    def test_a_numeric_table_with_one_long_name_scrolls(self):
+        head = '| Thesis | ' + ' | '.join('c%d' % k for k in range(6)) + ' |\n|' + '---|' * 7 + '\n'
+        rows = ''.join('| ' + 'a long thesis name ' * 8 + ' | ' + ' | '.join(['1'] * 6) + ' |\n' for _ in range(3))
+        (self.tmp / 'a/ONE.md').write_text(f'# One\n\n## What it is\n\n{head}{rows}\n')
+        self.build()
+        self.assertNotIn('table stack', self.page('a/ONE.html'))  # one prose cell a row: scrolled, not stacked as fourteen labelled lines
 
     def test_the_stylesheet_widens_cues_and_stacks(self):
         css = (ROOT / 'tools/publishing/site.css').read_text()

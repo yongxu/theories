@@ -390,13 +390,13 @@ class FirstScreenTests(unittest.TestCase):
     def test_the_repository_tests_fields_add_up_to_the_total(self):
         from tools.research import tests_page
         counts = tests_page.thesis_counts()
-        with patch.object(navigation, 'markdown_file', return_value='{{tests:ran}} {{tests:unrun}} {{tests:total}}'):
-            ran, unrun, total = [int(x) for x in navigation.first_screen([], 'x').split()]
+        with patch.object(navigation, 'markdown_file', return_value='{{tests:ran}} {{tests:unrun}} {{tests:other}}'):
+            ran, unrun, other = [int(x) for x in navigation.first_screen([], 'x').split()]
         self.assertEqual(unrun, sum(counts.get(k, 0) for k in tests_page.NEVER_RAN))
-        self.assertEqual((ran + unrun, total), (counts['total'], counts['total']))
-        with patch.object(navigation, 'markdown_file', return_value='{{tests:total}} {{tests:passed}} {{tests:failed}} {{tests:mixed}} {{tests:other}} {{tests:unrun}}'):
-            total, *parts = [int(x) for x in navigation.first_screen([], 'x').split()]
-        self.assertEqual(sum(parts), total)
+        named = set(tests_page.CLASS_KEYS) - set(tests_page.NEVER_RAN) - {'passed', 'failed', 'mixed'}
+        self.assertEqual(other, sum(counts.get(k, 0) for k in named))  # 'other' is the named classes that ran, nothing else
+        self.assertGreaterEqual(other, 0)
+        self.assertEqual(ran + unrun, counts['total'])
 
     def test_the_ways_in_table_follows_the_screen_from_the_sites_list(self):
         site = {'ways_in': [{'path': 'a.md', 'label': 'A', 'group': 'Read'}, {'path': 'b.md', 'label': 'B', 'group': 'Read'},

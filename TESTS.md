@@ -10,7 +10,7 @@ Every test in [experiments](experiments/README.md) by how it came out, the failu
 
 How to read a verdict, in [method §9](theories/becoming/chapters/08-METHOD.md#theses)'s words: "A thesis adds no theorem, a refutation removes none, and a failure stays recorded beside the thesis." "A frozen rule fixes how a verdict is scored before the data, not that the rule reads the construct the verdict names…" "So a verdict is read against every measure of its construct the run produced, and where they disagree with the rule's print, the disagreement is reported and the verdict not claimed."
 
-Results here are by setting: each row is one test in the setting or settings it names, a thesis can pass in one and fail in another, so no row or count below is a verdict on a thesis as a whole (method §9's table gives each thesis's standing), and a row's class is read by the rule stated under that class's heading below.
+Results here are by test: each row is one test in the setting or settings it names, a thesis can pass in one and fail in another, so no row or count below is a verdict on a thesis as a whole (method §9's table gives each thesis's standing), and a row's class is read by the rule stated under that class's heading below.
 
 ## By thesis
 

@@ -434,7 +434,8 @@ class Page:
             i += 1
         longest = max(sum(len(plain_title(c)) for c in r) for r in [head] + rows)
         wide = len(head) >= WIDE_COLUMNS or (len(head) >= 3 and longest >= WIDE_ROW)
-        stack = len(head) >= 3 and longest >= STACK_ROW
+        prose = max(sum(len(plain_title(c)) > 40 for c in r) for r in rows) if rows else 0
+        stack = len(head) >= 3 and longest >= STACK_ROW and prose >= 2  # rows of prose stack; short numeric cells scroll
         labels = [plain_title(c) for c in head] if stack else []
 
         def cell(tag, c, k):
@@ -990,7 +991,7 @@ def chapter_html(p, page, sequence, index, built):
 
 def search_index(built, recs):
     """What the site's search reads: each page's title and headings, each result's name (a record page, its status said, its
-    id and Chinese title findable too). Only pages built go in, so it publishes nothing the pages do not."""
+    id and Chinese title findable too). Only pages built go in; a record's Chinese title, from its public JSON, is findable even where its page does not show it."""
     pages, results = [], []
     for p, page in built.items():
         rid = posixpath.basename(p)[:-3] if p.startswith(RECORDS) else None

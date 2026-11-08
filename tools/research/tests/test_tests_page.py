@@ -67,7 +67,7 @@ class TestsPageTests(unittest.TestCase):
 
     def test_results_are_said_to_be_by_setting_above_the_summary(self):
         page = tests_page.render_page({'as_of': '2026-11-08', 'tests': [ROW]})
-        self.assertLess(page.index('Results here are by setting'), page.index('## By thesis'))
+        self.assertLess(page.index('Results here are by test'), page.index('## By thesis'))
         self.assertIn("class is read by the rule stated under that class's heading", page)
         # a row can hold more than one setting: MQ1 (simulation) two organisms, IN1's rounds two models each
         self.assertIn('each row is one test in the setting or settings it names', page)
