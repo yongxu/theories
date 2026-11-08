@@ -29502,7 +29502,7 @@
    {
     "anchor": "theories/becoming/review/README.md",
     "says": {
-     "en": "No human has reviewed this theory yet; the proofs are checked by machine, and everything else only by further AI reviews."
+     "en": "No independent review of this theory is recorded yet. The proofs are checked by machine, in Lean; everything else, the readings of the classical texts included, by further AI reviews; the person who directs the work has read its important parts."
     },
     "role": "limit"
    },

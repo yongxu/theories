@@ -363,10 +363,18 @@ class FirstScreenTests(unittest.TestCase):
         self.assertNotIn('\n#', '\n' + screen)
         self.assertIn('fixes scope', screen)  # both premises with their roles
         self.assertIn('gives order', screen)  # not 'alone': 07's own theorem has self-concern rank one case with no C
-        self.assertNotRegex(screen, r'\b(AI|Ren|Claude)\b')  # a front page names no person and no AI
+        # a front page names no person; it says once, briefly, that the work was made with AI, the work and not its making
+        # being the point, and never that no person has read it (Ren, 8 November 2026: sources/15-codex-theory-conversations/
+        # 2026-11-08-ai-briefly-and-read.md)
+        self.assertNotRegex(screen, r'\b(Ren|Claude)\b')
+        self.assertEqual(len(re.findall(r'\bAI\b', screen)), 1)
+        self.assertIn('Made with AI', screen)
+        self.assertNotRegex(screen, r'(?i)no human review|no person has (yet )?(read|reviewed)|no human has')
+        self.assertIn('no independent review is recorded', screen)
         # and so does everything above the opening as README renders it: the title, the navigation and status lines
-        above = (registry.ROOT / 'README.md').read_text().split('\n## Truth exists\n', 1)[0]
-        self.assertNotRegex(re.sub(r'<!--.*?-->', '', above, flags=re.S), r'\b(AI|Ren|Claude)\b')
+        above = re.sub(r'<!--.*?-->', '', (registry.ROOT / 'README.md').read_text().split('\n## Truth exists\n', 1)[0], flags=re.S)
+        self.assertNotRegex(above, r'\b(Ren|Claude)\b')
+        self.assertEqual(len(re.findall(r'\bAI\b', above)), 1)
         lead = navigation.markdown_file('readme_lead', 'README.md')
         self.assertNotIn('is an account of', lead)
         self.assertNotIn('two premises', lead)
