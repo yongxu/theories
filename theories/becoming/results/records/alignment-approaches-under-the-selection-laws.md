@@ -33,7 +33,7 @@
 ## Does not show
 
 - No approach is ranked: the laws order nothing, and a comparison would need an order and correspondence data on actual systems.
-- These are constraints every strategy deciding through couplings is subject to, not a necessary strategy; the direction rests on the continuation condition for scope and C for order, offered and not asserted, no warrant from outside sought.
+- These are constraints every strategy deciding through couplings is subject to, not a necessary strategy; the direction rests on the continuation condition for scope and C for order, with warrant open.
 - Which law a trained system follows is not given by the laws; coupling is not compliance.
 - The laws give no quantitative result stronger than themselves, such as a bound on proxy degradation, a rate of overoptimization or a debate equilibrium.
 - An approach whose decisions read something beyond its formations' couplings would not be such a selection, and the laws would not apply to it.
@@ -119,7 +119,6 @@ Aliases: `alignment approaches`, `RLHF under the selection laws`, `debate under 
 
 - 21 October 2026: added (AP1), six alignment approaches read under the selection laws, each with what it couples into, its premise, its gap and what it adds, no ranking; the gap premise-free, the incompleteness of preference-coupled approaches the scope of the continuation condition, the order unanimity; study section 282.
 - 22 October 2026, PL1 landing (with CK1, CR1, EM1): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by additions in sections 5, 7.4, 7.5, 7.7, 8.1 item 3 and 8.7 (pools along a run, what a center can know by a step, the deployed pipelines, learners that generalize). Read before re-pointing. The claim is unchanged.
-- 9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.
 
 </details>
 

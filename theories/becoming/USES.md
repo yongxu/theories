@@ -82,6 +82,6 @@ One or more per field, each at its true standing, on [their own page](USES-EXAMP
 ## What this page does not do
 
 - It adds no result. Every law, test and standing here is restated from the home it links, and where they differ the home governs.
-- It is not advice. No law here ranks a course; a ranking rests on C or another named order, with the continuation condition for scope, and the account asserts neither.
+- It is not advice. No law here ranks a course; a ranking names its order and scope, most often C and the continuation condition, and the account asserts neither.
 - It does not apply the account to any actual system. A field's use waits on a correspondence, shown in none of the rows for actual institutions, trained systems or people; the audits and constructed cases are readings.
 - No person's check of it is recorded. The rows and examples were written and checked by AI readers; the readings of the classical texts, the tests' designs and the proofs' bearing on any field still wait on people who know them.

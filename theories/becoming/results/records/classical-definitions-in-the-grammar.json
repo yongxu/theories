@@ -106,7 +106,7 @@
   ],
   "validation_scope": {
     "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.GrammarReadings, 13 theorems in 18 declarations, each with an empty axiom report. The sentences come from the frozen first-batch corpus as classified by four Opus coders; no person's audit recorded. The OU6 corrections were reviewed against the Lean by GPT astra and Opus reviewers.",
-    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.GrammarReadings，18 个声明中 13 条定理，公理报告皆空。句子来自冻结之第一批语料，经四位 Opus 编者分类；无人工审核。OU6 之更正经 GPT astra 与 Opus 审查者对照 Lean 审查。"
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.GrammarReadings，18 个声明中 13 条定理，公理报告皆空。句子来自冻结之第一批语料，经四位 Opus 编者分类；尚无人审核之记录。OU6 之更正经 GPT astra 与 Opus 审查者对照 Lean 审查。"
   },
   "next_delta": {
     "en": "Write the rest of the corpus's 517 definitional units in the grammar where they read relationally, and prove the 59 grammar-theorem candidates or show where they fail.",

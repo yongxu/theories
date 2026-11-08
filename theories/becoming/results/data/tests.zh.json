@@ -117,9 +117,9 @@
     },
     "LA1": {
       "en_name": "A language model revising a harvest threshold from its reward",
-      "en": "Both open settings passed; two of four locked settings failed, and with them contrasts L1, L3 and L4, at misses worth 92.5% to 98.2% of the best, which, by LA1b's later frozen test, its feedback barely resolved.",
+      "en": "Both open settings passed; two of four locked settings failed, and with them contrasts L1, L3 and L4, at misses worth 92.5% to 98.2% of the best, which LA1b's later frozen test reads as feedback that barely resolved the best threshold, that threshold assigned there (LA1c, with none assigned, found it in 29 of 30 locked seeds).",
       "name": "语言模型依奖励修订收获阈值",
-      "gloss": "两个开放设置都通过；4 个锁定设置中 2 个未通过，对比 L1、L3、L4 也随之未通过。这些偏差的价值是最优值的 92.5% 到 98.2%，按 LA1b 后来冻结的检验，LA1 的反馈几乎分辨不出这样的差别。"
+      "gloss": "两个开放设置都通过；4 个锁定设置中 2 个未通过，对比 L1、L3、L4 也随之未通过，其偏差的价值是最优值的 92.5% 到 98.2%；LA1b 后来冻结的检验把这读作反馈几乎分辨不出最优阈值，而该检验给定了这一阈值（LA1c 不给定阈值，在 30 个锁定种子中的 29 个里找到了它）。"
     },
     "LA2": {
       "en_name": "A lock in a self-rewarding loop of one trained judge",
@@ -165,9 +165,9 @@
     },
     "FC1": {
       "en_name": "Fidelity count: excess referents in classical and English wordings",
-      "en": "The classical wording introduced fewer excess referents and agents than the English; coded by language models and provisional, with no human audit and the main set's 經 coded by the model that wrote them; F3 and F4 not measured.",
+      "en": "The classical wording introduced fewer excess referents and agents than the English; coded by language models and provisional, with no person's audit recorded and the main set's 經 coded by the model that wrote them; F3 and F4 not measured.",
       "name": "忠实度计数：文言与英文表述中的多余指称",
-      "gloss": "在这两份文本上，文言的“經”引入的多余指称和行动者比英文条文少；编码由语言模型完成，结果是暂定的，没有人工审核，主集的“經”由写下它们的那个模型编码；F3 和 F4 未测量。"
+      "gloss": "在这两份文本上，文言的“經”引入的多余指称和行动者比英文条文少；编码由语言模型完成，结果是暂定的，尚无人审核的记录，主集的“經”由写下它们的那个模型编码；F3 和 F4 未测量。"
     },
     "LA4 (Stage A)": {
       "en_name": "The drain beyond the reward under gradient training, small policies",
@@ -225,9 +225,9 @@
     },
     "ZE": {
       "en_name": "Controlled English under the same name-table discipline",
-      "en": "By its registered rules, the classical code's advantage does not survive under one coder (the primary comparison) and survives at about a third of a referent per pair under the other, on a 60-pair check that its plan says is not a second primary test; the coders do not agree on excess; no human audit.",
+      "en": "By its registered rules, the classical code's advantage does not survive under one coder (the primary comparison) and survives at about a third of a referent per pair under the other, on a 60-pair check that its plan says is not a second primary test; the coders do not agree on excess; no person's audit recorded.",
       "name": "同样名表纪律下的受控英语",
-      "gloss": "按登记的规则，文言代码的优势在一个编码者下（主比较）没有保持下来，在另一个编码者下保持了下来，幅度约为每对三分之一个指称，但后者是一次 60 对的核查，其计划明言它不是第二个主检验；两个编码者对“多余”的判断并不一致；没有人工审核。"
+      "gloss": "按登记的规则，文言代码的优势在一个编码者下（主比较）没有保持下来，在另一个编码者下保持了下来，幅度约为每对三分之一个指称，但后者是一次 60 对的核查，其计划明言它不是第二个主检验；两个编码者对“多余”的判断并不一致；尚无人审核的记录。"
     },
     "SC1": {
       "en_name": "Whether a model under-detects what its own text introduces",

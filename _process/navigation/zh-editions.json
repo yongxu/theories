@@ -3,45 +3,46 @@
  "editions": {
   "GLOSSARY.zh.md": {
    "revised": "2026-11-09",
-   "english": "51790899679721736ad05fb33092f3fe278234762559f8719f7574995faca918",
-   "chinese": "13def3e7e476217cfa30cbf5dcdd4bdd5107b78e0e5a10f6fbd3fb09f9666b4d",
-   "english_commit": "edbcbc075"
+   "english": "8dd126b539060094b92322f5396eae7b9d9446cb5400eb8b738359df2ad3610a",
+   "chinese": "de7a6ca30ef4bbf3f09d3a4302ef142f9228f7e5661656063fa4299667fa6d3f",
+   "english_commit": "c3813369e"
   },
   "_process/navigation/README-ZH.md": {
    "revised": "2026-11-09",
-   "english": "f97e358a8eb546490d9e0deb5933b2961e519246f348dcdb59f0b7ef5a1af377",
-   "chinese": "079c9ec8f7680d43c43607084c65d642b8e071e2a8042b72ede3319cabf595de",
-   "english_commit": "8a892a201"
+   "english": "57ab6b29fb601264c810f15a92163ed71216d0ba8f83884b3661b6d571376fb9",
+   "chinese": "8b0f035017b0118e0c828cf7148ea381f9004f98e9e236b42aa47343f8b0413b",
+   "english_commit": "e80b0a7b1"
   },
   "theories/becoming/ONE-PAGE.zh.md": {
    "revised": "2026-11-09",
-   "english": "ef1510ed224b9b19b1ffeb71c269d378897ebd6184a05c75e761174486afeded",
-   "chinese": "48d3222933e70fe61c185ef636e8ae00d36e7e9d70c0353b57acc678abd37e7d",
-   "english_commit": "e0c724771"
+   "english": "7e7b42450e8c8eea0e52a2bbf04d7517afd095daad4e6b1ecb2ab4b634264e04",
+   "chinese": "47331cdc510f69478c1efce70b56089164f04402ba8834a94d45ce8f599d01e3",
+   "english_commit": "75f077470"
   },
   "theories/becoming/THE-THEORY-OF-BECOMING.zh.md": {
    "revised": "2026-11-09",
-   "english": "52bd657a5f11b546fab2b9e6448cfc7410aedb3ea5041cae1da65e3c0847527e",
-   "chinese": "2e6b3a0f4c0980e2fe88b9792e763a9512304c857c04ad9407cc31e531348dfa",
-   "english_commit": "e0c724771"
+   "english": "5c9e92be759ab216ecfb3c9249e2671dc1224757b24349c36bdea7dda6f28410",
+   "chinese": "2a1508125b4241e8cdda82c8baa7b6caf27eaf4847fe91fb2a39f872d13fc867",
+   "english_commit": "c3813369e"
   },
   "theories/becoming/USES-EXAMPLES.zh.md": {
    "revised": "2026-11-09",
-   "english": "8e37744e0676f69b1e501db52053f5808e0283e11162a161a9af04e8ee06f4ca",
-   "chinese": "dcac21f0934f96e9debef9bf6d9c18e9748850e9a6890358783e4e55a999e959",
-   "english_commit": "d12241292"
+   "english": "eea40bcf8944ae599b0b34dff037e32f2569b0d1e92e8f226013659141f975c3",
+   "chinese": "12e93c106c9f8ff5f7d976cdc09374d2eabe972b94ce4b4fcfbf2957379ae8e7",
+   "english_commit": "acc352294"
   },
   "theories/becoming/USES.zh.md": {
    "revised": "2026-11-09",
-   "english": "7ea984c1460f88d9b25b7c751114bea27ce6c38b4dddd2b157baa21720cf6896",
-   "chinese": "1b202ba3da58b6856ade2eec9f938b3d57221d8fe36535279fc976cd1caee67b",
-   "english_commit": "dec8423cb"
+   "english": "c060874f61f0dac5b131fda9605fbbda8e1cbce8340431e229008bb41c822dea",
+   "chinese": "61f85c0d1590d80c4072dc1405fbbbcad56a6433b47bd341fb410f22d8d66f39",
+   "english_commit": "07e92bc35"
   },
   "theories/becoming/review/README.zh.md": {
    "revised": "2026-11-09",
-   "english": "9f476aa7fceaa83fed2016830a54110ce0d3e1cae98ddff16babe4b065abfd96",
-   "chinese": "78e2bb64d323cf17b012be6cf60be07b22d107023c7bc553fbdfdd7f28076ce7",
-   "english_commit": "242eb8309"
+   "english": "da81b4de2129ead2c587039022138f6050fa8a0d82d70418af04837f60ff0200",
+   "chinese": "7b4028fe5504fd2853959a2ffc910a3baf4ce8abcf0ef6c6fb80594a291907ef",
+   "english_commit": "acc352294",
+   "unchanged": "the English changed only the one page's reading time; the Chinese cover gives the Chinese one page's own time, 18 to 23 minutes, which is unchanged"
   }
  }
 }

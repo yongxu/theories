@@ -67,7 +67,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- A comparison of two courses: no law here compares two, so the second-order direction of widening stays open and eventual widening's lag stays undecided.
+- A comparison of two courses: no law here compares two, so the second-order direction of 生生 stays open and eventual widening's lag stays undecided.
 - That renewal gives widening: on the kind relay 全生成 at two orders of grain and renewal without end hold while what it can form by name only returns, and beginnings recur on a reading that opens nothing. Witness: `Becoming.KindRelay.Runs.beginnings_without_opening`.
 - That a part under dissipation is sustained by supply from beyond: the fed relay's required conditions conserve, its loss paid by fuel no formation requires. Witness: `Becoming.KindRelay.Fed.conserving_on_part`.
 - A third part against the TAP equation, assembly theory or Jones 1995: each leaves conservation or upkeep out as stated, and its own variants or neighbours supply it.
@@ -167,7 +167,6 @@ Aliases: `What keeping widening needs, and what carries it`, `持续扩大需要
 - 30 October 2026 (HE, study section 455): total_eq_of_supports moved from KeepingWidening to beside total_le_of_support in Dissipation, statement and name unchanged; its reference, binding and the validation scope follow; reviewed in REVIEW-HE.
 - 30 October 2026: wording only, for the twenty-first review's item 13 (生生 in one sense): the grammar's «生生» marked in the Chinese of law 15 and of the second item it does not show, as the English and KindRelay.renews_without_end state; nothing the record states changed.
 - 3 November 2026, CD (board item CD): in what the record does not show, "全生成 at two orders" reads "at two orders of grain", the phrase of 02 §1's law of orders: one 全生成 already reads two grains, and the relay's law gives it at orders 0 and 1 over three; under the glossary's one sense, order alone says which course is better. A related line says what the lagged order on what a course keeps reachable puts above. The claim is unchanged.
-- 9 November 2026, board item WB: 'the second-order direction of 生生' re-said as the second-order direction of widening, since 生生 is read as the continuation of life and widening is not its measure; no change to the claim, its hypotheses or its Lean.
 
 </details>
 
