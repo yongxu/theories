@@ -355,7 +355,7 @@
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "aecb20fb0a5482ac0992cddc3f494f84b418b2bbd5f6b54d664897a6e9182c61"
+      "sha256": "decc90c5ac4f2f5ed5a3029dcd29c98b46ae9e474c042f212caa1e4bd1a9cc79"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T142054.885803Z/verification.json",

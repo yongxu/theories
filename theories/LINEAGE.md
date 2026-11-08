@@ -203,7 +203,7 @@ Drafts written for readers outside the repository, and what of each stands in th
 
 ## Growth in the records
 
-The records' history entries by the week of their leading date: 4837 dated entries, and 184 with no leading date, left out. An entry is a dated note of a change to a result, so the count measures changes recorded, not results.
+The records' history entries by the week of their leading date: 4838 dated entries, and 184 with no leading date, left out. An entry is a dated note of a change to a result, so the count measures changes recorded, not results.
 
 | Week of (Monday) | Entries |
 |---|---:|
@@ -212,7 +212,7 @@ The records' history entries by the week of their leading date: 4837 dated entri
 | 2026-10-19 | 1775 |
 | 2026-10-26 | 456 |
 | 2026-11-02 | 304 |
-| 2026-11-09 | 32 |
+| 2026-11-09 | 33 |
 
 ## What this page rests on
 

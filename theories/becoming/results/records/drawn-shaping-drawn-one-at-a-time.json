@@ -277,12 +277,12 @@
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "aecb20fb0a5482ac0992cddc3f494f84b418b2bbd5f6b54d664897a6e9182c61"
+      "sha256": "decc90c5ac4f2f5ed5a3029dcd29c98b46ae9e474c042f212caa1e4bd1a9cc79"
     },
     {
       "path": "theories/becoming/chapters/04-LIFE.md",
       "role": "statement",
-      "sha256": "5b8bf864d9ee60a279dd2ab706a052c32074f623d988c9f7d18dcac495caf149"
+      "sha256": "23381ea5e427954f45a25e5e5b9346c6c224430205682daaa26d43bc12549d9e"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
