@@ -78,7 +78,7 @@
 - Anything about transition probabilities, Bell causality, discrete general covariance as a condition on a dynamics, or the continuum limit.
 - That continuation of a finer class read on links is ordered by widening: on witnesses it is gained and lost.
 - How kinds of birth are ordered beyond the witnesses at offset 2; a count to five elements is a computation, not a law.
-- Which course is better: with every continuation's losses counted the reading is on both together, where C ranks no two courses from the empty set; ordering them needs a measure, beyond C and the condition. AI readings.
+- Which course is better: with every continuation's losses counted the reading is on both together, where C ranks no two courses from the empty set; widening alone does not settle them, and a further judgment names its criterion and who holds it, beyond C and the condition. AI readings.
 - The second-order direction: every course keeps widening what can be born next, so a range whose widening keeps widening is not told apart from one merely wider now.
 - **Counterexample:** The course of births with empty pasts includes every course's stems, and in it every element begins and ends in every class (antichain_rangeIncludes, antichain_begins_ends). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CausalGrowth.lean)
 - **Counterexample:** The antichain and the chain each widen the other on one of the two readings, so no strict order contains both (no_order_contains_both). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CausalGrowth.lean)
@@ -148,6 +148,7 @@ Aliases: `What can be born next against what continues`, `次可生者与相续`
 - 28 October 2026, board item UE14 (study section 432): related to the-present-on-causal-set-growth; no statement, next step or declaration changed.
 - 30 October 2026: wording only, for the twenty-first review's item 13 (生生 in one sense): the Chinese of laws 22 and 23 and of the dependency detail listing the grammar's names writes «生生» (renewal without end), as the English and the theorems state, where it wrote 生生不息; nothing the record states changed.
 - 3 November 2026, CD (board item CD): the statement says that read on what continues the inclusion reverses, not the order; law 16 and a counterexample say that the two widenings put the antichain and the chain above each other, not that they rank them; what the record does not show names the start C's verdict on both readings together needs, from the empty set (Starts.not_rangeWidens_formsOrContinues_needs_starts). Under the glossary's one sense, ranking and order (the ethics' role word) say which course is better, and widening says which admits more, with no premise. The claim is unchanged.
+- 9 November 2026, board item WB: the non-implication on ordering two courses re-said as 07 §2 now says it: widening alone does not settle them, and a further judgment names its criterion and who holds it, not necessarily a measure; no change to the claim, its hypotheses or its Lean.
 
 </details>
 
