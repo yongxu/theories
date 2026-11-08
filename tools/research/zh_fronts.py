@@ -207,7 +207,9 @@ def with_banner(text: str, line: str | None, nav: str) -> str:
     to open the same way is left alone) and `line`, if given, put there: the navigation line, a blank, the banner."""
     parts = text.split('\n')
     at = parts.index(nav) + 1
-    if at + 1 < len(parts) and not parts[at].strip() and parts[at + 1].startswith(BANNER):
+    if at < len(parts) and parts[at].startswith(BANNER):  # right under the line, as only a hand edit leaves it; its blank stays
+        del parts[at]
+    elif at + 1 < len(parts) and not parts[at].strip() and parts[at + 1].startswith(BANNER):
         del parts[at + 1:at + 3 if at + 2 < len(parts) and not parts[at + 2].strip() else at + 2]
     if line:
         parts[at:at] = ['', line] if at < len(parts) and not parts[at].strip() else ['', line, '']
@@ -291,13 +293,14 @@ def record_revised(pages, root: Path = ROOT, today: str | None = None, unchanged
             continue
         chinese = edition_digest((root / page).read_text(encoding='utf-8'))
         before = held.get(page) if _well_formed(held.get(page)) else None
-        if before and before['chinese'] == chinese and not unchanged:
+        same = bool(before) and before['chinese'] == chinese
+        if same and not unchanged:
             errors.append(f'{page} is unchanged since it was last recorded: revise it to its English, or give --unchanged REASON '
                           "saying why the English's change needs none")
             continue
         entry = {'revised': today or date.today().isoformat(), 'english': edition_digest((root / english).read_text(encoding='utf-8')),
                  'chinese': chinese, 'english_commit': git('log', '-1', '--format=%h', '--', english) or '0000000'}
-        if unchanged:
+        if same:  # the reason belongs only to a page whose Chinese did not change
             entry['unchanged'] = unchanged
         held[page] = entry
     if errors:

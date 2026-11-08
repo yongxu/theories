@@ -292,6 +292,11 @@ class EditionsTests(unittest.TestCase):
         zh = '# 页\n\n[English](a.md) · [首页](README.zh.md)\n\n正文。\n'
         self.assertEqual(d(zh), d(zh.replace('[English](a.md) · [首页](README.zh.md)\n', '[English](a.md) · [首页](README.zh.md)\n\n' + zh_fronts.BANNER + '它依……*\n')))
 
+    def test_a_banner_right_under_the_line_with_no_blank_is_taken_out_too(self):
+        nav = zh_fronts.nav_line(self.page)
+        page = self.text(self.page).replace(nav + '\n\n', nav + '\n' + zh_fronts.BANNER + '旧的。*\n\n')
+        self.assertEqual(zh_fronts.with_banner(page, None, nav), self.text(self.page))
+
     def test_a_banner_like_line_elsewhere_is_left_alone(self):
         page = self.text(self.page) + '\n' + zh_fronts.BANNER + '这一行在正文里。*\n'
         self.write(self.page, page)
@@ -370,6 +375,11 @@ class EditionsTests(unittest.TestCase):
         self.assertTrue(zh_fronts.record_revised([self.page], self.root, today='2026-11-10'))
         self.assertEqual(zh_fronts.record_revised([self.page], self.root, today='2026-11-10', unchanged='an English typo'), [])
         self.assertEqual(json.loads(self.text(zh_fronts.EDITIONS))['editions'][self.page]['unchanged'], 'an English typo')
+        other = 'theories/becoming/ONE-PAGE.zh.md'  # given with the reason, but its Chinese did change: no reason kept for it
+        self.write(other, self.text(other).replace('正文。', '改过的正文。'))
+        self.write(self.page, self.text(self.page))
+        self.assertEqual(zh_fronts.record_revised([self.page, other], self.root, today='2026-11-10', unchanged='an English typo'), [])
+        self.assertNotIn('unchanged', json.loads(self.text(zh_fronts.EDITIONS))['editions'][other])
         # an entry for a file no longer a front is dropped by the next record, not left to block the check
         data = json.loads(self.text(zh_fronts.EDITIONS))
         data['editions']['OLD.zh.md'] = data['editions'][self.page]
