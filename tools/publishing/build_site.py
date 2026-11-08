@@ -1066,9 +1066,11 @@ LEAD_SHARED = 3  # a paragraph met word for word among the leading paragraphs of
 STATUS_LINE = re.compile(r'<code>[^<]+</code> · <strong>')  # a record page's status line, as site_text leaves it (RECORD_STATUS)
 LANGUAGE_LINK = re.compile(r'<a [^>]*>\s*(?:中文|English)[^<]{0,24}</a>\s*(?: · |$)')  # '中文', '中文（各章一览）', 'English'
 READING_LINE = 200  # characters below which a paragraph that states a time to read is a reading-time line (a third of it in Chinese)
-CLOSE = '["”’)\\]]*'  # closing marks a sentence's period may sit inside
-SENTENCE = (r'(?:[^.]|\.(?!' + CLOSE + r'(?:\s|$))'  # a sentence's body: a period ends it only before a space or the end, closing marks
-            r'|(?:(?<= al)|(?<=\bNov)|(?<=e\.g)|(?<=i\.e)|(?<=\bcf))\.(?=\s+[a-z0-9(]))*')  # allowed, not after an abbreviation
+CLOSE = '["”’\')\\]]*'  # closing marks a sentence's period may sit inside
+SENTENCE = (r'(?:[^.]|\.(?!' + CLOSE + r'(?:\s|$))'  # a sentence's body: a period ends it only before a space or the end, closing
+            r'|\.(?=' + CLOSE[:-1] + r'+\s+[a-z])'  # marks allowed; not where a lowercase word follows a closing mark,
+            r'|(?:(?<= al)|(?<=\b(?:Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Oct|Nov|Dec))|(?<=Sept))\.(?=\s+[a-z0-9(])'  # nor after 'et al'
+            r'|(?:(?<=e\.g)|(?<=i\.e)|(?<=\bcf))\.(?=\s))*')  # or a month's abbreviation before a word or number, nor after e.g., i.e., cf.
 PROVENANCE = re.compile(  # a run of opening sentences that say where a page came from, not what it says, as experiments open:
     # 'Board item EW2, 21 October 2026. AI-written (a Claude Code session). Study section 286 of …. Literature check: ….'
     r'(?:(?:Board items? [A-Z]' + SENTENCE +
