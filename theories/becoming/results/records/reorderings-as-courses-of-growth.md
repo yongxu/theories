@@ -69,7 +69,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261028T083434.601834Z): all 76 declarations of Becoming.ReorderingGrowth, each with an empty axiom report. Drafted by an AI agent and read in the session; an independent read-only review by another AI agent (REVIEW-UE15) and a re-check, study section 438; not reviewed by a person. Most laws compose landed theorems.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261028T083434.601834Z): all 76 declarations of Becoming.ReorderingGrowth, each with an empty axiom report. Drafted by an AI agent and read in the session; an independent read-only review by another AI agent (REVIEW-UE15) and a re-check, study section 438; no person's review recorded. Most laws compose landed theorems.
 
 Canonical source: [ReorderingGrowth.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReorderingGrowth.lean)
 

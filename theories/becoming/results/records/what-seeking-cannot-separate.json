@@ -149,7 +149,7 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261029T164943.729811Z): all 27 declarations of Becoming.LumpedSeeking, each with an empty axiom report. Drafted by an AI agent; an independent read-only review by another AI agent (REVIEW-UE19) and a re-check (RECHECK-UE19), study section 453; not reviewed by a person.",
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261029T164943.729811Z): all 27 declarations of Becoming.LumpedSeeking, each with an empty axiom report. Drafted by an AI agent; an independent read-only review by another AI agent (REVIEW-UE19) and a re-check (RECHECK-UE19), study section 453; no person's review recorded.",
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261029T164943.729811Z）：Becoming.LumpedSeeking 之全部 27 项声明，公理报告皆空。由一 AI 代理起草；另一 AI 代理作独立只读审查（REVIEW-UE19）并复查（RECHECK-UE19），见研究第 453 节；未经人审。"
   },
   "next_delta": {

@@ -41,7 +41,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by Lean 4.29.1 with Std in three receipts, each binding the current bytes of its sources: verification.json (MarketGenerativity, 39 theorems), boundary-verification.json (RegimeBoundary, rebuilding MarketGenerativity) and attraction-verification.json (RegimeAttraction, rebuilding both); every cited theorem reports propext, Quot.sound and Classical.choice. Built 5 to 8 October 2026; the record was read against the current Lean; not reviewed by a person.
+Machine-checked by Lean 4.29.1 with Std in three receipts, each binding the current bytes of its sources: verification.json (MarketGenerativity, 39 theorems), boundary-verification.json (RegimeBoundary, rebuilding MarketGenerativity) and attraction-verification.json (RegimeAttraction, rebuilding both); every cited theorem reports propext, Quot.sound and Classical.choice. Built 5 to 8 October 2026; the record was read against the current Lean; no person's review recorded.
 
 Canonical source: [RegimeBoundary.lean](../../../../experiments/market-generativity/formal/RegimeBoundary.lean)
 

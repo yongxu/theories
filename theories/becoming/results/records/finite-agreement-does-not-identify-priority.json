@@ -81,7 +81,7 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by Lean 4.29.1 (receipt priority-identification-checks/20261007T193051.511909Z, the same bytes as priority-identification-verification.json; module PracticalPriorityIdentification, imports Std): finite_agreement_without_global_identification reports propext and Quot.sound. Built in one session; the record was read against the current Lean; not reviewed by a person.",
+    "en": "Machine-checked by Lean 4.29.1 (receipt priority-identification-checks/20261007T193051.511909Z, the same bytes as priority-identification-verification.json; module PracticalPriorityIdentification, imports Std): finite_agreement_without_global_identification reports propext and Quot.sound. Built in one session; the record was read against the current Lean; no person's review recorded.",
     "zh": "Lean 4.29.1 实查（回执 priority-identification-checks/20261007T193051.511909Z，与 priority-identification-verification.json 同字节；模块 PracticalPriorityIdentification，引入 Std）：finite_agreement_without_global_identification 报告 propext 与 Quot.sound。一会话中构建；对照当前 Lean 读过；未经人审。"
   },
   "next_delta": {

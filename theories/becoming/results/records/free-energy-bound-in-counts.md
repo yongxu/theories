@@ -65,7 +65,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261029T210603.495422Z): all 65 declarations of Becoming.FreeEnergyCounting, each with an empty axiom report. Drafted by an AI agent; an independent read-only review by another AI agent (REVIEW-UE21) and a re-check (RECHECK-UE21), study section 460; not reviewed by a person.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261029T210603.495422Z): all 65 declarations of Becoming.FreeEnergyCounting, each with an empty axiom report. Drafted by an AI agent; an independent read-only review by another AI agent (REVIEW-UE21) and a re-check (RECHECK-UE21), study section 460; no person's review recorded.
 
 Canonical source: [FreeEnergyCounting.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FreeEnergyCounting.lean)
 

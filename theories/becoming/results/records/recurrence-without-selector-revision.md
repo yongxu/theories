@@ -32,7 +32,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-The repository checker with Lean 4.29.1 passed BoundaryModels on 6 October 2026 (lean/verification.json, the checked bytes kept in its run folder), every FixedSelector theorem with an empty axiom report. On 16 October a comment was added to the file's first line, so no passing receipt binds the current bytes and the record is reviewed, not receipt-bound, until a checker run does. Reviewed in LEAN-CORE-REVIEW, whose first finding had the selector made operative and whose reinspection accepted the non-implication; not reviewed by a person.
+The repository checker with Lean 4.29.1 passed BoundaryModels on 6 October 2026 (lean/verification.json, the checked bytes kept in its run folder), every FixedSelector theorem with an empty axiom report. On 16 October a comment was added to the file's first line, so no passing receipt binds the current bytes and the record is reviewed, not receipt-bound, until a checker run does. Reviewed in LEAN-CORE-REVIEW, whose first finding had the selector made operative and whose reinspection accepted the non-implication; no person's review recorded.
 
 Canonical source: [BoundaryModels.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/BoundaryModels.lean)
 

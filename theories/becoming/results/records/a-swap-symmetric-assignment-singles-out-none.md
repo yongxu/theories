@@ -31,7 +31,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by Lean 4.29.1 (receipt priority-identification-checks/20261007T193051.511909Z, the same bytes as priority-identification-verification.json; module PracticalPriorityIdentification, imports Std): the four declarations cited have empty axiom reports. Built in one session; the record was read against the current Lean; not reviewed by a person.
+Machine-checked by Lean 4.29.1 (receipt priority-identification-checks/20261007T193051.511909Z, the same bytes as priority-identification-verification.json; module PracticalPriorityIdentification, imports Std): the four declarations cited have empty axiom reports. Built in one session; the record was read against the current Lean; no person's review recorded.
 
 Canonical source: [PracticalPriorityIdentification.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PracticalPriorityIdentification.lean)
 

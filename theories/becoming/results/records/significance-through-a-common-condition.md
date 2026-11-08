@@ -38,7 +38,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T212948.819150Z): the cited declarations of Becoming.ValuationFrames and Becoming.Metaethics have empty axiom reports; core purity verified. The laws were first registered within becoming-renewal-reading's claim; the record was read against the current Lean; not reviewed by a person.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T212948.819150Z): the cited declarations of Becoming.ValuationFrames and Becoming.Metaethics have empty axiom reports; core purity verified. The laws were first registered within becoming-renewal-reading's claim; the record was read against the current Lean; no person's review recorded.
 
 Canonical source: [ValuationFrames.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ValuationFrames.lean)
 

@@ -98,7 +98,7 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Checked by the module's checker with Lean 4.29.1 (receipt developmental-association-verification, passed 7 October 2026, fresh temporary build, source unchanged during the check; it binds the current bytes, which later receipts of other modules re-check): DevelopmentalAssociation, 41 declarations audited, 19 theorems, 15 cited here. The study records a review by the implementing author, no independent review; not reviewed by a person.",
+    "en": "Checked by the module's checker with Lean 4.29.1 (receipt developmental-association-verification, passed 7 October 2026, fresh temporary build, source unchanged during the check; it binds the current bytes, which later receipts of other modules re-check): DevelopmentalAssociation, 41 declarations audited, 19 theorems, 15 cited here. The study records a review by the implementing author, no independent review; no person's review recorded.",
     "zh": "以模块检查器与 Lean 4.29.1 检查（回执 developmental-association-verification，2026年10月7日通过，新鲜临时构建，检查期间源码未变；绑定当前字节，其他模块的后续回执复查之）：DevelopmentalAssociation 审计 41 项声明、19 条定理，此处引 15 条。研究记有实现者自审，无独立审查；未经人审。"
   },
   "next_delta": {

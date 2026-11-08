@@ -544,7 +544,7 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261027T170011.101817Z): Becoming.Tasks, 167 declarations, each with an empty axiom report, all cited here; four laws on UE10's and UE11's definitions sit in the leaf until their owners move them. Built in one session; an independent read-only review by another AI agent (REVIEW-UE12) and a re-check (RECHECK-UE12), its findings taken without a third reading, in study section 430; not reviewed by a person. Many laws are instances of UE10's and UE11's (the part-held and tower laws, adds_nothing), so the count is not of results.",
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261027T170011.101817Z): Becoming.Tasks, 167 declarations, each with an empty axiom report, all cited here; four laws on UE10's and UE11's definitions sit in the leaf until their owners move them. Built in one session; an independent read-only review by another AI agent (REVIEW-UE12) and a re-check (RECHECK-UE12), its findings taken without a third reading, in study section 430; no person's review recorded. Many laws are instances of UE10's and UE11's (the part-held and tower laws, adds_nothing), so the count is not of results.",
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261027T170011.101817Z）：Becoming.Tasks 之 167 项声明，公理报告皆空，本记录全引；涉 UE10、UE11 之定义之四律暂居此叶，待其主移之。于一会话中构建；另一 AI 代理作独立只读审查（REVIEW-UE12）并复查（RECHECK-UE12），其所见皆取而未再读，见研究第 430 节；未经人审。诸多律乃 UE10、UE11 之律之实例（持守该部分之律、塔之律、adds_nothing），故其数非结果之数。"
   },
   "next_delta": {

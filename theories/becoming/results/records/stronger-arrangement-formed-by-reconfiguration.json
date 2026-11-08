@@ -93,7 +93,7 @@
     "formal-not-empirical"
   ],
   "validation_scope": {
-    "en": "Checked by the module's checker with Lean 4.29.1 (receipt generated-selection-recurrence-verification, passed 7 October 2026, fresh temporary build, source unchanged during the check; it binds the current bytes): GeneratedSelectionRecurrence, 26 declarations audited, 15 with empty reports, its 16 theorems all cited here. The study records a review by the implementing author, no independent review; not reviewed by a person.",
+    "en": "Checked by the module's checker with Lean 4.29.1 (receipt generated-selection-recurrence-verification, passed 7 October 2026, fresh temporary build, source unchanged during the check; it binds the current bytes): GeneratedSelectionRecurrence, 26 declarations audited, 15 with empty reports, its 16 theorems all cited here. The study records a review by the implementing author, no independent review; no person's review recorded.",
     "zh": "以模块检查器与 Lean 4.29.1 检查（回执 generated-selection-recurrence-verification，2026年10月7日通过，新鲜临时构建，检查期间源码未变；绑定当前字节）：GeneratedSelectionRecurrence 审计 26 项声明，15 项报告为空，其 16 条定理此处皆引。研究记有实现者自审，无独立审查；未经人审。"
   },
   "next_delta": {

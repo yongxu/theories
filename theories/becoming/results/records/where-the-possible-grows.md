@@ -91,7 +91,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261029T145758.555114Z): Becoming.HeldPossible, 118 declarations, every one with an empty axiom report, all cited here; the two instance theorems, the laws of reach and traces under the held moves, adaptive_keeps_rule_iff and the root law sit in the leaf until the owners of the definitions they concern move them. Independent read-only reviews by a separate AI agent: REVIEW-UE11 and RECHECK-UE11 (study section 429), REVIEW-GW-LEAN and its re-check (448); not reviewed by a person.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261029T145758.555114Z): Becoming.HeldPossible, 118 declarations, every one with an empty axiom report, all cited here; the two instance theorems, the laws of reach and traces under the held moves, adaptive_keeps_rule_iff and the root law sit in the leaf until the owners of the definitions they concern move them. Independent read-only reviews by a separate AI agent: REVIEW-UE11 and RECHECK-UE11 (study section 429), REVIEW-GW-LEAN and its re-check (448); no person's review recorded.
 
 Canonical source: [HeldPossible.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldPossible.lean)
 

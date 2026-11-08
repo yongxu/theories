@@ -265,7 +265,7 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261028T083434.601834Z): all 76 declarations of Becoming.ReorderingGrowth, each with an empty axiom report. Drafted by an AI agent and read in the session; an independent read-only review by another AI agent (REVIEW-UE15) and a re-check, study section 438; not reviewed by a person. Most laws compose landed theorems.",
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261028T083434.601834Z): all 76 declarations of Becoming.ReorderingGrowth, each with an empty axiom report. Drafted by an AI agent and read in the session; an independent read-only review by another AI agent (REVIEW-UE15) and a re-check, study section 438; no person's review recorded. Most laws compose landed theorems.",
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261028T083434.601834Z）：Becoming.ReorderingGrowth 之全部 76 项声明，公理报告皆空。由一 AI 代理起草，会话中审读；另一 AI 代理作独立只读审查（REVIEW-UE15）并复查，见研究第 438 节；未经人审。多数律组合已落地之定理。"
   },
   "next_delta": {

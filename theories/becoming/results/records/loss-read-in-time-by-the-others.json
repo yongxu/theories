@@ -242,7 +242,7 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T200926.001323Z): Becoming.ReadInTime, 39 declarations, every one with an empty axiom report, all cited here. Built in one session; one independent read-only review by a separate AI agent, its findings taken as the kit note says (its probes kept in the kit), study section 420; not reviewed by a person.",
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T200926.001323Z): Becoming.ReadInTime, 39 declarations, every one with an empty axiom report, all cited here. Built in one session; one independent read-only review by a separate AI agent, its findings taken as the kit note says (its probes kept in the kit), study section 420; no person's review recorded.",
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T200926.001323Z）：Becoming.ReadInTime，39 项声明，公理报告皆空，本记录全引。于一会话中构建；另一 AI 代理作一次独立只读审查，其所见依工作包说明采纳（其探针存于工作包），见研究第 420 节；未经人审。"
   },
   "next_delta": {
@@ -421,7 +421,7 @@
     {
       "path": "theories/becoming/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "5624f33293486770b648cf18d73fa1677250f4f22ec133528c5ae34ce934a23f"
+      "sha256": "0a8f1a2339b9768eacde2e75a01bbf7a7c45cf98ccc5c166ea0a06570df8d6f2"
     },
     {
       "path": "theories/meta-attractor/README.md",

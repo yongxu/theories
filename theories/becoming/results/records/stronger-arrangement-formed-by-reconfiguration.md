@@ -38,7 +38,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Checked by the module's checker with Lean 4.29.1 (receipt generated-selection-recurrence-verification, passed 7 October 2026, fresh temporary build, source unchanged during the check; it binds the current bytes): GeneratedSelectionRecurrence, 26 declarations audited, 15 with empty reports, its 16 theorems all cited here. The study records a review by the implementing author, no independent review; not reviewed by a person.
+Checked by the module's checker with Lean 4.29.1 (receipt generated-selection-recurrence-verification, passed 7 October 2026, fresh temporary build, source unchanged during the check; it binds the current bytes): GeneratedSelectionRecurrence, 26 declarations audited, 15 with empty reports, its 16 theorems all cited here. The study records a review by the implementing author, no independent review; no person's review recorded.
 
 Canonical source: [GeneratedSelectionRecurrence.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/GeneratedSelectionRecurrence.lean)
 

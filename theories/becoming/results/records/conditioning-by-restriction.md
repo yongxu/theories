@@ -49,7 +49,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T163242.561061Z): Becoming.ConditionalWeights, 110 declarations, every one with an empty axiom report; this record cites 78 of them and exit-from-a-margin the other 32. Built in one session; an independent read-only review by a separate AI agent with a Lean rebuild, its findings taken and the revision re-checked, in study section 412; not reviewed by a person.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T163242.561061Z): Becoming.ConditionalWeights, 110 declarations, every one with an empty axiom report; this record cites 78 of them and exit-from-a-margin the other 32. Built in one session; an independent read-only review by a separate AI agent with a Lean rebuild, its findings taken and the revision re-checked, in study section 412; no person's review recorded.
 
 Canonical source: [ConditionalWeights.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionalWeights.lean)
 

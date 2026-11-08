@@ -1,6 +1,6 @@
 # Review dossier P: philosophy
 
-*Part of the review packet of the Theory of Becoming, for readers in moral philosophy and metaethics, personal identity and environmental ethics. No person has reviewed this work. It was written with AI, the Lean proofs included. The proofs and quotations are checked by machine, everything else only by further AI readers ([how this dossier was made](#how-this-dossier-was-made)).*
+*Part of the review packet of the Theory of Becoming, for readers in moral philosophy and metaethics, personal identity and environmental ethics. No independent human review of this work is recorded yet. It was written with AI, the Lean proofs included, and the person who directs the work has read its important parts, not every word. The proofs and quotations are checked by machine, everything else by further AI readers ([how this dossier was made](#how-this-dossier-was-made)).*
 
 <a id="the-dossier-in-ten-minutes"></a>
 ## The dossier in ten minutes
@@ -30,7 +30,7 @@ What the path does not reach, such as present beings beyond every closure, needs
 
 **Theses and tests** ([P-26](#p-26)). T8, argued: for life, that is for those whose own line runs through life, the way is 生生, life in the whole and its continuing generation (an AI reading), compared by widening what can form; whose losses count stays every continuation's. T5, that valuers counting everything positively can differ only on mixed comparisons, is proved for additive weightings, otherwise conjectured. Of its two frozen tests, with AI personas as valuers, the first failed every pre-registered rule and the second some. Human valuers are untested.
 
-**What is not claimed.** That the ethics is proved, or that it derives from the condition: the condition fixes scope and orders nothing, and C gives order. That the condition, C or the step is warranted, or any warrant binding every possible mind. An unconditional or complete ranking of mixed comparisons. Any duty, right, recognition, motivation or compliance. Constraints on acts, the value of new lives, or well-being beyond admitted continuation. That P2 and P4 are warranted, or that P3 holds of actual selves. Review by any person.
+**What is not claimed.** That the ethics is proved, or that it derives from the condition: the condition fixes scope and orders nothing, and C gives order. That the condition, C or the step is warranted, or any warrant binding every possible mind. An unconditional or complete ranking of mixed comparisons. Any duty, right, recognition, motivation or compliance. Constraints on acts, the value of new lives, or well-being beyond admitted continuation. That P2 and P4 are warranted, or that P3 holds of actual selves. Independent human review.
 
 **What we ask.** Of each item: is it correctly described and credited, put at its right strength, and soundly argued? Above all:
 1. The chapter's two questions above ([P-20](#p-20)).
@@ -681,7 +681,7 @@ For each item give one verdict: **accept** (the item is correctly described, cre
 <a id="how-this-dossier-was-made"></a>
 ## How this dossier was made
 
-Everything in the theory was made with AI: the Lean proofs, the chapters, the readings and this dossier. No human has reviewed any of it.
+Everything in the theory was made with AI: the Lean proofs, the chapters, the readings and this dossier. No independent human review of it is recorded; the person who directs the work has read its important parts, not every word.
 - A script copied the Lean statements from the source files ([`lean_statements.py`](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rp2-philosophy/lean_statements.py)); the packet's script checks every quotation against the file it names and every Lean name against the sources; the prose is AI-written and may be wrong.
 - An independent AI reader reviewed a first draft; its findings were taken.
 - The ethics was restated on 24 October 2026, the day this dossier was written: the continuation condition, read de se as lying within a center's closure, was stated on the theory's root ([P-17](#p-17)), and chapter 7 now leads with that structural reading; the free significance is not lifted onto the root. The AI reviews the method chapter lists predate this.

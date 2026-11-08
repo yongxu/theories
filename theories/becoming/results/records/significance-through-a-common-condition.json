@@ -94,7 +94,7 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T212948.819150Z): the cited declarations of Becoming.ValuationFrames and Becoming.Metaethics have empty axiom reports; core purity verified. The laws were first registered within becoming-renewal-reading's claim; the record was read against the current Lean; not reviewed by a person.",
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T212948.819150Z): the cited declarations of Becoming.ValuationFrames and Becoming.Metaethics have empty axiom reports; core purity verified. The laws were first registered within becoming-renewal-reading's claim; the record was read against the current Lean; no person's review recorded.",
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T212948.819150Z）：Becoming.ValuationFrames 与 Becoming.Metaethics 中所引声明公理报告皆空；核心纯净已核对。诸律先登于 becoming-renewal-reading 之主张中；本记录对照当前 Lean 读过；未经人审。"
   },
   "next_delta": {
