@@ -48,6 +48,29 @@ Ren, 8 November 2026 ([his words](../../../../../../sources/15-codex-theory-conv
   - the atlas's judgments are given as 06 counts them, each in its labelled cluster.
 - **Then the re-score.** The workflow is [rescore-workflow.js](workflows/rescore-workflow.js): seven fresh AI reviewers, one per lens, score the seven questions on the whole; a checker verifies their findings; a synthesis lists what keeps any score below 8.
 
+## The re-score, round 1
+
+Seven fresh AI reviewers, one per lens (first contact, the site, the unification, the growth, the uses, the navigation, the Chinese way in), scored the seven questions on the whole after (b), (c), the Chinese uses pages and the integration had landed. An AI checker verified their findings, and a synthesis listed what kept each question below 8 ([drafts/rescore1-synthesis.md](drafts/rescore1-synthesis.md)). Medians, Q1 to Q7: 6, 7, 7, 7, 6, 7, 6, against RV's 4, 2, 4, 3, 4, 4, 3. No question reached 8.
+
+What this round's landing took, from the synthesis:
+- **What the work is for.** The first screen now opens it with the use, in the uses page's words with its limit (no test designed from the account has yet run on a deployed pipeline), then the one page's centre given as a reading. README's directions moved to RESEARCH.md, and the opening gained an AI-written line pointing to where the central claims stand.
+- **The one page.** Its centre sits in "What it is"; its T7 cell is in sentences, with LA2's judge read in context (formation by training untested, as 02 §9 and LA2's folder say); "under each instruction tried" (also in the overview and the examples).
+- **The uses pages.**
+  - a brief above the table, and a line for fields with no row;
+  - the alignment row's terms glossed;
+  - the audit says which questions a law answers, and reads 07 §6's published measurements at their standing;
+  - the heaviest cells are trimmed, with the wisdom counts moved whole to the examples page, 06's unchecked 31 included.
+- **The way to the evidence.** 22 chapter links name the experiment's folder first, which GitHub shows, keeping the study section second. The register's counts add up. The chapters' page opens with a reader's table. The alignment dossier, the review packet and COLLECTIVE-DIRECTION link the uses.
+- **The site.**
+  - It carries the records, the experiments' pages and README.zh.md.
+  - Chinese pages get a Chinese line.
+  - The language link goes to a page's own edition.
+  - Pictures open at full size.
+  - Cards time the part a reader is sent to.
+  - The map has a way back.
+
+In the same round, the atlas's session made the Chinese way in (README.zh.md, one navigation line on every Chinese front, the map's site bar), and the (c) session took the pictures (the spine legible, with 08 §7's standings; the lineage in phases) and 08 §7's tables. The two readers of this round closed at the second, with no high or medium finding. Then comes the re-score's second round.
+
 ## Sent to the batched pass
 
 Each makes a correct statement more exact:
