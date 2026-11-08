@@ -295,7 +295,7 @@ def svg(s, lang, weeks):
         out.append(marker(x, y, p['label'], p['id'] in thread, p.get('origin')))
     # short titles on the major points, in rows above the lanes, each on a vertical leader from its point
     title_floor = base - 16 - 17 * max(len(lanes), 1) - 14
-    rows = title_rows(placed, lang, thread=thread)
+    rows = title_rows(placed, lang, thread)
     crossed = title_crossings(rows, thread)
     if crossed:  # the search found no layout: refuse, rather than draw leaders across titles
         raise ValueError(f'lineage picture ({lang}): titles cross or overlap: {crossed[:3]}')
@@ -359,7 +359,7 @@ def label_width(label, bold=False, size=14):
     return w * size * (1.06 if bold else 1.0)
 
 
-def title_rows(placed, lang, most=12, budget=200000, thread=None):
+def title_rows(placed, lang, thread, most=12, budget=200000):
     """Rows for the major points' titles, so that no leader crosses a title (RW's re-score: leader lines crossed the
     titles). Each title hangs right of its point, left of it or centred; in one row titles do not overlap, and a title
     in a lower row does not stand over a higher title's point, whose leader rises past it. A search, left to right,
@@ -369,8 +369,7 @@ def title_rows(placed, lang, most=12, budget=200000, thread=None):
     for n, p, x, y in placed:
         if p.get('short'):
             label = f'{n} · {p["short"][lang]}'
-            bold = p['id'] in thread if thread is not None else bool(p.get('thread'))  # drawn bold on the thread
-            items.append((x, y, label, label_width(label, bold) + 4, p))
+            items.append((x, y, label, label_width(label, p['id'] in thread) + 4, p))  # drawn bold on the thread
     items.sort(key=lambda i: i[0])
     if not items:
         return []
@@ -430,11 +429,11 @@ def title_rows(placed, lang, most=12, budget=200000, thread=None):
     return [(q[0], items[i][0], items[i][1], items[i][2], q[4], items[i][4]) for i, q in enumerate(found)]
 
 
-def title_crossings(rows, thread=None):
+def title_crossings(rows, thread):
     """What title_rows is to prevent, as pairs of titles: a leader crossing a lower title, or two titles overlapping in
     one row. None where it has done its work."""
     def span(x, label, anchor, p):
-        w = label_width(label, p.get('id') in thread if thread is not None else bool(p.get('thread'))) + 4
+        w = label_width(label, p.get('id') in thread) + 4
         x0 = x - 6 if anchor == 'start' else x + 6 - w if anchor == 'end' else x - w / 2
         return x0, x0 + w
     out = []

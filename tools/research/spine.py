@@ -51,7 +51,7 @@ GR = 58               # the grammar's circle
 KEEP = GR + 26        # the base distance of a pair's curves from the centre is at least KEEP + 24; a pair's lanes sit
                       # up to 32 nearer (formal-reuse 8, interpretive 24, application 32), still clear of the grammar's
                       # circle (the tests hold GR + 6); 16 between a pair's two directions leaves a count room on its curve
-LANE_STEP = 18        # between the lanes of pairs that pass near the grammar
+LANE_STEP = 16        # between the lanes of pairs that pass near the grammar
 LABEL_MIN = 15        # counts written on the picture
 LEAD = 5              # how much nearer its own curve than any other a count must stand
 LEGEND_X = 470
@@ -660,14 +660,14 @@ def svg(graph, s, lang, info=None):
         if (not nearest_is(c)(cx_, cy_) or not all(clear_of_circle(box, o) for o in hard)
                 or any(overlaps(box, b) for b in boxes + [l[0] for l in labels])):
             raise ValueError(f'spine picture ({lang}): no place for the count {c["n"]} of {c["from"]} to {c["to"]} '
-                             f'nearer its own curve than any other and clear of the circles')
+                             f'nearer its own curve than any other and clear of the circles, the labels and its pair\'s curves')
         labels.append((box, text((box[0] + box[2]) / 2, box[3] - 3.5, body, 14, 'bold' if back else 'normal', 'middle',
                                  BACKWARD if back else FORWARD, True)))
         if info is not None:
             info.setdefault('counts', []).append((c, box))
     out += [l[1] for l in labels]
     if info is not None:
-        info.update({'curves': L['curves'], 'circles': circles + badges})
+        info.update({'curves': L['curves'], 'circles': circles + badges, 'boxes': boxes})
     low = max([b[3] for b in boxes] + [centre[k][1] + r[k] for k in order] + [py + 15 for _, py, _ in badges]) + 40
     # left column: the premises, their arrows up the left margin into chapter 7, then the theses' key
     sx, sy = centre['significance']
@@ -833,7 +833,7 @@ def lead(graph, page_path):
              f'grammar, the root\'s vocabulary, is at the centre, and a spoke\'s width shows what share of the chapter\'s core '
              f'modules state their laws on it. A solid curve from one chapter to another counts the uses of the second\'s '
              f'results by the first\'s recorded as `formal-reuse`, a kind RESULT-WORKFLOW keeps for a verified inference (dashed '
-             f'and dotted curves are other dependences, with no count written): {total:,} '
+             f'and dotted curves between chapters are other dependences, with no count written): {total:,} '
              f'between chapters, {sum(into[k] for k in top):,} of them into {name[top[0]].lower()} and {name[top[1]].lower()}, '
              f'and {backward:,} running backward, an earlier chapter\'s results using a later one\'s. The two boxes are the '
              f'ethics\' premises, each a hypothesis where used, neither asserted. The badges T1 to T8 are the theses at the '
@@ -893,7 +893,7 @@ def section(graph, page_path):
              f'later one\'s: {len(back)} of the {len(drawn)} pairs drawn'
              + (f', the largest {name[biggest[0]].lower()} to {name[biggest[1]].lower()} with '
                 f'{between[biggest]["formal-reuse"]}' if biggest else '') + '. '
-             f'Dashed curves are `interpretive`, kept for "an argument dependency", and dotted ones `application`; `related`, '
+             f'Dashed curves between chapters are `interpretive`, kept for "an argument dependency", and dotted ones `application`; `related`, '
              f'which RESULT-WORKFLOW keeps for analogy, is not drawn ({related:,} edges). Not drawn as formal-reuse curves: '
              f'{plural(len(small), "pair")} with fewer than {DRAW_MIN} formal-reuse uses ({sum(small)} uses)'
              + (f', {other_kind} of them drawn as {other_en}' if other_kind else '') + '; '
@@ -974,7 +974,7 @@ def zh_page(graph):
             f'*由 `tools/research/spine.py` 依理论图与 [spine.json]({rel(DATA)}) 生成；[英文图]({rel(SVG["en"])})。*', '',
             f'**细读。** 每个圆是八章之一，大小为其所含结果数；中央是文法，即根的词汇；辐条的粗细表示该章核心模块中有多大比例在'
             f'文法上陈述其律。从甲章到乙章的实线，计乙章的结果被甲章的结果使用、记为 `formal-reuse` 的次数，'
-            f'RESULT-WORKFLOW 把这一类留给已核验的推理（虚线与点线是别种依赖，不计数）：章与章之间共 {total} 次，其中 {into[top[0]] + into[top[1]]} 次进入'
+            f'RESULT-WORKFLOW 把这一类留给已核验的推理（章与章之间的虚线与点线是别种依赖，不标数字）：章与章之间共 {total} 次，其中 {into[top[0]] + into[top[1]]} 次进入'
             f'「{zname(top[0])}」与「{zname(top[1])}」两章，{backward} 次是逆向的，即章序在前的一章的结果使用章序在后的一章的结果。两个方框是伦理的两个'
             f'前提，各在所用之处为假设，二者都不断言。徽标 T1 到 T8 是各论题，位于陈述它们的那一章，按其冻结检验的结局着色；'
             f'下表以各自所在行的话给出它们。曲线是一种依赖，不是意义上的一致。', '',

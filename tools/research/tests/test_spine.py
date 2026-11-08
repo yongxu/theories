@@ -160,6 +160,11 @@ class Drawing(unittest.TestCase):
                 self.assertGreater(other, gap(c) + spine.LEAD - 0.5, (lang, c['n']))
                 for circle in info['circles']:
                     self.assertTrue(spine.clear_of_circle(box, circle), (lang, c['n'], circle))
+                for block in info['boxes']:
+                    self.assertFalse(spine.overlaps(box, block), (lang, c['n'], block))
+            placed = [box for _, box in info['counts']]
+            for i, a in enumerate(placed):
+                self.assertFalse(any(spine.overlaps(a, b) for b in placed[i + 1:]), (lang, a))
 
     def test_a_count_with_no_place_stops_the_render(self):
         g = (ROOT / 'theories/becoming/results/data/theory-graph.json').read_text(encoding='utf-8')

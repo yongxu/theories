@@ -38,7 +38,7 @@
 | [第六章](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) | 古文：读出、检验与分歧；中文 | 约 123–160 分钟 |
 | [检验](TESTS.md) | 冻结的检验，按结局排列，未通过者在前；英文 | 约 33–42 分钟 |
 | [对照表](theories/becoming/results/atlas/CROSSWALK.zh.md) | 早先的理论文件夹与各思想领域，读作现行说明中的什么，附图与计数；各组在英文页上 | 约 3–4 分钟 |
-| [理论图](theories/becoming/results/THEORY-GRAPH.md) | 概念、结果、模块、文本与各章之间的连接；英文，脊柱部分有[中文版](theories/becoming/results/THEORY-GRAPH.zh.md)（约 16–21 分钟） | 约 61–79 分钟 |
+| [理论图](theories/becoming/results/THEORY-GRAPH.md) | 概念、结果、模块、文本与各章之间的连接；英文，脊柱部分有[中文版](theories/becoming/results/THEORY-GRAPH.zh.md)（约 17–21 分钟） | 约 61–79 分钟 |
 | [怎样长成](theories/LINEAGE.zh.md) | 本说明怎样从更早的文字与理论文件夹长成 | 全文约 100–130 分钟；简述、图、标签与这条线索约 15–19 分钟 |
 | [术语表](GLOSSARY.zh.md) | 每个词的一义与其所属之处 | 约 17–22 分钟 |
 | [审查包](theories/becoming/review/README.zh.md) | 给审读者的材料与问题；古文、佛学两份与重新归类的编码手册为中文 | 封面约 7–9 分钟 |
