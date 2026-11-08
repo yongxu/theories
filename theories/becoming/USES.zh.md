@@ -36,7 +36,7 @@
 
 - AI 系统的对齐：[渔民与贻贝床](USES-EXAMPLES.zh.md#the-fishers-and-the-mussel-bed)
 - AI 系统的对齐：[审计一个语言模型评判者](USES-EXAMPLES.zh.md#auditing-a-language-model-judge)
-- AI 系统的对齐：[一次完整的审计：依据成文原则的 AI 反馈](USES-EXAMPLES.zh.md#a-worked-audit-ai-feedback-against-written-principles)
+- AI 系统的对齐：[审计实例：依据成文原则的 AI 反馈](USES-EXAMPLES.zh.md#a-worked-audit-ai-feedback-against-written-principles)
 - AI 系统的对齐：[三个可重用的环境：IN1、CG2 与 LA2](USES-EXAMPLES.zh.md#three-environments-to-reuse-in1-cg2-and-la2)
 - 人与 AI 共处：[把 AJ 当作一张核对清单：目标不是什么，以及三个问题](USES-EXAMPLES.zh.md#aj-as-a-checklist-what-the-goal-is-not-and-three-questions)
 - 人与 AI 共处：[交接一项服务：以 J1–J4 衡量的构造情形](USES-EXAMPLES.zh.md#handing-over-a-service-the-constructed-case-against-j1j4)
