@@ -15,8 +15,8 @@
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/REVIEWS.md": "0ccef05c0f94ed738029b8aa50c19901bcddb80807925beeb2dca83cb56dc687",
     "_process/research/README.md": "ebdb2be9be35838f733940c261a282f051f63ff360f7dd605d00f95bd90a6964",
     "sources/README.md": "7d7f527445db2f40df09fbfd363c9ec321c410b4f4a4b08cfe857f804482c1e6",
-    "theories/LINEAGE.md": "a80271a02400ad4d2cb33d495f9ed4deb93e48a06a2d8daf1debae4fb28f450e",
-    "theories/LINEAGE.zh.md": "eea4f3362d2886a2d7863d07a7c93388f4742aa24bd9ca0854df288092d17b2c",
+    "theories/LINEAGE.md": "dfac291b282c47ff2de471052bf296b66a3cafd1e4624f5dd54c282fa02c5181",
+    "theories/LINEAGE.zh.md": "f07a649f74879bebb251a9ef89b3ff3a69117b53e3b8334b7ddd051849e5f6b2",
     "theories/README.md": "af3335c3ed9ab5963e28371e97ba015c90328297a5d6c97686fb46c5413ece66",
     "theories/becoming/README.md": "8237df4a4a50340cc56b6bba5fa077400cea64ed759b8c14dd3ab8e73e693646",
     "theories/becoming/chapters/CLAIMS.md": "a9ac5ff80ac0db24db83cbe4a3368e1f9607fc2b2d8a16406409a6034b35ebd5",
@@ -71,7 +71,7 @@
     "theories/becoming/results/completion/COMPLETION.md": "9920ec66b082f83d3828a7adb826255a1d6750b40f2e012a3ff147745d862d45",
     "theories/becoming/results/data/atlas.json": "43a17470656a55005e41a08fdbbc6d35d6002eded0554792204c208a1772613c",
     "theories/becoming/results/data/lean-index.json": "d5ed3eeb68faca7f79e8b48991fd5a7607c0fccdfc02ad98a4e8601bbbaa8ed5",
-    "theories/becoming/results/data/source-index.json": "748741b32d5ec74b273957a97a1263b1b70c35a2608e9d4d77249deb4352676f",
+    "theories/becoming/results/data/source-index.json": "8dabc635571780e59fea51b7f38f86e6479ac860355ea7e3c6537acd5a0b6773",
     "theories/becoming/results/data/theory-graph.json": "e886ce5f55a7bed76284e5c897f59816651abafa91f13af8dc884c80c572e6cb",
     "theories/becoming/results/lean-declarations/abstraction.md": "ba340581b509801e9301d53c97d5e60bf167b138e558da4a411e45a95600ae00",
     "theories/becoming/results/lean-declarations/becoming-core-part-1.md": "e21299c192716d2d47ec685ec7c77c1734babf810b7a68eea832a51f709632a5",
@@ -657,6 +657,8 @@
     "theories/becoming/results/spine.zh.svg": "c3fdb3893a05b9a122c2af3f05f40398973da9b71b881cce0a5e74d65e20376a",
     "theories/lineage.svg": "a1c857796a6af93b0d71affab10a5fc05949de3ab55a0402e2b66e79045d7f9b",
     "theories/lineage.zh.svg": "5222a8ad3170b89f4ada3d485cdbf48aea8d5dccc549232f076e32a26122e18e",
-    "theories/becoming/results/atlas/connections.svg": "4f67575b46cc3991e6a19c87b1970a450cb9c415ecffe6dca9a040002cdf195c"
+    "theories/becoming/results/atlas/connections.svg": "4f67575b46cc3991e6a19c87b1970a450cb9c415ecffe6dca9a040002cdf195c",
+    "theories/becoming/results/atlas/CROSSWALK.zh.md": "b8d1f4efa4fd44b89a7dc1e90ae31dfd8ff11d2f1f9477371e7a096fe9fe98ae",
+    "README.zh.md": "093c6ca7fef516e7d00bc535156dd91fc0b85d02351b94c664dd007e4064c8b1"
   }
 }

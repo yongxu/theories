@@ -10,7 +10,6 @@
         "MAP.md",
         "OPEN-QUESTIONS.md",
         "README.md",
-        "README.zh.md",
         "RESULTS.md",
         "TESTS.md",
         "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/FIXED-FINISH-LINE-AUDIT.md",
@@ -5730,6 +5729,8 @@
     "theories/becoming/chapters/06-CLASSICAL-TEXTS.md": {
       "title": "古文：读出、检验与分歧",
       "local_links": [
+        "GLOSSARY.zh.md",
+        "TESTS.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/PLAN.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/classify/REPORT.md",
@@ -5754,6 +5755,11 @@
         "experiments/wenli-reading-transfer/FIDELITY.md",
         "sources/15-codex-theory-conversations/2026-10-23-continuity-as-root/minimum-grammar-of-becoming.md",
         "sources/15-codex-theory-conversations/2026-10-23-continuity-as-root/three-minima.md",
+        "theories/LINEAGE.zh.md",
+        "theories/becoming/ONE-PAGE.zh.md",
+        "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+        "theories/becoming/USES-EXAMPLES.zh.md",
+        "theories/becoming/USES.zh.md",
         "theories/becoming/chapters/01-ROOT.md",
         "theories/becoming/chapters/02-MAP.md",
         "theories/becoming/chapters/03-KNOWING.md",
@@ -5761,6 +5767,7 @@
         "theories/becoming/chapters/05-COLLECTIVES.md",
         "theories/becoming/chapters/07-SIGNIFICANCE.md",
         "theories/becoming/chapters/08-METHOD.md",
+        "theories/becoming/chapters/README.md",
         "theories/becoming/history/CHINESE-SOURCES-AND-BECOMING.md",
         "theories/becoming/history/CIVILIZATION-THOUGHT-AND-BECOMING.md",
         "theories/becoming/history/DAO-AND-GENERATIVITY-2026-10-23.md",
@@ -5772,7 +5779,8 @@
         "theories/becoming/history/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
         "theories/becoming/history/WANG-YANGMING-2026-10-23.md",
         "theories/becoming/history/WENLI-AND-BECOMING.md",
-        "theories/becoming/history/YI-ZHUAN-AND-BECOMING.md"
+        "theories/becoming/history/YI-ZHUAN-AND-BECOMING.md",
+        "theories/becoming/review/README.zh.md"
       ]
     },
     "theories/becoming/chapters/07-SIGNIFICANCE.md": {
