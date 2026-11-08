@@ -191,7 +191,23 @@ class LandingPageTests(unittest.TestCase):
         self.assertEqual(errors, [])
         # six name a thesis; held and not-run never ran; of the four that ran, the refused one is 'other'
         self.assertIn('4 1 1 1 1 2 6', pages[zh_fronts.PAGE])
-        self.assertEqual([english_tests.screen_count(f, self.root) for f in fields], [4, 1, 1, 1, 1, 2, 6])
+        # Data TESTS.md's own render refused (so it is not among the outputs): the landing page waits, that render says why.
+        for bad in ('not json', '{"tests": [3]}', '{"tests": [{"thesis": null}]}', '{"rows": []}'):
+            with self.subTest(data=bad):
+                data.write_text(bad, encoding='utf-8')
+                self.assertEqual(self.render('# 首\n\n{{tests:ran}}\n'), ({}, []))
+        # No data at all: the field names the file it could not read, not the template's field.
+        data.unlink()
+        pages, errors = self.render('# 首\n\n{{tests:ran}}\n')
+        self.assertEqual(pages, {})
+        self.assertTrue(any(zh_fronts.TESTS_DATA + ' cannot be read' in e and 'FileNotFoundError' in e for e in errors), errors)
+        # Rows of the wrong shape reach screen_count as the data's fault, whatever the error.
+        for bad, why in (('not json', 'JSONDecodeError'), ('{"tests": [3]}', 'TypeError'), ('{"tests": [{"thesis": null}]}', 'AttributeError'),
+                         ('{"rows": []}', 'KeyError')):
+            with self.subTest(data=bad):
+                data.write_text(bad, encoding='utf-8')
+                with self.assertRaisesRegex(english_tests.Unreadable, why):
+                    english_tests.screen_count('ran', self.root)
 
     def test_links_are_written_from_the_template_and_a_generated_page_on_disk_is_refused(self):
         pages, errors = self.render('# 首\n\n{{nav}}\n\n[一页](../../theories/becoming/ONE-PAGE.zh.md) 与 [术语](../../GLOSSARY.zh.md#锁定)。\n')
@@ -216,7 +232,7 @@ class LandingPageTests(unittest.TestCase):
     def test_an_unknown_field_or_a_missing_page_renders_nothing(self):
         for body, word in (('{{when:now}}', 'unknown field'), ('{{time:theories/none.md}}', 'missing page'),
                            ('{{count:invented}}', 'unknown status'), ('{{stated:theories/becoming/ONE-PAGE.zh.md}}', 'states no reading time'),
-                           ('{{tests:nearly}}', 'unknown count of tests'), ('{{tests:ran}}', 'cannot be read')):
+                           ('{{tests:nearly}}', 'unknown count of tests'), ('{{tests:ran}}', 'tests.json cannot be read')):
             with self.subTest(body=body):
                 pages, errors = self.render('# 首\n\n' + body + '\n')
                 self.assertEqual(pages, {})

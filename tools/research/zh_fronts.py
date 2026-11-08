@@ -276,11 +276,11 @@ def render(records: list, outputs: dict, root: Path = ROOT) -> tuple[dict, list[
             from tools.research import tests_page as english_tests
             try:
                 return str(english_tests.screen_count(arg, root))
-            except ValueError as e:
+            except english_tests.UnknownCount as e:
                 errors.append(f'{TEMPLATE} {e}')
                 return m.group(0)
-            except (OSError, KeyError) as e:
-                errors.append(f'{TEMPLATE} counts the tests, which cannot be read: {e!r}')
+            except english_tests.Unreadable as e:
+                errors.append(f'{TEMPLATE} counts the tests: {e}')
                 return m.group(0)
         if kind == 'time' and arg in ('screen', 'page'):
             return m.group(0)

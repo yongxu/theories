@@ -282,8 +282,8 @@ def first_screen(records, opening, config=None, root=ROOT, above='', below=''):
             from tools.research import tests_page  # it imports this module
             try:
                 return str(tests_page.screen_count(arg, root))
-            except ValueError as e:
-                raise ValueError('readme_first_screen ' + str(e)) from None
+            except tests_page.UnknownCount as e:
+                raise ValueError('readme_first_screen ' + str(e)) from None  # an Unreadable names the data itself
         if kind == 'time':
             if arg == 'screen':
                 return m.group(0)
