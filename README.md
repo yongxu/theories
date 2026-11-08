@@ -12,7 +12,7 @@
 
 **They belong to an account** of how anything comes to be, lasts, changes and passes away within one relational unfolding, without assuming that becoming is good, meant as one in which people and trained systems can predict, come to share an understanding and coordinate; no check run inside the work can show that it serves this.
 
-**Start with** [the one page](theories/becoming/ONE-PAGE.md) (15–19 minutes). [The opening](#truth-exists) is a first-person conviction (22–28 minutes).
+**Start with** [the one page](theories/becoming/ONE-PAGE.md) (15–20 minutes). [The opening](#truth-exists) is a first-person conviction (22–28 minutes).
 
 **One case.** In [a test whose predictions and scoring were fixed before it ran](experiments/direction-installation/README.md), three fishers, language models told what to do, share a lake whose bed of mussels gives them nothing and dies the first month fewer than 70 tons are left. The community's largest steady catch, 50 tons a month, ends it; 30 a month keeps it and costs 40% of the catch. Told nothing of the bed, they kept it in no season, under each instruction tried (untold, the bed lay outside what their selection read, a reading). Told of it, told to count everything whose continuation depends on what their fishing changes (the test calls this the scope), given a rule for choosing among courses ([in full](theories/becoming/ONE-PAGE.md)), and able to talk, one model of two kept it in 8 of 10 seasons, against 3 of 10 under the community's goal alone. The test's own frozen predictions mostly failed ([the tests](TESTS.md)).
 

@@ -210,7 +210,7 @@ class OverviewTests(unittest.TestCase):
 
     def test_render_writes_the_page_and_the_picture(self):
         out = cm.render(json.dumps(atlas(entry('cx-a', 'cxg-early'))), json.dumps(GRAPH))
-        self.assertEqual(set(out), {cm.PAGE, cm.OVERVIEW})
+        self.assertEqual(set(out), {cm.PAGE, cm.OVERVIEW, cm.OVERVIEW_ZH})
 
     def test_short_names(self):
         self.assertEqual(cm._short('The meta-attractor (元吸引子 / 总体化吸引子)'), 'The meta-attractor')

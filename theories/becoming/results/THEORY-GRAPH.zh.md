@@ -4,7 +4,7 @@
 
 [English](THEORY-GRAPH.md) · [首页](../../../README.zh.md) · [一页](../ONE-PAGE.zh.md) · [用途](../USES.zh.md) · [实例](../USES-EXAMPLES.zh.md) · [总览](../THE-THEORY-OF-BECOMING.zh.md) · [八章（英文）](../chapters/README.md) · [古文（第六章）](../chapters/06-CLASSICAL-TEXTS.md) · [检验](../../../TESTS.zh.md) · [对照表](atlas/CROSSWALK.zh.md) · [怎样长成](../../LINEAGE.zh.md) · [术语表](../../../GLOSSARY.zh.md) · [审查包](../review/README.zh.md)
 
-*约 27–36 分钟读完。*
+*约 28–36 分钟读完。*
 
 本页是[理论图](THEORY-GRAPH.md)中“各章一览”的中文版：这幅图、怎样读它、核心声明的地位、五条共律与论题、它显示什么与不显示什么，以及各章之间边的种类表；各区域的结果、模块与文本的列表只在英文版中。本页由 AI 翻译；引自英文文本的话，除标明为英文原文者外，都是译文，未经核对，以英文原文为准。
 
@@ -33,7 +33,7 @@
 
 *由 `tools/research/spine.py` 依[共律数据](data/shared-laws.json)与 [spine.json](data/spine.json) 生成；[英文图](standings.svg)。*
 
-**十一项推导而得者**，各由一次 AI 写成的审阅读作文法之律的一个情形（[对该记录的审阅](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md)，[对 `Listed.coming_of_ceasing` 一行的审阅](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4C-RECORD.md)）；迄今所有审阅都出自 AI（[08](../chapters/08-METHOD.md#review-status)）。其中八项（除表中最后三行外），用 08 §7 的话说，是“the eight connected rows that the reading of connected rows took as derived”（对连接行的读法取为推导而得的八个连接行）：一行达到文法、且其陈述中没有平衡，按规则即为连接行（[DESIGN-BOUNDARY](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/DESIGN-BOUNDARY.md) §2，规则 1 与 2），[对连接行的读法](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/CONNECTED-ROWS-READING.md)（也是 AI 写成的）标出其中的情形。每个 «…» 都是 [`Becoming.GrammarLaws`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean) 中陈述的一条律。
+**十一项推导而得者**，各由一次 AI 写成的审阅读作文法之律的一个情形（[对该记录的审阅](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md)，[对 `Listed.coming_of_ceasing` 一行的审阅](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4C-RECORD.md)）；迄今所有记录在案的审阅都出自 AI（[08](../chapters/08-METHOD.md#review-status)）。其中八项（除表中最后三行外），用 08 §7 的话说，是“the eight connected rows that the reading of connected rows took as derived”（对连接行的读法取为推导而得的八个连接行）：一行达到文法、且其陈述中没有平衡，按规则即为连接行（[DESIGN-BOUNDARY](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/DESIGN-BOUNDARY.md) §2，规则 1 与 2），[对连接行的读法](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/CONNECTED-ROWS-READING.md)（也是 AI 写成的）标出其中的情形。每个 «…» 都是 [`Becoming.GrammarLaws`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean) 中陈述的一条律。
 
 | 声明 | 所属情形 | 记录依据的第一句（末行另引其地位一句；英文原文） | 其律中列有它的结果 |
 |---|---|---|---|
