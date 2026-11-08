@@ -78,7 +78,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cr1-coupling-correspondence/CORRESPONDENCE.md",
       "role": "statement",
-      "sha256": "ab5958012d5d92e52257686c9fde8f800088512737ad0aa11dc3f55938b3d3c4",
+      "sha256": "71b2d6874b5e902707e8c6303586cb024c36e3fbafceb595f7939a9998df395f",
       "declarations": []
     },
     {
@@ -103,8 +103,8 @@
       "zh": "2026年10月26日，工作板条目 DF1b（研究第 422 节）：Gao、Schulman 与 Hilton 按发表年份 2023 引用（ICML，PMLR 202；arXiv 2022 年 10 月），与本说明他处一致。"
     },
     {
-      "en": "8 November 2026, RW: the study's section 2 corrected: Constitutional AI keeps human labels for helpfulness (the paper's §4.1), so humans supply only principles, and couple in through them alone, for harmlessness, and there as the paper frames its oversight, though its §3.1–3.2 has human-written red-team prompts and a critic trained on human helpfulness feedback; section 1 notes that Sharma et al.'s optimizing (their §4.2) is against a preference model with human judgments for helpfulness and AI judgments for harmlessness; the statement adds \"the third in part\": its effects were mixed, depending on the optimizer (Sharma et al., sections 4.2 and 4.3.2; the home section says so).",
-      "zh": "2026年11月8日，RW：研究第 2 节更正：宪法式 AI 于有益性仍用人之标注（论文第 4.1 节），故人仅供原则、仅经原则耦合者，唯无害性而已，且依论文对其监督之表述，虽其第 3.1–3.2 节有人所写之红队提示与以人之有益性反馈训练之批评模型；第 1 节附记 Sharma 等之优化（其第 4.2 节）所对之偏好模型，有益性用人之判断、无害性用 AI 之判断；陈述增“第三项仅部分如此”：其效果不一，随优化之法而异（Sharma 等，第 4.2、4.3.2 节；本节详之）。"
+      "en": "8 November 2026, RW: the study's section 2 corrected: Constitutional AI keeps human labels for helpfulness (the paper's §4.1), so humans supply only principles, and couple in through them alone, for harmlessness, and there as the paper frames its oversight, though its §3.1–3.2 has human-written red-team prompts and a critic trained on human helpfulness feedback; section 1 notes that Sharma et al.'s optimizing (their §4.2) is against a preference model with human judgments for helpfulness and AI judgments for harmlessness; the statement adds \"the third in part\": its effects were mixed, varying by form of sycophancy and with details of the optimization (Sharma et al., sections 4.2 and 4.3.2; the home section says so).",
+      "zh": "2026年11月8日，RW：研究第 2 节更正：宪法式 AI 于有益性仍用人之标注（论文第 4.1 节），故人仅供原则、仅经原则耦合者，唯无害性而已，且依论文对其监督之表述，虽其第 3.1–3.2 节有人所写之红队提示与以人之有益性反馈训练之批评模型；第 1 节附记 Sharma 等之优化（其第 4.2 节）所对之偏好模型，有益性用人之判断、无害性用 AI 之判断；陈述增“第三项仅部分如此”：其效果不一，随谄媚之形式与优化之细节而异（Sharma 等，第 4.2、4.3.2 节；本节详之）。"
     }
   ]
 }
