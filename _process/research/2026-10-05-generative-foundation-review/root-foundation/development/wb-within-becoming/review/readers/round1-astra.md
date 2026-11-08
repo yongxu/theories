@@ -43,25 +43,25 @@ I found no mismatch in the changed navigation/spine quotation strings I inspecte
 
 **Not read in full:** the remaining chapters, complete atlas and record collection, complete Lean files, before-copies, or underlying empirical datasets. Hash-only secondary blocks were skipped as permitted. No edits, commits, builds, tests or checkers were run.
 
-[07]: /Users/ren/tmp/wb/homes/theories/becoming/chapters/07-SIGNIFICANCE.md
-[08]: /Users/ren/tmp/wb/homes/theories/becoming/chapters/08-METHOD.md
-[Opening]: /Users/ren/tmp/wb/homes/theories/becoming/OPENING.md
-[One]: /Users/ren/tmp/wb/homes/theories/becoming/ONE-PAGE.md
-[One ZH]: /Users/ren/tmp/wb/homes/theories/becoming/ONE-PAGE.zh.md
-[Overview]: /Users/ren/tmp/wb/homes/theories/becoming/THE-THEORY-OF-BECOMING.md
-[Overview ZH]: /Users/ren/tmp/wb/homes/theories/becoming/THE-THEORY-OF-BECOMING.zh.md
-[Argument]: /Users/ren/tmp/wb/homes/theories/becoming/ONE-ARGUMENT.md
-[Collective]: /Users/ren/tmp/wb/homes/theories/becoming/COLLECTIVE-DIRECTION.md
-[Examples]: /Users/ren/tmp/wb/homes/theories/becoming/USES-EXAMPLES.md
-[Examples ZH]: /Users/ren/tmp/wb/homes/theories/becoming/USES-EXAMPLES.zh.md
-[Atlas]: /Users/ren/tmp/wb/homes/theories/becoming/results/atlas/entries/correspondences.json
-[AGENTS]: /Users/ren/tmp/wb/homes/AGENTS.md
-[Self-concern record]: /Users/ren/tmp/wb/homes/theories/becoming/results/records/self-concern-and-c-under-the-condition.json
-[Root-edge record]: /Users/ren/tmp/wb/homes/theories/becoming/results/records/one-root-to-its-edge.json
-[Navigation]: /Users/ren/tmp/wb/homes/tools/research/navigation.py
-[Spine]: /Users/ren/tmp/wb/homes/theories/becoming/results/data/spine.json
-[Coverage]: /Users/ren/tmp/wb/homes/theories/becoming/results/completion/COVERAGE.json
-[Completion]: /Users/ren/tmp/wb/homes/theories/becoming/results/completion/COMPLETION.md
+[07]: ../../../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md
+[08]: ../../../../../../../../theories/becoming/chapters/08-METHOD.md
+[Opening]: ../../../../../../../../theories/becoming/OPENING.md
+[One]: ../../../../../../../../theories/becoming/ONE-PAGE.md
+[One ZH]: ../../../../../../../../theories/becoming/ONE-PAGE.zh.md
+[Overview]: ../../../../../../../../theories/becoming/THE-THEORY-OF-BECOMING.md
+[Overview ZH]: ../../../../../../../../theories/becoming/THE-THEORY-OF-BECOMING.zh.md
+[Argument]: ../../../../../../../../theories/becoming/ONE-ARGUMENT.md
+[Collective]: ../../../../../../../../theories/becoming/COLLECTIVE-DIRECTION.md
+[Examples]: ../../../../../../../../theories/becoming/USES-EXAMPLES.md
+[Examples ZH]: ../../../../../../../../theories/becoming/USES-EXAMPLES.zh.md
+[Atlas]: ../../../../../../../../theories/becoming/results/atlas/entries/correspondences.json
+[AGENTS]: ../../../../../../../../AGENTS.md
+[Self-concern record]: ../../../../../../../../theories/becoming/results/records/self-concern-and-c-under-the-condition.json
+[Root-edge record]: ../../../../../../../../theories/becoming/results/records/one-root-to-its-edge.json
+[Navigation]: ../../../../../../../../tools/research/navigation.py
+[Spine]: ../../../../../../../../theories/becoming/results/data/spine.json
+[Coverage]: ../../../../../../../../theories/becoming/results/completion/COVERAGE.json
+[Completion]: ../../../../../../../../theories/becoming/results/completion/COMPLETION.md
 
 ── cx · ok · session 01a1bcde-e62d-76b2-a2da-31c1715c1b42 · gpt-6-astra/xhigh · read-only · 901s · 7682.8k tokens · 80 cmds
 continue: cx -r 01a1bcde-e62d-76b2-a2da-31c1715c1b42 "…"

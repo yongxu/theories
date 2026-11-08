@@ -48,7 +48,7 @@ What the path does not reach, such as present beings beyond every closure, is co
 - **Part 3. The step of invariance.** [P-08](#p-08) the condition decomposed; [P-09](#p-09) two scopes of one presupposition; [P-10](#p-10) the strongest argument for the step; [P-11](#p-11) the strongest case against, the self held de se; [P-12](#p-12) what each premise forces.
 - **Part 4. Self-concern without the step.** [P-13](#p-13) through what one depends on; [P-14](#p-14) where the centers depend on one another; [P-15](#p-15) need and dependence read with time; [P-16](#p-16) what self-concern alone ranks.
 - **Part 5. The condition on the root, and the open question.** [P-17](#p-17) the condition stated on the root; [P-18](#p-18) reach past one's own end; [P-19](#p-19) through a shared condition, and the class of being joined; [P-20](#p-20) the open question, sharpened.
-- **Part 6. Practice, alignment and the theses.** [P-21](#p-21) the further premises of practical judgment; [P-22](#p-22) graded significance, status and numbers; [P-23](#p-23) the disclosed comparison commitments; [P-24](#p-24) doing, allowing and constraints on acts; [P-25](#p-25) alignment first as what a selection reaches; [P-26](#p-26) 生生 as the direction, and the order valuers share; [P-27](#p-27) the objections, and what the chapter does not show.
+- **Part 6. Practice, alignment and the theses.** [P-21](#p-21) the further premises of practical judgment; [P-22](#p-22) graded significance, status and numbers; [P-23](#p-23) the disclosed comparison commitments; [P-24](#p-24) doing, allowing and constraints on acts; [P-25](#p-25) alignment first as what a selection reaches; [P-26](#p-26) 生生 as what the makers offer, and the order valuers share; [P-27](#p-27) the objections, and what the chapter does not show.
 
 Each item gives its statement (in Lean for the central ones), its **Meaning** in words, its **Standing and use**, any **Readings**, its **Known weaknesses** and its **Questions**. Under **Known weaknesses**, a bullet citing a chapter or a study reports a recorded weakness; one marked [this dossier, AI] is this dossier's own assessment, recorded nowhere else, for the reviewer to confirm or reject. Much of the literature is credited in the study of the step of invariance ([STEP](../history/THE-STEP-OF-INVARIANCE.md), §2 and §6), which chapter 7 links; where this dossier quotes that study, the works it names are its citations.
 
@@ -563,16 +563,17 @@ A periphery theorem adds that finite agreement does not identify priority. **Sta
 2. Does it follow that an approach coupled to preferences is incomplete for the scope the condition fixes, whatever its raters value?
 
 <a id="p-26"></a>
-### P-26 生生 as the direction, and the order valuers share
+### P-26 生生 as what the makers offer, and the order valuers share
 
 **Meaning.** Two theses. T8: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "For life, the makers offer a way of seeing, not a verdict: what each course draws on, from what renewal and at which grain, what ends, what goes on through that ending, and who bears it."; "for life" says Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "whose way it is, not whose losses count: under the continuation condition every continuation's still does". Beside it is the theorem of P-07; the thesis is Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "that a selection reading what a course draws on, and what ends with it, selects a draw beyond a renewal its readers depend on less often than one that does not read it". Its standing: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "argued; its test named, not designed. Open: P2 and P4, the crux of §4.6's path, with P3, a correspondence not shown for actual selves; how readings that count beyond one's own line form." T5, a thesis whose bound is conjectured: the order is shared by every valuer who counts everything positively, so that disagreement among them can fall only on mixed comparisons. The reduction is proved only for net weightings: for a widening by one item (`Weighting.narrower_above_net`) and, with every item weighed above zero, for several (`Weighting.reads_ranksNet_widens`); not for orders neither additive nor transitive. **Standing and use.** Theses with their tests ([07 §8](../chapters/07-SIGNIFICANCE.md#theses)). T5's two frozen tests used AI personas as valuers: in the first (VD1) every pre-registered rule failed; the second (VD2), which measured each valuer's sign apart from its ranking, passed some of its rules and failed others.
 
 **Known weaknesses.**
 - Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "The judgments are role-play; human valuers are untested."
-- T8 has a clause on actors *of whatever substrate*, not quoted above; if P4 fails it loses its ground: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "it rests on P2 and P4, and for actors not themselves alive it would need another."
+- T8 reads, under P2 and P4, the line of any actor whose acts reach living lines as running through life; if P4 fails that reading goes, and Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "the makers' offer itself does not rest on this path."
+- T4's frozen test does not test T8: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "the bed gives the fishers nothing, so keeping it is not forgoing a draw on a renewal they depend on." T8's test is named, not designed.
 
 **Questions.**
-1. Is T8's claim that the shared verdict of valuers who count everything binds those whose own line runs through life defensible, with no verdict binding every possible mind claimed, and what would refute it beyond the chapter's own criteria?
+1. Is an offer of a way of seeing, binding no one, coherent in an account that asserts no should, and is T8's named refuter (selections that read a course's draw and what ends with it selecting a draw beyond the renewal their readers depend on no less often than selections that do not) one a test could meet?
 2. Can tests with AI valuers bear on T5 at all, and what test with human valuers would?
 
 <a id="p-27"></a>
@@ -671,7 +672,7 @@ For each item give one verdict: **accept** (the item is correctly described, cre
 | [P-23](#p-23) The disclosed comparison commitments | | |
 | [P-24](#p-24) Doing, allowing and constraints on acts | | |
 | [P-25](#p-25) Alignment first as what a selection reaches | | |
-| [P-26](#p-26) 生生 as the direction; the order valuers share | | |
+| [P-26](#p-26) 生生 as what the makers offer; the order valuers share | | |
 | [P-27](#p-27) The objections; what is not shown | | |
 
 **General.** What would a moral philosopher, a philosopher of personal identity or an environmental ethicist add or object to, beyond the items? Is any known position restated without credit? Is the open question of P-11, and its sharper form in P-20, the right one to ask?
