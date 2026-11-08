@@ -4,13 +4,15 @@
 
 [English](TESTS.md) · [首页](README.zh.md) · [一页](theories/becoming/ONE-PAGE.zh.md) · [用途](theories/becoming/USES.zh.md) · [实例](theories/becoming/USES-EXAMPLES.zh.md) · [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) · [八章（英文）](theories/becoming/chapters/README.md) · [古文（第六章）](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) · **检验** · [对照表](theories/becoming/results/atlas/CROSSWALK.zh.md) · [怎样长成](theories/LINEAGE.zh.md) · [术语表](GLOSSARY.zh.md) · [审查包](theories/becoming/review/README.zh.md)
 
-*约 15–19 分钟读完。*
+*约 15–20 分钟读完。*
 
-*AI 依英文版写成，未经人工审读；义以英文版为准，英文版又以各项检验的文件夹为准。*
+*AI 依英文版写成，尚无人审查它的记录；义以英文版为准，英文版又以各项检验的文件夹为准。*
 
 本论的经验论题接受评分之前就已冻结的检验。这里按结局列出已经评分的 39 项，未通过的在前（全部 66 项中：「未通过」4，「有通过，有未通过」20，「评分之前被拒绝」2，「什么也没有判定」1，「部分通过」2，「未被拒绝」3，「通过」5，「由登记的规则判定」2；此外「只作报告、没有判定」2，「已冻结、尚未运行」11，「暂缓、未冻结」3，「运行之前放弃」1，「并非本论的预测」10，见[英文的全表](TESTS.md)）。
 
 每行链接该项检验的文件夹（英文）；那句话由 AI 读取其记录写成，是一种读法。冻结，指预测或规则定下的那一天。各项检验的结局按所在文件夹的判定归类，引文与来源在英文的全表里。论题各说什么、禁止什么，见[方法一章的论题](theories/becoming/chapters/08-METHOD.md#theses)（英文）。
+
+这里的结局按检验列出：每一行是一项检验，在它所指明的一种或几种情形之中；一个论题可以在一种情形中通过、在另一种中未通过，所以下面没有哪一行、哪一个计数是对一个论题整体的裁断（每个论题的地位，见[方法一章 §9 的表](theories/becoming/chapters/08-METHOD.md#theses)，英文）；一行归入哪一类，按下面该类标题之下写明的规则来读。
 
 ## 未通过
 
