@@ -2220,6 +2220,45 @@
         "theories/becoming/chapters/02-MAP.md"
       ]
     },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wb-within-becoming/readings/11-astra-round2.md": {
+      "title": "11-astra-round2.md",
+      "local_links": [
+        "AGENTS.md",
+        "GLOSSARY.md",
+        "README.md",
+        "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/G0-AND-KNOWLEDGE.md",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PremiseWitnesses.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+        "sources/06-zhishan/sheng/生生 · English.md",
+        "sources/06-zhishan/sheng/生生不息 poem — editorial notes.md",
+        "theories/becoming/chapters/02-MAP.md",
+        "theories/becoming/chapters/04-LIFE.md",
+        "theories/becoming/chapters/06-CLASSICAL-TEXTS.md"
+      ]
+    },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wb-within-becoming/readings/16-astra-round3.md": {
+      "title": "16-astra-round3.md",
+      "local_links": [
+        "AGENTS.md",
+        "GLOSSARY.md",
+        "README.md",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CommonResponse.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean",
+        "sources/06-zhishan/sheng/生生 · 文言.md",
+        "theories/becoming/ONE-PAGE.md",
+        "theories/becoming/THE-THEORY-OF-BECOMING.md",
+        "theories/becoming/chapters/01-ROOT.md",
+        "theories/becoming/chapters/02-MAP.md",
+        "theories/becoming/chapters/03-KNOWING.md",
+        "theories/becoming/chapters/04-LIFE.md",
+        "theories/becoming/chapters/05-COLLECTIVES.md",
+        "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+        "theories/becoming/chapters/07-SIGNIFICANCE.md",
+        "theories/becoming/chapters/08-METHOD.md"
+      ]
+    },
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/twenty-first-review/X3-SCIENCES-AND-TEXTS-CROSS-MODEL.md": {
       "title": "Cross-model review X3: how the sciences and the wisdom traditions map onto the theory",
       "local_links": [
