@@ -8,7 +8,7 @@ from unittest import mock
 
 ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT))
-from tools.research import lineage  # noqa: E402
+from tools.research import lineage, zh_fronts  # noqa: E402
 
 STATIC = ROOT / '_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rw-spine/lineage_static.json'
 
@@ -44,6 +44,10 @@ class Tree(unittest.TestCase):
                                           point('c', '2026-11-03', 'private', 'sources/12-x/chat.md', private=True)],
                      'thread': {'title': {'en': 'One thread', 'zh': '一条线索'}, 'intro': {'en': 'It ran.', 'zh': '它延续。'},
                                 'points': ['a', 'b']},
+                     'phases': [{'id': 'old', 'from': '2024-01', 'to': '2024-12', 'name': {'en': 'Old', 'zh': '旧'},
+                                 'what': {'en': 'It began.', 'zh': '它开始。'}, 'points': ['a']},
+                                {'id': 'new', 'from': '2026-10-01', 'to': '2026-11-08', 'name': {'en': 'New', 'zh': '新'},
+                                 'what': {'en': 'It grew.', 'zh': '它长大。'}, 'points': ['b', 'c']}],
                      'renames': [{'date': '2026-10-27', 'from': 'old', 'to': 'new', 'where': {'en': 'here', 'zh': '这里'},
                                   'evidence_path': 'notes/a.md', 'quote': 'first words', 'label': 'public'}],
                      'papers': [{'id': 'p', 'title': 'A paper', 'date': '2026-10-02', 'paths': ['notes/a.md'],
@@ -91,13 +95,27 @@ class Tree(unittest.TestCase):
         self.assertIn('## 一条线索', zh)
         svg = pages[lineage.SVG['en']]
         self.assertNotIn('<script', svg)
-        self.assertEqual(svg.count('<circle'), 3 + 4)  # three points, four legend marks
+        self.assertEqual(svg.count('<circle'), 2 + 2)  # two public points and two legend circles; the private one a diamond
+        self.assertIn('- **Old** (2024-01 – 2024-12). It began. (points 1–1; all public)', en)
+        self.assertIn('private and unpublished** (1)', en)
+        self.assertIn('AI reconstruction** (none so far)', en)
+        self.assertIn('[`notes/a.md`](../notes/a.md?plain=1#L1) (line 1)', en)
+        self.assertIn('来源 1 处', zh)
+        self.assertIn(zh_fronts.nav_line(lineage.PAGE['zh']) + '\n\n*', zh)
 
-    def test_the_axis_widens_the_last_months(self):
+    def test_the_live_chinese_edition_carries_the_fronts_line(self):
+        self.patch.stop()
+        try:
+            self.assertEqual(zh_fronts.problems(pages=(lineage.PAGE['zh'],)), [])
+        finally:
+            self.patch.start()
+
+    def test_the_axis_gives_each_phase_room_by_its_points(self):
         segments = lineage.axis(self.spec)
-        year = lineage.x_of(dt.date(2025, 1, 1), segments) - lineage.x_of(dt.date(2024, 1, 1), segments)
-        month = lineage.x_of(dt.date(2026, 10, 31), segments) - lineage.x_of(dt.date(2026, 10, 1), segments)
-        self.assertGreater(month, year)
+        widths = [s[3] - s[2] for s in segments if s[4]]
+        self.assertAlmostEqual(widths[1] / widths[0], (2 + 3) / (1 + 3))  # two points against one, three added to each
+        self.assertEqual([round(s[3] - s[2]) for s in segments if s[4] is None], [lineage.GAP])
+        self.assertLess(lineage.x_of(dt.date(2024, 6, 1), segments), lineage.x_of(dt.date(2026, 10, 15), segments))
 
 
 if __name__ == '__main__':

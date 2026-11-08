@@ -2,7 +2,7 @@
 
 [中文](ONE-PAGE.zh.md) · [What it is for](USES.md) · [The overview](THE-THEORY-OF-BECOMING.md) · [The eight chapters](chapters/README.md) · [The theory graph](results/THEORY-GRAPH.md) · [How it grew](../LINEAGE.md)
 
-*Twelve to sixteen minutes to read.*
+*Thirteen to sixteen minutes to read.*
 
 **What it is.** An account of how anything comes to be, lasts, changes and passes away within one relational unfolding, of how life and knowing take shape there and how far evaluation does, without assuming that becoming is good. Made with AI, proofs included; the proofs are checked by machine, everything else only by AI review, and no person has yet reviewed it ([the review packet](review/README.md)). Its centre [AI reading]: a selection can succeed while what it cannot read is lost, and the laws do not say whether that loss counts ([what it is for, and how far](USES.md)).
 
@@ -12,7 +12,7 @@
 
 ![The eight chapters around the grammar: circles sized by their results, curves counting the uses between chapters' results, the two premises coming into chapter 7 as hypotheses where used, and T1 to T8 at their homes coloured by test outcome](results/spine.svg)
 
-*The chapters around the grammar, drawn from [the theory graph](results/THEORY-GRAPH.md) by a tool; what the picture shows and does not show is under [The spine](results/THEORY-GRAPH.md#the-spine).*
+*The chapters around the grammar, drawn from [the theory graph](results/THEORY-GRAPH.md) by a tool: a curve counts the uses of one chapter's results by another's recorded as formal-reuse, a kind kept for verified inferences; a dependence, not an agreement in meaning. Of the 117 central declarations, 11 are derived, each a case of grammar laws, through bridges checked in Lean as equivalences and support the review reads where a row has them; 1 is under a stated hypothesis, 6 are counting, below the grammar, and 99 stand at a named distance, each with its reason ([08 §7](chapters/08-METHOD.md#r-one-root-to-its-edge)). What the picture shows and does not: [The spine](results/THEORY-GRAPH.md#the-spine-what-it-shows-and-does-not-show).*
 
 | | What the account says | [How it stands](chapters/08-METHOD.md#standings-and-bases) | What would show it wrong |
 |---|---|---|---|

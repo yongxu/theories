@@ -2,7 +2,7 @@
 
 [English](ONE-PAGE.md) · [首页](../../README.zh.md) · **一页** · [用途](USES.zh.md) · [实例](USES-EXAMPLES.zh.md) · [总览](THE-THEORY-OF-BECOMING.zh.md) · [八章](chapters/README.md) · [第六章](chapters/06-CLASSICAL-TEXTS.md) · [检验](../../TESTS.md) · [怎样长成](../LINEAGE.zh.md) · [术语表](../../GLOSSARY.zh.md) · [审查包](review/README.zh.md)
 
-*约十一至十四分钟读完。*
+*约十二至十五分钟读完。*
 
 **它是什么。** 一种说明：在一个关系性的展开之中，任何东西如何出现、持续、变化与消逝，生命与认知如何在那里成形，评价又到什么程度；它不预先假定生灭变化是好的。它借助 AI 做成，证明也在内；证明由机器检验，其余一切只经过 AI 的复审，迄今无人审查（[审查包](review/README.zh.md)）。本说明的中心［AI 读法］：一个选择可以成功，而它读不到的东西却失去了；诸律不说这一损失算不算数（[本说明有什么用，用到多远](USES.zh.md)）。
 
@@ -12,7 +12,7 @@
 
 ![围绕文法的八章：圆按结果数定大小，曲线计各章结果之间的使用，两个前提进入第七章，各在所用之处为假设，T1 到 T8 在其所属之处按检验结局着色](results/spine.zh.svg)
 
-*围绕文法的各章，由工具依[理论图](results/THEORY-GRAPH.md)画出；这幅图显示什么、不显示什么，见理论图的 [The spine](results/THEORY-GRAPH.md#the-spine)（英文）。*
+*围绕文法的各章，由工具依[理论图](results/THEORY-GRAPH.md)画出：一条曲线计一章的结果使用另一章结果、记为 formal-reuse 的次数，这一类只用于已核验的推理；它是一种依赖，不是意义上的一致。117 项核心声明中，11 项推导而得，各为文法之律的一个情形，经由在 Lean 中作为等价核验的桥接与审阅所读的支持（在某行列有它们之处）；1 项在一个所述的假设之下，6 项为计数，位于文法以下，99 项处于一个指明的距离，各有其理由（[08 §7](chapters/08-METHOD.md#r-one-root-to-its-edge)）。这幅图显示什么、不显示什么，见理论图的 [The spine](results/THEORY-GRAPH.md#the-spine-what-it-shows-and-does-not-show)（英文）。*
 
 | | 本说明说什么 | [地位](chapters/08-METHOD.md#standings-and-bases) | 什么会表明它错 |
 |---|---|---|---|

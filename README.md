@@ -16,13 +16,13 @@
 
 **Its ethics** rests on [two unasserted premises](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order), their warrant open: the continuation condition (from every standpoint, for anything, its continuation into the future has significance) fixes scope, whose losses count, ranking nothing; C (widening what can form is better) gives order. [Thesis T8](theories/becoming/chapters/07-SIGNIFICANCE.md#theses) argues this ethics as life's way, claiming no verdict binding every possible mind.
 
-**Start with** [the one page](theories/becoming/ONE-PAGE.md) (12–16 minutes). [The opening](#truth-exists) is a first-person conviction (22–28 minutes).
+**Start with** [the one page](theories/becoming/ONE-PAGE.md) (13–16 minutes). [The opening](#truth-exists) is a first-person conviction (22–28 minutes).
 
 **Lean receipts** credit 505 of [536 registered results](RESULTS.md), showing each Lean statement follows from its premises, not that they hold. A review that read each Lean statement against the literature it knew, not exhaustively, finds [none of the central results new mathematics](theories/becoming/chapters/08-METHOD.md#known-results): each is near-definitional or a known result restated. [Empirical theses](theories/becoming/chapters/08-METHOD.md#theses) face tests frozen before scoring: some passed, some failed. No human review yet.
 
 ![The eight chapters around one grammar](theories/becoming/results/spine.svg)
 
-*11 of 117 central declarations are derived from the grammar ([08 §7](theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge) gives the other standings); [what the picture shows and does not show](theories/becoming/results/THEORY-GRAPH.md#the-spine); [how the account grew](theories/LINEAGE.md).*
+*11 of 117 central declarations are derived, each read by the review as a case of grammar laws ([08 §7](theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge) gives what Lean checks of them, and the other standings); [what the picture shows and does not show](theories/becoming/results/THEORY-GRAPH.md#the-spine); [how the account grew](theories/LINEAGE.md).*
 
 ---
 
