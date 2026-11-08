@@ -128,17 +128,17 @@
 <text x="650.6" y="478.5" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">17</text>
 <text x="626.7" y="485.6" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">15</text>
 <text x="555.5" y="608.8" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">15</text>
-<text x="36" y="943.3" font-size="15" font-weight="bold" text-anchor="start" fill="#57534e">两个前提，各在所用之处为假设</text>
+<text x="36" y="943.3" font-size="15" font-weight="bold" text-anchor="start" fill="#57534e">两种读法，各在所用之处为假设</text>
 <rect x="36" y="955.25566257523" width="390" height="73" rx="6" fill="#ffffff" stroke="#1c1917" stroke-dasharray="5 3"/>
 <text x="46" y="977.3" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">延续条件</text>
 <text x="46" y="996.3" font-size="14" text-anchor="start" fill="#57534e">确定范围：谁的损失算数；它不对任何东西排序</text>
-<text x="46" y="1015.3" font-size="14" text-anchor="start" fill="#57534e">前提，不断言；根据未决</text>
+<text x="46" y="1015.3" font-size="14" text-anchor="start" fill="#57534e">读法，不断言</text>
 <path d="M36,973.3 L14,973.3 L14,617.8 Q14,587.8 149.5,587.8" fill="none" stroke="#1c1917" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#back)"/>
 <rect x="36" y="1040.25566257523" width="390" height="92" rx="6" fill="#ffffff" stroke="#1c1917" stroke-dasharray="5 3"/>
 <text x="46" y="1062.3" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">C，即扩大可形成者更好</text>
 <text x="46" y="1081.3" font-size="14" text-anchor="start" fill="#57534e">确定次序：把一个进程排在它所扩大的每一个进程之</text>
 <text x="46" y="1100.3" font-size="14" text-anchor="start" fill="#57534e">上，而不判定任何混合的比较</text>
-<text x="46" y="1119.3" font-size="14" text-anchor="start" fill="#57534e">前提，不断言；根据未决</text>
+<text x="46" y="1119.3" font-size="14" text-anchor="start" fill="#57534e">读法，不断言</text>
 <path d="M36,1058.3 L23,1058.3 L23,602.8 Q23,572.8 143.4,572.8" fill="none" stroke="#1c1917" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#back)"/>
 <text x="20" y="1162.3" font-size="16" font-weight="bold" text-anchor="start" fill="#1c1917">论题</text>
 <circle cx="33" cy="1183.25566257523" r="10" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>

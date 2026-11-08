@@ -384,7 +384,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Tests.** None.
 - **Open.**
   - A sufficient condition for keeping widening relative to what is held, beyond the witnesses: endless change with an unlisted whole possible does not suffice. ([where-the-possible-grows.md#does-not-show--未表明](../../records/where-the-possible-grows.md#does-not-show--未表明))
-  - That growth relative to what is held is better or is the direction of 生生: ranking needs C or a premise in its place, and the reading of 生生不息 here is an AI reading. ([where-the-possible-grows.md#does-not-show--未表明](../../records/where-the-possible-grows.md#does-not-show--未表明))
+  - That growth relative to what is held is better or is what 生生 asks: a ranking rests on C or another named order, and the reading of 生生不息 here is an AI reading. ([where-the-possible-grows.md#does-not-show--未表明](../../records/where-the-possible-grows.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
 - **Valence.** none asserted
 - **Sources.** [07-SIGNIFICANCE.md#r-where-the-possible-grows](../../../chapters/07-SIGNIFICANCE.md#r-where-the-possible-grows)

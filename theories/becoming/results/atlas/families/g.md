@@ -124,9 +124,9 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That a move above n changes a rule: the tower's law locates moves that can change a rule from height n up, not a change. ([where-the-possible-grows.md#does-not-show--未表明](../../records/where-the-possible-grows.md#does-not-show--未表明))
   - A change of the law of change with no fixed scheme, or a space of rules not given with the carrier: the tower's scheme is fixed, as the law of any stated process is. ([where-the-possible-grows.md#does-not-show--未表明](../../records/where-the-possible-grows.md#does-not-show--未表明))
   - Whether the actual unfolding is a course of a process statable in advance; the possible that cannot be prestated is outside. ([where-the-possible-grows.md#does-not-show--未表明](../../records/where-the-possible-grows.md#does-not-show--未表明))
-  - That growth relative to what is held is better or is the direction of 生生: ranking needs C or a premise in its place, and the reading of 生生不息 here is an AI reading. ([where-the-possible-grows.md#does-not-show--未表明](../../records/where-the-possible-grows.md#does-not-show--未表明))
+  - That growth relative to what is held is better or is what 生生 asks: a ranking rests on C or another named order, and the reading of 生生不息 here is an AI reading. ([where-the-possible-grows.md#does-not-show--未表明](../../records/where-the-possible-grows.md#does-not-show--未表明))
   - A result no neighbouring field states: the held law restates open-ended novelty's innovation, and the tower law the finite degree of introspection of reflective towers. ([where-the-possible-grows.md#does-not-show--未表明](../../records/where-the-possible-grows.md#does-not-show--未表明))
-  - The second-order direction of 生生: a comparison of a range whose widening keeps widening with one merely wider now, never reversing widening and counting neither novelty nor scale. Eventual widening, first-order widening read on late tails, does not give it. ([07-SIGNIFICANCE.md#open](../../../chapters/07-SIGNIFICANCE.md#open))
+  - The second-order direction of widening: a comparison of a range whose widening keeps widening with one merely wider now, never reversing widening and counting neither novelty nor scale. Eventual widening, first-order widening read on late tails, does not give it. ([07-SIGNIFICANCE.md#open](../../../chapters/07-SIGNIFICANCE.md#open))
 - **Beyond its couplings.** Not stated.
 - **Valence.** none asserted
 - **Sources.** [07-SIGNIFICANCE.md#r-where-the-possible-grows](../../../chapters/07-SIGNIFICANCE.md#r-where-the-possible-grows), [COLLECTIVE-DIRECTION.md#7-keeping-the-future-open](../../../COLLECTIVE-DIRECTION.md#7-keeping-the-future-open)
@@ -152,11 +152,11 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Transitions.** None.
 - **Tests.** None.
 - **Open.**
-  - A comparison of two courses: no law here compares two, so the second-order direction of 生生 stays open and eventual widening's lag stays undecided. ([what-keeping-widening-needs.md#does-not-show--未表明](../../records/what-keeping-widening-needs.md#does-not-show--未表明))
+  - A comparison of two courses: no law here compares two, so the second-order direction of widening stays open and eventual widening's lag stays undecided. ([what-keeping-widening-needs.md#does-not-show--未表明](../../records/what-keeping-widening-needs.md#does-not-show--未表明))
   - That renewal gives widening: on the kind relay 全生成 at two orders of grain and renewal without end hold while what it can form by name only returns, and beginnings recur on a reading that opens nothing. ([what-keeping-widening-needs.md#does-not-show--未表明](../../records/what-keeping-widening-needs.md#does-not-show--未表明))
   - That a part under dissipation is sustained by supply from beyond: the fed relay's required conditions conserve, its loss paid by fuel no formation requires. ([what-keeping-widening-needs.md#does-not-show--未表明](../../records/what-keeping-widening-needs.md#does-not-show--未表明))
   - That renewers count formations where the present list repeats one; growth by kinds not given in advance; which actual courses meet the premises. ([what-keeping-widening-needs.md#does-not-show--未表明](../../records/what-keeping-widening-needs.md#does-not-show--未表明))
-  - The second-order direction of 生生: a comparison of a range whose widening keeps widening with one merely wider now, never reversing widening and counting neither novelty nor scale. Eventual widening, first-order widening read on late tails, does not give it. ([07-SIGNIFICANCE.md#open](../../../chapters/07-SIGNIFICANCE.md#open))
+  - The second-order direction of widening: a comparison of a range whose widening keeps widening with one merely wider now, never reversing widening and counting neither novelty nor scale. Eventual widening, first-order widening read on late tails, does not give it. ([07-SIGNIFICANCE.md#open](../../../chapters/07-SIGNIFICANCE.md#open))
   - Passing every bound uses natural-number amounts; in a dense order needs approaching a limit could support ever more formations at a bounded stock (argued, not proved in Lean). ([07-SIGNIFICANCE.md#r-what-keeping-widening-needs](../../../chapters/07-SIGNIFICANCE.md#r-what-keeping-widening-needs))
 - **Beyond its couplings.** Not stated.
 - **Valence.** none asserted
@@ -385,7 +385,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Tests.** None.
 - **Open.**
   - That any physical system has a least loss per change; the statistical second law names none, and which physical premises supply one is stated, as a correspondence, in least-loss-from-entropy-production (T1). ([least-loss-rest.md#does-not-show--未表明](../../records/least-loss-rest.md#does-not-show--未表明))
-  - That coming to rest supports or damages 生生. ([least-loss-rest.md#does-not-show--未表明](../../records/least-loss-rest.md#does-not-show--未表明))
+  - That coming to rest keeps or closes 生生, the continuation of life. ([least-loss-rest.md#does-not-show--未表明](../../records/least-loss-rest.md#does-not-show--未表明))
   - Stated in whole numbers; in denser amounts a fall at every step need not end. ([rest-by-balance.md#does-not-show--未表明](../../records/rest-by-balance.md#does-not-show--未表明))
   - It bounds how long a count can lose; it does not say that the count reaches nothing. ([rest-by-balance.md#does-not-show--未表明](../../records/rest-by-balance.md#does-not-show--未表明))
   - The comparison orders the counts at the end; it does not order what each drew at each step. ([rest-by-balance.md#does-not-show--未表明](../../records/rest-by-balance.md#does-not-show--未表明))
@@ -560,7 +560,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Tests.** None.
 - **Open.**
   - Which orders actual exchange takes, with probabilities over orders, and how long agreement takes: the voter model's and the naming game's expectations are not stated. ([a-code-formed-between-formations.md#does-not-show--未表明](../../records/a-code-formed-between-formations.md#does-not-show--未表明))
-  - That actual conventions, scripts or the theory's own terms form by hearing in this way, or whether a shared, imposed or kept code supports or damages 生生. ([a-code-formed-between-formations.md#does-not-show--未表明](../../records/a-code-formed-between-formations.md#does-not-show--未表明))
+  - That actual conventions, scripts or the theory's own terms form by hearing in this way, or whether a shared, imposed or kept code keeps or closes 生生, the continuation of life. ([a-code-formed-between-formations.md#does-not-show--未表明](../../records/a-code-formed-between-formations.md#does-not-show--未表明))
   - That names in use are coined deliberately, or that a coined form is heard. ([synonyms-and-coined-forms.md#does-not-show--未表明](../../records/synonyms-and-coined-forms.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
 - **Valence.** none asserted
