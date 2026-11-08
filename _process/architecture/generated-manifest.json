@@ -15,8 +15,8 @@
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/REVIEWS.md": "0ccef05c0f94ed738029b8aa50c19901bcddb80807925beeb2dca83cb56dc687",
     "_process/research/README.md": "ebdb2be9be35838f733940c261a282f051f63ff360f7dd605d00f95bd90a6964",
     "sources/README.md": "7d7f527445db2f40df09fbfd363c9ec321c410b4f4a4b08cfe857f804482c1e6",
-    "theories/LINEAGE.md": "f824b106d3413c9eb4d263387da6a8492fdb821e2eecdb3e2f73dbf70b611032",
-    "theories/LINEAGE.zh.md": "06b8613b0763b2caafd2c5175b1a74339e3140fa6fe7103bd0158d3f24f570d0",
+    "theories/LINEAGE.md": "a80271a02400ad4d2cb33d495f9ed4deb93e48a06a2d8daf1debae4fb28f450e",
+    "theories/LINEAGE.zh.md": "eea4f3362d2886a2d7863d07a7c93388f4742aa24bd9ca0854df288092d17b2c",
     "theories/README.md": "af3335c3ed9ab5963e28371e97ba015c90328297a5d6c97686fb46c5413ece66",
     "theories/becoming/README.md": "8237df4a4a50340cc56b6bba5fa077400cea64ed759b8c14dd3ab8e73e693646",
     "theories/becoming/chapters/CLAIMS.md": "a9ac5ff80ac0db24db83cbe4a3368e1f9607fc2b2d8a16406409a6034b35ebd5",
@@ -30,7 +30,7 @@
     "theories/becoming/results/ROADMAP.md": "e6e81d222aa24caa1c4a1c94f8b6bfe462d61b2a07421d6728d2235aed6d8001",
     "theories/becoming/results/THEORY-GRAPH.md": "7c39f1780490b5ede4af72f10fe576d0ad18408070aeeab3981665a3c223fc92",
     "theories/becoming/results/atlas/ATLAS.md": "a810900aaf6e6f78240e494e08ca9dfd5df43021912de40864662ea053c0dda6",
-    "theories/becoming/results/atlas/CROSSWALK.md": "4d17edaabcf77e3f5e0a8d0f0218c26b195eb4a2f11f7345938167339caa3427",
+    "theories/becoming/results/atlas/CROSSWALK.md": "2710e74edd3b8563b55a7b27a258936c71af4b0eb997aef1d8cfa7b6137eee51",
     "theories/becoming/results/atlas/crosswalk/abrahamic-islamic.md": "eb582ffe28418af7e7513e5a14350b9a14ae1b021467be5844c1c07e04695c32",
     "theories/becoming/results/atlas/crosswalk/alignment-selection-on-cognition.md": "bfe34434f14aed94d812f0a553aba345be4e0247e4dfdf1a85ae4595d4334fc0",
     "theories/becoming/results/atlas/crosswalk/architecture-for-a-living-earth.md": "852602e12f02cf2e924cc8ca4d3953e3b54e93f8841d25f0f49edeaa00904858",
@@ -656,6 +656,7 @@
     "theories/becoming/results/spine.svg": "c408d29eb11e5b3334c0607412a12717dd559b916cb12160f34743e066506043",
     "theories/becoming/results/spine.zh.svg": "c3fdb3893a05b9a122c2af3f05f40398973da9b71b881cce0a5e74d65e20376a",
     "theories/lineage.svg": "a1c857796a6af93b0d71affab10a5fc05949de3ab55a0402e2b66e79045d7f9b",
-    "theories/lineage.zh.svg": "5222a8ad3170b89f4ada3d485cdbf48aea8d5dccc549232f076e32a26122e18e"
+    "theories/lineage.zh.svg": "5222a8ad3170b89f4ada3d485cdbf48aea8d5dccc549232f076e32a26122e18e",
+    "theories/becoming/results/atlas/connections.svg": "4f67575b46cc3991e6a19c87b1970a450cb9c415ecffe6dca9a040002cdf195c"
   }
 }
