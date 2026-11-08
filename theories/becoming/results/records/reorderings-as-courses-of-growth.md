@@ -109,7 +109,7 @@ Trace theory: the linear extensions of a trace's dependence order are exactly it
 | proof | [Reordering.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reordering.lean) | — |
 | proof | [Decidedness.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Decidedness.lean) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T083434.601834Z/verification.json) | — |
-| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
+| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror); its history names sections [438](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/438.md), [440](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/440.md) | — |
 | integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue15-reorderings-as-growth/NOTE.md) | — |
 | integration | [REVIEW-UE15.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue15-reorderings-as-growth/REVIEW-UE15.md) | — |
 | statement | [01-ROOT.md](../../chapters/01-ROOT.md) | — |

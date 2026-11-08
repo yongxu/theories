@@ -26,7 +26,7 @@
 <a id="progress--已接通"></a>
 ## Progress
 
-1. What the full reading found, the name table, the 中华本, and the gaps the texts raise. [study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#328-中华思想脉络-on-the-spine-and-the-中华本-zh)
+1. What the full reading found, the name table, the 中华本, and the gaps the texts raise. [study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/328.md#328-中华思想脉络-on-the-spine-and-the-中华本-zh)
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -107,7 +107,7 @@ Ren, 19 October 2026, after extending his database to Chinese culture: “请把
 | integration | [names-decisions.tsv](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/work/names-decisions.tsv) | — |
 | integration | [verify_zh.py](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/verify_zh.py) | — |
 | integration | [build_tables.py](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/build_tables.py) | — |
-| review | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
+| review | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror); its history names sections [328](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/328.md), [333](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/333.md), [334](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/334.md), [338](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/338.md), [339](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/339.md), [340](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/340.md), [341](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/341.md), [342](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/342.md), [343](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/343.md), [344](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/344.md), [345](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/345.md), [346](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/346.md) | — |
 | statement | [CHINESE-SOURCES-AND-BECOMING.md](../../history/CHINESE-SOURCES-AND-BECOMING.md) | — |
 | provenance | [PROVENANCE.json](../../../../sources/civilization-thought-v1.0/PROVENANCE.json) | — |
 | provenance | [2026-10-19-zhonghua-edition.md](../../../../sources/15-codex-theory-conversations/2026-10-19-zhonghua-edition.md) | — |

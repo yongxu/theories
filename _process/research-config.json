@@ -481,5 +481,15 @@
         "English"
       ]
     ]
+  },
+  "mirrors": {
+    "note": "Generated mirrors (tools/research/mirror.py, RW): a source too large for GitHub to render, written one `##` section to a page in its folder, bytes unchanged except link targets; a source and its .zh.md edition share a folder, the English first. The source stays the source; records bind it and cite its sections by number, and their pages link the mirror.",
+    "folders": {
+      "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md": "_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING",
+      "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.zh.md": "_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING"
+    },
+    "notes": {
+      "_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING": "The study was one bilingual file until 17 October 2026, when it was split. Most of the prose of sections 1–162 went to the Chinese edition (108 kept an English heading). The English file kept their anchors, code blocks and some tables, under no heading, on the pages marked so here, and in some sections lines the Chinese edition lacks, among them quoted words in English; its English summary gives an English account of some of these sections. Sections 163–165 each have an English account on their own pages. The Chinese edition's banner says that where the two differ the English governs. Records bind the English file by hash, at the version each read; none binds the Chinese edition or a page here. Their histories name sections by number."
+    }
   }
 }

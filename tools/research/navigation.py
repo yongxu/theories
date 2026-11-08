@@ -37,8 +37,9 @@ def read(path):
 
 
 def link(path, base, label):
-    file, sep, fragment = path.partition('#')
-    return f'[{label}]({os.path.relpath(ROOT / file, (ROOT / base).parent)}{sep}{fragment})'
+    routed = registry.mirrored(path)
+    file, sep, fragment = routed.partition('#')
+    return f'[{label}]({os.path.relpath(ROOT / file, (ROOT / base).parent)}{sep}{fragment})' + (' (generated mirror)' if routed != path else '')
 
 
 def adapt_links(body, original, destination):
