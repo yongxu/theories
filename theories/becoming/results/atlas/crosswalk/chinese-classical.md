@@ -23,7 +23,7 @@ The domain is mapped more than any other (RO 248, ZH 1,300, Y 90, dossier C 39),
 - ZH entries, in 17 clusters ([passages.json](../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json)): 1,300 entries: 453 agreement, 647 scope, 200 divergence; 1,743 parallels, 250 rejected, 35 dropped, 239 name flags. Counted from the file; the 4 November reader's 1,742 and 251 differ by one each.
 - Y: passages of the Changes ([passages.json](../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/y1-changes/passages.json)): 90 passages: 51 agreement, 27 scope, 12 divergence. Counted from the file.
 - Dossier C for review by scholars of classical texts ([CLASSICAL-TEXTS.md](../../../review/CLASSICAL-TEXTS.md)): 39 items (C-01 to C-39, counted by heading); 95 questions by its own header. No person has reviewed it, by its own header.
-- The chapter: corpus, candidates, conditional laws, the hexagram world, names ([06-CLASSICAL-TEXTS.md](../../../chapters/06-CLASSICAL-TEXTS.md)): By its text, and not recounted here: 59 乙 candidates tested and 181 not; 219 丙一 read, 128 in 22 families; 449 names. All readings are the AI's, and no person has read them through.
+- The chapter: corpus, candidates, conditional laws, the hexagram world, names ([06-CLASSICAL-TEXTS.md](../../../chapters/06-CLASSICAL-TEXTS.md)): By its text, and not recounted here: 59 乙 candidates tested and 181 not; 219 丙一 read, 128 in 22 families; 449 names. All readings are the AI's, and no person's review of them is recorded.
 
 **Absent:**
 

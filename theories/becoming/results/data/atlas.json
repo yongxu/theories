@@ -26087,7 +26087,7 @@
      {
       "what": "The chapter: corpus, candidates, conditional laws, the hexagram world, names",
       "where": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
-      "extent": "By its text, and not recounted here: 59 乙 candidates tested and 181 not; 219 丙一 read, 128 in 22 families; 449 names. All readings are the AI's, and no person has read them through."
+      "extent": "By its text, and not recounted here: 59 乙 candidates tested and 181 not; 219 丙一 read, 128 in 22 families; 449 names. All readings are the AI's, and no person's review of them is recorded."
      }
     ],
     "absent": [
@@ -26287,7 +26287,7 @@
    },
    "kind": "domain",
    "summary": {
-    "en": "The account holds Chinese Buddhist texts at length (dossier, corpus, Lean tests of 146 sentences), mostly as the strongest contrary test: its continuation stands on the side 中论 refutes. Chapters and fronts hold almost nothing else: no twelve links, craving, saṃsāra, nirvāṇa, 无我 or suffering. Those mapped in the 脉络 study have no entries here, so this file's totals do not show that absence; coverage's absent list does. No entry here is agreement, of a law or otherwise, and I looked: the nearest are parts of entries; agreement stands only in the earlier maps under coverage. Most entries are this crosswalk's own proposals, contrary or divergent, not connections the account states; what is carried in part rests on the dossier, a live page unread by any person, not on a chapter. 无明 keeps the name and changes the claim. Sharpest finds: 雜阿含 293's 相續滅，是名苦邊 and 青目's refutation of 不住相似生, in no map or count. The dossier's statement that Tiantai is not in the repository is out of date."
+    "en": "The account holds Chinese Buddhist texts at length (dossier, corpus, Lean tests of 146 sentences), mostly as the strongest contrary test: its continuation stands on the side 中论 refutes. Chapters and fronts hold almost nothing else: no twelve links, craving, saṃsāra, nirvāṇa, 无我 or suffering. Those mapped in the 脉络 study have no entries here, so this file's totals do not show that absence; coverage's absent list does. No entry here is agreement, of a law or otherwise, and I looked: the nearest are parts of entries; agreement stands only in the earlier maps under coverage. Most entries are this crosswalk's own proposals, contrary or divergent, not connections the account states; what is carried in part rests on the dossier, a live page with no recorded review by a person, not on a chapter. 无明 keeps the name and changes the claim. Sharpest finds: 雜阿含 293's 相續滅，是名苦邊 and 青目's refutation of 不住相似生, in no map or count. The dossier's statement that Tiantai is not in the repository is out of date."
    },
    "read": [
     "theories/becoming/review/BUDDHIST-THOUGHT.md (whole)",
@@ -26357,7 +26357,7 @@
    "coverage": {
     "present": [
      {
-      "what": "Dossier B, for review, unread by any person",
+      "what": "Dossier B, for review; no person's review of it is recorded",
       "where": "theories/becoming/review/BUDDHIST-THOUGHT.md",
       "extent": "36 items B-01 to B-36: 18 on 中论, 4 成唯识论, 4 起信论, 5 华严, 2 无明 and 明, 2 阿含 and 坛经, 1 on the conditional laws; 76 questions and 8 sentences to classify"
      },
@@ -49606,7 +49606,7 @@
    "relation": "divergence",
    "agreement_of": null,
    "reading": {
-    "en": "Same concern, another mechanism, and they part at publishing. The account labels what each statement is and says on its first page who checked what, so it implies no review that has not happened. It does not withhold text no person's review of which is recorded; it says so. The museum's rule would hold such text back. Its own reading adds that no check inside the work can show it serves its purpose. Practice on both sides, not a law. [AI reading]"
+    "en": "Same concern, another mechanism, and they part at publishing. The account labels what each statement is and says on its first page who checked what, so it implies no review that has not happened. It does not withhold text with no recorded review by a person; it says so. The museum's rule would hold such text back. Its own reading adds that no check inside the work can show it serves its purpose. Practice on both sides, not a law. [AI reading]"
    },
    "targets": [
     {
@@ -59833,7 +59833,7 @@
    "relation": "agreement",
    "agreement_of": "thesis-or-method",
    "reading": {
-    "en": "The mechanism carried is the label on who made a text or reading and from what: AI readings are marked, literature from the AI's knowledge says so, fronts open 'AI-written', no human review. For a person's words a rule is stated: terms keep their wording where quoted, with source, and a first-person text revised in place names each revised passage, its own last text kept in history. Summaries of a person are not addressed. [AI reading]"
+    "en": "The mechanism carried is the label on who made a text or reading and from what: AI readings are marked, literature from the AI's knowledge says so, fronts open 'AI-written', with no independent human review recorded. For a person's words a rule is stated: terms keep their wording where quoted, with source, and a first-person text revised in place names each revised passage, its own last text kept in history. Summaries of a person are not addressed. [AI reading]"
    },
    "targets": [
     {
@@ -61956,7 +61956,7 @@
    "relation": "divergence",
    "agreement_of": null,
    "reading": {
-    "en": "Two claims under one word. The source's is who may accept: an owner's act. The account's is what a check can reach: selection reaches what couples in, people couple into none of the work's selectors, so its checks cannot certify it; that selection goes through couplings is a supplied condition. It claims no human review, seeks review and not acceptance, and a description confers no authority. Who may act outward stands in AGENTS.md, outside the live account. No live text joins the two; the link is this reading's. [AI reading]"
+    "en": "Two claims under one word. The source's is who may accept: an owner's act. The account's is what a check can reach: selection reaches what couples in, people couple into none of the work's selectors, so its checks cannot certify it; that selection goes through couplings is a supplied condition. It claims no independent human review, seeks review and not acceptance, and a description confers no authority. Who may act outward stands in AGENTS.md, outside the live account. No live text joins the two; the link is this reading's. [AI reading]"
    },
    "targets": [
     {

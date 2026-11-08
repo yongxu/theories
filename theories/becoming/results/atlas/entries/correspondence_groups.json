@@ -1356,7 +1356,7 @@
     {
      "what": "The chapter: corpus, candidates, conditional laws, the hexagram world, names",
      "where": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
-     "extent": "By its text, and not recounted here: 59 乙 candidates tested and 181 not; 219 丙一 read, 128 in 22 families; 449 names. All readings are the AI's, and no person has read them through."
+     "extent": "By its text, and not recounted here: 59 乙 candidates tested and 181 not; 219 丙一 read, 128 in 22 families; 449 names. All readings are the AI's, and no person's review of them is recorded."
     }
    ],
    "absent": [
@@ -1536,7 +1536,7 @@
   },
   "kind": "domain",
   "summary": {
-   "en": "The account holds Chinese Buddhist texts at length (dossier, corpus, Lean tests of 146 sentences), mostly as the strongest contrary test: its continuation stands on the side 中论 refutes. Chapters and fronts hold almost nothing else: no twelve links, craving, saṃsāra, nirvāṇa, 无我 or suffering. Those mapped in the 脉络 study have no entries here, so this file's totals do not show that absence; coverage's absent list does. No entry here is agreement, of a law or otherwise, and I looked: the nearest are parts of entries; agreement stands only in the earlier maps under coverage. Most entries are this crosswalk's own proposals, contrary or divergent, not connections the account states; what is carried in part rests on the dossier, a live page unread by any person, not on a chapter. 无明 keeps the name and changes the claim. Sharpest finds: 雜阿含 293's 相續滅，是名苦邊 and 青目's refutation of 不住相似生, in no map or count. The dossier's statement that Tiantai is not in the repository is out of date."
+   "en": "The account holds Chinese Buddhist texts at length (dossier, corpus, Lean tests of 146 sentences), mostly as the strongest contrary test: its continuation stands on the side 中论 refutes. Chapters and fronts hold almost nothing else: no twelve links, craving, saṃsāra, nirvāṇa, 无我 or suffering. Those mapped in the 脉络 study have no entries here, so this file's totals do not show that absence; coverage's absent list does. No entry here is agreement, of a law or otherwise, and I looked: the nearest are parts of entries; agreement stands only in the earlier maps under coverage. Most entries are this crosswalk's own proposals, contrary or divergent, not connections the account states; what is carried in part rests on the dossier, a live page with no recorded review by a person, not on a chapter. 无明 keeps the name and changes the claim. Sharpest finds: 雜阿含 293's 相續滅，是名苦邊 and 青目's refutation of 不住相似生, in no map or count. The dossier's statement that Tiantai is not in the repository is out of date."
   },
   "read": [
    "theories/becoming/review/BUDDHIST-THOUGHT.md (whole)",
@@ -1606,7 +1606,7 @@
   "coverage": {
    "present": [
     {
-     "what": "Dossier B, for review, unread by any person",
+     "what": "Dossier B, for review; no person's review of it is recorded",
      "where": "theories/becoming/review/BUDDHIST-THOUGHT.md",
      "extent": "36 items B-01 to B-36: 18 on 中论, 4 成唯识论, 4 起信论, 5 华严, 2 无明 and 明, 2 阿含 and 坛经, 1 on the conditional laws; 76 questions and 8 sentences to classify"
     },
