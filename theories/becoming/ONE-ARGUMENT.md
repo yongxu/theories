@@ -11,7 +11,7 @@
 | [3](#3-the-claim-that-can-fail-t3) | Trained systems do this as they near their reward's optimum (T3) | conjectured; says what it forbids |
 | [4](#4-the-frozen-tests-what-failed-and-what-that-moved) | Frozen tests of parts near that claim | fell both ways; none varies nearness |
 | [5](#5-the-test-that-would-vary-nearness-la4) | The test that varies nearness (LA4) | Stage A frozen and run: nothing contradicted; the locus unresolved |
-| [6](#6-one-mixed-case) | Whether one course is better than another | two premises, neither asserted; neither ranks a mixed case; the direction takes more |
+| [6](#6-one-mixed-case) | Whether one course is better than another | two readings, neither asserted; neither ranks a mixed case; the direction takes more |
 
 **The case**, for illustration. A fished stock, with seabirds that depend on it at a need and give the boats nothing. A boat's reward reads its catch and not the seabirds. No fishery was measured; the case proves nothing.
 

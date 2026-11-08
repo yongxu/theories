@@ -1088,7 +1088,7 @@
     {
       "id": "order",
       "name": "Widening",
-      "statement": "widening (including and exceeding) is irreflexive, one-way and transitive; under the continuation condition it is retaining and adding; the ethics adds two premises, the continuation condition for scope and C for order",
+      "statement": "widening (including and exceeding) is irreflexive, one-way and transitive; under the continuation condition it is retaining and adding; a ranking is under two named readings, the continuation condition for scope and C for order",
       "anchors": [
         "Becoming.Web.Widens",
         "Becoming.Weighting.WidensOn",
