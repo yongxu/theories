@@ -142,6 +142,23 @@ class Drawing(unittest.TestCase):
         self.assertNotIn('>3</text>', drawing)
         self.assertIn('1 of 1 modules', drawing)
 
+    def test_each_count_in_the_live_picture_sits_by_its_own_curve(self):
+        g = json.loads((ROOT / 'theories/becoming/results/data/theory-graph.json').read_text(encoding='utf-8'))
+        s = spine.spec()
+        for lang in ('en', 'zh'):
+            info = {}
+            spine.svg(g, s, lang, info)
+            self.assertTrue(info['counts'])
+            for c, box in info['counts']:
+                x, y = (box[0] + box[2]) / 2, (box[1] + box[3]) / 2
+
+                def gap(curve):
+                    return min(math.hypot(px - x, py - y) for px, py in (curve['point'](i / 200) for i in range(201)))
+                nearest = min(info['curves'], key=gap)
+                self.assertIs(nearest, c, (lang, c['from'], c['to'], c['n'], nearest['from'], nearest['to'], nearest['kind']))
+                for circle in info['circles']:
+                    self.assertTrue(spine.clear_of_circle(box, circle), (lang, c['n'], circle))
+
     def test_fronts_carry_the_two_sentences_above_the_picture(self):
         s = spine.spec()
         for path, lang in (('theories/becoming/ONE-PAGE.md', 'en'), ('theories/becoming/THE-THEORY-OF-BECOMING.md', 'en'),
@@ -151,6 +168,7 @@ class Drawing(unittest.TestCase):
             self.assertIn(sentences, text, path)
             self.assertLess(text.index(sentences), text.index('results/spine'), path)
         self.assertIn('About a tenth of the 117', spine.how_to_read(s, 'en'))
+        self.assertIn('counting laws, below the grammar (6)', spine.how_to_read(s, 'en'))
 
     def test_the_chinese_page(self):
         page = spine.zh_page(graph())

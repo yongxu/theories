@@ -377,7 +377,9 @@ def page(graph):
     lines += ['', '## The regions', '',
               'A region\'s results are the records whose home section is in its chapter, so the counts below are those the '
               '[chapters page](../chapters/README.md) gives as results stated. A chapter also keeps the anchors of former record '
-              'names, so that old links resolve; those are not results, and neither page counts them.', '',
+              'names, so that old links resolve; those are not results, and neither page counts them.'
+              + (f' To retire holds the {counts["retire"]["result"]} records that no chapter states, which the chapters page '
+                 'does not list.' if counts.get('retire', {}).get('result') else ''), '',
               '| Region | Concepts | Results | Modules | Texts |', '|---|---:|---:|---:|---:|']
     for k in REGION_ORDER:
         c = counts[k]

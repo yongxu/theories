@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "about": "Curated input of the spine picture (tools/research/spine.py, board item RW (c)): the chapters' short labels, the theses' homes and the words each copies from 08 §9 and the overview's Chinese table, the two premises' words from 07 and the overview, and the caption's quotations with their homes (THEORY-GRAPH.md's section on the picture). Every quoted phrase is checked at its home on each render; a phrase its home no longer holds stops the render. The counts come from the theory graph.",
+ "about": "Curated input of the spine picture (tools/research/spine.py, board item RW (c)): the chapters' short labels, the theses' homes and the words each copies from 08 §9 and the overview's Chinese table, the two premises' words from 07 and the overview, and the caption's quotations with their homes (THEORY-GRAPH.md's section on the picture). Every quoted phrase is checked at its home on each render; a phrase its home no longer holds stops the render. The counts come from the theory graph. The Chinese of the caption's and the standings' quotations ('zh' in caption and standing.counts_zh) is an AI translation for THEORY-GRAPH.zh.md, not checked against its home.",
  "order": [
   "root",
   "map",
@@ -226,6 +226,7 @@
    "zh": {
     "title": "一个从它所选择者读出的度量，存续得比对它的驳倒更久",
     "words": [
+     "锁定对任何类型证明",
      "实际的度量是猜想",
      "在一个训练出的系统中，每一冻结裁决都通过",
      "桥接不成立",
@@ -348,7 +349,7 @@
    "home": "theories/becoming/chapters/08-METHOD.md",
    "anchor": "r-one-root-to-its-edge",
    "text": "Each of the 117 distinct central declarations has one standing against the edge of one root. Eleven are derived, each a case of grammar laws, through bridges checked in Lean as equivalences and support the review reads where a row has them",
-   "zh": "117 项不同的核心声明，各有一个相对于一根之边的地位。十一项推导而得，各为文法之律的一个情形，经由在 Lean 中作为等价核验的桥接与审阅所读的支持（在某行列有它们之处）"
+   "zh": "117 项不同的核心声明，各有一个相对于根之边的地位。十一项推导而得，各为文法之律的一个情形，经由在 Lean 中作为等价核验的桥接与审阅所读的支持（在某行列有它们之处）"
   },
   {
    "home": "theories/becoming/chapters/08-METHOD.md",
@@ -366,7 +367,7 @@
    "home": "theories/becoming/chapters/08-METHOD.md",
    "anchor": "shared-laws-and-connectivity",
    "text": "Counted once each, the 117 distinct declarations fall four ways: 45 reach the grammar; 30 rest on balance, which the grammar represents both ways and cannot state without amounts, so they are no gap",
-   "zh": "每项只计一次，117 项不同的声明分为四类：45 项达到文法；30 项依于平衡，文法在两个方向上表示平衡，而没有数量便无法陈述它，所以它们不是缺口"
+   "zh": "每项只计一次，117 项不同的声明分为四类：45 项达到文法；30 项依于平衡，文法双向地表示平衡（一个等价），而没有数量便无法陈述它，所以它们不是缺口"
   },
   {
    "home": "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -383,7 +384,7 @@
  ],
  "standing": {
   "en": "Standings of the 117 central declarations against the edge of one root (08 §7): 11 derived · 1 under a stated hypothesis · 6 counting, below the grammar · 99 at a named distance",
-  "zh": "117 项核心声明相对于一根之边的地位（08 §7）：11 项推导而得 · 1 项在一个所述的假设之下 · 6 项为计数，位于文法以下 · 99 项处于一个指明的距离",
+  "zh": "117 项核心声明相对于根之边的地位（08 §7）：11 项推导而得 · 1 项在一个所述的假设之下 · 6 项为计数，位于文法以下 · 99 项处于一个指明的距离",
   "counts": [
    [
     "117",
@@ -412,7 +413,7 @@
    ]
   ],
   "counts_zh": {
-   "117": "117 项不同的核心声明，各有一个相对于一根之边的地位",
+   "117": "117 项不同的核心声明，各有一个相对于根之边的地位",
    "11": "十一项推导而得，各为文法之律的一个情形，经由在 Lean 中作为等价核验的桥接与审阅所读的支持（在某行列有它们之处）",
    "1": "一项，`GroupEnding.Flow.all_end`，在一个所述的假设之下",
    "6": "六项为计数，位于文法以下",

@@ -98,7 +98,7 @@ class Tree(unittest.TestCase):
         svg = pages[lineage.SVG['en']]
         self.assertNotIn('<script', svg)
         # two public points, two legend circles and four for who wrote it; the private one a diamond
-        self.assertEqual(svg.count('<circle'), 2 + 2 + 4)
+        self.assertEqual(svg.count('<circle'), 2 + 2 + 4 + 1)  # and the dot of the key's mark for not stated
         self.assertIn('fill="#a8a29e"', svg)  # point b, AI-drafted
         self.assertIn("| 2 | 2026-10-28 |", en)
         self.assertIn("AI-drafted from a person's words |", en)
@@ -131,6 +131,21 @@ class Tree(unittest.TestCase):
         en = pages[lineage.PAGE['en']]
         nav = ' · '.join(lineage.navigation.link(p, lineage.PAGE['en'], label) for p, label in lineage.navigation.NAV)
         self.assertIn('# How the account grew\n\n' + nav + '\n\n[中文](LINEAGE.zh.md) · ', en)
+
+    def test_a_mark_not_stated_keeps_its_dot_on_the_thread(self):
+        for on_thread in (False, True):
+            mark = lineage.marker(10, 10, 'public', on_thread, 'unstated')
+            self.assertIn('r="2.2"', mark)
+            self.assertNotIn('r="2.2"', lineage.marker(10, 10, 'public', on_thread, 'ai'))
+        self.assertEqual(lineage.marker(10, 10, 'reconstruction', False, 'unstated').count('stroke-dasharray'), 1)
+
+    def test_titles_that_would_cross_stop_the_render(self):
+        def crossing(placed, lang):
+            return [(0, 100, 400, '1 · A long title over its neighbour', 'start', {}), (1, 120, 400, '2 · Above', 'start', {})]
+        with mock.patch.object(lineage, 'spec', return_value=self.spec), mock.patch.object(lineage, 'title_rows', crossing):
+            pages, errors = lineage.render()
+        self.assertEqual(pages, {})
+        self.assertTrue(any('titles cross or overlap' in e for e in errors), errors)
 
     def test_no_leader_crosses_a_title_in_the_live_picture(self):
         self.patch.stop()

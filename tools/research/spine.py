@@ -6,10 +6,12 @@ counted from the graph the same render builds:
 
 - the grammar at the centre (its concepts) and the eight chapter regions on a ring in the chapters' order, each
   circle's area proportional to the results the region holds;
-- a spoke from each region to the grammar, with how many of the region's core modules state their laws on it;
+- each chapter's number inside its circle, its name, results and uses within it beside it;
+- a spoke from each region to the grammar, reading "k of m modules": how many of the region's core modules state
+  their laws on it;
 - `formal-reuse` between results of two regions as solid curves, for each ordered pair with at least DRAW_MIN uses,
-  the count on the curve, darker where an earlier chapter's results use a later one's; uses within a region as a
-  number in its circle;
+  kept off a disc round the grammar, the count beside the curve where it is at least LABEL_MIN, darker where an
+  earlier chapter's results use a later one's;
 - `interpretive` edges between regions dashed (pairs with at least INTERPRETIVE_MIN), `application` edges dotted
   (every pair); `related` (analogy) is not drawn;
 - the continuation condition and C coming into chapter 7 as premises, each a hypothesis where used and neither
@@ -46,7 +48,8 @@ W, H = 900, 900
 RING = 250            # the chapters' ring
 CX, CY = W / 2, 470   # its centre; svg() sets the height below the header
 GR = 58               # the grammar's circle
-KEEP = GR + 26        # no curve between chapters comes nearer the centre
+KEEP = GR + 26        # the base distance of a pair's curves from the centre is at least KEEP + 16; lanes of other
+                      # kinds sit up to 25 nearer, still clear of the grammar's circle (the tests hold GR + 6)
 LANE_STEP = 24        # between the lanes of pairs that pass near the grammar
 LABEL_MIN = 15        # counts written on the picture
 LEGEND_X = 470
@@ -69,7 +72,7 @@ WORDS = {
         'application': 'application, a reused result with its correspondence and added premises (dotted).',
         'spoke': 'Spoke, “k of m modules”: k of the chapter’s m core modules state their laws on the grammar. It counts modules, not results derived; its width is the share.',
         'spoke_label': '{k} of {m} modules',
-        'related': 'Not drawn: related, for analogy ({n} edges), and pairs under {m} uses; counts under {k} are not written. THEORY-GRAPH.md’s table of edge kinds between chapters has them all.',
+        'related': 'Not drawn: related, for analogy ({n} edges), and formal-reuse pairs under {m} uses; counts under {k} are not written. THEORY-GRAPH.md’s table of edge kinds between chapters has them all.',
         'theses': 'The theses',
         'theses_note': 'T1–T8 at their homes; what each claims, its standing and its tests: the theses table in THEORY-GRAPH.md, “The spine”.',
         'premises': 'Two premises, each a hypothesis where used',
@@ -88,7 +91,7 @@ WORDS = {
         'application': '应用（application），一个被复用的结果，连同其对应与所添的前提（点线）。',
         'spoke': '辐条，“m 个模块中 k 个”：该章 m 个核心模块中，有 k 个在文法上陈述其律。它计的是模块，不是推导而得的结果；粗细表示比例。',
         'spoke_label': '{m} 个模块中 {k} 个',
-        'related': '不画出：相关（related，用于类比，{n} 条边），以及少于 {m} 次使用的配对；少于 {k} 次的不标数字。理论图脊柱部分的中文版（THEORY-GRAPH.zh.md）中各章之间边的种类表列出全部。',
+        'related': '不画出：相关（related，用于类比，{n} 条边），以及少于 {m} 次 formal-reuse 使用的配对；少于 {k} 次的不标数字。理论图脊柱部分的中文版（THEORY-GRAPH.zh.md）中各章之间边的种类表列出全部。',
         'theses': '论题',
         'theses_note': 'T1 到 T8 在其所属之处；各自主张什么、地位如何、检验如何：见理论图脊柱部分的中文版（THEORY-GRAPH.zh.md）中的论题表。',
         'premises': '两个前提，各在所用之处为假设',
@@ -318,7 +321,7 @@ def curve(a, ra, b, rb, d, centre=None, side=1):
 
     Its middle stands on the perpendicular bisector of the chord, which passes through the ring's centre, at distance
     `d` from that centre: on the chord's side, or for a chord through the centre on the side `side` picks. Callers keep
-    `d` at least KEEP, so no curve between chapters crosses the grammar."""
+    `d` well clear of the grammar's circle, so no curve between chapters crosses it."""
     cx0, cy0 = centre or (CX, CY)
     (ax, ay), (bx, by) = a, b
     mx, my = (ax + bx) / 2, (ay + by) / 2
@@ -354,13 +357,15 @@ def short_name(s, k, lang):
     return stem.replace('-', ' ').capitalize()
 
 
-def place_box(candidates, w, h, circles, boxes, pad=2.0, soft=()):
-    """The first candidate centre, in the order given, whose w×h box is clear of every circle and box and crosses
-    the fewest `soft` points (x, y, r: the curves under it); a box no candidate clears takes the fewest hits."""
+def place_box(candidates, w, h, circles, boxes, pad=2.0, soft=(), accept=None):
+    """The first candidate centre, in the order given, whose w×h box is clear of every circle and box, that `accept`
+    allows, and that crosses the fewest `soft` points (x, y, r: the curves under it); a box no candidate clears takes
+    the fewest hits."""
     best = None
     for x, y in candidates:
         box = (x - w / 2, y - h / 2, x + w / 2, y + h / 2)
         hard = sum(not clear_of_circle(box, c, pad) for c in circles) + sum(overlaps(box, b, pad) for b in boxes)
+        hard += 0 if accept is None or accept(x, y) else 10
         crossed = sum(not clear_of_circle(box, c) for c in soft)
         score = (hard, crossed)
         if best is None or score < best[0]:
@@ -506,7 +511,8 @@ def layout(s, results, pairs, lang, top):
     return {'centre': centre, 'r': r, 'angle': angle, 'cy': cy, 'cx': cx, 'blocks': blocks, 'curves': curves, 'rank': rank}
 
 
-def svg(graph, s, lang):
+def svg(graph, s, lang, info=None):
+    """The picture in one language; `info`, a dict, receives where the counts went (for the tests)."""
     words = WORDS[lang]
     order = s['order']
     results, pairs, modules, concepts = counts(graph, order)
@@ -627,19 +633,34 @@ def svg(graph, s, lang):
                  for t in (0.5, 0.42, 0.58, 0.34, 0.66, 0.26, 0.74)]
         box = place_box(spots, w, h, obstacles, boxes + [l[0] for l in labels], soft=[pt for c in L['curves'] for pt in under[id(c)]])
         labels.append((box, text((box[0] + box[2]) / 2, box[3] - 3.5, body, 12, anchor='middle', fill=MUTED, halo=True)))
+    fine = {id(c): [c['point'](i / 100) for i in range(101)] for c in L['curves']}
+
+    def nearest_is(c):  # a count stands nearer its own curve than any other, so it cannot be read as another's
+        def accept(x, y):
+            own = min(math.hypot(px - x, py - y) for px, py in fine[id(c)])
+            return all(min(math.hypot(px - x, py - y) for px, py in fine[id(o)]) > own + 1 for o in L['curves'] if o is not c)
+        return accept
+
     for c in sorted(L['curves'], key=lambda c: -c['n']):
         if c['kind'] != 'formal-reuse' or c['n'] < LABEL_MIN:
             continue
         back = L['rank'][c['from']] < L['rank'][c['to']]
         body = str(c['n'])
         w, h = width_of(body, 14, back) + 6, 16
-        soft = [pt for other in L['curves'] if other is not c for pt in under[id(other)]]
+        mates = [o for o in L['curves'] if o is not c and {o['from'], o['to']} == {c['from'], c['to']}]
+        soft = [pt for other in L['curves'] if other is not c and other not in mates for pt in under[id(other)]]
+        hard = obstacles + [(x, y, r + 1) for o in mates for x, y, r in under[id(o)]]
         sibling = any(o['kind'] == 'formal-reuse' and o['from'] == c['to'] and o['to'] == c['from'] for o in L['curves'])
         away = ((L['cx'], L['cy']), 1 if c['outward'] > 0 else -1) if sibling else None
-        box = place_box(along(c['point'], 0.5, away), w, h, obstacles, boxes + [l[0] for l in labels], soft=soft)
+        box = place_box(along(c['point'], 0.5, away), w, h, hard, boxes + [l[0] for l in labels], soft=soft,
+                        accept=nearest_is(c))
         labels.append((box, text((box[0] + box[2]) / 2, box[3] - 3.5, body, 14, 'bold' if back else 'normal', 'middle',
                                  BACKWARD if back else FORWARD, True)))
+        if info is not None:
+            info.setdefault('counts', []).append((c, box))
     out += [l[1] for l in labels]
+    if info is not None:
+        info.update({'curves': L['curves'], 'circles': circles + badges})
     low = max([b[3] for b in boxes] + [centre[k][1] + r[k] for k in order] + [py + 15 for _, py, _ in badges]) + 40
     # left column: the premises, their arrows up the left margin into chapter 7, then the theses' key
     sx, sy = centre['significance']
@@ -737,16 +758,17 @@ def how_to_read(s, lang):
     share = (d + h) / total
     if lang == 'zh':
         about = '约十分之一' if 0.085 <= share <= 0.115 else f'{d + h} 项'
-        return (f'每个圆是一章，按其结果数定大小；从一章到另一章的曲线，计其结果在已核验的推理中使用另一章结果的次数；'
-                f'辐条标出该章有多少模块在中央的文法上陈述其律（计的是模块，不是推导而得的结果）。{total} 项核心声明中，'
-                f'{about}被读作根之律的情形（{d} 项推导而得，{h} 项在一个所述的假设之下）；其余或为计数之律，位于文法以下'
-                f'（{c} 项），或处于一个指明的距离，各有其理由（{rest} 项）。')
+        return (f'每个圆是一章，按其结果数定大小；从一章到另一章的实线，计其结果使用另一章结果、记为 formal-reuse（这一类只用于'
+                f'已核验的推理）的次数，虚线与点线是别种依赖；辐条标出该章有多少核心模块在中央的文法上陈述其律（计的是模块，'
+                f'不是推导而得的结果）。{total} 项核心声明中，{about}被读作文法之律的情形（{d} 项推导而得，{h} 项在一个所述的'
+                f'假设之下）；其余或为计数之律，位于文法以下（{c} 项），或处于一个指明的距离，各有其理由（{rest} 项）。')
     about = 'About a tenth' if 0.085 <= share <= 0.115 else f'{d + h}'
-    return (f'Each circle is a chapter, sized by its results; a curve from one chapter to another counts how often its '
-            f'results use the other\'s in verified inferences, and a spoke says how many of the chapter\'s modules state their '
-            f'laws on the grammar at the centre (modules, not results derived). {about} of the {total} central declarations '
-            f'are read as cases of the root\'s laws ({d} derived, {h} under a stated hypothesis); the rest are counting laws '
-            f'below the grammar ({c}) or stand at a named distance, each with its reason ({rest}).')
+    return (f'Each circle is a chapter, sized by its results; a solid curve from one chapter to another counts the uses of '
+            f'the other\'s results recorded as formal-reuse, the kind kept for verified inferences, and dashed and dotted '
+            f'curves are other dependences; a spoke says how many of the chapter\'s core modules state their laws on the '
+            f'grammar at the centre (modules, not results derived). {about} of the {total} central declarations are read as '
+            f'cases of the grammar\'s laws ({d} derived, {h} under a stated hypothesis); the rest are counting laws, below the '
+            f'grammar ({c}), or stand at a named distance, each with its reason ({rest}).')
 
 
 def plural(n, noun):
@@ -828,6 +850,8 @@ def section(graph, page_path):
     rank = {k: i for i, k in enumerate(order)}
     back = [k for k in drawn if rank[k[0]] < rank[k[1]]]
     small = [v['formal-reuse'] for k, v in between.items() if 0 < v['formal-reuse'] < DRAW_MIN]
+    other_kind = sum(1 for v in between.values() if 0 < v['formal-reuse'] < DRAW_MIN
+                     and (v['interpretive'] >= INTERPRETIVE_MIN or v['application'] >= 1))
     interp_small = [v['interpretive'] for v in between.values() if 0 < v['interpretive'] < INTERPRETIVE_MIN]
     related = sum(v['related'] for v in pairs.values())
     outside = sum(sum(v.values()) for k, v in pairs.items() if k[0] not in order or k[1] not in order)
@@ -846,12 +870,15 @@ def section(graph, page_path):
              + (f', the largest {name[biggest[0]].lower()} to {name[biggest[1]].lower()} with '
                 f'{between[biggest]["formal-reuse"]}' if biggest else '') + '. '
              f'Dashed curves are `interpretive`, kept for "an argument dependency", and dotted ones `application`; `related`, '
-             f'which RESULT-WORKFLOW keeps for analogy, is not drawn ({related:,} edges). Not drawn either: '
-             f'{plural(len(small), "pair")} with fewer than {DRAW_MIN} formal-reuse uses ({sum(small)} uses), and '
-             f'{plural(len(interp_small), "interpretive pair")} with fewer than {INTERPRETIVE_MIN} ({sum(interp_small)} edges); '
-             f'the table below has every pair. In a circle, "within" counts formal-reuse between results of the same '
-             f'chapter; interpretive edges within a chapter are in the table. A spoke\'s width and its k/m count the region\'s '
-             f'core modules that state their laws on the grammar, as the region lists below say. '
+             f'which RESULT-WORKFLOW keeps for analogy, is not drawn ({related:,} edges). Not drawn as formal-reuse curves: '
+             f'{plural(len(small), "pair")} with fewer than {DRAW_MIN} formal-reuse uses ({sum(small)} uses)'
+             + (f', {other_kind} of them drawn as a dashed or dotted curve of another kind' if other_kind else '') + '; '
+             f'not drawn as dashed curves: {plural(len(interp_small), "interpretive pair")} with fewer than '
+             f'{INTERPRETIVE_MIN} ({sum(interp_small)} edges); and the counts of curves under {LABEL_MIN} uses are not '
+             f'written. The table below has every pair. Beside a circle, "within" counts formal-reuse between results of '
+             f'the same chapter; interpretive edges within a chapter are in the table. A spoke\'s width and its "k of m '
+             f'modules" count the region\'s core modules that state their laws on the grammar, as the region lists below '
+             f'say. '
              + (f'Results in {", ".join(name.get(k, k) for k in others)} ({outside} edges touch them) are in the table only. '
                 if outside else '')
              + f'The continuation condition and C come into chapter 7 as premises: "{cap[4]["text"]}" '
@@ -908,6 +935,8 @@ def zh_page(graph):
     back = [k for k in drawn if rank[k[0]] < rank[k[1]]]
     biggest = max(back, key=lambda k: formal[k]) if back else None
     small = [n for n in formal.values() if 0 < n < DRAW_MIN]
+    other_kind = sum(1 for v in between.values() if 0 < v['formal-reuse'] < DRAW_MIN
+                     and (v['interpretive'] >= INTERPRETIVE_MIN or v['application'] >= 1))
     interp_small = [v['interpretive'] for v in between.values() if 0 < v['interpretive'] < INTERPRETIVE_MIN]
     related = sum(v['related'] for v in pairs.values())
     outside = sum(sum(v.values()) for k, v in pairs.items() if k[0] not in order or k[1] not in order)
@@ -931,7 +960,8 @@ def zh_page(graph):
     for label, n in (('推导而得', '11'), ('在一个所述的假设之下', '1'), ('计数，位于文法以下', '6'), ('处于一个指明的距离', '99')):
         body.append(f'| {label} | {n} | “{st["counts_zh"][n]}” |')
     body += [f'| 全部核心声明 | 117 | “{st["counts_zh"]["117"]}” |', '',
-             f'**图中的论题**（[08 §9]({rel(m08, "theses")})）：选自各自所在行的话，地位在前；其余见该行。', '',
+             f'**图中的论题**（[08 §9]({rel(m08, "theses")})）：选自[总览]({rel(s["theses_homes"]["zh"])})论题表中各自所在行的话，'
+             f'地位在前；08 §9 各行的完整表述见英文。', '',
              '| 论题 | 所在 | 图中颜色 | 其行的话 |', '|---|---|---|---|']
     for th in s['theses']:
         home = s['chapters'][th['home']]['file']
@@ -943,13 +973,14 @@ def zh_page(graph):
              f'“使用所引结果的已核验推理”。较深的曲线是前面一章的结果使用后面一章的结果：所画 {len(drawn)} 个配对中有 {len(back)} 个'
              + (f'，最大的是「{zname(biggest[0])}」到「{zname(biggest[1])}」，{formal[biggest]} 次' if biggest else '') + '。'
              f'虚线是 `interpretive`，留给“论证上的依赖”；点线是 `application`；`related` 是 RESULT-WORKFLOW 留给类比的，不画出'
-             f'（{related} 条边）。也不画出：少于 {DRAW_MIN} 次 formal-reuse 使用的 {len(small)} 个配对（共 {sum(small)} 次），以及少于 '
-             f'{INTERPRETIVE_MIN} 次的 {len(interp_small)} 个诠释配对（{sum(interp_small)} 条边）；少于 {LABEL_MIN} 次的不标数字；下表列出'
+             f'（{related} 条边）。不画作 formal-reuse 曲线的：少于 {DRAW_MIN} 次 formal-reuse 使用的 {len(small)} 个配对（共 '
+             f'{sum(small)} 次）' + (f'，其中 {other_kind} 个画作别种的虚线或点线' if other_kind else '') + f'；不画作虚线的：少于 '
+             f'{INTERPRETIVE_MIN} 次的 {len(interp_small)} 个诠释配对（{sum(interp_small)} 条边）；少于 {LABEL_MIN} 次的曲线不标数字。下表列出'
              f'每一个配对。圆旁的“章内使用”计同一章结果之间的 formal-reuse，章内的诠释边见表。辐条上的“m 个模块中 k 个”与其粗细，'
              f'计该区域核心模块中在文法上陈述其律的那些，如[英文版](THEORY-GRAPH.md)各区域的列表所示。'
              + (f'{"、".join("「" + zname(k) + "」" for k in others)}的结果（{outside} 条边涉及它们）只在表中。' if outside else '')
              + f'延续条件与 C 作为前提进入第七章：“{cap[4]["zh"]}”（[07]({rel(cap[4]["home"])})）。T1 到 T8 位于其所属之处，按检验'
-             f'结局着色；它们的话选自 [08 §9]({rel(m08, "theses")}) 中各自所在的行，地位在前，见上面的论题表。', '',
+             f'结局着色；它们的话选自[总览]({rel(s["theses_homes"]["zh"])})论题表中各自所在的行，地位在前，见上面的论题表。', '',
              f'**它不显示什么。** 一条边记录的是一种依赖、一次引用或一个已登记的读法，不是意义上的一致。曲线也不说一章的结果在多大'
              f'程度上达到文法，08 §7 以两种方式计这一点。“{cap[0]["zh"]}”；“{cap[1]["zh"]}”；“{cap[2]["zh"]}”'
              f'（[08 §7]({rel(cap[0]["home"], cap[0]["anchor"])})）。又，“{cap[5]["zh"]}”；“{cap[3]["zh"]}”'
@@ -958,7 +989,8 @@ def zh_page(graph):
              f'所以 45 与 11 计的是不同的东西，而曲线两者都不画。辐条也不画：它计的是在文法上陈述其律的模块，不是达到文法的结果。', '',
              '### 各章之间边的种类', '<a id="edge-kinds-between-chapters"></a>', '',
              '从第一个区域的结果到第二个区域的结果的边，按各记录给其依赖的种类（`formal-reuse`、`interpretive`、`application`）'
-             '与其 `related` 列表（类比，不是依赖）计。两个区域相同的一行，计该区域之内的边。', '',
+             '与其 `related` 列表（类比，不是依赖）计。两个区域相同的一行，计该区域之内的边。区域以其所在章在总览中的标题称之；'
+             '英文区域名见[英文版](THEORY-GRAPH.md#the-regions)。', '',
              '| 从此区域的结果 | 到此区域的结果 | formal-reuse | interpretive | application | related |',
              '|---|---|---:|---:|---:|---:|']
     full = list(theory_graph.REGION_ORDER)
@@ -970,8 +1002,8 @@ def zh_page(graph):
             'theories/becoming/results/data/spine.json; edit those, not this page. -->', '',
             '# 理论图：脊柱', '', zh_fronts.nav_line(PAGE_ZH), '', '{time}', '',
             f'本页是[理论图](THEORY-GRAPH.md)中脊柱部分的中文版：这幅图、怎样读它、核心声明的地位与论题、它显示什么与不显示什么，'
-            f'以及各章之间边的种类表；各区域的结果、模块与文本的列表只在英文版中。本页由 AI 翻译；引自英文文本的话都是译文，未经核对，'
-            f'以英文原文为准。', '']
+            f'以及各章之间边的种类表；各区域的结果、模块与文本的列表只在英文版中。本页的“脊柱”指各章围绕文法的这幅图；术语表中的'
+            f'“脊柱”指由其检查器所运行的 Lean 包 `Becoming`。本页由 AI 翻译；引自英文文本的话都是译文，未经核对，以英文原文为准。', '']
     text = '\n'.join(head + body).rstrip() + '\n'
     time = navigation.reading_time(text).replace(' minutes', ' 分钟').replace('a minute', '一分钟')
     return text.replace('{time}', f'*约 {time}读完。*', 1)

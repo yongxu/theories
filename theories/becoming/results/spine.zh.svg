@@ -11,7 +11,7 @@
 <text x="24" y="40" font-size="24" font-weight="bold" text-anchor="start" fill="#1c1917">围绕一个文法的八章</text>
 <text x="24" y="66" font-size="15" text-anchor="start" fill="#57534e">由理论图画出：每个圆按其章的结果数定大小，每条曲线计一章的结果使用另一章结果的次数。</text>
 <rect x="20" y="76" width="860" height="72" rx="6" fill="#f5f5f4" stroke="#e7e5e4"/>
-<text x="32" y="93" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">117 项核心声明相对于一根之边的地位（08 §7）：</text>
+<text x="32" y="93" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">117 项核心声明相对于根之边的地位（08 §7）：</text>
 <text x="32" y="113" font-size="15" text-anchor="start" fill="#1c1917">11 项推导而得 · 1 项在一个所述的假设之下 · 6 项为计数，位于文法以下</text>
 <text x="32" y="133" font-size="15" text-anchor="start" fill="#1c1917">99 项处于一个指明的距离</text>
 <line x1="450" y1="323.3" x2="450" y2="455.6" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="3.7" stroke-linecap="round"/>
@@ -107,15 +107,15 @@
 <text x="358.6" y="611" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">10 个模块中 4 个</text>
 <text x="323.2" y="519.6" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">62 个模块中 12 个</text>
 <text x="324.3" y="393.9" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">26 个模块中 4 个</text>
-<text x="531.4" y="321.3" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">60</text>
-<text x="528" y="339.7" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">42</text>
-<text x="564.9" y="474.6" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">40</text>
+<text x="535" y="313" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">60</text>
+<text x="519.7" y="346" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">42</text>
+<text x="541.9" y="433" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">40</text>
 <text x="392.5" y="375.2" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">35</text>
-<text x="420.9" y="398.6" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">29</text>
+<text x="414.4" y="401.2" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">29</text>
 <text x="555.5" y="412" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">26</text>
-<text x="429" y="380.1" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">20</text>
-<text x="647.7" y="436.7" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">17</text>
-<text x="635.8" y="455.4" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">15</text>
+<text x="432.8" y="369.3" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">20</text>
+<text x="656" y="433.4" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">17</text>
+<text x="631.7" y="447.3" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">15</text>
 <text x="555" y="565.6" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">15</text>
 <text x="36" y="900.3" font-size="15" font-weight="bold" text-anchor="start" fill="#57534e">两个前提，各在所用之处为假设</text>
 <rect x="36" y="912.25566257523" width="390" height="73" rx="6" fill="#ffffff" stroke="#1c1917" stroke-dasharray="5 3"/>
@@ -165,10 +165,10 @@
 <text x="506" y="1180.3" font-size="14" text-anchor="start" fill="#1c1917">中，有 k 个在文法上陈述其律。它计的是模块，</text>
 <text x="506" y="1198.3" font-size="14" text-anchor="start" fill="#1c1917">不是推导而得的结果；粗细表示比例。</text>
 <text x="506" y="1220.3" font-size="14" text-anchor="start" fill="#1c1917">不画出：相关（related，用于类比，1420 条边），</text>
-<text x="506" y="1238.3" font-size="14" text-anchor="start" fill="#1c1917">以及少于 10 次使用的配对；少于 15 次的不标</text>
-<text x="506" y="1256.3" font-size="14" text-anchor="start" fill="#1c1917">数字。理论图脊柱部分的中文版</text>
-<text x="506" y="1274.3" font-size="14" text-anchor="start" fill="#1c1917">（THEORY-GRAPH.zh.md）中各章之间边的种类表列</text>
-<text x="506" y="1292.3" font-size="14" text-anchor="start" fill="#1c1917">出全部。</text>
+<text x="506" y="1238.3" font-size="14" text-anchor="start" fill="#1c1917">以及少于 10 次 formal-reuse 使用的配对；少</text>
+<text x="506" y="1256.3" font-size="14" text-anchor="start" fill="#1c1917">于 15 次的不标数字。理论图脊柱部分的中文版</text>
+<text x="506" y="1274.3" font-size="14" text-anchor="start" fill="#1c1917">（THEORY-GRAPH.zh.md）中各章之间边的种类表</text>
+<text x="506" y="1292.3" font-size="14" text-anchor="start" fill="#1c1917">列出全部。</text>
 <text x="24" y="1334" font-size="12" text-anchor="start" fill="#57534e">由 tools/research/spine.py 依 theory-graph.json 与 spine.json 生成；它显示什么、不显示什么，见</text>
 <text x="24" y="1349" font-size="12" text-anchor="start" fill="#57534e">THEORY-GRAPH.zh.md 的“脊柱”。</text>
 </svg>

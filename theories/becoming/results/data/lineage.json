@@ -106,7 +106,7 @@
    "sources_list": "Sources by row",
    "origin": "Written by",
    "origins_key": "Fill, who wrote what states it:",
-   "origins_intro": "Each turning point also says who wrote the text that states it, the first of its evidence that does: the column *Written by*, and the fill of its mark in the picture. AI readers classified each from what the file or its folder says, and a second AI reader checked every one; each reading and its grounds are in [the classification](../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rw-spine/reads/lineage-origins.json). Of the {total}:",
+   "origins_intro": "Each turning point also says who wrote the text that states it, the first of its evidence that does: the column *Written by*, and the fill of its mark in the picture. Three AI readers classified the points from what the file, its folder or an earlier folder's source list says, and three more checked them point by point; all 48 checks agreed. The mark is that entry's: a row's other evidence, and quotations taken from it, may be in another hand. Each reading and its grounds are in [the classification](../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rw-spine/reads/lineage-origins.json). Of the {total}:",
    "labels_key": "Shape, what states it:"
   },
   "zh": {
@@ -154,7 +154,7 @@
    "sources_note": "各行的来源见表后的“各行来源”；来源的位置说明，除行号与标题外，保留英文。",
    "origin": "执笔",
    "origins_key": "填色，陈述它的文本出自谁之手：",
-   "origins_intro": "每个转折点也标明陈述它的文本出自谁之手，即其证据中首先陈述它的那一条：见“执笔”一栏，以及图中标记的填色。AI 读者依文件或其所在文件夹的说明逐一归类，另一位 AI 读者逐条核对；各条读法及其依据见[归类](../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rw-spine/reads/lineage-origins.json)。{total} 个转折点中：",
+   "origins_intro": "每个转折点也标明陈述它的文本出自谁之手，即其证据中首先陈述它的那一条：见“执笔”一栏，以及图中标记的填色。三位 AI 读者依文件、其所在文件夹或较早文件夹的来源列表的说明逐一归类，另三位逐条核对，48 条全部一致。所标的是那一条证据的执笔者：一行中的其他证据，以及取自它们的引文，可能出自别人之手。各条读法及其依据见[归类](../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rw-spine/reads/lineage-origins.json)。{total} 个转折点中：",
    "labels_key": "形状，陈述它的是什么："
   }
  },
@@ -3059,8 +3059,8 @@
   "unstated": {
    "en": "not stated",
    "zh": "未说明",
-   "short_en": "of unstated hand",
-   "short_zh": "执笔者未说明",
+   "short_en": "not stated",
+   "short_zh": "未说明",
    "means_en": "nothing found says who wrote it, or what speaks of it disagrees.",
    "means_zh": "找不到说明是谁写的，或说到它的文本彼此不一。"
   }

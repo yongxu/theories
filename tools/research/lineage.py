@@ -295,7 +295,11 @@ def svg(s, lang, weeks):
         out.append(marker(x, y, p['label'], p['id'] in thread, p.get('origin')))
     # short titles on the major points, in rows above the lanes, each on a vertical leader from its point
     title_floor = base - 16 - 17 * max(len(lanes), 1) - 14
-    for row, x, y, label, anchor, p in title_rows(placed, lang):
+    rows = title_rows(placed, lang)
+    crossed = title_crossings(rows)
+    if crossed:  # the search found no layout: refuse, rather than draw leaders across titles
+        raise ValueError(f'lineage picture ({lang}): titles cross or overlap: {crossed[:3]}')
+    for row, x, y, label, anchor, p in rows:
         ly = title_floor - 22 * row
         tx = x - 6 if anchor == 'start' else x + 6 if anchor == 'end' else x
         out.append(f'<line x1="{x:.1f}" y1="{y - 9:.1f}" x2="{x:.1f}" y2="{ly + 5:.1f}" stroke="{THREAD if p["id"] in thread else MUTED}" stroke-width="1"/>')
@@ -428,17 +432,17 @@ def title_rows(placed, lang, most=12, budget=200000):
 def title_crossings(rows):
     """What title_rows is to prevent, as pairs of titles: a leader crossing a lower title, or two titles overlapping in
     one row. None where it has done its work."""
-    def span(x, label, anchor):
-        w = label_width(label) + 4
+    def span(x, label, anchor, p):
+        w = label_width(label, bool(p.get('thread'))) + 4
         x0 = x - 6 if anchor == 'start' else x + 6 - w if anchor == 'end' else x - w / 2
         return x0, x0 + w
     out = []
-    for r1, x1, _, l1, a1, _ in rows:
-        s1 = span(x1, l1, a1)
-        for r2, x2, _, l2, a2, _ in rows:
+    for r1, x1, _, l1, a1, p1 in rows:
+        s1 = span(x1, l1, a1, p1)
+        for r2, x2, _, l2, a2, p2 in rows:
             if l1 == l2:
                 continue
-            s2 = span(x2, l2, a2)
+            s2 = span(x2, l2, a2, p2)
             if r2 < r1 and s2[0] - 1 <= x1 <= s2[1] + 1:
                 out.append((l1, l2))
             if r1 == r2 and l1 < l2 and s1[0] < s2[1] and s2[0] < s1[1]:
@@ -448,18 +452,17 @@ def title_crossings(rows):
 
 def marker(x, y, label, on_thread, origin=None):
     """A point's mark: its shape by what states it (a circle where public, a diamond where private, a dashed square where
-    reconstructed), its fill by who wrote that (black a person, grey AI-drafted from a person's words, white AI-made, a
-    dotted outline unstated); a blue ring where it is on the thread."""
+    reconstructed), its fill by who wrote that (black a person, grey AI-drafted from a person's words, white AI-made,
+    white with a dot at its centre not stated); a blue ring where it is on the thread."""
     ring = f' stroke="{THREAD}" stroke-width="2.4"' if on_thread else f' stroke="{INK}" stroke-width="1.3"'
-    if origin == 'unstated' and not on_thread:
-        ring += ' stroke-dasharray="2 2"'
     fill = FILL.get(origin, INK if label == 'public' else '#ffffff')
+    dot = f'<circle cx="{x:.1f}" cy="{y:.1f}" r="2.2" fill="{INK}"/>' if origin == 'unstated' else ''
     if label == 'public':
-        return f'<circle cx="{x:.1f}" cy="{y:.1f}" r="7" fill="{fill}"{ring}/>'
+        return f'<circle cx="{x:.1f}" cy="{y:.1f}" r="7" fill="{fill}"{ring}/>' + dot
     if label == 'private':
         return (f'<path d="M{x:.1f},{y - 8:.1f} L{x + 8:.1f},{y:.1f} L{x:.1f},{y + 8:.1f} L{x - 8:.1f},{y:.1f} z" '
-                f'fill="{fill}"{ring}/>')
-    return f'<rect x="{x - 7:.1f}" y="{y - 7:.1f}" width="14" height="14" fill="{fill}"{ring} stroke-dasharray="3 2"/>'
+                f'fill="{fill}"{ring}/>') + dot
+    return f'<rect x="{x - 7:.1f}" y="{y - 7:.1f}" width="14" height="14" fill="{fill}"{ring} stroke-dasharray="3 2"/>' + dot
 
 
 def wrap_text(text, width, lang):
@@ -625,9 +628,10 @@ def page(s, lang, weeks, undated, by_folder, totals):
               + (f' {words["origin"]} |' if s.get('origins') else ''), '|---:|---|---|---|---|' + ('---|' if s.get('origins') else '')]
     sources = []
     for n, p in enumerate(s['points'], 1):
-        ev = ('；' if lang == 'zh' else '; ').join(evidence_link(e, here, words) for e in p['evidence'])
+        links = list(dict.fromkeys(evidence_link(e, here, words) for e in p['evidence']))  # one place cited once
+        ev = ('；' if lang == 'zh' else '; ').join(links)
         stop = '。' if lang == 'zh' else '.'
-        shown = ev if lang == 'en' else words['sources_n'].format(n=len(p['evidence']))
+        shown = ev if lang == 'en' else words['sources_n'].format(n=len(links))
         lines.append(f'| {n} | {p["date"]} | **{cell(p["title"][lang])}{stop}** {cell(p["what"][lang])} | {shown} | '
                      f'{s["labels"][p["label"]][lang]} |' + (f' {s["origins"][p["origin"]][lang]} |' if s.get('origins') else ''))
         sources.append(f'{n}. {ev}')
@@ -688,5 +692,8 @@ def render():
     out = {}
     for lang in ('en', 'zh'):
         out[PAGE[lang]] = page(s, lang, weeks, undated, by_folder, totals)
-        out[SVG[lang]] = svg(s, lang, weeks)
+        try:
+            out[SVG[lang]] = svg(s, lang, weeks)
+        except ValueError as error:  # titles that would cross: stop the render, naming them
+            return {}, [str(error)]
     return out, []
