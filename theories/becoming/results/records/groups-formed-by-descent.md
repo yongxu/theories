@@ -31,7 +31,7 @@
 
 - Migration between lineages and inexact transmission are not stated, nor how assortment changes over generations; groups founded mixed, with additive returns to groupmates, are stated in record selection-with-returns-to-groupmates.
 - Why the lower lineages end: their members not being active is a hypothesis wherever it enters.
-- That keeping what ending selected is better: the mean is read in the counts; ranking goes through the comparison C or a premise in its place.
+- That keeping what ending selected is better: the mean is read in the counts; a ranking holds the comparison C or another order.
 - **Counterexample:** Groups formed across lineages need not keep their differences: in Exhausted the next groups are alike in holding back and the mean falls below where it started (Exhausted.next_step), while with the groups formed by descent it stays (Assorted.kept). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean)
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
@@ -106,6 +106,7 @@ Aliases: `groups formed by descent`, `lineages`, `assortment`, `complete assortm
 - 22 October 2026, CA1: related to confined-rise-within-a-whole (study section 366); this record's laws and statements are unchanged.
 - 6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.
 - 7 November 2026, CX: this said ranking goes through the comparison C, where a ranking of courses needs C or a premise in its place (07 §4), the correction LM1 made in other records; corrected. No law, premise or proof changed.
+- 9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.
 
 </details>
 
