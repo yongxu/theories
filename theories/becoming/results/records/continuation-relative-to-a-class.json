@@ -308,7 +308,7 @@
   ],
   "validation_scope": {
     "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.Grammar, 72 theorems in 120 declarations, and the instance sections of Arising, Change, Identity, ContinuedClasses, PatternPassing, Persistence and Space, each declaration with an empty axiom report. The plan it realizes was reviewed in its ninth version by GPT astra and two Opus reviewers; the instance sections were written by three Opus coders and merged with names reconciled. No person's review is recorded. The OU6 corrections were reviewed against the Lean by GPT astra and Opus reviewers.",
-    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.Grammar，120 个声明中 72 条定理，及 Arising、Change、Identity、ContinuedClasses、PatternPassing、Persistence、Space 的实例之节，公理报告皆空。计划第九版经 GPT astra 与两位 Opus 审查者审查；实例之节由三位 Opus 编者写成，合并时统一了名。无人审查。OU6 之更正经 GPT astra 与 Opus 审查者对照 Lean 审查。"
+    "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.Grammar，120 个声明中 72 条定理，及 Arising、Change、Identity、ContinuedClasses、PatternPassing、Persistence、Space 的实例之节，公理报告皆空。计划第九版经 GPT astra 与两位 Opus 审查者审查；实例之节由三位 Opus 编者写成，合并时统一了名。尚无人审查之记录。OU6 之更正经 GPT astra 与 Opus 审查者对照 Lean 审查。"
   },
   "next_delta": {
     "en": "Lift the shared laws onto the grammar with their owner, and the theorems that read activity only; state the counting of lines; and give generation and degeneration the content that continuation and renewal alone do not carry.",

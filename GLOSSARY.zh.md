@@ -1,4 +1,4 @@
-<!-- GLOSSARY.md 的中文版（RW，2026 年 11 月 8 日，AI 译自英文版，未经人工审读）。义以英文版为准；英文版改动时，本版随之修订。 -->
+<!-- GLOSSARY.md 的中文版（RW，2026 年 11 月 8 日，AI 译自英文版，尚无人审查它的记录）。义以英文版为准；英文版改动时，本版随之修订。 -->
 # 术语表
 
 [English](GLOSSARY.md) · [首页](README.zh.md) · [一页](theories/becoming/ONE-PAGE.zh.md) · [用途](theories/becoming/USES.zh.md) · [实例](theories/becoming/USES-EXAMPLES.zh.md) · [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) · [八章（英文）](theories/becoming/chapters/README.md) · [古文（第六章）](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) · [检验](TESTS.zh.md) · [对照表](theories/becoming/results/atlas/CROSSWALK.zh.md) · [怎样长成](theories/LINEAGE.zh.md) · **术语表** · [审查包](theories/becoming/review/README.zh.md)

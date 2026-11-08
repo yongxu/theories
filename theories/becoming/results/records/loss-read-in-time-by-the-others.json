@@ -243,7 +243,7 @@
   ],
   "validation_scope": {
     "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T200926.001323Z): Becoming.ReadInTime, 39 declarations, every one with an empty axiom report, all cited here. Built in one session; one independent read-only review by a separate AI agent, its findings taken as the kit note says (its probes kept in the kit), study section 420; no person's review recorded.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T200926.001323Z）：Becoming.ReadInTime，39 项声明，公理报告皆空，本记录全引。于一会话中构建；另一 AI 代理作一次独立只读审查，其所见依工作包说明采纳（其探针存于工作包），见研究第 420 节；未经人审。"
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T200926.001323Z）：Becoming.ReadInTime，39 项声明，公理报告皆空，本记录全引。于一会话中构建；另一 AI 代理作一次独立只读审查，其所见依工作包说明采纳（其探针存于工作包），见研究第 420 节；尚无人审之记录。"
   },
   "next_delta": {
     "en": "A late reading of another form, with its own weight, and the window it gives; the loss read before it reaches N; a law for the round from the step between; the step from which the window is closed, not only a bound; noise; readers who learn; an independent review by a person.",

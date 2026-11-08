@@ -438,7 +438,7 @@ def tests_page(root: Path = ROOT, checked: bool = True) -> tuple[dict, list[str]
             f'这里的结局按检验列出：每一行是一项检验，在它所指明的一种或几种情形之中；一个论题可以在一种情形中通过、在另一种中未通过，所以下面没有哪一行、哪一个计数是对一个论题整体的裁断（每个论题的地位，见[方法一章 §9 的表]({METHOD_THESES})，英文）；一行归入哪一类，按下面该类标题之下写明的规则来读。',
             '']
     head = lambda t: [TESTS_GENERATED, '', '# 检验', '', nav_line(TESTS_PAGE), '', f'*约 {t}读完。*', '',
-                      '*AI 依英文版写成，未经人工审读；义以英文版为准，英文版又以各项检验的文件夹为准。*', '']
+                      '*AI 依英文版写成，尚无人审查它的记录；义以英文版为准，英文版又以各项检验的文件夹为准。*', '']
     final = lambda t: '\n'.join(head(t) + lead + body).rstrip('\n') + '\n'
     page = final(settle(lambda t: zh_time(final(t))))
     return {TESTS_PAGE: page}, errors

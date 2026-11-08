@@ -152,7 +152,7 @@
   ],
   "validation_scope": {
     "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261027T195912.152773Z): 36 of Becoming.CausalGrowth's 212 declarations, each with an empty axiom report, cited here, the others by what-can-be-born-next. Built in one session; an independent read-only review by another AI agent (REVIEW-UE13) and a re-check (RECHECK-UE13), study section 431; no person's review recorded. Many laws restate known order theory.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261027T195912.152773Z）：Becoming.CausalGrowth 之 212 项声明中 36 项，公理报告皆空，本记录引之，余者为 what-can-be-born-next 所引。于一会话中构建；另一 AI 代理作独立只读审查（REVIEW-UE13）并复查（RECHECK-UE13），见研究第 431 节；未经人审。诸多律重述已知之序论。"
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261027T195912.152773Z）：Becoming.CausalGrowth 之 212 项声明中 36 项，公理报告皆空，本记录引之，余者为 what-can-be-born-next 所引。于一会话中构建；另一 AI 代理作独立只读审查（REVIEW-UE13）并复查（RECHECK-UE13），见研究第 431 节；尚无人审之记录。诸多律重述已知之序论。"
   },
   "next_delta": {
     "en": "The locally finite case without a natural labelling, with intervals decided, and which nets of the models are the links of their precedence; review by a person.",

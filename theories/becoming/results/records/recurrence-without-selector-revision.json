@@ -65,7 +65,7 @@
   ],
   "validation_scope": {
     "en": "The repository checker with Lean 4.29.1 passed BoundaryModels on 6 October 2026 (lean/verification.json, the checked bytes kept in its run folder), every FixedSelector theorem with an empty axiom report. On 16 October a comment was added to the file's first line, so no passing receipt binds the current bytes and the record is reviewed, not receipt-bound, until a checker run does. Reviewed in LEAN-CORE-REVIEW, whose first finding had the selector made operative and whose reinspection accepted the non-implication; no person's review recorded.",
-    "zh": "仓库检查器以 Lean 4.29.1 于2026年10月6日通过 BoundaryModels（lean/verification.json，所检查字节存于其运行目录），FixedSelector 每条定理公理报告为空。10月16日文件首行加了注释，故无通过的回执绑定当前字节；在检查器重跑之前本记录为已审而非回执绑定。经 LEAN-CORE-REVIEW 审查：其首项发现促使选择者改为运作，复查接受此非蕴含；未经人审。"
+    "zh": "仓库检查器以 Lean 4.29.1 于2026年10月6日通过 BoundaryModels（lean/verification.json，所检查字节存于其运行目录），FixedSelector 每条定理公理报告为空。10月16日文件首行加了注释，故无通过的回执绑定当前字节；在检查器重跑之前本记录为已审而非回执绑定。经 LEAN-CORE-REVIEW 审查：其首项发现促使选择者改为运作，复查接受此非蕴含；尚无人审之记录。"
   },
   "next_delta": {
     "en": "A checker run binding the current bytes; the non-implication restated on the spine as an instance of the gate laws, the selector being a quantity every step keeps.",

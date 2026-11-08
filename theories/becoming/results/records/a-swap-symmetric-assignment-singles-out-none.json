@@ -62,7 +62,7 @@
   ],
   "validation_scope": {
     "en": "Machine-checked by Lean 4.29.1 (receipt priority-identification-checks/20261007T193051.511909Z, the same bytes as priority-identification-verification.json; module PracticalPriorityIdentification, imports Std): the four declarations cited have empty axiom reports. Built in one session; the record was read against the current Lean; no person's review recorded.",
-    "zh": "Lean 4.29.1 实查（回执 priority-identification-checks/20261007T193051.511909Z，与 priority-identification-verification.json 同字节；模块 PracticalPriorityIdentification，引入 Std）：所引四项声明公理报告皆空。于一会话中构建；本记录对照当前 Lean 读过；未经人审。"
+    "zh": "Lean 4.29.1 实查（回执 priority-identification-checks/20261007T193051.511909Z，与 priority-identification-verification.json 同字节；模块 PracticalPriorityIdentification，引入 Std）：所引四项声明公理报告皆空。于一会话中构建；本记录对照当前 Lean 读过；尚无人审之记录。"
   },
   "next_delta": {
     "en": "The obstruction on the spine for any finite set of roles under a group of exchanges acting on it transitively, as an instance of the obstruction for codes.",

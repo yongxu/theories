@@ -228,7 +228,7 @@
   ],
   "validation_scope": {
     "en": "Machine-checked by the periphery checker check_cells_under_noise.py with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261031T134056.109386Z): all 76 declarations of CellsUnderNoise, each on Lean's standard axioms only, every core module of its closure, Becoming.FreeEnergyGuarantees among them, matching a passed core receipt. An independent review by another AI agent (REVIEW-UE24) and its recheck (RECHECK-UE24), study section 468; no person's review recorded.",
-    "zh": "外围检查器 check_cells_under_noise.py 以 Lean 4.30.0-rc2 与固定之 Mathlib 实查（回执 20261031T134056.109386Z）：CellsUnderNoise 之全部 76 项声明，皆只依 Lean 之标准公理，其闭包之每一核心模块（含 FreeEnergyGuarantees）皆合于已通过之核心回执。另一 AI 代理作独立审查（REVIEW-UE24）及复查（RECHECK-UE24），见研究第 468 节；未经人审。"
+    "zh": "外围检查器 check_cells_under_noise.py 以 Lean 4.30.0-rc2 与固定之 Mathlib 实查（回执 20261031T134056.109386Z）：CellsUnderNoise 之全部 76 项声明，皆只依 Lean 之标准公理，其闭包之每一核心模块（含 FreeEnergyGuarantees）皆合于已通过之核心回执。另一 AI 代理作独立审查（REVIEW-UE24）及复查（RECHECK-UE24），见研究第 468 节；尚无人审之记录。"
   },
   "next_delta": {
     "en": "Densities and continuous time, a Langevin form of the law; a kernel keeping the Gibbs weights, as under detailed balance; a frozen run of the 2015 scheme recording the weight of each assignment of places; the law in the pure core; review by a person.",

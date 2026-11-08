@@ -91,7 +91,7 @@
   ],
   "validation_scope": {
     "en": "Machine-checked by the core checker with Lean 4.29.1 (receipt 20261103T203838.375122Z): every declaration of Becoming.SelectionLevels with an empty axiom report. Built in one session, the restatements read against the Lean by one AI reader other than the author; no person's review recorded.",
-    "zh": "由核心检查器以 Lean 4.29.1 实查（回执 20261103T203838.375122Z）：Becoming.SelectionLevels 每一声明之公理报告皆空。于一会话中构建，复述之文经作者以外之一 AI 读者对照 Lean 审读；未经人审。"
+    "zh": "由核心检查器以 Lean 4.29.1 实查（回执 20261103T203838.375122Z）：Becoming.SelectionLevels 每一声明之公理报告皆空。于一会话中构建，复述之文经作者以外之一 AI 读者对照 Lean 审读；尚无人审之记录。"
   },
   "next_delta": {
     "en": "Readings of the group between the total and the mean; group sizes changing over generations; an independent review by a person.",

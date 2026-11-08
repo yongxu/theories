@@ -278,7 +278,7 @@
   ],
   "validation_scope": {
     "en": "Machine-checked by the periphery checker check_linear_blankets.py with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261031T183915.457765Z): 62 theorems in 92 declarations of LinearBlankets, each on Lean's standard axioms only, every core module of its closure matching a passed core receipt. Reviewed by other AI agents: the design (REVIEW-UE26-DESIGN, fifteen findings), the literature, the revised kit (RECHECK-UE26, twelve) and the Lean and landing texts (REVIEW-UE26-LANDING, nineteen, and its recheck, six), every finding taken; study section 484; no person's review recorded.",
-    "zh": "外围检查器 check_linear_blankets.py 以 Lean 4.30.0-rc2 与固定之 Mathlib 实查（回执 20261031T183915.457765Z）：LinearBlankets 诸声明，各仅依标准公理，闭包之核心模块皆合通过之回执。他 AI 代理审之：设计（REVIEW-UE26-DESIGN，十五条）、文献、修订之件（RECHECK-UE26，十二条）、Lean 与落地文本（REVIEW-UE26-LANDING，十九条，复核六条），凡所见皆取；研究第 484 节；未经人审。"
+    "zh": "外围检查器 check_linear_blankets.py 以 Lean 4.30.0-rc2 与固定之 Mathlib 实查（回执 20261031T183915.457765Z）：LinearBlankets 诸声明，各仅依标准公理，闭包之核心模块皆合通过之回执。他 AI 代理审之：设计（REVIEW-UE26-DESIGN，十五条）、文献、修订之件（RECHECK-UE26，十二条）、Lean 与落地文本（REVIEW-UE26-LANDING，十九条，复核六条），凡所见皆取；研究第 484 节；尚无人审之记录。"
   },
   "next_delta": {
     "en": "Nonlinear flows and densities; the stochastic time-unrolled blanket on path measures; the exact time-h map; how often cancellation occurs; Friston 2019 checked for the term-by-term corollaries; review by a person.",
