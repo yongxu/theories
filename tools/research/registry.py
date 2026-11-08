@@ -1131,6 +1131,18 @@ def link(path, base, label=None):
     return f'[{label or Path(path).name}]({os.path.relpath(ROOT / path, base)})'
 
 
+def source_cell(r, path, base):
+    """A record's source on its page. A study GitHub cannot render (`mirror.py`, RW) is linked at its generated mirror:
+    the index, then each section the record's own history names ("study section N"), on the page holding its text,
+    the Chinese edition's where only it has the section. The record still binds the study itself."""
+    mirrored = (r.get('_mirror') or {}).get(path)
+    if not mirrored:
+        return link(path, base)
+    named = [link(page, base, str(n)) + (' (Chinese)' if chinese else '') for n, page, chinese in mirrored['sections']]
+    cited = (': study section ' if len(named) == 1 else ': study sections ') + ', '.join(named) if named else ''
+    return link(mirrored['index'], base, Path(path).name) + ' (generated mirror)' + cited
+
+
 def statement_lines(statement):
     return ['> ' + en(statement), '']
 
@@ -1272,7 +1284,7 @@ def render_record_v2(r):
     lines += used_by_lines(r, result_link)
     lines += law_family_lines(r, result_link)
     lines += ['', heading('###', 'Sources', 'Sources / 来源'), '', '| Role | Source | Declarations |', '|---|---|---|']
-    lines += [f'| {x["role"]} | {link(x["path"], base)} | {", ".join("`" + d + "`" for d in x.get("declarations", [])) or "—"} |' for x in r['references']]
+    lines += [f'| {x["role"]} | {source_cell(r, x["path"], base)} | {", ".join("`" + d + "`" for d in x.get("declarations", [])) or "—"} |' for x in r['references']]
     lines += ['', 'Aliases: ' + (', '.join('`' + a + '`' for a in r['aliases']) or '—'), '', heading('###', 'History', 'History / 沿革'), '']
     lines += history_lines(r)
     if r.get('text_versions'):
@@ -1320,7 +1332,7 @@ def render_record(r):
     lines += used_by_lines(r, result_link)
     lines += law_family_lines(r, result_link)
     lines += ['', heading('##', 'Sources and existing receipts', '来源与既有回执 Sources and existing receipts'), '', '| Role | Source | Declarations |', '|---|---|---|']
-    lines += [f'| {x["role"]} | {link(x["path"], base)} | {", ".join("`" + d + "`" for d in x.get("declarations", [])) or "—"} |' for x in r['references']]
+    lines += [f'| {x["role"]} | {source_cell(r, x["path"], base)} | {", ".join("`" + d + "`" for d in x.get("declarations", [])) or "—"} |' for x in r['references']]
     lines += ['', 'Hashes in the editable record bind the reviewed source versions. The checker does not audit transitive Lean imports or establish premise warrant.', '',
               heading('##', 'Reuse and next delta', '复用与下一增量 Reuse and next delta'), '', en(r['next_delta']), '',
               'Aliases: ' + (', '.join('`' + a + '`' for a in r['aliases']) or '—'), '', heading('##', 'History', '沿革 History'), '']
@@ -1407,6 +1419,20 @@ def load_records():
     for r in records:
         r['_record_links'] = paths
         r['_used_by'] = sorted(used_by.get(r['id'], []))  # reverse edges, shown as "Used by" on the page
+    # Mirrors (RW): a source GitHub cannot render is linked at its generated mirror, at the sections the record's history
+    # names; a named section that no edition has is an error, not a fallback. Imported here: mirror reads navigation,
+    # which imports this module.
+    from tools.research import mirror
+    try:
+        mirrors = mirror.Mirror(config)
+    except OSError as e:
+        mirrors = None
+        errors.append(f'mirror: {e}')
+    for r in records if mirrors else []:
+        rows, problems = mirrors.record_sources(r)
+        if rows:
+            r['_mirror'] = rows
+        errors += problems
     family = {m: f for f in law_families() for m in f.get('members', [])}
     for r in records:
         if r['id'] in family:

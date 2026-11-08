@@ -16,6 +16,7 @@ import os
 from pathlib import Path
 import re
 import subprocess
+import sys
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -289,8 +290,11 @@ def local_link(doc: str, target: str) -> str | None:
 def documents() -> tuple[dict, dict]:
     docs = {}
     backlinks = defaultdict(list)
+    mirrored = tuple(f + "/" for f in set(_mirror_folders().values()))
     for path in discover("*.md"):
         if path.startswith("theories/becoming/results/"):
+            continue
+        if path.startswith(mirrored):  # a generated mirror repeats its source's links; the source is the document
             continue
         if not (path.startswith(("theories/", "_process/research/", "experiments/")) or "/" not in path):
             continue
@@ -406,6 +410,32 @@ def _generated(path: str, mtime: int, size: int) -> frozenset:
     return frozenset(json.loads(Path(path).read_text())["files"])
 
 
+def _mirror_folders() -> dict:
+    """Mirrored sources to their generated folders (`mirror.py`, RW), from the research configuration."""
+    config = json.loads((ROOT / "_process/research-config.json").read_text(encoding="utf-8"))
+    return dict(((config.get("mirrors") or {}).get("folders")) or {})
+
+
+@lru_cache(maxsize=4)
+def _mirror_links(stamps: tuple) -> dict:
+    """For each mirrored source, each file it links to the mirror page whose section links it first."""
+    if str(ROOT) not in sys.path:
+        sys.path.insert(0, str(ROOT))
+    from tools.research import mirror
+    m = mirror.Mirror()
+    return {source: m.first_pages(source) for source in m.folders}
+
+
+def _mirror_page(path: str, target: str) -> str:
+    """A document GitHub cannot render, linked at its mirror's page holding the link to `target` (or the mirror's
+    index); any other document as it is."""
+    folders = _mirror_folders()
+    if path not in folders:
+        return path
+    pages = _mirror_links(tuple(_stamp(ROOT / s) for s in folders))
+    return pages.get(path, {}).get(target) or folders[path] + "/README.md"
+
+
 def doc_links(file: dict, sources: dict) -> str:
     refs = file["direct_documentation_links_from"]
     # A theory's own argument outranks generated navigation that merely lists it.
@@ -419,7 +449,7 @@ def doc_links(file: dict, sources: dict) -> str:
     links = []
     for path in chosen:
         label = "Theory" if path.startswith("theories/") else "Study" if path.startswith("_process/") else "Package notes"
-        links.append(mdlink(label, path))
+        links.append(mdlink(label, _mirror_page(path, file["path"])))
     if not refs and readme:
         links.append("No direct module-documentation link found")
     if "receipt_layer" in file:

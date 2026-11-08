@@ -16,7 +16,7 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
-from tools.research import registry, navigation, completion, lean_catalogue, reading_catalogue, style, paths, moves, indexes, session_map, history_notes, rename_ids, theory_graph, atlas, connection_map, spine, lineage, zh_fronts
+from tools.research import registry, navigation, completion, lean_catalogue, reading_catalogue, style, paths, moves, indexes, session_map, history_notes, rename_ids, theory_graph, atlas, connection_map, spine, lineage, zh_fronts, mirror
 from tools.research import tests_page  # the tests, failures first (RW)
 
 
@@ -49,6 +49,7 @@ def input_snapshot():
     paths.update(atlas.inputs())
     paths.update(tests_page.inputs())
     paths.update(zh_fronts.inputs())  # the Chinese landing page's template and the pages it times
+    paths.update(mirror.inputs())  # the studies GitHub cannot render, mirrored a section to a page
     for directory in config['record_directories']:
         for path in (ROOT / directory).glob('*.json'):
             paths.add(path)
@@ -307,6 +308,11 @@ def check_or_render(render=False, base=None, ids=None, strict_fresh=False):
     zh_pages, zh_errors = zh_fronts.render(records, outputs)
     outputs.update(zh_pages)
     errors += zh_errors
+    # The mirrors (RW): a study GitHub cannot render, a section to a page, its bytes kept but for link targets; a link
+    # naming an anchor or a line the study lacks is an error.
+    mirror_pages, mirror_errors = mirror.render()
+    outputs.update(mirror_pages)
+    errors += mirror_errors
     index_pages, index_errors, reading_drift = index_outputs(render or strict_fresh)
     stale_indexes = []
     errors += index_errors

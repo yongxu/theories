@@ -480,5 +480,12 @@
         "English"
       ]
     ]
+  },
+  "mirrors": {
+    "note": "Generated mirrors (tools/research/mirror.py, RW): a source too large for GitHub to render, written one `##` section to a page in its folder, bytes unchanged except link targets; a source and its .zh.md edition share a folder, the English first. The source stays the source; records bind it and cite its sections by number, and their pages link the mirror.",
+    "folders": {
+      "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md": "_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING",
+      "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.zh.md": "_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING"
+    }
   }
 }
