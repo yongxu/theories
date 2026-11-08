@@ -236,5 +236,68 @@ class Drawing(unittest.TestCase):
         self.assertEqual(total, kinds)
 
 
+class Tables(unittest.TestCase):
+    """The tables THEORY-GRAPH.md reads from 08 §7 and the edge record, against small inputs."""
+
+    METHOD = ('<a id="shared-laws-and-connectivity"></a>\n## 7. Shared laws\n\n'
+              '| Law | Statement | Anchor | On the grammar | Rows |\n|---|---|---|---|---:|\n'
+              '| Closure | c | `W` | `«a»` | 4 |\n| Balance | b | `B` | represented both ways, not derived | 6 |\n\nNext.\n'
+              'Of the 126 rows, 5 now reach the grammar: all 4 on closure and 2 of 6 on balance, and 1 on no anchor.\n\n## 8. Known\n'
+              'Elsewhere, all 6 on balance.')
+
+    def test_the_laws_table_and_how_many_reach_the_grammar(self):
+        with mock.patch.object(spine, '_read', lambda path: self.METHOD if path == spine.METHOD else None):
+            self.assertEqual(spine.shared_laws_rows(), [('Closure', 'c', False, 4), ('Balance', 'b', True, 6)])
+            self.assertEqual(spine.reaching_the_grammar('Closure', 4), 4)
+            self.assertEqual(spine.reaching_the_grammar('Balance', 6), 2)
+            self.assertIsNone(spine.reaching_the_grammar('Balance', 7))  # the sentence no longer counts those rows
+            self.assertEqual(spine.rows_reaching(), (5, 1))
+            self.assertEqual(spine.shared_laws_cells(), [('Closure', '`«a»`'), ('Balance', 'represented both ways, not derived')])
+
+    def test_check_stops_when_the_counts_the_page_reads_move(self):
+        real, s = spine._read, spine.spec()
+        record = {'boundary': {'standings': [
+            {'declaration': f'Becoming.X.{k}', 'standing': 'derived', 'law': [], 'basis': {'en': 'A case.'}} for k in 'ab']}}
+
+        def moved(path):
+            if path == spine.METHOD:
+                return real(path).replace('Of the 126 rows, ', 'Of the rows, ')
+            if path == spine.EDGE_RECORD + '.json':
+                return json.dumps(record)
+            if str(path) == str(spine.registry.SHARED_LAWS):
+                return json.dumps({'boundary': {'groups': {'on the edge': 2, 'distances': 97}}})
+            return real(path)
+        with mock.patch.object(spine, '_read', moved):
+            errors = '\n'.join(spine.check(s))
+        self.assertIn('no longer says how many of the 126 rows reach the grammar', errors)
+        self.assertIn('the edge record has 2 derived declarations', errors)
+        self.assertIn('the shared-laws data places 99 central declarations', errors)
+        self.assertIn('after the eight connected rows', errors)
+
+    def test_a_cycle_among_recorded_uses_is_found(self):
+        g = {'edges': [{'from': 'a', 'to': 'b', 'type': 'formal-reuse'}, {'from': 'b', 'to': 'c', 'type': 'formal-reuse'},
+                       {'from': 'c', 'to': 'a', 'type': 'formal-reuse'}, {'from': 'c', 'to': 'd', 'type': 'formal-reuse'},
+                       {'from': 'd', 'to': 'a', 'type': 'related'}]}
+        self.assertEqual(spine.formal_cycles(g), (4, 4, [['a', 'b', 'c']]))
+        g['edges'] = g['edges'][1:]
+        self.assertEqual(spine.formal_cycles(g), (3, 4, []))
+        self.assertIn('no result reaches itself', spine.circular_paragraph(g, 'en')[0])
+        self.assertIn('condition of entry, not a finding', spine.circular_paragraph(g, 'en')[0])
+
+    def test_a_basis_is_cut_after_its_first_sentence_and_keeps_its_standing(self):
+        record = {'boundary': {'standings': [
+            {'declaration': 'Becoming.X.y', 'standing': 'derived', 'law': ['Becoming.L'],
+             'basis': {'en': 'A case of «L» at x, through Steps.along. Its other step is support. Its statement still reads as counting.'}},
+            {'declaration': 'Becoming.X.z', 'standing': 'derived', 'law': [], 'basis': {'en': 'A case, e.g. the run, of «L». Then more.'}},
+            {'declaration': 'Becoming.X.w', 'standing': 'named distance', 'basis': {'en': 'Far.'}},
+            {'declaration': 'Becoming.X.v', 'standing': 'counting'}]}}
+        with mock.patch.object(spine, '_read', lambda path: json.dumps(record) if path.endswith('.json') else None), \
+                mock.patch.object(spine, 'ROOT', Path('/nonexistent')):
+            rows = spine.derived_rows()
+            self.assertEqual(spine.edge_bases(), (3, 1))
+        self.assertEqual(rows[0][2], 'A case of «L» at x, through Steps.along. … Its statement still reads as counting.')
+        self.assertEqual(rows[1][2], 'A case, e.g. the run, of «L».')  # an abbreviation's point is not a sentence's end
+
+
 if __name__ == '__main__':
     unittest.main()

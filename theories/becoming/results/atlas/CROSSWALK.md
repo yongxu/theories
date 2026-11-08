@@ -4,6 +4,18 @@
 
 [the results](../README.md) · [the atlas of dynamics](ATLAS.md) · **the crosswalk** · [the connection map](map.html)
 
+All 1183 entries, in 28 groups, summed; every entry is an AI reading, no person's, and the [table below](#the-groups) gives each group:
+
+| What became of it | carried | carried-in-part | changed | history-only | not-carried | fresh-reading |
+|---|---:|---:|---:|---:|---:|---:|
+| Entries | 3 | 488 | 189 | 22 | 105 | 376 |
+
+| Relation | agreement | scope | divergence | contrary-reading |
+|---|---:|---:|---:|---:|
+| Entries | 338 | 371 | 325 | 25 |
+
+The relations sum to 1,059: the other 124 entries have none (105 not-carried, 19 history-only). 3 history-only entries have one, which [the connection map](map.html) draws as a short end, not a thread, though its group counts include them.
+
 ![How the earlier folders and the domains of thought meet the live account](connections.svg)
 
 *Drawn by connection_map.py from the crosswalk’s claims, on the pages its table links: each thread joins a folder or domain to the part of the account its claims are read against, coloured by relation, and every thread is an AI reading, no person’s. To explore the same data, open [the connection map](map.html) on the reader’s site, once it is published, or from a clone; GitHub shows it only as source.*
@@ -13,6 +25,8 @@ Each earlier theory folder and each domain of thought: what it claimed in its ow
 **What became of it:** *carried*; *carried-in-part*; *changed*; *history-only*; *not-carried*; *fresh-reading*. *Fresh-reading* means the account does not state the connection and a reader proposes it here. **Relations**, from [06](../../chapters/06-CLASSICAL-TEXTS.md#three-relations): *agreement*; *scope*; *divergence*; *contrary-reading*. Agreement says what it is agreement with: a checked **law**, a **thesis or method**, or a **reading**, where the join is a reader's or descends from the source. Only what a target carries counts as a connection.
 
 **How far to trust it.** Each item had a mapper, a reviser, a checker told to refute, a repair after a critic and a comparison across items. A second critic then read 100 entries drawn at random, up to 6 from each kind of verdict, against both sides: 83 held, 15 had a label or a target's role wrong and 2 had a wrong reading. Weighted by how many entries each kind of verdict holds, that estimates 82.6% holding, 14.2% with a label or role wrong and 3.2% with a wrong reading over all 1183; its fixes are applied, and the other entries were not read again. The first critic's sample (59) was aimed at suspects and gives no rate. Where the source is not stored here, a critic's check was memory against memory.
+
+<a id="the-groups"></a>
 
 1183 entries in 28 groups, each on its own page:
 

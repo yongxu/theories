@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1383" width="900" height="1383" role="img" aria-labelledby="spine-title spine-desc" font-family="'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif">
-<title id="spine-title">围绕一个文法的八章</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1497" width="900" height="1497" role="img" aria-labelledby="spine-title spine-desc" font-family="'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif">
+<title id="spine-title">八章及其彼此记录下的使用</title>
 <desc id="spine-desc">八章围绕文法排成一圈，按其结果数定大小（根 86；生成、守与退化 94；认知、学习与检验 110；生命与演化 46；联合活动与选择 74；古文 16；意义、伦理与对齐 82；方法 21）。章与章之间共有 497 次记为 formal-reuse 的使用，画出 17 个至少 10 次的配对。延续条件与 C 作为前提进入第七章，各在所用之处为假设，二者都不断言。T1 到 T8 在其所属之处，按检验结局着色。</desc>
 <defs>
 <marker id="fwd" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8a817c"/></marker>
@@ -7,169 +7,184 @@
 <marker id="thin" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#57534e" stroke-width="1.5"/></marker>
 <marker id="diamond" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M5,0 L10,5 L5,10 L0,5 z" fill="#57534e"/></marker>
 </defs>
-<rect x="0.5" y="0.5" width="899" height="1382" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
-<text x="24" y="40" font-size="24" font-weight="bold" text-anchor="start" fill="#1c1917">围绕一个文法的八章</text>
+<rect x="0.5" y="0.5" width="899" height="1496" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
+<text x="24" y="40" font-size="24" font-weight="bold" text-anchor="start" fill="#1c1917">八章及其彼此记录下的使用</text>
 <text x="24" y="66" font-size="15" text-anchor="start" fill="#57534e">由理论图画出：每个圆按其章的结果数定大小；每条实线计一章的结果使用另一章结果、记为</text>
 <text x="24" y="85" font-size="15" text-anchor="start" fill="#57534e">formal-reuse 的次数，章与章之间的虚线与点线是别种依赖。</text>
-<rect x="20" y="95" width="860" height="72" rx="6" fill="#f5f5f4" stroke="#e7e5e4"/>
+<rect x="20" y="95" width="860" height="96" rx="6" fill="#f5f5f4" stroke="#e7e5e4"/>
 <text x="32" y="112" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">117 项核心声明相对于根之边的地位（08 §7）：</text>
-<text x="32" y="132" font-size="15" text-anchor="start" fill="#1c1917">11 项推导而得 · 1 项在一个所述的假设之下 · 6 项为计数，位于文法以下</text>
-<text x="32" y="152" font-size="15" text-anchor="start" fill="#1c1917">99 项处于一个指明的距离</text>
-<line x1="450" y1="342.3" x2="450" y2="474.6" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="3.7" stroke-linecap="round"/>
-<line x1="584.2" y1="400.4" x2="492.4" y2="492.2" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2.7" stroke-linecap="round"/>
-<line x1="635.1" y1="534.6" x2="510" y2="534.6" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2.4" stroke-linecap="round"/>
-<line x1="596.6" y1="681.2" x2="492.4" y2="577.1" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="4.1" stroke-linecap="round"/>
-<line x1="450" y1="731" x2="450" y2="594.6" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round"/>
-<line x1="291.6" y1="693" x2="407.6" y2="577.1" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="4.6" stroke-linecap="round"/>
-<line x1="256.3" y1="534.6" x2="390" y2="534.6" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2.7" stroke-linecap="round"/>
-<line x1="294.1" y1="378.7" x2="407.6" y2="492.2" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2.4" stroke-linecap="round"/>
-<circle cx="450" cy="534.6" r="58" fill="#f5f5f4" stroke="#1c1917" stroke-width="1.5"/>
-<text x="450" y="532.6" font-size="17" font-weight="bold" text-anchor="middle" fill="#1c1917">文法</text>
-<text x="450" y="550.6" font-size="12" text-anchor="middle" fill="#57534e">41 个概念</text>
-<path d="M498.9,315.2 Q532.3,336 567.2,344.1" fill="none" stroke="#1c1917" stroke-opacity="0.85" stroke-width="7" marker-end="url(#back)"/>
-<path d="M566.8,362.2 Q520,365.6 488.4,329" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="6" marker-end="url(#fwd)"/>
-<path d="M571.2,381 Q501.7,409.9 472.3,338.9" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
-<path d="M478.7,334.7 Q541.1,443.6 642.8,501.9" fill="none" stroke="#1c1917" stroke-opacity="0.85" stroke-width="4.9" marker-end="url(#back)"/>
-<path d="M639.2,511.7 Q518.4,466.2 470.7,339.5" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="5.9" marker-end="url(#fwd)"/>
-<path d="M636.6,520.4 Q495.8,488.8 462.8,341.9" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="6 4" marker-end="url(#thin)"/>
-<path d="M481,333.3 Q576,482.5 617.3,668.8" fill="none" stroke="#1c1917" stroke-opacity="0.85" stroke-width="3.3" marker-end="url(#back)"/>
-<path d="M410.3,326.5 Q279.7,464.1 273.9,684.4" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
-<path d="M282.3,687 Q353.6,494.7 425.5,337.9" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.5" marker-end="url(#fwd)"/>
-<path d="M640.3,416.5 Q648.6,452.4 665.1,478.7" fill="none" stroke="#1c1917" stroke-opacity="0.85" stroke-width="4.1" marker-end="url(#back)"/>
-<path d="M650.9,492.2 Q619,464.6 622.4,418.9" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.9" marker-end="url(#fwd)"/>
-<path d="M642.5,504.6 Q589.5,476.9 608.5,416.2" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="6 4" marker-end="url(#thin)"/>
-<path d="M566.8,363.1 Q385.6,379.1 243.9,497.8" fill="none" stroke="#1c1917" stroke-opacity="0.85" stroke-width="4.4" marker-end="url(#back)"/>
-<path d="M247.5,504.4 Q397.8,408.7 567.1,371.1" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="5.1" marker-end="url(#fwd)"/>
-<path d="M252.7,514.7 Q416.2,453 571,383.1" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
-<path d="M658.1,584.2 Q450,830.6 237,578.4" fill="none" stroke="#1c1917" stroke-opacity="0.85" stroke-width="3.7" marker-end="url(#back)"/>
-<path d="M660.6,586.3 Q450,862.6 234.8,580.2" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="6 4" marker-end="url(#thin)"/>
-<path d="M238.7,575.5 Q450,798.6 654.7,582.5" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.6" marker-end="url(#fwd)"/>
-<path d="M615.6,670.2 Q578.8,534.6 610.7,416.9" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.8" marker-end="url(#fwd)"/>
-<path d="M409,750 Q154,534.6 405.2,322.5" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.5" marker-end="url(#fwd)"/>
-<path d="M478.8,739.4 Q576,586.8 613.5,417.6" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.9" marker-end="url(#fwd)"/>
-<path d="M468.9,734.5 Q518.4,603.1 638.3,557.9" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.7" marker-end="url(#fwd)"/>
-<path d="M252.7,514.8 Q381.6,466.2 429.3,339.5" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="5.5" marker-end="url(#fwd)"/>
-<path d="M255.6,543.5 Q415.5,569.1 441.4,730.7" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
-<circle cx="450" cy="284.6" r="55.6" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
-<text x="450" y="292.6" font-size="22" font-weight="bold" text-anchor="middle" fill="#57534e">01</text>
-<text x="450" y="199" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">根</text>
-<text x="450" y="216" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">86 项结果 · 章内使用 137</text>
-<circle cx="626.8" cy="357.9" r="58.2" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
-<text x="626.8" y="365.8" font-size="22" font-weight="bold" text-anchor="middle" fill="#57534e">02</text>
-<text x="626.8" y="269.7" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">生成、守与退化</text>
-<text x="626.8" y="286.7" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">94 项结果 · 章内使用 141</text>
-<circle cx="700" cy="534.6" r="62.9" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
-<text x="700" y="542.6" font-size="22" font-weight="bold" text-anchor="middle" fill="#57534e">03</text>
-<text x="700" y="619.6" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">认知、</text>
-<text x="700" y="638.6" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">学习与检验</text>
-<text x="700" y="655.6" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">110 项结果 · 章内使用 102</text>
-<circle cx="626.8" cy="711.4" r="40.7" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
-<text x="626.8" y="719.3" font-size="22" font-weight="bold" text-anchor="middle" fill="#57534e">04</text>
-<text x="626.8" y="774.1" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">生命与演化</text>
-<text x="626.8" y="791.1" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">46 项结果 · 章内使用 54</text>
-<circle cx="450" cy="784.6" r="51.6" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
-<text x="450" y="792.6" font-size="22" font-weight="bold" text-anchor="middle" fill="#57534e">05</text>
-<text x="450" y="858.3" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">联合活动与选择</text>
-<text x="450" y="875.3" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">74 项结果 · 章内使用 81</text>
-<circle cx="273.2" cy="711.4" r="24" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
-<text x="273.2" y="717.9" font-size="18" font-weight="bold" text-anchor="middle" fill="#57534e">06</text>
-<text x="273.2" y="757.4" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">古文</text>
-<text x="273.2" y="774.4" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">16 项结果 · 章内使用 14</text>
-<circle cx="200" cy="534.6" r="54.3" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
-<text x="200" y="542.6" font-size="22" font-weight="bold" text-anchor="middle" fill="#57534e">07</text>
-<text x="200" y="611" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">意义、</text>
-<text x="200" y="630" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">伦理与对齐</text>
-<text x="200" y="647" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">82 项结果 · 章内使用 117</text>
-<circle cx="273.2" cy="357.9" r="27.5" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
-<text x="273.2" y="365.4" font-size="21" font-weight="bold" text-anchor="middle" fill="#57534e">08</text>
-<text x="273.2" y="300.4" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">方法</text>
-<text x="273.2" y="317.4" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">21 项结果 · 章内使用 5</text>
-<circle cx="690.4" cy="326" r="15" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>
-<text x="690.4" y="331" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c1917">T1</text>
-<circle cx="697.9" cy="357.9" r="15" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>
-<text x="697.9" y="362.9" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c1917">T2</text>
-<circle cx="690.4" cy="389.7" r="15" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>
-<text x="690.4" y="394.7" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c1917">T7</text>
-<circle cx="514.6" cy="784.6" r="15" fill="#2a78d6" stroke="#1c1917" stroke-width="1.2"/>
-<text x="514.6" y="789.6" font-size="13" font-weight="bold" text-anchor="middle" fill="#ffffff">T3</text>
-<circle cx="133.2" cy="526.5" r="15" fill="#2a78d6" stroke="#1c1917" stroke-width="1.2"/>
-<text x="133.2" y="531.5" font-size="13" font-weight="bold" text-anchor="middle" fill="#ffffff">T4</text>
-<circle cx="144.8" cy="496" r="15" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>
-<text x="144.8" y="501" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c1917">T5</text>
-<circle cx="169.5" cy="474.6" r="15" fill="#ffffff" stroke="#1c1917" stroke-width="1.2"/>
-<text x="169.5" y="479.6" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c1917">T8</text>
-<circle cx="775.9" cy="534.6" r="15" fill="#1baf7a" stroke="#1c1917" stroke-width="1.2"/>
-<text x="775.9" y="539.6" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c1917">T6</text>
-<text x="450" y="443.3" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">74 个模块中 22 个</text>
-<text x="517" y="471.7" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">76 个模块中 14 个</text>
-<text x="572.5" y="538.6" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">88 个模块中 14 个</text>
-<text x="536.4" y="625" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">23 个模块中 8 个</text>
-<text x="450" y="656.2" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">28 个模块中 3 个</text>
-<text x="367.7" y="620.9" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">10 个模块中 4 个</text>
-<text x="323.2" y="538.6" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">62 个模块中 12 个</text>
-<text x="324.3" y="412.9" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">26 个模块中 4 个</text>
-<text x="532.6" y="337.3" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">60</text>
-<text x="526.1" y="354.6" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">42</text>
-<text x="520.6" y="432.4" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">40</text>
-<text x="350.6" y="469.3" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">35</text>
-<text x="409" y="425.1" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">29</text>
-<text x="555.2" y="431.2" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">26</text>
-<text x="428.2" y="396.9" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">20</text>
-<text x="650.6" y="454.5" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">17</text>
-<text x="626.7" y="461.6" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">15</text>
-<text x="555.5" y="584.8" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">15</text>
-<text x="36" y="919.3" font-size="15" font-weight="bold" text-anchor="start" fill="#57534e">两个前提，各在所用之处为假设</text>
-<rect x="36" y="931.25566257523" width="390" height="73" rx="6" fill="#ffffff" stroke="#1c1917" stroke-dasharray="5 3"/>
-<text x="46" y="953.3" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">延续条件</text>
-<text x="46" y="972.3" font-size="14" text-anchor="start" fill="#57534e">确定范围：谁的损失算数；它不对任何东西排序</text>
-<text x="46" y="991.3" font-size="14" text-anchor="start" fill="#57534e">前提，不断言；根据未决</text>
-<path d="M36,949.3 L14,949.3 L14,593.8 Q14,563.8 149.5,563.8" fill="none" stroke="#1c1917" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#back)"/>
-<rect x="36" y="1016.25566257523" width="390" height="92" rx="6" fill="#ffffff" stroke="#1c1917" stroke-dasharray="5 3"/>
-<text x="46" y="1038.3" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">C，即扩大可形成者更好</text>
-<text x="46" y="1057.3" font-size="14" text-anchor="start" fill="#57534e">确定次序：把一个进程排在它所扩大的每一个进程之</text>
-<text x="46" y="1076.3" font-size="14" text-anchor="start" fill="#57534e">上，而不判定任何混合的比较</text>
-<text x="46" y="1095.3" font-size="14" text-anchor="start" fill="#57534e">前提，不断言；根据未决</text>
-<path d="M36,1034.3 L23,1034.3 L23,578.8 Q23,548.8 143.4,548.8" fill="none" stroke="#1c1917" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#back)"/>
-<text x="20" y="1138.3" font-size="16" font-weight="bold" text-anchor="start" fill="#1c1917">论题</text>
-<circle cx="33" cy="1159.25566257523" r="10" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>
-<text x="56" y="1164.3" font-size="14" text-anchor="start" fill="#1c1917">冻结检验有通过也有未通过，或桥接不成立</text>
-<circle cx="33" cy="1181.25566257523" r="10" fill="#2a78d6" stroke="#1c1917" stroke-width="1.2"/>
-<text x="56" y="1186.3" font-size="14" text-anchor="start" fill="#1c1917">部分通过，或部分支持</text>
-<circle cx="33" cy="1203.25566257523" r="10" fill="#1baf7a" stroke="#1c1917" stroke-width="1.2"/>
-<text x="56" y="1208.3" font-size="14" text-anchor="start" fill="#1c1917">未被冻结检验拒绝</text>
-<circle cx="33" cy="1225.25566257523" r="10" fill="#ffffff" stroke="#1c1917" stroke-width="1.2"/>
-<text x="56" y="1230.3" font-size="14" text-anchor="start" fill="#1c1917">已论证；无检验</text>
-<text x="20" y="1256.3" font-size="14" text-anchor="start" fill="#1c1917">T1 到 T8 在其所属之处；各自主张什么、地位如何、</text>
-<text x="20" y="1274.3" font-size="14" text-anchor="start" fill="#1c1917">检验如何：见理论图脊柱部分的中文版</text>
-<text x="20" y="1292.3" font-size="14" text-anchor="start" fill="#1c1917">（THEORY-GRAPH.zh.md）中的论题表。</text>
-<text x="470" y="919.3" font-size="16" font-weight="bold" text-anchor="start" fill="#1c1917">怎样读这幅图</text>
-<circle cx="483" cy="940.25566257523" r="10" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
-<text x="483" y="944.3" font-size="10" font-weight="bold" text-anchor="middle" fill="#57534e">01</text>
-<text x="506" y="945.3" font-size="14" text-anchor="start" fill="#1c1917">圆：一章，面积按其结果数；圆内是章号；圆旁</text>
-<text x="506" y="963.3" font-size="14" text-anchor="start" fill="#1c1917">是章名、结果数与章内 formal-reuse 使用数。</text>
-<line x1="470" y1="980.3" x2="496" y2="980.3" stroke="#8a817c" stroke-width="3.2" marker-end="url(#fwd)"/>
-<text x="506" y="985.3" font-size="14" text-anchor="start" fill="#1c1917">记为 formal-reuse 的使用（这一类留给使用所</text>
-<text x="506" y="1003.3" font-size="14" text-anchor="start" fill="#1c1917">引结果的已核验推理）：箭头指向被使用其结果</text>
-<text x="506" y="1021.3" font-size="14" text-anchor="start" fill="#1c1917">的那一章；曲线旁的数字为其使用次数，15 次</text>
-<text x="506" y="1039.3" font-size="14" text-anchor="start" fill="#1c1917">及以上才标出。</text>
-<line x1="470" y1="1056.3" x2="496" y2="1056.3" stroke="#1c1917" stroke-width="3.2" marker-end="url(#back)"/>
-<text x="506" y="1061.3" font-size="14" text-anchor="start" fill="#1c1917">同上；章序在前的一章的结果使用章序在后的一</text>
-<text x="506" y="1079.3" font-size="14" text-anchor="start" fill="#1c1917">章的结果时，线色较深。</text>
-<line x1="470" y1="1096.3" x2="496" y2="1096.3" stroke="#57534e" stroke-width="1.7" stroke-dasharray="6 4" marker-end="url(#thin)"/>
-<text x="506" y="1101.3" font-size="14" text-anchor="start" fill="#1c1917">诠释（interpretive），用于论证上的依赖（虚</text>
-<text x="506" y="1119.3" font-size="14" text-anchor="start" fill="#1c1917">线；3 次及以上的配对）。</text>
-<line x1="470" y1="1136.3" x2="496" y2="1136.3" stroke="#57534e" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
-<text x="506" y="1141.3" font-size="14" text-anchor="start" fill="#1c1917">应用（application），一个被复用的结果，连</text>
-<text x="506" y="1159.3" font-size="14" text-anchor="start" fill="#1c1917">同其对应与所添的前提（点线）。</text>
-<line x1="470" y1="1176.3" x2="496" y2="1176.3" stroke="#a8a29e" stroke-width="6" stroke-linecap="round"/>
-<text x="506" y="1181.3" font-size="14" text-anchor="start" fill="#1c1917">辐条，“m 个模块中 k 个”：该章 m 个核心模块</text>
-<text x="506" y="1199.3" font-size="14" text-anchor="start" fill="#1c1917">中，有 k 个在文法上陈述其律。它计的是模块，</text>
-<text x="506" y="1217.3" font-size="14" text-anchor="start" fill="#1c1917">不是推导而得的结果；粗细表示比例。</text>
-<text x="506" y="1239.3" font-size="14" text-anchor="start" fill="#1c1917">不画出：相关（related，用于类比，1420 条边），</text>
-<text x="506" y="1257.3" font-size="14" text-anchor="start" fill="#1c1917">以及少于 10 次 formal-reuse 使用之配对的实</text>
-<text x="506" y="1275.3" font-size="14" text-anchor="start" fill="#1c1917">线；少于 15 次的不标数字。理论图脊柱部分的</text>
-<text x="506" y="1293.3" font-size="14" text-anchor="start" fill="#1c1917">中文版（THEORY-GRAPH.zh.md）中各章之间边的</text>
-<text x="506" y="1311.3" font-size="14" text-anchor="start" fill="#1c1917">种类表列出全部。</text>
-<text x="24" y="1353" font-size="12" text-anchor="start" fill="#57534e">由 tools/research/spine.py 依 theory-graph.json 与 spine.json 生成；它显示什么、不显示什么，见</text>
-<text x="24" y="1368" font-size="12" text-anchor="start" fill="#57534e">THEORY-GRAPH.zh.md 的“脊柱”。</text>
+<rect x="32" y="122" width="10" height="10" fill="#1c1917" stroke="#57534e" stroke-width="0.5"/>
+<text x="46" y="132" font-size="15" text-anchor="start" fill="#1c1917">11 项推导而得</text>
+<rect x="162.1" y="122" width="10" height="10" fill="#57534e" stroke="#57534e" stroke-width="0.5"/>
+<text x="176.1" y="132" font-size="15" text-anchor="start" fill="#1c1917">1 项在一个所述的假设之下</text>
+<rect x="372.9" y="122" width="10" height="10" fill="#a8a29e" stroke="#57534e" stroke-width="0.5"/>
+<text x="386.9" y="132" font-size="15" text-anchor="start" fill="#1c1917">6 项为计数，位于文法以下</text>
+<rect x="32" y="142" width="10" height="10" fill="#e7e5e4" stroke="#57534e" stroke-width="0.5"/>
+<text x="46" y="152" font-size="15" text-anchor="start" fill="#1c1917">99 项处于一个指明的距离</text>
+<rect x="32" y="166" width="78.6" height="12" fill="#1c1917" stroke="#57534e" stroke-width="0.5"><title>11</title></rect>
+<rect x="110.6" y="166" width="7.1" height="12" fill="#57534e" stroke="#57534e" stroke-width="0.5"><title>1</title></rect>
+<rect x="117.7" y="166" width="42.9" height="12" fill="#a8a29e" stroke="#57534e" stroke-width="0.5"><title>6</title></rect>
+<rect x="160.6" y="166" width="707.4" height="12" fill="#e7e5e4" stroke="#57534e" stroke-width="0.5"><title>99</title></rect>
+<line x1="450" y1="366.3" x2="450" y2="498.6" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="3.7" stroke-linecap="round"/>
+<line x1="584.2" y1="424.4" x2="492.4" y2="516.2" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2.7" stroke-linecap="round"/>
+<line x1="635.1" y1="558.6" x2="510" y2="558.6" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="596.6" y1="705.2" x2="492.4" y2="601.1" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="4.1" stroke-linecap="round"/>
+<line x1="450" y1="755" x2="450" y2="618.6" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round"/>
+<line x1="291.6" y1="717" x2="407.6" y2="601.1" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="4.6" stroke-linecap="round"/>
+<line x1="256.3" y1="558.6" x2="390" y2="558.6" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2.7" stroke-linecap="round"/>
+<line x1="294.1" y1="402.7" x2="407.6" y2="516.2" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2.4" stroke-linecap="round"/>
+<circle cx="450" cy="558.6" r="58" fill="#f5f5f4" stroke="#1c1917" stroke-width="1.5"/>
+<text x="450" y="556.6" font-size="17" font-weight="bold" text-anchor="middle" fill="#1c1917">文法</text>
+<text x="450" y="574.6" font-size="12" text-anchor="middle" fill="#57534e">41 个概念</text>
+<path d="M498.9,339.2 Q532.3,360 567.2,368.1" fill="none" stroke="#1c1917" stroke-opacity="0.85" stroke-width="7" marker-end="url(#back)"/>
+<path d="M566.8,386.2 Q520,389.6 488.4,353" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="6" marker-end="url(#fwd)"/>
+<path d="M571.2,405 Q501.7,433.9 472.3,362.9" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
+<path d="M478.7,358.7 Q541.1,467.6 642.8,525.9" fill="none" stroke="#1c1917" stroke-opacity="0.85" stroke-width="4.9" marker-end="url(#back)"/>
+<path d="M639.2,535.7 Q518.4,490.2 470.7,363.5" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="5.9" marker-end="url(#fwd)"/>
+<path d="M636.6,544.4 Q495.8,512.8 462.8,365.9" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="6 4" marker-end="url(#thin)"/>
+<path d="M481,357.3 Q576,506.5 617.3,692.8" fill="none" stroke="#1c1917" stroke-opacity="0.85" stroke-width="3.3" marker-end="url(#back)"/>
+<path d="M410.3,350.5 Q279.7,488.1 273.9,708.4" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
+<path d="M282.3,711 Q353.6,518.7 425.5,361.9" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.5" marker-end="url(#fwd)"/>
+<path d="M640.3,440.5 Q648.6,476.4 665.1,502.7" fill="none" stroke="#1c1917" stroke-opacity="0.85" stroke-width="4.1" marker-end="url(#back)"/>
+<path d="M650.9,516.2 Q619,488.6 622.4,442.9" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.9" marker-end="url(#fwd)"/>
+<path d="M642.5,528.6 Q589.5,500.9 608.5,440.2" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="6 4" marker-end="url(#thin)"/>
+<path d="M566.8,387.1 Q385.6,403.1 243.9,521.8" fill="none" stroke="#1c1917" stroke-opacity="0.85" stroke-width="4.4" marker-end="url(#back)"/>
+<path d="M247.5,528.4 Q397.8,432.7 567.1,395.1" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="5.1" marker-end="url(#fwd)"/>
+<path d="M252.7,538.7 Q416.2,477 571,407.1" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
+<path d="M658.1,608.2 Q450,854.6 237,602.4" fill="none" stroke="#1c1917" stroke-opacity="0.85" stroke-width="3.7" marker-end="url(#back)"/>
+<path d="M660.6,610.3 Q450,886.6 234.8,604.2" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="6 4" marker-end="url(#thin)"/>
+<path d="M238.7,599.5 Q450,822.6 654.7,606.5" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.6" marker-end="url(#fwd)"/>
+<path d="M615.6,694.2 Q578.8,558.6 610.7,440.9" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.8" marker-end="url(#fwd)"/>
+<path d="M409,774 Q154,558.6 405.2,346.5" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.5" marker-end="url(#fwd)"/>
+<path d="M478.8,763.4 Q576,610.8 613.5,441.6" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.9" marker-end="url(#fwd)"/>
+<path d="M468.9,758.5 Q518.4,627.1 638.3,581.9" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.7" marker-end="url(#fwd)"/>
+<path d="M252.7,538.8 Q381.6,490.2 429.3,363.5" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="5.5" marker-end="url(#fwd)"/>
+<path d="M255.6,567.5 Q415.5,593.1 441.4,754.7" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
+<circle cx="450" cy="308.6" r="55.6" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
+<text x="450" y="316.6" font-size="22" font-weight="bold" text-anchor="middle" fill="#57534e">01</text>
+<text x="450" y="223" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">根</text>
+<text x="450" y="240" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">86 项结果 · 章内使用 137</text>
+<circle cx="626.8" cy="381.9" r="58.2" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
+<text x="626.8" y="389.8" font-size="22" font-weight="bold" text-anchor="middle" fill="#57534e">02</text>
+<text x="626.8" y="293.7" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">生成、守与退化</text>
+<text x="626.8" y="310.7" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">94 项结果 · 章内使用 141</text>
+<circle cx="700" cy="558.6" r="62.9" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
+<text x="700" y="566.6" font-size="22" font-weight="bold" text-anchor="middle" fill="#57534e">03</text>
+<text x="700" y="643.6" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">认知、</text>
+<text x="700" y="662.6" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">学习与检验</text>
+<text x="700" y="679.6" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">110 项结果 · 章内使用 102</text>
+<circle cx="626.8" cy="735.4" r="40.7" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
+<text x="626.8" y="743.3" font-size="22" font-weight="bold" text-anchor="middle" fill="#57534e">04</text>
+<text x="626.8" y="798.1" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">生命与演化</text>
+<text x="626.8" y="815.1" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">46 项结果 · 章内使用 54</text>
+<circle cx="450" cy="808.6" r="51.6" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
+<text x="450" y="816.6" font-size="22" font-weight="bold" text-anchor="middle" fill="#57534e">05</text>
+<text x="450" y="882.3" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">联合活动与选择</text>
+<text x="450" y="899.3" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">74 项结果 · 章内使用 81</text>
+<circle cx="273.2" cy="735.4" r="24" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
+<text x="273.2" y="741.9" font-size="18" font-weight="bold" text-anchor="middle" fill="#57534e">06</text>
+<text x="273.2" y="781.4" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">古文</text>
+<text x="273.2" y="798.4" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">16 项结果 · 章内使用 14</text>
+<circle cx="200" cy="558.6" r="54.3" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
+<text x="200" y="566.6" font-size="22" font-weight="bold" text-anchor="middle" fill="#57534e">07</text>
+<text x="200" y="635" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">意义、</text>
+<text x="200" y="654" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">伦理与对齐</text>
+<text x="200" y="671" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">82 项结果 · 章内使用 117</text>
+<circle cx="273.2" cy="381.9" r="27.5" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
+<text x="273.2" y="389.4" font-size="21" font-weight="bold" text-anchor="middle" fill="#57534e">08</text>
+<text x="273.2" y="324.4" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">方法</text>
+<text x="273.2" y="341.4" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">21 项结果 · 章内使用 5</text>
+<circle cx="690.4" cy="350" r="15" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>
+<text x="690.4" y="355" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c1917">T1</text>
+<circle cx="697.9" cy="381.9" r="15" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>
+<text x="697.9" y="386.9" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c1917">T2</text>
+<circle cx="690.4" cy="413.7" r="15" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>
+<text x="690.4" y="418.7" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c1917">T7</text>
+<circle cx="514.6" cy="808.6" r="15" fill="#2a78d6" stroke="#1c1917" stroke-width="1.2"/>
+<text x="514.6" y="813.6" font-size="13" font-weight="bold" text-anchor="middle" fill="#ffffff">T3</text>
+<circle cx="133.2" cy="550.5" r="15" fill="#2a78d6" stroke="#1c1917" stroke-width="1.2"/>
+<text x="133.2" y="555.5" font-size="13" font-weight="bold" text-anchor="middle" fill="#ffffff">T4</text>
+<circle cx="144.8" cy="520" r="15" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>
+<text x="144.8" y="525" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c1917">T5</text>
+<circle cx="169.5" cy="498.6" r="15" fill="#ffffff" stroke="#1c1917" stroke-width="1.2"/>
+<text x="169.5" y="503.6" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c1917">T8</text>
+<circle cx="775.9" cy="558.6" r="15" fill="#d6d3d1" stroke="#1c1917" stroke-width="1.2"/>
+<text x="775.9" y="563.6" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c1917">T6</text>
+<text x="450" y="467.3" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">74 个模块中 22 个</text>
+<text x="517" y="495.7" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">76 个模块中 14 个</text>
+<text x="572.5" y="562.6" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">88 个模块中 14 个</text>
+<text x="536.4" y="649" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">23 个模块中 8 个</text>
+<text x="450" y="680.2" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">28 个模块中 3 个</text>
+<text x="367.7" y="644.9" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">10 个模块中 4 个</text>
+<text x="323.2" y="562.6" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">62 个模块中 12 个</text>
+<text x="324.3" y="436.9" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">26 个模块中 4 个</text>
+<text x="532.6" y="361.3" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">60</text>
+<text x="526.1" y="378.6" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">42</text>
+<text x="520.6" y="456.4" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">40</text>
+<text x="350.6" y="493.3" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">35</text>
+<text x="409" y="449.1" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">29</text>
+<text x="555.2" y="455.2" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">26</text>
+<text x="428.2" y="420.9" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">20</text>
+<text x="650.6" y="478.5" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">17</text>
+<text x="626.7" y="485.6" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">15</text>
+<text x="555.5" y="608.8" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">15</text>
+<text x="36" y="943.3" font-size="15" font-weight="bold" text-anchor="start" fill="#57534e">两个前提，各在所用之处为假设</text>
+<rect x="36" y="955.25566257523" width="390" height="73" rx="6" fill="#ffffff" stroke="#1c1917" stroke-dasharray="5 3"/>
+<text x="46" y="977.3" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">延续条件</text>
+<text x="46" y="996.3" font-size="14" text-anchor="start" fill="#57534e">确定范围：谁的损失算数；它不对任何东西排序</text>
+<text x="46" y="1015.3" font-size="14" text-anchor="start" fill="#57534e">前提，不断言；根据未决</text>
+<path d="M36,973.3 L14,973.3 L14,617.8 Q14,587.8 149.5,587.8" fill="none" stroke="#1c1917" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#back)"/>
+<rect x="36" y="1040.25566257523" width="390" height="92" rx="6" fill="#ffffff" stroke="#1c1917" stroke-dasharray="5 3"/>
+<text x="46" y="1062.3" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">C，即扩大可形成者更好</text>
+<text x="46" y="1081.3" font-size="14" text-anchor="start" fill="#57534e">确定次序：把一个进程排在它所扩大的每一个进程之</text>
+<text x="46" y="1100.3" font-size="14" text-anchor="start" fill="#57534e">上，而不判定任何混合的比较</text>
+<text x="46" y="1119.3" font-size="14" text-anchor="start" fill="#57534e">前提，不断言；根据未决</text>
+<path d="M36,1058.3 L23,1058.3 L23,602.8 Q23,572.8 143.4,572.8" fill="none" stroke="#1c1917" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#back)"/>
+<text x="20" y="1162.3" font-size="16" font-weight="bold" text-anchor="start" fill="#1c1917">论题</text>
+<circle cx="33" cy="1183.25566257523" r="10" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>
+<text x="56" y="1188.3" font-size="14" text-anchor="start" fill="#1c1917">冻结检验有通过也有未通过，或桥接不成立</text>
+<circle cx="33" cy="1205.25566257523" r="10" fill="#2a78d6" stroke="#1c1917" stroke-width="1.2"/>
+<text x="56" y="1210.3" font-size="14" text-anchor="start" fill="#1c1917">部分通过，或部分支持</text>
+<circle cx="33" cy="1227.25566257523" r="10" fill="#d6d3d1" stroke="#1c1917" stroke-width="1.2"/>
+<text x="56" y="1232.3" font-size="14" text-anchor="start" fill="#1c1917">未被冻结检验拒绝</text>
+<circle cx="33" cy="1249.25566257523" r="10" fill="#ffffff" stroke="#1c1917" stroke-width="1.2"/>
+<text x="56" y="1254.3" font-size="14" text-anchor="start" fill="#1c1917">已论证；无检验</text>
+<text x="20" y="1280.3" font-size="14" text-anchor="start" fill="#1c1917">T1 到 T8 在其所属之处；各自主张什么、地位如何、</text>
+<text x="20" y="1298.3" font-size="14" text-anchor="start" fill="#1c1917">检验如何：见理论图“各章一览”的中文版</text>
+<text x="20" y="1316.3" font-size="14" text-anchor="start" fill="#1c1917">（THEORY-GRAPH.zh.md）中的论题表。</text>
+<text x="470" y="943.3" font-size="16" font-weight="bold" text-anchor="start" fill="#1c1917">怎样读这幅图</text>
+<circle cx="483" cy="964.25566257523" r="10" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
+<text x="483" y="968.3" font-size="10" font-weight="bold" text-anchor="middle" fill="#57534e">01</text>
+<text x="506" y="969.3" font-size="14" text-anchor="start" fill="#1c1917">圆：一章，面积按其结果数；圆内是章号；圆旁</text>
+<text x="506" y="987.3" font-size="14" text-anchor="start" fill="#1c1917">是章名、结果数与章内 formal-reuse 使用数。</text>
+<line x1="470" y1="1004.3" x2="496" y2="1004.3" stroke="#8a817c" stroke-width="3.2" marker-end="url(#fwd)"/>
+<text x="506" y="1009.3" font-size="14" text-anchor="start" fill="#1c1917">记为 formal-reuse 的使用（这一类留给使用所</text>
+<text x="506" y="1027.3" font-size="14" text-anchor="start" fill="#1c1917">引结果的已核验推理）：箭头指向被使用其结果</text>
+<text x="506" y="1045.3" font-size="14" text-anchor="start" fill="#1c1917">的那一章；曲线旁的数字为其使用次数，15 次</text>
+<text x="506" y="1063.3" font-size="14" text-anchor="start" fill="#1c1917">及以上才标出。这一类由 AI 写成的记录指定；</text>
+<text x="506" y="1081.3" font-size="14" text-anchor="start" fill="#1c1917">登记检查核对接口具备其字段、且其所引是记录</text>
+<text x="506" y="1099.3" font-size="14" text-anchor="start" fill="#1c1917">中带散列的参考文献之一（全部 1162 条这样的</text>
+<text x="506" y="1117.3" font-size="14" text-anchor="start" fill="#1c1917">边中有 797 条，所引的都是 Lean 文件）；没</text>
+<text x="506" y="1135.3" font-size="14" text-anchor="start" fill="#1c1917">有任何检查核对那里的 Lean 是否确实使用所引</text>
+<text x="506" y="1153.3" font-size="14" text-anchor="start" fill="#1c1917">的结果。</text>
+<line x1="470" y1="1170.3" x2="496" y2="1170.3" stroke="#1c1917" stroke-width="3.2" marker-end="url(#back)"/>
+<text x="506" y="1175.3" font-size="14" text-anchor="start" fill="#1c1917">同上；章序在前的一章的结果使用章序在后的一</text>
+<text x="506" y="1193.3" font-size="14" text-anchor="start" fill="#1c1917">章的结果时，线色较深。</text>
+<line x1="470" y1="1210.3" x2="496" y2="1210.3" stroke="#57534e" stroke-width="1.7" stroke-dasharray="6 4" marker-end="url(#thin)"/>
+<text x="506" y="1215.3" font-size="14" text-anchor="start" fill="#1c1917">诠释（interpretive），用于论证上的依赖（虚</text>
+<text x="506" y="1233.3" font-size="14" text-anchor="start" fill="#1c1917">线；3 次及以上的配对）。</text>
+<line x1="470" y1="1250.3" x2="496" y2="1250.3" stroke="#57534e" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
+<text x="506" y="1255.3" font-size="14" text-anchor="start" fill="#1c1917">应用（application），一个被复用的结果，连</text>
+<text x="506" y="1273.3" font-size="14" text-anchor="start" fill="#1c1917">同其对应与所添的前提（点线）。</text>
+<line x1="470" y1="1290.3" x2="496" y2="1290.3" stroke="#a8a29e" stroke-width="6" stroke-linecap="round"/>
+<text x="506" y="1295.3" font-size="14" text-anchor="start" fill="#1c1917">辐条，“m 个模块中 k 个”：该章 m 个核心模块</text>
+<text x="506" y="1313.3" font-size="14" text-anchor="start" fill="#1c1917">中，有 k 个在文法上陈述其律。它计的是模块，</text>
+<text x="506" y="1331.3" font-size="14" text-anchor="start" fill="#1c1917">不是推导而得的结果；粗细表示比例。</text>
+<text x="506" y="1353.3" font-size="14" text-anchor="start" fill="#1c1917">不画出：相关（related，用于类比，1420 条边），</text>
+<text x="506" y="1371.3" font-size="14" text-anchor="start" fill="#1c1917">以及少于 10 次 formal-reuse 使用之配对的实</text>
+<text x="506" y="1389.3" font-size="14" text-anchor="start" fill="#1c1917">线；少于 15 次的不标数字。理论图“各章一览”</text>
+<text x="506" y="1407.3" font-size="14" text-anchor="start" fill="#1c1917">的中文版（THEORY-GRAPH.zh.md）中各章之间边</text>
+<text x="506" y="1425.3" font-size="14" text-anchor="start" fill="#1c1917">的种类表列出全部。</text>
+<text x="24" y="1467" font-size="12" text-anchor="start" fill="#57534e">由 tools/research/spine.py 依 theory-graph.json 与 spine.json 生成；它显示什么、不显示什么，见</text>
+<text x="24" y="1482" font-size="12" text-anchor="start" fill="#57534e">THEORY-GRAPH.zh.md 的“各章一览”。</text>
 </svg>

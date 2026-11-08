@@ -35,6 +35,7 @@ usage (from the checkout root):
 from __future__ import annotations
 
 import argparse
+from collections import Counter
 import json
 from pathlib import Path
 import posixpath
@@ -834,6 +835,21 @@ def _crosswalk_lead(atlas: dict, at: str) -> list[str]:
             *_checks_lines(atlas.get('crosswalk_checks'))]
 
 
+def _no_relation(entries: list, totals_r: list) -> str:
+    """The sentence under the relations' sums: the entries with none, by what became of them, and the entries only in
+    history that have one, which the map does not count."""
+    none = Counter(e['carried'] for e in entries if not e.get('relation'))
+    kept = Counter(e['carried'] for e in entries if e.get('relation') and e['carried'] in ABSENT)
+    parts = ', '.join(f'{n} {k}' for k, n in sorted(none.items(), key=lambda kv: -kv[1]))
+    out = f'The relations sum to {sum(totals_r):,}: the other {sum(none.values())} entries have none ({parts}).'
+    if kept:
+        n = sum(kept.values())
+        out += (f' {n} {" and ".join(sorted(kept))} {"entry" if n == 1 else "entries"} {"has" if n == 1 else "have"} one, which '
+                f'[the connection map]({_href(ATLAS + "/map.html")}) draws as a short end, not a thread, though its group counts include '
+                f'{"it" if n == 1 else "them"}.')
+    return out
+
+
 def crosswalk_page(atlas: dict) -> str:
     """CROSSWALK.md, the crosswalk's index: each folder's and domain's counts, linking its page. Each row holds the anchor
     its group's section had when the crosswalk was one page, so that a link made then still lands."""
@@ -844,13 +860,19 @@ def crosswalk_page(atlas: dict) -> str:
     # The single page's headings: its title, then each group's; and each entry's id, now on its group's page.
     old = dict(zip((g['id'] for g in groups), _headings(['The crosswalk'] + [g['title']['en'] for g in groups])[1:]))
     taken = set(_headings(['The crosswalk']))
+    totals_c = [sum(g['by_carried'][c] for g in groups) for c in carried]
+    totals_r = [sum(g['by_relation'][r] for g in groups) for r in relations]
     out = [GENERATED, '', '# The crosswalk', '', _navigation(CROSSWALK), '',
+           f'All {len(entries)} entries, in {len(groups)} groups, summed; every entry is an AI reading, no person\'s, and the [table below](#the-groups) gives each group:', '',
+           '| What became of it | ' + ' | '.join(carried) + ' |', '|---|' + '---:|' * len(carried), '| Entries | ' + ' | '.join(map(str, totals_c)) + ' |', '',
+           '| Relation | ' + ' | '.join(relations) + ' |', '|---|' + '---:|' * len(relations), '| Entries | ' + ' | '.join(map(str, totals_r)) + ' |', '',
+           _no_relation(entries, totals_r), '',
            f'![How the earlier folders and the domains of thought meet the live account]({_href(OVERVIEW)})', '',
            '*Drawn by connection_map.py from the crosswalk’s claims, on the pages its table links: each thread joins a folder or domain to the part of the account its '
            'claims are read against, coloured by relation, and every thread is an AI reading, no person’s. To explore the same data, '
            f'open [the connection map]({_href(ATLAS + "/map.html")}) on the reader’s site, once it is published, or from a clone; GitHub shows it only as source.*', '',
            *_crosswalk_lead(atlas, ATLAS),
-           f'{len(entries)} entries in {len(groups)} groups, each on its own page:', '',
+           '<a id="the-groups"></a>', '', f'{len(entries)} entries in {len(groups)} groups, each on its own page:', '',
            '| Group | Entries | ' + ' | '.join(carried) + ' | ' + ' | '.join(relations) + ' | ' + ' | '.join(f'agreement of {a}' for a in agreements) + ' |',
            '|---|---:|' + '---:|' * (len(carried) + len(relations) + len(agreements))]
     for g in groups:
@@ -906,7 +928,19 @@ ZH_CARRIED = {'carried': '承继', 'carried-in-part': '部分承继', 'changed':
 # The two domains a Chinese reader reaches first, each with what its group holds and does not.
 ZH_DOMAINS = (('cxg-chinese-classical', '中国古典思想',
                '本组只收现有映射尚未到达之处；中国古典的大部分在[第六章](../../chapters/06-CLASSICAL-TEXTS.md)，那里有段落的映射与一部图谱的条目'),
-              ('cxg-buddhist', '佛教思想', '就本说明已经到达之处而言；佛教论书的读法也在[第六章](../../chapters/06-CLASSICAL-TEXTS.md)'))
+              ('cxg-buddhist', '佛教思想', '就本论已经到达之处而言；佛教论书的读法也在[第六章](../../chapters/06-CLASSICAL-TEXTS.md)'))
+
+
+def _no_relation_zh(entries: list, relation: dict) -> str:
+    """The Chinese of _no_relation, from the same counts."""
+    none = Counter(e['carried'] for e in entries if not e.get('relation'))
+    kept = Counter(e['carried'] for e in entries if e.get('relation') and e['carried'] in ABSENT)
+    parts = '，'.join(f'{ZH_CARRIED.get(k, k)} {n}' for k, n in sorted(none.items(), key=lambda kv: -kv[1]))
+    out = f'各关系相加为 {sum(n for _, n in relation.values()):,}，其余 {sum(none.values())} 条没有关系（{parts}）。'
+    if kept:
+        out += (f'另有 {sum(kept.values())} 条{"、".join(ZH_CARRIED.get(k, k) for k in sorted(kept))}者有关系，[连接图](map.html)把它们画作一个短端而非一条线，'
+                f'但其分组计数包含它们。')
+    return out
 
 
 def crosswalk_zh_page(atlas: dict) -> str:
@@ -936,18 +970,18 @@ def crosswalk_zh_page(atlas: dict) -> str:
             domains.append(f'- **{name}**（{by[gid]["entries"]} 条，[英文页]({_href(group_path(by[gid]), ATLAS)})）：{note}。')
     out = [GENERATED, '', '# 对照表：早先的理论文件夹与各思想领域', '', zh_fronts.nav_line(CROSSWALK_ZH), '', '{{time}}', '',
            '*由 AI 依[英文的对照表](CROSSWALK.md)写成，未经人工审读；义以英文版为准。各组的条目在英文页上。*', '',
-           f'![早先的文件夹与各思想领域怎样与现行的说明相接]({_href(OVERVIEW, ATLAS)})', '',
-           '*图为英文，由 connection_map.py 依同一份数据画出：每一条线把一个文件夹或领域连到它的主张所对照的那部分说明，按关系着色；每一条线都是 AI 的读法，没有人的。*', '',
-           '**它是什么。** 每一个早先的理论文件夹与每一个思想领域：它以自己的话主张了什么，在现行的说明中又成了什么。它是证据层，不是用来通读的。它不产生任何结果；'
+           f'![早先的文件夹与各思想领域怎样与现行之论相接]({_href(OVERVIEW, ATLAS)})', '',
+           '*图为英文，由 connection_map.py 依同一份数据画出：每一条线把一个文件夹或领域连到它的主张所对照的本论那一部分，按关系着色；每一条线都是 AI 的读法，没有人的。*', '',
+           '**它是什么。** 每一个早先的理论文件夹与每一个思想领域：它以自己的话主张了什么，在现行之论中又成了什么。它是证据层，不是用来通读的。它不产生任何结果；'
            '每一条都是 AI 的读法，没有人读过。共用一个词不是对应，结构上的相合不是意义上的相合，它也不代表任何传统发言。未承继是一种结局，不是缺陷。'
            '来源不存于此处时，所说的出自 AI 的知识，没有对照原文核对过。', '']
     if trust:
         out += [trust, '']
     out += [f'**计数。** {len(entries):,} 条主张，来自 {folders} 个早先的理论文件夹与 {len(groups) - folders} 个思想领域：'
             + '，'.join(f'{ZH_CARRIED.get(k, k)} {n:,}' for k, n in carried.items()) + '。按关系：'
-            + '，'.join(f'{zh} {n:,}' + (agreement if key == 'agreement' else '') for key, (zh, n) in relation.items()) + '。只有一个目标所承载的才算作连接。', '',
+            + '，'.join(f'{zh} {n:,}' + (agreement if key == 'agreement' else '') for key, (zh, n) in relation.items()) + '。' + _no_relation_zh(entries, relation) + '只有一个目标所承载的才算作连接。', '',
             '**离中文文本最近的两个领域。**', '', *domains, '',
-            f'**全部 {len(groups)} 组**，每组一页，都在[英文索引](CROSSWALK.md)里：它以自己的话主张了什么，现行的说明中成了什么，以及每一条的目标与地位。', '']
+            f'**全部 {len(groups)} 组**，每组一页，都在[英文索引](CROSSWALK.md)里：它以自己的话主张了什么，现行之论中成了什么，以及每一条的目标与地位。', '']
     body = _finish(out)
     return body.replace('{{time}}', f'*约 {zh_fronts.settle(lambda t: zh_fronts.zh_time(body.replace("{{time}}", f"*约 {t}读完。*")))}读完。*')
 

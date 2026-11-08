@@ -98,12 +98,16 @@ class Tree(unittest.TestCase):
         svg = pages[lineage.SVG['en']]
         self.assertNotIn('<script', svg)
         # two public points, two legend circles and four for who wrote it; the private one a diamond
-        self.assertEqual(svg.count('<circle'), 2 + 2 + 4 + 1)  # and the dot of the key's mark for not stated
+        self.assertEqual(svg.count('<circle'), 2 + 1 + 1 + 3)  # points; the key's public and thread; the three who-wrote marks that occur
         self.assertIn('fill="#a8a29e"', svg)  # point b, AI-drafted
         self.assertIn("| 2 | 2026-10-28 |", en)
         self.assertIn("AI-drafted from a person's words |", en)
         self.assertIn("1 by a person", en)
         self.assertIn("- **not stated** (none so far)", en)
+        self.assertNotIn('not stated (none', svg)  # the picture's key lists only what occurs
+        self.assertIn('- **1.** **2024-07, Point a.**', en)  # a thread's numbers are the table's, in the text
+        self.assertIn('[来源 1 处](#src-2)', zh)
+        self.assertIn('<a id="src-2"></a>**2.**', zh)
         self.assertIn('- **Old** (2024-01 – 2024-12). It began. (points 1–1; all public; 1 by a person)', en)
         self.assertIn('Of the 3:', en)
         self.assertIn('private and unpublished** (1)', en)
@@ -151,18 +155,12 @@ class Tree(unittest.TestCase):
         self.patch.stop()
         try:
             s = lineage.spec()
-            segments = lineage.axis(s)
-            lanes, placed = [], []
-            for n, p in enumerate(s['points'], 1):
-                x = lineage.x_of(lineage.parse_date(p['date'])[0], segments)
-                lane = next((i for i, last in enumerate(lanes) if x - last >= 17), len(lanes))
-                if lane == len(lanes):
-                    lanes.append(x)
-                lanes[lane] = x
-                placed.append((n, p, x, 454 - 17 * lane))
-            thread = set(s['thread']['points'])
+            placed, _ = lineage.lanes_of(s, lineage.axis(s), 470)
+            thread = {pid for th in lineage.threads_of(s) for pid in th['points']}
             for lang in ('en', 'zh'):
-                self.assertEqual(lineage.title_crossings(lineage.title_rows(placed, lang, thread), thread), [], lang)
+                rows = lineage.title_rows(placed, lang, thread)
+                self.assertEqual(lineage.title_crossings(rows, thread), [], lang)
+                self.assertEqual(lineage.leaders_through_marks(placed, rows), [], lang)
         finally:
             self.patch.start()
 
@@ -172,6 +170,28 @@ class Tree(unittest.TestCase):
             self.assertEqual(zh_fronts.problems(pages=(lineage.PAGE['zh'],)), [])
         finally:
             self.patch.start()
+
+    def test_a_titled_point_stands_above_others_at_its_date(self):
+        s = json.loads(json.dumps(self.spec))
+        s['points'][1]['short'] = {'en': 'B', 'zh': 'B'}
+        s['points'].insert(2, point('b2', '2026-10-28'))
+        s['points'].insert(3, point('b3', '2026-10-30'))  # a few days on: a few px to the right, within a mark's reach
+        at = {'2024-07': 100.0, '2026-10-28': 300.0, '2026-10-30': 305.0, '2026-11-03': 500.0}
+        with mock.patch.object(lineage, 'x_of', lambda d, segments: at[d.isoformat()[:7] if d.day == 1 and d.month == 7 else d.isoformat()]):
+            placed, lanes = lineage.lanes_of(s, None, 400)
+        y = {p['id']: py for _, p, _, py in placed}
+        self.assertLess(y['b'], min(y['b2'], y['b3']))  # higher on the page: the titled one's leader rises past nothing
+        self.assertEqual([n for n, *_ in placed], [1, 2, 3, 4, 5])  # numbers stay the table's
+        self.assertEqual(lanes, 3)
+
+    def test_the_strands_count_points_on_threads_and_folders_cited(self):
+        (self.root / 'theories/fork').mkdir(parents=True)
+        (self.root / 'theories/fork/README.md').write_text('x')
+        (self.root / 'theories/other').mkdir()
+        (self.root / 'theories/other/README.md').write_text('x')
+        s = json.loads(json.dumps(self.spec))
+        s['points'][0]['evidence'][0]['path'] = 'theories/fork/README.md'
+        self.assertEqual(lineage.strand_counts(s), {'total': 3, 'on_threads': 2, 'on_none': 1, 'cited': 1, 'folders_n': 2})
 
     def test_the_axis_gives_each_phase_room_by_its_points(self):
         segments = lineage.axis(self.spec)

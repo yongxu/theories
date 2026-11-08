@@ -1,14 +1,22 @@
 <!-- GLOSSARY.md 的中文版（RW，2026 年 11 月 8 日，AI 译自英文版，未经人工审读）。义以英文版为准；英文版改动时，本版随之修订。 -->
 # 术语表
 
-[English](GLOSSARY.md) · [首页](README.zh.md) · [一页](theories/becoming/ONE-PAGE.zh.md) · [用途](theories/becoming/USES.zh.md) · [实例](theories/becoming/USES-EXAMPLES.zh.md) · [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) · [八章（英文）](theories/becoming/chapters/README.md) · [第六章](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) · [检验（英文）](TESTS.md) · [对照表](theories/becoming/results/atlas/CROSSWALK.zh.md) · [怎样长成](theories/LINEAGE.zh.md) · **术语表** · [审查包](theories/becoming/review/README.zh.md)
+[English](GLOSSARY.md) · [首页](README.zh.md) · [一页](theories/becoming/ONE-PAGE.zh.md) · [用途](theories/becoming/USES.zh.md) · [实例](theories/becoming/USES-EXAMPLES.zh.md) · [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) · [八章（英文）](theories/becoming/chapters/README.md) · [古文（第六章）](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) · [检验](TESTS.zh.md) · [对照表](theories/becoming/results/atlas/CROSSWALK.zh.md) · [怎样长成](theories/LINEAGE.zh.md) · **术语表** · [审查包](theories/becoming/review/README.zh.md)
 
-生成变化之论的词语，每一个只有一义、一个所属之处：定义它的那一章的那一节。别处用到一个词，都取这一义，并链接到那里。汉语术语在引入之处释义一次，并附拼音。除第六章外，各章与理论图皆为英文（理论图的脊柱部分有中文版）。文法的每一个概念及其 Lean 名称，都列在[理论图](theories/becoming/results/THEORY-GRAPH.md#the-grammars-concepts)中；较早文本所用的标签与现行术语的对照，见[方法一章](theories/becoming/chapters/08-METHOD.md#names)。本页所取代的术语表（规范章的 §10，连同其形式术语索引及其与语料词汇的对照）与该章一同保存在历史之中；九月的语料术语表（192 个词条）保存在[它自己的历史](_process/history/2026-09-consolidation/GLOSSARY.md)中。
+生灭变化之论的词语，每一个只有一义、一个所属之处：定义它的那一章的那一节。别处用到一个词，都取这一义，并链接到那里。汉语术语在引入之处释义一次。除第六章外，各章与理论图皆为英文（理论图的各章一览有中文版）。文法的每一个概念及其 Lean 名称，都列在[理论图](theories/becoming/results/THEORY-GRAPH.md#the-grammars-concepts)中；较早文本所用的标签与现行术语的对照，见[方法一章](theories/becoming/chapters/08-METHOD.md#names)。本页所取代的术语表（规范章的 §10，连同其形式术语索引及其与语料词汇的对照）与该章一同保存在历史之中；九月的语料术语表（192 个词条）保存在[它自己的历史](_process/history/2026-09-consolidation/GLOSSARY.md)中。
+
+## 名称
+
+| 术语 | 义 | 出处 |
+|---|---|---|
+| <a id="生灭变化之论"></a>生灭变化之论（the Theory of Becoming） | 这套解释的中文名。名中的“生灭变化”译英文的 becoming：任何东西的出现、持续、变化与消逝，都在其内，不预先认定为好。不用“生成”：“生成”在这里只有一义，见下文“生成、守、退化” | 中文版专有 |
+| <a id="本论"></a>本论（the account, the theory） | 指这套解释全体，中文前页一律用这个词。“说明”在中文版里只作动词或普通名词（如“其说明称”），不指这套解释；第六章写作时用“本理论”，同指。注疏中“本论”常指所注之论，此处不然 | 中文版专有 |
 
 ## 根
 
 | 术语 | 义 | 出处 |
 |---|---|---|
+| 文法（grammar） | 根的唯一一种符号，即诸发生之间的关系，以及由关系经少数运算构造出来的东西；其定理对每一载体与每一关系陈述 | [第一章 §1](theories/becoming/chapters/01-ROOT.md#one-kind-of-symbol) |
 | 际（relation） | 一个载体上的二元谓词，唯一的一种符号 | [第一章 §1](theories/becoming/chapters/01-ROOT.md#one-kind-of-symbol) |
 | 缘（condition） | 关系的主要读法：`R x y`，`x` 是 `y` 的缘；也指一个关系项在世界模型中的角色 | [第一章 §1](theories/becoming/chapters/01-ROOT.md#one-kind-of-symbol) |
 | 类（class） | 一个等价关系：诸发生在其中相同的那一方面 | [第一章 §2](theories/becoming/chapters/01-ROOT.md#class-and-continuation) |
@@ -30,6 +38,7 @@
 
 | 术语 | 义 | 出处 |
 |---|---|---|
+| 形成（formation） | 在世界模型中，一个关系项可以活跃于其中的角色：依存、取用、取与给；同一关系项也可以作为处于某一水平的缘，为他者所依存、所取用 | [第四章](theories/becoming/chapters/04-LIFE.md#life-as-condition) |
 | 传（carrying renewal） | 粗的样式继续下去，而一条细的相续开始（火传） | [第二章 §1](theories/becoming/chapters/02-MAP.md#branches) |
 | 延、尽（goes on, ends） | 沿某一分支继续下去；在每一分支上都终止 | [第二章 §1](theories/becoming/chapters/02-MAP.md#branches) |
 | 生成、守、退化（generation, keeping, degeneration） | 一个样式经由传而继续下去；不经由传而继续下去；在每一分支上都终止。“生成”从不指生起，也不指任何新的组织，它也不是生生：生生的英文释义“continuing generation”（持续的生发，第七章 §2）说的是生发，不是这一义：生成可以在两个粒度层级上继续下去，而可形成者只是回返。自某一点起守（后守）容许在该点之前有复生；有了它，再加上排中律，诸区域便覆盖全体。在一个进程的诸时刻上读，在判定的前提之下，保持扩大就是在一无所失的那一个之下的生成 | [第二章 §1](theories/becoming/chapters/02-MAP.md#branches)，[第七章 §2](theories/becoming/chapters/07-SIGNIFICANCE.md#r-keeping-widening-is-generation-losing-nothing) |
@@ -57,6 +66,7 @@
 
 | 术语 | 义 | 出处 |
 |---|---|---|
+| 余地（room） | 有余地，是说每一个在外部某缘上高于另一者的合格结果，都在耦合进来者上被某一合格结果超过（`Optimum.Room`） | [第五章](theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in) |
 | 更新之门、门控更新（the gate (of a renewal), gated renewal） | 给予一个缘的每一个形成，都以至少 `m` 的需要依存于它，于是更新依存于它所更新者。不是移动上的门 | [第五章](theories/becoming/chapters/05-COLLECTIVES.md#collectives) |
 | 最优解、取用者、池、共有的编码（optimum, drawer, pool, shared code） | 各依其引入之处的定义 | [第五章](theories/becoming/chapters/05-COLLECTIVES.md) |
 | 意义（significance）`sig` | 对一个立场、一个步与一个形成而言，那一延续是否有意义：一个命题，不是一个数；以从己方式（de se）读，即它位于该中心沿一个关系与之一同继续的东西之内 | [第七章 §1](theories/becoming/chapters/07-SIGNIFICANCE.md#evaluation) |
@@ -77,10 +87,16 @@
 
 | 术语 | 义 | 出处 |
 |---|---|---|
+| 论题（thesis，T1 到 T8） | 一项经验主张，附其地位、它禁止什么以及迄今的证据（T8 的地位是已论证，未经检验）：在其所属的章中完整陈述，并说明什么会驳倒它；它不增加定理，驳倒也不移除定理，未通过之处记在它旁边。各章开头的 **Thesis.** 与哲学论题是另外的用法，列于第八章 §2 | [第八章 §9](theories/becoming/chapters/08-METHOD.md#theses)，[第八章 §2](theories/becoming/chapters/08-METHOD.md#standings-and-bases) |
+| <a id="核心声明"></a>核心声明（central declaration） | 在[覆盖文件](theories/becoming/results/completion/COVERAGE.json)中，某一行就某一阶段、分化或领域指明为核心的 Lean 声明（标准 K1）；17 行共列 126 项，其中九项列了两次，所以不同的共 117 项 | [第八章 §12](theories/becoming/chapters/08-METHOD.md#completion-criterion)，[第八章 §7](theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge) |
+| 根之边（edge of one root） | 单一之根所达到之处；每一项核心声明相对于它有一个地位 | [第八章 §7](theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge) |
+| 推导而得（derived，根之边上的地位） | 根之边上的一种地位：一项核心声明是文法之律的一个情形，经由在 Lean 中作为等价核验的桥接与审阅所读的支持（某行载有它们之处）；这一情形依于审阅 | [第八章 §7](theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge) |
+| 指明的距离（named distance） | 一项核心声明的地位：它既不在根之边上，也不属计数，附其理由；根之边的记录并不表明「That a distance is a gap or a failure」（有距离就是缺口或失败） | [第八章 §7](theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge)，[根之边的记录](theories/becoming/results/records/one-root-to-its-edge.md#does-not-show--未表明) |
+| formal-reuse | 已记录依赖的一种，留给「a verified inference using the cited result, naming producer output, consumer input, preserved hypotheses and the connecting declaration or receipt」（使用所引结果的已核验推理，指明产出者的输出、使用者的输入、所保留的假设以及相连的声明或收据）；由 AI 写成的记录指定；边带有接口时，登记检查核对接口具备其字段、且其所引是记录中带散列的参考文献之一；没有任何检查核对所引的 Lean 是否确实使用所引的结果 | [RESULT-WORKFLOW](_process/RESULT-WORKFLOW.md#one-identity-explicit-relationships)，[理论图](theories/becoming/results/THEORY-GRAPH.zh.md#the-spine-what-it-shows-and-does-not-show) |
 | 地位（standing） | 一个陈述是哪一种主张：定义、连同其基的定理、有条件者、校准、论题、评估、读法、未决 | [第八章 §2](theories/becoming/chapters/08-METHOD.md#standings-and-bases) |
 | 基（base） | 一条定理在何处被证明：根、任一过程、任一类型、世界模型、一个具名的模型、外围 | [第八章 §2](theories/becoming/chapters/08-METHOD.md#standings-and-bases) |
 | 纯核；外围（the pure core; the periphery） | `Becoming` 的核心模块，它们只引入基础层与彼此（根模块 `Becoming` 还引入实例与应用之环），在去掉基础层的 `import Std` 之后，单凭 Lean 的前奏即可编译，每一个源声明的公理报告都为空；Mathlib 诸叶、较早的模块与 Python 实验，它们可以使用任何工具，依赖关系指向纯核，其结果保有各自的回执并列出其公理。三个基础模块（`GenerativeCore`、`InquirySufficiency`、`RelationalRenewal`，不是纯核的 L0 层）以及实例与应用之环，与纯核一同检查，满足纯核的条件，却不计入纯核；二者也都不是外围 | [第八章 §3](theories/becoming/chapters/08-METHOD.md#pure-core-and-periphery) |
-| 脊柱（spine） | 由其检查器所运行的 Lean 包 `Becoming`（纯核以及实例与应用之环，立于三个基础模块之上，后者与它一同检查而不计入其中），新的结果扩展它；*脊柱之名*是在那里使用的一个名称，*前脊柱*标记运行之外的一个较早的模块，连同其范围保存。脊柱上的一条律立于其标签所指的基上，并不因此就在根上 | [第八章 §3](theories/becoming/chapters/08-METHOD.md#pure-core-and-periphery) |
+| 脊柱（spine） | 由其检查器所运行的 Lean 包 `Becoming`（纯核以及实例与应用之环，立于三个基础模块之上，后者与它一同检查而不计入其中），新的结果扩展它；*脊柱之名*是在那里使用的一个名称，*前脊柱*标记运行之外的一个较早的模块，连同其范围保存。脊柱上的一条律立于其标签所指的基上，并不因此就在根上。文件 `spine.svg` 沿用较早的名字；它画的是各章，不是脊柱 | [第八章 §3](theories/becoming/chapters/08-METHOD.md#pure-core-and-periphery) |
 | 校准（calibration） | 一条律在何处需要一个全知原理，以及这一需要关于展开说出了什么 | [第八章 §5](theories/becoming/chapters/08-METHOD.md#calibrations) |
 | 假设（hypotheses） | 一条律自身的局部前提（有限、已列出、已判定……），写进其陈述之中 | [第八章 §2](theories/becoming/chapters/08-METHOD.md#standings-and-bases) |
 | 律（law） | 一个陈述，对其假设所容许的每一个关系、载体或模型都成立，从它所成立的对象上读出，而不是加于其上；只经由其假设而有内容。`Law` 是一个确定之步的脊柱之名，即一个关系（`next x = y`），不是其构形所遵从的一条规则；一门科学的律，冠以该科学之名 | [第八章 §10](theories/becoming/chapters/08-METHOD.md#law) |

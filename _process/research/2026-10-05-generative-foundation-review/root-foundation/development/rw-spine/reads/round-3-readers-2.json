@@ -1,0 +1,963 @@
+[
+ {
+  "key": "graph",
+  "findings": [
+   {
+    "where": "THEORY-GRAPH.md, sentence under the five shared laws table (spine.py shared_laws_section)",
+    "text": "\"It says what a row depends on, not that the row is proved from the law: only the eleven above are read as cases of grammar laws.\"",
+    "severity": "low",
+    "why": "There are two problems. (1) The same page's head says twelve: \"About a tenth of the 117 central declarations are read as cases of laws stated on the grammar (11 derived, and 1, a root form at one step, under a stated hypothesis)\". A reader meets 'only the eleven' and 'eleven and one' with nothing to reconcile them; the difference between 'grammar laws' and 'laws stated on the grammar' is never drawn. (2) 'Not proved from the law' is too strong. 08 §7: \"A law's statement on the grammar (this column) is among its anchors, so a declaration resting on it rests on the law\", and resting means the declaration's \"compiled type or value reaches\" the anchor. Where the value reaches it, the proof does go through the law. What the column does not say is that the row is a case of the law.",
+    "fix": "\"It says what a row depends on, not that the row is a case of the law: only the eleven above are read as cases of grammar laws, and one, `GroupEnding.Flow.all_end`, as a root form at its model under a stated hypothesis.\""
+   },
+   {
+    "where": "THEORY-GRAPH.md, standings paragraph (spine.py lead)",
+    "text": "\"The page of each record whose laws name a declaration prints its standing: for a derived row its laws, bridges and support, for a reading its basis, and otherwise the rule's reason.\"",
+    "severity": "low",
+    "why": "registry.py standing_line has a fourth branch, for the checked entry under a stated hypothesis. For `GroupEnding.Flow.all_end` it prints \"under a stated hypothesis, the root form `Becoming.RootForms.outside_leaves_no_offspring` at its model, with hypotheses … each with its countermodel and fit\", not a rule's reason. The 'otherwise' also covers that row, so the sentence misdescribes what its page prints.",
+    "fix": "\"…for a derived row its laws, bridges and support, for the row under a stated hypothesis its form, hypotheses and countermodels, for a reading its basis, and otherwise the rule's reason.\""
+   },
+   {
+    "where": "THEORY-GRAPH.md, 'Do the recorded uses form a cycle?' and 'What it shows'; the legend (spine.py WORDS 'formal')",
+    "text": "\"Each of the 797 interfaces cites a reviewed Lean file, and no tool checks that the file's proof uses the cited result.\" / \"cites a reviewed source (797 of all 1,162 such edges, each a Lean file)\"",
+    "severity": "low",
+    "why": "First, registry.py checks only that the evidence path is among the record's own references (\"dependency interface evidence must be a reviewed reference\"). A reference is 'reviewed' in RESULT-WORKFLOW's documentary sense, a hash of what the record's author read; on this page that author is AI-written and no person has read it, so 'reviewed' suggests more. Second, 42 of the 797 cite a reference whose role is 'provenance', not 'proof', so 'the file's proof' does not fit them. Third, there are 840 interfaces (34 on interpretive edges, 9 on application edges), so 'the 797 interfaces' reads as all of them.",
+    "fix": "\"Each of the 797 formal-reuse edges with an interface cites a Lean file among the record's hashed references (755 with the role proof, 42 provenance), and no tool checks that the Lean there uses the cited result.\""
+   },
+   {
+    "where": "THEORY-GRAPH.md, 'What it shows' (spine.py section) and the legend",
+    "text": "\"the AI-written records assign the kind\"",
+    "severity": "low",
+    "why": "This states the provenance of all 558 records as fact with no source. Of the record pages, 1 carries an 'AI-written' label, and the page links nothing that says every record is AI-written. Under AGENTS (\"AI-written text keeps its label\"), the label should come from somewhere a reader can check.",
+    "fix": "Link where the repository states that the records are AI-written (or the record schema's authorship field, if one exists). Otherwise write \"the records' authors assign the kind\"."
+   },
+   {
+    "where": "tools/research/connection_map.py viewRoot (map.html, root view)",
+    "text": "\"Each declaration and its standing is in the edge record: 42 have a basis in words, in its data, and the other 75 the label a rule gives\" … link('theories/becoming/chapters/08-METHOD.md','08 §7') … \"where it does not, where the declaration is stated (at a represented model, on its own carrier)\"",
+    "severity": "low",
+    "why": "'In its data' has no link; only the .md is linked, so a reader of the map cannot find the 42 bases. The '08 §7' link still lands at the top of chapter 8. The Lean-dependency sentence also omits the fourth bar, REACH's 'The rest' (\"no such dependence and no stated model\"), the 50 that are stated nowhere.",
+    "fix": "Link 'its data' to theories/becoming/results/records/one-root-to-its-edge.json. Give link() an anchor so the 08 link reaches #shared-laws-and-connectivity. End the sentence \"(at a represented model, on its own carrier, or neither)\"."
+   },
+   {
+    "where": "THEORY-GRAPH.md, 'The eleven derived' lead-in (spine.py lead)",
+    "text": "\"Eight of them are, in 08 §7's words, \\\"the eight connected rows that the reading of connected rows took as derived\\\"\"",
+    "severity": "low",
+    "why": "'The reading of connected rows' is a third AI document (u4-one-root-to-its-edge/CONNECTED-ROWS-READING.md, \"An AI reading, for U4\"). It is not among the two reviews credited in the same sentence and is not linked. The page also never says which eight; 08 names three \"and five more\", and a reader can tell only by elimination (all but mutuallyDependent_iff_reach, withinCoupling_reads_iff and coming_of_ceasing).",
+    "fix": "Link 'the reading of connected rows' to CONNECTED-ROWS-READING.md (an AI reading), and add: \"(all but the last three rows)\"."
+   },
+   {
+    "where": "theories/becoming/results/atlas/CROSSWALK.md head (atlas.py _no_relation)",
+    "text": "\"3 entries only in history or not carried have one\"",
+    "severity": "low",
+    "why": "Recomputed: all three are history-only (one scope, one agreement, one contrary-reading). No not-carried entry has a relation; atlas.py itself says \"not-carried has no relation and no targets\". The 'or' lets a reader think some not-carried entries carry one.",
+    "fix": "Have _no_relation name the kinds it counts: \"3 history-only entries have one, which the connection map leaves out…\"."
+   },
+   {
+    "where": "THEORY-GRAPH.md head, reading time (theory_graph.py page: part = lead + section)",
+    "text": "\"the chapters at a glance, with their tables, in 27–35 minutes\"",
+    "severity": "low",
+    "why": "Since this change, the timed part spans three level-2 sections: 'The chapters at a glance', 'What the picture shows and does not show' and 'Edge kinds between chapters'. 'The regions' sits between them and is not timed. A reader who takes the time for the one section named, or who reads straight through to the edge table, gets a different length from what was timed.",
+    "fix": "\"the chapters at a glance, what the picture shows and the edge kinds, with their tables, in 27–35 minutes\". Or move the two sections directly after the theses table, so that the timed part is contiguous."
+   }
+  ],
+  "prior": [
+   {
+    "where": "THEORY-GRAPH.md, five shared laws table, 'On the grammar' beside the count",
+    "fixed": "yes",
+    "note": "The column is now 'The law's statement on the grammar', with 'the models' laws in its row proved from it'. A new column 'Of those, reaching the grammar' reads 42, 16, 14, 1, 1, and reaching_the_grammar() takes each value from 08 §7's sentence, which I checked line by line. The sentence under the table says the column is about dependence. One new wording problem in that sentence is reported below."
+   },
+   {
+    "where": "THEORY-GRAPH.md standings paragraph; connection_map.py viewRoot",
+    "fixed": "yes",
+    "note": "Recomputed. 42 standings carry a basis, all 42 printed without 'by the rule'; 75 are printed 'by the rule'; 24 of the 99 have a basis (18 amounts, 3 free significance, 2 at its model, 1 balance in its statement). All 117 have a Standing line on a stating record's page. Two small gaps are left: the hypothesis row's branch and the map's missing link to the data (reported below)."
+   },
+   {
+    "where": "THEORY-GRAPH.md, circularity paragraph",
+    "fixed": "yes",
+    "note": "Retitled 'Do the recorded uses form a cycle?' and called a condition of entry. Matches registry.py visit(), which errors 'circular result dependency' over every declared dependency. One precision point on 'reviewed' and on the 797 is reported below."
+   },
+   {
+    "where": "THEORY-GRAPH.md, ◆ note",
+    "fixed": "yes",
+    "note": "Now says it is the coverage file's listing and does not line up exactly with the records that state a declaration."
+   },
+   {
+    "where": "THEORY-GRAPH.md, derived row Listed.coming_of_ceasing and column head",
+    "fixed": "yes",
+    "note": "Column headed 'First sentence of the record's basis'. The 'Its statement still reads as counting…' sentence is appended after an ellipsis. The new regex splits all eleven bases correctly; I checked each against the JSON."
+   },
+   {
+    "where": "THEORY-GRAPH.md, 'each read by the review'",
+    "fixed": "yes",
+    "note": "Now credits an AI-written review and links both REVIEW-U4-RECORD and REVIEW-U4C-RECORD, plus 08#review-status, whose anchor resolves. The 'eight connected rows' clause is quoted exactly from 08 line 448 and agrees with DESIGN-BOUNDARY rule 2."
+   },
+   {
+    "where": "ONE-PAGE/overview how_to_read, navigation.py",
+    "fixed": "deferred",
+    "note": "Deferred to the session that holds those files."
+   },
+   {
+    "where": "CROSSWALK.md head, relations sum",
+    "fixed": "yes",
+    "note": "Recomputed from atlas.load(): 124 with no relation (105 not-carried, 19 history-only); 3 history-only entries with one (scope, agreement, contrary-reading); outside ABSENT, agreement counts 337. A wording nit is reported below."
+   },
+   {
+    "where": "connection_map.py route() and sidepick",
+    "fixed": "yes",
+    "note": "OPEN now takes the largest group on S.side, and the sidepick re-runs route() when the hash names no group. A hash naming a group or 'all' still only redraws. I traced this in the code, not in a browser."
+   },
+   {
+    "where": "THEORY-GRAPH.md and legend, 'none is joined to a Lean use'",
+    "fixed": "yes",
+    "note": "Now says the interface cites a Lean file and that nothing checks the Lean uses the cited result. 797 of 797 formal-reuse interfaces end in .lean."
+   },
+   {
+    "where": "THEORY-GRAPH.md, '120 over the 126'",
+    "fixed": "yes",
+    "note": "Now reads 'more than the 87 rows that rest on at least one'."
+   },
+   {
+    "where": "connection_map.py viewRoot, Lean dependency sentence",
+    "fixed": "partly",
+    "note": "The wording now says compiled type or value. The '08 §7' link still has no anchor (link() takes a bare path). The sentence also leaves out the 'The rest' bar (reported below)."
+   },
+   {
+    "where": "THEORY-GRAPH.md, derived table law names",
+    "fixed": "partly",
+    "note": "A sentence now says each «…» is stated in Becoming.GrammarLaws and links it. All twelve names are theorems there. But the link goes to a 178 KB Lean file, and there is still no English law text or per-law anchor."
+   },
+   {
+    "where": "THEORY-GRAPH.md headings",
+    "fixed": "yes",
+    "note": "'What the picture shows…' and 'Edge kinds between chapters' are now level 2, so the outline no longer puts them under 'The regions'. They still come after the regions table, and the reading-time note is affected (reported below)."
+   },
+   {
+    "where": "(missed) connection_map.py loomnote under default focus",
+    "fixed": "yes",
+    "note": "Adds 'svg.focused .t.on .th.fresh{opacity:.42}' (more specific than the .95 rule). The note now says proposed threads stay paler while a group is lit and the others are dimmed."
+   },
+   {
+    "where": "(missed) THEORY-GRAPH.md 'Stated by' column",
+    "fixed": "yes",
+    "note": "Renamed 'Named in the laws of'; derived_rows' docstring agrees."
+   },
+   {
+    "where": "(missed) README.zh.md 脊柱部分",
+    "fixed": "deferred",
+    "note": "Deferred to the session that holds that file."
+   }
+  ],
+  "read": "Read in full: the prior keys read:graph and check:graph; the diff stat aa385eae9..567ec54f0; the full diffs of spine.py, theory_graph.py, connection_map.py, atlas.py, THEORY-GRAPH.md and CROSSWALK.md for that range; THEORY-GRAPH.md lines 1–30 and every changed hunk through 'Edge kinds between chapters'; registry.py standing_line and _rule_reason (lines 715–773), the reference checks (1008–1035) and the dependency, interface and cycle checks (1094–1125); the eleven derived bases in one-root-to-its-edge.json; 08-METHOD.md line 437 (the shared-laws sentence), line 448 (the standings paragraph) and the review-status section; CROSSWALK.md lines 1–22; CONNECTED-ROWS-READING.md header. Searched only: 08 and the u4 folder for 'eight connected rows' (DESIGN-BOUNDARY line 446, CENSUS, the two reviews); GrammarLaws.lean for each of the twelve law names (each is a theorem there); record pages for 'Standing of' lines (42 placed, 75 by the rule, 117 distinct, none 'unverified'); one-root-to-its-edge.md for its 117 declaration lines; record pages and fronts for 'AI-written'; RESULT-WORKFLOW for 'reviewed'; git grep for links to the renamed headings and the old bold title (none outside the zh page's own anchor); connection_map.py CSS, S init, threads class, REACH and link(). Recomputed with python3 -B: edge bases 42/75/24; interfaces by relation (797 formal-reuse, all .lean; 755 proof, 42 provenance; 840 interfaces in all); crosswalk relations from atlas.load() (124 with none: 105 not-carried and 19 history-only; 3 history-only with one; 337 agreements outside ABSENT); theory_graph.page() on data/theory-graph.json equals THEORY-GRAPH.md byte for byte. Tests: python3 -B -m unittest tools.research.tests.test_spine, 21 tests OK. test_lineage not run (outside this scope). No render; the full suite deliberately not run. Map behaviour traced in code, not in a browser. THEORY-GRAPH.zh.md and the pictures not judged (other scopes). Excluded sources not opened.",
+  "verdicts": [
+   {
+    "where": "THEORY-GRAPH.md, sentence under the five shared laws table (spine.py shared_laws_section)",
+    "agree": true,
+    "severity": "medium",
+    "why": "Both halves are real. 08 §7 opens the section with 'A shared law states a mechanism that many central results share, at the lowest layer that holds it, so that those results are proved through it', and says 'a declaration resting on it rests on the law', where resting is the compiled type or value reaching the law. So 'not that the row is proved from the law' denies what the home asserts of the law it shares, not just a matter of precision. The page's own subsection lead quotes the first half of that sentence and leaves out 'so that those results are proved through it'. 'Only the eleven' against the head's '11 derived, and 1 … under a stated hypothesis' read as cases of laws stated on the grammar is also an unreconciled count. I raise this to medium because it is misleading against the home. The reader's fix is right."
+   },
+   {
+    "where": "THEORY-GRAPH.md, standings paragraph (spine.py lead)",
+    "agree": true,
+    "severity": "low",
+    "why": "registry.py standing_line (lines 751-759) has a separate branch for placed == 'checked entry' that is not derived. It prints 'under a stated hypothesis, the root form … at its model, with hypotheses … each with its countermodel and fit' and gives no rule's reason. The page's 'otherwise the rule's reason' therefore misdescribes the line for GroupEnding.Flow.all_end. I recounted the rest: 42 standings in boundary.standings, all with a basis, are printed without 'by the rule'; 75 are printed 'by the rule'; the two sets do not overlap and together cover 117."
+   },
+   {
+    "where": "THEORY-GRAPH.md, 'Do the recorded uses form a cycle?' and 'What it shows'; the legend",
+    "agree": true,
+    "severity": "low",
+    "why": "Recounted from the records: 797 formal-reuse dependencies carry an interface (755 with evidence of role proof, 42 provenance, all .lean), plus 34 interpretive and 9 application, 840 in all. registry.py line 1108 checks only that the evidence path is among the record's references. One part of the finding is weak: 'reviewed' is the home's own word (RESULT-WORKFLOW line 171, 'a reviewed `evidence` path'), so it is not wider than its home. The 'the 797 interfaces' wording and 'the file's proof' for the 42 provenance references are fair precision points. Low is right."
+   },
+   {
+    "where": "THEORY-GRAPH.md, 'What it shows' and the legend, 'the AI-written records assign the kind'",
+    "agree": true,
+    "severity": "low",
+    "why": "Neither the page nor 08's review-status (which says only 'Every review so far is by AI') nor RESULT-WORKFLOW states who wrote the records. Of the fronts, only GLOSSARY and ONE-PAGE say it, and they are equally unsourced. This is a claim of authorship, not of cause, and no reader is misled about the mathematics. Low."
+   },
+   {
+    "where": "connection_map.py viewRoot, root view",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed. 'in its data' is plain text, and only the .md is linked. link('theories/becoming/chapters/08-METHOD.md','08 §7') passes no anchor, although to() (line 682) would carry a '#…' mark if one were given. The Lean-dependency sentence lists two of the three non-reaching bars, and REACH's fourth, 'The rest' ('no such dependence and no stated model'), is left out."
+   },
+   {
+    "where": "THEORY-GRAPH.md, 'The eleven derived' lead-in",
+    "agree": true,
+    "severity": "low",
+    "why": "CONNECTED-ROWS-READING.md exists, headed 'An AI reading, for U4', and the page neither links nor credits it. The eight are the first eight rows of the table: the JSON order puts mutuallyDependent_iff_reach, withinCoupling_reads_iff and coming_of_ceasing last. The reviews credited do match each entry's 'review' field in the JSON (REVIEW-U4-RECORD for ten, REVIEW-U4C-RECORD for coming_of_ceasing)."
+   },
+   {
+    "where": "CROSSWALK.md head (atlas.py _no_relation)",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed from the map's embedded data. The three are cxg-buddhist history-only scope, and cxg-greek-roman history-only agreement and contrary-reading; no not-carried entry has a relation. The 'or not carried' is imprecise. A further problem in the same sentence is reported under missed."
+   },
+   {
+    "where": "THEORY-GRAPH.md head, reading time",
+    "agree": true,
+    "severity": "low",
+    "why": "theory_graph.py page() times lead + section, and 'The regions' with its table sits between them. Since the two sections were made level 2, 'the chapters at a glance' names only the first of three timed sections. The reader misquoted the figure: the page says '27–36 minutes', not '27–35'."
+   }
+  ],
+  "missed": [
+   {
+    "where": "THEORY-GRAPH.md, 'The eleven derived' lead-in (spine.py lead, and its zh twin)",
+    "text": "\"reaching the grammar makes a row connected by the rule, and a reading marks the cases\"",
+    "severity": "medium",
+    "why": "DESIGN-BOUNDARY §2 orders the rules: \"1. A row with balance in its statement, through `Flow`'s anchors or written out, is **balance in its statement**. 2. A row that reaches the grammar is **connected**. The reading marks the cases as derived.\" Rule 2 applies only after rule 1. The page leaves out that precedence, so its sentence is wider than its home and conflicts with the page's own counts: 45 declarations reach the grammar, but 08 §7 gives only 11 derived and 22 connected ('22 connected, reaching grammar laws without being declared a case of one'). A reader who applies the sentence expects 34 connected.",
+    "fix": "\"a row that reaches the grammar, without balance in its statement, is connected by the rule (DESIGN-BOUNDARY §2, rules 1 and 2), and a reading marks the cases\""
+   },
+   {
+    "where": "THEORY-GRAPH.md, theses table, T2's row (spine.json T2 words, added by this fix)",
+    "text": "\"UE32 found T2's numbers better than the field's fitted embedding by its frozen criterion, both behind persistence in most stocks\"",
+    "severity": "medium",
+    "why": "08 §9's row continues: \"…the embedding losing more with longer history: sufficiency against it at these lengths, not the lag's place or T2's law (better in 42 of 65 stocks, p = 0.025; expected: not separated…)\". The fix copied the first clause and dropped the qualifier that says what the result does not show. A reader of the table, coloured 'frozen tests passed and failed', can take this as support for T2's law. AGENTS warns that 'a gloss is where qualifiers and standings drop'.",
+    "fix": "Add the home's qualifier to the chosen words: \"UE32 found T2's numbers better than the field's fitted embedding by its frozen criterion, both behind persistence in most stocks: sufficiency against it at these lengths, not the lag's place or T2's law\""
+   },
+   {
+    "where": "CROSSWALK.md head (atlas.py _no_relation)",
+    "text": "\"which [the connection map](map.html) leaves out of its relations: it draws what stayed behind as a short end, not a thread\"",
+    "severity": "low",
+    "why": "The map leaves these three out of its threads (threads(), showWarp, showThread, tags all skip LOOSE), but not out of its relation counts. Its group panel prints g.by_relation.agreement (cxg-greek-roman shows 11 agreement, its history-only agreement entry included), and the 'How it was read' table prints every group's by_relation, which payload takes from atlas.py with the absent entries counted. 'Leaves out of its relations' is therefore false of those views.",
+    "fix": "\"3 history-only entries have one, which the connection map draws as a short end, not a thread, though its group counts include them.\""
+   },
+   {
+    "where": "THEORY-GRAPH.md, five shared laws table, 'Of those, reaching the grammar', and the sentence under it",
+    "text": "\"The last column is 08 §7's count of those rows whose compiled type or value reaches the grammar.\"",
+    "severity": "low",
+    "why": "The page explains why the first count column (120) exceeds the 87 rows, but gives no total for the new column. It sums to 74, while 08 §7 says \"Of the 126 rows, 46 now reach the grammar … and 3 on no anchor, through the laws of steps counted\", and the finite-run rows are also counted under closure. A reader who sums the column, or compares it with the 45 declarations in 'What it does not show', has nothing to reconcile it with.",
+    "fix": "Add: \"Of the 126 rows, 46 reach the grammar, 3 of them on no anchor; the column adds past that because the finite-run rows rest on closure too.\""
+   }
+  ]
+ },
+ {
+  "key": "glossary-zh",
+  "findings": [
+   {
+    "where": "theories/becoming/results/THEORY-GRAPH.zh.md, theses table, T2 row (spine.json T2 zh words)",
+    "text": "第四项中，按其冻结的判据，水平、近来的给予与滞后这三个量对下一次给予的预报胜过该领域拟合的延迟嵌入 … 但在多数种群中二者都不如直接沿用上一次的给予",
+    "severity": "medium",
+    "why": "The fix added the fourth test but put the ellipsis exactly over the qualifier that limits what the win supports. The overview's row (THE-THEORY-OF-BECOMING.zh.md line 175) reads: 胜过该领域拟合的延迟嵌入，这是它们相对于更长历史之充分性的一个迹象，而非滞后位置的迹象，但在多数种群中…. T2 claims the lag's place is named before the data. Without the qualifier, a reader takes the frozen win as support for that claim. The English row has the same gap ('UE32 found T2's numbers better than the field's fitted embedding by its frozen criterion, both behind persistence in most stocks'; USES-EXAMPLES has 'sufficiency against it at these lengths, not the lag's').",
+    "fix": "In spine.json T2 zh, replace ' … ' with '，这是它们相对于更长历史之充分性的一个迹象，而非滞后位置的迹象，'. In the English words add 'a sign of sufficiency, not of the lag's place'."
+   },
+   {
+    "where": "GLOSSARY.md and GLOSSARY.zh.md, formation",
+    "text": "in the World, a relatum active as a formation, which depends, draws, takes and gives (zh: 一个作为形成而活跃的关系项，它依存、取用、取与给)",
+    "severity": "low",
+    "why": "The term is defined by itself, and the home's 'can' is dropped. 04 §1: 'In the World a relatum can stand as a condition at some level, which others depend on and draw on, and can be active as a formation, which depends, draws, takes and gives.' The theorem below it: 'Formations and conditions are two roles of one relatum'.",
+    "fix": "Write 'in the World, the role in which a relatum can be active, depending, drawing, taking and giving; the same relatum can also stand as a condition at some level, which others depend on and draw on'. Zh: 在世界模型中，一个关系项可以活跃于其中的角色：依存、取用、取与给；同一关系项也可以作为处于某一水平的缘，为他者所依存、所取用."
+   },
+   {
+    "where": "theories/becoming/results/THEORY-GRAPH.zh.md, standings table row 1 and the 它不显示什么 quotation (spine.json zh, lines 350 and 421)",
+    "text": "经由在 Lean 中作为等价核验的桥接与审阅所读的支持（在某行列有它们之处）",
+    "severity": "low",
+    "why": "The glossary and the page's own later sentence now read （某行载有它们之处）. That sentence is in the same 它不显示什么 paragraph, so one paragraph gives two renderings of 08 §7's 'where a row has them', and one of them misparses (行列 read as 'ranks').",
+    "fix": "In spine.json's two zh quotations, write （某行载有它们之处）."
+   },
+   {
+    "where": "GLOSSARY.zh.md, 指明的距离 (named distance)",
+    "text": "一项核心声明既不在边上、也不是计数时的地位，附其理由；边的记录并不表明",
+    "severity": "low",
+    "why": "计数时的地位 reads as 'the standing at the time of counting'. The English is 'neither on the edge nor counting', and 'counting' is the standing 08 §7 calls 'Six are counting, below the grammar' (zh page: 六项为计数，位于文法以下). Also, THEORY-GRAPH.zh now says 根之边的记录 so that 边 is not read as a dependency edge, but this new row says 边的记录.",
+    "fix": "Write 一项核心声明既不在边上、也不为计数（位于文法以下）时的地位 → better: 一项核心声明的地位，它既不在根之边上，也不属计数，附其理由；根之边的记录并不表明…. Use 根之边的记录 for the link text too."
+   },
+   {
+    "where": "theories/becoming/results/THEORY-GRAPH.zh.md, five shared laws, third column and the sentence under the table (same in THEORY-GRAPH.md)",
+    "text": "该行所述的模型之律由它证明 … 它说的是一行依赖什么，不是说该行由这条律证明",
+    "severity": "low",
+    "why": "The fix added 该行 to the third column. The new sentence below uses 该行 for a central row. Read together, they appear to say the row is proved from the law and then that it is not. In 08 §7 the third column's 'row' is the shared law's own table row ('every model's law in a row is proved from it', meaning the anchor's laws such as WithinClosure). The sentence below is about the 126 central rows.",
+    "fix": "Third column: 本表此行之锚的模型之律由它证明 (en: 'its anchor's model laws proved from it'). Keep 一行 / 该核心行 in the sentence below."
+   },
+   {
+    "where": "theories/becoming/results/THEORY-GRAPH.zh.md, the eleven derived, table header (same in English)",
+    "text": "记录依据的第一句（英文原文）",
+    "severity": "low",
+    "why": "The Listed.coming_of_ceasing row gives the first sentence, then ' … ', then the basis's last sentence ('Its statement still reads as counting on U4b's line; …'), checked against one-root-to-its-edge.json. The header claims less than the cell holds.",
+    "fix": "Write 记录依据的第一句（末行另引其末句；英文原文） / 'First sentence of the record's basis (the last row also its last)'."
+   },
+   {
+    "where": "theories/LINEAGE.zh.md, row 39 (lineage.json point 39 zh)",
+    "text": "范围由延续条件给出，次序由 C 给出；*对生命而言*说的是这是谁的道，不是谁的损失算数，每一个延续的损失仍然算数。",
+    "severity": "low",
+    "why": "The English row quotes 07 §8 ('\"*For life* says whose way it is, not whose losses count: every continuation's still does\"'), and the evidence lists that quote. The zh gives it as unmarked prose, against the page's rule 引自英文来源的话，以「」保留英文原文、附中文释义，或标明为译文.",
+    "fix": "Write 「*For life* says whose way it is, not whose losses count: every continuation's still does」（*对生命而言*说的是这是谁的道，不是谁的损失算数：每一个延续的损失仍然算数）."
+   },
+   {
+    "where": "theories/LINEAGE.zh.md, row 29 (same in LINEAGE.md)",
+    "text": "G0 于 10 月 17 日改名为存活之意义；它不是伦理的两个前提之一：存活之意义「is not assumed; it follows under the continuation condition」",
+    "severity": "low",
+    "why": "This clause was added by the fix, and the row's evidence does not cite the date. The record's history has it (continuation-condition-yields-living-significance.json line 1224, '17 October 2026, wording: outdated labels (G0, …) replaced by the current vocabulary (living significance, …)'). The quotation comes from theories/becoming/history/G0-WARRANT.md, a superseded text. The live home is GLOSSARY 'living significance | what the condition yields', 07 §3.",
+    "fix": "Add the record's 17 October history entry to point 29's evidence. Cite 07 §3 (#living-significance) beside, or instead of, the history file for the live wording."
+   },
+   {
+    "where": "theories/LINEAGE.zh.md, selection paragraph, second thread's intro, arc",
+    "text": "一位对立的读者逐一核对; 从 2022 年一个可能性的本体论; 10 月 2 日本仓库首批预先登记的预测写下（25）",
+    "severity": "low",
+    "why": "Each term differs from its rendering elsewhere on the page, so the account's terms are not held to one sense. 'adversarial' is 对抗性的 in row 34 (一次只读、对抗性的 AI 审查), and 对立 means 'opposed'. 'ontology' is 存在论 in row 2, the arc and the brief. 'pre-specified' (English arc and row 25) is 预先给定的 in the brief. 预先登记 (pre-registered) claims an external registration the source does not state ('Written before any run of experiment.py').",
+    "fix": "Write 一位持对抗立场的读者 (or 对抗性的读者); 一种可能性的存在论; 本仓库首批预先给定的预测. Use 预先给定 in row 25's title as well."
+   }
+  ],
+  "prior": [
+   {
+    "where": "LINEAGE.zh.md arc, 'one diagnostic mechanism restated four times' (22)",
+    "fixed": "yes",
+    "note": "Now reads 既非十五种理论、也非一种, with the full quotation including 'under successive names' and the adjacent commitments and engineering systems beside it. Matches MAP.md line 3."
+   },
+   {
+    "where": "LINEAGE.zh.md strands, 48 个转折点循三条线索",
+    "fixed": "yes",
+    "note": "Now 19 on the threads and 29 on none. Says 4 of 16 folders' README or files, with sources/ named. lineage.json gives 7+5+7=19."
+   },
+   {
+    "where": "LINEAGE.zh.md arc, 最早的文字诊断一种结构（转折点 1–3）",
+    "fixed": "yes",
+    "note": "Points 1, 2 and 3 are each described separately, matching the brief."
+   },
+   {
+    "where": "GLOSSARY thesis",
+    "fixed": "yes",
+    "note": "Headword is now 'thesis (T1 to T8)', using 08 §2's 'an empirical claim, with its standing, what it forbids and the evidence so far'. T8's standing is noted, the other two uses are named and §2 is cited. The zh mirrors it."
+   },
+   {
+    "where": "GLOSSARY formal-reuse",
+    "fixed": "yes",
+    "note": "RESULT-WORKFLOW line 37 is quoted exactly. The row says the AI-written records assign the kind, says what the registry checks (registry.py 1104-1109) and that nothing checks the Lean use. THEORY-GRAPH is a second home and the zh mirrors it."
+   },
+   {
+    "where": "README.zh.md 脊柱部分; GLOSSARY.zh.md line 6",
+    "fixed": "deferred",
+    "note": "GLOSSARY.zh.md line 6 now reads 理论图的各章一览有中文版. README.zh.md lines 43 and 48 still say 脊柱部分; that item is deferred."
+   },
+   {
+    "where": "THEORY-GRAPH.zh.md, 这些计数相加为 120 … 因为",
+    "fixed": "yes",
+    "note": "Now reads 多于依于至少一条的 87 行，因为一行可以依于多条. The sum is 42+54+14+2+8=120."
+   },
+   {
+    "where": "GLOSSARY.md spine, 'named otherwise'",
+    "fixed": "yes",
+    "note": "The note is now at the end of the row: 'The file spine.svg keeps an older name; it draws the chapters and is not this'. The zh matches."
+   },
+   {
+    "where": "GLOSSARY central declaration; THEORY-GRAPH.zh missing gloss",
+    "fixed": "yes",
+    "note": "Measured in COVERAGE.json: 17 rows, 126 listings, 9 listed twice, 117 distinct. Homes are 08 §12 #completion-criterion and 08 §7. THEORY-GRAPH.zh restores the gloss with a link to #核心声明, and the anchor exists in GLOSSARY.zh.md."
+   },
+   {
+    "where": "GLOSSARY named distance",
+    "fixed": "partly",
+    "note": "The English now reads 'neither on the edge nor counting' and quotes the record's Does-not-show; anchor #does-not-show--未表明 exists. The zh rendering misparses and keeps 边的记录 (see findings)."
+   },
+   {
+    "where": "GLOSSARY formation",
+    "fixed": "partly",
+    "note": "04's words were copied, but 'can' was dropped and the gloss now defines formation by itself ('a relatum active as a formation'). See findings."
+   },
+   {
+    "where": "GLOSSARY.zh 文法, 事件",
+    "fixed": "yes",
+    "note": "Now reads 即诸发生之间的关系."
+   },
+   {
+    "where": "LINEAGE.zh second thread, 一致性 / 延续",
+    "fixed": "yes",
+    "note": "Now reads 作为融贯检查器的 Lean and 相对于类的续之文法."
+   },
+   {
+    "where": "THEORY-GRAPH.zh T2 row, four tests with three accounted for",
+    "fixed": "yes",
+    "note": "The fourth test is now given, with an ellipsis. The ellipsis drops a qualifier from the overview (see findings)."
+   },
+   {
+    "where": "THEORY-GRAPH.zh five laws: 'ranks no law'; 边的记录",
+    "fixed": "yes",
+    "note": "这个名称不把任何一条律排在另一条之上 is added, and the page now says 根之边的记录. GLOSSARY.zh's new named-distance row still says 边的记录 (see findings)."
+   },
+   {
+    "where": "GLOSSARY.zh 核心声明 and 某行列有它们之处",
+    "fixed": "partly",
+    "note": "The glossary is fixed (某一行就…指明为核心; 某行载有它们之处). At 567ec54f0, THEORY-GRAPH.zh.md still has 在某行列有它们之处 twice (standings table row 1 and the 它不显示什么 quotation, from spine.json lines 350 and 421). The same paragraph uses the corrected 某行载有它们之处 a few lines later. The overview.zh caption at the commit still has it; that caption is deferred, and the uncommitted working tree already changes it."
+   },
+   {
+    "where": "LINEAGE.zh “ ” for retained English; unsourced selection quotation",
+    "fixed": "yes",
+    "note": "The arc, coverage and selection paragraphs use 「」. The selection sentence links workflows/2-lineage-finalize.js, whose line 50 has the quotation verbatim."
+   },
+   {
+    "where": "(checker missed) THEORY-GRAPH cycle paragraph",
+    "fixed": "yes",
+    "note": "Retitled 已记录的使用有环吗？ It says the registry refuses cycles, so this is a condition of entry and not a finding (registry.py 1112-1116 checks all declared dependencies). It says nothing about the Lean proofs."
+   },
+   {
+    "where": "(checker missed) LINEAGE arc 6–13, 看法",
+    "fixed": "yes",
+    "note": "The timeline sentence is quoted in full, including 'acquire the standing'. The citation is (6、8–11、13；观看方式在 19 明确) and uses 观看方式. Checked against TIMELINE.md line 325."
+   },
+   {
+    "where": "(checker missed) GLOSSARY derived headword",
+    "fixed": "yes",
+    "note": "'derived (a standing on the edge)' / 推导而得（derived，根之边上的地位）."
+   },
+   {
+    "where": "(checker missed) 'a record's authors' in glossary and legends",
+    "fixed": "yes",
+    "note": "'the AI-written records assign it' / 由 AI 写成的记录指定, in the glossary, THEORY-GRAPH.zh and the spine.zh.svg legend."
+   }
+  ],
+  "read": "Read everything at 567ec54f0. Another session was editing the worktree while I read, so where the working tree differed I read with git show HEAD. Read in full: round-3-readers-1.json read:glossary-zh and check:glossary-zh; the GLOSSARY.md, GLOSSARY.zh.md and README.zh.md diffs aa385eae9..567ec54f0; the THEORY-GRAPH.zh.md diff and the whole page; THEORY-GRAPH.md lines 1-79; all text nodes of spine.zh.svg, and the spine.svg legend; LINEAGE.zh.md lines 1-100 (header, arc, brief, labels, coverage, selection, strands, all three threads with their rows, table rows 1-11); LINEAGE.md arc, coverage, selection and strands; lineage.json points 14, 15, 16, 29, 39 and 40 (both languages, with evidence) and the threads' intros; the lineage.json diff of the static paragraphs and points; spine.json T2; 08-METHOD §2 Thesis rows, §7 (shared-laws table and paragraph, standings paragraph and table), §9 opening and the T1-T8 rows (cut at length), §12 completion criterion; 04 §1 opening; the edge record's Does not show; RESULT-WORKFLOW line 37; registry.py lines 1085-1125; MAP.md lines 1-5 and line 168; TIMELINE.md lines 25-31, 147, 321-325 and 335; G0-WARRANT.md lines 1-14; the crosswalk anchor cx-kpso-open-is-not-c. Searched only: the overview.zh and overview T2 rows (grep); spine.py's docstring; hb-02.md for 'generative' (grep only); COVERAGE.json (about, rows: 17 rows, 126 listings, 9 listed twice, 117 distinct); one-root-to-its-edge.json standings (42; 11 derived, 1 under a hypothesis, 6 counting, 24 at a distance); lineage origins (15/13/19/1) and thread membership (19); 1-gathered-and-verified.json counts gathered (12, 14, 14, 14; budgets in 2-lineage-finalize.js line 8); the lineage workflows' prompts (grep); anchors (#核心声明, #does-not-show--未表明, #completion-criterion, #standings-and-bases, #theses, #review-status, #the-spine-what-it-shows-and-does-not-show), all present. Ran python3 -B -m unittest tools.research.tests.test_spine tools.research.tests.test_lineage: 34 tests OK, against the working tree, which has uncommitted spine.py edits from the other session. No render was run, nothing was edited, and no excluded source was opened. I did not check whether MAP.md is AI-written.",
+  "verdicts": [
+   {
+    "where": "THEORY-GRAPH.zh.md theses table, T2 row (spine.json T2 zh words)",
+    "agree": true,
+    "severity": "medium",
+    "why": "Confirmed. spine.json's new zh entry (added in this change) reads '…胜过该领域拟合的延迟嵌入 … 但在多数种群中…'. The ellipsis falls exactly on the overview's qualifier (THE-THEORY-OF-BECOMING.zh.md:175 '这是它们相对于更长历史之充分性的一个迹象，而非滞后位置的迹象'; English overview :173 'a sign of their sufficiency against longer history, not of the lag's place'). T2's title claims the lag's place is named before the data, so without the qualifier the win reads as support for that clause. The English words added in the same commit ('UE32 found T2's numbers better … both behind persistence in most stocks') leave it out as well. Medium is right: the ellipsis shows something was cut, but the cut is the qualifier that limits what the win supports."
+   },
+   {
+    "where": "GLOSSARY.md / GLOSSARY.zh.md, formation",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed. The row reads 'a relatum active as a formation', which defines the term by itself. 04 §1 (line 22) has 'can be active as a formation, which depends, draws, takes and gives', and line 25 has 'two roles of one relatum'. Nothing false is said, so low."
+   },
+   {
+    "where": "THEORY-GRAPH.zh.md standings table row 1 and the 它不显示什么 quotation",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed. '（在某行列有它们之处）' appears twice, and the same paragraph later says '（某行载有它们之处）'. The parse '在某行 列有 它们' ('where a row lists them') is not wrong in itself, so the misparse risk is smaller than claimed. The real issue is two renderings of 08 §7's 'where a row has them' on one page. Low."
+   },
+   {
+    "where": "GLOSSARY.zh.md, 指明的距离",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed. '既不在边上、也不是计数时的地位' can be read as 'the standing at the time of counting', though its intended reading ('the standing when it is neither…') is also available. The link text '边的记录' differs from THEORY-GRAPH.zh's '根之边的记录'. The English row matches the record (line 8: 'on it … counting … or a named distance'; line 20: 'on the edge 12'), so only the zh wording is at fault. Low."
+   },
+   {
+    "where": "THEORY-GRAPH.zh.md five shared laws, third column vs the sentence under the table",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed. The cell '该行所述的模型之律由它证明' means the table row (08 §7 line 437: 'every model's law in a row is proved from it'). The sentence below uses '该行' for a central row and says it is not proved from the law. Read together, the two seem to contradict each other. The English 'in its row' is less ambiguous. Low. A deeper problem with that sentence is reported separately under missed."
+   },
+   {
+    "where": "THEORY-GRAPH.zh.md eleven derived, header 记录依据的第一句（英文原文）",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed against one-root-to-its-edge.json. Listed.coming_of_ceasing's cell gives the first sentence, then ' … ', then the basis's last sentence ('Its statement still reads as counting on U4b's line; …'). The header names only the first sentence. Low."
+   },
+   {
+    "where": "LINEAGE.zh.md row 39",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed. The evidence (lineage.json point 39) quotes 07 §8 line 778, '*For life* says whose way it is, not whose losses count: every continuation's still does.' The zh gives it as unmarked prose, against the page's own 「」 rule. The two goal titles in 「」 Chinese are not a breach, because the source itself gives them in zh ('(zh: 生命之伦理，及在其中形成的一切智能)', '(所有智能的普遍元伦理)'). Low."
+   },
+   {
+    "where": "LINEAGE.zh.md / LINEAGE.md row 29",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed. The date '17 October' is supported by the record's history (continuation-condition-yields-living-significance.json lines 1224 and 1227: 'living significance for G0') but not by the point's evidence. The quotation is from theories/becoming/history/G0-WARRANT.md line 12, a superseded file. The live 07 line 233 ('under it living significance follows') and GLOSSARY's 'what the condition yields' (07 §3 #living-significance) carry the same sense. Low."
+   },
+   {
+    "where": "LINEAGE.zh.md selection paragraph, second thread intro, arc",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed. '对立的读者' renders 'adversarial', which row 34 gives as 对抗性的. '可能性的本体论' was newly introduced in thread 2's intro (lineage.json diff), while row 2 and the arc use 存在论. '预先登记' (pre-registered) says more than the English 'pre-specified' and the source ('Written before any run of experiment.py'; committed before the pilot log). It was already in row 25's zh title before this change and was carried into the new arc. One could argue for medium, since it suggests an external registration, but it is close to how the predictions were actually committed, so low stands."
+   }
+  ],
+  "missed": [
+   {
+    "where": "theories/becoming/results/THEORY-GRAPH.zh.md, sentence under the five shared laws table (same in THEORY-GRAPH.md: 'It says what a row depends on, not that the row is proved from the law'; tools/research/spine.py ~927)",
+    "text": "它说的是一行依赖什么，不是说该行由这条律证明：被读作文法之律之情形的，只有上面的十一项",
+    "severity": "medium",
+    "why": "The homes say the opposite of 'not proved from the law'. 08 §7 line 427: 'A shared law states a mechanism that many central results share … so that those results are proved through it'. Line 437: 'A law's statement on the grammar (this column) is among its anchors, so a declaration resting on it rests on the law; … the grammar proves finite runs' laws from closure's'. GLOSSARY.zh 共律: '许多核心结果共有、并经由它而证明的一条律' (en: 'share and are proved through'). A reader of the page will believe that the 42 closure rows whose compiled value reaches «所闭当且仅当同一或及» are not proved through it. The distinction the sentence wants is between reaching (dependence) and being read as a case (derived), not between depending and being proved. The fix added the sentence and conflates the two.",
+    "fix": "Write: 它说的是一行编译后的类型或值达到什么，不是说该行是这条律的一个情形：被读作文法之律之情形的，只有上面的十一项. In English: 'It says what a row's compiled type or value reaches, not that the row is a case of the law: only the eleven above are read as cases of grammar laws.'"
+   },
+   {
+    "where": "theories/becoming/results/THEORY-GRAPH.zh.md, opening note",
+    "text": "本页由 AI 翻译；引自英文文本的话都是译文，未经核对，以英文原文为准。",
+    "severity": "low",
+    "why": "The page also keeps English originals. The eleven's table header says （英文原文） and gives each basis in English. The eight-rows quotation 'the eight connected rows that the reading of connected rows took as derived' is in English with a gloss. So 'every quotation is a translation' is wrong for part of the page.",
+    "fix": "Write: 引自英文文本的话，除标明为英文原文者外，都是译文，未经核对，以英文原文为准。"
+   },
+   {
+    "where": "theories/becoming/results/THEORY-GRAPH.zh.md (and .md), five shared laws table, third column",
+    "text": "该律在文法上的陈述 | 该行所述的模型之律由它证明 / 双向表示，不是推导",
+    "severity": "low",
+    "why": "The header promises the law's statement on the grammar, but no cell gives one. 08 §7's column names it («所闭当且仅当同一或及», «入当且仅当有不返» …, «像定后当且仅当同行», «广不可逆», «广之传递»), and the paragraph at line 437 says the column names the statement 'and how the anchor reads it'. A reader looking for the grammar's law under that header is lost.",
+    "fix": "Either print 08 §7's «…» names in the cell before the reading (e.g. «所闭当且仅当同一或及»；本表此行之锚的模型之律由它证明), or retitle the column 它与文法的关系 / 'How the grammar's statement reads the anchor'."
+   }
+  ]
+ },
+ {
+  "key": "lineage",
+  "findings": [
+   {
+    "where": "theories/LINEAGE.md, row 39's Evidence cell (lineage.json points[becoming-2026-10-30-ethics-for-life].evidence; zh source list 39 likewise)",
+    "text": "[`theories/becoming/chapters/07-SIGNIFICANCE.md`](...#L778) (§8 Thesis T8, line 778); ... [`theories/becoming/chapters/07-SIGNIFICANCE.md`](...#L778) (§8 Thesis T8 (line 778))",
+    "severity": "low",
+    "why": "The page's own labels paragraph says: 'Its entries follow the data's list, which can cite one place twice; a row shows each place once.' The fix added a second evidence entry for the same line with a different locator. evidence_link includes the locator, so the dict.fromkeys de-duplication keeps both, and the row shows the same place twice.",
+    "fix": "Fold the new quote into the existing 07 line 778 entry and drop the second entry, or de-duplicate links by path and line."
+   },
+   {
+    "where": "theories/LINEAGE.md, row and bullet 39 (points[becoming-2026-10-30-ethics-for-life].what.en; zh likewise)",
+    "text": "scope given by the continuation condition and order by C (\"*For life* says whose way it is, not whose losses count: every continuation's still does\")",
+    "severity": "low",
+    "why": "07 line 778 gives 'For life says whose way it is...' as a gloss on T8's 'For life', not on C. Placed in parentheses right after 'order by C', it reads as glossing C.",
+    "fix": "Move the quotation to follow the T8 quotation: 'Thesis T8 reads \"For life, the way is 生生, ...\" (... D1); \"*For life* says whose way it is, not whose losses count: every continuation's still does\"; scope is given by the continuation condition and order by C, ...'."
+   },
+   {
+    "where": "theories/LINEAGE.md, the arc (words.en.arc; zh likewise)",
+    "text": "a paper pairs each claim with refuters (23) ... the ethics' two premises are separated, the continuation condition for scope and C (widening what can form is better) for order, each stated and neither asserted (33)",
+    "severity": "low",
+    "why": "AGENTS.md: 'AI-written text keeps its label'. The arc labels the timeline, the map and 'an AI review' (34), but not point 23, which the phase calls 'an AI-drafted paper' and its row 'AI-drafted and, its notes say, not yet reviewed'. Nor does it label 33, where an AI review ('An AI review of the theory as one whole found the ethics ... over two premises') did the separating.",
+    "fix": "'an AI-drafted paper pairs each claim with refuters (23)' and 'an AI review separates the ethics' two premises, ... (33)'."
+   },
+   {
+    "where": "theories/LINEAGE.md, In brief, 'The turns of 2026' (phases[turns].what.en; zh likewise)",
+    "text": "From February to July 2026 the Fork narrative is left and cooperation is not held good in itself, 間 becomes the one primitive ... (points 14–21 ...)",
+    "severity": "low",
+    "why": "The phase claims points 14 to 21, but its summary never says the Fork was named. Row 14 is the AI turn: 'how could there be a future for humans in this winner takes all game?', the narrative 'called The Fork' and the one rule 'stop using AI compete with others'. The arc leads this period with that turn. So a reader is told the Fork is 'left' in the same phase without being told it arrived there. Points 17, 20 and 21 also go unsummarised.",
+    "fix": "'From February to July 2026 the question turns to AI and a Fork narrative and one rule are proposed, then the narrative is left and cooperation is not held good in itself, ...'."
+   },
+   {
+    "where": "theories/LINEAGE.md, second thread's intro (threads[1].intro.en; zh 无公理的 Lean 核心 likewise)",
+    "text": "to a Lean core without axioms and a grammar of continuation relative to a class",
+    "severity": "low",
+    "why": "Row 28 and 08 §3 put it narrower: 'An empty report shows that no logical axiom is used.' AGENTS.md says the pure core's empty reports cover 'logic only, so state the modelling choices a law depends on'. 'Without axioms' unqualified is wider than the home.",
+    "fix": "'to a Lean core whose axiom reports are empty (logic only) and a grammar ...'; zh 公理报告为空（仅就逻辑而言）的 Lean 核心."
+   },
+   {
+    "where": "theories/LINEAGE.md, row 29's Evidence cell (points[becoming-2026-10-11-g0-folded].evidence, new entry)",
+    "text": "theories/becoming/history/G0-WARRANT.md (opening paragraph (line 12))",
+    "severity": "low",
+    "why": "Line 12 is the first paragraph under '## 1. Status' ('**Living significance: ...** It is not assumed; it follows under the continuation condition'). The opening paragraph is line 7 ('The theory does not assume living significance: it follows under the continuation condition'). The quote is right; the locator names the wrong paragraph.",
+    "fix": "Locator '§1 Status (line 12)'."
+   },
+   {
+    "where": "theories/LINEAGE.md, row 16's Evidence cell (points[s26-05-jian-single-primitive].evidence, new entry)",
+    "text": "(header (line 5); timeline-raw.tsv dates v0.3 and v0.9 2026-05-01)",
+    "severity": "low",
+    "why": "'Dated the same day' rests on the TSV, which the row names without a path or link. The only path a reader finds, in TIMELINE line 5, is `_process/timeline-raw.tsv`, which does not exist. The file is `_process/history/2026-09-consolidation/timeline-raw.tsv`, lines 506 (v0.3) and 511 (v0.9).",
+    "fix": "Add an evidence entry for `_process/history/2026-09-consolidation/timeline-raw.tsv`, lines 506 and 511, or give that path in the locator."
+   },
+   {
+    "where": "theories/LINEAGE.md, In brief, 'The theory of becoming' (phases[becoming].what.en; zh likewise), next to the scope",
+    "text": "the ethics' scope and order premises are separated",
+    "severity": "low",
+    "why": "AGENTS.md: 'Name both wherever the ethics is summarized.' The arc and the third thread now name the continuation condition and C. This phase line, which summarizes the same step, names neither.",
+    "fix": "'the ethics' scope and order premises, the continuation condition and C, are separated'; zh 延续条件与 C."
+   }
+  ],
+  "prior": [
+   {
+    "where": "arc: 'read as \"one diagnostic mechanism restated four times\" (22)'",
+    "fixed": "yes",
+    "note": "It now reads 'neither fifteen theories nor one: ... beside commitments not reducible to it and engineering systems (22)', which is MAP.md line 3. The map is labelled AI-written, which matches row 22's AI-made origin."
+   },
+   {
+    "where": "'What the points follow': 'The 48 follow three strands'",
+    "fixed": "yes",
+    "note": "It now reads 'Of the 48, 19 lie on the three threads ... and 29 on none'. strand_counts gives total 48, on_threads 19, on_none 29, cited 4, folders_n 16, and the threads are [6,8,11,13,19,32,38], [2,16,18,28,35] and [15,17,29,33,39,40,47]. The zh template uses the same counts."
+   },
+   {
+    "where": "arc: '573 files against 504 before it'",
+    "fixed": "yes",
+    "note": "It now reads '504 in the whole corpus dated before it', as TIMELINE line 147 has it."
+   },
+   {
+    "where": "third thread intro and row 29: adopted axiom turned into a stated condition",
+    "fixed": "yes",
+    "note": "The intro now has 'G0, later named living significance, no longer an adopted axiom (29)'. Row 29 adds the 17 October rename and says it is not one of the two premises. The G0-WARRANT quote is verbatim at line 12, but the locator is mislabelled (see findings)."
+   },
+   {
+    "where": "third thread intro: premises not named, C unglossed, 39 and 47 missing",
+    "fixed": "yes",
+    "note": "The intro names both premises: the continuation condition for scope and C (widening what can form is better) for order, 'each stated and neither asserted'. It now includes 39 and 47. Nothing derives C or the ethics from the condition."
+   },
+   {
+    "where": "row 39: 'it is just for us as life'",
+    "fixed": "yes",
+    "note": "T8's 'For life says whose way it is, not whose losses count: every continuation's still does' is now quoted, verbatim from 07 line 778. Where it is placed is a low point (see findings)."
+   },
+   {
+    "where": "Coverage: 'the fill does not show when a person stopped writing'",
+    "fixed": "yes",
+    "note": "It now reads 'the fill is no measure of how much a person wrote at any date'."
+   },
+   {
+    "where": "arc: 'diagnose a structure (points 1–3)'",
+    "fixed": "yes",
+    "note": "Points 1, 2 and 3 are now kept apart as the brief has them."
+   },
+   {
+    "where": "arc: September and the first predictions (23, 25)",
+    "fixed": "yes",
+    "note": "It now reads 'on 2 October the repository's first pre-specified predictions are written (25)'."
+   },
+   {
+    "where": "arc: '(14)' for the winner-takes-all quotation",
+    "fixed": "yes",
+    "note": "hb-02 line 3428 is added to point 14's evidence and the row quotes it under 2026-02-07. The quote is verbatim at that line."
+   },
+   {
+    "where": "arc: 'The last weeks test it (40–48)'",
+    "fixed": "yes",
+    "note": "It now reads 'In the first week of November' and gives each point what its row says (45, 44, 46, 40, 47, 48)."
+   },
+   {
+    "where": "arc: 'a volume the timeline puts \"almost entirely\"'",
+    "fixed": "yes",
+    "note": "It now reads 'an acceleration the timeline puts, with examples and no count, \"almost entirely\" down to', which matches TIMELINE line 321."
+   },
+   {
+    "where": "arc: 'the way of seeing reproduces itself (6–13)'",
+    "fixed": "yes",
+    "note": "The checker refuted this one. The new '(6, 8–11, 13; the way of seeing made explicit at 19)' is still sound against TIMELINE line 53 ('present here except the phrase') and line 325's dates."
+   },
+   {
+    "where": "arc: 'no central result new mathematics (34)'",
+    "fixed": "yes",
+    "note": "The checker refuted this one and it is unchanged, rightly: 08's words are 'None of the central results is new mathematics'."
+   },
+   {
+    "where": "'How the points were chosen'",
+    "fixed": "yes",
+    "note": "'12 to 14' matches 1-gathered-and-verified.json (early 12, pre-becoming 14, October 14, November 14). The budgets 9/10/10/9/7/3 and the id prefixes match 2-finalized.json and lineage.json (9, 10, 10, 9, 7, 3), so 'every period stands at its cap' holds. Point 37 is now 'the review packet', not a paper."
+   },
+   {
+    "where": "'What the points follow': genealogy and 'name 4'",
+    "fixed": "yes",
+    "note": "It now says 'most folders' and 'Their evidence cites the README or files of 4 of the 16'. The four are keep-the-possibility-space-open, meta-attractor, the-fork and zhishan."
+   },
+   {
+    "where": "second thread intro: dormancy, 17, 28",
+    "fixed": "yes",
+    "note": "'dormant for four years' is attributed to the timeline. 17 is pointed to the ethics thread, and the Lean core is named. That wording is a low point (see findings)."
+   },
+   {
+    "where": "row 15: 'the Fork was never a binary'",
+    "fixed": "yes",
+    "note": "The row now quotes hb-02 line 5097, 'never put \"in a way that was neo-feudalism vs automated commons\"', in English and zh, verbatim."
+   },
+   {
+    "where": "LINEAGE.zh.md: 读不到 and 延续的文法",
+    "fixed": "yes",
+    "note": "Neither 读不到 nor 延续的文法 is left on the zh page. Both places now read 不读任何次序者 and 续之文法."
+   },
+   {
+    "where": "missed: second thread intro, 間 held until October",
+    "fixed": "yes",
+    "note": "The intro, row 16 and the phase all add v0.9's '系 replaces 间/涉', dated the same day. timeline-raw.tsv lines 506 and 511 do date v0.3 and v0.9 2026-05-01. The TSV has no path given (see findings)."
+   },
+   {
+    "where": "missed: 'openness kept rather than a measure expanded' as a step to the premises",
+    "fixed": "yes",
+    "note": "The intro now marks 17 as 'a claim the account changed, since C reads \"admits more\", a divergence the crosswalk records [AI reading]' and links #cx-kpso-open-is-not-c. That entry is headed '(changed, divergence)' and has 'C reads 'admits more''."
+   },
+   {
+    "where": "missed: TIMELINE's recurrence and cause unlabelled",
+    "fixed": "yes",
+    "note": "It now reads 'itself AI-written from the material, reads as recurring' and 'with examples and no count'."
+   },
+   {
+    "where": "missed: 'cooperation no longer held good in itself'",
+    "fixed": "yes",
+    "note": "It now reads 'cooperation not held good in itself (15)', and zh 合作并不被视为本身就好."
+   },
+   {
+    "where": "missed: 'From 2024 the diagnosis finds a mechanism'",
+    "fixed": "yes",
+    "note": "It now reads 'gains compounding and a selection law', which is TIMELINE line 31's 'compounding in 2024, the selection law in 2024-07'."
+   },
+   {
+    "where": "missed: zh page links the English CROSSWALK.md",
+    "fixed": "partly",
+    "note": "The strands paragraph now takes CROSSWALK_PAGE_ZH. The zh section 早先各文件夹后来如何 still links the English page: lineage.py line 727 hard-codes 'theories/becoming/results/atlas/CROSSWALK.md' for folders_intro. The zh opening also links CROSSWALK.md, but it names that page as a source of generation, so that link is defensible. Fix: pick the page by lang at line 727."
+   }
+  ],
+  "read": "READ IN FULL: theories/LINEAGE.md lines 1-100: the opening, the arc, In brief, the labels, coverage, chosen, strands, the three threads and table rows 1-13. Table rows 14-17, 19-29, 33, 34, 39, 40 and 44-48, each with its evidence. The first round's read:lineage and check:lineage in reads/round-3-readers-1.json. The lineage.json diff aa385eae9..567ec54f0 (by grep of changed fields) and, by script, the new evidence entries for points 14, 15, 16, 29 and 39. The zh arc, coverage, chosen, strands and three thread intros from lineage.json. TIMELINE.md lines 1-12, 31, 53, 121-129, 147-149 and 315-343 ('The shape of the arc'). MAP.md lines 1-8. The crosswalk entry #cx-kpso-open-is-not-c in full. G0-WARRANT.md lines 1-14. 07-SIGNIFICANCE.md lines 776-780 and 233. BECOMING-TWENTIETH-REVIEW.md lines 30-40. hb-02.md lines 3424-3429, 5094-5098, 7188-7195 and 8195-8198. The Fork README line 116. The headers of JIAN_FOUNDATION_NOTE_v0.3 and v0.9. tools/research/lineage.py strand_counts and lines 676-735.\nSEARCHED OR MEASURED ONLY: timeline-raw.tsv, grep for the Jian notes (lines 506-511, 527-528). workflows/1-lineage-research.js, grep for 'Return N to M' (6-12, 8-14 x3, 4-7). workflows/2-lineage-finalize.js, BUDGET and line 50. 1-gathered-and-verified.json and 2-finalized.json, counts per stratum. strand_counts and threads computed by script (48/19/29/4/16). Id prefixes counted (9/10/10/9/7/3). CROSSWALK.md legend lines 13, 25 and 33. GLOSSARY.zh.md for 存活之意义. LINEAGE.zh.md for 读不到, 延续的文法 and the CROSSWALK links (lines 9, 43 and 225-227). theories/becoming/history/THE-THEORY-OF-BECOMING.md line 5, plus a grep for 'neither is asserted'. CRITIQUE-FINDINGS.md, grep for the map's provenance. Ran python3 -B -m unittest tools.research.tests.test_lineage: 13 tests OK. test_spine was not run. Nothing rendered, and no full suite was run, deliberately. No sources/12-*, 13-*, 18-* or friend-conversation file was opened.",
+  "verdicts": [
+   {
+    "where": "Finding 1: row 39's Evidence cell shows 07-SIGNIFICANCE.md line 778 twice",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed. In lineage.json, point 39 has two entries for theories/becoming/chapters/07-SIGNIFICANCE.md: one with locator '§8 Thesis T8, line 778' and one with '§8 Thesis T8 (line 778)'. lineage.py line 704 de-duplicates with dict.fromkeys over evidence_link, and the link text includes the locator, so both entries survive. The rendered row 39 and zh src-39 list the same #L778 link twice. That makes the labels paragraph's own sentence, 'a row shows each place once', false for this row. Low is the right severity."
+   },
+   {
+    "where": "Finding 2: row 39, the T8 gloss placed after 'order by C'",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed. At 07 line 778 the order is: '... (scope: the continuation condition) ... (order: C). *For life* says whose way it is, not whose losses count'. So the sentence glosses T8's 'For life', not C. Row 39 puts it in parentheses straight after 'order by C', which reads as a gloss on C. The words are verbatim, so this is a placement fault and low is right."
+   },
+   {
+    "where": "Finding 3: the arc leaves points 23 and 33 without their AI labels",
+    "agree": true,
+    "severity": "low",
+    "why": "Real. Row 23 says 'AI-drafted and, its notes say, not yet reviewed'. Point 33's evidence is BECOMING-TWENTIETH-REVIEW.md, headed 'An AI review, read-only'. The arc does label 34 ('an AI review'), the timeline and the map. The rows carry the labels, so a reader is not misled about any point's standing. Low."
+   },
+   {
+    "where": "Finding 4: the phase 'The turns of 2026' has the Fork left without its arrival",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed. The phase opens 'the Fork narrative is left', but the phase never summarises point 14 (the Fork named, the one rule). The arc does give 14. Points 17, 20 and 21 also go unsummarised. A brief need not cover every point, so low is right."
+   },
+   {
+    "where": "Finding 5: second thread intro, 'a Lean core without axioms'",
+    "agree": true,
+    "severity": "low",
+    "why": "Real and low. Row 28 quotes 08: 'An empty report shows that no logical axiom is used', and AGENTS.md says the pure core's reports cover 'logic only'. The intro drops that qualifier. Two things the reader did not weigh. The account itself used 'the theory without axiom' as a label (rename R26), so the phrase has a home. And the brief's phase line ('an axiom-free pure core') and row 28's title use the same unqualified wording, so fixing only the intro would leave the page inconsistent. The fix should cover all three, or the reader should accept the shared phrase."
+   },
+   {
+    "where": "Finding 6: row 29's G0-WARRANT locator 'opening paragraph (line 12)'",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed. In G0-WARRANT.md, line 7 is the opening paragraph ('The theory does not assume living significance: it follows under the continuation condition'). Line 10 is '## 1. Status', and line 12 is the paragraph carrying the quoted 'It is not assumed; it follows under the continuation condition'. The quote and the link are right; only the locator's wording is wrong."
+   },
+   {
+    "where": "Finding 7: row 16 rests its 'dated the same day' on timeline-raw.tsv, given no path",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed. _process/timeline-raw.tsv does not exist; the file is _process/history/2026-09-consolidation/timeline-raw.tsv, which dates v0.3 at line 506 and v0.9 at line 511, both 2026-05-01. The TSV also dates v0.5 to v0.8 on the same day, so the claim holds. A reader following the only path given (TIMELINE line 5) finds nothing. Low, at its upper edge. The zh locator also carries this English clause."
+   },
+   {
+    "where": "Finding 8: the phase 'The theory of becoming' names neither premise",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed in both languages: 'the ethics' scope and order premises are separated' and zh '伦理的范围前提与次序前提被分开'. AGENTS.md says 'Name both wherever the ethics is summarized'. The arc and the third thread do name them. Low."
+   },
+   {
+    "where": "The reader's prior verdicts marked 'yes' (arc 22, 504, 1–3, 25, 14, November, 'almost entirely', the way of seeing, 34; chosen; strands; the third thread; rows 15, 29, 39; zh terms)",
+    "agree": true,
+    "severity": "none",
+    "why": "Rechecked against the files and every one holds. strand_counts returns total 48, on_threads 19, on_none 29, cited 4 and folders_n 16, and the threads are [6,8,11,13,19,32,38], [2,16,18,28,35] and [15,17,29,33,39,40,47]. 1-gathered-and-verified.json holds 12/14/14/14 gathered points, and BUDGET is 9/10/10/9/7/3, matching the id prefixes (s26 10, becoming 10, nov 9, sel 7, pt 3, early 9). The quotes are verbatim: TIMELINE lines 147, 321, 325 and 335; MAP line 3; hb-02 lines 3428, 5097, 7190 and 7194; 07 line 778; G0-WARRANT line 12. Rename R24 dates G0 to 'living significance' on 2026-10-17. COVERAGE.md line 9 (multi-agent reading passes on 09-03) supports 'itself AI-written'. The 'partly' on zh folders_intro also holds: lineage.py line 727 hard-codes CROSSWALK.md for both languages, although CROSSWALK.zh.md exists. The page's phase counts and its 15/13/19/1 hold. test_lineage ran 13 tests, OK."
+   }
+  ],
+  "missed": [
+   {
+    "where": "theories/LINEAGE.md, row 15 and thread bullet 15 (points[s26-04-fork-retired].what.en; zh likewise)",
+    "text": "The two-outcome narrative is left: \"I think I have moved on from the fork narrative, it becomes simpler\", after a correction of 2026-03-18 that the Fork was never put \"in a way that was neo-feudalism vs automated commons\"",
+    "severity": "low",
+    "why": "hb-02 line 5097: 'for the Fork we worked on, I never put it in a way that was neo-feudalism vs automated commons, the actual possibility space that we can pursuit is huge'. The fix put this in the row, but the row still opens by calling the Fork a 'two-outcome narrative', which is what the quotation it cites denies. The first-round checker named this pull, and the fix kept it. TIMELINE line 335 ('the 2026 two-scenario Fork') and the scenario row 14 cites give the framing some ground. So the row contradicts itself rather than stating something false.",
+    "fix": "'The Fork narrative is left: \"I think I have moved on from the fork narrative, ...\"'. Drop 'two-outcome', or write 'The narrative built on a two-scenario projection is left'."
+   },
+   {
+    "where": "theories/LINEAGE.md, the arc (words.en.arc; zh 二者都只陈述、不断言（33）likewise)",
+    "text": "the ethics' two premises are separated, the continuation condition for scope and C (widening what can form is better) for order, each stated and neither asserted (33)",
+    "severity": "low",
+    "why": "Point 33's evidence is the twentieth review, finding 3: 'a scope premise (the continuation condition, ...) and an order premise (C: widening is better)'. It says nothing about either premise's assertion. 'Neither asserted' is the account's present standing (AGENTS.md: 'Two unasserted premises'; 07: 'Neither premise is asserted'). Cited as (33), it dates that standing to 20 October.",
+    "fix": "'the ethics' two premises are separated (33): the continuation condition for scope and C (widening what can form is better) for order, each, as the account now has them, stated and neither asserted'."
+   },
+   {
+    "where": "theories/LINEAGE.md, third thread's intro (threads[2].intro.en)",
+    "text": "the way offered for life, which says whose way it is, not whose losses count (39)",
+    "severity": "low",
+    "why": "07 line 778: '*For life* says whose way it is, not whose losses count'. It is the phrase 'for life' that says this, but the English relative clause makes 'the way' the subject. The zh intro has it right (*对生命而言*说的是这是谁的道).",
+    "fix": "'the way offered for life, where *for life* says whose way it is, not whose losses count (39)'."
+   },
+   {
+    "where": "theories/LINEAGE.md, the arc (words.en.arc; zh 检验在任何运行之前冻结（45）likewise)",
+    "text": "In the first week of November tests are frozen before any run (45)",
+    "severity": "low",
+    "why": "Row 45 is narrower. Its title is 'Tests of formations that read frozen before any run', and the board's words it quotes are 'every test's first stage is frozen before any run'. What stayed a design was frozen on 5 November, and Stage A ran on 6 November. Unqualified, 'tests are frozen' is wider than the row.",
+    "fix": "'the tests of formations that read are frozen before any run (45)'."
+   }
+  ]
+ },
+ {
+  "key": "pictures",
+  "findings": [
+   {
+    "where": "tools/research/connection_map.py, sidepick onclick (line 711 of the generator); atlas/map.html at width 760 or less",
+    "text": "if(!(location.hash||'').slice(1).split('/')[1])route();else draw();",
+    "severity": "medium",
+    "why": "Measured in headless Chrome at 500 px. After '#loom/cxg-drives-narrative-attractors-and-mind', tapping Domains gives svg.focused true, 234 threads, 0 '.on', and the detail panel still shows the folder. After '#loom/cxg-other-indian', tapping Earlier folders gives 458 threads and 0 '.on'. The focus is a group on the hidden side, so every drawn thread sits at opacity .07. The loomnote promises 'while a folder or a domain is lit, its proposed threads stay paler ... and the threads of the others are dimmed'. Here nothing visible is lit. Above 760 px both cases keep their lit threads (31 and 18).",
+    "fix": "In the onclick: const a=(location.hash||'').slice(1).split('/')[1]; if(!a) route(); else if(G.has(a)&&G.get(a).side!==S.side) location.hash='#loom'; else draw(); (route()'s own btn.click() for a deep link sees the group on the new side and only draws)."
+   },
+   {
+    "where": "tools/research/lineage.py lanes_of (group when 'xs[i] - xs[groups[-1][-1]] < 4') and leaders_through_marks ('abs(qx - x) < 4'); theories/lineage.svg and lineage.zh.svg",
+    "text": "Points within 4 of one another form a group, and a titled point is placed after the rest of its group, above all of them, so its leader rises through no other point's mark",
+    "severity": "low",
+    "why": "Marks are r=7 circles (diamonds and squares reach 8), plus stroke. Measured on the committed SVGs: the blue leader of '6 · One value as power' (x=180.9, from 533 up to 289) passes through point 7's black circle at (185.0, 525), dx 4.1. The leader of '19 · Moloch in the mind' (x=406.2) passes through point 20's circle at (412.9, 525), dx 6.7. Both are visible in the raster, in en and zh. test_no_leader_crosses_a_title_in_the_live_picture asserts leaders_through_marks(...) == [] and passes, because the test uses the same 4 px.",
+    "fix": "Use the mark's reach, e.g. MARK = 9, in both places: group when xs[i] - xs[last] < MARK, and flag when abs(qx - x) < MARK. Add a fixture point 5 px from a titled one to the test."
+   },
+   {
+    "where": "tools/research/tests/test_spine.py Tables.test_a_basis_is_cut_after_its_first_sentence_and_keeps_its_standing",
+    "text": "self.assertEqual(rows[1][2], 'A case at 3.5 steps.')  # a decimal point is not a sentence's end",
+    "severity": "low",
+    "why": "Neither 'Steps.along' nor '3.5' has whitespace after the dot, so the old split re.split(r'(?<=[.])\\s', ...) gives the same first sentence for both. Measured: old and new regexes agree on both test strings. The changed part, the lookahead (?=[A-Z«`]) that keeps 'e.g. the run.' whole (old: 'A case, e.g.'), is not exercised. The comment claims a case the change did not need.",
+    "fix": "Add a basis such as 'A case, e.g. the run, of «L». Then more.' and assert 'A case, e.g. the run, of «L».'"
+   },
+   {
+    "where": "tools/research/atlas.py (Chinese crosswalk page, the counts paragraph near line 938); theories/becoming/results/atlas/CROSSWALK.zh.md",
+    "text": "1,183 条主张……按关系：相合 338（……），定域 371，相分 325，反读 25。只有一个目标所承载的才算作连接。",
+    "severity": "low",
+    "why": "The English page now accounts for the gap: 'The relations sum to 1,059: the other 124 entries have none (105 not-carried, 19 history-only).' The Chinese edition, which says it follows the English, gives the same four relation counts after '1,183 条主张' with no word on the 124 that have none.",
+    "fix": "Append a zh rendering of _no_relation's sentence, e.g. '各关系相加为 1,059：其余 124 条没有关系（未承继 105，仅存于历史 19）。'"
+   },
+   {
+    "where": "tools/research/atlas.py _no_relation; CROSSWALK.md:17",
+    "text": "3 entries only in history or not carried have one, which [the connection map](map.html) leaves out of its relations: it draws what stayed behind as a short end, not a thread.",
+    "severity": "low",
+    "why": "The map leaves these 3 out of its threads and tags only. Its group panel ('g.by_relation.agreement') and its 'How it was read' table print by_relation, and atlas.py builds that from every entry of the group: 'by_relation': {r['en']: sum(e['relation'] == r['en'] for e in held) ...} over held = all entries. So the map does count them among a group's relations.",
+    "fix": "'... have one, which the connection map draws as a short end, not a thread.'"
+   },
+   {
+    "where": "tools/research/spine.py WORDS en 'formal' and section(); spine.svg legend, THEORY-GRAPH.md 'What it shows'",
+    "text": "the registry checks that an interface has its fields and cites a reviewed source (797 of all 1,162 such edges, each a Lean file)",
+    "severity": "low",
+    "why": "'each a Lean file' attaches to 'edges', so it reads as if each edge were a Lean file. What is meant is that each of the 797 interfaces cites a Lean file (the zh says '所引的都是 Lean 文件').",
+    "fix": "'(on 797 of all 1,162 such edges; each cites a Lean file)'."
+   }
+  ],
+  "prior": [
+   {
+    "where": "spine.py circular_paragraph; THEORY-GRAPH.md:65 and .zh",
+    "fixed": "yes",
+    "note": "Retitled 'Do the recorded uses form a cycle?' and now says the registry refuses a closing record, 'so this is a condition of entry, not a finding about the results', in both languages. The new test asserts the phrase."
+   },
+   {
+    "where": "spine.py WORDS 'formal', section(), zh_page(), circular_paragraph(); spine.svg, spine.zh.svg",
+    "fixed": "yes",
+    "note": "It now says the registry checks fields and a reviewed source, and that nothing checks that the Lean uses the cited result. 'such edges' supplies the noun. One wording nit remains ('each a Lean file'), reported below as low."
+   },
+   {
+    "where": "atlas.py crosswalk_page; CROSSWALK.md",
+    "fixed": "partly",
+    "note": "CROSSWALK.md now has 'The relations sum to 1,059: the other 124 entries have none (105 not-carried, 19 history-only)', and that matches the data. The Chinese edition's counts paragraph does not account for the 124, and the added clause about the map is imprecise. Both are reported below."
+   },
+   {
+    "where": "connection_map.py route() and sidepick",
+    "fixed": "partly",
+    "note": "Measured in headless Chrome at 500 px. Default, then Domains, now lights the top domain (35 on), and #loom/all and back to #loom work. With a focus in the hash, switching side still empties the loom: '#loom/<folder>' then Domains gives on=0, and '#loom/<domain>' then Folders gives on=0. Reported below."
+   },
+   {
+    "where": "spine.py shared_laws_rows / check()",
+    "fixed": "partly",
+    "note": "Probed check() against a mocked 08. It now errors when Balance's 'not derived' is dropped, when the header is renamed (the message misnames the cause, but it fails), when a row count no longer matches the sentence, and when a new law has no zh name. Still unchecked: the literal 'eleven' in 'The eleven derived' and 'only the eleven above' against len(derived_rows()), and laws_zh's statements against the home."
+   },
+   {
+    "where": "spine.py shared_laws_section ('add to 120 over the 126')",
+    "fixed": "yes",
+    "note": "It now reads 'These counts add to 120, more than the 87 rows that rest on at least one, because a row can rest on several', and 87 is parsed from the caption check() holds against 08."
+   },
+   {
+    "where": "lineage.py leaders over lanes (point 27 through 28)",
+    "fixed": "partly",
+    "note": "Point 27 now stands above 28 at x=588.4. Leaders 6 and 19 still rise through the marks of points 7 and 20 (dx 4.1 and 6.7, marks r=7), because lanes_of groups only within 4 px and leaders_through_marks tests only within 4. Reported below."
+   },
+   {
+    "where": "connection_map.py intro() on the default view",
+    "fixed": "yes",
+    "note": "intro(lit) adds 'Lit now: <title>, the folder|domain with the most readings.'"
+   },
+   {
+    "where": "spine.py svg, standing bar contrast",
+    "fixed": "yes",
+    "note": "Every bar rect now has stroke #57534e at 0.5. Seen rastered: the 99 segment is outlined."
+   },
+   {
+    "where": "spine.py derived_rows split",
+    "fixed": "yes",
+    "note": "It now splits only before a capital, « or a backtick, so 'e.g. the' no longer cuts the sentence. The test does not exercise this (reported below)."
+   },
+   {
+    "where": "tests (test_spine, test_lineage, test_connection_map)",
+    "fixed": "partly",
+    "note": "Class Tables adds tests for shared_laws_rows, reaching_the_grammar, formal_cycles with the circular sentence, derived_rows and edge_bases. lineage adds lanes_of and strand_counts. Nothing tests check()'s new conditions, the map's route() or side picker, or atlas._no_relation (grep). Run: test_spine plus test_lineage, 34 OK."
+   },
+   {
+    "where": "data/lineage.json per-point `thread` flag",
+    "fixed": "yes",
+    "note": "0 of 48 points carry `thread`. Only the `threads` list remains."
+   },
+   {
+    "where": "(missed) spine.py lead(), zh_page(), map viewRoot: 'each with its standing and basis'",
+    "fixed": "yes",
+    "note": "It now says 42 have a basis in words in the JSON (boundary.standings), the other 75 have the rule's label, and 24 of the 99 have a basis. Measured: edge_bases() returns (42, 24), and map.html has bases {with:42, distance:24} and declarations 117."
+   },
+   {
+    "where": "(missed) map viewRoot 'sorting the declarations by whether and how each is stated on the grammar'",
+    "fixed": "yes",
+    "note": "It now says 'whether each declaration's compiled type or value reaches the grammar and, where it does not, where the declaration is stated'. That matches D.reach (45/16/6/50)."
+   },
+   {
+    "where": "(missed) derived table column 'In the record's words'",
+    "fixed": "yes",
+    "note": "The column is now headed 'First sentence of the record's basis' in en and '记录依据的第一句（英文原文）' in zh. For coming_of_ceasing, ' … Its statement still reads …' is appended, so its standing caveat is kept."
+   },
+   {
+    "where": "(missed) bar drawn 2 px short",
+    "fixed": "yes",
+    "note": "Measured: widths 78.6 / 7.1 / 42.9 / 707.4, which is 836·n/117 for 11/1/6/99, identical in spine.zh.svg (only y differs, 165 vs 166). Segments are separated by the 0.5 hairline, not by a gap."
+   }
+  ],
+  "read": "Read in full: round-3-readers-1.json under read:pictures and check:pictures; the code diff aa385eae9..567ec54f0 for atlas.py, connection_map.py, lineage.py, spine.py, theory_graph.py, test_lineage.py and test_spine.py; test_lineage.py at 567ec54f0; spine.py check() (lines 150-200) and shared_laws_rows at 567ec54f0; connection_map.py lines 590-600, 700-735 and 795-815 at 567ec54f0; 08-METHOD §7's table and paragraph; the opening of CROSSWALK.md (lines 5-22) and of CROSSWALK.zh.md.\n\nMeasured or viewed:\n- spine.svg and spine.zh.svg: the bar rects (widths are 836·n/117 with a hairline) and the legend text. spine.svg was viewed as a raster.\n- lineage.svg and lineage.zh.svg: viewed as rasters; every leader was measured against every mark; the title positions against the phase names; the titled numbers against the data order.\n- spine.derived_rows(), edge_bases(), shared_laws_rows() and reaching_the_grammar() run on live data.\n- spine.check() run against seven mocked changes to 08.\n- The old and new derived_rows regexes compared on the test strings.\n- map.html at 567ec54f0 probed in headless Chrome at 500 px and 1300 px through 12 routing steps.\n- map.html's data: declarations, bases and reach.\n- lineage.json: per-point thread flags.\n\nOnly searched: THEORY-GRAPH.md and .zh headings and key lines; atlas.py group by_relation (lines 540-556) and the zh counts; the records' JSON keys for authorship; ONE-PAGE and 08 for 'by AI'; tests for the new helpers by name.\n\nRan python3 -B -m unittest tools.research.tests.test_spine tools.research.tests.test_lineage: 34 OK. No render was run, nothing in the repository was edited, and the full suite was not run. The worktree has uncommitted edits to spine.py (the deferred how_to_read caption only), so the review is of 567ec54f0 via git show and git archive.",
+  "verdicts": [
+   {
+    "where": "tools/research/connection_map.py sidepick onclick; atlas/map.html at width 760 or less",
+    "agree": true,
+    "severity": "medium",
+    "why": "Real, confirmed from the code; I did not rerun it in a page. With a group in the hash, the onclick only calls draw(). At 760 px or less the CSS hides the other side (.loom.side-domains .left{display:none}), so pos() returns null for that group's node (no offsetParent) and none of its threads are drawn. applyFocus(S.focus) still sets svg.focused, and no drawn .t has data-g equal to the focus, so every thread sits at .07 and the detail panel still shows the hidden group. It is the remainder of the first round's medium finding, not something the fix introduced. A phone reader who opens a shared group link and taps the other side sees an empty loom. The reader's fix is sound: inside the onclick S.side is set first, so route()'s own btn.click() for a deep link finds the group on the new side and only draws."
+   },
+   {
+    "where": "tools/research/lineage.py lanes_of / leaders_through_marks; theories/lineage.svg and lineage.zh.svg",
+    "agree": true,
+    "severity": "low",
+    "why": "Real, measured with my own parse of both SVGs. Two leaders still cross marks: x=180.9 through the circle at (185.0, 525) with dx 4.1, and x=406.2 through (412.9, 525) with dx 6.7. In zh the same pairs cross at y 481. Marks are r=7 circles or 14 px squares. The 4 px threshold sits under the mark's radius in both the grouping and the check, so the live-picture test passes by construction. lanes_of's docstring says 'its leader rises through no other point's mark', which the picture does not keep. That is down from 7 of 15 in the first round, and the numbered title still identifies the point, so low is right. MARK of about 9 in both places is the right fix."
+   },
+   {
+    "where": "tools/research/tests/test_spine.py Tables.test_a_basis_is_cut_after_its_first_sentence_and_keeps_its_standing",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed by running both regexes. On 'A case of «L» at x, through Steps.along. ...' and 'A case at 3.5 steps. Then more.' the old and new splits agree. Only 'A case, e.g. the run, of «L». Then more.' separates them (old: 'A case, e.g.'). The test does cover the new ' … Its statement still reads' append, but the decimal comment names a case the old code already handled. On the live 11 bases the two regexes give the same first sentence."
+   },
+   {
+    "where": "tools/research/atlas.py Chinese crosswalk counts; CROSSWALK.zh.md",
+    "agree": true,
+    "severity": "low",
+    "why": "Real. CROSSWALK.zh.md contains neither 1,059 nor 124. Its counts paragraph gives the six carried counts, which sum to 1,183, and then the four relation counts, which sum to 1,059, with nothing for the gap. The English page now explains it. Unlike the first round's English line, the zh does not say all 1,183 are 'summed' just above, so low rather than medium is defensible."
+   },
+   {
+    "where": "tools/research/atlas.py _no_relation; CROSSWALK.md:17",
+    "agree": true,
+    "severity": "low",
+    "why": "Real. atlas.py:553 builds each group's by_relation over every entry. connection_map passes it through unchanged (line 201), and the group panel (g.by_relation.agreement) and the 'How it was read' table (line 799) print it. The 3 entries are cxg-buddhist history-only scope, and cxg-greek-roman history-only agreement and contrary-reading, so they do appear among those groups' relations. Only the map's totals.relation (line 215) and its threads leave them out. The map's own text (line 496) already says they 'carry a relation, which the crosswalk's table counts'. The reader's narrower wording is right."
+   },
+   {
+    "where": "tools/research/spine.py WORDS en 'formal' and section(); spine.svg legend, THEORY-GRAPH.md",
+    "agree": true,
+    "severity": "low",
+    "why": "Real wording nit. In the rendered legend '(797 of all 1,162 such edges, each a Lean file)' makes 'each' attach to edges. The zh '所引的都是 Lean 文件' says what is meant. No false belief about the counts results."
+   },
+   {
+    "where": "prior verdicts: circular_paragraph, formal wording, 120/87 sentence, intro 'Lit now', bar stroke, derived split, data `thread` flag, the three missed items",
+    "agree": true,
+    "severity": "none",
+    "why": "Checked. THEORY-GRAPH.md:65 has the new heading and the condition-of-entry sentence. Lines 57-63 match 08 §7 exactly (42/42, 54/16, 14/14, 2/1, 8/1; 'all 42 on closure ... 16 of 54 on balance, 1 of 8 on widening, 1 of 2 on lumping'), and 87 is quoted. The bar rects are 78.6/7.1/42.9/707.4 in both SVGs with stroke #57534e 0.5. edge_bases is (42, 24) by the JSON's standings (11 derived, 1 hypothesis, 6 counting; 18 amounts, 3 free significance, 2 at its model, 1 balance-in-statement). The coming_of_ceasing row keeps its standing caveat. render() returns the check errors before drawing, so a changed 08 table or sentence fails the render. THEORY-GRAPH.md is written earlier, by theory_graph, but research.py collects spine's errors in the same run. test_spine plus test_lineage: 34 OK."
+   },
+   {
+    "where": "prior 'tests' verdict (partly)",
+    "agree": true,
+    "severity": "none",
+    "why": "Grep confirms that no test references spine.check's three new conditions, atlas._no_relation, or the map's route/sidepick. test_a_titled_point_stands_above_others_at_its_date is meaningful (same-date fixture: the old order put the titled point below), but it never probes the 4 px boundary."
+   },
+   {
+    "where": "prior 'lineage titles' (implicit: numbers and overlaps)",
+    "agree": true,
+    "severity": "none",
+    "why": "Measured. All 15 titles' numbers match their points' `short` in spec order, in en and zh. The top title row is y=240 against the lowest phase name at 206 (en) and 170 (zh). No two titles in a row overlap by label_width."
+   }
+  ],
+  "missed": [
+   {
+    "where": "tools/research/connection_map.py route(), OPEN chosen by S.side; atlas/map.html above 760 px",
+    "text": "const OPEN=D.groups.filter(g=>g.side===S.side).sort((x,y)=>y.n-x.n)[0]",
+    "severity": "low",
+    "why": "At wide widths the side picker is hidden, but a domain deep link still clicks the hidden Domains button (route line 808), so S.side stays 'domains'. A later return to #loom (back button, or the 'Show all' chip then back) lights the top domain, not the folder, with 'Lit now: <domain>, the domain with the most readings'. That is true but depends on history the reader cannot see. The loomnote's 'It opens with the folder or domain with the most readings lit' covers it loosely. Nothing false.",
+    "fix": "Choose OPEN by S.side only when window.innerWidth<=760, else by 'folders'; or leave it and accept the loomnote's 'or'."
+   },
+   {
+    "where": "tools/research/spine.py lead() and zh_page(): '117 - with_basis'; reaching_the_grammar searches all of 08",
+    "text": "and the other {117 - with_basis} the label a rule gives",
+    "severity": "low",
+    "why": "The new sentences hard-code 117 beside a computed 42. If the edge record gains or loses a declaration, 'the other 75' goes stale while check() still passes, because it holds the standing line's numbers from spine.json, not this subtraction. reaching_the_grammar also matches its phrase anywhere in 08, not only in §7.",
+    "fix": "Take the total from the edge record's standings count or the boundary counts already read in lead(), and restrict the search to the §7 paragraph under the laws table."
+   }
+  ]
+ }
+]
