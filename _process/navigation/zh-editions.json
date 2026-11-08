@@ -3,9 +3,9 @@
  "editions": {
   "GLOSSARY.zh.md": {
    "revised": "2026-11-09",
-   "english": "8dd126b539060094b92322f5396eae7b9d9446cb5400eb8b738359df2ad3610a",
-   "chinese": "de7a6ca30ef4bbf3f09d3a4302ef142f9228f7e5661656063fa4299667fa6d3f",
-   "english_commit": "c3813369e"
+   "english": "86b2f1f76c5baa34670ca506196aced81618b0b21a344ed9443634433cade80c",
+   "chinese": "7e009cdef12343d3d3ed7f7b05127eeb80efc621028083fa2e7ef8c3225c21f9",
+   "english_commit": "94a8ebb1f"
   },
   "_process/navigation/README-ZH.md": {
    "revised": "2026-11-09",
@@ -15,34 +15,33 @@
   },
   "theories/becoming/ONE-PAGE.zh.md": {
    "revised": "2026-11-09",
-   "english": "7e7b42450e8c8eea0e52a2bbf04d7517afd095daad4e6b1ecb2ab4b634264e04",
-   "chinese": "47331cdc510f69478c1efce70b56089164f04402ba8834a94d45ce8f599d01e3",
-   "english_commit": "75f077470"
+   "english": "ed27819d6f399f3281598fb8ff1c90872d5d6842a3f60db51bb95aec040fea05",
+   "chinese": "ac42cb0788bfb3d75c1b2719295479f9965204d8ee9010cfcbe165941b5c3ad6",
+   "english_commit": "94a8ebb1f"
   },
   "theories/becoming/THE-THEORY-OF-BECOMING.zh.md": {
    "revised": "2026-11-09",
-   "english": "5c9e92be759ab216ecfb3c9249e2671dc1224757b24349c36bdea7dda6f28410",
-   "chinese": "2a1508125b4241e8cdda82c8baa7b6caf27eaf4847fe91fb2a39f872d13fc867",
-   "english_commit": "c3813369e"
+   "english": "383a9c356a88b8669fba90a0816b4c8482ea3e58df8dbf669bd49a9e3f2fb169",
+   "chinese": "8e5aa2900b0bb9b40ba5b24580be8175370df436f96bf4cca91d3208a8f7f705",
+   "english_commit": "94a8ebb1f"
   },
   "theories/becoming/USES-EXAMPLES.zh.md": {
    "revised": "2026-11-09",
-   "english": "eea40bcf8944ae599b0b34dff037e32f2569b0d1e92e8f226013659141f975c3",
-   "chinese": "12e93c106c9f8ff5f7d976cdc09374d2eabe972b94ce4b4fcfbf2957379ae8e7",
-   "english_commit": "acc352294"
+   "english": "c1f4a2d10bff6b78cc0ca682095c01f7813528db624529a7932b54bd0685eae8",
+   "chinese": "0436b03b766707ba281364c50a2968fd7dfe9af3e8cb25ada2058571b3a5a24d",
+   "english_commit": "d1eb852b6"
   },
   "theories/becoming/USES.zh.md": {
    "revised": "2026-11-09",
-   "english": "c060874f61f0dac5b131fda9605fbbda8e1cbce8340431e229008bb41c822dea",
-   "chinese": "61f85c0d1590d80c4072dc1405fbbbcad56a6433b47bd341fb410f22d8d66f39",
-   "english_commit": "07e92bc35"
+   "english": "04d1f134fa3c8e52aa77993080a2b1576008f71c719be06b5b9083516aa608f3",
+   "chinese": "b98a69dbc350839562981a3610c989cff79281122fa85714f4e5defaca1c3a7a",
+   "english_commit": "e32490365"
   },
   "theories/becoming/review/README.zh.md": {
    "revised": "2026-11-09",
-   "english": "da81b4de2129ead2c587039022138f6050fa8a0d82d70418af04837f60ff0200",
-   "chinese": "7b4028fe5504fd2853959a2ffc910a3baf4ce8abcf0ef6c6fb80594a291907ef",
-   "english_commit": "acc352294",
-   "unchanged": "the English changed only the one page's reading time; the Chinese cover gives the Chinese one page's own time, 18 to 23 minutes, which is unchanged"
+   "english": "0dbf9e7e496dfb9296150a8ca93e28d03ac1ebd32f572b495afd0eb07fd95217",
+   "chinese": "78e2bb64d323cf17b012be6cf60be07b22d107023c7bc553fbdfdd7f28076ce7",
+   "english_commit": "d1eb852b6"
   }
  }
 }
