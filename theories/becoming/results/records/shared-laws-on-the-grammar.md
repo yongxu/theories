@@ -86,7 +86,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Lean 4.29.1 core receipt 20261101T161537.177111Z: GrammarLaws, 223 theorems in 252 declarations; 40 representation and bridge declarations in 14 models; derivations in 14 more (OU3c, OU3e, OU3f) and in Mechanism, Response, SelectionPool, Locality, Decidedness and Identity (HE, HE2, U4d); axiom reports empty, all cited. Statements unchanged but, per the history, laws taken to any universe, renames, one law widened, an instance dropped from eight laws, two hypotheses dropped from the census of a run. Read-only AI reviews of each item, all findings taken, five reviewed twice; no person's review.
+Lean 4.29.1 core receipt 20261101T161537.177111Z: GrammarLaws, 223 theorems in 252 declarations; 40 representation and bridge declarations in 14 models; derivations in 14 more (OU3c, OU3e, OU3f) and in Mechanism, Response, SelectionPool, Locality, Decidedness and Identity (HE, HE2, U4d); axiom reports empty, all cited. Statements unchanged but, per the history, laws taken to any universe, renames, one law widened, an instance dropped from eight laws, two hypotheses dropped from the census of a run. Read-only AI reviews of each item, all findings taken, five twice; no person's review recorded.
 
 Canonical source: [GrammarLaws.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean)
 

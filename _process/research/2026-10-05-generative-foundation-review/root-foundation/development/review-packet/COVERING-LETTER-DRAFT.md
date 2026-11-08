@@ -1,6 +1,6 @@
 # The covering letter: a draft
 
-*An AI draft, 2 November 2026, brought on 3 November to the terms decided that day: Ren decided that the work has no licence, by choice, as [COMMONS.md](../../../../../../COMMONS.md) now says, and left the packet's other decisions to the work, which took [the board's recommendations](../../../../../BECOMING-WORKBOARD.md#decisions-pending-ren). Nothing has been sent, and no sentence here is his. About twenty minutes to read; the letter to a reader alone, five to six. An independent AI reader read it and its findings were taken after checking; no person has reviewed it. [Square brackets] are his to fill: his name and an address he reads, the date, his own sentences, and anything on payment, which stays his. The [Chinese edition](COVERING-LETTER-DRAFT.zh.md) holds the same text.*
+*An AI draft, 2 November 2026, brought on 3 November to the terms decided that day: Ren decided that the work has no licence, by choice, as [COMMONS.md](../../../../../../COMMONS.md) now says, and left the packet's other decisions to the work, which took [the board's recommendations](../../../../../BECOMING-WORKBOARD.md#decisions-pending-ren). Nothing has been sent, and no sentence here is his. About twenty minutes to read; the letter to a reader alone, five to six. An independent AI reader read it and its findings were taken after checking; no person's review of it is recorded. [Square brackets] are his to fill: his name and an address he reads, the date, his own sentences, and anything on payment, which stays his. The [Chinese edition](COVERING-LETTER-DRAFT.zh.md) holds the same text.*
 
 The packet tells its readers that a covering letter says who sends it, why, by when a reply would help, on what terms a reply is kept, and how to reach the repository. There was no such letter. [What each promise asks](#what-the-letter-has-to-carry) is listed at the end.
 
@@ -58,7 +58,7 @@ There are two forms. A reader of a dossier gets [the first](#to-a-reader). A cod
 >
 > I am [name, and one line on who you are]. [Why this person: which texts they read.]
 >
-> A theory made with AI has cut eleven classical texts into 4,116 sentence units, and AI put every unit into one of eight classes. No person has checked that. I am asking you to classify 237 sampled units on your own, so that we can measure how far a person and the AI agree. 146 of the 237 are from Buddhist texts. Your classes need not match the AI's.
+> A theory made with AI has cut eleven classical texts into 4,116 sentence units, and AI put every unit into one of eight classes. No person's check of that is recorded. I am asking you to classify 237 sampled units on your own, so that we can measure how far a person and the AI agree. 146 of the 237 are from Buddhist texts. Your classes need not match the AI's.
 >
 > Attached, and all you need: the codebook, and the sheet as a spreadsheet and as plain text. The codebook estimates five to eight hours in all, and no one has tried that estimate yet, so please time twenty units spread through the sheet and tell me first if that points far over. It can be done over several sittings. [Whether the time is paid, how much and how.]
 >

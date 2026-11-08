@@ -15,15 +15,21 @@ navigation line a generated page carries is dropped, the site having its own; `s
 pages at build, where a frozen copy binds the source or the words are true only off the site, or adds a link only the site
 serves. With `site.map`, the
 connection map is written by its generator's site mode (tools/research/connection_map.py), its links to pages of the site
-kept there. Beside the pages the build writes search.json, read by a small script of its own (no external script), a
-404.html for a project site at /<repo>/ (`site.site_root` for another root), and a favicon. Nothing written may print a
-local path. Nothing generated is committed: the site is written to tmp/site/ (untracked) or --out, and the Pages job builds
-it from main.
+kept there. Beside the pages the build writes search.json (each page's title, headings and lead, each result's name and
+lead, a former id's page ranked last), read by a small script of its own (no external script), a 404.html for a project
+site at /<repo>/ (`site.site_root` for another root), and a favicon. A page in Chinese names the work, describes it and
+labels the site's own markup in Chinese (`site.title_zh`, `site.description_zh`); the language link stands outside the
+navigation line, so that no width hides it. Where GitHub may not have the build commit (it is not on origin/main as the
+clone last fetched it, and the build is not GitHub's own run of it), each page's footer says that links to GitHub at it may
+not resolve. Nothing written may print a local path. Nothing generated is committed: the site is written to tmp/site/
+(untracked) or --out, and the Pages job builds it from main.
 
 Run from the repository's root:  python3 tools/publishing/build_site.py [--out DIR] [--commit SHA]
 """
 import argparse
+from collections import Counter
 import html
+from itertools import islice
 import json
 import os
 import pathlib
@@ -63,6 +69,11 @@ FAVICON = ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect wi
            '<path d="M16 27V13M16 17c0-5 4-8 9-8 0 5-4 8-9 8zM16 21c0-4-3-7-8-7 0 4 3 7 8 7z" fill="#fbfaf7" stroke="#fbfaf7" '
            'stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg>\n')
 RESULT_ANCHOR = re.compile(r'<a\b[^<>]*\b(?:id|name)="(r-[^"]+)"[^<>]*></a>')
+# What the site's own markup says to a reader (labels read aloud, titles shown on hover), in the page's language.
+SAY_EN = {'here': 'Link to this section', 'back': 'Back', 'nolink': 'Not in the public repository',
+          'picture': 'Open the picture at full size', 'pages': 'Pages', 'search': 'Search', 'contents': 'Contents', 'chapters': 'Chapters'}
+SAY_ZH = {'here': '本节的链接', 'back': '返回', 'nolink': '不在公开的仓库中', 'picture': '打开原尺寸的图',
+          'pages': '页面', 'search': '搜索', 'contents': '目录', 'chapters': '章节'}
 
 
 class SiteError(Exception):
@@ -217,11 +228,12 @@ class Page:
         self.toc = []  # (level, id, plain text) of each heading
         self.anchors, self.marked = set(), set()  # result anchors seen, and those given their record's mark
         text = strip_comments(text)
+        self.lang = 'zh' if path.endswith('.zh.md') or cjk_share(text) > 0.3 else 'en'  # before the blocks: their labels follow it
+        self.say = SAY_ZH if self.lang == 'zh' else SAY_EN
         lines = text.split('\n')
         lines = self._definitions(lines)
         self.html = self._blocks(lines) + self._footnote_list()
         self.title = self.title or self.first_heading
-        self.lang = 'zh' if path.endswith('.zh.md') or cjk_share(text) > 0.3 else 'en'
 
     # -- definitions: link references and footnotes, collected before the blocks
     def _definitions(self, lines):
@@ -266,7 +278,7 @@ class Page:
         if self.first_heading is None:
             self.first_heading = plain_title(text)
         self.toc.append((level, ident, plain_title(text)))
-        return f'<h{level} id="{html.escape(ident)}">{self.inline(text)}<a class="here" href="#{html.escape(ident)}" aria-label="Link to this section">#</a></h{level}>'
+        return f'<h{level} id="{html.escape(ident)}">{self.inline(text)}<a class="here" href="#{html.escape(ident)}" aria-label="{self.say["here"]}">#</a></h{level}>'
 
     def _record_mark(self, ident):
         rid = ident[2:]
@@ -458,7 +470,7 @@ class Page:
         for name in order:
             body = self.footnotes[name]
             ident = self._id(f'fn-{slug_id(name)}')
-            items.append(f'<li id="{ident}">{self.inline(body)} <a class="back" href="#fnref-{slug_id(name)}" aria-label="Back">↩</a></li>')
+            items.append(f'<li id="{ident}">{self.inline(body)} <a class="back" href="#fnref-{slug_id(name)}" aria-label="{self.say["back"]}">↩</a></li>')
         return '\n<section class="footnotes"><ol>' + ''.join(items) + '</ol></section>'
 
     # -- inline
@@ -503,7 +515,7 @@ class Page:
     def _a(self, href, text_html):
         new = self.links.resolve(href, self.path)
         if new is None:
-            return f'<span class="nolink" title="Not in the public repository">{text_html}</span>'
+            return f'<span class="nolink" title="{self.say["nolink"]}">{text_html}</span>'
         ext = ' rel="noopener"' if new.startswith('http') else ''
         return f'<a href="{html.escape(new)}"{ext}>{text_html}</a>'
 
@@ -515,7 +527,7 @@ class Page:
             new = new.replace('/blob/', '/raw/', 1)
         img = f'<img src="{html.escape(new)}" alt="{html.escape(alt)}" loading="lazy">'
         if src.split('#')[0].lower().endswith('.svg'):  # a picture opens at full size, and is shown wider than the text
-            return f'<a class="picture" href="{html.escape(new)}" title="Open the picture at full size">{img}</a>'
+            return f'<a class="picture" href="{html.escape(new)}" title="{self.say["picture"]}">{img}</a>'
         return img
 
     def _fnref(self, name):
@@ -776,30 +788,58 @@ def root_prefix(page_path):
     return '../' * (folder.count('/') + 1) if folder else ''
 
 
-def template(page_path, title, body, lang, cfg, commit, date, nav_html, source_href, home=False, dirty=False, base=None):
+def on_github(commit, root=ROOT):
+    """Whether GitHub can be expected to have `commit`, so that the site's links to files at it resolve: True in a GitHub
+    Actions run of that very commit (the dispatched Pages build) or where origin/main, as this clone last fetched it, holds
+    it; False where it does not; None where this clone cannot tell (no origin/main, or no repository)."""
+    if os.environ.get('GITHUB_ACTIONS') == 'true' and os.environ.get('GITHUB_SHA') == commit:
+        return True
+    run = subprocess.run(['git', 'merge-base', '--is-ancestor', commit, 'refs/remotes/origin/main'], cwd=root, capture_output=True)
+    return True if run.returncode == 0 else False if run.returncode == 1 else None
+
+
+def pushed_note(pushed):
+    """What the footer adds where links to GitHub at the build commit may not resolve (on_github's answer): nothing where GitHub
+    has the commit."""
+    if pushed is False:
+        return (' This commit is not on the repository\'s main branch as this clone last fetched it (origin/main), so a link to '
+                'GitHub at this commit may not resolve until it is pushed.')
+    if pushed is None:
+        return ' Whether GitHub has this commit could not be checked from this clone, so a link to GitHub at it may not resolve.'
+    return ''
+
+
+def template(page_path, title, body, lang, cfg, commit, date, nav_html, source_href, home=False, dirty=False, base=None, pushed=True):
     root = root_prefix(page_path)
+    zh = lang == 'zh'
+    say = SAY_ZH if zh else SAY_EN
     css, home_href = root + 'assets/site.css', root + 'index.html'
     short = commit[:9]
     name = cfg.get('title', 'The Theory of Becoming')
-    head_title = name if home else f'{title} · {name}'
+    description = cfg.get('description', '')
+    if zh:  # a page in Chinese names the work, describes it and goes home in Chinese, where the site has those
+        name, description = cfg.get('title_zh') or name, cfg.get('description_zh') or description
+        if 'README.zh.md' in cfg.get('pages', []):
+            home_href = root + out_path('README.zh.md')
+    head_title = name if home or title == name else f'{title} · {name}'  # a page named as the site is, the name once
     changed = ', with local paths and words true only off the site changed at build' if cfg.get('rewrites') else ''
     return f'''<!doctype html>
-<html lang="{'zh-Hans' if lang == 'zh' else 'en'}">
+<html lang="{'zh-Hans' if zh else 'en'}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{html.escape(head_title)}</title>
-<meta name="description" content="{html.escape(cfg.get('description', ''))}">
+<meta name="description" content="{html.escape(description)}">
 {f'<base href="{html.escape(base)}">' + chr(10) if base else ''}<link rel="stylesheet" href="{css}">
 <link rel="icon" href="{root}assets/favicon.svg" type="image/svg+xml">
 <script src="{root}assets/search.js" data-root="{root}" defer></script>
 </head>
 <body class="{'home' if home else 'page'} lang-{lang}">
-<header class="top"><a class="brand" href="{home_href}">{html.escape(name)}</a><nav aria-label="Pages">{nav_html}</nav><button class="find" type="button" hidden>{'搜索' if lang == 'zh' else 'Search'}</button></header>
+<header class="top"><a class="brand" href="{home_href}">{html.escape(name)}</a>{nav_html}<button class="find" type="button" hidden>{say['search']}</button></header>
 <main>
 {body}
 </main>
-<footer><p>Built from {'uncommitted edits on top of ' if dirty else ''}commit <a href="https://github.com/{cfg['repository']}/tree/{commit}"><code>{short}</code></a> of <a href="https://github.com/{cfg['repository']}">the repository</a> ({date}). Every page is converted from the repository's text{changed}; a link that leaves the site goes to the file as it stood at that commit.{f' <a href="{html.escape(source_href)}">This page' + "'" + 's source</a>.' if source_href else ''}</p></footer>
+<footer><p>Built from {'uncommitted edits on top of ' if dirty else ''}commit <a href="https://github.com/{cfg['repository']}/tree/{commit}"><code>{short}</code></a> of <a href="https://github.com/{cfg['repository']}">the repository</a> ({date}). Every page is converted from the repository's text{changed}; a link that leaves the site goes to the file as it stood at that commit.{pushed_note(pushed)}{f' <a href="{html.escape(source_href)}">This page' + "'" + 's source</a>.' if source_href else ''}</p></footer>
 </body>
 </html>
 '''
@@ -822,22 +862,31 @@ def edition(page_path, pages):
     return other if other in pages else None
 
 
+LANGUAGE_LINKS = {'中文': 'zh-Hans', 'English': 'en'}  # a navigation entry of this label goes to the other language
+
+
 def nav(cfg, page_path, pages, lang='en'):
     """The site's navigation line: on a page in Chinese its Chinese line, and the language link goes to this page's own
-    other edition where it has one."""
-    items = []
+    other edition where it has one. The language link stands after the line, outside it, so that it shows at every width
+    (between a phone's width and a wide screen the line scrolls sideways and fades at its end)."""
+    items, language = [], []
     zh = lang == 'zh' or page_path.endswith('.zh.md')
     other = edition(page_path, pages)
     for target, label in cfg.get('nav_zh' if zh and cfg.get('nav_zh') else 'nav', []):
-        if label in ('中文', 'English') and other:
+        if label in LANGUAGE_LINKS and other:
             target = other
         if target not in pages and target not in SPECIAL:
             raise SiteError('site.nav names a page not in site.pages: ' + target)
         built = target if target in SPECIAL else out_path(target)
         here = built == (page_path if page_path in SPECIAL else out_path(page_path))
         href = relative(built, page_path) if page_path not in SPECIAL else built
-        items.append(f'<a href="{href}"' + (' aria-current="page"' if here else '') + f'>{html.escape(label)}</a>')
-    return ''.join(items)
+        current = ' aria-current="page"' if here else ''
+        if label in LANGUAGE_LINKS:
+            other_lang = LANGUAGE_LINKS[label]
+            language.append(f'<a class="lang" href="{href}" hreflang="{other_lang}" lang="{other_lang}"{current}>{html.escape(label)}</a>')
+        else:
+            items.append(f'<a href="{href}"{current}>{html.escape(label)}</a>')
+    return f'<nav aria-label="{(SAY_ZH if zh else SAY_EN)["pages"]}">' + ''.join(items) + '</nav>' + ''.join(language)
 
 
 def hours(time):
@@ -958,24 +1007,28 @@ def contents_block(page):
         return f'<a href="#{html.escape(ident)}">{html.escape(text)}</a>'
     items = ''.join('<li>' + link(*head) + ('<ul>' + ''.join('<li>' + link(*h) + '</li>' for h in subs) + '</ul>' if subs else '') + '</li>'
                     for head, subs in groups)
-    zh = page.lang == 'zh'
-    return f'<nav class="contents" aria-label="{"目录" if zh else "Contents"}"><p>{"目录" if zh else "Contents"}</p><ul>{items}</ul></nav>'
+    return f'<nav class="contents" aria-label="{page.say["contents"]}"><p>{page.say["contents"]}</p><ul>{items}</ul></nav>'
 
 
 def sequence_links(p, page, sequence, index, built):
-    """The line of previous, all and next that a page of a sequence carries at its top and foot."""
+    """The line of previous, all and next that a page of a sequence carries at its top and foot; a neighbour in the other
+    language is said to be, in the language of the page."""
     k, zh = sequence.index(p), page.lang == 'zh'
 
     def link(target, cls, words):
         return f'<a class="{cls}" href="{html.escape(relative(out_path(target), p))}">{html.escape(words)}</a>'
+
+    def named(target):
+        other = built[target].lang != page.lang
+        return (built[target].title or '') + (('（英文）' if zh else ' (in Chinese)') if other else '')
     parts = []
     if k:
-        parts.append(link(sequence[k - 1], 'prev', ('← 上一章：' if zh else '← Previous: ') + (built[sequence[k - 1]].title or '')))
+        parts.append(link(sequence[k - 1], 'prev', ('← 上一章：' if zh else '← Previous: ') + named(sequence[k - 1])))
     if index:
         parts.append(link(index, 'all', '全部八章（英文）' if zh else 'All chapters'))
     if k + 1 < len(sequence):
-        parts.append(link(sequence[k + 1], 'next', ('下一章：' if zh else 'Next: ') + (built[sequence[k + 1]].title or '') + ' →'))
-    return f'<nav class="seq" aria-label="{"章节" if zh else "Chapters"}">{"".join(parts)}</nav>'
+        parts.append(link(sequence[k + 1], 'next', ('下一章：' if zh else 'Next: ') + named(sequence[k + 1]) + ' →'))
+    return f'<nav class="seq" aria-label="{page.say["chapters"]}">{"".join(parts)}</nav>'
 
 
 def chapter_html(p, page, sequence, index, built):
@@ -989,29 +1042,94 @@ def chapter_html(p, page, sequence, index, built):
     return line + '\n' + body + '\n' + line
 
 
-def search_index(built, recs):
-    """What the site's search reads: each page's title and headings, each result's name (a record page, its status said, its
-    id and Chinese title findable too). Only pages built go in; a record's Chinese title, from its public JSON, is findable even where its page does not show it."""
-    pages, results = [], []
+LEAD_MAX = 360  # characters of a page's lead that the search reads
+LEAD_LOOK = 8  # the paragraphs that may be a page's lead: its first eight that pass lead_paragraphs
+LEAD_SHARED = 3  # a paragraph met word for word among the leading paragraphs of more pages than this is no page's lead
+STATUS_LINE = re.compile(r'<code>[^<]+</code> · <strong>')  # a record page's status line, as site_text leaves it (RECORD_STATUS)
+LANGUAGE_LINK = re.compile(r'<a [^>]*>\s*(?:中文|English)[^<]{0,24}</a>\s*(?: · |$)')  # '中文', '中文（各章一览）', 'English'
+READING_LINE = 200  # characters below which a paragraph that states a time to read is a reading-time line (a third of it in Chinese)
+READING_TIME = re.compile(r'\b(?:minutes?|hours?|an hour) to read\b|\d+(?:–\d+)? ?分钟|[一二三四五六七八九十两半]+(?:分钟|小时)')
+
+
+def lead_paragraphs(body_html):
+    """The paragraphs of a page's text that could be its lead, in order, as text: passing over a record's status line (its id
+    in code, then its status in bold), a paragraph that starts with a language link ('中文 · …'), a line under READING_LINE
+    characters (a third of that in Chinese) that states a time to read (a reading-time line, alone or after a label of
+    provenance), a line of items
+    joined by ' · ' (a navigation line), a paragraph wholly in italics (a reading time, a label of provenance) and a line too
+    short to say anything."""
+    for m in re.finditer(r'<p>(.*?)</p>', body_html, re.S):
+        inner = m.group(1).strip()
+        text = ' '.join(strip_tags(inner).split())
+        if len(text) < 40:
+            continue
+        if inner.startswith('<em>') and inner.endswith('</em>') and inner.count('<em>') == 1:
+            continue
+        if STATUS_LINE.match(inner) or LANGUAGE_LINK.match(inner):
+            continue
+        if len(text) < (READING_LINE // 3 if cjk_share(text) > 0.5 else READING_LINE) and READING_TIME.search(text):
+            continue
+        if text.count(' · ') >= 2 and all(len(part) < 60 for part in text.split(' · ')):
+            continue
+        yield text
+
+
+def lead(body_html, shared=frozenset()):
+    """A page's lead, for the search: the first of its first LEAD_LOOK lead_paragraphs (a record's, its statement) that is not
+    in `shared` (search_index's paragraphs met on more than LEAD_SHARED pages), cut at a word near LEAD_MAX characters; ''
+    where none is left."""
+    for text in islice(lead_paragraphs(body_html), LEAD_LOOK):
+        if text in shared:
+            continue
+        if len(text) <= LEAD_MAX:
+            return text
+        cut = text[:LEAD_MAX]
+        return (cut.rsplit(' ', 1)[0] if ' ' in cut[LEAD_MAX // 2:] else cut) + '…'
+    return ''
+
+
+def shared_paragraphs(bodies):
+    """The paragraphs met word for word among the first LEAD_LOOK lead_paragraphs of more than LEAD_SHARED of `bodies`
+    (a generated page's opening that all its kind repeat), which are no page's lead."""
+    seen = Counter(text for body in bodies for text in set(islice(lead_paragraphs(body), LEAD_LOOK)))
+    return frozenset(text for text, pages in seen.items() if pages > LEAD_SHARED)
+
+
+def search_index(built, recs, home=None):
+    """What the site's search reads: each page's title, headings and lead, each result's name and its record's lead (a record
+    page, its status said, its id and Chinese title findable too), and `home`, the home's entry, first. A page kept only so
+    that a former id's links resolve is marked (`f`), for the search to rank it below every current name, and its lead is not
+    read. A paragraph that more than LEAD_SHARED pages open with alike (shared_paragraphs) is no page's lead. Only pages built
+    go in; a record's Chinese title, from its public JSON, is findable even where its page does not show it."""
+    shared = shared_paragraphs([page.html for page in built.values()])
+
+    def with_lead(entry, body):
+        said = lead(body, shared)
+        return dict(entry, l=said) if said else entry
+    pages, results = ([home] if home else []), []
     for p, page in built.items():
         rid = posixpath.basename(p)[:-3] if p.startswith(RECORDS) else None
         if rid in recs:
             rec = recs[rid]
-            results.append({'t': rec['title'] or page.title or rid, 'z': rec['title_zh'], 'u': out_path(p), 'a': rid,
-                            's': navigation.STATUS_TEXT.get(rec['status'], rec['status'])})
+            results.append(with_lead({'t': rec['title'] or page.title or rid, 'z': rec['title_zh'], 'u': out_path(p), 'a': rid,
+                                      's': navigation.STATUS_TEXT.get(rec['status'], rec['status'])}, page.html))
+        elif rid and (page.title or '').endswith('(renamed)'):  # the page a former id keeps (registry.py), naming the id it became
+            pages.append({'t': page.title or rid, 'u': out_path(p), 'h': [], 'f': 1})
         else:
-            pages.append({'t': page.title or posixpath.basename(p), 'u': out_path(p), 'h': [[text, ident] for level, ident, text in page.toc if level > 1]})
+            pages.append(with_lead({'t': page.title or posixpath.basename(p), 'u': out_path(p),
+                                    'h': [[text, ident] for level, ident, text in page.toc if level > 1]}, page.html))
     return {'pages': pages, 'results': results}
 
 
-SEARCH_JS = r"""/* The site's search over titles, headings and result names, from search.json. Text goes in as text, never as markup. */
+SEARCH_JS = r"""/* The site's search over titles, headings, leads and result names, from search.json. Text goes in as text, never as markup.
+   A name or heading that holds every word ranks above a lead that does, and a former id's page below all of them. */
 (function () {
   var root = document.currentScript.getAttribute('data-root') || '';
   var button = document.querySelector('button.find');
   if (!button || !window.fetch) { return; }
   var zh = document.documentElement.lang.indexOf('zh') === 0;
-  var say = zh ? {label: '搜索', hint: '标题、小节与成果名', none: '没有找到。', fail: '搜索要在网站上才能用，直接打开文件时用不了。', more: '只显示前 40 条。', result: '成果'}
-               : {label: 'Search', hint: 'Titles, sections and result names', none: 'Nothing found.', fail: 'Search works on the site, not on files opened directly.', more: 'Showing the first 40.', result: 'Result'};
+  var say = zh ? {label: '搜索', hint: '标题、小节、开头与成果名', none: '没有找到。', fail: '搜索要在网站上才能用，直接打开文件时用不了。', more: '只显示前 40 条。', result: '成果', renamed: '旧编号，已改名'}
+               : {label: 'Search', hint: 'Titles, sections, leads and result names', none: 'Nothing found.', fail: 'Search works on the site, not on files opened directly.', more: 'Showing the first 40.', result: 'Result', renamed: 'A former id, renamed'};
   var LIMIT = 40, panel, input, list, note, entries;
   button.hidden = false;
   button.setAttribute('aria-expanded', 'false');
@@ -1019,13 +1137,18 @@ SEARCH_JS = r"""/* The site's search over titles, headings and result names, fro
   function flatten(data) {
     var out = [];
     data.pages.forEach(function (p) {
-      out.push({text: p.t, under: '', href: p.u, key: p.t.toLowerCase(), rank: 3});
-      p.h.forEach(function (h) { out.push({text: h[0], under: p.t, href: p.u + '#' + h[1], key: h[0].toLowerCase(), rank: 2}); });
+      out.push({text: p.t, under: p.f ? say.renamed : '', href: p.u, key: p.t.toLowerCase(), lead: p.l || '', rank: p.f ? 0 : 3});
+      p.h.forEach(function (h) { out.push({text: h[0], under: p.t, href: p.u + '#' + h[1], key: h[0].toLowerCase(), lead: '', rank: 2}); });
     });
     data.results.forEach(function (r) {
-      out.push({text: zh && r.z ? r.z : r.t, under: say.result + ' · ' + r.s, href: r.u, key: (r.t + ' ' + r.z + ' ' + r.a).toLowerCase(), rank: 3});
+      out.push({text: zh && r.z ? r.z : r.t, under: say.result + ' · ' + r.s, href: r.u, key: (r.t + ' ' + r.z + ' ' + r.a).toLowerCase(), lead: r.l || '', rank: 3});
     });
+    out.forEach(function (e) { e.low = e.lead.toLowerCase(); });
     return out;
+  }
+  function snippet(e, word) {
+    var at = Math.max(0, e.low.indexOf(word)), from = Math.max(0, at - 40), to = Math.min(e.lead.length, at + word.length + 60);
+    return (from ? '…' : '') + e.lead.slice(from, to) + (to < e.lead.length ? '…' : '');
   }
   function load() {
     if (entries) { return Promise.resolve(); }
@@ -1039,7 +1162,10 @@ SEARCH_JS = r"""/* The site's search over titles, headings and result names, fro
     if (!words.length || !entries) { return hits; }
     entries.forEach(function (e) {
       if (words.every(function (w) { return e.key.indexOf(w) >= 0; })) {
-        hits.push({e: e, score: e.rank * 2 + (e.key.indexOf(words[0]) === 0 ? 1 : 0)});
+        hits.push({e: e, under: e.under, score: e.rank * 2 + (e.key.indexOf(words[0]) === 0 ? 1 : 0)});
+      } else if (e.low && words.every(function (w) { return e.key.indexOf(w) >= 0 || e.low.indexOf(w) >= 0; })) {
+        var only = words.filter(function (w) { return e.key.indexOf(w) < 0; })[0];  // a word that only the lead holds
+        hits.push({e: e, under: (e.under ? e.under + ' · ' : '') + snippet(e, only), score: 2});
       }
     });
     return hits.sort(function (a, b) { return b.score - a.score || a.e.text.length - b.e.text.length; });
@@ -1051,9 +1177,9 @@ SEARCH_JS = r"""/* The site's search over titles, headings and result names, fro
       var li = document.createElement('li'), a = document.createElement('a');
       a.href = root + h.e.href;
       a.textContent = h.e.text;
-      if (h.e.under) {
+      if (h.under) {
         var under = document.createElement('small');
-        under.textContent = h.e.under;
+        under.textContent = h.under;
         a.appendChild(under);
       }
       li.appendChild(a);
@@ -1204,22 +1330,26 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
         'tools/research/push_screen.sh', 'tools/research/reading_catalogue.py', 'tools/research/navigation.py'],
                             cwd=root, capture_output=True, text=True)
     dirty = status.returncode == 0 and bool(status.stdout.strip())
+    pushed = on_github(commit, root)
     written = []
     for p, page in built.items():
         dest = out / out_path(p)
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(template(p, page.title or posixpath.basename(p), page.html, page.lang, cfg, commit, date,
-                                 nav(cfg, p, set(pages), page.lang), links.github(p), dirty=dirty))
+                                 nav(cfg, p, set(pages), page.lang), links.github(p), dirty=dirty, pushed=pushed))
         written.append(dest)
     (out / 'index.html').write_text(template('index.html', cfg.get('title', ''), home, home_lang, cfg, commit, date,
-                                             nav(cfg, 'index.html', set(pages)), links.github('README.md'), home=True, dirty=dirty))
+                                             nav(cfg, 'index.html', set(pages)), links.github('README.md'), home=True, dirty=dirty,
+                                             pushed=pushed))
     written.append(out / 'index.html')
     (out / '404.html').write_text(template('index.html', 'Page not found', not_found_body(cfg, set(pages)), 'en', cfg, commit, date,
                                            nav(cfg, 'index.html', set(pages)).replace(' aria-current="page"', ''), None, dirty=dirty,
-                                           base=site_root(cfg)))
+                                           base=site_root(cfg), pushed=pushed))
     written.append(out / '404.html')
+    home_lead = lead(home)
+    home_entry = dict({'t': cfg.get('title', ''), 'u': 'index.html', 'h': [['Ways in', 'ways-in']]}, **({'l': home_lead} if home_lead else {}))
     # the search's data and script, and the favicon: written here so that the scans below read them with the rest
-    for name, content in (('search.json', json.dumps(search_index(built, recs), ensure_ascii=False, separators=(',', ':'))),
+    for name, content in (('search.json', json.dumps(search_index(built, recs, home_entry), ensure_ascii=False, separators=(',', ':'))),
                           ('assets/search.js', SEARCH_JS), ('assets/favicon.svg', FAVICON)):
         (out / name).write_text(content)
         (out / name).chmod(0o644)
@@ -1277,7 +1407,7 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
     if problems:
         raise SiteError('\n'.join(problems))
     return {'pages': len(built) + 1, 'assets': len(assets), 'links': dict(links.counts), 'map': map_note,
-            'untracked': links.untracked, 'out': str(out), 'commit': commit}
+            'untracked': links.untracked, 'out': str(out), 'commit': commit, 'on_github': pushed}
 
 
 def main(argv=None):
@@ -1293,6 +1423,8 @@ def main(argv=None):
         return 1
     print(f"built {report['pages']} pages and {report['assets']} assets in {report['out']} at {commit[:9]}; links: "
           + ', '.join(f'{k} {v}' for k, v in report['links'].items()) + f"; the map {report['map']}")
+    if report['on_github'] is not True:
+        print('  the footer says so: ' + pushed_note(report['on_github']).strip())
     for page, href in report['untracked'][:20]:
         print(f'  shown as text (not in the public repository): {page} → {href}')
     if len(report['untracked']) > 20:

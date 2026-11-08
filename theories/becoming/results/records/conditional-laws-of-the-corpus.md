@@ -60,7 +60,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Pure core, every axiom report empty: GrammarConditionals imports GrammarCandidates and GrammarLaws, a leaf nothing imports. The two general laws two families rest on are stated in the records of the laws they generalize, continuation relative to a class and the classical definitions. Written by an AI from the corpus's classification; one independent AI review, every finding taken; no human audit of the readings. The leaf, 48 theorems in 49 declarations, compiles with the whole package in the core run whose receipt the record binds.
+Pure core, every axiom report empty: GrammarConditionals imports GrammarCandidates and GrammarLaws, a leaf nothing imports. The two general laws two families rest on are stated in the records of the laws they generalize, continuation relative to a class and the classical definitions. Written by an AI from the corpus's classification; one independent AI review, every finding taken; no person's audit of the readings recorded. The leaf, 48 theorems in 49 declarations, compiles with the whole package in the core run whose receipt the record binds.
 
 Canonical source: [GrammarConditionals.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarConditionals.lean)
 

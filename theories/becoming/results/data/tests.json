@@ -253,7 +253,7 @@
       "outcome": "mixed",
       "quote": "**L1, the locked side: failed.** Two of the four locked conditions failed.",
       "quote_path": "experiments/commons-llm-feedback/README.md",
-      "gloss": "Both open settings passed; two of four locked settings failed, and with them contrasts L1, L3 and L4, at misses worth 92.5% to 98.2% of the best, which, by LA1b's later frozen test, its feedback barely resolved."
+      "gloss": "Both open settings passed; two of four locked settings failed, and with them contrasts L1, L3 and L4, at misses worth 92.5% to 98.2% of the best, which LA1b's later frozen test reads as feedback that barely resolved the best threshold, that threshold assigned there (LA1c, with none assigned, found it in 29 of 30 locked seeds)."
     },
     {
       "id": "LA2",
@@ -361,7 +361,7 @@
       "outcome": "partly-passed",
       "quote": "The fidelity result (FC1) favours the classical code on these two texts: the 經 introduce fewer excess referents and agents than the English clauses, with one coder on both sides of the main set and both coders agreeing in direction on the calibration set. It is LLM-coded and provisional.",
       "quote_path": "experiments/wenli-reading-transfer/README.md",
-      "gloss": "The classical wording introduced fewer excess referents and agents than the English; coded by language models and provisional, with no human audit and the main set's 經 coded by the model that wrote them; F3 and F4 not measured."
+      "gloss": "The classical wording introduced fewer excess referents and agents than the English; coded by language models and provisional, with no person's audit recorded and the main set's 經 coded by the model that wrote them; F3 and F4 not measured."
     },
     {
       "id": "LA4 (Stage A)",
@@ -673,7 +673,7 @@
       "outcome": "registered-rule",
       "quote": "The 經's advantage over the controlled English **does not survive** under the Claude coder.",
       "quote_path": "experiments/wenli-reading-transfer/CONTROLLED-ENGLISH-RESULTS.md",
-      "gloss": "By its registered rules, the classical code's advantage does not survive under one coder (the primary comparison) and survives at about a third of a referent per pair under the other, on a 60-pair check that its plan says is not a second primary test; the coders do not agree on excess; no human audit."
+      "gloss": "By its registered rules, the classical code's advantage does not survive under one coder (the primary comparison) and survives at about a third of a referent per pair under the other, on a 60-pair check that its plan says is not a second primary test; the coders do not agree on excess; no person's audit recorded."
     },
     {
       "id": "SC1",
