@@ -45,6 +45,7 @@ The words of the Theory of Becoming, each in one sense and with one home: the se
 | Term | Sense | Home |
 |---|---|---|
 | couples into | what reaches a selector through its couplings (never "registers") | [03 §1](theories/becoming/chapters/03-KNOWING.md#selection) |
+| lock | a configuration of a rule read from the share it raises in which the course stays, share and rule never below the start, while a loss it does not read passes every bound; left only through a change in what it reads (a reading favouring at no loss above a bound), or in the law, the reading or the selection | [02 §9](theories/becoming/chapters/02-MAP.md#r-closed-capture) |
 | selection | goes through the selector's couplings; a subset of the World premises is "a choice of premises" | [03 §1](theories/becoming/chapters/03-KNOWING.md#selection) |
 | 无明, 明 (*wúmíng*, *míng*) | seeking locked onto a target that cannot be met at rest, grounded in, and not the same as, the position every formation selects from; coupling joined to a selection so that it reaches what support does not mark | [03](theories/becoming/chapters/03-KNOWING.md#learning) |
 | testing (验), stages (层) | telling apart within the net; finite approximations of the core | [03](theories/becoming/chapters/03-KNOWING.md#testing) |

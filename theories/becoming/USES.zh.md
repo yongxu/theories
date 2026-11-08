@@ -3,7 +3,7 @@
 <a id="what-the-account-is-for-and-how-far"></a>
 # 本说明有什么用，用到多远
 
-[English](USES.md) · [首页](../../README.zh.md) · [一页](ONE-PAGE.zh.md) · **用途** · [实例](USES-EXAMPLES.zh.md) · [总览](THE-THEORY-OF-BECOMING.zh.md) · [八章](chapters/README.md) · [第六章](chapters/06-CLASSICAL-TEXTS.md) · [检验](../../TESTS.md) · [怎样长成](../LINEAGE.zh.md) · [术语表](../../GLOSSARY.zh.md) · [审查包](review/README.zh.md)
+[English](USES.md) · [首页](../../README.zh.md) · [一页](ONE-PAGE.zh.md) · **用途** · [实例](USES-EXAMPLES.zh.md) · [总览](THE-THEORY-OF-BECOMING.zh.md) · [八章（英文）](chapters/README.md) · [第六章](chapters/06-CLASSICAL-TEXTS.md) · [检验（英文）](../../TESTS.md) · [对照](results/atlas/CROSSWALK.zh.md) · [怎样长成](../LINEAGE.zh.md) · [术语表](../../GLOSSARY.zh.md) · [审查包](review/README.zh.md)
 
 *约十三至十七分钟读完，其中表格约十分钟；实例另成一页，还需三十七至四十八分钟。*
 
