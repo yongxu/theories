@@ -4,7 +4,7 @@
 
 [中文](USES.zh.md) · [One page](ONE-PAGE.md) · [The overview](THE-THEORY-OF-BECOMING.md) · [The tests](../../TESTS.md) · [Glossary](../../GLOSSARY.md)
 
-*Fifteen to nineteen minutes to read, the table eleven to fifteen of them; the worked examples, on their own page, forty-six to sixty more.*
+*Fifteen to nineteen minutes to read, the table ten to thirteen of them; the worked examples, on their own page, forty-six to sixty more.*
 
 *AI-written from the homes it links, 8 November 2026; each restatement checked against its home by AI readers; no person has read it. Where it and a home differ, the home governs.*
 
@@ -31,7 +31,7 @@ One or more per field, each at its true standing, on [their own page](USES-EXAMP
 
 - Alignment of AI systems: [The fishers and the mussel bed](USES-EXAMPLES.md#the-fishers-and-the-mussel-bed)
 - Alignment of AI systems: [Auditing a language-model judge](USES-EXAMPLES.md#auditing-a-language-model-judge)
-- Alignment of AI systems: [A worked audit: AI feedback against written principles](USES-EXAMPLES.md#a-worked-audit-ai-feedback-against-written-principles)
+- Alignment of AI systems: [An audit on paper: AI feedback against written principles](USES-EXAMPLES.md#an-audit-on-paper-ai-feedback-against-written-principles)
 - Alignment of AI systems: [Three environments to reuse: IN1, CG2 and LA2](USES-EXAMPLES.md#three-environments-to-reuse-in1-cg2-and-la2)
 - People and AI together: [AJ as a checklist: what the goal is not, and three questions](USES-EXAMPLES.md#aj-as-a-checklist-what-the-goal-is-not-and-three-questions)
 - People and AI together: [Handing over a service: the constructed case against J1–J4](USES-EXAMPLES.md#handing-over-a-service-the-constructed-case-against-j1j4)
