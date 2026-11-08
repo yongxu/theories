@@ -27,7 +27,7 @@ Its centre [AI reading]: a selection, whether a knower, a training run, a market
 
 ![The eight chapters around the grammar: circles sized by their results, curves counting the uses between chapters' results, the two premises coming into chapter 7 as hypotheses where used, and T1 to T8 at their homes coloured by test outcome](results/spine.svg)
 
-*The chapters around the grammar, drawn from [the theory graph](results/THEORY-GRAPH.md) by a tool; what the picture shows and does not show is under [The spine](results/THEORY-GRAPH.md#the-spine).*
+*The chapters around the grammar, drawn from [the theory graph](results/THEORY-GRAPH.md) by a tool: a curve counts the uses of one chapter's results by another's recorded as formal-reuse, a kind kept for verified inferences; a dependence, not an agreement in meaning. Of the 117 central declarations, 11 are derived, each a case of grammar laws, through bridges checked in Lean as equivalences and support the review reads where a row has them; 1 is under a stated hypothesis, 6 are counting, below the grammar, and 99 stand at a named distance, each with its reason ([08 §7](chapters/08-METHOD.md#r-one-root-to-its-edge)). What the picture shows and does not: [The spine](results/THEORY-GRAPH.md#the-spine-what-it-shows-and-does-not-show).*
 
 Each claim carries one standing ([the labels](chapters/08-METHOD.md#standings-and-bases)):
 

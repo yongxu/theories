@@ -369,12 +369,14 @@ def page(graph):
              f'([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). '
              f'{len(graph["nodes"])} nodes, {len(graph["edges"])} edges. An edge records a dependence, a citation or a '
              'registered reading, not an agreement in meaning.', '',
-             '| Region | Concepts | Results | Modules | Texts |', '|---|---:|---:|---:|---:|']
+             ]
+    from tools.research import spine  # the picture's sections read this module's regions, so it is imported here
+    lines += spine.lead(graph, PAGE)
+    lines += ['', '## The regions', '', '| Region | Concepts | Results | Modules | Texts |', '|---|---:|---:|---:|---:|']
     for k in REGION_ORDER:
         c = counts[k]
         if sum(c.values()):
             lines.append(f'| {REGION_TITLES[k]} | {c["concept"]} | {c["result"]} | {c["module"]} | {c["text"]} |')
-    from tools.research import spine  # the picture's section reads this module's regions, so it is imported here
     lines += spine.section(graph, PAGE)
     lines += corpus_section(graph)
     lines += ['', '## The grammar\'s concepts', '', '| Name | Gloss | Module |', '|---|---|---|']
