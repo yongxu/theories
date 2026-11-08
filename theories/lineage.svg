@@ -93,7 +93,7 @@
 <line x1="212.4" y1="445.0" x2="212.4" y2="355.0" stroke="#2a78d6" stroke-width="1"/>
 <text x="212.4" y="350.0" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">8 · The loop written down</text>
 <line x1="274.1" y1="445.0" x2="274.1" y2="333.0" stroke="#2a78d6" stroke-width="1"/>
-<text x="274.1" y="328.0" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">11 · Meta-attractor captures selection</text>
+<text x="274.1" y="328.0" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">11 · Meta-attractor captures selection's mechanisms</text>
 <line x1="295.1" y1="428.0" x2="295.1" y2="311.0" stroke="#2a78d6" stroke-width="1"/>
 <text x="295.1" y="306.0" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">13 · A second-order attractor</text>
 <line x1="406.2" y1="445.0" x2="406.2" y2="377.0" stroke="#2a78d6" stroke-width="1"/>

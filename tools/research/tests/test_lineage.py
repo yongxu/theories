@@ -8,7 +8,7 @@ from unittest import mock
 
 ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT))
-from tools.research import lineage  # noqa: E402
+from tools.research import lineage, zh_fronts  # noqa: E402
 
 STATIC = ROOT / '_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rw-spine/lineage_static.json'
 
@@ -101,6 +101,14 @@ class Tree(unittest.TestCase):
         self.assertIn('AI reconstruction** (none so far)', en)
         self.assertIn('[`notes/a.md`](../notes/a.md?plain=1#L1) (line 1)', en)
         self.assertIn('来源 1 处', zh)
+        self.assertIn(zh_fronts.nav_line(lineage.PAGE['zh']) + '\n\n*', zh)
+
+    def test_the_live_chinese_edition_carries_the_fronts_line(self):
+        self.patch.stop()
+        try:
+            self.assertEqual(zh_fronts.problems(pages=(lineage.PAGE['zh'],)), [])
+        finally:
+            self.patch.start()
 
     def test_the_axis_gives_each_phase_room_by_its_points(self):
         segments = lineage.axis(self.spec)

@@ -228,6 +228,8 @@
       "theories/becoming/ONE-PAGE.zh.md",
       "theories/becoming/USES.md",
       "theories/becoming/USES-EXAMPLES.md",
+      "theories/becoming/USES.zh.md",
+      "theories/becoming/USES-EXAMPLES.zh.md",
       "theories/becoming/THE-THEORY-OF-BECOMING.md",
       "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
       "theories/becoming/OPENING.md",
@@ -247,6 +249,8 @@
       "GLOSSARY.md",
       "GLOSSARY.zh.md",
       "OPEN-QUESTIONS.md",
+      "theories/LINEAGE.md",
+      "theories/LINEAGE.zh.md",
       "theories/README.md",
       "theories/becoming/review/README.md",
       "theories/becoming/review/README.zh.md",
@@ -258,7 +262,12 @@
       "theories/becoming/review/BUDDHIST-THOUGHT.md",
       "TESTS.md"
     ],
-    "assets": [],
+    "assets": [
+      "theories/becoming/results/spine.svg",
+      "theories/becoming/results/spine.zh.svg",
+      "theories/lineage.svg",
+      "theories/lineage.zh.svg"
+    ],
     "aliases": {
       "README.md#truth-exists": "theories/becoming/OPENING.md#truth-exists"
     },
@@ -296,6 +305,10 @@
         "Map"
       ],
       [
+        "theories/LINEAGE.md",
+        "How it grew"
+      ],
+      [
         "GLOSSARY.md",
         "Glossary"
       ],
@@ -322,7 +335,8 @@
       {
         "path": "theories/becoming/USES.md",
         "label": "What it is for, and how far",
-        "text": "Alignment, coordination, people and AI, wisdom traditions, human development and the sciences: what can be done today, and what is not claimed."
+        "text": "Alignment, coordination, people and AI, wisdom traditions, human development and the sciences: what can be done today, and what is not claimed.",
+        "zh": "theories/becoming/USES.zh.md"
       },
       {
         "path": "theories/becoming/THE-THEORY-OF-BECOMING.md",
@@ -349,6 +363,12 @@
         "path": "connections.html",
         "label": "The connection map",
         "text": "The earlier folders and twelve domains of thought set against the account, claim by claim, with the theory's own graph; every thread an AI reading."
+      },
+      {
+        "path": "theories/LINEAGE.md",
+        "zh": "theories/LINEAGE.zh.md",
+        "label": "How it grew",
+        "text": "From the writings of 2021 to the account today: turning points, each labelled by what states it, gathered by AI readers, and one thread followed through."
       },
       {
         "path": "MAP.md#check-the-proofs-yourself",

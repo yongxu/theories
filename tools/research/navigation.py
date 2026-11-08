@@ -440,7 +440,7 @@ PAGES = [('README.md', 'The Theory of Becoming', None, 'home'),
 # connections list and the workflow for contributors are linked from README's lower sections (RW, 8 November 2026).
 NAV = [('README.md', 'Home'), ('MAP.md', 'Start here'), (THEORY + '/ONE-PAGE.md', 'One page'), (THEORY + '/ONE-PAGE.zh.md', '一页（中文）'),
        (CANONICAL, 'The theory'), (CHAPTERS + '/README.md', 'Chapters'), (THEORY + '/USES.md', 'Uses'), ('TESTS.md', 'Tests'),
-       (THEORY + '/results/THEORY-GRAPH.md', 'Graph'), ('RESULTS.md', 'Results'), ('GLOSSARY.md', 'Glossary'),
+       (THEORY + '/results/THEORY-GRAPH.md', 'Graph'), ('theories/LINEAGE.md', 'How it grew'), ('RESULTS.md', 'Results'), ('GLOSSARY.md', 'Glossary'),
        (THEORY + '/review/README.md', 'Reviewers'), ('OPEN-QUESTIONS.md', 'Open questions')]
 WHERE_TO_LOOK = [
     '- Same theorem under two names: `trace-law-equivalence`, `derivation-soundness`. Preserve historical names and receipts; count the underlying result once.',

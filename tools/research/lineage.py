@@ -25,7 +25,7 @@ from collections import Counter
 from pathlib import Path
 from xml.sax.saxutils import escape
 
-from tools.research import navigation, registry
+from tools.research import navigation, registry, zh_fronts
 
 ROOT = registry.ROOT
 DATA = 'theories/becoming/results/data/lineage.json'
@@ -396,8 +396,10 @@ def page(s, lang, weeks, undated, by_folder, totals):
     here = PAGE[lang]
     other = PAGE['zh' if lang == 'en' else 'en']
     cut = s['cut']
-    lines = [HEADER, '', f'# {words["title"]}', '',
-             f'[{words["other_language"]}]({os.path.basename(other)}) · {{time}}', '',
+    # The Chinese edition opens with the Chinese fronts' one navigation line (zh_fronts), its time on a line below.
+    head = ([zh_fronts.nav_line(here), '', '*{time}*'] if lang == 'zh' else
+            [f'[{words["other_language"]}]({os.path.basename(other)}) · {{time}}'])
+    lines = [HEADER, '', f'# {words["title"]}', ''] + head + ['',
              words['intro'].format(commits=f'{cut["commits"]:,}' if lang == 'en' else cut['commits'],
                                    date=cut['date_' + lang], commit=cut['commit'][:9]), '']
     number = {p['id']: n for n, p in enumerate(s['points'], 1)}
