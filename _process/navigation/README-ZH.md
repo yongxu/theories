@@ -22,7 +22,7 @@
 
 **古文。** 文法的名字取自古文，运算不取自古文；读法都是 AI 的，尚无人审查它们的记录。[第六章](../../theories/becoming/chapters/06-CLASSICAL-TEXTS.md)用中文写成，把九家 248 段文字与已检查的律并读，逐段记为相合、定域或相分；相合不是印证，记为相分也不是说原文错了。例如[天之道与张弓](../../theories/becoming/USES-EXAMPLES.zh.md#the-way-of-heaven-and-the-drawn-bow-a-concordance-not-a-confirmation)。本论的“续”站在《中论》所破的一边，其定理没有处理那一论证的前提（[B-02](../../theories/becoming/review/BUDDHIST-THOUGHT.md#b-02)）。
 
-**伦理。** 本论的伦理不断言任何应当：凡它对进程排序之处，都指名其所据，最常是[两种读法](../../theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order)，二者都不被断言。*延续条件*：从每一个立场看，对任何东西，其延续到未来都被计数。它确定范围，即谁的损失算数，不给任何东西排序。*C*：扩大可形成者（一个进程让什么能够形成）更好，它给出次序。本论之作者提供一种看法，不是裁断（[论题 T8](../../theories/becoming/chapters/07-SIGNIFICANCE.md#theses)）。
+**伦理。** 本论的伦理不断言任何应当；它的排序多依于[两种读法](../../theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order)，二者都不被断言。*延续条件*：从每一个立场看，对任何东西，其延续到未来都被计数。它确定范围，即谁的损失算数，不给任何东西排序。*C*：扩大可形成者（一个进程让什么能够形成）更好，它给出次序。本论之作者提供一种看法，不是裁断（[论题 T8](../../theories/becoming/chapters/07-SIGNIFICANCE.md#theses)）。
 
 **证据。** [Lean](../../MAP.md#check-the-proofs-yourself) 是一个证明检查器，为[已登记的 {{count:registered}} 条结果](../../RESULTS.md)中的 {{count:recorded-checked}} 条给出回执；回执只表明每条陈述能从它的前提推出，不表明前提成立。一次自动化的回顾把每条 Lean 陈述同它所知的文献对照，这一回顾并不穷尽，发现[核心结果中没有一个是新的数学](../../theories/becoming/chapters/08-METHOD.md#known-results)。留下来的有三样，没有一样是一项发现：前提账簿，连同正反两面的见证（每个前提都被表明在一个模型中成立、在另一个中不成立）；作为两种读法分开的范围与次序；同一套词汇，用于守恒、受观察所限的选择，以及机会集的比较。[经验论题](../../theories/becoming/chapters/08-METHOD.md#theses)接受的是评分前就已冻结的检验：指名某个论题的检验中，运行过的 {{tests:ran}} 项里，{{tests:mixed}} 项结局为「有通过，有未通过」，{{tests:passed}} 项通过，{{tests:failed}} 项未通过，{{tests:other}} 项是其他结局；另有 {{tests:unrun}} 项从未运行。这项工作借助 AI 做成；主持它的人读过其中重要的部分，尚无独立的人工审查记录（[审查包](../../theories/becoming/review/README.zh.md)）。
 
