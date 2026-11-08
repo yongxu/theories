@@ -41,8 +41,6 @@ Take a pipeline in which a language model, as judge, picks between candidate ans
 
 **Beside published measurements.** 07 §6 reads six published ways of selecting a deployed model's behaviour, and finds that "three published measurements (reward overoptimization, judges misled under RLHF, sycophancy) find optimizing through it [the signal] raising what the deciders read and lowering what they do not, in magnitudes the theory did not predict" ([07 §6](chapters/07-SIGNIFICANCE.md#r-coupling-closures-of-training-pipelines)) (read from the papers' abstracts, not independently reviewed). Read against question 3, that is the drain's direction, an AI reading; T3's clause on trained systems stays conjectured.
 
-**Beside published measurements.** 07 §6 reads six published ways of selecting a deployed model's behaviour, and finds that "three published measurements (reward overoptimization, judges misled under RLHF, sycophancy) find optimizing through it raising what the deciders read and lowering what they do not, in magnitudes the theory did not predict" ([07 §6](chapters/07-SIGNIFICANCE.md#r-coupling-closures-of-training-pipelines)): questions 2 and 3's direction, seen in those pipelines, with no magnitude the theory gave.
-
 The audit predicts no magnitudes, and naming a pipeline's couplings is a reading.
 
 ### Three environments to reuse: IN1, CG2 and LA2
