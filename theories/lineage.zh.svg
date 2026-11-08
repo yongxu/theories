@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 811" width="1000" height="811" role="img" aria-labelledby="lineage-title" font-family="'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 886" width="1000" height="886" role="img" aria-labelledby="lineage-title" font-family="'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif">
 <title id="lineage-title">本论是怎样长成的</title>
-<rect x="0.5" y="0.5" width="999" height="810" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
+<rect x="0.5" y="0.5" width="999" height="885" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
 <text x="24.0" y="38.0" font-size="22" font-weight="bold" text-anchor="start" fill="#1c1917">本论是怎样长成的</text>
-<text x="24.0" y="64.0" font-size="15" text-anchor="start" fill="#57534e">从最早的文字（2021）到现行之论（2026 年 11 月 8 日）的转折点，分为六个阶段，各阶段的宽度按其转折点数</text>
-<text x="24.0" y="83.0" font-size="15" text-anchor="start" fill="#57534e">而定，不按时间比例；每个转折点都标明是什么陈述了它；主要的转折点附标题，编号同下表。</text>
+<text x="24.0" y="64.0" font-size="15" text-anchor="start" fill="#57534e">从最早的文字（2021）到现行的本论（2026 年 11 月 8 日）的转折点，分为六个阶段，各阶段的宽度按其转折点</text>
+<text x="24.0" y="83.0" font-size="15" text-anchor="start" fill="#57534e">数而定，不按时间比例；每个转折点都标明是什么陈述了它；主要的转折点附标题，编号同下表。</text>
 <rect x="50.0" y="150" width="73.6" height="404" fill="#efece6"/>
 <text x="86.8" y="170.0" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c1917">早期写作</text>
 <text x="86.8" y="540.0" font-size="12.5" text-anchor="middle" fill="#57534e">2021-10</text>
@@ -32,7 +32,12 @@
 <rect x="681.9" y="584.0" width="7" height="53.9" fill="#a8a29e"/>
 <rect x="747.3" y="584.0" width="7" height="13.9" fill="#a8a29e"/>
 <rect x="827.3" y="584.0" width="7" height="9.2" fill="#a8a29e"/>
-<text x="950.0" y="659.0" font-size="13" text-anchor="end" fill="#57534e">灰条：各记录的历史条目，按周计（最多的一周 1810 条）。</text>
+<text x="571.1" y="653.0" font-size="11" text-anchor="middle" fill="#57534e">10月5日</text>
+<text x="619.9" y="666.0" font-size="11" text-anchor="middle" fill="#57534e">10月12日</text>
+<text x="685.4" y="653.0" font-size="11" text-anchor="middle" fill="#57534e">10月19日</text>
+<text x="750.8" y="653.0" font-size="11" text-anchor="middle" fill="#57534e">10月26日</text>
+<text x="830.8" y="653.0" font-size="11" text-anchor="middle" fill="#57534e">11月2日</text>
+<text x="950.0" y="686.0" font-size="13" text-anchor="end" fill="#57534e">灰条：各记录的历史条目，按周计（最多的一周 1810 条）。</text>
 <path d="M180.9,481.0 L212.4,481.0 L274.1,498.0 L295.1,481.0 L406.2,481.0 L681.9,464.0 L747.3,498.0" fill="none" stroke="#0072B2" stroke-width="1.8" stroke-dasharray="5 3"/>
 <path d="M66.9,481.0 L385.9,447.0 L389.7,464.0 L588.4,498.0 L719.3,464.0" fill="none" stroke="#E69F00" stroke-width="1.8" stroke-dasharray="5 3"/>
 <path d="M374.7,498.0 L388.2,481.0 L607.1,498.0 L691.2,498.0 L784.7,498.0 L802.7,481.0 L950.0,498.0" fill="none" stroke="#CC79A7" stroke-width="1.8" stroke-dasharray="5 3"/>
@@ -114,24 +119,26 @@
 <text x="876.4" y="284.0" font-size="14" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">45 · 检验在任何运行之前冻结</text>
 <line x1="925.5" y1="489.0" x2="925.5" y2="421.0" stroke="#57534e" stroke-width="1"/>
 <text x="925.5" y="416.0" font-size="14" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">46 · T2 收窄</text>
-<text x="50.0" y="689.0" font-size="14" font-weight="bold" text-anchor="start" fill="#1c1917">形状，陈述它的是什么：</text>
-<circle cx="240.2" cy="684.0" r="7" fill="#e7e5e4" stroke="#1c1917" stroke-width="1.3"/>
-<text x="255.2" y="689.0" font-size="14" text-anchor="start" fill="#1c1917">公开（48）</text>
-<text x="50.0" y="715.0" font-size="14" font-weight="bold" text-anchor="start" fill="#1c1917">圆环，下文所循的线索：</text>
-<circle cx="240.2" cy="710.0" r="7" fill="#e7e5e4" stroke="#0072B2" stroke-width="2.4"/>
-<text x="255.2" y="715.0" font-size="14" text-anchor="start" fill="#1c1917">选择机制</text>
-<circle cx="348.2" cy="710.0" r="7" fill="#e7e5e4" stroke="#E69F00" stroke-width="2.4"/>
-<text x="363.2" y="715.0" font-size="14" text-anchor="start" fill="#1c1917">根</text>
-<circle cx="414.2" cy="710.0" r="7" fill="#e7e5e4" stroke="#CC79A7" stroke-width="2.4"/>
-<text x="429.2" y="715.0" font-size="14" text-anchor="start" fill="#1c1917">伦理</text>
-<text x="50.0" y="741.0" font-size="14" font-weight="bold" text-anchor="start" fill="#1c1917">填色，陈述它的文本出自谁之手：</text>
-<circle cx="299.6" cy="736.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<text x="314.6" y="741.0" font-size="14" text-anchor="start" fill="#1c1917">一个人的话（15）</text>
-<circle cx="467.0" cy="736.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
-<text x="482.0" y="741.0" font-size="14" text-anchor="start" fill="#1c1917">AI 据一个人的话起草（13）</text>
-<circle cx="692.8" cy="736.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
-<text x="707.8" y="741.0" font-size="14" text-anchor="start" fill="#1c1917">AI 所作（19）</text>
-<circle cx="834.7" cy="736.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/><circle cx="834.7" cy="736.0" r="2.2" fill="#1c1917"/>
-<text x="849.7" y="741.0" font-size="14" text-anchor="start" fill="#1c1917">未说明（1）</text>
-<text x="24.0" y="793.0" font-size="12" text-anchor="start" fill="#57534e">由 tools/research/lineage.py 依 lineage.json、各记录与对照生成。</text>
+<text x="50.0" y="716.0" font-size="14" font-weight="bold" text-anchor="start" fill="#1c1917">形状，陈述它的是什么：</text>
+<circle cx="240.2" cy="711.0" r="7" fill="#e7e5e4" stroke="#1c1917" stroke-width="1.3"/>
+<text x="255.2" y="716.0" font-size="14" text-anchor="start" fill="#1c1917">公开：迄今全部 48 个；尚无「私人、未发表」「AI 重构」</text>
+<text x="50.0" y="742.0" font-size="14" font-weight="bold" text-anchor="start" fill="#1c1917">圆环，下文所循的线索：</text>
+<circle cx="240.2" cy="737.0" r="7" fill="#e7e5e4" stroke="#0072B2" stroke-width="2.4"/>
+<text x="255.2" y="742.0" font-size="14" text-anchor="start" fill="#1c1917">选择机制</text>
+<circle cx="348.2" cy="737.0" r="7" fill="#e7e5e4" stroke="#E69F00" stroke-width="2.4"/>
+<text x="363.2" y="742.0" font-size="14" text-anchor="start" fill="#1c1917">根</text>
+<circle cx="414.2" cy="737.0" r="7" fill="#e7e5e4" stroke="#CC79A7" stroke-width="2.4"/>
+<text x="429.2" y="742.0" font-size="14" text-anchor="start" fill="#1c1917">伦理</text>
+<text x="50.0" y="768.0" font-size="14" font-weight="bold" text-anchor="start" fill="#1c1917">填色，陈述它的文本出自谁之手：</text>
+<circle cx="299.6" cy="763.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<text x="314.6" y="768.0" font-size="14" text-anchor="start" fill="#1c1917">一个人的话（15）</text>
+<circle cx="467.0" cy="763.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
+<text x="482.0" y="768.0" font-size="14" text-anchor="start" fill="#1c1917">AI 据一个人的话起草（13）</text>
+<circle cx="692.8" cy="763.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
+<text x="707.8" y="768.0" font-size="14" text-anchor="start" fill="#1c1917">AI 所作（19）</text>
+<circle cx="834.7" cy="763.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/><circle cx="834.7" cy="763.0" r="2.2" fill="#1c1917"/>
+<text x="849.7" y="768.0" font-size="14" text-anchor="start" fill="#1c1917">未说明（1）</text>
+<text x="50.0" y="798.0" font-size="13" text-anchor="start" fill="#57534e">一个点的高度不表示什么：它只让标记不相重叠，并把带标题的点抬到其邻点之上；粗体标题是线索上的点；每一根灰</text>
+<text x="50.0" y="816.0" font-size="13" text-anchor="start" fill="#57534e">条是各记录一周的历史条目，以该周的星期一标注。</text>
+<text x="24.0" y="868.0" font-size="12" text-anchor="start" fill="#57534e">由 tools/research/lineage.py 依 lineage.json、各记录与对照表画出。</text>
 </svg>

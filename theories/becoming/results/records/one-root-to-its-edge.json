@@ -379,8 +379,12 @@
       "zh": "2026年11月2日，看板条目 PF3：更正一条依据，说排序一般而言唯在 C，因为 07 §4.4 的定理表明，一个随自身延续上升的次序不靠 C 也排出一种情形；没有定律、前提或证明改变。"
     },
     {
-      "en": "7 November 2026, board item LM1: a reader of LM found this said C orders alone, where a ranking of courses needs C or a premise in its place (07 §4.4); corrected. No law, premise or proof changed.",
-      "zh": "2026年11月7日，工作板条目 LM1：LM 之读者指出此处谓唯 C 定序，而对进程的排序需要 C 或一个代替它的前提（07 §4.4）；已更正。诸律、前提与证明皆不变。"
+      "en": "7 November 2026, board item LM1: an AI reader of LM found this said C orders alone, where a ranking of courses needs C or a premise in its place (07 §4.4); corrected. No law, premise or proof changed.",
+      "zh": "2026年11月7日，工作板条目 LM1：LM 之 AI 读者指出此处谓唯 C 定序，而对进程的排序需要 C 或一个代替它的前提（07 §4.4）；已更正。诸律、前提与证明皆不变。"
+    },
+    {
+      "en": "9 November 2026, board item RW, step (c): an AI reader found the basis of `Flow.beyond_gives_nothing` reversed, saying what lies beyond a formation's closure is given nothing by it, where the Lean has a formation beyond the closure that takes part at a step give nothing to a condition a member of the closure then requires; corrected to the home record's words (feeding-closure, its third law). No law, premise, standing or proof changed.",
+      "zh": "2026年11月9日，工作板条目 RW 之 (c)：一位 AI 读者指出 `Flow.beyond_gives_nothing` 的依据说反了：它说闭包之外的不从闭包得到给予，而 Lean 所证的是闭包之外、在某步在场的形成，在该步不向闭包成员当时所需的条件给予；已依其所属记录的话（feeding-closure，第三条律）更正。诸律、前提、地位与证明皆不变。"
     }
   ],
   "boundary": {
@@ -389,7 +393,7 @@
         "declaration": "Becoming.Flow.beyond_gives_nothing",
         "standing": "derived",
         "basis": {
-          "en": "A case of «所闭之界» at feeding from: what lies beyond a formation's closure is given nothing by it. WithinFeeding is the closure of FedFrom, which unfolds through FedBy to a positive giving to a required condition; the support, eq_zero_of_not_pos, is Flow's lemma that a natural number not above nothing is nothing."
+          "en": "A case of «所闭之界» at feeding from: a formation beyond a formation's feeding closure that takes part at a step gives nothing at that step to a condition a member of the closure then requires. WithinFeeding is the closure of FedFrom, which unfolds through FedBy to a positive giving to a required condition; the support, eq_zero_of_not_pos, is Flow's lemma that a natural number not above nothing is nothing."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
         "law": [
