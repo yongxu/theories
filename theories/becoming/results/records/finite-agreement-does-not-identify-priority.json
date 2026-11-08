@@ -82,7 +82,7 @@
   ],
   "validation_scope": {
     "en": "Machine-checked by Lean 4.29.1 (receipt priority-identification-checks/20261007T193051.511909Z, the same bytes as priority-identification-verification.json; module PracticalPriorityIdentification, imports Std): finite_agreement_without_global_identification reports propext and Quot.sound. Built in one session; the record was read against the current Lean; no person's review recorded.",
-    "zh": "Lean 4.29.1 实查（回执 priority-identification-checks/20261007T193051.511909Z，与 priority-identification-verification.json 同字节；模块 PracticalPriorityIdentification，引入 Std）：finite_agreement_without_global_identification 报告 propext 与 Quot.sound。一会话中构建；对照当前 Lean 读过；尚无人审之记录。"
+    "zh": "Lean 4.29.1 实查（回执 priority-identification-checks/20261007T193051.511909Z，与 priority-identification-verification.json 同字节；模块 PracticalPriorityIdentification，引入 Std）：finite_agreement_without_global_identification 报 propext 与 Quot.sound。一会话构建；对当前 Lean 读过；尚无人审之记录。"
   },
   "next_delta": {
     "en": "The law on the spine beside the bounded score of the priority of basic conditions, and which evidence beyond pairwise agreement on finite samples, such as agreement on every sample a process can reach, identifies a lexical comparator.",

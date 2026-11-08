@@ -5,11 +5,11 @@
 
 [English](USES-EXAMPLES.md) · [首页](../../README.zh.md) · [一页](ONE-PAGE.zh.md) · [用途](USES.zh.md) · **实例** · [总览](THE-THEORY-OF-BECOMING.zh.md) · [八章（英文）](chapters/README.md) · [古文（第六章）](chapters/06-CLASSICAL-TEXTS.md) · [检验](../../TESTS.zh.md) · [对照表](results/atlas/CROSSWALK.zh.md) · [怎样长成](../LINEAGE.zh.md) · [术语表](../../GLOSSARY.zh.md) · [审查包](review/README.zh.md)
 
-*约四十七分钟至一小时读完，一次一个实例；[逐领域的那张表](USES.zh.md#field-by-field)在先。*
+*约四十七分钟至一小时一分钟读完，一次一个实例；[逐领域的那张表](USES.zh.md#field-by-field)在先。*
 
 *本页通向各章（第六章除外）与理论图的链接，都是英文页。*
 
-*由 AI 依其所链接的所属之处写成，2026 年 11 月 8 日；每一处重述都由 AI 读者与其所属之处核对过；尚无人审查它的记录。它与所属之处不一致时，以所属之处为准。这不是建议，也不是对任何实际系统的应用：见[用途页不做什么](USES.zh.md#what-this-page-does-not-do)。*
+*英文版于 2026 年 11 月 8 日由 AI 依其所链接的所属之处写成，每一处重述都由 AI 读者与其所属之处核对过；本页由 AI 译自英文版。尚无人审查二者的记录。与所属之处不一致时，以所属之处为准；译文以英文版为准。这不是建议，也不是对任何实际系统的应用：见[用途页不做什么](USES.zh.md#what-this-page-does-not-do)。*
 
 *引自英文所属之处的话，译成中文并标为（译文）；原文见[英文版](USES-EXAMPLES.md)。古文、第六章之名与条目自身的中文照原文引。*
 

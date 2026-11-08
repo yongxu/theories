@@ -133,7 +133,7 @@
    "to": "新名",
    "where": "在哪里、为什么",
    "folders_heading": "早先各文件夹后来如何",
-   "folders_intro": "对照表把十六个早先的理论文件夹与十二个思想领域对着现行之论来读：共 {total} 条，每一条都是 AI 的读法，尚无人审查的记录。它对一份随机样本的复核「estimates 82.6% holding, 14.2% with a label or role wrong and 3.2% with a wrong reading over all 1183」（估计全部 1183 条中 82.6% 成立，14.2% 标签或角色有误，3.2% 读法有误；[怎样核对的]({crosswalk})）。[文件夹索引]({index})给出每个文件夹的计数，[对照表]({crosswalk})给出每一条。*新读法*（fresh-reading）是说本论并不陈述这一联系，而是读者在那里提出它。",
+   "folders_intro": "对照表把十六个早先的理论文件夹与十二个思想领域对着现行之论来读：共 {total} 条，每一条都是 AI 的读法，尚无人审查它们的记录。它对一份随机样本的复核「estimates 82.6% holding, 14.2% with a label or role wrong and 3.2% with a wrong reading over all 1183」（估计全部 1183 条中 82.6% 成立，14.2% 标签或角色有误，3.2% 读法有误；[怎样核对的]({crosswalk})）。[文件夹索引]({index})给出每个文件夹的计数，[对照表]({crosswalk})给出每一条。*新读法*（fresh-reading）是说本论并不陈述这一联系，而是读者在那里提出它。",
    "papers_heading": "论文",
    "papers_intro": "为仓库之外的读者写的草稿，以及其中什么在现行之论里仍成立。[output/](../output/README.md) 中有什么，在那里说明。",
    "paper": "论文",
