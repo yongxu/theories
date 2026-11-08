@@ -1,0 +1,876 @@
+
+=== theories/becoming/results/atlas/entries/correspondences.json
+
+theories/becoming/results/atlas/entries/correspondences.json:4468
+    …    "en":
+  - "Scope and order held apart, and what would show T8 wrong: a mixed case argued better from every standpoint counting everything positively, with no further premise.
+  + "Scope and order held apart.
+  + T8's refuter is selections reading a course's draw and what ends with it selecting a draw beyond the renewal their readers depend on no less often than selections that do not; its former mixed-case refuter was withdrawn on 9 November 2026.
+    … The condition's scope, anything's continuation, is wider than the source's other life."
+
+theories/becoming/results/atlas/entries/correspondences.json:7175
+    … The source reads task-relevant evidence per cost, a comparison for a task that needs no ethics.
+  - The account keeps how courses differ apart from ranking them, which needs the continuation condition for scope and C for order, neither asserted, no warrant from outside sought.
+  + The account keeps how courses differ apart from ranking them, which rests on a named scope and order, most often the continuation condition and C, neither asserted, no warrant from outside sought.
+    … Its own model comparisons carry the like caution: one data set, one cycle of tasks.
+
+theories/becoming/results/atlas/entries/correspondences.json:7973
+    … A gate locates where change can enter and shows nothing of the change.
+  - Calling a structure good is a ranking, which needs the continuation condition for scope and C for order, neither asserted, no warrant from outside sought; and C reads widening of what can form, not mediation of writes.
+  + Calling a structure good is a ranking, which rests on a named scope and order, most often the continuation condition and C, neither asserted, no warrant from outside sought; and C reads widening of what can form, not mediation of writes.
+    … Its own nearest clause runs the other way: a change must be executable, whatever the disposition.
+
+theories/becoming/results/atlas/entries/correspondences.json:8001
+    …    "en":
+  - "That no dynamic is good or bad here, and the two readings any ranking of a substrate would be under, named."
+  + "That no dynamic is good or bad here, and that a ranking of a substrate names what it ranks under, most often the two readings."
+
+theories/becoming/results/atlas/entries/correspondences.json:9812
+    … The account's own 'narrowing' is of what a course admits, another reference: a prompt is not shown to narrow that.
+  - To call a narrowing worse needs the continuation condition for scope and C for order, neither asserted, no warrant from outside sought.
+  + To call a narrowing worse rests on a named scope and order, most often the continuation condition and C, neither asserted, no warrant from outside sought.
+    … [AI reading]"
+
+theories/becoming/results/atlas/entries/correspondences.json:11191
+    … Reading meaning so is mine.
+  - A loss needs the continuation condition for scope and C for order, neither asserted.
+  + A loss rests on a named scope and order, most often the continuation condition and C, neither asserted.
+    … [AI reading]"
+
+theories/becoming/results/atlas/entries/correspondences.json:12092
+    … So \"regardless of content\" is scoped: it depends on what one's own continuation holds, and where a course keeps something beyond, some such order reverses.
+  - Other rankings still need C, or another order, for order, with the continuation condition for scope, neither asserted, no warrant from outside sought.
+  + Other rankings still rest on C or another named order, with the continuation condition for scope, neither asserted, no warrant from outside sought.
+    … [AI reading]"
+
+theories/becoming/results/atlas/entries/correspondences.json:12994
+    … An evolved disposition, its normative warrant, its recognition and its preservation are different achievements; on the spine a response to another's loss enters
+  - No law says a loss is a harm: calling a course better needs the continuation condition for scope and C for order, neither asserted.
+  + No law says a loss is a harm: calling a course better rests on a named scope and order, most often the continuation condition and C, neither asserted.
+    … [AI reading]"
+
+theories/becoming/results/atlas/entries/correspondences.json:14310
+    … Obligation has its own home, conditionally: an empty plan set generates no duty.
+  - The source's 'should' is a ranking: that needs C (order) or another order, the continuation condition fixing whose losses count; neither asserted, no warrant from outside sought.
+  + The source's 'should' is a ranking: that rests on C (order) or another named order, the continuation condition fixing whose losses count; neither asserted, no warrant from outside sought.
+    … Draws are not software burden.
+
+theories/becoming/results/atlas/entries/correspondences.json:14779
+    … Natural-number amounts are used.
+  - What one course needs does not give the second-order direction of 生生."
+  + What one course needs does not give the second-order direction of widening."
+
+theories/becoming/results/atlas/entries/correspondences.json:15292
+    … Rules revised at every step can never complete, what its cooldown guards against: my step.
+  - A condition indispensable to one way of organizing is not thereby basic; any ranking there needs C, or another order, for order, with the continuation condition for scope, neither asserted.
+  + A condition indispensable to one way of organizing is not thereby basic; any ranking there rests on C or another named order, with the continuation condition for scope, neither asserted.
+    … Learning its own boundaries, and later savings, are not stated.
+
+theories/becoming/results/atlas/entries/correspondences.json:15907
+    … Natural-number amounts are used.
+  - What one course needs does not give the second-order direction of 生生."
+  + What one course needs does not give the second-order direction of widening."
+
+theories/becoming/results/atlas/entries/correspondences.json:16147
+    … "The rate table normalizes actual prices, which the account's wording keeps for economic relations, and human time stays a separate line, so no single unit is c
+  - What the account would ask is whose losses have no line: under the continuation condition (scope) every continuation's count; a ranking needs C (order) or another order; neither asserted, no warrant from outside sought, no law says a loss is a harm.
+  + What the account would ask is whose losses have no line: under the continuation condition (scope) every continuation's count; a ranking rests on C (order) or another named order; neither asserted, no warrant from outside sought, no law says a loss is a harm.
+    … Whether an actual AI system counts is not shown.
+
+theories/becoming/results/atlas/entries/correspondences.json:16374
+    … "The account begins from relations with no solver presupposed. 'Solved' has the form of a standard met or a task delivered, read against something supplied: mee
+  - Under the continuation condition, for scope, what a solution ends counts too; ranking it needs C, for order, or another order; neither asserted, no warrant from outside sought.
+  + Under the continuation condition, for scope, what a solution ends counts too; ranking it rests on C or another named order; neither asserted, no warrant from outside sought.
+    … The claim concerns humans and is not refuted here.
+
+theories/becoming/results/atlas/entries/correspondences.json:17259
+    … "A proposal, with no form in the account: the nearest live sentence, kept promises and enforced contracts as 'laws giving first: the law changes, not the state 
+  - Where the rest outruns the renewal one member's restraint decides nothing, but that is one member against the rest, not people at large. 'Good' and 'better' need C or another order, with the condition for scope, neither asserted, no warrant from outside sought.
+  + Where the rest outruns the renewal one member's restraint decides nothing, but that is one member against the rest, not people at large. 'Good' and 'better' rest on C or another named order, with the condition for scope, neither asserted, no warrant from outside sought.
+    … [AI reading]"
+
+theories/becoming/results/atlas/entries/correspondences.json:21441
+    … "Proposed here: no live text joins these to the claim.
+  - The nearest live move relocates alignment, not intelligence: a person, an AI system and a training process are formations within the unfolding, and alignment is first what each one's selections reach, with no ranking read (one would need C or another order, the continuation condition fixing scope, neither asserted).
+  + The nearest live move relocates alignment, not intelligence: a person, an AI system and a training process are formations within the unfolding, and alignment is first what each one's selections reach, with no ranking read (one would rest on C or another named order, the continuation condition fixing scope, neither asserted).
+    … One law scopes agency: a move is the part's own exactly where it is a policy of the part's configuration, and one course does not fix whose it is.
+
+theories/becoming/results/atlas/entries/correspondences.json:21897
+    … Method keeps real losses and conflict in.
+  - Calling either a pathology is a comparison, which needs the continuation condition for scope and C for order, neither asserted.
+  + Calling either a pathology is a comparison, which rests on a named scope and order, most often the continuation condition and C, neither asserted.
+    … [AI reading]"
+
+theories/becoming/results/atlas/entries/correspondences.json:22183
+    … "On 良知 the account records a divergence of standing:
+  - 阳明 states as a recognised fact what the theory holds under an unasserted condition (an order of courses would need C or another order too, neither asserted, no warrant from outside sought).
+  + 阳明 states as a recognised fact what the theory holds under an unasserted condition (an order of courses would rest on C or another named order too, neither asserted, no warrant from outside sought).
+    … It warns the source's marker of a risk: discounting each failed outcome as not real knowledge leaves nothing testable.
+
+theories/becoming/results/atlas/entries/correspondences.json:22787
+    … T8 once started from what acting presupposes.
+  - Rankings need C or another order, choices J1-J4.
+  + Rankings rest on C or another named order, choices J1-J4.
+    … [AI reading]"
+
+theories/becoming/results/atlas/entries/correspondences.json:23184
+    …      "en":
+  - "Not shown: that generation is better than keeping or degeneration: order is C or another named order, whose losses count needs the continuation condition."
+  + "Not shown: that generation is better than keeping or degeneration: order is C or another named order, whose losses count is the continuation condition's reading, narrower scopes counting particular ones."
+
+theories/becoming/results/atlas/entries/correspondences.json:23349
+    …    "en":
+  - "The first half is the account's starting point: a self acting for its own continuation presupposes that some continuation is counted, and T8 starts there, not from a wish.
+  + "The first half is where §4.6's separate P1–P4 argument starts: a self acting for its own continuation presupposes that some continuation is counted.
+  + T8 is the makers' offer and does not rest on that argument.
+    … The condition (scope) is that presupposition sub-true and invariant at every standpoint, which locates the contested step and answers nothing.
+
+theories/becoming/results/atlas/entries/correspondences.json:23504
+    … "The source holds this flat.
+  - The account's nearest statement, T8, is argued, for life, under two unasserted premises, the continuation condition for scope and C for order, with no verdict binding every possible mind.
+  - That one course keeps generating, rather than being merely wide now, is its open second-order direction.
+  + The account's nearest statement, T8, is the makers' offer for life, binding no one; the continuation condition and C belong to conditional comparisons, and keeping widening is a separate formal property.
+    … A finite balanced world has no course keeping widening by name.
+
+theories/becoming/results/atlas/entries/correspondences.json:23526
+    …      "en":
+  - "Open: the second-order direction of 生生, a comparison of a range whose widening keeps widening with one merely wider now, never reversing widening and counting neither novelty nor scale."
+  + "Open: the second-order direction of widening, a comparison of a range whose widening keeps widening with one merely wider now, never reversing widening and counting neither novelty nor scale."
+
+theories/becoming/results/atlas/entries/correspondences.json:23549
+    … "Theorem (World; witnesses): one level path eventually widens another where, from some step on, it widens it on every tail: first-order widening read on late ta
+  - It is not the second-order direction of 生生: a steady course eventually widens one that collapses, and it is silent on a lag."
+  + It is not the second-order direction of widening: a steady course eventually widens one that collapses, and it is silent on a lag."
+
+theories/becoming/results/atlas/entries/correspondences.json:30372
+    … "The account recasts likewise: what a course admits, and widening, defined with no premise.
+  - It denies the transfer: that the wider is better rests on C or another named order, whose losses count needs the continuation condition, neither asserted, no warrant from outside sought, and the definition carries no warrant.
+  + It denies the transfer: that the wider is better rests on C or another named order, whose losses count is the continuation condition's reading, narrower scopes counting particular ones, neither asserted, no warrant from outside sought, and the definition carries no warrant.
+    … On witnesses a widening stands below what it widens by a net weighting or a game's payoffs.
+
+theories/becoming/results/atlas/entries/correspondences.json:31251
+    …    "en":
+  - "Exact laws for each part, and none ranks the loss: that rests on C or another named order, and whose losses count needs the continuation condition, both unasserted, no warrant from outside sought.
+  + "Exact laws for each part, and none ranks the loss: that rests on C or another named order, and whose losses count is the continuation condition's reading, narrower scopes counting particular ones, both unasserted, no warrant from outside sought.
+    … A caution the source lacks: what is indispensable to one way of organization is not thereby basic, and a contribution is indispensable only where every admissib
+
+theories/becoming/results/atlas/entries/correspondences.json:31911
+    … A rise paid from beyond is exact, on a condition no member couples into.
+  - Whether the loss counts needs the continuation condition; any ranking, C.
+  + Whether the loss counts is the continuation condition's reading, narrower scopes counting particular ones; any ranking rests on C or another named order.
+    … Neither is asserted.
+
+theories/becoming/results/atlas/entries/correspondences.json:40343
+    … But mutual feeding is no warrant: mutual dependence is not mutual benefit, and in a mutually fed flow C's premise is self-concern's monotonicity, placed more na
+  - That restoring is better needs C, or another order, for order, scope the continuation condition, neither asserted, no warrant from outside sought.
+  + That restoring is better rests on C or another named order, scope the continuation condition, neither asserted, no warrant from outside sought.
+    … Whether any actual system is so fed is not shown.
+
+theories/becoming/results/atlas/entries/correspondences.json:42620
+    … It cannot yet tell the two by what shaping changes; capture and accountable revision part at a reader of the loss beyond the share, and a reform is judged by wh
+  - Ranking these courses needs C, or another order, for order and the continuation condition for scope, neither asserted, no warrant from outside sought.
+  + Ranking these courses rests on C or another named order and the continuation condition for scope, neither asserted, no warrant from outside sought.
+    … [AI reading]"
+
+theories/becoming/results/atlas/entries/correspondences.json:46408
+    … "Where a two-sided form holds exactly, and that drawn one member at a time either lock is left by drift, at a weight whose bound shrinks across the distance fro
+  - Neither side is called better: that needs C, or another order, for order and the continuation condition for scope, neither asserted, no warrant from outside sought."
+  + Neither side is called better: that rests on C or another named order and the continuation condition for scope, neither asserted, no warrant from outside sought."
+
+theories/becoming/results/atlas/entries/correspondences.json:46980
+    … No premise on what the pattern is or whether its going on is good.
+  - Not shown: that generation is better than keeping or degeneration; order is C or another named order, whose losses count needs the continuation condition."
+  + Not shown: that generation is better than keeping or degeneration; order is C or another named order, whose losses count is the continuation condition's reading, narrower scopes counting particular ones."
+
+theories/becoming/results/atlas/entries/correspondences.json:47725
+    …    "en":
+  - "Stability and a frozen source of law as one structure read from two sides, so that a test by marks cannot by itself give a verdict: that would need the continuation condition for scope and C for order, neither asserted."
+  + "Stability and a frozen source of law as one structure read from two sides, so that a test by marks cannot by itself give a verdict: that would rest on a named scope and order, most often the continuation condition and C, neither asserted."
+
+theories/becoming/results/atlas/entries/correspondences.json:47948
+    …    "en":
+  - "The preference for deformation, and that a shock's landing is uncontrolled; a preference among courses needs C, or another order, for order, with the continuation condition for scope, neither asserted.
+  + "The preference for deformation, and that a shock's landing is uncontrolled; a preference among courses rests on C or another named order, with the continuation condition for scope, neither asserted.
+    … Ren's own 2026-06-03 line that tragedy will wake people up sits against the draft's correction."
+
+theories/becoming/results/atlas/entries/correspondences.json:48638
+    … But a rule a course keeps moving under does not keep the possible widening, read for institutions and AI policy; in the renewable process no reading fixed by a 
+  - Calling this worse needs C, or another order, for order, with scope from the continuation condition, neither asserted, no warrant from outside sought.
+  + Calling this worse rests on C or another named order, with scope from the continuation condition, neither asserted, no warrant from outside sought.
+    … [AI reading]"
+
+theories/becoming/results/atlas/entries/correspondences.json:50500
+    … "Per-step growth, direction and continuing capacity kept apart; \"an expansion producing ever more novelty\" is not 生生.
+  - Ranking any of it needs C, or another order, for order and the condition for scope, neither asserted, no warrant from outside sought."
+  + Ranking any of it rests on C or another named order and the condition for scope, neither asserted, no warrant from outside sought."
+
+theories/becoming/results/atlas/entries/correspondences.json:50713
+    …    "en":
+  - "Three separate senses of connectedness, and that none yields concern for others without the step of invariance or the path of §4.6; any ranking takes C for order and the condition for scope, neither asserted, no warrant from outside sought."
+  + "Three separate senses of connectedness, none of which alone guarantees concern for others; other scopes can count particular others without the step of invariance or the path of §4.6, and each comparison names its order and scope, neither asserted, no warrant from outside sought."
+
+theories/becoming/results/atlas/entries/correspondences.json:50772
+    …    "en":
+  - "That the argument reaches only what returns to the self: losses returning to no one need the continuation condition, and any ranking beyond this case rests on C or another named order, neither asserted, no warrant from outside sought."
+  + "That the argument reaches only what returns to the self: the continuation condition counts every unreturned loss, narrower scopes particular ones, and any ranking beyond this case rests on C or another named order, neither asserted, no warrant from outside sought."
+
+theories/becoming/results/atlas/entries/correspondences.json:59471
+    … But a rule set by a given duty reads no loss either, and what a loop does not read does not change it; 18.25's regard for harm is what would. 07's P1 speaks of 
+  - In the ethics the condition fixes scope and C order, neither asserted, no warrant from outside sought; a ranking here needs C or a premise.
+  + In the ethics the condition fixes scope and C order, neither asserted, no warrant from outside sought; a ranking here rests on C or another named order.
+    … [AI reading]"
+
+theories/becoming/results/atlas/entries/correspondences.json:64618
+    … Divergence on ground: the land is God's and the people were freed from Egypt; the account reads no such owner or memory.
+  - Ranking a course with a jubilee above one without needs C, or another order, and the continuation condition for whose losses count, neither asserted, no warrant from outside sought.
+  + Ranking a course with a jubilee above one without rests on C or another named order, and the continuation condition for whose losses count, neither asserted, no warrant from outside sought.
+    … PLAN's seed 'rule changing without end' fits the holdings, not the jubilee's rule, which stays fixed.
+
+theories/becoming/results/atlas/entries/correspondences.json:65684
+    … "Renewal that responds to the rate through incentive, of which the model's liability, on shares and not output, is the nearest; a revenue curve; a moral verdict
+  - A ranking would need C, or another order, for order, and the continuation condition for whose losses count, neither asserted, no warrant from outside sought."
+  + A ranking would rest on C or another named order, and the continuation condition for whose losses count, neither asserted, no warrant from outside sought."
+
+theories/becoming/results/atlas/entries/correspondences.json:66438
+    … Who bears the absorbed harm, and whether it may be asked of the weak, the source debates and the law does not read.
+  - Ranking closing above keeping would need C, or another order, for order, with the continuation condition for scope, neither asserted, no warrant from outside sought."
+  + Ranking closing above keeping would rest on C or another named order, with the continuation condition for scope, neither asserted, no warrant from outside sought."
+
+theories/becoming/results/atlas/entries/correspondences.json:71915
+    …    "en":
+  - "That a goal can be right or wrong against a system's real welfare, a comparison the laws do not state: any ranking is under the continuation condition for scope and C for order, neither asserted.
+  + "That a goal can be right or wrong against a system's real welfare, a comparison the laws do not state: a ranking names its order and scope, most often C and the continuation condition, neither asserted.
+    … Also the confusion of effort with result, which no law addresses.
+
+theories/becoming/results/atlas/entries/correspondences.json:72458
+    … "Exact conditions, in models, for when a parameter decides and when a change is absorbed; six conditions read in CD §6, none ranked.
+  - Calling one intervention better would need C or another order for order, and the continuation condition for scope, neither asserted, no warrant from outside sought."
+  + Calling one intervention better would rest on C or another named order, and the continuation condition for scope, neither asserted, no warrant from outside sought."
+
+theories/becoming/results/atlas/entries/correspondences.json:74274
+    …      "en":
+  - "Not shown: that generation is better than keeping or degeneration: order is C or another named order, whose losses count needs the continuation condition.
+  + "Not shown: that generation is better than keeping or degeneration: order is C or another named order, whose losses count is the continuation condition's reading, narrower scopes counting particular ones.
+    … That passing, a reserve or a regulated level is good."
+
+theories/becoming/results/atlas/entries/correspondences.json:76455
+    …      "en":
+  - "Not shown: that generation is better than keeping or degeneration: order is C or another named order, whose losses count needs the continuation condition.
+  + "Not shown: that generation is better than keeping or degeneration: order is C or another named order, whose losses count is the continuation condition's reading, narrower scopes counting particular ones.
+    … Nor that the regions are decided at a point, or that renewal is generation."
+
+theories/becoming/results/atlas/entries/correspondences.json:77230
+    … The record's reading, the AI's: an escalation loop is the case where each party responds through its couplings and the difference returns to the part.
+  - No ranking of the flows is stated: order would need C or another order, and scope the continuation condition, neither asserted."
+  + No ranking of the flows is stated: order would rest on C or another named order, and scope the continuation condition, neither asserted."
+
+theories/becoming/results/atlas/entries/correspondences.json:77568
+    … "The transmission and ending laws joined on one flow.
+  - Not a ranking: the record says that a lineage ending with its whole is worse, or sequestration better, is not shown; ranking would need C or another order for order, with the continuation condition for scope, neither asserted, no warrant from outside sought."
+  + Not a ranking: the record says that a lineage ending with its whole is worse, or sequestration better, is not shown; ranking would rest on C or another named order, with the continuation condition for scope, neither asserted, no warrant from outside sought."
+
+theories/becoming/results/atlas/entries/correspondences.json:78491
+    … "The laws read every order rising with what couples in, not one objective, and at a mutual best response several optimizers stand as one of joint capacity.
+  - No law says which course to take: a ranking would need C, or another order, for order and the continuation condition for scope, neither asserted, no warrant from outside sought."
+  + No law says which course to take: a ranking would rest on C or another named order and the continuation condition for scope, neither asserted, no warrant from outside sought."
+
+theories/becoming/results/atlas/entries/correspondences.json:78558
+    … Neither says which formations it reaches, nor how much.
+  - Any ranking of the two flows would need C, or another order, for order and the continuation condition for scope, neither asserted, no warrant from outside sought."
+  + Any ranking of the two flows would rest on C or another named order and the continuation condition for scope, neither asserted, no warrant from outside sought."
+
+theories/becoming/results/atlas/entries/correspondences.json:79285
+    … "A reading names 'who holds the places from which the rule is read' as what could keep the readers' premise (02 section 9).
+  - Whether a course of few rulers is better or worse is not said: that needs C, or another order, for order and the continuation condition for scope, neither asserted, no warrant from outside sought."
+  + Whether a course of few rulers is better or worse is not said: that rests on C or another named order and the continuation condition for scope, neither asserted, no warrant from outside sought."
+
+theories/becoming/results/atlas/entries/correspondences.json:79928
+    … "Does not show 'That more options are better: among several choosers a wider menu can lower what each gets at the pure Nash equilibrium of one play.
+  - Whether a wider course of what can form can do the same is open; if one can, the witness stands against C there too, with the shape of T8's stated refuter.'"
+  + Whether a wider course of what can form can do the same is open; if one can, the witness stands against C there too, with the shape T8's refuter had until 9 November 2026.'"
+
+theories/becoming/results/atlas/entries/correspondences.json:79972
+    … Proposal only: neighbours are more takers needing renewers without bound, which 08 calls maintenance scaling, and D48's 'more waiting gives no more', a bound on
+  - D65 leaves contraction unranked, near his refusal of a verdict; any ranking needs C, or another order, for order and the continuation condition for scope, neither asserted, no warrant from outside sought.
+  + D65 leaves contraction unranked, near his refusal of a verdict; any ranking rests on C or another named order and the continuation condition for scope, neither asserted, no warrant from outside sought.
+    … [AI reading]"
+
+theories/becoming/results/atlas/entries/correspondences.json:80144
+    … "'No technical solution', mutual coercion as the remedy, and population as the subject, with the interior of the share-borne case.
+  - Asking the remedy or the population question here would need the continuation condition for scope and C for order, neither asserted, no warrant from outside sought."
+  + Asking the remedy or the population question here would rest on a named scope and order, most often the continuation condition and C, neither asserted, no warrant from outside sought."
+
+theories/becoming/results/atlas/entries/correspondences.json:81301
+    … A reading against one remedy: capability is a reason to pool, not to govern.
+  - Ranking the end needs C, or another order, for order, with the continuation condition for scope, neither asserted, no warrant from outside sought."
+  + Ranking the end rests on C or another named order, with the continuation condition for scope, neither asserted, no warrant from outside sought."
+
+theories/becoming/results/atlas/entries/correspondences.json:81371
+    … Selfishness and deception as traits; the displacement of humans in the title; the remedies.
+  - That these traits are undesirable is the source's comparison: no law here gives it, and a ranking would need C, or another order, with the continuation condition for scope, neither asserted, no warrant from outside sought."
+  + That these traits are undesirable is the source's comparison: no law here gives it, and a ranking would rest on C or another named order, with the continuation condition for scope, neither asserted, no warrant from outside sought."
+
+=== theories/becoming/results/atlas/entries/dynamics.json
+
+theories/becoming/results/atlas/entries/dynamics.json:1734
+    …     "en":
+  - "That a lineage ending with its whole is worse, or that sequestration is better: the counts read who leaves descendants; ranking goes through the comparison C or a premise in its place.",
+  + "That a lineage ending with its whole is worse, or that sequestration is better: the counts read who leaves descendants; a ranking holds the comparison C or another order.",
+
+theories/becoming/results/atlas/entries/dynamics.json:2349
+    … With the other group ended, a groupmate leaving five against one holding back leaving one makes the whole select against holding back (a witness): ending among 
+  - A ranking of these ends needs C or a premise in its place."
+  + A ranking of these ends rests on C or another named order."
+
+theories/becoming/results/atlas/entries/dynamics.json:2400
+    …     "en":
+  - "How groups form, or that keeping a condition is better: ending is read in the counts; ranking goes through the comparison C or a premise in its place.",
+  + "How groups form, or that keeping a condition is better: ending is read in the counts; a ranking holds the comparison C or another order.",
+
+theories/becoming/results/atlas/entries/dynamics.json:3570
+    …     "en":
+  - "The improvement of a principal's utility is not reached; it needs a ranking of courses, so C or a premise in its place.",
+  + "The improvement of a principal's utility is not reached; it needs a ranking of courses, under C or another named order.",
+
+theories/becoming/results/atlas/entries/dynamics.json:3740
+    …     "en":
+  - "That the beyond's fall is a harm, or that keeping is better: no evaluation enters; ranking courses needs C or a premise in its place.",
+  + "That the beyond's fall is a harm, or that keeping is better: no evaluation enters; a ranking of courses rests on C or another named order.",
+
+theories/becoming/results/atlas/entries/dynamics.json:6933
+    …     "en":
+  - "That capture by counted choices is a loss or a gain: no evaluation enters, and ranking courses needs C or a premise in its place.",
+  + "That capture by counted choices is a loss or a gain: no evaluation enters, and a ranking of courses rests on C or another named order.",
+
+theories/becoming/results/atlas/entries/dynamics.json:7144
+    …     "en":
+  - "That actual conventions, scripts or the theory's own terms form by hearing in this way, or whether a shared, imposed or kept code supports or damages 生生.",
+  + "That actual conventions, scripts or the theory's own terms form by hearing in this way, or whether a shared, imposed or kept code keeps or closes 生生, the continuation of life.",
+
+theories/becoming/results/atlas/entries/dynamics.json:9814
+    …     "en":
+  - "That giving, a window or any law of giving is better: that is asked under the ethics' two premises, the continuation condition for scope and C for order.",
+  + "That giving, a window or any law of giving is better: that is ranked only under the two readings 07 names, the continuation condition for scope and C for order.",
+
+theories/becoming/results/atlas/entries/dynamics.json:9883
+    …     "en":
+  - "That any law of giving is better: that is asked under the ethics' two premises, the continuation condition for scope and C for order.",
+  + "That any law of giving is better: that is ranked only under the two readings 07 names, the continuation condition for scope and C for order.",
+
+theories/becoming/results/atlas/entries/dynamics.json:10104
+    …     "en":
+  - "That giving or keeping is better: the laws count levels and lines, and a ranking is asked under the ethics' two premises, the continuation condition for scope and C for order.",
+  + "That giving or keeping is better: the laws count levels and lines, and a ranking is asked only under the two readings 07 names, the continuation condition for scope and C for order.",
+
+theories/becoming/results/atlas/entries/dynamics.json:11323
+    …     "en":
+  - "That growth relative to what is held is better or is the direction of 生生: ranking needs C or a premise in its place, and the reading of 生生不息 here is an AI reading.",
+  + "That growth relative to what is held is better or is what 生生 asks: a ranking rests on C or another named order, and the reading of 生生不息 here is an AI reading.",
+
+theories/becoming/results/atlas/entries/dynamics.json:12347
+    …     "en":
+  - "That growth relative to what is held is better or is the direction of 生生: ranking needs C or a premise in its place, and the reading of 生生不息 here is an AI reading.",
+  + "That growth relative to what is held is better or is what 生生 asks: a ranking rests on C or another named order, and the reading of 生生不息 here is an AI reading.",
+
+theories/becoming/results/atlas/entries/dynamics.json:12355
+    …     "en":
+  - "The second-order direction of 生生: a comparison of a range whose widening keeps widening with one merely wider now, never reversing widening and counting neither novelty nor scale.
+  + "The second-order direction of widening: a comparison of a range whose widening keeps widening with one merely wider now, never reversing widening and counting neither novelty nor scale.
+    … Eventual widening, first-order widening read on late tails, does not give it.",
+
+theories/becoming/results/atlas/entries/dynamics.json:12486
+    …     "en":
+  - "A comparison of two courses: no law here compares two, so the second-order direction of 生生 stays open and eventual widening's lag stays undecided.",
+  + "A comparison of two courses: no law here compares two, so the second-order direction of widening stays open and eventual widening's lag stays undecided.",
+
+theories/becoming/results/atlas/entries/dynamics.json:12502
+    …     "en":
+  - "The second-order direction of 生生: a comparison of a range whose widening keeps widening with one merely wider now, never reversing widening and counting neither novelty nor scale.
+  + "The second-order direction of widening: a comparison of a range whose widening keeps widening with one merely wider now, never reversing widening and counting neither novelty nor scale.
+    … Eventual widening, first-order widening read on late tails, does not give it.",
+
+theories/becoming/results/atlas/entries/dynamics.json:13547
+    …     "en":
+  - "That coming to rest supports or damages 生生.",
+  + "That coming to rest keeps or closes 生生, the continuation of life.",
+
+theories/becoming/results/atlas/entries/dynamics.json:14259
+    …     "en":
+  - "That actual conventions, scripts or the theory's own terms form by hearing in this way, or whether a shared, imposed or kept code supports or damages 生生.",
+  + "That actual conventions, scripts or the theory's own terms form by hearing in this way, or whether a shared, imposed or kept code keeps or closes 生生, the continuation of life.",
+
+theories/becoming/results/atlas/entries/dynamics.json:14896
+    … Renewal without end and growth relative to what is held are different relations: on the rule raised at every step and on the copying tower every moment ceases w
+  - Growth relative to what is held is not growth of the whole possible, and a ranking needs C or a premise in its place."
+  + Growth relative to what is held is not growth of the whole possible, and a ranking rests on C or another named order."
+
+theories/becoming/results/atlas/entries/dynamics.json:14935
+    …     "en":
+  - "That growth relative to what is held is better or is the direction of 生生: ranking needs C or a premise in its place, and the reading of 生生不息 here is an AI reading.",
+  + "That growth relative to what is held is better or is what 生生 asks: a ranking rests on C or another named order, and the reading of 生生不息 here is an AI reading.",
+
+theories/becoming/results/atlas/entries/dynamics.json:15711
+    …     "en":
+  - "That keeping the carriers is better: the counts read the share; ranking goes through the comparison C or a premise in its place.",
+  + "That keeping the carriers is better: the counts read the share; a ranking holds the comparison C or another order.",
+
+=== theories/becoming/results/records/a-swap-symmetric-assignment-singles-out-none.json
+
+theories/becoming/results/records/a-swap-symmetric-assignment-singles-out-none.json:126
+    …       "sha256":
+  - "52dea6f431eca625528743deef1a1f915d9aa342760a402c02682380a3fc11c2"
+  + "ec432c1f47a05d39a5d9ca87aea7f52f54e3972360ca9fbb7080ef51c10d8673"
+
+=== theories/becoming/results/records/capture-by-counted-choices.json
+
+theories/becoming/results/records/capture-by-counted-choices.json:393
+    …       "sha256":
+  - "ac9edda48204a39b7526803ec185fdeb710eea14981808e7ff02970758234585"
+  + "000f40dbb71f7e36018f4ad468133723bc97f499780185980c7639cd9c643982"
+
+=== theories/becoming/results/records/central-laws-over-every-exchange.json
+
+theories/becoming/results/records/central-laws-over-every-exchange.json:307
+    …       "sha256":
+  - "921fce5dfbe0c31b633a575d7bd5cfea5000997a2af866f8d8a36587c1f65936"
+  + "590695164d22f152b6fff291542001bb977f093a040bd5f90f54cf60c07137b1"
+
+=== theories/becoming/results/records/comparing-two-courses-on-what-they-admit.json
+
+theories/becoming/results/records/comparing-two-courses-on-what-they-admit.json:400
+    …       "en":
+  - "That widening with a lag, or the tail order, is the second-order direction of 生生: widening with a lag compares by what each keeps of the other's admissions over time.", 
+      "zh":
+  - "带滞后的扩大或尾序即生生的二阶方向：带滞后的扩大按各自随时间保有对方所纳者而比较。
+  + "That widening with a lag, or the tail order, is the second-order direction of widening: widening with a lag compares by what each keeps of the other's admissions over time.", 
+      "zh":
+  + "带滞后的扩大或尾序即扩大的二阶方向：带滞后的扩大按各自随时间保有对方所纳者而比较。
+    … ",
+
+theories/becoming/results/records/comparing-two-courses-on-what-they-admit.json:918
+    …       "sha256":
+  - "9287f9ae11e217bc802f3f9c9a60236417cd581f187820ae16cedf4ef6788ffe"
+  + "58a1264eadb4438f512993f76eebcc076f6bd2be8a5408b147ecd02b0654d4b9"
+
+theories/becoming/results/records/comparing-two-courses-on-what-they-admit.json:1014
+  +     }, 
+    { 
+      "en":
+  + "9 November 2026, board item WB: 'the second-order direction of 生生' re-said as the second-order direction of widening, since 生生 is read as the continuation of life and widening is not its measure; no change to the claim, its hypotheses or its Lean.", 
+      "zh":
+  + "2026 年 11 月 9 日，工作板条目 WB：「生生的二阶方向」改说为扩大的二阶方向，因生生读作生命之延续，扩大不是它的尺度；
+  + 主张、假设与 Lean 皆不变。
+  + "
+
+=== theories/becoming/results/records/comparing-two-courses-on-what-they-admit.md
+
+theories/becoming/results/records/comparing-two-courses-on-what-they-admit.md:65
+  - - That widening with a lag, or the tail order, is the second-order direction of 生生: widening with a lag compares by what each keeps of the other's admissions over time.
+  + - That widening with a lag, or the tail order, is the second-order direction of widening: widening with a lag compares by what each keeps of the other's admissions over time.
+
+theories/becoming/results/records/comparing-two-courses-on-what-they-admit.md:158
+  + - 9 November 2026, board item WB: 'the second-order direction of 生生' re-said as the second-order direction of widening, since 生生 is read as the continuation of life and widening is not its measure; no change to the claim, its hypotheses or its Lean.
+
+=== theories/becoming/results/records/comparison-by-widening.json
+
+theories/becoming/results/records/comparison-by-widening.json:184
+    … The AI's reading: widening reads “leads to more futures”, possibilities being what can form next; what can form now is the generative space, and where a part wi
+  - “Flourishes/plurality” is read by widening (an AI reading), plurality an aspect not yet measured; widening compares the direction of 生生, which is generation generating generation (D1, D22).
+  + “Flourishes/plurality” is read by widening (an AI reading), plurality an aspect not yet measured; widening compares what can form;
+  + 生生 is read since 9 November 2026 as the continuation of life, not as widening (D1).
+    … The condition fixes which admissions count, and C read as widening orders them (an AI reading).",
+
+theories/becoming/results/records/comparison-by-widening.json:682
+  +     }, 
+    { 
+      "en":
+  + "9 November 2026, board item WB: 'the second-order direction of 生生' re-said as the second-order direction of widening, since 生生 is read as the continuation of life and widening is not its measure; no change to the claim, its hypotheses or its Lean.", 
+      "zh":
+  + "2026 年 11 月 9 日，工作板条目 WB：「生生的二阶方向」改说为扩大的二阶方向，因生生读作生命之延续，扩大不是它的尺度；
+  + 主张、假设与 Lean 皆不变。
+  + "
+
+=== theories/becoming/results/records/comparison-by-widening.md
+
+theories/becoming/results/records/comparison-by-widening.md:77
+    … The AI's reading: widening reads “leads to more futures”, possibilities being what can form next; what can form now is the generative space, and where a part wi
+  - “Flourishes/plurality” is read by widening (an AI reading), plurality an aspect not yet measured; widening compares the direction of 生生, which is generation generating generation (D1, D22).
+  + “Flourishes/plurality” is read by widening (an AI reading), plurality an aspect not yet measured; widening compares what can form;
+  + 生生 is read since 9 November 2026 as the continuation of life, not as widening (D1).
+    … The condition fixes which admissions count, and C read as widening orders them (an AI reading).
+
+theories/becoming/results/records/comparison-by-widening.md:162
+  + - 9 November 2026, board item WB: 'the second-order direction of 生生' re-said as the second-order direction of widening, since 生生 is read as the continuation of life and widening is not its measure; no change to the claim, its hypotheses or its Lean.
+
+=== theories/becoming/results/records/constancy-read-at-a-members-class.json
+
+theories/becoming/results/records/constancy-read-at-a-members-class.json:338
+    …       "sha256":
+  - "9287f9ae11e217bc802f3f9c9a60236417cd581f187820ae16cedf4ef6788ffe"
+  + "58a1264eadb4438f512993f76eebcc076f6bd2be8a5408b147ecd02b0654d4b9"
+
+=== theories/becoming/results/records/drawn-shaping-drawn-one-at-a-time.json
+
+theories/becoming/results/records/drawn-shaping-drawn-one-at-a-time.json:285
+    …       "sha256":
+  - "23381ea5e427954f45a25e5e5b9346c6c224430205682daaa26d43bc12549d9e"
+  + "42401793f7563f30fcfcb853a337feac8a620aec38df59e68a1cd444c6c3dba2"
+
+=== theories/becoming/results/records/eventual-widening.json
+
+theories/becoming/results/records/eventual-widening.json:14
+    … 近乎定义；
+  - 生生的二阶方向仍未定。
+  + 扩大的二阶方向仍未定。
+    … "
+
+theories/becoming/results/records/eventual-widening.json:246
+    …       "en":
+  - "The second-order direction of 生生, a range whose widening keeps widening compared with one merely wider now: eventual widening needs no growth (a steady course eventually widens one that collapses) and is silent on a lag.
+  + "The second-order direction of widening, a range whose widening keeps widening compared with one merely wider now: eventual widening needs no growth (a steady course eventually widens one that collapses) and is silent on a lag.
+    … It stays open, and the study names what a next attempt needs.", 
+      "zh":
+    … It stays open, and the study names what a next attempt needs.", 
+      "zh":
+  - "生生的二阶方向，即扩大持续扩大的范围与仅当下更宽者之比较：最终扩大无需增长（稳定的进程最终扩大崩溃者），且对滞后不置一词。
+  + "扩大的二阶方向，即扩大持续扩大的范围与仅当下更宽者之比较：最终扩大无需增长（稳定的进程最终扩大崩溃者），且对滞后不置一词。
+    … 它仍未定，研究列出下一次尝试所需。
+
+theories/becoming/results/records/eventual-widening.json:632
+    …       "sha256":
+  - "9287f9ae11e217bc802f3f9c9a60236417cd581f187820ae16cedf4ef6788ffe"
+  + "58a1264eadb4438f512993f76eebcc076f6bd2be8a5408b147ecd02b0654d4b9"
+
+theories/becoming/results/records/eventual-widening.json:700
+  +     }, 
+    { 
+      "en":
+  + "9 November 2026, board item WB: 'the second-order direction of 生生' re-said as the second-order direction of widening, since 生生 is read as the continuation of life and widening is not its measure; no change to the claim, its hypotheses or its Lean.", 
+      "zh":
+  + "2026 年 11 月 9 日，工作板条目 WB：「生生的二阶方向」改说为扩大的二阶方向，因生生读作生命之延续，扩大不是它的尺度；
+  + 主张、假设与 Lean 皆不变。
+  + "
+
+=== theories/becoming/results/records/eventual-widening.md
+
+theories/becoming/results/records/eventual-widening.md:48
+  - - The second-order direction of 生生, a range whose widening keeps widening compared with one merely wider now: eventual widening needs no growth (a steady course eventually widens one that collapses) and is silent on a lag.
+  + - The second-order direction of widening, a range whose widening keeps widening compared with one merely wider now: eventual widening needs no growth (a steady course eventually widens one that collapses) and is silent on a lag.
+    … It stays open, and the study names what a next attempt needs.
+
+theories/becoming/results/records/eventual-widening.md:129
+  + - 9 November 2026, board item WB: 'the second-order direction of 生生' re-said as the second-order direction of widening, since 生生 is read as the continuation of life and widening is not its measure; no change to the claim, its hypotheses or its Lean.
+
+=== theories/becoming/results/records/exit-from-a-margin.json
+
+theories/becoming/results/records/exit-from-a-margin.json:276
+    …       "sha256":
+  - "ac9edda48204a39b7526803ec185fdeb710eea14981808e7ff02970758234585"
+  + "000f40dbb71f7e36018f4ad468133723bc97f499780185980c7639cd9c643982"
+
+=== theories/becoming/results/records/finite-agreement-does-not-identify-priority.json
+
+theories/becoming/results/records/finite-agreement-does-not-identify-priority.json:149
+    …       "sha256":
+  - "9287f9ae11e217bc802f3f9c9a60236417cd581f187820ae16cedf4ef6788ffe"
+  + "58a1264eadb4438f512993f76eebcc076f6bd2be8a5408b147ecd02b0654d4b9"
+
+=== theories/becoming/results/records/loss-read-in-time-by-the-others.json
+
+theories/becoming/results/records/loss-read-in-time-by-the-others.json:424
+    …       "sha256":
+  - "a509fe9ddaac4ab9bb93e314431b2a4a8b8fbbe0719bbd60e82e0cfa5c4c82a6"
+  + "13450638e187ea42954ee4499995a64eb7cda102228410d87bc5d081049389c4"
+
+=== theories/becoming/results/records/one-root-to-its-edge.json
+
+theories/becoming/results/records/one-root-to-its-edge.json:271
+    …       "sha256":
+  - "e1373ab42bc85f92a1718a743ced7fbb5eb16a2c9fee6a25393cf855a0344408",
+  + "149dbd42ec4fc3cdeb56488086a0add46b410711960c204f33142f062a233a71",
+
+=== theories/becoming/results/records/positive-ground-open-futures.json
+
+theories/becoming/results/records/positive-ground-open-futures.json:658
+  +     }, 
+    { 
+      "en":
+  + "9 November 2026, board item WB: 'the second-order direction of 生生' re-said as the second-order direction of widening, since 生生 is read as the continuation of life and widening is not its measure; no change to the claim, its hypotheses or its Lean.", 
+      "zh":
+  + "2026 年 11 月 9 日，工作板条目 WB：「生生的二阶方向」改说为扩大的二阶方向，因生生读作生命之延续，扩大不是它的尺度；
+  + 主张、假设与 Lean 皆不变。
+  + "
+
+theories/becoming/results/records/positive-ground-open-futures.json:688
+    …       "en":
+  - "**Living significance: every living claim has significance from every standpoint; on a frame, realized living content falls under the relevance read from significance.** It gives significance, not a positive valence, and the readings of `living` do not include further generation; the direction of 生生 is read separately, by widening what can form (D1).
+  + "**Living significance: every living claim has significance from every standpoint; on a frame, realized living content falls under the relevance read from significance.** It gives significance, not a positive valence, and the readings of `living` do not include further generation;
+  + 生生, the continuation of life, is read separately (D1).
+    … The \"positive\" of this result's positive ground is the relevance parameter of living significance, not a valence that living significance supplies.
+
+=== theories/becoming/results/records/positive-ground-open-futures.md
+
+theories/becoming/results/records/positive-ground-open-futures.md:14
+  - **Living significance: every living claim has significance from every standpoint; on a frame, realized living content falls under the relevance read from significance.** It gives significance, not a positive valence, and the readings of `living` do not include further generation; the direction of 生生 is read separately, by widening what can form (D1).
+  + **Living significance: every living claim has significance from every standpoint; on a frame, realized living content falls under the relevance read from significance.** It gives significance, not a positive valence, and the readings of `living` do not include further generation;
+  + 生生, the continuation of life, is read separately (D1).
+    … The "positive" of this result's positive ground is the relevance parameter of living significance, not a valence that living significance supplies.
+
+theories/becoming/results/records/positive-ground-open-futures.md:159
+  + - 9 November 2026, board item WB: 'the second-order direction of 生生' re-said as the second-order direction of widening, since 生生 is read as the continuation of life and widening is not its measure; no change to the claim, its hypotheses or its Lean.
+
+=== theories/becoming/results/records/reach-past-ones-own-end.json
+
+theories/becoming/results/records/reach-past-ones-own-end.json:192
+    …       "sha256":
+  - "9287f9ae11e217bc802f3f9c9a60236417cd581f187820ae16cedf4ef6788ffe"
+  + "58a1264eadb4438f512993f76eebcc076f6bd2be8a5408b147ecd02b0654d4b9"
+
+=== theories/becoming/results/records/reach-through-a-shared-condition.json
+
+theories/becoming/results/records/reach-through-a-shared-condition.json:183
+    …       "sha256":
+  - "9287f9ae11e217bc802f3f9c9a60236417cd581f187820ae16cedf4ef6788ffe"
+  + "58a1264eadb4438f512993f76eebcc076f6bd2be8a5408b147ecd02b0654d4b9"
+
+=== theories/becoming/results/records/readers-drawn-from-the-selected.json
+
+theories/becoming/results/records/readers-drawn-from-the-selected.json:326
+    …       "sha256":
+  - "a509fe9ddaac4ab9bb93e314431b2a4a8b8fbbe0719bbd60e82e0cfa5c4c82a6"
+  + "13450638e187ea42954ee4499995a64eb7cda102228410d87bc5d081049389c4"
+
+=== theories/becoming/results/records/self-concern-and-c-under-the-condition.json
+
+theories/becoming/results/records/self-concern-and-c-under-the-condition.json:240
+    …       "sha256":
+  - "9287f9ae11e217bc802f3f9c9a60236417cd581f187820ae16cedf4ef6788ffe",
+  + "58a1264eadb4438f512993f76eebcc076f6bd2be8a5408b147ecd02b0654d4b9",
+
+=== theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.json
+
+theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.json:325
+    …       "sha256":
+  - "a509fe9ddaac4ab9bb93e314431b2a4a8b8fbbe0719bbd60e82e0cfa5c4c82a6"
+  + "13450638e187ea42954ee4499995a64eb7cda102228410d87bc5d081049389c4"
+
+=== theories/becoming/results/records/shaping-selected-among-groups.json
+
+theories/becoming/results/records/shaping-selected-among-groups.json:246
+    …       "sha256":
+  - "23381ea5e427954f45a25e5e5b9346c6c224430205682daaa26d43bc12549d9e"
+  + "42401793f7563f30fcfcb853a337feac8a620aec38df59e68a1cd444c6c3dba2"
+
+=== theories/becoming/results/records/significance-through-a-common-condition.json
+
+theories/becoming/results/records/significance-through-a-common-condition.json:186
+    …       "sha256":
+  - "9287f9ae11e217bc802f3f9c9a60236417cd581f187820ae16cedf4ef6788ffe"
+  + "58a1264eadb4438f512993f76eebcc076f6bd2be8a5408b147ecd02b0654d4b9"
+
+=== theories/becoming/results/records/tasks-and-what-performs-them.json
+
+theories/becoming/results/records/tasks-and-what-performs-them.json:846
+    …       "sha256":
+  - "9287f9ae11e217bc802f3f9c9a60236417cd581f187820ae16cedf4ef6788ffe"
+  + "58a1264eadb4438f512993f76eebcc076f6bd2be8a5408b147ecd02b0654d4b9"
+
+=== theories/becoming/results/records/the-class-of-being-joined.json
+
+theories/becoming/results/records/the-class-of-being-joined.json:226
+    …       "sha256":
+  - "9287f9ae11e217bc802f3f9c9a60236417cd581f187820ae16cedf4ef6788ffe"
+  + "58a1264eadb4438f512993f76eebcc076f6bd2be8a5408b147ecd02b0654d4b9"
+
+=== theories/becoming/results/records/the-continuation-condition-on-the-root.json
+
+theories/becoming/results/records/the-continuation-condition-on-the-root.json:171
+    …       "sha256":
+  - "9287f9ae11e217bc802f3f9c9a60236417cd581f187820ae16cedf4ef6788ffe"
+  + "58a1264eadb4438f512993f76eebcc076f6bd2be8a5408b147ecd02b0654d4b9"
+
+=== theories/becoming/results/records/what-a-course-keeps-reachable.json
+
+theories/becoming/results/records/what-a-course-keeps-reachable.json:364
+    …       "en":
+  - "That the lagged order, the lexical order or any order here is the second-order direction of 生生 or ranks a course better: a ranking rests on C or another named order, and the lag's verdict, which C leaves open, or a rule of precedence is a further premise.", 
+      "zh":
+  - "滞后之序、字典序或此处任一序即生生的二阶方向或把进程排得更好：排序者持 C 或别一种次序，而 C 不定之滞后判定或优先之规则是又一前提。
+  + "That the lagged order, the lexical order or any order here is the second-order direction of widening or ranks a course better: a ranking rests on C or another named order, and the lag's verdict, which C leaves open, or a rule of precedence is a further premise.", 
+      "zh":
+  + "滞后之序、字典序或此处任一序即扩大的二阶方向或把进程排得更好：排序者持 C 或别一种次序，而 C 不定之滞后判定或优先之规则是又一前提。
+    … ",
+
+theories/becoming/results/records/what-a-course-keeps-reachable.json:949
+    …       "sha256":
+  - "9287f9ae11e217bc802f3f9c9a60236417cd581f187820ae16cedf4ef6788ffe"
+  + "58a1264eadb4438f512993f76eebcc076f6bd2be8a5408b147ecd02b0654d4b9"
+
+theories/becoming/results/records/what-a-course-keeps-reachable.json:1005
+  +     }, 
+    { 
+      "en":
+  + "9 November 2026, board item WB: 'the second-order direction of 生生' re-said as the second-order direction of widening, since 生生 is read as the continuation of life and widening is not its measure; no change to the claim, its hypotheses or its Lean.", 
+      "zh":
+  + "2026 年 11 月 9 日，工作板条目 WB：「生生的二阶方向」改说为扩大的二阶方向，因生生读作生命之延续，扩大不是它的尺度；
+  + 主张、假设与 Lean 皆不变。
+  + "
+
+=== theories/becoming/results/records/what-a-course-keeps-reachable.md
+
+theories/becoming/results/records/what-a-course-keeps-reachable.md:69
+  - - That the lagged order, the lexical order or any order here is the second-order direction of 生生 or ranks a course better: a ranking rests on C or another named order, and the lag's verdict, which C leaves open, or a rule of precedence is a further premise.
+  + - That the lagged order, the lexical order or any order here is the second-order direction of widening or ranks a course better: a ranking rests on C or another named order, and the lag's verdict, which C leaves open, or a rule of precedence is a further premise.
+
+theories/becoming/results/records/what-a-course-keeps-reachable.md:175
+  + - 9 November 2026, board item WB: 'the second-order direction of 生生' re-said as the second-order direction of widening, since 生生 is read as the continuation of life and widening is not its measure; no change to the claim, its hypotheses or its Lean.
+
+=== theories/becoming/results/records/what-a-line-holds-and-a-regularity-takes-in.json
+
+theories/becoming/results/records/what-a-line-holds-and-a-regularity-takes-in.json:290
+    …       "sha256":
+  - "9287f9ae11e217bc802f3f9c9a60236417cd581f187820ae16cedf4ef6788ffe"
+  + "58a1264eadb4438f512993f76eebcc076f6bd2be8a5408b147ecd02b0654d4b9"
+
+=== theories/becoming/results/records/what-can-be-born-next.json
+
+theories/becoming/results/records/what-can-be-born-next.json:388
+    …       "en":
+  - "Which course is better: with every continuation's losses counted the reading is on both together, where C ranks no two courses from the empty set; ordering them needs a measure, beyond C and the condition.
+  + "Which course is better: with every continuation's losses counted the reading is on both together, where C ranks no two courses from the empty set; widening alone does not settle them, and a further judgment names its criterion and who holds it, beyond C and the condition.
+    … AI readings.", 
+      "zh":
+    … "何历程更好：计每一相续之所失，则兼读二者，C 于此不排任何二自空集起之历程；
+  - 排之需度量，在 C 与条件之外。
+  + 单凭扩大不能定之，进一步之判断须指名其准则与持有者，在 C 与条件之外。
+    … 皆 AI 之读。
+
+theories/becoming/results/records/what-can-be-born-next.json:768
+    …       "sha256":
+  - "9287f9ae11e217bc802f3f9c9a60236417cd581f187820ae16cedf4ef6788ffe"
+  + "58a1264eadb4438f512993f76eebcc076f6bd2be8a5408b147ecd02b0654d4b9"
+
+theories/becoming/results/records/what-can-be-born-next.json:796
+  +     }, 
+    { 
+      "en":
+  + "9 November 2026, board item WB: the non-implication on ordering two courses re-said as 07 §2 now says it: widening alone does not settle them, and a further judgment names its criterion and who holds it, not necessarily a measure; no change to the claim, its hypotheses or its Lean.", 
+      "zh":
+  + "2026 年 11 月 9 日，工作板条目 WB：关于为二历程排序之非蕴涵，依第七章 §2 今之说法改述：单凭扩大不能定之，进一步之判断须指名其准则与持有者，未必是度量；
+  + 主张、假设与 Lean 皆不变。
+  + "
+
+=== theories/becoming/results/records/what-can-be-born-next.md
+
+theories/becoming/results/records/what-can-be-born-next.md:81
+  - - Which course is better: with every continuation's losses counted the reading is on both together, where C ranks no two courses from the empty set; ordering them needs a measure, beyond C and the condition.
+  + - Which course is better: with every continuation's losses counted the reading is on both together, where C ranks no two courses from the empty set; widening alone does not settle them, and a further judgment names its criterion and who holds it, beyond C and the condition.
+    … AI readings.
+
+theories/becoming/results/records/what-can-be-born-next.md:151
+  + - 9 November 2026, board item WB: the non-implication on ordering two courses re-said as 07 §2 now says it: widening alone does not settle them, and a further judgment names its criterion and who holds it, not necessarily a measure; no change to the claim, its hypotheses or its Lean.
+
+=== theories/becoming/results/records/what-keeping-widening-needs.json
+
+theories/becoming/results/records/what-keeping-widening-needs.json:480
+    …       "en":
+  - "A comparison of two courses: no law here compares two, so the second-order direction of 生生 stays open and eventual widening's lag stays undecided.", 
+      "zh":
+  - "两个进程之比较：此处无一律比较两者，故生生的二阶方向仍未定，最终扩大之滞后仍未决。
+  + "A comparison of two courses: no law here compares two, so the second-order direction of widening stays open and eventual widening's lag stays undecided.", 
+      "zh":
+  + "两个进程之比较：此处无一律比较两者，故扩大的二阶方向仍未定，最终扩大之滞后仍未决。
+    … ",
+
+theories/becoming/results/records/what-keeping-widening-needs.json:1088
+    …       "sha256":
+  - "9287f9ae11e217bc802f3f9c9a60236417cd581f187820ae16cedf4ef6788ffe"
+  + "58a1264eadb4438f512993f76eebcc076f6bd2be8a5408b147ecd02b0654d4b9"
+
+theories/becoming/results/records/what-keeping-widening-needs.json:1210
+  +     }, 
+    { 
+      "en":
+  + "9 November 2026, board item WB: 'the second-order direction of 生生' re-said as the second-order direction of widening, since 生生 is read as the continuation of life and widening is not its measure; no change to the claim, its hypotheses or its Lean.", 
+      "zh":
+  + "2026 年 11 月 9 日，工作板条目 WB：「生生的二阶方向」改说为扩大的二阶方向，因生生读作生命之延续，扩大不是它的尺度；
+  + 主张、假设与 Lean 皆不变。
+  + "
+
+=== theories/becoming/results/records/what-keeping-widening-needs.md
+
+theories/becoming/results/records/what-keeping-widening-needs.md:70
+  - - A comparison of two courses: no law here compares two, so the second-order direction of 生生 stays open and eventual widening's lag stays undecided.
+  + - A comparison of two courses: no law here compares two, so the second-order direction of widening stays open and eventual widening's lag stays undecided.
+
+theories/becoming/results/records/what-keeping-widening-needs.md:170
+  + - 9 November 2026, board item WB: 'the second-order direction of 生生' re-said as the second-order direction of widening, since 生生 is read as the continuation of life and widening is not its measure; no change to the claim, its hypotheses or its Lean.
+
+=== theories/becoming/results/records/what-leaves-a-class-follows-its-line.json
+
+theories/becoming/results/records/what-leaves-a-class-follows-its-line.json:172
+    …       "sha256":
+  - "9287f9ae11e217bc802f3f9c9a60236417cd581f187820ae16cedf4ef6788ffe"
+  + "58a1264eadb4438f512993f76eebcc076f6bd2be8a5408b147ecd02b0654d4b9"
+
+=== theories/becoming/results/records/what-would-give-c.json
+
+theories/becoming/results/records/what-would-give-c.json:551
+    …       "sha256":
+  - "9287f9ae11e217bc802f3f9c9a60236417cd581f187820ae16cedf4ef6788ffe"
+  + "58a1264eadb4438f512993f76eebcc076f6bd2be8a5408b147ecd02b0654d4b9"
+
+theories/becoming/results/records/what-would-give-c.json:556
+    …       "sha256":
+  - "e1373ab42bc85f92a1718a743ced7fbb5eb16a2c9fee6a25393cf855a0344408"
+  + "149dbd42ec4fc3cdeb56488086a0add46b410711960c204f33142f062a233a71"
+
+=== theories/becoming/results/records/when-holding-for-a-reading-stands-above-a-route.json
+
+theories/becoming/results/records/when-holding-for-a-reading-stands-above-a-route.json:293
+    …       "sha256":
+  - "9287f9ae11e217bc802f3f9c9a60236417cd581f187820ae16cedf4ef6788ffe"
+  + "58a1264eadb4438f512993f76eebcc076f6bd2be8a5408b147ecd02b0654d4b9"
+
+=== theories/becoming/results/records/when-no-route-stands-above-a-revision.json
+
+theories/becoming/results/records/when-no-route-stands-above-a-revision.json:267
+    …       "sha256":
+  - "9287f9ae11e217bc802f3f9c9a60236417cd581f187820ae16cedf4ef6788ffe"
+  + "58a1264eadb4438f512993f76eebcc076f6bd2be8a5408b147ecd02b0654d4b9"
+
+=== theories/becoming/results/records/where-the-possible-grows.json
+
+theories/becoming/results/records/where-the-possible-grows.json:328
+    …       "en":
+  - "That growth relative to what is held is better or is the direction of 生生: a ranking rests on C or another named order, and the reading of 生生不息 here is an AI reading.", 
+      "zh":
+  - "相对于所持守者之增长更好或即生生之方向：排序者持 C 或别一种次序，此处对生生不息之读为 AI 之读。
+  + "That growth relative to what is held is better or is what 生生 asks: a ranking rests on C or another named order, and the reading of 生生不息 here is an AI reading.", 
+      "zh":
+  + "相对于所持守者之增长更好或即生生之所求：排序者持 C 或别一种次序，此处对生生不息之读为 AI 之读。
+    … ",
+
+theories/becoming/results/records/where-the-possible-grows.json:732
+    …       "sha256":
+  - "9287f9ae11e217bc802f3f9c9a60236417cd581f187820ae16cedf4ef6788ffe"
+  + "58a1264eadb4438f512993f76eebcc076f6bd2be8a5408b147ecd02b0654d4b9"
+
+theories/becoming/results/records/where-the-possible-grows.json:788
+  +     }, 
+    { 
+      "en":
+  + "9 November 2026, board item WB: 'the second-order direction of 生生' re-said as the second-order direction of widening, since 生生 is read as the continuation of life and widening is not its measure; no change to the claim, its hypotheses or its Lean.", 
+      "zh":
+  + "2026 年 11 月 9 日，工作板条目 WB：「生生的二阶方向」改说为扩大的二阶方向，因生生读作生命之延续，扩大不是它的尺度；
+  + 主张、假设与 Lean 皆不变。
+  + "
+
+=== theories/becoming/results/records/where-the-possible-grows.md
+
+theories/becoming/results/records/where-the-possible-grows.md:79
+  - - That growth relative to what is held is better or is the direction of 生生: a ranking rests on C or another named order, and the reading of 生生不息 here is an AI reading.
+  + - That growth relative to what is held is better or is what 生生 asks: a ranking rests on C or another named order, and the reading of 生生不息 here is an AI reading.
+
+theories/becoming/results/records/where-the-possible-grows.md:168
+  + - 9 November 2026, board item WB: 'the second-order direction of 生生' re-said as the second-order direction of widening, since 生生 is read as the continuation of life and widening is not its measure; no change to the claim, its hypotheses or its Lean.
