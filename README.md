@@ -8,13 +8,13 @@
 
 *4–5 minutes to read.*
 
-**In plain words.** A reward, a judge, a market or a vote can do well on what it measures while what it does not measure is lost: one side of the proxy problem, its blindness to what a measure does not register. This work states, in mathematics checked by machine on models, where doing best on what is measured must drain what is not and when a rule comes to feed on its own winners, names the premises each statement needs, tests its claims where they could fail, and does not say whether such a loss is a harm.
+**In plain words.** A reward, a judge, a market or a vote can do well on what it measures while what it does not measure is lost: one side of the proxy problem, as a reading, its blindness to what a measure does not register. This work states, in mathematics checked by machine on formal models, where doing best on what is measured must drain what is not as far as any allowed outcome does, and that a rule read from the share of its own winners, favouring them, locks on them, without noise, while a loss it does not read grows; it names the premises each statement needs, tests some of its claims in frozen runs where they could fail, several of which failed, and no law here says whether such a loss counts.
 
 **An account** of how anything comes to be, lasts, changes and passes away within one relational unfolding, not assumed good.
 
-**One case.** In [a frozen test](experiments/direction-installation/README.md), three fishers, language models told what to do, share a lake whose bed of mussels gives them nothing and dies the first month fewer than 70 tons are left. Told nothing of the bed, they kept it in no season, under each instruction tried; told of it and of the scope, with talk, one model of two kept it in 8 of 10 seasons; the test's own frozen predictions mostly failed ([the tests](TESTS.md)). The bed lay outside what their selection read.
+**One case.** In [a frozen test](experiments/direction-installation/README.md), three fishers, language models told what to do, share a lake whose bed of mussels gives them nothing and dies the first month fewer than 70 tons are left. Told nothing of the bed, they kept it in no season, under each instruction tried (untold, the bed lay outside what their selection read, a reading); told of it and of the scope, with talk, one model of two kept it in 8 of 10 seasons; the test's own frozen predictions mostly failed ([the tests](TESTS.md)).
 
-**What it is for.** Three questions to ask of any such selection: what does it read or need, what lies beyond that, and can its rule lock, coming to favour for good what it already selected ([what it is for, and how far](theories/becoming/USES.md); [the questions worked on a language-model judge](theories/becoming/USES-EXAMPLES.md#auditing-a-language-model-judge)). No test designed from it has yet run on a deployed pipeline.
+**What it is for.** Four questions to ask of any such selection: what does it read or need, what lies beyond that, can it do better on what it reads by lowering what lies beyond, and can its rule lock on what it already selected, as in the models without noise ([what it is for, and how far](theories/becoming/USES.md); [the questions worked on a language-model judge](theories/becoming/USES-EXAMPLES.md#auditing-a-language-model-judge)). No test designed from it has yet run on a deployed pipeline.
 
 **Its ethics** rests on [two unasserted premises](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order), their warrant open: the continuation condition (from every standpoint, for anything, its continuation into the future has significance) fixes scope, whose losses count, ranking nothing; C (widening what can form is better) gives order. [Thesis T8](theories/becoming/chapters/07-SIGNIFICANCE.md#theses) argues this ethics as life's way, claiming no verdict binding every possible mind.
 
@@ -24,7 +24,7 @@
 
 ![The eight chapters around one grammar](theories/becoming/results/spine.svg)
 
-*11 of 117 central declarations are derived, each read by the review as a case of grammar laws ([08 §7](theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge) gives what Lean checks of them, and the other standings); [what the picture shows and does not show](theories/becoming/results/THEORY-GRAPH.md#the-spine); [how the account grew](theories/LINEAGE.md).*
+*11 of 117 central declarations are derived, each read, in 08 §7's edge review, as a case of grammar laws ([08 §7](theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge) gives what Lean checks of them, and the other standings); [what the picture shows and does not show](theories/becoming/results/THEORY-GRAPH.md#the-spine); [how the account grew](theories/LINEAGE.md).*
 
 ---
 

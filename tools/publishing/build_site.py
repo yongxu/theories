@@ -137,7 +137,8 @@ class Links:
         if alias:
             target, _, a2 = alias.partition('#')
             anchor = a2 or anchor
-        if target == page:
+        lines = bool(query) or bool(re.fullmatch(r'L\d+(-L\d+)?', anchor))  # a line of a file: only GitHub shows it
+        if target == page and not lines:
             self.internal.append((page, page, anchor))
             return '#' + anchor if anchor else posixpath.basename(out_path(page))
         if target in SPECIAL:
@@ -147,7 +148,6 @@ class Links:
             self.counts['untracked'] += 1
             self.untracked.append((page, href))
             return None
-        lines = bool(query) or bool(re.fullmatch(r'L\d+(-L\d+)?', anchor))  # a line of a file: only GitHub shows it
         if target in self.dirs and posixpath.join(target, 'README.md') in self.pages:
             target = posixpath.join(target, 'README.md')
         if target in self.pages and not lines:
@@ -631,6 +631,22 @@ def records(root=ROOT):
     return out
 
 
+def section_text(text, anchor):
+    """The section of a Markdown page whose heading has this anchor, to the next heading of its level or higher."""
+    lines = text.split('\n')
+    for k, line in enumerate(lines):
+        h = re.match(r'^(#{1,6})\s+(.*?)(?:\s+#+)?\s*$', line)
+        if h and reading_catalogue.slug(h.group(2)) == anchor:
+            level, out = len(h.group(1)), [line]
+            for nxt in lines[k + 1:]:
+                h2 = re.match(r'^(#{1,6})\s', nxt)
+                if h2 and len(h2.group(1)) <= level:
+                    break
+                out.append(nxt)
+            return '\n'.join(out)
+    raise SiteError('site.ways_in names a section the page lacks: #' + anchor)
+
+
 def first_screen(readme: str) -> str:
     """README's generated first screen: from its status line (README's title, generated comment and navigation line left
     out, since the site has its own) to the opening's heading."""
@@ -678,6 +694,8 @@ def edition(page_path, pages):
         other = page_path[:-3] + '.zh.md'
     else:
         return None
+    if other == 'README.md':  # README's English edition is the site's home
+        return 'index.html'
     return other if other in pages else None
 
 
@@ -718,6 +736,8 @@ def home_body(cfg, links, recs, root):
             if w.get('time_until'):  # the part a reader is sent to: up to the named heading line
                 assert w['time_until'] in text, ('site.ways_in times up to a heading the page lacks', target, w['time_until'])
                 text = text.split(w['time_until'], 1)[0]
+            elif '#' in target:  # a card to one section: that section, to the next heading of its level or higher
+                text = section_text(text, target.split('#', 1)[1])
             time = navigation.reading_time(text) + (f", {w['time_note']}" if w.get('time_note') else '')
         href = target if target in SPECIAL else links.resolve(target, 'README.md')
         if href is None:
@@ -772,10 +792,11 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
     for p in pages:
         if not p.endswith('.md'):
             raise SiteError('site.pages lists Markdown pages only: ' + p)
-    links = Links(set(pages), assets, files, dirs, cfg['repository'], commit, cfg.get('aliases'))
-    links.private = private
     from tools.research import connection_map
     map_ok = bool(cfg.get('map'))
+    aliases = {k: v for k, v in (cfg.get('aliases') or {}).items() if map_ok or v != MAP_PAGE}  # no link to an unbuilt map
+    links = Links(set(pages), assets, files, dirs, cfg['repository'], commit, aliases)
+    links.private = private
     if map_ok and not hasattr(connection_map, 'site_map'):
         raise SiteError('site.map is on, and this checkout\'s connection_map has no site mode (site_map)')
     if not map_ok:  # no link to a map this build does not write
@@ -786,7 +807,8 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
     if out.exists():
         shutil.rmtree(out)
     (out / 'assets').mkdir(parents=True)
-    shutil.copy(pathlib.Path(__file__).with_name('site.css'), out / 'assets' / 'site.css')
+    shutil.copyfile(pathlib.Path(__file__).with_name('site.css'), out / 'assets' / 'site.css')
+    (out / 'assets' / 'site.css').chmod(0o644)
     built = {}
     for p in pages:
         page = Page(p, (root / p).read_text(), links, recs)

@@ -217,6 +217,50 @@ class SiteTests(unittest.TestCase):
         self.assertIn('<a class="picture" href="pic.svg"', opening)
         self.assertIn('<title>Truth exists · T</title>', opening)  # a page with no h1 takes its first heading
 
+    def test_a_record_on_the_site_gets_its_mark_there(self):
+        (self.tmp / 'theories/becoming/results/records/closed-capture.md').write_text('# Closed capture\n')
+        self.files.add('theories/becoming/results/records/closed-capture.md')
+        self.build(pages=SITE['pages'] + ['theories/becoming/results/records/closed-capture.md'])
+        self.assertIn('class="mark mark-recorded-checked" href="../../theories/becoming/results/records/closed-capture.html"',
+                      self.page('a/chapters/02-MAP.html'))
+
+    def test_a_page_linking_itself_and_its_own_lines(self):
+        (self.tmp / 'a/ONE.md').write_text(ONE + '\n[This page](ONE.md), [its lines](ONE.md#L3-L5), [plain](ONE.md?plain=1#L2).\n')
+        self.build()
+        one = self.page('a/ONE.html')
+        self.assertIn('<a href="ONE.html">This page</a>', one)
+        self.assertIn(f'href="https://github.com/o/r/blob/{COMMIT}/a/ONE.md#L3-L5"', one)
+        self.assertIn(f'href="https://github.com/o/r/blob/{COMMIT}/a/ONE.md?plain=1#L2"', one)
+
+    def test_cards_grouped_in_their_order_and_files_readable(self):
+        self.build(ways_in=[{'path': 'a/ONE.md', 'label': 'One', 'text': 'x', 'group': 'Read'},
+                            {'path': 'a/OPENING.md', 'label': 'Open', 'text': 'y', 'group': 'Check'},
+                            {'path': 'a/chapters/README.md', 'label': 'Ch', 'text': 'z', 'group': 'Read'}])
+        home = self.page('index.html')
+        self.assertLess(home.index('<h3 class="group">Read</h3>'), home.index('<h3 class="group">Check</h3>'))
+        self.assertEqual(home.count('<h3 class="group">'), 2)
+        self.assertLess(home.index('>Ch<'), home.index('<h3 class="group">Check</h3>'))  # a group keeps its cards together
+        self.assertEqual((self.out / 'assets/site.css').stat().st_mode & 0o777, 0o644)
+
+    def test_the_chinese_readme_goes_back_to_the_home(self):
+        (self.tmp / 'README.zh.md').write_text('# 中文\n\n中文的首页。\n')
+        self.files.add('README.zh.md')
+        self.build(pages=SITE['pages'] + ['README.zh.md'], nav=[['index.html', 'Home'], ['README.zh.md', '中文']],
+                   nav_zh=[['index.html', '首页'], ['a/ONE.md', 'English']])
+        self.assertIn('<a href="index.html">English</a>', self.page('README.zh.html'))
+
+    def test_a_card_to_a_section_times_the_section(self):
+        (self.tmp / 'a/ONE.md').write_text(ONE.replace('## What it is', '## What it is\n\nShort.\n\n## Long part\n\n' + 'word ' * 600 + '\n\n## After', 1))
+        self.build(ways_in=[{'path': 'a/ONE.md#what-it-is', 'label': 'Part', 'text': 'x'}])
+        self.assertIn('<span class="time">a minute</span>', self.page('index.html'))
+
+    def test_with_the_map_off_its_links_stay_off_the_site(self):
+        (self.tmp / 'a/ONE.md').write_text(ONE + '\nSee [the map](../map.html).\n')
+        self.files.add('map.html')
+        self.build(aliases=dict(SITE['aliases'], **{'map.html': 'connections.html'}))
+        self.assertNotIn('connections.html', self.page('a/ONE.html'))
+        self.assertIn(f'https://github.com/o/r/blob/{COMMIT}/map.html', self.page('a/ONE.html'))
+
     def test_a_card_times_its_part(self):
         with self.assertRaises(AssertionError):
             self.build(ways_in=[{'path': 'a/ONE.md', 'label': 'One page', 'text': 'x', 'time_until': '## No such part'}])
@@ -255,6 +299,9 @@ class RepositoryConfigTests(unittest.TestCase):
             self.assertTrue(target in site.SPECIAL or target in pages, target)
         for w in cfg['ways_in']:
             self.assertTrue(w['path'] in site.SPECIAL or (ROOT / w['path'].split('#')[0]).is_file(), w['path'])
+            self.assertTrue(w.get('group'), 'a card with no group adds a list without a heading: ' + w['path'])
+        for source, target in cfg.get('aliases', {}).items():
+            self.assertTrue(target.split('#')[0] in site.SPECIAL or target.split('#')[0] in pages, (source, target))
 
     def test_patterns_stay_in_one_folder(self):
         files = {'a/x.md', 'a/b/y.md', 'a/README.md'}
