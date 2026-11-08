@@ -1766,8 +1766,8 @@
      "private": false
     },
     {
-     "path": "AGENTS.md",
-     "locator": "## The ethics (line 30)",
+     "path": "_process/history/2026-11-09-instructions/AGENTS-before-within-becoming.md",
+     "locator": "## The ethics (line 30), the working rules as they stood until 9 November 2026",
      "quote": "nothing that reads no order entails C (`Becoming.ReadsNoOrder.not_entails`), and deriving C from a weaker premise is open work.",
      "private": false
     }
