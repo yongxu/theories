@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 764" width="900" height="764" role="img" aria-labelledby="standings-title standings-desc" font-family="'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif">
+<title id="standings-title">117 项核心声明与文法之律</title>
+<desc id="standings-desc">每个方块是一项核心声明，即覆盖文件的某一行列为核心的一个 Lean 陈述，按其相对于根之边的地位排列（08 §7）。12 项被读作在文法上陈述之律的情形；其余或为计数，位于文法以下，或处于一个指明的距离，各有其理由。</desc>
+<rect x="0.5" y="0.5" width="899" height="763" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
+<text x="24" y="40" font-size="22" font-weight="bold" text-anchor="start" fill="#1c1917">117 项核心声明与文法之律</text>
+<text x="24" y="64" font-size="14" text-anchor="start" fill="#57534e">每个方块是一项核心声明，即覆盖文件的某一行列为核心的一个 Lean 陈述，按其相对于根之边的地位排列</text>
+<text x="24" y="82" font-size="14" text-anchor="start" fill="#57534e">（08 §7）。12 项被读作在文法上陈述之律的情形；其余或为计数，位于文法以下，或处于一个指明的距离，各</text>
+<text x="24" y="100" font-size="14" text-anchor="start" fill="#57534e">有其理由。</text>
+<rect x="24" y="136" width="12" height="12" rx="1.5" fill="#1c1917" stroke="#57534e" stroke-width="0.6"/>
+<rect x="39" y="136" width="12" height="12" rx="1.5" fill="#1c1917" stroke="#57534e" stroke-width="0.6"/>
+<rect x="54" y="136" width="12" height="12" rx="1.5" fill="#1c1917" stroke="#57534e" stroke-width="0.6"/>
+<rect x="69" y="136" width="12" height="12" rx="1.5" fill="#1c1917" stroke="#57534e" stroke-width="0.6"/>
+<rect x="84" y="136" width="12" height="12" rx="1.5" fill="#1c1917" stroke="#57534e" stroke-width="0.6"/>
+<rect x="99" y="136" width="12" height="12" rx="1.5" fill="#1c1917" stroke="#57534e" stroke-width="0.6"/>
+<rect x="114" y="136" width="12" height="12" rx="1.5" fill="#1c1917" stroke="#57534e" stroke-width="0.6"/>
+<rect x="129" y="136" width="12" height="12" rx="1.5" fill="#1c1917" stroke="#57534e" stroke-width="0.6"/>
+<rect x="144" y="136" width="12" height="12" rx="1.5" fill="#1c1917" stroke="#57534e" stroke-width="0.6"/>
+<rect x="159" y="136" width="12" height="12" rx="1.5" fill="#1c1917" stroke="#57534e" stroke-width="0.6"/>
+<rect x="174" y="136" width="12" height="12" rx="1.5" fill="#1c1917" stroke="#57534e" stroke-width="0.6"/>
+<text x="286" y="147" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">11 项推导而得</text>
+<text x="286" y="165" font-size="14" text-anchor="start" fill="#57534e">各为文法之律的一个情形，经由在 Lean 中作为等价核验的桥接</text>
+<text x="286" y="183" font-size="14" text-anchor="start" fill="#1c1917">例如 Flow.beyond_gives_nothing：闭包之外的在任何一步都不向闭包所需的条件给予</text>
+<rect x="24" y="206" width="12" height="12" rx="1.5" fill="#57534e" stroke="#57534e" stroke-width="0.6"/>
+<text x="286" y="217" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">1 项在一个所述的假设之下</text>
+<text x="286" y="235" font-size="14" text-anchor="start" fill="#57534e">根形式 RootForms.outside_leaves_no_offspring 的一步</text>
+<text x="286" y="253" font-size="14" text-anchor="start" fill="#1c1917">例如 GroupEnding.Flow.all_end：一个共同条件不留下可供组间选择的组</text>
+<rect x="24" y="276" width="12" height="12" rx="1.5" fill="#a8a29e" stroke="#57534e" stroke-width="0.6"/>
+<rect x="39" y="276" width="12" height="12" rx="1.5" fill="#a8a29e" stroke="#57534e" stroke-width="0.6"/>
+<rect x="54" y="276" width="12" height="12" rx="1.5" fill="#a8a29e" stroke="#57534e" stroke-width="0.6"/>
+<rect x="69" y="276" width="12" height="12" rx="1.5" fill="#a8a29e" stroke="#57534e" stroke-width="0.6"/>
+<rect x="84" y="276" width="12" height="12" rx="1.5" fill="#a8a29e" stroke="#57534e" stroke-width="0.6"/>
+<rect x="99" y="276" width="12" height="12" rx="1.5" fill="#a8a29e" stroke="#57534e" stroke-width="0.6"/>
+<text x="286" y="287" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">6 项为计数</text>
+<text x="286" y="305" font-size="14" text-anchor="start" fill="#57534e">位于文法以下</text>
+<text x="286" y="323" font-size="14" text-anchor="start" fill="#1c1917">例如 RelativePosition.rise_needs_fall：一个部分升需要另一部分降</text>
+<line x1="24" y1="340" x2="876" y2="340" stroke="#e7e5e4"/>
+<text x="24" y="360" font-size="16" font-weight="bold" text-anchor="start" fill="#1c1917">99 项处于一个指明的距离，各有其理由</text>
+<rect x="24" y="376" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="39" y="376" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="54" y="376" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="69" y="376" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="84" y="376" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="99" y="376" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="114" y="376" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="129" y="376" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="144" y="376" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="159" y="376" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="174" y="376" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="189" y="376" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="204" y="376" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="219" y="376" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="234" y="376" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="249" y="376" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="24" y="391" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="39" y="391" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="54" y="391" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="69" y="391" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="84" y="391" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="99" y="391" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<text x="286" y="387" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">22 项相连</text>
+<text x="286" y="405" font-size="14" text-anchor="start" fill="#57534e">达到文法之律，却未被宣告为其中某一条的情形</text>
+<rect x="24" y="424" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="39" y="424" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="54" y="424" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="69" y="424" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="84" y="424" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="99" y="424" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="114" y="424" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="129" y="424" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="144" y="424" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="159" y="424" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="174" y="424" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="189" y="424" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="204" y="424" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="219" y="424" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="234" y="424" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="249" y="424" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="24" y="439" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="39" y="439" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="54" y="439" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="69" y="439" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="84" y="439" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="99" y="439" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="114" y="439" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="129" y="439" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="144" y="439" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="159" y="439" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="174" y="439" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="189" y="439" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="204" y="439" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="219" y="439" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="234" y="439" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="249" y="439" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<text x="286" y="435" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">32 项陈述中有平衡</text>
+<text x="286" y="453" font-size="14" text-anchor="start" fill="#1c1917">例如 Flow.no_new_dependence：世系不形成新的依存</text>
+<rect x="24" y="472" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="39" y="472" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="54" y="472" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="69" y="472" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="84" y="472" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="99" y="472" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="114" y="472" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="129" y="472" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="144" y="472" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="159" y="472" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="174" y="472" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="189" y="472" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="204" y="472" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="219" y="472" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="234" y="472" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="249" y="472" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="24" y="487" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="39" y="487" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<text x="286" y="483" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">18 项依于数量</text>
+<rect x="24" y="514" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="39" y="514" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="54" y="514" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="69" y="514" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="84" y="514" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="99" y="514" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="114" y="514" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="129" y="514" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="144" y="514" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="159" y="514" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="174" y="514" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="189" y="514" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="204" y="514" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="219" y="514" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="234" y="514" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="249" y="514" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<text x="286" y="525" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">16 项在一个被表示的模型上</text>
+<text x="286" y="543" font-size="14" text-anchor="start" fill="#57534e">是表示，不是推导</text>
+<rect x="24" y="562" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="39" y="562" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="54" y="562" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="69" y="562" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="84" y="562" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="99" y="562" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<text x="286" y="573" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">6 项在其自身的载体上</text>
+<rect x="24" y="592" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="39" y="592" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<text x="286" y="603" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">2 项为其模型之律</text>
+<rect x="24" y="622" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="39" y="622" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="54" y="622" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<text x="286" y="633" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">3 项保持意义为自由</text>
+<text x="286" y="651" font-size="14" text-anchor="start" fill="#57534e">如第七章所意图</text>
+<text x="24" y="678" font-size="12.5" text-anchor="start" fill="#57534e">指明的距离说的是一项声明为何不被读作文法之律的情形；根之边的记录并不表明有距离就是缺口或失败。伦理的两个前提，</text>
+<text x="24" y="694" font-size="12.5" text-anchor="start" fill="#57534e">定范围的延续条件与定次序的 C，不在其中：二者都不在根之边上。</text>
+<text x="24" y="714" font-size="12.5" text-anchor="start" fill="#57534e">由 tools/research/spine.py 依 shared-laws.json 与 spine.json 生成；每项声明及其理由，见根之边的记录</text>
+<text x="24" y="730" font-size="12.5" text-anchor="start" fill="#57534e">（one-root-to-its-edge）。</text>
+</svg>
