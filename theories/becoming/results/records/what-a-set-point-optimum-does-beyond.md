@@ -80,7 +80,7 @@
 - Anything over a horizon or under noise: every law is of one step or of supplied courses, and deterministic; under noise a set point on later states makes reserves worth holding, so a rising drive on stores can return.
 - Which optimum is taken where several stand at the set point; the optima where none reaches it and some stand above, or in an exchange at or above it beyond the witnesses.
 - Conflicting set points, or optimizers read off an exchange: several share one set point, their eligible outcomes supplied; terms counted after are lexicographic, a weighted term trading against the set point (Topped.weighted_keeps).
-- That the beyond's fall is a harm, or that keeping is better: no evaluation enters; a ranking of courses holds C or another order.
+- That the beyond's fall is a harm, or that keeping is better: no evaluation enters; ranking courses needs C or a premise in its place.
 - **Counterexample:** The set point alone does not protect: from a store at its set point, the step exchanging nothing and the step taking a unit of the source and losing it are both optima of the order by distance, the first meeting the dweller's need and the second not (Topped.nearing_either). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SetPointOptimum.lean)
 - **Counterexample:** Counted after the set point, the beyond is maximized in total, not at each condition: of two ways of reaching the set point, every optimum empties a condition beyond that the even way keeps (Spread.counted_after_empties). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SetPointOptimum.lean)
 - **Counterexample:** A nearing order can drive the drain at its set point: with less source counted after, every optimum leaves the source below the dweller's need (Topped.counted_less_drains). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SetPointOptimum.lean)
@@ -149,7 +149,6 @@ Aliases: `What a set-point optimum does beyond what couples in`, `设定点最�
 - 25 October 2026: added (UE1b), what an order with a set point does beyond what couples in: the drain below the set point, the draw at it, and joint excess for holders with no choice in that law; the three general laws of the exchange moved into Becoming.Optimum (board rule 9); reviewed independently and re-checked; study section 415.
 - 29 October 2026, board item UE16 (study section 449): related to risk-minimization-on-a-shared-renewal; no statement, next step or declaration changed.
 - 7 November 2026, board item AA: the atlas's readers found a witness stated generally, and a ranking of courses said to need C alone, where it needs C or a premise in its place (07 §4); corrected against the Lean and the later records.
-- 9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.
 
 </details>
 

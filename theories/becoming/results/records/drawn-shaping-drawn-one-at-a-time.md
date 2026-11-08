@@ -36,7 +36,7 @@
 - Sampled generations with selection (Wright-Fisher), readers who learn, and counts that accumulate instead of being drawn (ChoiceCountCapture).
 - That risk dominance decides which state one member arising fixes more often: the two can part under strong selection. Witness: `Becoming.DrawnReplacement.Strong.other_first`.
 - That the base and the part shared by all leave which state fixes more often alone: they move no critical mass, yet they decide it. Witness: `Becoming.DrawnReplacement.Weak.shared_decides`.
-- That leaving a lock by drift is better or worse than keeping it: a ranking of courses holds C or another order.
+- That leaving a lock by drift is better or worse than keeping it: ranking courses needs C or a premise in its place.
 - **Counterexample:** Risk dominance does not decide which state one member arising fixes more often: with five members, a = 1, c = 9, hi = 20, lo = 0, the shapers are risk dominant and one other still fixes with more weight than one shaper (Strong.other_first); with a = 100 or p = 99 the order turns (Weak.shapers_first, Weak.shared_decides). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnReplacement.lean)
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
@@ -90,7 +90,6 @@ Aliases: `The critical mass, drawn one member at a time`, `临界量，逐一而
 
 - 3 November 2026, board item AJ8 (study section 503): added: DrawnShaping's stag hunt read as 04's replacement chain with weights read from the count; both exits bounded across the distance from the critical mass; risk dominance in counts and a witness where the Moran criterion parts from it.
 - 7 November 2026, board item LM1: this said ranking needs C, where a ranking of courses needs C or a premise in its place (07 §4); corrected. No law, premise or proof changed.
-- 9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.
 
 </details>
 

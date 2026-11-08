@@ -79,7 +79,7 @@
 - A tightening by dissipation: on the lineage's own family it leaves no inflow, the case dissipated on that born_within_stock treats, and Displacement, dissipated on its whole family, attains the response and selection laws.
 - A balanced-on form of Entropy's stock law, which born_within_inflow re-derives on its list (the Entropy owner's decision); born_within_stock stays beside it, neither placement of the offspring deriving the other.
 - That actual populations meet exact transmission of offspring number or the per-member bounds; soft selection is a reading of Displacement, not a theorem.
-- That any pace, amount or lineage is better: no evaluation enters, and a ranking holds C or another order.
+- That any pace, amount or lineage is better: no evaluation enters, and ranking needs C or a premise in its place.
 - **Counterexample:** The natural statement fails: in a family closed, balanced and dissipated on, gaining nothing, the carriers' share rises from a half to the whole at constant size two, and the response law with the inflow into the whole or into the population's own lineage in place of the carried inflow fails (Displacement.natural_fails). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionPace.lean)
 - **Counterexample:** The bound with the same step's inflow fails even with offspring number inherited (Inherited.same_step_fails); without inheritance the next-step variant fails too (Displacement.spread_needs_inheritance). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionPace.lean)
 - **Counterexample:** Without parents standing at most m, or with the population shrinking, the response law fails (Uncapped.uncapped, Shrink.shrink). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionPace.lean)
@@ -147,7 +147,6 @@ Aliases: `The pace of selection, within what flows into the lineages carrying an
 - 25 October 2026: added (UE5), the first candidate of UE0's audit of third parts: the natural statement false, the pace bounded by what flows into the carrying lineages, a third part against Price and Fisher, yes and weak; study section 416.
 - 26 October 2026, board item DF1b (study section 422): Nei (1971) and Felsenstein (1971) cited as the two works they are, as the correspondence does.
 - 7 November 2026, board item LM1: this said ranking needs C, where a ranking of courses needs C or a premise in its place (07 §4); corrected. No law, premise or proof changed.
-- 9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.
 
 </details>
 

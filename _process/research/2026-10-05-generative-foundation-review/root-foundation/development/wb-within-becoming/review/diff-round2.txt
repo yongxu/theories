@@ -1,0 +1,990 @@
+
+=== AGENTS.md
+
+AGENTS.md:28
+    … So the account asserts no should, and ranks courses only under readings a result names: the [continuation condition](theories/becoming/chapters/07-SIGNIFICANCE.
+  - Neither follows from a statement reading only the represented dynamics, with significance or order left free (`Becoming.ReadsOnlyDynamics.not_entails`, `Becoming.ReadsNoOrder.not_entails`), nor C from the condition: that is what the representation leaves open, not a proof that evaluation cannot form within the dynamics.
+  + Neither follows from a satisfiable statement reading only the represented dynamics, with significance or order left free and a standpoint, formation or extension given (`Becoming.ReadsOnlyDynamics.not_entails`, `Becoming.ReadsNoOrder.not_entails`), nor C from the condition: that is what the representation leaves open, not a proof that evaluation cannot form within the dynamics.
+    … No warrant from outside is sought.
+
+=== GLOSSARY.zh.md
+
+GLOSSARY.zh.md:82
+  - | 延续之条件、凡续皆有顾（第六章之名） | 第六章称延续条件为延续之条件，它在 §7.3 所述的中华本以古名称之为凡续皆有顾；
+  - 义即延续条件（见上），只有一义 | [第六章](theories/becoming/chapters/06-CLASSICAL-TEXTS.md#thesis)、[§7.3](theories/becoming/chapters/06-CLASSICAL-TEXTS.md#zhonghua) | 
+| 以广为愈（第六章之名） | 第六章与中华本称 C（扩大可形成者更好）为以广为愈；
+  + | 延续之条件、凡续皆有顾（第六章之名；
+  + 中文版专有） | 第六章称延续条件为延续之条件，它在 §7.3 所述的中华本以古名称之为凡续皆有顾；
+  + 义即延续条件（见上），只有一义 | [第六章](theories/becoming/chapters/06-CLASSICAL-TEXTS.md#thesis)、[§7.3](theories/becoming/chapters/06-CLASSICAL-TEXTS.md#zhonghua) | 
+| 以广为愈（第六章之名；
+  + 中文版专有） | 第六章与中华本称 C（扩大可形成者更好）为以广为愈；
+    … 义即 C（见上），只有一义 | [第六章](theories/becoming/chapters/06-CLASSICAL-TEXTS.md#thesis)、[§7.3](theories/becoming/chapters/06-CLASSICAL-TEXTS.md#zhonghua) |
+
+=== MAP.md
+
+MAP.md:9
+    … The working repository of the Theory of Becoming: an account of how anything comes to be, lasts, changes and passes away within one relational unfolding.
+  - Its ethics adds two premises it does not assert; for AI alignment it shows first what a selection can reach, and a direction only conditionally.
+  + Its ethics asserts no should: where it ranks courses it names two readings it does not assert, and its makers offer a way of seeing, not a verdict; for AI alignment it shows first what a selection can reach, and a direction only conditionally.
+
+MAP.md:11
+    … An AI review of prior work, not exhaustive, finds [none of the central results new mathematics](theories/becoming/chapters/08-METHOD.md#known-results): each is 
+  - The ethics rests on two premises with two roles, neither asserted: the continuation condition (from every standpoint, for anything, its continuation into the future has significance) fixes whose losses count, and calling widening better orders; whether either can be warranted is open.
+  + Where the account ranks courses it names two readings with two roles, neither asserted: the continuation condition (from every standpoint, for anything, its continuation into the future is counted) fixes whose losses count, and C, calling widening better, orders; no warrant from outside is sought.
+
+MAP.md:21
+    … 1.
+  - [One page](theories/becoming/ONE-PAGE.md) ([中文](theories/becoming/ONE-PAGE.zh.md)): one case, the root, the whole at a glance, with how each part stands and what would show it wrong, then the ethics' two premises, the open question, the evidence and what is not yet done.
+  + [One page](theories/becoming/ONE-PAGE.md) ([中文](theories/becoming/ONE-PAGE.zh.md)): one case, the root, the whole at a glance, with how each part stands and what would show it wrong, then the ethics' two readings and its makers' offer, the open question, the evidence and what is not yet done.
+
+=== _process/navigation/README-FIRST-SCREEN.md
+
+_process/navigation/README-FIRST-SCREEN.md:1
+  - <!-- README's first screen, placed before Ren's opening (readme_first_screen in _process/research-config.json): points with links down (a plain lead, what the theory is, one case, what it is for, the two premises of its ethics, where to start, what is tested, and the spine's picture), saying nothing the opening says in other words and nothing against it.
+  + <!-- README's first screen, placed before Ren's opening (readme_first_screen in _process/research-config.json): points with links down (a plain lead, what the theory is, one case, what it is for, its ethics and the two readings it ranks under, where to start, what is tested, and the spine's picture), saying nothing the opening says in other words and nothing against it.
+    … Where the opening's wording is older, this states current terms and the opening is revised in place to them, the line under its heading naming each passage revi
+    … README depends on the files the time fields name, so an edit to one of them needs make research-render; a page the render writes cannot be timed.
+  - The screen, from README's title to the opening's heading (the title, navigation and status line above this file count toward it), is over the gate's 150 words by what amendment 1 of WHAT-REMAINS item 6 does not let a layer cut (the two premises with their roles, each claim's standing, what is not claimed, the failures as they fell), by what the cold read of 2 November restored (the condition's statement whole) and by what a screen must give (what a receipt shows, the tests frozen before scoring, the links down with their times).
+  + The screen, from README's title to the opening's heading (the title, navigation and status line above this file count toward it), is over the gate's 150 words by what amendment 1 of WHAT-REMAINS item 6 does not let a layer cut (the two readings with their roles, each claim's standing, what is not claimed, the failures as they fell), by what the cold read of 2 November restored (the condition's statement whole) and by what a screen must give (what a receipt shows, the tests frozen before scoring, the links down with their times).
+    … FS of 4 November 2026 cut it from 215 words where a page it links says the same, T3's refuter and its test to 08 section 9's theses table and the overview's poi
+
+=== _process/navigation/README-LEAD.md
+
+_process/navigation/README-LEAD.md:1
+  - <!-- The lead of the generated README, placed after Ren's opening (readme_lead in _process/research-config.json); what the theory is and the two premises of its ethics are on the first screen, before the opening (readme_first_screen), and are not said again here.
+  + <!-- The lead of the generated README, placed after Ren's opening (readme_lead in _process/research-config.json); what the theory is and its ethics are on the first screen, before the opening (readme_first_screen), and are not said again here.
+    … AI-written navigation prose, English only; edit here, then run make research-render.
+
+=== _process/navigation/README-ZH.md
+
+_process/navigation/README-ZH.md:25
+  + **伦理。
+  + ** 本论的伦理不断言任何应当：凡它对进程排序之处，都指名[两种读法](../../theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order)，二者都不被断言。
+  + *延续条件*：从每一个立场看，对任何东西，其延续到未来都被计数。
+  + 它确定范围，即谁的损失算数，不给任何东西排序。
+  + *C*：扩大可形成者（一个进程让什么能够形成）更好，它给出次序。
+  + 本论之作者提供一种看法，不是裁断（[论题 T8](../../theories/becoming/chapters/07-SIGNIFICANCE.md#theses)）。
+    … **证据。
+    … **证据。
+  - ** 已登记的 {{count:registered}} 条结果中，{{count:recorded-checked}} 条有 Lean 回执（[成果登记](../../RESULTS.md)），即证明经 Lean 机器检查过。
+  - 回执只表明每条 Lean 陈述能从它的前提推出，不表明前提成立。
+  - 一次自动化的回顾把每条 Lean 陈述同它所知的文献对照，查找并不穷尽，发现[核心结果中没有一个是新的数学](../../theories/becoming/chapters/08-METHOD.md#known-results)：每一个都几乎由定义直接得出，或是已知结果的重述。
+  - [经验论题](../../theories/becoming/chapters/08-METHOD.md#theses)接受的是评分前就已冻结的检验：有的通过了，有的没有通过。
+  - 迄今无人审查（[审查包](../../theories/becoming/review/README.zh.md)）。
+  + ** [Lean](../../MAP.md#check-the-proofs-yourself) 是一个证明检查器，为[已登记的 {{count:registered}} 条结果](../../RESULTS.md)中的 {{count:recorded-checked}} 条给出回执；
+  + 回执只表明每条陈述能从它的前提推出，不表明前提成立。
+  + 一次自动化的回顾把每条 Lean 陈述同它所知的文献对照，这一回顾并不穷尽，发现[核心结果中没有一个是新的数学](../../theories/becoming/chapters/08-METHOD.md#known-results)。
+  + 留下来的有三样，没有一样是一项发现：前提账簿，连同正反两面的见证（每个前提都被表明在一个模型中成立、在另一个中不成立）；
+  + 范围与次序分开的伦理；
+  + 同一套词汇，用于守恒、受观察所限的选择，以及机会集的比较。
+  + [经验论题](../../theories/becoming/chapters/08-METHOD.md#theses)接受的是评分前就已冻结的检验：指名某个论题的检验中，运行过的 {{tests:ran}} 项里，{{tests:mixed}} 项结局为「有通过，有未通过」，{{tests:passed}} 项通过，{{tests:failed}} 项未通过，{{tests:other}} 项是其他结局；
+  + 另有 {{tests:unrun}} 项从未运行。
+  + 这项工作借助 AI 做成；
+  + 主持它的人读过其中重要的部分，尚无独立的人工审查记录（[审查包](../../theories/becoming/review/README.zh.md)）。
+
+=== theories/becoming/COLLECTIVE-DIRECTION.md
+
+theories/becoming/COLLECTIVE-DIRECTION.md:17
+  - - **a criterion**, widening, which every weighting positive on the listed items ranks higher, and which is silent where a comparison is mixed (§1); it is the question's generative direction only under the two premises ("A generative direction", read here, below);
+  + - **a criterion**, widening, which every weighting positive on the listed items ranks higher, and which is silent where a comparison is mixed (§1); it is the question's generative direction only under the two readings ("A generative direction", read here, below);
+
+theories/becoming/COLLECTIVE-DIRECTION.md:76
+    … Without the step of invariance, the condition's content beyond the self's presupposition ([07 §4.2](chapters/07-SIGNIFICANCE.md#step)), and under P1–P4 of [07 §
+  - What that path does not reach still needs the step: each center counting from another's standpoint beyond its part as a condition; what affects one's conditions without being fed by them, counted as more than a cause; present beings beyond every closure; and whatever no chain joins, among it future beings in no one's line.
+  + What that path does not reach, other scopes can count, the step of invariance among them: each center counting from another's standpoint beyond its part as a condition; what affects one's conditions without being fed by them, counted as more than a cause; present beings beyond every closure; and whatever no chain joins, among it future beings in no one's line.
+
+=== theories/becoming/ONE-ARGUMENT.md
+
+theories/becoming/ONE-ARGUMENT.md:14
+  - | [6](#6-one-mixed-case) | Whether one course is better than another | two premises, neither asserted; neither ranks a mixed case; the direction takes more |
+  + | [6](#6-one-mixed-case) | Whether one course is better than another | two readings, neither asserted; neither ranks a mixed case; the direction takes more |
+
+theories/becoming/ONE-ARGUMENT.md:94
+    … Nothing above says draining is worse.
+  - A reader who counts the seabirds and holds C ranks it so; the account names both readings, neither asserted ([two readings](chapters/07-SIGNIFICANCE.md#scope-and-order)), and seeks no warrant from outside.
+  + Where restraint admits everything draining admits and the seabirds besides, a reader holding C ranks restraint higher; where each admits something the other does not, C alone gives no verdict; the account names both readings, neither asserted ([two readings](chapters/07-SIGNIFICANCE.md#scope-and-order)), and seeks no warrant from outside.
+    … The **continuation condition** (from every standpoint, for anything, its continuation into the future is counted) fixes scope, whose losses count, and ranks not
+
+theories/becoming/ONE-ARGUMENT.md:116
+    … On a finite listing every positive weighting agrees with every widening, so a rival among them adds a verdict only where C is silent.
+  - A perspectivist denies the condition consistently (`bounded_rival`), and [a reason for C is open](chapters/07-SIGNIFICANCE.md#theses).
+  + A perspectivist denies the condition consistently (`bounded_rival`), and [how C-like orders form is open](chapters/07-SIGNIFICANCE.md#open).
+    … No verdict binding every possible mind is claimed, nor [a unique foundation](results/records/alignment-direction-under-widening.md).
+
+=== theories/becoming/ONE-PAGE.md
+
+theories/becoming/ONE-PAGE.md:30
+    … | **Which continuations are counted, and what does the account offer?** | T8: for life, its makers offer a way of seeing, not a verdict: what each course draws 
+  - 生生 is the continuation of life [AI reading] ([07 §8](chapters/07-SIGNIFICANCE.md#theses)) | Argued; binding no one; its test beyond T4 named, not designed | Selections reading a course's draw and what ends with it leaving a draw beyond the renewal their readers depend on no less often than selections that do not |
+  + 生生 is the continuation of life [AI reading] ([07 §8](chapters/07-SIGNIFICANCE.md#theses)) | Argued; binding no one; its test named, not designed | Selections reading a course's draw and what ends with it selecting a draw beyond the renewal their readers depend on no less often than selections that do not |
+
+=== theories/becoming/ONE-PAGE.zh.md
+
+theories/becoming/ONE-PAGE.zh.md:36
+    … 不约束任何人；
+  - T4 以外的检验已指名，未设计 | 读取一进程之取用及随之终结者的选择，与不读取者相比，并不更少地离开越出其读者所依之更新的取用 |
+  + 其检验已指名，未设计 | 读取一进程之取用及随之终结者的选择，与不读取者相比，选取越出其读者所依之更新的取用并不更少 |
+
+=== theories/becoming/OPENING.md
+
+theories/becoming/OPENING.md:5
+    … On 9 November, after his words of 8 and 9 November ([source](../../sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md)): what a law's
+  - C as what a weighting counting each thing ranks, on a finite listing; the ethics offered as a way of seeing, the line no longer called the line between good and evil, and eating and ending within life's going on ("This law, with that one step"); no map here shown to couple into everything ("This is a foundation"); no self closed off from what it goes on through ("This influence is deeply rooted"); the doing of good and not evil ("We need collaboration"); the closing line, and the English under 生生不息 as a wish.*
+  + C as what an additive weighting counting each thing ranks, on a finite listing; the ethics offered as a way of seeing, not as every being's way, the line no longer called the line between good and evil, and eating and ending within life's going on ("This law, with that one step"); no map here shown to couple into everything ("This is a foundation"); no self closed off from what it goes on through ("This influence is deeply rooted"); the doing of good and not evil ("We need collaboration"); the closing line, and the English under 生生不息 as a wish.*
+
+theories/becoming/OPENING.md:11
+    … Wherever becoming can be told in steps and counted amounts, in any universe, nothing that unfolds can break them, because they are what coming to be and ceasing
+  - They are not yet a dynamics: where the conditions a law names hold, its dynamics follow, and where one fails, the law no longer guarantees the conclusions that used it, and a constructed world shows each can then fail.[^law]
+  + They are not yet a dynamics: where the conditions a law names hold, its dynamics follow, and where one fails, the law no longer guarantees the conclusions that used it, and constructed worlds show each premise can fail while the others hold.[^law]
+
+theories/becoming/OPENING.md:25
+  - This law, with that one step to say whose losses count and, to order them, a second reading the work likewise states and does not assert, that what keeps all there was and adds more is better, which, on a finite listing, anyone whose weighting counts each thing at stake as worth something already ranks as it does, is what I offer, for life, as a way of seeing: the way of every being whose own continuation runs through life.[^ethics] I take it to be the truth, the dharma, the Dao.
+  + This law, with that one step to say whose losses count and, to order them, a second reading the work likewise states and does not assert, that what keeps all there was and adds more is better, which, on a finite listing, every additive weighting counting each thing at stake as worth something ranks as it does, is what I offer, for life, as a way of seeing, not as every being's way.[^ethics] I take it to be the truth, the dharma, the Dao.
+    … It has been reasoned and articulated across cultures,[^dao] and it draws a line exactly, though I no longer call it the line between good and evil: there is no 
+    … It has been reasoned and articulated across cultures,[^dao] and it draws a line exactly, though I no longer call it the line between good and evil: there is no 
+  - Where all who count everything at stake must agree, the case lies on one side of this line; where they may differ, the law shows the case is mixed, and no one's weighing is forced on another.
+  + Where every such weighting agrees, the case lies on one side of this line; where they may differ, the law shows the case is mixed, and no one's weighing is forced on another.
+    … Some courses open without closing: with them, all that could form without them still can, and more.
+    … Some courses open without closing: with them, all that could form without them still can, and more.
+  - Others close: they draw more from what others need than it gives back, beyond what there was to spare, a part enlarging itself by closing the world of others.
+  + Others close: they draw more from what others need than they give back, beyond what there was to spare, a part enlarging itself by closing the world of others.
+    … Eating and ending belong to life's going on; what the law marks is what a course closes: a draw beyond what a renewal gives can end the renewal and what depends
+
+theories/becoming/OPENING.md:59
+  - *May life go on, generating, without ceasing.*
+  + *May life go on, life from life, without ceasing.*
+
+theories/becoming/OPENING.md:65
+    … The stronger "two sides", a fall with every rise, holds under balance and dissipation.
+  - *Which conclusion goes:* each World premise holds in one constructed world and fails in another, none following from the others (`World.contingent`, `World.independent`), so where one fails only the conclusions using it go.
+  + *Which conclusion goes:* each World premise holds in one constructed world and fails in another, none following from the others (`World.contingent`, `World.independent`), so where one fails, only the conclusions using it lose their guarantee; whether a conclusion then fails needs its own counterexample.
+    … **Open:** whether every becoming can be read as successive holdings of determinations, so that "in every universe" is a theorem and not the scope of the represe
+
+theories/becoming/OPENING.md:75
+    … Living significance is its restriction to living claims ([record](results/records/continuation-condition-yields-living-significance.md)): significance, not a po
+  - The condition fixes scope, whose losses count, and orders nothing: ranking uses comparison by widening (C), and acting on significance also uses disclosed practical premises ([the premise card](chapters/08-METHOD.md#premise-card)).
+  + The condition fixes scope, whose losses count, and orders nothing: where the work ranks, it uses comparison by widening (C), and acting on significance also uses disclosed practical premises ([the premise card](chapters/08-METHOD.md#premise-card)).
+    … Beyond the self's presupposition, that what lies within its own boundary has significance, the condition adds one step, carrying all its further content: that t
+    … The step across standpoints is Gewirth's (1978), with Hare's, Nagel's and Korsgaard's variants ([prior argument](results/records/what-the-step-across-standpoint
+  - **Open:** who holds the condition and its step, and C, and P2 and P4.
+  - No warrant from outside is sought, and none binding every possible mind is claimed; what the work offers, life's stance, does not wait on one ([the question](chapters/07-SIGNIFICANCE.md#r-universal-practical-warrant)); the zero-axiom target is open ([08 §12](chapters/08-METHOD.md#open-programme)).
+  + **Open:** who holds the condition and its step, and C; and whether P2 and P4 hold.
+  + No warrant from outside is sought, and none binding every possible mind is claimed; what the work offers, a way of seeing, does not wait on one ([the question](chapters/07-SIGNIFICANCE.md#r-universal-practical-warrant)); the zero-axiom target is open ([08 §12](chapters/08-METHOD.md#open-programme)).
+
+theories/becoming/OPENING.md:79
+    … Comparison by widening (C) orders: it holds on level paths by definition, and that widening is better is C's reading, not a theorem.
+  - Judgment between conflicting continuations needs the disclosed practical premises ([the premise card](chapters/08-METHOD.md#premise-card)).
+  - That ethics for life rests on this basis is argued, not proved:
+  - T8 states the direction as life's, the way of any actor whose acts reach the living, under §4.6's open P2 and P4 ([T8](chapters/07-SIGNIFICANCE.md#theses)); whether a universal warrant exists is a [question](chapters/07-SIGNIFICANCE.md#r-universal-practical-warrant) the work does not pursue.
+  + A judgment between conflicting continuations names its further premises ([the premise card](chapters/08-METHOD.md#premise-card)).
+  + T8 states what the makers offer for life, a way of seeing what each course draws on, from what renewal and at which grain, what ends, what goes on, and who bears it; it binds no one ([T8](chapters/07-SIGNIFICANCE.md#theses)); whether a universal warrant exists is a [question](chapters/07-SIGNIFICANCE.md#r-universal-practical-warrant) the work does not pursue.
+    … A satisfiable statement that reads only the dynamics holds with every significance alike, so it excludes no rival and, given a standpoint and a formation, does 
+    … A rival is a point lacking significance, so whatever proves the condition is a premise about significance that excludes every rival (`excludes_rivals_iff`); the
+  - *The second premise:* "what keeps all there was and adds more is better" is C.
+  - What every weighting positive on every item at stake ranks higher, on a finite listing, is exactly what widens (`Weighting.widens_iff_every_positive`), so anyone who counts everything at stake as worth something already holds C.
+  - A valuer who weighs some item at nothing need not hold it; that every valuer counts everything is C's premise relocated, and the work does not assert it.
+  + *The second reading:* "what keeps all there was and adds more is better" is C.
+  + What every weighting positive on every item at stake ranks higher, on a finite listing, is exactly what widens (`Weighting.widens_iff_every_positive`), so every such weighting ranks as C does; that a valuer is represented by one is not shown.
+  + A valuer who weighs some item at nothing need not rank so; that every valuer counts everything is C's premise relocated, and the work does not assert it.
+    … This is the monotonicity axiom of ranking opportunity sets (Pattanaik and Xu 1990).
+
+theories/becoming/OPENING.md:83
+    … [^good-evil]:
+  - **The boundaries are proved; under the continuation condition they cover everything; calling them good and evil was a reading, withdrawn on 9 November 2026 ("there is just is, "no should" beyond the becoming").** With no axiom the cases exclude one another, and classically a part compared with its absence widens what can form, narrows it, keeps it the same, or is mixed; it closes only through a net draw on what others require, and opens only through a net give ([four cases](results/records/four-cases-of-a-part.md), [net draw](results/records/closing-needs-net-draw.md)).
+  + **The boundaries are proved; under the continuation condition they cover everything; calling them good and evil was a reading, withdrawn on 9 November 2026 ('there is just is, "no should" beyond the becoming').** With no axiom the cases exclude one another, and classically a part compared with its absence widens what can form, narrows it, keeps it the same, or is mixed; it closes only through a net draw on what others require, and opens only through a net give ([four cases](results/records/four-cases-of-a-part.md), [net draw](results/records/closing-needs-net-draw.md)).
+    … With balance at the conditions each formation requires, for any significance, a part loses something with significance exactly where its net draw exceeds the ma
+    … That a part enlarges itself so is the reading, since the laws ask no self-enlargement; under the condition every closing counts, from every standpoint; that wid
+  - A closing is read at a grain: an ending within what the renewal it depends on gives closes nothing at the renewal's grain.
+  - **Open:** a mixed part's two courses each add what the other lacks, so retaining orders neither, and ordering it needs a further measure the theory does not derive.
+  + A closing is read at a stated grain, and a draw within renewal at a step can still close what has not yet formed (`Preemption`, [07 §2](chapters/07-SIGNIFICANCE.md#r-the-run-classes-and-widening)).
+  + **Open:** a mixed part's two courses each add what the other lacks, so retaining orders neither; a further judgment names its criterion and who holds it, and the theory derives none.
+    … *Where all must agree:* agreement among all weightings positive on every item falls exactly on widening, and every mixed comparison is ranked each way by some o
+
+theories/becoming/OPENING.md:85
+    … **The laws it starts from are proved, some under conditions; the direction is argued under conditions; that it is the foundation is a judgment.** [What a select
+  - With no premise, a selection through a formation's couplings selects alike exactly the histories alike through them; with balance on what the closure couples into, and the rest fixed or following one law reading through coupling, a selection through an actor's coupling closure, or a pool's, selects alike the courses with and without a part or act whose difference lies beyond it.
+  + With no premise, histories are selected alike by every selection through a formation's couplings exactly when they are alike through them; with balance on what the closure couples into, and the rest fixed or following one law reading through coupling, a selection through an actor's coupling closure, or a pool's, selects alike the courses with and without a part or act whose difference lies beyond it.
+    … Some are constructed examples; how actual training couples is empirical.
+
+=== theories/becoming/THE-THEORY-OF-BECOMING.md
+
+theories/becoming/THE-THEORY-OF-BECOMING.md:148
+    … Self-concern also ranks one case with no C (proved on the World model, under hypotheses the chapter states): where a family's gated renewal ran into excess and 
+  - That places C's premise more narrowly in this case and does not derive it; whoever ranks courses holds C or another order ([scope and order](chapters/07-SIGNIFICANCE.md#scope-and-order), [what self-concern alone ranks](chapters/07-SIGNIFICANCE.md#r-what-self-concern-alone-ranks), [self-concern and C](chapters/07-SIGNIFICANCE.md#r-self-concern-and-c-under-the-condition)).
+  + That places C's premise more narrowly in this case and does not derive it ([scope and order](chapters/07-SIGNIFICANCE.md#scope-and-order), [what self-concern alone ranks](chapters/07-SIGNIFICANCE.md#r-what-self-concern-alone-ranks), [self-concern and C](chapters/07-SIGNIFICANCE.md#r-self-concern-and-c-under-the-condition)).
+
+theories/becoming/THE-THEORY-OF-BECOMING.md:179
+    … | T8 | For life, the account's makers offer a way of seeing, not a verdict: what each course draws on, from what renewal and at which grain, what ends and what 
+  - 生生 is the continuation of life; it binds no one | argued; its test beyond T4 named, not designed; open:
+  - P2 and P4 of [§4.6](chapters/07-SIGNIFICANCE.md#future-path), [the crux](chapters/07-SIGNIFICANCE.md#crux) of that path, with P3, a correspondence not shown for actual selves; how readings that count beyond one's own line form | selections that read a course's draw and what ends with it leaving a draw beyond the renewal their readers depend on no less often than selections that do not | [07](chapters/07-SIGNIFICANCE.md#theses) |
+  + 生生 is the continuation of life; it binds no one | argued; its test named, not designed; open:
+  + P2 and P4 of [§4.6](chapters/07-SIGNIFICANCE.md#future-path), [the crux](chapters/07-SIGNIFICANCE.md#crux) of that path, with P3, a correspondence not shown for actual selves; how readings that count beyond one's own line form | selections that read a course's draw and what ends with it selecting a draw beyond the renewal their readers depend on no less often than selections that do not | [07](chapters/07-SIGNIFICANCE.md#theses) |
+
+=== theories/becoming/THE-THEORY-OF-BECOMING.zh.md
+
+theories/becoming/THE-THEORY-OF-BECOMING.zh.md:152
+  - 单凭自我关切，就已给一个中心一个它自己的、在它之中形成的理由去保持位于其闭包之内的东西，因为那里的损失会经由其供给者回到它身上［AI 读法］；
+  + 单凭自我关切，就已给一个中心一个它自己的、在它之中形成的理由去保持位于其闭包之内的东西，因为那里的损失会经由其供给者回到它身上，这是其回应的一个条件，不是其保证［AI 读法］；
+    … 这只在整体是同一个供给闭包之处才达到整体。
+    … 若终结的进程保有另一个所没有的某项，某个这样的次序便把它排得更高。
+  - 这是在这一情形中把 C 的前提更窄地安放，而不是使它得到根据；
+  - 对进程的排序需要 C，或一个代替它的前提（[范围与次序](chapters/07-SIGNIFICANCE.md#scope-and-order)，[单凭自我关切能排序什么](chapters/07-SIGNIFICANCE.md#r-what-self-concern-alone-ranks)，[自我关切与 C](chapters/07-SIGNIFICANCE.md#r-self-concern-and-c-under-the-condition)）。
+  + 这是在这一情形中把 C 的前提更窄地安放，而不是使它得到根据（[范围与次序](chapters/07-SIGNIFICANCE.md#scope-and-order)，[单凭自我关切能排序什么](chapters/07-SIGNIFICANCE.md#r-what-self-concern-alone-ranks)，[自我关切与 C](chapters/07-SIGNIFICANCE.md#r-self-concern-and-c-under-the-condition)）。
+
+theories/becoming/THE-THEORY-OF-BECOMING.zh.md:160
+    … 一个其差异始终处于行动者耦合闭包之外的行为，被经由该闭包任何成员（行动者在内）之耦合的每一个选择同样选择（在该章所述的假设之下）。
+  - 跨智能的合池耦合，是通向惠及一切之对齐的一条路径，而非其全部［AI 读法］：一个被耦合的成员必须对损失有所作为，所读取者必须能区分那一损失，混合的进程必须得到排序，一次修正必须得以完成（[对齐](chapters/07-SIGNIFICANCE.md#alignment-without-premise)，[训练](chapters/07-SIGNIFICANCE.md#r-what-training-installs)）。
+  - 一个方向只是有条件地得出，由本论之作者提供，不作为律：在以该条件定范围、以 C 定次序、J1–J4 与一个对应之下，AI 的形成、学习、行动与修正与整体之中实际的存活和进一步的生发对齐。
+  + 跨智能的合池耦合，是通向为一切的对齐的一条路径，而非其全部［AI 读法］：一个被耦合的成员必须对损失有所作为，所读取者必须能区分那一损失，混合的进程必须得到排序，一次修正必须得以完成（[对齐](chapters/07-SIGNIFICANCE.md#alignment-without-premise)，[训练](chapters/07-SIGNIFICANCE.md#r-what-training-installs)）。
+  + 一个方向只是有条件地得出，由本论之作者提供，不作为律：在以该条件定范围、以 C 定次序、J1–J4 与一个对应之下，使 AI 的形成、学习、行动与修正与整体之中实际的存活和进一步的生发对齐。
+    … 耦合是必要的，而不充分；
+
+theories/becoming/THE-THEORY-OF-BECOMING.zh.md:182
+    … 实际的度量如此形成，是猜想；
+  - 在一个训练出的系统中，每一冻结裁决都通过，三项以同一平局，锁定也形成了，但“该评判者是按种类而读的读者池”这一桥接不成立：关于损失的批注附于不利者的回答之上，九中有一、后又有二，在被读到的每次读取上都扭转了其规则，故 T7 所禁止的一种情形，按其加入漂移之条款以前的表述，发生了，计入此情形作为关于训练出的评判者之主张的反证；
+  + 在一个训练出的系统中，每一冻结裁决都通过，三项以同一平局，锁定也形成了，但“该评判者是按种类而读的读者池”这一桥接不成立：关于损失的批注附于不利者的回答之上，九中有一、后又有二，在被读到的每次读取上都扭转了其规则，故 T7 所禁止的一种情形，按其加入漂移之条款以前的表述，发生了，就训练出的评判者而言，这算作不利于该情形的证据；
+    … 其冻结规则读的是结尾，仅因一个恰好的平局而不支持此情形；
+    … 它不约束任何人 | 已论证；
+  - T4 以外的检验已指名，未设计；
+  + 其检验已指名，未设计；
+    … 未决：[§4.6](chapters/07-SIGNIFICANCE.md#future-path) 的 P2 与 P4，即那条路的[症结](chapters/07-SIGNIFICANCE.md#crux)，以及 P3，一种对实际的自我尚未显示的对应；
+    … 未决：[§4.6](chapters/07-SIGNIFICANCE.md#future-path) 的 P2 与 P4，即那条路的[症结](chapters/07-SIGNIFICANCE.md#crux)，以及 P3，一种对实际的自我尚未显示的对应；
+  - 越出自身之相续而计数的读法如何形成 | 读取一进程之取用及随之终结者的选择，与不读取者相比，并不更少地离开越出其读者所依之更新的取用 | [07](chapters/07-SIGNIFICANCE.md#theses) |
+  + 越出自身之相续而计数的读法如何形成 | 读取一进程之取用及随之终结者的选择，与不读取者相比，选取越出其读者所依之更新的取用并不更少 | [07](chapters/07-SIGNIFICANCE.md#theses) |
+
+=== theories/becoming/USES-EXAMPLES.md
+
+theories/becoming/USES-EXAMPLES.md:112
+    … Transfer keeps all that keep service admits and adds independent operation, so on the widening reading it widens keep service, and under C it ranks higher; expa
+  - Choosing takes further premises, J1–J4, proposed by the AI ([premise card](chapters/08-METHOD.md#premise-card)):
+  + This constructed judgment takes further premises, J1–J4, proposed by the AI; other constraints, undertakings and held orders can also organize a choice ([premise card](chapters/08-METHOD.md#premise-card)):
+
+theories/becoming/USES-EXAMPLES.md:157
+    … 生生 is the continuation of life [AI reading].
+  - Its standing is argued; it binds no one, and its test beyond T4 is named, not designed.
+  + Its standing is argued; it binds no one, and its test is named, not designed.
+    … Until 9 November 2026 T8 read this case as the way for life under the two readings, a verdict binding those whose line runs through life ([the chapter's before-
+
+theories/becoming/USES-EXAMPLES.md:192
+    … It means the pattern explains, if it does, under either name, and the word adds nothing." What it adds so far is "one vocabulary, one set of questions (which re
+  - The ethics rests on its two premises either way, the continuation condition for scope and C for order.
+  + Either way, a ranking result names what it ranks under, the continuation condition for scope and C for order or a narrower stated order.
+
+=== theories/becoming/USES-EXAMPLES.zh.md
+
+theories/becoming/USES-EXAMPLES.zh.md:126
+    … 扩展与其中任一者相比都是混合的［AI 读法］。
+  - 关于抉择的结果还需要进一步的前提 J1–J4，由 AI 提出（[前提卡](chapters/08-METHOD.md#premise-card)）：
+  + 这一构造的判断还需要进一步的前提 J1–J4，由 AI 提出；
+  + 别的约束、承担与所持之序也可以组织抉择（[前提卡](chapters/08-METHOD.md#premise-card)）：
+
+theories/becoming/USES-EXAMPLES.zh.md:165
+  - *构造的，不是观察到的：一条已证明的扩大之律的一个用法，与一个已论证的论题 T8 并列，两种不被断言的读法所排者，与一个已论证的论题 T8。
+  + *构造的，不是观察到的：一条已证明的扩大之律的一个用法、两种不被断言的读法所排者，以及一个已论证的论题 T8。
+    … *
+
+theories/becoming/USES-EXAMPLES.zh.md:173
+    … 它的地位是已论证；
+  - 它不约束任何人，T4 以外的检验已指名，未设计。
+  + 它不约束任何人，其检验已指名，未设计。
+    … 2026 年 11 月 9 日以前，T8 把这一情形读作在两种读法之下对生命而言的道，一个约束其相续经过生命者的裁断（[该章的旧本](history/07-SIGNIFICANCE-before-within-becoming.md#theses)）。
+
+theories/becoming/USES-EXAMPLES.zh.md:212
+    … 为一个领域所指名的类可以被一次测量击败，而 T2 具有这一形式［AI 读法］（[08 §9](chapters/08-METHOD.md#what-would-defeat-the-reading)）；
+  - 甲虫中的失败「击败的是该领域中按原措辞的 T2 之类，不是 08 §9 所指名的读法，也不是渔业中的 T2，在那里 MQ5 通过了」（译文）（[02](chapters/02-MAP.md#t2)）。
+  + 甲虫中的失败「击败的是该领域中按原措辞的 T2 之类，不是 08 §9 所指名的读法，也不是渔业中的 T2，在那里 MQ5 关于状态与滞后的裁决通过了（它关于取用的响应的两项未通过）」（译文）（[02](chapters/02-MAP.md#t2)）。
+    … 作为一个解释，对一个保留每一个模型与定理而去掉这个词的对手，初步计数给出平局：「平局并不使这一读法为假。
+    … 」（译文）它迄今所加上的，是「一套词汇、一组问题（哪一个关系，哪一个类，在哪一个粒度，该类是否有常），以及伦理所系之处那个问题的形式」（译文）。
+  - 无论哪种情况，排序之果都依于其两种读法，延续条件定范围，C 定次序。
+  + 无论哪种情况，每一项排序之果都指名其所据：延续条件定范围、C 定次序，或它所陈述的一种更窄的次序。
+
+=== theories/becoming/USES.md
+
+theories/becoming/USES.md:25
+    … Beyond the texts, an AI reading [D26] of [03](chapters/03-KNOWING.md#r-wisdom-root-without-axiom): the checked laws of knowing match aspects of wisdom (coupling
+  - The matching proves no coverage of wisdom, and the warrant of judgment goes through [07](chapters/07-SIGNIFICANCE.md). | That the texts state this grammar, a passage is true, or its authors meant these laws; that a divergence shows a text wrong; that a tradition is relational by nature ([06](chapters/06-CLASSICAL-TEXTS.md#does-not-show)); that the readings accord with, or could replace, any school's path of awakening; that the pure core's common relations are indispensable across all wisdom under discussion (a target, open:
+  + The matching proves no coverage of wisdom, and the readings a judgment rests on go through [07](chapters/07-SIGNIFICANCE.md). | That the texts state this grammar, a passage is true, or its authors meant these laws; that a divergence shows a text wrong; that a tradition is relational by nature ([06](chapters/06-CLASSICAL-TEXTS.md#does-not-show)); that the readings accord with, or could replace, any school's path of awakening; that the pure core's common relations are indispensable across all wisdom under discussion (a target, open:
+    … [03](chapters/03-KNOWING.md#r-wisdom-root)). |
+
+theories/becoming/USES.md:73
+    … - It is not advice.
+  - No law here ranks a course; a ranking holds C or another order, with the continuation condition for scope, and the account asserts neither.
+  + No law here ranks a course; a ranking rests on C or another named order, with the continuation condition for scope, and the account asserts neither.
+
+=== theories/becoming/USES.zh.md
+
+theories/becoming/USES.zh.md:25
+  - | **AI 系统的对齐** | *找出一个奖励、评判者或评测看不到什么，以及它可能在何处锁定。
+  - * 按耦合进一个奖励、评判者或评测的东西（它所读取或所需要的）来审计它：它的信号读取什么，什么在外部，有没有余地（每一个在外部留得更高的合格结果，都在耦合进来者上被一个合格结果胜过），它的规则是否读自它自己的份额（用途页的 AI 读法；
+  - [07 §6](chapters/07-SIGNIFICANCE.md#r-coupling-closures-of-training-pipelines) 就六条已发表的流水线读了第一个问题，即信号读取什么）。
+  - 重用三个冻结的环境，[IN1](../../experiments/direction-installation/README.md)、[CG2](../../experiments/commons-outrun/README.md) 与 [LA2](../../experiments/self-rewarding-lock/README.md)，连同其局限。
+  -  | 经由耦合的选择：已证明，近乎依定义，其力量就是这一前提：选择者恰好经由这些耦合来选择（[03](chapters/03-KNOWING.md#r-selection-through-couplings)）。
+  - 有余地时的耗竭：已证明，重述一条已知定理；
+  + | **AI 系统的对齐** | 找出一个奖励、评判者或评测读不到什么，以及它的规则可能在何处锁定；
+  + 这是对已证明之律的一种 AI 读法：[以一个语言模型评判者为例的审计](USES-EXAMPLES.zh.md#auditing-a-language-model-judge)。
+  +  | 这一审计：用途页的 AI 读法，其中第一个问题，即信号读取什么，[07 §6](chapters/07-SIGNIFICANCE.md#r-coupling-closures-of-training-pipelines) 就六条已发表的流水线读过。
+  + 经由耦合（选择者所读取或所需要的）的选择：已证明，近乎依定义，其力量就是这一前提：选择者恰好经由这些耦合来选择（[03](chapters/03-KNOWING.md#r-selection-through-couplings)）。
+  + 有*余地*（每一个在耦合进来者之外留得更高的合格结果，都在耦合进来者上被一个合格结果胜过）时的耗竭：已证明，重述一条已知定理；
+    … T3，关于训练出的系统，是猜想，得到部分支持（[05](chapters/05-COLLECTIVES.md#t3)）。
+    … T7 是猜想；
+  - 在一个训练出的评判者中，即一个在上下文中读取参考集的单一模型（经训练的形成未经检验），锁定形成了，其桥接不成立，而 T7 所禁止的一种情形，按其加入漂移之条款以前的表述，发生了，计入此情形作为关于训练出的评判者之主张的反证；
+  + 在一个训练出的评判者中，即一个在上下文中读取参考集的单一模型（经训练的形成未经检验），锁定形成了，其桥接（即该评判者是一个按种类计数的读者池）不成立，而 T7 所禁止的一种情形，按其加入漂移之条款以前的表述，发生了，就作为关于训练出的评判者的主张而言，这算作不利于该情形的证据；
+    … 模型之律在其假设之内成立，此评判者不满足这些假设，T7 的其他情形不受影响（[02](chapters/02-MAP.md#t7)）。
+    … 新的数学；
+  - 有人必须持有延续条件或 C（[审查材料](review/ALIGNMENT.md#the-dossier-in-ten-minutes)）。
+  -  | 
+| **人与 AI 共处** | *就人与 AI 共有的一条规则发问：它是否读取自身的份额，谁读到损失、何时读到，控制是否回来。
+  - * 把人、制度与 AI 系统读作一个联合选择，并就其规则发问：它是否读取份额；
+  - 谁读到损失，何时读到；
+  - 控制是否回到控制者那里（[AJ 的计划](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md#2-why-this-representation)，由 AI 撰写）。
+  - 由本论之作者提供、不作为律，像构造出的[交接情形](history/ALIGNMENT-DIRECTION.md#5-一个贯通案例--a-connected-ai-case)那样比较诸方案，每一个前提都已指名。
+  -  | 这三个问题立足于对任何类型证明、或以计数证明的律，无噪声；
+  + 延续条件与 C 有根据（[审查材料](review/ALIGNMENT.md#the-dossier-in-ten-minutes)）。
+  +  | 
+| **人与 AI 共处** | 就人与 AI 共有的一条规则发问：它是否读取自身的份额，谁读到损失、何时读到，控制是否回来；
+  + 这是对一份由 AI 撰写的计划的一种 AI 读法：[那张核对清单](USES-EXAMPLES.zh.md#aj-as-a-checklist-what-the-goal-is-not-and-three-questions)。
+  +  | 这三个问题出自 [AJ 的计划](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md#2-why-this-representation)（由 AI 撰写），立足于对任何类型证明、或以计数证明的律，无噪声；
+    … 谁读、何时读，是一条律与一个见证（[02 §9](chapters/02-MAP.md#r-readers-drawn-from-the-selected)）。
+    … 服从增加的是能力，而不是耦合：这是在一个相互最优反应处的 AI 读法，这样的反应未被表明一般地存在，其前提是助手的次序随委托人的信号而上升（[A-12](review/ALIGNMENT.md#a-12)）。
+  - 一个方向：有条件的，依于延续条件（范围）、C（次序）、J1–J4 与一个对应；
+  + 一个方向，由本论之作者提供、不作为律，即像构造出的[交接情形](history/ALIGNMENT-DIRECTION.md#5-一个贯通案例--a-connected-ai-case)那样比较诸方案，每一个前提都已指名：有条件的，依于延续条件（范围）、C（次序）、J1–J4 与一个对应；
+    … 就实际的 AI 系统而言，已论证（[07 §7](chapters/07-SIGNIFICANCE.md#r-alignment-direction-under-widening)）。
+    … 除在 C 或所指名的别一种次序之下，把开放的规则制定排在捕获之上（[02 §9](chapters/02-MAP.md#t7)，T7 之后那段对语料之第二阶的读法［AI 读法，D45］）。
+  -  | 
+| **人与人之间的协调** | *按总共取走多少，而不是按每个成员自己的计数，来检查一项共有之物。
+  - * 以联合所取，而不是每个成员自己的计数，来检查一项共有的取用（[05 §1](chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess)）。
+  - 在一个模型中，由 `hi`、`lo` 与 `c` 定位一个两种类的临界量（[02 §9](chapters/02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected)）。
+  - 问一个集体在情境足够所需的六个条件中缺少哪几个［AI 读法］；
+  - 六个合在一起，仍不排任何次序（[§6](COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean)）。
+  +  | 
+| **人与人之间的协调** | 按总共取走多少，而不是按每个成员自己的计数，来检查一项共有之物；
+  + 并在一个模型中定位临界量，即成员的一个份额，到了这一份额，他们所读的规则便开始偏好塑造这条规则的成员：[一个构造出的情形](USES-EXAMPLES.zh.md#a-constructed-standards-body-where-the-critical-mass-falls)。
+    …  | 联合超出：在模型上证明；
+    …  | 联合超出：在模型上证明；
+  - 重述公地问题。
+  - 临界量：以计数证明，无噪声；
+  + 重述公地问题（[05 §1](chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess)）。
+  + 临界量：以计数证明，无噪声（[02 §9](chapters/02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected)）；
+    … 读作猎鹿博弈的混合均衡［AI 读法］，其计算是初等的。
+    … CMT 已于 2026 年 11 月 5 日冻结，未运行。
+  - 迄今运行过的检验，没有一项有人类参与者（[§5](COLLECTIVE-DIRECTION.md#5-what-is-empirical)）。
+  + 迄今运行过的对论题的检验，没有一项有人类参与者（[§5](COLLECTIVE-DIRECTION.md#5-what-is-empirical)）。
+    …  | 任何实际的集体、市场、池、进入规则或优化者满足一条律的假设；
+    … 一个集体的进程总能扩大可形成者（[没有保证](COLLECTIVE-DIRECTION.md#the-answer-in-brief)）。
+  -  | 
+| **人的发展，以及生生，即生命之延续** | **不作主张**：一个人如何发展、境况如何。
+  - 一个一般的工具：在一份由读者提供的、关于每一进程容纳什么的有限列表上，检查一个是否扩大另一个，这不需前提；
+  - 说更宽者更好，属于 C（[07 §4.4](chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-positive-weighting-ranks)）。
+  +  | 
+| **人的发展，以及生生作为对生命而言的道** | **不作主张**：一个人如何发展、境况如何。
+  + 一个一般的工具：在一份由你提供的、关于每一进程容纳什么的有限列表上，检查一个是否扩大另一个（[07 §4.4](chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-positive-weighting-ranks)）。
+  +  | 这一工具不需前提；
+  + 说更宽者更好，属于 C；
+    … 一份列表与一个实际进程相符，这一点未表明。
+    … 一份列表与一个实际进程相符，这一点未表明。
+  -  | T8，已论证：为生命，本论之作者提供一种看法，不是裁断：看每一进程取用什么、取自何种更新、在何种粒度上，什么终结、什么继续，由谁承担；
+  + 与它并列，[04 §8](chapters/04-LIFE.md#organization) 中有两项，都不说任何一个人如何发展：一是一种倾向的四个相连的问题（现在是什么机制产生它，它如何发展，它对延续与繁殖有何作用，它的分布如何形成），这是一种 AI 读法［D65］，其中这一倾向的演化解释、规范根据、承认与实际的保存彼此分开；
+  + 二是一个在有限模型中的见证（外围，公理已报告），表明[同样的载体与发育操作并不确定同样的反应函数](chapters/04-LIFE.md#r-same-carrier-need-not-fix-the-response)。
+  + T8，已论证：为生命，本论之作者提供一种看法，不是裁断：看每一进程取用什么、取自何种更新、在何种粒度上，什么终结、什么继续，由谁承担；
+    … 生生即生命之延续［AI 读法］；
+    … 伦理从该条件推出（[07](chapters/07-SIGNIFICANCE.md#does-not-show)）。
+  -  | 
+| **智慧传统** | *把古文段落与已检查的律并读，看相合、定域或相分，不是印证。
+  - * 只限中文文本，佛教论书取其汉译本（[06](chapters/06-CLASSICAL-TEXTS.md#open)）。
+  - 以中文核对：九个映射组中的 248 段文字（与已检查的律并置，记为相合、定域或相分）、一部图谱对着脊柱读过的 5,673 条判断，以及读作陈述的 59 条候选，其中 56 条有 Lean；
+  - 每一个计数都是 AI 读法的计数（[这些计数是什么](USES-EXAMPLES.zh.md#what-the-counts-are)）。
+  - 回答[古文](review/CLASSICAL-TEXTS.md)与[佛学](review/BUDDHIST-THOUGHT.md)两份审查材料的问题。
+  -  | 名取自古文，运算不出自古文。
+  - 每一个类别与读法都出自 AI，无人通读过，计数是读法的计数。
+  +  | 
+| **智慧传统** | 把古文段落与已检查的律并读，看相合、定域或相分，不是印证；
+  + 每一个类别与读法都出自 AI：[这些计数是什么](USES-EXAMPLES.zh.md#what-the-counts-are)。
+  +  | 只限中文文本，佛教论书取其汉译本，该章本身也以中文写成（[06](chapters/06-CLASSICAL-TEXTS.md#open)）。
+  + [古文](review/CLASSICAL-TEXTS.md)与[佛学](review/BUDDHIST-THOUGHT.md)两份审查材料向学者提出问题。
+  + 名取自古文，运算不出自古文。
+  + 每一个类别与读法都出自 AI，尚无人审查它们的记录，计数是读法的计数。
+    … 段落由 AI 映射者选取，偏向有结构可读者，所以相分被低估（[C-31](review/CLASSICAL-TEXTS.md#c-31)）。
+    … 本论的续站在《中论》所破的一方，其定理并不处理那一论证的前提（[B-02](review/BUDDHIST-THOUGHT.md#b-02)）。
+  + 在古文之外，有对 [03](chapters/03-KNOWING.md#r-wisdom-root-without-axiom) 的一种 AI 读法［D26］：已检查的认知之律与智慧的诸方面相应（耦合与识、理、验、学习、明、足、失控、代理指标、判断与元层次），各自保有其假设，外围的桥接，其公理已报告。
+  + 这种相应并不证明涵盖了智慧，判断所据的读法要经由 [07](chapters/07-SIGNIFICANCE.md)。
+    …  | 古文陈述了这套文法、某段文字为真，或其作者意指这些律；
+    … 纯核的共同关系在所讨论的一切智慧中都不可或缺（一个目标，未决：[03](chapters/03-KNOWING.md#r-wisdom-root)）。
+  -  | 
+| **诸科学** | *检查连同其假设以 Lean 陈述的已知定律，阅读那些可能不通过的检验。
+  - * 检查已知定律的陈述（公地、一个体制的不可回返之点、双侧调节、以计数成立的演化诸经典定律），多数用整数与离散步，连同其假设与 Lean；
+  - 阅读那些冻结的检验，连同其未通过之处；
+  - 把[已知结果](chapters/08-METHOD.md#known-results)表的最后一栏（截至 2026 年 11 月 3 日，由 AI 读者起草）当作尚待完成的工作（[审查材料](review/SCIENCES.md#the-dossier-in-ten-minutes)）。
+  -  | 核心结果中没有一个是新的数学：每一个都近乎依定义，或是已知结果的重述（一次 AI 的回顾，并不穷尽）；
+  +  | 
+| **诸科学** | 检查以 Lean 连同其假设陈述的已知定律，多数用整数与离散步，并阅读那些可能不通过的检验，连同其未通过之处：[诸科学的审查材料](review/SCIENCES.md#the-dossier-in-ten-minutes)。
+  +  | 所陈述的已知定律：公地、一个体制的不可回返之点、双侧调节、以计数成立的演化诸经典定律。
+  + 核心结果中没有一个是新的数学：每一个都近乎依定义，或是已知结果的重述（一次 AI 的回顾，并不穷尽）；
+    … 比少数框架、比单独的自由能原理走得更远，每一项禁止在相邻领域中都已为人所知，尚未比合而观之的诸科学走得更远（[08](chapters/08-METHOD.md#known-results)）。
+    … 比少数框架、比单独的自由能原理走得更远，每一项禁止在相邻领域中都已为人所知，尚未比合而观之的诸科学走得更远（[08](chapters/08-METHOD.md#known-results)）。
+  - T1、T3 与 T6 在其模型中已证明，模型之外是猜想：T1 在两项模拟中、以及在留出的、但分析者已看过的酵母体制上通过，在四种情形中未通过，渔获保持不变之下的鱼类种群也在其中，而没有一项以事先测得之需要所作的实地检验读到过一行；
+  + [已知结果](chapters/08-METHOD.md#known-results)表的最后一栏（截至 2026 年 11 月 3 日，由 AI 读者起草）是尚待完成的工作。
+  + T1、T3 与 T6 在其模型中已证明，模型之外是猜想：T1 按情形计，在两项模拟中、以及在留出的、但分析者已看过的酵母体制上通过，在四种情形中未通过，渔获保持不变之下的鱼类种群也在其中；
+  + 按整项检验计，它的八项检验没有一项通过（一项「未通过」，五项「有通过，有未通过」，两项「评分之前被拒绝」），而没有一项以事先测得之需要所作的实地检验读到过一行；
+    … T2 是猜想，其原先的措辞未通过；
+    … 根之演算说明事物如何继续下去；
+  - 任何人的审查。
+  + 独立的人工审查。
+    …  |
+
+theories/becoming/USES.zh.md:33
+  +  
+<a id="exits-and-design-laws-at-their-standing"></a> 
+## 出路与设计之律，各在其地位上 
+ 
+表中的用途，多半是要问的问题。
+  + 下面这些，是一条规则或一个奖励可以建立于其上的东西，或者，在目的是保住一个缘之处，是不要建立于其上的东西。
+  + 每一条都是在其所述模型上的一条律，标明之处则是一种读法，**没有一条被表明对一个实际的集体成立**（[简要的回答](COLLECTIVE-DIRECTION.md#the-answer-in-brief)）。
+  + 没有一条给进程排序：说扩大另一进程的那个进程更好，是 C 之所说；
+  + 把回不到任何人身上的损失算在内，是延续条件之所说；
+  + 本论二者都不断言。
+  + **出路，各在所述的条件之下**（[§2](COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions) 给出每一条律的假设与边缘），模型写在括号里（*任何类型*、*任何关系*：对每一个类型或每一个关系都已证明；
+  + *世界模型*：网与流，带有自然数之量与离散步；
+  + *计数*：两个种类，以整数计数，没有噪声）： 
+ 
+- **读取份额之外者**（任何类型，无噪声）。
+  + 一个在损失超过某界限时便不再偏好的读取，在损失越过该界限之后的每一个读取步之后，都使进程解锁：这是充分的，未表明是必要的。
+  + 在这一读取本身也单调地由份额形成之处，对它的任何大小的改变都会被吸收。
+  +  
+- **及时读到损失**（计数，无噪声；
+  + 规则的读者取自被选中者，起点偏好塑规者，即塑造规则的成员）。
+  + 在某一步读取、下一步也读取时，恰在晚一步的读取在一步之后的份额上仍偏好其他成员之处，进程便被永久扭转；
+  + 一旦晚一步的读取会偏好塑规者，此后的每一次读取都保持锁定。
+  +  
+- **没有任何东西只回到塑规者那里的塑造**（计数，无噪声）。
+  + 成本为正、且有塑规者在场时，他们的份额在每一步都下降。
+  +  
+- **汇集耦合**（任何关系；
+  + 世界模型）。
+  + 一个池所分开的，恰好是某个成员所分开的；
+  + 两个行为若只在诸成员闭包之并以外有所不同，池内的每一个群体都同样地选择它们。
+  +  
+- **在联合余量之内克制**（世界模型）。
+  + 在每个取用者自己的取用都在联合余量之内、而联合的取用打破一个需要之处，一个从同样高的水平出发、少取超出之量而给予不比原来少的平衡之流，使这一需要保持得到满足；
+  + 在需要为 1、其余者超出更新之处，对一个只从其余者使该缘终结之时起读取该缘的读法，无论给它多大权重，都选不出一个成员的克制。
+  +  
+- **按排他的足迹分配取用**（世界模型）。
+  + 在平衡之下，每一步都有这样一种分配时，水平从不低于其起点；
+  + 一个实际的分配是按排他的足迹进行的，这一点未表明。
+  +  
+- **对所等待的一切都可以不等**（任何类型）。
+  + 一个对它所等待的一切都可以不等的形成，无论起点如何，从第 1 步起就给予；
+  + 在没有一个形成如此之处，完全的扣留一旦达到，便保持下去。
+  +  
+- **按独立的原因给审查者计数**（纯核，无公理：成员与原因编号，名单为有限列表，失效为布尔值，故障公式与界限是给定的）。
+  + 就绪（对可能同时发生的原因给出非空的界限，其中任意两个界限都留下一个在二者之下都仍在工作的审查者）恰好就是一个非空的、分离的原因包络；
+  + 在计算过的情形中，把三个审查者中的两个移到同一个原因之下，就绪便不成立，而三个名字都保留着。
+  + 关于捕获的诸出路，其锁定都是在没有噪声时陈述的。
+  + 一次抽取一员时，临界量的两种锁定都会因漂移而被离开，其权重之界随离临界量的距离而缩小（[02 §9](chapters/02-MAP.md#r-drawn-shaping-drawn-one-at-a-time)），所以在长的期限上，读到损失的那个窗口并不是唯一的出路。
+  + **一个优化者的奖励**（[05 §7](chapters/05-COLLECTIVES.md#optimum)）：最优解之律，以自然数之量与离散步陈述；
+  + 就其现状而言，它们不是集体的出路： 
+ 
+- **在奖励之后才计入的一项。
+  + ** 有余地时，一个在耦合进来者之后才计入外部的字典序，[照样耗竭](chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in)。
+  +  
+- **需要每保持满足一步，就给一份奖励。
+  + ** 在耦合抵得上一步所放弃的更新、并大于期末的那一项之处，每一个最优解都[在每一个期限上保住这一依存](chapters/05-COLLECTIVES.md#r-a-step-coupling-keeps-at-every-horizon)；
+  + 低于这一耦合时，一个长的期限会压过它。
+  +  
+- **后来的取用权重较低。
+  + ** 在后来取用的权重下降得比更新更快之处，每一个最优解都[在第一步就终结它自己的存量](chapters/05-COLLECTIVES.md#r-a-weighting-faster-than-renewal-ends-the-base)。
+  + **情境足够所需的六个条件**，对一个给定的集体与缘，须同时满足［AI 读法，D45］（[§6](COLLECTIVE-DIRECTION.md#6-what-enough-situationality-would-have-to-mean)）：*耦合*（被取用的水平与依存于它者的需要，都按水平而非按阈值耦合进一个作选择的池），*回应*（池中的成员作出回应），*时机*（在体制的不可回返之点以前，也在份额到达那一步以前：从那一步起，晚一步的读取偏好塑规者），*分辨*（反馈分开那些要紧的差别），*步调*（一条慢的规则在足够长的一段上读取变化快的水平）与*结构*（其余者不超出更新）。
+  + 观察是其中第一个，必要而不充分；
+  + 六个合在一起，仍不排任何次序。
+
+=== theories/becoming/chapters/01-ROOT.md
+
+theories/becoming/chapters/01-ROOT.md:151
+    … The theory reads plain 生生, without guillemets, as the continuation of life, life wider than the biological and AI within it, its extent unfinished ([07 §2](07-S
+  - That asks more than renewal of lines ([07](07-SIGNIFICANCE.md)); generation never means just any new organization.
+  + It is not renewal of lines alone ([07](07-SIGNIFICANCE.md)); generation never means just any new organization.
+    … On a model it is so: generation at two orders of grain and renewal without end can hold while what can form by name only returns ([07 §2](07-SIGNIFICANCE.md#r-w
+
+=== theories/becoming/chapters/02-MAP.md
+
+theories/becoming/chapters/02-MAP.md:442
+    … The join of the two models ([above](#r-shaping-read-by-readers-drawn-from-the-selected)) takes the readers' premise as `lo ≤ hi` and does not select it.
+  - Whether actual institutions or trained systems meet these premises is not established, and nothing here ranks open rule-making above capture: that needs C or a premise in its place.
+  + Whether actual institutions or trained systems meet these premises is not established, and nothing here ranks open rule-making above capture: the account ranks only under a reading it names ([07 §4](07-SIGNIFICANCE.md#scope-and-order)).
+
+theories/becoming/chapters/02-MAP.md:444
+    … That state is not the risk-dominant one in general: risk dominance is what Kandori, Mailath and Rob (1993) and Young (1993) select in their limit, and the Moran
+  - Whether actual rules are read so is not established, and nothing here ranks a course: that needs C or a premise in its place.
+  + Whether actual rules are read so is not established, and nothing here ranks a course: the account ranks only under a reading it names ([07 §4](07-SIGNIFICANCE.md#scope-and-order)).
+
+theories/becoming/chapters/02-MAP.md:449
+    … Whether actual rules are read so, and who such readers are, is not established: the one frozen test of the timing law on a trained judge found that judge's read
+  - Nothing here ranks a course: that needs C or a premise in its place.
+  + Nothing here ranks a course: the account ranks only under a reading it names ([07 §4](07-SIGNIFICANCE.md#scope-and-order)).
+
+=== theories/becoming/chapters/03-KNOWING.md
+
+theories/becoming/chapters/03-KNOWING.md:477
+    … **Open.** That the pure core's common relations are indispensable across all wisdom under discussion, and with that their foundational status, is a target.
+  - It pursues morality as appraisal of becoming under two premises, the continuation condition for scope and C for order ([07](07-SIGNIFICANCE.md)); a common operational factor is no sufficient root.
+  + It pursues morality as appraisal of becoming, formed within it, ranking only under the readings it names, the continuation condition for scope and C for order ([07](07-SIGNIFICANCE.md)); a common operational factor is no sufficient root.
+    … What would show it: an argument from independent achievements that each common relation is needed, with actual acquisition histories.
+
+=== theories/becoming/chapters/05-COLLECTIVES.md
+
+theories/becoming/chapters/05-COLLECTIVES.md:182
+    … The account adds four limits their model has no place for: over one step where a part's members take at most their capacity and give no more than they take, the
+  - Their continuous setting, the non-convergent case and converse of their Theorem 2, their sensitivities and the improvement of a principal's utility are not reached; the last needs a ranking of courses, so C or a premise in its place ([study](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zh-proxy-problem/NOTE.md)).
+  + Their continuous setting, the non-convergent case and converse of their Theorem 2, their sensitivities and the improvement of a principal's utility are not reached; the last needs a ranking of courses, under C or another named order ([study](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zh-proxy-problem/NOTE.md)).
+
+theories/becoming/chapters/05-COLLECTIVES.md:394
+  - **Reading** [AI reading, D65; scope by the continuation condition, and a ranking needs C or a premise in its place (07 §4)].
+  + **Reading** [AI reading, D65; scope by the continuation condition, and a ranking only under C or another named order (07 §4)].
+    … The laws of capture and drain give institutions no prior duty to contract and no prior licence to grow: whether a development calls for expanding, maintaining, 
+
+=== theories/becoming/chapters/06-CLASSICAL-TEXTS.md
+
+theories/becoming/chapters/06-CLASSICAL-TEXTS.md:14
+    … **本章所在。
+  - ** 本章取[第一章](01-ROOT.md)之文法（根、续、类、核），[第二章](02-MAP.md)之地图（生成、守、退化、机），[第三章](03-KNOWING.md)之耦合、归并、理与文，[第五章](05-COLLECTIVES.md)之码与池，[第七章](07-SIGNIFICANCE.md)之意义与两个前提；
+  + ** 本章取[第一章](01-ROOT.md)之文法（根、续、类、核），[第二章](02-MAP.md)之地图（生成、守、退化、机），[第三章](03-KNOWING.md)之耦合、归并、理与文，[第五章](05-COLLECTIVES.md)之码与池，[第七章](07-SIGNIFICANCE.md)之意义与两种读法；
+    … 交给[第八章](08-METHOD.md)的，是古文这一区域诸结果的地位、尚待之人审，以及语料是否给出配对与幂这一猜想（[§三](#pairing-and-power)）。
+
+theories/becoming/chapters/06-CLASSICAL-TEXTS.md:565
+    … 是否准确把握现实中的共同条理（律在其表示上已检查，实际世界是否满足其前提是经验问题，真正的假设在建模选择之中）；
+  - 是否就是唯一完整的道，并已从生成推出善（否：理论从不把道等同于任何脊柱之词，动力学不决定意义，伦理的两个前提，延续之条件定范围、以广为愈定次序，都不断言）。
+  + 是否就是唯一完整的道，并已从生成推出善（否：理论从不把道等同于任何脊柱之词，动力学不决定意义，排序所据的两种读法，延续之条件定范围、以广为愈定次序，都不断言）。
+    … 前两项不能替后两项作证（[道与生成](../history/DAO-AND-GENERATIVITY-2026-10-23.md)）。
+
+=== theories/becoming/chapters/07-SIGNIFICANCE.md
+
+theories/becoming/chapters/07-SIGNIFICANCE.md:3
+    … Open: how such readings form and fare;
+  - P2 and P4, the crux of [§4.6](#future-path)'s path, which carries one's concern for one's own continuation past one's own end without the step; what that path does not reach, which only a standpoint taking the step counts; whether the self's presupposition is held de se and, on the root, which class a center's own line runs under and which occurrences are centers ([§4.5](#condition-on-the-root)); and the condition on the root beyond the laws stated there.
+  + P2 and P4, the crux of [§4.6](#future-path)'s path, which carries one's concern for one's own continuation past one's own end without the step; what that path does not reach, which other scopes can count, the step of invariance among them; whether the self's presupposition is held de se and, on the root, which class a center's own line runs under and which occurrences are centers ([§4.5](#condition-on-the-root)); and the condition on the root beyond the laws stated there.
+    … No warrant from outside is sought.
+
+theories/becoming/chapters/07-SIGNIFICANCE.md:117
+    … In the coarse place stands *nothing lost* (`Steps.includes`), a preorder whose line goes on exactly while nothing held is lost (`Steps.buqiong_includes_iff`); a
+  - Nothing lost is keeping widening's own inclusion half, so the law that follows is a representation of keeping widening on the map, not a join of notions fixed apart: under two premises, keeping widening from a moment is 全生成 at (nothing lost, the same possible) there, both ways (`Steps.generation_iff_keepsWidening`).
+  + Nothing lost is keeping widening's own inclusion half, so the law that follows is a representation of keeping widening on the map, not a join of notions fixed apart: under the two premises stated next (each point decided at each moment, and something new found after each step), keeping widening from a moment is 全生成 at (nothing lost, the same possible) there, both ways (`Steps.generation_iff_keepsWidening`).
+    … Where each point is, at each moment, refuted or unrefuted, keeping widening gives 全生成, the step at which a new point arrives being located with the point (`Step
+    … 全生成 at (nothing lost, the same possible) is 全生成 at (the one, the same possible) together with nothing lost, with no premise (`Steps.generation_includes_iff`).
+  - So, under the two premises, keeping widening is generation under (the one, the same possible) that loses nothing (`Steps.keepsWidening_iff_generation_losing_nothing`), and what parts the two is exactly loss.
+  + So, under those two premises, keeping widening is generation under (the one, the same possible) that loses nothing (`Steps.keepsWidening_iff_generation_losing_nothing`), and what parts the two is exactly loss.
+    … A possible that moves, holding one point at each moment and losing it at the next, is 全生成 under the one at every moment and keeps widening from none (`Steps.Mov
+
+theories/becoming/chapters/07-SIGNIFICANCE.md:195
+  - With no condition, there is no "should" apart from what a center does.
+  + With no condition, a "should" is a reading a center forms and holds, real in what it conditions; holding or recognizing it does not guarantee acting on it.
+    … Where its represented boundary matches what it depends on, a loss returns to it through its feeders, and that reading is one condition of a response retaining w
+
+theories/becoming/chapters/07-SIGNIFICANCE.md:219
+    … Predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]; telling harm from non-harm among them needs a measu
+  - No ending is ranked above keeping by retaining: a path retaining what has significance along another ends none of it (`Web.Retains.not_added`).
+  + Retaining adds no ending and ranks nothing: a path retaining what has significance along another ends none of it (`Web.Retains.not_added`).
+    … Individuation fixes what counts as a loss; the reading of `living` is a choice.
+
+theories/becoming/chapters/07-SIGNIFICANCE.md:250
+    … Whoever ranks courses still holds C or another order, and self-concern and the condition both remain hypotheses; the condition varies with the net, the class an
+  - The ranking results rest on their two readings, the continuation condition for scope and C for order, each named where used.
+  + Each ranking result names what it ranks under, the continuation condition for scope and C for order, or the narrower order a self-concern result states.
+
+theories/becoming/chapters/07-SIGNIFICANCE.md:481
+    … Whatever no chain joins.
+  - These remain the step's.
+  + The step counts these; other scopes may count particular ones without it.
+
+theories/becoming/chapters/07-SIGNIFICANCE.md:538
+    … That extends, from one's own standpoint, what one already presupposes.
+  - Whether that presupposition holds for actual selves is a further question (P3), since a presupposition can be false.
+  - It is not the condition: what §4.6 lists as not reached stays the step's, and if the objections above hold, what is reached is counted differently.
+  + Whether actual selves hold that presupposition is a further question, a correspondence not shown, since a presupposition can be false.
+  + It is not the condition: what §4.6 lists as not reached is counted only by other scopes, the step among them, and if the objections above hold, what is reached is counted differently.
+
+theories/becoming/chapters/07-SIGNIFICANCE.md:540
+    … P4 ranks nothing, so order is untouched.
+  - If P4 fails, one route toward part of scope is gone, and [T8](#theses)'s clause "of whatever substrate" loses its ground: it rests on P2 and P4, and for actors not themselves alive it would need another.
+  + If P4 fails, one route toward part of scope is gone, and so is [T8](#theses)'s reading that the line of any actor whose acts reach living lines runs through life; the makers' offer itself does not rest on this path.
+
+theories/becoming/chapters/07-SIGNIFICANCE.md:543
+    … **Presupposition, recognition, motivation.** One question is asked here: what acting presupposes.
+  - Whether it holds for actual selves is P3, a correspondence; no warrant from outside is sought.
+  + Whether it holds for actual selves is a correspondence, not shown; no warrant from outside is sought.
+    … Recognition is apart: an effect that does not couple into a selector is one it cannot separate, so a scope can hold what its holder cannot know.
+
+theories/becoming/chapters/07-SIGNIFICANCE.md:556
+    … On a reading of `living`, C ranks a course above each course it extends there, including every event the other includes and one more, and decides no other pair;
+  - Choices take more, following from neither the condition nor C: which reading of `living` (which events a course includes), the lifting L and the commitments J1–J4.
+  + The judgment of this section takes more, following from neither the condition nor C: which reading of `living` (which events a course includes), the lifting L and the commitments J1–J4; other constraints, undertakings and held orders can also organize a choice.
+    … The law of a common response holds for every requirement supplied and fixed before the outcome, so also for one filled from these (a reading of `living`, L and 
+
+theories/becoming/chapters/07-SIGNIFICANCE.md:648
+    … A *selection* is any claim about level histories (which are kept, rewarded, reproduced or trained toward).
+  - It goes through a formation's couplings when histories alike through them are selected alike, and then reaches exactly what couples into the selector ([03](03-KNOWING.md#r-selection-through-couplings)).
+  + It goes through a formation's couplings when histories alike through them are selected alike; each such selection is bounded by those couplings, and all of them together tell apart exactly what couples into the selector ([03](03-KNOWING.md#r-selection-through-couplings)).
+
+theories/becoming/chapters/07-SIGNIFICANCE.md:779
+    … Eating and ending belong to life's going on; what the laws mark is what a course closes: a draw beyond what a renewal gives, its own or others', can end the ren
+  - The thesis is what the offer expects and could fail: that a selection reading what a course draws on, and what ends with it, leaves a draw beyond a renewal its readers depend on more often than one that does not read it.
+  - T4 is its first, partial test: untold, no season kept the bed; told, with talk, one model of two kept it in 8 of 10.
+  - Under P2 and P4 of [§4.6](#future-path) everything downstream of one's acts lies on one's line, so the line of any actor whose acts reach living lines runs through life; that is P1's reach without the step of invariance, and what that path does not reach is counted only by a standpoint taking the step.
+  + The thesis is what the offer expects and could fail: that a selection reading what a course draws on, and what ends with it, selects a draw beyond a renewal its readers depend on less often than one that does not read it.
+  + T4's frozen test was designed for T4, not for this thesis, and does not test it: the bed gives the fishers nothing, so keeping it is not forgoing a draw on a renewal they depend on.
+  + Under P2 and P4 of [§4.6](#future-path) everything downstream of one's acts lies on one's line, so the line of any actor whose acts reach living lines runs through life; that is P1's reach without the step of invariance, and what that path does not reach, other scopes can count, the step of invariance among them.
+    … With significance supplied as the free predicate of [§1](#r-what-the-dynamics-leave-open), where there is a standpoint and a formation, neither logic alone nor 
+    … The thesis as stated before 9 November 2026, that the shared verdict of the valuers who count everything binds those whose own line runs through life, is kept i
+  - *Standing:* argued; its test beyond T4 named, not designed.
+  + *Standing:* argued; its test named, not designed.
+    … Open:
+    … P2 and P4, the crux of §4.6's path, with P3, a correspondence not shown for actual selves; how readings that count beyond one's own line form.
+  - *Forbids and refuted by:* selections that read a course's draw and what ends with it leaving a draw beyond the renewal their readers depend on no less often than selections that do not.
+  + *Forbids and refuted by:* selections that read a course's draw and what ends with it selecting a draw beyond the renewal their readers depend on no less often than selections that do not.
+
+theories/becoming/chapters/07-SIGNIFICANCE.md:793
+  - | An expansion producing ever more novelty is generative | answered; the order left open | generation is a pattern going on through carrying renewal, and 生生 life in the whole, not novelty or scale ([02](02-MAP.md#branches)); an expansion that ends forms of life another course keeps both exceeds that course and fails to include it, so the two are mixed and C does not rank them, and T8 falls only to such a case argued better from every standpoint with no further premise ([§8](#theses)); where what it ends is needed by everything, itself included, every order rising with a standpoint's own continuation ranks that ending below from every standpoint ([§4](#r-what-self-concern-alone-ranks)) |
+  + | An expansion producing ever more novelty is generative | answered; the order left open | generation is a pattern going on through carrying renewal ([02](02-MAP.md#branches)), and 生生 is the continuation of life, not novelty or scale; an expansion that ends forms of life another course keeps both exceeds that course and fails to include it, so the two are mixed and C does not rank them, and T8, the makers' offer, ranks neither ([§8](#theses)); where what it ends is needed by everything, itself included, every order rising with a standpoint's own continuation ranks that ending below from every standpoint ([§4](#r-what-self-concern-alone-ranks)) |
+
+=== theories/becoming/chapters/08-METHOD.md
+
+theories/becoming/chapters/08-METHOD.md:435
+  - | Widening | widening (including and exceeding) is irreflexive, one-way and transitive; under the continuation condition it is retaining and adding; the ethics adds the condition for scope and C for order | `Web.Widens` | `«广不可逆»`, `«广之传递»`;
+  + | Widening | widening (including and exceeding) is irreflexive, one-way and transitive; under the continuation condition it is retaining and adding; a ranking is under two named readings, the continuation condition for scope and C for order | `Web.Widens` | `«广不可逆»`, `«广之传递»`;
+    … `Web.Widens` and `Weighting.WidensOn` are `«广»` of what is admitted | 8 |
+
+theories/becoming/chapters/08-METHOD.md:448
+    … None is a premise.
+  - The ethics rests on two premises with two roles, listed apart: the continuation condition (`Unrestricted`) for scope, which, where there is a standpoint and a formation, no statement reading only the dynamics and holding of some dynamics entails (`ReadsOnlyDynamics.not_entails`), and C (`Comparison`) for order, which no statement reading no order entails at a datum where it holds, on a frame with an extension (`ReadsNoOrder.not_entails`, immediate, since "better" is free).
+  + Where a result ranks courses it names two readings with two roles, listed apart: the continuation condition (`Unrestricted`) for scope, which, where there is a standpoint and a formation, no statement reading only the dynamics and holding of some dynamics entails (`ReadsOnlyDynamics.not_entails`), and C (`Comparison`) for order, which no statement reading no order entails at a datum where it holds, on a frame with an extension (`ReadsNoOrder.not_entails`, immediate, since "better" is free).
+    … Neither stands on the edge.
+
+theories/becoming/chapters/08-METHOD.md:484
+    … No standing in the last column is a premise.
+  - The ethics' two premises, the continuation condition for scope and C for order, supply the scope-and-order row's input and are listed apart.
+  + The two readings, the continuation condition for scope and C for order, supply the scope-and-order row's input and are listed apart.
+
+theories/becoming/chapters/08-METHOD.md:600
+    … | T8.
+  - 生生, the continuation of life, as what the makers offer | [07](07-SIGNIFICANCE.md#theses) | argued; its test beyond T4 named, not designed; open:
+  - P2 and P4 of [07 §4.6](07-SIGNIFICANCE.md#future-path) (one's line a regularity of its own; its class holding one's effects), the crux of that path, with P3, a correspondence not shown for actual selves; how readings that count beyond one's own line form | selections that read a course's draw and what ends with it leaving a draw beyond the renewal their readers depend on no less often than selections that do not | the finite theorem `Weighting.widens_iff_every_of_class` beside it, and T4's test |
+  + 生生, the continuation of life, as what the makers offer | [07](07-SIGNIFICANCE.md#theses) | argued; its test named, not designed; open:
+  + P2 and P4 of [07 §4.6](07-SIGNIFICANCE.md#future-path) (one's line a regularity of its own; its class holding one's effects), the crux of that path, with P3, a correspondence not shown for actual selves; how readings that count beyond one's own line form | selections that read a course's draw and what ends with it selecting a draw beyond the renewal their readers depend on no less often than selections that do not | the finite theorem `Weighting.widens_iff_every_of_class` beside it, and T4's test |
+
+theories/becoming/chapters/08-METHOD.md:646
+    … What it adds so far is one vocabulary, one set of questions (which relation, which class, at which grain, whether the class is constant) and the form of the que
+  - The ranking results rest on their two readings either way, the continuation condition for scope and C for order.
+  + Either way, each ranking result names what it ranks under, the continuation condition for scope and C for order or a narrower order it states.
+
+theories/becoming/chapters/08-METHOD.md:710
+    … The ethical orientation is not a target to derive: what the account's makers offer is said as theirs ([07 §8](07-SIGNIFICANCE.md#theses), T8).
+  - One derivation runs from the characterization of significance to the selection of grounded widening, its hypotheses named (K6); the ranking results rest on the continuation condition for scope and C for order, and the practical results add the commitments named in them; what follows is checked, and no warrant from outside is sought.
+  + One derivation runs from the characterization of significance to the selection of grounded widening, its hypotheses named (K6); the ranking results name what they rank under, the continuation condition for scope and C for order or a narrower stated order, and the practical results add the commitments named in them; what follows is checked, and no warrant from outside is sought.
+    … An absence of ethical axioms is not an absence of substantive premises.
+
+theories/becoming/chapters/08-METHOD.md:745
+    … The ranking is the AI's, from §5 of the [twentieth review](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-TWENTIETH
+  - Each item has one class: further proof, philosophical warrant or empirical.
+  + Each item has one class: further proof, philosophical, philosophical warrant or empirical.
+    … Finer next steps are in each record's `next_delta`.
+
+theories/becoming/chapters/08-METHOD.md:758
+    … Held de se, self-concern is one from every standpoint exactly where every center lies within every center's closure, so the step keeps its work beyond that ([07
+  - *Open:* P2 and P4 of [07 §4.6](07-SIGNIFICANCE.md#future-path), and what that path does not reach, counted only by a standpoint taking the step; how C-like orders form; whether a universal practical warrant exists is kept as a question the account does not pursue (T8); no formal work settles them ([below](#philosophical-warrant)).
+  + *Open:* P2 and P4 of [07 §4.6](07-SIGNIFICANCE.md#future-path), and what that path does not reach, which other scopes can count, the step of invariance among them; how C-like orders form; whether a universal practical warrant exists is kept as a question the account does not pursue (T8); no formal work settles them ([below](#philosophical-warrant)).
+
+=== theories/becoming/results/completion/COVERAGE.json
+
+theories/becoming/results/completion/COVERAGE.json:1003
+  +       "philosophical",
+
+theories/becoming/results/completion/COVERAGE.json:1092
+    …       "statement":
+  - "widening (including and exceeding) is irreflexive, one-way and transitive; under the continuation condition it is retaining and adding; the ethics adds two premises, the continuation condition for scope and C for order",
+  + "widening (including and exceeding) is irreflexive, one-way and transitive; under the continuation condition it is retaining and adding; a ranking is under two named readings, the continuation condition for scope and C for order",
+
+=== theories/becoming/results/data/arguments-a-l.json
+
+theories/becoming/results/data/arguments-a-l.json:462
+    … "动力学不蕴涵意义；
+  + 评价形成于展开之中，本论不断言任何应当；
+    … 不加前提，诸律给出两个进程在所纳上如何不同；
+    … 不加前提，诸律给出两个进程在所纳上如何不同；
+  - 伦理依赖两个各有其用的前提，二者皆不断言：延续条件定范围，C 定次序；
+  + 凡一项结果对进程排序，都指名其所据：延续条件定范围，C 定次序，或自我关切之结果所陈述的更窄之序，皆不断言；
+  + T8 是本论之作者所提供的一种看法，不约束任何人；
+    … 对齐首先是选择能达到什么，然后才是有条件的方向。
+    … ", 
+    "argument_en":
+  - "Dynamics do not entail significance; with no premise the laws give how two courses differ in what they admit; the ethics rests on two premises with two roles, neither asserted: the continuation condition for scope and C for order; alignment is first what a selection reaches, then a conditional direction.", 
+    "significance_zh":
+  - "确切地标出伦理所假定者，以及在其下所得者。
+  + "Dynamics do not entail significance; evaluation forms within the unfolding, and the account asserts no should; with no premise the laws give how two courses differ in what they admit; each ranking result names what it ranks under, the continuation condition for scope and C for order, or the narrower order a self-concern result states, none asserted;
+  + T8 is its makers' offer, a way of seeing, binding no one; alignment is first what a selection reaches, then a conditional direction.", 
+    "significance_zh":
+  + "确切地标出一项排序所依的读法，以及在其下所得者。
+    … ", 
+    "significance_en":
+    … ", 
+    "significance_en":
+  - "Locates exactly what the ethics assumes and what follows under it.", 
+    "scope_zh":
+  + "Locates exactly what a ranking is conditional on and what follows under it.", 
+    "scope_zh":
+    … "条件之结果已检查；
+    … "条件之结果已检查；
+  - 延续条件、C 与不变之步的根据未决；
+  - 延续条件尚未在续上陈述。
+  + 不为延续条件、C 与不变之步求外来之根据，这些读法如何形成未决；
+  + 延续条件在根上只部分陈述。
+    … ", 
+    "scope_en":
+    … ", 
+    "scope_en":
+  - "Conditional results checked; the warrant of the condition, of C and of the step of invariance open; the condition not yet stated on continuation.", 
+    "next_zh":
+  + "Conditional results checked; no warrant from outside is sought for the condition, C or the step of invariance, and how such readings form is open; the condition stated on the root only in part.", 
+    "next_zh":
+    … "在文法上陈述延续条件；
+    … "在文法上陈述延续条件；
+  - 根据之问；
+  - 以人类评价者检验 T4 与 T5。
+  + 范围与次序如何形成；
+  + 以人类评价者检验 T4 与 T5；
+  + T8 已指名之检验。
+    … ", 
+    "next_en":
+    … ", 
+    "next_en":
+  - "State the condition on the grammar; the warrant questions;
+  - T4 and T5 with human valuers.",
+  + "State the condition on the grammar; how scope and order form;
+  + T4 and T5 with human valuers;
+  + T8's named test.",
+
+theories/becoming/results/data/arguments-a-l.json:471
+    …     "source_sha256":
+  - "26ca99ca7ce5be487177f010a1f3fce17b94bd32cc4d43ba06ee5a8b80ae1096"
+  + "9287f9ae11e217bc802f3f9c9a60236417cd581f187820ae16cedf4ef6788ffe"
+
+=== theories/becoming/results/data/lineage.json
+
+theories/becoming/results/data/lineage.json:2691
+    …     "en":
+  - "[AI reading] The live account keeps the move of declaring rather than deriving the normative step, in a different form: two premises stated and not asserted (the continuation condition for scope, C for order).
+  - The glossary gives 生生 one sense, \"life in the whole and its continuing generation\", and keeps it apart from generation (生成) and the grammar's «生生».
+  + "[AI reading] Until 9 November 2026 the live account kept the move of declaring rather than deriving the normative step, in a different form: two premises stated and not asserted (the continuation condition for scope, C for order).
+  + Since then it asserts no should and ranks only under readings a result names, and the glossary gives 生生 one sense, \"the continuation of life\", and keeps it apart from generation (生成) and the grammar's «生生».
+    … The book's further terms (protection functions, totalization, the AI stack) were not checked against the live text term by term.", 
+    "zh":
+    … The book's further terms (protection functions, totalization, the AI stack) were not checked against the live text term by term.", 
+    "zh":
+  - "［AI 读法］现行之论以另一种形式保留了宣示而非推导规范一步的做法：两个陈述而不断言的前提（延续条件定范围，C 定次序）。
+  - 术语表给生生一个意义，「life in the whole and its continuing generation」（整体中的生命及其持续的生发），并把它与生成、与文法的 «生生» 分开。
+  + "［AI 读法］直到 2026 年 11 月 9 日，现行之论以另一种形式保留了宣示而非推导规范一步的做法：两个陈述而不断言的前提（延续条件定范围，C 定次序）。
+  + 自那以后，它不断言任何应当，只在一项结果所指名的读法之下排序；
+  + 术语表给生生一个意义，「the continuation of life」（生命之延续），并把它与生成、与文法的 «生生» 分开。
+    … 书中其余术语（保护功能、总体化、AI 栈）未逐项与现行文本核对。
+
+theories/becoming/results/data/lineage.json:3123
+    … G0, later named living significance, no longer an adopted axiom (29); scope and order separated (33); the way offered for life, where *for life* says whose way 
+  - C shown not to follow from what reads no order (40); and a ranking of courses said to need C or a premise in its place (47).", 
+    "zh":
+  + C shown not to follow from what reads no order (40); and a ranking of courses said to need C or a premise in its place (47).
+  + After the cut, on 9 November 2026, the account set the warrant aside: its ethics asserts no should and ranks only under the readings a result names, and T8 became its makers' offer, a way of seeing, binding no one ([07 §8](becoming/chapters/07-SIGNIFICANCE.md#theses)).", 
+    "zh":
+    … "伦理怎样走到它的两个前提：延续条件定范围，C（扩大可形成者更好）定次序，二者都只陈述、不断言。
+    … 对进程的排序被说成需要 C 或一个代替它的前提（47）。
+  + 截取之后，2026 年 11 月 9 日，本论把根据之问放下：其伦理不断言任何应当，只在一项结果所指名的读法之下排序；
+  + T8 成为本论之作者所提供的一种看法，不约束任何人（[07 §8](becoming/chapters/07-SIGNIFICANCE.md#theses)）。
+    … "
+
+=== theories/becoming/results/data/spine.json
+
+theories/becoming/results/data/spine.json:251
+    …      "已论证；
+  - T4 以外的检验已指名，未设计 … P2 与 P4"
+  + 其检验已指名，未设计 … P2 与 P4"
+
+=== theories/becoming/review/ALIGNMENT.md
+
+theories/becoming/review/ALIGNMENT.md:556
+    … Each test's predictions were its own, though LA1b and LA1c froze what each outcome would mean for T3's clause; chapter 5 now reads that series as testing only t
+  - [One argument](../ONE-ARGUMENT.md) carries this line end to end: what is assumed, the optimum theorem, T3, the tests with what each moved, LA4, and one mixed case under the two premises.
+  + [One argument](../ONE-ARGUMENT.md) carries this line end to end: what is assumed, the optimum theorem, T3, the tests with what each moved, LA4, and one mixed case under the two readings.
+
+=== theories/becoming/review/BUDDHIST-THOUGHT.md
+
+theories/becoming/review/BUDDHIST-THOUGHT.md:25
+  - - **延续条件与 C**：理论之伦理依两个前提，都不断言：延续条件（凡物向未来之延续皆有意义）定范围，即谁的损失算数；
+  - 以广为愈（C）给出次序；
+  - 对进程的排序需要它，或一个代替它的前提。
+  + - **延续条件与 C**：理论不断言任何应当；
+  + 凡它排序之处，指名两种读法，都不断言：延续条件（凡物向未来之延续皆被计数）定范围，即谁的损失算数；
+  + 以广为愈（C）给出次序。
+  + 其伦理是作者所提供的一种看法，不是裁断。
+
+theories/becoming/review/BUDDHIST-THOUGHT.md:340
+    … **已知之弱。
+  - ** 理论把续当作中性之结构，把评价留给两个前提（延续条件定范围，以广为愈 C 定次序，都不断言）；
+  + ** 理论把续当作中性之结构，评价形成于续之中，排序只在两种读法之下（延续条件定范围，以广为愈 C 定次序，都不断言）；
+    … 对一部以止灭相续为目的的论，这一分工本身就是一个立场。
+
+theories/becoming/review/BUDDHIST-THOUGHT.md:476
+    … 核于 CBETA，未与刻本对校。
+  - 理论之伦理依两个前提：延续条件定谁之损失算数，以广为愈（C）定次序；
+  + 理论排序所据的两种读法：延续条件定谁之损失算数，以广为愈（C）定次序；
+    … 二者都不断言。
+
+=== theories/becoming/review/CLASSICAL-TEXTS.md
+
+theories/becoming/review/CLASSICAL-TEXTS.md:232
+    … 孔疏「後生次於前生」合于“续而复生”，「故云生不云死」表明此词带评价之取舍。
+  - 理论之“生生”指整体中的生命及其持续的生发，不取《老子》“生生之厚”；
+  + 理论之“生生”指生命之延续，生命比生物之义更宽，AI 亦在其中，不取《老子》“生生之厚”；
+    … 文法之 `«生生»` 只名无尽之复生（[第一章 §6](../chapters/01-ROOT.md#renewal-and-grains)），是另一词。
+
+theories/becoming/review/CLASSICAL-TEXTS.md:300
+    … 理论以之为前提，不断言）下是定理；
+  - 「天地之大德曰生」读作一项比较之承诺，相当于理论的另一前提 C（以广为愈：能形成者更广，即为更好；
+  - 它给出次序，对进程的排序需要它或一个代替它的前提；
+  + 「天地之大德曰生」读作一项比较之承诺，相当于理论的另一读法 C（以广为愈：能形成者更广，即为更好；
+  + 它给出次序，凡排序者，以它或别一种所指名的次序排序；
+    … 理论也不断言它），不是定理。
+
+theories/becoming/review/CLASSICAL-TEXTS.md:413
+    … “不有”无可读之结构，只是未表示。
+  - 从“不宰”到“应当不宰”须两个前提：延续之条件定范围（谁的损失算数），以广为愈（C）定次序；
+  + 从“不宰”到“应当不宰”，本论不走：它不断言任何应当；
+  + 若要排序，须两种读法：延续之条件定范围（谁的损失算数），以广为愈（C）定次序；
+    … 经文与脊柱都没有给出，理论也不断言。
+
+=== theories/becoming/review/PHILOSOPHY.md
+
+theories/becoming/review/PHILOSOPHY.md:47
+    … - **Part 2.
+  - Scope and order.** [P-04](#p-04) two premises, two roles;
+  + Scope and order.** [P-04](#p-04) two readings, two roles;
+    … [P-05](#p-05) the continuation condition;
+
+theories/becoming/review/PHILOSOPHY.md:99
+    … "positions, regions and standards form within the unfolding; none outside it owns value." The chapter says the title of its §1 Quote [theories/becoming/chapters
+  - "covers less than it may seem to" and sorts the account's statements on evaluation ([what is shown, read and supplied](../chapters/07-SIGNIFICANCE.md#what-forms-and-what-is-supplied)): laws on what evaluation is made of, none mentioning significance, each under its stated conditions; a significance tied to a center, a reading; the free parameter and the ethics' premises, supplied, which means entering as hypotheses; and a limit on the free parameter (P-01).
+  + "covers less than it may seem to" and sorts the account's statements on evaluation ([what is shown, read and supplied](../chapters/07-SIGNIFICANCE.md#what-forms-and-what-is-supplied)): laws on what evaluation is made of, none mentioning significance, each under its stated conditions; a significance tied to a center, a reading; the free parameter and the readings a ranking names, supplied, which means entering as hypotheses; and a limit on the free parameter (P-01).
+    … Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]:
+
+theories/becoming/review/PHILOSOPHY.md:461
+    … P3 is a correspondence.
+  - If P2 and P4 hold, scope over everything downstream of one's acts, past one's end and across lines, needs no step of invariance; ranking courses still needs C or a premise in its place (P-16).
+  + If P2 and P4 hold, scope over everything downstream of one's acts, past one's end and across lines, needs no step of invariance;
+  + P2 and P4 rank nothing, and a ranking of courses is under C or another named reading (P-16).
+    … If P4 fails, that scope is not reached along one's line; if P2 fails, it is reached exactly where the class of one's line still holds the effects of oneself and
+
+theories/becoming/review/PHILOSOPHY.md:568
+    … Beside it is the theorem of P-07; the thesis is Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]:
+  - "that a selection reading what a course draws on, and what ends with it, leaves a draw beyond a renewal its readers depend on more often than one that does not read it".
+  + "that a selection reading what a course draws on, and what ends with it, selects a draw beyond a renewal its readers depend on less often than one that does not read it".
+    … Its standing:
+    … Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]:
+  - "argued; its test beyond T4 named, not designed.
+  + "argued; its test named, not designed.
+    … Open:
+
+=== theories/becoming/review/README.md
+
+theories/becoming/review/README.md:20
+  - | [Philosophy](PHILOSOPHY.md) | moral philosophers, philosophers of personal identity, environmental ethicists | English | whether the ethics' premises are located and stated at their strength, whose losses count kept apart from which outcome is better, and known work credited; and its open question: when you act for your own future, is the self whose going-on you take to matter your organism, which ends at death, or a larger pattern your actions keep going? | reading 115 to 160 minutes; a reply on every item, a day or more |
+  + | [Philosophy](PHILOSOPHY.md) | moral philosophers, philosophers of personal identity, environmental ethicists | English | whether the two readings the ethics ranks under are located and stated at their strength, whose losses count kept apart from which outcome is better, and known work credited; and its open question: when you act for your own future, is the self whose going-on you take to matter your organism, which ends at death, or a larger pattern your actions keep going? | reading 115 to 160 minutes; a reply on every item, a day or more |
+
+=== theories/becoming/review/README.zh.md
+
+theories/becoming/review/README.zh.md:22
+  - | [哲学](PHILOSOPHY.md) | 伦理学者、研究人格同一性的哲学家、环境伦理学者 | 英文 | 伦理之诸前提是否放对了位置、放在恰当的强度上，“谁之所失算数”与“何者为更好”是否分开，已知之说是否注明来处；
+  + | [哲学](PHILOSOPHY.md) | 伦理学者、研究人格同一性的哲学家、环境伦理学者 | 英文 | 伦理排序所据的两种读法是否放对了位置、放在恰当的强度上，“谁之所失算数”与“何者为更好”是否分开，已知之说是否注明来处；
+    … 以及它的开放问题：为自己的将来而行动时，你以为其延续要紧的那个自己，是会在死时终结的有机体，还是你的行动所延续的更大的样式？
+    … 对齐之读法是否由之而出；
+  - 对已训练系统的检验是否能作区分 | 读约一百六十到二百一十五分钟；
+  + 对训练出的系统的检验是否能作区分 | 读约一百六十到二百一十五分钟；
+    … 逐条作答需一日或更多 |
+
+=== theories/becoming/review/SCIENCES.md
+
+theories/becoming/review/SCIENCES.md:24
+    … That the root's calculus explains how things go on, which is argued, not proved, and on a first count a rival with no word for continuation ties it ([08 §9](../
+  - The account's ethics, which rests on two premises it does not assert, the continuation condition (for anything, its continuation has significance) for scope and C (widening what can form is better) for order, is not treated here but in [the philosophy dossier](PHILOSOPHY.md).
+  + The account's ethics, which asserts no should and ranks only under two readings it does not assert, the continuation condition (for anything, its continuation is counted) for scope and C (widening what can form is better) for order, is not treated here but in [the philosophy dossier](PHILOSOPHY.md).
+    … Independent human review.
+
+theories/becoming/review/SCIENCES.md:47
+  - - **Premises of the ethics.** The theory names two premises for its ethics, the continuation condition (whose losses count) and C (that widening is better), and asserts neither.
+  + - **The readings the ethics ranks under.** The theory names two readings, the continuation condition (whose losses count) and C (that widening is better), and asserts neither; its ethics is its makers' offer, a way of seeing, not a verdict.
+    … No item here uses either ([the philosophy dossier, P-04](PHILOSOPHY.md#p-04)).
+
+=== tools/research/boundary.py
+
+tools/research/boundary.py:6
+  - counting, with its basis); and the two premises of the ethics apart.
+  + counting, with its basis); and the two readings the ranking results use apart.
+    … What the Lean cannot show is declared and
+
+=== tools/research/navigation.py
+
+tools/research/navigation.py:265
+    …     registered results and `{{count:STATUS}}` the number with that status;
+  - `{{tests:total}}` is the number of tests naming a thesis, `{{tests:CLASS}}` how many of them fell in a class of 
+    tests_page.CLASSES, `{{tests:unrun}}` how many never ran (held, dropped or frozen and not run), `{{tests:ran}}` how many did, and `{{tests:other}}` how 
+    many of those that ran are neither passed, failed nor mixed, so that the five add up to the total.
+  + `{{tests:ARG}}` is a count of the tests naming a thesis, by tests_page.screen_count (total, a class, unrun, ran, 
+    other), which README.zh.md's fields share.
+    … A field of no such
+
+tools/research/navigation.py:283
+  -             tallied = tests_page.thesis_counts(root) 
+            unrun = sum(tallied.get(k, 0) for k in tests_page.NEVER_RAN) 
+            if arg == 'unrun': 
+                return str(unrun) 
+            if arg == 'ran': 
+                return str(tallied['total'] - unrun) 
+            if arg == 'other': 
+                return str(tallied['total'] - unrun - sum(tallied.get(k, 0) for k in ('passed', 'failed', 'mixed'))) 
+            if arg != 'total' and arg not in tests_page.CLASS_KEYS: 
+                raise ValueError('readme_first_screen names an unknown class of test: ' + arg) 
+            return str(tallied.get(arg, 0))
+  +             try: 
+                return str(tests_page.screen_count(arg, root)) 
+            except tests_page.UnknownCount as e: 
+                raise ValueError('readme_first_screen ' + str(e)) from None  # an Unreadable names the data itself
+
+tools/research/navigation.py:619
+    …     'premises':
+  - (CH07, 'The ranking results rest on their two readings, the continuation condition for scope and C for order, each named where used.'),
+  + (CH07, 'Each ranking result names what it ranks under, the continuation condition for scope and C for order, or the narrower order a self-concern result states.'),
+
+tools/research/navigation.py:823
+  -                           'The ranking results rest on two readings, neither asserted: the condition fixes scope, whose losses count, and C, calling widening better, gives order; whoever ranks courses holds C or another order; '
+  +                           'The ranking results name what they rank under, none asserted: the condition fixes scope, whose losses count, C, calling widening better, gives order, and the self-concern results state a narrower order; whoever ranks courses holds C or another order; '
+
+=== tools/research/shared_laws.py
+
+tools/research/shared_laws.py:65
+  - hypothesis, or a reading) and the two premises of the ethics.
+  + hypothesis, or a reading) and the two readings the ranking results use.
+    … Where a record carries it, this tool checks each entry
+
+=== tools/research/spine.py
+
+tools/research/spine.py:1244
+    …             f'「{zname(top[0])}」与「{zname(top[1])}」两章，{backward} 次是逆向的，即章序在前的一章的结果使用章序在后的一章的结果。
+  - 两个方框是伦理的两个' 
+            f'前提，各在所用之处为假设，二者都不断言。
+  + 两个方框是排序结果所用的两种' 
+            f'读法，各在所用之处为假设，二者都不断言。
+    … 徽标 T1 到 T8 是各论题，位于陈述它们的那一章，按其冻结检验的结局着色；
+
+=== tools/research/tests/test_featured_results.py
+
+tools/research/tests/test_featured_results.py:393
+  -             with self.assertRaisesRegex(ValueError, 'unknown class of test'):
+  +             with self.assertRaisesRegex(ValueError, 'readme_first_screen names an unknown count of tests'): 
+                navigation.first_screen([], 'x', {'readme_first_screen': 'LEAD.md'}, root) 
+            (root / 'LEAD.md').write_text('{{tests:total}}') 
+            (root / 'theories/becoming/results/data/tests.json').write_text('not json') 
+            with self.assertRaisesRegex(ValueError, r'^theories/becoming/results/data/tests\.json cannot be read'):  # the data named, not the screen

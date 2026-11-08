@@ -7,12 +7,12 @@
 
 Where the theory is open: the crux and the warrant of C, the open targets, the open programme in method (chapter 8), and what lies beyond the readings. No reading waits on anyone: "The readings stand as one account; where two did not fit, the account decided between them" ([method, readings adopted](theories/becoming/chapters/08-METHOD.md#readings-adopted)). A completed result's own next step is on its record page.
 
-## The crux, and how scope and order form
+## The crux and the warrant of C
 
-The ranking results rest on their two readings, the continuation condition for scope and C for order, each named where used. Neither is asserted, and neither is the account's own: each is an order or scope some formations hold, and the results say what follows where it is held. ([chapter 7, section 4](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order))
+The ethics rests on its two premises with two roles, the continuation condition for scope and C for order. Neither is asserted. ([chapter 7, section 4](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order))
 
 - **The crux** ([chapter 7, section 4.7](theories/becoming/chapters/07-SIGNIFICANCE.md#crux); an AI reading throughout: argued, not proved). "whether all of one's effects are one's own, in the sense of whose losses count, argued for and against and not settled." "The laws do not answer it."
-- **How C and the scope form.** "Which formations hold C, which count past their own line (the step of invariance, which fixes scope), and how such orders form, spread, lock and fare; no warrant from outside is sought." ([method, open item 12](theories/becoming/chapters/08-METHOD.md#open-items-ranked)) "C's no-loss extension is widening by definition, so the definition carries no "better"" ([method, philosophical questions](theories/becoming/chapters/08-METHOD.md#philosophical-warrant)). Open: "how C-like orders form; whether a universal practical warrant exists is kept as a question the account does not pursue (T8)" ([item 12](theories/becoming/chapters/08-METHOD.md#open-items-ranked)).
+- **The warrant of C.** "Is widening better (C, which orders), and does significance stop at no boundary (the step of invariance, which fixes scope)?" ([method, open item 12](theories/becoming/chapters/08-METHOD.md#open-items-ranked)) "C's no-loss extension is widening by definition, so the definition carries no warrant" ([method, philosophical warrant](theories/becoming/chapters/08-METHOD.md#philosophical-warrant)). Open: "a reason for C, and whether a stronger practical warrant exists, with no warrant binding every possible mind claimed (T8)" ([item 12](theories/becoming/chapters/08-METHOD.md#open-items-ranked)).
 
 <a id="registered-results"></a>
 <a id="已登记成果--registered-results"></a>
