@@ -591,7 +591,7 @@ NAMES = {'K1': 'Coverage', 'K2': 'Unity', 'K3': 'Premises', 'K4': 'Representatio
 
 def render_report(result: dict) -> str:
     out = [GENERATED, '', '# The completion criterion, run', '',
-           'The criterion K1–K7 adopted on 20 October 2026 ([study §218](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/218.md#218-r25-the-twentieth-reviews-step-1-docs-now)), '
+           'The criterion K1–K7, proposed in [study §218](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/218.md#218-r25-the-twentieth-reviews-step-1-docs-now) and adopted on 20 October 2026 ([§231](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/231.md#231-the-completion-criterion-runs-r39)), '
            f'run by [`completion.py`](../../../../tools/research/completion.py) on the coverage file [`COVERAGE.json`](COVERAGE.json), '
            f'the core receipt `{result["receipt"]}` and the connectivity measure of `{(result["connectivity_commit"] or "")[:9]}` '
            f'(core receipt `{result["connectivity_receipt"]}`). A criterion is met when it has no finding. '

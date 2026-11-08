@@ -213,7 +213,7 @@ class HeaderTests(unittest.TestCase):
     def test_a_page_says_where_the_section_is(self):
         m = built()
         out, _ = m.render()
-        self.assertIn("the English file keeps only its anchor here.", out[f'{FOLDER}/001.md'].split('\n')[2])
+        self.assertIn("the English file keeps only anchors here.", out[f'{FOLDER}/001.md'].split('\n')[2])
         self.assertNotIn('英文文件所留', out[f'{FOLDER}/001.zh.md'].split('\n')[2])
         self.assertIn('[中文](003.zh.md)', out[f'{FOLDER}/003.md'].split('\n')[2])
         self.assertIn('[英文版](003.md)', out[f'{FOLDER}/003.zh.md'].split('\n')[2])
@@ -221,7 +221,7 @@ class HeaderTests(unittest.TestCase):
 
     def test_what_a_remnant_keeps(self):
         en = '# S\n\n<a id="1-a"></a>\n\n```text\nX\n```\n\n<a id="2-b"></a>\n\nOnly here.\n\n<a id="3-c"></a>\n<!-- table -->\n\n## 4. D\n'
-        zh = '# 研\n\n## 1. A\n\n```text\nX\n```\n\n## 2. B\n\n别的。\n\n## 3. C\n\n别的。\n'
+        zh = '# 研\n\n## 1. A\n\n```text\nX\n```\n\n## 2. B\n\n别的，这一节的正文比英文长得多。\n\n## 3. C\n\n别的。\n'
         m = built(en=en, zh=zh)
         self.assertEqual([m.keeps(page_of(m, EN, f'00{n}.md')) for n in (1, 2, 3)], ['kept', 'extra', 'anchor'])
         out, errors = m.render()
@@ -229,15 +229,49 @@ class HeaderTests(unittest.TestCase):
         line = lambda name: out[f'{FOLDER}/{name}'].split('\n')[2]
         self.assertIn("heading and main text are in the [Chinese edition](001.zh.md); this page holds what the English file keeps of it, under no heading.*", line('001.md'))
         self.assertIn('It also holds lines the Chinese edition does not have.*', line('002.md'))
-        self.assertIn('keeps only its anchor here.*', line('003.md'))
+        self.assertIn('keeps only anchors here.*', line('003.md'))
         self.assertIn('[英文文件所留的部分](001.md)*', line('001.zh.md'))
         self.assertIn('[英文文件所留的部分](002.md)（含本版所无的文字）*', line('002.zh.md'))
-        self.assertNotIn('003.md)*', line('003.zh.md').replace('[4]', ''))
+        self.assertNotIn('003.md)', line('003.zh.md'))
         self.assertIn('[anchor only](003.md)', out[f'{FOLDER}/README.md'])
+
+    def test_a_page_with_an_account_of_its_own(self):
+        m = built(en='# S\n\n<a id="1-a"></a>\n\nA long English account of the section.\n', zh='# 研\n\n## 1. A\n\n短。\n')
+        self.assertEqual(m.keeps(page_of(m, EN, '001.md')), 'account')
+        out, _ = m.render()
+        self.assertIn('with its own account; this page holds what the English file keeps of it, under no heading, including an English account.*', out[f'{FOLDER}/001.md'].split('\n')[2])
+        self.assertIn('[英文文件所留的部分](001.md)（含本版所无的文字）', out[f'{FOLDER}/001.zh.md'].split('\n')[2])
+
+    def test_a_heading_and_nothing_else(self):
+        m = built(en='# S\n\n## 1. A\n\n```text\nX\n```\n', zh='# 研\n\n## 1. 甲\n\n正文。\n')
+        self.assertEqual(m.keeps(page_of(m, EN, '001.md')), 'heading')
+        out, _ = m.render()
+        self.assertIn("This section's main text is in the [Chinese edition](001.zh.md).*", out[f'{FOLDER}/001.md'].split('\n')[2])
+        self.assertIn('[英文文件所留的部分](001.md)*', out[f'{FOLDER}/001.zh.md'].split('\n')[2])
+
+    def test_a_table_header_in_the_files_own_language_is_not_extra(self):
+        en = '# S\n\n<a id="1-a"></a>\n\n| before | now |\n|---|---|\n| `a` | `b` |\n'
+        zh = '# 研\n\n## 1. A\n\n这一节的正文比英文长得多，表如下。\n\n| 原名 | 现名 |\n|---|---|\n| `a` | `b` |\n'
+        m = built(en=en, zh=zh)
+        self.assertEqual(m.keeps(page_of(m, EN, '001.md')), 'kept')
+        m = built(en=en.replace('`b`', '`c`'), zh=zh)
+        self.assertEqual(m.keeps(page_of(m, EN, '001.md')), 'extra')
+
+    def test_cells_must_share_a_row(self):
+        en = '# S\n\n<a id="1-a"></a>\n\n| A | B |\n'
+        zh = '# 研\n\n## 1. A\n\n这一节的正文比英文长得多。\n\n| A | x |\n| y | B |\n'
+        m = built(en=en, zh=zh)
+        self.assertEqual(m.keeps(page_of(m, EN, '001.md')), 'extra')
+
+    def test_a_comment_with_text_after_it_is_read(self):
+        en = '# S\n\n<a id="1-a"></a>\n\n<!-- a --> Seen\n'
+        zh = '# 研\n\n## 1. A\n\n这一节的正文比英文长得多。\n'
+        m = built(en=en, zh=zh)
+        self.assertEqual(m.keeps(page_of(m, EN, '001.md')), 'extra')
 
     def test_a_table_with_fewer_columns_is_not_extra(self):
         en = '# S\n\n<a id="1-a"></a>\n\n| 模块 |\n|---|\n| Dependence |\n'
-        zh = '# 研\n\n## 1. A\n\n| 模块 | 内容 |\n|---|---|\n| Dependence | 依存 |\n'
+        zh = '# 研\n\n## 1. A\n\n| 模块 | 内容 |\n|---|---|\n| Dependence | 依存，这一节的正文比英文长得多 |\n'
         m = built(en=en, zh=zh)
         self.assertEqual(m.keeps(page_of(m, EN, '001.md')), 'kept')
         m = built(en=en.replace('Dependence', 'Other'), zh=zh)

@@ -38,6 +38,7 @@ HEADER_LINES = 4  # the comment, a blank line, the navigation line, a blank line
 NUMBERED = re.compile(r'(\d+)\.\s')
 NUMBERED_HEADING = re.compile(r'^## (\d+)\.\s', re.M)
 ANCHOR_LINE = re.compile(r'^<a id="([^"]+)"></a>[ \t]*$')
+BARE_LINE = re.compile(r'-{3,}|\*{3,}|_{3,}|</?[a-zA-Z]+[^>]*>')  # a thematic break or a lone HTML tag: nothing to read
 SETEXT = re.compile(r'^ {0,3}(=+|-+)[ \t]*$')
 LIST_ITEM = re.compile(r'^ {0,3}([-*+]|\d+[.)])\s')
 LINE_FRAGMENT = re.compile(r'L\d+(-L\d+)?')
@@ -318,8 +319,8 @@ class Mirror:
     def cited(self, record: dict, source: str) -> list[int]:
         """The sections of `source` a record's history names. "study section N" is the record's own shorthand, and some
         records bind more than one numbered study: a citation that does not name the file, all of whose numbers are `##`
-        headings of another study the record binds (a Markdown file under the same research tree; a chapter or a design
-        note with numbered headings is not a study), is read as that study's."""
+        headings of another Markdown file the record binds under the same research tree, is read as that file's. A chapter
+        outside the tree, with numbered headings of its own, is not."""
         editions = set(self.editions(source))
         tree = '/'.join(source.split('/')[:2]) + '/'
         others = [p for x in record.get('references') or [] if isinstance(x, dict) and isinstance(p := x.get('path'), str)
@@ -373,26 +374,56 @@ class Mirror:
         return next((p for e in self.editions(page.source) if e != page.source for p in self.pages[e]
                      if p.number == page.number and (p.number is not None or not p.title)), None)
 
-    def keeps(self, page: Page) -> str:
-        """What a page holding a section headed only elsewhere has of it: 'anchor' (nothing a reader sees), 'extra' (a line
-        outside code that the other edition's page lacks) or 'kept' (only what the other edition has too)."""
+    def visible(self, page: Page) -> tuple[list[str], bool]:
+        """The page's lines a reader sees outside code (stripped; '' between blocks), and whether it has code."""
         body = self.texts[page.source][page.start:page.end]
         masked = _mask(self.texts[page.source])[page.start:page.end]
-        pairs = list(zip(_lines(body), _lines(masked)))
-        code = any(raw.strip() and not mask.strip() for raw, mask in pairs)
-        text = [raw.strip() for raw, mask in pairs if mask.strip() and not ANCHOR_LINE.match(raw.strip()) and not raw.lstrip().startswith('<!--')]
-        if not text and not code:
-            return 'anchor'
+        lines, code = [], False
+        for raw, mask in zip(_lines(body), _lines(masked)):
+            line = raw.strip()
+            code = code or bool(line and not mask.strip())
+            if mask.strip() and not ANCHOR_LINE.match(line) and not (line.startswith('<!--') and line.endswith('-->')) and not BARE_LINE.fullmatch(line):
+                lines.append(line)
+            elif lines and lines[-1]:
+                lines.append('')
+        return lines, code
+
+    def keeps(self, page: Page) -> str | None:
+        """What a page has of a section whose main text is in another edition. For a page under no heading: 'anchor' (nothing a
+        reader sees), 'account' (at least as much text outside code as the other edition's page), 'extra' (a line outside
+        code the other edition's page lacks), 'kept' (none). For a page with a heading and nothing else outside code,
+        whose other edition has text: 'heading'. Otherwise None."""
         twin = self.twin(page)
-        other = self.texts[twin.source][twin.start:twin.end] if twin else ''
-        held = {line.strip() for line in _lines(other)}
+        if twin is None or page.number is None:
+            return None
+        lines, code = self.visible(page)
+        theirs, _ = self.visible(twin)
+        if page.title:
+            return 'heading' if len([x for x in lines if x]) == 1 and len([x for x in theirs if x]) > 1 else None
+        if not any(lines) and not code:
+            return 'anchor'
+        if sum(map(len, lines)) >= sum(map(len, theirs)):
+            return 'account'
+        held = {line.strip() for line in _lines(self.texts[twin.source][twin.start:twin.end])}
         def absent(line):
             if line in held:
                 return False
-            if line.startswith('|'):  # a table can keep fewer columns than the other edition: its cells are what must be there
-                return any(cell.strip(' -:') and cell.strip() not in other for cell in line.strip('|').split('|'))
+            if line.startswith('|'):  # a table can keep fewer columns than the other edition: one row must hold its cells
+                cells = [c.strip() for c in line.strip('|').split('|') if c.strip(' -:')]
+                return bool(cells) and not any(all(c in row for c in cells) for row in held)
             return True
-        return 'extra' if any(absent(line) for line in text) else 'kept'
+        for i, line in enumerate(lines):
+            if line and absent(line):
+                # a table's header row, in the file's own language, says nothing its rows do not
+                body = []
+                for row in lines[i + 2:]:
+                    if not row.startswith('|'):
+                        break
+                    body.append(row)
+                header = line.startswith('|') and i + 1 < len(lines) and set(lines[i + 1]) <= set('|-: ') and body and not any(absent(row) for row in body)
+                if not header:
+                    return 'extra'
+        return 'kept'
 
     def nav(self, page: Page, pages: list[Page]) -> str:
         k = pages.index(page)
@@ -408,21 +439,26 @@ class Mirror:
             base = posixpath.basename(twin.path)
         if chinese:
             where = f'第 {page.number} 节' if page.number is not None else ('序' if not page.title else page.title)
-            if twin is None or (twin.remnant and self.keeps(twin) == 'anchor'):
+            kept = self.keeps(twin) if twin is not None else None
+            if twin is None or kept == 'anchor':
                 other = ''
-            elif twin.remnant:
-                other = f' · [英文文件所留的部分]({base})' + ('（含本版所无的文字）' if self.keeps(twin) == 'extra' else '')
+            elif kept is not None:
+                other = f' · [英文文件所留的部分]({base})' + ('（含本版所无的文字）' if kept in ('extra', 'account') else '')
             else:
                 other = f' · [英文版]({base})'
             return f'*[{name} 的生成镜像](README.md) · {where}，原文第 {page.first}–{page.last} 行{moves_on}{other}*'
         where = f'section {page.number}' if page.number is not None else ('the preamble' if not page.title else page.title)
-        if page.remnant and twin is not None:
-            kept = self.keeps(page)
-            if kept == 'anchor':
-                other = f' · This section\'s heading and text are in the [Chinese edition]({base}); the English file keeps only its anchor here.'
-            else:
-                other = (f' · This section\'s heading and main text are in the [Chinese edition]({base}); this page holds what the '
-                         'English file keeps of it, under no heading.' + (' It also holds lines the Chinese edition does not have.' if kept == 'extra' else ''))
+        kept = self.keeps(page)
+        if kept == 'anchor':
+            other = f' · This section\'s heading and text are in the [Chinese edition]({base}); the English file keeps only anchors here.'
+        elif kept == 'account':
+            other = (f' · This section\'s heading is in the [Chinese edition]({base}), with its own account; this page holds what the '
+                     'English file keeps of it, under no heading, including an English account.')
+        elif kept == 'heading':
+            other = f' · This section\'s main text is in the [Chinese edition]({base}).'
+        elif kept is not None:
+            other = (f' · This section\'s heading and main text are in the [Chinese edition]({base}); this page holds what the '
+                     'English file keeps of it, under no heading.' + (' It also holds lines the Chinese edition does not have.' if kept == 'extra' else ''))
         else:
             other = '' if twin is None else f' · [中文]({base})'
         return f'*[The generated mirror of {name}](README.md) · {where}, lines {page.first}–{page.last} of the source{moves_on}{other}*'
@@ -471,7 +507,7 @@ class Mirror:
                 p = r.get(s)
                 if p is None:
                     return '—'
-                if p.remnant and self.keeps(p) == 'anchor':
+                if self.keeps(p) == 'anchor':
                     return f'[anchor only]({posixpath.basename(p.path)})'
                 return f'[{p.last - p.first + 1:,} lines{", no heading" if p.remnant else ""}]({posixpath.basename(p.path)})'
             lines.append(f'| {p0.number if p0.number is not None else "—"} | {title} | ' + ' | '.join(cell(s) for s in editions) + ' |')
