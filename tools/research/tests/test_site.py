@@ -150,8 +150,8 @@ class SiteTests(unittest.TestCase):
         from tools.research import connection_map
         calls = []
 
-        def stub(out_dir, link_base, site_paths=None):
-            calls.append((link_base, dict(site_paths)))
+        def stub(out_dir, link_base, site_paths=None, home='index.html', nav=None):
+            calls.append((link_base, dict(site_paths), home, list(nav or [])))
             out_dir = Path(out_dir)
             out_dir.mkdir(parents=True, exist_ok=True)
             (out_dir / 'map.html').write_text('<!doctype html><title>map</title><a href="a/ONE.html">one</a>')
@@ -170,6 +170,8 @@ class SiteTests(unittest.TestCase):
         self.assertFalse((self.out / '_map').exists())
         self.assertEqual(calls[0][0], f'https://github.com/o/r/blob/{COMMIT}/')
         self.assertEqual(calls[0][1]['a/ONE.md'], 'a/ONE.html')
+        self.assertEqual(calls[0][2], 'index.html')
+        self.assertIn(('One page', 'a/ONE.html'), calls[0][3])  # the map carries the site's line, hrefs from the root
         self.assertIn('href="../../connections.html"', self.page('a/chapters/index.html'))
 
     def test_the_home_keeps_the_status_line(self):

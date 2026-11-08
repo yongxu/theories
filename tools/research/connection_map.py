@@ -14,6 +14,7 @@ usage: python3 tools/research/connection_map.py --fragment OUT
 from __future__ import annotations
 
 import argparse
+import html
 import json
 import re
 import sys
@@ -222,6 +223,60 @@ def payload(atlas: dict, graph: dict, shared: dict, base: str | None = BASE) -> 
             'dynamics': len(atlas['dynamics']), 'checks': atlas.get('crosswalk_checks')}
 
 
+def _ledes(data: dict) -> tuple[str, str]:
+    """The map's lede and the line under it, from its totals: the page's script shows them and its no-script summary
+    gives them, so the two cannot say different things."""
+    T, checks = data['totals'], data.get('checks')
+    carried, of = T['carried'], T['agreement_of']
+    stated = carried.get('carried', 0) + carried.get('carried-in-part', 0)
+    lede = (f'{T["entries"]:,} claims from {T["folders"]} earlier folders and {T["domains"]} domains of thought, each read against the '
+            f'live account. It states {stated:,} in whole or in part and takes up {carried.get("changed", 0):,} to say otherwise. '
+            f'{carried.get("fresh-reading", 0):,} it does not state: a reader proposes the connection here. '
+            f'{carried.get("not-carried", 0):,} it does not take up, and {carried.get("history-only", 0):,} stand only in its history.')
+    sub = (f'Every thread is an AI reading, and no person’s. Of {T["relation"].get("agreement", 0):,} agreements, {of.get("law", 0):,} are '
+           f'with a checked law, {of.get("thesis-or-method", 0):,} with a thesis or method, and {of.get("reading", 0):,} rest on a '
+           'reader’s join. A thread is not proof, a shared word is not a correspondence, and agreement is drawn no more prominently '
+           f'than divergence. {T["from_knowledge"]:,} entries rest on the AI’s knowledge of a text not stored here, unchecked against '
+           'that text.')
+    second = (checks or {}).get('second_critic')
+    if second:
+        sub += (f' A random check of {second["sampled"]} entries estimates that about {second["estimate_percent"]["label"]:g}% of all carry '
+                f'a wrong label or target role and {second["estimate_percent"]["fails"]:g}% a wrong reading (How it was read).')
+    return lede, sub
+
+
+STATS = (('carried', 'carried'), ('carried-in-part', 'in part'), ('changed', 'changed'), ('fresh-reading', 'proposed here'),
+         ('history-only', 'only in history'), ('not-carried', 'not carried'))
+CROSSWALK_PATH = atlas_tool.CROSSWALK
+
+
+def _href(data: dict, path: str) -> str | None:
+    """Where a link to a repository path goes from the page, as its script's `to` sends it; None where links are text."""
+    if data.get('base') is None:
+        return None
+    file, mark, anchor = path.partition('#')
+    site = data.get('site') or {}
+    return (site[file] + mark + anchor) if file in site else data['base'] + path
+
+
+def _header(data: dict) -> str:
+    """The page's header with its lede, counts and the line under it written in: the same with or without script."""
+    lede, sub = _ledes(data)
+    stats = ''.join(f'<li><b>{data["totals"]["carried"].get(k, 0):,}</b>{label}</li>' for k, label in STATS)
+    return (BODY.replace('<p class="lede" id="lede"></p>', f'<p class="lede" id="lede">{html.escape(lede)}</p>')
+            .replace('<ul class="stats" id="stats"></ul>', f'<ul class="stats" id="stats">{stats}</ul>')
+            .replace('<p class="note small" id="sublede"></p>', f'<p class="note small" id="sublede">{html.escape(sub)}</p>'))
+
+
+def _noscript(data: dict) -> str:
+    """What a reader without script is told beyond the header: that the map is drawn by its script, and where the same
+    claims are listed as text."""
+    href = _href(data, CROSSWALK_PATH)
+    crosswalk = f'<a href="{html.escape(href)}">the crosswalk</a>' if href else 'the crosswalk (CROSSWALK.md)'
+    return (f'<noscript><div class="wrap"><p class="note">This map is drawn by its script. Without it, the same claims are listed '
+            f'as text, with each target’s standing, in {crosswalk}.</p></div></noscript>')
+
+
 def _blob(data: dict) -> str:
     """The data as text safe inside a script element (no `<` at all, so neither `</script` nor `<!--` can end or
     change it), and safe from the render's link check, which reads every `](`."""
@@ -229,7 +284,7 @@ def _blob(data: dict) -> str:
 
 
 def _body(data: dict) -> str:
-    return f'{BODY}\n<script type="application/json" id="cx-data">{_blob(data)}</script>\n<script>{SCRIPT}</script>\n'
+    return f'{_header(data)}\n{_noscript(data)}\n<script type="application/json" id="cx-data">{_blob(data)}</script>\n<script>{SCRIPT}</script>\n'
 
 
 def fragment(data: dict) -> str:
@@ -237,11 +292,19 @@ def fragment(data: dict) -> str:
     return f'<title>{TITLE}</title>\n<meta name="claude:viewport-fit-sides" content="cover">\n<style>{CSS}</style>\n{_body(data)}'
 
 
-def page(data: dict) -> str:
-    """The whole document: its title and style in its head."""
+def page(data: dict, bar: str = '') -> str:
+    """The whole document: its title and style in its head; `bar`, a site's line of links, above the map."""
     return ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
             f'<meta name="viewport" content="width=device-width, initial-scale=1">\n<title>{TITLE}</title>\n{GENERATED}\n'
-            f'<style>{CSS}</style>\n</head>\n<body>\n{_body(data)}</body>\n</html>\n')
+            f'<style>{CSS}</style>\n</head>\n<body>\n{bar}{_body(data)}</body>\n</html>\n')
+
+
+def site_bar(home: str = 'index.html', nav: list[tuple[str, str]] | None = None) -> str:
+    """The site's line above the map: its name linking home, then any further (label, href) the site gives, each href
+    relative to the map."""
+    items = [f'<a class="home" href="{html.escape(home)}">The Theory of Becoming</a>']
+    items += [f'<a href="{html.escape(href)}">{html.escape(label)}</a>' for label, href in (nav or [])]
+    return f'<nav class="sitebar" aria-label="Site">{"".join(items)}</nav>\n'
 
 
 def check_site(link_base: str, site_paths: dict[str, str] | None = None) -> None:
@@ -254,20 +317,25 @@ def check_site(link_base: str, site_paths: dict[str, str] | None = None) -> None
         raise ValueError(f'site_paths maps repository paths, without #anchor, to URL strings: {bad[:3]!r}')
 
 
-def site_map(out_dir: str | Path, link_base: str, site_paths: dict[str, str] | None = None) -> Path:
+def site_map(out_dir: str | Path, link_base: str, site_paths: dict[str, str] | None = None, home: str = 'index.html',
+             nav: list[tuple[str, str]] | None = None) -> Path:
     """Write OUT_DIR/map.html for a site and return its path. A link that leaves the map goes to `link_base` followed by
     the repository path, `link_base` ending in / (a permalink prefix such as https://github.com/<owner>/<repo>/blob/<sha>/,
     or a relative path to a copy of the repository); a repository path in `site_paths` goes instead to the URL the site
     gives it (relative to map.html, or absolute), the link's #anchor kept. The page reads the atlas's, the graph's and
-    the shared laws' data as rendered in this checkout, so a site is built after a render."""
+    the shared laws' data as rendered in this checkout, so a site is built after a render. Above the map stands the site's
+    line: its name linking `home`, then `nav`'s (label, href) pairs, each href relative to map.html."""
     check_site(link_base, site_paths)
+    if not isinstance(home, str) or any(not (isinstance(pair, (tuple, list)) and len(pair) == 2 and all(isinstance(x, str) for x in pair))
+                                         for pair in (nav or [])):
+        raise ValueError('home is a string and nav a list of (label, href) strings')
     atlas_data = json.loads((ROOT / atlas_tool.DATA).read_text(encoding='utf-8'))
     graph = json.loads((ROOT / theory_graph.GRAPH).read_text(encoding='utf-8'))
     data = payload(atlas_data, graph, _shared(), base=link_base)
     data['site'] = dict(sorted((site_paths or {}).items()))
     out = Path(out_dir) / 'map.html'
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(page(data), encoding='utf-8')
+    out.write_text(page(data, site_bar(home, nav)), encoding='utf-8')
     return out
 
 
@@ -296,6 +364,8 @@ CSS = r'''
 --beam:#e6dfd0;--beam-ink:#17140f;--beam-muted:#5d5548;--bar:#a89e8c;--focus:#ece6d9;
 --agreement:#4a90e2;--scope:#b48c0e;--divergence:#cf3f22;--contrary-reading:#10a586;}
 *{box-sizing:border-box}
+.sitebar{display:flex;flex-wrap:wrap;gap:4px 18px;padding:10px var(--gutter-r) 10px var(--gutter-l);border-bottom:1px solid var(--rule);font:500 14px/1.3 var(--sans);background:var(--panel)}
+.sitebar a{color:var(--ink-2);text-decoration:none}.sitebar a.home{color:var(--ink);font-weight:600}.sitebar a:hover{text-decoration:underline}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 var(--serif)}
 .wrap{max-width:1560px;margin:0 auto;padding:28px var(--gutter-r) 64px var(--gutter-l)}
@@ -440,10 +510,6 @@ function link(path,label){const text=label||path;if(!path)return text;return D.b
 function shown(e){return S.out.has(e.carried)&&(!e.relation||S.rel.has(e.relation))&&(e.relation!=='agreement'||S.of.has(e.agreement_of));}
 
 const stated=(T.carried['carried']||0)+(T.carried['carried-in-part']||0);const of=T.agreement_of;
-document.getElementById('lede').textContent=fmt(T.entries)+' claims from '+T.folders+' earlier folders and '+T.domains+' domains of thought, each read against the live account. It states '+fmt(stated)+' in whole or in part and takes up '+fmt(T.carried['changed']||0)+' to say otherwise. '+fmt(T.carried['fresh-reading']||0)+' it does not state: a reader proposes the connection here. '+fmt(T.carried['not-carried']||0)+' it does not take up, and '+fmt(T.carried['history-only']||0)+' stand only in its history.';
-document.getElementById('sublede').textContent='Every thread is an AI reading, and no person’s. Of '+fmt(T.relation.agreement||0)+' agreements, '+fmt(of.law||0)+' are with a checked law, '+fmt(of['thesis-or-method']||0)+' with a thesis or method, and '+fmt(of.reading||0)+' rest on a reader’s join. A thread is not proof, a shared word is not a correspondence, and agreement is drawn no more prominently than divergence. '+fmt(T.from_knowledge)+' entries rest on the AI’s knowledge of a text not stored here, unchecked against that text.'+(D.checks&&D.checks.second_critic?' A random check of '+D.checks.second_critic.sampled+' entries estimates that about '+D.checks.second_critic.estimate_percent.label+'% of all carry a wrong label or target role and '+D.checks.second_critic.estimate_percent.fails+'% a wrong reading (How it was read).':'');
-const stats=document.getElementById('stats');
-[['carried','carried'],['carried-in-part','in part'],['changed','changed'],['fresh-reading','proposed here'],['history-only','only in history'],['not-carried','not carried']].forEach(p=>stats.append(el('li',{},el('b',{},fmt(T.carried[p[0]]||0)),p[1])));
 
 const VIEWS=[['loom','The loom'],['meet','Where they meet'],['root','The root’s reach'],['corpus','The corpus'],['loose','Loose ends'],['method','How it was read']];
 const nav=document.getElementById('views');VIEWS.forEach(v=>nav.append(el('a',{href:'#'+v[0],'data-v':v[0]},v[1])));

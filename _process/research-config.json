@@ -223,6 +223,7 @@
     "title": "The Theory of Becoming",
     "description": "One account of how things form, persist, change and end, with Lean-checked models and frozen tests; its ethics rests on two unasserted premises: the continuation condition (scope) and C, widening what can form is better (order).",
     "pages": [
+      "README.zh.md",
       "MAP.md",
       "theories/becoming/ONE-PAGE.md",
       "theories/becoming/ONE-PAGE.zh.md",
@@ -337,7 +338,7 @@
         "Reviewers"
       ],
       [
-        "theories/becoming/ONE-PAGE.zh.md",
+        "README.zh.md",
         "中文"
       ]
     ],
@@ -436,7 +437,7 @@
     "map": true,
     "nav_zh": [
       [
-        "index.html",
+        "README.zh.md",
         "首页"
       ],
       [

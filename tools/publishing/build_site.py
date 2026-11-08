@@ -812,8 +812,10 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
     if map_ok:
         on_site = {p: out_path(p) for p in pages}
         tmp = out / '_map'
+        map_nav = [(label, target if target in SPECIAL else out_path(target)) for target, label in cfg.get('nav', [])
+                   if target in SPECIAL or target in pages]
         made = pathlib.Path(connection_map.site_map(tmp, f"https://github.com/{cfg['repository']}/blob/{commit}/",
-                                                    on_site))
+                                                    on_site, home='index.html', nav=map_nav))
         made.rename(out / MAP_PAGE)
         tmp.rmdir()
         written.append(out / MAP_PAGE)
