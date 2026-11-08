@@ -25,7 +25,7 @@
 <a id="progress--已接通"></a>
 ## Progress
 
-1. The control built and measured. [study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#377-the-controlled-english-control-ze)
+1. The control built and measured. [study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/377.md#377-the-controlled-english-control-ze)
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -65,7 +65,7 @@ Board item ZE, the control named in FC1's limits. Reading (the AI's, D63): the f
 | integration | [ze_score.py](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ze-controlled-english/ze_score.py) | — |
 | integration | [results.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ze-controlled-english/data/results.json) | — |
 | statement | [FIDELITY-RESULTS.md](../../../../experiments/wenli-reading-transfer/FIDELITY-RESULTS.md) | — |
-| review | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror): study sections [377](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/377.md), [418](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/418.md) | — |
+| review | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror); its history names sections [377](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/377.md), [418](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/418.md) | — |
 
 Aliases: `ZE`, `controlled English edition`, `English name table`, `受控英文本`
 

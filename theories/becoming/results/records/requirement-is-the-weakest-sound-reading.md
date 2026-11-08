@@ -63,7 +63,7 @@ The warrant of the reading on which the internal relatedness of activity and sup
 |---|---|---|
 | proof | [OverExchange.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean) | `Becoming.ExchangeRelation.Local`, `Becoming.ExchangeRelation.Supports`, `Becoming.ExchangeRelation.mayRespond_not_supports`, `Becoming.ExchangeRelation.respondsBelow_local`, `Becoming.ExchangeRelation.respondsBelow_supports`, `Becoming.ExchangeRelation.respondsBelow_weakest` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T151214.034215Z/verification.json) | — |
-| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror): study section [369](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/369.md) | — |
+| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror); its history names section [369](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/369.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | statement | [BECOMING-FOUNDATION.md](../../history/BECOMING-FOUNDATION.md) | — |
 

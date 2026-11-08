@@ -24,8 +24,8 @@
 <a id="progress--已接通"></a>
 ## Progress
 
-1. The name 文, the epistemology of 文 on the laws, and the comparison with 文理生生. [study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#346-文理生生-joined-with-the-epistemology-of-文-at-the-centre-wl)
-2. WL2: the open Lean items proved (the coarsest value-keeping class as one law, a formation's own course, the course of names read back). [study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#351-the-laws-of-文-as-theorems-the-coarsest-value-keeping-class-a-formations-own-course-the-course-of-forms-wl2)
+1. The name 文, the epistemology of 文 on the laws, and the comparison with 文理生生. [study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/346.md#346-文理生生-joined-with-the-epistemology-of-文-at-the-centre-wl)
+2. WL2: the open Lean items proved (the coarsest value-keeping class as one law, a formation's own course, the course of names read back). [study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/351.md#351-the-laws-of-文-as-theorems-the-coarsest-value-keeping-class-a-formations-own-course-the-course-of-forms-wl2)
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -75,7 +75,7 @@ Ren, 22 October 2026: “是的，让它成为整合的中心，至于文，文�
 | integration | [crosswalk.tsv](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/crosswalk.tsv) | — |
 | integration | [verify_zh.py](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/verify_zh.py) | — |
 | integration | [import_wenli.py](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/wenli/import_wenli.py) | — |
-| review | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror): study sections [346](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/346.md), [351](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/351.md), [370](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/370.md), [374](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/374.md), [418](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/418.md) | — |
+| review | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror); its history names sections [346](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/346.md), [351](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/351.md), [370](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/370.md), [374](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/374.md), [418](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/418.md) | — |
 | provenance | [PROVENANCE.json](../../../../sources/wenli-shengsheng-v0.4/PROVENANCE.json) | — |
 | provenance | [2026-10-22-wenli-epistemology-centre.md](../../../../sources/15-codex-theory-conversations/2026-10-22-wenli-epistemology-centre.md) | — |
 

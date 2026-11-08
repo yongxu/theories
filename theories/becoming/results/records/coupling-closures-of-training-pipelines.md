@@ -52,7 +52,7 @@ Christiano et al. 2017; Ouyang et al. 2022; Bai et al. 2022; Rafailov et al. 202
 | Role | Source | Declarations |
 |---|---|---|
 | statement | [CORRESPONDENCE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cr1-coupling-correspondence/CORRESPONDENCE.md) | — |
-| review | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror): study sections [358](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/358.md), [422](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/422.md) | — |
+| review | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror); its history names sections [358](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/358.md), [422](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/422.md) | — |
 
 Aliases: `CR1`, `coupling closures of training pipelines`
 

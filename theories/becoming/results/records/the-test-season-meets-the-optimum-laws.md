@@ -74,7 +74,7 @@ LA4's season.py: its exhaustive checks of the season's outcomes agree with every
 | review | [REVIEW-LA4-FORMAL.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/la4-formal/REVIEW-LA4-FORMAL.md) | — |
 | integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/la4-formal/NOTE.md) | — |
 | integration | [DESIGN.md](../../../../experiments/drain-beyond-the-reward/DESIGN.md) | — |
-| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror): study section [470](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/470.md) | — |
+| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror); its history names section [470](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/470.md) | — |
 | statement | [05-COLLECTIVES.md](../../chapters/05-COLLECTIVES.md) | — |
 
 Aliases: `LA4's test season meets the optimum laws`, `LA4 之检验季合于最优之律`, `Becoming.Optimum.Season.bay_drained`, `Becoming.Optimum.Season.site_no_room`

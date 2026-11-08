@@ -2,177 +2,179 @@
 
 # Mirror of BECOMING-RENEWAL-READING.md
 
-A page for each section of [BECOMING-RENEWAL-READING.md](../../BECOMING-RENEWAL-READING.md) (3.78 MB), [BECOMING-RENEWAL-READING.zh.md](../../BECOMING-RENEWAL-READING.zh.md) (1.82 MB): GitHub renders no Markdown file this large. Each page holds its section's bytes as the source has them, except link targets, which point from the page; a link to another section goes to that section's page. The source is the source: records bind it by hash and cite its sections by number, and every render writes this folder again from it. In the source, sections 166–510 have their text only in BECOMING-RENEWAL-READING.md; sections 1–107, 109–165 have their text only in BECOMING-RENEWAL-READING.zh.md.
+A page for each section of [BECOMING-RENEWAL-READING.md](../../BECOMING-RENEWAL-READING.md) (3.78 MB) and [BECOMING-RENEWAL-READING.zh.md](../../BECOMING-RENEWAL-READING.zh.md) (1.82 MB): GitHub renders no Markdown file this large. Each page holds what its source has at those lines, byte for byte, except link targets, which point from the page: a link to another section goes to that section's page, and a link to a whole file to this index. Previous and next follow the source's order. The source is the source, and every render writes this folder again from it. In the source, sections 166–510 have a heading only in BECOMING-RENEWAL-READING.md; sections 1–107, 109–165 have a heading only in BECOMING-RENEWAL-READING.zh.md.
+
+The study was one bilingual file until 17 October 2026, when it was split. Most of the prose of sections 1–107 and 109–162 went to the Chinese edition; the English file kept their anchors, code blocks and some tables, under no heading, on the pages marked so here, and its English summary gives an English account of some of them. Sections 163–165 have a short English paragraph there as well. The Chinese edition's banner says that where the two differ the English governs. Records bind the English file by hash, at the version each read; none binds the Chinese edition or a page here. Their histories name sections by number.
 
 | § | Section | English | 中文 |
 |---|---|---|---|
-| — | Preamble | [2,945 lines](preamble.md) | [7 lines](preamble.zh.md) |
-| 1 | 问题 | — | [6 lines](001.zh.md) |
-| 2 | 结果 | — | [28 lines](002.zh.md) |
-| 3 | 与计划的对照 | — | [9 lines](003.zh.md) |
-| 4 | 作者反审 | — | [41 lines](004.zh.md) |
-| 5 | 边界 | — | [5 lines](005.zh.md) |
-| 6 | 动态依存与逐步读法（P6） | — | [104 lines](006.zh.md) |
-| 7 | 独立审查与更正 | — | [68 lines](007.zh.md) |
-| 8 | 回程、视界、共同活动与替代（P7） | — | [168 lines](008.zh.md) |
-| 9 | C 在各读法下的排序（P8） | — | [51 lines](009.zh.md) |
-| 10 | 条件的对应纪律（P9） | — | [50 lines](010.zh.md) |
-| 11 | 第二次独立审查与更正（P7b） | — | [74 lines](011.zh.md) |
-| 12 | 第三次独立审查与更正（P9b） | — | [73 lines](012.zh.md) |
-| 13 | 继续生成：生起、不息与更新（P10） | — | [55 lines](013.zh.md) |
-| 14 | 更多：流、供给与更新者（P11） | — | [53 lines](014.zh.md) |
-| 15 | 第四次独立审查与更正（P11b） | — | [91 lines](015.zh.md) |
-| 16 | 跨步的同一：改名、改认与接续（P12） | — | [61 lines](016.zh.md) |
-| 17 | 耗散：复现的取用打开有限家族（P13） | — | [57 lines](017.zh.md) |
-| 18 | 角色：生作为生的条件与经由给予的生起（P14） | — | [65 lines](018.zh.md) |
-| 19 | 第五次独立审查与更正（P12b） | — | [93 lines](019.zh.md) |
-| 20 | 生成即补充：生起本身承担要求（P15） | — | [62 lines](020.zh.md) |
-| 21 | 整体与部分：整体经由部分的生成而持续（P16） | — | [61 lines](021.zh.md) |
-| 22 | 第六次独立审查与更正（P16b） | — | [96 lines](022.zh.md) |
-| 23 | 第七次独立审查与更正（P16c） | — | [82 lines](023.zh.md) |
-| 24 | 储备：活动越过支持，水平越过活动（P17） | — | [78 lines](024.zh.md) |
-| 25 | 世系：关系项经由所依与所给直接相关（P18） | — | [57 lines](025.zh.md) |
-| 26 | 变化的规律：不加前提，开始成立与不再成立同步（P19） | — | [64 lines](026.zh.md) |
-| 27 | 第八次独立审查与更正（P18b） | — | [79 lines](027.zh.md) |
-| 28 | 上升与下降在同一交换中（P20） | — | [55 lines](028.zh.md) |
-| 29 | 演化在脊柱上（P21） | — | [54 lines](029.zh.md) |
-| 30 | 整体与其部分（P22） | — | [54 lines](030.zh.md) |
-| 31 | 完整的陈述与完成审计（P23） | — | [35 lines](031.zh.md) |
-| 32 | 前提的地图（P24） | — | [48 lines](032.zh.md) |
-| 33 | 开放（P25） | — | [50 lines](033.zh.md) |
-| 34 | 第九次独立审查与更正（P23c） | — | [75 lines](034.zh.md) |
-| 35 | 止息需要生起与静止定理（P26） | — | [52 lines](035.zh.md) |
-| 36 | 普查定律的一般形式与有界普查（P27） | — | [57 lines](036.zh.md) |
-| 37 | 普查的平衡（P28） | — | [51 lines](037.zh.md) |
-| 38 | 第十次独立审查与更正（P25b） | — | [72 lines](038.zh.md) |
-| 39 | 每个前提都起约束的世界与名称的确认（P29） | — | [43 lines](039.zh.md) |
-| 40 | 复现定律由平衡推出与增长的界（P30） | — | [58 lines](040.zh.md) |
-| 41 | 沿依存之链的滞后共灭（P31） | — | [51 lines](041.zh.md) |
-| 42 | 第十一次独立审查与更正（P29b） | — | [66 lines](042.zh.md) |
-| 43 | 延续下的普查平衡与跨一步的精确条件（P32） | — | [65 lines](043.zh.md) |
-| 44 | 交换归于静止（P33） | — | [49 lines](044.zh.md) |
-| 45 | 第十二次独立审查与更正（P33b） | — | [57 lines](045.zh.md) |
-| 46 | 计数的全部规律（P34） | — | [61 lines](046.zh.md) |
-| 47 | 延续的奠基：从想要延续者重述（W1–W5） | — | [143 lines](047.zh.md) |
-| 48 | 第十三次独立审查与更正（P34b） | — | [53 lines](048.zh.md) |
-| 49 | 被围住时与有限世界中计数的规律（P35） | — | [59 lines](049.zh.md) |
-| 50 | 见证改名（P36） | — | [37 lines](050.zh.md) |
-| 51 | 接下来能形成什么：接纳、部分与区域（P37） | — | [88 lines](051.zh.md) |
-| 52 | 每个前提选择之下计数的规律（P38） | — | [57 lines](052.zh.md) |
-| 53 | 一条公理推出什么（P39） | — | [83 lines](053.zh.md) |
-| 54 | 有限世界中每个选择之下计数的规律（P38b） | — | [55 lines](054.zh.md) |
-| 55 | 每个前提都起约束时计数的规律（P38c） | — | [51 lines](055.zh.md) |
-| 56 | 不用公理能走多远（P40） | — | [84 lines](056.zh.md) |
-| 57 | 计数自成一个模块（P41） | — | [34 lines](057.zh.md) |
-| 58 | 第十四次独立审查与更正（P41b） | — | [56 lines](058.zh.md) |
-| 59 | 单位所承载的：每一分辨率下的静止（R1） | — | [246 lines](059.zh.md) |
-| 60 | 每个选择之下所选前提都起约束时计数的规律（P45） | — | [61 lines](060.zh.md) |
-| 61 | 反馈与所及（P42） | — | [109 lines](061.zh.md) |
-| 62 | 公理的分解（P43） | — | [110 lines](062.zh.md) |
-| 63 | 有限世界中与被围住时前提起约束的计数（P46） | — | [69 lines](063.zh.md) |
-| 64 | G0 各处用法的审计（P44） | — | [104 lines](064.zh.md) |
-| 65 | 所立者与依存的计数（P47） | — | [56 lines](065.zh.md) |
-| 66 | 一步的规律，条件在规律之内（P48） | — | [70 lines](066.zh.md) |
-| 67 | 折叠 G0（P51） | — | [44 lines](067.zh.md) |
-| 68 | 每个变化之律保留、失去与回返的：零前提（R6） | — | [54 lines](068.zh.md) |
-| 69 | 第二部分的清点：什么不用公理（P52） | — | [37 lines](069.zh.md) |
-| 70 | 识与检验（P49） | — | [158 lines](070.zh.md) |
-| 71 | 依存、储备、支持与普查平衡的规律，条件在规律之内（P50） | — | [92 lines](071.zh.md) |
-| 72 | 实验：变动自己的动作检验什么、需要什么（P53） | — | [68 lines](072.zh.md) |
-| 73 | 失控：经自身之识的回路所不能识的（P55） | — | [55 lines](073.zh.md) |
-| 74 | 静止、开放与补给的规律，条件在规律之内（P57） | — | [71 lines](074.zh.md) |
-| 75 | 整体的规律，条件在规律之内（P60） | — | [48 lines](075.zh.md) |
-| 76 | 延续之下的普查定律，只用一个覆盖列表（P61） | — | [37 lines](076.zh.md) |
-| 77 | 第二部分中不用公理的内容移入第一部分（P54） | — | [34 lines](077.zh.md) |
-| 78 | 生成的空间，不用公理（P56） | — | [36 lines](078.zh.md) |
-| 79 | 储备与依存的规律，条件在规律之内（P63） | — | [36 lines](079.zh.md) |
-| 80 | 较粗的步上的一步规律（Sampling） | — | [40 lines](080.zh.md) |
-| 81 | 较细的单位上的一步规律（Units） | — | [44 lines](081.zh.md) |
-| 82 | 时间之塔：连续时间作为越来越细的离散读法（Tower） | — | [31 lines](082.zh.md) |
-| 83 | 无明的边界条件：寻求何处能静止于够（P62） | — | [68 lines](083.zh.md) |
-| 84 | 可判定性局部化（P58） | — | [48 lines](084.zh.md) |
-| 85 | 不平衡作为关系项：先证等价（P59） | — | [32 lines](085.zh.md) |
-| 86 | 经识的选择：选择恰及选择者所识（P64） | — | [101 lines](086.zh.md) |
-| 87 | 其余回应时的比较：在回应所及之内决定（P65） | — | [90 lines](087.zh.md) |
-| 88 | 机制与标准因果模型：承载规律的投影，作为过程的因果模型（P66、P68） | — | [88 lines](088.zh.md) |
-| 89 | 吸引：被吸入者不再回来，每个律恰吸入不返回者（P67） | — | [90 lines](089.zh.md) |
-| 90 | 确切的名称：停止不能被否证（P58b） | — | [43 lines](090.zh.md) |
-| 91 | 一个展开与它的读法：过程与框架从世界一侧陈述（P69） | — | [113 lines](091.zh.md) |
-| 92 | 学习：归纳、推广、训练与元层次（P73、P74） | — | [112 lines](092.zh.md) |
-| 93 | 智慧之根在第一部分所及（P75） | — | [52 lines](093.zh.md) |
-| 94 | 描述保留什么、失去什么：分离、关系的生灭与有意义的切分（P70） | — | [100 lines](094.zh.md) |
-| 95 | 在所识之中的识：对角线、补全的展开与没有静值的节律（P71） | — | [69 lines](095.zh.md) |
-| 96 | 语境中的识：粘合、不依语境的主张作为承诺，与部分失去整体的两种方式（P72） | — | [70 lines](096.zh.md) |
-| 97 | 辨识：有界的记录确定什么（P83） | — | [89 lines](097.zh.md) |
-| 98 | 历史固定什么：律与历史的完备对应，检验固定相同的条件（P76） | — | [52 lines](098.zh.md) |
-| 99 | 路径分支时：返回、被吸入与相同之下的确定（P81） | — | [71 lines](099.zh.md) |
-| 100 | 回应由动力学给出：反事实是规律的进程（P80） | — | [117 lines](100.zh.md) |
-| 101 | 列出一次所承诺的（P77） | — | [12 lines](101.zh.md) |
-| 102 | 变化的次序（P78） | — | [31 lines](102.zh.md) |
-| 103 | 一步与逐步选择家族的全部规律（P79） | — | [26 lines](103.zh.md) |
-| 104 | 加权历史及其损失（P82） | — | [12 lines](104.zh.md) |
-| 105 | 传递的精确条件与边界（P84） | — | [30 lines](105.zh.md) |
-| 106 | 没有哪个来源复现的供给（P85） | — | [10 lines](106.zh.md) |
-| 107 | 跨步供给、冗余与储备（P86） | — | [16 lines](107.zh.md) |
-| 108 | Persistence through dormancy and identity fixed by relations (P87) | [1,690 lines](108.md) | [57 lines](108.zh.md) |
-| — | English summary | [1,804 lines](english-summary.md) | — |
-| 109 | 交换的次序：正规形、普查与最小足迹（P88） | — | [20 lines](109.zh.md) |
-| 110 | 熵：生成留下的历史与守住它的代价（R5） | — | [101 lines](110.zh.md) |
-| 111 | 静止一族按强度命名（P58c） | — | [107 lines](111.zh.md) |
-| 112 | 一般规律与改名：存量、接触与严格损失匹配（2026-10-14） | — | [49 lines](112.zh.md) |
-| 113 | 旧记录的一般律：确保、分组、读出与门控改变 | — | [84 lines](113.zh.md) |
-| 114 | 旧记录的一般律：生存核、计数与预留出口、持续与永不到达 | — | [84 lines](114.zh.md) |
-| 115 | 旧记录的一般律：复制与回溯读出 | — | [95 lines](115.zh.md) |
-| 116 | 旧记录的一般律：到达、谱系与链的边 | — | [82 lines](116.zh.md) |
-| 117 | 旧记录的一般律：跨情境读出与机器的每段历史 | — | [100 lines](117.zh.md) |
-| 118 | 相同之下补全：经等价承载规律与分支检验（Becoming.Likeness） | — | [77 lines](118.zh.md) |
-| 119 | 经其识所能学者 | — | [68 lines](119.zh.md) |
-| 120 | 判定不能去掉；有限多结果所需的原则与无穷多结果的反例；核心的分支检验即外围的检验（Becoming.Likeness 与 Becoming.Bridge） | — | [71 lines](120.zh.md) |
-| 121 | 线性检验所见：每个分岔推迟到显现时（Becoming.Postponement）；四项读法 | — | [46 lines](121.zh.md) |
-| 122 | 外围证明接入脊柱（整合 I1）：像有限模型上同测即相同（以排中律为假设）、目标唯一、自身之善的第二步即剖面上的 N_rel | — | [58 lines](122.zh.md) |
-| 123 | 第十七次审查的更正：文字、改名与一处由构造给出的平衡 | — | [40 lines](123.zh.md) |
-| 124 | 外围证明接入脊柱（整合 I3a）：二十项记录在脊柱上陈述；部分与结合两个核心模块；五条一般律 | — | [46 lines](124.zh.md) |
-| 125 | 从关系开始的重建：只用水平的规律、从交换读出的前提、语境中的读法（Becoming.Novelty、Becoming.Reading、Becoming.Readings） | — | [90 lines](125.zh.md) |
-| 126 | 有界记录的长度对每一对界恰好（P83b） | — | [30 lines](126.zh.md) |
-| 127 | 外围证明接入脊柱（整合 I3b）：九项记录接入；语境中的规律、共同实现的界与粒度 | — | [43 lines](127.zh.md) |
-| 128 | 精化在类数之内停止：Moore 界与有分支的框架以类计的深度（P83c） | — | [55 lines](128.zh.md) |
-| 129 | 外围证明接入脊柱（整合 I3c）：经所登记者保持守卫；共享存量与学得程序的传递 | — | [49 lines](129.zh.md) |
-| 130 | Moore 界不需判定：判定位置，不判定值（P83d） | — | [47 lines](130.zh.md) |
-| 131 | 动作在哪里形成：部分的、其余的，或只是两者之关系的（Becoming.Coupling） | — | [74 lines](131.zh.md) |
-| 132 | 区分：检验即有界的记录，两个框架之间的深度恰好（P83e） | — | [49 lines](132.zh.md) |
-| 133 | 静止之步不需要界：对每个学习者 2N − 1，界只给出沉默（P83f） | — | [41 lines](133.zh.md) |
-| 134 | 外围证明接入脊柱（整合 I3d）：经约化的判者、经部分的读取、汲取而不补充的水平；对齐方向的比较即 BetterAt | — | [56 lines](134.zh.md) |
-| 135 | 继承模块中的记录接入脊柱（整合 I3e）：列出之选项中不被胜过者；弱排中与排中两条界 | — | [48 lines](135.zh.md) |
-| 136 | 按否证学习者的静止之步是立方阶的；一个世界之内检验的 N − 1 恰好（P83g） | — | [49 lines](136.zh.md) |
-| 137 | 任意多条件下最小的识：读有限多个条件的律经其敏感而读，尾需要全知（Becoming.Sensitivity） | — | [72 lines](137.zh.md) |
-| 138 | 散立的模块在共同基底上陈述：每条律是同一展开之历程的律（Becoming.Courses、Becoming.CoursesBridge；P114） | — | [88 lines](138.zh.md) |
-| 139 | 脊柱运行之外的模块归类（整合 I4a，草稿待 Ren）：598 个模块，31 个较早的版本连到脊柱，64 条待接入的律 | — | [78 lines](139.zh.md) |
-| 140 | 运行分开之处的辨识，计数中的典型（P116） | — | [61 lines](140.zh.md) |
-| 141 | 差别到达多少：耦合强度度量敏感，所携带的量是能到达的最大差别（Becoming.Propagation） | — | [84 lines](141.zh.md) |
-| 142 | 较早的版本的文件头注记（整合 I4c）：31 个模块指向脊柱上陈述其主定理的声明 | — | [19 lines](142.zh.md) |
-| 143 | 每个起源都经过门（整合 I4b 第一项）：单向的门律，LivingOrganization 接入 | — | [34 lines](143.zh.md) |
-| 144 | 权重计数情境（P117） | — | [55 lines](144.zh.md) |
-| 145 | 有限历史所否证者（整合 I4b 第三项）：可否证、附着与 Markov 原则，PrefixSafety 接入 | — | [39 lines](145.zh.md) |
-| 146 | 有限分支处的提升（整合 I4b 第四项）：持续某段进程，FiniteBranching 接入 | — | [40 lines](146.zh.md) |
-| 147 | 依 Ren 的交托决定的读法（P110） | — | [49 lines](147.zh.md) |
-| 148 | 新的增益从哪里来：算入其余，每次上升都是被给予的（Becoming.Gain；P111） | — | [50 lines](148.zh.md) |
-| 149 | 语境中的读法何时粘合：奇偶律、Bell 型之界与环（Becoming.Gluing；P112） | — | [50 lines](149.zh.md) |
-| 150 | 分开与计数的开放证明（P119） | — | [66 lines](150.zh.md) |
-| 151 | 只读记录的选择（整合 I4b 第二项）：PluralRecords 与 TieBreaking 接入 | — | [39 lines](151.zh.md) |
-| 152 | 所携带的差别怎样增长：上游没有回路处有限阶精确、增长至多是多项式，回路使之失控（Becoming.Loops） | — | [87 lines](152.zh.md) |
-| 153 | 经选项模型的选择：第 151 节的重新框定（整合 I4b 第二项的后续） | — | [43 lines](153.zh.md) |
-| 154 | 截断所失：任意耦合时程——精确余项、按时间次序的链与安定的时程（Becoming.Remainder） | — | [84 lines](154.zh.md) |
-| 155 | 携带差别的阶作为历史之和：P118 的阶是 P82 的视界（Becoming.Routes） | — | [64 lines](155.zh.md) |
-| 156 | 回路怎样在展开中形成：耦合闭合一条链（Becoming.Closing） | — | [57 lines](156.zh.md) |
-| 157 | 回路在律所读之内，与断裂：回路的形成与 Becoming.Runaway 的策略在一个律中（Becoming.Thresholds） | — | [62 lines](157.zh.md) |
-| 158 | 耦合多常作用：安定、失控与其速度（Becoming.Frequency） | — | [66 lines](158.zh.md) |
-| 159 | 观察是从所观察者出发的路线：差别只往下游去（Becoming.Observation） | — | [57 lines](159.zh.md) |
-| 160 | 整体而无部分之律所需：最小的识之反例的确切强度（Becoming.Tail） | — | [61 lines](160.zh.md) |
-| 161 | 运行在何处延续：有限多配置之内运行是通向返回的路径，一般地是依赖选择（Becoming.Onward） | — | [57 lines](161.zh.md) |
-| 162 | 第二部分折叠进第一部分：一个条件小节（P128） | — | [37 lines](162.zh.md) |
-| 163 | 发布准备度复核与第十八次审查（R18、I5） | — | [16 lines](163.zh.md) |
-| 164 | 复核所见的脊柱整理（P129） | — | [17 lines](164.zh.md) |
-| 165 | 一个根：每个基都读作运行，前沿陈述在两种作为的世界上（P130） | — | [21 lines](165.zh.md) |
+| — | Preamble | [5 lines](preamble.md) | [7 lines](preamble.zh.md) |
+| 1 | 问题 | [2 lines, no heading](001.md) | [6 lines](001.zh.md) |
+| 2 | 结果 | [6 lines, no heading](002.md) | [28 lines](002.zh.md) |
+| 3 | 与计划的对照 | [4 lines, no heading](003.md) | [9 lines](003.zh.md) |
+| 4 | 作者反审 | [2 lines, no heading](004.md) | [41 lines](004.zh.md) |
+| 5 | 边界 | [2 lines, no heading](005.md) | [5 lines](005.zh.md) |
+| 6 | 动态依存与逐步读法（P6） | [36 lines, no heading](006.md) | [104 lines](006.zh.md) |
+| 7 | 独立审查与更正 | [16 lines, no heading](007.md) | [68 lines](007.zh.md) |
+| 8 | 回程、视界、共同活动与替代（P7） | [48 lines, no heading](008.md) | [168 lines](008.zh.md) |
+| 9 | C 在各读法下的排序（P8） | [15 lines, no heading](009.md) | [51 lines](009.zh.md) |
+| 10 | 条件的对应纪律（P9） | [15 lines, no heading](010.md) | [50 lines](010.zh.md) |
+| 11 | 第二次独立审查与更正（P7b） | [56 lines, no heading](011.md) | [74 lines](011.zh.md) |
+| 12 | 第三次独立审查与更正（P9b） | [41 lines, no heading](012.md) | [73 lines](012.zh.md) |
+| 13 | 继续生成：生起、不息与更新（P10） | [20 lines, no heading](013.md) | [55 lines](013.zh.md) |
+| 14 | 更多：流、供给与更新者（P11） | [20 lines, no heading](014.md) | [53 lines](014.zh.md) |
+| 15 | 第四次独立审查与更正（P11b） | [52 lines, no heading](015.md) | [91 lines](015.zh.md) |
+| 16 | 跨步的同一：改名、改认与接续（P12） | [21 lines, no heading](016.md) | [61 lines](016.zh.md) |
+| 17 | 耗散：复现的取用打开有限家族（P13） | [22 lines, no heading](017.md) | [57 lines](017.zh.md) |
+| 18 | 角色：生作为生的条件与经由给予的生起（P14） | [24 lines, no heading](018.md) | [65 lines](018.zh.md) |
+| 19 | 第五次独立审查与更正（P12b） | [67 lines, no heading](019.md) | [93 lines](019.zh.md) |
+| 20 | 生成即补充：生起本身承担要求（P15） | [24 lines, no heading](020.md) | [62 lines](020.zh.md) |
+| 21 | 整体与部分：整体经由部分的生成而持续（P16） | [20 lines, no heading](021.md) | [61 lines](021.zh.md) |
+| 22 | 第六次独立审查与更正（P16b） | [61 lines, no heading](022.md) | [96 lines](022.zh.md) |
+| 23 | 第七次独立审查与更正（P16c） | [54 lines, no heading](023.md) | [82 lines](023.zh.md) |
+| 24 | 储备：活动越过支持，水平越过活动（P17） | [49 lines, no heading](024.md) | [78 lines](024.zh.md) |
+| 25 | 世系：关系项经由所依与所给直接相关（P18） | [23 lines, no heading](025.md) | [57 lines](025.zh.md) |
+| 26 | 变化的规律：不加前提，开始成立与不再成立同步（P19） | [21 lines, no heading](026.md) | [64 lines](026.zh.md) |
+| 27 | 第八次独立审查与更正（P18b） | [46 lines, no heading](027.md) | [79 lines](027.zh.md) |
+| 28 | 上升与下降在同一交换中（P20） | [34 lines, no heading](028.md) | [55 lines](028.zh.md) |
+| 29 | 演化在脊柱上（P21） | [19 lines, no heading](029.md) | [54 lines](029.zh.md) |
+| 30 | 整体与其部分（P22） | [20 lines, no heading](030.md) | [54 lines](030.zh.md) |
+| 31 | 完整的陈述与完成审计（P23） | [14 lines, no heading](031.md) | [35 lines](031.zh.md) |
+| 32 | 前提的地图（P24） | [20 lines, no heading](032.md) | [48 lines](032.zh.md) |
+| 33 | 开放（P25） | [21 lines, no heading](033.md) | [50 lines](033.zh.md) |
+| 34 | 第九次独立审查与更正（P23c） | [43 lines, no heading](034.md) | [75 lines](034.zh.md) |
+| 35 | 止息需要生起与静止定理（P26） | [21 lines, no heading](035.md) | [52 lines](035.zh.md) |
+| 36 | 普查定律的一般形式与有界普查（P27） | [24 lines, no heading](036.md) | [57 lines](036.zh.md) |
+| 37 | 普查的平衡（P28） | [22 lines, no heading](037.md) | [51 lines](037.zh.md) |
+| 38 | 第十次独立审查与更正（P25b） | [39 lines, no heading](038.md) | [72 lines](038.zh.md) |
+| 39 | 每个前提都起约束的世界与名称的确认（P29） | [19 lines, no heading](039.md) | [43 lines](039.zh.md) |
+| 40 | 复现定律由平衡推出与增长的界（P30） | [23 lines, no heading](040.md) | [58 lines](040.zh.md) |
+| 41 | 沿依存之链的滞后共灭（P31） | [20 lines, no heading](041.md) | [51 lines](041.zh.md) |
+| 42 | 第十一次独立审查与更正（P29b） | [40 lines, no heading](042.md) | [66 lines](042.zh.md) |
+| 43 | 延续下的普查平衡与跨一步的精确条件（P32） | [26 lines, no heading](043.md) | [65 lines](043.zh.md) |
+| 44 | 交换归于静止（P33） | [21 lines, no heading](044.md) | [49 lines](044.zh.md) |
+| 45 | 第十二次独立审查与更正（P33b） | [30 lines, no heading](045.md) | [57 lines](045.zh.md) |
+| 46 | 计数的全部规律（P34） | [23 lines, no heading](046.md) | [61 lines](046.zh.md) |
+| 47 | 延续的奠基：从想要延续者重述（W1–W5） | [73 lines, no heading](047.md) | [143 lines](047.zh.md) |
+| 48 | 第十三次独立审查与更正（P34b） | [26 lines, no heading](048.md) | [53 lines](048.zh.md) |
+| 49 | 被围住时与有限世界中计数的规律（P35） | [24 lines, no heading](049.md) | [59 lines](049.zh.md) |
+| 50 | 见证改名（P36） | [12 lines, no heading](050.md) | [37 lines](050.zh.md) |
+| 51 | 接下来能形成什么：接纳、部分与区域（P37） | [35 lines, no heading](051.md) | [88 lines](051.zh.md) |
+| 52 | 每个前提选择之下计数的规律（P38） | [22 lines, no heading](052.md) | [57 lines](052.zh.md) |
+| 53 | 一条公理推出什么（P39） | [36 lines, no heading](053.md) | [83 lines](053.zh.md) |
+| 54 | 有限世界中每个选择之下计数的规律（P38b） | [23 lines, no heading](054.md) | [55 lines](054.zh.md) |
+| 55 | 每个前提都起约束时计数的规律（P38c） | [21 lines, no heading](055.md) | [51 lines](055.zh.md) |
+| 56 | 不用公理能走多远（P40） | [37 lines, no heading](056.md) | [84 lines](056.zh.md) |
+| 57 | 计数自成一个模块（P41） | [16 lines, no heading](057.md) | [34 lines](057.zh.md) |
+| 58 | 第十四次独立审查与更正（P41b） | [30 lines, no heading](058.md) | [56 lines](058.zh.md) |
+| 59 | 单位所承载的：每一分辨率下的静止（R1） | [99 lines, no heading](059.md) | [246 lines](059.zh.md) |
+| 60 | 每个选择之下所选前提都起约束时计数的规律（P45） | [23 lines, no heading](060.md) | [61 lines](060.zh.md) |
+| 61 | 反馈与所及（P42） | [53 lines, no heading](061.md) | [109 lines](061.zh.md) |
+| 62 | 公理的分解（P43） | [60 lines, no heading](062.md) | [110 lines](062.zh.md) |
+| 63 | 有限世界中与被围住时前提起约束的计数（P46） | [23 lines, no heading](063.md) | [69 lines](063.zh.md) |
+| 64 | G0 各处用法的审计（P44） | [34 lines, no heading](064.md) | [104 lines](064.zh.md) |
+| 65 | 所立者与依存的计数（P47） | [24 lines, no heading](065.md) | [56 lines](065.zh.md) |
+| 66 | 一步的规律，条件在规律之内（P48） | [34 lines, no heading](066.md) | [70 lines](066.zh.md) |
+| 67 | 折叠 G0（P51） | [22 lines, no heading](067.md) | [44 lines](067.zh.md) |
+| 68 | 每个变化之律保留、失去与回返的：零前提（R6） | [27 lines, no heading](068.md) | [54 lines](068.zh.md) |
+| 69 | 第二部分的清点：什么不用公理（P52） | [22 lines, no heading](069.md) | [37 lines](069.zh.md) |
+| 70 | 识与检验（P49） | [59 lines, no heading](070.md) | [158 lines](070.zh.md) |
+| 71 | 依存、储备、支持与普查平衡的规律，条件在规律之内（P50） | [44 lines, no heading](071.md) | [92 lines](071.zh.md) |
+| 72 | 实验：变动自己的动作检验什么、需要什么（P53） | [25 lines, no heading](072.md) | [68 lines](072.zh.md) |
+| 73 | 失控：经自身之识的回路所不能识的（P55） | [20 lines, no heading](073.md) | [55 lines](073.zh.md) |
+| 74 | 静止、开放与补给的规律，条件在规律之内（P57） | [35 lines, no heading](074.md) | [71 lines](074.zh.md) |
+| 75 | 整体的规律，条件在规律之内（P60） | [20 lines, no heading](075.md) | [48 lines](075.zh.md) |
+| 76 | 延续之下的普查定律，只用一个覆盖列表（P61） | [14 lines, no heading](076.md) | [37 lines](076.zh.md) |
+| 77 | 第二部分中不用公理的内容移入第一部分（P54） | [19 lines, no heading](077.md) | [34 lines](077.zh.md) |
+| 78 | 生成的空间，不用公理（P56） | [21 lines, no heading](078.md) | [36 lines](078.zh.md) |
+| 79 | 储备与依存的规律，条件在规律之内（P63） | [18 lines, no heading](079.md) | [36 lines](079.zh.md) |
+| 80 | 较粗的步上的一步规律（Sampling） | [16 lines, no heading](080.md) | [40 lines](080.zh.md) |
+| 81 | 较细的单位上的一步规律（Units） | [16 lines, no heading](081.md) | [44 lines](081.zh.md) |
+| 82 | 时间之塔：连续时间作为越来越细的离散读法（Tower） | [13 lines, no heading](082.md) | [31 lines](082.zh.md) |
+| 83 | 无明的边界条件：寻求何处能静止于够（P62） | [23 lines, no heading](083.md) | [68 lines](083.zh.md) |
+| 84 | 可判定性局部化（P58） | [28 lines, no heading](084.md) | [48 lines](084.zh.md) |
+| 85 | 不平衡作为关系项：先证等价（P59） | [18 lines, no heading](085.md) | [32 lines](085.zh.md) |
+| 86 | 经识的选择：选择恰及选择者所识（P64） | [41 lines, no heading](086.md) | [101 lines](086.zh.md) |
+| 87 | 其余回应时的比较：在回应所及之内决定（P65） | [35 lines, no heading](087.md) | [90 lines](087.zh.md) |
+| 88 | 机制与标准因果模型：承载规律的投影，作为过程的因果模型（P66、P68） | [33 lines, no heading](088.md) | [88 lines](088.zh.md) |
+| 89 | 吸引：被吸入者不再回来，每个律恰吸入不返回者（P67） | [34 lines, no heading](089.md) | [90 lines](089.zh.md) |
+| 90 | 确切的名称：停止不能被否证（P58b） | [20 lines, no heading](090.md) | [43 lines](090.zh.md) |
+| 91 | 一个展开与它的读法：过程与框架从世界一侧陈述（P69） | [49 lines, no heading](091.md) | [113 lines](091.zh.md) |
+| 92 | 学习：归纳、推广、训练与元层次（P73、P74） | [42 lines, no heading](092.md) | [112 lines](092.zh.md) |
+| 93 | 智慧之根在第一部分所及（P75） | [19 lines, no heading](093.md) | [52 lines](093.zh.md) |
+| 94 | 描述保留什么、失去什么：分离、关系的生灭与有意义的切分（P70） | [39 lines, no heading](094.md) | [100 lines](094.zh.md) |
+| 95 | 在所识之中的识：对角线、补全的展开与没有静值的节律（P71） | [29 lines, no heading](095.md) | [69 lines](095.zh.md) |
+| 96 | 语境中的识：粘合、不依语境的主张作为承诺，与部分失去整体的两种方式（P72） | [30 lines, no heading](096.md) | [70 lines](096.zh.md) |
+| 97 | 辨识：有界的记录确定什么（P83） | [42 lines, no heading](097.md) | [89 lines](097.zh.md) |
+| 98 | 历史固定什么：律与历史的完备对应，检验固定相同的条件（P76） | [23 lines, no heading](098.md) | [52 lines](098.zh.md) |
+| 99 | 路径分支时：返回、被吸入与相同之下的确定（P81） | [34 lines, no heading](099.md) | [71 lines](099.zh.md) |
+| 100 | 回应由动力学给出：反事实是规律的进程（P80） | [45 lines, no heading](100.md) | [117 lines](100.zh.md) |
+| 101 | 列出一次所承诺的（P77） | [2 lines, no heading](101.md) | [12 lines](101.zh.md) |
+| 102 | 变化的次序（P78） | [2 lines, no heading](102.md) | [31 lines](102.zh.md) |
+| 103 | 一步与逐步选择家族的全部规律（P79） | [2 lines, no heading](103.md) | [26 lines](103.zh.md) |
+| 104 | 加权历史及其损失（P82） | [2 lines, no heading](104.md) | [12 lines](104.zh.md) |
+| 105 | 传递的精确条件与边界（P84） | [2 lines, no heading](105.md) | [30 lines](105.zh.md) |
+| 106 | 没有哪个来源复现的供给（P85） | [2 lines, no heading](106.md) | [10 lines](106.zh.md) |
+| 107 | 跨步供给、冗余与储备（P86） | [2 lines, no heading](107.md) | [16 lines](107.zh.md) |
+| 108 | Persistence through dormancy and identity fixed by relations (P87) | [25 lines](108.md) | [57 lines](108.zh.md) |
+| 109 | 交换的次序：正规形、普查与最小足迹（P88） | [2 lines, no heading](109.md) | [20 lines](109.zh.md) |
+| 110 | 熵：生成留下的历史与守住它的代价（R5） | [44 lines, no heading](110.md) | [101 lines](110.zh.md) |
+| 111 | 静止一族按强度命名（P58c） | [80 lines, no heading](111.md) | [107 lines](111.zh.md) |
+| 112 | 一般规律与改名：存量、接触与严格损失匹配（2026-10-14） | [18 lines, no heading](112.md) | [49 lines](112.zh.md) |
+| 113 | 旧记录的一般律：确保、分组、读出与门控改变 | [42 lines, no heading](113.md) | [84 lines](113.zh.md) |
+| 114 | 旧记录的一般律：生存核、计数与预留出口、持续与永不到达 | [40 lines, no heading](114.md) | [84 lines](114.zh.md) |
+| 115 | 旧记录的一般律：复制与回溯读出 | [50 lines, no heading](115.md) | [95 lines](115.zh.md) |
+| 116 | 旧记录的一般律：到达、谱系与链的边 | [48 lines, no heading](116.md) | [82 lines](116.zh.md) |
+| 117 | 旧记录的一般律：跨情境读出与机器的每段历史 | [62 lines, no heading](117.md) | [100 lines](117.zh.md) |
+| 118 | 相同之下补全：经等价承载规律与分支检验（Becoming.Likeness） | [43 lines, no heading](118.md) | [77 lines](118.zh.md) |
+| 119 | 经其识所能学者 | [31 lines, no heading](119.md) | [68 lines](119.zh.md) |
+| 120 | 判定不能去掉；有限多结果所需的原则与无穷多结果的反例；核心的分支检验即外围的检验（Becoming.Likeness 与 Becoming.Bridge） | [42 lines, no heading](120.md) | [71 lines](120.zh.md) |
+| 121 | 线性检验所见：每个分岔推迟到显现时（Becoming.Postponement）；四项读法 | [22 lines, no heading](121.md) | [46 lines](121.zh.md) |
+| 122 | 外围证明接入脊柱（整合 I1）：像有限模型上同测即相同（以排中律为假设）、目标唯一、自身之善的第二步即剖面上的 N_rel | [31 lines, no heading](122.md) | [58 lines](122.zh.md) |
+| 123 | 第十七次审查的更正：文字、改名与一处由构造给出的平衡 | [14 lines, no heading](123.md) | [40 lines](123.zh.md) |
+| 124 | 外围证明接入脊柱（整合 I3a）：二十项记录在脊柱上陈述；部分与结合两个核心模块；五条一般律 | [23 lines, no heading](124.md) | [46 lines](124.zh.md) |
+| 125 | 从关系开始的重建：只用水平的规律、从交换读出的前提、语境中的读法（Becoming.Novelty、Becoming.Reading、Becoming.Readings） | [47 lines, no heading](125.md) | [90 lines](125.zh.md) |
+| 126 | 有界记录的长度对每一对界恰好（P83b） | [17 lines, no heading](126.md) | [30 lines](126.zh.md) |
+| 127 | 外围证明接入脊柱（整合 I3b）：九项记录接入；语境中的规律、共同实现的界与粒度 | [22 lines, no heading](127.md) | [43 lines](127.zh.md) |
+| 128 | 精化在类数之内停止：Moore 界与有分支的框架以类计的深度（P83c） | [26 lines, no heading](128.md) | [55 lines](128.zh.md) |
+| 129 | 外围证明接入脊柱（整合 I3c）：经所登记者保持守卫；共享存量与学得程序的传递 | [20 lines, no heading](129.md) | [49 lines](129.zh.md) |
+| 130 | Moore 界不需判定：判定位置，不判定值（P83d） | [23 lines, no heading](130.md) | [47 lines](130.zh.md) |
+| 131 | 动作在哪里形成：部分的、其余的，或只是两者之关系的（Becoming.Coupling） | [40 lines, no heading](131.md) | [74 lines](131.zh.md) |
+| 132 | 区分：检验即有界的记录，两个框架之间的深度恰好（P83e） | [24 lines, no heading](132.md) | [49 lines](132.zh.md) |
+| 133 | 静止之步不需要界：对每个学习者 2N − 1，界只给出沉默（P83f） | [21 lines, no heading](133.md) | [41 lines](133.zh.md) |
+| 134 | 外围证明接入脊柱（整合 I3d）：经约化的判者、经部分的读取、汲取而不补充的水平；对齐方向的比较即 BetterAt | [20 lines, no heading](134.md) | [56 lines](134.zh.md) |
+| 135 | 继承模块中的记录接入脊柱（整合 I3e）：列出之选项中不被胜过者；弱排中与排中两条界 | [19 lines, no heading](135.md) | [48 lines](135.zh.md) |
+| 136 | 按否证学习者的静止之步是立方阶的；一个世界之内检验的 N − 1 恰好（P83g） | [24 lines, no heading](136.md) | [49 lines](136.zh.md) |
+| 137 | 任意多条件下最小的识：读有限多个条件的律经其敏感而读，尾需要全知（Becoming.Sensitivity） | [44 lines, no heading](137.md) | [72 lines](137.zh.md) |
+| 138 | 散立的模块在共同基底上陈述：每条律是同一展开之历程的律（Becoming.Courses、Becoming.CoursesBridge；P114） | [48 lines, no heading](138.md) | [88 lines](138.zh.md) |
+| 139 | 脊柱运行之外的模块归类（整合 I4a，草稿待 Ren）：598 个模块，31 个较早的版本连到脊柱，64 条待接入的律 | [20 lines, no heading](139.md) | [78 lines](139.zh.md) |
+| 140 | 运行分开之处的辨识，计数中的典型（P116） | [25 lines, no heading](140.md) | [61 lines](140.zh.md) |
+| 141 | 差别到达多少：耦合强度度量敏感，所携带的量是能到达的最大差别（Becoming.Propagation） | [48 lines, no heading](141.md) | [84 lines](141.zh.md) |
+| 142 | 较早的版本的文件头注记（整合 I4c）：31 个模块指向脊柱上陈述其主定理的声明 | [12 lines, no heading](142.md) | [19 lines](142.zh.md) |
+| 143 | 每个起源都经过门（整合 I4b 第一项）：单向的门律，LivingOrganization 接入 | [13 lines, no heading](143.md) | [34 lines](143.zh.md) |
+| 144 | 权重计数情境（P117） | [24 lines, no heading](144.md) | [55 lines](144.zh.md) |
+| 145 | 有限历史所否证者（整合 I4b 第三项）：可否证、附着与 Markov 原则，PrefixSafety 接入 | [13 lines, no heading](145.md) | [39 lines](145.zh.md) |
+| 146 | 有限分支处的提升（整合 I4b 第四项）：持续某段进程，FiniteBranching 接入 | [13 lines, no heading](146.md) | [40 lines](146.zh.md) |
+| 147 | 依 Ren 的交托决定的读法（P110） | [19 lines, no heading](147.md) | [49 lines](147.zh.md) |
+| 148 | 新的增益从哪里来：算入其余，每次上升都是被给予的（Becoming.Gain；P111） | [23 lines, no heading](148.md) | [50 lines](148.zh.md) |
+| 149 | 语境中的读法何时粘合：奇偶律、Bell 型之界与环（Becoming.Gluing；P112） | [20 lines, no heading](149.md) | [50 lines](149.zh.md) |
+| 150 | 分开与计数的开放证明（P119） | [28 lines, no heading](150.md) | [66 lines](150.zh.md) |
+| 151 | 只读记录的选择（整合 I4b 第二项）：PluralRecords 与 TieBreaking 接入 | [13 lines, no heading](151.md) | [39 lines](151.zh.md) |
+| 152 | 所携带的差别怎样增长：上游没有回路处有限阶精确、增长至多是多项式，回路使之失控（Becoming.Loops） | [53 lines, no heading](152.md) | [87 lines](152.zh.md) |
+| 153 | 经选项模型的选择：第 151 节的重新框定（整合 I4b 第二项的后续） | [18 lines, no heading](153.md) | [43 lines](153.zh.md) |
+| 154 | 截断所失：任意耦合时程——精确余项、按时间次序的链与安定的时程（Becoming.Remainder） | [54 lines, no heading](154.md) | [84 lines](154.zh.md) |
+| 155 | 携带差别的阶作为历史之和：P118 的阶是 P82 的视界（Becoming.Routes） | [42 lines, no heading](155.md) | [64 lines](155.zh.md) |
+| 156 | 回路怎样在展开中形成：耦合闭合一条链（Becoming.Closing） | [35 lines, no heading](156.md) | [57 lines](156.zh.md) |
+| 157 | 回路在律所读之内，与断裂：回路的形成与 Becoming.Runaway 的策略在一个律中（Becoming.Thresholds） | [40 lines, no heading](157.md) | [62 lines](157.zh.md) |
+| 158 | 耦合多常作用：安定、失控与其速度（Becoming.Frequency） | [40 lines, no heading](158.md) | [66 lines](158.zh.md) |
+| 159 | 观察是从所观察者出发的路线：差别只往下游去（Becoming.Observation） | [34 lines, no heading](159.md) | [57 lines](159.zh.md) |
+| 160 | 整体而无部分之律所需：最小的识之反例的确切强度（Becoming.Tail） | [38 lines, no heading](160.md) | [61 lines](160.zh.md) |
+| 161 | 运行在何处延续：有限多配置之内运行是通向返回的路径，一般地是依赖选择（Becoming.Onward） | [35 lines, no heading](161.md) | [57 lines](161.zh.md) |
+| 162 | 第二部分折叠进第一部分：一个条件小节（P128） | [18 lines, no heading](162.md) | [37 lines](162.zh.md) |
+| — | English summary | [1,728 lines](english-summary.md) | — |
+| 163 | 发布准备度复核与第十八次审查（R18、I5） | [31 lines, no heading](163.md) | [16 lines](163.zh.md) |
+| 164 | 复核所见的脊柱整理（P129） | [23 lines, no heading](164.md) | [17 lines](164.zh.md) |
+| 165 | 一个根：每个基都读作运行，前沿陈述在两种作为的世界上（P130） | [22 lines, no heading](165.md) | [21 lines](165.zh.md) |
 | 166 | Every spine theorem on the base (U) | [36 lines](166.md) | — |
 | 167 | The unification follow-through (U2) | [49 lines](167.md) | — |
 | 168 | Where a level couples into a formation (N2) | [56 lines](168.md) | — |

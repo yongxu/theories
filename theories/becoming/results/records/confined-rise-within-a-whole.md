@@ -90,7 +90,7 @@ Buss 1987 and Michod 1999 (with Michod and Roze 2001) read the transitions in in
 | proof | [Reproduction.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean) | `Becoming.Reproduction.le_of_excess_zero` |
 | proof | [Continuation.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean) | `Becoming.Flow.family_excess_ends` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T142108.117415Z/verification.json) | — |
-| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror): study section [366](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/366.md) | — |
+| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror); its history names section [366](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/366.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | statement | [THE-THEORY-OF-EVOLUTION.md](../../history/THE-THEORY-OF-EVOLUTION.md) | — |
 | statement | [OPENING.md](../../OPENING.md) | — |
