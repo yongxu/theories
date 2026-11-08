@@ -63,7 +63,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.Grammar, 72 theorems in 120 declarations, and the instance sections of Arising, Change, Identity, ContinuedClasses, PatternPassing, Persistence and Space, each declaration with an empty axiom report. The plan it realizes was reviewed in its ninth version by GPT astra and two Opus reviewers; the instance sections were written by three Opus coders and merged with names reconciled. No human review. The OU6 corrections were reviewed against the Lean by GPT astra and Opus reviewers.
+Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.Grammar, 72 theorems in 120 declarations, and the instance sections of Arising, Change, Identity, ContinuedClasses, PatternPassing, Persistence and Space, each declaration with an empty axiom report. The plan it realizes was reviewed in its ninth version by GPT astra and two Opus reviewers; the instance sections were written by three Opus coders and merged with names reconciled. No person's review is recorded. The OU6 corrections were reviewed against the Lean by GPT astra and Opus reviewers.
 
 Canonical source: [Grammar.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean)
 
