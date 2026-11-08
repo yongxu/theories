@@ -325,8 +325,11 @@
     ],
     "assets": [
       "theories/becoming/results/atlas/connections.svg",
+      "theories/becoming/results/atlas/connections.zh.svg",
       "theories/becoming/results/spine.svg",
       "theories/becoming/results/spine.zh.svg",
+      "theories/becoming/results/standings.svg",
+      "theories/becoming/results/standings.zh.svg",
       "theories/lineage.svg",
       "theories/lineage.zh.svg"
     ],
