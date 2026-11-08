@@ -130,6 +130,7 @@ class Links:
             self.counts['external'] += 1
             return href
         path, _, anchor = href.partition('#')
+        path, _, query = path.partition('?')  # GitHub's ?plain=1 (a source's lines) is kept on a link to GitHub
         from urllib.parse import unquote
         target = posixpath.normpath(posixpath.join(posixpath.dirname(page), unquote(path))) if path else page
         alias = self.aliases.get(f'{target}#{anchor}') or self.aliases.get(target)
@@ -146,9 +147,10 @@ class Links:
             self.counts['untracked'] += 1
             self.untracked.append((page, href))
             return None
+        lines = bool(query) or bool(re.fullmatch(r'L\d+(-L\d+)?', anchor))  # a line of a file: only GitHub shows it
         if target in self.dirs and posixpath.join(target, 'README.md') in self.pages:
             target = posixpath.join(target, 'README.md')
-        if target in self.pages:
+        if target in self.pages and not lines:
             self.counts['site'] += 1
             self.internal.append((page, target, anchor))
             return relative(out_path(target), page) + (f'#{anchor}' if anchor else '')
@@ -161,7 +163,8 @@ class Links:
             return None
         if target in self.files or target in self.dirs:
             self.counts['github'] += 1
-            return self.github(target, anchor)
+            link = self.github(target)
+            return link + (f'?{query}' if query else '') + (f'#{anchor}' if anchor else '')
         self.counts['untracked'] += 1
         self.untracked.append((page, href))
         return None

@@ -3,7 +3,7 @@
 <a id="what-the-account-is-for-worked-examples"></a>
 # 本说明有什么用：实例
 
-[English](USES-EXAMPLES.md) · [首页](../../README.zh.md) · [一页](ONE-PAGE.zh.md) · [用途](USES.zh.md) · **实例** · [总览](THE-THEORY-OF-BECOMING.zh.md) · [八章](chapters/README.md) · [第六章](chapters/06-CLASSICAL-TEXTS.md) · [检验](../../TESTS.md) · [怎样长成](../LINEAGE.zh.md) · [术语表](../../GLOSSARY.zh.md) · [审查包](review/README.zh.md)
+[English](USES-EXAMPLES.md) · [首页](../../README.zh.md) · [一页](ONE-PAGE.zh.md) · [用途](USES.zh.md) · **实例** · [总览](THE-THEORY-OF-BECOMING.zh.md) · [八章（英文）](chapters/README.md) · [第六章](chapters/06-CLASSICAL-TEXTS.md) · [检验（英文）](../../TESTS.md) · [对照表](results/atlas/CROSSWALK.zh.md) · [怎样长成](../LINEAGE.zh.md) · [术语表](../../GLOSSARY.zh.md) · [审查包](review/README.zh.md)
 
 *约三十七至四十八分钟读完，一次一个实例；[逐领域的那张表](USES.zh.md#field-by-field)在先。*
 

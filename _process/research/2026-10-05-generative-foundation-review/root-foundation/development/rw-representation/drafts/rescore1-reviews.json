@@ -1,0 +1,874 @@
+[
+ {
+  "lens": "review:unification",
+  "scores": [
+   {
+    "q": "Q1. How representable is the project",
+    "score": 6,
+    "why": "README's first screen (read in full) says what it is, how it stands and where to start: Lean receipts 505/536, 'none of the central results new mathematics', 'No human review yet', both premises named, reading times. ONE-PAGE.md (read in full) is a strong ten-minute layer with a claims/standing/refuter table. But the first screen is hard for a newcomer to take in. The 'One case' paragraph ends in 'a law proved and near-definitional, its force the premise that a selector selects through just what it reads or needs', and nothing on the first screen says in plain words why the reader should care. Below the first screen, README.md is 104 KB, mostly a research log (the 'Ongoing research and current progress' section from line 148 on is walls of text).",
+    "to_reach_8": "README first screen (_process/navigation/README-FIRST-SCREEN.md and the readme_* sources): add one plain sentence on what the account lets a reader do, e.g. ask of any reward, judge or market what it reads and what lies beyond, linking USES-EXAMPLES.md#auditing-a-language-model-judge. Rewrite the 'Beside it, a law...' clause in everyday words. Move the 'Ongoing research and current progress' block out of README.md into its own linked page (RESEARCH.md already exists) so the landing page ends after the four layers."
+   },
+   {
+    "q": "Q2. Static website",
+    "score": 7,
+    "why": "/Users/ren/tmp/rw/site is built (46 files) and looks good: warm serif type, a persistent top nav (Home, One page, Uses, Overview, Chapters, Tests, Graph, Map, Growth, Glossary, Reviewers, Start here, 中文) and a 'Ways in' card list with reading times. It stays faithful because every page is converted from the repository text and the footer names the commit. I checked every internal href and fragment over all pages except connections.html: 0 missing files and 0 broken anchors among 8,395 links. However, 4,425 of those links leave for github.com. On THEORY-GRAPH.html, 543 of 578 links do, because results records are not on the site, so a reader who follows any result is sent to GitHub. The spine is an unlinked <img> scaled to the 60rem column, which makes its 11 px legend about 8 px. connections.html is a single 4.96 MB page that renders only through JS. The site is not reachable yet: pages.yml runs on dispatch only.",
+    "to_reach_8": "Publish the result records (or a per-result page generated from RESULTS.md and records/) on the site, so a result clicked on THEORY-GRAPH.html, RESULTS.html or a chapter stays on the site (tools/publishing/build_site.py plus site.pages in _process/research-config.json). Wrap each spine <img> in a link to spine.svg, or give it a 'full size' link. Split the 4.9 MB cx-data in connections.html into a lazily fetched JSON file. The owner's switch (Settings → Pages → GitHub Actions, then dispatching .github/workflows/pages.yml) would add a public URL and make the connection map viewable without a clone. It would also replace the local footer 'Built from uncommitted edits on top of 6936752bf' with the deployed commit and make the blob/<sha> links resolve, if that commit is pushed."
+   },
+   {
+    "q": "Q3. Unification and connections shown elegantly",
+    "score": 7,
+    "why": "There is now a real picture. spine.svg, generated from the graph, is embedded in README, ONE-PAGE, the overview and THEORY-GRAPH, with a Chinese edition. It sizes eight chapter circles by results and draws formal-reuse, earlier-to-later, interpretive and application edges in four styles, says why 'related' (1,420) is left out, and shows the two premises entering chapter 7 as hypotheses. THEORY-GRAPH.md §The spine has an exemplary 'What it does not show': it quotes 08 §7's 11 derived, 1 under a hypothesis, 6 counting and 99 at a named distance, and explains why 45 and 11 count different things. The edge-kind table keeps all four kinds apart for every pair. The counts check out: 17 pairs ≥10, 6 earlier-to-later, results summing to 536, 41 concepts. The map's 'The root's reach' view draws 11/1/6/99 and 45/16/6/50 as bars. What holds it below 8 is the following. The picture titled 'around one grammar' does not itself show how far the grammar reaches: its spokes are uniform thin lines whatever k/m is (22/74 and 3/28 look the same), and the 11/117 appears only in text one click away. The legend and the T1–T8 paragraphs are 10.5–11 px inside a 1300 px image, unreadable at GitHub or site width. Two edge-label pairs collide ('15'/'3' near (700,426) and '14'/'11' near (650,493)). The arrow direction (arrowhead on the used chapter) is stated only in THEORY-GRAPH prose, not in the legend. 08 §7's standings, the source of truth, are one paragraph of more than 2,000 characters with no table. The map's root's-reach view cannot be opened on GitHub.",
+    "to_reach_8": "In tools/research/spine.py → theories/becoming/results/spine.svg (and spine.zh.svg): (1) put the standing on the picture, as a small stacked bar or line under 'The grammar' reading 'of 117 central declarations: 11 derived · 1 under a hypothesis · 6 counting · 99 at a named distance', and encode k/m in each spoke's width or label it on the spoke. (2) Move the T1–T8 sentences out of the SVG into a table under the picture in THEORY-GRAPH.md (keep the coloured dots and a one-word outcome), and enlarge the diagram's own text to at least 14 px at an 880 px render. (3) Offset the colliding count labels. (4) Add to the legend: 'arrow points to the chapter whose results are used'. In README's caption under the spine, add the one line '11 of 117 central declarations are derived from the grammar; 99 stand at a named distance'. In 08-METHOD.md §7 (#r-one-root-to-its-edge), add a standings table (standing | n | example | reason), with the paragraph kept below it. In THEORY-GRAPH.md, link the map's #root view once Pages is live."
+   },
+   {
+    "q": "Q4. How the whole grew",
+    "score": 7,
+    "why": "theories/LINEAGE.md (I read its head and the thread; it is 100 KB, 86–112 min) opens with lineage.svg, a timeline from 2021 to 8 Nov 2026 with compressed bands. It defines three evidence labels (public / private and unpublished / AI reconstruction) and follows one thread, the selection mechanism from 2024-07 to closed capture and T7's failed bridge, with quotations and dates. The turning-points table gives a source file and line for each. It is reachable from README ('Growth') and the site. But the picture is numbered dots with no titles, so it tells no story without the table. Only 2 of the 52 drawn points carry a non-public label, so the label legend is almost unused visually. The step from the folders to the chapters is not drawn.",
+    "to_reach_8": "In tools/research/lineage.py → theories/lineage.svg: put short titles on the turning points, at least the thread's and the phase boundaries, or add a phase strip (folders, consolidation, spine, tests). Draw where the earlier folders feed into today's chapters, e.g. end the timeline in the eight chapter names with the thread's arrival marked on 02 and 05. Keep the 8–11-minute reading at the top of LINEAGE.md as it is."
+   },
+   {
+    "q": "Q5. Understanding the value it provides",
+    "score": 6,
+    "why": "USES.md (read the table and examples list) and USES-EXAMPLES.md (read the first two examples) state value field by field, at true standing, with 'Nothing claimed' where nothing is. The judge-audit example is a concrete, usable five-question procedure. The front pages do not overclaim. But the plain statement of value is not early. The README's first screen gives a case whose own frozen predictions 'mostly failed' and a near-definitional law, and leaves 'why it matters' to a link. The README opening calls it 'a foundation for AI alignment, the most important matter...', which is labelled conviction but is the first value claim many readers will meet.",
+    "to_reach_8": "README first screen: one sentence saying what a reader can do today, e.g. audit any selection, whether reward, judge, market or vote, by what couples into it, with a link to the judge-audit example and the honest limit ('no test on a deployed pipeline yet'). ONE-PAGE.md: a two-line 'What you can do with it' before the table, linking USES.md."
+   },
+   {
+    "q": "Q6. Use in alignment, wisdom, coordination, human development and other fields",
+    "score": 7,
+    "why": "USES.md has one row per field (alignment, people and AI, coordination, human development and 生生, wisdom traditions, the sciences), each with 'What you can do', 'How it stands' and 'What is not claimed'. Human development opens with 'Nothing claimed'. USES-EXAMPLES.md has at least one worked example per field, each headed with its standing ('From a frozen test (IN1)…', 'An AI reading…'), and both pages exist in Chinese. The table cells are paragraphs of 100–200 words, and the T7 clause recurs verbatim, so the table does not scan, and the standings use the account's own vocabulary ('room', 'couples into', 'near-definitional').",
+    "to_reach_8": "USES.md: cut each cell to one or two lines, with a standing tag (proved / conjectured / tested: passed-failed / AI reading / nothing claimed), and move the qualifiers into USES-EXAMPLES.md. Gloss 'couples into' and 'room' at first use, or link GLOSSARY entries."
+   },
+   {
+    "q": "Q7. Valuable things easy to see, connections clear",
+    "score": 6,
+    "why": "The site's nav and 'Ways in' cards put every front one click from home, and every internal link and anchor resolves. On GitHub, README's nav reaches the same pages, and THEORY-GRAPH.md (80 KB) and LINEAGE.md (100 KB) are under the size at which GitHub stops rendering. But the connection map (theories/becoming/results/atlas/map.html) shows only as source on GitHub; MAP.md says so, and README's nav does not list it. Most result links on the site leave for GitHub. README.md's lower 90 KB buries the layers under the research log. Reading times disagree: the README gives the opening as 22–28 minutes and the site's card gives 71–92.",
+    "to_reach_8": "Add 'Map' to README's nav once Pages is live, pointing to the Pages URL of connections.html (until then, link the root's-reach numbers in THEORY-GRAPH.md). Move README's 'Ongoing research and current progress' into RESEARCH.md. Put records on the site, as in Q2. Reconcile the opening's reading time (state whether it includes the notes) in the README first screen and the site's Ways-in card."
+   }
+  ],
+  "findings": [
+   {
+    "severity": "medium",
+    "where": "theories/becoming/results/spine.svg (tools/research/spine.py); README.md first screen caption",
+    "problem": "The picture embedded on the landing page is titled 'The eight chapters around one grammar' and has a spoke from the grammar to every chapter. It does not show how far the grammar reaches: the spokes are uniform whatever k/m is, and the 11 derived / 99 at a named distance appear only in text one click away (THEORY-GRAPH says 'the picture draws neither'). A reader of the README first screen can come away thinking the chapters derive from one grammar.",
+    "fix": "Draw the standing on the picture: a small bar under 'The grammar' reading '117 central declarations: 11 derived · 1 under a hypothesis · 6 counting · 99 at a named distance'. Make spoke width or label carry k/m. Add the same one-line count to the README caption under the spine."
+   },
+   {
+    "severity": "medium",
+    "where": "theories/becoming/results/spine.svg legend and T1–T8 block",
+    "problem": "The legend and the T1–T8 thesis paragraphs are set at 10.5–11 px inside a 1300 px-wide image. At GitHub's column width or the site's 60rem column they render at about 7–8 px, so a reader cannot read the key or the outcomes without opening the SVG by itself, and on the site the <img> is not linked to the full-size SVG.",
+    "fix": "Move the T1–T8 sentences into a Markdown table under the picture (THEORY-GRAPH.md §The spine), keeping the coloured dots and a one-word outcome in the SVG. Raise the diagram text to at least 14 px at render width. Wrap the site's spine <img> in a link to spine.svg."
+   },
+   {
+    "severity": "medium",
+    "where": "theories/becoming/chapters/08-METHOD.md §7 (#r-one-root-to-its-edge, #shared-laws-and-connectivity)",
+    "problem": "This is the source of truth for how far unification goes: 11 derived, 1 under hypothesis, 6 counting, and 99 at a named distance split 22/32/18/16/6/2/3, plus the 45/30/6/36 connectivity split. It is given as two paragraphs of more than 2,000 characters each, with no table, so the honest numbers are hard to find and to check.",
+    "fix": "Add a standings table above the paragraph (standing | n | one example | reason) and a second for the four-way connectivity count. Keep the prose below, and link the map's 'The root's reach' view."
+   },
+   {
+    "severity": "medium",
+    "where": "Site: theories/becoming/results/THEORY-GRAPH.html, RESULTS.html, chapters (tools/publishing/build_site.py)",
+    "problem": "4,425 of the 8,395 links on the built site go to github.com blob URLs, including 543 of 578 on THEORY-GRAPH.html, because the result records and atlas pages are not on the site. A reader exploring connections is sent off the site at the first click. Before Pages is live, the blob URLs also point at a commit (6936752bf, plus uncommitted edits) that may not be on the public remote.",
+    "fix": "Add the records (theories/becoming/results/records/*.md) and ATLAS.md/CROSSWALK.md to site.pages, or generate one page per result. Build only from a pushed commit."
+   },
+   {
+    "severity": "medium",
+    "where": "theories/becoming/results/atlas/map.html; README.md nav; MAP.md:77",
+    "problem": "The connection map, the only interactive view with the root's-reach bars and the four relation kinds kept apart, cannot be opened on GitHub (MAP.md: 'GitHub shows only its source') and is not in README's nav. Until the owner's Pages switch, a GitHub visitor cannot see it.",
+    "fix": "After Pages is dispatched, link the deployed connections.html from README's nav and from THEORY-GRAPH.md. Until then, state its root's-reach numbers in THEORY-GRAPH and say it opens from a clone."
+   },
+   {
+    "severity": "low",
+    "where": "theories/becoming/results/spine.svg edge labels",
+    "problem": "Two pairs of edge count labels overlap: '15' and '3' near (700,426), and '14' and '11' near (650,493). Curves in the upper right between 01, 02 and 03 cross densely.",
+    "fix": "Offset labels along their curves, or place them with a collision check in spine.py."
+   },
+   {
+    "severity": "low",
+    "where": "theories/becoming/results/spine.svg legend",
+    "problem": "The legend does not say which way an arrow points. The arrowhead is on the chapter whose results are used, which only THEORY-GRAPH's prose says ('a curve from one chapter to another counts uses of the second's results by the first's'), so 'Root → Map 60' can be read as derivation flowing from root to map.",
+    "fix": "Add 'arrow points to the chapter whose results are used' to the legend's formal-reuse line."
+   },
+   {
+    "severity": "low",
+    "where": "theories/lineage.svg",
+    "problem": "The growth picture is numbered dots with no titles. Only 2 of 52 points carry a non-public label, and it does not show the folders flowing into today's chapters, so the picture needs the table to say anything.",
+    "fix": "Add short titles for the thread's points and the phase boundaries, and end the timeline at the eight chapters with the thread's arrival marked."
+   },
+   {
+    "severity": "low",
+    "where": "README.md first screen vs site index.html Ways-in card",
+    "problem": "The opening's reading time is 22–28 minutes on the README and 71–92 minutes on the site card for the same 'The opening'.",
+    "fix": "Say which includes the notes, and use the same figure in both places."
+   },
+   {
+    "severity": "low",
+    "where": "README.md below the first screen (from '## Ongoing research and current progress')",
+    "problem": "README.md is 104 KB. After the first screen and the opening, most of it is a research log with paragraphs of several thousand characters, which buries the four reading layers.",
+    "fix": "Move the research log to RESEARCH.md and end README after the layers and how to check."
+   }
+  ],
+  "read": "Read in full: README.md first screen and the opening's first part, ONE-PAGE.md, the THEORY-GRAPH.md header, §The spine with its 'What it shows / does not show', the whole edge-kind table, the corpus table and the grammar-concepts table, and 08-METHOD.md §7 (lines 425–480). Also read: the overview's head and spine embed; USES.md's field table and examples list; the first two USES-EXAMPLES.md examples; the head, thread and first table rows of LINEAGE.md; the head of MAP.md; .github/workflows/pages.yml. Rendered spine.svg and lineage.svg (and the site home, as a non-JS thumbnail) to PNG in the scratchpad and looked at them. Checked the spine's numbers against the table (17 pairs, 6 earlier-to-later, 536 results, 41 concepts) and scanned its label positions for collisions. Site: extracted the home text, checked every href and fragment on all pages except connections.html (0 missing, 0 bad anchors, 4,425 external), and read connections.html's script strings and embedded data (views, standings 11/1/6/99, reach 45/16/6/50, checks). I did not see the map rendered with JS, since the browser pane cannot open file://. I did not read the chapters beyond §7, the region result lists in THEORY-GRAPH, the rest of LINEAGE's table, or the Chinese editions. The earlier REVIEW.md I only skimmed for its Q3 line."
+ },
+ {
+  "lens": "review:site",
+  "scores": [
+   {
+    "q": "Q1. How representable is the project from where a newcomer lands",
+    "score": 6,
+    "why": "The site home (index.html, which is README's generated first screen verbatim) says in its first lines what the account is, gives one concrete case (the frozen fishers test, with its failures stated), names the ethics' two unasserted premises, and gives the proof standing plainly: 505 of 536 Lean receipts, no new mathematics, no human review. That is honest and quick, a 3-minute screen. But the prose is dense for a newcomer. The second half of 'One case' ('a law proved and near-definitional, its force the premise that a selector selects through just what it reads or needs: those selections, together, reach exactly what couples into it') cannot be followed without the chapters. Fourteen equal-weight cards follow, with no ordering beyond the list. The first-screen case also differs from the one page: 'under each instruction tried' on the home, 'under any instruction' on ONE-PAGE.",
+    "to_reach_8": "README first screen (its source is the readme_first_screen file named in _process/research-config.json; re-render, don't hand-edit): put the selection law in plain words ('a selector can only keep or drop what it can tell apart; what it cannot read can be lost while it succeeds', which is ONE-PAGE's 'centre' sentence, labelled [AI reading]), and keep 'each instruction tried'. theories/becoming/ONE-PAGE.md: change 'under any instruction' to the home's 'under each instruction tried'. research-config.json site.ways_in: split the cards into 'Read' (one page, uses, overview, chapters) and 'Check' (tests, graph, map, proofs, reviewers), or mark the first two as the way in."
+   },
+   {
+    "q": "Q2. Is there a static website (built, reachable, elegant, faithful)",
+    "score": 6,
+    "why": "Built: 38 Markdown pages, 4 SVGs, the connection map and a home, from an allow-list. Faithful: every page is converted from the repository's text, links between site pages are checked to the anchor or the build fails, other links go to GitHub at the build commit, and each result's anchor carries a status mark linked to its record (271 Lean-receipt, 16 reviewed-scoped and 3 open marks across the eight chapters). Safe: private paths are refused by the push screen's own pattern, key patterns are scanned, unsafe schemes and attributes are dropped. My scan found no /Users or tmp paths, no private links and no unconverted Markdown in any page. The stylesheet is restrained and readable, with light and dark modes and a 16px gutter. Against that: the site is not reachable, because Pages waits on the owner's switch. As built, the footer names commit 6936752bf 'with uncommitted edits', which is not on origin, so every one of the roughly 3,900 GitHub links on this copy would 404. The two figures are unreadable at the site's width (below). The connection map is a different visual system with no site header and no way back. No front page says the site exists.",
+    "to_reach_8": "The owner's switch (Settings → Pages → GitHub Actions, then dispatch .github/workflows/pages.yml from main) would add a public URL, a clean build at a pushed SHA whose GitHub links resolve, and a footer without 'uncommitted edits'. Beyond the switch: (1) tools/publishing/build_site.py: wrap each <img> of an .svg in a link to the file, and give figures a wider frame (a figure class wider than main's 46rem, or a horizontally scrolling container), so spine.svg and lineage.svg can be read. (2) tools/research/connection_map.py site mode: emit the site's header (brand to index.html plus nav) or at least a 'The Theory of Becoming' link back to index.html, a footer naming the commit, and a <noscript> line. (3) research-config.json site.aliases: map README.md to index.html, so the in-page 'Home' links on TESTS, RESULTS, OPEN-QUESTIONS, CLAIMS and MAP stay on the site. (4) README.md / MAP.md (via their render sources): once the site is live, link it from the first screen."
+   },
+   {
+    "q": "Q3. Are the unification and connections shown elegantly",
+    "score": 6,
+    "why": "THEORY-GRAPH.html is honest and keeps edge kinds apart. It says an edge records a dependence, citation or registered reading, not agreement in meaning. It explains formal-reuse, interpretive and application curves, says related edges (1,420) and small pairs are not drawn, and gives every pair in an edge-kind table. 'What it does not show' separates the 45 declarations that reach the grammar from the 11 derived ones. The spine picture appears on the home, the one page and the graph page. On the site, though, spine.svg is 1300px wide with 11px labels inside a column of about 700px, so its labels render around 6px. It has no links and is not clickable to enlarge. The interactive connection map (connections.html, 4.9 MB, JavaScript only) is the one view a reader can explore, but it sits outside the site's frame.",
+    "to_reach_8": "tools/research/spine.py: give the SVG nodes <a> links to their chapter pages and draw it at a size legible at about 720px wide (fewer, larger labels, or a portrait layout). build_site.py: link the image to its full-size file and let figures break out of the 46rem column. theories/becoming/results/THEORY-GRAPH.md: put a one-paragraph plain-language reading of the picture before the region table (what the ring, the curves and the T-labels mean). connection_map.py: site header, a way back, and a 'how to read this map' line visible without JavaScript."
+   },
+   {
+    "q": "Q4. Is it clear how the whole grew into today's account",
+    "score": 6,
+    "why": "LINEAGE.html has the narrative, a picture and evidence labels: each turning point is marked public, private and unpublished, or AI reconstruction. One thread (the selection mechanism) is followed from July 2024 to the trained-judge test of T7, with quotes, and AI authorship is labelled at each step. It is one click from the home ('How it grew') and in the nav ('Growth'). But the page is 86–112 minutes, and lineage.svg is 1300px wide with 9px text, so on the site it renders at about 5px: the picture that should carry the 8–11 minute part cannot be read. The card says 'From the writings of 2021' while the thread starts in 2024 and the repository in September 2026, so a reader has to search for where 2021 comes in.",
+    "to_reach_8": "theories/LINEAGE.md (via its generator): open with a five-to-eight-line time line in text (year, turning point, label) before the long rows, so the 10-minute part works without the picture. The lineage.svg generator: larger type (at least 14px at a 720px render) or a vertical layout. build_site.py: link the image to full size. research-config.json ways_in 'How it grew': show the 8–11 minute short-path time, not 86–112."
+   },
+   {
+    "q": "Q5. Can people understand what value it provides",
+    "score": 5,
+    "why": "The honesty is strong: the home says what is not new, that there has been no human review, and that tests failed. The fishers case is concrete. But the home never says, in one plain sentence, what a reader gains from the account: what question it lets them answer that they could not before. The value statement is on USES.html (the alignment row's 'audit a reward, judge or evaluation by what couples into it'), two clicks and 13–17 minutes away, and is written in the account's vocabulary. ONE-PAGE's 'centre' sentence (a selection can succeed while what it cannot read is lost) is the clearest value line, and it is not on the home.",
+    "to_reach_8": "README first screen (its render source): add a 'What it is for' line in plain words, e.g. 'It gives a checkable way to ask what a reward, metric or institution can and cannot see, and what is lost where it cannot', with the [AI reading] label and a link to USES. Keep the existing 'nothing new' and 'no human review' lines beside it. theories/becoming/USES.md: lead with one sentence per field saying what question it answers, before the dense table."
+   },
+   {
+    "q": "Q6. How it can be used in alignment, wisdom, coordination, human development and other fields",
+    "score": 7,
+    "why": "USES.html has a field-by-field table (alignment, people and AI, coordination, human development, wisdom traditions, the sciences). Each row gives what you can do today, how it stands and what is not claimed, and human development says 'Nothing claimed of how a person develops or fares'. USES-EXAMPLES.html works the cases at their true standing, each with 'What it does not show'. Both have Chinese editions on the site. Reaching 8 is held back by density (the table cells are paragraphs of qualifiers) and by the wisdom row's home, chapter 6, which is Chinese only on the site with no English abstract. An English reader who follows the row's links to 06 is blocked.",
+    "to_reach_8": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md: add an English abstract (or an English edition with 06 governing), and give chapters/README.md's catalogue an English gloss for 06's title. theories/becoming/USES.md: a one-line 'today you can' per field above the table, with the qualifiers kept in the table."
+   },
+   {
+    "q": "Q7. Are valuable things easy to see, connections clear, navigation that leads",
+    "score": 6,
+    "why": "Every main page is one click from the home (14 cards with reading times) and from a 13-item header nav. Pages render: no unconverted Markdown anywhere, and every internal anchor is checked at build. But several things lead the reader astray. The connection map has no header or way back. The 'Home' links in the generated pages' own navigation lines (TESTS, RESULTS, OPEN-QUESTIONS, CLAIMS, MAP) go to README on GitHub, off the site. 'Chapters' lands on a generated directory catalogue: the table links show file names like '01-ROOT.md', and most of the page is a ledger of 183 moved files in internal batch codes (H4, R35-B1, 'pinned only by a frozen checker'). On a phone the 13-item nav scrolls sideways with its scrollbar hidden, so 'Start here' and '中文' are out of sight. 'Start here' is twelfth in the nav and last among the cards. Some reading times disagree: the opening is 22–28 minutes in the hero and 71–92 on its card, and 'Check the proofs' shows MAP.md's full 12–16 minutes for one section.",
+    "to_reach_8": "research-config.json site.nav: put 'Start here' second, shorten the list (fold Glossary and Reviewers into a footer or a 'More' row), and add README.md → index.html to site.aliases. site.css: let header.top nav wrap on small screens or show a fade at its edge. theories/becoming/chapters/README.md (its generator): give the eight chapters a reader's list with one-line descriptions, link text that is the chapter title rather than the file name, and the history ledger moved below or to a sibling page. connection_map.py site mode: site header and link home. build_site.py home_body: time a card's anchor section, not the whole file, when the path carries #anchor; make the opening's time agree with the hero."
+   }
+  ],
+  "findings": [
+   {
+    "severity": "high",
+    "where": "/Users/ren/tmp/rw/site (as built): footer of every page, and all outbound links",
+    "problem": "The site is built 'from uncommitted edits on top of commit 6936752bf', and that commit is not on origin (origin/main is 805cff889 and 6936752bf is not its ancestor). So all of the roughly 3,900 links to github.com/yongxu/theories/blob/6936752bf…, including every status mark's record link, would 404 for anyone shown this copy. The site is also not reachable at any URL until Pages is switched on.",
+    "fix": "Show only a build of a pushed main commit. The owner's switch (Pages source: GitHub Actions, then dispatch .github/workflows/pages.yml) builds at GITHUB_SHA. Until then, label any shared local copy a preview."
+   },
+   {
+    "severity": "medium",
+    "where": "tools/publishing/build_site.py (Page._img, template) with theories/becoming/results/spine.svg and theories/lineage.svg",
+    "problem": "Both SVGs are 1300px wide (spine labels mostly 11px, lineage labels mostly 9px) and are placed in a 44–46rem column, so on the site their text renders at about 5–6px, and at about 2–3px on a phone. The images are not wrapped in links, so a reader cannot open them at full size. The two pictures meant to carry Q3 and Q4 cannot be read on the site.",
+    "fix": "Wrap each SVG <img> in <a href> to the file. Give figures a wider or scrollable frame in site.css. Regenerate the SVGs at a legible size for about a 720px render (spine.py, the lineage generator), with chapter nodes linked."
+   },
+   {
+    "severity": "medium",
+    "where": "tools/research/connection_map.py site_map → /Users/ren/tmp/rw/site/connections.html",
+    "problem": "The connection map, in the nav as 'Map' and among the cards, has no site header, no link back to index.html, no footer naming the commit and no <noscript> fallback. It is 4.9 MB of inline JSON, with no size or reading time on its card. A reader who opens it leaves the site's navigation and can only press back.",
+    "fix": "In site mode, emit the site header (brand → index.html plus nav) and footer, a noscript line, and a short 'how to read this' paragraph. Note its size on the card in research-config.json ways_in."
+   },
+   {
+    "severity": "medium",
+    "where": "/Users/ren/tmp/rw/site/theories/becoming/chapters/index.html (from theories/becoming/chapters/README.md)",
+    "problem": "The 'Chapters' nav target and the 'The eight chapters' card land on a generated directory catalogue. Its table shows file names ('01-ROOT.md') with a repeated boilerplate role ('each result of its region stated once'), chapter 6's title is given only in Chinese, and most of the page is a ledger of 183 moved files in internal batch codes (H4, R19-chapters, R35-B1, 'pinned only by a frozen checker'). The card's 17–22 minutes mostly measures that ledger.",
+    "fix": "Have the generator give the eight chapters a reader's list (title, one-line content, results count, reading time, link text the title). Move the history ledger below a heading or to a sibling page, and time the card to the reader's part."
+   },
+   {
+    "severity": "medium",
+    "where": "/Users/ren/tmp/rw/site/theories/becoming/chapters/06-CLASSICAL-TEXTS.html",
+    "problem": "Chapter 6 is Chinese only (lang zh-Hans) and has no English abstract. The USES wisdom row links into it, so an English reader following the home → Uses → wisdom path is blocked there. The English review dossier CLASSICAL-TEXTS is the only English way in, and the chapter does not point to it.",
+    "fix": "Add an English abstract at the top of 06-CLASSICAL-TEXTS.md (06 governs) or an English edition, and add an English title gloss to the chapters catalogue."
+   },
+   {
+    "severity": "medium",
+    "where": "research-config.json site.aliases; generated nav lines in TESTS.md, RESULTS.md, OPEN-QUESTIONS.md, chapters/CLAIMS.md, MAP.md",
+    "problem": "These pages carry the repository's own navigation line, whose 'Home' points to README.md. README.md is not a site page, so on the site 'Home' goes to github.com/…/README.md. The reader leaves the site and gets a second, different navigation stacked under the site header.",
+    "fix": "Add 'README.md': 'index.html' to site.aliases (build_site.py already honours aliases for site targets; check the alias path resolves to the home), or strip the repository nav line on the site."
+   },
+   {
+    "severity": "medium",
+    "where": "README first screen (the home) vs theories/becoming/ONE-PAGE.md 'One case'",
+    "problem": "The home says the fishers 'kept it in no season, under each instruction tried'. ONE-PAGE (and USES-EXAMPLES) says 'under any instruction'. 'Any' generalizes beyond the instructions tested, and a reader comparing the two sees the claim widen.",
+    "fix": "Use 'under each instruction tried' in ONE-PAGE.md, ONE-PAGE.zh.md and USES-EXAMPLES.md, matching the home and the test's folder."
+   },
+   {
+    "severity": "medium",
+    "where": "README first screen / site home",
+    "problem": "The home states what the account is and how it stands, but not in plain words what a reader can do with it or why it matters. The only value-like sentence ('a law proved and near-definitional, its force the premise…') is in the account's vocabulary. ONE-PAGE's clearer 'centre' sentence, and USES's 'audit a reward, judge or evaluation by what couples into it', are one or two clicks away.",
+    "fix": "Add one labelled plain sentence of use to the first screen's source, linking USES, and keep the 'no new mathematics' and 'no human review' lines beside it."
+   },
+   {
+    "severity": "low",
+    "where": "tools/publishing/site.css header.top nav; research-config.json site.nav",
+    "problem": "The 13-item nav scrolls sideways with its scrollbar hidden, so on a phone 'Start here' and '中文' are offscreen with no affordance. 'Start here' is twelfth in the nav and last among the cards. 'Map' (connections.html) and MAP.html ('Start here') share a name in the repository.",
+    "fix": "Let the nav wrap below 600px or add an edge fade. Order 'Start here' second. Fold Glossary and Reviewers into the footer."
+   },
+   {
+    "severity": "low",
+    "where": "tools/publishing/build_site.py home_body (reading times)",
+    "problem": "Card times are whole-file times. 'Check the proofs' (MAP.md#check-the-proofs-yourself) shows MAP's full 12–16 minutes. 'The opening' card shows 71–92 minutes while the hero, a few lines above, gives it as 22–28. 'How it grew' shows 86–112 though the page names an 8–11 minute path. 'The tests' shows 32–42 while the page says 32–41.",
+    "fix": "When a way-in path has an anchor, time that section. Allow a ways_in 'time' override for pages with a stated short path, and use one timing source for the hero and the cards."
+   },
+   {
+    "severity": "low",
+    "where": ".github/workflows/pages.yml sparse-checkout vs tools/research/connection_map.py _section_title",
+    "problem": "The CI build checks out only /*.md, tools, theories, the config, _process/navigation and experiments/README.md. The atlas cites sections in experiments/self-rewarding-lock/README.md, experiments/margin-measured/README.md and an _process/research PLAN.md, whose titles would silently fall back to 'file#anchor' on Pages. So the published map would differ from the local build, and the workflow has never been run.",
+    "fix": "Add those paths (or experiments/*/README.md) to the sparse set, or have the map fail rather than fall back when a cited file is absent."
+   },
+   {
+    "severity": "low",
+    "where": "tools/publishing/site.css figure.spine figcaption; template nav on zh pages",
+    "problem": "The figcaption colour is hard-coded #4a443c, which is unreadable in dark mode if site.figure is ever set (it is unused now). The Chinese pages carry an English header, nav and footer, and there is no Chinese home.",
+    "fix": "Use var(--muted) for the figcaption. Give site.nav a zh label set for pages with lang zh, or a zh home."
+   }
+  ],
+  "read": "Read in full: /Users/ren/tmp/rw/wt/tools/publishing/build_site.py (822 lines), tools/publishing/site.css, .github/workflows/pages.yml, the site key of _process/research-config.json, connection_map.py's site_map and the paths it reads (and the private and key patterns in push_screen.sh). In the built site I read, as extracted text: index.html in full (hero and all 14 cards); chapters/index.html (top and catalogue); the opening and status marks of 03-KNOWING.html; the opening of 06-CLASSICAL-TEXTS.html; the lead, the by-thesis table and the Failed and Mixed rows of TESTS.html; USES.html through its field-by-field table; the first worked example in USES-EXAMPLES.html; the first half of ONE-PAGE.html; the top of MAP.html; THEORY-GRAPH.html through the spine section and part of the edge-kind table; the lead and thread of LINEAGE.html; the HTML skeleton of connections.html (its script searched, not read). Mechanical scans across every built page, searched and not read page by page: private paths and /Users, unconverted Markdown, status-mark counts per chapter, GitHub link targets, SVG viewBoxes and font sizes. I checked git: the build commit 6936752bf is not on origin. I could not see the site rendered (the browser pane refused screenshots of a local file), so elegance is judged from the CSS, the HTML and the computed SVG scale, not from a screenshot. I ran no tests and edited nothing. Overall: the builder is careful, faithful and safe, and the front texts are honest. What holds the site below 8 is that it is unpublished and its as-built links point at an unpushed commit, the two figures cannot be read at the site's width, the connection map sits outside the site with no way back, and the Chapters landing page and the Chinese-only chapter 6 block a reader."
+ },
+ {
+  "lens": "review:growth",
+  "scores": [
+   {
+    "q": "Q1 How representable is the project",
+    "score": 6,
+    "why": "Read README.md's first screen (lines 1-25), MAP.md, ONE-PAGE.md in full, and the site's index.html. The landing says what it is in one line, gives one concrete case (the fishers and the mussel bed), and states where it stands: 505 of 536 results have Lean receipts, none of it is new mathematics, frozen tests passed and failed, and no person has reviewed it. Both the nav and the site link 'Growth'. What is missing is why it matters, in a sentence a newcomer can follow. The case is written in compressed clauses ('Told nothing of the bed, they kept it in no season, under each instruction tried'), and the README goes from that screen straight into a long first-person opening and, at the bottom, a wall of 'Historical section' anchors.",
+    "to_reach_8": "README.md first screen (generated from the readme_first_screen file in _process/research-config.json): add one plain sentence on why it matters, using ONE-PAGE.md's centre that a selection can succeed while what it cannot read is lost, keeping its [AI reading] label. Rewrite the case in plain clauses (what they were told, what happened, what failed). Add a one-line 'how it grew' with its date span next to the spine picture's caption. README.md 'Preserved history': collapse the anchor list under one details block that sits after a link to theories/LINEAGE.md. ONE-PAGE.md: break the 'What makes something go on' table's standing cells (the T7 cell is about 900 characters) into a short standing plus a link."
+   },
+   {
+    "q": "Q2 Static website",
+    "score": 6,
+    "why": "Opened /Users/ren/tmp/rw/site over a local server: index, LINEAGE.html, connections.html. It has 46 files, a consistent nav of 12 items, Chinese editions, the lineage and spine SVGs, and an interactive connection map that is elegant and faithful. It is not reachable: Pages waits on the owner's switch. As built it says 'Built from uncommitted edits on top of commit 6936752bf', and every link that leaves the site points at blob/6936752bf. That commit is not on origin (origin/main is 805cff889), so every evidence link on LINEAGE.html (229 in the Markdown) would 404 today. The lineage picture is a plain <img> sized to the text column, so its numbers are barely legible and its dots do not link to their rows. connections.html is 5 MB and shows nothing without JavaScript.",
+    "to_reach_8": "The switch adds reachability, and builds from GITHUB_SHA so the pinned links resolve once that commit is pushed. To score 8 as built: tools/publishing/build_site.py should refuse, or prominently warn, when it builds from uncommitted edits or from a commit not on the remote, and use the remote main SHA for local previews. Let the lineage SVG on LINEAGE.html break out of the text column (full-bleed figure) and wrap each dot in an <a href=\"#tp-N\"> that goes to its table row. connections.html: add a <noscript> summary with the counts table and links."
+   },
+   {
+    "q": "Q3 Unification and connections shown elegantly",
+    "score": 7,
+    "why": "Viewed theories/becoming/results/spine.svg as rendered and connections.html in the browser. The spine keeps formal-reuse, interpretive and application edges apart in its legend, says which edges are not drawn (1,420 analogy edges), gives 'on the grammar k/m' for each chapter, and shows the two premises as hypotheses coming into chapter 7. That is honest about how far unification goes. ONE-PAGE.md also says that a few central results are cases of the root and most use none of its laws. The connection map's loom (16 folders and 12 domains, chapters as a beam) is elegant. The spine's right-hand legend is a long block of T1–T7 prose that buries the picture. The connection map is an HTML file, so it cannot be seen on GitHub, and README.md does not link it.",
+    "to_reach_8": "spine.svg (generated by the theory-graph tool): move the T1–T7 paragraphs out of the SVG into THEORY-GRAPH.md#the-spine and keep one-line labels in the picture. Add a caption line stating the unification numerically, e.g. 'k of m central results are cases of the root' from 08 §7. README.md and MAP.md: link the connection map, i.e. the site's connections.html once Pages is on, and a static PNG/SVG snapshot of the loom committed beside CROSSWALK.md so GitHub readers can see it."
+   },
+   {
+    "q": "Q4 How the whole grew (narrative and picture with evidence labels)",
+    "score": 6,
+    "why": "Read theories/LINEAGE.md in full, LINEAGE.zh.md's head and sections, lineage.svg (rendered, and on the site), _process/history/2026-09-consolidation/TIMELINE.md (head, era headings, 'The shape of the arc'), the September MAP.md head, _process/history/INDEX.md's TIMELINE row, theories/README.md, and the banners of all 16 folders (meta-attractor, wamotopia and keep-the-possibility-space-open read in full). This is now real and evidence-bound: 48 dated turning points, each with file and line evidence and a label, plus one thread (the selection mechanism) followed from 2024 to the LA2 failure. It also has 29 renames, a papers table saying what stands, the records' weekly growth, the folders' fates, and a Chinese edition. The INDEX hands TIMELINE on to LINEAGE. But the 'whole' growth has no narrative. The 8–11-minute part is a picture of numbered dots with no words, plus one thread. Nowhere is the arc told in eras: city diagnosis → Moloch/Ouroboros → meta-attractor → AI turn → 開/間 and 文言 → September consolidation → the Lean spine → frozen tests. TIMELINE had that and LINEAGE dropped it on purpose ('turning points rather than a narrative'). All 48 turning points carry the same label, 'public', so the legend's other two classes never appear. The labels sort where a claim is stated, not who wrote it, so the 'AI-drafted' notes sit buried in the row text. The picture does not show the earlier folders flowing into the account. No folder banner and not theories/README.md links LINEAGE.",
+    "to_reach_8": "theories/becoming/results/data/lineage.json + tools/research/lineage.py: (1) add a 'Phases' section of 6–8 short dated paragraphs before the table, each naming its turning points by number and carrying TIMELINE's 'shape of the arc' forward past 4 October. (2) In lineage.svg, put a two-to-four-word caption beside each dot or each phase band, so the picture reads without the table, and name the phases on the axis. (3) Add an authorship column to the table: the author's own words, AI-drafted from his ideas, or an AI reading. The 'by what states it' label would no longer be the only one, given it is uniformly 'public'. (4) Add a strip, or a small second figure, placing the 16 earlier folders on the time axis by when their material dates, each linking its crosswalk page. (5) theories/README.md (atlas.py) and each folder banner: add a link to LINEAGE.md#… for the turning points that folder fed."
+   },
+   {
+    "q": "Q5 Value said plainly, early, with a concrete case, without overclaiming",
+    "score": 5,
+    "why": "Read README's first screen, ONE-PAGE.md, and USES.md's opening and table. A concrete case comes first, and nothing is overclaimed: every standing is stated, and the [AI reading] labels are present. But the value itself, what someone gains by reading this, is never said in plain words on the landing. The case's prose is hard to parse, and the closest thing to a value statement (ONE-PAGE: 'a selection can succeed while what it cannot read is lost') sits on the second page.",
+    "to_reach_8": "README first screen and site index.html: add a 'What you can do with it' line of two or three plain verbs taken from USES.md's table, e.g. 'audit a reward or judge by what it reads; check a shared draw by the joint take; read where a rule locks', each linking its USES row, with 'how far' kept. Rewrite the case in short sentences. ONE-PAGE.md: move 'The account's centre' sentence ahead of the case."
+   },
+   {
+    "q": "Q6 Uses in alignment, wisdom, coordination, human development and other fields",
+    "score": 7,
+    "why": "Read USES.md (opening, the field-by-field table, headings) and USES-EXAMPLES.md (the fishers example and the AJ checklist in full, plus all headings). Every field has a row with what can be done today, its standing, and what is not claimed. Human development says 'Nothing claimed' outright. Worked examples exist for every field at their true standing, constructed cases are marked as constructed, and both pages have Chinese editions. Held back by density: the examples are written in theorem-paraphrase ('Let selection not lower a target's share…'), so a practitioner would struggle to apply one.",
+    "to_reach_8": "USES-EXAMPLES.md: begin each example with a three-line plain box, 'The situation / The question the account lets you ask / What it does not tell you', and give the theorem paraphrase after it. USES.md: add one 10-minute runnable or checkable example (e.g. the judge-audit questions applied to a named public pipeline from 07 §6) with its standing."
+   },
+   {
+    "q": "Q7 Valuable things easy to see, connections clear",
+    "score": 6,
+    "why": "README nav and site nav each reach about 12 key pages in one click, and the pages render on GitHub (README 104 KB, LINEAGE 100 KB, CROSSWALK 59 KB, the hb-* evidence files at most 446 KB, all under the 2 MB limit). Gaps: the connection map is not linked from README or MAP, and is invisible on GitHub. theories/README.md and the 16 folder banners do not link the growth page. LINEAGE's 229 evidence links carry no line anchors (no #L or ?plain=1) into 240–446 KB files, so 'line 4411' cannot be reached by clicking. The site's lineage dots do not link to their rows.",
+    "to_reach_8": "lineage.py: emit evidence links as …/hb-01.md?plain=1#L4411 (GitHub) and the matching line anchors on the site. README.md and MAP.md: link the connection map (site page plus a committed snapshot image). theories/README.md: add a 'How these grew' link to LINEAGE.md. Site LINEAGE.html: make the picture's dots links."
+   }
+  ],
+  "findings": [
+   {
+    "severity": "high",
+    "where": "/Users/ren/tmp/rw/site (every page's footer and every link that leaves the site, e.g. theories/LINEAGE.html's 229 evidence links)",
+    "problem": "The site was built from uncommitted edits, and its outbound links pin commit 6936752bf, which is not on origin (origin/main is 805cff889). A reader of this build who follows any evidence link to GitHub gets a 404, so the growth page's evidence cannot be checked from the site as built.",
+    "fix": "build_site.py: refuse or warn loudly on a dirty tree or an unpushed commit, and pin outbound links to the remote main SHA for local builds. The Pages job already uses GITHUB_SHA, so the owner's switch, after a push, fixes it there."
+   },
+   {
+    "severity": "medium",
+    "where": "theories/LINEAGE.md (and .zh), generated by tools/research/lineage.py from theories/becoming/results/data/lineage.json",
+    "problem": "No narrative of the whole growth. The short part is a picture of numbered dots and one thread (selection), and the 48 turning points are a flat table. The eras and arc that the September TIMELINE gave ('The shape of the arc') were dropped and are not carried past 4 October, so a reader cannot tell the story without reading 86–112 minutes of rows.",
+    "fix": "Add a 'Phases' section of 6–8 dated paragraphs before the table, each citing its turning-point numbers, ending with what the account is now. Name the phases on the SVG's axis."
+   },
+   {
+    "severity": "medium",
+    "where": "theories/lineage.svg, lineage.zh.svg; site theories/LINEAGE.html",
+    "problem": "The picture carries only numbers: no word for any turning point and no phase names, so it says nothing without the table. On the site it is an <img> at text-column width, where the numbers are barely legible and the dots do not link to their rows. Its legend shows three label kinds, but every dot is 'public'.",
+    "fix": "Add short captions or phase bands, make the figure full-width on the site with dots linking to #tp-N rows, and drop unused legend entries or say 'none so far'."
+   },
+   {
+    "severity": "medium",
+    "where": "theories/LINEAGE.md, 'Turning points' Label column and label definitions",
+    "problem": "All 48 turning points are labelled 'public', so the label does no work. It records where a claim is stated, not who wrote it. Authorship, which matters most for growth (the author's own words, AI-drafted from his ideas, or an AI research tool's output), appears only inside row prose. The hb-01/02/03 files used as 'public' evidence are tracked excerpts of the author's turns from chats that MAP.md says are not tracked, and this is not explained.",
+    "fix": "Add an authorship column, and state in the label definitions that the hb-* files are tracked excerpts (the author's turns only) of untracked chat logs."
+   },
+   {
+    "severity": "medium",
+    "where": "theories/LINEAGE.md evidence links (229 relative links, 0 with line anchors)",
+    "problem": "Evidence cites line numbers, e.g. 'line 4411' in a 446 KB file, but the links open the rendered file at the top. On GitHub's rendered Markdown, line numbers are not visible, so the evidence is hard to verify by clicking.",
+    "fix": "Emit ?plain=1#L<n> links for Markdown and text sources, with matching anchors on the site."
+   },
+   {
+    "severity": "medium",
+    "where": "theories/README.md (generated by tools/research/atlas.py) and the 16 folder banners (theories/*/README.md line 2)",
+    "problem": "Neither the folder index nor any banner links the growth page, though LINEAGE.md sits in the same folder. The folders also carry no dates in the index, so a reader in the folders cannot see where each fits in the growth.",
+    "fix": "Add a link to LINEAGE.md in theories/README.md and in each banner. Add a 'material dates' column to the folder table, and optionally a folder strip on the lineage picture."
+   },
+   {
+    "severity": "medium",
+    "where": "README.md first screen (readme_first_screen) and site index.html",
+    "problem": "Why it matters and what a reader can do with it are not said plainly on the landing. The one case is written in compressed clauses that a newcomer struggles to parse.",
+    "fix": "Add one plain value sentence and two or three 'what you can do' verbs linking USES.md rows, and rewrite the case in short sentences."
+   },
+   {
+    "severity": "medium",
+    "where": "theories/becoming/results/atlas/map.html / site connections.html; README.md, MAP.md",
+    "problem": "The most elegant connection view (the loom) cannot be seen from the repository on GitHub, and neither README nor MAP links it. Without JavaScript it shows a single line of text.",
+    "fix": "Commit a static snapshot (SVG/PNG) beside CROSSWALK.md, link it and the site page from README and MAP, and add a <noscript> summary."
+   },
+   {
+    "severity": "low",
+    "where": "MAP.md 'How it got here', second paragraph",
+    "problem": "A garbled sentence: 'with their originals in sources/ but for the chat logs, … with a conversation's transcript in drafts/, which the repository has not tracked since 19 October 2026' leaves it unclear what is tracked.",
+    "fix": "Split it into two sentences: what sources/ holds, and what is untracked since 19 October (chat logs, memory exports, recorded conversations, and the drafts/ transcript)."
+   },
+   {
+    "severity": "low",
+    "where": "theories/LINEAGE.md row 22 vs theories/README.md",
+    "problem": "Row 22 says fifteen folders, then two more (17), while the index and the crosswalk say sixteen earlier folders. That the seventeenth became becoming/ on 9 October is said only in the renames table.",
+    "fix": "Add 'one of which became becoming/ on 9 October' to row 22."
+   },
+   {
+    "severity": "low",
+    "where": "theories/LINEAGE.md row 14",
+    "problem": "'(called The Fork, which the September timeline says is not in the corpus)' is ambiguous about whether the narrative or the name is missing.",
+    "fix": "Rephrase: 'the narrative itself, called The Fork, is not in the corpus (September timeline)'."
+   },
+   {
+    "severity": "low",
+    "where": "README.md 'Preserved history'",
+    "problem": "The front page ends with dozens of 'Historical section' anchor links and no pointer to the growth page.",
+    "fix": "Put LINEAGE.md first in that section and fold the anchors under one details element (they are already in one; add the LINEAGE line before it)."
+   }
+  ],
+  "read": "What I read: theories/LINEAGE.md in full (intro, thread, all 48 turning points, renames, folder fates, papers, records growth, sources); LINEAGE.zh.md's head and headings; lineage.svg rendered via qlmanage and on the site, plus lineage.zh.svg's text; _process/history/2026-09-consolidation/TIMELINE.md (head, era headings, 'The shape of the arc'); the head of the September MAP.md; the head of _process/history/INDEX.md and its TIMELINE row; theories/README.md in full; banner line 2 of all 16 folder READMEs (three read in full); MAP.md (headings, 'How it got here'); README.md (first screen, repository, discovery, preserved history); ONE-PAGE.md in full; USES.md (opening, table); USES-EXAMPLES.md (headings, fishers, AJ checklist); spine.svg rendered; .github/workflows/pages.yml. On the site I opened index.html, theories/LINEAGE.html and connections.html in a browser over a 127.0.0.1 static server (now stopped). Git checks: origin/main is 805cff889, 6936752bf is not pushed, and the commit counts check out. I did not read the chapters, TESTS.md, RESULTS.md or the review dossiers, so the Q1/Q3/Q5/Q6 scores rest on the fronts only. I wrote nothing in the tree; the only files written were render thumbnails in the scratchpad."
+ },
+ {
+  "lens": "review:chinese",
+  "scores": [
+   {
+    "q": "Q1 representable (Chinese reader)",
+    "score": 6,
+    "why": "The GitHub landing (README.md) is English from the first line. Its first screen has one Chinese way in, '一页（中文）' in the nav, and the 'Start with' line offers only English links. ONE-PAGE.zh.md is a complete and honest one-page reading: what it is, the fishers case, the root, a table of standings and refuters, the ethics with both premises named, the evidence, what is not done. But it is a close, sentence-for-sentence translation. Its long nested clauses (the T7 row is one sentence of about 200 characters, with phrases like '计入此情形作为关于训练出的评判者之主张的反证') and the calque '本说明' for 'the account' make it hard going for a native reader. It never says plainly in Chinese why the work matters or what a reader can do with it. There is no README.zh.md and no Chinese home page on the site.",
+    "to_reach_8": "(1) README.md: on the first screen, add 中文 next to each 'Start with' link (one page, uses) and a one-line Chinese entry, e.g. '中文读者：一页 · 用途 · 怎样长成 · 第六章（中文）'. Or add a short README.zh.md (3 minutes) linked from the nav. (2) theories/becoming/ONE-PAGE.zh.md: split the T7 and T1 table cells into short sentences. Add one plain sentence after '它是什么' on why it matters and what you can do with it, linking USES.zh.md. Consider a gloss for '本说明' (or '本论') in GLOSSARY.zh.md. (3) Have a native reader edit, rather than an AI cold read; the page header already says it has not been read by a person."
+   },
+   {
+    "q": "Q2 static website",
+    "score": 6,
+    "why": "The site at /Users/ren/tmp/rw/site is built: 40 pages plus CSS, with light and dark themes and CJK font stacks. Body class lang-zh gives Chinese pages a taller line height. The home cards carry 中文 tags for six fronts, and chapter 06 renders as lang zh-Hans. It is faithful in the sense that every page is converted from the repository text, with the build commit stated. But it is not reachable: Pages waits on the owner's switch. As built, its footer says 'Built from uncommitted edits on top of commit 6936752bf', and that commit is not on origin, so every link that leaves the site (the GitHub blob links) would 404 today. For a Chinese reader the chrome is all English. The global nav's 中文 always goes to ONE-PAGE.zh.html, even from USES.html, whose own edition is USES.zh.html. LINEAGE.zh.html is marked lang=\"en\" with body class lang-en, so it gets English typography and the wrong language for screen readers. The pages were not viewed in a browser (the pane would not open local files); scored from the HTML and CSS.",
+    "to_reach_8": "What the switch would add: a public URL, a build from main's committed tree, and outbound links at GITHUB_SHA that resolve. Beyond the switch: (1) tools/publishing/build_site.py: make the nav's 中文 page-aware (link the current page's .zh edition, or 'English' on a zh page), and give zh pages a Chinese nav (一页 · 用途 · 总览 · 八章 · 检验 · 理论图 · 怎样长成 · 术语 · 审查). (2) Fix language detection so theories/LINEAGE.zh.html gets lang=\"zh-Hans\" and lang-zh. It is the only zh page that misses; its source starts with a generated comment. (3) Add a short Chinese home (index.zh.html) built from a 3-minute Chinese first screen. (4) Mark chapter 06 '中文' on the chapters card."
+   },
+   {
+    "q": "Q3 unification and connections shown",
+    "score": 6,
+    "why": "spine.zh.svg is a real Chinese picture, embedded in ONE-PAGE.zh.md and the Chinese overview. I rendered and looked at it. It keeps edge kinds apart (formal reuse solid, earlier-to-later dark, interpretive dashed, application dotted, related not drawn) and states how far unification reaches per chapter ('在文法上 k/m'). The two premises enter chapter 7 as hypotheses, and T1–T8 are coloured by outcome. ONE-PAGE.zh says honestly that 'a few core results are cases of the root, more use its laws, most do not'. But the explanation of what the picture shows and does not show is English only (THEORY-GRAPH.md 'The spine'; the caption says '（英文）'). The legend leaks process jargon ('formal-reuse', 'RESULT-WORKFLOW 只把它用于…'). The graph pages and the connection map (connections.html, 5 MB) are English.",
+    "to_reach_8": "(1) Add a Chinese 'what it shows / what it does not show' paragraph under the picture in ONE-PAGE.zh.md or THE-THEORY-OF-BECOMING.zh.md, with the 08 §7 counts in Chinese (117 declarations: 11 derived, 1 under a hypothesis, 6 counting, 99 at a named distance). (2) tools/research/spine.py zh labels: replace 'formal-reuse … RESULT-WORKFLOW 只把它用于使用所引结果的已核验推理' with a reader's phrase ('证明中直接引用'), and 'k/m' with '有 k 个模块在文法上陈述其律（共 m 个）'. (3) A Chinese section of THEORY-GRAPH.md's spine part, or a THEORY-GRAPH.zh.md stub that covers the spine and edge-kind table only."
+   },
+   {
+    "q": "Q4 how it grew",
+    "score": 7,
+    "why": "LINEAGE.zh.md (112 KB, renders on GitHub) has a Chinese time line picture (lineage.zh.svg, which I rendered and looked at). It has labels (公开 / 私人、未发表 / AI 重构) on every turning point and one thread followed through (选择机制, 2024-07 to 2026-10, quoting English sources with Chinese glosses). Its contents include renamings, what became of the earlier folders, and papers, and it says no person has read it. Where it falls short: no Chinese front links it (ONE-PAGE.zh.md, THE-THEORY-OF-BECOMING.zh.md, review/README.zh.md and GLOSSARY.zh.md all omit it), and README's 'Growth' is English. On the site it is reached only from the home card's 中文, and its page is mis-tagged lang en. The turning-point table puts long English path lists in the evidence column. Its stated time (92–120 min) disagrees with the site card (86–112 min, the English figure).",
+    "to_reach_8": "(1) Link LINEAGE.zh.md from ONE-PAGE.zh.md's top nav and from the overview's 怎样读本文. (2) Fix the site lang tag (see Q2). (3) In tools/research/lineage.py zh output, collapse the evidence cell to '来源 n 处' with the paths in a details/foot list, so the table reads as a narrative. (4) Show the zh time on the site card for the zh link, or state both."
+   },
+   {
+    "q": "Q5 value understood",
+    "score": 6,
+    "why": "USES.zh.md says plainly, by field, what a reader can do today, how it stands, and what is not claimed. It opens by saying the laws are theorems about models and that applying them needs a correspondence. It does not overclaim, and has '不作主张' for human development. ONE-PAGE.zh.md gives a concrete case early (the fishers and the mussel bed, with numbers) and names its centre as an AI reading. But the Chinese reading path never states the value up front. ONE-PAGE.zh.md has no line on what it is for and no link to USES.zh.md, and neither do the overview, the review cover or the glossary. A Chinese reader who starts at '一页（中文）' does not learn that a uses page exists. The density of the translation also hides the plain point ('一个选择可以成功，而它读不到的东西却失去了').",
+    "to_reach_8": "(1) theories/becoming/ONE-PAGE.zh.md: add a short paragraph after '一个情形', 'What it is for / 有什么用', with two or three plain uses (audit what a reward or judge reads; check a shared draw by its joint total; read classical texts against checked laws, as concordance not confirmation), each at its standing, linking USES.zh.md. Add USES.zh.md to its top nav. (2) THE-THEORY-OF-BECOMING.zh.md: add USES.zh.md to the nav and to 怎样读本文. (3) README.md first screen: put 中文 beside 'what it is for, and how far'."
+   },
+   {
+    "q": "Q6 uses in fields",
+    "score": 7,
+    "why": "USES.zh.md and USES-EXAMPLES.zh.md cover alignment, people with AI, coordination, human development with 生生, wisdom traditions and the sciences. Each row has a standing and a column for what is not claimed, with '不作主张' where nothing is claimed, and nine worked examples carry true standings. I read the fishers example and the 天之道/张弓 example. All nine example anchors resolve, as do the chapter 06 anchors cited. The wisdom row is honest that it covers Chinese texts only and that all classifications are AI's. Below 8 because, for a Chinese reader, the pages are reachable only via the English USES.md or the site home card. Almost every standing link lands in an English chapter (01–05, 07, 08), and the review dossiers for alignment and the sciences are English. Translated quotations of English chapters are set in Chinese quotation marks as if verbatim (e.g. 「联合交换在每一侧对均等的偏离…」 in the 张弓 example).",
+    "to_reach_8": "(1) Link USES.zh.md from every Chinese front (ONE-PAGE.zh.md, THE-THEORY-OF-BECOMING.zh.md, review/README.zh.md, GLOSSARY.zh.md) and from the README first screen. (2) In USES.zh.md, mark English targets once at the top ('各章除第六章外为英文'), as GLOSSARY.zh.md already does. (3) In USES-EXAMPLES.zh.md, mark translated quotes as 译文 (as LINEAGE.zh.md does) rather than presenting them as quotations."
+   },
+   {
+    "q": "Q7 easy to see, connections clear",
+    "score": 5,
+    "why": "For a Chinese reader the one-click reach is thin and the Chinese pages do not lead to each other. From README.md only ONE-PAGE.zh is one click away; USES.zh, LINEAGE.zh, review/README.zh and GLOSSARY.zh are two clicks via the English pages. Chapter 06 is written in Chinese but is never labelled as Chinese in the README or on the site's chapters card. The Chinese fronts' own navs link only English, the overview, 八章 (an English index) and 理论图 (English). None links 用途 or 怎样长成. On the site, the global nav is English and its 中文 is not page-aware, and LINEAGE.zh is mis-tagged. All pages render on GitHub (largest front 270 KB, chapter 07), and the SVGs render. Two names for the same premises across the path: chapter 06 says 延续之条件 and 以广为愈（C）, while the fronts and glossary say 延续条件 and 'C：扩大可形成者更好'. GLOSSARY.zh.md does not list 以广为愈.",
+    "to_reach_8": "(1) One shared Chinese nav line on every zh front: [English] · 一页 · 用途 · 实例 · 总览 · 第六章（中文） · 怎样长成 · 术语表 · 审查包. Edit ONE-PAGE.zh.md, THE-THEORY-OF-BECOMING.zh.md, USES.zh.md, USES-EXAMPLES.zh.md, LINEAGE.zh.md (via lineage.py), GLOSSARY.zh.md and review/README.zh.md. (2) README.md: a Chinese line on the first screen listing those, with 第六章 marked 中文. (3) Page-aware 中文 and a zh nav in build_site.py, plus the LINEAGE.zh lang fix. (4) GLOSSARY.zh.md: add 以广为愈 and 延续之条件 as chapter 06's classical names for C and the continuation condition, pointing to the one sense, or align 06's usage."
+   }
+  ],
+  "findings": [
+   {
+    "severity": "high",
+    "where": "theories/becoming/ONE-PAGE.zh.md, THE-THEORY-OF-BECOMING.zh.md, review/README.zh.md, GLOSSARY.zh.md (navs and bodies)",
+    "problem": "No Chinese front links the Chinese uses page (USES.zh.md / USES-EXAMPLES.zh.md) or the Chinese lineage (LINEAGE.zh.md). A Chinese reader starting from README's '一页（中文）' never learns these exist. The value and the fields (Q5, Q6) and the growth story (Q4) are blocked on the Chinese path, and reachable only through English pages or the site home card.",
+    "fix": "Add 用途 · 实例 · 怎样长成 to each Chinese front's top nav. In ONE-PAGE.zh.md, add a short '有什么用' paragraph linking USES.zh.md."
+   },
+   {
+    "severity": "medium",
+    "where": "README.md first screen (line 5 nav; 'Start with' paragraph)",
+    "problem": "The landing is English throughout. Only '一页（中文）' is offered, and the 'Start with' line links only English pages. Chapter 06 is in Chinese but is listed as 'the classical texts' with no language mark. There is no README.zh.md.",
+    "fix": "Add 中文 beside 'the one page' and 'what it is for, and how far', and one Chinese line listing the zh pages with 第六章（中文）. Or add a 3-minute README.zh.md linked from the nav."
+   },
+   {
+    "severity": "medium",
+    "where": "/Users/ren/tmp/rw/site (all pages; footer; outbound links)",
+    "problem": "As built, the site is unreachable (Pages switch pending). Its outbound GitHub links point to commit 6936752bf, which is not on origin, so they would 404. The footer says it was built from uncommitted edits.",
+    "fix": "The owner's switch: dispatch .github/workflows/pages.yml from main, which builds at GITHUB_SHA. Before then, do not share the local build."
+   },
+   {
+    "severity": "medium",
+    "where": "tools/publishing/build_site.py (global nav); site/theories/becoming/USES.html etc.",
+    "problem": "The global nav is English on Chinese pages, and its 中文 always goes to ONE-PAGE.zh.html. From USES.html it skips USES.zh.html, the page's own edition. A Chinese reader has no Chinese navigation on the site.",
+    "fix": "Make the language switch page-aware (link the current page's .zh edition, or English from a zh page), and render a Chinese nav on lang-zh pages."
+   },
+   {
+    "severity": "medium",
+    "where": "site/theories/LINEAGE.zh.html",
+    "problem": "It is marked <html lang=\"en\"> and <body class=\"page lang-en\">, unlike the other zh pages. CJK line height (body.lang-zh) is not applied, and assistive tech reads it as English.",
+    "fix": "Fix the language detection in build_site.py for sources that start with a generated comment (LINEAGE.zh.md). Add a test that every *.zh page gets lang zh-Hans."
+   },
+   {
+    "severity": "medium",
+    "where": "theories/becoming/ONE-PAGE.zh.md (table rows T7, T1; 伦理)",
+    "problem": "The translation follows the English clause for clause. The T7 cell is a single sentence of about 200 characters ('…计入此情形作为关于训练出的评判者之主张的反证'), and '本说明' is used for 'the account'. For a native reader the page that should carry Q1 reads as translationese, and the plain point is buried.",
+    "fix": "Break long cells into short sentences. Have a native reader do a plain-Chinese pass (the header says no person has read it). Consider defining '本说明' (or choosing '本论') once in GLOSSARY.zh.md."
+   },
+   {
+    "severity": "medium",
+    "where": "theories/becoming/results/spine.zh.svg legend; THEORY-GRAPH.md 'The spine'",
+    "problem": "The Chinese picture's explanation of what it shows and does not show, including the 08 §7 counts that measure how far unification goes, is English only. The legend carries process jargon ('formal-reuse', 'RESULT-WORKFLOW 只把它用于…').",
+    "fix": "Add a Chinese 'what it shows / does not show' paragraph beside the picture in ONE-PAGE.zh.md or the overview. Plain-word the legend in spine.py's zh strings."
+   },
+   {
+    "severity": "low",
+    "where": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md vs GLOSSARY.zh.md and the zh fronts",
+    "problem": "Chapter 06 names the premises 延续之条件 and 以广为愈（C）. The fronts and glossary use 延续条件 and 'C：扩大可形成者更好', and the glossary does not list 以广为愈. That makes two names for one premise on the Chinese path.",
+    "fix": "List 以广为愈 and 延续之条件 in GLOSSARY.zh.md as chapter 06's classical names, pointing to the one sense, or align 06."
+   },
+   {
+    "severity": "low",
+    "where": "theories/becoming/USES-EXAMPLES.zh.md (张弓 example and others)",
+    "problem": "Translations of English chapter text are set in 「」 as if quoted verbatim, unlike LINEAGE.zh.md, which marks translations.",
+    "fix": "Mark them 译文, or quote the English with a gloss, as LINEAGE.zh.md does."
+   },
+   {
+    "severity": "low",
+    "where": "theories/becoming/chapters/README.md status line vs zh page headers",
+    "problem": "The chapters index says a Chinese edition is 'not maintained in step with the English file'. USES.zh.md and GLOSSARY.zh.md say '英文版改动时，本版随之修订'. A reader cannot tell which zh editions are kept current.",
+    "fix": "Distinguish the live zh fronts (kept in step) from the history zh editions in the index wording."
+   },
+   {
+    "severity": "low",
+    "where": "README.md vs site index.html cards",
+    "problem": "Reading times disagree. The opening is '22–28 minutes' in README and '71–92 minutes' on the site card. LINEAGE.zh says 92–120 min, while the site card shows the English 86–112.",
+    "fix": "State what each figure covers (text only vs. with notes), and show the zh time beside the zh link."
+   }
+  ],
+  "read": "Read in full: theories/becoming/ONE-PAGE.zh.md, theories/becoming/USES.zh.md, theories/becoming/review/README.zh.md. Read in part: README.md (nav, first screen, opening, notes 22–24, the four-layer list, the 'Ongoing research' sections including the Chinese-thought one); THE-THEORY-OF-BECOMING.zh.md (the header, 怎样读本文, the whole case 一个情形, 整体一览's start, §6 古文, the heading list); USES-EXAMPLES.zh.md (header, the fishers example, the 天之道/张弓 example, headings); chapter 06 (the thesis, the 所在 and 基与标 blocks, §一, the heading list); LINEAGE.zh.md (header, labels, the thread, the first seven turning-point rows, headings); GLOSSARY.zh.md (header and the root and ethics rows); chapters/README.md; THEORY-GRAPH.md (intro, The spine, start of the edge-kind table); .github/workflows/pages.yml; site/assets/site.css (top). Rendered to PNG and looked at: spine.zh.svg and lineage.zh.svg (the lineage thumbnail was cropped at mid-September). Site: extracted the text of index.html; inspected the nav, links, lang and body classes of ONE-PAGE.zh.html, USES.html, USES.zh.html, LINEAGE.zh.html, the overview zh, review README.zh and 06. Viewing the site in a browser failed (the pane would not open a local file or the localhost server I briefly started and then stopped), so site elegance is judged from the HTML and CSS, not seen. Checked mechanically: the nine example anchors in USES-EXAMPLES.zh.md and ten chapter 06 anchors cited by USES.zh.md all resolve; front file sizes are all under 300 KB; the build commit 6936752bf is not on origin; names of persons or AI products appear on the zh fronts only inside source file paths. Not read: chapters 01–05, 07 and 08, the other review dossiers, connections.html, OPENING.md, and USES.md beyond its links. I relied on the earlier review's scores not at all."
+ },
+ {
+  "lens": "review:first-contact",
+  "scores": [
+   {
+    "q": "Q1. How representable is the project (from where a newcomer lands)",
+    "score": 6,
+    "why": "README.md's first screen (lines 1-25) works on standing: '3 minutes', a one-line definition, one concrete case (the IN1 fishers and the mussel bed, with its failures), the two unasserted premises named, 505 of 536 with Lean receipts (checked against RESULTS.md line 8), 'none of the central results new mathematics', 'No human review yet', and a nav of 14 entries. What the project is stays abstract ('within one relational unfolding'), and why it matters is never said plainly on that screen: the law next to the case is given in house idiom ('its force the premise that a selector selects through just what it reads or needs: those selections, together, reach exactly what couples into it'). The README shows no purpose line like AGENTS.md's 'predict, come to share an understanding and coordinate'. Scrolling on GitHub, a newcomer next meets 60 lines of first-person conviction ('Truth exists': 'in any universe', 'I take it to be the truth, the dharma, the Dao', 'a foundation for AI alignment, the most important matter...'), qualified only in footnotes. After that comes 'Ongoing research and current progress', an internal work log (K1, XL1, R32, `World.withRest_counted`, 'AJ5', 'LA4 Stage B'). MAP.md ('Start here') and ONE-PAGE.md are clear on standing but dense. A newcomer can say how it stands. They struggle to say what it is in plain words, and why it matters.",
+    "to_reach_8": "README.md (via readme_first_screen in _process/research-config.json): add one plain sentence after the definition saying what the account is for and what a reader gets, in the USES.md sense. For example: checked statements of what a reward, market or vote can and cannot see, with every premise named, offered to help people and AI predict, share an understanding and coordinate, none of it new mathematics. Rewrite the 'Beside it, a law...' sentence in plain words: a selection can succeed while what it cannot read is lost, and the laws do not say whether that loss counts (ONE-PAGE.md's centre sentence). README.md (via readme_opening and the render): put a one-line frame directly under '## Truth exists' saying this is the author's conviction, each sentence's standing in its note, and that the first screen and the one page govern. Better, show only the opening's first paragraph and a link, as the site home does. Move 'Ongoing research and current progress' below 'Research and repository', or into a linked page (for example _process/BECOMING-WORKBOARD.md or a STATUS page), leaving a 3-line status summary in its place. ONE-PAGE.md: give one plain-language gloss for each table row's first cell before its standing."
+   },
+   {
+    "q": "Q2. Is there a static website (built, reachable, elegant, faithful)",
+    "score": 7,
+    "why": "Read /Users/ren/tmp/rw/site: 46 files. index.html carries the README first screen plus a 'Ways in' card list with reading times, and has a shared nav. assets/site.css has dark mode, a 600px breakpoint and print styles. A link check of every page (connections.html excepted) found 8,395 hrefs and no missing file or anchor; 4,425 go to GitHub at the pinned commit. Page titles are proper except one. The typography is good (rendered thumbnail of index.html). Faithful: each page is converted from the repository text, and the footer names the commit. Not reachable: .github/workflows/pages.yml is workflow_dispatch only, Pages is not enabled, and neither README.md nor MAP.md links a site. connections.html (4.9 MB) uses a different visual system, has no site header or nav and no link back to Home, and is empty without JavaScript. The footer says 'Built from uncommitted edits on top of commit 6936752bf', so the GitHub links go to a commit that lacks those edits. theories/becoming/OPENING.html is titled 'OPENING.md · The Theory of Becoming'. The home lead gives the opening as 22-28 minutes and its card as 71-92.",
+    "to_reach_8": "The owner's switch: enable Pages (Settings, Pages, Source: GitHub Actions) and dispatch .github/workflows/pages.yml from main, so the footer names a real commit. Then add the site URL to README.md's nav line and first screen (readme_first_screen) and to MAP.md 'Where to start'. tools/research/connection_map.py: emit the site's header/nav (or at least a 'The Theory of Becoming' home link) and a <noscript> summary of the lede and counts. tools/publishing/build_site.py: give OPENING.html a real title ('Truth exists' or 'The opening'), and make the home card's time agree with the lead (say 22-28 for the text and 71-92 with notes in both places). Optionally move 'Start here' to the front of the site nav, after Home."
+   },
+   {
+    "q": "Q3. Are the unification and the connections shown elegantly",
+    "score": 7,
+    "why": "theories/becoming/results/spine.svg (rendered and viewed) sits on the README first screen, on ONE-PAGE.md and on the site home. It draws eight chapter circles sized by results around 'The grammar 41 concepts', with formal-reuse, interpretive and application edges drawn in distinct styles and 'related' (1,420 edges) left undrawn. It shows 'on the grammar k/m' per chapter, the two premises entering chapter 7 as hypotheses, and T1-T8 coloured by outcome. THEORY-GRAPH.md §The spine has a 'What it does not show' paragraph that quotes 08 §7's counts (11 of 117 central declarations derived as cases of the grammar, 45 reach it, 99 at a named distance) plus a full edge-kind table, and ONE-PAGE.md says 'a few are cases of the root, more use its laws in their proofs and most use none'. Edge kinds are kept apart and the extent of unification is stated honestly. It loses elegance and first-contact legibility: the SVG is 1300 px wide with 10.5-11 px text, so on GitHub's column or the site's ~960 px column the text falls to about 7-8 px, and the right column is long T1-T8 paragraphs. Equal-weight spokes from the grammar to every chapter visually suggest a uniform unification the k/m counts deny (05 is 3/28, 06 is 4/10). The '11 derived of 117' figure is not in the picture. The connection map (crosswalk) cannot be viewed on GitHub and is JS-only on the site.",
+    "to_reach_8": "tools/research/spine.py (regenerating spine.svg and spine.zh.svg): move the T1-T8 paragraphs out of the SVG into the caption or table (keep the coloured badges and a one-line key), and raise text to 13 px or more at a 900-1000 px width. Draw each chapter's spoke to the grammar with its weight or opacity set by k/m, and put one line in the picture: '11 of 117 central declarations derived from the grammar; 45 reach it'. README.md and ONE-PAGE.md: add a one-sentence caption under the picture saying what a curve means and how far the unification goes. theories/becoming/results/atlas/map.html and connection_map.py: commit a static SVG or PNG overview of the loom (folders against the account, edge colours by relation) beside CROSSWALK.md, so the connection view is visible on GitHub without a clone."
+   },
+   {
+    "q": "Q4. Is it clear how the whole grew into today's account",
+    "score": 6,
+    "why": "theories/LINEAGE.md (read in part: header, labels, 'One thread', the first 7 table rows, 'Growth in the records', 'What this page rests on') has a picture (theories/lineage.svg, viewed), three evidence labels defined, 48 turning points each with file-and-line evidence, a traced selection-mechanism thread from 2024 to the October 2026 Lean results and LA2's failure, and weekly record counts. Its evidence labelling is strong. But all 48 points are 'public', so the picture's other two labels are empty legend entries and nothing says so. The picture gives numbered dots and axis ticks only: no point titles, no phase names and no tooltips, so it cannot be read without the table. There is no short prose of the phases, such as 2021-23 social design (Metamunity, Wamotopia), 2024 Moloch and the meta-attractor, 2025 formal attractor drafts, September 2026 consolidation into 16 folders, October 2026 the Lean spine, November tests and failures. Reading in full takes 86-112 minutes. MAP.md 'How it got here' gives commit counts and the method of keeping history, not the arc.",
+    "to_reach_8": "theories/becoming/results/data/lineage.json and tools/research/lineage.py: add 4-6 named phases, each with a one-sentence 'what changed' and a date span, drawn as labelled bands in lineage.svg and lineage.zh.svg. Put short titles (or titles on the thread's points) beside the dots in the picture. Add a sentence to the picture and lead noting that all 48 points are currently public. LINEAGE.md: open with a 5-8 sentence narrative of the phases (3 minutes) before the thread, and give that part's reading time in the header. MAP.md 'How it got here' and README.md's caption line under the spine: one sentence of the arc, not only the link."
+   },
+   {
+    "q": "Q5. Can people understand what value it provides",
+    "score": 6,
+    "why": "The plainest value statements sit one click in: ONE-PAGE.md's 'The account's centre [AI reading]: a selection can succeed while what it cannot read is lost, and the laws do not say whether that loss counts', and theories/becoming/USES.md's field table ('Audit a reward, judge or evaluation by what couples into it', with 'What is not claimed' per field). USES-EXAMPLES.md's fishers and LM-judge audit are concrete and honest about standing. The README first screen gives the case and the standings but not the value in a sentence. Its 'Start with... what it is for, and how far' link makes the reader go and find it. The value is also phrased in idiom ('couples into', 'admits', 'widens'), which a newcomer cannot use without the glossary. On the overclaiming side, the first screen and USES are careful. On GitHub, though, the README body's opening asserts 'This is a foundation for AI alignment... I hold that this foundation supplies that too' and 'universal invariants... in any universe'. USES.md says 'A solution to alignment... not claimed', and the reconciliation lives only in footnotes.",
+    "to_reach_8": "readme_first_screen (README.md and the site's index.html): add a 'What it gives you' line of 2-3 plain sentences taken from USES.md's alignment and coordination rows (an audit of what a reward or judge can see; a check of a shared draw by the joint take, not each member's own count; every premise named), with 'none of it applied to an actual system yet'. ONE-PAGE.md: move the 'account's centre' sentence into the 'What it is' paragraph. USES.md: add a 5-line plain summary above the table, before the reader meets 'couples into'. README.md opening: add a short bracketed pointer in the alignment paragraph ('what this does not claim: USES.md') so the conviction and the claim boundary sit together."
+   },
+   {
+    "q": "Q6. Does it show how it can be used across fields",
+    "score": 7,
+    "why": "theories/becoming/USES.md (read in full) has six fields (alignment, people and AI, coordination, human development with 生生, wisdom traditions, the sciences), each with 'What you can do today', 'How it stands' and 'What is not claimed'. Human development opens with '**Nothing claimed** of how a person develops or fares'. USES-EXAMPLES.md has nine worked examples, one or more per field, each headed with its standing. I read the fishers, the LM-judge audit and the valley example; all are at true standing (constructed, AI reading, frozen test partly passed). Chinese editions exist. The cells are dense, multi-clause restatements, roughly 150 words a cell, so the 'do today' column is hard to act on. The examples are mostly constructed rather than practitioner procedures, and no example gives a reusable worksheet or input/output (for example the five audit questions as a fill-in template). Wisdom is Chinese texts only (stated). No field outside these six (education, policy, ecology management) is marked 'nothing claimed'.",
+    "to_reach_8": "theories/becoming/USES.md: shorten each 'What you can do today' cell to one imperative sentence plus a link, and move the standings detail to the examples page. Add a 'Fields not covered' line (for example education, economics, ecology management: nothing claimed). theories/becoming/USES-EXAMPLES.md: turn 'Auditing a language-model judge' into a fill-in checklist (the five questions, what to write for each, what would count against) and add a short filled-in example output. Do the same for the coordination example (inputs hi, lo, c, the output critical mass, what is not claimed). Mirror both in the .zh editions."
+   },
+   {
+    "q": "Q7. Are valuable things easy to see, their connections clear",
+    "score": 7,
+    "why": "README.md's nav reaches One page, Theory, Chapters, Uses, Tests, Graph, Growth, Results, Glossary, Reviewers and Open questions in one click. The same nav repeats atop TESTS.md and the generated pages, and the site's nav is on every page except connections.html. Every Markdown front is far under the ~2 MB render limit (largest: 07-SIGNIFICANCE.md 270 KB, README.md 105 KB, RESULTS.md 175 KB), so they render on GitHub. Site links all resolve. Against: the connection map is not one click from the README, and it is not viewable on GitHub at all (MAP.md says so). The README's body below the first screen is a 60-line conviction plus a work log, so scrolling leads away from the valuable pages rather than toward them. The site nav puts 'Start here' last, and on narrow screens it scrolls horizontally with a hidden scrollbar. TESTS.md's 13-column summary table is wide.",
+    "to_reach_8": "README.md (render): after the first screen, insert a compact 'Ways in' list matching the site home's cards (title, minutes, one line), before '## Truth exists'. Add the connection map (or its committed static image plus CROSSWALK.md) and, once published, the site to the README nav. tools/publishing/build_site.py and site.css: order the nav Home, Start here, One page, Uses, ..., and show an overflow cue (fade or arrow) on narrow screens. connection_map.py: add the site nav to connections.html. TESTS.md: collapse the by-thesis table to the outcome classes that are non-empty, or split it into two narrower tables."
+   }
+  ],
+  "findings": [
+   {
+    "severity": "medium",
+    "where": "README.md, after the first screen ('## Truth exists', lines 27-146, rendered from theories/becoming/OPENING.md)",
+    "problem": "On GitHub, the main landing continues directly into 60 lines of first-person conviction that assert more than the first screen and USES.md allow: 'universal invariants... in any universe, nothing that unfolds can break them', 'I take it to be the truth, the dharma, the Dao', 'This is a foundation for AI alignment... I hold that this foundation supplies that too'. Meanwhile USES.md lists 'A solution to alignment' as not claimed and the first screen says none of the results is new mathematics. The qualifications are only in footnotes 1-24, below the text. A newcomer who scrolls rather than following links may take the conviction for the claim.",
+    "fix": "Under '## Truth exists' add a one-line frame: the author's conviction, each sentence's standing in its note, with the first screen, ONE-PAGE.md and USES.md governing what is claimed. Better, render only the opening's first paragraph plus a link in README.md, as the site home already does, and keep the full text on OPENING.md."
+   },
+   {
+    "severity": "medium",
+    "where": "README.md first screen (readme_first_screen in _process/research-config.json); mirrored in /Users/ren/tmp/rw/site/index.html",
+    "problem": "The screen gives what it is (abstractly) and how it stands (clearly) but never says plainly why it matters or what a reader gets. The one law shown is in house idiom ('its force the premise that a selector selects through just what it reads or needs: those selections, together, reach exactly what couples into it'), and ONE-PAGE.md's plain centre sentence is not on the landing.",
+    "fix": "Add a plain 'What it gives' sentence drawn from USES.md: an audit of what a reward, judge, market or vote can see; a check of a shared draw by the joint take; every premise named; not applied to an actual system yet. Replace the 'Beside it' sentence with ONE-PAGE.md's 'a selection can succeed while what it cannot read is lost, and the laws do not say whether that loss counts'."
+   },
+   {
+    "severity": "medium",
+    "where": "README.md '## Ongoing research and current progress' (lines 148-198)",
+    "problem": "The second section a GitHub visitor reaches is an internal work log: board codes (AJ5, LA4 Stage B, XL1, K1, R32), Lean identifiers (`World.withRest_counted`, `Becoming.OverExchange`) and paragraphs over 1,500 characters. It buries the navigation to the valuable pages and reads as process, not presentation.",
+    "fix": "Move it below 'Research and repository' or to a linked status page, leaving a 3-5 line status summary. Insert a 'Ways in' list matching the site home's cards right after the first screen."
+   },
+   {
+    "severity": "medium",
+    "where": "/Users/ren/tmp/rw/site/connections.html (tools/research/connection_map.py); theories/becoming/results/atlas/map.html",
+    "problem": "The connection map, the only interactive view of how the earlier folders and domains connect, has no site header or nav and no link back to Home. It is empty without JavaScript (no noscript), is 4.9 MB in one file, and uses a visual system different from the rest of the site. On GitHub it shows only as source (MAP.md says to clone).",
+    "fix": "Emit the site header/nav (or a Home link) and a <noscript> lede with the counts. Commit a static SVG overview of the loom beside CROSSWALK.md so GitHub readers see the connections. Align fonts and colours with assets/site.css."
+   },
+   {
+    "severity": "medium",
+    "where": "theories/becoming/results/spine.svg (tools/research/spine.py), shown on README.md, ONE-PAGE.md and the site home",
+    "problem": "It is 1300 px wide with 10.5-11 px text, and a right column holds T1-T8 as long paragraphs, so on GitHub's README column or the site's ~960 px column text renders at about 7-8 px. On phones it is unreadable. Spokes from the grammar to every chapter are drawn alike, though chapters reach the grammar very unevenly (05 is 3/28), and the '11 of 117 derived' extent sits only in THEORY-GRAPH.md's prose.",
+    "fix": "Move the T-paragraphs into the caption or table, keep badges and a one-line key, and raise the type to 13 px or more at the display width. Weight each spoke by k/m, and print the derived/reaches counts in the figure."
+   },
+   {
+    "severity": "medium",
+    "where": "theories/lineage.svg and theories/LINEAGE.md (tools/research/lineage.py, results/data/lineage.json)",
+    "problem": "The growth picture has numbered dots and axis ticks only: no titles, phases or tooltips. A newcomer cannot tell from it what grew when without cross-referencing a 48-row table. The page has no short narrative of phases (the full read is 86-112 minutes). Two of the three legend labels ('private and unpublished', 'AI reconstruction') mark no point, and nothing says so.",
+    "fix": "Add 4-6 named phase bands with a one-line 'what changed' each to the data and the SVG, plus short labels on the thread's points. Open LINEAGE.md with a 5-8 sentence phase narrative and its own reading time. Note that all 48 points are currently public."
+   },
+   {
+    "severity": "medium",
+    "where": "theories/becoming/ONE-PAGE.md ('One case'), THE-THEORY-OF-BECOMING.md ('What a selection reaches'), USES-EXAMPLES.md ('The fishers and the mussel bed')",
+    "problem": "These say 'Told nothing of the bed, they kept it in no season, under any instruction'. The README's first screen says 'under each instruction tried'. 'Any instruction' reads as a claim about every possible instruction, wider than the test supports.",
+    "fix": "Use the README's wording, 'under each instruction tried', in all three pages and their .zh editions."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/ren/tmp/rw/site/index.html (tools/publishing/build_site.py)",
+    "problem": "The lead gives the opening as '22-28 minutes' and the 'Ways in' card gives 'The opening 71-92 minutes', with no explanation of the difference.",
+    "fix": "Use one figure, or say '22-28 minutes, 71-92 with its notes' in both places."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/ren/tmp/rw/site/theories/becoming/OPENING.html",
+    "problem": "The page title is 'OPENING.md · The Theory of Becoming', a file name rather than a name.",
+    "fix": "Title it 'Truth exists' or 'The opening' in build_site.py."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/ren/tmp/rw/site footer (all pages)",
+    "problem": "The footer says 'Built from uncommitted edits on top of commit 6936752bf', and outbound links point at that commit, which lacks those edits (the tree is now at 0e1a15003).",
+    "fix": "Rebuild from a committed tree before review or publishing. The Pages job's --commit $GITHUB_SHA already does this once dispatched."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/ren/tmp/rw/site/assets/site.css and the site nav",
+    "problem": "'Start here' is the last of 13 nav items. On narrow screens the nav scrolls horizontally with its scrollbar hidden, giving no cue that more items exist.",
+    "fix": "Order the nav Home, Start here, One page, Uses, ..., and add an edge fade or arrow when it overflows."
+   },
+   {
+    "severity": "low",
+    "where": ".github/workflows/pages.yml, README.md, MAP.md",
+    "problem": "The site is built but unreachable: Pages is dispatch-only and not enabled, and no front page mentions or links the site.",
+    "fix": "Owner's switch: enable Pages and dispatch from main. Then add the URL to README.md's nav and first screen and to MAP.md 'Where to start'."
+   }
+  ],
+  "read": "What I read: README.md lines 1-25 (the first screen) and 27-240 (the opening's text, Ongoing research, Research and repository, Discovery, Preserved history; the notes 87-146 I did not read), and MAP.md in full. In theories/becoming: ONE-PAGE.md and USES.md in full; from USES-EXAMPLES.md, the header, the fishers, the LM-judge audit and the valley example; the header and 'One case' of THE-THEORY-OF-BECOMING.md; the 'The spine' section and the start of the edge-kind table in results/THEORY-GRAPH.md; the top 20 lines of review/README.md. Also the top of TESTS.md (lead and by-thesis table), the top 25 lines of theories/README.md, the RESULTS.md count line, and the OPENING.md header. From theories/LINEAGE.md: header, labels, thread, rows 1-7, 'Growth in the records' and 'What this page rests on'; I listed the dates and labels of all 48 rows by script, not by reading them. I rendered spine.svg and lineage.svg (lineage thumbnail cropped at the 1 Sep-15 Sep part, so I read its remaining labels from the SVG text) and site/index.html as images and looked at them. I extracted site/index.html as text and read the nav, CSS media rules and page titles. For site/connections.html I read its markup, data keys and script head; it could not be seen rendered (the browser pane refused file://, and the Quick Look thumbnail shows only the header because the script does not run). I ran a static link and anchor check over all 45 other site pages (8,395 links, none broken), plus file sizes against the GitHub render limit, and read .github/workflows/pages.yml. I did not read the chapters, the dossiers, the crosswalk pages, GLOSSARY, OPEN-QUESTIONS, the Chinese editions or the rest of LINEAGE's table. I edited nothing and ran no tests. The earlier review was not consulted for scores."
+ },
+ {
+  "lens": "review:navigation",
+  "scores": [
+   {
+    "q": "Q1 How representable is the project",
+    "score": 6,
+    "why": "README's first screen (read in full) is honest and compact. It gives one sentence on what the account is, the fishers case, the two unasserted premises, start links with reading times, and where it stands: 505/536 Lean receipts, none of the central results new mathematics, mixed tests, no human review. The spine picture follows. Three things let it down. The case and the law sentence are hard to parse for a newcomer ('dies the first month fewer than 70 tons are left'; 'its force the premise that a selector selects through just what it reads or needs'). Nothing says plainly why the account matters. Below the fold the 104 KB README turns into a 2,800-word first-person opening and then an 'Ongoing research' section in internal shorthand (K1, XL1, `World.withRest_counted`, AJ, LA4, MA2/MA4b, D45) that a newcomer cannot read. ONE-PAGE.md (read) is accurate but dense, and its T7 cell is one sentence of about 120 words.",
+    "to_reach_8": "README.md, via readme_first_screen in _process/research-config.json: put the case in ONE-PAGE's clearer wording (50 t/month ends the bed, 30 keeps it at 40% of the catch). Add one plain line saying why it matters (what a selection, such as a reward, a market or a vote, cannot see it cannot keep, and the account states exactly when). Under the first screen, add a short 'Where things stand' box: tests passed/failed, what is open, no human review. README.md 'Ongoing research': move it to a linked page (e.g. _process/PROGRESS.md) or open each goal with one plain sentence and drop the declaration names from the README. ONE-PAGE.md: split the T7 'How it stands' cell into a short standing ('Proved for any type; T7 conjectured; one trained judge broke its bridge') and a link to 02#t7 for the rest."
+   },
+   {
+    "q": "Q2 Static website",
+    "score": 7,
+    "why": "The site at /Users/ren/tmp/rw/site is built: 40 HTML pages, one stylesheet with light and dark tokens, a 16px gutter, a sticky nav and a card home with reading times and 中文 links. I viewed it at 690px and 1280px. Every one of 8,395 hrefs resolves: no internal file or anchor is missing, and 4,425 links go out to GitHub at the build commit. It is faithful because it is generated from the repository's text, and the footer names the source commit. Gaps as built: the nav and the home cards omit Results and Open questions, though both pages are built. connections.html has no nav or link back to the site. The home spine SVG (1300px wide, 10.5–13px fonts) shows at about 900px, so its labels come out near 7px, and it is not linked to a full-size view. Chapter pages of 150–340 KB have no table of contents. One page gives two times for the opening: 22–28 minutes in the hero, 71–92 on its card. This local build's footer reads 'Built from uncommitted edits'. It is not yet reachable: .github/workflows/pages.yml is dispatch-only and waits on the owner.",
+    "to_reach_8": "tools/publishing/build_site.py: add Results and Open questions to the nav and the home 'Ways in' cards (Uses' worked examples too). Inject the site header or a 'Home' link into connections.html. Wrap the home spine in <a href=…spine.svg> and use the existing figure.spine style. Generate an in-page contents list for chapter pages. On the opening card, label the times '22–28 min; with notes 71–92'. What the owner's switch would add: a public URL, so the connection map becomes viewable without a clone. README.md and MAP.md should then link the site ('Read on the site'), and MAP.md's 'open it from a clone' note can point to the site's connections.html."
+   },
+   {
+    "q": "Q3 Unification and connections shown",
+    "score": 7,
+    "why": "The material is good and honest. THEORY-GRAPH.md#the-spine (read) keeps formal-reuse, interpretive, application and related edges apart in the picture and in a full table. It says what the picture does not show, and it quotes 08 §7 on how far unification actually goes: of 117 central declarations, 11 are derived as grammar cases and 99 stand at a named distance. The connection map (viewed on the site) is elegant, legible and labelled 'every thread an AI reading'. Three things fall short. The spine at the size it is shown (README, ONE-PAGE, site home) is too small to read: its legend and T1–T8 notes are dense text inside the SVG. The honest measure of unification (11 of 117 derived) is not in the picture or its caption, only two clicks in. On GitHub the connection map shows only source (MAP.md says to open it from a clone), so the main connections view is out of reach for a GitHub reader until Pages is published.",
+    "to_reach_8": "tools/research/spine.py → spine.svg: drop or shorten the in-figure T1–T8 note block (keep the coloured dots and move the notes to THEORY-GRAPH.md), and raise label font sizes so they read at 800–900px. Add one line to the figure or its caption in README/ONE-PAGE: 'Of 117 central declarations, 11 are derived from the grammar, 6 count below it, the rest stand at a named distance (08 §7).' MAP.md and theories/README.md: once Pages is on, link the published connections.html. Until then, add a static SVG or PNG snapshot of the loom (theories/becoming/results/atlas/) that GitHub renders, linked from MAP.md and the site home card."
+   },
+   {
+    "q": "Q4 How the whole grew",
+    "score": 7,
+    "why": "theories/LINEAGE.md (top, thread, start of the table read; picture viewed) has a picture, three evidence labels (public / private and unpublished / AI reconstruction), one thread (the selection mechanism, 2024 to October 2026) and a numbered table of turning points, each with file-and-line evidence. It is linked from the README first screen and the nav ('Growth'). Weaknesses: lineage.svg is numbered dots with no event names, so it cannot be read without the table, and at page width its text is tiny. The page is 86–112 minutes. No short paragraph tells the growth in plain stages before the quote-heavy thread.",
+    "to_reach_8": "tools/research/lineage.py → lineage.svg: put short titles on 6–8 major turning points in the picture (e.g. 2021 Metamunity, 2024 Moloch as single-value optimisation, 2025 meta-attractor, Sept 2026 sixteen folders, Oct 2026 spine and Lean core, Oct–Nov 2026 frozen tests), and widen the era bands' type. theories/LINEAGE.md: before 'One thread', add a five-to-seven-sentence 'In brief', staged and labelled, so the 8–11-minute part reads without the table."
+   },
+   {
+    "q": "Q5 Value said plainly",
+    "score": 6,
+    "why": "Nothing is overclaimed: the first screen and ONE-PAGE give no new mathematics, no human review and mixed tests. The fishers case appears early. But value is never said in a plain sentence on the landing. The reader is told what the account is and how it stands, not what they gain. The clearest value statement, 'what survives is a ledger of premises, each shown holding in one model and failing in another, and an ethics with scope and order apart', is deep in ONE-PAGE's Evidence paragraph. USES.md (read in full) states value field by field, one click away, but in table cells of 100–200 words.",
+    "to_reach_8": "README.md first screen (readme_first_screen) and ONE-PAGE.md 'What it is': add a plain 'What it gives you today' line with three items: a checked ledger of premises, each shown holding and failing; a way to audit a reward, judge or vote by what it can read; frozen tests with their failures kept. Each item links its USES row. USES.md: open with a three-sentence plain summary above the table."
+   },
+   {
+    "q": "Q6 Uses across fields",
+    "score": 7,
+    "why": "USES.md and USES-EXAMPLES.md (USES read in full, one example read in full, all headings read) cover alignment, people and AI, coordination, human development and 生生, wisdom traditions and the sciences. Each row gives what you can do, how it stands and what is not claimed. Human development says 'Nothing claimed' plainly, and each example opens with its standing in italics. This is close to 8. It is held back by the prose: table cells run 100–200 words and the examples use internal terms (room, couples in, the drain, J1–J4) without a plain takeaway. A practitioner in a field cannot quickly see what they would do differently.",
+    "to_reach_8": "theories/becoming/USES.md: add a short 'In one line' column or a first plain sentence per row, and cut each cell to its standing plus a link. theories/becoming/USES-EXAMPLES.md: open each example with a two-line plain box, 'What you do / what you learn / what it does not tell you', before the law-by-law steps, and gloss room, couples in and drain on first use there (or link GLOSSARY anchors)."
+   },
+   {
+    "q": "Q7 Valuable things easy to see",
+    "score": 6,
+    "why": "The standard nav line on generated pages (README, TESTS, RESULTS, OPEN-QUESTIONS; read) puts 14 destinations one click from the landing. Hand-written fronts (ONE-PAGE, USES, USES-EXAMPLES, GLOSSARY, review README) carry their own short nav lines. MAP.md (read in full) is a good 'Start here' guide. Front pages are 6 KB–270 KB and render on GitHub. The blockers: the 3.78 MB study BECOMING-RENEWAL-READING.md, which does not render on GitHub, is the target of 27 section-anchored links from chapters 02/03/04/05 and the sciences dossier and appears in 411 record pages. These are the literature and field-test sections (MQ1–MQ6, EW1–EW3, CG1), so a reader following evidence hits a non-rendering page with dead anchors, and the site sends them to the same GitHub blob. The connection map is not viewable on GitHub. RESULTS.md is 536 alphabetical rows; its 'Where to look first' sits at the bottom and is about duplicate names, not where to start. TESTS.md's by-thesis table names T1–T7 by number only. The site nav omits Results and Open questions. 'Map' means three things: MAP.md = Start here, the site's Map = the connection map, chapter 02 = The map.",
+    "to_reach_8": "Split _process/research/…/root-foundation/BECOMING-RENEWAL-READING.md into per-section or per-range files under 1 MB with research.py move, keeping the original in history/, and repoint the chapter, dossier and record links. At least the 27 links in theories/becoming/chapters/02–05 and review/SCIENCES.md should go to the experiments/ folders TESTS.md already uses. RESULTS.md (results page renderer): put a 'Start with these' list of 8–12 central results by chapter under the lead, and group or link the register by chapter. TESTS.md (tests_page.py): add a one-line gloss of each thesis in the By-thesis table. Site nav: add Results and Open questions, and rename the site's 'Map' to 'Connections'. After Pages is on, link the site from the README nav line."
+   }
+  ],
+  "findings": [
+   {
+    "severity": "high",
+    "where": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md (3,780,784 bytes), linked from theories/becoming/chapters/02-MAP.md (15 links), 03-KNOWING.md (4), 04-LIFE.md (1), 05-COLLECTIVES.md (5), review/SCIENCES.md (2), RESULTS.md (2) and 411 record pages",
+    "problem": "The file is far over the size GitHub renders: 3.7 MB was checked not to render. The links are section anchors (e.g. #272-the-margin-of-a-regime-in-the-field-mq3, #286-early-warnings…-ew1) on the evidence path for T1, T6 and the CG tests. A reader following 'study §272' or 'the literature' gets a page that does not render and an anchor that goes nowhere. The site's links point to the same GitHub blob.",
+    "fix": "Split the study into section-range files under ~1 MB with research.py move, keeping the original byte-for-byte in history/, and regenerate anchors. Or repoint the chapter and dossier links to the experiments/<test>/README.md folders TESTS.md already cites, keeping the study link as secondary."
+   },
+   {
+    "severity": "medium",
+    "where": "tools/publishing/build_site.py: site nav (every page) and index.html 'Ways in' cards",
+    "problem": "Neither the site nav nor the home cards list Results (RESULTS.html) or Open questions (OPEN-QUESTIONS.html), although both are built and both are in the GitHub nav line. On the site, Open questions is reachable only from MAP, TESTS, RESULTS, CLAIMS and the connection map, so what is open is not one click from the landing.",
+    "fix": "Add 'Results' and 'Open questions' to the site nav and as home cards with reading times, matching the README nav line."
+   },
+   {
+    "severity": "medium",
+    "where": "site/connections.html (generated by tools/research/connection_map.py; 4.96 MB) and MAP.md 'The earlier theory folders'",
+    "problem": "The connection map has no site header and no link back to the home: it is a navigation dead end. On GitHub, map.html shows only source, and MAP.md tells readers to open it from a clone. The best view of the connections is unreachable for a GitHub reader until Pages is published.",
+    "fix": "Have build_site.py inject the site header, or have connection_map.py add a 'The Theory of Becoming · Home' link. Until Pages is on, commit a rendered snapshot (SVG/PNG) of the loom that GitHub shows and link it from MAP.md and theories/README.md. After the switch, link the published page."
+   },
+   {
+    "severity": "medium",
+    "where": "theories/becoming/results/spine.svg (tools/research/spine.py), shown on README.md, ONE-PAGE.md and site index.html",
+    "problem": "The SVG is 1300×1375 with 10.5–13px text and a long in-figure legend and T1–T8 note block. At the width it is shown (~830–960px) its labels come out at about 7px and cannot be read. On the site it is not linked to a full-size view, and the page does not use the figure.spine style the stylesheet defines. The headline picture of the unification cannot be read where it is first met.",
+    "fix": "Move the T1–T8 notes out of the SVG into THEORY-GRAPH.md#the-spine, enlarge node and label type, and keep the legend to edge kinds and test colours. On the site, wrap the image in a link to spine.svg inside <figure class=\"spine\">."
+   },
+   {
+    "severity": "medium",
+    "where": "README.md first screen (readme_first_screen in _process/research-config.json) and theories/becoming/ONE-PAGE.md",
+    "problem": "Value is never stated plainly: the landing says what the account is and how it stands, not what a reader gains. The README's case sentence is harder than ONE-PAGE's version of the same case ('dies the first month fewer than 70 tons are left'). The law sentence beside it ('its force the premise that a selector selects through just what it reads or needs') is opaque to a newcomer.",
+    "fix": "Use ONE-PAGE's clearer case wording on the first screen. Add one plain 'What it gives you today' line (a checked ledger of premises shown holding and failing; an audit of a reward, judge or vote by what it can read; frozen tests with failures kept), each item linked to its USES row."
+   },
+   {
+    "severity": "medium",
+    "where": "README.md 'Ongoing research and current progress' (lines 148–198)",
+    "problem": "After the opening, the README's research section is internal shorthand: K1, XL1, `World.withRest_counted`, `Becoming.ExchangePremises`, AJ, LA4 Stage A/B, MA2/MA4b, D45, 'the uses pages' AI reading'. A newcomer who scrolls the landing page meets a wall they cannot use.",
+    "fix": "Move this section to a linked progress page, or open each goal with one plain sentence and keep Lean names and item codes out of the README."
+   },
+   {
+    "severity": "medium",
+    "where": "RESULTS.md (results renderer)",
+    "problem": "The register is 536 rows in alphabetical order with no grouping by chapter and no starting point. 'Where to look first', at the very bottom, lists duplicate and similar names, not where a reader should start. The lead counts 505 + 20 + 4 and leaves out the 7 superseded rows, so the counts do not add up to 536.",
+    "fix": "Under the lead, add 'Start with these': 8–12 central results by chapter with one-line glosses, plus a by-chapter index. Include 'and 7 superseded' in the count. Rename the bottom section (e.g. 'Duplicates and near-duplicates')."
+   },
+   {
+    "severity": "medium",
+    "where": "theories/becoming/review/README.md 'How to respond'",
+    "problem": "'Return them to whoever sent you the packet' and 'the covering letter gives the terms' assume a sent packet. A specialist who reaches the packet from the README's 'Reviewers' link has no covering letter and no channel to respond.",
+    "fix": "Prepare a line for unsolicited readers (e.g. a GitHub issue template or discussion), to land once the owner decides, since who is sent what is his; list it under decisions pending him."
+   },
+   {
+    "severity": "low",
+    "where": "TESTS.md 'By thesis' table (tests_page.py)",
+    "problem": "T1–T7 appear only as numbers linking to method §9. A reader cannot tell which thesis failed without leaving the page.",
+    "fix": "Add a short gloss column (e.g. 'T1: a condition below a need measured in advance does not return unfed'), quoted from 08 §9."
+   },
+   {
+    "severity": "low",
+    "where": "site index.html and README.md first screen",
+    "problem": "The same page gives two times for the opening: 'The opening … (22–28 minutes)' in the hero and 'The opening 71–92 minutes' on its card. The first is the body (~2,800 words) and the second includes the notes (~6,500 more words), but neither says so. review/README.md gives ONE-PAGE as 'eleven to fifteen minutes' where every other page says 12–15.",
+    "fix": "Label the times ('22–28 minutes; with the notes 71–92'), and take the review README's time from the same timing source as the others."
+   },
+   {
+    "severity": "low",
+    "where": "Site nav label 'Map', MAP.md titled 'Start here', chapter 02 'The map'",
+    "problem": "'Map' means three different things across the site and the repository, so a reader clicking 'Map' on the site gets the connection map, not MAP.md.",
+    "fix": "Call the site item 'Connections', and keep 'Start here' for MAP.md."
+   },
+   {
+    "severity": "low",
+    "where": "site theories/becoming/chapters/*.html",
+    "problem": "Chapter pages of 150–340 KB have no table of contents on the site (GitHub gives one for the Markdown), so a reader cannot jump to a section.",
+    "fix": "Generate a contents list from the h2/h3 headings in build_site.py."
+   },
+   {
+    "severity": "low",
+    "where": "TESTS.md, Mixed row quoting a folder",
+    "problem": "The visible text quotes '…does not survive under the Claude coder.' on a page in the front nav. It is an instrument detail inside a verbatim quote, but it names an AI on a front page.",
+    "fix": "Decide whether verbatim experiment quotes are exempt from the no-names rule, and record that decision. Otherwise quote around it or gloss it as 'a second model coder'."
+   },
+   {
+    "severity": "low",
+    "where": "site footer (this build)",
+    "problem": "The footer says 'Built from uncommitted edits on top of commit 6936752bf', while HEAD is 0e1a15003. That is fine for a local preview, but the build cannot be tied to a commit.",
+    "fix": "Build the reviewed preview from a clean checkout of the content tip. The Pages job's GITHUB_SHA build already does this."
+   }
+  ],
+  "read": "Read in full: README.md first screen (lines 1–25), the opening (27–86), 'Ongoing research' to 'Preserved history' (148–235), MAP.md (all), theories/becoming/USES.md (all), theories/becoming/ONE-PAGE.md (all), theories/becoming/review/README.md (all), theories/README.md (lead and table), .github/workflows/pages.yml. Read in part: TESTS.md (lead, by-thesis table, Failed section, headings), RESULTS.md (lead, first rows, Law families, Where to look first, Discovery), OPEN-QUESTIONS.md (lead, all open targets, Open programme, Beyond the readings), GLOSSARY.md (head), theories/LINEAGE.md (lead, label list, One thread, the first 7 table rows, headings), THEORY-GRAPH.md (lead, The spine, the edge-kinds table head, headings), USES-EXAMPLES.md (headings and 'Auditing a language-model judge' in full), the 07-SIGNIFICANCE.md opening. Checked by script, not read: sizes of every tracked .md/.svg over 700 KB and which front pages link them; a scan of the visible text of 12 front pages for person and AI names (one hit in TESTS); every href in the 40 site pages (8,395 checked: 0 missing files, 0 missing anchors, 4,425 external). Viewed in a browser through a temporary local static server, since stopped: the site home at 690px and 1280px, spine.svg, LINEAGE.html with lineage.svg, and connections.html. I edited nothing in the tree, ran no tests and called no model. Nothing was published. These scores are for what is built now; I did not anchor on the 7 November REVIEW.md scores."
+ },
+ {
+  "lens": "review:uses",
+  "scores": [
+   {
+    "q": "Q1 Representable to a newcomer",
+    "score": 6,
+    "why": "The README's first screen (3 minutes) tells a newcomer what the work is, in one abstract sentence, and how it stands: Lean receipts for 505 of 536 results, none of them new mathematics, frozen tests some passed and some failed, no human review. Its one case, the IN1 fishers, is concrete. It never says plainly why a reader should care. The case paragraph ends in jargon ('its force the premise that a selector selects through just what it reads or needs'). Right below the first screen, the README's body is the first-person opening ('a foundation for AI alignment', 'the truth, the dharma, the Dao'), so a landing reader meets the strongest claims before the measured ones.",
+    "to_reach_8": "README first screen (readme_first_screen in _process/research-config.json): add one plain sentence on why it matters and to whom, e.g. that it gives checked questions to ask of any reward, market or institution about what it cannot see and when it locks, and what more you must assume to call one course better. Cut the jargon from the case's last sentence and link the glossary instead. README: put a short rule or 'end of the three-minute page; what follows is a conviction' line before '## Truth exists'. ONE-PAGE.md: break the T7 'How it stands' cell (about 150 words in one sentence) into two short sentences and send the reader to 02 for the rest."
+   },
+   {
+    "q": "Q2 Static website",
+    "score": 7,
+    "why": "Built at /Users/ren/tmp/rw/site: 40 pages, including the Chinese editions of USES, USES-EXAMPLES, ONE-PAGE, the overview and the lineage. A nav, a home with 'Ways in' cards giving reading times, the spine figure, and a stamp naming its commit. My scan found 0 broken internal links or anchors among 8,395 hrefs. It is faithful: every page is converted from the repository text. The CSS is restrained. But 4,425 of the links leave the site for GitHub, among them COLLECTIVE-DIRECTION.md and the IN1, CG2, LA2 and CMT experiment READMEs that the uses rows depend on. The local build points those links at 6936752bf with 'uncommitted edits', so they may 404 if that commit is not pushed. Nobody can reach the site until the owner flips the switch. I could not view it visually: the browser pane would not open a local file.",
+    "to_reach_8": "Ren's switch: enabling Pages, then dispatching pages.yml, adds the reachability and builds at a pushed $GITHUB_SHA, so the off-site links resolve. _process/research-config.json site.pages: add theories/becoming/COLLECTIVE-DIRECTION.md and experiments/{direction-installation,commons-outrun,self-rewarding-lock,critical-mass-located}/README.md (with DESIGN.md for CMT), so that the uses page's evidence stays on the site. Check it once at phone width, since the four-column uses table relies on horizontal scrolling (site.css: td min-width 7rem, div.table overflow-x)."
+   },
+   {
+    "q": "Q3 Unification and connections shown",
+    "score": 7,
+    "why": "From the spine section of THEORY-GRAPH.md: spine.svg keeps formal-reuse, interpretive and application curves apart, says that 'related' (1,420 edges) is not drawn, and has 'What it shows / What it does not show'. It also quotes 08 §7's honest count: of 117 distinct declarations, eleven are derived and 99 stand at a named distance. There is an edge-kind table for every pair, and a connection map. But the picture's own labels ('on the grammar 22/74', '+43 interpretive') are explained only in the text, and how far the unification goes is said in prose, not in the picture.",
+    "to_reach_8": "tools/research/spine.py / spine.svg: add a legend line inside the figure explaining 'on the grammar a/b' and the three curve styles, plus a one-line caption giving the 11 derived / 1 under hypothesis / 6 counting / 99 at a distance split. THEORY-GRAPH.md: put that split as a four-row table directly under the picture, before the long quotations."
+   },
+   {
+    "q": "Q4 How the whole grew",
+    "score": 7,
+    "why": "From the first 30 lines of LINEAGE.md and the text labels of lineage.svg: there is a picture across 2021 to 8 November 2026, every turning point carries a label (public / private and unpublished / AI reconstruction), and one thread, the selection mechanism, is followed from July 2024 to LA2, with quotations. The picture shows numbers only, so a reader has to go back and forth with the table to follow any story. The thread paragraph is dense with quotations, and the page as a whole takes 86–112 minutes.",
+    "to_reach_8": "tools/research/lineage.py / lineage.svg: put a 3–5 word title on each of the turning points that matter most (at least the thread's points), and colour or shape the markers by their evidence label. LINEAGE.md: open with a five-sentence plain narrative (what came first, what was set aside, what the spine replaced, where it stands), each sentence giving its label, before 'One thread'."
+   },
+   {
+    "q": "Q5 Value said plainly, early, concretely, without overclaiming",
+    "score": 6,
+    "why": "The concrete case comes early and honestly: the fishers, the 70-ton bed, the 50 against 30 tons, 'kept it in no season', 8 of 10 for one model of two. The pages hedge throughout: 'Nothing claimed', standings, 'no person has read it'. But no page says the value in one plain sentence. USES.md opens with a paragraph about standings and premises, not about what the reader gains. The table that is meant to take 'about ten' minutes has cells of 100–200 words, so the value is buried. The nearest thing to a plain value statement is ONE-PAGE's '[AI reading]: a selection can succeed while what it cannot read is lost'. The landing README's opening claims more than USES grants: 'This is a foundation for AI alignment' against USES's 'not a solution to alignment'.",
+    "to_reach_8": "USES.md (and USES.zh.md): before the standings paragraph, add a three-sentence 'What you get' box: the questions you can ask of a selection, the frozen environments you can reuse, and the one thing it never does (rank without C). In the table, keep each 'What you can do' cell to 40 words or fewer and move the counts (248, 5,673, 3,514, 59/38/15/3/3) and the T7 clause into USES-EXAMPLES.md. README first screen: give the value sentence named under Q1, and before '## Truth exists' a note that the opening's claims are convictions, with the measured version in USES."
+   },
+   {
+    "q": "Q6 Uses across fields at true standing",
+    "score": 7,
+    "why": "This is the strongest part. USES has six fields, each with what can be done today, how it stands, and what is not claimed. Human development says '**Nothing claimed**' outright. USES-EXAMPLES gives nine worked examples, each under a standing banner (frozen test, AI reading, constructed). The restatements I checked hold against their homes: the standards-body numbers (2:4, 10 of 30, 90 against 102, 78 and 90; c=2 gives 5 of 30), UE31b's 0.83/0.004/0.05/0.18, IN1's 8 of 10 against 3 of 10, CG2's 32 rather than 2, 07's does-not-show list, 07 §6's six pipelines, A-12, and T7. The gaps: the judge audit is generic, with no worked instance on any one of the six published pipelines 07 §6 reads, and it drops the three published measurements, which are its most concrete support. 'Human development' has no human example (the valley is about 生生). Institutions and governance, ecology and resource management, economics and education get no row and no explicit 'Nothing claimed'. The table row says 'in one trained judge the lock formed' without 'in context', which can be read as formation by training.",
+    "to_reach_8": "USES-EXAMPLES.md 'Auditing a language-model judge': work the five questions through on one of 07 §6's six published pipelines (e.g. AI feedback against written principles), each answer labelled reading or law, and add 07 §6's three published measurements (overoptimization, misled judges, sycophancy) with 'magnitudes the theory did not predict'. USES.md: add rows, or one 'Other fields' row, for institutions and governance (one minimal model, 05 §12; nothing claimed of actual institutions), ecology and resource management (T1's fisheries tests, failed and refused), and economics (relative position zero-sum, the commons), each with 'Nothing claimed' where nothing is. In the human-development row, say that there is no worked example because nothing is claimed. Alignment row: change 'one trained judge' to 'one already-trained model judging in context, formation by training untested'. Mirror all of this in USES.zh.md and USES-EXAMPLES.zh.md."
+   },
+   {
+    "q": "Q7 Valuable things easy to see, connections clear",
+    "score": 7,
+    "why": "The README nav and the site nav both reach Uses, One page, Tests, Graph, Growth and Reviewers in one click. MAP.md points to USES. Every front I checked is well under GitHub's render limit (README 105 KB, RESULTS 175 KB, LINEAGE 101 KB). But on GitHub, ONE-PAGE.md's nav bar, the alignment dossier's ten minutes, review/README.md, THE-THEORY-OF-BECOMING.md and COLLECTIVE-DIRECTION.md never link to USES (grep count 0), so a reader who arrives at any of them cannot find the uses. On the site, the uses rows' supporting pages leave the site.",
+    "to_reach_8": "ONE-PAGE.md and ONE-PAGE.zh.md: add 'Uses' to the nav bar. review/ALIGNMENT.md 'The dossier in ten minutes': link to USES-EXAMPLES.md#auditing-a-language-model-judge and #three-environments-to-reuse-in1-cg2-and-la2 under 'What follows for alignment'. review/README.md and COLLECTIVE-DIRECTION.md: add a line linking to USES.md. On the site, add the allow-list entries named under Q2."
+   }
+  ],
+  "findings": [
+   {
+    "severity": "medium",
+    "where": "theories/becoming/USES.md, alignment row 'How it stands' (and ONE-PAGE.md T7 row, 'in one trained system')",
+    "problem": "'In one trained judge the lock formed' can be read as a lock formed through training. LA2's judge was an already-trained model reading a reference set in context, and the same page says 'none trained a language model'. The qualifier 'read in context, formation by training untested' appears only in USES-EXAMPLES.",
+    "fix": "Say 'in one already-trained model judging in context (formation by training untested)' in the USES row, and the same in USES.zh.md. Consider the same clause in ONE-PAGE's T7 cell."
+   },
+   {
+    "severity": "medium",
+    "where": "theories/becoming/USES.md table (all rows); USES.zh.md",
+    "problem": "Cells run 100–200 words, e.g. the wisdom row's 'What you can do' with ten counts, and the alignment 'How it stands' with the whole T7 clause. The promised ten-minute table reads as a wall, and on GitHub and the site it squeezes into narrow, scrolling columns. Field by field, the value is hard to see.",
+    "fix": "Keep each cell to 40 words or fewer, giving the claim and its standing word (proved, AI reading, conjectured, nothing claimed). Move the counts and clauses into the matching USES-EXAMPLES section and link to it."
+   },
+   {
+    "severity": "medium",
+    "where": "README.md first screen (readme_first_screen) and the top of USES.md",
+    "problem": "No page says the value in one plain sentence. The README gives what it is, abstractly, and how it stands. USES opens with standings and premises. A newcomer is not told what they gain or who it is for.",
+    "fix": "Add a two- or three-sentence 'What you get' at the top of USES (questions to ask of any selection; frozen environments to reuse; it never ranks without C), and one such sentence on the README first screen."
+   },
+   {
+    "severity": "medium",
+    "where": "README.md, '## Truth exists' directly after the first screen",
+    "problem": "The landing page's main body is the first-person opening, which claims more than the uses page grants ('a foundation for AI alignment, the most important matter…', 'the truth, the dharma, the Dao', 'the line between good and evil'). USES says 'not a solution to alignment' and 'no law evaluates'. It is labelled a conviction, but a reader who scrolls meets it before the measured account.",
+    "fix": "Before the opening, add a one-line marker: the three-minute page ends here; what follows is a conviction, and the measured claims are in ONE-PAGE and USES. Optionally link USES's 'What is not claimed' column there."
+   },
+   {
+    "severity": "medium",
+    "where": "_process/research-config.json site.pages; site theories/becoming/USES.html",
+    "problem": "COLLECTIVE-DIRECTION.md and the IN1, CG2, LA2 and CMT experiment READMEs (the evidence the uses rows cite) are not on the site, so those links leave for GitHub. In the local build they point at 6936752bf with 'uncommitted edits' and may 404 if that commit is not pushed.",
+    "fix": "Add those pages to site.pages. The Pages switch, which builds at a pushed $GITHUB_SHA, fixes the commit target."
+   },
+   {
+    "severity": "medium",
+    "where": "theories/becoming/ONE-PAGE.md nav; review/ALIGNMENT.md ten minutes; review/README.md; THE-THEORY-OF-BECOMING.md; COLLECTIVE-DIRECTION.md",
+    "problem": "None of these links to USES or USES-EXAMPLES. On GitHub, a reader who arrives at the one page or the alignment dossier cannot find the uses.",
+    "fix": "Add 'Uses' to ONE-PAGE's nav (both editions). In ALIGNMENT's 'What follows for alignment', link the judge audit and the three environments. Add a line linking USES from review/README.md and COLLECTIVE-DIRECTION.md."
+   },
+   {
+    "severity": "medium",
+    "where": "theories/becoming/USES-EXAMPLES.md 'Auditing a language-model judge'",
+    "problem": "The audit is generic ('Take a pipeline'). It never works the five questions through on one of the six published pipelines that 07 §6 reads. It also leaves out 07 §6's three published measurements (reward overoptimization, judges misled under RLHF, sycophancy, 'in magnitudes the theory did not predict'), the most concrete support for this use. 'Five questions, each a law's' overstates question 1, which is an identification, not a law.",
+    "fix": "Work one named pipeline through the five questions, each answer labelled law or reading. Add the three measurements with their caveat. Say 'four questions a law answers and one identification'."
+   },
+   {
+    "severity": "medium",
+    "where": "theories/becoming/USES.md 'Field by field'",
+    "problem": "Fields readers will look for (institutions and governance, ecology and resource management, economics, education) have no row, so it is not clear whether nothing is claimed for them or they were forgotten. Fisheries sit inside 'The sciences'.",
+    "fix": "Add an 'Other fields' row, or short rows, each with its standing: institutions (one minimal model, 05 §12; no actual institution shown to meet it), resource management (T1's fisheries failures and refused runs), economics (relative position zero-sum, the commons restated), education (Nothing claimed)."
+   },
+   {
+    "severity": "medium",
+    "where": "theories/becoming/review/ALIGNMENT.md 'The dossier in ten minutes'",
+    "problem": "The ten minutes list seven results and three readings with no concrete case. A practitioner gets no example of use until A-18/A-19, or never, since the dossier does not link the uses pages.",
+    "fix": "Add a two-sentence case (the LA2 judge, or IN1's bed) and a link to the judge audit under 'What follows for alignment'."
+   },
+   {
+    "severity": "low",
+    "where": "theories/becoming/USES-EXAMPLES.md 'Three courses for a valley' under 'Human development'",
+    "problem": "The only example under 'Human development' is a valley's choice of courses, not a person's development. That is honest, since nothing is claimed, but a reader may expect a human case.",
+    "fix": "Open the section with one line: no worked example of a person's development exists because nothing is claimed; the valley shows 生生 and widening."
+   },
+   {
+    "severity": "low",
+    "where": "theories/becoming/USES-EXAMPLES.md standards body, 'At an even count'",
+    "problem": "The home (02, r-drawn-shaping-drawn-one-at-a-time) says 'at an even population'. 'Even count' can be read as an even number of shapers.",
+    "fix": "Use the home's wording, or 'with equal numbers of each kind'."
+   },
+   {
+    "severity": "low",
+    "where": "theories/becoming/USES.md wisdom row",
+    "problem": "The row restates 06's atlas count (3,514 judgments, each in one place in its labelled cluster; 1,300 entries, all checked) but drops 06's qualifier: 96 judgments also fall in other clusters, of which 31 have a class differing from the labelled cluster's, unchecked.",
+    "fix": "Add 'of 96 also falling elsewhere, 31 unchecked', or link to 06 for that qualifier."
+   },
+   {
+    "severity": "low",
+    "where": "README.md first screen vs site index.html card",
+    "problem": "The opening is '22–28 minutes' on the README but '71–92 minutes' on the site's card, with no word on what each counts (body only, or with the notes).",
+    "fix": "State both on both pages: body N minutes, with notes M."
+   },
+   {
+    "severity": "low",
+    "where": "theories/becoming/USES.md sciences row; COLLECTIVE-DIRECTION.md header",
+    "problem": "Internal shorthand a reader cannot parse: 'each run refused at the header of the agency's table', 'board item AJ5'.",
+    "fix": "Use plain words, e.g. 'each run stopped because the agency's tables give no measured upper bound', and drop the board item."
+   },
+   {
+    "severity": "low",
+    "where": "theories/becoming/USES-EXAMPLES.md 'Handing over a service'",
+    "problem": "The case links first to a history page (history/ALIGNMENT-DIRECTION.md), although its Lean (`Becoming.Requirement.Handover.direction`, Direction.lean) and its record are live, so a reader may take it as superseded.",
+    "fix": "Link the record (results/records/alignment-direction-under-widening.md) first and the history page as provenance."
+   },
+   {
+    "severity": "low",
+    "where": "theories/lineage.svg; theories/becoming/results/spine.svg",
+    "problem": "The lineage picture shows numbered points only, and the spine's in-picture labels ('on the grammar 22/74', '+43 interpretive') are explained only in the text.",
+    "fix": "Titles on the key points and markers shaped by evidence label in lineage.svg; a legend line in spine.svg."
+   }
+  ],
+  "read": "I read these in full: theories/becoming/USES.md, USES-EXAMPLES.md, ONE-PAGE.md and COLLECTIVE-DIRECTION.md. In review/ALIGNMENT.md I read 'The dossier in ten minutes', 'The tests, as they fell', 'The items' and A-12. In the README I read the first screen and the opening as far as the cancer and capture paragraphs. Of USES.zh.md I read the head and the human-development row, and I compared every number in the English and Chinese uses pages by script (no difference). In LINEAGE.md I read the first 30 lines, the labels and the thread. In THEORY-GRAPH.md I read the spine section and the start of the edge-kind table. I extracted the text labels of lineage.svg and spine.svg, and read .github/workflows/pages.yml and the site note in research-config. On the site I read the home's text and the table CSS (site.css), and I ran a read-only link and anchor scan over all 40 pages (8,395 hrefs, 0 broken internal, 4,425 external). I could not view the site visually: the browser pane would not open local files. I checked these homes for restatements: 07 §6 assessment (r-coupling-closures-of-training-pipelines) and the readings after it; 02 r-shaping-read-by-readers-drawn-from-the-selected and r-drawn-shaping-drawn-one-at-a-time; 02 T7 and its frozen-test paragraph; 07 does-not-show; 07 §4.4's header; IN1's README line on 8 of 10; UE31b's result table; CG2's README on the weight of 32; and 06's counts (248; 5,673/3,514/1,300/2,159). All held except the minor drops noted in the findings. I did not read the chapters in full, A-18/A-19, connections.html, TESTS.md, MAP.md beyond its line on USES, or USES-EXAMPLES.zh.md. Q3 and Q4 are scored on the sections named above only."
+ }
+]

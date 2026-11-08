@@ -548,7 +548,8 @@ class MainTests(AtlasCase):
         self.write_atlas(capture())
         code, result = self.main('--check')
         self.assertEqual((code, result['errors'], result['differs']), (1, [], [atlas.PAGE, atlas.CROSSWALK, atlas.FOLDERS, atlas.DATA,
-                                                                       atlas.FAMILY_PAGES + '/c.md', atlas.FAMILY_PAGES + '/g.md']))
+                                                                       atlas.FAMILY_PAGES + '/c.md', atlas.FAMILY_PAGES + '/g.md',
+                                                                       atlas.CROSSWALK_ZH]))
         pages, _ = atlas.render(RECORDS)
         for path, body in pages.items():
             (self.root / path).parent.mkdir(parents=True, exist_ok=True)

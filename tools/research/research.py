@@ -16,7 +16,7 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
-from tools.research import registry, navigation, completion, lean_catalogue, reading_catalogue, style, paths, moves, indexes, session_map, history_notes, rename_ids, theory_graph, atlas, connection_map, spine, lineage
+from tools.research import registry, navigation, completion, lean_catalogue, reading_catalogue, style, paths, moves, indexes, session_map, history_notes, rename_ids, theory_graph, atlas, connection_map, spine, lineage, zh_fronts
 from tools.research import tests_page  # the tests, failures first (RW)
 
 
@@ -48,6 +48,7 @@ def input_snapshot():
     paths.update((ROOT / config['goal_directory']).glob('*.json'))
     paths.update(atlas.inputs())
     paths.update(tests_page.inputs())
+    paths.update(zh_fronts.inputs())  # the Chinese landing page's template and the pages it times
     for directory in config['record_directories']:
         for path in (ROOT / directory).glob('*.json'):
             paths.add(path)
@@ -301,6 +302,11 @@ def check_or_render(render=False, base=None, ids=None, strict_fresh=False):
     # The connection map (CX): the atlas's correspondences, the graph and the shared laws on one page.
     if atlas_pages:
         outputs.update(connection_map.render(atlas_pages[atlas.DATA], outputs[theory_graph.GRAPH]))
+    # The Chinese landing page (RW): its template filled with reading times and counts by README.md's rule, a page this
+    # render writes timed as it is about to be written.
+    zh_pages, zh_errors = zh_fronts.render(records, outputs)
+    outputs.update(zh_pages)
+    errors += zh_errors
     index_pages, index_errors, reading_drift = index_outputs(render or strict_fresh)
     stale_indexes = []
     errors += index_errors

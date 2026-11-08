@@ -2,9 +2,11 @@
 
 一种说明：在一个关系性的展开之中，任何东西如何出现、持续、变化与消逝，生命、演化与认知如何在其中成形，评价又到什么程度；它不预先假定生灭变化是好的。
 
-[English](THE-THEORY-OF-BECOMING.md) · [首页](../../README.zh.md) · [一页](ONE-PAGE.zh.md) · [用途](USES.zh.md) · [实例](USES-EXAMPLES.zh.md) · **总览** · [八章](chapters/README.md) · [第六章](chapters/06-CLASSICAL-TEXTS.md) · [检验](../../TESTS.md) · [怎样长成](../LINEAGE.zh.md) · [术语表](../../GLOSSARY.zh.md) · [审查包](review/README.zh.md)
+[English](THE-THEORY-OF-BECOMING.md) · [首页](../../README.zh.md) · [一页](ONE-PAGE.zh.md) · [用途](USES.zh.md) · [实例](USES-EXAMPLES.zh.md) · **总览** · [八章（英文）](chapters/README.md) · [第六章](chapters/06-CLASSICAL-TEXTS.md) · [检验（英文）](../../TESTS.md) · [对照表](results/atlas/CROSSWALK.zh.md) · [怎样长成](../LINEAGE.zh.md) · [术语表](../../GLOSSARY.zh.md) · [审查包](review/README.zh.md)
 
-*约五十五分钟至一小时十二分钟读完。*
+*约五十五分钟至一小时十一分钟读完。*
+
+*AI 译自英文版，未经人工审读；义以英文版为准，英文版又以其所链接之处为准。*
 
 ## 怎样读本文
 

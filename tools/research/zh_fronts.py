@@ -2,9 +2,18 @@
 """The Chinese fronts and their one navigation line (RW, 8 November 2026).
 
 Every Chinese front opens with the same line: its English edition, then the Chinese ways in in one order, the page
-itself in bold and not linked. The line is built here, so the hand-written pages, the generated pages (the lineage
-by lineage.py, the Chinese of the graph's spine sections by spine.py, each calling `nav_line`) and the check agree. Chapter 6 is written in Chinese and is linked,
-but it is a chapter, not a front, and carries no such line.
+itself in bold and not linked; a way in whose page is English says so. The line is built here, so the hand-written
+pages, the generated ones (the lineage, the Chinese landing page, the crosswalk's Chinese front, the Chinese of the
+graph's spine sections) and the check agree.
+Chapter 6, written in Chinese and with no English edition, carries the line too, without the English link.
+
+The Chinese landing page, README.zh.md, is generated from _process/navigation/README-ZH.md, its links written from that file as README.md's first screen's
+are: its reading times, its
+counts of results and its navigation line are filled at render (`render`), by the rule README.md's first screen uses,
+so no figure on it is copied by hand. Fields: {{nav}}; {{time:PATH}}, a page's reading time (a page the render writes
+is timed as it is about to be written); {{time:chapters}}, the eight chapters' span in hours; {{time:screen}} and
+{{time:page}}, the page's first screen (above its first `## `) and the whole page; {{stated:PATH}}, the reading time a
+page states of itself in its opening lines; {{count:registered}} and {{count:STATUS}}.
 
 usage: python3 -B tools/research/zh_fronts.py   (prints each front whose line differs, exits 1 if any)
 """
@@ -12,6 +21,7 @@ from __future__ import annotations
 
 from pathlib import Path
 import posixpath
+import re
 import sys
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -22,9 +32,10 @@ WAYS = (('首页', 'README.zh.md'),
         ('用途', 'theories/becoming/USES.zh.md'),
         ('实例', 'theories/becoming/USES-EXAMPLES.zh.md'),
         ('总览', 'theories/becoming/THE-THEORY-OF-BECOMING.zh.md'),
-        ('八章', 'theories/becoming/chapters/README.md'),
+        ('八章（英文）', 'theories/becoming/chapters/README.md'),
         ('第六章', 'theories/becoming/chapters/06-CLASSICAL-TEXTS.md'),
-        ('检验', 'TESTS.md'),
+        ('检验（英文）', 'TESTS.md'),
+        ('对照表', 'theories/becoming/results/atlas/CROSSWALK.zh.md'),
         ('怎样长成', 'theories/LINEAGE.zh.md'),
         ('术语表', 'GLOSSARY.zh.md'),
         ('审查包', 'theories/becoming/review/README.zh.md'))
@@ -37,10 +48,14 @@ FRONTS = {'README.zh.md': 'README.md',
           'theories/LINEAGE.zh.md': 'theories/LINEAGE.md',
           'theories/becoming/results/THEORY-GRAPH.zh.md': 'theories/becoming/results/THEORY-GRAPH.md',
           'GLOSSARY.zh.md': 'GLOSSARY.md',
-          'theories/becoming/review/README.zh.md': 'theories/becoming/review/README.md'}
-# Written by hand; the lineage and the graph's spine sections are generated, and their generators emit the line.
-GENERATED = ('theories/LINEAGE.zh.md', 'theories/becoming/results/THEORY-GRAPH.zh.md')
-HAND_WRITTEN = tuple(p for p in FRONTS if p not in GENERATED)
+          'theories/becoming/review/README.zh.md': 'theories/becoming/review/README.md',
+          'theories/becoming/results/atlas/CROSSWALK.zh.md': 'theories/becoming/results/atlas/CROSSWALK.md',
+          'theories/becoming/chapters/06-CLASSICAL-TEXTS.md': None}
+# Generated, each by its generator, which takes the line from here.
+GENERATED_FRONTS = ('theories/LINEAGE.zh.md', 'README.zh.md', 'theories/becoming/results/atlas/CROSSWALK.zh.md',
+                    'theories/becoming/results/THEORY-GRAPH.zh.md')
+# Written by hand.
+HAND_WRITTEN = tuple(p for p in FRONTS if p not in GENERATED_FRONTS)
 
 
 def _link(label: str, target: str, page: str) -> str:
@@ -51,7 +66,7 @@ def nav_line(page: str) -> str:
     """The line for a front: [English] · then each way in, the page itself bold and not linked."""
     if page not in FRONTS:
         raise KeyError(f'not a Chinese front: {page}')
-    items = [_link('English', FRONTS[page], page)]
+    items = [_link('English', FRONTS[page], page)] if FRONTS[page] else []
     items += [f'**{label}**' if target == page else _link(label, target, page) for label, target in WAYS]
     return ' · '.join(items)
 
@@ -66,12 +81,127 @@ def current(page: str, root: Path = ROOT) -> str | None:
     if not path.is_file():
         return None
     lines = path.read_text(encoding='utf-8').split('\n')[:OPENING]
-    return next((line for line in lines if line.startswith('[English](')), None)
+    first = '[English](' if FRONTS.get(page) else f'[{WAYS[0][0]}]('
+    return next((line for line in lines if line.startswith(first)), None)
 
 
 def problems(pages=HAND_WRITTEN, root: Path = ROOT) -> list[str]:
     """Each front whose line is missing or differs from `nav_line`."""
     return [f'{page}: its navigation line is not the Chinese fronts\' line' for page in pages if current(page, root) != nav_line(page)]
+
+
+# --- the Chinese landing page, generated ----------------------------------------------------------------------------
+
+TEMPLATE = '_process/navigation/README-ZH.md'
+PAGE = 'README.zh.md'
+GENERATED = ('<!-- Generated by tools/research/research.py render (tools/research/zh_fronts.py) from _process/navigation/README-ZH.md; '
+             'edit that file, not this page. -->')
+FIELD = re.compile(r'\{\{([a-z]+)(?::([^}]*))?\}\}')
+CHAPTERS = tuple(f'theories/becoming/chapters/{n}' for n in ('01-ROOT.md', '02-MAP.md', '03-KNOWING.md', '04-LIFE.md', '05-COLLECTIVES.md',
+                                                                 '06-CLASSICAL-TEXTS.md', '07-SIGNIFICANCE.md', '08-METHOD.md'))
+STATED = re.compile(r'^\*[^*\n]*分钟[^*\n]*\*$', re.M)
+
+
+def zh_time(text: str) -> str:
+    """A reading time in Chinese, by README.md's rule: '11–14 分钟', or '1 分钟'."""
+    from tools.research import navigation
+    t = navigation.reading_time(text)
+    return '1 分钟' if t == 'a minute' else t.replace(' minutes', ' 分钟')
+
+
+def settle(timed) -> str:
+    """A page's time of itself, by README.md's rule: `timed(t)` is the page's time with `t` written in; iterate until a
+    value repeats and take the longer of the cycle."""
+    from tools.research import navigation
+    t, seen = timed(''), []
+    while t not in seen:
+        seen.append(t)
+        t = timed(t)
+    return max(seen[seen.index(t):], key=navigation.span)
+
+
+def _hours(minutes: float) -> str:
+    h = round(minutes / 30) / 2
+    return f'{h:g}'
+
+
+def inputs(root: Path = ROOT) -> list[Path]:
+    """The files the landing page reads, for the render's input snapshot: its template and the pages it times."""
+    template = root / TEMPLATE
+    if not template.is_file():
+        return []
+    named = {arg for kind, arg in FIELD.findall(template.read_text(encoding='utf-8')) if kind in ('time', 'stated') and arg.endswith('.md')}
+
+    def hand_written(p):  # a page the render writes is no input of it: it is timed as the render writes it
+        return p.is_file() and '<!-- Generated by ' not in p.read_text(encoding='utf-8')[:400]
+    return sorted({template} | {root / p for p in named | set(CHAPTERS) if hand_written(root / p)})
+
+
+def render(records: list, outputs: dict, root: Path = ROOT) -> tuple[dict, list[str]]:
+    """(pages, errors): README.zh.md from its template, every field filled; a page the render writes is read as it is
+    about to be written. No page where a field is unknown, malformed or names a missing page."""
+    from tools.research import navigation
+    template = root / TEMPLATE
+    if not template.is_file():
+        return {}, [f'{TEMPLATE} is missing']
+    errors, stated = [], {}
+
+    def text_of(path):
+        if path in outputs:
+            return outputs[path]
+        p = (root / path).resolve()
+        if Path(root).resolve() not in p.parents or not p.is_file():
+            errors.append(f'{TEMPLATE} names a missing page: {path}')
+            return ''
+        text = p.read_text(encoding='utf-8')
+        if '<!-- Generated by ' in text[:400]:  # its copy on disk is the last render's, as README.md's rule says
+            errors.append(f'{TEMPLATE} times a page the render writes after this one: {path}')
+            return ''
+        return text
+
+    def fill(m):
+        kind, arg = m.group(1), m.group(2) or ''
+        if kind == 'nav':
+            return m.group(0)  # filled after the links are adapted: it is written from the page
+        if kind == 'count':
+            if arg == 'registered':
+                return str(len(records))
+            if arg not in navigation.STATUS_TEXT:
+                errors.append(f'{TEMPLATE} names an unknown status: {arg}')
+                return m.group(0)
+            return str(sum(r['status'] == arg for r in records))
+        if kind == 'time' and arg in ('screen', 'page'):
+            return m.group(0)
+        if kind == 'time' and arg == 'chapters':
+            spans = [navigation.span(navigation.reading_time(text_of(c))) for c in CHAPTERS]
+            return f'{_hours(min(lo for _, lo in spans))}–{_hours(max(hi for hi, _ in spans))} 小时'
+        if kind == 'time':
+            return zh_time(text_of(arg))
+        if kind == 'stated':
+            found = STATED.search('\n'.join(text_of(arg).split('\n')[:OPENING]))
+            if not found:
+                errors.append(f'{arg} states no reading time in its opening lines')
+                return m.group(0)
+            stated[m.group(0)] = found.group(0).strip('*').rstrip('。').replace('|', '\\|')
+            return m.group(0)  # filled after the links are adapted
+        errors.append(f'{TEMPLATE} has an unknown field: {m.group(0)}')
+        return m.group(0)
+
+    body = re.sub(r'\A\s*<!--.*?-->\s*', '', template.read_text(encoding='utf-8'), count=1, flags=re.S)  # the template's own note
+    body = navigation.adapt_links(FIELD.sub(fill, body), TEMPLATE, PAGE)  # its links are written from the template, as README.md's
+    body = body.replace('{{nav}}', nav_line(PAGE))
+    for field, value in stated.items():
+        body = body.replace(field, value)
+    body = GENERATED + '\n\n' + body.lstrip('\n')
+    # The page's own times, each by README.md's rule; the screen's first, then the page's with it in place.
+    screen_time = settle(lambda t: zh_time(body.replace('{{time:screen}}', t).replace('{{time:page}}', '').split('\n## ', 1)[0]))
+    body = body.replace('{{time:screen}}', screen_time)
+    body = body.replace('{{time:page}}', settle(lambda t: zh_time(body.replace('{{time:page}}', t))))
+    if errors:
+        return {}, ['zh fronts: ' + e for e in errors]
+    if '{{' in body:
+        return {}, [f'zh fronts: {TEMPLATE} has a malformed field: ' + body.split('{{', 1)[1][:40]]
+    return {PAGE: body}, []
 
 
 if __name__ == '__main__':

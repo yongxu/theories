@@ -268,9 +268,12 @@
       "theories/becoming/results/records/*.md",
       "experiments/*/README.md",
       "experiments/critical-mass-located/DESIGN.md",
-      "experiments/reform-events/HOLD.md"
+      "experiments/reform-events/HOLD.md",
+      "theories/becoming/results/atlas/CROSSWALK.md",
+      "theories/becoming/results/atlas/crosswalk/*.md"
     ],
     "assets": [
+      "theories/becoming/results/atlas/connections.svg",
       "theories/becoming/results/spine.svg",
       "theories/becoming/results/spine.zh.svg",
       "theories/lineage.svg",
