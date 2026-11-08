@@ -218,7 +218,7 @@
     }
   },
   "site": {
-    "note": "The reader's site (tools/publishing/build_site.py): pages is the allow-list, nothing else is published; a path the push screen keeps private, or under sources/, is refused. nav and ways_in are AI-written navigation and name only pages listed here. The Pages job (.github/workflows/pages.yml) runs only when dispatched; enabling Pages is Ren's. With site.map on, the connection map is written as connections.html by connection_map's site mode.",
+    "note": "The reader's site (tools/publishing/build_site.py): pages is the allow-list, nothing else is published; a path the push screen keeps private, or under sources/, is refused. nav and ways_in are AI-written navigation and name only pages listed here. The Pages job (.github/workflows/pages.yml) runs only when dispatched; enabling Pages is Ren's. With site.map on, the connection map is written as connections.html by connection_map's site mode. A card's time says what it is of; its fields are computed by the builder (card_time). chapters get contents and previous and next links. rewrites change the site's text only: two experiment READMEs print a local path and review receipts bind their hash, so they are redacted at build; words true only off the site are dropped there; the Chinese crosswalk, a generated page, is given a link to the map under its title. The opening's card times the text README's first screen times as {{time:opening}} ({body}), so the two agree.",
     "repository": "yongxu/theories",
     "title": "The Theory of Becoming",
     "description": "One account of how things form, persist, change and end, with Lean-checked models and frozen tests; its ethics rests on two unasserted premises: the continuation condition (scope) and C, widening what can form is better (order).",
@@ -245,6 +245,7 @@
       "theories/becoming/chapters/08-METHOD.md",
       "theories/becoming/chapters/CLAIMS.md",
       "theories/becoming/results/THEORY-GRAPH.md",
+      "theories/becoming/results/THEORY-GRAPH.zh.md",
       "RESULTS.md",
       "experiments/README.md",
       "GLOSSARY.md",
@@ -270,7 +271,36 @@
       "experiments/critical-mass-located/DESIGN.md",
       "experiments/reform-events/HOLD.md",
       "theories/becoming/results/atlas/CROSSWALK.md",
+      "theories/becoming/results/atlas/CROSSWALK.zh.md",
       "theories/becoming/results/atlas/crosswalk/*.md"
+    ],
+    "chapters": {
+      "pages": "theories/becoming/chapters/0*.md",
+      "index": "theories/becoming/chapters/README.md"
+    },
+    "rewrites": [
+      {
+        "page": "experiments/motor-learning-cost/README.md",
+        "pattern": "PYTHONPATH=/tmp/\\S+ /Users/\\S+/python3",
+        "to": "PYTHONPATH=<the run's dependency folder> <the run's Python>"
+      },
+      {
+        "page": "experiments/recipient-value-learning/README.md",
+        "pattern": "PYTHONPATH=/tmp/\\S+ /Users/\\S+/python3",
+        "to": "PYTHONPATH=<the run's dependency folder> <the run's Python>"
+      },
+      {
+        "pattern": " on the reader[’']s site, once it is published, or from a clone; GitHub shows it only as source"
+      },
+      {
+        "pattern": ": once the reader[’']s site is published, open it there, or from a clone of the repository, since GitHub shows only its source"
+      },
+      {
+        "page": "theories/becoming/results/atlas/CROSSWALK.zh.md",
+        "pattern": "(?m)^# .*$",
+        "to": "\\g<0>\n\n[连接图（英文）](map.html)",
+        "count": 1
+      }
     ],
     "assets": [
       "theories/becoming/results/atlas/connections.svg",
@@ -286,12 +316,16 @@
     },
     "nav": [
       [
-        "index.html",
-        "Home"
-      ],
-      [
         "theories/becoming/ONE-PAGE.md",
         "One page"
+      ],
+      [
+        "theories/becoming/THE-THEORY-OF-BECOMING.md",
+        "Overview"
+      ],
+      [
+        "theories/becoming/chapters/README.md",
+        "Chapters"
       ],
       [
         "theories/becoming/USES.md",
@@ -300,6 +334,10 @@
       [
         "TESTS.md",
         "Tests"
+      ],
+      [
+        "RESULTS.md",
+        "Results"
       ],
       [
         "theories/becoming/results/THEORY-GRAPH.md",
@@ -348,26 +386,28 @@
         "path": "theories/becoming/chapters/README.md",
         "label": "The eight chapters",
         "text": "Each result stated once, in its home section, with a mark of its record's status.",
+        "time": "the index {time}; the chapters {all:theories/becoming/chapters/0*.md}",
         "group": "Read"
       },
       {
         "path": "theories/becoming/OPENING.md",
         "label": "The opening",
         "text": "A first-person conviction, with a note on how far each sentence is proved.",
-        "time_until": "[^law]:",
-        "time_note": "without its notes",
+        "time": "{body}, without its notes",
         "group": "Read"
       },
       {
         "path": "TESTS.md",
         "label": "The tests",
         "text": "Every test in the experiments by how it came out, the failures first, with when each was frozen and run.",
+        "time": "the lead and the summary by thesis {said:summary by thesis: (.+?) to read}; every row {said:every row: (.+?)\\.}",
         "group": "Check"
       },
       {
         "path": "RESULTS.md",
         "label": "The register of results",
         "text": "Every registered result with its status and its record, which names its premises, evidence and boundary.",
+        "time": "a register to look things up in; read through, {whole}",
         "group": "Check"
       },
       {
@@ -380,6 +420,7 @@
         "path": "MAP.md#check-the-proofs-yourself",
         "label": "Check the proofs",
         "text": "Build the Lean package and read its axiom report yourself.",
+        "time": "{time} to read the steps; a fresh run takes a while",
         "group": "Check"
       },
       {
@@ -387,12 +428,14 @@
         "zh": "theories/becoming/review/README.zh.md",
         "label": "For reviewers",
         "text": "Dossiers for logic, philosophy, alignment, the sciences, the classical texts and Buddhist thought.",
+        "time": "the index {time}",
         "group": "Check"
       },
       {
         "path": "theories/becoming/results/THEORY-GRAPH.md",
         "label": "The theory graph",
         "text": "Results, Lean modules, sections and texts, with their edges kept apart by kind.",
+        "time": "the spine and its tables {said:its tables in (.+?)\\.}; in full {said:(\\S+ minutes) to read in full}",
         "group": "See"
       },
       {
@@ -407,7 +450,7 @@
         "label": "How it grew",
         "text": "From the writings of 2021 to the account today: turning points, each labelled by what states it, gathered by AI readers, and one thread followed through.",
         "time_until": "## Turning points",
-        "time_note": "the picture, the labels and the thread",
+        "time_note": "the picture, the labels and the threads",
         "group": "See"
       },
       {
@@ -421,6 +464,7 @@
         "path": "theories/README.md",
         "label": "The earlier folders",
         "text": "Sixteen folders written before the live account, each with what became of its claims.",
+        "time": "the index {time}",
         "group": "See"
       },
       {
@@ -459,6 +503,10 @@
       [
         "theories/LINEAGE.zh.md",
         "怎样长成"
+      ],
+      [
+        "theories/becoming/results/atlas/CROSSWALK.zh.md",
+        "对照表"
       ],
       [
         "GLOSSARY.zh.md",

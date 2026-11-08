@@ -50,6 +50,7 @@ def input_snapshot():
     paths.update(tests_page.inputs())
     paths.update(zh_fronts.inputs())  # the Chinese landing page's template and the pages it times
     paths.update(mirror.inputs())  # the studies GitHub cannot render, mirrored a section to a page
+    paths.update(navigation.render_inputs())  # the chapters RESULTS.md groups by and OPEN-QUESTIONS.md quotes, and the one page RESULTS.md quotes
     for directory in config['record_directories']:
         for path in (ROOT / directory).glob('*.json'):
             paths.add(path)
@@ -203,6 +204,81 @@ def check_links(outputs, planned=()):
     return errors
 
 
+# Live links to Markdown GitHub cannot render. Links the tree held at this commit predate the check (RW, 8 November 2026).
+OVERSIZED_SINCE = '196b32e21'
+
+
+def text_at(root, revision, path):
+    """A file's text at a commit, or '' where the commit does not have it."""
+    out = subprocess.run(['git', 'show', f'{revision}:{path}'], cwd=root, capture_output=True)
+    return out.stdout.decode(errors='replace') if out.returncode == 0 else ''
+
+
+def link_destination(referrer, raw):
+    """The repository file a raw link target names, or None."""
+    parts = moves.split_target(raw)
+    return None if parts is None else referrer if not parts[0] else moves.resolve(referrer, parts[0])
+
+
+def live_markdown(root, only=None):
+    classifier = paths.Classifier(root=root)
+    return [f for f in moves.inventory(root) if f.endswith('.md') and classifier.role(f) == 'live'
+            and (not only or any(f == p.rstrip('/') or f.startswith(p.rstrip('/') + '/') for p in only))]
+
+
+def oversized_links(root=ROOT, only=None, since=OVERSIZED_SINCE, limit=mirror.PAGE_LIMIT):
+    """Live links to a Markdown file over `limit` bytes that the referring file did not have at `since`: GitHub renders no such
+    file. `{'oversized': [paths], 'held_since': n, 'new': [{file, line, target, bytes, mirror}]}`."""
+    big = {f: (root / f).stat().st_size for f in moves.inventory(root) if f.endswith('.md') and (root / f).is_file() and (root / f).stat().st_size > limit}
+    names = [f.rsplit('/', 1)[-1] for f in big]
+    new, held = [], 0
+    for referrer in live_markdown(root, only) if big else []:
+        text = (root / referrer).read_text(errors='replace')
+        if not any(name in text for name in names):
+            continue
+        hits = [(start, raw, dest) for start, _, raw in moves.links(text) if (dest := link_destination(referrer, raw)) in big and dest != referrer]
+        known = {raw for _, _, raw in moves.links(text_at(root, since, referrer))} if hits else set()
+        for start, raw, dest in hits:
+            if raw in known:
+                held += 1
+            else:
+                new.append({'file': referrer, 'line': moves.line_of(text, start), 'target': raw, 'bytes': big[dest], 'mirrored': dest in mirror.folders()})
+    return {'oversized': sorted(big), 'held_since': held, 'new': new,
+            'scope': f'Live Markdown linking Markdown over {limit:,} bytes, links its file already held at {since} set apart. '
+                     'A link to a mirrored study: repoint it with research.py repoint-mirrored.'}
+
+
+def site_markdown(root=ROOT):
+    """The Markdown pages the reader's site publishes, as its builder expands them."""
+    from tools.publishing import build_site
+    config = navigation.read(navigation.CONFIG).get('site') or {}
+    return [p for p in build_site.expand_pages(config.get('pages', []), build_site.tracked_files(root)) if p.endswith('.md')]
+
+
+def repoint_mirrored(only=None, apply=False, root=ROOT):
+    """Each live link from a site page (or from `only`) to a mirrored study, sent to the generated mirror page holding its anchor,
+    or to the mirror's index where it names none. A dry run unless `apply`. A study never repoints itself or its edition."""
+    mirrors = mirror.Mirror()
+    live = set(live_markdown(root))
+    chosen = [p for p in (only or site_markdown(root)) if p in live and p not in mirrors.folders]
+    changed, errors = [], []
+    for referrer in chosen:
+        text = (root / referrer).read_text()
+        page = mirror.Page(referrer, referrer, 0, 0, 0, 0, None, '')
+        out, last = [], 0
+        for start, end, raw in moves.links(text):
+            if link_destination(referrer, raw) not in mirrors.folders:
+                continue
+            target = mirrors.target(page, raw, errors)
+            if target != raw:
+                changed.append({'file': referrer, 'line': moves.line_of(text, start), 'from': raw, 'to': target})
+                out += [text[last:start], target]
+                last = end
+        if out and apply:
+            (root / referrer).write_text(''.join(out + [text[last:]]))
+    return {'applied': apply, 'pages': len({c['file'] for c in changed}), 'links': len(changed), 'errors': errors, 'list': changed}
+
+
 SECRET_PATTERNS = {
     'openrouter': r'sk-or-v1-[0-9a-f]{64}',
     'anthropic': r'sk-ant-[A-Za-z0-9_-]{20,}',
@@ -270,6 +346,7 @@ def check_or_render(render=False, base=None, ids=None, strict_fresh=False):
     records, errors = registry.load_records()
     findings, drift = registry.validate(records)
     errors += findings + registry.orphan_pages(records) + navigation.validate_goals(records) + navigation.validate_history()
+    errors += navigation.validate_fronts(records)
     changed = changed_paths(base) if base else None
     selected = set(ids) if ids else registry.affected_ids(records, changed) if base else {r['id'] for r in records}
     errors += ['unknown result id: ' + x for x in selected - {r['id'] for r in records}]
@@ -451,6 +528,9 @@ def main():
     p.add_argument('--paths', nargs='+', help='limit to these files or directories')
     p.add_argument('--live-only', action='store_true', help='leave generated pages out')
     p.add_argument('--limit', type=int, default=200, help='broken links listed (counts are always complete)')
+    p = sub.add_parser('repoint-mirrored', help='Send live links from site pages to a study GitHub cannot render to its generated mirror (dry run unless --apply)')
+    p.add_argument('--paths', nargs='+', help='these files instead of the site pages')
+    p.add_argument('--apply', action='store_true')
     sub.add_parser('secrets', help='Scan tracked files for credential patterns (hashes only)')
     p = sub.add_parser('preserve-view', help='After reading and reconciling added prose, preserve it before rendering')
     p.add_argument('path')
@@ -476,10 +556,15 @@ def main():
         code = 1 if result.get('conflicts') or result.get('verification_errors') else 0
     elif args.command == 'links':
         result = moves.check_links(ROOT, args.paths, include_generated=not args.live_only)
-        code = 1 if result['broken'] else 0
+        oversized = oversized_links(ROOT, args.paths)
+        result['oversized_links'] = oversized
+        code = 1 if result['broken'] or oversized['new'] else 0
         if args.limit >= 0 and len(result['list']) > args.limit:
             result['list_truncated_to'] = args.limit
             result['list'] = result['list'][:args.limit]
+    elif args.command == 'repoint-mirrored':
+        result = repoint_mirrored(args.paths, args.apply)
+        code = 1 if result['errors'] else 0
     elif args.command == 'secrets':
         result = secrets()
         code = 1 if result['findings'] else 0

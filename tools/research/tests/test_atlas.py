@@ -21,7 +21,7 @@ from urllib.parse import unquote
 ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
-from tools.research import atlas, paths, reading_catalogue, registry  # noqa: E402
+from tools.research import atlas, navigation, paths, reading_catalogue, registry  # noqa: E402
 
 CONFIG = {'record_directories': ['theories/becoming/results/records']}
 CHAPTER = 'theories/becoming/chapters/02-MAP.md'
@@ -505,6 +505,11 @@ class CorrespondenceTests(AtlasCase):
         page = atlas.folders_page(built)
         self.assertIn('(early/README.md)', page)
         self.assertNotIn('Greek thought', page)
+
+    def test_the_index_carries_the_navigation_line_under_its_title(self):
+        built = atlas.build({'dynamics': [], 'correspondences': [], 'correspondence_groups': [group()]}, VOCABULARY, RECORDS)
+        lines = atlas.folders_page(built).split('\n')
+        self.assertEqual(lines[lines.index('# The earlier theory folders') + 2], navigation.nav_line(atlas.FOLDERS))
 
     def test_an_earlier_folder_group_names_its_folder(self):
         self.assertTrue(any('cxg-<its folder>' in e for e in self.problems(reading(group='cxg-gone'), groups=[group(id='cxg-gone')])))

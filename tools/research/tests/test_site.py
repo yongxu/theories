@@ -3,13 +3,16 @@ allow-list is published and the push screen's private paths are refused; a link 
 its HTML, a link to any other tracked file goes to GitHub at the build commit, a link to an untracked path is shown as
 text; every link between pages of the site resolves, anchor included, or the build fails; a result's anchor carries its
 record's status; raw HTML keeps no handler or script URL; and the repository's own site configuration names only pages
-that exist and may be published."""
+that exist and may be published. Also what a reader meets: a card's time says what it is of, every result anchor has its
+mark, chapters have contents and neighbours, a generated page shows one navigation, wide tables widen and stack, the search,
+the 404 page and the favicon are written, the home's order, and that nothing written prints a local path."""
 import importlib.util
 import json
 import os
 from pathlib import Path
 import re
 import shutil
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -38,6 +41,46 @@ SITE = {'repository': 'o/r', 'title': 'T', 'description': 'd',
         'aliases': {'README.md#truth-exists': 'a/OPENING.md#truth-exists'},
         'nav': [['index.html', 'Home'], ['a/ONE.md', 'One page']],
         'ways_in': [{'path': 'a/ONE.md', 'label': 'One page', 'text': 'What it claims.'}]}
+# The search script on a stand-in for the page (node, argv: the script and search.json), so that a hit can be clicked.
+SEARCH_STAGE = r"""
+const fs = require('fs');
+let focused = null;
+const node = tag => ({tagName: tag.toUpperCase(), attrs: {}, on: {}, kids: [], hidden: false, value: '', text: '',
+  get textContent() { return this.text; }, set textContent(v) { this.text = v; if (v === '') { this.kids = []; } },
+  setAttribute(k, v) { this.attrs[k] = v; }, getAttribute(k) { return this.attrs[k]; },
+  appendChild(c) { c.up = this; this.kids.push(c); return c; },
+  addEventListener(t, f) { (this.on[t] = this.on[t] || []).push(f); },
+  contains(o) { for (; o; o = o.up) { if (o === this) { return true; } } return false; },
+  closest(s) { for (let o = this; o; o = o.up) { if (o.tagName === s.toUpperCase()) { return o; } } return null; },
+  focus() { focused = this; }});
+const body = node('body'), button = node('button'), page = node('html');
+Object.assign(page, {currentScript: {getAttribute: () => ''}, querySelector: () => button, documentElement: {lang: 'en'}, createElement: node, body});
+const fire = (el, type, extra) => {
+  const ev = Object.assign({target: el, key: ''}, extra);
+  for (let o = el; o; o = o.up) { (o.on[type] || []).forEach(f => f(ev)); }
+  (page.on[type] || []).forEach(f => f(ev));
+};
+const data = JSON.parse(fs.readFileSync(process.argv[2], 'utf8'));
+globalThis.document = page;
+globalThis.window = {fetch: () => Promise.resolve({ok: true, json: () => Promise.resolve(data)})};
+globalThis.fetch = window.fetch;
+new Function(fs.readFileSync(process.argv[1], 'utf8'))();
+(async () => {
+  fire(button, 'click');
+  await new Promise(r => setTimeout(r));
+  const panel = body.kids[0], input = panel.kids[0], list = panel.kids[2];
+  input.value = 'what';
+  fire(input, 'input');
+  const link = () => list.kids[0].kids[0];
+  fire(link(), 'click', {metaKey: true});
+  const openAfterANewTab = !panel.hidden;
+  fire(link().kids[0], 'click');  // the small words inside the link
+  const afterHit = {hidden: panel.hidden, expanded: button.attrs['aria-expanded'], focusOnButton: focused === button};
+  fire(button, 'click');
+  fire(body, 'keydown', {key: 'Escape'});
+  console.log(JSON.stringify({openAfterANewTab, afterHit, afterEscape: {hidden: panel.hidden, focusOnButton: focused === button}}));
+})();
+"""
 
 
 class SiteTests(unittest.TestCase):
@@ -46,7 +89,7 @@ class SiteTests(unittest.TestCase):
         self.addCleanup(shutil.rmtree, self.tmp)
         files = {'README.md': README, 'a/ONE.md': ONE, 'a/chapters/02-MAP.md': CHAPTER, 'a/chapters/README.md': CHAPTERS,
                  'a/OPENING.md': '## Truth exists\n\nThe opening.\n', 'a/results/records/closed-capture.md': '# r\n',
-                 'experiments/x/README.md': '# x\n', 'sources/12-claude-ai-chats/c.md': 'private\n'}
+                 'experiments/x/README.md': '# x\n', 'sources/12-claude-ai-chats/c.md': '# A private chat\n\nprivate\n'}
         for p, text in files.items():
             (self.tmp / p).parent.mkdir(parents=True, exist_ok=True)
             (self.tmp / p).write_text(text)
@@ -320,6 +363,245 @@ class SiteTests(unittest.TestCase):
         with self.assertRaisesRegex(site.SiteError, 'what the push screen reads as a key'):
             self.build()
 
+    # -- a card's time
+    def test_a_card_says_what_its_time_is_of(self):
+        (self.tmp / 'a/chapters/01-LONG.md').write_text('# Long\n\n' + 'word ' * 30000 + '\n')
+        self.files.add('a/chapters/01-LONG.md')
+        self.build(pages=SITE['pages'] + ['a/chapters/01-LONG.md'],
+                   ways_in=[{'path': 'a/chapters/README.md', 'label': 'Ch', 'text': 'x', 'time': 'the index {time}; the chapters {all:a/chapters/0*.md}'}])
+        self.assertIn('<span class="time">the index a minute; the chapters about 4–5 hours</span>', self.page('index.html'))
+
+    def test_a_card_can_quote_the_time_its_page_states(self):
+        (self.tmp / 'a/ONE.md').write_text('# One\n\n## What it is\n\n*The lead: 3–4 minutes to read; every row: 30–40 minutes.*\n')
+        self.build(ways_in=[{'path': 'a/ONE.md', 'label': 'One', 'text': 'x', 'time': 'lead {said:lead: (.+?) to read}, all {said:every row: (.+?)\\.}'}])
+        self.assertIn('<span class="time">lead 3–4 minutes, all 30–40 minutes</span>', self.page('index.html'))
+        with self.assertRaisesRegex(site.SiteError, 'no longer states'):
+            self.build(ways_in=[{'path': 'a/ONE.md', 'label': 'One', 'text': 'x', 'time': '{said:never said (.+)}'}])
+
+    def test_a_card_can_time_a_page_without_its_notes(self):  # neither the notes nor the marks that call them are read
+        (self.tmp / 'a/ONE.md').write_text('# One\n\n## What it is\n\n' + 'word[^n] ' * 200 + '\n\n[^n]: ' + 'note ' * 5000 + '\n')
+        self.build(ways_in=[{'path': 'a/ONE.md', 'label': 'One', 'text': 'x', 'time': '{body}, without its notes'}])
+        self.assertIn('<span class="time">2 minutes, without its notes</span>', self.page('index.html'))
+
+    def test_a_card_without_a_page_of_text_shows_only_its_stated_time(self):
+        self.build(nav=SITE['nav'], ways_in=[{'path': 'index.html', 'label': 'H', 'text': 'x', 'time': 'at a glance'}])
+        self.assertIn('<span class="time">at a glance</span>', self.page('index.html'))
+
+    # -- the marks
+    def test_every_result_anchor_with_a_record_has_its_mark(self):
+        rec = self.tmp / 'theories/becoming/results/records'
+        for rid in ('in-a-cell', 'in-a-list', 'in-a-line'):
+            (rec / f'{rid}.json').write_text(json.dumps({'id': rid, 'status': 'reviewed-scoped'}))
+        (self.tmp / 'a/chapters/02-MAP.md').write_text(
+            CHAPTER + '\n| Result | Standing |\n|---|---|\n| <a id="r-in-a-cell"></a>A name | proved |\n| <a id="r-no-record"></a>Other | open |\n\n'
+            '- <a id="r-in-a-list"></a>**A listed one**: text.\n\n<a id="r-in-a-line"></a>A sentence that runs on.\n')
+        self.build()
+        chapter = self.page('a/chapters/02-MAP.html')
+        anchors = [a for a in re.findall(r'id="r-([^"]+)"', chapter) if a != 'no-record']
+        self.assertEqual(sorted(anchors), ['closed-capture', 'in-a-cell', 'in-a-line', 'in-a-list'])
+        self.assertEqual(len(re.findall(r'<a class="mark mark-', chapter)), len(anchors))
+        self.assertRegex(chapter, r'<td><a id="r-in-a-cell"></a><a class="mark mark-reviewed-scoped" ')
+        self.assertRegex(chapter, r'<li><a id="r-in-a-list"></a><a class="mark mark-reviewed-scoped" ')
+        self.assertIn('<td><a id="r-no-record"></a>Other</td>', chapter)  # no record, no mark
+
+    def test_an_anchor_that_could_not_be_marked_fails_the_build(self):
+        (self.tmp / 'a/chapters/02-MAP.md').write_text(CHAPTER.replace('<a id="r-closed-capture"></a>\n', 'Text <span id="r-closed-capture"></span> here.\n'))
+        with self.assertRaisesRegex(site.SiteError, 'has no mark'):
+            self.build()
+
+    # -- chapters
+    def test_chapters_have_contents_and_neighbours(self):
+        (self.tmp / 'a/chapters/01-ROOT.md').write_text('# The root\n\nIntro.\n\n## First\n\n### Under it\n\n## `Second` part\n\nText.\n')
+        (self.tmp / 'a/chapters/03-LAST.md').write_text('# 最后一章\n\n中文的一章，都是中文。\n\n## 一节\n\n正文。\n')
+        self.files |= {'a/chapters/01-ROOT.md', 'a/chapters/03-LAST.md'}
+        self.build(pages=SITE['pages'] + ['a/chapters/01-ROOT.md', 'a/chapters/03-LAST.md'],
+                   chapters={'pages': 'a/chapters/0*.md', 'index': 'a/chapters/README.md'})
+        first, middle, last = self.page('a/chapters/01-ROOT.html'), self.page('a/chapters/02-MAP.html'), self.page('a/chapters/03-LAST.html')
+        self.assertIn('<a href="#first">First</a><ul><li><a href="#under-it">Under it</a></li></ul>', first)
+        self.assertIn('<a href="#second-part">Second part</a>', first)
+        self.assertLess(first.index('</h1>'), first.index('<nav class="contents"'))
+        self.assertLess(first.index('<nav class="contents"'), first.index('Intro.'))
+        self.assertNotIn('class="prev"', first)
+        self.assertIn('class="next" href="02-MAP.html">Next: The map →</a>', first)
+        self.assertEqual(middle.count('class="prev" href="01-ROOT.html">← Previous: The root</a>'), 2)  # at the top and at the foot
+        self.assertIn('class="all" href="index.html">All chapters</a>', middle)
+        self.assertNotIn('class="next"', last)
+        self.assertIn('aria-label="目录"', last)  # a chapter in Chinese is told so in Chinese
+        self.assertIn('上一章：The map', last)
+        self.assertNotIn('<nav class="contents"', self.page('a/ONE.html'))  # the index and other pages are not chapters
+
+    def test_a_chapter_index_must_be_on_the_site(self):
+        with self.assertRaisesRegex(site.SiteError, 'site.chapters'):
+            self.build(chapters={'pages': 'a/chapters/0*.md', 'index': 'a/NOT-THERE.md'})
+
+    # -- one navigation
+    def test_a_generated_pages_navigation_line_is_dropped(self):
+        (self.tmp / 'a/ONE.md').write_text('# One page\n\n<!-- generated -->\n\n[Home](../README.md) · [Chapters](chapters/README.md) · [The map](chapters/02-MAP.md)\n\n## What it is\n\n'
+                                           'Text. [Chapters](chapters/README.md) · [The map](chapters/02-MAP.md)\n')
+        (self.tmp / 'a/OPENING.md').write_text('# 中文\n\n[首页](ONE.md) · **第六章** · [The map](chapters/02-MAP.md)\n\n## Truth exists\n\nThe opening.\n')
+        (self.tmp / 'a/chapters/README.md').write_text('# 中文首页\n\n[English](../ONE.md) · **首页** · [一页](../ONE.md#what-it-is)\n\n'
+                                                       + CHAPTERS.split('\n', 1)[1])  # the Chinese landing's form: the home in bold
+        self.build()
+        main = self.page('a/ONE.html').split('<main>')[1].split('</main>')[0]
+        self.assertNotIn('>Home<', main)
+        landing = self.page('a/chapters/index.html').split('<main>')[1].split('</main>')[0]
+        self.assertNotIn('首页</strong>', landing)
+        self.assertIn('<a href="02-MAP.html">The map</a>', landing)  # the page's own text stays
+        self.assertIn('Text. <a href="chapters/index.html">Chapters</a>', main)  # a line of links that is not the navigation stays
+        self.assertNotIn('第六章', self.page('a/OPENING.html'))
+
+    def test_the_homes_own_navigation_line_is_dropped_too(self):
+        for home, kept in (('**首页**', False), ('**Home**', False), ('**另一页**', True)):  # the page that is the home has it in bold
+            with self.subTest(home=home):
+                line = f'[English](README.md) · {home} · [一页](a/ONE.md)'
+                self.assertEqual(line in site.strip_nav_line(f'# 中文\n\n{line}\n\n正文。\n'), kept)
+
+    # -- tables
+    def test_a_wide_table_widens_and_a_text_table_stacks(self):
+        wide = '| A | B | C | D | E |\n|---|---|---|---|---|\n' + '| 1 | 2 | 3 | 4 | 5 |\n'
+        text = '| Name | **Standing** | What |\n|---|---|---|\n| n | s | ' + 'word ' * 30 + '|\n| | | |\n'
+        (self.tmp / 'a/ONE.md').write_text(f'# One\n\n## What it is\n\n{wide}\n{text}\n')
+        self.build()
+        one = self.page('a/ONE.html')
+        self.assertIn('<div class="table wide"><table>', one)  # numbers: scrolled, not stacked, and so unlabelled
+        self.assertIn('<td>1</td>', one)
+        self.assertIn('<div class="table stack"><table>', one)
+        self.assertIn('<td data-label="Name">n</td><td data-label="Standing">s</td>', one)  # the label is the heading's plain text
+
+    def test_the_stylesheet_widens_cues_and_stacks(self):
+        css = (ROOT / 'tools/publishing/site.css').read_text()
+        self.assertIn('main > div.table.wide', css)
+        self.assertRegex(css, r'div\.table \{[^}]*no-repeat local')  # a shade at an edge says there is more
+        narrow = css.split('@media (max-width: 600px)')[1].split('@media print')[0]
+        self.assertIn('div.table.stack td[data-label]::before', narrow)
+        self.assertIn('content: attr(data-label)', narrow)
+
+    # -- the search, the 404 page and the favicon
+    def test_the_search_reads_titles_headings_and_result_names_of_built_pages(self):
+        (self.tmp / 'theories/becoming/results/records/closed-capture.json').write_text(json.dumps(
+            {'id': 'closed-capture', 'status': 'recorded-checked', 'title': {'en': 'Closed capture', 'zh': '闭合的捕获'}}))
+        (self.tmp / 'theories/becoming/results/records/closed-capture.md').write_text('# Closed capture\n\n## Laws\n')
+        self.files.add('theories/becoming/results/records/closed-capture.md')
+        self.build(pages=SITE['pages'] + ['theories/becoming/results/records/closed-capture.md'])
+        index = json.loads(self.page('search.json'))
+        one = next(p for p in index['pages'] if p['u'] == 'a/ONE.html')
+        self.assertEqual(one['t'], 'One page')
+        self.assertIn(['What it is', 'what-it-is'], one['h'])
+        self.assertEqual(index['results'], [{'t': 'Closed capture', 'z': '闭合的捕获', 'u': 'theories/becoming/results/records/closed-capture.html',
+                                             'a': 'closed-capture', 's': 'an existing Lean receipt is recorded'}])
+        for entry in index['pages'] + index['results']:
+            self.assertTrue((self.out / entry['u']).is_file(), entry['u'])
+            self.assertFalse(entry['u'].startswith('sources/'), entry['u'])
+        self.assertNotIn('A private chat', self.page('search.json'))  # sources/ is off the site and off the index
+
+    @unittest.skipUnless(shutil.which('node'), 'node is not installed')
+    def test_a_search_hit_closes_the_panel(self):
+        self.build()
+        run = subprocess.run(['node', '-e', SEARCH_STAGE, str(self.out / 'assets/search.js'), str(self.out / 'search.json')],
+                             capture_output=True, text=True, check=True)
+        seen = json.loads(run.stdout)
+        self.assertEqual(seen['afterHit'], {'hidden': True, 'expanded': 'false', 'focusOnButton': False})  # the reader goes to the hit
+        self.assertTrue(seen['openAfterANewTab'])  # a hit opened in a new tab leaves the list to try the next
+        self.assertEqual(seen['afterEscape'], {'hidden': True, 'focusOnButton': True})  # Esc still gives the focus back
+
+    def test_the_search_script_is_the_sites_own_and_writes_text_as_text(self):
+        self.build()
+        script = self.page('assets/search.js')
+        self.assertNotRegex(script, r'https?://')
+        self.assertNotIn('innerHTML', script)
+        self.assertNotIn('eval(', script)
+        self.assertIn('<script src="../../assets/search.js" data-root="../../" defer></script>', self.page('a/chapters/index.html'))
+        self.assertIn('<script src="assets/search.js" data-root="" defer></script>', self.page('index.html'))
+        self.assertIn('<button class="find" type="button" hidden>', self.page('a/ONE.html'))  # shown by the script, so never dead
+
+    def test_the_404_page_links_work_from_any_depth(self):
+        self.build()
+        page = self.page('404.html')
+        self.assertIn('<base href="/r/">', page)
+        refs = [r for r in re.findall(r'\b(?:href|src)="([^"]+)"', page) if not re.match(r'https?:', r) and r != '/r/']
+        self.assertTrue(refs)
+        for ref in refs:
+            self.assertFalse(ref.startswith(('/', '../')), ref)  # read from the site's root, by the base
+            self.assertTrue((self.out / ref).is_file(), ref)
+        self.assertNotIn('aria-current', page)
+        self.assertNotIn("This page's source", page)
+
+    def test_the_root_of_the_404_page(self):
+        self.assertEqual(site.site_root({'repository': 'o/theories'}), '/theories/')
+        self.assertEqual(site.site_root({'repository': 'o/o.github.io'}), '/')
+        self.assertEqual(site.site_root({'repository': 'o/theories', 'site_root': '/elsewhere'}), '/elsewhere/')
+
+    def test_a_favicon_is_written_and_linked(self):
+        self.build()
+        self.assertTrue(self.page('assets/favicon.svg').startswith('<svg'))
+        self.assertIn('<link rel="icon" href="../assets/favicon.svg"', self.page('a/ONE.html'))
+
+    # -- the home
+    def test_the_cards_follow_start_with_and_the_picture_follows_the_cards(self):
+        (self.tmp / 'a/pic.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg"></svg>')
+        self.files.add('a/pic.svg')
+        (self.tmp / 'README.md').write_text('# T\n\n> Still being revised.\n\n**First.** What it is.\n\n**Start with** [the one page](a/ONE.md).\n\n'
+                                            '**Receipts** prove less than they seem.\n\n![The picture](a/pic.svg)\n\n*The caption.*\n\n---\n\n## Truth exists\n\nThe opening.\n')
+        self.build(assets=['a/pic.svg'])
+        home = self.page('index.html')
+        order = [home.index(w) for w in ('Still being revised', 'First.', 'Receipts', 'Start with', 'id="ways-in"', 'class="picture"', 'The caption.')]
+        self.assertEqual(order, sorted(order))  # no qualifier falls below the cards; the words are all there
+        self.assertNotIn('<hr>', home)
+
+    def test_a_first_screen_without_start_with_keeps_its_order(self):
+        blocks = ['<p>One.</p>', '<p><a class="picture" href="p.svg"><img></a></p>', '<p><em>Caption.</em></p>', '<p>Two.</p>', '<hr>']
+        self.assertEqual(site.arrange_first_screen(blocks), (['<p>One.</p>', '<p>Two.</p>'], blocks[1:3]))
+
+    # -- what is written
+    def test_a_local_path_in_a_written_page_fails_the_build(self):
+        (self.tmp / 'a/ONE.md').write_text(ONE + '\n```sh\nPYTHONPATH=/tmp/x /Users/someone/.cache/bin/python3 run.py\n```\n')
+        with self.assertRaisesRegex(site.SiteError, r'a/ONE.html prints a local path'):
+            self.build()
+
+    def test_what_is_and_is_not_a_local_path(self):
+        for path in ('/Users/someone/x', 'file:///Users/someone/x', '/home/someone/x', '/private/tmp/x', '/var/folders/ab/x', 'C:\\Users\\someone',
+                     '~/tmp/x', '/Volumes/Disk/x', '-I/Users/someone/include', 'cc -L/tmp/libs', '/tmp/ren-recipient-value-deps',
+                     'BECOMING_OUT=/tmp/other', 'BECOMING_OUT=/tmp/becoming-run-2', 'OTHER=/tmp/becoming-run'):
+            self.assertTrue(site.LOCAL_PATH.search(path), path)
+        for path in ('BECOMING_OUT=/tmp/becoming-run', 'BECOMING_OUT=/tmp/becoming-run python3', 'https://example.org/Users/x', 'https://example.org/home/x/',
+                     'https://example.org/tmp/x', 'https://example.org/Volumes/x', 'https://example.org/~/x', '../tmp/notes.md', 'tmp/site/', 'a-I/Users/x'):
+            self.assertFalse(site.LOCAL_PATH.search(path), path)
+
+    def test_a_rewrite_changes_the_site_and_not_the_source(self):
+        source = ONE + '\n```sh\nPYTHONPATH=/tmp/x /Users/someone/.cache/bin/python3 run.py\n```\n'
+        (self.tmp / 'a/ONE.md').write_text(source)
+        self.build(rewrites=[{'page': 'a/ONE.md', 'pattern': r'PYTHONPATH=/tmp/\S+ /Users/\S+/python3', 'to': 'PYTHONPATH=<deps> python3'}])
+        self.assertIn('PYTHONPATH=&lt;deps&gt; python3 run.py', self.page('a/ONE.html'))
+        self.assertEqual((self.tmp / 'a/ONE.md').read_text(), source)
+
+    def test_a_rule_whose_words_have_gone_fails_the_build(self):
+        with self.assertRaisesRegex(site.SiteError, 'no longer matches'):
+            self.build(rewrites=[{'page': 'a/ONE.md', 'pattern': 'words that are not there', 'to': ''}])
+        with self.assertRaisesRegex(site.SiteError, 'not on the site'):
+            self.build(rewrites=[{'page': 'a/GONE.md', 'pattern': 'x', 'to': ''}])
+
+    def test_a_rule_for_no_named_page_may_match_nowhere(self):
+        (self.tmp / 'a/ONE.md').write_text(ONE + '\nThe map, on this page only, is there.\n')
+        self.build(rewrites=[{'pattern': ', on this page only,'}, {'pattern': 'not on any page'}])
+        self.assertIn('The map is there.', self.page('a/ONE.html'))
+
+    def test_the_footer_says_when_the_build_changes_words(self):
+        self.build()
+        self.assertNotIn('changed at build', self.page('a/ONE.html'))
+        self.build(rewrites=[{'pattern': 'not on any page'}])
+        self.assertIn("converted from the repository's text, with local paths and words true only off the site changed at build; a link",
+                      self.page('a/ONE.html'))
+
+    def test_a_record_page_says_its_status_in_words(self):
+        record = 'theories/becoming/results/records/closed-capture.md'
+        (self.tmp / record).write_text('# Closed\n\n`closed-capture` · **recorded-checked** · theorem · F01\n\nThe word `recorded-checked` in a sentence stays.\n')
+        self.files.add(record)
+        self.build(pages=SITE['pages'] + [record])
+        page = self.page(record[:-3] + '.html')
+        self.assertIn('<strong>an existing Lean receipt is recorded</strong> · theorem', page)
+        self.assertNotIn('<strong>recorded-checked</strong>', page)
+        self.assertIn('The word <code>recorded-checked</code> in a sentence stays.', page)
+
 
 class ScreenPatternTests(unittest.TestCase):
     def test_the_site_reads_the_push_screens_lists(self):
@@ -352,6 +634,75 @@ class RepositoryConfigTests(unittest.TestCase):
             self.assertTrue(w.get('group'), 'a card with no group adds a list without a heading: ' + w['path'])
         for source, target in cfg.get('aliases', {}).items():
             self.assertTrue(target.split('#')[0] in site.SPECIAL or target.split('#')[0] in pages, (source, target))
+
+    def test_card_times_do_not_mislead(self):
+        cfg = site.site_config()
+        cards = {w['label']: w for w in cfg['ways_in']}
+        self.assertIn('{all:theories/becoming/chapters/0*.md}', cards['The eight chapters']['time'])
+        self.assertIn('the index {time}', cards['The eight chapters']['time'])
+        for label in ('The tests', 'The register of results', 'The theory graph'):
+            self.assertIn('time', cards[label], label)  # a page to look things up in, or read in part, says so
+        self.assertNotRegex(cards['Check the proofs']['time'].replace('{time}', ''), r'\d')  # no run's duration: none was timed
+
+    def test_the_opening_is_timed_alike_on_its_card_and_in_start_with(self):
+        card = next(w for w in site.site_config()['ways_in'] if w['label'] == 'The opening')
+        body = site.navigation.readme_opening().partition('\n### Notes\n')[0]  # what the first screen's {{time:opening}} times
+        self.assertEqual(site.card_time(card, ROOT, site.tracked_files()), site.navigation.reading_time(body) + ', without its notes')
+
+    def test_the_chinese_pages_and_navigation(self):
+        cfg = site.site_config()
+        for page in ('theories/becoming/results/THEORY-GRAPH.zh.md', 'theories/becoming/results/atlas/CROSSWALK.zh.md'):
+            self.assertIn(page, cfg['pages'])
+        self.assertIn(['theories/becoming/results/atlas/CROSSWALK.zh.md', '对照表'], cfg['nav_zh'])
+        pages = site.expand_pages(cfg['pages'], site.tracked_files())
+        page = 'theories/becoming/results/atlas/CROSSWALK.zh.md'
+        text = site.site_text(page, (ROOT / page).read_text(), site.compile_rewrites(cfg, pages))
+        self.assertIn('[连接图（英文）](map.html)', text)  # the map, marked as English
+
+    def test_the_navigation_names_the_main_readings(self):
+        labels = [label for _, label in site.site_config()['nav']]
+        for label in ('Chapters', 'Overview', 'Results', '中文'):
+            self.assertIn(label, labels)
+        css = (ROOT / 'tools/publishing/site.css').read_text()
+        narrow = css.split('@media (max-width: 600px)')[1].split('@media print')[0]
+        self.assertRegex(narrow, r'header\.top nav \{[^}]*flex-wrap: wrap')
+        masked = re.findall(r'(@media[^{]*\{\s*)?header\.top nav \{[^}]*mask-image', css)
+        self.assertEqual(len(masked), 1)  # one rule fades the line, and only at the widths where it scrolls
+        self.assertIn('min-width: 601px', masked[0])
+
+    def test_the_stylesheet_has_no_dead_figure_rule_and_no_mark_over_text(self):
+        css = (ROOT / 'tools/publishing/site.css').read_text()
+        self.assertNotIn('figure.spine', css)
+        self.assertNotRegex(css, r'div\.marks \{[^}]*-\.')
+
+    def test_the_two_published_readmes_are_redacted_at_build(self):
+        cfg = site.site_config()
+        pages = site.expand_pages(cfg['pages'], site.tracked_files())
+        rules = site.compile_rewrites(cfg, pages)
+        for page in ('experiments/motor-learning-cost/README.md', 'experiments/recipient-value-learning/README.md'):
+            raw, text = (ROOT / page).read_text(), site.site_text(page, (ROOT / page).read_text(), rules)
+            self.assertTrue(site.LOCAL_PATH.search(raw), page + ' no longer prints a path: drop its rule')
+            self.assertFalse(site.LOCAL_PATH.search(text), page)
+            self.assertIn("<the run's dependency folder> <the run's Python>", text)  # marked as withheld, not shown as a bare python3
+
+    def test_the_site_does_not_promise_itself(self):
+        cfg = site.site_config()
+        rules = site.compile_rewrites(cfg, site.expand_pages(cfg['pages'], site.tracked_files()))
+        said = 'To explore the same data, open [the connection map](map.html) on the reader’s site, once it is published, or from a clone; GitHub shows it only as source.'
+        self.assertEqual(site.rewritten('x.md', said, rules), 'To explore the same data, open [the connection map](map.html).')
+        reworded = 'The map, once it is published, is there; GitHub shows it only as source.'
+        self.assertEqual(site.rewritten('x.md', reworded, rules), reworded)  # left whole, for the test below to go red on
+        said = ('the map draws it (interactive: once the reader\'s site is published, open it there, or from a clone of the repository, '
+                'since GitHub shows only its source; [its picture](x.md) heads the crosswalk)')
+        self.assertEqual(site.rewritten('x.md', said, rules), 'the map draws it (interactive; [its picture](x.md) heads the crosswalk)')
+
+    def test_no_page_of_the_site_says_the_site_is_yet_to_come(self):
+        cfg = site.site_config()
+        pages = site.expand_pages(cfg['pages'], site.tracked_files())
+        rules = site.compile_rewrites(cfg, pages)
+        for page in pages:
+            text = site.site_text(page, (ROOT / page).read_text(), rules)
+            self.assertNotRegex(text, r"once (?:it|the reader[’']s site) is published", page)
 
     def test_patterns_stay_in_one_folder(self):
         files = {'a/x.md', 'a/b/y.md', 'a/README.md'}

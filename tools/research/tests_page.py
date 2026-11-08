@@ -32,6 +32,7 @@ CLASSES = [
     ('no-prediction', 'No prediction of the account', 'Built, calculated or measured with no prediction of a thesis frozen before it; where a Frozen date is given, it is the day a protocol or plan was fixed.'),
 ]
 CLASS_KEYS = [c[0] for c in CLASSES]
+NEVER_RAN = ('not-run', 'held', 'dropped')  # the classes with no run to report
 FIELDS = ('id', 'name', 'thesis', 'folder', 'frozen', 'run', 'outcome', 'quote', 'quote_path', 'gloss')
 DATE = re.compile(r'^(\d{4}-\d{2}-\d{2})?$')
 SCORED = {'failed', 'mixed', 'refused', 'decided-nothing', 'partly-passed', 'not-rejected', 'passed', 'registered-rule'}
@@ -135,7 +136,8 @@ def validate(data, root=ROOT):
 
 
 def cell(text):
-    return text.replace('|', '\\|').replace('\n', ' ')
+    """A field as a table cell: bare pipes escaped, an already escaped one kept as it is."""
+    return re.sub(r'(?<!\\)\|', r'\\|', text).replace('\n', ' ')
 
 
 def theses(field):
@@ -175,11 +177,19 @@ def by_thesis(rows, names=None):
     return out
 
 
+def thesis_counts(root=ROOT):
+    """Among the rows of tests.json naming a thesis: their number ('total') and how many fell in each class, classes with
+    none left out. A row naming two theses is one row, so these are tests, not the by-thesis table's cells."""
+    rows = [r for r in json.loads((Path(root) / DATA).read_text())['tests'] if r['thesis'].strip()]
+    tallied = {k: sum(r['outcome'] == k for r in rows) for k in CLASS_KEYS}
+    return {'total': len(rows), **{k: n for k, n in tallied.items() if n}}
+
+
 def render_page(data):
     rows = data['tests']
     by = {k: [r for r in rows if r['outcome'] == k] for k in CLASS_KEYS}
     counts = '; '.join(f'{len(by[k])} {label.lower()}' for k, label, _ in CLASSES if by[k])
-    nav = ' · '.join(navigation.link(p, PAGE, label) for p, label in navigation.NAV)
+    nav = navigation.nav_line(PAGE)
     lead = [
         f'Every test in [experiments](experiments/README.md) by how it came out, the failures first: {len(rows)} in all '
         f'({counts}), as of {day(data["as_of"])}. Each row links its folder and quotes the outcome from its pages (one, '
@@ -192,6 +202,10 @@ def render_page(data):
         '',
         f'How to read a verdict, in [method §9](theories/becoming/chapters/08-METHOD.md#theses)\'s words: '
         + ' '.join(f'"{q["text"]}{"…" if q.get("continues") else ""}"' for q in data.get('method_quotes', [])),
+        '',
+        'Results here are by setting: each row is one test in the setting or settings it names, a thesis can pass in one and fail in another, so no '
+        'row or count below is a verdict on a thesis as a whole (method §9\'s table gives each thesis\'s standing), and a row\'s '
+        'class is read by the rule stated under that class\'s heading below.',
         '',
         '## By thesis',
         '',

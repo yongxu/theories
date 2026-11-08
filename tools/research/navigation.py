@@ -10,6 +10,7 @@ import os
 from pathlib import Path
 import re
 import tempfile
+from itertools import zip_longest
 from urllib.parse import unquote, urlsplit
 
 from tools.research import registry, moves
@@ -37,6 +38,8 @@ def read(path):
 
 
 def link(path, base, label):
+    if path is None:  # a group's name in NAV, no link
+        return label
     routed = registry.mirrored(path)
     file, sep, fragment = routed.partition('#')
     return f'[{label}]({os.path.relpath(ROOT / file, (ROOT / base).parent)}{sep}{fragment})' + (' (generated mirror)' if routed != path else '')
@@ -251,15 +254,18 @@ def timed_paths(config=None, root=ROOT):
             if kind == 'time' and arg not in ('screen', 'opening', 'notes')]
 
 
-def first_screen(records, opening, config=None, root=ROOT, above=''):
+def first_screen(records, opening, config=None, root=ROOT, above='', below=''):
     """README's first screen (the release gate's, WHAT-REMAINS item 6: everything before the opening's heading): the
     readme_first_screen file, placed before the opening, its fields filled at render so that no figure is copied.
     `{{time:PATH}}` is the reading time of a file of the repository (PATH from the repository's root, and no page the
     render writes, whose copy on disk is the last render's), `{{time:opening}}` and `{{time:notes}}` that of the
-    opening's body and of its notes, `{{time:screen}}` that of the whole screen as it renders, `above` (the title,
-    navigation and status) with the file and its own time filled in (where filling it in moves the time back and forth,
-    the longer); `{{count:registered}}` is the number of registered results and `{{count:STATUS}}` the number with
-    that status. A field of no such form left in the file is an error."""
+    opening's body and of its notes, `{{time:screen}}` that of the whole screen as it renders: `above` (the title,
+    navigation and status), the file with its own time filled in (where filling it in moves the time back and forth, the
+    longer) and `below` (the ways in, which stand before the opening's heading); `{{count:registered}}` is the number of
+    registered results and `{{count:STATUS}}` the number with that status; `{{tests:total}}` is the number of tests naming a thesis, `{{tests:CLASS}}` how many of them fell in a class of
+    tests_page.CLASSES, `{{tests:unrun}}` how many never ran (held, dropped or frozen and not run), `{{tests:ran}}` how many did, and `{{tests:other}}` how
+    many of those that ran are neither passed, failed nor mixed, so that the five add up to the total. A field of no such
+    form left in the file is an error."""
     lead = markdown_file('readme_first_screen', 'README.md', config, root)
     if not lead:
         return lead
@@ -273,6 +279,19 @@ def first_screen(records, opening, config=None, root=ROOT, above=''):
             if arg not in STATUS_TEXT:
                 raise ValueError('readme_first_screen names an unknown status: ' + arg)
             return str(sum(r['status'] == arg for r in records))
+        if kind == 'tests':
+            from tools.research import tests_page  # it imports this module
+            tallied = tests_page.thesis_counts(root)
+            unrun = sum(tallied.get(k, 0) for k in tests_page.NEVER_RAN)
+            if arg == 'unrun':
+                return str(unrun)
+            if arg == 'ran':
+                return str(tallied['total'] - unrun)
+            if arg == 'other':
+                return str(tallied['total'] - unrun - sum(tallied.get(k, 0) for k in ('passed', 'failed', 'mixed')))
+            if arg != 'total' and arg not in tests_page.CLASS_KEYS:
+                raise ValueError('readme_first_screen names an unknown class of test: ' + arg)
+            return str(tallied.get(arg, 0))
         if kind == 'time':
             if arg == 'screen':
                 return m.group(0)
@@ -295,7 +314,7 @@ def first_screen(records, opening, config=None, root=ROOT, above=''):
         raise ValueError('readme_first_screen has a malformed field: ' + screen.replace(SCREEN_TIME, '').split('{{', 1)[1][:40])
 
     def timed(t):
-        return reading_time(above + '\n\n' + screen.replace(SCREEN_TIME, t))
+        return reading_time(above + '\n\n' + screen.replace(SCREEN_TIME, t) + '\n\n' + below)
     if SCREEN_TIME not in screen:
         return screen
     t, seen = timed(''), []
@@ -365,17 +384,23 @@ def validate_goals(records):
     return errors
 
 
-def preserved_anchors(original, history):
-    # Preserve every old heading/explicit anchor at the old URL as a history link.
+def preserved_targets(original, history):
+    """Each heading or explicit anchor of a page's preserved versions, to the reading edition that holds it."""
     from tools.research.reading_catalogue import anchors
     saved = history['documents'][original]
     targets = {}
     for version in saved.get('prior_versions', []) + [saved]:
         targets.update({a: version['reading'] for a in anchors(ROOT / version['reading'])})
+    return targets
+
+
+def preserved_anchors(original, history, base=None):
+    # Preserve every old heading/explicit anchor as a history link: at the old URL, or on the page `base` that keeps them.
+    targets = preserved_targets(original, history)
     lines = ['', '<details>', '<summary>Historical section links</summary>', '']
     for anchor in sorted(targets):
         safe = anchor.replace('"', '&quot;')
-        lines += [f'<a id="{safe}"></a>', link(targets[anchor] + '#' + anchor, original, 'Historical section: ' + anchor), '']
+        lines += [f'<a id="{safe}"></a>', link(targets[anchor] + '#' + anchor, base or original, 'Historical section: ' + anchor), '']
     return lines + ['</details>', '']
 
 
@@ -389,6 +414,126 @@ def register_table(records, base):
         lines += [f'| `{r["id"]}` | ' + link(page_of(r), base, registry.en(r['title'])) + f' | {r["kind"]} | {r["status"]} | '
                   + link(r['canonical_source'], base, Path(r['canonical_source']).name) + ' |']
     return lines
+
+
+# A chapter written in another language, by its English name on the English register (the chapters' index gives the same words).
+CHAPTER_ENGLISH = {'06-CLASSICAL-TEXTS.md': 'The classical texts: what they read out, how it is tested and where they diverge (in Chinese)'}
+
+
+def chapter_homes(root=ROOT):
+    """(homes, titles): each record id whose home is a chapter section (anchor r-<id>) to (chapter, place in it), and each
+    chapter to its title in English."""
+    homes, titles = {}, {}
+    for p in sorted((root / CHAPTERS).glob('0[1-8]-*.md')):
+        if p.name.endswith('.zh.md'):
+            continue
+        text = p.read_text()
+        chapter = str(p.relative_to(root))
+        heading = re.search(r'^# (.+)$', text, flags=re.M)
+        titles[chapter] = CHAPTER_ENGLISH.get(p.name) or (heading.group(1).strip() if heading else p.stem)
+        for m in re.finditer(r'<a id="r-([^"]+)"></a>', text):
+            homes.setdefault(m.group(1), (chapter, m.start()))
+    return homes, titles
+
+
+def register_by_chapter(records, base, homes, titles):
+    """The register grouped by the chapter that states each result, in the chapter's order; what no chapter states comes last."""
+    groups = {chapter: [] for chapter in titles}
+    unhomed = []
+    for r in records:
+        (groups[homes[r['id']][0]] if r['id'] in homes and homes[r['id']][0] in groups else unhomed).append(r)
+    named = []  # (anchor, short name, heading, its results)
+    for chapter, group in groups.items():
+        if group:
+            number = chapter.rsplit('/', 1)[1][:2]
+            named.append((f'chapter-{number}', f'Chapter {int(number)}', f'Chapter {int(number)}. {titles[chapter]}', sorted(group, key=lambda r: homes[r['id']][1])))
+    if unhomed:
+        named.append(('not-in-a-chapter', 'Stated in no chapter', 'Stated in no chapter', unhomed))
+    lines = ['By the chapter that states each, in that chapter\'s order: '
+             + ' · '.join(f'[{short}](#{anchor}) ({len(group)})' for anchor, short, _, group in named) + '.', '']
+    for anchor, _, heading, group in named:
+        lines += anchor_lines(anchor) + [f'### {heading}', ''] + register_table(group, base) + ['']
+    return lines
+
+
+# A way into the register: the results the one page leans on (an AI selection, not a ranking).
+START_HERE = ['continuation-relative-to-a-class', 'selection-through-couplings', 'what-an-optimum-does-beyond-what-couples-in',
+              'closed-capture', 'own-count-misses-joint-excess', 'one-root-to-its-edge']
+ONE_PAGE = THEORY + '/ONE-PAGE.md'
+MAP_CHAPTER = CHAPTERS + '/02-MAP.md'
+# Each result's plain line, the one page's own words: the list opens on them, the record's statement after.
+START_PLAIN = {
+    'continuation-relative-to-a-class': (ONE_PAGE, 'Sameness is in some respect, a *class*. Where one occurrence conditions another alike under the class, the second *continues* it.'),
+    'selection-through-couplings': (ONE_PAGE, 'The selections through a selector\'s couplings (what it reads or needs), together, reach exactly what couples into it'),
+    'what-an-optimum-does-beyond-what-couples-in': (ONE_PAGE, 'With *room* (every eligible outcome left higher beyond is beaten on what couples in), every optimum of an order rising with what couples in drains what lies beyond as far as any eligible outcome does'),
+    'closed-capture': (ONE_PAGE, 'A rule read from the share it raises can lock and outlive a growing loss it does not read'),
+    'own-count-misses-joint-excess': (ONE_PAGE, 'Takers each within what a renewal gives can together exceed it; where the renewal depends on what it renews, enough such steps in a row from a low enough level end it and what depends on the condition as much'),
+    'one-root-to-its-edge': (ONE_PAGE, 'Of the central results a few are cases of the root, more use its laws in their proofs and most use none'),
+}
+# Each result's standing in its homes' words, the one page's table first, which its record's hypotheses do not carry (closed
+# capture's noise, which its record names only under what it does not show), then where to read on, if anywhere.
+START_STANDING = {
+    'continuation-relative-to-a-class': ([(ONE_PAGE, 'Theorems for every relation and class, so they forbid no relation. That this explains how things go on: argued. That every becoming fits it: open')], None, None),
+    'selection-through-couplings': ([(ONE_PAGE, 'Proved, near-definitional; its force is the premise that a selector selects through just those')], None, None),
+    'what-an-optimum-does-beyond-what-couples-in': ([(ONE_PAGE, 'Proved; a known theorem restated')], None, None),
+    'closed-capture': ([(ONE_PAGE, 'Proved for any type, in the model only, without noise'),
+                        (MAP_CHAPTER, 'Drawn one member at a time, the critical mass\'s locks are left by drift alone, with no new reader and no change in what is read, at a weight whose bound shrinks across the distance from the mass'),
+                        (MAP_CHAPTER, 'for capture through the rule this is a reading')],
+                       MAP_CHAPTER + '#which-locks-noise-leaves', 'which locks noise leaves'),
+    'own-count-misses-joint-excess': ([(ONE_PAGE, 'Proved on models; restates the commons')], None, None),
+}
+
+
+def word_for_word_errors(where, sentences, root=ROOT):
+    """Each (path, sentence) of `sentences` that its file no longer holds, word for word."""
+    errors = []
+    for path, sentence in sentences:
+        text = (root / path).read_text() if (root / path).is_file() else ''
+        if squashed(sentence) not in squashed(text):
+            errors.append(f'{where}: {path} no longer says, word for word: {sentence}')
+    return errors
+
+
+def start_here_errors(records, root=ROOT):
+    """A result START_HERE names that is missing or is not a completed scoped result, one without a plain line, and a plain line
+    or standing its source no longer holds."""
+    by_id = {r['id']: r for r in records}
+    errors = ['navigation.START_HERE: ' + i + (' is not a registered result' if i not in by_id else ' is not a completed scoped result')
+              for i in START_HERE if i not in by_id or by_id[i]['status'] not in COMPLETED or by_id[i]['kind'] == 'target']
+    errors += ['navigation.START_PLAIN: no plain line for ' + i for i in START_HERE if i not in START_PLAIN]
+    words = list(START_PLAIN.values()) + [pair for pairs, _, _ in START_STANDING.values() for pair in pairs]
+    return errors + word_for_word_errors('navigation.START_HERE', words, root)
+
+
+def sentence_end(text):
+    return text if text.endswith('.') else text + '.'
+
+
+def start_item(r, path, homes):
+    """One result of the list: its plain line, its record's statement with its one term glossed, its standing in its homes'
+    words where they give one, and its status."""
+    home = ' (' + link(homes[r['id']][0] + '#r-' + r['id'], path, 'home section') + ')' if r['id'] in homes else ''
+    plain = sentence_end(START_PLAIN[r['id']][1]) + ' ' if r['id'] in START_PLAIN else ''
+    statement = registry.en(r.get('statement') or r.get('claim') or {}).replace('缘', '缘 (' + link('GLOSSARY.md#the-root', path, 'condition') + ', *yuán*)', 1)
+    standing = ''
+    if r['id'] in START_STANDING:
+        pairs, target, label = START_STANDING[r['id']]
+        said = '; '.join(s if k == 0 else s[0].lower() + s[1:] for k, (_, s) in enumerate(pairs))
+        said = said.replace("at a weight whose bound shrinks across the distance from the mass", "at a weight whose bound shrinks across the distance from the mass (" + link(MAP_CHAPTER + '#r-drawn-shaping-drawn-one-at-a-time', path, 'drawn one at a time') + ')', 1)  # 02 cites its model there
+        standing = ' *Its standing:* ' + (f'{said} (' + link(target, path, label) + ').' if target else sentence_end(said))
+    return '- **' + link(page_of(r), path, registry.en(r['title'])) + f'**{home}. {plain}*Its record:* {statement}{standing}' + f' `{r["status"]}`, {STATUS_TEXT[r["status"]]}.'
+
+
+def start_here_lines(records, path, homes):
+    by_id = {r['id']: r for r in records}
+    chosen = [by_id[i] for i in START_HERE if i in by_id]
+    if not chosen:
+        return []
+    lines = ['## Start here', '', 'Results ' + link(ONE_PAGE, path, 'the one page') + ' leans on, chosen by an AI reader: a way in, not a ranking. '
+             'Each opens with the one page\'s plain line, then its record\'s statement and its standing in its homes\' words, and holds under the hypotheses its record states. An automated review against the literature it knew, not exhaustive, finds '
+             + link(CHAPTERS + '/08-METHOD.md#known-results', path, 'none of the central results new mathematics') + '.', '']
+    lines += [start_item(r, path, homes) for r in chosen]
+    return lines + ['', 'The ethics rests on two premises it does not assert: ' + link(CHAPTERS + '/07-SIGNIFICANCE.md#scope-and-order', path, 'the continuation condition fixes scope, and C gives order') + '.', '']
 
 
 def law_family_table(records, base):
@@ -443,17 +588,125 @@ PAGES = [('README.md', 'The Theory of Becoming', None, 'home'),
          (THEORY + '/README.md', 'The Theory of Becoming', 'The Theory of Becoming / 生成／变化之论', 'stub'),
          (CHAPTERS + '/CLAIMS.md', 'Registered claims and historical ledger', '已登记主张与历史账本 / Registered claims and historical ledger', 'stub'),
          (THEORY + '/results/ROADMAP.md', 'Current research directions', '当前研究路线 / Current research directions', 'roadmap')]
-# The navigation line on every generated page: the ways a reader goes, then the register and what is open. The scopes, the
-# connections list and the workflow for contributors are linked from README's lower sections (RW, 8 November 2026).
-NAV = [('README.md', 'Home'), ('MAP.md', 'Where everything is'), (THEORY + '/ONE-PAGE.md', 'One page'), ('README.zh.md', '中文'),
-       (CANONICAL, 'The theory'), (CHAPTERS + '/README.md', 'Chapters'), (THEORY + '/USES.md', 'Uses'), ('TESTS.md', 'Tests'),
-       (THEORY + '/results/THEORY-GRAPH.md', 'Graph'), (THEORY + '/results/atlas/CROSSWALK.md', 'Connections'), ('theories/LINEAGE.md', 'How it grew'), ('RESULTS.md', 'Results'), ('GLOSSARY.md', 'Glossary'),
-       (THEORY + '/review/README.md', 'Reviewers'), ('OPEN-QUESTIONS.md', 'Open questions')]
+# The navigation line on every generated page, grouped as the site's ways in are: an entry with no path is a group's name.
+# The scopes, the connections list and the workflow for contributors are linked from README's lower sections (RW, 8 November 2026).
+CROSSWALK = THEORY + '/results/atlas/CROSSWALK.md'
+NAV = [('README.md', 'Home'), ('README.zh.md', '中文'),
+       (None, '**Read**'), (THEORY + '/ONE-PAGE.md', 'One page'), (CANONICAL, 'The theory'), (CHAPTERS + '/README.md', 'Chapters'), (THEORY + '/USES.md', 'Uses'),
+       (None, '**Check**'), ('TESTS.md', 'Tests'), ('RESULTS.md', 'Results'), ('MAP.md#check-the-proofs-yourself', 'Proofs'), ('OPEN-QUESTIONS.md', 'Open questions'), (THEORY + '/review/README.md', 'Reviewers'),
+       (None, '**See**'), (THEORY + '/results/THEORY-GRAPH.md', 'Graph'), (CROSSWALK, 'Connections'), ('theories/LINEAGE.md', 'How it grew'), ('GLOSSARY.md', 'Glossary'), ('MAP.md', 'Where everything is')]
+# Hand-written fronts that carry the line, each with its Chinese edition where it has one (the line's 中文 then goes there).
+NAV_FRONTS = {'MAP.md': None, 'GLOSSARY.md': 'GLOSSARY.zh.md'}
+
+
+def nav_line(path, zh=None):
+    """The navigation line as it stands on the page at `path`, its 中文 link going to `zh` where the page has an edition."""
+    return ' · '.join(link(zh if zh and target == 'README.zh.md' else target, path, label) for target, label in NAV)
+
+
+def nav_front_errors(root=ROOT):
+    """Each hand-written front whose navigation line is missing or is not the generated pages' line."""
+    errors = []
+    for page, zh in NAV_FRONTS.items():
+        text = (root / page).read_text() if (root / page).is_file() else ''
+        if nav_line(page, zh) not in text.split('\n'):
+            errors.append(f'{page}: its navigation line is missing or differs; under its title it should read: {nav_line(page, zh)}')
+    return errors
+
+
 WHERE_TO_LOOK = [
     '- Same theorem under two names: `trace-law-equivalence`, `derivation-soundness`. Preserve historical names and receipts; count the underlying result once.',
     '- Similar statements with different semantics: `branching-target-uniqueness`, `joint-target-uniqueness`. Their local test languages differ.',
     '- Three shared-support results: `draws-on-a-shared-stock`, `exclusive-footprint-support`, `joint-plan-composition`. Their common obstruction does not establish a verified translation between them.',
     '- Completed conditional alignment argument and its AI application: `practical-judgment-under-living-significance`, `alignment-direction-under-widening`. The question `universal-practical-warrant` and the independent target `wisdom-root` remain open.']
+
+
+CH07, CH08 = CHAPTERS + '/07-SIGNIFICANCE.md', CHAPTERS + '/08-METHOD.md'
+# OPEN-QUESTIONS opens with these, each in its home's words; a sentence its home no longer holds is an error at render.
+OPEN_LEAD = {
+    'premises': (CH07, 'The ethics rests on its two premises with two roles, the continuation condition for scope and C for order.'),
+    'unasserted': (CH07, 'Neither is asserted.'),
+    'crux': (CH07, 'whether all of one\'s effects are one\'s own, in the sense of whose losses count, argued for and against and not settled.'),
+    'crux-laws': (CH07, 'The laws do not answer it.'),
+    'crux-standing': (CH07, 'An AI reading throughout: argued, not proved.'),
+    'c-question': (CH08, 'Is widening better (C, which orders), and does significance stop at no boundary (the step of invariance, which fixes scope)?'),
+    'c-definition': (CH08, 'C\'s no-loss extension is widening by definition, so the definition carries no warrant'),
+    'c-open': (CH08, 'a reason for C, and whether a stronger practical warrant exists, with no warrant binding every possible mind claimed (T8)'),
+    'readings': (CH08, 'The readings stand as one account; where two did not fit, the account decided between them'),
+}
+OPEN_KEPT = '_process/OPEN-QUESTIONS-KEPT.md'  # what keeps OPEN-QUESTIONS.md, off the reader's page
+OWNER_SLUG = re.compile(r'(?:^|-)rens?(?:-|$)')
+
+
+def squashed(text):
+    return re.sub(r'\s+', ' ', text).strip()
+
+
+def open_lead_errors(root=ROOT):
+    """Each sentence of OPEN_LEAD that its home no longer holds, word for word."""
+    return word_for_word_errors('navigation.OPEN_LEAD', OPEN_LEAD.values(), root)
+
+
+def validate_fronts(records):
+    """What the registers and hand-written fronts promise: the shared navigation line, the start list with its words, and the lead's sentences."""
+    return nav_front_errors() + start_here_errors(records) + open_lead_errors()
+
+
+def render_inputs():
+    """The chapters, which RESULTS.md groups by and OPEN-QUESTIONS.md quotes, and the one page, whose plain lines RESULTS.md
+    quotes (for research.py's input snapshot)."""
+    return set((ROOT / CHAPTERS).glob('0[1-8]-*.md')) | {ROOT / ONE_PAGE}
+
+
+def open_lead_lines(path):
+    """The opening of OPEN-QUESTIONS.md: what the ethics leaves most open, in its homes' words."""
+    q = lambda key: OPEN_LEAD[key][1]
+    return ['## The crux and the warrant of C', '',
+            f'{q("premises")} {q("unasserted")} (' + link(CH07 + '#scope-and-order', path, 'chapter 7, section 4') + ')', '',
+            '- **The crux** (' + link(CH07 + '#crux', path, 'chapter 7, section 4.7') + f'; {q("crux-standing")[0].lower() + q("crux-standing")[1:-1]}). "{q("crux")}" "{q("crux-laws")}"',
+            f'- **The warrant of C.** "{q("c-question")}" (' + link(CH08 + '#open-items-ranked', path, 'method, open item 12') + f') "{q("c-definition")}" ('
+            + link(CH08 + '#philosophical-warrant', path, 'method, philosophical warrant') + f'). Open: "{q("c-open")}" (' + link(CH08 + '#open-items-ranked', path, 'item 12') + ').', '']
+
+
+def discovery_lines(path):
+    return [H('##', 'Discovery and evidence', 'Discovery and evidence / 检索与证据'), '',
+            ' · '.join(link(p, path, label) for p, label in [(THEORY + '/ONE-PAGE.md', 'The one page'), (CANONICAL, 'The overview'), (CHAPTERS + '/README.md', 'The eight chapters'), (THEORY + '/results/THEORY-GRAPH.md', 'The theory graph'), (moves.current_path('MAP.md', ROOT), 'Broader theory map')])
+            + '. Earlier catalogues: ' + ' · '.join(link(p, path, label) for p, label in [(THEORY + '/results/README.md', 'chapter readings of 8 October 2026 and later'), (THEORY + '/results/GENERATIVITY-CHAIN.md', 'the generativity chain, kept since 8 October 2026')]) + '.', '',
+            '```sh', 'make research-check', 'make research-find QUERY=your-topic', 'make research-render', '```', '',
+            'Default discovery excludes frozen copies and failed build attempts. Use `--archives` deliberately to include them. Checks concern metadata and evidence bindings; mathematical changes retain their actual Lean-build requirement.', '']
+
+
+def preserved_lines(original, history, base):
+    saved = history['documents'][original]
+    return [H('##', 'Preserved history', 'Preserved history / 完整历史'), '', link(saved['reading'], base, 'Previous full text with working links') + ' · ' + link(saved['raw'], base, 'Exact original bytes'), '',
+            'The complete previous content remains preserved. This generated page is the current navigation; historical next steps retain their dated scope.', ''] + preserved_anchors(original, history, base)
+
+
+def open_kept_page(history):
+    """The page holding what keeps OPEN-QUESTIONS.md: how to search and check, and its preserved versions."""
+    path, original = OPEN_KEPT, 'OPEN-QUESTIONS.md'
+    lines = [H('#', 'How the open-questions page is kept'), '', MARKER, '', nav_line(path), '',
+             link(original, path, 'The open questions') + ' are the reader\'s page; this one holds how to search and check the repository, and that page\'s earlier versions with each of their sections.', '']
+    lines += discovery_lines(path)
+    if original in history['documents']:
+        lines += preserved_lines(original, history, path)
+    return registry.finish(lines)
+
+
+# site.ways_in names the connection map by its page on the site; on GitHub the crosswalk shows the same threads.
+WAYS_ON_GITHUB = {'connections.html': CROSSWALK}
+
+
+def ways_in_table(config, path):
+    """README's ways in, from the list the site's cards use, one column to a group. Its own heading ends the first screen the
+    site's home takes from README, so the site's cards are not doubled."""
+    columns = {}
+    for way in (config.get('site') or {}).get('ways_in') or []:
+        columns.setdefault(way.get('group') or 'Ways in', []).append(link(WAYS_ON_GITHUB.get(way['path'], way['path']), path, way['label']))
+    if not columns:
+        return []
+    return ['## Ways in', '', '| ' + ' | '.join(columns) + ' |', '|' + '---|' * len(columns)] + [
+        '| ' + ' | '.join(row) + ' |' for row in zip_longest(*columns.values(), fillvalue='')] + ['']
 
 
 def research_lines(ongoing, records_by_id, path):
@@ -507,7 +760,7 @@ def dependency_lines(records, path):
     edges = [(r['id'], e['id']) for r in with_edges for e in r['dependencies']]
     ids = numbered([f'{c}--{p}' for c, p in edges])
     lines = [counts(records) + f' {len(edges)} curated edges join {len(with_edges)} results to the results they draw on.', '',
-             'Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer\'s proof uses the producer\'s theorem; '
+             'Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer\'s proof uses the producer\'s theorem, as the AI-written records assign the kind; the registry checks that an interface has its fields and cites a reviewed source, and nothing checks that the Lean there uses the cited result; '
              '*interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge\'s detail, '
              'the producer\'s output, the consumer\'s input, the retained conditions and the connection evidence are on the consumer\'s record page, '
              'whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with '
@@ -545,13 +798,14 @@ def render_views(records):
     outputs = {}
     for path, title, former, kind in PAGES:
         lines = [H('#', title, former), '', README_MARKER if path == 'README.md' else MARKER, '',
-                 ' · '.join(link(p, path, label) for p, label in NAV), '']
+                 nav_line(path), '']
         if kind == 'home':
             if config.get('readme_status'):
                 lines += ['> ' + config['readme_status'], '']
-            screen = first_screen(records, opening, config, above=registry.finish(lines))
+            ways_in = ways_in_table(config, path)
+            screen = first_screen(records, opening, config, above=registry.finish(lines), below='\n'.join(ways_in))
             if screen:
-                lines += [screen, '', '---', '']
+                lines += [screen, ''] + ways_in + ['---', '']
             if opening:
                 lines += [opening, '', '---', '']
             lead = markdown_file('readme_lead', path, config)
@@ -594,13 +848,17 @@ def render_views(records):
             if repository:
                 lines += [repository, '']
         if kind == 'register':
-            lines += ['The single register of results: one editable JSON record per migrated claim, from which this page and each record page are generated. '
-                      + counts(records) + ' `recorded-checked` credits an existing Lean receipt and `reviewed-scoped` an existing substantive review; '
-                      'neither certifies a stronger claim. Unmigrated results retain their existing sources; files, checks and repeated acceptances are not independent results. '
-                      'Hash drift requires reading the changed source before updating its record.', '',
-                      H('##', 'Registered results', '已登记成果 / Registered results'), ''] + register_table(records, path) + ['',
+            homes, titles = chapter_homes()
+            lines += [counts(records) + ' Results not yet migrated keep their existing sources and are not counted here. `recorded-checked` credits an existing Lean receipt and `reviewed-scoped` an existing substantive review; '
+                      'neither certifies a stronger claim. Files, checks and repeated acceptances are not independent results. '
+                      'Each row links the result\'s record, which names its premises, evidence and boundary.', '']
+            lines += start_here_lines(records, path, homes)
+            lines += [H('##', 'Registered results', '已登记成果 / Registered results'), ''] + register_by_chapter(records, path, homes, titles) + [
                       H('##', 'Law families', 'Law families / 规律族'), ''] + law_family_table(records, path) + ['',
-                      H('##', 'Where to look first', 'Where to look first'), ''] + WHERE_TO_LOOK + ['']
+                      H('##', 'Where to look first', 'Where to look first'), ''] + WHERE_TO_LOOK + ['',
+                      '## How this register is kept', '',
+                      'The single register of results: one editable JSON record per migrated claim, from which this page and each record page are generated. '
+                      'Hash drift requires reading the changed source before updating its record.', '']
         if kind in ('stub', 'roadmap'):
             lines += stub_lines(path, kind, goal_records)
         if path == 'RESEARCH.md' and ongoing:
@@ -608,9 +866,10 @@ def render_views(records):
         if kind == 'open':
             groups = open_question_links(config)
             targets = [r for r in records if r['kind'] == 'target']
-            lines += ['Where the theory is open: the open targets, the open programme in method (chapter 8), and what lies beyond the readings. '
-                      'No reading waits on anyone: each is decided by its place in one account of the theory (decision D45). '
+            lines += ['Where the theory is open: the crux and the warrant of C, the open targets, the open programme in method (chapter 8), and what lies beyond the readings. '
+                      f'No reading waits on anyone: "{OPEN_LEAD["readings"][1]}" (' + link(CH08 + '#readings-adopted', path, 'method, readings adopted') + '). '
                       'A completed result\'s own next step is on its record page.', '']
+            lines += open_lead_lines(path)
             lines += anchor_lines('registered-results', '已登记成果--registered-results')
             lines += [H('##', 'Open targets', 'Open targets'), '']
             for r in targets:
@@ -652,17 +911,18 @@ def render_views(records):
         if kind == 'dependencies':
             lines += dependency_lines(records, path)
             lines += [H('##', 'Wider composition evidence', 'Wider composition evidence / 更广组合证据'), '', link(moves.current_path(FOUNDATION_COMPOSITION, ROOT), path, 'Documented joined histories, conditional transport, separate realizations and unresolved interfaces'), '', 'These historical connections retain their own source cutoff and validation scope; they are not automatically upgraded by this index.', '']
-        lines += [H('##', 'Discovery and evidence', 'Discovery and evidence / 检索与证据'), '',
-                  ' · '.join(link(p, path, label) for p, label in [(THEORY + '/ONE-PAGE.md', 'The one page'), (CANONICAL, 'The overview'), (CHAPTERS + '/README.md', 'The eight chapters'), (THEORY + '/results/THEORY-GRAPH.md', 'The theory graph'), (moves.current_path('MAP.md', ROOT), 'Broader theory map')])
-                  + '. Earlier catalogues: ' + ' · '.join(link(p, path, label) for p, label in [(THEORY + '/results/README.md', 'chapter readings of 8 October 2026 and later'), (THEORY + '/results/GENERATIVITY-CHAIN.md', 'the generativity chain, kept since 8 October 2026')]) + '.', '',
-                  '```sh', 'make research-check', 'make research-find QUERY=your-topic', 'make research-render', '```', '',
-                  'Default discovery excludes frozen copies and failed build attempts. Use `--archives` deliberately to include them. Checks concern metadata and evidence bindings; mathematical changes retain their actual Lean-build requirement.', '']
-        if path in history['documents']:
-            saved = history['documents'][path]
-            lines += [H('##', 'Preserved history', 'Preserved history / 完整历史'), '', link(saved['reading'], path, 'Previous full text with working links') + ' · ' + link(saved['raw'], path, 'Exact original bytes'), '',
-                      'The complete previous content remains preserved. This generated page is the current navigation; historical next steps retain their dated scope.', '']
-            # Root instructions are preserved through their own directive source, not a generated dashboard.
-            lines += preserved_anchors(path, history)
+        if kind == 'open':
+            # The reader's page keeps its old section anchors, with nothing to read, so an old link still lands here and is told where to go.
+            kept = ['discovery-and-evidence', 'discovery-and-evidence--检索与证据', 'preserved-history', 'preserved-history--完整历史']
+            kept += sorted(preserved_targets(path, history)) if path in history['documents'] else []
+            lines += ['---', ''] + anchor_lines(*[a.replace('"', '&quot;') for a in dict.fromkeys(kept) if not OWNER_SLUG.search(a)]) + ['',
+                      '*' + link(OPEN_KEPT, path, 'How this page is kept') + ': searching the repository, and this page\'s earlier versions with each of their sections.*', '']
+            outputs[OPEN_KEPT] = open_kept_page(history)
+        else:
+            lines += discovery_lines(path)
+            if path in history['documents']:
+                # Root instructions are preserved through their own directive source, not a generated dashboard.
+                lines += preserved_lines(path, history, path)
         outputs[path] = registry.finish(lines)
     return outputs
 

@@ -1,5 +1,7 @@
 # Where everything is
 
+[Home](README.md) · [中文](README.zh.md) · **Read** · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Uses](theories/becoming/USES.md) · **Check** · [Tests](TESTS.md) · [Results](RESULTS.md) · [Proofs](MAP.md#check-the-proofs-yourself) · [Open questions](OPEN-QUESTIONS.md) · [Reviewers](theories/becoming/review/README.md) · **See** · [Graph](theories/becoming/results/THEORY-GRAPH.md) · [Connections](theories/becoming/results/atlas/CROSSWALK.md) · [How it grew](theories/LINEAGE.md) · [Glossary](GLOSSARY.md) · [Where everything is](MAP.md)
+
 A guide for visitors: what this repository is, where to begin, how its history is kept and how to check the proofs yourself. It extends the map of 17 October 2026; the September corpus map, with the reading of the fifteen folders as strata of one argument and the 2 October "why and meaning" section, is kept verbatim in [history](_process/history/2026-09-consolidation/MAP.md).
 
 ## What this is

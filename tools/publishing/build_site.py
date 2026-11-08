@@ -6,11 +6,19 @@ under sources/ is refused. Each page is converted from its Markdown with the sta
 anchors GitHub gives them (tools/research/reading_catalogue.slug, which the repository's link check uses). A link to
 another page of the site becomes a link to its HTML; a link to any other tracked file goes to that file on GitHub as it
 stood at the build commit; a link to a path the repository does not track is shown as its text. Every link between pages
-of the site, anchor included, must resolve, or the build fails. At each result's anchor (`r-<record id>`) the page gets a
-small mark of the record's status, linked to the record. The home is README's generated first screen, verbatim, then
-the ways in that `site.ways_in` lists, each with its page's reading time. With `site.map`, the connection map is written
-by its generator's site mode (tools/research/connection_map.py), its links to pages of the site kept there. Nothing generated is committed: the site is
-written to tmp/site/ (untracked) or --out, and the Pages job builds it from main.
+of the site, anchor included, must resolve, or the build fails. At each result's anchor (`r-<record id>`), in a table cell
+or a list as at a line of its own, the page gets a small mark of the record's status, linked to the record. The home is
+README's generated first screen in its own words: its "Start with" paragraph comes last of its text, the ways in that
+`site.ways_in` lists come right after it, each with its reading time (`time` on a card says what the time is of), and the
+picture and its caption come after them. The pages of `site.chapters` get contents and previous and next links; the
+navigation line a generated page carries is dropped, the site having its own; `site.rewrites` changes the words of the pages a rule names, or of any page where a rule naming none matches, of named
+pages at build, where a frozen copy binds the source or the words are true only off the site, or adds a link only the site
+serves. With `site.map`, the
+connection map is written by its generator's site mode (tools/research/connection_map.py), its links to pages of the site
+kept there. Beside the pages the build writes search.json, read by a small script of its own (no external script), a
+404.html for a project site at /<repo>/ (`site.site_root` for another root), and a favicon. Nothing written may print a
+local path. Nothing generated is committed: the site is written to tmp/site/ (untracked) or --out, and the Pages job builds
+it from main.
 
 Run from the repository's root:  python3 tools/publishing/build_site.py [--out DIR] [--commit SHA]
 """
@@ -40,6 +48,21 @@ SAFE_ATTRS = {'href', 'src', 'id', 'name', 'alt', 'title', 'class', 'align', 'co
 MAX_PAGE = 2_000_000  # bytes of one built page; the connection map, which carries its data inline, is exempt
 STATUS_MARK = {'recorded-checked': 'Lean receipt', 'reviewed-scoped': 'reviewed at its scope', 'open': 'open target',
                'superseded': 'superseded', 'withdrawn': 'withdrawn'}
+RECORDS = 'theories/becoming/results/records/'
+# A path on someone's machine: a home folder, a mounted volume or a temporary folder, at a word's start or after a compiler's
+# -I or -L. One /tmp/ path is told to the reader, not someone's: MAP.md's `BECOMING_OUT=/tmp/becoming-run`, for a receipt
+# outside the repository. That exact string is all that passes.
+LOCAL_PATH = re.compile(r"(?:(?<![\w.~-])|(?<=(?<![\w./~-])-[IL]))"
+                        r"(?:/Users/[\w.-]+|/home/[\w.-]+/|/Volumes/[\w.-]+|/private/(?:tmp|var)/|/var/folders/|[A-Za-z]:\\Users\\"
+                        r"|(?<!/)~/[\w.-]|(?<!BECOMING_OUT=)/tmp/|/tmp/(?!becoming-run(?![\w./-])))")
+TEXT_WRITTEN = ('.html', '.svg', '.css', '.json', '.js')  # what the written-file scans read
+# A table is shown wider than the text at this many columns, or with a row this long; on a phone it stacks at three or more
+# columns with a row this long (short numeric cells read better scrolled than as a tall list of labels).
+WIDE_COLUMNS, WIDE_ROW, STACK_ROW = 5, 500, 120
+FAVICON = ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#8c2f1e"/>'
+           '<path d="M16 27V13M16 17c0-5 4-8 9-8 0 5-4 8-9 8zM16 21c0-4-3-7-8-7 0 4 3 7 8 7z" fill="#fbfaf7" stroke="#fbfaf7" '
+           'stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg>\n')
+RESULT_ANCHOR = re.compile(r'<a\b[^<>]*\b(?:id|name)="(r-[^"]+)"[^<>]*></a>')
 
 
 class SiteError(Exception):
@@ -191,6 +214,8 @@ class Page:
         self.title = None
         self.fn_order, self.fn_refs = [], {}
         self.first_heading = None
+        self.toc = []  # (level, id, plain text) of each heading
+        self.anchors, self.marked = set(), set()  # result anchors seen, and those given their record's mark
         text = strip_comments(text)
         lines = text.split('\n')
         lines = self._definitions(lines)
@@ -240,6 +265,7 @@ class Page:
             self.title = plain_title(text)
         if self.first_heading is None:
             self.first_heading = plain_title(text)
+        self.toc.append((level, ident, plain_title(text)))
         return f'<h{level} id="{html.escape(ident)}">{self.inline(text)}<a class="here" href="#{html.escape(ident)}" aria-label="Link to this section">#</a></h{level}>'
 
     def _record_mark(self, ident):
@@ -247,6 +273,7 @@ class Page:
         rec = self.records.get(rid)
         if not rec:
             return ''
+        self.marked.add(ident)
         status = rec.get('status', '')
         record = f'theories/becoming/results/records/{rid}.md'
         href = (relative(out_path(record), self.path) if record in self.links.pages
@@ -287,6 +314,7 @@ class Page:
                     self._id(ident)
                     out.append(f'<a id="{html.escape(ident)}"></a>')
                     if ident.startswith('r-'):
+                        self.anchors.add(ident)
                         mark = self._record_mark(ident)
                         if mark:
                             out.append(f'<div class="marks">{mark}</div>')
@@ -404,11 +432,17 @@ class Page:
         while i < len(lines) and lines[i].strip().startswith('|'):
             rows.append(split_row(lines[i]))
             i += 1
+        longest = max(sum(len(plain_title(c)) for c in r) for r in [head] + rows)
+        wide = len(head) >= WIDE_COLUMNS or (len(head) >= 3 and longest >= WIDE_ROW)
+        stack = len(head) >= 3 and longest >= STACK_ROW
+        labels = [plain_title(c) for c in head] if stack else []
 
         def cell(tag, c, k):
             a = align[k] if k < len(align) and align[k] else ''
-            return f'<{tag}' + (f' style="text-align:{a}"' if a else '') + f'>{self.inline(c)}</{tag}>'
-        t = '<div class="table"><table><thead><tr>' + ''.join(cell('th', c, k) for k, c in enumerate(head)) + '</tr></thead><tbody>'
+            label = f' data-label="{html.escape(labels[k])}"' if tag == 'td' and k < len(labels) and labels[k] else ''
+            return f'<{tag}{label}' + (f' style="text-align:{a}"' if a else '') + f'>{self.inline(c)}</{tag}>'
+        kinds = 'table' + (' wide' if wide else '') + (' stack' if stack else '')
+        t = f'<div class="{kinds}"><table><thead><tr>' + ''.join(cell('th', c, k) for k, c in enumerate(head)) + '</tr></thead><tbody>'
         for r in rows:
             r = (r + [''] * len(head))[:max(len(head), len(r))]
             t += '<tr>' + ''.join(cell('td', c, k) for k, c in enumerate(r)) + '</tr>'
@@ -453,7 +487,7 @@ class Page:
             if '\x00' not in t:
                 break
             t = re.sub(r'\x00(\d+)\x00', lambda m: keep[int(m.group(1))], t)
-        return t
+        return RESULT_ANCHOR.sub(lambda m: m.group(0) + self._record_mark(m.group(1)), t)  # a result's anchor in a cell, list or line
 
     def inline_text(self, text, keep):
         """A link's text: escaped and emphasized, placeholders kept for the outer pass."""
@@ -520,6 +554,8 @@ class Page:
                 value = new
             if key == 'id' or (key == 'name' and name == 'a'):
                 self._id(value)
+                if value.startswith('r-'):
+                    self.anchors.add(value)
             kept.append(f' {key}="{html.escape(value)}"')
         return f'<{name}{"".join(kept)}>'
 
@@ -632,7 +668,8 @@ def records(root=ROOT):
             d = json.loads(p.read_text())
         except ValueError:
             continue
-        out[d.get('id', p.stem)] = {'status': d.get('status', ''), 'title': (d.get('title') or {}).get('en', '')}
+        title = d.get('title') or {}
+        out[d.get('id', p.stem)] = {'status': d.get('status', ''), 'title': title.get('en', ''), 'title_zh': title.get('zh', '')}
     return out
 
 
@@ -667,6 +704,62 @@ def section_text(text, anchor):
     raise SiteError('site.ways_in names a section the page lacks: #' + anchor)
 
 
+NAV_ITEM = r'(?:\[[^\]]+\]\([^)\s]+\)|\*\*[^*]+\*\*)'
+NAV_LINE = re.compile(rf'^{NAV_ITEM}(?: · {NAV_ITEM})+\s*$')
+RECORD_STATUS = re.compile(r'^(`[^`]+` · )\*\*([a-z-]+)\*\*( · )', re.M)
+
+
+def strip_nav_line(text):
+    """A page's text without the navigation line generated pages carry under their title (a line of links joined by ' · ',
+    one of them to the home, or the home itself in bold on the page that is the home), the site having its own. Only one line
+    near the top goes; any other line of links stays."""
+    lines = text.split('\n')
+    for k, line in enumerate(lines[:20]):
+        if NAV_LINE.match(line) and re.search(r'\[(?:Home|首页)\]\(|\*\*(?:Home|首页)\*\*', line):
+            return '\n'.join(lines[:k] + lines[k + 1:])
+    return text
+
+
+def compile_rewrites(cfg, pages):
+    """`site.rewrites` as (the pages named or None, pattern, replacement, count). A rule with `page` (a path or a pattern in
+    one folder) must match on every page it names, so that a rule whose words have gone fails the build; one without changes
+    any page where it matches. A rule changes only the site's text: a frozen copy may bind the source."""
+    rules = []
+    for r in cfg.get('rewrites', []):
+        try:
+            pattern = re.compile(r['pattern'])
+        except (KeyError, re.error) as e:
+            raise SiteError(f'site.rewrites has a bad pattern: {r!r}: {e}')
+        named = None
+        if r.get('page'):
+            named = set(expand_pages([r['page']], set(pages))) & set(pages)
+            if not named:
+                raise SiteError('site.rewrites names a page not on the site: ' + r['page'])
+        rules.append((named, pattern, r.get('to', ''), int(r.get('count', 0))))
+    return rules
+
+
+def rewritten(path, text, rules):
+    for named, pattern, to, count in rules:
+        if named is None:
+            text = pattern.sub(to, text, count=count)
+        elif path in named:
+            text, n = pattern.subn(to, text, count=count)
+            if not n:
+                raise SiteError(f'site.rewrites: a rule for {path} no longer matches: {pattern.pattern}')
+    return text
+
+
+def site_text(path, text, rules=()):
+    """A page's Markdown as the site publishes it: rewritten as site.rewrites says, its generated navigation line dropped,
+    and on a record page the status said in words."""
+    text = strip_nav_line(rewritten(path, text, rules))
+    if path.startswith(RECORDS):
+        text = RECORD_STATUS.sub(lambda m: m.group(1) + '**' + navigation.STATUS_TEXT.get(m.group(2), m.group(2)) + '**' + m.group(3),
+                                 text, count=1)
+    return text
+
+
 def first_screen(readme: str) -> str:
     """README's generated first screen: from its status line (README's title, generated comment and navigation line left
     out, since the site has its own) to the opening's heading."""
@@ -676,12 +769,19 @@ def first_screen(readme: str) -> str:
     return '\n'.join(lines[start:end]).strip()
 
 
-def template(page_path, title, body, lang, cfg, commit, date, nav_html, source_href, home=False, dirty=False):
-    css = relative('assets/site.css', page_path) if page_path != 'index.html' else 'assets/site.css'
-    home_href = relative('index.html', page_path) if page_path != 'index.html' else 'index.html'
+def root_prefix(page_path):
+    """The relative way from a built page to the site's root: '' at the root, '../../' two folders down."""
+    folder = posixpath.dirname(out_path(page_path))
+    return '../' * (folder.count('/') + 1) if folder else ''
+
+
+def template(page_path, title, body, lang, cfg, commit, date, nav_html, source_href, home=False, dirty=False, base=None):
+    root = root_prefix(page_path)
+    css, home_href = root + 'assets/site.css', root + 'index.html'
     short = commit[:9]
     name = cfg.get('title', 'The Theory of Becoming')
     head_title = name if home else f'{title} · {name}'
+    changed = ', with local paths and words true only off the site changed at build' if cfg.get('rewrites') else ''
     return f'''<!doctype html>
 <html lang="{'zh-Hans' if lang == 'zh' else 'en'}">
 <head>
@@ -689,14 +789,16 @@ def template(page_path, title, body, lang, cfg, commit, date, nav_html, source_h
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{html.escape(head_title)}</title>
 <meta name="description" content="{html.escape(cfg.get('description', ''))}">
-<link rel="stylesheet" href="{css}">
+{f'<base href="{html.escape(base)}">' + chr(10) if base else ''}<link rel="stylesheet" href="{css}">
+<link rel="icon" href="{root}assets/favicon.svg" type="image/svg+xml">
+<script src="{root}assets/search.js" data-root="{root}" defer></script>
 </head>
 <body class="{'home' if home else 'page'} lang-{lang}">
-<header class="top"><a class="brand" href="{home_href}">{html.escape(name)}</a><nav aria-label="Pages">{nav_html}</nav></header>
+<header class="top"><a class="brand" href="{home_href}">{html.escape(name)}</a><nav aria-label="Pages">{nav_html}</nav><button class="find" type="button" hidden>{'搜索' if lang == 'zh' else 'Search'}</button></header>
 <main>
 {body}
 </main>
-<footer><p>Built from {'uncommitted edits on top of ' if dirty else ''}commit <a href="https://github.com/{cfg['repository']}/tree/{commit}"><code>{short}</code></a> of <a href="https://github.com/{cfg['repository']}">the repository</a> ({date}). Every page is converted from the repository's text; a link that leaves the site goes to the file as it stood at that commit. <a href="{html.escape(source_href)}">This page's source</a>.</p></footer>
+<footer><p>Built from {'uncommitted edits on top of ' if dirty else ''}commit <a href="https://github.com/{cfg['repository']}/tree/{commit}"><code>{short}</code></a> of <a href="https://github.com/{cfg['repository']}">the repository</a> ({date}). Every page is converted from the repository's text{changed}; a link that leaves the site goes to the file as it stood at that commit.{f' <a href="{html.escape(source_href)}">This page' + "'" + 's source</a>.' if source_href else ''}</p></footer>
 </body>
 </html>
 '''
@@ -737,28 +839,84 @@ def nav(cfg, page_path, pages, lang='en'):
     return ''.join(items)
 
 
-def home_body(cfg, links, recs, root):
-    screen = first_screen((root / 'README.md').read_text())
+def hours(time):
+    """A reading time too long to count in minutes, in hours: '1533–1992 minutes' as 'about 26–33 hours'."""
+    hi, lo = navigation.span(time)
+    if hi < 180:
+        return time
+    a, b = int(lo / 60 + 0.5), int(hi / 60 + 0.5)  # halves up, as navigation.reading_time rounds
+    return f'about {a} hours' if a == b else f'about {a}–{b} hours'
+
+
+def card_time(w, root, files):
+    """What a card says of the time it takes. By default the reading time of the part the card sends a reader to: `time_until`
+    a named line, or the section its anchor names, or the page. `time`, where a card has it, says what the time is of, with
+    fields that are computed, so that it cannot go stale: {time} the part just named, {whole} the card's whole page, {body} the
+    page without its footnotes or the marks that call them, the text README's first screen times as {{time:opening}},
+    {all:PATTERN} every file a pattern in one folder matches, together, in hours where they are that long, and {said:REGEX}
+    the first group of what the page itself states, where it times a part that is not a run of its text."""
+    target = w['path'].split('#')[0]
+    p = root / target
+    if not (p.is_file() and target.endswith('.md')):
+        return w.get('time', '')
+    whole = strip_nav_line(strip_comments(p.read_text()))
+    text = whole
+    if w.get('time_until'):  # the part a reader is sent to: up to the named heading line
+        assert w['time_until'] in text, ('site.ways_in times up to a heading the page lacks', target, w['time_until'])
+        text = text.split(w['time_until'], 1)[0]
+    elif '#' in w['path']:  # a card to one section: that section, to the next heading of its level or higher
+        text = section_text(text, w['path'].split('#', 1)[1])
+    part = navigation.reading_time(text)
+    if not w.get('time'):
+        return part + (f", {w['time_note']}" if w.get('time_note') else '')
+
+    def field(m):
+        if m.group(1) == 'time':
+            return part
+        if m.group(1) == 'whole':
+            return navigation.reading_time(whole)
+        if m.group(1) == 'body':
+            return navigation.reading_time(navigation.endnotes(whole).partition('\n### Notes\n')[0])
+        if m.group(1).startswith('said:'):
+            said = re.search(m.group(1)[len('said:'):], whole)
+            if not said:
+                raise SiteError(f'site.ways_in quotes a time {target} no longer states: ' + m.group(1))
+            return said.group(1)
+        matched = expand_pages([m.group(1)[len('all:'):]], files)
+        if not matched:
+            raise SiteError('site.ways_in times a pattern that matches nothing: ' + m.group(1))
+        return hours(navigation.reading_time('\n'.join(strip_nav_line(strip_comments((root / f).read_text())) for f in matched)))
+    return re.sub(r'\{(time|whole|body|all:[^}]+|said:[^}]+)\}', field, w['time'])
+
+
+def arrange_first_screen(blocks):
+    """The first screen's blocks of HTML as (its text, ending in its "Start with" paragraph, and its pictures with their
+    captions). Nothing is cut or reworded; the rule closing README's first screen is the one block the site does not need."""
+    text, pictures, start, k = [], [], [], 0
+    while k < len(blocks):
+        block = blocks[k]
+        k += 1
+        if block.startswith('<p><a class="picture"'):
+            pictures.append(block)
+            if k < len(blocks) and blocks[k].startswith('<p><em>'):
+                pictures.append(blocks[k])
+                k += 1
+        elif not start and 'Start with' in strip_tags(block):
+            start.append(block)
+        elif block != '<hr>':
+            text.append(block)
+    return text + start, pictures
+
+
+def home_body(cfg, links, recs, root, files, rules=()):
+    screen = first_screen(rewritten('README.md', (root / 'README.md').read_text(), rules))
     page = Page('README.md', screen, links, recs)
-    parts = [f'<section class="hero"><h1>{html.escape(cfg.get("title", "The Theory of Becoming"))}</h1>{page.html}</section>']
-    fig = cfg.get('figure')
-    if fig and (root / fig['path']).is_file():
-        src = links.resolve(fig['path'], 'README.md')
-        parts.append(f'<figure class="spine"><img src="{html.escape(src)}" alt="{html.escape(fig.get("alt", ""))}">'
-                     f'<figcaption>{Page("README.md", fig.get("caption", ""), links, recs).html}</figcaption></figure>')
+    text, pictures = arrange_first_screen(page.html.split('\n'))
+    parts = [f'<section class="hero"><h1>{html.escape(cfg.get("title", "The Theory of Becoming"))}</h1>' + '\n'.join(text) + '</section>']
     cards = []
     for w in cfg.get('ways_in', []):
         target = w['path']
-        p = root / target.split('#')[0]
-        time = ''
-        if p.is_file() and target.split('#')[0].endswith('.md'):
-            text = p.read_text()
-            if w.get('time_until'):  # the part a reader is sent to: up to the named heading line
-                assert w['time_until'] in text, ('site.ways_in times up to a heading the page lacks', target, w['time_until'])
-                text = text.split(w['time_until'], 1)[0]
-            elif '#' in target:  # a card to one section: that section, to the next heading of its level or higher
-                text = section_text(text, target.split('#', 1)[1])
-            time = navigation.reading_time(text) + (f", {w['time_note']}" if w.get('time_note') else '')
+        time = card_time(w, root, files)
         href = target if target in SPECIAL else links.resolve(target, 'README.md')
         if href is None:
             raise SiteError('site.ways_in names a path not in the repository: ' + target)
@@ -779,7 +937,192 @@ def home_body(cfg, links, recs, root):
     body = ''.join((f'<h3 class="group">{html.escape(g)}</h3>' if g else '') + '<ul class="cards">' + ''.join(grouped[g]) + '</ul>'
                    for g in order)
     parts.append('<section class="ways"><h2 id="ways-in">Ways in</h2>' + body + '</section>')
+    if pictures:
+        parts.append('<section class="picture">' + '\n'.join(pictures) + '</section>')
     return '\n'.join(parts), page.lang
+
+
+def contents_block(page):
+    """A page's contents from its h2 and h3 headings, an h3 under the h2 before it; on a phone only the h2s show."""
+    groups = []
+    for level, ident, text in page.toc:
+        if level == 2 or (level == 3 and not groups):
+            groups.append(((ident, text), []))
+        elif level == 3:
+            groups[-1][1].append((ident, text))
+    if not groups:
+        return ''
+
+    def link(ident, text):
+        return f'<a href="#{html.escape(ident)}">{html.escape(text)}</a>'
+    items = ''.join('<li>' + link(*head) + ('<ul>' + ''.join('<li>' + link(*h) + '</li>' for h in subs) + '</ul>' if subs else '') + '</li>'
+                    for head, subs in groups)
+    zh = page.lang == 'zh'
+    return f'<nav class="contents" aria-label="{"目录" if zh else "Contents"}"><p>{"目录" if zh else "Contents"}</p><ul>{items}</ul></nav>'
+
+
+def sequence_links(p, page, sequence, index, built):
+    """The line of previous, all and next that a page of a sequence carries at its top and foot."""
+    k, zh = sequence.index(p), page.lang == 'zh'
+
+    def link(target, cls, words):
+        return f'<a class="{cls}" href="{html.escape(relative(out_path(target), p))}">{html.escape(words)}</a>'
+    parts = []
+    if k:
+        parts.append(link(sequence[k - 1], 'prev', ('← 上一章：' if zh else '← Previous: ') + (built[sequence[k - 1]].title or '')))
+    if index:
+        parts.append(link(index, 'all', '全部八章（英文）' if zh else 'All chapters'))
+    if k + 1 < len(sequence):
+        parts.append(link(sequence[k + 1], 'next', ('下一章：' if zh else 'Next: ') + (built[sequence[k + 1]].title or '') + ' →'))
+    return f'<nav class="seq" aria-label="{"章节" if zh else "Chapters"}">{"".join(parts)}</nav>'
+
+
+def chapter_html(p, page, sequence, index, built):
+    """A chapter's body: the line of neighbours above its title and at its foot, its contents right under the title."""
+    line, body = sequence_links(p, page, sequence, index, built), page.html
+    if '</h1>' in body:
+        head, rest = body.split('</h1>', 1)
+        body = head + '</h1>\n' + contents_block(page) + rest
+    else:
+        body = contents_block(page) + '\n' + body
+    return line + '\n' + body + '\n' + line
+
+
+def search_index(built, recs):
+    """What the site's search reads: each page's title and headings, each result's name (a record page, its status said, its
+    id and Chinese title findable too). Only pages built go in, so it publishes nothing the pages do not."""
+    pages, results = [], []
+    for p, page in built.items():
+        rid = posixpath.basename(p)[:-3] if p.startswith(RECORDS) else None
+        if rid in recs:
+            rec = recs[rid]
+            results.append({'t': rec['title'] or page.title or rid, 'z': rec['title_zh'], 'u': out_path(p), 'a': rid,
+                            's': navigation.STATUS_TEXT.get(rec['status'], rec['status'])})
+        else:
+            pages.append({'t': page.title or posixpath.basename(p), 'u': out_path(p), 'h': [[text, ident] for level, ident, text in page.toc if level > 1]})
+    return {'pages': pages, 'results': results}
+
+
+SEARCH_JS = r"""/* The site's search over titles, headings and result names, from search.json. Text goes in as text, never as markup. */
+(function () {
+  var root = document.currentScript.getAttribute('data-root') || '';
+  var button = document.querySelector('button.find');
+  if (!button || !window.fetch) { return; }
+  var zh = document.documentElement.lang.indexOf('zh') === 0;
+  var say = zh ? {label: '搜索', hint: '标题、小节与成果名', none: '没有找到。', fail: '搜索要在网站上才能用，直接打开文件时用不了。', more: '只显示前 40 条。', result: '成果'}
+               : {label: 'Search', hint: 'Titles, sections and result names', none: 'Nothing found.', fail: 'Search works on the site, not on files opened directly.', more: 'Showing the first 40.', result: 'Result'};
+  var LIMIT = 40, panel, input, list, note, entries;
+  button.hidden = false;
+  button.setAttribute('aria-expanded', 'false');
+
+  function flatten(data) {
+    var out = [];
+    data.pages.forEach(function (p) {
+      out.push({text: p.t, under: '', href: p.u, key: p.t.toLowerCase(), rank: 3});
+      p.h.forEach(function (h) { out.push({text: h[0], under: p.t, href: p.u + '#' + h[1], key: h[0].toLowerCase(), rank: 2}); });
+    });
+    data.results.forEach(function (r) {
+      out.push({text: zh && r.z ? r.z : r.t, under: say.result + ' · ' + r.s, href: r.u, key: (r.t + ' ' + r.z + ' ' + r.a).toLowerCase(), rank: 3});
+    });
+    return out;
+  }
+  function load() {
+    if (entries) { return Promise.resolve(); }
+    return fetch(root + 'search.json').then(function (r) {
+      if (!r.ok) { throw new Error(String(r.status)); }
+      return r.json();
+    }).then(function (data) { entries = flatten(data); });
+  }
+  function find(query) {
+    var words = query.toLowerCase().split(/\s+/).filter(Boolean), hits = [];
+    if (!words.length || !entries) { return hits; }
+    entries.forEach(function (e) {
+      if (words.every(function (w) { return e.key.indexOf(w) >= 0; })) {
+        hits.push({e: e, score: e.rank * 2 + (e.key.indexOf(words[0]) === 0 ? 1 : 0)});
+      }
+    });
+    return hits.sort(function (a, b) { return b.score - a.score || a.e.text.length - b.e.text.length; });
+  }
+  function show() {
+    var hits = find(input.value);
+    list.textContent = '';
+    hits.slice(0, LIMIT).forEach(function (h) {
+      var li = document.createElement('li'), a = document.createElement('a');
+      a.href = root + h.e.href;
+      a.textContent = h.e.text;
+      if (h.e.under) {
+        var under = document.createElement('small');
+        under.textContent = h.e.under;
+        a.appendChild(under);
+      }
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+    note.textContent = input.value.trim() && !hits.length ? say.none : hits.length > LIMIT ? say.more : '';
+  }
+  function make() {
+    panel = document.createElement('div');
+    panel.className = 'find-panel';
+    panel.setAttribute('role', 'search');
+    input = document.createElement('input');
+    input.type = 'search';
+    input.placeholder = say.hint;
+    input.setAttribute('aria-label', say.label);
+    list = document.createElement('ul');
+    note = document.createElement('p');
+    note.setAttribute('role', 'status');
+    panel.appendChild(input);
+    panel.appendChild(note);
+    panel.appendChild(list);
+    document.body.appendChild(panel);
+    input.addEventListener('input', show);
+    // A hit on the page being read only moves the hash, and the panel would cover what was asked for. A click that opens a
+    // new tab leaves the reader here, with the list.
+    list.addEventListener('click', function (ev) {
+      if (ev.target.closest('a') && !ev.metaKey && !ev.ctrlKey && !ev.shiftKey) { hide(); }
+    });
+  }
+  function open() {
+    if (!panel) { make(); }
+    panel.hidden = false;
+    button.setAttribute('aria-expanded', 'true');
+    input.focus();
+    load().then(show).catch(function () { note.textContent = say.fail; });
+  }
+  function hide() {
+    panel.hidden = true;
+    button.setAttribute('aria-expanded', 'false');
+  }
+  function close() {
+    hide();
+    button.focus();
+  }
+  function isOpen() { return panel && !panel.hidden; }
+  button.addEventListener('click', function () { if (isOpen()) { close(); } else { open(); } });
+  document.addEventListener('keydown', function (ev) {
+    if (ev.key === 'Escape' && isOpen()) { close(); }
+    else if (ev.key === '/' && !ev.metaKey && !ev.ctrlKey && !ev.altKey && !/^(INPUT|TEXTAREA|SELECT)$/.test(ev.target.tagName)) { ev.preventDefault(); open(); }
+  });
+  document.addEventListener('click', function (ev) { if (isOpen() && !panel.contains(ev.target) && ev.target !== button) { close(); } });
+})();
+"""
+
+
+def site_root(cfg):
+    """The path the site is served under, for the one page that cannot be reached by a relative link: `site.site_root`, or
+    GitHub's project site /<repo>/ (a <user>.github.io repository is served at /)."""
+    if cfg.get('site_root'):
+        return cfg['site_root'].rstrip('/') + '/'
+    repo = cfg['repository'].split('/')[-1]
+    return '/' if repo.endswith('.github.io') else f'/{repo}/'
+
+
+def not_found_body(cfg, pages):
+    """The 404 page's text. GitHub serves it at whatever depth the address had, so its links are read from the site's root."""
+    zh = f' <a href="{html.escape(out_path("README.zh.md"))}" lang="zh-Hans">中文首页</a>' if 'README.zh.md' in pages else ''
+    where = f' <a href="{html.escape(out_path("MAP.md"))}">Where everything is</a> lists the rest.' if 'MAP.md' in pages else ''
+    return ('<h1>This page is not on the site</h1>\n<p>The address may be old or mistyped, or the file may be in the repository only. '
+            f'<a href="index.html">The home</a> has the ways in.{where}{zh}</p>')
 
 
 def expand_pages(entries, files):
@@ -828,6 +1171,11 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
                    ways_in=[dict(w, **({'zh': None} if unbuilt(w.get('zh')) else {}))
                             for w in cfg.get('ways_in', []) if not unbuilt(w['path'])])
     recs = records(root)
+    rules = compile_rewrites(cfg, pages)
+    chapters = cfg.get('chapters') or {}
+    sequence = expand_pages([chapters['pages']], set(pages)) if chapters.get('pages') else []
+    if chapters.get('index') and chapters['index'] not in pages:
+        raise SiteError('site.chapters names an index not in site.pages: ' + chapters['index'])
     date = subprocess.run(['git', 'show', '-s', '--format=%cs', commit], cwd=root, capture_output=True, text=True).stdout.strip() or commit
     if out.exists():
         shutil.rmtree(out)
@@ -836,9 +1184,11 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
     (out / 'assets' / 'site.css').chmod(0o644)
     built = {}
     for p in pages:
-        page = Page(p, (root / p).read_text(), links, recs)
+        page = Page(p, site_text(p, (root / p).read_text(), rules), links, recs)
         built[p] = page
-    home, home_lang = home_body(cfg, links, recs, root)
+    for p in sequence:
+        built[p].html = chapter_html(p, built[p], sequence, chapters.get('index'), built)
+    home, home_lang = home_body(cfg, links, recs, root, files, rules)
     # every link between pages of the site resolves, its anchor included
     broken = []
     home_ids = set(re.findall(r'\bid="([^"]+)"', home))
@@ -863,6 +1213,16 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
     (out / 'index.html').write_text(template('index.html', cfg.get('title', ''), home, home_lang, cfg, commit, date,
                                              nav(cfg, 'index.html', set(pages)), links.github('README.md'), home=True, dirty=dirty))
     written.append(out / 'index.html')
+    (out / '404.html').write_text(template('index.html', 'Page not found', not_found_body(cfg, set(pages)), 'en', cfg, commit, date,
+                                           nav(cfg, 'index.html', set(pages)).replace(' aria-current="page"', ''), None, dirty=dirty,
+                                           base=site_root(cfg)))
+    written.append(out / '404.html')
+    # the search's data and script, and the favicon: written here so that the scans below read them with the rest
+    for name, content in (('search.json', json.dumps(search_index(built, recs), ensure_ascii=False, separators=(',', ':'))),
+                          ('assets/search.js', SEARCH_JS), ('assets/favicon.svg', FAVICON)):
+        (out / name).write_text(content)
+        (out / name).chmod(0o644)
+        written.append(out / name)
     for a in sorted(assets):
         dest = out / a
         dest.parent.mkdir(parents=True, exist_ok=True)
@@ -880,22 +1240,32 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
                                                     on_site, home='index.html', nav=map_nav))
         made.rename(out / MAP_PAGE)
         tmp.rmdir()
+        drawn = (out / MAP_PAGE).read_text()
+        if '</head>' in drawn:  # the favicon is the one thing the map's own page does not have from its generator
+            (out / MAP_PAGE).write_text(drawn.replace('</head>', '<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">\n</head>', 1))
         written.append(out / MAP_PAGE)
         map_note = 'built'
     (out / '.nojekyll').write_text('')
-    # what was written: no page too large, no private path, nothing the push screen reads as a key
+    # what was written: no page too large, no private path, no local path, nothing the push screen reads as a key, and a mark
+    # at every result anchor that has a record
     problems = []
+    for p, page in built.items():
+        problems += [f"{p}: the result anchor #{ident} has no mark of its record's status"
+                     for ident in sorted(i for i in page.anchors if i[2:] in recs and i not in page.marked)]
     for w in written:
         rel = str(w.relative_to(out))
         if refused(rel, private):
             problems.append('a private path was written: ' + rel)
         if w.suffix == '.html' and w.name != MAP_PAGE and w.stat().st_size > MAX_PAGE:
             problems.append(f'{rel} is {w.stat().st_size} bytes, over {MAX_PAGE}')
-        if w.suffix in ('.html', '.svg', '.css'):
+        if w.suffix in TEXT_WRITTEN:
             text = w.read_text()
             hit = secrets.search(text)
             if hit:
                 problems.append(f'{rel} holds what the push screen reads as a key, at line {text[:hit.start()].count(chr(10)) + 1}')
+            hit = LOCAL_PATH.search(text)
+            if hit:  # a page whose text a frozen copy binds is redacted through site.rewrites, not edited
+                problems.append(f'{rel} prints a local path, at line {text[:hit.start()].count(chr(10)) + 1}: {hit.group(0)}')
             for ref in re.findall(r'\b(?:href|src)="([^"]+)"', text):
                 target = ref.split('#')[0]
                 gh = re.match(r'https://github\.com/[^/]+/[^/]+/(?:blob|tree|raw)/[0-9a-f]+/(.*)', target)

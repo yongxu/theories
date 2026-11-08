@@ -9,6 +9,11 @@ STALE = 'tmp/__strict-fresh-test__/INDEX.md'
 
 
 class StrictFreshTests(unittest.TestCase):
+    def setUp(self):
+        fronts = patch.object(navigation, 'validate_fronts', lambda records: [])  # these tests register no records
+        fronts.start()
+        self.addCleanup(fronts.stop)
+
     def run_check(self, strict_fresh):
         register = (registry.OUT / 'RESULT-REGISTER.md').relative_to(research.ROOT)
         calls = []

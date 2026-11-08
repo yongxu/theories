@@ -46,7 +46,7 @@ from urllib.parse import unquote
 ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
-from tools.research import paths, reading_catalogue, registry  # noqa: E402
+from tools.research import navigation, paths, reading_catalogue, registry  # noqa: E402
 
 ATLAS = 'theories/becoming/results/atlas'
 VOCABULARY = ATLAS + '/vocabulary.json'
@@ -964,7 +964,7 @@ def folders_page(atlas: dict) -> str:
              f'{est["label"]}% with a label or a target\'s role wrong and {est["fails"]}% with a wrong reading over all '
              f'{critic["entries"]} entries, folders and domains together; its fixes are applied, and the other entries were not '
              f'read again.') if est else ''
-    out = [GENERATED, '', '# The earlier theory folders', '',
+    out = [GENERATED, '', '# The earlier theory folders', '', navigation.nav_line(FOLDERS), '',
            FOLDERS_LEAD.replace('{n}', NUMBER_WORDS.get(len(folders), str(len(folders)))) + trust, '',
            '| Folder | Kind | Entries | ' + ' | '.join(carried) + ' | In the crosswalk |',
            '|---|---|---:|' + '---:|' * len(carried) + '---|']

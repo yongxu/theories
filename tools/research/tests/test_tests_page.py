@@ -65,7 +65,33 @@ class TestsPageTests(unittest.TestCase):
         self.assertIn('[AI reading]', page)
 
 
+    def test_results_are_said_to_be_by_setting_above_the_summary(self):
+        page = tests_page.render_page({'as_of': '2026-11-08', 'tests': [ROW]})
+        self.assertLess(page.index('Results here are by setting'), page.index('## By thesis'))
+        self.assertIn("class is read by the rule stated under that class's heading", page)
+        # a row can hold more than one setting: MQ1 (simulation) two organisms, IN1's rounds two models each
+        self.assertIn('each row is one test in the setting or settings it names', page)
+        self.assertNotIn('one test in one setting', page)
+
+    def test_thesis_counts_are_of_the_rows_naming_a_thesis(self):
+        rows = [dict(ROW, id='A'), dict(ROW, id='B', thesis='T1, T2', outcome='mixed'), dict(ROW, id='C', thesis='', outcome='failed')]
+        (self.root / 'theories/becoming/results/data').mkdir(parents=True)
+        (self.root / tests_page.DATA).write_text(json.dumps({'tests': rows}))
+        self.assertEqual(tests_page.thesis_counts(self.root), {'total': 2, 'failed': 1, 'mixed': 1})
+
+
 class RepositoryDataTests(unittest.TestCase):
+    def test_the_rows_counted_as_never_run_have_no_run_date(self):
+        rows = json.loads((ROOT / tests_page.DATA).read_text())['tests']
+        self.assertTrue(set(tests_page.NEVER_RAN) <= set(tests_page.CLASS_KEYS))
+        never = [r for r in rows if r['outcome'] in tests_page.NEVER_RAN]
+        self.assertTrue(never)
+        self.assertEqual([r['id'] for r in never if r['run']], [])
+
+    def test_the_counts_add_up_to_the_rows_naming_a_thesis(self):
+        tallied = tests_page.thesis_counts()
+        self.assertEqual(sum(n for k, n in tallied.items() if k != 'total'), tallied['total'])
+
     def test_the_repository_tests_quote_their_folders(self):
         p = ROOT / tests_page.DATA
         if not p.is_file():
