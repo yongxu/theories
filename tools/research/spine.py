@@ -755,9 +755,10 @@ def svg(graph, s, lang, info=None):
         soft = [pt for other in L['curves'] if other is not c and other not in mates for pt in halo[id(other)]] + spoke_soft
         hard = obstacles + [(x, y, r + 1) for o in mates for x, y, r in under[id(o)]]
         # either side of the curve: nearest_is keeps a count by its own curve rather than its pair's other one
-        strict = hard + [pt for o in L['curves'] if o is not c and o not in mates and o['kind'] == 'formal-reuse' for pt in halo[id(o)]]
-        box = place_box(along(c['point'], 0.5), w, h, strict, boxes + [l[0] for l in labels], pad=0.0, soft=soft,
-                        accept=nearest_is(c))
+        # the count's box already pads its digits by about 3 px, so the other solid curves' strokes (not their halos) bound it
+        strict = hard + [pt for o in L['curves'] if o is not c and o not in mates and o['kind'] == 'formal-reuse' for pt in under[id(o)]]
+        box = place_box(along(c['point'], 0.5, offsets=(0, 3, 6, 9, 12, 15, 18, 21, 24)), w, h, strict, boxes + [l[0] for l in labels],
+                        pad=0.0, soft=soft, accept=nearest_is(c))
         if not all(clear_of_circle(box, o) for o in strict):  # no place clear of every solid curve: the fewest crossings
             box = place_box(along(c['point'], 0.5), w, h, hard, boxes + [l[0] for l in labels], pad=0.0, soft=soft,
                             accept=nearest_is(c))
@@ -924,7 +925,7 @@ def standings_svg(s, lang):
         lines = [(l, 15, 'bold', INK) for l in wrap(head, width, lang)]
         lines += [(l, 14, 'normal', MUTED) for l in wrap(gloss, width + 4, lang)] if gloss else []
         if example:
-            decl, words_of = example['declaration'], norm(example[lang][1])
+            decl, words_of = example['declaration'], norm(example[lang][1]) + ((' ' if lang == 'en' else '') + example['note'][lang] if example.get('note') else '')
             lead = (f'{words["example_only" if count == 1 else "example"]} {decl}{words["in_law"] if example.get("in_law") else ""}'
                     f'{"：" if lang == "zh" else ": "}{words_of}')
             lines += [(l, 14, 'normal', INK) for l in wrap(lead, width + 4, lang)]
@@ -995,7 +996,7 @@ def description(results, pairs, s, lang, modules=None):
         spokes = '；'.join(f'{s["chapters"][k]["zh"]} {modules[k][0]} 个中 {modules[k][1]} 个' for k in order if k in modules)
         return (f'八章围绕文法排成一圈，按其结果数定大小（{sizes}）。'
                 f'章与章之间共有 {total} 次记为 formal-reuse 的使用，画出 {drawn} 个至少 {DRAW_MIN} 次的配对；{total} 次中有 {backward} 次是逆向的，'
-                f'即章序在前的一章的结果使用章序在后的一章的结果，有 {DRAW_MIN} 次或以上的配对画得较深（章的编号是为阅读，不是证明的次序）。'
+                f'即章序在前的一章的结果使用章序在后的一章的结果，其所在配对有 {DRAW_MIN} 次或以上时画得较深（章的编号是为阅读，不是证明的次序）。'
                 + (f'每章到文法的辐条，示该章在文法上陈述其律的核心模块（{spokes}）。' if spokes else '')
                 + (f'{sum(n.values())} 项核心声明相对于根之边的地位：{n.get("derived", 0)} 项推导而得，{n.get("under a stated hypothesis", 0)} 项在一个所述的假设之下，'
                    f'{n.get("counting", 0)} 项为计数，{sum(n.values()) - n.get("derived", 0) - n.get("under a stated hypothesis", 0) - n.get("counting", 0)} 项处于一个指明的距离。' if n else '')
@@ -1207,7 +1208,7 @@ def shared_laws_section(s, rel, lang):
                           f'因为一行可以依于多条：“{caps[6]["zh"]}”（[08 §7]({link})）。最后一栏是 08 §7 所计的、这些行中其编译后的类型或值达到文法的行数；'
                           f'126 行中有 {reach} 行达到文法，其中 {no_anchor} 行不依于任何锚，所以依于一条共律的有 {reach - no_anchor} 行；这一栏相加为 {sum(reaching_the_grammar(n, c) or 0 for n, _, _, c in rows)}，多于 {reach - no_anchor}，是因为一行可以依于多条律，{names["Finite runs"]}的各行也依于{names["Closure"]}。'
                           f'它说的是一行编译后的类型或值达到什么，不是说该行是这条律的一个情形：被读作文法之律之情形的，只有上面的十一项，'
-                          f'另有一项 `GroupEnding.Flow.all_end` 在一个所述的假设之下被读作其模型上的一个根形式。', '']
+                          f'另有一项 `GroupEnding.Flow.all_end` 在一个所述的假设之下被读作根形式 `RootForms.outside_leaves_no_offspring` 的一步。', '']
     out = ['### The five shared laws', '',
            f'A shared law states a mechanism many central results share, at the lowest layer that holds it ([08 §7]({link})); the name '
            f'ranks no law above another.', '',
@@ -1218,7 +1219,7 @@ def shared_laws_section(s, rel, lang):
                       f'([08 §7]({link})). The last column is 08 §7\'s count of those rows whose compiled type or value reaches the grammar; of the 126 rows, '
                       f'{reach} reach it, {no_anchor} of them on no anchor, so {reach - no_anchor} on a shared law; the column adds to {sum(reaching_the_grammar(n, c) or 0 for n, _, _, c in rows)}, '
                       f'more than {reach - no_anchor}, because a row can rest on several laws, the finite-run rows on closure too. It says what a row\'s compiled type or value reaches, not that the row is a case of the law: only the eleven above are '
-                      f'read as cases of grammar laws, and one, `GroupEnding.Flow.all_end`, as a root form at its model under a stated hypothesis.', '']
+                      f'read as cases of grammar laws, and one, `GroupEnding.Flow.all_end`, as the root form `RootForms.outside_leaves_no_offspring` at one step, under a stated hypothesis.', '']
 
 
 def circular_paragraph(graph, lang):

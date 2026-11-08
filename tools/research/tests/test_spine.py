@@ -132,8 +132,12 @@ class Checking(unittest.TestCase):
         self.assertIn('the example of "derived", RelativePosition.rise_needs_fall, stands as \'counting\'', errors)
         self.assertIn('the example of "derived" quotes two records', errors)
         s = spine.spec()
-        s['first_view']['bands'][2]['example']['en'][1] = s['first_view']['bands'][2]['example']['zh'][1] = 'a part'
-        self.assertTrue(any('is not in a law of its record naming RelativePosition.rise_needs_fall' in e for e in spine.check(s)))
+        ex = s['first_view']['bands'][2]['example']
+        ex['en'][1], ex['zh'][1] = 'A nonempty family has a greatest part', '非空的族有一个最大的部分'  # the record's other law
+        errors = spine.check(s)
+        for lang in ('en', 'zh'):
+            self.assertIn(f'the example of "counting" is not in a law of its record naming RelativePosition.rise_needs_fall ({lang})', '\n'.join(errors))
+        self.assertFalse(any('no longer holds' in e for e in errors))
         s = spine.spec()
         s['first_view']['bands'][0]['gloss_also']['en'][1] = 'a clause the glossary does not hold'
         self.assertTrue(any('a clause the glossary does not hold' in e for e in spine.check(s)))
@@ -142,7 +146,9 @@ class Checking(unittest.TestCase):
         svg = spine.standings_svg(spine.spec(), 'en')
         self.assertIn('It is GroupEnding.Flow.all_end:', svg)
         self.assertIn('For example, Flow.beyond_gives_nothing:', svg)
-        self.assertIn('the case rests on an AI-written', svg)
+        self.assertIn('the case rests on that review,', svg)
+        self.assertIn('which is AI-written', svg)
+        self.assertIn("(the closure: a formation's feeding closure)", svg.replace('&#x27;', "'").replace('&apos;', "'"))
         self.assertIn("RelativePosition.rise_needs_fall, in its record's law:", svg)
         self.assertIn('rows list 126, nine declarations twice, so 117 distinct', spine.standings_svg(spine.spec(), 'en').replace('\n', ' '))
 
@@ -194,6 +200,14 @@ class Drawing(unittest.TestCase):
                 self.assertGreater(other, gap(c) + spine.LEAD - 0.5, (lang, c['n']))
                 for circle in info['circles']:
                     self.assertTrue(spine.clear_of_circle(box, circle), (lang, c['n'], circle))
+                # the box, which pads the digits, clears the stroke of every other solid curve but its pair's
+                mates = [o for o in info['curves'] if o is not c and {o['from'], o['to']} == {c['from'], c['to']}]
+                for o in info['curves']:
+                    if o is c or o in mates or o['kind'] != 'formal-reuse':
+                        continue
+                    half = 0.4 + 0.4 * math.sqrt(o['n'])
+                    for i in range(201):
+                        self.assertTrue(spine.clear_of_circle(box, (*o['point'](i / 200), half + 1)), (lang, c['n'], o['from'], o['to']))
                 for block in info['boxes']:
                     self.assertFalse(spine.overlaps(box, block), (lang, c['n'], block))
             placed = [box for _, box in info['counts']]

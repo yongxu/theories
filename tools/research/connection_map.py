@@ -258,7 +258,7 @@ def _ledes_zh(data: dict) -> str:
            f'其中 {num(carried.get("carried", 0))} 条承继，{num(carried.get("carried-in-part", 0))} 条部分承继，{num(carried.get("changed", 0))} 条改变（本论另有说法）；'
            f'{num(carried.get("fresh-reading", 0))} 条是此处提出的新读法：本论没有陈述，由读者在此提出这一连接；'
            f'{num(carried.get("not-carried", 0))} 条未承继，{num(carried.get("history-only", 0))} 条仅存于历史。'
-           f'每一条线都是 AI 的读法，不是人的。{num(T["relation"].get("agreement", 0))} 处相合中，{num(of.get("law", 0))} 处与一条已核验的律相合，'
+           f'每一条线都是 AI 的读法，没有人的。{num(T["relation"].get("agreement", 0))} 处相合中，{num(of.get("law", 0))} 处与一条已核验的律相合，'
            f'{num(of.get("thesis-or-method", 0))} 处与一个论题或方法相合，{num(of.get("reading", 0))} 处依于读者的接合。'
            '一条线不是证明，共用一个词不是对应，相合画得并不比相分更显眼。'
            f'{num(T["from_knowledge"])} 条条目依于 AI 对一份不存于此处之文本的了解，未对照该文本核验。')
@@ -436,7 +436,7 @@ OV_TEXT = {
     'zh': {'title': '早先的文件夹与各思想领域怎样与现行的本论相接',
            'lede': ('由 connection_map.py 依对照表的 {n} 条主张画出，每一条都对照现行的本论来读。一条线把一个早先的文件夹或一个思想领域，',
                     '连到它的主张所对照的本论那一部分。图中文字为 AI 所译，义以英文版为准。'),
-           'ai': ('每一条线都是 AI 的读法，不是人的。一条线不是证明；相合画得并不比相分更显眼。', ''),
+           'ai': ('每一条线都是 AI 的读法，没有人的。一条线不是证明；相合画得并不比相分更显眼。', ''),
            'critic': '随机复核 {sampled} 条，据此估计全部 {n} 条中约 {label}% 的标签或目标角色有误，约 {fails}% 的读法有误。',
            'folders': '{n} 个早先的文件夹', 'claims': '主张', 'parts': '它们所对照的本论各部分',
            'domains': '{n} 个思想领域', 'sep': ' · ',

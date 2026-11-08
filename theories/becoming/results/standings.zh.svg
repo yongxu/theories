@@ -20,9 +20,9 @@
 <rect x="174" y="154" width="12" height="12" rx="1.5" fill="#1c1917" stroke="#57534e" stroke-width="0.6"/>
 <text x="286" y="165" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">11 项推导而得</text>
 <text x="286" y="183" font-size="14" text-anchor="start" fill="#57534e">各为文法之律的一个情形，经由在 Lean 中作为等价核验的桥接与审阅所读的支持（某行</text>
-<text x="286" y="201" font-size="14" text-anchor="start" fill="#57534e">载有它们之处）；这一情形依于一次 AI 写成的审阅</text>
+<text x="286" y="201" font-size="14" text-anchor="start" fill="#57534e">载有它们之处）；这一情形依于该审阅，它是 AI 写成的</text>
 <text x="286" y="219" font-size="14" text-anchor="start" fill="#1c1917">例如 Flow.beyond_gives_nothing：闭包之外的形成在某步在场时，在该步不向闭包成员</text>
-<text x="286" y="237" font-size="14" text-anchor="start" fill="#1c1917">当时所需的条件给予</text>
+<text x="286" y="237" font-size="14" text-anchor="start" fill="#1c1917">当时所需的条件给予（闭包指一个形成的供给闭包）</text>
 <rect x="24" y="260" width="12" height="12" rx="1.5" fill="#57534e" stroke="#57534e" stroke-width="0.6"/>
 <text x="286" y="271" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">1 项在一个所述的假设之下</text>
 <text x="286" y="289" font-size="14" text-anchor="start" fill="#57534e">根形式 RootForms.outside_leaves_no_offspring 的一步</text>
@@ -155,7 +155,7 @@
 <text x="24" y="804" font-size="12.5" text-anchor="start" fill="#57534e">每项声明的地位见根之边的记录（one-root-to-its-edge）：42 项有文字的依据，在其数据中，其余 75 项是规则所给的</text>
 <text x="24" y="820" font-size="12.5" text-anchor="start" fill="#57534e">标签；凡其律中列有某项声明的记录，其页面印出该声明的地位及其所依。08 §7 的地位表对“陈述中有平衡”（附一例）、</text>
 <text x="24" y="836" font-size="12.5" text-anchor="start" fill="#57534e">“依于数量”“为其模型之律”三类未列理由，并依 F5 已核验的项定出在一个被表示的模型上的 16 项与在其自身的载体上的</text>
-<text x="24" y="852" font-size="12.5" text-anchor="start" fill="#57534e">6 项：这些项是在同一记录的某一行于一个模型上陈述的定理，在核心运行中核验过。根之边、推导而得、指明的距离这</text>
-<text x="24" y="868" font-size="12.5" text-anchor="start" fill="#57534e">几个词，见 GLOSSARY.zh.md。</text>
+<text x="24" y="852" font-size="12.5" text-anchor="start" fill="#57534e">6 项：这些项是在一个模型上陈述同一记录中某一行的定理；核心运行核验 Lean 能显示的部分，一个定理陈述的确是其</text>
+<text x="24" y="868" font-size="12.5" text-anchor="start" fill="#57534e">行，是读者的判断。根之边、推导而得、指明的距离这几个词，见 GLOSSARY.zh.md。</text>
 <text x="24" y="888" font-size="12.5" text-anchor="start" fill="#57534e">图中文字为 AI 所译，义以英文版为准。由 tools/research/spine.py 依 shared-laws.json 与 spine.json 画出。</text>
 </svg>

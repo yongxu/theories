@@ -89,7 +89,7 @@
    "claimed": "What it claimed",
    "stands": "What of it stands",
    "growth_heading": "Growth in the records",
-   "growth_intro": "The records' history entries by the week of their leading date, to the page's cut ({cut}): {total} dated entries; {undated} with no leading date, and any dated after the cut, left out. An entry is a dated note of a change to a result, so the count measures changes recorded, not results.",
+   "growth_intro": "The records' history entries by the week of their leading date, to {cut}, the date of the commit counted above: {total} dated entries; {undated} with no leading date, and any dated later, left out. An entry is a dated note of a change to a result, so the count measures changes recorded, not results.",
    "week_of": "Week of (Monday)",
    "entries": "Entries",
    "growth": "Grey bars: the records' history entries by week (largest week {top}).",
@@ -113,10 +113,10 @@
    "chosen": "**How the points were chosen.** AI readers gathered 12 to 14 points for each period (2021 to 2025; 2026 to 4 October; the rest of October; the first week of November), an adversarial reader checked each, and a third, following [its instruction](../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rw-spine/workflows/2-lineage-finalize.js), kept at most nine or ten for each, \"the real turning points, where vocabulary, method, structure or standing changed\"; seven more follow the selection mechanism, and three come from the papers, among them the review packet. Every period stands at its cap, so no period's count says how much happened then.",
    "strands": "**What the points follow.** Of the {total}, {on_threads} lie on the three threads followed below (the selection mechanism, the root and the ethics) and {on_none} on none. Their evidence cites the README or files of {cited} of the {folders_n} earlier folders; material of others may come in through `sources/`. What became of each folder is in [the crosswalk]({crosswalk}); most folders' own histories are in their READMEs' genealogy sections ([the folders]({folders})).",
    "threads_key": "Rings, the threads followed below:",
-   "arc_short": "**The arc in brief.** The first writings (2021–2023) diagnose the city as a structure, define possibility in an ontology of change and name molochs a community faces. In 2024–2025 a selection mechanism forms: one value as power's token, a loop selecting pure capital optimizers, a meta-attractor capturing selection's mechanisms. In 2026 the question becomes humans' future in a winner-takes-all game with AI; a Fork narrative is proposed and left, 間 becomes the one primitive, Lean a checker. By 6 October the writings are gathered into theory folders, the repository's first pre-specified predictions written. In October the theory of becoming is named, its ethics' premises (the continuation condition for scope, C for order) separated, and a plan roots it in a grammar. In November tests of formations that read are frozen before any run; T2's former wording fails on beetle cultures, T2 is narrowed, and AI readers read the earlier folders against the account.",
+   "arc_short": "**The arc in brief.** The first writings (2021–2023) diagnose the city as a structure, define possibility in an ontology of change and name molochs a community faces. In 2024–2025 a selection mechanism forms: one value as the token of power, a loop selecting pure capital optimizers, a meta-attractor capturing selection's mechanisms. In 2026 the question becomes humans' future in a winner-takes-all game with AI; a Fork narrative is proposed and left, 間 becomes the one primitive, Lean a checker. By 6 October the writings are gathered into theory folders, the repository's first pre-specified predictions written. In October the theory of becoming is named, its ethics' premises (the continuation condition for scope, C for order) separated, a plan rooting it in a grammar. In November tests of formations that read are frozen before any run; T2's former wording fails on beetle cultures, T2 is narrowed, and AI readers read the earlier folders against the account.",
    "labels_all": "{label}: all {n} so far (none yet labelled {others})",
    "marks_note": "A point's height carries no meaning: it keeps marks apart and lifts a titled point above its neighbours; a bold title is a point on one of the threads; each grey bar is one week of the records' history entries, labelled with its Monday.",
-   "folders_table": "Each earlier folder, by the dated span of the material it draws on, as AI readers found it in the folder's own text (one gathered the ends and two others found eleven of them wrong, since corrected: [the read](../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rw-spine/reads/folder-dates.json)), each end linked to its line; its kind and claims in the crosswalk; and the two parts of the account its drawn claims are most read against (a claim read against several parts counting at each, a tie going to the lower chapter number), as the map counts them:",
+   "folders_table": "Each earlier folder, by the dated span of the material it draws on, as AI readers found it in the folder's own text (one gathered the ends and two others found eleven of them wrong, since corrected: [the read](../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rw-spine/reads/folder-dates.json)), each end linked to its line (where a line gives only a source's window, its end); its kind and claims in the crosswalk; and the two parts of the account its drawn claims are most read against (a claim read against several parts counting at each, a tie going to the lower chapter number), as the map counts them:",
    "folders_columns": [
     "Folder",
     "Its material, dated",
@@ -153,7 +153,7 @@
    "claimed": "它主张什么",
    "stands": "其中什么仍成立",
    "growth_heading": "记录中的增长",
-   "growth_intro": "各记录的历史条目，按其开头日期所在的周计，截至本页的截止日（{cut}）：有日期的 {total} 条；没有开头日期的 {undated} 条，以及截止日之后的条目，不计。一个条目是对一项结果之改动的一条带日期的记载，所以这个计数量的是记下的改动，而不是结果。",
+   "growth_intro": "各记录的历史条目，按其开头日期所在的周计，截至{cut}（上文计数的那次提交的日期）：有日期的 {total} 条；没有开头日期的 {undated} 条，以及此后的条目，不计。一个条目是对一项结果之改动的一条带日期的记载，所以这个计数量的是记下的改动，而不是结果。",
    "week_of": "周（自周一）",
    "entries": "条目",
    "growth": "灰条：各记录的历史条目，按周计（最多的一周 {top} 条）。",
@@ -182,7 +182,7 @@
    "arc_short": "**弧线简述。** 最早的文字（2021–2023）把城市诊断为一种结构，在一种关于变化的存在论中定义可能性，并把 molochs 列为一个社群面对的挑战。2024–2025 年，一种选择机制成形：一种价值被选作权力的象征，一个环选出纯粹的资本优化者，一个元吸引子捕获选择机制本身。2026 年，问题成为：在一场与 AI 的赢者通吃的游戏中，人类怎样还有未来；一种分岔叙事被提出又被放下，間成为唯一原语，Lean 成为检验器。到 10 月 6 日，诸篇写作被汇入各理论文件夹，本仓库最早的预先给定的预测写成。10 月，生灭变化之论得名，伦理的两个前提（定范围的延续条件、定次序的 C）被分开，一份计划把本论植根于一种文法。11 月，关于读取之形成的各项检验在任何运行之前冻结；T2 原先的表述在甲虫培养中未通过，T2 被收窄，AI 读者把早先各文件夹对着本论来读。",
    "labels_all": "{label}：迄今全部 {n} 个；尚无「{others}」",
    "marks_note": "一个点的高度不表示什么：它只让标记不相重叠，并把带标题的点抬到其邻点之上；粗体标题是线索上的点；每一根灰条是各记录一周的历史条目，以该周的星期一标注。",
-   "folders_table": "每个早先的文件夹：它所取材料的日期跨度，由 AI 读者在该文件夹自己的文字中找出（一位找出两端，另两位指出其中十一个有误，已更正：[这次读取](../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rw-spine/reads/folder-dates.json)），两端各链到其所在行；它在对照表中的类别与主张数；以及它画出的主张最多对照的本论两部分（一条主张对照几个部分，就在每一部分各计一次；并列时取章号较小者），按连接图的计数：",
+   "folders_table": "每个早先的文件夹：它所取材料的日期跨度，由 AI 读者在该文件夹自己的文字中找出（一位找出两端，另两位指出其中十一个有误，已更正：[这次读取](../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rw-spine/reads/folder-dates.json)），两端各链到其所在行（某行只给出来源的时段时，取其末端）；它在对照表中的类别与主张数；以及它画出的主张最多对照的本论两部分（一条主张对照几个部分，就在每一部分各计一次；并列时取章号较小者），按连接图的计数：",
    "folders_columns": [
     "文件夹",
     "其材料的日期",
@@ -192,7 +192,7 @@
     "对照表中"
    ],
    "folder_page": "其后如何（英文）",
-   "translation": "*AI 依英文版写成，尚无人审查的记录；义以英文版为准。*"
+   "translation": "*AI 依英文版写成，尚无人审查它的记录；义以英文版为准。*"
   }
  },
  "points": [

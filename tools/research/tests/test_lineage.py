@@ -77,6 +77,10 @@ class Tree(unittest.TestCase):
         self.assertIn('no longer holds', errors)
         self.assertIn('names no point zz', errors)
 
+    def test_the_live_arc_in_brief_is_at_most_150_words(self):
+        words = json.loads((ROOT / lineage.DATA).read_text(encoding='utf-8'))['words']['en']['arc_short']
+        self.assertLessEqual(len(words.replace('**The arc in brief.** ', '').split()), 150)
+
     def test_history_by_week_reads_both_date_forms(self):
         weeks, undated = lineage.history_by_week()
         self.assertEqual(weeks, {dt.date(2026, 10, 26): 2, dt.date(2026, 11, 2): 1})
