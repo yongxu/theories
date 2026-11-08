@@ -634,7 +634,7 @@ def section(graph, page_path):
              f'([08 §7]({rel(cap[0]["home"], cap[0]["anchor"])})). And "{cap[5]["text"]}"; "{cap[3]["text"]}" '
              f'([08 §7]({rel(cap[3]["home"], cap[3]["anchor"])})). Reaching the grammar is that dependence of a '
              f'declaration\'s compiled type or value; being derived is a standing, a declaration read as a case of grammar '
-             f'laws through bridges checked in Lean and, where a row has them, support the review reads. So 45 and 11 count '
+             f'laws through bridges checked in Lean as equivalences and support the review reads where a row has them. So 45 and 11 count '
              f'different things, and the curves draw neither. Nor does a spoke: it counts modules that state their laws '
              f'on the grammar, not results that reach it.', '',
              '### Edge kinds between chapters', '',

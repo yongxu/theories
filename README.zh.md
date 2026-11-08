@@ -22,7 +22,7 @@
 
 ![围绕一套文法的八章](theories/becoming/results/spine.zh.svg)
 
-*117 个核心声明中，11 个由文法推出（其余的地位见 [08 §7](theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge)）；这幅图显示什么、不显示什么，见理论图的 [The spine](theories/becoming/results/THEORY-GRAPH.md#the-spine)（英文）；本说明[怎样长成](theories/LINEAGE.zh.md)。*
+*117 个核心声明中，11 个推导而得，按审阅的读法各为文法之律的一个情形（Lean 核验了其中什么，以及其余的地位，见 [08 §7](theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge)）；这幅图显示什么、不显示什么，见理论图的 [The spine](theories/becoming/results/THEORY-GRAPH.md#the-spine)（英文）；本说明[怎样长成](theories/LINEAGE.zh.md)。*
 
 ## 从哪里读起
 

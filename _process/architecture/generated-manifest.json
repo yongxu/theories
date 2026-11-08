@@ -4,7 +4,7 @@
     "DEPENDENCIES.md": "d1c14e144d46062d800ee393d99025d2e33597d2c4e5696d0fe286a9d68401f5",
     "GOALS.md": "681f73aa8cdd4aeb9eec371a990a208865d41583c63fea2d53c1776b5deef212",
     "OPEN-QUESTIONS.md": "b0ef758e75748322803eec31294a08d7c3a91a348190c411d73ea0a14b932c4b",
-    "README.md": "89989972a54f9e2a78f4638686cd53edf9f51fbf0d7110efd3ab718b4d8e0053",
+    "README.md": "4315aebb2a3282f2bcf7fb6854774731555b1d5101b1f14fe57b216bf27c3323",
     "RESEARCH.md": "52fcfb1406d176665ee4662a234939495c0284fd8fc581e6f6434a3749fa8f2f",
     "RESULTS.md": "65b41f6a9530b07a248454f6abc4c45e8d0969f8bf9694fd68aec82e676bf20d",
     "TESTS.md": "efa53e94c3f3c24c881c72347afc60b542aa7f2ebcd6d225d5a7125e8bd184a0",
@@ -28,7 +28,7 @@
     "theories/becoming/results/README.md": "b96a63d5af9830bb8e40fe23e937f369a172d9d8017926a027ddf82422646430",
     "theories/becoming/results/RESULT-REGISTER.md": "062e5a30a5630b2c143f9fd523684faeb086373ff214e34975b836f1b6552b01",
     "theories/becoming/results/ROADMAP.md": "e6e81d222aa24caa1c4a1c94f8b6bfe462d61b2a07421d6728d2235aed6d8001",
-    "theories/becoming/results/THEORY-GRAPH.md": "0b8d4e38be091872d2e681cd80e51de3ebf52abf413f0cb0103ce712f89be5d6",
+    "theories/becoming/results/THEORY-GRAPH.md": "7c39f1780490b5ede4af72f10fe576d0ad18408070aeeab3981665a3c223fc92",
     "theories/becoming/results/atlas/ATLAS.md": "a810900aaf6e6f78240e494e08ca9dfd5df43021912de40864662ea053c0dda6",
     "theories/becoming/results/atlas/CROSSWALK.md": "4d17edaabcf77e3f5e0a8d0f0218c26b195eb4a2f11f7345938167339caa3427",
     "theories/becoming/results/atlas/crosswalk/abrahamic-islamic.md": "eb582ffe28418af7e7513e5a14350b9a14ae1b021467be5844c1c07e04695c32",
@@ -654,7 +654,7 @@
     "theories/becoming/results/records/wisdom-root.md": "7163cb507136db3259f71b8f4fb767b79519ccc461254df27ee754738e80560f",
     "theories/becoming/results/records/worlds-are-runs.md": "aed2bb06229953f98bcbd991753f42844ce99263b0e98dee61d5c082ff53c1fe",
     "theories/becoming/results/spine.svg": "c408d29eb11e5b3334c0607412a12717dd559b916cb12160f34743e066506043",
-    "theories/becoming/results/spine.zh.svg": "7b607b9cbdbd50bda1e66bc6c74d870a930db3235f3ac84cc88d68b3356eb5cb",
+    "theories/becoming/results/spine.zh.svg": "09970d0077a1307ccdb8878e81575f919e63b318b0e0658ec8e1b7202f0fbf48",
     "theories/lineage.svg": "a1c857796a6af93b0d71affab10a5fc05949de3ab55a0402e2b66e79045d7f9b",
     "theories/lineage.zh.svg": "5222a8ad3170b89f4ada3d485cdbf48aea8d5dccc549232f076e32a26122e18e"
   }

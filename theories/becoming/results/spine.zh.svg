@@ -10,9 +10,10 @@
 <rect x="0.5" y="0.5" width="899" height="1218" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
 <text x="24" y="40" font-size="24" font-weight="bold" text-anchor="start" fill="#1c1917">围绕一个文法的八章</text>
 <text x="24" y="66" font-size="15" text-anchor="start" fill="#57534e">由理论图画出：每个圆按其章的结果数定大小，每条曲线计一章的结果使用另一章结果的次数。</text>
-<rect x="20" y="76" width="860" height="52" rx="6" fill="#f5f5f4" stroke="#e7e5e4"/>
+<rect x="20" y="76" width="860" height="72" rx="6" fill="#f5f5f4" stroke="#e7e5e4"/>
 <text x="32" y="93" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">117 项核心声明相对于一根之边的地位（08 §7）：</text>
-<text x="32" y="113" font-size="15" text-anchor="start" fill="#1c1917">11 项推导而得 · 1 项在一个所述的假设之下 · 6 项为计数，在文法之下 · 99 项处于一个指明的距离</text>
+<text x="32" y="113" font-size="15" text-anchor="start" fill="#1c1917">11 项推导而得 · 1 项在一个所述的假设之下 · 6 项为计数，位于文法以下 · 99 项处于一个指明的距</text>
+<text x="32" y="133" font-size="15" text-anchor="start" fill="#1c1917">离</text>
 <line x1="330" y1="392.6" x2="330" y2="508" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="3.7" stroke-linecap="round"/>
 <line x1="446.6" y1="443.4" x2="366.8" y2="523.2" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2.7" stroke-linecap="round"/>
 <line x1="490.1" y1="560" x2="382" y2="560" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2.4" stroke-linecap="round"/>
