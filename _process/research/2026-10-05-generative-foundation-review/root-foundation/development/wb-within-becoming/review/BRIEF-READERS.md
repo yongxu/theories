@@ -28,3 +28,13 @@ Two corrections from astra's inventory hold over UNDERSTANDING's own wording:
 The opening (`theories/becoming/OPENING.md`) is Ren's first person, revised in place on argument. Its heading names each revised passage. Check that the names match what changed.
 
 **Report:** a table, one row per finding: file; line; quoted (25 words at most); severity (high, medium, low); what is wrong; the exact replacement. High first. Then at most 300 words on patterns. Say what you read in full.
+
+## Round 1 (9 November 2026, branch tip `223f917bc`)
+
+The diff, sentence by sentence (`kit/sentence_diff.py main 223f917bc`): [diff-round1.txt](diff-round1.txt), about 230 KB. Read all of it. Each block names the file and line in the branch; `-` is main's sentence, `+` the branch's, `…` an unchanged neighbour. For any block whose context you need, open the file in `/Users/ren/tmp/wb/homes` at that line.
+
+Secondary: [diff-round1-records.txt](diff-round1-records.txt), the records' and the crosswalk's changes. Most record blocks are re-pointed source hashes (skip those); read the changed `claim`, `summary`, `scope` or `reading` sentences and the 9 November history notes, and the crosswalk's re-said `says` and `reading` fields.
+
+Not in the diff, by design: the before-copies under `theories/becoming/history/` and `_process/history/`; generated pages (the crosswalk's pages, RESULTS, OPEN-QUESTIONS, README, the indexes), which the render writes from what is in the diff.
+
+Write your report to `review/readers/round1-<your name>.md` only if you can write files; otherwise return it as your answer.
