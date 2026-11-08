@@ -5,7 +5,7 @@
     "GOALS.md": "546f0989ed4faad545bd81c64ec4a4e129515716ff7b71e5b6e7178da9492827",
     "OPEN-QUESTIONS.md": "aca6e3267133126b8dfba6cc6d7ffa87e9c8c52aa4700479300c725733ae59eb",
     "README.md": "d87e7cda3a572f896324819549ad071e2bd98fdd0821fe0537a25fb0a04a77a0",
-    "README.zh.md": "5089158d3bb363da74398d2bf8993adae2d70402bbd67b5c92c60ec4f8107c83",
+    "README.zh.md": "a815b1017cb870ff2eb460f1092b6b286a8ffcf86b0b325de0c848f97689c3d9",
     "RESEARCH.md": "9daf6b0a0d6d23980374a8a2c4d8e9630b3ce94bb6ce0750f726542e481fb03f",
     "RESULTS.md": "b6d0c0f173f9207e0e0bc97c0123fe29705d89a95288f2e19b7eac7f9ddb6aa2",
     "TESTS.md": "5201f058e3b61e7e919020cc1ca880d52f2f898a4f232d961f731c54f03fd2fd",
@@ -17,7 +17,7 @@
     "_process/research/README.md": "68233965ad9ccbfb40d67859194a33a082ac52f9fba1ef1d2f12ca0ff1e61a81",
     "sources/README.md": "7d7f527445db2f40df09fbfd363c9ec321c410b4f4a4b08cfe857f804482c1e6",
     "theories/LINEAGE.md": "b568852b1ca17cdebecbdb4f084cc7f7a30fe54c300400654b537b5c901a7cf9",
-    "theories/LINEAGE.zh.md": "59336f230acc970a1df438d961a4d801b73df312ec45a360f9fc7a63eecb11e7",
+    "theories/LINEAGE.zh.md": "74dc448ce84aae5ebfbc09658186bf38e3ae686c7e2412b21a010bc700871948",
     "theories/README.md": "af3335c3ed9ab5963e28371e97ba015c90328297a5d6c97686fb46c5413ece66",
     "theories/becoming/README.md": "b3513d54641060993f2f4608f64598618397f23b1945b896964fad722b579e81",
     "theories/becoming/chapters/CLAIMS.md": "233b2f6278ef3d9271ddc5d1833349786747d6fe18b1ca63c85bd2268eea91aa",
@@ -1341,6 +1341,6 @@
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/164.zh.md": "2cc51a4c7d54608fd4b503b40ba05da792b7daa72f975c0ab0d3ececfb4d5707",
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/165.zh.md": "38459952a806b35fa7ebe2aaa75d853a9bafd6b86d3ae30fca88b5f7ebdb5a90",
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md": "c9aa1e6dcaf1d8c7d293d7107d38a0b7f456fde41dbefaf2823fa08ab5d0be19",
-    "TESTS.zh.md": "822140dcee8064415c29a42ad602da558957acf487022ab1a4d918684bf83584"
+    "TESTS.zh.md": "23611c2d4bf22495f379b7fc0929c23057ae323544f1ff42a2c3ade1fbb48254"
   }
 }
