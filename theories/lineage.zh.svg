@@ -33,9 +33,9 @@
 <rect x="747.3" y="584.0" width="7" height="13.9" fill="#a8a29e"/>
 <rect x="827.3" y="584.0" width="7" height="9.2" fill="#a8a29e"/>
 <text x="950.0" y="659.0" font-size="13" text-anchor="end" fill="#57534e">灰条：各记录的历史条目，按周计（最多的一周 1810 条）。</text>
-<path d="M180.9,481.0 L212.4,481.0 L274.1,498.0 L295.1,481.0 L406.2,481.0 L681.9,498.0 L747.3,498.0" fill="none" stroke="#0072B2" stroke-width="1.8" stroke-dasharray="5 3"/>
-<path d="M66.9,481.0 L385.9,447.0 L389.7,464.0 L588.4,498.0 L719.3,481.0" fill="none" stroke="#E69F00" stroke-width="1.8" stroke-dasharray="5 3"/>
-<path d="M374.7,498.0 L388.2,481.0 L607.1,498.0 L691.2,481.0 L784.7,498.0 L802.7,481.0 L950.0,498.0" fill="none" stroke="#CC79A7" stroke-width="1.8" stroke-dasharray="5 3"/>
+<path d="M180.9,481.0 L212.4,481.0 L274.1,498.0 L295.1,481.0 L406.2,481.0 L681.9,464.0 L747.3,498.0" fill="none" stroke="#0072B2" stroke-width="1.8" stroke-dasharray="5 3"/>
+<path d="M66.9,481.0 L385.9,447.0 L389.7,464.0 L588.4,498.0 L719.3,464.0" fill="none" stroke="#E69F00" stroke-width="1.8" stroke-dasharray="5 3"/>
+<path d="M374.7,498.0 L388.2,481.0 L607.1,498.0 L691.2,498.0 L784.7,498.0 L802.7,481.0 L950.0,498.0" fill="none" stroke="#CC79A7" stroke-width="1.8" stroke-dasharray="5 3"/>
 <circle cx="51.5" cy="498.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
 <circle cx="66.9" cy="481.0" r="7" fill="#1c1917" stroke="#E69F00" stroke-width="2.4"/>
 <circle cx="120.9" cy="498.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
@@ -67,12 +67,12 @@
 <circle cx="607.1" cy="498.0" r="7" fill="#ffffff" stroke="#CC79A7" stroke-width="2.4"/>
 <circle cx="663.2" cy="498.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
 <circle cx="672.5" cy="481.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="681.9" cy="498.0" r="7" fill="#ffffff" stroke="#0072B2" stroke-width="2.4"/>
-<circle cx="691.2" cy="481.0" r="7" fill="#ffffff" stroke="#CC79A7" stroke-width="2.4"/>
-<circle cx="691.2" cy="464.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="719.3" cy="481.0" r="7" fill="#ffffff" stroke="#E69F00" stroke-width="2.4"/>
+<circle cx="681.9" cy="464.0" r="7" fill="#ffffff" stroke="#0072B2" stroke-width="2.4"/>
+<circle cx="691.2" cy="498.0" r="7" fill="#ffffff" stroke="#CC79A7" stroke-width="2.4"/>
+<circle cx="691.2" cy="481.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="719.3" cy="464.0" r="7" fill="#ffffff" stroke="#E69F00" stroke-width="2.4"/>
 <circle cx="719.3" cy="498.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="728.6" cy="464.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="728.6" cy="481.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
 <circle cx="747.3" cy="498.0" r="7" fill="#ffffff" stroke="#0072B2" stroke-width="2.4"/>
 <circle cx="784.7" cy="498.0" r="7" fill="#1c1917" stroke="#CC79A7" stroke-width="2.4"/>
 <circle cx="802.7" cy="481.0" r="7" fill="#ffffff" stroke="#CC79A7" stroke-width="2.4"/>
@@ -102,9 +102,9 @@
 <text x="471.8" y="394.0" font-size="14" text-anchor="start" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">22 · 语料汇入理论文件夹</text>
 <line x1="588.4" y1="472.0" x2="588.4" y2="421.0" stroke="#57534e" stroke-width="1"/>
 <text x="588.4" y="416.0" font-size="14" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">27 · 生成变化之论得名</text>
-<line x1="681.9" y1="489.0" x2="681.9" y2="377.0" stroke="#0072B2" stroke-width="1"/>
+<line x1="681.9" y1="455.0" x2="681.9" y2="377.0" stroke="#0072B2" stroke-width="1"/>
 <text x="687.9" y="372.0" font-size="14" font-weight="bold" text-anchor="end" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">32 · 脊柱上的捕获</text>
-<line x1="719.3" y1="472.0" x2="719.3" y2="355.0" stroke="#E69F00" stroke-width="1"/>
+<line x1="719.3" y1="455.0" x2="719.3" y2="355.0" stroke="#E69F00" stroke-width="1"/>
 <text x="725.3" y="350.0" font-size="14" font-weight="bold" text-anchor="end" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">35 · 文法作为根</text>
 <line x1="747.3" y1="489.0" x2="747.3" y2="333.0" stroke="#0072B2" stroke-width="1"/>
 <text x="753.3" y="328.0" font-size="14" font-weight="bold" text-anchor="end" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">38 · T7 的桥接不成立</text>

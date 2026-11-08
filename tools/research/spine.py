@@ -197,9 +197,13 @@ def check(s):
                for name, _, _, count in laws if reaching_the_grammar(name, count) is None]
     if rows_reaching() is None:
         errors.append('08 §7 no longer says how many of the 126 rows reach the grammar, and how many on no anchor')
+    last_three = [d for d, *_ in derived_rows()[-3:]]
+    after = method_section_7().split('the eight connected rows', 1)[-1]
+    if not all(f'`{d}`' in after for d in last_three):
+        errors.append(f'08 §7 no longer names {last_three} after the eight connected rows; THEORY-GRAPH says all but the last three')
     if len(derived_rows()) != 11:
         errors.append(f'the edge record has {len(derived_rows())} derived declarations; THEORY-GRAPH says eleven')
-    if standing and str(central_total()) not in [n for n, *_ in standing['counts']]:
+    if standing and str(central_total()) != standing['counts'][0][0]:
         errors.append(f'the shared-laws data places {central_total()} central declarations; the standing line counts otherwise')
     holds(METHOD, "every model's law in a row is proved from it, except balance's, which the grammar represents and does not derive")
     return errors
@@ -952,7 +956,7 @@ def shared_laws_section(s, rel, lang):
     total = sum(r[3] for r in rows)
     link = rel(METHOD, 'shared-laws-and-connectivity')
     rested = re.search(r'(\d+) rest on at least one', caps[6]['text']).group(1)
-    reach, no_anchor = rows_reaching() or ('?', '?')
+    reach, no_anchor = rows_reaching() or (0, 0)
     column = "every model's law in a row is proved from it, except balance's, which the grammar represents and does not derive"
     cells = {name: cell for name, cell in shared_laws_cells()}
     if lang == 'zh':
@@ -964,7 +968,7 @@ def shared_laws_section(s, rel, lang):
         return out + ['', f'第三栏照录 08 §7 的原文：它指明该律在 `Becoming.GrammarLaws` 中的陈述以及锚如何读它；用 08 §7 的话说，“{column}”'
                           f'（表中一行里每个模型之律都由它证明，平衡除外，文法表示平衡而不推导它）。这些计数相加为 {total}，多于依于至少一条的 {rested} 行，'
                           f'因为一行可以依于多条：“{caps[6]["zh"]}”（[08 §7]({link})）。最后一栏是 08 §7 所计的、这些行中其编译后的类型或值达到文法的行数；'
-                          f'126 行中有 {reach} 行达到文法，其中 {no_anchor} 行不依于任何锚，这一栏相加更多，是因为一行可以依于多条律，{names["Finite runs"]}的各行也依于{names["Closure"]}。'
+                          f'126 行中有 {reach} 行达到文法，其中 {no_anchor} 行不依于任何锚，所以经由一条律达到的有 {reach - no_anchor} 行；这一栏相加为 {sum(reaching_the_grammar(n, c) or 0 for n, _, _, c in rows)}，多于 {reach - no_anchor}，是因为一行可以依于多条律，{names["Finite runs"]}的各行也依于{names["Closure"]}。'
                           f'它说的是一行编译后的类型或值达到什么，不是说该行是这条律的一个情形：被读作文法之律之情形的，只有上面的十一项，'
                           f'另有一项 `GroupEnding.Flow.all_end` 在一个所述的假设之下被读作其模型上的一个根形式。', '']
     out = ['### The five shared laws', '',
@@ -975,8 +979,8 @@ def shared_laws_section(s, rel, lang):
     return out + ['', f'The third column, in 08 §7\'s words, names the law\'s statement in `Becoming.GrammarLaws` and how the anchor reads it: "{column}". '
                       f'These counts add to {total}, more than the {rested} rows that rest on at least one, because a row can rest on several: "{caps[6]["text"]}" '
                       f'([08 §7]({link})). The last column is 08 §7\'s count of those rows whose compiled type or value reaches the grammar; of the 126 rows, '
-                      f'{reach} reach it, {no_anchor} of them on no anchor, and the column adds to more because a row can rest on several laws, the finite-run rows '
-                      f'on closure too. It says what a row\'s compiled type or value reaches, not that the row is a case of the law: only the eleven above are '
+                      f'{reach} reach it, {no_anchor} of them on no anchor, so {reach - no_anchor} through a law; the column adds to {sum(reaching_the_grammar(n, c) or 0 for n, _, _, c in rows)}, '
+                      f'more than {reach - no_anchor}, because a row can rest on several laws, the finite-run rows on closure too. It says what a row\'s compiled type or value reaches, not that the row is a case of the law: only the eleven above are '
                       f'read as cases of grammar laws, and one, `GroupEnding.Flow.all_end`, as a root form at its model under a stated hypothesis.', '']
 
 
@@ -996,21 +1000,22 @@ def circular_paragraph(graph, lang):
             f'references, and no tool checks that the Lean there uses the cited result.']
 
 
-def how_to_read(s, lang):
+def how_to_read(s, lang, page='theories/becoming/ONE-PAGE.md'):
     """The two sentences above the picture wherever it is shown: what its marks are, and the standings in plain words,
     the numbers from 08 §7's phrases in spine.json (the one-page fronts copy them, and a test holds them to this)."""
     n = {phrase_n: int(phrase_n) for phrase_n, *_ in s['standing']['counts']}
+    wf = os.path.relpath(WORKFLOW, Path(page).parent)
     total, d, h, c, rest = n['117'], n['11'], n['1'], n['6'], n['99']
     share = (d + h) / total
     if lang == 'zh':
         about = '约十分之一' if 0.085 <= share <= 0.115 else f'{d + h} 项'
-        return (f'每个圆是一章，按其结果数定大小；从一章到另一章的实线，计其结果使用另一章结果、记为 formal-reuse（RESULT-WORKFLOW 把这一类留给'
+        return (f'每个圆是一章，按其结果数定大小；从一章到另一章的实线，计其结果使用另一章结果、记为 formal-reuse（[RESULT-WORKFLOW]({wf}) 把这一类留给'
                 f'已核验的推理；它由 AI 写成的记录指定，没有任何检查核对一次使用是否见于 Lean）的次数，章与章之间的虚线与点线是别种依赖；辐条标出该章有多少核心模块在中央的文法上陈述其律（计的是模块，'
                 f'不是推导而得的结果）。{total} 项核心声明中，{about}被读作在文法上陈述之律的情形（{d} 项推导而得，{h} 项为根上一形式（root form）的一步情形，'
                 f'在一个所述的假设之下）；其余或为计数之律，位于文法以下（{c} 项），或处于一个指明的距离，各有其理由（{rest} 项）。')
     about = 'About a tenth' if 0.085 <= share <= 0.115 else f'{d + h}'
     return (f'Each circle is a chapter, sized by its results; a solid curve from one chapter to another counts the uses of '
-            f'the other\'s results recorded as formal-reuse, the kind RESULT-WORKFLOW keeps for verified inferences (the AI-written records '
+            f'the other\'s results recorded as formal-reuse, the kind [RESULT-WORKFLOW]({wf}) keeps for verified inferences (the AI-written records '
             f'assign it, and nothing checks a use against the Lean), and dashed and dotted '
             f'curves between chapters are other dependences; a spoke says how many of the chapter\'s core modules state their laws on the '
             f'grammar at the centre (modules, not results derived). {about} of the {total} central declarations are read as '
@@ -1063,7 +1068,7 @@ def lead(graph, page_path):
     counts_by = {n: phrase for n, path, phrase in st.get('counts', [])}
     m08 = 'theories/becoming/chapters/08-METHOD.md'
     lines = ['<a id="the-spine"></a>', '', '## The chapters at a glance', '',
-             f'**How to read it.** {how_to_read(s, "en")}', '',
+             f'**How to read it.** {how_to_read(s, "en", page_path)}', '',
              f'![The eight chapters and their recorded uses of one another: circles sized by their results, solid curves counting formal-reuse uses '
              f'between chapters\' results and dashed and dotted ones other dependences, the continuation condition and C coming into chapter 7 as premises, and T1 to T8 at their '
              f'homes coloured by test outcome]({rel(SVG["en"])})', '',
@@ -1148,7 +1153,7 @@ def section(graph, page_path):
              f'**What it shows.** Each circle is a chapter\'s region, its area proportional to the results the region '
              f'holds; the centre is the grammar ({concepts} concepts). A solid curve from one chapter to another counts uses of '
              f'the second\'s results by the first\'s under `formal-reuse`, which [RESULT-WORKFLOW]({rel(WORKFLOW)}) keeps '
-             f'for "a verified inference using the cited result": the records, AI-written ("Made with AI, proofs included", [the one page]({rel("theories/becoming/ONE-PAGE.md")})), assign the kind, the registry checks that an interface has its fields '
+             f'for "a verified inference using the cited result": the records, made with AI ("Made with AI, proofs included", [the one page]({rel("theories/becoming/ONE-PAGE.md")})), assign the kind, the registry checks that an interface has its fields '
              f'and cites a file among the record\'s hashed references (on {iface:,} of all {formal:,} such edges; each cites a Lean file), and nothing checks that the Lean there uses the cited result. Darker curves are an earlier chapter\'s results using a '
              f'later one\'s: {len(back)} of the {len(drawn)} pairs drawn'
              + (f', the largest {name[biggest[0]].lower()} to {name[biggest[1]].lower()} with '
@@ -1229,7 +1234,7 @@ def zh_page(graph):
     m08 = 'theories/becoming/chapters/08-METHOD.md'
     iface, formal_edges = interface_counts(graph)
     body = ['## 各章一览', '<a id="the-spine"></a>', '',
-            f'**怎样读它。** {how_to_read(s, "zh")}', '',
+            f'**怎样读它。** {how_to_read(s, "zh", PAGE_ZH)}', '',
             f'![八章及其彼此记录下的使用：圆按结果数定大小，实线计各章结果之间记为 formal-reuse 的使用，章与章之间的虚线与点线是别种依赖，两个前提进入第七章，各在所用之处为假设，T1 到 T8 '
             f'在其所属之处按检验结局着色]({rel(SVG["zh"])})', '',
             f'*由 `tools/research/spine.py` 依理论图与 [spine.json]({rel(DATA)}) 生成；[英文图]({rel(SVG["en"])})。*', '',
@@ -1266,7 +1271,7 @@ def zh_page(graph):
     body += ['', '### 这幅图显示什么、不显示什么', '<a id="the-spine-what-it-shows-and-does-not-show"></a>', '',
              f'**它显示什么。** 每个圆是一章的区域，面积与该区域所含结果数成正比；中央是文法（{concepts} 个概念）。从甲章到乙章的'
              f'实线，计甲章的结果在 `formal-reuse` 之下使用乙章结果的次数，[RESULT-WORKFLOW]({rel(WORKFLOW)}) 把这一类留给'
-             f'“使用所引结果的已核验推理”：这一类由 AI 写成的记录指定（[一页](../ONE-PAGE.zh.md)说本说明“借助 AI 写成”）；登记检查核对接口具备其字段，并引用记录中带散列的参考文献之一（全部 {formal_edges} 条这样的边中有 {iface} 条，所引的都是 Lean 文件）；没有任何检查核对那里的 Lean 是否确实使用所引的结果。较深的曲线是章序在前的一章的结果使用章序在后的一章的结果：所画 {len(drawn)} 个配对中有 {len(back)} 个'
+             f'“使用所引结果的已核验推理”：这一类由 AI 写成的记录指定（[一页](../ONE-PAGE.zh.md)说它“借助 AI 做成，证明也在内”）；登记检查核对接口具备其字段，并引用记录中带散列的参考文献之一（全部 {formal_edges} 条这样的边中有 {iface} 条，所引的都是 Lean 文件）；没有任何检查核对那里的 Lean 是否确实使用所引的结果。较深的曲线是章序在前的一章的结果使用章序在后的一章的结果：所画 {len(drawn)} 个配对中有 {len(back)} 个'
              + (f'，最大的是「{zname(biggest[0])}」到「{zname(biggest[1])}」，{formal[biggest]} 次' if biggest else '') + '。'
              f'章与章之间的虚线是 `interpretive`，留给“论证上的依赖”；点线是 `application`；`related` 是 RESULT-WORKFLOW 留给类比的，不画出'
              f'（{related} 条边）。不画作 formal-reuse 曲线的：少于 {DRAW_MIN} 次 formal-reuse 使用的 {len(small)} 个配对（共 '

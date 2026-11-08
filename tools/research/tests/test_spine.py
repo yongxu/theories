@@ -254,6 +254,26 @@ class Tables(unittest.TestCase):
             self.assertEqual(spine.rows_reaching(), (5, 1))
             self.assertEqual(spine.shared_laws_cells(), [('Closure', '`«a»`'), ('Balance', 'represented both ways, not derived')])
 
+    def test_check_stops_when_the_counts_the_page_reads_move(self):
+        real, s = spine._read, spine.spec()
+        record = {'boundary': {'standings': [
+            {'declaration': f'Becoming.X.{k}', 'standing': 'derived', 'law': [], 'basis': {'en': 'A case.'}} for k in 'ab']}}
+
+        def moved(path):
+            if path == spine.METHOD:
+                return real(path).replace('Of the 126 rows, ', 'Of the rows, ')
+            if path == spine.EDGE_RECORD + '.json':
+                return json.dumps(record)
+            if str(path) == str(spine.registry.SHARED_LAWS):
+                return json.dumps({'boundary': {'groups': {'on the edge': 2, 'distances': 97}}})
+            return real(path)
+        with mock.patch.object(spine, '_read', moved):
+            errors = '\n'.join(spine.check(s))
+        self.assertIn('no longer says how many of the 126 rows reach the grammar', errors)
+        self.assertIn('the edge record has 2 derived declarations', errors)
+        self.assertIn('the shared-laws data places 99 central declarations', errors)
+        self.assertIn('after the eight connected rows', errors)
+
     def test_a_cycle_among_recorded_uses_is_found(self):
         g = {'edges': [{'from': 'a', 'to': 'b', 'type': 'formal-reuse'}, {'from': 'b', 'to': 'c', 'type': 'formal-reuse'},
                        {'from': 'c', 'to': 'a', 'type': 'formal-reuse'}, {'from': 'c', 'to': 'd', 'type': 'formal-reuse'},

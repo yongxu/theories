@@ -36,7 +36,7 @@ RECORDS = 'theories/becoming/results/records'
 CORRESPONDENCES = 'theories/becoming/results/atlas/entries/correspondences.json'
 CROSSWALK_PAGE = 'theories/becoming/results/atlas/CROSSWALK.md'
 CROSSWALK_PAGE_ZH = 'theories/becoming/results/atlas/CROSSWALK.zh.md'
-MARK_REACH = 9  # a mark's half-width with its stroke: a leader nearer than this to another mark's centre passes through it
+MARK_REACH = 10  # a mark's half-width with its stroke: a leader nearer than this to another mark's centre passes through it
 LABELS = ('public', 'private', 'reconstruction')
 # Who wrote what states a turning point (RW's re-score, Q4): the fill of its mark in the picture (a dot at its centre where not stated).
 ORIGINS = ('person', 'drafted', 'ai', 'unstated')

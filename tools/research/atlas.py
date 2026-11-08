@@ -931,6 +931,18 @@ ZH_DOMAINS = (('cxg-chinese-classical', '中国古典思想',
               ('cxg-buddhist', '佛教思想', '就本说明已经到达之处而言；佛教论书的读法也在[第六章](../../chapters/06-CLASSICAL-TEXTS.md)'))
 
 
+def _no_relation_zh(entries: list, relation: dict) -> str:
+    """The Chinese of _no_relation, from the same counts."""
+    none = Counter(e['carried'] for e in entries if not e.get('relation'))
+    kept = Counter(e['carried'] for e in entries if e.get('relation') and e['carried'] in ABSENT)
+    parts = '，'.join(f'{ZH_CARRIED.get(k, k)} {n}' for k, n in sorted(none.items(), key=lambda kv: -kv[1]))
+    out = f'各关系相加为 {sum(n for _, n in relation.values()):,}，其余 {sum(none.values())} 条没有关系（{parts}）。'
+    if kept:
+        out += (f'另有 {sum(kept.values())} 条{"、".join(ZH_CARRIED.get(k, k) for k in sorted(kept))}者有关系，[连接图](map.html)把它们画作一个短端而非一条线，'
+                f'但其分组计数包含它们。')
+    return out
+
+
 def crosswalk_zh_page(atlas: dict) -> str:
     """CROSSWALK.zh.md: the crosswalk's front for a Chinese reader: what it is and is not, how far to trust it, its
     counts, the picture, and the two domains nearest the Chinese texts, the entries themselves on the English pages."""
@@ -967,7 +979,7 @@ def crosswalk_zh_page(atlas: dict) -> str:
         out += [trust, '']
     out += [f'**计数。** {len(entries):,} 条主张，来自 {folders} 个早先的理论文件夹与 {len(groups) - folders} 个思想领域：'
             + '，'.join(f'{ZH_CARRIED.get(k, k)} {n:,}' for k, n in carried.items()) + '。按关系：'
-            + '，'.join(f'{zh} {n:,}' + (agreement if key == 'agreement' else '') for key, (zh, n) in relation.items()) + f'。各关系相加为 {sum(n for _, n in relation.values()):,}，其余 {len(entries) - sum(n for _, n in relation.values()):,} 条没有关系（未承继或仅存于历史）。只有一个目标所承载的才算作连接。', '',
+            + '，'.join(f'{zh} {n:,}' + (agreement if key == 'agreement' else '') for key, (zh, n) in relation.items()) + '。' + _no_relation_zh(entries, relation) + '只有一个目标所承载的才算作连接。', '',
             '**离中文文本最近的两个领域。**', '', *domains, '',
             f'**全部 {len(groups)} 组**，每组一页，都在[英文索引](CROSSWALK.md)里：它以自己的话主张了什么，现行的说明中成了什么，以及每一条的目标与地位。', '']
     body = _finish(out)
