@@ -4,9 +4,11 @@
 
 [English](README.md) · **首页** · [一页](theories/becoming/ONE-PAGE.zh.md) · [用途](theories/becoming/USES.zh.md) · [实例](theories/becoming/USES-EXAMPLES.zh.md) · [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) · [八章（英文）](theories/becoming/chapters/README.md) · [古文（第六章）](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) · [检验](TESTS.zh.md) · [对照表](theories/becoming/results/atlas/CROSSWALK.zh.md) · [怎样长成](theories/LINEAGE.zh.md) · [术语表](GLOSSARY.zh.md) · [审查包](theories/becoming/review/README.zh.md)
 
+*本版落后于英文版：它依 2026 年 11 月 9 日的[英文版](README.md)译出，英文版此后有改动，本版尚未随之修订；有出入处，以英文版为准。*
+
 > 这一版仍在修订之中。
 
-*前面这几段约 7–10 分钟，全页约 10–13 分钟；下面各个入口各注明所需时间。*
+*前面这几段约 8–10 分钟，全页约 10–13 分钟；下面各个入口各注明所需时间。*
 
 *AI 依英文首页与[一页](theories/becoming/ONE-PAGE.zh.md)写成，尚无人审查它的记录。与它所链接之处不一致时，以所链接之处为准。*
 
@@ -37,7 +39,7 @@
 | 入口 | 是什么 | 读多久 |
 |---|---|---|
 | [一页](theories/becoming/ONE-PAGE.zh.md) | 全论最短的一层：它是什么，一个情形，根，诸律与其地位、什么会表明它错，伦理 | 约 18–23 分钟 |
-| [用途](theories/becoming/USES.zh.md) | 逐个领域：今天能用它做什么，能做到多远，不主张什么 | 约 21–27 分钟 |
+| [用途](theories/becoming/USES.zh.md) | 逐个领域：今天能用它做什么，能做到多远，不主张什么 | 约 21–28 分钟 |
 | [实例](theories/becoming/USES-EXAMPLES.zh.md) | 每个领域一例或数例，各在其真实的地位上 | 约 47–61 分钟 |
 | [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) | 全论的一小时层，按八章的顺序 | 约 57–74 分钟 |
 | [开篇](theories/becoming/OPENING.md) | 第一人称写下的信念：这件事为什么要紧；英文，尚无中文版 | 正文约 22–28 分钟，注释另计 |
