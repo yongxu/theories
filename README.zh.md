@@ -20,7 +20,7 @@
 
 **证据。** 多数已登记的结果有 Lean 回执（[成果登记](RESULTS.md)），只表明每一条 Lean 陈述由其前提推出，不表明前提成立。一次并不穷尽的、由 AI 作的回顾发现，[核心结果中没有一个是新的数学](theories/becoming/chapters/08-METHOD.md#known-results)：每一个都近乎依定义，或是已知结果的重述。[经验论题](theories/becoming/chapters/08-METHOD.md#theses)面对在评分之前就已冻结的检验：有的通过，有的未通过。迄今无人审查（[审查包](theories/becoming/review/README.zh.md)）。
 
-![围绕文法的八章](theories/becoming/results/spine.zh.svg)
+![围绕一套文法的八章](theories/becoming/results/spine.zh.svg)
 
 *117 个核心声明中，11 个由文法推出（其余的地位见 [08 §7](theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge)）；这幅图显示什么、不显示什么，见理论图的 [The spine](theories/becoming/results/THEORY-GRAPH.md#the-spine)（英文）；本说明[怎样长成](theories/LINEAGE.zh.md)。*
 
