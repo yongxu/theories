@@ -273,6 +273,7 @@
       "theories/becoming/results/atlas/crosswalk/*.md"
     ],
     "assets": [
+      "theories/becoming/results/atlas/connections.svg",
       "theories/becoming/results/spine.svg",
       "theories/becoming/results/spine.zh.svg",
       "theories/lineage.svg",

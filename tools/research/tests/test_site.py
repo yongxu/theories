@@ -25,7 +25,7 @@ README = ('# The Theory of Becoming\n\n<!-- generated -->\n\n[Home](README.md) Â
           '> This version is still being revised.\n\n*A minute to read.*\n\n**An account** of how things go on. '
           'Start with [the one page](a/ONE.md#what-it-is), and [the opening](#truth-exists).\n\n## Truth exists\n\nThe opening.\n')
 ONE = ('# One page\n\n## What it is\n\nSee [the chapter](chapters/02-MAP.md#r-closed-capture), [chapters](chapters/), '
-       '[a record](results/records/closed-capture.md), [a scratch note](../tmp/notes.md) and [a folder](../experiments/).\n\n'
+       '[a record](results/records/closed-capture.md), [a scratch note](../tmp/notes.md), [a line](results/records/closed-capture.md?plain=1#L3) and [a folder](../experiments/).\n\n'
        '| Claim | Standing |\n|---|---|\n| `a \\| b` holds | proved \\| checked |\n\n'
        '- one\n  - nested\n- two\n\nA note.[^n]\n\n[^n]: The note.\n\n<!-- a comment that must not appear -->\n'
        'Raw <a href="javascript:alert(1)" onclick="x()">tag</a> and <script>no()</script>.\n')
@@ -72,6 +72,7 @@ class SiteTests(unittest.TestCase):
         self.assertIn('href="chapters/index.html"', one)
         self.assertIn(f'href="https://github.com/o/r/blob/{COMMIT}/a/results/records/closed-capture.md"', one)
         self.assertIn(f'href="https://github.com/o/r/tree/{COMMIT}/experiments"', one)
+        self.assertIn(f'href="https://github.com/o/r/blob/{COMMIT}/a/results/records/closed-capture.md?plain=1#L3"', one)
         self.assertIn('<span class="nolink" title="Not in the public repository">a scratch note</span>', one)
         self.assertEqual(report['untracked'], [('a/ONE.md', '../tmp/notes.md')])  # private (tmp/) and untracked alike
         self.assertIn('href="../ONE.html#what-it-is"', self.page('a/chapters/index.html'))
