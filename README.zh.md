@@ -32,7 +32,7 @@
 
 | 入口 | 是什么 | 读多久 |
 |---|---|---|
-| [一页](theories/becoming/ONE-PAGE.zh.md) | 整个说明最短的一层：它是什么，一个情形，根，诸律与其地位、什么会表明它错，伦理 | 约 13–16 分钟 |
+| [一页](theories/becoming/ONE-PAGE.zh.md) | 整个说明最短的一层：它是什么，一个情形，根，诸律与其地位、什么会表明它错，伦理 | 约 13–17 分钟 |
 | [用途](theories/becoming/USES.zh.md) | 逐个领域：今天能用它做什么，能做到多远，不主张什么 | 约 14–18 分钟 |
 | [实例](theories/becoming/USES-EXAMPLES.zh.md) | 每个领域一例或数例，各在其真实的地位上 | 约 43–56 分钟 |
 | [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) | 整个说明的一小时层，按八章的顺序 | 约 56–73 分钟 |

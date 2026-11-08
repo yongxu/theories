@@ -952,13 +952,14 @@ def how_to_read(s, lang):
     share = (d + h) / total
     if lang == 'zh':
         about = '约十分之一' if 0.085 <= share <= 0.115 else f'{d + h} 项'
-        return (f'每个圆是一章，按其结果数定大小；从一章到另一章的实线，计其结果使用另一章结果、记为 formal-reuse（这一类留给'
-                f'已核验的推理）的次数，章与章之间的虚线与点线是别种依赖；辐条标出该章有多少核心模块在中央的文法上陈述其律（计的是模块，'
+        return (f'每个圆是一章，按其结果数定大小；从一章到另一章的实线，计其结果使用另一章结果、记为 formal-reuse（RESULT-WORKFLOW 把这一类留给'
+                f'已核验的推理；它由 AI 写成的记录指定，没有任何检查核对一次使用是否见于 Lean）的次数，章与章之间的虚线与点线是别种依赖；辐条标出该章有多少核心模块在中央的文法上陈述其律（计的是模块，'
                 f'不是推导而得的结果）。{total} 项核心声明中，{about}被读作在文法上陈述之律的情形（{d} 项推导而得，{h} 项为根上一形式（root form）的一步情形，'
                 f'在一个所述的假设之下）；其余或为计数之律，位于文法以下（{c} 项），或处于一个指明的距离，各有其理由（{rest} 项）。')
     about = 'About a tenth' if 0.085 <= share <= 0.115 else f'{d + h}'
     return (f'Each circle is a chapter, sized by its results; a solid curve from one chapter to another counts the uses of '
-            f'the other\'s results recorded as formal-reuse, the kind kept for verified inferences, and dashed and dotted '
+            f'the other\'s results recorded as formal-reuse, the kind RESULT-WORKFLOW keeps for verified inferences (the AI-written records '
+            f'assign it, and nothing checks a use against the Lean), and dashed and dotted '
             f'curves between chapters are other dependences; a spoke says how many of the chapter\'s core modules state their laws on the '
             f'grammar at the centre (modules, not results derived). {about} of the {total} central declarations are read as '
             f'cases of laws stated on the grammar ({d} derived, and {h}, a root form at one step, under a stated hypothesis); the rest are counting laws, below the '

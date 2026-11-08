@@ -4,7 +4,7 @@
 
 [Home](../../../README.md) · [Where everything is](../../../MAP.md) · [One page](../ONE-PAGE.md) · [中文](../../../README.zh.md) · [The theory](../THE-THEORY-OF-BECOMING.md) · [Chapters](../chapters/README.md) · [Uses](../USES.md) · [Tests](../../../TESTS.md) · [Graph](THEORY-GRAPH.md) · [Connections](atlas/CROSSWALK.md) · [How it grew](../../LINEAGE.md) · [Results](../../../RESULTS.md) · [Glossary](../../../GLOSSARY.md) · [Reviewers](../review/README.md) · [Open questions](../../../OPEN-QUESTIONS.md)
 
-[中文（各章一览）](THEORY-GRAPH.zh.md) · 70–91 minutes to read in full; the chapters at a glance, with their tables, in 27–35 minutes.
+[中文（各章一览）](THEORY-GRAPH.zh.md) · 70–92 minutes to read in full; the chapters at a glance, with their tables, in 27–36 minutes.
 
 One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts, the chapter sections that state results and the review dossiers, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3220 nodes, 6892 edges. An edge records a dependence, a citation or a registered reading, not an agreement in meaning.
 
@@ -12,7 +12,7 @@ One graph of the theory: the grammar's concepts, the results, the Lean modules, 
 
 ## The chapters at a glance
 
-**How to read it.** Each circle is a chapter, sized by its results; a solid curve from one chapter to another counts the uses of the other's results recorded as formal-reuse, the kind kept for verified inferences, and dashed and dotted curves between chapters are other dependences; a spoke says how many of the chapter's core modules state their laws on the grammar at the centre (modules, not results derived). About a tenth of the 117 central declarations are read as cases of laws stated on the grammar (11 derived, and 1, a root form at one step, under a stated hypothesis); the rest are counting laws, below the grammar (6), or stand at a named distance, each with its reason (99).
+**How to read it.** Each circle is a chapter, sized by its results; a solid curve from one chapter to another counts the uses of the other's results recorded as formal-reuse, the kind RESULT-WORKFLOW keeps for verified inferences (the AI-written records assign it, and nothing checks a use against the Lean), and dashed and dotted curves between chapters are other dependences; a spoke says how many of the chapter's core modules state their laws on the grammar at the centre (modules, not results derived). About a tenth of the 117 central declarations are read as cases of laws stated on the grammar (11 derived, and 1, a root form at one step, under a stated hypothesis); the rest are counting laws, below the grammar (6), or stand at a named distance, each with its reason (99).
 
 ![The eight chapters and their recorded uses of one another: circles sized by their results, solid curves counting formal-reuse uses between chapters' results and dashed and dotted ones other dependences, the continuation condition and C coming into chapter 7 as premises, and T1 to T8 at their homes coloured by test outcome](spine.svg)
 
