@@ -22,7 +22,7 @@
 
 ![The eight chapters around one grammar](theories/becoming/results/spine.svg)
 
-*11 of 117 central declarations are derived, each a case of grammar laws as the review reads it ([08 §7](theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge) gives what Lean checks of them, and the other standings); [what the picture shows and does not show](theories/becoming/results/THEORY-GRAPH.md#the-spine); [how the account grew](theories/LINEAGE.md).*
+*11 of 117 central declarations are derived, each read by the review as a case of grammar laws ([08 §7](theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge) gives what Lean checks of them, and the other standings); [what the picture shows and does not show](theories/becoming/results/THEORY-GRAPH.md#the-spine); [how the account grew](theories/LINEAGE.md).*
 
 ---
 

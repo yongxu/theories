@@ -55,6 +55,13 @@ class Counting(unittest.TestCase):
         self.assertEqual(''.join(zh), '一个从它所选择者读出的度量')
         self.assertTrue(all(len(l) <= 4 for l in zh))
 
+    def test_items_wrap_between_items_only(self):
+        body = '11 项推导而得 · 1 项在一个所述的假设之下 · 6 项为计数，位于文法以下 · 99 项处于一个指明的距离'
+        lines = spine.wrap_items(body, 92, 'zh')
+        self.assertEqual(' · '.join(lines), body)
+        self.assertEqual(lines[-1], '99 项处于一个指明的距离')
+        self.assertEqual(spine.wrap_items('ab · cd', 20, 'en'), ['ab · cd'])
+
 
 class Geometry(unittest.TestCase):
     def centres(self):

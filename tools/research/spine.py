@@ -234,6 +234,24 @@ def wrap(text, width, lang):
     return lines + ([line] if line else [])
 
 
+def wrap_items(text, width, lang, sep=' · '):
+    """Lines of whole items: `text` split at `sep` and packed greedily, an item wider than a line wrapped alone."""
+    def size(s):
+        return sum(2 if lang == 'zh' and ord(ch) > 0x2e80 else 1 for ch in s)
+    lines, line = [], ''
+    for item in text.split(sep):
+        if size(item) > width:
+            lines += [line] if line else []
+            lines += wrap(item, width, lang)
+            line = ''
+        elif line and size(line + sep + item) > width:
+            lines.append(line)
+            line = item
+        else:
+            line = f'{line}{sep}{item}' if line else item
+    return lines + ([line] if line else [])
+
+
 def f(x):
     return f'{x:.1f}'.rstrip('0').rstrip('.')
 
@@ -334,7 +352,7 @@ def svg(graph, s, lang):
         y += 8
         sep = '：' if lang == 'zh' else ': '
         head, body = standing.split(sep, 1) if sep in standing else (standing, '')
-        lines = wrap(head + sep.strip(), 100 if lang == 'en' else 92, lang) + wrap(body, 100 if lang == 'en' else 92, lang)
+        lines = wrap(head + sep.strip(), 100 if lang == 'en' else 92, lang) + wrap_items(body, 100 if lang == 'en' else 92, lang)
         out.append(f'<rect x="20" y="{y - 17}" width="{W - 40}" height="{12 + 20 * len(lines)}" rx="6" fill="#f5f5f4" stroke="#e7e5e4"/>')
         for i, line in enumerate(lines):
             out.append(text(32, y + 20 * i, line, 15, 'bold' if i == 0 else 'normal', fill=INK))
