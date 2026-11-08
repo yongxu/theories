@@ -569,8 +569,8 @@ A periphery theorem adds that finite agreement does not identify priority. **Sta
 
 **Known weaknesses.**
 - Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "The judgments are role-play; human valuers are untested."
-- T8 reads, under P2 and P4, the line of any actor whose acts reach living lines as running through life; if P4 fails that reading goes, and Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "the makers' offer itself does not rest on this path."
-- T4's frozen test does not test T8: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "the bed gives the fishers nothing, so keeping it is not forgoing a draw on a renewal they depend on." T8's test is named, not designed.
+- T8 reads, under P2 and P4, the line of any actor whose acts reach living lines as running through life; if P4 fails, the theorem no longer establishes it, whether it holds being a separate question, and Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "the makers' offer itself does not rest on this path."
+- T4's frozen test does not test T8: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "keeping the bed forgoes part of the fishers' catch, but their largest steady catch already stays within the fish's renewal while ending the bed". T8's test is named, not designed.
 
 **Questions.**
 1. Is an offer of a way of seeing, binding no one, coherent in an account that asserts no should, and is T8's named refuter (selections that read a course's draw and what ends with it selecting a draw beyond the renewal their readers depend on no less often than selections that do not) one a test could meet?

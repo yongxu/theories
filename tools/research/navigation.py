@@ -525,7 +525,7 @@ def start_here_lines(records, path, homes):
              'Each opens with the one page\'s plain line, then its record\'s statement and its standing in its homes\' words, and holds under the hypotheses its record states. An automated review against the literature it knew, not exhaustive, finds '
              + link(CHAPTERS + '/08-METHOD.md#known-results', path, 'none of the central results new mathematics') + '.', '']
     lines += [start_item(r, path, homes) for r in chosen]
-    return lines + ['', 'No law here evaluates; where a result ranks courses, it names the two readings it ranks under, neither asserted: ' + link(CHAPTERS + '/07-SIGNIFICANCE.md#scope-and-order', path, 'the continuation condition fixes scope, and C gives order') + '.', '']
+    return lines + ['', 'No law here evaluates; each ranking result names what it ranks under, most often two readings, neither asserted: ' + link(CHAPTERS + '/07-SIGNIFICANCE.md#scope-and-order', path, 'the continuation condition fixes scope, and C gives order') + '.', '']
 
 
 def law_family_table(records, base):
