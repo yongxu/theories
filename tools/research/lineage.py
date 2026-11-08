@@ -677,6 +677,15 @@ def link(path, page):
     return rel + ('#' + path.split('#', 1)[1] if '#' in path else '')
 
 
+def evidence_target(e, here):
+    """Where an evidence entry's link goes: the line its quotation stands on now (`?plain=1` for Markdown)."""
+    target = link(e['path'], here)
+    line = quote_line(e['path'].split('#', 1)[0], e.get('quote'), e.get('line'))
+    if line and '#' not in target:
+        target += ('?plain=1' if e['path'].endswith('.md') else '') + f'#L{line}'
+    return target
+
+
 KIND_ZH = {'theory': '理论', 'design': '设计', 'method': '方法', 'exploration': '探索', 'provenance': '出处'}
 
 
@@ -691,7 +700,7 @@ def folder_rows(s, lang, groups, against, here):
         if not g:
             continue
         title = connection_map.OV_SHORT_ZH.get(g['id'], g['title']['en']) if lang == 'zh' else g['title']['en']
-        ends = [f'[{f[k]}]({link(e["path"], here)})' for k, e in zip(('from', 'to'), f['evidence'] + f['evidence'][-1:])]
+        ends = [f'[{f[k]}]({evidence_target(e, here)})' for k, e in zip(('from', 'to'), f['evidence'] + f['evidence'][-1:])]
         span = ends[0] if f['from'] == f['to'] else f'{ends[0]} – {ends[1]}'
         parts = []
         for w, name, path, n in (against or {}).get(g['id'], [])[:2]:
