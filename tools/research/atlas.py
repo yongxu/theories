@@ -935,7 +935,7 @@ def crosswalk_zh_page(atlas: dict) -> str:
         if gid in by:
             domains.append(f'- **{name}**（{by[gid]["entries"]} 条，[英文页]({_href(group_path(by[gid]), ATLAS)})）：{note}。')
     out = [GENERATED, '', '# 对照表：早先的理论文件夹与各思想领域', '', zh_fronts.nav_line(CROSSWALK_ZH), '', '{{time}}', '',
-           '*由 AI 依[英文的对照索引](CROSSWALK.md)写成，未经人工审读；义以英文版为准。各组的条目在英文页上。*', '',
+           '*由 AI 依[英文的对照表](CROSSWALK.md)写成，未经人工审读；义以英文版为准。各组的条目在英文页上。*', '',
            f'![早先的文件夹与各思想领域怎样与现行的说明相接]({_href(OVERVIEW, ATLAS)})', '',
            '*图为英文，由 connection_map.py 依同一份数据画出：每一条线把一个文件夹或领域连到它的主张所对照的那部分说明，按关系着色；每一条线都是 AI 的读法，没有人的。*', '',
            '**它是什么。** 每一个早先的理论文件夹与每一个思想领域：它以自己的话主张了什么，在现行的说明中又成了什么。它是证据层，不是用来通读的。它不产生任何结果；'
