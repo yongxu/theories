@@ -35,6 +35,7 @@ usage (from the checkout root):
 from __future__ import annotations
 
 import argparse
+from collections import Counter
 import json
 from pathlib import Path
 import posixpath
@@ -834,6 +835,19 @@ def _crosswalk_lead(atlas: dict, at: str) -> list[str]:
             *_checks_lines(atlas.get('crosswalk_checks'))]
 
 
+def _no_relation(entries: list, totals_r: list) -> str:
+    """The sentence under the relations' sums: the entries with none, by what became of them, and the entries only in
+    history that have one, which the map does not count."""
+    none = Counter(e['carried'] for e in entries if not e.get('relation'))
+    kept = sum(1 for e in entries if e.get('relation') and e['carried'] in ABSENT)
+    parts = ', '.join(f'{n} {k}' for k, n in sorted(none.items(), key=lambda kv: -kv[1]))
+    out = f'The relations sum to {sum(totals_r):,}: the other {sum(none.values())} entries have none ({parts}).'
+    if kept:
+        out += (f' {kept} {"entry" if kept == 1 else "entries"} only in history or not carried {"has" if kept == 1 else "have"} one, which '
+                f'[the connection map]({_href(ATLAS + "/map.html")}) leaves out of its relations: it draws what stayed behind as a short end, not a thread.')
+    return out
+
+
 def crosswalk_page(atlas: dict) -> str:
     """CROSSWALK.md, the crosswalk's index: each folder's and domain's counts, linking its page. Each row holds the anchor
     its group's section had when the crosswalk was one page, so that a link made then still lands."""
@@ -850,6 +864,7 @@ def crosswalk_page(atlas: dict) -> str:
            f'All {len(entries)} entries, in {len(groups)} groups, summed; every entry is an AI reading, no person\'s, and the [table below](#the-groups) gives each group:', '',
            '| What became of it | ' + ' | '.join(carried) + ' |', '|---|' + '---:|' * len(carried), '| Entries | ' + ' | '.join(map(str, totals_c)) + ' |', '',
            '| Relation | ' + ' | '.join(relations) + ' |', '|---|' + '---:|' * len(relations), '| Entries | ' + ' | '.join(map(str, totals_r)) + ' |', '',
+           _no_relation(entries, totals_r), '',
            f'![How the earlier folders and the domains of thought meet the live account]({_href(OVERVIEW)})', '',
            '*Drawn by connection_map.py from the crosswalk’s claims, on the pages its table links: each thread joins a folder or domain to the part of the account its '
            'claims are read against, coloured by relation, and every thread is an AI reading, no person’s. To explore the same data, '

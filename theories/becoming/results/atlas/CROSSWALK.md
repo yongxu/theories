@@ -14,6 +14,8 @@ All 1183 entries, in 28 groups, summed; every entry is an AI reading, no person'
 |---|---:|---:|---:|---:|
 | Entries | 338 | 371 | 325 | 25 |
 
+The relations sum to 1,059: the other 124 entries have none (105 not-carried, 19 history-only). 3 entries only in history or not carried have one, which [the connection map](map.html) leaves out of its relations: it draws what stayed behind as a short end, not a thread.
+
 ![How the earlier folders and the domains of thought meet the live account](connections.svg)
 
 *Drawn by connection_map.py from the crosswalk’s claims, on the pages its table links: each thread joins a folder or domain to the part of the account its claims are read against, coloured by relation, and every thread is an AI reading, no person’s. To explore the same data, open [the connection map](map.html) on the reader’s site, once it is published, or from a clone; GitHub shows it only as source.*

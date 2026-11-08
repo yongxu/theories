@@ -155,18 +155,12 @@ class Tree(unittest.TestCase):
         self.patch.stop()
         try:
             s = lineage.spec()
-            segments = lineage.axis(s)
-            lanes, placed = [], []
-            for n, p in enumerate(s['points'], 1):
-                x = lineage.x_of(lineage.parse_date(p['date'])[0], segments)
-                lane = next((i for i, last in enumerate(lanes) if x - last >= 17), len(lanes))
-                if lane == len(lanes):
-                    lanes.append(x)
-                lanes[lane] = x
-                placed.append((n, p, x, 454 - 17 * lane))
+            placed, _ = lineage.lanes_of(s, lineage.axis(s), 470)
             thread = {pid for th in lineage.threads_of(s) for pid in th['points']}
             for lang in ('en', 'zh'):
-                self.assertEqual(lineage.title_crossings(lineage.title_rows(placed, lang, thread), thread), [], lang)
+                rows = lineage.title_rows(placed, lang, thread)
+                self.assertEqual(lineage.title_crossings(rows, thread), [], lang)
+                self.assertEqual(lineage.leaders_through_marks(placed, rows), [], lang)
         finally:
             self.patch.start()
 
@@ -176,6 +170,25 @@ class Tree(unittest.TestCase):
             self.assertEqual(zh_fronts.problems(pages=(lineage.PAGE['zh'],)), [])
         finally:
             self.patch.start()
+
+    def test_a_titled_point_stands_above_others_at_its_date(self):
+        s = json.loads(json.dumps(self.spec))
+        s['points'][1]['short'] = {'en': 'B', 'zh': 'B'}
+        s['points'].insert(2, point('b2', '2026-10-28'))
+        placed, lanes = lineage.lanes_of(s, lineage.axis(s), 400)
+        y = {p['id']: py for _, p, _, py in placed}
+        self.assertLess(y['b'], y['b2'])  # higher on the page: the titled one's leader rises past nothing
+        self.assertEqual([n for n, *_ in placed], [1, 2, 3, 4])  # numbers stay the table's
+        self.assertEqual(lanes, 2)
+
+    def test_the_strands_count_points_on_threads_and_folders_cited(self):
+        (self.root / 'theories/fork').mkdir(parents=True)
+        (self.root / 'theories/fork/README.md').write_text('x')
+        (self.root / 'theories/other').mkdir()
+        (self.root / 'theories/other/README.md').write_text('x')
+        s = json.loads(json.dumps(self.spec))
+        s['points'][0]['evidence'][0]['path'] = 'theories/fork/README.md'
+        self.assertEqual(lineage.strand_counts(s), {'total': 3, 'on_threads': 2, 'on_none': 1, 'cited': 1, 'folders_n': 2})
 
     def test_the_axis_gives_each_phase_room_by_its_points(self):
         segments = lineage.axis(self.spec)

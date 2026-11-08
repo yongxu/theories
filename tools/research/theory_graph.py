@@ -380,7 +380,8 @@ def page(graph):
               'A region\'s results are the records whose home section is in its chapter, so the counts below are those the '
               '[chapters page](../chapters/README.md) gives as results stated. A chapter also keeps the anchors of former record '
               'names, so that old links resolve; those are not results, and neither page counts them. In the lists below, ◆ marks a '
-              'result the [coverage file](completion/COVERAGE.json) names as central.'
+              'result the [coverage file](completion/COVERAGE.json) lists in a row, beside that row\'s central declarations: it is the file\'s listing, so not '
+              'every result marked states one of those declarations, nor does every result stating one carry the mark.'
               + (f' To retire holds the {counts["retire"]["result"]} superseded records that no chapter states, which the '
                  'chapters page does not list.' if counts.get('retire', {}).get('result') and retired_superseded else ''), '',
               '| Region | Concepts | Results | Modules | Texts |', '|---|---:|---:|---:|---:|']

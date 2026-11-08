@@ -69,7 +69,7 @@ WORDS = {
         'results': '{n} results', 'within': '{n} within',
         'read': 'How to read it',
         'size': 'Circle: a chapter, its area by its results; its number inside it; beside it, its name, its results and the formal-reuse uses within it.',
-        'formal': 'A use recorded as formal-reuse, a kind kept for “a verified inference using the cited result”: the arrow points to the chapter whose results are used; the number beside a curve counts its uses, written where it is {m} or more. The record’s authors assign the kind; the registry checks an interface’s form where an edge has one ({k} of {n}), and no edge is joined to a Lean use.',
+        'formal': 'A use recorded as formal-reuse, a kind kept for “a verified inference using the cited result”: the arrow points to the chapter whose results are used; the number beside a curve counts its uses, written where it is {m} or more. The AI-written records assign the kind; the registry checks that an interface has its fields and cites a reviewed source ({k} of all {n} such edges, each a Lean file); nothing checks that the Lean there uses the cited result.',
         'backward': 'The same, darker where an earlier chapter’s results use a later one’s.',
         'interpretive': 'interpretive, kept for “an argument dependency” (dashed; pairs with {m} or more).',
         'application': 'application, a reused result with its correspondence and added premises (dotted).',
@@ -88,7 +88,7 @@ WORDS = {
         'results': '{n} 项结果', 'within': '章内使用 {n}',
         'read': '怎样读这幅图',
         'size': '圆：一章，面积按其结果数；圆内是章号；圆旁是章名、结果数与章内 formal-reuse 使用数。',
-        'formal': '记为 formal-reuse 的使用（这一类留给使用所引结果的已核验推理）：箭头指向被使用其结果的那一章；曲线旁的数字为其使用次数，{m} 次及以上才标出。这一类由记录的作者指定；边带有接口时（{n} 条中有 {k} 条），登记检查核对接口的形式，没有哪条边与一次 Lean 使用相连。',
+        'formal': '记为 formal-reuse 的使用（这一类留给使用所引结果的已核验推理）：箭头指向被使用其结果的那一章；曲线旁的数字为其使用次数，{m} 次及以上才标出。这一类由 AI 写成的记录指定；登记检查核对接口具备其字段并引用已审阅的来源（全部 {n} 条这样的边中有 {k} 条，所引的都是 Lean 文件）；没有任何检查核对那里的 Lean 是否确实使用所引的结果。',
         'backward': '同上；章序在前的一章的结果使用章序在后的一章的结果时，线色较深。',
         'interpretive': '诠释（interpretive），用于论证上的依赖（虚线；{m} 次及以上的配对）。',
         'application': '应用（application），一个被复用的结果，连同其对应与所添的前提（点线）。',
@@ -187,6 +187,14 @@ def check(s):
                     errors.append(f'spine.json: the standing line ({lang}) lacks {number}')
     for phrase in ('a verified inference using the cited result', 'an argument dependency', '`related` for analogy'):
         holds(WORKFLOW, phrase)
+    laws = shared_laws_rows()
+    if [r[0] for r in laws if r[2]] != ['Balance']:
+        errors.append('08 §7: the laws table no longer has Balance as its one row represented and not derived')
+    for name, *_ in laws:
+        if name not in s.get('laws_zh', {}).get('names', {}):
+            errors.append(f'spine.json: laws_zh has no name for {name}')
+    errors += [f'08 §7 no longer says how many of the rows on {name} reach the grammar'
+               for name, _, _, count in laws if reaching_the_grammar(name, count) is None]
     return errors
 
 
@@ -554,9 +562,10 @@ def svg(graph, s, lang, info=None):
                 counts_of.append(int(re.search(r'\d+', body_item).group()))
                 item += 1
         bar_y, x, whole = y + 20 * len(lines) - 6, 32.0, sum(counts_of) or 1
-        for fill, n in zip(STANDING_FILL, counts_of):  # the bar: each standing's share of the central declarations
-            w = (W - 64) * n / whole
-            out.append(f'<rect x="{f(x)}" y="{bar_y}" width="{f(max(w - 2, 1))}" height="12" fill="{fill}"><title>{n}</title></rect>')
+        for fill, n in zip(STANDING_FILL, counts_of):  # the bar: each standing's share of the central declarations, drawn
+            w = (W - 64) * n / whole                    # at its true width, the segments told apart by a hairline as the swatches are
+            out.append(f'<rect x="{f(x)}" y="{bar_y}" width="{f(w)}" height="12" fill="{fill}" stroke="{MUTED}" stroke-width="0.5">'
+                       f'<title>{n}</title></rect>')
             x += w
         top = y - 17 + 36 + 20 * len(lines)
     L = layout(s, results, pairs, lang, top)
@@ -830,6 +839,9 @@ def formal_cycles(graph):
 
 METHOD = 'theories/becoming/chapters/08-METHOD.md'
 EDGE_RECORD = 'theories/becoming/results/records/one-root-to-its-edge'
+GRAMMAR_LAWS = 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean'
+REVIEW_U4 = '_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md'
+REVIEW_U4C = '_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4C-RECORD.md'
 
 
 def shared_laws_rows():
@@ -846,8 +858,27 @@ def shared_laws_rows():
     return rows
 
 
+def reaching_the_grammar(name, count):
+    """How many of the central rows on a shared law reach the grammar, from 08 §7's sentence ("all 42 on closure", "16 of 54
+    on balance"), or None where the sentence no longer says it for that count."""
+    text, word = _read(METHOD) or '', name.lower()
+    if f'all {count} on {word}' in text:
+        return count
+    found = re.search(rf'(\d+) of {count} on {word}', text)
+    return int(found.group(1)) if found else None
+
+
+def edge_bases():
+    """From the edge record's data: (declarations with a basis in words, those of them at a named distance)."""
+    record = json.loads(_read(EDGE_RECORD + '.json') or '{}')
+    with_basis = [s for s in record.get('boundary', {}).get('standings', []) if s.get('basis')]
+    near = ('derived', 'under a stated hypothesis', 'counting')
+    return len(with_basis), sum(1 for s in with_basis if s.get('standing') not in near)
+
+
 def derived_rows():
-    """The derived declarations from the edge record: (short name, its laws, the first sentence of its basis, records stating it)."""
+    """The derived declarations from the edge record: (short name, its laws, the first sentence of its basis and any
+    sentence on how its statement reads, records whose laws name it)."""
     record = json.loads(_read(EDGE_RECORD + '.json') or '{}')
     wanted = [s for s in record.get('boundary', {}).get('standings', []) if s.get('standing') == 'derived']
     stating = {s['declaration']: [] for s in wanted}
@@ -865,7 +896,8 @@ def derived_rows():
     out = []
     for s in wanted:
         d = s['declaration']
-        first = re.split(r'(?<=[.])\s', s['basis']['en'])[0]
+        sentences = re.split(r'(?<=[.])\s+(?=[A-Z«`])', s['basis']['en'])
+        first = sentences[0] + ''.join(' … ' + x for x in sentences[1:] if x.startswith('Its statement still reads'))
         out.append((d.removeprefix('Becoming.'), [x.removeprefix('Becoming.') for x in s.get('law', [])], first, stating[d]))
     return out
 
@@ -875,33 +907,41 @@ def shared_laws_section(s, rel, lang):
     rows, caps = shared_laws_rows(), s['caption']
     total = sum(r[3] for r in rows)
     link = rel(METHOD, 'shared-laws-and-connectivity')
+    rested = re.search(r'(\d+) rest on at least one', caps[6]['text']).group(1)
     if lang == 'zh':
         names, words = s['laws_zh']['names'], s['laws_zh']['statements']
         out = ['### 五条共律', '<a id="the-five-shared-laws"></a>', '',
-               f'共律陈述许多核心结果共有的一个机制，在持有它的最低一层只陈述一次（[08 §7]({link})）。', '',
-               '| 共律 | 它说什么（译文） | 在文法上 | 依于它的核心声明 |', '|---|---|---|---:|']
-        out += [f'| {names[n]} | {words[n]} | {"双向表示，不是推导" if rep_only else "其模型之律由它证明"} | {c} |' for n, _, rep_only, c in rows]
-        return out + ['', f'这些计数相加为 {total}，共 126 个核心行，因为一行可以依于多条：“{caps[6]["zh"]}”（[08 §7]({link})）。', '']
+               f'共律陈述许多核心结果共有的一个机制，在持有它的最低一层只陈述一次（[08 §7]({link})）；这个名称不把任何一条律排在另一条之上。', '',
+               '| 共律 | 它说什么（译文） | 该律在文法上的陈述 | 依于它的核心行 | 其中达到文法的 |', '|---|---|---|---:|---:|']
+        out += [f'| {names[n]} | {words[n]} | {"双向表示，不是推导" if rep_only else "该行所述的模型之律由它证明"} | {c} | {reaching_the_grammar(n, c)} |' for n, _, rep_only, c in rows]
+        return out + ['', f'这些计数相加为 {total}，多于依于至少一条的 {rested} 行，因为一行可以依于多条：“{caps[6]["zh"]}”（[08 §7]({link})）。'
+                          f'最后一栏是 08 §7 所计的、这些行中其编译后的类型或值达到文法的行数；它说的是一行依赖什么，不是说该行由这条律证明：'
+                          f'被读作文法之律之情形的，只有上面的十一项。', '']
     out = ['### The five shared laws', '',
            f'A shared law states a mechanism many central results share, at the lowest layer that holds it ([08 §7]({link})); the name '
            f'ranks no law above another.', '',
-           '| Law | What it says, in 08 §7\'s words | On the grammar | Central declarations on it |', '|---|---|---|---:|']
-    held = {True: 'represented both ways, not derived', False: "its models' laws proved from it"}
-    out += [f'| {n} | {w} | {held[rep_only]} | {c} |' for n, w, rep_only, c in rows]
-    return out + ['', f'These counts add to {total} over the 126 central rows, because a row can rest on several: "{caps[6]["text"]}" '
-                      f'([08 §7]({link})).', '']
+           '| Law | What it says, in 08 §7\'s words | The law\'s statement on the grammar | Central rows resting on it | Of those, reaching the grammar |', '|---|---|---|---:|---:|']
+    held = {True: 'represented both ways, not derived', False: "the models' laws in its row proved from it"}
+    out += [f'| {n} | {w} | {held[rep_only]} | {c} | {reaching_the_grammar(n, c)} |' for n, w, rep_only, c in rows]
+    return out + ['', f'These counts add to {total}, more than the {rested} rows that rest on at least one, because a row can rest on several: "{caps[6]["text"]}" '
+                      f'([08 §7]({link})). The last column is 08 §7\'s count of those rows whose compiled type or value reaches the grammar. It says what a row '
+                      f'depends on, not that the row is proved from the law: only the eleven above are read as cases of grammar laws.', '']
 
 
 def circular_paragraph(graph, lang):
     """Whether the recorded formal-reuse edges have a cycle, computed at each render and stated of those edges only."""
     edges, nodes, groups = formal_cycles(graph)
+    iface, _ = interface_counts(graph)
     if lang == 'zh':
-        found = '其中没有环，即没有哪项结果经由它们达到自身' if not groups else f'其中有 {len(groups)} 组结果彼此可达'
-        return [f'**基础是循环的吗？** 在已记录的 {edges} 条 `formal-reuse` 边上，共 {nodes} 项结果，{found}（每次生成时计算）。这只就已记录的边而言：'
-                f'一条边是记录的作者所记下的，没有哪条边与一次 Lean 使用相连。']
-    found = 'no result reaches itself: there is no cycle' if not groups else f'{len(groups)} group{"s" if len(groups) != 1 else ""} of results reach one another'
-    return [f'**Is the foundation circular?** Among the {edges:,} recorded `formal-reuse` edges, over {nodes} results, {found} (computed at each '
-            f'render). That is of recorded edges only: an edge says what a record\'s authors recorded, and none is joined to a Lean use.']
+        found = '没有哪项结果经由它们达到自身' if not groups else f'有 {len(groups)} 组结果彼此可达'
+        return [f'**已记录的使用有环吗？** 在已记录的 {edges} 条 `formal-reuse` 边上，共 {nodes} 项结果，{found}（每次生成时计算）。登记检查拒绝会闭合其已声明依赖之环的记录，'
+                f'所以这是入册的条件，不是关于这些结果的一项发现：它说的是记录所声明的，不是 Lean 证明或论证没有循环。{iface} 个接口各引一个已审阅的 Lean 文件，'
+                f'没有任何工具核对那个文件的证明是否使用所引的结果。']
+    found = 'no result reaches itself' if not groups else f'{len(groups)} group{"s" if len(groups) != 1 else ""} of results reach one another'
+    return [f'**Do the recorded uses form a cycle?** Among the {edges:,} recorded `formal-reuse` edges, over {nodes} results, {found} (computed at each render). '
+            f'The registry refuses a record that would close a cycle among its declared dependencies, so this is a condition of entry, not a finding about the results: '
+            f'it says what the records declare, not that the Lean proofs or the arguments are non-circular. Each of the {iface} interfaces cites a reviewed Lean file, '
+            f'and no tool checks that the file\'s proof uses the cited result.']
 
 
 def how_to_read(s, lang):
@@ -993,12 +1033,18 @@ def lead(graph, page_path):
         for label, n in (('derived', '11'), ('under a stated hypothesis', '1'), ('counting, below the grammar', '6'),
                          ('at a named distance', '99')):
             lines.append(f'| {label} | {n} | "{counts_by.get(n, "")}" |')
+        with_basis, at_distance = edge_bases()
         lines += [f'| all central declarations | 117 | "{counts_by.get("117", "")}" |', '',
-                  f'Each declaration, with its standing and basis, is in [the edge record]({rel(EDGE_RECORD + ".md")}); each of the 99 has '
-                  f'its reason there. A declaration is the Lean statement a row of the coverage file names; the plain words of a result '
-                  f'are at its record.', '',
-                  '**The eleven derived**, each read by the review as a case of grammar laws, in the edge record\'s words:', '',
-                  '| Declaration | A case of | In the record\'s words | Stated by |', '|---|---|---|---|']
+                  f'Each declaration and its standing is in [the edge record]({rel(EDGE_RECORD + ".md")}): {with_basis} have a basis in words, in '
+                  f'[its data]({rel(EDGE_RECORD + ".json")}) (`boundary.standings`), and the other {117 - with_basis} the label a rule gives. The page of each '
+                  f'record whose laws name a declaration prints its standing: for a derived row its laws, bridges and support, for a reading its '
+                  f'basis, and otherwise the rule\'s reason. Each of the 99 has its named reason: its class, and for {at_distance} a '
+                  f'basis in words. A declaration is the Lean statement a row of the coverage file names; the plain words of a result are at its record.', '',
+                  f'**The eleven derived**, each read as a case of grammar laws by an AI-written review ([of the record]({rel(REVIEW_U4)}), [of `Listed.coming_of_ceasing`\'s row]({rel(REVIEW_U4C)})); '
+                  f'every review so far is by AI ([08]({rel(m08, "review-status")})). Eight of them are, in 08 §7\'s words, "the eight connected rows that the reading of '
+                  f'connected rows took as derived": reaching the grammar makes a row connected by the rule, and a reading marks the cases. Each «…» is a law stated in '
+                  f'[`Becoming.GrammarLaws`]({rel(GRAMMAR_LAWS)}).', '',
+                  '| Declaration | A case of | First sentence of the record\'s basis | Named in the laws of |', '|---|---|---|---|']
         for decl, laws, first, stating in derived_rows():
             lines.append(f'| `{decl}` | {", ".join(f"`{x}`" for x in laws)} | {first} | '
                          + ', '.join(f'[{x}]({rel(str(Path(EDGE_RECORD).parent) + "/" + x + ".md")})' for x in stating) + ' |')
@@ -1042,12 +1088,12 @@ def section(graph, page_path):
                     if k in theory_graph.REGION_ORDER else 99)
     method = rel('theories/becoming/chapters/08-METHOD.md', 'theses')
     iface, formal = interface_counts(graph)
-    lines = ['', '<a id="the-spine-what-it-shows-and-does-not-show"></a>', '', '### What the picture shows and does not show', '',
+    lines = ['', '<a id="the-spine-what-it-shows-and-does-not-show"></a>', '', '## What the picture shows and does not show', '',
              f'**What it shows.** Each circle is a chapter\'s region, its area proportional to the results the region '
              f'holds; the centre is the grammar ({concepts} concepts). A solid curve from one chapter to another counts uses of '
              f'the second\'s results by the first\'s under `formal-reuse`, which [RESULT-WORKFLOW]({rel(WORKFLOW)}) keeps '
-             f'for "a verified inference using the cited result": the record\'s authors assign the kind, the registry checks an interface\'s '
-             f'form where an edge has one ({iface:,} of {formal:,}), and no edge is joined to a Lean use. Darker curves are an earlier chapter\'s results using a '
+             f'for "a verified inference using the cited result": the AI-written records assign the kind, the registry checks that an interface has its fields '
+             f'and cites a reviewed source ({iface:,} of all {formal:,} such edges, each a Lean file), and nothing checks that the Lean there uses the cited result. Darker curves are an earlier chapter\'s results using a '
              f'later one\'s: {len(back)} of the {len(drawn)} pairs drawn'
              + (f', the largest {name[biggest[0]].lower()} to {name[biggest[1]].lower()} with '
                 f'{between[biggest]["formal-reuse"]}' if biggest else '') + '. '
@@ -1075,7 +1121,7 @@ def section(graph, page_path):
              f'laws through bridges checked in Lean as equivalences and support the review reads where a row has them. So 45 and 11 count '
              f'different things, and the curves draw neither. Nor does a spoke: it counts modules that state their laws '
              f'on the grammar, not results that reach it.', '',
-             '### Edge kinds between chapters', '',
+             '## Edge kinds between chapters', '',
              'Edges from the results of the first region to the results of the second, by the kind each record gives its '
              'dependence (`formal-reuse`, `interpretive`, `application`) and its `related` list (analogy, not a '
              'dependence). A row whose two regions are the same counts edges within the region.', '',
@@ -1142,9 +1188,13 @@ def zh_page(graph):
     for label, n in (('推导而得', '11'), ('在一个所述的假设之下', '1'), ('计数，位于文法以下', '6'), ('处于一个指明的距离', '99')):
         body.append(f'| {label} | {n} | “{st["counts_zh"][n]}” |')
     body += [f'| 全部核心声明 | 117 | “{st["counts_zh"]["117"]}” |', '',
-             f'每项声明及其地位与依据，见[边的记录]({rel(EDGE_RECORD + ".md")})（英文）；99 项中每一项的理由都在那里。', '',
-             '**十一项推导而得者**，各由审阅读作文法之律的一个情形（第三栏为边的记录的英文原文）：', '',
-             '| 声明 | 所属情形 | 记录的话（英文原文） | 陈述它的结果 |', '|---|---|---|---|',
+             f'每项声明及其地位，见[根之边的记录]({rel(EDGE_RECORD + ".md")})（英文）：{edge_bases()[0]} 项有文字的依据，在[其数据]({rel(EDGE_RECORD + ".json")})（`boundary.standings`）中，'
+             f'其余 {117 - edge_bases()[0]} 项是规则所给的标签。凡其律中列有某项声明的记录，其页面印出该声明的地位：推导而得者印出其律、桥接与支持，读法印出其依据，其余印出规则的理由。99 项中每一项都有其指明的理由：其类别，其中 {edge_bases()[1]} 项另有文字的依据。'
+             f'一项[核心声明]({rel("GLOSSARY.zh.md")}#核心声明)是覆盖文件的某一行所指明的 Lean 陈述；一项结果的平实说法在其记录中。', '',
+             f'**十一项推导而得者**，各由一次 AI 写成的审阅读作文法之律的一个情形（[对该记录的审阅]({rel(REVIEW_U4)})，[对 `Listed.coming_of_ceasing` 一行的审阅]({rel(REVIEW_U4C)})）；'
+             f'迄今所有审阅都出自 AI（[08]({rel(m08, "review-status")})）。其中八项，用 08 §7 的话说，是“the eight connected rows that the reading of connected rows took as derived”'
+             f'（对连接行的读法取为推导而得的八个连接行）：达到文法使一行按规则成为连接行，读法标出其中的情形。每个 «…» 都是 [`Becoming.GrammarLaws`]({rel(GRAMMAR_LAWS)}) 中陈述的一条律。', '',
+             '| 声明 | 所属情形 | 记录依据的第一句（英文原文） | 其律中列有它的结果 |', '|---|---|---|---|',
              *[f'| `{decl}` | {"、".join(f"`{x}`" for x in laws)} | {first} | '
                + '、'.join(f'[{x}]({rel(str(Path(EDGE_RECORD).parent) + "/" + x + ".md")})' for x in stating) + ' |'
                for decl, laws, first, stating in derived_rows()],
@@ -1159,7 +1209,7 @@ def zh_page(graph):
     body += ['', '### 这幅图显示什么、不显示什么', '<a id="the-spine-what-it-shows-and-does-not-show"></a>', '',
              f'**它显示什么。** 每个圆是一章的区域，面积与该区域所含结果数成正比；中央是文法（{concepts} 个概念）。从甲章到乙章的'
              f'实线，计甲章的结果在 `formal-reuse` 之下使用乙章结果的次数，[RESULT-WORKFLOW]({rel(WORKFLOW)}) 把这一类留给'
-             f'“使用所引结果的已核验推理”：这一类由记录的作者指定；边带有接口时（{formal_edges} 条中有 {iface} 条），登记检查核对接口的形式，没有哪条边与一次 Lean 使用相连。较深的曲线是章序在前的一章的结果使用章序在后的一章的结果：所画 {len(drawn)} 个配对中有 {len(back)} 个'
+             f'“使用所引结果的已核验推理”：这一类由 AI 写成的记录指定；登记检查核对接口具备其字段并引用已审阅的来源（全部 {formal_edges} 条这样的边中有 {iface} 条，所引的都是 Lean 文件）；没有任何检查核对那里的 Lean 是否确实使用所引的结果。较深的曲线是章序在前的一章的结果使用章序在后的一章的结果：所画 {len(drawn)} 个配对中有 {len(back)} 个'
              + (f'，最大的是「{zname(biggest[0])}」到「{zname(biggest[1])}」，{formal[biggest]} 次' if biggest else '') + '。'
              f'章与章之间的虚线是 `interpretive`，留给“论证上的依赖”；点线是 `application`；`related` 是 RESULT-WORKFLOW 留给类比的，不画出'
              f'（{related} 条边）。不画作 formal-reuse 曲线的：少于 {DRAW_MIN} 次 formal-reuse 使用的 {len(small)} 个配对（共 '
@@ -1174,7 +1224,7 @@ def zh_page(graph):
              f'程度上达到文法，08 §7 以两种方式计这一点。“{cap[0]["zh"]}”；“{cap[1]["zh"]}”；“{cap[2]["zh"]}”'
              f'（[08 §7]({rel(cap[0]["home"], cap[0]["anchor"])})）。又，“{cap[5]["zh"]}”；“{cap[3]["zh"]}”'
              f'（[08 §7]({rel(cap[3]["home"], cap[3]["anchor"])})）。达到文法，是一项声明编译后的类型或值的那种依赖；推导而得是'
-             f'一种地位，即一项声明被读作文法之律的一个情形，经由在 Lean 中作为等价核验的桥接与审阅所读的支持（在某行列有它们之处）。'
+             f'一种地位，即一项声明被读作文法之律的一个情形，经由在 Lean 中作为等价核验的桥接与审阅所读的支持（某行载有它们之处）。'
              f'所以 45 与 11 计的是不同的东西，而曲线两者都不画。辐条也不画：它计的是在文法上陈述其律的模块，不是达到文法的结果。', '',
              '### 各章之间边的种类', '<a id="edge-kinds-between-chapters"></a>', '',
              '从第一个区域的结果到第二个区域的结果的边，按各记录给其依赖的种类（`formal-reuse`、`interpretive`、`application`）'

@@ -236,5 +236,44 @@ class Drawing(unittest.TestCase):
         self.assertEqual(total, kinds)
 
 
+class Tables(unittest.TestCase):
+    """The tables THEORY-GRAPH.md reads from 08 §7 and the edge record, against small inputs."""
+
+    METHOD = ('| Law | Statement | Anchor | On the grammar | Rows |\n|---|---|---|---|---:|\n'
+              '| Closure | c | `W` | `«a»` | 4 |\n| Balance | b | `B` | represented both ways, not derived | 6 |\n\nNext.\n'
+              'Of them, all 4 on closure and 2 of 6 on balance reach it.')
+
+    def test_the_laws_table_and_how_many_reach_the_grammar(self):
+        with mock.patch.object(spine, '_read', lambda path: self.METHOD if path == spine.METHOD else None):
+            self.assertEqual(spine.shared_laws_rows(), [('Closure', 'c', False, 4), ('Balance', 'b', True, 6)])
+            self.assertEqual(spine.reaching_the_grammar('Closure', 4), 4)
+            self.assertEqual(spine.reaching_the_grammar('Balance', 6), 2)
+            self.assertIsNone(spine.reaching_the_grammar('Balance', 7))  # the sentence no longer counts those rows
+
+    def test_a_cycle_among_recorded_uses_is_found(self):
+        g = {'edges': [{'from': 'a', 'to': 'b', 'type': 'formal-reuse'}, {'from': 'b', 'to': 'c', 'type': 'formal-reuse'},
+                       {'from': 'c', 'to': 'a', 'type': 'formal-reuse'}, {'from': 'c', 'to': 'd', 'type': 'formal-reuse'},
+                       {'from': 'd', 'to': 'a', 'type': 'related'}]}
+        self.assertEqual(spine.formal_cycles(g), (4, 4, [['a', 'b', 'c']]))
+        g['edges'] = g['edges'][1:]
+        self.assertEqual(spine.formal_cycles(g), (3, 4, []))
+        self.assertIn('no result reaches itself', spine.circular_paragraph(g, 'en')[0])
+        self.assertIn('condition of entry, not a finding', spine.circular_paragraph(g, 'en')[0])
+
+    def test_a_basis_is_cut_after_its_first_sentence_and_keeps_its_standing(self):
+        record = {'boundary': {'standings': [
+            {'declaration': 'Becoming.X.y', 'standing': 'derived', 'law': ['Becoming.L'],
+             'basis': {'en': 'A case of «L» at x, through Steps.along. Its other step is support. Its statement still reads as counting.'}},
+            {'declaration': 'Becoming.X.z', 'standing': 'derived', 'law': [], 'basis': {'en': 'A case at 3.5 steps. Then more.'}},
+            {'declaration': 'Becoming.X.w', 'standing': 'named distance', 'basis': {'en': 'Far.'}},
+            {'declaration': 'Becoming.X.v', 'standing': 'counting'}]}}
+        with mock.patch.object(spine, '_read', lambda path: json.dumps(record) if path.endswith('.json') else None), \
+                mock.patch.object(spine, 'ROOT', Path('/nonexistent')):
+            rows = spine.derived_rows()
+            self.assertEqual(spine.edge_bases(), (3, 1))
+        self.assertEqual(rows[0][2], 'A case of «L» at x, through Steps.along. … Its statement still reads as counting.')
+        self.assertEqual(rows[1][2], 'A case at 3.5 steps.')  # a decimal point is not a sentence's end
+
+
 if __name__ == '__main__':
     unittest.main()

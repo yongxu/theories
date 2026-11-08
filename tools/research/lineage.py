@@ -35,6 +35,7 @@ SVG = {'en': 'theories/lineage.svg', 'zh': 'theories/lineage.zh.svg'}
 RECORDS = 'theories/becoming/results/records'
 CORRESPONDENCES = 'theories/becoming/results/atlas/entries/correspondences.json'
 CROSSWALK_PAGE = 'theories/becoming/results/atlas/CROSSWALK.md'
+CROSSWALK_PAGE_ZH = 'theories/becoming/results/atlas/CROSSWALK.zh.md'
 LABELS = ('public', 'private', 'reconstruction')
 # Who wrote what states a turning point (RW's re-score, Q4): the fill of its mark in the picture (a dot at its centre where not stated).
 ORIGINS = ('person', 'drafted', 'ai', 'unstated')
@@ -284,19 +285,11 @@ def svg(s, lang, weeks):
             out.append(f'<rect x="{x:.1f}" y="{base + 70:.1f}" width="7" height="{h:.1f}" fill="{FAINT}"/>')
         out.append(t(W - 50, base + 145, words['growth'].format(top=most), 13, anchor='end', fill=MUTED))
     # the points in lanes above the axis; the thread's path first, the markers on it
-    lanes, placed, marks = [], [], {}
     threads = threads_of(s)
     ring_of = {pid: th['colour'] for th in reversed(threads) for pid in th['points']}
     thread = set(ring_of)
-    for n, p in enumerate(s['points'], 1):
-        x = x_of(parse_date(p['date'])[0], segments)
-        lane = next((i for i, last in enumerate(lanes) if x - last >= 17), len(lanes))
-        if lane == len(lanes):
-            lanes.append(x)
-        lanes[lane] = x
-        y = base - 16 - 17 * lane
-        marks[p['id']] = (x, y)
-        placed.append((n, p, x, y))
+    placed, lanes = lanes_of(s, segments, base)
+    marks = {p['id']: (x, y) for n, p, x, y in placed}
     for th in threads:
         path = [marks[i] for i in th.get('points', []) if i in marks]
         if len(path) > 1:
@@ -305,11 +298,14 @@ def svg(s, lang, weeks):
     for n, p, x, y in placed:
         out.append(marker(x, y, p['label'], ring_of.get(p['id'], False), p.get('origin')))
     # short titles on the major points, in rows above the lanes, each on a vertical leader from its point
-    title_floor = base - 16 - 17 * max(len(lanes), 1) - 14
+    title_floor = base - 16 - 17 * max(lanes, 1) - 14
     rows = title_rows(placed, lang, thread)
     crossed = title_crossings(rows, thread)
     if crossed:  # the search found no layout: refuse, rather than draw leaders across titles
         raise ValueError(f'lineage picture ({lang}): titles cross or overlap: {crossed[:3]}')
+    through = leaders_through_marks(placed, rows)
+    if through:  # a title would read as the higher point's
+        raise ValueError(f'lineage picture ({lang}): leaders rise through other points: {through[:3]}')
     for row, x, y, label, anchor, p in rows:
         ly = title_floor - 22 * row
         tx = x - 6 if anchor == 'start' else x + 6 if anchor == 'end' else x
@@ -371,20 +367,62 @@ def label_width(label, bold=False, size=14):
     return w * size * (1.06 if bold else 1.0)
 
 
+def lanes_of(s, segments, base=0):
+    """The points in lanes above the axis: (placed as (number, point, x, y), how many lanes). Each point takes the
+    lowest lane whose last point is 17 or more to its left. Points within 4 of one another form a group, and a titled
+    point is placed after the rest of its group, above all of them, so its leader rises through no other point's mark
+    (RW's third reading)."""
+    xs = [x_of(parse_date(p['date'])[0], segments) for p in s['points']]
+    by_x = sorted(range(len(xs)), key=lambda i: (xs[i], i))
+    groups = []
+    for i in by_x:
+        if groups and xs[i] - xs[groups[-1][-1]] < 4:
+            groups[-1].append(i)
+        else:
+            groups.append([i])
+    lanes, lane_of = [], {}
+    for g in groups:
+        for i in sorted(g, key=lambda i: (bool(s['points'][i].get('short')), xs[i], i)):
+            x = xs[i]
+            lowest = 1 + max((lane_of[j] for j in g if j in lane_of), default=-1) if s['points'][i].get('short') else 0
+            lane = next((k for k in range(lowest, len(lanes)) if x - lanes[k] >= 17), None)
+            if lane is None:
+                lane = max(len(lanes), lowest)
+                lanes += [float('-inf')] * (lane + 1 - len(lanes))
+            lanes[lane] = x
+            lane_of[i] = lane
+    return [(i + 1, p, xs[i], base - 16 - 17 * lane_of[i]) for i, p in enumerate(s['points'])], len(lanes)
+
+
+def leaders_through_marks(placed, rows):
+    """Titled points whose leader rises through another point's mark (within 4 of its centre, above it): what
+    lanes_of is to prevent. None where it has done its work."""
+    out = []
+    for _, x, y, label, _, p in rows:
+        for n, q, qx, qy in placed:
+            if q['id'] != p['id'] and abs(qx - x) < 4 and qy < y:
+                out.append((label, n))
+    return out
+
+
+def strand_counts(s):
+    """The counts 'What the points follow' gives: points on a thread and on none, and the earlier folders the evidence
+    cites by a path under theories/."""
+    on = {pid for th in threads_of(s) for pid in th['points']}
+    earlier = {d.name for d in (ROOT / 'theories').iterdir() if d.is_dir() and d.name != 'becoming' and (d / 'README.md').is_file()}
+    cited = {e['path'].split('/')[1] for p in s['points'] for e in p['evidence']
+             if e['path'].startswith('theories/') and e['path'].count('/') >= 2 and e['path'].split('/')[1] in earlier}
+    return {'total': len(s['points']), 'on_threads': len(on), 'on_none': len(s['points']) - len(on), 'cited': len(cited),
+            'folders_n': len(earlier)}
+
+
 def picture_base(s, lang, segments, top):
     """The axis's height: low enough that the highest title, in as many rows as the titles need, clears the phases' names."""
-    lanes, placed = [], []
-    for n, p in enumerate(s['points'], 1):
-        x = x_of(parse_date(p['date'])[0], segments)
-        lane = next((i for i, last in enumerate(lanes) if x - last >= 17), len(lanes))
-        if lane == len(lanes):
-            lanes.append(x)
-        lanes[lane] = x
-        placed.append((n, p, x, 0))
+    placed, lanes = lanes_of(s, segments)
     thread = {pid for th in threads_of(s) for pid in th['points']}
     rows = max([r[0] for r in title_rows(placed, lang, thread)] or [0]) + 1
     names = top + 20 + 18 * 2 + 12  # the phases' names, three lines at most
-    return max(470, names + 22 * rows + 30 + 17 * max(len(lanes), 1))
+    return max(470, names + 22 * rows + 30 + 17 * max(lanes, 1))
 
 
 def title_rows(placed, lang, thread, most=12, budget=200000):
@@ -647,7 +685,8 @@ def page(s, lang, weeks, undated, by_folder, totals):
             lines.append(f'- **{o[lang]}**' + (f'（{shown}）' if lang == 'zh' else f' ({shown})') + f'{colon}{o["means_" + lang]}')
     for key in ('coverage', 'chosen', 'strands'):
         if words.get(key):
-            lines += ['', words[key].format(crosswalk=os.path.relpath(CROSSWALK_PAGE, Path(here).parent), folders=os.path.relpath('theories/README.md', Path(here).parent))]
+            lines += ['', words[key].format(crosswalk=os.path.relpath(CROSSWALK_PAGE_ZH if lang == 'zh' else CROSSWALK_PAGE, Path(here).parent),
+                                            folders=os.path.relpath('theories/README.md', Path(here).parent), **strand_counts(s))]
     lines += ['', words['hb_note'], '']
     for th in threads_of(s):
         lines += ['', f'## {th["title"][lang]}', '', th['intro'][lang], '']
