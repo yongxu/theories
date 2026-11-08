@@ -20,7 +20,8 @@ def current_template(root):
     (root / zh_fronts.TEMPLATE_SOURCE).parent.mkdir(parents=True, exist_ok=True)
     (root / zh_fronts.TEMPLATE_SOURCE).write_text('The first screen.\n', encoding='utf-8')
     (root / zh_fronts.EDITIONS).write_text(json.dumps({'editions': {zh_fronts.TEMPLATE: {
-        'revised': '2026-11-08', 'english': zh_fronts.english_digest('The first screen.\n')}}}), encoding='utf-8')
+        'revised': '2026-11-08', 'english': zh_fronts.edition_digest('The first screen.\n'), 'chinese': '0' * 64,
+        'english_commit': 'abc1234'}}}), encoding='utf-8')
 
 
 class ChineseFrontsTests(unittest.TestCase):
@@ -267,7 +268,8 @@ class EditionsTests(unittest.TestCase):
                 self.write(page, f'# 页\n\n{zh_fronts.nav_line(page)}\n\n*约 1 分钟读完。*\n\n正文。\n')
             self.write(english, f'# Page\n\n[中文](x.zh.md) · [One page](o.md)\n\nText of {english}.\n')
         self.write(zh_fronts.TEMPLATE, '<!-- note -->\n\n# 首\n\n{{nav}}\n\n正文。\n')
-        held = {p: {'revised': '2026-11-08', 'english': zh_fronts.english_digest((self.root / e).read_text(encoding='utf-8'))}
+        held = {p: {'revised': '2026-11-08', 'english': zh_fronts.edition_digest((self.root / e).read_text(encoding='utf-8')),
+                    'chinese': zh_fronts.edition_digest((self.root / p).read_text(encoding='utf-8')), 'english_commit': 'abc1234'}
                 for p, e in zh_fronts.tracked().items()}
         self.write(zh_fronts.EDITIONS, json.dumps({'editions': held}))
         self.page = 'theories/becoming/USES.zh.md'
@@ -279,10 +281,21 @@ class EditionsTests(unittest.TestCase):
     def text(self, rel):
         return (self.root / rel).read_text(encoding='utf-8')
 
-    def test_a_note_or_the_navigation_line_changes_no_digest(self):
-        base = '# Page\n\n[中文](a.zh.md)\n\nBody.\n'
-        self.assertEqual(zh_fronts.english_digest(base), zh_fronts.english_digest('<!-- a\nnote -->\n# Page\n\n[Home](README.md) · [中文](a.zh.md) · **Read**\n\nBody.\n'))
-        self.assertNotEqual(zh_fronts.english_digest(base), zh_fronts.english_digest(base.replace('Body', 'Body changed')))
+    def test_a_note_the_navigation_line_or_a_link_target_changes_no_digest(self):
+        d = zh_fronts.edition_digest
+        base = '# Page\n\n[中文](a.zh.md)\n\nBody, [a test](x/README.md#r).\n'
+        self.assertEqual(d(base), d('<!-- a\nnote -->\n# Page\n\n[Home](README.md) · [中文](a.zh.md) · **Read**\n\nBody, [a test](y/README.md).\n'))
+        self.assertNotEqual(d(base), d(base.replace('Body', 'Body changed')))
+        self.assertNotEqual(d(base), d(base.replace('a test', 'another test')))
+        # only the navigation line goes: a line of the body linking a Chinese page still counts
+        self.assertNotEqual(d(base + '\nSee [中文](b.zh.md) for more.\n'), d(base + '\nSee [中文](b.zh.md) for less.\n'))
+        zh = '# 页\n\n[English](a.md) · [首页](README.zh.md)\n\n正文。\n'
+        self.assertEqual(d(zh), d(zh.replace('[English](a.md) · [首页](README.zh.md)\n', '[English](a.md) · [首页](README.zh.md)\n\n' + zh_fronts.BANNER + '它依……*\n')))
+
+    def test_a_banner_like_line_elsewhere_is_left_alone(self):
+        page = self.text(self.page) + '\n' + zh_fronts.BANNER + '这一行在正文里。*\n'
+        self.write(self.page, page)
+        self.assertEqual(zh_fronts.with_banner(page, None, zh_fronts.nav_line(self.page)), page)
 
     def test_current_editions_carry_no_banner(self):
         self.assertEqual(zh_fronts.banner_problems(self.root), [])
@@ -341,11 +354,29 @@ class EditionsTests(unittest.TestCase):
         found = zh_fronts.record_revised([self.page], self.root, today='2026-11-09')
         self.assertTrue(found and 'uncommitted' in found[0], found)
         git('-c', 'user.name=t', '-c', 'user.email=t@t', 'commit', '-qam', 'y')
+        found = zh_fronts.record_revised([self.page], self.root, today='2026-11-09')  # the Chinese was not touched
+        self.assertTrue(found and 'unchanged since it was last recorded' in found[0], found)
+        self.write(self.page, self.text(self.page).replace('正文。', '新的正文。'))
         self.assertEqual(zh_fronts.record_revised([self.page], self.root, today='2026-11-09'), [])
         entry = json.loads(self.text(zh_fronts.EDITIONS))['editions'][self.page]
-        self.assertEqual(entry, {'revised': '2026-11-09', 'english': zh_fronts.english_digest(self.text(english))})
+        commit = git('log', '-1', '--format=%h', '--', english).stdout.strip()
+        self.assertEqual(entry, {'revised': '2026-11-09', 'english': zh_fronts.edition_digest(self.text(english)),
+                                 'chinese': zh_fronts.edition_digest(self.text(self.page)), 'english_commit': commit})
         self.assertEqual(zh_fronts.banner_problems(self.root), [])
         self.assertEqual(zh_fronts.record_revised(['README.md'], self.root), ['not a translated front: README.md'])
+        # a new English that needs no change in the Chinese: recorded only with the reason, which the entry keeps
+        self.write(english, self.text(english) + 'A typo fixed.\n')
+        git('-c', 'user.name=t', '-c', 'user.email=t@t', 'commit', '-qam', 'z')
+        self.assertTrue(zh_fronts.record_revised([self.page], self.root, today='2026-11-10'))
+        self.assertEqual(zh_fronts.record_revised([self.page], self.root, today='2026-11-10', unchanged='an English typo'), [])
+        self.assertEqual(json.loads(self.text(zh_fronts.EDITIONS))['editions'][self.page]['unchanged'], 'an English typo')
+        # an entry for a file no longer a front is dropped by the next record, not left to block the check
+        data = json.loads(self.text(zh_fronts.EDITIONS))
+        data['editions']['OLD.zh.md'] = data['editions'][self.page]
+        self.write(zh_fronts.EDITIONS, json.dumps(data))
+        self.write(self.page, self.text(self.page).replace('新的正文。', '又新的正文。'))
+        self.assertEqual(zh_fronts.record_revised([self.page], self.root, today='2026-11-11'), [])
+        self.assertNotIn('OLD.zh.md', json.loads(self.text(zh_fronts.EDITIONS))['editions'])
 
 
 if __name__ == '__main__':

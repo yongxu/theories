@@ -35,7 +35,8 @@ class StrictFreshTests(unittest.TestCase):
                 patch.object(navigation, 'render_views', lambda records: {}), \
                 patch.object(research.theory_graph, 'render', lambda records: {}), \
                 patch.object(research.atlas, 'render', lambda records: ({}, [])), \
-                patch.object(research.zh_fronts, 'render', lambda records, outputs: ({}, [])), \
+                patch.multiple(research.zh_fronts, render=lambda records, outputs: ({}, []), write_banners=lambda: ([], []),
+                               banner_problems=lambda: []), \
                 patch.object(research.mirror, 'render', lambda: ({}, [])):
             code, result = research.check_or_render(False, strict_fresh=strict_fresh)
         return code, result, calls
@@ -87,7 +88,8 @@ class StrictFreshTests(unittest.TestCase):
                     patch.object(navigation, 'validate_history', lambda: []), \
                     patch.object(navigation, 'render_views', lambda records: {}), \
                     patch.object(research.atlas, 'render', lambda records: ({}, [])), \
-                    patch.object(research.zh_fronts, 'render', lambda records, outputs: ({}, [])), \
+                    patch.multiple(research.zh_fronts, render=lambda records, outputs: ({}, []), write_banners=lambda: ([], []),
+                                   banner_problems=lambda: []), \
                     patch.object(research.mirror, 'render', lambda: ({}, [])), \
                     patch.object(navigation, 'write_views', write_views):
                 code, result = research.check_or_render(True)

@@ -19,14 +19,16 @@ first screen's counts of the tests naming a thesis (tests_page.screen_count).
 Each translated edition also says when it falls behind its English (RW, 8 November 2026, the fourth re-score's finding:
 the Chinese said what the English no longer said, and nothing showed it). EDITIONS records, for each hand-written
 Chinese front and for the landing page's template, the day it was last revised and a digest of the English it followed
-(HTML comments and any line linking a Chinese edition, the English page's navigation line, left out, so a note or that line changes nothing).
+(its HTML comments, navigation line and link targets left out, so a note, that line or a move changes nothing; the
+Chinese is digested the same way, so a revision can be told from none).
 Where the English has changed since, the page carries a dated banner under its navigation line, 本版落后于英文版, which
 the render writes and removes (`write_banners`; README.zh.md's is written with the page) and the check requires
 (`banner_problems`). Revising an edition is what clears it: `--revised PAGE` records today and the English as it is now,
 so it is run after the Chinese has been brought to that English and never to silence a banner.
 
 usage: python3 -B tools/research/zh_fronts.py              (each front whose line or banner is wrong; exits 1 if any)
-       python3 -B tools/research/zh_fronts.py --revised PAGE...  (record that PAGE now follows its English as committed)
+       python3 -B tools/research/zh_fronts.py --revised PAGE... [--unchanged REASON]  (record that PAGE follows its
+         English as committed; refused for an unchanged Chinese unless REASON says why the English's change needs none)
 """
 from __future__ import annotations
 
@@ -115,12 +117,26 @@ def tracked() -> dict:
     return {**{p: e for p, e in FRONTS.items() if p in HAND_WRITTEN and e}, TEMPLATE: TEMPLATE_SOURCE}
 
 
-def english_digest(text: str) -> str:
-    """The digest an edition is checked against: the English without its HTML comments or its navigation line."""
+def _nav_at(lines: list) -> int | None:
+    """Where a page's navigation line stands among its opening lines: an English front's links its Chinese edition, a
+    Chinese front's opens with its English link (or, without one, the first way in), the template's is {{nav}}."""
+    first = f'[{WAYS[0][0]}]('
+    return next((i for i, l in enumerate(lines[:OPENING]) if '[中文](' in l or l.startswith(('[English](', first)) or l == '{{nav}}'), None)
+
+
+def edition_digest(text: str) -> str:
+    """The digest of a page as an edition is checked against it: without its HTML comments, its navigation line, a
+    banner under it, or link targets (a move rewrites links in every page and tells a reader nothing new)."""
     import hashlib
-    body = re.sub(r'<!--.*?-->', '', text, flags=re.S)
-    lines = [l.rstrip() for l in body.split('\n') if '[中文](' not in l]  # the navigation line, however it begins
+    lines = [l.rstrip() for l in re.sub(r'<!--.*?-->', '', text, flags=re.S).split('\n')]
+    at = _nav_at(lines)
+    if at is not None:
+        del lines[at]
+    lines = [re.sub(r'\]\([^)\s]*\)', ']()', l) for l in lines if l.strip() and not l.startswith(BANNER)]  # blank lines carry nothing
     return hashlib.sha256('\n'.join(lines).strip().encode('utf-8')).hexdigest()
+
+
+english_digest = edition_digest  # the English side; the Chinese side is digested the same way
 
 
 def editions(root: Path = ROOT) -> tuple[dict, list[str]]:
@@ -136,10 +152,16 @@ def editions(root: Path = ROOT) -> tuple[dict, list[str]]:
     errors = [f'zh fronts: {EDITIONS} has no entry for {p}' for p in tracked() if p not in held]
     errors += [f'zh fronts: {EDITIONS} names a file that is no translated front: {p}' for p in held if p not in tracked()]
     for p, e in held.items():
-        if not (isinstance(e, dict) and isinstance(e.get('revised'), str) and DATE.match(e['revised'])
-                and isinstance(e.get('english'), str) and re.fullmatch(r'[0-9a-f]{64}', e['english'])):
-            errors.append(f'zh fronts: {EDITIONS}: {p} needs "revised" (YYYY-MM-DD) and "english" (a sha256)')
+        if not _well_formed(e):
+            errors.append(f'zh fronts: {EDITIONS}: {p} needs "revised" (YYYY-MM-DD), "english" and "chinese" (sha256 digests) '
+                          'and "english_commit"')
     return held, errors
+
+
+def _well_formed(e) -> bool:
+    return (isinstance(e, dict) and isinstance(e.get('revised'), str) and bool(DATE.match(e['revised']))
+            and all(isinstance(e.get(k), str) and bool(re.fullmatch(r'[0-9a-f]{64}', e[k])) for k in ('english', 'chinese'))
+            and isinstance(e.get('english_commit'), str) and bool(re.fullmatch(r'[0-9a-f]{7,40}', e['english_commit'])))
 
 
 def lag(page: str, root: Path = ROOT) -> tuple[str | None, list[str]]:
@@ -148,7 +170,7 @@ def lag(page: str, root: Path = ROOT) -> tuple[str | None, list[str]]:
     if any('is not a JSON object' in e for e in errors):
         return None, errors
     entry, english = held.get(page), tracked()[page]
-    if not (isinstance(entry, dict) and isinstance(entry.get('revised'), str) and DATE.match(entry['revised']) and isinstance(entry.get('english'), str)):
+    if not _well_formed(entry):
         return None, [f'zh fronts: {EDITIONS} has no well-formed entry for {page}']
     if not (root / english).is_file():
         return None, [f'zh fronts: {page} follows a missing English page: {english}']
@@ -181,19 +203,15 @@ def banner(page: str, revised: str) -> str:
 
 
 def with_banner(text: str, line: str | None, nav: str) -> str:
-    """`text` with its banner, if any, taken out and `line`, if given, put after the navigation line `nav` and a blank."""
+    """`text` with the banner right under its navigation line `nav`, if any, taken out (a line elsewhere that happens
+    to open the same way is left alone) and `line`, if given, put there: the navigation line, a blank, the banner."""
     parts = text.split('\n')
-    kept, i = [], 0
-    while i < len(parts):
-        if parts[i].startswith(BANNER):
-            i += 2 if i + 1 < len(parts) and not parts[i + 1].strip() else 1
-            continue
-        kept.append(parts[i])
-        i += 1
+    at = parts.index(nav) + 1
+    if at + 1 < len(parts) and not parts[at].strip() and parts[at + 1].startswith(BANNER):
+        del parts[at + 1:at + 3 if at + 2 < len(parts) and not parts[at + 2].strip() else at + 2]
     if line:
-        at = kept.index(nav) + 1
-        kept[at:at] = ['', line] if at < len(kept) and not kept[at].strip() else ['', line, '']
-    return '\n'.join(kept)
+        parts[at:at] = ['', line] if at < len(parts) and not parts[at].strip() else ['', line, '']
+    return '\n'.join(parts)
 
 
 def _banner_target(page: str, root: Path) -> tuple[str, str] | None:
@@ -229,42 +247,70 @@ def write_banners(root: Path = ROOT) -> tuple[list[str], list[str]]:
     pages, errors = _expected(root)
     if errors:
         return [], errors
-    written = []
+    import os
+    import tempfile
+    written, errors = [], []
     for page, (text, want) in pages.items():
-        if text != want:
-            (root / page).write_text(want, encoding='utf-8')
-            written.append(page)
-    return written, []
+        if text == want:
+            continue
+        path = root / page
+        if path.read_text(encoding='utf-8') != text:  # changed since it was read: leave it for the next render
+            errors.append(f'zh fronts: {page} changed while its banner was being written; render again')
+            continue
+        with tempfile.NamedTemporaryFile('w', encoding='utf-8', dir=path.parent, delete=False) as stream:
+            stream.write(want)
+        os.replace(stream.name, path)
+        written.append(page)
+    return written, errors
 
 
-def record_revised(pages, root: Path = ROOT, today: str | None = None) -> list[str]:
-    """Record that each of `pages` now follows its English as committed: today's date and that English's digest. An
-    English with uncommitted changes is refused, so the record names an English anyone can read at a commit."""
+def record_revised(pages, root: Path = ROOT, today: str | None = None, unchanged: str | None = None) -> list[str]:
+    """Record that each of `pages` now follows its English as committed: today, that English's digest and last commit,
+    and the Chinese's digest. Refused where the English has uncommitted changes (the record names an English anyone can
+    read at a commit) and where the Chinese is the same as when it was last recorded, unless `unchanged` says why the
+    new English needs no change in the Chinese; that reason is kept in the entry, so a banner cleared without a
+    revision says so. Entries for files that are no longer translated fronts are dropped."""
     import json
     import subprocess
     from datetime import date
-    errors = []
     held, found = editions(root)
-    if found and not all('has no entry' in e for e in found):
+    if any('is not a JSON object' in e for e in found):
         return found
+    held = {p: e for p, e in held.items() if p in tracked()}
+    errors = []
+
+    def git(*a):
+        return subprocess.run(['git', '-C', str(root), *a], capture_output=True, text=True).stdout.strip()
     for page in pages:
         english = tracked().get(page)
         if english is None:
             errors.append(f'not a translated front: {page}')
             continue
-        dirty = subprocess.run(['git', '-C', str(root), 'status', '--porcelain', '--', english], capture_output=True, text=True).stdout.strip()
-        if dirty:
+        if git('status', '--porcelain', '--', english):
             errors.append(f'{english} has uncommitted changes: commit the English the edition follows first')
             continue
-        held[page] = {'revised': today or date.today().isoformat(), 'english': english_digest((root / english).read_text(encoding='utf-8'))}
+        chinese = edition_digest((root / page).read_text(encoding='utf-8'))
+        before = held.get(page) if _well_formed(held.get(page)) else None
+        if before and before['chinese'] == chinese and not unchanged:
+            errors.append(f'{page} is unchanged since it was last recorded: revise it to its English, or give --unchanged REASON '
+                          "saying why the English's change needs none")
+            continue
+        entry = {'revised': today or date.today().isoformat(), 'english': edition_digest((root / english).read_text(encoding='utf-8')),
+                 'chinese': chinese, 'english_commit': git('log', '-1', '--format=%h', '--', english) or '0000000'}
+        if unchanged:
+            entry['unchanged'] = unchanged
+        held[page] = entry
     if errors:
         return errors
-    data = {'note': ('Each translated Chinese front and the Chinese landing page\'s template: the day it was last revised and '
-                     'the digest of the English it then followed (tools/research/zh_fronts.py). Written by --revised after '
-                     'a revision, never by hand and never to clear a banner.'),
-            'editions': dict(sorted(held.items()))}
+    data = {'note': NOTE, 'editions': dict(sorted(held.items()))}
     (root / EDITIONS).write_text(json.dumps(data, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
     return []
+
+
+NOTE = ("Each translated Chinese front and the Chinese landing page's template: the day it was last revised, the digests "
+        "of the English it then followed and of the Chinese, and the English's last commit (tools/research/zh_fronts.py). "
+        "Written by --revised after a revision, never by hand; an entry with \"unchanged\" recorded a new English that "
+        "needed no change in the Chinese, and says why.")
 
 
 # --- the Chinese landing page, generated ----------------------------------------------------------------------------
@@ -508,10 +554,16 @@ def render(records: list, outputs: dict, root: Path = ROOT) -> tuple[dict, list[
 
 if __name__ == '__main__':
     if sys.argv[1:2] == ['--revised']:
-        if not sys.argv[2:]:
-            sys.exit('usage: zh_fronts.py --revised PAGE...')
-        found = record_revised(sys.argv[2:])
-        print('\n'.join(found) or f'{EDITIONS}: recorded ' + ', '.join(sys.argv[2:]) + ' (run make research-render to clear their banners)')
+        args, reason = sys.argv[2:], None
+        if '--unchanged' in args:
+            i = args.index('--unchanged')
+            reason, args = (args[i + 1] if i + 1 < len(args) else ''), args[:i] + args[i + 2:]
+            if not reason.strip():
+                sys.exit('--unchanged needs a reason')
+        if not args:
+            sys.exit('usage: zh_fronts.py --revised PAGE... [--unchanged REASON]')
+        found = record_revised(args, unchanged=reason)
+        print('\n'.join(found) or f'{EDITIONS}: recorded ' + ', '.join(args) + ' (run make research-render to clear their banners)')
         sys.exit(1 if found else 0)
     found = problems() + banner_problems()
     print('\n'.join(found) or 'every Chinese front carries the line, and every banner says how far its edition follows its English')

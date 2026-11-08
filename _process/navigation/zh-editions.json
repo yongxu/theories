@@ -1,33 +1,47 @@
 {
- "note": "Each translated Chinese front and the Chinese landing page's template: the day it was last revised and the digest of the English it then followed (tools/research/zh_fronts.py). Written by --revised after a revision, never by hand and never to clear a banner.",
+ "note": "Each translated Chinese front and the Chinese landing page's template: the day it was last revised, the digests of the English it then followed and of the Chinese, and the English's last commit (tools/research/zh_fronts.py). Written by --revised after a revision, never by hand; an entry with \"unchanged\" recorded a new English that needed no change in the Chinese, and says why.",
  "editions": {
   "GLOSSARY.zh.md": {
    "revised": "2026-11-08",
-   "english": "536840ff7e9eb2b7a5e333da7e58632d6883d54b5ed3df81d6a2d5a7c4b5548f"
+   "english": "e6cbeefb4d83d4a0761ba64004d588f02d0ed41710b849606ddc155b486a3b73",
+   "chinese": "e8a9eacc97ecf365e946d1f2d22226fd0489a8aed0922a31f088cbf2b3e53b04",
+   "english_commit": "dd75ba4a8"
   },
   "_process/navigation/README-ZH.md": {
    "revised": "2026-11-08",
-   "english": "11dc7246d02f42524bf3d3bdf8c51b71e375b02b3484592f0b49f95de7fbca64"
+   "english": "fc8ce9f35b34f732f42ed88f3e34e4b644c09f16d6187ce53e4571cc25c5cbab",
+   "chinese": "ff761b4f9bd562cf4d9ea879ea4452cdc1cabab0a7d2f4d45214e1b68aa6fb86",
+   "english_commit": "8240dbef8"
   },
   "theories/becoming/ONE-PAGE.zh.md": {
    "revised": "2026-11-08",
-   "english": "cd753cfcc56d4cd95ef07f339c29542b30e8399e42083d35f53b444090f6880c"
+   "english": "f52e6cf205c04e7900d87d96d9047e326d83c7b19d9390c00af044b500183d4d",
+   "chinese": "fc71411cabad3bd91708addf30e44246954b7fcb1204583fb1686f19c6833d75",
+   "english_commit": "1d4177260"
   },
   "theories/becoming/THE-THEORY-OF-BECOMING.zh.md": {
    "revised": "2026-11-08",
-   "english": "4e4818cf1196457d5e422524c137c8f50ccb5eb8a09c4063b537c068f641872b"
+   "english": "3133296fa2849a2c9f5c74a2f5c62619ecef526a7fb359dac24033269068e6cd",
+   "chinese": "9f30a5e40985858edcf2dc3cf33acb91f496f807cf67a8d6075f190bde7e0ad0",
+   "english_commit": "1d4177260"
   },
   "theories/becoming/USES-EXAMPLES.zh.md": {
    "revised": "2026-11-08",
-   "english": "01f9c29064a2a801176faa3ed5212e2e9a77f8dd83013635e65404a545c9f9f4"
+   "english": "7314615ae6db470d443e4f725a12bf6e8d89cb7a4a6d2d819d58c5e5e09d0dbf",
+   "chinese": "53654422797d26247ff7c499b1fadfd22b080dedf8c222864c6c6f13f405e862",
+   "english_commit": "8240dbef8"
   },
   "theories/becoming/USES.zh.md": {
    "revised": "2026-11-08",
-   "english": "efc1113cf5ab63110d230d5e5a3bcd256d15cda27367744a933754c44030a2b9"
+   "english": "00a7c212ded40827127608aff4a31351742e62f108c5546a08c2b98ccb127101",
+   "chinese": "7a0e61d0c3ef9b4dfcda3af81695e4db7d6d0554161bd6135cacc3a7fc2f0fe0",
+   "english_commit": "8240dbef8"
   },
   "theories/becoming/review/README.zh.md": {
    "revised": "2026-11-08",
-   "english": "ee321b5668d2e9b872a34ebd65e489bec3653963ad9328e06a99b4c00c60ed93"
+   "english": "48c85440462e830c4ec9d1d04b2e30ea7057bad0d9fccf6be8e0563f569f1660",
+   "chinese": "9ba81c8ae82b26ae2fdf8e2d93c47cd142240e1c658af2e91b96a9226554f089",
+   "english_commit": "3e944c037"
   }
  }
 }
