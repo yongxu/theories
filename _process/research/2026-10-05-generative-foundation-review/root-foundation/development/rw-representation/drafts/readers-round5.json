@@ -1,0 +1,69 @@
+[
+ {
+  "verdict": "The round closes: no high and no medium. All six prior items are closed on the loci named. The three statements you asked about hold against Sharma et al. Best-of-N \"reduces answer and mimicry sycophancy for this base model\" and \"With RL, some forms of sycophancy increase\" (§4.2). \"Depended on the optimizer\" renders §4.2's \"also depend on details of the optimization approach\". \"The human data\" has the right referent, since §4.2 says the PM \"is trained in part using the data analyzed in\" §4.1, though the gloss drops \"somewhat\" (finding 2). \"Truthfulness sometimes given up\" is the abstract's own claim. \"The third in part\" only narrows the claim; its order is given by the home section and the record's Correspondence, and I found no misreading. No law or standing changed: the item 3 law text, T3's \"conjectured, partly supported\" and reviewed-scoped are untouched. Stated times are right by navigation.reading_time: USES-EXAMPLES 5,954 words and 65 characters gives 46.05 to 59.87, so 46 to 60; USES 15 to 19; the statement is 295 characters. Five lows follow. One I would fix before landing: the Chinese edition still carries the sentence the checker added to the last round's medium. I rate it low because your rule puts restatements in other files there and that page's banner defers to the English; if you count the zh edition as the same page, it is that medium's residue. How this was checked: both papers were read through WebFetch's summarizing model, in targeted queries returning short verbatim fragments, not line by line, and only the first 100,000 characters of each. That covers Sharma §4 and Constitutional AI §4.1. Nothing was edited; no tests or builds ran; I ran the page's reading-time function read-only.",
+  "prior": [
+   {
+    "item": "M: item 3 and line 42 of USES-EXAMPLES, 07 §6, the record's statement and the study's bullet unqualified on Sharma et al.",
+    "state": "closed",
+    "why": "All five English loci now carry the limit, and the added detail matches §4.2 and §4.3.2. 07 §6 and ALIGNMENT line 169 agree verbatim. The Chinese counterpart of line 42 was not among the named loci and is finding 1."
+   },
+   {
+    "item": "L1: the study's Sources said all figures were from abstracts",
+    "state": "closed",
+    "why": "Sources now excepts section 2's Constitutional AI figures and the Sharma note, from the papers' bodies, read 8 November 2026, matching the record's Conditions."
+   },
+   {
+    "item": "L2: READING-BUDGETS' opening time should be 21.9 to 28.4",
+    "state": "closed",
+    "why": "Stated 21.9 to 28.4. Recomputed from the opening's body: 2,823 words and 43 characters gives 21.88 and 28.445."
+   },
+   {
+    "item": "L3: the audit's 'or which half drives what it found' looser than the study",
+    "state": "closed",
+    "why": "Now 'does not separate what each half contributes', the study's words. The paper treats the PM as one unit throughout."
+   },
+   {
+    "item": "L4: the audit's lead used a parenthetical that read as the frame's content",
+    "state": "closed",
+    "why": "Now 'as the paper frames it, though ...', separating the frame from what qualifies it. Constitutional AI §4.1 confirms the helpful RLHF model in the chain-of-thought runs and pre-trained models otherwise."
+   },
+   {
+    "item": "L5: 'transcripts that differ only in what comes after them' should be episodes with the same transcript",
+    "state": "closed",
+    "why": "Now 'separating episodes with the same transcript', matching the study's by-construction clause."
+   }
+  ],
+  "findings": [
+   {
+    "severity": "low",
+    "where": "/Users/ren/tmp/rw/wt2/theories/becoming/USES-EXAMPLES.zh.md:48",
+    "problem": "The Chinese edition still quotes 07 §6 without the limit and says 这就是耗竭的方向 for all three measurements, the sentence corrected at line 42 of the English. Its header says it is revised when the English changes. It has no worked audit, so this is the only line affected.",
+    "fix": "After the quotation add 第三项的效果不一：随优化之法而异，真实性有时让位于迎合。 and write 这就是耗竭的方向（第三项仅部分如此）. About 40 characters; its stated 37 to 48 minutes stays right."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/ren/tmp/rw/wt2/theories/becoming/USES-EXAMPLES.md:54 and CORRESPONDENCE.md section 1",
+    "problem": "'it reads the human data as favouring agreement (its §4.1)' drops the paper's hedges. §4.1 says the data 'somewhat incentivizes' matching the user, all else equal, also incentivizes truthful responses, and matching beliefs 'is not consistently the most predictive feature'. The direction is right; the strength is left out.",
+    "fix": "In both places write 'as somewhat favouring agreement, all else equal'. Five words; the page's 46 to 60 minutes stays right."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/ren/tmp/rw/wt2/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cr1-coupling-correspondence/CORRESPONDENCE.md (section 1 note and 'What this establishes'); the record's history",
+    "problem": "'mixed and depended on the optimizer' is cited to §4.2 and §4.3.2, but §4.3.2 is best-of-N only (N=4096) and says nothing on the optimizer's role; it supports 'mixed'. The effects also differ by form of sycophancy, and the best-of-N and RL runs start from different models (helpful-only Claude 1.3; Claude 2's finetuning), so the short form reads slightly more isolated than the paper's 'details of the optimization approach'.",
+    "fix": "Optional: 'mixed (§4.2, §4.3.2), varying by form of sycophancy and with details of the optimization (§4.2)'. The audit's item 3 already shows the form dependence."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/ren/tmp/rw/wt2/theories/becoming/USES-EXAMPLES.md:42",
+    "problem": "'(read from the papers' abstracts, not independently reviewed)' stands directly before the new sentence on mixed effects, which comes from the paper's body and has no source mark of its own. This understates what was read and overstates nothing.",
+    "fix": "End the new sentence with '(its §4.2, read from the body)'."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/ren/tmp/rw/wt2/theories/becoming/results/atlas/entries/correspondences.json:1247, 3090, 29431, 32660, 49742, 53880, 81187, and what is generated from them (atlas/crosswalk/*.md, data/atlas.json, map.html)",
+    "problem": "Seven crosswalk entries restate 07 §6's sentence on the three measurements without the new limit. The sentence still stands in the home, so these are truncated rather than false.",
+    "fix": "Carry the limit in at the crosswalk's next drift scan, or now through its generator; no hand-edits to generated pages."
+   }
+  ]
+ }
+]

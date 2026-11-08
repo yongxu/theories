@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "about": "Curated input of the spine picture (tools/research/spine.py, board item RW (c)): the chapters' short labels, the theses' homes and the words each copies from 08 §9 and the overview's Chinese table, the two premises' words from 07 and the overview, and the caption's quotations with their homes (THEORY-GRAPH.md's section on the picture). Every quoted phrase is checked at its home on each render; a phrase its home no longer holds stops the render. The counts come from the theory graph.",
+ "about": "Curated input of the spine picture (tools/research/spine.py, board item RW (c)): the chapters' short labels, the theses' homes and the words each copies from 08 §9 and the overview's Chinese table, the two premises' words from 07 and the overview, and the caption's quotations with their homes (THEORY-GRAPH.md's section on the picture). Every quoted phrase is checked at its home on each render; a phrase its home no longer holds stops the render. The counts come from the theory graph. The Chinese of the caption's and the standings' quotations ('zh' in caption and standing.counts_zh) is an AI translation for THEORY-GRAPH.zh.md, not checked against its home.",
  "order": [
   "root",
   "map",
@@ -93,7 +93,7 @@
     "title": "持续担保联合取用",
     "words": [
      "在模型中已证明",
-     "模型之外是猜想：在三种情形中通过，即一项酵母实验中对拟合留出、但未对分析者留出的诸体制，以及两项模拟",
+     "模型之外是猜想：在三种情形中通过，即一项酵母实验中对拟合留出、但未对分析者留出的诸体制，以及两项模拟，二者是仅有的设计中有不止一个取用者的检验，各有一项预测本可能不成立（公地中的那一项是只有一个取用者的范围预测），其余检验的是所测之量或一个恒等式，而不是这一论题",
      "在四种中未通过，三种在真实酵母中，一种在鱼类种群中",
      "没有对事先测得之需要的实地检验"
     ]
@@ -137,7 +137,7 @@
     "title": "在有余地之处，优化耗竭其耦合之外者",
     "words": [
      "对最优解已证明",
-     "对训练出的系统是猜想，得到部分支持",
+     "对训练出的系统是猜想，得到部分支持 … 关于学习者会保住存量的预测未通过",
      "所禁止的情形之一，最初就任何不共单位之缘而措辞，在学习者读取该缘的一次计算流中不成立"
     ]
    },
@@ -226,10 +226,8 @@
    "zh": {
     "title": "一个从它所选择者读出的度量，存续得比对它的驳倒更久",
     "words": [
-     "实际的度量是猜想",
-     "在一个训练出的系统中，每一冻结裁决都通过",
-     "桥接不成立",
-     "故 T7 所禁止的一种情形，按其加入漂移之条款以前的表述，发生了，计入此情形作为关于训练出的评判者之主张的反证"
+     "在模型中仅证明了对环路所不读者的不变，以及锁定比一个不断增长的未读坐标存续得更久，二者皆无噪声 … 实际的度量如此形成，是猜想",
+     "在一个训练出的系统中，每一冻结裁决都通过 … “该评判者是按种类而读的读者池”这一桥接不成立 … T7 所禁止的一种情形，按其加入漂移之条款以前的表述，发生了，计入此情形作为关于训练出的评判者之主张的反证"
     ]
    },
    "anchor": "t7"
@@ -347,37 +345,43 @@
   {
    "home": "theories/becoming/chapters/08-METHOD.md",
    "anchor": "r-one-root-to-its-edge",
-   "text": "Each of the 117 distinct central declarations has one standing against the edge of one root. Eleven are derived, each a case of grammar laws, through bridges checked in Lean as equivalences and support the review reads where a row has them"
+   "text": "Each of the 117 distinct central declarations has one standing against the edge of one root. Eleven are derived, each a case of grammar laws, through bridges checked in Lean as equivalences and support the review reads where a row has them",
+   "zh": "117 项不同的核心声明，各有一个相对于根之边的地位。十一项推导而得，各为文法之律的一个情形，经由在 Lean 中作为等价核验的桥接与审阅所读的支持（在某行列有它们之处）"
   },
   {
    "home": "theories/becoming/chapters/08-METHOD.md",
    "anchor": "r-one-root-to-its-edge",
-   "text": "One, `GroupEnding.Flow.all_end`, is under a stated hypothesis"
+   "text": "One, `GroupEnding.Flow.all_end`, is under a stated hypothesis",
+   "zh": "一项，`GroupEnding.Flow.all_end`，在一个所述的假设之下"
   },
   {
    "home": "theories/becoming/chapters/08-METHOD.md",
    "anchor": "r-one-root-to-its-edge",
-   "text": "Six are counting, below the grammar. The other 99 stand at a named distance, each with its reason: 22 connected, reaching grammar laws without being declared a case of one"
+   "text": "Six are counting, below the grammar. The other 99 stand at a named distance, each with its reason: 22 connected, reaching grammar laws without being declared a case of one",
+   "zh": "六项为计数，位于文法以下。其余 99 项处于一个指明的距离，各有其理由：22 项相连，达到文法之律，却未被宣告为其中某一条的情形"
   },
   {
    "home": "theories/becoming/chapters/08-METHOD.md",
    "anchor": "shared-laws-and-connectivity",
-   "text": "Counted once each, the 117 distinct declarations fall four ways: 45 reach the grammar; 30 rest on balance, which the grammar represents both ways and cannot state without amounts, so they are no gap"
+   "text": "Counted once each, the 117 distinct declarations fall four ways: 45 reach the grammar; 30 rest on balance, which the grammar represents both ways and cannot state without amounts, so they are no gap",
+   "zh": "每项只计一次，117 项不同的声明分为四类：45 项达到文法；30 项依于平衡，文法双向地表示平衡，而没有数量便无法陈述它，所以它们不是缺口"
   },
   {
    "home": "theories/becoming/chapters/07-SIGNIFICANCE.md",
    "anchor": "",
-   "text": "Evaluation enters through the ethics' two premises, each a hypothesis where used and neither asserted: the continuation condition for scope, C for order"
+   "text": "Evaluation enters through the ethics' two premises, each a hypothesis where used and neither asserted: the continuation condition for scope, C for order",
+   "zh": "评价经由伦理的两个前提进入，各在所用之处为假设，二者都不断言：延续条件定范围，C 定次序"
   },
   {
    "home": "theories/becoming/chapters/08-METHOD.md",
    "anchor": "shared-laws-and-connectivity",
-   "text": "The connectivity measure counts, at each landing, the shared laws that a central declaration's compiled type or value reaches"
+   "text": "The connectivity measure counts, at each landing, the shared laws that a central declaration's compiled type or value reaches",
+   "zh": "连通度量在每次落地时，计一项核心声明编译后的类型或值所达到的共律"
   }
  ],
  "standing": {
   "en": "Standings of the 117 central declarations against the edge of one root (08 §7): 11 derived · 1 under a stated hypothesis · 6 counting, below the grammar · 99 at a named distance",
-  "zh": "117 项核心声明相对于一根之边的地位（08 §7）：11 项推导而得 · 1 项在一个所述的假设之下 · 6 项为计数，位于文法以下 · 99 项处于一个指明的距离",
+  "zh": "117 项核心声明相对于根之边的地位（08 §7）：11 项推导而得 · 1 项在一个所述的假设之下 · 6 项为计数，位于文法以下 · 99 项处于一个指明的距离",
   "counts": [
    [
     "117",
@@ -404,6 +408,13 @@
     "theories/becoming/chapters/08-METHOD.md",
     "The other 99 stand at a named distance"
    ]
-  ]
+  ],
+  "counts_zh": {
+   "117": "117 项不同的核心声明，各有一个相对于根之边的地位",
+   "11": "十一项推导而得，各为文法之律的一个情形，经由在 Lean 中作为等价核验的桥接与审阅所读的支持（在某行列有它们之处）",
+   "1": "一项，`GroupEnding.Flow.all_end`，在一个所述的假设之下",
+   "6": "六项为计数，位于文法以下",
+   "99": "其余 99 项处于一个指明的距离"
+  }
  }
 }

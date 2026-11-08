@@ -111,6 +111,7 @@ class Links:
         self.counts = {'site': 0, 'github': 0, 'untracked': 0, 'external': 0, 'private': 0, 'refused': 0}
         self.private = None  # the push screen's pattern, set by build: a link to a private path is shown as text
         self.untracked = []
+        self.unbuilt = set()  # special pages this build does not write (the map, when site.map is off)
 
     def github(self, path: str, anchor: str = '') -> str:
         kind = 'tree' if path in self.dirs else 'blob'
@@ -133,21 +134,23 @@ class Links:
         path, _, query = path.partition('?')  # GitHub's ?plain=1 (a source's lines) is kept on a link to GitHub
         from urllib.parse import unquote
         target = posixpath.normpath(posixpath.join(posixpath.dirname(page), unquote(path))) if path else page
-        alias = self.aliases.get(f'{target}#{anchor}') or self.aliases.get(target)
+        lines = bool(query) or bool(re.fullmatch(r'L\d+(-L\d+)?', anchor))  # a line of a file: only GitHub shows it
+        alias = None if lines else (self.aliases.get(f'{target}#{anchor}') or self.aliases.get(target))
         if alias:
             target, _, a2 = alias.partition('#')
             anchor = a2 or anchor
-        if target == page:
+        if target == page and not lines:
             self.internal.append((page, page, anchor))
-            return '#' + anchor
-        if target in SPECIAL:
+            return '#' + anchor if anchor else posixpath.basename(out_path(page))
+        if target in SPECIAL and target not in self.unbuilt:
             self.counts['site'] += 1
+            if anchor and target == 'index.html':
+                self.internal.append((page, target, anchor))  # the home's ids are checked with the rest
             return relative(target, page) + (f'#{anchor}' if anchor else '')
         if target.startswith('../') or target == '..':
             self.counts['untracked'] += 1
             self.untracked.append((page, href))
             return None
-        lines = bool(query) or bool(re.fullmatch(r'L\d+(-L\d+)?', anchor))  # a line of a file: only GitHub shows it
         if target in self.dirs and posixpath.join(target, 'README.md') in self.pages:
             target = posixpath.join(target, 'README.md')
         if target in self.pages and not lines:
@@ -245,7 +248,9 @@ class Page:
         if not rec:
             return ''
         status = rec.get('status', '')
-        href = self.links.github(f'theories/becoming/results/records/{rid}.md')
+        record = f'theories/becoming/results/records/{rid}.md'
+        href = (relative(out_path(record), self.path) if record in self.links.pages
+                else self.links.github(record))
         return (f'<a class="mark mark-{html.escape(status)}" href="{html.escape(href)}" '
                 f'title="The result\'s record: {html.escape(navigation.STATUS_TEXT.get(status, status))}">'
                 f'{html.escape(STATUS_MARK.get(status, status))}</a>')
@@ -364,6 +369,8 @@ class Page:
                 continue
             if m and len(m.group(1).expandtabs(4)) < base:
                 break
+            if re.match(r'^\s{0,3}(#{1,6}(\s|$)|```[^`]*$|~~~|>)', line) or re.fullmatch(r'\s{0,3}([-*_])(\s*\1){2,}\s*', line):
+                break  # a heading, fence, quote or rule ends the list, as on GitHub
             if items and not m:
                 items[-1].append(line.strip())  # a lazy continuation line
                 i += 1
@@ -629,6 +636,37 @@ def records(root=ROOT):
     return out
 
 
+def section_text(text, anchor):
+    """The part of a Markdown page a link's anchor names, read as the builder reads headings: outside fenced code and
+    comments, repeated headings numbered as GitHub numbers them. A heading's part runs to the next heading of its level or
+    higher; an `<a id>` line's, to the next heading."""
+    lines = strip_comments(text).split('\n')
+    heads, ids, fence = [], {}, None  # heads: (line, level, slug before numbering)
+    for k, line in enumerate(lines):
+        if fence:
+            if line.strip().startswith(fence):
+                fence = None
+            continue
+        f = re.match(r'^\s*(```+|~~~+)', line)
+        if f:
+            fence = f.group(1)
+            continue
+        h = re.match(r'^(#{1,6})\s+(.*?)(?:\s+#+)?\s*$', line)
+        if h:
+            heads.append((k, len(h.group(1)), reading_catalogue.slug(h.group(2))))
+        for ident in re.findall(r'<a\s+(?:id|name)="([^"]+)"\s*>\s*</a>', line):
+            ids.setdefault(ident, k)
+    for (k, level, _), ident in zip(heads, reading_catalogue.numbered([h[2] for h in heads])):
+        if ident == anchor:
+            stop = next((j for j, lv, _ in heads if j > k and lv <= level), len(lines))
+            return '\n'.join(lines[k:stop])
+    if anchor in ids:
+        k = ids[anchor]
+        stop = next((j for j, _, _ in heads if j > k), len(lines))
+        return '\n'.join(lines[k:stop])
+    raise SiteError('site.ways_in names a section the page lacks: #' + anchor)
+
+
 def first_screen(readme: str) -> str:
     """README's generated first screen: from its status line (README's title, generated comment and navigation line left
     out, since the site has its own) to the opening's heading."""
@@ -676,6 +714,8 @@ def edition(page_path, pages):
         other = page_path[:-3] + '.zh.md'
     else:
         return None
+    if other == 'README.md':  # README's English edition is the site's home
+        return 'index.html'
     return other if other in pages else None
 
 
@@ -716,6 +756,8 @@ def home_body(cfg, links, recs, root):
             if w.get('time_until'):  # the part a reader is sent to: up to the named heading line
                 assert w['time_until'] in text, ('site.ways_in times up to a heading the page lacks', target, w['time_until'])
                 text = text.split(w['time_until'], 1)[0]
+            elif '#' in target:  # a card to one section: that section, to the next heading of its level or higher
+                text = section_text(text, target.split('#', 1)[1])
             time = navigation.reading_time(text) + (f", {w['time_note']}" if w.get('time_note') else '')
         href = target if target in SPECIAL else links.resolve(target, 'README.md')
         if href is None:
@@ -727,7 +769,16 @@ def home_body(cfg, links, recs, root):
         cards.append(f'<li><a class="card" href="{html.escape(href)}"><span class="label">{html.escape(w["label"])}</span>'
                      + (f'<span class="time">{html.escape(time)}</span>' if time else '')
                      + f'<span class="text">{Page("README.md", w["text"], links, recs).html[3:-4]}</span></a>{zh}</li>')
-    parts.append('<section class="ways"><h2 id="ways-in">Ways in</h2><ul class="cards">' + ''.join(cards) + '</ul></section>')
+    grouped, order = {}, []
+    for w, c in zip(cfg.get('ways_in', []), cards):
+        g = w.get('group', '')
+        if g not in grouped:
+            grouped[g] = []
+            order.append(g)
+        grouped[g].append(c)
+    body = ''.join((f'<h3 class="group">{html.escape(g)}</h3>' if g else '') + '<ul class="cards">' + ''.join(grouped[g]) + '</ul>'
+                   for g in order)
+    parts.append('<section class="ways"><h2 id="ways-in">Ways in</h2>' + body + '</section>')
     return '\n'.join(parts), page.lang
 
 
@@ -761,21 +812,28 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
     for p in pages:
         if not p.endswith('.md'):
             raise SiteError('site.pages lists Markdown pages only: ' + p)
-    links = Links(set(pages), assets, files, dirs, cfg['repository'], commit, cfg.get('aliases'))
-    links.private = private
     from tools.research import connection_map
     map_ok = bool(cfg.get('map'))
+    def unbuilt(target):
+        return not map_ok and (target or '').split('#')[0] == MAP_PAGE
+    aliases = {k: v for k, v in (cfg.get('aliases') or {}).items() if not unbuilt(v)}  # no link to an unbuilt map
+    links = Links(set(pages), assets, files, dirs, cfg['repository'], commit, aliases)
+    links.private = private
+    links.unbuilt = set() if map_ok else {MAP_PAGE}
     if map_ok and not hasattr(connection_map, 'site_map'):
         raise SiteError('site.map is on, and this checkout\'s connection_map has no site mode (site_map)')
     if not map_ok:  # no link to a map this build does not write
-        cfg = dict(cfg, nav=[n for n in cfg.get('nav', []) if n[0] != MAP_PAGE],
-                   ways_in=[w for w in cfg.get('ways_in', []) if w['path'] != MAP_PAGE])
+        cfg = dict(cfg, nav=[n for n in cfg.get('nav', []) if not unbuilt(n[0])],
+                   nav_zh=[n for n in cfg.get('nav_zh', []) if not unbuilt(n[0])],
+                   ways_in=[dict(w, **({'zh': None} if unbuilt(w.get('zh')) else {}))
+                            for w in cfg.get('ways_in', []) if not unbuilt(w['path'])])
     recs = records(root)
     date = subprocess.run(['git', 'show', '-s', '--format=%cs', commit], cwd=root, capture_output=True, text=True).stdout.strip() or commit
     if out.exists():
         shutil.rmtree(out)
     (out / 'assets').mkdir(parents=True)
-    shutil.copy(pathlib.Path(__file__).with_name('site.css'), out / 'assets' / 'site.css')
+    shutil.copyfile(pathlib.Path(__file__).with_name('site.css'), out / 'assets' / 'site.css')
+    (out / 'assets' / 'site.css').chmod(0o644)
     built = {}
     for p in pages:
         page = Page(p, (root / p).read_text(), links, recs)
@@ -808,7 +866,8 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
     for a in sorted(assets):
         dest = out / a
         dest.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy(root / a, dest)
+        shutil.copyfile(root / a, dest)
+        dest.chmod(0o644)
         written.append(dest)
     # the connection map (tools/research/connection_map.py's site mode), its links to pages of the site kept on the site
     map_note = 'not built: site.map is off'

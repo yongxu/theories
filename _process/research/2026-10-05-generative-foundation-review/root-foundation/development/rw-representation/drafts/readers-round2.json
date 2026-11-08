@@ -1,0 +1,10 @@
+[
+ {
+  "key": "fronts-r2",
+  "verdict": "No high, no medium; all nine round-1 mediums closed; lows: READING-BUDGETS count 547 not 517; four questions vs five on the linked page; CAI's other human inputs (§3.2 human red-team prompts, critic trained on human helpfulness); item 1 names the wrong function; item 3 Gao's gold RM; plain lead one 95-word sentence; zh editions lag (AA's mirror)."
+ },
+ {
+  "key": "code-r2",
+  "verdict": "No high and no medium; seven of nine round-1 findings closed, two partly (tests, CSS comment); five new lows: section_text ignores fences, numbering and a-id anchors (latent); map-off filter misses nav_zh, zh fields and anchored targets (latent); an alias to a SPECIAL page skips the lines and anchor checks (latent); the mode test cannot fail; _list swallows an ATX heading after a list item (LINEAGE.zh.md 改名, predates); CSS comment's reason wrong."
+ }
+]

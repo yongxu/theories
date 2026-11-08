@@ -25,6 +25,7 @@ from tools.research.reading_catalogue import english
 
 ROOT = path_roles.ROOT
 CHAPTERS = 'theories/becoming/chapters'
+RECORDS = 'theories/becoming/results/records'
 CANONICAL = 'theories/becoming/THE-THEORY-OF-BECOMING.md'  # the overview (RA, 23 October 2026)
 NUMBERED = re.compile(r'^(\d\d)-[A-Z0-9-]+\.md$')  # the eight chapters, 01-ROOT.md … 08-METHOD.md
 STUDIES = '_process/research'
@@ -151,7 +152,9 @@ def reader_list(root: Path = ROOT) -> list[str]:
         text = f.read_text()
         t = title(CHAPTERS + '/' + name, root) + (' (the classical texts: what they read out, how it is tested and where they '
                                                    'diverge; in Chinese)' if name.startswith('06-') else '')
-        stated = text.count('<a id="r-')
+        # a result is a record anchored at its home; a chapter also keeps the anchors of former record names, so that
+        # old links resolve, and those are not counted (the theory graph's regions count the same records)
+        stated = len({a for a in re.findall(r'<a id="r-([^"]+)"', text) if (root / RECORDS / f'{a}.json').is_file()})
         lines.append(f'| {k} | [{cell(t)}]({name}) | {cell(theory_graph.REGION_TITLES[region])} | {stated} | '
                      f'{navigation.reading_time(text)} |')
     return lines + ['']

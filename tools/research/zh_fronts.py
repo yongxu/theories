@@ -3,7 +3,8 @@
 
 Every Chinese front opens with the same line: its English edition, then the Chinese ways in in one order, the page
 itself in bold and not linked; a way in whose page is English says so. The line is built here, so the hand-written
-pages, the generated ones (the lineage, the Chinese landing page, the crosswalk's Chinese front) and the check agree.
+pages, the generated ones (the lineage, the Chinese landing page, the crosswalk's Chinese front, the Chinese of the
+graph's spine sections) and the check agree.
 Chapter 6, written in Chinese and with no English edition, carries the line too, without the English link.
 
 The Chinese landing page, README.zh.md, is generated from _process/navigation/README-ZH.md, its links written from that file as README.md's first screen's
@@ -45,12 +46,14 @@ FRONTS = {'README.zh.md': 'README.md',
           'theories/becoming/USES-EXAMPLES.zh.md': 'theories/becoming/USES-EXAMPLES.md',
           'theories/becoming/THE-THEORY-OF-BECOMING.zh.md': 'theories/becoming/THE-THEORY-OF-BECOMING.md',
           'theories/LINEAGE.zh.md': 'theories/LINEAGE.md',
+          'theories/becoming/results/THEORY-GRAPH.zh.md': 'theories/becoming/results/THEORY-GRAPH.md',
           'GLOSSARY.zh.md': 'GLOSSARY.md',
           'theories/becoming/review/README.zh.md': 'theories/becoming/review/README.md',
           'theories/becoming/results/atlas/CROSSWALK.zh.md': 'theories/becoming/results/atlas/CROSSWALK.md',
           'theories/becoming/chapters/06-CLASSICAL-TEXTS.md': None}
 # Generated, each by its generator, which takes the line from here.
-GENERATED_FRONTS = ('theories/LINEAGE.zh.md', 'README.zh.md', 'theories/becoming/results/atlas/CROSSWALK.zh.md')
+GENERATED_FRONTS = ('theories/LINEAGE.zh.md', 'README.zh.md', 'theories/becoming/results/atlas/CROSSWALK.zh.md',
+                    'theories/becoming/results/THEORY-GRAPH.zh.md')
 # Written by hand.
 HAND_WRITTEN = tuple(p for p in FRONTS if p not in GENERATED_FRONTS)
 

@@ -1,0 +1,1523 @@
+{
+ "about": "AI readings: who wrote the evidence of each turning point of theories/LINEAGE.md (lineage.json's points, numbered from 1), classified by three AI readers from what each file or its folder says and checked point by point by three more (RW's re-score, Q4, 8 November 2026). No person has read them. 'origin' is the point's: that of the first evidence entry that states the turning point. All 48 checks agreed.",
+ "classes": {
+  "person": "the text that states it is a person's own writing, or a person's words kept verbatim (in `sources/`, or the excerpts of one person's turns), as the file or its folder says.",
+  "drafted": "the text that states it was written by AI from a person's words, notes or conversation, as the file or its folder says: the ideas may be the person's, the wording is not.",
+  "ai": "the text that states it is the repository's own AI-made work: records, chapters, the board, reviews, designs and AI readings.",
+  "unstated": "nothing found says who wrote it, or what speaks of it disagrees."
+ },
+ "points": [
+  {
+   "index": 1,
+   "id": "p2021-metamunity",
+   "origin": "person",
+   "why": "All three entries quote one file, the decoded text of the 2021-10-18 proposal, so the point takes their origin. The first entry, which coins 元社区, states the turning point. The folder README says the text is the person's own.",
+   "evidence": [
+    {
+     "path": "sources/00-early-2021-2022/recovered-text/2021-10-18_proposal_元社区-Metamunity.txt",
+     "origin": "person",
+     "basis": "Line 1. sources/00-early-2021-2022/README.md lists proposal.pages (2021-10-18) as the 元社区 Metamunity proposal, with its full text in this recovered-text file, and says the text was decoded byte-wise by a short decoder. The same README says the proposal's terms 原子化 and 附近 are the person's own from 2021-10-18. The September TIMELINE.md (2021-05 → 2022-04 section) treats the proposal as the person's, in contrast with the 麦 field notes, which it marks 'not [the person's] writing'."
+    },
+    {
+     "path": "sources/00-early-2021-2022/recovered-text/2021-10-18_proposal_元社区-Metamunity.txt",
+     "origin": "person",
+     "basis": "Line 21. Same file and the same sources/00-early-2021-2022/README.md statement. The README quotes this exact sentence (它的结构在无形中把一个个人变成了原子化的个体) and says these words are the person's from 2021-10-18."
+    },
+    {
+     "path": "sources/00-early-2021-2022/recovered-text/2021-10-18_proposal_元社区-Metamunity.txt",
+     "origin": "person",
+     "basis": "Line 41. Same file and the same sources/00-early-2021-2022/README.md attribution. The README quotes 城市中社会联结机制的结构性问题 as the proposal's argument."
+    }
+   ],
+   "check": {
+    "index": 1,
+    "agree": true,
+    "origin": "person",
+    "why": "I agree. sources/00-early-2021-2022/README.md says the proposal's terms 原子化 and 附近 'are Ren's from 2021-10-18'. There is a stronger statement the classification did not cite: theories/wamotopia-and-the-wamo-protocol/README.md's source list tags the recovered proposal text '[Ren-authored]'. The text dates from 2021-10-18, before AI drafting tools, and nothing suggests 706 or anyone else co-wrote it. (In my reply I say 'a person' for the name.)"
+   }
+  },
+  {
+   "index": 2,
+   "id": "p2022-world-of-possibilities",
+   "origin": "person",
+   "why": "All three entries quote the person's own twelve-line first page, so they agree. The first entry, the definition of possibility, states the turning point.",
+   "evidence": [
+    {
+     "path": "sources/00-early-2021-2022/recovered-text/2022-04-07_World-of-Possibilities.txt",
+     "origin": "person",
+     "basis": "Line 13. sources/00-early-2021-2022/README.md: 'In April 2022 [the person] wrote out a complete primitive-set ... typed the heading of chapter one, and stopped'. The README transcribes this page in full. The text is in the first person ('But I hope you will get the point')."
+    },
+    {
+     "path": "sources/00-early-2021-2022/recovered-text/2022-04-07_World-of-Possibilities.txt",
+     "origin": "person",
+     "basis": "Line 19. Same file and the same sources/00-early-2021-2022/README.md attribution. The README says these twelve lines are the entire document, so every line is the person's."
+    },
+    {
+     "path": "sources/00-early-2021-2022/recovered-text/2022-04-07_World-of-Possibilities.txt",
+     "origin": "person",
+     "basis": "Line 23. Same file and the same sources/00-early-2021-2022/README.md attribution."
+    }
+   ],
+   "check": {
+    "index": 2,
+    "agree": true,
+    "origin": "person",
+    "why": "I agree. sources/00-early-2021-2022/README.md says 'In April 2022 [the person] wrote out a complete primitive-set ... typed the heading of chapter one, and stopped', and it calls the twelve lines 'the entire document'. All three quotes are lines of that page, which is written in the first person ('But I hope you will get the point')."
+   }
+  },
+  {
+   "index": 3,
+   "id": "p2023-wamotopia-moloch",
+   "origin": "drafted",
+   "why": "The first entry, the v1.0 manifesto naming 'unchecked molochs', states the turning point. It and the camp text are both tagged AI-drafted from the person's ideas, so all entries agree. The tag's stated ground for the manifesto is a reading of its prose ('reads as AI-assisted; the ideas are [the person's]'), and the source folder has no README of its own. The repository README in the same Wamotopia repo, by contrast, is tagged person-authored.",
+   "evidence": [
+    {
+     "path": "sources/02-wamotopia/2023-2024-wamotopia-repo/manifestos/wamotopia_v1.0.md",
+     "origin": "drafted",
+     "basis": "Line 9. theories/wamotopia-and-the-wamo-protocol/README.md source list (line 557) tags this file '[AI-drafted from (the person)'s ideas]'. Line 340 of the same README: 'Prose reads as AI-assisted; the ideas are [the person's].' sources/SOURCES.md's 02-wamotopia row names only its origin (~/repos/wamotopia), not its author."
+    },
+    {
+     "path": "sources/02-wamotopia/2023-2024-wamotopia-repo/manifestos/wamotopia_v1.0.md",
+     "origin": "drafted",
+     "basis": "Line 19. Same file and the same tag in theories/wamotopia-and-the-wamo-protocol/README.md (lines 557 and 340)."
+    },
+    {
+     "path": "sources/02-wamotopia/2023-2024-wamotopia-repo/Wacas/slay_moloch_camp_v0.8.md",
+     "origin": "drafted",
+     "basis": "Line 2. theories/wamotopia-and-the-wamo-protocol/README.md source list (line 563) tags this file '[AI-drafted from (the person)'s ideas]'."
+    }
+   ],
+   "check": {
+    "index": 3,
+    "agree": true,
+    "origin": "drafted",
+    "why": "I agree. The source list in theories/wamotopia-and-the-wamo-protocol/README.md tags manifestos/wamotopia_v1.0.md and Wacas/slay_moloch_camp_v0.8.md '[AI-drafted from (the person)'s ideas]'. Its 2023-12-10 entry says 'Prose reads as AI-assisted; the ideas are (the person)'s.' The tag rests on a reading of the prose, as the classification says, but it is an explicit statement that the text is drafted."
+   }
+  },
+  {
+   "index": 4,
+   "id": "p2024-03-complexity-outruns-understanding",
+   "origin": "person",
+   "why": "All three entries are the person's own typed turns of 2024-03-18. The first, line 656, states the turning point. The others are the person's correction later in the same conversation.",
+   "evidence": [
+    {
+     "path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-01.md",
+     "origin": "person",
+     "basis": "Line 656. hb-01.md header (lines 1-3): the person's 'own messages ... only [the person's] (HUMAN) turns ... Claude's replies are omitted'. _process/history/2026-09-consolidation/COVERAGE.md line 11: chats were read as the person's turns only. In context, the turn is the person's own writing: the next turns ask for 'supportive evidence for the writing above' and to rewrite 'my original writing'."
+    },
+    {
+     "path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-01.md",
+     "origin": "person",
+     "basis": "Line 666. Same hb-01.md header: only the person's HUMAN turns. The turn is first-person and is not a paste ('i think some parts of the reasoning is not good enough...')."
+    },
+    {
+     "path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-01.md",
+     "origin": "person",
+     "basis": "Line 666, the same turn as the previous entry. Basis as above, from the hb-01.md header."
+    }
+   ],
+   "check": {
+    "index": 4,
+    "agree": true,
+    "origin": "person",
+    "why": "I agree. The hb-01.md header says each entry holds 'only (the person)'s (HUMAN) turns'. Right after line 656 the person asks for 'supportive evidence for the writing above' and then to 'add all these into my original writing'. That marks line 656 as the person's own writing, not a paste. Line 666 is a first-person correction ('i think some parts of the reasoning is not good enough')."
+   }
+  },
+  {
+   "index": 5,
+   "id": "p2024-04-moloch-non-convergence",
+   "origin": "person",
+   "why": "All three entries come from one turn of 2024-04-16, after the person writes 下面是我的观点 (here are my views). The first entry states the turning point. The pasted description of three AI camps earlier in the same turn is not cited.",
+   "evidence": [
+    {
+     "path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-01.md",
+     "origin": "person",
+     "basis": "Line 1689. hb-01.md header: only the person's HUMAN turns. Line 1687 introduces the cited passage with '下面是我的观点，可以帮我整理成一个speech吗？' (here are my views; can you make them into a speech?), which marks what follows as the person's own views rather than a paste."
+    },
+    {
+     "path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-01.md",
+     "origin": "person",
+     "basis": "Line 1691. Same turn, under the same '下面是我的观点' line. Basis: the hb-01.md header."
+    },
+    {
+     "path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-01.md",
+     "origin": "person",
+     "basis": "Line 1699. Same turn. Basis: the hb-01.md header."
+    }
+   ],
+   "check": {
+    "index": 5,
+    "agree": true,
+    "origin": "person",
+    "why": "I agree. In hb-01, line 1687 introduces the quoted passage with '下面是我的观点，可以帮我整理成一个speech吗？我是一个科学家和哲学家' (here are my views; can you make them into a speech? I am a scientist and philosopher). That marks lines 1689-1699 as the person's own views. The pasted description of the AI camps above line 1687 is not cited."
+   }
+  },
+  {
+   "index": 6,
+   "id": "sel-2024-07-14-selection-law",
+   "origin": "person",
+   "why": "The first entry, the person's Chinese turn of 2024-07-14, states the turning point. The second is the person's turn of the next day. The third differs: it is the meta-attractor folder's English gloss of the first entry's Chinese, written by the September readers. That makes it AI-made restatement, though its content follows the person's words.",
+   "evidence": [
+    {
+     "path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-01.md",
+     "origin": "person",
+     "basis": "Line 4411. hb-01.md header: only the person's HUMAN turns. The passage is the person's own Chinese argument in the 2024-07-14 conversation, with no sign of a paste."
+    },
+    {
+     "path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-01.md",
+     "origin": "person",
+     "basis": "Line 4645. hb-01.md header: only the person's HUMAN turns. The turn is first-person ('I think you have an understanding on what I was trying to say')."
+    },
+    {
+     "path": "theories/meta-attractor/README.md",
+     "origin": "ai",
+     "basis": "Item 7 of 'In (the person)'s own words', line 872. The cited English is the README's italic gloss of the person's Chinese. The section's preamble (line 864) says Chinese is kept 'with a gloss'. _process/history/2026-09-consolidation/COVERAGE.md line 9: the theory syntheses were written by multi-agent reading passes on 2026-09-03."
+    }
+   ],
+   "check": {
+    "index": 6,
+    "agree": true,
+    "origin": "person",
+    "why": "I agree. Lines 4411 and 4645 of hb-01 are the person's own turns: Chinese argument with no sign of a paste, and a first-person 'I think you have an understanding on what I was trying to say'. The third entry quotes the English gloss in item 7 of theories/meta-attractor/README.md, not the Chinese. The section preamble says 'Chinese is kept in Chinese with a gloss', and COVERAGE.md says multi-agent reading passes wrote the syntheses, so 'ai' is right for that entry."
+   }
+  },
+  {
+   "index": 7,
+   "id": "p2024-07-game-design",
+   "origin": "person",
+   "why": "All three entries are the person's own turns. The first, of 2024-07-28, states the game-design axiom, which is the turning point. The 07-29 entries are the person's restatement and extension of it.",
+   "evidence": [
+    {
+     "path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-01.md",
+     "origin": "person",
+     "basis": "Line 5354. hb-01.md header: only the person's HUMAN turns. The line opens the person's 2024-07-28 conversation."
+    },
+    {
+     "path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-01.md",
+     "origin": "person",
+     "basis": "Line 5471. hb-01.md header: only the person's HUMAN turns. The turn is the person's own argument ('But you are all dumb, you don't see the real issue')."
+    },
+    {
+     "path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-01.md",
+     "origin": "person",
+     "basis": "Line 5481. Same turn. Basis: the hb-01.md header."
+    }
+   ],
+   "check": {
+    "index": 7,
+    "agree": true,
+    "origin": "person",
+    "why": "I agree. Line 5354 opens the 2024-07-28 entry in hb-01, which holds only the person's HUMAN turns. Lines 5471 and 5481 belong to the person's first-person turn of 07-29, which opens 'But you are all dumb, you don't see the real issue' and restates the axiom. None of it is pasted."
+   }
+  },
+  {
+   "index": 8,
+   "id": "sel-2024-10-30-capital-loop",
+   "origin": "drafted",
+   "why": "The first entry, the precursor note of 2024-10-30, states the loop and is AI-drafted from the person's ideas. The SOURCES.md table row and the meta-attractor README's source list are the repository's own AI-made records, which only date and characterise that note.",
+   "evidence": [
+    {
+     "path": "sources/03-meta-attractor/2024-precursors/capital-analysis.md",
+     "origin": "drafted",
+     "basis": "Line 8. theories/meta-attractor/README.md source list (line 1150): '2024 precursors (03-meta-attractor/2024-precursors/, 2024-10-30 → 2024-11-05, all AI-drafted from [the person's] ideas)'. sources/SOURCES.md has no per-file authorship statement for it."
+    },
+    {
+     "path": "sources/03-meta-attractor/2024-precursors/capital-analysis.md",
+     "origin": "drafted",
+     "basis": "Line 4. Same file and the same tag in theories/meta-attractor/README.md line 1150."
+    },
+    {
+     "path": "sources/SOURCES.md",
+     "origin": "ai",
+     "basis": "Line 666, a file-table row (path, bytes, date). sources/README.md calls SOURCES.md the 'hand-kept provenance manifest' recording each import, unlike sources/ originals, which are 'kept byte for byte'. The manifest refers to the person in the third person ('[the person] supplied ...'). It is the repository's own record, and theories/becoming/ONE-PAGE.md line 7 says the account was 'Made with AI'."
+    },
+    {
+     "path": "theories/meta-attractor/README.md",
+     "origin": "ai",
+     "basis": "Source list, line 1150, a September synthesis. _process/history/2026-09-consolidation/COVERAGE.md line 9 says multi-agent reading passes wrote the theory syntheses, and the README's banner (line 1) marks the folder as an earlier AI-era synthesis."
+    }
+   ],
+   "check": {
+    "index": 8,
+    "agree": true,
+    "origin": "drafted",
+    "why": "I agree. The source list in theories/meta-attractor/README.md says the 2024 precursors are 'all AI-drafted from (the person)'s ideas', and capital-analysis.md has no author line that contradicts it. The SOURCES.md row and the README source list are records the working sessions wrote; sources/README.md calls SOURCES.md the 'hand-kept provenance manifest', and it refers to the person in the third person. So 'ai' is right for those two entries."
+   }
+  },
+  {
+   "index": 9,
+   "id": "p2024-11-ouroboros",
+   "origin": "drafted",
+   "why": "The first entry, ouroboros-cycle.md, states the generalisation to any compounding domain. It is AI-drafted from the person's ideas. The same-day hb-02 entries are the person's own turns but only ask for a name and plan a salon. The README source list is AI-made restatement.",
+   "evidence": [
+    {
+     "path": "sources/03-meta-attractor/2024-precursors/ouroboros-cycle.md",
+     "origin": "drafted",
+     "basis": "Line 7. theories/meta-attractor/README.md source list (lines 1150-1154): the 2024 precursors, including ouroboros-cycle.md, are 'all AI-drafted from [the person's] ideas'."
+    },
+    {
+     "path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-02.md",
+     "origin": "person",
+     "basis": "Line 123. hb-02.md header: the person's own messages, 'only [the person's] (HUMAN) turns'. The turn is a short request in the person's own words."
+    },
+    {
+     "path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-02.md",
+     "origin": "person",
+     "basis": "Line 140. hb-02.md header: only the person's HUMAN turns. The turn is first-person ('I want to make a Salon ...')."
+    },
+    {
+     "path": "theories/meta-attractor/README.md",
+     "origin": "ai",
+     "basis": "Source list, line 1150, a September synthesis written by the multi-agent reading passes (_process/history/2026-09-consolidation/COVERAGE.md line 9)."
+    }
+   ],
+   "check": {
+    "index": 9,
+    "agree": true,
+    "origin": "drafted",
+    "why": "I agree. The meta-attractor README's line 'all AI-drafted from (the person)'s ideas' covers ouroboros-cycle.md, which is the file that states the generalisation to any compounding domain. In the two cited hb-02 turns the person asks for a name ('can you come up with something more creative, like moloch') and plans a salon, so they are 'person' but do not state the generalisation. Note: hb-02 line 117, which is not cited, is the person's own numbered loop on compounding advantage from the same day. Citing it would put the person's words beside the drafted text."
+   }
+  },
+  {
+   "index": 10,
+   "id": "p2025-02-nvf",
+   "origin": "person",
+   "why": "The point dated 2025-02-07 is stated by compound_selfishness.md (second and third entries), the person's raw note. The first entry is the person's earlier 2025-02-03 chat turn with the 'image of self' wording. All entries are the person's.",
+   "evidence": [
+    {
+     "path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-02.md",
+     "origin": "person",
+     "basis": "Line 1754. hb-02.md header: only the person's HUMAN turns. The turn begins 'or is the root cause just selfish?', the person's own question."
+    },
+    {
+     "path": "sources/01-writings-2025/compound_selfishness.md",
+     "origin": "person",
+     "basis": "Line 3. theories/memories-and-working-style/README.md line 273, under 'Primary — (the person)-authored or (the person)-owned': '01-writings-2025/compound_selfishness.md (2025-02-07) — the raw note ... [(the person)-authored]'. Line 16 of the same README calls it 'a page and a half of unedited English'. sources/SOURCES.md line 429 describes 01-writings-2025 as the person's 'own notes plus AI-assisted essays'."
+    },
+    {
+     "path": "sources/01-writings-2025/compound_selfishness.md",
+     "origin": "person",
+     "basis": "Line 17. Same file and the same tag in theories/memories-and-working-style/README.md line 273."
+    }
+   ],
+   "check": {
+    "index": 10,
+    "agree": true,
+    "origin": "person",
+    "why": "I agree. theories/memories-and-working-style/README.md tags compound_selfishness.md '[(the person)-authored]' and calls it 'a page and a half of unedited English'. The file keeps the person's raw syntax and HTML-comment notes to self. hb-02 line 1754 is the person's own question in the 2025-02-03 conversation ('or is the root cause just selfish?')."
+   }
+  },
+  {
+   "index": 11,
+   "id": "sel-2025-05-30-meta-attractor-captures-selection",
+   "origin": "unstated",
+   "why": "The first entry, the SEED draft of 2025-05-30, states the turning point, and its authorship is unsettled. The meta-attractor folder hedges it as '[(the person)-authored, likely]', the September critique calls SEED an AI-drafted essay iteration, and the September timeline calls it 'the most (the person)-voiced text'. The 05-18 report differs: an AI research tool wrote it from the person's framing. The README source list is AI-made.",
+   "evidence": [
+    {
+     "path": "sources/03-meta-attractor/2025-05-drafts-selected/2025-05-30-seed-meta-attractors-and-road-to-systemic-collapse.md",
+     "origin": "unstated",
+     "basis": "Line 25. theories/meta-attractor/README.md line 1161 tags it '[(the person)-authored, likely]', a hedge. _process/history/2026-09-consolidation/CRITIQUE-FINDINGS.md line 91 lists SEED among 'AI-drafted essay iterations' and says its prose 'is not [the person's] English by any internal test'. _process/history/2026-09-consolidation/TIMELINE.md line 97 calls it 'the most (the person)-voiced text in the set'. The file carries no author line."
+    },
+    {
+     "path": "sources/03-meta-attractor/2025-05-drafts-selected/2025-05-18-navigating-the-precipice-start-research.md",
+     "origin": "drafted",
+     "basis": "Line 13. theories/meta-attractor/README.md source list (line 1157): '[AI research-tool output from (the person)'s framing]'."
+    },
+    {
+     "path": "theories/meta-attractor/README.md",
+     "origin": "ai",
+     "basis": "Source list, line 1157, a September synthesis written by the multi-agent reading passes (_process/history/2026-09-consolidation/COVERAGE.md line 9)."
+    }
+   ],
+   "check": {
+    "index": 11,
+    "agree": true,
+    "origin": "unstated",
+    "why": "I agree, with a reservation about the class name. Strictly, statements do exist, but they conflict and none settles the question. theories/meta-attractor/README.md says '[(the person)-authored, likely]' and 'in (the person)'s own hand'. synthesis-a gives the same hedge ('Ren-authored (likely; rough hand-written prose curated as \"seed\")'). CRITIQUE-FINDINGS.md says SEED's prose 'is not (the person)'s English by any internal test', yet its fix keeps the hedge rather than overturning it. None of these is a plain statement that a person wrote SEED or that AI drafted it. 'Unstated' is the honest choice among the four classes, and 'person' would claim more than the hedge allows. The other entries hold: the 05-18 report is tagged '[AI research-tool output from (the person)'s framing]', so 'drafted', and the README source list is 'ai'."
+   }
+  },
+  {
+   "index": 12,
+   "id": "p2025-08-sts",
+   "origin": "drafted",
+   "why": "The first two entries, STS.md's title and abstract, state the Spirit–Token–Space framework, and that paper is tagged AI-drafted from the person's ideas. The third entry differs: usis.md is an AI's review of the framework under its earlier name. It is AI-written appraisal, not the person's ideas drafted.",
+   "evidence": [
+    {
+     "path": "sources/01-writings-2025/STS.md",
+     "origin": "drafted",
+     "basis": "Line 1. theories/selfishness-spiral-and-narrative-value-frames/README.md line 669: 'STS.md (2025-08-10) — Spirit–Token–Space paper ... [AI-drafted from (the person)'s ideas]'. theories/spirit-space-token-and-yi-substrate/README.md line 883 gives the same tag for the identical paper, '(also present as 01-writings-2025/STS.md)'. sources/SOURCES.md line 429: 01-writings-2025 holds 'AI-assisted essays ... and the STS paper'."
+    },
+    {
+     "path": "sources/01-writings-2025/STS.md",
+     "origin": "drafted",
+     "basis": "Line 5. Same file and the same tags (selfishness-spiral README line 669, spirit-space-token README line 883)."
+    },
+    {
+     "path": "sources/01-writings-2025/usis.md",
+     "origin": "ai",
+     "basis": "Line 103. theories/selfishness-spiral-and-narrative-value-frames/README.md line 670: 'usis.md (2025-08-10) — USIS review of Token–Spirit–Space ... [AI review]'. theories/spirit-space-token-and-yi-substrate/README.md line 591 calls the matching file 'the assessment ... A three-part appraisal'. It is an AI's appraisal written in 2025, outside the repository's working sessions."
+    }
+   ],
+   "check": {
+    "index": 12,
+    "agree": true,
+    "origin": "drafted",
+    "why": "I agree. Both theories/selfishness-spiral-and-narrative-value-frames/README.md and theories/spirit-space-token-and-yi-substrate/README.md tag STS.md '[AI-drafted from (the person)'s ideas]', and the file has no author line that says otherwise. usis.md is tagged '[AI review]'. It is an AI appraisal from 2025, made outside the repository's sessions, so 'ai' is the nearest class for it, as the classification notes."
+   }
+  },
+  {
+   "index": 13,
+   "id": "sel-2025-08-10-formal-selection-rule",
+   "origin": "drafted",
+   "why": "The first three entries are the comprehensive definition of 2025-08-10, which states the turning point. It is an AI-written expansion made against the person's system prompt and user context, so 'drafted'. The fourth entry is the meta-attractor folder's September synthesis, which is AI-made.",
+   "evidence": [
+    {
+     "path": "sources/03-meta-attractor/2025-08-formal/2025-08-10-comprehensive-mathematical-definition.md",
+     "origin": "drafted",
+     "basis": "Line 11. theories/meta-attractor/synthesis-b-formal-and-essays-2025-08-10.md line 249: the file was 'written against a system prompt whose length floor is 2,500 words and whose explicit rule is \"do not omit any key idea found in USER CONTEXT\"'. Line 244 of the same synthesis: 'the mathematics is the AI's, built to [the person's] specification'. theories/meta-attractor/README.md line 922 calls the prompt file the person's system prompt with the person's interstitial narration."
+    },
+    {
+     "path": "sources/03-meta-attractor/2025-08-formal/2025-08-10-comprehensive-mathematical-definition.md",
+     "origin": "drafted",
+     "basis": "Line 262. Same file and the same basis in synthesis-b lines 244 and 249."
+    },
+    {
+     "path": "sources/03-meta-attractor/2025-08-formal/2025-08-10-comprehensive-mathematical-definition.md",
+     "origin": "drafted",
+     "basis": "Line 39. Same file and the same basis in synthesis-b lines 244 and 249."
+    },
+    {
+     "path": "theories/meta-attractor/synthesis-b-formal-and-essays-2025-08-10.md",
+     "origin": "ai",
+     "basis": "Line 249, a September synthesis of the meta-attractor folder. _process/history/2026-09-consolidation/COVERAGE.md line 9: multi-agent readers 'wrote one synthesis file per theory-part'. The file speaks of the person in the third person."
+    }
+   ],
+   "check": {
+    "index": 13,
+    "agree": true,
+    "origin": "drafted",
+    "why": "I agree. synthesis-b says the comprehensive file was 'written against a system prompt whose length floor is 2,500 words' with the rule 'do not omit any key idea found in USER CONTEXT'. It also says 'The four (CAOC) are (the person)'s; the mathematics is the AI's, built to (the person)'s specification.' That makes the file an AI expansion of the person's direction, which is 'drafted'. The synthesis itself is a September multi-agent synthesis, so 'ai'."
+   }
+  },
+  {
+   "index": 14,
+   "id": "s26-02-the-fork",
+   "origin": "person",
+   "why": "The turn of 2026-02-09 is stated by the third entry (hb-02 line 3627), the person's own 'one rule'. The first entry is an earlier anticipation from January: the transcript labels its speaker 'Unknown Speaker', and the attribution to the person comes from the Wamotopia folder's tag and the September timeline's reading. The second entry differs: 'The deciding variable is institutional design' sits inside a scenario projection the person pasted as 'organized by AI'. The fourth entry is the person's own sentence introducing that paste. The name 'The Fork' belongs to an AI-produced narrative not in the corpus, and the TIMELINE and theories/README entries are AI-made.",
+   "evidence": [
+    {
+     "path": "sources/02-wamotopia/transcripts/2026-01-note-chiangmai-festival-talk.txt",
+     "origin": "person",
+     "basis": "Line 176. theories/wamotopia-and-the-wamo-protocol/README.md line 574 calls it an 'otter.ai transcript of (the person)'s pre-festival talk (speaker unlabelled; content unmistakably (the person)). [(the person)-authored] (spoken)'. _process/history/2026-09-consolidation/TIMELINE.md line 117 treats the transcripts as the person's spoken statements. Caveat: the file itself labels every turn 'Unknown Speaker', the attribution rests on content, and the lineage's own label_why calls the speaker unnamed."
+    },
+    {
+     "path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-02.md",
+     "origin": "drafted",
+     "basis": "Line 3608. The line is the end of a pasted scenario projection inside the person's turn. Line 3490 introduces it: 'here is my projection, organized by AI:'. The text is the AI's organisation of the person's projection, which the person pasted."
+    },
+    {
+     "path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-02.md",
+     "origin": "person",
+     "basis": "Line 3627. hb-02.md header: only the person's HUMAN turns. The turn is first-person argument ('I am not against AI ... at least this is the best strategy I currently think: Make the global coordination work based on one rule'), not a paste."
+    },
+    {
+     "path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-02.md",
+     "origin": "person",
+     "basis": "Line 3490. The quoted sentence 'here is my projection, organized by AI:' is the person's own words introducing the paste. hb-02.md header: only the person's HUMAN turns. What follows it is AI-organised."
+    },
+    {
+     "path": "_process/history/2026-09-consolidation/TIMELINE.md",
+     "origin": "ai",
+     "basis": "Line 125. The September narrative timeline under _process, written by the working sessions. Its header (line 3) says it was built from the record and refers to the person in the third person. theories/LINEAGE.md line 28 calls it 'a narrative ... itself reconstructed from the material'."
+    },
+    {
+     "path": "theories/README.md",
+     "origin": "ai",
+     "basis": "Line 24. Line 1 of the page: 'Generated by tools/research/atlas.py from theories/becoming/results/atlas/'. Its preamble says each crosswalk entry 'is an AI reading with no person's behind it'."
+    }
+   ],
+   "check": {
+    "index": 14,
+    "agree": true,
+    "origin": "person",
+    "why": "I agree. hb-02 line 3627 is the person's first-person turn ('I am not against AI ... at least this is the best strategy I currently think: Make the global coordination work based on one rule'), and it states the one rule. Line 3490 reads 'here is my projection, organized by AI:', so line 3608 ('The deciding variable is institutional design') is AI-organised text the person pasted, and 'drafted' is right for it. The caveat on the January talk is correct and matters: all 64 turns in the transcript are labelled 'Unknown Speaker'. The attribution rests on the Wamotopia README's '[(the person)-authored] (spoken)' and its 'content unmistakably (the person)', which is an AI reading of the content and not a speaker label. The TIMELINE.md entry and the generated theories/README.md entry are 'ai'."
+   }
+  },
+  {
+   "index": 15,
+   "id": "s26-04-fork-retired",
+   "origin": "person",
+   "why": "The first entry, the person's turn of 2026-04-16 ('I have moved on from the fork narrative'), states the turning point. The other hb-02 entries are the person's own turns from the same and nearby conversations. The Fork folder's claim 44 differs: it is the September readers' AI-written reading of that turn.",
+   "evidence": [
+    {
+     "path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-02.md",
+     "origin": "person",
+     "basis": "Line 7190. hb-02.md header: only the person's HUMAN turns. The turn is first-person ('actually, I think I have moved on from the fork narrative ...')."
+    },
+    {
+     "path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-02.md",
+     "origin": "person",
+     "basis": "Line 7194. Same conversation, the person's next turn ('well, i am also not saying ...'). Basis: the hb-02.md header."
+    },
+    {
+     "path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-02.md",
+     "origin": "person",
+     "basis": "Line 5097. hb-02.md header: only the person's HUMAN turns. In this turn of the 2026-03-18 conversation the person corrects an AI-written SOUL file in the person's own words. theories/the-fork-and-cooperative-infrastructure/README.md line 166 describes it that way."
+    },
+    {
+     "path": "theories/the-fork-and-cooperative-infrastructure/README.md",
+     "origin": "ai",
+     "basis": "Claim 44, line 116, a September synthesis. _process/history/2026-09-consolidation/COVERAGE.md line 9 says multi-agent readers wrote the syntheses, and the README's line-1 banner says its text is the earlier folder's, unchanged."
+    },
+    {
+     "path": "_process/history/2026-09-consolidation/reading-notes-inputs/hb-02.md",
+     "origin": "person",
+     "basis": "Line 8197. hb-02.md header: only the person's HUMAN turns. The turn is first-person ('When I said destruction, I just didn't have a better word ...')."
+    }
+   ],
+   "check": {
+    "index": 15,
+    "agree": true,
+    "origin": "person",
+    "why": "I agree. hb-02 lines 7190 and 7194 are the person's first-person turns of 2026-04-16 ('I think I have moved on from the fork narrative'). Line 5097 is the person correcting an AI-written SOUL file in the person's own words ('I never put it in a way that was neo-feudalism vs automated commons'). Line 8197 is first-person ('When I said destruction, I just didn't have a better word'). Claim 44 in the Fork README is a September AI synthesis, so 'ai'. A side note that does not change the origin: the Fork README dates the SOUL correction 2026-03-19, while the hb-02 heading is 2026-03-18."
+   }
+  },
+  {
+   "index": 16,
+   "id": "s26-05-jian-single-primitive",
+   "origin": "drafted",
+   "why": "All four entries quote one file, the 間 foundation note v0.3 of 2026-05-01. Its first entry states 間 as the one primitive. The file's own header names a person as 作者 (author) and Claude as 协作起草 (co-drafter), so the text was written with AI from the person's ideas.",
+   "evidence": [
+    {
+     "path": "sources/08-jian-wen-language/jian-repo/JIAN_FOUNDATION_NOTE_v0.3.md",
+     "origin": "drafted",
+     "basis": "§I, line 50. The file's header (lines 5-6) reads '作者: [the person]' and '协作起草: Claude' (co-drafted by Claude). theories/jian-and-wenyan-as-formal-language/README.md line 14 calls the foundation notes one of three document tracks whose genesis is the person's recorded turns of May 2026."
+    },
+    {
+     "path": "sources/08-jian-wen-language/jian-repo/JIAN_FOUNDATION_NOTE_v0.3.md",
+     "origin": "drafted",
+     "basis": "§VIII, line 648. Same file, and the same header lines 5-6: a person as author, Claude as co-drafter."
+    },
+    {
+     "path": "sources/08-jian-wen-language/jian-repo/JIAN_FOUNDATION_NOTE_v0.3.md",
+     "origin": "drafted",
+     "basis": "v0.3 changelog, line 13. Same file and the same header attribution (lines 5-6)."
+    },
+    {
+     "path": "sources/08-jian-wen-language/jian-repo/JIAN_FOUNDATION_NOTE_v0.3.md",
+     "origin": "drafted",
+     "basis": "The header itself: '作者' names a person and '协作起草: Claude' names the AI co-drafter (lines 5-6)."
+    }
+   ],
+   "check": {
+    "index": 16,
+    "agree": true,
+    "origin": "drafted",
+    "why": "I agree. The header of JIAN_FOUNDATION_NOTE_v0.3.md reads '**作者**: (the person)' and '**协作起草**: Claude'. That is the file's own statement that it was co-drafted with AI under the person's authorship, which fits 'drafted'. All four entries come from this file."
+   }
+  },
+  {
+   "index": 17,
+   "id": "s26-05-kai-root",
+   "origin": "drafted",
+   "why": "Entry 1, the v9 correction dated 2026-05-04, states the turning point, and the folder tags it as AI-drafted from a person's ideas. Entries 2 and 4 are September AI syntheses that restate it, so they are ai. Entry 3 is another AI-drafted text from the person's SSBX project.",
+   "evidence": [
+    {
+     "path": "sources/07-shengsheng-buxi/downloads-drafts-2026-05/生生不息论_v9_开境护闭校正版.md",
+     "origin": "drafted",
+     "basis": "In theories/becoming/history/lineage/shengsheng-buxi/synthesis-a-downloads-2026.md, line 699, the source table tags this file '[AI-drafted from <the person>'s ideas]'. In theories/keep-the-possibility-space-open/README.md, line 237, the 文言 formulations are 'largely drafted by a model and adopted' by the person 'with explicit assent', then 'carried into the 生生不息论 canon': 'Ren's ideas, not Ren's prose'. The file's own header names no author."
+    },
+    {
+     "path": "theories/keep-the-possibility-space-open/README.md",
+     "origin": "ai",
+     "basis": "_process/history/2026-09-consolidation/COVERAGE.md, line 9: in the 'multi-agent reading passes on 2026-09-03' each reader 'wrote one synthesis file per theory-part'. theories/README.md, line 5, calls the folders 'syntheses first written in September 2026'. The README refers to the person in the third person."
+    },
+    {
+     "path": "sources/07-shengsheng-buxi/ssbx-repo/义理/R_与生生不息对齐之必然.md",
+     "origin": "drafted",
+     "basis": "In theories/becoming/history/lineage/shengsheng-buxi/synthesis-c-ssbx-yili-and-formal-doctrine.md, line 391, the source list tags this file '[AI-drafted]'. That list follows _process/history/2026-09-consolidation/THEORY-TEMPLATE.md, line 33, whose tag set is [person-authored] [AI-drafted from the person's ideas] [AI review] [external]. The SSBX repo's AGENTS.md says agents work in that repository. The file's header gives only a report date, 2026-05-07."
+    },
+    {
+     "path": "theories/keep-the-possibility-space-open/README.md",
+     "origin": "ai",
+     "basis": "Same AI synthesis as entry 2 (COVERAGE.md line 9). Line 237 is the synthesis's own provenance note on the 文言 formulations."
+    }
+   ],
+   "check": {
+    "index": 17,
+    "agree": true,
+    "origin": "drafted",
+    "why": "Confirmed. synthesis-a-downloads-2026.md line 698 tags downloads-drafts-2026-05/生生不息论_v9_开境护闭校正版.md '[AI-drafted from Ren's ideas]'. keep-the-possibility-space-open/README.md line 237 says the 文言 formulations were 'largely drafted by a model and adopted', 'Ren's ideas, not Ren's prose'. synthesis-c line 390 tags 义理/R_与生生不息对齐之必然.md '[AI-drafted]', and synthesis-a tags the Downloads copy of the same paper '[AI-drafted from Ren's ideas]'. The SSBX AGENTS.md says it governs 'all agents working in this repository'. The README entries are September syntheses (COVERAGE.md line 9), so 'ai' is right for them."
+   }
+  },
+  {
+   "index": 18,
+   "id": "s26-05-lean-checker",
+   "origin": "drafted",
+   "why": "Entry 1, the 2026-05-06 spec that calls Lean an internal coherence checker, states the turning point. The folder tags it AI-drafted. Entries 2 and 3 are the 2026-05-21 ledger, also tagged AI-drafted, so all entries agree.",
+   "evidence": [
+    {
+     "path": "sources/07-shengsheng-buxi/ssbx-repo/史料/真理/daoli-v12-lean-verifier.md",
+     "origin": "drafted",
+     "basis": "theories/becoming/history/lineage/shengsheng-buxi/synthesis-b-ssbx-canon-and-history.md, line 507, tags this file '[AI-drafted]', using the tag set of THEORY-TEMPLATE.md line 33 (AI-drafted from the person's ideas). The file's own header ('文档 status ... spec') names no author."
+    },
+    {
+     "path": "sources/07-shengsheng-buxi/ssbx-repo/docs-next/10_formal_形式/claim-status-ledger.md",
+     "origin": "drafted",
+     "basis": "synthesis-c-ssbx-yili-and-formal-doctrine.md, line 459, tags it '[AI-drafted; the corpus's key epistemic artefact]'. The header's 'human status ledger' names the page's readers, not its writer."
+    },
+    {
+     "path": "sources/07-shengsheng-buxi/ssbx-repo/docs-next/10_formal_形式/claim-status-ledger.md",
+     "origin": "drafted",
+     "basis": "Same file as entry 2 (synthesis-c line 459, '[AI-drafted ...]')."
+    }
+   ],
+   "check": {
+    "index": 18,
+    "agree": true,
+    "origin": "drafted",
+    "why": "Confirmed. synthesis-b line 507 tags 史料/真理/daoli-v12-lean-verifier.md '[AI-drafted]'. synthesis-c line 459 tags claim-status-ledger.md '[AI-drafted; the corpus's key epistemic artefact]'. Neither file's header names a person, and the ledger's 'human status ledger' names who reads it, not who wrote it. Both come from the person's SSBX project, where agents worked, so 'drafted' fits better than 'ai'."
+   }
+  },
+  {
+   "index": 19,
+   "id": "sel-2026-05-28-selection-on-cognition",
+   "origin": "drafted",
+   "why": "All three entries quote the 2026-05-28 core stance, which states the point. Its header says it records a conversation between the person and an AI collaborator, and the folder tags it AI-drafted from the person's ideas.",
+   "evidence": [
+    {
+     "path": "sources/05-alignment-and-moloch/2026-05-28-alignment-core-stance.md",
+     "origin": "drafted",
+     "basis": "Line 3 of the header: the document 'captures the substantive ground that grew out of the conversation on 2026-05-28 between <the person> and Claude (as research collaborator)'. theories/alignment-selection-on-cognition/README.md, line 865: 'Claude's record of the 2026-05-28 conversation ... [AI-drafted from <the person>'s ideas, with embedded AI review labeled as such]'."
+    },
+    {
+     "path": "sources/05-alignment-and-moloch/2026-05-28-alignment-core-stance.md",
+     "origin": "drafted",
+     "basis": "Same file and header, line 3. The folder README's line 865 tags it AI-drafted."
+    },
+    {
+     "path": "sources/05-alignment-and-moloch/2026-05-28-alignment-core-stance.md",
+     "origin": "drafted",
+     "basis": "Same file and header, line 3. The folder README's line 865 tags it AI-drafted."
+    }
+   ],
+   "check": {
+    "index": 19,
+    "agree": true,
+    "origin": "drafted",
+    "why": "Confirmed. The core stance's line 3 says it 'captures the substantive ground that grew out of the conversation on 2026-05-28 between' the person 'and Claude (as research collaborator)'. alignment-selection-on-cognition/README.md line 865 calls it 'Claude's record of the 2026-05-28 conversation ... [AI-drafted from' the person's 'ideas ...]'. All three quotes come from that file."
+   }
+  },
+  {
+   "index": 20,
+   "id": "s26-06-foundation-principles",
+   "origin": "drafted",
+   "why": "Entries 1 to 3 quote FOUNDATION-PRINCIPLES-DRAFT.md, which states the point and is tagged AI-drafted from the person's ideas. Entry 4 is the September AI synthesis's source list that gives that tag.",
+   "evidence": [
+    {
+     "path": "sources/04-speculative-future/current/FOUNDATION-PRINCIPLES-DRAFT.md",
+     "origin": "drafted",
+     "basis": "theories/keep-the-possibility-space-open/README.md, line 874: 'the governing public draft ... [AI-drafted from <the person>'s ideas]'. The file's own header names no author."
+    },
+    {
+     "path": "sources/04-speculative-future/current/FOUNDATION-PRINCIPLES-DRAFT.md",
+     "origin": "drafted",
+     "basis": "Same file, same tag (keep-the-possibility-space-open/README.md line 874)."
+    },
+    {
+     "path": "sources/04-speculative-future/current/FOUNDATION-PRINCIPLES-DRAFT.md",
+     "origin": "drafted",
+     "basis": "Same file, same tag (keep-the-possibility-space-open/README.md line 874)."
+    },
+    {
+     "path": "theories/keep-the-possibility-space-open/README.md",
+     "origin": "ai",
+     "basis": "A September synthesis written by the reading agents (_process/history/2026-09-consolidation/COVERAGE.md line 9; theories/README.md line 5)."
+    }
+   ],
+   "check": {
+    "index": 20,
+    "agree": true,
+    "origin": "drafted",
+    "why": "Confirmed. keep-the-possibility-space-open/README.md line 874 tags FOUNDATION-PRINCIPLES-DRAFT.md '[AI-drafted from' the person's 'ideas]'. SOURCES.md gives only its size and date, 2026-06-06. Entry 4, the synthesis's source list, is AI work (COVERAGE.md line 9)."
+   }
+  },
+  {
+   "index": 21,
+   "id": "s26-07-zhishan",
+   "origin": "drafted",
+   "why": "Entry 1, the manifesto draft of 2026-07-08, states the turning test, and the folder tags it AI-drafted from the person's ideas. 智善.md (entries 3 and 4) is tagged the same way. TIMELINE line 193 records that the person commissioned it, but not that the person wrote it. Entries 5 and 6 are the AI synthesis's tags.",
+   "evidence": [
+    {
+     "path": "sources/06-zhishan/manifesto/drafts/draft-1.md",
+     "origin": "drafted",
+     "basis": "theories/zhishan-intelligence-must-be-good/README.md, line 1130: 'the single-hand Chinese manifesto, 2026-07-08. [AI-drafted from <the person>'s ideas]'. In _process/history/2026-09-consolidation/TIMELINE.md, line 187, 'in one hand' describes a single version, not who wrote it."
+    },
+    {
+     "path": "sources/06-zhishan/manifesto/drafts/draft-1.md",
+     "origin": "drafted",
+     "basis": "Same file, same tag (zhishan README line 1130)."
+    },
+    {
+     "path": "sources/06-zhishan/sheng/智善.md",
+     "origin": "drafted",
+     "basis": "zhishan README, line 1108: 'the Chinese foundational statement ... [AI-drafted from <the person>'s ideas]'. TIMELINE.md, line 193, records only the person's commission of a cornerstone document."
+    },
+    {
+     "path": "sources/06-zhishan/sheng/智善.md",
+     "origin": "drafted",
+     "basis": "Same file, same tag (zhishan README line 1108)."
+    },
+    {
+     "path": "theories/zhishan-intelligence-must-be-good/README.md",
+     "origin": "ai",
+     "basis": "A September synthesis written by the reading agents (COVERAGE.md line 9; theories/README.md line 5)."
+    },
+    {
+     "path": "theories/zhishan-intelligence-must-be-good/README.md",
+     "origin": "ai",
+     "basis": "A September synthesis written by the reading agents (COVERAGE.md line 9; theories/README.md line 5)."
+    }
+   ],
+   "check": {
+    "index": 21,
+    "agree": true,
+    "origin": "drafted",
+    "why": "Confirmed. zhishan README line 1130 tags draft-1.md '[AI-drafted from' the person's 'ideas]', and line 1108 gives 智善.md the same tag. The README's line 707 and the TIMELINE's 'in one hand' describe a single version, not who wrote it. The TIMELINE also records the person's commission for 智善.md ('我想写一份，智能为善的文章'), which is consistent with an AI-drafted text. manifesto/README.md and SOURCES.md name no author."
+   }
+  },
+  {
+   "index": 22,
+   "id": "s26-09-consolidation",
+   "origin": "ai",
+   "why": "Entry 1, MAP.md's opening, states the gathering and the reading as one mechanism under four names. MAP.md is process documentation written by the consolidation sessions. The other entries are also AI-made repository files, so all entries agree.",
+   "evidence": [
+    {
+     "path": "_process/history/2026-09-consolidation/MAP.md",
+     "origin": "ai",
+     "basis": "A process file under _process/history from the multi-agent consolidation (COVERAGE.md line 9). It refers to the person in the third person. Nothing in it says a person wrote it."
+    },
+    {
+     "path": "_process/history/2026-09-consolidation/MAP.md",
+     "origin": "ai",
+     "basis": "Same file and same basis as entry 1."
+    },
+    {
+     "path": "theories/README.md",
+     "origin": "ai",
+     "basis": "Line 1: '<!-- Generated by tools/research/atlas.py ... do not edit. -->'. It is the live account's generated page, and the live account says it was made with AI (theories/becoming/ONE-PAGE.md, line 7)."
+    },
+    {
+     "path": "_process/architecture/README.md",
+     "origin": "ai",
+     "basis": "A process record of 8 October 2026, an 'Implementation of <the person>'s architecture request'. It reports the renames 'At <the person>'s request' in the third person. It is a _process file written by the working sessions."
+    }
+   ],
+   "check": {
+    "index": 22,
+    "agree": true,
+    "origin": "ai",
+    "why": "Confirmed. MAP.md is a consolidation-session process file that speaks of the person in the third person, and it was moved to history in commit 0754ee218. theories/README.md line 1 marks it as generated by atlas.py. _process/architecture/README.md is an AI implementation record that reports 'At Ren's request' in the third person."
+   }
+  },
+  {
+   "index": 23,
+   "id": "pt-capability-outruns-correction",
+   "origin": "drafted",
+   "why": "All three entries quote the v2 .tex, which states the point. The folder's NOTES say v2 is AI-drafted from the person's ideas and that none of its sentences are the person's verbatim. The person's name in the \\author line does not change this.",
+   "evidence": [
+    {
+     "path": "drafts/2026-09-28-capability-outruns-correction/When_Capability_Outruns_Correction_v2.tex",
+     "origin": "drafted",
+     "basis": "drafts/2026-09-28-capability-outruns-correction/NOTES.md, line 3: 'These notes were written by Claude Opus 5.5, which drafted v2. <The person> has not yet reviewed v2.' The Provenance section: 'Authorship: v2 is AI-drafted from <the person>'s ideas, v1 and the corpus. None of its sentences are <the person>'s verbatim.'"
+    },
+    {
+     "path": "drafts/2026-09-28-capability-outruns-correction/When_Capability_Outruns_Correction_v2.tex",
+     "origin": "drafted",
+     "basis": "Same file, same NOTES.md authorship line."
+    },
+    {
+     "path": "drafts/2026-09-28-capability-outruns-correction/When_Capability_Outruns_Correction_v2.tex",
+     "origin": "drafted",
+     "basis": "Same file, same NOTES.md authorship line."
+    }
+   ],
+   "check": {
+    "index": 23,
+    "agree": true,
+    "origin": "drafted",
+    "why": "Confirmed. NOTES.md line 3 says the notes 'were written by Claude Opus 5.5, which drafted v2'. Line 21 says 'v2 is AI-drafted from Ren's ideas, v1 and the corpus. None of its sentences are Ren's verbatim.' The \\author line naming the person does not change this. SOURCES.md line 526 says even v1 was 'AI-drafted from Ren's ideas'."
+   }
+  },
+  {
+   "index": 24,
+   "id": "s26-10-why-and-meaning",
+   "origin": "person",
+   "why": "Entry 1 states the turning point: the person's own message, quoted verbatim, naming the conversation as the 'why and meaning'. Entries 2 and 3 are MAP.md's AI-written reading. Entry 3 embeds a verbatim fragment of the person's speech taken from an automatic transcript, which was not read here. Entry 4 is another verbatim message from the person.",
+   "evidence": [
+    {
+     "path": "sources/16-claude-code-directions/2026-10-02-why-and-meaning-request.md",
+     "origin": "person",
+     "basis": "Scope line: '<The person>'s message is quoted verbatim ... The title, this provenance note and the gloss are assistant-authored.' The quoted line 11 is under the heading '<The person> — verbatim'."
+    },
+    {
+     "path": "_process/history/2026-09-consolidation/MAP.md",
+     "origin": "ai",
+     "basis": "MAP.md is a process file of the consolidation sessions that speaks of the person in the third person. The quoted sentence is MAP's own summary, not the person's words."
+    },
+    {
+     "path": "_process/history/2026-09-consolidation/MAP.md",
+     "origin": "ai",
+     "basis": "The sentence is MAP's own narration, written by the sessions. Its parenthetical quote is a fragment of the person's speech that MAP takes from an automatic transcript, which it cautions is 'automatic' and 'unedited'."
+    },
+    {
+     "path": "sources/16-claude-code-directions/2026-10-02-paper-v3-spine-direction.md",
+     "origin": "person",
+     "basis": "Header: '<The person>'s words are quoted verbatim. The title, this note and the gloss are assistant-authored.' Line 15 is message 3 under '<The person> — verbatim'."
+    }
+   ],
+   "check": {
+    "index": 24,
+    "agree": true,
+    "origin": "person",
+    "why": "Confirmed. The why-and-meaning request file says 'Ren's message is quoted verbatim' under '## Ren — verbatim', and line 11 is that message. The paper-v3 file's message 3 is also under '## Ren — verbatim'. The two MAP.md entries are the session's narration, so 'ai' is right for them. Entry 3's short embedded quote comes from a transcript I did not open."
+   }
+  },
+  {
+   "index": 25,
+   "id": "s26-10-first-predictions",
+   "origin": "ai",
+   "why": "Entry 1, PREDICTIONS.md, states the turning point. It was committed with an AI co-author trailer in the paper's AI-drafted folder. The pilot log is the output of an AI-written script, and PREDICTIONS-2 came in the same AI-co-authored commit. No file says a person wrote them.",
+   "evidence": [
+    {
+     "path": "drafts/2026-10-02-iaseai-selecting-the-selectors/experiment/PREDICTIONS.md",
+     "origin": "ai",
+     "basis": "Commit 3ba95cf7b (2026-10-02 21:47:35 +0700), 'Pre-specify predictions ...', carries the trailer 'Co-Authored-By: Claude Opus 5.5'. The folder's NOTES.md, line 3, says the paper was drafted by a model and that every sentence is AI-drafted. No file names a person as author of the predictions."
+    },
+    {
+     "path": "drafts/2026-10-02-iaseai-selecting-the-selectors/experiment/pilot.log",
+     "origin": "ai",
+     "basis": "Output of experiment_pilot.py, added with this log and PREDICTIONS-2.md in commit 667ca9249 (2026-10-02 21:49:40 +0700), which carries the trailer 'Co-Authored-By: Claude Opus 5.5'."
+    },
+    {
+     "path": "drafts/2026-10-02-iaseai-selecting-the-selectors/experiment/PREDICTIONS-2.md",
+     "origin": "ai",
+     "basis": "Added in commit 667ca9249 with the AI co-author trailer. No file names a person as its author."
+    }
+   ],
+   "check": {
+    "index": 25,
+    "agree": true,
+    "origin": "ai",
+    "why": "Confirmed. Commits 3ba95cf7b and 667ca9249 (2026-10-02, 21:47 and 21:49 +0700) carry 'Co-Authored-By: Claude Opus 5.5'. 667ca9249 adds experiment_pilot.py, pilot.log and PREDICTIONS-2.md together. The folder's NOTES.md line 3 says 'Every sentence of the paper is AI-drafted'. No file says a person wrote the predictions, and nothing ties them to the person's own words, so 'ai' fits better than 'drafted'."
+   }
+  },
+  {
+   "index": 26,
+   "id": "pt-v7-3-integrated-into-generative-account",
+   "origin": "ai",
+   "why": "The turning point is the integration of 6 October, stated in entry 2, the chapter's 'AI-authored integration' paragraph. Entry 1 only dates the V7.3 paper being integrated, which belongs to the AI-drafted paper line. Entry 3 is the same AI chapter.",
+   "evidence": [
+    {
+     "path": "drafts/2026-10-02-iaseai-selecting-the-selectors/v7.3/README.md",
+     "origin": "drafted",
+     "basis": "Dateline, line 3: '5 October 2026. Conditional working paper. AI-assisted development and review are not independent human certification.' The paper line's NOTES.md (lines 3 and 100) says the paper is AI-drafted from the person's ideas. v7.3/CLAIMS.md, line 5, keeps the person's own words (R) apart from text drafted by a model (A, D)."
+    },
+    {
+     "path": "theories/becoming/history/GENERATIVE-SELECTION.md",
+     "origin": "ai",
+     "basis": "Line 7: '6 October 2026. AI-authored integration requested by <the person> ...'"
+    },
+    {
+     "path": "theories/becoming/history/GENERATIVE-SELECTION.md",
+     "origin": "ai",
+     "basis": "Line 5 is the chapter's own status paragraph, in an AI-authored chapter under theories/becoming (line 7). It links the person's directive but does not quote it."
+    }
+   ],
+   "check": {
+    "index": 26,
+    "agree": true,
+    "origin": "ai",
+    "why": "Confirmed. GENERATIVE-SELECTION.md line 7 reads '6 October 2026. AI-authored integration requested by Ren', and line 5 is that chapter's own status paragraph. Entry 1 is the v7.3 README dateline ('AI-assisted development and review'). Its tag of 'drafted' is defensible from the paper line's AI-drafted notes, and v7.3/CLAIMS.md keeps R/A/D provenance apart."
+   }
+  },
+  {
+   "index": 27,
+   "id": "becoming-2026-10-09-theory-named",
+   "origin": "person",
+   "why": "The naming itself is entry 2, the person's verbatim message. Entry 1 (the earlier title) is AI-authored context. Entries 3 and 4, the provisional reading of 先 and the zero-axiom hypothesis, are the record's AI implementation interpretation.",
+   "evidence": [
+    {
+     "path": "sources/15-codex-theory-conversations/2026-10-09-theory-of-becoming-name.md",
+     "origin": "ai",
+     "basis": "Under the heading '## Context — AI-authored' (line 5). The header says the file holds 'Selected exact user messages ... followed by a separately labelled implementation interpretation'."
+    },
+    {
+     "path": "sources/15-codex-theory-conversations/2026-10-09-theory-of-becoming-name.md",
+     "origin": "person",
+     "basis": "Under '## <The person>'s words'. The header: 'Selected exact user messages from the current Claude Code conversation'."
+    },
+    {
+     "path": "sources/15-codex-theory-conversations/2026-10-09-theory-of-becoming-name.md",
+     "origin": "ai",
+     "basis": "Under the heading '## AI implementation interpretation'."
+    },
+    {
+     "path": "sources/15-codex-theory-conversations/2026-10-09-theory-of-becoming-name.md",
+     "origin": "ai",
+     "basis": "Under the heading '## AI implementation interpretation'."
+    }
+   ],
+   "check": {
+    "index": 27,
+    "agree": true,
+    "origin": "person",
+    "why": "Confirmed. The file says 'Selected exact user messages', and the naming line '我觉得先叫the theory of becoming吧' is under '## Ren's words'. Entry 1 is under '## Context — AI-authored', and entries 3 and 4 are under '## AI implementation interpretation', so all three are 'ai'."
+   }
+  },
+  {
+   "index": 28,
+   "id": "becoming-2026-10-09-pure-core",
+   "origin": "person",
+   "why": "Entry 1, the person's verbatim directive that the spine have no dependency and no axiom, states the turning point. Entries 2 and 3 are the live method chapter's AI-written statement of the checker's rule and its limit.",
+   "evidence": [
+    {
+     "path": "sources/15-codex-theory-conversations/2026-10-09-pure-core.md",
+     "origin": "person",
+     "basis": "Header: 'Exact user messages in the unification conversation'. The quote sits under '## <The person>'s words'."
+    },
+    {
+     "path": "theories/becoming/chapters/08-METHOD.md",
+     "origin": "ai",
+     "basis": "A live chapter under theories/becoming. theories/becoming/ONE-PAGE.md, line 7, says the account was 'Made with AI ... no person has yet reviewed it'."
+    },
+    {
+     "path": "theories/becoming/chapters/08-METHOD.md",
+     "origin": "ai",
+     "basis": "Same chapter, same basis (ONE-PAGE.md line 7)."
+    }
+   ],
+   "check": {
+    "index": 28,
+    "agree": true,
+    "origin": "person",
+    "why": "Confirmed. The pure-core file says 'Exact user messages in the unification conversation', and the directive is under '## Ren's words'. 08-METHOD.md is a live chapter of the account, and ONE-PAGE.md line 7 says the account is 'Made with AI'."
+   }
+  },
+  {
+   "index": 29,
+   "id": "becoming-2026-10-11-g0-folded",
+   "origin": "ai",
+   "why": "Entry 1, the record's dated history entry '2026-10-11 P51', states the turning point ('G0 is no longer an adopted axiom ...'). It is AI-written and quotes the person's directive. Entry 2 is that directive itself, verbatim. Entry 3, the Part II fold decision, was worded by the assistant and sent by the person. Entry 4 is the record's own narration.",
+   "evidence": [
+    {
+     "path": "theories/becoming/results/records/continuation-condition-yields-living-significance.json",
+     "origin": "ai",
+     "basis": "A result record under theories/becoming/results/records, kept by the working sessions. Its history entry speaks of the person in the third person ('<The person> folded G0 (\"...\")'). The live account says it was made with AI (ONE-PAGE.md line 7)."
+    },
+    {
+     "path": "sources/15-codex-theory-conversations/2026-10-11-fold-g0.md",
+     "origin": "person",
+     "basis": "Header: 'This is one exact user message ... Original wording, spelling and spacing are preserved.' The quote is under '## <The person>'s words'."
+    },
+    {
+     "path": "sources/15-codex-theory-conversations/2026-10-16-fold-part-ii.md",
+     "origin": "drafted",
+     "basis": "Line 11: 'The text it sent was drafted by the assistant as the button's message, and <the person> sent it as the decision.'"
+    },
+    {
+     "path": "sources/15-codex-theory-conversations/2026-10-16-fold-part-ii.md",
+     "origin": "ai",
+     "basis": "This is the record's narration, not one of 'the exact user question and the reply' that the header says the file holds. It describes the person and the assistant in the third person, so it was written by the recording session. Nothing labels this line otherwise."
+    }
+   ],
+   "check": {
+    "index": 29,
+    "agree": true,
+    "origin": "ai",
+    "why": "Confirmed. The turning-point sentence is the record's AI-kept history entry. The fold-g0 file is 'one exact user message', so entry 2 is 'person'. fold-part-ii says 'The text it sent was drafted by the assistant as the button's message, and Ren sent it as the decision', so 'drafted' fits entry 3. Entry 4 quotes that narration line itself, which sits under the 'Ren's words' heading but is third-person framing by the recording session, so 'ai' is right."
+   }
+  },
+  {
+   "index": 30,
+   "id": "becoming-2026-10-17-provenance-and-labels",
+   "origin": "person",
+   "why": "Entry 1, the person's verbatim message of 17 October, states the turning point: keep the words but not as truth, and drop G0 and Part I. Entries 2 and 3 are the record's AI-authored reading of it. Entry 4 is the relabelling in an AI-kept record's history.",
+   "evidence": [
+    {
+     "path": "sources/15-codex-theory-conversations/2026-10-17-ren-words-not-authority.md",
+     "origin": "person",
+     "basis": "Header: '<The person>'s exact message in the Claude Code conversation ... followed by separately labelled AI-authored context'. The quote is under '## <The person>'s message'."
+    },
+    {
+     "path": "sources/15-codex-theory-conversations/2026-10-17-ren-words-not-authority.md",
+     "origin": "ai",
+     "basis": "Under the heading '## Context (AI-authored)'."
+    },
+    {
+     "path": "sources/15-codex-theory-conversations/2026-10-17-ren-words-not-authority.md",
+     "origin": "ai",
+     "basis": "Under the heading '## Context (AI-authored)'."
+    },
+    {
+     "path": "theories/becoming/results/records/continuation-condition-yields-living-significance.json",
+     "origin": "ai",
+     "basis": "A result record's history entry under theories/becoming, kept by the working sessions (ONE-PAGE.md line 7)."
+    }
+   ],
+   "check": {
+    "index": 30,
+    "agree": true,
+    "origin": "person",
+    "why": "Confirmed. The file opens with 'Ren's exact message ... followed by separately labelled AI-authored context'. Entry 1 is under '## Ren's message', and entries 2 and 3 are under '## Context (AI-authored)'. Entry 4 is a history entry in an AI-kept record."
+   }
+  },
+  {
+   "index": 31,
+   "id": "becoming-2026-10-18-registration-to-coupling",
+   "origin": "person",
+   "why": "Entry 1, the person's typed objection that 'registration' is a dualist word, starts the turn and states it. The record marks only the later button replies as assistant-drafted, not this message. The replacement was carried out in AI-made files: the rename table (entry 2) and the glossary (entry 3).",
+   "evidence": [
+    {
+     "path": "sources/15-codex-theory-conversations/2026-10-17-registration-dualist-vocabulary.md",
+     "origin": "person",
+     "basis": "Header: '<The person>'s exact messages ... Original wording, spelling and spacing are preserved.' The objection is under '## <The person>'s words'. Only the later replies are marked 'the reply the assistant had drafted for the button'."
+    },
+    {
+     "path": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/n1-migration/RENAME-TABLE.json",
+     "origin": "ai",
+     "basis": "A migration table under _process written by the working sessions. Nothing says a person wrote it."
+    },
+    {
+     "path": "GLOSSARY.md",
+     "origin": "ai",
+     "basis": "The live account's glossary ('The words of the Theory of Becoming ...'). The live account says it was made with AI (theories/becoming/ONE-PAGE.md line 7)."
+    }
+   ],
+   "check": {
+    "index": 31,
+    "agree": true,
+    "origin": "person",
+    "why": "Confirmed. The objection 'first of all, i think registration is a dualist word ...' is typed by the person under '## Ren's words'. Only the later replies are marked as 'the reply the assistant had drafted for the button'. RENAME-TABLE.json is an AI migration file under _process. GLOSSARY.md is the live account's glossary, made with AI per ONE-PAGE.md line 7."
+   }
+  },
+  {
+   "index": 32,
+   "id": "sel-2026-10-19-capture-on-the-spine",
+   "origin": "ai",
+   "why": "Entry 1, the capture-through-the-rule record, states the turning point. It is a page generated from an AI-kept JSON record under theories/becoming. The other entries are the same kind of record and a live chapter, so all entries agree.",
+   "evidence": [
+    {
+     "path": "theories/becoming/results/records/capture-through-the-rule.md",
+     "origin": "ai",
+     "basis": "Line 4: '<!-- Generated by tools/research/registry.py; edit the matching JSON record. -->'. It is a result record of the live account, which says it was made with AI (ONE-PAGE.md line 7)."
+    },
+    {
+     "path": "theories/becoming/results/records/capture-through-the-rule.md",
+     "origin": "ai",
+     "basis": "Same record, same basis."
+    },
+    {
+     "path": "theories/becoming/results/records/closed-capture.md",
+     "origin": "ai",
+     "basis": "A generated result record under theories/becoming/results/records (ONE-PAGE.md line 7)."
+    },
+    {
+     "path": "theories/becoming/chapters/02-MAP.md",
+     "origin": "ai",
+     "basis": "A live chapter under theories/becoming (ONE-PAGE.md line 7: 'Made with AI')."
+    }
+   ],
+   "check": {
+    "index": 32,
+    "agree": true,
+    "origin": "ai",
+    "why": "Confirmed. capture-through-the-rule.md line 4 reads 'Generated by tools/research/registry.py; edit the matching JSON record', and closed-capture.md is the same kind of record. 02-MAP.md is a live chapter, and the account is 'Made with AI' (ONE-PAGE.md line 7). Nothing says a person wrote any of them."
+   }
+  },
+  {
+   "index": 33,
+   "id": "becoming-2026-10-20-scope-and-order",
+   "origin": "ai",
+   "why": "Entry 0, the twentieth review of 20 October, states the turning point (the ethics as two premises, scope and order) and is an AI review. Entry 1 differs: the retired chapter's header says its wording is the AI's from a person's proposals, so it is drafted, though the restructuring it dates followed the AI review. Entry 2 is the AI-made method chapter.",
+   "evidence": [
+    {
+     "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-TWENTIETH-REVIEW.md",
+     "origin": "ai",
+     "basis": "Header line: '20 October 2026. An AI review, read-only.' The seven lens reports were run as parallel reviews with one brief (read in this file)."
+    },
+    {
+     "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
+     "origin": "drafted",
+     "basis": "Header line 5: 'Direction: [a person]. The organization and wording are the AI's (Claude), from [the person's] priority proposal, his whole and manifold, his direction of 生生 ...' (read in this file). So the text, the dated restructuring note included, is AI-worded from a person's proposals."
+    },
+    {
+     "path": "theories/becoming/chapters/08-METHOD.md",
+     "origin": "ai",
+     "basis": "A chapter of the live account under theories/becoming. The overview (theories/becoming/THE-THEORY-OF-BECOMING.md line 11) says 'It was made with AI, the Lean proofs included'. The one page (theories/becoming/ONE-PAGE.md line 7) says 'Made with AI'. The chapter's header says nothing otherwise."
+    }
+   ],
+   "check": {
+    "index": 33,
+    "agree": true,
+    "origin": "ai",
+    "why": "Entry 0 is BECOMING-TWENTIETH-REVIEW.md, whose header reads '20 October 2026. An AI review, read-only.' Entry 1 is correctly drafted: history/THE-THEORY-OF-BECOMING.md line 5 says 'The organization and wording are the AI's (Claude), from [a person's] priority proposal ...' and 'everything else is the AI's'. Entry 2 is a line of the live method chapter, which is AI-made."
+   }
+  },
+  {
+   "index": 34,
+   "id": "becoming-2026-10-20-no-new-mathematics",
+   "origin": "ai",
+   "why": "Entry 0, the significance review of 20 October, states the verdict 'No central result is a new theorem' and is an AI review. Entry 1 is in sources/ but is quoted from the record's section labelled AI-authored (the AI brief's reading), not from the person's message in the same record. Entry 2 is the AI-made method chapter. All three are ai.",
+   "evidence": [
+    {
+     "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+     "origin": "ai",
+     "basis": "Header line: '20 October 2026. An AI review (board item SA1), read-only and adversarial.'"
+    },
+    {
+     "path": "sources/15-codex-theory-conversations/2026-10-21-claims-stronger-than-proved.md",
+     "origin": "ai",
+     "basis": "The quotation is under '## Context (AI-authored)', bullet 'How the brief read it'. The header says the record was written by a session and that 'Separately labelled AI-authored context follows'. The person's own message, under '## [the person's] message', is a different sentence."
+    },
+    {
+     "path": "theories/becoming/chapters/08-METHOD.md",
+     "origin": "ai",
+     "basis": "A live chapter under theories/becoming. The overview (THE-THEORY-OF-BECOMING.md line 11) and the one page (ONE-PAGE.md line 7) say the account was made with AI. Nothing in the chapter says otherwise."
+    }
+   ],
+   "check": {
+    "index": 34,
+    "agree": true,
+    "origin": "ai",
+    "why": "BECOMING-SIGNIFICANCE-REVIEW.md opens '20 October 2026. An AI review (board item SA1), read-only and adversarial.' The sources/15 entry quotes line 12, which is under '## Context (AI-authored)', 'How the brief read it'. The header says 'This record was written by TH1's session' and that 'Separately labelled AI-authored context follows'. The person's own message, at line 7, is a different sentence. Entry 2 is the AI-made method chapter."
+   }
+  },
+  {
+   "index": 35,
+   "id": "becoming-2026-10-23-grammar-root",
+   "origin": "ai",
+   "why": "Entry 0 states the turning point (plan version 8 roots the theory in a grammar) and is the record's AI-authored context, not the person's quoted messages. The same record keeps the person's verbatim messages asking for version 9 (the root's centre moved to continuation; that button text was AI-drafted) and asking for version 10 to be written and implemented. The two texts the person pasted are said to be by another AI assistant. Entry 1, the version-10 line, comes from three AI reviews in an AI-drafted plan. Entry 2 is the AI-made method chapter.",
+   "evidence": [
+    {
+     "path": "sources/15-codex-theory-conversations/2026-10-23-continuity-as-root.md",
+     "origin": "ai",
+     "basis": "The quotation is under '## Context (AI-authored)'. The header says the record holds a person's 'exact messages ... with separately labelled AI-authored context'."
+    },
+    {
+     "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/PLAN.md",
+     "origin": "ai",
+     "basis": "First line: 'AI 起草的计划' (a plan drafted by AI). Version 10 is listed as '按第九版的三份审查（GPT astra、Opus 形式、Opus 古文）修订' (revised after the three reviews of version 9, by GPT astra and two Opus readers). The quoted line '续、四相、成坏、同一，都相对于一个类' is one of that revision's points."
+    },
+    {
+     "path": "theories/becoming/chapters/08-METHOD.md",
+     "origin": "ai",
+     "basis": "A live chapter under theories/becoming. The overview and the one page say the account was made with AI (THE-THEORY-OF-BECOMING.md line 11, ONE-PAGE.md line 7)."
+    }
+   ],
+   "check": {
+    "index": 35,
+    "agree": true,
+    "origin": "ai",
+    "why": "The quote at line 7 of 2026-10-23-continuity-as-root.md is under '## Context (AI-authored)'. The person's messages are a separate section. PLAN.md's first line is 'AI 起草的计划', and version 10 is the one revised after three AI reviews (GPT astra and two Opus readers). Entry 2 is the AI-made chapter. All three entries are ai."
+   }
+  },
+  {
+   "index": 36,
+   "id": "becoming-2026-10-23-four-layers",
+   "origin": "ai",
+   "why": "Entry 0, the board's 'RA landed' clause, states the restructuring and is AI-made. Entry 1 is the same clause. Entry 2 is a row the repository's tool generated in the history index. All three are ai.",
+   "evidence": [
+    {
+     "path": "_process/BECOMING-WORKBOARD.md",
+     "origin": "ai",
+     "basis": "The live work board under _process, written by the working sessions. Its header calls it the 'Live board' that holds open claims, the landing queue and what awaits a person. Nothing in it says a person wrote the RA clause."
+    },
+    {
+     "path": "_process/BECOMING-WORKBOARD.md",
+     "origin": "ai",
+     "basis": "Same board clause ('RA landed'). The board's clauses are the working sessions' (see the header of _process/BECOMING-WORKBOARD.md)."
+    },
+    {
+     "path": "theories/becoming/history/INDEX.md",
+     "origin": "ai",
+     "basis": "Line 1: '<!-- Generated by tools/research/moves.py from MANIFEST.json; do not edit by hand. -->'. A row the repository's tooling generated under theories/becoming, with no person's text."
+    }
+   ],
+   "check": {
+    "index": 36,
+    "agree": true,
+    "origin": "ai",
+    "why": "Both quotes are from the board's 'RA landed' clause, the working sessions' own text. The board's header calls it the 'Live board' holding open claims, the landing queue and what awaits a person. Nothing marks the clause as a person's words. history/INDEX.md line 1 says it is generated by tools/research/moves.py."
+   }
+  },
+  {
+   "index": 37,
+   "id": "pt-review-packet-assembled",
+   "origin": "ai",
+   "why": "Entry 0, the packet's cover, states the turning point and says everything in it was written with AI. Entries 1 and 2 are files of the same AI-written packet. All three are ai.",
+   "evidence": [
+    {
+     "path": "theories/becoming/review/README.md",
+     "origin": "ai",
+     "basis": "Opening paragraph: 'No human has reviewed this theory yet. Everything in it was written with AI, the Lean proofs included.'"
+    },
+    {
+     "path": "theories/becoming/review/recoding/FREEZE.md",
+     "origin": "ai",
+     "basis": "Part of the review packet, whose cover (theories/becoming/review/README.md) says 'Everything in it was written with AI'. The file records a sample drawn by sample.py 'before any human coded a unit'."
+    },
+    {
+     "path": "theories/becoming/review/README.zh.md",
+     "origin": "ai",
+     "basis": "Opening: '其中一切都是借助 AI 写成的，Lean 之证明也在内' (everything in it was written with AI, the Lean proofs included)."
+    }
+   ],
+   "check": {
+    "index": 37,
+    "agree": true,
+    "origin": "ai",
+    "why": "The review packet's cover says 'No human has reviewed this theory yet. Everything in it was written with AI, the Lean proofs included.' FREEZE.md is part of that packet and records a sample drawn by sample.py. README.zh.md says the same as the cover."
+   }
+  },
+  {
+   "index": 38,
+   "id": "sel-2026-10-26-t7-bridge-failed",
+   "origin": "ai",
+   "why": "Entry 0, the LA2 experiment's README, states the failed bridge and is AI-written. Entries 1 and 2 restate it in the AI-made chapter 2. All are ai.",
+   "evidence": [
+    {
+     "path": "experiments/self-rewarding-lock/README.md",
+     "origin": "ai",
+     "basis": "Header: 'Board item AJ3, 25 October 2026. AI-written (a Claude Code session).'"
+    },
+    {
+     "path": "theories/becoming/chapters/02-MAP.md",
+     "origin": "ai",
+     "basis": "A live chapter under theories/becoming. The overview (THE-THEORY-OF-BECOMING.md line 11) says the account was made with AI. Nothing in the chapter says otherwise."
+    },
+    {
+     "path": "theories/becoming/chapters/02-MAP.md",
+     "origin": "ai",
+     "basis": "Same chapter as above. It is part of the account the overview says was made with AI."
+    }
+   ],
+   "check": {
+    "index": 38,
+    "agree": true,
+    "origin": "ai",
+    "why": "The header of experiments/self-rewarding-lock/README.md reads 'Board item AJ3, 25 October 2026. AI-written (a Claude Code session).' Both 02-MAP quotes are from the live chapter, which is AI-made."
+   }
+  },
+  {
+   "index": 39,
+   "id": "becoming-2026-10-30-ethics-for-life",
+   "origin": "person",
+   "why": "Entry 0 states the turning point (no absolute good; it is for life) and is a person's message kept verbatim. Entry 1 differs: T8 is in the AI-made chapter 7, and its gloss of 生生 is marked as an AI reading. Entry 2 differs too: it is a goal title the AI drafted (an AI note's proposed wording), which the person approved with a reply button. It is drafted, not the person's own words.",
+   "evidence": [
+    {
+     "path": "sources/15-codex-theory-conversations/2026-10-30-no-absolute-good-the-way-for-life.md",
+     "origin": "person",
+     "basis": "Header: '[a person]'s words are quoted exactly; the AI-authored parts are labelled.' The quotation is in the block quote under '## [the person's] message'."
+    },
+    {
+     "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+     "origin": "ai",
+     "basis": "A live chapter under theories/becoming, and the overview says the account was made with AI (THE-THEORY-OF-BECOMING.md line 11). The quoted line itself carries the label '[AI reading, D1]'."
+    },
+    {
+     "path": "sources/15-codex-theory-conversations/2026-10-30-goal-the-ethics-for-life-approved.md",
+     "origin": "drafted",
+     "basis": "The quote is under '## What was approved (AI-authored)'. The record says the AI's note held 'proposed wording' and that the AI asked whether to approve it. The person chose the button 'Yes, approve it'. So the AI wrote the title from the person's message, and the person approved it."
+    }
+   ],
+   "check": {
+    "index": 39,
+    "agree": true,
+    "origin": "person",
+    "why": "Entry 0 is the block quote under '## [the person's] message' in 2026-10-30-no-absolute-good-the-way-for-life.md, and the header says the person's 'words are quoted exactly; the AI-authored parts are labelled'. That makes it a verbatim record of a person's words. Entry 1 carries '[AI reading, D1]' inside the AI-made chapter 7. Entry 2's label of drafted is defensible: the quote is under '## What was approved (AI-authored)', and the record says the AI's note held 'proposed wording', which the person approved with the button 'Yes, approve it'. One could also call entry 2 ai, since the wording is the AI's proposal. That does not change the point's origin."
+   }
+  },
+  {
+   "index": 40,
+   "id": "nov-du-reads-no-order",
+   "origin": "ai",
+   "why": "Entry 0, chapter 7's statement of the result in its home section, states the turning point and is ai, as is entry 1 from the same section. Entry 2 differs. It is the working rules (AGENTS.md), which the AI rewrote on 3 November from a person's messages, with the person's approval. That makes it drafted.",
+   "evidence": [
+    {
+     "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+     "origin": "ai",
+     "basis": "A live chapter under theories/becoming. The overview (THE-THEORY-OF-BECOMING.md line 11) and the one page (ONE-PAGE.md line 7) say the account was made with AI."
+    },
+    {
+     "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+     "origin": "ai",
+     "basis": "Same chapter as above. Nothing in it says a person wrote it."
+    },
+    {
+     "path": "AGENTS.md",
+     "origin": "drafted",
+     "basis": "sources/15-codex-theory-conversations/2026-11-03-agents-review.md, '## What was done (AI-authored)': 'AGENTS.md was rewritten' on a person's request to review it. Its section 'Limits that outlive their reason (AI-authored)' says that, on the person's third message, the session kept the line 'never write that it derives from the condition' with its reason, 'Becoming.ReadsNoOrder.not_entails', and named deriving C from a weaker premise as open work. The person approved the rewrite with the button 'Yes, land it'."
+    }
+   ],
+   "check": {
+    "index": 40,
+    "agree": true,
+    "origin": "ai",
+    "why": "Entries 0 and 1 are 07-SIGNIFICANCE §4, a live chapter of the AI-made account. Entry 2 (AGENTS.md) is fairly called drafted. sources/15-codex-theory-conversations/2026-11-03-agents-review.md, 'Limits that outlive their reason (AI-authored)', says that on the person's third message 'never write that it derives from the condition' kept its reason, `Becoming.ReadsNoOrder.not_entails`, with deriving C named as open work. The person approved the rewrite with the button 'Yes, land it'. The line is identical in _process/history/2026-11-04-instructions/AGENTS-before-gate.md."
+   }
+  },
+  {
+   "index": 41,
+   "id": "nov-nd-shared-law",
+   "origin": "ai",
+   "why": "Entry 0, the method chapter's §7, states the rename and is ai. Entry 1, the glossary row, is ai only on the account-level statement, since the glossary itself names no writer.",
+   "evidence": [
+    {
+     "path": "theories/becoming/chapters/08-METHOD.md",
+     "origin": "ai",
+     "basis": "A live chapter under theories/becoming. The overview (THE-THEORY-OF-BECOMING.md line 11) and the one page (ONE-PAGE.md line 7) say the account was made with AI."
+    },
+    {
+     "path": "GLOSSARY.md",
+     "origin": "ai",
+     "basis": "Its header calls it 'The words of the Theory of Becoming', with each term's home in the chapters. It names no writer. The one page (theories/becoming/ONE-PAGE.md line 7) says the account was 'Made with AI'. The rename came in with commit 249565d46, 'ND part 1, documents', a working-session item. The quoted row is now at line 83, not 81."
+    }
+   ],
+   "check": {
+    "index": 41,
+    "agree": true,
+    "origin": "ai",
+    "why": "08-METHOD §7 is a live chapter of the account made with AI. GLOSSARY.md names no writer, and it belongs to the same AI-made account. The quoted row is at line 83, not 81 as the locator says. The text is unchanged."
+   }
+  },
+  {
+   "index": 42,
+   "id": "nov-agents-order",
+   "origin": "drafted",
+   "why": "All three entries are lines of AGENTS.md as rewritten on 3 November. Entry 0 states the turning point, the new order of the work. The source record says the AI wrote the rewrite in a conversation about a person's request to review the file. The order (what is false, what can fail, readers) was the AI review's finding. The comparisons sentence followed the person's messages on ranking. The person approved the text ('Yes, land it'). The lines were checked to be present already in the 3-November copy.",
+   "evidence": [
+    {
+     "path": "AGENTS.md",
+     "origin": "drafted",
+     "basis": "sources/15-codex-theory-conversations/2026-11-03-agents-review.md: a person asked 'i think it is time to review our AGENTS.md'. Under '## What was done (AI-authored)', the record says 'AGENTS.md was rewritten ... orders the work: what is false in what a reader is told, then what lets the account be wrong, then what a person who has read it reports'. The person chose 'Yes, land it'. The line is present in _process/history/2026-11-04-instructions/AGENTS-before-gate.md."
+    },
+    {
+     "path": "AGENTS.md",
+     "origin": "drafted",
+     "basis": "The same record: the rewrite 'states the purpose and 08 §8's verdict' (AI-authored section), in the conversation that started with the person's request. The line is present in the 3-November copy (AGENTS-before-gate.md)."
+    },
+    {
+     "path": "AGENTS.md",
+     "origin": "drafted",
+     "basis": "The same record's section '**Comparisons (AI-authored).** On the last two messages, Method's sentence ... extends to comparison: better, higher, winning or optimal is a relation formed by whatever compares'. It was written by the AI from the person's verbatim messages that 'ranking' is 'our cognitive construct'."
+    }
+   ],
+   "check": {
+    "index": 42,
+    "agree": true,
+    "origin": "drafted",
+    "why": "AI wrote all three lines. The source record (2026-11-03-agents-review.md) says, under '## What was done (AI-authored)', that 'AGENTS.md was rewritten' in a conversation that opened with the person's request ('i think it is time to review our AGENTS.md'). The person approved it ('Yes, land it'), and the Comparisons line is stated as written 'On the last two messages' about ranking. All three lines appear verbatim in AGENTS-before-gate.md and in the live AGENTS.md, and none is in AGENTS-before-review.md. One caveat: the substance of entry 0, the order (what is false, then what can fail, then readers), came from the AI review's own finding ('The measure had run out ... names what could'), not from the person's words. ai would also be defensible for that entry. The record ties the rewrite as a whole to the person's messages and approval, so drafted holds."
+   }
+  },
+  {
+   "index": 43,
+   "id": "nov-freeze-edition-1",
+   "origin": "ai",
+   "why": "Entry 0, the record of the freeze of 3 November, states the freeze and is AI-written. Entry 1, the release gate's item 7, is in an AI-written coordination note. Entries 2 and 3, the commons lines, differ. They were written by the AI from a person's words of 19 October and 3 November, and the person's phrase 'belongs to commons' was kept, so they are drafted.",
+   "evidence": [
+    {
+     "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/review-packet/FREEZE-STEPS.md",
+     "origin": "ai",
+     "basis": "Header: '*AI-written, 2 November 2026, from a rehearsal on a scratch copy of main ... no person has reviewed it.' Its section on the freeze of 3 November is part of the same file."
+    },
+    {
+     "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md",
+     "origin": "ai",
+     "basis": "Header: 'AI-written coordination note, 28 October 2026'."
+    },
+    {
+     "path": "COMMONS.md",
+     "origin": "drafted",
+     "basis": "sources/15-codex-theory-conversations/2026-11-03-the-commons-not-a-licence.md quotes the person verbatim: 'we think this works belongs to commons, and our ideology against the concept of license itself'. Under '## What was done (AI-authored)' it says 'COMMONS.md now says the work belongs to the commons', reworked after an AI cold reader, and adds that the person's own phrase was kept. The first version (commit e1c010006, 19 October) quotes the person's words."
+    },
+    {
+     "path": "COMMONS.md",
+     "origin": "drafted",
+     "basis": "Same source record. 'What was done (AI-authored)' says COMMONS.md now says 'it has no licence by choice', written by the session from the person's 3-November words."
+    }
+   ],
+   "check": {
+    "index": 43,
+    "agree": true,
+    "origin": "ai",
+    "why": "The header of FREEZE-STEPS.md reads '*AI-written, 2 November 2026 ... no person has reviewed it.' The header of WHAT-REMAINS.md reads 'AI-written coordination note, 28 October 2026'. The COMMONS.md entries are correctly drafted. 2026-11-03-the-commons-not-a-licence.md quotes the person verbatim ('we think this works belongs to commons ...'). Its '## What was done (AI-authored)' section describes the session writing COMMONS.md, and says 'Ren's own phrase was kept' for 'belongs to the commons'. COMMONS.md was committed in 4f50e3e68 on 3 November."
+   }
+  },
+  {
+   "index": 44,
+   "id": "nov-ue32",
+   "origin": "ai",
+   "why": "Entry 0, UE32's README stating the frozen verdict, states the turning point and is AI-written. Every other entry is in AI-written experiment files or in the experiments index, which the working sessions wrote. All are ai.",
+   "evidence": [
+    {
+     "path": "experiments/state-against-embedding/README.md",
+     "origin": "ai",
+     "basis": "Header: 'Board item UE32, 3 November 2026; run 4 November 2026. AI-written (a Claude Code session; no person has checked it).'"
+    },
+    {
+     "path": "experiments/README.md",
+     "origin": "ai",
+     "basis": "The experiments index under experiments/, 'Rewritten 17 October 2026 in the repository restructure'. It names no person as writer. Per the account (ONE-PAGE.md line 7, 'Made with AI'), files the working sessions wrote under experiments/ are AI-made."
+    },
+    {
+     "path": "experiments/state-against-embedding/README.md",
+     "origin": "ai",
+     "basis": "Same file, header 'AI-written (a Claude Code session; no person has checked it)'."
+    },
+    {
+     "path": "experiments/state-against-embedding/README.md",
+     "origin": "ai",
+     "basis": "Same file, header 'AI-written (a Claude Code session ...)'."
+    },
+    {
+     "path": "experiments/state-against-embedding/DESIGN.md",
+     "origin": "ai",
+     "basis": "Header: 'Board item UE32, 3 November 2026. AI-written (a Claude Code session).'"
+    }
+   ],
+   "check": {
+    "index": 44,
+    "agree": true,
+    "origin": "ai",
+    "why": "The README of experiments/state-against-embedding says 'AI-written (a Claude Code session; no person has checked it)', and its DESIGN.md says 'AI-written (a Claude Code session)'. experiments/README.md is the working sessions' index, 'Rewritten 17 October 2026 in the repository restructure', and names no person as writer."
+   }
+  },
+  {
+   "index": 45,
+   "id": "nov-rf-frozen",
+   "origin": "ai",
+   "why": "Entry 0, the experiments index row recording the freezes of 4 November, states the turning point and is ai. The board's decision lines and the AI-written README of the formations-that-read tests are ai as well.",
+   "evidence": [
+    {
+     "path": "experiments/README.md",
+     "origin": "ai",
+     "basis": "The experiments index under experiments/, rewritten in the 17 October restructure. It names no person as writer and is the working sessions' work. The account says it was made with AI (ONE-PAGE.md line 7)."
+    },
+    {
+     "path": "_process/BECOMING-WORKBOARD.md",
+     "origin": "ai",
+     "basis": "The live work board under _process, written by the working sessions (the header calls it the 'Live board'). The quoted words are the board's own text in its decisions section, not a quotation of a person."
+    },
+    {
+     "path": "_process/BECOMING-WORKBOARD.md",
+     "origin": "ai",
+     "basis": "Same board and section as above."
+    },
+    {
+     "path": "experiments/formations-that-read/README.md",
+     "origin": "ai",
+     "basis": "Header: 'Board item RF, 31 October 2026. AI-written (a Claude Code session).'"
+    }
+   ],
+   "check": {
+    "index": 45,
+    "agree": true,
+    "origin": "ai",
+    "why": "The experiments index row is the working sessions' text. The two board quotes are the board's own prose at line 86 ('On 4 November 2026 both conditions hold so far ... every test's first stage is frozen before any run ...'), not a quotation of a person. The header of formations-that-read/README.md reads 'Board item RF, 31 October 2026. AI-written (a Claude Code session).'"
+   }
+  },
+  {
+   "index": 46,
+   "id": "nov-ue31b-t2-narrowed",
+   "origin": "ai",
+   "why": "Entry 0, UE31b's result in the AI-written README, states the failure of T2's wording and is ai, as is entry 1 from the same file. Entry 2, chapter 2's narrowed T2, is the AI-made account.",
+   "evidence": [
+    {
+     "path": "experiments/state-named-in-advance/README.md",
+     "origin": "ai",
+     "basis": "Header: 'AI-written (a Claude Code session), 3 November 2026. Board item UE31.'"
+    },
+    {
+     "path": "experiments/state-named-in-advance/README.md",
+     "origin": "ai",
+     "basis": "Same file, header 'AI-written (a Claude Code session)'."
+    },
+    {
+     "path": "theories/becoming/chapters/02-MAP.md",
+     "origin": "ai",
+     "basis": "A live chapter under theories/becoming. The overview (THE-THEORY-OF-BECOMING.md line 11) says the account was made with AI."
+    }
+   ],
+   "check": {
+    "index": 46,
+    "agree": true,
+    "origin": "ai",
+    "why": "The header of experiments/state-named-in-advance/README.md reads 'AI-written (a Claude Code session), 3 November 2026. Board item UE31.' 02-MAP's T2 is from the live chapter, which is AI-made."
+   }
+  },
+  {
+   "index": 47,
+   "id": "nov-lm-c-and-lean-whole",
+   "origin": "ai",
+   "why": "Entry 0, the board's 'LM1 landed' clause, states the correction about C and is ai. Entry 1 is in an AI-written coordination note, and entry 2 is another board clause. All are ai.",
+   "evidence": [
+    {
+     "path": "_process/BECOMING-WORKBOARD.md",
+     "origin": "ai",
+     "basis": "The live work board under _process, written by the working sessions. The 'LM1 landed' clause on the Queue line names no person as writer."
+    },
+    {
+     "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md",
+     "origin": "ai",
+     "basis": "Header: 'AI-written coordination note, 28 October 2026'. The LM section is a later dated section of the same note, under _process, and nothing in it says otherwise."
+    },
+    {
+     "path": "_process/BECOMING-WORKBOARD.md",
+     "origin": "ai",
+     "basis": "Same board, the 'LM landed: the Lean made whole' clause on the Queue line, written by the working sessions."
+    }
+   ],
+   "check": {
+    "index": 47,
+    "agree": true,
+    "origin": "ai",
+    "why": "The 'LM1 landed' and 'LM landed' clauses are the board's own Queue-line text, written by the working sessions, and are not attributed to a person. WHAT-REMAINS.md is headed 'AI-written coordination note', and the LM section is a later section of that same note."
+   }
+  },
+  {
+   "index": 48,
+   "id": "nov-crosswalk-map",
+   "origin": "ai",
+   "why": "Entry 0, the board's CX landed clause, states the crosswalk and is ai. The crosswalk says of itself that every entry is an AI reading. All four entries are ai.",
+   "evidence": [
+    {
+     "path": "_process/BECOMING-WORKBOARD.md",
+     "origin": "ai",
+     "basis": "The live work board under _process, written by the working sessions. The CX landed clause on the Queue line names no person as writer."
+    },
+    {
+     "path": "theories/becoming/results/atlas/CROSSWALK.md",
+     "origin": "ai",
+     "basis": "Line 1: 'Generated by tools/research/atlas.py'. Opening: 'It creates no result, and every entry is an AI reading with no person's behind it.'"
+    },
+    {
+     "path": "theories/becoming/results/atlas/CROSSWALK.md",
+     "origin": "ai",
+     "basis": "Same file, section 'How far to trust it'. The estimate comes from an AI critic's read of 100 entries, under the opening's statement that every entry is an AI reading."
+    },
+    {
+     "path": "_process/BECOMING-WORKBOARD.md",
+     "origin": "ai",
+     "basis": "Same board CX landed clause, written by the working sessions."
+    }
+   ],
+   "check": {
+    "index": 48,
+    "agree": true,
+    "origin": "ai",
+    "why": "The CX landed clause is the board's own Queue-line text. CROSSWALK.md is generated by tools/research/atlas.py, and its opening says 'every entry is an AI reading with no person's behind it'. The 82.6% estimate is in its 'How far to trust it' section."
+   }
+  }
+ ]
+}

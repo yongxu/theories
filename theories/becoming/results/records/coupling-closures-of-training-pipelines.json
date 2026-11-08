@@ -10,13 +10,13 @@
   "family": "F04",
   "reviewed_at_utc": "2026-10-22T13:22:29+00:00",
   "statement": {
-    "en": "In each published way of selecting a deployed model's behaviour the signal is a function of what its deciders read, so the selection laws' premise holds by construction; three published measurements find optimizing through that coupling lowering what the deciders do not read.",
-    "zh": "已发表之每一选择已部署模型行为之法，其信号皆为决定者所读者之函数，故选择之律之前提依构造成立；三项已发表之测量见经决定者之耦合优化，升其所读而降其所不读者。"
+    "en": "In each published way of selecting a deployed model's behaviour the signal is a function of what its deciders read, so the selection laws' premise holds by construction; three published measurements find optimizing through that coupling lowering what the deciders do not read, the third in part.",
+    "zh": "已发表之每一选择已部署模型行为之法，其信号皆为决定者所读者之函数，故选择之律之前提依构造成立；三项已发表之测量见经决定者之耦合优化，升其所读而降其所不读者，第三项仅部分如此。"
   },
   "hypotheses": [
     {
-      "en": "The identification of each pipeline as a web (formations, conditions, coupling) is the AI reading of its published construction; figures are from the papers abstracts, read 22 October 2026.",
-      "zh": "将每一流程识别为网（形成、条件、耦合）为对其已发表构造之 AI 读法；数字取自论文摘要，2026年10月22日所读。"
+      "en": "The identification of each pipeline as a web (formations, conditions, coupling) is the AI reading of its published construction; figures are from the papers abstracts, read 22 October 2026; section 2's Constitutional AI figures and section 1's note on Sharma et al. are from the papers' bodies, read 8 November 2026.",
+      "zh": "将每一流程识别为网（形成、条件、耦合）为对其已发表构造之 AI 读法；数字取自论文摘要，2026年10月22日所读；第 2 节宪法式 AI 之数字与第 1 节关于 Sharma 等之附记取自论文正文，2026年11月8日所读。"
     }
   ],
   "correspondence": {
@@ -71,14 +71,14 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "A correspondence study (no Lean) reviewed at its stated scope in one session; sources read from their abstracts and the NIST release on 22 October 2026; not independently reviewed.",
-    "zh": "对应研究（无 Lean），在一个会话中按其所述范围审查；来源于2026年10月22日读其摘要与 NIST 发布；未经独立审查。"
+    "en": "A correspondence study (no Lean) reviewed at its stated scope in one session; sources read from their abstracts and the NIST release on 22 October 2026; section 2's Constitutional AI construction and section 1's note on Sharma et al. from the papers' bodies on 8 November 2026; not independently reviewed.",
+    "zh": "对应研究（无 Lean），在一个会话中按其所述范围审查；来源于2026年10月22日读其摘要与 NIST 发布；第 2 节宪法式 AI 之构造与第 1 节关于 Sharma 等之附记，2026年11月8日读其正文；未经独立审查。"
   },
   "references": [
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cr1-coupling-correspondence/CORRESPONDENCE.md",
       "role": "statement",
-      "sha256": "57ef1663b2f89399985f62b7de5f7dc9b61bc4a76155cbc6ec6d2f5c81dc9fde",
+      "sha256": "71b2d6874b5e902707e8c6303586cb024c36e3fbafceb595f7939a9998df395f",
       "declarations": []
     },
     {
@@ -101,6 +101,10 @@
     {
       "en": "26 October 2026, board item DF1b (study section 422): Gao, Schulman and Hilton cited by the published year, 2023 (ICML, PMLR 202; arXiv October 2022), as elsewhere in the account.",
       "zh": "2026年10月26日，工作板条目 DF1b（研究第 422 节）：Gao、Schulman 与 Hilton 按发表年份 2023 引用（ICML，PMLR 202；arXiv 2022 年 10 月），与本说明他处一致。"
+    },
+    {
+      "en": "8 November 2026, RW: the study's section 2 corrected: Constitutional AI keeps human labels for helpfulness (the paper's §4.1), so humans supply only principles, and couple in through them alone, for harmlessness, and there as the paper frames its oversight, though its §3.1–3.2 has human-written red-team prompts and a critic trained on human helpfulness feedback; section 1 notes that Sharma et al.'s optimizing (their §4.2) is against a preference model with human judgments for helpfulness and AI judgments for harmlessness; the statement adds \"the third in part\": its effects were mixed, varying by form of sycophancy and with details of the optimization (Sharma et al., sections 4.2 and 4.3.2; the home section says so).",
+      "zh": "2026年11月8日，RW：研究第 2 节更正：宪法式 AI 于有益性仍用人之标注（论文第 4.1 节），故人仅供原则、仅经原则耦合者，唯无害性而已，且依论文对其监督之表述，虽其第 3.1–3.2 节有人所写之红队提示与以人之有益性反馈训练之批评模型；第 1 节附记 Sharma 等之优化（其第 4.2 节）所对之偏好模型，有益性用人之判断、无害性用 AI 之判断；陈述增“第三项仅部分如此”：其效果不一，随谄媚之形式与优化之细节而异（Sharma 等，第 4.2、4.3.2 节；本节详之）。"
     }
   ]
 }

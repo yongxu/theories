@@ -71,6 +71,24 @@ What this round's landing took, from the synthesis:
 
 In the same round, the atlas's session made the Chinese way in (README.zh.md, one navigation line on every Chinese front, the map's site bar), and the (c) session took the pictures (the spine legible, with 08 §7's standings; the lineage in phases) and 08 §7's tables. The two readers of this round closed at the second, with no high or medium finding. Then comes the re-score's second round.
 
+## The re-score's second round (8 November 2026)
+
+Seven fresh AI reviewers and a checker scored the seven questions again: medians 6, 6, 6, 7, 6, 7, 7 ([synthesis](drafts/rescore2-synthesis.md), [reviews](drafts/rescore2-reviews.json)). No person has scored them. Newcomers still met the account's terms before plain words, so the fixes went there first:
+
+- **The first screen** opens in plain words, in the wording of the chapters each claim comes from, with its readings labelled. The uses are four questions with room among them, and the case has its lesson. It measures 535 words, counted on the rendered screen from its title to the opening's heading; [READING-BUDGETS](../aj4-alignment-readers/READING-BUDGETS.md) has the reason.
+- **The one page's case** gives both halves: told nothing of the bed, and told of it with talk.
+- **The uses pages** have a plain first sentence in each row, and a worked audit of AI feedback against written principles.
+- **The site** groups its ways in (Read, Check, See), times a card to a section by that section, names no map a build does not write, keeps a file's lines on GitHub, checks anchors on the home and ends a list at a heading.
+
+Five rounds of AI readers followed ([1](drafts/readers-round1.json), [2](drafts/readers-round2.json), [3](drafts/readers-round3.json), [4](drafts/readers-round4.json), [5](drafts/readers-round5.json)), the last with no high and no medium finding; each medium in the third and fourth was checked by a second reader against the paper.
+
+**Two errors came from papers read only by their abstracts**, and both changed what a reader is told. [The study](../cr1-coupling-correspondence/CORRESPONDENCE.md) read them on 22 October and said so.
+
+- Constitutional AI: humans supply only principles holds for harmlessness alone, and there as the paper frames its oversight. Helpfulness labels stay human (its §4.1 and §4.2), some red-team prompts are human-written, and the critic is a model trained on human helpfulness feedback (§3.1–3.2).
+- Sharma et al. on sycophancy: where it optimizes, the preference model has human judgments for helpfulness and AI judgments for harmlessness (§4.2), so "none of the three measurements was on this pipeline" was false. Its effects were mixed, which [07 §6](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#r-coupling-closures-of-training-pipelines) and its record now say.
+
+Both are corrected at the study with dated notes that keep the earlier wording. The other measurements and the study's other pipelines have not been read past their abstracts.
+
 ## Sent to the batched pass
 
 Each makes a correct statement more exact:

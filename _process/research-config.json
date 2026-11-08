@@ -281,16 +281,13 @@
     ],
     "aliases": {
       "README.md#truth-exists": "theories/becoming/OPENING.md#truth-exists",
-      "README.md": "index.html"
+      "README.md": "index.html",
+      "theories/becoming/results/atlas/map.html": "connections.html"
     },
     "nav": [
       [
         "index.html",
         "Home"
-      ],
-      [
-        "MAP.md",
-        "Start here"
       ],
       [
         "theories/becoming/ONE-PAGE.md",
@@ -301,20 +298,8 @@
         "Uses"
       ],
       [
-        "theories/becoming/THE-THEORY-OF-BECOMING.md",
-        "Overview"
-      ],
-      [
-        "theories/becoming/chapters/README.md",
-        "Chapters"
-      ],
-      [
         "TESTS.md",
         "Tests"
-      ],
-      [
-        "RESULTS.md",
-        "Results"
       ],
       [
         "theories/becoming/results/THEORY-GRAPH.md",
@@ -329,16 +314,8 @@
         "How it grew"
       ],
       [
-        "OPEN-QUESTIONS.md",
-        "Open questions"
-      ],
-      [
-        "GLOSSARY.md",
-        "Glossary"
-      ],
-      [
-        "theories/becoming/review/README.md",
-        "Reviewers"
+        "MAP.md",
+        "Where everything is"
       ],
       [
         "README.zh.md",
@@ -350,49 +327,79 @@
         "path": "theories/becoming/ONE-PAGE.md",
         "zh": "theories/becoming/ONE-PAGE.zh.md",
         "label": "One page",
-        "text": "What the account claims, how each claim stands, and what would show it wrong."
+        "text": "What the account claims, how each claim stands, and what would show it wrong.",
+        "group": "Read"
       },
       {
         "path": "theories/becoming/USES.md",
         "label": "What it is for, and how far",
         "text": "Alignment, coordination, people and AI, wisdom traditions, human development and the sciences: what can be done today, and what is not claimed.",
-        "zh": "theories/becoming/USES.zh.md"
+        "zh": "theories/becoming/USES.zh.md",
+        "group": "Read"
       },
       {
         "path": "theories/becoming/THE-THEORY-OF-BECOMING.md",
         "zh": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
         "label": "The overview",
-        "text": "The whole argument in one account, each paragraph linked to the chapter that states it."
+        "text": "The whole argument in one account, each paragraph linked to the chapter that states it.",
+        "group": "Read"
       },
       {
         "path": "theories/becoming/chapters/README.md",
         "label": "The eight chapters",
-        "text": "Each result stated once, in its home section, with a mark of its record's status."
+        "text": "Each result stated once, in its home section, with a mark of its record's status.",
+        "group": "Read"
+      },
+      {
+        "path": "theories/becoming/OPENING.md",
+        "label": "The opening",
+        "text": "A first-person conviction, with a note on how far each sentence is proved.",
+        "time_until": "[^law]:",
+        "time_note": "without its notes",
+        "group": "Read"
       },
       {
         "path": "TESTS.md",
         "label": "The tests",
-        "text": "Every test in the experiments by how it came out, the failures first, with when each was frozen and run."
+        "text": "Every test in the experiments by how it came out, the failures first, with when each was frozen and run.",
+        "group": "Check"
       },
       {
         "path": "RESULTS.md",
         "label": "The register of results",
-        "text": "Every registered result with its status and its record, which names its premises, evidence and boundary."
+        "text": "Every registered result with its status and its record, which names its premises, evidence and boundary.",
+        "group": "Check"
       },
       {
         "path": "OPEN-QUESTIONS.md",
         "label": "What is open",
-        "text": "The open targets, the open programme in method, and what lies beyond the readings."
+        "text": "The open targets, the open programme in method, and what lies beyond the readings.",
+        "group": "Check"
+      },
+      {
+        "path": "MAP.md#check-the-proofs-yourself",
+        "label": "Check the proofs",
+        "text": "Build the Lean package and read its axiom report yourself.",
+        "group": "Check"
+      },
+      {
+        "path": "theories/becoming/review/README.md",
+        "zh": "theories/becoming/review/README.zh.md",
+        "label": "For reviewers",
+        "text": "Dossiers for logic, philosophy, alignment, the sciences, the classical texts and Buddhist thought.",
+        "group": "Check"
       },
       {
         "path": "theories/becoming/results/THEORY-GRAPH.md",
         "label": "The theory graph",
-        "text": "Results, Lean modules, sections and texts, with their edges kept apart by kind."
+        "text": "Results, Lean modules, sections and texts, with their edges kept apart by kind.",
+        "group": "See"
       },
       {
         "path": "connections.html",
         "label": "The connections",
-        "text": "The earlier folders and twelve domains of thought set against the account, claim by claim, with the theory's own graph; every thread an AI reading."
+        "text": "The earlier folders and twelve domains of thought set against the account, claim by claim, with the theory's own graph; every thread an AI reading.",
+        "group": "See"
       },
       {
         "path": "theories/LINEAGE.md",
@@ -400,41 +407,27 @@
         "label": "How it grew",
         "text": "From the writings of 2021 to the account today: turning points, each labelled by what states it, gathered by AI readers, and one thread followed through.",
         "time_until": "## Turning points",
-        "time_note": "the picture, the labels and the thread"
-      },
-      {
-        "path": "MAP.md#check-the-proofs-yourself",
-        "label": "Check the proofs",
-        "text": "Build the Lean package and read its axiom report yourself."
-      },
-      {
-        "path": "theories/becoming/OPENING.md",
-        "label": "The opening",
-        "text": "A first-person conviction, with a note on how far each sentence is proved.",
-        "time_until": "[^law]:",
-        "time_note": "without its notes"
+        "time_note": "the picture, the labels and the thread",
+        "group": "See"
       },
       {
         "path": "GLOSSARY.md",
         "label": "Glossary",
         "text": "Each term in its one sense.",
-        "zh": "GLOSSARY.zh.md"
-      },
-      {
-        "path": "theories/becoming/review/README.md",
-        "zh": "theories/becoming/review/README.zh.md",
-        "label": "For reviewers",
-        "text": "Dossiers for logic, philosophy, alignment, the sciences, the classical texts and Buddhist thought."
+        "zh": "GLOSSARY.zh.md",
+        "group": "See"
       },
       {
         "path": "theories/README.md",
         "label": "The earlier folders",
-        "text": "Sixteen folders written before the live account, each with what became of its claims."
+        "text": "Sixteen folders written before the live account, each with what became of its claims.",
+        "group": "See"
       },
       {
         "path": "MAP.md",
-        "label": "Start here",
-        "text": "Where everything is in the repository, and how to check it."
+        "label": "Where everything is",
+        "text": "Where everything is in the repository, and how to check it.",
+        "group": "See"
       }
     ],
     "map": true,
@@ -474,6 +467,14 @@
       [
         "theories/becoming/review/README.zh.md",
         "审查包"
+      ],
+      [
+        "theories/becoming/chapters/README.md",
+        "八章（英文）"
+      ],
+      [
+        "TESTS.md",
+        "检验（英文）"
       ],
       [
         "theories/becoming/ONE-PAGE.md",

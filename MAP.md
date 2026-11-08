@@ -1,4 +1,4 @@
-# Start here
+# Where everything is
 
 A guide for visitors: what this repository is, where to begin, how its history is kept and how to check the proofs yourself. It extends the map of 17 October 2026; the September corpus map, with the reading of the fifteen folders as strata of one argument and the 2 October "why and meaning" section, is kept verbatim in [history](_process/history/2026-09-consolidation/MAP.md).
 
@@ -29,7 +29,7 @@ The [README](README.md)'s first screen is followed by [a statement of the whole 
 
 ## How it got here
 
-[How the account grew](theories/LINEAGE.md) ([中文](theories/LINEAGE.zh.md)) tells it turning point by turning point, from the writings of 2021 to the account today, each point labelled by what states it and gathered and checked by AI readers, no person's, with one thread, the selection mechanism, followed through; its picture, labels and thread come first, in eight to eleven minutes, and the whole takes about an hour and a half.
+[How the account grew](theories/LINEAGE.md) ([中文](theories/LINEAGE.zh.md)) tells it turning point by turning point, from the writings of 2021 to the account today, each point labelled by what states it and saying who wrote that text, the points gathered and checked by AI readers, no person's, with one thread, the selection mechanism, followed through; its brief, picture, labels and thread come first, in fourteen to eighteen minutes, and the whole takes an hour and a half to two hours.
 
 The ideas began in writing from 2021 on: the sixteen earlier theory folders below, with their originals in `sources/` but for the chat logs, memory exports and recorded conversations, with a conversation's transcript in `drafts/`, which the repository has not tracked since 19 October 2026. The repository's first commit is from 6 September 2026, and it holds more than 6,000 commits by 7 November 2026; the formal theory has been built since October 2026. The history is part of the work, and nothing is deleted:
 
@@ -74,7 +74,7 @@ A fresh run compiles more than a thousand Lean steps and takes a while; `BECOMIN
 
 ## The earlier theory folders
 
-The live account does not gather them whole. What each claimed in its own terms, and whether the account states it, takes it up and says otherwise, or does not state it, is in [the crosswalk](theories/becoming/results/atlas/CROSSWALK.md), claim by claim, with the twelve domains of thought read the same way; [the index of the folders](theories/README.md) counts what became of each, and [the connection map](theories/becoming/results/atlas/map.html) draws it (a page for a browser: open it from a clone of the repository, since GitHub shows only its source). Every entry is an AI reading, and no person has read them.
+The live account does not gather them whole. What each claimed in its own terms, and whether the account states it, takes it up and says otherwise, or does not state it, is in [the crosswalk](theories/becoming/results/atlas/CROSSWALK.md), claim by claim, with the twelve domains of thought read the same way; [the index of the folders](theories/README.md) counts what became of each, and [the connection map](theories/becoming/results/atlas/map.html) draws it (interactive: once the reader's site is published, open it there, or from a clone of the repository, since GitHub shows only its source; [its picture](theories/becoming/results/atlas/CROSSWALK.md) heads the crosswalk). Every entry is an AI reading, and no person has read them.
 
 | Folder | In one line |
 |---|---|
