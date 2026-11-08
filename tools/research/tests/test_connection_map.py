@@ -193,12 +193,20 @@ class OverviewTests(unittest.TestCase):
 
     @unittest.skipUnless(shutil.which('node'), 'node is not installed')
     def test_the_threads_are_the_ones_the_page_draws(self):
-        start = cm.SCRIPT.index('function threads(){'); end = cm.SCRIPT.index('\n', start)
-        script = ('const D=' + json.dumps({'entries': self.data['entries']}) + ';const LOOSE=new Set(' + json.dumps(list(cm.ABSENT)) + ');'
-                  'function shown(e){return true;}' + cm.SCRIPT[start:end] + 'console.log(JSON.stringify(threads()));')
+        def line(head):  # one line of the page's script, as it stands
+            i = cm.SCRIPT.index(head)
+            return cm.SCRIPT[i:cm.SCRIPT.index('\n', i)] + '\n'
+        data = {'entries': self.data['entries'], 'relations': self.data['relations'], 'carried': VOCABULARY['carried']}
+        script = ('const D=' + json.dumps(data) + ';\n' + line('const OF=') + line('const LOOSE=') + line('const S=') + line('function shown(')
+                  + line('function threads(){') + 'console.log(JSON.stringify(threads()));')
         out = json.loads(subprocess.run(['node', '-e', script], capture_output=True, text=True, check=True).stdout)
         key = lambda t: (t['group'], t['warp'], t['relation'], t['fresh'], t['n'])
         self.assertEqual(sorted(map(key, out)), sorted(map(key, cm.overview_threads(self.data))))
+
+    def test_each_curated_name_is_a_live_group_or_part(self):
+        live = json.loads((ROOT / cm.atlas_tool.DATA).read_text(encoding='utf-8'))
+        self.assertLessEqual(set(cm.OV_SHORT), {g['id'] for g in live['correspondence_groups']})
+        self.assertLessEqual(set(cm.OV_WARP), {i for i, _, _ in cm.WARP})
 
     def test_render_writes_the_page_and_the_picture(self):
         out = cm.render(json.dumps(atlas(entry('cx-a', 'cxg-early'))), json.dumps(GRAPH))

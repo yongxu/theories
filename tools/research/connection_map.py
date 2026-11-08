@@ -226,7 +226,7 @@ def payload(atlas: dict, graph: dict, shared: dict, base: str | None = BASE) -> 
             'dynamics': len(atlas['dynamics']), 'checks': atlas.get('crosswalk_checks')}
 
 
-def _ledes(data: dict) -> tuple[str, str]:
+def _ledes(data: dict, pointer: bool = True) -> tuple[str, str]:
     """The map's lede and the line under it, from its totals: the page's script shows them and its no-script summary
     gives them, so the two cannot say different things."""
     T, checks = data['totals'], data.get('checks')
@@ -244,7 +244,7 @@ def _ledes(data: dict) -> tuple[str, str]:
     second = (checks or {}).get('second_critic')
     if second:
         sub += (f' A random check of {second["sampled"]} entries estimates that about {second["estimate_percent"]["label"]:g}% of all carry '
-                f'a wrong label or target role and {second["estimate_percent"]["fails"]:g}% a wrong reading (How it was read).')
+                f'a wrong label or target role and {second["estimate_percent"]["fails"]:g}% a wrong reading' + (' (How it was read).' if pointer else '.'))
     return lede, sub
 
 
@@ -355,11 +355,11 @@ OV_FONT = "Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK S
 
 # Groups whose title, cut at its colon or its gloss, would tell a reader something else: Chinese classical thought's group
 # holds only what the existing maps have not reached, Buddhist thought's only as far as the account reaches it.
-OV_SHORT = {'cxg-chinese-classical': 'Chinese classical, beyond the existing maps',
-            'cxg-buddhist': 'Buddhist thought, as far as the account reaches',
+OV_SHORT = {'cxg-chinese-classical': 'Chinese classical thought: what the maps have not reached',
+            'cxg-buddhist': 'Buddhist thought, as far as the account has reached it',
             'cxg-context-as-existence-runtimes': 'Context as existence: the runtimes',
-            'cxg-drives-narrative-attractors-and-mind': 'Drives, narrative attractors and mind',
-            'cxg-the-fork-and-cooperative-infrastructure': 'Cooperative abundance (The Fork)'}
+            'cxg-drives-narrative-attractors-and-mind': 'Drives, narrative attractors and the construction of mind',
+            'cxg-the-fork-and-cooperative-infrastructure': 'Cooperative abundance and freely built worlds (The Fork)'}
 OV_WARP = {'ch-06': '06 The classical texts (in Chinese)'}
 
 
@@ -392,6 +392,11 @@ def _relations(data: dict) -> list[str]:
     if missing:
         raise ValueError(f'the map\'s picture has no colour or word for the relation {missing}; add it to OV_COLOUR and OV_WORD')
     return names
+
+
+def _with_relation(data: dict) -> int:
+    """Claims that draw no thread (only in history, or not carried) yet carry a relation, which the crosswalk's table counts."""
+    return sum(1 for e in data['entries'] if e['carried'] in ABSENT and e['relation'])
 
 
 def _tie(t: dict) -> str:
@@ -427,14 +432,14 @@ def overview_svg(data: dict) -> str:
     step = max(22, (bottom - top) / max(1, len(warp) - 1))
     w_of = {w['id']: top + i * step for i, w in enumerate(warp)}
     bottom = max(bottom, top + step * (len(warp) - 1))
-    left_label, left_count, x1, x2, right_label = 322, 330, 362, 556, 566
+    left_label, left_count, x1, x2, right_label = 340, 348, 380, 556, 566
     threads = overview_threads(data)
     height = bottom + 212
     loose = sum(T['carried'].get(k, 0) for k in ABSENT)
     out = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {OV_W} {height}" width="{OV_W}" height="{height}" role="img" '
            f'aria-labelledby="cx-title cx-desc" font-family="{html.escape(OV_FONT)}">',
            f'<title id="cx-title">How the earlier folders and the domains of thought meet the live account</title>',
-           f'<desc id="cx-desc">{html.escape((_ledes(data)[0] + " " + _ledes(data)[1]).replace(" (How it was read)", ""))}</desc>',
+           f'<desc id="cx-desc">{html.escape(" ".join(_ledes(data, pointer=False)) + f" The relations count the claims drawn; {_with_relation(data)} that stand only in history or are not carried also carry one, which the crosswalk’s table counts.")}</desc>',
            f'<rect x="0.5" y="0.5" width="{OV_W - 1}" height="{height - 1}" rx="10" fill="{OV_PAPER}" stroke="{OV_RULE}"/>',
            _ov_text(24, 34, 'How the earlier folders and the domains of thought meet the live account', 17, 'bold'),
            _ov_text(24, 54, f'Drawn by connection_map.py from the crosswalk’s {T["entries"]:,} claims, each read against the live account. A thread', 11.5, fill=OV_MUTED),
@@ -447,8 +452,8 @@ def overview_svg(data: dict) -> str:
         parts.append(f'<tspan font-weight="bold">{T["carried"].get(k, 0):,}</tspan> {html.escape(label)}')
     second = (data.get('checks') or {}).get('second_critic')
     if second:
-        out.append(_ov_text(24, 128, f'A random check of {second["sampled"]} entries estimates about {second["estimate_percent"]["label"]:g}% of all with a '
-                            f'wrong label or target role and {second["estimate_percent"]["fails"]:g}% with a wrong reading.', 11.5, fill=OV_MUTED))
+        out.append(_ov_text(24, 128, f'A random check of {second["sampled"]} entries estimates that about {second["estimate_percent"]["label"]:g}% of all '
+                            f'{T["entries"]:,} carry a wrong label or target role and {second["estimate_percent"]["fails"]:g}% a wrong reading.', 11.5, fill=OV_MUTED))
     out.append(f'<text x="{x}" y="154" font-size="13" fill="{OV_INK}">' + '<tspan fill="#6d6355"> · </tspan>'.join(parts) + '</text>')
     out += [_ov_text(left_label, 186, f'{len(folders)} earlier folders', 12.5, 'bold', 'end'),
             _ov_text(left_count, 186, 'claims', 10.5, anchor='start', fill=OV_MUTED),
@@ -469,7 +474,8 @@ def overview_svg(data: dict) -> str:
     out.append('</g>')
     for g in folders + domains:
         y = y_of[g['id']]
-        out += [_ov_text(left_label, y, OV_SHORT.get(g['id']) or _short(g['title']), 12, anchor='end'),
+        name = OV_SHORT.get(g['id']) or _short(g['title'])
+        out += [_ov_text(left_label, y, name, 12 if len(name) <= 50 else 11, anchor='end'),
                 _ov_text(left_count, y, f'{g["n"]}', 10.5, fill=OV_MUTED)]
     for w in warp:
         y = w_of[w['id']]
@@ -483,9 +489,9 @@ def overview_svg(data: dict) -> str:
         label = f'{OV_WORD[r]} {T["relation"].get(r, 0):,}'
         out.append(_ov_text(x + 32, y, label, 12))
         x += 44 + len(label) * 7
-    with_relation = sum(1 for e in data['entries'] if e['carried'] in ABSENT and e['relation'])
-    notes = ['The counts are drawn claims, by relation; dashes only tell relations apart. A thread’s width grows with its claims;',
-             'a lighter thread is a connection the account does not state, proposed here.',
+    with_relation = _with_relation(data)
+    notes = ['The legend’s counts are drawn claims, by relation; dashes only tell relations apart. A thread’s width grows with its',
+             'claims; a lighter thread is a connection the account does not state, proposed here.',
              f'The {loose:,} claims only in history or not carried draw no thread ({with_relation} of them carry a relation, which the crosswalk’s table counts).',
              'Beside a folder or domain the number counts all its claims; beside a part of the account, the drawn claims read against it,',
              'a claim read against several parts counting at each.',
