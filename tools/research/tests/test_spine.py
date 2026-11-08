@@ -173,6 +173,18 @@ class Drawing(unittest.TestCase):
         self.assertEqual(pages, {})
         self.assertTrue(any('no place for the count' in e for e in errors), errors)
 
+    def test_a_count_on_a_circle_stops_the_render_though_nearest_its_curve(self):
+        g = (ROOT / 'theories/becoming/results/data/theory-graph.json').read_text(encoding='utf-8')
+        real = spine.place_box
+
+        def grown(*a, **k):  # the same centre, so the lead still holds, and a box too large to clear anything
+            box = real(*a, **k)
+            return (box[0] - 200, box[1] - 200, box[2] + 200, box[3] + 200) if k.get('accept') else box
+        with mock.patch.object(spine, 'place_box', grown):
+            pages, errors = spine.render(g)
+        self.assertEqual(pages, {})
+        self.assertTrue(any('no place for the count' in e for e in errors), errors)
+
     def test_a_curve_behind_a_chapter_stops_the_render(self):
         g = (ROOT / 'theories/becoming/results/data/theory-graph.json').read_text(encoding='utf-8')
         with mock.patch.object(spine, 'LANE_STEP', 60):

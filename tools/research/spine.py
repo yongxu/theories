@@ -622,7 +622,8 @@ def svg(graph, s, lang, info=None):
             label = '#ffffff' if t['outcome'] == 'partial' else INK
             out.append(f'<circle cx="{f(px)}" cy="{f(py)}" r="15" fill="{colour}" stroke="{INK}" stroke-width="1.2"/>')
             out.append(text(px, py + 5, t['id'], 13, 'bold', 'middle', label))
-    # the words on the spokes, then the counts of 15 and more beside their curves, nearest their own, clear of what is drawn
+    # the words on the spokes, then the counts of 15 and more beside their curves, nearest their own, clear of the
+    # circles, the labels and their pair's curves
     labels = []
     obstacles = circles + badges
     under = {id(c): [(*c['point'](i / 60), 1.5 + (0.4 + 0.4 * math.sqrt(c['n']) if c['kind'] == 'formal-reuse' else 1))
@@ -833,7 +834,7 @@ def lead(graph, page_path):
              f'grammar, the root\'s vocabulary, is at the centre, and a spoke\'s width shows what share of the chapter\'s core '
              f'modules state their laws on it. A solid curve from one chapter to another counts the uses of the second\'s '
              f'results by the first\'s recorded as `formal-reuse`, a kind RESULT-WORKFLOW keeps for a verified inference (dashed '
-             f'and dotted curves between chapters are other dependences, with no count written): {total:,} '
+             f'and dotted curves between chapters are other dependences, with no count written): {total:,} uses '
              f'between chapters, {sum(into[k] for k in top):,} of them into {name[top[0]].lower()} and {name[top[1]].lower()}, '
              f'and {backward:,} running backward, an earlier chapter\'s results using a later one\'s. The two boxes are the '
              f'ethics\' premises, each a hypothesis where used, neither asserted. The badges T1 to T8 are the theses at the '
@@ -969,7 +970,7 @@ def zh_page(graph):
     m08 = 'theories/becoming/chapters/08-METHOD.md'
     body = ['## 脊柱', '<a id="the-spine"></a>', '',
             f'**怎样读它。** {how_to_read(s, "zh")}', '',
-            f'![围绕文法的八章：圆按结果数定大小，实线计各章结果之间记为 formal-reuse 的使用，虚线与点线是别种依赖，两个前提进入第七章，各在所用之处为假设，T1 到 T8 '
+            f'![围绕文法的八章：圆按结果数定大小，实线计各章结果之间记为 formal-reuse 的使用，章与章之间的虚线与点线是别种依赖，两个前提进入第七章，各在所用之处为假设，T1 到 T8 '
             f'在其所属之处按检验结局着色]({rel(SVG["zh"])})', '',
             f'*由 `tools/research/spine.py` 依理论图与 [spine.json]({rel(DATA)}) 生成；[英文图]({rel(SVG["en"])})。*', '',
             f'**细读。** 每个圆是八章之一，大小为其所含结果数；中央是文法，即根的词汇；辐条的粗细表示该章核心模块中有多大比例在'
@@ -995,7 +996,7 @@ def zh_page(graph):
              f'实线，计甲章的结果在 `formal-reuse` 之下使用乙章结果的次数，[RESULT-WORKFLOW]({rel(WORKFLOW)}) 把这一类留给'
              f'“使用所引结果的已核验推理”。较深的曲线是章序在前的一章的结果使用章序在后的一章的结果：所画 {len(drawn)} 个配对中有 {len(back)} 个'
              + (f'，最大的是「{zname(biggest[0])}」到「{zname(biggest[1])}」，{formal[biggest]} 次' if biggest else '') + '。'
-             f'虚线是 `interpretive`，留给“论证上的依赖”；点线是 `application`；`related` 是 RESULT-WORKFLOW 留给类比的，不画出'
+             f'章与章之间的虚线是 `interpretive`，留给“论证上的依赖”；点线是 `application`；`related` 是 RESULT-WORKFLOW 留给类比的，不画出'
              f'（{related} 条边）。不画作 formal-reuse 曲线的：少于 {DRAW_MIN} 次 formal-reuse 使用的 {len(small)} 个配对（共 '
              f'{sum(small)} 次）' + (f'，其中 {other_kind} 个画作{other_zh}' if other_kind else '') + f'；不画作虚线的：少于 '
              f'{INTERPRETIVE_MIN} 次的 {len(interp_small)} 个诠释配对（{sum(interp_small)} 条边）；少于 {LABEL_MIN} 次的曲线不标数字。下表列出'
