@@ -1,0 +1,69 @@
+
+=== _process/navigation/README-FIRST-SCREEN.md
+
+_process/navigation/README-FIRST-SCREEN.md:12
+  - **Its ethics** asserts no should: where it ranks courses it names what it ranks under, most often [two readings](../../theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order), neither asserted: the continuation condition (from every standpoint, for anything, its continuation into the future is counted) fixes scope, whose losses count, ranking nothing;
+  + **Its ethics** asserts no should; its rankings mostly rest on [two readings](../../theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order), neither asserted: the continuation condition (from every standpoint, for anything, its continuation into the future is counted) fixes scope, whose losses count, ranking nothing;
+    … C (widening what can form is better) gives order.
+
+=== _process/navigation/README-ZH.md
+
+_process/navigation/README-ZH.md:25
+    … **伦理。
+  - ** 本论的伦理不断言任何应当：凡它对进程排序之处，都指名其所据，最常是[两种读法](../../theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order)，二者都不被断言。
+  + ** 本论的伦理不断言任何应当；
+  + 它的排序多依于[两种读法](../../theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order)，二者都不被断言。
+    … *延续条件*：从每一个立场看，对任何东西，其延续到未来都被计数。
+
+=== theories/LINEAGE.md
+
+theories/LINEAGE.md:206
+  - The records' history entries by the week of their leading date: 4846 dated entries, and 184 with no leading date, left out.
+  + The records' history entries by the week of their leading date: 4851 dated entries, and 184 with no leading date, left out.
+    … An entry is a dated note of a change to a result, so the count measures changes recorded, not results.
+
+theories/LINEAGE.md:215
+  - | 2026-11-09 | 41 |
+  + | 2026-11-09 | 46 |
+
+=== theories/LINEAGE.zh.md
+
+theories/LINEAGE.zh.md:259
+  - 各记录的历史条目，按其开头日期所在的周计：有日期的 4846 条；
+  + 各记录的历史条目，按其开头日期所在的周计：有日期的 4851 条；
+    … 没有开头日期的 184 条，不计。
+
+theories/LINEAGE.zh.md:268
+  - | 2026-11-09 | 41 |
+  + | 2026-11-09 | 46 |
+
+=== theories/becoming/ONE-PAGE.md
+
+theories/becoming/ONE-PAGE.md:30
+  - | **What is counted, and what is offered?** | T8: for life, its makers offer a way of seeing what each course draws on and from what renewal, what ends, and who bears it;
+  + | **What is counted, and what is offered?** | T8: for life, its makers offer a way of seeing what each course draws on, from what renewal, what ends and what goes on through it, and who bears it;
+    … 生生 is the continuation of life [AI reading] ([07 §8](chapters/07-SIGNIFICANCE.md#theses)) | Argued; binds no one; test named, not designed | Selections reading 
+
+theories/becoming/ONE-PAGE.md:32
+    … **The ethics.** No law evaluates; should and better are readings people and AI form ([07 §1](chapters/07-SIGNIFICANCE.md#evaluation)).
+  - The account asserts no should; where it ranks courses it names its readings, each an unasserted hypothesis wherever used, which the dynamics cannot show wrong ([07 §4](chapters/07-SIGNIFICANCE.md#scope-and-order)).
+  + The account asserts no should; where it ranks, it names its readings, each an unasserted hypothesis wherever used, which the dynamics cannot show wrong ([07 §4](chapters/07-SIGNIFICANCE.md#scope-and-order)).
+    … The *continuation condition* fixes scope, whose losses count: from every standpoint, for anything, its continuation into the future is counted.
+    … What can form is what a course *admits*: formations (what takes and gives) whose conditions meet their requirements.
+  - One course *widens* another where at every step it admits all the other admits and at some step more, which needs no premise; that the wider is better is C's.
+  + One course *widens* another where at every step it admits all the other admits and at some step more, needing no premise; that the wider is better is C's.
+
+=== theories/becoming/ONE-PAGE.zh.md
+
+theories/becoming/ONE-PAGE.zh.md:38
+    … | **什么被计数，本论提供什么？
+  - ** | T8：为生命，本论之作者提供一种看法，看每一进程取用什么、取自何种更新，什么终结，由谁承担；
+  + ** | T8：为生命，本论之作者提供一种看法，看每一进程取用什么、取自何种更新，什么终结、什么经由那终结继续，由谁承担；
+    … 生生即生命之延续，不是上面“根”一段里的“生成”［AI 读法］（[07 §8](chapters/07-SIGNIFICANCE.md#theses)） | 已论证；
+
+=== theories/becoming/chapters/05-COLLECTIVES.md
+
+theories/becoming/chapters/05-COLLECTIVES.md:426
+    … - Any evaluation: no law says a drain is a harm, restraint better, cooperation good or a shared code worth keeping.
+  - That is ranked only under the two readings of [07](07-SIGNIFICANCE.md), the continuation condition for scope and C for order.
+  + A ranking of it names its scope and order; the continuation condition and C are one pair of readings [07](07-SIGNIFICANCE.md) examines.
