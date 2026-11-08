@@ -555,8 +555,8 @@
    "label_why": "Both drafts are tracked files in this repository, dated by their filenames; the meta-attractor folder's README marks the 05-18 report as an AI research tool's output.",
    "thread": true,
    "short": {
-    "en": "Meta-attractor captures selection",
-    "zh": "元吸引子捕获选择"
+    "en": "Meta-attractor captures selection's mechanisms",
+    "zh": "元吸引子捕获选择之机制"
    }
   },
   {
@@ -689,7 +689,7 @@
     }
    ],
    "label": "public",
-   "label_why": "The turns stand verbatim under their dated heading in a tracked extract of the private chat export (the projection at lines 3602–3608, the compromise at lines 3626–3627, the request for a narrative at lines 3636–3637); the name The Fork is the Fork folder's. The January talk is a tracked transcript whose speaker is unnamed.",
+   "label_why": "The turns stand verbatim under their dated heading in a tracked extract of the private chat export (the projection at lines 3602–3608, the compromise at lines 3626–3627, the request for a narrative at lines 3636–3637); the name The Fork is the narrative's, per the September timeline, kept by the Fork folder as its historical home (theories/README.md line 24). The January talk is a tracked transcript whose speaker is unnamed.",
    "thread": false
   },
   {
@@ -892,7 +892,7 @@
    "thread": true,
    "short": {
     "en": "Moloch in the mind",
-    "zh": "摩洛克在心中"
+    "zh": "Moloch 在心中"
    }
   },
   {
@@ -1021,8 +1021,8 @@
     },
     {
      "path": "_process/architecture/README.md",
-     "locator": "line 38",
-     "quote": "two directories were renamed so that their paths name what they hold.",
+     "locator": "line 38, under '## Directory renames, 9 October 2026' (line 32)",
+     "quote": "| `theories/shengsheng-buxi-generative-existence/` | [`theories/becoming/`]",
      "private": false
     }
    ],
@@ -2854,8 +2854,8 @@
     "sel-2025-08-10-formal-selection-rule"
    ],
    "what": {
-    "en": "From March 2024 to August 2025 conversations and AI-drafted notes say that a society picks one value as the token of power, write down a loop that selects pure capital optimizers, and name a meta-attractor that captures the mechanisms of selection themselves, defined as a second-order attractor.",
-    "zh": "2024 年 3 月至 2025 年 8 月，一些对话与由 AI 起草的笔记说，一个社会选出一种价值作为权力的象征；写下一个选出纯粹资本优化者的环；并命名一个捕获选择机制本身的元吸引子，定义为一个二阶吸引子。"
+    "en": "From March 2024 to August 2025 conversations, drafts and AI-drafted notes say that a society picks one value as the token of power, write down a loop that selects pure capital optimizers, and name a meta-attractor that captures the mechanisms of selection themselves, defined as a second-order attractor.",
+    "zh": "2024 年 3 月至 2025 年 8 月，一些对话、草稿与由 AI 起草的笔记说，一个社会选出一种价值作为权力的象征；写下一个选出纯粹资本优化者的环；并命名一个捕获选择机制本身的元吸引子，定义为一个二阶吸引子。"
    }
   },
   {
@@ -2877,8 +2877,8 @@
     "s26-07-zhishan"
    ],
    "what": {
-    "en": "From February to July 2026 the Fork narrative is left and cooperation is no longer held good in itself, 間 becomes the one primitive and classical Chinese a formal language, Lean enters as a coherence checker, and selection is read as shaping a way of seeing, Moloch in the mind.",
-    "zh": "2026 年 2 月至 7 月，分岔叙事被放下，合作不再被当作本身就好；間成为唯一原语，古文成为一种形式语言；Lean 作为一致性检查器进入；选择被读作塑造一种观看方式，即心中的摩洛克。"
+    "en": "From February to July 2026 the Fork narrative is left and cooperation is not held good in itself, 間 becomes the one primitive and classical Chinese a formal language, Lean enters as a coherence checker, and, in an AI-written working stance, selection is read as concentrating a way of seeing, Moloch in the mind.",
+    "zh": "2026 年 2 月至 7 月，分岔叙事被放下，合作不被当作本身就好；間成为唯一原语，古文成为一种形式语言；Lean 作为一致性检查器进入；在一份由 AI 写成的工作立场中，选择被读作集中一种观看方式，即心中的 Moloch。"
    }
   },
   {
@@ -2897,8 +2897,8 @@
     "pt-v7-3-integrated-into-generative-account"
    ],
    "what": {
-    "en": "From September to 6 October 2026 the writings are gathered into theory folders, a paper argues from correctability with refuters for each claim, the repository's first predictions are committed before their run, one failing in the pilot, and a conference line is folded into the generative account.",
-    "zh": "2026 年 9 月至 10 月 6 日，诸篇写作被汇入各理论文件夹；一篇论文从可纠正性立论，每项主张都配有驳倒它的观察；本仓库最早的预先预测在运行之前提交，其中一项在试运行中未通过；一条会议论文线被并入生成论的说明。"
+    "en": "From September to 6 October 2026 the writings are gathered into theory folders, an AI-drafted paper argues from correctability with refuters for each claim, the repository's first pre-specified predictions are written before their run, one failing in the pilot, and a conference line is folded into the generative account.",
+    "zh": "2026 年 9 月至 10 月 6 日，诸篇写作被汇入各理论文件夹；一篇由 AI 起草的论文从可纠正性立论，每项主张都配有驳倒它的观察；本仓库最早的预先给定的预测写于运行之前，其中一项在试运行中未通过；一条会议论文线被并入生成论的说明。"
    }
   },
   {
@@ -2925,8 +2925,8 @@
     "becoming-2026-10-30-ethics-for-life"
    ],
    "what": {
-    "en": "From 9 to 30 October 2026 the theory of becoming is named, its Lean spine gets an axiom-free pure core, the ethics' scope and order premises are separated, no central result is found to be new mathematics, the root becomes a grammar of continuation relative to a class, the account is laid out in four layers, and T7's frozen test passes every verdict while its bridge fails.",
-    "zh": "2026 年 10 月 9 日至 30 日，生成变化之论得名；它的 Lean 脊柱有了不含公理的纯核；伦理的范围前提与次序前提被分开；没有一项核心结果被认为是新数学；根成为一种相对于类的续的文法；本说明分为四层；T7 的冻结检验每一裁决都通过，而其桥接不成立。"
+    "en": "From 9 to 30 October 2026 the theory of becoming is named, its Lean spine gets an axiom-free pure core, the ethics' scope and order premises are separated, an AI review finds no central result a new theorem of research-level mathematics, a plan roots the theory in a grammar of continuation relative to a class and its first module lands, the account is laid out in four layers, and T7's frozen test passes every verdict while its bridge fails and a case T7 forbids, as then worded, occurs.",
+    "zh": "2026 年 10 月 9 日至 30 日，生成变化之论得名；它的 Lean 脊柱有了不含公理的纯核；伦理的范围前提与次序前提被分开；一次 AI 审阅认为没有一项核心结果是研究水平的新数学定理；一份计划把本理论植根于一种相对于类的续的文法，其第一个模块落地；本说明分为四层；T7 的冻结检验每一裁决都通过，而其桥接不成立，并且 T7 所禁止的一种情形，按当时的表述，发生了。"
    }
   },
   {
@@ -2949,8 +2949,8 @@
     "nov-crosswalk-map"
    ],
    "what": {
-    "en": "From 1 to 7 November 2026 C is shown not entailed by what reads no order, tests of formations that read are frozen before any run, T2's former wording fails on beetle cultures and T2 is narrowed, the account is frozen as a reader edition, and the earlier folders are read against it in a crosswalk.",
-    "zh": "2026 年 11 月 1 日至 7 日，C 被表明不为不读任何次序者所蕴涵；关于读取之形成的各项检验在任何运行之前冻结；T2 的原先措辞在甲虫培养物上未通过，T2 被收窄；本说明被冻结为读者版；早先各文件夹在对照中被对着它来读。"
+    "en": "From 1 to 7 November 2026 C is shown not entailed by what reads no order, tests of formations that read are frozen before any run, T2's former wording fails on beetle cultures and T2 is narrowed, the account is frozen as a reader edition, and the earlier folders are read against it by AI readers in a crosswalk.",
+    "zh": "2026 年 11 月 1 日至 7 日，C 被表明不为不读任何次序者所蕴涵；关于读取之形成的各项检验在任何运行之前冻结；T2 的原先措辞在甲虫培养物上未通过，T2 被收窄；本说明被冻结为读者版；早先各文件夹由 AI 读者在对照中对着它来读。"
    }
   }
  ]
