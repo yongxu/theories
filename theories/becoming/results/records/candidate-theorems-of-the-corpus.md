@@ -38,7 +38,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.GrammarCandidates, 69 theorems in 93 declarations, each with an empty axiom report. Written by an Opus coder from the first-batch classification; no human audit of the readings.
+Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.GrammarCandidates, 69 theorems in 93 declarations, each with an empty axiom report. Written by an Opus coder from the first-batch classification; no person's audit of the readings recorded.
 
 Canonical source: [GrammarCandidates.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean)
 

@@ -218,10 +218,12 @@
     }
   },
   "site": {
-    "note": "The reader's site (tools/publishing/build_site.py): pages is the allow-list, nothing else is published; a path the push screen keeps private, or under sources/, is refused. nav and ways_in are AI-written navigation and name only pages listed here. The Pages job (.github/workflows/pages.yml) runs only when dispatched; enabling Pages is Ren's. With site.map on, the connection map is written as connections.html by connection_map's site mode. A card's time says what it is of; its fields are computed by the builder (card_time). chapters get contents and previous and next links. rewrites change the site's text only: two experiment READMEs print a local path and review receipts bind their hash, so they are redacted at build; words true only off the site are dropped there; the Chinese crosswalk, a generated page, is given a link to the map under its title. The opening's card times the text README's first screen times as {{time:opening}} ({body}), so the two agree.",
+    "note": "The reader's site (tools/publishing/build_site.py): pages is the allow-list, nothing else is published; a path the push screen keeps private, or under sources/, is refused. nav and ways_in are AI-written navigation and name only pages listed here. The Pages job (.github/workflows/pages.yml) runs only when dispatched; enabling Pages is Ren's. With site.map on, the connection map is written as connections.html by connection_map's site mode. A card's time says what it is of; its fields are computed by the builder (card_time). chapters get contents and previous and next links. rewrites change the site's text only: two experiment READMEs print a local path and review receipts bind their hash, so they are redacted at build; words true only off the site are dropped there; the Chinese crosswalk, a generated page, is given a link to the map under its title; the chapters' index keeps its table of the eight chapters and drops, through its closing line on rerunning the render, the key to the files' statuses and the lists of files and of chapters moved to history, which its page in the repository keeps, the build failing where those words change or a section comes among them; chapter 06, in Chinese, is given one English line under its title. title_zh and description_zh name and describe the work on pages in Chinese. The opening's card times the text README's first screen times as {{time:opening}} ({body}), so the two agree.",
     "repository": "yongxu/theories",
     "title": "The Theory of Becoming",
+    "title_zh": "生灭变化之论",
     "description": "One account of how things form, persist, change and end, with Lean-checked models and frozen tests; its ethics rests on two unasserted premises: the continuation condition (scope) and C, widening what can form is better (order).",
+    "description_zh": "一套解释，讲任何东西怎样在同一个关系性的展开中出现、持续、变化和消逝；附有以 Lean 检验的模型与冻结的检验。",
     "pages": [
       "README.zh.md",
       "MAP.md",
@@ -263,6 +265,7 @@
       "theories/becoming/review/CLASSICAL-TEXTS.md",
       "theories/becoming/review/BUDDHIST-THOUGHT.md",
       "TESTS.md",
+      "TESTS.zh.md",
       "theories/becoming/COLLECTIVE-DIRECTION.md",
       "theories/becoming/ONE-ARGUMENT.md",
       "theories/becoming/FREE-ENERGY-PRINCIPLE.md",
@@ -299,6 +302,24 @@
         "page": "theories/becoming/results/atlas/CROSSWALK.zh.md",
         "pattern": "(?m)^# .*$",
         "to": "\\g<0>\n\n[连接图（英文）](map.html)",
+        "count": 1
+      },
+      {
+        "page": "theories/becoming/chapters/README.md",
+        "pattern": "(?s)\\nStatus: \\*\\*chapter\\*\\* [^\\n]*\\n\\n## Files in this directory\\n(?:(?!\\n## ).)*\\n## Chapters moved to history\\n(?:(?!\\n## ).)*\\nRerun `make research-render` after a chapter is added, split or moved\\.\\n",
+        "to": "\\n",
+        "count": 1
+      },
+      {
+        "page": "theories/becoming/chapters/README.md",
+        "pattern": "The chapters they replace are in history \\(below\\), bytes unchanged\\.",
+        "to": "The chapters they replace are kept in [history](../history/), bytes unchanged; this page's source in the repository lists them with their move receipts.",
+        "count": 1
+      },
+      {
+        "page": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+        "pattern": "(?m)^# .*$",
+        "to": "\\g<0>\n\n<p lang=\"en\"><em>In English: this chapter is in Chinese. [Section 6 of the overview](../THE-THEORY-OF-BECOMING.md#6-the-classical-texts) summarizes it in English; [the reviewers' dossier on the classical texts](../review/CLASSICAL-TEXTS.md), also in Chinese, asks scholars of classical Chinese texts to judge its readings.</em></p>",
         "count": 1
       }
     ],
@@ -448,7 +469,7 @@
         "path": "theories/LINEAGE.md",
         "zh": "theories/LINEAGE.zh.md",
         "label": "How it grew",
-        "text": "From the writings of 2021 to the account today: turning points, each labelled by what states it, gathered by AI readers, and one thread followed through.",
+        "text": "From the writings of 2021 to the account today: turning points, each labelled by what states it, gathered by AI readers, and three threads followed through (the selection mechanism, the root and the ethics).",
         "time_until": "## Turning points",
         "time_note": "the picture, the labels and the threads",
         "group": "See"
@@ -521,8 +542,8 @@
         "八章（英文）"
       ],
       [
-        "TESTS.md",
-        "检验（英文）"
+        "TESTS.zh.md",
+        "检验"
       ],
       [
         "theories/becoming/ONE-PAGE.md",

@@ -4,6 +4,8 @@
 
 [English](THE-THEORY-OF-BECOMING.md) · [首页](../../README.zh.md) · [一页](ONE-PAGE.zh.md) · [用途](USES.zh.md) · [实例](USES-EXAMPLES.zh.md) · **总览** · [八章（英文）](chapters/README.md) · [古文（第六章）](chapters/06-CLASSICAL-TEXTS.md) · [检验](../../TESTS.zh.md) · [对照表](results/atlas/CROSSWALK.zh.md) · [怎样长成](../LINEAGE.zh.md) · [术语表](../../GLOSSARY.zh.md) · [审查包](review/README.zh.md)
 
+*本版落后于英文版：它依 2026 年 11 月 9 日的[英文版](THE-THEORY-OF-BECOMING.md)译出，英文版此后有改动，本版尚未随之修订；有出入处，以英文版为准。*
+
 *约五十七分钟至一小时十四分钟读完。*
 
 *AI 译自英文版，尚无人审查它的记录；义以英文版为准，英文版又以其所链接之处为准。*
