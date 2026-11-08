@@ -112,6 +112,16 @@ class Checking(unittest.TestCase):
             errors = spine.check(s)
         self.assertTrue(any('did not reject it' in e for e in errors), errors)
 
+    def test_the_simpler_pictures_classes_are_checked(self):
+        s, real = spine.spec(), spine.boundary_counts
+        with mock.patch.object(spine, 'boundary_counts', lambda: {**real(), 'connected': real()['connected'] + 1, 'new class': 2}):
+            errors = '\n'.join(spine.check(s))
+        self.assertIn('2 central declarations "new class", a class the simpler picture does not draw', errors)
+        self.assertIn(f"no longer holds: '{real()['connected'] + 1} connected'", errors)
+        self.assertIn('do not add to its central declarations', errors)
+        s['first_view']['bands'][0]['example']['en'][1] = 'a sentence its record does not hold'
+        self.assertTrue(any('a sentence its record does not hold' in e for e in spine.check(s)))
+
     def test_an_unknown_outcome_is_an_error(self):
         s = spine.spec()
         s['theses'][0] = {**s['theses'][0], 'outcome': 'passed'}
@@ -191,6 +201,54 @@ class Drawing(unittest.TestCase):
             pages, errors = spine.render(g)
         self.assertEqual(pages, {})
         self.assertTrue(any('passes behind chapter' in e for e in errors), errors)
+
+    def test_the_shared_laws_strip_and_the_spokes_beside_their_chapters(self):
+        g = json.loads((ROOT / 'theories/becoming/results/data/theory-graph.json').read_text(encoding='utf-8'))
+        s = spine.spec()
+        out = spine.svg(g, s, 'en')
+        for name, _, represented, c in spine.shared_laws_rows():
+            self.assertIn(f'>{name}</text>', out)
+            k = spine.reaching_the_grammar(name, c)
+            self.assertIn(f'>{c} rows, all {c} reach</text>' if k == c else f'>{c} rows, {k} reach</text>', out)
+        self.assertEqual(out.count('>represented both ways, not derived</text>'), 1)  # balance alone
+        self.assertIn('fill="url(#reach)"', out)
+        self.assertIn('run backward, an earlier chapter’s results using a later one’s', out)
+        self.assertEqual(out.count(' modules on the grammar</text>'), 8)  # one line in each chapter's words, none on the ring
+        zh = spine.svg(g, s, 'zh')
+        self.assertIn('>平衡</text>', zh)
+        self.assertEqual(zh.count(' 个在文法上</text>'), 8)
+
+    def test_a_curve_through_a_chapters_words_stops_the_render(self):
+        g = (ROOT / 'theories/becoming/results/data/theory-graph.json').read_text(encoding='utf-8')
+        real = spine.layout
+
+        def over(*a, **k):  # the map's words spread over the whole ring
+            L = real(*a, **k)
+            L['blocks']['map'] = {**L['blocks']['map'], 'box': (0, 0, spine.W, 2000)}
+            return L
+        with mock.patch.object(spine, 'layout', over):
+            pages, errors = spine.render(g)
+        self.assertEqual(pages, {})
+        self.assertTrue(any('crosses the words of chapter map' in e for e in errors), errors)
+
+    def test_the_simpler_picture_draws_every_central_declaration_once(self):
+        s, n = spine.spec(), spine.boundary_counts()
+        for lang in ('en', 'zh'):
+            out = spine.standings_svg(s, lang)
+            self.assertTrue(out.startswith('<svg xmlns="http://www.w3.org/2000/svg"'))
+            self.assertIsNone(re.search(r'(?:href|src)="(?!#)', out), 'no external resource')
+            self.assertNotIn('<script', out)
+            self.assertEqual(out.count('width="12" height="12"'), sum(n.values()))
+            for item in s['first_view']['bands'] + s['first_view']['distance']:
+                head = f'{n[item["key"]]} {item[lang]["label"]}' if lang == 'en' else f'{n[item["key"]]} 项{item[lang]["label"]}'
+                self.assertIn(f'>{head}</text>', out)
+            for item in s['first_view']['bands'] + s['first_view']['distance']:
+                if item.get('example'):
+                    self.assertIn(item['example']['declaration'], out)
+        self.assertIn('>The 117 central declarations and the grammar’s laws</text>', spine.standings_svg(s, 'en'))
+        lead = '\n'.join(spine.lead(graph(), 'theories/becoming/results/THEORY-GRAPH.md'))
+        self.assertIn('](standings.svg)', lead)
+        self.assertIn('](standings.zh.svg)', spine.zh_page(graph()))
 
     def test_drawn_otherwise_names_the_kind(self):
         v = lambda f, i, a: {'formal-reuse': f, 'interpretive': i, 'application': a, 'related': 0}
@@ -281,8 +339,23 @@ class Tables(unittest.TestCase):
         self.assertEqual(spine.formal_cycles(g), (4, 4, [['a', 'b', 'c']]))
         g['edges'] = g['edges'][1:]
         self.assertEqual(spine.formal_cycles(g), (3, 4, []))
-        self.assertIn('no result reaches itself', spine.circular_paragraph(g, 'en')[0])
-        self.assertIn('condition of entry, not a finding', spine.circular_paragraph(g, 'en')[0])
+        paragraph = '\n'.join(spine.circular_paragraph(g, 'en'))
+        self.assertTrue(paragraph.startswith('<a id="do-the-recorded-uses-form-a-cycle"></a>'))  # the caption links here
+        self.assertIn('no result reaches itself', paragraph)
+        self.assertIn('condition of entry, not a finding', paragraph)
+        self.assertIn('#do-the-recorded-uses-form-a-cycle', spine.how_to_read(spine.spec(), 'en'))
+        self.assertIn('id="do-the-recorded-uses-form-a-cycle"', '\n'.join(spine.circular_paragraph(g, 'zh')))
+
+    def test_a_law_in_english_from_its_docstring(self):
+        lean = ('/-- Nothing within a closure bears the relation to what lies beyond it. Read through more. -/\n'
+                'theorem «所闭之界» {R : X} : True := trivial\n\n'
+                '/-- **Taking on, over `n` steps (承之迭).** Let each round hold. -/\ntheorem «承之迭» : True := trivial\n')
+        with mock.patch.object(spine, '_read', lambda path: lean if path == spine.GRAMMAR_LAWS else None):
+            self.assertEqual(spine.law_english('Becoming.«所闭之界»'), 'Nothing within a closure bears the relation to what lies beyond it')
+            self.assertEqual(spine.law_english('«承之迭»'), 'Taking on, over `n` steps')
+            self.assertEqual(spine.law_english('«无»'), '«无»')  # no docstring: the name itself
+        lead = '\n'.join(spine.lead(graph(), 'theories/becoming/results/THEORY-GRAPH.md'))
+        self.assertIn('Nothing within a closure bears the relation to what lies beyond it (`«所闭之界»`)', lead)
 
     def test_a_basis_is_cut_after_its_first_sentence_and_keeps_its_standing(self):
         record = {'boundary': {'standings': [

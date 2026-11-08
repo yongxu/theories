@@ -7,8 +7,10 @@ counted from the graph the same render builds:
 - the grammar at the centre (its concepts) and the eight chapter regions on a ring in the chapters' order, each
   circle's area proportional to the results the region holds;
 - each chapter's number inside its circle, its name, results and uses within it beside it;
-- a spoke from each region to the grammar, reading "k of m modules": how many of the region's core modules state
-  their laws on it;
+- a spoke from each region to the grammar, its width the share of the region's core modules that state their laws on
+  it, the count ("k of m modules on the grammar") in the chapter's words beside it, off the ring;
+- under the standings of the central declarations, a strip of the five shared laws from 08 §7: the central rows on
+  each and, hatched, those reaching the grammar, balance marked represented and not derived;
 - `formal-reuse` between results of two regions as solid curves, for each ordered pair with at least DRAW_MIN uses,
   kept off a disc round the grammar, the count beside the curve where it is at least LABEL_MIN, darker where an
   earlier chapter's results use a later one's;
@@ -19,7 +21,9 @@ counted from the graph the same render builds:
 - T1-T8 pinned at their homes, coloured by test outcome, with words chosen from their rows in 08 §9 (in Chinese,
   from the overview's table), standing first.
 
-What is not drawn is counted in the caption, and every pair is in the table. The curated input is
+What is not drawn is counted in the caption, and every pair is in the table. A simpler picture
+(`standings.svg`, `standings.zh.svg`) draws the central declarations one square each by their standing against the edge
+of one root, the 99 at a named distance by reason, with one example per standing in its record's words. The curated input is
 `theories/becoming/results/data/spine.json`; each phrase it quotes is checked at its home on every render, so a
 change at a home that drops a phrase stops the render until the picture's words follow it. Text is SVG text with
 generic fonts, no script and no external resource, so GitHub renders the picture as an image.
@@ -38,6 +42,7 @@ from tools.research import moves, registry, theory_graph
 ROOT = registry.ROOT
 DATA = 'theories/becoming/results/data/spine.json'
 SVG = {'en': 'theories/becoming/results/spine.svg', 'zh': 'theories/becoming/results/spine.zh.svg'}
+FIRST = {'en': 'theories/becoming/results/standings.svg', 'zh': 'theories/becoming/results/standings.zh.svg'}  # the simpler picture
 PAGE_ZH = 'theories/becoming/results/THEORY-GRAPH.zh.md'  # the Chinese of THEORY-GRAPH.md's spine sections
 ZH_REGIONS = {'process': '过程', 'retire': '待退役', 'unassigned': '尚未归属'}
 WORKFLOW = '_process/RESULT-WORKFLOW.md'
@@ -70,11 +75,15 @@ WORDS = {
         'read': 'How to read it',
         'size': 'Circle: a chapter, its area by its results; its number inside it; beside it, its name, its results and the formal-reuse uses within it.',
         'formal': 'A use recorded as formal-reuse, a kind kept for “a verified inference using the cited result”: the arrow points to the chapter whose results are used; the number beside a curve counts its uses, written where it is {m} or more. The AI-written records assign the kind; the registry checks that an interface has its fields and cites a file among the record’s hashed references (on {k} of all {n} such edges; each cites a Lean file); nothing checks that the Lean there uses the cited result.',
-        'backward': 'The same, darker where an earlier chapter’s results use a later one’s.',
+        'numbering': 'The chapters are numbered for reading, not as an order of proof: {b} of the {t} uses between chapters run backward, an earlier chapter’s results using a later one’s (the darker curves).',
+        'backward': 'The same, darker where an earlier chapter’s results use a later one’s: the chapters are numbered for reading, not as an order of proof.',
         'interpretive': 'interpretive, kept for “an argument dependency” (dashed; pairs with {m} or more).',
         'application': 'application, a reused result with its correspondence and added premises (dotted).',
-        'spoke': 'Spoke, “k of m modules”: k of the chapter’s m core modules state their laws on the grammar. It counts modules, not results derived; its width is the share.',
-        'spoke_label': '{k} of {m} modules',
+        'spoke': 'Spoke: its width is the share of the chapter’s core modules that state their laws on the grammar, given beside the chapter as “k of m modules on the grammar”. It counts modules, not results derived.',
+        'spoke_label': '{k} of {m} modules on the grammar',
+        'laws_head': 'The five shared laws (08 §7): central rows on each; hatched, those reaching the grammar',
+        'law_all': '{c} rows, all {c} reach', 'law_some': '{c} rows, {k} reach', 'law_rep': 'represented both ways, not derived',
+        'laws_note': 'Rows, not declarations: {rested} of the {rows} central rows (nine declarations stand in two) rest on at least one law, some on several. Reaching the grammar is not being derived: only the {d} derived above are read as cases of grammar laws, and 1 as a root form under a stated hypothesis.',
         'related': 'Not drawn: related, for analogy ({n} edges), and the formal-reuse curves of pairs under {m} uses; counts under {k} are not written. THEORY-GRAPH.md’s table of edge kinds between chapters has them all.',
         'theses': 'The theses',
         'theses_note': 'T1–T8 at their homes; what each claims, its standing and its tests: the theses table in THEORY-GRAPH.md, “The chapters at a glance”.',
@@ -89,11 +98,15 @@ WORDS = {
         'read': '怎样读这幅图',
         'size': '圆：一章，面积按其结果数；圆内是章号；圆旁是章名、结果数与章内 formal-reuse 使用数。',
         'formal': '记为 formal-reuse 的使用（这一类留给使用所引结果的已核验推理）：箭头指向被使用其结果的那一章；曲线旁的数字为其使用次数，{m} 次及以上才标出。这一类由 AI 写成的记录指定；登记检查核对接口具备其字段、且其所引是记录中带散列的参考文献之一（全部 {n} 条这样的边中有 {k} 条，所引的都是 Lean 文件）；没有任何检查核对那里的 Lean 是否确实使用所引的结果。',
-        'backward': '同上；章序在前的一章的结果使用章序在后的一章的结果时，线色较深。',
+        'numbering': '章的编号是为阅读，不是证明的次序：章与章之间的 {t} 次使用中，{b} 次是逆向的，即章序在前的一章的结果使用章序在后的一章的结果（较深的曲线）。',
+        'backward': '同上；章序在前的一章的结果使用章序在后的一章的结果时，线色较深：章的编号是为阅读，不是证明的次序。',
         'interpretive': '诠释（interpretive），用于论证上的依赖（虚线；{m} 次及以上的配对）。',
         'application': '应用（application），一个被复用的结果，连同其对应与所添的前提（点线）。',
-        'spoke': '辐条，“m 个模块中 k 个”：该章 m 个核心模块中，有 k 个在文法上陈述其律。它计的是模块，不是推导而得的结果；粗细表示比例。',
-        'spoke_label': '{m} 个模块中 {k} 个',
+        'spoke': '辐条：粗细表示该章核心模块中在文法上陈述其律者所占的比例，其数写在章旁，作“m 个模块中 k 个在文法上”。它计的是模块，不是推导而得的结果。',
+        'spoke_label': '{m} 个模块中 {k} 个在文法上',
+        'laws_head': '五条共律（08 §7）：依于每一条的核心行；斜线部分是其编译后的类型或值达到文法的行',
+        'law_all': '{c} 行，全部达到', 'law_some': '{c} 行，{k} 行达到', 'law_rep': '双向表示，不推导',
+        'laws_note': '计的是行，不是声明：{rows} 个核心行（九项声明各占两行）中，{rested} 行至少依于一条律，有的依于多条。达到文法不等于推导而得：被读作文法之律之情形的，只有上面推导而得的 {d} 项，另有 1 项在一个所述的假设之下被读作根形式。',
         'related': '不画出：相关（related，用于类比，{n} 条边），以及少于 {m} 次 formal-reuse 使用之配对的实线；少于 {k} 次的不标数字。理论图“各章一览”的中文版（THEORY-GRAPH.zh.md）中各章之间边的种类表列出全部。',
         'theses': '论题',
         'theses_note': 'T1 到 T8 在其所属之处；各自主张什么、地位如何、检验如何：见理论图“各章一览”的中文版（THEORY-GRAPH.zh.md）中的论题表。',
@@ -206,6 +219,26 @@ def check(s):
     if standing and str(central_total()) != standing['counts'][0][0]:
         errors.append(f'the shared-laws data places {central_total()} central declarations; the standing line counts otherwise')
     holds(METHOD, "every model's law in a row is proved from it, except balance's, which the grammar represents and does not derive")
+    if central_rows() is None:
+        errors.append('08 §7 no longer says how many of the central rows rest on at least one shared law')
+    fv = s.get('first_view')
+    if fv:  # the simpler picture: every class drawn, each class's words and count 08 §7's, each example its record's
+        n = boundary_counts()
+        drawn = [b['key'] for b in fv['bands']] + [d['key'] for d in fv['distance']]
+        errors += [f'the shared-laws data has {v} central declarations "{k}", a class the simpler picture does not draw'
+                   for k, v in n.items() if v and k not in drawn]
+        if sum(n.values()) != central_total():
+            errors.append('the shared-laws data\'s classes do not add to its central declarations')
+        for b in fv['bands']:
+            holds(METHOD, b['en']['gloss'])
+        for d in fv['distance']:
+            holds(METHOD, f'{n.get(d["key"], 0)} {d["en"]["label"]}')
+            if d['en'].get('gloss'):
+                holds(METHOD, d['en']['gloss'])
+        for item in fv['bands'] + fv['distance']:
+            if item.get('example'):
+                for lang in ('en', 'zh'):
+                    holds(*item['example'][lang])
     return errors
 
 
@@ -411,8 +444,9 @@ def along(point, prefer, offsets=(0, 6, 12, 18, 24)):
     return out
 
 
-def layout(s, results, pairs, lang, top):
-    """Where everything on the ring goes: centres, radii, the chapters' label blocks, the curves with their lanes."""
+def layout(s, results, pairs, lang, top, modules=None):
+    """Where everything on the ring goes: centres, radii, the chapters' label blocks (with the spoke's count where
+    `modules` gives it), the curves with their lanes."""
     order = s['order']
     words = WORDS[lang]
     n = len(order)
@@ -431,7 +465,8 @@ def layout(s, results, pairs, lang, top):
             names = wrap(name, 14, lang)
         within = pairs.get((k, k), dict.fromkeys(KINDS, 0))['formal-reuse']
         counted = words['results'].format(n=results[k]) + (' · ' + words['within'].format(n=within) if within else '')
-        return [(line, 16, 'bold', INK) for line in names] + [(counted, 13, 'normal', MUTED)]
+        spoke = [(words['spoke_label'].format(k=modules[k][1], m=modules[k][0]), 13, 'normal', MUTED)] if modules else []
+        return [(line, 16, 'bold', INK) for line in names] + [(counted, 13, 'normal', MUTED)] + spoke
 
     def block_height(lines):
         return sum(19 if size >= 16 else 17 for _, size, *_ in lines)
@@ -440,15 +475,21 @@ def layout(s, results, pairs, lang, top):
     cy = top + 18 + block_height(block_lines(first)) + 8 + r[first] + RING
     cx = CX
     centre = {k: (cx + RING * math.cos(angle[k]), cy + RING * math.sin(angle[k])) for k in order}
-    # label blocks: above a chapter in the upper part of the ring, below every other, centred on it
+    # label blocks: above a chapter in the upper part of the ring, below every other; centred on it, except away from
+    # the ring's top and bottom, where a block leans outward, off the curves that leave the chapter inward
     blocks = {}
     for k in order:
         lines = block_lines(k)
         x, y = centre[k]
         height = block_height(lines)
         widest = max(width_of(line, size, weight == 'bold') for line, size, weight, _ in lines)
-        y0 = y - r[k] - 9 - height if math.sin(angle[k]) < -0.3 else y + r[k] + 7
-        blocks[k] = {'lines': lines, 'box': (x - widest / 2, y0, x + widest / 2, y0 + height), 'x': x}
+        above = math.sin(angle[k]) < -0.3
+        y0 = y - r[k] - 9 - height if above else y + r[k] + 7
+        lean = -1 if math.cos(angle[k]) < -0.5 else 1 if math.cos(angle[k]) > 0.5 else 0
+        tx = x + lean * 0.5 * r[k] * -1 if lean else x  # the text's anchor: the circle's inner side, the block running outward
+        x0 = tx - widest if lean < 0 else tx if lean > 0 else x - widest / 2
+        blocks[k] = {'lines': lines, 'box': (x0, y0, x0 + widest, y0 + height), 'x': tx,
+                     'anchor': 'end' if lean < 0 else 'start' if lean > 0 else 'middle'}
     # curves: the pairs drawn, their base distance from the centre, long pairs given lanes that do not meet
     drawn = []
     for (a, b), c in sorted(pairs.items(), key=lambda kv: (rank.get(kv[0][0], 99), rank.get(kv[0][1], 99))):
@@ -544,11 +585,16 @@ def svg(graph, s, lang, info=None):
            f'<marker id="back" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="{BACKWARD}"/></marker>',
            f'<marker id="thin" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,1 L9,5 L0,9" fill="none" stroke="{MUTED}" stroke-width="1.5"/></marker>',
            f'<marker id="diamond" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M5,0 L10,5 L5,10 L0,5 z" fill="{MUTED}"/></marker>',
+           f'<pattern id="reach" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="4" height="4" fill="#ffffff"/><rect width="2" height="4" fill="{MUTED}"/></pattern>',
            '</defs>',
            f'<rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="10" fill="{PAPER}" stroke="#d6d3d1"/>',
            text(24, 40, words['title'], 24, 'bold')]
     y = 66
-    for line in wrap(words['subtitle'], 100 if lang == 'en' else 92, lang):
+    rank = {k: i for i, k in enumerate(order)}
+    between = {k: v['formal-reuse'] for k, v in pairs.items() if k[0] != k[1] and k[0] in rank and k[1] in rank}
+    backward = sum(n for (a, b), n in between.items() if rank[a] < rank[b])
+    numbering = words['numbering'].format(b=f'{backward:,}', t=f'{sum(between.values()):,}')
+    for line in wrap(words['subtitle'], 100 if lang == 'en' else 92, lang) + wrap(numbering, 100 if lang == 'en' else 92, lang):
         out.append(text(24, y, line, 15, fill=MUTED))
         y += 19
     top = y - 19 + 6
@@ -579,7 +625,8 @@ def svg(graph, s, lang, info=None):
                        f'<title>{n}</title></rect>')
             x += w
         top = y - 17 + 36 + 20 * len(lines)
-    L = layout(s, results, pairs, lang, top)
+        top = laws_strip(out, s, lang, top + 10, counts_of[0])
+    L = layout(s, results, pairs, lang, top, modules)
     centre, r, angle, cx, cy = L['centre'], L['r'], L['angle'], L['cx'], L['cy']
     for c in L['curves']:  # the circles are painted over the curves: one passing behind a chapter would read as two edges
         for k in order:
@@ -587,6 +634,10 @@ def svg(graph, s, lang, info=None):
                 near = min(math.hypot(px - centre[k][0], py - centre[k][1]) for px, py in (c['point'](i / 100) for i in range(101)))
                 if near < r[k] + 3:
                     raise ValueError(f'spine picture ({lang}): the {c["kind"]} curve from {c["from"]} to {c["to"]} passes behind chapter {k}')
+        for k, block in L['blocks'].items():  # nor through a chapter's words
+            x0, y0, x1, y1 = block['box']
+            if any(x0 - 2 <= px <= x1 + 2 and y0 - 2 <= py <= y1 + 2 for px, py in (c['point'](i / 200) for i in range(201))):
+                raise ValueError(f'spine picture ({lang}): the {c["kind"]} curve from {c["from"]} to {c["to"]} crosses the words of chapter {k}')
     circles = [(cx, cy, GR)] + [(centre[k][0], centre[k][1], r[k]) for k in order]
     boxes = [b['box'] for b in L['blocks'].values()]
     # spokes to the grammar, their width by the share of the chapter's modules stated on it
@@ -622,7 +673,7 @@ def svg(graph, s, lang, info=None):
         yy = b['box'][1]
         for line, size, weight, fill in b['lines']:
             yy += 19 if size >= 16 else 17
-            out.append(text(b['x'], yy - 4, line, size, weight, 'middle', fill, True))
+            out.append(text(b['x'], yy - 4, line, size, weight, b['anchor'], fill, True))
     # the theses at their homes, as badges, where they clear the label, the spoke, the curves' ends and the premises
     attach = {k: [] for k in order}
     for c in L['curves']:
@@ -660,21 +711,12 @@ def svg(graph, s, lang, info=None):
             label = '#ffffff' if t['outcome'] == 'partial' else INK
             out.append(f'<circle cx="{f(px)}" cy="{f(py)}" r="15" fill="{colour}" stroke="{INK}" stroke-width="1.2"/>')
             out.append(text(px, py + 5, t['id'], 13, 'bold', 'middle', label))
-    # the words on the spokes, then the counts of 15 and more beside their curves, nearest their own, clear of the
-    # circles, the labels and their pair's curves
+    # the counts of 15 and more beside their curves, nearest their own, clear of the circles, the labels and their
+    # pair's curves (the spokes' counts stand in the chapters' label blocks, off the ring)
     labels = []
     obstacles = circles + badges
     under = {id(c): [(*c['point'](i / 60), 1.5 + (0.4 + 0.4 * math.sqrt(c['n']) if c['kind'] == 'formal-reuse' else 1))
                      for i in range(61)] for c in L['curves']}
-    for k in order:
-        a = angle[k]
-        d0, d1 = GR + 4, RING - r[k] - 4
-        body = words['spoke_label'].format(k=modules[k][1], m=modules[k][0])
-        w, h = width_of(body, 12) + 6, 15
-        spots = [(cx + (d0 + (d1 - d0) * t) * math.cos(a), cy + (d0 + (d1 - d0) * t) * math.sin(a))
-                 for t in (0.5, 0.42, 0.58, 0.34, 0.66, 0.26, 0.74)]
-        box = place_box(spots, w, h, obstacles, boxes + [l[0] for l in labels], soft=[pt for c in L['curves'] for pt in under[id(c)]])
-        labels.append((box, text((box[0] + box[2]) / 2, box[3] - 3.5, body, 12, anchor='middle', fill=MUTED, halo=True)))
     fine = {id(c): [c['point'](i / 100) for i in range(101)] for c in L['curves']}
 
     def nearest_is(c, lead=LEAD):  # a count stands visibly nearer its own curve than any other
@@ -763,6 +805,122 @@ def svg(graph, s, lang, info=None):
     out.append('</svg>')
     out[0] = out[0].replace(f'viewBox="0 0 {W} {H}" width="{W}" height="{H}"', f'viewBox="0 0 {W} {height}" width="{W}" height="{height}"')
     out = [o.replace(f'height="{H - 1}" rx="10"', f'height="{height - 1}" rx="10"') if o.startswith('<rect x="0.5"') else o for o in out]
+    return '\n'.join(out) + '\n'
+
+
+def central_rows():
+    """(central rows, those resting on at least one shared law) from 08 §7's sentence the caption quotes."""
+    found = re.search(r'Of the (\d+) central rows \(nine declarations stand in two\), (\d+) rest on at least one', method_section_7())
+    return (int(found.group(1)), int(found.group(2))) if found else None
+
+
+def laws_strip(out, s, lang, top, derived):
+    """The five shared laws under the standings: per law, the central rows resting on it and, hatched, those reaching the
+    grammar, from 08 §7's table and sentence; balance marked represented, not derived. Returns the strip's bottom."""
+    laws, words = shared_laws_rows(), WORDS[lang]
+    if not laws:
+        return top
+    width = 100 if lang == 'en' else 92
+    rows, rested = central_rows() or (0, 0)
+    heads = wrap(words['laws_head'], width, lang)
+    notes = wrap(words['laws_note'].format(rested=rested, rows=rows, d=derived), 112 if lang == 'en' else 104, lang)
+    y = top + 21
+    height = 20 * len(heads) + 76 + 16 * len(notes) + 8
+    out.append(f'<rect x="20" y="{top}" width="{W - 40}" height="{height}" rx="6" fill="#f5f5f4" stroke="#e7e5e4"/>')
+    for i, line in enumerate(heads):
+        out.append(text(32, y + 20 * i, line, 15, 'bold', fill=INK))
+    y += 20 * len(heads) + 4
+    colw = (W - 64) / len(laws)
+    scale = (colw - 24) / max(c for *_, c in laws)
+    for j, (name, _, represented, c) in enumerate(laws):
+        x = 32 + j * colw
+        k = reaching_the_grammar(name, c) or 0
+        out.append(text(x, y, name if lang == 'en' else s['laws_zh']['names'][name], 14, 'bold', fill=INK))
+        out.append(f'<rect x="{f(x)}" y="{y + 7}" width="{f(c * scale)}" height="11" fill="#ffffff" stroke="{MUTED}" stroke-width="0.5"><title>{c}</title></rect>')
+        if k:
+            out.append(f'<rect x="{f(x)}" y="{y + 7}" width="{f(k * scale)}" height="11" fill="url(#reach)" stroke="{MUTED}" stroke-width="0.5"><title>{k}</title></rect>')
+        out.append(text(x, y + 34, (words['law_all'] if k == c else words['law_some']).format(c=c, k=k), 13, fill=INK))
+        if represented:
+            out.append(text(x, y + 51, words['law_rep'], 13, fill=MUTED))
+    y += 51 + 20
+    for i, line in enumerate(notes):
+        out.append(text(32, y + 16 * i, line, 12.5, fill=MUTED))
+    return top + height
+
+
+def boundary_counts():
+    """The central declarations by class against the edge of one root, from the shared-laws data."""
+    return json.loads(_read(registry.SHARED_LAWS) or '{}').get('boundary', {}).get('counts', {})
+
+
+def standings_svg(s, lang):
+    """The simpler picture: one square per central declaration, grouped by its standing against the edge of one root and,
+    at a named distance, by its reason; one example per standing in its record's words."""
+    fv, words, n = s['first_view'], s['first_view'][lang], boundary_counts()
+    total = sum(n.values())
+    cases = n.get('derived', 0) + n.get('under a stated hypothesis', 0)
+    per, pitch, size = 16, 15, 12
+    tx = 24 + per * pitch + 22
+    width = 78 if lang == 'en' else 74
+    fills = dict(zip(('derived', 'under a stated hypothesis', 'counting'), STANDING_FILL))
+    title = words['title'].format(n=total)
+    out = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" '
+           f'aria-labelledby="standings-title standings-desc" font-family="{FONT[lang]}">',
+           f'<title id="standings-title">{escape(title)}</title>',
+           f'<desc id="standings-desc">{escape(words["subtitle"].format(cases=cases))}</desc>',
+           f'<rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="10" fill="{PAPER}" stroke="#d6d3d1"/>',
+           text(24, 40, title, 22, 'bold')]
+    y = 64
+    for line in wrap(words['subtitle'].format(cases=cases), 104 if lang == 'en' else 96, lang):
+        out.append(text(24, y, line, 14, fill=MUTED))
+        y += 18
+    y += 18
+
+    def squares(y0, count, fill):
+        for i in range(count):
+            out.append(f'<rect x="{24 + (i % per) * pitch}" y="{f(y0 + (i // per) * pitch)}" width="{size}" height="{size}" '
+                       f'rx="1.5" fill="{fill}" stroke="{MUTED}" stroke-width="0.6"/>')
+        return math.ceil(count / per) * pitch
+
+    def block(y0, head, gloss, example):
+        lines = [(l, 15, 'bold', INK) for l in wrap(head, width, lang)]
+        lines += [(l, 14, 'normal', MUTED) for l in wrap(gloss, width + 4, lang)] if gloss else []
+        if example:
+            decl, words_of = example['declaration'], norm(example[lang][1])
+            lead = f'{words["example"]} {decl}{"：" if lang == "zh" else ": "}{words_of}'
+            lines += [(l, 14, 'normal', INK) for l in wrap(lead, width + 4, lang)]
+        yy = y0 + 11
+        for body, sz, weight, fill in lines:
+            out.append(text(tx, yy, body, sz, weight, fill=fill))
+            yy += 18
+        return yy - 11 - y0
+
+    def label(count, b):
+        return f'{count} {b["label"]}' if lang == 'en' else f'{count} 项{b["label"]}'
+
+    for band in fv['bands']:
+        c, b = n.get(band['key'], 0), band[lang]
+        used = squares(y, c, fills[band['key']])
+        y += max(used, block(y, label(c, b), norm(b.get('gloss', '')), band.get('example'))) + 16
+    rest = sum(n.get(d['key'], 0) for d in fv['distance'])
+    out.append(f'<line x1="24" y1="{y - 6}" x2="{W - 24}" y2="{y - 6}" stroke="#e7e5e4"/>')
+    y += 14
+    out.append(text(24, y, words['distance'].format(n=rest), 16, 'bold'))
+    y += 16
+    for d in fv['distance']:
+        c, b = n.get(d['key'], 0), d[lang]
+        used = squares(y, c, STANDING_FILL[3])
+        y += max(used, block(y, label(c, b), norm(b.get('gloss', '')), d.get('example'))) + 12
+    y += 8
+    for paragraph in words['footer']:
+        for line in wrap(paragraph, 118 if lang == 'en' else 108, lang):
+            out.append(text(24, y, line, 12.5, fill=MUTED))
+            y += 16
+        y += 4
+    height = int(y + 14)
+    out.append('</svg>')
+    out[0] = out[0].replace(f'viewBox="0 0 {W} {H}" width="{W}" height="{H}"', f'viewBox="0 0 {W} {height}" width="{W}" height="{height}"')
+    out[3] = out[3].replace(f'height="{H - 1}"', f'height="{height - 1}"')
     return '\n'.join(out) + '\n'
 
 
@@ -924,6 +1082,21 @@ def edge_bases():
     return len(with_basis), sum(1 for s in with_basis if s.get('standing') not in near)
 
 
+def law_english(name):
+    """A grammar law in English: the bold lead of its docstring in `Becoming.GrammarLaws`, else its first sentence, without
+    the law's own name in brackets; the name itself where it has no docstring."""
+    bare = name.removeprefix('Becoming.')
+    found = re.search(r'/--((?:(?!-/).)*?)-/\s*(?:@\[[^\]]*\]\s*)?(?:theorem|lemma|def|abbrev) ' + re.escape(bare) + r'[\s{(:]',
+                      _read(GRAMMAR_LAWS) or '', re.S)
+    if not found:
+        return bare
+    doc = ' '.join(found.group(1).split())
+    bold = re.match(r'\*\*(.+?)\*\*', doc)
+    lead = bold.group(1) if bold else re.split(r'(?<=[.:])\s', doc, 1)[0]
+    lead = re.sub(r'\s*\(' + re.escape(bare.strip('«»')) + r'\)', '', lead).rstrip('.:')
+    return lead[:1].upper() + lead[1:]
+
+
 def derived_rows():
     """The derived declarations from the edge record: (short name, its laws, the first sentence of its basis and any
     sentence on how its statement reads, records whose laws name it)."""
@@ -990,11 +1163,11 @@ def circular_paragraph(graph, lang):
     iface, _ = interface_counts(graph)
     if lang == 'zh':
         found = '没有哪项结果经由它们达到自身' if not groups else f'有 {len(groups)} 组结果彼此可达'
-        return [f'**已记录的使用有环吗？** 在已记录的 {edges} 条 `formal-reuse` 边上，共 {nodes} 项结果，{found}（每次生成时计算）。登记检查拒绝会闭合其已声明依赖之环的记录，'
+        return ['<a id="do-the-recorded-uses-form-a-cycle"></a>', '', f'**已记录的使用有环吗？** 在已记录的 {edges} 条 `formal-reuse` 边上，共 {nodes} 项结果，{found}（每次生成时计算）。登记检查拒绝会闭合其已声明依赖之环的记录，'
                 f'所以这是入册的条件，不是关于这些结果的一项发现：它说的是记录所声明的，不是 Lean 证明或论证没有循环。带接口的 {iface} 条 formal-reuse 边各引记录中带散列的参考文献里的一个 Lean 文件，'
                 f'没有任何工具核对那里的 Lean 是否使用所引的结果。']
     found = 'no result reaches itself' if not groups else f'{len(groups)} group{"s" if len(groups) != 1 else ""} of results reach one another'
-    return [f'**Do the recorded uses form a cycle?** Among the {edges:,} recorded `formal-reuse` edges, over {nodes} results, {found} (computed at each render). '
+    return ['<a id="do-the-recorded-uses-form-a-cycle"></a>', '', f'**Do the recorded uses form a cycle?** Among the {edges:,} recorded `formal-reuse` edges, over {nodes} results, {found} (computed at each render). '
             f'The registry refuses a record that would close a cycle among its declared dependencies, so this is a condition of entry, not a finding about the results: '
             f'it says what the records declare, not that the Lean proofs or the arguments are non-circular. Each of the {iface} formal-reuse edges with an interface cites a Lean file among the record\'s hashed '
             f'references, and no tool checks that the Lean there uses the cited result.']
@@ -1005,22 +1178,29 @@ def how_to_read(s, lang, page='theories/becoming/ONE-PAGE.md'):
     the numbers from 08 §7's phrases in spine.json (the one-page fronts copy them, and a test holds them to this)."""
     n = {phrase_n: int(phrase_n) for phrase_n, *_ in s['standing']['counts']}
     wf = os.path.relpath(WORKFLOW, Path(page).parent)
+    gl = os.path.relpath('GLOSSARY.zh.md' if lang == 'zh' else 'GLOSSARY.md', Path(page).parent)
+    tg = os.path.relpath(PAGE_ZH if lang == 'zh' else 'theories/becoming/results/THEORY-GRAPH.md', Path(page).parent)
     total, d, h, c, rest = n['117'], n['11'], n['1'], n['6'], n['99']
     share = (d + h) / total
     if lang == 'zh':
         about = '约十分之一' if 0.085 <= share <= 0.115 else f'{d + h} 项'
         return (f'每个圆是一章，按其结果数定大小；从一章到另一章的实线，计其结果使用另一章结果、记为 formal-reuse（[RESULT-WORKFLOW]({wf}) 把这一类留给'
-                f'已核验的推理；它由 AI 写成的记录指定，没有任何检查核对一次使用是否见于 Lean）的次数，章与章之间的虚线与点线是别种依赖；辐条标出该章有多少核心模块在中央的文法上陈述其律（计的是模块，'
-                f'不是推导而得的结果）。{total} 项核心声明中，{about}被读作在文法上陈述之律的情形（{d} 项推导而得，{h} 项为根上一形式（root form）的一步情形，'
-                f'在一个所述的假设之下）；其余或为计数之律，位于文法以下（{c} 项），或处于一个指明的距离，各有其理由（{rest} 项）。')
+                f'已核验的推理；它由 AI 写成的记录指定，没有任何检查核对一次使用是否见于 Lean）的次数，章与章之间的虚线与点线是别种依赖；辐条的粗细与章旁的计数，标出该章有多少核心模块在中央的文法上陈述其律（计的是模块，'
+                f'不是推导而得的结果）。章的编号是为阅读，不是证明的次序，所以使用是双向的：较深的曲线是章序在前的一章的结果使用章序在后的一章的结果；'
+                f'登记检查拒绝会闭合其已声明依赖之环的记录（[这是入册的条件，不是一项发现]({tg}#do-the-recorded-uses-form-a-cycle)）。'
+                f'{total} 项核心声明中，{about}被读作在文法上陈述之律的情形（{d} 项[推导而得]({gl}#derived)，{h} 项为根上一形式（root form）的一步情形，'
+                f'在一个所述的假设之下）；其余或为计数之律，位于文法以下（{c} 项），或处于一个[指明的距离]({gl}#named-distance)，不被读作这样的情形，各有其指明的理由（{rest} 项）。')
     about = 'About a tenth' if 0.085 <= share <= 0.115 else f'{d + h}'
     return (f'Each circle is a chapter, sized by its results; a solid curve from one chapter to another counts the uses of '
             f'the other\'s results recorded as formal-reuse, the kind [RESULT-WORKFLOW]({wf}) keeps for verified inferences (the AI-written records '
             f'assign it, and nothing checks a use against the Lean), and dashed and dotted '
-            f'curves between chapters are other dependences; a spoke says how many of the chapter\'s core modules state their laws on the '
-            f'grammar at the centre (modules, not results derived). {about} of the {total} central declarations are read as '
-            f'cases of laws stated on the grammar ({d} derived, and {h}, a root form at one step, under a stated hypothesis); the rest are counting laws, below the '
-            f'grammar ({c}), or stand at a named distance, each with its reason ({rest}).')
+            f'curves between chapters are other dependences; a spoke\'s width, and the count beside its chapter, say how many of the chapter\'s core modules state their laws on the '
+            f'grammar at the centre (modules, not results derived). The chapters are numbered for reading, not as an order of proof, so uses '
+            f'run both ways: a darker curve is an earlier chapter\'s results using a later one\'s, and the registry refuses a record that would '
+            f'close a cycle among its declared dependencies ([a condition of entry, not a finding]({tg}#do-the-recorded-uses-form-a-cycle)). '
+            f'{about} of the {total} central declarations are read as '
+            f'cases of laws stated on the grammar ({d} [derived]({gl}#derived), and {h}, a root form at one step, under a stated hypothesis); the rest are counting laws, below the '
+            f'grammar ({c}), or stand at a [named distance]({gl}#named-distance), not read as such a case and each with its reason named ({rest}).')
 
 
 def drawn_otherwise(between):
@@ -1068,25 +1248,20 @@ def lead(graph, page_path):
     counts_by = {n: phrase for n, path, phrase in st.get('counts', [])}
     m08 = 'theories/becoming/chapters/08-METHOD.md'
     lines = ['<a id="the-spine"></a>', '', '## The chapters at a glance', '',
-             f'**How to read it.** {how_to_read(s, "en", page_path)}', '',
+             f'**How to read it.** {how_to_read(s, "en", page_path)} Of the {total:,} uses between chapters, '
+             f'{sum(into[k] for k in top):,} go into {name[top[0]].lower()} and {name[top[1]].lower()}, and {backward:,} run backward. '
+             f'Under the standings, a strip gives the five shared laws: the central rows resting on each and, hatched, those whose compiled '
+             f'type or value reaches the grammar ([their table](#the-five-shared-laws)). The two boxes are the ethics\' premises, each a '
+             f'hypothesis where used, neither asserted; the badges T1 to T8 are the theses at the chapters that state them, coloured by how '
+             f'their frozen tests came out, each in its row\'s words in the table below. A curve is a dependence, not an agreement in meaning.', '',
              f'![The eight chapters and their recorded uses of one another: circles sized by their results, solid curves counting formal-reuse uses '
-             f'between chapters\' results and dashed and dotted ones other dependences, the continuation condition and C coming into chapter 7 as premises, and T1 to T8 at their '
-             f'homes coloured by test outcome]({rel(SVG["en"])})', '',
+             f'between chapters\' results and dashed and dotted ones other dependences, the five shared laws under the standings, the continuation '
+             f'condition and C coming into chapter 7 as premises, and T1 to T8 at their homes coloured by test outcome]({rel(SVG["en"])})', '',
              f'*Generated by `tools/research/spine.py` from this graph and [spine.json]({rel(DATA)}); '
-             f'[the Chinese of these sections]({rel(PAGE_ZH)}), with [its picture]({rel(SVG["zh"])}).*', '',
-             f'**Reading it closely.** Each circle is one of the eight chapters, its size the number of results it holds; the '
-             f'grammar, the root\'s vocabulary, is at the centre, and a spoke\'s width shows what share of the chapter\'s core '
-             f'modules state their laws on it. A solid curve from one chapter to another counts the uses of the second\'s '
-             f'results by the first\'s recorded as `formal-reuse`, a kind RESULT-WORKFLOW keeps for a verified inference (dashed '
-             f'and dotted curves between chapters are other dependences, with no count written): {total:,} uses '
-             f'between chapters, {sum(into[k] for k in top):,} of them into {name[top[0]].lower()} and {name[top[1]].lower()}, '
-             f'and {backward:,} running backward, an earlier chapter\'s results using a later one\'s. The two boxes are the '
-             f'ethics\' premises, each a hypothesis where used, neither asserted. The badges T1 to T8 are the theses at the '
-             f'chapters that state them, coloured by how their frozen tests came out; the table below gives each in its row\'s '
-             f'words. A curve is a dependence, not an agreement in meaning.', '']
+             f'[the Chinese of these sections]({rel(PAGE_ZH)}), with [its picture]({rel(SVG["zh"])}).*', '']
     if st:
         lines += [f'**The standings of the central declarations** ([08 §7]({rel(m08, "r-one-root-to-its-edge")})), which the '
-                  f'picture\'s top line gives:', '',
+                  f'picture\'s top line gives and the simpler picture below draws one square each:', '',
                   '| Standing against the edge of one root | Declarations | In 08 §7\'s words |', '|---|---:|---|']
         for label, n in (('derived', '11'), ('under a stated hypothesis', '1'), ('counting, below the grammar', '6'),
                          ('at a named distance', '99')):
@@ -1099,15 +1274,19 @@ def lead(graph, page_path):
                   f'record whose laws name a declaration prints its standing: for a derived row its laws, bridges and support, for the row under a '
                   f'stated hypothesis its form, hypotheses and countermodels, for a reading its basis, and otherwise the rule\'s reason. Each of the 99 has its named reason: its class, and for {at_distance} a '
                   f'basis in words. A declaration is the Lean statement a row of the coverage file names; the plain words of a result are at its record.', '',
+                  f'![The {total_decl} central declarations, one square each, by their standing against the edge of one root: derived, under a stated '
+                  f'hypothesis, counting and, by reason, at a named distance, with one example each in its record\'s words]({rel(FIRST["en"])})', '',
+                  f'*Generated by `tools/research/spine.py` from [the shared-laws data]({rel(registry.SHARED_LAWS)}) and [spine.json]({rel(DATA)}); '
+                  f'[in Chinese]({rel(FIRST["zh"])}).*', '',
                   f'**The eleven derived**, each read as a case of grammar laws by an AI-written review ([of the record]({rel(REVIEW_U4)}), [of `Listed.coming_of_ceasing`\'s row]({rel(REVIEW_U4C)})); '
                   f'every review so far is by AI ([08]({rel(m08, "review-status")})). Eight of them, all but the last three rows below, are, in 08 §7\'s words, "the eight connected rows that the '
                   f'reading of connected rows took as derived": a row that reaches the grammar, without balance in its statement, is connected by the rule '
                   f'([DESIGN-BOUNDARY]({rel(DESIGN_BOUNDARY)}) §2, rules 1 and 2), and [the reading of connected rows]({rel(CONNECTED_READING)}), also AI-written, '
                   f'marks the cases. Each «…» is a law stated in '
-                  f'[`Becoming.GrammarLaws`]({rel(GRAMMAR_LAWS)}).', '',
-                  '| Declaration | A case of | First sentence of the record\'s basis (the last row also its standing) | Named in the laws of |', '|---|---|---|---|']
+                  f'[`Becoming.GrammarLaws`]({rel(GRAMMAR_LAWS)}); the second column gives it in English by the first words of its Lean docstring.', '',
+                  '| Declaration | A case of (the law\'s docstring, its first words) | First sentence of the record\'s basis (the last row also its standing) | Named in the laws of |', '|---|---|---|---|']
         for decl, laws, first, stating in derived_rows():
-            lines.append(f'| `{decl}` | {", ".join(f"`{x}`" for x in laws)} | {first} | '
+            lines.append(f'| `{decl}` | {"; ".join(f"{law_english(x)} (`{x}`)" for x in laws)} | {first} | '
                          + ', '.join(f'[{x}]({rel(str(Path(EDGE_RECORD).parent) + "/" + x + ".md")})' for x in stating) + ' |')
         lines += ['', *shared_laws_section(s, rel, 'en'), *circular_paragraph(graph, 'en'), '']
     lines += [f'**The theses in the picture** ([08 §9]({rel(m08, "theses")})): words chosen from each row, its standing first; '
@@ -1165,8 +1344,8 @@ def section(graph, page_path):
              f'not drawn as dashed curves: {plural(len(interp_small), "interpretive pair")} with fewer than '
              f'{INTERPRETIVE_MIN} ({sum(interp_small)} edges); and the counts of curves under {LABEL_MIN} uses are not '
              f'written. The table below has every pair. Beside a circle, "within" counts formal-reuse between results of '
-             f'the same chapter; interpretive edges within a chapter are in the table. A spoke\'s width and its "k of m '
-             f'modules" count the region\'s core modules that state their laws on the grammar, as the region lists below '
+             f'the same chapter; interpretive edges within a chapter are in the table. A spoke\'s width, and the "k of m '
+             f'modules on the grammar" beside its chapter, count the region\'s core modules that state their laws on the grammar, as the region lists below '
              f'say. '
              + (f'Results in {", ".join(name.get(k, k) for k in others)} ({outside} edges touch them) are in the table only. '
                 if outside else '')
@@ -1234,17 +1413,14 @@ def zh_page(graph):
     m08 = 'theories/becoming/chapters/08-METHOD.md'
     iface, formal_edges = interface_counts(graph)
     body = ['## 各章一览', '<a id="the-spine"></a>', '',
-            f'**怎样读它。** {how_to_read(s, "zh", PAGE_ZH)}', '',
-            f'![八章及其彼此记录下的使用：圆按结果数定大小，实线计各章结果之间记为 formal-reuse 的使用，章与章之间的虚线与点线是别种依赖，两个前提进入第七章，各在所用之处为假设，T1 到 T8 '
+            f'**怎样读它。** {how_to_read(s, "zh", PAGE_ZH)}章与章之间共 {total} 次使用，其中 {into[top[0]] + into[top[1]]} 次进入'
+            f'「{zname(top[0])}」与「{zname(top[1])}」两章，{backward} 次是逆向的。地位一行之下的条带给出五条共律：依于每一条的核心行，'
+            f'斜线部分是其编译后的类型或值达到文法的行（[其表](#the-five-shared-laws)）。两个方框是伦理的两个前提，各在所用之处为假设，二者都不断言；'
+            f'徽标 T1 到 T8 是各论题，位于陈述它们的那一章，按其冻结检验的结局着色，下表以各自所在行的话给出它们。曲线是一种依赖，不是意义上的一致。', '',
+            f'![八章及其彼此记录下的使用：圆按结果数定大小，实线计各章结果之间记为 formal-reuse 的使用，章与章之间的虚线与点线是别种依赖，地位之下是五条共律，两个前提进入第七章，各在所用之处为假设，T1 到 T8 '
             f'在其所属之处按检验结局着色]({rel(SVG["zh"])})', '',
             f'*由 `tools/research/spine.py` 依理论图与 [spine.json]({rel(DATA)}) 生成；[英文图]({rel(SVG["en"])})。*', '',
-            f'**细读。** 每个圆是八章之一，大小为其所含结果数；中央是文法，即根的词汇；辐条的粗细表示该章核心模块中有多大比例在'
-            f'文法上陈述其律。从甲章到乙章的实线，计乙章的结果被甲章的结果使用、记为 `formal-reuse` 的次数，'
-            f'RESULT-WORKFLOW 把这一类留给已核验的推理（章与章之间的虚线与点线是别种依赖，不标数字）：章与章之间共 {total} 次，其中 {into[top[0]] + into[top[1]]} 次进入'
-            f'「{zname(top[0])}」与「{zname(top[1])}」两章，{backward} 次是逆向的，即章序在前的一章的结果使用章序在后的一章的结果。两个方框是伦理的两个'
-            f'前提，各在所用之处为假设，二者都不断言。徽标 T1 到 T8 是各论题，位于陈述它们的那一章，按其冻结检验的结局着色；'
-            f'下表以各自所在行的话给出它们。曲线是一种依赖，不是意义上的一致。', '',
-            f'**核心声明的地位**（[08 §7]({rel(m08, "r-one-root-to-its-edge")})），即图顶端那一行：', '',
+            f'**核心声明的地位**（[08 §7]({rel(m08, "r-one-root-to-its-edge")})），即图顶端那一行，下面较简的图每项画一个方块：', '',
             '| 相对于根之边的地位 | 声明数 | 08 §7 的话（译文） |', '|---|---:|---|']
     for label, n in (('推导而得', '11'), ('在一个所述的假设之下', '1'), ('计数，位于文法以下', '6'), ('处于一个指明的距离', '99')):
         body.append(f'| {label} | {n} | “{st["counts_zh"][n]}” |')
@@ -1252,6 +1428,8 @@ def zh_page(graph):
              f'每项声明及其地位，见[根之边的记录]({rel(EDGE_RECORD + ".md")})（英文）：{edge_bases()[0]} 项有文字的依据，在[其数据]({rel(EDGE_RECORD + ".json")})（`boundary.standings`）中，'
              f'其余 {central_total() - edge_bases()[0]} 项是规则所给的标签。凡其律中列有某项声明的记录，其页面印出该声明的地位：推导而得者印出其律、桥接与支持，在一个所述的假设之下的那一行印出其形式、假设与反模型，读法印出其依据，其余印出规则的理由。99 项中每一项都有其指明的理由：其类别，其中 {edge_bases()[1]} 项另有文字的依据。'
              f'一项[核心声明]({rel("GLOSSARY.zh.md")}#核心声明)是覆盖文件的某一行所指明的 Lean 陈述；一项结果的平实说法在其记录中。', '',
+             f'![{central_total()} 项核心声明，每项一个方块，按其相对于根之边的地位排列：推导而得、在一个所述的假设之下、计数，以及按理由分列的处于一个指明的距离者，各附一例，用其记录的话]({rel(FIRST["zh"])})', '',
+             f'*由 `tools/research/spine.py` 依[共律数据]({rel(registry.SHARED_LAWS)})与 [spine.json]({rel(DATA)}) 生成；[英文图]({rel(FIRST["en"])})。*', '',
              f'**十一项推导而得者**，各由一次 AI 写成的审阅读作文法之律的一个情形（[对该记录的审阅]({rel(REVIEW_U4)})，[对 `Listed.coming_of_ceasing` 一行的审阅]({rel(REVIEW_U4C)})）；'
              f'迄今所有审阅都出自 AI（[08]({rel(m08, "review-status")})）。其中八项（除表中最后三行外），用 08 §7 的话说，是“the eight connected rows that the reading of connected rows took as derived”'
              f'（对连接行的读法取为推导而得的八个连接行）：一行达到文法、且其陈述中没有平衡，按规则即为连接行（[DESIGN-BOUNDARY]({rel(DESIGN_BOUNDARY)}) §2，规则 1 与 2），'
@@ -1277,7 +1455,7 @@ def zh_page(graph):
              f'（{related} 条边）。不画作 formal-reuse 曲线的：少于 {DRAW_MIN} 次 formal-reuse 使用的 {len(small)} 个配对（共 '
              f'{sum(small)} 次）' + (f'，其中 {other_kind} 个画作{other_zh}' if other_kind else '') + f'；不画作虚线的：少于 '
              f'{INTERPRETIVE_MIN} 次的 {len(interp_small)} 个诠释配对（{sum(interp_small)} 条边）；少于 {LABEL_MIN} 次的曲线不标数字。下表列出'
-             f'每一个配对。圆旁的“章内使用”计同一章结果之间的 formal-reuse，章内的诠释边见表。辐条上的“m 个模块中 k 个”与其粗细，'
+             f'每一个配对。圆旁的“章内使用”计同一章结果之间的 formal-reuse，章内的诠释边见表。章旁的“m 个模块中 k 个在文法上”与辐条的粗细，'
              f'计该区域核心模块中在文法上陈述其律的那些，如[英文版](THEORY-GRAPH.md)各区域的列表所示。'
              + (f'{"、".join("「" + zname(k) + "」" for k in others)}的结果（{outside} 条边涉及它们）只在表中。' if outside else '')
              + f'延续条件与 C 作为前提进入第七章：“{cap[4]["zh"]}”（[07]({rel(cap[4]["home"])})）。T1 到 T8 位于其所属之处，按检验'
@@ -1321,6 +1499,7 @@ def render(graph_json):
     graph = json.loads(graph_json)
     try:
         pages = {SVG[lang]: svg(graph, s, lang) for lang in ('en', 'zh')}
+        pages.update({FIRST[lang]: standings_svg(s, lang) for lang in ('en', 'zh')})
     except ValueError as error:  # a count that would read as another curve's: stop the render, naming it
         return {}, [str(error)]
     pages[PAGE_ZH] = zh_page(graph)

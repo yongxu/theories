@@ -58,6 +58,7 @@ CROSSWALK = ATLAS + '/CROSSWALK.md'
 CROSSWALK_PAGES = ATLAS + '/crosswalk'
 # The map's overview as a picture, drawn by connection_map.py, which the crosswalk's index shows first.
 OVERVIEW = ATLAS + '/connections.svg'
+OVERVIEW_ZH = ATLAS + '/connections.zh.svg'  # the same picture, its words in Chinese (connection_map.overview_svg)
 # GitHub stops showing a Markdown file somewhere between 1,035,845 bytes (ATLAS.md, shown on 8 November 2026) and
 # 3,742,459 (CROSSWALK.md, not shown); no page written here exceeds 1 MiB. lean_catalogue.PAGE_LIMIT is the same bound.
 PAGE_LIMIT = 1_048_576
@@ -970,8 +971,8 @@ def crosswalk_zh_page(atlas: dict) -> str:
             domains.append(f'- **{name}**（{by[gid]["entries"]} 条，[英文页]({_href(group_path(by[gid]), ATLAS)})）：{note}。')
     out = [GENERATED, '', '# 对照表：早先的理论文件夹与各思想领域', '', zh_fronts.nav_line(CROSSWALK_ZH), '', '{{time}}', '',
            '*由 AI 依[英文的对照表](CROSSWALK.md)写成，未经人工审读；义以英文版为准。各组的条目在英文页上。*', '',
-           f'![早先的文件夹与各思想领域怎样与现行之论相接]({_href(OVERVIEW, ATLAS)})', '',
-           '*图为英文，由 connection_map.py 依同一份数据画出：每一条线把一个文件夹或领域连到它的主张所对照的本论那一部分，按关系着色；每一条线都是 AI 的读法，没有人的。*', '',
+           f'![早先的文件夹与各思想领域怎样与现行之论相接]({_href(OVERVIEW_ZH, ATLAS)})', '',
+           f'*由 connection_map.py 依同一份数据画出，名称为 AI 所译（[英文图]({_href(OVERVIEW, ATLAS)})）：每一条线把一个文件夹或领域连到它的主张所对照的本论那一部分，按关系着色；每一条线都是 AI 的读法，不是人的。*', '',
            '**它是什么。** 每一个早先的理论文件夹与每一个思想领域：它以自己的话主张了什么，在现行之论中又成了什么。它是证据层，不是用来通读的。它不产生任何结果；'
            '每一条都是 AI 的读法，没有人读过。共用一个词不是对应，结构上的相合不是意义上的相合，它也不代表任何传统发言。未承继是一种结局，不是缺陷。'
            '来源不存于此处时，所说的出自 AI 的知识，没有对照原文核对过。', '']

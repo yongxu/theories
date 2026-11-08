@@ -147,6 +147,22 @@ def check(s):
                 parse_date(ph[key])
             except (KeyError, ValueError):
                 errors.append(f'lineage.json: phase {ph.get("id")}: bad {key}')
+    folders = sorted(d.name for d in (ROOT / 'theories').iterdir() if d.is_dir() and d.name != 'becoming')
+    dated = s.get('folders')
+    if dated:  # every earlier folder dated, each end with its evidence
+        named = [f.get('folder') for f in dated]
+        if sorted(named) != folders:
+            errors.append(f'lineage.json: the dated folders {sorted(set(named) ^ set(folders))} differ from theories/')
+        for f in dated:
+            where = f'lineage.json: folder {f.get("folder")}'
+            for key in ('from', 'to'):
+                try:
+                    parse_date(f[key])
+                except (KeyError, ValueError, TypeError):
+                    errors.append(f'{where}: bad {key} {f.get(key)!r}')
+            if len(f.get('evidence', [])) < 1:
+                errors.append(f'{where}: no evidence for its dates')
+            errors += evidence_errors(where, f.get('evidence', []))
     trust = s.get('folders_trust')
     if trust:
         errors += evidence_errors('lineage.json: the crosswalk\'s estimate', [trust])
@@ -284,7 +300,15 @@ def svg(s, lang, weeks):
             x = x_of(monday, segments)
             h = 55 * n / most
             out.append(f'<rect x="{x:.1f}" y="{base + 70:.1f}" width="7" height="{h:.1f}" fill="{FAINT}"/>')
-        out.append(t(W - 50, base + 145, words['growth'].format(top=most), 13, anchor='end', fill=MUTED))
+        right = [-1e9, -1e9]  # each bar's week by its Monday, on a second line where it would touch the last label
+        for monday in weeks:
+            x, body = x_of(monday, segments) + 3.5, week_label(monday, lang)
+            half = label_width(body, size=11) / 2
+            row = next((r for r in (0, 1) if x - half > right[r] + 6), None)
+            if row is not None:
+                out.append(t(x, base + 139 + 13 * row, body, 11, anchor='middle', fill=MUTED))
+                right[row] = x + half
+        out.append(t(W - 50, base + 172, words['growth'].format(top=most), 13, anchor='end', fill=MUTED))
     # the points in lanes above the axis; the thread's path first, the markers on it
     threads = threads_of(s)
     ring_of = {pid: th['colour'] for th in reversed(threads) for pid in th['points']}
@@ -333,9 +357,16 @@ def svg(s, lang, weeks):
         return f'{name}（{shown}）' if lang == 'zh' else f'{name} ({shown})'
 
     count = Counter(p['label'] for p in s['points'])
-    y = key_row(base + 175, words.get('labels_key', ''),
-                [(lambda x, yy, k=key: marker(x, yy, k, False, 'shape'), counted(s['labels'][key][lang], count.get(key, 0)))
-                 for key in LABELS if count.get(key)])
+    used = [key for key in LABELS if count.get(key)]
+    if len(used) == 1 and words.get('labels_all'):  # one shape so far: say so, and name the shapes none takes yet
+        only = used[0]
+        shapes = [(lambda x, yy, k=only: marker(x, yy, k, False, 'shape'), words['labels_all'].format(
+            n=count[only], label=s['labels'][only][lang],
+            others=('」「' if lang == 'zh' else ' or ').join(s['labels'][k][lang] for k in LABELS if k != only)))]
+    else:
+        shapes = [(lambda x, yy, k=key: marker(x, yy, k, False, 'shape'), counted(s['labels'][key][lang], count.get(key, 0)))
+                  for key in used]
+    y = key_row(base + 202, words.get('labels_key', ''), shapes)
     y = key_row(y + 26, words.get('threads_key', ''), [(lambda x, yy, c=th['colour']: marker(x, yy, 'public', c, 'shape'), th.get('legend', {}).get(lang, words['thread_legend']))
                                                         for th in threads])
     if s.get('origins'):
@@ -343,6 +374,12 @@ def svg(s, lang, weeks):
         y = key_row(y + 26, words['origins_key'],
                     [(lambda x, yy, k=key: marker(x, yy, 'public', False, k), counted(s['origins'][key][lang], made.get(key, 0)))
                      for key in ORIGINS if made.get(key)])
+    if words.get('marks_note'):  # what a mark's height and a title's weight carry
+        y += 30
+        for line in wrap_text(words['marks_note'], 120 if lang == 'en' else 104, lang):
+            out.append(t(50, y, line, 13, fill=MUTED))
+            y += 18
+        y -= 18
     height = y + 70
     out.append(t(24, height - 18, words['footer'], 12, fill=MUTED))
     out.append('</svg>')
@@ -555,6 +592,11 @@ def wrap_text(text, width, lang):
     return lines + ([line] if line else [])
 
 
+def week_label(monday, lang):
+    """A week's bar by its Monday: '12 Oct', '10月12日'."""
+    return f'{monday.month}月{monday.day}日' if lang == 'zh' else f'{monday.day} {MONTHS[monday.month - 1][:3]}'
+
+
 def tick_label(tick, lang):
     day, precision = parse_date(tick)
     if precision == 'year':
@@ -635,7 +677,33 @@ def link(path, page):
     return rel + ('#' + path.split('#', 1)[1] if '#' in path else '')
 
 
-def page(s, lang, weeks, undated, by_folder, totals):
+KIND_ZH = {'theory': '理论', 'design': '设计', 'method': '方法', 'exploration': '探索', 'provenance': '出处'}
+
+
+def folder_rows(s, lang, groups, against, here):
+    """One row per earlier folder: its title and README, the dated span of its material with each end's evidence, its
+    kind and claims in the crosswalk, the two parts of the account its drawn claims are most read against, and its page."""
+    from tools.research import atlas as atlas_tool, connection_map
+    words, rows = s['words'][lang], []
+    by = {g['id']: g for g in groups}
+    for f in sorted(s.get('folders', []), key=lambda f: (parse_date(f['from'])[0], f['folder'])):
+        g = by.get('cxg-' + f['folder'])
+        if not g:
+            continue
+        title = connection_map.OV_SHORT_ZH.get(g['id'], g['title']['en']) if lang == 'zh' else g['title']['en']
+        ends = [f'[{f[k]}]({link(e["path"], here)})' for k, e in zip(('from', 'to'), f['evidence'] + f['evidence'][-1:])]
+        span = ends[0] if f['from'] == f['to'] else f'{ends[0]} – {ends[1]}'
+        parts = []
+        for w, name, path, n in (against or {}).get(g['id'], [])[:2]:
+            label = w[3:] if w.startswith('ch-') else connection_map.OV_WARP_ZH.get(w, name) if lang == 'zh' else name
+            parts.append(f'[{label}]({link(path, here)}) ({n})' if lang == 'en' else f'[{label}]({link(path, here)})（{n}）')
+        rows.append(f'| [{cell(title)}]({link("theories/" + f["folder"] + "/README.md", here)}) | {span} | '
+                    f'{KIND_ZH.get(g["kind"], g["kind"]) if lang == "zh" else g["kind"]} | {g["entries"]} | '
+                    f'{("、" if lang == "zh" else ", ").join(parts)} | [{words["folder_page"]}]({link(atlas_tool.group_path(g), here)}) |')
+    return rows
+
+
+def page(s, lang, weeks, undated, by_folder, totals, groups=(), against=None):
     words = s['words'][lang]
     here = PAGE[lang]
     other = PAGE['zh' if lang == 'en' else 'en']
@@ -648,6 +716,8 @@ def page(s, lang, weeks, undated, by_folder, totals):
     lines = [HEADER, '', f'# {words["title"]}', ''] + head + ['',
              words['intro'].format(commits=f'{cut["commits"]:,}' if lang == 'en' else cut['commits'],
                                    date=cut['date_' + lang], commit=cut['commit'][:9]), '']
+    if words.get('arc_short'):  # the ten-minute part opens with the arc in brief, one sentence a phase
+        lines += [words['arc_short'], '']
     if words.get('arc'):
         lines += [words['arc'], '']
     number = {p['id']: n for n, p in enumerate(s['points'], 1)}
@@ -729,6 +799,9 @@ def page(s, lang, weeks, undated, by_folder, totals):
                   '| ' + ' | '.join(s['carried_words'][c][lang] for c in order) + ' |',
                   '|' + '---:|' * len(order),
                   '| ' + ' | '.join(str(totals.get(c, 0)) for c in order) + ' |', '']
+        rows = folder_rows(s, lang, groups, against, here) if words.get('folders_table') else []
+        if rows:
+            lines += [words['folders_table'], '', '| ' + ' | '.join(words['folders_columns']) + ' |', '|---|---|---|---:|---|---|', *rows, '']
     if s.get('papers'):
         lines += [f'## {words["papers_heading"]}', '', words['papers_intro'], '',
                   f'| {words["paper"]} | {words["date"]} | {words["claimed"]} | {words["stands"]} | {words["label"]} |',
@@ -753,8 +826,9 @@ def page(s, lang, weeks, undated, by_folder, totals):
     return body.replace('{time}', words['reading_time'].format(full=full, first=first), 1)
 
 
-def render():
-    """(pages, errors)."""
+def render(atlas_json=None, against=None):
+    """(pages, errors); the atlas's data and the map's count of what each folder's claims are read against, where the
+    render has them, give the table of the earlier folders."""
     s = spec()
     if not s:
         return {}, []  # no lineage yet: nothing to write
@@ -765,7 +839,8 @@ def render():
     by_folder, totals = crosswalk_outcomes()
     out = {}
     for lang in ('en', 'zh'):
-        out[PAGE[lang]] = page(s, lang, weeks, undated, by_folder, totals)
+        groups = [g for g in json.loads(atlas_json).get('correspondence_groups', [])] if atlas_json else []
+        out[PAGE[lang]] = page(s, lang, weeks, undated, by_folder, totals, groups, against)
         try:
             out[SVG[lang]] = svg(s, lang, weeks)
         except ValueError as error:  # titles that would cross: stop the render, naming them

@@ -370,11 +370,6 @@ def check_or_render(render=False, base=None, ids=None, strict_fresh=False):
         spine_pages, spine_errors = spine.render(outputs[theory_graph.GRAPH])
         outputs.update(spine_pages)
         errors += spine_errors
-    # The lineage (RW): how the account grew, from its curated turning points, the records' history and the
-    # crosswalk; an evidence path the tree lacks or a quotation its file no longer holds is an error.
-    lineage_pages, lineage_errors = lineage.render()
-    outputs.update(lineage_pages)
-    errors += lineage_errors
     # The atlas (AA): the dynamics as a curated layer beside the records; a broken entry is an error, as a record is.
     atlas_pages, atlas_errors = atlas.render(records)
     outputs.update(atlas_pages)
@@ -382,6 +377,14 @@ def check_or_render(render=False, base=None, ids=None, strict_fresh=False):
     # The connection map (CX): the atlas's correspondences, the graph and the shared laws on one page.
     if atlas_pages:
         outputs.update(connection_map.render(atlas_pages[atlas.DATA], outputs[theory_graph.GRAPH]))
+    # The lineage (RW): how the account grew, from its curated turning points, the records' history and the
+    # crosswalk, its earlier folders dated and set beside what the map counts their claims read against; an evidence
+    # path the tree lacks or a quotation its file no longer holds is an error.
+    lineage_pages, lineage_errors = lineage.render(
+        atlas_pages.get(atlas.DATA), connection_map.read_against(atlas_pages[atlas.DATA], outputs[theory_graph.GRAPH])
+        if atlas_pages and theory_graph.GRAPH in outputs else None)
+    outputs.update(lineage_pages)
+    errors += lineage_errors
     # The Chinese landing page (RW): its template filled with reading times and counts by README.md's rule, a page this
     # render writes timed as it is about to be written.
     zh_pages, zh_errors = zh_fronts.render(records, outputs)
