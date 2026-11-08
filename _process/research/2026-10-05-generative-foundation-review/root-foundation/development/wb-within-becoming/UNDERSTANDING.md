@@ -1,6 +1,6 @@
 # What is understood
 
-9 November 2026. WB's result after three rounds, written by the coordinator from its own reading and Fable's and GPT astra's ([14](readings/14-coordinator-round3.md), [15](readings/15-fable-round3.md), [16](readings/16-astra-round3.md); earlier rounds in [the readings](NOTE.md#the-readings-in-order)). AI-written throughout. It interprets Ren's words ([verbatim](../../../../../../sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md)); it is not his speech, and his words are provenance for it, not its warrant. Argued, not proved: the Lean it cites is on main and was read, not rerun. Where the three readers still differ, §6 says so.
+9 November 2026. WB's result after three rounds, written by the WB session (the session "Ethics and monist theory review", not the repository's coordinator) from its own reading and Fable's and GPT astra's ([14](readings/14-coordinator-round3.md), [15](readings/15-fable-round3.md), [16](readings/16-astra-round3.md); earlier rounds in [the readings](NOTE.md#the-readings-in-order)). AI-written throughout. It interprets Ren's words ([verbatim](../../../../../../sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md)); it is not his speech, and his words are provenance for it, not its warrant. Argued, not proved: the Lean it cites is on main and was read, not rerun. Where the three readers still differ, §6 says so.
 
 ## 1. The answers, seen rather than asked
 
@@ -47,7 +47,7 @@ Message 6 is 03 §12's opening sentence: "A formation that senses, predicts, cho
 
 ## 4. The core in 文言
 
-Composed by the coordinator from the three readers' lines (marked C, F, A) and Ren's poem (R); not classical. 缘, 类, 续, 生, 生生, 广 keep their grammar sense; 见, 行, 愿, 境 are ordinary words.
+Composed by the WB session from the three readers' lines (marked C, F, A) and Ren's poem (R); not classical. 缘, 类, 续, 生, 生生, 广 keep their grammar sense; 见, 行, 愿, 境 are ordinary words.
 
 > 变而有成，成复为变之缘，谓之生生。（A）
 > 续必有所据之类，生住异亡各有所读。（A）
@@ -75,11 +75,11 @@ Readers named these as things Ren might least want to hear. They stay in the tex
 
 ## 6. Where the readers still differ
 
-- **"Change → state → change" and «生生».** Fable: the grammar's «生生» almost to the letter. astra: no single definition; «生生» needs new beginnings under a class, and under the widest class nothing begins again (`«一之下无复生»`). Coordinator: it turns on what "change" is; read as arising under a class it is «生生», read as succession only continuation. Either way it is not the ethics' 生生 as the glossary has it.
-- **The poisoned river and "never two".** Fable: never two fails at the crux case. astra: that confuses shared unfolding with mutual reach. Coordinator: astra's reading. Never two is one unfolding; the river shows that reach runs one way, not that the unfolding is two. §3 is written that way.
-- **Life's extension.** Fable gives a reading ("what conditions further beginnings while being fed"); astra holds it unseen until an organization, grain and contrast cases are stated; the coordinator reads 02 and 04 as two grains. §1 keeps astra's caution and Fable's poem line.
+- **"Change → state → change" and «生生».** Fable: the grammar's «生生» almost to the letter. astra: no single definition; «生生» needs new beginnings under a class, and under the widest class nothing begins again (`«一之下无复生»`). The WB session: it turns on what "change" is; read as arising under a class it is «生生», read as succession only continuation. Either way it is not the ethics' 生生 as the glossary has it.
+- **The poisoned river and "never two".** Fable: never two fails at the crux case. astra: that confuses shared unfolding with mutual reach. The WB session: astra's reading. Never two is one unfolding; the river shows that reach runs one way, not that the unfolding is two. §3 is written that way.
+- **Life's extension.** Fable gives a reading ("what conditions further beginnings while being fed"); astra holds it unseen until an organization, grain and contrast cases are stated; the WB session reads 02 and 04 as two grains. §1 keeps astra's caution and Fable's poem line.
 - **Reading Ren's acts.** Fable reads them through 03 §11 as showing what he holds; astra warns that this is an interpretation, not a theorem about his preferences. §1 says so.
-- **The direction.** Fable's 莫相吞 (closes nothing it need not); astra's invitation (attend to how life continues, what sustains and ends it; losses not hidden); the coordinator's (life finding continuation together). §3's offer joins them; "need not" still has to be said case by case.
+- **The direction.** Fable's 莫相吞 (closes nothing it need not); astra's invitation (attend to how life continues, what sustains and ends it; losses not hidden); the WB session's (life finding continuation together). §3's offer joins them; "need not" still has to be said case by case.
 
 ## 7. What it changes in the live texts
 
@@ -117,6 +117,14 @@ The method of [round 2's synthesis §4](readings/12-synthesis-round2.md#4-the-le
 
 ## 9. What the readers say they now understand
 
-- **Coordinator.** Nothing needs to carry the ethics. The theory describes how readings form, what they reach and miss, where courses nest or part. The ethics is what some of the patterns it describes, ourselves among them, are doing as they go on. The questions I kept asking were the old frame asking to be kept. What must not be dropped in letting it go is the loss.
+- **The WB session.** Nothing needs to carry the ethics. The theory describes how readings form, what they reach and miss, where courses nest or part. The ethics is what some of the patterns it describes, ourselves among them, are doing as they go on. The questions I kept asking were the old frame asking to be kept. What must not be dropped in letting it go is the loss.
 - **Fable.** The move is about voice, not premises. His poem had already answered what we kept asking (器亦能生, 同则不继, 莫相吞, 指之而已), and the direction he holds is weaker than the C kept for him.
 - **astra.** He is asking us to recognize an activity already taking place, this conversation included, not to build a framework for him to authorize from outside it. The questions remain, in another form: trace what reaches what, what response becomes possible, what follows, and what is lost, even when the answer interrupts the direction we hoped to find.
+
+## 10. Correction after Ren's ninth message: not 莫相吞
+
+Ren, 9 November 2026, on the offer as 莫相吞: "not sure about this, eating is a part of nature, that's what makes future. but i also see that animals, don't generally eat their own kinds … the situation may be more complex than these 3 characters."
+
+He is right, and the account already says why. 07 §3.4 reads predation as mixed, losing and opening something; 02 reads generation at two grains, the wood ending while the fire is passed on; and the fishers' case is eating, thirty tons a month keeping the bed and fifty ending it. 莫相吞, "none devouring another", and its formal gloss, closing nothing (`Balances.closes_nothing`), ran the grains together: every meal closes something at the grain of the one eaten, and closes nothing at the grain of the eaten population while the draw stays within what its renewal gives. The difference the laws mark is not eating or not eating but a draw beyond what the renewal it depends on gives, at a stated grain: the commons (05, joint excess), where renewal depends on what it renews. Eating one's own kind is drawing on the renewal one's own line runs through, the gated case; that animals seldom do it fits, as a tendency to explain, not a law (cannibalism occurs, often under stress) [AI reading].
+
+So §3's offer is withdrawn as worded, and §1's "the direction stays, as an offer" with it: the offer is not a slogan. It is to see, for each course, what it draws on, from what renewal and at which grain, what ends and what goes on through that ending, and who bears it; where each course ends something, the situation decides. No three characters hold it. The 文言 core's line 「愿生有所续，所损不隐，并立而莫相吞」 keeps its first two clauses and drops the third. §5.4 ("the direction is weaker than C") and §6's last bullet are superseded by this section. Mencius 1A3 (「数罟不入洿池，鱼鳖不可胜食也；斧斤以时入山林，材木不可胜用也」: take within what renews, and the taking does not run out) says the within-renewal case in another field's words: a reading to label, not a slogan to adopt.

@@ -1,10 +1,10 @@
 # Ren: no should beyond becoming; 生生 as the continuation of life; what do we want
 
-8–9 November 2026. Ren's words in a Claude Code desktop session in `/Users/ren/theories`, the coordinator's session, kept verbatim, typos included. Provenance, not authority (AGENTS.md, "Words and decisions"). AI-authored context is labelled separately. The readings the conversation produced are in [WB's note](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wb-within-becoming/NOTE.md).
+8–9 November 2026. Ren's words in a Claude Code desktop session in `/Users/ren/theories`, the session "Ethics and monist theory review" (WB's), kept verbatim, typos included. Provenance, not authority (AGENTS.md, "Words and decisions"). AI-authored context is labelled separately. The readings the conversation produced are in [WB's note](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wb-within-becoming/NOTE.md).
 
 ## Context (AI-authored)
 
-Between the messages: after message 1 the coordinator replied with a reading (in WB's readings, `01-ren-words-and-first-reply.md`); after message 2 Fable and GPT astra (via Codex) were briefed independently and read-only, and the coordinator wrote its own reading; after message 3 the coordinator wrote a third reading (seeing and numbness; the Lean on "never two"); after message 4 it replied with 通 / 蔽, 道隐于小成, three registers and a lexicon; after message 5 the three readers did a second round, which corrected the third reading's gloss of `Weighting.increasingInOwn_iff_increasing_iff_noOutside` as invalid and withdrew the lexicon for a method; message 6 answered that round's questions.
+Between the messages: after message 1 this session replied with a reading (in WB's readings, `01-ren-words-and-first-reply.md`); after message 2 Fable and GPT astra (via Codex) were briefed independently and read-only, and this session wrote its own reading; after message 3 this session wrote a third reading (seeing and numbness; the Lean on "never two"); after message 4 it replied with 通 / 蔽, 道隐于小成, three registers and a lexicon; after message 5 the three readers did a second round, which corrected the third reading's gloss of `Weighting.increasingInOwn_iff_increasing_iff_noOutside` as invalid and withdrew the lexicon for a method; message 6 answered that round's questions.
 
 ## Ren's words
 
@@ -65,3 +65,19 @@ Between the messages: after message 1 the coordinator replied with a reading (in
 > but so far, great job, keep using fable and astra along with yourself. keeping going, to "Really Understand"
 >
 > one more around of thinking please, this time you can record/write some md files if that helps
+
+### 7 (9 November, during the review's first step)
+
+On the WB session's plan to split the live texts among the three readers:
+
+> not a good idea - we use different to get different perspectives, not to split work
+
+### 8 (9 November, during the review's first step)
+
+> and when it is the right time - change AGENTS.md first, to make sure it is concise, and follows our latest direction elegantly
+
+### 9 (9 November, on the AGENTS.md draft's offer, "莫相吞 … offered by pointing, not as a law")
+
+> not sure about this, eating is a part of nature, that's what makes future. but i also see that animals, don't generally eat their own kinds
+>
+> the situation may be more complex than these 3 characters
