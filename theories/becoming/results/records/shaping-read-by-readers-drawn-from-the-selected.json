@@ -148,7 +148,7 @@
   ],
   "validation_scope": {
     "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T165537.368039Z): Becoming.DrawnShaping, 38 declarations, every one with an empty axiom report, all cited here. Built in one session; one independent read-only review by a separate AI agent (sixteen findings, no unsound Lean), taken as the kit note says, study section 414; no person's review recorded.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T165537.368039Z）：Becoming.DrawnShaping，38 项声明，公理报告皆空，本记录全引。于一会话中构建；另一 AI 代理作一次独立只读审查（十六项意见，无不健全之 Lean），依工作包说明采纳，见研究第 414 节；未经人审。"
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T165537.368039Z）：Becoming.DrawnShaping，38 项声明，公理报告皆空，本记录全引。于一会话中构建；另一 AI 代理作一次独立只读审查（十六项意见，无不健全之 Lean），依工作包说明采纳，见研究第 414 节；尚无人审之记录。"
   },
   "next_delta": {
     "en": "Readers who learn; a cost changing with the share; mutation with drift and the time to leave the lock; the generic lock at a start read there, upper_strictly and present_along_course lifted into RuleCapture (rule 9, its owner's call); a run of CMT's frozen test of the critical mass on laboratory stag hunts (experiments/critical-mass-located); an independent review by a person.",

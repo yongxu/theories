@@ -262,7 +262,7 @@
   ],
   "validation_scope": {
     "en": "Pure core, every axiom report empty (core receipt 20261031T183655.254131Z): BlanketWeights (46 theorems in 90 declarations) imports Blanket and Flow, a leaf; the witnesses evaluate by decide over full nested matches. Reviewed by other AI agents: the design (REVIEW-UE26-DESIGN, fifteen findings), the literature, the revised kit (RECHECK-UE26, twelve) and the Lean and landing texts (REVIEW-UE26-LANDING, nineteen, and its recheck, six), every finding taken; study section 484; no person's review recorded.",
-    "zh": "纯核，公理报告皆空（核心回执 20261031T183655.254131Z）：BlanketWeights 引 Blanket 与 Flow，为叶；见证以 decide 于完整之嵌套匹配求值。他 AI 代理审之：设计（REVIEW-UE26-DESIGN，十五条）、文献、修订之件（RECHECK-UE26，十二条）、Lean 与落地文本（REVIEW-UE26-LANDING，十九条，复核六条），凡所见皆取；研究第 484 节；未经人审。"
+    "zh": "纯核，公理报告皆空（核心回执 20261031T183655.254131Z）：BlanketWeights 引 Blanket 与 Flow，为叶；见证以 decide 于完整之嵌套匹配求值。他 AI 代理审之：设计（REVIEW-UE26-DESIGN，十五条）、文献、修订之件（RECHECK-UE26，十二条）、Lean 与落地文本（REVIEW-UE26-LANDING，十九条，复核六条），凡所见皆取；研究第 484 节；尚无人审之记录。"
   },
   "next_delta": {
     "en": "Entropy production of the lag relay, joining EntropyProduction; a discrete law for footnote 13's set of internal and active states; a chain's steady weights computed from its rates; review by a person.",

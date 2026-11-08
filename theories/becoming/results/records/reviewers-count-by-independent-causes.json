@@ -99,7 +99,7 @@
   ],
   "validation_scope": {
     "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T212948.819150Z): Becoming.Reconfiguration, 80 declarations, every one with an empty axiom report; core purity verified. The module states the periphery module CorrectionReconfiguration (receipt correction-reconfiguration-verification.json, whose six cited witnesses also report no axiom) in the core's vocabulary. The record was read against the current Lean; no person's review recorded.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T212948.819150Z）：Becoming.Reconfiguration 之 80 项声明公理报告皆空；核心纯净已核对。该模块以核心之用语陈述外围模块 CorrectionReconfiguration（回执 correction-reconfiguration-verification.json，所引六项见证亦不报公理）。本记录对照当前 Lean 读过；未经人审。"
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T212948.819150Z）：Becoming.Reconfiguration 之 80 项声明公理报告皆空；核心纯净已核对。该模块以核心之用语陈述外围模块 CorrectionReconfiguration（回执 correction-reconfiguration-verification.json，所引六项见证亦不报公理）。本记录对照当前 Lean 读过；尚无人审之记录。"
   },
   "next_delta": {
     "en": "Causes formed rather than supplied: fault formulas read from failures that occur in a run, and readiness where the bounds on co-occurring causes change.",

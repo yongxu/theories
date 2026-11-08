@@ -1100,7 +1100,7 @@ def lead(graph, page_path):
                   f'stated hypothesis its form, hypotheses and countermodels, for a reading its basis, and otherwise the rule\'s reason. Each of the 99 has its named reason: its class, and for {at_distance} a '
                   f'basis in words. A declaration is the Lean statement a row of the coverage file names; the plain words of a result are at its record.', '',
                   f'**The eleven derived**, each read as a case of grammar laws by an AI-written review ([of the record]({rel(REVIEW_U4)}), [of `Listed.coming_of_ceasing`\'s row]({rel(REVIEW_U4C)})); '
-                  f'every review so far is by AI ([08]({rel(m08, "review-status")})). Eight of them, all but the last three rows below, are, in 08 §7\'s words, "the eight connected rows that the '
+                  f'every recorded review so far is by AI ([08]({rel(m08, "review-status")})). Eight of them, all but the last three rows below, are, in 08 §7\'s words, "the eight connected rows that the '
                   f'reading of connected rows took as derived": a row that reaches the grammar, without balance in its statement, is connected by the rule '
                   f'([DESIGN-BOUNDARY]({rel(DESIGN_BOUNDARY)}) §2, rules 1 and 2), and [the reading of connected rows]({rel(CONNECTED_READING)}), also AI-written, '
                   f'marks the cases. Each «…» is a law stated in '
@@ -1253,7 +1253,7 @@ def zh_page(graph):
              f'其余 {central_total() - edge_bases()[0]} 项是规则所给的标签。凡其律中列有某项声明的记录，其页面印出该声明的地位：推导而得者印出其律、桥接与支持，在一个所述的假设之下的那一行印出其形式、假设与反模型，读法印出其依据，其余印出规则的理由。99 项中每一项都有其指明的理由：其类别，其中 {edge_bases()[1]} 项另有文字的依据。'
              f'一项[核心声明]({rel("GLOSSARY.zh.md")}#核心声明)是覆盖文件的某一行所指明的 Lean 陈述；一项结果的平实说法在其记录中。', '',
              f'**十一项推导而得者**，各由一次 AI 写成的审阅读作文法之律的一个情形（[对该记录的审阅]({rel(REVIEW_U4)})，[对 `Listed.coming_of_ceasing` 一行的审阅]({rel(REVIEW_U4C)})）；'
-             f'迄今所有审阅都出自 AI（[08]({rel(m08, "review-status")})）。其中八项（除表中最后三行外），用 08 §7 的话说，是“the eight connected rows that the reading of connected rows took as derived”'
+             f'迄今有记录的审阅都出自 AI（[08]({rel(m08, "review-status")})）。其中八项（除表中最后三行外），用 08 §7 的话说，是“the eight connected rows that the reading of connected rows took as derived”'
              f'（对连接行的读法取为推导而得的八个连接行）：一行达到文法、且其陈述中没有平衡，按规则即为连接行（[DESIGN-BOUNDARY]({rel(DESIGN_BOUNDARY)}) §2，规则 1 与 2），'
              f'[对连接行的读法]({rel(CONNECTED_READING)})（也是 AI 写成的）标出其中的情形。每个 «…» 都是 [`Becoming.GrammarLaws`]({rel(GRAMMAR_LAWS)}) 中陈述的一条律。', '',
              '| 声明 | 所属情形 | 记录依据的第一句（末行另引其地位一句；英文原文） | 其律中列有它的结果 |', '|---|---|---|---|',

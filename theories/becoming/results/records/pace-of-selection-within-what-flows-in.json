@@ -487,7 +487,7 @@
   ],
   "validation_scope": {
     "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T174631.939884Z): Becoming.SelectionPace, 224 declarations, every one with an empty axiom report, all cited here. Built in one session by an AI agent; an independent read-only review by a separate AI agent (1 error, 3 overclaims, 9 imprecisions, 7 suggestions) and its re-check of the revision (1 overclaim, 3 imprecisions, 1 suggestion), every finding taken, the last suggestion as a follow-up, in study section 416; no person's review recorded.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T174631.939884Z）：Becoming.SelectionPace，224 项声明，公理报告皆空，本记录全引。于一会话中由 AI 代理构建；另一 AI 代理作独立只读审查（1 项错误、3 项过度陈述、9 项不精确、7 项建议）并复查修订（1 项过度陈述、3 项不精确、1 项建议），所见皆采，末一建议列为后续，见研究第 416 节；未经人审。"
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T174631.939884Z）：Becoming.SelectionPace，224 项声明，公理报告皆空，本记录全引。于一会话中由 AI 代理构建；另一 AI 代理作独立只读审查（1 项错误、3 项过度陈述、9 项不精确、7 项建议）并复查修订（1 项过度陈述、3 项不精确、1 项建议），所见皆采，末一建议列为后续，见研究第 416 节；尚无人审之记录。"
   },
   "next_delta": {
     "en": "The carriers' joint law for an amount above one, in layers; the cap laws asked of the carriers alone; the least standing tied to need beyond one lemma; how long exact transmission of offspring number with growth can last within a bounded inflow; a balanced-on form of Entropy's stock law; a frozen test of the whole-level form; review by a person.",

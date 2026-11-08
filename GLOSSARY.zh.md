@@ -1,7 +1,9 @@
-<!-- GLOSSARY.md 的中文版（RW，2026 年 11 月 8 日，AI 译自英文版，未经人工审读）。义以英文版为准；英文版改动时，本版随之修订。 -->
+<!-- GLOSSARY.md 的中文版（RW，2026 年 11 月 8 日，AI 译自英文版，尚无人审查它的记录）。义以英文版为准；英文版改动时，本版随之修订。 -->
 # 术语表
 
 [English](GLOSSARY.md) · [首页](README.zh.md) · [一页](theories/becoming/ONE-PAGE.zh.md) · [用途](theories/becoming/USES.zh.md) · [实例](theories/becoming/USES-EXAMPLES.zh.md) · [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) · [八章（英文）](theories/becoming/chapters/README.md) · [古文（第六章）](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) · [检验](TESTS.zh.md) · [对照表](theories/becoming/results/atlas/CROSSWALK.zh.md) · [怎样长成](theories/LINEAGE.zh.md) · **术语表** · [审查包](theories/becoming/review/README.zh.md)
+
+*AI 译自英文版，尚无人审查它的记录；义以英文版为准。*
 
 生灭变化之论的词语，每一个只有一义、一个所属之处：定义它的那一章的那一节。别处用到一个词，都取这一义，并链接到那里。汉语术语在引入之处释义一次。除第六章外，各章与理论图皆为英文（理论图的各章一览有中文版）。文法的每一个概念及其 Lean 名称，都列在[理论图](theories/becoming/results/THEORY-GRAPH.md#the-grammars-concepts)中；较早文本所用的标签与现行术语的对照，见[方法一章](theories/becoming/chapters/08-METHOD.md#names)。本页所取代的术语表（规范章的 §10，连同其形式术语索引及其与语料词汇的对照）与该章一同保存在历史之中；九月的语料术语表（192 个词条）保存在[它自己的历史](_process/history/2026-09-consolidation/GLOSSARY.md)中。
 
@@ -38,7 +40,7 @@
 
 | 术语 | 义 | 出处 |
 |---|---|---|
-| 形成（formation） | 在世界模型中，一个关系项可以活跃于其中的角色：依存、取用、取与给；同一关系项也可以作为处于某一水平的缘，为他者所依存、所取用 | [第四章](theories/becoming/chapters/04-LIFE.md#life-as-condition) |
+| 形成（formation） | 在世界模型中，一个关系项可以在其中活跃、依存、取用、取与给的角色；同一关系项也可以作为处于某一水平的缘，为他者所依存、所取用 | [第四章](theories/becoming/chapters/04-LIFE.md#life-as-condition) |
 | 传（carrying renewal） | 粗的样式继续下去，而一条细的相续开始（火传） | [第二章 §1](theories/becoming/chapters/02-MAP.md#branches) |
 | 延、尽（goes on, ends） | 沿某一分支继续下去；在每一分支上都终止 | [第二章 §1](theories/becoming/chapters/02-MAP.md#branches) |
 | 生成、守、退化（generation, keeping, degeneration） | 一个样式经由传而继续下去；不经由传而继续下去；在每一分支上都终止。“生成”从不指生起，也不指任何新的组织，它也不是生生：生生的英文释义“continuing generation”（持续的生发，第七章 §2）说的是生发，不是这一义：生成可以在两个粒度层级上继续下去，而可形成者只是回返。自某一点起守（后守）容许在该点之前有复生；有了它，再加上排中律，诸区域便覆盖全体。在一个进程的诸时刻上读，在判定的前提之下，保持扩大就是在一无所失的那一个之下的生成 | [第二章 §1](theories/becoming/chapters/02-MAP.md#branches)，[第七章 §2](theories/becoming/chapters/07-SIGNIFICANCE.md#r-keeping-widening-is-generation-losing-nothing) |
@@ -49,7 +51,7 @@
 | 环、耦合、所携之量（loop, coupling, carried amount） | 影响的一条闭合路径；一个水平对另一个水平反应的强度；一个差异沿一条路径所携带的东西 | [第二章](theories/becoming/chapters/02-MAP.md#loops) |
 | 第一律（first law） | `Flow.Gainless` 的脊柱之名：一个没有重复的封闭同族，所得回的至多是从它所取走的；在㶲平衡之下，以可用功读出的热力学第二定律给出它（`EntropyProduction.gainless_of_secondLaw`）。热力学第一定律，即能量守恒，总是以全名称之 | [第二章](theories/becoming/chapters/02-MAP.md#how-to-read) |
 | 元吸引子（meta-attractor） | 封闭的捕获：一个选择之环，其规则与其对规则的读取都由它所选择的份额形成，环中没有任何东西读取份额之外者。它从不指语料的工作定义，即一种活动的反复出现的组织，其后果有助于在其具体承载者的变化之中再生产选择这一组织的条件：那是另一义，二者都未被表明包含对方：形式的元吸引子不说及承载者，所以一个捕获之环在某一对类上是否生成，仍属未决 | [第二章](theories/becoming/chapters/02-MAP.md#capture) |
-| <a id="锁定"></a>锁定（lock） | 一条读自它所提高之份额的规则所处的一种构形：此后的进程保持在这一构形中，份额与规则都不低于起点，而它读不到的损失可以越过任何界限；无噪声时，唯有它所读之物的改变（一个在损失超过某界限时便不再偏好的读取，这是一条充分的出路，未表明是唯一的），或律、读法、选择的改变，才让它离开；有噪声时，有些锁定单凭漂移也会离开，并非全部（有的已证明，如逐一抽取的临界量；对经由规则的捕获，是[一种读法](theories/becoming/chapters/02-MAP.md#which-locks-noise-leaves)）。无明一行所说的“锁定于一个目标”是寻求的锁定，不是这里的构形 | [第二章 §9](theories/becoming/chapters/02-MAP.md#r-closed-capture) |
+| <a id="锁定"></a>锁定（lock） | 一条读自它所提高之份额的规则所处的一种构形：此后的进程保持在这一构形中，份额与规则都不低于起点，而它读不到的损失可以越过任何界限；无噪声时，唯有它所读之物的改变（一个在损失超过某界限时便不再偏好的读取，这是一条充分的出路，未表明是唯一的），或律、读法、选择的改变，才让它离开；有噪声时，有些锁定单凭漂移也会离开，并非全部（有的已证明，如逐一抽取的临界量；对经由规则的捕获，是[一种读法](theories/becoming/chapters/02-MAP.md#which-locks-noise-leaves)）。（中文版所加：无明一行所说的“锁定于一个目标”是寻求的锁定，不是这里的构形。） | [第二章 §9](theories/becoming/chapters/02-MAP.md#r-closed-capture) |
 
 ## 认知
 
@@ -77,8 +79,8 @@
 | 延续条件（the continuation condition）`Unrestricted` | 从每一个立场看，对任何东西，其延续到未来都有意义；陈述而不断言；它确定范围 | [第七章 §3](theories/becoming/chapters/07-SIGNIFICANCE.md#condition) |
 | 自闭包读法、全闭包条件（the own-closure reading, the whole-closure condition） | 把“有意义”读作位于一个中心沿一个关系与之一同继续的东西之内；延续条件在这一读法之下所成为的：每一个中心沿该关系的闭包都是整体。这是一个关于关系的陈述，有的网满足它，有的网不满足，而不是意义保持自由时的那个前提 | [第七章 §4.5](theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-continuation-condition-on-the-root) |
 | C | 扩大之比较：扩大可形成者更好；它给出次序；对诸进程的排序需要它，或一个代替它的前提（单凭自我关切，无需 C 便排定一种情形） | [第七章 §4](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order) |
-| 延续之条件、凡续皆有顾（第六章之名） | 第六章称延续条件为延续之条件，它在 §7.3 所述的中华本以古名称之为凡续皆有顾；义即延续条件（见上），只有一义 | [第六章](theories/becoming/chapters/06-CLASSICAL-TEXTS.md#thesis)、[§7.3](theories/becoming/chapters/06-CLASSICAL-TEXTS.md#zhonghua) |
-| 以广为愈（第六章之名） | 第六章与中华本称 C（扩大可形成者更好）为以广为愈；义即 C（见上），只有一义 | [第六章](theories/becoming/chapters/06-CLASSICAL-TEXTS.md#thesis)、[§7.3](theories/becoming/chapters/06-CLASSICAL-TEXTS.md#zhonghua) |
+| 延续之条件、凡续皆有顾（第六章之名；中文版专有） | 第六章称延续条件为延续之条件，它在 §7.3 所述的中华本以古名称之为凡续皆有顾；义即延续条件（见上），只有一义 | [第六章](theories/becoming/chapters/06-CLASSICAL-TEXTS.md#thesis)、[§7.3](theories/becoming/chapters/06-CLASSICAL-TEXTS.md#zhonghua) |
+| 以广为愈（第六章之名；中文版专有） | 第六章与中华本称 C（扩大可形成者更好）为以广为愈；义即 C（见上），只有一义 | [第六章](theories/becoming/chapters/06-CLASSICAL-TEXTS.md#thesis)、[§7.3](theories/becoming/chapters/06-CLASSICAL-TEXTS.md#zhonghua) |
 | 不变之步（the step of invariance） | 延续条件在自我之预设以外的内容 | [第七章 §4](theories/becoming/chapters/07-SIGNIFICANCE.md#step) |
 | 存活之意义（living significance） | 该条件所给出的：活下去者的意义 | [第七章 §3](theories/becoming/chapters/07-SIGNIFICANCE.md#living-significance) |
 | 生生（*shēngshēng*） | 整体之中的生命及其持续的生发［AI 读法，D1］。T8 论证，它就是对生命而言的道，以扩大可形成者来比较，以延续条件定范围，以 C 定次序。它既不是文法的 `«生生»`（无尽的复生），也不是第二章的生成本身（生成容许损失），也不是任何新的组织。读作扩大时，在一个进程的诸时刻上、在判定的前提之下，它是可能者的生成，且不失去其中任何一个［AI 读法，D45］ | [第七章 §2](theories/becoming/chapters/07-SIGNIFICANCE.md#order) |

@@ -132,7 +132,7 @@
   ],
   "validation_scope": {
     "en": "Machine-checked by Lean 4.29.1 with Std in three receipts, each binding the current bytes of its sources: verification.json (MarketGenerativity, 39 theorems), boundary-verification.json (RegimeBoundary, rebuilding MarketGenerativity) and attraction-verification.json (RegimeAttraction, rebuilding both); every cited theorem reports propext, Quot.sound and Classical.choice. Built 5 to 8 October 2026; the record was read against the current Lean; no person's review recorded.",
-    "zh": "Lean 4.29.1 实查，三份回执各绑定其源码之当前字节：verification.json（MarketGenerativity）、boundary-verification.json（RegimeBoundary）与 attraction-verification.json（RegimeAttraction，重建前二者）；所引定理皆报 propext、Quot.sound 与 Classical.choice。10月5日至8日构建；本记录对照当前 Lean 读过；未经人审。"
+    "zh": "Lean 4.29.1 实查，三份回执各绑定其源码之当前字节：verification.json（MarketGenerativity）、boundary-verification.json（RegimeBoundary）与 attraction-verification.json（RegimeAttraction，重建前二者）；所引定理皆报 propext、Quot.sound 与 Classical.choice。10月5日至8日构建；本记录对照当前 Lean 读过；尚无人审之记录。"
   },
   "next_delta": {
     "en": "The share law, the margin and the two ends as instances of the spine's laws of change, as MarketInstances gives for never leaving, reaching, lasting and draining; a basin or stability law for every β.",

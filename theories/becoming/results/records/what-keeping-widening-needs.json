@@ -549,7 +549,7 @@
   ],
   "validation_scope": {
     "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261029T184601.050950Z): Becoming.KeepingWidening, 306 declarations, Dissipation's total_eq_of_supports and Population's length_le_count, every one with an empty axiom report, all cited here; every earlier statement of the module prints unchanged (signature audit). Built in sessions; independent read-only reviews by a separate AI agent, REVIEW-UE7 (study section 419) and REVIEW-GW-LEAN with its re-check (study section 448), every finding taken but one of the first; no person's review recorded.",
-    "zh": "Lean 4.29.1 检查器实查（回执 20261029T184601.050950Z）：Becoming.KeepingWidening 之 306 项声明、Dissipation 之 total_eq_of_supports 与 Population 之 length_le_count，公理报告皆空，皆引；本模块之旧陈述所印不变（签名审查）。另一 AI 代理独立只读审查：REVIEW-UE7（第 419 节）与 REVIEW-GW-LEAN 及其复查（第 448 节），所见除首次一项外皆采；未经人审。"
+    "zh": "Lean 4.29.1 检查器实查（回执 20261029T184601.050950Z）：Becoming.KeepingWidening 之 306 项声明、Dissipation 之 total_eq_of_supports 与 Population 之 length_le_count，公理报告皆空，皆引；本模块之旧陈述所印不变（签名审查）。另一 AI 代理独立只读审查：REVIEW-UE7（第 419 节）与 REVIEW-GW-LEAN 及其复查（第 448 节），所见除首次一项外皆采；尚无人审之记录。"
   },
   "next_delta": {
     "en": "Comparing two courses on admitted ranges and on what they keep reachable is done (comparing-two-courses-on-what-they-admit, what-a-course-keeps-reachable), what carries their openings remaining; growth by kinds not given in advance; which reading the widening order counts, beyond names; review by a person.",
