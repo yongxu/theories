@@ -483,7 +483,7 @@
   ],
   "validation_scope": {
     "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261027T050540.882212Z): Becoming.ReachableRanges, 196 declarations, every one with an empty axiom report, all cited here; Web.KeepsWidening.chain, .of_chain, .not_listed_via_chain, Web.keepsWidening_iff_chain and Law.runs_agree sit in the leaf until the owners of the definitions they concern move them. Built in one session; an independent read-only review by a separate AI agent (REVIEW-UE10) and two re-checks (RECHECK-UE10, RECHECK2-UE10), in study section 424; no person's review recorded.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261027T050540.882212Z）：Becoming.ReachableRanges 之 196 项声明，公理报告皆空，本记录全引；按名持续扩大之链之律诸定理与 Law.runs_agree 暂居此叶，待其所涉定义之主移之。于一会话中构建；另一 AI 代理作独立只读审查（REVIEW-UE10）并两次复查（RECHECK-UE10、RECHECK2-UE10），见研究第 424 节；未经人审。"
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261027T050540.882212Z）：Becoming.ReachableRanges 之 196 项声明，公理报告皆空，本记录全引；按名持续扩大之链之律诸定理与 Law.runs_agree 暂居此叶，待其所涉定义之主移之。于一会话中构建；另一 AI 代理作独立只读审查（REVIEW-UE10）并两次复查（RECHECK-UE10、RECHECK2-UE10），见研究第 424 节；尚无人审之记录。"
   },
   "next_delta": {
     "en": "What carries a course's openings, 07's remaining candidate; a branching witness for keeping the possible within a horizon widening; a reason, or a premise, for a rule of precedence between realized and reachable widening, or for a lag's verdict; review by a person.",

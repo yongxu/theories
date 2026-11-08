@@ -479,7 +479,7 @@
   ],
   "validation_scope": {
     "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261028T054831.888463Z): all 190 declarations of Becoming.Presence, each with an empty axiom report. Built in one session; an independent read-only review by another AI agent (REVIEW-UE14, 18 findings, every one taken) and a re-check, study section 432; no person's review recorded. Most laws restate the order theory of linear extensions.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261028T054831.888463Z）：Becoming.Presence 之全部 190 项声明，公理报告皆空。于一会话中构建；另一 AI 代理作独立只读审查（REVIEW-UE14，十八条，皆已采纳）并复查，见研究第 432 节；未经人审。多数律重述线性扩张之序论。"
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261028T054831.888463Z）：Becoming.Presence 之全部 190 项声明，公理报告皆空。于一会话中构建；另一 AI 代理作独立只读审查（REVIEW-UE14，十八条，皆已采纳）并复查，见研究第 432 节；尚无人审之记录。多数律重述线性扩张之序论。"
   },
   "next_delta": {
     "en": "Presence on the theory's other models, first the order of exchanges the World's interleavings leave; the present of a center; growths whose courses are weighted; review by a person.",

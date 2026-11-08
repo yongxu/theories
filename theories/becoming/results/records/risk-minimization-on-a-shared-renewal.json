@@ -213,7 +213,7 @@
   ],
   "validation_scope": {
     "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261029T153820.435638Z): 58 of the 98 declarations of Becoming.FreeEnergyGuarantees, the rest cited by its sibling record, each with an empty axiom report. Drafted by an AI agent and read in the session; an independent read-only review by another AI agent (REVIEW-UE16) and a re-check, study section 449; no person's review recorded. The laws apply landed theorems.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261029T153820.435638Z）：Becoming.FreeEnergyGuarantees 之 98 项声明中之 58 项，余者由其姊妹记录引用，公理报告皆空。由一 AI 代理起草，会话中审读；另一 AI 代理作独立只读审查（REVIEW-UE16）并复查，见研究第 449 节；未经人审。诸律应用已落地之定理。"
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261029T153820.435638Z）：Becoming.FreeEnergyGuarantees 之 98 项声明中之 58 项，余者由其姊妹记录引用，公理报告皆空。由一 AI 代理起草，会话中审读；另一 AI 代理作独立只读审查（REVIEW-UE16）并复查，见研究第 449 节；尚无人审之记录。诸律应用已落地之定理。"
   },
   "next_delta": {
     "en": "Conditions under which a shared reading of the joint outcome keeps a collective going; review by a person.",

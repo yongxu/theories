@@ -91,7 +91,7 @@
   ],
   "validation_scope": {
     "en": "Checked by the module's checker with Lean 4.30.0-rc2 and pinned Mathlib (receipt 20261007T222003.863783Z, the same bytes as organized-scale-verification.json; it binds the current bytes): OrganizedScaleLoop, 26 theorems audited, 12 cited here, with 77 inherited audits replayed. The study records a counter-review by the same author, not independent; no person's review recorded.",
-    "zh": "以模块检查器与 Lean 4.30.0-rc2 及固定 Mathlib 检查（回执 20261007T222003.863783Z，与 organized-scale-verification.json 字节相同；绑定当前字节）：OrganizedScaleLoop 审计 26 条定理，此处引 12 条，并重放 77 项继承审计。研究记有同一作者的反审，非独立；未经人审。"
+    "zh": "以模块检查器与 Lean 4.30.0-rc2 及固定 Mathlib 检查（回执 20261007T222003.863783Z，与 organized-scale-verification.json 字节相同；绑定当前字节）：OrganizedScaleLoop 审计 26 条定理，此处引 12 条，并重放 77 项继承审计。研究记有同一作者的反审，非独立；尚无人审之记录。"
   },
   "next_delta": {
     "en": "In one preparation, measure regional physiology, signalling, retained change, movement and later microbial conditions, and compare a current-total model, a model without acquired history and one keeping it, with matched capacity and held-out interventions.",

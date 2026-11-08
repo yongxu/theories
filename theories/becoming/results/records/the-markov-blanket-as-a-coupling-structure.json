@@ -159,7 +159,7 @@
   ],
   "validation_scope": {
     "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261029T164943.729811Z): 35 of the 49 declarations of Becoming.Blanket, the rest cited by its sibling record, each with an empty axiom report. Drafted by an AI agent; an independent read-only review by another AI agent (REVIEW-UE18), whose probe the revision adopted, and a re-check, study section 452; no person's review recorded.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261029T164943.729811Z）：Becoming.Blanket 之 49 项声明中之 35 项，余者由其姊妹记录引用，公理报告皆空。由一 AI 代理起草；另一 AI 代理作独立只读审查（REVIEW-UE18），修订采其探针，并复查，见研究第 452 节；未经人审。"
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261029T164943.729811Z）：Becoming.Blanket 之 49 项声明中之 35 项，余者由其姊妹记录引用，公理报告皆空。由一 AI 代理起草；另一 AI 代理作独立只读审查（REVIEW-UE18），修订采其探针，并复查，见研究第 452 节；尚无人审之记录。"
   },
   "next_delta": {
     "en": "A formation's records other than its level as the internal part of a blanketed law; its level as that part across a family of runs, or along one run from the consistency condition alone, without functions given; the threshold-reading policy unable to draw on a larger supply; review by a person.",

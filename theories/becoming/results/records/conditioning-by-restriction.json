@@ -211,7 +211,7 @@
   ],
   "validation_scope": {
     "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T163242.561061Z): Becoming.ConditionalWeights, 110 declarations, every one with an empty axiom report; this record cites 78 of them and exit-from-a-margin the other 32. Built in one session; an independent read-only review by a separate AI agent with a Lean rebuild, its findings taken and the revision re-checked, in study section 412; no person's review recorded.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T163242.561061Z）：Becoming.ConditionalWeights，110 项声明，公理报告皆空；本记录引其 78 项，exit-from-a-margin 引其余 32 项。于一会话中构建；另一 AI 代理作独立只读审查并重建 Lean，其所见皆采，修订经复查，见研究第 412 节；未经人审。"
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T163242.561061Z）：Becoming.ConditionalWeights，110 项声明，公理报告皆空；本记录引其 78 项，exit-from-a-margin 引其余 32 项。于一会话中构建；另一 AI 代理作独立只读审查并重建 Lean，其所见皆采，修订经复查，见研究第 412 节；尚无人审之记录。"
   },
   "next_delta": {
     "en": "Restriction stated once for every weighting, with possibility's support commuting with it; graded records on a general domain; review by a person.",

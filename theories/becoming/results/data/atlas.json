@@ -26082,7 +26082,7 @@
      {
       "what": "Dossier C for review by scholars of classical texts",
       "where": "theories/becoming/review/CLASSICAL-TEXTS.md",
-      "extent": "39 items (C-01 to C-39, counted by heading); 95 questions by its own header. No person has reviewed it, by its own header."
+      "extent": "39 items (C-01 to C-39, counted by heading); 95 questions by its own header. By its own header, no independent human review of the theory is recorded, and the person who directs the work has read its important parts, not every word."
      },
      {
       "what": "The chapter: corpus, candidates, conditional laws, the hexagram world, names",
@@ -52016,7 +52016,7 @@
     {
      "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#corpus",
      "says": {
-      "en": "「Lean 检查的是所给的推导，不判定古人的定义之意」. Each classification row is an AI reconstruction with no human review. The chapter's opening marks every result as definition, theorem by base, assessment, reading or open."
+      "en": "「Lean 检查的是所给的推导，不判定古人的定义之意」. Each classification row is an AI reconstruction, no person's review of it recorded. The chapter's opening marks every result as definition, theorem by base, assessment, reading or open."
      },
      "role": "carries"
     },

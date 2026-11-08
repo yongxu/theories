@@ -185,6 +185,38 @@ def thesis_counts(root=ROOT):
     return {'total': len(rows), **{k: n for k, n in tallied.items() if n}}
 
 
+SCREEN_COUNTS = ('total', 'ran', 'unrun', 'other', *CLASS_KEYS)
+
+
+class UnknownCount(ValueError):
+    """A `{{tests:ARG}}` field naming no count: the page's fault."""
+
+
+class Unreadable(ValueError):
+    """tests.json could not be read or is not rows: the data's fault, named as such."""
+
+
+def screen_count(arg, root=ROOT):
+    """A first screen's `{{tests:ARG}}` count, the same for README.md's and README.zh.md's, among the tests naming a
+    thesis: `total`; a class of CLASSES; `unrun`, those in NEVER_RAN (held, dropped, or frozen and not run); `ran`, the
+    rest; `other`, those that ran and are neither passed, failed nor mixed, so that ran is passed, failed, mixed and
+    other together. UnknownCount for any other ARG; Unreadable where the data cannot be read as rows."""
+    if arg not in SCREEN_COUNTS:
+        raise UnknownCount('names an unknown count of tests: ' + arg)
+    try:
+        tallied = thesis_counts(root)
+    except (OSError, ValueError, KeyError, TypeError, AttributeError) as e:
+        raise Unreadable(f'{DATA} cannot be read as rows of tests: {e!r}') from e
+    unrun = sum(tallied.get(k, 0) for k in NEVER_RAN)
+    if arg == 'unrun':
+        return unrun
+    if arg == 'ran':
+        return tallied['total'] - unrun
+    if arg == 'other':
+        return tallied['total'] - unrun - sum(tallied.get(k, 0) for k in ('passed', 'failed', 'mixed'))
+    return tallied.get(arg, 0)
+
+
 def render_page(data):
     rows = data['tests']
     by = {k: [r for r in rows if r['outcome'] == k] for k in CLASS_KEYS}

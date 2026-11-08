@@ -98,7 +98,7 @@
   ],
   "validation_scope": {
     "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261029T164943.729811Z): 14 of the 49 declarations of Becoming.Blanket, the rest cited by its sibling record, each with an empty axiom report. Drafted by an AI agent; an independent read-only review by another AI agent (REVIEW-UE18), whose probe the revision adopted, and a re-check, study section 452; no person's review recorded.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261029T164943.729811Z）：Becoming.Blanket 之 49 项声明中之 14 项，余者由其姊妹记录引用，公理报告皆空。由一 AI 代理起草；另一 AI 代理作独立只读审查（REVIEW-UE18），修订采其探针，并复查，见研究第 452 节；未经人审。"
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261029T164943.729811Z）：Becoming.Blanket 之 49 项声明中之 14 项，余者由其姊妹记录引用，公理报告皆空。由一 AI 代理起草；另一 AI 代理作独立只读审查（REVIEW-UE18），修订采其探针，并复查，见研究第 452 节；尚无人审之记录。"
   },
   "next_delta": {
     "en": "The average form in counting form, N^N·∏ a^n ≤ A^N·∏ n^n (the bound UE17 states over the reals); review by a person.",

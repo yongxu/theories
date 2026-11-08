@@ -133,7 +133,7 @@
   ],
   "validation_scope": {
     "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T163242.561061Z): Becoming.ConditionalWeights, 110 declarations, every one with an empty axiom report; this record cites 32 of them and conditioning-by-restriction the other 78; Typicality.typical_throughout in the same receipt. Built in one session; an independent read-only review by a separate AI agent with a Lean rebuild, its findings taken and the revision re-checked, in study section 412; no person's review recorded.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T163242.561061Z）：Becoming.ConditionalWeights，110 项声明，公理报告皆空；本记录引其 32 项，conditioning-by-restriction 引其余 78 项；Typicality.typical_throughout 在同一回执。于一会话中构建；另一 AI 代理作独立只读审查并重建 Lean，其所见皆采，修订经复查，见研究第 412 节；未经人审。"
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T163242.561061Z）：Becoming.ConditionalWeights，110 项声明，公理报告皆空；本记录引其 32 项，conditioning-by-restriction 引其余 78 项；Typicality.typical_throughout 在同一回执。于一会话中构建；另一 AI 代理作独立只读审查并重建 Lean，其所见皆采，修订经复查，见研究第 412 节；尚无人审之记录。"
   },
   "next_delta": {
     "en": "The one-sided (Cantelli) form of the bound, never above one; exits for a level whose rises and falls do not balance; an exponential bound within the horizon; T6's invisible half in counting form; review by a person.",

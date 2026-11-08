@@ -94,7 +94,7 @@
   ],
   "validation_scope": {
     "en": "Machine-checked by Lean 4.29.1 in the alignment-continuity run (receipt alignment-continuity-checks/20261008T085311.995516Z, the same bytes as alignment-continuity-verification.json), which binds the current bytes of AlignmentSuccession.lean at its live path under market-generativity/meta-attractor; every cited theorem reports propext, Quot.sound and Classical.choice. The record was read against the current Lean; no person's review recorded.",
-    "zh": "Lean 4.29.1 实查（回执 alignment-continuity-checks/20261008T085311.995516Z，与 alignment-continuity-verification.json 同字节），绑定 AlignmentSuccession.lean 于 meta-attractor 下现行路径之当前字节；所引定理皆报 propext、Quot.sound 与 Classical.choice。本记录对照当前 Lean 读过；未经人审。"
+    "zh": "Lean 4.29.1 实查（回执 alignment-continuity-checks/20261008T085311.995516Z，与 alignment-continuity-verification.json 同字节），绑定 AlignmentSuccession.lean 于 meta-attractor 下现行路径之当前字节；所引定理皆报 propext、Quot.sound 与 Classical.choice。本记录对照当前 Lean 读过；尚无人审之记录。"
   },
   "next_delta": {
     "en": "Succession where the parts and the conversion of reserve to work are formed in the run, and the carrier as an instance of the spine's laws of change, as MarketInstances gives for the market step.",

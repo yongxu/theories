@@ -83,7 +83,7 @@
   ],
   "validation_scope": {
     "en": "Checked by the module's checker with Lean 4.29.1 (receipt development/verification.json, passed 31 October 2026, fresh build of five modules, 107 audits; it binds the current bytes): DevelopedResponse, 17 declarations audited, 14 with propext only, 1 with an empty report and the two energy laws with Quot.sound too, 9 cited here. An internal counter-review accepted the construction; no person's review recorded.",
-    "zh": "以模块检查器与 Lean 4.29.1 检查（回执 development/verification.json，2026年10月31日通过，新鲜构建五个模块，107 项审计；绑定当前字节）：DevelopedResponse 审计 17 项声明，14 项只用 propext，1 项报告为空，两条能量律另用 Quot.sound，此处引 9 项。内部反审接受此构造；未经人审。"
+    "zh": "以模块检查器与 Lean 4.29.1 检查（回执 development/verification.json，2026年10月31日通过，新鲜构建五个模块，107 项审计；绑定当前字节）：DevelopedResponse 审计 17 项声明，14 项只用 propext，1 项报告为空，两条能量律另用 Quot.sound，此处引 9 项。内部反审接受此构造；尚无人审之记录。"
   },
   "next_delta": {
     "en": "Several transmissible response organizations re-formed differentially in a shared development, with the binding rule and the timing of sampling formed in the history rather than supplied.",

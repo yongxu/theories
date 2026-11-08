@@ -1,0 +1,47 @@
+{
+ "note": "Each translated Chinese front and the Chinese landing page's template: the day it was last revised, the digests of the English it then followed and of the Chinese, and the English's last commit (tools/research/zh_fronts.py). Written by --revised after a revision, never by hand; an entry with \"unchanged\" recorded a new English that needed no change in the Chinese, and says why.",
+ "editions": {
+  "GLOSSARY.zh.md": {
+   "revised": "2026-11-09",
+   "english": "e6cbeefb4d83d4a0761ba64004d588f02d0ed41710b849606ddc155b486a3b73",
+   "chinese": "8906348e044066e61adcd517bb9d3bc01c9fa58c7832d5af0226cd700d4f5ce0",
+   "english_commit": "9870e2998"
+  },
+  "_process/navigation/README-ZH.md": {
+   "revised": "2026-11-09",
+   "english": "f97e358a8eb546490d9e0deb5933b2961e519246f348dcdb59f0b7ef5a1af377",
+   "chinese": "079c9ec8f7680d43c43607084c65d642b8e071e2a8042b72ede3319cabf595de",
+   "english_commit": "8a892a201"
+  },
+  "theories/becoming/ONE-PAGE.zh.md": {
+   "revised": "2026-11-09",
+   "english": "78894893fac2bdf145798dde8eb7b0b51989b8f33fac0180b023bcd4cbac1fb1",
+   "chinese": "fc459c972fd342da71eb230d113f7275c6cc1eabf36bdbaa21133fd643f043a0",
+   "english_commit": "8a892a201"
+  },
+  "theories/becoming/THE-THEORY-OF-BECOMING.zh.md": {
+   "revised": "2026-11-09",
+   "english": "9c4691f9609b5a2527f146f0b7e3718021f0748dd0de499fd40ab54dbc4b681c",
+   "chinese": "0f8e2d772558c1d911128e21f4ee1cfadd3d594ca13fcde6f5b41b8f8d465ba1",
+   "english_commit": "8a892a201"
+  },
+  "theories/becoming/USES-EXAMPLES.zh.md": {
+   "revised": "2026-11-09",
+   "english": "3367801e1a3d57941b5c0c34dba8698e6450699d3acb0c9d91fecc11359a3647",
+   "chinese": "90af6a7641887ca91d12f6adbb192f2c51c40e6a7940866659d724290c903332",
+   "english_commit": "fbe9972f2"
+  },
+  "theories/becoming/USES.zh.md": {
+   "revised": "2026-11-09",
+   "english": "f82286938de02cc947e33837a4d4f4c8a45f49a69d6dec2a1fc4b8c9bd5a64dd",
+   "chinese": "9973dec66a26ae85cf0a7e364215d1a99604e5dceb199d64f022c1fa15b21973",
+   "english_commit": "4d5093425"
+  },
+  "theories/becoming/review/README.zh.md": {
+   "revised": "2026-11-09",
+   "english": "a3f7eb4981e837dda2368e6715769bdf77b336705f832aee01f4e00ba04897f4",
+   "chinese": "7b4028fe5504fd2853959a2ffc910a3baf4ce8abcf0ef6c6fb80594a291907ef",
+   "english_commit": "8a892a201"
+  }
+ }
+}

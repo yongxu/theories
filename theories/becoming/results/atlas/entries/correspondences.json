@@ -20385,7 +20385,7 @@
    {
     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#corpus",
     "says": {
-     "en": "「Lean 检查的是所给的推导，不判定古人的定义之意」. Each classification row is an AI reconstruction with no human review. The chapter's opening marks every result as definition, theorem by base, assessment, reading or open."
+     "en": "「Lean 检查的是所给的推导，不判定古人的定义之意」. Each classification row is an AI reconstruction, no person's review of it recorded. The chapter's opening marks every result as definition, theorem by base, assessment, reading or open."
     },
     "role": "carries"
    },
