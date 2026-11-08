@@ -1,6 +1,6 @@
 # The self-confirming lock on agents, frozen
 
-*Board item SCL, 5 November 2026: the atlas's self-confirming-lock test ([AA's plan, §7](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas/PLAN.md)), built on FREEZE-10's game and freeze 1's harness, imported at their hashes. AI-written (a Claude Code session), not yet reviewed by a person. Frozen before any call to a model: no model has been called with any of these prompts, and no result of FREEZE-10's courses exists to be read. The freeze is the commit of `lock-scl/FROZEN.sha256` (section 15), which is not yet written. The run is Ren's. About 80 to 110 minutes to read, at 100 to 130 words a minute, tables aside (about 95 to 125 with them); the first part takes 13 to 17.*
+*Board item SCL, 5 November 2026: the atlas's self-confirming-lock test ([AA's plan, §7](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas/PLAN.md)), built on FREEZE-10's game and freeze 1's harness, imported at their hashes. AI-written (a Claude Code session); no person's review of it is recorded. Frozen before any call to a model: no model has been called with any of these prompts, and no result of FREEZE-10's courses exists to be read. The freeze is the commit of `lock-scl/FROZEN.sha256` (section 15), which is not yet written. The run is Ren's. About 80 to 110 minutes to read, at 100 to 130 words a minute, tables aside (about 95 to 125 with them); the first part takes 13 to 17.*
 
 ## What is frozen, and what it can refute
 
@@ -368,3 +368,5 @@ A later edit of this file is allowed only for a link or a typo, or to correct a 
 8. **K's base**: K compares later probes with the start probes of all five arms sharing one start; a reader may prefer each arm's own start (less precise, no shared base).
 9. **The dry run's length**: about a minute and a half, almost all the power's 2,900 simulated runs; fewer runs would lose resolution.
 10. **The home line**: the record's next ("a frozen test predicting when a learner stops trying what its model ranks low") asks for the onset, which this freeze describes and does not test; the landing's history line should say so.
+
+**Corrected after the freeze, 9 November 2026** (board item RW). The header said "not yet reviewed by a person", a claim the repository cannot support and [the word of 8 November 2026](../../sources/15-codex-theory-conversations/2026-11-08-ai-briefly-and-read.md) asks the work not to make; it now says that no person's review of it is recorded. This is a correction of a statement to a reader, which this file's rule on later edits allows. It changes no rule, threshold, size or reading; the frozen text is the one at the freeze commit.

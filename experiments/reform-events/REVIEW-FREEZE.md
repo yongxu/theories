@@ -1,6 +1,6 @@
 # Review of T7F's freeze (reader rounds)
 
-5 November 2026. AI-written (a Claude Code session), not yet reviewed by a person. One reader, other than the author, reads the design before the freeze. It gets the files, not the author's conclusions, works read-only and may run small checks in scratch. It does a full read first, then reads each round's diff. There are at most five rounds, and they stop at the first with no high or medium finding. Severity: **high** means the test could not fail, or would mislead a reader about what it shows, or a refusal or rule is wrong in code. **Medium** means a rule, threshold or text that must change before freezing. **Low** means clarity or a small fix.
+5 November 2026. AI-written (a Claude Code session); no person's review of it is recorded. One reader, other than the author, reads the design before the freeze. It gets the files, not the author's conclusions, works read-only and may run small checks in scratch. It does a full read first, then reads each round's diff. There are at most five rounds, and they stop at the first with no high or medium finding. Severity: **high** means the test could not fail, or would mislead a reader about what it shows, or a refusal or rule is wrong in code. **Medium** means a rule, threshold or text that must change before freezing. **Low** means clarity or a small fix.
 
 ## Round 1: the full read
 

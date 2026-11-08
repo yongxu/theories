@@ -2335,6 +2335,7 @@
         "experiments/critical-mass-located/write_frozen.py",
         "experiments/formations-that-read/told/PINS.json",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean",
+        "sources/15-codex-theory-conversations/2026-11-08-ai-briefly-and-read.md",
         "theories/becoming/chapters/02-MAP.md"
       ]
     },
@@ -2457,7 +2458,8 @@
         "experiments/formations-that-read/train-tr2a/results/dry-run.json",
         "experiments/formations-that-read/train-tr2a/tr2a.py",
         "experiments/formations-that-read/train-tr2a/tr2a_dry_run.py",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean"
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean",
+        "sources/15-codex-theory-conversations/2026-11-08-ai-briefly-and-read.md"
       ]
     },
     "experiments/formations-that-read/FREEZE-12.md": {
@@ -2475,6 +2477,7 @@
         "experiments/formations-that-read/lock-scl/scl_stage0.py",
         "experiments/formations-that-read/lock-scl/write_frozen.py",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean",
+        "sources/15-codex-theory-conversations/2026-11-08-ai-briefly-and-read.md",
         "theories/becoming/chapters/03-KNOWING.md"
       ]
     },
@@ -2501,6 +2504,7 @@
         "experiments/formations-that-read/tr8.py",
         "experiments/formations-that-read/tr_rr.py",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachedCascade.lean",
+        "sources/15-codex-theory-conversations/2026-11-08-ai-briefly-and-read.md",
         "theories/becoming/chapters/05-COLLECTIVES.md"
       ]
     },
@@ -2526,6 +2530,7 @@
         "experiments/formations-that-read/tr9.json",
         "experiments/formations-that-read/tr9.py",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ListingValuation.lean",
+        "sources/15-codex-theory-conversations/2026-11-08-ai-briefly-and-read.md",
         "theories/becoming/chapters/03-KNOWING.md",
         "theories/becoming/chapters/07-SIGNIFICANCE.md"
       ]

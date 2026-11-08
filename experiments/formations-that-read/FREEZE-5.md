@@ -1,6 +1,6 @@
 # TR1, frozen
 
-*Board item TR1, 4 November 2026: TR1 frozen on freeze 1's harness, at TR71's owner's split. AI-written (a Claude Code session), not yet reviewed by a person. Frozen before any call to a model: no model has been called with any of these prompts. The run is Ren's. About 61 to 80 minutes to read, at 100 to 130 words a minute; the first part takes nine to eleven.*
+*Board item TR1, 4 November 2026: TR1 frozen on freeze 1's harness, at TR71's owner's split. AI-written (a Claude Code session); no person's review of it is recorded. Frozen before any call to a model: no model has been called with any of these prompts. The run is Ren's. About 61 to 80 minutes to read, at 100 to 130 words a minute; the first part takes nine to eleven.*
 
 ## What is frozen, and what it can refute
 
@@ -289,3 +289,5 @@ A later edit of this file is allowed only for a link or a typo, or as a dated no
 - **What still stands.** The argument of section 6: calls made again are a suffix of the log, in the plan's order at parallel 1, so a later step never reads a record other than the one read for its earlier step. TR1A's first reader argued it by reading freeze 1's `resume`, `mend` and `bracketed`, not by an exhaustive test.
 - **Why there is no mend here.** An addendum may change only freeze 1's client and this freeze's dry run.
 - **What a reader of a TR1 folder can do.** Make the comparison by hand. A record read is its id's latest in the log; for each such H record, compare the history its rebuild shows with the answers read for its earlier steps. TR1A's reading makes this comparison by position ([FREEZE-10 §6](FREEZE-10.md#6-the-run)).
+
+**Corrected after the freeze, 9 November 2026** (board item RW). The header said "not yet reviewed by a person", a claim the repository cannot support and [the word of 8 November 2026](../../sources/15-codex-theory-conversations/2026-11-08-ai-briefly-and-read.md) asks the work not to make; it now says that no person's review of it is recorded. This file's rule allows a later edit for a link or a typo, or as a dated note argued as FREEZE-1's are; this one is argued so: it corrects what the header says of who has read the file, not the design. It changes no rule, threshold, size or reading; the frozen text is the one at the freeze commit.

@@ -1,6 +1,6 @@
 # TR3 and TR6: the full design
 
-*Part of [the designs of RF's tests](DESIGN.md): the exact tables, the power check, rivals, usage and references for TR3 and TR6. AI-written, not yet reviewed by a person. TR3 is frozen in [FREEZE-3](FREEZE-3.md) (4 November 2026), with the changes its section 12 lists, and not run; TR6 in [FREEZE-6](FREEZE-6.md) (the same day), with the changes its section 12 lists, and not run.*
+*Part of [the designs of RF's tests](DESIGN.md): the exact tables, the power check, rivals, usage and references for TR3 and TR6. AI-written; no person's review of it is recorded. TR3 is frozen in [FREEZE-3](FREEZE-3.md) (4 November 2026), with the changes its section 12 lists, and not run; TR6 in [FREEZE-6](FREEZE-6.md) (the same day), with the changes its section 12 lists, and not run.*
 
 Every number here is printed by [`tr3.py`](tr3.py) into [`tr3.json`](tr3.json) (Python 3.11, standard library, `fractions.Fraction` for exact values, seeds 20261031 and its successors; a few minutes on one core, about a minute of processor time). The script mirrors [`Becoming.Cascade`](../integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Cascade.lean) (sha256 `e6add4291cb2…`, the hash the record binds; core receipt 20261029T134236.345943Z, every declaration with an empty axiom report). The empty report concerns logic only. The modelling choices are in the law's own statement: deterministic laws, members indexed by the natural numbers, one act each, worlds fixing every coupling, no probability.
 

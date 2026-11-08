@@ -564,10 +564,18 @@ class SiteTests(unittest.TestCase):
                               'Claude Haiku, through the Claude Code CLI, takes the member\'s place in a commons that renews.'),
                              ('UE32, 3 November 2026. AI-written (a Claude Code session, through a subagent it sent to read). ',
                               'It is the reading behind UE32: the field that reads a state from a series of counts.'),
-                             ('AI-authored study, 6 October 2026. ', 'The protocol was written, frozen and committed before the code existed.')):
+                             ('AI-authored study, 6 October 2026. ', 'The protocol was written, frozen and committed before the code existed.'),
+                             ('Board item IN1, 21 October 2026. AI-written (a Claude Code session). Predictions, verdict rules and code frozen '
+                              'before any experimental model call: PREDICTIONS-2026-10-21.md. Prior art: significance review, installation check. ',
+                              'Three fishers share a lake, and a bed of mussels that gives them nothing depends on the fish.'),
+                             ('6 October 2026. ', 'Executable counterpart of the mathematical market study, its connection named.'),
+                             ('Board item X1, 2 May 2026. Literature check: Smith et al. 2020, sections 2.1 and 3. ',
+                              'The test reads the bed and the fish, each season, from the frozen tables.')):
             self.assertEqual(site.lead('<p>' + before + rest + '</p>\n' + said), rest, before)  # what follows the provenance is the lead
-        plain = 'Board games and AI-written essays are read here as one case among many, and nothing about them is provenance.'
-        self.assertEqual(site.lead('<p>' + plain + '</p>'), plain)  # a sentence that only starts like provenance stays
+        for plain in ('Board games and AI-written essays are read here as one case among many, and nothing about them is provenance.',
+                      'AI-written essays are read here as one case among many, and nothing about them is provenance at all.',
+                      'About the lake: the bed dies the first month fewer than seventy tons are left, whatever the fishers read.'):
+            self.assertEqual(site.lead('<p>' + plain + '</p>'), plain)  # a sentence that only starts like provenance stays
         long = '<p>' + 'A paragraph long enough to be a lead says how long it takes, about ten minutes to read, and more. ' * 3 + '</p>'
         self.assertEqual(site.lead(long), strip(long))  # a paragraph of text that names a time is still text
         zh = '<p>正文的第一段：一个选择可以成功，而它所不度量的东西却失去了；这一段足够长，可以作为本页的引言来读。</p>'
@@ -709,17 +717,22 @@ class SiteTests(unittest.TestCase):
             self.build(pages=SITE['pages'] + ['a/ONE.zh.md'])
         zh, one = self.page('a/ONE.zh.html'), self.page('a/ONE.html')
         footer = zh[zh.index('<footer>'):]
-        self.assertIn(f'本站由<a href="https://github.com/o/r">本仓库</a>的提交 <a href="https://github.com/o/r/tree/{COMMIT}"><code>{COMMIT[:9]}</code></a>构建', footer)
-        self.assertIn('此提交不在本副本上次所取的仓库主分支（origin/main）上', footer)
+        self.assertIn(f'本站由<a href="https://github.com/o/r">本仓库</a>的提交 <a href="https://github.com/o/r/tree/{COMMIT}"><code>{COMMIT[:9]}</code></a> 构建', footer)
+        self.assertIn('此提交不在本地克隆上次获取的仓库主分支（origin/main）上', footer)
         self.assertIn('本页的源文件</a>。', footer)
         self.assertNotIn('Built from', footer)
         self.assertIn('Built from', one[one.index('<footer>'):])  # an English page keeps the English
         with patch.object(site, 'on_github', return_value=None):
             self.build(pages=SITE['pages'] + ['a/ONE.zh.md'])
-        self.assertIn('从本副本无法查明 GitHub 是否已有此提交', self.page('a/ONE.zh.html'))
+        self.assertIn('从本地克隆无法查明 GitHub 是否已有此提交', self.page('a/ONE.zh.html'))
         with patch.object(site, 'on_github', return_value=True):
-            self.build(pages=SITE['pages'] + ['a/ONE.zh.md'])
-        self.assertNotIn('打不开', self.page('a/ONE.zh.html'))
+            self.build(pages=SITE['pages'] + ['a/ONE.zh.md'], rewrites=[{'pattern': 'not on any page'}])
+        zh = self.page('a/ONE.zh.html')
+        self.assertNotIn('打不开', zh)
+        self.assertIn('每一页都由仓库中的文本转换而来，只在站外才成立的本地路径与词句在构建时已改；', zh)  # the build's changes, in Chinese
+        dirty = site.template('a/ONE.zh.md', '一页', '<p>x</p>', 'zh', SITE | {'repository': 'o/r'}, COMMIT, '2026-11-09', '', '', dirty=True)
+        self.assertIn(f'<code>{COMMIT[:9]}</code></a> 及其上尚未提交的改动构建（2026-11-09）', dirty)
+        self.assertNotIn('Built from', dirty)
 
     def test_the_map_says_when_github_may_not_have_the_commit(self):
         from tools.research import connection_map
@@ -738,8 +751,13 @@ class SiteTests(unittest.TestCase):
                 self.build(map=True, nav=SITE['nav'] + [['connections.html', 'Map']])
             drawn = (self.out / 'connections.html').read_text()
             self.assertIn('</nav>\n<p class="pushed-note"', drawn)  # under the site bar
+            self.assertIn(f'This page was built from commit <code>{COMMIT[:9]}</code>. This commit is not', drawn)  # it names the commit
+            self.assertIn("This commit is not on the repository&#x27;s main branch", drawn)  # escaped
             self.assertIn('may not resolve until it is pushed.</p><div class="wrap">', drawn.replace('&#x27;', "'"))
-            self.assertIn('<link rel="icon" href="assets/favicon.svg"', drawn)
+            self.assertEqual((drawn.count('pushed-note'), drawn.count('rel="icon"')), (1, 1))
+            with patch.object(site, 'on_github', return_value=None):
+                self.build(map=True, nav=SITE['nav'] + [['connections.html', 'Map']])
+            self.assertIn('could not be checked from this clone', (self.out / 'connections.html').read_text())
             with patch.object(site, 'on_github', return_value=True):
                 self.build(map=True, nav=SITE['nav'] + [['connections.html', 'Map']])
             self.assertNotIn('pushed-note', (self.out / 'connections.html').read_text())

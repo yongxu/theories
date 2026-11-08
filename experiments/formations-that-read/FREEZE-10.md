@@ -1,6 +1,6 @@
 # TR1's informing variant and Stage A, frozen
 
-*Board item TR1A, 5 November 2026: what FREEZE-5 left as designs, frozen on freeze 1's harness and FREEZE-5's files, at the coordinator's offer. AI-written (a Claude Code session), not yet reviewed by a person. Frozen before any call to a model and before any training: no model has been called with any of these prompts, and no chooser of the two classes Stage A reads has been trained. The runs are Ren's. About 48 to 62 minutes to read, at 100 to 130 words a minute; the first part takes ten to thirteen.*
+*Board item TR1A, 5 November 2026: what FREEZE-5 left as designs, frozen on freeze 1's harness and FREEZE-5's files, at the coordinator's offer. AI-written (a Claude Code session); no person's review of it is recorded. Frozen before any call to a model and before any training: no model has been called with any of these prompts, and no chooser of the two classes Stage A reads has been trained. The runs are Ren's. About 48 to 62 minutes to read, at 100 to 130 words a minute; the first part takes ten to thirteen.*
 
 ## What is frozen, and what it can refute
 
@@ -270,3 +270,5 @@ A later edit of this file is allowed only for a link or a typo, or as a dated no
 ## 15. The hash file
 
 `told-tr1a/write_frozen.py REPO` writes `told-tr1a/FROZEN.sha256`, the base link of TR1A's chain: the sha-256 of every file the first part lists, paths repository-relative, sorted. It refuses unless the dry run passed and recorded the files' hashes now, unless each freeze 1 file has freeze 1's own hash, and unless each FREEZE-5 file has FREEZE-5's. The hash file is committed once, last, on the merged tree, after the gate passes.
+
+**Corrected after the freeze, 9 November 2026** (board item RW). The header said "not yet reviewed by a person", a claim the repository cannot support and [the word of 8 November 2026](../../sources/15-codex-theory-conversations/2026-11-08-ai-briefly-and-read.md) asks the work not to make; it now says that no person's review of it is recorded. This file's rule allows a later edit for a link or a typo, or as a dated note argued as FREEZE-1's are; this one is argued so: it corrects what the header says of who has read the file, not the design. It changes no rule, threshold, size or reading; the frozen text is the one at the freeze commit.

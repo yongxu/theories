@@ -1,6 +1,6 @@
 # TR6, frozen
 
-*The folder's sixth freeze, and board item RFZ's third, after FREEZE-1 and FREEZE-3; 4 November 2026. AI-written (a Claude Code session), not yet reviewed by a person. Frozen before any call to a model: no model has been called with any of these prompts. The run is Ren's. About 82 to 107 minutes to read, at 100 to 130 words a minute; the first part takes eleven to fourteen.*
+*The folder's sixth freeze, and board item RFZ's third, after FREEZE-1 and FREEZE-3; 4 November 2026. AI-written (a Claude Code session); no person's review of it is recorded. Frozen before any call to a model: no model has been called with any of these prompts. The run is Ren's. About 82 to 107 minutes to read, at 100 to 130 words a minute; the first part takes eleven to fourteen.*
 
 ## What is frozen, and what it can refute
 
@@ -339,3 +339,5 @@ AI-written, an expectation, not a prediction any verdict reads. The deciding pin
 ## 14. Provenance and the reading of the freeze
 
 AI-written, 4 November 2026, in one Claude Code session that owns board item RFZ. It was frozen after the design (board item RF, 31 October) and freeze 3 (TR3, landed the same day), whose harness it shares. Before the freeze landed, a reader other than its author read the frozen files in five rounds, until nothing of high or medium severity remained: a fresh Claude Opus subagent read them whole in the first round and, from the second on, at the coordinator's word, the same reader read the diff of the last round's fixes and the sections they touch. It was given the files and the coordinator's requirements, not this session's conclusions, and worked read-only, with small checks of the code. It is of the theory's own family, as is every reader the session can call, and the deciding pins' families have read nothing here. Its findings and how each was taken are in [`told-tr6/REVIEW-FREEZE.md`](told-tr6/REVIEW-FREEZE.md). The freeze lands only once a round finds nothing of high or medium severity. [`told-tr6/write_frozen.py`](told-tr6/write_frozen.py) writes `FROZEN.sha256` on the merged tree, refusing unless the dry run passed on the same files, and that link is committed last.
+
+**Corrected after the freeze, 9 November 2026** (board item RW). The header said "not yet reviewed by a person", a claim the repository cannot support and [the word of 8 November 2026](../../sources/15-codex-theory-conversations/2026-11-08-ai-briefly-and-read.md) asks the work not to make; it now says that no person's review of it is recorded. It changes no rule, threshold, size or reading; the frozen text is the one at the freeze commit.

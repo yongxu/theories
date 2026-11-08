@@ -1,6 +1,6 @@
 # CMT: the reader rounds before the freeze
 
-*Board item CMT. AI-written (a Claude Code session, the design's author), not yet reviewed by a person. The rounds follow [the freeze practice](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas/refuters/readers/freeze.json): a full read by a reader other than the author, then the same reader on each diff, at most five rounds, stopping at the first with no finding of high or medium severity. Severity: high, the test could not fail, or would mislead a reader about what it shows, or a refusal or rule is wrong in code; medium, a rule, threshold or text that must change before freezing; low, clarity or a small fix. Nothing has been frozen, downloaded or called.*
+*Board item CMT. AI-written (a Claude Code session, the design's author); no person's review of it is recorded. The rounds follow [the freeze practice](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas/refuters/readers/freeze.json): a full read by a reader other than the author, then the same reader on each diff, at most five rounds, stopping at the first with no finding of high or medium severity. Severity: high, the test could not fail, or would mislead a reader about what it shows, or a refusal or rule is wrong in code; medium, a rule, threshold or text that must change before freezing; low, clarity or a small fix. Nothing has been frozen, downloaded or called.*
 
 ## Round 1
 

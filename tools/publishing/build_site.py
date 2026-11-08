@@ -803,9 +803,9 @@ def pushed_note(pushed, zh=False):
     has the commit; in Chinese on a Chinese page."""
     if zh:
         if pushed is False:
-            return '此提交不在本副本上次所取的仓库主分支（origin/main）上，所以在推送之前，指向 GitHub 上此提交的链接可能打不开。'
+            return '此提交不在本地克隆上次获取的仓库主分支（origin/main）上，所以在推送之前，指向 GitHub 上此提交的链接可能打不开。'
         if pushed is None:
-            return '从本副本无法查明 GitHub 是否已有此提交，所以指向它的链接可能打不开。'
+            return '从本地克隆无法查明 GitHub 是否已有此提交，所以指向它的链接可能打不开。'
         return ''
     if pushed is False:
         return (' This commit is not on the repository\'s main branch as this clone last fetched it (origin/main), so a link to '
@@ -831,7 +831,7 @@ def template(page_path, title, body, lang, cfg, commit, date, nav_html, source_h
     changed = ', with local paths and words true only off the site changed at build' if cfg.get('rewrites') else ''
     tree, repo = f"https://github.com/{cfg['repository']}/tree/{commit}", f"https://github.com/{cfg['repository']}"
     if zh:  # a Chinese page's footer says the same in Chinese
-        footer = (f'本站由<a href="{repo}">本仓库</a>的提交 <a href="{tree}"><code>{short}</code></a>'
+        footer = (f'本站由<a href="{repo}">本仓库</a>的提交 <a href="{tree}"><code>{short}</code></a> '
                   f'{"及其上尚未提交的改动" if dirty else ""}构建（{date}）。每一页都由仓库中的文本转换而来'
                   f'{"，只在站外才成立的本地路径与词句在构建时已改" if cfg.get("rewrites") else ""}；离开本站的链接，指向该文件在此提交时的样子。'
                   f'{pushed_note(pushed, zh=True)}'
@@ -1066,10 +1066,18 @@ LEAD_SHARED = 3  # a paragraph met word for word among the leading paragraphs of
 STATUS_LINE = re.compile(r'<code>[^<]+</code> · <strong>')  # a record page's status line, as site_text leaves it (RECORD_STATUS)
 LANGUAGE_LINK = re.compile(r'<a [^>]*>\s*(?:中文|English)[^<]{0,24}</a>\s*(?: · |$)')  # '中文', '中文（各章一览）', 'English'
 READING_LINE = 200  # characters below which a paragraph that states a time to read is a reading-time line (a third of it in Chinese)
-PROVENANCE = re.compile(  # a run of opening sentences that say where a page came from, not what it says: an experiment's
+SENTENCE = r'(?:[^.]|\.(?!\s|$)|(?<= al)\.(?=\s))*'  # a sentence's body: a period ends it only before a space or the end, not after 'et al'
+PROVENANCE = re.compile(  # a run of opening sentences that say where a page came from, not what it says, as experiments open:
     # 'Board item EW2, 21 October 2026. AI-written (a Claude Code session). Study section 286 of …. Literature check: ….'
-    r'(?:(?:Board items? [^.]*|AI-(?:written|authored)\b[^.]*|Study sections? [^.]*|Literature(?: and data)? check: [^.]*'
-    r'|Prior art: [^.]*|[A-Z][A-Z0-9]{0,5}[a-z]?, \d{1,2}(?:–\d{1,2})? [A-Z][a-z]+ \d{4}|About [^.]*? to read\b[^.]*)\.(?:\s+|$))+')
+    r'(?:(?:Board items? [A-Z]' + SENTENCE +
+    r'|AI-(?:written|authored|assisted)(?=\s*[(,.;]| study\b| by\b| from\b| in\b| on\b)' + SENTENCE +
+    r'|Study sections? \d' + SENTENCE +
+    r'|Literature(?: and data)? check: ' + SENTENCE +
+    r'|Prior art: ' + SENTENCE +
+    r'|Predictions\b' + SENTENCE + r'\bfrozen\b' + SENTENCE +
+    r'|(?:[A-Z][A-Z0-9]{0,5}[a-z]?, )?\d{1,2}(?:–\d{1,2})? [A-Z][a-z]+ \d{4}(?:; run \d{1,2} [A-Z][a-z]+ \d{4})?' +
+    r'|About ' + SENTENCE + r'\b(?:minutes?|hours?|an hour) to read\b' + SENTENCE +
+    r')\.(?:\s+|$))+')
 READING_TIME = re.compile(r'\b(?:minutes?|hours?|an hour) to read\b|\d+(?:–\d+)? ?分钟|[一二三四五六七八九十两半]+(?:分钟|小时)')
 
 
@@ -1079,8 +1087,9 @@ def lead_paragraphs(body_html):
     characters (a third of that in Chinese) that states a time to read (a reading-time line, alone or after a label of
     provenance), a line of items
     joined by ' · ' (a navigation line), a paragraph wholly in italics (a reading time, a label of provenance) and a line too
-    short to say anything; and a paragraph's opening sentences of provenance (PROVENANCE: its board item, date, authorship,
-    study section, literature check or time to read) are passed over, the paragraph too where too little is left."""
+    short to say anything; and a paragraph's opening sentences of provenance (PROVENANCE: a board item, a date alone or after
+    an item's name, an AI-written, AI-authored or AI-assisted label, a study section, a literature check, prior art, predictions
+    frozen, a time to read) are passed over, the paragraph too where too little is left."""
     for m in re.finditer(r'<p>(.*?)</p>', body_html, re.S):
         inner = m.group(1).strip()
         text = ' '.join(strip_tags(inner).split())
@@ -1407,6 +1416,7 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
             end = drawn.index('</nav>', bar) + len('</nav>')
             drawn = (drawn[:end] + '\n<p class="pushed-note" style="margin:0;padding:6px var(--gutter-r) 6px var(--gutter-l);'
                      'font:13px/1.45 var(--sans);color:var(--muted);border-bottom:1px solid var(--rule)">'
+                     + f'This page was built from commit <code>{html.escape(commit[:9])}</code>. '
                      + html.escape(pushed_note(pushed).strip()) + '</p>' + drawn[end:])
         (out / MAP_PAGE).write_text(drawn)
         written.append(out / MAP_PAGE)
