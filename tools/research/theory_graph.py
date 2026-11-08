@@ -428,7 +428,7 @@ def page(graph):
     text = '\n'.join(lines).rstrip() + '\n'
     full = navigation.reading_time(text.replace('{time}', '', 1))
     part = navigation.reading_time('\n'.join(lead + section))
-    return text.replace('{time}', f'[中文（各章一览）](THEORY-GRAPH.zh.md) · {full} to read in full; the chapters at a glance, with their tables, in '
+    return text.replace('{time}', f'[中文（各章一览）](THEORY-GRAPH.zh.md) · {full} to read in full; the chapters at a glance, what the picture shows and the edge kinds, with their tables, in '
                                   f'{part}.', 1)
 
 

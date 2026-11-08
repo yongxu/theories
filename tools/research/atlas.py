@@ -839,12 +839,14 @@ def _no_relation(entries: list, totals_r: list) -> str:
     """The sentence under the relations' sums: the entries with none, by what became of them, and the entries only in
     history that have one, which the map does not count."""
     none = Counter(e['carried'] for e in entries if not e.get('relation'))
-    kept = sum(1 for e in entries if e.get('relation') and e['carried'] in ABSENT)
+    kept = Counter(e['carried'] for e in entries if e.get('relation') and e['carried'] in ABSENT)
     parts = ', '.join(f'{n} {k}' for k, n in sorted(none.items(), key=lambda kv: -kv[1]))
     out = f'The relations sum to {sum(totals_r):,}: the other {sum(none.values())} entries have none ({parts}).'
     if kept:
-        out += (f' {kept} {"entry" if kept == 1 else "entries"} only in history or not carried {"has" if kept == 1 else "have"} one, which '
-                f'[the connection map]({_href(ATLAS + "/map.html")}) leaves out of its relations: it draws what stayed behind as a short end, not a thread.')
+        n = sum(kept.values())
+        out += (f' {n} {" and ".join(sorted(kept))} {"entry" if n == 1 else "entries"} {"has" if n == 1 else "have"} one, which '
+                f'[the connection map]({_href(ATLAS + "/map.html")}) draws as a short end, not a thread, though its group counts include '
+                f'{"it" if n == 1 else "them"}.')
     return out
 
 
@@ -965,7 +967,7 @@ def crosswalk_zh_page(atlas: dict) -> str:
         out += [trust, '']
     out += [f'**计数。** {len(entries):,} 条主张，来自 {folders} 个早先的理论文件夹与 {len(groups) - folders} 个思想领域：'
             + '，'.join(f'{ZH_CARRIED.get(k, k)} {n:,}' for k, n in carried.items()) + '。按关系：'
-            + '，'.join(f'{zh} {n:,}' + (agreement if key == 'agreement' else '') for key, (zh, n) in relation.items()) + '。只有一个目标所承载的才算作连接。', '',
+            + '，'.join(f'{zh} {n:,}' + (agreement if key == 'agreement' else '') for key, (zh, n) in relation.items()) + f'。各关系相加为 {sum(n for _, n in relation.values()):,}，其余 {len(entries) - sum(n for _, n in relation.values()):,} 条没有关系（未承继或仅存于历史）。只有一个目标所承载的才算作连接。', '',
             '**离中文文本最近的两个领域。**', '', *domains, '',
             f'**全部 {len(groups)} 组**，每组一页，都在[英文索引](CROSSWALK.md)里：它以自己的话主张了什么，现行的说明中成了什么，以及每一条的目标与地位。', '']
     body = _finish(out)

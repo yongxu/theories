@@ -33,7 +33,7 @@
 <rect x="747.3" y="584.0" width="7" height="13.9" fill="#a8a29e"/>
 <rect x="827.3" y="584.0" width="7" height="9.2" fill="#a8a29e"/>
 <text x="950.0" y="659.0" font-size="13" text-anchor="end" fill="#57534e">灰条：各记录的历史条目，按周计（最多的一周 1810 条）。</text>
-<path d="M180.9,498.0 L212.4,481.0 L274.1,498.0 L295.1,481.0 L406.2,498.0 L681.9,498.0 L747.3,498.0" fill="none" stroke="#0072B2" stroke-width="1.8" stroke-dasharray="5 3"/>
+<path d="M180.9,481.0 L212.4,481.0 L274.1,498.0 L295.1,481.0 L406.2,481.0 L681.9,498.0 L747.3,498.0" fill="none" stroke="#0072B2" stroke-width="1.8" stroke-dasharray="5 3"/>
 <path d="M66.9,481.0 L385.9,447.0 L389.7,464.0 L588.4,498.0 L719.3,481.0" fill="none" stroke="#E69F00" stroke-width="1.8" stroke-dasharray="5 3"/>
 <path d="M374.7,498.0 L388.2,481.0 L607.1,498.0 L691.2,481.0 L784.7,498.0 L802.7,481.0 L950.0,498.0" fill="none" stroke="#CC79A7" stroke-width="1.8" stroke-dasharray="5 3"/>
 <circle cx="51.5" cy="498.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
@@ -41,8 +41,8 @@
 <circle cx="120.9" cy="498.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
 <circle cx="146.6" cy="498.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
 <circle cx="155.0" cy="481.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="180.9" cy="498.0" r="7" fill="#1c1917" stroke="#0072B2" stroke-width="2.4"/>
-<circle cx="185.0" cy="481.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="180.9" cy="481.0" r="7" fill="#1c1917" stroke="#0072B2" stroke-width="2.4"/>
+<circle cx="185.0" cy="498.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
 <circle cx="212.4" cy="481.0" r="7" fill="#a8a29e" stroke="#0072B2" stroke-width="2.4"/>
 <circle cx="214.1" cy="498.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
 <circle cx="241.5" cy="498.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
@@ -54,8 +54,8 @@
 <circle cx="385.9" cy="447.0" r="7" fill="#a8a29e" stroke="#E69F00" stroke-width="2.4"/>
 <circle cx="388.2" cy="481.0" r="7" fill="#a8a29e" stroke="#CC79A7" stroke-width="2.4"/>
 <circle cx="389.7" cy="464.0" r="7" fill="#a8a29e" stroke="#E69F00" stroke-width="2.4"/>
-<circle cx="406.2" cy="498.0" r="7" fill="#a8a29e" stroke="#0072B2" stroke-width="2.4"/>
-<circle cx="412.9" cy="481.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="406.2" cy="481.0" r="7" fill="#a8a29e" stroke="#0072B2" stroke-width="2.4"/>
+<circle cx="412.9" cy="498.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
 <circle cx="442.2" cy="498.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
 <circle cx="477.8" cy="498.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
 <circle cx="550.7" cy="498.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
@@ -86,7 +86,7 @@
 <circle cx="950.0" cy="481.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
 <line x1="51.5" y1="489.0" x2="51.5" y2="245.0" stroke="#57534e" stroke-width="1"/>
 <text x="45.5" y="240.0" font-size="14" text-anchor="start" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">1 · 元社区：城市作为一种结构</text>
-<line x1="180.9" y1="489.0" x2="180.9" y2="267.0" stroke="#0072B2" stroke-width="1"/>
+<line x1="180.9" y1="472.0" x2="180.9" y2="267.0" stroke="#0072B2" stroke-width="1"/>
 <text x="180.9" y="262.0" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">6 · 一种价值作为权力的象征</text>
 <line x1="212.4" y1="472.0" x2="212.4" y2="289.0" stroke="#0072B2" stroke-width="1"/>
 <text x="206.4" y="284.0" font-size="14" font-weight="bold" text-anchor="start" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">8 · 环被写下</text>
@@ -96,7 +96,7 @@
 <text x="289.1" y="328.0" font-size="14" font-weight="bold" text-anchor="start" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">13 · 二阶吸引子</text>
 <line x1="385.9" y1="438.0" x2="385.9" y2="355.0" stroke="#E69F00" stroke-width="1"/>
 <text x="385.9" y="350.0" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">16 · 間 作为唯一原语</text>
-<line x1="406.2" y1="489.0" x2="406.2" y2="377.0" stroke="#0072B2" stroke-width="1"/>
+<line x1="406.2" y1="472.0" x2="406.2" y2="377.0" stroke="#0072B2" stroke-width="1"/>
 <text x="400.2" y="372.0" font-size="14" font-weight="bold" text-anchor="start" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">19 · Moloch 在心中</text>
 <line x1="477.8" y1="489.0" x2="477.8" y2="399.0" stroke="#57534e" stroke-width="1"/>
 <text x="471.8" y="394.0" font-size="14" text-anchor="start" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">22 · 语料汇入理论文件夹</text>

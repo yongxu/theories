@@ -166,10 +166,10 @@
 <text x="506" y="1080.3" font-size="14" text-anchor="start" fill="#1c1917">used; the number beside a curve counts its uses,</text>
 <text x="506" y="1098.3" font-size="14" text-anchor="start" fill="#1c1917">written where it is 15 or more. The AI-written</text>
 <text x="506" y="1116.3" font-size="14" text-anchor="start" fill="#1c1917">records assign the kind; the registry checks that</text>
-<text x="506" y="1134.3" font-size="14" text-anchor="start" fill="#1c1917">an interface has its fields and cites a reviewed</text>
-<text x="506" y="1152.3" font-size="14" text-anchor="start" fill="#1c1917">source (797 of all 1,162 such edges, each a Lean</text>
-<text x="506" y="1170.3" font-size="14" text-anchor="start" fill="#1c1917">file); nothing checks that the Lean there uses the</text>
-<text x="506" y="1188.3" font-size="14" text-anchor="start" fill="#1c1917">cited result.</text>
+<text x="506" y="1134.3" font-size="14" text-anchor="start" fill="#1c1917">an interface has its fields and cites a file among</text>
+<text x="506" y="1152.3" font-size="14" text-anchor="start" fill="#1c1917">the record’s hashed references (on 797 of all</text>
+<text x="506" y="1170.3" font-size="14" text-anchor="start" fill="#1c1917">1,162 such edges; each cites a Lean file); nothing</text>
+<text x="506" y="1188.3" font-size="14" text-anchor="start" fill="#1c1917">checks that the Lean there uses the cited result.</text>
 <line x1="470" y1="1205.3" x2="496" y2="1205.3" stroke="#1c1917" stroke-width="3.2" marker-end="url(#back)"/>
 <text x="506" y="1210.3" font-size="14" text-anchor="start" fill="#1c1917">The same, darker where an earlier chapter’s</text>
 <text x="506" y="1228.3" font-size="14" text-anchor="start" fill="#1c1917">results use a later one’s.</text>

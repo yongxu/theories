@@ -14,7 +14,7 @@ All 1183 entries, in 28 groups, summed; every entry is an AI reading, no person'
 |---|---:|---:|---:|---:|
 | Entries | 338 | 371 | 325 | 25 |
 
-The relations sum to 1,059: the other 124 entries have none (105 not-carried, 19 history-only). 3 entries only in history or not carried have one, which [the connection map](map.html) leaves out of its relations: it draws what stayed behind as a short end, not a thread.
+The relations sum to 1,059: the other 124 entries have none (105 not-carried, 19 history-only). 3 history-only entries have one, which [the connection map](map.html) draws as a short end, not a thread, though its group counts include them.
 
 ![How the earlier folders and the domains of thought meet the live account](connections.svg)
 

@@ -36,6 +36,7 @@ RECORDS = 'theories/becoming/results/records'
 CORRESPONDENCES = 'theories/becoming/results/atlas/entries/correspondences.json'
 CROSSWALK_PAGE = 'theories/becoming/results/atlas/CROSSWALK.md'
 CROSSWALK_PAGE_ZH = 'theories/becoming/results/atlas/CROSSWALK.zh.md'
+MARK_REACH = 9  # a mark's half-width with its stroke: a leader nearer than this to another mark's centre passes through it
 LABELS = ('public', 'private', 'reconstruction')
 # Who wrote what states a turning point (RW's re-score, Q4): the fill of its mark in the picture (a dot at its centre where not stated).
 ORIGINS = ('person', 'drafted', 'ai', 'unstated')
@@ -369,14 +370,14 @@ def label_width(label, bold=False, size=14):
 
 def lanes_of(s, segments, base=0):
     """The points in lanes above the axis: (placed as (number, point, x, y), how many lanes). Each point takes the
-    lowest lane whose last point is 17 or more to its left. Points within 4 of one another form a group, and a titled
+    lowest lane whose last point is 17 or more to its left. Points within MARK_REACH of one another form a group, and a titled
     point is placed after the rest of its group, above all of them, so its leader rises through no other point's mark
     (RW's third reading)."""
     xs = [x_of(parse_date(p['date'])[0], segments) for p in s['points']]
     by_x = sorted(range(len(xs)), key=lambda i: (xs[i], i))
     groups = []
     for i in by_x:
-        if groups and xs[i] - xs[groups[-1][-1]] < 4:
+        if groups and xs[i] - xs[groups[-1][-1]] < MARK_REACH:
             groups[-1].append(i)
         else:
             groups.append([i])
@@ -395,12 +396,12 @@ def lanes_of(s, segments, base=0):
 
 
 def leaders_through_marks(placed, rows):
-    """Titled points whose leader rises through another point's mark (within 4 of its centre, above it): what
+    """Titled points whose leader rises through another point's mark (within MARK_REACH of its centre, above it): what
     lanes_of is to prevent. None where it has done its work."""
     out = []
     for _, x, y, label, _, p in rows:
         for n, q, qx, qy in placed:
-            if q['id'] != p['id'] and abs(qx - x) < 4 and qy < y:
+            if q['id'] != p['id'] and abs(qx - x) < MARK_REACH and qy < y:
                 out.append((label, n))
     return out
 
@@ -724,7 +725,7 @@ def page(s, lang, weeks, undated, by_folder, totals):
         lines += [f'## {words["folders_heading"]}', '',
                   words['folders_intro'].format(total=sum(totals.values()),
                                                 index=link('theories/README.md', here),
-                                                crosswalk=link('theories/becoming/results/atlas/CROSSWALK.md', here)), '',
+                                                crosswalk=link(CROSSWALK_PAGE_ZH if lang == 'zh' else CROSSWALK_PAGE, here)), '',
                   '| ' + ' | '.join(s['carried_words'][c][lang] for c in order) + ' |',
                   '|' + '---:|' * len(order),
                   '| ' + ' | '.join(str(totals.get(c, 0)) for c in order) + ' |', '']

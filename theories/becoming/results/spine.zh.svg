@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1479" width="900" height="1479" role="img" aria-labelledby="spine-title spine-desc" font-family="'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1497" width="900" height="1497" role="img" aria-labelledby="spine-title spine-desc" font-family="'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif">
 <title id="spine-title">八章及其彼此记录下的使用</title>
 <desc id="spine-desc">八章围绕文法排成一圈，按其结果数定大小（根 86；生成、守与退化 94；认知、学习与检验 110；生命与演化 46；联合活动与选择 74；古文 16；意义、伦理与对齐 82；方法 21）。章与章之间共有 497 次记为 formal-reuse 的使用，画出 17 个至少 10 次的配对。延续条件与 C 作为前提进入第七章，各在所用之处为假设，二者都不断言。T1 到 T8 在其所属之处，按检验结局着色。</desc>
 <defs>
@@ -7,7 +7,7 @@
 <marker id="thin" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#57534e" stroke-width="1.5"/></marker>
 <marker id="diamond" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M5,0 L10,5 L5,10 L0,5 z" fill="#57534e"/></marker>
 </defs>
-<rect x="0.5" y="0.5" width="899" height="1478" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
+<rect x="0.5" y="0.5" width="899" height="1496" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
 <text x="24" y="40" font-size="24" font-weight="bold" text-anchor="start" fill="#1c1917">八章及其彼此记录下的使用</text>
 <text x="24" y="66" font-size="15" text-anchor="start" fill="#57534e">由理论图画出：每个圆按其章的结果数定大小；每条实线计一章的结果使用另一章结果、记为</text>
 <text x="24" y="85" font-size="15" text-anchor="start" fill="#57534e">formal-reuse 的次数，章与章之间的虚线与点线是别种依赖。</text>
@@ -162,28 +162,29 @@
 <text x="506" y="1027.3" font-size="14" text-anchor="start" fill="#1c1917">引结果的已核验推理）：箭头指向被使用其结果</text>
 <text x="506" y="1045.3" font-size="14" text-anchor="start" fill="#1c1917">的那一章；曲线旁的数字为其使用次数，15 次</text>
 <text x="506" y="1063.3" font-size="14" text-anchor="start" fill="#1c1917">及以上才标出。这一类由 AI 写成的记录指定；</text>
-<text x="506" y="1081.3" font-size="14" text-anchor="start" fill="#1c1917">登记检查核对接口具备其字段并引用已审阅的来</text>
-<text x="506" y="1099.3" font-size="14" text-anchor="start" fill="#1c1917">源（全部 1162 条这样的边中有 797 条，所引</text>
-<text x="506" y="1117.3" font-size="14" text-anchor="start" fill="#1c1917">的都是 Lean 文件）；没有任何检查核对那里的</text>
-<text x="506" y="1135.3" font-size="14" text-anchor="start" fill="#1c1917">Lean 是否确实使用所引的结果。</text>
-<line x1="470" y1="1152.3" x2="496" y2="1152.3" stroke="#1c1917" stroke-width="3.2" marker-end="url(#back)"/>
-<text x="506" y="1157.3" font-size="14" text-anchor="start" fill="#1c1917">同上；章序在前的一章的结果使用章序在后的一</text>
-<text x="506" y="1175.3" font-size="14" text-anchor="start" fill="#1c1917">章的结果时，线色较深。</text>
-<line x1="470" y1="1192.3" x2="496" y2="1192.3" stroke="#57534e" stroke-width="1.7" stroke-dasharray="6 4" marker-end="url(#thin)"/>
-<text x="506" y="1197.3" font-size="14" text-anchor="start" fill="#1c1917">诠释（interpretive），用于论证上的依赖（虚</text>
-<text x="506" y="1215.3" font-size="14" text-anchor="start" fill="#1c1917">线；3 次及以上的配对）。</text>
-<line x1="470" y1="1232.3" x2="496" y2="1232.3" stroke="#57534e" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
-<text x="506" y="1237.3" font-size="14" text-anchor="start" fill="#1c1917">应用（application），一个被复用的结果，连</text>
-<text x="506" y="1255.3" font-size="14" text-anchor="start" fill="#1c1917">同其对应与所添的前提（点线）。</text>
-<line x1="470" y1="1272.3" x2="496" y2="1272.3" stroke="#a8a29e" stroke-width="6" stroke-linecap="round"/>
-<text x="506" y="1277.3" font-size="14" text-anchor="start" fill="#1c1917">辐条，“m 个模块中 k 个”：该章 m 个核心模块</text>
-<text x="506" y="1295.3" font-size="14" text-anchor="start" fill="#1c1917">中，有 k 个在文法上陈述其律。它计的是模块，</text>
-<text x="506" y="1313.3" font-size="14" text-anchor="start" fill="#1c1917">不是推导而得的结果；粗细表示比例。</text>
-<text x="506" y="1335.3" font-size="14" text-anchor="start" fill="#1c1917">不画出：相关（related，用于类比，1420 条边），</text>
-<text x="506" y="1353.3" font-size="14" text-anchor="start" fill="#1c1917">以及少于 10 次 formal-reuse 使用之配对的实</text>
-<text x="506" y="1371.3" font-size="14" text-anchor="start" fill="#1c1917">线；少于 15 次的不标数字。理论图“各章一览”</text>
-<text x="506" y="1389.3" font-size="14" text-anchor="start" fill="#1c1917">的中文版（THEORY-GRAPH.zh.md）中各章之间边</text>
-<text x="506" y="1407.3" font-size="14" text-anchor="start" fill="#1c1917">的种类表列出全部。</text>
-<text x="24" y="1449" font-size="12" text-anchor="start" fill="#57534e">由 tools/research/spine.py 依 theory-graph.json 与 spine.json 生成；它显示什么、不显示什么，见</text>
-<text x="24" y="1464" font-size="12" text-anchor="start" fill="#57534e">THEORY-GRAPH.zh.md 的“各章一览”。</text>
+<text x="506" y="1081.3" font-size="14" text-anchor="start" fill="#1c1917">登记检查核对接口具备其字段，并引用记录中带</text>
+<text x="506" y="1099.3" font-size="14" text-anchor="start" fill="#1c1917">散列的参考文献之一（全部 1162 条这样的边中</text>
+<text x="506" y="1117.3" font-size="14" text-anchor="start" fill="#1c1917">有 797 条，所引的都是 Lean 文件）；没有任</text>
+<text x="506" y="1135.3" font-size="14" text-anchor="start" fill="#1c1917">何检查核对那里的 Lean 是否确实使用所引的结</text>
+<text x="506" y="1153.3" font-size="14" text-anchor="start" fill="#1c1917">果。</text>
+<line x1="470" y1="1170.3" x2="496" y2="1170.3" stroke="#1c1917" stroke-width="3.2" marker-end="url(#back)"/>
+<text x="506" y="1175.3" font-size="14" text-anchor="start" fill="#1c1917">同上；章序在前的一章的结果使用章序在后的一</text>
+<text x="506" y="1193.3" font-size="14" text-anchor="start" fill="#1c1917">章的结果时，线色较深。</text>
+<line x1="470" y1="1210.3" x2="496" y2="1210.3" stroke="#57534e" stroke-width="1.7" stroke-dasharray="6 4" marker-end="url(#thin)"/>
+<text x="506" y="1215.3" font-size="14" text-anchor="start" fill="#1c1917">诠释（interpretive），用于论证上的依赖（虚</text>
+<text x="506" y="1233.3" font-size="14" text-anchor="start" fill="#1c1917">线；3 次及以上的配对）。</text>
+<line x1="470" y1="1250.3" x2="496" y2="1250.3" stroke="#57534e" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
+<text x="506" y="1255.3" font-size="14" text-anchor="start" fill="#1c1917">应用（application），一个被复用的结果，连</text>
+<text x="506" y="1273.3" font-size="14" text-anchor="start" fill="#1c1917">同其对应与所添的前提（点线）。</text>
+<line x1="470" y1="1290.3" x2="496" y2="1290.3" stroke="#a8a29e" stroke-width="6" stroke-linecap="round"/>
+<text x="506" y="1295.3" font-size="14" text-anchor="start" fill="#1c1917">辐条，“m 个模块中 k 个”：该章 m 个核心模块</text>
+<text x="506" y="1313.3" font-size="14" text-anchor="start" fill="#1c1917">中，有 k 个在文法上陈述其律。它计的是模块，</text>
+<text x="506" y="1331.3" font-size="14" text-anchor="start" fill="#1c1917">不是推导而得的结果；粗细表示比例。</text>
+<text x="506" y="1353.3" font-size="14" text-anchor="start" fill="#1c1917">不画出：相关（related，用于类比，1420 条边），</text>
+<text x="506" y="1371.3" font-size="14" text-anchor="start" fill="#1c1917">以及少于 10 次 formal-reuse 使用之配对的实</text>
+<text x="506" y="1389.3" font-size="14" text-anchor="start" fill="#1c1917">线；少于 15 次的不标数字。理论图“各章一览”</text>
+<text x="506" y="1407.3" font-size="14" text-anchor="start" fill="#1c1917">的中文版（THEORY-GRAPH.zh.md）中各章之间边</text>
+<text x="506" y="1425.3" font-size="14" text-anchor="start" fill="#1c1917">的种类表列出全部。</text>
+<text x="24" y="1467" font-size="12" text-anchor="start" fill="#57534e">由 tools/research/spine.py 依 theory-graph.json 与 spine.json 生成；它显示什么、不显示什么，见</text>
+<text x="24" y="1482" font-size="12" text-anchor="start" fill="#57534e">THEORY-GRAPH.zh.md 的“各章一览”。</text>
 </svg>

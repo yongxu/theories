@@ -175,11 +175,14 @@ class Tree(unittest.TestCase):
         s = json.loads(json.dumps(self.spec))
         s['points'][1]['short'] = {'en': 'B', 'zh': 'B'}
         s['points'].insert(2, point('b2', '2026-10-28'))
-        placed, lanes = lineage.lanes_of(s, lineage.axis(s), 400)
+        s['points'].insert(3, point('b3', '2026-10-30'))  # a few days on: a few px to the right, within a mark's reach
+        at = {'2024-07': 100.0, '2026-10-28': 300.0, '2026-10-30': 305.0, '2026-11-03': 500.0}
+        with mock.patch.object(lineage, 'x_of', lambda d, segments: at[d.isoformat()[:7] if d.day == 1 and d.month == 7 else d.isoformat()]):
+            placed, lanes = lineage.lanes_of(s, None, 400)
         y = {p['id']: py for _, p, _, py in placed}
-        self.assertLess(y['b'], y['b2'])  # higher on the page: the titled one's leader rises past nothing
-        self.assertEqual([n for n, *_ in placed], [1, 2, 3, 4])  # numbers stay the table's
-        self.assertEqual(lanes, 2)
+        self.assertLess(y['b'], min(y['b2'], y['b3']))  # higher on the page: the titled one's leader rises past nothing
+        self.assertEqual([n for n, *_ in placed], [1, 2, 3, 4, 5])  # numbers stay the table's
+        self.assertEqual(lanes, 3)
 
     def test_the_strands_count_points_on_threads_and_folders_cited(self):
         (self.root / 'theories/fork').mkdir(parents=True)

@@ -239,9 +239,11 @@ class Drawing(unittest.TestCase):
 class Tables(unittest.TestCase):
     """The tables THEORY-GRAPH.md reads from 08 §7 and the edge record, against small inputs."""
 
-    METHOD = ('| Law | Statement | Anchor | On the grammar | Rows |\n|---|---|---|---|---:|\n'
+    METHOD = ('<a id="shared-laws-and-connectivity"></a>\n## 7. Shared laws\n\n'
+              '| Law | Statement | Anchor | On the grammar | Rows |\n|---|---|---|---|---:|\n'
               '| Closure | c | `W` | `«a»` | 4 |\n| Balance | b | `B` | represented both ways, not derived | 6 |\n\nNext.\n'
-              'Of them, all 4 on closure and 2 of 6 on balance reach it.')
+              'Of the 126 rows, 5 now reach the grammar: all 4 on closure and 2 of 6 on balance, and 1 on no anchor.\n\n## 8. Known\n'
+              'Elsewhere, all 6 on balance.')
 
     def test_the_laws_table_and_how_many_reach_the_grammar(self):
         with mock.patch.object(spine, '_read', lambda path: self.METHOD if path == spine.METHOD else None):
@@ -249,6 +251,8 @@ class Tables(unittest.TestCase):
             self.assertEqual(spine.reaching_the_grammar('Closure', 4), 4)
             self.assertEqual(spine.reaching_the_grammar('Balance', 6), 2)
             self.assertIsNone(spine.reaching_the_grammar('Balance', 7))  # the sentence no longer counts those rows
+            self.assertEqual(spine.rows_reaching(), (5, 1))
+            self.assertEqual(spine.shared_laws_cells(), [('Closure', '`«a»`'), ('Balance', 'represented both ways, not derived')])
 
     def test_a_cycle_among_recorded_uses_is_found(self):
         g = {'edges': [{'from': 'a', 'to': 'b', 'type': 'formal-reuse'}, {'from': 'b', 'to': 'c', 'type': 'formal-reuse'},
@@ -264,7 +268,7 @@ class Tables(unittest.TestCase):
         record = {'boundary': {'standings': [
             {'declaration': 'Becoming.X.y', 'standing': 'derived', 'law': ['Becoming.L'],
              'basis': {'en': 'A case of «L» at x, through Steps.along. Its other step is support. Its statement still reads as counting.'}},
-            {'declaration': 'Becoming.X.z', 'standing': 'derived', 'law': [], 'basis': {'en': 'A case at 3.5 steps. Then more.'}},
+            {'declaration': 'Becoming.X.z', 'standing': 'derived', 'law': [], 'basis': {'en': 'A case, e.g. the run, of «L». Then more.'}},
             {'declaration': 'Becoming.X.w', 'standing': 'named distance', 'basis': {'en': 'Far.'}},
             {'declaration': 'Becoming.X.v', 'standing': 'counting'}]}}
         with mock.patch.object(spine, '_read', lambda path: json.dumps(record) if path.endswith('.json') else None), \
@@ -272,7 +276,7 @@ class Tables(unittest.TestCase):
             rows = spine.derived_rows()
             self.assertEqual(spine.edge_bases(), (3, 1))
         self.assertEqual(rows[0][2], 'A case of «L» at x, through Steps.along. … Its statement still reads as counting.')
-        self.assertEqual(rows[1][2], 'A case at 3.5 steps.')  # a decimal point is not a sentence's end
+        self.assertEqual(rows[1][2], 'A case, e.g. the run, of «L».')  # an abbreviation's point is not a sentence's end
 
 
 if __name__ == '__main__':

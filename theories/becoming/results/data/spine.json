@@ -109,14 +109,14 @@
     "words": [
      "conjectured, on four frozen fish-stock tests",
      "MQ4 failed its whole-state verdict; MQ5 passed; MQ7 missed its frozen bound",
-     "UE32 found T2's numbers better than the field's fitted embedding by its frozen criterion, both behind persistence in most stocks",
+     "UE32 found T2's numbers better than the field's fitted embedding by its frozen criterion, both behind persistence in most stocks, the embedding losing more with longer history: sufficiency against it at these lengths, not the lag's place or T2's law",
      "UE31b (run on 6 November 2026) failed its former wording"
     ]
    },
    "zh": {
     "title": "一个可更新的缘在取用之下的状态，就是它的水平、近来的给予与一个滞后，其位置在读数据之前定下",
     "words": [
-     "猜想；四项冻结的鱼类种群检验中，一项通过，一项未通过其整体状态裁决，一项未达其冻结界限；第四项中，按其冻结的判据，水平、近来的给予与滞后这三个量对下一次给予的预报胜过该领域拟合的延迟嵌入 … 但在多数种群中二者都不如直接沿用上一次的给予",
+     "猜想；四项冻结的鱼类种群检验中，一项通过，一项未通过其整体状态裁决，一项未达其冻结界限；第四项中，按其冻结的判据，水平、近来的给予与滞后这三个量对下一次给予的预报胜过该领域拟合的延迟嵌入，这是它们相对于更长历史之充分性的一个迹象，而非滞后位置的迹象，但在多数种群中二者都不如直接沿用上一次的给予",
      "在面粉甲虫的培养物上，其原先的措辞“凡量度所及”败于蛹与成虫这一变量更少的类"
     ]
    },
@@ -347,7 +347,7 @@
    "home": "theories/becoming/chapters/08-METHOD.md",
    "anchor": "r-one-root-to-its-edge",
    "text": "Each of the 117 distinct central declarations has one standing against the edge of one root. Eleven are derived, each a case of grammar laws, through bridges checked in Lean as equivalences and support the review reads where a row has them",
-   "zh": "117 项不同的核心声明，各有一个相对于根之边的地位。十一项推导而得，各为文法之律的一个情形，经由在 Lean 中作为等价核验的桥接与审阅所读的支持（在某行列有它们之处）"
+   "zh": "117 项不同的核心声明，各有一个相对于根之边的地位。十一项推导而得，各为文法之律的一个情形，经由在 Lean 中作为等价核验的桥接与审阅所读的支持（某行载有它们之处）"
   },
   {
    "home": "theories/becoming/chapters/08-METHOD.md",
@@ -418,7 +418,7 @@
   ],
   "counts_zh": {
    "117": "117 项不同的核心声明，各有一个相对于根之边的地位",
-   "11": "十一项推导而得，各为文法之律的一个情形，经由在 Lean 中作为等价核验的桥接与审阅所读的支持（在某行列有它们之处）",
+   "11": "十一项推导而得，各为文法之律的一个情形，经由在 Lean 中作为等价核验的桥接与审阅所读的支持（某行载有它们之处）",
    "1": "一项，`GroupEnding.Flow.all_end`，在一个所述的假设之下",
    "6": "六项为计数，位于文法以下",
    "99": "其余 99 项处于一个指明的距离"

@@ -31,7 +31,7 @@
 
 | 术语 | 义 | 出处 |
 |---|---|---|
-| 形成（formation） | 在世界模型中，一个作为形成而活跃的关系项，它依存、取用、取与给；同一关系项也可以作为处于某一水平的缘，为他者所依存、所取用 | [第四章](theories/becoming/chapters/04-LIFE.md#life-as-condition) |
+| 形成（formation） | 在世界模型中，一个关系项可以活跃于其中的角色：依存、取用、取与给；同一关系项也可以作为处于某一水平的缘，为他者所依存、所取用 | [第四章](theories/becoming/chapters/04-LIFE.md#life-as-condition) |
 | 传（carrying renewal） | 粗的样式继续下去，而一条细的相续开始（火传） | [第二章 §1](theories/becoming/chapters/02-MAP.md#branches) |
 | 延、尽（goes on, ends） | 沿某一分支继续下去；在每一分支上都终止 | [第二章 §1](theories/becoming/chapters/02-MAP.md#branches) |
 | 生成、守、退化（generation, keeping, degeneration） | 一个样式经由传而继续下去；不经由传而继续下去；在每一分支上都终止。“生成”从不指生起，也不指任何新的组织，它也不是生生：生生的英文释义“continuing generation”（持续的生发，第七章 §2）说的是生发，不是这一义：生成可以在两个粒度层级上继续下去，而可形成者只是回返。自某一点起守（后守）容许在该点之前有复生；有了它，再加上排中律，诸区域便覆盖全体。在一个进程的诸时刻上读，在判定的前提之下，保持扩大就是在一无所失的那一个之下的生成 | [第二章 §1](theories/becoming/chapters/02-MAP.md#branches)，[第七章 §2](theories/becoming/chapters/07-SIGNIFICANCE.md#r-keeping-widening-is-generation-losing-nothing) |
@@ -84,8 +84,8 @@
 | <a id="核心声明"></a>核心声明（central declaration） | 在[覆盖文件](theories/becoming/results/completion/COVERAGE.json)中，某一行就某一阶段、分化或领域指明为核心的 Lean 声明（标准 K1）；17 行共列 126 项，其中九项列了两次，所以不同的共 117 项 | [第八章 §12](theories/becoming/chapters/08-METHOD.md#completion-criterion)，[第八章 §7](theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge) |
 | 根之边（edge of one root） | 单一之根所达到之处；每一项核心声明相对于它有一个地位 | [第八章 §7](theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge) |
 | 推导而得（derived，根之边上的地位） | 根之边上的一种地位：一项核心声明是文法之律的一个情形，经由在 Lean 中作为等价核验的桥接与审阅所读的支持（某行载有它们之处）；这一情形依于审阅 | [第八章 §7](theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge) |
-| 指明的距离（named distance） | 一项核心声明既不在边上、也不是计数时的地位，附其理由；边的记录并不表明「That a distance is a gap or a failure」（有距离就是缺口或失败） | [第八章 §7](theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge)，[边的记录](theories/becoming/results/records/one-root-to-its-edge.md#does-not-show--未表明) |
-| formal-reuse | 已记录依赖的一种，留给「a verified inference using the cited result, naming producer output, consumer input, preserved hypotheses and the connecting declaration or receipt」（使用所引结果的已核验推理，指明产出者的输出、使用者的输入、所保留的假设以及相连的声明或收据）；由 AI 写成的记录指定；边带有接口时，登记检查核对接口具备其字段并引用已审阅的来源；没有任何检查核对所引的 Lean 是否确实使用所引的结果 | [RESULT-WORKFLOW](_process/RESULT-WORKFLOW.md#one-identity-explicit-relationships)，[理论图](theories/becoming/results/THEORY-GRAPH.zh.md#the-spine-what-it-shows-and-does-not-show) |
+| 指明的距离（named distance） | 一项核心声明的地位：它既不在根之边上，也不属计数，附其理由；根之边的记录并不表明「That a distance is a gap or a failure」（有距离就是缺口或失败） | [第八章 §7](theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge)，[根之边的记录](theories/becoming/results/records/one-root-to-its-edge.md#does-not-show--未表明) |
+| formal-reuse | 已记录依赖的一种，留给「a verified inference using the cited result, naming producer output, consumer input, preserved hypotheses and the connecting declaration or receipt」（使用所引结果的已核验推理，指明产出者的输出、使用者的输入、所保留的假设以及相连的声明或收据）；由 AI 写成的记录指定；边带有接口时，登记检查核对接口具备其字段，并引用记录中带散列的参考文献之一；没有任何检查核对所引的 Lean 是否确实使用所引的结果 | [RESULT-WORKFLOW](_process/RESULT-WORKFLOW.md#one-identity-explicit-relationships)，[理论图](theories/becoming/results/THEORY-GRAPH.zh.md#the-spine-what-it-shows-and-does-not-show) |
 | 地位（standing） | 一个陈述是哪一种主张：定义、连同其基的定理、有条件者、校准、论题、评估、读法、未决 | [第八章 §2](theories/becoming/chapters/08-METHOD.md#standings-and-bases) |
 | 基（base） | 一条定理在何处被证明：根、任一过程、任一类型、世界模型、一个具名的模型、外围 | [第八章 §2](theories/becoming/chapters/08-METHOD.md#standings-and-bases) |
 | 纯核；外围（the pure core; the periphery） | `Becoming` 的核心模块，它们只引入基础层与彼此（根模块 `Becoming` 还引入实例与应用之环），在去掉基础层的 `import Std` 之后，单凭 Lean 的前奏即可编译，每一个源声明的公理报告都为空；Mathlib 诸叶、较早的模块与 Python 实验，它们可以使用任何工具，依赖关系指向纯核，其结果保有各自的回执并列出其公理。三个基础模块（`GenerativeCore`、`InquirySufficiency`、`RelationalRenewal`，不是纯核的 L0 层）以及实例与应用之环，与纯核一同检查，满足纯核的条件，却不计入纯核；二者也都不是外围 | [第八章 §3](theories/becoming/chapters/08-METHOD.md#pure-core-and-periphery) |
