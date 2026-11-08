@@ -242,6 +242,26 @@ class HeaderTests(unittest.TestCase):
         self.assertIn('with its own account; this page holds what the English file keeps of it, under no heading, including an English account.*', out[f'{FOLDER}/001.md'].split('\n')[2])
         self.assertIn('[英文文件所留的部分](001.md)（含本版所无的文字）', out[f'{FOLDER}/001.zh.md'].split('\n')[2])
 
+    def test_long_chinese_or_a_table_is_not_an_english_account(self):
+        zh = '# 研\n\n## 1. A\n\n短。\n'
+        m = built(en='# S\n\n<a id="1-a"></a>\n\n这是一行比另一版更长的中文文字。\n', zh=zh)
+        self.assertEqual(m.keeps(page_of(m, EN, '001.md')), 'extra')
+        m = built(en='# S\n\n<a id="1-a"></a>\n\n| only a table here |\n', zh=zh)
+        self.assertEqual(m.keeps(page_of(m, EN, '001.md')), 'extra')
+
+    def test_what_is_nothing_to_read(self):
+        zh = '# 研\n\n## 1. A\n\n这一节的正文比英文长得多。\n'
+        m = built(en='# S\n\n<a id="1-a"></a>\n\n---\n\n<details>\n</details>\n', zh=zh)
+        self.assertEqual(m.keeps(page_of(m, EN, '001.md')), 'anchor')
+        m = built(en='# S\n\n<a id="1-a"></a>\n\n<img src="fig.png">\n', zh=zh)
+        self.assertEqual(m.keeps(page_of(m, EN, '001.md')), 'extra')
+
+    def test_the_last_row_of_a_table_is_not_the_next_ones_header(self):
+        en = '# S\n\n<a id="1-a"></a>\n\n| only here |\n\n| 模块 |\n|---|\n| D |\n'
+        zh = '# 研\n\n## 1. A\n\n这一节的正文比英文长得多得多得多。\n\n| 模块 | x |\n|---|---|\n| D | y |\n'
+        m = built(en=en, zh=zh)
+        self.assertEqual(m.keeps(page_of(m, EN, '001.md')), 'extra')
+
     def test_a_heading_and_nothing_else(self):
         m = built(en='# S\n\n## 1. A\n\n```text\nX\n```\n', zh='# 研\n\n## 1. 甲\n\n正文。\n')
         self.assertEqual(m.keeps(page_of(m, EN, '001.md')), 'heading')

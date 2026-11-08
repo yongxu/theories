@@ -38,7 +38,8 @@ HEADER_LINES = 4  # the comment, a blank line, the navigation line, a blank line
 NUMBERED = re.compile(r'(\d+)\.\s')
 NUMBERED_HEADING = re.compile(r'^## (\d+)\.\s', re.M)
 ANCHOR_LINE = re.compile(r'^<a id="([^"]+)"></a>[ \t]*$')
-BARE_LINE = re.compile(r'-{3,}|\*{3,}|_{3,}|</?[a-zA-Z]+[^>]*>')  # a thematic break or a lone HTML tag: nothing to read
+BARE_LINE = re.compile(r'-{3,}|\*{3,}|_{3,}|</?(?:details|summary)>')  # a thematic break or a folding tag: nothing to read
+CHINESE = re.compile(r'[\u4e00-\u9fff]')
 SETEXT = re.compile(r'^ {0,3}(=+|-+)[ \t]*$')
 LIST_ITEM = re.compile(r'^ {0,3}([-*+]|\d+[.)])\s')
 LINE_FRAGMENT = re.compile(r'L\d+(-L\d+)?')
@@ -390,7 +391,7 @@ class Mirror:
 
     def keeps(self, page: Page) -> str | None:
         """What a page has of a section whose main text is in another edition. For a page under no heading: 'anchor' (nothing a
-        reader sees), 'account' (at least as much text outside code as the other edition's page), 'extra' (a line outside
+        reader sees), 'account' (prose outside code with no Chinese in it, at least as long as the other edition's page), 'extra' (a line outside
         code the other edition's page lacks), 'kept' (none). For a page with a heading and nothing else outside code,
         whose other edition has text: 'heading'. Otherwise None."""
         twin = self.twin(page)
@@ -402,7 +403,8 @@ class Mirror:
             return 'heading' if len([x for x in lines if x]) == 1 and len([x for x in theirs if x]) > 1 else None
         if not any(lines) and not code:
             return 'anchor'
-        if sum(map(len, lines)) >= sum(map(len, theirs)):
+        prose = [x for x in lines if x and not x.startswith('|')]
+        if prose and not any(CHINESE.search(x) for x in lines) and sum(map(len, lines)) >= sum(map(len, theirs)):
             return 'account'
         held = {line.strip() for line in _lines(self.texts[twin.source][twin.start:twin.end])}
         def absent(line):
@@ -420,7 +422,7 @@ class Mirror:
                     if not row.startswith('|'):
                         break
                     body.append(row)
-                header = line.startswith('|') and i + 1 < len(lines) and set(lines[i + 1]) <= set('|-: ') and body and not any(absent(row) for row in body)
+                header = line.startswith('|') and i + 1 < len(lines) and '-' in lines[i + 1] and set(lines[i + 1]) <= set('|-: ') and body and not any(absent(row) for row in body)
                 if not header:
                     return 'extra'
         return 'kept'
