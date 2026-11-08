@@ -6,7 +6,7 @@
 
 *全文约 97–127 分钟；简述、图、标签与这条线索约 13–17 分钟。*
 
-本说明是怎样长成的：从 2021 年的文字，经由它读过、承继或放下的早先各理论文件夹，到现在的[生成变化之论](becoming/ONE-PAGE.zh.md)。本页由[谱系数据](becoming/results/data/lineage.json)、各记录的历史与[对照](becoming/results/atlas/CROSSWALK.md)生成。本仓库在 `7040940cd`（2026 年 11 月 8 日）共有 6087 次提交；其第一次提交是 2026 年 9 月 6 日的，此前的东西都是带入仓库的材料。本页接续[九月时间线](../_process/history/2026-09-consolidation/TIMELINE.md)，那是「a narrative, not an index」（一份叙述，不是索引），止于 2026 年 10 月 4 日。本页的转折点由 AI 读者收集并核对，没有人读过。
+本说明是怎样长成的：从 2021 年的文字，经由它读过、承继或放下的早先各理论文件夹，到现在的[生成变化之论](becoming/ONE-PAGE.zh.md)。本页由[谱系数据](becoming/results/data/lineage.json)、各记录的历史与[对照表](becoming/results/atlas/CROSSWALK.md)生成。本仓库在 `7040940cd`（2026 年 11 月 8 日）共有 6087 次提交；其第一次提交是 2026 年 9 月 6 日的，此前的东西都是带入仓库的材料。本页接续[九月时间线](../_process/history/2026-09-consolidation/TIMELINE.md)，那是「a narrative, not an index」（一份叙述，不是索引），止于 2026 年 10 月 4 日。本页的转折点由 AI 读者收集并核对，没有人读过。
 
 ## 简述
 
@@ -184,7 +184,7 @@
 
 ## 早先各文件夹后来如何
 
-对照把十六个早先的理论文件夹与十二个思想领域对着现行的说明来读：共 1183 条，每一条都是 AI 的读法，没有人读过。它对一份随机样本的复核「estimates 82.6% holding, 14.2% with a label or role wrong and 3.2% with a wrong reading over all 1183」（估计全部 1183 条中 82.6% 成立，14.2% 标签或角色有误，3.2% 读法有误；[怎样核对的](becoming/results/atlas/CROSSWALK.md)）。[文件夹索引](README.md)给出每个文件夹的计数，[对照](becoming/results/atlas/CROSSWALK.md)给出每一条。*新读法*（fresh-reading）是说本说明并不陈述这一联系，而是读者在那里提出它。
+对照表把十六个早先的理论文件夹与十二个思想领域对着现行的说明来读：共 1183 条，每一条都是 AI 的读法，没有人读过。它对一份随机样本的复核「estimates 82.6% holding, 14.2% with a label or role wrong and 3.2% with a wrong reading over all 1183」（估计全部 1183 条中 82.6% 成立，14.2% 标签或角色有误，3.2% 读法有误；[怎样核对的](becoming/results/atlas/CROSSWALK.md)）。[文件夹索引](README.md)给出每个文件夹的计数，[对照表](becoming/results/atlas/CROSSWALK.md)给出每一条。*新读法*（fresh-reading）是说本说明并不陈述这一联系，而是读者在那里提出它。
 
 | 承继 | 部分承继 | 改变 | 仅在历史中 | 未承继 | 新读法 |
 |---:|---:|---:|---:|---:|---:|

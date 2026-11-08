@@ -16,7 +16,7 @@
     "_process/research/README.md": "ebdb2be9be35838f733940c261a282f051f63ff360f7dd605d00f95bd90a6964",
     "sources/README.md": "7d7f527445db2f40df09fbfd363c9ec321c410b4f4a4b08cfe857f804482c1e6",
     "theories/LINEAGE.md": "89ac5af1588f390b108d71ac7642f48aeddfa4d1e9f8c806c1e2c4b23da8e1de",
-    "theories/LINEAGE.zh.md": "2485284e8a39ad609142b429b860f1bc49d26d08f5e0adc64592743006c96d82",
+    "theories/LINEAGE.zh.md": "83c8788dc6f5b3ac1e92c180bb819e8e8538b74a87fce4e837593efea5dd3c4c",
     "theories/README.md": "af3335c3ed9ab5963e28371e97ba015c90328297a5d6c97686fb46c5413ece66",
     "theories/becoming/README.md": "8237df4a4a50340cc56b6bba5fa077400cea64ed759b8c14dd3ab8e73e693646",
     "theories/becoming/chapters/CLAIMS.md": "a9ac5ff80ac0db24db83cbe4a3368e1f9607fc2b2d8a16406409a6034b35ebd5",
@@ -658,7 +658,7 @@
     "theories/lineage.svg": "a1c857796a6af93b0d71affab10a5fc05949de3ab55a0402e2b66e79045d7f9b",
     "theories/lineage.zh.svg": "5222a8ad3170b89f4ada3d485cdbf48aea8d5dccc549232f076e32a26122e18e",
     "theories/becoming/results/atlas/connections.svg": "4f67575b46cc3991e6a19c87b1970a450cb9c415ecffe6dca9a040002cdf195c",
-    "theories/becoming/results/atlas/CROSSWALK.zh.md": "a226f1eaa84e5212d569477ac213ccfadd1c242cf685b65b9322ae72b509764b",
-    "README.zh.md": "032ca4d413fb4a042afb02a907109a598db809b444668f4657d10be39351ad47"
+    "theories/becoming/results/atlas/CROSSWALK.zh.md": "9df1ba4666b8edbb15c78a1ba9203c5721205cdd13d4b52e163a77bb9ff69bb2",
+    "README.zh.md": "4283f1e24092f6424ef7213fa1e5b7f0a0d7aad4808c3fad3060bfb8996d2974"
   }
 }
