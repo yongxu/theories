@@ -4,7 +4,7 @@
 
 [中文](USES-EXAMPLES.zh.md) · [What it is for, and how far](USES.md) · [One page](ONE-PAGE.md) · [The tests](../../TESTS.md) · [Glossary](../../GLOSSARY.md)
 
-*Forty to fifty-one minutes to read, one example at a time; [the table, field by field](USES.md#field-by-field), comes first.*
+*Forty to fifty-two minutes to read, one example at a time; [the table, field by field](USES.md#field-by-field), comes first.*
 
 *AI-written from the homes it links, 8 November 2026; each restatement checked against its home by AI readers; no person has read it. Where it and a home differ, the home governs. Not advice, and not an application to any actual system: see [what the uses page does not do](USES.md#what-this-page-does-not-do).*
 
@@ -40,8 +40,6 @@ Take a pipeline in which a language model, as judge, picks between candidate ans
 **Beside LA2.** In [LA2](../../experiments/self-rewarding-lock/README.md) a language model, reading the set in context (formation by training untested), judged list and prose versions of answers after a reference set counted from the loop's earlier selections. Where nothing read a planted loss, the course locked at its first reading and stayed locked while the unread loss grew (post hoc): question 4's lock, in this system. Question 5's premise failed: one note of the loss among nine readers turned the judge, prose in all 50 picks, where without the note it chose lists in 60 of 60. LA2 met a case [T7](chapters/02-MAP.md#t7) forbids, as worded before its clause on drift (a loss read only by those the rule disfavours, the metric dropped once they are no more than its carriers among its readers, with nothing else changed), and counts against that case as a claim about trained judges, the model's law standing within its hypotheses, which this judge does not meet, and T7's other cases untouched. Every frozen verdict passed, three by an exact tie. Its limits: in the in-time condition's control, started at one list to eight prose with nothing reading the loss, the counts alone turned the course in 4 of 5 seeds, so the loss read in time is not shown to have turned it; one frozen support is contradicted by the data and not claimed.
 
 **Beside published measurements.** 07 §6 reads six published ways of selecting a deployed model's behaviour, and finds that "three published measurements (reward overoptimization, judges misled under RLHF, sycophancy) find optimizing through it [the signal] raising what the deciders read and lowering what they do not, in magnitudes the theory did not predict" ([07 §6](chapters/07-SIGNIFICANCE.md#r-coupling-closures-of-training-pipelines)) (read from the papers' abstracts, not independently reviewed). Read against question 3, that is the drain's direction, an AI reading; T3's clause on trained systems stays conjectured.
-
-**Beside published measurements.** 07 §6 reads six published ways of selecting a deployed model's behaviour, and finds that "three published measurements (reward overoptimization, judges misled under RLHF, sycophancy) find optimizing through it raising what the deciders read and lowering what they do not, in magnitudes the theory did not predict" ([07 §6](chapters/07-SIGNIFICANCE.md#r-coupling-closures-of-training-pipelines)): questions 2 and 3's direction, seen in those pipelines, with no magnitude the theory gave.
 
 The audit predicts no magnitudes, and naming a pipeline's couplings is a reading.
 
