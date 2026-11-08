@@ -824,7 +824,7 @@ def page(s, lang, weeks, undated, by_folder, totals, groups=(), against=None):
         lines.append('')
     if weeks:
         lines += [f'## {words["growth_heading"]}', '',
-                  words['growth_intro'].format(total=sum(weeks.values()), undated=undated), '',
+                  words['growth_intro'].format(total=sum(weeks.values()), undated=undated, cut=cut['date_' + lang]), '',
                   f'| {words["week_of"]} | {words["entries"]} |', '|---|---:|']
         for monday, n in weeks.items():
             lines.append(f'| {monday.isoformat()} | {n} |')

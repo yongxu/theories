@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1030" width="900" height="1030" role="img" aria-labelledby="standings-title standings-desc" font-family="Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1044" width="900" height="1044" role="img" aria-labelledby="standings-title standings-desc" font-family="Helvetica, Arial, sans-serif">
 <title id="standings-title">The 117 central declarations and the grammar’s laws</title>
 <desc id="standings-desc">Each square is one central declaration, a Lean statement that a row of the coverage file names as central (its 17 rows list 126, nine declarations twice, so 117 distinct), placed by its standing against the edge of one root, how far the one root reaches (08 §7). 11 are read as cases of grammar laws and 1 as a root form at one step, under a stated hypothesis; the rest are counting, below the grammar, or stand at a named distance, each with its reason.</desc>
-<rect x="0.5" y="0.5" width="899" height="1029" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
+<rect x="0.5" y="0.5" width="899" height="1043" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
 <text x="24" y="40" font-size="22" font-weight="bold" text-anchor="start" fill="#1c1917">The 117 central declarations and the grammar’s laws</text>
 <text x="24" y="64" font-size="14" text-anchor="start" fill="#57534e">Each square is one central declaration, a Lean statement that a row of the coverage file names as</text>
 <text x="24" y="82" font-size="14" text-anchor="start" fill="#57534e">central (its 17 rows list 126, nine declarations twice, so 117 distinct), placed by its standing against</text>
@@ -21,8 +21,8 @@
 <rect x="174" y="172" width="12" height="12" rx="1.5" fill="#1c1917" stroke="#57534e" stroke-width="0.6"/>
 <text x="286" y="183" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">11 derived</text>
 <text x="286" y="201" font-size="14" text-anchor="start" fill="#57534e">each a case of grammar laws, through bridges checked in Lean as equivalences and</text>
-<text x="286" y="219" font-size="14" text-anchor="start" fill="#57534e">support the review reads where a row has them; the case rests on the review (the</text>
-<text x="286" y="237" font-size="14" text-anchor="start" fill="#57534e">review is AI-written)</text>
+<text x="286" y="219" font-size="14" text-anchor="start" fill="#57534e">support the review reads where a row has them; the case rests on an AI-written</text>
+<text x="286" y="237" font-size="14" text-anchor="start" fill="#57534e">review</text>
 <text x="286" y="255" font-size="14" text-anchor="start" fill="#1c1917">For example, Flow.beyond_gives_nothing: A formation beyond the closure that takes</text>
 <text x="286" y="273" font-size="14" text-anchor="start" fill="#1c1917">part at a step gives nothing at that step to a condition a member of the closure</text>
 <text x="286" y="291" font-size="14" text-anchor="start" fill="#1c1917">then requires</text>
@@ -147,21 +147,22 @@
 <rect x="84" y="742" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
 <rect x="99" y="742" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
 <text x="286" y="753" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">6 on their own carrier</text>
-<text x="286" y="771" font-size="14" text-anchor="start" fill="#57534e">by F5's verified items</text>
-<rect x="24" y="790" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="39" y="790" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<text x="286" y="801" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">2 laws of their models</text>
-<rect x="24" y="820" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="39" y="820" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<rect x="54" y="820" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
-<text x="286" y="831" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">3 keeping significance free</text>
-<text x="286" y="849" font-size="14" text-anchor="start" fill="#57534e">as chapter 7 intends</text>
-<text x="24" y="876" font-size="12.5" text-anchor="start" fill="#57534e">A named distance says why a declaration is not read as a case of grammar laws; the edge record does not show that a</text>
-<text x="24" y="892" font-size="12.5" text-anchor="start" fill="#57534e">distance is a gap or a failure. The ethics’ two premises, the continuation condition for scope and C for order, are</text>
-<text x="24" y="908" font-size="12.5" text-anchor="start" fill="#57534e">not among these: neither stands on the edge.</text>
-<text x="24" y="928" font-size="12.5" text-anchor="start" fill="#57534e">Each declaration's standing is in the edge record, one-root-to-its-edge: 42 have a basis in words, in its data, and</text>
-<text x="24" y="944" font-size="12.5" text-anchor="start" fill="#57534e">the other 75 the label a rule gives; the page of each record whose laws name a declaration prints its standing, with</text>
-<text x="24" y="960" font-size="12.5" text-anchor="start" fill="#57534e">its basis or the rule's reason. 08 §7 gives the classes on amounts and laws of their models no further words. The</text>
-<text x="24" y="976" font-size="12.5" text-anchor="start" fill="#57534e">terms edge of one root, derived and named distance are in GLOSSARY.md.</text>
-<text x="24" y="996" font-size="12.5" text-anchor="start" fill="#57534e">Generated by tools/research/spine.py from shared-laws.json and spine.json.</text>
+<rect x="24" y="772" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="39" y="772" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<text x="286" y="783" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">2 laws of their models</text>
+<rect x="24" y="802" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="39" y="802" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<rect x="54" y="802" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
+<text x="286" y="813" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">3 keeping significance free</text>
+<text x="286" y="831" font-size="14" text-anchor="start" fill="#57534e">as chapter 7 intends</text>
+<text x="24" y="858" font-size="12.5" text-anchor="start" fill="#57534e">A named distance says why a declaration is not read as a case of grammar laws; the edge record does not show that a</text>
+<text x="24" y="874" font-size="12.5" text-anchor="start" fill="#57534e">distance is a gap or a failure. The ethics’ two premises, the continuation condition for scope and C for order, are</text>
+<text x="24" y="890" font-size="12.5" text-anchor="start" fill="#57534e">not among these: neither stands on the edge.</text>
+<text x="24" y="910" font-size="12.5" text-anchor="start" fill="#57534e">Each declaration's standing is in the edge record, one-root-to-its-edge: 42 have a basis in words, in its data, and</text>
+<text x="24" y="926" font-size="12.5" text-anchor="start" fill="#57534e">the other 75 the label a rule gives; the page of each record whose laws name a declaration prints its standing, with</text>
+<text x="24" y="942" font-size="12.5" text-anchor="start" fill="#57534e">what it rests on. 08 §7's table of standings gives no reason for the classes with balance in their statements (it</text>
+<text x="24" y="958" font-size="12.5" text-anchor="start" fill="#57534e">gives an example), on amounts and laws of their models, and places the 16 at a represented model and the 6 on their</text>
+<text x="24" y="974" font-size="12.5" text-anchor="start" fill="#57534e">own carrier by F5's verified items: theorems that state a row of the same record at a model, verified on the core run.</text>
+<text x="24" y="990" font-size="12.5" text-anchor="start" fill="#57534e">The terms edge of one root, derived and named distance are in GLOSSARY.md.</text>
+<text x="24" y="1010" font-size="12.5" text-anchor="start" fill="#57534e">Generated by tools/research/spine.py from shared-laws.json and spine.json.</text>
 </svg>

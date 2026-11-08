@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1767" width="900" height="1767" role="img" aria-labelledby="spine-title spine-desc" font-family="'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif">
 <title id="spine-title">八章及其彼此记录下的使用</title>
-<desc id="spine-desc">八章围绕文法排成一圈，按其结果数定大小（根 86；生成、守与退化 94；认知、学习与检验 110；生命与演化 46；联合活动与选择 74；古文 16；意义、伦理与对齐 82；方法 21）。章与章之间共有 497 次记为 formal-reuse 的使用，画出 17 个至少 10 次的配对；497 次中有 212 次是逆向的，即章序在前的一章的结果使用章序在后的一章的结果，画得较深（章的编号是为阅读，不是证明的次序）。每章到文法的辐条，示该章在文法上陈述其律的核心模块（根 74 个中 22 个；生成、守与退化 76 个中 14 个；认知、学习与检验 88 个中 14 个；生命与演化 23 个中 8 个；联合活动与选择 28 个中 3 个；古文 10 个中 4 个；意义、伦理与对齐 62 个中 12 个；方法 26 个中 4 个）。在地位之下，五条共律各有依于它的核心行与其中达到文法者（闭包 42 行，42 行达到；平衡 54 行，16 行达到，平衡为表示，不推导；有限运行 14 行，14 行达到；归并 2 行，1 行达到；扩大 8 行，1 行达到）。延续条件（定范围：谁的损失算数）与 C（定次序）作为前提进入第七章，各在所用之处为假设，二者都不断言。T1 到 T8 在其所属之处，按检验结局着色。</desc>
+<desc id="spine-desc">八章围绕文法排成一圈，按其结果数定大小（根 86；生成、守与退化 94；认知、学习与检验 110；生命与演化 46；联合活动与选择 74；古文 16；意义、伦理与对齐 82；方法 21）。章与章之间共有 497 次记为 formal-reuse 的使用，画出 17 个至少 10 次的配对；497 次中有 212 次是逆向的，即章序在前的一章的结果使用章序在后的一章的结果，有 10 次或以上的配对画得较深（章的编号是为阅读，不是证明的次序）。每章到文法的辐条，示该章在文法上陈述其律的核心模块（根 74 个中 22 个；生成、守与退化 76 个中 14 个；认知、学习与检验 88 个中 14 个；生命与演化 23 个中 8 个；联合活动与选择 28 个中 3 个；古文 10 个中 4 个；意义、伦理与对齐 62 个中 12 个；方法 26 个中 4 个）。117 项核心声明相对于根之边的地位：11 项推导而得，1 项在一个所述的假设之下，6 项为计数，99 项处于一个指明的距离。在地位之下，五条共律各有依于它的核心行与其中达到文法者（闭包 42 行，42 行达到；平衡 54 行，16 行达到，平衡为表示，不推导；有限运行 14 行，14 行达到；归并 2 行，1 行达到；扩大 8 行，1 行达到）。延续条件（定范围：谁的损失算数）与 C（定次序）作为前提进入第七章，各在所用之处为假设，二者都不断言。T1 到 T8 在其所属之处，按检验结局着色。</desc>
 <defs>
 <marker id="fwd" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8a817c"/></marker>
 <marker id="back" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c1917"/></marker>
@@ -13,7 +13,7 @@
 <text x="24" y="66" font-size="15" text-anchor="start" fill="#57534e">由理论图画出：每个圆按其章的结果数定大小；每条实线计一章的结果使用另一章结果、记为</text>
 <text x="24" y="85" font-size="15" text-anchor="start" fill="#57534e">formal-reuse 的次数，章与章之间的虚线与点线是别种依赖。</text>
 <text x="24" y="104" font-size="15" text-anchor="start" fill="#57534e">章的编号是为阅读，不是证明的次序：章与章之间的 497 次使用中，212 次是逆向的，即章序在前的一</text>
-<text x="24" y="123" font-size="15" text-anchor="start" fill="#57534e">章的结果使用章序在后的一章的结果（较深的曲线；只画出有 10 次或以上的配对）。</text>
+<text x="24" y="123" font-size="15" text-anchor="start" fill="#57534e">章的结果使用章序在后的一章的结果（较深的曲线；formal-reuse 的实线只画出有 10 次或以上的配对）。</text>
 <rect x="20" y="133" width="860" height="96" rx="6" fill="#f5f5f4" stroke="#e7e5e4"/>
 <text x="32" y="150" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">117 项核心声明相对于根之边的地位（08 §7）：</text>
 <rect x="32" y="160" width="10" height="10" fill="#1c1917" stroke="#57534e" stroke-width="0.5"/>
@@ -52,8 +52,8 @@
 <rect x="700.8" y="291" width="2.7" height="11" fill="url(#reach)" stroke="#57534e" stroke-width="0.5"><title>1</title></rect>
 <text x="700.8" y="318" font-size="13" text-anchor="start" fill="#1c1917">8 行，1 行达到</text>
 <text x="32" y="355" font-size="12.5" text-anchor="start" fill="#57534e">计的是行，不是声明：126 个核心行（九项声明各占两行）中，87 行至少依于一条律，有的依于多条。达到文法不等</text>
-<text x="32" y="371" font-size="12.5" text-anchor="start" fill="#57534e">于推导而得：被读作文法之律之情形的，只有上面推导而得的 11 项，另有 1 项在一个所述的假设之下被读作根形式。</text>
-<text x="32" y="387" font-size="12.5" text-anchor="start" fill="#57534e">行数很少的条加宽以便看见；数目以文字为准。</text>
+<text x="32" y="371" font-size="12.5" text-anchor="start" fill="#57534e">于推导而得：被读作文法之律之情形的，只有上面推导而得的 11 项，另有 1 项在一个所述的假设之下被读作一个根</text>
+<text x="32" y="387" font-size="12.5" text-anchor="start" fill="#57534e">形式的一步。行数很少的条加宽以便看见；数目以文字为准。</text>
 <line x1="450" y1="583.3" x2="450" y2="715.6" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="3.7" stroke-linecap="round"/>
 <line x1="584.2" y1="641.4" x2="492.4" y2="733.2" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2.7" stroke-linecap="round"/>
 <line x1="635.1" y1="775.6" x2="510" y2="775.6" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2.4" stroke-linecap="round"/>

@@ -132,6 +132,9 @@ class Checking(unittest.TestCase):
         self.assertIn('the example of "derived", RelativePosition.rise_needs_fall, stands as \'counting\'', errors)
         self.assertIn('the example of "derived" quotes two records', errors)
         s = spine.spec()
+        s['first_view']['bands'][2]['example']['en'][1] = s['first_view']['bands'][2]['example']['zh'][1] = 'a part'
+        self.assertTrue(any('is not in a law of its record naming RelativePosition.rise_needs_fall' in e for e in spine.check(s)))
+        s = spine.spec()
         s['first_view']['bands'][0]['gloss_also']['en'][1] = 'a clause the glossary does not hold'
         self.assertTrue(any('a clause the glossary does not hold' in e for e in spine.check(s)))
 
@@ -139,8 +142,7 @@ class Checking(unittest.TestCase):
         svg = spine.standings_svg(spine.spec(), 'en')
         self.assertIn('It is GroupEnding.Flow.all_end:', svg)
         self.assertIn('For example, Flow.beyond_gives_nothing:', svg)
-        self.assertIn('the case rests on the review (the', svg)
-        self.assertIn('review is AI-written)', svg)
+        self.assertIn('the case rests on an AI-written', svg)
         self.assertIn("RelativePosition.rise_needs_fall, in its record's law:", svg)
         self.assertIn('rows list 126, nine declarations twice, so 117 distinct', spine.standings_svg(spine.spec(), 'en').replace('\n', ' '))
 

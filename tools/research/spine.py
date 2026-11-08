@@ -76,7 +76,7 @@ WORDS = {
         'read': 'How to read it',
         'size': 'Circle: a chapter, its area by its results; its number inside it; beside it, its name, its results and the formal-reuse uses within it.',
         'formal': 'A use recorded as formal-reuse, a kind kept for “a verified inference using the cited result”: the arrow points to the chapter whose results are used; the number beside a curve counts its uses, written where it is {m} or more. The AI-written records assign the kind; the registry checks that an interface has its fields and cites a file among the record’s hashed references (on {k} of all {n} such edges; each cites a Lean file); nothing checks that the Lean there uses the cited result.',
-        'numbering': 'The chapters are numbered for reading, not as an order of proof: {b} of the {t} uses between chapters run backward, an earlier chapter’s results using a later one’s (the darker curves; only pairs with {m} or more are drawn).',
+        'numbering': 'The chapters are numbered for reading, not as an order of proof: {b} of the {t} uses between chapters run backward, an earlier chapter’s results using a later one’s (the darker curves; only formal-reuse curves of pairs with {m} or more are drawn).',
         'backward': 'The same, darker where an earlier chapter’s results use a later one’s: the chapters are numbered for reading, not as an order of proof.',
         'interpretive': 'interpretive, kept for “an argument dependency” (dashed; pairs with {m} or more).',
         'application': 'application, a reused result with its correspondence and added premises (dotted).',
@@ -84,7 +84,7 @@ WORDS = {
         'spoke_label': '{k} of {m} modules on the grammar',
         'laws_head': 'The five shared laws (08 §7): central rows on each; hatched, those whose compiled type or value reaches the grammar',
         'law_all': '{c} rows, all {c} reach', 'law_some': '{c} rows, {k} reach', 'law_rep': 'represented both ways, not derived',
-        'laws_note': 'Rows, not declarations: {rested} of the {rows} central rows (nine declarations stand in two) rest on at least one law, some on several. Reaching the grammar is not being derived: only the {d} derived above are read as cases of grammar laws, and {h} as a root form under a stated hypothesis. A bar of few rows is widened to be seen; the words give the counts.',
+        'laws_note': 'Rows, not declarations: {rested} of the {rows} central rows (nine declarations stand in two) rest on at least one law, some on several. Reaching the grammar is not being derived: only the {d} derived above are read as cases of grammar laws, and {h} as a root form at one step, under a stated hypothesis. A bar of few rows is widened to be seen; the words give the counts.',
         'related': 'Not drawn: related, for analogy ({n} edges), and the formal-reuse curves of pairs under {m} uses; counts under {k} are not written. THEORY-GRAPH.md’s table of edge kinds between chapters has them all.',
         'theses': 'The theses',
         'theses_note': 'T1–T8 at their homes; what each claims, its standing and its tests: the theses table in THEORY-GRAPH.md, “The chapters at a glance”.',
@@ -99,7 +99,7 @@ WORDS = {
         'read': '怎样读这幅图',
         'size': '圆：一章，面积按其结果数；圆内是章号；圆旁是章名、结果数与章内 formal-reuse 使用数。',
         'formal': '记为 formal-reuse 的使用（这一类留给使用所引结果的已核验推理）：箭头指向被使用其结果的那一章；曲线旁的数字为其使用次数，{m} 次及以上才标出。这一类由 AI 写成的记录指定；登记检查核对接口具备其字段、且其所引是记录中带散列的参考文献之一（全部 {n} 条这样的边中有 {k} 条，所引的都是 Lean 文件）；没有任何检查核对那里的 Lean 是否确实使用所引的结果。',
-        'numbering': '章的编号是为阅读，不是证明的次序：章与章之间的 {t} 次使用中，{b} 次是逆向的，即章序在前的一章的结果使用章序在后的一章的结果（较深的曲线；只画出有 {m} 次或以上的配对）。',
+        'numbering': '章的编号是为阅读，不是证明的次序：章与章之间的 {t} 次使用中，{b} 次是逆向的，即章序在前的一章的结果使用章序在后的一章的结果（较深的曲线；formal-reuse 的实线只画出有 {m} 次或以上的配对）。',
         'backward': '同上；章序在前的一章的结果使用章序在后的一章的结果时，线色较深：章的编号是为阅读，不是证明的次序。',
         'interpretive': '诠释（interpretive），用于论证上的依赖（虚线；{m} 次及以上的配对）。',
         'application': '应用（application），一个被复用的结果，连同其对应与所添的前提（点线）。',
@@ -107,7 +107,7 @@ WORDS = {
         'spoke_label': '{m} 个模块中 {k} 个在文法上',
         'laws_head': '五条共律（08 §7）：依于每一条的核心行；斜线部分是其编译后的类型或值达到文法的行',
         'law_all': '{c} 行，全部达到', 'law_some': '{c} 行，{k} 行达到', 'law_rep': '双向表示，不推导',
-        'laws_note': '计的是行，不是声明：{rows} 个核心行（九项声明各占两行）中，{rested} 行至少依于一条律，有的依于多条。达到文法不等于推导而得：被读作文法之律之情形的，只有上面推导而得的 {d} 项，另有 {h} 项在一个所述的假设之下被读作根形式。行数很少的条加宽以便看见；数目以文字为准。',
+        'laws_note': '计的是行，不是声明：{rows} 个核心行（九项声明各占两行）中，{rested} 行至少依于一条律，有的依于多条。达到文法不等于推导而得：被读作文法之律之情形的，只有上面推导而得的 {d} 项，另有 {h} 项在一个所述的假设之下被读作一个根形式的一步。行数很少的条加宽以便看见；数目以文字为准。',
         'related': '不画出：相关（related，用于类比，{n} 条边），以及少于 {m} 次 formal-reuse 使用之配对的实线；少于 {k} 次的不标数字。理论图“各章一览”的中文版（THEORY-GRAPH.zh.md）中各章之间边的种类表列出全部。',
         'theses': '论题',
         'theses_note': 'T1 到 T8 在其所属之处；各自主张什么、地位如何、检验如何：见理论图“各章一览”的中文版（THEORY-GRAPH.zh.md）中的论题表。',
@@ -247,6 +247,12 @@ def check(s):
                     holds(*ex[lang])
                 if ex['en'][0] != ex['zh'][0]:
                     errors.append(f'spine.json: the example of "{item["key"]}" quotes two records, {ex["en"][0]} and {ex["zh"][0]}')
+                if ex.get('in_law'):
+                    laws = json.loads(_read(ex['en'][0]) or '{}').get('laws', [])
+                    for lang in ('en', 'zh'):
+                        if not any('Becoming.' + ex['declaration'] in law.get('declarations', []) and norm(ex[lang][1]) in norm(law.get(lang, ''))
+                                   for law in laws):
+                            errors.append(f'spine.json: the example of "{item["key"]}" is not in a law of its record naming {ex["declaration"]} ({lang})')
                 label = rows.get('Becoming.' + ex['declaration'], {}).get('label')
                 if label != item['key']:
                     errors.append(f'spine.json: the example of "{item["key"]}", {ex["declaration"]}, stands as {label!r} in the shared-laws data')
@@ -749,8 +755,12 @@ def svg(graph, s, lang, info=None):
         soft = [pt for other in L['curves'] if other is not c and other not in mates for pt in halo[id(other)]] + spoke_soft
         hard = obstacles + [(x, y, r + 1) for o in mates for x, y, r in under[id(o)]]
         # either side of the curve: nearest_is keeps a count by its own curve rather than its pair's other one
-        box = place_box(along(c['point'], 0.5), w, h, hard, boxes + [l[0] for l in labels], pad=0.0, soft=soft,
+        strict = hard + [pt for o in L['curves'] if o is not c and o not in mates and o['kind'] == 'formal-reuse' for pt in halo[id(o)]]
+        box = place_box(along(c['point'], 0.5), w, h, strict, boxes + [l[0] for l in labels], pad=0.0, soft=soft,
                         accept=nearest_is(c))
+        if not all(clear_of_circle(box, o) for o in strict):  # no place clear of every solid curve: the fewest crossings
+            box = place_box(along(c['point'], 0.5), w, h, hard, boxes + [l[0] for l in labels], pad=0.0, soft=soft,
+                            accept=nearest_is(c))
         cx_, cy_ = (box[0] + box[2]) / 2, (box[1] + box[3]) / 2
         if (not nearest_is(c)(cx_, cy_) or not all(clear_of_circle(box, o) for o in hard)
                 or any(overlaps(box, b) for b in boxes + [l[0] for l in labels])):
@@ -979,13 +989,16 @@ def description(results, pairs, s, lang, modules=None):
     drawn = sum(1 for (a, b), c in pairs.items() if a != b and a in order and b in order and c['formal-reuse'] >= DRAW_MIN)
     total = sum(c['formal-reuse'] for (a, b), c in pairs.items() if a != b and a in order and b in order)
     modules = modules or {}
+    n = boundary_counts()
     if lang == 'zh':
         sizes = '；'.join(s['chapters'][k]['zh'] + ' ' + str(results[k]) for k in order)
         spokes = '；'.join(f'{s["chapters"][k]["zh"]} {modules[k][0]} 个中 {modules[k][1]} 个' for k in order if k in modules)
         return (f'八章围绕文法排成一圈，按其结果数定大小（{sizes}）。'
                 f'章与章之间共有 {total} 次记为 formal-reuse 的使用，画出 {drawn} 个至少 {DRAW_MIN} 次的配对；{total} 次中有 {backward} 次是逆向的，'
-                f'即章序在前的一章的结果使用章序在后的一章的结果，画得较深（章的编号是为阅读，不是证明的次序）。'
+                f'即章序在前的一章的结果使用章序在后的一章的结果，有 {DRAW_MIN} 次或以上的配对画得较深（章的编号是为阅读，不是证明的次序）。'
                 + (f'每章到文法的辐条，示该章在文法上陈述其律的核心模块（{spokes}）。' if spokes else '')
+                + (f'{sum(n.values())} 项核心声明相对于根之边的地位：{n.get("derived", 0)} 项推导而得，{n.get("under a stated hypothesis", 0)} 项在一个所述的假设之下，'
+                   f'{n.get("counting", 0)} 项为计数，{sum(n.values()) - n.get("derived", 0) - n.get("under a stated hypothesis", 0) - n.get("counting", 0)} 项处于一个指明的距离。' if n else '')
                 + '在地位之下，五条共律各有依于它的核心行与其中达到文法者（'
                 + '；'.join(f'{s["laws_zh"]["names"][nm]} {c} 行，{k} 行达到' + ('，平衡为表示，不推导' if rep_ else '') for nm, c, k, rep_ in strip)
                 + '）。延续条件（定范围：谁的损失算数）与 C（定次序）作为前提进入第七章，各在所用之处为假设，二者都不断言。T1 到 T8 在其所属之处，按检验结局着色。')
@@ -993,8 +1006,11 @@ def description(results, pairs, s, lang, modules=None):
     spokes = ', '.join(f'{theory_graph.REGION_TITLES[k].split(":")[0]} {modules[k][1]} of {modules[k][0]}' for k in order if k in modules)
     return (f'Eight chapters on a ring around the grammar, sized by their results ({sizes}); '
             f'{total} formal-reuse uses between chapters, {drawn} pairs with at least {DRAW_MIN} drawn, {backward} of the uses running backward, '
-            "an earlier chapter's results using a later one's, drawn darker (the chapters are numbered for reading, not as an order of proof); "
+            f"an earlier chapter's results using a later one's, drawn darker where a pair has {DRAW_MIN} or more (the chapters are numbered for reading, not as an order of proof); "
             + (f"spokes to the grammar give each chapter's core modules that state their laws on it ({spokes}); " if spokes else '')
+            + (f'the standings of the {sum(n.values())} central declarations against the edge of one root ({n.get("derived", 0)} derived, '
+               f'{n.get("under a stated hypothesis", 0)} under a stated hypothesis, {n.get("counting", 0)} counting, '
+               f'{sum(n.values()) - n.get("derived", 0) - n.get("under a stated hypothesis", 0) - n.get("counting", 0)} at a named distance); ' if n else '')
             + 'under the standings, the five shared laws with the central rows on each and those reaching the grammar ('
             + '; '.join(f'{nm} {c} rows, {k} reach' + (', represented, not derived' if rep_ else '') for nm, c, k, rep_ in strip)
             + '); the continuation condition (scope, whose losses count) and C (order) come into chapter 7 as premises, each a hypothesis '
@@ -1233,22 +1249,22 @@ def how_to_read(s, lang, page='theories/becoming/ONE-PAGE.md'):
     if lang == 'zh':
         about = '约十分之一' if 0.085 <= share <= 0.115 else f'{d + h} 项'
         return (f'每个圆是一章，按其结果数定大小；从一章到另一章的实线，计其结果使用另一章结果、记为 formal-reuse（[RESULT-WORKFLOW]({wf}) 把这一类留给'
-                f'已核验的推理；它由 AI 写成的记录指定，没有任何检查核对一次使用是否见于 Lean）的次数，章与章之间的虚线与点线是别种依赖；辐条的粗细与章旁的计数，标出该章有多少核心模块在中央的文法上陈述其律（计的是模块，'
+                f'已核验的推理；它由 AI 写成的记录指定，没有任何检查核对一次使用是否见于 Lean）的次数，章与章之间的虚线与点线是别种依赖；辐条的粗细标出比例、章旁的计数标出数目：该章核心模块中在中央的文法上陈述其律者（计的是模块，'
                 f'不是推导而得的结果）。章的编号是为阅读，不是证明的次序，使用也是双向的：较深的曲线是章序在前的一章的结果使用章序在后的一章的结果；'
                 f'登记检查拒绝会闭合其已声明依赖之环的记录（[这是入册的条件，不是一项发现]({tg}#do-the-recorded-uses-form-a-cycle)）。'
-                f'{total} 项核心声明中，{about}被读作文法之律或根形式的情形：{d} 项[推导而得]({gl}#derived)，为文法之律的情形，{h} 项为根上一形式（root form）的一步情形，'
-                f'在一个所述的假设之下；其余或为计数之律，位于文法以下（{c} 项），或处于一个[指明的距离]({gl}#named-distance)，不被读作这样的情形，各有其指明的理由（{rest} 项）。')
+                f'{total} 项核心声明中，{about}被读作文法之律或根形式的情形：{d} 项[推导而得]({gl}#derived)，为文法之律的情形，{h} 项为一个根形式（root form）的一步情形，'
+                f'在一个所述的假设之下；其余或为计数之律，位于文法以下（{c} 项），或处于一个[指明的距离]({gl}#named-distance)，既非推导而得，也非在一个所述的假设之下，各有其指明的理由（{rest} 项）。')
     about = 'About a tenth' if 0.085 <= share <= 0.115 else f'{d + h}'
     return (f'Each circle is a chapter, sized by its results; a solid curve from one chapter to another counts the uses of '
             f'the other\'s results recorded as formal-reuse, the kind [RESULT-WORKFLOW]({wf}) keeps for verified inferences (the AI-written records '
             f'assign it, and nothing checks a use against the Lean), and dashed and dotted '
-            f'curves between chapters are other dependences; a spoke\'s width, and the count beside its chapter, say how many of the chapter\'s core modules state their laws on the '
+            f'curves between chapters are other dependences; a spoke\'s width gives the share, and the count beside its chapter the number, of the chapter\'s core modules that state their laws on the '
             f'grammar at the centre (modules, not results derived). The chapters are numbered for reading, not as an order of proof, and uses '
             f'run both ways: a darker curve is an earlier chapter\'s results using a later one\'s, and the registry refuses a record that would '
             f'close a cycle among its declared dependencies ([a condition of entry, not a finding]({tg}#do-the-recorded-uses-form-a-cycle)). '
             f'{about} of the {total} central declarations are read as '
             f'cases of grammar laws or of a root form: {d} [derived]({gl}#derived), cases of grammar laws, and {h}, a root form at one step, under a stated hypothesis; the rest are counting laws, below the '
-            f'grammar ({c}), or stand at a [named distance]({gl}#named-distance), not read as such a case and each with its reason named ({rest}).')
+            f'grammar ({c}), or stand at a [named distance]({gl}#named-distance), neither derived nor under a stated hypothesis, each with its reason named ({rest}).')
 
 
 def drawn_otherwise(between):
@@ -1299,8 +1315,8 @@ def lead(graph, page_path):
              f'**How to read it.** {how_to_read(s, "en", page_path)} Of the {total:,} uses between chapters, '
              f'{sum(into[k] for k in top):,} go into {name[top[0]].lower()} and {name[top[1]].lower()}, and {backward:,} run backward. '
              f'Under the standings, a strip gives the five shared laws: the central rows resting on each and, hatched, those whose compiled '
-             f'type or value reaches the grammar ([their table](#the-five-shared-laws)). The two boxes are the ethics\' premises, each a '
-             f'hypothesis where used, neither asserted; the badges T1 to T8 are the theses at the chapters that state them, coloured by how '
+             f'type or value reaches the grammar ([their table](#the-five-shared-laws)). The two boxes are the ethics\' premises, the continuation condition for '
+             f'scope and C for order, each a hypothesis where used, neither asserted; the badges T1 to T8 are the theses at the chapters that state them, coloured by how '
              f'their frozen tests came out, each in its row\'s words in the table below. A curve is a dependence, not an agreement in meaning.', '',
              f'![The eight chapters and their recorded uses of one another: circles sized by their results, solid curves counting formal-reuse uses '
              f'between chapters\' results and dashed and dotted ones other dependences, the five shared laws under the standings, the continuation '
@@ -1323,7 +1339,7 @@ def lead(graph, page_path):
                   f'stated hypothesis its form, hypotheses and countermodels, for a reading its basis, and otherwise the rule\'s reason. Each of the 99 has its named reason: its class, and for {at_distance} a '
                   f'basis in words. A declaration is the Lean statement a row of the coverage file names; the plain words of a result are at its record.', '',
                   f'![The {total_decl} central declarations, one square each, by their standing against the edge of one root: derived, under a stated '
-                  f'hypothesis, counting and, by reason, at a named distance, with an example for {examples_drawn(s)[0]} of them and the single declaration of the class of one, in its record\'s words]({rel(FIRST["en"])})', '',
+                  f'hypothesis, counting and, by reason, at a named distance, with an example for {examples_drawn(s)[0]} of the classes' + (' and the single declaration of the class of one' if examples_drawn(s)[1] else '') + f', in its record\'s words]({rel(FIRST["en"])})', '',
                   f'*Generated by `tools/research/spine.py` from [the shared-laws data]({rel(registry.SHARED_LAWS)}) and [spine.json]({rel(DATA)}); '
                   f'[in Chinese]({rel(FIRST["zh"])}).*', '',
                   f'**The eleven derived**, each read as a case of grammar laws by an AI-written review ([of the record]({rel(REVIEW_U4)}), [of `Listed.coming_of_ceasing`\'s row]({rel(REVIEW_U4C)})); '
@@ -1463,7 +1479,7 @@ def zh_page(graph):
     body = ['## 各章一览', '<a id="the-spine"></a>', '',
             f'**怎样读它。** {how_to_read(s, "zh", PAGE_ZH)}章与章之间共 {total} 次使用，其中 {into[top[0]] + into[top[1]]} 次进入'
             f'「{zname(top[0])}」与「{zname(top[1])}」两章，{backward} 次是逆向的。地位一行之下的条带给出五条共律：依于每一条的核心行，'
-            f'斜线部分是其编译后的类型或值达到文法的行（[其表](#the-five-shared-laws)）。两个方框是伦理的两个前提，各在所用之处为假设，二者都不断言；'
+            f'斜线部分是其编译后的类型或值达到文法的行（[其表](#the-five-shared-laws)）。两个方框是伦理的两个前提，定范围的延续条件与定次序的 C，各在所用之处为假设，二者都不断言；'
             f'徽标 T1 到 T8 是各论题，位于陈述它们的那一章，按其冻结检验的结局着色，下表以各自所在行的话给出它们。曲线是一种依赖，不是意义上的一致。', '',
             f'![八章及其彼此记录下的使用：圆按结果数定大小，实线计各章结果之间记为 formal-reuse 的使用，章与章之间的虚线与点线是别种依赖，地位之下是五条共律，两个前提进入第七章，各在所用之处为假设，T1 到 T8 '
             f'在其所属之处按检验结局着色]({rel(SVG["zh"])})', '',
@@ -1476,7 +1492,7 @@ def zh_page(graph):
              f'每项声明及其地位，见[根之边的记录]({rel(EDGE_RECORD + ".md")})（英文）：{edge_bases()[0]} 项有文字的依据，在[其数据]({rel(EDGE_RECORD + ".json")})（`boundary.standings`）中，'
              f'其余 {central_total() - edge_bases()[0]} 项是规则所给的标签。凡其律中列有某项声明的记录，其页面印出该声明的地位：推导而得者印出其律、桥接与支持，在一个所述的假设之下的那一行印出其形式、假设与反模型，读法印出其依据，其余印出规则的理由。99 项中每一项都有其指明的理由：其类别，其中 {edge_bases()[1]} 项另有文字的依据。'
              f'一项[核心声明]({rel("GLOSSARY.zh.md")}#核心声明)是覆盖文件的某一行所指明的 Lean 陈述；一项结果的平实说法在其记录中。', '',
-             f'![{central_total()} 项核心声明，每项一个方块，按其相对于根之边的地位排列：推导而得、在一个所述的假设之下、计数，以及按理由分列的处于一个指明的距离者，其中 {examples_drawn(s)[0]} 类各附一例，单独一项的那一类写出该项，皆用其记录的话]({rel(FIRST["zh"])})', '',
+             f'![{central_total()} 项核心声明，每项一个方块，按其相对于根之边的地位排列：推导而得、在一个所述的假设之下、计数，以及按理由分列的处于一个指明的距离者，其中 {examples_drawn(s)[0]} 类各附一例' + ('，单独一项的那一类写出该项' if examples_drawn(s)[1] else '') + f'，皆用其记录的话]({rel(FIRST["zh"])})', '',
              f'*由 `tools/research/spine.py` 依[共律数据]({rel(registry.SHARED_LAWS)})与 [spine.json]({rel(DATA)}) 画出，图中文字为 AI 所译；[英文图]({rel(FIRST["en"])})。*', '',
              f'**十一项推导而得者**，各由一次 AI 写成的审阅读作文法之律的一个情形（[对该记录的审阅]({rel(REVIEW_U4)})，[对 `Listed.coming_of_ceasing` 一行的审阅]({rel(REVIEW_U4C)})）；'
              f'迄今所有记录在案的审阅都出自 AI（[08]({rel(m08, "review-status")})）。其中八项（除表中最后三行外），用 08 §7 的话说，是“the eight connected rows that the reading of connected rows took as derived”'
