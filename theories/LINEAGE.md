@@ -2,7 +2,7 @@
 
 # How the account grew
 
-[Home](../README.md) · [Start here](../MAP.md) · [One page](becoming/ONE-PAGE.md) · [中文](../README.zh.md) · [The theory](becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](becoming/chapters/README.md) · [Uses](becoming/USES.md) · [Tests](../TESTS.md) · [Graph](becoming/results/THEORY-GRAPH.md) · [Connections](becoming/results/atlas/CROSSWALK.md) · [How it grew](LINEAGE.md) · [Results](../RESULTS.md) · [Glossary](../GLOSSARY.md) · [Reviewers](becoming/review/README.md) · [Open questions](../OPEN-QUESTIONS.md)
+[Home](../README.md) · [Where everything is](../MAP.md) · [One page](becoming/ONE-PAGE.md) · [中文](../README.zh.md) · [The theory](becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](becoming/chapters/README.md) · [Uses](becoming/USES.md) · [Tests](../TESTS.md) · [Graph](becoming/results/THEORY-GRAPH.md) · [Connections](becoming/results/atlas/CROSSWALK.md) · [How it grew](LINEAGE.md) · [Results](../RESULTS.md) · [Glossary](../GLOSSARY.md) · [Reviewers](becoming/review/README.md) · [Open questions](../OPEN-QUESTIONS.md)
 
 [中文](LINEAGE.zh.md) · 93–120 minutes to read in full; the brief, the picture, the labels and the thread in 14–18 minutes.
 

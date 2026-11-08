@@ -2,7 +2,7 @@
 
 [中文](ONE-PAGE.zh.md) · [What it is for](USES.md) · [The overview](THE-THEORY-OF-BECOMING.md) · [The eight chapters](chapters/README.md) · [The theory graph](results/THEORY-GRAPH.md) · [How it grew](../LINEAGE.md)
 
-*Thirteen to seventeen minutes to read.*
+*Fourteen to eighteen minutes to read.*
 
 **What it is.** An account of how anything comes to be, lasts, changes and passes away within one relational unfolding, of how life and knowing take shape there and how far evaluation does, without assuming that becoming is good. Made with AI, proofs included; the proofs are checked by machine, everything else only by AI review, and no person has yet reviewed it ([the review packet](review/README.md)). Its centre [AI reading]: a selection can succeed while what it cannot read is lost, and the laws do not say whether that loss counts ([what it is for, and how far](USES.md)).
 
