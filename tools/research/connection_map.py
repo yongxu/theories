@@ -4,7 +4,8 @@ far the root reaches and how far the corpus has been read, and where things do n
 
 It holds no claim of its own. Every count and entry is read from what other generators write: the atlas's correspondences
 (atlas.json), the theory graph (theory-graph.json) and the shared-laws data (shared-laws.json). The page is generated
-through `make research-render`, so a strict check fails when it is stale; `--fragment OUT` writes the same page without a
+through `make research-render`, so a strict check fails when it is stale, with a static picture of its overview,
+connections.svg, which GitHub shows where it shows the map only as source; `--fragment OUT` writes the same page without a
 document skeleton and with paths as plain text, for hosting outside the repository; `site_map` (or `--site OUT_DIR`)
 writes it whole for a site, its links going to a base the site's builder gives.
 
@@ -339,12 +340,132 @@ def site_map(out_dir: str | Path, link_base: str, site_paths: dict[str, str] | N
     return out
 
 
+# --- the overview's picture: what GitHub shows of the map ---------------------------------------------------------
+
+OVERVIEW = atlas_tool.ATLAS + '/connections.svg'
+OV_W = 900
+OV_INK, OV_MUTED, OV_PAPER, OV_RULE = '#1e1a15', '#6d6355', '#fcfcfb', '#d6d3d1'
+OV_COLOUR = {'agreement': '#1f6fbf', 'scope': '#b58a00', 'divergence': '#d1361b', 'contrary-reading': '#0f8a6e'}
+OV_DASH = {'scope': '7 3', 'contrary-reading': '1.5 3.5'}
+OV_WORD = {'agreement': 'Agreement', 'scope': 'Scope', 'divergence': 'Divergence', 'contrary-reading': 'Contrary reading'}
+OV_FONT = "Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC', sans-serif"
+
+
+def _short(title: str, limit: int = 50) -> str:
+    """A group's title for the picture: before its gloss in brackets or after a colon, and within `limit` characters."""
+    head = title.split(' (')[0]
+    before, colon, _ = head.partition(': ')
+    if colon and len(before) >= 8:
+        head = before
+    for cut in (', with ', ', as far '):
+        head = head.split(cut)[0]
+    if len(head) > limit:
+        head = head[:limit - 1].rsplit(' ', 1)[0].rstrip(',') + '…'
+    return head
+
+
+def _ov_text(x, y, body, size=12.0, weight='normal', anchor='start', fill=OV_INK) -> str:
+    bold = ' font-weight="bold"' if weight == 'bold' else ''
+    return f'<text x="{x:g}" y="{y:g}" font-size="{size:g}"{bold} text-anchor="{anchor}" fill="{fill}">{html.escape(body)}</text>'
+
+
+def overview_threads(data: dict) -> list[dict]:
+    """The map's threads, as its script counts them: claims stated, changed or proposed here, by group, part of the account,
+    relation and whether the account states the connection; each with how many claims it carries."""
+    counts = Counter()
+    for e in data['entries']:
+        if e['carried'] in ABSENT or not e['relation']:
+            continue
+        for w in e['warps']:
+            counts[(e['group'], w, e['relation'], e['carried'] == 'fresh-reading')] += 1
+    return [{'group': g, 'warp': w, 'relation': r, 'fresh': f, 'n': n} for (g, w, r, f), n in sorted(counts.items())]
+
+
+def overview_svg(data: dict) -> str:
+    """A static picture of the map's overview: the earlier folders and the domains of thought on the left, the parts of the
+    account their claims are read against on the right, threads coloured by relation, the counts, and that every thread
+    is an AI reading. Drawn at its own width, so its words read at their size where it is shown at 900 pixels."""
+    T, groups, warp = data['totals'], data['groups'], data['warp']
+    folders = [g for g in groups if g['side'] == 'folders']
+    domains = [g for g in groups if g['side'] == 'domains']
+    top, row, gap = 176, 19, 44
+    y_of = {g['id']: top + i * row for i, g in enumerate(folders)}
+    y0 = top + len(folders) * row + gap
+    y_of.update({g['id']: y0 + i * row for i, g in enumerate(domains)})
+    bottom = y0 + (len(domains) - 1) * row
+    step = (bottom - top) / max(1, len(warp) - 1)
+    w_of = {w['id']: top + i * step for i, w in enumerate(warp)}
+    left_label, left_count, x1, x2, right_label = 322, 330, 362, 556, 566
+    threads = overview_threads(data)
+    height = bottom + 136
+    loose = sum(T['carried'].get(k, 0) for k in ABSENT)
+    out = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {OV_W} {height}" width="{OV_W}" height="{height}" role="img" '
+           f'aria-labelledby="cx-title cx-desc" font-family="{html.escape(OV_FONT)}">',
+           f'<title id="cx-title">How the earlier folders and the domains of thought meet the live account</title>',
+           f'<desc id="cx-desc">{html.escape(_ledes(data)[0] + " " + _ledes(data)[1])}</desc>',
+           f'<rect x="0.5" y="0.5" width="{OV_W - 1}" height="{height - 1}" rx="10" fill="{OV_PAPER}" stroke="{OV_RULE}"/>',
+           _ov_text(24, 34, 'How the earlier folders and the domains of thought meet the live account', 17, 'bold'),
+           _ov_text(24, 54, f'Drawn by connection_map.py from the crosswalk’s {T["entries"]:,} claims, each read against the live account. A thread', 11.5, fill=OV_MUTED),
+           _ov_text(24, 69, 'joins an earlier folder or a domain of thought to the part of the account its claims are read against.', 11.5, fill=OV_MUTED),
+           _ov_text(24, 92, 'Every thread is an AI reading, no person’s. A thread is not proof, and agreement is drawn no more '
+                    'prominently than divergence.', 12.5, 'bold')]
+    x = 24
+    parts = []
+    for k, label in STATS:
+        parts.append(f'<tspan font-weight="bold">{T["carried"].get(k, 0):,}</tspan> {html.escape(label)}')
+    out.append(f'<text x="{x}" y="118" font-size="13" fill="{OV_INK}">' + '<tspan fill="#6d6355"> · </tspan>'.join(parts) + '</text>')
+    out += [_ov_text(left_label, 154, f'{len(folders)} earlier folders', 12.5, 'bold', 'end'),
+            _ov_text(left_count, 154, 'claims', 10.5, anchor='start', fill=OV_MUTED),
+            _ov_text(right_label, 154, 'Where the account takes them up', 12.5, 'bold'),
+            _ov_text(left_label, y0 - 22, f'{len(domains)} domains of thought', 12.5, 'bold', 'end')]
+    out.append('<g fill="none" stroke-linecap="round">')
+    order = sorted(threads, key=lambda t: (not t['fresh'], -t['n'], t['group'], t['warp'], t['relation']))
+    for t in order:
+        if t['group'] not in y_of or t['warp'] not in w_of:
+            continue
+        ya = y_of[t['group']] - 4 + {'agreement': -2, 'scope': -0.7, 'divergence': 0.7, 'contrary-reading': 2}[t['relation']]
+        spread = ((ya - top) / max(1, bottom - top) - 0.5) * 16
+        yb = w_of[t['warp']] - 4 + spread
+        mx = (x1 + x2) / 2
+        dash = f' stroke-dasharray="{OV_DASH[t["relation"]]}"' if t['relation'] in OV_DASH else ''
+        out.append(f'<path d="M{x1} {ya:.1f}C{mx:g} {ya:.1f} {mx:g} {yb:.1f} {x2} {yb:.1f}" stroke="{OV_COLOUR[t["relation"]]}" '
+                   f'stroke-width="{0.7 + 0.5 * t["n"] ** 0.5:.2f}" stroke-opacity="{0.2 if t["fresh"] else 0.5}"{dash}/>')
+    out.append('</g>')
+    for g in folders + domains:
+        y = y_of[g['id']]
+        out += [_ov_text(left_label, y, _short(g['title']), 12), _ov_text(left_count, y, f'{g["n"]}', 10.5, fill=OV_MUTED)]
+        out[-2] = out[-2].replace('text-anchor="start"', 'text-anchor="end"')
+    for w in warp:
+        y = w_of[w['id']]
+        out.append(f'<text x="{right_label}" y="{y:.1f}" font-size="12" fill="{OV_INK}">{html.escape(w["title"])}'
+                   f'<tspan fill="{OV_MUTED}" font-size="10.5">  {w["n"]}</tspan></text>')
+    y = bottom + 44
+    x = 24
+    for r in ('agreement', 'scope', 'divergence', 'contrary-reading'):
+        dash = f' stroke-dasharray="{OV_DASH[r]}"' if r in OV_DASH else ''
+        out.append(f'<line x1="{x}" y1="{y - 4}" x2="{x + 26}" y2="{y - 4}" stroke="{OV_COLOUR[r]}" stroke-width="2.5" stroke-linecap="round"{dash}/>')
+        label = f'{OV_WORD[r]} {T["relation"].get(r, 0):,}'
+        out.append(_ov_text(x + 32, y, label, 12))
+        x += 44 + len(label) * 7
+    out.append(_ov_text(x + 6, y, 'claims, by relation', 11, fill=OV_MUTED))
+    out.append(_ov_text(24, y + 22, f'A thread’s width grows with its claims; a lighter thread is a connection the account does not state, proposed here. '
+                        f'The {loose:,} claims only in history', 11, fill=OV_MUTED))
+    out.append(_ov_text(24, y + 38, 'or not carried draw no thread. Beside a folder or domain the number counts its claims; beside a part of the account, '
+                        'the claims read against it.', 11, fill=OV_MUTED))
+    out.append(_ov_text(24, y + 60, 'Every claim with its targets and their standings: the crosswalk below. The same data to explore: map.html beside this '
+                        'file, which GitHub shows only as source.', 11, fill=OV_MUTED))
+    out.append('</svg>')
+    return '\n'.join(out) + '\n'
+
+
 def _shared() -> dict:
     return json.loads((ROOT / registry.SHARED_LAWS).read_text(encoding='utf-8'))
 
 
 def render(atlas_json: str, graph_json: str) -> dict:
-    return {PAGE: page(payload(json.loads(atlas_json), json.loads(graph_json), _shared()))}
+    """The map's page and its overview's picture, from one payload."""
+    data = payload(json.loads(atlas_json), json.loads(graph_json), _shared())
+    return {PAGE: page(data), OVERVIEW: overview_svg(data)}
 
 
 CSS = r'''

@@ -146,6 +146,47 @@ class PageTests(unittest.TestCase):
         self.assertNotIn('derives from the condition', self.page)
 
 
+
+class OverviewTests(unittest.TestCase):
+    """The map's overview as a static picture: well formed, drawn from the same data as the page, at its own width."""
+
+    def setUp(self):
+        entries = [entry('cx-a', 'cxg-early'), entry('cx-b', 'cxg-early', relation='divergence', of=None),
+                   entry('cx-c', 'cxg-greek', relation='scope', of=None, carried='fresh-reading'),
+                   entry('cx-d', 'cxg-greek', carried='not-carried', relation=None, record=None)]
+        self.data = cm.payload(atlas(*entries), GRAPH, SHARED)
+        self.svg = cm.overview_svg(self.data)
+
+    def test_it_is_well_formed_and_drawn_at_900(self):
+        import xml.etree.ElementTree as ET
+        root = ET.fromstring(self.svg)
+        self.assertEqual(root.get('width'), '900')
+        self.assertTrue(root.get('viewBox').startswith('0 0 900 '))
+        self.assertIn('<title id="cx-title">', self.svg)
+
+    def test_it_says_what_every_thread_is_and_gives_the_counts(self):
+        self.assertIn('Every thread is an AI reading, no person’s.', self.svg)
+        for k, label in cm.STATS:
+            self.assertIn(f'>{self.data["totals"]["carried"].get(k, 0):,}</tspan> {label}', self.svg)
+
+    def test_a_thread_for_each_stated_or_proposed_claim_group_part_and_relation(self):
+        threads = cm.overview_threads(self.data)
+        self.assertEqual(sorted((t['group'], t['relation'], t['fresh'], t['n']) for t in threads),
+                         [('cxg-early', 'agreement', False, 1), ('cxg-early', 'divergence', False, 1), ('cxg-greek', 'scope', True, 1)])
+        self.assertEqual(self.svg.count('<path d="M'), len(threads))
+        self.assertIn('stroke-dasharray="7 3"', self.svg)  # scope, as the map draws it
+        self.assertIn('stroke-opacity="0.2"', self.svg)  # proposed here, lighter
+
+    def test_render_writes_the_page_and_the_picture(self):
+        out = cm.render(json.dumps(atlas(entry('cx-a', 'cxg-early'))), json.dumps(GRAPH))
+        self.assertEqual(set(out), {cm.PAGE, cm.OVERVIEW})
+
+    def test_short_names(self):
+        self.assertEqual(cm._short('The meta-attractor (元吸引子 / 总体化吸引子)'), 'The meta-attractor')
+        self.assertEqual(cm._short('智善: intelligence must be good'), '智善: intelligence must be good')
+        self.assertEqual(cm._short('Modern philosophy: process, recognition, capital'), 'Modern philosophy')
+        self.assertTrue(len(cm._short('x ' * 60)) <= 50)
+
 class SiteTests(unittest.TestCase):
     """The map for a site: a whole document from the data a render wrote, its links going to the base the builder gives."""
 
