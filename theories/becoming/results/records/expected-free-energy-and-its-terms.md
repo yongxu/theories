@@ -61,7 +61,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the periphery checker check_expected_free_energy_reals.py with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261031T134130.030892Z): all 68 declarations of ExpectedFreeEnergyReals, each on Lean's standard axioms only, FreeEnergyReals and every core module of its closure, Becoming.LumpedSeeking among them, matching a passed receipt. Independent reviews by other AI agents (REVIEW-UE19; REVIEW-UE23 and RECHECK-UE23 for seeking), study sections 453 and 464; not reviewed by a person.
+Machine-checked by the periphery checker check_expected_free_energy_reals.py with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261031T134130.030892Z): all 68 declarations of ExpectedFreeEnergyReals, each on Lean's standard axioms only, FreeEnergyReals and every core module of its closure, Becoming.LumpedSeeking among them, matching a passed receipt. Independent reviews by other AI agents (REVIEW-UE19; REVIEW-UE23 and RECHECK-UE23 for seeking), study sections 453 and 464; no person's review recorded.
 
 Canonical source: [ExpectedFreeEnergyReals.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean)
 

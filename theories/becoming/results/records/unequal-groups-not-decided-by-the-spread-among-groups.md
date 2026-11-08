@@ -36,7 +36,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the core checker with Lean 4.29.1 (receipt 20261103T203838.375122Z): every declaration of Becoming.SelectionLevels with an empty axiom report. Built in one session, the restatements read against the Lean by one AI reader other than the author; not reviewed by a person.
+Machine-checked by the core checker with Lean 4.29.1 (receipt 20261103T203838.375122Z): every declaration of Becoming.SelectionLevels with an empty axiom report. Built in one session, the restatements read against the Lean by one AI reader other than the author; no person's review recorded.
 
 Canonical source: [SelectionLevels.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean)
 

@@ -40,7 +40,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- That the texts state these laws or their authors meant them: a reading stands or is revised by its place in one account, and no person has reviewed these readings.
+- That the texts state these laws or their authors meant them: a reading stands or is revised by its place in one account, and no person's review of these readings is recorded.
 - That ending gives altering, or altering passing through, with no premise, or any order in time: what ends can cease, what alters can fail to pass through; alone a step need not reverse, and for what has ended, premises joined, all are one. Witness: `Becoming.«异而不通之例»`.
 - Which 變 the text means, which it does not say: the 疏 and the commentators who borrow it are near change at the limit; 上十二 has words near alternation, its example from 亢 to 通; as alternation at every step (上十一), 窮 selects no place.
 - That the order is every recension's: the 音義 at the sentence's own place records one without 變則通.

@@ -1,4 +1,4 @@
-<!-- The worked examples of USES.md (RW, 8 November 2026): one or more per field, each at its true standing. AI-written from the homes it links, each restatement checked against its home by AI readers; no person has read it. Where it and a home differ, the home governs. -->
+<!-- The worked examples of USES.md (RW, 8 November 2026): one or more per field, each at its true standing. AI-written from the homes it links, each restatement checked against its home by AI readers; no person's review of it is recorded. Where it and a home differ, the home governs. -->
 
 # What the account is for: worked examples
 
@@ -6,7 +6,7 @@
 
 *Fifty to sixty-five minutes to read, one example at a time; [the table, field by field](USES.md#field-by-field), comes first.*
 
-*AI-written from the homes it links, 8 November 2026; each restatement checked against its home by AI readers; no person has read it. Where it and a home differ, the home governs. Not advice, and not an application to any actual system: see [what the uses page does not do](USES.md#what-this-page-does-not-do).*
+*AI-written from the homes it links, 8 November 2026; each restatement checked against its home by AI readers; no person's review of it is recorded. Where it and a home differ, the home governs. Not advice, and not an application to any actual system: see [what the uses page does not do](USES.md#what-this-page-does-not-do).*
 
 
 ## Alignment of AI systems
@@ -163,7 +163,7 @@ A valley weighs three courses. Course A keeps the river's fishery, its wetland a
 
 ### The way of heaven and the drawn bow: a concordance, not a confirmation
 
-*An AI reading of a law proved on the World model; its class and reading unreviewed by any person.*
+*An AI reading of a law proved on the World model; no person's review of its class and reading is recorded.*
 
 **The passage.** 《老子》第七十七章, as stored: 「天之道，其犹张弓与？高者抑之，下者举之；有馀者损之，不足者补之。天之道，损有馀而补不足。」 In English (this page's translation, AI-made): "The way of heaven, is it not like drawing a bow? The high it presses down, the low it lifts; from what has too much it takes, to what has too little it adds. The way of heaven takes from what has too much and makes up what has too little."
 
@@ -171,7 +171,7 @@ A valley weighs three courses. Course A keeps the river's fishery, its wetland a
 
 **What the concordance records** [AI reading, D54]. The map of Chinese sources found no law for a level held from both sides; these laws "are the formal statements it proposed; reading the passages as them is the AI's" (the record). The passage is entered as *scoping*, not *agreement*: lowering the high and raising the low is not a law of the whole unfolding (a loop closes a difference only through a link giving back less, and closing is not lossless) but "the property of a regulating coupling", and the text's attribution of it to the way of heaven the theory does not adopt ([the entry](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/passages.json), `lao-77-tian-zhi-dao`). The chapter goes on 「人之道则不然，损不足以奉有馀」. The concordance enters this as agreement: every rise is given, and one member rises only as another falls; these are laws of direction and source, with no evaluation, and the verdict that this is wrong "needs the continuation condition and the comparison commitment" (`lao-77-ren-zhi-dao`), in 06's terms the condition for scope and C for order, which the theory does not assert ([06](chapters/06-CLASSICAL-TEXTS.md#laozi-51)). 06 lists this line among the tradition's own responses to contest and rank ([06](chapters/06-CLASSICAL-TEXTS.md#four-layers)).
 
-**What it does not show.** Agreement is not confirmation: the law holds without the text and does not exhaust its meaning; scoping is not denial ([06](chapters/06-CLASSICAL-TEXTS.md#three-relations)). The record does not show that a given system regulates a level, or that holding a level is good: the laws say what holds it and how wide a band it needs. To read the passage as advice would need the continuation condition (scope) and C (order), which neither the text nor the spine supplies. No person has read the class or the reading ([06](chapters/06-CLASSICAL-TEXTS.md#open)).
+**What it does not show.** Agreement is not confirmation: the law holds without the text and does not exhaust its meaning; scoping is not denial ([06](chapters/06-CLASSICAL-TEXTS.md#three-relations)). The record does not show that a given system regulates a level, or that holding a level is good: the laws say what holds it and how wide a band it needs. To read the passage as advice would need the continuation condition (scope) and C (order), which neither the text nor the spine supplies. No person's review of the class or the reading is recorded ([06](chapters/06-CLASSICAL-TEXTS.md#open)).
 
 **What a scholar can do.** Judge whether the passages were chosen to fit the theory, whether the three-way split works in commentary practice, and spot-check the classes ([C-31](review/CLASSICAL-TEXTS.md#c-31), questions 74 to 76); whether the choice of the tradition's own responses leans toward the theory ([C-32](review/CLASSICAL-TEXTS.md#c-32)).
 

@@ -277,7 +277,7 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the periphery checker check_linear_blankets.py with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261031T183915.457765Z): 62 theorems in 92 declarations of LinearBlankets, each on Lean's standard axioms only, every core module of its closure matching a passed core receipt. Reviewed by other AI agents: the design (REVIEW-UE26-DESIGN, fifteen findings), the literature, the revised kit (RECHECK-UE26, twelve) and the Lean and landing texts (REVIEW-UE26-LANDING, nineteen, and its recheck, six), every finding taken; study section 484; not reviewed by a person.",
+    "en": "Machine-checked by the periphery checker check_linear_blankets.py with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261031T183915.457765Z): 62 theorems in 92 declarations of LinearBlankets, each on Lean's standard axioms only, every core module of its closure matching a passed core receipt. Reviewed by other AI agents: the design (REVIEW-UE26-DESIGN, fifteen findings), the literature, the revised kit (RECHECK-UE26, twelve) and the Lean and landing texts (REVIEW-UE26-LANDING, nineteen, and its recheck, six), every finding taken; study section 484; no person's review recorded.",
     "zh": "外围检查器 check_linear_blankets.py 以 Lean 4.30.0-rc2 与固定之 Mathlib 实查（回执 20261031T183915.457765Z）：LinearBlankets 诸声明，各仅依标准公理，闭包之核心模块皆合通过之回执。他 AI 代理审之：设计（REVIEW-UE26-DESIGN，十五条）、文献、修订之件（RECHECK-UE26，十二条）、Lean 与落地文本（REVIEW-UE26-LANDING，十九条，复核六条），凡所见皆取；研究第 484 节；未经人审。"
   },
   "next_delta": {
@@ -471,7 +471,7 @@
     {
       "path": "theories/becoming/FREE-ENERGY-PRINCIPLE.md",
       "role": "integration",
-      "sha256": "9e85477b5e20e76f4f1108b091f3ceffa545ef6e565c2d534cf365ae62294c62"
+      "sha256": "a68af5047819d4d982a01f0fc9bf38314137c58d02c9707a9b5b8dab06bc01b6"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",

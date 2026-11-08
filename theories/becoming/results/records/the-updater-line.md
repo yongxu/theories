@@ -42,7 +42,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Checked by the drift-margins checker with Lean 4.30.0-rc2 and pinned Mathlib (receipt 20261008T114955.171898Z, six modules rebuilt against a pinned Mathlib cache, 307 audits; it binds the current bytes of all four modules): ConnectionistRecovery 29, DevelopmentalMemory 28, UpdaterConsequences 36 and DriftMargins 42 theorems, 24 cited here. Each study records a counter-review by its author, not independent; not reviewed by a person.
+Checked by the drift-margins checker with Lean 4.30.0-rc2 and pinned Mathlib (receipt 20261008T114955.171898Z, six modules rebuilt against a pinned Mathlib cache, 307 audits; it binds the current bytes of all four modules): ConnectionistRecovery 29, DevelopmentalMemory 28, UpdaterConsequences 36 and DriftMargins 42 theorems, 24 cited here. Each study records a counter-review by its author, not independent; no person's review recorded.
 
 Canonical source: [ConnectionistRecovery.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/ConnectionistRecovery.lean)
 

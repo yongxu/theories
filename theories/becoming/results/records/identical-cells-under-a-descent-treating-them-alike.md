@@ -45,7 +45,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261029T153820.435638Z): 40 of the 98 declarations of Becoming.FreeEnergyGuarantees, the rest cited by its sibling record, each with an empty axiom report. Drafted by an AI agent and read in the session; an independent read-only review by another AI agent (REVIEW-UE16) and a re-check, study section 449; not reviewed by a person. The laws apply landed theorems.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261029T153820.435638Z): 40 of the 98 declarations of Becoming.FreeEnergyGuarantees, the rest cited by its sibling record, each with an empty axiom report. Drafted by an AI agent and read in the session; an independent read-only review by another AI agent (REVIEW-UE16) and a re-check, study section 449; no person's review recorded. The laws apply landed theorems.
 
 Canonical source: [FreeEnergyGuarantees.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FreeEnergyGuarantees.lean)
 

@@ -227,7 +227,7 @@ def render_page(data):
         f'({counts}), as of {day(data["as_of"])}. Each row links its folder and quotes the outcome from its pages (one, '
         'where they have no sentence to quote, from method §9), the source linked; its class is read from the folder\'s '
         'verdicts, and its plain gloss is a restatement [AI reading]. The rows were drafted from the folders by an AI reader '
-        'and checked against them by a second; no person has checked them. A row\'s thesis is the one method §9 or the '
+        'and checked against them by a second; no person\'s check of them is recorded. A row\'s thesis is the one method §9 or the '
         'test\'s folder names; Frozen is the day its prediction, rule or plan was fixed, and Run the day the run finished. '
         'Experiments retired to [experiments/history](experiments/history/INDEX.md) are not listed. T8 is argued, and no '
         'test bears on it.',

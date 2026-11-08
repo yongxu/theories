@@ -353,7 +353,7 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Pure core, every axiom report empty (core receipt 20261101T044825.244995Z): BlanketCouplings (70 theorems in 140 declarations) imports Blanket, Histories and IdentificationRuns, a leaf; no decide. Near-definitional; the delta is the classification and, for a formation's level, the condition on the World's exchange, pairwise. Reviewed by other AI agents, every finding taken: UE27's design, Lean and landing texts (fifteen, fifteen and twenty-two findings) and UE28's (fifteen, thirteen and eighteen); study sections 488 and 491; not reviewed by a person.",
+    "en": "Pure core, every axiom report empty (core receipt 20261101T044825.244995Z): BlanketCouplings (70 theorems in 140 declarations) imports Blanket, Histories and IdentificationRuns, a leaf; no decide. Near-definitional; the delta is the classification and, for a formation's level, the condition on the World's exchange, pairwise. Reviewed by other AI agents, every finding taken: UE27's design, Lean and landing texts (fifteen, fifteen and twenty-two findings) and UE28's (fifteen, thirteen and eighteen); study sections 488 and 491; no person's review recorded.",
     "zh": "纯核，公理报告皆空（核心回执 20261101T044825.244995Z）：BlanketCouplings（70 条定理，140 项声明）引 Blanket、Histories 与 IdentificationRuns，为叶。近乎定义；增量为分类，及形成之层级于世界之交换上之逐对条件。他 AI 代理审之，凡所见皆取：UE27 之设计、Lean 与落地文本（十五、十五、二十二条），UE28 者（十五、十三、十八条）；研究第 488 与 491 节；未经人审。"
   },
   "next_delta": {
@@ -637,7 +637,7 @@
     {
       "path": "theories/becoming/FREE-ENERGY-PRINCIPLE.md",
       "role": "integration",
-      "sha256": "9e85477b5e20e76f4f1108b091f3ceffa545ef6e565c2d534cf365ae62294c62"
+      "sha256": "a68af5047819d4d982a01f0fc9bf38314137c58d02c9707a9b5b8dab06bc01b6"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T185431.953044Z/verification.json",

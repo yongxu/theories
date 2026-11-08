@@ -40,7 +40,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the core checker with Lean 4.29.1 (receipt 20261103T102739.294112Z): Becoming.RuleShaping and Becoming.SelectionLevels, every declaration cited here with an empty axiom report. Built in one session, the texts restating it read against their homes by the author; not reviewed by a person.
+Machine-checked by the core checker with Lean 4.29.1 (receipt 20261103T102739.294112Z): Becoming.RuleShaping and Becoming.SelectionLevels, every declaration cited here with an empty axiom report. Built in one session, the texts restating it read against their homes by the author; no person's review recorded.
 
 Canonical source: [RuleShaping.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean)
 

@@ -40,7 +40,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Checked by the module's checker with Lean 4.29.1 (receipt evolution/verification.json, passed 31 October 2026, fresh temporary build; it binds the current bytes): ConsequenceTransmission, 19 declarations audited, 9 with propext only and 10 with empty reports, 19 cited here; the developmental extension's receipt re-checks the same bytes. An internal counter-review read the source and the receipt hashes, without recompiling; not reviewed by a person.
+Checked by the module's checker with Lean 4.29.1 (receipt evolution/verification.json, passed 31 October 2026, fresh temporary build; it binds the current bytes): ConsequenceTransmission, 19 declarations audited, 9 with propext only and 10 with empty reports, 19 cited here; the developmental extension's receipt re-checks the same bytes. An internal counter-review read the source and the receipt hashes, without recompiling; no person's review recorded.
 
 Canonical source: [ConsequenceTransmission.lean](../../../../experiments/shared-renewal-capability/regulation/retention/formation/evolution/ConsequenceTransmission.lean)
 

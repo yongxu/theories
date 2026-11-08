@@ -83,7 +83,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261029T184601.050950Z): Becoming.KeepingWidening, 306 declarations, Dissipation's total_eq_of_supports and Population's length_le_count, every one with an empty axiom report, all cited here; every earlier statement of the module prints unchanged (signature audit). Built in sessions; independent read-only reviews by a separate AI agent, REVIEW-UE7 (study section 419) and REVIEW-GW-LEAN with its re-check (study section 448), every finding taken but one of the first; not reviewed by a person.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261029T184601.050950Z): Becoming.KeepingWidening, 306 declarations, Dissipation's total_eq_of_supports and Population's length_le_count, every one with an empty axiom report, all cited here; every earlier statement of the module prints unchanged (signature audit). Built in sessions; independent read-only reviews by a separate AI agent, REVIEW-UE7 (study section 419) and REVIEW-GW-LEAN with its re-check (study section 448), every finding taken but one of the first; no person's review recorded.
 
 Canonical source: [KeepingWidening.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepingWidening.lean)
 

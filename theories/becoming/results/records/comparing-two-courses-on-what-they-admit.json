@@ -487,7 +487,7 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T212948.819150Z): Becoming.ComparingCourses, 244 declarations, every one with an empty axiom report, all cited here; Web.Linked.append generalizes the landed Web.Linked.snoc and sits beside it until moved below. Built in one session; an independent read-only review by a separate AI agent (REVIEW-UE9), every finding taken, and a re-check (RECHECK-UE9), every finding taken but one, in study section 421; not reviewed by a person.",
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T212948.819150Z): Becoming.ComparingCourses, 244 declarations, every one with an empty axiom report, all cited here; Web.Linked.append generalizes the landed Web.Linked.snoc and sits beside it until moved below. Built in one session; an independent read-only review by a separate AI agent (REVIEW-UE9), every finding taken, and a re-check (RECHECK-UE9), every finding taken but one, in study section 421; no person's review recorded.",
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T212948.819150Z）：Becoming.ComparingCourses 之 244 项声明，公理报告皆空，本记录全引；Web.Linked.append 推广已落地之 Web.Linked.snoc，移至下层前与之并存。于一会话中构建；另一 AI 代理作独立只读审查（REVIEW-UE9），其所见皆采，并作复查（RECHECK-UE9），其所见除一项外皆采，见研究第 421 节；未经人审。"
   },
   "next_delta": {
