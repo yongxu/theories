@@ -3,9 +3,9 @@
  "editions": {
   "GLOSSARY.zh.md": {
    "revised": "2026-11-09",
-   "english": "c29977e89b85066916cfa6172e6168afefe0334b93444e4d242d77b70c024a7b",
-   "chinese": "93eb2301f050cf4d0d3473fa5da1ae86169d8bb0bf4c0b273e150d9e1d6b194a",
-   "english_commit": "e0c724771"
+   "english": "e0c858d56b6f654104bc72e99661efc997c67636b26db3bc7215921e764f2aef",
+   "chinese": "500f2380011df8cb4bdfd1806dd99603fd7e0bd539dd7bcb42e3c9312fcc52f2",
+   "english_commit": "1ffacd8d2"
   },
   "_process/navigation/README-ZH.md": {
    "revised": "2026-11-09",
