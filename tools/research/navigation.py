@@ -262,9 +262,8 @@ def first_screen(records, opening, config=None, root=ROOT, above='', below=''):
     opening's body and of its notes, `{{time:screen}}` that of the whole screen as it renders: `above` (the title,
     navigation and status), the file with its own time filled in (where filling it in moves the time back and forth, the
     longer) and `below` (the ways in, which stand before the opening's heading); `{{count:registered}}` is the number of
-    registered results and `{{count:STATUS}}` the number with that status; `{{tests:total}}` is the number of tests naming a thesis, `{{tests:CLASS}}` how many of them fell in a class of
-    tests_page.CLASSES, `{{tests:unrun}}` how many never ran (held, dropped or frozen and not run), `{{tests:ran}}` how many did, and `{{tests:other}}` how
-    many of those that ran are neither passed, failed nor mixed, so that the five add up to the total. A field of no such
+    registered results and `{{count:STATUS}}` the number with that status; `{{tests:ARG}}` is a count of the tests naming a thesis, by tests_page.screen_count (total, a class, unrun, ran,
+    other), which README.zh.md's fields share. A field of no such
     form left in the file is an error."""
     lead = markdown_file('readme_first_screen', 'README.md', config, root)
     if not lead:
@@ -281,17 +280,10 @@ def first_screen(records, opening, config=None, root=ROOT, above='', below=''):
             return str(sum(r['status'] == arg for r in records))
         if kind == 'tests':
             from tools.research import tests_page  # it imports this module
-            tallied = tests_page.thesis_counts(root)
-            unrun = sum(tallied.get(k, 0) for k in tests_page.NEVER_RAN)
-            if arg == 'unrun':
-                return str(unrun)
-            if arg == 'ran':
-                return str(tallied['total'] - unrun)
-            if arg == 'other':
-                return str(tallied['total'] - unrun - sum(tallied.get(k, 0) for k in ('passed', 'failed', 'mixed')))
-            if arg != 'total' and arg not in tests_page.CLASS_KEYS:
-                raise ValueError('readme_first_screen names an unknown class of test: ' + arg)
-            return str(tallied.get(arg, 0))
+            try:
+                return str(tests_page.screen_count(arg, root))
+            except tests_page.UnknownCount as e:
+                raise ValueError('readme_first_screen ' + str(e)) from None  # an Unreadable names the data itself
         if kind == 'time':
             if arg == 'screen':
                 return m.group(0)

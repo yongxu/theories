@@ -342,11 +342,14 @@ def check_or_render(render=False, base=None, ids=None, strict_fresh=False):
     catalogue is reported, not failed, so parallel sessions are not blocked by pages that
     follow chapters and studies; `strict_fresh` (CI) fails on it and also compares the Lean
     catalogue, so the check fails whenever a render would change a generated page."""
+    # A translated Chinese front whose English has moved on carries a dated banner (RW): the render writes it before it
+    # reads anything, so the pages that time those fronts time them as they stand; the check requires it.
+    written, banner_errors = zh_fronts.write_banners() if render else ([], zh_fronts.banner_problems())
     before = input_snapshot()
     records, errors = registry.load_records()
     findings, drift = registry.validate(records)
     errors += findings + registry.orphan_pages(records) + navigation.validate_goals(records) + navigation.validate_history()
-    errors += navigation.validate_fronts(records)
+    errors += navigation.validate_fronts(records) + banner_errors
     changed = changed_paths(base) if base else None
     selected = set(ids) if ids else registry.affected_ids(records, changed) if base else {r['id'] for r in records}
     errors += ['unknown result id: ' + x for x in selected - {r['id'] for r in records}]
@@ -457,6 +460,8 @@ def check_or_render(render=False, base=None, ids=None, strict_fresh=False):
               # Directory indexes and catalogues that differ from what render would write; they
               # follow chapters, studies and sources and are refreshed by make research-render.
               'stale_indexes': stale_indexes,
+              # RW: translated Chinese fronts whose 落后于英文版 banner this render wrote or removed.
+              'zh_banners_written': written,
               # MV: how far the computed view of shared laws still matches the records and the core receipt.
               'shared_laws': registry.shared_laws_status(records)}
     if ids or base:

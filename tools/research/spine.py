@@ -1495,7 +1495,7 @@ def zh_page(graph):
              f'![{central_total()} 项核心声明，每项一个方块，按其相对于根之边的地位排列：推导而得、在一个所述的假设之下、计数，以及按理由分列的处于一个指明的距离者，其中 {examples_drawn(s)[0]} 类各附一例' + ('，单独一项的那一类写出该项' if examples_drawn(s)[1] else '') + f'，皆用其记录的话]({rel(FIRST["zh"])})', '',
              f'*由 `tools/research/spine.py` 依[共律数据]({rel(registry.SHARED_LAWS)})与 [spine.json]({rel(DATA)}) 画出，图中文字为 AI 所译；[英文图]({rel(FIRST["en"])})。*', '',
              f'**十一项推导而得者**，各由一次 AI 写成的审阅读作文法之律的一个情形（[对该记录的审阅]({rel(REVIEW_U4)})，[对 `Listed.coming_of_ceasing` 一行的审阅]({rel(REVIEW_U4C)})）；'
-             f'迄今所有记录在案的审阅都出自 AI（[08]({rel(m08, "review-status")})）。其中八项（除表中最后三行外），用 08 §7 的话说，是“the eight connected rows that the reading of connected rows took as derived”'
+             f'迄今有记录的审阅都出自 AI（[08]({rel(m08, "review-status")})）。其中八项（除表中最后三行外），用 08 §7 的话说，是“the eight connected rows that the reading of connected rows took as derived”'
              f'（对连接行的读法取为推导而得的八个连接行）：一行达到文法、且其陈述中没有平衡，按规则即为连接行（[DESIGN-BOUNDARY]({rel(DESIGN_BOUNDARY)}) §2，规则 1 与 2），'
              f'[对连接行的读法]({rel(CONNECTED_READING)})（也是 AI 写成的）标出其中的情形。每个 «…» 都是 [`Becoming.GrammarLaws`]({rel(GRAMMAR_LAWS)}) 中陈述的一条律；第二栏在律名后引其 Lean 文档字符串的开头（英文原文），一如英文版。', '',
              '| 声明 | 所属情形（律名；其文档字符串的开头，英文原文） | 记录依据的第一句（末行另引其地位一句；英文原文） | 其律中列有它的结果 |', '|---|---|---|---|',

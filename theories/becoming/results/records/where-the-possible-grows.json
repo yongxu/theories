@@ -396,7 +396,7 @@
   ],
   "validation_scope": {
     "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261029T145758.555114Z): Becoming.HeldPossible, 118 declarations, every one with an empty axiom report, all cited here; the two instance theorems, the laws of reach and traces under the held moves, adaptive_keeps_rule_iff and the root law sit in the leaf until the owners of the definitions they concern move them. Independent read-only reviews by a separate AI agent: REVIEW-UE11 and RECHECK-UE11 (study section 429), REVIEW-GW-LEAN and its re-check (448); no person's review recorded.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261029T145758.555114Z）：Becoming.HeldPossible 之 118 项声明，公理报告皆空，本记录全引；两实例定理、持守之步下之达与迹之律、adaptive_keeps_rule_iff 与根之律暂居此叶，待其所涉定义之主移之。另一 AI 代理作独立只读审查：REVIEW-UE11 与 RECHECK-UE11（研究第 429 节），REVIEW-GW-LEAN 及其复查（448）；未经人审。"
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261029T145758.555114Z）：Becoming.HeldPossible 之 118 项声明，公理报告皆空，本记录全引；两实例定理、持守之步下之达与迹之律、adaptive_keeps_rule_iff 与根之律暂居此叶，待其所涉定义之主移之。另一 AI 代理作独立只读审查：REVIEW-UE11 与 RECHECK-UE11（研究第 429 节），REVIEW-GW-LEAN 及其复查（448）；尚无人审之记录。"
   },
   "next_delta": {
     "en": "A change of the law of change with no fixed scheme, or a space of rules not given with the carrier; a sufficient condition for keeping widening relative to what is held; review by a person.",

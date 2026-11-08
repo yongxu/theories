@@ -92,7 +92,7 @@
   ],
   "validation_scope": {
     "en": "Machine-checked by Lean 4.30.0-rc2 with Mathlib at revision ea11ccc0 (receipt seeded-continuation-verification.json, rerun on 26 October 2026 against the current bytes of SeededContinuation.lean, which differ from those of the 8 October run only in a comment on the import line; modules ContinuationAdequacy, JointContinuation and SeededContinuation). The record was read against the current Lean; no person's review recorded.",
-    "zh": "Lean 4.30.0-rc2（Mathlib 修订 ea11ccc0）实查（回执 seeded-continuation-verification.json，2026年10月26日依 SeededContinuation.lean 之当前字节重跑，其与10月8日之运行只差引入行上之一条注释；模块 ContinuationAdequacy、JointContinuation 与 SeededContinuation）。本记录对照当前 Lean 读过；未经人审。"
+    "zh": "Lean 4.30.0-rc2（Mathlib 修订 ea11ccc0）实查（回执 seeded-continuation-verification.json，2026年10月26日依 SeededContinuation.lean 之当前字节重跑，其与10月8日之运行只差引入行上之一条注释；模块 ContinuationAdequacy、JointContinuation 与 SeededContinuation）。本记录对照当前 Lean 读过；尚无人审之记录。"
   },
   "next_delta": {
     "en": "How a supported start forms in a run, and the paired plan from a seed on the spine, where mutual_history is the invariant law for the conjunction of the two properties and the composition is Viability.Plan.zip_keeps.",

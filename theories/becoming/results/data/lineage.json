@@ -146,7 +146,7 @@
    "to": "新名",
    "where": "在哪里、为什么",
    "folders_heading": "早先各文件夹后来如何",
-   "folders_intro": "对照表把十六个早先的理论文件夹与十二个思想领域对着现行之论来读：共 {total} 条，每一条都是 AI 的读法，尚无人审查的记录。它对一份随机样本的复核「estimates 82.6% holding, 14.2% with a label or role wrong and 3.2% with a wrong reading over all 1183」（估计全部 1183 条中 82.6% 成立，14.2% 标签或角色有误，3.2% 读法有误；[怎样核对的]({crosswalk})）。[文件夹索引]({index})给出每个文件夹的计数，[对照表]({crosswalk})给出每一条。*新读法*（fresh-reading）是说本论并不陈述这一联系，而是读者在那里提出它。",
+   "folders_intro": "对照表把十六个早先的理论文件夹与十二个思想领域对着现行之论来读：共 {total} 条，每一条都是 AI 的读法，尚无人审查它们的记录。它对一份随机样本的复核「estimates 82.6% holding, 14.2% with a label or role wrong and 3.2% with a wrong reading over all 1183」（估计全部 1183 条中 82.6% 成立，14.2% 标签或角色有误，3.2% 读法有误；[怎样核对的]({crosswalk})）。[文件夹索引]({index})给出每个文件夹的计数，[对照表]({crosswalk})给出每一条。*新读法*（fresh-reading）是说本论并不陈述这一联系，而是读者在那里提出它。",
    "papers_heading": "论文",
    "papers_intro": "为仓库之外的读者写的草稿，以及其中什么在现行之论里仍成立。[output/](../output/README.md) 中有什么，在那里说明。",
    "paper": "论文",
@@ -1661,7 +1661,7 @@
    },
    "what": {
     "en": "A review packet was assembled for human specialists: a cover, dossiers for scholars of classical Chinese texts and of Buddhist thought and for logicians (later joined by dossiers for philosophy, alignment and the sciences), and a blind re-coding of the corpus classification, its sample \"drawn on 24 October 2026, before any human coded a unit\". Its cover opened: \"No human has reviewed this theory yet.\"",
-    "zh": "一份审查包为人类专家汇编而成：一份封面，分别供古代汉语文本学者、佛学学者与逻辑学者的审查材料（后来又加上哲学、对齐与科学几份），以及对语料分类的一次盲重编码，其样本「drawn on 24 October 2026, before any human coded a unit」（于 2026 年 10 月 24 日、在任何人编码任何单元之前抽取）。封面开头曾说：「No human has reviewed this theory yet.」（中文版作「本论迄今尚无人工审查。」）"
+    "zh": "一份审查包为人类专家汇编而成：一份封面，分别供古代汉语文本学者、佛学学者与逻辑学者的审查材料（后来又加上哲学、对齐与科学几份），以及对语料分类的一次盲重编码，其样本「drawn on 24 October 2026, before any human coded a unit」（于 2026 年 10 月 24 日、在任何人编码任何单元之前抽取）。封面开头曾说：「No human has reviewed this theory yet.」（中文版作「本理论迄今尚无人工审查。」）"
    },
    "evidence": [
     {
@@ -1680,8 +1680,9 @@
     {
      "path": "theories/becoming/review/README.zh.md",
      "locator": "opening paragraph",
-     "quote": "本论迄今尚无人工审查。",
-     "private": false
+     "quote": "本理论迄今尚无人工审查。",
+     "private": false,
+     "commit": "70fcd7f5c"
     }
    ],
    "label": "public",
@@ -2015,7 +2016,7 @@
    },
    "what": {
     "en": "Read by cell on flour beetle cultures, T2's wording 'as far as anything measured does' fails to the pupae and the adults, 'a class of fewer variables'; the failure counts against the claim for every renewable condition under a draw, but 'does not defeat T2 in the fisheries'. Chapter 2 now says the three numbers with the draw fix the next giving 'as far as the level's own history does'.",
-    "zh": "按单元读面粉甲虫的培养物，T2 的措辞「as far as anything measured does」（凡量度所及）败于蛹与成虫，「a class of fewer variables」（变量更少的类）；这一失败对每一个在取用之下的可更新的缘之主张都算作反证，但「does not defeat T2 in the fisheries」（并不因此在渔业中推翻 T2）。第二章现在说，这三个量连同取用确定下一次给予，「as far as the level's own history does」（水平自身的历史所及）。"
+    "zh": "按单元读面粉甲虫的培养物，T2 的措辞「as far as anything measured does」（凡量度所及）败于蛹与成虫，「a class of fewer variables」（变量更少的类）；这一失败算作不利于“凡在取用之下的可更新的缘都如此”这一主张的证据，但「does not defeat T2 in the fisheries」（并不因此在渔业中推翻 T2）。第二章现在说，这三个量连同取用确定下一次给予，「as far as the level's own history does」（水平自身的历史所及）。"
    },
    "evidence": [
     {
@@ -2897,7 +2898,7 @@
    ],
    "claimed": {
     "en": "Frozen reader editions in PDF (thirteen parts, English and Chinese) with the re-coding sheet in two forms and sha256 manifests, each built from a named commit: edition 1, 0f1d9aa13, committed 2026-11-03; edition 2, 7735fa07a, 2026-11-05; edition 3, 6d221555a, 2026-11-05; edition 4, 9f36dd69e, 2026-11-06; edition 5, 3395e82ee, 2026-11-07 (tags review-packet-1 to review-packet-5). The covers of editions 1 to 5 open: \"No human has reviewed this theory yet.\" It asks specialists whether readings are faithful and claims put at their right strength; the re-coding asks readers of classical Chinese to classify 237 sampled sentences blind.",
-    "zh": "冻结的 PDF 读者版（十三部分，英文与中文），附两种格式的重编码表与 sha256 清单，各自由一个指名的提交构建：第 1 版 0f1d9aa13，2026-11-03；第 2 版 7735fa07a，2026-11-05；第 3 版 6d221555a，2026-11-05；第 4 版 9f36dd69e，2026-11-06；第 5 版 3395e82ee，2026-11-07（标签 review-packet-1 至 review-packet-5）。第 1 至 5 版的封面开头写道：「No human has reviewed this theory yet.」（中文版作「本论迄今尚无人工审查。」）它请各领域专家判断读法是否忠实、主张的强度是否恰当；重编码请能读古文者对抽样的 237 句作盲分类。"
+    "zh": "冻结的 PDF 读者版（十三部分，英文与中文），附两种格式的重编码表与 sha256 清单，各自由一个指名的提交构建：第 1 版 0f1d9aa13，2026-11-03；第 2 版 7735fa07a，2026-11-05；第 3 版 6d221555a，2026-11-05；第 4 版 9f36dd69e，2026-11-06；第 5 版 3395e82ee，2026-11-07（标签 review-packet-1 至 review-packet-5）。第 1 至 5 版的封面开头写道：「No human has reviewed this theory yet.」（中文版作「本理论迄今尚无人工审查。」）它请各领域专家判断读法是否忠实、主张的强度是否恰当；重编码请能读古文者对抽样的 237 句作盲分类。"
    },
    "stands": {
     "en": "Edition 5 is the current one per the board's 'Which edition to send' line; \"Editions 1 to 4 are kept as history and are not to be sent.\" Each edition is a frozen snapshot of the live account at its commit; the live sources in theories/becoming/ have moved on since.",
