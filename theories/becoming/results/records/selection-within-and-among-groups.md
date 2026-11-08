@@ -36,7 +36,7 @@
 - Groups of unequal size here: they are stated in record selection-within-and-among-groups-of-any-sizes, of which this division is the case of equal sizes, the among-group part read there by the groups' means.
 - What the groups are, why their members' offspring numbers differ, or how groups form, persist or mix: which level wins is read off the counts, not explained. No base reading (groups as lineages within their own families) is given.
 - Transmission that is not exact: the generational form is stated with exact transmission only.
-- That selection among groups ought to win, or that holding back is better: the division is an identity of counts; a ranking holds the comparison C or another order, not through the division.
+- That selection among groups ought to win, or that holding back is better: the division is an identity of counts; ranking goes through the comparison C or a premise in its place, not through the division.
 - **Counterexample:** Selection within the groups against an amount does not decide the whole: with the same groups and the same within-group counts the whole selects for it (AmongWins.among_wins) or against it (WithinWins.within_wins), according to selection among the groups. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean)
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
@@ -106,7 +106,6 @@ Aliases: `selection within groups and among them`, `组内选择与组间选择`
 - 20 October 2026, EV7: the division is stated for groups of any sizes (SelectionLevels.levels_sized; record selection-within-and-among-groups-of-any-sizes, study section 273), and levels is now derived from it as the case of equal sizes, its statement unchanged; the old proof's helpers lhs_shape and rhs_shape are gone, so the law's declarations name the derivation instead. The claim is unchanged; its open item on groups of unequal size is answered there.
 - 6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.
 - 7 November 2026, CX: this said ranking goes through the comparison C, where a ranking of courses needs C or a premise in its place (07 §4), the correction LM1 made in other records; corrected. No law, premise or proof changed.
-- 9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.
 
 </details>
 

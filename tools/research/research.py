@@ -226,11 +226,15 @@ def live_markdown(root, only=None):
             and (not only or any(f == p.rstrip('/') or f.startswith(p.rstrip('/') + '/') for p in only))]
 
 
-def oversized_links(root=ROOT, only=None, since=OVERSIZED_SINCE, limit=mirror.PAGE_LIMIT):
+def oversized_links(root=ROOT, only=None, since=OVERSIZED_SINCE, limit=mirror.PAGE_LIMIT, fronts=None):
     """Live links to a Markdown file over `limit` bytes that the referring file did not have at `since`: GitHub renders no such
-    file. `{'oversized': [paths], 'held_since': n, 'new': [{file, line, target, bytes, mirror}]}`."""
+    file. A link from a page of the reader's site (`fronts`, by default the site's pages) to a mirrored study is reported however
+    long it has stood, since its mirror renders and repoint-mirrored sends it there; elsewhere, a frozen design or a study among
+    them, a link the file held at `since` is set apart. `{'oversized': [paths], 'held_since': n, 'new': [{file, line, target,
+    bytes, mirror}]}`."""
     big = {f: (root / f).stat().st_size for f in moves.inventory(root) if f.endswith('.md') and (root / f).is_file() and (root / f).stat().st_size > limit}
     names = [f.rsplit('/', 1)[-1] for f in big]
+    mirrored = set(mirror.folders()) if big else set()
     new, held = [], 0
     for referrer in live_markdown(root, only) if big else []:
         text = (root / referrer).read_text(errors='replace')
@@ -238,14 +242,17 @@ def oversized_links(root=ROOT, only=None, since=OVERSIZED_SINCE, limit=mirror.PA
             continue
         hits = [(start, raw, dest) for start, _, raw in moves.links(text) if (dest := link_destination(referrer, raw)) in big and dest != referrer]
         known = {raw for _, _, raw in moves.links(text_at(root, since, referrer))} if hits else set()
+        if hits and fronts is None:
+            fronts = set(site_markdown(root))
         for start, raw, dest in hits:
-            if raw in known:
+            if raw in known and not (dest in mirrored and referrer in fronts):
                 held += 1
             else:
-                new.append({'file': referrer, 'line': moves.line_of(text, start), 'target': raw, 'bytes': big[dest], 'mirrored': dest in mirror.folders()})
+                new.append({'file': referrer, 'line': moves.line_of(text, start), 'target': raw, 'bytes': big[dest], 'mirrored': dest in mirrored})
     return {'oversized': sorted(big), 'held_since': held, 'new': new,
-            'scope': f'Live Markdown linking Markdown over {limit:,} bytes, links its file already held at {since} set apart. '
-                     'A link to a mirrored study: repoint it with research.py repoint-mirrored.'}
+            'scope': f'Live Markdown linking Markdown over {limit:,} bytes, links its file already held at {since} set apart, except '
+                     'a link from a page of the reader\'s site to a mirrored study. A link to a mirrored study: repoint it with '
+                     'research.py repoint-mirrored.'}
 
 
 def site_markdown(root=ROOT):

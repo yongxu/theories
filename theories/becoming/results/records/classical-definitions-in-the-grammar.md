@@ -40,7 +40,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.GrammarReadings, 13 theorems in 18 declarations, each with an empty axiom report. The sentences come from the frozen first-batch corpus as classified by four Opus coders; no human audit. The OU6 corrections were reviewed against the Lean by GPT astra and Opus reviewers.
+Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.GrammarReadings, 13 theorems in 18 declarations, each with an empty axiom report. The sentences come from the frozen first-batch corpus as classified by four Opus coders; no person's audit recorded. The OU6 corrections were reviewed against the Lean by GPT astra and Opus reviewers.
 
 Canonical source: [GrammarReadings.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean)
 

@@ -42,7 +42,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- That giving, a window or any law of giving is better: that is ranked only under the two readings 07 names, the continuation condition for scope and C for order.
+- That giving, a window or any law of giving is better: that is asked under the ethics' two premises, the continuation condition for scope and C for order.
 - Forgiveness with a probability, and errors turning withholding into giving; with one-way errors by chance the window delays total withholding and does not prevent it (the chance record).
 - That the agreeing Prop law of the bridge can always be the normal form: the disjunctive normal form of answering keeps inclusion only under excluded middle. Witness: `Becoming.WindowedWaiting.Pair.all_agreeing_keeps_em`.
 - How waiting forms or how a pairing comes about; amounts of giving.
@@ -101,7 +101,6 @@ Aliases: `a pair tolerates only within a window`, `Becoming.WindowedWaiting.keep
 - 5 November 2026, board item EL7: the correspondence names Hilbe et al. 2017, whose uniqueness of win-stay lose-shift among memory-one strategies is close to the one law restoring and answering; nothing the record proves changes.
 - 6 November 2026, board item EL7, correction: the window was read as a deterministic relative of forgiveness without saying that under chance errors it ends in total withholding; that is now said, and the next step narrowed.
 - 6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.
-- 9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.
 
 </details>
 

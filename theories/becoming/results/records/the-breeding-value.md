@@ -29,7 +29,7 @@
 
 - That the normal equations have such a solution: solving them is given.
 - Inexact transmission of the breeding value, where Fisher's environment term enters.
-- That a larger additive part is better: the counts read spreads; a ranking holds the comparison C or another order.
+- That a larger additive part is better: the counts read spreads; ranking goes through the comparison C or a premise in its place.
 - **Counterexample:** Offspring number the product of two amounts: the best combination carries 32 of 48, so the additive part is strictly less than the whole (Interaction.interaction). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean)
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
@@ -88,7 +88,6 @@ Aliases: `breeding value`, `Fisher's fundamental theorem with breeding values`, 
 - 22 October 2026: added (EV15), the breeding value and Fisher's fundamental theorem with breeding values; study section 368.
 - 6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.
 - 7 November 2026, CX: this said ranking goes through the comparison C, where a ranking of courses needs C or a premise in its place (07 §4), the correction LM1 made in other records; corrected. No law, premise or proof changed.
-- 9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.
 
 </details>
 

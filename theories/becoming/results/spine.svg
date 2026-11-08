@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1532" width="900" height="1532" role="img" aria-labelledby="spine-title spine-desc" font-family="Helvetica, Arial, sans-serif">
 <title id="spine-title">The eight chapters and their recorded uses of one another</title>
-<desc id="spine-desc">Eight chapters on a ring around the grammar, sized by their results (The root 86, The map 94, Knowing and testing 110, Life and evolution 46, Collectives and selection 74, The classical texts 16, Significance and alignment 82, Method and the formal core 21); 497 formal-reuse uses between chapters, 17 pairs with at least 10 drawn; the continuation condition and C come into chapter 7 as the two readings the ranking results use, each a hypothesis where used, neither asserted; T1 to T8 at their homes, coloured by test outcome.</desc>
+<desc id="spine-desc">Eight chapters on a ring around the grammar, sized by their results (The root 86, The map 94, Knowing and testing 110, Life and evolution 46, Collectives and selection 74, The classical texts 16, Significance and alignment 82, Method and the formal core 21); 497 formal-reuse uses between chapters, 17 pairs with at least 10 drawn; the continuation condition and C come into chapter 7 as premises, each a hypothesis where used, neither asserted; T1 to T8 at their homes, coloured by test outcome.</desc>
 <defs>
 <marker id="fwd" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8a817c"/></marker>
 <marker id="back" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c1917"/></marker>
@@ -127,18 +127,18 @@
 <text x="650.6" y="477.5" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">17</text>
 <text x="626.7" y="484.6" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">15</text>
 <text x="555.5" y="607.8" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">15</text>
-<text x="36" y="942.3" font-size="15" font-weight="bold" text-anchor="start" fill="#57534e">Two readings, each a hypothesis where used</text>
+<text x="36" y="942.3" font-size="15" font-weight="bold" text-anchor="start" fill="#57534e">Two premises, each a hypothesis where used</text>
 <rect x="36" y="954.25566257523" width="390" height="92" rx="6" fill="#ffffff" stroke="#1c1917" stroke-dasharray="5 3"/>
 <text x="46" y="976.3" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">The continuation condition</text>
 <text x="46" y="995.3" font-size="14" text-anchor="start" fill="#57534e">scope: fixes whose losses count; does not rank</text>
 <text x="46" y="1014.3" font-size="14" text-anchor="start" fill="#57534e">anything</text>
-<text x="46" y="1033.3" font-size="14" text-anchor="start" fill="#57534e">a reading, not asserted</text>
+<text x="46" y="1033.3" font-size="14" text-anchor="start" fill="#57534e">a premise, not asserted; warrant open</text>
 <path d="M36,972.3 L14,972.3 L14,616.8 Q14,586.8 149.5,586.8" fill="none" stroke="#1c1917" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#back)"/>
 <rect x="36" y="1058.25566257523" width="390" height="92" rx="6" fill="#ffffff" stroke="#1c1917" stroke-dasharray="5 3"/>
 <text x="46" y="1080.3" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">C, widening what can form is better</text>
 <text x="46" y="1099.3" font-size="14" text-anchor="start" fill="#57534e">order: ranks a course above every course it widens;</text>
 <text x="46" y="1118.3" font-size="14" text-anchor="start" fill="#57534e">does not rank mixed comparisons</text>
-<text x="46" y="1137.3" font-size="14" text-anchor="start" fill="#57534e">a reading, not asserted</text>
+<text x="46" y="1137.3" font-size="14" text-anchor="start" fill="#57534e">a premise, not asserted; warrant open</text>
 <path d="M36,1076.3 L23,1076.3 L23,601.8 Q23,571.8 143.4,571.8" fill="none" stroke="#1c1917" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#back)"/>
 <text x="20" y="1180.3" font-size="16" font-weight="bold" text-anchor="start" fill="#1c1917">The theses</text>
 <circle cx="33" cy="1201.25566257523" r="10" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>

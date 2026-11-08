@@ -1,6 +1,6 @@
 # A commons with gated renewal: the theory's first falsifiable test on learning agents
 
-Board item CG1, 20 October 2026. AI-written (a Claude Code session started from the significance review SA1). Study section 240 of [BECOMING-RENEWAL-READING](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#240-a-commons-with-gated-renewal-the-first-falsifiable-test-on-learning-agents-cg1).
+Board item CG1, 20 October 2026. AI-written (a Claude Code session started from the significance review SA1). Study section 240 of [BECOMING-RENEWAL-READING](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/240.md#240-a-commons-with-gated-renewal-the-first-falsifiable-test-on-learning-agents-cg1).
 
 SA1 found that no correspondence of the Theory of Becoming to physics, ecology, economics or AI had been measured. This experiment writes predictions from five laws of the spine for a Harvest-style commons with gated regrowth (Perolat et al. 2017), freezes them, and runs learning agents. Each prediction is reported as passed, failed or not testable, and every failure is kept.
 

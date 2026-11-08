@@ -28,7 +28,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- That any law of giving is better: that is ranked only under the two readings 07 names, the continuation condition for scope and C for order.
+- That any law of giving is better: that is asked under the ethics' two premises, the continuation condition for scope and C for order.
 - Forgiveness with a probability, as in generous tit-for-tat, or errors turning a withholding into giving: neither is represented.
 - How long total withholding takes, or how much a law gives before it: the bound counts only bursts aligned to blocks, so it is loose.
 - A limit: that the share falls to nothing is by hand, a ratio of the weights.
@@ -77,7 +77,6 @@ Aliases: `errors by chance in a pair keeping mutual withholding`, `Becoming.Pair
 ### History
 
 - 6 November 2026, board item EL7: added from EL7's investigation of chance and stability (el7/a), its scratch Lean moved to the core; 05 §5's reading of the window as a deterministic relative of forgiveness corrected with it.
-- 9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.
 
 </details>
 
