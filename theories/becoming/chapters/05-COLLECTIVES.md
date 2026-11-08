@@ -423,7 +423,7 @@ An institution is one of plan §六's test systems. This section gives a minimal
 ## What this chapter does not show
 
 - That any actual collective, market, pool, entry rule or optimizer meets the hypotheses of a law, that an actual difference grows at the pace its carried amount bounds, or that a pool's decision responds to all its members tell apart: orders, capacities, horizons, pools and waiting are supplied, and the correspondence is empirical.
-- Any evaluation: no law says a drain is a harm, restraint better, cooperation good or a shared code worth keeping. That is ranked only under the two readings of [07](07-SIGNIFICANCE.md), the continuation condition for scope and C for order.
+- Any evaluation: no law says a drain is a harm, restraint better, cooperation good or a shared code worth keeping. A ranking of it names its scope and order; the continuation condition and C are one pair of readings [07](07-SIGNIFICANCE.md) examines.
 - That a mutual best response exists in general (no existence is shown, and none is shown to fail), or which of several self-consistent outcomes learners come to.
 - Real amounts and probabilities in the pure core, whose laws here are in natural numbers, course by course; stochastic regrowth, random orders of hearing and amounts of giving.
 - That most laws here are stated on the grammar: they are on the World, processes or types; the bullets marked *Stated at the model* read some of them at a process's model, and the records' shared-law lines say which reach the grammar ([08](08-METHOD.md)).
