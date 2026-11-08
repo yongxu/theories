@@ -624,7 +624,7 @@ WHERE_TO_LOOK = [
 CH07, CH08 = CHAPTERS + '/07-SIGNIFICANCE.md', CHAPTERS + '/08-METHOD.md'
 # OPEN-QUESTIONS opens with these, each in its home's words; a sentence its home no longer holds is an error at render.
 OPEN_LEAD = {
-    'premises': (CH07, 'The ranking results rest on their two readings, the continuation condition for scope and C for order, each named where used.'),
+    'premises': (CH07, 'Each ranking result names what it ranks under, the continuation condition for scope and C for order, or the narrower order a self-concern result states.'),
     'unasserted': (CH07, 'Neither is asserted, and neither is the account\'s own: each is an order or scope some formations hold, and the results say what follows where it is held.'),
     'crux': (CH07, 'whether all of one\'s effects are one\'s own, in the sense of whose losses count, argued for and against and not settled.'),
     'crux-laws': (CH07, 'The laws do not answer it.'),
@@ -828,7 +828,7 @@ def render_views(records):
                           'The theory does not assert this condition; ' + link(CHAPTERS + '/07-SIGNIFICANCE.md#condition', path, 'chapter 7, section 3')
                           + ' states what follows from it. The condition gives the continuation of everything significance from every standpoint, so the results under it '
                           'are the case of a significance that covers everything; the rules of comparison are derived without it, and the condition adds none. '
-                          'The ranking results rest on two readings, neither asserted: the condition fixes scope, whose losses count, and C, calling widening better, gives order; whoever ranks courses holds C or another order; '
+                          'The ranking results name what they rank under, none asserted: the condition fixes scope, whose losses count, C, calling widening better, gives order, and the self-concern results state a narrower order; whoever ranks courses holds C or another order; '
                           'C\'s no-loss extension on level paths is widening by definition. '
                           'Open: how the condition, C and the step of invariance, from what one\'s own continuation needs to the continuation of anything, come to be held; no warrant from outside is sought.', '']
                 lines += result_block(first, path, '####')

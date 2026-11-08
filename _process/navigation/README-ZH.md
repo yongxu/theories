@@ -20,7 +20,7 @@
 
 **古文。** 文法的名字取自古文，运算不取自古文；读法都是 AI 的，没有人通读过。[第六章](../../theories/becoming/chapters/06-CLASSICAL-TEXTS.md)用中文写成，把九家 248 段文字与已检查的律并读，逐段记为相合、定域或相分；相合不是印证，记为相分也不是说原文错了。例如[天之道与张弓](../../theories/becoming/USES-EXAMPLES.zh.md#the-way-of-heaven-and-the-drawn-bow-a-concordance-not-a-confirmation)。本论的“续”站在《中论》所破的一边，其定理没有处理那一论证的前提（[B-02](../../theories/becoming/review/BUDDHIST-THOUGHT.md#b-02)）。
 
-**伦理。** 本论的伦理立在[两个不被断言的前提](../../theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order)上，根据都还未决。*延续条件*：从每一个立场看，对任何东西，其延续到未来都有意义。它确定范围，即谁的损失算数，不给任何东西排序。*C*：扩大可形成者（一个进程让什么能够形成）更好，它给出次序。给进程排出好坏，需要 C 或一个代替它的前提。[论题 T8](../../theories/becoming/chapters/07-SIGNIFICANCE.md#theses) 论证这一伦理是对生命而言的道，但不主张任何裁断对一切可能的心智都有约束力。
+**伦理。** 本论的伦理不断言任何应当：凡它对进程排序之处，都指名[两种读法](../../theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order)，二者都不被断言。*延续条件*：从每一个立场看，对任何东西，其延续到未来都被计数。它确定范围，即谁的损失算数，不给任何东西排序。*C*：扩大可形成者（一个进程让什么能够形成）更好，它给出次序。本论之作者提供一种看法，不是裁断（[论题 T8](../../theories/becoming/chapters/07-SIGNIFICANCE.md#theses)）。
 
 **证据。** 已登记的 {{count:registered}} 条结果中，{{count:recorded-checked}} 条有 Lean 回执（[成果登记](../../RESULTS.md)），即证明经 Lean 机器检查过。回执只表明每条 Lean 陈述能从它的前提推出，不表明前提成立。一次自动化的回顾把每条 Lean 陈述同它所知的文献对照，查找并不穷尽，发现[核心结果中没有一个是新的数学](../../theories/becoming/chapters/08-METHOD.md#known-results)：每一个都几乎由定义直接得出，或是已知结果的重述。[经验论题](../../theories/becoming/chapters/08-METHOD.md#theses)接受的是评分前就已冻结的检验：有的通过了，有的没有通过。迄今无人审查（[审查包](../../theories/becoming/review/README.zh.md)）。
 

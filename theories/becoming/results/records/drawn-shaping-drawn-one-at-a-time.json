@@ -110,7 +110,7 @@
       "witness": "Becoming.DrawnReplacement.Weak.shared_decides"
     },
     {
-      "en": "That leaving a lock by drift is better or worse than keeping it: a ranking of courses holds C or another order.",
+      "en": "That leaving a lock by drift is better or worse than keeping it: a ranking of courses rests on C or another named order.",
       "zh": "以漂变离开锁定优于或劣于守之：排序进程者持 C 或别一种次序。",
       "kind": "non-implication"
     }

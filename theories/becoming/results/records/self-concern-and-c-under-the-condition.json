@@ -72,8 +72,8 @@
       "zh": "就网上之排序：接纳由所予之二值读法判定，二层径所接纳者列为（步，构成）之项，每一主张计为活，每项以其构成之标记标之。"
     },
     {
-      "en": "The ranking results rest on two readings with two roles: the continuation condition for scope and C (Comparison) for order. Whoever ranks courses still holds C or another order; this result locates where self-concern gives what C asks, one way: between two listed level paths, courses whose admissions end, where the de se condition holds and admission is decided.",
-      "zh": "伦理依二前提，各有其职：延续条件定范围，C（Comparison）定序。凡对进程排序者，仍持 C 或别一种次序；此结果指出自关切单向给出 C 之所求之处：于自承之条件成立、接纳可判定之处，二所列且接纳有终之层径之间。"
+      "en": "This result assumes self-concern and the continuation condition held de se, with admission decided and two listed level paths, courses whose admissions end; it concludes, one way, the extension rankings C asks between those paths. Whoever ranks courses still holds C or another order.",
+      "zh": "此结果以自关切与自承之延续条件为假设，接纳可判定，二所列且接纳有终之层径；它单向推出 C 在这两条层径之间所求的扩展排序。凡对进程排序者，仍持 C 或别一种次序。"
     }
   ],
   "does_not_show": [
@@ -99,8 +99,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "That the condition holds, that self-concern is warranted, or that C is derived: the condition and C stay the ethics' premises and self-concern a hypothesis; C is a reading the account does not assert.",
-      "zh": "条件成立、自关切有据，或 C 被推出：条件与 C 仍为伦理之前提，自关切为假设；C 之依据仍开放。",
+      "en": "That the condition holds, that self-concern is warranted, or that C holds without its stated hypotheses: each stays a hypothesis where used, and C is a reading the account does not assert.",
+      "zh": "条件成立、自关切有据，或 C 无须所述假设便成立：各自在用到之处仍是假设，C 是本论不断言的一种读法。",
       "kind": "non-implication"
     }
   ],

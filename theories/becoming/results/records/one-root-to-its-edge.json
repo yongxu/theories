@@ -96,8 +96,8 @@
     },
     {
       "kind": "non-implication",
-      "en": "That anyone must hold either reading the ranking results use: neither is entailed by statements of the dynamics (the condition given a standpoint and a formation, C given a frame with an extension), and no warrant from outside is sought.",
-      "zh": "伦理之二前提有其据：二者皆不为动力之陈述所蕴涵（条件于有立场与成形处，C 于框架有扩展处）；二者之据皆开放。"
+      "en": "That anyone must hold either reading the ranking results use: neither is entailed by a satisfiable statement reading only the dynamics, with significance or order free (the condition given a standpoint and a formation, C given a frame with an extension), and no warrant from outside is sought.",
+      "zh": "任何人必须持有排序之果所用的任一读法：二者皆不为只读动力学、意义或次序自由之可满足陈述所蕴涵（条件于有立场与成形处，C 于框架有扩展处）；不求外来之根据。"
     },
     {
       "kind": "scope",
@@ -883,7 +883,7 @@
         "premise": "Becoming.Unrestricted",
         "not_entailed": "Becoming.ReadsOnlyDynamics.not_entails",
         "basis": {
-          "en": "For anything, its continuation into the future has significance: the condition fixes scope, whose losses count, and its content beyond the self's presupposition, the step of invariance, extends that scope to losses that return to no one. Where there is a standpoint and a formation, no statement reading only the dynamics and holding of some dynamics entails it. No warrant from outside is sought, and none binding every possible mind is claimed (chapter 7: its §3 for the condition, T8 in its §8 for the warrant)."
+          "en": "For anything, its continuation into the future has significance: the condition fixes scope, whose losses count, and its content beyond the self's presupposition, the step of invariance, extends that scope to losses that return to no one. Where there is a standpoint and a formation, no statement reading only the dynamics and holding of some dynamics entails it. No warrant from outside is sought, and none binding every possible mind is claimed (chapter 7: its §3 for the condition, its §8 for what is offered)."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
       },
