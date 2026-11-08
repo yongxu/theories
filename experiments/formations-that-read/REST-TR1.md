@@ -1,6 +1,6 @@
 # TR1: the full design
 
-*Part of [the designs of RF's tests](DESIGN.md): the exact tables, the power check, rivals, usage and references for TR1. AI-written; no person's review of it is recorded. TR1 is frozen in [FREEZE-5](FREEZE-5.md) (4 November 2026), with the changes its section 12 lists, and not run; the informing variant (section 8) and Stage A (section 10) are frozen in [FREEZE-10](FREEZE-10.md) (5 November 2026), with the changes its section 12 lists, and not run.*
+*Part of [the designs of RF's tests](DESIGN.md): the exact tables, the power check, rivals, usage and references for TR1. AI-written; no person's review of it is recorded. TR1 is frozen in [FREEZE-5](FREEZE-5.md) (4 November 2026), with the changes its section 12 lists, and not run; the informing variant (section 8) and Stage A (section 10) are frozen in [FREEZE-10](FREEZE-10.md) (5 November 2026), with the changes its section 12 lists; Stage A ran once, on 6 November 2026 ([the runs made](README.md#the-runs-made)), and the informing variant has not run.*
 
 Every number below is computed by [`tr1.py`](tr1.py) and written to [`tr1.json`](tr1.json) (Python 3.11, standard library, deterministic: exact values as fractions, simulations from `random.Random` seeded with frozen strings; about three minutes on one idle core, seven on a heavily loaded machine; `python3 -B tr1.py`). Simulated probabilities are shares of replications: 300 per cell in the sweep, 600 in the main table, 150 on the six-content design. Nothing here calls a model, downloads data or trains a system.
 

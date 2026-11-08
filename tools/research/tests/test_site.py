@@ -570,11 +570,23 @@ class SiteTests(unittest.TestCase):
                               'Three fishers share a lake, and a bed of mussels that gives them nothing depends on the fish.'),
                              ('6 October 2026. ', 'Executable counterpart of the mathematical market study, its connection named.'),
                              ('Board item X1, 2 May 2026. Literature check: Smith et al. 2020, sections 2.1 and 3. ',
-                              'The test reads the bed and the fish, each season, from the frozen tables.')):
+                              'The test reads the bed and the fish, each season, from the frozen tables.'),
+                             ('AI-assisted mathematical experiment, 5 October 2026. ',
+                              'This evaluates the existing finite-material shared-renewal process, with all event rates retained.'),
+                             ('Board item X2, 3 May 2026. Literature check: the review "Seabirds and forage fish." ',
+                              'The test reads the colonies and the catch, each season, from the frozen tables.'),
+                             ('Board item X3, 4 May 2026. Literature check: Dai et al. ',
+                              'The test reads the colonies and the catch, each season, from the frozen tables.'),
+                             ('Board item T1N, 5 Nov. 2026. AI-written (a Claude Code session). ',
+                              'The rules read the lakes below the need, each with its fate resolved, from the frozen layout.')):
             self.assertEqual(site.lead('<p>' + before + rest + '</p>\n' + said), rest, before)  # what follows the provenance is the lead
         for plain in ('Board games and AI-written essays are read here as one case among many, and nothing about them is provenance.',
                       'AI-written essays are read here as one case among many, and nothing about them is provenance at all.',
-                      'About the lake: the bed dies the first month fewer than seventy tons are left, whatever the fishers read.'):
+                      'About the lake: the bed dies the first month fewer than seventy tons are left, whatever the fishers read.',
+                      'About what it takes to read a state from a series, the field has said little, and the test asks why.',
+                      'Board items of the old kind are not provenance, whatever their date or their reader says.',
+                      'Study sections of this kind are read here as text, and the search should show them whole.',
+                      'Predictions frozen before the run failed in four lakes of five, and the fifth was not read at all.'):
             self.assertEqual(site.lead('<p>' + plain + '</p>'), plain)  # a sentence that only starts like provenance stays
         long = '<p>' + 'A paragraph long enough to be a lead says how long it takes, about ten minutes to read, and more. ' * 3 + '</p>'
         self.assertEqual(site.lead(long), strip(long))  # a paragraph of text that names a time is still text

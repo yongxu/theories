@@ -1,6 +1,6 @@
 # TR2 and TR7: the full design
 
-*Part of [the designs of RF's tests](DESIGN.md): the exact tables, the power check, rivals, usage and references for TR2 and TR7. AI-written; no person's review of it is recorded. TR2's Stage B is frozen in [FREEZE-7](FREEZE-7.md) (4 November 2026), with the changes its section 12 lists, its Stage A in [FREEZE-11](FREEZE-11.md) (5 November 2026), with the choices its section 7 lists; TR7 in [FREEZE-4](FREEZE-4.md) (4 November 2026), with the changes its section 11 lists, and its Stage A in [FREEZE-9](FREEZE-9.md) (5 November 2026), with the changes and choices its section 7 lists; nothing has run.*
+*Part of [the designs of RF's tests](DESIGN.md): the exact tables, the power check, rivals, usage and references for TR2 and TR7. AI-written; no person's review of it is recorded. TR2's Stage B is frozen in [FREEZE-7](FREEZE-7.md) (4 November 2026), with the changes its section 12 lists, its Stage A in [FREEZE-11](FREEZE-11.md) (5 November 2026), with the choices its section 7 lists; TR7 in [FREEZE-4](FREEZE-4.md) (4 November 2026), with the changes its section 11 lists, and its Stage A in [FREEZE-9](FREEZE-9.md) (5 November 2026), with the changes and choices its section 7 lists; the Stage A of TR2 and of TR7 ran once each, on 6 November 2026 ([the runs made](README.md#the-runs-made)), and nothing else of either has run.*
 
 ## What the law states, checked against the Lean
 

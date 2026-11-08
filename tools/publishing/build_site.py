@@ -833,7 +833,7 @@ def template(page_path, title, body, lang, cfg, commit, date, nav_html, source_h
     if zh:  # a Chinese page's footer says the same in Chinese
         footer = (f'本站由<a href="{repo}">本仓库</a>的提交 <a href="{tree}"><code>{short}</code></a> '
                   f'{"及其上尚未提交的改动" if dirty else ""}构建（{date}）。每一页都由仓库中的文本转换而来'
-                  f'{"，只在站外才成立的本地路径与词句在构建时已改" if cfg.get("rewrites") else ""}；离开本站的链接，指向该文件在此提交时的样子。'
+                  f'{"，只在站外才成立的本地路径与词句在构建时已改" if cfg.get("rewrites") else ""}；离开本站的链接，指向所链的文件在此提交时的样子。'
                   f'{pushed_note(pushed, zh=True)}'
                   f'{f"""<a href="{html.escape(source_href)}">本页的源文件</a>。""" if source_href else ""}')
     else:
@@ -1066,18 +1066,21 @@ LEAD_SHARED = 3  # a paragraph met word for word among the leading paragraphs of
 STATUS_LINE = re.compile(r'<code>[^<]+</code> · <strong>')  # a record page's status line, as site_text leaves it (RECORD_STATUS)
 LANGUAGE_LINK = re.compile(r'<a [^>]*>\s*(?:中文|English)[^<]{0,24}</a>\s*(?: · |$)')  # '中文', '中文（各章一览）', 'English'
 READING_LINE = 200  # characters below which a paragraph that states a time to read is a reading-time line (a third of it in Chinese)
-SENTENCE = r'(?:[^.]|\.(?!\s|$)|(?<= al)\.(?=\s))*'  # a sentence's body: a period ends it only before a space or the end, not after 'et al'
+CLOSE = '["”’)\\]]*'  # closing marks a sentence's period may sit inside
+SENTENCE = (r'(?:[^.]|\.(?!' + CLOSE + r'(?:\s|$))'  # a sentence's body: a period ends it only before a space or the end, closing marks
+            r'|(?:(?<= al)|(?<=\bNov)|(?<=e\.g)|(?<=i\.e)|(?<=\bcf))\.(?=\s+[a-z0-9(]))*')  # allowed, not after an abbreviation
 PROVENANCE = re.compile(  # a run of opening sentences that say where a page came from, not what it says, as experiments open:
     # 'Board item EW2, 21 October 2026. AI-written (a Claude Code session). Study section 286 of …. Literature check: ….'
     r'(?:(?:Board items? [A-Z]' + SENTENCE +
-    r'|AI-(?:written|authored|assisted)(?=\s*[(,.;]| study\b| by\b| from\b| in\b| on\b)' + SENTENCE +
+    r'|AI-(?:written|authored)(?=\s*[(,.;]| study\b| by\b| from\b| in\b| on\b)' + SENTENCE +
+    r'|AI-assisted [a-z]+(?: [a-z]+)?, \d{1,2} [A-Z][a-z]+ \d{4}' +
     r'|Study sections? \d' + SENTENCE +
     r'|Literature(?: and data)? check: ' + SENTENCE +
     r'|Prior art: ' + SENTENCE +
-    r'|Predictions\b' + SENTENCE + r'\bfrozen\b' + SENTENCE +
+    r'|Predictions(?:,[^:.]*)? frozen before [^:.]*: \S+' +
     r'|(?:[A-Z][A-Z0-9]{0,5}[a-z]?, )?\d{1,2}(?:–\d{1,2})? [A-Z][a-z]+ \d{4}(?:; run \d{1,2} [A-Z][a-z]+ \d{4})?' +
     r'|About ' + SENTENCE + r'\b(?:minutes?|hours?|an hour) to read\b' + SENTENCE +
-    r')\.(?:\s+|$))+')
+    r')\.' + CLOSE + r'(?:\s+|$))+')
 READING_TIME = re.compile(r'\b(?:minutes?|hours?|an hour) to read\b|\d+(?:–\d+)? ?分钟|[一二三四五六七八九十两半]+(?:分钟|小时)')
 
 
@@ -1088,8 +1091,9 @@ def lead_paragraphs(body_html):
     provenance), a line of items
     joined by ' · ' (a navigation line), a paragraph wholly in italics (a reading time, a label of provenance) and a line too
     short to say anything; and a paragraph's opening sentences of provenance (PROVENANCE: a board item, a date alone or after
-    an item's name, an AI-written, AI-authored or AI-assisted label, a study section, a literature check, prior art, predictions
-    frozen, a time to read) are passed over, the paragraph too where too little is left."""
+    an item's name, an AI-written or AI-authored label, an AI-assisted kind with its date, a study section, a literature check,
+    prior art, predictions frozen before a named file, a time to read) are passed over, the paragraph too where too little is
+    left; other openings ('Opened …', 'Index rewritten …') are not."""
     for m in re.finditer(r'<p>(.*?)</p>', body_html, re.S):
         inner = m.group(1).strip()
         text = ' '.join(strip_tags(inner).split())
@@ -1416,7 +1420,7 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
             end = drawn.index('</nav>', bar) + len('</nav>')
             drawn = (drawn[:end] + '\n<p class="pushed-note" style="margin:0;padding:6px var(--gutter-r) 6px var(--gutter-l);'
                      'font:13px/1.45 var(--sans);color:var(--muted);border-bottom:1px solid var(--rule)">'
-                     + f'This page was built from commit <code>{html.escape(commit[:9])}</code>. '
+                     + f"This page was built from {'uncommitted edits on top of ' if dirty else ''}commit <code>{html.escape(commit[:9])}</code>. "
                      + html.escape(pushed_note(pushed).strip()) + '</p>' + drawn[end:])
         (out / MAP_PAGE).write_text(drawn)
         written.append(out / MAP_PAGE)
