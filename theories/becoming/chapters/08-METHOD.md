@@ -426,7 +426,7 @@ So self-reference does not certify itself, and the reference back of a bound use
 
 **One mechanism, stated once.** A shared law states a mechanism that many central results share, at the lowest layer that holds it, so that those results are proved through it. The name says only that: it ranks no law above another and rules nothing ([§10](#law)).
 
-| Law | Statement | Anchor | On the grammar | Central declarations on it |
+| Law | Statement | Anchor | On the grammar | Central rows on it |
 |---|---|---|---|---:|
 | Closure | what a relation carries reaches exactly its closure | `WithinClosure` | `«所闭当且仅当同一或及»`; `WithinClosure` is `«所闭»` by definition | 42 |
 | Balance | a level changes by what is given and taken, at each step and over every stretch | `Flow.Balances` | `«守数当且仅当可对»`, `«程守数当且仅当可对»`: represented both ways (`Flow.balances_iff_units`), not derived | 54 |
