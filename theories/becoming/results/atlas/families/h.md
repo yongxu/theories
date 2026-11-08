@@ -236,7 +236,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Open.**
   - That growth relative to what is held is growth of the whole possible: along a course of a stated process the whole possible never grows. ([where-the-possible-grows.md#does-not-show--未表明](../../records/where-the-possible-grows.md#does-not-show--未表明))
   - A sufficient condition for keeping widening relative to what is held, beyond the witnesses: endless change with an unlisted whole possible does not suffice. ([where-the-possible-grows.md#does-not-show--未表明](../../records/where-the-possible-grows.md#does-not-show--未表明))
-  - That growth relative to what is held is better or is what 生生 asks: a ranking rests on C or another named order, and the reading of 生生不息 here is an AI reading. ([where-the-possible-grows.md#does-not-show--未表明](../../records/where-the-possible-grows.md#does-not-show--未表明))
+  - That growth relative to what is held is better or is 生生's measure: a ranking rests on C or another named order, and the reading of 生生不息 here is an AI reading. ([where-the-possible-grows.md#does-not-show--未表明](../../records/where-the-possible-grows.md#does-not-show--未表明))
   - Whether the actual unfolding is a course of a process statable in advance; the possible that cannot be prestated is outside. ([where-the-possible-grows.md#does-not-show--未表明](../../records/where-the-possible-grows.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
 - **Valence.** none asserted

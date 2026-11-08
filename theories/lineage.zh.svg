@@ -32,7 +32,7 @@
 <rect x="681.9" y="584.0" width="7" height="53.9" fill="#a8a29e"/>
 <rect x="747.3" y="584.0" width="7" height="13.9" fill="#a8a29e"/>
 <rect x="827.3" y="584.0" width="7" height="9.2" fill="#a8a29e"/>
-<rect x="950.0" y="584.0" width="7" height="1.2" fill="#a8a29e"/>
+<rect x="950.0" y="584.0" width="7" height="1.4" fill="#a8a29e"/>
 <text x="950.0" y="659.0" font-size="13" text-anchor="end" fill="#57534e">灰条：各记录的历史条目，按周计（最多的一周 1810 条）。</text>
 <path d="M180.9,481.0 L212.4,481.0 L274.1,498.0 L295.1,481.0 L406.2,481.0 L681.9,464.0 L747.3,498.0" fill="none" stroke="#0072B2" stroke-width="1.8" stroke-dasharray="5 3"/>
 <path d="M66.9,481.0 L385.9,447.0 L389.7,464.0 L588.4,498.0 L719.3,464.0" fill="none" stroke="#E69F00" stroke-width="1.8" stroke-dasharray="5 3"/>

@@ -6,7 +6,7 @@
 
 > This version is still being revised.
 
-*6–8 minutes to read.*
+*6–7 minutes to read.*
 
 **What this is.** A theory of how anything comes to be, lasts, changes and passes away, without assuming that becoming is good. Its laws are proved on formal models, in mathematics checked by machine; that they explain how actual things go on is argued, not proved. Its makers want it to help people and trained systems predict, come to share an understanding and coordinate; the want is theirs and revisable, and nothing in the work shows it met.
 
@@ -16,7 +16,7 @@
 
 **One case.** In [a test whose predictions were fixed before it ran](experiments/direction-installation/README.md), three fishers, language models told what to do, share a lake whose bed of mussels, which gives them nothing, dies the first month fewer than 70 tons are left: the community's largest steady catch, 50 tons a month, ends it, while 30 keeps it and costs 40% of the catch. Told nothing of the bed, they kept it in no season. Told of it, told to count everything whose continuation depends on their fishing, given a rule for choosing among courses ([in full](theories/becoming/ONE-PAGE.md)) and able to talk, one model of two kept it in 8 of 10 seasons, against 3 of 10 under the community's goal alone; the test's own frozen predictions mostly failed ([the tests](TESTS.md)). As a reading: what their selection did not read, it did not keep.
 
-**Its ethics** asserts no should: where it ranks courses it names what it ranks under, most often [two readings](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order), neither asserted: the continuation condition (from every standpoint, for anything, its continuation into the future is counted) fixes scope, whose losses count, ranking nothing; C (widening what can form is better) gives order. Its makers offer a way of seeing, not a verdict.
+**Its ethics** asserts no should; its rankings mostly rest on [two readings](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order), neither asserted: the continuation condition (from every standpoint, for anything, its continuation into the future is counted) fixes scope, whose losses count, ranking nothing; C (widening what can form is better) gives order. Its makers offer a way of seeing, not a verdict.
 
 **How it stands.** [Lean](MAP.md#check-the-proofs-yourself), a proof checker, gives receipts for 505 of [536 registered results](RESULTS.md): each statement follows from its premises, not that they hold. An automated review against the literature it knew, not exhaustive, finds [none of the central results new mathematics](theories/becoming/chapters/08-METHOD.md#known-results). Three things survive, none of them a discovery: the premise ledger, each premise shown holding in one model and failing in another; scope and order kept apart as two readings; one vocabulary for conservation, selection limited by observation, and comparison of opportunity sets. [Its theses](theories/becoming/chapters/08-METHOD.md#theses) face tests frozen before scoring: of the 33 that ran, 18 came out mixed, 4 passed, 4 failed and 7 otherwise; 3 more never ran. The work was made with AI; the person who directs it has read its important parts, and no independent human review is recorded yet.
 
