@@ -148,7 +148,7 @@ OTHER_ZH = (('no-verdict', '只作报告、没有判定'), ('not-run', '已冻�
 
 
 def _cell(text: str) -> str:
-    return re.sub(r'(?<!\\)\|', r'\\|', ' '.join(text.split()))
+    return re.sub(r'(?<!\\)((?:\\\\)*)\|', r'\1\\|', ' '.join(text.split()))  # a pipe after an even run of backslashes is bare
 
 
 def _lines_problems(held, ids) -> list[str]:
@@ -181,6 +181,8 @@ def tests_page(root: Path = ROOT, checked: bool = True) -> tuple[dict, list[str]
     errors = _lines_problems(held, {r['id'] for r in rows})
     known = {k for k, _, _ in SCORED_ZH} | {k for k, _ in OTHER_ZH}
     errors += [f'zh fronts: no Chinese class for the outcome {k!r} (tests_page.py has it)' for k in english_tests.CLASS_KEYS if k not in known]
+    if {k for k, _, _ in SCORED_ZH} != set(english_tests.SCORED):
+        errors.append('zh fronts: the Chinese page\'s scored classes are not tests_page.py\'s SCORED')
     if errors:
         return {}, errors
     by = {}
@@ -238,6 +240,8 @@ def render(records: list, outputs: dict, root: Path = ROOT) -> tuple[dict, list[
     errors, stated = [], {}
     from tools.research import tests_page as english_tests
     tests, tests_errors = tests_page(root, checked=english_tests.PAGE in outputs or not (root / TESTS_DATA).is_file())
+    if tests_errors:  # the landing page times the tests page: without it, say why, not that a time is missing
+        return {}, tests_errors
     outputs = {**outputs, **tests}  # the landing page times the tests page as it is about to be written
 
     def text_of(path):
@@ -267,7 +271,11 @@ def render(records: list, outputs: dict, root: Path = ROOT) -> tuple[dict, list[
         if kind == 'time' and arg in ('screen', 'page'):
             return m.group(0)
         if kind == 'time' and arg == 'opening':  # the opening's body, without its notes, as README.md's first screen times it
-            body_of_opening = navigation.readme_opening(root=root).partition('\n### Notes\n')[0]
+            try:
+                body_of_opening = navigation.readme_opening(root=root).partition('\n### Notes\n')[0]
+            except (ValueError, OSError) as e:
+                errors.append(f'{TEMPLATE} times the opening: {e}')
+                return m.group(0)
             if not body_of_opening.strip():
                 errors.append(f'{TEMPLATE} times the opening, which has no body')
                 return m.group(0)

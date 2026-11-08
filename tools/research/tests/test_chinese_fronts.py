@@ -121,6 +121,22 @@ class TestsPageTests(unittest.TestCase):
         self.assertEqual(pages, {})
         self.assertEqual(empty, [f'zh fronts: {zh_fronts.TESTS_LINES}: the line for F1 needs non-empty en, en_name, name and gloss'])
 
+    def test_a_bad_line_is_what_the_landing_page_render_reports(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.write(root, self.ROWS, {'F1': {'en_name': 'A failure', 'en': 'It failed.', 'name': '', 'gloss': 'x'}})
+            (root / zh_fronts.TEMPLATE).parent.mkdir(parents=True, exist_ok=True)
+            (root / zh_fronts.TEMPLATE).write_text('# 首页\n\n检验约 {{time:TESTS.zh.md}}。\n', encoding='utf-8')
+            pages, errors = zh_fronts.render([], {'TESTS.md': 'x'}, root)
+        self.assertEqual(pages, {})
+        self.assertEqual(errors, [f'zh fronts: {zh_fronts.TESTS_LINES}: the line for F1 needs non-empty en, en_name, name and gloss'])
+
+    def test_cells_escape_only_bare_pipes(self):
+        self.assertEqual(zh_fronts._cell('a | b'), 'a \\| b')
+        self.assertEqual(zh_fronts._cell('a \\| b'), 'a \\| b')
+        self.assertEqual(zh_fronts._cell('a \\\\| b'), 'a \\\\\\| b')
+
 
 class LandingPageTests(unittest.TestCase):
     """README.zh.md from its template: every field filled by README.md's rule, a generated page timed as it will be written."""
