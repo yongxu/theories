@@ -29,11 +29,13 @@ Three kinds of claim are kept apart below.
 
 ### 2. AI feedback against written principles (Constitutional AI, RLAIF)
 
-*Construction* (Bai et al. 2022, [arXiv:2212.08073](https://arxiv.org/abs/2212.08073)). Humans supply only a list of principles. A model critiques and revises its own responses (the supervised phase); a model then judges pairs of samples against the principles, a preference model is trained on these judgments, and RL uses it as the reward (RLAIF).
+*Construction* (Bai et al. 2022, [arXiv:2212.08073](https://arxiv.org/abs/2212.08073)). For harmlessness, humans supply only a list of principles; for helpfulness, the paper keeps human feedback labels, as in (1) (its §4.1; §4.2 counts 135,296 human helpfulness comparisons beside 182,831 generated harmlessness ones). A model critiques and revises its own responses (the supervised phase); a model then judges pairs of samples against the principles, a preference model is trained on these judgments together with the human helpfulness comparisons, and RL uses it as the reward (RLAIF).
 
-*What the selection reads.* Still a function of the transcript pair, read now by a feedback model through the principles. The deciders change; the conditions read do not.
+*What the selection reads.* Still a function of the transcript pair, read now by a feedback model through the principles for harmlessness and by human raters for helpfulness. The deciders change; the conditions read do not.
 
-*Laws.* `Web.anticipates_iff` (§7.3): a decider coupling more finely into the same conditions separates more within them and reaches no further. A feedback model may tell apart, within a transcript, what time-limited humans could not, which widens what is separated *inside* the transcript. Consequences after the transcript stay beyond, as in (1). Humans couple in through the principles alone: what the principles do not name is read only as far as the feedback model's own coupling reads it.
+*Laws.* `Web.anticipates_iff` (§7.3): a decider coupling more finely into the same conditions separates more within them and reaches no further. A feedback model may tell apart, within a transcript, what time-limited humans could not, which widens what is separated *inside* the transcript. Consequences after the transcript stay beyond, as in (1). For harmlessness, humans couple in through the principles alone: what the principles do not name is read only as far as the feedback model's own coupling reads it; for helpfulness, through their comparisons, as in (1).
+
+*Corrected 8 November 2026.* This section said, as the paper's abstract does, that humans supply only a list of principles, and that humans couple in through the principles alone; the paper's §4.1 keeps human labels for helpfulness, so both now hold for harmlessness only. What the selection reads is still a function of the transcript pair, and the selection laws' premise holds by construction as before.
 
 ### 3. Direct preference optimization (DPO)
 

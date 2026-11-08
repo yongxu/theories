@@ -78,7 +78,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cr1-coupling-correspondence/CORRESPONDENCE.md",
       "role": "statement",
-      "sha256": "57ef1663b2f89399985f62b7de5f7dc9b61bc4a76155cbc6ec6d2f5c81dc9fde",
+      "sha256": "ad1e4ed52710d104b4e0c7a4d790ce3e0092e3137452266be139b9bf8cd352b2",
       "declarations": []
     },
     {
@@ -101,6 +101,10 @@
     {
       "en": "26 October 2026, board item DF1b (study section 422): Gao, Schulman and Hilton cited by the published year, 2023 (ICML, PMLR 202; arXiv October 2022), as elsewhere in the account.",
       "zh": "2026年10月26日，工作板条目 DF1b（研究第 422 节）：Gao、Schulman 与 Hilton 按发表年份 2023 引用（ICML，PMLR 202；arXiv 2022 年 10 月），与本说明他处一致。"
+    },
+    {
+      "en": "8 November 2026, RW: the study's section 2 corrected: Constitutional AI keeps human labels for helpfulness (the paper's §4.1), so humans supply only principles, and couple in through them alone, for harmlessness; the statement is unchanged.",
+      "zh": "2026年11月8日，RW：研究第 2 节更正：宪法式 AI 于有益性仍用人之标注（论文第 4.1 节），故人仅供原则、仅经原则耦合者，唯无害性而已；陈述不变。"
     }
   ]
 }

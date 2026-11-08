@@ -61,6 +61,7 @@ Aliases: `CR1`, `coupling closures of training pipelines`
 
 - 22 October 2026: added (CR1); study section 358.
 - 26 October 2026, board item DF1b (study section 422): Gao, Schulman and Hilton cited by the published year, 2023 (ICML, PMLR 202; arXiv October 2022), as elsewhere in the account.
+- 8 November 2026, RW: the study's section 2 corrected: Constitutional AI keeps human labels for helpfulness (the paper's §4.1), so humans supply only principles, and couple in through them alone, for harmlessness; the statement is unchanged.
 
 </details>
 
