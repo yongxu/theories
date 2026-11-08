@@ -342,7 +342,8 @@ def check_or_render(render=False, base=None, ids=None, strict_fresh=False):
             if not errors:
                 again = lean_catalogue.render()
                 errors += ['lean catalogue: ' + e for e in lean_catalogue.problems(again)]
-                settled = {path: body for path, body in again.items()
+                # The directory indexes count the files on disk, so a page this render added is counted only now.
+                settled = {path: body for path, body in {**again, **indexes.render()}.items()
                            if not (ROOT / path).is_file() or (ROOT / path).read_text() != body}
                 if settled and not errors:
                     errors += navigation.write_views(settled, initial)

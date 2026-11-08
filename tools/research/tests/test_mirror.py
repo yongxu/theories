@@ -69,6 +69,12 @@ def built(en=EN_TEXT, zh=ZH_TEXT, **more):
     return mirror.Mirror(CONFIG, texts={EN: en, ZH: zh, **more})
 
 
+def without_targets(s):
+    """The text outside every link target."""
+    spans = moves.links(s)
+    return ''.join(s[a:b] for a, b in zip([0] + [e for _, e, _ in spans], [x for x, _, _ in spans] + [len(s)]))
+
+
 def page_of(m, source, name):
     return next(p for p in m.pages[source] if p.path.rsplit('/', 1)[1] == name)
 
@@ -93,6 +99,15 @@ class SplitTests(unittest.TestCase):
         # `61-…` is §6.1's anchor: only an anchor equal to the other edition's heading starts a section
         m = built(en='# S\n\n<a id="61-sub"></a>\n\n## 7. Seven\n', zh='# 研\n\n## 61. 六一\n')
         self.assertEqual([p.number for p in m.pages[EN]], [None, 7])
+
+    def test_an_anchor_in_code_starts_nothing(self):
+        en = '# S\n\n```html\n<a id="1-a"></a>\n```\n'
+        self.assertEqual([p.number for p in built(en=en, zh='# 研\n\n## 1. A\n').pages[EN]], [None])
+
+    def test_the_split_sees_the_other_edition(self):
+        en = '# S\n\n<a id="1-a"></a>\n\ntext\n'
+        self.assertEqual([p.number for p in built(en=en, zh='# 研\n\n## 1. A\n').pages[EN]], [None, 1])
+        self.assertEqual([p.number for p in built(en=en, zh='# 研\n').pages[EN]], [None])
 
     def test_a_heading_in_a_fence_does_not_split(self):
         m = built()
@@ -148,6 +163,8 @@ class LinkTests(unittest.TestCase):
 
     def test_a_line_link_names_the_page_and_its_line(self):
         self.assertIn('[a line](004.md?plain=1#L8)', self.page('003.md'))  # the source's line 20 is 004's 4th, after a 4-line header
+        m = built(en='# S\n\n## 1. One\n\n### L3\n\n[l](STUDY.md?plain=1#L3)\n', zh='# 研\n')
+        self.assertIn('[l](001.md?plain=1#L5)', self.page('001.md', m))  # a line link is a line, even with a heading of that name
         self.assertEqual(built().line(EN, 20), (f'{FOLDER}/004.md', 8))
 
     def test_into_the_same_page_and_into_the_other_edition(self):
@@ -181,13 +198,10 @@ class LinkTests(unittest.TestCase):
     def test_nothing_but_link_targets_changes(self):
         m = built()
         out, _ = m.render()
-        def strip(s):
-            spans = moves.links(s)
-            return ''.join(s[a:b] for a, b in zip([0] + [e for _, e, _ in spans], [x for x, _, _ in spans] + [len(s)]))
         for source in (EN, ZH):
             for p in m.pages[source]:
                 body = out[p.path].split('\n', mirror.HEADER_LINES)[mirror.HEADER_LINES]
-                self.assertEqual(strip(body), strip(m.texts[source][p.start:p.end]), p.path)
+                self.assertEqual(without_targets(body), without_targets(m.texts[source][p.start:p.end]), p.path)
 
     def test_first_pages(self):
         m = built()
@@ -199,12 +213,40 @@ class HeaderTests(unittest.TestCase):
     def test_a_page_says_where_the_section_is(self):
         m = built()
         out, _ = m.render()
-        one = out[f'{FOLDER}/001.md'].split('\n')[2]
-        self.assertIn("This section's heading and text are in the [Chinese edition](001.zh.md); this page holds what the English file keeps of it, under no heading.", one)
-        self.assertIn('[英文文件所留的部分](001.md)', out[f'{FOLDER}/001.zh.md'].split('\n')[2])
+        self.assertIn("the English file keeps only its anchor here.", out[f'{FOLDER}/001.md'].split('\n')[2])
+        self.assertNotIn('英文文件所留', out[f'{FOLDER}/001.zh.md'].split('\n')[2])
         self.assertIn('[中文](003.zh.md)', out[f'{FOLDER}/003.md'].split('\n')[2])
         self.assertIn('[英文版](003.md)', out[f'{FOLDER}/003.zh.md'].split('\n')[2])
         self.assertNotIn('Chinese edition', out[f'{FOLDER}/004.md'].split('\n')[2])
+
+    def test_what_a_remnant_keeps(self):
+        en = '# S\n\n<a id="1-a"></a>\n\n```text\nX\n```\n\n<a id="2-b"></a>\n\nOnly here.\n\n<a id="3-c"></a>\n<!-- table -->\n\n## 4. D\n'
+        zh = '# 研\n\n## 1. A\n\n```text\nX\n```\n\n## 2. B\n\n别的。\n\n## 3. C\n\n别的。\n'
+        m = built(en=en, zh=zh)
+        self.assertEqual([m.keeps(page_of(m, EN, f'00{n}.md')) for n in (1, 2, 3)], ['kept', 'extra', 'anchor'])
+        out, errors = m.render()
+        self.assertEqual(errors, [])
+        line = lambda name: out[f'{FOLDER}/{name}'].split('\n')[2]
+        self.assertIn("heading and main text are in the [Chinese edition](001.zh.md); this page holds what the English file keeps of it, under no heading.*", line('001.md'))
+        self.assertIn('It also holds lines the Chinese edition does not have.*', line('002.md'))
+        self.assertIn('keeps only its anchor here.*', line('003.md'))
+        self.assertIn('[英文文件所留的部分](001.md)*', line('001.zh.md'))
+        self.assertIn('[英文文件所留的部分](002.md)（含本版所无的文字）*', line('002.zh.md'))
+        self.assertNotIn('003.md)*', line('003.zh.md').replace('[4]', ''))
+        self.assertIn('[anchor only](003.md)', out[f'{FOLDER}/README.md'])
+
+    def test_a_table_with_fewer_columns_is_not_extra(self):
+        en = '# S\n\n<a id="1-a"></a>\n\n| 模块 |\n|---|\n| Dependence |\n'
+        zh = '# 研\n\n## 1. A\n\n| 模块 | 内容 |\n|---|---|\n| Dependence | 依存 |\n'
+        m = built(en=en, zh=zh)
+        self.assertEqual(m.keeps(page_of(m, EN, '001.md')), 'kept')
+        m = built(en=en.replace('Dependence', 'Other'), zh=zh)
+        self.assertEqual(m.keeps(page_of(m, EN, '001.md')), 'extra')
+
+    def test_the_preambles_link_each_other(self):
+        out, _ = built().render()
+        self.assertIn('[中文](preamble.zh.md)', out[f'{FOLDER}/preamble.md'].split('\n')[2])
+        self.assertIn('[英文版](preamble.md)', out[f'{FOLDER}/preamble.zh.md'].split('\n')[2])
 
     def test_a_long_label_is_cut_at_a_word(self):
         self.assertEqual(mirror.short('Ren’s words quoted in passages that exist only in the Chinese edition'), 'Ren’s words quoted in passages that…')
@@ -217,7 +259,7 @@ class IndexTests(unittest.TestCase):
         rows = [l for l in index.split('\n') if l.startswith('| ') and not l.startswith('| §')]
         self.assertEqual([r.split(' | ')[0] for r in rows], ['| —', '| 1', '| 2', '| 3', '| 4', '| —'])
         self.assertIn('| 3 | Kept (P3) | [', index)
-        self.assertIn('| 1 | 旧 | [2 lines, no heading](001.md) | [', index)
+        self.assertIn('| 1 | 旧 | [anchor only](001.md) | [', index)
         self.assertIn('| English summary | [', index)
 
     def test_a_note_for_the_folder(self):
@@ -230,6 +272,14 @@ class ErrorTests(unittest.TestCase):
     def test_a_heading_swallowed_by_a_fence(self):
         _, errors = built(en='# S\n\n## 1. A\n\n```text\n\n## 2. B\n\n## 3. C\n', zh='# 研\n').render()
         self.assertTrue(any('section 2 is inside code' in e for e in errors), errors)
+
+    def test_a_heading_swallowed_below_an_unnumbered_section(self):
+        _, errors = built(en='# S\n\n## 8. A\n\n## Summary\n\n```text\n\n## 9. B\n', zh='# 研\n').render()
+        self.assertTrue(any('section 9 is inside code' in e for e in errors), errors)
+
+    def test_an_anchor_of_a_section_headed_elsewhere_out_of_order(self):
+        _, errors = built(en='# S\n\n## 9. A\n\ntext\n\n<a id="1-a"></a>\n\nmore\n', zh='# 研\n\n## 1. A\n').render()
+        self.assertTrue(any('an anchor of section 1 below section 9' in e for e in errors), errors)
 
     def test_a_number_twice(self):
         _, errors = built(en='# S\n\n## 2. A\n\n## 2. B\n', zh='# 研\n').render()
@@ -258,7 +308,12 @@ class CitedTests(unittest.TestCase):
 
     def test_what_is_not_read(self):
         self.assertEqual(self.cited(['vocabulary of the naming study, section 7', 'Main-study section 28 consumes', 'the existing study §85',
-                                     'study section 358, 12 October 2026', 'study sections 61 and 62, 2026-10-12']), [61, 62, 358])
+                                     'study section 358, 12 October 2026', 'study sections 61 and 62, 2026-10-12',
+                                     'study sections 70 and 71, 12 October 2026']), [61, 62, 70, 71, 358])
+
+    def test_a_chapter_with_numbered_headings_is_not_another_study(self):
+        chapter = 'theories/T.md'
+        self.assertEqual(self.cited(['study section 9'], [{'path': chapter}], **{chapter: '# T\n\n## 9. Nine\n'}), [9])
 
     def test_a_citation_of_another_study_the_record_binds(self):
         other = {OTHER: '# O\n\n## 41. A\n\n## 42. B\n'}
@@ -297,7 +352,8 @@ class CitedTests(unittest.TestCase):
             self.assertEqual(registry.mirrored(f'{EN}#nowhere'), f'{EN}#nowhere')
             self.assertEqual(registry.mirrored('a/b.md#x'), 'a/b.md#x')
             self.assertEqual(registry.link(f'{EN}#3-kept', base, 'study'), f'[study]({up}/{FOLDER}/003.md#3-kept)')
-            self.assertEqual(navigation.link(EN, 'README.md', 'the study'), f'[the study]({FOLDER}/README.md)')
+            self.assertEqual(navigation.link(EN, 'README.md', 'the study'), f'[the study]({FOLDER}/README.md) (generated mirror)')
+            self.assertEqual(navigation.link('a/b.md', 'README.md', 'b'), '[b](a/b.md)')
 
 
 class LeanCatalogueTests(unittest.TestCase):
@@ -328,6 +384,7 @@ class CheckLinksTests(unittest.TestCase):
     def test_text_in_code_or_tex_is_not_a_link(self):
         body = '```text\n[audit](development/missing/AUDIT.md)\n```\n\nSee `[x](also-missing.md)` and \\([EX](0)\\).\n'
         self.assertEqual(research.check_links({'a/PAGE.md': body}), [])
+        self.assertEqual(research.check_links({'a/PAGE.md': 'A reading \\([EX](0)\\) only.\n'}), [])  # no backtick on this page
         self.assertEqual(research.check_links({'a/PAGE.md': '[audit](development/missing/AUDIT.md)\n'}),
                          ['a/PAGE.md: missing link development/missing/AUDIT.md'])
 
@@ -353,8 +410,27 @@ class TreeTests(unittest.TestCase):
             for p in pages:
                 self.assertEqual(moves.anchors(out[p.path]), images.get(p.path, set()), p.path)
                 self.assertLessEqual(len(out[p.path].encode('utf-8')), mirror.PAGE_LIMIT, p.path)
+                body = out[p.path].split('\n', mirror.HEADER_LINES)[mirror.HEADER_LINES]
+                self.assertEqual(without_targets(body), without_targets(text[p.start:p.end]), p.path)
+        en = next(s for s in m.pages if not mirror.is_chinese(s))
+        zh = next(s for s in m.pages if mirror.is_chinese(s))
+        headed = {p.number for p in m.pages[zh] if p.title} - {p.number for p in m.pages[en] if p.title}
+        self.assertEqual({p.number for p in m.pages[en] if p.remnant}, headed)
         records, load_errors = registry.load_records()
         self.assertEqual([e for e in load_errors if 'no edition has' in e or e.startswith('mirror')], [])
+        # The citations read as another study's, pinned: a new one fails here, and someone reads it.
+        stem = mirror.stem_of(en)
+        dropped = {}
+        for r in records:
+            if en in r.get('_mirror', {}):
+                every = {n for numbers, _ in m.citations(r, stem) for n in numbers}
+                if every - set(m.cited(r, en)):
+                    dropped[r['id']] = sorted(every - set(m.cited(r, en)))
+        market, acquired = list(range(41, 47)), [14, 15, 16, 19, 20, 21, 22, 23]
+        self.assertEqual(dropped, {'acquired-binding-compositional-use': [11, 12, 13] + acquired, 'enacted-scene-binding': acquired,
+                                   'encounter-selection-and-revision': [19, 20, 21, 22, 23], 'market-finite-support-obstruction': market,
+                                   'market-partial-correction-boundary': market, 'market-protected-continuation': market,
+                                   'market-supported-finite-transition': market, 'wisdom-root-without-axiom': [21]})
 
 
 if __name__ == '__main__':

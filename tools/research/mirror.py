@@ -41,7 +41,8 @@ ANCHOR_LINE = re.compile(r'^<a id="([^"]+)"></a>[ \t]*$')
 SETEXT = re.compile(r'^ {0,3}(=+|-+)[ \t]*$')
 LIST_ITEM = re.compile(r'^ {0,3}([-*+]|\d+[.)])\s')
 LINE_FRAGMENT = re.compile(r'L\d+(-L\d+)?')
-NUMBER = r'\d{1,3}(?!\d)'  # a section number: a year, or the start of a date, is not one
+MONTHS = 'January|February|March|April|May|June|July|August|September|October|November|December'
+NUMBER = r'\d{1,3}(?!\d)(?!\s+(?:' + MONTHS + r')\b)'  # a section number: a year, or a day before its month, is not one
 NUMBERS = NUMBER + r'(?:\s*(?:,\s*(?:and\s+)?|and\s+|[–-]\s*)' + NUMBER + r')*'
 
 
@@ -317,10 +318,12 @@ class Mirror:
     def cited(self, record: dict, source: str) -> list[int]:
         """The sections of `source` a record's history names. "study section N" is the record's own shorthand, and some
         records bind more than one numbered study: a citation that does not name the file, all of whose numbers are `##`
-        headings of another Markdown file the record binds, is read as that study's."""
+        headings of another study the record binds (a Markdown file under the same research tree; a chapter or a design
+        note with numbered headings is not a study), is read as that study's."""
         editions = set(self.editions(source))
+        tree = '/'.join(source.split('/')[:2]) + '/'
         others = [p for x in record.get('references') or [] if isinstance(x, dict) and isinstance(p := x.get('path'), str)
-                  and p.endswith('.md') and p not in editions]
+                  and p.endswith('.md') and p.startswith(tree) and p not in editions]
         found = set()
         for numbers, named in self.citations(record, stem_of(source)):
             if named or not any(set(numbers) <= self.headed_elsewhere(p) for p in others):
@@ -344,10 +347,11 @@ class Mirror:
         if dest is None:
             return raw
         if dest in self.folders:
-            spot = self.route(dest, fragment) if fragment else None
+            names_lines = bool(fragment and LINE_FRAGMENT.fullmatch(fragment))
+            spot = self.route(dest, fragment) if fragment and not (names_lines and query == 'plain=1') else None
             if spot is not None:
                 dest, fragment = spot
-            elif fragment and LINE_FRAGMENT.fullmatch(fragment):
+            elif names_lines:
                 spots = [self.line(dest, int(n)) for n in re.findall(r'\d+', fragment)]
                 if None in spots or len({p for p, _ in spots}) > 1:
                     errors.append(f'{page.path}: {raw} names lines no single page of {dest} holds')
@@ -363,10 +367,32 @@ class Mirror:
         return '<' + relative + tail + '>' if raw.startswith('<') else emit(relative) + tail
 
     def twin(self, page: Page):
-        """The same numbered section's page in another edition."""
-        if page.number is None:
+        """The same numbered section's page, or the preamble, in another edition."""
+        if page.number is None and page.title:
             return None
-        return next((p for e in self.editions(page.source) if e != page.source for p in self.pages[e] if p.number == page.number), None)
+        return next((p for e in self.editions(page.source) if e != page.source for p in self.pages[e]
+                     if p.number == page.number and (p.number is not None or not p.title)), None)
+
+    def keeps(self, page: Page) -> str:
+        """What a page holding a section headed only elsewhere has of it: 'anchor' (nothing a reader sees), 'extra' (a line
+        outside code that the other edition's page lacks) or 'kept' (only what the other edition has too)."""
+        body = self.texts[page.source][page.start:page.end]
+        masked = _mask(self.texts[page.source])[page.start:page.end]
+        pairs = list(zip(_lines(body), _lines(masked)))
+        code = any(raw.strip() and not mask.strip() for raw, mask in pairs)
+        text = [raw.strip() for raw, mask in pairs if mask.strip() and not ANCHOR_LINE.match(raw.strip()) and not raw.lstrip().startswith('<!--')]
+        if not text and not code:
+            return 'anchor'
+        twin = self.twin(page)
+        other = self.texts[twin.source][twin.start:twin.end] if twin else ''
+        held = {line.strip() for line in _lines(other)}
+        def absent(line):
+            if line in held:
+                return False
+            if line.startswith('|'):  # a table can keep fewer columns than the other edition: its cells are what must be there
+                return any(cell.strip(' -:') and cell.strip() not in other for cell in line.strip('|').split('|'))
+            return True
+        return 'extra' if any(absent(line) for line in text) else 'kept'
 
     def nav(self, page: Page, pages: list[Page]) -> str:
         k = pages.index(page)
@@ -382,12 +408,21 @@ class Mirror:
             base = posixpath.basename(twin.path)
         if chinese:
             where = f'第 {page.number} 节' if page.number is not None else ('序' if not page.title else page.title)
-            other = '' if twin is None else f' · [{"英文文件所留的部分" if twin.remnant else "英文版"}]({base})'
+            if twin is None or (twin.remnant and self.keeps(twin) == 'anchor'):
+                other = ''
+            elif twin.remnant:
+                other = f' · [英文文件所留的部分]({base})' + ('（含本版所无的文字）' if self.keeps(twin) == 'extra' else '')
+            else:
+                other = f' · [英文版]({base})'
             return f'*[{name} 的生成镜像](README.md) · {where}，原文第 {page.first}–{page.last} 行{moves_on}{other}*'
         where = f'section {page.number}' if page.number is not None else ('the preamble' if not page.title else page.title)
         if page.remnant and twin is not None:
-            other = (f' · This section\'s heading and text are in the [Chinese edition]({base}); this page holds what the '
-                     'English file keeps of it, under no heading.')
+            kept = self.keeps(page)
+            if kept == 'anchor':
+                other = f' · This section\'s heading and text are in the [Chinese edition]({base}); the English file keeps only its anchor here.'
+            else:
+                other = (f' · This section\'s heading and main text are in the [Chinese edition]({base}); this page holds what the '
+                         'English file keeps of it, under no heading.' + (' It also holds lines the Chinese edition does not have.' if kept == 'extra' else ''))
         else:
             other = '' if twin is None else f' · [中文]({base})'
         return f'*[The generated mirror of {name}](README.md) · {where}, lines {page.first}–{page.last} of the source{moves_on}{other}*'
@@ -420,7 +455,7 @@ class Mirror:
         lines = [GENERATED.format(source=' and '.join(editions)), '',
                  f'# Mirror of {base(english)}', '',
                  f'A page for each section of {named}: GitHub renders no Markdown file this large. Each page holds what its source '
-                 'has at those lines, byte for byte, except link targets, which point from the page: a link to another section goes '
+                 'has at the lines its header names, byte for byte, except link targets, which point from the page: a link to another section goes '
                  'to that section\'s page, and a link to a whole file to this index. Previous and next follow the source\'s order. '
                  'The source is the source, and every render writes this folder again from it.'
                  + (' In the source, ' + '; '.join(alone) + '.' if alone else ''), '']
@@ -436,6 +471,8 @@ class Mirror:
                 p = r.get(s)
                 if p is None:
                     return '—'
+                if p.remnant and self.keeps(p) == 'anchor':
+                    return f'[anchor only]({posixpath.basename(p.path)})'
                 return f'[{p.last - p.first + 1:,} lines{", no heading" if p.remnant else ""}]({posixpath.basename(p.path)})'
             lines.append(f'| {p0.number if p0.number is not None else "—"} | {title} | ' + ' | '.join(cell(s) for s in editions) + ' |')
         return '\n'.join(lines) + '\n'
@@ -449,19 +486,24 @@ class Mirror:
         for i, line in enumerate(raw):
             m = NUMBERED_HEADING.match(line)
             if m and raw[i] != masked[i]:
-                page = next((p for p in pages if p.first <= i + 1 <= p.last), None)
-                if page is not None and page.number is not None and int(m.group(1)) == page.number + 1:
+                numbers = [p.number for p in pages if p.first <= i + 1 and p.number is not None]  # the last numbered page at or above it
+                if numbers and int(m.group(1)) == numbers[-1] + 1:
                     found.append(f'mirror: {source} line {i + 1}: the heading of section {m.group(1)} is inside code; is a fence above it unclosed?')
         return found
 
     def render(self) -> tuple[dict[str, str], list[str]]:
         """Every page and index, and the errors: a link naming an anchor or a line its mirrored file lacks, a page over the
-        limit, two sources writing one page, a number twice in one file, a heading swallowed by a fence, and a page in the
-        folder that no section writes any more."""
+        limit, two sources writing one page, a number twice in one file, a heading swallowed by a fence, an anchor of a
+        section headed elsewhere out of order, and a page in the folder that no section writes any more."""
         out, errors = {}, []
         for source, pages in self.pages.items():
             errors += [f'mirror: {source} has {n} sections numbered {k}' for k, n in Counter(p.number for p in pages if p.number is not None).items() if n > 1]
             errors += self.swallowed(source)
+            last = None
+            for page in pages:
+                if page.remnant and last is not None and page.number <= last:
+                    errors.append(f'mirror: {source} line {page.first}: an anchor of section {page.number} below section {last}; is it inside a section?')
+                last = page.number if page.number is not None else last
             for page in pages:
                 if page.path in out:
                     errors.append(f'mirror: {page.path} is written twice')
