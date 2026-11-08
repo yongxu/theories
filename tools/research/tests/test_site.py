@@ -906,13 +906,11 @@ class RepositoryConfigTests(unittest.TestCase):
         self.assertIn('three threads followed through (the selection mechanism, the root and the ethics)', card['text'])
         self.assertNotIn('one thread', card['text'])
 
-    def test_where_everything_is_times_the_lineage_as_the_lineage_does(self):
-        said = re.search(r'(\d+–\d+) minutes to read in full; the brief, the picture, the labels and the threads in (\d+–\d+) minutes',
-                         (ROOT / 'theories/LINEAGE.md').read_text())
-        self.assertTrue(said, 'LINEAGE.md no longer states its times in these words')
-        full, brief = said.groups()
+    def test_where_everything_is_leaves_the_lineage_its_own_times(self):
+        # MAP.md is hand-written and the lineage's times move with every render: MAP names no figure that would go stale
         line = next(l for l in (ROOT / 'MAP.md').read_text().split('\n') if l.startswith('[How the account grew]'))
-        self.assertIn(f'in {brief} minutes, and the whole takes {full} minutes', line)
+        self.assertNotRegex(line, r'\d+–\d+ minutes')
+        self.assertIn('states its own reading times', line)
 
     def test_the_chinese_name_and_description_are_set(self):
         cfg = site.site_config()

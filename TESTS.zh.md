@@ -73,7 +73,7 @@
 
 | 检验 | 论题 | 冻结 | 运行 | 一句话［AI 读法］ |
 |---|---|---|---|---|
-| [**FC1**](experiments/wenli-reading-transfer/README.md) 忠实度计数：文言与英文表述中的多余指称 | — | 2026-10-22 | 2026-10-22 | 在这两份文本上，文言的“經”引入的多余指称和行动者比英文条文少；编码由语言模型完成，结果是暂定的，没有人工审核，主集的“經”由写下它们的那个模型编码；F3 和 F4 未测量。 |
+| [**FC1**](experiments/wenli-reading-transfer/README.md) Fidelity count: excess referents in classical and English wordings（英文） | — | 2026-10-22 | 2026-10-22 | The classical wording introduced fewer excess referents and agents than the English; coded by language models and provisional, with no person's audit recorded and the main set's 經 coded by the model that wrote them; F3 and F4 not measured.（英文） |
 | [**LA4 (Stage A)**](experiments/drain-beyond-the-reward/README.md) 梯度训练下奖励之外的消耗（小型策略，A 阶段） | T3 | 2026-11-03 | 2026-11-03 | 没有一项预测与结果相矛盾：3 项在两个受测策略族中都得到支持，2 项在两族中都未能判定，P6 在其中一族无法检验；得到支持的接近度模式（越接近奖励最优，奖励之外的存量越低）大体上可由策略梯度的更新规则推出。 |
 
 ## 未被拒绝
@@ -105,4 +105,4 @@
 | 检验 | 论题 | 冻结 | 运行 | 一句话［AI 读法］ |
 |---|---|---|---|---|
 | [**SC1**](experiments/source-check/README.md) 模型是否漏检自己文本引入的内容 | — | 2026-10-23 | 2026-10-23 | “模型更难查出自己文本里多引入的内容”这种作者特有的检出不足，没有被发现。 |
-| [**ZE**](experiments/wenli-reading-transfer/README.md) 同样名表纪律下的受控英语 | — | 2026-10-23 | 2026-10-23 | 按登记的规则，文言代码的优势在一个编码者下（主比较）没有保持下来，在另一个编码者下保持了下来，幅度约为每对三分之一个指称，但后者是一次 60 对的核查，其计划明言它不是第二个主检验；两个编码者对“多余”的判断并不一致；没有人工审核。 |
+| [**ZE**](experiments/wenli-reading-transfer/README.md) Controlled English under the same name-table discipline（英文） | — | 2026-10-23 | 2026-10-23 | By its registered rules, the classical code's advantage does not survive under one coder (the primary comparison) and survives at about a third of a referent per pair under the other, on a 60-pair check that its plan says is not a second primary test; the coders do not agree on excess; no person's audit recorded.（英文） |
