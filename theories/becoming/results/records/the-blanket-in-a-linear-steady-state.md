@@ -66,7 +66,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the periphery checker check_linear_blankets.py with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261031T183915.457765Z): 62 theorems in 92 declarations of LinearBlankets, each on Lean's standard axioms only, every core module of its closure matching a passed core receipt. Reviewed by other AI agents: the design (REVIEW-UE26-DESIGN, fifteen findings), the literature, the revised kit (RECHECK-UE26, twelve) and the Lean and landing texts (REVIEW-UE26-LANDING, nineteen, and its recheck, six), every finding taken; study section 484; not reviewed by a person.
+Machine-checked by the periphery checker check_linear_blankets.py with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261031T183915.457765Z): 62 theorems in 92 declarations of LinearBlankets, each on Lean's standard axioms only, every core module of its closure matching a passed core receipt. Reviewed by other AI agents: the design (REVIEW-UE26-DESIGN, fifteen findings), the literature, the revised kit (RECHECK-UE26, twelve) and the Lean and landing texts (REVIEW-UE26-LANDING, nineteen, and its recheck, six), every finding taken; study section 484; no person's review recorded.
 
 Canonical source: [LinearBlankets.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean)
 

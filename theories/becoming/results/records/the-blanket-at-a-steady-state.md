@@ -61,7 +61,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Pure core, every axiom report empty (core receipt 20261031T183655.254131Z): BlanketWeights (46 theorems in 90 declarations) imports Blanket and Flow, a leaf; the witnesses evaluate by decide over full nested matches. Reviewed by other AI agents: the design (REVIEW-UE26-DESIGN, fifteen findings), the literature, the revised kit (RECHECK-UE26, twelve) and the Lean and landing texts (REVIEW-UE26-LANDING, nineteen, and its recheck, six), every finding taken; study section 484; not reviewed by a person.
+Pure core, every axiom report empty (core receipt 20261031T183655.254131Z): BlanketWeights (46 theorems in 90 declarations) imports Blanket and Flow, a leaf; the witnesses evaluate by decide over full nested matches. Reviewed by other AI agents: the design (REVIEW-UE26-DESIGN, fifteen findings), the literature, the revised kit (RECHECK-UE26, twelve) and the Lean and landing texts (REVIEW-UE26-LANDING, nineteen, and its recheck, six), every finding taken; study section 484; no person's review recorded.
 
 Canonical source: [BlanketWeights.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketWeights.lean)
 

@@ -69,7 +69,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T200926.001323Z): Becoming.ReadInTime, 39 declarations, every one with an empty axiom report, all cited here. Built in one session; one independent read-only review by a separate AI agent, its findings taken as the kit note says (its probes kept in the kit), study section 420; not reviewed by a person.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T200926.001323Z): Becoming.ReadInTime, 39 declarations, every one with an empty axiom report, all cited here. Built in one session; one independent read-only review by a separate AI agent, its findings taken as the kit note says (its probes kept in the kit), study section 420; no person's review recorded.
 
 Canonical source: [ReadInTime.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadInTime.lean)
 

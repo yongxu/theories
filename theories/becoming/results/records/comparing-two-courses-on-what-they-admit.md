@@ -81,7 +81,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T212948.819150Z): Becoming.ComparingCourses, 244 declarations, every one with an empty axiom report, all cited here; Web.Linked.append generalizes the landed Web.Linked.snoc and sits beside it until moved below. Built in one session; an independent read-only review by a separate AI agent (REVIEW-UE9), every finding taken, and a re-check (RECHECK-UE9), every finding taken but one, in study section 421; not reviewed by a person.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T212948.819150Z): Becoming.ComparingCourses, 244 declarations, every one with an empty axiom report, all cited here; Web.Linked.append generalizes the landed Web.Linked.snoc and sits beside it until moved below. Built in one session; an independent read-only review by a separate AI agent (REVIEW-UE9), every finding taken, and a re-check (RECHECK-UE9), every finding taken but one, in study section 421; no person's review recorded.
 
 Canonical source: [ComparingCourses.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ComparingCourses.lean)
 

@@ -37,7 +37,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Checked by the module's checker with Lean 4.29.1 (receipt development/verification.json, passed 31 October 2026, fresh build of five modules, 107 audits; it binds the current bytes): DevelopedResponse, 17 declarations audited, 14 with propext only, 1 with an empty report and the two energy laws with Quot.sound too, 9 cited here. An internal counter-review accepted the construction; not reviewed by a person.
+Checked by the module's checker with Lean 4.29.1 (receipt development/verification.json, passed 31 October 2026, fresh build of five modules, 107 audits; it binds the current bytes): DevelopedResponse, 17 declarations audited, 14 with propext only, 1 with an empty report and the two energy laws with Quot.sound too, 9 cited here. An internal counter-review accepted the construction; no person's review recorded.
 
 Canonical source: [DevelopedResponse.lean](../../../../experiments/shared-renewal-capability/regulation/retention/formation/evolution/development/DevelopedResponse.lean)
 

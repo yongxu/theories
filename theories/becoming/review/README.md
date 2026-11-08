@@ -4,7 +4,7 @@
 
 *This cover takes eight to eleven minutes to read; each dossier gives its own times in its opening section.*
 
-**No human has reviewed this theory yet.** Everything in it was written with AI, the Lean proofs included. The proofs are checked by machine, in Lean; everything else, the readings of the classical texts included, has been checked only by further AI reviews. This packet asks people who know the fields to judge what a machine cannot: whether the readings are faithful, whether the claims are put at their right strength, and what is missing. The covering letter gives who sends it, why, and by when a reply would help.
+**No independent human review of this theory is recorded yet.** It was written with AI, the Lean proofs included, and the person who directs the work has read its important parts, not every word. The proofs are checked by machine, in Lean; everything else, the readings of the classical texts included, by further AI reviews. This packet asks people who know the fields to judge what a machine cannot: whether the readings are faithful, whether the claims are put at their right strength, and what is missing. The covering letter gives who sends it, why, and by when a reply would help.
 
 ## What the theory is
 

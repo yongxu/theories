@@ -36,7 +36,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T212948.819150Z): Becoming.Reconfiguration, 80 declarations, every one with an empty axiom report; core purity verified. The module states the periphery module CorrectionReconfiguration (receipt correction-reconfiguration-verification.json, whose six cited witnesses also report no axiom) in the core's vocabulary. The record was read against the current Lean; not reviewed by a person.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T212948.819150Z): Becoming.Reconfiguration, 80 declarations, every one with an empty axiom report; core purity verified. The module states the periphery module CorrectionReconfiguration (receipt correction-reconfiguration-verification.json, whose six cited witnesses also report no axiom) in the core's vocabulary. The record was read against the current Lean; no person's review recorded.
 
 Canonical source: [Reconfiguration.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reconfiguration.lean)
 

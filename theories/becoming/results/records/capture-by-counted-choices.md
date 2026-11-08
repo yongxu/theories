@@ -50,7 +50,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T103820.622467Z): Becoming.ChoiceCountCapture, 45 declarations, every one with an empty axiom report, all cited here. Built in one session; an independent read-only review by a separate AI agent, its findings taken and the revision re-checked, in study section 406; not reviewed by a person.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T103820.622467Z): Becoming.ChoiceCountCapture, 45 declarations, every one with an empty axiom report, all cited here. Built in one session; an independent read-only review by a separate AI agent, its findings taken and the revision re-checked, in study section 406; no person's review recorded.
 
 Canonical source: [ChoiceCountCapture.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ChoiceCountCapture.lean)
 

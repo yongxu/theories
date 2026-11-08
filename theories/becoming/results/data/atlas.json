@@ -25986,7 +25986,7 @@
    },
    "kind": "domain",
    "summary": {
-    "en": "The domain is mapped more than any other (RO 248, ZH 1,300, Y 90, dossier C 39), and nothing there is re-mapped. These ten entries take what the maps do not hold: 诗 through 孟子, 阴阳家, 农家, 黄宗羲 on taxes and schools, 孟子 on cycles, 叔向 on a published code, 顾炎武, 子华子, proverbs of asymmetry. The live account draws none of these connections: each is proposed here, an AI reading no person has checked. No agreement here is of law: 黄宗羲's folded levies and 顾炎武's two endings are a reader's joins to checked laws, which stay silent on the new charge and on 亡天下 under a standing dynasty. Divergence stands on 邹衍's ring, 许行 and 孟子 on rank, 叔向's remedy and 子华子's order. Six rest on stored text and four on recalled, unchecked text. The row was held to ten entries; not_mapped names what that left. 06's 未决 line is partly stale."
+    "en": "The domain is mapped more than any other (RO 248, ZH 1,300, Y 90, dossier C 39), and nothing there is re-mapped. These ten entries take what the maps do not hold: 诗 through 孟子, 阴阳家, 农家, 黄宗羲 on taxes and schools, 孟子 on cycles, 叔向 on a published code, 顾炎武, 子华子, proverbs of asymmetry. The live account draws none of these connections: each is proposed here, an AI reading; no person's check of it is recorded. No agreement here is of law: 黄宗羲's folded levies and 顾炎武's two endings are a reader's joins to checked laws, which stay silent on the new charge and on 亡天下 under a standing dynasty. Divergence stands on 邹衍's ring, 许行 and 孟子 on rank, 叔向's remedy and 子华子's order. Six rest on stored text and four on recalled, unchecked text. The row was held to ten entries; not_mapped names what that left. 06's 未决 line is partly stale."
    },
    "read": [
     "cx-crosswalk/BRIEF.md and REPAIR.md; reads/CRITIC.md; aa-attractor-atlas/PLAN.md sections 4.1 to 4.4 and 6.1 to 6.5; aa-attractor-atlas/readers-2026-11-04/correspondences.md in full",
@@ -26087,7 +26087,7 @@
      {
       "what": "The chapter: corpus, candidates, conditional laws, the hexagram world, names",
       "where": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
-      "extent": "By its text, and not recounted here: 59 乙 candidates tested and 181 not; 219 丙一 read, 128 in 22 families; 449 names. All readings are the AI's, and no person has read them through."
+      "extent": "By its text, and not recounted here: 59 乙 candidates tested and 181 not; 219 丙一 read, 128 in 22 families; 449 names. All readings are the AI's, and no person's review of them is recorded."
      }
     ],
     "absent": [
@@ -26287,7 +26287,7 @@
    },
    "kind": "domain",
    "summary": {
-    "en": "The account holds Chinese Buddhist texts at length (dossier, corpus, Lean tests of 146 sentences), mostly as the strongest contrary test: its continuation stands on the side 中论 refutes. Chapters and fronts hold almost nothing else: no twelve links, craving, saṃsāra, nirvāṇa, 无我 or suffering. Those mapped in the 脉络 study have no entries here, so this file's totals do not show that absence; coverage's absent list does. No entry here is agreement, of a law or otherwise, and I looked: the nearest are parts of entries; agreement stands only in the earlier maps under coverage. Most entries are this crosswalk's own proposals, contrary or divergent, not connections the account states; what is carried in part rests on the dossier, a live page unread by any person, not on a chapter. 无明 keeps the name and changes the claim. Sharpest finds: 雜阿含 293's 相續滅，是名苦邊 and 青目's refutation of 不住相似生, in no map or count. The dossier's statement that Tiantai is not in the repository is out of date."
+    "en": "The account holds Chinese Buddhist texts at length (dossier, corpus, Lean tests of 146 sentences), mostly as the strongest contrary test: its continuation stands on the side 中论 refutes. Chapters and fronts hold almost nothing else: no twelve links, craving, saṃsāra, nirvāṇa, 无我 or suffering. Those mapped in the 脉络 study have no entries here, so this file's totals do not show that absence; coverage's absent list does. No entry here is agreement, of a law or otherwise, and I looked: the nearest are parts of entries; agreement stands only in the earlier maps under coverage. Most entries are this crosswalk's own proposals, contrary or divergent, not connections the account states; what is carried in part rests on the dossier, a live page with no recorded review by a person, not on a chapter. 无明 keeps the name and changes the claim. Sharpest finds: 雜阿含 293's 相續滅，是名苦邊 and 青目's refutation of 不住相似生, in no map or count. The dossier's statement that Tiantai is not in the repository is out of date."
    },
    "read": [
     "theories/becoming/review/BUDDHIST-THOUGHT.md (whole)",
@@ -26357,7 +26357,7 @@
    "coverage": {
     "present": [
      {
-      "what": "Dossier B, for review, unread by any person",
+      "what": "Dossier B, for review; no person's review of it is recorded",
       "where": "theories/becoming/review/BUDDHIST-THOUGHT.md",
       "extent": "36 items B-01 to B-36: 18 on 中论, 4 成唯识论, 4 起信论, 5 华严, 2 无明 and 明, 2 阿含 and 坛经, 1 on the conditional laws; 76 questions and 8 sentences to classify"
      },
@@ -26367,7 +26367,7 @@
       "extent": "中论 chapters 1, 2, 7, 21, 10, 17, 19, 24: 1,432 units, 530 coded 己 of the 540 己 in both rounds (B-18, 06 §二). Lines counted, less one header each: 起信论 589, 金师子章 220, 成唯识论 410 (nine passages only), 五教章六相 131"
      },
      {
-      "what": "Conditional laws written family by family, Lean-checked, readings unreviewed",
+      "what": "Conditional laws written family by family, Lean-checked, no person's review of the readings recorded",
       "where": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-conditional-laws-of-the-corpus",
       "extent": "146 of 219 sentences are Buddhist (counted in groups.tsv by unit prefix: 起信 52, 中论 47, 成唯识 32, 金师子 15): law 85, not holding on its reading 6, premise 16, 丁 18, not expressible 16, definition 5, matching B-36. All six not holding are Buddhist"
      },
@@ -27401,7 +27401,7 @@
    "coverage": {
     "present": [
      {
-      "what": "Dossier P, for review, read by no person",
+      "what": "Dossier P, for review; no person's review of it is recorded",
       "where": "theories/becoming/review/PHILOSOPHY.md",
       "extent": "27 items P-01 to P-27 in six parts; 44 reference lines (counted in the References section). Jonas and Spinoza's conatus each occur once, in P-05's second question, Jonas also in the references; Parfit 1984 and 1997 are credited throughout parts 3 and 5"
      },
@@ -47323,7 +47323,7 @@
     {
      "anchor": "theories/becoming/chapters/08-METHOD.md#reviews",
      "says": {
-      "en": "Every review so far is by AI. No human review is claimed."
+      "en": "Every recorded review so far is by AI. No independent human review is claimed."
      },
      "role": "carries"
     },
@@ -49606,16 +49606,16 @@
    "relation": "divergence",
    "agreement_of": null,
    "reading": {
-    "en": "Same concern, another mechanism, and they part at publishing. The account labels what each statement is and says on its first page who checked what, so it implies no review that has not happened. It does not withhold text no person has reviewed; it says so. The museum's rule would hold such text back. Its own reading adds that no check inside the work can show it serves its purpose. Practice on both sides, not a law. [AI reading]"
+    "en": "Same concern, another mechanism, and they part at publishing. The account labels what each statement is and says on its first page who checked what, so it implies no review that has not happened. It does not withhold text with no recorded review by a person; it says so. The museum's rule would hold such text back. Its own reading adds that no check inside the work can show it serves its purpose. Practice on both sides, not a law. [AI reading]"
    },
    "targets": [
     {
      "anchor": "theories/becoming/ONE-PAGE.md",
      "says": {
-      "en": "“the proofs are checked by machine, everything else only by AI review, and no person has yet reviewed it”."
+      "en": "“the proofs are checked by machine and the rest by AI review, the person who directs the work has read its important parts, and no independent human review is recorded yet”."
      },
      "role": "carries",
-     "part": "no person has yet reviewed it"
+     "part": "no independent human review is recorded yet"
     },
     {
      "anchor": "theories/becoming/chapters/08-METHOD.md#standings-and-bases",
@@ -49672,13 +49672,13 @@
    "relation": "divergence",
    "agreement_of": null,
    "reading": {
-    "en": "The account meets the same risk differently. Its structural readings are made, revised and checked by AI and stand published with an AI label, no person having reviewed them; it answers unreliability with more AI reads and stated counts, not a person's gate. Under the museum's rule 06's correspondences would stay candidates, and so would this file. The source's rule is a design, and the account does not say it is wrong: review by people is what it says is missing. [AI reading]"
+    "en": "The account meets the same risk differently. Its structural readings are made, revised and checked by AI and stand published with an AI label, no person's review of them recorded; it answers unreliability with more AI reads and stated counts, not a person's gate. Under the museum's rule 06's correspondences would stay candidates, and so would this file. The source's rule is a design, and the account does not say it is wrong: review by people is what it says is missing. [AI reading]"
    },
    "targets": [
     {
      "anchor": "theories/becoming/THE-THEORY-OF-BECOMING.md",
      "says": {
-      "en": "“The corpus was classified sentence by sentence in two frozen rounds by AI, and no person has yet reviewed the classification; which sentence reads as which theorem is AI reconstruction”."
+      "en": "“The corpus was classified sentence by sentence in two frozen rounds by AI, and no person's review of the classification is recorded; which sentence reads as which theorem is AI reconstruction”."
      },
      "role": "carries"
     },
@@ -59833,7 +59833,7 @@
    "relation": "agreement",
    "agreement_of": "thesis-or-method",
    "reading": {
-    "en": "The mechanism carried is the label on who made a text or reading and from what: AI readings are marked, literature from the AI's knowledge says so, fronts open 'AI-written', no human review. For a person's words a rule is stated: terms keep their wording where quoted, with source, and a first-person text revised in place names each revised passage, its own last text kept in history. Summaries of a person are not addressed. [AI reading]"
+    "en": "The mechanism carried is the label on who made a text or reading and from what: AI readings are marked, literature from the AI's knowledge says so, fronts open 'AI-written', with no independent human review recorded. For a person's words a rule is stated: terms keep their wording where quoted, with source, and a first-person text revised in place names each revised passage, its own last text kept in history. Summaries of a person are not addressed. [AI reading]"
    },
    "targets": [
     {
@@ -59860,7 +59860,7 @@
     {
      "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md",
      "says": {
-      "en": "AI-written, 29 October 2026. No human has reviewed it. It adds no result: every law it names is stated once, in the home section it links, and it says no more than that statement."
+      "en": "AI-written, 29 October 2026. No independent human review of it is recorded. It adds no result: every law it names is stated once, in the home section it links, and it says no more than that statement."
      },
      "role": "neighbour"
     }
@@ -61829,7 +61829,7 @@
     {
      "anchor": "theories/becoming/chapters/08-METHOD.md#reviews",
      "says": {
-      "en": "Every review so far is by AI; no human review is claimed."
+      "en": "Every recorded review so far is by AI; no independent human review is claimed."
      },
      "role": "limit"
     },
@@ -61956,7 +61956,7 @@
    "relation": "divergence",
    "agreement_of": null,
    "reading": {
-    "en": "Two claims under one word. The source's is who may accept: an owner's act. The account's is what a check can reach: selection reaches what couples in, people couple into none of the work's selectors, so its checks cannot certify it; that selection goes through couplings is a supplied condition. It claims no human review, seeks review and not acceptance, and a description confers no authority. Who may act outward stands in AGENTS.md, outside the live account. No live text joins the two; the link is this reading's. [AI reading]"
+    "en": "Two claims under one word. The source's is who may accept: an owner's act. The account's is what a check can reach: selection reaches what couples in, people couple into none of the work's selectors, so its checks cannot certify it; that selection goes through couplings is a supplied condition. It claims no independent human review, seeks review and not acceptance, and a description confers no authority. Who may act outward stands in AGENTS.md, outside the live account. No live text joins the two; the link is this reading's. [AI reading]"
    },
    "targets": [
     {
@@ -61983,7 +61983,7 @@
     {
      "anchor": "theories/becoming/review/README.md",
      "says": {
-      "en": "No human has reviewed this theory yet; the proofs are checked by machine, and everything else only by further AI reviews."
+      "en": "No independent human review of this theory is recorded yet. It was written with AI, the Lean proofs included, and the person who directs the work has read its important parts, not every word."
      },
      "role": "limit"
     },

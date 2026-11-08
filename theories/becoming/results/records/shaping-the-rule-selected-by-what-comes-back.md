@@ -50,7 +50,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T071027.387418Z): Becoming.RuleShaping, 58 declarations, every one with an empty axiom report, all cited here. Built in one session; one independent read-only review by a separate AI agent, taken in study section 403; not reviewed by a person.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T071027.387418Z): Becoming.RuleShaping, 58 declarations, every one with an empty axiom report, all cited here. Built in one session; one independent read-only review by a separate AI agent, taken in study section 403; no person's review recorded.
 
 Canonical source: [RuleShaping.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean)
 

@@ -62,7 +62,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the periphery checker check_free_energy_reals.py with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261031T134204.303683Z): all 76 declarations of FreeEnergyReals, each on Lean's standard axioms only, every core module of its closure matching a passed core receipt. Independent reviews by other AI agents (REVIEW-UE17; REVIEW-UE22 and RECHECK-UE22 for the counting form), study sections 450 and 462; not reviewed by a person.
+Machine-checked by the periphery checker check_free_energy_reals.py with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261031T134204.303683Z): all 76 declarations of FreeEnergyReals, each on Lean's standard axioms only, every core module of its closure matching a passed core receipt. Independent reviews by other AI agents (REVIEW-UE17; REVIEW-UE22 and RECHECK-UE22 for the counting form), study sections 450 and 462; no person's review recorded.
 
 Canonical source: [FreeEnergyReals.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/FreeEnergyReals.lean)
 

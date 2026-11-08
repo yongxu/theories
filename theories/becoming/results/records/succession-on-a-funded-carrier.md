@@ -36,7 +36,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by Lean 4.29.1 in the alignment-continuity run (receipt alignment-continuity-checks/20261008T085311.995516Z, the same bytes as alignment-continuity-verification.json), which binds the current bytes of AlignmentSuccession.lean at its live path under market-generativity/meta-attractor; every cited theorem reports propext, Quot.sound and Classical.choice. The record was read against the current Lean; not reviewed by a person.
+Machine-checked by Lean 4.29.1 in the alignment-continuity run (receipt alignment-continuity-checks/20261008T085311.995516Z, the same bytes as alignment-continuity-verification.json), which binds the current bytes of AlignmentSuccession.lean at its live path under market-generativity/meta-attractor; every cited theorem reports propext, Quot.sound and Classical.choice. The record was read against the current Lean; no person's review recorded.
 
 Canonical source: [AlignmentSuccession.lean](../../../../experiments/market-generativity/meta-attractor/AlignmentSuccession.lean)
 

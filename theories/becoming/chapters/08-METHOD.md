@@ -682,7 +682,7 @@ A law with content stands or falls by its check. An observation reaches it only 
 <a id="reviews"></a>
 ## 11. Reviews
 
-**Every review so far is by AI.** Twenty-one numbered reviews and others listed in the [ledger](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/REVIEWS.md) checked existing results; the nineteenth found five errors, eight overstatements and no false theorem. No human review is claimed. Since some evidence is coding by language models, it was tested whether a model misses what it planted in its own text.
+**Every recorded review so far is by AI.** Twenty-one numbered reviews and others listed in the [ledger](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/REVIEWS.md) checked existing results; the nineteenth found five errors, eight overstatements and no false theorem. No independent human review is claimed. Since some evidence is coding by language models, it was tested whether a model misses what it planted in its own text.
 
 <a id="r-fidelity-coders-on-own-and-other-texts"></a>
 **Assessment** (the coding method, against referents planted knowingly; model-coded, provisional, reviewed at its scope). The test used 240 English statements, written and blind-coded by two model families, each coding its own texts and the other's. It detected no negative combined interaction between author and coder for referents planted in the coder's own text (interaction +0.02, interval −0.05 to +0.08). The interval is uncertainty, not evidence that neither family has a deficit. The two families identify only the sum of their self effects, so one family's deficit could be masked by the other's advantage. One family lists more excess in faithful texts (+0.16, interval +0.08 to +0.24).
@@ -806,7 +806,7 @@ The pure core assumes no principle of classical logic ([§3](#pure-core-and-peri
 <a id="review-status"></a>
 ### Review status
 
-Every review so far is by AI ([§11](#reviews)) and checked existing results. Not yet reviewed: the joins of 17 October 2026 that put every spine theorem on the base and joined the periphery to it, everything landed after `b88c2d972` (19 October 2026), and these eight chapters. The [review packet](../review/README.md) asks for it: dossiers for scholars of classical Chinese texts and of Buddhist thought on the [classical readings](06-CLASSICAL-TEXTS.md), for logicians on the Lean statements against the prose, for philosophers on the arguments of [significance](07-SIGNIFICANCE.md), for researchers in AI alignment on the laws of what a selection reaches and the tests on trained systems, and for scientists on the containments of their fields' frameworks; and a sampled re-coding of the corpus classification.
+Every recorded review so far is by AI ([§11](#reviews)) and checked existing results. No independent human review yet covers the joins of 17 October 2026 that put every spine theorem on the base and joined the periphery to it, everything landed after `b88c2d972` (19 October 2026), and these eight chapters. The [review packet](../review/README.md) asks for it: dossiers for scholars of classical Chinese texts and of Buddhist thought on the [classical readings](06-CLASSICAL-TEXTS.md), for logicians on the Lean statements against the prose, for philosophers on the arguments of [significance](07-SIGNIFICANCE.md), for researchers in AI alignment on the laws of what a selection reaches and the tests on trained systems, and for scientists on the containments of their fields' frameworks; and a sampled re-coding of the corpus classification.
 
 <a id="does-not-show"></a>
 ## What this chapter does not show
@@ -816,7 +816,7 @@ Every review so far is by AI ([§11](#reviews)) and checked existing results. No
 - That the grammar is as strong as Lean, or that the corpus supplies pairing and power.
 - That the method proves the ontology or an ethical necessity.
 - That the completion checks find every premise: they read source text and the patterns listed.
-- That the prior-art search was exhaustive, or that any result has had human review.
+- That the prior-art search was exhaustive, or that any result has had independent human review.
 
 <a id="open"></a>
 ## Open
@@ -826,4 +826,4 @@ Every review so far is by AI ([§11](#reviews)) and checked existing results. No
 - Settling and the tail beyond lists and numbered conditions; whether WLPO as a proposition gives the rule.
 - Absolute minimality, against a fixed comparison of expressive resources.
 - Revision with an undecided value over infinitely many sentences ([03](03-KNOWING.md#r-revision-with-an-undecided-value)).
-- Human review of statements, arguments and the corpus classification.
+- Independent human review of statements, arguments and the corpus classification.

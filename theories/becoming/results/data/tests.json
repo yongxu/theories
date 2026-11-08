@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "about": "Every test of the account's theses, for TESTS.md (tools/research/tests_page.py): each row names its folder, the thesis it bears on (as 08 §9 or the test's own folder names it), the day its prediction or rule was frozen and the day its run finished, and quotes its outcome from its folder word for word; the outcome class is a reading of that quote. Drafted from the folders by an AI reader, checked against them by a second (RW, 8 November 2026); no person has checked it. Experiments retired to experiments/history are not listed.",
+  "about": "Every test of the account's theses, for TESTS.md (tools/research/tests_page.py): each row names its folder, the thesis it bears on (as 08 §9 or the test's own folder names it), the day its prediction or rule was frozen and the day its run finished, and quotes its outcome from its folder word for word; the outcome class is a reading of that quote. Drafted from the folders by an AI reader, checked against them by a second (RW, 8 November 2026); no person's check of it is recorded. Experiments retired to experiments/history are not listed.",
   "as_of": "2026-11-08",
   "method_quotes": [
     {

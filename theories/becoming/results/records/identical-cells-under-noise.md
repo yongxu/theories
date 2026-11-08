@@ -57,7 +57,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the periphery checker check_cells_under_noise.py with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261031T134056.109386Z): all 76 declarations of CellsUnderNoise, each on Lean's standard axioms only, every core module of its closure, Becoming.FreeEnergyGuarantees among them, matching a passed core receipt. An independent review by another AI agent (REVIEW-UE24) and its recheck (RECHECK-UE24), study section 468; not reviewed by a person.
+Machine-checked by the periphery checker check_cells_under_noise.py with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261031T134056.109386Z): all 76 declarations of CellsUnderNoise, each on Lean's standard axioms only, every core module of its closure, Becoming.FreeEnergyGuarantees among them, matching a passed core receipt. An independent review by another AI agent (REVIEW-UE24) and its recheck (RECHECK-UE24), study section 468; no person's review recorded.
 
 Canonical source: [CellsUnderNoise.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/CellsUnderNoise.lean)
 

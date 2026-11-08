@@ -93,7 +93,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261027T195912.152773Z): 176 of Becoming.CausalGrowth's 212 declarations, each with an empty axiom report, cited here, the others by precedence-and-its-links. Built in one session; an independent read-only review by another AI agent (REVIEW-UE13) and a re-check (RECHECK-UE13), study section 431; not reviewed by a person. Many laws restate known order theory.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261027T195912.152773Z): 176 of Becoming.CausalGrowth's 212 declarations, each with an empty axiom report, cited here, the others by precedence-and-its-links. Built in one session; an independent read-only review by another AI agent (REVIEW-UE13) and a re-check (RECHECK-UE13), study section 431; no person's review recorded. Many laws restate known order theory.
 
 Canonical source: [CausalGrowth.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CausalGrowth.lean)
 

@@ -105,7 +105,7 @@
     "formal-not-empirical"
   ],
   "validation_scope": {
-    "en": "Checked by the module's checker with Lean 4.29.1 (receipt evolution/verification.json, passed 31 October 2026, fresh temporary build; it binds the current bytes): ConsequenceTransmission, 19 declarations audited, 9 with propext only and 10 with empty reports, 19 cited here; the developmental extension's receipt re-checks the same bytes. An internal counter-review read the source and the receipt hashes, without recompiling; not reviewed by a person.",
+    "en": "Checked by the module's checker with Lean 4.29.1 (receipt evolution/verification.json, passed 31 October 2026, fresh temporary build; it binds the current bytes): ConsequenceTransmission, 19 declarations audited, 9 with propext only and 10 with empty reports, 19 cited here; the developmental extension's receipt re-checks the same bytes. An internal counter-review read the source and the receipt hashes, without recompiling; no person's review recorded.",
     "zh": "以模块检查器与 Lean 4.29.1 检查（回执 evolution/verification.json，2026年10月31日通过，新鲜临时构建；绑定当前字节）：ConsequenceTransmission 审计 19 项声明，9 项只用 propext，10 项报告为空，此处引 19 项；发育扩展的回执复查同一字节。内部反审读了源码与回执哈希，未重新编译；未经人审。"
   },
   "next_delta": {

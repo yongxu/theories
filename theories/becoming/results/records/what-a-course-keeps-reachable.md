@@ -90,7 +90,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261027T050540.882212Z): Becoming.ReachableRanges, 196 declarations, every one with an empty axiom report, all cited here; Web.KeepsWidening.chain, .of_chain, .not_listed_via_chain, Web.keepsWidening_iff_chain and Law.runs_agree sit in the leaf until the owners of the definitions they concern move them. Built in one session; an independent read-only review by a separate AI agent (REVIEW-UE10) and two re-checks (RECHECK-UE10, RECHECK2-UE10), in study section 424; not reviewed by a person.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261027T050540.882212Z): Becoming.ReachableRanges, 196 declarations, every one with an empty axiom report, all cited here; Web.KeepsWidening.chain, .of_chain, .not_listed_via_chain, Web.keepsWidening_iff_chain and Law.runs_agree sit in the leaf until the owners of the definitions they concern move them. Built in one session; an independent read-only review by a separate AI agent (REVIEW-UE10) and two re-checks (RECHECK-UE10, RECHECK2-UE10), in study section 424; no person's review recorded.
 
 Canonical source: [ReachableRanges.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean)
 

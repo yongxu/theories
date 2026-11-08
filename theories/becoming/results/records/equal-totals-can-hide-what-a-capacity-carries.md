@@ -38,7 +38,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Checked by the module's checker with Lean 4.30.0-rc2 and pinned Mathlib (receipt 20261007T222003.863783Z, the same bytes as organized-scale-verification.json; it binds the current bytes): OrganizedScaleLoop, 26 theorems audited, 12 cited here, with 77 inherited audits replayed. The study records a counter-review by the same author, not independent; not reviewed by a person.
+Checked by the module's checker with Lean 4.30.0-rc2 and pinned Mathlib (receipt 20261007T222003.863783Z, the same bytes as organized-scale-verification.json; it binds the current bytes): OrganizedScaleLoop, 26 theorems audited, 12 cited here, with 77 inherited audits replayed. The study records a counter-review by the same author, not independent; no person's review recorded.
 
 Canonical source: [OrganizedScaleLoop.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/OrganizedScaleLoop.lean)
 

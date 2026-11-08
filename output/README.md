@@ -1,6 +1,6 @@
 # output/
 
-*AI-written, 8 November 2026, from the files and their sources; no person has reviewed it.*
+*AI-written, 8 November 2026, from the files and their sources; no person's review of it is recorded.*
 
 Built files: PDFs, images and the prompts that made them, and one source file (the Chiang Mai canvas's `.md`). Dates are those the files or their sources state, or the date the file entered the repository.
 

@@ -119,7 +119,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261027T170011.101817Z): Becoming.Tasks, 167 declarations, each with an empty axiom report, all cited here; four laws on UE10's and UE11's definitions sit in the leaf until their owners move them. Built in one session; an independent read-only review by another AI agent (REVIEW-UE12) and a re-check (RECHECK-UE12), its findings taken without a third reading, in study section 430; not reviewed by a person. Many laws are instances of UE10's and UE11's (the part-held and tower laws, adds_nothing), so the count is not of results.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261027T170011.101817Z): Becoming.Tasks, 167 declarations, each with an empty axiom report, all cited here; four laws on UE10's and UE11's definitions sit in the leaf until their owners move them. Built in one session; an independent read-only review by another AI agent (REVIEW-UE12) and a re-check (RECHECK-UE12), its findings taken without a third reading, in study section 430; no person's review recorded. Many laws are instances of UE10's and UE11's (the part-held and tower laws, adds_nothing), so the count is not of results.
 
 Canonical source: [Tasks.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tasks.lean)
 

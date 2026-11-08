@@ -16092,7 +16092,7 @@
    {
     "anchor": "theories/becoming/chapters/08-METHOD.md#reviews",
     "says": {
-     "en": "Every review so far is by AI. No human review is claimed."
+     "en": "Every recorded review so far is by AI. No independent human review is claimed."
     },
     "role": "carries"
    },
@@ -18100,16 +18100,16 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "Same concern, another mechanism, and they part at publishing. The account labels what each statement is and says on its first page who checked what, so it implies no review that has not happened. It does not withhold text no person has reviewed; it says so. The museum's rule would hold such text back. Its own reading adds that no check inside the work can show it serves its purpose. Practice on both sides, not a law. [AI reading]"
+   "en": "Same concern, another mechanism, and they part at publishing. The account labels what each statement is and says on its first page who checked what, so it implies no review that has not happened. It does not withhold text with no recorded review by a person; it says so. The museum's rule would hold such text back. Its own reading adds that no check inside the work can show it serves its purpose. Practice on both sides, not a law. [AI reading]"
   },
   "targets": [
    {
     "anchor": "theories/becoming/ONE-PAGE.md",
     "says": {
-     "en": "“the proofs are checked by machine, everything else only by AI review, and no person has yet reviewed it”."
+     "en": "“the proofs are checked by machine and the rest by AI review, the person who directs the work has read its important parts, and no independent human review is recorded yet”."
     },
     "role": "carries",
-    "part": "no person has yet reviewed it"
+    "part": "no independent human review is recorded yet"
    },
    {
     "anchor": "theories/becoming/chapters/08-METHOD.md#standings-and-bases",
@@ -18166,13 +18166,13 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "The account meets the same risk differently. Its structural readings are made, revised and checked by AI and stand published with an AI label, no person having reviewed them; it answers unreliability with more AI reads and stated counts, not a person's gate. Under the museum's rule 06's correspondences would stay candidates, and so would this file. The source's rule is a design, and the account does not say it is wrong: review by people is what it says is missing. [AI reading]"
+   "en": "The account meets the same risk differently. Its structural readings are made, revised and checked by AI and stand published with an AI label, no person's review of them recorded; it answers unreliability with more AI reads and stated counts, not a person's gate. Under the museum's rule 06's correspondences would stay candidates, and so would this file. The source's rule is a design, and the account does not say it is wrong: review by people is what it says is missing. [AI reading]"
   },
   "targets": [
    {
     "anchor": "theories/becoming/THE-THEORY-OF-BECOMING.md",
     "says": {
-     "en": "“The corpus was classified sentence by sentence in two frozen rounds by AI, and no person has yet reviewed the classification; which sentence reads as which theorem is AI reconstruction”."
+     "en": "“The corpus was classified sentence by sentence in two frozen rounds by AI, and no person's review of the classification is recorded; which sentence reads as which theorem is AI reconstruction”."
     },
     "role": "carries"
    },
@@ -27467,7 +27467,7 @@
   "relation": "agreement",
   "agreement_of": "thesis-or-method",
   "reading": {
-   "en": "The mechanism carried is the label on who made a text or reading and from what: AI readings are marked, literature from the AI's knowledge says so, fronts open 'AI-written', no human review. For a person's words a rule is stated: terms keep their wording where quoted, with source, and a first-person text revised in place names each revised passage, its own last text kept in history. Summaries of a person are not addressed. [AI reading]"
+   "en": "The mechanism carried is the label on who made a text or reading and from what: AI readings are marked, literature from the AI's knowledge says so, fronts open 'AI-written', with no independent human review recorded. For a person's words a rule is stated: terms keep their wording where quoted, with source, and a first-person text revised in place names each revised passage, its own last text kept in history. Summaries of a person are not addressed. [AI reading]"
   },
   "targets": [
    {
@@ -27494,7 +27494,7 @@
    {
     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md",
     "says": {
-     "en": "AI-written, 29 October 2026. No human has reviewed it. It adds no result: every law it names is stated once, in the home section it links, and it says no more than that statement."
+     "en": "AI-written, 29 October 2026. No independent human review of it is recorded. It adds no result: every law it names is stated once, in the home section it links, and it says no more than that statement."
     },
     "role": "neighbour"
    }
@@ -29363,7 +29363,7 @@
    {
     "anchor": "theories/becoming/chapters/08-METHOD.md#reviews",
     "says": {
-     "en": "Every review so far is by AI; no human review is claimed."
+     "en": "Every recorded review so far is by AI; no independent human review is claimed."
     },
     "role": "limit"
    },
@@ -29480,7 +29480,7 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "Two claims under one word. The source's is who may accept: an owner's act. The account's is what a check can reach: selection reaches what couples in, people couple into none of the work's selectors, so its checks cannot certify it; that selection goes through couplings is a supplied condition. It claims no human review, seeks review and not acceptance, and a description confers no authority. Who may act outward stands in AGENTS.md, outside the live account. No live text joins the two; the link is this reading's. [AI reading]"
+   "en": "Two claims under one word. The source's is who may accept: an owner's act. The account's is what a check can reach: selection reaches what couples in, people couple into none of the work's selectors, so its checks cannot certify it; that selection goes through couplings is a supplied condition. It claims no independent human review, seeks review and not acceptance, and a description confers no authority. Who may act outward stands in AGENTS.md, outside the live account. No live text joins the two; the link is this reading's. [AI reading]"
   },
   "targets": [
    {
@@ -29502,7 +29502,7 @@
    {
     "anchor": "theories/becoming/review/README.md",
     "says": {
-     "en": "No human has reviewed this theory yet; the proofs are checked by machine, and everything else only by further AI reviews."
+     "en": "No independent human review of this theory is recorded yet. It was written with AI, the Lean proofs included, and the person who directs the work has read its important parts, not every word."
     },
     "role": "limit"
    },

@@ -261,7 +261,7 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Pure core, every axiom report empty (core receipt 20261031T183655.254131Z): BlanketWeights (46 theorems in 90 declarations) imports Blanket and Flow, a leaf; the witnesses evaluate by decide over full nested matches. Reviewed by other AI agents: the design (REVIEW-UE26-DESIGN, fifteen findings), the literature, the revised kit (RECHECK-UE26, twelve) and the Lean and landing texts (REVIEW-UE26-LANDING, nineteen, and its recheck, six), every finding taken; study section 484; not reviewed by a person.",
+    "en": "Pure core, every axiom report empty (core receipt 20261031T183655.254131Z): BlanketWeights (46 theorems in 90 declarations) imports Blanket and Flow, a leaf; the witnesses evaluate by decide over full nested matches. Reviewed by other AI agents: the design (REVIEW-UE26-DESIGN, fifteen findings), the literature, the revised kit (RECHECK-UE26, twelve) and the Lean and landing texts (REVIEW-UE26-LANDING, nineteen, and its recheck, six), every finding taken; study section 484; no person's review recorded.",
     "zh": "纯核，公理报告皆空（核心回执 20261031T183655.254131Z）：BlanketWeights 引 Blanket 与 Flow，为叶；见证以 decide 于完整之嵌套匹配求值。他 AI 代理审之：设计（REVIEW-UE26-DESIGN，十五条）、文献、修订之件（RECHECK-UE26，十二条）、Lean 与落地文本（REVIEW-UE26-LANDING，十九条，复核六条），凡所见皆取；研究第 484 节；未经人审。"
   },
   "next_delta": {
@@ -465,7 +465,7 @@
     {
       "path": "theories/becoming/FREE-ENERGY-PRINCIPLE.md",
       "role": "integration",
-      "sha256": "9e85477b5e20e76f4f1108b091f3ceffa545ef6e565c2d534cf365ae62294c62"
+      "sha256": "a68af5047819d4d982a01f0fc9bf38314137c58d02c9707a9b5b8dab06bc01b6"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json",

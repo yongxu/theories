@@ -4,7 +4,7 @@
 
 *About 50 minutes to read; in brief, about eight.*
 
-*AI-written, 30 October 2026 (board item UE20); not reviewed by a person. It adds no result: every law it names is stated once, in the home section it links, and it says no more than that statement. It is for readers who know the free-energy principle and want to see, claim by claim, where it stands in the theory: what the theory states as the principle does, which statements of the principle's literature it forbids and on what hypotheses, what the principle states that the theory cannot yet, and what would count against this page. It assumes the theory: for what the theory is, read [the one page](ONE-PAGE.md) first.*
+*AI-written, 30 October 2026 (board item UE20); no person's review of it is recorded. It adds no result: every law it names is stated once, in the home section it links, and it says no more than that statement. It is for readers who know the free-energy principle and want to see, claim by claim, where it stands in the theory: what the theory states as the principle does, which statements of the principle's literature it forbids and on what hypotheses, what the principle states that the theory cannot yet, and what would count against this page. It assumes the theory: for what the theory is, read [the one page](ONE-PAGE.md) first.*
 
 Labels: **Theorem** with its model (*any type*; *World*: webs and flows with natural-number amounts and discrete steps; *periphery*: on Mathlib's reals, Lean's three standard axioms reported), *witness* for one constructed model showing that something can happen, and **Reading** [AI reading, D45] for an interpretation. A pure-core law has an empty axiom report; its modelling choices are named in its record.
 

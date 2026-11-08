@@ -249,7 +249,7 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the periphery checker check_free_energy_reals.py with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261031T134204.303683Z): all 76 declarations of FreeEnergyReals, each on Lean's standard axioms only, every core module of its closure matching a passed core receipt. Independent reviews by other AI agents (REVIEW-UE17; REVIEW-UE22 and RECHECK-UE22 for the counting form), study sections 450 and 462; not reviewed by a person.",
+    "en": "Machine-checked by the periphery checker check_free_energy_reals.py with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261031T134204.303683Z): all 76 declarations of FreeEnergyReals, each on Lean's standard axioms only, every core module of its closure matching a passed core receipt. Independent reviews by other AI agents (REVIEW-UE17; REVIEW-UE22 and RECHECK-UE22 for the counting form), study sections 450 and 462; no person's review recorded.",
     "zh": "外围检查器 check_free_energy_reals.py 以 Lean 4.30.0-rc2 与固定之 Mathlib 实查（回执 20261031T134204.303683Z）：FreeEnergyReals 之全部 76 项声明，皆只依 Lean 之标准公理，其闭包之每一核心模块皆合于已通过之核心回执。另有 AI 代理作独立审查（REVIEW-UE17；计数形式见 REVIEW-UE22 与 RECHECK-UE22），见研究第 450 与 462 节；未经人审。"
   },
   "next_delta": {
