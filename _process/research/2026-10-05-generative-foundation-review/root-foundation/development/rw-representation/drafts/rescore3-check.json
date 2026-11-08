@@ -1,0 +1,330 @@
+{
+ "verdicts": [
+  {
+   "where": "first-contact HIGH: README first screen and OPENING header never say the work was written with AI",
+   "verdict": "holds",
+   "note": "The visible README has 0 hits for 'with AI', 'written with', 'AI-written'; the first screen says only 'An automated review' and 'No human review yet'. ONE-PAGE line 7 ('Made with AI, proofs included') and README.zh line 15 ('它借助 AI 做成，证明也是') state it, so the two languages differ. OPENING's AI-written statement is only in its HTML comment; the visible revision line does not say by what. The comment in README-FIRST-SCREEN.md records no authorship label as deliberate, so the rule itself needs the argument. first-contact's wording passes test_featured_results.py:339 and 342 (the regex bans the token AI, not 'language models')."
+  },
+  {
+   "where": "first-contact MEDIUM: 'In plain words' is not plain",
+   "verdict": "holds",
+   "note": "The quoted clauses are at README-FIRST-SCREEN.md line 4. That file's comment records why they are there: a third-round reader took a plainer lead as findings the homes did not state. So first-contact's shape (short sentences, then one sentence carrying the qualifiers together) is the usable fix. Growth's 'two unqualified sentences' would reopen that error."
+  },
+  {
+   "where": "first-contact MEDIUM: landing does not say what the work is for; identity split in two",
+   "verdict": "holds",
+   "note": "Case-insensitive count above the opening for alignment, coordinat-, wisdom is 0. Nothing joins 'An account' (line 6) to the proxy-problem lead (line 4). 'alignment of trained systems' passes the test."
+  },
+  {
+   "where": "first-contact MEDIUM: after 'none new mathematics' the reader is not told what is gained",
+   "verdict": "holds",
+   "note": "The clause is on ONE-PAGE line 36 and not on the first screen. The home is 08 line 569: 'Three things survive, none of them a discovery' (premise ledger with witnesses both ways; the ethics with scope and order apart; one vocabulary). ONE-PAGE's gloss drops 'none of them a discovery'. Copy 08's words with that qualifier, not ONE-PAGE's."
+  },
+  {
+   "where": "first-contact MEDIUM: 'One case' tells the foreseeable and leaves out the striking",
+   "verdict": "holds",
+   "note": "Checked against experiments/direction-installation/README.md: 50 tons ends the bed, 30 keeps it at 40% of the catch, 0.80 against 0.30 for gpt-5.4-mini, three conditions marked 'the AI's reading'. ONE-PAGE and README.zh already carry the 50/30 trade-off; the English first screen is the odd one. On the first screen the label must read 'a reading' because of the token test."
+  },
+  {
+   "where": "first-contact MEDIUM: 'some passed, some failed' is rosier than TESTS.md",
+   "verdict": "partly",
+   "note": "The sentence is true but vaguer than the page. The proposed figure uses the wrong base: the sentence is about empirical theses, and 30 of the 66 name no thesis (11 frozen not run, 10 no prediction of the account, others). From the class totals minus the 'none named' row, the 36 tests naming a thesis are 4 passed, 4 failed, 18 mixed, 1 partly passed, 3 not rejected, 2 refused, 1 decided nothing, 2 held, 1 dropped. Render that count."
+  },
+  {
+   "where": "first-contact MEDIUM: revision list before the essay; tone jump",
+   "verdict": "partly",
+   "note": "The revision line is 219 words at README line 33, ahead of the first sentence, and line 55 reads as quoted. The preparation asked for mostly exists: the first screen calls the opening a first-person conviction, and two lines under the list say each note grades its sentence and point to ONE-PAGE and USES for standing. Shortening the list or folding it is the real fix."
+  },
+  {
+   "where": "first-contact MEDIUM: site home repeats the README; cards below the fold; no search",
+   "verdict": "holds",
+   "note": "My 1280x1000 render has the fold at 'Start with'. build_site.py home_body emits hero, then cards; the picture is inside the hero. site-r3 has no search index or input."
+  },
+  {
+   "where": "first-contact MEDIUM: 'grammar', 'frozen', 'Lean', 'one relational unfolding' unexplained at first use",
+   "verdict": "holds",
+   "note": "Counts above the opening: grammar 3, frozen 3, Lean 3, none glossed. GLOSSARY.md has no headword for grammar, Lean or frozen. ONE-PAGE's root paragraph opens as quoted."
+  },
+  {
+   "where": "first-contact MEDIUM: T1 on ONE-PAGE and USES against TESTS 'By thesis'",
+   "verdict": "holds",
+   "note": "ONE-PAGE line 23 and USES say passed in two simulations and held-out yeast, failed in four settings; the by-thesis row reads Failed 1, Mixed 5, Refused 2, Passed none. 08 §9 counts settings, TESTS classes tests. Compatible, and no sentence says so."
+  },
+  {
+   "where": "site HIGH: card times for 'The eight chapters' and 'Check the proofs'",
+   "verdict": "holds",
+   "note": "index.html shows 18-24 minutes and 1-2 minutes. home_body times the linked file or section. chapters/README.md's table sums to 1,533-1,991 minutes, about 26 to 33 hours. MAP.md line 56 says a fresh run compiles more than a thousand Lean steps and takes a while. site.ways_in has time_note but no override. This misleads and should be fixed first."
+  },
+  {
+   "where": "site HIGH: English home omits AI authorship",
+   "verdict": "holds",
+   "note": "Same finding as first-contact's. The site reviewer's claim that 'with AI' stays within the tested rule is wrong: test_featured_results.py:339 and 342 fail on \\bAI\\b, so copying ONE-PAGE's sentence reddens the test. Use language-model wording or change the rule by argument."
+  },
+  {
+   "where": "site MEDIUM: links to the 3.78 MB reading file and to large receipts",
+   "verdict": "holds",
+   "note": "39 occurrences across site pages (02:15, 05:5, 03:4, 04:1, experiments 14); the file is 3,780,788 bytes; split files exist at mirror/BECOMING-RENEWAL-READING/NNN.md. Record pages hold 6,032 links to verification.json, 5,763 to files over 1 MB (largest 5.39 MB). How GitHub shows those JSON files was not fetched. Navigation's count of nine and eight is an undercount."
+  },
+  {
+   "where": "site MEDIUM: status marks missing on table-row anchors",
+   "verdict": "holds",
+   "note": "r- anchors inside td: 37, 15, 30, 13, 16, 0, 4, 0, total 115. The home card promises each result 'with a mark of its record's status'."
+  },
+  {
+   "where": "site MEDIUM: chapter pages have no contents or next/previous",
+   "verdict": "holds",
+   "note": "None in the eight built chapters I scanned. site.css:62 has div.marks bottom margin -.6rem, as stated."
+  },
+  {
+   "where": "site MEDIUM: sticky nav omissions and phone behaviour",
+   "verdict": "holds",
+   "note": "site.nav has nine entries with no Chapters, overview or Results. My 375 px frame shows Home, One page, Uses, then the fade. The mask at site.css:104 is unconditional, and 中文 is washed out at 1280 in my render."
+  },
+  {
+   "where": "site MEDIUM: no search, filter, 404 or favicon",
+   "verdict": "holds",
+   "note": "site-r3 has no search.json, 404.html or favicon; assets holds site.css only. RESULTS.html is 268 KB and static."
+  },
+  {
+   "where": "site MEDIUM: wide tables clipped",
+   "verdict": "holds",
+   "note": "My TESTS.html render at 1280 cuts the 14-column table at 'Not', so Passed is out of view with no visible cue. USES.zh in a 390 px frame hides most of the fourth column."
+  },
+  {
+   "where": "site MEDIUM: local paths on two published pages",
+   "verdict": "holds",
+   "note": "experiments/motor-learning-cost/index.html:32 and recipient-value-learning/index.html:33 print /Users/ren/.cache/... Check whether a frozen copy binds the README text before editing; if so, redact at build. build() has no scan for local paths."
+  },
+  {
+   "where": "site MEDIUM: site exists only locally; README and MAP name no URL",
+   "verdict": "holds",
+   "note": "A status, not a defect: pages.yml is dispatch-only and the switch is the owner's. MAP.md lines 70 and 77 name the site with no address. Nothing can land before the switch; the one-line URL can be prepared. I read the job and did not run it."
+  },
+  {
+   "where": "site MEDIUM: spine picture is a static img",
+   "verdict": "holds",
+   "note": "_img wraps an SVG in a link to itself only. The fix is site-only; GitHub stays an image."
+  },
+  {
+   "where": "unification MEDIUM: the picture's form says more than its numbers",
+   "verdict": "holds",
+   "note": "Title, hub and eight spokes as stated; widest spoke is 4 of 10 (classical texts); sums are 81 of 387. Retitling and a proportional 11/1/6/99 bar are cheap. Per-chapter standings are not the simple join the reviewer implies: rw-spine/README.md records why it was left, since it needs each central declaration placed in a chapter, 'a count the chapters do not give and that could disagree with 04's own'."
+  },
+  {
+   "where": "unification MEDIUM: 08 §7's shared laws appear on no front and in no picture",
+   "verdict": "holds",
+   "note": "0 occurrences on README, ONE-PAGE, the overview, MAP, chapters/README; THEORY-GRAPH only in a quotation and a list entry. Any view must carry 08's terms: the five counts sum to 120 over 126 rows (87 rest on at least one, a row can rest on several), and balance is represented, not derived."
+  },
+  {
+   "where": "unification MEDIUM: headline terms missing from the glossary; 'spine' in two senses",
+   "verdict": "holds",
+   "note": "No headword for grammar, edge of one root, central declaration, derived, named distance, formal-reuse. GLOSSARY line 80 defines spine as the Lean package; the picture's section is 'The spine'."
+  },
+  {
+   "where": "unification MEDIUM: page never answers whether the foundation is circular",
+   "verdict": "holds",
+   "note": "I recomputed from theory-graph.json: 1,162 formal-reuse edges, 479 nodes, no strongly connected component above size one, no self-loop. THEORY-GRAPH.md has no mention. State it as true of recorded formal-reuse edges only."
+  },
+  {
+   "where": "unification MEDIUM: solid curves read as machine-checked",
+   "verdict": "holds",
+   "note": "Holds with a correction. registry.py:1104-1109 does check an interface contract (output, input, conditions, reviewed evidence), which the reviewer's grep missed. But it applies only where an interface is present: 365 of 1,162 formal-reuse edges have none, although RESULT-WORKFLOW asks each to name its connecting declaration or receipt, and nothing joins an edge to a Lean use. The legend quotes 'a verified inference'. Say who verifies, and give the count with an interface."
+  },
+  {
+   "where": "unification MEDIUM: T6 in green",
+   "verdict": "holds",
+   "note": "#1baf7a is the only success-like colour on the picture and T6 alone wears it in my render. The legend's words are accurate and the row states low power. A small fix."
+  },
+  {
+   "where": "unification MEDIUM: loom opens as a tangle; connections.svg static",
+   "verdict": "holds",
+   "note": "My render confirms it. The side panel does say where to start, and CROSSWALK already has a per-group table of relations below the image, so the Markdown fix is mostly moving or summing that table."
+  },
+  {
+   "where": "unification MEDIUM: which declarations are the 11, and what any of the 99 is, cannot be followed",
+   "verdict": "partly",
+   "note": "Too strong. records/one-root-to-its-edge.md lists each declaration with its standing and basis (lines 27 on), is on the site, and is reached from 08 §7. What holds: the graph page and the map's bars do not lead there, region lists do not mark centrality, there are no plain statements. rw-spine/README.md lists that plain-words table as not done."
+  },
+  {
+   "where": "growth HIGH: thread numbers render wrong",
+   "verdict": "holds",
+   "note": "lineage.py line 623 writes '6. ... 8. ... 11.' as a Markdown ordered list; site LINEAGE.html has <ol start=\"6\"> and GitHub counts up the same way, so rendered 7 is point 8. The phrase 'numbered as in the table' is not on the page, but the picture and table use the real numbers. A one-line fix. Medium by AGENTS' order: the bold date and title still identify each point."
+  },
+  {
+   "where": "growth MEDIUM: fill channel and missing coverage caveat",
+   "verdict": "partly",
+   "note": "No exact 'a person's words' between points 15 and 24, true. But points 16-21 and 23 read 'AI-drafted from a person's words', so the mark does not say the person stopped. What holds: TIMELINE line 7's caveat (the export stops 2026-05-05, some file dates are extraction stamps) is not on the page, and the date basis is unlabelled."
+  },
+  {
+   "where": "growth MEDIUM: no narrative of why one phase gave way to the next",
+   "verdict": "holds",
+   "note": "_process/history/INDEX.md line 9 says 'as turning points rather than a narrative'. 'In brief' is event lists. TIMELINE's arc stops at 4 October and is not carried."
+  },
+  {
+   "where": "growth MEDIUM: only the selection strand followed",
+   "verdict": "holds",
+   "note": "lineage.json has one thread. I count 11 titled labels on lineage.svg, not 13; 16, 35, 40 and 46 are untitled."
+  },
+  {
+   "where": "growth MEDIUM: folders not placed in the growth",
+   "verdict": "holds",
+   "note": "The rows' evidence names 4 of 16 folders (scanned in lineage.json); the rows do not mention the others. 'What became' is one aggregate row. Stating plainly that the 48 follow two strands is the cheap alternative."
+  },
+  {
+   "where": "growth MEDIUM: Chinese lineage has no evidence links",
+   "verdict": "holds",
+   "note": "The evidence column of LINEAGE.zh.md rows is '来源 N 处' with 0 links."
+  },
+  {
+   "where": "growth MEDIUM: internal names unglossed in the brief and picture",
+   "verdict": "holds",
+   "note": "'In brief' uses T7, C and T2; the picture has '38 · T7's bridge fails'."
+  },
+  {
+   "where": "growth MEDIUM: selection criteria unstated",
+   "verdict": "holds",
+   "note": "The page says AI readers gathered and checked; it does not say what qualified a point. Points 40-48 are nine of 48 in the last week. rw-spine/reads holds the material to state it from."
+  },
+  {
+   "where": "growth MEDIUM: site's growth sources off-site, links to an unpushed commit",
+   "verdict": "partly",
+   "note": "True of site-r3: no remote ref contains 196b32e21. But pages.yml builds with GITHUB_SHA from GitHub's main, so links on a real deploy always resolve. What holds: the owner pushes first or an older tree is published, and the 16 folder READMEs and TIMELINE leave the site."
+  },
+  {
+   "where": "uses MEDIUM: USES never says what a reader gains over existing work",
+   "verdict": "holds",
+   "note": "No 'ledger' on USES.md. Copy from 08 §8 with 'none of them a discovery', and keep ONE-PAGE's 'the review finds each prohibition known in a neighbouring field'."
+  },
+  {
+   "where": "uses MEDIUM: audits end without saying what they yielded",
+   "verdict": "partly",
+   "note": "The body does say which question is a law, a reading or empirical. The paper audit's item 4 reports no lock step in what the study names and names open points. Missing is the closing statement and what a pipeline's owner would check next."
+  },
+  {
+   "where": "uses MEDIUM: 'told of it and of the scope' undefined",
+   "verdict": "holds",
+   "note": "README line 15, ONE-PAGE line 9 and USES-EXAMPLES line 20. agents.py DIRECTION is plain. README.zh already glosses it (谁的损失算数)."
+  },
+  {
+   "where": "uses MEDIUM: the 'What you can do' column is the hardest",
+   "verdict": "holds",
+   "note": "Cells are 97, 72, 66, 54, 78, 73 words. Room's wording, `hi`, `lo`, `c` and the unnamed six conditions are as stated."
+  },
+  {
+   "where": "uses MEDIUM: human development row hides material; valley misfiled",
+   "verdict": "partly",
+   "note": "04 lines 283 and 286 exist with the stated labels; 'Nothing claimed' can stand beside them. But the row is 'Human development, and 生生 as the way for life', so the valley (T8) is filed under its second half, not misfiled. No example of development itself, true."
+  },
+  {
+   "where": "uses MEDIUM: wisdom row covers Chinese texts only",
+   "verdict": "holds",
+   "note": "03 r-wisdom-root-without-axiom [AI reading, D26] exists with 'The matching proves no coverage of wisdom'."
+  },
+  {
+   "where": "uses MEDIUM: most actionable material not surfaced",
+   "verdict": "holds",
+   "note": "COLLECTIVE-DIRECTION §2's exits table and §6's six conditions go unnamed; the Alignment row is diagnostic only. Carry 'none shown to hold of an actual collective'."
+  },
+  {
+   "where": "uses MEDIUM: pass and fail words against TESTS classes",
+   "verdict": "partly",
+   "note": "Holds for MQ5 (under Mixed, 6 of 8, though 02's own text also says 'where MQ5 passed', so the home needs the same change), 'the six' against seven T2 rows, UE32 (T2's only Passed), and T1. Does not hold for T4: TESTS' IN1 round 2 row already says 07 and 08 count it per model as partly passed."
+  },
+  {
+   "where": "uses MEDIUM: alignment researcher has no route on the home; examples link missing",
+   "verdict": "partly",
+   "note": "'No route' overstates: the Uses and 'For reviewers' cards both name alignment. What holds: the dossier link is the last thing in the Alignment row's fourth column, and USES line 5 omits the examples while the Chinese edition has them."
+  },
+  {
+   "where": "navigation HIGH: card times",
+   "verdict": "holds",
+   "note": "Same as the site finding. Tests, Results and Graph also show whole-page times; TESTS' own head gives 3-4 minutes for the lead."
+  },
+  {
+   "where": "navigation MEDIUM: GitHub README runs straight into the opening",
+   "verdict": "holds",
+   "note": "Layers begin near character 66,500 of 86,600. The 15-link line and 'Start with' sit above, so it is not mapless, but there is no ways-in table. A compact table after the caption is the cheap part."
+  },
+  {
+   "where": "navigation MEDIUM: shared nav absent on hand-written fronts",
+   "verdict": "holds",
+   "note": "Read each head: MAP and theories/README have none, GLOSSARY only 中文, ONE-PAGE and USES partial lines with no Home, CROSSWALK as stated."
+  },
+  {
+   "where": "navigation MEDIUM: RESULTS opens on process language and an alphabetical table",
+   "verdict": "holds",
+   "note": "First rows and maintenance sentences as stated."
+  },
+  {
+   "where": "navigation MEDIUM: OPEN-QUESTIONS omits the crux",
+   "verdict": "holds",
+   "note": "0 hits for crux, invariance, P2. D45 is unexplained, and 'Discovery and evidence' and 'Preserved history' are published. OPEN-QUESTIONS.md:114 shows the visible slug '3-rens-own-open-questions'."
+  },
+  {
+   "where": "navigation MEDIUM: Lean checking not one click from GitHub's first screen",
+   "verdict": "holds",
+   "note": "'Lean receipts' links only RESULTS; the nav has no entry; README:152's 'the Lean package' has no link."
+  },
+  {
+   "where": "navigation MEDIUM: map unusable on GitHub",
+   "verdict": "holds",
+   "note": "CROSSWALK lines 5 and 52 link map.html plainly; the caption warns. The built CROSSWALK.html and MAP.html still say 'once it is published' on the site itself."
+  },
+  {
+   "where": "chinese HIGH: ONE-PAGE.zh is calque",
+   "verdict": "holds",
+   "note": "Quotes confirmed. One correction: the T7 cell is 322 characters in six sentences, longest 118, not one sentence over 200. The English cell is equally dense, so both need the shortening. Real, labelled as AI translation, and medium by AGENTS' order: it blocks a reader without misinforming one."
+  },
+  {
+   "where": "chinese HIGH: no Chinese view of the tests",
+   "verdict": "holds",
+   "note": "No TESTS.zh.md. The nav and table say 英文, the inline 检验 links do not. A gap, not a misstatement; medium. tests.json's plain glosses could feed a generated page."
+  },
+  {
+   "where": "chinese MEDIUM: 生成变化之论 against the glossary's 生成",
+   "verdict": "holds",
+   "note": "The glossary row says 生成 is one branch and 从不指生起; the body says 生灭变化; there is no entry for the name. The compound is a plausible rendering of 'becoming', which is why it needs a decision and a gloss."
+  },
+  {
+   "where": "chinese MEDIUM: 本说明 and 本理论 alternate",
+   "verdict": "holds",
+   "note": "Counts confirmed: README.zh 4, USES.zh 7, ONE-PAGE.zh 3 for 本说明; overview 8 and examples 6 for 本理论."
+  },
+  {
+   "where": "chinese MEDIUM: zh graph and crosswalk off the site; no map link",
+   "verdict": "holds",
+   "note": "Neither is in site.pages and links go to GitHub; nav_zh has no 对照表; no zh page I grepped links connections.html."
+  },
+  {
+   "where": "chinese MEDIUM: landing shows nothing of 古文",
+   "verdict": "holds",
+   "note": "In README-ZH.md 古文 occurs only in the entry table and language note; the door is labelled 第六章."
+  },
+  {
+   "where": "chinese MEDIUM: opening unmentioned in Chinese",
+   "verdict": "holds",
+   "note": "No OPENING.zh.md and no mention on README.zh, ONE-PAGE.zh or the overview. The table row is immediate; a translation of first-person text should be prepared and listed."
+  },
+  {
+   "where": "chinese MEDIUM: unmarked links into English",
+   "verdict": "holds",
+   "note": "My body-only count: ONE-PAGE.zh 32 of 37, overview 130 of 148. USES.zh:12 warns; ONE-PAGE.zh has only the nav labels."
+  },
+  {
+   "where": "chinese MEDIUM: chapter 06 entry",
+   "verdict": "holds",
+   "note": "Line 8 uses 乙类, 丙一, 22 族之律 before their tables; no contents on the site; 06 does not link the dossier's 一小时之路."
+  },
+  {
+   "where": "chinese MEDIUM: 审查包 assumes a mailed packet",
+   "verdict": "holds",
+   "note": "Lines 33 and 35 assume a letter. Who is sent what and any public reply channel are the owner's: prepare and list."
+  },
+  {
+   "where": "chinese MEDIUM: USES.zh on a phone",
+   "verdict": "holds",
+   "note": "My 390 px frame shows 所不主张者 almost wholly off-screen."
+  }
+ ],
+ "per_question": "No high or medium finding failed outright; the sub-claims that failed are named in their notes. Of the seven highs (five distinct), two truly mislead a reader: the missing authorship and the card times. Numbering, ONE-PAGE.zh and TESTS.zh are real and medium by AGENTS' order.\n\nOne constraint on every first-screen fix: READING-BUDGETS row 27 has the screen at 553 words, 403 over the 150 target. Reviewers' additions total well over 100 words, so they need paired cuts. Hedges in the lead cannot be the cuts.\n\nQ1 (6, 7, 7, 7, 7, 7, zh 6): fair at about 7, zh 6. The stated blockers are the true ones: authorship, the knotted lead, no purpose, nothing on what survives. All are in reach, every sentence having a home. Unusable as written: site's 'with AI' (fails the test), growth's 'unqualified' lead.\n\nQ2 (7.5, 7, 7.5, 8, 8, 7, zh 6): fair at 7 to 7.5 as built. The two 8s did not examine the card times or chapter pages. Unification's 'the switch alone reaches 8' does not hold: the switch adds only a public URL, the map without a clone, and links that resolve. Blockers are builder work: card times, marks in tables, chapter contents, doubled nav, wide tables, search. In reach.\n\nQ3 (7, 7, 6.5, 8, 8, 8, zh 6): fair at 7. True blockers: shape against measure, shared laws unseen, loom's first view. In reach, except per-chapter standings, which first need declarations placed in chapters (rw-spine/README.md). No claim changes.\n\nQ4 (8, 8, 8, 7, 8, 8, zh 7): fair at 7.5. Growth's 7 read the most and found what the 8s missed. Fixing numbering, adding a sourced arc, a second thread and a coverage paragraph reach 8; all in lineage.json and lineage.py. Zh also needs evidence links.\n\nQ5 (6, 7, 7.5, 7, 6, 7, 7): fair at 6.5 to 7. True blocker: no statement of what survives, and the case undersold. In reach, with a ceiling: no deployed test exists and new runs are held, so the value can be said more plainly, not made larger. Keep 'none of them a discovery'.\n\nQ6 (8, 8, 8, 8, 7, 8, 8): fair at 7.5 to 8. Uses read the most; its 7 rests on findings that mostly hold. Reaching a firm 8 needs plainer cells, exits and design laws named at standing, and development and wisdom additions. No claim changes.\n\nQ7 (7, 7, 7.5, 7, 7, 7, zh 6): fair at 7, zh 6. True blockers: nav absent on hand-written fronts, no 'worth seeing first' selection, RESULTS and OPEN-QUESTIONS heads, no search. In reach.\n\nWhat I read in tree 196b32e21 (README first screen and OPENING header, README-FIRST-SCREEN.md, README-ZH.md, README.zh.md, ONE-PAGE.zh.md, USES.md's intro and table): read through. Read in part: USES-EXAMPLES (both audits, outline), TESTS head and by-thesis, direction-installation README and agents.py, LINEAGE (heads, brief, thread, section list), 08 §7 and §8 passages, RESULTS and OPEN-QUESTIONS heads, build_site.py (marks, images, template, home), site.css rules, pages.yml, spine.py and registry.py lines, rw-spine/README.md, the first-screen test. Rendered into the scratchpad and looked at: home and TESTS at 1280, connections.html at 1400, spine.svg, USES.zh at 390 and TESTS at 375 in a frame. Computed by script, not read: link-target counts, marks against anchors, the cycle check, edge interfaces, receipt sizes, zh link counts, lineage hands. Not done: no link crawl of my own (three reviewers' crawls agree on 0 broken); no GitHub fetch; dark mode not rendered; chapters not read through; no restatement checked beyond those noted. No test run, no model called, nothing in the tree edited."
+}

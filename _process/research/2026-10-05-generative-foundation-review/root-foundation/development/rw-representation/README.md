@@ -89,6 +89,10 @@ Five rounds of AI readers followed ([1](drafts/readers-round1.json), [2](drafts/
 
 Both are corrected at the study with dated notes that keep the earlier wording. The other measurements and the study's other pipelines have not been read past their abstracts.
 
+## The re-score's third round (8 November 2026)
+
+Seven fresh AI reviewers and a checker again, on main `196b32e21`: medians 7, 7.5, 7, 8, 7, 8, 7 ([synthesis](drafts/rescore3-synthesis.md), [reviews](drafts/rescore3-reviews.json), [checker](drafts/rescore3-check.json)). No person has scored them. Q4 and Q6 reached a median of 8, the checker a little lower on both. Its first finding of what misleads a reader, that the English first screen never says the work was written with AI, is the owner's decision of 19 October and is listed on the board under the decisions pending him, with a sentence prepared; it is not changed here. The fixes went three ways: the pictures and the lineage to the (c) session, the Chinese to the atlas session, and the first screen, the uses pages, the registers, the navigation and the site here, each part through an implementer and a checker and then two rounds of readers on the whole.
+
 ## Sent to the batched pass
 
 Each makes a correct statement more exact:
