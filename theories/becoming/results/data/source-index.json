@@ -5732,7 +5732,6 @@
       "local_links": [
         "GLOSSARY.zh.md",
         "README.zh.md",
-        "TESTS.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/PLAN.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/classify/REPORT.md",
@@ -5782,6 +5781,7 @@
         "theories/becoming/history/WANG-YANGMING-2026-10-23.md",
         "theories/becoming/history/WENLI-AND-BECOMING.md",
         "theories/becoming/history/YI-ZHUAN-AND-BECOMING.md",
+        "theories/becoming/review/CLASSICAL-TEXTS.md",
         "theories/becoming/review/README.zh.md"
       ]
     },

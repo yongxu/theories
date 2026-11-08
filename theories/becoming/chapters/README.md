@@ -15,7 +15,7 @@ In reading order; the numbering is for reading, not an order of proof.
 | 3 | [Knowing, learning and testing](03-KNOWING.md) | Knowing and testing | 110 | 236–307 minutes |
 | 4 | [Life and evolution](04-LIFE.md) | Life and evolution | 46 | 114–148 minutes |
 | 5 | [Joint activity and selection](05-COLLECTIVES.md) | Collectives and selection | 74 | 180–234 minutes |
-| 6 | [古文：读出、检验与分歧 (the classical texts: what they read out, how it is tested and where they diverge; in Chinese)](06-CLASSICAL-TEXTS.md) | The classical texts | 16 | 123–160 minutes |
+| 6 | [古文：读出、检验与分歧 (the classical texts: what they read out, how it is tested and where they diverge; in Chinese)](06-CLASSICAL-TEXTS.md) | The classical texts | 16 | 124–161 minutes |
 | 7 | [Significance, ethics and alignment](07-SIGNIFICANCE.md) | Significance and alignment | 82 | 300–390 minutes |
 | 8 | [Method and the formal core](08-METHOD.md) | Method and the formal core | 21 | 215–279 minutes |
 
