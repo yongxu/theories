@@ -14,6 +14,15 @@ from tools.research import zh_fronts  # noqa: E402
 LINK = re.compile(r'\[([^\]]+)\]\(([^)]+)\)')
 
 
+def current_template(root):
+    """A first screen and an editions record in which the landing page's template follows it, so the page carries no banner."""
+    import json
+    (root / zh_fronts.TEMPLATE_SOURCE).parent.mkdir(parents=True, exist_ok=True)
+    (root / zh_fronts.TEMPLATE_SOURCE).write_text('The first screen.\n', encoding='utf-8')
+    (root / zh_fronts.EDITIONS).write_text(json.dumps({'editions': {zh_fronts.TEMPLATE: {
+        'revised': '2026-11-08', 'english': zh_fronts.english_digest('The first screen.\n')}}}), encoding='utf-8')
+
+
 class ChineseFrontsTests(unittest.TestCase):
     def test_every_hand_written_front_carries_the_line(self):
         self.assertEqual(zh_fronts.problems(), [])
@@ -85,6 +94,7 @@ class TestsPageTests(unittest.TestCase):
             for c in zh_fronts.CHAPTERS:
                 (root / c).parent.mkdir(parents=True, exist_ok=True)
                 (root / c).write_text('# c\n', encoding='utf-8')
+            current_template(root)
             pages, errors = zh_fronts.render([], {'TESTS.md': 'x'}, root)
             refused, refused_errors = zh_fronts.render([], {}, root)  # TESTS.md's own render refused the data: it says why
             inputs = {str(p.relative_to(root)) for p in zh_fronts.inputs(root)}
@@ -94,6 +104,8 @@ class TestsPageTests(unittest.TestCase):
         self.assertEqual((refused, refused_errors), ({}, []))
         self.assertIn(zh_fronts.TESTS_DATA, inputs)
         self.assertIn(zh_fronts.TESTS_LINES, inputs)
+        self.assertIn(zh_fronts.EDITIONS, inputs)
+        self.assertIn(zh_fronts.TEMPLATE_SOURCE, inputs)
 
     def test_a_row_whose_english_changed_shows_the_english_marked(self):
         import tempfile
@@ -154,6 +166,7 @@ class LandingPageTests(unittest.TestCase):
         self.template = self.root / zh_fronts.TEMPLATE
         self.template.parent.mkdir(parents=True, exist_ok=True)
         self.records = [{'status': 'recorded-checked'}, {'status': 'recorded-checked'}, {'status': 'reviewed-scoped'}]
+        current_template(self.root)
 
     def render(self, body, outputs=None):
         self.template.write_text('<!-- the template\'s note -->\n\n' + body, encoding='utf-8')
@@ -237,6 +250,102 @@ class LandingPageTests(unittest.TestCase):
                 pages, errors = self.render('# 首\n\n' + body + '\n')
                 self.assertEqual(pages, {})
                 self.assertTrue(any(word in e for e in errors), errors)
+
+
+class EditionsTests(unittest.TestCase):
+    """How far each translated edition follows its English: a dated banner where the English has moved on, written by
+    the render and required by the check; --revised records a revision against a committed English."""
+
+    def setUp(self):
+        import json
+        import tempfile
+        temporary = tempfile.TemporaryDirectory()
+        self.addCleanup(temporary.cleanup)
+        self.root = Path(temporary.name)
+        for page, english in zh_fronts.tracked().items():
+            if page != zh_fronts.TEMPLATE:
+                self.write(page, f'# 页\n\n{zh_fronts.nav_line(page)}\n\n*约 1 分钟读完。*\n\n正文。\n')
+            self.write(english, f'# Page\n\n[中文](x.zh.md) · [One page](o.md)\n\nText of {english}.\n')
+        self.write(zh_fronts.TEMPLATE, '<!-- note -->\n\n# 首\n\n{{nav}}\n\n正文。\n')
+        held = {p: {'revised': '2026-11-08', 'english': zh_fronts.english_digest((self.root / e).read_text(encoding='utf-8'))}
+                for p, e in zh_fronts.tracked().items()}
+        self.write(zh_fronts.EDITIONS, json.dumps({'editions': held}))
+        self.page = 'theories/becoming/USES.zh.md'
+
+    def write(self, rel, body):
+        (self.root / rel).parent.mkdir(parents=True, exist_ok=True)
+        (self.root / rel).write_text(body, encoding='utf-8')
+
+    def text(self, rel):
+        return (self.root / rel).read_text(encoding='utf-8')
+
+    def test_a_note_or_the_navigation_line_changes_no_digest(self):
+        base = '# Page\n\n[中文](a.zh.md)\n\nBody.\n'
+        self.assertEqual(zh_fronts.english_digest(base), zh_fronts.english_digest('<!-- a\nnote -->\n# Page\n\n[Home](README.md) · [中文](a.zh.md) · **Read**\n\nBody.\n'))
+        self.assertNotEqual(zh_fronts.english_digest(base), zh_fronts.english_digest(base.replace('Body', 'Body changed')))
+
+    def test_current_editions_carry_no_banner(self):
+        self.assertEqual(zh_fronts.banner_problems(self.root), [])
+        self.assertEqual(zh_fronts.write_banners(self.root), ([], []))
+
+    def test_a_changed_english_needs_a_dated_banner_which_the_render_writes_and_a_revision_removes(self):
+        english = zh_fronts.FRONTS[self.page]
+        self.write(english, self.text(english).replace('Text of', 'New text of'))
+        problems = zh_fronts.banner_problems(self.root)
+        self.assertEqual(len(problems), 1)
+        self.assertIn(self.page, problems[0])
+        self.assertIn('--revised ' + self.page, problems[0])
+        before = self.text(self.page)
+        self.assertEqual(zh_fronts.write_banners(self.root), ([self.page], []))
+        after = self.text(self.page)
+        want = ('*本版落后于英文版：它依 2026 年 11 月 8 日的[英文版](USES.md)译出，英文版此后有改动，本版尚未随之修订；'
+                '有出入处，以英文版为准。*')
+        self.assertIn(zh_fronts.nav_line(self.page) + '\n\n' + want + '\n\n*约 1 分钟读完。*', after)
+        self.assertEqual(after.replace(want + '\n\n', ''), before)  # nothing else on the page touched
+        self.assertEqual(zh_fronts.banner_problems(self.root), [])
+        self.assertEqual(zh_fronts.write_banners(self.root), ([], []))  # a fixed point
+        self.write(english, self.text(english).replace('New text of', 'Text of'))  # the English back where the edition is
+        self.assertEqual(zh_fronts.write_banners(self.root), ([self.page], []))
+        self.assertEqual(self.text(self.page), before)
+
+    def test_the_landing_page_says_so_where_the_first_screen_has_moved_on(self):
+        pages, errors = zh_fronts.render([], {}, self.root)
+        self.assertEqual(errors, [])
+        self.assertNotIn(zh_fronts.BANNER, pages[zh_fronts.PAGE])
+        self.write(zh_fronts.TEMPLATE_SOURCE, 'A new first screen.\n')
+        pages, errors = zh_fronts.render([], {}, self.root)
+        self.assertEqual(errors, [])
+        self.assertIn(zh_fronts.nav_line(zh_fronts.PAGE) + '\n\n*本版落后于英文版：它依 2026 年 11 月 8 日的[英文版](README.md)译出', pages[zh_fronts.PAGE])
+
+    def test_a_malformed_or_incomplete_record_is_an_error(self):
+        import json
+        good = json.loads(self.text(zh_fronts.EDITIONS))
+        for edit, word in ((lambda d: d['editions'].pop(self.page), 'has no entry'),
+                           (lambda d: d['editions'].update({'X.zh.md': d['editions'][self.page]}), 'no translated front'),
+                           (lambda d: d['editions'][self.page].update(revised='8 Nov'), 'needs "revised"'),
+                           (lambda d: d.pop('editions'), 'is not a JSON object')):
+            with self.subTest(word=word):
+                data = json.loads(json.dumps(good))
+                edit(data)
+                self.write(zh_fronts.EDITIONS, json.dumps(data))
+                self.assertTrue(any(word in e for e in zh_fronts.banner_problems(self.root)), zh_fronts.banner_problems(self.root))
+                self.assertEqual(zh_fronts.write_banners(self.root)[0], [])
+
+    def test_revised_records_today_against_a_committed_english_only(self):
+        import json
+        import subprocess
+        git = lambda *a: subprocess.run(['git', '-C', str(self.root), *a], capture_output=True, text=True, check=True)
+        git('init', '-q'); git('add', '-A'); git('-c', 'user.name=t', '-c', 'user.email=t@t', 'commit', '-qm', 'x')
+        english = zh_fronts.FRONTS[self.page]
+        self.write(english, self.text(english).replace('Text of', 'New text of'))
+        found = zh_fronts.record_revised([self.page], self.root, today='2026-11-09')
+        self.assertTrue(found and 'uncommitted' in found[0], found)
+        git('-c', 'user.name=t', '-c', 'user.email=t@t', 'commit', '-qam', 'y')
+        self.assertEqual(zh_fronts.record_revised([self.page], self.root, today='2026-11-09'), [])
+        entry = json.loads(self.text(zh_fronts.EDITIONS))['editions'][self.page]
+        self.assertEqual(entry, {'revised': '2026-11-09', 'english': zh_fronts.english_digest(self.text(english))})
+        self.assertEqual(zh_fronts.banner_problems(self.root), [])
+        self.assertEqual(zh_fronts.record_revised(['README.md'], self.root), ['not a translated front: README.md'])
 
 
 if __name__ == '__main__':

@@ -16,7 +16,17 @@ is timed as it is about to be written); {{time:chapters}}, the eight chapters' s
 page states of itself in its opening lines; {{count:registered}} and {{count:STATUS}}; {{tests:ARG}}, README.md's
 first screen's counts of the tests naming a thesis (tests_page.screen_count).
 
-usage: python3 -B tools/research/zh_fronts.py   (prints each front whose line differs, exits 1 if any)
+Each translated edition also says when it falls behind its English (RW, 8 November 2026, the fourth re-score's finding:
+the Chinese said what the English no longer said, and nothing showed it). EDITIONS records, for each hand-written
+Chinese front and for the landing page's template, the day it was last revised and a digest of the English it followed
+(HTML comments and any line linking a Chinese edition, the English page's navigation line, left out, so a note or that line changes nothing).
+Where the English has changed since, the page carries a dated banner under its navigation line, 本版落后于英文版, which
+the render writes and removes (`write_banners`; README.zh.md's is written with the page) and the check requires
+(`banner_problems`). Revising an edition is what clears it: `--revised PAGE` records today and the English as it is now,
+so it is run after the Chinese has been brought to that English and never to silence a banner.
+
+usage: python3 -B tools/research/zh_fronts.py              (each front whose line or banner is wrong; exits 1 if any)
+       python3 -B tools/research/zh_fronts.py --revised PAGE...  (record that PAGE now follows its English as committed)
 """
 from __future__ import annotations
 
@@ -90,6 +100,171 @@ def current(page: str, root: Path = ROOT) -> str | None:
 def problems(pages=HAND_WRITTEN, root: Path = ROOT) -> list[str]:
     """Each front whose line is missing or differs from `nav_line`."""
     return [f'{page}: its navigation line is not the Chinese fronts\' line' for page in pages if current(page, root) != nav_line(page)]
+
+
+# --- how far each edition follows its English -----------------------------------------------------------------------
+
+EDITIONS = '_process/navigation/zh-editions.json'
+TEMPLATE_SOURCE = '_process/navigation/README-FIRST-SCREEN.md'  # README.md's first screen, which the template follows
+BANNER = '*本版落后于英文版：'
+DATE = re.compile(r'^(\d{4})-(\d{2})-(\d{2})$')
+
+
+def tracked() -> dict:
+    """{Chinese file: its English}: the hand-written fronts with an English edition, and the landing page's template."""
+    return {**{p: e for p, e in FRONTS.items() if p in HAND_WRITTEN and e}, TEMPLATE: TEMPLATE_SOURCE}
+
+
+def english_digest(text: str) -> str:
+    """The digest an edition is checked against: the English without its HTML comments or its navigation line."""
+    import hashlib
+    body = re.sub(r'<!--.*?-->', '', text, flags=re.S)
+    lines = [l.rstrip() for l in body.split('\n') if '[中文](' not in l]  # the navigation line, however it begins
+    return hashlib.sha256('\n'.join(lines).strip().encode('utf-8')).hexdigest()
+
+
+def editions(root: Path = ROOT) -> tuple[dict, list[str]]:
+    """({Chinese file: {revised, english}}, errors): EDITIONS read; every tracked file needs an entry, a date and a
+    64-hex digest, and no entry names a file that is not tracked."""
+    import json
+    path = root / EDITIONS
+    try:
+        held = json.loads(path.read_text(encoding='utf-8'))['editions']
+        assert isinstance(held, dict)
+    except (OSError, ValueError, KeyError, TypeError, AssertionError) as e:
+        return {}, [f'zh fronts: {EDITIONS} is not a JSON object with "editions": {e!r}']
+    errors = [f'zh fronts: {EDITIONS} has no entry for {p}' for p in tracked() if p not in held]
+    errors += [f'zh fronts: {EDITIONS} names a file that is no translated front: {p}' for p in held if p not in tracked()]
+    for p, e in held.items():
+        if not (isinstance(e, dict) and isinstance(e.get('revised'), str) and DATE.match(e['revised'])
+                and isinstance(e.get('english'), str) and re.fullmatch(r'[0-9a-f]{64}', e['english'])):
+            errors.append(f'zh fronts: {EDITIONS}: {p} needs "revised" (YYYY-MM-DD) and "english" (a sha256)')
+    return held, errors
+
+
+def lag(page: str, root: Path = ROOT) -> tuple[str | None, list[str]]:
+    """(the day `page` was last revised if its English has changed since, else None; errors), from its own entry only."""
+    held, errors = editions(root)
+    if any('is not a JSON object' in e for e in errors):
+        return None, errors
+    entry, english = held.get(page), tracked()[page]
+    if not (isinstance(entry, dict) and isinstance(entry.get('revised'), str) and DATE.match(entry['revised']) and isinstance(entry.get('english'), str)):
+        return None, [f'zh fronts: {EDITIONS} has no well-formed entry for {page}']
+    if not (root / english).is_file():
+        return None, [f'zh fronts: {page} follows a missing English page: {english}']
+    return (None if english_digest((root / english).read_text(encoding='utf-8')) == entry['english'] else entry['revised']), []
+
+
+def stale(root: Path = ROOT) -> tuple[dict, list[str]]:
+    """({Chinese file: the day it was last revised}, errors) for each edition whose English has changed since."""
+    held, errors = editions(root)
+    if errors:
+        return {}, errors
+    out = {}
+    for page, english in tracked().items():
+        source = root / english
+        if not source.is_file():
+            errors.append(f'zh fronts: {page} follows a missing English page: {english}')
+        elif english_digest(source.read_text(encoding='utf-8')) != held[page]['english']:
+            out[page] = held[page]['revised']
+    return out, errors
+
+
+def banner(page: str, revised: str) -> str:
+    """The dated line a lagging edition carries under its navigation line, its English linked from the page's place
+    (the template's link is written from the landing page it becomes)."""
+    y, m, d = DATE.match(revised).groups()
+    shown = PAGE if page == TEMPLATE else page
+    english = 'README.md' if page == TEMPLATE else FRONTS[page]
+    return (f'{BANNER}它依 {int(y)} 年 {int(m)} 月 {int(d)} 日的{_link("英文版", english, shown)}译出，英文版此后有改动，'
+            '本版尚未随之修订；有出入处，以英文版为准。*')
+
+
+def with_banner(text: str, line: str | None, nav: str) -> str:
+    """`text` with its banner, if any, taken out and `line`, if given, put after the navigation line `nav` and a blank."""
+    parts = text.split('\n')
+    kept, i = [], 0
+    while i < len(parts):
+        if parts[i].startswith(BANNER):
+            i += 2 if i + 1 < len(parts) and not parts[i + 1].strip() else 1
+            continue
+        kept.append(parts[i])
+        i += 1
+    if line:
+        at = kept.index(nav) + 1
+        kept[at:at] = ['', line] if at < len(kept) and not kept[at].strip() else ['', line, '']
+    return '\n'.join(kept)
+
+
+def _banner_target(page: str, root: Path) -> tuple[str, str] | None:
+    """(the page's text, its navigation line) for a hand-written front, or None where it is missing or lacks the line."""
+    text = (root / page).read_text(encoding='utf-8') if (root / page).is_file() else None
+    nav = current(page, root)
+    return (text, nav) if text is not None and nav is not None and nav in text.split('\n') else None
+
+
+def _expected(root: Path):
+    lagging, errors = stale(root)
+    pages = {}
+    for page in tracked():
+        if page == TEMPLATE:
+            continue  # README.zh.md's banner is written with the page
+        target = _banner_target(page, root)
+        if target is None:
+            continue  # its missing navigation line is problems()' to report
+        text, nav = target
+        pages[page] = (text, with_banner(text, banner(page, lagging[page]) if page in lagging else None, nav))
+    return pages, errors
+
+
+def banner_problems(root: Path = ROOT) -> list[str]:
+    """Each hand-written edition whose banner does not say what EDITIONS and its English say, and EDITIONS' errors."""
+    pages, errors = _expected(root)
+    return errors + [f'zh fronts: {page}: its 落后于英文版 banner does not match its English (run make research-render, '
+                     f'or revise it and run tools/research/zh_fronts.py --revised {page})' for page, (text, want) in pages.items() if text != want]
+
+
+def write_banners(root: Path = ROOT) -> tuple[list[str], list[str]]:
+    """(written, errors): each hand-written edition's banner put right, nothing else on the page touched."""
+    pages, errors = _expected(root)
+    if errors:
+        return [], errors
+    written = []
+    for page, (text, want) in pages.items():
+        if text != want:
+            (root / page).write_text(want, encoding='utf-8')
+            written.append(page)
+    return written, []
+
+
+def record_revised(pages, root: Path = ROOT, today: str | None = None) -> list[str]:
+    """Record that each of `pages` now follows its English as committed: today's date and that English's digest. An
+    English with uncommitted changes is refused, so the record names an English anyone can read at a commit."""
+    import json
+    import subprocess
+    from datetime import date
+    errors = []
+    held, found = editions(root)
+    if found and not all('has no entry' in e for e in found):
+        return found
+    for page in pages:
+        english = tracked().get(page)
+        if english is None:
+            errors.append(f'not a translated front: {page}')
+            continue
+        dirty = subprocess.run(['git', '-C', str(root), 'status', '--porcelain', '--', english], capture_output=True, text=True).stdout.strip()
+        if dirty:
+            errors.append(f'{english} has uncommitted changes: commit the English the edition follows first')
+            continue
+        held[page] = {'revised': today or date.today().isoformat(), 'english': english_digest((root / english).read_text(encoding='utf-8'))}
+    if errors:
+        return errors
+    data = {'note': ('Each translated Chinese front and the Chinese landing page\'s template: the day it was last revised and '
+                     'the digest of the English it then followed (tools/research/zh_fronts.py). Written by --revised after '
+                     'a revision, never by hand and never to clear a banner.'),
+            'editions': dict(sorted(held.items()))}
+    (root / EDITIONS).write_text(json.dumps(data, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
+    return []
 
 
 # --- the Chinese landing page, generated ----------------------------------------------------------------------------
@@ -227,8 +402,9 @@ def inputs(root: Path = ROOT) -> list[Path]:
 
     def hand_written(p):  # a page the render writes is no input of it: it is timed as the render writes it
         return p.is_file() and '<!-- Generated by ' not in p.read_text(encoding='utf-8')[:400]
-    extra = {root / p for p in (TESTS_DATA, TESTS_LINES) if (root / p).is_file()}
-    return sorted({template} | extra | {root / p for p in named | set(CHAPTERS) if hand_written(root / p)})
+    extra = {root / p for p in (TESTS_DATA, TESTS_LINES, EDITIONS, TEMPLATE_SOURCE) if (root / p).is_file()}
+    english = {root / e for e in tracked().values() if (root / e).is_file()}  # what the editions' banners are checked against
+    return sorted({template} | extra | english | {root / p for p in named | set(CHAPTERS) if hand_written(root / p)})
 
 
 def render(records: list, outputs: dict, root: Path = ROOT) -> tuple[dict, list[str]]:
@@ -312,6 +488,10 @@ def render(records: list, outputs: dict, root: Path = ROOT) -> tuple[dict, list[
     body = re.sub(r'\A\s*<!--.*?-->\s*', '', template.read_text(encoding='utf-8'), count=1, flags=re.S)  # the template's own note
     body = navigation.adapt_links(FIELD.sub(fill, body), TEMPLATE, PAGE)  # its links are written from the template, as README.md's
     body = body.replace('{{nav}}', nav_line(PAGE))
+    behind, lag_errors = lag(TEMPLATE, root)
+    errors += [e.removeprefix('zh fronts: ') for e in lag_errors]
+    if behind:  # the template follows README.md's first screen; where that has moved on, the page says so
+        body = with_banner(body, banner(TEMPLATE, behind), nav_line(PAGE))
     for field, value in stated.items():
         body = body.replace(field, value)
     body = GENERATED + '\n\n' + body.lstrip('\n')
@@ -327,6 +507,12 @@ def render(records: list, outputs: dict, root: Path = ROOT) -> tuple[dict, list[
 
 
 if __name__ == '__main__':
-    found = problems()
-    print('\n'.join(found) or 'every Chinese front carries the line')
+    if sys.argv[1:2] == ['--revised']:
+        if not sys.argv[2:]:
+            sys.exit('usage: zh_fronts.py --revised PAGE...')
+        found = record_revised(sys.argv[2:])
+        print('\n'.join(found) or f'{EDITIONS}: recorded ' + ', '.join(sys.argv[2:]) + ' (run make research-render to clear their banners)')
+        sys.exit(1 if found else 0)
+    found = problems() + banner_problems()
+    print('\n'.join(found) or 'every Chinese front carries the line, and every banner says how far its edition follows its English')
     sys.exit(1 if found else 0)
