@@ -107,7 +107,7 @@
   },
   "zh": {
    "title": "本说明是怎样长成的",
-   "subtitle": "从最早的文字（2021）到现行的说明（2026 年 11 月 8 日）的转折点，分为六个阶段，每一个都标明是什么陈述了它；主要的转折点附标题，编号同下表。",
+   "subtitle": "从最早的文字（2021）到现行的说明（2026 年 11 月 8 日）的转折点，分为六个阶段，每个转折点都标明是什么陈述了它；主要的转折点附标题，编号同下表。",
    "other_language": "English",
    "reading_time": "全文约 {full}；简述、图、标签与这条线索约 {first}。",
    "intro": "本说明是怎样长成的：从 2021 年的文字，经由它读过、承继或放下的早先各理论文件夹，到现在的[生成变化之论](becoming/ONE-PAGE.zh.md)。本页由[谱系数据](becoming/results/data/lineage.json)、各记录的历史与[对照](becoming/results/atlas/CROSSWALK.md)生成。本仓库在 `{commit}`（{date}）共有 {commits} 次提交；其第一次提交是 2026 年 9 月 6 日的，此前的东西都是带入仓库的材料。本页接续[九月时间线](../_process/history/2026-09-consolidation/TIMELINE.md)，那是「a narrative, not an index」（一份叙述，不是索引），止于 2026 年 10 月 4 日。本页的转折点由 AI 读者收集并核对，没有人读过。",
@@ -146,7 +146,8 @@
    "none_so_far": "目前没有",
    "hb_note": "`_process/history/2026-09-consolidation/reading-notes-inputs/hb-*.md` 这些文件，是从未入库的对话导出中摘出的同一个人的发言；引用它们的转折点标为公开，因为摘录本身已入库。",
    "sources_list": "各行来源",
-   "sources_n": "来源 {n} 处"
+   "sources_n": "来源 {n} 处",
+   "sources_note": "各行的来源见表后的“各行来源”。"
   }
  },
  "folders_trust": {

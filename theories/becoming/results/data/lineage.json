@@ -107,7 +107,7 @@
   },
   "zh": {
    "title": "本说明是怎样长成的",
-   "subtitle": "从最早的文字（2021）到现行的说明（2026 年 11 月 8 日）的转折点，分为六个阶段，每一个都标明是什么陈述了它；主要的转折点附标题，编号同下表。",
+   "subtitle": "从最早的文字（2021）到现行的说明（2026 年 11 月 8 日）的转折点，分为六个阶段，每个转折点都标明是什么陈述了它；主要的转折点附标题，编号同下表。",
    "other_language": "English",
    "reading_time": "全文约 {full}；简述、图、标签与这条线索约 {first}。",
    "intro": "本说明是怎样长成的：从 2021 年的文字，经由它读过、承继或放下的早先各理论文件夹，到现在的[生成变化之论](becoming/ONE-PAGE.zh.md)。本页由[谱系数据](becoming/results/data/lineage.json)、各记录的历史与[对照](becoming/results/atlas/CROSSWALK.md)生成。本仓库在 `{commit}`（{date}）共有 {commits} 次提交；其第一次提交是 2026 年 9 月 6 日的，此前的东西都是带入仓库的材料。本页接续[九月时间线](../_process/history/2026-09-consolidation/TIMELINE.md)，那是「a narrative, not an index」（一份叙述，不是索引），止于 2026 年 10 月 4 日。本页的转折点由 AI 读者收集并核对，没有人读过。",
@@ -146,7 +146,8 @@
    "none_so_far": "目前没有",
    "hb_note": "`_process/history/2026-09-consolidation/reading-notes-inputs/hb-*.md` 这些文件，是从未入库的对话导出中摘出的同一个人的发言；引用它们的转折点标为公开，因为摘录本身已入库。",
    "sources_list": "各行来源",
-   "sources_n": "来源 {n} 处"
+   "sources_n": "来源 {n} 处",
+   "sources_note": "各行的来源见表后的“各行来源”。"
   }
  },
  "points": [
@@ -361,7 +362,7 @@
    "thread": true,
    "short": {
     "en": "One value as power",
-    "zh": "一种价值即权力"
+    "zh": "一种价值作为权力的象征"
    }
   },
   {
@@ -648,7 +649,7 @@
    },
    "what": {
     "en": "A talk recorded in January 2026 already says \"It would be a good idea to not use AI for competition, but use it for the benefits for all\". On 2026-02-09 a conversation takes up a pasted scenario projection, organized by AI, Automated Feudalism versus Automated Commons, \"The deciding variable is institutional design\", asks for a narrative from it, called The Fork (the narrative itself, the September timeline says, is not in the corpus; a later folder keeps the name as its historical home), and, as a compromise, proposes to \"Make the global coordination work based on one rule, that is forcefully executed: stop using AI compete with others, only use them for commons\".",
-    "zh": "2026 年 1 月录下的一次演讲已说「It would be a good idea to not use AI for competition, but use it for the benefits for all」（不把 AI 用于竞争、而用于众人之益，会是个好主意）。2026-02-09，一次对话接过一份贴入的、由 AI 整理的情景推演，Automated Feudalism（自动化封建）对 Automated Commons（自动化公地），「The deciding variable is institutional design」（决定性的变量是制度设计），请求据此写一篇叙事，名为 The Fork（分岔）（据九月时间线，这篇叙事本身不在语料中；后来有一个文件夹把这个名字留作它的“historical home”），并作为一种妥协，提议「Make the global coordination work based on one rule, that is forcefully executed: stop using AI compete with others, only use them for commons」（让全球协调建立在一条强制执行的规则上：停止用 AI 与他人竞争，只把它用于公地）。"
+    "zh": "2026 年 1 月录下的一次演讲已说「It would be a good idea to not use AI for competition, but use it for the benefits for all」（不把 AI 用于竞争、而用于众人之益，会是个好主意）。2026-02-09，一次对话接过一份贴入的、由 AI 整理的情景推演，Automated Feudalism（自动化封建）对 Automated Commons（自动化公地），「The deciding variable is institutional design」（决定性的变量是制度设计），请求据此写一篇叙事，名为 The Fork（分岔）（据九月时间线，这篇叙事本身不在语料中；后来有一个文件夹把这个名字留作它的历史归属），并作为一种妥协，提议「Make the global coordination work based on one rule, that is forcefully executed: stop using AI compete with others, only use them for commons」（让全球协调建立在一条强制执行的规则上：停止用 AI 与他人竞争，只把它用于公地）。"
    },
    "evidence": [
     {
@@ -1537,13 +1538,13 @@
    "evidence": [
     {
      "path": "_process/BECOMING-WORKBOARD.md",
-     "locator": "## Now, 'RA landed', line 29",
+     "locator": "## Now, 'RA landed'",
      "quote": "every live result stated once in its home section (anchor `r-<record id>`)",
      "private": false
     },
     {
      "path": "_process/BECOMING-WORKBOARD.md",
-     "locator": "## Now, 'RA landed', line 29",
+     "locator": "## Now, 'RA landed'",
      "quote": "the canonical chapter, its Chinese edition and the 41 chapters the eight carry moved to `theories/becoming/history/` byte for byte",
      "private": false
     },
@@ -1598,7 +1599,7 @@
    "date": "2026-10-26",
    "title": {
     "en": "T7's frozen test: every verdict passed, the bridge failed",
-    "zh": "T7 的冻结检验：每一裁决都通过，桥接未通过"
+    "zh": "T7 的冻结检验：每一裁决都通过，桥接不成立"
    },
    "what": {
     "en": "LA2 (frozen 25 October 2026, run 25 and 26 October) tested, in one trained system, the conjecture that a judge formed from what it selected is a pool of readers counted by kind: \"Every frozen verdict passed, and the conjecture failed for this judge\", one note of the loss, on the one prose answer among nine readers, turning its reading. So T7's forbidden case of a metric whose loss is read only by those it disfavours, dropped once the selection has left them no more than its carriers among its readers, with nothing else changed, occurred in this system \"as worded before its clause on drift\", while the law of the rule as the pool of readers drawn from those it selects \"stands within its hypotheses, which this judge does not meet\".",
@@ -1874,13 +1875,13 @@
     },
     {
      "path": "_process/BECOMING-WORKBOARD.md",
-     "locator": "the board's decisions section, the review packet's decisions (line 84)",
+     "locator": "the board's decisions section, the review packet's decisions",
      "quote": "every test's first stage is frozen before any run",
      "private": false
     },
     {
      "path": "_process/BECOMING-WORKBOARD.md",
-     "locator": "the board's decisions section, the review packet's decisions (line 84)",
+     "locator": "the board's decisions section, the review packet's decisions",
      "quote": "What stayed a design is frozen too, on 5 November, before any call to a model and any training run",
      "private": false
     },
@@ -1944,7 +1945,7 @@
    "evidence": [
     {
      "path": "_process/BECOMING-WORKBOARD.md",
-     "locator": "Queue line, 'LM1 landed' clause (line 39)",
+     "locator": "Queue line, 'LM1 landed' clause",
      "quote": "it now says a ranking of courses needs C or a premise in its place",
      "private": false
     },
@@ -1956,7 +1957,7 @@
     },
     {
      "path": "_process/BECOMING-WORKBOARD.md",
-     "locator": "Queue line, 'LM landed: the Lean made whole' clause (line 39)",
+     "locator": "Queue line, 'LM landed: the Lean made whole' clause",
      "quote": "one near-full rebuild, core run `20261106T174854.382527Z`, every axiom report empty, one new core leaf `Becoming.PremisesTogether`, no new mathematics",
      "private": false
     }
@@ -1979,7 +1980,7 @@
    "evidence": [
     {
      "path": "_process/BECOMING-WORKBOARD.md",
-     "locator": "Queue line, CX landed clause (line 39)",
+     "locator": "Queue line, CX landed clause",
      "quote": "1,183 entries read the 16 earlier theory folders and 12 domains of thought against the live account",
      "private": false
     },
@@ -1997,7 +1998,7 @@
     },
     {
      "path": "_process/BECOMING-WORKBOARD.md",
-     "locator": "Queue line, CX landed clause (line 39)",
+     "locator": "Queue line, CX landed clause",
      "quote": "Nine more gave ranking to C alone in other words",
      "private": false
     }
@@ -2878,7 +2879,7 @@
    ],
    "what": {
     "en": "From February to July 2026 the Fork narrative is left and cooperation is not held good in itself, 間 becomes the one primitive and classical Chinese a formal language, Lean enters as a coherence checker, and, in an AI-written working stance, selection is read as concentrating a way of seeing, Moloch in the mind.",
-    "zh": "2026 年 2 月至 7 月，分岔叙事被放下，合作不被当作本身就好；間成为唯一原语，古文成为一种形式语言；Lean 作为一致性检查器进入；在一份由 AI 写成的工作立场中，选择被读作集中一种观看方式，即心中的 Moloch。"
+    "zh": "2026 年 2 月至 7 月，分岔叙事被放下，合作不被当作本身就好；間成为唯一原语，古文成为一种形式语言；Lean 作为融贯检验器进入；在一份由 AI 写成的工作立场中，选择被读作集中一种观看方式，即心中的 Moloch。"
    }
   },
   {
@@ -2897,8 +2898,8 @@
     "pt-v7-3-integrated-into-generative-account"
    ],
    "what": {
-    "en": "From September to 6 October 2026 the writings are gathered into theory folders, an AI-drafted paper argues from correctability with refuters for each claim, the repository's first pre-specified predictions are written before their run, one failing in the pilot, and a conference line is folded into the generative account.",
-    "zh": "2026 年 9 月至 10 月 6 日，诸篇写作被汇入各理论文件夹；一篇由 AI 起草的论文从可纠正性立论，每项主张都配有驳倒它的观察；本仓库最早的预先给定的预测写于运行之前，其中一项在试运行中未通过；一条会议论文线被并入生成论的说明。"
+    "en": "From September to 6 October 2026 the writings are gathered into theory folders, an AI-drafted paper argues from correctability with refuters for each claim, the repository's first pre-specified predictions are written before their run, one failing in the pilot, and a conference line is folded into the generative account, short of a no-assumptions directive of the same day, in a chapter now in history.",
+    "zh": "2026 年 9 月至 10 月 6 日，诸篇写作被汇入各理论文件夹；一篇由 AI 起草的论文从可纠正性立论，每项主张都配有可驳倒它的观察；本仓库最早的预先给定的预测写于运行之前，其中一项在试运行中未通过；一条会议论文线被并入生成性说明，但未达到同日的无假设要求，该章今已移入历史。"
    }
   },
   {

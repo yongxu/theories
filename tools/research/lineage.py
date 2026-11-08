@@ -355,15 +355,21 @@ def cell(text):
     return (text or '').replace('|', '\\|').replace('\n', ' ')
 
 
-def quote_line(path, quote):
-    """The first line of `path` that holds the start of `quote` (whitespace collapsed, Markdown marks dropped), or None."""
+def quote_line(path, quote, named=None):
+    """The line of `path` where `quote` stands (whitespace collapsed, Markdown marks dropped): the named line where it
+    holds the quotation; else, of the lines holding the whole quotation (or, for one spanning lines, its first line),
+    the one nearest the named line; else of those holding its first 48 characters; else None."""
     text = _read(path) if quote else None
     if not text:
         return None
-    head = norm(quote)[:48].strip()
-    for i, line in enumerate(text.split('\n'), 1):
-        if head and head in norm(line):
-            return i
+    lines = [norm(line) for line in text.split('\n')]
+    whole, head = norm(quote).strip(), norm(quote)[:48].strip()
+    if named and 1 <= named <= len(lines) and head and head in lines[named - 1]:
+        return named
+    for part in (whole, head):
+        found = [i for i, line in enumerate(lines, 1) if part and part in line]
+        if found:
+            return min(found, key=lambda i: abs(i - named)) if named else found[0]
     return None
 
 
@@ -376,14 +382,24 @@ def evidence_link(e, here, words):
     locator = e.get('locator') or ''
     if e['path'] in UNRENDERED:  # changed by commits that render nothing, so a line there would not stay true
         return f'[`{e["path"]}`]({target})' + (f' ({cell(locator)})' if locator else '')
-    found = quote_line(e['path'].split('#', 1)[0], e.get('quote'))
     named = re.search(r'\blines? (\d+)', locator)
+    found = quote_line(e['path'].split('#', 1)[0], e.get('quote'), int(named.group(1)) if named else None)
     line = found or (int(named.group(1)) if named else None)
     if found and named and re.match(r'line \d+\b', locator[named.start():]):
         locator = locator[:named.start()] + f'line {found}' + locator[named.end():]
     if line and '#' not in target:
         target += ('?plain=1' if e['path'].endswith('.md') else '') + f'#L{line}'
+    if words.get('sources_n'):  # the Chinese edition: the common locator words in Chinese
+        locator = zh_locator(locator)
+        return f'[`{e["path"]}`]({target})' + (f'（{cell(locator)}）' if locator else '')
     return f'[`{e["path"]}`]({target})' + (f' ({cell(locator)})' if locator else '')
+
+
+def zh_locator(locator):
+    """A locator's common English words in Chinese: line numbers and "same heading"; the rest is left as written."""
+    locator = re.sub(r'\blines (\d+)[–-](\d+)', r'第 \1–\2 行', locator)
+    locator = re.sub(r'\bline (\d+)', r'第 \1 行', locator)
+    return locator.replace('same heading', '同一标题下').replace('under ', '在 ')
 
 
 def link(path, page):
@@ -412,7 +428,10 @@ def page(s, lang, weeks, undated, by_folder, totals):
             labels = (words['all_label'].format(label=s['labels'][next(iter(kinds))][lang]) if len(kinds) == 1 else
                       ('，' if lang == 'zh' else ', ').join(f'{n} {s["labels"][k][lang]}' for k, n in kinds.items()))
             tail = words['phase_tail'].format(first=min(nums), last=max(nums), labels=labels)
-            lines.append(f'- **{ph["name"][lang]}** ({ph["from"]} – {ph["to"]}). {ph["what"][lang]} {tail}')
+            if lang == 'zh':
+                lines.append(f'- **{ph["name"][lang]}**（{ph["from"]} – {ph["to"]}）。{ph["what"][lang]}{tail}')
+            else:
+                lines.append(f'- **{ph["name"][lang]}** ({ph["from"]} – {ph["to"]}). {ph["what"][lang]} {tail}')
         lines.append('')
     lines += [f'![{words["title"]}]({os.path.basename(SVG[lang])})', '', words['labels_intro'], '']
     colon = '：' if lang == 'zh' else ': '
@@ -430,11 +449,11 @@ def page(s, lang, weeks, undated, by_folder, totals):
             lines.append(f'{number[pid]}. **{p["date"]}{"，" if lang == "zh" else ", "}{cell(p["title"][lang])}{"。" if lang == "zh" else "."}** {p["what"][lang]}')
         lines.append('')
     part = '\n'.join(lines)
-    lines += [f'## {words["points_heading"]}', '',
+    lines += [f'## {words["points_heading"]}', ''] + ([words['sources_note'], ''] if lang == 'zh' else []) + [
               f'| # | {words["date"]} | {words["what"]} | {words["evidence"]} | {words["label"]} |', '|---:|---|---|---|---|']
     sources = []
     for n, p in enumerate(s['points'], 1):
-        ev = '; '.join(evidence_link(e, here, words) for e in p['evidence'])
+        ev = ('；' if lang == 'zh' else '; ').join(evidence_link(e, here, words) for e in p['evidence'])
         stop = '。' if lang == 'zh' else '.'
         shown = ev if lang == 'en' else words['sources_n'].format(n=len(p['evidence']))
         lines.append(f'| {n} | {p["date"]} | **{cell(p["title"][lang])}{stop}** {cell(p["what"][lang])} | {shown} | '

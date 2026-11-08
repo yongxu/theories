@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1219" width="900" height="1219" role="img" aria-labelledby="spine-title spine-desc" font-family="'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif">
 <title id="spine-title">围绕一个文法的八章</title>
-<desc id="spine-desc">八章围绕文法排成一圈，按其结果数定大小（根 86；生成、守与退化 94；认知、学习与检验 110；生命与演化 46；联合活动与选择 74；古文 16；意义、伦理与对齐 82；方法 21）。章与章之间共有 497 次形式复用，画出 17 个至少 10 次的配对。延续条件与 C 作为前提进入第七章，各在所用之处为假设，二者都不断言。T1 到 T8 在其所属之处，按检验结局着色。</desc>
+<desc id="spine-desc">八章围绕文法排成一圈，按其结果数定大小（根 86；生成、守与退化 94；认知、学习与检验 110；生命与演化 46；联合活动与选择 74；古文 16；意义、伦理与对齐 82；方法 21）。章与章之间共有 497 次记为 formal-reuse 的使用，画出 17 个至少 10 次的配对。延续条件与 C 作为前提进入第七章，各在所用之处为假设，二者都不断言。T1 到 T8 在其所属之处，按检验结局着色。</desc>
 <defs>
 <marker id="fwd" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8a817c"/></marker>
 <marker id="back" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c1917"/></marker>
@@ -11,8 +11,8 @@
 <text x="24" y="40" font-size="24" font-weight="bold" text-anchor="start" fill="#1c1917">围绕一个文法的八章</text>
 <text x="24" y="66" font-size="15" text-anchor="start" fill="#57534e">由理论图画出：每个圆按其章的结果数定大小，每条曲线计一章的结果使用另一章结果的次数。</text>
 <rect x="20" y="76" width="860" height="52" rx="6" fill="#f5f5f4" stroke="#e7e5e4"/>
-<text x="32" y="93" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">117 项核心声明对一个根之边界的地位（08 §7）：</text>
-<text x="32" y="113" font-size="15" text-anchor="start" fill="#1c1917">11 项推导而得 · 1 项在一个明示的假设下 · 6 项为计数，在文法之下 · 99 项处于一个指明的距离</text>
+<text x="32" y="93" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">117 项核心声明相对于一根之边的地位（08 §7）：</text>
+<text x="32" y="113" font-size="15" text-anchor="start" fill="#1c1917">11 项推导而得 · 1 项在一个所述的假设之下 · 6 项为计数，在文法之下 · 99 项处于一个指明的距离</text>
 <line x1="330" y1="392.6" x2="330" y2="508" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="3.7" stroke-linecap="round"/>
 <line x1="446.6" y1="443.4" x2="366.8" y2="523.2" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2.7" stroke-linecap="round"/>
 <line x1="490.1" y1="560" x2="382" y2="560" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2.4" stroke-linecap="round"/>
@@ -148,44 +148,47 @@
 <circle cx="668" cy="336" r="10" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
 <text x="691" y="341" font-size="14" text-anchor="start" fill="#1c1917">圆的面积：该章的结果数。</text>
 <line x1="655" y1="358" x2="681" y2="358" stroke="#8a817c" stroke-width="3.2" marker-end="url(#fwd)"/>
-<text x="691" y="363" font-size="14" text-anchor="start" fill="#1c1917">证明中直接引用</text>
-<text x="691" y="381" font-size="14" text-anchor="start" fill="#1c1917">（formal-reuse，只用于使用所</text>
-<text x="691" y="399" font-size="14" text-anchor="start" fill="#1c1917">引结果的已核验推理）：箭头</text>
-<text x="691" y="417" font-size="14" text-anchor="start" fill="#1c1917">指向被使用其结果的那一章，</text>
-<text x="691" y="435" font-size="14" text-anchor="start" fill="#1c1917">数字为使用次数。</text>
+<text x="691" y="363" font-size="14" text-anchor="start" fill="#1c1917">记为 formal-reuse 的使用</text>
+<text x="691" y="381" font-size="14" text-anchor="start" fill="#1c1917">（这一类只用于使用所引结果的</text>
+<text x="691" y="399" font-size="14" text-anchor="start" fill="#1c1917">已核验推理）：箭头指向被使</text>
+<text x="691" y="417" font-size="14" text-anchor="start" fill="#1c1917">用其结果的那一章，数字为使</text>
+<text x="691" y="435" font-size="14" text-anchor="start" fill="#1c1917">用次数。</text>
 <line x1="655" y1="452" x2="681" y2="452" stroke="#1c1917" stroke-width="3.2" marker-end="url(#back)"/>
 <text x="691" y="457" font-size="14" text-anchor="start" fill="#1c1917">同上；前面一章的结果使用后</text>
 <text x="691" y="475" font-size="14" text-anchor="start" fill="#1c1917">面一章的结果时，线色较深。</text>
 <line x1="655" y1="492" x2="681" y2="492" stroke="#57534e" stroke-width="1.7" stroke-dasharray="6 4" marker-end="url(#thin)"/>
-<text x="691" y="497" font-size="14" text-anchor="start" fill="#1c1917">诠释（interpretive），论证</text>
-<text x="691" y="515" font-size="14" text-anchor="start" fill="#1c1917">上的依赖（虚线）。</text>
-<line x1="655" y1="532" x2="681" y2="532" stroke="#57534e" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
-<text x="691" y="537" font-size="14" text-anchor="start" fill="#1c1917">应用（application），一个</text>
-<text x="691" y="555" font-size="14" text-anchor="start" fill="#1c1917">被复用的结果加上所添的前提</text>
-<text x="691" y="573" font-size="14" text-anchor="start" fill="#1c1917">（点线）。</text>
-<line x1="655" y1="590" x2="681" y2="590" stroke="#a8a29e" stroke-width="6" stroke-linecap="round"/>
-<text x="691" y="595" font-size="14" text-anchor="start" fill="#1c1917">辐条的粗细与 k/m：该章 m</text>
-<text x="691" y="613" font-size="14" text-anchor="start" fill="#1c1917">个核心模块中，有 k 个在文</text>
-<text x="691" y="631" font-size="14" text-anchor="start" fill="#1c1917">法上陈述其律。</text>
-<text x="691" y="653" font-size="14" text-anchor="start" fill="#1c1917">圆内的“章内使用”计同一章结</text>
-<text x="691" y="671" font-size="14" text-anchor="start" fill="#1c1917">果之间的证明中直接引用。</text>
-<text x="691" y="693" font-size="14" text-anchor="start" fill="#1c1917">不画出：相关（related，用</text>
-<text x="691" y="711" font-size="14" text-anchor="start" fill="#1c1917">于类比，1420 条边），以及</text>
-<text x="691" y="729" font-size="14" text-anchor="start" fill="#1c1917">少于 10 次使用的配对；图下</text>
-<text x="691" y="747" font-size="14" text-anchor="start" fill="#1c1917">的表列出全部。</text>
-<text x="655" y="779" font-size="16" font-weight="bold" text-anchor="start" fill="#1c1917">论题</text>
-<circle cx="668" cy="800" r="10" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>
-<text x="691" y="805" font-size="14" text-anchor="start" fill="#1c1917">冻结检验有通过也有未通过，</text>
-<text x="691" y="823" font-size="14" text-anchor="start" fill="#1c1917">或桥接不成立</text>
-<circle cx="668" cy="840" r="10" fill="#2a78d6" stroke="#1c1917" stroke-width="1.2"/>
-<text x="691" y="845" font-size="14" text-anchor="start" fill="#1c1917">部分通过，或部分支持</text>
-<circle cx="668" cy="862" r="10" fill="#1baf7a" stroke="#1c1917" stroke-width="1.2"/>
-<text x="691" y="867" font-size="14" text-anchor="start" fill="#1c1917">未被冻结检验拒绝</text>
-<circle cx="668" cy="884" r="10" fill="#ffffff" stroke="#1c1917" stroke-width="1.2"/>
-<text x="691" y="889" font-size="14" text-anchor="start" fill="#1c1917">已论证；无检验</text>
-<text x="655" y="915" font-size="14" text-anchor="start" fill="#1c1917">T1 到 T8 在其所属之处；各自主</text>
-<text x="655" y="933" font-size="14" text-anchor="start" fill="#1c1917">张什么、地位如何、检验如何：见</text>
-<text x="655" y="951" font-size="14" text-anchor="start" fill="#1c1917">图下的表。</text>
+<text x="691" y="497" font-size="14" text-anchor="start" fill="#1c1917">诠释（interpretive），用于</text>
+<text x="691" y="515" font-size="14" text-anchor="start" fill="#1c1917">论证上的依赖（虚线；3 次及</text>
+<text x="691" y="533" font-size="14" text-anchor="start" fill="#1c1917">以上的配对）。</text>
+<line x1="655" y1="550" x2="681" y2="550" stroke="#57534e" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
+<text x="691" y="555" font-size="14" text-anchor="start" fill="#1c1917">应用（application），一个</text>
+<text x="691" y="573" font-size="14" text-anchor="start" fill="#1c1917">被复用的结果，连同其对应与</text>
+<text x="691" y="591" font-size="14" text-anchor="start" fill="#1c1917">所添的前提（点线）。</text>
+<line x1="655" y1="608" x2="681" y2="608" stroke="#a8a29e" stroke-width="6" stroke-linecap="round"/>
+<text x="691" y="613" font-size="14" text-anchor="start" fill="#1c1917">辐条的粗细与 k/m：该章 m</text>
+<text x="691" y="631" font-size="14" text-anchor="start" fill="#1c1917">个核心模块中，有 k 个在文</text>
+<text x="691" y="649" font-size="14" text-anchor="start" fill="#1c1917">法上陈述其律。</text>
+<text x="691" y="671" font-size="14" text-anchor="start" fill="#1c1917">圆内的“章内使用”计同一章结</text>
+<text x="691" y="689" font-size="14" text-anchor="start" fill="#1c1917">果之间这样的使用。</text>
+<text x="691" y="711" font-size="14" text-anchor="start" fill="#1c1917">不画出：相关（related，用</text>
+<text x="691" y="729" font-size="14" text-anchor="start" fill="#1c1917">于类比，1420 条边），以及</text>
+<text x="691" y="747" font-size="14" text-anchor="start" fill="#1c1917">少于 10 次使用的配对；理论</text>
+<text x="691" y="765" font-size="14" text-anchor="start" fill="#1c1917">图（THEORY-GRAPH.md）“The</text>
+<text x="691" y="783" font-size="14" text-anchor="start" fill="#1c1917">spine”一节的表列出全部。</text>
+<text x="655" y="815" font-size="16" font-weight="bold" text-anchor="start" fill="#1c1917">论题</text>
+<circle cx="668" cy="836" r="10" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>
+<text x="691" y="841" font-size="14" text-anchor="start" fill="#1c1917">冻结检验有通过也有未通过，</text>
+<text x="691" y="859" font-size="14" text-anchor="start" fill="#1c1917">或桥接不成立</text>
+<circle cx="668" cy="876" r="10" fill="#2a78d6" stroke="#1c1917" stroke-width="1.2"/>
+<text x="691" y="881" font-size="14" text-anchor="start" fill="#1c1917">部分通过，或部分支持</text>
+<circle cx="668" cy="898" r="10" fill="#1baf7a" stroke="#1c1917" stroke-width="1.2"/>
+<text x="691" y="903" font-size="14" text-anchor="start" fill="#1c1917">未被冻结检验拒绝</text>
+<circle cx="668" cy="920" r="10" fill="#ffffff" stroke="#1c1917" stroke-width="1.2"/>
+<text x="691" y="925" font-size="14" text-anchor="start" fill="#1c1917">已论证；无检验</text>
+<text x="655" y="951" font-size="14" text-anchor="start" fill="#1c1917">T1 到 T8 在其所属之处；各自主</text>
+<text x="655" y="969" font-size="14" text-anchor="start" fill="#1c1917">张什么、地位如何、检验如何：见</text>
+<text x="655" y="987" font-size="14" text-anchor="start" fill="#1c1917">理论图（THEORY-GRAPH.md）“The</text>
+<text x="655" y="1005" font-size="14" text-anchor="start" fill="#1c1917">spine”一节中的论题表。</text>
 <text x="24" y="1189" font-size="12" text-anchor="start" fill="#57534e">由 tools/research/spine.py 依 theory-graph.json 与 spine.json 生成；它显示什么、不显示什么，见 THEORY-GRAPH.md</text>
 <text x="24" y="1204" font-size="12" text-anchor="start" fill="#57534e">的“The spine”。</text>
 </svg>

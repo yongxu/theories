@@ -440,7 +440,7 @@ The column *On the grammar* names the law's statement in [`Becoming.GrammarLaws`
 |---|---:|---|
 | the grammar | 45 | |
 | balance | 30 | which the grammar represents both ways and cannot state without amounts, so they are no gap |
-| another shared law's anchor, without reaching it | 6 | each with its reason |
+| another shared law's anchor, without reaching the grammar | 6 | each with its reason |
 | no shared law | 36 | 9 on a premise of the account (support, dissipation), 3 on a counting identity (Price's), 7 laws of their models, 4 single applications of a premise or a closed region, 13 definitional or representational |
 | all | 117 | counted once each |
 
@@ -450,10 +450,10 @@ The column *On the grammar* names the law's statement in [`Becoming.GrammarLaws`
 | Standing against the edge of one root | Central declarations | Example | Reason, in the paragraph's words |
 |---|---:|---|---|
 | derived | 11 | `Flow.beyond_gives_nothing`, `Listed.coming_of_ceasing` | each a case of grammar laws, through bridges checked in Lean as equivalences and support the review reads where a row has them |
-| under a stated hypothesis | 1 | `GroupEnding.Flow.all_end` | the root form `RootForms.outside_leaves_no_offspring` at one step, each of the form's three hypotheses met at the model by definitions alone |
+| under a stated hypothesis | 1 | `GroupEnding.Flow.all_end` | the root form `RootForms.outside_leaves_no_offspring` at one step, each of the form's three hypotheses … met at the model by definitions alone |
 | counting | 6 | | below the grammar |
 | at a named distance: connected | 22 | | reaching grammar laws without being declared a case of one |
-| at a named distance: balance in their statements | 32 | `Flow.no_new_dependence` | its relational part is the root form `RootForms.descent_forms_no_dependence`, met only through amount reasoning |
+| at a named distance: balance in their statements | 32 | `Flow.no_new_dependence`: it meets the form's first hypothesis only through amount reasoning | |
 | at a named distance: on amounts | 18 | | |
 | at a named distance: at a represented model | 16 | | by F5's verified items |
 | at a named distance: on their own carrier | 6 | | by F5's verified items |

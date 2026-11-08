@@ -4,7 +4,7 @@
     "DEPENDENCIES.md": "d1c14e144d46062d800ee393d99025d2e33597d2c4e5696d0fe286a9d68401f5",
     "GOALS.md": "681f73aa8cdd4aeb9eec371a990a208865d41583c63fea2d53c1776b5deef212",
     "OPEN-QUESTIONS.md": "b0ef758e75748322803eec31294a08d7c3a91a348190c411d73ea0a14b932c4b",
-    "README.md": "c0a37d5ae4ff910fa8d3f45915b9bf3dc00d5a521acfa6e98a50498b52a1428e",
+    "README.md": "89989972a54f9e2a78f4638686cd53edf9f51fbf0d7110efd3ab718b4d8e0053",
     "RESEARCH.md": "52fcfb1406d176665ee4662a234939495c0284fd8fc581e6f6434a3749fa8f2f",
     "RESULTS.md": "65b41f6a9530b07a248454f6abc4c45e8d0969f8bf9694fd68aec82e676bf20d",
     "TESTS.md": "efa53e94c3f3c24c881c72347afc60b542aa7f2ebcd6d225d5a7125e8bd184a0",
@@ -15,8 +15,8 @@
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/REVIEWS.md": "0ccef05c0f94ed738029b8aa50c19901bcddb80807925beeb2dca83cb56dc687",
     "_process/research/README.md": "ebdb2be9be35838f733940c261a282f051f63ff360f7dd605d00f95bd90a6964",
     "sources/README.md": "7d7f527445db2f40df09fbfd363c9ec321c410b4f4a4b08cfe857f804482c1e6",
-    "theories/LINEAGE.md": "cecbec927dc88302dfc622d2773657b9d567ee854a5dd31003fb19cf788b0de5",
-    "theories/LINEAGE.zh.md": "7ce158bc4914f477d6f7febeb60c02bdcaa038bb67f791aa0ba1e655a0d59693",
+    "theories/LINEAGE.md": "f824b106d3413c9eb4d263387da6a8492fdb821e2eecdb3e2f73dbf70b611032",
+    "theories/LINEAGE.zh.md": "6797f035c2ad82bcb16982b4009ff8c2c16e65be8c6dd884afb28f551bd3668e",
     "theories/README.md": "af3335c3ed9ab5963e28371e97ba015c90328297a5d6c97686fb46c5413ece66",
     "theories/becoming/README.md": "8237df4a4a50340cc56b6bba5fa077400cea64ed759b8c14dd3ab8e73e693646",
     "theories/becoming/chapters/CLAIMS.md": "a9ac5ff80ac0db24db83cbe4a3368e1f9607fc2b2d8a16406409a6034b35ebd5",
@@ -28,7 +28,7 @@
     "theories/becoming/results/README.md": "b96a63d5af9830bb8e40fe23e937f369a172d9d8017926a027ddf82422646430",
     "theories/becoming/results/RESULT-REGISTER.md": "062e5a30a5630b2c143f9fd523684faeb086373ff214e34975b836f1b6552b01",
     "theories/becoming/results/ROADMAP.md": "e6e81d222aa24caa1c4a1c94f8b6bfe462d61b2a07421d6728d2235aed6d8001",
-    "theories/becoming/results/THEORY-GRAPH.md": "827f526eb766a50e7b6b0a65228b55e1780d011e3c09f19a9d4bb3a6f4e2213d",
+    "theories/becoming/results/THEORY-GRAPH.md": "0b8d4e38be091872d2e681cd80e51de3ebf52abf413f0cb0103ce712f89be5d6",
     "theories/becoming/results/atlas/ATLAS.md": "a810900aaf6e6f78240e494e08ca9dfd5df43021912de40864662ea053c0dda6",
     "theories/becoming/results/atlas/CROSSWALK.md": "4d17edaabcf77e3f5e0a8d0f0218c26b195eb4a2f11f7345938167339caa3427",
     "theories/becoming/results/atlas/crosswalk/abrahamic-islamic.md": "eb582ffe28418af7e7513e5a14350b9a14ae1b021467be5844c1c07e04695c32",
@@ -653,9 +653,9 @@
     "theories/becoming/results/records/wisdom-root-without-axiom.md": "458fa4e678cf4e6ba46931e809d5ab015c141cb97c6fc769f26ecbcafe32b201",
     "theories/becoming/results/records/wisdom-root.md": "7163cb507136db3259f71b8f4fb767b79519ccc461254df27ee754738e80560f",
     "theories/becoming/results/records/worlds-are-runs.md": "aed2bb06229953f98bcbd991753f42844ce99263b0e98dee61d5c082ff53c1fe",
-    "theories/becoming/results/spine.svg": "dfda5c1f77a16219b037a1251d96f188a201f9ead2fe1b361b6a3b1c2846c03e",
-    "theories/becoming/results/spine.zh.svg": "79ccadefd79a932a08a64dbbcb2e8ecfd283f91709b211686245f086b7254326",
+    "theories/becoming/results/spine.svg": "08a030dfb1b96ee61e164d807549f5096ab58aca09a629959b7fab8355f1864b",
+    "theories/becoming/results/spine.zh.svg": "ecd29c6daa9d6575bebe5bac4ba6bfb3eb71bceb6bd3fd562822e8c38c85fbb0",
     "theories/lineage.svg": "a1c857796a6af93b0d71affab10a5fc05949de3ab55a0402e2b66e79045d7f9b",
-    "theories/lineage.zh.svg": "a57600b674266f4936aa6727fee958c0c02def1d8de15ec252bec2d716097664"
+    "theories/lineage.zh.svg": "5222a8ad3170b89f4ada3d485cdbf48aea8d5dccc549232f076e32a26122e18e"
   }
 }
