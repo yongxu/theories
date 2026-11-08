@@ -12,7 +12,7 @@ The criterion K1–K7, proposed in [study §218](../../../../_process/research/2
 | K4 | Representation | yes | 0 |
 | K5 | Enclosure | yes | 0 |
 | K6 | The ethics chain | yes | 0 |
-| K7 | Open register | yes | 0 |
+| K7 | Open register | no | 1 |
 
 ## K1. Coverage
 
@@ -91,11 +91,11 @@ Normative hypotheses in its statements: living significance, the continuation co
 
 No finding.
 
-## K7. Open register: met
+## K7. Open register: not met
 
-08 §12 ranks 12 open items: 1 (further proof); 2 (further proof); 3 (further proof); 4 (philosophical warrant); 5 (further proof); 6 (further proof); 7 (further proof); 8 (further proof); 9 (further proof); 10 (further proof); 11 (further proof); 12 (philosophical warrant).
+08 §12 ranks 12 open items: 1 (further proof); 2 (further proof); 3 (further proof); 4 (philosophical warrant); 5 (further proof); 6 (further proof); 7 (further proof); 8 (further proof); 9 (further proof); 10 (further proof); 11 (further proof); 12 (philosophical).
 
-No finding.
+- item 12 (How scope and order form): class "philosophical" is not one of further proof, philosophical warrant, empirical
 
 <a id="master-laws"></a>
 <a id="shared-laws"></a>

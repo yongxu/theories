@@ -27,3 +27,17 @@ These goals restate the ethics in the frame WB revises. Each is listed here with
 
 - **The edition line.** Edition 5 states the two-premise picture and T8 as binding. WB's reason is now on the board's line "Which edition to send".
 - **AGENTS.md's landing protocol** (astra's read of the draft). "While it stands" should mean "while it holds the head", and the re-read should come immediately before the fast-forward, after the checks. This is the coordinator's text; WB did not change it.
+
+## For the crosswalk's owner
+
+The crosswalk's entries (`theories/becoming/results/atlas/entries/correspondences.json`) restate the homes. WB re-said the parts that restate a changed sentence directly:
+
+- the formula ("a ranking needs C or a premise in its place", "warrant open");
+- 39 targets' T8 restatements, set to T8's new statement;
+- the scope-and-order target;
+- the selection, capability and revision sentences;
+- the readings that cited T8's former refuter, now dated.
+
+These ran through WB's kit scripts `crosswalk_formula.py` and `crosswalk_struct.py`, plus a last pass of exact replacements.
+
+`kit/wb_drift.py`, the crosswalk's `main_drift.py` with the base set to main and the head to this branch, still finds about 380 fields. Most are windows of phrases that remain true: "the continuation condition for scope and C for order", "fixes whose losses count". What remains to read are the entries whose readings compare a source with the old T8 or with the "ranking needs C" frame. A crosswalk re-read should take them in its next round, from the drift list `wb_drift.py` writes. The Chinese `says` of the rewritten T8 targets were dropped, not translated, so the Chinese crosswalk shows the English there until it is re-read.

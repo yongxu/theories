@@ -39,6 +39,7 @@
 <rect x="681.9" y="628.0" width="7" height="53.9" fill="#a8a29e"/>
 <rect x="747.3" y="628.0" width="7" height="13.9" fill="#a8a29e"/>
 <rect x="827.3" y="628.0" width="7" height="9.2" fill="#a8a29e"/>
+<rect x="950.0" y="628.0" width="7" height="1.0" fill="#a8a29e"/>
 <text x="950.0" y="703.0" font-size="13" text-anchor="end" fill="#57534e">Grey bars: the records' history entries by week (largest week 1810).</text>
 <path d="M180.9,525.0 L212.4,525.0 L274.1,542.0 L295.1,525.0 L406.2,525.0 L681.9,508.0 L747.3,542.0" fill="none" stroke="#0072B2" stroke-width="1.8" stroke-dasharray="5 3"/>
 <path d="M66.9,525.0 L385.9,491.0 L389.7,508.0 L588.4,542.0 L719.3,508.0" fill="none" stroke="#E69F00" stroke-width="1.8" stroke-dasharray="5 3"/>

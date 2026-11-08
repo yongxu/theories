@@ -176,8 +176,8 @@
 - <a id="src-36"></a>**36.** 提交 `0d7a397a5` 中的 `_process/BECOMING-WORKBOARD.md`（## Now，'RA landed'）；[`theories/becoming/history/INDEX.md`](becoming/history/INDEX.md?plain=1#L178)（row THE-THEORY-OF-BECOMING.md，第 178 行）
 - <a id="src-37"></a>**37.** 提交 `70fcd7f5c` 中的 `theories/becoming/review/README.md`（opening paragraph）；[`theories/becoming/review/recoding/FREEZE.md`](becoming/review/recoding/FREEZE.md?plain=1#L3)（first paragraph）；[`theories/becoming/review/README.zh.md`](becoming/review/README.zh.md?plain=1#L9)（opening paragraph）
 - <a id="src-38"></a>**38.** [`experiments/self-rewarding-lock/README.md`](../experiments/self-rewarding-lock/README.md?plain=1#L7)（## Failures and limits，first item，第 7 行）；[`theories/becoming/chapters/02-MAP.md`](becoming/chapters/02-MAP.md?plain=1#L436)（#t7，Frozen test paragraph，第 436 行）
-- <a id="src-39"></a>**39.** [`sources/15-codex-theory-conversations/2026-10-30-no-absolute-good-the-way-for-life.md`](../sources/15-codex-theory-conversations/2026-10-30-no-absolute-good-the-way-for-life.md?plain=1#L7)（the message kept，第 7 行）；[`theories/becoming/chapters/07-SIGNIFICANCE.md`](becoming/chapters/07-SIGNIFICANCE.md?plain=1#L778)（§8 Thesis T8，第 778 行）；[`sources/15-codex-theory-conversations/2026-10-30-goal-the-ethics-for-life-approved.md`](../sources/15-codex-theory-conversations/2026-10-30-goal-the-ethics-for-life-approved.md?plain=1#L15)（## What was approved（AI-authored），第 15 行）
-- <a id="src-40"></a>**40.** [`theories/becoming/chapters/07-SIGNIFICANCE.md`](becoming/chapters/07-SIGNIFICANCE.md?plain=1#L233)（§4，scope and order（第 233 行））；[`_process/history/2026-11-09-instructions/AGENTS-before-within-becoming.md`](../_process/history/2026-11-09-instructions/AGENTS-before-within-becoming.md?plain=1#L30)（## The ethics（第 30 行），the working rules as they stood until 9 November 2026）
+- <a id="src-39"></a>**39.** [`sources/15-codex-theory-conversations/2026-10-30-no-absolute-good-the-way-for-life.md`](../sources/15-codex-theory-conversations/2026-10-30-no-absolute-good-the-way-for-life.md?plain=1#L7)（the message kept，第 7 行）；[`theories/becoming/history/07-SIGNIFICANCE-before-within-becoming.md`](becoming/history/07-SIGNIFICANCE-before-within-becoming.md?plain=1#L778)（§8 Thesis T8，第 778 行，as it stood until 9 November 2026）；[`sources/15-codex-theory-conversations/2026-10-30-goal-the-ethics-for-life-approved.md`](../sources/15-codex-theory-conversations/2026-10-30-goal-the-ethics-for-life-approved.md?plain=1#L15)（## What was approved（AI-authored），第 15 行）
+- <a id="src-40"></a>**40.** [`theories/becoming/chapters/07-SIGNIFICANCE.md`](becoming/chapters/07-SIGNIFICANCE.md?plain=1#L234)（§4，scope and order（第 234 行））；[`_process/history/2026-11-09-instructions/AGENTS-before-within-becoming.md`](../_process/history/2026-11-09-instructions/AGENTS-before-within-becoming.md?plain=1#L30)（## The ethics（第 30 行），the working rules as they stood until 9 November 2026）
 - <a id="src-41"></a>**41.** [`theories/becoming/chapters/08-METHOD.md`](becoming/chapters/08-METHOD.md?plain=1#L427)（§7，One mechanism，stated once（第 427 行））；[`GLOSSARY.md`](../GLOSSARY.md?plain=1#L93)（row 'shared law（共律）'（第 93 行））
 - <a id="src-42"></a>**42.** [`AGENTS.md`](../AGENTS.md?plain=1#L13)（## What moves it，item 1（第 13 行））；[`AGENTS.md`](../AGENTS.md?plain=1#L11)（## What moves it（第 11 行））；[`AGENTS.md`](../AGENTS.md?plain=1#L28)（## Method（第 28 行））
 - <a id="src-43"></a>**43.** [`_process/research/2026-10-05-generative-foundation-review/root-foundation/development/review-packet/FREEZE-STEPS.md`](../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/review-packet/FREEZE-STEPS.md?plain=1#L161)（## The freeze of 3 November 2026）；[`_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md`](../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md?plain=1#L207)（the release gate，item 7）；[`COMMONS.md`](../COMMONS.md?plain=1#L3)（第 3 行）
@@ -256,7 +256,7 @@
 
 ## 记录中的增长
 
-各记录的历史条目，按其开头日期所在的周计：有日期的 4805 条；没有开头日期的 184 条，不计。一个条目是对一项结果之改动的一条带日期的记载，所以这个计数量的是记下的改动，而不是结果。
+各记录的历史条目，按其开头日期所在的周计：有日期的 4837 条；没有开头日期的 184 条，不计。一个条目是对一项结果之改动的一条带日期的记载，所以这个计数量的是记下的改动，而不是结果。
 
 | 周（自周一） | 条目 |
 |---|---:|
@@ -265,6 +265,7 @@
 | 2026-10-19 | 1775 |
 | 2026-10-26 | 456 |
 | 2026-11-02 | 304 |
+| 2026-11-09 | 32 |
 
 ## 本页所依据的
 
