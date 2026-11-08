@@ -239,7 +239,10 @@ def render(records: list, outputs: dict, root: Path = ROOT) -> tuple[dict, list[
         return {}, [f'{TEMPLATE} is missing']
     errors, stated = [], {}
     from tools.research import tests_page as english_tests
-    tests, tests_errors = tests_page(root, checked=english_tests.PAGE in outputs or not (root / TESTS_DATA).is_file())
+    checked = english_tests.PAGE in outputs or not (root / TESTS_DATA).is_file()
+    if not checked:  # TESTS.md's own render refused the data and has said why; the landing page, which times both, waits
+        return {}, []
+    tests, tests_errors = tests_page(root, checked=checked)
     if tests_errors:  # the landing page times the tests page: without it, say why, not that a time is missing
         return {}, tests_errors
     outputs = {**outputs, **tests}  # the landing page times the tests page as it is about to be written

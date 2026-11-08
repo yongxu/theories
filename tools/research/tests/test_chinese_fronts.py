@@ -86,12 +86,12 @@ class TestsPageTests(unittest.TestCase):
                 (root / c).parent.mkdir(parents=True, exist_ok=True)
                 (root / c).write_text('# c\n', encoding='utf-8')
             pages, errors = zh_fronts.render([], {'TESTS.md': 'x'}, root)
-            refused, _ = zh_fronts.render([], {}, root)  # TESTS.md's own render refused the data: no Chinese page
+            refused, refused_errors = zh_fronts.render([], {}, root)  # TESTS.md's own render refused the data: it says why
             inputs = {str(p.relative_to(root)) for p in zh_fronts.inputs(root)}
         self.assertEqual(errors, [])
         self.assertIn(zh_fronts.TESTS_PAGE, pages)
         self.assertNotIn('{{time:', pages['README.zh.md'])
-        self.assertNotIn(zh_fronts.TESTS_PAGE, refused)
+        self.assertEqual((refused, refused_errors), ({}, []))
         self.assertIn(zh_fronts.TESTS_DATA, inputs)
         self.assertIn(zh_fronts.TESTS_LINES, inputs)
 
