@@ -1,9 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 715" width="1000" height="715" role="img" aria-labelledby="lineage-title" font-family="Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 791" width="1000" height="791" role="img" aria-labelledby="lineage-title" font-family="Helvetica, Arial, sans-serif">
 <title id="lineage-title">How the account grew</title>
-<rect x="0.5" y="0.5" width="999" height="714" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
+<rect x="0.5" y="0.5" width="999" height="790" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
 <text x="24.0" y="38.0" font-size="22" font-weight="bold" text-anchor="start" fill="#1c1917">How the account grew</text>
-<text x="24.0" y="64.0" font-size="15" text-anchor="start" fill="#57534e">Turning points from the first writings (2021) to the live account (8 November 2026) in six phases, each marked</text>
-<text x="24.0" y="83.0" font-size="15" text-anchor="start" fill="#57534e">by what states it; the major points titled and numbered as in the table below.</text>
+<text x="24.0" y="64.0" font-size="15" text-anchor="start" fill="#57534e">Turning points from the first writings (2021) to the live account (8 November 2026) in six phases, each as</text>
+<text x="24.0" y="83.0" font-size="15" text-anchor="start" fill="#57534e">wide as its points need and not to time scale, each point marked by what states it; the major points titled</text>
+<text x="24.0" y="102.0" font-size="15" text-anchor="start" fill="#57534e">and numbered as in the table below.</text>
 <rect x="50.0" y="150" width="73.6" height="360" fill="#efece6"/>
 <text x="86.8" y="170.0" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c1917">Early</text>
 <text x="86.8" y="188.0" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c1917">writings</text>
@@ -42,75 +43,91 @@
 <path d="M180.9,454.0 L212.4,454.0 L274.1,454.0 L295.1,437.0 L406.2,454.0 L681.9,454.0 L747.3,454.0" fill="none" stroke="#2a78d6" stroke-width="1.8" stroke-dasharray="5 3"/>
 <circle cx="51.5" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
 <circle cx="66.9" cy="437.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="120.9" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="120.9" cy="454.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
 <circle cx="146.6" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
 <circle cx="155.0" cy="437.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
 <circle cx="180.9" cy="454.0" r="7" fill="#1c1917" stroke="#2a78d6" stroke-width="2.4"/>
 <circle cx="185.0" cy="437.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="212.4" cy="454.0" r="7" fill="#1c1917" stroke="#2a78d6" stroke-width="2.4"/>
-<circle cx="214.1" cy="437.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="212.4" cy="454.0" r="7" fill="#a8a29e" stroke="#2a78d6" stroke-width="2.4"/>
+<circle cx="214.1" cy="437.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
 <circle cx="241.5" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="274.1" cy="454.0" r="7" fill="#1c1917" stroke="#2a78d6" stroke-width="2.4"/>
-<circle cx="295.1" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="295.1" cy="437.0" r="7" fill="#1c1917" stroke="#2a78d6" stroke-width="2.4"/>
+<circle cx="274.1" cy="454.0" r="7" fill="#ffffff" stroke="#2a78d6" stroke-width="2.4"/>
+<circle cx="295.1" cy="454.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="295.1" cy="437.0" r="7" fill="#a8a29e" stroke="#2a78d6" stroke-width="2.4"/>
 <circle cx="325.2" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
 <circle cx="374.7" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="385.9" cy="437.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="388.2" cy="420.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="389.7" cy="403.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="406.2" cy="454.0" r="7" fill="#1c1917" stroke="#2a78d6" stroke-width="2.4"/>
-<circle cx="412.9" cy="437.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="442.2" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="477.8" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="550.7" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="385.9" cy="437.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="388.2" cy="420.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="389.7" cy="403.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="406.2" cy="454.0" r="7" fill="#a8a29e" stroke="#2a78d6" stroke-width="2.4"/>
+<circle cx="412.9" cy="437.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="442.2" cy="454.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="477.8" cy="454.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="550.7" cy="454.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
 <circle cx="559.1" cy="437.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="559.1" cy="420.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="570.4" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="559.1" cy="420.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="570.4" cy="454.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
 <circle cx="588.4" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
 <circle cx="588.4" cy="437.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="607.1" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="607.1" cy="454.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
 <circle cx="663.2" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
 <circle cx="672.5" cy="437.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="681.9" cy="454.0" r="7" fill="#1c1917" stroke="#2a78d6" stroke-width="2.4"/>
-<circle cx="691.2" cy="437.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="691.2" cy="420.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="719.3" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="719.3" cy="437.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="728.6" cy="420.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="747.3" cy="454.0" r="7" fill="#1c1917" stroke="#2a78d6" stroke-width="2.4"/>
+<circle cx="681.9" cy="454.0" r="7" fill="#ffffff" stroke="#2a78d6" stroke-width="2.4"/>
+<circle cx="691.2" cy="437.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="691.2" cy="420.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="719.3" cy="454.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="719.3" cy="437.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="728.6" cy="420.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="747.3" cy="454.0" r="7" fill="#ffffff" stroke="#2a78d6" stroke-width="2.4"/>
 <circle cx="784.7" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="802.7" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="802.7" cy="437.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="851.8" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="851.8" cy="437.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="876.4" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="876.4" cy="437.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="925.5" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="950.0" cy="454.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="950.0" cy="437.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<line x1="180.9" y1="445.0" x2="180.9" y2="377.0" stroke="#2a78d6" stroke-width="1"/>
-<text x="180.9" y="372.0" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">6 · One value as power</text>
-<line x1="212.4" y1="445.0" x2="212.4" y2="355.0" stroke="#2a78d6" stroke-width="1"/>
-<text x="212.4" y="350.0" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">8 · The loop written down</text>
-<line x1="274.1" y1="445.0" x2="274.1" y2="333.0" stroke="#2a78d6" stroke-width="1"/>
-<text x="274.1" y="328.0" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">11 · Meta-attractor captures selection's mechanisms</text>
+<circle cx="802.7" cy="454.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="802.7" cy="437.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="851.8" cy="454.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="851.8" cy="437.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="876.4" cy="454.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="876.4" cy="437.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="925.5" cy="454.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="950.0" cy="454.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="950.0" cy="437.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
+<line x1="51.5" y1="445.0" x2="51.5" y2="223.0" stroke="#57534e" stroke-width="1"/>
+<text x="45.5" y="218.0" font-size="14" text-anchor="start" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">1 · Metamunity: the city as a structure</text>
+<line x1="180.9" y1="445.0" x2="180.9" y2="245.0" stroke="#2a78d6" stroke-width="1"/>
+<text x="180.9" y="240.0" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">6 · One value as power</text>
+<line x1="212.4" y1="445.0" x2="212.4" y2="267.0" stroke="#2a78d6" stroke-width="1"/>
+<text x="206.4" y="262.0" font-size="14" font-weight="bold" text-anchor="start" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">8 · The loop written down</text>
+<line x1="274.1" y1="445.0" x2="274.1" y2="289.0" stroke="#2a78d6" stroke-width="1"/>
+<text x="268.1" y="284.0" font-size="14" font-weight="bold" text-anchor="start" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">11 · Meta-attractor captures selection's mechanisms</text>
 <line x1="295.1" y1="428.0" x2="295.1" y2="311.0" stroke="#2a78d6" stroke-width="1"/>
-<text x="295.1" y="306.0" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">13 · A second-order attractor</text>
-<line x1="406.2" y1="445.0" x2="406.2" y2="377.0" stroke="#2a78d6" stroke-width="1"/>
-<text x="406.2" y="372.0" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">19 · Moloch in the mind</text>
-<line x1="588.4" y1="445.0" x2="588.4" y2="355.0" stroke="#57534e" stroke-width="1"/>
-<text x="588.4" y="350.0" font-size="14" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">27 · The theory of becoming named</text>
-<line x1="681.9" y1="445.0" x2="681.9" y2="377.0" stroke="#2a78d6" stroke-width="1"/>
-<text x="681.9" y="372.0" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">32 · Capture on the spine</text>
-<line x1="747.3" y1="445.0" x2="747.3" y2="333.0" stroke="#2a78d6" stroke-width="1"/>
-<text x="747.3" y="328.0" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">38 · T7's bridge fails</text>
-<circle cx="59.0" cy="640.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<text x="76.0" y="645.0" font-size="14" text-anchor="start" fill="#1c1917">public (48)</text>
-<path d="M359.0,632.0 L367.0,640.0 L359.0,648.0 L351.0,640.0 z" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
-<text x="376.0" y="645.0" font-size="14" text-anchor="start" fill="#1c1917">private and unpublished (none so far)</text>
-<rect x="652.0" y="633.0" width="14" height="14" fill="#ffffff" stroke="#1c1917" stroke-width="1.3" stroke-dasharray="3 2"/>
-<text x="676.0" y="645.0" font-size="14" text-anchor="start" fill="#1c1917">AI reconstruction (none so far)</text>
-<circle cx="59.0" cy="667.0" r="7" fill="#1c1917" stroke="#2a78d6" stroke-width="2.4"/>
-<text x="76.0" y="672.0" font-size="14" text-anchor="start" fill="#1c1917">the selection thread, below</text>
-<text x="24.0" y="697.0" font-size="12" text-anchor="start" fill="#57534e">Generated by tools/research/lineage.py from lineage.json, the records and the crosswalk.</text>
+<text x="289.1" y="306.0" font-size="14" font-weight="bold" text-anchor="start" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">13 · A second-order attractor</text>
+<line x1="406.2" y1="445.0" x2="406.2" y2="333.0" stroke="#2a78d6" stroke-width="1"/>
+<text x="400.2" y="328.0" font-size="14" font-weight="bold" text-anchor="start" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">19 · Moloch in the mind</text>
+<line x1="477.8" y1="445.0" x2="477.8" y2="355.0" stroke="#57534e" stroke-width="1"/>
+<text x="471.8" y="350.0" font-size="14" text-anchor="start" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">22 · Corpus into folders</text>
+<line x1="588.4" y1="445.0" x2="588.4" y2="377.0" stroke="#57534e" stroke-width="1"/>
+<text x="588.4" y="372.0" font-size="14" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">27 · The theory named</text>
+<line x1="681.9" y1="445.0" x2="681.9" y2="267.0" stroke="#2a78d6" stroke-width="1"/>
+<text x="687.9" y="262.0" font-size="14" font-weight="bold" text-anchor="end" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">32 · Capture on the spine</text>
+<line x1="747.3" y1="445.0" x2="747.3" y2="245.0" stroke="#2a78d6" stroke-width="1"/>
+<text x="753.3" y="240.0" font-size="14" font-weight="bold" text-anchor="end" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">38 · T7's bridge fails</text>
+<line x1="876.4" y1="428.0" x2="876.4" y2="223.0" stroke="#57534e" stroke-width="1"/>
+<text x="882.4" y="218.0" font-size="14" text-anchor="end" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">45 · Tests frozen before any run</text>
+<text x="50.0" y="645.0" font-size="14" font-weight="bold" text-anchor="start" fill="#1c1917">Shape, what states it:</text>
+<circle cx="231.5" cy="640.0" r="7" fill="#e7e5e4" stroke="#1c1917" stroke-width="1.3"/>
+<text x="246.5" y="645.0" font-size="14" text-anchor="start" fill="#1c1917">public (48)</text>
+<path d="M356.3,632.0 L364.3,640.0 L356.3,648.0 L348.3,640.0 z" fill="#e7e5e4" stroke="#1c1917" stroke-width="1.3"/>
+<text x="371.3" y="645.0" font-size="14" text-anchor="start" fill="#1c1917">private and unpublished (none so far)</text>
+<rect x="643.8" y="633.0" width="14" height="14" fill="#e7e5e4" stroke="#1c1917" stroke-width="1.3" stroke-dasharray="3 2"/>
+<text x="665.8" y="645.0" font-size="14" text-anchor="start" fill="#1c1917">AI reconstruction (none so far)</text>
+<circle cx="59.0" cy="666.0" r="7" fill="#e7e5e4" stroke="#2a78d6" stroke-width="2.4"/>
+<text x="74.0" y="671.0" font-size="14" text-anchor="start" fill="#1c1917">the selection thread, below</text>
+<text x="50.0" y="697.0" font-size="14" font-weight="bold" text-anchor="start" fill="#1c1917">Fill, who wrote what states it:</text>
+<circle cx="292.3" cy="692.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<text x="307.3" y="697.0" font-size="14" text-anchor="start" fill="#1c1917">a person's words (15)</text>
+<circle cx="490.9" cy="692.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
+<text x="505.9" y="697.0" font-size="14" text-anchor="start" fill="#1c1917">AI-drafted from a person's words (13)</text>
+<circle cx="801.6" cy="692.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
+<text x="816.6" y="697.0" font-size="14" text-anchor="start" fill="#1c1917">AI-made (19)</text>
+<circle cx="292.3" cy="716.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3" stroke-dasharray="2 2"/>
+<text x="307.3" y="721.0" font-size="14" text-anchor="start" fill="#1c1917">not stated (1)</text>
+<text x="24.0" y="773.0" font-size="12" text-anchor="start" fill="#57534e">Generated by tools/research/lineage.py from lineage.json, the records and the crosswalk.</text>
 </svg>

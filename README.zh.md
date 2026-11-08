@@ -22,7 +22,7 @@
 
 ![围绕一套文法的八章](theories/becoming/results/spine.zh.svg)
 
-*117 个核心声明中，11 个推导而得，按审阅的读法各为文法之律的一个情形（Lean 核验了其中什么，以及其余的地位，见 [08 §7](theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge)）；这幅图显示什么、不显示什么，见理论图的 [The spine](theories/becoming/results/THEORY-GRAPH.md#the-spine)（英文）；本说明[怎样长成](theories/LINEAGE.zh.md)。*
+*117 个核心声明中，11 个推导而得，按审阅的读法各为文法之律的一个情形（Lean 核验了其中什么，以及其余的地位，见 [08 §7](theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge)）；这幅图显示什么、不显示什么，见[理论图的脊柱部分](theories/becoming/results/THEORY-GRAPH.zh.md#the-spine)；本说明[怎样长成](theories/LINEAGE.zh.md)。*
 
 ## 从哪里读起
 
@@ -33,7 +33,7 @@
 | [一页](theories/becoming/ONE-PAGE.zh.md) | 整个说明的十分钟层：它是什么，一个情形，根，诸律与其地位、什么会表明它错，伦理 | 约十一至十四分钟 |
 | [用途](theories/becoming/USES.zh.md) | 逐个领域：今天能用它做什么，能做到多远，不主张什么 | 约十三至十七分钟 |
 | [实例](theories/becoming/USES-EXAMPLES.zh.md) | 每个领域一例或数例，各在其真实的地位上 | 约三十七至四十八分钟 |
-| [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) | 整个说明的一小时层，按八章的顺序 | 约五十分钟至一小时十分钟 |
+| [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) | 整个说明的一小时层，按八章的顺序 | 约五十五分钟至一小时十二分钟 |
 | [八章](theories/becoming/chapters/README.md) | 各章正文，诸结果的所属之处；除第六章外为英文 | 每章约两至六个半小时 |
 | [第六章](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) | 古文：读出、检验与分歧；中文 | 约两小时至两小时四十分钟 |
 | [检验](TESTS.md) | 冻结的检验，按结局排列，未通过者在前；英文 | 约三十二至四十二分钟 |

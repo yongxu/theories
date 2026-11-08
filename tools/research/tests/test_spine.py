@@ -8,7 +8,7 @@ from unittest import mock
 
 ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT))
-from tools.research import spine  # noqa: E402
+from tools.research import spine, zh_fronts  # noqa: E402
 
 ORDER = ['root', 'map', 'knowing', 'life', 'collective', 'classical', 'significance', 'method']
 
@@ -64,31 +64,34 @@ class Counting(unittest.TestCase):
 
 
 class Geometry(unittest.TestCase):
-    def centres(self):
-        out = {}
-        for i, k in enumerate(ORDER):
-            a = -math.pi / 2 + i * 2 * math.pi / len(ORDER)
-            out[k] = (spine.CX + spine.RING * math.cos(a), spine.CY + spine.RING * math.sin(a))
-        return out
+    def layout(self):
+        """The fixture with a pair across the ring (knowing and significance) and a pair at 90 degrees, both ways."""
+        g = graph()
+        more = [('knowing1', 'significance1', 12), ('significance1', 'knowing1', 11), ('root1', 'knowing1', 10),
+                ('knowing1', 'root1', 13), ('map1', 'root1', 9)]
+        for a, b, n in more:
+            g['edges'] += [{'from': f'record:{a}', 'to': f'record:{b}', 'type': 'formal-reuse'}] * n
+        results, pairs, modules, concepts = spine.counts(g, ORDER)
+        return spine.layout(spine.spec(), results, pairs, 'en', 120)
 
-    def test_curves_stay_inside_the_ring_and_clear_of_the_grammar(self):
-        c = self.centres()
-        for a in ORDER:
-            for b in ORDER:
-                if a == b:
-                    continue
-                for lane in (0.0, 1.0):
-                    _, point = spine.curve(c[a], 40, c[b], 40, lane)
-                    x, y = point(0.5)
-                    d = math.hypot(x - spine.CX, y - spine.CY)
-                    self.assertLess(d, spine.RING - 40, (a, b, lane))
-                    self.assertGreater(d, 56, (a, b, lane))
+    def test_no_curve_comes_near_the_grammar(self):
+        L = self.layout()
+        for c in L['curves']:
+            for i in range(21):
+                x, y = c['point'](i / 20)
+                self.assertGreater(math.hypot(x - L['cx'], y - L['cy']), spine.GR + 6, (c['from'], c['to'], i))
+
+    def test_a_pair_across_the_ring_goes_round_one_side(self):
+        L = self.layout()
+        mids = {(c['from'], c['to']): c['point'](0.5) for c in L['curves'] if c['kind'] == 'formal-reuse'}
+        (x1, y1), (x2, y2) = mids[('knowing', 'significance')], mids[('significance', 'knowing')]
+        self.assertGreater((y1 - L['cy']) * (y2 - L['cy']), 0, 'both directions on the same side of the centre')
+        self.assertGreater(math.dist((x1, y1), (x2, y2)), 8, 'in different lanes')
 
     def test_two_directions_of_a_pair_take_different_lanes(self):
-        c = self.centres()
-        _, outer = spine.curve(c['root'], 40, c['map'], 40, 0.0)
-        _, inner = spine.curve(c['map'], 40, c['root'], 40, 1.0)
-        self.assertGreater(math.dist(outer(0.5), inner(0.5)), 20)
+        L = self.layout()
+        mids = {(c['from'], c['to']): c['point'](0.5) for c in L['curves'] if c['kind'] == 'formal-reuse'}
+        self.assertGreater(math.dist(mids[('root', 'knowing')], mids[('knowing', 'root')]), 8)
 
 
 class Checking(unittest.TestCase):
@@ -127,10 +130,35 @@ class Drawing(unittest.TestCase):
             self.assertIn('<title id="spine-title">', out)
             for t in s['theses']:
                 self.assertIn(f'>{t["id"]}</text>', out)
-        out = spine.svg(graph(), s, 'en')
-        # root to map (12) is drawn, darker since the root comes first; map to root (3) is under the threshold
-        self.assertIn('>12</text>', out)
-        self.assertNotIn('>3</text>', out.split('</defs>', 1)[1].split('How to read it')[0])
+        g = graph()
+        g['edges'] += [{'from': 'record:root1', 'to': 'record:map1', 'type': 'formal-reuse'}] * 4 + \
+            [{'from': 'record:knowing1', 'to': 'record:root1', 'type': 'formal-reuse'}] * 11
+        out = spine.svg(g, s, 'en')
+        drawing = out.split('</defs>', 1)[1].split('How to read it')[0]
+        # root to map (16) is drawn and its count written; knowing to root (11) is drawn and not written; map to root
+        # (3) is under the threshold and not drawn
+        self.assertIn('>16</text>', drawing)
+        self.assertNotIn('>11</text>', drawing)
+        self.assertNotIn('>3</text>', drawing)
+        self.assertIn('1 of 1 modules', drawing)
+
+    def test_fronts_carry_the_two_sentences_above_the_picture(self):
+        s = spine.spec()
+        for path, lang in (('theories/becoming/ONE-PAGE.md', 'en'), ('theories/becoming/THE-THEORY-OF-BECOMING.md', 'en'),
+                           ('theories/becoming/ONE-PAGE.zh.md', 'zh'), ('theories/becoming/THE-THEORY-OF-BECOMING.zh.md', 'zh')):
+            text = (ROOT / path).read_text(encoding='utf-8')
+            sentences = spine.how_to_read(s, lang)
+            self.assertIn(sentences, text, path)
+            self.assertLess(text.index(sentences), text.index('results/spine'), path)
+        self.assertIn('About a tenth of the 117', spine.how_to_read(s, 'en'))
+
+    def test_the_chinese_page(self):
+        page = spine.zh_page(graph())
+        self.assertIn(zh_fronts.nav_line(spine.PAGE_ZH), page)
+        self.assertIn('<a id="the-spine-what-it-shows-and-does-not-show"></a>', page)
+        self.assertIn('| 根 | 生成、守与退化 | 12 | 0 | 0 | 0 |', page)
+        self.assertIn('](spine.zh.svg)', page)
+        self.assertRegex(page, r'\*约 [0-9–]+ 分钟读完。\*')
 
     def test_section_tables_every_pair_and_counts_what_is_not_drawn(self):
         g = graph()

@@ -36,13 +36,20 @@ from tools.research import moves, registry, theory_graph
 ROOT = registry.ROOT
 DATA = 'theories/becoming/results/data/spine.json'
 SVG = {'en': 'theories/becoming/results/spine.svg', 'zh': 'theories/becoming/results/spine.zh.svg'}
+PAGE_ZH = 'theories/becoming/results/THEORY-GRAPH.zh.md'  # the Chinese of THEORY-GRAPH.md's spine sections
+ZH_REGIONS = {'process': '过程', 'retire': '待退役', 'unassigned': '尚未归属'}
 WORKFLOW = '_process/RESULT-WORKFLOW.md'
 DRAW_MIN = 10
 INTERPRETIVE_MIN = 3
 KINDS = ('formal-reuse', 'interpretive', 'application', 'related')
 W, H = 900, 900
-CX, CY, RING = 330, 560, 225
-LEGEND_X = 655
+RING = 250            # the chapters' ring
+CX, CY = W / 2, 470   # its centre; svg() sets the height below the header
+GR = 58               # the grammar's circle
+KEEP = GR + 26        # no curve between chapters comes nearer the centre
+LANE_STEP = 24        # between the lanes of pairs that pass near the grammar
+LABEL_MIN = 15        # counts written on the picture
+LEGEND_X = 470
 INK, MUTED, FAINT, PAPER = '#1c1917', '#57534e', '#a8a29e', '#fcfcfb'
 FORWARD, BACKWARD = '#8a817c', '#1c1917'
 FONT = {'en': 'Helvetica, Arial, sans-serif',
@@ -55,14 +62,14 @@ WORDS = {
         'grammar': 'The grammar', 'concepts': '{n} concepts',
         'results': '{n} results', 'within': '{n} within',
         'read': 'How to read it',
-        'size': 'Circle area: the chapter’s results.',
-        'formal': 'A use recorded as formal-reuse, a kind kept for “a verified inference using the cited result”: the arrow points to the chapter whose results are used; the number counts the uses.',
+        'size': 'Circle: a chapter, its area by its results; its number inside it; beside it, its name, its results and the formal-reuse uses within it.',
+        'formal': 'A use recorded as formal-reuse, a kind kept for “a verified inference using the cited result”: the arrow points to the chapter whose results are used; the number beside a curve counts its uses, written where it is {m} or more.',
         'backward': 'The same, darker where an earlier chapter’s results use a later one’s.',
         'interpretive': 'interpretive, kept for “an argument dependency” (dashed; pairs with {m} or more).',
         'application': 'application, a reused result with its correspondence and added premises (dotted).',
-        'spoke': 'Spoke width and k/m: k of the chapter’s m core modules state their laws on the grammar.',
-        'related': 'Not drawn: related, for analogy ({n} edges), and pairs under {m} uses; THEORY-GRAPH.md’s table of edge kinds between chapters has them all.',
-        'within_legend': 'In a circle, \u201cwithin\u201d counts formal-reuse between results of the same chapter.',
+        'spoke': 'Spoke, “k of m modules”: k of the chapter’s m core modules state their laws on the grammar. It counts modules, not results derived; its width is the share.',
+        'spoke_label': '{k} of {m} modules',
+        'related': 'Not drawn: related, for analogy ({n} edges), and pairs under {m} uses; counts under {k} are not written. THEORY-GRAPH.md’s table of edge kinds between chapters has them all.',
         'theses': 'The theses',
         'theses_note': 'T1–T8 at their homes; what each claims, its standing and its tests: the theses table in THEORY-GRAPH.md, “The spine”.',
         'premises': 'Two premises, each a hypothesis where used',
@@ -74,18 +81,18 @@ WORDS = {
         'grammar': '文法', 'concepts': '{n} 个概念',
         'results': '{n} 项结果', 'within': '章内使用 {n}',
         'read': '怎样读这幅图',
-        'size': '圆的面积：该章的结果数。',
-        'formal': '记为 formal-reuse 的使用（这一类只用于使用所引结果的已核验推理）：箭头指向被使用其结果的那一章，数字为使用次数。',
+        'size': '圆：一章，面积按其结果数；圆内是章号；圆旁是章名、结果数与章内 formal-reuse 使用数。',
+        'formal': '记为 formal-reuse 的使用（这一类只用于使用所引结果的已核验推理）：箭头指向被使用其结果的那一章；曲线旁的数字为其使用次数，{m} 次及以上才标出。',
         'backward': '同上；前面一章的结果使用后面一章的结果时，线色较深。',
         'interpretive': '诠释（interpretive），用于论证上的依赖（虚线；{m} 次及以上的配对）。',
         'application': '应用（application），一个被复用的结果，连同其对应与所添的前提（点线）。',
-        'spoke': '辐条的粗细与 k/m：该章 m 个核心模块中，有 k 个在文法上陈述其律。',
-        'related': '不画出：相关（related，用于类比，{n} 条边），以及少于 {m} 次使用的配对；理论图（THEORY-GRAPH.md）中各章之间边的种类表列出全部。',
-        'within_legend': '圆内的“章内使用”计同一章结果之间这样的使用。',
+        'spoke': '辐条，“m 个模块中 k 个”：该章 m 个核心模块中，有 k 个在文法上陈述其律。它计的是模块，不是推导而得的结果；粗细表示比例。',
+        'spoke_label': '{m} 个模块中 {k} 个',
+        'related': '不画出：相关（related，用于类比，{n} 条边），以及少于 {m} 次使用的配对；少于 {k} 次的不标数字。理论图脊柱部分的中文版（THEORY-GRAPH.zh.md）中各章之间边的种类表列出全部。',
         'theses': '论题',
-        'theses_note': 'T1 到 T8 在其所属之处；各自主张什么、地位如何、检验如何：见理论图（THEORY-GRAPH.md）“The spine”一节中的论题表。',
+        'theses_note': 'T1 到 T8 在其所属之处；各自主张什么、地位如何、检验如何：见理论图脊柱部分的中文版（THEORY-GRAPH.zh.md）中的论题表。',
         'premises': '两个前提，各在所用之处为假设',
-        'footer': '由 tools/research/spine.py 依 theory-graph.json 与 spine.json 生成；它显示什么、不显示什么，见 THEORY-GRAPH.md 的“The spine”。',
+        'footer': '由 tools/research/spine.py 依 theory-graph.json 与 spine.json 生成；它显示什么、不显示什么，见 THEORY-GRAPH.zh.md 的“脊柱”。',
     },
 }
 
@@ -263,39 +270,80 @@ def text(x, y, body, size=12, weight='normal', anchor='start', fill=INK, halo=Fa
             f'{escape(body)}</text>')
 
 
-def curve(a, ra, b, rb, lane):
-    """A quadratic curve from circle a to circle b on the ring, inside it: (path, its point at t).
+def width_of(body, size, bold=False):
+    """An estimate of a line's drawn width: a CJK character a full em, Latin letters by rough class."""
+    w = 0.0
+    for ch in body:
+        if ord(ch) > 0x2e80:
+            w += 1.0
+        elif ch in "iljI.,;:!|'’ ·":
+            w += 0.3
+        elif ch in 'mwMW':
+            w += 0.85
+        elif ch.isupper() or ch.isdigit():
+            w += 0.62
+        else:
+            w += 0.54
+    return w * size * (1.06 if bold else 1.0)
 
-    A chord's perpendicular bisector passes through the ring's centre, so the curve's middle is put on it at a
-    distance from the centre set by `lane` (0 the outer lane, 1 the inner): clear of the chapters between a and b
-    and of the grammar, the two directions of a pair in different lanes, and a pair across the ring passing on
-    either side of the grammar."""
+
+def overlaps(a, b, pad=0.0):
+    return not (a[2] + pad <= b[0] or b[2] + pad <= a[0] or a[3] + pad <= b[1] or b[3] + pad <= a[1])
+
+
+def clear_of_circle(box, circle, pad=0.0):
+    """Whether a box stays outside a circle (cx, cy, r) by `pad`."""
+    cx, cy, r = circle
+    nx, ny = min(max(cx, box[0]), box[2]), min(max(cy, box[1]), box[3])
+    return math.hypot(cx - nx, cy - ny) > r + pad
+
+
+def arc_span(start, end, through):
+    """The arc from angle `start` to `end` that passes `through`, as (from, length), counter-clockwise from `from`."""
+    tau = 2 * math.pi
+    ccw = (end - start) % tau
+    if (through - start) % tau <= ccw:
+        return start % tau, ccw
+    return end % tau, (start - end) % tau
+
+
+def spans_meet(a, b, margin=-0.05):
+    tau = 2 * math.pi
+    (s1, l1), (s2, l2) = a, b
+    return ((s2 - s1) % tau) < l1 + margin or ((s1 - s2) % tau) < l2 + margin
+
+
+def curve(a, ra, b, rb, d, centre=None, side=1):
+    """A quadratic curve from circle a to circle b inside the ring: (path, its point at t, attachment points).
+
+    Its middle stands on the perpendicular bisector of the chord, which passes through the ring's centre, at distance
+    `d` from that centre: on the chord's side, or for a chord through the centre on the side `side` picks. Callers keep
+    `d` at least KEEP, so no curve between chapters crosses the grammar."""
+    cx0, cy0 = centre or (CX, CY)
     (ax, ay), (bx, by) = a, b
     mx, my = (ax + bx) / 2, (ay + by) / 2
-    h = math.hypot(mx - CX, my - CY)
+    h = math.hypot(mx - cx0, my - cy0)
     if h > 1:
-        ux, uy = (mx - CX) / h, (my - CY) / h
-        outer, inner = (h - 28, h - 66) if h > 150 else (h + 20, max(h - 20, 86))
-        d = outer + (inner - outer) * lane
+        ux, uy = (mx - cx0) / h, (my - cy0) / h
     else:
         dx, dy = bx - ax, by - ay
-        ux, uy = -dy / math.hypot(dx, dy), dx / math.hypot(dx, dy)
-        d = 80 + 30 * lane
-    px, py = CX + ux * d, CY + uy * d
-    cx, cy = 2 * px - mx, 2 * py - my
+        length = math.hypot(dx, dy)
+        ux, uy = -dy / length * side, dx / length * side
+    px, py = cx0 + ux * d, cy0 + uy * d
+    qx, qy = 2 * px - mx, 2 * py - my
 
-    def towards(sx, sy, qx, qy, r):
-        dist = math.hypot(qx - sx, qy - sy)
-        return sx + (qx - sx) * r / dist, sy + (qy - sy) * r / dist
+    def towards(sx, sy, tx, ty, r):
+        dist = math.hypot(tx - sx, ty - sy)
+        return sx + (tx - sx) * r / dist, sy + (ty - sy) * r / dist
 
-    p0 = towards(ax, ay, cx, cy, ra + 2)
-    p2 = towards(bx, by, cx, cy, rb + 3)
+    p0 = towards(ax, ay, qx, qy, ra + 2)
+    p2 = towards(bx, by, qx, qy, rb + 3)
 
     def point(t):
         u = 1 - t
-        return (u * u * p0[0] + 2 * u * t * cx + t * t * p2[0], u * u * p0[1] + 2 * u * t * cy + t * t * p2[1])
+        return (u * u * p0[0] + 2 * u * t * qx + t * t * p2[0], u * u * p0[1] + 2 * u * t * qy + t * t * p2[1])
 
-    return f'M{f(p0[0])},{f(p0[1])} Q{f(cx)},{f(cy)} {f(p2[0])},{f(p2[1])}', point
+    return f'M{f(p0[0])},{f(p0[1])} Q{f(qx)},{f(qy)} {f(p2[0])},{f(p2[1])}', point, (p0, p2)
 
 
 def short_name(s, k, lang):
@@ -306,17 +354,156 @@ def short_name(s, k, lang):
     return stem.replace('-', ' ').capitalize()
 
 
-def place(mid_of, circles, taken):
-    """The first point along a curve (by `mid_of(t)`) clear of every circle and every label already placed."""
-    for t in (0.5, 0.42, 0.58, 0.34, 0.66, 0.27, 0.73, 0.2, 0.8):
-        x, y = mid_of(t)
-        if all(math.hypot(x - cx, y - cy) > cr + 9 for cx, cy, cr in circles) and \
-                all(abs(x - tx) > 26 or abs(y - ty) > 17 for tx, ty in taken):
-            taken.append((x, y))
-            return x, y
-    x, y = mid_of(0.5)
-    taken.append((x, y))
-    return x, y
+def place_box(candidates, w, h, circles, boxes, pad=2.0, soft=()):
+    """The first candidate centre, in the order given, whose w×h box is clear of every circle and box and crosses
+    the fewest `soft` points (x, y, r: the curves under it); a box no candidate clears takes the fewest hits."""
+    best = None
+    for x, y in candidates:
+        box = (x - w / 2, y - h / 2, x + w / 2, y + h / 2)
+        hard = sum(not clear_of_circle(box, c, pad) for c in circles) + sum(overlaps(box, b, pad) for b in boxes)
+        crossed = sum(not clear_of_circle(box, c) for c in soft)
+        score = (hard, crossed)
+        if best is None or score < best[0]:
+            best = (score, box)
+        if score == (0, 0):
+            break
+    return best[1]
+
+
+def along(point, prefer, away=None, offsets=(0, 9, 17)):
+    """Candidate centres on and beside a curve, nearest `prefer` first; with `away` (a point and a sign: +1 away from
+    it, -1 towards it), only on that side of the curve, so a count stays on its own curve's side of its pair."""
+    ts = sorted((i / 50 for i in range(8, 43)), key=lambda t: abs(t - prefer))
+    out = []
+    for t in ts:
+        (x0, y0), (x1, y1) = point(max(0.0, t - 0.01)), point(min(1.0, t + 0.01))
+        dx, dy = x1 - x0, y1 - y0
+        length = math.hypot(dx, dy) or 1
+        nx, ny = -dy / length, dx / length
+        x, y = point(t)
+        signs = (1, -1)
+        if away is not None:
+            (ox, oy), sgn = away
+            signs = (sgn if nx * (x - ox) + ny * (y - oy) >= 0 else -sgn,)
+        out += [(x + nx * o * s, y + ny * o * s) for o in offsets for s in signs]
+    return out
+
+
+def layout(s, results, pairs, lang, top):
+    """Where everything on the ring goes: centres, radii, the chapters' label blocks, the curves with their lanes."""
+    order = s['order']
+    words = WORDS[lang]
+    n = len(order)
+    r = {k: radius(results[k]) for k in order}
+    angle = {k: -math.pi / 2 + i * 2 * math.pi / n for i, k in enumerate(order)}
+    rank = {k: i for i, k in enumerate(order)}
+
+    def block_lines(k):
+        name = short_name(s, k, lang)
+        if lang == 'en' or len(name) <= 7:
+            names = [name]
+        elif '、' in name:  # at the enumeration comma nearest the middle
+            cut = min((i for i, ch in enumerate(name) if ch == '、'), key=lambda i: abs(i - len(name) / 2)) + 1
+            names = [name[:cut], name[cut:]]
+        else:
+            names = wrap(name, 14, lang)
+        within = pairs.get((k, k), dict.fromkeys(KINDS, 0))['formal-reuse']
+        counted = words['results'].format(n=results[k]) + (' · ' + words['within'].format(n=within) if within else '')
+        return [(line, 16, 'bold', INK) for line in names] + [(counted, 13, 'normal', MUTED)]
+
+    def block_height(lines):
+        return sum(19 if size >= 16 else 17 for _, size, *_ in lines)
+
+    first = order[0]
+    cy = top + 18 + block_height(block_lines(first)) + 8 + r[first] + RING
+    cx = CX
+    centre = {k: (cx + RING * math.cos(angle[k]), cy + RING * math.sin(angle[k])) for k in order}
+    # label blocks: above a chapter in the upper part of the ring, below every other, centred on it
+    blocks = {}
+    for k in order:
+        lines = block_lines(k)
+        x, y = centre[k]
+        height = block_height(lines)
+        widest = max(width_of(line, size, weight == 'bold') for line, size, weight, _ in lines)
+        y0 = y - r[k] - 9 - height if math.sin(angle[k]) < -0.3 else y + r[k] + 7
+        blocks[k] = {'lines': lines, 'box': (x - widest / 2, y0, x + widest / 2, y0 + height), 'x': x}
+    # curves: the pairs drawn, their base distance from the centre, long pairs given lanes that do not meet
+    drawn = []
+    for (a, b), c in sorted(pairs.items(), key=lambda kv: (rank.get(kv[0][0], 99), rank.get(kv[0][1], 99))):
+        if a == b or a not in rank or b not in rank:
+            continue
+        for kind, minimum in (('formal-reuse', DRAW_MIN), ('interpretive', INTERPRETIVE_MIN), ('application', 1)):
+            if c[kind] >= minimum:
+                drawn.append({'from': a, 'to': b, 'kind': kind, 'n': c[kind]})
+    groups = {}
+    for e in drawn:
+        groups.setdefault(frozenset((e['from'], e['to'])), []).append(e)
+
+    def chord_mid(a, b):
+        (ax, ay), (bx, by) = centre[a], centre[b]
+        return (ax + bx) / 2, (ay + by) / 2
+
+    base = {}
+    for g in groups:
+        a, b = sorted(g, key=rank.get)
+        mx, my = chord_mid(a, b)
+        h = math.hypot(mx - cx, my - cy)
+        base[g] = max(KEEP + 16, h - (16 if h > 0.85 * RING else 32))
+    # a chord through the centre goes round on the side with less weight of other curves near it
+    side = {}
+    for g in groups:
+        a, b = sorted(g, key=rank.get)
+        mx, my = chord_mid(a, b)
+        if math.hypot(mx - cx, my - cy) > 1:
+            continue
+        (ax, ay), (bx, by) = centre[a], centre[b]
+        length = math.hypot(bx - ax, by - ay)
+        best = None
+        for sgn in (1, -1):
+            px, py = cx - (by - ay) / length * sgn * base[g], cy + (bx - ax) / length * sgn * base[g]
+            weight = 0.0
+            for h, es in groups.items():
+                if h == g:
+                    continue
+                p, q = sorted(h, key=rank.get)
+                hx, hy = chord_mid(p, q)
+                weight += sum(e['n'] for e in es) / (1 + math.hypot(px - hx, py - hy) / 60)
+            if best is None or weight < best[0]:
+                best = (weight, sgn)
+        side[g] = best[1]
+    # lanes: long pairs (those passing near the grammar) take the first level whose arcs they do not meet
+    level, taken = {}, {}
+    long_pairs = sorted((g for g in groups if base[g] < 0.66 * RING), key=lambda g: base[g])
+
+    def span(g):
+        a, b = sorted(g, key=rank.get)
+        mx, my = chord_mid(a, b)
+        if math.hypot(mx - cx, my - cy) > 1:
+            through = math.atan2(my - cy, mx - cx)
+        else:
+            (ax, ay), (bx, by) = centre[a], centre[b]
+            length = math.hypot(bx - ax, by - ay)
+            through = math.atan2((bx - ax) / length * side[g], -(by - ay) / length * side[g])
+        return arc_span(angle[a], angle[b], through)
+
+    for g in sorted(long_pairs, key=lambda g: (base[g], span(g)[1])):
+        lv = 0  # pairs at the same base distance share lanes; a lane holds arcs that do not meet
+        while any(spans_meet(span(g), span(h)) for h in taken.get((round(base[g]), lv), [])):
+            lv += 1
+        taken.setdefault((round(base[g]), lv), []).append(g)
+        level[g] = lv
+    curves = []
+    for g, es in groups.items():
+        a0 = min(g, key=rank.get)
+        d0 = base[g] + LANE_STEP * level.get(g, 0)
+        for e in es:
+            outward = 1 if e['from'] == a0 else -1
+            offset = {'formal-reuse': 6 * outward, 'interpretive': 17 * outward, 'application': 25 * outward}[e['kind']]
+            # the side of a chord through the centre is read from the pair's first chapter, so both directions agree
+            path, point, ends = curve(centre[e['from']], r[e['from']], centre[e['to']], r[e['to']], d0 + offset,
+                                      (cx, cy), side.get(g, 1) * outward)
+            curves.append({**e, 'path': path, 'point': point, 'ends': ends, 'outward': outward})
+    return {'centre': centre, 'r': r, 'angle': angle, 'cy': cy, 'cx': cx, 'blocks': blocks, 'curves': curves, 'rank': rank}
 
 
 def svg(graph, s, lang):
@@ -324,13 +511,6 @@ def svg(graph, s, lang):
     order = s['order']
     results, pairs, modules, concepts = counts(graph, order)
     related = sum(v['related'] for v in pairs.values())
-    centre = {}
-    for i, key in enumerate(order):
-        angle = -math.pi / 2 + i * 2 * math.pi / len(order)
-        centre[key] = (CX + RING * math.cos(angle), CY + RING * math.sin(angle), angle)
-    r = {k: radius(results[k]) for k in order}
-    circles = [(CX, CY, 50)] + [(centre[k][0], centre[k][1], r[k]) for k in order]
-    taken = []
     out = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" '
            f'aria-labelledby="spine-title spine-desc" font-family="{FONT[lang]}">',
            f'<title id="spine-title">{escape(words["title"])}</title>',
@@ -347,6 +527,7 @@ def svg(graph, s, lang):
     for line in wrap(words['subtitle'], 100 if lang == 'en' else 92, lang):
         out.append(text(24, y, line, 15, fill=MUTED))
         y += 19
+    top = y - 19 + 6
     standing = s.get('standing', {}).get(lang)
     if standing:
         y += 8
@@ -356,151 +537,160 @@ def svg(graph, s, lang):
         out.append(f'<rect x="20" y="{y - 17}" width="{W - 40}" height="{12 + 20 * len(lines)}" rx="6" fill="#f5f5f4" stroke="#e7e5e4"/>')
         for i, line in enumerate(lines):
             out.append(text(32, y + 20 * i, line, 15, 'bold' if i == 0 else 'normal', fill=INK))
+        top = y - 17 + 12 + 20 * len(lines)
+    L = layout(s, results, pairs, lang, top)
+    centre, r, angle, cx, cy = L['centre'], L['r'], L['angle'], L['cx'], L['cy']
+    circles = [(cx, cy, GR)] + [(centre[k][0], centre[k][1], r[k]) for k in order]
+    boxes = [b['box'] for b in L['blocks'].values()]
     # spokes to the grammar, their width by the share of the chapter's modules stated on it
     for k in order:
-        x, y0, a = centre[k]
-        gx, gy = CX + 52 * math.cos(a), CY + 52 * math.sin(a)
+        x, y0 = centre[k]
+        a = angle[k]
+        gx, gy = cx + (GR + 2) * math.cos(a), cy + (GR + 2) * math.sin(a)
         sx, sy = x - (r[k] + 2) * math.cos(a), y0 - (r[k] + 2) * math.sin(a)
         share = modules[k][1] / modules[k][0] if modules[k][0] else 0
         out.append(f'<line x1="{f(sx)}" y1="{f(sy)}" x2="{f(gx)}" y2="{f(gy)}" stroke="{FAINT}" stroke-opacity="0.75" '
                    f'stroke-width="{f(1 + 9 * share)}" stroke-linecap="round"/>')
-    out.append(f'<circle cx="{CX}" cy="{CY}" r="50" fill="#f5f5f4" stroke="{INK}" stroke-width="1.5"/>')
-    out.append(text(CX, CY - 3, words['grammar'], 16, 'bold', 'middle'))
-    out.append(text(CX, CY + 16, words['concepts'].format(n=concepts), 13, anchor='middle', fill=MUTED))
-    # edges between regions
-    rank = {k: i for i, k in enumerate(order)}
-    labels = []
-    for (a, b), c in sorted(pairs.items(), key=lambda kv: (rank.get(kv[0][0], 99), rank.get(kv[0][1], 99))):
-        if a == b or a not in rank or b not in rank:
-            continue
-        (ax, ay, _), (bx, by, _) = centre[a], centre[b]
-        first = (rank[b] - rank[a]) % len(order) <= len(order) // 2
-        for kind, minimum, lane in (('formal-reuse', DRAW_MIN, 0.0 if first else 1.0),
-                                    ('interpretive', INTERPRETIVE_MIN, 0.35 if first else 0.65),
-                                    ('application', 1, 0.65 if first else 0.35)):
-            n = c[kind]
-            if n < minimum:
-                continue
-            path, mid_of = curve((ax, ay), r[a], (bx, by), r[b], lane)
-            if kind == 'formal-reuse':
-                back = rank[a] < rank[b]
-                colour = BACKWARD if back else FORWARD
-                out.append(f'<path d="{path}" fill="none" stroke="{colour}" stroke-opacity="0.85" '
-                           f'stroke-width="{f(0.8 + 0.8 * math.sqrt(n))}" marker-end="url(#{"back" if back else "fwd"})"/>')
-                lx, ly = place(mid_of, circles, taken)
-                labels.append(text(lx, ly + 5, str(n), 14, 'bold' if back else 'normal', 'middle', colour, True))
-                continue
-            style = 'stroke-dasharray="6 4" marker-end="url(#thin)"' if kind == 'interpretive' else \
+    out.append(f'<circle cx="{f(cx)}" cy="{f(cy)}" r="{GR}" fill="#f5f5f4" stroke="{INK}" stroke-width="1.5"/>')
+    out.append(text(cx, cy - 2, words['grammar'], 15 if lang == 'en' else 17, 'bold', 'middle'))
+    out.append(text(cx, cy + 16, words['concepts'].format(n=concepts), 12, anchor='middle', fill=MUTED))
+    # curves between chapters
+    for c in L['curves']:
+        if c['kind'] == 'formal-reuse':
+            back = L['rank'][c['from']] < L['rank'][c['to']]
+            colour = BACKWARD if back else FORWARD
+            out.append(f'<path d="{c["path"]}" fill="none" stroke="{colour}" stroke-opacity="0.85" '
+                       f'stroke-width="{f(0.8 + 0.8 * math.sqrt(c["n"]))}" marker-end="url(#{"back" if back else "fwd"})"/>')
+        else:
+            style = 'stroke-dasharray="6 4" marker-end="url(#thin)"' if c['kind'] == 'interpretive' else \
                 'stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"'
-            out.append(f'<path d="{path}" fill="none" stroke="{MUTED}" stroke-width="1.7" {style}/>')
-            lx, ly = place(mid_of, circles, taken)
-            labels.append(text(lx, ly + 5, str(n), 13, anchor='middle', fill=MUTED, halo=True))
-    # the k/m of each spoke, where it is clear of the curves' numbers
+            out.append(f'<path d="{c["path"]}" fill="none" stroke="{MUTED}" stroke-width="1.7" {style}/>')
+    # chapters: the number inside, the name and counts beside
     for k in order:
-        x, y0, a = centre[k]
-        d0, d1 = 52, RING - r[k] - 2
-        lx, ly = place(lambda t: (CX + (d0 + (d1 - d0) * t) * math.cos(a), CY + (d0 + (d1 - d0) * t) * math.sin(a)), circles, taken)
-        labels.append(text(lx, ly + 5, f'{modules[k][1]}/{modules[k][0]}', 13, anchor='middle', fill=MUTED, halo=True))
-    # regions
-    low = CY + RING
-    for k in order:
-        x, y0, a = centre[k]
-        within = pairs.get((k, k), dict.fromkeys(KINDS, 0))
+        x, y0 = centre[k]
         out.append(f'<circle cx="{f(x)}" cy="{f(y0)}" r="{f(r[k])}" fill="#ffffff" stroke="{INK}" stroke-width="1.5"/>')
-        name = short_name(s, k, lang)
-        if lang == 'en' or len(name) <= 6:
-            names = [name]
-        elif '、' in name:  # at the enumeration comma nearest the middle
-            cut = min((i for i, ch in enumerate(name) if ch == '、'), key=lambda i: abs(i - len(name) / 2)) + 1
-            names = [name[:cut], name[cut:]]
-        else:
-            names = wrap(name, 10, lang)
-        block = [(s['chapters'][k]['file'][:2] + ' ' + line if i == 0 else line, 17, 'bold', INK) for i, line in enumerate(names)]
-        block.append((words['results'].format(n=results[k]), 14, 'normal', MUTED))
-        if within['formal-reuse']:
-            block.append((words['within'].format(n=within['formal-reuse']), 14, 'normal', MUTED))
-        height = 18 * len(block)
-        widest = max((sum(size * (0.56 if ord(ch) < 0x2e80 else 1.0) for ch in line) for line, size, *_ in block), default=0)
-        if height <= 1.5 * r[k] and widest <= 1.95 * r[k]:
-            top = y0 - 9 * (len(block) - 1)
-            for i, (line, size, weight, fill) in enumerate(block):
-                out.append(text(x, top + 18 * i + 5, line, size, weight, 'middle', fill))
-        else:
-            ox, oy = math.cos(a), math.sin(a)
-            if abs(oy) > 0.3:  # above a circle in the upper half, below one in the lower, centred
-                bx, anchor = x, 'middle'
-                by = y0 - r[k] - 14 if oy < 0 else y0 + r[k] + 20
-                top = by - 18 * (len(block) - 1) if oy < 0 else by
-            else:  # a side circle: below it, centred, so the text stays on the page
-                bx, anchor, top = x, 'middle', y0 + r[k] + 20
-            for i, (line, size, weight, fill) in enumerate(block):
-                out.append(text(bx, top + 18 * i + 5, line, size, weight, anchor, fill, True))
-            low = max(low, top + 18 * len(block))
-    out += labels
-    # theses at their homes, as badges; chapter 7's below its premises' arrows
+        size = min(22, round(0.75 * r[k]))
+        out.append(text(x, y0 + size * 0.36, s['chapters'][k]['file'][:2], size, 'bold', 'middle', MUTED))
+        b = L['blocks'][k]
+        yy = b['box'][1]
+        for line, size, weight, fill in b['lines']:
+            yy += 19 if size >= 16 else 17
+            out.append(text(b['x'], yy - 4, line, size, weight, 'middle', fill, True))
+    # the theses at their homes, as badges, where they clear the label, the spoke, the curves' ends and the premises
+    attach = {k: [] for k in order}
+    for c in L['curves']:
+        attach[c['from']].append(c['ends'][0])
+        attach[c['to']].append(c['ends'][1])
+    for k in order:
+        attach[k].append((centre[k][0] - (r[k] + 2) * math.cos(angle[k]), centre[k][1] - (r[k] + 2) * math.sin(angle[k])))
+    premise_entry = [math.radians(150 + 16 * i) for i in range(len(s['premises']))]
+    for i, a in enumerate(premise_entry):
+        sx, sy = centre['significance']
+        attach['significance'].append((sx + (r['significance'] + 4) * math.cos(a), sy + (r['significance'] + 4) * math.sin(a)))
     at = {}
     for t in s['theses']:
         at.setdefault(t['home'], []).append(t)
+    badges = []
     for k, ts in at.items():
-        x, y0, a = centre[k]
-        base = a + 0.95 if k == 'significance' else a + 0.85 if k == 'collective' else a
-        for i, t in enumerate(ts):
-            phi = base + (i - (len(ts) - 1) / 2) * 0.5
-            px, py = x + (r[k] + 11) * math.cos(phi), y0 + (r[k] + 11) * math.sin(phi)
+        x, y0 = centre[k]
+        reach = r[k] + 13
+        step = 33 / reach
+        best = None
+        for j in range(72):
+            phi = j * 2 * math.pi / 72
+            spots = [(x + reach * math.cos(phi + (i - (len(ts) - 1) / 2) * step),
+                      y0 + reach * math.sin(phi + (i - (len(ts) - 1) / 2) * step)) for i in range(len(ts))]
+            score = min(
+                [math.hypot(px - qx, py - qy) - 21 for px, py in spots for qx, qy in attach[k]] +
+                [math.hypot(px - ox, py - oy) - orr - 17 for px, py in spots for ox, oy, orr in circles if (ox, oy) != (x, y0)] +
+                [0 if clear_of_circle(bx, (px, py, 17)) else -40 for px, py in spots for bx in boxes] +
+                [min(px - 16, W - 16 - px) for px, _ in spots])
+            if best is None or score > best[0]:
+                best = (score, spots)
+        for t, (px, py) in zip(ts, best[1]):
+            badges.append((px, py, 15))
             colour = s['outcomes'][t['outcome']]['colour']
             label = '#ffffff' if t['outcome'] == 'partial' else INK
             out.append(f'<circle cx="{f(px)}" cy="{f(py)}" r="15" fill="{colour}" stroke="{INK}" stroke-width="1.2"/>')
             out.append(text(px, py + 5, t['id'], 13, 'bold', 'middle', label))
-    # the premises, stacked below the ring at the left, their arrows up the left margin into chapter 7
-    sx, sy, _ = centre['significance']
-    y = max(CY + RING + 90, low + 40)
-    out.append(text(20, y, words['premises'], 15, 'bold', fill=MUTED))
+    # the words on the spokes, then the counts of 15 and more by their arrowheads, each clear of what is drawn
+    labels = []
+    obstacles = circles + badges
+    under = {id(c): [(*c['point'](i / 25), 1.5 + (0.4 + 0.4 * math.sqrt(c['n']) if c['kind'] == 'formal-reuse' else 1))
+                     for i in range(26)] for c in L['curves']}
+    for k in order:
+        a = angle[k]
+        d0, d1 = GR + 4, RING - r[k] - 4
+        body = words['spoke_label'].format(k=modules[k][1], m=modules[k][0])
+        w, h = width_of(body, 12) + 6, 15
+        spots = [(cx + (d0 + (d1 - d0) * t) * math.cos(a), cy + (d0 + (d1 - d0) * t) * math.sin(a))
+                 for t in (0.5, 0.42, 0.58, 0.34, 0.66, 0.26, 0.74)]
+        box = place_box(spots, w, h, obstacles, boxes + [l[0] for l in labels], soft=[pt for c in L['curves'] for pt in under[id(c)]])
+        labels.append((box, text((box[0] + box[2]) / 2, box[3] - 3.5, body, 12, anchor='middle', fill=MUTED, halo=True)))
+    for c in sorted(L['curves'], key=lambda c: -c['n']):
+        if c['kind'] != 'formal-reuse' or c['n'] < LABEL_MIN:
+            continue
+        back = L['rank'][c['from']] < L['rank'][c['to']]
+        body = str(c['n'])
+        w, h = width_of(body, 14, back) + 6, 16
+        soft = [pt for other in L['curves'] if other is not c for pt in under[id(other)]]
+        sibling = any(o['kind'] == 'formal-reuse' and o['from'] == c['to'] and o['to'] == c['from'] for o in L['curves'])
+        away = ((L['cx'], L['cy']), 1 if c['outward'] > 0 else -1) if sibling else None
+        box = place_box(along(c['point'], 0.5, away), w, h, obstacles, boxes + [l[0] for l in labels], soft=soft)
+        labels.append((box, text((box[0] + box[2]) / 2, box[3] - 3.5, body, 14, 'bold' if back else 'normal', 'middle',
+                                 BACKWARD if back else FORWARD, True)))
+    out += [l[1] for l in labels]
+    low = max([b[3] for b in boxes] + [centre[k][1] + r[k] for k in order] + [py + 15 for _, py, _ in badges]) + 40
+    # left column: the premises, their arrows up the left margin into chapter 7, then the theses' key
+    sx, sy = centre['significance']
+    y = low
+    out.append(text(36, y, words['premises'], 15, 'bold', fill=MUTED))
     y += 12
-    premise_bottom = y
     for i, p in enumerate(s['premises']):
-        first = wrap(p[lang]['lines'][0], 40 if lang == 'en' else 38, lang)
-        rest = [l for raw in p[lang]['lines'][1:] for l in wrap(raw, 46 if lang == 'en' else 42, lang)]
-        bx, bw = 36, 330
+        first = wrap(p[lang]['lines'][0], 46 if lang == 'en' else 40, lang)
+        rest = [l for raw in p[lang]['lines'][1:] for l in wrap(raw, 52 if lang == 'en' else 46, lang)]
+        bx, bw = 36, 390
         bh = 16 + 19 * (len(first) + len(rest))
         out.append(f'<rect x="{bx}" y="{y}" width="{bw}" height="{bh}" rx="6" fill="#ffffff" stroke="{INK}" stroke-dasharray="5 3"/>')
         for j, line in enumerate(first + rest):
             out.append(text(bx + 10, y + 22 + 19 * j, line, 15 if j < len(first) else 14,
                             'bold' if j < len(first) else 'normal', fill=INK if j < len(first) else MUTED))
         ex, ey = bx, y + 18
-        target = math.radians(150 + 16 * i)
+        target = premise_entry[i]
         tx, ty = sx + (r['significance'] + 4) * math.cos(target), sy + (r['significance'] + 4) * math.sin(target)
         lane = 14 + 9 * i
         out.append(f'<path d="M{f(ex)},{f(ey)} L{lane},{f(ey)} L{lane},{f(ty + 30)} Q{lane},{f(ty)} {f(tx)},{f(ty)}" fill="none" '
                    f'stroke="{INK}" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#back)"/>')
         y += bh + 12
-        premise_bottom = y
-    # legend
-    x0, y = LEGEND_X, CY - RING - 20
+    y += 18
+    out.append(text(20, y, words['theses'], 16, 'bold'))
+    y += 26
+    for key, o in s['outcomes'].items():
+        out.append(f'<circle cx="{20 + 13}" cy="{y - 5}" r="10" fill="{o["colour"]}" stroke="{INK}" stroke-width="1.2"/>')
+        y = legend_line(out, 20, y, o[lang], lang, size=14, width=46 if lang == 'en' else 40, step=18)
+    y = legend_line(out, -16, y + 4, words['theses_note'], lang, size=14, width=52 if lang == 'en' else 46, step=18)
+    left_bottom = y
+    # right column: how to read it
+    x0, y = LEGEND_X, low
     out.append(text(x0, y, words['read'], 16, 'bold'))
     y += 26
     out.append(f'<circle cx="{x0 + 13}" cy="{y - 5}" r="10" fill="#ffffff" stroke="{INK}" stroke-width="1.5"/>')
-    y = legend_line(out, x0, y, words['size'], lang, size=14, width=28 if lang == 'en' else 26, step=18)
+    out.append(text(x0 + 13, y - 1, '01', 10, 'bold', 'middle', MUTED))
+    width = 50 if lang == 'en' else 42
+    y = legend_line(out, x0, y, words['size'], lang, size=14, width=width, step=18)
     samples = [
-        (f'<line x1="{x0}" y1="{{y}}" x2="{x0 + 26}" y2="{{y}}" stroke="{FORWARD}" stroke-width="3.2" marker-end="url(#fwd)"/>', words['formal']),
+        (f'<line x1="{x0}" y1="{{y}}" x2="{x0 + 26}" y2="{{y}}" stroke="{FORWARD}" stroke-width="3.2" marker-end="url(#fwd)"/>', words['formal'].format(m=LABEL_MIN)),
         (f'<line x1="{x0}" y1="{{y}}" x2="{x0 + 26}" y2="{{y}}" stroke="{BACKWARD}" stroke-width="3.2" marker-end="url(#back)"/>', words['backward']),
         (f'<line x1="{x0}" y1="{{y}}" x2="{x0 + 26}" y2="{{y}}" stroke="{MUTED}" stroke-width="1.7" stroke-dasharray="6 4" marker-end="url(#thin)"/>', words['interpretive'].format(m=INTERPRETIVE_MIN)),
         (f'<line x1="{x0}" y1="{{y}}" x2="{x0 + 26}" y2="{{y}}" stroke="{MUTED}" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>', words['application']),
         (f'<line x1="{x0}" y1="{{y}}" x2="{x0 + 26}" y2="{{y}}" stroke="{FAINT}" stroke-width="6" stroke-linecap="round"/>', words['spoke']),
-        ('', words['within_legend']),
-        ('', words['related'].format(n=f'{related:,}' if lang == 'en' else related, m=DRAW_MIN)),
+        ('', words['related'].format(n=f'{related:,}' if lang == 'en' else related, m=DRAW_MIN, k=LABEL_MIN)),
     ]
     for mark, body in samples:
         if mark:
             out.append(mark.format(y=f(y - 5)))
-        y = legend_line(out, x0, y, body, lang, size=14, width=28 if lang == 'en' else 26, step=18)
-    y += 10
-    out.append(text(x0, y, words['theses'], 16, 'bold'))
-    y += 26
-    for key, o in s['outcomes'].items():
-        out.append(f'<circle cx="{x0 + 13}" cy="{y - 5}" r="10" fill="{o["colour"]}" stroke="{INK}" stroke-width="1.2"/>')
-        y = legend_line(out, x0, y, o[lang], lang, size=14, width=28 if lang == 'en' else 26, step=18)
-    y = legend_line(out, x0 - 36, y + 4, words['theses_note'], lang, size=14, width=33 if lang == 'en' else 30, step=18)
-    height = max(H, int(max(y, premise_bottom)) + 50)
+        y = legend_line(out, x0, y, body, lang, size=14, width=width, step=18)
+    height = int(max(y, left_bottom)) + 50
     for i, line in enumerate(wrap(words['footer'], 120 if lang == 'en' else 110, lang)):
         out.append(text(24, height - 30 + 15 * i, line, 12, fill=MUTED))
     out.append('</svg>')
@@ -539,6 +729,26 @@ def description(results, pairs, s, lang):
             f'their homes, coloured by test outcome.')
 
 
+def how_to_read(s, lang):
+    """The two sentences above the picture wherever it is shown: what its marks are, and the standings in plain words,
+    the numbers from 08 §7's phrases in spine.json (the one-page fronts copy them, and a test holds them to this)."""
+    n = {phrase_n: int(phrase_n) for phrase_n, *_ in s['standing']['counts']}
+    total, d, h, c, rest = n['117'], n['11'], n['1'], n['6'], n['99']
+    share = (d + h) / total
+    if lang == 'zh':
+        about = '约十分之一' if 0.085 <= share <= 0.115 else f'{d + h} 项'
+        return (f'每个圆是一章，按其结果数定大小；从一章到另一章的曲线，计其结果在已核验的推理中使用另一章结果的次数；'
+                f'辐条标出该章有多少模块在中央的文法上陈述其律（计的是模块，不是推导而得的结果）。{total} 项核心声明中，'
+                f'{about}被读作根之律的情形（{d} 项推导而得，{h} 项在一个所述的假设之下）；其余或为计数之律，位于文法以下'
+                f'（{c} 项），或处于一个指明的距离，各有其理由（{rest} 项）。')
+    about = 'About a tenth' if 0.085 <= share <= 0.115 else f'{d + h}'
+    return (f'Each circle is a chapter, sized by its results; a curve from one chapter to another counts how often its '
+            f'results use the other\'s in verified inferences, and a spoke says how many of the chapter\'s modules state their '
+            f'laws on the grammar at the centre (modules, not results derived). {about} of the {total} central declarations '
+            f'are read as cases of the root\'s laws ({d} derived, {h} under a stated hypothesis); the rest are counting laws '
+            f'below the grammar ({c}) or stand at a named distance, each with its reason ({rest}).')
+
+
 def plural(n, noun):
     return f'{n} {noun}' + ('' if n == 1 else 's')
 
@@ -567,12 +777,13 @@ def lead(graph, page_path):
     counts_by = {n: phrase for n, path, phrase in st.get('counts', [])}
     m08 = 'theories/becoming/chapters/08-METHOD.md'
     lines = ['## The spine', '',
+             f'**How to read it.** {how_to_read(s, "en")}', '',
              f'![The eight chapters around the grammar: circles sized by their results, curves counting the uses between '
              f'chapters\' results, the continuation condition and C coming into chapter 7 as premises, and T1 to T8 at their '
              f'homes coloured by test outcome]({rel(SVG["en"])})', '',
              f'*Generated by `tools/research/spine.py` from this graph and [spine.json]({rel(DATA)}); '
-             f'[Chinese edition]({rel(SVG["zh"])}).*', '',
-             f'**Reading it.** Each circle is one of the eight chapters, its size the number of results it holds; the '
+             f'[the Chinese of these sections]({rel(PAGE_ZH)}), with [its picture]({rel(SVG["zh"])}).*', '',
+             f'**Reading it closely.** Each circle is one of the eight chapters, its size the number of results it holds; the '
              f'grammar, the root\'s vocabulary, is at the centre, and a spoke\'s width shows what share of the chapter\'s core '
              f'modules state their laws on it. A curve from one chapter to another counts the uses of the second\'s results '
              f'by the first\'s recorded as `formal-reuse`, a kind RESULT-WORKFLOW keeps for a verified inference: {total:,} '
@@ -670,8 +881,105 @@ def section(graph, page_path):
     return lines
 
 
+def zh_page(graph):
+    """THEORY-GRAPH.zh.md: the Chinese of THEORY-GRAPH.md's spine sections (the picture, how to read it, the standings,
+    the theses, what it shows and does not, the table of edge kinds), so the Chinese fronts link no English anchor.
+    The quotations are spine.json's AI translations of their homes; the region lists stay in the English page."""
+    from tools.research import navigation, zh_fronts
+    s = spec()
+    order = s['order']
+    results, pairs, modules, concepts = counts(graph, order)
+    here = Path(PAGE_ZH).parent
+
+    def rel(path, anchor=''):
+        return os.path.relpath(path, here) + (f'#{anchor}' if anchor else '')
+
+    def zname(k):
+        return s['chapters'][k]['zh'] if k in s['chapters'] else ZH_REGIONS.get(k, k)
+
+    between = {k: v for k, v in pairs.items() if k[0] != k[1] and k[0] in order and k[1] in order}
+    formal = {k: v['formal-reuse'] for k, v in between.items()}
+    total = sum(formal.values())
+    into = {k: sum(n for (a, b), n in formal.items() if b == k) for k in order}
+    top = sorted(order, key=lambda k: -into[k])[:2]
+    rank = {k: i for i, k in enumerate(order)}
+    backward = sum(n for (a, b), n in formal.items() if rank[a] < rank[b])
+    drawn = [k for k, n in formal.items() if n >= DRAW_MIN]
+    back = [k for k in drawn if rank[k[0]] < rank[k[1]]]
+    biggest = max(back, key=lambda k: formal[k]) if back else None
+    small = [n for n in formal.values() if 0 < n < DRAW_MIN]
+    interp_small = [v['interpretive'] for v in between.values() if 0 < v['interpretive'] < INTERPRETIVE_MIN]
+    related = sum(v['related'] for v in pairs.values())
+    outside = sum(sum(v.values()) for k, v in pairs.items() if k[0] not in order or k[1] not in order)
+    others = sorted({k for pair in pairs for k in pair if k not in order})
+    cap = s['caption']
+    st = s['standing']
+    m08 = 'theories/becoming/chapters/08-METHOD.md'
+    body = ['## 脊柱', '<a id="the-spine"></a>', '',
+            f'**怎样读它。** {how_to_read(s, "zh")}', '',
+            f'![围绕文法的八章：圆按结果数定大小，曲线计各章结果之间的使用，两个前提进入第七章，各在所用之处为假设，T1 到 T8 '
+            f'在其所属之处按检验结局着色]({rel(SVG["zh"])})', '',
+            f'*由 `tools/research/spine.py` 依理论图与 [spine.json]({rel(DATA)}) 生成；[英文图]({rel(SVG["en"])})。*', '',
+            f'**细读。** 每个圆是八章之一，大小为其所含结果数；中央是文法，即根的词汇；辐条的粗细表示该章核心模块中有多大比例在'
+            f'文法上陈述其律。从一章到另一章的曲线，计后一章的结果被前一章的结果使用、记为 `formal-reuse` 的次数，'
+            f'RESULT-WORKFLOW 把这一类留给已核验的推理：章与章之间共 {total} 次，其中 {into[top[0]] + into[top[1]]} 次进入'
+            f'「{zname(top[0])}」与「{zname(top[1])}」两章，{backward} 次是逆向的，即前面一章的结果使用后面一章的结果。两个方框是伦理的两个'
+            f'前提，各在所用之处为假设，二者都不断言。徽标 T1 到 T8 是各论题，位于陈述它们的那一章，按其冻结检验的结局着色；'
+            f'下表以各自所在行的话给出它们。曲线是一种依赖，不是意义上的一致。', '',
+            f'**核心声明的地位**（[08 §7]({rel(m08, "r-one-root-to-its-edge")})），即图顶端那一行：', '',
+            '| 相对于一根之边的地位 | 声明数 | 08 §7 的话（译文） |', '|---|---:|---|']
+    for label, n in (('推导而得', '11'), ('在一个所述的假设之下', '1'), ('计数，位于文法以下', '6'), ('处于一个指明的距离', '99')):
+        body.append(f'| {label} | {n} | “{st["counts_zh"][n]}” |')
+    body += [f'| 全部核心声明 | 117 | “{st["counts_zh"]["117"]}” |', '',
+             f'**图中的论题**（[08 §9]({rel(m08, "theses")})）：选自各自所在行的话，地位在前；其余见该行。', '',
+             '| 论题 | 所在 | 图中颜色 | 其行的话 |', '|---|---|---|---|']
+    for th in s['theses']:
+        home = s['chapters'][th['home']]['file']
+        body.append(f'| {th["id"]}. {th["zh"]["title"]} | [{home[:2]}]({rel("theories/becoming/chapters/" + home, th.get("anchor", ""))}) | '
+                    f'{s["outcomes"][th["outcome"]]["zh"]} | {"；".join(th["zh"]["words"])} |')
+    body += ['', '### 它显示什么、不显示什么', '<a id="the-spine-what-it-shows-and-does-not-show"></a>', '',
+             f'**它显示什么。** 每个圆是一章的区域，面积与该区域所含结果数成正比；中央是文法（{concepts} 个概念）。从一章到另一章的'
+             f'曲线，计前一章的结果在 `formal-reuse` 之下使用后一章结果的次数，[RESULT-WORKFLOW]({rel(WORKFLOW)}) 把这一类留给'
+             f'“使用所引结果的已核验推理”。较深的曲线是前面一章的结果使用后面一章的结果：所画 {len(drawn)} 个配对中有 {len(back)} 个'
+             + (f'，最大的是「{zname(biggest[0])}」到「{zname(biggest[1])}」，{formal[biggest]} 次' if biggest else '') + '。'
+             f'虚线是 `interpretive`，留给“论证上的依赖”；点线是 `application`；`related` 是 RESULT-WORKFLOW 留给类比的，不画出'
+             f'（{related} 条边）。也不画出：少于 {DRAW_MIN} 次 formal-reuse 使用的 {len(small)} 个配对（共 {sum(small)} 次），以及少于 '
+             f'{INTERPRETIVE_MIN} 次的 {len(interp_small)} 个诠释配对（{sum(interp_small)} 条边）；少于 {LABEL_MIN} 次的不标数字；下表列出'
+             f'每一个配对。圆旁的“章内使用”计同一章结果之间的 formal-reuse，章内的诠释边见表。辐条上的“m 个模块中 k 个”与其粗细，'
+             f'计该区域核心模块中在文法上陈述其律的那些，如[英文版](THEORY-GRAPH.md)各区域的列表所示。'
+             + (f'{"、".join("「" + zname(k) + "」" for k in others)}的结果（{outside} 条边涉及它们）只在表中。' if outside else '')
+             + f'延续条件与 C 作为前提进入第七章：“{cap[4]["zh"]}”（[07]({rel(cap[4]["home"])})）。T1 到 T8 位于其所属之处，按检验'
+             f'结局着色；它们的话选自 [08 §9]({rel(m08, "theses")}) 中各自所在的行，地位在前，见上面的论题表。', '',
+             f'**它不显示什么。** 一条边记录的是一种依赖、一次引用或一个已登记的读法，不是意义上的一致。曲线也不说一章的结果在多大'
+             f'程度上达到文法，08 §7 以两种方式计这一点。“{cap[0]["zh"]}”；“{cap[1]["zh"]}”；“{cap[2]["zh"]}”'
+             f'（[08 §7]({rel(cap[0]["home"], cap[0]["anchor"])})）。又，“{cap[5]["zh"]}”；“{cap[3]["zh"]}”'
+             f'（[08 §7]({rel(cap[3]["home"], cap[3]["anchor"])})）。达到文法，是一项声明编译后的类型或值的那种依赖；推导而得是'
+             f'一种地位，即一项声明被读作文法之律的一个情形，经由在 Lean 中作为等价核验的桥接与审阅所读的支持（在某行列有它们之处）。'
+             f'所以 45 与 11 计的是不同的东西，而曲线两者都不画。辐条也不画：它计的是在文法上陈述其律的模块，不是达到文法的结果。', '',
+             '### 各章之间边的种类', '<a id="edge-kinds-between-chapters"></a>', '',
+             '从第一个区域的结果到第二个区域的结果的边，按各记录给其依赖的种类（`formal-reuse`、`interpretive`、`application`）'
+             '与其 `related` 列表（类比，不是依赖）计。两个区域相同的一行，计该区域之内的边。', '',
+             '| 从此区域的结果 | 到此区域的结果 | formal-reuse | interpretive | application | related |',
+             '|---|---|---:|---:|---:|---:|']
+    full = list(theory_graph.REGION_ORDER)
+    for (a, b), c in sorted(pairs.items(), key=lambda kv: (full.index(kv[0][0]) if kv[0][0] in full else 99,
+                                                              full.index(kv[0][1]) if kv[0][1] in full else 99)):
+        if any(c.values()):
+            body.append(f'| {zname(a)} | {zname(b)} | {c["formal-reuse"]} | {c["interpretive"]} | {c["application"]} | {c["related"]} |')
+    head = ['<!-- Generated by tools/research/research.py render (tools/research/spine.py) from the theory graph and '
+            'theories/becoming/results/data/spine.json; edit those, not this page. -->', '',
+            '# 理论图：脊柱', '', zh_fronts.nav_line(PAGE_ZH), '', '{time}', '',
+            f'本页是[理论图](THEORY-GRAPH.md)中脊柱部分的中文版：这幅图、怎样读它、核心声明的地位与论题、它显示什么与不显示什么，'
+            f'以及各章之间边的种类表；各区域的结果、模块与文本的列表只在英文版中。本页由 AI 翻译；引自英文文本的话都是译文，未经核对，'
+            f'以英文原文为准。', '']
+    text = '\n'.join(head + body).rstrip() + '\n'
+    time = navigation.reading_time(text).replace(' minutes', ' 分钟').replace('a minute', '一分钟')
+    return text.replace('{time}', f'*约 {time}读完。*', 1)
+
+
 def render(graph_json):
-    """(pages, errors): the two pictures, or none and the errors where a quoted phrase has left its home."""
+    """(pages, errors): the two pictures and the Chinese page, or none and the errors where a quoted phrase has left
+    its home."""
     s = spec()
     if not s:
         return {}, [f'{DATA} is missing']
@@ -679,4 +987,6 @@ def render(graph_json):
     if errors:
         return {}, errors
     graph = json.loads(graph_json)
-    return {SVG[lang]: svg(graph, s, lang) for lang in ('en', 'zh')}, []
+    pages = {SVG[lang]: svg(graph, s, lang) for lang in ('en', 'zh')}
+    pages[PAGE_ZH] = zh_page(graph)
+    return pages, []

@@ -2,8 +2,8 @@
 """The Chinese fronts and their one navigation line (RW, 8 November 2026).
 
 Every Chinese front opens with the same line: its English edition, then the Chinese ways in in one order, the page
-itself in bold and not linked. The line is built here, so the hand-written pages, the generated lineage (lineage.py
-is to call `nav_line`, and its test to check it) and the check agree. Chapter 6 is written in Chinese and is linked,
+itself in bold and not linked. The line is built here, so the hand-written pages, the generated pages (the lineage
+by lineage.py, the Chinese of the graph's spine sections by spine.py, each calling `nav_line`) and the check agree. Chapter 6 is written in Chinese and is linked,
 but it is a chapter, not a front, and carries no such line.
 
 usage: python3 -B tools/research/zh_fronts.py   (prints each front whose line differs, exits 1 if any)
@@ -35,10 +35,12 @@ FRONTS = {'README.zh.md': 'README.md',
           'theories/becoming/USES-EXAMPLES.zh.md': 'theories/becoming/USES-EXAMPLES.md',
           'theories/becoming/THE-THEORY-OF-BECOMING.zh.md': 'theories/becoming/THE-THEORY-OF-BECOMING.md',
           'theories/LINEAGE.zh.md': 'theories/LINEAGE.md',
+          'theories/becoming/results/THEORY-GRAPH.zh.md': 'theories/becoming/results/THEORY-GRAPH.md',
           'GLOSSARY.zh.md': 'GLOSSARY.md',
           'theories/becoming/review/README.zh.md': 'theories/becoming/review/README.md'}
-# Written by hand; the lineage is generated and its generator emits the line.
-HAND_WRITTEN = tuple(p for p in FRONTS if p != 'theories/LINEAGE.zh.md')
+# Written by hand; the lineage and the graph's spine sections are generated, and their generators emit the line.
+GENERATED = ('theories/LINEAGE.zh.md', 'theories/becoming/results/THEORY-GRAPH.zh.md')
+HAND_WRITTEN = tuple(p for p in FRONTS if p not in GENERATED)
 
 
 def _link(label: str, target: str, page: str) -> str:

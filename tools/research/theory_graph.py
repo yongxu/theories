@@ -363,21 +363,28 @@ def page(graph):
         if n['type'] in ('result', 'module', 'text', 'concept') and reg in counts:
             counts[reg][n['type']] += 1
     states = {e['to'] for e in graph['edges'] if e['type'] == 'states'}
-    lines = [HEADER, '', '# The theory graph', '',
+    from tools.research import navigation, spine  # the picture's sections read this module's regions, so imported here
+    lines = [HEADER, '', '# The theory graph', '', ' · '.join(navigation.link(p, PAGE, label) for p, label in navigation.NAV),
+             '', '{time}', '',
              'One graph of the theory: the grammar\'s concepts, the results, the Lean modules, the corpus texts, the '
              'chapter sections that state results and the review dossiers, with the edges between them '
              f'([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). '
              f'{len(graph["nodes"])} nodes, {len(graph["edges"])} edges. An edge records a dependence, a citation or a '
              'registered reading, not an agreement in meaning.', '',
              ]
-    from tools.research import spine  # the picture's sections read this module's regions, so it is imported here
-    lines += spine.lead(graph, PAGE)
-    lines += ['', '## The regions', '', '| Region | Concepts | Results | Modules | Texts |', '|---|---:|---:|---:|---:|']
+    lead = spine.lead(graph, PAGE)
+    lines += lead
+    lines += ['', '## The regions', '',
+              'A region\'s results are the records whose home section is in its chapter, so the counts below are those the '
+              '[chapters page](../chapters/README.md) gives as results stated. A chapter also keeps the anchors of former record '
+              'names, so that old links resolve; those are not results, and neither page counts them.', '',
+              '| Region | Concepts | Results | Modules | Texts |', '|---|---:|---:|---:|---:|']
     for k in REGION_ORDER:
         c = counts[k]
         if sum(c.values()):
             lines.append(f'| {REGION_TITLES[k]} | {c["concept"]} | {c["result"]} | {c["module"]} | {c["text"]} |')
-    lines += spine.section(graph, PAGE)
+    section = spine.section(graph, PAGE)
+    lines += section
     lines += corpus_section(graph)
     lines += ['', '## The grammar\'s concepts', '', '| Name | Gloss | Module |', '|---|---|---|']
     rows = {}
@@ -409,7 +416,11 @@ def page(graph):
               'neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is '
               'the restructure\'s remaining formal work. A result marked · is not yet stated by a section of a live '
               'chapter.', '']
-    return '\n'.join(lines).rstrip() + '\n'
+    text = '\n'.join(lines).rstrip() + '\n'
+    full = navigation.reading_time(text.replace('{time}', '', 1))
+    part = navigation.reading_time('\n'.join(lead + section))
+    return text.replace('{time}', f'[中文（脊柱部分）](THEORY-GRAPH.zh.md) · {full} to read in full; the spine and its tables in '
+                                  f'{part}.', 1)
 
 
 def render(records):
