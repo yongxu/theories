@@ -66,7 +66,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- That the lagged order, the lexical order or any order here is the second-order direction of 生生 or ranks a course better: a ranking holds C or another order, and the lag's verdict, which C leaves open, or a rule of precedence is a further premise.
+- That the lagged order, the lexical order or any order here is the second-order direction of 生生 or ranks a course better: a ranking rests on C or another named order, and the lag's verdict, which C leaves open, or a rule of precedence is a further premise.
 - That read with a lag covering decides every pair of a range that keeps widening and one wider now that starts a course: it decides one witness's pair, and on another, each course exceeding the other, it is silent both ways.
 - That the lagged order is UE9's: it is built as UE9's is, on families of courses, and UE9's laws on its order (names read across steps, the conflict with eventual widening) are not proved of it.
 - A branching witness for keeping the possible within a horizon widening: Rise, Climb and WiderNow are determined, so on them every notion here is a property of single courses.

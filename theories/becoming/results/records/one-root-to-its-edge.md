@@ -17,7 +17,136 @@
 
 ## Standings on the edge
 
-*Not matched:* the data read another version of this field (premises_of_the_ethics); rerun `python3 -B tools/research/shared_laws.py`, then make research-render.
+**Counts** of the 117 central declarations: on the edge 12 (derived 11, under a stated hypothesis 1); below the grammar 6; distances 99 (connected 22, balance in its statement 32, amounts 18, at a represented model 16, own carrier 6, at its model 2, free significance 3); unplaced 0.
+
+- **For scope**, the continuation condition: `Becoming.Unrestricted`; where there is a standpoint and a formation, no statement reading only the dynamics and holding of some dynamics entails it, by `Becoming.ReadsOnlyDynamics.not_entails` (computed: a theorem whose type names the definition; its statement read in the review).
+- **For order**, C, calling widening better: `Becoming.Comparison`; no statement reading no order entails it at a datum where it holds, on a frame with an extension, by `Becoming.ReadsNoOrder.not_entails` (computed: a theorem whose type names the definition; its statement read in the review).
+
+### On the edge
+
+- `Becoming.Flow.beyond_gives_nothing`: derived (a checked entry): a case of `Becoming.«所闭之界»`; support `Becoming.eq_zero_of_not_pos`.
+- `Becoming.Flow.mutuallyDependent_iff_reach`: derived (a checked entry): a case of `Becoming.«所闭之逆»`.
+- `Becoming.Flow.withinCoupling_reads_iff`: derived (a checked entry): a case of `Becoming.«借步之所闭在二所闭»` and `Becoming.«二所闭在借步之所闭»`; support `Becoming.Flow.withinCoupling_reads`, `Becoming.WithinClosure.of_reads`, `Becoming.Flow.CoupledFrom.of_reads` and `Becoming.WithinClosureOf.to_reads`.
+- `Becoming.Flow.withinSystem_of_withinInfluence`: derived (a checked entry): a case of `Becoming.«所闭之单调»`; support `Becoming.Flow.shares_of_affectedBy` and `Becoming.WithinClosure.mono`.
+- `Becoming.Law.drawn_iff_not_returns`: derived (a checked entry): a case of `Becoming.«定后有后则入当且仅当不返»`; bridges `Becoming.Branching.law_reach_iff`, `Becoming.Branching.law_trace_iff`, `Becoming.Law.absorbing_iff_closed`, `Becoming.Law.drawn_iff_drawnIn`, `Becoming.Law.reaches_iff_orbit`, `Becoming.Law.returns_iff` and `Becoming.Law.returns_iff_reaches`; support `Becoming.Branching.law_trace_of`, `Becoming.Branching.units_length`, `Becoming.Law.next_fixed`, `Becoming.Law.next_total`, `Becoming.Law.orbit_add`, `Becoming.Law.orbit_shift` and `Becoming.Law.reaches_of_orbit`.
+- `Becoming.Law.lossless_iff_returns`: derived (a checked entry): a case of `Becoming.«有限遍后定后则定前当且仅当皆返»`; bridges `Becoming.Branching.law_reach_iff`, `Becoming.Branching.law_trace_iff`, `Becoming.Law.lossless_iff`, `Becoming.Law.lossless_iff_fixedBefore`, `Becoming.Law.reaches_iff_orbit`, `Becoming.Law.returns_iff` and `Becoming.Law.returns_iff_reaches`; support `Becoming.Branching.law_trace_of`, `Becoming.Branching.units_length`, `Becoming.Law.next_fixed`, `Becoming.Law.next_total`, `Becoming.Law.orbit_add`, `Becoming.Law.orbit_shift` and `Becoming.Law.reaches_of_orbit`.
+- `Becoming.Learning.goAlike_iff_lumped`: derived (a checked entry): a case of `Becoming.«像定后当且仅当同行»`; bridges `Becoming.Learning.lumped_iff_fixed_image` and `Becoming.goAlikeUnder_iff_alike`.
+- `Becoming.Listed.coming_of_ceasing`: derived (a checked entry): a case of `Becoming.«定后前者在前则亡屡者生屡»`; bridges `Becoming.comesToBe_iff_sheng_along` and `Becoming.ceasesToBe_iff_wang_along`; support `Becoming.Steps.along_fixed`, `Becoming.Steps.along_hasPred_iff` and `Becoming.Steps.along_hasSucc_iff`.
+- `Becoming.Tolerance.answers_restores_iff`: derived (a checked entry): a case of `Becoming.«承之迭»`; bridges `Becoming.Tolerance.worst_start`, `Becoming.Withholding.answers_closed` and `Becoming.Withholding.chain_iff_steps`; support `Becoming.Tolerance.KeepsInclusion.course`, `Becoming.Tolerance.KeepsInclusionInto.course`, `Becoming.Tolerance.answers_keeps`, `Becoming.Withholding.Chain.last`, `Becoming.Withholding.Chain.last_of_eq` and `Becoming.Withholding.Chain.zero_eq`.
+- `Becoming.Withholding.withholding_spreads`: derived (a checked entry): a case of `Becoming.«存承之迭»`; bridges `Becoming.Withholding.chain_iff_steps`, `Becoming.Withholding.waitsAll_closed` and `Becoming.Withholding.within_iff_withinSteps`; support `Becoming.Withholding.Chain.last`, `Becoming.Withholding.Chain.last_of_eq` and `Becoming.Withholding.Chain.zero_eq`.
+- `Becoming.WithinMoves.after_course`: derived (a checked entry): a case of `Becoming.«迭内之接»`; bridges `Becoming.trace_iff_steps` and `Becoming.withinMoves_iff_withinSteps`; support `Becoming.trace_steps`.
+- `Becoming.GroupEnding.Flow.all_end`: under a stated hypothesis (a checked entry): the form `Becoming.RootForms.outside_leaves_no_offspring`; `Becoming.RootForms.GivesFrom` (countermodel `Becoming.RootForms.outside_leaves_no_offspring.needs_gate`, fit `Becoming.RootForms.outside_leaves_no_offspring.gate_needed`); `Becoming.RootForms.ListedWithin` (countermodel `Becoming.RootForms.outside_leaves_no_offspring.needs_descent`, fit `Becoming.RootForms.outside_leaves_no_offspring.descent_needed`); `Becoming.RootForms.Outside` (countermodel `Becoming.RootForms.outside_leaves_no_offspring.needs_outside`, fit `Becoming.RootForms.outside_leaves_no_offspring.outside_needed`); recovery `Becoming.RootForms.all_end_at_model`; certificate `Becoming.RootForms.all_end_certified`.
+
+### Below the grammar
+
+- `Becoming.CensusWebs.keep_pace`: counting (a reading; the rule gives unplaced).
+- `Becoming.Drift.falls_back`: counting (a reading; the rule gives unplaced).
+- `Becoming.RelativePosition.rise_needs_fall`: counting (a reading; the rule gives unplaced).
+- `Becoming.SelectionLevels.levels_sized`: counting (a reading; the rule gives unplaced).
+- `Becoming.SelectionLevels.rises_exact_iff_levels`: counting (a reading; the rule gives unplaced).
+- `Becoming.SelectionTerm.covariation`: counting (a reading; the rule gives unplaced).
+
+### Distances
+
+- `Becoming.Amounts.rests`: connected (by the rule).
+- `Becoming.Branching.loss_passes_juncture`: connected (by the rule).
+- `Becoming.ClosedCapture.lock_outlives_loss`: connected (by the rule).
+- `Becoming.Learnable.learnable_iff`: connected (by the rule).
+- `Becoming.LearnableRuns.learnable_iff_tracks`: connected (by the rule).
+- `Becoming.Pace.rule_until_reading`: connected (by the rule).
+- `Becoming.RegimeMargin.Adjusted.comes_to_rest`: connected (by the rule).
+- `Becoming.RegimeMargin.Adjusted.falls_iff_below`: connected (by the rule).
+- `Becoming.RegimeMargin.Coupled.Indexed.ends_downstream`: connected (by the rule).
+- `Becoming.RegimeMargin.Coupled.threshold_falls`: connected (by the rule).
+- `Becoming.RegimeMargin.Drawn.run_shape`: connected (by the rule).
+- `Becoming.RuleCapture.favouring_locks`: connected (by the rule).
+- `Becoming.RuleCapture.uniform_locks`: connected (by the rule).
+- `Becoming.Valuation.significant_iff`: connected (by the rule).
+- `Becoming.Web.Carries.active_not_recurring`: connected (by the rule).
+- `Becoming.Web.Unceasing.activeRenewer_recurs`: connected (by the rule).
+- `Becoming.Web.Unceasing.rises`: connected (by the rule).
+- `Becoming.Web.selfValuation_significant_iff`: connected (by the rule).
+- `Becoming.act_courses_unselected`: connected (by the rule).
+- `Becoming.forced_iff_center`: connected (by the rule).
+- `Becoming.onLoop_of_closing`: connected (by the rule).
+- `Becoming.presupposition_scopes`: connected (by the rule).
+- `Becoming.Direction.widening_selected_by_pool`: balance in its statement (by the rule).
+- `Becoming.Flow.Balances.comparison_within_response`: balance in its statement (by the rule).
+- `Becoming.Flow.Balances.consumption_ends_with_feeders`: balance in its statement (by the rule).
+- `Becoming.Flow.Balances.renewedBy`: balance in its statement (by the rule).
+- `Becoming.Flow.Balances.retains_iff_within_margin`: balance in its statement (by the rule).
+- `Becoming.Flow.Balances.widens_iff_others_within`: balance in its statement (by the rule).
+- `Becoming.Flow.Dissipative.opens`: balance in its statement (by the rule).
+- `Becoming.Flow.More.replenishment_unbounded`: balance in its statement (by the rule).
+- `Becoming.Flow.act_selected_by_pool`: balance in its statement (by the rule).
+- `Becoming.Flow.act_unselected`: balance in its statement (by the rule).
+- `Becoming.Flow.change_recurs_iff`: balance in its statement (by the rule).
+- `Becoming.Flow.continuing_excludes`: balance in its statement (by the rule).
+- `Becoming.Flow.no_new_dependence`: balance in its statement (a reading; the rule gives the same).
+- `Becoming.Flow.outrun_below`: balance in its statement (by the rule).
+- `Becoming.Flow.restores`: balance in its statement (by the rule).
+- `Becoming.Flow.unexcluded_beyond_coupling`: balance in its statement (by the rule).
+- `Becoming.Flow.unselected_beyond_coupling`: balance in its statement (by the rule).
+- `Becoming.Flow.unselected_beyond_pool`: balance in its statement (by the rule).
+- `Becoming.Flow.uptake_needs_replenishment`: balance in its statement (by the rule).
+- `Becoming.GroupEnding.Flow.coupled_end_together`: balance in its statement (by the rule).
+- `Becoming.GroupEnding.Flow.family_childless`: balance in its statement (by the rule).
+- `Becoming.Optimum.mutual_beyond`: balance in its statement (by the rule).
+- `Becoming.Optimum.optimum_beyond`: balance in its statement (by the rule).
+- `Becoming.Reproduction.Flow.closed_lineage_lowered`: balance in its statement (by the rule).
+- `Becoming.Reproduction.Flow.lineage_ends`: balance in its statement (by the rule).
+- `Becoming.Web.Embodied.replenishes`: balance in its statement (by the rule).
+- `Becoming.Web.Whole.family_excess_ends`: balance in its statement (by the rule).
+- `Becoming.Web.course_lost_iff`: balance in its statement (by the rule).
+- `Becoming.World.balanced_reidentify_iff`: balance in its statement (by the rule).
+- `Becoming.World.comes_to_rest_unrefuted`: balance in its statement (by the rule).
+- `Becoming.apart_only_downstream`: balance in its statement (by the rule).
+- `Becoming.counterfactual_is_course`: balance in its statement (by the rule).
+- `Becoming.Flow.new_beyond_every`: amounts (a reading; the rule gives unplaced).
+- `Becoming.Flow.selected_le`: amounts (a reading; the rule gives unplaced).
+- `Becoming.Flow.selection_within`: amounts (a reading; the rule gives unplaced).
+- `Becoming.Flow.transmitted_supported`: amounts (a reading; the rule gives unplaced).
+- `Becoming.GroupEnding.Flow.rises_iff_inactive`: amounts (a reading; the rule gives unplaced).
+- `Becoming.RegimeMargin.Adjusted.ends_iff_below`: amounts (a reading; the rule gives unplaced).
+- `Becoming.RegimeMargin.ends_iff_below`: amounts (a reading; the rule gives unplaced).
+- `Becoming.Reproduction.Flow.number_within_take`: amounts (a reading; the rule gives unplaced).
+- `Becoming.SelectionTerm.Flow.support_moved_rises`: amounts (a reading; the rule gives unplaced).
+- `Becoming.SelectionTerm.Flow.support_not_lower`: amounts (a reading; the rule gives unplaced).
+- `Becoming.Web.Next.frontier_ends_drawn_first`: amounts (a reading; the rule gives unplaced).
+- `Becoming.Web.frontier_breaks_below`: amounts (a reading; the rule gives unplaced).
+- `Becoming.Web.frontier_broken`: amounts (a reading; the rule gives unplaced).
+- `Becoming.Web.frontier_exhausts`: amounts (a reading; the rule gives unplaced).
+- `Becoming.Web.frontier_keeps_stepwise`: amounts (a reading; the rule gives unplaced).
+- `Becoming.Web.frontier_rebuilds`: amounts (a reading; the rule gives unplaced).
+- `Becoming.carried_iff_rising`: amounts (a reading; the rule gives unplaced).
+- `Becoming.responses_le_missBound`: amounts (a reading; the rule gives unplaced).
+- `Becoming.Dependence.Overdetermined.only_together`: at a represented model (by the rule).
+- `Becoming.Dependence.differenceOnlyTogether_iff`: at a represented model (by the rule).
+- `Becoming.Flow.descent_reaches`: at a represented model (by the rule).
+- `Becoming.Limit.identifies_iff_tracks`: at a represented model (by the rule).
+- `Becoming.Renewable.no_exact_finite_reading`: at a represented model (by the rule).
+- `Becoming.Run.not_fixes_of_untaken`: at a represented model (by the rule).
+- `Becoming.SharedCodes.run_agrees_every_start_iff`: at a represented model (by the rule).
+- `Becoming.Viability.kernel_and_iff`: at a represented model (by the rule).
+- `Becoming.Web.living_on_reaches`: at a represented model (by the rule).
+- `Becoming.Web.optimum_broken_iff`: at a represented model (by the rule).
+- `Becoming.Web.renewingAt_iff_over_all`: at a represented model (by the rule).
+- `Becoming.Web.roles_alive`: at a represented model (by the rule).
+- `Becoming.Web.roles_dependent`: at a represented model (by the rule).
+- `Becoming.Web.roles_supported`: at a represented model (by the rule).
+- `Becoming.Web.significance_undetermined`: at a represented model (by the rule).
+- `Becoming.Web.transmits_at_iff`: at a represented model (by the rule).
+- `Becoming.ExchangeLaw.response_not_fixed_by_coupling`: own carrier (by the rule).
+- `Becoming.Ideals.verifiableBy_iff_interior`: own carrier (by the rule).
+- `Becoming.Learning.Training.unselected_beyond_data`: own carrier (by the rule).
+- `Becoming.Valuation.significant_iff_held`: own carrier (by the rule).
+- `Becoming.Web.paths_extension_iff_widens`: own carrier (by the rule).
+- `Becoming.Weighting.widens_iff_every_positive`: own carrier (by the rule).
+- `Becoming.Direction.extension_iff_widens`: at its model (a reading; the rule gives unplaced).
+- `Becoming.PartForms.goAlike`: at its model (a reading; the rule gives unplaced).
+- `Becoming.Web.paths_one_object`: free significance (a reading; the rule gives unplaced).
+- `Becoming.Web.widens_iff_retains_adds`: free significance (a reading; the rule gives unplaced).
+- `Becoming.unrestricted_iff_livingSignificance`: free significance (a reading; the rule gives unplaced).
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -31,7 +160,7 @@
 
 - That a row under a stated hypothesis uses the grammar's laws: neither root form reaches one. A form shows that the row's conclusion follows from its hypotheses read as relations.
 - That the countermodels show more than that no hypothesis of a form is redundant: they are over one point. Lever 2's witnesses at the model stay beside them.
-- That anyone must hold either reading the ranking results use: neither is entailed by statements of the dynamics (the condition given a standpoint and a formation, C given a frame with an extension), and no warrant from outside is sought.
+- That anyone must hold either reading the ranking results use: neither is entailed by a satisfiable statement reading only the dynamics, with significance or order free (the condition given a standpoint and a formation, C given a frame with an extension), and no warrant from outside is sought.
 - That a distance is a gap or a failure: each row at a distance has its reason, and the measure records dependence, not meaning.
 - **Counterexample:** Over one point, each hypothesis of each root form dropped, the conclusion fails (RootForms.outside_leaves_no_offspring.needs_gate, needs_descent, needs_outside; RootForms.descent_forms_no_dependence.needs_given, needs_inherits, needs_undepended). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RootForms.lean)
 

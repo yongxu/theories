@@ -100,7 +100,7 @@
 - The approximate form: constructor theory's possible as a limit, short of perfection, of constructors whose errors go to zero, which needs amounts of error.
 - That the laws fix the division into performing part and substrate: which tasks are possible depends on it.
 - Keeping the ability under loss: constructors deteriorate without maintenance, a later step on the World, where zero-move delivery does not read whether a state can be kept against change.
-- That widening, or reach, is better: a ranking holds C or another order, and the reading here is an AI reading.
+- That widening, or reach, is better: a ranking rests on C or another named order, and the reading here is an AI reading.
 - A result no neighbouring field states: the composition laws restate Gogioso and others' process-theoretic reading for pairs on processes, and the tower laws are UE11's read at the performer.
 - **Counterexample:** The free enzyme performs the task, yet held free at every move, or held unchanged, it delivers nothing (Catalysis.not_held, Catalysis.not_held_unchanged). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tasks.lean)
 - **Counterexample:** A possible task whose transpose is performed by no region of any reading of a performing part (Catalysis.transpose_not_possible). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tasks.lean)

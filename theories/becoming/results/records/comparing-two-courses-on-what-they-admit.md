@@ -66,7 +66,7 @@
 - Anything about what a course keeps reachable or what carries its openings, 07's other two candidates, which are not read on admitted ranges.
 - An impossibility on every web, or for comparisons that are not strict partial orders containing widening: with listed static admissions, or where no static course includes a keeping one, the ranking is consistent.
 - That every form of the lag meets law 4: the order of a lag for each admission can put a course above one keeping a formation it drops.
-- That a comparison here ranks a course better: a ranking holds C or another order, and choosing between counting early steps and reading only tails is a further premise.
+- That a comparison here ranks a course better: a ranking rests on C or another named order, and choosing between counting early steps and reading only tails is a further premise.
 - A result no neighbouring field states: law 1's one-pair form has the shape of Askell's incomparability argument, and the other laws are near-definitional.
 - **Counterexample:** On the two-sided web no strict partial order containing widening and unchanged by the exchange ranks the growing course above the other (Sides.keeping_over_alike_cycles), yet one ranks the other above it (Sides.reverse_consistent). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ComparingCourses.lean)
 - **Counterexample:** Widening with a lag alone does not contain widening: the rising course widens its copy one step late, which includes it with lag one (Delayed.widens_not_withLag). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ComparingCourses.lean)
