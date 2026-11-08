@@ -1,0 +1,170 @@
+[
+ {
+  "key": "fronts",
+  "verdict": "Round 1 has no high findings and nine medium ones, so this is not ready to land. Read-only: I read the diff, the rendered README up to \"## Truth exists\", the homes, records and study named in the task, IN1's README, and the commit's zh editions. I edited nothing and ran no tests. To a newcomer the first screen is now much plainer about what the work is and what to do with it. It says plainly that a measured selection can lose what it does not measure, it gives three questions to ask, and the fishers case has a lesson. But the new plain lead says more than its homes in three places. It describes the lock's premise as if it were a result (\"when a rule comes to feed on its own winners\"). It says the work does not say whether a loss is a harm, though the ethics' scope premise is about exactly whose losses count. And it says the work tests its claims where they could fail, when only some theses are tested and several tests are held or not run. When the centre sentence was removed, its standing went with it. The identification with the proxy problem and the case's lesson are AI readings in their homes, but they now appear with no \"a reading\" in words. The case's lesson comes right after the told-of-the-bed result, which IN1 explains differently. The \"three questions\" leave out room, the condition the drain depends on, and link to a worked example that has five questions. The worked audit of AI feedback is mostly faithful to 07 §6, its study and the laws it cites, and it names both premises. But it uses measurements of human-preference pipelines as if they bore on this pipeline, and it repeats the study's claim that humans supply only the principles. Constitutional AI also trained on human helpfulness labels; I am recalling this from the published paper, which I did not open here. The note-11 limit (only blindness to what a measure does not register) is kept, and so are both premises, \"an automated review\" and the caption's standings. The five new plain sentences in USES are acceptable, with small losses of precision.",
+  "findings": [
+   {
+    "severity": "medium",
+    "where": "README first screen, \"In plain words\" (_process/navigation/README-FIRST-SCREEN.md), \"…and when a rule comes to feed on its own winners\"",
+    "problem": "The lead says the work states when a rule comes to feed on its own winners. In 02 §9 (r-capture-through-the-rule, r-closed-capture), a rule being read from its winners' share is the premise (\"That actual rules read the share is the premise\"). The result is the lock that follows, and the lock is proved only without noise (02's \"Which locks noise leaves\": favouring rules read from the share are left by drift). A reader would think the work explains how capture arises and that the lock holds outright. The word \"lock\", which the next paragraph uses, is never tied to this sentence.",
+    "fix": "Copy the home's words first, then shorten. For example: \"…and that a rule read from the share of its own winners, favouring them, locks on them, without noise, while a loss it does not read grows.\" Keep \"that actual rules read the share is the premise\" in the uses page, or add it here."
+   },
+   {
+    "severity": "medium",
+    "where": "README first screen, \"In plain words\", \"…and does not say whether such a loss is a harm\"",
+    "problem": "The sentence it replaced said \"no law says whether that loss counts\" (the same in ONE-PAGE: \"the laws do not say whether that loss counts\"). The new one says the work as a whole does not say. Two lines later the ethics' scope premise, the continuation condition, says exactly whose losses count, unasserted and with its warrant open. A newcomer reads a contradiction, or concludes that the work has no ethics of loss.",
+    "fix": "Use \"no law here says whether such a loss counts\", as the homes do. Or add \"its laws do not say…; its ethics answers only under two unasserted premises (below)\"."
+   },
+   {
+    "severity": "medium",
+    "where": "README first screen, \"In plain words\", \"tests its claims where they could fail\"",
+    "problem": "This reads as if every claim that could fail is tested. In fact some empirical theses face frozen tests: T1's field tests were refused, CMT is frozen and not run, T2O is held, and T3 is \"conjectured, partly supported\". The screen itself says no test designed from the work has run on a deployed pipeline. A reader would overrate the empirical standing.",
+    "fix": "\"…tests some of its claims in frozen runs where they could fail, several of which failed\", in line with the receipts paragraph (\"some passed, some failed\")."
+   },
+   {
+    "severity": "medium",
+    "where": "README first screen: \"In plain words\" and the case's new last sentence; ONE-PAGE.md \"One case\"",
+    "problem": "The centre sentence, labelled \"a reading and not a theorem\", was removed, and its content moved into the plain lead with no label. Two parts of the lead are AI readings in their homes. The first is the identification with the proxy problem: 05 §7 gives it as \"Reading [AI reading, ZH]. This is the proxy problem as the account's law\", and note 11 gives it as a restatement in a weaker discrete, conserved form. The second is the centre's \"can do well … while what it does not measure is lost\", which ONE-PAGE marks [AI reading]. The new lesson, \"The bed lay outside what their selection read\", is also IN1's reading (\"the AI's reading\"), and it is unlabelled on both pages. The task requires \"a reading\" in words on README's first screen, and ONE-PAGE uses [AI reading] marks.",
+    "fix": "README: \"…one side of the proxy problem, as a reading: its blindness…\", and \"The bed, a reading has it, lay outside what their selection read.\" ONE-PAGE: append [AI reading] to the lesson sentence."
+   },
+   {
+    "severity": "medium",
+    "where": "README first screen, \"One case\", the lesson sentence placed after the told-of-the-bed clause",
+    "problem": "The lesson comes right after \"told of it and of the scope, with talk, one model of two kept it in 8 of 10 seasons; … predictions mostly failed\". Placed there, it implies the bed was outside what was read in the told cells too. In those cells the bed was told. IN1's README explains the deaths there by \"a model error … and an uncoupled joint act, not a missing order\", and its round-2 reading is \"No condition kept a dependent no member was told of\". A reader would take away the wrong lesson about the told cells.",
+    "fix": "Scope the lesson to the cells where the bed was not told, and use the home's words. For example, after \"Told nothing of the bed, they kept it in no season\", add \"(untold, the bed lay outside what their selection read, a reading)\". Or end with IN1's \"No condition kept a dependent no member was told of\"."
+   },
+   {
+    "severity": "medium",
+    "where": "README first screen, \"What it is for\", the three questions",
+    "problem": "USES's alignment row, the home, asks four things: what the signal reads, what lies beyond, whether there is room, and whether the rule is read from its own share. The screen drops room. Room is the condition under which an optimum drains (05 §7: \"Room binds: without it keeping can be an optimum\"), and it is the qualifier the plain lead's \"where\" stands for. The \"worked\" link then lands on an audit of five questions, so the screen's \"three\" does not match what the reader finds. The lock gloss \"coming to favour for good\" also drops \"without noise\", which the USES row's standing column carries (\"proved for any type, without noise\").",
+    "fix": "Add room as a plain question, for example \"…what lies beyond that, can it gain by lowering what lies beyond, and can its rule lock…\", or say \"four questions\". Add \"(without noise, in the models)\" to the lock gloss, or drop \"for good\"."
+   },
+   {
+    "severity": "medium",
+    "where": "USES-EXAMPLES.md, \"A worked audit: AI feedback against written principles\", item 3",
+    "problem": "Item 3 says room here is an empirical question, then cites 07 §6's three measurements as \"the drain's direction\", marking them only as \"filed under human preference\". In the study (CORRESPONDENCE.md) the measurements sit under pipeline 1, RLHF with human labels: Gao et al.'s synthetic setup, Wen et al., Sharma et al. None measured AI feedback against principles. A reader would believe the drain has been measured in this pipeline.",
+    "fix": "Say it plainly: \"none of 07 §6's three measurements was made on this pipeline; they measured human-preference pipelines (the study's section 1)\". Then give the AI reading that they bear on it only by analogy."
+   },
+   {
+    "severity": "medium",
+    "where": "USES-EXAMPLES.md worked audit, opening paragraph and item 2 (\"humans couple in through the principles alone\"); source: CORRESPONDENCE.md section 2",
+    "problem": "The audit copies the study faithfully, but the study's claim \"Humans supply only a list of principles\" follows Bai et al.'s abstract. The study read sources from their abstracts, as the record says. As I recall the paper (not opened here), Constitutional AI applied AI feedback to harmlessness only. Its RL preference model was trained on human helpfulness comparisons mixed with AI harmlessness comparisons, and the supervised phase started from a model trained on human helpfulness feedback. So humans also couple in through those labels. A reader auditing the pipeline would get its couplings wrong.",
+    "fix": "Correct the study, the home, keeping the earlier wording as its history, and then the audit. For example: \"for harmlessness, humans supply only principles; helpfulness comparisons stayed human (per the paper, not only its abstract)\". In item 2: \"for harmlessness, humans couple in through the principles alone\"."
+   },
+   {
+    "severity": "medium",
+    "where": "README first screen, as a whole (newcomer)",
+    "problem": "The re-score's confirmed finding 2 was only half addressed. \"An automated review\" was added, but the screen still never says that the text and the proofs were made with automated help, which ONE-PAGE:7 says (\"Made with AI, proofs included\"). A newcomer reading only the first screen does not learn how the work was made, and that changes how they weigh it.",
+    "fix": "Add one clause in the screen's words that keeps the no-name rule. For example, in the receipts paragraph: \"Text and proofs were written with automated help; the proofs are checked by machine, the rest only by automated review.\""
+   },
+   {
+    "severity": "low",
+    "where": "README \"In plain words\": \"must drain\", \"on models\", no domain named",
+    "problem": "\"Drain\" is unqualified (the home has \"as far as any eligible outcome does\"; note 11 has \"to the least any outcome leaves\"). \"On models\" can be misread as \"language models\". The lead never says that training systems is the main case, which only \"a reward, a judge\" hints at.",
+    "fix": "\"…must drain what is not as far as any allowed outcome does, in formal models…\". Optionally add \"as in training a language model\" (this names no AI author)."
+   },
+   {
+    "severity": "low",
+    "where": "USES.md, the five new plain first sentences",
+    "problem": "People and AI drops the row's first question, \"does it read the share\". In Wisdom traditions, \"concordance\" suggests agreement, while the row checks agreement, scoping or divergence, with divergence undercounted. In The sciences, \"stated with every premise\" overstates: the row says \"with their hypotheses and Lean\", and the modelling choices are not all premises. Alignment and Coordination match their rows.",
+    "fix": "People and AI: \"…whether it reads its own share, who reads a loss…\". Wisdom: \"…beside checked laws, for agreement, scoping or divergence, not confirmation\". Sciences: \"…stated with their hypotheses in Lean…\"."
+   },
+   {
+    "severity": "low",
+    "where": "USES-EXAMPLES.md worked audit, items 2 and 4",
+    "problem": "Item 2 glosses `Web.anticipates_iff` in the study's words (\"a finer decider … separates more within them, no further\"), not in 05's home words. Item 4's \"open: … reads the rule from the share\" links the record's Does-not-show section, which does not list this question.",
+    "fix": "Copy 05's sentence on `Web.anticipates_iff` first. Mark the open question as this page's AI reading, or link the record's Next."
+   },
+   {
+    "severity": "low",
+    "where": "ONE-PAGE.md \"One case\"",
+    "problem": "The lesson was added, but the positive half the re-score asked for is still missing (synthesis item 36): told of the bed, one model kept it in 8 of 10 seasons, and the frozen predictions mostly failed. The lesson also comes after \"They are language models told what to do\", which interrupts the reasoning.",
+    "fix": "Put the lesson, labelled [AI reading], right after the untold-cells sentence. Add the told-cells result with its failed predictions."
+   },
+   {
+    "severity": "low",
+    "where": "MAP.md, the earlier theory folders",
+    "problem": "\"Open it on the reader's site\" points to a site that is not published yet (Pages is Ren's decision) and gives no link.",
+    "fix": "\"Once the reader's site is published, …\", or link the site page when it exists."
+   },
+   {
+    "severity": "low",
+    "where": "README.zh.md, USES.zh.md, USES-EXAMPLES.zh.md, ONE-PAGE.zh.md",
+    "problem": "The zh editions were not revised. README.zh still has the old \"有什么用\" (\"what it is for\") paragraph and no plain lead. The zh pages have no case lesson, no plain row sentences and no worked audit, although their headers say they are revised along with the English.",
+    "fix": "Revise the zh editions in the same landing, or list the lag on the board."
+   },
+   {
+    "severity": "low",
+    "where": "_process/navigation/README-FIRST-SCREEN.md, the leading comment",
+    "problem": "The round-2 sentence is placed before round 1's, so the history reads out of order. The comment still says \"four points\" and \"bringing the screen to 187 words\", though READING-BUDGETS now records 491.",
+    "fix": "Put the round-2 sentence after round 1's. Point to READING-BUDGETS for the count."
+   },
+   {
+    "severity": "low",
+    "where": "README spine caption, \"each read by the review\"",
+    "problem": "\"The review\" follows \"An automated review\" of the literature in the paragraph above, so a newcomer may take them as the same review. 08 §7 says the derived eleven come through bridges checked in Lean, one of them under a stated hypothesis.",
+    "fix": "\"…each read, in 08 §7's edge review, as a case of grammar laws…\"."
+   }
+  ]
+ },
+ {
+  "key": "code",
+  "verdict": "No high findings. Nothing new can publish a private path or a key. Every one of the 414 record marks in /Users/ren/tmp/rw/site2 now points to a record page that exists on the site (none fall back to GitHub). No built page still links atlas/map.html: MAP.html and CROSSWALK.html both reach connections.html. The cards are complete and correctly grouped: 5 Read, 5 Check, 7 See, each card with its 中文 link where the config gives one. Both new nav_zh items are correctly marked （英文） and go to the English chapters index and TESTS.html. The self-link change is right: the precedence works, and a README served as index.html gets \"index.html\". The asset copy now writes 644. Two mediums: a card's reading time is wrong, and a latent build bug appears when site.map is off. The lows are precision points and tests the change should add. I only read code and the built site; I ran no tests.",
+  "findings": [
+   {
+    "severity": "medium",
+    "where": "tools/publishing/build_site.py home_body (the time computation); _process/research-config.json ways_in entry MAP.md#check-the-proofs-yourself",
+    "problem": "The 'Check the proofs' card links one section of MAP.md (## Check the proofs yourself, lines 43–57), but its reading time comes from the whole file. The built home shows '12–16 minutes' for a section of about a minute, the same time as the 'Where everything is' card for the whole of MAP.md. This predates the diff, but the grouping now puts the wrong time in the Check group. A reader picking a way in by time is told something false.",
+    "fix": "When a ways_in path has an #anchor, time the text from that heading to the next heading of the same or a higher level (or support a time_from key), or show no time for an anchored card. Add a test: an anchored card's time is the section's, not the file's."
+   },
+   {
+    "severity": "medium",
+    "where": "tools/publishing/build_site.py Links.resolve (the SPECIAL branch) and build() (the map-off filter); config aliases 'theories/becoming/results/atlas/map.html' → 'connections.html'",
+    "problem": "With site.map off, build() removes connections.html from nav and ways_in, but not from aliases. Links.resolve also sends any SPECIAL target to a relative href without checking that it was built. Every link to atlas/map.html (CROSSWALK.md's three, MAP.md's) would then point to a connections.html the build never wrote. Before the alias those links went to the file on GitHub. The internal-link check does not catch this, because SPECIAL targets never enter links.internal. It is latent today, since map is true.",
+    "fix": "When the map is off, drop aliases whose target is MAP_PAGE (or make resolve treat MAP_PAGE as unbuilt and fall through to GitHub or text). Add a test: with site.map off, a link to atlas/map.html goes to GitHub and no href points to connections.html."
+   },
+   {
+    "severity": "low",
+    "where": "tools/research/tests/test_site.py",
+    "problem": "None of the new behaviour is covered by a test. The only mark test checks the GitHub fallback, because the fixture has no record page. Missing: the mark to the record's site page, the self-link without an anchor becoming the page's own basename (index.html for a README), the cards grouped under h3.group in config order, the asset mode 644, and the map.html alias.",
+    "fix": "Add fixture cases for each. Also extend RepositoryConfigTests: every ways_in entry has a group (an entry without one would add an unheaded list), and every alias target is in pages or SPECIAL."
+   },
+   {
+    "severity": "low",
+    "where": "theories/becoming/results/atlas/CROSSWALK.md line 9, as built in site2/theories/becoming/results/atlas/CROSSWALK.html",
+    "problem": "On the site, the alias makes 'open the connection map from a clone; GitHub shows it only as source' link straight to the site's connections.html. The sentence still tells the reader to clone. MAP.md's version ('open it on the reader's site, or from a clone') reads correctly.",
+    "fix": "Reword it the way MAP.md words it: on the reader's site, or from a clone."
+   },
+   {
+    "severity": "low",
+    "where": "tools/publishing/build_site.py Links.resolve, the target == page branch",
+    "problem": "The self-link branch runs before the lines/query check. A page's link to its own source lines (X.md?plain=1 or #L12-L20) becomes '#L12' or the page's basename instead of going to GitHub. A '#L..' anchor would also fail the anchor check.",
+    "fix": "Compute lines first and skip the self-link branch when lines is true."
+   },
+   {
+    "severity": "low",
+    "where": "tools/publishing/build_site.py build(), the site.css copy",
+    "problem": "Assets now get copyfile and mode 644, but site.css is still copied with shutil.copy, which keeps the source's mode.",
+    "fix": "Copy site.css with copyfile and chmod 0o644, the same way."
+   },
+   {
+    "severity": "low",
+    "where": "tools/publishing/site.css body.home a.picture",
+    "problem": "The comment says the picture stays inside 'the page's column, which is wider there'. On the home the picture sits inside section.hero (44rem), so width 100% is the hero's width, not main's 60rem. The behaviour is fine; the comment is imprecise.",
+    "fix": "Say the picture stays inside the hero's column."
+   },
+   {
+    "severity": "low",
+    "where": "tools/publishing/build_site.py nav() / edition(); nav_zh",
+    "problem": "On README.zh.html the 'English' link goes to ONE-PAGE.html, not the home that is README's English edition. edition() looks for README.md, which is not a site page. This predates the diff.",
+    "fix": "Have edition() map README.md to index.html (or apply the README alias) so README.zh's English link goes to the home."
+   },
+   {
+    "severity": "low",
+    "where": "_process/research-config.json nav / ways_in 'Where everything is' → MAP.md",
+    "problem": "The nav and the card call the page 'Where everything is', but its heading and HTML title still say 'Start here'.",
+    "fix": "Rename MAP.md's heading to match, or accept the mismatch knowingly."
+   }
+  ]
+ }
+]

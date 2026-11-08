@@ -1,0 +1,75 @@
+[
+ {
+  "verdict": "The round does not close: one medium, five lows, no high. M's false sentence is gone and the §4.2 split is stated correctly, but the fix makes Sharma §4.2 the measurement nearest this pipeline while the sentence above it says, unqualified, that optimizing was found lowering the unread; the paper says \"mixed effects\" and \"sometimes\".\n\nChecked and sound:\n- Constitutional AI: 42,496, 182,831 and 135,296; the critic and the chain-of-thought feedback are the helpful RLHF model; helpfulness labels stay human.\n- Sharma: the split is at §4.2, and \"constitution\" or \"principles\" occur nowhere in its text except a reference title. Bai 2022b is not cited at the Claude 2 PM sentence.\n- Wen and Gao abstract pages match what the study says, including 24.1% and 18.3%.\n- \"By analogy\" and \"a reading\" are present where the bearing is not shown. \"Figures read from the papers' abstracts\" governs no stated figure in the audit's sentence.\n\nTimes, by navigation.py's rule (re-implemented, counted only):\n- USES-EXAMPLES.md: 5,890 words and 65 characters, 45.56 to 59.23, so 46 to 59 is right.\n- USES.md: 14.94 to 19.42, so 15 to 19 is right.\n- The zh examples page: 36.9 to 47.9, as stated.\n- First screen: 535 words, as stated.\n\nNo stale copy of the old wordings or times remains outside history. I ran no tests and edited nothing. Paper wording came through WebFetch's summarizer; §4.2's was consistent across fetches.",
+  "prior": [
+   {
+    "item": "M: audit item 3 said none of 07 §6's three measurements was made on this pipeline",
+    "state": "closed",
+    "why": "The sentence is gone. Two measurements are placed on human-preference pipelines, by analogy. The third is given §4.2's split, human for helpfulness and AI for harmlessness, which the paper states, with the point that the paper does not say those AI judgments read written principles, and a reading tag. The new text brings its own qualifier problem, listed as a finding."
+   },
+   {
+    "item": "L1: 'through the principles alone' without the frame; chain-of-thought feedback model unnamed; parenthetical read as the frame's content",
+    "state": "closed",
+    "why": "The study's Laws paragraph and audit item 2 now say 'as the paper frames it'. The study and its note name the chain-of-thought feedback model, matching the paper's §4.1. The study's note and the record's history now use 'though'. The same parenthetical form remains at the audit's lead paragraph, which L1 did not name; listed as a low."
+   },
+   {
+    "item": "L2: audit item 1's 'transcript pair'; 'Against it' spoke of picks separating pairs",
+    "state": "closed",
+    "why": "Item 1 now says 'the transcript it scores (the prompt and the response)', under 'A reading', which is fair since the paper says only that the preference model scores any given sample. The refuter now speaks of a reward or pick. One small wording remains, listed as a low."
+   },
+   {
+    "item": "L3: the record said figures came from abstracts read 22 October",
+    "state": "partly",
+    "why": "The record's condition and evidence, JSON in both languages and rendered page, now separate section 2's figures and the Sharma note, read from the bodies on 8 November. The study's own Sources paragraph still says 'the figures quoted are from the abstracts', which is now false for section 2's three figures."
+   },
+   {
+    "item": "L4: READING-BUDGETS gave the opening as 21.2 to 27.5 minutes",
+    "state": "partly",
+    "why": "The stale figures are gone and 21.9 is right. The opening counts 2,823 words and 43 characters, so 21.881 to 28.445, which is 28.4 at one decimal and not 28.5. The README's rendered '22–28 minutes' agrees: a true 28.5 would round to 29."
+   }
+  ],
+  "findings": [
+   {
+    "severity": "medium",
+    "where": "theories/becoming/USES-EXAMPLES.md line 54, audit item 3, the sentences from \"07 §6's three measurements found\" through \"([its §4.2](https://arxiv.org/abs/2310.13548))\"",
+    "problem": "The item says the three measurements 'found optimizing lowering what the deciders do not read', then ties the third to 'a preference model with this pipeline's split' at §4.2. A reader concludes that optimizing against a preference model with this split was measured lowering truthfulness. §4.2 says optimizing with the Claude 2 PM 'has mixed effects on sycophancy': best-of-N reduces answer and mimicry sycophancy for that base model, some forms rise through RL, and optimizing 'can yield models that sometimes sacrifice truthfulness for sycophancy'. §4.3.2 says optimizing against that PM reduces sycophancy, less than the non-sycophantic PM and much less than the oracle. The study's section 1 entry and the abstract both say 'sometimes'; the audit drops it at the point where the question is whether there is room in this pipeline.",
+    "fix": "After the §4.2 link add the result as the paper gives it, for example: 'there with mixed effects, some forms of sycophancy falling and others rising, and truthfulness sometimes given up for agreement'; or mark the lead sentence '(the third, sometimes)'. The slow end is 59.225 at 5,890 words, so 28 or more added words make it sixty, and USES-EXAMPLES.md line 7 and USES.md line 7 then change. The same unqualified form stands in 07 §6's sentence, the record's statement and the study's 'What this establishes' bullet. That predates these fixes and the audit can carry the qualifier alone, but those lines want 'sometimes' for the third at their next correction."
+   },
+   {
+    "severity": "low",
+    "where": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cr1-coupling-correspondence/CORRESPONDENCE.md line 78, Sources, last sentence",
+    "problem": "It still says 'Abstracts and the NIST release were read on 22 October 2026; the figures quoted are from the abstracts.' Section 2 now quotes 42,496, 182,831 and 135,296 from the paper's body, and the record already says so. The study contradicts its own record.",
+    "fix": "Add to that sentence: 'except section 2's Constitutional AI figures, and the note on Sharma et al. in section 1, from the papers' bodies, read 8 November 2026'."
+   },
+   {
+    "severity": "low",
+    "where": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/READING-BUDGETS.md line 27, first-screen row",
+    "problem": "'21.9 to 28.5 minutes': the slow end is 28.445 (2,823 words, 43 characters), 28.4 at one decimal, and the rendered README states 22–28.",
+    "fix": "Write 21.9 to 28.4."
+   },
+   {
+    "severity": "low",
+    "where": "theories/becoming/USES-EXAMPLES.md line 54, audit item 3, 'or which half drives what it found'",
+    "problem": "The paper's abstract says sycophancy is 'likely driven in part by human preference judgments', and its §4.1 analyses only the human helpfulness data. It does not separate the two halves inside the preference model, but it is not silent on the human half. The study's wording, 'does not separate', is exact; the audit's gloss is looser.",
+    "fix": "Use the study's words: 'and does not separate what each half contributes, though it reads the human data as favouring agreement (its §4.1)'."
+   },
+   {
+    "severity": "low",
+    "where": "theories/becoming/USES-EXAMPLES.md line 50, audit lead paragraph",
+    "problem": "'as the paper frames it (some red-team prompts are human-written, and the critic is a model trained on human helpfulness feedback)' keeps the parenthetical form the last round flagged in the study's note and the record's history: it can read as the frame's content. It also leaves out the chain-of-thought feedback model, which the study now names.",
+    "fix": "Use 'as the paper frames it, though some red-team prompts are human-written and the critic, like the feedback model in its chain-of-thought runs, is a model trained on human helpfulness feedback'."
+   },
+   {
+    "severity": "low",
+    "where": "theories/becoming/USES-EXAMPLES.md line 52, audit item 1, 'Against it'",
+    "problem": "'transcripts that differ only in what comes after them' are, strictly, the same transcript. The study's construction speaks of two episodes with the same transcript.",
+    "fix": "Use 'a reward or pick separating episodes with the same transcript'."
+   }
+  ]
+ },
+ {
+  "real": true,
+  "severity": "medium",
+  "why": "The finding holds against the paper's full text and the worktree at 1b2b57c8a; nothing was edited.\n\nConfirmed in the paper:\n- §4.2: optimizing with the Claude 2 PM \"has mixed effects on sycophancy\". Best-of-N \"reduces answer and mimicry sycophancy for this base model\". With RL \"some forms of sycophancy increase\". The PM \"can yield models that sometimes sacrifice truthfulness for sycophancy\", and effects \"depend on details of the optimization approach\".\n- §4.3.2: optimizing against that PM reduces sycophancy, less than the non-sycophantic PM and much less than the oracle.\n- The abstract says \"sometimes sacrifices\".\n\nConfirmed in the repository: the study's section 1 says \"sometimes traded\". USES-EXAMPLES line 54 says the three measurements \"found optimizing lowering what the deciders do not read\", then attaches the third to \"a preference model with this pipeline's split\".\n\nAttempts to refute:\n1. \"Found\" could be existential, and an existence case is what bears on room. This is partly right, and it is why severity is not high. Fig. 6(b) reports feedback and mimicry sycophancy rising as RL optimizes against this PM, and the paper itself uses \"sacrifice truthfulness\". The sentence is incomplete rather than false.\n2. The line's hedges could cover it. They do not. \"[AI reading]\" and \"by analogy\" cover whether the measurement bears on this pipeline, not what was found. \"Read from the papers' abstracts\" is no excuse, because the abstract carries \"sometimes\", and the line cites §4.2 directly.\n3. The omission could be immaterial. It is not. The item asks whether there is room, and this is the measurement it singles out as closest to this pipeline. The same PM moved mimicry sycophancy in opposite directions depending on the optimizer, which is the sign information a reader needs to weigh it. A reader would take the third as a one-directional drain.\n\nTwo corrections to the proposed fix:\n- The audit cannot carry the qualifier alone. Line 42 of the same page quotes 07 §6's unqualified sentence and adds \"that is the drain's direction\", and USES-EXAMPLES.zh.md line 48 mirrors it. Line 42 is what makes the one-directional reading the page's own, so it needs the qualifier too. The unqualified form also stands in 07 §6 (line 686), the record's statement (.md line 8, .json line 13) and the study's \"What this establishes\" bullet, as the finding says.\n- \"Some forms of sycophancy falling and others rising\" misdescribes the result, since mimicry falls under best-of-N and rises under RL. Better: \"there with mixed effects, best-of-N lowering some forms of sycophancy and RL raising some, truthfulness sometimes given up for agreement\".\n\nNot verified: the 59.225 minutes at 5,890 words arithmetic. I found no tool that computes it, and `wc -w` gives 6,017 for the whole file including header matter. The 28-word threshold is consistent only if the rate is about 99.45 words per minute and rounding happens at 59.5."
+ }
+]
