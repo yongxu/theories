@@ -204,6 +204,15 @@ class LeanCatalogueTests(unittest.TestCase):
             self.assertEqual(lean_catalogue._mirror_page('other/DOC.md', 'x/A.lean'), 'other/DOC.md')
 
 
+class CheckLinksTests(unittest.TestCase):
+    def test_text_in_code_is_not_a_link(self):
+        from tools.research import research
+        body = '```text\n[audit](development/missing/AUDIT.md)\n```\n\nSee `[x](also-missing.md)`.\n'
+        self.assertEqual(research.check_links({'a/PAGE.md': body}), [])
+        self.assertEqual(research.check_links({'a/PAGE.md': '[audit](development/missing/AUDIT.md)\n'}),
+                         ['a/PAGE.md: missing link development/missing/AUDIT.md'])
+
+
 class TreeTests(unittest.TestCase):
     """The configured mirrors as the tree has them: every invariant above on the real studies."""
 

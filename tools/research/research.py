@@ -184,7 +184,9 @@ def check_links(outputs, planned=()):
     errors = []
     available = {(ROOT / p).resolve() for p in planned}
     for name, body in outputs.items():
-        for target in re.findall(r'\]\((<[^>]+>|[^\s)]+)\)', body):
+        # Text in code is not a link, as moves.check_links reads it: a mirror keeps its source's code as it is.
+        masked = moves.code_mask(body) if '`' in body or '~~~' in body else body
+        for target in [body[m.start(1):m.end(1)] for m in re.finditer(r'\]\((<[^>]+>|[^\s)]+)\)', masked)]:
             part = urlsplit(target.strip('<>'))
             if part.scheme or not part.path:
                 continue
@@ -194,8 +196,8 @@ def check_links(outputs, planned=()):
             elif part.fragment and p.suffix == '.md' and not re.fullmatch(r'L\d+(-L\d+)?', part.fragment):
                 # a line (#L12) is GitHub's, not a heading's, as moves.check_links reads it
                 relative = str(p.relative_to(ROOT)) if p.is_relative_to(ROOT) else None
-                body = outputs.get(relative) if relative in planned else None
-                found = reading_catalogue.anchors_from_text(body) if body is not None else reading_catalogue.anchors(p)
+                held = outputs.get(relative) if relative in planned else None
+                found = reading_catalogue.anchors_from_text(held) if held is not None else reading_catalogue.anchors(p)
                 if unquote(part.fragment) not in found:
                     errors.append(f'{name}: missing anchor {target}')
     return errors
