@@ -62,11 +62,11 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- That widening with a lag, or the tail order, is the second-order direction of 生生: widening with a lag compares by what each keeps of the other's admissions over time.
+- That widening with a lag, or the tail order, is the second-order direction of widening: widening with a lag compares by what each keeps of the other's admissions over time.
 - Anything about what a course keeps reachable or what carries its openings, 07's other two candidates, which are not read on admitted ranges.
 - An impossibility on every web, or for comparisons that are not strict partial orders containing widening: with listed static admissions, or where no static course includes a keeping one, the ranking is consistent.
 - That every form of the lag meets law 4: the order of a lag for each admission can put a course above one keeping a formation it drops.
-- That a comparison here ranks a course better: ranking needs C or a premise in its place, and choosing between counting early steps and reading only tails is a further premise.
+- That a comparison here ranks a course better: a ranking rests on C or another named order, and choosing between counting early steps and reading only tails is a further premise.
 - A result no neighbouring field states: law 1's one-pair form has the shape of Askell's incomparability argument, and the other laws are near-definitional.
 - **Counterexample:** On the two-sided web no strict partial order containing widening and unchanged by the exchange ranks the growing course above the other (Sides.keeping_over_alike_cycles), yet one ranks the other above it (Sides.reverse_consistent). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ComparingCourses.lean)
 - **Counterexample:** Widening with a lag alone does not contain widening: the rising course widens its copy one step late, which includes it with lag one (Delayed.widens_not_withLag). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ComparingCourses.lean)
@@ -154,6 +154,8 @@ Aliases: `Comparing two courses on what they admit`, `就所纳比较两个进�
 - 28 October 2026 (OU3c, study section 433): strictJoin_trans and strictJoin_irrefl moved into Becoming.GrammarLaws, beside widening's laws, by the decision of this record's owner; names and statements kept, but generalised to any universe; their proof reference and binding moved with them.
 - 3 November 2026, CD (board item CD): the last clause of the statement says that widening with a lag and eventual widening relate one pair oppositely, not that they rank it; laws 19 to 21, two items it does not show, a counterexample and a related line say what widening with a lag, the tail order and the order of a lag for each admission put above, as the home section in 07 §2 now says. Under the glossary's one sense, ranking and order (the ethics' role word) say which course is better, and widening says which admits more, with no premise; an order defined with no premise, the lagged, tail or lexical order among them, puts one course above another, and ranks only where it is read as a ranking, in C's slot or as a premise. The claim is unchanged.
 - 7 November 2026, board item LM1: this said ranking needs C, where a ranking of courses needs C or a premise in its place (07 §4); corrected. No law, premise or proof changed.
+- 9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.
+- 9 November 2026, board item WB: 'the second-order direction of 生生' re-said as the second-order direction of widening, since 生生 is read as the continuation of life and widening is not its measure; no change to the claim, its hypotheses or its Lean.
 
 </details>
 

@@ -40,7 +40,7 @@
 - That actual agents, brains or trained systems count their choices so or choose at the argmax; the overtraining effect the lock matches in rats has failed to replicate in humans (de Wit and others 2018).
 - That the free-energy principle's partition into thing and world is a coupling structure of the World model: the selection laws read its sparse coupling, not its blanket condition, and no representation theorem joins a Langevin system with a Markov blanket to a web.
 - More than two policies, intermediate precision, a score that changes with the outcomes, additive counting's timescale, and that a crossing under posterior counting comes within any horizon.
-- That capture by counted choices is a loss or a gain: no evaluation enters, and ranking courses needs C or a premise in its place.
+- That capture by counted choices is a loss or a gain: no evaluation enters, and a ranking of courses rests on C or another named order.
 - **Counterexample:** A score is not enough to turn a count: three choices of the first policy to one keep it against a score weighing the second twice as much (Witness.counted_beats_score), while from one to one the score decides for good (Witness.score_decides). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ChoiceCountCapture.lean)
 - **Counterexample:** The lock is not absolute: one count moved locks the course the other way (Witness.moved_locks_down), and a rule in force not read from the counts carries counts above the threshold the other way (Witness.Stale.above_but_stale_locks_down). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ChoiceCountCapture.lean)
 - **Counterexample:** A falling share need not cross at once: counted from the posterior at the time of choosing, three to one falls at the first step while the weighted rule still favours the first policy, by a tie (Witness.after_one_still_first), and favours the second from the second step (Witness.after_two_turns). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ChoiceCountCapture.lean)
@@ -115,6 +115,7 @@ Aliases: `A chooser reading what couples in, its rule read from the count of its
 - 31 October 2026, board item UE25 (study section 471): related to a-code-held-as-counts; the correspondence names it among the containment's third parts; no statement, next step or declaration changed.
 - 6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.
 - 7 November 2026, board item LM1: this said ranking needs C, where a ranking of courses needs C or a premise in its place (07 §4); corrected. No law, premise or proof changed.
+- 9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.
 
 </details>
 
