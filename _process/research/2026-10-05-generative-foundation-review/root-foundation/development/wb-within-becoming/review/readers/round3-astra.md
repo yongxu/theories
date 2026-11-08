@@ -21,7 +21,7 @@ The remaining pattern is disagreement between fields within an entry: corrected 
 
 **Not read in full:** the remaining chapters, complete atlas, Lean files, test files or empirical datasets. Later concurrent worktree changes were excluded. No edits, commits, builds, tests or checkers were run.
 
-[atlas]: /Users/ren/tmp/wb/homes/theories/becoming/results/atlas/entries/correspondences.json
+[atlas]: ../../../../../../../../theories/becoming/results/atlas/entries/correspondences.json
 
 ── cx · ok · session 01a1bcde-e62d-76b2-a2da-31c1715c1b42 · gpt-6-astra/xhigh · read-only · 553s · 2806.6k tokens · 15 cmds
 continue: cx -r 01a1bcde-e62d-76b2-a2da-31c1715c1b42 "…"

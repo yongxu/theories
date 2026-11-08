@@ -27,21 +27,21 @@ The recurring problem remains scope during restatement: particular assumptions b
 
 **Not read in full:** the remaining chapters, atlas, record collection, Lean files, underlying experimental data, or historical copies. No edits, commits, builds, tests or checkers were run.
 
-[07]: /Users/ren/tmp/wb/homes/theories/becoming/chapters/07-SIGNIFICANCE.md
-[08]: /Users/ren/tmp/wb/homes/theories/becoming/chapters/08-METHOD.md
-[Navigation]: /Users/ren/tmp/wb/homes/tools/research/navigation.py
-[Coverage]: /Users/ren/tmp/wb/homes/theories/becoming/results/completion/COVERAGE.json
-[First screen]: /Users/ren/tmp/wb/homes/_process/navigation/README-FIRST-SCREEN.md
-[ZH screen]: /Users/ren/tmp/wb/homes/_process/navigation/README-ZH.md
-[One]: /Users/ren/tmp/wb/homes/theories/becoming/ONE-PAGE.md
-[Opening]: /Users/ren/tmp/wb/homes/theories/becoming/OPENING.md
-[Atlas]: /Users/ren/tmp/wb/homes/theories/becoming/results/atlas/entries/correspondences.json
-[Philosophy]: /Users/ren/tmp/wb/homes/theories/becoming/review/PHILOSOPHY.md
-[Classical dossier]: /Users/ren/tmp/wb/homes/theories/becoming/review/CLASSICAL-TEXTS.md
-[AGENTS]: /Users/ren/tmp/wb/homes/AGENTS.md
-[Collective]: /Users/ren/tmp/wb/homes/theories/becoming/COLLECTIVE-DIRECTION.md
-[Uses]: /Users/ren/tmp/wb/homes/theories/becoming/USES.md
-[Uses ZH]: /Users/ren/tmp/wb/homes/theories/becoming/USES.zh.md
+[07]: ../../../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md
+[08]: ../../../../../../../../theories/becoming/chapters/08-METHOD.md
+[Navigation]: ../../../../../../../../tools/research/navigation.py
+[Coverage]: ../../../../../../../../theories/becoming/results/completion/COVERAGE.json
+[First screen]: ../../../../../../../navigation/README-FIRST-SCREEN.md
+[ZH screen]: ../../../../../../../navigation/README-ZH.md
+[One]: ../../../../../../../../theories/becoming/ONE-PAGE.md
+[Opening]: ../../../../../../../../theories/becoming/OPENING.md
+[Atlas]: ../../../../../../../../theories/becoming/results/atlas/entries/correspondences.json
+[Philosophy]: ../../../../../../../../theories/becoming/review/PHILOSOPHY.md
+[Classical dossier]: ../../../../../../../../theories/becoming/review/CLASSICAL-TEXTS.md
+[AGENTS]: ../../../../../../../../AGENTS.md
+[Collective]: ../../../../../../../../theories/becoming/COLLECTIVE-DIRECTION.md
+[Uses]: ../../../../../../../../theories/becoming/USES.md
+[Uses ZH]: ../../../../../../../../theories/becoming/USES.zh.md
 
 ── cx · ok · session 01a1bcde-e62d-76b2-a2da-31c1715c1b42 · gpt-6-astra/xhigh · read-only · 800s · 5827.0k tokens · 45 cmds
 continue: cx -r 01a1bcde-e62d-76b2-a2da-31c1715c1b42 "…"
