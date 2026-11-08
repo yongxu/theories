@@ -25986,7 +25986,7 @@
    },
    "kind": "domain",
    "summary": {
-    "en": "The domain is mapped more than any other (RO 248, ZH 1,300, Y 90, dossier C 39), and nothing there is re-mapped. These ten entries take what the maps do not hold: 诗 through 孟子, 阴阳家, 农家, 黄宗羲 on taxes and schools, 孟子 on cycles, 叔向 on a published code, 顾炎武, 子华子, proverbs of asymmetry. The live account draws none of these connections: each is proposed here, an AI reading no person has checked. No agreement here is of law: 黄宗羲's folded levies and 顾炎武's two endings are a reader's joins to checked laws, which stay silent on the new charge and on 亡天下 under a standing dynasty. Divergence stands on 邹衍's ring, 许行 and 孟子 on rank, 叔向's remedy and 子华子's order. Six rest on stored text and four on recalled, unchecked text. The row was held to ten entries; not_mapped names what that left. 06's 未决 line is partly stale."
+    "en": "The domain is mapped more than any other (RO 248, ZH 1,300, Y 90, dossier C 39), and nothing there is re-mapped. These ten entries take what the maps do not hold: 诗 through 孟子, 阴阳家, 农家, 黄宗羲 on taxes and schools, 孟子 on cycles, 叔向 on a published code, 顾炎武, 子华子, proverbs of asymmetry. The live account draws none of these connections: each is proposed here, an AI reading; no person's check of it is recorded. No agreement here is of law: 黄宗羲's folded levies and 顾炎武's two endings are a reader's joins to checked laws, which stay silent on the new charge and on 亡天下 under a standing dynasty. Divergence stands on 邹衍's ring, 许行 and 孟子 on rank, 叔向's remedy and 子华子's order. Six rest on stored text and four on recalled, unchecked text. The row was held to ten entries; not_mapped names what that left. 06's 未决 line is partly stale."
    },
    "read": [
     "cx-crosswalk/BRIEF.md and REPAIR.md; reads/CRITIC.md; aa-attractor-atlas/PLAN.md sections 4.1 to 4.4 and 6.1 to 6.5; aa-attractor-atlas/readers-2026-11-04/correspondences.md in full",
@@ -26367,7 +26367,7 @@
       "extent": "中论 chapters 1, 2, 7, 21, 10, 17, 19, 24: 1,432 units, 530 coded 己 of the 540 己 in both rounds (B-18, 06 §二). Lines counted, less one header each: 起信论 589, 金师子章 220, 成唯识论 410 (nine passages only), 五教章六相 131"
      },
      {
-      "what": "Conditional laws written family by family, Lean-checked, readings unreviewed",
+      "what": "Conditional laws written family by family, Lean-checked, no person's review of the readings recorded",
       "where": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-conditional-laws-of-the-corpus",
       "extent": "146 of 219 sentences are Buddhist (counted in groups.tsv by unit prefix: 起信 52, 中论 47, 成唯识 32, 金师子 15): law 85, not holding on its reading 6, premise 16, 丁 18, not expressible 16, definition 5, matching B-36. All six not holding are Buddhist"
      },
