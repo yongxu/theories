@@ -2,20 +2,20 @@
 
 # Mirror of BECOMING-RENEWAL-READING.md
 
-A page for each section of [BECOMING-RENEWAL-READING.md](../../BECOMING-RENEWAL-READING.md) (3.78 MB) and [BECOMING-RENEWAL-READING.zh.md](../../BECOMING-RENEWAL-READING.zh.md) (1.82 MB): GitHub renders no Markdown file this large. Each page holds what its source has at those lines, byte for byte, except link targets, which point from the page: a link to another section goes to that section's page, and a link to a whole file to this index. Previous and next follow the source's order. The source is the source, and every render writes this folder again from it. In the source, sections 166–510 have a heading only in BECOMING-RENEWAL-READING.md; sections 1–107, 109–165 have a heading only in BECOMING-RENEWAL-READING.zh.md.
+A page for each section of [BECOMING-RENEWAL-READING.md](../../BECOMING-RENEWAL-READING.md) (3.78 MB) and [BECOMING-RENEWAL-READING.zh.md](../../BECOMING-RENEWAL-READING.zh.md) (1.82 MB): GitHub renders no Markdown file this large. Each page holds what its source has at the lines its header names, byte for byte, except link targets, which point from the page: a link to another section goes to that section's page, and a link to a whole file to this index. Previous and next follow the source's order. The source is the source, and every render writes this folder again from it. In the source, sections 166–510 have a heading only in BECOMING-RENEWAL-READING.md; sections 1–107, 109–165 have a heading only in BECOMING-RENEWAL-READING.zh.md.
 
-The study was one bilingual file until 17 October 2026, when it was split. Most of the prose of sections 1–107 and 109–162 went to the Chinese edition; the English file kept their anchors, code blocks and some tables, under no heading, on the pages marked so here, and its English summary gives an English account of some of them. Sections 163–165 have a short English paragraph there as well. The Chinese edition's banner says that where the two differ the English governs. Records bind the English file by hash, at the version each read; none binds the Chinese edition or a page here. Their histories name sections by number.
+The study was one bilingual file until 17 October 2026, when it was split. Most of the prose of sections 1–162 went to the Chinese edition (108 kept an English heading). The English file kept their anchors, code blocks and some tables, under no heading, on the pages marked so here, and in some sections lines the Chinese edition lacks, among them quoted words in English; its English summary gives an English account of some of them. Sections 163–165 each have an English account on their own pages. The Chinese edition's banner says that where the two differ the English governs. Records bind the English file by hash, at the version each read; none binds the Chinese edition or a page here. Their histories name sections by number.
 
 | § | Section | English | 中文 |
 |---|---|---|---|
 | — | Preamble | [5 lines](preamble.md) | [7 lines](preamble.zh.md) |
-| 1 | 问题 | [2 lines, no heading](001.md) | [6 lines](001.zh.md) |
-| 2 | 结果 | [6 lines, no heading](002.md) | [28 lines](002.zh.md) |
-| 3 | 与计划的对照 | [4 lines, no heading](003.md) | [9 lines](003.zh.md) |
-| 4 | 作者反审 | [2 lines, no heading](004.md) | [41 lines](004.zh.md) |
-| 5 | 边界 | [2 lines, no heading](005.md) | [5 lines](005.zh.md) |
+| 1 | 问题 | [anchor only](001.md) | [6 lines](001.zh.md) |
+| 2 | 结果 | [anchor only](002.md) | [28 lines](002.zh.md) |
+| 3 | 与计划的对照 | [anchor only](003.md) | [9 lines](003.zh.md) |
+| 4 | 作者反审 | [anchor only](004.md) | [41 lines](004.zh.md) |
+| 5 | 边界 | [anchor only](005.md) | [5 lines](005.zh.md) |
 | 6 | 动态依存与逐步读法（P6） | [36 lines, no heading](006.md) | [104 lines](006.zh.md) |
-| 7 | 独立审查与更正 | [16 lines, no heading](007.md) | [68 lines](007.zh.md) |
+| 7 | 独立审查与更正 | [anchor only](007.md) | [68 lines](007.zh.md) |
 | 8 | 回程、视界、共同活动与替代（P7） | [48 lines, no heading](008.md) | [168 lines](008.zh.md) |
 | 9 | C 在各读法下的排序（P8） | [15 lines, no heading](009.md) | [51 lines](009.zh.md) |
 | 10 | 条件的对应纪律（P9） | [15 lines, no heading](010.md) | [50 lines](010.zh.md) |
@@ -109,15 +109,15 @@ The study was one bilingual file until 17 October 2026, when it was split. Most 
 | 98 | 历史固定什么：律与历史的完备对应，检验固定相同的条件（P76） | [23 lines, no heading](098.md) | [52 lines](098.zh.md) |
 | 99 | 路径分支时：返回、被吸入与相同之下的确定（P81） | [34 lines, no heading](099.md) | [71 lines](099.zh.md) |
 | 100 | 回应由动力学给出：反事实是规律的进程（P80） | [45 lines, no heading](100.md) | [117 lines](100.zh.md) |
-| 101 | 列出一次所承诺的（P77） | [2 lines, no heading](101.md) | [12 lines](101.zh.md) |
-| 102 | 变化的次序（P78） | [2 lines, no heading](102.md) | [31 lines](102.zh.md) |
-| 103 | 一步与逐步选择家族的全部规律（P79） | [2 lines, no heading](103.md) | [26 lines](103.zh.md) |
-| 104 | 加权历史及其损失（P82） | [2 lines, no heading](104.md) | [12 lines](104.zh.md) |
-| 105 | 传递的精确条件与边界（P84） | [2 lines, no heading](105.md) | [30 lines](105.zh.md) |
-| 106 | 没有哪个来源复现的供给（P85） | [2 lines, no heading](106.md) | [10 lines](106.zh.md) |
-| 107 | 跨步供给、冗余与储备（P86） | [2 lines, no heading](107.md) | [16 lines](107.zh.md) |
+| 101 | 列出一次所承诺的（P77） | [anchor only](101.md) | [12 lines](101.zh.md) |
+| 102 | 变化的次序（P78） | [anchor only](102.md) | [31 lines](102.zh.md) |
+| 103 | 一步与逐步选择家族的全部规律（P79） | [anchor only](103.md) | [26 lines](103.zh.md) |
+| 104 | 加权历史及其损失（P82） | [anchor only](104.md) | [12 lines](104.zh.md) |
+| 105 | 传递的精确条件与边界（P84） | [anchor only](105.md) | [30 lines](105.zh.md) |
+| 106 | 没有哪个来源复现的供给（P85） | [anchor only](106.md) | [10 lines](106.zh.md) |
+| 107 | 跨步供给、冗余与储备（P86） | [anchor only](107.md) | [16 lines](107.zh.md) |
 | 108 | Persistence through dormancy and identity fixed by relations (P87) | [25 lines](108.md) | [57 lines](108.zh.md) |
-| 109 | 交换的次序：正规形、普查与最小足迹（P88） | [2 lines, no heading](109.md) | [20 lines](109.zh.md) |
+| 109 | 交换的次序：正规形、普查与最小足迹（P88） | [anchor only](109.md) | [20 lines](109.zh.md) |
 | 110 | 熵：生成留下的历史与守住它的代价（R5） | [44 lines, no heading](110.md) | [101 lines](110.zh.md) |
 | 111 | 静止一族按强度命名（P58c） | [80 lines, no heading](111.md) | [107 lines](111.zh.md) |
 | 112 | 一般规律与改名：存量、接触与严格损失匹配（2026-10-14） | [18 lines, no heading](112.md) | [49 lines](112.zh.md) |
