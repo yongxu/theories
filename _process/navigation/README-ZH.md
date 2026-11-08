@@ -24,7 +24,7 @@
 
 ![围绕一套文法的八章](../../theories/becoming/results/spine.zh.svg)
 
-*117 个核心声明中，11 个推导而得，在 08 §7 的审阅中各读作文法之律的一个情形（Lean 核验了其中什么，以及其余的地位，见 [08 §7](../../theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge)）；这幅图显示什么、不显示什么，见理论图的 [The spine](../../theories/becoming/results/THEORY-GRAPH.md#the-spine)（英文）；本说明[怎样长成](../../theories/LINEAGE.zh.md)。*
+*117 个核心声明中，11 个推导而得，在 08 §7 的审阅中各读作文法之律的一个情形（Lean 核验了其中什么，以及其余的地位，见 [08 §7](../../theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge)）；这幅图显示什么、不显示什么，见[理论图的脊柱部分](../../theories/becoming/results/THEORY-GRAPH.zh.md#the-spine)；本说明[怎样长成](../../theories/LINEAGE.zh.md)。*
 
 ## 从哪里读起
 
@@ -40,9 +40,9 @@
 | [第六章](../../theories/becoming/chapters/06-CLASSICAL-TEXTS.md) | 古文：读出、检验与分歧；中文 | 约 {{time:theories/becoming/chapters/06-CLASSICAL-TEXTS.md}} |
 | [检验](../../TESTS.md) | 冻结的检验，按结局排列，未通过者在前；英文 | 约 {{time:TESTS.md}} |
 | [对照表](../../theories/becoming/results/atlas/CROSSWALK.zh.md) | 早先的理论文件夹与各思想领域，读作现行说明中的什么，附图与计数；各组在英文页上 | 约 {{time:theories/becoming/results/atlas/CROSSWALK.zh.md}} |
-| [理论图](../../theories/becoming/results/THEORY-GRAPH.md) | 概念、结果、模块、文本与各章之间的连接；英文 | 约 {{time:theories/becoming/results/THEORY-GRAPH.md}} |
+| [理论图](../../theories/becoming/results/THEORY-GRAPH.md) | 概念、结果、模块、文本与各章之间的连接；英文，脊柱部分有[中文版](../../theories/becoming/results/THEORY-GRAPH.zh.md)（约 {{time:theories/becoming/results/THEORY-GRAPH.zh.md}}） | 约 {{time:theories/becoming/results/THEORY-GRAPH.md}} |
 | [怎样长成](../../theories/LINEAGE.zh.md) | 本说明怎样从更早的文字与理论文件夹长成 | {{stated:theories/LINEAGE.zh.md}} |
 | [术语表](../../GLOSSARY.zh.md) | 每个词的一义与其所属之处 | 约 {{time:GLOSSARY.zh.md}} |
 | [审查包](../../theories/becoming/review/README.zh.md) | 给审读者的材料与问题；古文、佛学两份与重新归类的编码手册为中文 | 封面约 {{time:theories/becoming/review/README.zh.md}} |
 
-**语言。** 除第六章、古文与佛学两份审查材料及重新归类的编码手册外，各章、记录、检验与理论图都是英文。各中文版由 AI 译自英文，未经人工审读；义以英文版为准。
+**语言。** 除第六章、古文与佛学两份审查材料及重新归类的编码手册外，各章、记录、检验与理论图都是英文（理论图的脊柱部分有中文版）。各中文版由 AI 译自英文，未经人工审读；义以英文版为准。

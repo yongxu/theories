@@ -65,7 +65,7 @@
  "words": {
   "en": {
    "title": "How the account grew",
-   "subtitle": "Turning points from the first writings (2021) to the live account (8 November 2026) in six phases, each marked by what states it; the major points titled and numbered as in the table below.",
+   "subtitle": "Turning points from the first writings (2021) to the live account (8 November 2026) in six phases, each as wide as its points need and not to time scale, each point marked by what states it; the major points titled and numbered as in the table below.",
    "other_language": "中文",
    "reading_time": "{full} to read in full; the brief, the picture, the labels and the thread in {first}.",
    "intro": "How the account grew: from the writings of 2021, through the earlier theory folders it read and carried or set aside, to [the theory of becoming](becoming/ONE-PAGE.md) as it stands. Generated from [the lineage data](becoming/results/data/lineage.json), the records' history and [the crosswalk](becoming/results/atlas/CROSSWALK.md). The repository holds {commits} commits at `{commit}` ({date}); its first commit is of 6 September 2026, and what came before is material brought into it. This page carries forward [the September timeline](../_process/history/2026-09-consolidation/TIMELINE.md), \"a narrative, not an index\", which stops on 4 October 2026. Its turning points were gathered and checked by AI readers, no person's.",
@@ -103,11 +103,15 @@
    "all_label": "all {label}",
    "none_so_far": "none so far",
    "hb_note": "The files `_process/history/2026-09-consolidation/reading-notes-inputs/hb-*.md` are one person's turns excerpted from chat exports that are not tracked; a turning point citing them is public because the excerpt is.",
-   "sources_list": "Sources by row"
+   "sources_list": "Sources by row",
+   "origin": "Written by",
+   "origins_key": "Fill, who wrote what states it:",
+   "origins_intro": "Each turning point also says who wrote the text that states it, the first of its evidence that does: the column *Written by*, and the fill of its mark in the picture (a dot at its centre where not stated). Three AI readers classified the points from what the file, its folder or an earlier folder's source list says, and three more checked them point by point; all 48 checks agreed. The mark is that entry's: a row's other evidence, and quotations taken from it, may be in another hand. Each reading and its grounds are in [the classification](../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rw-spine/reads/lineage-origins.json). Its entries follow the data's list, which can cite one place twice; a row shows each place once. Of the {total}:",
+   "labels_key": "Shape, what states it:"
   },
   "zh": {
    "title": "本说明是怎样长成的",
-   "subtitle": "从最早的文字（2021）到现行的说明（2026 年 11 月 8 日）的转折点，分为六个阶段，每个转折点都标明是什么陈述了它；主要的转折点附标题，编号同下表。",
+   "subtitle": "从最早的文字（2021）到现行的说明（2026 年 11 月 8 日）的转折点，分为六个阶段，各阶段的宽度按其转折点数而定，不按时间比例；每个转折点都标明是什么陈述了它；主要的转折点附标题，编号同下表。",
    "other_language": "English",
    "reading_time": "全文约 {full}；简述、图、标签与这条线索约 {first}。",
    "intro": "本说明是怎样长成的：从 2021 年的文字，经由它读过、承继或放下的早先各理论文件夹，到现在的[生成变化之论](becoming/ONE-PAGE.zh.md)。本页由[谱系数据](becoming/results/data/lineage.json)、各记录的历史与[对照](becoming/results/atlas/CROSSWALK.md)生成。本仓库在 `{commit}`（{date}）共有 {commits} 次提交；其第一次提交是 2026 年 9 月 6 日的，此前的东西都是带入仓库的材料。本页接续[九月时间线](../_process/history/2026-09-consolidation/TIMELINE.md)，那是「a narrative, not an index」（一份叙述，不是索引），止于 2026 年 10 月 4 日。本页的转折点由 AI 读者收集并核对，没有人读过。",
@@ -147,11 +151,49 @@
    "hb_note": "`_process/history/2026-09-consolidation/reading-notes-inputs/hb-*.md` 这些文件，是从未入库的对话导出中摘出的同一个人的发言；引用它们的转折点标为公开，因为摘录本身已入库。",
    "sources_list": "各行来源",
    "sources_n": "来源 {n} 处",
-   "sources_note": "各行的来源见表后的“各行来源”；来源的位置说明，除行号与标题外，保留英文。"
+   "sources_note": "各行的来源见表后的“各行来源”；来源的位置说明，除行号与标题外，保留英文。",
+   "origin": "执笔",
+   "origins_key": "填色，陈述它的文本出自谁之手：",
+   "origins_intro": "每个转折点也标明陈述它的文本出自谁之手，即其证据中首先陈述它的那一条：见“执笔”一栏，以及图中标记的填色（未说明者，标记中心有一点）。三位 AI 读者依文件、其所在文件夹或较早文件夹的来源列表的说明逐一归类，另三位逐条核对，48 条全部一致。所标的是那一条证据的执笔者：一行中的其他证据，以及取自它们的引文，可能出自别人之手。各条读法及其依据见[归类](../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rw-spine/reads/lineage-origins.json)。归类的条目依数据中的证据列表，其中可能两次引用同一处；表的每一行中，同一处只列一次。{total} 个转折点中：",
+   "labels_key": "形状，陈述它的是什么："
   }
  },
  "folders_trust": {
   "path": "theories/becoming/results/atlas/CROSSWALK.md",
   "quote": "estimates 82.6% holding, 14.2% with a label or role wrong and 3.2% with a wrong reading over all 1183"
+ },
+ "origins": {
+  "person": {
+   "en": "a person's words",
+   "zh": "一个人的话",
+   "short_en": "by a person",
+   "short_zh": "出自一个人",
+   "means_en": "the text that states it is a person's own writing, or a person's words kept verbatim (in `sources/`, or the excerpts of one person's turns), as the file or its folder says.",
+   "means_zh": "陈述它的文本是一个人自己写的，或是逐字保留的一个人的话（在 `sources/` 中，或是摘出的同一个人的发言），以文件或其所在文件夹的说明为据。"
+  },
+  "drafted": {
+   "en": "AI-drafted from a person's words",
+   "zh": "AI 据一个人的话起草",
+   "short_en": "AI-drafted",
+   "short_zh": "AI 起草",
+   "means_en": "the text that states it was written by AI from a person's words, notes or conversation, as the file or its folder says: the ideas may be the person's, the wording is not.",
+   "means_zh": "陈述它的文本由 AI 依一个人的话、笔记或对话写成，以文件或其所在文件夹的说明为据：想法可能是那个人的，措辞不是。"
+  },
+  "ai": {
+   "en": "AI-made",
+   "zh": "AI 所作",
+   "short_en": "AI-made",
+   "short_zh": "AI 所作",
+   "means_en": "the text that states it is the repository's own AI-made work: records, chapters, the board, reviews, designs and AI readings.",
+   "means_zh": "陈述它的文本是本仓库自己由 AI 做成的工作：记录、各章、工作板、审阅、设计与 AI 的读法。"
+  },
+  "unstated": {
+   "en": "not stated",
+   "zh": "未说明",
+   "short_en": "not stated",
+   "short_zh": "未说明",
+   "means_en": "nothing found says who wrote it, or what speaks of it disagrees.",
+   "means_zh": "找不到说明是谁写的，或说到它的文本彼此不一。"
+  }
  }
 }

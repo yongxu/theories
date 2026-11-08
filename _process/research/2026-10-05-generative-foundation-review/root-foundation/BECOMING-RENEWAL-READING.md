@@ -19998,6 +19998,7 @@ Boundary:
   - The life row's citations stay with their records.
 Output → input: 08 §7's counts; COMPLETION (generated); census-balance; the records binding Flow.lean and
        Optimum.lean, rebound to the receipt.
+```
 
 ## 436. The schema-1 records whose laws schema 1 could not hold, migrated (DF3, batch A)
 

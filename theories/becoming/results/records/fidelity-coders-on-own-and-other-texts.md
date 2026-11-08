@@ -24,7 +24,7 @@
 <a id="progress--已接通"></a>
 ## Progress
 
-1. The crossed test run on English statements. [study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#376-coders-on-their-own-and-the-others-texts-sc1)
+1. The crossed test run on English statements. [study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/376.md#376-coders-on-their-own-and-the-others-texts-sc1)
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -62,7 +62,7 @@ Board item SC1, testing the open observation recorded in FC1's results. Reading 
 | integration | [kit.py](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sc1-source-check/kit.py) | — |
 | integration | [results.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sc1-source-check/results.json) | — |
 | statement | [FIDELITY-RESULTS.md](../../../../experiments/wenli-reading-transfer/FIDELITY-RESULTS.md) | — |
-| review | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
+| review | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror); its history names sections [376](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/376.md), [418](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/418.md) | — |
 
 Aliases: `SC1`, `source check`, `self-detection of excess referents`, `作者盲点之测`
 

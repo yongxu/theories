@@ -12,9 +12,11 @@
 
 **根。** 一种符号：关系，读作缘。同一总是某一方面的同一，即一个*类*。一个发生是另一个的缘、且二者在该类下相似，后者便*续*前者。以两种粒度，部分与模式，去读，一个进程可以*生成*（经由部分的复生而继续）、*守*（不经复生而继续）或*退化*（在每一分支上都终止）；生成与守各自排除退化。核心结果中，少数是根的情形，较多在证明中用到根之律，多数不用（[08 §7](chapters/08-METHOD.md#r-one-root-to-its-edge)）。展开是一个，这是一个论题，已论证：在关系之内，只到已表明之处，取者与被取者是同一关系项的两种角色，知者与所知是同一个[环](chapters/03-KNOWING.md#the-reading-loop)，而责任[未被表明是这样分化出来的](chapters/07-SIGNIFICANCE.md#practical-judgment)。它禁止的是解释，不是观察（[08](chapters/08-METHOD.md#one-relational-unfolding)）。
 
-![围绕文法的八章：圆按结果数定大小，曲线计各章结果之间的使用，两个前提进入第七章，各在所用之处为假设，T1 到 T8 在其所属之处按检验结局着色](results/spine.zh.svg)
+**怎样读这幅图。** 每个圆是一章，按其结果数定大小；从一章到另一章的实线，计其结果使用另一章结果、记为 formal-reuse（这一类留给已核验的推理）的次数，章与章之间的虚线与点线是别种依赖；辐条标出该章有多少核心模块在中央的文法上陈述其律（计的是模块，不是推导而得的结果）。117 项核心声明中，约十分之一被读作在文法上陈述之律的情形（11 项推导而得，1 项为根上一形式（root form）的一步情形，在一个所述的假设之下）；其余或为计数之律，位于文法以下（6 项），或处于一个指明的距离，各有其理由（99 项）。
 
-*围绕文法的各章，由工具依[理论图](results/THEORY-GRAPH.md)画出：一条曲线计一章的结果使用另一章结果、记为 formal-reuse 的次数，这一类只用于已核验的推理；它是一种依赖，不是意义上的一致。117 项核心声明中，11 项推导而得，各为文法之律的一个情形，经由在 Lean 中作为等价核验的桥接与审阅所读的支持（在某行列有它们之处）；1 项在一个所述的假设之下，6 项为计数，位于文法以下，99 项处于一个指明的距离，各有其理由（[08 §7](chapters/08-METHOD.md#r-one-root-to-its-edge)）。这幅图显示什么、不显示什么，见理论图的 [The spine](results/THEORY-GRAPH.md#the-spine-what-it-shows-and-does-not-show)（英文）。*
+![围绕文法的八章：圆按结果数定大小，实线计各章结果之间记为 formal-reuse 的使用，章与章之间的虚线与点线是别种依赖，两个前提进入第七章，各在所用之处为假设，T1 到 T8 在其所属之处按检验结局着色](results/spine.zh.svg)
+
+*由工具依[理论图](results/THEORY-GRAPH.md)画出：少于 10 次 formal-reuse 使用之配对的实线不画，15 次及以上才标数字；一条曲线是一种依赖，不是意义上的一致。以 [08 §7](chapters/08-METHOD.md#r-one-root-to-its-edge) 的话所述的各项地位，见[理论图的脊柱部分](results/THEORY-GRAPH.zh.md#the-spine)；这幅图显示什么、不显示什么，见[其中一节](results/THEORY-GRAPH.zh.md#the-spine-what-it-shows-and-does-not-show)。*
 
 | | 本说明说什么 | [地位](chapters/08-METHOD.md#standings-and-bases) | 什么会表明它错 |
 |---|---|---|---|

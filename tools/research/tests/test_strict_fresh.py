@@ -30,7 +30,8 @@ class StrictFreshTests(unittest.TestCase):
                 patch.object(navigation, 'render_views', lambda records: {}), \
                 patch.object(research.theory_graph, 'render', lambda records: {}), \
                 patch.object(research.atlas, 'render', lambda records: ({}, [])), \
-                patch.object(research.zh_fronts, 'render', lambda records, outputs: ({}, [])):
+                patch.object(research.zh_fronts, 'render', lambda records, outputs: ({}, [])), \
+                patch.object(research.mirror, 'render', lambda: ({}, [])):
             code, result = research.check_or_render(False, strict_fresh=strict_fresh)
         return code, result, calls
 
@@ -61,13 +62,16 @@ class StrictFreshTests(unittest.TestCase):
             writes.append(dict(outputs))
             return []
 
-        for later, expected, found in [(catalogue, 2, []), ({}, 1, []), (catalogue, 1, ['x.md: a page the catalogue no longer writes'])]:
+        index = {'tmp/__strict-fresh-test__/INDEX.md': 'counts a page the first write added\n'}
+        for later, counted, expected, found in [(catalogue, {}, 2, []), ({}, {}, 1, []), (catalogue, {}, 1, ['x.md: a page the catalogue no longer writes']),
+                                                ({}, index, 2, [])]:
             writes.clear()
             with patch.object(research, 'input_snapshot', lambda: None), \
                     patch.object(research, 'unchanged_inputs', lambda before: True), \
                     patch.object(research, 'index_outputs', lambda render=False: ({}, [], [])), \
                     patch.object(research, 'check_links', lambda outputs, planned=(): []), \
                     patch.object(research.indexes, 'adopted', lambda: {}), \
+                    patch.object(research.indexes, 'render', lambda: counted), \
                     patch.object(research.lean_catalogue, 'render', lambda: later), \
                     patch.object(research.lean_catalogue, 'problems', lambda files: found), \
                     patch.object(registry, 'load_records', lambda: ([], [])), \
@@ -79,12 +83,13 @@ class StrictFreshTests(unittest.TestCase):
                     patch.object(navigation, 'render_views', lambda records: {}), \
                     patch.object(research.atlas, 'render', lambda records: ({}, [])), \
                     patch.object(research.zh_fronts, 'render', lambda records, outputs: ({}, [])), \
+                    patch.object(research.mirror, 'render', lambda: ({}, [])), \
                     patch.object(navigation, 'write_views', write_views):
                 code, result = research.check_or_render(True)
             self.assertEqual(result['errors'], ['lean catalogue: ' + e for e in found])  # a problem on the second pass writes nothing more
             self.assertEqual(len(writes), expected)
             if expected == 2:
-                self.assertEqual(writes[1], catalogue)
+                self.assertEqual(writes[1], {**later, **counted})
 
     def test_the_flag_belongs_to_check_only(self):
         with patch('sys.argv', ['research.py', 'render', '--strict-fresh']), \

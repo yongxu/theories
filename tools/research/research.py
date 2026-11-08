@@ -16,7 +16,7 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
-from tools.research import registry, navigation, completion, lean_catalogue, reading_catalogue, style, paths, moves, indexes, session_map, history_notes, rename_ids, theory_graph, atlas, connection_map, spine, lineage, zh_fronts
+from tools.research import registry, navigation, completion, lean_catalogue, reading_catalogue, style, paths, moves, indexes, session_map, history_notes, rename_ids, theory_graph, atlas, connection_map, spine, lineage, zh_fronts, mirror
 from tools.research import tests_page  # the tests, failures first (RW)
 
 
@@ -49,6 +49,7 @@ def input_snapshot():
     paths.update(atlas.inputs())
     paths.update(tests_page.inputs())
     paths.update(zh_fronts.inputs())  # the Chinese landing page's template and the pages it times
+    paths.update(mirror.inputs())  # the studies GitHub cannot render, mirrored a section to a page
     for directory in config['record_directories']:
         for path in (ROOT / directory).glob('*.json'):
             paths.add(path)
@@ -183,7 +184,9 @@ def check_links(outputs, planned=()):
     errors = []
     available = {(ROOT / p).resolve() for p in planned}
     for name, body in outputs.items():
-        for target in re.findall(r'\]\((<[^>]+>|[^\s)]+)\)', body):
+        # Text in code or inline TeX is not a link, as moves.links reads it: a mirror keeps its source's code as it is.
+        masked = moves.TEX_INLINE.sub(lambda m: re.sub(r'[^\n]', ' ', m.group(0)), moves.code_mask(body)) if '`' in body or '~~~' in body or '\\(' in body else body
+        for target in [body[m.start(1):m.end(1)] for m in re.finditer(r'\]\((<[^>]+>|[^\s)]+)\)', masked)]:
             part = urlsplit(target.strip('<>'))
             if part.scheme or not part.path:
                 continue
@@ -193,8 +196,8 @@ def check_links(outputs, planned=()):
             elif part.fragment and p.suffix == '.md' and not re.fullmatch(r'L\d+(-L\d+)?', part.fragment):
                 # a line (#L12) is GitHub's, not a heading's, as moves.check_links reads it
                 relative = str(p.relative_to(ROOT)) if p.is_relative_to(ROOT) else None
-                body = outputs.get(relative) if relative in planned else None
-                found = reading_catalogue.anchors_from_text(body) if body is not None else reading_catalogue.anchors(p)
+                held = outputs.get(relative) if relative in planned else None
+                found = reading_catalogue.anchors_from_text(held) if held is not None else reading_catalogue.anchors(p)
                 if unquote(part.fragment) not in found:
                     errors.append(f'{name}: missing anchor {target}')
     return errors
@@ -307,6 +310,11 @@ def check_or_render(render=False, base=None, ids=None, strict_fresh=False):
     zh_pages, zh_errors = zh_fronts.render(records, outputs)
     outputs.update(zh_pages)
     errors += zh_errors
+    # The mirrors (RW): a study GitHub cannot render, a section to a page, its bytes kept but for link targets; a link
+    # naming an anchor or a line the study lacks is an error.
+    mirror_pages, mirror_errors = mirror.render()
+    outputs.update(mirror_pages)
+    errors += mirror_errors
     index_pages, index_errors, reading_drift = index_outputs(render or strict_fresh)
     stale_indexes = []
     errors += index_errors
@@ -334,7 +342,8 @@ def check_or_render(render=False, base=None, ids=None, strict_fresh=False):
             if not errors:
                 again = lean_catalogue.render()
                 errors += ['lean catalogue: ' + e for e in lean_catalogue.problems(again)]
-                settled = {path: body for path, body in again.items()
+                # The directory indexes count the files on disk, so a page this render added is counted only now.
+                settled = {path: body for path, body in {**again, **indexes.render()}.items()
                            if not (ROOT / path).is_file() or (ROOT / path).read_text() != body}
                 if settled and not errors:
                     errors += navigation.write_views(settled, initial)

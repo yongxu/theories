@@ -65,7 +65,7 @@
  "words": {
   "en": {
    "title": "How the account grew",
-   "subtitle": "Turning points from the first writings (2021) to the live account (8 November 2026) in six phases, each marked by what states it; the major points titled and numbered as in the table below.",
+   "subtitle": "Turning points from the first writings (2021) to the live account (8 November 2026) in six phases, each as wide as its points need and not to time scale, each point marked by what states it; the major points titled and numbered as in the table below.",
    "other_language": "中文",
    "reading_time": "{full} to read in full; the brief, the picture, the labels and the thread in {first}.",
    "intro": "How the account grew: from the writings of 2021, through the earlier theory folders it read and carried or set aside, to [the theory of becoming](becoming/ONE-PAGE.md) as it stands. Generated from [the lineage data](becoming/results/data/lineage.json), the records' history and [the crosswalk](becoming/results/atlas/CROSSWALK.md). The repository holds {commits} commits at `{commit}` ({date}); its first commit is of 6 September 2026, and what came before is material brought into it. This page carries forward [the September timeline](../_process/history/2026-09-consolidation/TIMELINE.md), \"a narrative, not an index\", which stops on 4 October 2026. Its turning points were gathered and checked by AI readers, no person's.",
@@ -103,11 +103,15 @@
    "all_label": "all {label}",
    "none_so_far": "none so far",
    "hb_note": "The files `_process/history/2026-09-consolidation/reading-notes-inputs/hb-*.md` are one person's turns excerpted from chat exports that are not tracked; a turning point citing them is public because the excerpt is.",
-   "sources_list": "Sources by row"
+   "sources_list": "Sources by row",
+   "origin": "Written by",
+   "origins_key": "Fill, who wrote what states it:",
+   "origins_intro": "Each turning point also says who wrote the text that states it, the first of its evidence that does: the column *Written by*, and the fill of its mark in the picture (a dot at its centre where not stated). Three AI readers classified the points from what the file, its folder or an earlier folder's source list says, and three more checked them point by point; all 48 checks agreed. The mark is that entry's: a row's other evidence, and quotations taken from it, may be in another hand. Each reading and its grounds are in [the classification](../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rw-spine/reads/lineage-origins.json). Its entries follow the data's list, which can cite one place twice; a row shows each place once. Of the {total}:",
+   "labels_key": "Shape, what states it:"
   },
   "zh": {
    "title": "本说明是怎样长成的",
-   "subtitle": "从最早的文字（2021）到现行的说明（2026 年 11 月 8 日）的转折点，分为六个阶段，每个转折点都标明是什么陈述了它；主要的转折点附标题，编号同下表。",
+   "subtitle": "从最早的文字（2021）到现行的说明（2026 年 11 月 8 日）的转折点，分为六个阶段，各阶段的宽度按其转折点数而定，不按时间比例；每个转折点都标明是什么陈述了它；主要的转折点附标题，编号同下表。",
    "other_language": "English",
    "reading_time": "全文约 {full}；简述、图、标签与这条线索约 {first}。",
    "intro": "本说明是怎样长成的：从 2021 年的文字，经由它读过、承继或放下的早先各理论文件夹，到现在的[生成变化之论](becoming/ONE-PAGE.zh.md)。本页由[谱系数据](becoming/results/data/lineage.json)、各记录的历史与[对照表](becoming/results/atlas/CROSSWALK.md)生成。本仓库在 `{commit}`（{date}）共有 {commits} 次提交；其第一次提交是 2026 年 9 月 6 日的，此前的东西都是带入仓库的材料。本页接续[九月时间线](../_process/history/2026-09-consolidation/TIMELINE.md)，那是「a narrative, not an index」（一份叙述，不是索引），止于 2026 年 10 月 4 日。本页的转折点由 AI 读者收集并核对，没有人读过。",
@@ -147,7 +151,11 @@
    "hb_note": "`_process/history/2026-09-consolidation/reading-notes-inputs/hb-*.md` 这些文件，是从未入库的对话导出中摘出的同一个人的发言；引用它们的转折点标为公开，因为摘录本身已入库。",
    "sources_list": "各行来源",
    "sources_n": "来源 {n} 处",
-   "sources_note": "各行的来源见表后的“各行来源”；来源的位置说明，除行号与标题外，保留英文。"
+   "sources_note": "各行的来源见表后的“各行来源”；来源的位置说明，除行号与标题外，保留英文。",
+   "origin": "执笔",
+   "origins_key": "填色，陈述它的文本出自谁之手：",
+   "origins_intro": "每个转折点也标明陈述它的文本出自谁之手，即其证据中首先陈述它的那一条：见“执笔”一栏，以及图中标记的填色（未说明者，标记中心有一点）。三位 AI 读者依文件、其所在文件夹或较早文件夹的来源列表的说明逐一归类，另三位逐条核对，48 条全部一致。所标的是那一条证据的执笔者：一行中的其他证据，以及取自它们的引文，可能出自别人之手。各条读法及其依据见[归类](../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rw-spine/reads/lineage-origins.json)。归类的条目依数据中的证据列表，其中可能两次引用同一处；表的每一行中，同一处只列一次。{total} 个转折点中：",
+   "labels_key": "形状，陈述它的是什么："
   }
  },
  "points": [
@@ -184,7 +192,12 @@
    ],
    "label": "public",
    "label_why": "The recovered text of the proposal is a tracked file that states these words; the date is its file name's and the sources/00 README table's.",
-   "thread": false
+   "thread": false,
+   "short": {
+    "en": "Metamunity: the city as a structure",
+    "zh": "元社区：城市作为一种结构"
+   },
+   "origin": "person"
   },
   {
    "id": "p2022-world-of-possibilities",
@@ -219,7 +232,8 @@
    ],
    "label": "public",
    "label_why": "The recovered text is a tracked file that states these definitions; 2022-04-07 is the file's edit date per the sources/00 README table.",
-   "thread": false
+   "thread": false,
+   "origin": "person"
   },
   {
    "id": "p2023-wamotopia-moloch",
@@ -254,7 +268,8 @@
    ],
    "label": "public",
    "label_why": "The manifesto and camp text are tracked files that state these words. The day-level dates (manifesto 2023-12-10, camp 2023-12-21) rest on theories/wamotopia-and-the-wamo-protocol/README.md's reconstruction from the repository bundle; sources/00-early-2021-2022/2023-12-11-wamotopia_v1.0-downloads.md shows v1.0 existed by 2023-12-11.",
-   "thread": false
+   "thread": false,
+   "origin": "drafted"
   },
   {
    "id": "p2024-03-complexity-outruns-understanding",
@@ -289,7 +304,8 @@
    ],
    "label": "public",
    "label_why": "The turns are quoted verbatim under their dated heading in a tracked extract of the private chat export. That this begins the correction-speed line (later sources/01-writings-2025/cognitive_lag.md) is TIMELINE.md's reading.",
-   "thread": false
+   "thread": false,
+   "origin": "person"
   },
   {
    "id": "p2024-04-moloch-non-convergence",
@@ -324,7 +340,8 @@
    ],
    "label": "public",
    "label_why": "The turn is quoted verbatim under its dated heading in a tracked extract of the private chat export; TIMELINE.md dates it 04-16 too.",
-   "thread": false
+   "thread": false,
+   "origin": "person"
   },
   {
    "id": "sel-2024-07-14-selection-law",
@@ -363,7 +380,8 @@
    "short": {
     "en": "One value as power",
     "zh": "一种价值作为权力的象征"
-   }
+   },
+   "origin": "person"
   },
   {
    "id": "p2024-07-game-design",
@@ -398,7 +416,8 @@
    ],
    "label": "public",
    "label_why": "Both turns are quoted verbatim under dated headings in a tracked extract of the private chat export. That the 07-29 turn founds theories/keep-the-possibility-space-open/ is TIMELINE.md's reading.",
-   "thread": false
+   "thread": false,
+   "origin": "person"
   },
   {
    "id": "sel-2024-10-30-capital-loop",
@@ -443,7 +462,8 @@
    "short": {
     "en": "The loop written down",
     "zh": "环被写下"
-   }
+   },
+   "origin": "drafted"
   },
   {
    "id": "p2024-11-ouroboros",
@@ -484,7 +504,8 @@
    ],
    "label": "public",
    "label_why": "The precursor file (dated 2024-11-05 in sources/SOURCES.md, AI-drafted per the meta-attractor folder's README) and the dated turns in a tracked extract state these words.",
-   "thread": false
+   "thread": false,
+   "origin": "drafted"
   },
   {
    "id": "p2025-02-nvf",
@@ -519,7 +540,8 @@
    ],
    "label": "public",
    "label_why": "Both wordings are in tracked files; the day of the rewrite is the file date recorded in sources/SOURCES.md.",
-   "thread": false
+   "thread": false,
+   "origin": "person"
   },
   {
    "id": "sel-2025-05-30-meta-attractor-captures-selection",
@@ -558,7 +580,8 @@
    "short": {
     "en": "Meta-attractor captures selection's mechanisms",
     "zh": "元吸引子捕获选择之机制"
-   }
+   },
+   "origin": "unstated"
   },
   {
    "id": "p2025-08-sts",
@@ -593,7 +616,8 @@
    ],
    "label": "public",
    "label_why": "Both files are tracked and state the two names; the day rests on file dates recorded in sources/SOURCES.md.",
-   "thread": false
+   "thread": false,
+   "origin": "drafted"
   },
   {
    "id": "sel-2025-08-10-formal-selection-rule",
@@ -638,7 +662,8 @@
    "short": {
     "en": "A second-order attractor",
     "zh": "二阶吸引子"
-   }
+   },
+   "origin": "drafted"
   },
   {
    "id": "s26-02-the-fork",
@@ -691,7 +716,8 @@
    ],
    "label": "public",
    "label_why": "The turns stand verbatim under their dated heading in a tracked extract of the private chat export (the projection at lines 3602–3608, the compromise at lines 3626–3627, the request for a narrative at lines 3636–3637); the name The Fork is the narrative's, per the September timeline, kept by the Fork folder as its historical home (theories/README.md line 24). The January talk is a tracked transcript whose speaker is unnamed.",
-   "thread": false
+   "thread": false,
+   "origin": "person"
   },
   {
    "id": "s26-04-fork-retired",
@@ -738,7 +764,8 @@
    ],
    "label": "public",
    "label_why": "The turns stand verbatim under their dated headings in a tracked extract of the private chat export; the reading as a criterion of generative versus degenerative is the Fork folder's README.",
-   "thread": false
+   "thread": false,
+   "origin": "person"
   },
   {
    "id": "s26-05-jian-single-primitive",
@@ -779,7 +806,8 @@
    ],
    "label": "public",
    "label_why": "A tracked source file, dated 2026-05-01 by file time, states it; the decision to rename (2026-04-30) rests on a private chat via TIMELINE.",
-   "thread": false
+   "thread": false,
+   "origin": "drafted"
   },
   {
    "id": "s26-05-kai-root",
@@ -820,7 +848,8 @@
    ],
    "label": "public",
    "label_why": "Tracked drafts with file-time dates state it; only the root-category gloss and the conversation of 2026-05-02 rest on a private chat via the folder's AI synthesis.",
-   "thread": false
+   "thread": false,
+   "origin": "drafted"
   },
   {
    "id": "s26-05-lean-checker",
@@ -855,7 +884,8 @@
    ],
    "label": "public",
    "label_why": "Tracked files with file-time and header dates state it.",
-   "thread": false
+   "thread": false,
+   "origin": "drafted"
   },
   {
    "id": "sel-2026-05-28-selection-on-cognition",
@@ -894,7 +924,8 @@
    "short": {
     "en": "Moloch in the mind",
     "zh": "Moloch 在心中"
-   }
+   },
+   "origin": "drafted"
   },
   {
    "id": "s26-06-foundation-principles",
@@ -935,7 +966,8 @@
    ],
    "label": "public",
    "label_why": "A tracked source file, dated 2026-06-06 by file time, states it; the keep-the-possibility-space-open folder's README marks it AI-drafted.",
-   "thread": false
+   "thread": false,
+   "origin": "drafted"
   },
   {
    "id": "s26-07-zhishan",
@@ -988,7 +1020,8 @@
    ],
    "label": "public",
    "label_why": "Tracked source files with file-time dates (2026-07-08, 2026-07-15) state it. The folder README marks both texts AI-drafted (lines 1108 and 1130).",
-   "thread": false
+   "thread": false,
+   "origin": "drafted"
   },
   {
    "id": "s26-09-consolidation",
@@ -1029,7 +1062,12 @@
    ],
    "label": "public",
    "label_why": "Tracked files state the date and the structure; the date rests on MAP.md (git first commits theories/ on 2026-09-25), and the reading as one mechanism under four names, beside commitments not reducible to it, is the map's.",
-   "thread": false
+   "thread": false,
+   "short": {
+    "en": "Corpus into folders",
+    "zh": "语料汇入理论文件夹"
+   },
+   "origin": "ai"
   },
   {
    "id": "pt-capability-outruns-correction",
@@ -1064,7 +1102,8 @@
    ],
    "label": "public",
    "label_why": "The tracked paper and its notes state the draft, its date, its method and its standing.",
-   "thread": false
+   "thread": false,
+   "origin": "drafted"
   },
   {
    "id": "s26-10-why-and-meaning",
@@ -1105,7 +1144,8 @@
    ],
    "label": "public",
    "label_why": "The tracked request and direction files state the naming and the conclusion, and MAP.md, tracked, quotes the automatic transcript verbatim with timestamps; the recording and the transcript themselves are not in the repository.",
-   "thread": false
+   "thread": false,
+   "origin": "person"
   },
   {
    "id": "s26-10-first-predictions",
@@ -1140,7 +1180,8 @@
    ],
    "label": "public",
    "label_why": "Tracked files and git history state it.",
-   "thread": false
+   "thread": false,
+   "origin": "ai"
   },
   {
    "id": "pt-v7-3-integrated-into-generative-account",
@@ -1175,7 +1216,8 @@
    ],
    "label": "public",
    "label_why": "The tracked chapter (AI-authored, now in history) and the V7.3 edition state the integration, its date and its standing.",
-   "thread": false
+   "thread": false,
+   "origin": "ai"
   },
   {
    "id": "becoming-2026-10-09-theory-named",
@@ -1218,9 +1260,10 @@
    "label_why": "The naming, its provisional standing and the hypothesis are stated in a tracked, dated source record, the reading of 先 in its AI-authored interpretation.",
    "thread": false,
    "short": {
-    "en": "The theory of becoming named",
+    "en": "The theory named",
     "zh": "生成变化之论得名"
-   }
+   },
+   "origin": "person"
   },
   {
    "id": "becoming-2026-10-09-pure-core",
@@ -1255,7 +1298,8 @@
    ],
    "label": "public",
    "label_why": "The directive is kept verbatim in a tracked dated source, and the core's rule and its limit are stated in the live method chapter; commits d79d0d9d7 (03:02) and 1e66b6b91 (04:28) of 2026-10-09 date the spine's start and its purity.",
-   "thread": false
+   "thread": false,
+   "origin": "person"
   },
   {
    "id": "becoming-2026-10-11-g0-folded",
@@ -1296,7 +1340,8 @@
    ],
    "label": "public",
    "label_why": "A tracked record's dated history and two tracked dated sources state the fold and its completion; the second source says the decision's wording was drafted by the assistant.",
-   "thread": false
+   "thread": false,
+   "origin": "ai"
   },
   {
    "id": "becoming-2026-10-17-provenance-and-labels",
@@ -1337,7 +1382,8 @@
    ],
    "label": "public",
    "label_why": "The message, its AI-authored reading and the relabelling are stated in a tracked dated source and a tracked record's history.",
-   "thread": false
+   "thread": false,
+   "origin": "person"
   },
   {
    "id": "becoming-2026-10-18-registration-to-coupling",
@@ -1372,7 +1418,8 @@
    ],
    "label": "public",
    "label_why": "The objection, the rename table and the resulting term are all in tracked files; the count of 175 is from the dated landing commit.",
-   "thread": false
+   "thread": false,
+   "origin": "person"
   },
   {
    "id": "sel-2026-10-19-capture-on-the-spine",
@@ -1417,7 +1464,8 @@
    "short": {
     "en": "Capture on the spine",
     "zh": "脊柱上的捕获"
-   }
+   },
+   "origin": "ai"
   },
   {
    "id": "becoming-2026-10-20-scope-and-order",
@@ -1452,7 +1500,8 @@
    ],
    "label": "public",
    "label_why": "The review, the retired chapter's header and the method chapter are tracked files that state these changes with their dates.",
-   "thread": false
+   "thread": false,
+   "origin": "ai"
   },
   {
    "id": "becoming-2026-10-20-no-new-mathematics",
@@ -1487,7 +1536,8 @@
    ],
    "label": "public",
    "label_why": "The verdict is in a tracked dated review, the response in a tracked dated source, and the thesis form in the live method chapter. The outside critique of 19 October that prompted the review is cited there but not stored here.",
-   "thread": false
+   "thread": false,
+   "origin": "ai"
   },
   {
    "id": "becoming-2026-10-23-grammar-root",
@@ -1522,7 +1572,8 @@
    ],
    "label": "public",
    "label_why": "The plan, the dated source and the method chapter are tracked files that state the new root and its rule; the landing date is from the dated commit.",
-   "thread": false
+   "thread": false,
+   "origin": "ai"
   },
   {
    "id": "becoming-2026-10-23-four-layers",
@@ -1540,13 +1591,15 @@
      "path": "_process/BECOMING-WORKBOARD.md",
      "locator": "## Now, 'RA landed'",
      "quote": "every live result stated once in its home section (anchor `r-<record id>`)",
-     "private": false
+     "private": false,
+     "commit": "0d7a397a5"
     },
     {
      "path": "_process/BECOMING-WORKBOARD.md",
      "locator": "## Now, 'RA landed'",
      "quote": "the canonical chapter, its Chinese edition and the 41 chapters the eight carry moved to `theories/becoming/history/` byte for byte",
-     "private": false
+     "private": false,
+     "commit": "0d7a397a5"
     },
     {
      "path": "theories/becoming/history/INDEX.md",
@@ -1557,7 +1610,8 @@
    ],
    "label": "public",
    "label_why": "The live board and the history index, both tracked, state the restructure and its date.",
-   "thread": false
+   "thread": false,
+   "origin": "ai"
   },
   {
    "id": "pt-review-packet-assembled",
@@ -1592,7 +1646,8 @@
    ],
    "label": "public",
    "label_why": "The tracked cover and freeze note state it; the first commit of the packet (70fcd7f5c, 2026-10-24) confirms the date and its first three dossiers.",
-   "thread": false
+   "thread": false,
+   "origin": "ai"
   },
   {
    "id": "sel-2026-10-26-t7-bridge-failed",
@@ -1631,7 +1686,8 @@
    "short": {
     "en": "T7's bridge fails",
     "zh": "T7 的桥接不成立"
-   }
+   },
+   "origin": "ai"
   },
   {
    "id": "becoming-2026-10-30-ethics-for-life",
@@ -1666,7 +1722,8 @@
    ],
    "label": "public",
    "label_why": "The message, the thesis and the goal's retitling are stated in tracked files: dated sources, the approved wording AI-authored, and chapter 7.",
-   "thread": false
+   "thread": false,
+   "origin": "person"
   },
   {
    "id": "nov-du-reads-no-order",
@@ -1701,7 +1758,8 @@
    ],
    "label": "public",
    "label_why": "Chapter 7 and AGENTS.md, both tracked, state the result and its standing; the Lean is in the package and commit 756eb1e84 of 2026-11-01 dates it.",
-   "thread": false
+   "thread": false,
+   "origin": "ai"
   },
   {
    "id": "nov-nd-shared-law",
@@ -1730,7 +1788,8 @@
    ],
    "label": "public",
    "label_why": "Chapter 8 and the glossary, both tracked, state the new name and the old; commit 5f60d51c7 of 2026-11-01 dates it.",
-   "thread": false
+   "thread": false,
+   "origin": "ai"
   },
   {
    "id": "nov-agents-order",
@@ -1765,7 +1824,8 @@
    ],
    "label": "public",
    "label_why": "The current AGENTS.md and its tracked before-copy (_process/history/2026-11-03-instructions/) state the change; commits 0423d4000, 6677b7bba and eb9968dcf of 2026-11-03 date it.",
-   "thread": false
+   "thread": false,
+   "origin": "drafted"
   },
   {
    "id": "nov-freeze-edition-1",
@@ -1806,7 +1866,8 @@
    ],
    "label": "public",
    "label_why": "The tracked freeze steps, release gate page and COMMONS.md state the freeze, its commit and the licence; commit 4f50e3e68 of 2026-11-03 dates the licence decision.",
-   "thread": false
+   "thread": false,
+   "origin": "ai"
   },
   {
    "id": "nov-ue32",
@@ -1853,7 +1914,8 @@
    ],
    "label": "public",
    "label_why": "The run's tracked README and the experiments index state the frozen verdict, the expectation and the limits; commit 45f61a167 of 2026-11-04 dates the run.",
-   "thread": false
+   "thread": false,
+   "origin": "ai"
   },
   {
    "id": "nov-rf-frozen",
@@ -1877,13 +1939,15 @@
      "path": "_process/BECOMING-WORKBOARD.md",
      "locator": "the board's decisions section, the review packet's decisions",
      "quote": "every test's first stage is frozen before any run",
-     "private": false
+     "private": false,
+     "commit": "d7aab6cd1"
     },
     {
      "path": "_process/BECOMING-WORKBOARD.md",
      "locator": "the board's decisions section, the review packet's decisions",
      "quote": "What stayed a design is frozen too, on 5 November, before any call to a model and any training run",
-     "private": false
+     "private": false,
+     "commit": "bfd7657af"
     },
     {
      "path": "experiments/formations-that-read/README.md",
@@ -1894,7 +1958,12 @@
    ],
    "label": "public",
    "label_why": "The tracked experiments index, board and the tests' README (its account of the runs AI-written) state the freezes, the Stage A runs and their readings.",
-   "thread": false
+   "thread": false,
+   "short": {
+    "en": "Tests frozen before any run",
+    "zh": "检验在任何运行之前冻结"
+   },
+   "origin": "ai"
   },
   {
    "id": "nov-ue31b-t2-narrowed",
@@ -1929,7 +1998,8 @@
    ],
    "label": "public",
    "label_why": "The run's tracked README and chapter 2 state the failure, its scope and the new wording; commit 7da2bcdfb of 2026-11-06 dates the run.",
-   "thread": false
+   "thread": false,
+   "origin": "ai"
   },
   {
    "id": "nov-lm-c-and-lean-whole",
@@ -1947,7 +2017,8 @@
      "path": "_process/BECOMING-WORKBOARD.md",
      "locator": "Queue line, 'LM1 landed' clause",
      "quote": "it now says a ranking of courses needs C or a premise in its place",
-     "private": false
+     "private": false,
+     "commit": "b29f69449"
     },
     {
      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md",
@@ -1959,12 +2030,14 @@
      "path": "_process/BECOMING-WORKBOARD.md",
      "locator": "Queue line, 'LM landed: the Lean made whole' clause",
      "quote": "one near-full rebuild, core run `20261106T174854.382527Z`, every axiom report empty, one new core leaf `Becoming.PremisesTogether`, no new mathematics",
-     "private": false
+     "private": false,
+     "commit": "16c55965c"
     }
    ],
    "label": "public",
    "label_why": "The tracked board and WHAT-REMAINS state the correction, the audit and the rebuild; commits 16c55965c and b29f69449 of 2026-11-07 date the landings.",
-   "thread": false
+   "thread": false,
+   "origin": "ai"
   },
   {
    "id": "nov-crosswalk-map",
@@ -1982,7 +2055,8 @@
      "path": "_process/BECOMING-WORKBOARD.md",
      "locator": "Queue line, CX landed clause",
      "quote": "1,183 entries read the 16 earlier theory folders and 12 domains of thought against the live account",
-     "private": false
+     "private": false,
+     "commit": "448f15a6e"
     },
     {
      "path": "theories/becoming/results/atlas/CROSSWALK.md",
@@ -2000,12 +2074,14 @@
      "path": "_process/BECOMING-WORKBOARD.md",
      "locator": "Queue line, CX landed clause",
      "quote": "Nine more gave ranking to C alone in other words",
-     "private": false
+     "private": false,
+     "commit": "448f15a6e"
     }
    ],
    "label": "public",
    "label_why": "The generated crosswalk and the tracked board state the entries, their standing and the check; commit 448f15a6e of 2026-11-07 dates the landing, and theories/becoming/results/atlas/map.html is tracked.",
-   "thread": false
+   "thread": false,
+   "origin": "ai"
   }
  ],
  "renames": [
@@ -2954,5 +3030,39 @@
     "zh": "2026 年 11 月 1 日至 7 日，C 被表明不为不读任何次序者所蕴涵；关于读取之形成的各项检验在任何运行之前冻结；T2 的原先措辞在甲虫培养物上未通过，T2 被收窄；本说明被冻结为读者版；早先各文件夹由 AI 读者在对照中对着它来读。"
    }
   }
- ]
+ ],
+ "origins": {
+  "person": {
+   "en": "a person's words",
+   "zh": "一个人的话",
+   "short_en": "by a person",
+   "short_zh": "出自一个人",
+   "means_en": "the text that states it is a person's own writing, or a person's words kept verbatim (in `sources/`, or the excerpts of one person's turns), as the file or its folder says.",
+   "means_zh": "陈述它的文本是一个人自己写的，或是逐字保留的一个人的话（在 `sources/` 中，或是摘出的同一个人的发言），以文件或其所在文件夹的说明为据。"
+  },
+  "drafted": {
+   "en": "AI-drafted from a person's words",
+   "zh": "AI 据一个人的话起草",
+   "short_en": "AI-drafted",
+   "short_zh": "AI 起草",
+   "means_en": "the text that states it was written by AI from a person's words, notes or conversation, as the file or its folder says: the ideas may be the person's, the wording is not.",
+   "means_zh": "陈述它的文本由 AI 依一个人的话、笔记或对话写成，以文件或其所在文件夹的说明为据：想法可能是那个人的，措辞不是。"
+  },
+  "ai": {
+   "en": "AI-made",
+   "zh": "AI 所作",
+   "short_en": "AI-made",
+   "short_zh": "AI 所作",
+   "means_en": "the text that states it is the repository's own AI-made work: records, chapters, the board, reviews, designs and AI readings.",
+   "means_zh": "陈述它的文本是本仓库自己由 AI 做成的工作：记录、各章、工作板、审阅、设计与 AI 的读法。"
+  },
+  "unstated": {
+   "en": "not stated",
+   "zh": "未说明",
+   "short_en": "not stated",
+   "short_zh": "未说明",
+   "means_en": "nothing found says who wrote it, or what speaks of it disagrees.",
+   "means_zh": "找不到说明是谁写的，或说到它的文本彼此不一。"
+  }
+ }
 }
