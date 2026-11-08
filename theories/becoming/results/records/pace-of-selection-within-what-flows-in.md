@@ -90,7 +90,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T174631.939884Z): Becoming.SelectionPace, 224 declarations, every one with an empty axiom report, all cited here. Built in one session by an AI agent; an independent read-only review by a separate AI agent (1 error, 3 overclaims, 9 imprecisions, 7 suggestions) and its re-check of the revision (1 overclaim, 3 imprecisions, 1 suggestion), every finding taken, the last suggestion as a follow-up, in study section 416; not reviewed by a person.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T174631.939884Z): Becoming.SelectionPace, 224 declarations, every one with an empty axiom report, all cited here. Built in one session by an AI agent; an independent read-only review by a separate AI agent (1 error, 3 overclaims, 9 imprecisions, 7 suggestions) and its re-check of the revision (1 overclaim, 3 imprecisions, 1 suggestion), every finding taken, the last suggestion as a follow-up, in study section 416; no person's review recorded.
 
 Canonical source: [SelectionPace.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionPace.lean)
 

@@ -36,7 +36,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by Lean 4.30.0-rc2 with Mathlib at revision ea11ccc0 (receipt seeded-continuation-verification.json, rerun on 26 October 2026 against the current bytes of SeededContinuation.lean, which differ from those of the 8 October run only in a comment on the import line; modules ContinuationAdequacy, JointContinuation and SeededContinuation). The record was read against the current Lean; not reviewed by a person.
+Machine-checked by Lean 4.30.0-rc2 with Mathlib at revision ea11ccc0 (receipt seeded-continuation-verification.json, rerun on 26 October 2026 against the current bytes of SeededContinuation.lean, which differ from those of the 8 October run only in a comment on the import line; modules ContinuationAdequacy, JointContinuation and SeededContinuation). The record was read against the current Lean; no person's review recorded.
 
 Canonical source: [SeededContinuation.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/SeededContinuation.lean)
 

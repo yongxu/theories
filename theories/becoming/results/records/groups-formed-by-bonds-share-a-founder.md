@@ -39,7 +39,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Checked by the module's checker with Lean 4.29.1 (receipt developmental-association-verification, passed 7 October 2026, fresh temporary build, source unchanged during the check; it binds the current bytes, which later receipts of other modules re-check): DevelopmentalAssociation, 41 declarations audited, 19 theorems, 15 cited here. The study records a review by the implementing author, no independent review; not reviewed by a person.
+Checked by the module's checker with Lean 4.29.1 (receipt developmental-association-verification, passed 7 October 2026, fresh temporary build, source unchanged during the check; it binds the current bytes, which later receipts of other modules re-check): DevelopmentalAssociation, 41 declarations audited, 19 theorems, 15 cited here. The study records a review by the implementing author, no independent review; no person's review recorded.
 
 Canonical source: [DevelopmentalAssociation.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/DevelopmentalAssociation.lean)
 

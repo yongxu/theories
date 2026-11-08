@@ -91,7 +91,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T173410.671057Z): Becoming.SetPointOptimum, 124 declarations (82 theorems), every one with an empty axiom report, all cited here; the three general laws of the exchange it uses moved into Becoming.Optimum with no statement of Optimum or RegimeMargin changed (declaration types compared). Built in one session; an independent read-only review by a separate AI agent, its findings taken and the revision re-checked, in study section 415; not reviewed by a person.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T173410.671057Z): Becoming.SetPointOptimum, 124 declarations (82 theorems), every one with an empty axiom report, all cited here; the three general laws of the exchange it uses moved into Becoming.Optimum with no statement of Optimum or RegimeMargin changed (declaration types compared). Built in one session; an independent read-only review by a separate AI agent, its findings taken and the revision re-checked, in study section 415; no person's review recorded.
 
 Canonical source: [SetPointOptimum.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SetPointOptimum.lean)
 

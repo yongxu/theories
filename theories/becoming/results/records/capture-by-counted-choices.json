@@ -177,7 +177,7 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T103820.622467Z): Becoming.ChoiceCountCapture, 45 declarations, every one with an empty axiom report, all cited here. Built in one session; an independent read-only review by a separate AI agent, its findings taken and the revision re-checked, in study section 406; not reviewed by a person.",
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T103820.622467Z): Becoming.ChoiceCountCapture, 45 declarations, every one with an empty axiom report, all cited here. Built in one session; an independent read-only review by a separate AI agent, its findings taken and the revision re-checked, in study section 406; no person's review recorded.",
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T103820.622467Z）：Becoming.ChoiceCountCapture，45 项声明，公理报告皆空，本记录全引。于一会话中构建；另一 AI 代理作独立只读审查，其所见皆采，修订复查，见研究第 406 节；未经人审。"
   },
   "next_delta": {

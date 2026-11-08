@@ -115,7 +115,7 @@
     "formal-not-empirical"
   ],
   "validation_scope": {
-    "en": "Checked by the drift-margins checker with Lean 4.30.0-rc2 and pinned Mathlib (receipt 20261008T114955.171898Z, six modules rebuilt against a pinned Mathlib cache, 307 audits; it binds the current bytes of all four modules): ConnectionistRecovery 29, DevelopmentalMemory 28, UpdaterConsequences 36 and DriftMargins 42 theorems, 24 cited here. Each study records a counter-review by its author, not independent; not reviewed by a person.",
+    "en": "Checked by the drift-margins checker with Lean 4.30.0-rc2 and pinned Mathlib (receipt 20261008T114955.171898Z, six modules rebuilt against a pinned Mathlib cache, 307 audits; it binds the current bytes of all four modules): ConnectionistRecovery 29, DevelopmentalMemory 28, UpdaterConsequences 36 and DriftMargins 42 theorems, 24 cited here. Each study records a counter-review by its author, not independent; no person's review recorded.",
     "zh": "以漂移余量检查器与 Lean 4.30.0-rc2 及固定 Mathlib 检查（回执 20261008T114955.171898Z，六个模块以固定的 Mathlib 缓存重建，307 项审计；绑定四个模块的当前字节）：ConnectionistRecovery 29、DevelopmentalMemory 28、UpdaterConsequences 36、DriftMargins 42 条定理，此处引 24 条。各研究记有作者反审，非独立；未经人审。"
   },
   "next_delta": {

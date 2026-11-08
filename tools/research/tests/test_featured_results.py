@@ -368,9 +368,9 @@ class FirstScreenTests(unittest.TestCase):
         # 2026-11-08-ai-briefly-and-read.md)
         self.assertNotRegex(screen, r'\b(Ren|Claude)\b')
         self.assertEqual(len(re.findall(r'\bAI\b', screen)), 1)
-        self.assertIn('Made with AI', screen)
-        self.assertNotRegex(screen, r'(?i)no human review|no person has (yet )?(read|reviewed)|no human has')
-        self.assertIn('no independent review is recorded', screen)
+        self.assertIn('The work was made with AI', screen)
+        self.assertNotRegex(screen, r'(?i)no human review|no person has (yet )?(read|reviewed)|no human has|nobody|no one has|not (been )?(reviewed|checked) by (a|any) person')
+        self.assertIn('no independent human review is recorded', screen)
         # and so does everything above the opening as README renders it: the title, the navigation and status lines
         above = re.sub(r'<!--.*?-->', '', (registry.ROOT / 'README.md').read_text().split('\n## Truth exists\n', 1)[0], flags=re.S)
         self.assertNotRegex(above, r'\b(Ren|Claude)\b')

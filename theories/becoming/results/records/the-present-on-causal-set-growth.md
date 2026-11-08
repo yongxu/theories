@@ -100,7 +100,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261028T054831.888463Z): all 190 declarations of Becoming.Presence, each with an empty axiom report. Built in one session; an independent read-only review by another AI agent (REVIEW-UE14, 18 findings, every one taken) and a re-check, study section 432; not reviewed by a person. Most laws restate the order theory of linear extensions.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261028T054831.888463Z): all 190 declarations of Becoming.Presence, each with an empty axiom report. Built in one session; an independent read-only review by another AI agent (REVIEW-UE14, 18 findings, every one taken) and a re-check, study section 432; no person's review recorded. Most laws restate the order theory of linear extensions.
 
 Canonical source: [Presence.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Presence.lean)
 

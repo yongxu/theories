@@ -16092,7 +16092,7 @@
    {
     "anchor": "theories/becoming/chapters/08-METHOD.md#reviews",
     "says": {
-     "en": "Every review so far is by AI. No human review is claimed."
+     "en": "Every recorded review so far is by AI. No independent human review is claimed."
     },
     "role": "carries"
    },
@@ -18100,16 +18100,16 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "Same concern, another mechanism, and they part at publishing. The account labels what each statement is and says on its first page who checked what, so it implies no review that has not happened. It does not withhold text no person has reviewed; it says so. The museum's rule would hold such text back. Its own reading adds that no check inside the work can show it serves its purpose. Practice on both sides, not a law. [AI reading]"
+   "en": "Same concern, another mechanism, and they part at publishing. The account labels what each statement is and says on its first page who checked what, so it implies no review that has not happened. It does not withhold text no person's review of which is recorded; it says so. The museum's rule would hold such text back. Its own reading adds that no check inside the work can show it serves its purpose. Practice on both sides, not a law. [AI reading]"
   },
   "targets": [
    {
     "anchor": "theories/becoming/ONE-PAGE.md",
     "says": {
-     "en": "“the proofs are checked by machine, everything else only by AI review, and no person has yet reviewed it”."
+     "en": "“the proofs are checked by machine and the rest by AI review, the person who directs the work has read its important parts, and no independent human review is recorded yet”."
     },
     "role": "carries",
-    "part": "no person has yet reviewed it"
+    "part": "no independent human review is recorded yet"
    },
    {
     "anchor": "theories/becoming/chapters/08-METHOD.md#standings-and-bases",
@@ -18166,13 +18166,13 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "The account meets the same risk differently. Its structural readings are made, revised and checked by AI and stand published with an AI label, no person having reviewed them; it answers unreliability with more AI reads and stated counts, not a person's gate. Under the museum's rule 06's correspondences would stay candidates, and so would this file. The source's rule is a design, and the account does not say it is wrong: review by people is what it says is missing. [AI reading]"
+   "en": "The account meets the same risk differently. Its structural readings are made, revised and checked by AI and stand published with an AI label, no person's review of them recorded; it answers unreliability with more AI reads and stated counts, not a person's gate. Under the museum's rule 06's correspondences would stay candidates, and so would this file. The source's rule is a design, and the account does not say it is wrong: review by people is what it says is missing. [AI reading]"
   },
   "targets": [
    {
     "anchor": "theories/becoming/THE-THEORY-OF-BECOMING.md",
     "says": {
-     "en": "“The corpus was classified sentence by sentence in two frozen rounds by AI, and no person has yet reviewed the classification; which sentence reads as which theorem is AI reconstruction”."
+     "en": "“The corpus was classified sentence by sentence in two frozen rounds by AI, and no person's review of the classification is recorded; which sentence reads as which theorem is AI reconstruction”."
     },
     "role": "carries"
    },
@@ -27494,7 +27494,7 @@
    {
     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md",
     "says": {
-     "en": "AI-written, 29 October 2026. No human has reviewed it. It adds no result: every law it names is stated once, in the home section it links, and it says no more than that statement."
+     "en": "AI-written, 29 October 2026. No independent human review of it is recorded. It adds no result: every law it names is stated once, in the home section it links, and it says no more than that statement."
     },
     "role": "neighbour"
    }
@@ -29363,7 +29363,7 @@
    {
     "anchor": "theories/becoming/chapters/08-METHOD.md#reviews",
     "says": {
-     "en": "Every review so far is by AI; no human review is claimed."
+     "en": "Every recorded review so far is by AI; no independent human review is claimed."
     },
     "role": "limit"
    },
@@ -29502,7 +29502,7 @@
    {
     "anchor": "theories/becoming/review/README.md",
     "says": {
-     "en": "No independent review of this theory is recorded yet. The proofs are checked by machine, in Lean; everything else, the readings of the classical texts included, by further AI reviews; the person who directs the work has read its important parts."
+     "en": "No independent human review of this theory is recorded yet. It was written with AI, the Lean proofs included, and the person who directs the work has read its important parts, not every word."
     },
     "role": "limit"
    },

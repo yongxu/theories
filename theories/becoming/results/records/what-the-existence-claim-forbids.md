@@ -38,7 +38,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261029T164943.729811Z): 14 of the 49 declarations of Becoming.Blanket, the rest cited by its sibling record, each with an empty axiom report. Drafted by an AI agent; an independent read-only review by another AI agent (REVIEW-UE18), whose probe the revision adopted, and a re-check, study section 452; not reviewed by a person.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261029T164943.729811Z): 14 of the 49 declarations of Becoming.Blanket, the rest cited by its sibling record, each with an empty axiom report. Drafted by an AI agent; an independent read-only review by another AI agent (REVIEW-UE18), whose probe the revision adopted, and a re-check, study section 452; no person's review recorded.
 
 Canonical source: [Blanket.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Blanket.lean)
 

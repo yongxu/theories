@@ -147,7 +147,7 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T165537.368039Z): Becoming.DrawnShaping, 38 declarations, every one with an empty axiom report, all cited here. Built in one session; one independent read-only review by a separate AI agent (sixteen findings, no unsound Lean), taken as the kit note says, study section 414; not reviewed by a person.",
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261025T165537.368039Z): Becoming.DrawnShaping, 38 declarations, every one with an empty axiom report, all cited here. Built in one session; one independent read-only review by a separate AI agent (sixteen findings, no unsound Lean), taken as the kit note says, study section 414; no person's review recorded.",
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261025T165537.368039Z）：Becoming.DrawnShaping，38 项声明，公理报告皆空，本记录全引。于一会话中构建；另一 AI 代理作一次独立只读审查（十六项意见，无不健全之 Lean），依工作包说明采纳，见研究第 414 节；未经人审。"
   },
   "next_delta": {
@@ -322,7 +322,7 @@
     {
       "path": "theories/becoming/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "b03dd74894abca413d1d46c17e6b5669dda02abd9a525cc2fbc0dcd5c5bc32a6"
+      "sha256": "0a8f1a2339b9768eacde2e75a01bbf7a7c45cf98ccc5c166ea0a06570df8d6f2"
     },
     {
       "path": "theories/meta-attractor/README.md",

@@ -124,7 +124,7 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the core checker with Lean 4.29.1 (receipt 20261103T102739.294112Z): Becoming.DrawnReplacement and Becoming.Drift, every declaration cited here with an empty axiom report. Built in one session, the texts restating it read against their homes by the author; not reviewed by a person.",
+    "en": "Machine-checked by the core checker with Lean 4.29.1 (receipt 20261103T102739.294112Z): Becoming.DrawnReplacement and Becoming.Drift, every declaration cited here with an empty axiom report. Built in one session, the texts restating it read against their homes by the author; no person's review recorded.",
     "zh": "由核心检查器以 Lean 4.29.1 实查（回执 20261103T102739.294112Z）：Becoming.DrawnReplacement 与 Becoming.Drift，此处所引声明之公理报告皆空。于一会话中构建，复述之文由作者对照其主节读过；未经人审。"
   },
   "next_delta": {
