@@ -4510,7 +4510,7 @@
     "record": "four-cases-of-a-part",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-four-cases-of-a-part",
     "says": {
-     "en": "Definition and Theorem (World). l includes l' when at every step it admits every formation l' admits, and exceeds it when at some step it admits one l' does not; l widens l' when it includes and exceeds it; two keep the same when each includes the other, and are mixed when each exceeds the other. Ordering a mixed part needs a measure."
+     "en": "Definition and Theorem (World). l includes l' when at every step it admits every formation l' admits, and exceeds it when at some step it admits one l' does not; l widens l' when it includes and exceeds it; two keep the same when each includes the other, and are mixed when each exceeds the other. Widening alone does not settle a mixed part; a further judgment names its criterion and who holds it, and the criterion need not be a number."
     },
     "role": "carries"
    },
@@ -15001,7 +15001,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-settle",
     "says": {
-     "en": "Under the condition every narrowing loses something with significance. No ending is ranked above keeping by retaining: a path retaining what has significance along another ends none of it. Individuation fixes what counts as a loss; the reading of living is a choice."
+     "en": "Under the condition every narrowing loses something with significance. Retaining adds no ending and ranks nothing: a path retaining what has significance along another ends none of it. Individuation fixes what counts as a loss; the reading of living is a choice."
     },
     "role": "neighbour"
    },
@@ -16409,7 +16409,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-settle",
     "says": {
-     "en": "“Under the condition every narrowing loses something with significance.” “Predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]”; “telling harm from non-harm among them needs a measure.” The condition fixes scope and ranks nothing; C gives order, and whoever ranks courses holds C or another order; neither is asserted."
+     "en": "“Under the condition every narrowing loses something with significance.” “Predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]”; “telling harm from non-harm among them takes a judgment that names its criterion and who holds it, not necessarily a number.” The condition fixes scope and ranks nothing; C gives order, and whoever ranks courses holds C or another order; neither is asserted."
     },
     "role": "carries"
    },
@@ -23918,7 +23918,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-settle",
     "says": {
-     "en": "Under the condition every narrowing loses something with significance. Predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]; telling harm from non-harm among them needs a measure. No ending is ranked above keeping by retaining."
+     "en": "Under the condition every narrowing loses something with significance. Predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]; telling harm from non-harm among them takes a judgment that names its criterion and who holds it, not necessarily a number. Retaining adds no ending and ranks nothing."
     },
     "role": "neighbour"
    },
@@ -24446,7 +24446,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-settle",
     "says": {
-     "en": "Predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]; telling harm from non-harm among them needs a measure."
+     "en": "Predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]; telling harm from non-harm among them takes a judgment that names its criterion and who holds it, not necessarily a number."
     },
     "role": "neighbour"
    },
@@ -24542,7 +24542,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-settle",
     "says": {
-     "en": "Under the condition every narrowing loses something with significance; read as losing and opening something, such endings are mixed [AI reading, D65]. No ending is ranked above keeping by retaining: a path retaining what has significance along another ends none of it."
+     "en": "Under the condition every narrowing loses something with significance; read as losing and opening something, such endings are mixed [AI reading, D65]. Retaining adds no ending and ranks nothing: a path retaining what has significance along another ends none of it."
     },
     "role": "carries"
    },
@@ -32997,7 +32997,7 @@
     "record": null,
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-settle",
     "says": {
-     "en": "What the condition alone does not settle: predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]; telling harm from non-harm among them needs a measure. No ending is ranked above keeping by retaining: a path retaining what has significance along another ends none of it (`Web.Retains.not_added`)."
+     "en": "What the condition alone does not settle: predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]; telling harm from non-harm among them takes a judgment that names its criterion and who holds it, not necessarily a number. Retaining adds no ending and ranks nothing: a path retaining what has significance along another ends none of it (`Web.Retains.not_added`)."
     },
     "role": "limit"
    },
@@ -38583,7 +38583,7 @@
     "record": null,
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-settle",
     "says": {
-     "en": "Under the condition every narrowing loses something with significance. Predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]; telling harm from non-harm among them needs a measure. No ending is ranked above keeping by retaining."
+     "en": "Under the condition every narrowing loses something with significance. Predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]; telling harm from non-harm among them takes a judgment that names its criterion and who holds it, not necessarily a number. Retaining adds no ending and ranks nothing."
     },
     "role": "carries",
     "part": "the mixed cases, D65"
@@ -38598,7 +38598,7 @@
    }
   ],
   "account_adds": {
-   "en": "That the ranking turns on the reading, whole-run or event by event, and on C; that telling harm from non-harm among such endings needs a measure."
+   "en": "That the ranking turns on the reading, whole-run or event by event, and on C; that telling harm from non-harm among such endings takes a judgment naming its criterion, not necessarily a number."
   },
   "source_adds": {
    "en": "A difference in kind between the wolf and the ego, by what the eating is for, and the word disease for one side only."
@@ -58354,7 +58354,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-settle",
     "says": {
-     "en": "Under the condition every narrowing loses something with significance. Predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]; telling harm from non-harm among them needs a measure. No ending is ranked above keeping by retaining: a path retaining what has significance along another ends none of it."
+     "en": "Under the condition every narrowing loses something with significance. Predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]; telling harm from non-harm among them takes a judgment that names its criterion and who holds it, not necessarily a number. Retaining adds no ending and ranks nothing: a path retaining what has significance along another ends none of it."
     },
     "role": "neighbour"
    },
@@ -60053,7 +60053,7 @@
     "record": null,
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#34-what-the-condition-does-not-settle",
     "says": {
-     "en": "Under the condition every narrowing loses something with significance; telling harm from non-harm needs a measure. No ending is ranked above keeping by retaining. Individuation fixes what counts as a loss; the reading of living is a choice."
+     "en": "Under the condition every narrowing loses something with significance; telling harm from non-harm takes a judgment naming its criterion, not necessarily a number. Retaining adds no ending and ranks nothing. Individuation fixes what counts as a loss; the reading of living is a choice."
     },
     "role": "neighbour"
    }
@@ -60675,7 +60675,7 @@
     "record": null,
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#34-what-the-condition-does-not-settle",
     "says": {
-     "en": "Under the condition every narrowing loses something with significance. Predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]; telling harm from non-harm among them needs a measure. No ending is ranked above keeping by retaining."
+     "en": "Under the condition every narrowing loses something with significance. Predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]; telling harm from non-harm among them takes a judgment that names its criterion and who holds it, not necessarily a number. Retaining adds no ending and ranks nothing."
     },
     "role": "neighbour",
     "part": "Reading D65"
