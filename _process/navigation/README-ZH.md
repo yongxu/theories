@@ -26,7 +26,7 @@
 
 ![围绕一个文法的八章](../../theories/becoming/results/spine.zh.svg)
 
-*117 个核心声明中，约十分之一读作文法之律的情形：11 个推导而得，在 08 §7 的审阅中各读作一个情形，1 个在一个所述的假设之下；其余 6 个是计数之律，位于文法以下，99 个处于一个指明的距离，各有其理由（Lean 核验了其中什么，见 [08 §7](../../theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge)）；这幅图显示什么、不显示什么，见[理论图的脊柱部分](../../theories/becoming/results/THEORY-GRAPH.zh.md#the-spine)；本论[怎样长成](../../theories/LINEAGE.zh.md)。*
+*117 个核心声明中，约十分之一读作文法之律的情形：11 个推导而得，在 08 §7 的审阅中各读作一个情形，1 个在一个所述的假设之下；其余 6 个是计数之律，位于文法以下，99 个处于一个指明的距离，各有其理由（Lean 核验了其中什么，见 [08 §7](../../theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge)）；这幅图显示什么、不显示什么，见[理论图：各章一览](../../theories/becoming/results/THEORY-GRAPH.zh.md#the-spine)；本论[怎样长成](../../theories/LINEAGE.zh.md)。*
 
 ## 从哪里读起
 
@@ -43,9 +43,9 @@
 | [古文（第六章）](../../theories/becoming/chapters/06-CLASSICAL-TEXTS.md) | 从古文读出文法，检验它，记下分歧；中文 | 约 {{time:theories/becoming/chapters/06-CLASSICAL-TEXTS.md}} |
 | [检验](../../TESTS.zh.md) | 冻结的检验，按结局排列，未通过者在前，每项一句话（[全表](../../TESTS.md)为英文） | 约 {{time:TESTS.zh.md}} |
 | [对照表](../../theories/becoming/results/atlas/CROSSWALK.zh.md) | 早先的理论文件夹与各思想领域，读作现行之论中的什么，附图与计数；各组在英文页上 | 约 {{time:theories/becoming/results/atlas/CROSSWALK.zh.md}} |
-| [理论图](../../theories/becoming/results/THEORY-GRAPH.md) | 概念、结果、模块、文本与各章之间的连接；英文，脊柱部分有[中文版](../../theories/becoming/results/THEORY-GRAPH.zh.md)（约 {{time:theories/becoming/results/THEORY-GRAPH.zh.md}}） | 约 {{time:theories/becoming/results/THEORY-GRAPH.md}} |
+| [理论图](../../theories/becoming/results/THEORY-GRAPH.md) | 概念、结果、模块、文本与各章之间的连接；英文，其中的各章一览有[中文版](../../theories/becoming/results/THEORY-GRAPH.zh.md)（约 {{time:theories/becoming/results/THEORY-GRAPH.zh.md}}） | 约 {{time:theories/becoming/results/THEORY-GRAPH.md}} |
 | [怎样长成](../../theories/LINEAGE.zh.md) | 本论怎样从更早的文字与理论文件夹长成 | {{stated:theories/LINEAGE.zh.md}} |
 | [术语表](../../GLOSSARY.zh.md) | 每个词的一义与其所属之处 | 约 {{time:GLOSSARY.zh.md}} |
 | [审查包](../../theories/becoming/review/README.zh.md) | 给审读者的材料与问题；古文、佛学两份与重新归类的编码手册为中文 | 封面约 {{time:theories/becoming/review/README.zh.md}} |
 
-**语言。** 除第六章、古文与佛学两份审查材料及重新归类的编码手册外，各章、记录、检验与理论图都是英文（理论图的脊柱部分有中文版）。各中文版由 AI 译自英文，未经人工审读；义以英文版为准。
+**语言。** 除第六章、古文与佛学两份审查材料及重新归类的编码手册外，各章、记录、检验与理论图都是英文（理论图的各章一览有中文版）。各中文版由 AI 译自英文，未经人工审读；义以英文版为准。
