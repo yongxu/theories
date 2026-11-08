@@ -160,8 +160,9 @@ class Tree(unittest.TestCase):
                     lanes.append(x)
                 lanes[lane] = x
                 placed.append((n, p, x, 454 - 17 * lane))
+            thread = set(s['thread']['points'])
             for lang in ('en', 'zh'):
-                self.assertEqual(lineage.title_crossings(lineage.title_rows(placed, lang)), [], lang)
+                self.assertEqual(lineage.title_crossings(lineage.title_rows(placed, lang, thread=thread), thread), [], lang)
         finally:
             self.patch.start()
 

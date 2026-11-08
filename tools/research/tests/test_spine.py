@@ -156,8 +156,31 @@ class Drawing(unittest.TestCase):
                     return min(math.hypot(px - x, py - y) for px, py in (curve['point'](i / 200) for i in range(201)))
                 nearest = min(info['curves'], key=gap)
                 self.assertIs(nearest, c, (lang, c['from'], c['to'], c['n'], nearest['from'], nearest['to'], nearest['kind']))
+                other = min(gap(o) for o in info['curves'] if o is not c)
+                self.assertGreater(other, gap(c) + spine.LEAD - 0.5, (lang, c['n']))
                 for circle in info['circles']:
                     self.assertTrue(spine.clear_of_circle(box, circle), (lang, c['n'], circle))
+
+    def test_a_count_with_no_place_stops_the_render(self):
+        g = (ROOT / 'theories/becoming/results/data/theory-graph.json').read_text(encoding='utf-8')
+        with mock.patch.object(spine, 'LEAD', 500):
+            pages, errors = spine.render(g)
+        self.assertEqual(pages, {})
+        self.assertTrue(any('no place for the count' in e for e in errors), errors)
+
+    def test_a_curve_behind_a_chapter_stops_the_render(self):
+        g = (ROOT / 'theories/becoming/results/data/theory-graph.json').read_text(encoding='utf-8')
+        with mock.patch.object(spine, 'LANE_STEP', 60):
+            pages, errors = spine.render(g)
+        self.assertEqual(pages, {})
+        self.assertTrue(any('passes behind chapter' in e for e in errors), errors)
+
+    def test_drawn_otherwise_names_the_kind(self):
+        v = lambda f, i, a: {'formal-reuse': f, 'interpretive': i, 'application': a, 'related': 0}
+        self.assertEqual(spine.drawn_otherwise({('a', 'b'): v(3, 0, 3), ('c', 'd'): v(1, 0, 1), ('e', 'f'): v(20, 9, 9)})[:2], (2, 'a dotted application curve'))
+        self.assertEqual(spine.drawn_otherwise({('a', 'b'): v(3, 5, 0)})[:2], (1, 'a dashed interpretive curve'))
+        self.assertEqual(spine.drawn_otherwise({('a', 'b'): v(3, 5, 0), ('c', 'd'): v(3, 0, 1)})[:2], (2, 'a dashed or dotted curve of another kind'))
+        self.assertEqual(spine.drawn_otherwise({('a', 'b'): v(12, 0, 0)})[0], 0)
 
     def test_fronts_carry_the_two_sentences_above_the_picture(self):
         s = spine.spec()

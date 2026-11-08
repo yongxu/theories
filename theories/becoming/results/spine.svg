@@ -10,8 +10,8 @@
 <rect x="0.5" y="0.5" width="899" height="1417" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
 <text x="24" y="40" font-size="24" font-weight="bold" text-anchor="start" fill="#1c1917">The eight chapters around one grammar</text>
 <text x="24" y="66" font-size="15" text-anchor="start" fill="#57534e">Drawn from the theory graph: each circle sized by its chapter’s results; each solid curve counting</text>
-<text x="24" y="85" font-size="15" text-anchor="start" fill="#57534e">one chapter’s uses of another’s results recorded as formal-reuse, dashed and dotted curves other</text>
-<text x="24" y="104" font-size="15" text-anchor="start" fill="#57534e">dependences.</text>
+<text x="24" y="85" font-size="15" text-anchor="start" fill="#57534e">one chapter’s uses of another’s results recorded as formal-reuse, dashed and dotted curves between</text>
+<text x="24" y="104" font-size="15" text-anchor="start" fill="#57534e">chapters other dependences.</text>
 <rect x="20" y="114" width="860" height="52" rx="6" fill="#f5f5f4" stroke="#e7e5e4"/>
 <text x="32" y="131" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">Standings of the 117 central declarations against the edge of one root (08 §7):</text>
 <text x="32" y="151" font-size="15" text-anchor="start" fill="#1c1917">11 derived · 1 under a stated hypothesis · 6 counting, below the grammar · 99 at a named distance</text>
@@ -38,15 +38,15 @@
 <path d="M640.3,415.5 Q648.6,451.4 665.1,477.7" fill="none" stroke="#1c1917" stroke-opacity="0.85" stroke-width="4.1" marker-end="url(#back)"/>
 <path d="M650.9,491.2 Q619,463.6 622.4,417.9" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.9" marker-end="url(#fwd)"/>
 <path d="M642.5,503.6 Q589.5,475.9 608.5,415.2" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="6 4" marker-end="url(#thin)"/>
-<path d="M566.6,358.4 Q379.5,363.3 241.6,494.2" fill="none" stroke="#1c1917" stroke-opacity="0.85" stroke-width="4.4" marker-end="url(#back)"/>
-<path d="M245.4,500.3 Q391.7,392.9 566.3,366.1" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="5.1" marker-end="url(#fwd)"/>
-<path d="M251.2,510.1 Q410.1,437.3 569.4,378.1" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
-<path d="M660.6,585.3 Q450,861.6 234.8,579.2" fill="none" stroke="#1c1917" stroke-opacity="0.85" stroke-width="3.7" marker-end="url(#back)"/>
-<path d="M663,587 Q450,893.6 232.7,580.7" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="6 4" marker-end="url(#thin)"/>
-<path d="M236.3,576.7 Q450,829.6 657.5,584" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.6" marker-end="url(#fwd)"/>
-<path d="M619.2,668.4 Q594.8,533.6 615.9,417.1" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.8" marker-end="url(#fwd)"/>
-<path d="M406.6,752.1 Q106,533.6 402.6,318.1" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.5" marker-end="url(#fwd)"/>
-<path d="M481.7,740.4 Q590.7,591.9 617.5,417.3" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.9" marker-end="url(#fwd)"/>
+<path d="M566.8,361.2 Q384.1,374.4 243.4,496.1" fill="none" stroke="#1c1917" stroke-opacity="0.85" stroke-width="4.4" marker-end="url(#back)"/>
+<path d="M247,502.6 Q396.3,404 566.8,369.1" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="5.1" marker-end="url(#fwd)"/>
+<path d="M252.4,512.8 Q414.7,448.3 570.6,381.1" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
+<path d="M658.8,583.8 Q450,837.6 236.4,577.9" fill="none" stroke="#1c1917" stroke-opacity="0.85" stroke-width="3.7" marker-end="url(#back)"/>
+<path d="M661.2,585.7 Q450,869.6 234.2,579.6" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="6 4" marker-end="url(#thin)"/>
+<path d="M238.1,575.1 Q450,805.6 655.4,582.2" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.6" marker-end="url(#fwd)"/>
+<path d="M616.5,669 Q582.8,533.6 612,416.2" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.8" marker-end="url(#fwd)"/>
+<path d="M408.4,749.9 Q142,533.6 404.5,320.6" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.5" marker-end="url(#fwd)"/>
+<path d="M479.5,738.9 Q579.6,587.3 614.5,416.8" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.9" marker-end="url(#fwd)"/>
 <path d="M468.9,733.5 Q518.4,602.1 638.3,556.9" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.7" marker-end="url(#fwd)"/>
 <path d="M252.7,513.8 Q381.6,465.2 429.3,338.5" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="5.5" marker-end="url(#fwd)"/>
 <path d="M255.6,542.5 Q415.5,568.1 441.4,729.7" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
@@ -101,21 +101,21 @@
 <text x="450" y="442.3" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">22 of 74 modules</text>
 <text x="517" y="470.7" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">14 of 76 modules</text>
 <text x="572.5" y="537.6" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">14 of 88 modules</text>
-<text x="536.4" y="624" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">8 of 23 modules</text>
+<text x="544.5" y="632.1" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">8 of 23 modules</text>
 <text x="450" y="655.2" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">3 of 28 modules</text>
-<text x="349.6" y="638.1" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">4 of 10 modules</text>
-<text x="323.2" y="537.6" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">12 of 62 modules</text>
+<text x="367.7" y="619.9" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">4 of 10 modules</text>
+<text x="333.5" y="537.6" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">12 of 62 modules</text>
 <text x="324.3" y="411.9" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">4 of 26 modules</text>
 <text x="532.6" y="336.3" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">60</text>
-<text x="514.6" y="354.5" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">42</text>
-<text x="536.7" y="449.4" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">40</text>
-<text x="357.7" y="453.7" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">35</text>
-<text x="413.9" y="417.9" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">29</text>
+<text x="526.1" y="353.6" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">42</text>
+<text x="520.6" y="431.4" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">40</text>
+<text x="346.6" y="463.7" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">35</text>
+<text x="414.4" y="419.2" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">29</text>
 <text x="555.2" y="430.2" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">26</text>
-<text x="431.5" y="384.9" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">20</text>
+<text x="427.3" y="393.6" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">20</text>
 <text x="650.6" y="453.5" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">17</text>
-<text x="631.8" y="472.1" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">15</text>
-<text x="561.7" y="578.9" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">15</text>
+<text x="626.7" y="460.6" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">15</text>
+<text x="557.8" y="584.8" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">15</text>
 <text x="36" y="918.3" font-size="15" font-weight="bold" text-anchor="start" fill="#57534e">Two premises, each a hypothesis where used</text>
 <rect x="36" y="930.25566257523" width="390" height="92" rx="6" fill="#ffffff" stroke="#1c1917" stroke-dasharray="5 3"/>
 <text x="46" y="952.3" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">The continuation condition</text>

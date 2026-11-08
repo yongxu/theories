@@ -35,7 +35,7 @@ SVG = {'en': 'theories/lineage.svg', 'zh': 'theories/lineage.zh.svg'}
 RECORDS = 'theories/becoming/results/records'
 CORRESPONDENCES = 'theories/becoming/results/atlas/entries/correspondences.json'
 LABELS = ('public', 'private', 'reconstruction')
-# Who wrote what states a turning point (RW's re-score, Q4): the fill of its mark in the picture.
+# Who wrote what states a turning point (RW's re-score, Q4): the fill of its mark in the picture (a dot at its centre where not stated).
 ORIGINS = ('person', 'drafted', 'ai', 'unstated')
 FILL = {'person': '#1c1917', 'drafted': '#a8a29e', 'ai': '#ffffff', 'unstated': '#ffffff', 'shape': '#e7e5e4'}
 # The board changes in board-only commits, which no render follows, and its clauses are trimmed: evidence there names
