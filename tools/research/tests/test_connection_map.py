@@ -140,9 +140,9 @@ class PageTests(unittest.TestCase):
         self.assertNotIn('<html', self.fragment)
         self.assertIn('"base":null', self.fragment)
 
-    def test_it_names_both_premises_where_it_speaks_of_the_ethics(self):
+    def test_it_names_both_readings_where_it_speaks_of_the_ethics(self):
         self.assertIn('the continuation condition for scope and C for order', self.page)
-        self.assertIn('their warrant is open', self.page)
+        self.assertIn('no warrant from outside is sought', self.page)
         self.assertNotIn('derives from the condition', self.page)
 
 
