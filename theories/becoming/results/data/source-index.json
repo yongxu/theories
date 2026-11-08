@@ -10,6 +10,7 @@
         "MAP.md",
         "OPEN-QUESTIONS.md",
         "README.md",
+        "README.zh.md",
         "RESULTS.md",
         "TESTS.md",
         "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/FIXED-FINISH-LINE-AUDIT.md",
@@ -5730,6 +5731,7 @@
       "title": "古文：读出、检验与分歧",
       "local_links": [
         "GLOSSARY.zh.md",
+        "README.zh.md",
         "TESTS.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/one-unfolding-root/PLAN.md",
