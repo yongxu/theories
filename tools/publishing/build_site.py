@@ -798,9 +798,15 @@ def on_github(commit, root=ROOT):
     return True if run.returncode == 0 else False if run.returncode == 1 else None
 
 
-def pushed_note(pushed):
+def pushed_note(pushed, zh=False):
     """What the footer adds where links to GitHub at the build commit may not resolve (on_github's answer): nothing where GitHub
-    has the commit."""
+    has the commit; in Chinese on a Chinese page."""
+    if zh:
+        if pushed is False:
+            return '此提交不在本副本上次所取的仓库主分支（origin/main）上，所以在推送之前，指向 GitHub 上此提交的链接可能打不开。'
+        if pushed is None:
+            return '从本副本无法查明 GitHub 是否已有此提交，所以指向它的链接可能打不开。'
+        return ''
     if pushed is False:
         return (' This commit is not on the repository\'s main branch as this clone last fetched it (origin/main), so a link to '
                 'GitHub at this commit may not resolve until it is pushed.')
@@ -823,6 +829,18 @@ def template(page_path, title, body, lang, cfg, commit, date, nav_html, source_h
             home_href = root + out_path('README.zh.md')
     head_title = name if home or title == name else f'{title} · {name}'  # a page named as the site is, the name once
     changed = ', with local paths and words true only off the site changed at build' if cfg.get('rewrites') else ''
+    tree, repo = f"https://github.com/{cfg['repository']}/tree/{commit}", f"https://github.com/{cfg['repository']}"
+    if zh:  # a Chinese page's footer says the same in Chinese
+        footer = (f'本站由<a href="{repo}">本仓库</a>的提交 <a href="{tree}"><code>{short}</code></a>'
+                  f'{"及其上尚未提交的改动" if dirty else ""}构建（{date}）。每一页都由仓库中的文本转换而来'
+                  f'{"，只在站外才成立的本地路径与词句在构建时已改" if cfg.get("rewrites") else ""}；离开本站的链接，指向该文件在此提交时的样子。'
+                  f'{pushed_note(pushed, zh=True)}'
+                  f'{f"""<a href="{html.escape(source_href)}">本页的源文件</a>。""" if source_href else ""}')
+    else:
+        footer = (f"Built from {'uncommitted edits on top of ' if dirty else ''}commit <a href=\"{tree}\"><code>{short}</code></a> of "
+                  f"<a href=\"{repo}\">the repository</a> ({date}). Every page is converted from the repository's text{changed}; a link "
+                  f"that leaves the site goes to the file as it stood at that commit.{pushed_note(pushed)}"
+                  + (f' <a href="{html.escape(source_href)}">This page' + "'" + 's source</a>.' if source_href else ''))
     return f'''<!doctype html>
 <html lang="{'zh-Hans' if zh else 'en'}">
 <head>
@@ -839,7 +857,7 @@ def template(page_path, title, body, lang, cfg, commit, date, nav_html, source_h
 <main>
 {body}
 </main>
-<footer><p>Built from {'uncommitted edits on top of ' if dirty else ''}commit <a href="https://github.com/{cfg['repository']}/tree/{commit}"><code>{short}</code></a> of <a href="https://github.com/{cfg['repository']}">the repository</a> ({date}). Every page is converted from the repository's text{changed}; a link that leaves the site goes to the file as it stood at that commit.{pushed_note(pushed)}{f' <a href="{html.escape(source_href)}">This page' + "'" + 's source</a>.' if source_href else ''}</p></footer>
+<footer><p>{footer}</p></footer>
 </body>
 </html>
 '''
@@ -1048,6 +1066,10 @@ LEAD_SHARED = 3  # a paragraph met word for word among the leading paragraphs of
 STATUS_LINE = re.compile(r'<code>[^<]+</code> · <strong>')  # a record page's status line, as site_text leaves it (RECORD_STATUS)
 LANGUAGE_LINK = re.compile(r'<a [^>]*>\s*(?:中文|English)[^<]{0,24}</a>\s*(?: · |$)')  # '中文', '中文（各章一览）', 'English'
 READING_LINE = 200  # characters below which a paragraph that states a time to read is a reading-time line (a third of it in Chinese)
+PROVENANCE = re.compile(  # a run of opening sentences that say where a page came from, not what it says: an experiment's
+    # 'Board item EW2, 21 October 2026. AI-written (a Claude Code session). Study section 286 of …. Literature check: ….'
+    r'(?:(?:Board items? [^.]*|AI-(?:written|authored)\b[^.]*|Study sections? [^.]*|Literature(?: and data)? check: [^.]*'
+    r'|Prior art: [^.]*|[A-Z][A-Z0-9]{0,5}[a-z]?, \d{1,2}(?:–\d{1,2})? [A-Z][a-z]+ \d{4}|About [^.]*? to read\b[^.]*)\.(?:\s+|$))+')
 READING_TIME = re.compile(r'\b(?:minutes?|hours?|an hour) to read\b|\d+(?:–\d+)? ?分钟|[一二三四五六七八九十两半]+(?:分钟|小时)')
 
 
@@ -1057,7 +1079,8 @@ def lead_paragraphs(body_html):
     characters (a third of that in Chinese) that states a time to read (a reading-time line, alone or after a label of
     provenance), a line of items
     joined by ' · ' (a navigation line), a paragraph wholly in italics (a reading time, a label of provenance) and a line too
-    short to say anything."""
+    short to say anything; and a paragraph's opening sentences of provenance (PROVENANCE: its board item, date, authorship,
+    study section, literature check or time to read) are passed over, the paragraph too where too little is left."""
     for m in re.finditer(r'<p>(.*?)</p>', body_html, re.S):
         inner = m.group(1).strip()
         text = ' '.join(strip_tags(inner).split())
@@ -1071,6 +1094,11 @@ def lead_paragraphs(body_html):
             continue
         if text.count(' · ') >= 2 and all(len(part) < 60 for part in text.split(' · ')):
             continue
+        head = PROVENANCE.match(text)
+        if head:
+            text = text[head.end():].strip()
+            if len(text) < 40:
+                continue
         yield text
 
 
@@ -1373,7 +1401,14 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
         tmp.rmdir()
         drawn = (out / MAP_PAGE).read_text()
         if '</head>' in drawn:  # the favicon is the one thing the map's own page does not have from its generator
-            (out / MAP_PAGE).write_text(drawn.replace('</head>', '<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">\n</head>', 1))
+            drawn = drawn.replace('</head>', '<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">\n</head>', 1)
+        bar = drawn.find('<nav class="sitebar"')
+        if pushed is not True and bar >= 0 and '</nav>' in drawn[bar:]:  # its links to GitHub are at the build commit too
+            end = drawn.index('</nav>', bar) + len('</nav>')
+            drawn = (drawn[:end] + '\n<p class="pushed-note" style="margin:0;padding:6px var(--gutter-r) 6px var(--gutter-l);'
+                     'font:13px/1.45 var(--sans);color:var(--muted);border-bottom:1px solid var(--rule)">'
+                     + html.escape(pushed_note(pushed).strip()) + '</p>' + drawn[end:])
+        (out / MAP_PAGE).write_text(drawn)
         written.append(out / MAP_PAGE)
         map_note = 'built'
     (out / '.nojekyll').write_text('')

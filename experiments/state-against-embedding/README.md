@@ -1,6 +1,6 @@
 # UE32: T2 against empirical dynamic modelling
 
-Board item UE32, 3 November 2026; run 4 November 2026. AI-written (a Claude Code session; no person has checked it). About twenty to twenty-seven minutes to read, [the result](#the-result) fourteen to nineteen of them; its parts are listed with their own times.
+Board item UE32, 3 November 2026; run 4 November 2026. AI-written (a Claude Code session; no person's review of it is recorded). About twenty to twenty-seven minutes to read, [the result](#the-result) fourteen to nineteen of them; its parts are listed with their own times.
 
 **Why.** Thesis T2 names in advance the state of a renewable condition under a draw: its level, its recent giving and one lag ([02 §5](../../theories/becoming/chapters/02-MAP.md#t2)).
 - Where a stage before recruitment is counted, the field's state is that stage. UE31 and UE31b test T2 against it in the flour beetle ([UE31](../state-named-in-advance/README.md), [UE31b](../state-named-in-advance/cells/DESIGN.md)).
