@@ -44,3 +44,7 @@ Write your report to `review/readers/round1-<your name>.md` only if you can writ
 The same reader reads what changed since round 1: [diff-round2.txt](diff-round2.txt), from round 1's tip `223f917bc` to `00b2fbec2`, without what the merge of main brought in (RW's Chinese round; a block whose new sentences are all main's is left out). Secondary: [diff-round2-records.txt](diff-round2-records.txt) (skip hash-only blocks). Generated pages in the diff (LINEAGE, THEORY-GRAPH, the indexes) are the render's; read their sources instead.
 
 Check first that each of your round-1 findings is fixed as you meant, or say why the fix differs; the fixes are `kit/edit_round1.py`, `kit/crosswalk_round1.py` and `kit/crosswalk_round1b.py`, then the merge's resolution. Then read the rest of the diff by the same seven questions. The same table; high first; say what you read in full.
+
+## Round 3 (9 November 2026, branch tip `47b9b069d`)
+
+What changed since round 2's tip `00b2fbec2`: [diff-round3.txt](diff-round3.txt) and [diff-round3-records.txt](diff-round3-records.txt) (the crosswalk; no merge of main in between). The fixes are `kit/edit_round2.py` and the commits after `00b2fbec2`; both readers' round-2 reports are in `review/readers/`. Check that each of your round-2 findings is fixed as you meant, and note where the other reader's fixes conflict with yours; then read the rest by the same seven questions. Same table; high first; say what you read in full. This round stops the review if it finds no high or medium.

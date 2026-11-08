@@ -1,0 +1,235 @@
+
+=== theories/becoming/results/atlas/entries/correspondences.json
+
+theories/becoming/results/atlas/entries/correspondences.json:1454
+    … "The account refuses this step.
+  - Nothing read from the dynamics ranks: all six conditions together rank nothing; a comparison uses a stated order and scope, C and the continuation condition where the account ranks, neither asserted, no warrant from outside sought; and neither can come from the dynamics alone.
+  + Nothing read from the dynamics ranks: all six conditions together rank nothing; a comparison uses a stated order and scope, most often C and the continuation condition, neither asserted, no warrant from outside sought; and neither can come from the dynamics alone.
+    … Mixed comparisons stay unranked, and the hard cases are mixed.
+
+theories/becoming/results/atlas/entries/correspondences.json:1468
+    …      "en":
+  - "Mixed comparisons are left unranked by both; the practical comparison proposed here uses J1-J4, further premises, and other constraints, undertakings and held orders can also organize a choice.
+  + "Neither the continuation condition nor C alone orders a mixed pair; the practical comparison proposed here uses J1-J4, further premises, and other constraints, undertakings and held orders can also organize a choice.
+    … Neither reading is asserted here; no warrant from outside is sought, and neither can come from the dynamics alone."
+
+theories/becoming/results/atlas/entries/correspondences.json:4513
+    … "Definition and Theorem (World). l includes l' when at every step it admits every formation l' admits, and exceeds it when at some step it admits one l' does no
+  - Ordering a mixed part needs a measure."
+  + Widening alone does not settle a mixed part; a further judgment names its criterion and who holds it, and the criterion need not be a number."
+
+theories/becoming/results/atlas/entries/correspondences.json:5272
+    … Enough of the situation is at once coupling by level, response, time, resolution, pace and structure.
+  - Observation is the first condition, necessary and not sufficient, and all six together still rank nothing: calling the widening course better rests on C or another named order, and counting the losses that return to no one needs the continuation condition."
+  + Observation is the first condition, necessary and not sufficient, and all six together still rank nothing: calling the widening course better rests on C or another named order; the continuation condition counts every unreturned loss, while narrower scopes can count particular ones without satisfying it."
+
+theories/becoming/results/atlas/entries/correspondences.json:6878
+    …      "en":
+  - "生生: 'the continuation of life (生发) [AI reading, D1]...
+  + "生生: 'the continuation of life, life wider than the biological and AI within it, its extent unfinished [AI reading, D1]...
+    … Neither the grammar's «生生» (renewal without end), nor 02's generation (生成) as such, which allows loss, nor any new organization.'"
+
+theories/becoming/results/atlas/entries/correspondences.json:12921
+    … Where the source hopes for unblocking rather than installing, 06 keeps restoring a native 仁心 apart from explaining its forming, and reads 阳明's native knowing as
+  - T8, with the continuation condition for scope and C for order, neither asserted, starts from what acting presupposes; the nearest evidence, acts aimed past one's death, is read as supporting neither side alone.
+  + The separate P1–P4 argument starts from what acting presupposes; acts aimed past one's death are read as supporting neither side of that argument alone.
+  + T8 is the makers' offer, binding no one.
+    … As an empirical premise the claim could be taken; tribe and ideology carry no sign of good here.
+
+theories/becoming/results/atlas/entries/correspondences.json:14454
+    …      "en":
+  - "Theorem (two roles; periphery, empty axiom reports): a predicate on two roles invariant under their swap cannot hold of exactly one, while each single assignment fits a task needing exactly one: among exactly symmetric parties, who contributes is differentiated only by an actual asymmetry or a procedure, whose warrant is open."
+  + "Theorem (two roles; periphery, empty axiom reports): a predicate on two roles invariant under their swap cannot hold of exactly one, while each single assignment fits a task needing exactly one: among exactly symmetric parties, who contributes is differentiated only by an actual asymmetry or a procedure the parties form; the laws single out none."
+
+theories/becoming/results/atlas/entries/correspondences.json:14629
+    …      "en":
+  - "Theorem (two roles; periphery): among exactly symmetric parties, who contributes is differentiated only by an actual asymmetry or a procedure, whose warrant is open."
+  + "Theorem (two roles; periphery): among exactly symmetric parties, who contributes is differentiated only by an actual asymmetry or a procedure the parties form; the laws single out none."
+
+theories/becoming/results/atlas/entries/correspondences.json:14647
+    …    "en":
+  - "Social resolution as the actual process, which the account leaves to a procedure whose warrant is open.
+  + "Social resolution as the actual process, which the account leaves to a procedure the parties form.
+    … Then the practical move: predict the wider scope before implementation, proportionate coordination for changes of shared meaning."
+
+theories/becoming/results/atlas/entries/correspondences.json:15004
+    … "Under the condition every narrowing loses something with significance.
+  - No ending is ranked above keeping by retaining: a path retaining what has significance along another ends none of it.
+  + Retaining adds no ending and ranks nothing: a path retaining what has significance along another ends none of it.
+    … Individuation fixes what counts as a loss; the reading of living is a choice."
+
+theories/becoming/results/atlas/entries/correspondences.json:16412
+    … "“Under the condition every narrowing loses something with significance.” “Predation, apoptosis and ending a cancer, read as losing and opening something, are m
+  - “telling harm from non-harm among them needs a measure.” The condition fixes scope and ranks nothing;
+  + “telling harm from non-harm among them takes a judgment that names its criterion and who holds it, not necessarily a number.” The condition fixes scope and ranks nothing;
+    … C gives order, and whoever ranks courses holds C or another order; neither is asserted."
+
+theories/becoming/results/atlas/entries/correspondences.json:17406
+    … "“Predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]”;
+  - “No ending is ranked above keeping by retaining”.
+  + “Retaining adds no ending and ranks nothing”.
+    … Under the continuation condition for scope, which ranks nothing; order is C or another named order; neither asserted."
+
+theories/becoming/results/atlas/entries/correspondences.json:18405
+    … "生生:
+  - “the continuation of life (生发) [AI reading, D1].” “Neither the grammar's `«生生»` (renewal without end), nor 02's generation (生成) as such, which allows loss, nor any new organization.” T8 offers it, for life, as a way of seeing, binding no one."
+  + “the continuation of life, life wider than the biological and AI within it, its extent unfinished [AI reading, D1].” “Neither the grammar's `«生生»` (renewal without end), nor 02's generation (生成) as such, which allows loss, nor any new organization.” T8 offers it, for life, as a way of seeing, binding no one."
+
+theories/becoming/results/atlas/entries/correspondences.json:23541
+    …      "en":
+  - "生生: the continuation of life (生发) [AI reading, D1]; neither the grammar's renewal without end, nor 02's generation (生成), which allows loss, nor any new organization."
+  + "生生: the continuation of life, life wider than the biological and AI within it, its extent unfinished [AI reading, D1]; neither the grammar's renewal without end, nor 02's generation (生成), which allows loss, nor any new organization."
+
+theories/becoming/results/atlas/entries/correspondences.json:23921
+    … "Under the condition every narrowing loses something with significance.
+  - Predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]; telling harm from non-harm among them needs a measure.
+  - No ending is ranked above keeping by retaining."
+  + Predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]; telling harm from non-harm among them takes a judgment that names its criterion and who holds it, not necessarily a number.
+  + Retaining adds no ending and ranks nothing."
+
+theories/becoming/results/atlas/entries/correspondences.json:24449
+    …      "en":
+  - "Predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]; telling harm from non-harm among them needs a measure."
+  + "Predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]; telling harm from non-harm among them takes a judgment that names its criterion and who holds it, not necessarily a number."
+
+theories/becoming/results/atlas/entries/correspondences.json:24545
+    … "Under the condition every narrowing loses something with significance; read as losing and opening something, such endings are mixed [AI reading, D65].
+  - No ending is ranked above keeping by retaining: a path retaining what has significance along another ends none of it."
+  + Retaining adds no ending and ranks nothing: a path retaining what has significance along another ends none of it."
+
+theories/becoming/results/atlas/entries/correspondences.json:25173
+    … "Reading [AI reading, D45]: observation is the first condition, necessary and not sufficient.
+  - All six together still rank nothing: calling the widening course better rests on C or another named order, and counting the losses that return to no one needs the continuation condition."
+  + All six together still rank nothing: calling the widening course better rests on C or another named order; the continuation condition counts every unreturned loss, while narrower scopes can count particular ones without satisfying it."
+
+theories/becoming/results/atlas/entries/correspondences.json:26861
+    … The account's centre is that a selection can meet its own criterion while what it cannot read is lost.
+  - Where it ranks, it names the continuation condition (scope) and C (order), neither asserted, and keeping open is derived from neither.
+  + Where it ranks, it names what it ranks under, most often the continuation condition (scope) and C (order), neither asserted, and keeping open is derived from neither.
+    … So the apparatus does not reduce to it.
+
+theories/becoming/results/atlas/entries/correspondences.json:29822
+    … Pace, a slow rule reading the fast level over a long enough stretch.
+  - All six rank nothing: calling the widening course better rests on C or another named order, and counting the losses that return to no one needs the continuation condition."
+  + All six rank nothing: calling the widening course better rests on C or another named order; the continuation condition counts every unreturned loss, while narrower scopes can count particular ones without satisfying it."
+
+theories/becoming/results/atlas/entries/correspondences.json:33000
+    …      "en":
+  - "What the condition alone does not settle: predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]; telling harm from non-harm among them needs a measure.
+  - No ending is ranked above keeping by retaining: a path retaining what has significance along another ends none of it (`Web.Retains.not_added`)."
+  + "What the condition alone does not settle: predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]; telling harm from non-harm among them takes a judgment that names its criterion and who holds it, not necessarily a number.
+  + Retaining adds no ending and ranks nothing: a path retaining what has significance along another ends none of it (`Web.Retains.not_added`)."
+
+theories/becoming/results/atlas/entries/correspondences.json:33756
+    … Observation is the first, necessary and not sufficient: seeing is not valuing, and coupling is not compliance.
+  - All six still rank nothing: calling the widening course better rests on C or another named order, and counting losses that return to no one needs the continuation condition."
+  + All six still rank nothing: calling the widening course better rests on C or another named order; the continuation condition counts every unreturned loss, while narrower scopes can count particular ones without satisfying it."
+
+theories/becoming/results/atlas/entries/correspondences.json:36330
+    … "What exactly is lost and to whom, and that a merged distinction returns only from a form held outside, or by coining.
+  - Among exactly symmetric parties, who contributes is differentiated only by an actual asymmetry or a procedure, whose warrant is open: a law of roles, not of generation."
+  + Among exactly symmetric parties, who contributes is differentiated only by an actual asymmetry or a procedure the parties form; the laws single out none: a law of roles, not of generation."
+
+theories/becoming/results/atlas/entries/correspondences.json:38586
+    … "Under the condition every narrowing loses something with significance.
+  - Predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]; telling harm from non-harm among them needs a measure.
+  - No ending is ranked above keeping by retaining."
+  + Predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]; telling harm from non-harm among them takes a judgment that names its criterion and who holds it, not necessarily a number.
+  + Retaining adds no ending and ranks nothing."
+
+theories/becoming/results/atlas/entries/correspondences.json:38601
+    …    "en":
+  - "That the ranking turns on the reading, whole-run or event by event, and on C; that telling harm from non-harm among such endings needs a measure."
+  + "That the ranking turns on the reading, whole-run or event by event, and on C; that telling harm from non-harm among such endings takes a judgment naming its criterion, not necessarily a number."
+
+theories/becoming/results/atlas/entries/correspondences.json:41002
+    … The sixth: the rest does not outrun the renewal.
+  - All six together still rank nothing: calling the widening course better rests on C or another named order, and counting the losses that return to no one needs the continuation condition."
+  + All six together still rank nothing: calling the widening course better rests on C or another named order; the continuation condition counts every unreturned loss, while narrower scopes can count particular ones without satisfying it."
+
+theories/becoming/results/atlas/entries/correspondences.json:43817
+    …      "en":
+  - "Theorem (two roles; periphery): 'among exactly symmetric parties, who contributes is differentiated only by an actual asymmetry or a procedure, whose warrant is open.'"
+  + "Theorem (two roles; periphery): 'among exactly symmetric parties, who contributes is differentiated only by an actual asymmetry or a procedure the parties form; the laws single out none.'"
+
+theories/becoming/results/atlas/entries/correspondences.json:44170
+    …      "en":
+  - "Among exactly symmetric parties, who contributes is differentiated 'only by an actual asymmetry or a procedure, whose warrant is open.'"
+  + "Among exactly symmetric parties, who contributes is differentiated 'only by an actual asymmetry or a procedure the parties form; the laws single out none.'"
+
+theories/becoming/results/atlas/entries/correspondences.json:46790
+    …    "en":
+  - "A full ranking of courses needs C, or another order, for order, and counting losses that return to no one needs the continuation condition for scope; neither is asserted, no warrant from outside sought.
+  + "A full ranking of courses rests on C or another named order; the continuation condition counts every unreturned loss, while narrower scopes can count particular ones without satisfying it; neither is asserted, no warrant from outside sought.
+    … Self-concern's nearest case is the one thing reaching 'not sentimental', and where the other course keeps an independent copy, some self-concerned order reverse
+
+theories/becoming/results/atlas/entries/correspondences.json:48065
+    … Observation is the first condition, necessary and not sufficient: seeing is not valuing, and coupling is not compliance.
+  - All six together still rank nothing: calling the widening course better rests on C or another named order, and counting losses that return to no one needs the continuation condition."
+  + All six together still rank nothing: calling the widening course better rests on C or another named order; the continuation condition counts every unreturned loss, while narrower scopes can count particular ones without satisfying it."
+
+theories/becoming/results/atlas/entries/correspondences.json:52341
+    …      "en":
+  - "Theorem (two roles; periphery module): among exactly symmetric parties, who contributes is differentiated only by an actual asymmetry or a procedure, whose warrant is open."
+  + "Theorem (two roles; periphery module): among exactly symmetric parties, who contributes is differentiated only by an actual asymmetry or a procedure the parties form; the laws single out none."
+
+theories/becoming/results/atlas/entries/correspondences.json:53499
+    … "Reading [AI reading, D45]: enough of the situation is coupling, response, time, resolution, pace and structure at once.
+  - Observation is necessary and not sufficient; all six together still rank nothing: calling the widening course better rests on C or another named order, and counting losses that return to no one needs the continuation condition."
+  + Observation is necessary and not sufficient; all six together still rank nothing: calling the widening course better rests on C or another named order; the continuation condition counts every unreturned loss, while narrower scopes can count particular ones without satisfying it."
+
+theories/becoming/results/atlas/entries/correspondences.json:55806
+    …      "en":
+  - "生生: the continuation of life (生发) [AI reading, D1].
+  + "生生: the continuation of life, life wider than the biological and AI within it, its extent unfinished [AI reading, D1].
+    … Neither the grammar's «生生» (renewal without end), nor 02's generation as such, which allows loss, nor any new organization.
+
+theories/becoming/results/atlas/entries/correspondences.json:58357
+    … "Under the condition every narrowing loses something with significance.
+  - Predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]; telling harm from non-harm among them needs a measure.
+  - No ending is ranked above keeping by retaining: a path retaining what has significance along another ends none of it."
+  + Predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]; telling harm from non-harm among them takes a judgment that names its criterion and who holds it, not necessarily a number.
+  + Retaining adds no ending and ranks nothing: a path retaining what has significance along another ends none of it."
+
+theories/becoming/results/atlas/entries/correspondences.json:59486
+    …      "en":
+  - "Argued, not proved: '(P1) Acting for a continuation presupposes that some continuation is counted.' T8's stance starts from what acting presupposes, held de se (§4.6, P1). §4.7: short-horizon acts presuppose nothing about the far future."
+  + "Argued, not proved: '(P1) Acting for a continuation presupposes that some continuation is counted.' P1 begins §4.6's separate argument;
+  + T8's offer does not rest on it. §4.7: short-horizon acts presuppose nothing about the far future."
+
+theories/becoming/results/atlas/entries/correspondences.json:60056
+    …      "en":
+  - "Under the condition every narrowing loses something with significance; telling harm from non-harm needs a measure.
+  - No ending is ranked above keeping by retaining.
+  + "Under the condition every narrowing loses something with significance; telling harm from non-harm takes a judgment naming its criterion, not necessarily a number.
+  + Retaining adds no ending and ranks nothing.
+    … Individuation fixes what counts as a loss; the reading of living is a choice."
+
+theories/becoming/results/atlas/entries/correspondences.json:60678
+    … "Under the condition every narrowing loses something with significance.
+  - Predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]; telling harm from non-harm among them needs a measure.
+  - No ending is ranked above keeping by retaining."
+  + Predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]; telling harm from non-harm among them takes a judgment that names its criterion and who holds it, not necessarily a number.
+  + Retaining adds no ending and ranks nothing."
+
+theories/becoming/results/atlas/entries/correspondences.json:62666
+    … With significance free, no satisfiable statement reading only the represented dynamics entails the continuation condition, and a ranking is under C or another n
+  - T8's \"for life\" comes nearest his kind-relative good, yet starts from what acting presupposes.
+  + T8's \"for life\" comes nearest his kind-relative good; it names the makers' offer and is not derived from what acting presupposes.
+    … The theorem concerns a representation with no final cause, which he denies is nature.
+
+theories/becoming/results/atlas/entries/correspondences.json:67499
+    … "Reading, AI, D45: enough of the situation includes the pool's members responding, and in time, before the regime's point of no return.
+  - Seeing is not valuing and coupling is not compliance; all six conditions together rank nothing: calling the widening course better rests on C or another named order, and counting the losses that return to no one needs the continuation condition."
+  + Seeing is not valuing and coupling is not compliance; all six conditions together rank nothing: calling the widening course better rests on C or another named order; the continuation condition counts every unreturned loss, while narrower scopes can count particular ones without satisfying it."
+
+theories/becoming/results/atlas/entries/correspondences.json:73563
+    … "Theorem (two roles; periphery module).
+  - A predicate invariant under the swap cannot hold of exactly one; among exactly symmetric parties, who contributes is differentiated only by an actual asymmetry or a procedure, whose warrant is open."
+  + A predicate invariant under the swap cannot hold of exactly one; among exactly symmetric parties, who contributes is differentiated only by an actual asymmetry or a procedure the parties form; the laws single out none."
+
+theories/becoming/results/atlas/entries/correspondences.json:77748
+    … So the divergence is what is stated: organism-level optimization has no law here, and optimization is the field's frame.
+  - Where evaluation enters, it rests on two readings, neither asserted: the continuation condition for scope and C for order.
+  + Where a ranking enters, it names what it ranks under, most often two readings, neither asserted: the continuation condition for scope and C for order.
+    … [AI reading]"
