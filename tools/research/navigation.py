@@ -37,7 +37,7 @@ def read(path):
 
 
 def link(path, base, label):
-    file, sep, fragment = path.partition('#')
+    file, sep, fragment = registry.mirrored(path).partition('#')
     return f'[{label}]({os.path.relpath(ROOT / file, (ROOT / base).parent)}{sep}{fragment})'
 
 

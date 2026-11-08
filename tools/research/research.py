@@ -184,8 +184,8 @@ def check_links(outputs, planned=()):
     errors = []
     available = {(ROOT / p).resolve() for p in planned}
     for name, body in outputs.items():
-        # Text in code is not a link, as moves.check_links reads it: a mirror keeps its source's code as it is.
-        masked = moves.code_mask(body) if '`' in body or '~~~' in body else body
+        # Text in code or inline TeX is not a link, as moves.links reads it: a mirror keeps its source's code as it is.
+        masked = moves.TEX_INLINE.sub(lambda m: re.sub(r'[^\n]', ' ', m.group(0)), moves.code_mask(body)) if '`' in body or '~~~' in body or '\\(' in body else body
         for target in [body[m.start(1):m.end(1)] for m in re.finditer(r'\]\((<[^>]+>|[^\s)]+)\)', masked)]:
             part = urlsplit(target.strip('<>'))
             if part.scheme or not part.path:
