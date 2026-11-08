@@ -795,7 +795,14 @@ def boundary_section(r, base):
     lines += [f'**Counts** of the {sum(b["groups"].values())} central declarations: ' + '; '.join(parts) + '.', '']
     for p in b['premises_of_the_ethics']:
         absent = en(p['absent']).strip().rstrip('.') if isinstance(p.get('absent'), dict) else ''
-        what = {'not entailed': f'not entailed by any statement reading only the dynamics, by `{p.get("not_entailed")}` '
+        theorem = str(p.get('not_entailed', ''))
+        # each theorem in 08 §7's words: the condition's reads only the dynamics, C's reads no order (RW)
+        unentailed = ('no statement reading no order entails it at a datum where it holds, on a frame with an extension'
+                      if theorem.endswith('ReadsNoOrder.not_entails') else
+                      'where there is a standpoint and a formation, no statement reading only the dynamics and holding of '
+                      'some dynamics entails it' if theorem.endswith('ReadsOnlyDynamics.not_entails') else
+                      'not entailed by any statement reading only the dynamics')
+        what = {'not entailed': f'{unentailed}, by `{theorem}` '
                                 '(computed: a theorem whose type names the definition; its statement read in the review)',
                 'not shown': 'no theorem shows it unentailed by the dynamics' + (': ' + absent if absent else ''),
                 'unverified': 'unverified: ' + '; '.join(map(str, p.get('failed', [])))}.get(p.get('result'), p.get('result'))

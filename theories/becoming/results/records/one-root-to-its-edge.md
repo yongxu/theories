@@ -19,8 +19,8 @@
 
 **Counts** of the 117 central declarations: on the edge 12 (derived 11, under a stated hypothesis 1); below the grammar 6; distances 99 (connected 22, balance in its statement 32, amounts 18, at a represented model 16, own carrier 6, at its model 2, free significance 3); unplaced 0.
 
-- **For scope**, the continuation condition: `Becoming.Unrestricted`; not entailed by any statement reading only the dynamics, by `Becoming.ReadsOnlyDynamics.not_entails` (computed: a theorem whose type names the definition; its statement read in the review).
-- **For order**, C, calling widening better: `Becoming.Comparison`; not entailed by any statement reading only the dynamics, by `Becoming.ReadsNoOrder.not_entails` (computed: a theorem whose type names the definition; its statement read in the review).
+- **For scope**, the continuation condition: `Becoming.Unrestricted`; where there is a standpoint and a formation, no statement reading only the dynamics and holding of some dynamics entails it, by `Becoming.ReadsOnlyDynamics.not_entails` (computed: a theorem whose type names the definition; its statement read in the review).
+- **For order**, C, calling widening better: `Becoming.Comparison`; no statement reading no order entails it at a datum where it holds, on a frame with an extension, by `Becoming.ReadsNoOrder.not_entails` (computed: a theorem whose type names the definition; its statement read in the review).
 
 ### On the edge
 
