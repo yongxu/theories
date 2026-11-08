@@ -241,7 +241,8 @@ def build(records):
                       'page': str(registry.record_path(r).with_suffix('.md').relative_to(ROOT))})
         for d in r.get('dependencies', []):
             if d.get('id') in ids:
-                edges.append({'from': 'record:' + r['id'], 'to': 'record:' + d['id'], 'type': d.get('relation', 'depends')})
+                edges.append({'from': 'record:' + r['id'], 'to': 'record:' + d['id'], 'type': d.get('relation', 'depends'),
+                              **({'interface': True} if 'interface' in d else {})})
         for d in r.get('related', []):
             if d.get('id') in ids:
                 edges.append({'from': 'record:' + r['id'], 'to': 'record:' + d['id'], 'type': 'related'})
@@ -378,7 +379,8 @@ def page(graph):
     lines += ['', '## The regions', '',
               'A region\'s results are the records whose home section is in its chapter, so the counts below are those the '
               '[chapters page](../chapters/README.md) gives as results stated. A chapter also keeps the anchors of former record '
-              'names, so that old links resolve; those are not results, and neither page counts them.'
+              'names, so that old links resolve; those are not results, and neither page counts them. In the lists below, ◆ marks a '
+              'result the [coverage file](completion/COVERAGE.json) names as central.'
               + (f' To retire holds the {counts["retire"]["result"]} superseded records that no chapter states, which the '
                  'chapters page does not list.' if counts.get('retire', {}).get('result') and retired_superseded else ''), '',
               '| Region | Concepts | Results | Modules | Texts |', '|---|---:|---:|---:|---:|']
@@ -396,6 +398,8 @@ def page(graph):
     for (gloss, module), names in rows.items():
         lines.append(f'| {", ".join(f"`{n}`" for n in names)} | {gloss.replace("|", "/")} | `{module}` |')
     results = by.get('result', [])
+    coverage = Path(registry.ROOT / 'theories/becoming/results/completion/COVERAGE.json')
+    central = {x for row in json.loads(coverage.read_text(encoding='utf-8')).get('rows', []) for x in row.get('records', [])} if coverage.is_file() else set()
     for k in REGION_ORDER:
         rs = [r for r in results if r['region'] == k]
         ms = [m for m in by.get('module', []) if m['region'] == k]
@@ -407,7 +411,8 @@ def page(graph):
             for r in sorted(rs, key=lambda r: r['title']):
                 rel = os.path.relpath(r['page'], Path(PAGE).parent)
                 mark = '' if 'record:' + r['record'] in states else ' ·'
-                lines.append(f'- [{r["title"] or r["record"]}]({rel}) ({r["status"]}){mark}')
+                central_mark = ' ◆' if r['record'] in central else ''
+                lines.append(f'- [{r["title"] or r["record"]}]({rel}) ({r["status"]}){central_mark}{mark}')
             lines.append('')
         if ms:
             on = [m for m in ms if m['on_grammar']]
@@ -422,7 +427,7 @@ def page(graph):
     text = '\n'.join(lines).rstrip() + '\n'
     full = navigation.reading_time(text.replace('{time}', '', 1))
     part = navigation.reading_time('\n'.join(lead + section))
-    return text.replace('{time}', f'[中文（脊柱部分）](THEORY-GRAPH.zh.md) · {full} to read in full; the spine and its tables in '
+    return text.replace('{time}', f'[中文（各章一览）](THEORY-GRAPH.zh.md) · {full} to read in full; the chapters at a glance, with their tables, in '
                                   f'{part}.', 1)
 
 

@@ -8,6 +8,7 @@ The words of the Theory of Becoming, each in one sense and with one home: the se
 
 | Term | Sense | Home |
 |---|---|---|
+| grammar (文法) | the root's one kind of symbol, a relation between occurrences, and what is built from relations by a few operations; its theorems are stated for every carrier and relation | [01 §1](theories/becoming/chapters/01-ROOT.md#one-kind-of-symbol) |
 | relation (际, *jì*) | a two-place predicate on a carrier, the one kind of symbol | [01 §1](theories/becoming/chapters/01-ROOT.md#one-kind-of-symbol) |
 | condition (缘, *yuán*) | the main reading of a relation: `R x y`, `x` is a condition of `y`; also a relatum's role in the World | [01 §1](theories/becoming/chapters/01-ROOT.md#one-kind-of-symbol) |
 | class (类, *lèi*) | an equivalence relation: the respect in which occurrences are the same | [01 §2](theories/becoming/chapters/01-ROOT.md#class-and-continuation) |
@@ -29,6 +30,7 @@ The words of the Theory of Becoming, each in one sense and with one home: the se
 
 | Term | Sense | Home |
 |---|---|---|
+| formation | in the World, a relatum active as what depends, draws, takes and gives; the same relatum can also stand as a condition at some level | [04](theories/becoming/chapters/04-LIFE.md#life-as-condition) |
 | carrying renewal (传) | the coarse pattern continues while a fine line begins (火传) | [02 §1](theories/becoming/chapters/02-MAP.md#branches) |
 | goes on, ends (延, 尽) | goes on along some branch; ends on every branch | [02 §1](theories/becoming/chapters/02-MAP.md#branches) |
 | generation, keeping, degeneration (生成, 守, 退化) | a pattern going on through carrying renewal; going on without it; ending on every branch. "Generation" never means arising, nor any new organization, and it is not 生生, whose English gloss "continuing generation" (07 §2) says 生发, not this sense: generation can go on at two orders of grain while what can form only returns. Keeping from some point on (后守) allows renewals before its point, and with it and excluded middle the regions cover. Read on a course's moments, under premises of deciding, keeping widening is generation under the one that loses nothing | [02 §1](theories/becoming/chapters/02-MAP.md#branches), [07 §2](theories/becoming/chapters/07-SIGNIFICANCE.md#r-keeping-widening-is-generation-losing-nothing) |
@@ -56,6 +58,7 @@ The words of the Theory of Becoming, each in one sense and with one home: the se
 
 | Term | Sense | Home |
 |---|---|---|
+| room | there is room where every eligible outcome standing above another at a condition beyond is exceeded, on what couples in, by an eligible one (`Optimum.Room`) | [05](theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in) |
 | the gate (of a renewal), gated renewal | every formation giving to a condition depends on it at a need of at least `m`, so the renewal depends on what it renews. Not the gate on moves | [05](theories/becoming/chapters/05-COLLECTIVES.md#collectives) |
 | optimum, drawer, pool, shared code | as defined where each is introduced | [05](theories/becoming/chapters/05-COLLECTIVES.md) |
 | significance (`sig`) | for a standpoint, a step and a formation, whether that continuation has significance: a proposition, not a number; read de se, that it lies within what the center continues with along a relation |  [07 §1](theories/becoming/chapters/07-SIGNIFICANCE.md#evaluation) |
@@ -74,10 +77,16 @@ The words of the Theory of Becoming, each in one sense and with one home: the se
 
 | Term | Sense | Home |
 |---|---|---|
+| thesis | a claim about actual systems, T1 to T8: stated in full with what would refute it in its home chapter; it adds no theorem, a refutation removes none, and a failure stays recorded beside it | [08 §9](theories/becoming/chapters/08-METHOD.md#theses) |
+| central declaration | a Lean declaration that a row of the coverage file names for a phase, differentiation or domain (criterion K1); there are 117 distinct ones | [08 §7](theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge) |
+| edge of one root | how far the one root reaches; each central declaration has one standing against it | [08 §7](theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge) |
+| derived | a standing on that edge: a central declaration that is a case of grammar laws, through bridges checked in Lean as equivalences and support the review reads where a row has them; the case rests on the review | [08 §7](theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge) |
+| named distance | the standing of a central declaration off the edge, with its reason; a distance is not shown to be a failure | [08 §7](theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge) |
+| formal-reuse | the kind of recorded dependency kept for a verified inference using the cited result; a record's authors assign it, and no edge is joined to a Lean use | [RESULT-WORKFLOW](_process/RESULT-WORKFLOW.md#one-identity-explicit-relationships) |
 | standing | what kind of claim a statement is: definition, theorem with its base, conditional, calibration, thesis, assessment, reading, open | [08 §2](theories/becoming/chapters/08-METHOD.md#standings-and-bases) |
 | base | where a theorem is proved: the root, any process, any type, the World, a named model, the periphery | [08 §2](theories/becoming/chapters/08-METHOD.md#standings-and-bases) |
 | the pure core; the periphery | the core modules of `Becoming`, which import only the foundation and one another (the root module `Becoming` also imports the instance and application ring) and, with the foundation's `import Std` removed, compile from Lean's prelude alone, every source declaration with an empty axiom report; the Mathlib leaves, older modules and Python experiments, which may use any tool, with dependence running toward the pure core, their results keeping their own receipts with their axioms listed. The three foundation modules (`GenerativeCore`, `InquirySufficiency`, `RelationalRenewal`, not the pure core's layer L0) and the instance and application ring are checked with the pure core and meet its conditions without being counted in it; neither is periphery | [08 §3](theories/becoming/chapters/08-METHOD.md#pure-core-and-periphery) |
-| spine | the Lean package `Becoming` as its checker runs it (the pure core and the instance and application ring, resting on the three foundation modules, which are checked with it and not counted in it), which new results extend; *the spine's name* is a name used there, and *pre-spine* marks an earlier module outside the run, kept with its scope. A law on the spine stands on the base its label names and is not thereby on the root | [08 §3](theories/becoming/chapters/08-METHOD.md#pure-core-and-periphery) |
+| spine | the Lean package `Becoming` as its checker runs it (the file `spine.svg` is named otherwise: it is the picture of the chapters) (the pure core and the instance and application ring, resting on the three foundation modules, which are checked with it and not counted in it), which new results extend; *the spine's name* is a name used there, and *pre-spine* marks an earlier module outside the run, kept with its scope. A law on the spine stands on the base its label names and is not thereby on the root | [08 §3](theories/becoming/chapters/08-METHOD.md#pure-core-and-periphery) |
 | calibration | where a law needs an omniscience principle, and what the need says about the unfolding | [08 §5](theories/becoming/chapters/08-METHOD.md#calibrations) |
 | hypotheses | a law's own local premises (finite, listed, decided, …), written into its statement | [08 §2](theories/becoming/chapters/08-METHOD.md#standings-and-bases) |
 | law (律, *lǜ*) | a statement holding of every relation, carrier or model its hypotheses admit, read off what it holds of and not set over it; with content only through its hypotheses. `Law` is the spine's name for a determined step, one relation (`next x = y`), not a rule its configurations obey; a science's law is named with its science | [08 §10](theories/becoming/chapters/08-METHOD.md#law) |

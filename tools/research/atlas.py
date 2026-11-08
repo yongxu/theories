@@ -844,13 +844,18 @@ def crosswalk_page(atlas: dict) -> str:
     # The single page's headings: its title, then each group's; and each entry's id, now on its group's page.
     old = dict(zip((g['id'] for g in groups), _headings(['The crosswalk'] + [g['title']['en'] for g in groups])[1:]))
     taken = set(_headings(['The crosswalk']))
+    totals_c = [sum(g['by_carried'][c] for g in groups) for c in carried]
+    totals_r = [sum(g['by_relation'][r] for g in groups) for r in relations]
     out = [GENERATED, '', '# The crosswalk', '', _navigation(CROSSWALK), '',
+           f'All {len(entries)} entries, in {len(groups)} groups, summed; every entry is an AI reading, no person\'s, and the [table below](#the-groups) gives each group:', '',
+           '| What became of it | ' + ' | '.join(carried) + ' |', '|---|' + '---:|' * len(carried), '| Entries | ' + ' | '.join(map(str, totals_c)) + ' |', '',
+           '| Relation | ' + ' | '.join(relations) + ' |', '|---|' + '---:|' * len(relations), '| Entries | ' + ' | '.join(map(str, totals_r)) + ' |', '',
            f'![How the earlier folders and the domains of thought meet the live account]({_href(OVERVIEW)})', '',
            '*Drawn by connection_map.py from the crosswalk’s claims, on the pages its table links: each thread joins a folder or domain to the part of the account its '
            'claims are read against, coloured by relation, and every thread is an AI reading, no person’s. To explore the same data, '
            f'open [the connection map]({_href(ATLAS + "/map.html")}) on the reader’s site, once it is published, or from a clone; GitHub shows it only as source.*', '',
            *_crosswalk_lead(atlas, ATLAS),
-           f'{len(entries)} entries in {len(groups)} groups, each on its own page:', '',
+           '<a id="the-groups"></a>', '', f'{len(entries)} entries in {len(groups)} groups, each on its own page:', '',
            '| Group | Entries | ' + ' | '.join(carried) + ' | ' + ' | '.join(relations) + ' | ' + ' | '.join(f'agreement of {a}' for a in agreements) + ' |',
            '|---|---:|' + '---:|' * (len(carried) + len(relations) + len(agreements))]
     for g in groups:

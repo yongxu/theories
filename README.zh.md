@@ -32,7 +32,7 @@
 
 | 入口 | 是什么 | 读多久 |
 |---|---|---|
-| [一页](theories/becoming/ONE-PAGE.zh.md) | 整个说明最短的一层：它是什么，一个情形，根，诸律与其地位、什么会表明它错，伦理 | 约 12–16 分钟 |
+| [一页](theories/becoming/ONE-PAGE.zh.md) | 整个说明最短的一层：它是什么，一个情形，根，诸律与其地位、什么会表明它错，伦理 | 约 13–16 分钟 |
 | [用途](theories/becoming/USES.zh.md) | 逐个领域：今天能用它做什么，能做到多远，不主张什么 | 约 14–18 分钟 |
 | [实例](theories/becoming/USES-EXAMPLES.zh.md) | 每个领域一例或数例，各在其真实的地位上 | 约 43–56 分钟 |
 | [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) | 整个说明的一小时层，按八章的顺序 | 约 56–73 分钟 |
@@ -40,9 +40,9 @@
 | [第六章](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) | 古文：读出、检验与分歧；中文 | 约 123–160 分钟 |
 | [检验](TESTS.md) | 冻结的检验，按结局排列，未通过者在前；英文 | 约 33–42 分钟 |
 | [对照表](theories/becoming/results/atlas/CROSSWALK.zh.md) | 早先的理论文件夹与各思想领域，读作现行说明中的什么，附图与计数；各组在英文页上 | 约 3–4 分钟 |
-| [理论图](theories/becoming/results/THEORY-GRAPH.md) | 概念、结果、模块、文本与各章之间的连接；英文，脊柱部分有[中文版](theories/becoming/results/THEORY-GRAPH.zh.md)（约 17–22 分钟） | 约 61–79 分钟 |
-| [怎样长成](theories/LINEAGE.zh.md) | 本说明怎样从更早的文字与理论文件夹长成 | 全文约 100–130 分钟；简述、图、标签与这条线索约 15–19 分钟 |
-| [术语表](GLOSSARY.zh.md) | 每个词的一义与其所属之处 | 约 17–22 分钟 |
+| [理论图](theories/becoming/results/THEORY-GRAPH.md) | 概念、结果、模块、文本与各章之间的连接；英文，脊柱部分有[中文版](theories/becoming/results/THEORY-GRAPH.zh.md)（约 23–29 分钟） | 约 68–88 分钟 |
+| [怎样长成](theories/LINEAGE.zh.md) | 本说明怎样从更早的文字与理论文件夹长成 | 全文约 112–146 分钟；简述、图、标签与这些线索约 27–35 分钟 |
+| [术语表](GLOSSARY.zh.md) | 每个词的一义与其所属之处 | 约 19–25 分钟 |
 | [审查包](theories/becoming/review/README.zh.md) | 给审读者的材料与问题；古文、佛学两份与重新归类的编码手册为中文 | 封面约 7–9 分钟 |
 
 **语言。** 除第六章、古文与佛学两份审查材料及重新归类的编码手册外，各章、记录、检验与理论图都是英文（理论图的脊柱部分有中文版）。各中文版由 AI 译自英文，未经人工审读；义以英文版为准。

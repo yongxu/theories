@@ -34,6 +34,7 @@ PAGE = {'en': 'theories/LINEAGE.md', 'zh': 'theories/LINEAGE.zh.md'}
 SVG = {'en': 'theories/lineage.svg', 'zh': 'theories/lineage.zh.svg'}
 RECORDS = 'theories/becoming/results/records'
 CORRESPONDENCES = 'theories/becoming/results/atlas/entries/correspondences.json'
+CROSSWALK_PAGE = 'theories/becoming/results/atlas/CROSSWALK.md'
 LABELS = ('public', 'private', 'reconstruction')
 # Who wrote what states a turning point (RW's re-score, Q4): the fill of its mark in the picture (a dot at its centre where not stated).
 ORIGINS = ('person', 'drafted', 'ai', 'unstated')
@@ -50,6 +51,12 @@ W, H = 1000, 640
 INK, MUTED, FAINT, PAPER, THREAD = '#1c1917', '#57534e', '#a8a29e', '#fcfcfb', '#2a78d6'
 FONT = {'en': 'Helvetica, Arial, sans-serif',
         'zh': "'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif"}
+
+
+def threads_of(s):
+    """The followed threads: the data's `threads`, or a single `thread`; each with its ring's colour."""
+    found = s.get('threads') or ([s['thread']] if s.get('thread') else [])
+    return [{**th, 'colour': th.get('colour', THREAD)} for th in found]
 
 
 def _read(path):
@@ -125,9 +132,10 @@ def check(s):
                 errors.append(f'lineage.json: paper {p.get("id")}: no such path {path}')
         if p.get('label') not in LABELS:
             errors.append(f'lineage.json: paper {p.get("id")}: unknown label {p.get("label")!r}')
-    for t in s.get('thread', {}).get('points', []):
-        if t not in ids:
-            errors.append(f'lineage.json: the thread names no point {t}')
+    for th in threads_of(s):
+        for t in th.get('points', []):
+            if t not in ids:
+                errors.append(f'lineage.json: the thread names no point {t}')
     for ph in s.get('phases', []):
         for pid in ph['points']:
             if pid not in ids:
@@ -242,8 +250,8 @@ def x_of(day, segments):
 def svg(s, lang, weeks):
     words = s['words'][lang]
     segments = axis(s)
-    base = 470
     top = 150
+    base = picture_base(s, lang, segments, top)
     out = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" '
            f'aria-labelledby="lineage-title" font-family="{FONT[lang]}">',
            f'<title id="lineage-title">{escape(words["title"])}</title>',
@@ -277,7 +285,9 @@ def svg(s, lang, weeks):
         out.append(t(W - 50, base + 145, words['growth'].format(top=most), 13, anchor='end', fill=MUTED))
     # the points in lanes above the axis; the thread's path first, the markers on it
     lanes, placed, marks = [], [], {}
-    thread = set(s.get('thread', {}).get('points', []))
+    threads = threads_of(s)
+    ring_of = {pid: th['colour'] for th in reversed(threads) for pid in th['points']}
+    thread = set(ring_of)
     for n, p in enumerate(s['points'], 1):
         x = x_of(parse_date(p['date'])[0], segments)
         lane = next((i for i, last in enumerate(lanes) if x - last >= 17), len(lanes))
@@ -287,12 +297,13 @@ def svg(s, lang, weeks):
         y = base - 16 - 17 * lane
         marks[p['id']] = (x, y)
         placed.append((n, p, x, y))
-    path = [marks[i] for i in s.get('thread', {}).get('points', []) if i in marks]
-    if len(path) > 1:
-        d = 'M' + ' L'.join(f'{x:.1f},{y:.1f}' for x, y in path)
-        out.append(f'<path d="{d}" fill="none" stroke="{THREAD}" stroke-width="1.8" stroke-dasharray="5 3"/>')
+    for th in threads:
+        path = [marks[i] for i in th.get('points', []) if i in marks]
+        if len(path) > 1:
+            d = 'M' + ' L'.join(f'{x:.1f},{y:.1f}' for x, y in path)
+            out.append(f'<path d="{d}" fill="none" stroke="{th["colour"]}" stroke-width="1.8" stroke-dasharray="5 3"/>')
     for n, p, x, y in placed:
-        out.append(marker(x, y, p['label'], p['id'] in thread, p.get('origin')))
+        out.append(marker(x, y, p['label'], ring_of.get(p['id'], False), p.get('origin')))
     # short titles on the major points, in rows above the lanes, each on a vertical leader from its point
     title_floor = base - 16 - 17 * max(len(lanes), 1) - 14
     rows = title_rows(placed, lang, thread)
@@ -302,7 +313,7 @@ def svg(s, lang, weeks):
     for row, x, y, label, anchor, p in rows:
         ly = title_floor - 22 * row
         tx = x - 6 if anchor == 'start' else x + 6 if anchor == 'end' else x
-        out.append(f'<line x1="{x:.1f}" y1="{y - 9:.1f}" x2="{x:.1f}" y2="{ly + 5:.1f}" stroke="{THREAD if p["id"] in thread else MUTED}" stroke-width="1"/>')
+        out.append(f'<line x1="{x:.1f}" y1="{y - 9:.1f}" x2="{x:.1f}" y2="{ly + 5:.1f}" stroke="{ring_of.get(p["id"], MUTED)}" stroke-width="1"/>')
         out.append(t(tx, ly, label, 14, 'bold' if p['id'] in thread else 'normal', anchor, INK, halo=True))
     # the key: shapes by what states it (drawn neutral), the thread, and fills by who wrote it; each row wraps
     def key_row(y, heading, entries):
@@ -327,13 +338,14 @@ def svg(s, lang, weeks):
     count = Counter(p['label'] for p in s['points'])
     y = key_row(base + 175, words.get('labels_key', ''),
                 [(lambda x, yy, k=key: marker(x, yy, k, False, 'shape'), counted(s['labels'][key][lang], count.get(key, 0)))
-                 for key in LABELS])
-    y = key_row(y + 26, '', [(lambda x, yy: marker(x, yy, 'public', True, 'shape'), words['thread_legend'])])
+                 for key in LABELS if count.get(key)])
+    y = key_row(y + 26, words.get('threads_key', ''), [(lambda x, yy, c=th['colour']: marker(x, yy, 'public', c, 'shape'), th.get('legend', {}).get(lang, words['thread_legend']))
+                                                        for th in threads])
     if s.get('origins'):
         made = Counter(p.get('origin') for p in s['points'])
         y = key_row(y + 26, words['origins_key'],
                     [(lambda x, yy, k=key: marker(x, yy, 'public', False, k), counted(s['origins'][key][lang], made.get(key, 0)))
-                     for key in ORIGINS])
+                     for key in ORIGINS if made.get(key)])
     height = y + 70
     out.append(t(24, height - 18, words['footer'], 12, fill=MUTED))
     out.append('</svg>')
@@ -357,6 +369,22 @@ def label_width(label, bold=False, size=14):
         else:
             w += 0.52
     return w * size * (1.06 if bold else 1.0)
+
+
+def picture_base(s, lang, segments, top):
+    """The axis's height: low enough that the highest title, in as many rows as the titles need, clears the phases' names."""
+    lanes, placed = [], []
+    for n, p in enumerate(s['points'], 1):
+        x = x_of(parse_date(p['date'])[0], segments)
+        lane = next((i for i, last in enumerate(lanes) if x - last >= 17), len(lanes))
+        if lane == len(lanes):
+            lanes.append(x)
+        lanes[lane] = x
+        placed.append((n, p, x, 0))
+    thread = {pid for th in threads_of(s) for pid in th['points']}
+    rows = max([r[0] for r in title_rows(placed, lang, thread)] or [0]) + 1
+    names = top + 20 + 18 * 2 + 12  # the phases' names, three lines at most
+    return max(470, names + 22 * rows + 30 + 17 * max(len(lanes), 1))
 
 
 def title_rows(placed, lang, thread, most=12, budget=200000):
@@ -453,8 +481,9 @@ def title_crossings(rows, thread):
 def marker(x, y, label, on_thread, origin=None):
     """A point's mark: its shape by what states it (a circle where public, a diamond where private, a dashed square where
     reconstructed), its fill by who wrote that (black a person, grey AI-drafted from a person's words, white AI-made,
-    white with a dot at its centre not stated); a blue ring where it is on the thread."""
-    ring = f' stroke="{THREAD}" stroke-width="2.4"' if on_thread else f' stroke="{INK}" stroke-width="1.3"'
+    white with a dot at its centre not stated); a coloured ring where it is on a thread (`on_thread`: its colour, or True)."""
+    colour = THREAD if on_thread is True else on_thread
+    ring = f' stroke="{colour}" stroke-width="2.4"' if on_thread else f' stroke="{INK}" stroke-width="1.3"'
     fill = FILL.get(origin, INK if label == 'public' else '#ffffff')
     dot = f'<circle cx="{x:.1f}" cy="{y:.1f}" r="2.2" fill="{INK}"/>' if origin == 'unstated' else ''
     if label == 'public':
@@ -580,6 +609,8 @@ def page(s, lang, weeks, undated, by_folder, totals):
     lines = [HEADER, '', f'# {words["title"]}', ''] + head + ['',
              words['intro'].format(commits=f'{cut["commits"]:,}' if lang == 'en' else cut['commits'],
                                    date=cut['date_' + lang], commit=cut['commit'][:9]), '']
+    if words.get('arc'):
+        lines += [words['arc'], '']
     number = {p['id']: n for n, p in enumerate(s['points'], 1)}
     label_of = {p['id']: p['label'] for p in s['points']}
     origin_of = {p['id']: p.get('origin') for p in s['points']}
@@ -614,13 +645,16 @@ def page(s, lang, weeks, undated, by_folder, totals):
             o, n = s['origins'][key], made.get(key, 0)
             shown = n if n else words['none_so_far']
             lines.append(f'- **{o[lang]}**' + (f'（{shown}）' if lang == 'zh' else f' ({shown})') + f'{colon}{o["means_" + lang]}')
+    for key in ('coverage', 'chosen', 'strands'):
+        if words.get(key):
+            lines += ['', words[key].format(crosswalk=os.path.relpath(CROSSWALK_PAGE, Path(here).parent), folders=os.path.relpath('theories/README.md', Path(here).parent))]
     lines += ['', words['hb_note'], '']
-    th = s.get('thread', {})
-    if th:
+    for th in threads_of(s):
         lines += ['', f'## {th["title"][lang]}', '', th['intro'][lang], '']
-        for pid in th['points']:
+        for pid in th['points']:  # bullets: a Markdown numbered list would renumber them from its first
             p = next(x for x in s['points'] if x['id'] == pid)
-            lines.append(f'{number[pid]}. **{p["date"]}{"，" if lang == "zh" else ", "}{cell(p["title"][lang])}{"。" if lang == "zh" else "."}** {p["what"][lang]}')
+            comma, stop = ('，', '。') if lang == 'zh' else (', ', '.')
+            lines.append(f'- **{number[pid]}.** **{p["date"]}{comma}{cell(p["title"][lang])}{stop}** {p["what"][lang]}')
         lines.append('')
     part = '\n'.join(lines)
     lines += [f'## {words["points_heading"]}', ''] + ([words['sources_note'], ''] if lang == 'zh' else []) + [
@@ -631,10 +665,10 @@ def page(s, lang, weeks, undated, by_folder, totals):
         links = list(dict.fromkeys(evidence_link(e, here, words) for e in p['evidence']))  # one place cited once
         ev = ('；' if lang == 'zh' else '; ').join(links)
         stop = '。' if lang == 'zh' else '.'
-        shown = ev if lang == 'en' else words['sources_n'].format(n=len(links))
+        shown = ev if lang == 'en' else f'[{words["sources_n"].format(n=len(links))}](#src-{n})'
         lines.append(f'| {n} | {p["date"]} | **{cell(p["title"][lang])}{stop}** {cell(p["what"][lang])} | {shown} | '
                      f'{s["labels"][p["label"]][lang]} |' + (f' {s["origins"][p["origin"]][lang]} |' if s.get('origins') else ''))
-        sources.append(f'{n}. {ev}')
+        sources.append(f'- <a id="src-{n}"></a>**{n}.** {ev}')
     if lang == 'zh':
         lines += ['', f'### {words["sources_list"]}', ''] + sources
     lines.append('')

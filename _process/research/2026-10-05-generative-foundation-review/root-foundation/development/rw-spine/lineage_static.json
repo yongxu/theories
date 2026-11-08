@@ -67,7 +67,7 @@
    "title": "How the account grew",
    "subtitle": "Turning points from the first writings (2021) to the live account (8 November 2026) in six phases, each as wide as its points need and not to time scale, each point marked by what states it; the major points titled and numbered as in the table below.",
    "other_language": "中文",
-   "reading_time": "{full} to read in full; the brief, the picture, the labels and the thread in {first}.",
+   "reading_time": "{full} to read in full; the brief, the picture, the labels and the threads in {first}.",
    "intro": "How the account grew: from the writings of 2021, through the earlier theory folders it read and carried or set aside, to [the theory of becoming](becoming/ONE-PAGE.md) as it stands. Generated from [the lineage data](becoming/results/data/lineage.json), the records' history and [the crosswalk](becoming/results/atlas/CROSSWALK.md). The repository holds {commits} commits at `{commit}` ({date}); its first commit is of 6 September 2026, and what came before is material brought into it. This page carries forward [the September timeline](../_process/history/2026-09-consolidation/TIMELINE.md), \"a narrative, not an index\", which stops on 4 October 2026. Its turning points were gathered and checked by AI readers, no person's.",
    "labels_intro": "Each turning point carries one label, by what states it:",
    "points_heading": "Turning points",
@@ -107,13 +107,18 @@
    "origin": "Written by",
    "origins_key": "Fill, who wrote what states it:",
    "origins_intro": "Each turning point also says who wrote the text that states it, the first of its evidence that does: the column *Written by*, and the fill of its mark in the picture (a dot at its centre where not stated). Three AI readers classified the points from what the file, its folder or an earlier folder's source list says, and three more checked them point by point; all 48 checks agreed. The mark is that entry's: a row's other evidence, and quotations taken from it, may be in another hand. Each reading and its grounds are in [the classification](../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rw-spine/reads/lineage-origins.json). Its entries follow the data's list, which can cite one place twice; a row shows each place once. Of the {total}:",
-   "labels_key": "Shape, what states it:"
+   "labels_key": "Shape, what states it:",
+   "arc": "**The arc.** The first writings diagnose a structure (points 1–3). From 2024 the diagnosis finds a mechanism, which [the September timeline](../_process/history/2026-09-consolidation/TIMELINE.md#the-shape-of-the-arc) finds recurring \"at every scale\": a system rewards winners with more capacity to win, the winners write the rules through their own way of seeing, and the way of seeing reproduces itself (6–13). In February 2026 the question turns to AI: \"how could there be a future for humans in this winner takes all game?\" (14). May brings classical Chinese as a formal language and Lean as a checker (16, 18), in a month of 573 files against 504 before it, a volume the timeline puts \"almost entirely\" down to the arrival of agentic tooling. In September the writings are gathered into folders and read as \"one diagnostic mechanism restated four times\" (22); a paper pairs each claim with refuters and the first pre-specified predictions are written (23, 25). In October the theory of becoming is named (27), an AI review finds no central result new mathematics (34), the ethics' premises are separated (33) and the root becomes a grammar (35). The last weeks test it: designs frozen before any run, failures kept, and the earlier folders read against the account (40–48).",
+   "coverage": "**Coverage and dates.** The record is uneven. The September timeline warns that the chat export it draws on stops on 5 May 2026, \"the silence after that date is the edge of the export\", and that some file dates are later extraction or checkout stamps. A point's date is as exact as its evidence gives. Points 16 to 21 and 23 are AI-drafted from a person's words, so the fill does not show when a person stopped writing.",
+   "chosen": "**How the points were chosen.** AI readers gathered them by period, at most nine or ten for each (2021 to 2025; 2026 to 4 October; the rest of October; the first week of November), keeping \"the real turning points, where vocabulary, method, structure or standing changed\"; seven more follow the selection mechanism and three are papers. So the nine points in November's first week reflect that budget, not how much happened then.",
+   "strands": "**What the points follow.** The 48 follow three strands, the selection mechanism, the root and the ethics, and name 4 of the 16 earlier folders. What became of each folder is in [the crosswalk]({crosswalk}); each folder's own history is in its README's genealogy ([the folders]({folders})).",
+   "threads_key": "Rings, the threads followed below:"
   },
   "zh": {
    "title": "本说明是怎样长成的",
    "subtitle": "从最早的文字（2021）到现行的说明（2026 年 11 月 8 日）的转折点，分为六个阶段，各阶段的宽度按其转折点数而定，不按时间比例；每个转折点都标明是什么陈述了它；主要的转折点附标题，编号同下表。",
    "other_language": "English",
-   "reading_time": "全文约 {full}；简述、图、标签与这条线索约 {first}。",
+   "reading_time": "全文约 {full}；简述、图、标签与这些线索约 {first}。",
    "intro": "本说明是怎样长成的：从 2021 年的文字，经由它读过、承继或放下的早先各理论文件夹，到现在的[生成变化之论](becoming/ONE-PAGE.zh.md)。本页由[谱系数据](becoming/results/data/lineage.json)、各记录的历史与[对照](becoming/results/atlas/CROSSWALK.md)生成。本仓库在 `{commit}`（{date}）共有 {commits} 次提交；其第一次提交是 2026 年 9 月 6 日的，此前的东西都是带入仓库的材料。本页接续[九月时间线](../_process/history/2026-09-consolidation/TIMELINE.md)，那是「a narrative, not an index」（一份叙述，不是索引），止于 2026 年 10 月 4 日。本页的转折点由 AI 读者收集并核对，没有人读过。",
    "labels_intro": "每个转折点按陈述它的东西带一个标签。引自英文来源的话，以「」保留英文原文、附中文释义，或标明为译文；原文见[英文版](LINEAGE.md)。",
    "points_heading": "转折点",
@@ -155,7 +160,12 @@
    "origin": "执笔",
    "origins_key": "填色，陈述它的文本出自谁之手：",
    "origins_intro": "每个转折点也标明陈述它的文本出自谁之手，即其证据中首先陈述它的那一条：见“执笔”一栏，以及图中标记的填色（未说明者，标记中心有一点）。三位 AI 读者依文件、其所在文件夹或较早文件夹的来源列表的说明逐一归类，另三位逐条核对，48 条全部一致。所标的是那一条证据的执笔者：一行中的其他证据，以及取自它们的引文，可能出自别人之手。各条读法及其依据见[归类](../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rw-spine/reads/lineage-origins.json)。归类的条目依数据中的证据列表，其中可能两次引用同一处；表的每一行中，同一处只列一次。{total} 个转折点中：",
-   "labels_key": "形状，陈述它的是什么："
+   "labels_key": "形状，陈述它的是什么：",
+   "arc": "**这条弧线。** 最早的文字诊断一种结构（转折点 1–3）。从 2024 年起，诊断找到一个机制，[九月时间线](../_process/history/2026-09-consolidation/TIMELINE.md#the-shape-of-the-arc)发现它“at every scale”（在每一尺度上）反复出现：一个系统以更多的获胜能力奖励获胜者，获胜者透过自己的看法书写规则，这种看法又再生产自身（6–13）。2026 年 2 月，问题转向 AI：“how could there be a future for humans in this winner takes all game?”（在这场赢者通吃的游戏里，人类怎么还会有未来？）（14）。5 月带来作为形式语言的文言与作为检查器的 Lean（16、18），这个月有 573 个文件，此前全部为 504 个，时间线把这一数量“almost entirely”（几乎完全）归于智能体工具的到来。9 月，文字被汇入各文件夹，并被读作“one diagnostic mechanism restated four times”（同一诊断机制重述四次）（22）；一篇论文为每一主张配上反驳条件，最早的预先指定的预测也写下了（23、25）。10 月，生成变化之论得名（27），一次 AI 审阅发现没有哪项核心结果是新的数学（34），伦理的两个前提被分开（33），根成为一种文法（35）。最后几周检验它：设计在任何运行之前冻结，未通过者保留，早先各文件夹被对照本说明来读（40–48）。",
+   "coverage": "**覆盖与日期。** 记录并不均匀。九月时间线提醒说，它所依据的对话导出止于 2026 年 5 月 5 日，“the silence after that date is the edge of the export”（此后的沉默是导出的边界），有些文件日期是后来提取或检出时的时间戳。一个转折点的日期，精确到其证据所给的程度。转折点 16 至 21 与 23 是 AI 据一个人的话起草的，所以填色并不显示一个人何时停止书写。",
+   "chosen": "**转折点是怎样选的。** AI 读者按时期收集，每个时期至多九或十个（2021 至 2025 年；2026 年至 10 月 4 日；10 月其余时间；11 月第一周），保留“the real turning points, where vocabulary, method, structure or standing changed”（词汇、方法、结构或地位发生改变的真正转折点）；另有七个循选择机制，三个是论文。所以 11 月第一周的九个转折点反映的是这一配额，而不是当时发生了多少事。",
+   "strands": "**这些转折点循什么。** 48 个转折点循三条线索：选择机制、根与伦理；它们提到 16 个早先文件夹中的 4 个。每个文件夹后来如何，见[对照]({crosswalk})；每个文件夹自身的历史，见其 README 中的谱系（[各文件夹]({folders})）。",
+   "threads_key": "圆环，下文所循的线索："
   }
  },
  "folders_trust": {

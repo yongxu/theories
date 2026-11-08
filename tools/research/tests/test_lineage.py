@@ -98,12 +98,16 @@ class Tree(unittest.TestCase):
         svg = pages[lineage.SVG['en']]
         self.assertNotIn('<script', svg)
         # two public points, two legend circles and four for who wrote it; the private one a diamond
-        self.assertEqual(svg.count('<circle'), 2 + 2 + 4 + 1)  # and the dot of the key's mark for not stated
+        self.assertEqual(svg.count('<circle'), 2 + 1 + 1 + 3)  # points; the key's public and thread; the three who-wrote marks that occur
         self.assertIn('fill="#a8a29e"', svg)  # point b, AI-drafted
         self.assertIn("| 2 | 2026-10-28 |", en)
         self.assertIn("AI-drafted from a person's words |", en)
         self.assertIn("1 by a person", en)
         self.assertIn("- **not stated** (none so far)", en)
+        self.assertNotIn('not stated (none', svg)  # the picture's key lists only what occurs
+        self.assertIn('- **1.** **2024-07, Point a.**', en)  # a thread's numbers are the table's, in the text
+        self.assertIn('[来源 1 处](#src-2)', zh)
+        self.assertIn('<a id="src-2"></a>**2.**', zh)
         self.assertIn('- **Old** (2024-01 – 2024-12). It began. (points 1–1; all public; 1 by a person)', en)
         self.assertIn('Of the 3:', en)
         self.assertIn('private and unpublished** (1)', en)
@@ -160,7 +164,7 @@ class Tree(unittest.TestCase):
                     lanes.append(x)
                 lanes[lane] = x
                 placed.append((n, p, x, 454 - 17 * lane))
-            thread = set(s['thread']['points'])
+            thread = {pid for th in lineage.threads_of(s) for pid in th['points']}
             for lang in ('en', 'zh'):
                 self.assertEqual(lineage.title_crossings(lineage.title_rows(placed, lang, thread), thread), [], lang)
         finally:

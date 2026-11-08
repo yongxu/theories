@@ -707,7 +707,8 @@ column('warp',D.warp,w=>el('button',{class:'node','data-id':w.id,onclick(){selec
 column('right',D.groups.filter(g=>g.side==='domains'),groupNode);
 const sidepick=document.getElementById('sidepick');
 [['folders','Earlier folders'],['domains','Domains']].forEach(p=>sidepick.append(el('button',{'aria-pressed':String(S.side===p[0]),'data-s':p[0],onclick(){S.side=p[0];loom.classList.toggle('side-folders',p[0]==='folders');loom.classList.toggle('side-domains',p[0]==='domains');sidepick.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.s===S.side)));draw();}},p[1])));
-document.getElementById('loomnote').textContent='Line weight grows with the number of readings. A short dotted end that reaches nothing is what stayed behind: only in history, or not carried. Faint threads are connections a reader proposes here, not ones the account states. Only a target the connection rests on draws a thread. Choose a folder, a domain, a chapter or a thread.';
+document.getElementById('loomnote').textContent='Line weight grows with the number of readings. A short dotted end that reaches nothing is what stayed behind: only in history, or not carried. Faint threads are connections a reader proposes here, not ones the account states. Only a target the connection rests on draws a thread. It opens on the folder with the most readings. Choose a folder, a domain, a chapter or a thread.';
+document.getElementById('loomnote').append(' ',el('button',{class:'chip',onclick(){location.hash='#loom/all';}},'Show all threads'));
 function threads(){const m=new Map();D.entries.forEach(e=>{if(LOOSE.has(e.carried)||!shown(e))return;const fresh=e.carried==='fresh-reading';e.warps.forEach(w=>{const k=[e.group,w,e.relation,fresh?'f':'c'].join('|');m.set(k,(m.get(k)||0)+1);});});return [...m.entries()].map(p=>{const q=p[0].split('|');return {group:q[0],warp:q[1],relation:q[2],fresh:q[3]==='f',n:p[1]};});}
 const OFFSET={'agreement':-3,'scope':-1,'divergence':1,'contrary-reading':3};
 function draw(){
@@ -769,10 +770,10 @@ function bars(rows,max){const b=el('div',{class:'bars'});rows.forEach(r=>{b.appe
 
 function viewRoot(){const v=document.querySelector('[data-view=root]');v.textContent='';const n=D.declarations;const max=Math.max(...D.standings.flatMap(g=>g.rows.map(r=>r.n)));
 const row=k=>D.standings.flatMap(g=>g.rows).find(r=>r.key===k);const distance=D.standings.find(g=>g.title.indexOf('At a named distance')===0);
-v.append(el('h2',{},'How far the root reaches'),el('p',{class:'note'},'Each of the '+n+' distinct central declarations has one standing against the edge of one root. The strictest sense of unified is a law derived on that edge, each a case of grammar laws: '+(row('derived')?row('derived').n:0)+' are. The other '+(distance?distance.n:0)+' at a distance stand there with a reason, named below.'));
+v.append(el('h2',{},'How far the root reaches'),el('p',{class:'note'},'Each of the '+n+' distinct central declarations has one standing against the edge of one root. The strictest sense of unified is a law derived on that edge, each a case of grammar laws: '+(row('derived')?row('derived').n:0)+' are. The other '+(distance?distance.n:0)+' at a distance stand there with a reason, named below. Each declaration, with its standing and basis, is in ',link('theories/becoming/results/records/one-root-to-its-edge.md','the edge record'),'.'));
 D.standings.forEach(g=>{v.append(el('h3',{},g.title+' · '+g.n),bars(g.rows,max));});
 v.append(el('p',{class:'note'},'None of these is a premise. The ethics rests on two premises with two roles, listed apart: the continuation condition for scope and C for order. Neither is asserted, their warrant is open, and neither stands on the edge. ',link('theories/becoming/chapters/08-METHOD.md','Chapter 8'),' states the standings.'));
-const m2=Math.max(...D.reach.map(r=>r.n));v.append(el('h3',{style:'margin-top:22px'},'The same declarations, by Lean dependency'),el('p',{class:'small'},'A measurement of Lean dependency only.'),bars(D.reach,m2));}
+const m2=Math.max(...D.reach.map(r=>r.n));v.append(el('h3',{style:'margin-top:22px'},'The same declarations, by Lean dependency'),el('p',{class:'small'},'A measurement of Lean dependency only, sorting the declarations by whether and how each is stated on the grammar. ',link('theories/becoming/chapters/08-METHOD.md','08 §7'),' also sorts the same declarations by the shared law they rest on.'),bars(D.reach,m2));}
 
 function viewCorpus(){const v=document.querySelector('[data-view=corpus]');v.textContent='';const c=D.corpus;
 v.append(el('h2',{},'How far the corpus has been read'),el('p',{class:'note'},fmt(c.classified)+' units of the Chinese classical corpus are classified, '+fmt(c.stating)+' of them in the classes that state something. Of those:'));
@@ -800,7 +801,7 @@ function route(){const raw=(location.hash||'#loom').slice(1).split('/');const vi
 document.querySelectorAll('[data-view]').forEach(s=>{s.hidden=s.dataset.view!==view;});
 nav.querySelectorAll('a').forEach(a=>{if(a.dataset.v===view)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
 if(view!=='loom'){if(!drawn.has(view)){VIEWFN[view]();drawn.add(view);}return;}
-const a=raw[1],b=raw[2];S.focus=b?a+'/'+b:(a||null);
+const OPEN=D.groups.filter(g=>g.side==='folders').sort((x,y)=>y.n-x.n)[0];const all=raw[1]==='all';const a=all?undefined:raw[1],b=raw[2];S.focus=b?a+'/'+b:(a||(all||!OPEN?null:OPEN.id));
 if(a&&G.has(a)&&b&&W.has(b))showThread(G.get(a),W.get(b));else if(a&&G.has(a))showGroup(G.get(a));else if(a&&W.has(a))showWarp(W.get(a));else intro();
 if(a&&G.has(a)&&G.get(a).side!==S.side){const btn=sidepick.querySelector('[data-s='+G.get(a).side+']');if(btn)btn.click();}
 draw();if(a&&window.innerWidth<1240)detail.scrollIntoView({block:'start',behavior:'smooth'});}

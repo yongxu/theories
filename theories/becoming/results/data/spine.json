@@ -60,7 +60,7 @@
    "zh": "部分通过，或部分支持"
   },
   "not-rejected": {
-   "colour": "#1baf7a",
+   "colour": "#d6d3d1",
    "en": "not rejected by frozen tests",
    "zh": "未被冻结检验拒绝"
   },
@@ -377,6 +377,12 @@
    "anchor": "shared-laws-and-connectivity",
    "text": "The connectivity measure counts, at each landing, the shared laws that a central declaration's compiled type or value reaches",
    "zh": "连通度量在每次落地时，计一项核心声明编译后的类型或值所达到的共律"
+  },
+  {
+   "home": "theories/becoming/chapters/08-METHOD.md",
+   "anchor": "shared-laws-and-connectivity",
+   "text": "Of the 126 central rows (nine declarations stand in two), 87 rest on at least one",
+   "zh": "126 个核心行（九项声明各占两行）中，87 行至少依于一条"
   }
  ],
  "standing": {
@@ -415,6 +421,22 @@
    "1": "一项，`GroupEnding.Flow.all_end`，在一个所述的假设之下",
    "6": "六项为计数，位于文法以下",
    "99": "其余 99 项处于一个指明的距离"
+  }
+ },
+ "laws_zh": {
+  "names": {
+   "Closure": "闭包",
+   "Balance": "平衡",
+   "Finite runs": "有限运行",
+   "Lumping": "归并",
+   "Widening": "扩大"
+  },
+  "statements": {
+   "Closure": "一个关系所传递的，恰好达到其闭包",
+   "Balance": "一个水平由所给与所取而变化，在每一步，也在每一段上",
+   "Finite runs": "当一个列表包含每一构型时，一条律恰在每一构型都返回之处不并合（`Law.lossless_iff_returns`）；对每一条律，无须列表，一个构型恰在它不返回之处被吸入（`Law.drawn_iff_not_returns`）；当每一个无上升而后有最小下降的进程都终止时，沿一条不上升的线的下降不会再现，而在有限预算之内，最小损失使这些进程终止（`Amounts.rests`）；静止不是被吸入的一种情形",
+   "Lumping": "一个单独读取的部分恰在其余部分对它不造成差别之处带有一条律",
+   "Widening": "扩大（包含并超出）是非自反、单向且传递的；在延续条件之下，它是保留并添加；伦理加上延续条件定范围、C 定次序"
   }
  }
 }
