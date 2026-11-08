@@ -86,7 +86,7 @@ Ren, 12 October 2026, asked about the integration for laws that are not determin
 | proof | [Population.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean) | `Becoming.total_congr_on` |
 | proof | [Dissipation.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean) | — |
 | proof | [World.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean) | — |
-| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
+| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror): study sections [155](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/155.zh.md) (Chinese), [492](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/492.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [2026-10-12-move-towards-100.md](../../../../sources/15-codex-theory-conversations/2026-10-12-move-towards-100.md) | — |
 | provenance | [2026-10-16-loops-readings-and-delegated-choices.md](../../../../sources/15-codex-theory-conversations/2026-10-16-loops-readings-and-delegated-choices.md) | — |

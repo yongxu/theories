@@ -59,7 +59,7 @@ The minimum is at most the mean (an averaging inequality); equal versus needs-ba
 |---|---|---|
 | proof | [RelativePosition.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RelativePosition.lean) | `Becoming.RelativePosition.Least`, `Becoming.RelativePosition.equal_share_even`, `Becoming.RelativePosition.equal_share_exceeds`, `Becoming.RelativePosition.equal_share_iff`, `Becoming.RelativePosition.least_bound`, `Becoming.RelativePosition.least_exists`, `Becoming.RelativePosition.least_not_ahead`, `Becoming.RelativePosition.uneven_short` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T054058.112616Z/verification.json) | — |
-| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
+| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror): study section [338](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/338.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | integration | [passages.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json) | — |
 | statement | [CIVILIZATION-THOUGHT-AND-BECOMING.md](../../history/CIVILIZATION-THOUGHT-AND-BECOMING.md) | — |

@@ -75,7 +75,7 @@ Ren, 19 October 2026, after sharing the 易道体系图 v1.3.0: “整个中国�
 | integration | [passages.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/passages.json) | — |
 | integration | [verify_ro.py](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/verify_ro.py) | — |
 | integration | [atlas-excerpt.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ro-relational-sources/atlas-excerpt.json) | — |
-| review | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
+| review | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror): study sections [207](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/207.md), [209](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/209.md), [418](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/418.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [PROVENANCE.json](../../../../sources/chinese-classical-texts/PROVENANCE.json) | — |
 | provenance | [2026-10-19-relational-ontology-of-chinese-thought.md](../../../../sources/15-codex-theory-conversations/2026-10-19-relational-ontology-of-chinese-thought.md) | — |

@@ -65,7 +65,7 @@ Board item ZE, the control named in FC1's limits. Reading (the AI's, D63): the f
 | integration | [ze_score.py](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ze-controlled-english/ze_score.py) | — |
 | integration | [results.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ze-controlled-english/data/results.json) | — |
 | statement | [FIDELITY-RESULTS.md](../../../../experiments/wenli-reading-transfer/FIDELITY-RESULTS.md) | — |
-| review | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
+| review | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror): study sections [377](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/377.md), [418](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/418.md) | — |
 
 Aliases: `ZE`, `controlled English edition`, `English name table`, `受控英文本`
 

@@ -66,7 +66,7 @@ Board item FC1, on Ren's request to run the fidelity count; the scope was cut by
 | integration | [results_calib.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/fidelity/data/results_calib.json) | — |
 | integration | [score.py](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/fidelity/score.py) | — |
 | statement | [WENLI-AND-BECOMING.md](../../history/WENLI-AND-BECOMING.md) | — |
-| review | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
+| review | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror): study sections [370](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/370.md), [377](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/377.md), [418](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/418.md) | — |
 
 Aliases: `the fidelity count`, `忠实之测`, `FC1`, `excess referents`
 

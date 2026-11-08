@@ -89,7 +89,7 @@ Curie's principle (Curie 1894; Chalmers 1970, British Journal for the Philosophy
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/cells-under-noise-checks/20261030T160959.698859Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T152859.871907Z/verification.json) | — |
 | integration | [check_cells_under_noise.py](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/check_cells_under_noise.py) | — |
-| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
+| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror): study section [468](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/468.md) | — |
 | integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue24-cells-under-noise/NOTE.md) | — |
 | integration | [REVIEW-UE24.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue24-cells-under-noise/REVIEW-UE24.md) | — |
 | integration | [RECHECK-UE24.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue24-cells-under-noise/RECHECK-UE24.md) | — |

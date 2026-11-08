@@ -61,7 +61,7 @@ The doing/allowing and agent-relative distinctions in ethics, which outcome-only
 |---|---|---|
 | proof | [Lexical.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lexical.lean) | `Becoming.Lexical.Above.agent_adjoined`, `Becoming.Lexical.Above.congr_left`, `Becoming.Lexical.Above.congr_right`, `Becoming.Lexical.BasicPriority.same_claims_alike`, `Becoming.Lexical.Included.congr`, `Becoming.Lexical.StrictIncluded.congr` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json) | — |
-| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
+| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror): study section [344](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/344.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | integration | [passages.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json) | — |
 | statement | [CIVILIZATION-THOUGHT-AND-BECOMING.md](../../history/CIVILIZATION-THOUGHT-AND-BECOMING.md) | — |

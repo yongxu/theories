@@ -101,7 +101,7 @@ Map independent scientific achievements to the shared spine’s discrimination, 
 | review | [SCIENTIFIC-INQUIRY-CONTINUATION-REVIEW.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/SCIENTIFIC-INQUIRY-CONTINUATION-REVIEW.json) | — |
 | review | [SCIENTIFIC-INQUIRY-TIMING-REVIEW.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/SCIENTIFIC-INQUIRY-TIMING-REVIEW.json) | — |
 | review | [SCIENTIFIC-INQUIRY-DEMARCATION-REVIEW.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/SCIENTIFIC-INQUIRY-DEMARCATION-REVIEW.json) | — |
-| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
+| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror): study sections [112](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/112.zh.md) (Chinese), [205](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/205.md) | — |
 
 Aliases: —
 

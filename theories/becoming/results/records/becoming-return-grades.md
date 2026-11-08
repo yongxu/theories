@@ -100,7 +100,7 @@ The grades distinguish when dependence is met again in one run. Which grade an a
 | proof | [World.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean) | `Becoming.Web` |
 | proof | [RelationalRenewal.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalRenewal.lean) | `RelationalRenewal.alternating`, `RelationalRenewal.fluctuating`, `RelationalRenewal.fluctuating_neither` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261014T091930.724493Z/verification.json) | — |
-| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
+| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror): study section [112](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/112.zh.md) (Chinese) | — |
 | statement | [BECOMING-UNIFICATION-PLAN.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-UNIFICATION-PLAN.md) | — |
 | provenance | [2026-10-09-pure-core.md](../../../../sources/15-codex-theory-conversations/2026-10-09-pure-core.md) | — |
 | review | [BECOMING-P7-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-P7-REVIEW.md) | — |

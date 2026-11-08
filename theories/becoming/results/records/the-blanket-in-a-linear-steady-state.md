@@ -97,7 +97,7 @@ The Ornstein–Uhlenbeck steady state: the Lyapunov equation and the Helmholtz f
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/linear-blankets-checks/20261031T183915.457765Z/verification.json) | — |
 | proof | [Blanket.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Blanket.lean) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T183655.254131Z/verification.json) | — |
-| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
+| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror): study section [484](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/484.md) | — |
 | integration | [DESIGN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue26-blankets-at-a-steady-state/DESIGN.md) | — |
 | integration | [REVIEW-UE26-DESIGN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue26-blankets-at-a-steady-state/REVIEW-UE26-DESIGN.md) | — |
 | integration | [LITERATURE-CHECK.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue26-blankets-at-a-steady-state/LITERATURE-CHECK.md) | — |

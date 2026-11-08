@@ -61,7 +61,7 @@ Hume's is–ought gap, stated for the represented dynamics: no statement about t
 |---|---|---|
 | proof | [Significance.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean) | `Becoming.ReadsOnlyDynamics`, `Becoming.ReadsOnlyDynamics.admits_rival`, `Becoming.ReadsOnlyDynamics.not_entails`, `Becoming.Rival`, `Becoming.Unrestricted.not_rival`, `Becoming.bounded_is_rival`, `Becoming.excludes_rivals_iff`, `Becoming.not_rival_iff`, `Becoming.not_rival_unrestricted_iff_stable`, `Becoming.readsOnlyDynamics_of`, `Becoming.rival_iff_lacks`, `Becoming.unrestricted_iff_not_rival` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T103619.721318Z/verification.json) | — |
-| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
+| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror): study section [347](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/347.md) | — |
 | statement | [OPENING.md](../../OPENING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 

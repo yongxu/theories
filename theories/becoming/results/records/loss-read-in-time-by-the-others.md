@@ -108,7 +108,7 @@ Collingridge's dilemma (1980) has two horns: while change is easy its need canno
 | proof | [Resolution.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Resolution.lean) | — |
 | proof | [Recurrence.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T200926.001323Z/verification.json) | — |
-| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
+| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror): study section [420](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/420.md) | — |
 | integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ma4b-read-in-time/NOTE.md) | — |
 | review | [REVIEW-MA4b.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ma4b-read-in-time/REVIEW-MA4b.md) | — |
 | review | [review-probe-ReadInTimeProbe.lean.txt](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ma4b-read-in-time/review-probe-ReadInTimeProbe.lean.txt) | — |

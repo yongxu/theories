@@ -133,7 +133,7 @@ Rideout and Sorkin's classical sequential growth (2000) read as a process: inter
 | proof | [Grammar.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean) | — |
 | proof | [Frame.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261027T195912.152773Z/verification.json) | — |
-| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
+| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror): study sections [431](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/431.md), [432](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/432.md) | — |
 | integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue13-causal-sets/NOTE.md) | — |
 | integration | [REVIEW-UE13.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue13-causal-sets/REVIEW-UE13.md) | — |
 | integration | [RECHECK-UE13.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue13-causal-sets/RECHECK-UE13.md) | — |

@@ -137,7 +137,7 @@ The chapter's open programme (section 8.2) named a constructive criterion along 
 | proof | [Labelled.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean) | `Becoming.Consistent`, `Becoming.Dependence.along` |
 | proof | [GenerativeCore.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/GenerativeCore.lean) | `Generative.Trace`, `Generative.projection_exact_iff` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T150254.342862Z/verification.json) | — |
-| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
+| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror): study sections [181](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/181.md), [224](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/224.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [2026-10-17-registration-dualist-vocabulary.md](../../../../sources/15-codex-theory-conversations/2026-10-17-registration-dualist-vocabulary.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T183920.923524Z/verification.json) | — |

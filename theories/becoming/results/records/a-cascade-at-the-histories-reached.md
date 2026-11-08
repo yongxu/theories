@@ -74,7 +74,7 @@ The deterministic form of an information cascade (Bikhchandani, Hirshleifer and 
 | proof | [Cascade.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Cascade.lean) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T211917.845905Z/verification.json) | — |
 | integration | [REST-TR3-TR6.md](../../../../experiments/formations-that-read/REST-TR3-TR6.md) | — |
-| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
+| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror): study section [507](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/507.md) | — |
 
 Aliases: `a cascade at the histories reached`, `所至之历上之级联`, `cascade along the run`, `Becoming.Turns.acts_alike_along`, `Becoming.Turns.LawAlikeAlong`, `Becoming.Turns.ReadsOnlyActsAlong`
 

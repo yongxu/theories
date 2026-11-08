@@ -89,7 +89,7 @@ The whole deduction must warrant relational unity and differentiation, including
 | provenance | [2026-10-08-theory-of-becoming-priority.md](../../../../sources/15-codex-theory-conversations/2026-10-08-theory-of-becoming-priority.md) | — |
 | provenance | [2026-10-09-becoming-whole-generative-manifold.md](../../../../sources/15-codex-theory-conversations/2026-10-09-becoming-whole-generative-manifold.md) | — |
 | review | [BECOMING-P23C-P24-P25-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-P23C-P24-P25-REVIEW.md) | — |
-| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
+| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror): study sections [67](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/067.zh.md) (Chinese), [197](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/197.md), [218](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/218.md), [418](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/418.md) | — |
 | provenance | [2026-10-20-fix-all-twentieth-review.md](../../../../sources/15-codex-theory-conversations/2026-10-20-fix-all-twentieth-review.md) | — |
 
 Aliases: —

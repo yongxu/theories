@@ -104,7 +104,7 @@ Reads the opening's "the whole Earth has become a highly entangled system", "hea
 | proof | [Frequency.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frequency.lean) | `Becoming.carried_roundTrip`, `Becoming.carried_le_count`, `Becoming.carried_along_in_time` |
 | proof | [Capture.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Capture.lean) | `Becoming.le_offspringCount`, `Becoming.offspringCount_le` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T144846.235357Z/verification.json) | — |
-| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
+| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror): study sections [212](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/212.md), [422](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/422.md) | — |
 | integration | [DELEGATED-CHOICES.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [OPENING.md](../../OPENING.md) | — |

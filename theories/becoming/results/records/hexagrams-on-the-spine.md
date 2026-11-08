@@ -109,7 +109,7 @@ Ren, 19 October 2026, asked whether the relation of the work to the 周易, abov
 | statement | [YI-ZHUAN-AND-BECOMING.md](../../history/YI-ZHUAN-AND-BECOMING.md) | — |
 | integration | [passages.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/y1-changes/passages.json) | — |
 | integration | [verify_mapping.py](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/y1-changes/verify_mapping.py) | — |
-| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
+| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror): study sections [192](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/192.md), [196](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/196.md), [198](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/198.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [PROVENANCE.json](../../../../sources/zhouyi-yizhuan/PROVENANCE.json) | — |
 | provenance | [2026-10-19-the-changes-on-the-spine.md](../../../../sources/15-codex-theory-conversations/2026-10-19-the-changes-on-the-spine.md) | — |

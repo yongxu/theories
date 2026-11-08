@@ -79,7 +79,7 @@ Pinwheel scheduling (Holte, Mok, Rosier, Tulchinsky and Varvel 1989), motivated 
 | proof | [Retaining.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean) | — |
 | proof | [Regulation.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regulation.lean) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T130926.237994Z/verification.json) | — |
-| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
+| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror): study sections [310](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/310.md), [418](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/418.md) | — |
 | review | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | proof | [Prelude.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean) | `Becoming.Naturals.lt_of_mul_lt_mul_right`, `Becoming.Naturals.lt_two_pow`, `Becoming.Naturals.two_pow_pos` |

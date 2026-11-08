@@ -73,7 +73,7 @@ An equivariant Markov kernel keeps invariant expectations, standard in probabili
 | review | [REVIEW-LA4-FORMAL.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/la4-formal/REVIEW-LA4-FORMAL.md) | — |
 | integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/la4-formal/NOTE.md) | — |
 | integration | [DESIGN.md](../../../../experiments/drain-beyond-the-reward/DESIGN.md) | — |
-| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
+| integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror): study section [470](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/470.md) | — |
 | statement | [05-COLLECTIVES.md](../../chapters/05-COLLECTIVES.md) | — |
 
 Aliases: `A commuting learner drives no choice whose values nothing it reads tells apart`, `交换之学习者不驱动其所读皆不分二值之选择`, `what a learner's symmetry fixes`, `Becoming.Weighted.Commutes.carried`, `Becoming.Weighted.Commutes.of_samples`
