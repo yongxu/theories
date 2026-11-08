@@ -6,7 +6,7 @@
 
 *Each note says how far its sentence is proved: proved, proved under conditions, argued, empirical, a reading, a judgment, a conviction, or open.*
 
-*How each claim stands is on [the one page](ONE-PAGE.md), and what is not claimed, field by field, on [what it is for, and how far](USES.md).*
+*How the account's central claims stand is on [the one page](ONE-PAGE.md), and what is not claimed, field by field, on [what it is for, and how far](USES.md).*
 
 There is a set of universal invariants of how anything comes to be, lasts, changes and passes away. Wherever becoming can be told in steps and counted amounts, in any universe, nothing that unfolds can break them, because they are what coming to be and ceasing to be are. They are not yet a dynamics: where the conditions a law names hold, its dynamics follow, and where one fails, the law says exactly which conclusion goes with it.[^law]
 

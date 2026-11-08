@@ -12,7 +12,7 @@
 
 **One case.** In [a frozen test](experiments/direction-installation/README.md), three fishers, language models told what to do, share a lake whose bed of mussels gives them nothing and dies the first month fewer than 70 tons are left. Told nothing of the bed, they kept it in no season, under each instruction tried; told of it and of the scope, with talk, one model of two kept it in 8 of 10 seasons; the test's own frozen predictions mostly failed ([the tests](TESTS.md)).
 
-**What it is for.** To audit a selection, whether a reward, a judge, a market or a vote: what it reads (takes in or needs), what lies beyond that, and where its rule can lock on what it already chose ([what it is for, and how far](theories/becoming/USES.md)); no test designed from it has yet run on a deployed pipeline. Its centre, a reading and not a theorem: a selection can succeed while what it cannot read is lost, and no law says whether that loss counts.
+**What it is for.** To audit a selection, whether a reward, a judge, a market or a vote: what couples into it (what it reads or needs), what lies beyond that, and where its rule can lock on what it already selected ([what it is for, and how far](theories/becoming/USES.md)); no test designed from it has yet run on a deployed pipeline. Its centre, a reading and not a theorem: a selection can succeed while what it cannot read is lost, and no law says whether that loss counts.
 
 **Its ethics** rests on [two unasserted premises](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order), their warrant open: the continuation condition (from every standpoint, for anything, its continuation into the future has significance) fixes scope, whose losses count, ranking nothing; C (widening what can form is better) gives order. [Thesis T8](theories/becoming/chapters/07-SIGNIFICANCE.md#theses) argues this ethics as life's way, claiming no verdict binding every possible mind.
 
@@ -32,7 +32,7 @@
 
 *Each note says how far its sentence is proved: proved, proved under conditions, argued, empirical, a reading, a judgment, a conviction, or open.*
 
-*How each claim stands is on [the one page](theories/becoming/ONE-PAGE.md), and what is not claimed, field by field, on [what it is for, and how far](theories/becoming/USES.md).*
+*How the account's central claims stand is on [the one page](theories/becoming/ONE-PAGE.md), and what is not claimed, field by field, on [what it is for, and how far](theories/becoming/USES.md).*
 
 There is a set of universal invariants of how anything comes to be, lasts, changes and passes away. Wherever becoming can be told in steps and counted amounts, in any universe, nothing that unfolds can break them, because they are what coming to be and ceasing to be are. They are not yet a dynamics: where the conditions a law names hold, its dynamics follow, and where one fails, the law says exactly which conclusion goes with it.<sup><a id="ref-law"></a>[1](#note-law)</sup>
 
