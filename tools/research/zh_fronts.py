@@ -6,7 +6,8 @@ itself in bold and not linked; a way in whose page is English says so. The line 
 pages, the generated ones (the lineage, the Chinese landing page, the crosswalk's Chinese front) and the check agree.
 Chapter 6, written in Chinese and with no English edition, carries the line too, without the English link.
 
-The Chinese landing page, README.zh.md, is generated from _process/navigation/README-ZH.md: its reading times, its
+The Chinese landing page, README.zh.md, is generated from _process/navigation/README-ZH.md, its links written from that file as README.md's first screen's
+are: its reading times, its
 counts of results and its navigation line are filled at render (`render`), by the rule README.md's first screen uses,
 so no figure on it is copied by hand. Fields: {{nav}}; {{time:PATH}}, a page's reading time (a page the render writes
 is timed as it is about to be written); {{time:chapters}}, the eight chapters' span in hours; {{time:screen}} and
@@ -143,7 +144,7 @@ def render(records: list, outputs: dict, root: Path = ROOT) -> tuple[dict, list[
     def fill(m):
         kind, arg = m.group(1), m.group(2) or ''
         if kind == 'nav':
-            return nav_line(PAGE)
+            return m.group(0)  # filled after the links are adapted: it is written from the page
         if kind == 'count':
             if arg == 'registered':
                 return f'{len(records):,}'
@@ -167,8 +168,9 @@ def render(records: list, outputs: dict, root: Path = ROOT) -> tuple[dict, list[
         errors.append(f'{TEMPLATE} has an unknown field: {m.group(0)}')
         return m.group(0)
 
-    body = FIELD.sub(fill, template.read_text(encoding='utf-8'))
-    body = re.sub(r'^<!--.*?-->\n\n?', '', body, count=1, flags=re.S)  # the template's own note
+    body = re.sub(r'\A\s*<!--.*?-->\s*', '', template.read_text(encoding='utf-8'), count=1, flags=re.S)  # the template's own note
+    body = navigation.adapt_links(FIELD.sub(fill, body), TEMPLATE, PAGE)  # its links are written from the template, as README.md's
+    body = body.replace('{{nav}}', nav_line(PAGE))
     body = GENERATED + '\n\n' + body.lstrip('\n')
     def timed(screen_time, page_time):
         return body.replace('{{time:screen}}', screen_time).replace('{{time:page}}', page_time)
