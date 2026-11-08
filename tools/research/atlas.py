@@ -898,6 +898,60 @@ def group_page(atlas: dict, g: dict) -> str:
     return _finish(out + ['', back])
 
 
+# --- the crosswalk's Chinese front ------------------------------------------------------------------------------------
+
+CROSSWALK_ZH = ATLAS + '/CROSSWALK.zh.md'
+ZH_CARRIED = {'carried': '承继', 'carried-in-part': '部分承继', 'changed': '改变', 'fresh-reading': '此处提出的新读法',
+              'history-only': '仅存于历史', 'not-carried': '未承继'}
+# The two domains a Chinese reader reaches first, each with what its group holds and does not.
+ZH_DOMAINS = (('cxg-chinese-classical', '中国古典思想',
+               '本组只收现有映射尚未到达之处；中国古典的大部分在[第六章](../../chapters/06-CLASSICAL-TEXTS.md)，那里有段落的映射与一部图谱的条目'),
+              ('cxg-buddhist', '佛教思想', '就本说明已经到达之处而言；佛教论书的读法也在[第六章](../../chapters/06-CLASSICAL-TEXTS.md)'))
+
+
+def crosswalk_zh_page(atlas: dict) -> str:
+    """CROSSWALK.zh.md: the crosswalk's front for a Chinese reader: what it is and is not, how far to trust it, its
+    counts, the picture, and the two domains nearest the Chinese texts, the entries themselves on the English pages."""
+    from tools.research import zh_fronts
+    groups, entries, vocabulary = atlas['correspondence_groups'], atlas['correspondences'], atlas['vocabulary']
+    carried = {c['en']: sum(g['by_carried'].get(c['en'], 0) for g in groups) for c in vocabulary['carried']}
+    relation = {r['en']: (r.get('zh') or r['en'], sum(g['by_relation'].get(r['en'], 0) for g in groups)) for r in vocabulary['relations']}
+    folders = sum(g['domain'] == EARLIER for g in groups)
+    of = {a['en']: sum(g['by_agreement_of'].get(a['en'], 0) for g in groups) for a in vocabulary['agreement_of']}
+    agreement = (f'（其中与已检查之律相合 {of.get("law", 0):,}，与论题或方法相合 {of.get("thesis-or-method", 0):,}，与一种读法相合 '
+                 f'{of.get("reading", 0):,}；这里的相合比[第六章](../../chapters/06-CLASSICAL-TEXTS.md#three-relations)所定的宽，第六章的相合只指与已检查之律结构相同）')
+    second = ((atlas.get('crosswalk_checks') or {}).get('second_critic') or {})
+    first = ((atlas.get('crosswalk_checks') or {}).get('first_critic') or {})
+    est = second.get('estimate_percent')
+    trust = (f'**多可信。** 每一项都经过一位映射者、一位修订者、一位受命去反驳的检查者、一次批评之后的修补，以及跨项的比较。之后，第二位批评者从每一类结局中随机抽取'
+             f'至多 {second["per_stratum"]} 条，共 {second["sampled"]} 条，对照两边去读：{second["verdicts"]["holds"]} 条成立，'
+             f'{second["verdicts"]["label"]} 条的标签或目标角色有误，{second["verdicts"]["fails"]} 条的读法有误。按各类结局的条数加权，估计全部 '
+             f'{second["entries"]:,} 条中约 {est["holds"]:g}% 成立，约 {est["label"]:g}% 的标签或角色有误，约 {est["fails"]:g}% 的读法有误；'
+             f'这些修正已经做了，其余各条没有再读。第一位批评者的样本（{first.get("sampled", 0)} 条）专挑可疑者，不给出比率。'
+             '来源不存于此处时，批评者的核对是以记忆对记忆。') if est else ''
+    by = {g['id']: g for g in groups}
+    domains = []
+    for gid, name, note in ZH_DOMAINS:
+        if gid in by:
+            domains.append(f'- **{name}**（{by[gid]["entries"]} 条，[英文页]({_href(group_path(by[gid]), ATLAS)})）：{note}。')
+    out = [GENERATED, '', '# 对照表：早先的理论文件夹与各思想领域', '', zh_fronts.nav_line(CROSSWALK_ZH), '', '{{time}}', '',
+           '*由 AI 依[英文的对照表](CROSSWALK.md)写成，未经人工审读；义以英文版为准。各组的条目在英文页上。*', '',
+           f'![早先的文件夹与各思想领域怎样与现行的说明相接]({_href(OVERVIEW, ATLAS)})', '',
+           '*图为英文，由 connection_map.py 依同一份数据画出：每一条线把一个文件夹或领域连到它的主张所对照的那部分说明，按关系着色；每一条线都是 AI 的读法，没有人的。*', '',
+           '**它是什么。** 每一个早先的理论文件夹与每一个思想领域：它以自己的话主张了什么，在现行的说明中又成了什么。它是证据层，不是用来通读的。它不产生任何结果；'
+           '每一条都是 AI 的读法，没有人读过。共用一个词不是对应，结构上的相合不是意义上的相合，它也不代表任何传统发言。未承继是一种结局，不是缺陷。'
+           '来源不存于此处时，所说的出自 AI 的知识，没有对照原文核对过。', '']
+    if trust:
+        out += [trust, '']
+    out += [f'**计数。** {len(entries):,} 条主张，来自 {folders} 个早先的理论文件夹与 {len(groups) - folders} 个思想领域：'
+            + '，'.join(f'{ZH_CARRIED.get(k, k)} {n:,}' for k, n in carried.items()) + '。按关系：'
+            + '，'.join(f'{zh} {n:,}' + (agreement if key == 'agreement' else '') for key, (zh, n) in relation.items()) + '。只有一个目标所承载的才算作连接。', '',
+            '**离中文文本最近的两个领域。**', '', *domains, '',
+            f'**全部 {len(groups)} 组**，每组一页，都在[英文索引](CROSSWALK.md)里：它以自己的话主张了什么，现行的说明中成了什么，以及每一条的目标与地位。', '']
+    body = _finish(out)
+    return body.replace('{{time}}', f'*约 {zh_fronts.settle(lambda t: zh_fronts.zh_time(body.replace("{{time}}", f"*约 {t}读完。*")))}读完。*')
+
+
 def folders_page(atlas: dict) -> str:
     """theories/README.md: the earlier folders, each with its kind and what became of its claims in the crosswalk."""
     vocabulary, groups = atlas['vocabulary'], atlas['correspondence_groups']
@@ -981,6 +1035,7 @@ def render(records: list) -> tuple[dict, list[str]]:
              DATA: json.dumps(atlas, ensure_ascii=False, indent=1) + '\n'}
     pages.update({family_path(f): family_page(atlas, f) for f in vocabulary['families']})
     pages.update({group_path(g): group_page(atlas, g) for g in atlas['correspondence_groups']})
+    pages[CROSSWALK_ZH] = crosswalk_zh_page(atlas)
     errors = [f'{path}: {len(body.encode()):,} bytes, more than the {PAGE_LIMIT:,} this render allows (GitHub showed a page of '
               f'1,035,845 bytes and not one of 3,742,459); split it further'
               for path, body in pages.items() if path.endswith('.md') and len(body.encode()) > PAGE_LIMIT]

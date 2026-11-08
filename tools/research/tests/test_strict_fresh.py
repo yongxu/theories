@@ -29,7 +29,8 @@ class StrictFreshTests(unittest.TestCase):
                 patch.object(navigation, 'validate_history', lambda: []), \
                 patch.object(navigation, 'render_views', lambda records: {}), \
                 patch.object(research.theory_graph, 'render', lambda records: {}), \
-                patch.object(research.atlas, 'render', lambda records: ({}, [])):
+                patch.object(research.atlas, 'render', lambda records: ({}, [])), \
+                patch.object(research.zh_fronts, 'render', lambda records, outputs: ({}, [])):
             code, result = research.check_or_render(False, strict_fresh=strict_fresh)
         return code, result, calls
 
@@ -77,6 +78,7 @@ class StrictFreshTests(unittest.TestCase):
                     patch.object(navigation, 'validate_history', lambda: []), \
                     patch.object(navigation, 'render_views', lambda records: {}), \
                     patch.object(research.atlas, 'render', lambda records: ({}, [])), \
+                    patch.object(research.zh_fronts, 'render', lambda records, outputs: ({}, [])), \
                     patch.object(navigation, 'write_views', write_views):
                 code, result = research.check_or_render(True)
             self.assertEqual(result['errors'], ['lean catalogue: ' + e for e in found])  # a problem on the second pass writes nothing more
