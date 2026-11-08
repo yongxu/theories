@@ -30,7 +30,7 @@
     "theories/becoming/results/ROADMAP.md": "e6e81d222aa24caa1c4a1c94f8b6bfe462d61b2a07421d6728d2235aed6d8001",
     "theories/becoming/results/THEORY-GRAPH.md": "c1169a1de9053ee2d643d4f9b34991ab9547ff866a6675f75aa38a7d350c2c3b",
     "theories/becoming/results/atlas/ATLAS.md": "a810900aaf6e6f78240e494e08ca9dfd5df43021912de40864662ea053c0dda6",
-    "theories/becoming/results/atlas/CROSSWALK.md": "4d17edaabcf77e3f5e0a8d0f0218c26b195eb4a2f11f7345938167339caa3427",
+    "theories/becoming/results/atlas/CROSSWALK.md": "3d7f4907ed23bdf221847fd15ead0ff76984d7ea84d34e4e478fbfe150fba184",
     "theories/becoming/results/atlas/crosswalk/abrahamic-islamic.md": "eb582ffe28418af7e7513e5a14350b9a14ae1b021467be5844c1c07e04695c32",
     "theories/becoming/results/atlas/crosswalk/alignment-selection-on-cognition.md": "bfe34434f14aed94d812f0a553aba345be4e0247e4dfdf1a85ae4595d4334fc0",
     "theories/becoming/results/atlas/crosswalk/architecture-for-a-living-earth.md": "852602e12f02cf2e924cc8ca4d3953e3b54e93f8841d25f0f49edeaa00904858",
@@ -656,6 +656,7 @@
     "theories/becoming/results/spine.svg": "f35834f0f5879532a420447d61c91efde0df16c0c146c12934aac83bff5dd476",
     "theories/becoming/results/spine.zh.svg": "001b74d07f48c8a19cecb9795fb5a830a6d2bba27e6c414881dd0c284880ab5d",
     "theories/lineage.svg": "53c9013799ae6be6e477c41ad917b80de495706ff3e2c72e582c452b23ee6aa1",
-    "theories/lineage.zh.svg": "b16d4ca4b94f0c50cce9949c9a428492956c5574865e95b0ecd671e5e0b95145"
+    "theories/lineage.zh.svg": "b16d4ca4b94f0c50cce9949c9a428492956c5574865e95b0ecd671e5e0b95145",
+    "theories/becoming/results/atlas/connections.svg": "9e20948c04a8ba2b252c842b40614b6a96e97a598636b758892acd43d7a2c4de"
   }
 }
