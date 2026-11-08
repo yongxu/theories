@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1399" width="900" height="1399" role="img" aria-labelledby="spine-title spine-desc" font-family="Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1418" width="900" height="1418" role="img" aria-labelledby="spine-title spine-desc" font-family="Helvetica, Arial, sans-serif">
 <title id="spine-title">The eight chapters around one grammar</title>
 <desc id="spine-desc">Eight chapters on a ring around the grammar, sized by their results (The root 86, The map 94, Knowing and testing 110, Life and evolution 46, Collectives and selection 74, The classical texts 16, Significance and alignment 82, Method and the formal core 21); 497 formal-reuse uses between chapters, 17 pairs with at least 10 drawn; the continuation condition and C come into chapter 7 as premises, each a hypothesis where used, neither asserted; T1 to T8 at their homes, coloured by test outcome.</desc>
 <defs>
@@ -7,170 +7,171 @@
 <marker id="thin" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#57534e" stroke-width="1.5"/></marker>
 <marker id="diamond" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M5,0 L10,5 L5,10 L0,5 z" fill="#57534e"/></marker>
 </defs>
-<rect x="0.5" y="0.5" width="899" height="1398" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
+<rect x="0.5" y="0.5" width="899" height="1417" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
 <text x="24" y="40" font-size="24" font-weight="bold" text-anchor="start" fill="#1c1917">The eight chapters around one grammar</text>
-<text x="24" y="66" font-size="15" text-anchor="start" fill="#57534e">Drawn from the theory graph: each circle sized by its chapter’s results, each curve counting how</text>
-<text x="24" y="85" font-size="15" text-anchor="start" fill="#57534e">often one chapter’s results use another’s.</text>
-<rect x="20" y="95" width="860" height="52" rx="6" fill="#f5f5f4" stroke="#e7e5e4"/>
-<text x="32" y="112" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">Standings of the 117 central declarations against the edge of one root (08 §7):</text>
-<text x="32" y="132" font-size="15" text-anchor="start" fill="#1c1917">11 derived · 1 under a stated hypothesis · 6 counting, below the grammar · 99 at a named distance</text>
-<line x1="450" y1="322.3" x2="450" y2="454.6" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="3.7" stroke-linecap="round"/>
-<line x1="584.2" y1="380.4" x2="492.4" y2="472.2" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2.7" stroke-linecap="round"/>
-<line x1="635.1" y1="514.6" x2="510" y2="514.6" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2.4" stroke-linecap="round"/>
-<line x1="596.6" y1="661.2" x2="492.4" y2="557.1" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="4.1" stroke-linecap="round"/>
-<line x1="450" y1="711" x2="450" y2="574.6" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round"/>
-<line x1="291.6" y1="673" x2="407.6" y2="557.1" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="4.6" stroke-linecap="round"/>
-<line x1="256.3" y1="514.6" x2="390" y2="514.6" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2.7" stroke-linecap="round"/>
-<line x1="294.1" y1="358.7" x2="407.6" y2="472.2" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2.4" stroke-linecap="round"/>
-<circle cx="450" cy="514.6" r="58" fill="#f5f5f4" stroke="#1c1917" stroke-width="1.5"/>
-<text x="450" y="512.6" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c1917">The grammar</text>
-<text x="450" y="530.6" font-size="12" text-anchor="middle" fill="#57534e">41 concepts</text>
-<path d="M497.6,297.1 Q530.7,319.7 566.7,326.5" fill="none" stroke="#1c1917" stroke-opacity="0.85" stroke-width="7" marker-end="url(#back)"/>
-<path d="M566.6,340.2 Q521.6,341.9 489.8,307.7" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="6" marker-end="url(#fwd)"/>
-<path d="M569.6,356.6 Q507,377 476.5,316.9" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
-<path d="M477.6,315.2 Q538.2,426.4 642.1,483.1" fill="none" stroke="#1c1917" stroke-opacity="0.85" stroke-width="4.9" marker-end="url(#back)"/>
-<path d="M639.7,490.6 Q521.3,443.4 471.7,319.1" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="5.9" marker-end="url(#fwd)"/>
-<path d="M637.6,496.7 Q505.7,458.9 466.2,321" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="6 4" marker-end="url(#thin)"/>
-<path d="M476.7,315.7 Q557.5,470.1 613.7,649.7" fill="none" stroke="#1c1917" stroke-opacity="0.85" stroke-width="3.3" marker-end="url(#back)"/>
-<path d="M415.5,310.8 Q307.4,455.6 277.1,664.7" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
-<path d="M283.5,667.5 Q364.7,479.3 428.3,319.1" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.5" marker-end="url(#fwd)"/>
-<path d="M637.9,397 Q644.9,433.9 662.8,460.2" fill="none" stroke="#1c1917" stroke-opacity="0.85" stroke-width="4.1" marker-end="url(#back)"/>
-<path d="M652.4,470.5 Q622.7,443.1 624.4,399" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.9" marker-end="url(#fwd)"/>
-<path d="M645.5,479.4 Q602.4,451.5 614,397.7" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="6 4" marker-end="url(#thin)"/>
-<path d="M566.9,344.1 Q387.1,362.8 244.5,478.5" fill="none" stroke="#1c1917" stroke-opacity="0.85" stroke-width="4.4" marker-end="url(#back)"/>
-<path d="M247,483.6 Q396.3,385 566.8,350.1" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="5.1" marker-end="url(#fwd)"/>
-<path d="M251.4,491.6 Q410.8,420.1 569.6,359.6" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
-<path d="M659.1,565.1 Q450,822.6 236.1,559.2" fill="none" stroke="#1c1917" stroke-opacity="0.85" stroke-width="3.7" marker-end="url(#back)"/>
-<path d="M660.8,566.4 Q450,844.6 234.6,560.3" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="6 4" marker-end="url(#thin)"/>
-<path d="M237.2,556.9 Q450,798.6 656.4,564.1" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.6" marker-end="url(#fwd)"/>
-<path d="M620.1,649.3 Q598.8,514.6 617.2,398.3" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.8" marker-end="url(#fwd)"/>
-<path d="M407.2,732.4 Q118,514.6 403.2,299.9" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.5" marker-end="url(#fwd)"/>
-<path d="M479.5,719.9 Q579.6,568.3 614.5,397.8" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.9" marker-end="url(#fwd)"/>
-<path d="M469.9,714.8 Q521.3,585.9 638.8,539.1" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.7" marker-end="url(#fwd)"/>
-<path d="M252.3,493.8 Q378.7,443.4 428.3,319.1" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="5.5" marker-end="url(#fwd)"/>
-<path d="M255.1,526.5 Q405.6,559 438.5,711.3" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
-<circle cx="450" cy="264.6" r="55.6" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
-<text x="450" y="272.6" font-size="22" font-weight="bold" text-anchor="middle" fill="#57534e">01</text>
-<text x="450" y="179" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">Root</text>
-<text x="450" y="196" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">86 results · 137 within</text>
-<circle cx="626.8" cy="337.9" r="58.2" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
-<text x="626.8" y="345.8" font-size="22" font-weight="bold" text-anchor="middle" fill="#57534e">02</text>
-<text x="626.8" y="249.7" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">Map</text>
-<text x="626.8" y="266.7" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">94 results · 141 within</text>
-<circle cx="700" cy="514.6" r="62.9" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
-<text x="700" y="522.6" font-size="22" font-weight="bold" text-anchor="middle" fill="#57534e">03</text>
-<text x="700" y="599.6" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">Knowing</text>
-<text x="700" y="616.6" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">110 results · 102 within</text>
-<circle cx="626.8" cy="691.4" r="40.7" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
-<text x="626.8" y="699.3" font-size="22" font-weight="bold" text-anchor="middle" fill="#57534e">04</text>
-<text x="626.8" y="754.1" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">Life</text>
-<text x="626.8" y="771.1" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">46 results · 54 within</text>
-<circle cx="450" cy="764.6" r="51.6" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
-<text x="450" y="772.6" font-size="22" font-weight="bold" text-anchor="middle" fill="#57534e">05</text>
-<text x="450" y="838.3" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">Collectives</text>
-<text x="450" y="855.3" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">74 results · 81 within</text>
-<circle cx="273.2" cy="691.4" r="24" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
-<text x="273.2" y="697.9" font-size="18" font-weight="bold" text-anchor="middle" fill="#57534e">06</text>
-<text x="273.2" y="737.4" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">Classical texts</text>
-<text x="273.2" y="754.4" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">16 results · 14 within</text>
-<circle cx="200" cy="514.6" r="54.3" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
-<text x="200" y="522.6" font-size="22" font-weight="bold" text-anchor="middle" fill="#57534e">07</text>
-<text x="200" y="591" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">Significance</text>
-<text x="200" y="608" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">82 results · 117 within</text>
-<circle cx="273.2" cy="337.9" r="27.5" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
-<text x="273.2" y="345.4" font-size="21" font-weight="bold" text-anchor="middle" fill="#57534e">08</text>
-<text x="273.2" y="280.4" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">Method</text>
-<text x="273.2" y="297.4" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">21 results · 5 within</text>
-<circle cx="690.4" cy="306" r="15" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>
-<text x="690.4" y="311" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c1917">T1</text>
-<circle cx="697.9" cy="337.9" r="15" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>
-<text x="697.9" y="342.9" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c1917">T2</text>
-<circle cx="690.4" cy="369.7" r="15" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>
-<text x="690.4" y="374.7" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c1917">T7</text>
-<circle cx="514.6" cy="764.6" r="15" fill="#2a78d6" stroke="#1c1917" stroke-width="1.2"/>
-<text x="514.6" y="769.6" font-size="13" font-weight="bold" text-anchor="middle" fill="#ffffff">T3</text>
-<circle cx="133.2" cy="506.5" r="15" fill="#2a78d6" stroke="#1c1917" stroke-width="1.2"/>
-<text x="133.2" y="511.5" font-size="13" font-weight="bold" text-anchor="middle" fill="#ffffff">T4</text>
-<circle cx="144.8" cy="476" r="15" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>
-<text x="144.8" y="481" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c1917">T5</text>
-<circle cx="169.5" cy="454.6" r="15" fill="#ffffff" stroke="#1c1917" stroke-width="1.2"/>
-<text x="169.5" y="459.6" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c1917">T8</text>
-<circle cx="775.9" cy="514.6" r="15" fill="#1baf7a" stroke="#1c1917" stroke-width="1.2"/>
-<text x="775.9" y="519.6" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c1917">T6</text>
-<text x="450" y="423.3" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">22 of 74 modules</text>
-<text x="517" y="451.7" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">14 of 76 modules</text>
-<text x="572.5" y="518.6" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">14 of 88 modules</text>
-<text x="544.5" y="613.1" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">8 of 23 modules</text>
-<text x="450" y="646.8" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">3 of 28 modules</text>
-<text x="367.7" y="600.9" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">4 of 10 modules</text>
-<text x="323.2" y="518.6" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">12 of 62 modules</text>
-<text x="324.3" y="392.9" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">4 of 26 modules</text>
-<text x="535" y="312" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">60</text>
-<text x="519.7" y="345" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">42</text>
-<text x="541.9" y="432" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">40</text>
-<text x="392.5" y="374.2" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">35</text>
-<text x="414.4" y="400.2" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">29</text>
-<text x="555.5" y="411" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">26</text>
-<text x="432.8" y="368.3" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">20</text>
-<text x="656" y="432.4" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">17</text>
-<text x="631.7" y="446.3" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">15</text>
-<text x="555" y="564.6" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">15</text>
-<text x="36" y="899.3" font-size="15" font-weight="bold" text-anchor="start" fill="#57534e">Two premises, each a hypothesis where used</text>
-<rect x="36" y="911.25566257523" width="390" height="92" rx="6" fill="#ffffff" stroke="#1c1917" stroke-dasharray="5 3"/>
-<text x="46" y="933.3" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">The continuation condition</text>
-<text x="46" y="952.3" font-size="14" text-anchor="start" fill="#57534e">scope: fixes whose losses count; does not rank</text>
-<text x="46" y="971.3" font-size="14" text-anchor="start" fill="#57534e">anything</text>
-<text x="46" y="990.3" font-size="14" text-anchor="start" fill="#57534e">a premise, not asserted; warrant open</text>
-<path d="M36,929.3 L14,929.3 L14,573.8 Q14,543.8 149.5,543.8" fill="none" stroke="#1c1917" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#back)"/>
-<rect x="36" y="1015.25566257523" width="390" height="92" rx="6" fill="#ffffff" stroke="#1c1917" stroke-dasharray="5 3"/>
-<text x="46" y="1037.3" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">C, widening what can form is better</text>
-<text x="46" y="1056.3" font-size="14" text-anchor="start" fill="#57534e">order: ranks a course above every course it widens;</text>
-<text x="46" y="1075.3" font-size="14" text-anchor="start" fill="#57534e">does not rank mixed comparisons</text>
-<text x="46" y="1094.3" font-size="14" text-anchor="start" fill="#57534e">a premise, not asserted; warrant open</text>
-<path d="M36,1033.3 L23,1033.3 L23,558.8 Q23,528.8 143.4,528.8" fill="none" stroke="#1c1917" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#back)"/>
-<text x="20" y="1137.3" font-size="16" font-weight="bold" text-anchor="start" fill="#1c1917">The theses</text>
-<circle cx="33" cy="1158.25566257523" r="10" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>
-<text x="56" y="1163.3" font-size="14" text-anchor="start" fill="#1c1917">frozen tests passed and failed, or a bridge</text>
-<text x="56" y="1181.3" font-size="14" text-anchor="start" fill="#1c1917">failed</text>
-<circle cx="33" cy="1198.25566257523" r="10" fill="#2a78d6" stroke="#1c1917" stroke-width="1.2"/>
-<text x="56" y="1203.3" font-size="14" text-anchor="start" fill="#1c1917">partly passed, or partial support</text>
-<circle cx="33" cy="1220.25566257523" r="10" fill="#1baf7a" stroke="#1c1917" stroke-width="1.2"/>
-<text x="56" y="1225.3" font-size="14" text-anchor="start" fill="#1c1917">not rejected by frozen tests</text>
-<circle cx="33" cy="1242.25566257523" r="10" fill="#ffffff" stroke="#1c1917" stroke-width="1.2"/>
-<text x="56" y="1247.3" font-size="14" text-anchor="start" fill="#1c1917">argued; no test</text>
-<text x="20" y="1273.3" font-size="14" text-anchor="start" fill="#1c1917">T1–T8 at their homes; what each claims, its standing</text>
-<text x="20" y="1291.3" font-size="14" text-anchor="start" fill="#1c1917">and its tests: the theses table in THEORY-GRAPH.md,</text>
-<text x="20" y="1309.3" font-size="14" text-anchor="start" fill="#1c1917">“The spine”.</text>
-<text x="470" y="899.3" font-size="16" font-weight="bold" text-anchor="start" fill="#1c1917">How to read it</text>
-<circle cx="483" cy="920.25566257523" r="10" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
-<text x="483" y="924.3" font-size="10" font-weight="bold" text-anchor="middle" fill="#57534e">01</text>
-<text x="506" y="925.3" font-size="14" text-anchor="start" fill="#1c1917">Circle: a chapter, its area by its results; its</text>
-<text x="506" y="943.3" font-size="14" text-anchor="start" fill="#1c1917">number inside it; beside it, its name, its results</text>
-<text x="506" y="961.3" font-size="14" text-anchor="start" fill="#1c1917">and the formal-reuse uses within it.</text>
-<line x1="470" y1="978.3" x2="496" y2="978.3" stroke="#8a817c" stroke-width="3.2" marker-end="url(#fwd)"/>
-<text x="506" y="983.3" font-size="14" text-anchor="start" fill="#1c1917">A use recorded as formal-reuse, a kind kept for “a</text>
-<text x="506" y="1001.3" font-size="14" text-anchor="start" fill="#1c1917">verified inference using the cited result”: the</text>
-<text x="506" y="1019.3" font-size="14" text-anchor="start" fill="#1c1917">arrow points to the chapter whose results are</text>
-<text x="506" y="1037.3" font-size="14" text-anchor="start" fill="#1c1917">used; the number beside a curve counts its uses,</text>
-<text x="506" y="1055.3" font-size="14" text-anchor="start" fill="#1c1917">written where it is 15 or more.</text>
-<line x1="470" y1="1072.3" x2="496" y2="1072.3" stroke="#1c1917" stroke-width="3.2" marker-end="url(#back)"/>
-<text x="506" y="1077.3" font-size="14" text-anchor="start" fill="#1c1917">The same, darker where an earlier chapter’s</text>
-<text x="506" y="1095.3" font-size="14" text-anchor="start" fill="#1c1917">results use a later one’s.</text>
-<line x1="470" y1="1112.3" x2="496" y2="1112.3" stroke="#57534e" stroke-width="1.7" stroke-dasharray="6 4" marker-end="url(#thin)"/>
-<text x="506" y="1117.3" font-size="14" text-anchor="start" fill="#1c1917">interpretive, kept for “an argument dependency”</text>
-<text x="506" y="1135.3" font-size="14" text-anchor="start" fill="#1c1917">(dashed; pairs with 3 or more).</text>
-<line x1="470" y1="1152.3" x2="496" y2="1152.3" stroke="#57534e" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
-<text x="506" y="1157.3" font-size="14" text-anchor="start" fill="#1c1917">application, a reused result with its</text>
-<text x="506" y="1175.3" font-size="14" text-anchor="start" fill="#1c1917">correspondence and added premises (dotted).</text>
-<line x1="470" y1="1192.3" x2="496" y2="1192.3" stroke="#a8a29e" stroke-width="6" stroke-linecap="round"/>
-<text x="506" y="1197.3" font-size="14" text-anchor="start" fill="#1c1917">Spoke, “k of m modules”: k of the chapter’s m core</text>
-<text x="506" y="1215.3" font-size="14" text-anchor="start" fill="#1c1917">modules state their laws on the grammar. It counts</text>
-<text x="506" y="1233.3" font-size="14" text-anchor="start" fill="#1c1917">modules, not results derived; its width is the</text>
-<text x="506" y="1251.3" font-size="14" text-anchor="start" fill="#1c1917">share.</text>
-<text x="506" y="1273.3" font-size="14" text-anchor="start" fill="#1c1917">Not drawn: related, for analogy (1,420 edges), and</text>
-<text x="506" y="1291.3" font-size="14" text-anchor="start" fill="#1c1917">formal-reuse pairs under 10 uses; counts under 15</text>
-<text x="506" y="1309.3" font-size="14" text-anchor="start" fill="#1c1917">are not written. THEORY-GRAPH.md’s table of edge</text>
-<text x="506" y="1327.3" font-size="14" text-anchor="start" fill="#1c1917">kinds between chapters has them all.</text>
-<text x="24" y="1369" font-size="12" text-anchor="start" fill="#57534e">Generated by tools/research/spine.py from theory-graph.json and spine.json; THEORY-GRAPH.md, “The spine”, says what it</text>
-<text x="24" y="1384" font-size="12" text-anchor="start" fill="#57534e">shows and does not.</text>
+<text x="24" y="66" font-size="15" text-anchor="start" fill="#57534e">Drawn from the theory graph: each circle sized by its chapter’s results; each solid curve counting</text>
+<text x="24" y="85" font-size="15" text-anchor="start" fill="#57534e">one chapter’s uses of another’s results recorded as formal-reuse, dashed and dotted curves other</text>
+<text x="24" y="104" font-size="15" text-anchor="start" fill="#57534e">dependences.</text>
+<rect x="20" y="114" width="860" height="52" rx="6" fill="#f5f5f4" stroke="#e7e5e4"/>
+<text x="32" y="131" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">Standings of the 117 central declarations against the edge of one root (08 §7):</text>
+<text x="32" y="151" font-size="15" text-anchor="start" fill="#1c1917">11 derived · 1 under a stated hypothesis · 6 counting, below the grammar · 99 at a named distance</text>
+<line x1="450" y1="341.3" x2="450" y2="473.6" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="3.7" stroke-linecap="round"/>
+<line x1="584.2" y1="399.4" x2="492.4" y2="491.2" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2.7" stroke-linecap="round"/>
+<line x1="635.1" y1="533.6" x2="510" y2="533.6" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="596.6" y1="680.2" x2="492.4" y2="576.1" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="4.1" stroke-linecap="round"/>
+<line x1="450" y1="730" x2="450" y2="593.6" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round"/>
+<line x1="291.6" y1="692" x2="407.6" y2="576.1" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="4.6" stroke-linecap="round"/>
+<line x1="256.3" y1="533.6" x2="390" y2="533.6" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2.7" stroke-linecap="round"/>
+<line x1="294.1" y1="377.7" x2="407.6" y2="491.2" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2.4" stroke-linecap="round"/>
+<circle cx="450" cy="533.6" r="58" fill="#f5f5f4" stroke="#1c1917" stroke-width="1.5"/>
+<text x="450" y="531.6" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c1917">The grammar</text>
+<text x="450" y="549.6" font-size="12" text-anchor="middle" fill="#57534e">41 concepts</text>
+<path d="M498.9,314.2 Q532.3,335 567.2,343.1" fill="none" stroke="#1c1917" stroke-opacity="0.85" stroke-width="7" marker-end="url(#back)"/>
+<path d="M566.8,361.2 Q520,364.6 488.4,328" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="6" marker-end="url(#fwd)"/>
+<path d="M571.2,380 Q501.7,408.9 472.3,337.9" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
+<path d="M478.7,333.7 Q541.1,442.6 642.8,500.9" fill="none" stroke="#1c1917" stroke-opacity="0.85" stroke-width="4.9" marker-end="url(#back)"/>
+<path d="M639.2,510.7 Q518.4,465.2 470.7,338.5" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="5.9" marker-end="url(#fwd)"/>
+<path d="M636.6,519.4 Q495.8,487.8 462.8,340.9" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="6 4" marker-end="url(#thin)"/>
+<path d="M481,332.3 Q576,481.5 617.3,667.8" fill="none" stroke="#1c1917" stroke-opacity="0.85" stroke-width="3.3" marker-end="url(#back)"/>
+<path d="M410.3,325.5 Q279.7,463.1 273.9,683.4" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
+<path d="M282.3,686 Q353.6,493.7 425.5,336.9" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.5" marker-end="url(#fwd)"/>
+<path d="M640.3,415.5 Q648.6,451.4 665.1,477.7" fill="none" stroke="#1c1917" stroke-opacity="0.85" stroke-width="4.1" marker-end="url(#back)"/>
+<path d="M650.9,491.2 Q619,463.6 622.4,417.9" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.9" marker-end="url(#fwd)"/>
+<path d="M642.5,503.6 Q589.5,475.9 608.5,415.2" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="6 4" marker-end="url(#thin)"/>
+<path d="M566.6,358.4 Q379.5,363.3 241.6,494.2" fill="none" stroke="#1c1917" stroke-opacity="0.85" stroke-width="4.4" marker-end="url(#back)"/>
+<path d="M245.4,500.3 Q391.7,392.9 566.3,366.1" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="5.1" marker-end="url(#fwd)"/>
+<path d="M251.2,510.1 Q410.1,437.3 569.4,378.1" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
+<path d="M660.6,585.3 Q450,861.6 234.8,579.2" fill="none" stroke="#1c1917" stroke-opacity="0.85" stroke-width="3.7" marker-end="url(#back)"/>
+<path d="M663,587 Q450,893.6 232.7,580.7" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="6 4" marker-end="url(#thin)"/>
+<path d="M236.3,576.7 Q450,829.6 657.5,584" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.6" marker-end="url(#fwd)"/>
+<path d="M619.2,668.4 Q594.8,533.6 615.9,417.1" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.8" marker-end="url(#fwd)"/>
+<path d="M406.6,752.1 Q106,533.6 402.6,318.1" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.5" marker-end="url(#fwd)"/>
+<path d="M481.7,740.4 Q590.7,591.9 617.5,417.3" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.9" marker-end="url(#fwd)"/>
+<path d="M468.9,733.5 Q518.4,602.1 638.3,556.9" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="3.7" marker-end="url(#fwd)"/>
+<path d="M252.7,513.8 Q381.6,465.2 429.3,338.5" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="5.5" marker-end="url(#fwd)"/>
+<path d="M255.6,542.5 Q415.5,568.1 441.4,729.7" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
+<circle cx="450" cy="283.6" r="55.6" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
+<text x="450" y="291.6" font-size="22" font-weight="bold" text-anchor="middle" fill="#57534e">01</text>
+<text x="450" y="198" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">Root</text>
+<text x="450" y="215" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">86 results · 137 within</text>
+<circle cx="626.8" cy="356.9" r="58.2" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
+<text x="626.8" y="364.8" font-size="22" font-weight="bold" text-anchor="middle" fill="#57534e">02</text>
+<text x="626.8" y="268.7" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">Map</text>
+<text x="626.8" y="285.7" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">94 results · 141 within</text>
+<circle cx="700" cy="533.6" r="62.9" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
+<text x="700" y="541.6" font-size="22" font-weight="bold" text-anchor="middle" fill="#57534e">03</text>
+<text x="700" y="618.6" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">Knowing</text>
+<text x="700" y="635.6" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">110 results · 102 within</text>
+<circle cx="626.8" cy="710.4" r="40.7" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
+<text x="626.8" y="718.3" font-size="22" font-weight="bold" text-anchor="middle" fill="#57534e">04</text>
+<text x="626.8" y="773.1" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">Life</text>
+<text x="626.8" y="790.1" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">46 results · 54 within</text>
+<circle cx="450" cy="783.6" r="51.6" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
+<text x="450" y="791.6" font-size="22" font-weight="bold" text-anchor="middle" fill="#57534e">05</text>
+<text x="450" y="857.3" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">Collectives</text>
+<text x="450" y="874.3" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">74 results · 81 within</text>
+<circle cx="273.2" cy="710.4" r="24" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
+<text x="273.2" y="716.9" font-size="18" font-weight="bold" text-anchor="middle" fill="#57534e">06</text>
+<text x="273.2" y="756.4" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">Classical texts</text>
+<text x="273.2" y="773.4" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">16 results · 14 within</text>
+<circle cx="200" cy="533.6" r="54.3" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
+<text x="200" y="541.6" font-size="22" font-weight="bold" text-anchor="middle" fill="#57534e">07</text>
+<text x="200" y="610" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">Significance</text>
+<text x="200" y="627" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">82 results · 117 within</text>
+<circle cx="273.2" cy="356.9" r="27.5" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
+<text x="273.2" y="364.4" font-size="21" font-weight="bold" text-anchor="middle" fill="#57534e">08</text>
+<text x="273.2" y="299.4" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">Method</text>
+<text x="273.2" y="316.4" font-size="13" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">21 results · 5 within</text>
+<circle cx="690.4" cy="325" r="15" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>
+<text x="690.4" y="330" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c1917">T1</text>
+<circle cx="697.9" cy="356.9" r="15" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>
+<text x="697.9" y="361.9" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c1917">T2</text>
+<circle cx="690.4" cy="388.7" r="15" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>
+<text x="690.4" y="393.7" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c1917">T7</text>
+<circle cx="514.6" cy="783.6" r="15" fill="#2a78d6" stroke="#1c1917" stroke-width="1.2"/>
+<text x="514.6" y="788.6" font-size="13" font-weight="bold" text-anchor="middle" fill="#ffffff">T3</text>
+<circle cx="133.2" cy="525.5" r="15" fill="#2a78d6" stroke="#1c1917" stroke-width="1.2"/>
+<text x="133.2" y="530.5" font-size="13" font-weight="bold" text-anchor="middle" fill="#ffffff">T4</text>
+<circle cx="144.8" cy="495" r="15" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>
+<text x="144.8" y="500" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c1917">T5</text>
+<circle cx="169.5" cy="473.6" r="15" fill="#ffffff" stroke="#1c1917" stroke-width="1.2"/>
+<text x="169.5" y="478.6" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c1917">T8</text>
+<circle cx="775.9" cy="533.6" r="15" fill="#1baf7a" stroke="#1c1917" stroke-width="1.2"/>
+<text x="775.9" y="538.6" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c1917">T6</text>
+<text x="450" y="442.3" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">22 of 74 modules</text>
+<text x="517" y="470.7" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">14 of 76 modules</text>
+<text x="572.5" y="537.6" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">14 of 88 modules</text>
+<text x="536.4" y="624" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">8 of 23 modules</text>
+<text x="450" y="655.2" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">3 of 28 modules</text>
+<text x="349.6" y="638.1" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">4 of 10 modules</text>
+<text x="323.2" y="537.6" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">12 of 62 modules</text>
+<text x="324.3" y="411.9" font-size="12" text-anchor="middle" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">4 of 26 modules</text>
+<text x="532.6" y="336.3" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">60</text>
+<text x="514.6" y="354.5" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">42</text>
+<text x="536.7" y="449.4" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">40</text>
+<text x="357.7" y="453.7" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">35</text>
+<text x="413.9" y="417.9" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">29</text>
+<text x="555.2" y="430.2" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">26</text>
+<text x="431.5" y="384.9" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">20</text>
+<text x="650.6" y="453.5" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">17</text>
+<text x="631.8" y="472.1" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">15</text>
+<text x="561.7" y="578.9" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">15</text>
+<text x="36" y="918.3" font-size="15" font-weight="bold" text-anchor="start" fill="#57534e">Two premises, each a hypothesis where used</text>
+<rect x="36" y="930.25566257523" width="390" height="92" rx="6" fill="#ffffff" stroke="#1c1917" stroke-dasharray="5 3"/>
+<text x="46" y="952.3" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">The continuation condition</text>
+<text x="46" y="971.3" font-size="14" text-anchor="start" fill="#57534e">scope: fixes whose losses count; does not rank</text>
+<text x="46" y="990.3" font-size="14" text-anchor="start" fill="#57534e">anything</text>
+<text x="46" y="1009.3" font-size="14" text-anchor="start" fill="#57534e">a premise, not asserted; warrant open</text>
+<path d="M36,948.3 L14,948.3 L14,592.8 Q14,562.8 149.5,562.8" fill="none" stroke="#1c1917" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#back)"/>
+<rect x="36" y="1034.25566257523" width="390" height="92" rx="6" fill="#ffffff" stroke="#1c1917" stroke-dasharray="5 3"/>
+<text x="46" y="1056.3" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">C, widening what can form is better</text>
+<text x="46" y="1075.3" font-size="14" text-anchor="start" fill="#57534e">order: ranks a course above every course it widens;</text>
+<text x="46" y="1094.3" font-size="14" text-anchor="start" fill="#57534e">does not rank mixed comparisons</text>
+<text x="46" y="1113.3" font-size="14" text-anchor="start" fill="#57534e">a premise, not asserted; warrant open</text>
+<path d="M36,1052.3 L23,1052.3 L23,577.8 Q23,547.8 143.4,547.8" fill="none" stroke="#1c1917" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#back)"/>
+<text x="20" y="1156.3" font-size="16" font-weight="bold" text-anchor="start" fill="#1c1917">The theses</text>
+<circle cx="33" cy="1177.25566257523" r="10" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>
+<text x="56" y="1182.3" font-size="14" text-anchor="start" fill="#1c1917">frozen tests passed and failed, or a bridge</text>
+<text x="56" y="1200.3" font-size="14" text-anchor="start" fill="#1c1917">failed</text>
+<circle cx="33" cy="1217.25566257523" r="10" fill="#2a78d6" stroke="#1c1917" stroke-width="1.2"/>
+<text x="56" y="1222.3" font-size="14" text-anchor="start" fill="#1c1917">partly passed, or partial support</text>
+<circle cx="33" cy="1239.25566257523" r="10" fill="#1baf7a" stroke="#1c1917" stroke-width="1.2"/>
+<text x="56" y="1244.3" font-size="14" text-anchor="start" fill="#1c1917">not rejected by frozen tests</text>
+<circle cx="33" cy="1261.25566257523" r="10" fill="#ffffff" stroke="#1c1917" stroke-width="1.2"/>
+<text x="56" y="1266.3" font-size="14" text-anchor="start" fill="#1c1917">argued; no test</text>
+<text x="20" y="1292.3" font-size="14" text-anchor="start" fill="#1c1917">T1–T8 at their homes; what each claims, its standing</text>
+<text x="20" y="1310.3" font-size="14" text-anchor="start" fill="#1c1917">and its tests: the theses table in THEORY-GRAPH.md,</text>
+<text x="20" y="1328.3" font-size="14" text-anchor="start" fill="#1c1917">“The spine”.</text>
+<text x="470" y="918.3" font-size="16" font-weight="bold" text-anchor="start" fill="#1c1917">How to read it</text>
+<circle cx="483" cy="939.25566257523" r="10" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
+<text x="483" y="943.3" font-size="10" font-weight="bold" text-anchor="middle" fill="#57534e">01</text>
+<text x="506" y="944.3" font-size="14" text-anchor="start" fill="#1c1917">Circle: a chapter, its area by its results; its</text>
+<text x="506" y="962.3" font-size="14" text-anchor="start" fill="#1c1917">number inside it; beside it, its name, its results</text>
+<text x="506" y="980.3" font-size="14" text-anchor="start" fill="#1c1917">and the formal-reuse uses within it.</text>
+<line x1="470" y1="997.3" x2="496" y2="997.3" stroke="#8a817c" stroke-width="3.2" marker-end="url(#fwd)"/>
+<text x="506" y="1002.3" font-size="14" text-anchor="start" fill="#1c1917">A use recorded as formal-reuse, a kind kept for “a</text>
+<text x="506" y="1020.3" font-size="14" text-anchor="start" fill="#1c1917">verified inference using the cited result”: the</text>
+<text x="506" y="1038.3" font-size="14" text-anchor="start" fill="#1c1917">arrow points to the chapter whose results are</text>
+<text x="506" y="1056.3" font-size="14" text-anchor="start" fill="#1c1917">used; the number beside a curve counts its uses,</text>
+<text x="506" y="1074.3" font-size="14" text-anchor="start" fill="#1c1917">written where it is 15 or more.</text>
+<line x1="470" y1="1091.3" x2="496" y2="1091.3" stroke="#1c1917" stroke-width="3.2" marker-end="url(#back)"/>
+<text x="506" y="1096.3" font-size="14" text-anchor="start" fill="#1c1917">The same, darker where an earlier chapter’s</text>
+<text x="506" y="1114.3" font-size="14" text-anchor="start" fill="#1c1917">results use a later one’s.</text>
+<line x1="470" y1="1131.3" x2="496" y2="1131.3" stroke="#57534e" stroke-width="1.7" stroke-dasharray="6 4" marker-end="url(#thin)"/>
+<text x="506" y="1136.3" font-size="14" text-anchor="start" fill="#1c1917">interpretive, kept for “an argument dependency”</text>
+<text x="506" y="1154.3" font-size="14" text-anchor="start" fill="#1c1917">(dashed; pairs with 3 or more).</text>
+<line x1="470" y1="1171.3" x2="496" y2="1171.3" stroke="#57534e" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
+<text x="506" y="1176.3" font-size="14" text-anchor="start" fill="#1c1917">application, a reused result with its</text>
+<text x="506" y="1194.3" font-size="14" text-anchor="start" fill="#1c1917">correspondence and added premises (dotted).</text>
+<line x1="470" y1="1211.3" x2="496" y2="1211.3" stroke="#a8a29e" stroke-width="6" stroke-linecap="round"/>
+<text x="506" y="1216.3" font-size="14" text-anchor="start" fill="#1c1917">Spoke, “k of m modules”: k of the chapter’s m core</text>
+<text x="506" y="1234.3" font-size="14" text-anchor="start" fill="#1c1917">modules state their laws on the grammar. It counts</text>
+<text x="506" y="1252.3" font-size="14" text-anchor="start" fill="#1c1917">modules, not results derived; its width is the</text>
+<text x="506" y="1270.3" font-size="14" text-anchor="start" fill="#1c1917">share.</text>
+<text x="506" y="1292.3" font-size="14" text-anchor="start" fill="#1c1917">Not drawn: related, for analogy (1,420 edges), and</text>
+<text x="506" y="1310.3" font-size="14" text-anchor="start" fill="#1c1917">the formal-reuse curves of pairs under 10 uses;</text>
+<text x="506" y="1328.3" font-size="14" text-anchor="start" fill="#1c1917">counts under 15 are not written. THEORY-GRAPH.md’s</text>
+<text x="506" y="1346.3" font-size="14" text-anchor="start" fill="#1c1917">table of edge kinds between chapters has them all.</text>
+<text x="24" y="1388" font-size="12" text-anchor="start" fill="#57534e">Generated by tools/research/spine.py from theory-graph.json and spine.json; THEORY-GRAPH.md, “The spine”, says what it</text>
+<text x="24" y="1403" font-size="12" text-anchor="start" fill="#57534e">shows and does not.</text>
 </svg>

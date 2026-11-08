@@ -140,7 +140,7 @@ class Tree(unittest.TestCase):
         self.assertEqual(lineage.marker(10, 10, 'reconstruction', False, 'unstated').count('stroke-dasharray'), 1)
 
     def test_titles_that_would_cross_stop_the_render(self):
-        def crossing(placed, lang):
+        def crossing(placed, lang, **kw):
             return [(0, 100, 400, '1 · A long title over its neighbour', 'start', {}), (1, 120, 400, '2 · Above', 'start', {})]
         with mock.patch.object(lineage, 'spec', return_value=self.spec), mock.patch.object(lineage, 'title_rows', crossing):
             pages, errors = lineage.render()

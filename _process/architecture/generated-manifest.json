@@ -15,8 +15,8 @@
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/REVIEWS.md": "0ccef05c0f94ed738029b8aa50c19901bcddb80807925beeb2dca83cb56dc687",
     "_process/research/README.md": "77fc2ae61ed1b058fc501008e2ffef229395068b9aa63e10f22bd514c3cf8164",
     "sources/README.md": "7d7f527445db2f40df09fbfd363c9ec321c410b4f4a4b08cfe857f804482c1e6",
-    "theories/LINEAGE.md": "c8c0cba6838310900150be19790e7cbb5b3f92fbd07b566c5f2d54f8b34f77cc",
-    "theories/LINEAGE.zh.md": "f26684881df682357fbf88d807391dc0c6dcf8f79c63199b3e5f2f9766a2b6fd",
+    "theories/LINEAGE.md": "edbc771dfaede50126608d34520f25d194273167b23446eed05f5760598bceb8",
+    "theories/LINEAGE.zh.md": "59e576075d87ca70ef19f7a8dad2c4ec372537538f355fdfe979187fdfefa026",
     "theories/README.md": "af3335c3ed9ab5963e28371e97ba015c90328297a5d6c97686fb46c5413ece66",
     "theories/becoming/README.md": "8237df4a4a50340cc56b6bba5fa077400cea64ed759b8c14dd3ab8e73e693646",
     "theories/becoming/chapters/CLAIMS.md": "a9ac5ff80ac0db24db83cbe4a3368e1f9607fc2b2d8a16406409a6034b35ebd5",
@@ -28,7 +28,7 @@
     "theories/becoming/results/README.md": "b96a63d5af9830bb8e40fe23e937f369a172d9d8017926a027ddf82422646430",
     "theories/becoming/results/RESULT-REGISTER.md": "062e5a30a5630b2c143f9fd523684faeb086373ff214e34975b836f1b6552b01",
     "theories/becoming/results/ROADMAP.md": "e6e81d222aa24caa1c4a1c94f8b6bfe462d61b2a07421d6728d2235aed6d8001",
-    "theories/becoming/results/THEORY-GRAPH.md": "90ebb2ec55525890d2817a79f80b0042f709edf3e623aee93d9d08023646d885",
+    "theories/becoming/results/THEORY-GRAPH.md": "339fd04bdf8ab8269afa86e6dff00a4a4b3edc28b3fcdc9b5d44077985058609",
     "theories/becoming/results/atlas/ATLAS.md": "a810900aaf6e6f78240e494e08ca9dfd5df43021912de40864662ea053c0dda6",
     "theories/becoming/results/atlas/CROSSWALK.md": "4d17edaabcf77e3f5e0a8d0f0218c26b195eb4a2f11f7345938167339caa3427",
     "theories/becoming/results/atlas/crosswalk/abrahamic-islamic.md": "eb582ffe28418af7e7513e5a14350b9a14ae1b021467be5844c1c07e04695c32",
@@ -653,10 +653,10 @@
     "theories/becoming/results/records/wisdom-root-without-axiom.md": "458fa4e678cf4e6ba46931e809d5ab015c141cb97c6fc769f26ecbcafe32b201",
     "theories/becoming/results/records/wisdom-root.md": "7163cb507136db3259f71b8f4fb767b79519ccc461254df27ee754738e80560f",
     "theories/becoming/results/records/worlds-are-runs.md": "aed2bb06229953f98bcbd991753f42844ce99263b0e98dee61d5c082ff53c1fe",
-    "theories/becoming/results/spine.svg": "82b3a2b4b1262186052f9958173760db2c3076b8a670af84c86f2d153f9e069a",
-    "theories/becoming/results/spine.zh.svg": "0890fdddd5ac840a643060ed63bd9b88646877b35307a01bcfaa3d978f2e8f65",
+    "theories/becoming/results/spine.svg": "2c10640fc22dd9c43cfdd9f0cc86415add251141e346cfea7a8bc4d0370be90b",
+    "theories/becoming/results/spine.zh.svg": "3308cb05859960106f46f00c655bb069771d3214d8d616f4959842ea92fe457b",
     "theories/lineage.svg": "d7ea26a37bbbba6ea585781661ffe77e2996d99c6ab02923d81d2375d2f55797",
     "theories/lineage.zh.svg": "a28554529464e41ad100c6b5c44a8f43748649055680e62c4078ef296e8920cc",
-    "theories/becoming/results/THEORY-GRAPH.zh.md": "566e6230bcf7c9a5f172b429c21ec9175b03dcd8b4ca0b93443543c6a3b96076"
+    "theories/becoming/results/THEORY-GRAPH.zh.md": "66c83ac4a25b6f7d133ff7b25bedd95e699ed878c57deb3c4715ec3f4b0b6e43"
   }
 }

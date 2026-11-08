@@ -363,6 +363,7 @@ def page(graph):
         if n['type'] in ('result', 'module', 'text', 'concept') and reg in counts:
             counts[reg][n['type']] += 1
     states = {e['to'] for e in graph['edges'] if e['type'] == 'states'}
+    retired_superseded = all(n.get('status') == 'superseded' for n in graph['nodes'] if n['type'] == 'result' and n.get('region') == 'retire')
     from tools.research import navigation, spine  # the picture's sections read this module's regions, so imported here
     lines = [HEADER, '', '# The theory graph', '', ' · '.join(navigation.link(p, PAGE, label) for p, label in navigation.NAV),
              '', '{time}', '',
@@ -378,8 +379,8 @@ def page(graph):
               'A region\'s results are the records whose home section is in its chapter, so the counts below are those the '
               '[chapters page](../chapters/README.md) gives as results stated. A chapter also keeps the anchors of former record '
               'names, so that old links resolve; those are not results, and neither page counts them.'
-              + (f' To retire holds the {counts["retire"]["result"]} records that no chapter states, which the chapters page '
-                 'does not list.' if counts.get('retire', {}).get('result') else ''), '',
+              + (f' To retire holds the {counts["retire"]["result"]} superseded records that no chapter states, which the '
+                 'chapters page does not list.' if counts.get('retire', {}).get('result') and retired_superseded else ''), '',
               '| Region | Concepts | Results | Modules | Texts |', '|---|---:|---:|---:|---:|']
     for k in REGION_ORDER:
         c = counts[k]

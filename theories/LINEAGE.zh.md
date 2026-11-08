@@ -4,7 +4,7 @@
 
 [English](LINEAGE.md) · [首页](../README.zh.md) · [一页](becoming/ONE-PAGE.zh.md) · [用途](becoming/USES.zh.md) · [实例](becoming/USES-EXAMPLES.zh.md) · [总览](becoming/THE-THEORY-OF-BECOMING.zh.md) · [八章](becoming/chapters/README.md) · [第六章](becoming/chapters/06-CLASSICAL-TEXTS.md) · [检验](../TESTS.md) · **怎样长成** · [术语表](../GLOSSARY.zh.md) · [审查包](becoming/review/README.zh.md)
 
-*全文约 100–129 分钟；简述、图、标签与这条线索约 15–19 分钟。*
+*全文约 100–130 分钟；简述、图、标签与这条线索约 15–19 分钟。*
 
 本说明是怎样长成的：从 2021 年的文字，经由它读过、承继或放下的早先各理论文件夹，到现在的[生成变化之论](becoming/ONE-PAGE.zh.md)。本页由[谱系数据](becoming/results/data/lineage.json)、各记录的历史与[对照](becoming/results/atlas/CROSSWALK.md)生成。本仓库在 `7040940cd`（2026 年 11 月 8 日）共有 6087 次提交；其第一次提交是 2026 年 9 月 6 日的，此前的东西都是带入仓库的材料。本页接续[九月时间线](../_process/history/2026-09-consolidation/TIMELINE.md)，那是「a narrative, not an index」（一份叙述，不是索引），止于 2026 年 10 月 4 日。本页的转折点由 AI 读者收集并核对，没有人读过。
 
@@ -27,7 +27,7 @@
 - **私人、未发表**（目前没有）：只有未在此发表的材料陈述了它（私人笔记与对话，或未存于此的材料），并有一个公开文本引用它。
 - **AI 重构**（目前没有）：没有来源陈述它；它是从材料中推断的，由 AI 读者推断，或由九月时间线这样的叙述推断，而那份叙述本身也是从材料中重构的。
 
-每个转折点也标明陈述它的文本出自谁之手，即其证据中首先陈述它的那一条：见“执笔”一栏，以及图中标记的填色。三位 AI 读者依文件、其所在文件夹或较早文件夹的来源列表的说明逐一归类，另三位逐条核对，48 条全部一致。所标的是那一条证据的执笔者：一行中的其他证据，以及取自它们的引文，可能出自别人之手。各条读法及其依据见[归类](../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rw-spine/reads/lineage-origins.json)。48 个转折点中：
+每个转折点也标明陈述它的文本出自谁之手，即其证据中首先陈述它的那一条：见“执笔”一栏，以及图中标记的填色（未说明者，标记中心有一点）。三位 AI 读者依文件、其所在文件夹或较早文件夹的来源列表的说明逐一归类，另三位逐条核对，48 条全部一致。所标的是那一条证据的执笔者：一行中的其他证据，以及取自它们的引文，可能出自别人之手。各条读法及其依据见[归类](../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rw-spine/reads/lineage-origins.json)。归类按数据中的证据条目从 0 编号；数据中引用两次的同一处，表中只列一次。48 个转折点中：
 
 - **一个人的话**（15）：陈述它的文本是一个人自己写的，或是逐字保留的一个人的话（在 `sources/` 中，或是摘出的同一个人的发言），以文件或其所在文件夹的说明为据。
 - **AI 据一个人的话起草**（13）：陈述它的文本由 AI 依一个人的话、笔记或对话写成，以文件或其所在文件夹的说明为据：想法可能是那个人的，措辞不是。
