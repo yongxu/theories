@@ -146,7 +146,6 @@ class PageTests(unittest.TestCase):
         self.assertNotIn('derives from the condition', self.page)
 
 
-
 class OverviewTests(unittest.TestCase):
     """The map's overview as a static picture: well formed, drawn from the same data as the page, at its own width."""
 
@@ -155,6 +154,7 @@ class OverviewTests(unittest.TestCase):
                    entry('cx-c', 'cxg-greek', relation='scope', of=None, carried='fresh-reading'),
                    entry('cx-d', 'cxg-greek', carried='not-carried', relation=None, record=None)]
         self.data = cm.payload(atlas(*entries), GRAPH, SHARED)
+        self.data['relations'] = [{'en': r} for r in ('agreement', 'scope', 'divergence', 'contrary-reading')]
         self.svg = cm.overview_svg(self.data)
 
     def test_it_is_well_formed_and_drawn_at_900(self):
@@ -177,6 +177,29 @@ class OverviewTests(unittest.TestCase):
         self.assertIn('stroke-dasharray="7 3"', self.svg)  # scope, as the map draws it
         self.assertIn('stroke-opacity="0.2"', self.svg)  # proposed here, lighter
 
+    def test_a_title_with_markup_is_escaped_and_a_relation_without_a_colour_is_named(self):
+        import xml.etree.ElementTree as ET
+        hostile = dict(self.data, groups=[dict(g, title='A <b>"bold" & odd</b> folder') for g in self.data['groups']])
+        ET.fromstring(cm.overview_svg(hostile))
+        with self.assertRaises(ValueError) as caught:
+            cm.overview_svg(dict(self.data, relations=self.data['relations'] + [{'en': 'resonance'}]))
+        self.assertIn('resonance', str(caught.exception))
+
+    def test_the_parts_keep_apart_when_there_are_few_groups(self):
+        import re as re_
+        few = dict(self.data, warp=[dict(w, id=f'w{i}', title=f'Part {i}') for i, w in enumerate(self.data['warp'] * 9)])
+        ys = [float(y) for y in re_.findall(r'<text x="566" y="([\d.]+)" font-size="12"', cm.overview_svg(few))]
+        self.assertTrue(all(b - a >= 22 for a, b in zip(ys, ys[1:])), ys)
+
+    @unittest.skipUnless(shutil.which('node'), 'node is not installed')
+    def test_the_threads_are_the_ones_the_page_draws(self):
+        start = cm.SCRIPT.index('function threads(){'); end = cm.SCRIPT.index('\n', start)
+        script = ('const D=' + json.dumps({'entries': self.data['entries']}) + ';const LOOSE=new Set(' + json.dumps(list(cm.ABSENT)) + ');'
+                  'function shown(e){return true;}' + cm.SCRIPT[start:end] + 'console.log(JSON.stringify(threads()));')
+        out = json.loads(subprocess.run(['node', '-e', script], capture_output=True, text=True, check=True).stdout)
+        key = lambda t: (t['group'], t['warp'], t['relation'], t['fresh'], t['n'])
+        self.assertEqual(sorted(map(key, out)), sorted(map(key, cm.overview_threads(self.data))))
+
     def test_render_writes_the_page_and_the_picture(self):
         out = cm.render(json.dumps(atlas(entry('cx-a', 'cxg-early'))), json.dumps(GRAPH))
         self.assertEqual(set(out), {cm.PAGE, cm.OVERVIEW})
@@ -186,6 +209,7 @@ class OverviewTests(unittest.TestCase):
         self.assertEqual(cm._short('智善: intelligence must be good'), '智善: intelligence must be good')
         self.assertEqual(cm._short('Modern philosophy: process, recognition, capital'), 'Modern philosophy')
         self.assertTrue(len(cm._short('x ' * 60)) <= 50)
+        self.assertLessEqual(sum(2 if '\u4e00' <= c <= '\u9fff' else 1 for c in cm._short('间' * 40)), 50)  # a wide character counts two
 
 class SiteTests(unittest.TestCase):
     """The map for a site: a whole document from the data a render wrote, its links going to the base the builder gives."""
