@@ -380,8 +380,9 @@ def evidence_link(e, here, words):
         return f'`{e["path"]}` ({words["not_in_repository"]})'
     target = link(e['path'], here)
     locator = e.get('locator') or ''
+    zh = bool(words.get('sources_n'))  # the Chinese edition
     if e['path'] in UNRENDERED:  # changed by commits that render nothing, so a line there would not stay true
-        return f'[`{e["path"]}`]({target})' + (f' ({cell(locator)})' if locator else '')
+        return f'[`{e["path"]}`]({target})' + ((f'（{cell(zh_locator(locator))}）' if zh else f' ({cell(locator)})') if locator else '')
     named = re.search(r'\blines? (\d+)', locator)
     found = quote_line(e['path'].split('#', 1)[0], e.get('quote'), int(named.group(1)) if named else None)
     line = found or (int(named.group(1)) if named else None)
@@ -389,17 +390,20 @@ def evidence_link(e, here, words):
         locator = locator[:named.start()] + f'line {found}' + locator[named.end():]
     if line and '#' not in target:
         target += ('?plain=1' if e['path'].endswith('.md') else '') + f'#L{line}'
-    if words.get('sources_n'):  # the Chinese edition: the common locator words in Chinese
+    if zh:  # the common locator words in Chinese
         locator = zh_locator(locator)
         return f'[`{e["path"]}`]({target})' + (f'（{cell(locator)}）' if locator else '')
     return f'[`{e["path"]}`]({target})' + (f' ({cell(locator)})' if locator else '')
 
 
 def zh_locator(locator):
-    """A locator's common English words in Chinese: line numbers and "same heading"; the rest is left as written."""
+    """A locator's common English words in Chinese form: line numbers, "same heading", a heading it stands under, and
+    full-width punctuation; its other words are left as written, which the page says."""
     locator = re.sub(r'\blines (\d+)[–-](\d+)', r'第 \1–\2 行', locator)
     locator = re.sub(r'\bline (\d+)', r'第 \1 行', locator)
-    return locator.replace('same heading', '同一标题下').replace('under ', '在 ')
+    locator = re.sub(r"(^|, )under ('## [^']*')", r'\1在 \2 标题下', locator)
+    locator = locator.replace('same heading', '同一标题下')
+    return locator.replace(', ', '，').replace(' (', '（').replace('(', '（').replace(')', '）')
 
 
 def link(path, page):

@@ -173,8 +173,8 @@
 <text x="691" y="711" font-size="14" text-anchor="start" fill="#1c1917">不画出：相关（related，用</text>
 <text x="691" y="729" font-size="14" text-anchor="start" fill="#1c1917">于类比，1420 条边），以及</text>
 <text x="691" y="747" font-size="14" text-anchor="start" fill="#1c1917">少于 10 次使用的配对；理论</text>
-<text x="691" y="765" font-size="14" text-anchor="start" fill="#1c1917">图（THEORY-GRAPH.md）“The</text>
-<text x="691" y="783" font-size="14" text-anchor="start" fill="#1c1917">spine”一节的表列出全部。</text>
+<text x="691" y="765" font-size="14" text-anchor="start" fill="#1c1917">图（THEORY-GRAPH.md）中各</text>
+<text x="691" y="783" font-size="14" text-anchor="start" fill="#1c1917">章之间边的种类表列出全部。</text>
 <text x="655" y="815" font-size="16" font-weight="bold" text-anchor="start" fill="#1c1917">论题</text>
 <circle cx="668" cy="836" r="10" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>
 <text x="691" y="841" font-size="14" text-anchor="start" fill="#1c1917">冻结检验有通过也有未通过，</text>

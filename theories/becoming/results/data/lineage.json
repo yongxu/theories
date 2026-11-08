@@ -147,7 +147,7 @@
    "hb_note": "`_process/history/2026-09-consolidation/reading-notes-inputs/hb-*.md` 这些文件，是从未入库的对话导出中摘出的同一个人的发言；引用它们的转折点标为公开，因为摘录本身已入库。",
    "sources_list": "各行来源",
    "sources_n": "来源 {n} 处",
-   "sources_note": "各行的来源见表后的“各行来源”。"
+   "sources_note": "各行的来源见表后的“各行来源”；来源的位置说明，除行号与标题外，保留英文。"
   }
  },
  "points": [
@@ -2899,7 +2899,7 @@
    ],
    "what": {
     "en": "From September to 6 October 2026 the writings are gathered into theory folders, an AI-drafted paper argues from correctability with refuters for each claim, the repository's first pre-specified predictions are written before their run, one failing in the pilot, and a conference line is folded into the generative account, short of a no-assumptions directive of the same day, in a chapter now in history.",
-    "zh": "2026 年 9 月至 10 月 6 日，诸篇写作被汇入各理论文件夹；一篇由 AI 起草的论文从可纠正性立论，每项主张都配有可驳倒它的观察；本仓库最早的预先给定的预测写于运行之前，其中一项在试运行中未通过；一条会议论文线被并入生成性说明，但未达到同日的无假设要求，该章今已移入历史。"
+    "zh": "2026 年 9 月至 10 月 6 日，诸篇写作被汇入各理论文件夹；一篇由 AI 起草的论文从可纠正性立论，每项主张都配有可驳倒它的观察；本仓库最早的预先给定的预测写于运行之前，其中一项在试运行中未通过；一条会议论文线被并入生成性说明，但未达到同日一项不作假设之指令的要求，该章今已移入历史。"
    }
   },
   {

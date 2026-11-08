@@ -453,7 +453,7 @@ The column *On the grammar* names the law's statement in [`Becoming.GrammarLaws`
 | under a stated hypothesis | 1 | `GroupEnding.Flow.all_end` | the root form `RootForms.outside_leaves_no_offspring` at one step, each of the form's three hypotheses … met at the model by definitions alone |
 | counting | 6 | | below the grammar |
 | at a named distance: connected | 22 | | reaching grammar laws without being declared a case of one |
-| at a named distance: balance in their statements | 32 | `Flow.no_new_dependence`: it meets the form's first hypothesis only through amount reasoning | |
+| at a named distance: balance in their statements | 32 | `Flow.no_new_dependence`: its relational part is the root form `RootForms.descent_forms_no_dependence`, whose first hypothesis it meets only through amount reasoning | |
 | at a named distance: on amounts | 18 | | |
 | at a named distance: at a represented model | 16 | | by F5's verified items |
 | at a named distance: on their own carrier | 6 | | by F5's verified items |

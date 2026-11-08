@@ -147,7 +147,7 @@
    "hb_note": "`_process/history/2026-09-consolidation/reading-notes-inputs/hb-*.md` 这些文件，是从未入库的对话导出中摘出的同一个人的发言；引用它们的转折点标为公开，因为摘录本身已入库。",
    "sources_list": "各行来源",
    "sources_n": "来源 {n} 处",
-   "sources_note": "各行的来源见表后的“各行来源”。"
+   "sources_note": "各行的来源见表后的“各行来源”；来源的位置说明，除行号与标题外，保留英文。"
   }
  },
  "folders_trust": {

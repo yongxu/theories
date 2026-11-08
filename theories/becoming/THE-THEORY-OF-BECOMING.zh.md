@@ -27,7 +27,7 @@
 
 ![围绕文法的八章：圆按结果数定大小，曲线计各章结果之间的使用，两个前提进入第七章，各在所用之处为假设，T1 到 T8 在其所属之处按检验结局着色](results/spine.zh.svg)
 
-*围绕文法的各章，由工具依[理论图](results/THEORY-GRAPH.md)画出：一条曲线计一章的结果使用另一章结果、记为 formal-reuse 的次数，这一类只用于已核验的推理；它是一种依赖，不是意义上的一致。117 项核心声明中，11 项推导而得，各为文法之律的一个情形，经由在 Lean 中核验的桥接，以及在某行有之处审阅所读的支持；1 项在一个所述的假设之下，6 项为计数、在文法之下，99 项处于一个指明的距离（[08 §7](chapters/08-METHOD.md#r-one-root-to-its-edge)）。这幅图显示什么、不显示什么，见理论图的 [The spine](results/THEORY-GRAPH.md#the-spine)（英文）。*
+*围绕文法的各章，由工具依[理论图](results/THEORY-GRAPH.md)画出：一条曲线计一章的结果使用另一章结果、记为 formal-reuse 的次数，这一类只用于已核验的推理；它是一种依赖，不是意义上的一致。117 项核心声明中，11 项推导而得，各为文法之律的一个情形，经由在 Lean 中核验的桥接，以及在 08 §7 表中某行列有之处，审阅所读的支持；1 项在一个所述的假设之下，6 项为计数、在文法之下，99 项处于一个指明的距离（[08 §7](chapters/08-METHOD.md#r-one-root-to-its-edge)）。这幅图显示什么、不显示什么，见理论图的 [The spine](results/THEORY-GRAPH.md#the-spine-what-it-shows-and-does-not-show)（英文）。*
 
 每一项主张都带有一个地位（[标签](chapters/08-METHOD.md#standings-and-bases)）：
 
