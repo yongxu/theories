@@ -102,3 +102,6 @@ a.picture { display: block; width: min(calc(100vw - 32px), 64rem); margin: 1.2re
 a.picture img { display: block; width: 100%; height: auto; }
 /* the navigation line scrolls sideways; a fade at its edge says there is more */
 header.top nav { -webkit-mask-image: linear-gradient(to right, #000 85%, transparent); mask-image: linear-gradient(to right, #000 85%, transparent); padding-right: 2rem; }
+/* on the home the picture stays inside the page's column, which is wider there */
+body.home a.picture { width: 100%; margin-left: 0; transform: none; }
+section.ways h3.group { font-family: var(--sans); font-size: .9rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 1.6rem 0 .6rem; }

@@ -444,7 +444,7 @@ PAGES = [('README.md', 'The Theory of Becoming', None, 'home'),
          (THEORY + '/results/ROADMAP.md', 'Current research directions', '当前研究路线 / Current research directions', 'roadmap')]
 # The navigation line on every generated page: the ways a reader goes, then the register and what is open. The scopes, the
 # connections list and the workflow for contributors are linked from README's lower sections (RW, 8 November 2026).
-NAV = [('README.md', 'Home'), ('MAP.md', 'Start here'), (THEORY + '/ONE-PAGE.md', 'One page'), ('README.zh.md', '中文'),
+NAV = [('README.md', 'Home'), ('MAP.md', 'Where everything is'), (THEORY + '/ONE-PAGE.md', 'One page'), ('README.zh.md', '中文'),
        (CANONICAL, 'The theory'), (CHAPTERS + '/README.md', 'Chapters'), (THEORY + '/USES.md', 'Uses'), ('TESTS.md', 'Tests'),
        (THEORY + '/results/THEORY-GRAPH.md', 'Graph'), (THEORY + '/results/atlas/CROSSWALK.md', 'Connections'), ('theories/LINEAGE.md', 'How it grew'), ('RESULTS.md', 'Results'), ('GLOSSARY.md', 'Glossary'),
        (THEORY + '/review/README.md', 'Reviewers'), ('OPEN-QUESTIONS.md', 'Open questions')]

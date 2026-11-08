@@ -139,7 +139,7 @@ class Links:
             anchor = a2 or anchor
         if target == page:
             self.internal.append((page, page, anchor))
-            return '#' + anchor
+            return '#' + anchor if anchor else posixpath.basename(out_path(page))
         if target in SPECIAL:
             self.counts['site'] += 1
             return relative(target, page) + (f'#{anchor}' if anchor else '')
@@ -245,7 +245,9 @@ class Page:
         if not rec:
             return ''
         status = rec.get('status', '')
-        href = self.links.github(f'theories/becoming/results/records/{rid}.md')
+        record = f'theories/becoming/results/records/{rid}.md'
+        href = (relative(out_path(record), self.path) if record in self.links.pages
+                else self.links.github(record))
         return (f'<a class="mark mark-{html.escape(status)}" href="{html.escape(href)}" '
                 f'title="The result\'s record: {html.escape(navigation.STATUS_TEXT.get(status, status))}">'
                 f'{html.escape(STATUS_MARK.get(status, status))}</a>')
@@ -727,7 +729,16 @@ def home_body(cfg, links, recs, root):
         cards.append(f'<li><a class="card" href="{html.escape(href)}"><span class="label">{html.escape(w["label"])}</span>'
                      + (f'<span class="time">{html.escape(time)}</span>' if time else '')
                      + f'<span class="text">{Page("README.md", w["text"], links, recs).html[3:-4]}</span></a>{zh}</li>')
-    parts.append('<section class="ways"><h2 id="ways-in">Ways in</h2><ul class="cards">' + ''.join(cards) + '</ul></section>')
+    grouped, order = {}, []
+    for w, c in zip(cfg.get('ways_in', []), cards):
+        g = w.get('group', '')
+        if g not in grouped:
+            grouped[g] = []
+            order.append(g)
+        grouped[g].append(c)
+    body = ''.join((f'<h3 class="group">{html.escape(g)}</h3>' if g else '') + '<ul class="cards">' + ''.join(grouped[g]) + '</ul>'
+                   for g in order)
+    parts.append('<section class="ways"><h2 id="ways-in">Ways in</h2>' + body + '</section>')
     return '\n'.join(parts), page.lang
 
 
@@ -808,7 +819,8 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
     for a in sorted(assets):
         dest = out / a
         dest.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy(root / a, dest)
+        shutil.copyfile(root / a, dest)
+        dest.chmod(0o644)
         written.append(dest)
     # the connection map (tools/research/connection_map.py's site mode), its links to pages of the site kept on the site
     map_note = 'not built: site.map is off'

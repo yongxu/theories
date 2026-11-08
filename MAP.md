@@ -74,7 +74,7 @@ A fresh run compiles more than a thousand Lean steps and takes a while; `BECOMIN
 
 ## The earlier theory folders
 
-The live account does not gather them whole. What each claimed in its own terms, and whether the account states it, takes it up and says otherwise, or does not state it, is in [the crosswalk](theories/becoming/results/atlas/CROSSWALK.md), claim by claim, with the twelve domains of thought read the same way; [the index of the folders](theories/README.md) counts what became of each, and [the connection map](theories/becoming/results/atlas/map.html) draws it (a page for a browser: open it from a clone of the repository, since GitHub shows only its source). Every entry is an AI reading, and no person has read them.
+The live account does not gather them whole. What each claimed in its own terms, and whether the account states it, takes it up and says otherwise, or does not state it, is in [the crosswalk](theories/becoming/results/atlas/CROSSWALK.md), claim by claim, with the twelve domains of thought read the same way; [the index of the folders](theories/README.md) counts what became of each, and [the connection map](theories/becoming/results/atlas/map.html) draws it (interactive: open it on the reader's site, or from a clone of the repository, since GitHub shows only its source; [its picture](theories/becoming/results/atlas/CROSSWALK.md) heads the crosswalk). Every entry is an AI reading, and no person has read them.
 
 | Folder | In one line |
 |---|---|
