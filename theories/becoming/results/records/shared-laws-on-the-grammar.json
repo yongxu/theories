@@ -616,7 +616,7 @@
   ],
   "validation_scope": {
     "en": "Lean 4.29.1 core receipt 20261101T161537.177111Z: GrammarLaws, 223 theorems in 252 declarations; 40 representation and bridge declarations in 14 models; derivations in 14 more (OU3c, OU3e, OU3f) and in Mechanism, Response, SelectionPool, Locality, Decidedness and Identity (HE, HE2, U4d); axiom reports empty, all cited. Statements unchanged but, per the history, laws taken to any universe, renames, one law widened, an instance dropped from eight laws, two hypotheses dropped from the census of a run. Read-only AI reviews of each item, all findings taken, five twice; no person's review recorded.",
-    "zh": "Lean 4.29.1 回执 20261101T161537.177111Z：GrammarLaws 252 项声明中 223 条定理；十四模型 40 项表示桥接声明；另十四模块（OU3c、OU3e、OU3f）与 Mechanism、Response、SelectionPool、Locality、Decidedness、Identity（HE、HE2、U4d）之推导；公理报告皆空，皆引。陈述不变，唯历史所言：推至任一宇宙、改名、放宽一律、八律去一实例、一程清点去二前提。只读 AI 审查各项，皆采，五项复审；无人审。"
+    "zh": "Lean 4.29.1 回执 20261101T161537.177111Z：GrammarLaws 252 声明中定理 223；十四模型 40 项表示桥接声明；另十四模块（OU3c、OU3e、OU3f）与 Mechanism、Response、SelectionPool、Locality、Decidedness、Identity（HE、HE2、U4d）之推导；公理报告皆空，皆引。陈述不变，唯据历史：推至任一宇宙、改名、放宽一律、八律去一实例、一程清点去二前提。只读 AI 审各项，皆采，五项复审；尚无人审之记录。"
   },
   "next_delta": {
     "en": "A derivation of balance where a model's balance is read under a relation other than the one, pairings composing along a supplied conditioning; the models' other central laws restated on the grammar; a converse of the law of rest with the step relations it compares and its logic stated; review by a person.",
