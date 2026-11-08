@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 977" width="900" height="977" role="img" aria-labelledby="cx-title cx-desc" font-family="Helvetica, Arial, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Noto Sans CJK SC&#x27;, sans-serif">
-<title id="cx-title">早先的文件夹与各思想领域怎样与现行之论相接</title>
-<desc id="cx-desc">由 connection_map.py 依对照表的 1183 条主张画出，每一条都对照现行之论来读。一条线把一个早先的文件夹或一个思想领域，连到它的主张所对照的本论那一部分。名称为 AI 所译，义以英文版为准。每一条线都是 AI 的读法，不是人的。一条线不是证明；相合画得并不比相分更显眼。</desc>
+<title id="cx-title">早先的文件夹与各思想领域怎样与现行的本论相接</title>
+<desc id="cx-desc">1183 条主张，出自 16 个早先的文件夹与 12 个思想领域，每一条都对照现行的本论来读。本论全部或部分陈述其中 491 条，承接 189 条而另有说法。376 条本论没有陈述：由读者在此提出这一连接。105 条本论没有承接，22 条仅存于其历史。每一条线都是 AI 的读法，不是人的。337 处相合中，130 处与一条已核验的律相合，67 处与一个论题或方法相合，140 处依于读者的接合。一条线不是证明，共用一个词不是对应，相合画得并不比相分更显眼。328 条条目依于 AI 对一份不存于此处之文本的了解，未对照该文本核验。随机复核 100 条，据此估计全部条目中约 14.2% 的标签或目标角色有误，约 3.2% 的读法有误。图中文字为 AI 所译，义以英文版为准。关系计的是画出的主张；仅存于历史或未承继者中另有 3 条也带有关系，对照表的表格计入它们。</desc>
 <rect x="0.5" y="0.5" width="899" height="976" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
-<text x="24" y="34" font-size="17" font-weight="bold" text-anchor="start" fill="#1e1a15">早先的文件夹与各思想领域怎样与现行之论相接</text>
-<text x="24" y="54" font-size="11.5" text-anchor="start" fill="#6d6355">由 connection_map.py 依对照表的 1183 条主张画出，每一条都对照现行之论来读。一条线把一个早先的文件夹或一个思想领域，</text>
-<text x="24" y="69" font-size="11.5" text-anchor="start" fill="#6d6355">连到它的主张所对照的本论那一部分。名称为 AI 所译，义以英文版为准。</text>
+<text x="24" y="34" font-size="17" font-weight="bold" text-anchor="start" fill="#1e1a15">早先的文件夹与各思想领域怎样与现行的本论相接</text>
+<text x="24" y="54" font-size="11.5" text-anchor="start" fill="#6d6355">由 connection_map.py 依对照表的 1183 条主张画出，每一条都对照现行的本论来读。一条线把一个早先的文件夹或一个思想领域，</text>
+<text x="24" y="69" font-size="11.5" text-anchor="start" fill="#6d6355">连到它的主张所对照的本论那一部分。图中文字为 AI 所译，义以英文版为准。</text>
 <text x="24" y="92" font-size="12.5" font-weight="bold" text-anchor="start" fill="#1e1a15">每一条线都是 AI 的读法，不是人的。一条线不是证明；相合画得并不比相分更显眼。</text>
 <text x="24" y="112" font-size="11.5" text-anchor="start" fill="#6d6355">随机复核 100 条，据此估计全部 1183 条中约 14.2% 的标签或目标角色有误，约 3.2% 的读法有误。</text>
 <text x="24" y="154" font-size="13" fill="#1e1a15"><tspan font-weight="bold">3</tspan> 承继<tspan fill="#6d6355"> · </tspan><tspan font-weight="bold">488</tspan> 部分承继<tspan fill="#6d6355"> · </tspan><tspan font-weight="bold">189</tspan> 改变<tspan fill="#6d6355"> · </tspan><tspan font-weight="bold">376</tspan> 此处提出的新读法<tspan fill="#6d6355"> · </tspan><tspan font-weight="bold">22</tspan> 仅存于历史<tspan fill="#6d6355"> · </tspan><tspan font-weight="bold">105</tspan> 未承继</text>

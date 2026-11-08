@@ -1,0 +1,326 @@
+{
+ "about": "The dated span of each earlier folder's material, for LINEAGE's per-folder table (RW (c), round 4, 9 November 2026). An AI reader, the session that built the table, read each folder's README and, where it dates its material elsewhere, the folder's own files, and gave each end with the line that states it and a quotation from that line; the render checks every quotation at its line. A second AI reader, the lineage reader of round 4 (round-4-readers-1.json, scope 'lineage'), found that nine folders' own text dates material later than the first read's end, spoken recordings of 2 and 4 October 2026 that each folder presents as its own material, and that the memories folder's start was the date of its first export rather than the span its README gives; its checker confirmed all ten. The ends below are the corrected ones. Later notes in the folders, of 6 October 2026 onward, are notes on the later work, not material, and are left out. No person's review of these dates is recorded.",
+ "rule": "from: the earliest date the folder's own text gives for material it draws on; to: the latest such date. A date is as exact as its line gives it.",
+ "corrected_in_round_4": {
+  "to": [
+   "selfishness-spiral-and-narrative-value-frames",
+   "drives-narrative-attractors-and-mind",
+   "zhishan-intelligence-must-be-good",
+   "meta-attractor",
+   "relational-self-and-datong",
+   "jian-and-wenyan-as-formal-language",
+   "keep-the-possibility-space-open",
+   "the-fork-and-cooperative-infrastructure",
+   "alignment-selection-on-cognition"
+  ],
+  "from": [
+   "memories-and-working-style"
+  ]
+ },
+ "reader_findings": [
+  {
+   "where": "theories/LINEAGE.md, 'What became of the earlier folders', per-folder table, column 'Its material, dated' (data: theories/becoming/results/data/lineage.json 'folders', the 'to' ends)",
+   "text": "Selfishness spiral \"2021-05-21 – 2026-06-05\"; Drives \"– 2026-07-29\"; 智善 \"– 2026-07-29\"; Meta-attractor \"– 2026-08-14\"; Relational self \"– 2026-08-20\"; 間 and 文言 \"– 2026-09-02\"; Keep the possibility space open \"– 2026-09-03\"; Fork \"– 2026-09-07\"; Alignment \"– 2026-09-29\"",
+   "severity": "high",
+   "why": "The lead says each row gives \"the dated span of the material it draws on, as an AI reader found it in the folder's own text\". In 9 of the 16 folders, the folder's own text dates material later than the row's end. These are spoken recordings of 1 to 4 October that the folder presents as its own material: selfishness-spiral README.md:153 \"### Said in Chinese, 2026-10-04\"; drives README.md:67 \"**2026-10-04: 心 and 理, the regulator named…\"; zhishan README.md:221 \"(2026-10-04, spoken)\"; meta-attractor README.md:277 \"(2026-10-04, spoken)\"; relational-self README.md:72 \"**2026-10-04: the relational self as a way of deciding…\"; jian README.md:152 \"The grammar claim, said again in Chinese (2026-10-04)\"; keep-the-possibility README.md:178 \"**2026-10-04, said in Chinese…\"; the-fork README.md:60 \"**2026-10-02: provision like trees…\"; alignment README.md:214 \"(2026-10-04, spoken)\". A reader would believe, for example, that the selfishness folder's material stops in June 2026. Its spoken material actually runs to 4 October.",
+   "fix": "Set 'to' and its evidence for these nine folders to the lines above: 2026-10-04 for eight of them and 2026-10-02 for the Fork, then re-render. The other option is to narrow the lead to what the ends actually are, e.g. \"the span its genealogy dates\", but that loses the dated view the re-score asked for."
+  },
+  {
+   "where": "theories/LINEAGE.md folder table, row 'Memories and working style' (lineage.json folders: memories-and-working-style 'from')",
+   "text": "[2026-03-29](memories-and-working-style/README.md?plain=1#L214) – 2026-09-03",
+   "severity": "medium",
+   "why": "The cited line is \"| 2026-03-29 | claude.ai memory export 1\", which is the date of the first export, not the earliest date the folder gives for its material. The folder's own line 7 says \"Between 2026-03 and 2026-09, two claude.ai memory exports and twelve Claude Code project-memory folders accumulated\". The same table, \"Every row is from the memory layer\", has earlier rows: line 210 \"| 2026-03-07 | 《人类最重要的三个问题》 period\", and as far back as line 204 \"| 2021-05 | Dali field notes\". The other rows take event dates (Drives from 2021-05-21 recorded speech), so this row uses a different rule.",
+   "fix": "Use \"2026-03\" with its evidence at line 7 (\"Between 2026-03 and 2026-09 … accumulated\"). If event dates are the rule for every row, use \"2021-05\" from line 204."
+  }
+ ],
+ "folders": [
+  {
+   "folder": "alignment-selection-on-cognition",
+   "from": "2024-03-18",
+   "to": "2026-10-04",
+   "basis": "folder",
+   "evidence": [
+    {
+     "path": "theories/alignment-selection-on-cognition/README.md",
+     "line": 240,
+     "quote": "out-hb-01.md` #1–2, 2024-03-18)"
+    },
+    {
+     "path": "theories/alignment-selection-on-cognition/README.md",
+     "line": 214,
+     "quote": "(2026-10-04, spoken)"
+    }
+   ]
+  },
+  {
+   "folder": "architecture-for-a-living-earth",
+   "from": "2024-07-29",
+   "to": "2026-09-13",
+   "basis": "folder",
+   "evidence": [
+    {
+     "path": "theories/architecture-for-a-living-earth/chiang-mai-2025/CONNECTIONS-AND-EVIDENCE.md",
+     "line": 21,
+     "quote": "July 29, 2024 discussion"
+    },
+    {
+     "path": "theories/architecture-for-a-living-earth/README.md",
+     "line": 6,
+     "quote": "Opened 2026-09-13 · Working exploration"
+    }
+   ]
+  },
+  {
+   "folder": "context-as-existence-runtimes",
+   "from": "2024-03-18",
+   "to": "2026-09-03",
+   "basis": "folder",
+   "evidence": [
+    {
+     "path": "theories/context-as-existence-runtimes/README.md",
+     "line": 1052,
+     "quote": "2024-03-18, *Questioning AI Identity* — `out-hb-01.md #5`. The earliest dated item in this theory"
+    },
+    {
+     "path": "theories/context-as-existence-runtimes/README.md",
+     "line": 854,
+     "quote": "**2026-09-03 — self-similarity.**"
+    }
+   ]
+  },
+  {
+   "folder": "drives-narrative-attractors-and-mind",
+   "from": "2021-05-21",
+   "to": "2026-10-04",
+   "basis": "folder",
+   "evidence": [
+    {
+     "path": "theories/drives-narrative-attractors-and-mind/README.md",
+     "line": 252,
+     "quote": "**2021-05-21 — narrative reaching the body, and the split, in recorded speech.**"
+    },
+    {
+     "path": "theories/drives-narrative-attractors-and-mind/README.md",
+     "line": 67,
+     "quote": "**2026-10-04: 心 and 理, the regulator named"
+    }
+   ]
+  },
+  {
+   "folder": "evolving-community-swarms",
+   "from": "2026-09-05",
+   "to": "2026-09-07",
+   "basis": "folder",
+   "evidence": [
+    {
+     "path": "theories/evolving-community-swarms/README.md",
+     "line": 6,
+     "quote": "**Working title · established 2026-09-05 · exploratory theory and design direction**"
+    },
+    {
+     "path": "theories/evolving-community-swarms/README.md",
+     "line": 18,
+     "quote": "**Updated ambition, 2026-09-07:**"
+    }
+   ]
+  },
+  {
+   "folder": "human-solutions-museum",
+   "from": "2024-11-03",
+   "to": "2026-08-21",
+   "basis": "folder",
+   "evidence": [
+    {
+     "path": "theories/human-solutions-museum/README.md",
+     "line": 303,
+     "quote": "**2024-11-03/05 — the failure dynamic.**"
+    },
+    {
+     "path": "theories/human-solutions-museum/README.md",
+     "line": 383,
+     "quote": "— 2026-08-21, on adopting a mature neighbouring project."
+    }
+   ]
+  },
+  {
+   "folder": "jian-and-wenyan-as-formal-language",
+   "from": "2026-04-12",
+   "to": "2026-10-04",
+   "basis": "folder",
+   "evidence": [
+    {
+     "path": "theories/jian-and-wenyan-as-formal-language/README.md",
+     "line": 911,
+     "quote": "**2026-04-12 → 04-29 — the pre-history.**"
+    },
+    {
+     "path": "theories/jian-and-wenyan-as-formal-language/README.md",
+     "line": 152,
+     "quote": "**The grammar claim, said again in Chinese (2026-10-04).**"
+    }
+   ]
+  },
+  {
+   "folder": "keep-the-possibility-space-open",
+   "from": "2024-03-18",
+   "to": "2026-10-04",
+   "basis": "folder",
+   "evidence": [
+    {
+     "path": "theories/keep-the-possibility-space-open/README.md",
+     "line": 560,
+     "quote": "**2024-03-18 — the first mechanism, before any of the vocabulary.**"
+    },
+    {
+     "path": "theories/keep-the-possibility-space-open/README.md",
+     "line": 178,
+     "quote": "**2026-10-04, said in Chinese:"
+    }
+   ]
+  },
+  {
+   "folder": "memories-and-working-style",
+   "from": "2026-03",
+   "to": "2026-09-03",
+   "basis": "folder",
+   "evidence": [
+    {
+     "path": "theories/memories-and-working-style/README.md",
+     "line": 6,
+     "quote": "Between 2026-03 and 2026-09"
+    },
+    {
+     "path": "theories/memories-and-working-style/README.md",
+     "line": 240,
+     "quote": "| 2026-09-03 | Plan 53 executing; the corpus snapshot in `sources/` is taken |"
+    }
+   ]
+  },
+  {
+   "folder": "meta-attractor",
+   "from": "2024-03-18",
+   "to": "2026-10-04",
+   "basis": "folder",
+   "evidence": [
+    {
+     "path": "theories/meta-attractor/README.md",
+     "line": 738,
+     "quote": "change faster than they can be comprehended (2024-03-18)"
+    },
+    {
+     "path": "theories/meta-attractor/README.md",
+     "line": 277,
+     "quote": "(2026-10-04, spoken)"
+    }
+   ]
+  },
+  {
+   "folder": "relational-self-and-datong",
+   "from": "2025",
+   "to": "2026-10-04",
+   "basis": "folder",
+   "evidence": [
+    {
+     "path": "theories/relational-self-and-datong/README.md",
+     "line": 239,
+     "quote": "These are AI-assembled research documents in the 2025 selfishness-spiral cluster"
+    },
+    {
+     "path": "theories/relational-self-and-datong/README.md",
+     "line": 72,
+     "quote": "**2026-10-04: the relational self as a way of deciding"
+    }
+   ]
+  },
+  {
+   "folder": "selfishness-spiral-and-narrative-value-frames",
+   "from": "2021-05-21",
+   "to": "2026-10-04",
+   "basis": "folder",
+   "evidence": [
+    {
+     "path": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+     "line": 435,
+     "quote": "**2021-05-21 — the frame at individual scale, in recorded speech.**"
+    },
+    {
+     "path": "theories/selfishness-spiral-and-narrative-value-frames/README.md",
+     "line": 153,
+     "quote": "### Said in Chinese, 2026-10-04"
+    }
+   ]
+  },
+  {
+   "folder": "spirit-space-token-and-yi-substrate",
+   "from": "2024-04-26",
+   "to": "2026-09-03",
+   "basis": "folder",
+   "evidence": [
+    {
+     "path": "theories/spirit-space-token-and-yi-substrate/README.md",
+     "line": 589,
+     "quote": "communicate through tokens (2024-04-26)"
+    },
+    {
+     "path": "theories/spirit-space-token-and-yi-substrate/README.md",
+     "line": 629,
+     "quote": "**2026-08-22 → 2026-09-03 — the concepts recut.**"
+    }
+   ]
+  },
+  {
+   "folder": "the-fork-and-cooperative-infrastructure",
+   "from": "2021-10-18",
+   "to": "2026-10-02",
+   "basis": "folder",
+   "evidence": [
+    {
+     "path": "theories/the-fork-and-cooperative-infrastructure/README.md",
+     "line": 152,
+     "quote": "recovered-text/2021-10-18_proposal_元社区-Metamunity.txt"
+    },
+    {
+     "path": "theories/the-fork-and-cooperative-infrastructure/README.md",
+     "line": 60,
+     "quote": "**2026-10-02: provision like trees, and the labour question.**"
+    }
+   ]
+  },
+  {
+   "folder": "wamotopia-and-the-wamo-protocol",
+   "from": "2021-10-18",
+   "to": "2026-06-04",
+   "basis": "folder",
+   "evidence": [
+    {
+     "path": "theories/wamotopia-and-the-wamo-protocol/README.md",
+     "line": 336,
+     "quote": "**2021-10-18 — 元社区 Metamunity, the diagnosis this programme answers.**"
+    },
+    {
+     "path": "theories/wamotopia-and-the-wamo-protocol/README.md",
+     "line": 376,
+     "quote": "and the hierarchy correction (2026-06-04)."
+    }
+   ]
+  },
+  {
+   "folder": "zhishan-intelligence-must-be-good",
+   "from": "2024-07-18",
+   "to": "2026-10-04",
+   "basis": "folder",
+   "evidence": [
+    {
+     "path": "theories/zhishan-intelligence-must-be-good/README.md",
+     "line": 665,
+     "quote": "**2024-07-18.** The earliest trace is not a theory but a revision task"
+    },
+    {
+     "path": "theories/zhishan-intelligence-must-be-good/README.md",
+     "line": 221,
+     "quote": "(2026-10-04, spoken)"
+    }
+   ]
+  }
+ ]
+}

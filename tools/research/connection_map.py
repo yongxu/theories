@@ -249,6 +249,27 @@ def _ledes(data: dict, pointer: bool = True) -> tuple[str, str]:
     return lede, sub
 
 
+def _ledes_zh(data: dict) -> str:
+    """The English ledes in Chinese, with the same counts, for the Chinese picture's accessible description."""
+    T, checks = data['totals'], data.get('checks')
+    carried, of = T['carried'], T['agreement_of']
+    stated = carried.get('carried', 0) + carried.get('carried-in-part', 0)
+    num = str
+    out = (f'{num(T["entries"])} 条主张，出自 {T["folders"]} 个早先的文件夹与 {T["domains"]} 个思想领域，每一条都对照现行的本论来读。'
+           f'本论全部或部分陈述其中 {num(stated)} 条，承接 {num(carried.get("changed", 0))} 条而另有说法。'
+           f'{num(carried.get("fresh-reading", 0))} 条本论没有陈述：由读者在此提出这一连接。'
+           f'{num(carried.get("not-carried", 0))} 条本论没有承接，{num(carried.get("history-only", 0))} 条仅存于其历史。'
+           f'每一条线都是 AI 的读法，不是人的。{num(T["relation"].get("agreement", 0))} 处相合中，{num(of.get("law", 0))} 处与一条已核验的律相合，'
+           f'{num(of.get("thesis-or-method", 0))} 处与一个论题或方法相合，{num(of.get("reading", 0))} 处依于读者的接合。'
+           '一条线不是证明，共用一个词不是对应，相合画得并不比相分更显眼。'
+           f'{num(T["from_knowledge"])} 条条目依于 AI 对一份不存于此处之文本的了解，未对照该文本核验。')
+    second = (checks or {}).get('second_critic')
+    if second:
+        out += (f'随机复核 {second["sampled"]} 条，据此估计全部条目中约 {second["estimate_percent"]["label"]:g}% 的标签或目标角色有误，'
+                f'约 {second["estimate_percent"]["fails"]:g}% 的读法有误。')
+    return out + '图中文字为 AI 所译，义以英文版为准。'
+
+
 STATS = (('carried', 'carried'), ('carried-in-part', 'in part'), ('changed', 'changed'), ('fresh-reading', 'proposed here'),
          ('history-only', 'only in history'), ('not-carried', 'not carried'))
 CROSSWALK_PATH = atlas_tool.CROSSWALK
@@ -413,9 +434,9 @@ OV_TEXT = {
                      None,
                      'Every claim with its targets and their standings: the crosswalk (CROSSWALK.md, in the same folder). The same data to explore:',
                      'map.html in that folder, which GitHub shows only as source.')},
-    'zh': {'title': '早先的文件夹与各思想领域怎样与现行之论相接',
-           'lede': ('由 connection_map.py 依对照表的 {n} 条主张画出，每一条都对照现行之论来读。一条线把一个早先的文件夹或一个思想领域，',
-                    '连到它的主张所对照的本论那一部分。名称为 AI 所译，义以英文版为准。'),
+    'zh': {'title': '早先的文件夹与各思想领域怎样与现行的本论相接',
+           'lede': ('由 connection_map.py 依对照表的 {n} 条主张画出，每一条都对照现行的本论来读。一条线把一个早先的文件夹或一个思想领域，',
+                    '连到它的主张所对照的本论那一部分。图中文字为 AI 所译，义以英文版为准。'),
            'ai': ('每一条线都是 AI 的读法，不是人的。一条线不是证明；相合画得并不比相分更显眼。', ''),
            'critic': '随机复核 {sampled} 条，据此估计全部 {n} 条中约 {label}% 的标签或目标角色有误，约 {fails}% 的读法有误。',
            'folders': '{n} 个早先的文件夹', 'claims': '主张', 'parts': '它们所对照的本论各部分',
@@ -516,7 +537,7 @@ def overview_svg(data: dict, lang: str = 'en') -> str:
     height = bottom + 212
     loose = sum(T['carried'].get(k, 0) for k in ABSENT)
     desc = (' '.join(_ledes(data, pointer=False)) + f' The relations count the claims drawn; {_with_relation(data)} that stand only in history or are not carried also carry one, which the crosswalk’s table counts.'
-            if not zh else words['lede'][0].format(n=num(T['entries'])) + words['lede'][1] + words['ai'][0])
+            if not zh else _ledes_zh(data) + f'关系计的是画出的主张；仅存于历史或未承继者中另有 {_with_relation(data)} 条也带有关系，对照表的表格计入它们。')
     out = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {OV_W} {height}" width="{OV_W}" height="{height}" role="img" '
            f'aria-labelledby="cx-title cx-desc" font-family="{html.escape(OV_FONT)}">',
            f'<title id="cx-title">{html.escape(words["title"])}</title>',

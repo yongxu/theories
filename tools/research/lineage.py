@@ -362,7 +362,7 @@ def svg(s, lang, weeks):
         only = used[0]
         shapes = [(lambda x, yy, k=only: marker(x, yy, k, False, 'shape'), words['labels_all'].format(
             n=count[only], label=s['labels'][only][lang],
-            others=('」「' if lang == 'zh' else ' or ').join(s['labels'][k][lang] for k in LABELS if k != only)))]
+            others=('」「' if lang == 'zh' else ', or ').join(s['labels'][k][lang] for k in LABELS if k != only)))]
     else:
         shapes = [(lambda x, yy, k=key: marker(x, yy, k, False, 'shape'), counted(s['labels'][key][lang], count.get(key, 0)))
                   for key in used]
@@ -719,7 +719,7 @@ def page(s, lang, weeks, undated, by_folder, totals, groups=(), against=None):
     cut = s['cut']
     # Each edition opens with its fronts' navigation line (the generated pages' NAV in English, zh_fronts' line in
     # Chinese), its time on a line below.
-    head = ([zh_fronts.nav_line(here), '', '*{time}*'] if lang == 'zh' else
+    head = ([zh_fronts.nav_line(here), '', '*{time}*'] + (['', words['translation']] if words.get('translation') else []) if lang == 'zh' else
             [' · '.join(navigation.link(p, here, label) for p, label in navigation.NAV), '',
              f'[{words["other_language"]}]({os.path.basename(other)}) · {{time}}'])
     lines = [HEADER, '', f'# {words["title"]}', ''] + head + ['',

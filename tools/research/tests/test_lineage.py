@@ -127,7 +127,7 @@ class Tree(unittest.TestCase):
         self.assertEqual(errors, [])
         en, svg, zh = pages[lineage.PAGE['en']], pages[lineage.SVG['en']], pages[lineage.SVG['zh']]
         self.assertLess(en.index('**The arc in brief.** It grew.'), en.index('## '))  # the ten-minute part opens the page
-        self.assertIn('>public, all 3 so far; none yet private and unpublished or AI reconstruction</text>', svg)
+        self.assertIn('>public, all 3 so far; none yet private and unpublished, or AI reconstruction</text>', svg)
         self.assertIn('>26 Oct</text>', svg)
         self.assertIn('>2 Nov</text>', svg)
         self.assertIn('>11月2日</text>', zh)

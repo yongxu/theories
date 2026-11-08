@@ -1,0 +1,624 @@
+[
+ {
+  "key": "spine",
+  "findings": [
+   {
+    "where": "README.md line 27, generated from _process/navigation/README-FIRST-SCREEN.md line 20 (the README's caption under spine.svg)",
+    "text": "\"the rest are counting laws, below the grammar (6), or stand at a named distance, each with its reason (99)\"",
+    "severity": "medium",
+    "why": "Re-score Q3 items 2 and 3 named the README caption: \"Files: `spine.svg`, its captions in README, ONE-PAGE, the overview and THEORY-GRAPH\" and \"Files: README caption, ONE-PAGE 'How to read the picture' and `spine.svg` top bar\". ONE-PAGE, the overview and THEORY-GRAPH now link [derived](GLOSSARY.md#derived) and [named distance](GLOSSARY.md#named-distance) and say \"The chapters are numbered for reading, not as an order of proof\". The README caption, which most readers see first, still has neither the links nor the numbering clause.",
+    "fix": "In README-FIRST-SCREEN.md line 20, link \"derived\" to ../../GLOSSARY.md#derived and \"named distance\" to ../../GLOSSARY.md#named-distance. Add the clause \"the chapters are numbered for reading, not as an order of proof, so uses run both ways\", linked to THEORY-GRAPH.md#do-the-recorded-uses-form-a-cycle. Then render."
+   },
+   {
+    "where": "theories/becoming/results/spine.svg, subtitle line 2 (WORDS['en']['numbering'] in tools/research/spine.py)",
+    "text": "\"212 of the 497 uses between chapters run backward, an earlier chapter’s results using a later one’s (the darker curves).\"",
+    "severity": "low",
+    "why": "The darker curves draw only the 6 backward pairs with 10 or more uses (60, 26, 20, 17, 13, 10 = 146 uses). The other 66 backward uses are in pairs that are not drawn. THEORY-GRAPH says \"Darker curves are an earlier chapter's results using a later one's: 6 of the 17 pairs drawn\". A reader who adds up the dark curves will not reach 212.",
+    "fix": "Change the parenthesis to \"(drawn darker where a pair has 10 or more)\", or \"(the darker curves, for pairs drawn)\"."
+   },
+   {
+    "where": "ONE-PAGE.md, THE-THEORY-OF-BECOMING.md and THEORY-GRAPH.md 'How to read', from how_to_read() in spine.py",
+    "text": "\"The chapters are numbered for reading, not as an order of proof, so uses run both ways\"",
+    "severity": "low",
+    "why": "The home (chapters/README.md line 9) says only \"the numbering is for reading, not an order of proof\". The backward uses show that the numbering is not a proof order. The numbering does not cause them, and \"so\" reads as a claim that it does.",
+    "fix": "Replace \"so uses run both ways\" with \"and uses run both ways\"."
+   },
+   {
+    "where": "GLOSSARY.md line 84 (named-distance row)",
+    "text": "\"not read as a case of grammar laws (neither derived nor under a stated hypothesis)\"",
+    "severity": "low",
+    "why": "The parenthesis counts the row under a stated hypothesis as a case of grammar laws. The picture's own note says \"only the 11 derived above are read as cases of grammar laws, and 1 as a root form under a stated hypothesis\". 08 §7 calls that row \"the root form `RootForms.outside_leaves_no_offspring` at one step\".",
+    "fix": "Say \"not read as a case of grammar laws or of a root form (neither derived nor under a stated hypothesis)\"."
+   },
+   {
+    "where": "GLOSSARY.md line 83 (derived row, its example)",
+    "text": "\"For example `Flow.beyond_gives_nothing` ... is a case of the law that nothing within a closure bears the relation to what lies beyond it\"",
+    "severity": "low",
+    "why": "The same row says \"read as a case of grammar laws ... the case rests on the review\". THEORY-GRAPH says each of the eleven was \"read as a case of grammar laws by an AI-written review\". The example drops \"read as\".",
+    "fix": "Change to \"is read as a case of the law that ...\"."
+   },
+   {
+    "where": "theories/becoming/results/spine.svg, count labels \"26\" at (555.2, 691.2) and \"35\" at (350.6, 729.3)",
+    "text": "\"26\" and \"35\"",
+    "severity": "low",
+    "why": "Measured on the SVG geometry: \"26\" overlaps the light spoke from 02 to the grammar by 1.4 px, besides sitting on its own 01→03 curve. \"35\" is 2.2 px from the dotted 07→02 application curve and 4.9 px from the 07→02 formal-reuse curve. It sits where three curves bunch. The re-score asked for labels to be read off curves. The chapter blocks now clear them, but these two counts still sit on other lines.",
+    "fix": "In svg(), add the spokes' sample points to place_box's soft obstacles. Also try the next offset along the 07→01 curve for 35, so it stands clear of the 07→02 pair."
+   },
+   {
+    "where": "theories/becoming/results/spine.svg, five-laws strip, Lumping and Widening bars",
+    "text": "hatched rects width=\"2.7\" for \"2 rows, 1 reach\" and \"8 rows, 1 reach\"",
+    "severity": "low",
+    "why": "The hatch pattern repeats every 4 px with 2 px stripes. A 2.7 px segment shows at most one sliver. In the 2x screenshot the Lumping and Widening hatches are barely visible, so only the words carry the counts.",
+    "fix": "Give a hatched segment a minimum width (for example 6 px) and say so in a footnote. Or draw the reaching share as a solid darker fill."
+   },
+   {
+    "where": "theories/becoming/results/spine.svg, strip head (WORDS['en']['laws_head'])",
+    "text": "\"central rows on each; hatched, those reaching the grammar\"",
+    "severity": "low",
+    "why": "The picture never says what \"reach\" means. The page caption gives 08 §7's words: \"those whose compiled type or value reaches the grammar\". The note under the strip guards against reading reach as derived, but does not say what reach is.",
+    "fix": "Head: \"hatched, those whose compiled type or value reaches the grammar\"."
+   },
+   {
+    "where": "tools/research/spine.py WORDS['en']['laws_note']",
+    "text": "\"(nine declarations stand in two) ... and 1 as a root form under a stated hypothesis\"",
+    "severity": "low",
+    "why": "The \"1\" is a literal. check() holds 08's sentence only for the rows and \"(nine declarations stand in two)\". If the number under a stated hypothesis changes, the note keeps \"1\" with nothing to stop the render.",
+    "fix": "Format the 1 from boundary_counts()['under a stated hypothesis'], as {d} already is."
+   },
+   {
+    "where": "theories/becoming/chapters/08-METHOD.md §7 table header, beside the picture's strip",
+    "text": "Picture: \"Rows, not declarations: 87 of the 126 central rows\" against 08's table column \"Central declarations on it\"",
+    "severity": "low",
+    "why": "Recomputed from shared-laws.json and COVERAGE.json. Over the 126 (row, declaration) pairs the counts are 42/54/14/2/8 rows, with 42/16/14/1/1 reaching the grammar, as the picture says. Over the 117 distinct declarations they would be 41/46/13/2/7. So the picture is right, and 08's own sentence says \"Of the 126 rows, 46 now reach the grammar: all 42 on closure\". But the home table's header says declarations, so a reader checking the picture against 08 sees a contradiction.",
+    "fix": "In 08 §7's table, rename the column \"Central rows on it\", as COMPLETION.md says \"Counted per row\". The holder of 08 decides this."
+   },
+   {
+    "where": "ONE-PAGE.md and THE-THEORY-OF-BECOMING.md, alt text of spine.svg; the overview's caption",
+    "text": "\"... the two premises coming into chapter 7 as hypotheses where used, and T1 to T8 at their homes coloured by test outcome\"",
+    "severity": "low",
+    "why": "THEORY-GRAPH's alt now includes \"the five shared laws under the standings\". The one page and the overview alt texts leave out the new strip. The overview's caption also lacks the five-laws link that ONE-PAGE's caption has (\"the five laws the models share, balance represented and not derived: [their table]\").",
+    "fix": "Add \"the five shared laws under the standings\" to both alt texts. Add ONE-PAGE's five-laws clause and link to the overview caption."
+   },
+   {
+    "where": "README.md line 15 (changed in this diff) against ONE-PAGE.md line 5",
+    "text": "\"[the one page](theories/becoming/ONE-PAGE.md) (15–20 minutes)\"",
+    "severity": "low",
+    "why": "ONE-PAGE's own line still reads \"Fifteen to nineteen minutes to read\". Outside this lane's picture scope, but it is a count changed in this diff that now disagrees with its home.",
+    "fix": "Make ONE-PAGE's line say \"Fifteen to twenty minutes\", or take both from the same reading-time rule."
+   }
+  ],
+  "read": "Diff 90b61d8a6..e0c5ae6da: read --stat. Read in full: the tools/research/spine.py diff (svg, layout, laws_strip, central_rows, standings_svg, law_english, how_to_read, lead, zh_page parts, check), plus the helpers shared_laws_rows, method_section_7, reaching_the_grammar, rows_reaching, central_total, shared_laws_section and counts(). Read in full: theories/becoming/results/spine.svg, and looked at it in headless Chrome at 1x and 2x with crops of the ring, the 07 side and the strips. Read lines 1-110 of theories/becoming/results/THEORY-GRAPH.md: How to read, the standings table, the eleven-derived table with its English \"A case of\" column, The five shared laws, the cycle paragraph, the theses table and What the picture shows. Read ONE-PAGE.md lines 1-40 and THE-THEORY-OF-BECOMING.md lines 1-34 (both captions and alt texts). Read GLOSSARY.md rows 83-84 and the GLOSSARY.zh rows, for their anchors only. Read 08-METHOD.md §7 (lines 420-450: the shared-laws table, the connectivity paragraph and the standings on the edge). Read COMPLETION.md's shared-laws section. Read the README.md diff and line 25-27 caption, and the rescore4 synthesis. Measured with python3 -B: the per-law central rows and those reaching the grammar from shared-laws.json together with COVERAGE.json (42/42, 54/16, 14/14, 2/1, 8/1; 87 of 126; 46 reaching, 3 on no anchor; all match the strip and 08 §7). From theory-graph.json: 497 between-chapter uses, 212 backward, 291 into root and map, 17 pairs drawn and 6 backward, each spoke's k of m (22/74, 14/76, 14/88, 8/23, 3/28, 4/10, 12/62, 4/26), the within counts and the results. All match the picture. Edge direction confirmed on one record (balance-from-the-first-law). Measured each count label's distance to every curve and spoke. Grepped Becoming/GrammarLaws.lean for the docstring of each of the 12 laws in the derived table: every English name matches its bold lead or first sentence. Grepped registry.py's cycle check: it covers all declared dependencies, and the numbering and cycle clause claims no more than that. Grepped for the anchors: derived, named-distance, does-not-show--未表明 and do-the-recorded-uses-form-a-cycle exist. the-five-shared-laws is the English heading's slug, and build_site gives headings ids. Grepped chapters/README.md line 9 for the numbering home. Ran the focused tests test_spine, test_lineage and test_connection_map: 73 tests OK at load about 72. The full suite was deliberately not run. Not read: the Chinese pages and pictures, standings.svg, the lineage files and the connections.zh.svg.\"",
+  "verdicts": [
+   {
+    "where": "README.md line 27 (from _process/navigation/README-FIRST-SCREEN.md line 20), caption under spine.svg",
+    "agree": true,
+    "severity": "medium",
+    "why": "Confirmed. README.md:27 still reads \"or stand at a named distance, each with its reason (99)\". It has no glossary links and no numbering clause. Re-score Q3 items 2 and 3 both name the README caption (\"Files: README caption, ONE-PAGE 'How to read the picture' and `spine.svg` top bar\"), and the diff changes only README line 15. The picture's own subtitle now carries the numbering line, which softens the backward-use half. The undefined \"named distance\" on the first screen still stands. READ IN FULL: spine.svg (screenshotted at 1x and 2x, crops of the strip and the upper ring), the spine.py diff (svg, laws_strip, central_rows, law_english, how_to_read, lead, check, zh_page, standings_svg), the 'How to read' paragraphs of ONE-PAGE, THE-THEORY-OF-BECOMING and THEORY-GRAPH, THEORY-GRAPH lines 11-68 (derived table, five shared laws, cycle paragraph), the GLOSSARY derived and named-distance rows, 08 §7 from its anchor through the standings table, the twelve GrammarLaws docstrings (extracted by regex), and registry.py lines 1085-1125 (the cycle check). Re-score synthesis read in full. SEARCHED ONLY: README.md and README-FIRST-SCREEN for the caption, chapters/README line 9 and 01-ROOT for the numbering clause, the reading-time strings, theory_graph.py for on_grammar. MEASURED: pairs, totals and modules recomputed with spine.counts on theory-graph.json; shared-laws.json boundary counts. test_spine ran: 27 OK."
+   },
+   {
+    "where": "spine.svg subtitle line 2 (WORDS['en']['numbering'])",
+    "agree": true,
+    "severity": "low",
+    "why": "Recomputed with spine.counts: 497 between-chapter uses, 212 backward. Drawn backward pairs (10 or more uses): root→map 60, root→knowing 26, map→significance 20, map→knowing 17, knowing→significance 13, root→life 10, which make 146. The legend's \"Not drawn: … the formal-reuse curves of pairs under 10 uses\" covers the gap, so this is precision, not a false claim."
+   },
+   {
+    "where": "How to read in ONE-PAGE, the overview and THEORY-GRAPH (how_to_read)",
+    "agree": true,
+    "severity": "low",
+    "why": "The home, chapters/README.md:9, says only \"the numbering is for reading, not an order of proof\". The \"so\" adds a cause that the home does not give. The backward uses show the numbering is not a proof order; the numbering does not produce them."
+   },
+   {
+    "where": "GLOSSARY.md line 84 (named-distance)",
+    "agree": true,
+    "severity": "low",
+    "why": "08 §7 separates the two: \"Eleven are derived, each a case of grammar laws\" and \"One … is under a stated hypothesis: it is the root form `RootForms.outside_leaves_no_offspring` at one step\". The picture note and the THEORY-GRAPH shared-laws paragraph keep them apart too (\"only the eleven above are read as cases of grammar laws, and one … as a root form\"). The glossary parenthesis instead files the hypothesis row under \"a case of grammar laws\"."
+   },
+   {
+    "where": "GLOSSARY.md line 83 (derived row, its example)",
+    "agree": false,
+    "severity": "none",
+    "why": "The example copies its homes. 08 §7 says \"Eleven are derived, each a case of grammar laws\", and the record's basis says \"A case of «所闭之界» at feeding from: what lies beyond a formation's closure is given nothing by it\". The same row already says \"read as a case of grammar laws\" and \"the case rests on the review\", so no qualifier is lost."
+   },
+   {
+    "where": "spine.svg count labels 26 and 35",
+    "agree": true,
+    "severity": "low",
+    "why": "In the 2x crop, 26 sits on its own dark 01→03 curve with a halo, beside the light 02 spoke. 35 sits on the long 07→01 curve, with the 29 curve and the dotted 07→02 curve close by. Both can be read and tied to their curves, and the render enforces the nearest-own check. Legibility only."
+   },
+   {
+    "where": "spine.svg five-laws strip, Lumping and Widening hatches",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed in the 2x crop: the 1-of-2 and 1-of-8 hatched segments show a single sliver. The words \"2 rows, 1 reach\" and \"8 rows, 1 reach\" carry the counts."
+   },
+   {
+    "where": "spine.svg strip head (laws_head)",
+    "agree": true,
+    "severity": "low",
+    "why": "08 §7 defines reach as \"the shared laws that a central declaration's compiled type or value reaches\". The THEORY-GRAPH lead uses those words (\"those whose compiled type or value reaches the grammar\"). The picture says only \"reaching\", although the note under the strip guards against reading it as derived."
+   },
+   {
+    "where": "spine.py WORDS['en']['laws_note'] (and zh)",
+    "agree": true,
+    "severity": "low",
+    "why": "The 1 is literal, and check() does not tie it to boundary_counts()['under a stated hypothesis'] (=1 in shared-laws.json). It is correct today, but nothing would catch drift."
+   },
+   {
+    "where": "08-METHOD §7 table header 'Central declarations on it' against the strip's 'rows'",
+    "agree": true,
+    "severity": "low",
+    "why": "08's own sentence counts rows: \"Of the 126 rows, 46 now reach the grammar: all 42 on closure … 16 of 54 on balance, 1 of 8 on widening, 1 of 2 on lumping\". Its table header says declarations. The picture follows the sentence. The tension is in 08, which this diff does not touch."
+   },
+   {
+    "where": "ONE-PAGE and overview alt text; overview caption",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed. grep finds no 'five laws' or 'five shared' in THE-THEORY-OF-BECOMING.md. ONE-PAGE:19 has the clause and its link. Only THEORY-GRAPH's alt mentions the strip."
+   },
+   {
+    "where": "README.md:15 against ONE-PAGE.md:5",
+    "agree": true,
+    "severity": "low",
+    "why": "README now says \"(15–20 minutes)\", and ONE-PAGE line 5 still says \"Fifteen to nineteen minutes to read\". The two disagree by one minute; the fix is to make them match."
+   }
+  ],
+  "missed": [
+   {
+    "where": "theories/becoming/results/spine.svg line 3, <desc id=\"spine-desc\"> (built in spine.py svg())",
+    "text": "\"497 formal-reuse uses between chapters, 17 pairs with at least 10 drawn; the continuation condition and C come into chapter 7 as premises …; T1 to T8 at their homes\"",
+    "severity": "low",
+    "why": "The accessible description leaves out the elements this change adds: the five-laws strip (42/42, 54/16 \"represented both ways, not derived\", 14/14, 2/1, 8/1), the numbering line (\"212 of the 497 uses between chapters run backward\") and the spoke counts now in the chapter blocks. A screen-reader user gets none of the unification the re-score asked to show (Q3 item 1).",
+    "fix": "In svg(), add to the desc: \"212 of them run backward (the chapters are numbered for reading, not as an order of proof); under the standings, the five shared laws with the central rows on each and those reaching the grammar, balance represented and not derived\"."
+   },
+   {
+    "where": "how_to_read() in spine.py, rendered in ONE-PAGE.md:15, THE-THEORY-OF-BECOMING.md:28 and THEORY-GRAPH.md:15, against the strip note in the same picture",
+    "text": "\"About a tenth of the 117 central declarations are read as cases of laws stated on the grammar (11 derived, and 1, a root form at one step, under a stated hypothesis)\"",
+    "severity": "low",
+    "why": "This change puts a note in the picture that says \"only the 11 derived above are read as cases of grammar laws, and 1 as a root form under a stated hypothesis\". THEORY-GRAPH's shared-laws paragraph says the same. 08 §7 keeps them apart: \"Eleven are derived, each a case of grammar laws\", and the twelfth \"is the root form … at one step\". The caption beside the picture still counts the twelfth among \"cases of laws stated on the grammar\". A reader sees two different counts of what is a case. The caption's sentence predates this diff, but the contrary note is new.",
+    "fix": "In how_to_read, write \"(11 [derived] as cases of grammar laws, and 1 read as a root form at one step, under a stated hypothesis)\". The glossary's named-distance parenthesis then follows."
+   }
+  ]
+ },
+ {
+  "key": "standings",
+  "findings": [
+   {
+    "where": "theories/becoming/results/data/spine.json first_view.bands[0].example.en, drawn in standings.svg under \"11 derived\" (the same phrase is in GLOSSARY.md line 83 and THEORY-GRAPH.md line 41, and comes from the edge record one-root-to-its-edge.json line 392)",
+    "text": "\"For example, Flow.beyond_gives_nothing: what lies beyond a formation's closure is given nothing by it\"",
+    "severity": "high",
+    "why": "This states the converse of the Lean. Flow.beyond_gives_nothing concludes `L.give t h c = 0`, where h is beyond the closure (`¬ L.WithinFeeding W f h`) and c is required by g within it. So it is what lies beyond that gives nothing. The declaration's own record says: \"A formation beyond the closure that takes part at a step gives nothing at that step to a condition a member of the closure then requires\" (feeding-closure.json, laws), and its statement says \"nothing beyond it gives, at any step, to a condition its members require\". The zh example is taken from feeding-closure.json and has the right direction (闭包之外的…都不向闭包所需的条件给予), so the English and Chinese pictures say opposite things. check() passes because it only finds the phrase in the edge record.",
+    "fix": "Set example.en to [\"theories/becoming/results/records/feeding-closure.json\", \"A formation beyond the closure that takes part at a step gives nothing at that step to a condition a member of the closure then requires\"], from the same record as the zh. Correct the edge record's basis sentence as a record correction, and with it GLOSSARY.md line 83's example and THEORY-GRAPH's row, all of which repeat it."
+   },
+   {
+    "where": "spine.json first_view.bands[0].en.gloss, drawn in standings.svg under \"11 derived\"",
+    "text": "\"each a case of grammar laws, through bridges checked in Lean as equivalences\"",
+    "severity": "medium",
+    "why": "08 §7 says: \"each a case of grammar laws, through bridges checked in Lean as equivalences and support the review reads where a row has them\", and \"the other readings and the case of each derived row rest on the review\". The glossary says \"the case rests on the review\". With the qualifier cut, a reader of the picture will take the eleven to be cases checked in Lean. Only the bridges are checked in Lean; the case is an AI-written review's reading, as THEORY-GRAPH says just below the picture. check() passes because the shortened gloss is a substring of 08's sentence.",
+    "fix": "Copy the whole clause: \"each a case of grammar laws, through bridges checked in Lean as equivalences and support the review reads where a row has them; the case rests on the review\". Or end the shortened gloss with \"; the case rests on an AI-written review\"."
+   },
+   {
+    "where": "spine.json first_view.distance[1].example.en, drawn in standings.svg under \"32 with balance in their statements\"",
+    "text": "\"For example, Flow.no_new_dependence: Descent forms no new dependence\"",
+    "severity": "medium",
+    "why": "The record sets this phrase only before its conditions: \"Descent forms no new dependence: with balance at a relatum coming to stand across a step and inheritance of c at its descents, where nothing taking part in the step depends on c, the relatum does not depend on c after the step\". Its statement says \"Under balance and inheritance descent forms no new dependence\". The picture shows the phrase without its conditions, which is wider than its home, and the zh copy (世系不形成新的依存) is wider in the same way.",
+    "fix": "Take the statement's words from the same record: en \"Under balance and inheritance descent forms no new dependence\", zh \"在平衡与承继之下经世系不形成新的依存\"."
+   },
+   {
+    "where": "standings.svg as a whole: subtitle and the distance classes",
+    "text": "\"placed by its standing against the edge of one root (08 §7)\"; \"18 on amounts\", \"6 on their own carrier\", \"2 laws of their models\" (no gloss and no example)",
+    "severity": "medium",
+    "why": "The picture is meant as the first view a newcomer can follow (synthesis Q3 item 6). It still relies on undefined terms. \"Edge of one root\" and \"coverage file\" are glossed only in GLOSSARY (\"how far the one root reaches; each central declaration has one standing against it\"). Three of the seven distance classes have no gloss, and six of the ten classes have no example. The footer sends the reader to \"the edge record, one-root-to-its-edge\" as plain text, with no glossary pointer. A newcomer cannot tell what separates \"on amounts\" from \"with balance in their statements\" or \"on their own carrier\".",
+    "fix": "Add the glossary's words to the subtitle: \"…against the edge of one root, how far the one root reaches (08 §7)\". End the footer with \"terms: GLOSSARY.md, edge of one root, derived, named distance\". For the classes without a gloss, say in the footer that their reasons are in the edge record, not on the picture."
+   },
+   {
+    "where": "THEORY-GRAPH.md line 33 (alt text of standings.svg) and its zh copy",
+    "text": "\"with one example each in its record's words\" / \"各附一例，用其记录的话\"",
+    "severity": "low",
+    "why": "Four of the ten classes drawn have an example (derived, under a stated hypothesis, counting, balance in their statements). The other six have none. After the first fix above, one of the four also changes record.",
+    "fix": "\"with an example, in its record's words, for four of them\"."
+   },
+   {
+    "where": "spine.py check(), the first_view block",
+    "text": "for item in fv['bands'] + fv['distance']: if item.get('example'): for lang in ('en','zh'): holds(*item['example'][lang])",
+    "severity": "low",
+    "why": "The check only confirms that each phrase occurs somewhere in the named file. It does not confirm that the example declaration carries the band's label in shared-laws.json boundary.rows, nor that the phrase belongs to an entry naming that declaration. So the derived example's en and zh could come from two records and disagree in direction without failing.",
+    "fix": "Also require rows['Becoming.' + decl]['label'] == item['key'], and require that the phrase sits in a laws or statement entry whose declarations include 'Becoming.' + decl (or that the en and zh paths are the same file)."
+   },
+   {
+    "where": "spine.json first_view.bands[1] (\"1 under a stated hypothesis\")",
+    "text": "\"For example, GroupEnding.Flow.all_end: one shared condition leaves no group to select among\"",
+    "severity": "low",
+    "why": "08 §7: \"One, `GroupEnding.Flow.all_end`, is under a stated hypothesis\". It is the class's only member, so \"For example\" suggests there are others.",
+    "fix": "For a band whose count is 1, write \"It is GroupEnding.Flow.all_end: …\" (zh \"即 …\")."
+   },
+   {
+    "where": "standings.zh.svg footer",
+    "text": "\"由 tools/research/spine.py 依 shared-laws.json 与 spine.json 生成；…\" (no translation label)",
+    "severity": "low",
+    "why": "spine.json's about says \"The Chinese labels and glosses are AI translations\", and THEORY-GRAPH.zh's header says 本页由 AI 翻译. The svg itself carries no such label, and it is linked and can be opened on its own.",
+    "fix": "Add a footer line to the zh picture: \"中文标签与说明为 AI 翻译，以英文为准。\""
+   },
+   {
+    "where": "standings.svg subtitle",
+    "text": "\"Each square is one central declaration, a Lean statement that a row of the coverage file names as central\"",
+    "severity": "low",
+    "why": "08 §7 counts \"the 126 central rows (nine declarations stand in two)\", and the spine.svg strip above counts rows by law. A reader who adds up row counts elsewhere will not reach 117 and is not told why.",
+    "fix": "Add the glossary's words: \"…names as central (126 rows, nine declarations twice, so 117 distinct ones)\"."
+   }
+  ],
+  "read": "Read in full: theories/becoming/results/standings.svg (headless Chrome screenshot, 900x852) and standings.zh.svg (screenshot, 900x764); the first_view block of theories/becoming/results/data/spine.json; tools/research/spine.py's standings_svg, boundary_counts and the first_view part of check() (lines ~224-246); THEORY-GRAPH.md lines 1-40 (the standings table, its paragraph, the picture's alt text and caption); 08-METHOD.md §7 (lines 422-500, both tables and the standings paragraph); the GLOSSARY.md diff for \"derived\" and \"named distance\" (lines 81-84); the Q3/Q4 part and the checker's corrections in rescore4-synthesis.md. Measured with python3 -B: shared-laws.json boundary.counts (11/1/6/22/32/18/16/6/2/3, total 117, the two zero classes not drawn) and the label of each of the 117 rows in boundary.rows. The counts match 08 §7's table, and the total of 117 is the distinct declarations: the \"126 central rows (nine declarations stand in two)\" are counted once each. Each example declaration is in the band shown. Only searched: the five example phrases in their records (one-root-to-its-edge.json line 392, feeding-closure.json statement and laws, selection-among-groups-by-ending.json, relative-position-is-zero-sum.json, transmission-is-inheritance-and-need.json); Flow.beyond_gives_nothing in Becoming/Interdependence.lean (statement read in a check snapshot); «所闭之界» and its docstring in GrammarLaws.lean; THEORY-GRAPH.zh.md for the zh caption and its AI-translation header. Ran test_spine only (27 tests OK, load average about 99). test_lineage and test_connection_map are outside this scope and were not run.",
+  "verdicts": [
+   {
+    "where": "spine.json first_view.bands[0].example.en (standings.svg, \"11 derived\"); GLOSSARY.md line 83; THEORY-GRAPH.md line 41; one-root-to-its-edge.json line 392",
+    "agree": true,
+    "severity": "high",
+    "why": "Real. Interdependence.lean:152 takes `within : WithinFeeding W f g`, `beyond : ¬ WithinFeeding W f h` and `present : h ∈ L.present t`, and concludes `L.give t h c = 0`. So the formation beyond the closure (h) is the one that gives nothing. Its docstring reads: \"What lies beyond a formation's feeding closure gives nothing, at any step, to a condition that a member of the closure then requires\". The picture, the glossary example this change adds, and the edge record's basis all say \"what lies beyond a formation's closure is given nothing by it\", which reverses the direction. The zh picture (from feeding-closure.json) has the right direction, so the two pictures disagree. Scope I read in full: standings.svg (rendered and viewed), the first_view block of spine.json, spine.py's check() first_view block, boundary_counts and standings_svg, THEORY-GRAPH.md lines 1-45 and the diff for GLOSSARY.md and THEORY-GRAPH.md, the 08 §7 standings paragraph (line 448) and line 437, shared-laws.json boundary.counts and the four example rows, and the Lean of beyond_gives_nothing and rise_needs_fall. I only searched feeding-closure.json, selection-among-groups-by-ending.json, relative-position-is-zero-sum.json, transmission-is-inheritance-and-need.json (laws and statement) and the zh svgs' text. test_spine ran: 27 tests OK."
+   },
+   {
+    "where": "spine.json first_view.bands[0].en.gloss / zh.gloss (standings.svg, \"11 derived\")",
+    "agree": true,
+    "severity": "medium",
+    "why": "Real. 08 §7 reads: \"Eleven are derived, each a case of grammar laws, through bridges checked in Lean as equivalences and support the review reads where a row has them\", and \"the other readings and the case of each derived row rest on the review\". The picture cuts this off after \"equivalences\" in both languages, so a reader takes the case itself to be Lean-checked. The subtitle's \"read as cases\" softens this only a little. The table just above the picture in THEORY-GRAPH quotes the full clause, but the svg is linked and opened on its own."
+   },
+   {
+    "where": "spine.json first_view.distance[1].example (\"Descent forms no new dependence\")",
+    "agree": true,
+    "severity": "medium",
+    "why": "Real. In laws[7] of transmission-is-inheritance-and-need.json the phrase is only the lead before its conditions: \"Descent forms no new dependence: with balance at a relatum coming to stand across a step and inheritance of c at its descents, where nothing taking part in the step depends on c, ...\". The statement reads: \"Under balance and inheritance descent forms no new dependence\". The proposed fix is in the statement verbatim (en and zh)."
+   },
+   {
+    "where": "standings.svg subtitle and unglossed distance classes",
+    "agree": true,
+    "severity": "medium",
+    "why": "Real. The picture's organizing term, \"edge of one root\", is never explained on it, though the glossary has \"how far the one root reaches; each central declaration has one standing against it\". \"on amounts\", \"on their own carrier\" and \"laws of their models\" have no words at all. The footer names the edge record only as plain text. A newcomer opening the svg alone cannot tell the seven reasons apart. 08 §7's standings sentence has no gloss for these three either, so the honest fix is a pointer to where their reasons are, not new words."
+   },
+   {
+    "where": "THEORY-GRAPH.md line 33 alt text and its zh copy (\"with one example each\")",
+    "agree": true,
+    "severity": "low",
+    "why": "Four of the ten classes drawn carry an example; six do not."
+   },
+   {
+    "where": "spine.py check(), first_view examples",
+    "agree": true,
+    "severity": "low",
+    "why": "Real. holds(path, phrase) only finds the phrase somewhere in the file. It does not tie the phrase to the example's declaration or class, and it does not compare the en and zh sources, which is how the reversed en example passed beside a correct zh one. Related: the about says each class's words are \"checked there together with its count\", but for the three bands only the gloss is checked against 08, not the count (08 writes Eleven/One/Six in words)."
+   },
+   {
+    "where": "spine.json first_view.bands[1] (\"For example\" for a class of one)",
+    "agree": true,
+    "severity": "low",
+    "why": "08 §7: \"One, `GroupEnding.Flow.all_end`, is under a stated hypothesis\"; it is the only member."
+   },
+   {
+    "where": "standings.zh.svg footer (no AI-translation label)",
+    "agree": true,
+    "severity": "low",
+    "why": "Real. connections.zh.svg carries \"AI 所译，义以英文版为准\", but standings.zh.svg has no such line, while spine.json's about says \"The Chinese labels and glosses are AI translations\". The svg can be opened on its own."
+   },
+   {
+    "where": "standings.svg subtitle (117 vs 126 rows)",
+    "agree": true,
+    "severity": "low",
+    "why": "The count 117 matches 08 (\"Counted once each, the 117 distinct declarations\") and shared-laws boundary.rows (117 keys). The note on 126 rows with nine counted twice only helps a reader who compares against row counts elsewhere."
+   }
+  ],
+  "missed": [
+   {
+    "where": "spine.json first_view.bands[1].example (standings.svg and standings.zh.svg, \"1 under a stated hypothesis\")",
+    "text": "\"For example, GroupEnding.Flow.all_end: one shared condition leaves no group to select among\" / \"一个共同条件不留下可供组间选择的组\"",
+    "severity": "medium",
+    "why": "Same pattern as the no_new_dependence finding: the picture takes the record's closing gloss and drops its conditions. In selection-among-groups-by-ending.json laws[5] it reads: \"Where every member of a generation is not active, as where every group depends on one condition that ran into joint excess, the next generation is empty: one shared condition leaves no group to select among.\" The Lean is the root form under three hypotheses (GivesFrom, ListedWithin, Outside). Without them, a reader believes that merely sharing one condition empties the next generation.",
+    "fix": "Use the law's first clause: en \"Where every member of a generation is not active, ... the next generation is empty\", or the statement's \"One condition shared by every group ends every group, so it supplies no selection among them\" if the shortening keeps \"ran into joint excess\"; take the zh from the same entry (\"一代的每个成员都不活跃时……下一代为空\")."
+   },
+   {
+    "where": "spine.json first_view.bands[2].example (standings.svg, \"6 counting\")",
+    "text": "\"For example, RelativePosition.rise_needs_fall: a part's rise needs another part's fall\" / \"一个部分升需要另一部分降\"",
+    "severity": "medium",
+    "why": "The cut drops \"position\". The Lean docstring (RelativePosition.lean:166) reads: \"A part's rise in position needs another part's fall\". The record's sentence begins \"No change raises every part's position, and a part's rise needs ...\", and its statement says \"its rise is the rest's summed fall, whatever the amounts do\". Shown bare under \"counting\", \"a part's rise\" reads as growth in amount, so a reader takes amounts to be zero-sum, which the record denies.",
+    "fix": "en: \"a part's rise in position needs another part's fall\" (the Lean docstring), or the record's whole clause \"No change raises every part's position, and a part's rise needs another part's fall\"; zh likewise from the same entry, keeping 位置."
+   }
+  ]
+ },
+ {
+  "key": "lineage",
+  "findings": [
+   {
+    "where": "theories/LINEAGE.md, 'What became of the earlier folders', per-folder table, column 'Its material, dated' (data: theories/becoming/results/data/lineage.json 'folders', the 'to' ends)",
+    "text": "Selfishness spiral \"2021-05-21 – 2026-06-05\"; Drives \"– 2026-07-29\"; 智善 \"– 2026-07-29\"; Meta-attractor \"– 2026-08-14\"; Relational self \"– 2026-08-20\"; 間 and 文言 \"– 2026-09-02\"; Keep the possibility space open \"– 2026-09-03\"; Fork \"– 2026-09-07\"; Alignment \"– 2026-09-29\"",
+    "severity": "high",
+    "why": "The lead says each row gives \"the dated span of the material it draws on, as an AI reader found it in the folder's own text\". In 9 of the 16 folders, the folder's own text dates material later than the row's end. These are spoken recordings of 1 to 4 October that the folder presents as its own material: selfishness-spiral README.md:153 \"### Said in Chinese, 2026-10-04\"; drives README.md:67 \"**2026-10-04: 心 and 理, the regulator named…\"; zhishan README.md:221 \"(2026-10-04, spoken)\"; meta-attractor README.md:277 \"(2026-10-04, spoken)\"; relational-self README.md:72 \"**2026-10-04: the relational self as a way of deciding…\"; jian README.md:152 \"The grammar claim, said again in Chinese (2026-10-04)\"; keep-the-possibility README.md:178 \"**2026-10-04, said in Chinese…\"; the-fork README.md:60 \"**2026-10-02: provision like trees…\"; alignment README.md:214 \"(2026-10-04, spoken)\". A reader would believe, for example, that the selfishness folder's material stops in June 2026. Its spoken material actually runs to 4 October.",
+    "fix": "Set 'to' and its evidence for these nine folders to the lines above: 2026-10-04 for eight of them and 2026-10-02 for the Fork, then re-render. The other option is to narrow the lead to what the ends actually are, e.g. \"the span its genealogy dates\", but that loses the dated view the re-score asked for."
+   },
+   {
+    "where": "theories/LINEAGE.md folder table, row 'Memories and working style' (lineage.json folders: memories-and-working-style 'from')",
+    "text": "[2026-03-29](memories-and-working-style/README.md?plain=1#L214) – 2026-09-03",
+    "severity": "medium",
+    "why": "The cited line is \"| 2026-03-29 | claude.ai memory export 1\", which is the date of the first export, not the earliest date the folder gives for its material. The folder's own line 7 says \"Between 2026-03 and 2026-09, two claude.ai memory exports and twelve Claude Code project-memory folders accumulated\". The same table, \"Every row is from the memory layer\", has earlier rows: line 210 \"| 2026-03-07 | 《人类最重要的三个问题》 period\", and as far back as line 204 \"| 2021-05 | Dali field notes\". The other rows take event dates (Drives from 2021-05-21 recorded speech), so this row uses a different rule.",
+    "fix": "Use \"2026-03\" with its evidence at line 7 (\"Between 2026-03 and 2026-09 … accumulated\"). If event dates are the rule for every row, use \"2021-05\" from line 204."
+   },
+   {
+    "where": "theories/LINEAGE.md, 'The arc in brief', fifth and sixth sentences (lineage.json words.en.arc_short and zh)",
+    "text": "\"T2 is narrowed after failing\"",
+    "severity": "medium",
+    "why": "This is wider than its home. Phase 6 says \"T2's former wording fails on beetle cultures and T2 is narrowed\", and point 46 says the failure \"does not defeat T2 in the fisheries\". Point 44, in the same week, has T2 \"better than the field's fitted embedding\". \"After failing\" reads as T2 itself failed.",
+    "fix": "\"T2's wording fails on beetle cultures and T2 is narrowed\". Keep 150 words by shortening elsewhere, e.g. \"capturing the mechanisms of selection\" → \"capturing selection's mechanisms\". Make the same change to the zh \"T2 未通过后被收窄\"."
+   },
+   {
+    "where": "theories/LINEAGE.md, 'The arc in brief', last clause",
+    "text": "\"and the earlier folders are read against the account\"",
+    "severity": "medium",
+    "why": "The home drops a label here. Phase 6 says \"the earlier folders are read against it by AI readers in a crosswalk\", and point 48 says the crosswalk's \"every entry is an AI reading with no person's behind it\". The arc in full keeps \"by AI readers (48)\". The ten-minute part is where AI-made work must keep its label.",
+    "fix": "Add \"by AI readers\" (zh: \"由 AI 读者\") and trim three words elsewhere to stay at 150."
+   },
+   {
+    "where": "theories/LINEAGE.md, 'The arc in brief', fourth sentence",
+    "text": "\"By 6 October the writings are gathered into theory folders, the first predictions written before their run.\"",
+    "severity": "medium",
+    "why": "The home qualifies this. Phase 4 says \"the repository's first pre-specified predictions are written before their run\", and point 25 says \"The repository's first pre-specified predictions\". Dropping \"the repository's\" makes the claim about all the writings, but the earlier folders tag 2024 claims as predictions, e.g. alignment-selection-on-cognition README.md:242: \"AI accelerates that convergence … [prediction] (… 2024-04-16)\".",
+    "fix": "\"…the repository's first predictions written before their run\" (zh: \"本仓库最早的预测写于运行之前\"), with one word trimmed elsewhere."
+   },
+   {
+    "where": "theories/lineage.svg key, marks_note (lineage.json words.en.marks_note; tools/research/lineage.py lanes_of)",
+    "text": "\"A point's height above the axis only keeps marks apart\"",
+    "severity": "low",
+    "why": "lanes_of also places a titled point \"after the rest of its group, above all of them, so its leader rises through no other point's mark\". So height also lifts titled points above their untitled neighbours, and a reader may look for meaning in that. The bold rule (\"a bold title is a point on one of the threads\") and the Monday week labels (5 Oct, 12 Oct, 19 Oct, 26 Oct, 2 Nov, all Mondays and matching the growth table) do match what lineage.py draws.",
+    "fix": "\"A point's height carries no meaning: it keeps marks apart and lifts a titled point above its neighbours\"."
+   },
+   {
+    "where": "theories/LINEAGE.md folder table, 'Most read against' (lineage.py folder_rows, connection_map.read_against)",
+    "text": "Keep the possibility space open \"[07] (29), [02] (18)\"; Fork \"[05] (16), [02] (9)\"; Human Solutions Museum \"[03] (9), [05] (8)\"",
+    "severity": "low",
+    "why": "The counts agree with read_against computed from atlas.json and theory-graph.json for all 16 folders. But in these three rows the second place is a tie that the column header does not show: keep-the-possibility ch-02 18 / ch-05 18, Fork ch-02 9 / ch-07 9, Museum ch-05 8 / ch-07 8. The tie is broken by id, so \"the two parts … most read against\" names one of two equals. The link text is also only a chapter number (\"03\"), with no name.",
+    "fix": "Show every part tied at second place, or say in the lead \"ties broken by chapter number\". Consider giving the chapter's short name as the link text."
+   },
+   {
+    "where": "theories/LINEAGE.md folder table lead (lineage.json words.en.folders_table)",
+    "text": "\"as an AI reader found it in the folder's own text\"",
+    "severity": "low",
+    "why": "The lead names an AI reader and nothing wider, as asked. Unlike the turning points, which have reads/1-gathered-and-verified.json, 2-finalized.json and lineage-origins.json, no file in development/rw-spine/reads records this read or any check of it, and the data says only \"basis\": \"folder\". The rows above show the read missed later dates.",
+    "fix": "Record the dating read, its instruction and output, beside the other reads, and link it from the lead. If it is not recorded, say \"by the AI that assembled this page, unchecked\"."
+   },
+   {
+    "where": "theories/lineage.svg key, labels_all",
+    "text": "\"public, all 48 so far; none yet private and unpublished or AI reconstruction\"",
+    "severity": "low",
+    "why": "The second clause is hard to parse because it puts the two other labels' names after \"none yet\" with no verb. The re-score asked for \"all 48 public so far\".",
+    "fix": "\"public: all 48 so far (none yet labelled private and unpublished, or AI reconstruction)\"."
+   }
+  ],
+  "read": "Read in full: theories/LINEAGE.md lines 1-49 (reading time, intro, arc in brief, arc in full, In brief with its six phases, picture key, coverage, how the points were chosen) and lines 174-241 (What became of the earlier folders with its per-folder table, Growth in the records, What this page rests on). For turning points 1-48, read each title and the first 300 characters of its row. Read the full diff of tools/research/lineage.py (check, svg week labels, labels_all, marks_note, week_label, evidence_target, folder_rows, page, render), plus lanes_of and connection_map.read_against / overview_threads. Read lineage.json 'folders' and the words entries (en arc_short, labels_all, marks_note, folders_table, folders_columns, growth, intro, reading_time; zh arc_short, reading_time, marks_note, labels_all, folders_table), and the zh page head. Looked at theories/lineage.svg as a headless-Chrome screenshot at 1000x954. Measured: the arc in brief is 150 words and the phases 483. git rev-list --count 7040940cd = 6087, commit dated 2026-11-08, ancestor of main. The first commit is 2026-09-06. The five week bars are Mondays (5 Oct to 2 Nov) and match the growth table. read_against was recomputed from atlas.json and theory-graph.json, and kind and claims from atlas correspondence_groups: all 16 rows agree. Ran test_lineage: 15 tests, OK. The full suite was not run. Per folder, I scanned every README (and architecture's subfiles) for dates and opened the cited and competing lines for memories-and-working-style (lines 7, 82, 178, 195-242), relational-self-and-datong (lines 1-12, 235-270, 72, 426), architecture-for-a-living-earth (all .md dates; CONNECTIONS-AND-EVIDENCE.md 17-36), alignment-selection-on-cognition (236-242, 560-566, 214, 626, 779), jian-and-wenyan (905-915, 152, 832-842, 1296-1299), wamotopia (336, 370-380, 545-583), meta-attractor (6-24, 277), evolving-community-swarms (context file 75-80), and the October lines of drives, selfishness, zhishan, keep-the-possibility and the Fork. Only searched: the synthesis file (Q3/Q4 sections, the item list and the checker's corrections, read in part); the crosswalk page for jian and the theories/README row; build_site.py's handling of ?plain=1. Not opened: sources/12-*, 13-*, 18-*, drafts/2026-10-02-friend-conversation*.",
+  "verdicts": [
+   {
+    "where": "theories/LINEAGE.md folder table, 'Its material, dated', the 'to' ends of nine folders (lineage.json folders)",
+    "agree": true,
+    "severity": "medium",
+    "why": "Real. I opened all nine cited lines and each one dates material in the folder's own text later than the row's end. Examples: selfishness README:153 \"### Said in Chinese, 2026-10-04\"; drives README:67 \"**2026-10-04: 心 and 理, the regulator named…\" (\"From the recording … which Ren supplied on 2026-10-04\"); alignment README:214 \"(2026-10-04, spoken)\"; keep-the-possibility README:178; jian README:152; relational-self README:72; meta-attractor README:277; zhishan README:221; Fork README:60 (2026-10-02). The lead promises \"the dated span of the material it draws on, as an AI reader found it in the folder's own text\", so the ends are wrong. I rate it medium, not high. It is a wrong date in a provenance column, in the class of a wrong count. It changes no claim of the account, and a careful reader could take the ends as each genealogy's span. The later in-folder notes of 6–26 October and 3 November (meta-attractor:6–20, jian:6–10) are notes on the later work, not material, so they rightly stay out. The fix is the reader's: set those nine 'to' ends to their lines. Read in full: LINEAGE.md lines 1–48 and 174–201; lineage.svg, screenshotted; the lineage.py diff, plus lanes_of; lineage.json words.en/zh (arc_short, marks_note, labels_all, folders_table, reading_time) and the whole 'folders' list; points 14, 15, 22, 23, 25–27, 33, 34, 40, 44–48; memories README:5–9 and 198–242; relational-self README:230–275; architecture README:1–10 and CONNECTIONS-AND-EVIDENCE.md:1–37; alignment README:238–243; context README:1050–1053; Fork README:150–153. Computed: connection_map.read_against over all 16 folders, matching the table; the commit count (git rev-list --count 7040940cd = 6087, committed 2026-11-08 +0700); the bar Mondays; the bold set against the threads; test_lineage (15 OK). Searched only, not read: every folder README for full dates, YYYY-MM dates and bare years; the rescore4 synthesis (Q3/Q4 lines); development/rw-spine/reads (file names only)."
+   },
+   {
+    "where": "theories/LINEAGE.md folder table, row 'Memories and working style', 'from'",
+    "agree": true,
+    "severity": "low",
+    "why": "The rule is inconsistent, but the end can be defended. Line 7 says the material is the memory layer: \"Between 2026-03 and 2026-09, two claude.ai memory exports and twelve Claude Code project-memory folders accumulated\". Line 214, \"2026-03-29 | claude.ai memory export 1\", is the earliest of those exports. Line 204, \"2021-05 | Dali field notes\", dates an event the memory records, not when the material was made. Other rows do use event dates, so the column mixes two rules. That is a precision issue, not a misleading one. The smallest fix is evidence at line 7 with \"2026-03\"."
+   },
+   {
+    "where": "theories/LINEAGE.md 'The arc in brief', \"T2 is narrowed after failing\" (and zh \"T2 未通过后被收窄\")",
+    "agree": true,
+    "severity": "medium",
+    "why": "Wider than its home. Phase 6 says \"T2's former wording fails on beetle cultures and T2 is narrowed\". Point 46 says the failure \"does not defeat T2 in the fisheries\", and point 44 in the same week reads \"T2 better than the field's fitted embedding\". The brief drops both \"wording\" and the domain. Note that arc_short is exactly 150 words without its bold lead (154 with it), so any words added must be trimmed elsewhere."
+   },
+   {
+    "where": "theories/LINEAGE.md 'The arc in brief', \"and the earlier folders are read against the account\"",
+    "agree": true,
+    "severity": "medium",
+    "why": "The brief drops the AI label that its home carries. Phase 6 has \"read against it by AI readers in a crosswalk\", and point 48 has \"every entry is an AI reading with no person's behind it\". This breaks the rule that AI-made work keeps its label. The phase line just below restores it within the same ten-minute part, which softens the effect, but the brief itself is a restatement and must keep it."
+   },
+   {
+    "where": "theories/LINEAGE.md 'The arc in brief', \"the first predictions written before their run\"",
+    "agree": true,
+    "severity": "medium",
+    "why": "Wider than its home. Phase 4 and point 25 say \"the repository's first pre-specified predictions\", and dropping \"the repository's\" turns the claim into one about all the writings. The phrase \"written before their run\" saves part of it, since the 2024 [prediction] tags (alignment README:242, \"AI accelerates that convergence … [prediction] (… 2024-04-16)\") had no run. Still, a restatement may only shorten its home, not drop a qualifier that bounds it."
+   },
+   {
+    "where": "theories/lineage.svg key, marks_note",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed in lineage.py lanes_of: \"a titled point is placed after the rest of its group, above all of them\". Height therefore also lifts titled points. The bold rule matches line 338 ('bold' if p['id'] in thread), and the bold titles 6, 8, 11, 13, 16, 19, 32, 35, 38, 40 are all thread points. The week labels 5 Oct, 12 Oct, 19 Oct, 26 Oct and 2 Nov are all Mondays and match the growth table and the five bars."
+   },
+   {
+    "where": "theories/LINEAGE.md folder table, 'Most read against' ties",
+    "agree": true,
+    "severity": "low",
+    "why": "Recomputed read_against: all 16 rows match, and so does the Claims column (g['entries'], e.g. Museum 31 in theories/README.md:18). Second-place ties exist for keep-the-possibility (ch-02 18 / ch-05 18), the Fork (ch-02 9 / ch-07 9) and the Museum (ch-05 8 / ch-07 8), each broken by id order in read_against's sort. Drives ties at first place (14/14), and both of those are shown."
+   },
+   {
+    "where": "theories/LINEAGE.md folder table lead, \"as an AI reader found it in the folder's own text\"",
+    "agree": true,
+    "severity": "low",
+    "why": "development/rw-spine/reads holds the turning-point reads and round files, but no folder-dating read; the data says only \"basis\": \"folder\". The lead claims nothing wider than an AI reader, so it is correctly labelled, only unsourced. The errors in the first finding show that the read was not checked."
+   },
+   {
+    "where": "theories/lineage.svg key, labels_all",
+    "agree": true,
+    "severity": "low",
+    "why": "The rendered key reads \"public, all 48 so far; none yet private and unpublished or AI reconstruction\", which is hard to parse and has no verb. It is wording only. The zh is clearer: \"迄今全部 48 个；尚无「…」\"."
+   }
+  ],
+  "missed": [
+   {
+    "where": "theories/LINEAGE.md 'The arc in brief', third sentence (lineage.json words.en.arc_short; zh \"2026 年，问题转向 AI\")",
+    "text": "\"In 2026 the question turns to AI, a Fork narrative is proposed and left\"",
+    "severity": "medium",
+    "why": "The brief drops the question that its home names. The arc in full says \"In February 2026 the question turns to AI: 'how could there be a future for humans in this winner takes all game?' (14)\", and point 14 quotes the question and its \"one rule … stop using AI compete with others\". Read bare, the brief tells a reader AI enters the account in 2026. The same page's folder table now links to 2024 AI material, alignment-selection-on-cognition README:242: \"AI accelerates that convergence, because AI produces better game strategies than humans … [prediction] (… 2024-04-16)\", and README:243: \"AI is also the instrument for seeing attractors … 2024-04-16\". So the brief contradicts the folders the page itself dates.",
+    "fix": "\"In 2026 the question turns to a future for humans beside AI that competes with them\", or keep point 14's words: \"the question turns to AI as a winner-takes-all game\". Trim the same number of words elsewhere to stay at 150, and change the zh to match."
+   }
+  ]
+ },
+ {
+  "key": "chinese",
+  "findings": [
+   {
+    "where": "GLOSSARY.zh.md line 93 (row derived) and theories/becoming/results/standings.zh.svg, derived example; against GLOSSARY.md line 83 and standings.svg",
+    "text": "zh: 「例如 `Flow.beyond_gives_nothing`（闭包之外的不向闭包给予）」 and 「闭包之外的在任何一步都不向闭包所需的条件给予」; en: \"For example `Flow.beyond_gives_nothing`, what lies beyond a formation's closure is given nothing by it\"",
+    "severity": "high",
+    "why": "The two editions say opposite things, and the English is the one that is wrong. The home, records/feeding-closure.md law 3, says: \"A formation beyond the closure that takes part at a step gives nothing at that step to a condition a member of the closure then requires.\" The Lean docstring (Interdependence.lean) agrees: \"What lies beyond a formation's feeding closure gives nothing, at any step, to a condition that a member of the closure then requires.\" The Chinese follows the home. The English (copied from the edge record's basis sentence, one-root-to-its-edge.json line 392) reverses who gives to whom. So an English reader comes away believing the reverse of the result, and a bilingual reader finds the two glossaries contradicting each other.",
+    "fix": "Keep the Chinese. In GLOSSARY.md line 83 and in the source of the standings.svg example (spine.json), use the record's words: \"a formation beyond the closure gives nothing to a condition a member of the closure requires\". Correct the edge record's basis sentence at its source too, which also corrects the quotation in THEORY-GRAPH(.zh) row 1. Optionally restore 「一个形成的」 in the zh glossary (\"a formation's\")."
+   },
+   {
+    "where": "theories/becoming/results/standings.zh.svg, line under 「11 项推导而得」 (same in standings.svg)",
+    "text": "「各为文法之律的一个情形，经由在 Lean 中作为等价核验的桥接」",
+    "severity": "medium",
+    "why": "The home (08 §7) says: \"each a case of grammar laws, through bridges checked in Lean as equivalences and support the review reads where a row has them\". GLOSSARY.zh adds 「这一情形依于审阅」. The picture keeps only the Lean bridges and drops the review on which the case rests. A reader therefore takes the derived standing as fully Lean-checked. The English picture drops the same words.",
+    "fix": "Restore the home's clause: 「经由在 Lean 中作为等价核验的桥接与审阅所读的支持」. In English: \"…as equivalences and support the review reads\". If width is short, shorten elsewhere, not this qualifier."
+   },
+   {
+    "where": "theories/becoming/results/atlas/connections.zh.svg, title and lede; CROSSWALK.zh.md alt text; lineage.zh.svg subtitle",
+    "text": "「早先的文件夹与各思想领域怎样与现行之论相接」; 「每一条都对照现行之论来读。一条线把…连到它的主张所对照的本论那一部分」",
+    "severity": "low",
+    "why": "GLOSSARY.zh row 本论: 「指这套解释全体，中文前页一律用这个词」. The new picture names the account as 现行之论 and as 本论 in the same two sentences, so a reader may take them for two things.",
+    "fix": "Render \"the live account\" as 「现行的本论」, or simply 「本论」, in the OV_TEXT zh title and lede, the CROSSWALK.zh alt text and the lineage.zh subtitle."
+   },
+   {
+    "where": "standings.zh.svg footer; THEORY-GRAPH.zh.md caption under standings.zh.svg (both new); pre-existing in spine.zh.svg footer, THEORY-GRAPH.zh spine caption and LINEAGE.zh.md line 9",
+    "text": "「由 tools/research/spine.py 依 shared-laws.json 与 spine.json 生成」; 「依[共律数据]…与 [spine.json](data/spine.json) 生成」",
+    "severity": "low",
+    "why": "GLOSSARY.zh: 「“生成”在这里只有一义，见下文“生成、守、退化”」. Here 生成 means \"output by a tool\", which is a second sense, and this change adds new instances of it.",
+    "fix": "Use 「写出」 or 「产出」 (for pictures, 「画出」) in the zh strings in spine.py, lineage.py and the THEORY-GRAPH.zh captions."
+   },
+   {
+    "where": "theories/becoming/results/atlas/connections.zh.svg, <desc id=\"cx-desc\"> (connection_map.overview_svg, zh branch)",
+    "text": "The zh desc is only the lede plus 「每一条线都是 AI 的读法，不是人的。一条线不是证明；相合画得并不比相分更显眼。」",
+    "severity": "low",
+    "why": "The English desc also carries: \"328 entries rest on the AI's knowledge of a text not stored here, unchecked against that text\", \"a shared word is not a correspondence\", the split of the 337 agreements (130 with a checked law, 67 with a thesis or method, 140 on a reader's join), the outcome counts and the random-check estimate. Without them, the zh accessible description loses the unchecked-source qualifier and the error estimate.",
+    "fix": "Build the zh desc from a translation of the full English _ledes text, rather than from the visible lede alone."
+   },
+   {
+    "where": "connections.zh.svg lede and CROSSWALK.zh.md caption; spine.zh.svg and standings.zh.svg",
+    "text": "「名称为 AI 所译，义以英文版为准」 / 「名称为 AI 所译（[英文图](connections.svg)）」",
+    "severity": "low",
+    "why": "Every word in the picture is AI-translated, not just the names. The code's own docstring says \"its words and names are AI translations\". spine.zh.svg and standings.zh.svg carry no translation label at all, so the three Chinese pictures are labelled inconsistently. The pages that embed them do say 「AI 译自英文版…义以英文版为准」. The CROSSWALK.zh caption also drops the English caption's pointer to map.html (\"on the reader's site, once it is published, or from a clone; GitHub shows it only as source\"), though the svg's own footer has it.",
+    "fix": "Write 「图中文字为 AI 所译，义以英文版为准」 in connections.zh.svg and the caption. Add the same short line to the footers of spine.zh.svg and standings.zh.svg."
+   },
+   {
+    "where": "THEORY-GRAPH.zh.md, table of the eleven derived, column 「所属情形」",
+    "text": "「| `Flow.beyond_gives_nothing` | `«所闭之界»` |」 (each row gives only the Lean law name)",
+    "severity": "low",
+    "why": "This change gave the English column \"A case of (the law's docstring, its first words)\", e.g. \"Nothing within a closure bears the relation to what lies beyond it (`«所闭之界»`)\", and added the line \"the second column gives it in English by the first words of its Lean docstring\". The zh edition drops that gloss. Names such as «有限遍后定后则定前当且仅当皆返» are not plain to a Chinese reader either.",
+    "fix": "Put the Chinese of each docstring's first words before the Lean name, as the English column does, and add the matching sentence after the table's lead."
+   },
+   {
+    "where": "spine.zh.svg footer",
+    "text": "「它显示什么、不显示什么，见 THEORY-GRAPH.zh.md 的“各章一览”」",
+    "severity": "low",
+    "why": "The English footer points to the section itself: \"THEORY-GRAPH.md, 'What the picture shows and does not show'\". The zh page has that section as 「这幅图显示什么、不显示什么」 (anchor the-spine-what-it-shows-and-does-not-show). The zh footer names only the enclosing 各章一览.",
+    "fix": "「…见 THEORY-GRAPH.zh.md 的“这幅图显示什么、不显示什么”」"
+   },
+   {
+    "where": "THE-THEORY-OF-BECOMING.zh.md, header note and the 怎样读这幅图 line (line 32)",
+    "text": "「本页通向各章（第六章除外）与理论图的链接，都是英文页。」, while the line now links 「results/THEORY-GRAPH.zh.md#do-the-recorded-uses-form-a-cycle」",
+    "severity": "low",
+    "why": "This change adds a third link from the overview to the Chinese theory graph, so the page's own note about its links is now wrong in three places (two of those links predate the change).",
+    "fix": "Make the note match ONE-PAGE.zh: 「本页通向各章（第六章除外）的链接是英文页；理论图除各章一览外为英文。」"
+   },
+   {
+    "where": "theories/LINEAGE.zh.md line 11 (弧线简述)",
+    "text": "「Lean 作为融贯检验器进入」",
+    "severity": "low",
+    "why": "The English arc in brief says \"Lean enters as a checker\". 融贯 is taken from the In-brief bullet (\"a coherence checker\"), so it is sourced, but it is not in the sentence being translated.",
+    "fix": "「Lean 作为检验器进入」"
+   },
+   {
+    "where": "theories/LINEAGE.zh.md line 231 (counts table header)",
+    "text": "「仅在历史中」",
+    "severity": "low",
+    "why": "Elsewhere in the Chinese edition, connections.zh.svg's strip and CROSSWALK.zh use 「仅存于历史」 for history-only. A reader comparing the counts meets two words for one category.",
+    "fix": "Use 「仅存于历史」 in the lineage table header."
+   }
+  ],
+  "read": "I read these in full: the diff stat 90b61d8a6..e0c5ae6da; rescore4-synthesis.md (Q3, Q4 and the checker's corrections); the diffs of GLOSSARY(.zh), ONE-PAGE(.zh), THE-THEORY-OF-BECOMING(.zh), CROSSWALK.zh and connection_map.py/atlas.py; GLOSSARY.zh rows derived and named-distance, with their English rows; ONE-PAGE.zh's and THE-THEORY-OF-BECOMING.zh's how-to-read lines and header notes; THEORY-GRAPH.zh.md lines 1-135 (the how-to-read paragraph, the standings table, the derived table, the five shared laws, the cycle paragraph, the theses table, the shows/does-not-show section and the edge-kinds table to row 05), against THEORY-GRAPH.md lines 11-69; LINEAGE.zh.md lines 1-49 (reading time, intro, 弧线简述, 弧线全文, the six phases, the labels) and lines 227-255 (the per-folder table), against LINEAGE.md lines 1-49 and 174-201; CROSSWALK.zh.md lines 1-24 and the CROSSWALK.md caption. I extracted the full text of spine(.zh).svg, standings(.zh).svg and connections(.zh).svg and compared them line by line. I screenshotted spine.zh.svg (at 1x, plus 2x crops of the ring and the legend), standings.zh.svg, connections.zh.svg and lineage.zh.svg, and looked at each: nothing is cut off and no labels overlap beyond what the English picture has. I measured by script: the 16 folder rows are identical across en/zh (links, dates, kinds, claims, most-read-against counts), every linked line carries its date, and 497/291/212 recompute from the zh edge table. I checked the Lean docstring of Flow.beyond_gives_nothing (Interdependence.lean) and feeding-closure.md law 3. I only searched (did not read in full) for: 生成 and 现行之论 across the zh fronts and pictures; the chapter names in spine.json against the overview zh headings, which agree with each other and with connections.zh.svg and THEORY-GRAPH.zh; the crosswalk group titles; 08-METHOD §7 for the standings wording; the lineage.svg/lineage.zh.svg key text. Not read: README.zh.md's diff, LINEAGE.zh beyond the head and folder table, the 28 crosswalk group pages, the code beyond connection_map.py's diff. No tests were run; the focused tests were deliberately left to the implementer's runs. Nothing in the repository was edited.",
+  "verdicts": [
+   {
+    "where": "GLOSSARY.zh.md row derived / standings.zh.svg vs GLOSSARY.md line 83, standings.svg, THEORY-GRAPH(.zh) row 1",
+    "agree": true,
+    "severity": "high",
+    "why": "This finding holds. Lean Interdependence.lean:150 says \"What lies beyond a formation's feeding closure gives nothing, at any step, to a condition that a member of the closure then requires\". feeding-closure.md law 3 says \"A formation beyond the closure that takes part at a step gives nothing at that step to a condition a member of the closure then requires\". «所闭之界» is `¬ R y z` with y inside and z beyond, so nothing beyond feeds what is inside. The English example, \"what lies beyond a formation's closure is given nothing by it\", reverses this. It comes from one-root-to-its-edge.json:392 by way of spine.json first_view.bands[0].example.en, and this change puts it new into GLOSSARY.md and standings.svg. The Chinese (spine.json takes its zh from feeding-closure.json) states the result correctly. THEORY-GRAPH.zh row 1 then quotes the reversed English basis untranslated, directly under the correct zh gloss, so the zh page contradicts itself as well. High is right, because the English governs."
+   },
+   {
+    "where": "standings.zh.svg / standings.svg, derived band gloss (spine.json first_view.bands[0].*.gloss)",
+    "agree": true,
+    "severity": "medium",
+    "why": "The finding is confirmed. 08 §7 says \"Eleven are derived, each a case of grammar laws, through bridges checked in Lean as equivalences and support the review reads where a row has them\". spine.json's own 'about' claims \"each class's English words are 08 §7's\", yet the gloss stops at \"equivalences\". The qualifier that the case rests on an AI review is lost, and a reader takes the standing as Lean-checked. The spine.zh top bar only shortens to 「各为文法之律的一个情形」 and makes no Lean claim, so that bar is fine."
+   },
+   {
+    "where": "connections.zh.svg title and lede; CROSSWALK.zh alt; lineage.zh.svg subtitle",
+    "agree": true,
+    "severity": "low",
+    "why": "The finding is real but low. 现行之论 already appeared in CROSSWALK.zh's alt and in its 它是什么 paragraph before this change. It works as a descriptor (\"the live account\"), and 本论 stays the name, so no reader takes it for a different account. The new picture does mix the two within its first two sentences."
+   },
+   {
+    "where": "standings.zh.svg footer; THEORY-GRAPH.zh standings caption",
+    "agree": true,
+    "severity": "low",
+    "why": "The finding is real. GLOSSARY.zh says 生成 has one sense, and the change adds new uses of 生成 meaning output from a tool. The same usage is already widespread (spine.zh footer, LINEAGE.zh line 11, lineage.zh.svg footer), so the fix belongs in the tools' zh strings together."
+   },
+   {
+    "where": "connections.zh.svg <desc>",
+    "agree": true,
+    "severity": "low",
+    "why": "The finding is confirmed. The zh desc is the visible lede only. It drops the English desc's \"328 entries rest on the AI's knowledge of a text not stored here, unchecked\", \"a shared word is not a correspondence\", the 130/67/140 split and the random-check estimate (which is visible in the picture). CROSSWALK.zh's own text keeps the unchecked-source qualifier, so low is right."
+   },
+   {
+    "where": "connections.zh.svg lede, CROSSWALK.zh caption; spine.zh.svg, standings.zh.svg",
+    "agree": true,
+    "severity": "low",
+    "why": "The finding is confirmed. 「名称为 AI 所译」 is narrower than spine.json's \"The Chinese labels and glosses are AI translations\". spine.zh and standings.zh carry no label in the picture, although the pages that embed them do. The CROSSWALK.zh caption drops the English caption's \"on the reader's site, once it is published, or from a clone\", while the svg footer keeps only the \"GitHub shows it only as source\" part."
+   },
+   {
+    "where": "THEORY-GRAPH.zh.md eleven-derived table, column 所属情形",
+    "agree": true,
+    "severity": "low",
+    "why": "The finding is confirmed. The English column gives each docstring's first words, and its lead adds \"the second column gives it in English by the first words of its Lean docstring\". The zh column has only the «…» names. Those are Chinese, but in a dense classical register, so low."
+   },
+   {
+    "where": "spine.zh.svg footer",
+    "agree": true,
+    "severity": "low",
+    "why": "The finding is confirmed. The English footer names \"What the picture shows and does not show\", while the zh footer names the enclosing ## 各章一览, not its ### 这幅图显示什么、不显示什么. The pointer is not wrong, only less precise."
+   },
+   {
+    "where": "THE-THEORY-OF-BECOMING.zh.md line 11 note vs line 32",
+    "agree": true,
+    "severity": "low",
+    "why": "The finding is confirmed. The page now has three links to THEORY-GRAPH.zh.md (#do-the-recorded-uses-form-a-cycle, which is new, plus #the-five-shared-laws and #the-spine-what-it-shows-and-does-not-show) and one to THEORY-GRAPH.md, yet its note says all its theory-graph links are English. ONE-PAGE.zh line 7 already has the correct wording."
+   },
+   {
+    "where": "LINEAGE.zh.md line 11, 弧线简述",
+    "agree": true,
+    "severity": "low",
+    "why": "The finding is confirmed. The English arc in brief says \"Lean enters as a checker\". 融贯 comes from the In-brief bullet (\"a coherence checker\"), so it has a source but is wider than the sentence it translates. The rest of the arc in brief matches the English, both premises named with their roles."
+   },
+   {
+    "where": "LINEAGE.zh.md line 231 counts header",
+    "agree": true,
+    "severity": "low",
+    "why": "The finding is confirmed, though it predates this change (the 90b61d8a6 edition has the same header at line 229). connections.zh.svg and CROSSWALK.zh use 仅存于历史. The counts (3/488/189/22/105/376) match the English and the picture's strip. What I read in full: the synthesis's Q3 and Q4 and its checker corrections; the GLOSSARY en/zh derived and named-distance rows; the how-to-read lines of ONE-PAGE en/zh and THE-THEORY-OF-BECOMING en/zh; THEORY-GRAPH en and zh lines 1-70 (how to read, captions, derived table, shared laws, cycle anchor); LINEAGE en and zh heads and per-folder tables; CROSSWALK.zh lines 1-26 and CROSSWALK.md lines 17-21; spine.json first_view. I looked at spine.zh.svg, standings.zh.svg, standings.svg, connections.zh.svg and lineage.zh.svg as headless-Chrome screenshots, and compared their text strings, title and desc with the English svgs. I checked the Lean docstrings of Flow.beyond_gives_nothing and «所闭之界», feeding-closure.md law 3, the 08 §7 standings paragraph and the 08 line-437 source of \"representations and not derivations\". I only searched (grep) the Chinese chapter headings in THE-THEORY-OF-BECOMING.zh, the GLOSSARY.zh shared-law row and the AI-translation labels across the zh fronts. I measured the connections counts (16 folders sum to 838, 12 domains to 345, together 1,183; legend 1,056 + 127 = 1,183; with the 3 relation-bearing history entries, 1,059, which matches CROSSWALK.zh's 338/371/325/25) and the LINEAGE.zh Written-by counts (15/13/19/1 = 48; before September 11 of 21 AI-drafted; from September 19 of 27 AI-made). The focused tests test_spine, test_lineage and test_connection_map ran: 73 OK. No render, gate or full suite was run."
+   }
+  ],
+  "missed": [
+   {
+    "where": "theories/LINEAGE.zh.md head, lines 1-13 (lineage.py zh page template)",
+    "text": "The page has no visible or comment label that its Chinese is AI-written or AI-translated, or that the English governs. It says only 「本页的转折点由 AI 读者收集并核对，非人所为」, and 「原文见英文版」 for quotations.",
+    "severity": "medium",
+    "why": "Every other zh front in scope carries the label: ONE-PAGE.zh 「AI 译自英文版，未经人工审读；义以英文版为准」, THE-THEORY-OF-BECOMING.zh the same, THEORY-GRAPH.zh 「本页由 AI 翻译…以英文原文为准」, CROSSWALK.zh 「由 AI 依英文的对照表写成…义以英文版为准」. The repository rule is that AI-written text keeps its label and a translation says which edition governs. This change rewrote the head (the new 弧线简述 and 弧线全文, the reading time) without adding one, so a Chinese reader cannot tell the prose is AI-written or which edition settles a difference, such as 融贯 in the arc in brief.",
+    "fix": "Have lineage.py's zh head emit, after the reading-time line: 「*AI 依英文版写成，未经人工审读；义以英文版为准。*」"
+   },
+   {
+    "where": "theories/becoming/results/THEORY-GRAPH.zh.md line 40 (derived table row 1, third column), together with GLOSSARY.zh row derived and standings.zh.svg",
+    "text": "「| `Flow.beyond_gives_nothing` | `«所闭之界»` | A case of «所闭之界» at feeding from: what lies beyond a formation's closure is given nothing by it. |」, while GLOSSARY.zh says 「闭包之外的不向闭包给予」 and standings.zh.svg says 「闭包之外的在任何一步都不向闭包所需的条件给予」",
+    "severity": "medium",
+    "why": "This is a separate symptom of the reversal in the first finding, inside the Chinese edition itself. The zh page quotes the English basis untranslated, and that basis says the closure gives nothing to what lies beyond, the opposite of the zh glossary and picture. The Lean docstring reads \"What lies beyond a formation's feeding closure gives nothing, at any step, to a condition that a member of the closure then requires\". The two editions' examples also cite different sources: spine.json gives one-root-to-its-edge.json for the en example and feeding-closure.json for the zh one. That divergence lets the zh render pass without matching the English.",
+    "fix": "Correct the basis sentence at its source, one-root-to-its-edge.json:392, to the record's words (\"a formation beyond the closure gives nothing to a condition a member of the closure requires\"), then re-render. Point spine.json's en and zh examples at the same record (feeding-closure, law 3)."
+   }
+  ]
+ }
+]

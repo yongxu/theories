@@ -122,6 +122,26 @@ class Checking(unittest.TestCase):
         s['first_view']['bands'][0]['example']['en'][1] = 'a sentence its record does not hold'
         self.assertTrue(any('a sentence its record does not hold' in e for e in spine.check(s)))
 
+    def test_an_example_stands_in_its_class_and_quotes_one_record(self):
+        s = spine.spec()
+        self.assertEqual([e for e in spine.check(s) if 'example of' in e], [])
+        derived = s['first_view']['bands'][0]['example']
+        derived['declaration'] = 'RelativePosition.rise_needs_fall'  # a counting declaration under "derived"
+        derived['en'] = ['theories/becoming/results/records/one-root-to-its-edge.json', 'A case of «所闭之界» at feeding from']
+        errors = '\n'.join(spine.check(s))
+        self.assertIn('the example of "derived", RelativePosition.rise_needs_fall, stands as \'counting\'', errors)
+        self.assertIn('the example of "derived" quotes two records', errors)
+        s = spine.spec()
+        s['first_view']['bands'][0]['gloss_also']['en'][1] = 'a clause the glossary does not hold'
+        self.assertTrue(any('a clause the glossary does not hold' in e for e in spine.check(s)))
+
+    def test_the_simpler_picture_says_a_class_of_one_is_its_only_member(self):
+        svg = spine.standings_svg(spine.spec(), 'en')
+        self.assertIn('It is GroupEnding.Flow.all_end:', svg)
+        self.assertIn('For example, Flow.beyond_gives_nothing:', svg)
+        self.assertIn('the case rests on the review', svg)
+        self.assertIn('126 rows, nine declarations in two, so 117 distinct', spine.standings_svg(spine.spec(), 'en').replace('\n', ' '))
+
     def test_an_unknown_outcome_is_an_error(self):
         s = spine.spec()
         s['theses'][0] = {**s['theses'][0], 'outcome': 'passed'}
