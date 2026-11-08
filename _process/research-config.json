@@ -435,7 +435,7 @@
         "path": "theories/becoming/results/THEORY-GRAPH.md",
         "label": "The theory graph",
         "text": "Results, Lean modules, sections and texts, with their edges kept apart by kind.",
-        "time": "the spine and its tables {said:its tables in (.+?)\\.}; in full {said:(\\S+ minutes) to read in full}",
+        "time": "the chapters at a glance, the picture and the edge kinds {said:with their tables, in (.+?)\\.}; in full {said:(\\S+ minutes) to read in full}",
         "group": "See"
       },
       {
