@@ -548,12 +548,12 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "0600e1f98e28422487cb018d250ceac3bd4cc62ae6b431cef4671c7c314e6a90"
+      "sha256": "9287f9ae11e217bc802f3f9c9a60236417cd581f187820ae16cedf4ef6788ffe"
     },
     {
       "path": "theories/becoming/chapters/08-METHOD.md",
       "role": "statement",
-      "sha256": "49af5bfc47b8e122f563f76d39404cc0b5ece93ab2e2a65be88caa08b027dea7"
+      "sha256": "e1373ab42bc85f92a1718a743ced7fbb5eb16a2c9fee6a25393cf855a0344408"
     }
   ],
   "proof_bindings": [

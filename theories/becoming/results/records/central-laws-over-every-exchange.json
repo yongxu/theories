@@ -304,7 +304,7 @@
     {
       "path": "theories/becoming/results/completion/COVERAGE.json",
       "role": "integration",
-      "sha256": "432883b022026e0cbb495bf382a6256ebe0dcae5a501c8195ed47936ee64cba6"
+      "sha256": "921fce5dfbe0c31b633a575d7bd5cfea5000997a2af866f8d8a36587c1f65936"
     },
     {
       "path": "tools/research/completion.py",
