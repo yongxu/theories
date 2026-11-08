@@ -232,7 +232,7 @@ class SiteTests(unittest.TestCase):
         self.assertIn(f'href="https://github.com/o/r/blob/{COMMIT}/a/ONE.md#L3-L5"', one)
         self.assertIn(f'href="https://github.com/o/r/blob/{COMMIT}/a/ONE.md?plain=1#L2"', one)
 
-    def test_cards_grouped_in_their_order_and_files_readable(self):
+    def test_cards_grouped_in_their_order(self):
         self.build(ways_in=[{'path': 'a/ONE.md', 'label': 'One', 'text': 'x', 'group': 'Read'},
                             {'path': 'a/OPENING.md', 'label': 'Open', 'text': 'y', 'group': 'Check'},
                             {'path': 'a/chapters/README.md', 'label': 'Ch', 'text': 'z', 'group': 'Read'}])
@@ -260,6 +260,43 @@ class SiteTests(unittest.TestCase):
         self.build(aliases=dict(SITE['aliases'], **{'map.html': 'connections.html'}))
         self.assertNotIn('connections.html', self.page('a/ONE.html'))
         self.assertIn(f'https://github.com/o/r/blob/{COMMIT}/map.html', self.page('a/ONE.html'))
+
+    def test_a_cards_section_is_read_as_the_builder_reads_headings(self):
+        page = ('# P\n\n## Results\n\nfirst\n\n## Results\n\n```\n# not a heading\n```\n\n' + 'word ' * 300 +
+                '\n\n## After\n\n<a id="r-x"></a>\nshort\n\n## Last\n\n' + 'word ' * 600 + '\n')
+        self.assertIn('word', site.section_text(page, 'results-1'))  # the second Results, numbered as GitHub numbers it
+        self.assertNotIn('first', site.section_text(page, 'results-1'))
+        self.assertNotIn('After', site.section_text(page, 'results-1'))  # a fenced '#' line does not end the part
+        self.assertEqual(site.section_text(page, 'r-x').count('word'), 0)  # an <a id> line's part runs to the next heading
+        with self.assertRaises(site.SiteError):
+            site.section_text(page, 'no-such-part')
+
+    def test_with_the_map_off_no_line_names_it(self):
+        self.build(nav_zh=[['index.html', '首页'], ['connections.html', '地图']],
+                   aliases=dict(SITE['aliases'], **{'map.html': 'connections.html#top'}))
+        self.assertNotIn('connections.html', self.page('index.html'))
+
+    def test_a_link_to_an_aliased_files_lines_goes_to_github(self):
+        (self.tmp / 'a/ONE.md').write_text(ONE + '\n[The readme\'s line](../README.md?plain=1#L5).\n')
+        self.build(aliases=dict(SITE['aliases'], **{'README.md': 'index.html'}))
+        self.assertIn(f'href="https://github.com/o/r/blob/{COMMIT}/README.md?plain=1#L5"', self.page('a/ONE.html'))
+
+    def test_a_link_to_the_home_at_an_anchor_it_lacks_fails_the_build(self):
+        (self.tmp / 'a/ONE.md').write_text(ONE + '\n[The readme](../README.md#no-such-part).\n')
+        with self.assertRaises(site.SiteError):
+            self.build(aliases=dict(SITE['aliases'], **{'README.md': 'index.html'}))
+
+    def test_an_asset_is_readable_whatever_its_mode(self):
+        (self.tmp / 'a/pic.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg"></svg>')
+        (self.tmp / 'a/pic.svg').chmod(0o600)
+        self.files.add('a/pic.svg')
+        self.build(assets=['a/pic.svg'])
+        self.assertEqual((self.out / 'a/pic.svg').stat().st_mode & 0o777, 0o644)
+
+    def test_a_heading_after_a_list_item_is_a_heading(self):
+        (self.tmp / 'a/ONE.md').write_text(ONE + '\n1. an item\n## After the list\n\nText.\n')
+        self.build()
+        self.assertIn('<h2 id="after-the-list">', self.page('a/ONE.html'))
 
     def test_a_card_times_its_part(self):
         with self.assertRaises(AssertionError):

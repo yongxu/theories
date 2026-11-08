@@ -78,7 +78,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cr1-coupling-correspondence/CORRESPONDENCE.md",
       "role": "statement",
-      "sha256": "ad1e4ed52710d104b4e0c7a4d790ce3e0092e3137452266be139b9bf8cd352b2",
+      "sha256": "deac7ad66b3ea7ee09b9e74e3d29ae626056fc07d2303dd846bc252c087592ee",
       "declarations": []
     },
     {
@@ -103,8 +103,8 @@
       "zh": "2026年10月26日，工作板条目 DF1b（研究第 422 节）：Gao、Schulman 与 Hilton 按发表年份 2023 引用（ICML，PMLR 202；arXiv 2022 年 10 月），与本说明他处一致。"
     },
     {
-      "en": "8 November 2026, RW: the study's section 2 corrected: Constitutional AI keeps human labels for helpfulness (the paper's §4.1), so humans supply only principles, and couple in through them alone, for harmlessness; the statement is unchanged.",
-      "zh": "2026年11月8日，RW：研究第 2 节更正：宪法式 AI 于有益性仍用人之标注（论文第 4.1 节），故人仅供原则、仅经原则耦合者，唯无害性而已；陈述不变。"
+      "en": "8 November 2026, RW: the study's section 2 corrected: Constitutional AI keeps human labels for helpfulness (the paper's §4.1), so humans supply only principles, and couple in through them alone, for harmlessness, and there as the paper frames its oversight (§3.1–3.2: human-written red-team prompts, a critic trained on human helpfulness feedback); the statement is unchanged.",
+      "zh": "2026年11月8日，RW：研究第 2 节更正：宪法式 AI 于有益性仍用人之标注（论文第 4.1 节），故人仅供原则、仅经原则耦合者，唯无害性而已，且依论文对其监督之表述（第 3.1–3.2 节：红队提示有人所写者，批评之模型以人之有益性反馈训练）；陈述不变。"
     }
   ]
 }

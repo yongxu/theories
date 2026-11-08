@@ -111,6 +111,7 @@ class Links:
         self.counts = {'site': 0, 'github': 0, 'untracked': 0, 'external': 0, 'private': 0, 'refused': 0}
         self.private = None  # the push screen's pattern, set by build: a link to a private path is shown as text
         self.untracked = []
+        self.unbuilt = set()  # special pages this build does not write (the map, when site.map is off)
 
     def github(self, path: str, anchor: str = '') -> str:
         kind = 'tree' if path in self.dirs else 'blob'
@@ -133,16 +134,18 @@ class Links:
         path, _, query = path.partition('?')  # GitHub's ?plain=1 (a source's lines) is kept on a link to GitHub
         from urllib.parse import unquote
         target = posixpath.normpath(posixpath.join(posixpath.dirname(page), unquote(path))) if path else page
-        alias = self.aliases.get(f'{target}#{anchor}') or self.aliases.get(target)
+        lines = bool(query) or bool(re.fullmatch(r'L\d+(-L\d+)?', anchor))  # a line of a file: only GitHub shows it
+        alias = None if lines else (self.aliases.get(f'{target}#{anchor}') or self.aliases.get(target))
         if alias:
             target, _, a2 = alias.partition('#')
             anchor = a2 or anchor
-        lines = bool(query) or bool(re.fullmatch(r'L\d+(-L\d+)?', anchor))  # a line of a file: only GitHub shows it
         if target == page and not lines:
             self.internal.append((page, page, anchor))
             return '#' + anchor if anchor else posixpath.basename(out_path(page))
-        if target in SPECIAL:
+        if target in SPECIAL and target not in self.unbuilt:
             self.counts['site'] += 1
+            if anchor and target == 'index.html':
+                self.internal.append((page, target, anchor))  # the home's ids are checked with the rest
             return relative(target, page) + (f'#{anchor}' if anchor else '')
         if target.startswith('../') or target == '..':
             self.counts['untracked'] += 1
@@ -366,6 +369,8 @@ class Page:
                 continue
             if m and len(m.group(1).expandtabs(4)) < base:
                 break
+            if re.match(r'^\s{0,3}(#{1,6}(\s|$)|```|~~~|>)', line) or re.fullmatch(r'\s{0,3}([-*_])(\s*\1){2,}\s*', line):
+                break  # a heading, fence, quote or rule ends the list, as on GitHub
             if items and not m:
                 items[-1].append(line.strip())  # a lazy continuation line
                 i += 1
@@ -632,18 +637,33 @@ def records(root=ROOT):
 
 
 def section_text(text, anchor):
-    """The section of a Markdown page whose heading has this anchor, to the next heading of its level or higher."""
-    lines = text.split('\n')
+    """The part of a Markdown page a link's anchor names, read as the builder reads headings: outside fenced code and
+    comments, repeated headings numbered as GitHub numbers them. A heading's part runs to the next heading of its level or
+    higher; an `<a id>` line's, to the next heading."""
+    lines = strip_comments(text).split('\n')
+    heads, ids, fence = [], {}, None  # heads: (line, level, slug before numbering)
     for k, line in enumerate(lines):
+        if fence:
+            if line.strip().startswith(fence):
+                fence = None
+            continue
+        f = re.match(r'^\s*(```+|~~~+)', line)
+        if f:
+            fence = f.group(1)
+            continue
         h = re.match(r'^(#{1,6})\s+(.*?)(?:\s+#+)?\s*$', line)
-        if h and reading_catalogue.slug(h.group(2)) == anchor:
-            level, out = len(h.group(1)), [line]
-            for nxt in lines[k + 1:]:
-                h2 = re.match(r'^(#{1,6})\s', nxt)
-                if h2 and len(h2.group(1)) <= level:
-                    break
-                out.append(nxt)
-            return '\n'.join(out)
+        if h:
+            heads.append((k, len(h.group(1)), reading_catalogue.slug(h.group(2))))
+        for ident in re.findall(r'<a\s+(?:id|name)="([^"]+)"\s*>\s*</a>', line):
+            ids.setdefault(ident, k)
+    for (k, level, _), ident in zip(heads, reading_catalogue.numbered([h[2] for h in heads])):
+        if ident == anchor:
+            stop = next((j for j, lv, _ in heads if j > k and lv <= level), len(lines))
+            return '\n'.join(lines[k:stop])
+    if anchor in ids:
+        k = ids[anchor]
+        stop = next((j for j, _, _ in heads if j > k), len(lines))
+        return '\n'.join(lines[k:stop])
     raise SiteError('site.ways_in names a section the page lacks: #' + anchor)
 
 
@@ -794,14 +814,19 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
             raise SiteError('site.pages lists Markdown pages only: ' + p)
     from tools.research import connection_map
     map_ok = bool(cfg.get('map'))
-    aliases = {k: v for k, v in (cfg.get('aliases') or {}).items() if map_ok or v != MAP_PAGE}  # no link to an unbuilt map
+    def unbuilt(target):
+        return not map_ok and (target or '').split('#')[0] == MAP_PAGE
+    aliases = {k: v for k, v in (cfg.get('aliases') or {}).items() if not unbuilt(v)}  # no link to an unbuilt map
     links = Links(set(pages), assets, files, dirs, cfg['repository'], commit, aliases)
     links.private = private
+    links.unbuilt = set() if map_ok else {MAP_PAGE}
     if map_ok and not hasattr(connection_map, 'site_map'):
         raise SiteError('site.map is on, and this checkout\'s connection_map has no site mode (site_map)')
     if not map_ok:  # no link to a map this build does not write
-        cfg = dict(cfg, nav=[n for n in cfg.get('nav', []) if n[0] != MAP_PAGE],
-                   ways_in=[w for w in cfg.get('ways_in', []) if w['path'] != MAP_PAGE])
+        cfg = dict(cfg, nav=[n for n in cfg.get('nav', []) if not unbuilt(n[0])],
+                   nav_zh=[n for n in cfg.get('nav_zh', []) if not unbuilt(n[0])],
+                   ways_in=[dict(w, **({'zh': None} if unbuilt(w.get('zh')) else {}))
+                            for w in cfg.get('ways_in', []) if not unbuilt(w['path'])])
     recs = records(root)
     date = subprocess.run(['git', 'show', '-s', '--format=%cs', commit], cwd=root, capture_output=True, text=True).stdout.strip() or commit
     if out.exists():
