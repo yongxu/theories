@@ -2,7 +2,7 @@
 
 # The theory graph
 
-[Home](../../../README.md) · [Start here](../../../MAP.md) · [One page](../ONE-PAGE.md) · [中文](../../../README.zh.md) · [The theory](../THE-THEORY-OF-BECOMING.md) · [Chapters](../chapters/README.md) · [Uses](../USES.md) · [Tests](../../../TESTS.md) · [Graph](THEORY-GRAPH.md) · [How it grew](../../LINEAGE.md) · [Results](../../../RESULTS.md) · [Glossary](../../../GLOSSARY.md) · [Reviewers](../review/README.md) · [Open questions](../../../OPEN-QUESTIONS.md)
+[Home](../../../README.md) · [Start here](../../../MAP.md) · [One page](../ONE-PAGE.md) · [中文](../../../README.zh.md) · [The theory](../THE-THEORY-OF-BECOMING.md) · [Chapters](../chapters/README.md) · [Uses](../USES.md) · [Tests](../../../TESTS.md) · [Graph](THEORY-GRAPH.md) · [Connections](atlas/CROSSWALK.md) · [How it grew](../../LINEAGE.md) · [Results](../../../RESULTS.md) · [Glossary](../../../GLOSSARY.md) · [Reviewers](../review/README.md) · [Open questions](../../../OPEN-QUESTIONS.md)
 
 [中文（脊柱部分）](THEORY-GRAPH.zh.md) · 61–79 minutes to read in full; the spine and its tables in 18–23 minutes.
 

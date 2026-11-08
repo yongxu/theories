@@ -2,7 +2,7 @@
 
 [English](ONE-PAGE.md) · [首页](../../README.zh.md) · **一页** · [用途](USES.zh.md) · [实例](USES-EXAMPLES.zh.md) · [总览](THE-THEORY-OF-BECOMING.zh.md) · [八章（英文）](chapters/README.md) · [第六章](chapters/06-CLASSICAL-TEXTS.md) · [检验（英文）](../../TESTS.md) · [对照表](results/atlas/CROSSWALK.zh.md) · [怎样长成](../LINEAGE.zh.md) · [术语表](../../GLOSSARY.zh.md) · [审查包](review/README.zh.md)
 
-*约十二至十五分钟读完。*
+*约十二至十六分钟读完。*
 
 *AI 译自英文版，未经人工审读；义以英文版为准，英文版又以其所链接之处为准。*
 
