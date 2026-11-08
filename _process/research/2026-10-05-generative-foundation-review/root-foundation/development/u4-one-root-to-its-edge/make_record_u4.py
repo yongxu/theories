@@ -3,8 +3,9 @@
 by MV's `boundary` field (BOUNDARY-FIELD.md), with Becoming.RootForms' two root forms as the record's laws.
 
 The record has been corrected since it was made (its history: PF3, LM1, and RW (c) on 9 November 2026, where this
-script's basis for `Flow.beyond_gives_nothing` reversed the Lean); the record's history, not this script, holds the live
-wording.
+script's basis for `Flow.beyond_gives_nothing` reversed the Lean); the record itself (one-root-to-its-edge.json), not
+this script, holds the live wording, and its history says what changed. Rerunning the script would restore the bases
+it corrected.
 
 From the checkout root:
   python3 -B <dir>/make_record_u4.py --names           every entry with the names its review must give in code spans

@@ -146,11 +146,11 @@ class Checking(unittest.TestCase):
         svg = spine.standings_svg(spine.spec(), 'en')
         self.assertIn('It is GroupEnding.Flow.all_end:', svg)
         self.assertIn('For example, Flow.beyond_gives_nothing:', svg)
-        self.assertIn('the case rests on that review,', svg)
-        self.assertIn('which is AI-written', svg)
+        self.assertIn('the case rests on those reviews,', svg)
+        self.assertIn('each AI-written', svg)
         self.assertIn("(the closure: a formation's feeding closure)", svg.replace('&#x27;', "'").replace('&apos;', "'"))
         self.assertIn("RelativePosition.rise_needs_fall, in its record's law:", svg)
-        self.assertIn('rows list 126, nine declarations twice, so 117 distinct', spine.standings_svg(spine.spec(), 'en').replace('\n', ' '))
+        self.assertIn('domains, list 126 central rows, nine declarations twice, so 117 distinct', spine.standings_svg(spine.spec(), 'en').split('</desc>')[0])
 
     def test_an_unknown_outcome_is_an_error(self):
         s = spine.spec()
@@ -200,14 +200,17 @@ class Drawing(unittest.TestCase):
                 self.assertGreater(other, gap(c) + spine.LEAD - 0.5, (lang, c['n']))
                 for circle in info['circles']:
                     self.assertTrue(spine.clear_of_circle(box, circle), (lang, c['n'], circle))
-                # the box, which pads the digits, clears the stroke of every other solid curve but its pair's
+                # the box, which pads the digits by about 2.5 px, clears the stroke of every other curve but its pair's, and
+                # every spoke
                 mates = [o for o in info['curves'] if o is not c and {o['from'], o['to']} == {c['from'], c['to']}]
                 for o in info['curves']:
-                    if o is c or o in mates or o['kind'] != 'formal-reuse':
+                    if o is c or o in mates:
                         continue
-                    half = 0.4 + 0.4 * math.sqrt(o['n'])
+                    half = 0.4 + 0.4 * math.sqrt(o['n']) if o['kind'] == 'formal-reuse' else 1
                     for i in range(201):
-                        self.assertTrue(spine.clear_of_circle(box, (*o['point'](i / 200), half + 1)), (lang, c['n'], o['from'], o['to']))
+                        self.assertTrue(spine.clear_of_circle(box, (*o['point'](i / 200), half)), (lang, c['n'], o['from'], o['to']))
+                for x, y, r in info['spokes']:
+                    self.assertTrue(spine.clear_of_circle(box, (x, y, r - 1)), (lang, c['n'], 'spoke'))
                 for block in info['boxes']:
                     self.assertFalse(spine.overlaps(box, block), (lang, c['n'], block))
             placed = [box for _, box in info['counts']]

@@ -1,5 +1,5 @@
 {
- "about": "The dated span of each earlier folder's material, for LINEAGE's per-folder table (RW (c), round 4, 9 November 2026). An AI reader, the session that built the table, read each folder's README and, where it dates its material elsewhere, the folder's own files, and gave each end with the line that states it and a quotation from that line; the render checks every quotation at its line. A second AI reader, the lineage reader of round 4 (round-4-readers-1.json, scope 'lineage'), found that nine folders' own text dates material later than the first read's end, spoken recordings of 2 and 4 October 2026 that each folder presents as its own material, and that the memories folder's start was the date of its first export rather than the span its README gives; its checker confirmed the nine ends, and judged the memories start defensible but its rule mixed; the start now takes the span the folder's README gives. A third AI reader, the checker of round 4's second lineage reading (round-4-readers-2.json, its 'missed'), found Wamotopia's end earlier than its source list's span (2026-08-13 to 2026-09-03), now its end. The ends below are the corrected ones. Later notes in the folders, of 6 October 2026 onward, are notes on the later work, not material, and are left out. No person's review of these dates is recorded.",
+ "about": "The dated span of each earlier folder's material, for LINEAGE's per-folder table (RW (c), round 4, 9 November 2026). An AI reader, the session that built the table, read each folder's README and, where it dates its material elsewhere, the folder's own files, and gave each end with the line that states it and a quotation from that line; the render checks every quotation at its line. A second AI reader, the lineage reader of round 4 (round-4-readers-1.json, scope 'lineage'), found that nine folders' own text dates material later than the first read's end, spoken recordings of 2 and 4 October 2026 that each folder presents as its own material, and that the memories folder's start was the date of its first export rather than the span its README gives; its checker confirmed the nine ends, and judged the memories start defensible but its rule mixed; the start now takes the span the folder's README gives. A third AI reader, the checker of round 4's second lineage reading (round-4-readers-2.json, its 'missed'), found Wamotopia's end earlier than its source list's span (2026-08-13 to 2026-09-03), now its end. The ends below are the corrected ones. Later notes in the folders, of 6 October 2026 onward, are notes on the later work, not material, and are left out. No person's review of these dates is recorded. The fifth reading of round 4 (round-4-readers-5.json) found the memories folder's start taken by another rule than its end; both ends now come from its README's table of dates from the memory layer, the start at 2021-05.",
  "rule": "from: the earliest date the folder's own text gives for material it draws on; to: the latest such date. A date is as exact as its line gives it. Where a line gives only a source's window, its end is taken.",
  "corrected_in_round_4": {
   "to": [
@@ -39,6 +39,13 @@
    "severity": "low",
    "why": "Neither the first reading nor this one rechecked the seven unchanged ends. The folder's own source list dates material it draws on later than 2026-06-04. Wamotopia README.md:583 says \"`out-cb-02.md` — Ren's Claude Code messages, 2026-08-13 → 2026-09-03; item 70 (commons participation plus an opinionated first-party instance) is tagged to this theory\", and line 582 gives out-cb-07 as \"2026-06-03 → 2026-09-03\". folder-dates.json's rule is \"to: the latest such date. A date is as exact as its line gives it\". By that rule the end is at least within 2026-08-13 to 2026-09-03, not 2026-06-04. The other unchanged ends (context, spirit, architecture, museum, swarms, memories 'to') show no later material date in their READMEs, by a search for 2026-09/10/11 dates.",
    "fix": "Set Wamotopia's 'to' to 2026-09-03 with evidence at line 583 (\"2026-08-13 → 2026-09-03; item 70 … is tagged to this theory\"). If a range end is not to count, add to the rule that a source list's span is not a material date."
+  },
+  {
+   "where": "theories/LINEAGE.md, the per-folder table, row 'Memories and working style' (lineage.json and folder-dates.json, memories-and-working-style 'from', evidence README.md line 6)",
+   "text": "\"[2026-03](memories-and-working-style/README.md?plain=1#L6) – [2026-09-03](memories-and-working-style/README.md?plain=1#L240)\"",
+   "severity": "medium",
+   "why": "The lead says each row gives \"the dated span of the material it draws on\", and folder-dates.json's rule is \"from: the earliest date the folder's own text gives for material it draws on; to: the latest such date\". The row's two ends follow different rules. The end, 2026-09-03, is an event row of the README's 'Project facts and dates' table (\"Every row is from the memory layer\"). The start, line 6, is when the memory exports accumulated (\"Between 2026-03 and 2026-09, two claude.ai memory exports … accumulated\"). That same table begins at line 204 with \"| 2021-05 | Dali field notes …\", and has rows for 2022-01, 2024, 2025-02-07 and 2025-02-27. The README also reads material dated earlier than 2026-03 directly: line 16 \"`01-writings-2025/compound_selfishness.md` (2025-02-07)\", line 20 \"`prompt.md` (2025-02-27)\", and line 82 quotes conversations of \"(2024-07-28)\" and \"(2025-02-03)\". A reader would believe this folder's material begins in March 2026. folder-dates.json's 'about' records that a checker judged the earlier choice \"defensible but its rule mixed\", and the fix kept the mix. This was the only row whose start, checked against its README by script, has earlier material dates. Alignment's 2023-12 lines say \"not read\", and 智善's 2023-10 is an outside white paper.",
+   "fix": "Set 'from' to 2021-05, with evidence at README.md line 204 (quote \"| 2021-05 | Dali field notes\"). That uses the same table and rule as the row's end. Then re-render. If the memory records alone are meant to be the material, the other option is \"2026-03 – 2026-09\", with both ends at line 6, and the lead then says so for this row."
   }
  ],
  "folders": [
@@ -188,14 +195,14 @@
   },
   {
    "folder": "memories-and-working-style",
-   "from": "2026-03",
+   "from": "2021-05",
    "to": "2026-09-03",
    "basis": "folder",
    "evidence": [
     {
      "path": "theories/memories-and-working-style/README.md",
-     "line": 6,
-     "quote": "Between 2026-03 and 2026-09"
+     "line": 204,
+     "quote": "| 2021-05 | Dali field notes"
     },
     {
      "path": "theories/memories-and-working-style/README.md",

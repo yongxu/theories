@@ -245,6 +245,9 @@ def check(s):
                 ex = item['example']
                 for lang in ('en', 'zh'):
                     holds(*ex[lang])
+                if ex.get('note'):  # a note on an example is the glossary's words
+                    for lang in ('en', 'zh'):
+                        holds(*ex['note'][lang])
                 if ex['en'][0] != ex['zh'][0]:
                     errors.append(f'spine.json: the example of "{item["key"]}" quotes two records, {ex["en"][0]} and {ex["zh"][0]}')
                 if ex.get('in_law'):
@@ -755,13 +758,24 @@ def svg(graph, s, lang, info=None):
         soft = [pt for other in L['curves'] if other is not c and other not in mates for pt in halo[id(other)]] + spoke_soft
         hard = obstacles + [(x, y, r + 1) for o in mates for x, y, r in under[id(o)]]
         # either side of the curve: nearest_is keeps a count by its own curve rather than its pair's other one
-        # the count's box already pads its digits by about 3 px, so the other solid curves' strokes (not their halos) bound it
-        strict = hard + [pt for o in L['curves'] if o is not c and o not in mates and o['kind'] == 'formal-reuse' for pt in under[id(o)]]
+        # the count's box already pads its digits by about 3 px, so every other curve's and spoke's stroke, and 1 px beyond
+        # it, bound the box (not the halos)
+        strict = hard + [(x, y, r - 0.5) for o in L['curves'] if o is not c and o not in mates for x, y, r in under[id(o)]] + spoke_soft
         box = place_box(along(c['point'], 0.5, offsets=(0, 3, 6, 9, 12, 15, 18, 21, 24)), w, h, strict, boxes + [l[0] for l in labels],
                         pad=0.0, soft=soft, accept=nearest_is(c))
-        if not all(clear_of_circle(box, o) for o in strict):  # no place clear of every solid curve: the fewest crossings
-            box = place_box(along(c['point'], 0.5), w, h, hard, boxes + [l[0] for l in labels], pad=0.0, soft=soft,
-                            accept=nearest_is(c))
+        if not all(clear_of_circle(box, o) for o in strict):
+            # no place both clear of every other stroke and nearer its own curve: of the places nearer its own curve and
+            # clear of the circles, labels and its pair's curves, the one farthest from every other curve's and spoke's stroke
+            taken = boxes + [l[0] for l in labels]
+            def room(x, y):
+                b = (x - w / 2, y - h / 2, x + w / 2, y + h / 2)
+                return min(math.hypot(px - min(max(px, b[0]), b[2]), py - min(max(py, b[1]), b[3])) - r for px, py, r in strict[len(hard):])
+            fits = [(x, y) for x, y in along(c['point'], 0.5, offsets=(0, 3, 6, 9, 12, 15, 18, 21, 24))
+                    if nearest_is(c)(x, y) and all(clear_of_circle((x - w / 2, y - h / 2, x + w / 2, y + h / 2), o) for o in hard)
+                    and not any(overlaps((x - w / 2, y - h / 2, x + w / 2, y + h / 2), b) for b in taken)]
+            # place_box takes the first candidate that clears, so ordering by room picks the roomiest
+            box = place_box(sorted(fits, key=lambda p: -room(*p)) or along(c['point'], 0.5), w, h, hard, taken, pad=0.0,
+                            soft=() if fits else soft, accept=nearest_is(c))
         cx_, cy_ = (box[0] + box[2]) / 2, (box[1] + box[3]) / 2
         if (not nearest_is(c)(cx_, cy_) or not all(clear_of_circle(box, o) for o in hard)
                 or any(overlaps(box, b) for b in boxes + [l[0] for l in labels])):
@@ -773,7 +787,7 @@ def svg(graph, s, lang, info=None):
             info.setdefault('counts', []).append((c, box))
     out += [l[1] for l in labels]
     if info is not None:
-        info.update({'curves': L['curves'], 'circles': circles + badges, 'boxes': boxes})
+        info.update({'curves': L['curves'], 'circles': circles + badges, 'boxes': boxes, 'spokes': spoke_soft})
     low = max([b[3] for b in boxes] + [centre[k][1] + r[k] for k in order] + [py + 15 for _, py, _ in badges]) + 40
     # left column: the premises, their arrows up the left margin into chapter 7, then the theses' key
     sx, sy = centre['significance']
@@ -925,7 +939,9 @@ def standings_svg(s, lang):
         lines = [(l, 15, 'bold', INK) for l in wrap(head, width, lang)]
         lines += [(l, 14, 'normal', MUTED) for l in wrap(gloss, width + 4, lang)] if gloss else []
         if example:
-            decl, words_of = example['declaration'], norm(example[lang][1]) + ((' ' if lang == 'en' else '') + example['note'][lang] if example.get('note') else '')
+            note = example.get('note')
+            decl, words_of = example['declaration'], norm(example[lang][1]) + (
+                (f" (the closure: {norm(note[lang][1])})" if lang == 'en' else f'（闭包指{norm(note[lang][1])}）') if note else '')
             lead = (f'{words["example_only" if count == 1 else "example"]} {decl}{words["in_law"] if example.get("in_law") else ""}'
                     f'{"：" if lang == "zh" else ": "}{words_of}')
             lines += [(l, 14, 'normal', INK) for l in wrap(lead, width + 4, lang)]
@@ -1340,7 +1356,7 @@ def lead(graph, page_path):
                   f'stated hypothesis its form, hypotheses and countermodels, for a reading its basis, and otherwise the rule\'s reason. Each of the 99 has its named reason: its class, and for {at_distance} a '
                   f'basis in words. A declaration is the Lean statement a row of the coverage file names; the plain words of a result are at its record.', '',
                   f'![The {total_decl} central declarations, one square each, by their standing against the edge of one root: derived, under a stated '
-                  f'hypothesis, counting and, by reason, at a named distance, with an example for {examples_drawn(s)[0]} of the classes' + (' and the single declaration of the class of one' if examples_drawn(s)[1] else '') + f', in its record\'s words]({rel(FIRST["en"])})', '',
+                  f'hypothesis, counting and, by reason, at a named distance, with an example for {examples_drawn(s)[0]} of the classes' + (' and the single declaration of the class of one' if examples_drawn(s)[1] else '') + f', in its record\'s words, the derived one with the glossary\'s note on its closure]({rel(FIRST["en"])})', '',
                   f'*Generated by `tools/research/spine.py` from [the shared-laws data]({rel(registry.SHARED_LAWS)}) and [spine.json]({rel(DATA)}); '
                   f'[in Chinese]({rel(FIRST["zh"])}).*', '',
                   f'**The eleven derived**, each read as a case of grammar laws by an AI-written review ([of the record]({rel(REVIEW_U4)}), [of `Listed.coming_of_ceasing`\'s row]({rel(REVIEW_U4C)})); '
@@ -1493,7 +1509,7 @@ def zh_page(graph):
              f'每项声明及其地位，见[根之边的记录]({rel(EDGE_RECORD + ".md")})（英文）：{edge_bases()[0]} 项有文字的依据，在[其数据]({rel(EDGE_RECORD + ".json")})（`boundary.standings`）中，'
              f'其余 {central_total() - edge_bases()[0]} 项是规则所给的标签。凡其律中列有某项声明的记录，其页面印出该声明的地位：推导而得者印出其律、桥接与支持，在一个所述的假设之下的那一行印出其形式、假设与反模型，读法印出其依据，其余印出规则的理由。99 项中每一项都有其指明的理由：其类别，其中 {edge_bases()[1]} 项另有文字的依据。'
              f'一项[核心声明]({rel("GLOSSARY.zh.md")}#核心声明)是覆盖文件的某一行所指明的 Lean 陈述；一项结果的平实说法在其记录中。', '',
-             f'![{central_total()} 项核心声明，每项一个方块，按其相对于根之边的地位排列：推导而得、在一个所述的假设之下、计数，以及按理由分列的处于一个指明的距离者，其中 {examples_drawn(s)[0]} 类各附一例' + ('，单独一项的那一类写出该项' if examples_drawn(s)[1] else '') + f'，皆用其记录的话]({rel(FIRST["zh"])})', '',
+             f'![{central_total()} 项核心声明，每项一个方块，按其相对于根之边的地位排列：推导而得、在一个所述的假设之下、计数，以及按理由分列的处于一个指明的距离者，其中 {examples_drawn(s)[0]} 类各附一例' + ('，单独一项的那一类写出该项' if examples_drawn(s)[1] else '') + f'，皆用其记录的话，推导而得的一例附词汇表对其闭包的说明]({rel(FIRST["zh"])})', '',
              f'*由 `tools/research/spine.py` 依[共律数据]({rel(registry.SHARED_LAWS)})与 [spine.json]({rel(DATA)}) 画出，图中文字为 AI 所译；[英文图]({rel(FIRST["en"])})。*', '',
              f'**十一项推导而得者**，各由一次 AI 写成的审阅读作文法之律的一个情形（[对该记录的审阅]({rel(REVIEW_U4)})，[对 `Listed.coming_of_ceasing` 一行的审阅]({rel(REVIEW_U4C)})）；'
              f'迄今有记录的审阅都出自 AI（[08]({rel(m08, "review-status")})）。其中八项（除表中最后三行外），用 08 §7 的话说，是“the eight connected rows that the reading of connected rows took as derived”'
