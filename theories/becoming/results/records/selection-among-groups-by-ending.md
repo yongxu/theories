@@ -37,7 +37,7 @@
 
 - Which group's condition runs into joint excess, or why: it is a hypothesis wherever it enters, as is that members depend on their own group's condition.
 - Mixed groups and inexact transmission: there selection within the surviving groups enters and can outweigh (Outweighs); mixing between groups is not stated (groups whose conditions are coupled: record groups-whose-conditions-are-coupled).
-- How groups form, or that keeping a condition is better: ending is read in the counts; a ranking holds the comparison C or another order.
+- How groups form, or that keeping a condition is better: ending is read in the counts; ranking goes through the comparison C or a premise in its place.
 - **Counterexample:** Ending among groups does not decide the whole: with the other group ended, a groupmate leaving five against one holding back leaving one makes the whole select against holding back (Outweighs.outweighs). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean)
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
@@ -107,7 +107,6 @@ Aliases: `selection among groups by ending`, `经由终止的组间选择`, `gro
 - 20 October 2026, EV7: Becoming.GroupEnding gains ending for groups of any sizes (EndedBy, means_not_against, Flow.rises_iff_inactive_sized) and the two-generation witness Exhausted (record selection-within-and-among-groups-of-any-sizes, study section 273); this record's laws and their statements are unchanged.
 - 20 October 2026, EV8: Becoming.Drift states that a rise by ending among groups (raises_of_inactive) is undone by a sampled generation with a weight between q^n and a share falling as 1/n (record drift-offspring-sampled, study section 276); this record's laws and their statements are unchanged.
 - 7 November 2026, CX: this said ranking goes through the comparison C, where a ranking of courses needs C or a premise in its place (07 §4), the correction LM1 made in other records; corrected. No law, premise or proof changed.
-- 9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.
 
 </details>
 

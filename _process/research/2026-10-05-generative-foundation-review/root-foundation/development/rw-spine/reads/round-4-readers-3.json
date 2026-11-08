@@ -1,0 +1,560 @@
+[
+ {
+  "key": "spine",
+  "findings": [
+   {
+    "where": "theories/becoming/results/spine.svg, count label \"35\" (07→01 formal-reuse) at (346.6, 779.7); spine.zh.svg the same at (346.6, 705.7); placed by the new halo soft points in svg() in tools/research/spine.py",
+    "text": "\"35\" now sits on its own 07→01 curve and touches the 07→02 formal-reuse curve, whose count \"29\" stands just along it",
+    "severity": "medium",
+    "why": "Measured: the glyph box of \"35\" (15.6 x 10 px) overlaps the 07→02 formal-reuse curve (M247.5,819.4 Q397.8,723.7 567.1,686.1, width 5.1) by 0.6 px with half the stroke counted, before its 1.5 px halo. It overlaps its own 07→01 curve by 2.75 px, which is intended. The fix moved it off the dotted 07→02 application curve (now 8.9 px away) and onto the solid curve of the same kind and colour. In the 1x screenshot \"35\" sits in the fork where both light curves leave 07, and the 07→02 band runs along its top. A reader can take 35 for 07→02's count beside 29. Every other count clears every other curve and spoke by at least 5.7 px (26 to the 02 spoke).",
+    "fix": "In svg(), treat the halo points of other formal-reuse curves as hard obstacles for a count, not soft ones, or try the next offset along 07→01. Add a test that every count's box clears every curve except its own by its half stroke plus 1.5 px."
+   },
+   {
+    "where": "how_to_read() in tools/research/spine.py, rendered at ONE-PAGE.md line 15, THE-THEORY-OF-BECOMING.md line 28 and THEORY-GRAPH.md line 15 (and in caption-r4-en.txt and caption-r4-zh.txt)",
+    "text": "\"read as cases of grammar laws or of a root form: … or stand at a named distance, not read as such a case and each with its reason named (99)\"",
+    "severity": "low",
+    "why": "The F3 fix makes \"such a case\" mean \"a case of grammar laws or of a root form\". So the sentence now says that none of the 99 is read as a case of a root form, which is the gloss the F4 fix removed from the glossary. 08 §7 says of one of the 99: \"`Flow.no_new_dependence`, whose relational part is the root form `RootForms.descent_forms_no_dependence`\". The home separates the classes only as derived or under a stated hypothesis.",
+    "fix": "\"… or stand at a named distance, neither derived nor under a stated hypothesis, each with its reason named (99)\", in English and Chinese (不被读作这样的情形 → 既非推导而得，也非在一个所述的假设之下)."
+   },
+   {
+    "where": "theories/becoming/results/spine.svg <desc id=\"spine-desc\"> (description() in spine.py)",
+    "text": "\"497 formal-reuse uses between chapters, 17 pairs with at least 10 drawn, 212 of the uses running backward, an earlier chapter's results using a later one's, drawn darker\"",
+    "severity": "low",
+    "why": "As written, all 212 backward uses are drawn darker. Only backward uses in pairs with 10 or more are drawn. The fix reworded the visible subtitle to keep this (\"the darker curves; only pairs with 10 or more are drawn\"), but the desc lost it.",
+    "fix": "\"…, drawn darker where a pair has 10 or more\" (zh: 画得较深 → 有 10 次或以上的配对画得较深)."
+   },
+   {
+    "where": "theories/becoming/results/records/one-root-to-its-edge.json basis of Flow.beyond_gives_nothing (and its copies in data/shared-laws.json and THEORY-GRAPH(.zh) derived row 1); GLOSSARY.md line 83",
+    "text": "basis: \"a formation beyond the feeding closure that takes part at a step …\"; glossary: \"a formation beyond the closure that takes part at a step …\"",
+    "severity": "low",
+    "why": "Neither text says whose closure it is. The replaced basis said \"a formation's feeding closure\", and the Lean's docstring says \"What lies beyond a formation's feeding closure\". In the home record \"the closure\" has its antecedent (law 1: \"g lies within f's feeding closure\"). The glossary row has none before \"the closure\", and the second reading's checker noted this. The direction and the take-part hypothesis are now right in all copies.",
+    "fix": "\"a formation beyond a formation's feeding closure that takes part at a step …\" in the basis, or \"beyond the feeding closure of a formation\" in both. Regenerate shared-laws.json and THEORY-GRAPH."
+   },
+   {
+    "where": "how_to_read() on ONE-PAGE.md, THE-THEORY-OF-BECOMING.md and THEORY-GRAPH.md (pre-existing)",
+    "text": "\"a spoke's width, and the count beside its chapter, say how many of the chapter's core modules state their laws on the grammar\"",
+    "severity": "low",
+    "why": "The picture's own key says \"Spoke: its width is the share of the chapter's core modules that state their laws on the grammar\". The drawn widths follow the share: Life's spoke (8 of 23, width 4.1) is wider than the root's (22 of 74, width 3.7). A reader told that width says \"how many\" will rank them the wrong way.",
+    "fix": "\"a spoke's width gives the share, and the count beside its chapter the number, of the chapter's core modules that state their laws on the grammar\"."
+   },
+   {
+    "where": "GLOSSARY.md line 83 (derived row; pre-existing)",
+    "text": "\"the case rests on the review\"",
+    "severity": "low",
+    "why": "Neither the glossary nor its link says which review, or that it is AI-written. This round's standings picture now says \"(the review is AI-written)\", and THEORY-GRAPH says \"each read as a case of grammar laws by an AI-written review\". AI-written text keeps its label.",
+    "fix": "\"the case rests on an AI-written review ([REVIEW-U4-RECORD](…))\", in both languages."
+   },
+   {
+    "where": "/Users/ren/tmp/rw/drafts/readme-caption-r4-en.txt against readme-caption-r4-zh.txt (another session's drafts)",
+    "text": "en: \"11 derived, cases of grammar laws\"; zh: 「11 个推导而得，为文法之律的情形（这一情形依于审阅）」",
+    "severity": "low",
+    "why": "The missed finding is fixed in the Chinese, but now the Chinese keeps the qualifier that the case rests on the review and the English does not. The English governs, and 08 §7 keeps it: \"the case of each derived row rest[s] on the review\".",
+    "fix": "en: \"11 derived, cases of grammar laws (the case rests on the review)\"."
+   }
+  ],
+  "earlier": [
+   {
+    "where": "F0 spine.svg strip, Lumping and Widening bars (laws_strip)",
+    "resolved": "yes",
+    "note": "Bars are at least BAR_MIN=16 px and the hatch is bar*k/c. Lumping is now a 16 px bar with an 8 px hatch (1 of 2), and Widening a 21.2 px bar with a 2.7 px hatch (1 of 8). The laws_note adds \"A bar of few rows is widened to be seen; the words give the counts\" (zh 行数很少的条加宽以便看见；数目以文字为准). Checked in 1x and 3x screenshots, en and zh."
+   },
+   {
+    "where": "F1 GLOSSARY.md line 83, derived example",
+    "resolved": "yes",
+    "note": "It now says \"read as a case, at feeding from, of the law …: no member of the closure is fed from what lies beyond\". That matches WithinClosure.not_rel within beyond giving ¬ FedFrom g h, with FedFrom g h meaning g is fed from h. The zh row matches. The unnamed \"the closure\" remains (new low finding)."
+   },
+   {
+    "where": "F2 edge record basis, shared-laws.json copies, THEORY-GRAPH(.zh) derived row 1",
+    "resolved": "yes",
+    "note": "All four copies now keep the take-part-at-a-step hypothesis, in feeding-closure law 3's words. git grep finds the old sentence only in the readers' JSON. The history entry, en and zh, says it was corrected to the home record's words. The basis lost \"a formation's\" before the closure (new low finding)."
+   },
+   {
+    "where": "F3 how_to_read lead clause",
+    "resolved": "yes",
+    "note": "It now says \"read as cases of grammar laws or of a root form: 11 derived, cases of grammar laws, and 1, a root form at one step\", in all three pages and in zh, matching the strip note. But it makes the trailing \"not read as such a case\" exclude root forms for the 99 (new low finding)."
+   },
+   {
+    "where": "F4 GLOSSARY.md line 84, named distance",
+    "resolved": "partly",
+    "note": "The glossary now takes 08's parenthesis: \"neither derived nor under a stated hypothesis\" (zh matches). The same width moved into the how-to-read through the F3 rewording: \"not read as such a case\", where such a case now includes a root form."
+   },
+   {
+    "where": "F5 count label 35",
+    "resolved": "no",
+    "note": "It is off the dotted 07→02 application curve (now 8.9 px away) but on the 07→02 formal-reuse curve: its glyph box overlaps that curve by 0.6 px before the halo, in both en and zh. The fix's halo soft points moved it there (new medium finding). 26 is now 5.7 px clear of the 02 spoke."
+   },
+   {
+    "where": "F6 spine.svg desc",
+    "resolved": "yes",
+    "note": "The desc says what backward means and that it is drawn darker, and it lists the spokes with k of m per chapter, which matches the spoke labels in en and zh. It still implies all 212 backward uses are drawn (new low finding)."
+   },
+   {
+    "where": "F7 readme-caption-r4-en.txt cycle clause",
+    "resolved": "left to another holder",
+    "note": "The draft now reads \"a cycle among its declared dependencies\", and the zh draft 在其已声明的依赖中闭合环, so the drafts are fixed. Landing them is the other session's round."
+   },
+   {
+    "where": "Missed 1: desc premises clause",
+    "resolved": "yes",
+    "note": "The desc now reads \"the continuation condition (scope, whose losses count) and C (order)\" (zh 延续条件（定范围：谁的损失算数）与 C（定次序）). Nothing says C derives from the condition."
+   },
+   {
+    "where": "Missed 2: readme-caption-r4-zh.txt 08 §7 as the review",
+    "resolved": "left to another holder",
+    "note": "The zh draft now reads 为文法之律的情形（这一情形依于审阅）, which no longer places the review in 08 §7. The en draft lacks the matching qualifier (new low finding)."
+   }
+  ],
+  "read": "Read in full:\n- The spine entry of round-4-readers-2.json: 8 findings, 8 verdicts and 2 missed.\n- git diff --stat 0be9ab2a8 73a1a436f.\n- The fix diffs, 0be9ab2a8..73a1a436f, of spine.py, test_spine.py, GLOSSARY.md, GLOSSARY.zh.md, ONE-PAGE.md, THE-THEORY-OF-BECOMING.md, THEORY-GRAPH.md, THEORY-GRAPH.zh.md (its how-to-read and derived row), 08-METHOD.md, one-root-to-its-edge.json and .md, and shared-laws.json.\n- THEORY-GRAPH.md lines 1-80: how to read, alt text, standings table, derived table, the five shared laws with their paragraph, and the cycle paragraph.\n- 08-METHOD.md lines 424-462: the shared-laws table, its paragraph, the standings paragraph and the standings table.\n- Interdependence.lean: the module doc (lines 15-50) and lines 105-160 (FedFrom, FedClosed, WithinFeeding and beyond_gives_nothing).\n- feeding-closure.json, all its laws and its statement.\n- The svg desc in en and zh, and the spoke labels in en and zh.\n- The four caption drafts in /Users/ren/tmp/rw/drafts (readme-caption-r4-en/zh and caption-r4-en/zh).\n\nLooked at, as headless-Chrome crops written to the scratchpad's r4-shots-3 folder with the prefix sp3-:\n- spine.svg: the ring at 1x; 35 and 26 at 4x; the header and strip at 1x and 3x; the bottom with the key and premise boxes at 1x.\n- spine.zh.svg: the header and strip at 1x.\n\nMeasured with python3 -B (r4m/measure.py and a script of my own): every count label's box distance to every quadratic curve and spoke, in en and zh. 35's glyph box overlaps the 07→02 formal-reuse curve by 0.6 px. All other counts clear other curves by at least 5.7 px. Also read the strip rect widths: Lumping 16 with hatch 8, Widening 21.2 with hatch 2.7.\n\nOnly searched:\n- git grep for every restatement of the basis, old and new: the old sentence remains only in the readers' JSON.\n- beyond_gives_nothing across theories/ and the GLOSSARY files. I did not read 02-MAP line 289 or the history pages beyond the grep line.\n- main's THEORY-GRAPH for the pre-existing \\\"at its model\\\".\n- The spine.py diff since main, for the how_to_read lines.\n\nRan the focused tests test_spine, test_lineage and test_connection_map: 75 tests OK in 29 s, at a load average of about 122. The full suite was deliberately not run, and no render was run. Nothing in the repository was edited. I did not open sources/12-*, 13-*, 18-* or the friend-conversation drafts.",
+  "verdicts": [
+   {
+    "where": "spine.svg count \"35\" (07→01 formal-reuse) at (346.6, 779.7), and spine.zh.svg at (346.6, 705.7)",
+    "agree": true,
+    "severity": "medium",
+    "why": "Confirmed by measuring the SVG geometry (Bezier sampled at 400 points, glyph box 15.6 x 10.1 above the baseline, half stroke counted). \"35\" overlaps its own curve L94 (M252.7,829.8 Q381.6,781.2 429.3,654.5) by 2.75 px, which is intended. It also overlaps the 07→02 formal-reuse curve L85 (M247.5,819.4 Q397.8,723.7 567.1,686.1, width 5.1) by 0.67 px, before its 1.5 px halo. That curve's own count, \"29\", stands 1.28 px from it. zh gives the same numbers. Every other count clears every other curve and spoke by at least 5.94 px (\"26\" to the 02 spoke). The cause is in svg(): halo points of other curves go into the soft list, so place_box only minimises them and does not exclude them. The fix moved \"35\" off the dotted application curve and onto a solid curve of the same colour. The second reading asked that no count sit on another curve, so this remains unresolved, and medium is right."
+   },
+   {
+    "where": "how_to_read() in spine.py: ONE-PAGE.md:15, THE-THEORY-OF-BECOMING.md:28, THEORY-GRAPH.md:15, the zh pages, and caption-r4-en/zh.txt",
+    "agree": true,
+    "severity": "low",
+    "why": "Real. The lead now reads \"cases of grammar laws or of a root form\", so the closing \"not read as such a case\" excludes root forms for all 99. That is the gloss the F4 fix took out of the glossary. The home separates the classes only by its parenthesis (glossary, after the fix: \"neither derived nor under a stated hypothesis\"). 08 §7 says of one of the 99: \"`Flow.no_new_dependence`, whose relational part is the root form `RootForms.descent_forms_no_dependence`\". On a strict reading the sentence is defensible, since that declaration is not read as a case as a whole. But it is wider than 08's words and now disagrees with the glossary it links. The zh has the same problem (不被读作这样的情形). Low is right."
+   },
+   {
+    "where": "spine.svg <desc> (description()), en and zh",
+    "agree": true,
+    "severity": "low",
+    "why": "Real. \"212 of the uses running backward, an earlier chapter's results using a later one's, drawn darker\" reads as if all 212 are drawn. Only the backward uses in pairs with at least DRAW_MIN = 10 are drawn. The zh 画得较深 has the same problem. Low."
+   },
+   {
+    "where": "one-root-to-its-edge.json basis of Flow.beyond_gives_nothing, its two copies in shared-laws.json, THEORY-GRAPH(.zh) derived row 1, GLOSSARY.md:83 / GLOSSARY.zh.md:93",
+    "agree": true,
+    "severity": "low",
+    "why": "Real. The basis now reads \"a formation beyond the feeding closure that takes part at a step …\". The Lean is correct in direction and hypothesis: requires : W.requires t g c, present : h ∈ L.present t, conclusion L.give t h c = 0. Feeding-closure law 3 has an antecedent for its closure (law 1, \"g lies within f's feeding closure\"). The basis has none, while the docstring and the replaced basis said \"a formation's feeding closure\". The glossary row is vaguer still: it drops \"feeding\" as well (\"beyond the closure\", \"a member of the closure\"), so a reader is not told which closure. The history entry's wording is consistent. git grep finds no live copy of the old basis outside the history entries. Low."
+   },
+   {
+    "where": "how_to_read() spoke clause on the three pages and zh (pre-existing)",
+    "agree": true,
+    "severity": "low",
+    "why": "Real. The drawn width is 1 + 9 x share, which I checked: the root, 22 of 74, is 3.7; Life, 8 of 23, is 4.1; Classical texts, 4 of 10, is 4.6. So width gives the share, as the picture's key says, not \"how many\". The count is written beside each spoke, so the harm is limited. Low."
+   },
+   {
+    "where": "GLOSSARY.md:83 \"the case rests on the review\" (pre-existing)",
+    "agree": true,
+    "severity": "low",
+    "why": "Real but minor. These are 08 §7's own words (\"the case of each derived row rest on the review\"), and 08 does not label the review there either. THEORY-GRAPH and the standings picture now say the review is AI-written, so the glossary is the one place left that does not. Low."
+   },
+   {
+    "where": "/Users/ren/tmp/rw/drafts/readme-caption-r4-en.txt vs -zh.txt",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed. The zh has 为文法之律的情形（这一情形依于审阅）, and the en has \"cases of grammar laws\" without the qualifier. The two editions also differ elsewhere. Only the zh adds （Lean 核验了其中什么，见 08 §7） after the 99. Only the en has \"the grammar being the account's relational calculus\" and links \"read as cases …\" to 08 §7. Both should match the English, which governs. Low."
+   }
+  ],
+  "missed": [
+   {
+    "where": "spine.svg subtitle (WORDS['en']['numbering'] in spine.py), and spine.zh.svg 较深的曲线；只画出有 10 次或以上的配对",
+    "text": "\"212 of the 497 uses between chapters run backward, an earlier chapter's results using a later one's (the darker curves; only pairs with 10 or more are drawn)\"",
+    "severity": "low",
+    "why": "The F6 fix replaced the precise \"drawn darker where a pair has 10 or more\" with \"only pairs with 10 or more are drawn\". That is wider than its home in the picture's own key: \"Not drawn: … the formal-reuse curves of pairs under 10 uses\". The key also says dashed interpretive curves are drawn for \"pairs with 3 or more\", and drawn_otherwise() draws dotted and dashed curves for pairs under 10 formal-reuse uses. So the picture does draw pairs with fewer than 10 uses, contrary to the subtitle.",
+    "fix": "\"(the darker curves; only formal-reuse curves of pairs with 10 or more are drawn)\"; zh: （较深的曲线；formal-reuse 的实线只画出有 10 次或以上的配对）."
+   },
+   {
+    "where": "spine.svg <desc> (description()), en and zh",
+    "text": "\"under the standings, the five shared laws with the central rows on each …\"",
+    "severity": "low",
+    "why": "The desc refers to \"the standings\" but never gives them. The picture's top strip shows 11 derived, 1 under a stated hypothesis, 6 counting and 99 at a named distance. A screen-reader user gets the five laws placed under a strip they were never told about.",
+    "fix": "Insert before it: \"the standings of the 117 central declarations against the edge of one root (11 derived, 1 under a stated hypothesis, 6 counting, 99 at a named distance)\", and in zh the same from 08 §7's counts."
+   },
+   {
+    "where": "THEORY-GRAPH.md:15, the lead after how_to_read (lead() in spine.py; pre-existing on main)",
+    "text": "\"The two boxes are the ethics' premises, each a hypothesis where used, neither asserted\"",
+    "severity": "low",
+    "why": "Where the ethics' premises are summarized, both are to be named with their roles (the continuation condition for scope, C for order). This sentence names neither, although the desc now does (\"the continuation condition (scope, whose losses count) and C (order)\"). I searched the zh page for the matching sentence and did not find it under that wording.",
+    "fix": "\"The two boxes are the ethics' premises, the continuation condition for scope and C for order, each a hypothesis where used, neither asserted.\""
+   }
+  ]
+ },
+ {
+  "key": "standings",
+  "findings": [
+   {
+    "where": "standings.svg and standings.zh.svg, class \"6 on their own carrier\" (spine.json first_view.distance[own carrier].en/zh.gloss, new in this fix)",
+    "text": "\"6 on their own carrier / by F5's verified items\" / \"6 项在其自身的载体上 / 依 F5 已核验的项\"",
+    "severity": "medium",
+    "why": "The words are 08 §7's (\"16 at a represented model and 6 on their own carrier, by F5's verified items\"; table rows 458-459), and check() finds them in 08. But neither the picture, nor GLOSSARY.md (which the footer points to), nor 08 says what F5 is. It is an internal item code, defined only in tools/research/shared_laws.py (\"F5 ... A law may carry statements_at_model: theorems that state a row of the same record at a model\") and in a _process design note. So the gloss that was added to answer the missed \"unglossed classes\" item gives a newcomer a code instead of a meaning, and the reader is still lost about this class. 08 also gives \"by F5's verified items\" to the 16 at a represented model, whose gloss here is \"representations and not derivations\" (08 line 437). A reader of the picture would take F5 to concern only the own-carrier class.",
+    "fix": "Give the class words a reader can use, still from 08 §7: for example \"stated where their terms are the grammar's, by F5's verified items\" (08 line 437: \"stated where their terms are the grammar's\"). Then add to the footer one clause from shared_laws.py: \"F5's items are theorems, checked on the core run, that state a row of the same record at a model\" (zh likewise). Or drop the gloss and say in the footer that 08 gives this class and the represented-model class only \"by F5's verified items\"."
+   },
+   {
+    "where": "standings.svg and standings.zh.svg footer, second paragraph (spine.json first_view.en/zh.footer[1])",
+    "text": "\"the page of each record whose laws name a declaration prints its standing, with its basis or the rule's reason\" / \"其页面印出该声明的地位，附其依据或规则的理由\"",
+    "severity": "low",
+    "why": "The home, THEORY-GRAPH.md line 31, says: \"prints its standing: for a derived row its laws, bridges and support, for the row under a stated hypothesis its form, hypotheses and countermodels, for a reading its basis, and otherwise the rule's reason\". The shortening puts a basis on every page that is not the rule's. A derived row's page prints no basis: feeding-closure.md line 19 has \"derived, a case of `Becoming.«所闭之界»`, with the support `Becoming.eq_zero_of_not_pos` …\" and not the edge record's basis sentence. The picture glosses those bands itself, so little is misread.",
+    "fix": "\"… prints its standing and what it rests on: laws and support, form and hypotheses, its basis, or the rule's reason\". Or keep only \"prints its standing\" (zh likewise)."
+   },
+   {
+    "where": "standings.svg and standings.zh.svg footer, second paragraph (new sentence)",
+    "text": "\"08 §7 gives the classes on amounts and laws of their models no further words.\" / \"08 §7 对“依于数量”与“为其模型之律”两类未再加说明。\"",
+    "severity": "low",
+    "why": "08 §7's class table leaves the reason column empty for three classes: \"at a named distance: balance in their statements | 32 | `Flow.no_new_dependence`: … | \" (an example and no reason), \"on amounts | 18 | | \" and \"laws of their models | 2 | | \". The picture shows \"32 with balance in their statements\" with no gloss either. Naming only two classes implies that 08 explains the third.",
+    "fix": "\"08 §7 gives the classes with balance in their statements, on amounts and laws of their models no further words (the first an example)\". Or simply add \"with balance in their statements\" to the list (zh likewise)."
+   },
+   {
+    "where": "tools/research/spine.py check() (first_view examples) and lead()/zh_page() alt text",
+    "text": "example \"in_law\": true renders \", in its record's law:\"; the alt text hard-codes \"and the single declaration of the class of one\" / \"单独一项的那一类写出该项\"",
+    "severity": "low",
+    "why": "check() ties an example to one record (en and zh name the same file) and its declaration to its class. It does not tie the quoted phrase to the laws entry that names the declaration. So the picture's claim \"in its record's law\" is unchecked. It is true today: relative-position-is-zero-sum.json laws[1] names Becoming.RelativePosition.rise_needs_fall and begins \"No change raises every part's position, and a part's rise needs another part's fall, …\". Separately, the alt text uses examples_drawn(s)[0] for the count but writes the class-of-one clause whatever examples_drawn(s)[1] is. The spiny.json about does not claim either check, so nothing a reader sees is wrong now.",
+    "fix": "When an example has in_law, check that some laws entry of that record names 'Becoming.' + declaration and holds the phrase. Write the class-of-one clause only when examples_drawn(s)[1] is 1."
+   }
+  ],
+  "earlier": [
+   {
+    "where": "standings subtitle, \"a row of the coverage file … (126 rows, nine declarations in two, so 117 distinct)\" (medium)",
+    "resolved": "yes",
+    "note": "Now \"(its 17 rows list 126, nine declarations twice, so 117 distinct)\", with 17 computed from COVERAGE.json (measured: 17 rows). This is the glossary's wording. The zh \"（17 行共列 126 项，其中九项列了两次，故为 117 项不同的声明）\" matches GLOSSARY.zh line 91. The svg desc carries the same words. The test pins the new string."
+   },
+   {
+    "where": "standings footer[1], \"The reasons not glossed here are in the edge record … beside each declaration\" (medium)",
+    "resolved": "yes",
+    "note": "The footer now copies THEORY-GRAPH line 31: \"42 have a basis in words, in its data, and the other 75 the label a rule gives; the page of each record whose laws name a declaration prints its standing\". This follows the checker's redirect to the record pages. Measured: edge_bases() = (42, 24) and 117 - 42 = 75. Its shortening \"with its basis or the rule's reason\" is reported as a new low."
+   },
+   {
+    "where": "standings \"11 derived\" gloss, \"the case rests on the review\" with no AI label (medium)",
+    "resolved": "yes",
+    "note": "Rendered as \"…; the case rests on the review (the review is AI-written)\" and \"这一情形依于审阅（审阅为 AI 所写）\". The glossary clause is kept verbatim and the label is appended outside it. A test covers it."
+   },
+   {
+    "where": "standings \"6 counting\" example, not_all_rise's clause under rise_needs_fall (low)",
+    "resolved": "yes",
+    "note": "The lead now reads \"For example, RelativePosition.rise_needs_fall, in its record's law: No change raises every part's position, and a part's rise needs another part's fall\" (zh \"，见其记录中的律：\"). The words are a prefix of relative-position-is-zero-sum.json laws[1], which names rise_needs_fall. Measured: the shared-laws label is 'counting'. That the phrase is in that law is not checked (folded into a new low)."
+   },
+   {
+    "where": "spine.json first_view.about vs check(), the bands' counts (low)",
+    "resolved": "yes",
+    "note": "The about now says that each distance class's words are checked \"together with its count\" and that each band's gloss is \"checked there\". This is exactly what check() does (holds(METHOD, f'{n} {label}') for the distances, holds(METHOD, gloss) for the bands). The band counts (11/1/6) are still unchecked against 08's number words, but nothing claims they are. They match 08 §7's table today."
+   },
+   {
+    "where": "standings.zh subtitle, 根之边（本根所及之远） (low)",
+    "resolved": "yes",
+    "note": "Now 根之边（单一之根所达到之处）, GLOSSARY.zh line 92's words."
+   },
+   {
+    "where": "checker's missed: subtitle drops \"at one step\" (low)",
+    "resolved": "yes",
+    "note": "en now says \"1 as a root form at one step, under a stated hypothesis\". zh says \"1 项被读作一个根形式的一步，在一个所述的假设之下\". Both match 08 §7's \"it is the root form `RootForms.outside_leaves_no_offspring` at one step\"."
+   },
+   {
+    "where": "checker's missed: \"on amounts\", \"on their own carrier\", \"laws of their models\" unglossed, the footer's pointers do not gloss them (medium)",
+    "resolved": "partly",
+    "note": "The footer now sends the reader to the record pages, which print each declaration's basis or the rule's reason. It also says 08 §7 gives amounts and laws of their models no further words. Own carrier got the gloss \"by F5's verified items\", which is 08's wording, but F5 is defined nowhere a reader of the picture is sent. That is reported as a new medium. The footer's list also leaves out balance in their statements, which 08's table equally leaves without words (new low)."
+   }
+  ],
+  "read": "Read in full:\n- The standings entry of round-4-readers-2.json: 6 findings, 6 verdicts, 2 missed, and the earlier list.\n- git diff --stat 0be9ab2a8 73a1a436f.\n- The fix diffs (word diffs) of spine.json, GLOSSARY.md, GLOSSARY.zh.md (rows 91-94), THEORY-GRAPH.md, THEORY-GRAPH.zh.md (standings paragraph, alt text, first derived row), 08-METHOD.md, test_spine.py, and the full diff of tools/research/spine.py.\n- spine.json first_view, all of it (en, zh, bands, distance).\n- spine.py check() lines 200-250 (the first_view block), examples_drawn, and standings_svg's changed lines.\n- test_spine.py lines 115-146 (the three first_view tests).\n- THEORY-GRAPH.md lines 22-36.\n- 08-METHOD.md lines 440-470 (§7's connectivity table, the standings paragraph and the class table), plus the line-437 context for \"representations and not derivations\".\n- relative-position-is-zero-sum.json laws[0-5].\n- The <title> and <desc> of standings.svg and standings.zh.svg.\n\nLooked at standings.svg (900x1030) and standings.zh.svg (900x908) as headless-Chrome screenshots in /private/tmp/claude-501/-Users-ren-theories/52d6b47e-68c8-4189-8383-b1a9e9047d9a/scratchpad/r4-shots-3/standings.png and /private/tmp/claude-501/-Users-ren-theories/52d6b47e-68c8-4189-8383-b1a9e9047d9a/scratchpad/r4-shots-3/standings-zh.png. Nothing is cut off and nothing overlaps.\n\nMeasured with python3 -B, in memory only:\n- spine.check() returns [].\n- boundary_counts() equals shared-laws.json boundary.counts (11/1/6/22/32/18/16/6/2/3, total 117), which matches 08 §7's table.\n- COVERAGE.json has 17 rows; central_rows() = (126, 87); edge_bases() = (42, 24); examples_drawn = (3, 1).\n- The shared-laws labels of the four example declarations are derived, under a stated hypothesis, counting and balance in its statement. not_all_rise, total_lt_of_mem and below_somewhere_or_not have no label.\n- standings_svg regenerates both svgs byte-identically.\n\nRan test_spine: 29 tests OK, at a load average of about 190-217. test_lineage and test_connection_map were not run (outside this scope, and the machine was heavily loaded). The full suite was deliberately not run, and no render was run.\n\nOnly searched, not read in full:\n- The repository for F5's definition: 08 uses it only at lines 448, 458 and 459; GLOSSARY has no entry; shared_laws.py lines 40-61 and the head of F5-MODEL-STATEMENTS.md define it.\n- Record pages for how a standing is printed (feeding-closure.md 19, relative-position-is-zero-sum.md 17, selection-among-groups-by-ending.md 23 and 26).\n- The examples_drawn callers.\n- Stale alt-text phrasings (\"for 4 of them\", \"4 类各附一例\"): none are left in the .md files.\n\nNot judged: the README/overview caption drafts, which are outside this scope. Nothing in the repository was edited.",
+  "verdicts": [
+   {
+    "where": "standings.svg / standings.zh.svg, \"6 on their own carrier / by F5's verified items\" (spine.json first_view.distance[own carrier] gloss, new in this fix)",
+    "agree": true,
+    "severity": "medium",
+    "why": "The finding is real. The gloss is 08 §7's table cell (lines 458-459 give \"by F5's verified items\" to both the 16 and the 6), so check() passes. But F5 is defined nowhere the picture sends a reader. A grep finds no \"F5\" in GLOSSARY.md, one-root-to-its-edge.md or THEORY-GRAPH.md. 08 line 437 only uses the name (\"So F5's report, over the 117, counts 45 reaching the grammar, 16 stated at a represented model, 6 stated on their own carrier only (U2's 4 and U3's 2)\"). The record pages the footer now points to repeat the code: for example \"*Standing of `Becoming.Web.paths_extension_iff_widens`, by the rule:* own carrier (F5's verified items on its own carrier only).\" So the gloss added to answer the unglossed-classes item still leaves a newcomer with a code. The proposed words hold up. 08 line 437 has \"stated where their terms are the grammar's\" for U2's 4, and \"restates two in the grammar's terms on their own carrier\" for U3's 2. A check() string would need the \" … \" elision."
+   },
+   {
+    "where": "standings footer[1], \"prints its standing, with its basis or the rule's reason\" / \"附其依据或规则的理由\"",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed. THEORY-GRAPH line 31 says \"for a derived row its laws, bridges and support, for the row under a stated hypothesis its form, hypotheses and countermodels, for a reading its basis, and otherwise the rule's reason\". feeding-closure.md line 19 prints the derived row's law and support, not the basis sentence (\"derived, a case of `Becoming.«所闭之界»`, with the support `Becoming.eq_zero_of_not_pos`\"). Measured: all 117 central declarations have a \"Standing of\" line on some record page, so the pointer is otherwise true. The bands carry their own glosses, so the cost is low."
+   },
+   {
+    "where": "standings footer[1], \"08 §7 gives the classes on amounts and laws of their models no further words\"",
+    "agree": true,
+    "severity": "low",
+    "why": "Partly right. 08's table (lines 456-457, 460) leaves the reason cell empty for balance, amounts and laws of their models alike, so listing two of the three is uneven. The finding misses the larger problem with the sentence: for laws of their models it is false of 08 §7 as a whole (reported under missed). The fix should name the table, not 08 §7."
+   },
+   {
+    "where": "spine.py check() / lead() / zh_page(): in_law unchecked; alt text hard-codes the class-of-one clause",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed by reading check() (lines 225-252): the example's phrase is held against the record and its label against the class, but nothing ties the phrase to the laws entry that names the declaration. It is true today: relative-position-is-zero-sum.md line 15 is law 2, which names `Becoming.RelativePosition.rise_needs_fall` and begins with the quoted words. Measured examples_drawn = (3, 1), so the hard-coded clause is right today. check() returns []."
+   }
+  ],
+  "missed": [
+   {
+    "where": "standings.svg and standings.zh.svg footer, second paragraph (spine.json first_view.en/zh.footer[1], new in this fix)",
+    "text": "\"08 §7 gives the classes on amounts and laws of their models no further words.\" / \"08 §7 对“依于数量”与“为其模型之律”两类未再加说明。\"",
+    "severity": "medium",
+    "why": "This is wider than its home and false for one of the two classes. The class \"laws of their models\" holds 2 declarations: shared-laws.json boundary.rows labels Becoming.Direction.extension_iff_widens and Becoming.PartForms.goAlike \"at its model\". 08 §7 gives both words. Line 437 says \"for `PartForms.goAlike`, the part carrying a law of its own, a law of its model\" and \"the other two, `Direction.extension_iff_widens` on the moves' frame and `PartForms.goAlike`, keep their reasons\". The §7 table rows 488 and 493 name them \"at its model\". Both also have a basis in the edge record's data, and the record page prints it (\"at its model, a reading: C's extension on the moves' frame, … a law of that model\"). A reader told that 08 §7 says nothing more about this class will not look for it there. 08's silence holds only for the standings table's reason column (lines 457, 460), which is also empty for balance in their statements (line 456).",
+    "fix": "Narrow the claim to its home and make it even: \"08 §7's table of standings gives no reason for the classes with balance in their statements, on amounts and laws of their models.\" zh: \"08 §7 的地位表对“陈述中有平衡”“依于数量”“为其模型之律”三类未列理由。\" Or drop the sentence, since the preceding clause already sends the reader to each record's page."
+   },
+   {
+    "where": "THEORY-GRAPH.md alt text for standings.svg (lead() in spine.py, changed in this fix)",
+    "text": "\"… counting and, by reason, at a named distance, with an example for 3 of them and the single declaration of the class of one, in its record's words\"",
+    "severity": "low",
+    "why": "\"3 of them\" follows \"The 117 central declarations\", so it can read as 3 declarations, not 3 classes. The Chinese says 3 类 (classes). The count is right: examples_drawn = (3, 1).",
+    "fix": "\"with an example for 3 of the classes and the single declaration of the class of one, in its record's words\"."
+   }
+  ]
+ },
+ {
+  "key": "lineage",
+  "findings": [
+   {
+    "where": "theories/LINEAGE.md, 'The arc in full' (lineage.json words.en arc_long); LINEAGE.zh.md 弧线全文",
+    "text": "\"…each, as the account now has them, stated and neither asserted, and the root becomes a grammar (35).\" (zh \"…二者都只陈述、不断言；根成为一种文法（35）\")",
+    "severity": "low",
+    "why": "The brief now says \"a plan roots it in a grammar\", but the arc in full still reports a finished change in October. The home is narrower. Point 35 says \"Plan version 8 … 'roots the theory in classical Chinese grammar…'. Version 10 made continuation … relative to a class, its first module landing on 23 October, prelude only\", and phase 5 says \"a plan roots the theory in a grammar of continuation relative to a class and its first module lands\". The second reading's checker said the fix should change both lines or neither, and only the brief changed. The two arcs now disagree.",
+    "fix": "\"…and a plan roots the theory in a grammar (35)\". zh: \"一份计划把本论植根于一种文法（35）\"."
+   },
+   {
+    "where": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rw-spine/reads/folder-dates.json, 'about'",
+    "text": "\"A third AI reader, the lineage reader of round 4's second reading (round-4-readers-2.json), found Wamotopia's end earlier than its source list's span\"",
+    "severity": "low",
+    "why": "In round-4-readers-2.json the Wamotopia item appears in the lineage entry's 'missed' list, which is the checker's. It is not among the reader's 'findings', which are the arc sentence, the 9 Nov bar, the root sentence and 'confirmed all ten'. The record credits the wrong AI reader, the same kind of attribution slip the second reading flagged in the lead.",
+    "fix": "\"A third AI reader, the checker of round 4's second lineage reading (round-4-readers-2.json, 'missed'), found…\""
+   },
+   {
+    "where": "theories/LINEAGE.md, 'Growth in the records', lead sentence (lineage.json words growth_intro); LINEAGE.zh.md equivalent",
+    "text": "\"The records' history entries by the week of their leading date: 4805 dated entries, and 184 with no leading date, left out.\"",
+    "severity": "low",
+    "why": "history_by_week(until=cut) now also leaves out the dated entries after the page's cut. Today that is one entry, one-root-to-its-edge.md's 9 November entry: history_by_week() returns 4806 and history_by_week(2026-11-08) returns 4805. The sentence names only the undated entries as left out, so a reader who counts the records' dated entries finds 4806 and cannot see why. The docstring says \"an entry written after the cut waits for the next one\", but the page does not say this.",
+    "fix": "\"…by the week of their leading date, to the page's cut (8 November 2026): 4805 dated entries; 184 with no leading date, and any dated after the cut, left out.\" Give zh the same."
+   },
+   {
+    "where": "theories/LINEAGE.md folder table, Wamotopia row (lineage.json and folder-dates.json 'to')",
+    "text": "\"[2026-09-03](wamotopia-and-the-wamo-protocol/README.md?plain=1#L583)\", with the quote \"2026-08-13 → 2026-09-03\"",
+    "severity": "low",
+    "why": "Line 583 dates a message export's window (\"out-cb-02.md — Ren's Claude Code messages, 2026-08-13 → 2026-09-03; item 70 … is tagged to this theory\"), not item 70 itself. The table cell shows a single day as if some material were dated then. The rule says \"A date is as exact as its line gives it\", and this line gives only a window whose end is an upper bound. The Spirit row's range end (\"2026-08-22 → 2026-09-03 — the concepts recut\") is a dated work period, so it is not the same case.",
+    "fix": "Either keep the date and add to the rule \"where a line gives only a source's window, its end is taken\", or show the cell as \"by 2026-09-03\"."
+   },
+   {
+    "where": "LINEAGE.zh.md 弧线简述, fourth sentence (lineage.json words.zh arc_short)",
+    "text": "\"本仓库最早的预先设定的预测写成\"",
+    "severity": "low",
+    "why": "Its homes on the same page use another term. Phase 4 says \"本仓库首批…预先给定的预测写于运行之前\", the arc in full says \"本仓库首批预先给定的预测写下（25）\", and point 25 uses 预先给定. The brief is the only place on the page with 预先设定, so a reader may think a different kind of prediction is meant.",
+    "fix": "\"本仓库首批预先给定的预测写下\"."
+   }
+  ],
+  "earlier": [
+   {
+    "where": "Second reading finding 0 (medium): arc in brief, fourth sentence, \"the repository's first predictions precede their run\" and \"fill theory folders\"",
+    "resolved": "yes",
+    "note": "It now reads \"By 6 October the writings are gathered into theory folders, the repository's first pre-specified predictions written.\" That keeps phase 4's \"gathered into\" and point 25's and phase 4's \"pre-specified\". zh: \"被汇入…最早的预先设定的预测写成\". Only a terminology difference remains (预先设定 vs 预先给定, a new low)."
+   },
+   {
+    "where": "Second reading finding 1 (low): the '9 Nov' week bar past the cut",
+    "resolved": "yes",
+    "note": "history_by_week now takes the cut, which render() parses from s['cut']['date_en']. Headless screenshots of lineage.svg (1000x954) and lineage.zh.svg (1000x886) show five bars, 5 Oct to 2 Nov, with no label past the axis end. Nothing is cut or overlapping. The growth table lost its 2026-11-09 row and reads 4805. The lead sentence does not yet say that post-cut entries are left out (new low)."
+   },
+   {
+    "where": "Second reading finding 2 (low): \"and the root becomes a grammar\" in the brief",
+    "resolved": "partly",
+    "note": "The brief now says \"and a plan roots it in a grammar\", and zh says \"一份计划把本论植根于一种文法\", which matches point 35 and phase 5. The arc in full, en and zh, still says \"the root becomes a grammar (35)\", although the checker asked that both lines change together (new low)."
+   },
+   {
+    "where": "Second reading finding 3 (low): folder-dates.json \"its checker confirmed all ten\"",
+    "resolved": "yes",
+    "note": "It now reads \"its checker confirmed the nine ends, and judged the memories start defensible but its rule mixed; the start now takes the span the folder's README gives\", which matches the verdict. The new sentence about Wamotopia credits the wrong role (new low)."
+   },
+   {
+    "where": "Checker's missed 0 (low): the folder table's lead credited the reader with the correction",
+    "resolved": "yes",
+    "note": "It now reads \"one gathered the ends and two others found eleven of them wrong, since corrected\", and zh \"另两位指出其中十一个有误，已更正\". The count of eleven matches folder-dates.json corrected_in_round_4: 10 'to' and 1 'from'."
+   },
+   {
+    "where": "Checker's missed 1 (low): Wamotopia's end 2026-06-04 was earlier than its source list",
+    "resolved": "yes",
+    "note": "It is now 2026-09-03 at README line 583, and the quote \"2026-08-13 → 2026-09-03\" holds at that line. I grepped the rest of the README. The only later dates are 2026-09-04 at lines 336 and 555, which is when an earlier file was decoded, not material. The start, 2021-10-18 at line 336, has nothing earlier but a biography line (242). The folder data in lineage.json equals folder-dates.json for all 16 folders, and all 32 quotes match their lines. The end is the end of an export window, not a dated item (new low)."
+   }
+  ],
+  "read": "Read in full:\n- The lineage entry of round-4-readers-2.json: 4 findings, 4 verdicts, 2 missed and 10 earlier.\n- git diff --stat 0be9ab2a8..73a1a436f, then the word diffs of lineage_static.json, lineage.json (words and folders hunks), folder-dates.json, lineage.py (history_by_week and render) and lineage.svg.\n- The word diff 817a717c1..73a1a436f of LINEAGE.md. The merge base had main's older render, so this diff isolates this branch's changes; it also showed main's point 40/42 evidence moves, which were not judged.\n- theories/LINEAGE.md lines 1–60: the reading time, intro, arc in brief, arc in full, In brief, the label key, how the points were chosen, what they follow, and the first thread.\n- theories/LINEAGE.md lines 170–245: the folder table lead, all 16 rows, the papers' heads, and Growth in the records.\n- Turning-point rows 3, 14, 22, 25, 35, 45, 46 and 48.\n- LINEAGE.zh.md lines 1–16, and its folder lead at line 237.\n- folder-dates.json, all of it.\n- Wamotopia README lines 570–585, and every dated line from 2026-06 onward plus the 2013–2021 hits (26, 42, 242, 258, 274, 336, 376, 494, 545, 555, 580–583).\n- The Wamotopia manifesto v1.0, lines 5–12.\n- Human Solutions Museum README lines 378–386 and 490–520, to check whether its source list carries a window like Wamotopia's.\n\nMeasured with python3 -B:\n- The arc in brief is 150 words without its bold lead (154 with it). Per sentence: 23/24/28/16/28/31.\n- lineage.json folders equals folder-dates.json for all 16, and all 32 evidence quotes are found at their lines.\n- history_by_week() gives 4806 and 184 with a 2026-11-09 week of 1; with until=2026-11-08 it gives 4805 and 184.\n- The ten-minute part's prose (brief plus phases) is about 7–9 minutes by navigation.reading_time.\n\nLooked at headless-Chrome screenshots of lineage.svg (1000x954) and lineage.zh.svg (1000x886) in the scratchpad's r4-shots-3. The key, the marks note and five week bars all fit, with no element past the axis and none overlapping.\n\nOnly searched, not read in full:\n- The READMEs of architecture, museum, context, swarms, memories and spirit, grepped for dates from 2026-08-22 onward and for September/October 2026. The only hits are the 25 September banner and the memories 'Between 2026-03 and 2026-09' line, so no later material ends.\n- 预先设定/预先给定 across LINEAGE.zh.md.\n- test_lineage.py for history_by_week, which has no test of the new until argument.\n\nNot run: the focused tests, deliberately, at a load average of 190–213; the implementer's runs are the evidence. The full suite was not run either. Nothing in the repository was edited, and no render was run. Not opened: sources/12-*, 13-*, 18-* and drafts/2026-10-02-friend-conversation*.",
+  "verdicts": [
+   {
+    "where": "theories/LINEAGE.md 'The arc in full', \"and the root becomes a grammar (35)\" (zh \"根成为一种文法（35）\")",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed. The brief now reads \"and a plan roots it in a grammar\". The arc in full, on lines 15 (en) and 17 (zh), still says \"the root becomes a grammar (35)\". Point 35 says \"Plan version 8 … 'roots the theory in classical Chinese grammar…'\" and \"its first module landing on 23 October, prelude only\". Phase 5 says \"a plan roots the theory in a grammar of continuation relative to a class and its first module lands\". The second reading's checker said to change both lines or neither, so the two arcs now disagree. Point 35's title (\"One-unfolding root: a grammar of continuation…\") softens this, so low is right. The proposed fix copies the home."
+   },
+   {
+    "where": "reads/folder-dates.json 'about': \"A third AI reader, the lineage reader of round 4's second reading … found Wamotopia's end earlier\"",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed. In round-4-readers-2.json, the lineage entry's 'findings' are the arc sentence, the 9 Nov bar, the root sentence and 'confirmed all ten'. The Wamotopia item is only in 'missed', which is the checker's output. The record gives the find to the wrong role. It is a process record, not a front, so low is right."
+   },
+   {
+    "where": "LINEAGE.md 'Growth in the records' lead: \"4805 dated entries, and 184 with no leading date, left out\" (zh line 284 the same)",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed by running the code. history_by_week() returns 4806 dated and 184 undated. history_by_week(date(2026,11,8)), which render() now passes from s['cut'], returns 4805, and the one dropped is the 2026-11-09 week. The lead names only the undated entries as left out. The cut-off exists only in the docstring (\"an entry written after the cut waits for the next one\"). The table and bars are otherwise right: 460/1810/1775/456/304, and 1810 is the largest week, as the svg key says."
+   },
+   {
+    "where": "LINEAGE.md folder table, Wamotopia end \"[2026-09-03](…README.md?plain=1#L583)\"",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed, and the evidence is stronger than the finding says. README:583 gives only an export window (\"out-cb-02.md — Ren's Claude Code messages, 2026-08-13 → 2026-09-03; item 70 … is tagged to this theory\"). The reading note itself dates item 70 to 2026-08-21 (out-cb-02.md:87, \"— same —\" under the 2026-08-21 compaction summary, line 67). The other later item tagged to this folder, out-cb-07 #153, is dated 2026-08-14 (out-cb-07.md:311). So no dated item the folder draws on is as late as 2026-09-03. The cell's day is an upper bound, and the rule (\"A date is as exact as its line gives it\") was not extended to say a window end is taken. No other folder's README has a later '→' window end than its row's end, so this is the only row that uses the window rule. Low is right. Either fix (\"by 2026-09-03\", or a rule clause) works."
+   },
+   {
+    "where": "LINEAGE.zh.md 弧线简述: \"本仓库最早的预先设定的预测写成\"",
+    "agree": true,
+    "severity": "low",
+    "why": "Real. Point 25 and phase 4 use 预先给定. One small correction: phase 4 (zh) actually reads \"本仓库最早的预先给定的预测写于运行之前\", not \"首批…\". So the smallest fix keeps the brief's own words: \"本仓库最早的预先给定的预测写成\"."
+   }
+  ],
+  "missed": [
+   {
+    "where": "theories/LINEAGE.md 'The arc in brief', sixth sentence (lineage.json words.en.arc_short); LINEAGE.zh.md 弧线简述 \"在运行之前冻结\"",
+    "text": "\"In November tests of formations that read are frozen before running;\" (zh \"关于读取之形成的各项检验在运行之前冻结\")",
+    "severity": "low",
+    "why": "This fix changed the home's words. The previous brief, phase 6 (\"tests of formations that read are frozen before any run\") and the arc in full (\"frozen before any run (45)\") all say \"before any run\". \"Before running\" reads as though the tests were then run. Point 45 says only the Stage A of TR1, TR2 and TR7 ran, on small learners, and \"The tests that call a model have not run.\" The zh drops 任何, which phase 6 (zh) keeps: \"在任何运行之前冻结\". The change seems to have been made to save a word for \"a plan roots it in a grammar\", but the brief now runs to exactly 150 words without its lead.",
+    "fix": "\"frozen before any run\" (zh \"在任何运行之前冻结\"). To keep 150 words, make another cut, e.g. \"T2's former wording fails on beetle cultures, T2 is narrowed\" becomes \"T2's former wording fails on beetle cultures and is narrowed\"."
+   },
+   {
+    "where": "reads/folder-dates.json 'reader_findings' and 'rule'",
+    "text": "'reader_findings' holds only the two round-4 first-reading findings (the nine ends, the memories start); 'rule' is unchanged: \"to: the latest such date. A date is as exact as its line gives it.\"",
+    "severity": "low",
+    "why": "The 'about' now says a third AI reader found Wamotopia's end, and corrected_in_round_4.to now lists wamotopia-and-the-wamo-protocol. But the finding is not recorded with the other findings, and the rule does not say that a source window's end counts as a material date, which is the reading the new end at README:583 depends on. Someone checking the record cannot see on what basis the eleventh end was changed. Process record only, so low.",
+    "fix": "Append the second reading's checker's Wamotopia 'missed' item to 'reader_findings', and add to 'rule': \"where a line gives only a source's window, its end is taken\" (or show that cell as \"by 2026-09-03\")."
+   }
+  ]
+ },
+ {
+  "key": "chinese",
+  "findings": [
+   {
+    "where": "theories/becoming/results/THEORY-GRAPH.zh.md line 14, ONE-PAGE.zh.md line 17, THE-THEORY-OF-BECOMING.zh.md line 32 (spine.py how_to_read, zh branch), and the drafted caption-r4-zh.txt",
+    "text": "「约十分之一被读作文法之律或根形式的情形：11 项推导而得，为文法之律的情形，1 项为根上一形式（root form）的一步情形」",
+    "severity": "low",
+    "why": "The fix brought 根形式 into this sentence, so \"root form\" now appears two ways in one sentence: 根形式, then 根上一形式. The pictures (standings.zh: 「根形式 RootForms.outside_leaves_no_offspring 的一步」; the strip note: 「被读作根形式」) and GLOSSARY.zh's named-distance row say 根形式. A reader can take 根上一形式 (a form on the root) for something other than the 根形式 named a clause earlier. The second reading's 本根 finding noted the double rendering in its why, and only the 本根 part was fixed.",
+    "fix": "In spine.py's zh how_to_read, write 「1 项为一个根形式（root form）的一步情形」. The caption draft takes the same words."
+   },
+   {
+    "where": "standings.zh.svg (and standings.svg), the class 「6 项在其自身的载体上」 with its new gloss 「依 F5 已核验的项」, beside 「16 项在一个被表示的模型上 / 是表示，不是推导」 (spine.json first_view distance 'own carrier')",
+    "text": "「6 项在其自身的载体上 / 依 F5 已核验的项」",
+    "severity": "low",
+    "why": "08 §7 line 448 attaches the qualifier to both classes: \"16 at a represented model and 6 on their own carrier, by F5's verified items\". Its table (lines 458-459) gives \"by F5's verified items\" on both rows. The picture gives it only to the 6 and gives the 16 a different gloss, so a reader takes F5's verified items as what sets the 6 apart from the 16.",
+    "fix": "Give the 16 class 08's qualifier too: 「是表示，不是推导；依 F5 已核验的项」 (English \"representations and not derivations; by F5's verified items\"). Otherwise drop it from the 6."
+   },
+   {
+    "where": "standings.zh.svg subtitle and desc (new: 「17 行共列 126 项，其中九项列了两次」) against spine.zh.svg's strip note 「126 个核心行（九项声明各占两行）」 and standings.zh's derived gloss 「某行载有它们之处」, all on THEORY-GRAPH.zh",
+    "text": "「即覆盖文件的某一行列为核心的一个 Lean 陈述（17 行共列 126 项，其中九项列了两次，故为 117 项不同的声明）」",
+    "severity": "low",
+    "why": "The fix counts the coverage file's 17 rows, so 行 now means a coverage row of many declarations. On the same page, the spine strip keeps 08 §7's unit, \"Of the 126 central rows (nine declarations stand in two)\", where one row is one listed declaration, and the derived gloss's 「某行」 (\"where a row has them\") uses that unit too. A reader meets 17 rows and 126 rows for the same file, and 「九项声明各占两行」 against 「九项列了两次」. The English pictures do the same (\"its 17 rows list 126\" against \"126 central rows\").",
+    "fix": "Name the 17 by what they are, not as 行: 「覆盖文件 17 个阶段、分化或领域共列 126 个核心行（九项声明各列两次），故为 117 项不同的声明」. In English: \"the coverage file's 17 phases, differentiations and domains list 126 central rows, nine declarations twice, so 117 distinct\"."
+   },
+   {
+    "where": "spine.zh.svg <desc> (spine.py description(), zh branch, rewritten in this fix), and the same in spine.svg's desc",
+    "text": "「画出 17 个至少 10 次的配对；497 次中有 212 次是逆向的，即章序在前的一章的结果使用章序在后的一章的结果，画得较深」 (English: \"212 of the uses running backward, an earlier chapter's results using a later one's, drawn darker\")",
+    "severity": "low",
+    "why": "Measured from the theory graph: only 146 of the 212 backward uses lie in the 17 drawn pairs. The other 66 are in pairs under 10 uses, which are not drawn at all. The desc says all 212 are drawn darker. The picture's lede now says it correctly: 「（较深的曲线；只画出有 10 次或以上的配对）」.",
+    "fix": "Write 「…，画出的逆向配对画得较深」 (English \"drawn darker where their pair is drawn\"), or follow the lede: 「（较深的曲线；只画出有 10 次或以上的配对）」."
+   },
+   {
+    "where": "standings.zh.svg counting class (spine.json first_view.zh.in_law, new in this fix)",
+    "text": "「例如 RelativePosition.rise_needs_fall，见其记录中的律：没有一个变化使每个部分的位置都升；一个部分升需要另一部分降」",
+    "severity": "low",
+    "why": "The English reads \"For example, RelativePosition.rise_needs_fall, in its record's law:\", which says where the following words come from. In Chinese 见 reads as \"see\", an instruction to go and look at the record's law, and the quoted words then seem to be a separate gloss.",
+    "fix": "「例如 RelativePosition.rise_needs_fall，用其记录中律的话：…」, or 「…，其记录中的律：…」."
+   },
+   {
+    "where": "/Users/ren/tmp/rw/drafts/readme-caption-r4-zh.txt (drafted for README.zh), against readme-caption-r4-en.txt",
+    "text": "「117 个核心声明中，约十分之一读作文法之律或根形式的情形：11 个推导而得，为文法之律的情形（这一情形依于审阅），1 个为根上一形式的一步情形…（Lean 核验了其中什么，见 08 §7）；这幅图显示什么、不显示什么，见[理论图：各章一览](…THEORY-GRAPH.zh.md#the-spine)」",
+    "severity": "low",
+    "why": "This draft is not a translation of the English draft. It adds two clauses the English lacks: the review clause, without the pictures' 「（审阅为 AI 所写）」 label, and the Lean pointer. It drops \"the grammar being the account's relational calculus\" and the English link from \"read as cases of grammar laws or of a root form\" to 08 §7. Its link text 「这幅图显示什么、不显示什么」 points to #the-spine, the top of 各章一览, not the section of that name (the English goes to #the-spine-what-it-shows-and-does-not-show). It also counts 核心声明 with 个, where the glossary and the other fronts use 项, and it carries the 根上一形式 / 根形式 split.",
+    "fix": "Translate the English draft clause for clause, with 项 and 根形式. Point the link to THEORY-GRAPH.zh.md#the-spine-what-it-shows-and-does-not-show. If the review clause stays, write 「（这一情形依于审阅，审阅为 AI 所写）」 and add the same clause to the English."
+   }
+  ],
+  "earlier": [
+   {
+    "where": "Second reading, low: spine.zh.svg <desc>, 「其中 212 次是逆向的」 placed after the premises sentence",
+    "resolved": "yes",
+    "note": "The desc now reads 「画出 17 个至少 10 次的配对；497 次中有 212 次是逆向的，…（章的编号是为阅读，不是证明的次序）」, and the premises sentence follows the shared-laws parenthesis, in the English order. Both premises are named with their roles: 「延续条件（定范围：谁的损失算数）与 C（定次序）」. The new spokes sentence matches the English (「根 74 个中 22 个」 = \"22 of 74\"). A separate low point on 「画得较深」 for all 212 is reported as a new finding."
+   },
+   {
+    "where": "Second reading, low: connections.zh.svg <desc>, 承接 against the strip's 承继",
+    "resolved": "yes",
+    "note": "The desc now uses the strip's words: 「其中 3 条承继，488 条部分承继，189 条改变（本论另有说法）；376 条是此处提出的新读法…；105 条未承继，22 条仅存于历史」. The six counts sum to 1183 and match the strip. The rest of the desc still matches the English (337 = 130/67/140, 328, 14.2%, 3.2%, 3), and the AI-translation label is kept. In the screenshot, nothing is cut off."
+   },
+   {
+    "where": "Second reading, low: standings.zh.svg subtitle 「根之边（本根所及之远）」",
+    "resolved": "partly",
+    "note": "The subtitle and desc now take the glossary's gloss, 「根之边（单一之根所达到之处）」, and 本根 is gone. The root form's double rendering, which that finding's why also named, remains, and the fix put both renderings in one sentence of the how-to-read lines (根形式 … 根上一形式). It is re-reported as a new low finding."
+   },
+   {
+    "where": "Second reading, low: lineage(.zh).svg empty 「11月9日」 bar; growth table 2026-11-09 row",
+    "resolved": "yes",
+    "note": "lineage.py now counts history only up to the page's cut (8 November). The zero-height bar and its 「11月9日」 / \"9 Nov\" label are gone from both svgs, the growth tables end at 2026-11-02 (304), and the dated count reads 4805. The subtitle now says 「到现行的本论（2026 年 11 月 8 日）」 and the footer says 画出. The screenshot shows no empty week."
+   },
+   {
+    "where": "Second reading's checker, missed (low): spine.zh.svg lede 「（某一配对有 10 次或以上时画得较深）」",
+    "resolved": "yes",
+    "note": "The lede now reads 「（较深的曲线；只画出有 10 次或以上的配对）」, and the English reads \"(the darker curves; only pairs with 10 or more are drawn)\". Darkness and the drawing threshold are now separate and agree with the key and the 不画出 line."
+   },
+   {
+    "where": "Second reading's checker, missed (low): THEORY-GRAPH(.zh) alt text of standings, 「其中 4 类各附一例」",
+    "resolved": "yes",
+    "note": "It now reads 「其中 3 类各附一例，单独一项的那一类写出该项，皆用其记录的话」 (English: \"with an example for 3 of them and the single declaration of the class of one, in its record's words\"). The picture agrees: 例如 for derived, counting and balance, and 即 for GroupEnding.Flow.all_end. examples_drawn now returns (3, 1)."
+   },
+   {
+    "where": "Second reading's checker, missed (low): the note on 生成 for tool output (LINEAGE.zh line 11, the lineage.zh.svg footer)",
+    "resolved": "yes",
+    "note": "No text was owed by that note, but the fix also changed the words. LINEAGE.zh's intro now says 「…与对照表写出」, the sources paragraph says 「写出本页时又核对…」, and the lineage.zh.svg footer says 「依 lineage.json、各记录与对照表画出」. No 生成 for tool output remains in LINEAGE.zh's head, its per-folder section or the svg. The tool-output 生成 at LINEAGE.zh lines 58 and 104 (「由 AI 研究工具生成的报告」) is outside this scope and older."
+   }
+  ],
+  "read": "Read in full:\n- The chinese entry of round-4-readers-2.json: 4 findings, 4 verdicts and 3 missed items.\n- git diff --stat 0be9ab2a8..73a1a436f.\n- From that range, the diffs of GLOSSARY(.zh).md, ONE-PAGE(.zh).md, THE-THEORY-OF-BECOMING(.zh).md, THEORY-GRAPH(.zh).md, connections.zh.svg with connection_map.py, standings.zh.svg, lineage(.zh).svg with lineage.py, spine.py and test_spine.py, plus the changed text lines of spine.zh.svg.\n- LINEAGE(.zh).md, both as a word diff over 0be9ab2a8..73a1a436f and as the round's real change, 817a717c1..73a1a436f, because the merge 0be9ab2a8 carried main's older LINEAGE pages and the render restored them.\n- THEORY-GRAPH.zh.md lines 1-60: how to read, both alt texts, the standings table and the derived table.\n- LINEAGE.zh.md lines 7-14: reading time, the AI label, intro, 弧线简述 and 弧线全文, against LINEAGE.md lines 7-13.\n- The per-folder lead and table in both editions. A script compared all 16 rows' links, dates, kinds, claims and most-read-against counts, and they are identical.\n- The full text and desc of spine.zh.svg, standings.svg and standings.zh.svg; the descs of spine.svg, connections.svg and connections.zh.svg; spine.json first_view.zh; folder-dates.json about/rule/corrected fields.\n- 08-METHOD.md lines 437 and 448, the §7 class table rows 457-460, and the Lean of Flow.beyond_gives_nothing.\n- The drafts readme-caption-r4-en/zh.txt and caption-r4-zh.txt.\n\nLooked at as headless-Chrome screenshots, all in /private/tmp/claude-501/-Users-ren-theories/52d6b47e-68c8-4189-8383-b1a9e9047d9a/scratchpad/r4-shots-3:\n- spine.zh.svg at 900x1767, at 1x and 2x, with 2x crops of the strip (strip.png) and the ring (ring.png).\n- standings.zh.svg at 900x908.\n- connections.zh.svg at 900x977.\n- lineage.zh.svg at 1000x886.\nNothing is cut off or overlapping. In the strip, 归并 is widened to 16 px with an 8-px hatch, and 扩大's 1-of-8 hatch is a thin 2.7-px sliver, visible at 2x.\n\nMeasured with python3 -B:\n- From the theory graph, 146 of the 212 backward uses lie in drawn pairs (383 of the 497 uses are in drawn pairs).\n- COVERAGE.json has 17 rows listing 126 declarations.\n\nOnly searched: the 受供给/供给闭包 renderings, the 根形式/根上一形式 renderings, 生成 and 现行之论 in LINEAGE.zh, 说明 in the scoped svgs, and the zh example string in relative-position-is-zero-sum.json.\n\nTests were not run: the load average was about 100, and under the machine rule reviewers read and do not run. The full suite was deliberately not run. Nothing in the repository was edited and no render was run. The sources/12-*, 13-* and 18-* files and the friend-conversation drafts were not opened.",
+  "verdicts": [
+   {
+    "where": "Finding 1: THEORY-GRAPH.zh.md l.14, ONE-PAGE.zh.md l.17, THE-THEORY-OF-BECOMING.zh.md l.32 (spine.py how_to_read zh, l.1239), caption-r4-zh.txt: 「…被读作文法之律或根形式的情形：…1 项为根上一形式（root form）的一步情形」",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed in spine.py l.1239 and on all three pages. One sentence now says 根形式 and then 根上一形式. standings.zh.svg says 「根形式 RootForms.outside_leaves_no_offspring 的一步」 and 「1 项被读作一个根形式的一步」, and the strip note says 「被读作根形式」. The English has one term (\"of a root form … a root form at one step\"). The proposed fix, 「1 项为一个根形式（root form）的一步情形」, matches the standings subtitle and is the smallest one."
+   },
+   {
+    "where": "Finding 2: standings(.zh).svg own-carrier gloss 「依 F5 已核验的项」 / \"by F5's verified items\" (spine.json first_view.distance 'own carrier', new in this fix)",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed. 08 §7's paragraph reads \"16 at a represented model and 6 on their own carrier, by F5's verified items\", and its table puts \"by F5's verified items\" on both rows. The 16's gloss, \"representations and not derivations\", is 08's own words from l.437, so it is not wrong. But giving F5 only to the 6 suggests F5's verification is what separates them. Low is right. Either fix works."
+   },
+   {
+    "where": "Finding 3: standings(.zh).svg subtitle and desc 「17 行共列 126 项，其中九项列了两次」 against spine.zh.svg strip 「126 个核心行（九项声明各占两行）」",
+    "agree": true,
+    "severity": "low",
+    "why": "Real, but the picture now copies its home word for word: GLOSSARY.zh row 91 / GLOSSARY.md row 81 read 「17 行共列 126 项，其中九项列了两次」 / \"its 17 rows list 126, nine declarations twice\". 08 §7 (l.437) counts \"126 central rows\". So the two units of 行 come from two homes, not from the fix. COVERAGE.json does have 17 rows (phase, differentiation, domain). The proposed wording, 「17 个阶段、分化或领域」, takes the glossary's own \"for a phase, differentiation or domain\". It is best made in the glossary row first and then copied to the picture, so the picture still copies its home."
+   },
+   {
+    "where": "Finding 4: spine(.zh).svg <desc>: 「497 次中有 212 次是逆向的，…画得较深」 / \"212 of the uses running backward, … drawn darker\"",
+    "agree": true,
+    "severity": "low",
+    "why": "Measured with spine.counts() on theory-graph.json: 212 uses run backward in all, and only 146 of them fall in drawn pairs (map→significance 20, knowing→significance 13, root→map 60, root→knowing 26, map→knowing 17, root→life 10). The other 66 are in pairs under 10 uses, which are not drawn. The visible lede is correct (「只画出有 10 次或以上的配对」); the desc is not. Low."
+   },
+   {
+    "where": "Finding 5: standings.zh.svg 「例如 RelativePosition.rise_needs_fall，见其记录中的律：…」",
+    "agree": true,
+    "severity": "low",
+    "why": "Real but marginal. 「见…：」 can read as 'see …:' or as 'as seen in …:', and since the colon introduces the quoted law, most readers will still take the words as the record's law. The English \"in its record's law\" names the source of the words, not an instruction. 「，其记录中的律：」 is cleaner. Low at most."
+   },
+   {
+    "where": "Finding 6: /Users/ren/tmp/rw/drafts/readme-caption-r4-zh.txt against readme-caption-r4-en.txt",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed by reading both drafts. The zh draft adds 「（这一情形依于审阅）」 without the AI label and 「（Lean 核验了其中什么，见 08 §7）」. It drops \"the grammar being the account's relational calculus\" and moves the 08 §7 link off \"read as cases …\". It links #the-spine (THEORY-GRAPH.zh l.12) where the English links #the-spine-what-it-shows-and-does-not-show, which exists at l.85. It counts with 个 where the fronts use 项, and it has 根上一形式. A draft for another session's round, so low."
+   },
+   {
+    "where": "Its verdicts on the second reading (all six marked resolved or partly)",
+    "agree": true,
+    "severity": "none",
+    "why": "Each one checked. The spine.zh desc now has the English order (the 212 sentence follows the pairs, and the premises come after the shared laws, each with its role). The connections.zh desc uses the strip's 承继/部分承继/改变/未承继, and 3+488+189+376+105+22=1183. 本根 is gone from spine.json, spine.py and every zh svg, and the root form's double rendering is rightly carried as finding 1 ('partly'). Both lineage svgs have no height=\"0.0\" bar, the last week label is 11月2日, and the growth table ends at 2026-11-02 (304). The lede is now 「（较深的曲线；只画出有 10 次或以上的配对）」. The alt text says 「3 类各附一例，单独一项的那一类写出该项」, and the picture agrees (例如 ×3, 即 ×1). No 生成 for tool output is left in LINEAGE.zh's head, its per-folder section or lineage.zh.svg. 生成性解释 at LINEAGE.zh l.24 is older (on main) and outside this scope. No resolved verdict is wrong."
+   }
+  ],
+  "missed": [
+   {
+    "where": "theories/LINEAGE.zh.md l.13, 弧线简述 (lineage.py zh brief, new in this round)",
+    "text": "「到 10 月 6 日，诸篇写作被汇入各理论文件夹，本仓库最早的预先设定的预测写成。」",
+    "severity": "low",
+    "why": "The same page renders \"pre-specified\" as 预先给定 three times: 弧线全文 l.15 「10 月 2 日本仓库首批预先给定的预测写下」, the phase line l.24 「本仓库最早的预先给定的预测写于运行之前」 and row 25 l.118 「本仓库首批预先给定的预测」. The English has one word, \"the repository's first pre-specified predictions\". Two renderings in the ten-minute part and its fuller version can read as two kinds of prediction, against the rule that a term keeps one sense and one rendering.",
+    "fix": "In lineage.py's zh brief, write 「本仓库最早的预先给定的预测写成」."
+   },
+   {
+    "where": "spine.zh.svg strip note (spine.py WORDS zh laws_note, l.110, edited in this fix) and spine.svg's \"and 1 as a root form under a stated hypothesis\"",
+    "text": "「…只有上面推导而得的 11 项，另有 1 项在一个所述的假设之下被读作根形式。」",
+    "severity": "low",
+    "why": "08 §7: `GroupEnding.Flow.all_end` \"is the root form `RootForms.outside_leaves_no_offspring` at one step\". The how-to-read lines, the standings subtitle (「1 项被读作一个根形式的一步」) and its band gloss all keep \"at one step\". The strip note, appended to in this fix, drops it, so on the same picture the one declaration reads as a root form outright, which is wider than its home.",
+    "fix": "「另有 1 项在一个所述的假设之下被读作一个根形式的一步」 / \"and 1 as a root form at one step, under a stated hypothesis\"."
+   }
+  ]
+ }
+]

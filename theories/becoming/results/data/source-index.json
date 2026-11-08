@@ -2259,12 +2259,6 @@
         "theories/becoming/chapters/08-METHOD.md"
       ]
     },
-    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wb-within-becoming/review/readers/round5-astra.md": {
-      "title": "round5-astra.md",
-      "local_links": [
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean"
-      ]
-    },
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/twenty-first-review/X3-SCIENCES-AND-TEXTS-CROSS-MODEL.md": {
       "title": "Cross-model review X3: how the sciences and the wisdom traditions map onto the theory",
       "local_links": [
@@ -5893,7 +5887,6 @@
         "theories/becoming/chapters/04-LIFE.md",
         "theories/becoming/chapters/05-COLLECTIVES.md",
         "theories/becoming/chapters/08-METHOD.md",
-        "theories/becoming/history/07-SIGNIFICANCE-before-within-becoming.md",
         "theories/becoming/history/ALIGNMENT-DIRECTION.md",
         "theories/becoming/history/ALIGNMENT-THROUGH-CHANGE.md",
         "theories/becoming/history/CHOICE-AND-GENERATIVE-CONTEXT.md",
@@ -5983,54 +5976,6 @@
         "theories/becoming/review/PHILOSOPHY.md",
         "theories/becoming/review/README.md",
         "tools/research/completion.py"
-      ]
-    },
-    "theories/becoming/history/07-SIGNIFICANCE-before-within-becoming.md": {
-      "title": "Significance, ethics and alignment",
-      "local_links": [
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gw-generation-and-widening/NOTE.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pf-path-and-crux/PHILOSOPHY-ROUND-1.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pf-path-and-crux/PHILOSOPHY-ROUND-2.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pw-step-forward/NOTE.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rr-revision-routes/NOTE.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sj-edge-and-judgement/HOW-EVALUATION-FORMS.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue10-what-can-be-reached/NOTE.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue11-where-the-possible-grows/NOTE.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue12-tasks-and-what-performs-them/NOTE.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue13-causal-sets/NOTE.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue4-second-order/DESIGN.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue7-what-keeps-widening/NOTE.md",
-        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue9-comparing-courses/NOTE.md",
-        "experiments/commons-outrun-generalizing/README.md",
-        "experiments/direction-installation/README.md",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Boundaries.lean",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarPath.lean",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PremiseWitnesses.lean",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PracticalPriorityIdentification.lean",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/priority-identification-verification.json",
-        "experiments/self-rewarding-lock/README.md",
-        "experiments/shaping-what-comes-back/README.md",
-        "experiments/valuer-agreement/README.md",
-        "sources/15-codex-theory-conversations/2026-10-10-wanting-continuation-one-axiom.md",
-        "theories/becoming/COLLECTIVE-DIRECTION.md",
-        "theories/becoming/history/ALIGNMENT-DIRECTION.md",
-        "theories/becoming/history/ALIGNMENT-THROUGH-CHANGE.md",
-        "theories/becoming/history/CHOICE-AND-GENERATIVE-CONTEXT.md",
-        "theories/becoming/history/ETHICAL-LEARNING.md",
-        "theories/becoming/history/EVALUATIVE-GROUNDING.md",
-        "theories/becoming/history/G0-WARRANT.md",
-        "theories/becoming/history/KNOWLEDGE.md",
-        "theories/becoming/history/NONINSTRUMENTAL-CONCERN.md",
-        "theories/becoming/history/PRACTICAL-JUDGMENT.md",
-        "theories/becoming/history/THE-STEP-OF-INVARIANCE.md",
-        "theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md",
-        "theories/becoming/review/README.md",
-        "theories/meta-attractor/README.md"
       ]
     },
     "theories/becoming/history/ALIGNMENT-DIRECTION.md": {

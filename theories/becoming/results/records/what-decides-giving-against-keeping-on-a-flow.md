@@ -37,7 +37,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- That giving or keeping is better: the laws count levels and lines, and a ranking names its scope and order; the continuation condition and C are one pair of readings 07 examines.
+- That giving or keeping is better: the laws count levels and lines, and a ranking is asked under the ethics' two premises, the continuation condition for scope and C for order.
 - Which routes any pair has, or a measured β or γ: the parts are supplied, so the sign is where the routes put it.
 - Renewal reaching one formation only: the routes do not represent it, and the formula, read on places supported in every run compared, does not reach a receiver that would otherwise fall below its need.
 - That offspring are a line's level beyond this reading, or the share laws' premise: the pair formula follows here only for a pair's run so read.
@@ -87,8 +87,6 @@ Aliases: `what decides giving against keeping on a flow`, `Becoming.PairFlow.Rou
 ### History
 
 - 6 November 2026, board item EL7: added from EL7's investigation of the factors (el7/b), its scratch Lean moved to the core; a skeptic's reading narrowed it to a near-definitional derivation with single witnesses at the shortfall.
-- 9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.
-- 9 November 2026, board item WB (the readers' fourth round): a ranking said to name its scope and order, the continuation condition and C being one pair of readings 07 examines, in place of 'ranked only under the two readings'; current Chinese fields brought to their English; no change to the claim, its hypotheses or its Lean.
 
 </details>
 

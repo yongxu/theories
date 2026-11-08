@@ -66,7 +66,7 @@ Meeting and failing a premise in models is the standard way to show it independe
 - **formal-reuse**: [the-source-texts-test-systems](the-source-texts-test-systems.md). TwoLines and ThirdThing, with TwoLines.other_line_outside and ThirdThing.fixed_class, which give the failing witnesses.
 - **formal-reuse**: [becoming-spine-instances](becoming-spine-instances.md). LiftModel's frame and LiftModel.lift_needs_live_middle, whose last part is L's failure here.
 - **formal-reuse**: [a-narrowing-above-its-widening](a-narrowing-above-its-widening.md). Weighting.WidensBy and Weighting.widensOn_of_widensBy, a widening by one item alone being a widening.
-- related, not a proved adapter: [one-root-to-its-edge](one-root-to-its-edge.md). The edge of one root lists apart the two readings the ranking results use, the condition for scope and C for order; this record gives the condition's root form and C their witnesses.
+- related, not a proved adapter: [one-root-to-its-edge](one-root-to-its-edge.md). The edge of one root lists the ethics' two premises apart, the condition for scope and C for order; this record gives the condition's root form and C their witnesses.
 - related, not a proved adapter: [what-the-dynamics-leave-open](what-the-dynamics-leave-open.md). The pattern of the non-entailment: ReadsOnlyDynamics.not_entails for the condition, here with the order in the place of the significance.
 
 **Used by:** [what-would-give-c](what-would-give-c.md)
@@ -98,7 +98,6 @@ Aliases: `the condition on the root varies with the net`, `根上之条件随网
 
 - 1 November 2026, board item DU (study section 489): added. The premise card's pairs for the condition's root form, C and L, and the law of widening by one item, from the deeper unification review's leaf, Becoming.PremiseWitnesses; two independent AI reviews of the leaf and a third look, every finding taken.
 - 6 November 2026, board item LM: thirteen of the premises an audit of the compiled terms found concluded by no theorem under their own names, chosen by reading, are met, each with the premises its line names, in a new leaf, `Becoming.PremisesTogether` (law added).
-- 9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.
 
 </details>
 
