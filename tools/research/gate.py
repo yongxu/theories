@@ -164,6 +164,7 @@ ROOTF = '_process/research/2026-10-05-generative-foundation-review/root-foundati
 # path until it gets one.
 TESTS = {
     'test_atlas': (),
+    'test_lean_catalogue_links': (),
     'test_connection_map': (DATA + 'shared-laws.json',),
     # the Chinese fronts' navigation line: the fronts, their English editions and the line's targets
     'test_chinese_fronts': ('README.zh.md', 'README.md', 'GLOSSARY.zh.md', 'GLOSSARY.md', 'theories/LINEAGE.zh.md', 'theories/LINEAGE.md',

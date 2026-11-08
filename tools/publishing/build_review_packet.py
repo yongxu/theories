@@ -45,9 +45,9 @@ PARTS = {
     "ALIGNMENT.md": ("en", "Review dossier · Alignment"),
     "SCIENCES.md": ("en", "Review dossier · Sciences"),
     "../ONE-PAGE.md": ("en", "The Theory of Becoming in one page"),
-    "../ONE-PAGE.zh.md": ("zh", "生成变化之论：一页"),
+    "../ONE-PAGE.zh.md": ("zh", "生灭变化之论：一页"),
     "../THE-THEORY-OF-BECOMING.md": ("en", "The Theory of Becoming"),
-    "../THE-THEORY-OF-BECOMING.zh.md": ("zh", "生成变化之论"),
+    "../THE-THEORY-OF-BECOMING.zh.md": ("zh", "生灭变化之论"),
     "recoding/CODEBOOK.md": ("zh", "重新归类：编码手册"),
 }
 

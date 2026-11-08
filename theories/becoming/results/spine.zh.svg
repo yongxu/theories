@@ -162,11 +162,11 @@
 <text x="506" y="1027.3" font-size="14" text-anchor="start" fill="#1c1917">引结果的已核验推理）：箭头指向被使用其结果</text>
 <text x="506" y="1045.3" font-size="14" text-anchor="start" fill="#1c1917">的那一章；曲线旁的数字为其使用次数，15 次</text>
 <text x="506" y="1063.3" font-size="14" text-anchor="start" fill="#1c1917">及以上才标出。这一类由 AI 写成的记录指定；</text>
-<text x="506" y="1081.3" font-size="14" text-anchor="start" fill="#1c1917">登记检查核对接口具备其字段，并引用记录中带</text>
-<text x="506" y="1099.3" font-size="14" text-anchor="start" fill="#1c1917">散列的参考文献之一（全部 1162 条这样的边中</text>
-<text x="506" y="1117.3" font-size="14" text-anchor="start" fill="#1c1917">有 797 条，所引的都是 Lean 文件）；没有任</text>
-<text x="506" y="1135.3" font-size="14" text-anchor="start" fill="#1c1917">何检查核对那里的 Lean 是否确实使用所引的结</text>
-<text x="506" y="1153.3" font-size="14" text-anchor="start" fill="#1c1917">果。</text>
+<text x="506" y="1081.3" font-size="14" text-anchor="start" fill="#1c1917">登记检查核对接口具备其字段、且其所引是记录</text>
+<text x="506" y="1099.3" font-size="14" text-anchor="start" fill="#1c1917">中带散列的参考文献之一（全部 1162 条这样的</text>
+<text x="506" y="1117.3" font-size="14" text-anchor="start" fill="#1c1917">边中有 797 条，所引的都是 Lean 文件）；没</text>
+<text x="506" y="1135.3" font-size="14" text-anchor="start" fill="#1c1917">有任何检查核对那里的 Lean 是否确实使用所引</text>
+<text x="506" y="1153.3" font-size="14" text-anchor="start" fill="#1c1917">的结果。</text>
 <line x1="470" y1="1170.3" x2="496" y2="1170.3" stroke="#1c1917" stroke-width="3.2" marker-end="url(#back)"/>
 <text x="506" y="1175.3" font-size="14" text-anchor="start" fill="#1c1917">同上；章序在前的一章的结果使用章序在后的一</text>
 <text x="506" y="1193.3" font-size="14" text-anchor="start" fill="#1c1917">章的结果时，线色较深。</text>
