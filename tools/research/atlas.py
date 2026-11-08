@@ -944,7 +944,7 @@ def crosswalk_zh_page(atlas: dict) -> str:
             '**离中文文本最近的两个领域。**', '', *domains, '',
             f'**全部 {len(groups)} 组**，每组一页，都在[英文索引](CROSSWALK.md)里：它以自己的话主张了什么，现行的说明中成了什么，以及每一条的目标与地位。', '']
     body = _finish(out)
-    return body.replace('{{time}}', f'*约 {zh_fronts.zh_time(body)}读完。*')
+    return body.replace('{{time}}', f'*约 {zh_fronts.settle(lambda t: zh_fronts.zh_time(body.replace("{{time}}", f"*约 {t}读完。*")))}读完。*')
 
 
 def folders_page(atlas: dict) -> str:
