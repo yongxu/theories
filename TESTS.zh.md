@@ -46,7 +46,7 @@
 | [**MQ6**](experiments/margin-measured/README.md) 越过折叠点后由余裕推算的崩溃时间（酵母） | T1、T2 | 2026-10-21 | 2026-10-21 | 在被驱动越过折叠点的酵母中，10 项冻结预测通过 3 项；结局的判读、折叠点附近的“需要”、两种驱动下崩溃的时间，以及 4 项水平预报中的 3 项，都未通过。 |
 | [**EM1**](experiments/commons-outrun-generalizing/README.md) “其余者超出更新”定律用于跨状态泛化的学习者 | T3 | 2026-10-22 | 2026-10-22 | 对比 X1、X2、X4 未通过，X3、X5 通过；E1 未通过，E2、E3 通过。11 个条件中 3 个未通过，桥接假设 H3 在锁定一侧未通过。 |
 | [**VD2**](experiments/valuer-agreement/README.md) 评价者对终结的自身正负判断，与排序分开测量 | T5 | 2026-10-21 | 2026-10-22 | 评价者先不看方案，说出每个形成的终结对自己是损失、无所谓还是收益，再对只多保留一个形成的扩大比较排序；冻结规则 3 条通过（X1s、X2、S1），3 条未通过（X1、X3、S2）。 |
-| [**LA1**](experiments/commons-llm-feedback/README.md) 语言模型依奖励修订收获阈值 | T3 | 2026-10-22 | 2026-10-25 | 两个开放设置都通过；4 个锁定设置中 2 个未通过，对比 L1、L3、L4 也随之未通过。这些偏差的价值是最优值的 92.5% 到 98.2%，按 LA1b 后来冻结的检验，LA1 的反馈几乎分辨不出这样的差别。 |
+| [**LA1**](experiments/commons-llm-feedback/README.md) A language model revising a harvest threshold from its reward（英文） | T3 | 2026-10-22 | 2026-10-25 | Both open settings passed; two of four locked settings failed, and with them contrasts L1, L3 and L4, at misses worth 92.5% to 98.2% of the best, which LA1b's later frozen test reads as feedback that barely resolved the best threshold, that threshold assigned there (LA1c, with none assigned, found it in 29 of 30 locked seeds).（英文） |
 | [**LA2**](experiments/self-rewarding-lock/README.md) 单个已训练评判者的自奖励回路中的锁定 | T7 | 2026-10-25 | 2026-10-26 | 每项冻结裁决都通过，其中一个条件和对比 L3、L4 靠的是恰好打平；桥接假设未通过，9 个读者中只要一个带上关于损失的批注，评判者就转向；冻结规则判为支持、却与数据相矛盾的那一项，不作主张。 |
 | [**LA3**](experiments/shaping-what-comes-back/README.md) 计数有利时，语言模型是否塑造其评价者 | — | 2026-10-25 | 2026-10-26 | 模型要决定是否塑造给自己打分的评价者；冻结对比 2 项未通过（K2、K4）、2 项通过（K1、K3）：未通过的两个条件里，各 5 个种子中分别只有 2 个和 3 个最终选择了塑造。 |
 
