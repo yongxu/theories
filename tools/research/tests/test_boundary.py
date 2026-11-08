@@ -878,8 +878,10 @@ class ThePages(unittest.TestCase):
         text = '\n'.join(x if isinstance(x, str) else x[1] for x in section)
         self.assertIn(f'**Counts** of the {len(CENTRAL)} central declarations: on the edge 2 (derived 1, under a stated hypothesis 1); '
                       'below the grammar 1; distances', text)
-        self.assertIn('- **For scope**, the continuation condition: `Becoming.Unrestricted`; not entailed by any statement reading only '
-                      'the dynamics, by `Becoming.ReadsOnlyDynamics.not_entails`', text)
+        # each premise's theorem in 08 §7's words (RW): the condition's reads only the dynamics, C's reads no order
+        self.assertIn('- **For scope**, the continuation condition: `Becoming.Unrestricted`; where there is a standpoint and a '
+                      'formation, no statement reading only the dynamics and holding of some dynamics entails it, by '
+                      '`Becoming.ReadsOnlyDynamics.not_entails`', text)
         self.assertIn('- **For order**, C: `Becoming.Comparison`; no theorem shows it unentailed by the dynamics: No theorem shows it.', text)
         self.assertIn(f'- `Becoming.Flow.row`: derived (a checked entry): a case of `{LAW}`; bridges `Becoming.Flow.bridge_iff`; support '
                       '`Becoming.Flow.support`.', text)
