@@ -38,3 +38,9 @@ Secondary: [diff-round1-records.txt](diff-round1-records.txt), the records' and 
 Not in the diff, by design: the before-copies under `theories/becoming/history/` and `_process/history/`; generated pages (the crosswalk's pages, RESULTS, OPEN-QUESTIONS, README, the indexes), which the render writes from what is in the diff.
 
 Write your report to `review/readers/round1-<your name>.md` only if you can write files; otherwise return it as your answer.
+
+## Round 2 (9 November 2026, branch tip `00b2fbec2`)
+
+The same reader reads what changed since round 1: [diff-round2.txt](diff-round2.txt), from round 1's tip `223f917bc` to `00b2fbec2`, without what the merge of main brought in (RW's Chinese round; a block whose new sentences are all main's is left out). Secondary: [diff-round2-records.txt](diff-round2-records.txt) (skip hash-only blocks). Generated pages in the diff (LINEAGE, THEORY-GRAPH, the indexes) are the render's; read their sources instead.
+
+Check first that each of your round-1 findings is fixed as you meant, or say why the fix differs; the fixes are `kit/edit_round1.py`, `kit/crosswalk_round1.py` and `kit/crosswalk_round1b.py`, then the merge's resolution. Then read the rest of the diff by the same seven questions. The same table; high first; say what you read in full.

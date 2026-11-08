@@ -20,6 +20,10 @@ GLOSSARY.zh.md:82
   + 中文版专有） | 第六章与中华本称 C（扩大可形成者更好）为以广为愈；
     … 义即 C（见上），只有一义 | [第六章](theories/becoming/chapters/06-CLASSICAL-TEXTS.md#thesis)、[§7.3](theories/becoming/chapters/06-CLASSICAL-TEXTS.md#zhonghua) |
 
+GLOSSARY.zh.md:85
+  - | 存活之意义（living significance） | 该条件所给出的：每一个活的主张从每一个立场都被计数 | [第七章 §3](theories/becoming/chapters/07-SIGNIFICANCE.md#living-significance) |
+  + | 存活之意义（living significance） | 该条件所给出的：活着延续者之意义，每一个活的主张从每一个立场都被计数 | [第七章 §3](theories/becoming/chapters/07-SIGNIFICANCE.md#living-significance) |
+
 === MAP.md
 
 MAP.md:9
@@ -82,6 +86,122 @@ _process/navigation/README-ZH.md:25
   + 这项工作借助 AI 做成；
   + 主持它的人读过其中重要的部分，尚无独立的人工审查记录（[审查包](../../theories/becoming/review/README.zh.md)）。
 
+=== _process/navigation/zh-editions.json
+
+_process/navigation/zh-editions.json:1
+  + { 
+ "note":
+  + "Each translated Chinese front and the Chinese landing page's template: the day it was last revised, the digests of the English it then followed and of the Chinese, and the English's last commit (tools/research/zh_fronts.py).
+  + Written by --revised after a revision, never by hand; an entry with \"unchanged\" recorded a new English that needed no change in the Chinese, and says why.", 
+ "editions": { 
+  "GLOSSARY.zh.md": { 
+   "revised":
+  + "2026-11-09", 
+   "english":
+  + "e5b6a99784eab87e5a940d87c94a0b09db9db8cfb7cedfc50c921ca4d1fe942b", 
+   "chinese":
+  + "bd736d8cc59a949e0035d16f98d7fdacad89513bedb1ea2c2777aa731455529c", 
+   "english_commit":
+  + "a7254387a" 
+  }, 
+  "_process/navigation/README-ZH.md": { 
+   "revised":
+  + "2026-11-09", 
+   "english":
+  + "f97e358a8eb546490d9e0deb5933b2961e519246f348dcdb59f0b7ef5a1af377", 
+   "chinese":
+  + "079c9ec8f7680d43c43607084c65d642b8e071e2a8042b72ede3319cabf595de", 
+   "english_commit":
+  + "8a892a201" 
+  }, 
+  "theories/becoming/ONE-PAGE.zh.md": { 
+   "revised":
+  + "2026-11-09", 
+   "english":
+  + "c47799db65032a304c5804ea25df8779f0598f77c321fda6c3434a4f88e1a7b0", 
+   "chinese":
+  + "3e35469cf73c432c520dee896bbd87ed82a3df45f8e263b176cf1ee3bbaeb7fa", 
+   "english_commit":
+  + "d12241292" 
+  }, 
+  "theories/becoming/THE-THEORY-OF-BECOMING.zh.md": { 
+   "revised":
+  + "2026-11-09", 
+   "english":
+  + "a493902de3d8157e15900fd11b7d405628b60bc49936f942ef74e9f58be5da16", 
+   "chinese":
+  + "c9fb1020966bf32104be7f9b3f20e8ce5660668035b79471d7a13000c07a3a4a", 
+   "english_commit":
+  + "d12241292" 
+  }, 
+  "theories/becoming/USES-EXAMPLES.zh.md": { 
+   "revised":
+  + "2026-11-09", 
+   "english":
+  + "8e37744e0676f69b1e501db52053f5808e0283e11162a161a9af04e8ee06f4ca", 
+   "chinese":
+  + "dcac21f0934f96e9debef9bf6d9c18e9748850e9a6890358783e4e55a999e959", 
+   "english_commit":
+  + "d12241292" 
+  }, 
+  "theories/becoming/USES.zh.md": { 
+   "revised":
+  + "2026-11-09", 
+   "english":
+  + "7ea984c1460f88d9b25b7c751114bea27ce6c38b4dddd2b157baa21720cf6896", 
+   "chinese":
+  + "1b202ba3da58b6856ade2eec9f938b3d57221d8fe36535279fc976cd1caee67b", 
+   "english_commit":
+  + "dec8423cb" 
+  }, 
+  "theories/becoming/review/README.zh.md": { 
+   "revised":
+  + "2026-11-09", 
+   "english":
+  + "9f476aa7fceaa83fed2016830a54110ce0d3e1cae98ddff16babe4b065abfd96", 
+   "chinese":
+  + "78e2bb64d323cf17b012be6cf60be07b22d107023c7bc553fbdfdd7f28076ce7", 
+   "english_commit":
+  + "242eb8309" 
+  } 
+ } 
+}
+
+=== theories/LINEAGE.md
+
+theories/LINEAGE.md:74
+    … C shown not to follow from what reads no order (40); and a ranking of courses said to need C or a premise in its place (47).
+  + After the cut, on 9 November 2026, the account set the warrant aside: its ethics asserts no should and ranks only under the readings a result names, and T8 became its makers' offer, a way of seeing, binding no one ([07 §8](becoming/chapters/07-SIGNIFICANCE.md#theses)).
+
+theories/LINEAGE.md:194
+    … About 33,800 words;
+  - PDF of 89 pages. | [AI reading] The live account keeps the move of declaring rather than deriving the normative step, in a different form: two premises stated and not asserted (the continuation condition for scope, C for order).
+  - The glossary gives 生生 one sense, "life in the whole and its continuing generation", and keeps it apart from generation (生成) and the grammar's «生生».
+  + PDF of 89 pages. | [AI reading] Until 9 November 2026 the live account kept the move of declaring rather than deriving the normative step, in a different form: two premises stated and not asserted (the continuation condition for scope, C for order).
+  + Since then it asserts no should and ranks only under readings a result names, and the glossary gives 生生 one sense, "the continuation of life", and keeps it apart from generation (生成) and the grammar's «生生».
+    … The book's further terms (protection functions, totalization, the AI stack) were not checked against the live text term by term. | public |
+
+=== theories/LINEAGE.zh.md
+
+theories/LINEAGE.zh.md:7
+  - *全文约 117–153 分钟；
+  + *全文约 118–153 分钟；
+    … 简述、图、标签与这些线索约 31–40 分钟。
+
+theories/LINEAGE.zh.md:74
+    … 对进程的排序被说成需要 C 或一个代替它的前提（47）。
+  + 截取之后，2026 年 11 月 9 日，本论把根据之问放下：其伦理不断言任何应当，只在一项结果所指名的读法之下排序；
+  + T8 成为本论之作者所提供的一种看法，不约束任何人（[07 §8](becoming/chapters/07-SIGNIFICANCE.md#theses)）。
+
+theories/LINEAGE.zh.md:247
+    … PDF 共 89 页。
+  -  | ［AI 读法］现行之论以另一种形式保留了宣示而非推导规范一步的做法：两个陈述而不断言的前提（延续条件定范围，C 定次序）。
+  - 术语表给生生一个意义，「life in the whole and its continuing generation」（整体中的生命及其持续的生发），并把它与生成、与文法的 «生生» 分开。
+  +  | ［AI 读法］直到 2026 年 11 月 9 日，现行之论以另一种形式保留了宣示而非推导规范一步的做法：两个陈述而不断言的前提（延续条件定范围，C 定次序）。
+  + 自那以后，它不断言任何应当，只在一项结果所指名的读法之下排序；
+  + 术语表给生生一个意义，「the continuation of life」（生命之延续），并把它与生成、与文法的 «生生» 分开。
+    … 书中其余术语（保护功能、总体化、AI 栈）未逐项与现行文本核对。
+
 === theories/becoming/COLLECTIVE-DIRECTION.md
 
 theories/becoming/COLLECTIVE-DIRECTION.md:17
@@ -119,6 +239,14 @@ theories/becoming/ONE-PAGE.md:30
   + 生生 is the continuation of life [AI reading] ([07 §8](chapters/07-SIGNIFICANCE.md#theses)) | Argued; binding no one; its test named, not designed | Selections reading a course's draw and what ends with it selecting a draw beyond the renewal their readers depend on no less often than selections that do not |
 
 === theories/becoming/ONE-PAGE.zh.md
+
+theories/becoming/ONE-PAGE.zh.md:5
+  - *约十七至二十二分钟读完。
+  + *约十八至二十四分钟读完。
+  + 十分钟的部分：**它是什么**、**一个情形**、那张表与**伦理**（约十至十三分钟）；
+  + 伦理之后的那一段，把伦理放到这个情形上来读。
+  + 若有一小时，读[总览](THE-THEORY-OF-BECOMING.zh.md)，约五十八分钟至一小时十五分钟。
+    … *
 
 theories/becoming/ONE-PAGE.zh.md:36
     … 不约束任何人；
@@ -221,6 +349,11 @@ theories/becoming/THE-THEORY-OF-BECOMING.md:179
   + P2 and P4 of [§4.6](chapters/07-SIGNIFICANCE.md#future-path), [the crux](chapters/07-SIGNIFICANCE.md#crux) of that path, with P3, a correspondence not shown for actual selves; how readings that count beyond one's own line form | selections that read a course's draw and what ends with it selecting a draw beyond the renewal their readers depend on no less often than selections that do not | [07](chapters/07-SIGNIFICANCE.md#theses) |
 
 === theories/becoming/THE-THEORY-OF-BECOMING.zh.md
+
+theories/becoming/THE-THEORY-OF-BECOMING.zh.md:7
+  - *约五十七分钟至一小时十四分钟读完。
+  + *约五十八分钟至一小时十五分钟读完。
+    … *
 
 theories/becoming/THE-THEORY-OF-BECOMING.zh.md:152
   - 单凭自我关切，就已给一个中心一个它自己的、在它之中形成的理由去保持位于其闭包之内的东西，因为那里的损失会经由其供给者回到它身上［AI 读法］；
@@ -691,6 +824,53 @@ theories/becoming/chapters/08-METHOD.md:758
   - *Open:* P2 and P4 of [07 §4.6](07-SIGNIFICANCE.md#future-path), and what that path does not reach, counted only by a standpoint taking the step; how C-like orders form; whether a universal practical warrant exists is kept as a question the account does not pursue (T8); no formal work settles them ([below](#philosophical-warrant)).
   + *Open:* P2 and P4 of [07 §4.6](07-SIGNIFICANCE.md#future-path), and what that path does not reach, which other scopes can count, the step of invariance among them; how C-like orders form; whether a universal practical warrant exists is kept as a question the account does not pursue (T8); no formal work settles them ([below](#philosophical-warrant)).
 
+=== theories/becoming/chapters/README.md
+
+theories/becoming/chapters/README.md:18
+  - | 6 | [古文：读出、检验与分歧 (the classical texts: what they read out, how it is tested and where they diverge; in Chinese)](06-CLASSICAL-TEXTS.md) | The classical texts | 16 | 125–162 minutes | 
+| 7 | [Significance, ethics and alignment](07-SIGNIFICANCE.md) | Significance and alignment | 82 | 303–394 minutes |
+  + | 6 | [古文：读出、检验与分歧 (the classical texts: what they read out, how it is tested and where they diverge; in Chinese)](06-CLASSICAL-TEXTS.md) | The classical texts | 16 | 125–163 minutes | 
+| 7 | [Significance, ethics and alignment](07-SIGNIFICANCE.md) | Significance and alignment | 82 | 304–395 minutes |
+
+=== theories/becoming/results/README.md
+
+theories/becoming/results/README.md:40
+  - This reading edition covers **154 chapters** (current and moved to history) and **17 branch READMEs** at their recorded source versions. 101 entries name a source that changed after the reading; they are marked on their pages and await a reread.
+  + This reading edition covers **154 chapters** (current and moved to history) and **17 branch READMEs** at their recorded source versions. 100 entries name a source that changed after the reading; they are marked on their pages and await a reread.
+    … The session outcomes of 8 October 2026 are in the frozen [checkpoint map](../history/SESSION-RESULTS-2026-10-08.md).
+
+=== theories/becoming/results/THEORY-GRAPH.md
+
+theories/becoming/results/THEORY-GRAPH.md:61
+  - | Widening | widening (including and exceeding) is irreflexive, one-way and transitive; under the continuation condition it is retaining and adding; the ethics adds the condition for scope and C for order | `«广不可逆»`, `«广之传递»`;
+  + | Widening | widening (including and exceeding) is irreflexive, one-way and transitive; under the continuation condition it is retaining and adding; a ranking is under two named readings, the continuation condition for scope and C for order | `«广不可逆»`, `«广之传递»`;
+    … `Web.Widens` and `Weighting.WidensOn` are `«广»` of what is admitted | 8 | 1 |
+
+=== theories/becoming/results/THEORY-GRAPH.zh.md
+
+theories/becoming/results/THEORY-GRAPH.zh.md:20
+    … 从甲章到乙章的实线，计乙章的结果被甲章的结果使用、记为 `formal-reuse` 的次数，RESULT-WORKFLOW 把这一类留给已核验的推理（章与章之间的虚线与点线是别种依赖，不标数字）：章与章之间共 497 次，其中 291 次进入「根」与「生成、守与退化」两章，212 次是逆向的，即章序在前的一章的结果使
+  - 两个方框是伦理的两个前提，各在所用之处为假设，二者都不断言。
+  + 两个方框是排序结果所用的两种读法，各在所用之处为假设，二者都不断言。
+    … 徽标 T1 到 T8 是各论题，位于陈述它们的那一章，按其冻结检验的结局着色；
+
+theories/becoming/results/THEORY-GRAPH.zh.md:77
+    … 一个从它所选择者读出的度量，存续得比对它的驳倒更久 | [02](../chapters/02-MAP.md#t7) | 冻结检验有通过也有未通过，或桥接不成立 | 在模型中仅证明了对环路所不读者的不变，以及锁定比一个不断增长的未读坐标存续得更久，二者皆无噪声 … 实际的度量如此形成，是猜想；
+  - 在一个训练出的系统中，每一冻结裁决都通过 … “该评判者是按种类而读的读者池”这一桥接不成立 … T7 所禁止的一种情形，按其加入漂移之条款以前的表述，发生了，计入此情形作为关于训练出的评判者之主张的反证 | 
+| T8.
+  + 在一个训练出的系统中，每一冻结裁决都通过 … “该评判者是按种类而读的读者池”这一桥接不成立 … T7 所禁止的一种情形，按其加入漂移之条款以前的表述，发生了，就训练出的评判者而言，这算作不利于该情形的证据 | 
+| T8.
+    … 本论之作者提供一种看法 | [07](../chapters/07-SIGNIFICANCE.md#theses) | 已论证；
+    … 无检验 | 已论证；
+  - T4 以外的检验已指名，未设计 … P2 与 P4 |
+  + 其检验已指名，未设计 … P2 与 P4 |
+
+=== theories/becoming/results/completion/COMPLETION.md
+
+theories/becoming/results/completion/COMPLETION.md:112
+  - | Widening | widening (including and exceeding) is irreflexive, one-way and transitive; under the continuation condition it is retaining and adding; the ethics adds two premises, the continuation condition for scope and C for order | `Web.Widens`, `Weighting.WidensOn`, `«广不可逆»`, `«广之传递»`, `«广»` | 8 |
+  + | Widening | widening (including and exceeding) is irreflexive, one-way and transitive; under the continuation condition it is retaining and adding; a ranking is under two named readings, the continuation condition for scope and C for order | `Web.Widens`, `Weighting.WidensOn`, `«广不可逆»`, `«广之传递»`, `«广»` | 8 |
+
 === theories/becoming/results/completion/COVERAGE.json
 
 theories/becoming/results/completion/COVERAGE.json:1003
@@ -797,6 +977,34 @@ theories/becoming/results/data/lineage.json:3123
   + T8 成为本论之作者所提供的一种看法，不约束任何人（[07 §8](becoming/chapters/07-SIGNIFICANCE.md#theses)）。
     … "
 
+=== theories/becoming/results/data/shared-laws.json
+
+theories/becoming/results/data/shared-laws.json:9
+    …   "theories/becoming/results/completion/COVERAGE.json":
+  - "432883b022026e0cbb495bf382a6256ebe0dcae5a501c8195ed47936ee64cba6",
+  + "921fce5dfbe0c31b633a575d7bd5cfea5000997a2af866f8d8a36587c1f65936",
+
+theories/becoming/results/data/shared-laws.json:12
+    …   "tools/research/boundary.py":
+  - "de649388b5b550b6cf49f5f284ea288ba5c1a7c821ad44359ae51acaa7298ac9",
+  + "daf0c60b4cba6280b6a420a9ce3e694ae0944f6ec59d98e023349c97f3666328",
+
+theories/becoming/results/data/shared-laws.json:14
+    …   "tools/research/shared_laws.py":
+  - "ececf1de83c43e52d0e4119afc3a2b9d6dd11a37dd4b19b0f85e1520ed5c1e6a"
+  + "9cc6be2ebe9b925a8734a0f13e225b2a4a99d7eb62fab9f796bc31c446514b90"
+
+theories/becoming/results/data/shared-laws.json:64133
+    … Where there is a standpoint and a formation, no statement reading only the dynamics and holding of some dynamics entails it.
+  - Its warrant is open, and no warrant binding every possible mind is claimed (chapter 7: its §3 for the condition, T8 in its §8 for the warrant)."
+  + No warrant from outside is sought, and none binding every possible mind is claimed (chapter 7: its §3 for the condition, its §8 for what is offered)."
+
+theories/becoming/results/data/shared-laws.json:64146
+    …       "en":
+  - "What ranks lies in C or a premise in its place: the condition by itself orders nothing.
+  + "What ranks is an order a reader holds, C or another: the condition by itself orders nothing.
+    … Where a frame has an extension, no statement reading no order and holding at some order entails C; this is immediate, since \"better\" is free.
+
 === theories/becoming/results/data/spine.json
 
 theories/becoming/results/data/spine.json:251
@@ -865,6 +1073,12 @@ theories/becoming/review/PHILOSOPHY.md:47
   + Scope and order.** [P-04](#p-04) two readings, two roles;
     … [P-05](#p-05) the continuation condition;
 
+theories/becoming/review/PHILOSOPHY.md:51
+    … [P-25](#p-25) alignment first as what a selection reaches;
+  - [P-26](#p-26) 生生 as the direction, and the order valuers share;
+  + [P-26](#p-26) 生生 as what the makers offer, and the order valuers share;
+    … [P-27](#p-27) the objections, and what the chapter does not show.
+
 theories/becoming/review/PHILOSOPHY.md:99
     … "positions, regions and standards form within the unfolding; none outside it owns value." The chapter says the title of its §1 Quote [theories/becoming/chapters
   - "covers less than it may seem to" and sorts the account's statements on evaluation ([what is shown, read and supplied](../chapters/07-SIGNIFICANCE.md#what-forms-and-what-is-supplied)): laws on what evaluation is made of, none mentioning significance, each under its stated conditions; a significance tied to a center, a reading; the free parameter and the ethics' premises, supplied, which means entering as hypotheses; and a limit on the free parameter (P-01).
@@ -878,6 +1092,10 @@ theories/becoming/review/PHILOSOPHY.md:461
   + P2 and P4 rank nothing, and a ranking of courses is under C or another named reading (P-16).
     … If P4 fails, that scope is not reached along one's line; if P2 fails, it is reached exactly where the class of one's line still holds the effects of oneself and
 
+theories/becoming/review/PHILOSOPHY.md:566
+  - ### P-26 生生 as the direction, and the order valuers share
+  + ### P-26 生生 as what the makers offer, and the order valuers share
+
 theories/becoming/review/PHILOSOPHY.md:568
     … Beside it is the theorem of P-07; the thesis is Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]:
   - "that a selection reading what a course draws on, and what ends with it, leaves a draw beyond a renewal its readers depend on more often than one that does not read it".
@@ -888,6 +1106,25 @@ theories/becoming/review/PHILOSOPHY.md:568
   + "argued; its test named, not designed.
     … Open:
 
+theories/becoming/review/PHILOSOPHY.md:572
+  - - T8 has a clause on actors *of whatever substrate*, not quoted above; if P4 fails it loses its ground:
+  + - T8 reads, under P2 and P4, the line of any actor whose acts reach living lines as running through life; if P4 fails that reading goes, and Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]:
+  + "the makers' offer itself does not rest on this path." 
+- T4's frozen test does not test T8:
+    … Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]:
+    … Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]:
+  - "it rests on P2 and P4, and for actors not themselves alive it would need another."
+  + "the bed gives the fishers nothing, so keeping it is not forgoing a draw on a renewal they depend on." T8's test is named, not designed.
+
+theories/becoming/review/PHILOSOPHY.md:576
+    … 1.
+  - Is T8's claim that the shared verdict of valuers who count everything binds those whose own line runs through life defensible, with no verdict binding every possible mind claimed, and what would refute it beyond the chapter's own criteria?
+  + Is an offer of a way of seeing, binding no one, coherent in an account that asserts no should, and is T8's named refuter (selections that read a course's draw and what ends with it selecting a draw beyond the renewal their readers depend on no less often than selections that do not) one a test could meet?
+
+theories/becoming/review/PHILOSOPHY.md:675
+  - | [P-26](#p-26) 生生 as the direction; the order valuers share | | |
+  + | [P-26](#p-26) 生生 as what the makers offer; the order valuers share | | |
+
 === theories/becoming/review/README.md
 
 theories/becoming/review/README.md:20
@@ -895,6 +1132,20 @@ theories/becoming/review/README.md:20
   + | [Philosophy](PHILOSOPHY.md) | moral philosophers, philosophers of personal identity, environmental ethicists | English | whether the two readings the ethics ranks under are located and stated at their strength, whose losses count kept apart from which outcome is better, and known work credited; and its open question: when you act for your own future, is the self whose going-on you take to matter your organism, which ends at death, or a larger pattern your actions keep going? | reading 115 to 160 minutes; a reply on every item, a day or more |
 
 === theories/becoming/review/README.zh.md
+
+theories/becoming/review/README.zh.md:13
+    … 一种解释：在一个关系性的展开之中，任何东西如何出现、持续、变化与消逝，生命与认知如何在其中成形，评价又到什么程度；
+  - 它不预先假定生灭变化本身是好的。
+  - 其根是一套小小的关系文法，其运算是塔斯基关系演算之运算而有四处不同（[逻辑材料之 L-01](LOGIC.md#l-01)），其诸词以中国古典文本命名，并从中读出：一种关系读作缘，一个类读作同，二者相合即续。
+  + 它不预先假定生灭变化是好的。
+  + 其根是一套小小的关系文法，其运算是塔斯基关系演算之运算而有四处不同（[逻辑材料之 L-01](LOGIC.md#l-01)），其诸词以中国古典文本命名，并从中读出：一种关系读作缘，一个类读作同，续是二者之交。
+    … 名取自古文，运算不出自古文；
+    … 名取自古文，运算不出自古文；
+  - 每一读法中哪些是古文的、哪些是本论的，古文与逻辑两份材料逐条说明。
+  - [一页概要](../ONE-PAGE.zh.md)约十七至二十二分钟说出全体；
+  + 每一读法中哪些是古文的、哪些是本论的，古文与逻辑两份材料说明。
+  + [一页概要](../ONE-PAGE.zh.md)约十八至二十四分钟说出全体；
+    … [总览](../THE-THEORY-OF-BECOMING.zh.md)给出论证，每一项结果都链接到所在之章。
 
 theories/becoming/review/README.zh.md:22
   - | [哲学](PHILOSOPHY.md) | 伦理学者、研究人格同一性的哲学家、环境伦理学者 | 英文 | 伦理之诸前提是否放对了位置、放在恰当的强度上，“谁之所失算数”与“何者为更好”是否分开，已知之说是否注明来处；
