@@ -390,9 +390,15 @@ def check_or_render(render=False, base=None, ids=None, strict_fresh=False):
     # The lineage (RW): how the account grew, from its curated turning points, the records' history and the
     # crosswalk, its earlier folders dated and set beside what the map counts their claims read against; an evidence
     # path the tree lacks or a quotation its file no longer holds is an error.
+    # Where this run did not write the atlas data or the graph (a check that stubs them), the committed files stand in.
+    def written_or_committed(path, written):
+        if written.get(path) is not None:
+            return written[path]
+        return (ROOT / path).read_text(encoding='utf-8') if (ROOT / path).is_file() else None
+    atlas_json = written_or_committed(atlas.DATA, atlas_pages or {})
+    graph_json = written_or_committed(theory_graph.GRAPH, outputs)
     lineage_pages, lineage_errors = lineage.render(
-        atlas_pages.get(atlas.DATA), connection_map.read_against(atlas_pages[atlas.DATA], outputs[theory_graph.GRAPH])
-        if atlas_pages and theory_graph.GRAPH in outputs else None)
+        atlas_json, connection_map.read_against(atlas_json, graph_json) if atlas_json and graph_json else None)
     outputs.update(lineage_pages)
     errors += lineage_errors
     # The Chinese landing page (RW): its template filled with reading times and counts by README.md's rule, a page this
