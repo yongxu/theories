@@ -35,7 +35,7 @@ python3 -I ew2.py test cury2011_som_data.csv
 
 ## Results
 
-Run once, after the freeze landed on main (`44ced15e8`), with nothing changed. Study section [289](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#289-early-warnings-before-seabird-breeding-failures-in-the-field-ew2).
+Run once, after the freeze landed on main (`44ced15e8`), with nothing changed. Study section [289](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/289.md#289-early-warnings-before-seabird-breeding-failures-in-the-field-ew2).
 
 | Verdict | Statistic | Result |
 |---|---|---|
@@ -77,7 +77,7 @@ Board item EW3, 22 October 2026. EW2's frozen test, unchanged, on series to 2020
 
 ### Results
 
-Run once, after the freeze landed on main (`836281856`). Study section [350](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#350-early-warnings-before-seabird-breeding-failures-on-longer-series-ew3).
+Run once, after the freeze landed on main (`836281856`). Study section [350](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/350.md#350-early-warnings-before-seabird-breeding-failures-on-longer-series-ew3).
 
 | Verdict | Statistic | Result |
 |---|---|---|
@@ -99,7 +99,7 @@ Board item EW4, 22 October 2026. EW2's frozen test, unchanged (four level covari
 
 ### Results
 
-Run once, after the freeze landed on main (`74204a684`). Study section [352](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#352-early-warnings-before-farallon-seabird-breeding-failures-ew4).
+Run once, after the freeze landed on main (`74204a684`). Study section [352](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/352.md#352-early-warnings-before-farallon-seabird-breeding-failures-ew4).
 
 | Verdict | Statistic | Result |
 |---|---|---|

@@ -16,6 +16,8 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from types import SimpleNamespace
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
@@ -81,6 +83,21 @@ new Function(fs.readFileSync(process.argv[1], 'utf8'))();
   console.log(JSON.stringify({openAfterANewTab, afterHit, afterEscape: {hidden: panel.hidden, focusOnButton: focused === button}}));
 })();
 """
+# The same stand-in, typing the query argv[3] and printing each hit's text and the small words under it, in order.
+SEARCH_QUERY = SEARCH_STAGE.split('(async () => {')[0] + r"""(async () => {
+  fire(button, 'click');
+  await new Promise(r => setTimeout(r));
+  const panel = body.kids[0], input = panel.kids[0], list = panel.kids[2];
+  input.value = process.argv[3];
+  fire(input, 'input');
+  console.log(JSON.stringify(list.kids.map(li => [li.kids[0].text, li.kids[0].kids.length ? li.kids[0].kids[0].text : ''])));
+})();
+"""
+
+
+def strip(html_text):
+    """A paragraph's text as the search reads it."""
+    return ' '.join(site.strip_tags(html_text).split())
 
 
 class SiteTests(unittest.TestCase):
@@ -254,10 +271,10 @@ class SiteTests(unittest.TestCase):
         self.build(pages=SITE['pages'] + ['a/ONE.zh.md'], assets=['a/pic.svg'],
                    nav=[['index.html', 'Home'], ['a/ONE.zh.md', '中文']], nav_zh=[['index.html', '首页'], ['a/ONE.md', 'English']])
         one, zh, opening = self.page('a/ONE.html'), self.page('a/ONE.zh.html'), self.page('a/OPENING.html')
-        self.assertIn('<a href="ONE.zh.html"', one)  # the language link goes to this page's own edition
+        self.assertIn('<a class="lang" href="ONE.zh.html"', one)  # the language link goes to this page's own edition
         self.assertIn('lang="zh-Hans"', zh)
         self.assertIn('首页', zh)
-        self.assertIn('<a href="ONE.html"', zh)
+        self.assertIn('<a class="lang" href="ONE.html"', zh)
         self.assertIn('<a class="picture" href="pic.svg"', opening)
         self.assertIn('<title>Truth exists · T</title>', opening)  # a page with no h1 takes its first heading
 
@@ -290,7 +307,7 @@ class SiteTests(unittest.TestCase):
         self.files.add('README.zh.md')
         self.build(pages=SITE['pages'] + ['README.zh.md'], nav=[['index.html', 'Home'], ['README.zh.md', '中文']],
                    nav_zh=[['index.html', '首页'], ['a/ONE.md', 'English']])
-        self.assertIn('<a href="index.html">English</a>', self.page('README.zh.html'))
+        self.assertIn('<a class="lang" href="index.html" hreflang="en" lang="en">English</a>', self.page('README.zh.html'))
 
     def test_a_card_to_a_section_times_the_section(self):
         (self.tmp / 'a/ONE.md').write_text(ONE.replace('## What it is', '## What it is\n\nShort.\n\n## Long part\n\n' + 'word ' * 600 + '\n\n## After', 1))
@@ -430,6 +447,13 @@ class SiteTests(unittest.TestCase):
         self.assertIn('上一章：The map', last)
         self.assertNotIn('<nav class="contents"', self.page('a/ONE.html'))  # the index and other pages are not chapters
 
+    def test_a_neighbour_in_the_other_language_is_said_to_be(self):
+        (self.tmp / 'a/chapters/03-LAST.md').write_text('# 最后一章\n\n中文的一章，都是中文。\n\n## 一节\n\n正文。\n')
+        self.files.add('a/chapters/03-LAST.md')
+        self.build(pages=SITE['pages'] + ['a/chapters/03-LAST.md'], chapters={'pages': 'a/chapters/0*.md', 'index': 'a/chapters/README.md'})
+        self.assertIn('class="next" href="03-LAST.html">Next: 最后一章 (in Chinese) →</a>', self.page('a/chapters/02-MAP.html'))
+        self.assertIn('class="prev" href="02-MAP.html">← 上一章：The map（英文）</a>', self.page('a/chapters/03-LAST.html'))
+
     def test_a_chapter_index_must_be_on_the_site(self):
         with self.assertRaisesRegex(site.SiteError, 'site.chapters'):
             self.build(chapters={'pages': 'a/chapters/0*.md', 'index': 'a/NOT-THERE.md'})
@@ -500,6 +524,60 @@ class SiteTests(unittest.TestCase):
             self.assertTrue((self.out / entry['u']).is_file(), entry['u'])
             self.assertFalse(entry['u'].startswith('sources/'), entry['u'])
         self.assertNotIn('A private chat', self.page('search.json'))  # sources/ is off the site and off the index
+
+    def mussels(self):
+        """Pages where 'mussels' is a heading, a page's lead and a former id."""
+        (self.tmp / 'a/OPENING.md').write_text('## Truth exists\n\nThe opening.\n\n## Mussels\n\nText.\n')
+        (self.tmp / 'a/ONE.md').write_text('# One page\n\n[中文](ONE.zh.md) · [Uses](USES.md) · [Graph](GRAPH.md)\n\n*Two minutes to read, '
+                                           'the paragraph below one of them.*\n\nA bed of mussels dies the first month fewer than seventy tons '
+                                           'are left in the lake.\n\n## What it is\n\nText.\n')
+        renamed = 'theories/becoming/results/records/mussels-old.md'
+        (self.tmp / renamed).write_text('# mussels-old (renamed)\n\nThe record `mussels-old` is now `closed-capture`, and its history is kept there.\n')
+        self.files.add(renamed)
+        self.build(pages=SITE['pages'] + [renamed])
+
+    def test_the_search_reads_leads_and_marks_a_former_id(self):
+        self.mussels()
+        index = json.loads(self.page('search.json'))
+        self.assertEqual(index['pages'][0]['u'], 'index.html')  # the home, first
+        self.assertTrue(index['pages'][0]['l'].startswith('An account of how things go on.'))
+        one = next(p for p in index['pages'] if p['u'] == 'a/ONE.html')
+        self.assertEqual(one['l'], 'A bed of mussels dies the first month fewer than seventy tons are left in the lake.')  # not the line of links or the time
+        old = next(p for p in index['pages'] if p['u'] == 'theories/becoming/results/records/mussels-old.html')
+        self.assertEqual((old.get('f'), 'l' in old), (1, False))
+        self.assertEqual(site.lead('<p>' + 'word ' * 200 + '</p>')[-1], '…')
+        self.assertLessEqual(len(site.lead('<p>' + 'word ' * 200 + '</p>')), site.LEAD_MAX + 1)
+        said = '<p>One graph of the theory, with the edges between its results kept apart by kind.</p>'
+        for before in ('<a href="GRAPH.zh.html">中文（各章一览）</a> · 72–94 minutes to read in full; the chapters at a glance in 29–38 minutes.',
+                       '<a href="LINEAGE.zh.html">中文</a> · 110–142 minutes to read in full; the brief, the picture and the threads in 30–39 minutes.',
+                       'Board item T1N, 5 November 2026. AI-written (a Claude Code session). About 4 to 6 minutes to read.',
+                       '<code>coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it</code> · <strong>an existing Lean receipt is '
+                       'recorded</strong> · theorem · F01 · <a href="x.json">record</a> · <a href="R.html">register</a>'):
+            self.assertEqual(site.lead('<p>' + before + '</p>\n' + said), strip(said), before)  # a language link, a time to read, a status line
+        long = '<p>' + 'A paragraph long enough to be a lead says how long it takes, about ten minutes to read, and more. ' * 3 + '</p>'
+        self.assertEqual(site.lead(long), strip(long))  # a paragraph of text that names a time is still text
+        zh = '<p>正文的第一段：一个选择可以成功，而它所不度量的东西却失去了；这一段足够长，可以作为本页的引言来读。</p>'
+        self.assertEqual(site.lead('<p>全文约 117–152 分钟；简述、图、标签与这些线索约 31–40 分钟，其余部分可以留到以后再读。</p>\n' + zh), strip(zh))
+        guide = '<p>' + '只有十分钟的读者：先读论题与三种关系，再看第十一节照录的相分与反读；只有一小时的读者：读古文审查材料的一小时之路，依字句、异文与注疏，共六条。' + '</p>'
+        self.assertEqual(site.lead(guide + zh), strip(guide))  # in Chinese a line is a third as long
+
+    def test_a_paragraph_more_than_a_few_pages_open_with_is_no_pages_lead(self):
+        opening = '<p>The crosswalk, with every folder and domain and their counts.</p>\n'
+        own = 'What folder {} claimed in its own terms, and what became of it in the account.'
+        page = lambda k: SimpleNamespace(title=f'Folder {k}', toc=[], html=opening + f'<p>{own.format(k)}</p>')
+        for many, leads in ((site.LEAD_SHARED, lambda n: [strip(opening)] * n), (site.LEAD_SHARED + 1, lambda n: [own.format(k) for k in range(n)])):
+            index = site.search_index({f'a/f{k}.md': page(k) for k in range(many)}, {})
+            self.assertEqual([p['l'] for p in index['pages']], leads(many), many)
+
+    @unittest.skipUnless(shutil.which('node'), 'node is not installed')
+    def test_a_name_ranks_above_a_lead_and_a_former_id_below_both(self):
+        self.mussels()
+        run = subprocess.run(['node', '-e', SEARCH_QUERY, str(self.out / 'assets/search.js'), str(self.out / 'search.json'), 'mussels'],
+                             capture_output=True, text=True, check=True)
+        hits = json.loads(run.stdout)
+        self.assertEqual([h[0] for h in hits], ['Mussels', 'One page', 'mussels-old (renamed)'])
+        self.assertIn('mussels dies', hits[1][1])  # a hit in a lead shows where
+        self.assertEqual(hits[2][1], 'A former id, renamed')
 
     @unittest.skipUnless(shutil.which('node'), 'node is not installed')
     def test_a_search_hit_closes_the_panel(self):
@@ -598,6 +676,68 @@ class SiteTests(unittest.TestCase):
         self.build(rewrites=[{'pattern': 'not on any page'}])
         self.assertIn("converted from the repository's text, with local paths and words true only off the site changed at build; a link",
                       self.page('a/ONE.html'))
+
+    def test_the_footer_says_when_github_may_not_have_the_commit(self):
+        with patch.object(site, 'on_github', return_value=False):
+            self.build()
+        said = ("This commit is not on the repository's main branch as this clone last fetched it (origin/main), so a link to "
+                'GitHub at this commit may not resolve until it is pushed.')
+        for page in ('a/ONE.html', 'index.html', '404.html'):
+            self.assertIn(said, self.page(page).replace('&#x27;', "'"), page)
+        with patch.object(site, 'on_github', return_value=True):
+            self.build()
+        self.assertNotIn('may not resolve', self.page('a/ONE.html'))
+
+    def test_whether_github_has_the_commit(self):
+        git = ['git', '-c', 'user.name=x', '-c', 'user.email=x@x', '-c', 'commit.gpgsign=false']
+        with tempfile.TemporaryDirectory() as folder, patch.dict(os.environ):
+            os.environ.pop('GITHUB_ACTIONS', None)
+            os.environ.pop('GITHUB_SHA', None)
+            self.assertIsNone(site.on_github('0' * 40, Path(folder)))  # no repository: cannot tell
+            subprocess.run(git + ['init', '-q'], cwd=folder, check=True)
+            subprocess.run(git + ['commit', '-q', '--allow-empty', '-m', 'one'], cwd=folder, check=True)
+            first = subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=folder, capture_output=True, text=True, check=True).stdout.strip()
+            self.assertIsNone(site.on_github(first, Path(folder)))  # no origin/main
+            subprocess.run(['git', 'update-ref', 'refs/remotes/origin/main', first], cwd=folder, check=True)
+            subprocess.run(git + ['commit', '-q', '--allow-empty', '-m', 'two'], cwd=folder, check=True)
+            second = subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=folder, capture_output=True, text=True, check=True).stdout.strip()
+            self.assertIs(site.on_github(first, Path(folder)), True)
+            self.assertIs(site.on_github(second, Path(folder)), False)  # a local commit, not yet pushed
+            os.environ.update(GITHUB_ACTIONS='true', GITHUB_SHA=second)
+            self.assertIs(site.on_github(second, Path(folder)), True)  # GitHub's own run of the commit: GitHub has it
+
+    def test_a_page_in_chinese_is_named_described_and_labelled_in_chinese(self):
+        (self.tmp / 'README.zh.md').write_text('# 中文\n\n中文的首页。\n')
+        (self.tmp / 'a/ONE.zh.md').write_text('# 一页\n\n中文的一页，有注。[^n] 见[草稿](../tmp/x.md)。\n\n## 一节\n\n正文。\n\n[^n]: 注文。\n')
+        self.files |= {'README.zh.md', 'a/ONE.zh.md'}
+        self.build(pages=SITE['pages'] + ['README.zh.md', 'a/ONE.zh.md'], title_zh='题', description_zh='描述',
+                   nav=[['index.html', 'Home'], ['README.zh.md', '中文']], nav_zh=[['README.zh.md', '首页'], ['a/ONE.md', 'English']])
+        zh, en = self.page('a/ONE.zh.html'), self.page('a/ONE.html')
+        for said in ('<a class="brand" href="../README.zh.html">题</a>', '<meta name="description" content="描述">', '<title>一页 · 题</title>',
+                     '<nav aria-label="页面">', 'aria-label="本节的链接"', 'aria-label="返回"', 'title="不在公开的仓库中"',
+                     '<button class="find" type="button" hidden>搜索</button>'):
+            self.assertIn(said, zh)
+        for said in ('<a class="brand" href="../index.html">T</a>', '<meta name="description" content="d">', '<nav aria-label="Pages">',
+                     'aria-label="Link to this section"'):
+            self.assertIn(said, en)
+
+    def test_a_page_named_as_the_site_is_titled_with_the_name_once(self):
+        (self.tmp / 'README.zh.md').write_text('# 题\n\n中文的首页。\n')
+        (self.tmp / 'a/chapters/README.md').write_text('# T\n\n' + CHAPTERS.split('\n', 2)[2])
+        self.files.add('README.zh.md')
+        self.build(pages=SITE['pages'] + ['README.zh.md'], title_zh='题', nav=[['index.html', 'Home'], ['README.zh.md', '中文']])
+        self.assertIn('<title>题</title>', self.page('README.zh.html'))
+        self.assertIn('<title>T</title>', self.page('a/chapters/index.html'))
+        self.assertIn('<title>One page · T</title>', self.page('a/ONE.html'))
+
+    def test_the_language_link_stands_outside_the_line_that_scrolls(self):
+        self.build(nav=[['index.html', 'Home'], ['a/ONE.md', 'One page'], ['a/OPENING.md', '中文']])
+        header = self.page('a/ONE.html').split('<header class="top">')[1].split('</header>')[0]
+        line = header.split('<nav aria-label="Pages">')[1].split('</nav>')[0]
+        self.assertNotIn('中文', line)
+        self.assertIn('</nav><a class="lang" href="OPENING.html" hreflang="zh-Hans" lang="zh-Hans">中文</a><button', header)
+        css = (ROOT / 'tools/publishing/site.css').read_text()
+        self.assertRegex(css, r'(?m)^header\.top a\.lang \{[^}]*flex: none')  # unindented: outside every @media, so at every width
 
     def test_a_record_page_says_its_status_in_words(self):
         record = 'theories/becoming/results/records/closed-capture.md'
@@ -714,6 +854,98 @@ class RepositoryConfigTests(unittest.TestCase):
     def test_patterns_stay_in_one_folder(self):
         files = {'a/x.md', 'a/b/y.md', 'a/README.md'}
         self.assertEqual(site.expand_pages(['a/*.md'], files), ['a/README.md', 'a/x.md'])
+
+    def rules(self):
+        cfg = site.site_config()
+        return site.compile_rewrites(cfg, site.expand_pages(cfg['pages'], site.tracked_files()))
+
+    def site_text(self, page):
+        return site.site_text(page, (ROOT / page).read_text(), self.rules())
+
+    def test_the_chinese_tests_page_is_on_the_site_and_in_the_chinese_line(self):
+        cfg = site.site_config()
+        self.assertIn('TESTS.zh.md', cfg['pages'])
+        self.assertIn(['TESTS.zh.md', '检验'], cfg['nav_zh'])
+        self.assertNotIn('TESTS.md', [target for target, _ in cfg['nav_zh']])  # the Chinese line sends no one to the English tests
+        self.assertEqual(site.edition('TESTS.md', set(cfg['pages'])), 'TESTS.zh.md')
+
+    def test_the_sites_chapter_index_is_the_chapters_without_the_folders_housekeeping(self):
+        index = 'theories/becoming/chapters/README.md'
+        source, text = (ROOT / index).read_text(), self.site_text(index)
+        for gone in ('## Files in this directory', '## Chapters moved to history', 'in history (below)', 'Rerun `make research-render`'):
+            self.assertIn(gone, source, 'the rule cuts what the page no longer has: ' + gone)
+            self.assertNotIn(gone, text)
+        self.assertIn('## The eight chapters', text)
+        for k in range(1, 9):
+            chapter = next(p.name for p in (ROOT / 'theories/becoming/chapters').glob(f'0{k}-*.md'))
+            self.assertIn(f']({chapter})', text, chapter)  # every chapter is still linked from its row
+        self.assertIn('[history](../history/)', text)
+        rules = self.rules()
+        after = site.site_text(index, source + '\n## A section after the last line\n\nKept.\n', rules)
+        self.assertIn('## A section after the last line', after)  # the cut ends at the generator's closing line
+        among = source.replace('\n## Chapters moved to history\n', '\n## A section among them\n\nx\n\n## Chapters moved to history\n')
+        for changed in (among, source.replace('\nStatus: **chapter** is', '\nKey: **chapter** is'),
+                        source.replace('\nRerun `make research-render` after a chapter', '\nRun `make research-render` after a chapter')):
+            self.assertNotEqual(changed, source)
+            with self.assertRaises(site.SiteError):  # the generator's words changed, or a section came among them: the build fails
+                site.site_text(index, changed, rules)
+
+    def test_the_sites_chapter_06_has_one_english_line(self):
+        text = self.site_text('theories/becoming/chapters/06-CLASSICAL-TEXTS.md')
+        line = next(l for l in text.split('\n') if 'In English:' in l)
+        self.assertTrue(line.startswith('<p lang="en">'))
+        self.assertIn('(../review/CLASSICAL-TEXTS.md)', line)
+        self.assertIn('(../THE-THEORY-OF-BECOMING.md#6-the-classical-texts)', line)
+        self.assertEqual(text.count('In English:'), 1)
+        self.assertNotIn('In English:', (ROOT / 'theories/becoming/chapters/06-CLASSICAL-TEXTS.md').read_text())  # the site's line only
+
+    def test_the_lineage_card_names_the_pages_three_threads(self):
+        card = next(w for w in site.site_config()['ways_in'] if w['path'] == 'theories/LINEAGE.md')
+        lineage = (ROOT / 'theories/LINEAGE.md').read_text()
+        self.assertIn('the three threads followed below (the selection mechanism, the root and the ethics)', lineage)
+        self.assertIn('three threads followed through (the selection mechanism, the root and the ethics)', card['text'])
+        self.assertNotIn('one thread', card['text'])
+
+    def test_where_everything_is_times_the_lineage_as_the_lineage_does(self):
+        said = re.search(r'(\d+–\d+) minutes to read in full; the brief, the picture, the labels and the threads in (\d+–\d+) minutes',
+                         (ROOT / 'theories/LINEAGE.md').read_text())
+        self.assertTrue(said, 'LINEAGE.md no longer states its times in these words')
+        full, brief = said.groups()
+        line = next(l for l in (ROOT / 'MAP.md').read_text().split('\n') if l.startswith('[How the account grew]'))
+        self.assertIn(f'in {brief} minutes, and the whole takes {full} minutes', line)
+
+    def test_the_chinese_name_and_description_are_set(self):
+        cfg = site.site_config()
+        self.assertEqual(cfg['title_zh'], '生灭变化之论')
+        self.assertIn('# 生灭变化之论', (ROOT / 'README.zh.md').read_text())  # the Chinese home's own name
+        self.assertGreater(site.cjk_share(cfg['description_zh']), 0.5)
+
+
+@unittest.skipUnless((ROOT / '_process/research').is_dir(), 'the studies are not in this checkout (the Pages job reads only the site)')
+class MirroredStudyLinkTests(unittest.TestCase):
+    """A page of the site links no study GitHub cannot render where a mirror renders it (research.py repoint-mirrored), and the
+    link check refuses such a link however long it has stood."""
+
+    def test_a_front_holding_a_link_to_a_mirrored_study_is_refused(self):
+        from tools.research import research
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / 'docs').mkdir()
+            (root / 'BIG.md').write_text('# big\n\n' + 'x' * 2000)
+            (root / 'docs/old.md').write_text('[kept](../BIG.md#a)\n')
+            for args in (['init', '-q'], ['add', '-A'], ['-c', 'user.name=x', '-c', 'user.email=x@x', '-c', 'commit.gpgsign=false', 'commit', '-qm', 'base']):
+                subprocess.run(['git', *args], cwd=root, check=True)
+            found = lambda fronts: research.oversized_links(root, since='HEAD', limit=1000, fronts=fronts)
+            self.assertEqual(found({'docs/old.md'})['new'], [])  # not mirrored: a held link is set apart
+            with patch.object(research.mirror, 'folders', return_value={'BIG.md': 'mirror/BIG'}):
+                refused, elsewhere = found({'docs/old.md'}), found(set())
+        self.assertEqual([(f['file'], f['target'], f['mirrored']) for f in refused['new']], [('docs/old.md', '../BIG.md#a', True)])
+        self.assertEqual((elsewhere['new'], elsewhere['held_since']), ([], 1))  # a file not on the site keeps its held link
+
+    def test_no_page_of_the_site_links_a_mirrored_study(self):
+        from tools.research import research
+        found = research.repoint_mirrored()
+        self.assertEqual((found['links'], found['errors']), (0, []), found['list'][:5])
 
 if __name__ == '__main__':
     unittest.main()

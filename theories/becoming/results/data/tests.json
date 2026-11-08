@@ -253,7 +253,7 @@
       "outcome": "mixed",
       "quote": "**L1, the locked side: failed.** Two of the four locked conditions failed.",
       "quote_path": "experiments/commons-llm-feedback/README.md",
-      "gloss": "Both open settings passed; two of four locked settings failed, and with them contrasts L1, L3 and L4, at misses worth 92.5% to 98.2% of the best, which, by LA1b's later frozen test, its feedback barely resolved."
+      "gloss": "Both open settings passed; two of four locked settings failed, and with them contrasts L1, L3 and L4, at misses worth 92.5% to 98.2% of the best, which LA1b's later frozen test reads as feedback that barely resolved the best threshold, that threshold assigned there (LA1c, with none assigned, found it in 29 of 30 locked seeds)."
     },
     {
       "id": "LA2",

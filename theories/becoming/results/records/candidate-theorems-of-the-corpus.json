@@ -93,7 +93,7 @@
     "formal-not-empirical"
   ],
   "validation_scope": {
-    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.GrammarCandidates, 69 theorems in 93 declarations, each with an empty axiom report. Written by an Opus coder from the first-batch classification; no human audit of the readings.",
+    "en": "Checked by the core checker with Lean 4.29.1 from the prelude: Becoming.GrammarCandidates, 69 theorems in 93 declarations, each with an empty axiom report. Written by an Opus coder from the first-batch classification; no person's audit of the readings recorded.",
     "zh": "由核心检查器以 Lean 4.29.1 从前奏检查：Becoming.GrammarCandidates，93 个声明中 69 条定理，公理报告皆空。由一位 Opus 编者据第一批分类写成；读法无人审。"
   },
   "next_delta": {

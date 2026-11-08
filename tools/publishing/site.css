@@ -30,6 +30,9 @@ header.top nav { display: flex; gap: .9rem; min-width: 0; overflow-x: auto; whit
 header.top nav::-webkit-scrollbar { display: none; }
 header.top nav a { color: var(--muted); }
 header.top nav a[aria-current="page"] { color: var(--ink); border-bottom: 2px solid var(--accent); }
+/* the language link, after the line and outside it: shown at every width, where the line scrolls and fades and where it wraps */
+header.top a.lang { flex: none; white-space: nowrap; color: var(--muted); }
+header.top a.lang[aria-current="page"] { color: var(--ink); }
 main { max-width: 46rem; margin: 0 auto; padding: 1.5rem 16px 3rem; }
 body.home main { max-width: 60rem; }
 h1, h2, h3, h4, h5, h6 { font-family: var(--sans); line-height: 1.25; }
