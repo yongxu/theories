@@ -1,7 +1,7 @@
 <!-- GLOSSARY.md 的中文版（RW，2026 年 11 月 8 日，AI 译自英文版，未经人工审读）。义以英文版为准；英文版改动时，本版随之修订。 -->
 # 术语表
 
-[English](GLOSSARY.md) · [首页](README.zh.md) · [一页](theories/becoming/ONE-PAGE.zh.md) · [用途](theories/becoming/USES.zh.md) · [实例](theories/becoming/USES-EXAMPLES.zh.md) · [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) · [八章（英文）](theories/becoming/chapters/README.md) · [第六章](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) · [检验（英文）](TESTS.md) · [对照](theories/becoming/results/atlas/CROSSWALK.zh.md) · [怎样长成](theories/LINEAGE.zh.md) · **术语表** · [审查包](theories/becoming/review/README.zh.md)
+[English](GLOSSARY.md) · [首页](README.zh.md) · [一页](theories/becoming/ONE-PAGE.zh.md) · [用途](theories/becoming/USES.zh.md) · [实例](theories/becoming/USES-EXAMPLES.zh.md) · [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) · [八章（英文）](theories/becoming/chapters/README.md) · [第六章](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) · [检验（英文）](TESTS.md) · [对照表](theories/becoming/results/atlas/CROSSWALK.zh.md) · [怎样长成](theories/LINEAGE.zh.md) · **术语表** · [审查包](theories/becoming/review/README.zh.md)
 
 生成变化之论的词语，每一个只有一义、一个所属之处：定义它的那一章的那一节。别处用到一个词，都取这一义，并链接到那里。汉语术语在引入之处释义一次，并附拼音。除第六章外，各章与理论图皆为英文。文法的每一个概念及其 Lean 名称，都列在[理论图](theories/becoming/results/THEORY-GRAPH.md#the-grammars-concepts)中；较早文本所用的标签与现行术语的对照，见[方法一章](theories/becoming/chapters/08-METHOD.md#names)。本页所取代的术语表（规范章的 §10，连同其形式术语索引及其与语料词汇的对照）与该章一同保存在历史之中；九月的语料术语表（192 个词条）保存在[它自己的历史](_process/history/2026-09-consolidation/GLOSSARY.md)中。
 
@@ -40,13 +40,13 @@
 | 环、耦合、所携之量（loop, coupling, carried amount） | 影响的一条闭合路径；一个水平对另一个水平反应的强度；一个差异沿一条路径所携带的东西 | [第二章](theories/becoming/chapters/02-MAP.md#loops) |
 | 第一律（first law） | `Flow.Gainless` 的脊柱之名：一个没有重复的封闭同族，所得回的至多是从它所取走的；在㶲平衡之下，以可用功读出的热力学第二定律给出它（`EntropyProduction.gainless_of_secondLaw`）。热力学第一定律，即能量守恒，总是以全名称之 | [第二章](theories/becoming/chapters/02-MAP.md#how-to-read) |
 | 元吸引子（meta-attractor） | 封闭的捕获：一个选择之环，其规则与其对规则的读取都由它所选择的份额形成，环中没有任何东西读取份额之外者。它从不指语料的工作定义，即一种活动的反复出现的组织，其后果有助于在其具体承载者的变化之中再生产选择这一组织的条件：那是另一义，二者都未被表明包含对方：形式的元吸引子不说及承载者，所以一个捕获之环在某一对类上是否生成，仍属未决 | [第二章](theories/becoming/chapters/02-MAP.md#capture) |
+| <a id="锁定"></a>锁定（lock） | 一条读自它所提高之份额的规则所处的一种构形：此后的进程保持在这一构形中，份额与规则都不低于起点，而它读不到的损失可以越过任何界限；无噪声时，唯有它所读之物的改变（一个在损失超过某界限时便不再偏好的读取，这是一条充分的出路，未表明是唯一的），或律、读法、选择的改变，才让它离开；有噪声时，有些锁定单凭漂移也会离开，并非全部。无明一行所说的“锁定于一个目标”是寻求的锁定，不是这里的构形 | [第二章 §9](theories/becoming/chapters/02-MAP.md#r-closed-capture) |
 
 ## 认知
 
 | 术语 | 义 | 出处 |
 |---|---|---|
 | <a id="耦合进"></a>耦合进（couples into） | 经由一个选择者的诸耦合而到达它的东西（从不说“记录到”，即 registers） | [第三章 §1](theories/becoming/chapters/03-KNOWING.md#selection) |
-| <a id="锁定"></a>锁定（lock） | 一条读自它所提高之份额的规则所处的一种构形：此后的进程保持在这一构形中，份额与规则都不低于起点，而它读不到的损失可以越过任何界限；唯有它所读之物的改变（一个在某界限以上、无损而偏好的读取），或律、读法、选择的改变，才让它离开。无明一行所说的“锁定于一个目标”是寻求的锁定，不是这里的构形 | [第二章 §9](theories/becoming/chapters/02-MAP.md#r-closed-capture) |
 | 选择（selection） | 经由选择者的诸耦合而进行；世界模型诸前提的一个子集，称为“前提的一种选取”（a choice of premises） | [第三章 §1](theories/becoming/chapters/03-KNOWING.md#selection) |
 | 无明、明（*wúmíng*、*míng*） | 锁定于一个在静止中无法达到之目标的寻求，植根于每一个形成由之选择的那个位置，却与之不同；耦合与一个选择相结合，使之到达支持所不标记的东西 | [第三章](theories/becoming/chapters/03-KNOWING.md#learning) |
 | 验、层（testing, stages） | 在网之内作区分；核的有限逼近 | [第三章](theories/becoming/chapters/03-KNOWING.md#testing) |
