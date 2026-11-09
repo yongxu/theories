@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-11-09T13:03:49+00:00",
+  "reviewed_at_utc": "2026-11-09T15:00:40+00:00",
   "statement": {
     "en": "In a mutually dependent flow, significance held de se as what lies within each center's closure under being affected, or under affecting, is the continuation condition; where every formation is a center, each is exactly mutual dependence.",
     "zh": "于相互依赖之流，以每一中心沿被影响或沿影响之闭包内者为自持之意义，即延续条件；凡每一形成皆为中心处，二者各恰为相互依赖。"
@@ -70,7 +70,7 @@
   ],
   "counterexamples": [
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean",
       "detail": {
         "en": "The clearer's world, every formation its own center: neither de se reading is the condition (Clearing.not_unrestricted_ownClosure).",
         "zh": "清除者之世界，每一形成为己之中心：二自持之读皆非此条件（Clearing.not_unrestricted_ownClosure）。"
@@ -96,7 +96,7 @@
     "en": "AI reading: read with 07 §4.3, under mutual dependence every center's closure is the whole along either relation, so the de se and de dicto readings agree and the step of invariance adds nothing there. Being affected read as what a continuation depends on, and affecting as what it reaches, are the AI's readings.",
     "zh": "AI 解读：与 07 §4.3 并读，相互依赖之下，沿任一关系每一中心之闭包皆为全体，故自持与公持之读相合，不变性之一步于此无所增。以被影响读为延续所依者、以影响读为其所及者，皆 AI 之读。"
   },
-  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean",
   "aliases": [
     "mutual dependence gives the condition de se",
     "相互依赖给出自持之条件",
@@ -139,14 +139,14 @@
   ],
   "references": [
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean",
       "role": "proof",
       "declarations": [
         "Becoming.Clearing.not_unrestricted_ownClosure",
         "Becoming.Flow.mutuallyDependent_iff_unrestricted",
         "Becoming.Flow.unrestricted_of_mutuallyDependent"
       ],
-      "sha256": "3766ee8db4f5e5c08927cd52fbdd877d6543ddda5cd43bcce5ba448804499205"
+      "sha256": "318b0fdeead1687bbde7f36b91542f42dd2f49b9e8868e2a37e66a96d8743b98"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T130231.019057Z/verification.json",
@@ -166,9 +166,9 @@
   ],
   "proof_bindings": [
     {
-      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T130231.019057Z/verification.json",
-      "sha256_pointer": "/source_sha256/Becoming.PersistingChoices",
+      "sha256_pointer": "/source_sha256/Becoming.FlowCenters",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -177,6 +177,10 @@
     {
       "en": "9 November 2026, board item ZA (Ren, 9 November 2026: how far the zero-axiom target is, after \"ethics emerges from continuation condition, not another way around\"): added. The composition the readings named as ready: mutual dependence gives the condition held de se, along being affected and along affecting, each exactly mutual dependence where every formation is a center; the checker's note kept: mutual dependence is closure under being affected, not feeding.",
       "zh": "2026年11月9日，工作板条目 ZA（Ren 2026年11月9日问零公理目标尚有多远）：新增。诸读所称已备之合成：相互依赖给出沿被影响与沿影响而自持之条件，凡每一形成皆为中心处各恰为相互依赖；保留查核者之注：相互依赖为被影响之闭包，非供养之闭包。"
+    },
+    {
+      "en": "9 November 2026, J1 (route (b)'s join, board rule 9): the three declarations moved, with their names and statements, from PersistingChoices to FlowCenters, beside the standpoints a flow gives; Flow.mutuallyDependent_iff_unrestricted is now the case of ownClosure_unrestricted_iff_of_onto. The claim is unchanged.",
+      "zh": "2026年11月9日，J1（路线 (b) 之合观，看板规则 9）：三声明连同其名与陈述自 PersistingChoices 移至 FlowCenters，与流所给之立场并列；Flow.mutuallyDependent_iff_unrestricted 今为 ownClosure_unrestricted_iff_of_onto 之情形。所陈未变。"
     }
   ]
 }

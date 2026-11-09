@@ -1,0 +1,48 @@
+# J1: route (b) joined, and its rule-9 moves (AI-written, Claude Opus 5.5, 9 November 2026)
+
+Board row J1. Ren's words for route (b): [2026-11-09-route-b-ethics-forms.md](../../../../../../sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md) ("ok - 这一类请平行化认真完成，非常重要"). Home: [07 §4.11](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#route-b-joined). Record: [route-b-joined](../../../../../../theories/becoming/results/records/route-b-joined.md). Module: [`Becoming.FromTheDynamics`](../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FromTheDynamics.lean).
+
+Route (b) had four pieces, each landed on its own: G1 the standpoints and the relation read off a flow (`Becoming.FlowCenters`, 07 §4.8), G3 what persisting shows of an order (`Becoming.PersistingChoices`, ZA, 07 §4.9), G2 a center's own class (`Becoming.OwnClass`, ZC, 07 §4.10) and the bound, what selection read off continuation cannot reach (`Becoming.BeyondCoupling`, ZB, 07 §3.5). Three AI readings of the join (Opus, Fable, astra), eight adversarial checkers and a completeness critic read them together; their files are outside the repository, in the route's shared notes (`/Users/ren/tmp/za-how-far/route-b/join/`: `NEXT.md`, the three readings, `check-*`, `critic.md`). This note says what J1 did with what they settled. Its two siblings are separate pieces: J2 (which readings persist) and J3 (the condition in time).
+
+## 1. What route (b) now shows as one statement
+
+Near-definitional by necessity: with significance free, no statement reading only the dynamics entails the condition (`ReadsOnlyDynamics.not_entails`). So the join cannot fail on any model once its readings are taken; its content is in the readings, and the steps doing dynamical work are imported (`Flow.exists_reachReturns`, `GroupEnding.Flow.coupled_generation_childless`, `act_courses_unselected_pool`).
+
+- **(a) The scope.** At the formations whose acts return, along affecting, each standpoint's least class (`«后类»`) meets P2 and P4, and with each standpoint's line under it, the per-center condition holds exactly where the flow is mutually dependent, given one returning formation (`Flow.returning_downstream_iff_mutuallyDependent`). The checker's finding holds and is in Lean: P2 does no work in the equivalence (`«各后类续无外即一之续无外»`, no premise); `«返则后类本类常闭»` makes the class admissible and least, nothing more.
+- **(b) The bound there.** `Flow.returning_beyond_coupling` (Bound's per-center law at `Subtype.val`); with `Flow.returning_pool_covers`, the bound on selection has content only for a pool that leaves some formation out.
+- **(c) C read from what persisting shows.** The exact condition: every strict order according with the choices and increasing in its own continuation on the pairs met ranks `x` above `y` exactly where `x` reaches `y` in the shown relation with the own-widenings met added (`ChoiceOccasions.selfConcerned_above_iff_reach`). A listed extension met together is one step of it (`Web.extension_reached_of_met`); the met-pair C (`Web.extension_ranked_of_increasingInOwnOn`) now stands below the C theorem, which is its case of every pair. Under the stake the pair it ranks is keeping above ending (`Web.extension_met_keeps_above_ending`), and keeping above ending is then self-concern on the pairs met (`ChoiceOccasions.increasingInOwnOn_of_keeping`, from which PC's `selfConcerned_consistent_of_kept` is now derived).
+- **(d)** C never ranks the persisting course: `Flow.persists_not_listsAdmitted` (G3's follow-up, cited, not re-proved).
+- **(e)** On a World meeting every law G3 uses, with `PersistingChoices.Crossed`'s choices, every premise of `Flow.persisting_consistent_with_selfConcern` holds and no strict order according with the choices is increasing in its own continuation everywhere (`FromTheDynamics.Alternating.crossed_joined`). G3 had landed the chooser (`Crossed.not_selfConcerned`) without a World; this adds the World.
+- **A joint witness exists now.** `FromTheDynamics.Alternating`: two formations standing in turn, each taking its own standing and giving the other its standing. Finite, balanced, mutually dependent (so every formation returns and (a)'s condition holds), a line of descent persisting through the two (each member comes to stand again and again, the pigeonhole the base check argued), never overdrawing its family, its actual levels listed by no finite listing; a chooser offered keeping or ending keeps, consistent with keeping above ending and self-concern on the occasion met (`FromTheDynamics.Alternating.joined`). The earlier statement "no model meets the joined premises together" (INTERFACES, the base checks) is superseded by this witness. The chooser is still supplied: it is tied to the flow only by `realized`, vacuous for what is chosen.
+
+## 2. What it does not show
+
+- That significance is own closure, which relation, that the standpoints are the returning formations, that the class is the least one: readings.
+- That any order is held: only consistent with choices; nothing between degrees of keeping (`Forgoing`).
+- Anything in time: every relation is read across all steps (`Affects` is time-blind; own closure ignores the step). J3's piece.
+- A selection whose pool is read off the course (the meta-attractor): the pool is fixed in `act_courses_unselected_throughout`. J2's piece.
+- That the four pieces' "centers" are one object: no theorem identifies them (07 §4.11's table). `Alternating` is one model where the line's members are the returning formations, a witness, not an identification.
+- Persistence favouring restraint (Opus's conjecture): unsupported (`check-order-*`); not stated.
+
+## 3. The rule-9 moves (board rule 9: the general law below, the special derived)
+
+| Item (NEXT.md, check-dupes) | Done |
+|---|---|
+| G1's iff, backward half = G3's `.2` | PC §1 (`Flow.unrestricted_of_mutuallyDependent`, `Flow.mutuallyDependent_iff_unrestricted`, `Clearing.not_unrestricted_ownClosure`) moved into FlowCenters, same names; `returning_unrestricted_iff_mutuallyDependent`'s backward half derived from the first. PC imports FlowCenters, so its importers keep the names. |
+| FlowCenters:164 re-proves `MutuallyFed.unrestricted` | already fixed at G1's corrections landing (`80d151980`); now the case of `ownClosure_unrestricted_iff_of_onto`. |
+| Two onto-instances; `atReturning` | `ownClosure_unrestricted_iff_of_onto`, `ownClosure_unrestricted_iff_of_returning` in Weightings beside `ownClosure_unrestricted_iff`; `Flow.mutuallyDependent_iff_unrestricted`, `Flow.mutuallyFed_iff_unrestricted`, `ownClosure_unrestricted_atReturning_iff` derived. |
+| `«续无外则同一中心»` for center-indexed classes | `«各续无外则同一中心»` (GrammarScope), no class, P2 or P4; the old law its instance. OwnClass's `«各本类常闭续无外则同一中心»` asked three premises the law does not use and went; Bound's `ownClosure_not_unrestricted_of_acyclic` was already one step from the old law and stays. |
+| Cohort-ending lemma | `GroupEnding.Flow.coupled_generation_childless`; `Flow.persists_never_overdraws` (PC) and `Flow.coupled_ending_ranked_below` (Weightings) take their ending step from it. Founding's `survivors_independent` (positive form) and `confined_ends` (on a lineage) are siblings of different statements, left. |
+| `«及之首步»` | in Grammar beside `«及»`; OwnClass's copy and PC's `ChoiceOccasions.reach_first_step` went; Grammar's two inline copies, OwnClass's inline copy and GrammarCandidates' `«及之两端»` first half use it. Inline copies in GrammarReadings and RoutesToC left (modules otherwise untouched). |
+| `ReturnsAlong` twice (FlowCenters, Centers) | `ReturnsAlong` with `.loop`, `returnsAlong_of_whole`, `.whole` moved to Frame at `Type u`; Centers' `Flow.ReachReturns` is defined as its case along affecting (definitionally what it was); OwnClass's `«返则后类本类常闭»` and `«返之后皆续当且仅当皆返»` name it. |
+| (J1's own) the met-pair C beside the C theorem | `Weighting.IncreasingInOwnOn` and its two laws moved from PC to Weightings beside `IncreasingInOwn`; `Web.extension_ownWidens` and `Web.extension_ranked_of_increasingInOwnOn` in PremiseWitnesses, `Web.extension_ranked_of_increasingInOwn` derived as the case of every pair. |
+
+Left, as found by the checks and not moved here: `«合为类»` against Grammar's inline class-of-meet (check-dupes a); `«静之本类至终有常»` as an instance of main's chain (b); `MutuallyDependent.reachReturns` was rewritten through `returnsAlong_of_whole` (c, done); `Drawing.returning_feeding_apart`'s third conjunct now uses `unrestricted_of_mutuallyDependent` (d, done); the three `Clearing` witnesses are siblings (e, no change needed); BC's docstrings calling a relation within coupling in "a relation that returns" (wording, Bound's).
+
+## 4. Checks
+
+Scratch build (`scratch_build.py`, the checker's own steps) of the 141-module closure of the changed modules and the joining module: every axiom report empty, no warning; `Becoming.FromTheDynamics` 31 theorems. The core run, the gate and the cold read are recorded in [READER.md](READER.md) and the landing's commits. The full suite is deferred to the phase's end.
+
+## 5. Sentences for AG (07's existing wording, 08 §12)
+
+Sent to AG's session, not edited here: 07 §1's table row "Read … no law here picks the relation or the centers"; 07 §3.3's last sentence (D18, D19), which §3.5 and §4.11 now give theorem forms; 07 §4.8's "G3's `Flow.mutuallyDependent_iff_unrestricted`" (now FlowCenters'); 08 §12 item 12, "How scope and order form". One edit was made in an existing section because a removal would have left a dangling name: 07 §4.10's acyclic clause now cites `«各续无外则同一中心»`.

@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-11-09T13:03:49+00:00",
+  "reviewed_at_utc": "2026-11-09T15:00:40+00:00",
   "statement": {
     "en": "Where a choice ending what a line depends on is realized as an overdraw, a persisting line whose choices come from some strict order has them consistent with keeping ranked above ending on the occasions met, and with self-concern there where only ending was at stake.",
     "zh": "终结系之所依之择实现为透支处，其择出于某严序之存续之系，其择与于所遇之时存居终上相合，于唯终结攸关处与自我关切相合。"
@@ -26,7 +26,7 @@
         "Becoming.ChoiceOccasions.accorded_containing_iff",
         "Becoming.ChoiceOccasions.above_in_every_containing_iff_reach",
         "Becoming.ChoiceOccasions.above_in_some_containing_of_unreached",
-        "Becoming.ChoiceOccasions.reach_first_step",
+        "Becoming.«及之首步»",
         "Becoming.ChoiceOccasions.not_reach_of_unmet"
       ]
     },
@@ -53,6 +53,7 @@
         "Becoming.ChoiceOccasions.OwnWidensMet",
         "Becoming.ChoiceOccasions.contains_iff_increasingInOwnOn",
         "Becoming.ChoiceOccasions.selfConcerned_consistent_iff",
+        "Becoming.ChoiceOccasions.increasingInOwnOn_of_keeping",
         "Becoming.ChoiceOccasions.selfConcerned_consistent_of_kept",
         "Becoming.ChoiceOccasions.selfConcerned_consistent_of_allOrNone"
       ]
@@ -293,10 +294,10 @@
         "Becoming.ChoiceOccasions.accorded_containing_iff",
         "Becoming.ChoiceOccasions.accords_withPairs_iff",
         "Becoming.ChoiceOccasions.contains_iff_increasingInOwnOn",
+        "Becoming.ChoiceOccasions.increasingInOwnOn_of_keeping",
         "Becoming.ChoiceOccasions.keeping_above_ending",
         "Becoming.ChoiceOccasions.noCycle_withPairs_of_kept",
         "Becoming.ChoiceOccasions.not_reach_of_unmet",
-        "Becoming.ChoiceOccasions.reach_first_step",
         "Becoming.ChoiceOccasions.reach_withPairs_of_kept",
         "Becoming.ChoiceOccasions.reversed_off_met",
         "Becoming.ChoiceOccasions.selfConcerned_consistent_iff",
@@ -360,13 +361,20 @@
         "Becoming.SelectionTerm.Generations.Persists",
         "Becoming.Weighting.AllOrNone",
         "Becoming.Weighting.EndsOwn",
-        "Becoming.Weighting.IncreasingInOwnOn",
         "Becoming.Weighting.WidensOn.ne",
-        "Becoming.Weighting.adds_ends_of_allOrNone",
+        "Becoming.Weighting.adds_ends_of_allOrNone"
+      ],
+      "sha256": "3766ee8db4f5e5c08927cd52fbdd877d6543ddda5cd43bcce5ba448804499205"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Weighting.IncreasingInOwnOn",
         "Becoming.Weighting.increasingInOwnOn_every_iff",
         "Becoming.Weighting.increasingInOwnOn_of_increasingInOwn"
       ],
-      "sha256": "3766ee8db4f5e5c08927cd52fbdd877d6543ddda5cd43bcce5ba448804499205"
+      "sha256": "d7413b8cf32e78e2a482c72ba6891410641e83176b942d90b580ee12486328ca"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T130231.019057Z/verification.json",
@@ -382,6 +390,14 @@
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/za-concern-formed/NOTE.md",
       "role": "integration",
       "sha256": "dd32e962216cec6edf8b0b1497bba81cb6644ab76f0c9cc17b851ca59d5dcd9c"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.«及之首步»"
+      ],
+      "sha256": "2093db006e8951b772c73a94ef8ca565b606d25055d44794c42e6d5b4a13c7b9"
     }
   ],
   "proof_bindings": [
@@ -401,6 +417,10 @@
     {
       "en": "9 November 2026, board item ZA, follow-up from three AI readings of route (b)'s join: the crossed witness (every course met, no strict order according with the choices increasing in its own continuation) and the persisting line's course never a listed level path were added; laws and a does-not-show line added, no earlier statement changed.",
       "zh": "2026年11月9日，工作板条目 ZA，依路 (b) 合并之三 AI 之读之补：增交错之例（诸程皆遇而无与诸择相合之严序随己之延续而增）、存续之系所行之程永非所列之层路径；增律与一行「未表明」，先前陈述不改。"
+    },
+    {
+      "en": "9 November 2026, J1 (route (b)'s join, board rule 9): Weighting.IncreasingInOwnOn and its two laws moved to Weightings beside IncreasingInOwn; ChoiceOccasions.reach_first_step went for the grammar's «及之首步»; the ending step of Flow.persists_never_overdraws is GroupEnding.Flow.coupled_generation_childless; and ChoiceOccasions.selfConcerned_consistent_of_kept is now derived from keeping_above_ending through ChoiceOccasions.increasingInOwnOn_of_keeping (under the stake, keeping above ending is self-concern on the pairs met). The claim is unchanged.",
+      "zh": "2026年11月9日，J1（路线 (b) 之合观，看板规则 9）：Weighting.IncreasingInOwnOn 及其二律移至 Weightings，与 IncreasingInOwn 并列；ChoiceOccasions.reach_first_step 去之，用文法之 «及之首步»；Flow.persists_never_overdraws 之终结一步为 GroupEnding.Flow.coupled_generation_childless；ChoiceOccasions.selfConcerned_consistent_of_kept 今经 ChoiceOccasions.increasingInOwnOn_of_keeping 由 keeping_above_ending 推出（攸关之设下，存居终上即所遇之对之自我关切）。所陈未变。"
     }
   ]
 }

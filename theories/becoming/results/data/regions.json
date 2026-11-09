@@ -2725,6 +2725,11 @@
    "region": "significance",
    "base": "old-base",
    "note": "OwnClass ZC: the class of a formation's coupling closure on a flow; the reach exactly where acts return, the line its loop (07 §4.10)"
+  },
+  "route-b-joined": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "FromTheDynamics J1: route (b) joined, the scope at the returning formations under the least class iff mutual dependence, the bound there, C read from what persisting shows, a joint witness (07 §4.11)"
   }
  },
  "modules": {
@@ -4687,6 +4692,11 @@
    "region": "significance",
    "base": "grammar",
    "note": "a center's own class under P2 and P4 (后类最细), and read on a flow (route (b), ZC)"
+  },
+  "Becoming.FromTheDynamics": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "route (b) joined: the four pieces' statements composed, near-definitional by necessity, with a joint witness (route (b), J1)"
   }
  }
 }
