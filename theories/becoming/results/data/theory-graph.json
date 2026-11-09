@@ -4852,8 +4852,8 @@
    "title_zh": "路线 (b) 的普遍形式，闭合",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "unassigned",
-   "base": "",
+   "region": "significance",
+   "base": "old-base",
    "page": "theories/becoming/results/records/route-b-universal-form-closed.md"
   },
   {
@@ -4948,8 +4948,8 @@
    "title_zh": "读自延续的选择不及耦合之外",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "unassigned",
-   "base": "",
+   "region": "significance",
+   "base": "old-base",
    "page": "theories/becoming/results/records/selection-read-off-continuations.md"
   },
   {
@@ -6700,8 +6700,8 @@
    "title_zh": "选择在耦合外之盲何处解除",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "unassigned",
-   "base": "",
+   "region": "significance",
+   "base": "old-base",
    "page": "theories/becoming/results/records/where-the-blindness-lifts.md"
   },
   {
@@ -11134,8 +11134,8 @@
    "name": "Becoming.BeyondCoupling",
    "level": "L2",
    "theorems": 27,
-   "region": "unassigned",
-   "base": "",
+   "region": "significance",
+   "base": "old-base",
    "on_grammar": true,
    "reaches_grammar": true
   },
