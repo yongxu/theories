@@ -12,7 +12,7 @@ import sys
 ROOT = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else '.')
 E = ROOT / 'theories/becoming/results/atlas/entries'
 PROSE = {'sense', 'quote', 'reading', 'account_adds', 'source_adds', 'says', 'part', 'name', 'mechanism', 'edge',
-         'open', 'condition', 'beyond', 'forbids'}
+         'open', 'condition', 'beyond', 'forbids', 'summary', 'title'}
 I = re.I
 SHAPES = {
     'T8 as way, verdict or resting on readings': r"T8[^.;]*(life's way|the way for life|thesis: for life|verdict binding|binds those|is argued as|under (the )?(two readings|two premises|P[1-4]\b|the (continuation )?condition|C for order)|rests? on (P[1-4]|the two|two))|T8 (offers|is) 生生|生生 as (life's|the) way",
@@ -42,7 +42,7 @@ def leaves(x, path):
 
 
 n = 0
-for fn in ('correspondences.json', 'dynamics.json'):
+for fn in ('correspondences.json', 'dynamics.json', 'correspondence_groups.json'):
     for e in json.loads((E / fn).read_text(encoding='utf-8')):
         for p, s in leaves(e, []):
             keys = [k for k in p if isinstance(k, str)]

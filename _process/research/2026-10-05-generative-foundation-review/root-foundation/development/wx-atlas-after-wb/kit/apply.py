@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """WX: apply the atlas re-sayings after WB. Each edit names the entries it may touch (or '*'), an exact old text, the new
-text and the number of fields it must change; the run stops if any count differs. Both files round-trip with indent=1.
+text and the number of fields it must change; the run stops if any count differs. The three entry files (the crosswalk,
+its groups, the dynamics atlas) round-trip with indent=1.
 
-usage: python3 -B apply.py [ROOT] [--dry]"""
+usage: python3 -B apply.py [ROOT] [--dry] [--from=COMMIT]   (--from reads both files at COMMIT first, e.g. main)"""
 import json
 import pathlib
+import subprocess
 import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
@@ -32,7 +34,17 @@ def setp(obj, path, val):
     obj[path[-1]] = val
 
 
-data = {fn: json.loads((E / fn).read_text(encoding='utf-8')) for fn in ('correspondences.json', 'dynamics.json')}
+FROM = next((a.split('=', 1)[1] for a in sys.argv[1:] if a.startswith('--from=')), None)
+
+
+def load(fn):
+    if FROM:
+        rel = (E / fn).resolve().relative_to(ROOT.resolve())
+        return json.loads(subprocess.check_output(['git', '-C', str(ROOT), 'show', f'{FROM}:{rel}']).decode('utf-8'))
+    return json.loads((E / fn).read_text(encoding='utf-8'))
+
+
+data = {fn: load(fn) for fn in ('correspondences.json', 'dynamics.json', 'correspondence_groups.json')}
 byid = {e['id']: e for d in data.values() for e in d}
 total = 0
 for k, ed in enumerate(EDITS):

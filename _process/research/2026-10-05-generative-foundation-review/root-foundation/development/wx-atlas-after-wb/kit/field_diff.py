@@ -22,7 +22,7 @@ def leaves(x, path):
 
 
 lines, n = [], 0
-for fn in ('correspondences.json', 'dynamics.json'):
+for fn in ('correspondences.json', 'dynamics.json', 'correspondence_groups.json'):
     old = {e['id']: e for e in json.loads(subprocess.check_output(['git', 'show', f'{BASE}:{E}{fn}']).decode('utf-8'))}
     for e in json.load(open(E + fn, encoding='utf-8')):
         o = dict(leaves(old[e['id']], []))

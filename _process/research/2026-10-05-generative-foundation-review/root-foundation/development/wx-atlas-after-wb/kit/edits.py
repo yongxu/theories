@@ -386,7 +386,7 @@ EDITS += [
      "Read as widening, on a course's moments and under premises of deciding, keeping widening is generation of the possible that loses none of it [AI reading, D45]; widening is not 生生's measure.", 1),
     (['cx-wamo-stabilize-not-utopia'],
      "T8 has this form: a wish that life go on motivates avoiding degeneration, ending on every branch, which keeping excludes as well as generation does. But that the wider course is better is C's, and the wish does not give it.",
-     "Its form is a wish, as the glossary says 生生不息 is, not T8's: T8 is the makers' offer of a way of seeing, binding no one. A wish that life go on can motivate avoiding degeneration, ending on every branch, which keeping excludes as well as generation does; but that the wider course is better is C's, and the wish does not give it.", 1),
+     "The source's hope has the form of a wish, as the glossary says 生生不息 is, and not T8's: T8 is the makers' offer of a way of seeing, binding no one. A wish that life go on can motivate avoiding degeneration, ending on every branch, which keeping excludes as well as generation does; but that the wider course is better is C's, and the wish does not give it.", 1),
     (['cx-wamo-stabilize-not-utopia'],
      "Both premises, the condition for scope and C for order, stay unasserted, no warrant from outside sought.",
      "Neither the condition nor C is asserted, no warrant from outside sought.", 1),
@@ -662,4 +662,23 @@ EDITS += [
     (['cx-ecs-surpass-as-goal'],
      "In its conditional judgment (the continuation condition for scope, C or another order for a ranking, neither asserted) mere output growth grounds no transformation.",
      "In its conditional judgment (living significance, J1–J4 and correspondence E, none asserted) mere output growth grounds no transformation.", 1),
+]
+
+# --- the crosswalk's group summaries (correspondence_groups.json), the same shapes ---
+EDITS += [
+    (['cxg-keep-the-possibility-space-open'],
+     "C (order) is a comparison the folder's 开 was coined to replace, neither asserted, warrant open;",
+     "C (order) is a comparison the folder's 开 was coined to replace, neither asserted, no warrant from outside sought;", 1),
+    (['cxg-zhishan-intelligence-must-be-good'],
+     "The account holds such orderings under the continuation condition (scope) and C (order), neither asserted, with J1 to J4 further, and T8 claims no verdict binding every possible mind.",
+     "Where the account ranks such orderings, it names its readings, most often the continuation condition (scope) and C (order), neither asserted, with J1 to J4 in 07 §5's scheme; T8 is its makers' offer, binding no one, and no warrant from outside is sought.", 1),
+    (['cxg-systems-cybernetics'],
+     "\"more options are better\", where any order needs C or a premise in its place and scope the continuation condition, neither asserted;",
+     "\"more options are better\", where a ranking names its order, C or another, and its scope, neither the condition nor C asserted;", 1),
+    (['cxg-memories-and-working-style'],
+     "one owned premise against two;",
+     "one owned premise against readings each ranking names, none asserted;", 1),
+    (['cx-asc-conditional-pause'],
+     "The account's direction concerns which comparison keeps which moves,",
+     "The direction its makers offer concerns which moves a comparison keeps,", 1),
 ]
