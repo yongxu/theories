@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-11-09T15:56:52+00:00",
+  "reviewed_at_utc": "2026-11-09T16:00:45+00:00",
   "statement": {
-    "en": "A world whose relata act by the readings they carry is the course those acts generate; the line read off it is descended by construction and carries its founders' inherited reading; with ending read as an overdraw of that course, G3's realization premise is the identity.",
-    "zh": "诸关系项依其所携读法而行之世界即此诸行为所生之程；读自其上之系由构造相传、携其始祖所传之读法；终读为此程之透支时，G3 之实现前提即为恒等。"
+    "en": "A world whose relata act by their carried readings is the course those acts generate; the line read off it is descended by construction and carries its founders' reading; with ending read as that course's overdraw, every occasion picking that reading, G3's realization premise is the identity.",
+    "zh": "诸关系项依其所携读法而行之世界即此诸行为所生之程；读自其上之系由构造相传、携其始祖所传之读法；终读为此程之透支、且每一场合皆择所携之读法时，G3 之实现前提即为恒等。"
   },
   "laws": [
     {
@@ -51,7 +51,7 @@
     },
     {
       "en": "Let a reading end where its world's course overdraws a family from a short stock. Where every occasion picks the reading the line carries and the world is the course it generates, G3's realization premise is the identity, ending being defined as that overdraw; under G3's remaining premises some strict order according with the choices puts every non-ending reading above every ending one met with it.",
-      "zh": "设诸选项为读法，各给一世界；读法终者，其世界之程自短存而透支一族。每一场合皆择此系所携之读法、且世界即其所生之程处，G3 之实现前提即为恒等（终即定义为此透支）；在 G3 其余前提下，有一与诸择相合之严格序，置每一不终之读法于与之同遇之每一终者之上。",
+      "zh": "读法终者，其世界之程自短存而透支一族。每一场合皆择此系所携之读法、且世界即其所生之程处，G3 之实现前提即为恒等（终即定义为此透支）；在 G3 其余前提下，有一与诸择相合之严格序，置每一不终之读法于与之同遇之每一终者之上。",
       "declarations": [
         "Becoming.Flow.Overdraws",
         "Becoming.Flow.lineOf_persists_never_overdraws",
@@ -263,12 +263,12 @@
         "Becoming.ReadingsPersist.Habitat.lineD_slots",
         "Becoming.ReadingsPersist.Habitat.world_byReading"
       ],
-      "sha256": "42b5578ae541d8e6f942231710a2f22b31d48992c4ca9bf155fc6d3d5d7a8181"
+      "sha256": "07a19feeea16f1fa31f4f981d19b14a37803d1d75bad56daabb2b5855b4a8333"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zj2-readings-persist/NOTE.md",
       "role": "integration",
-      "sha256": "6bb337e441dd518d3f897304190b0a3f103ccedba36cb0272e5e8d14d3abb2a8"
+      "sha256": "d75fd0d323c68e5f23b7f62e70e320b1e6f0cae8bd7023d1b1f5792421f883ff"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zj2-readings-persist/READER.md",
@@ -278,7 +278,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "9ea594a3dd3c1c09d8b7f932c5ad91c1577c38b2c10bbc29b0abcb7ad52c927f"
+      "sha256": "9b866f94de5f363c3b74c8a5cce3c6eb8450548ab246d6b9ce766edff1929b1d"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",

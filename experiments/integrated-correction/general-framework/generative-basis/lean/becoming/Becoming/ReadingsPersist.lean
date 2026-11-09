@@ -30,7 +30,8 @@ selection is read off the course. No ranking, no ethical premise and no axiom en
   Where every occasion picks the reading the line carries and the world is that reading's course, G3's
   premise `realized` is then the identity, ending being defined as that overdraw: nothing is derived about
   the stake. G3's keeping-above-ending law follows for the line read off the course under its remaining
-  premises (balance from feasibility, acting, dependence, gated renewal, coupled cohorts, no cycle shown)
+  premises (the world's law reading what has stood, its course feasible, so balanced, acting, dependence,
+  gated renewal, coupled cohorts, the line persisting, no cycle shown)
   (`Flow.carried_keeping_above_ending`); with several occasions picking differently a run made of the
   picks would be needed, and is not built here. What does not hold by construction: Bound's
   `ActReadsWithin` is a property of how an act reads its index, and carrying the index changes nothing in
@@ -49,7 +50,8 @@ selection is read off the course. No ranking, no ethical premise and no axiom en
   feasible; the slots lie within that closure (with the group the line's slots, by reflexivity) and each
   slot's own standing is coupled into it. Then the slots stand at arbitrarily late steps in one course
   exactly when in the other (`line_standing_unselected`; with the act indexed by significance under
-  `ActReadsWithin`, every significance's course feasible, `line_standing_unselected_of_reads`). This is
+  `ActReadsWithin`, the two significances agreeing on every formation of the closure, every significance's
+  course feasible, `line_standing_unselected_of_reads`). This is
   `act_courses_unselected_throughout` with standing late as the selection (`Web.standsLate_readOffCouplings`):
   near-definitional. A persisting line read off a flow stands late within any group holding its cohorts
   (`Flow.lineOf_standsLate`); the converse is not claimed: a slot can come to stand again, fed from outside
@@ -88,7 +90,7 @@ selection is read off the course. No ranking, no ethical premise and no axiom en
   `line_standing_unselected` holds with every premise met by the model, so the line's standing late cannot
   tell the reading that clears from the one that spares (`Habitat.beyond_standing_unselected`): a model
   meeting every premise of `act_courses_unselected_throughout`, with the acts indexed by what the line
-  carries; that both lines persist is computed (`Habitat.beyond_which_persist`). Where the dweller's line
+  carries; that the line persists under both readings is computed (`Habitat.beyond_which_persist`). Where the dweller's line
   renews the source: under the second reading the habitat is gone from the second step, the dweller's line
   from the third, the source then stays at one, and the line is gone from the fourth; the third reading's
   line persists with the dweller's (`Habitat.back_which_persist`). In the course of the second reading
@@ -117,7 +119,8 @@ selection is read off the course. No ranking, no ethical premise and no axiom en
   readings that persist. The cascade a narrow reading brings beyond (the dweller's line ending) is not
   registered by the narrow line's own persistence.
 - Read for alignment: a selection read off the pool its own course gives, by persistence, registers no
-  removal, its readers' or its own: it is empty as a selection. What registers a removal is a selection
+  removal, its readers' or its own, on every course whose lines settle (classically, every course with
+  finitely many lines): there it is empty as a selection. What registers a removal is a selection
   read off a fixed pool, or off a line whose own continuation the removal ends (the second world, where the
   loss returns to the selecting line). And by `reader_kept_alike`, a reader whose coupling closure the
   alternatives agree on is not removed by the one while kept by the other. Read as GOALS' first condition
@@ -558,8 +561,9 @@ theorem Flow.lineOf_persists_never_overdraws [DecidableEq X] {L : Flow X X} {W :
 picks the reading the line carries, `sig`, and the world is the course `world sig` generates, every ending
 pick is realized as an overdraw of that course: G3's premise `realized` is the identity, ending being
 defined as that overdraw, so nothing is derived about the stake. G3's keeping-above-ending law follows for
-the line read off the course under its remaining premises (balance from feasibility, acting, dependence,
-gated renewal, coupled cohorts, no cycle shown). -/
+the line read off the course under its remaining premises (the world's law reading what has stood, its
+course feasible, so balanced, acting, dependence, gated renewal, coupled cohorts, the line persisting, no
+cycle shown). -/
 theorem Flow.carried_keeping_above_ending [DecidableEq X] {O : Type} {world : Sig → ExchangeLaw X X}
     {present : Nat → List X} {start : X → Nat} {W : Web X X} {sig : Sig}
     (na : (world sig).Nonanticipating) (feasible : (world sig).Feasible present start)

@@ -8,15 +8,15 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-11-09T15:56:52+00:00",
+  "reviewed_at_utc": "2026-11-09T16:00:45+00:00",
   "statement": {
     "en": "A line's standing late tells readings apart only by what their acts do within its coupling closure. In a witness where nothing comes back a line clearing a dweller's habitat persists as a sparing one does, an overdrawing one ends; where the dweller renews the source, the clearing line ends with it.",
     "zh": "系之晚立只以诸读法之举在其耦合闭包内所为分之。见证中，无所返处，清栖者之栖地之系与留之系同存续，透支之系终；栖者续此系之源处，清之系与之同终。"
   },
   "laws": [
     {
-      "en": "Let a line carry one of two readings: the rest acts by a law of what has stood reading through coupling; the two acts are laws of what has stood, the first reading each slot's couplings only, agreeing on everything coupled into the line's coupling closure drawn through both courses; both feasible; each slot's own standing coupled in. The slots stand late in the one course exactly when in the other.",
-      "zh": "设一系携二读法之一：其余依读已成者、经耦合而读之律；二举为读已成者之律，前者只读各位之耦合，且在经两程所得之系耦合闭包内耦合入者上皆一致；两程可行；各位之自立耦合入。则诸位于一程中立至晚步，恰如于另一程。",
+      "en": "Let a line carry one of two readings: the rest acts by a law of what has stood reading through coupling; the two acts are laws of what has stood, the first reading each slot's couplings only, agreeing under every history on what couples into the line's coupling closure drawn through both courses; both feasible; own standing coupled in. The slots stand late in the one course exactly when in the other.",
+      "zh": "设一系携二读法之一：其余依读已成者、经耦合而读之律；二举为读已成者之律，前者只读各位之耦合，且于每一历史下在经两程所得之系耦合闭包内耦合入者上皆一致；两程可行；各位之自立耦合入。则诸位于一程中立至晚步，恰如于另一程。",
       "declarations": [
         "Becoming.StandsLate",
         "Becoming.Web.standsLate_readOffCouplings",
@@ -128,8 +128,8 @@
       "zh": "不加公理。离散步与自然数水平；一种关系项；网、在场之关系项与起始水平为给定；经水平之耦合为给定，含各位之自立。"
     },
     {
-      "en": "The two acts agree on everything coupled into the line's coupling closure drawn through both courses: a premise on the acts, met in the witness, not derived; where they differ there, the difference can be selected, as the witness's overdrawing reading shows.",
-      "zh": "二举在经两程所得之系耦合闭包内耦合入者上一致：对二举之前提，于见证中满足，非推出；若于此不同，差异可被选，如见证之透支读法所示。"
+      "en": "The two acts agree, under every level history, on everything coupled into the line's coupling closure drawn through both courses: a premise on the acts, met in the witness, not derived; where they differ there, the difference can be selected, as the witness's overdrawing reading shows.",
+      "zh": "二举于每一水平史下在经两程所得之系耦合闭包内耦合入者上一致：对二举之前提，于见证中满足，非推出；若于此不同，差异可被选，如见证之透支读法所示。"
     },
     {
       "en": "The rest acts by a law of what has stood reading through coupling, the first act reads each slot's couplings only, and both courses are feasible; the significance form needs every significance's course feasible.",
@@ -142,8 +142,8 @@
   ],
   "does_not_show": [
     {
-      "en": "That a wider reading persists where its loss returns because it is wider: a narrow reading whose act agrees on everything coupled into the line's closure persists as well, by the law.",
-      "zh": "其失去返回处，较宽之读法因宽而存续：其举在系闭包内耦合入者上皆一致之窄读法亦存续，依此律。",
+      "en": "That a wider reading persists where its loss returns because it is wider: a narrow reading whose act agrees on everything coupled into the line's closure stands late as well, under the law's premises.",
+      "zh": "其失去返回处，较宽之读法因宽而存续：其举在系闭包内耦合入者上皆一致之窄读法亦晚立，在此律之前提下。",
       "kind": "non-implication",
       "witness": "Becoming.line_standing_unselected"
     },
@@ -347,12 +347,12 @@
         "Becoming.line_standing_unselected",
         "Becoming.line_standing_unselected_of_reads"
       ],
-      "sha256": "42b5578ae541d8e6f942231710a2f22b31d48992c4ca9bf155fc6d3d5d7a8181"
+      "sha256": "07a19feeea16f1fa31f4f981d19b14a37803d1d75bad56daabb2b5855b4a8333"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zj2-readings-persist/NOTE.md",
       "role": "integration",
-      "sha256": "6bb337e441dd518d3f897304190b0a3f103ccedba36cb0272e5e8d14d3abb2a8"
+      "sha256": "d75fd0d323c68e5f23b7f62e70e320b1e6f0cae8bd7023d1b1f5792421f883ff"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zj2-readings-persist/READER.md",
@@ -362,7 +362,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "9ea594a3dd3c1c09d8b7f932c5ad91c1577c38b2c10bbc29b0abcb7ad52c927f"
+      "sha256": "9b866f94de5f363c3b74c8a5cce3c6eb8450548ab246d6b9ce766edff1929b1d"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",

@@ -56,3 +56,17 @@ Every finding of both readers was taken.
 - **Fable 12–15**: taken as the reader proposed.
 
 The module grew from 80 to 83 theorems (131 declarations), every axiom report still empty.
+
+## Round 2, the diff of round 1's fixes (`fa05df45b..3fabcfa9b`)
+
+**Fable: no high or medium finding.** Every round-1 item landed; the new theorem is sound as read and described exactly; the Chinese tracks the English. Six lows: the index entry still said G3's `realized` "holds by construction"; two notions called "alive" in §4.12 (`AliveIn` by standing, `Flow.LineAlive` by cohort); the record's law and hypothesis lacked "under every level history"; a Chinese clause the English had dropped; the turning in the second world cited without `Habitat.back_which_persist`; the one-world scope entry replaced rather than kept. Fable's rounds stop here.
+
+**astra: one high, three medium, one low.**
+- *High:* a missed "persists as well, by the law" in the record's `does_not_show`, the Chinese included.
+- *Medium:*
+  - "empty as a selection" was stated without the settling scope (§4.12's reading, the module's reading, the note);
+  - the realization summaries omitted the line's persisting and the generated-course premises, and the record statement dropped the constant-pick restriction;
+  - the significance form omitted the significances' agreement within the closure (`agreeWithin`), and the record lacked "under every level history".
+- *Low:* "that both lines persist" was ambiguous (it is the line under both readings).
+
+**What was done.** All taken: "stands late as well, under the law's premises"; "on every course whose lines settle (classically, every course with finitely many lines)", with the infinite-pool limit stated in the note; the remaining premises listed in the module's two summaries; "every occasion picking that reading" in the record statement; the significances' agreement added in §4.12 and the module; "under every level history" in the record; "the line persists under both readings"; and Fable's six lows as proposed. astra reads the round-2 diff next.

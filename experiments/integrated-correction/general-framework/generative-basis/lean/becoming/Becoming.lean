@@ -4796,8 +4796,8 @@ tagged instance or application.
   flow following a law of what has stood has the levels it generates and the course is feasible
   (`ExchangeLaw.levels_of_follows`, `ExchangeLaw.feasible_of_follows`). The line read off a flow
   (`Flow.lineOf`) is G3's `Descended` by construction and carries its founders' inherited reading
-  (`Flow.lineOf_carries`); G3's `realized` holds by construction where every occasion picks the carried
-  reading (`Flow.carried_keeping_above_ending`); `Flow.ReachesBefore` lifted to lines with dated
+  (`Flow.lineOf_carries`); with ending read as the course's overdraw and every occasion picking the carried reading, G3's
+  `realized` is the identity (`Flow.carried_keeping_above_ending`); `Flow.ReachesBefore` lifted to lines with dated
   membership (`Flow.LineReachesBefore`). Standing late selects no reading beyond the line's coupling
   closure (`line_standing_unselected`, `act_courses_unselected_throughout` with standing late as the
   selection; persistence implies standing late). With the pool read off the course, selection by

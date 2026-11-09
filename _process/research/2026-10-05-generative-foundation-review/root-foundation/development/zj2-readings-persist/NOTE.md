@@ -45,7 +45,7 @@ Every law is near-definitional; the witness has finitely many relata, its course
 
 Bound's pool was fixed across courses, so the pool kept the dweller even in the course that ended it. With the pool read off the course, a selection read off its own pool can remove its readers. Which lines count as readers is supplied (in the witness, the dweller's line, read as a reader of the habitat, since its continuation requires it), and nothing ties them to the selection or makes it prefer their removal. In the witness, selection by persistence read off the course's pool holds at the course clearing the habitat, which removes the dweller's line; read off the fixed pool of both lines, the same selection fails there.
 
-astra's reading sharpened this: read off its own pool, selection by persistence registers no removal at all. It passes every course whose lines settle (each persisting or gone from some step on), the course removing every line included (`clearedBack_survivors_pass`); classically, with finitely many lines every course settles (argued, not in Lean). So it is empty as a selection: survivorship read off the survivors.
+astra's reading sharpened this: read off its own pool, selection by persistence registers no removal on any course whose lines settle. It passes every such course (each persisting or gone from some step on), the course removing every line included (`clearedBack_survivors_pass`); classically, with finitely many lines every course settles (argued, not in Lean). So on settled courses it is empty as a selection: survivorship read off the survivors. With infinitely many lines, each living later than the last and none persisting, no common step settles them, and the law does not apply.
 
 What does register a removal, and so when a reading beyond the selector's share is not removed without trace:
 - **A pool that does not depend on the course.** Read off a fixed pool, every removal turns the selection (`not_allPersist_of_removes`).
@@ -56,8 +56,8 @@ What does register a removal, and so when a reading beyond the selector's share 
 
 - **What forms.** Readings are carried along descent and filtered by persistence. Nothing here forms a reading wider than what returns to its carriers, and nothing ranks the readings that persist: what persists is a set, not an order ("it doesn't need to be ranking/comparison").
 - **What persists.** Readings whose acts keep what returns to their line. Beyond that, a reading counting the dweller and one leaving it out persist alike. A reading that does not keep what returns ceases with its line (Ren's "cease to exist", read on the model).
-- **Where it stops.** At the line's coupling closure (Bound). The cascade a narrow reading brings beyond, the dweller's line ending, is not registered by the narrow line's own persistence, and a selection read off the survivors registers no removal at all.
-- **For alignment** (a reading). GOALS' first condition read on the flow: keep the readers in a pool that does not depend on the course selected, or couple their loss back into the selectors' own continuation. Survivorship read off its own pool keeps nothing.
+- **Where it stops.** At the line's coupling closure (Bound). The cascade a narrow reading brings beyond, the dweller's line ending, is not registered by the narrow line's own persistence, and a selection read off the survivors registers no removal on any settled course.
+- **For alignment** (a reading). GOALS' first condition read on the flow: keep the readers in a pool that does not depend on the course selected, or couple their loss back into the selectors' own continuation. Survivorship read off its own pool, on settled courses, keeps nothing.
 
 ## Failed candidates and corrections (kept)
 
