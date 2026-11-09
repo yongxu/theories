@@ -1,0 +1,182 @@
+{
+  "schema_version": 2,
+  "id": "mutual-dependence-gives-the-condition-de-se",
+  "title": {
+    "en": "Mutual dependence gives the condition held de se",
+    "zh": "相互依赖给出自持之延续条件"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F07",
+  "reviewed_at_utc": "2026-11-09T11:05:36+00:00",
+  "statement": {
+    "en": "In a mutually dependent flow, significance held de se as what lies within each center's closure under being affected, or under affecting, is the continuation condition; where every formation is a center, each is exactly mutual dependence.",
+    "zh": "于相互依赖之流，以每一中心沿被影响或沿影响之闭包内者为自持之意义，即延续条件；凡每一形成皆为中心处，二者各恰为相互依赖。"
+  },
+  "laws": [
+    {
+      "en": "Mutual dependence gives the condition held de se along being affected, what can affect a center's continuation at some remove (by the definition of mutual dependence), and along affecting, what it can affect at some remove (through mutual dependence read forward), for every assignment of centers.",
+      "zh": "相互依赖给出沿被影响（可于某远处影响中心之延续者，依相互依赖之定义）与沿影响（中心可于某远处影响者，经相互依赖之前读）而自持之条件，于中心之每一指派皆然。",
+      "declarations": [
+        "Becoming.Flow.unrestricted_of_mutuallyDependent"
+      ]
+    },
+    {
+      "en": "Where every formation is some standpoint's center, the condition held de se along being affected holds exactly where the flow is mutually dependent, and likewise along affecting.",
+      "zh": "凡每一形成皆为某立场之中心处，沿被影响而自持之条件成立，恰当此流相互依赖；沿影响亦然。",
+      "declarations": [
+        "Becoming.Flow.mutuallyDependent_iff_unrestricted"
+      ]
+    },
+    {
+      "en": "In the clearer's world, every formation its own center, neither de se reading is the condition: the dweller lies beyond the clearer's influence closure.",
+      "zh": "于清除者之世界，每一形成为己之中心，二自持之读皆非此条件：栖居者在清除者之影响闭包之外。",
+      "declarations": [
+        "Becoming.Clearing.not_unrestricted_ownClosure"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Any formation, condition and standpoint types; a flow and a web; the centers any map from standpoints to formations; for the converse, every formation some standpoint's center.",
+      "zh": "任一形成、条件与立场之类型；一流与一网；中心为自立场至形成之任一映射；逆向需每一形成皆为某立场之中心。"
+    },
+    {
+      "en": "Significance is the own-closure reading held de se, what lies within the center's closure under a relation, supplied; the relation is being affected or affecting.",
+      "zh": "意义取己闭包之自持之读，即中心沿一关系之闭包内者，为所设；关系为被影响或影响。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That any actual web is mutually dependent.",
+      "zh": "任一实际之网相互依赖。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That a center's concern is drawn along being affected or along affecting, or that the own-closure reading is significance: each is a reading.",
+      "zh": "中心之关切沿被影响或沿影响而引，或己闭包之读即意义：皆为解读。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "Which formations are centers: the map of centers is supplied.",
+      "zh": "何形成为中心：中心之映射为所设。",
+      "kind": "scope"
+    },
+    {
+      "en": "Mutual feeding: mutual feeding gives mutual dependence, and not conversely.",
+      "zh": "相互供养：相互供养给出相互依赖，逆之不然。",
+      "kind": "converse"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+      "detail": {
+        "en": "The clearer's world, every formation its own center: neither de se reading is the condition (Clearing.not_unrestricted_ownClosure).",
+        "zh": "清除者之世界，每一形成为己之中心：二自持之读皆非此条件（Clearing.not_unrestricted_ownClosure）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "significance-related-not-asserted",
+    "no-ethical-premise",
+    "conditional-not-universal",
+    "names-provisional",
+    "formal-not-empirical"
+  ],
+  "validation_scope": {
+    "en": "Pure core, every axiom report empty; a leaf importing Weightings, MutualDependence, ShownOrder and GrammarPath, checked by the core run named in the references. Written by an AI and checked against the Lean by its author; no person's review recorded. Short laws, none new as mathematics. A composition of two landed laws, near-definitional.",
+    "zh": "纯核，公理报告皆空；叶模块，引 Weightings、MutualDependence、ShownOrder 与 GrammarPath，经参考所列之核运行检查。AI 所写，作者对照 Lean 自查；尚无人之审查记录。诸律皆短，无新数学。 二已落地之律之合成，近乎依定义。"
+  },
+  "next_delta": {
+    "en": "Centers read from the dynamics, a self-bearing formation whose reach returns, so that the map of centers is no longer supplied; and which relation a center's concern is drawn along.",
+    "zh": "自动态读出中心（自承而其所及返回之形成），使中心之映射不再为所设；及中心之关切沿何关系而引。"
+  },
+  "correspondence": {
+    "en": "AI reading: read with 07 §4.3, under mutual dependence every center's closure is the whole along either relation, so the de se and de dicto readings agree and the step of invariance adds nothing there. Being affected read as what a continuation depends on, and affecting as what it reaches, are the AI's readings.",
+    "zh": "AI 解读：与 07 §4.3 并读，相互依赖之下，沿任一关系每一中心之闭包皆为全体，故自持与公持之读相合，不变性之一步于此无所增。以被影响读为延续所依者、以影响读为其所及者，皆 AI 之读。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+  "aliases": [
+    "mutual dependence gives the condition de se",
+    "相互依赖给出自持之条件",
+    "Becoming.Flow.unrestricted_of_mutuallyDependent",
+    "Becoming.Flow.mutuallyDependent_iff_unrestricted"
+  ],
+  "dependencies": [
+    {
+      "id": "mutual-dependence-and-its-pace",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Mutual dependence and its reading forward (Flow.MutuallyDependent, Flow.mutuallyDependent_iff_reach), and the clearer's world not mutually dependent (Clearing.shares_not_mutual).",
+        "zh": "相互依赖及其前读（Flow.MutuallyDependent、Flow.mutuallyDependent_iff_reach），及清除者之世界非相互依赖（Clearing.shares_not_mutual）。"
+      }
+    },
+    {
+      "id": "what-the-step-across-standpoints-reaches",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The own-closure reading held de se and the condition where every center's closure is the whole (selfAscribed, ownClosure, ownClosure_unrestricted_iff, ownClosure_unrestricted_of_whole).",
+        "zh": "己闭包之自持之读，及每一中心之闭包为全体处之条件（selfAscribed、ownClosure、ownClosure_unrestricted_iff、ownClosure_unrestricted_of_whole）。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "self-concern-through-dependence",
+      "detail": {
+        "en": "Self-concern held de se along dependence is one from every center's standpoint where the centers lie within one another's closures; here every closure is the whole.",
+        "zh": "中心互在其闭包内处，沿依赖而自持之自我关切自每一中心之立场为一；此处每一闭包皆为全体。"
+      }
+    },
+    {
+      "id": "what-persisting-shows-of-an-order",
+      "detail": {
+        "en": "The same landing: what persisting shows of an order.",
+        "zh": "同次落地：存续所示之序。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Clearing.not_unrestricted_ownClosure",
+        "Becoming.Flow.mutuallyDependent_iff_unrestricted",
+        "Becoming.Flow.unrestricted_of_mutuallyDependent"
+      ],
+      "sha256": "71268b5459b994f6a29a92d515acb94be5400094a04dd844810c77db8698acf7"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T110024.252629Z/verification.json",
+      "role": "receipt",
+      "sha256": "829ea8a7e6b54f7e7cc56e38b51828d094a6b092e51d9fd93749a9611f72ff8f"
+    },
+    {
+      "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "role": "statement",
+      "sha256": "1cf52ba762b04183e12f1ccbf2e02e43b7a9b87274f2ad3553ee3677e056e880"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/za-concern-formed/NOTE.md",
+      "role": "integration",
+      "sha256": "b98e45c8548bb389a17acd92a829d9a03d89f417db6f615a1d393ab7bd728471"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T110024.252629Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.PersistingChoices",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "9 November 2026, board item ZA (Ren, 9 November 2026: how far the zero-axiom target is, after \"ethics emerges from continuation condition, not another way around\"): added. The composition the readings named as ready: mutual dependence gives the condition held de se, along being affected and along affecting, each exactly mutual dependence where every formation is a center; the checker's note kept: mutual dependence is closure under being affected, not feeding.",
+      "zh": "2026年11月9日，工作板条目 ZA（Ren 2026年11月9日问零公理目标尚有多远）：新增。诸读所称已备之合成：相互依赖给出沿被影响与沿影响而自持之条件，凡每一形成皆为中心处各恰为相互依赖；保留查核者之注：相互依赖为被影响之闭包，非供养之闭包。"
+    }
+  ]
+}

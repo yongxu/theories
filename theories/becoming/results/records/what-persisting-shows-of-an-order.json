@@ -1,0 +1,361 @@
+{
+  "schema_version": 2,
+  "id": "what-persisting-shows-of-an-order",
+  "title": {
+    "en": "What persisting shows of an order",
+    "zh": "存续所示之序"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F07",
+  "reviewed_at_utc": "2026-11-09T11:05:36+00:00",
+  "statement": {
+    "en": "Where a choice ending what a line depends on is realized as an overdraw, a line that persists leaves its choices consistent with keeping ranked above ending on the occasions met, and with self-concern there where only ending was at stake; beyond them it fixes nothing.",
+    "zh": "终结系之所依之择实现为透支处，存续之系令其择与于所遇之时存居终上相合，于唯终结攸关处与自我关切相合；其外无所定。"
+  },
+  "laws": [
+    {
+      "en": "Choices with required comparisons: a relation's pairs read as further occasions; some strict order accords with the choices and makes every required comparison exactly where the shown relation with them added has no cycle; every such order shares exactly that relation's reach, and beyond it some ranks either way.",
+      "zh": "附所求比较之诸择：一关系之诸对读作更多之择时；有严序与诸择相合且作每一所求比较，恰当增之后所示之关系无环；每一此序所共有者恰为此关系之及，及外有序两向排之。",
+      "declarations": [
+        "Becoming.ChoiceOccasions.withPairs",
+        "Becoming.ChoiceOccasions.Met",
+        "Becoming.ChoiceOccasions.Unmet",
+        "Becoming.ChoiceOccasions.shown_withPairs_iff",
+        "Becoming.ChoiceOccasions.accords_withPairs_iff",
+        "Becoming.ChoiceOccasions.accorded_containing_iff",
+        "Becoming.ChoiceOccasions.above_in_every_containing_iff_reach",
+        "Becoming.ChoiceOccasions.above_in_some_containing_of_unreached",
+        "Becoming.ChoiceOccasions.reach_first_step",
+        "Becoming.ChoiceOccasions.not_reach_of_unmet"
+      ]
+    },
+    {
+      "en": "Where the choices come from some strict order and no chosen alternative ends, what ends is a sink: some strict order according with the choices puts every alternative that does not end above every one that ends and was open with it.",
+      "zh": "诸择出于某严序且无所择者终结处，终者为汇：有与诸择相合之严序，置每一不终者于每一与之同开而终者之上。",
+      "declarations": [
+        "Becoming.ChoiceOccasions.reach_withPairs_of_kept",
+        "Becoming.ChoiceOccasions.noCycle_withPairs_of_kept",
+        "Becoming.ChoiceOccasions.keeping_above_ending"
+      ]
+    },
+    {
+      "en": "An order increasing in its own continuation on the pairs met together: some strict order according with the choices is so exactly where the shown relation with every own-widening met added has no cycle; where no chosen course ends and only ending is at stake on the occasions met, as where each course open keeps all or none of the own continuation, some is.",
+      "zh": "于同遇之对上随己之延续而增之序：有与诸择相合之严序如此，恰当增入每一所遇之己扩大后所示之关系无环；无所择之程终结且于所遇之时唯终结攸关处（如每一开者或全存或全无己之延续），有之。",
+      "declarations": [
+        "Becoming.Weighting.IncreasingInOwnOn",
+        "Becoming.Weighting.increasingInOwnOn_of_increasingInOwn",
+        "Becoming.Weighting.increasingInOwnOn_every_iff",
+        "Becoming.Weighting.WidensOn.ne",
+        "Becoming.Weighting.EndsOwn",
+        "Becoming.Weighting.AllOrNone",
+        "Becoming.Weighting.adds_ends_of_allOrNone",
+        "Becoming.ChoiceOccasions.OwnWidensMet",
+        "Becoming.ChoiceOccasions.contains_iff_increasingInOwnOn",
+        "Becoming.ChoiceOccasions.selfConcerned_consistent_iff",
+        "Becoming.ChoiceOccasions.selfConcerned_consistent_of_kept",
+        "Becoming.ChoiceOccasions.selfConcerned_consistent_of_allOrNone"
+      ]
+    },
+    {
+      "en": "Off the occasions met it is free: where a course met nowhere widens another and adds to the own continuation, some strict order according with the choices and increasing in its own continuation on the pairs met ranks the other above it, and so is not increasing in its own continuation.",
+      "zh": "所遇之时外则自由：一未遇之程扩大另一程且增己之延续处，有与诸择相合、于所遇之对上随己之延续而增之严序置另一程于其上，故非随己之延续而增。",
+      "declarations": [
+        "Becoming.ChoiceOccasions.reversed_off_met"
+      ]
+    },
+    {
+      "en": "On the World, under balance, only active formations giving and activity needing support, with a family's renewal gated on it and every member of every cohort depending on it, each at a need of at least m, a line with members in arbitrarily late cohorts never had the family's uptake exceed its replenishment for n steps from a stock below n + m.",
+      "zh": "于世界模型，平衡、唯活跃者给、活跃需支持，族之更新受其门控，每一世代之每一成员依于此族，需各至少 m：成员见于任意晚之世代之系，从未自少于 n + m 之存量起连 n 步令族之取用超其补充。",
+      "declarations": [
+        "Becoming.SelectionTerm.Generations.Persists",
+        "Becoming.Flow.persists_never_overdraws"
+      ]
+    },
+    {
+      "en": "Where a chosen course ending what the line depends on is realized as such an overdraw, a persisting line's choices, coming from some strict order, are consistent with an order increasing in its own continuation on the occasions met wherever only ending was at stake there.",
+      "zh": "所择之程终结系之所依者实现为此透支处，存续之系之择（出于某严序）与于所遇之时随己之延续而增之序相合，凡彼处唯终结攸关者。",
+      "declarations": [
+        "Becoming.Flow.persisting_consistent_with_selfConcern"
+      ]
+    },
+    {
+      "en": "Witness: a line of one member a step on a commons meets every World law named and persists; choosing the line as it is over one more child and an ending, by a strict order of its own reading each course whole, it never ends, keeping stands above ending, and no order according with its choice is increasing in its own continuation.",
+      "zh": "例：一共有物上每步一成员之系，满足所列世界之律而存续；依己之严序（全读每一程）于多一子、如其所是与终结之间择如其所是，从不终结，存者居终者之上，而无与其择相合之序随己之延续而增。",
+      "declarations": [
+        "Becoming.PersistingChoices.Forgoing.takes",
+        "Becoming.PersistingChoices.Forgoing.gives",
+        "Becoming.PersistingChoices.Forgoing.flow",
+        "Becoming.PersistingChoices.Forgoing.web",
+        "Becoming.PersistingChoices.Forgoing.generations",
+        "Becoming.PersistingChoices.Forgoing.beq_self",
+        "Becoming.PersistingChoices.Forgoing.beq_succ",
+        "Becoming.PersistingChoices.Forgoing.family_eq",
+        "Becoming.PersistingChoices.Forgoing.balances",
+        "Becoming.PersistingChoices.Forgoing.acting",
+        "Becoming.PersistingChoices.Forgoing.dependent",
+        "Becoming.PersistingChoices.Forgoing.descended",
+        "Becoming.PersistingChoices.Forgoing.persists",
+        "Becoming.PersistingChoices.Forgoing.gated",
+        "Becoming.PersistingChoices.Forgoing.coupled",
+        "Becoming.PersistingChoices.Forgoing.never_overdraws",
+        "Becoming.PersistingChoices.Forgoing.Item",
+        "Becoming.PersistingChoices.Forgoing.items",
+        "Becoming.PersistingChoices.Forgoing.own",
+        "Becoming.PersistingChoices.Forgoing.more",
+        "Becoming.PersistingChoices.Forgoing.fewer",
+        "Becoming.PersistingChoices.Forgoing.drain",
+        "Becoming.PersistingChoices.Forgoing.choices",
+        "Becoming.PersistingChoices.Forgoing.score",
+        "Becoming.PersistingChoices.Forgoing.order",
+        "Becoming.PersistingChoices.Forgoing.order_strict",
+        "Becoming.PersistingChoices.Forgoing.order_accords",
+        "Becoming.PersistingChoices.Forgoing.noCycle",
+        "Becoming.PersistingChoices.Forgoing.kept",
+        "Becoming.PersistingChoices.Forgoing.more_ne_fewer",
+        "Becoming.PersistingChoices.Forgoing.met",
+        "Becoming.PersistingChoices.Forgoing.widens",
+        "Becoming.PersistingChoices.Forgoing.adds",
+        "Becoming.PersistingChoices.Forgoing.keeping_above_drain",
+        "Becoming.PersistingChoices.Forgoing.not_selfConcerned",
+        "Becoming.PersistingChoices.Forgoing.persists_not_selfConcerned"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "Any carrier of alternatives and any occasions; choices accord by strict dominance; that they come from some strict order, nothing shown returning, is a hypothesis.",
+      "zh": "任一备择之载体与任一时；诸择以严胜相合；其出于某严序（所示无返）为假设。"
+    },
+    {
+      "en": "Courses are two-valued admissions on a finite listing; the own continuation is a marking of listed items; ending is any predicate on alternatives, or admitting no marked item.",
+      "zh": "程为有限列举上之二值接纳；己之延续为所列项之标记；终结为备择上之任一谓词，或不纳任何所标之项。"
+    },
+    {
+      "en": "On the World: balance, only active formations giving, activity needing support, descent, a family's renewal gated on it and every cohort depending on it, each at a need of at least m.",
+      "zh": "于世界模型：平衡、唯活跃者给、活跃需支持、传代、族之更新受其门控、每一世代依于此族，需各至少 m。"
+    },
+    {
+      "en": "The link to the flow, supplied: a chosen course ending what the line depends on is realized as an overdraw of the family from a short stock.",
+      "zh": "与流之联系，为所设：所择之程终结系之所依者，实现为自不足之存量对族之透支。"
+    },
+    {
+      "en": "The stake, for the positive law: on the occasions met, a course adds to the own continuation beyond one it widens only by not ending where the other ends.",
+      "zh": "攸关之设（正律所需）：于所遇之时，一程超其所扩大者而增己之延续，唯以不终而彼终。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That any order is held: the choices are consistent with one, which does not show that the chooser carries it.",
+      "zh": "任一序为所持：诸择与之相合，不示择者携之。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Anything between degrees of keeping: a persisting chooser picking fewer of its own over more is consistent with no self-concerned order.",
+      "zh": "存之程度之间之任何事：存续之择者择己之少者于多者之上，与任何自我关切之序皆不合。",
+      "kind": "non-implication",
+      "witness": "Becoming.PersistingChoices.Forgoing.persists_not_selfConcerned"
+    },
+    {
+      "en": "Anything off the occasions met.",
+      "zh": "所遇之时外之任何事。",
+      "kind": "scope",
+      "witness": "Becoming.ChoiceOccasions.reversed_off_met"
+    },
+    {
+      "en": "That a chosen ending is realized as an overdraw, or that actual formations choose by a strict order among such courses.",
+      "zh": "所择之终结实现为透支，或实际之形成于此类程间依严序而择。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "Selection by share among several lines: persisting here is members in arbitrarily late cohorts, with no rate or fitness.",
+      "zh": "多系间依份额之选择：此处之存续为任意晚世代有成员，无速率或适应度。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+      "detail": {
+        "en": "A line of one member a step on a commons, meeting the World laws and persisting, chooses the line as it is over one more child by a strict order of its own: no strict order according with its choice is increasing in its own continuation on the occasion met (PersistingChoices.Forgoing.persists_not_selfConcerned).",
+        "zh": "共有物上每步一成员之系，满足世界之律而存续，依己之严序择如其所是于多一子之上：无与其择相合之严序于所遇之时随己之延续而增（PersistingChoices.Forgoing.persists_not_selfConcerned）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "conditional-not-universal",
+    "formal-not-empirical",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Pure core, every axiom report empty; a leaf importing Weightings, MutualDependence, ShownOrder and GrammarPath, checked by the core run named in the references. Written by an AI and checked against the Lean by its author; no person's review recorded. Short laws, none new as mathematics. The choice laws are ShownOrder's on enlarged occasions; the survivorship law is the coupled ending of GroupEnding read contrapositively; the witness evaluates its tables by rfl and Nat.beq lemmas proved by recursion.",
+    "zh": "纯核，公理报告皆空；叶模块，引 Weightings、MutualDependence、ShownOrder 与 GrammarPath，经参考所列之核运行检查。AI 所写，作者对照 Lean 自查；尚无人之审查记录。诸律皆短，无新数学。 择之律为 ShownOrder 于扩充之择时上之律；存续之律为 GroupEnding 之耦合终结之逆否；例以 rfl 及以递归所证之 Nat.beq 引理计算其表。"
+  },
+  "next_delta": {
+    "en": "Alternatives that are flows, so that what a chosen course does to the line is a law and not a premise; several lines under selection by share, to ask whether differential persistence fixes anything between degrees of keeping; review by a person.",
+    "zh": "备择为流，使所择之程于系所为者为律而非前提；多系依份额而择，以问差异之存续是否定存之程度之间之任何事；人之审查。"
+  },
+  "correspondence": {
+    "en": "Rationalizing strict choices by a strict partial order with required comparisons added, near Richter (1966); keeping above ending is survivorship read in that form. AI reading: read with training and selection, what persisting installs is fixed on the occasions met, which locates goal misgeneralization (Langosco and others 2022; Shah and others 2022) as a possibility, not shown; the witness is the countermodel an AI reading proposed, a persisting, fully informed chooser that is not self-concerned. These are readings, not containments.",
+    "zh": "以严偏序合理化附所求比较之严择，近于 Richter（1966）；存居终上为以此形读之幸存者偏差。AI 解读：与训练及选择并读，存续所装者定于所遇之时，故目标误泛化（Langosco 等 2022；Shah 等 2022）为确定其处之可能，非所示；例为一 AI 之读所提之反模型：存续而全知、却非自我关切之择者。此皆解读，非包含。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+  "aliases": [
+    "what persisting shows",
+    "存续所示",
+    "survivorship in order form",
+    "Becoming.Flow.persists_never_overdraws",
+    "Becoming.Flow.persisting_consistent_with_selfConcern",
+    "Becoming.ChoiceOccasions.keeping_above_ending",
+    "Becoming.ChoiceOccasions.selfConcerned_consistent_iff",
+    "Becoming.ChoiceOccasions.reversed_off_met",
+    "Becoming.PersistingChoices.Forgoing.persists_not_selfConcerned"
+  ],
+  "dependencies": [
+    {
+      "id": "what-choices-show-of-an-order",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Occasions of choosing and their laws, applied to the enlarged occasions (ChoiceOccasions, Shown, Accords, accorded_iff_noCycle, above_in_every_iff_reach, above_in_some_of_unreached).",
+        "zh": "择之时及其律，用于扩充之择时（ChoiceOccasions、Shown、Accords、accorded_iff_noCycle、above_in_every_iff_reach、above_in_some_of_unreached）。"
+      }
+    },
+    {
+      "id": "what-self-concern-alone-ranks",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Orders increasing in their own continuation on a listing (Weighting.IncreasingInOwn, WidensOn, AddsOwn) and the coupled ending under which no later cohort has a member (GroupEnding.Flow.family_childless).",
+        "zh": "列举上随己之延续而增之序（Weighting.IncreasingInOwn、WidensOn、AddsOwn），及无后世代有成员之耦合终结（GroupEnding.Flow.family_childless）。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "what-training-installs",
+      "detail": {
+        "en": "AI reading: off the occasions met the order is free, as a trained response is free where unlumped.",
+        "zh": "AI 解读：所遇之时外其序自由，如已训之应于未归并处自由。"
+      }
+    },
+    {
+      "id": "mutual-dependence-gives-the-condition-de-se",
+      "detail": {
+        "en": "The same landing: scope where everything is entangled.",
+        "zh": "同次落地：万物相缠处之范围。"
+      }
+    },
+    {
+      "id": "the-least-own-class",
+      "detail": {
+        "en": "The same landing: which class is one's own under P2 and P4.",
+        "zh": "同次落地：P2、P4 之下何类为己之类。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ChoiceOccasions.Met",
+        "Becoming.ChoiceOccasions.OwnWidensMet",
+        "Becoming.ChoiceOccasions.Unmet",
+        "Becoming.ChoiceOccasions.above_in_every_containing_iff_reach",
+        "Becoming.ChoiceOccasions.above_in_some_containing_of_unreached",
+        "Becoming.ChoiceOccasions.accorded_containing_iff",
+        "Becoming.ChoiceOccasions.accords_withPairs_iff",
+        "Becoming.ChoiceOccasions.contains_iff_increasingInOwnOn",
+        "Becoming.ChoiceOccasions.keeping_above_ending",
+        "Becoming.ChoiceOccasions.noCycle_withPairs_of_kept",
+        "Becoming.ChoiceOccasions.not_reach_of_unmet",
+        "Becoming.ChoiceOccasions.reach_first_step",
+        "Becoming.ChoiceOccasions.reach_withPairs_of_kept",
+        "Becoming.ChoiceOccasions.reversed_off_met",
+        "Becoming.ChoiceOccasions.selfConcerned_consistent_iff",
+        "Becoming.ChoiceOccasions.selfConcerned_consistent_of_allOrNone",
+        "Becoming.ChoiceOccasions.selfConcerned_consistent_of_kept",
+        "Becoming.ChoiceOccasions.shown_withPairs_iff",
+        "Becoming.ChoiceOccasions.withPairs",
+        "Becoming.Flow.persisting_consistent_with_selfConcern",
+        "Becoming.Flow.persists_never_overdraws",
+        "Becoming.PersistingChoices.Forgoing.Item",
+        "Becoming.PersistingChoices.Forgoing.acting",
+        "Becoming.PersistingChoices.Forgoing.adds",
+        "Becoming.PersistingChoices.Forgoing.balances",
+        "Becoming.PersistingChoices.Forgoing.beq_self",
+        "Becoming.PersistingChoices.Forgoing.beq_succ",
+        "Becoming.PersistingChoices.Forgoing.choices",
+        "Becoming.PersistingChoices.Forgoing.coupled",
+        "Becoming.PersistingChoices.Forgoing.dependent",
+        "Becoming.PersistingChoices.Forgoing.descended",
+        "Becoming.PersistingChoices.Forgoing.drain",
+        "Becoming.PersistingChoices.Forgoing.family_eq",
+        "Becoming.PersistingChoices.Forgoing.fewer",
+        "Becoming.PersistingChoices.Forgoing.flow",
+        "Becoming.PersistingChoices.Forgoing.gated",
+        "Becoming.PersistingChoices.Forgoing.generations",
+        "Becoming.PersistingChoices.Forgoing.gives",
+        "Becoming.PersistingChoices.Forgoing.items",
+        "Becoming.PersistingChoices.Forgoing.keeping_above_drain",
+        "Becoming.PersistingChoices.Forgoing.kept",
+        "Becoming.PersistingChoices.Forgoing.met",
+        "Becoming.PersistingChoices.Forgoing.more",
+        "Becoming.PersistingChoices.Forgoing.more_ne_fewer",
+        "Becoming.PersistingChoices.Forgoing.never_overdraws",
+        "Becoming.PersistingChoices.Forgoing.noCycle",
+        "Becoming.PersistingChoices.Forgoing.not_selfConcerned",
+        "Becoming.PersistingChoices.Forgoing.order",
+        "Becoming.PersistingChoices.Forgoing.order_accords",
+        "Becoming.PersistingChoices.Forgoing.order_strict",
+        "Becoming.PersistingChoices.Forgoing.own",
+        "Becoming.PersistingChoices.Forgoing.persists",
+        "Becoming.PersistingChoices.Forgoing.persists_not_selfConcerned",
+        "Becoming.PersistingChoices.Forgoing.score",
+        "Becoming.PersistingChoices.Forgoing.takes",
+        "Becoming.PersistingChoices.Forgoing.web",
+        "Becoming.PersistingChoices.Forgoing.widens",
+        "Becoming.SelectionTerm.Generations.Persists",
+        "Becoming.Weighting.AllOrNone",
+        "Becoming.Weighting.EndsOwn",
+        "Becoming.Weighting.IncreasingInOwnOn",
+        "Becoming.Weighting.WidensOn.ne",
+        "Becoming.Weighting.adds_ends_of_allOrNone",
+        "Becoming.Weighting.increasingInOwnOn_every_iff",
+        "Becoming.Weighting.increasingInOwnOn_of_increasingInOwn"
+      ],
+      "sha256": "71268b5459b994f6a29a92d515acb94be5400094a04dd844810c77db8698acf7"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T110024.252629Z/verification.json",
+      "role": "receipt",
+      "sha256": "829ea8a7e6b54f7e7cc56e38b51828d094a6b092e51d9fd93749a9611f72ff8f"
+    },
+    {
+      "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "role": "statement",
+      "sha256": "1cf52ba762b04183e12f1ccbf2e02e43b7a9b87274f2ad3553ee3677e056e880"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/za-concern-formed/NOTE.md",
+      "role": "integration",
+      "sha256": "b98e45c8548bb389a17acd92a829d9a03d89f417db6f615a1d393ab7bd728471"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T110024.252629Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.PersistingChoices",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "9 November 2026, board item ZA (Ren, 9 November 2026: how far the zero-axiom target is, after \"ethics emerges from continuation condition, not another way around\"): added. G3 of the readings: choice modelled inside a flow, both halves proved, with a witness of a persisting, fully informed chooser that is not self-concerned; said as \"consistent with\", not \"has\".",
+      "zh": "2026年11月9日，工作板条目 ZA（Ren 2026年11月9日问零公理目标尚有多远）：新增。诸读之 G3：于流中建择之模型，两半皆证，附存续而全知、却非自我关切之择者之例；言「相合」，不言「有」。"
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "schema_version": 2,
+  "id": "the-least-own-class",
+  "title": {
+    "en": "Under P2 and P4 the own class has a least form",
+    "zh": "P2、P4 之下己类有最小者"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-09T11:05:36+00:00",
+  "statement": {
+    "en": "Where a member conditions something and some class meets P2 and P4 at it, the class of the member with everything downstream of it meets both and lies within every class that does; such classes meet, and each gives the member's line the same reach.",
+    "zh": "成员有所缘且有类于其处满足 P2 与 P4 处，此成员与其下游一切所成之类满足二者，且在每一满足者之内；此类可交，且各给成员之线同一所及。"
+  },
+  "laws": [
+    {
+      "en": "The downstream class of a member: the member and everything downstream of it alike, every other occurrence alike only to itself; it is a class and holds the member's effects.",
+      "zh": "成员之下游类：此成员与其下游之一切同类，余者唯与己同类；此为类，且持此成员之所缘。",
+      "declarations": [
+        "Becoming.OwnClass.downstreamClass",
+        "Becoming.OwnClass.downstreamClass_class",
+        "Becoming.OwnClass.downstream_of_alike",
+        "Becoming.OwnClass.downstream_step",
+        "Becoming.OwnClass.downstreamClass_held"
+      ]
+    },
+    {
+      "en": "Where the member conditions something and some class meets P2 and P4 at it, the downstream class meets P2 there and lies within every class meeting both; under P2, holding the member's effects is containing it.",
+      "zh": "成员有所缘且有类于其处满足 P2 与 P4 处，下游类于彼满足 P2，且在每一满足二者之类之内；P2 之下，持成员之所缘即含此类。",
+      "declarations": [
+        "Becoming.OwnClass.alike_of_downstream",
+        "Becoming.OwnClass.downstreamClass_least",
+        "Becoming.OwnClass.downstreamClass_constant_at",
+        "Becoming.OwnClass.held_iff_contains_downstream"
+      ]
+    },
+    {
+      "en": "Two classes meeting P2 and P4 at a member that conditions something meet in a class meeting both.",
+      "zh": "于有所缘之成员处满足 P2 与 P4 之二类，其交为满足二者之类。",
+      "declarations": [
+        "Becoming.OwnClass.meet_class",
+        "Becoming.OwnClass.meet_held",
+        "Becoming.OwnClass.meet_constant_at"
+      ]
+    },
+    {
+      "en": "Under every class meeting P2 and P4 at a member that conditions something, the member's line reaches exactly what lies downstream of it.",
+      "zh": "于有所缘之成员处满足 P2 与 P4 之每一类之下，成员之线所及恰为其下游者。",
+      "declarations": [
+        "Becoming.OwnClass.reach_iff_downstream"
+      ]
+    },
+    {
+      "en": "Where whether each occurrence conditions anything is decided, the one meets P2 and P4 at every member, so the least class exists outright.",
+      "zh": "每一发生有无所缘可判定处，一于每一成员处满足 P2 与 P4，故最小之类径存。",
+      "declarations": [
+        "Becoming.OwnClass.one_constant_at",
+        "Becoming.OwnClass.one_held",
+        "Becoming.OwnClass.least_own_class"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "The root: any carrier, relation and class; P2 is constancy up to the net's end at the member's class, P4 holding the member's effects.",
+      "zh": "根：任一载体、关系与类；P2 为于成员之类至网终有常，P4 为持成员之所缘。"
+    },
+    {
+      "en": "The member conditions something; and either some class meets P2 and P4 at it, or whether each occurrence conditions anything is decided.",
+      "zh": "成员有所缘；且或有类于其处满足 P2 与 P4，或每一发生有无所缘可判定。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That P2 and P4 hold for anyone's class: the crux of the path past one's own end.",
+      "zh": "P2 与 P4 于任何人之类成立：越己之终之路之关键。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That the downstream class is anyone's own.",
+      "zh": "下游类为任何人之己类。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "What else a class meeting both holds alike to the member, which bears on what a line reaching such an occurrence carries on.",
+      "zh": "满足二者之类另持何者与成员同类，此关乎及于此发生之线所续者。",
+      "kind": "scope"
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "decidability",
+    "formal-not-empirical",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Pure core, every axiom report empty; a leaf importing Weightings, MutualDependence, ShownOrder and GrammarPath, checked by the core run named in the references. Written by an AI and checked against the Lean by its author; no person's review recorded. Short laws, none new as mathematics. Near-definitional: under P2 holding the member's effects is everything downstream being alike (constancy-read-at-a-members-class); what is added is that the class of exactly that meets P2, so a least exists, and that two such classes meet in one.",
+    "zh": "纯核，公理报告皆空；叶模块，引 Weightings、MutualDependence、ShownOrder 与 GrammarPath，经参考所列之核运行检查。AI 所写，作者对照 Lean 自查；尚无人之审查记录。诸律皆短，无新数学。 近乎依定义：P2 之下持成员之所缘即下游一切同类（constancy-read-at-a-members-class）；所增者为恰此之类满足 P2，故最小者存，且二此类交为一此类。"
+  },
+  "next_delta": {
+    "en": "Whether P2 and P4 hold for a self, argued or witnessed; what the classes meeting both hold besides the downstream class, and what lines reaching those occurrences carry on.",
+    "zh": "P2 与 P4 于一己是否成立，论之或见之；满足二者之诸类除下游类外另持何者，及及于彼诸发生之线所续者。"
+  },
+  "correspondence": {
+    "en": "AI reading: the least class is 07 §4.7's widest self, everything one conditions, so under P2 and P4 the de se question does not change what one's own line reaches, and the crux is whether one's class contains that class. An AI reading had conjectured that such classes close only under joins, with two whose meet fails; that is false.",
+    "zh": "AI 解读：最小之类即 07 §4.7 之最宽之己（凡己所缘者），故 P2、P4 之下，自持之问不改己线之所及，关键在己类是否含此类。一 AI 之读曾猜此类唯于并下封闭，且有二类其交不满足；此猜为假。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+  "aliases": [
+    "the least own class",
+    "最小之己类",
+    "the downstream class",
+    "下游类",
+    "Becoming.OwnClass.downstreamClass_least",
+    "Becoming.OwnClass.least_own_class",
+    "Becoming.OwnClass.reach_iff_downstream"
+  ],
+  "dependencies": [
+    {
+      "id": "constancy-read-at-a-members-class",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Constancy up to the net's end at a member's class and what it gives with the member's effects held («本类至终有常», «所缘同于», «本类常闭则所缘同类», «本类常闭则后皆续»).",
+        "zh": "于成员之类至网终有常，及持成员之所缘时所给者（«本类至终有常»、«所缘同于»、«本类常闭则所缘同类»、«本类常闭则后皆续»）。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "what-a-line-holds-and-a-regularity-takes-in",
+      "detail": {
+        "en": "What a line must hold and what a regularity takes in, the laws the path of 07 §4.6 joins.",
+        "zh": "线所必持与常所纳者，07 §4.6 之路所接之律。"
+      }
+    },
+    {
+      "id": "what-persisting-shows-of-an-order",
+      "detail": {
+        "en": "The same landing: what persisting shows of an order.",
+        "zh": "同次落地：存续所示之序。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.OwnClass.alike_of_downstream",
+        "Becoming.OwnClass.downstreamClass",
+        "Becoming.OwnClass.downstreamClass_class",
+        "Becoming.OwnClass.downstreamClass_constant_at",
+        "Becoming.OwnClass.downstreamClass_held",
+        "Becoming.OwnClass.downstreamClass_least",
+        "Becoming.OwnClass.downstream_of_alike",
+        "Becoming.OwnClass.downstream_step",
+        "Becoming.OwnClass.held_iff_contains_downstream",
+        "Becoming.OwnClass.least_own_class",
+        "Becoming.OwnClass.meet_class",
+        "Becoming.OwnClass.meet_constant_at",
+        "Becoming.OwnClass.meet_held",
+        "Becoming.OwnClass.one_constant_at",
+        "Becoming.OwnClass.one_held",
+        "Becoming.OwnClass.reach_iff_downstream"
+      ],
+      "sha256": "71268b5459b994f6a29a92d515acb94be5400094a04dd844810c77db8698acf7"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T110024.252629Z/verification.json",
+      "role": "receipt",
+      "sha256": "829ea8a7e6b54f7e7cc56e38b51828d094a6b092e51d9fd93749a9611f72ff8f"
+    },
+    {
+      "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "role": "statement",
+      "sha256": "1cf52ba762b04183e12f1ccbf2e02e43b7a9b87274f2ad3553ee3677e056e880"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/za-concern-formed/NOTE.md",
+      "role": "integration",
+      "sha256": "b98e45c8548bb389a17acd92a829d9a03d89f417db6f615a1d393ab7bd728471"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T110024.252629Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.PersistingChoices",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "9 November 2026, board item ZA (Ren, 9 November 2026: how far the zero-axiom target is, after \"ethics emerges from continuation condition, not another way around\"): added. G2 of the readings: whether the classes meeting P2 and P4 at a point close under meets; they do where the point conditions something, with a least one, its downstream class; the conjecture of joins only is kept here as failed.",
+      "zh": "2026年11月9日，工作板条目 ZA（Ren 2026年11月9日问零公理目标尚有多远）：新增。诸读之 G2：于一点满足 P2 与 P4 之诸类是否于交下封闭；此点有所缘处则然，且有最小者，即其下游类；唯并之猜于此存为已败。"
+    }
+  ]
+}
