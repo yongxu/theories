@@ -30,7 +30,7 @@
 - That a center's concern is drawn along being affected or along affecting, or that the own-closure reading is significance: each is a reading.
 - Which formations are centers: the map of centers is supplied.
 - Mutual feeding: mutual feeding gives mutual dependence, and not conversely.
-- **Counterexample:** The clearer's world, every formation its own center: neither de se reading is the condition (Clearing.not_unrestricted_ownClosure). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean)
+- **Counterexample:** The clearer's world, every formation its own center: neither de se reading is the condition (Clearing.not_unrestricted_ownClosure). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean)
 
 **Standard boundaries:** States how significance relates to structure, for any significance or under the continuation condition (Unrestricted: the continuation of anything has significance); it asserts no significance and does not assert the condition. · No ethical premise and no Lean axiom is used. · A conditional law does not make its antecedent universal; a theorem's premise is not thereby necessary for every achievement. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A law of the formal model; its correspondence to actual systems is a separate obligation.
 
@@ -39,7 +39,7 @@
 
 Pure core, every axiom report empty; a leaf importing Weightings, MutualDependence and ShownOrder, checked by the core run named in the references. Written by an AI and checked against the Lean by its author; no person's review recorded. Short laws, none new as mathematics. A composition of two landed laws, near-definitional.
 
-Canonical source: [PersistingChoices.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean)
+Canonical source: [FlowCenters.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean)
 
 <a id="next--下一步"></a>
 ## Next
@@ -66,10 +66,11 @@ AI reading: read with 07 §4.3, under mutual dependence every center's closure i
 
 | Role | Source | Declarations |
 |---|---|---|
-| proof | [PersistingChoices.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean) | `Becoming.Clearing.not_unrestricted_ownClosure`, `Becoming.Flow.mutuallyDependent_iff_unrestricted`, `Becoming.Flow.unrestricted_of_mutuallyDependent` |
+| proof | [FlowCenters.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean) | `Becoming.Clearing.not_unrestricted_ownClosure`, `Becoming.Flow.mutuallyDependent_iff_unrestricted`, `Becoming.Flow.unrestricted_of_mutuallyDependent` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T130231.019057Z/verification.json) | — |
 | statement | [07-SIGNIFICANCE.md](../../chapters/07-SIGNIFICANCE.md) | — |
 | integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/za-concern-formed/NOTE.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json) | — |
 
 Aliases: `mutual dependence gives the condition de se`, `相互依赖给出自持之条件`, `Becoming.Flow.unrestricted_of_mutuallyDependent`, `Becoming.Flow.mutuallyDependent_iff_unrestricted`
 
@@ -77,7 +78,8 @@ Aliases: `mutual dependence gives the condition de se`, `相互依赖给出自�
 ### History
 
 - 9 November 2026, board item ZA (Ren, 9 November 2026: how far the zero-axiom target is, after "ethics emerges from continuation condition, not another way around"): added. The composition the readings named as ready: mutual dependence gives the condition held de se, along being affected and along affecting, each exactly mutual dependence where every formation is a center; the checker's note kept: mutual dependence is closure under being affected, not feeding.
+- 9 November 2026, J1 (route (b)'s join, board rule 9): the three declarations moved, with their names and statements, from PersistingChoices to FlowCenters, beside the standpoints a flow gives; Flow.mutuallyDependent_iff_unrestricted is now the case of ownClosure_unrestricted_iff_of_onto. The claim is unchanged.
 
 </details>
 
-Documentary review UTC: `2026-11-09T13:03:49+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T15:00:40+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

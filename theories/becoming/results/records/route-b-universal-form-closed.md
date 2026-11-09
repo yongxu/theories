@@ -83,7 +83,7 @@ Reading (the AI's): route (b)'s should, a center's boundary matching what it dep
 - related, not a proved adapter: [standpoints-read-off-a-flow](standpoints-read-off-a-flow.md). The standpoints read off a flow as the formations whose acts return; the laws here take any supplied center, so they hold there too.
 - related, not a proved adapter: [selection-read-off-continuations](selection-read-off-continuations.md). What no selection read off a center's continuation selects, the selection-side form of the same bound.
 
-**Used by:** [where-the-blindness-lifts](where-the-blindness-lifts.md)
+**Used by:** [route-b-joined](route-b-joined.md) · [where-the-blindness-lifts](where-the-blindness-lifts.md)
 
 <a id="sources--来源"></a>
 ### Sources

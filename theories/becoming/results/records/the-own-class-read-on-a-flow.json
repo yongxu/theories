@@ -175,7 +175,7 @@
         "Becoming.«返之所及即环»",
         "Becoming.«返之线»"
       ],
-      "sha256": "022ae3a42ed24d045c67a9772df51ce6d17d4d77ae34819de05fada0ee99216d"
+      "sha256": "b9fcde1a30b394e0998a24524a26951ed9ff1a84eed1431cc21ce52f4f67f18a"
     },
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -201,12 +201,18 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T141048.279821Z/verification.json",
       "role": "receipt",
       "sha256": "a455945244dbeee7b4be23061a6f87d0743879c6f5d9af8fcf46fdd213102b7c"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json",
+      "role": "receipt",
+      "sha256": "b2a4a06d538e8e7d391c8947e4c85eb6183fa84004a1f4fd8eb13d765d628a14",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OwnClass.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T141048.279821Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.OwnClass",
       "success_pointer": "/status",
       "success_value": "passed"

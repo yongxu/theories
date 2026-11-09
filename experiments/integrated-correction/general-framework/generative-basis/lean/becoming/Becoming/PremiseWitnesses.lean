@@ -60,7 +60,11 @@ whose admissions are listed.
   relation on formations holds, with the item `(t, f)` marked by the marking of `f`, an order
   increasing in that own continuation, read on level paths through the decided admission, ranks
   every extension between two such listed paths, as C (`Comparison`) asks there
-  (`Web.extension_ranked_of_increasingInOwn`). Listing confines the link twice. A level path's
+  (`Web.extension_ranked_of_increasingInOwn`). The extension is a widening that adds to that own
+  continuation (`Web.extension_ownWidens`), so an order increasing in its own continuation only on
+  the pairs some relation `met` relates ranks it wherever `met` relates the two
+  (`Web.extension_ranked_of_increasingInOwnOn`, of which the law before is the case of every
+  pair). Listing confines the link twice. A level path's
   admissions are listed only where it admits nothing from some step on
   (`Web.admits_nothing_from_of_listed`; so it eventually widens nothing,
   `Web.not_eventually_of_listed`): the link covers courses whose admissions end, never one that
@@ -472,14 +476,53 @@ theorem Web.extension_ranked_of_increasing {admitted : (Nat → C → Nat) → N
     (((Web.widens_iff_every_weighting decides listed listed').trans
       Weighting.widens_iff_every_positive.symm).mp (W.paths_extension_iff_widens.mp extension))
 
+/-- **An extension between listed level paths widens and adds to the own continuation.** Let
+`Unrestricted (selfAscribed (ownClosure rel) center)` hold, let `own` mark whatever formation lies
+within `p`'s center's closure along `rel`, and mark each (step, formation) item by the marking of its
+formation. Let admission be decided, and let what `l'` and `l` admit be listed in `items`. If `l`
+extends `l'` with every claim counted as living, what `l` admits widens what `l'` admits on `items`
+and adds to that own continuation beyond it. -/
+theorem Web.extension_ownWidens {Pos : Type} {rel : F → F → Prop} {center : Pos → F}
+    (unrestricted : Unrestricted (selfAscribed (ownClosure rel) center)) {p : Pos} {own : F → Bool}
+    (marks : ∀ f, WithinClosure rel (center p) f → own f = true)
+    {admitted : (Nat → C → Nat) → Nat × F → Bool} (decides : W.DecidesAdmission admitted)
+    {items : List (Nat × F)} {l l' : Nat → C → Nat} (listed : W.ListsAdmitted items l)
+    (listed' : W.ListsAdmitted items l') (extension : Extension W.paths (fun _ => True) l' l) :
+    Weighting.WidensOn items (admitted l) (admitted l') ∧
+      Weighting.AddsOwn items (fun i => own i.2) (admitted l) (admitted l') :=
+  have widens : Weighting.WidensOn items (admitted l) (admitted l') :=
+    ((Web.widens_iff_every_weighting decides listed listed').trans
+      Weighting.widens_iff_every_positive.symm).mp (W.paths_extension_iff_widens.mp extension)
+  ⟨widens, match widens.2 with
+    | ⟨i, mem, yes, no⟩ =>
+      ⟨i, mem, marks i.2 (ownClosure_unrestricted_iff.mp unrestricted p i.2), yes, no⟩⟩
+
+/-- **Where the continuation condition held de se holds, self-concern on the pairs met ranks every
+extension between listed level paths met together.** Under the premises of `Web.extension_ownWidens`,
+every order increasing in that own continuation on the pairs `met` relates ranks what `l` admits above
+what `l'` admits, wherever `met` relates the two: the extension is a widening adding to the own
+continuation. This is C between two listed level paths, read from an order increasing in its own
+continuation only on some pairs, such as those met together at occasions of choosing. -/
+theorem Web.extension_ranked_of_increasingInOwnOn {Pos : Type} {rel : F → F → Prop}
+    {center : Pos → F} (unrestricted : Unrestricted (selfAscribed (ownClosure rel) center))
+    {p : Pos} {own : F → Bool} (marks : ∀ f, WithinClosure rel (center p) f → own f = true)
+    {admitted : (Nat → C → Nat) → Nat × F → Bool} (decides : W.DecidesAdmission admitted)
+    {items : List (Nat × F)} {O : (Nat × F → Bool) → (Nat × F → Bool) → Prop}
+    {met : (Nat × F → Bool) → (Nat × F → Bool) → Prop}
+    (concerned : Weighting.IncreasingInOwnOn met items (fun i => own i.2) O)
+    {l l' : Nat → C → Nat} (listed : W.ListsAdmitted items l) (listed' : W.ListsAdmitted items l')
+    (extension : Extension W.paths (fun _ => True) l' l) (wasMet : met (admitted l) (admitted l')) :
+    O (admitted l') (admitted l) :=
+  match Web.extension_ownWidens unrestricted marks decides listed listed' extension with
+  | ⟨widens, adds⟩ => concerned _ _ wasMet widens adds
+
 /-- **Where the continuation condition held de se holds, self-concern ranks every extension between
 listed level paths.** Let `Unrestricted (selfAscribed (ownClosure rel) center)` hold for a relation
 `rel` on the web's formations, let `own` mark whatever formation lies within `p`'s center's closure
 along `rel`, and mark each (step, formation) item by the marking of its formation. Let admission be
 decided, and let what `l'` and `l` admit be listed in `items`. If `l` extends `l'` with every claim
 counted as living, every order increasing in that own continuation on `items` ranks what `l` admits
-above what `l'` admits: the order is increasing in admission
-(`Weighting.increasingInOwn_iff_increasing`), and `Web.extension_ranked_of_increasing` applies. This
+above what `l'` admits: the case of every pair of `Web.extension_ranked_of_increasingInOwnOn`. This
 is C between two listed level paths only. The listing is asked of the two paths compared, not of
 every level path: that would hold of no web with a formation (`Web.not_listsAdmitted_every`), and
 it leaves no extension (`Web.no_extension_of_listsAdmitted_every`). Listed paths are paths whose
@@ -493,10 +536,9 @@ theorem Web.extension_ranked_of_increasingInOwn {Pos : Type} {rel : F → F → 
     (concerned : Weighting.IncreasingInOwn items (fun i => own i.2) O)
     {l l' : Nat → C → Nat} (listed : W.ListsAdmitted items l) (listed' : W.ListsAdmitted items l')
     (extension : Extension W.paths (fun _ => True) l' l) : O (admitted l') (admitted l) :=
-  Web.extension_ranked_of_increasing decides
-    ((Weighting.increasingInOwn_iff_increasing fun i _ =>
-      marks i.2 (ownClosure_unrestricted_iff.mp unrestricted p i.2)).mp concerned)
-    listed listed' extension
+  Web.extension_ranked_of_increasingInOwnOn unrestricted marks decides
+    (Weighting.increasingInOwnOn_of_increasingInOwn (met := fun _ _ => True) concerned)
+    listed listed' extension trivial
 
 end Paths
 

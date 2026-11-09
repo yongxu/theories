@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-09T14:12:08+00:00",
+  "reviewed_at_utc": "2026-11-09T15:00:40+00:00",
   "statement": {
     "en": "Where a class meets the path's regularity and holds one's effects, the net fixes the least such class, oneself with everything downstream, and every such class reaches what the one reaches; at an occurrence that acts, these classes are closed under meets, not joins.",
     "zh": "凡一类满足此路之理且持己之所缘，网即定其最细者，即己连同下游一切；凡此类皆所及即一之所及；于有所缘之事件，此诸类对交封闭，对并不封闭。"
@@ -65,7 +65,8 @@
         "Becoming.«后类之所及即一之所及»",
         "Becoming.«本类常则闭当且仅当所及即一之所及»",
         "Becoming.«各本类常闭则续无外即一之续无外»",
-        "Becoming.«各本类常闭续无外则同一中心»"
+        "Becoming.«各后类续无外即一之续无外»",
+        "Becoming.«各续无外则同一中心»"
       ]
     },
     {
@@ -258,9 +259,8 @@
         "Becoming.MeetBreaks.step",
         "Becoming.ReturnsAlong.downstreamClass_regular",
         "Becoming.«判则后类本类常闭»",
-        "Becoming.«及之首步»",
+        "Becoming.«各后类续无外即一之续无外»",
         "Becoming.«各本类常闭则续无外即一之续无外»",
-        "Becoming.«各本类常闭续无外则同一中心»",
         "Becoming.«合为类»",
         "Becoming.«后类»",
         "Becoming.«后类为类»",
@@ -284,7 +284,23 @@
         "Becoming.«静之本类至终有常»",
         "Becoming.«静最细»"
       ],
-      "sha256": "022ae3a42ed24d045c67a9772df51ce6d17d4d77ae34819de05fada0ee99216d"
+      "sha256": "b9fcde1a30b394e0998a24524a26951ed9ff1a84eed1431cc21ce52f4f67f18a"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.«各续无外则同一中心»"
+      ],
+      "sha256": "692b481acb694a8054be3962199b686cbd3f8623e636638baff520a5042be037"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.«及之首步»"
+      ],
+      "sha256": "2093db006e8951b772c73a94ef8ca565b606d25055d44794c42e6d5b4a13c7b9"
     },
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -310,12 +326,18 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T141048.279821Z/verification.json",
       "role": "receipt",
       "sha256": "a455945244dbeee7b4be23061a6f87d0743879c6f5d9af8fcf46fdd213102b7c"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json",
+      "role": "receipt",
+      "sha256": "b2a4a06d538e8e7d391c8947e4c85eb6183fa84004a1f4fd8eb13d765d628a14",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OwnClass.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T141048.279821Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.OwnClass",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -325,6 +347,10 @@
     {
       "en": "9 November 2026: added (ZC, route (b)'s piece G2), deciding an AI conjecture, unchecked, that the classes meeting P2 and P4 are closed under joins and not meets; the opposite holds, and P2 alone is not closed under meets.",
       "zh": "2026年11月9日：新增（ZC，路线 (b) 之 G2），判定一未经核查之 AI 猜想（满足 P2 与 P4 之诸类对并封闭而对交不封闭）；所成者相反，且单有 P2 对交不封闭。"
+    },
+    {
+      "en": "9 November 2026, J1 (route (b)'s join, board rule 9): «及之首步» moved to the grammar beside «及»; «各本类常闭续无外则同一中心» went, since the one-center law holds with each center under any class of its own, asking none of its premises «类», P2 or P4 («各续无外则同一中心», GrammarScope), and «各后类续无外即一之续无外» states the least class's per-center form with no premise; «返则后类本类常闭» takes its hypothesis as ReturnsAlong. Statement and claim unchanged; the 07 sentence citing the corollary now cites the general law.",
+      "zh": "2026年11月9日，J1（路线 (b) 之合观，看板规则 9）：«及之首步» 移至文法，与 «及» 并列；«各本类常闭续无外则同一中心» 去之，因一中心律于各中心在其任一己类下皆成立，不须其前提 «类»、P2 或 P4（«各续无外则同一中心»，GrammarScope），而 «各后类续无外即一之续无外» 陈最细类之各中心形式，无须前提；«返则后类本类常闭» 之假设今写作 ReturnsAlong。陈述与所陈未变；07 引此推论之句今引通律。"
     }
   ]
 }

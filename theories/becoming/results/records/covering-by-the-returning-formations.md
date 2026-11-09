@@ -73,6 +73,7 @@ In a finite digraph every vertex reaches a sink strongly connected component, on
 | review | [READER.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/za-g1-centers/READER.md) | — |
 | integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/za-g1-centers/NOTE.md) | — |
 | statement | [07-SIGNIFICANCE.md](../../chapters/07-SIGNIFICANCE.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json) | — |
 
 Aliases: `covering by the returning formations`, `由回返构成的覆盖`, `Becoming.Flow.covered_by_returning`, `Becoming.Flow.returning_influence_unrestricted_iff`
 

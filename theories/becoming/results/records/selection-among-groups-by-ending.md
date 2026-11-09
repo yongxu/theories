@@ -95,6 +95,7 @@ Group selection by differential extinction (Wright 1945; Levins 1970 on metapopu
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T155100.105164Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T181337.294917Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json) | — |
 
 Aliases: `selection among groups by ending`, `经由终止的组间选择`, `group selection by extinction`, `Becoming.GroupEnding.rises_iff_ended`, `Becoming.GroupEnding.Flow.excess_childless`, `Becoming.GroupEnding.Flow.raises_of_inactive`, `Becoming.GroupEnding.Flow.all_end`
 

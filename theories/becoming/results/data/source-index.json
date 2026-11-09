@@ -96,6 +96,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FreeEnergyCounting.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FreeEnergyGuarantees.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frequency.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FromTheDynamics.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Gain.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Gated.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Gluing.lean",
@@ -216,6 +217,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingSchedule.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Readings.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Readout.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reconfiguration.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
@@ -1863,6 +1865,15 @@
         "theories/becoming/chapters/08-METHOD.md"
       ]
     },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/j1-route-b-joined/NOTE.md": {
+      "title": "J1: route (b) joined, and its rule-9 moves (AI-written, Claude Opus 5.5, 9 November 2026)",
+      "local_links": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/j1-route-b-joined/READER.md",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FromTheDynamics.lean",
+        "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",
+        "theories/becoming/chapters/07-SIGNIFICANCE.md"
+      ]
+    },
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/og-organism/DESIGN.md": {
       "title": "OG: an organism on the root — design",
       "local_links": [
@@ -2283,6 +2294,16 @@
       "local_links": [
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zc-own-class/COLD-READ.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OwnClass.lean"
+      ]
+    },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zj2-readings-persist/NOTE.md": {
+      "title": "J2: which readings persist (route (b)'s formation piece)",
+      "local_links": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zj2-readings-persist/READER.md",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean",
+        "sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md",
+        "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",
+        "theories/becoming/chapters/07-SIGNIFICANCE.md"
       ]
     },
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/twenty-first-review/X3-SCIENCES-AND-TEXTS-CROSS-MODEL.md": {
@@ -3112,6 +3133,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingSchedule.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Readings.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Readout.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reconfiguration.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
@@ -3405,6 +3427,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingSchedule.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Readings.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Refinement.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean",
@@ -5960,6 +5983,7 @@
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gw-generation-and-widening/NOTE.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/j1-route-b-joined/NOTE.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/j3-condition-in-time/NOTE.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pf-path-and-crux/PHILOSOPHY-ROUND-1.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pf-path-and-crux/PHILOSOPHY-ROUND-2.md",
@@ -5975,16 +5999,19 @@
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue9-comparing-courses/NOTE.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/za-concern-formed/NOTE.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zc-own-class/NOTE.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zj2-readings-persist/NOTE.md",
         "experiments/commons-outrun-generalizing/README.md",
         "experiments/direction-installation/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Boundaries.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionInTime.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FromTheDynamics.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarPath.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OwnClass.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PremiseWitnesses.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PracticalPriorityIdentification.lean",
@@ -5993,6 +6020,8 @@
         "experiments/shaping-what-comes-back/README.md",
         "experiments/valuer-agreement/README.md",
         "sources/15-codex-theory-conversations/2026-10-10-wanting-continuation-one-axiom.md",
+        "sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md",
+        "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",
         "theories/LINEAGE.md",
         "theories/becoming/COLLECTIVE-DIRECTION.md",
         "theories/becoming/ONE-PAGE.md",

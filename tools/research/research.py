@@ -18,6 +18,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 from tools.research import registry, navigation, completion, lean_catalogue, reading_catalogue, style, paths, moves, indexes, session_map, history_notes, rename_ids, theory_graph, atlas, connection_map, spine, lineage, zh_fronts, mirror
 from tools.research import tests_page  # the tests, failures first (RW)
+from tools.research import atlas_index  # the map's index and what does not join (AA, the next phase)
 
 
 @contextmanager
@@ -48,6 +49,7 @@ def input_snapshot():
     paths.update((ROOT / config['goal_directory']).glob('*.json'))
     paths.update(atlas.inputs())
     paths.update(tests_page.inputs())
+    paths.update(atlas_index.inputs())  # the tests table, COVERAGE, the session map's families and the core receipt
     paths.update(zh_fronts.inputs())  # the Chinese landing page's template and the pages it times
     paths.update(mirror.inputs())  # the studies GitHub cannot render, mirrored a section to a page
     paths.update(navigation.render_inputs())  # the chapters RESULTS.md groups by and OPEN-QUESTIONS.md quotes, and the one page RESULTS.md quotes
@@ -397,6 +399,13 @@ def check_or_render(render=False, base=None, ids=None, strict_fresh=False):
         return (ROOT / path).read_text(encoding='utf-8') if (ROOT / path).is_file() else None
     atlas_json = written_or_committed(atlas.DATA, atlas_pages or {})
     graph_json = written_or_committed(theory_graph.GRAPH, outputs)
+    # The map's index (AA, the next phase's step 1): the records, the atlas, the tests, the graph and the core receipt joined
+    # in one SQLite index, and a page counting what does not join (exits with no destination, tests with no record, ...).
+    # Like the connection map, it follows this run's atlas data, so a check that stubs the atlas stubs it too.
+    if atlas_pages and graph_json:
+        joins_pages, joins_errors = atlas_index.render(records, atlas_pages[atlas.DATA], graph_json)
+        outputs.update(joins_pages)
+        errors += joins_errors
     lineage_pages, lineage_errors = lineage.render(
         atlas_json, connection_map.read_against(atlas_json, graph_json) if atlas_json and graph_json else None)
     outputs.update(lineage_pages)

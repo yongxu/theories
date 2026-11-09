@@ -485,6 +485,28 @@ All views are generated from `data/atlas.json` and `atlas-graph.json`. Nothing i
 
 ---
 
+## 13. The next phase: the map's structures (9 November 2026)
+
+*AI-written, 9 November 2026.*
+
+On 9 November 2026 Ren asked how the map could be better visualized, stored, indexed and understood, and how it relates to the world, to our understanding of it, to alignment, even universal alignment, and to wisdom ([his words](../../../../../../sources/15-codex-theory-conversations/2026-11-09-map-structures.md)). Claude Opus 5.5, Claude Fable 5.1 and GPT astra each read a fixed copy of main at `008c950e5` under one brief, none seeing the others, and Opus then wrote a joint reading in Chinese ([the readings](../map-structures/readings/), [the joint reading](../map-structures/readings/04-joint-reading.md)). Asked whether that design goes to the atlas as its next phase, he answered "交给 AA" ("give it to AA"; quoted in MS's row, which the board's history file `_process/history/workboard/BECOMING-WORKBOARD-2026-10-11_to_2026-10-17.md` keeps).
+
+So this plan's next phase is that design. It builds what §3.2 designed and Phase 1 did not build (exits that end somewhere, transitions with their ends, premises, theses and tests, open items) and §8's views, in the joint reading's order (its §7). Each step is claimed on AA's row and lands through the queue on its own:
+
+1. **The index.** `tools/research/atlas_index.py` reads the records, the atlas, the tests table, the theory graph and the declarations the core run lists into one disposable SQLite index, and counts what does not join on a generated page, [JOINS.md](../../../../../../theories/becoming/results/atlas/JOINS.md). Test ids and premise ids are tried on a small batch (LA2, LA4 and IN1; K3's 17 premises) to measure what they would join, with no entry added. No agents.
+2. **The premise ledger and the exit graph, families C and D.** Premises become entries, seeded from K3's 17, 08 §4's premise card and the Lean hypothesis names, with module-qualified ids. Each exit ends at a destination predicate and says what it drops. The terrain of the two families' 38 dynamics is drawn, with the routes out of each capture region and the weakest step of each route.
+3. **The layer that meets the world.** Every test is bound to its records and dynamics. Dynamics gain `touches`, and more `forbids` from the frozen predictions. LA2, LA4 and IN1 get bindings. A failure is hung on the dynamics it bears on (`bears_on`). The coverage matrix is generated.
+4. **Situations and their checker.** Closed capture, the `Clearing` and `Diversion` witnesses and the lake come first, then a reward-model pipeline. The checker computes what lies beyond, where the readers come from, reading in time and mutual dependence.
+5. **The wisdom matrix and Chinese names.** Dynamic × domain pages are generated from the crosswalk, and the 177 dynamics get Chinese names from their records' titles.
+
+Beside these is a Lean item, named in MS's row and not yet claimed: higher-order capture (a selection whose pool changes with its course, or that removes its own readers), and when a selection read off continuation reads before a loss passes its point of no return. These are the two limits 07 §3.5 states.
+
+Step 1 uses no agents. Each later step has its agent count proposed to Ren before it runs (§11, item 1). By the joint reading, none of them makes a paid run or designs a new test, so none is held by his hold of 6 November.
+
+**Step 1 landed** on 10 November 2026, with this section ([what does not join](../../../../../../theories/becoming/results/atlas/JOINS.md)). Measured on the tree it landed on: 22 of 286 exits name a destination and 56 of 177 dynamics have no exit; none of the 66 test rows names a record or a dynamic, and by route 6 tests join records exactly, 26 only through a folder other tests share, 44 join a dynamic through the folder the atlas links, and 14 join nothing; 2,196 of 3,768 crosswalk targets resolve to a record and 693 of 1,183 entries reach a dynamic; 296 of 522 live theorem records are cited by no dynamic. The page counts them again at every render.
+
+---
+
 ## Appendix A. First pass of the dynamics
 
 These come from the readers' reports, unchecked against every home. Phase 1 checked them, and [the atlas](../../../../../../theories/becoming/results/atlas/ATLAS.md) holds the result; this table stays as written, with its errors, some of them named in [the note](phase1/FAMILIES.md). Base key: AT any type, AP any process, W World, C counts, R root, P periphery.

@@ -95,6 +95,7 @@ Hamilton 1975 read the Price equation's among-group share through assortment (re
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json) | — |
 
 Aliases: `groups formed by descent`, `lineages`, `assortment`, `complete assortment`, `由世系形成的组`, `同类聚合`, `Becoming.SelectionLevels.rises_iff_lineages`, `Becoming.GroupEnding.Flow.lineages_not_lower`
 
