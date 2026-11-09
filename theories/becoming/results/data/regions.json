@@ -2701,6 +2701,21 @@
    "base": "old-base",
    "note": "PersistingChoices ZA: a persisting line's choices are consistent with keeping above ending, and with self-concern where only ending was at stake; consistent with, not had (07 §4.9)"
   },
+  "selection-read-off-continuations": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "BeyondCoupling ZB: a selection read off continuations, over the whole run, selects alike two acts agreeing on what couples into the closure; significance as the act's index (07 §3.5)"
+  },
+  "route-b-universal-form-closed": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "BeyondCoupling ZB: route (b)'s universal form in one theorem, its third law per center (07 §3.5)"
+  },
+  "where-the-blindness-lifts": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "BeyondCoupling ZB: what a selection read off a group separates; the loss coupled in; the direction open (07 §3.5)"
+  },
   "what-the-net-fixes-of-ones-own-class": {
    "region": "significance",
    "base": "grammar",
@@ -4662,6 +4677,11 @@
    "region": "significance",
    "base": "old-base",
    "note": "what persisting shows of an order: the condition de se under mutual dependence, survivorship on the World, choices consistent with self-concern on the occasions met (route (b), ZA)"
+  },
+  "Becoming.BeyondCoupling": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "what selection read off continuation cannot reach: blind beyond the coupling closure over the whole run, route (b)'s universal form, where the blindness lifts (route (b), ZB)"
   },
   "Becoming.OwnClass": {
    "region": "significance",

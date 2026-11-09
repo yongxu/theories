@@ -4845,6 +4845,18 @@
    "page": "theories/becoming/results/records/rooms-tested-by-a-window.md"
   },
   {
+   "id": "record:route-b-universal-form-closed",
+   "type": "result",
+   "record": "route-b-universal-form-closed",
+   "title": "Route (b)'s universal form, closed",
+   "title_zh": "路线 (b) 的普遍形式，闭合",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/route-b-universal-form-closed.md"
+  },
+  {
    "id": "record:rules-that-change-themselves-in-the-grammar",
    "type": "result",
    "record": "rules-that-change-themselves-in-the-grammar",
@@ -4927,6 +4939,18 @@
    "region": "life",
    "base": "old-base",
    "page": "theories/becoming/results/records/selection-among-groups-by-ending.md"
+  },
+  {
+   "id": "record:selection-read-off-continuations",
+   "type": "result",
+   "record": "selection-read-off-continuations",
+   "title": "No selection read off a continuation selects beyond the coupling",
+   "title_zh": "读自延续的选择不及耦合之外",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/selection-read-off-continuations.md"
   },
   {
    "id": "record:selection-right-exactly-where-read",
@@ -6667,6 +6691,18 @@
    "region": "map",
    "base": "old-base",
    "page": "theories/becoming/results/records/where-novelty-gain-comes-from.md"
+  },
+  {
+   "id": "record:where-the-blindness-lifts",
+   "type": "result",
+   "record": "where-the-blindness-lifts",
+   "title": "Where selection's blindness beyond the coupling lifts",
+   "title_zh": "选择在耦合外之盲何处解除",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/where-the-blindness-lifts.md"
   },
   {
    "id": "record:where-the-possible-grows",
@@ -11087,6 +11123,17 @@
    "name": "Becoming.PersistingChoices",
    "level": "L2",
    "theorems": 53,
+   "region": "significance",
+   "base": "old-base",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.BeyondCoupling",
+   "type": "module",
+   "name": "Becoming.BeyondCoupling",
+   "level": "L2",
+   "theorems": 27,
    "region": "significance",
    "base": "old-base",
    "on_grammar": true,
@@ -31122,6 +31169,24 @@
    "anchor": "r-whole-and-regions-and-bounded-centers"
   },
   {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-selection-read-off-continuations",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-selection-read-off-continuations"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-route-b-universal-form-closed",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-route-b-universal-form-closed"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-where-the-blindness-lifts",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-where-the-blindness-lifts"
+  },
+  {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-self-concern-and-c-under-the-condition",
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -31919,6 +31984,21 @@
   {
    "from": "module:Becoming.BalanceRegions",
    "to": "module:Becoming.GrammarCrossing",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.BeyondCoupling",
+   "to": "module:Becoming.FlowCenters",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.BeyondCoupling",
+   "to": "module:Becoming.GrammarScope",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.BeyondCoupling",
+   "to": "module:Becoming.SelectionPool",
    "type": "imports"
   },
   {
@@ -53233,6 +53313,56 @@
    "interface": true
   },
   {
+   "from": "record:route-b-universal-form-closed",
+   "to": "module:Becoming.BeyondCoupling",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:route-b-universal-form-closed",
+   "to": "record:derived-extent-limits",
+   "type": "related"
+  },
+  {
+   "from": "record:route-b-universal-form-closed",
+   "to": "record:levels-of-closure",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:route-b-universal-form-closed",
+   "to": "record:selection-read-off-continuations",
+   "type": "related"
+  },
+  {
+   "from": "record:route-b-universal-form-closed",
+   "to": "record:standpoints-read-off-a-flow",
+   "type": "related"
+  },
+  {
+   "from": "record:route-b-universal-form-closed",
+   "to": "record:testing-within-couplings",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:route-b-universal-form-closed",
+   "to": "record:the-continuation-condition-on-the-root",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:route-b-universal-form-closed",
+   "to": "record:what-the-dynamics-leave-open",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:route-b-universal-form-closed",
+   "to": "record:what-the-step-across-standpoints-reaches",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
    "from": "record:rules-that-change-themselves-in-the-grammar",
    "to": "module:Becoming.GrammarRegularity",
    "type": "proved-in"
@@ -53568,6 +53698,54 @@
   {
    "from": "record:selection-among-groups-by-ending",
    "to": "record:what-bounds-offspring-numbers",
+   "type": "related"
+  },
+  {
+   "from": "record:selection-read-off-continuations",
+   "to": "module:Becoming.BeyondCoupling",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:selection-read-off-continuations",
+   "to": "record:covering-by-the-returning-formations",
+   "type": "related"
+  },
+  {
+   "from": "record:selection-read-off-continuations",
+   "to": "record:derived-extent-limits",
+   "type": "related"
+  },
+  {
+   "from": "record:selection-read-off-continuations",
+   "to": "record:raising-what-couples-in-draws-from-beyond",
+   "type": "related"
+  },
+  {
+   "from": "record:selection-read-off-continuations",
+   "to": "record:selection-through-couplings",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:selection-read-off-continuations",
+   "to": "record:testing-within-couplings",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:selection-read-off-continuations",
+   "to": "record:the-gap-for-ones-own-act",
+   "type": "related"
+  },
+  {
+   "from": "record:selection-read-off-continuations",
+   "to": "record:what-pooled-coupling-reaches",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:selection-read-off-continuations",
+   "to": "record:where-the-blindness-lifts",
    "type": "related"
   },
   {
@@ -60322,6 +60500,44 @@
    "type": "related"
   },
   {
+   "from": "record:where-the-blindness-lifts",
+   "to": "module:Becoming.BeyondCoupling",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:where-the-blindness-lifts",
+   "to": "record:loss-read-in-time-by-the-others",
+   "type": "related"
+  },
+  {
+   "from": "record:where-the-blindness-lifts",
+   "to": "record:readers-drawn-from-the-selected",
+   "type": "related"
+  },
+  {
+   "from": "record:where-the-blindness-lifts",
+   "to": "record:route-b-universal-form-closed",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:where-the-blindness-lifts",
+   "to": "record:selection-read-off-continuations",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:where-the-blindness-lifts",
+   "to": "record:shaping-the-rule-selected-by-what-comes-back",
+   "type": "related"
+  },
+  {
+   "from": "record:where-the-blindness-lifts",
+   "to": "record:testing-within-couplings",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
    "from": "record:where-the-possible-grows",
    "to": "module:Becoming.Amounts",
    "type": "proved-in"
@@ -63912,6 +64128,16 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-route-b-universal-form-closed",
+   "to": "record:route-b-universal-form-closed",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-selection-read-off-continuations",
+   "to": "record:selection-read-off-continuations",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-self-concern-and-c-under-the-condition",
    "to": "record:self-concern-and-c-under-the-condition",
    "type": "states"
@@ -64054,6 +64280,11 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-when-no-route-stands-above-a-revision",
    "to": "record:when-no-route-stands-above-a-revision",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-where-the-blindness-lifts",
+   "to": "record:where-the-blindness-lifts",
    "type": "states"
   },
   {

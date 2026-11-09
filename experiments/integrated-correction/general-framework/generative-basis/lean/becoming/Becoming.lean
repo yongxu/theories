@@ -386,6 +386,7 @@ import Becoming.GrammarPath
 import Becoming.RoutesToC
 import Becoming.FlowCenters
 import Becoming.PersistingChoices
+import Becoming.BeyondCoupling
 import Becoming.OwnClass
 import Becoming.SignificanceStatements
 
@@ -4750,6 +4751,28 @@ tagged instance or application.
   crossed choices are consistent with no strict order increasing in its own continuation
   (`PersistingChoices.Crossed.not_selfConcerned`); where a line persists, the web's actual levels are never a
   listed level path (`Flow.persists_not_listsAdmitted`). A leaf; short laws, none new as mathematics.
+* `Becoming.BeyondCoupling` (L2, through `Becoming.GrammarScope` and `Becoming.FlowCenters`): what
+  selection read off continuation cannot reach (board item ZB, one of route (b)'s pieces). A selection
+  read off a group's continuations decides a level history by each member's admission at every step
+  (`Web.ReadOffContinuations`), or by what couples into the members at every step
+  (`Web.ReadOffCouplings`), over the whole run. `act_courses_unselected_pool` read over the whole
+  run (`act_courses_unselected_throughout`): two acts of a part, laws of what has stood, the first
+  reading through its members' coupling, agreeing on what couples into a group's coupling closure,
+  the rest following a law reading through coupling, the courses feasible, are selected alike by
+  every such selection of a pool within the closure, a bound with content only for a pool leaving some
+  returning formation out (`Flow.returning_pool_covers`); where the act reads significance only within
+  that closure (`ActReadsWithin`, a premise) so are two significances agreeing there
+  (`significance_courses_unselected`). Route (b)'s universal form in one theorem
+  (`routeB_universal_closed`): the own-closure significance is the condition exactly where every
+  closure is the whole, not on a relation with no cycle and two distinct centers, and not wherever
+  a center's own closure lies within its coupling closure and something lies beyond that, as along a
+  relation within coupling in or along affecting at a center whose acts return. Where the
+  blindness lifts: histories are selected alike by every selection read off a group's couplings
+  exactly when alike through every member's couplings at every step
+  (`Web.readOffCouplings_alike_iff`, from `Web.selects_alike_all_iff`). Witnesses in `Clearing` and
+  `Diversion`, among them the failed candidate that coupling the dweller in turns the selection
+  against its loss (`Clearing.read_not_direction`). A leaf: it composes laws of modules that nothing
+  below imports together; short laws, none new as mathematics.
 * `Becoming.OwnClass` (L2, through `Becoming.GrammarScope`, `Becoming.Centers`, `Becoming.FlowCenters` and
   `Becoming.Identity`): a center's own class,
   what the net fixes of it (board item ZC, route (b)'s de se piece). At an occurrence that conditions
