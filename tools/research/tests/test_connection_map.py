@@ -2,6 +2,7 @@ import contextlib
 import html
 import io
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -139,6 +140,20 @@ class PageTests(unittest.TestCase):
         self.assertFalse(self.fragment.lstrip().lower().startswith('<!doctype'))
         self.assertNotIn('<html', self.fragment)
         self.assertIn('"base":null', self.fragment)
+
+    @unittest.skipUnless(shutil.which('node'), 'node is not installed')
+    def test_every_script_on_the_page_parses_whole(self):
+        # each inline script is checked as one program, so a quote that closes a string early fails here, not on a reader's page
+        scripts = [m.group(1) for m in re.finditer(r'<script(?![^>]*type="application/json")[^>]*>(.*?)</script>', self.page, re.S)]
+        self.assertTrue(scripts)
+        for script in scripts:
+            with tempfile.NamedTemporaryFile('w', suffix='.js', delete=False) as f:
+                f.write(script)
+            try:
+                run = subprocess.run(['node', '--check', f.name], capture_output=True, text=True)
+            finally:
+                os.unlink(f.name)
+            self.assertEqual(run.returncode, 0, run.stderr[-800:])
 
     def test_it_names_both_readings_where_it_speaks_of_the_ethics(self):
         self.assertIn('the continuation condition for scope and C for order', self.page)
