@@ -5577,6 +5577,18 @@
    "page": "theories/becoming/results/records/the-move-alone-underdetermines.md"
   },
   {
+   "id": "record:the-own-class-read-on-a-flow",
+   "type": "result",
+   "record": "the-own-class-read-on-a-flow",
+   "title": "The own class read on a flow",
+   "title_zh": "于流上读己之类",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/the-own-class-read-on-a-flow.md"
+  },
+  {
    "id": "record:the-present-on-causal-set-growth",
    "type": "result",
    "record": "the-present-on-causal-set-growth",
@@ -6511,6 +6523,18 @@
    "region": "knowing",
    "base": "general",
    "page": "theories/becoming/results/records/what-the-existence-claim-forbids.md"
+  },
+  {
+   "id": "record:what-the-net-fixes-of-ones-own-class",
+   "type": "result",
+   "record": "what-the-net-fixes-of-ones-own-class",
+   "title": "What the net fixes of one's own class",
+   "title_zh": "网于己之类所定者",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/what-the-net-fixes-of-ones-own-class.md"
   },
   {
    "id": "record:what-the-step-across-standpoints-reaches",
@@ -11136,6 +11160,17 @@
    "theorems": 27,
    "region": "significance",
    "base": "old-base",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.OwnClass",
+   "type": "module",
+   "name": "Becoming.OwnClass",
+   "level": "L2",
+   "theorems": 67,
+   "region": "significance",
+   "base": "grammar",
    "on_grammar": true,
    "reaches_grammar": true
   },
@@ -31325,6 +31360,18 @@
    "anchor": "r-what-persisting-shows-of-an-order"
   },
   {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-the-net-fixes-of-ones-own-class",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-what-the-net-fixes-of-ones-own-class"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-own-class-read-on-a-flow",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-the-own-class-read-on-a-flow"
+  },
+  {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-ranking-under-readings",
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -34379,6 +34426,31 @@
   {
    "from": "module:Becoming.OverExchange",
    "to": "module:Becoming.Wholes",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.OwnClass",
+   "to": "module:Becoming.Centers",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.OwnClass",
+   "to": "module:Becoming.FlowCenters",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.OwnClass",
+   "to": "module:Becoming.GrammarPath",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.OwnClass",
+   "to": "module:Becoming.GrammarScope",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.OwnClass",
+   "to": "module:Becoming.Identity",
    "type": "imports"
   },
   {
@@ -56082,6 +56154,26 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:the-own-class-read-on-a-flow",
+   "to": "module:Becoming.OwnClass",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-own-class-read-on-a-flow",
+   "to": "record:constancy-read-at-a-members-class",
+   "type": "related"
+  },
+  {
+   "from": "record:the-own-class-read-on-a-flow",
+   "to": "record:what-the-net-fixes-of-ones-own-class",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-own-class-read-on-a-flow",
+   "to": "record:where-a-formations-acts-return",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:the-present-on-causal-set-growth",
    "to": "module:Becoming.CausalGrowth",
    "type": "proved-in"
@@ -59617,6 +59709,46 @@
   {
    "from": "record:what-the-existence-claim-forbids",
    "to": "record:the-markov-blanket-as-a-coupling-structure",
+   "type": "related"
+  },
+  {
+   "from": "record:what-the-net-fixes-of-ones-own-class",
+   "to": "module:Becoming.OwnClass",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-the-net-fixes-of-ones-own-class",
+   "to": "record:constancy-read-at-a-members-class",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-the-net-fixes-of-ones-own-class",
+   "to": "record:reach-past-ones-own-end",
+   "type": "related"
+  },
+  {
+   "from": "record:what-the-net-fixes-of-ones-own-class",
+   "to": "record:standpoints-read-off-a-flow",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-the-net-fixes-of-ones-own-class",
+   "to": "record:the-class-of-being-joined",
+   "type": "related"
+  },
+  {
+   "from": "record:what-the-net-fixes-of-ones-own-class",
+   "to": "record:the-continuation-condition-on-the-root",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-the-net-fixes-of-ones-own-class",
+   "to": "record:the-own-class-read-on-a-flow",
+   "type": "related"
+  },
+  {
+   "from": "record:what-the-net-fixes-of-ones-own-class",
+   "to": "record:what-a-line-holds-and-a-regularity-takes-in",
    "type": "related"
   },
   {
@@ -64193,6 +64325,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-own-class-read-on-a-flow",
+   "to": "record:the-own-class-read-on-a-flow",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-run-classes-and-widening",
    "to": "record:the-run-classes-and-widening",
    "type": "states"
@@ -64255,6 +64392,11 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-the-dynamics-leave-open",
    "to": "record:what-the-dynamics-leave-open",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-the-net-fixes-of-ones-own-class",
+   "to": "record:what-the-net-fixes-of-ones-own-class",
    "type": "states"
   },
   {

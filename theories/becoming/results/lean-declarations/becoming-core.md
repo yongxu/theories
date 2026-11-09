@@ -11,14 +11,14 @@ On each part, theorems and lemmas are individually listed and definitions and ty
 
 ## Becoming pure core
 
-This group's 376 modules are listed on 6 parts of about equal size, the largest 793,034 bytes, under the size at which GitHub stops showing a Markdown file. Browser find on a part finds the names on that part only; the module table below says which part holds each module.
+This group's 377 modules are listed on 6 parts of about equal size, the largest 795,653 bytes, under the size at which GitHub stops showing a Markdown file. Browser find on a part finds the names on that part only; the module table below says which part holds each module.
 
 | Page | Modules, in the catalogue's order | theorem/lemma occurrences |
 |---|---|---:|
 | [Part 1 of 6](../lean-declarations/becoming-core-part-1.md) | 73, from GenerativeCore.lean to Decidedness.lean | 3,018 |
-| [Part 2 of 6](../lean-declarations/becoming-core-part-2.md) | 65, from Dependence.lean to HistoryIdeals.lean | 3,170 |
-| [Part 3 of 6](../lean-declarations/becoming-core-part-3.md) | 63, from HistoryIdealsTraces.lean to Loops.lean | 3,178 |
-| [Part 4 of 6](../lean-declarations/becoming-core-part-4.md) | 50, from LossMatching.lean to Quantum.lean | 3,131 |
+| [Part 2 of 6](../lean-declarations/becoming-core-part-2.md) | 66, from Dependence.lean to HistoryIdealsTraces.lean | 3,177 |
+| [Part 3 of 6](../lean-declarations/becoming-core-part-3.md) | 62, from HistoryLanguages.lean to Loops.lean | 3,171 |
+| [Part 4 of 6](../lean-declarations/becoming-core-part-4.md) | 51, from LossMatching.lean to Quantum.lean | 3,198 |
 | [Part 5 of 6](../lean-declarations/becoming-core-part-5.md) | 60, from Ranking.lean to SelectionLevels.lean | 3,094 |
 | [Part 6 of 6](../lean-declarations/becoming-core-part-6.md) | 65, from SelectionPace.lean to InquirySufficiency.lean | 2,970 |
 
@@ -162,7 +162,7 @@ This group's 376 modules are listed on 6 parts of about equal size, the largest 
 | <a id="module-8004abb8cade"></a>[HeldPossible.lean](../lean-declarations/becoming-core-part-2.md#module-8004abb8cade) | part 2 | 89 |
 | <a id="module-41f2b00bb90e"></a>[Histories.lean](../lean-declarations/becoming-core-part-2.md#module-41f2b00bb90e) | part 2 | 26 |
 | <a id="module-53b317abd0cf"></a>[HistoryIdeals.lean](../lean-declarations/becoming-core-part-2.md#module-53b317abd0cf) | part 2 | 72 |
-| <a id="module-7efc10e14cbe"></a>[HistoryIdealsTraces.lean](../lean-declarations/becoming-core-part-3.md#module-7efc10e14cbe) | part 3 | 7 |
+| <a id="module-7efc10e14cbe"></a>[HistoryIdealsTraces.lean](../lean-declarations/becoming-core-part-2.md#module-7efc10e14cbe) | part 2 | 7 |
 | <a id="module-9e9246f66d1f"></a>[HistoryLanguages.lean](../lean-declarations/becoming-core-part-3.md#module-9e9246f66d1f) | part 3 | 34 |
 | <a id="module-de8b7fa464e2"></a>[HistorySums.lean](../lean-declarations/becoming-core-part-3.md#module-de8b7fa464e2) | part 3 | 39 |
 | <a id="module-35179900d759"></a>[Horizon.lean](../lean-declarations/becoming-core-part-3.md#module-35179900d759) | part 3 | 32 |
@@ -247,6 +247,7 @@ This group's 376 modules are listed on 6 parts of about equal size, the largest 
 | <a id="module-0116411bbe45"></a>[OptimumSeason.lean](../lean-declarations/becoming-core-part-4.md#module-0116411bbe45) | part 4 | 63 |
 | <a id="module-7412c6ab20ba"></a>[OrderNormal.lean](../lean-declarations/becoming-core-part-4.md#module-7412c6ab20ba) | part 4 | 101 |
 | <a id="module-958bcd7f9971"></a>[OverExchange.lean](../lean-declarations/becoming-core-part-4.md#module-958bcd7f9971) | part 4 | 50 |
+| <a id="module-ba36a94fd1ca"></a>[OwnClass.lean](../lean-declarations/becoming-core-part-4.md#module-ba36a94fd1ca) | part 4 | 67 |
 | <a id="module-4cd46e389136"></a>[OwnWidening.lean](../lean-declarations/becoming-core-part-4.md#module-4cd46e389136) | part 4 | 15 |
 | <a id="module-f1acf0f3e260"></a>[Pace.lean](../lean-declarations/becoming-core-part-4.md#module-f1acf0f3e260) | part 4 | 34 |
 | <a id="module-ec4710e5e96b"></a>[PairChance.lean](../lean-declarations/becoming-core-part-4.md#module-ec4710e5e96b) | part 4 | 28 |

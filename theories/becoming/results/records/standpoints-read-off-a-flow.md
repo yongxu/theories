@@ -80,7 +80,7 @@ In graph terms a formation's acts return exactly where its strongly connected co
 - related, not a proved adapter: [covering-by-the-returning-formations](covering-by-the-returning-formations.md). Covering by the returning formations on finite flows, and the condition along being affected at them.
 - related, not a proved adapter: [derived-extent-limits](derived-extent-limits.md). Clearing.center_not_derived: along dependence the center is not derived from the dynamics; here the standpoints are read off the flow, as a reading.
 
-**Used by:** [covering-by-the-returning-formations](covering-by-the-returning-formations.md)
+**Used by:** [covering-by-the-returning-formations](covering-by-the-returning-formations.md) · [what-the-net-fixes-of-ones-own-class](what-the-net-fixes-of-ones-own-class.md)
 
 <a id="sources--来源"></a>
 ### Sources

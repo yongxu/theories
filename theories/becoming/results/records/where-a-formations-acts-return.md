@@ -61,7 +61,7 @@ The strongly connected components of a directed graph and the sink components of
 - related, not a proved adapter: [whole-and-regions-and-bounded-centers](whole-and-regions-and-bounded-centers.md). Answers its Next, a model of how a center forms and represents its boundary, for the region acted on and the region represented.
 - related, not a proved adapter: [the-gap-for-ones-own-act](the-gap-for-ones-own-act.md). Where acts do not return, some formation acted on can never affect the actor: that gap, at that formation.
 
-**Used by:** [covering-by-the-returning-formations](covering-by-the-returning-formations.md) · [standpoints-read-off-a-flow](standpoints-read-off-a-flow.md)
+**Used by:** [covering-by-the-returning-formations](covering-by-the-returning-formations.md) · [standpoints-read-off-a-flow](standpoints-read-off-a-flow.md) · [the-own-class-read-on-a-flow](the-own-class-read-on-a-flow.md)
 
 <a id="sources--来源"></a>
 ### Sources
