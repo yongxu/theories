@@ -3,13 +3,14 @@ import Becoming.FlowCenters
 import Becoming.GrammarScope
 
 /-!
-# BeyondCoupling: what concern formed by continuation cannot reach
+# BeyondCoupling: what selection read off continuation cannot reach
 
 On 9 November 2026 Ren asked how far the zero-axiom target is ("这个还差多远？我一直以为这个是主要目标"),
 and, after the AI's answer on route (b), ethics forming within the dynamics, wrote "ok - 这一类请平行化认真完成，
 非常重要" (kept in `sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md`). This
-module is one of route (b)'s four pieces: it states once, on the flow, what concern formed by
-continuation and selection cannot reach. It adds no premise beyond what each law names. A
+module is one of route (b)'s four pieces: it states once, on the flow, what a selection read off
+continuation cannot reach. It shows no concern forming: persisting is a filter (07 §4.9), and
+what is read here is only what such a selection can tell apart. It adds no premise beyond what each law names. A
 significance enters only as the index of an act, or as the own-closure content read de se with its
 relation and centers supplied. No ranking or axiom enters.
 
@@ -64,16 +65,16 @@ relation and centers supplied. No ranking or axiom enters.
   `«续无外则同一中心»`); the relation's lack of a cycle is supplied, and aggregated over time
   affecting need not lack one. And wherever a center's own closure lies within its coupling
   closure, what lies beyond the coupling closure has no significance from it, a rival
-  (`Flow.ownClosure_rival_of_within`). Two cases: along every relation that returns to the center,
+  (`Flow.ownClosure_rival_of_within`). Two cases: along every relation within coupling in, that is
   within being affected through what couples in (whatever is related to a formation exchanges with
-  a condition coupled into it; `Flow.returning_ownClosure_rival`), and along affecting at a center
+  a condition coupled into it; `Flow.couplingIn_ownClosure_rival`), and along affecting at a center
   whose acts return (`Flow.reachReturns_ownClosure_rival`, from `Flow.ReachReturns.represented`),
   the standpoints a flow gives. The three laws together are `routeB_universal_closed`. In
   `Clearing` the dweller exchanges with nothing, so in the clearing flow it lies beyond the
   clearer's coupling closure whatever couples in by level (`Clearing.dweller_beyond_every_coupling`).
-  So along every returning relation the clearer's own closure leaves it out and the condition
-  fails, while along affecting the clearer's own closure holds it; so affecting does not return to
-  the clearer (`Clearing.returning_leaves_dweller`).
+  So along every relation within coupling in the clearer's own closure leaves it out and the
+  condition fails, while along affecting the clearer's own closure holds it, so along affecting the
+  clearer's own closure is not within its coupling closure (`Clearing.couplingIn_leaves_dweller`).
 * **Where the blindness lifts.** Two histories are selected alike by every selection read off a
   group's continuations exactly when they admit every member alike at every step
   (`Web.readOffContinuations_alike_iff`). They are selected alike by every selection read off its
@@ -100,7 +101,7 @@ relation and centers supplied. No ranking or axiom enters.
   "coupling the dweller in turns the joint selection against its loss" fails and is kept.
 
 **Readings (the AI's, 9 November 2026, not yet read by Ren).**
-- Concern formed by continuation and selection reaches at most what comes back through couplings:
+- A selection read off continuation reaches at most what comes back through couplings:
   a bound, not a claim that every distinction available is used. Take two
   courses whose acts agree on what couples into the centers' pooled coupling closure, under the
   premises above. No selection read off the centers' continuations, pooled or one by one, holds at
@@ -374,11 +375,11 @@ theorem Flow.ownClosure_rival_of_within {L : Flow F C} {W : Web F C} {obs : F �
   ⟨lacks, fun unrestricted => lacks 0 (unrestricted (p, 0, h)),
    rival_iff_lacks.mpr ⟨p, 0, h, lacks 0⟩⟩
 
-/-- **Along a relation that returns to the center.** Along every relation under which whatever is
-related to a formation exchanges with a condition coupled into it, the own closure lies within the
+/-- **Along a relation within coupling in.** Along every relation under which whatever is related
+to a formation exchanges with a condition coupled into it, the own closure lies within the
 coupling closure (`WithinClosure.mono`), so what lies beyond a center's coupling closure has no
 significance from its standpoint, and the significance is a rival. -/
-theorem Flow.returning_ownClosure_rival {L : Flow F C} {W : Web F C} {obs : F → C → Prop}
+theorem Flow.couplingIn_ownClosure_rival {L : Flow F C} {W : Web F C} {obs : F → C → Prop}
     {rel : F → F → Prop} (returns : ∀ g h, rel g h → L.CoupledFrom W obs g h)
     {center : Pos → F} {p : Pos} {h : F} (beyond : ¬ L.WithinCoupling W obs (center p) h) :
     (∀ t, ¬ selfAscribed (ownClosure rel) center p t h) ∧
@@ -435,12 +436,12 @@ theorem dweller_beyond_every_coupling (obs : Formation → Place → Prop) :
       | .dweller, .inr gives => absurd gives (Nat.lt_irrefl 0))
     (fun same => Formation.noConfusion same)) rfl
 
-/-- **Every relation that returns to the clearer leaves the dweller out.** Along every relation
-that returns to the clearer, within being affected through what couples in under the clearing
-flow, for every coupling by level, the clearer's own closure gives the dweller no significance from
+/-- **Every relation within coupling in leaves the dweller out.** Along every relation within
+being affected through what couples in under the clearing flow, for every coupling by level, the clearer's own closure gives the dweller no significance from
 a standpoint centred on the clearer, at any step, and the condition fails. Along affecting the
-clearer's own closure holds the dweller, so affecting does not return to the clearer. -/
-theorem returning_leaves_dweller {Pos : Type} {center : Pos → Formation} {p : Pos}
+clearer's own closure holds the dweller, so along affecting the clearer's own closure is not
+within its coupling closure. -/
+theorem couplingIn_leaves_dweller {Pos : Type} {center : Pos → Formation} {p : Pos}
     (clearerAt : center p = .clearer) (obs : Formation → Place → Prop)
     {rel : Formation → Formation → Prop} (returns : ∀ g h, rel g h → flow.CoupledFrom web obs g h) :
     (∀ t, ¬ selfAscribed (ownClosure rel) center p t .dweller) ∧
@@ -448,8 +449,8 @@ theorem returning_leaves_dweller {Pos : Type} {center : Pos → Formation} {p : 
       selfAscribed (ownClosure (flow.Affects web)) center p 0 .dweller :=
   have beyond : ¬ flow.WithinCoupling web obs (center p) .dweller :=
     fun within => dweller_beyond_every_coupling obs (clearerAt ▸ within)
-  ⟨(Flow.returning_ownClosure_rival returns beyond).1,
-   (Flow.returning_ownClosure_rival returns beyond).2.1,
+  ⟨(Flow.couplingIn_ownClosure_rival returns beyond).1,
+   (Flow.couplingIn_ownClosure_rival returns beyond).2.1,
    show WithinClosure (flow.Affects web) (center p) .dweller from clearerAt ▸ reach_middle.1⟩
 
 /-- The two conducts of the clearer: sparing the habitat (`true`) and clearing it (`false`), read

@@ -340,7 +340,7 @@ SCOPE = (
     "reach decided every formation lies within the influence closure of a returning one, so the step along being affected at them gives the "
     "condition, and held de se along being affected the condition is their lying in one loop. Witnesses part the returning formations from a "
     "supplied center, the relations from one another, and self-bearing standpoints from returning ones. "
-    "BeyondCoupling: what concern formed by continuation cannot reach. A selection read off a group's continuations "
+    "BeyondCoupling: what selection read off continuation cannot reach. A selection read off a group's continuations "
     "decides a level history by each member's admission at every step, or by what couples into the members at every "
     "step, over the whole run; two acts of a part, laws of what has stood, the first reading through its members' "
     "coupling, agreeing on what couples into a group's coupling closure, the rest following a law reading through "
