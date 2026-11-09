@@ -1,0 +1,591 @@
+[
+ {
+  "key": "connections",
+  "findings": [
+   {
+    "where": "theories/becoming/results/atlas/CROSSWALK.md:31 (the caption under the picture), written by tools/research/atlas.py crosswalk_page",
+    "text": "each thread joins a folder or domain to the part of the account its claims are read against, coloured by relation, and every thread is an AI reading, no person’s",
+    "severity": "medium",
+    "why": "The picture the caption sits under is now a matrix. Its own lede says \"A row is an earlier folder or a domain of thought, a column the part of the account its claims are read against; read a row across\", and its AI line says \"Every dot is an AI reading\". Nothing in it joins anything, so a reader who looks for threads will not find them. The svg's <desc> has the same problem, because it reuses _ledes: \"Every thread is an AI reading ... A thread is not proof\".",
+    "fix": "In atlas.py's caption, write: \"each dot sits in a folder's or domain's row and the column of the part of the account its claims are read against, coloured by relation, and every dot is an AI reading, no person’s\". Change 'thread' to 'dot' in the svg desc, which means passing pointer text or a word into _ledes for the picture."
+   },
+   {
+    "where": "connections.svg key, line \"filled: the account states the connection\" (connection_map.py OV_TEXT stated_key / stated; overview_threads fresh = carried == 'fresh-reading'). The same wording is in CROSSWALK.md \"Start here\" lead: \"that the account states\"",
+    "text": "filled: the account states the connection",
+    "severity": "medium",
+    "why": "The picture's own lede, from _ledes, splits these: \"It states 491 in whole or in part and takes up 189 to say otherwise. 376 it does not state\". The filled dots cover all 680 non-fresh claims, so the key folds the 189 the account 'takes up to say otherwise' into 'states'. That says more than the lede. The first Start-here row (間 and 文言 → 06, divergence, 24) is 22 'changed' and 2 'in part', yet the lead introduces it as a thread 'the account states'.",
+    "fix": "Key: \"filled: the account takes it up (states it, or says otherwise)\". Start-here lead: \"... that the account takes up (none proposed here) ...\". Change the dot tooltip's 'the account states the connection' the same way."
+   },
+   {
+    "where": "CROSSWALK.md Start here table (connection_map.start_here, rows=5, tie-break by group id)",
+    "text": "| [Wamotopia and the Wamo Protocol](...) | [05 Joint activity and selection](...) | scope | 14 |",
+    "severity": "medium",
+    "why": "The lead promises \"The thickest threads in the picture below that the account states\". Measured over overview_threads, three non-fresh threads tie at 14: Alignment → 05 scope, Wamotopia → 05 scope, and 智善: intelligence must be good → 07 divergence. The cut at five rows keeps two of them and drops 智善 → 07 only because its id sorts last, so a reader is shown an arbitrary part of a tie as if it were the top five.",
+    "fix": "In start_here, keep every thread whose n equals the last row's n (six rows here). Alternatively, say \"five of the thickest\" and name the tie."
+   },
+   {
+    "where": "map page on the site (connection_map.site_bar + CSS header.top sticky; existing #detail rule at connection_map.py:746)",
+    "text": "header.top{position:sticky;top:0;z-index:2;...}  with  #detail{position:sticky;top:12px;...}",
+    "severity": "medium",
+    "why": "Measured in a browser at 1400×900 on a page built with site_map(..., search='assets/search.js') into the scratchpad: after scrolling, #detail sticks at top 12 px while the header's bottom is at 40 px with z-index 2. The detail panel's heading \"What a thread says\" sits under the header, and readers at widths of 1240 px and up lose the top of the panel they are reading.",
+    "fix": "Inside the min-width:1240px block, set #detail's top to calc(header height + 12px), e.g. top:52px, and max-height to calc(100vh - 64px). Or give the header a CSS variable for its height and use that."
+   },
+   {
+    "where": "connections.zh.svg footer (OV_TEXT['zh'] notes, last line)",
+    "text": "同样的数据可在连接图中探索：读者网站上的“连接”页",
+    "severity": "medium",
+    "why": "The site's Chinese nav (research-config site.nav_zh) has no entry called 连接, and the only nav label for connections.html is the English nav's \"Connections\". A Chinese reader looking for a “连接” page will not find it.",
+    "fix": "Write 读者网站上的“Connections”（连接图）页 (connections.html). Or add a 连接图 entry to nav_zh, though that is Q3 item 7's work."
+   },
+   {
+    "where": "map page site header vs build_site.py template (nav() at build_site.py:890-907)",
+    "text": "<a href=\"README.zh.html\">中文</a></nav>",
+    "severity": "low",
+    "why": "On every other page, the site puts the language link outside the scrolling nav as <a class=\"lang\" hreflang=\"zh-Hans\" lang=\"zh-Hans\">, so that, as nav()'s docstring says, \"it shows at every width\". site_bar puts 中文 inside the nav, where it scrolls out of view at phone widths and carries no lang attribute. The nav's aria-label is also \"Site\" where the site uses SAY_EN['pages'] (\"Pages\"), and the brand text is hard-coded where the site uses cfg title.",
+    "fix": "In build_site, pass the language entry separately, or have site_bar render labels in build_site.LANGUAGE_LINKS after </nav> with class=\"lang\", hreflang and lang. Use aria-label=\"Pages\" and pass the site title in as home's label."
+   },
+   {
+    "where": "connections.svg footer, last note line (OV_TEXT['en'] notes)",
+    "text": "the connection map, on the reader’s site its Connections page, from a clone map.html in this folder (GitHub shows it only as source).",
+    "severity": "low",
+    "why": "An 'or' is missing between the two places, so the line reads as one run-on phrase. The CROSSWALK line has it (\"on the reader’s site its Connections page, or [map.html](map.html) opened from a clone\"), and so does the Chinese (“或在克隆中打开”).",
+    "fix": "Write: \"the connection map: on the reader’s site its Connections page, or from a clone map.html in this folder (GitHub shows it only as source).\""
+   },
+   {
+    "where": "connections.svg dot tooltips (OV_TEXT 'dot' format)",
+    "text": "<title>1 claims, Scope, read against 07 Significance, ethics, alignment; the account states the connection</title>",
+    "severity": "low",
+    "why": "\"1 claims\" is ungrammatical, and the relation word is capitalised mid-sentence. The key already uses size_one for n = 1.",
+    "fix": "Use size_one/size for the count in 'dot', and lower-case the relation word in the tooltip."
+   },
+   {
+    "where": "CROSSWALK.md Start here table, first row's 'Read against' cell (start_here uses w['title'])",
+    "text": "[06 古文：读出、检验与分歧](../../chapters/06-CLASSICAL-TEXTS.md)",
+    "severity": "low",
+    "why": "CROSSWALK.md is an English document. The picture right below names this column \"06 The classical texts (in Chinese)\" (OV_WARP), so the table and the picture name the same part differently.",
+    "fix": "In start_here, use OV_WARP.get(w['id'], w['title']) for the link text."
+   },
+   {
+    "where": "connections.svg cells (slot spacing in overview_svg)",
+    "text": "slot = ... min(7.5, (col - 4) / max(1, len(relations)))  with r = min(3.6, 1.0 + 0.55 * n ** 0.5)",
+    "severity": "low",
+    "why": "With 15 columns, col is 28 px and the slots are 6 px apart, but a dot's diameter goes up to 7.2 px. Adjacent large dots touch or overlap, for example in the 間 and 文言 row under 06. Dots for 1, 5 and 20 claims have radii 1.55, 2.23 and 3.46, so 1 against 5 is hard to tell apart at 900 px. Rows and columns themselves can be followed, and the dots match the data: 692 circles, one per overview_threads entry, 296 rings, and both svgs identical to a fresh overview_svg.",
+    "fix": "Cap r at about 2.9 (just under half the slot), or widen the slot to col/4 with col about 30."
+   }
+  ],
+  "read": "Read in full:\n- git diff 21649c5d8 3c8b5e08f for tools/research/connection_map.py, tools/publishing/build_site.py, tools/research/atlas.py, CROSSWALK.md, map.html, test_connection_map.py and test_site.py.\n- CROSSWALK.md lines 16-31.\n- build_site.py's page template (lines 835-865), nav() (870-910), SEARCH_JS (1167-1290) and the map build block (1405-1430).\n- connection_map.py's payload and overview_threads.\n- research-config.json: the site nav, nav_zh and the map.html rewrite.\n- Synthesis sections Q2 item 5, Q3 and the lists.\n\nSearched only:\n- site.css, for header.top and button.find.\n- connection_map.py's CSS, for sticky, header, button and [hidden].\n\nLooked at and measured:\n- connections.svg and connections.zh.svg, screenshotted at 900×1363 and 900×1278, plus a 2× crop.\n- Recomputed payload and overview_threads from atlas.json and theory-graph.json with python3 -B. Both svgs equal a fresh overview_svg. 692 dots match 692 threads, 296 of them rings.\n- Legend: 337 / 370 / 325 / 24 = 1,056. CROSSWALK gives 1,059 less the 3 history-only entries with a relation (agreement, scope, contrary-reading). The svg note says the same.\n- Column counts: they sum to 1,724, each column equal to its thread sum.\n- Start-here: its links all resolve; the 14-claim tie is listed in finding 3.\n- All font sizes are 12 px or more.\n\nBuilt and clicked:\n- Built a map page with site_map(..., search='assets/search.js') in the scratchpad and served it locally.\n- The Search button unhides and opens the panel, and finds a hit from search.json.\n- The sticky #detail goes under the sticky header at 1400 px.\n\nTests: python3 -B -m unittest test_connection_map test_site passed (120 tests, 1 skipped). I did not run test_spine, test_lineage or test_atlas, and the full suite was not run. Nothing in the repository was edited and no render was run.",
+  "verdicts": [
+   {
+    "where": "theories/becoming/results/atlas/CROSSWALK.md:31 caption (atlas.py crosswalk_page) and the svg <desc> via _ledes",
+    "agree": true,
+    "severity": "medium",
+    "why": "This holds. The picture is a matrix, and its own lines say \"A row is an earlier folder or a domain of thought, a column the part of the account ... read a row across\" and \"Every dot is an AI reading\". The caption still says \"each thread joins a folder or domain to the part of the account\", and the desc still says \"Every thread is an AI reading ... A thread is not proof\". The reader missed one more place: the new Start-here lead also says \"The thickest threads in the picture below\", and the picture has no threads, only dots in cells. That lead should say \"cells\" or \"dots\" as well. What I read in full: the diffs 21649c5d8..3c8b5e08f of CROSSWALK.md, map.html, build_site.py, atlas.py, connection_map.py, test_connection_map.py and test_site.py; CROSSWALK.md lines 1-35; build_site.py's nav(), page template and SEARCH_JS; site.css's header rules; the synthesis's Q2-Q4; both svgs, screenshotted at 900 px. I also measured overview_threads, start_here, the totals, and a fresh overview_svg against both svgs; both are identical to it."
+   },
+   {
+    "where": "connections.svg key \"filled: the account states the connection\"; Start-here lead \"that the account states\"",
+    "agree": true,
+    "severity": "medium",
+    "why": "Measured: the 間 and 文言 → 06 divergence 24 is changed 22 + carried-in-part 2. 智善 → 07 is changed 10 + in-part 4. Wamotopia → 05 scope 14 is in-part 10 + changed 4, with its 7 fresh claims left out. The same picture's lede (from _ledes) reserves \"states\" for carried and in-part: \"It states 491 in whole or in part and takes up 189 to say otherwise\". The map's OUT_LONG for changed says \"It takes up the topic and says something else, or withdrew the claim.\" The key and the lead are therefore wider than the lede above them. Medium is right: a reader may take the 24 as claims the account states."
+   },
+   {
+    "where": "CROSSWALK.md Start here table, cut at five rows",
+    "agree": true,
+    "severity": "low",
+    "why": "Real. Measured non-fresh threads: Alignment → 05 scope 14, Wamotopia → 05 scope 14, and 智善 → 07 divergence 14. The cut keeps the first two by group id. But the lead promises no count and says nothing false: every row shown is among the thickest. Leaving out one equal at the edge is a precision matter, not something that misleads a reader, so the severity should be low rather than medium. The fix stands: keep the ties, or say \"five of the thickest\"."
+   },
+   {
+    "where": "map page on the site: header.top sticky (z-index 2) over #detail sticky top:12px at ≥1240 px",
+    "agree": true,
+    "severity": "medium",
+    "why": "Confirmed from the CSS. header.top is sticky at top 0 with z-index 2 and about 37-40 px tall. Line 746 sets #detail{position:sticky;top:12px} with no z-index, so the panel's first ~28 px, its heading, sit under the header whenever the page is scrolled. The panel's inner scroll cannot uncover them. The same defect also hits phones; see the missed finding on the missing phone rule and scrollIntoView."
+   },
+   {
+    "where": "connections.zh.svg footer \"读者网站上的“连接”页\"",
+    "agree": true,
+    "severity": "medium",
+    "why": "Confirmed. nav_zh has no 连接 or 连接图 entry. The only Chinese way to the map on the site is the rewrite under CROSSWALK.zh's title, \"[连接图（英文）](map.html)\". The English nav calls it \"Connections\". A Chinese reader looking for a “连接” page will not find one. The site is also not yet reachable; see the missed finding."
+   },
+   {
+    "where": "connection_map.site_bar vs build_site nav(): 中文 inside nav, aria-label \"Site\", brand hard-coded",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed. nav() puts the LANGUAGE_LINKS entry after </nav> as <a class=\"lang\" hreflang lang>, and its docstring says \"so that it shows at every width\". map_nav passes 中文 through as an ordinary nav item. The aria-label is \"Site\", where nav() uses SAY_EN['pages']. The brand matches cfg title today (\"The Theory of Becoming\") but is hard-coded."
+   },
+   {
+    "where": "connections.svg footer \"the connection map, on the reader’s site its Connections page, from a clone map.html in this folder\"",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed in the screenshot. The 'or' is missing, while the CROSSWALK line and the Chinese line both have it. The line has a wider problem, though: it names a site that is not published (see the missed finding)."
+   },
+   {
+    "where": "connections.svg dot tooltips (OV_TEXT 'dot')",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed. 'dot' is '{n} claims, {relation}, ...', with no size_one for n = 1. _rel_word returns OV_WORD's capitalised 'Scope', 'Agreement' and so on, which then appear mid-sentence."
+   },
+   {
+    "where": "CROSSWALK.md Start here first row 'Read against' cell",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed. start_here uses w['title'], \"06 古文：读出、检验与分歧\", while the picture just below names the column \"06 The classical texts (in Chinese)\" from OV_WARP. The link target is correct."
+   },
+   {
+    "where": "connections.svg cell slots vs dot radius",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed. col = min(33, 420/15) = 28, and the slot step is min(7.5, 24/4) = 6 px. A dot's radius can reach 3.6, a 7.2 px diameter, so adjacent large dots touch or overlap; the 間 row under 06 shows this. The size key's 1, 5 and 20 give radii 1.55, 2.23 and 3.46, which are hard to tell apart. Rows and columns can still be followed, and the dots match the data: 692 circles, 296 of them rings."
+   }
+  ],
+  "missed": [
+   {
+    "where": "CROSSWALK.md:31 (atlas.py crosswalk_page), connections.svg footer (OV_TEXT['en'] notes) and connections.zh.svg footer (OV_TEXT['zh'] notes)",
+    "text": "To explore the same data, open the connection map: on the reader’s site its Connections page, or [map.html](map.html) opened from a clone",
+    "severity": "medium",
+    "why": "The site is not reachable. The re-score this change answers says so: Q2 item 4 \"No one can reach the site. This holds, and the next step is Ren's\", and its fix for the map line is \"after the first deploy, add a site link ... to CROSSWALK's map line\". research-config's site note also says \"enabling Pages is Ren's\". No front gives a site address; a grep for github.io and \"reader's site\" in README, MAP and CROSSWALK finds none. The old line said \"once it is published\". The new one drops that and points readers to a \"Connections page\" on a site they cannot find. The English and Chinese svg footers say the same.",
+    "fix": "Keep the qualifier until the first deploy: \"on the reader’s site, once it is published, its Connections page; or map.html opened from a clone\". Do the same in the svg footers (zh: “读者网站发布后其上的 Connections（连接图）页”), and drop it only when a site link lands."
+   },
+   {
+    "where": "connection_map.py CSS (header.top sticky with no phone rule; no scroll-margin) together with the map script's route(): detail.scrollIntoView({block:'start'}) when width < 1240",
+    "text": "header.top{position:sticky;top:0;z-index:2;...}  …  if(a&&window.innerWidth<1240)detail.scrollIntoView({block:'start',behavior:'smooth'})",
+    "severity": "medium",
+    "why": "The site's own header is deliberately not sticky on phones. site.css @media (max-width:600px) says \"the whole line, wrapped, and not held on screen, where it would take a phone's reading height\": header.top{position:static;flex-wrap:wrap}, with [id]{scroll-margin-top} set (3.5rem wide, .6rem narrow) and div.find-panel{top:.6rem}. The map's copy of the header has none of these rules. On the map page at any width below 1240 px, tapping a folder, domain or thread scrolls the detail panel to the top of the viewport, where its heading lands under the sticky header. On a phone, every tap hides the heading of what was just chosen. The reader's finding covered only the ≥1240 px sticky case.",
+    "fix": "Copy the site's phone rule into the map CSS (@media (max-width:600px){header.top{position:static;flex-wrap:wrap}header.top nav{order:3;flex-basis:100%;flex-wrap:wrap;white-space:normal;overflow:visible}div.find-panel{top:.6rem}}). Give #detail a scroll-margin-top of the header's height plus a little, e.g. 52px, and the same offset for its sticky top at ≥1240 px."
+   }
+  ]
+ },
+ {
+  "key": "spine",
+  "findings": [
+   {
+    "where": "README.md:23, _process/navigation/README-FIRST-SCREEN.md:16, README.zh.md:29, _process/navigation/README-ZH.md:27 (alt text of spine.svg / spine.zh.svg)",
+    "text": "![The eight chapters around one grammar](theories/becoming/results/spine.svg)  /  ![围绕一个文法的八章](theories/becoming/results/spine.zh.svg)",
+    "severity": "low",
+    "why": "Q3 item 4, which this change answers, asks for \"the SVG's own title as the alt text (\"The eight chapters and their recorded uses of one another\")\" because the README alt \"repeats the hub framing\". The SVG's <title> is \"The eight chapters and their recorded uses of one another\", and ONE-PAGE/THE-THEORY-OF-BECOMING/THEORY-GRAPH already use it. Only the README alt text was left unchanged, so the first screen still describes the picture as a hub.",
+    "fix": "In README-FIRST-SCREEN.md and README-ZH.md, the sources README.md and README.zh.md come from, set the alt text to \"The eight chapters and their recorded uses of one another\" and \"八章及其彼此记录下的使用\". Then regenerate the READMEs."
+   },
+   {
+    "where": "theories/becoming/results/THEORY-GRAPH.md:112 (and THEORY-GRAPH.zh.md, same lead), from spine.py section()",
+    "text": "\"First, one table per kind among the eight chapters: a row is the chapter whose results use, a column the chapter whose results are used, the diagonal within a chapter, and a dot none.\"",
+    "severity": "low",
+    "why": "The same sentence also covers the fourth table, **related**, whose own header says \"(analogy, not a dependence)\". The section's lead calls `related` \"its `related` list (analogy, not a dependence)\". So for that table, \"whose results use\" / \"are used\" describes a use the home says it is not. \"whose results use\" also has no object.",
+    "fix": "\"...a row is the chapter whose results use (for related, list) the column's, a column the chapter whose results are used (listed)...\"; and the same in the Chinese (行是使用（related：列出）者结果所在的章...)."
+   },
+   {
+    "where": "theories/becoming/results/THEORY-GRAPH.md:104, \"What it shows\" paragraph (THEORY-GRAPH.zh.md: 下表列出每一个配对)",
+    "text": "\"The table below has every pair.\" ... \"Results in To retire (33 edges touch them) are in the table only.\"",
+    "severity": "low",
+    "why": "\"Edge kinds between chapters\" now has five tables below this paragraph. The first four are 8 by 8 and leave out To retire. Only the fifth, the list (\"Then every pair, the regions beyond the eight chapters included\"), has every pair and To retire, so \"the table below\" no longer names one table.",
+    "fix": "\"The list of every pair under 'Edge kinds between chapters' has them all\" and \"...are in that list only\". In Chinese: “各章之间边的种类”末尾的配对列表."
+   },
+   {
+    "where": "theories/becoming/results/THEORY-GRAPH.md:178 (and THEORY-GRAPH.zh.md 再是每一对区域，八章以外的区域也在内)",
+    "text": "\"Then every pair, the regions beyond the eight chapters included:\"",
+    "severity": "low",
+    "why": "The list's regions are the eight chapters and To retire, so only one region is beyond the eight. The plural suggests more than the list holds.",
+    "fix": "\"Then every pair, To retire included:\" (Chinese: 再是每一对区域，「待退役」也在内：). Or generate the names of the regions outside the eight."
+   },
+   {
+    "where": "theories/becoming/results/spine.svg:215 (legend spoke sample) and the spokes at lines 61-68; spine.py SPOKE_MAX",
+    "text": "legend sample `stroke-opacity=\"0.45\" stroke-width=\"4\"`; drawn spokes 1.6 to 3.4 wide at opacity 0.45 (width = 1 + 6 × share)",
+    "severity": "low",
+    "why": "The legend says \"Spoke: its width is the share of the chapter's core modules that state their laws on the grammar\", and the captions say \"a spoke's width gives the share\". The legend sample is 4 wide, wider than every spoke drawn (the widest, 06 at 4 of 10, is 3.4). The affine scale also compresses the shares: 05 (3 of 28) is drawn 1.6 and 06 (4 of 10) 3.4, a width ratio of 2.1 for a share ratio of 3.7. At 45% opacity the order of widths can still be seen, which is what the words claim, but only faintly. The counts beside each chapter carry the numbers.",
+    "fix": "Draw the legend sample at a width a spoke actually takes, for example 1 + 6 × 0.4 = 3.4 labelled with its share. Or say \"wider for a larger share\" in the legend and captions."
+   },
+   {
+    "where": "tools/research/tests/test_spine.py:337-345",
+    "text": "matrix = sum(int(c) for l in cells ...); listed = sum(...); self.assertEqual(matrix, listed, kind)",
+    "severity": "low",
+    "why": "The new test compares each kind's matrix total with the list's total among the eight chapters. A transposed matrix, or cells moved within it, would pass, although the lead says \"a row is the chapter whose results use, a column the chapter whose results are used\". I checked every cell of all four tables against the list (and the Chinese against the English) and found 0 mismatches. The test does not keep it that way. No test guards the 13 px minimum in spine.svg/standings.svg either.",
+    "fix": "Compare cell by cell: for each kind, row a and column b, assert the cell equals the list row (name a, name b)[kind], with '·' as 0. Add an assertion that every font-size in the four SVGs is ≥ 13."
+   },
+   {
+    "where": "theories/becoming/results/spine.svg, curve label \"17\" (02 → 03), not changed by this diff",
+    "text": "the label \"17\" on the dark 02→03 curve",
+    "severity": "low",
+    "why": "In a headless-Chrome render at 900×1859, the curve and arrow pass through the label between the \"1\" and the \"7\". It is still readable. The spokes and text changes in this diff did not cause it, and nothing they changed now overlaps or is cut: every text in spine.svg, spine.zh.svg, standings.svg and standings.zh.svg is ≥ 13 px (131, 126, 48 and 39 texts), the 13 px footers fit inside the 900 width, and standings.svg grew to 1106 to hold its rewrapped notes.",
+    "fix": "Optional: move the label further along its curve (spine.py's LEAD rule), or give it the paper halo the chapter labels use."
+   }
+  ],
+  "read": "Read in full: the Q3 section of /Users/ren/tmp/rw/drafts/rescore5-synthesis.md (items 1 to 7), plus lines 5, 15-16, 35-37 and 141-159 found by searching it; git diff 21649c5d8..3c8b5e08f --stat; the diffs of tools/research/spine.py, theories/becoming/results/spine.svg, standings.svg, README.zh.md and tools/research/tests/test_spine.py; THEORY-GRAPH.md's section \"Edge kinds between chapters\" (lines 108-245); THEORY-GRAPH.zh.md lines 85-150 (\"它显示什么\", \"它不显示什么\", \"各章之间边的种类\" with its four matrices); spine.py's counts(), section() around the edge tables, and edge_matrices(); build_site.py's _table and inline (to see how \"from \\ to\" renders); the <title>/<desc> of spine.svg. Rendered and looked at headless-Chrome screenshots of spine.svg (900×1859, plus a crop around 01/02/03), spine.zh.svg (900×1767), standings.svg (900×1106) and standings.zh.svg (900×947), saved in /private/tmp/claude-501/-Users-ren-theories/52d6b47e-68c8-4189-8383-b1a9e9047d9a/scratchpad/r5-shots-1. Measured: the font-size distribution of all four SVGs (minimum 13 in each; no style= or group font-size overrides); spoke widths against 1 + 6 × share for all eight chapters (all match the \\\"k of m\\\" counts); all 4 × 64 matrix cells against the list's rows, using /private/tmp/claude-501/-Users-ren-theories/52d6b47e-68c8-4189-8383-b1a9e9047d9a/scratchpad/chk.py (0 mismatches, rows citing and columns cited); the off-diagonal formal-reuse sum, 497, and the upper-triangle (backward) sum, 212, both matching the picture's subtitle and desc; Chinese matrices and list identical in numbers to the English. Ran test_spine: 29 tests OK. I did not run the other focused tests in the task's list. Only searched: the spoke captions on ONE-PAGE.md, THE-THEORY-OF-BECOMING.md and THEORY-GRAPH.md, and their .zh editions (grep for \\\"spoke\\\"/\\\"辐条\\\"; the English wording \\\"a spoke's width gives the share\\\" is consistent with the legend); the alt texts of spine.svg across the repository's .md files (grep spine.svg). Not read: the LINEAGE, CROSSWALK, connections and map changes (other scopes), and any sources/ files.",
+  "verdicts": [
+   {
+    "where": "README.md:23, _process/navigation/README-FIRST-SCREEN.md:16, README.zh.md:29, _process/navigation/README-ZH.md:27 (alt text of spine.svg / spine.zh.svg)",
+    "agree": true,
+    "severity": "low",
+    "why": "This holds. git grep shows README-FIRST-SCREEN.md:16 still has \"![The eight chapters around one grammar]\" and README-ZH.md:27 still has \"![围绕一个文法的八章]\". The SVG's <title> and the alt text on ONE-PAGE, THE-THEORY-OF-BECOMING and THEORY-GRAPH (en and zh) say \"The eight chapters and their recorded uses of one another\" / \"八章及其彼此记录下的使用\". Q3 item 4 asks for exactly this alt text, and this change answers Q3 item 4. A reader sees the alt text only when the image does not load, so low is right."
+   },
+   {
+    "where": "theories/becoming/results/THEORY-GRAPH.md:112 and THEORY-GRAPH.zh.md:96 (lead of the matrices, from spine.py section()/zh_page())",
+    "agree": true,
+    "severity": "low",
+    "why": "This holds. The one lead covers all four tables: \"a row is the chapter whose results use, a column the chapter whose results are used\" (zh: 行是使用者结果所在的章，列是被使用者结果所在的章). The section's home sentence directly above it calls related \"its `related` list (analogy, not a dependence)\". The fourth table's own header repeats \"(analogy, not a dependence)\", so a reader is corrected right away. Low."
+   },
+   {
+    "where": "theories/becoming/results/THEORY-GRAPH.md:104 \"What it shows\" and THEORY-GRAPH.zh.md:87 (下表列出每一个配对 … 只在表中)",
+    "agree": true,
+    "severity": "low",
+    "why": "This holds. Five tables now follow under \"Edge kinds between chapters\". The four 8 by 8 tables leave out To retire. Only the closing list has every pair and the 33 To retire edges (I measured 33 from the list). So \"The table below has every pair\" and \"are in the table only\" no longer point at one table. The spine legend's \"THEORY-GRAPH.md's table of edge kinds between chapters has them all\" is singular too, but it stays true, because the curves it speaks of are among the eight chapters and both the matrices and the list carry them. Low."
+   },
+   {
+    "where": "theories/becoming/results/THEORY-GRAPH.md:166 and THEORY-GRAPH.zh.md:150 (\"Then every pair, the regions beyond the eight chapters included\")",
+    "agree": true,
+    "severity": "low",
+    "why": "This holds. The list's regions are the eight chapters and To retire, nine names in both languages, so only one region lies beyond the eight. The string is fixed in spine.py rather than generated. Low."
+   },
+   {
+    "where": "theories/becoming/results/spine.svg spokes (lines 61-68) and legend sample (line 215); spine.zh.svg the same; spine.py SPOKE_MAX",
+    "agree": true,
+    "severity": "low",
+    "why": "This holds. I checked width = 1 + 6 × share for all eight spokes against the \"k of m modules\" labels: 22/74→2.8, 14/76→2.1, 14/88→2.0, 8/23→3.1, 3/28→1.6, 4/10→3.4, 12/62→2.2, 4/26→1.9. The legend sample is 4 wide, wider than any spoke drawn. In a 2x crop of the centre the order of widths can just be seen for the extremes (06 and 04 against 05), but the four spokes with shares between 15 and 19 percent (1.9 to 2.2 px at 45% opacity) cannot be told apart. The legend says \"its width is the share\" and the captions say \"a spoke's width gives the share\", but the scale is affine with a 1 px floor, not proportional. Each chapter carries its counts beside it, so no number is lost. Low is right. Lightening the spokes did what Q3 item 4 asked: in the render the centre no longer pulls the eye."
+   },
+   {
+    "where": "tools/research/tests/test_spine.py:337-345",
+    "agree": true,
+    "severity": "low",
+    "why": "This holds. The new assertion compares only each kind's matrix total with the list's total among the eight chapters, so a transposed matrix or swapped cells would pass. It also checks only the English page. My own cell-by-cell check of all 4 × 64 cells against the list, in THEORY-GRAPH.md and THEORY-GRAPH.zh.md, found 0 mismatches, with totals 1162 / 98 / 11 / 1420 matching the page's 1,162 and 1,420. Direction is right too: theory-graph.json edges run from the citing record, and 01→02 = 60 matches \"the largest the root to the map with 60\". No test guards font-size ≥ 13. test_spine ran: 29 tests OK."
+   },
+   {
+    "where": "theories/becoming/results/spine.svg, label \"17\" on the 02→03 curve",
+    "agree": true,
+    "severity": "low",
+    "why": "This holds and was not caused by this diff. The 2x crop shows the arrow running close through the label, and the label is still readable. I also checked the rest: every text in spine.svg, spine.zh.svg, standings.svg and standings.zh.svg is ≥ 13 px. The renders show no text cut at the 900 width. The r=12 legend circle clears the \"How to read it\" heading. standings.svg grew to 1106 and no page embeds it at a fixed height (git grep). The zh footers keep their AI-translation label (\"图中文字为 AI 所译，义以英文版为准\"). What I read in full: the spine.py, test_spine.py, spine.svg and standings.svg diffs; THEORY-GRAPH.md lines 90-245; the THEORY-GRAPH.zh.md edge-kinds section and its \"它显示什么\" paragraph; the four SVG renders and two zoomed crops. What I only searched: the spoke captions in ONE-PAGE, THE-THEORY-OF-BECOMING and THEORY-GRAPH; the alt texts; the Q3/Q4 part of the synthesis. I recomputed from the matrix the curve counts in \"What it shows\" (17 pairs drawn, 6 darker, 25 pairs / 114 uses, 16 interpretive pairs / 20 edges, 497 / 212 / 291), and all match."
+   }
+  ],
+  "missed": []
+ },
+ {
+  "key": "lineage",
+  "findings": [
+   {
+    "where": "theories/LINEAGE.md line 11 (the arc in brief), from lineage.json words.en.arc_short; the same in LINEAGE.zh.md line 13 and lineage.json words.zh.arc_short",
+    "text": "\"a Fork narrative (Automated Feudalism or Automated Commons) is proposed and left\"",
+    "severity": "high",
+    "why": "Point 14 says the person pasted \"a scenario projection, organized by AI, Automated Feudalism versus Automated Commons\" and asked for a narrative from it, \"called The Fork (the narrative itself, the September timeline says, is not in the corpus\". Point 15 quotes the person on 2026-03-18: the Fork was never put \"in a way that was neo-feudalism vs automated commons\": \"the actual possibility space that we can pursuit is huge\" (hb-02.md line 5097). The gloss gives the narrative the very binary the person said it never had, and that narrative is not in the corpus. A ten-minute reader would believe something the person's own words deny.",
+    "fix": "Gloss where the narrative came from, not what it said: \"a Fork narrative (asked for from an AI-organized projection of Automated Feudalism versus Automated Commons) is proposed and left\". Or drop the parenthesis. Make the same change in zh."
+   },
+   {
+    "where": "theories/LINEAGE.md line 11 (the arc in brief); lineage.json words.en.arc_short",
+    "text": "\"間 (the in-between; \"all is 间\") becomes the one primitive\"",
+    "severity": "medium",
+    "why": "Neither point 16 nor its home glosses 間 as \"the in-between\". The home (JIAN_FOUNDATION_NOTE_v0.3.md line 50) says \"一切是间。間 是唯一原语。間 即 happening,即 function evaluation。\", and point 16 renders it \"(all is 间; 間 is the one primitive)\". \"the in-between\" is an unsourced dictionary sense that says more than the home. \"all is 间\" sits in quotation marks but is the page's own English rendering, not words in the source.",
+    "fix": "\"間 (in its note, \"一切是间\", all is 间: happening, function evaluation) becomes the one primitive\". Or keep only the point's rendering, without quotation marks: (all is 间)."
+   },
+   {
+    "where": "theories/LINEAGE.md line 11 (the arc in brief); lineage.json words.en.arc_short",
+    "text": "\"In November tests of the proved laws of formations that read (such as what choices show of an order) are frozen before any run\"",
+    "severity": "medium",
+    "why": "Point 45 says each of these tests \"refutes at most a named correspondence\". The home (experiments/formations-that-read/README.md line 5) says \"RF proved nine laws ... No run refutes a theorem. Each test refutes at most a named correspondence or bridge\". \"tests of the proved laws\" tells a reader that the laws themselves are what the tests could refute or confirm.",
+    "fix": "\"tests of what the proved laws of formations that read (such as what choices show of an order) correspond to, each refuting at most a named correspondence, are frozen before any run\". Make the same change in zh."
+   },
+   {
+    "where": "theories/LINEAGE.md lines 85 and 139 (point 49's what), lineage.json nov-within-becoming-no-should what.en/zh",
+    "text": "\"the working rules say that \"the account asserts no should, and ranks courses only under readings a result names\", the continuation condition for scope and C for order\"",
+    "severity": "medium",
+    "why": "AGENTS.md line 28 reads \"...ranks courses only under readings a result names: the continuation condition (...) for scope, C (...) for order, and any further premise.\" The board's WB clause at 55cf6892e reads \"rankings only under readings a result names, most often the continuation condition and C, the self-concern results under their narrower order\". 07 line 3 has \"most use two readings\". Appended as it is, the gloss presents the two as the readings and drops \"and any further premise\" / \"most often\".",
+    "fix": "\"..., most often the continuation condition for scope and C for order\". Or copy the rules' words: \"the continuation condition for scope, C for order, and any further premise\"."
+   },
+   {
+    "where": "theories/LINEAGE.md line 15 (the arc in full) and line 76 (the ethics thread's intro); lineage.json words arc and the ethics thread text",
+    "text": "\"on 9 November the account sets the warrant aside, asserts no should\" / \"on 9 November the account set the warrant aside: it asserts no should\"",
+    "severity": "medium",
+    "why": "The home says something narrower. AGENTS.md ## Evaluation (line 28) says \"No warrant from outside is sought\", and that the open entailment \"is what the representation leaves open, not a proof that evaluation cannot form within the dynamics\". 07 line 779 says \"no warrant from outside is sought\". \"sets the warrant aside\" drops \"from outside\", so a reader would take it that the account dropped any question of warrant.",
+    "fix": "\"on 9 November the account seeks no warrant from outside, asserts no should, ...\". Use the same words in the thread intro and in zh."
+   },
+   {
+    "where": "theories/LINEAGE.md line 43 (How the points were chosen); lineage.json words.en.chosen and zh",
+    "text": "\"kept at most nine or ten for each ...; seven more follow the selection mechanism, and three come from the papers, among them the review packet. Every period stands at its cap\"",
+    "severity": "medium",
+    "why": "The finalize workflow's budgets (2-lineage-finalize.js line 8: early 9, pre-becoming 10, becoming-october 10, november 9, thread 7, papers 3) add up to 48. Point 49 (2026-11-09) falls outside every period named (\"the first week of November\") and was not chosen this way. The origins paragraph says it was \"added when the cut moved to 9 November\", but the paragraph that accounts for how the points were chosen still covers only 48, so a reader who sums the budgets is left one point short.",
+    "fix": "Add: \"and one, point 49, was added by the AI session that moved the cut to 9 November, outside these periods.\" Make the same change in zh."
+   },
+   {
+    "where": "theories/LINEAGE.md line 34 (origins paragraph); reads/lineage-origins.json about and entry 49 why",
+    "text": "\"The 49th point ... was classified by the AI that added it and checked by an AI reader of that round.\" / \"read again by the round's AI reader\"",
+    "severity": "medium",
+    "why": "The 48 earlier checks have a recorded outcome (\"all 48 checks agreed\"). For point 49 no check, reader output or verdict is recorded anywhere in the tree: a search for the id finds only the data, the page and the classification. The sentence states a check whose result is not recorded, and possibly one not yet made.",
+    "fix": "Record the round reader's verdict on entry 49 in lineage-origins.json (agreed or not, with its file) and say so. Until then, write \"to be checked by an AI reader of that round\"."
+   },
+   {
+    "where": "lineage.json nov-within-becoming-no-should evidence[0] and origin; LINEAGE.md row 49 Written by, the In brief phase line \"1 by a person\", the picture's fill of 49",
+    "text": "evidence \"### 2 (8 November) (line 27)\", quote \"right or wrong are \\\"cognitive structures/dynamics\\\"\"; origin \"person\"",
+    "severity": "low",
+    "why": "The point's title (\"the account asserts no should\") echoes the person's \"there is just is, \\\"no should\\\" beyond the becoming\", which is at line 29, not line 27. Line 27 itself goes on: \"it shouldn't be \\\"ranking courses still needs an order\\\" - and it doesn't need to be ranking/comparison\". So the person's entry states the provocation, not the change (ranking under named readings, T8 an offer), which AGENTS.md and 07 state. The class follows the precedent of point 39, and the json's why admits \"states the first part\". Still, the person's-words fill could be read as the person having written the outcome.",
+    "fix": "Add the line 29 quote (\"no should\" beyond the becoming) to evidence[0]. Or note in the what: \"the person's words, which also question ranking itself, ...\"."
+   },
+   {
+    "where": "theories/LINEAGE.md line 11 (the arc in brief)",
+    "text": "\"Lean a proof checker\"",
+    "severity": "low",
+    "why": "Point 18's title is \"Lean as coherence checker\", and its home has Lean 4 \"framework 之 internal coherence checker\", with empirical correspondence \"不 直接 verifiable in Lean\". The In brief phase line on the same page says \"Lean enters as a coherence checker\".",
+    "fix": "\"Lean a coherence checker\". In zh: 一致性检验器."
+   },
+   {
+    "where": "theories/LINEAGE.md line 11 (the arc in brief)",
+    "text": "\"name molochs (after Moloch, \\\"the optimizer for value\\\") among a community's challenges\"",
+    "severity": "low",
+    "why": "Point 3: the manifesto (wamotopia_v1.0.md line 9) names \"unchecked molochs\". \"the optimizer for value\" comes from the Slay Moloch theme camp file (slay_moloch_camp_v0.8.md line 2), \"added later in the month\". The gloss attaches the camp's later definition to the manifesto's word.",
+    "fix": "\"name molochs among a community's challenges (Moloch, a theme camp of that month says, is \\\"the optimizer for value\\\")\"."
+   },
+   {
+    "where": "theories/LINEAGE.md line 11 (the arc in brief)",
+    "text": "\"In October ... its ethics' two readings (the continuation condition for scope, C for order) separated\"",
+    "severity": "low",
+    "why": "In October they were called premises: point 33 quotes \"a scope premise ... and an order premise\", and 07's before-copy §4 is titled \"two premises, two roles\". The ethics thread and the arc in full both say \"called premises until 9 November\" / \"now called readings\", but the brief uses the later name for an October event without saying so.",
+    "fix": "\"its ethics' two premises, now called readings (...), separated\"."
+   }
+  ],
+  "read": "Read in full: the head of theories/LINEAGE.md through In brief, the labels and origins paragraphs, Coverage, How the points were chosen and What the points follow (lines 1–47); the ethics thread's intro (line 76); point 49 in the thread (line 85) and its table row (line 139); rows 39 and 40; the growth table (lines 229–242); the head of theories/LINEAGE.zh.md (lines 7–13) and its count lines; theories/lineage.svg, looked at as a headless-Chrome screenshot at 1000x976 (/private/tmp/claude-501/-Users-ren-theories/52d6b47e-68c8-4189-8383-b1a9e9047d9a/scratchpad/r5-shots-1/lineage.png); lineage.json's point nov-within-becoming-no-should, points 3, 14, 15, 16, 18, 33, 45 and 46 with their evidence, the cut, arc_short and the end of arc; the diffs 21649c5d8..3c8b5e08f of LINEAGE.md (word diff), lineage_static.json, reads/lineage-origins.json (the new entry and about), lineage.py and test_lineage.py; AGENTS.md lines 20–45 (Method, ## Evaluation at line 26 with the quote at line 28, Proof, Words); sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md lines 1–60 (the quote at line 27; \\\"no should\\\" at line 29); 07-SIGNIFICANCE.md Thesis T8 (line 779, quote present) and line 3; the board at 55cf6892e, line 39, WB's landed clause (quote present: \\\"07's ethics and T8 as its makers' offer, binding no one\\\"); hb-02.md lines 3486–3492, 3604–3628 and 5090–5099; TIMELINE.md lines 120–128; JIAN_FOUNDATION_NOTE_v0.3.md lines 45–60; experiments/formations-that-read/README.md lines 1–30; the budgets in 2-lineage-finalize.js (lines 8 and 50); the Q4 part of /Users/ren/tmp/rw/drafts/rescore5-synthesis.md (searched by grep). Measured: git rev-list --count 55cf6892e = 6465, a commit of 2026-11-09 06:48 +0700 and an ancestor of the tree; 2026-11-09 is a Monday; history_by_week() gives 460/1810/1775/456/304/48 = 4853, with 184 undated, matching the table; the arc in brief is 215 words; points by period are 13/12/14/10 = 49; the Written by counts per phase add to 16/13/19/1; the thread count is 20 and 29; AGENTS' \\\"asserts no should\\\" landed 2026-11-09 01:32 and 07's \\\"a way of seeing, not a verdict\\\" 2026-11-09 02:55. The count 49 agrees in the svg subtitle, the public label (49), \\\"Of the 49\\\", the strands paragraph and the picture's key, en and zh. The picture now sits right after the arc in brief (line 13), and the old placement is removed. test_lineage: 16 tests OK; the other focused tests were not run, as they lie outside this scope. Only searched: GLOSSARY.md for C's entry (line 71, \\\"a reading, not asserted\\\") and for 間 or in-between (no gloss); the 07 before-copy for \\\"two readings\\\" and its §4 title; ONE-PAGE.md for C's wording; lineage.zh.svg's texts containing 49. Not opened: sources/12-*, 13-*, 18-* and the friend-conversation drafts. No person's review of this work is recorded; this is an AI read.",
+  "verdicts": [
+   {
+    "where": "theories/LINEAGE.md line 11 (arc in brief), lineage.json words.en/zh.arc_short: Fork gloss",
+    "agree": true,
+    "severity": "high",
+    "why": "Real. hb-02.md line 5097, the person on 2026-03-18: \"for the Fork we worked on, I never put it in a way that was neo-feudalism vs automated commons, the actual possibility space that we can pursuit is huge\"; TIMELINE.md line 125: the artifact \"is not in this corpus\". \"Automated Feudalism or Automated Commons\" comes from the pasted projection \"organized by AI\" (hb-02 line 3490), not from the narrative. The gloss gives the Fork the binary the person explicitly denied, so high is right. The zh line 13 has the same (Automated Feudalism 或 Automated Commons)."
+   },
+   {
+    "where": "theories/LINEAGE.md line 11: 間 (the in-between; \"all is 间\")",
+    "agree": true,
+    "severity": "low",
+    "why": "Partly real, but the severity is too high. Point 16 does not gloss 間 as \"the in-between\". The home note does, though: JIAN_FOUNDATION_NOTE_v0.3.md line 86 has 茶室中两人之间的\"間\"既是空间,也是时间,也是这两人当下关系本身, and line 449 has 一切是 relation between happenings. So the sense is in the cited file, not unsourced. What remains is a precision issue: the English rendering \"all is 间\" sits in quotation marks as though the source said it, and the gloss is not in the point. Low."
+   },
+   {
+    "where": "theories/LINEAGE.md line 11: \"tests of the proved laws of formations that read\"",
+    "agree": true,
+    "severity": "medium",
+    "why": "Real. Point 45 says each test \"refutes at most a named correspondence\". The home (experiments/formations-that-read/README.md line 5) says \"No run refutes a theorem. Each test refutes at most a named correspondence or bridge\". Adding \"proved\" to \"tests of ... laws\" while dropping that qualifier tells a ten-minute reader the theorems themselves are what get tested. The example \"what choices show of an order\" is sourced (RF1, same line)."
+   },
+   {
+    "where": "LINEAGE.md row 49 / point 49 what (lineage.json nov-within-becoming-no-should what.en/zh): the readings appended to the quote",
+    "agree": true,
+    "severity": "medium",
+    "why": "Real. AGENTS.md line 28 continues \"...for scope, C ... for order, and any further premise\". The board's WB clause at 55cf6892e reads \"rankings only under readings a result names, most often the continuation condition and C\". 07 line 3 has \"most use two readings\". The apposition presents the two as the whole set of readings, which is narrower than every home. Medium."
+   },
+   {
+    "where": "LINEAGE.md arc in full and ethics thread intro: \"the account sets the warrant aside\"",
+    "agree": true,
+    "severity": "low",
+    "why": "Partly real, but overstated. The homes say \"No warrant from outside is sought\" (AGENTS.md line 28; 07 line 779). 07 line 819 also says a warrant binding every possible mind \"stays open as a question the account does not pursue ... what it offers does not wait on one\". \"Sets the warrant aside\" is close to \"does not pursue\". The defect is that \"the warrant\" is vague and drops \"from outside\" (the fix is right). Calling it misleading is too strong, so low."
+   },
+   {
+    "where": "LINEAGE.md How the points were chosen (budgets vs point 49)",
+    "agree": true,
+    "severity": "low",
+    "why": "Real: 2-lineage-finalize.js line 8 gives BUDGET 9+10+10+9+7+3 = 48, and point 49 came from none of those periods. But the paragraph states no total (\"at most nine or ten\" cannot be summed exactly), and the origins paragraph two paragraphs up says the 49th was \"added when the cut moved to 9 November\". No count on the page is wrong, so low."
+   },
+   {
+    "where": "LINEAGE.md origins paragraph and lineage-origins.json about / entry 49 why: \"checked by an AI reader of that round\"",
+    "agree": true,
+    "severity": "medium",
+    "why": "Real. reads/ holds round-1, round-3 and round-4 reader files and nothing for a round-5 check of entry 49. A search for nov-within-becoming-no-should finds only lineage.json, the pages and lineage-origins.json. The page states a check, and the head's \"gathered and checked by AI readers\" extends to point 49 too, with no recorded outcome, where the 48 have \"all 48 checks agreed\". Unsourced, so medium."
+   },
+   {
+    "where": "point 49 evidence[0] / origin person / 'Written by' and the picture's fill",
+    "agree": true,
+    "severity": "low",
+    "why": "Real, and low is right. The locator line 27 is correct for the quote (the heading is at line 25). The person's \"no should\" beyond the becoming is at line 29, and the same message also says \"it doesn't need to be ranking/comparison\", which the account did not adopt. The page's convention (\"The mark is that entry's\") is stated, and the json's why says the entry \"states the first part\". The what quotes the person's words rather than paraphrasing them into the outcome."
+   },
+   {
+    "where": "LINEAGE.md line 11: \"Lean a proof checker\"",
+    "agree": true,
+    "severity": "low",
+    "why": "Real. Point 18's title is \"Lean as coherence checker\", and the home quote is \"Lean 是 framework 之 internal coherence checker\". The same page's phase line says \"coherence checker\". The before-copy said \"Lean a checker\", so this change added a word the home does not use. The zh 证明检验器 has the same problem."
+   },
+   {
+    "where": "LINEAGE.md line 11: molochs (after Moloch, \"the optimizer for value\")",
+    "agree": true,
+    "severity": "low",
+    "why": "Real. The phrase is from slay_moloch_camp_v0.8.md line 2, a different file \"added later in the month\" (point 3), while the manifesto (wamotopia_v1.0.md line 9) just says \"unchecked molochs\". It is a precision issue, not a false belief."
+   },
+   {
+    "where": "LINEAGE.md line 11: October \"its ethics' two readings ... separated\"",
+    "agree": true,
+    "severity": "low",
+    "why": "Real. Point 33 quotes \"a scope premise ... and an order premise\", and the thread intro and the arc in full say \"called premises until 9 November\" / \"now called readings\". The brief uses the later name for an October event without the note. See also the missed finding on \"the ethics' two readings\"."
+   }
+  ],
+  "missed": [
+   {
+    "where": "theories/LINEAGE.md line 76 (A third thread: the ethics, intro) and line 11 (arc in brief); lineage.json words en/zh (ethics thread text, arc_short); LINEAGE.zh.md line 78",
+    "text": "\"How the ethics came to its two readings, the continuation condition for scope and C (widening what can form is better) for order, each stated and neither asserted (called premises until 9 November)\"",
+    "severity": "medium",
+    "why": "After 9 November the homes no longer make the two readings the ethics'. 07 line 3: \"Each of the chapter's ranking results states what it is conditional on, none the account's own; most use two readings\". 07 line 7: \"the ranking results take two readings as hypotheses where used, neither asserted\". AGENTS.md line 28: \"Its ethics is its makers' offer, by pointing, not as a law\", with readings \"the continuation condition ... C ... and any further premise\". So \"the ethics came to its two readings\" tells a reader the ethics now rests on, or consists of, these two readings. That is the pre-9-November framing (\"Two unasserted premises carry it\") under the new name. The thread's own last clause (T8 its makers' offer) shows the ethics' endpoint is the offer, not the readings.",
+    "fix": "\"How the account came to the two readings its ranking results take as hypotheses where used, the continuation condition for scope and C (...) for order, neither asserted (called the ethics' premises until 9 November), and its ethics to its makers' offer: ...\". In the brief: \"its ethics' two premises, now the readings its rankings take where used (...), separated\". Same in zh."
+   },
+   {
+    "where": "theories/lineage.svg (and lineage.zh.svg), growth bars below the axis, the week of 9 November",
+    "text": "the \"9 Nov\" bar label at the right edge, over a bar of 48 entries against a largest week of 1810",
+    "severity": "low",
+    "why": "At the picture's scale the 48-entry bar is under 2 px, a faint dash at x≈953 (screenshot r5-shots-1/lineage.png). The label \"9 Nov\" names a bar a reader cannot see, and that week is partial (cut on its Monday, 9 November). The table's row \"| 2026-11-09 | 48 |\" and the measured count (history_by_week to 9 November: 4853 total, 48 in that week) are correct.",
+    "fix": "Give a non-zero week a minimum bar height of 2–3 px, or note in the caption \"the week of 9 November counts one day\"."
+   }
+  ]
+ },
+ {
+  "key": "chinese",
+  "findings": [
+   {
+    "where": "theories/LINEAGE.zh.md:13 (弧线简述), from lineage_static.json zh.arc_short; the same gloss in LINEAGE.md:13",
+    "text": "一种分岔叙事（Automated Feudalism 或 Automated Commons，自动化的封建或自动化的公地）被提出又被放下",
+    "severity": "medium",
+    "why": "Point 14 says the narrative was asked for from \"a pasted scenario projection, organized by AI, Automated Feudalism versus Automated Commons\". Point 15 records a correction of 2026-03-18 that the Fork was never put \"in a way that was neo-feudalism vs automated commons\": \"the actual possibility space that we can pursuit is huge\". The new gloss says the Fork was the very binary that this correction denies, so it says more than its home. Its Chinese wording (自动化的封建／自动化的公地) also departs from point 14's 自动化封建／自动化公地.",
+    "fix": "Drop the parenthesis, or write it as point 14 does: 一种分岔叙事（出自一份 AI 整理的 Automated Feudalism 对 Automated Commons 的情景推演，后来被说成从未是这样的二分）被提出又被放下. Make the same change in English."
+   },
+   {
+    "where": "theories/lineage.zh.svg:126 (point 49's label), from theories/becoming/results/data/lineage.json:2138; English lineage.svg:133 \"No should; T8 an offer\"",
+    "text": "49 · 无应当；T8 为作者所提供",
+    "severity": "medium",
+    "why": "The home (AGENTS.md, Evaluation) has \"Right and wrong, should and better are patterns formed in people and AI, real in what they condition ... So the account asserts no should\". Point 49's own title is 本论不断言任何应当. 无应当 reads as \"there is no should\", which is wider than the home and contrary to it. 为作者所提供 does not say whose makers they are; the fronts write 本论之作者.",
+    "fix": "49 · 不断言应当；T8 为本论之作者所提供 (and in English \"Asserts no should; T8 its makers' offer\"), in lineage.json, then re-render."
+   },
+   {
+    "where": "theories/becoming/results/atlas/CROSSWALK.zh.md:13 (generated by tools/research/atlas.py:981; the English caption at atlas.py:878 says the same)",
+    "text": "每一条线把一个文件夹或领域连到它的主张所对照的本论那一部分，按关系着色；每一条线都是 AI 的读法",
+    "severity": "medium",
+    "why": "After this change connections.zh.svg is a matrix with no lines. Its own key says 每格中，每种关系一个点 ... 实心：本论陈述这一连接 / 空心圆环：在此处提出. The caption tells a Chinese reader to follow lines that are not in the picture.",
+    "fix": "In atlas.py, change the caption to 每一行是一个文件夹或领域，每一列是它的主张所对照的本论那一部分；每格中每种关系一个点，按关系着色，实心为本论所陈述，空心为此处提出；每一个点都是 AI 的读法，没有人的. Fix the English caption's \"each thread joins\" the same way."
+   },
+   {
+    "where": "theories/becoming/results/atlas/connections.zh.svg:831 (footer), from tools/research/connection_map.py:462",
+    "text": "同样的数据可在连接图中探索：读者网站上的“连接”页",
+    "severity": "medium",
+    "why": "The site has no page called 连接. _process/research-config.json labels it 'Connections' in site.nav and 'The connections' in ways_in, and site.nav_zh has no entry for connections.html at all (the re-score's Q3 item 7: \"The Chinese site bar has no 连接图\"). A Chinese reader who looks for 连接 on the site will not find it.",
+    "fix": "读者网站上的“Connections”（连接图）页 (the page's English name, glossed). Or add connections.html to nav_zh under the label the footer uses."
+   },
+   {
+    "where": "theories/LINEAGE.zh.md:13 (弧线简述); the English brief has \"Lean a proof checker\"",
+    "text": "Lean 成为证明检验器",
+    "severity": "low",
+    "why": "The home is point 18: Lean 4 as 「framework 之 internal coherence checker」, with 「empirical correspondence ... 不 直接 verifiable in Lean」. The phase entry says Lean 作为融贯检验器进入, and the arc in full says 作为检验器的 Lean. Calling it a proof checker in the brief names a role the home does not give it in 2026. The fronts also say 证明检查器 (README.zh), not 检验器.",
+    "fix": "Lean 成为融贯检验器 (English: \"Lean a coherence checker\"), as point 18 and the phase entry have it."
+   },
+   {
+    "where": "theories/LINEAGE.zh.md:28 (phase 检验、读者版与对照), :87 and :143 (point 49)",
+    "text": "只在某项结果所指明的读法之下排序 / 只在某项结果所指明的读法之下对进程排序",
+    "severity": "low",
+    "why": "The brief and the ethics thread on the same page say 一项结果所指名的读法, and GLOSSARY.zh (排序、次序) says 本论只在一个结果所指名的读法之下排序. 指明 (specifies) and 指名 (names) differ, and \"readings a result names\" is 指名.",
+    "fix": "Write 所指名 in both places."
+   },
+   {
+    "where": "theories/LINEAGE.zh.md:87 and :143 (point 49)",
+    "text": "「a way of seeing, not a verdict」（一种看法，不是裁决）",
+    "severity": "low",
+    "why": "README.zh's ethics paragraph, the front, has 本论之作者提供一种看法，不是裁断, and USES.zh has 一种看法，不是裁断. The same phrase is glossed two ways.",
+    "fix": "（一种看法，不是裁断）"
+   },
+   {
+    "where": "theories/LINEAGE.zh.md:45 (转折点是怎样选的); the same in LINEAGE.md",
+    "text": "AI 读者为每个时期各收集 12 至 14 个（2021 至 2025 年；2026 年至 10 月 4 日；10 月其余时间；11 月第一周）……每个时期都恰在其配额上",
+    "severity": "low",
+    "why": "Point 49 (9 November) falls in none of the four periods. It was added when the cut moved, not through the gather, check and keep process. The origins paragraph says only that it was classified and checked: 第 49 个转折点是截取移到 11 月 9 日时加入的，由加入它的 AI 归类. A reader of this paragraph would take all 49 points to have passed the adversarial selection.",
+    "fix": "Add one sentence: 第 49 个转折点不经这一选择，是截取移到 11 月 9 日时加入的. Add the same in English."
+   },
+   {
+    "where": "README.zh.md:48 (理论图 row)",
+    "text": "约 77–101 分钟",
+    "severity": "low",
+    "why": "THEORY-GRAPH.md's own line says \"77–100 minutes to read in full\". The card and the page give different times for the same English page. The re-score's lows noted the same kind of mismatch on LINEAGE and ONE-PAGE.zh.",
+    "fix": "Time the card by the page's own rule (zh_fronts.settle), or quote the page's stated time, so that both read 77–100."
+   },
+   {
+    "where": "theories/LINEAGE.zh.md:13 (弧线简述)",
+    "text": "读取之形成的已证明诸律（例如选择显示出次序的什么）的各项检验",
+    "severity": "low",
+    "why": "The English is \"tests of the proved laws of formations that read (such as what choices show of an order)\". The Chinese keeps the meaning, but 选择显示出次序的什么 is hard to parse.",
+    "fix": "（例如选择显示出一种次序的哪些方面）"
+   }
+  ],
+  "read": "Read in full: the diff 21649c5d8..3c8b5e08f for theories/LINEAGE.zh.md and theories/LINEAGE.md (word diff: intro, 弧线简述, 弧线全文, 简述's sixth phase, labels, the origins paragraph with its counts, 这些转折点循什么, the ethics thread's intro, point 49 in the thread and in the table, its sources row, growth table); the diff for THEORY-GRAPH.md and THEORY-GRAPH.zh.md (the four edge-kind matrices; I checked by script that every cell equals the pair table, 0 mismatches in both languages); the diff for README.zh.md; the diff for lineage_static.json and reads/lineage-origins.json (point 49's classification); the extracted text of connections.svg, connections.zh.svg, lineage.svg and lineage.zh.svg, each compared line by line, with font sizes (connections.zh at least 12; lineage.zh at least 11, as in English); headless-Chrome screenshots of all four SVGs at their viewBox sizes, plus a 2x crop of connections.zh.svg, in /private/tmp/claude-501/-Users-ren-theories/52d6b47e-68c8-4189-8383-b1a9e9047d9a/scratchpad/r5-shots-1/; AGENTS.md lines 20–40 (Method, Evaluation, Proof and naming, Words and decisions); sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md lines 1–60 (point 49's first evidence; the quotation is verbatim and the classification as a person's words follows point 39's precedent); 07-SIGNIFICANCE.md lines 777–781 (Thesis T8: \\\"a way of seeing, not a verdict\\\", \\\"The offer binds no one\\\"); README.zh.md lines 23–27; LINEAGE points 3, 14, 15, 16 and 18 (both languages where needed); CROSSWALK.md's diff and CROSSWALK.zh.md lines 1–30; site config entries for connections.html. Ran the focused tests test_spine, test_lineage, test_connection_map, test_atlas and test_site: 209 ran, OK, 1 skipped. Only searched, not read: the board for 55cf6892e's clause (the quoted phrase is present); the fronts (README.zh, ONE-PAGE.zh, THE-THEORY-OF-BECOMING.zh, USES.zh, GLOSSARY.zh) for 本论之作者所提供, 所指名/所指明, 裁断 and 读法; GLOSSARY.zh for 生灭变化之论 and 生成 (在生灭变化之内 fits its row: 生灭变化 translates becoming); the re-score synthesis for its Chinese items; build_site.py, zh_fronts.py and navigation.py for the map page name and the reading-time rule. Equalities checked: 49 points in both languages, with 49 public; origins 16/13/19/1; threads 20 and 29; phase 40–49 counted as 1/1/8; commits 6,465 at 55cf6892e; growth 4,853 entries, with 48 in the week of 9 November and a largest week of 1,810 matching the table; connections legend 337/370/325/24 plus the 3 undrawn relations equal CROSSWALK.zh's 338/371/325/25; statuses 3/488/189/376/22/105. Naming: no 说明 names the account in the changed Chinese (未说明 only), 生成 appears only in 02's title 生成、守与退化, 本论 names the account and 生灭变化之论 the theory; AI-translation labels are kept on the pages and in the SVG. No person's review of these Chinese editions is recorded; this is an AI reading.",
+  "verdicts": [
+   {
+    "where": "theories/LINEAGE.zh.md:13 (弧线简述), lineage_static.json zh.arc_short; LINEAGE.md:11",
+    "agree": true,
+    "severity": "medium",
+    "why": "Confirmed. Point 14 says the Fork narrative was asked for from \"a pasted scenario projection, organized by AI, Automated Feudalism versus Automated Commons\". Point 15 records the correction that the Fork was never put \"in a way that was neo-feudalism vs automated commons\". The new parenthesis \"(Automated Feudalism or Automated Commons)\" makes the Fork that binary, which is wider than point 15 allows. 自动化的封建／自动化的公地 also differs from point 14's 自动化封建／自动化公地. The fix is right: drop the parenthesis, or say where the binary came from."
+   },
+   {
+    "where": "theories/lineage.zh.svg:126, from lineage.json short.zh of nov-within-becoming-no-should",
+    "agree": true,
+    "severity": "medium",
+    "why": "Confirmed. The label reads \"49 · 无应当；T8 为作者所提供\". The home (AGENTS.md, Evaluation) says \"Right and wrong, should and better are patterns formed in people and AI, real in what they condition ... So the account asserts no should\", and point 49's own title is 本论不断言任何应当. 无应当 reads as \"there is no should\", which goes against \"real in what they condition\". The English short label \"No should; T8 an offer\" has the same fault and should change with it. 为作者所提供 drops 本论之, so the reader is not told whose makers."
+   },
+   {
+    "where": "theories/becoming/results/atlas/CROSSWALK.zh.md:13 (atlas.py Chinese caption)",
+    "agree": true,
+    "severity": "medium",
+    "why": "Confirmed. CROSSWALK.zh.md is unchanged in this diff, but the picture it captions is now a matrix: the svg's key says 每格中，每种关系一个点 and it draws no lines. The caption still says 每一条线把一个文件夹或领域连到…；每一条线都是 AI 的读法, so a Chinese reader is told to follow lines that are not drawn. The English caption, also touched in this change, keeps \"each thread joins\"."
+   },
+   {
+    "where": "theories/becoming/results/atlas/connections.zh.svg footer (connection_map.py)",
+    "agree": true,
+    "severity": "medium",
+    "why": "Confirmed. research-config.json site.nav labels connections.html 'Connections'. site.nav_zh has no entry for it. The only Chinese way in is the CROSSWALK.zh rewrite's link 连接图（英文）. No page on the site is called 连接, so the footer's 读者网站上的“连接”页 sends a reader to look for a name the site does not use."
+   },
+   {
+    "where": "theories/LINEAGE.zh.md:13 Lean 成为证明检验器 (and English 'Lean a proof checker')",
+    "agree": true,
+    "severity": "low",
+    "why": "Point 18 says 「framework 之 internal coherence checker」 and the phase entry says Lean 作为融贯检验器进入, but the brief says 证明检验器. Lean is in fact a proof checker, so a reader is not misled much. This is precision against the home's word, so low is right."
+   },
+   {
+    "where": "theories/LINEAGE.zh.md:28 and :87/:143 (所指明)",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed. The brief, the ethics thread and GLOSSARY.zh write 一（项）结果所指名的读法, while the phase entry and point 49 write 某项结果所指明. That renders the same English phrase two ways."
+   },
+   {
+    "where": "theories/LINEAGE.zh.md:87/:143 （一种看法，不是裁决）",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed. README.zh:25 and USES.zh:32 have 一种看法，不是裁断, so the same English phrase is glossed two ways."
+   },
+   {
+    "where": "theories/LINEAGE.zh.md:45 转折点是怎样选的 (and LINEAGE.md)",
+    "agree": true,
+    "severity": "low",
+    "why": "Real. The four periods end at the first week of November, and point 49 (9 November) did not pass through the gather, check and keep process. The origins paragraph says only how 49 was classified. The paragraph states no total, so no number is wrong; low is right."
+   },
+   {
+    "where": "README.zh.md:48 理论图 row 约 77–101 分钟",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed. THEORY-GRAPH.md:7 says \"77–100 minutes to read in full\" for the same page. The difference is one minute, so low."
+   },
+   {
+    "where": "theories/LINEAGE.zh.md:13 （例如选择显示出次序的什么）",
+    "agree": true,
+    "severity": "low",
+    "why": "The meaning matches the English \"such as what choices show of an order\", but the phrase is awkward Chinese. Wording only, so low."
+   }
+  ],
+  "missed": [
+   {
+    "where": "theories/lineage.zh.svg (point 49's black fill; key 一个人的话（16）), LINEAGE.zh.md 简述 phase 检验、读者版与对照 '1 出自一个人', the origins list '一个人的话（16）' and table row 49 '一个人的话'; from reads/lineage-origins.json index 49 and lineage.json origin 'person'",
+    "text": "| 49 | 2026-11-09 | **在生灭变化之内：本论不断言任何应当；T8 为本论之作者所提供。** … | 公开 | 一个人的话 |",
+    "severity": "medium",
+    "why": "The page's own rule (origins_intro) is 其证据中首先陈述它的那一条, in English \"the first of its evidence that does\" state the turning point. Point 49's first evidence, the person's words of 8 November, says only \"right or wrong are 'cognitive structures/dynamics'\". It does not say that the account asserts no should, or that T8 is the makers' offer. The classification itself says entry 0 \"states the first part of the point; the other entries are AI-made and state the change\". So the black fill, the count 16 (instead of 15, with 20 AI-made), and the phase's '1 出自一个人' tell a reader that a person's own words state this change, when AI-made text (AGENTS.md, chapter 7, the board) states it. That also reads a person's words as the source of the account's ethics, against the rule that they are provenance, not authority.",
+    "fix": "Classify point 49 as 'ai' (first evidence that states the change: AGENTS.md), or put the AGENTS.md entry first. Re-render, so the svg fill, the counts (一个人的话 15, AI 所作 20) and the phase entry (40–49: 1 AI 起草, 9 AI 所作) follow in both languages."
+   },
+   {
+    "where": "theories/LINEAGE.zh.md:15 (弧线全文) and :78 (第三条线索 intro); same in LINEAGE.md",
+    "text": "11 月 9 日，本论把根据之问放下，不断言任何应当，并使 T8 成为本论之作者所提供者（49）",
+    "severity": "low",
+    "why": "The text cites point 49, but point 49 says nothing about warrant. The home, 07 §warrant, says \"It stays open as a question the account does not pursue: on its method no warrant from outside is sought\". 放下 (in English \"sets the warrant aside\") reads as the question being dropped, not left open and unpursued, and it drops \"from outside\".",
+    "fix": "11 月 9 日，本论不求外来的根据（根据之问仍开放，本论不追究），不断言任何应当… (English: \"seeks no warrant from outside, the question left open\"). Or add that clause to point 49's text so the citation holds."
+   },
+   {
+    "where": "theories/becoming/results/THEORY-GRAPH.zh.md (edge-kind matrices intro; spine.py edge_matrices); same in THEORY-GRAPH.md",
+    "text": "先是八章之间每一种边各一张表：行是使用者结果所在的章，列是被使用者结果所在的章",
+    "severity": "low",
+    "why": "The sentence covers all four tables, including the related table, whose heading says **related**（类比，不是依赖）. For that table, \"row uses column\" asserts a dependence the heading denies. The counts were checked and match the pair list in both languages.",
+    "fix": "行是边所出自的结果所在的章，列是边所指向的结果所在的章（formal-reuse、interpretive、application 中即使用者与被使用者；related 只是类比）."
+   },
+   {
+    "where": "theories/becoming/results/atlas/CROSSWALK.zh.md (head, unchanged by this change)",
+    "text": "(no 从这里开始 table; no line naming the Connections page on the site)",
+    "severity": "low",
+    "why": "The English crosswalk gained a 'Start here' table of the five thickest stated connections and a new map line in answer to the re-score. The Chinese crosswalk got neither, so a Chinese reader has no entry point into the new matrix. The Chinese page is avowedly a summary (各组的条目在英文页上), so this is a gap, not a falsehood.",
+    "fix": "Have connection_map.py write the same five rows at a marker in CROSSWALK.zh.md, with Chinese group and chapter names, plus one line on where to open the map."
+   }
+  ]
+ }
+]

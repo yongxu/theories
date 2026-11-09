@@ -180,7 +180,7 @@ class OverviewTests(unittest.TestCase):
         self.assertIn('<title id="cx-title">', self.svg)
 
     def test_it_says_what_every_thread_is_and_gives_the_counts(self):
-        self.assertIn('Every thread is an AI reading, no person’s.', self.svg)
+        self.assertIn('Every dot is an AI reading, no person’s.', self.svg)
         for k, label in cm.STATS:
             self.assertIn(f'>{self.data["totals"]["carried"].get(k, 0):,}</tspan> {label}', self.svg)
 
@@ -188,9 +188,12 @@ class OverviewTests(unittest.TestCase):
         threads = cm.overview_threads(self.data)
         self.assertEqual(sorted((t['group'], t['relation'], t['fresh'], t['n']) for t in threads),
                          [('cxg-early', 'agreement', False, 1), ('cxg-early', 'divergence', False, 1), ('cxg-greek', 'scope', True, 1)])
-        self.assertEqual(self.svg.count('<path d="M'), len(threads))
-        self.assertIn('stroke-dasharray="7 3"', self.svg)  # scope, as the map draws it
-        self.assertIn('stroke-opacity="0.2"', self.svg)  # proposed here, lighter
+        dots = re.findall(r'<circle class="thread"[^>]*>', self.svg)
+        self.assertEqual(len(dots), len(threads))  # a dot per thread, in its row and column
+        self.assertEqual(sum('stroke=' in d for d in dots), sum(t['fresh'] for t in threads))  # proposed here: a ring
+        self.assertIn(f'fill="{cm.OV_COLOUR["divergence"]}"', self.svg)  # stated: filled in its relation's colour
+        self.assertIn('<title>1 claim, divergence, read against', self.svg)  # one claim, the relation in lower case
+        self.assertNotIn('thread', re.search(r'<desc id="cx-desc">(.*?)</desc>', self.svg, re.S).group(1).lower().replace('threads', ''))
 
     def test_a_title_with_markup_is_escaped_and_a_relation_without_a_colour_is_named(self):
         import xml.etree.ElementTree as ET
@@ -200,11 +203,13 @@ class OverviewTests(unittest.TestCase):
             cm.overview_svg(dict(self.data, relations=self.data['relations'] + [{'en': 'resonance'}]))
         self.assertIn('resonance', str(caught.exception))
 
-    def test_the_parts_keep_apart_when_there_are_few_groups(self):
-        import re as re_
-        few = dict(self.data, warp=[dict(w, id=f'w{i}', title=f'Part {i}') for i, w in enumerate(self.data['warp'] * 9)])
-        ys = [float(y) for y in re_.findall(r'<text x="566" y="([\d.]+)" font-size="12"', cm.overview_svg(few))]
-        self.assertTrue(all(b - a >= 22 for a, b in zip(ys, ys[1:])), ys)
+    def test_the_columns_keep_apart_and_fit_the_width(self):
+        many = dict(self.data, warp=[dict(w, id=f'w{i}', title=f'Part {i}') for i, w in enumerate(self.data['warp'] * 9)])
+        svg = cm.overview_svg(many)
+        xs = [float(x) for x in re.findall(r'<text transform="translate\(([\d.]+),', svg)]
+        self.assertEqual(len(xs), len(many['warp']))
+        self.assertTrue(all(b - a >= 14 for a, b in zip(xs, xs[1:])), xs)
+        self.assertLess(max(xs), cm.OV_W - 60)  # the rising labels keep inside the picture
 
     @unittest.skipUnless(shutil.which('node'), 'node is not installed')
     def test_the_threads_are_the_ones_the_page_draws(self):
@@ -292,10 +297,17 @@ class SiteTests(unittest.TestCase):
                 cm.main(argv)
 
     def test_the_site_page_has_its_line_home_and_a_summary_without_script(self):
-        page = cm.site_map(self.out, self.base, {cm.CROSSWALK_PATH: 'crosswalk.html'}, nav=[('Chapters', 'chapters.html')]).read_text()
+        page = cm.site_map(self.out, self.base, {cm.CROSSWALK_PATH: 'crosswalk.html'}, nav=[('Chapters', 'chapters.html'), ('Connections', 'connections.html')],
+                           search='assets/search.js').read_text()
         body = page.split('<body>', 1)[1]
-        self.assertTrue(body.lstrip().startswith('<nav class="sitebar" aria-label="Site"><a class="home" href="index.html">The Theory of Becoming</a>'
-                                                 '<a href="chapters.html">Chapters</a></nav>'))
+        self.assertTrue(body.lstrip().startswith('<script src="assets/search.js" data-root="" defer></script>\n'
+                                                 '<header class="top"><a class="brand" href="index.html">The Theory of Becoming</a>'
+                                                 '<nav aria-label="Pages"><a href="chapters.html">Chapters</a>'
+                                                 '<a href="connections.html" aria-current="page">Connections</a></nav>'
+                                                 '<button class="find" type="button" hidden>Search</button></header>'))  # the site's header, as every page has it
+        with_zh = cm.site_bar(nav=[('Chapters', 'chapters.html'), ('中文', 'README.zh.html')], name='A site')
+        self.assertIn('>A site</a><nav aria-label="Pages"><a href="chapters.html">Chapters</a></nav>'
+                      '<a class="lang" href="README.zh.html" hreflang="zh-Hans" lang="zh-Hans">中文</a>', with_zh)  # outside the line, as the site has it
         noscript = re.search(r'<noscript>(.*?)</noscript>', page, re.S).group(1)
         lede, sub = cm._ledes(self.data(page))
         self.assertIn(f'<p class="lede" id="lede">{html.escape(lede)}</p>', page)  # written in, the same with or without script
@@ -310,7 +322,7 @@ class SiteTests(unittest.TestCase):
 
     def test_the_repository_page_has_the_summary_and_no_site_line(self):
         page = cm.page(cm.payload(atlas(entry('cx-a', 'cxg-early')), GRAPH, SHARED))
-        self.assertNotIn('class="sitebar"', page)
+        self.assertNotIn('<header class="top"', page)
         self.assertIn('<a href="../../../../' + cm.CROSSWALK_PATH + '">the crosswalk</a>', page)
         self.assertNotIn("getElementById('lede').textContent", page)  # the header is written in, not by the script
         fragment = cm.fragment(cm.payload(atlas(entry('cx-a', 'cxg-early')), GRAPH, SHARED, base=None))

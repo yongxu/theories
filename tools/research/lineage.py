@@ -278,7 +278,7 @@ def svg(s, lang, weeks):
            f'<rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="10" fill="{PAPER}" stroke="#d6d3d1"/>',
            t(24, 38, words['title'], 22, 'bold')]
     y = 64
-    for line in wrap_text(words['subtitle'], 110 if lang == 'en' else 100, lang):
+    for line in wrap_text(words['subtitle'].format(n=len(s['points']), date=s['cut']['date_' + lang]), 110 if lang == 'en' else 100, lang):
         out.append(t(24, y, line, 15, fill=MUTED))
         y += 19
     # the phases, as named bands
@@ -727,8 +727,8 @@ def page(s, lang, weeks, undated, by_folder, totals, groups=(), against=None):
     lines = [HEADER, '', f'# {words["title"]}', ''] + head + ['',
              words['intro'].format(commits=f'{cut["commits"]:,}' if lang == 'en' else cut['commits'],
                                    date=cut['date_' + lang], commit=cut['commit'][:9]), '']
-    if words.get('arc_short'):  # the ten-minute part opens with the arc in brief, one sentence a phase
-        lines += [words['arc_short'], '']
+    if words.get('arc_short'):  # the ten-minute part opens with the arc in brief, one sentence a phase, then the picture
+        lines += [words['arc_short'], '', f'![{words["title"]}]({os.path.basename(SVG[lang])})', '']
     if words.get('arc'):
         lines += [words['arc'], '']
     number = {p['id']: n for n, p in enumerate(s['points'], 1)}
@@ -751,7 +751,7 @@ def page(s, lang, weeks, undated, by_folder, totals, groups=(), against=None):
             else:
                 lines.append(f'- **{ph["name"][lang]}** ({ph["from"]} – {ph["to"]}). {ph["what"][lang]} {tail}')
         lines.append('')
-    lines += [f'![{words["title"]}]({os.path.basename(SVG[lang])})', '', words['labels_intro'], '']
+    lines += ([] if words.get('arc_short') else [f'![{words["title"]}]({os.path.basename(SVG[lang])})', '']) + [words['labels_intro'], '']
     colon = '：' if lang == 'zh' else ': '
     count = Counter(p['label'] for p in s['points'])
     for key in LABELS:
