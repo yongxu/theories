@@ -4730,7 +4730,7 @@ tagged instance or application.
   (only the dweller returns; the supplied clearer and it part), `Clearing.clearer_beyond_returning_feeding`,
   `Drawing.returning_feeding_apart`, `Unexchanged.apart`. Which relation and which reading of the standpoints
   stay choices. A leaf; short compositions, none new as mathematics.
-* `Becoming.BeyondCoupling` (L2, through `Becoming.GrammarScope` and `Becoming.Standpoints`): what
+* `Becoming.BeyondCoupling` (L2, through `Becoming.GrammarScope`, `Becoming.Standpoints` and `Becoming.FlowCenters`): what
   concern formed by continuation cannot reach (board item ZB, one of route (b)'s pieces). A selection
   read off a group's continuations decides a level history by each member's admission at every step
   (`Web.ReadOffContinuations`), or by what couples into the members at every step
