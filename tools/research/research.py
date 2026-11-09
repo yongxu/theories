@@ -386,7 +386,7 @@ def check_or_render(render=False, base=None, ids=None, strict_fresh=False):
     errors += atlas_errors
     # The connection map (CX): the atlas's correspondences, the graph and the shared laws on one page.
     if atlas_pages:
-        outputs.update(connection_map.render(atlas_pages[atlas.DATA], outputs[theory_graph.GRAPH]))
+        outputs.update(connection_map.render(atlas_pages[atlas.DATA], outputs[theory_graph.GRAPH], atlas_pages.get(atlas.CROSSWALK)))
     # The lineage (RW): how the account grew, from its curated turning points, the records' history and the
     # crosswalk, its earlier folders dated and set beside what the map counts their claims read against; an evidence
     # path the tree lacks or a quotation its file no longer holds is an error.

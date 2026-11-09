@@ -165,7 +165,7 @@ class OverviewTests(unittest.TestCase):
         self.assertIn('<title id="cx-title">', self.svg)
 
     def test_it_says_what_every_thread_is_and_gives_the_counts(self):
-        self.assertIn('Every thread is an AI reading, no person’s.', self.svg)
+        self.assertIn('Every dot is an AI reading, no person’s.', self.svg)
         for k, label in cm.STATS:
             self.assertIn(f'>{self.data["totals"]["carried"].get(k, 0):,}</tspan> {label}', self.svg)
 
@@ -173,9 +173,10 @@ class OverviewTests(unittest.TestCase):
         threads = cm.overview_threads(self.data)
         self.assertEqual(sorted((t['group'], t['relation'], t['fresh'], t['n']) for t in threads),
                          [('cxg-early', 'agreement', False, 1), ('cxg-early', 'divergence', False, 1), ('cxg-greek', 'scope', True, 1)])
-        self.assertEqual(self.svg.count('<path d="M'), len(threads))
-        self.assertIn('stroke-dasharray="7 3"', self.svg)  # scope, as the map draws it
-        self.assertIn('stroke-opacity="0.2"', self.svg)  # proposed here, lighter
+        dots = re.findall(r'<circle class="thread"[^>]*>', self.svg)
+        self.assertEqual(len(dots), len(threads))  # a dot per thread, in its row and column
+        self.assertEqual(sum('stroke=' in d for d in dots), sum(t['fresh'] for t in threads))  # proposed here: a ring
+        self.assertIn(f'fill="{cm.OV_COLOUR["divergence"]}"', self.svg)  # stated: filled in its relation's colour
 
     def test_a_title_with_markup_is_escaped_and_a_relation_without_a_colour_is_named(self):
         import xml.etree.ElementTree as ET
@@ -185,11 +186,13 @@ class OverviewTests(unittest.TestCase):
             cm.overview_svg(dict(self.data, relations=self.data['relations'] + [{'en': 'resonance'}]))
         self.assertIn('resonance', str(caught.exception))
 
-    def test_the_parts_keep_apart_when_there_are_few_groups(self):
-        import re as re_
-        few = dict(self.data, warp=[dict(w, id=f'w{i}', title=f'Part {i}') for i, w in enumerate(self.data['warp'] * 9)])
-        ys = [float(y) for y in re_.findall(r'<text x="566" y="([\d.]+)" font-size="12"', cm.overview_svg(few))]
-        self.assertTrue(all(b - a >= 22 for a, b in zip(ys, ys[1:])), ys)
+    def test_the_columns_keep_apart_and_fit_the_width(self):
+        many = dict(self.data, warp=[dict(w, id=f'w{i}', title=f'Part {i}') for i, w in enumerate(self.data['warp'] * 9)])
+        svg = cm.overview_svg(many)
+        xs = [float(x) for x in re.findall(r'<text transform="translate\(([\d.]+),', svg)]
+        self.assertEqual(len(xs), len(many['warp']))
+        self.assertTrue(all(b - a >= 14 for a, b in zip(xs, xs[1:])), xs)
+        self.assertLess(max(xs), cm.OV_W - 60)  # the rising labels keep inside the picture
 
     @unittest.skipUnless(shutil.which('node'), 'node is not installed')
     def test_the_threads_are_the_ones_the_page_draws(self):

@@ -329,10 +329,20 @@ class Drawing(unittest.TestCase):
         self.assertIn('| The map | The root | 3 | 0 | 0 | 0 |', body)
         self.assertIn('| Life and evolution | The root | 0 | 0 | 0 | 1 |', body)
         self.assertIn('1 pair with fewer than 10 formal-reuse uses (3 uses)', body)
-        rows = [l for l in lines if l.startswith('| ') and not l.startswith('| Edges from results of')]
+        start = next(i for i, l in enumerate(lines) if l.startswith('| Edges from results of'))
+        rows = [l for l in lines[start + 2:] if l.startswith('| ')]
         total = sum(int(c) for l in rows for c in l.strip('|').split('|')[2:])
         kinds = sum(1 for e in g['edges'] if e['type'] in spine.KINDS)
         self.assertEqual(total, kinds)
+        # each kind's matrix among the eight chapters agrees with the list's pairs among them
+        names = {spine.theory_graph.REGION_TITLES[k].split(':')[0]: k for k in spine.spec()['order']}
+        for i, kind in enumerate(spine.KINDS):
+            m = lines.index(f'**{kind}**' + (' (analogy, not a dependence)' if kind == 'related' else ''))
+            cells = [l for l in lines[m + 4:m + 4 + 8]]
+            matrix = sum(int(c) for l in cells for c in (x.strip() for x in l.strip('|').split('|')[1:]) if c != '·')
+            listed = sum(int(l.strip('|').split('|')[2 + i]) for l in rows
+                         if l.strip('|').split('|')[0].strip() in names and l.strip('|').split('|')[1].strip() in names)
+            self.assertEqual(matrix, listed, kind)
 
 
 class Tables(unittest.TestCase):

@@ -756,6 +756,11 @@ ROLE_WORD = {'carries': 'Read against', 'neighbour': 'Beside it, not carrying it
 AGREEMENT_WORD = {'law': 'a law', 'thesis-or-method': 'a thesis or method', 'reading': 'a reading'}
 
 
+# Where CROSSWALK.md's start-here table goes: connection_map.py, which counts the map's threads, writes it there when the
+# render runs it after this page (a comment, so a page rendered without the map shows nothing).
+START_HERE = '<!-- start here: the thickest threads, written by connection_map.py -->'
+
+
 def group_path(group: dict) -> str:
     """A folder's or domain's page: crosswalk/<its id without cxg->.md."""
     return f'{CROSSWALK_PAGES}/{group["id"].removeprefix("cxg-")}.md'
@@ -868,10 +873,11 @@ def crosswalk_page(atlas: dict) -> str:
            '| What became of it | ' + ' | '.join(carried) + ' |', '|---|' + '---:|' * len(carried), '| Entries | ' + ' | '.join(map(str, totals_c)) + ' |', '',
            '| Relation | ' + ' | '.join(relations) + ' |', '|---|' + '---:|' * len(relations), '| Entries | ' + ' | '.join(map(str, totals_r)) + ' |', '',
            _no_relation(entries, totals_r), '',
+           START_HERE, '',
            f'![How the earlier folders and the domains of thought meet the live account]({_href(OVERVIEW)})', '',
            '*Drawn by connection_map.py from the crosswalk’s claims, on the pages its table links: each thread joins a folder or domain to the part of the account its '
            'claims are read against, coloured by relation, and every thread is an AI reading, no person’s. To explore the same data, '
-           f'open [the connection map]({_href(ATLAS + "/map.html")}) on the reader’s site, once it is published, or from a clone; GitHub shows it only as source.*', '',
+           f'open the connection map: on the reader’s site its Connections page, or [map.html]({_href(ATLAS + "/map.html")}) opened from a clone; GitHub shows map.html only as source.*', '',
            *_crosswalk_lead(atlas, ATLAS),
            '<a id="the-groups"></a>', '', f'{len(entries)} entries in {len(groups)} groups, each on its own page:', '',
            '| Group | Entries | ' + ' | '.join(carried) + ' | ' + ' | '.join(relations) + ' | ' + ' | '.join(f'agreement of {a}' for a in agreements) + ' |',

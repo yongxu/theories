@@ -60,6 +60,7 @@ LANE_STEP = 16        # between the lanes of pairs that pass near the grammar
 LABEL_MIN = 15        # counts written on the picture
 LEAD = 5              # how much nearer its own curve than any other a count must stand
 BAR_MIN = 16          # the narrowest bar in the shared laws' strip
+SPOKE_MAX = 6         # a spoke's extra width when every module of its chapter states its laws on the grammar
 STANDING_FILL = ('#1c1917', '#57534e', '#a8a29e', '#e7e5e4')  # derived, under a hypothesis, counting, at a distance
 LEGEND_X = 470
 INK, MUTED, FAINT, PAPER = '#1c1917', '#57534e', '#a8a29e', '#fcfcfb'
@@ -668,12 +669,12 @@ def svg(graph, s, lang, info=None):
         gx, gy = cx + (GR + 2) * math.cos(a), cy + (GR + 2) * math.sin(a)
         sx, sy = x - (r[k] + 2) * math.cos(a), y0 - (r[k] + 2) * math.sin(a)
         share = modules[k][1] / modules[k][0] if modules[k][0] else 0
-        out.append(f'<line x1="{f(sx)}" y1="{f(sy)}" x2="{f(gx)}" y2="{f(gy)}" stroke="{FAINT}" stroke-opacity="0.75" '
-                   f'stroke-width="{f(1 + 9 * share)}" stroke-linecap="round"/>')
-        spoke_soft += [(sx + (gx - sx) * i / 40, sy + (gy - sy) * i / 40, (1 + 9 * share) / 2 + 1) for i in range(41)]
+        out.append(f'<line x1="{f(sx)}" y1="{f(sy)}" x2="{f(gx)}" y2="{f(gy)}" stroke="{FAINT}" stroke-opacity="0.45" '
+                   f'stroke-width="{f(1 + SPOKE_MAX * share)}" stroke-linecap="round"/>')
+        spoke_soft += [(sx + (gx - sx) * i / 40, sy + (gy - sy) * i / 40, (1 + SPOKE_MAX * share) / 2 + 1) for i in range(41)]
     out.append(f'<circle cx="{f(cx)}" cy="{f(cy)}" r="{GR}" fill="#f5f5f4" stroke="{INK}" stroke-width="1.5"/>')
     out.append(text(cx, cy - 2, words['grammar'], 15 if lang == 'en' else 17, 'bold', 'middle'))
-    out.append(text(cx, cy + 16, words['concepts'].format(n=concepts), 12, anchor='middle', fill=MUTED))
+    out.append(text(cx, cy + 16, words['concepts'].format(n=concepts), 13, anchor='middle', fill=MUTED))
     # curves between chapters
     for c in L['curves']:
         if c['kind'] == 'formal-reuse':
@@ -822,8 +823,8 @@ def svg(graph, s, lang, info=None):
     x0, y = LEGEND_X, low
     out.append(text(x0, y, words['read'], 16, 'bold'))
     y += 26
-    out.append(f'<circle cx="{x0 + 13}" cy="{y - 5}" r="10" fill="#ffffff" stroke="{INK}" stroke-width="1.5"/>')
-    out.append(text(x0 + 13, y - 1, '01', 10, 'bold', 'middle', MUTED))
+    out.append(f'<circle cx="{x0 + 13}" cy="{y - 5}" r="12" fill="#ffffff" stroke="{INK}" stroke-width="1.5"/>')
+    out.append(text(x0 + 13, y - 0.5, '01', 13, 'bold', 'middle', MUTED))
     width = 50 if lang == 'en' else 42
     y = legend_line(out, x0, y, words['size'], lang, size=14, width=width, step=18)
     samples = [
@@ -831,7 +832,7 @@ def svg(graph, s, lang, info=None):
         (f'<line x1="{x0}" y1="{{y}}" x2="{x0 + 26}" y2="{{y}}" stroke="{BACKWARD}" stroke-width="3.2" marker-end="url(#back)"/>', words['backward']),
         (f'<line x1="{x0}" y1="{{y}}" x2="{x0 + 26}" y2="{{y}}" stroke="{MUTED}" stroke-width="1.7" stroke-dasharray="6 4" marker-end="url(#thin)"/>', words['interpretive'].format(m=INTERPRETIVE_MIN)),
         (f'<line x1="{x0}" y1="{{y}}" x2="{x0 + 26}" y2="{{y}}" stroke="{MUTED}" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>', words['application']),
-        (f'<line x1="{x0}" y1="{{y}}" x2="{x0 + 26}" y2="{{y}}" stroke="{FAINT}" stroke-width="6" stroke-linecap="round"/>', words['spoke']),
+        (f'<line x1="{x0}" y1="{{y}}" x2="{x0 + 26}" y2="{{y}}" stroke="{FAINT}" stroke-opacity="0.45" stroke-width="4" stroke-linecap="round"/>', words['spoke']),
         ('', words['related'].format(n=f'{related:,}' if lang == 'en' else related, m=DRAW_MIN, k=LABEL_MIN)),
     ]
     for mark, body in samples:
@@ -839,8 +840,8 @@ def svg(graph, s, lang, info=None):
             out.append(mark.format(y=f(y - 5)))
         y = legend_line(out, x0, y, body, lang, size=14, width=width, step=18)
     height = int(max(y, left_bottom)) + 50
-    for i, line in enumerate(wrap(words['footer'], 120 if lang == 'en' else 110, lang)):
-        out.append(text(24, height - 30 + 15 * i, line, 12, fill=MUTED))
+    for i, line in enumerate(wrap(words['footer'], 112 if lang == 'en' else 102, lang)):
+        out.append(text(24, height - 30 + 16 * i, line, 13, fill=MUTED))
     out.append('</svg>')
     out[0] = out[0].replace(f'viewBox="0 0 {W} {H}" width="{W}" height="{H}"', f'viewBox="0 0 {W} {height}" width="{W}" height="{height}"')
     out = [o.replace(f'height="{H - 1}" rx="10"', f'height="{height - 1}" rx="10"') if o.startswith('<rect x="0.5"') else o for o in out]
@@ -887,7 +888,7 @@ def laws_strip(out, s, lang, top, derived):
             out.append(text(x, y + 51, words['law_rep'], 13, fill=MUTED))
     y += 51 + 20
     for i, line in enumerate(notes):
-        out.append(text(32, y + 16 * i, line, 12.5, fill=MUTED))
+        out.append(text(32, y + 16 * i, line, 13, fill=MUTED))
     return top + height
 
 
@@ -972,9 +973,9 @@ def standings_svg(s, lang):
     y += 8
     based = edge_bases()[0]
     for paragraph in words['footer']:
-        for line in wrap(paragraph.format(b=based, r=total - based), 118 if lang == 'en' else 108, lang):
-            out.append(text(24, y, line, 12.5, fill=MUTED))
-            y += 16
+        for line in wrap(paragraph.format(b=based, r=total - based), 112 if lang == 'en' else 102, lang):
+            out.append(text(24, y, line, 13, fill=MUTED))
+            y += 17
         y += 4
     height = int(y + 14)
     out.append('</svg>')
@@ -1446,6 +1447,10 @@ def section(graph, page_path):
              'Edges from the results of the first region to the results of the second, by the kind each record gives its '
              'dependence (`formal-reuse`, `interpretive`, `application`) and its `related` list (analogy, not a '
              'dependence). A row whose two regions are the same counts edges within the region.', '',
+             'First, one table per kind among the eight chapters: a row is the chapter whose results use, a column the chapter '
+             'whose results are used, the diagonal within a chapter, and a dot none.', '',
+             *edge_matrices(pairs, s, 'en'),
+             'Then every pair, the regions beyond the eight chapters included:', '',
              '| Edges from results of | to results of | formal-reuse | interpretive | application | related |',
              '|---|---|---:|---:|---:|---:|']
     full = list(theory_graph.REGION_ORDER)
@@ -1455,6 +1460,25 @@ def section(graph, page_path):
             lines.append(f'| {name.get(a, a)} | {name.get(b, b)} | {c["formal-reuse"]} | {c["interpretive"]} | '
                          f'{c["application"]} | {c["related"]} |')
     return lines
+
+
+def edge_matrices(pairs, s, lang):
+    """One 8 by 8 table per edge kind, rows the citing chapter and columns the cited one, the diagonal within a chapter;
+    a dot where there is none. The list under them gives every pair, the regions beyond the eight chapters included."""
+    order = s['order']
+    num = {k: s['chapters'][k]['file'][:2] for k in order}
+    short = {k: (theory_graph.REGION_TITLES[k].split(':')[0].removeprefix('The ').capitalize() if lang == 'en' else s['chapters'][k]['zh']) for k in order}
+    out = []
+    for kind in KINDS:
+        head = (f'**{kind}**' + (' (analogy, not a dependence)' if kind == 'related' and lang == 'en' else
+                                 '（类比，不是依赖）' if kind == 'related' else ''))
+        out += [head, '', ('| from \\ to | ' if lang == 'en' else '| 从 \\ 到 | ') + ' | '.join(num[k] for k in order) + ' |',
+                '|---|' + '---:|' * len(order)]
+        for a in order:
+            cells = [str(pairs.get((a, b), {}).get(kind, 0) or '·') for b in order]
+            out.append(f'| {num[a]} {short[a]} | ' + ' | '.join(cells) + ' |')
+        out.append('')
+    return out
 
 
 def zh_page(graph):
@@ -1551,6 +1575,9 @@ def zh_page(graph):
              '从第一个区域的结果到第二个区域的结果的边，按各记录给其依赖的种类（`formal-reuse`、`interpretive`、`application`）'
              '与其 `related` 列表（类比，不是依赖）计。两个区域相同的一行，计该区域之内的边。区域以其所在章在总览中的标题称之；'
              '英文区域名见[英文版](THEORY-GRAPH.md#the-regions)。', '',
+             '先是八章之间每一种边各一张表：行是使用者结果所在的章，列是被使用者结果所在的章，对角线是一章之内，圆点表示没有。', '',
+             *edge_matrices(pairs, s, 'zh'),
+             '再是每一对区域，八章以外的区域也在内：', '',
              '| 从此区域的结果 | 到此区域的结果 | formal-reuse | interpretive | application | related |',
              '|---|---|---:|---:|---:|---:|']
     full = list(theory_graph.REGION_ORDER)
