@@ -26,7 +26,7 @@ Delta: the relation read as one of a flow's (affecting, being affected, feeding)
 Supplied premises / correspondence: which flow relation; which formations are the standpoints (a reading); the
   class (the one, as the own-closure reading takes it); significance read as own closure; finitely many formations
   and decided reach for covering.
-Evidence: Becoming.FlowCenters, 32 theorems, no axioms (scratch build 9 November 2026; the core run's receipt at
+Evidence: Becoming.FlowCenters, 33 theorems, no axioms (scratch build 9 November 2026; the core run's receipt at
   landing).
 Boundary: Clearing.returning_apart, Clearing.clearer_beyond_returning_feeding, Drawing.returning_feeding_apart,
   Unexchanged.apart.
@@ -71,4 +71,4 @@ And still supplied beyond these: that significance is own closure at all (07 §1
 
 ## 7. Readers
 
-One AI reader of another model (Fable 5.1), cold, read-only, against the Lean: round 1 found no high finding, three medium and nine low; all were taken (one, the Clearing verdict witness, had been tightened before the report arrived and went to round 2 with the corrections). Round 2 read the corrections. The reports are in [READER.md](READER.md). No person's review is recorded.
+One AI reader of another model (Fable 5.1), cold, read-only, against the Lean: round 1 found no high finding, three medium and nine low; all were taken (one, the Clearing verdict witness, had been tightened before the report arrived and went to round 2 with the corrections). Round 2 read the corrections and found no high or medium finding, three low, all taken. The reports are in [READER.md](READER.md). No person's review is recorded.

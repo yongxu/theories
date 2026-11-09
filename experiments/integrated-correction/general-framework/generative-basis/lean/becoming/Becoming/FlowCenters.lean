@@ -67,8 +67,8 @@ read two ways: every formation, as 03 reads them; or only the formations whose a
   along affecting and along being affected, and not along feeding
   (`Drawing.returning_feeding_apart`).
 * **Failed candidates, kept.** Covering from activity along feeding, by the returning formations:
-  in `Clearing` the clearer takes part, and lies within the feeding closure of no formation whose
-  acts return (`Clearing.clearer_beyond_returning_feeding`). Standpoints read as bearing on
+  in `Clearing` the clearer takes from its resource, and lies within the feeding closure of no
+  formation whose acts return (`Clearing.clearer_beyond_returning_feeding`). Standpoints read as bearing on
   themselves (`Web.SelfBearing`) as well as returning: in `Unexchanged` every formation's acts
   return and none bears on itself, so that reading has no standpoint and, there being formations,
   covers none of them; there the

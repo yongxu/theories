@@ -52,3 +52,19 @@ The reader's report, as returned:
 | 10 | yes | The note's table says "not proved here" for that row. |
 | 11 | yes | Added. |
 | 12 | yes | "there being formations, covers none of them". |
+
+## Round 2 (9 November 2026)
+
+The same reader read the corrections (`git diff 56964d2c1 5ef2eac33`) and the Lean they compose. Its findings, in short (AI-written summary of the report; the reader's words are quoted where it matters):
+
+- The new `Flow.returning_unrestricted_iff_mutuallyDependent` is correct, and is stated everywhere with "given one" and with its forward direction named as the new one.
+- `Clearing.returning_loses_dweller` is correct. On "the verdict changes with the center alone" the reader wrote: "Yes. Both conjuncts use the same content (own closure along being affected, held de se); only the center changes". It also noted, as a nuance the prose need not add, that the two standpoint types differ (`Unit` and `Returning`), while the content function is one.
+- Every round-1 finding is fixed; finding 7 is fixed differently, with the new dependencies' records checked.
+- **High:** nothing. **Medium:** nothing.
+- **Low**, all taken:
+  - the note said 32 theorems where the module now has 33;
+  - "by the joining lemma" stood for an iff whose other direction is G3's `Flow.mutuallyDependent_iff_unrestricted` (or one line from `ownClosure_unrestricted_iff`), and 07 now names both;
+  - the module docstring's last bullet kept "takes part" where every other place says "takes from its resource".
+- The Chinese of the changed sentences matches the English.
+
+No round 3: round 2 had no high or medium finding.
