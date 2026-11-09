@@ -388,6 +388,7 @@ import Becoming.FlowCenters
 import Becoming.PersistingChoices
 import Becoming.BeyondCoupling
 import Becoming.OwnClass
+import Becoming.FromTheDynamics
 import Becoming.SignificanceStatements
 
 /-!

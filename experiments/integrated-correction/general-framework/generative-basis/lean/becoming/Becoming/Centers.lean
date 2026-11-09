@@ -65,9 +65,10 @@ theorem InOneLoop.trans (first : L.InOneLoop W f g) (second : L.InOneLoop W g h)
     L.InOneLoop W f h :=
   ⟨first.1.trans second.1, second.2.trans first.2⟩
 
-/-- **A formation's acts return**: whatever it can affect can affect it. -/
+/-- **A formation's acts return**: whatever it can affect can affect it. It is returning along
+affecting (`ReturnsAlong`, of the frame). -/
 def ReachReturns (L : Flow F C) (W : Web F C) (f : F) : Prop :=
-  ∀ g, L.WithinReach W f g → L.WithinReach W g f
+  ReturnsAlong (L.Affects W) f
 
 theorem reachReturns_iff_loop : L.ReachReturns W f ↔ ∀ g, L.WithinReach W f g → L.InOneLoop W f g :=
   ⟨fun returns g within => ⟨within, returns g within⟩, fun loop g within => (loop g within).2⟩

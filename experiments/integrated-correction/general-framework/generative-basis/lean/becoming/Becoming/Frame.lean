@@ -28,7 +28,10 @@ transitive, grows with the relation, is symmetric under a symmetric relation, an
 within it bears the relation to what lies beyond it (`WithinClosure.refl`,
 `WithinClosure.trans`, `WithinClosure.mono`, `WithinClosure.symm`, `WithinClosure.not_rel`).
 A region is an element's closure exactly when it holds the element, is closed and lies within
-the closure (`closure_iff_certified`). A group's closure is the union of its members' closures
+the closure (`closure_iff_certified`). An element *returns* along a relation where whatever lies
+within its closure has it within its own (`ReturnsAlong`); its closure is then its loop, and one
+returning element whose closure is the whole makes every closure the whole (`ReturnsAlong.loop`,
+`ReturnsAlong.whole`). A group's closure is the union of its members' closures
 (`WithinClosureOf`). A process's reach is the closure of its steps
 (`reach_iff_withinClosure`), and an invariant is a region closed under them
 (`invariant_iff_closedUnder`), so what holds where a process starts and is kept by its steps
@@ -37,7 +40,9 @@ the later layers, under feeding, influence, reach, sharing, coupling and pooled 
 the scope a presupposition reaches, are this closure under their relations. `ClosedUnder`,
 `WithinClosure` and their laws moved here unchanged, with their names, from
 `Becoming.Feedback`, and `WithinClosureOf` from `Becoming.Selection`, now defined as the union it
-was proved to be (board item EC1, 21 October 2026), all stated for elements of any type.
+was proved to be (board item EC1, 21 October 2026), all stated for elements of any type. `ReturnsAlong`
+and its three laws moved here, with their names, from `Becoming.FlowCenters` (route (b)'s join,
+9 November 2026), and `Flow.ReachReturns` of `Becoming.Centers` is its case along affecting.
 -/
 
 namespace Becoming
@@ -149,6 +154,28 @@ theorem not_within_of_closed {X : Type u} {rel : X → X → Prop} {region : X �
     (closed : ClosedUnder rel region) (holds : region f) (outside : ¬ region g) :
     ¬ WithinClosure rel f g :=
   «闭而外则不所闭» closed holds outside
+
+/-- `c` *returns* along a relation: whatever lies within its closure has `c` within its own
+closure. Along affecting this is `Flow.ReachReturns`: whatever a formation can affect can affect
+it. -/
+def ReturnsAlong {X : Type u} (rel : X → X → Prop) (c : X) : Prop :=
+  ∀ g, WithinClosure rel c g → WithinClosure rel g c
+
+/-- A returning element's own closure is its loop: what lies within it has the element within its
+own closure. -/
+theorem ReturnsAlong.loop {X : Type u} {rel : X → X → Prop} {c g : X} (returns : ReturnsAlong rel c)
+    (within : WithinClosure rel c g) : WithinClosure rel c g ∧ WithinClosure rel g c :=
+  ⟨within, returns g within⟩
+
+/-- Where every closure is the whole, every element returns. -/
+theorem returnsAlong_of_whole {X : Type u} {rel : X → X → Prop}
+    (whole : ∀ f g, WithinClosure rel f g) (c : X) : ReturnsAlong rel c :=
+  fun g _ => whole g c
+
+/-- **One returning element whose closure is the whole makes every closure the whole.** -/
+theorem ReturnsAlong.whole {X : Type u} {rel : X → X → Prop} {c : X} (returns : ReturnsAlong rel c)
+    (whole : ∀ g, WithinClosure rel c g) : ∀ f g, WithinClosure rel f g :=
+  fun f g => (returns f (whole f)).trans (whole g)
 
 /-- `g` lies within a group's closure under a relation: within some member's closure. -/
 def WithinClosureOf {X : Type u} (rel : X → X → Prop) (group : X → Prop) (g : X) : Prop :=
