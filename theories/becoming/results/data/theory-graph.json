@@ -1845,6 +1845,18 @@
    "page": "theories/becoming/results/records/coupling-closures-of-training-pipelines.md"
   },
   {
+   "id": "record:covering-by-the-returning-formations",
+   "type": "result",
+   "record": "covering-by-the-returning-formations",
+   "title": "Covering by the returning formations",
+   "title_zh": "由回返构成的覆盖",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/covering-by-the-returning-formations.md"
+  },
+  {
    "id": "record:degeneration-from-a-horizon",
    "type": "result",
    "record": "degeneration-from-a-horizon",
@@ -5191,6 +5203,18 @@
    "region": "root",
    "base": "grammar",
    "page": "theories/becoming/results/records/standings-not-read-off-the-occurrence-model.md"
+  },
+  {
+   "id": "record:standpoints-read-off-a-flow",
+   "type": "result",
+   "record": "standpoints-read-off-a-flow",
+   "title": "The standpoints and the relation read off a flow",
+   "title_zh": "从流读出的立场与关系",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/standpoints-read-off-a-flow.md"
   },
   {
    "id": "record:steps-met-again-after-a-fall",
@@ -11019,6 +11043,17 @@
    "theorems": 74,
    "region": "significance",
    "base": "general",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.FlowCenters",
+   "type": "module",
+   "name": "Becoming.FlowCenters",
+   "level": "L2",
+   "theorems": 33,
+   "region": "significance",
+   "base": "old-base",
    "on_grammar": true,
    "reaches_grammar": true
   },
@@ -31166,6 +31201,18 @@
    "anchor": "r-constancy-read-at-a-members-class"
   },
   {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-standpoints-read-off-a-flow",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-standpoints-read-off-a-flow"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-covering-by-the-returning-formations",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-covering-by-the-returning-formations"
+  },
+  {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-ranking-under-readings",
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -32775,6 +32822,26 @@
   {
    "from": "module:Becoming.Flow",
    "to": "module:Becoming.Witnesses",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.FlowCenters",
+   "to": "module:Becoming.Centers",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.FlowCenters",
+   "to": "module:Becoming.GrammarScope",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.FlowCenters",
+   "to": "module:Becoming.MutualDependence",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.FlowCenters",
+   "to": "module:Becoming.Weightings",
    "type": "imports"
   },
   {
@@ -41848,6 +41915,36 @@
    "from": "record:coupling-closures-of-training-pipelines",
    "to": "record:alignment-approaches-under-the-selection-laws",
    "type": "application"
+  },
+  {
+   "from": "record:covering-by-the-returning-formations",
+   "to": "module:Becoming.FlowCenters",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:covering-by-the-returning-formations",
+   "to": "record:continuation-condition-decomposition",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:covering-by-the-returning-formations",
+   "to": "record:self-concern-through-dependence",
+   "type": "related"
+  },
+  {
+   "from": "record:covering-by-the-returning-formations",
+   "to": "record:standpoints-read-off-a-flow",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:covering-by-the-returning-formations",
+   "to": "record:what-the-step-across-standpoints-reaches",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:covering-by-the-returning-formations",
+   "to": "record:where-a-formations-acts-return",
+   "type": "formal-reuse"
   },
   {
    "from": "record:degeneration-from-a-horizon",
@@ -54689,6 +54786,61 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:standpoints-read-off-a-flow",
+   "to": "module:Becoming.FlowCenters",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:standpoints-read-off-a-flow",
+   "to": "record:covering-by-the-returning-formations",
+   "type": "related"
+  },
+  {
+   "from": "record:standpoints-read-off-a-flow",
+   "to": "record:derived-extent-limits",
+   "type": "related"
+  },
+  {
+   "from": "record:standpoints-read-off-a-flow",
+   "to": "record:levels-of-closure",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:standpoints-read-off-a-flow",
+   "to": "record:loss-beyond-a-region",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:standpoints-read-off-a-flow",
+   "to": "record:mutual-dependence-and-its-pace",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:standpoints-read-off-a-flow",
+   "to": "record:self-concern-through-dependence",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:standpoints-read-off-a-flow",
+   "to": "record:the-continuation-condition-on-the-root",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:standpoints-read-off-a-flow",
+   "to": "record:what-the-step-across-standpoints-reaches",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:standpoints-read-off-a-flow",
+   "to": "record:where-a-formations-acts-return",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:standpoints-read-off-a-flow",
+   "to": "record:whole-and-regions-and-bounded-centers",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:steps-met-again-after-a-fall",
    "to": "module:Becoming.Optimum",
    "type": "proved-in"
@@ -63473,6 +63625,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-covering-by-the-returning-formations",
+   "to": "record:covering-by-the-returning-formations",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-derived-extent-limits",
    "to": "record:derived-extent-limits",
    "type": "states"
@@ -63650,6 +63807,11 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-significance-through-a-common-condition",
    "to": "record:significance-through-a-common-condition",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-standpoints-read-off-a-flow",
+   "to": "record:standpoints-read-off-a-flow",
    "type": "states"
   },
   {

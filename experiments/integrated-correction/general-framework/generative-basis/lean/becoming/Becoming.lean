@@ -384,6 +384,7 @@ import Becoming.PremiseWitnesses
 import Becoming.PremisesTogether
 import Becoming.GrammarPath
 import Becoming.RoutesToC
+import Becoming.FlowCenters
 import Becoming.OwnClass
 import Becoming.SignificanceStatements
 
@@ -4714,13 +4715,29 @@ tagged instance or application.
   (`Weighting.increasing_iff_one_step`). On a listing of what lies downstream, P2 and P4 of the path in
   07 §4.6 with self-concern give increasing in admission
   (`Weighting.increasing_on_downstream_of_regularity`). A leaf; short laws, none new as mathematics.
-* `Becoming.OwnClass` (L2, through `Becoming.GrammarScope` and `Becoming.Centers`): a center's own class,
+* `Becoming.FlowCenters` (L2, through `Becoming.GrammarScope`): the standpoints and the relation of the
+  own-closure reading read off a flow (board item ZA-G1, route (b)'s first piece). An element returns along a
+  relation where whatever lies within its closure has it within its own (`ReturnsAlong`); held de se at the
+  returning elements, given one, the presupposition is the condition exactly where every closure is the whole
+  (`ownClosure_unrestricted_atReturning_iff`). On a flow the formations whose acts return (`Flow.Returning`) are
+  one reading of the standpoints and every formation the other: held de se along affecting at the returning
+  formations the condition gives mutual dependence (`Flow.mutuallyDependent_of_returning_unrestricted`, and its
+  root form), along feeding with every formation a center it is mutual feeding (`Flow.mutuallyFed_iff_unrestricted`).
+  On finitely many formations with reach decided every formation lies within the influence closure of a returning
+  one (`Flow.covered_by_returning`), so the step along being affected at them gives the condition
+  (`Flow.unrestricted_of_returning_standpointInvariant`), and held de se along being affected the condition is
+  that they lie in one loop (`Flow.returning_influence_unrestricted_iff`). Witnesses: `Clearing.returning_apart`
+  (only the dweller returns; the supplied clearer and it part), `Clearing.clearer_beyond_returning_feeding`,
+  `Drawing.returning_feeding_apart`, `Unexchanged.apart`. Which relation and which reading of the standpoints
+  stay choices. A leaf; short compositions, none new as mathematics.
+* `Becoming.OwnClass` (L2, through `Becoming.GrammarScope`, `Becoming.Centers` and `Becoming.FlowCenters`): a center's own class,
   what the net fixes of it (board item ZC, route (b)'s de se piece). At an occurrence that conditions
   something, a class meeting 07 §4.6's P2 and P4 has its block closed under the net, and the converse
   holds where it is decided of each alike occurrence whether it conditions something
   (`«本类常闭当且仅当类闭»`), so the classes meeting both are closed under meets (`«本类常闭之交»`, `«本类常闭之遍交»`) and
   not under joins (`JoinBreaks`); the least is the occurrence with everything downstream of it (`«后类»`,
-  `«后类最细»`), and every one reaches what the one reaches (`«本类常闭则所及即一之所及»`), so with each
+  `«后类最细»`), meeting both with no decision at an element returning along the net
+  (`ReturnsAlong.downstreamClass_regular`), and every one reaches what the one reaches (`«本类常闭则所及即一之所及»`), so with each
   center under such a class the per-center condition along the net is that at the one
   (`«各本类常闭则续无外即一之续无外»`). The identity meets P2 everywhere and P4 nowhere an effect differs
   from oneself (`«静之本类至终有常»`, `«静不闭»`); P2 alone is not closed under meets (`MeetBreaks`). Read

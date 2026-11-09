@@ -1,6 +1,7 @@
 import Becoming.GrammarPath
 import Becoming.GrammarScope
 import Becoming.Centers
+import Becoming.FlowCenters
 
 /-!
 # A center's own class: what the net fixes of it (本类之定)
@@ -30,8 +31,8 @@ module answers it for the classes meeting P2 and P4, and reads the class on a fl
   P2 and P4 at `m`, it does too (`«后类本类常闭»`); so it is the least such class (`«后类最细»`). It
   holds `m`'s effects with no premise, and meets P2 wherever it is decided, of each occurrence downstream
   of `m`, whether it conditions something (`«判则后类本类常闭»`), and with no decision wherever everything
-  within `m`'s closure has `m` within its own, as at an element whose closure returns to it
-  (`«返则后类本类常闭»`).
+  within `m`'s closure has `m` within its own, as at an element returning along the net in
+  `Becoming.FlowCenters`'s sense (`«返则后类本类常闭»`, `ReturnsAlong.downstreamClass_regular`).
 * **Every class meeting P2 and P4 reaches what the one reaches (本类常闭则所及即一之所及).** From a
   member, a line under any class meeting P2 and P4 there reaches exactly what a line under the one
   reaches: the member and everything downstream of it (`«本类常闭则所及即一之所及»`). Given P2, P4 is
@@ -398,6 +399,15 @@ theorem «无环则返之所及唯己» {R : «际» α} (acyclic : «无环» R
     | .inr a, .inr b => absurd («及之传递» a b) (acyclic f)
 
 end OwnClass
+
+/-- **At an element returning along the net (`ReturnsAlong`, `Becoming.FlowCenters`), the element's class of
+what follows it meets P2 and P4, and is the least class meeting them.** `ReturnsAlong` is the hypothesis of
+`«返则后类本类常闭»`, stated through `WithinClosure`. -/
+theorem ReturnsAlong.downstreamClass_regular {X : Type} {R : «际» X} {m : X} (returns : ReturnsAlong R m) :
+    («本类至终有常» R («后类» R m) m ∧ «所缘同于» R («后类» R m) m) ∧
+      ∀ E, «类» E → «本类至终有常» R E m → «所缘同于» R E m → «则» («后类» R m) E :=
+  have regular := «返则后类本类常闭» returns
+  «后类最细» ⟨_, «后类为类» R m, regular.1, regular.2⟩
 
 /-! ## Witnesses -/
 

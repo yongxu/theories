@@ -1,20 +1,17 @@
-# Ren: how far the zero-axiom target is; route (b), ethics forming within the dynamics, "请平行化认真完成"
+# Ren's words for route (b), 9 November 2026 (kept verbatim; the quoted AI text is AI-written)
 
-9 November 2026. Ren's words from a Claude Code desktop session in `/Users/ren/theories` (a fork of AG's session "生灭变化理论"), kept verbatim. They are provenance, not authority (AGENTS.md). AI-written context and the AI text Ren quoted are labelled as such. This file was put here by the first route (b) piece to land (ZC, the own class), from the shared notes of the four route (b) sessions (`/Users/ren/tmp/za-how-far/route-b/SOURCE.md`). The readings Ren asked about are in `/Users/ren/tmp/za-how-far/`: three AI readers and a checker.
+Context: a fork of the AG session ("生灭变化理论 (fork)"), after Ren's correction of the first screen's ethics
+("there is no warrant, ethics emerges from continuation condition, not another way around, there is no any
+dualistic good or evil", kept as message 9 of `sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md`
+on the AG branch).
 
-## Context (AI-written)
-
-Ren had corrected the first screen's ethics earlier that day: "there is no warrant, ethics emerges from continuation condition, not another way around, there is no any dualistic good or evil". Those words are message 9 of `2026-11-09-agents-the-map.md` on AG's branch. A session summary then listed what is not yet proved. Ren quoted one line of it and asked how far that target is. After the readers' answer he quoted its route (b) section and wrote one line. The work then split into four parallel pieces, each landing separately: G1 (centers read off a flow), G2 (a center's own class, board row ZC), G3 (self-concern from persistence, row ZA) and the bound (row ZB).
-
-## Ren's words
-
-### 1 (quoting an AI summary line, then asking)
+## 1 (quoting an AI summary line, then asking)
 
 > * 尚未证明：条件本身从动力中形成，这是零公理目标。 这个还差多远？我一直以为这个是主要目标
 
-His words are "这个还差多远？我一直以为这个是主要目标". The starred line is the AI's.
+His words are "这个还差多远？我一直以为这个是主要目标"; the starred line is the AI's.
 
-### 2 (after the AI's answer: he quoted its route (b) section, AI-written, then wrote one line)
+## 2 (after the AI's answer; he quoted its route (b) section, AI-written, then wrote one line)
 
 AI-written text he quoted:
 
@@ -28,3 +25,5 @@ AI-written text he quoted:
 His words (10:34 UTC):
 
 > ok - 这一类请平行化认真完成，非常重要
+
+The first route (b) piece to land (ZA-G1) put this file here, copied from the pieces' shared notes (this line AI-written); the pieces' rows on the work board cite it.
