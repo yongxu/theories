@@ -4715,7 +4715,7 @@ tagged instance or application.
   07 §4.6 with self-concern give increasing in admission
   (`Weighting.increasing_on_downstream_of_regularity`). A leaf; short laws, none new as mathematics.
 * `Becoming.PersistingChoices` (L2, through `Becoming.Weightings` and `Becoming.MutualDependence`): what
-  persisting shows of an order, and which class is one's own (board item ZA). Mutual dependence gives the
+  persisting shows of an order (board item ZA). Mutual dependence gives the
   continuation condition held de se along being affected and along affecting, each exactly mutual dependence
   where every formation is a center (`Flow.unrestricted_of_mutuallyDependent`,
   `Flow.mutuallyDependent_iff_unrestricted`). Some strict order accords with choices and makes required
@@ -4727,11 +4727,8 @@ tagged instance or application.
   is at stake on the occasions met, its choices are consistent with an order increasing in its own
   continuation on those occasions (`Flow.persisting_consistent_with_selfConcern`); off them a consistent order
   reverses it (`ChoiceOccasions.reversed_off_met`), and a persisting chooser choosing by a strict order of its
-  own, never ending, is consistent with none (`PersistingChoices.Forgoing.persists_not_selfConcerned`). On
-  the root, where a member conditions something, the classes meeting P2 and P4 at it are closed under meets
-  and have a least one, the member with everything downstream of it (`OwnClass.downstreamClass_least`,
-  `OwnClass.meet_constant_at`), under each of which its line reaches exactly what lies downstream of it
-  (`OwnClass.reach_iff_downstream`). A leaf; short laws, none new as mathematics.
+  own, never ending, is consistent with none (`PersistingChoices.Forgoing.persists_not_selfConcerned`). A
+  leaf; short laws, none new as mathematics.
 * `Becoming.GrammarPath` (L1): what a line under a class must hold, and what a regularity takes in
   (board item PF), for every carrier, relation and class. Where a region is left under a class only
   into a set, a line under the class from inside to outside holds a member of that set alike to its

@@ -1,15 +1,15 @@
 import Becoming.Weightings
 import Becoming.MutualDependence
 import Becoming.ShownOrder
-import Becoming.GrammarPath
 
 /-!
-# PersistingChoices: what persisting shows of an order, and which class is one's own (所续之示)
+# PersistingChoices: what persisting shows of an order (所续之示)
 
 Self-concern, an order increasing in one's own continuation (`Weighting.IncreasingInOwn`), enters every
 ranking result that uses it as a hypothesis, and the continuation condition read de se takes its relation
-and its class as given. This module asks what the dynamics give in their place, in three parts, and where
-each stops (board item ZA).
+and its class as given. This module asks what the dynamics give in place of self-concern, and where a
+center's closure is the whole, and where each stops (board item ZA; which class is one's own is board item
+ZC's, `Becoming.OwnClass`, and which formations are centers ZA-G1's, `Becoming.FlowCenters`).
 
 * **Mutual dependence gives the condition held de se, along being affected and along affecting.** In a
   mutually dependent flow, significance held de se as what lies within a center's closure under being
@@ -59,19 +59,6 @@ each stops (board item ZA).
   in its own continuation on the occasion met, the chosen course being widened by one adding to the own
   continuation (`PersistingChoices.Forgoing.persists_not_selfConcerned`). Persisting filtered out the
   ending and fixed nothing between degrees of keeping.
-* **Under P2 and P4 the own class has a least form.** On the root, where a member `m` conditions something
-  and some class meets P2 (constant up to the net's end at `m`, `«本类至终有常»`) and P4 (holding `m`'s
-  effects, `«所缘同于»`) at `m`, the class holding `m` with everything downstream of it alike, every other
-  occurrence alike only to itself (`OwnClass.downstreamClass`), meets both
-  (`OwnClass.downstreamClass_constant_at`, `OwnClass.downstreamClass_held`) and lies within every class
-  that does (`OwnClass.downstreamClass_least`). The meet of two such classes meets both
-  (`OwnClass.meet_constant_at`, `OwnClass.meet_held`); under P2, holding the member's effects is exactly
-  containing that class (`OwnClass.held_iff_contains_downstream`, `«本类常则闭当且仅当后皆同类»` read on it);
-  and under every one of them the member's line reaches exactly what lies downstream of it
-  (`OwnClass.reach_iff_downstream`). Where whether each
-  occurrence conditions anything is decided, the one meets both, so the least exists outright
-  (`OwnClass.least_own_class`). These laws are near-definitional. The conjecture that such classes are
-  closed only under joins, with a witness of two whose meet fails, is false.
 
 **Readings** (the AI's; correspondences, not theorems).
 - *Survivorship.* Persisting is a filter on what was chosen, not a mechanism forming an order. Where a choice
@@ -82,16 +69,13 @@ each stops (board item ZA).
   `ChoiceOccasions.Untried`, and for a trained response `Training.response_free_where_unlumped`).
 - *Revealed preference.* `ChoiceOccasions.selfConcerned_consistent_iff` is rationalizing strict choices by a
   strict partial order (Richter 1966) with required comparisons added.
-- *The own class.* Under P2 and P4, which class one's line runs under does not change what that line reaches
-  from oneself, everything downstream of oneself; the classes differ in what else they hold alike to oneself,
-  which bears on what a line reaching such an occurrence carries on (`«本类常闭则所及皆及»`).
 
 **What is not derived.** That an actual formation chooses by a strict order, or among these courses; that a
 chosen course ending what the line depends on is realized as an overdraw (`realized`, the one premise linking
 the choices to the flow); the stake premise; that any order is held, rather than consistent with the choices;
 that persisting selects between degrees of keeping; anything on occasions not met; that an actual web is
 mutually dependent; which relation a center's concern is drawn along, the own-closure reading being supplied;
-that P2 and P4 hold; that the downstream class is anyone's own.
+which formations are centers.
 
 Every declaration has an empty axiom report. No ethical predicate or normative premise is introduced; the
 orders are supplied mathematical relations.
@@ -763,139 +747,5 @@ theorem persists_not_selfConcerned :
   ⟨balances, acting, dependent, descended, persists, order_accords, kept, not_selfConcerned⟩
 
 end PersistingChoices.Forgoing
-
-/-! ## Which class is one's own, under P2 and P4 -/
-
-namespace OwnClass
-
-universe w
-
-variable {α : Type w} {R : «际» α}
-
-/-- **The downstream class of `m`**: `m` and everything downstream of it alike, every other occurrence
-alike only to itself. -/
-def downstreamClass (R : «际» α) (m : α) : «际» α :=
-  fun y z => y = z ∨ ((m = y ∨ «及» R m y) ∧ (m = z ∨ «及» R m z))
-
-/-- It is a class. -/
-theorem downstreamClass_class (m : α) : «类» (downstreamClass R m) where
-  refl _ := .inl rfl
-  symm h := match h with
-    | .inl e => .inl e.symm
-    | .inr ⟨a, b⟩ => .inr ⟨b, a⟩
-  trans {y _ x} h₁ h₂ := match h₁, h₂ with
-    | .inl e, h => Eq.subst (motive := fun q => downstreamClass R m q x) e.symm h
-    | h, .inl e => Eq.subst (motive := fun q => downstreamClass R m y q) e h
-    | .inr ⟨a, _⟩, .inr ⟨_, c⟩ => .inr ⟨a, c⟩
-
-/-- What is alike to `m` under it is `m` or downstream of `m`. -/
-theorem downstream_of_alike {m y : α} (h : downstreamClass R m m y) : m = y ∨ «及» R m y :=
-  match h with
-  | .inl e => .inl e
-  | .inr ⟨_, b⟩ => b
-
-/-- A step from `m` or from what lies downstream of `m` stays downstream of `m`. -/
-theorem downstream_step {m u v : α} (inside : m = u ∨ «及» R m u) (step : R u v) : «及» R m v :=
-  match inside with
-  | .inl e => Eq.subst (motive := fun q => «及» R q v) e.symm (.one step)
-  | .inr down => «及之传递» down (.one step)
-
-/-- **It holds `m`'s effects** (P4 at `m`). -/
-theorem downstreamClass_held (m : α) : «所缘同于» R (downstreamClass R m) m :=
-  fun _ step => .inr ⟨.inl rfl, .inr (.one step)⟩
-
-/-- Under a class meeting P2 and P4 at a member that conditions something, everything downstream of the
-member is alike to it (`«本类常闭则后皆续»`). -/
-theorem alike_of_downstream {E : «际» α} (hE : «类» E) {m : α} (atClass : «本类至终有常» R E m)
-    (goes : ∃ w, R m w) (held : «所缘同于» R E m) {y : α} (inside : m = y ∨ «及» R m y) : E m y :=
-  match inside with
-  | .inl e => Eq.subst (motive := fun q => E m q) e (hE.refl m)
-  | .inr down => hE.symm («本类常闭则后皆续» hE atClass goes held (hE.refl m) down).1
-
-/-- **The least.** Where `m` conditions something, the downstream class lies within every class meeting
-P2 (constant up to the net's end at `m`) and P4 (holding `m`'s effects) at `m`. -/
-theorem downstreamClass_least {E : «际» α} (hE : «类» E) {m : α} (atClass : «本类至终有常» R E m)
-    (goes : ∃ w, R m w) (held : «所缘同于» R E m) : «则» (downstreamClass R m) E :=
-  fun y _ h => match h with
-    | .inl e => Eq.subst (motive := fun q => E y q) e (hE.refl y)
-    | .inr ⟨a, b⟩ => hE.trans (hE.symm (alike_of_downstream hE atClass goes held a))
-        (alike_of_downstream hE atClass goes held b)
-
-/-- **It meets P2.** Where `m` conditions something and some class meets P2 and P4 at `m`, the downstream
-class is constant up to the net's end at `m`. -/
-theorem downstreamClass_constant_at {E : «际» α} (hE : «类» E) {m : α}
-    (atClass : «本类至终有常» R E m) (goes : ∃ w, R m w) (held : «所缘同于» R E m) :
-    «本类至终有常» R (downstreamClass R m) m :=
-  fun u u' mu mu' v step =>
-    match atClass u u' (downstreamClass_least hE atClass goes held m u mu)
-        (downstreamClass_least hE atClass goes held m u' mu') v step with
-    | .inl ⟨v', step', _⟩ => .inl ⟨v', step', .inr ⟨.inr (downstream_step (downstream_of_alike mu) step),
-        .inr (downstream_step (downstream_of_alike mu') step')⟩⟩
-    | .inr stops => .inr stops
-
-/-- The meet of two classes is a class. -/
-theorem meet_class {E E' : «际» α} (hE : «类» E) (hE' : «类» E') : «类» («合» E E') where
-  refl x := ⟨hE.refl x, hE'.refl x⟩
-  symm h := ⟨hE.symm h.1, hE'.symm h.2⟩
-  trans h₁ h₂ := ⟨hE.trans h₁.1 h₂.1, hE'.trans h₁.2 h₂.2⟩
-
-/-- Two classes holding `m`'s effects meet in one holding them. -/
-theorem meet_held {E E' : «际» α} {m : α} (held : «所缘同于» R E m) (held' : «所缘同于» R E' m) :
-    «所缘同于» R («合» E E') m :=
-  fun v step => ⟨held v step, held' v step⟩
-
-/-- **The meet of two classes meeting P2 and P4 at a member that conditions something meets P2 there.**
--/
-theorem meet_constant_at {E E' : «际» α} (hE : «类» E) (hE' : «类» E') {m : α}
-    (atClass : «本类至终有常» R E m) (atClass' : «本类至终有常» R E' m) (goes : ∃ w, R m w)
-    (held : «所缘同于» R E m) (held' : «所缘同于» R E' m) : «本类至终有常» R («合» E E') m :=
-  fun u u' mu mu' v step => match atClass u u' mu.1 mu'.1 v step with
-    | .inl ⟨v', step', _⟩ =>
-      have inE : ∀ {F : «际» α}, «类» F → «本类至终有常» R F m → «所缘同于» R F m → F m u → F m u' →
-          F v v' := fun hF atF heldF au au' =>
-        hF.trans («本类常闭则所缘同类» hF atF goes heldF (hF.symm au) step)
-          (hF.symm («本类常闭则所缘同类» hF atF goes heldF (hF.symm au') step'))
-      .inl ⟨v', step', inE hE atClass held mu.1 mu'.1, inE hE' atClass' held' mu.2 mu'.2⟩
-    | .inr stops => .inr stops
-
-/-- **Under P2, holding a member's effects is containing its downstream class.** Where a class meets P2 at a
-member that conditions something, it holds the member's effects exactly where the downstream class lies within
-it: `«本类常则闭当且仅当后皆同类»` read on that class. The backward direction needs no P2. -/
-theorem held_iff_contains_downstream {E : «际» α} (hE : «类» E) {m : α} (atClass : «本类至终有常» R E m)
-    (goes : ∃ w, R m w) : «所缘同于» R E m ↔ «则» (downstreamClass R m) E :=
-  ⟨fun held => downstreamClass_least hE atClass goes held,
-   fun within v step => within m v (downstreamClass_held m v step)⟩
-
-/-- **Every such class gives the same reach.** Under a class meeting P2 and P4 at a member that
-conditions something, the member's line reaches exactly what lies downstream of it. -/
-theorem reach_iff_downstream {E : «际» α} (hE : «类» E) {m : α} (atClass : «本类至终有常» R E m)
-    (goes : ∃ w, R m w) (held : «所缘同于» R E m) {t : α} : «相续» R E m t ↔ «及» R m t :=
-  ⟨fun line => «相续含于及» R E m t line,
-   fun down => («本类常闭则后皆续» hE atClass goes held (hE.refl m) down).2⟩
-
-/-- Where whether each occurrence conditions anything is decided, the one is constant up to the net's end
-at every member. -/
-theorem one_constant_at (decided : ∀ u, (∃ w, R u w) ∨ ∀ w, ¬ R u w) (m : α) :
-    «本类至终有常» R «一» m :=
-  fun _ u' _ _ _ _ => match decided u' with
-    | .inl ⟨w, step⟩ => .inl ⟨w, step, trivial⟩
-    | .inr stops => .inr stops
-
-/-- The one holds every member's effects. -/
-theorem one_held (m : α) : «所缘同于» R «一» m := fun _ _ => trivial
-
-/-- **Under P2 and P4 the own class has a least form.** Where whether each occurrence conditions anything
-is decided and `m` conditions something, the downstream class of `m` is a class meeting P2 and P4 at `m`
-and lies within every class that does. -/
-theorem least_own_class (decided : ∀ u, (∃ w, R u w) ∨ ∀ w, ¬ R u w) {m : α} (goes : ∃ w, R m w) :
-    «类» (downstreamClass R m) ∧ «本类至终有常» R (downstreamClass R m) m ∧
-      «所缘同于» R (downstreamClass R m) m ∧
-      ∀ E : «际» α, «类» E → «本类至终有常» R E m → «所缘同于» R E m → «则» (downstreamClass R m) E :=
-  ⟨downstreamClass_class m,
-   downstreamClass_constant_at «一为类» (one_constant_at decided m) goes (one_held m),
-   downstreamClass_held m,
-   fun _ hE atClass held => downstreamClass_least hE atClass goes held⟩
-
-end OwnClass
 
 end Becoming
