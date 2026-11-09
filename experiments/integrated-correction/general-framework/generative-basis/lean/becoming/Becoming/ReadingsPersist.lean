@@ -25,7 +25,7 @@ selection is read off the course. No ranking, no ethical premise and no axiom en
 * **The line read off the course.** From founders and a listing of the relata, a member's offspring
   across a step are the listed relata descending from it then (`Flow.lineOf`); the line is G3's
   `Descended` by construction (`Flow.lineOf_descended`). Where readings are inherited along descent
-  (`Flow.Inherits`), every member of every cohort carries the founders' reading (`Flow.lineOf_carries`).
+  (`Flow.InheritsReading`), every member of every cohort carries the founders' reading (`Flow.lineOf_carries`).
   Read a reading as ending where the course its world generates overdraws a family from a short stock.
   Where every occasion picks the reading the line carries and the world is that reading's course, G3's
   premise `realized` is then the identity, ending being defined as that overdraw: nothing is derived about
@@ -302,12 +302,12 @@ theorem lineOf_stands {t : Nat} {x : X} (member : x ∈ (L.lineOf W members firs
 variable (L W) in
 /-- Readings are inherited along descent in the flow: whoever descends from a relatum carries its
 reading. -/
-def Inherits (read : X → Sig) : Prop :=
+def InheritsReading (read : X → Sig) : Prop :=
   ∀ t x g, L.DescendsAt W t x g → read x = read g
 
 /-- **A line carries its founders' reading.** Where readings are inherited along descent and every
 founder carries `sig`, every member of every cohort of the line read off the flow carries `sig`. -/
-theorem lineOf_carries {read : X → Sig} {sig : Sig} (inherits : L.Inherits W read)
+theorem lineOf_carries {read : X → Sig} {sig : Sig} (inherits : L.InheritsReading W read)
     (founders : ∀ x, x ∈ first → read x = sig) :
     ∀ t x, x ∈ (L.lineOf W members first).family t → read x = sig
   | 0, x, member => founders x member
@@ -1028,7 +1028,7 @@ def lineD (back : Bool) (σ : Reading) (lev : Nat → Rel → Nat) : SelectionTe
 /-- **Readings are inherited along descent**, in every course of every world: whatever a relatum gives
 to carries its reading. -/
 theorem inherits (back : Bool) (σ : Reading) (lev : Nat → Rel → Nat) :
-    (flowOf back σ lev).Inherits (webOf lev) (readOf σ) := by
+    (flowOf back σ lev).InheritsReading (webOf lev) (readOf σ) := by
   intro t x g descends
   have gives := descends.2.1
   cases g <;> cases x <;> first | rfl | exact absurd gives (Nat.lt_irrefl 0)

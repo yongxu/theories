@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-11-09T16:03:37+00:00",
+  "reviewed_at_utc": "2026-11-09T16:05:57+00:00",
   "statement": {
     "en": "A line's standing late tells readings apart only by what their acts do within its coupling closure. In a witness where nothing comes back a line clearing a dweller's habitat persists as a sparing one does, an overdrawing one ends; where the dweller renews the source, the clearing line ends with it.",
     "zh": "系之晚立只以诸读法之举在其耦合闭包内所为分之。见证中，无所返处，清栖者之栖地之系与留之系同存续，透支之系终；栖者续此系之源处，清之系与之同终。"
@@ -347,12 +347,12 @@
         "Becoming.line_standing_unselected",
         "Becoming.line_standing_unselected_of_reads"
       ],
-      "sha256": "07a19feeea16f1fa31f4f981d19b14a37803d1d75bad56daabb2b5855b4a8333"
+      "sha256": "edbeb105bd6032e40d4c1cf5605da5f7506966b0f2c11d9a3e4885567aabef31"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zj2-readings-persist/NOTE.md",
       "role": "integration",
-      "sha256": "cc6efcbc5e2abf686ac9fd5204a32b59d18d72edf1ec661cd16847c650f6a9c2"
+      "sha256": "fac52273ed0d479c4f41ab558432fd221f85646e68612e278a6fbd71ae13f8e8"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zj2-readings-persist/READER.md",

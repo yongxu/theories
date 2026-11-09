@@ -67,6 +67,8 @@ What does register a removal, and so when a reading beyond the selector's share 
 - **"Read off the course's pool, removal does not turn selection by persistence; it is turned only where the removal returns to the selectors"** (the first draft of 07 §4.12 and of this note): the second half is false. Where the dweller renews the source, the course removing it removes both lines and still passes that selection (`clearedBack_survivors_pass`, added after astra's reading); what turned was the line's own persistence, read off the line. The selection read off its own pool registers no removal.
 - **Line persistence as a selection on levels**: G3's `Persists` is of cohorts read off the flow, which depend on who gives to whom, not on levels alone. The law is stated for standing late among the line's slots, which a persisting line implies (`lineOf_standsLate`). The converse is not claimed.
 
+- **A name taken elsewhere**: the first core run (receipt folder `20261109T160354.551443Z`, discarded; log kept in the route (b) notes, `logs/j2-core-run.log`) failed at the aggregate: `Becoming.Flow.Inherits` already names Transmission's inheritance of a dependence, a different notion. The scratch build compiles only the import closure, which does not hold Transmission, so it could not see the clash. Renamed `Flow.InheritsReading`.
+
 ## Limits (what is not modelled)
 
 How a reading arises or changes: readings are never varied or learned here. The act each reading gives is supplied. Several lines competing for a share: RuleShaping's counts are not connected. A reading in time, before a loss passes its point of no return (GOALS' second condition; J3's time). The founders and the listing of relata are supplied.

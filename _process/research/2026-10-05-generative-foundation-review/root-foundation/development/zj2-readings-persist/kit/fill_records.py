@@ -100,7 +100,7 @@ def record_carried(ts):
             "stand, and where readings are inherited along descent every member of every cohort carries the founders' reading.",
             "由始祖与关系项之列，读自一流之系以一步中自某成员而传之所列关系项为其后裔。此系由构造即在流中相传，其后之成员皆立；读法沿传承而继处，每一代之每一成员皆携始祖之读法。",
             [B("Flow.descendsB"), B("Flow.descendsB_iff"), B("Flow.lineOf"), B("Flow.mem_lineOf_kids"),
-             B("Flow.lineOf_descended"), B("Flow.lineOf_stands"), B("Flow.Inherits"), B("Flow.lineOf_carries")]),
+             B("Flow.lineOf_descended"), B("Flow.lineOf_stands"), B("Flow.InheritsReading"), B("Flow.lineOf_carries")]),
         law("Let a reading end where its world's course overdraws a family from a short stock. Where every occasion picks "
             "the reading the line carries and the world is the course it generates, G3's realization premise is the "
             "identity, ending being defined as that overdraw; under G3's "

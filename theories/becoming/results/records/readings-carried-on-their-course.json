@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-11-09T16:03:37+00:00",
+  "reviewed_at_utc": "2026-11-09T16:05:57+00:00",
   "statement": {
     "en": "A world whose relata act by their carried readings is the course those acts generate; the line read off it is descended by construction and carries its founders' reading; with ending read as that course's overdraw, every occasion picking that reading, G3's realization premise is the identity.",
     "zh": "诸关系项依其所携读法而行之世界即此诸行为所生之程；读自其上之系由构造相传、携其始祖所传之读法；终读为此程之透支、且每一场合皆择所携之读法时，G3 之实现前提即为恒等。"
@@ -45,7 +45,7 @@
         "Becoming.Flow.mem_lineOf_kids",
         "Becoming.Flow.lineOf_descended",
         "Becoming.Flow.lineOf_stands",
-        "Becoming.Flow.Inherits",
+        "Becoming.Flow.InheritsReading",
         "Becoming.Flow.lineOf_carries"
       ]
     },
@@ -235,7 +235,7 @@
         "Becoming.ExchangeLaw.byReading_withAct",
         "Becoming.ExchangeLaw.feasible_of_follows",
         "Becoming.ExchangeLaw.levels_of_follows",
-        "Becoming.Flow.Inherits",
+        "Becoming.Flow.InheritsReading",
         "Becoming.Flow.LineAlive",
         "Becoming.Flow.LineReachesBefore",
         "Becoming.Flow.LineReachesBefore.affects",
@@ -263,12 +263,12 @@
         "Becoming.ReadingsPersist.Habitat.lineD_slots",
         "Becoming.ReadingsPersist.Habitat.world_byReading"
       ],
-      "sha256": "07a19feeea16f1fa31f4f981d19b14a37803d1d75bad56daabb2b5855b4a8333"
+      "sha256": "edbeb105bd6032e40d4c1cf5605da5f7506966b0f2c11d9a3e4885567aabef31"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zj2-readings-persist/NOTE.md",
       "role": "integration",
-      "sha256": "cc6efcbc5e2abf686ac9fd5204a32b59d18d72edf1ec661cd16847c650f6a9c2"
+      "sha256": "fac52273ed0d479c4f41ab558432fd221f85646e68612e278a6fbd71ae13f8e8"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zj2-readings-persist/READER.md",
