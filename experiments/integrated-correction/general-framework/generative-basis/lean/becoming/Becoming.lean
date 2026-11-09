@@ -387,6 +387,7 @@ import Becoming.RoutesToC
 import Becoming.FlowCenters
 import Becoming.PersistingChoices
 import Becoming.BeyondCoupling
+import Becoming.ConditionInTime
 import Becoming.SignificanceStatements
 
 /-!
@@ -4772,6 +4773,22 @@ tagged instance or application.
   `Diversion`, among them the failed candidate that coupling the dweller in turns the selection
   against its loss (`Clearing.read_not_direction`). A leaf: it composes laws of modules that nothing
   below imports together; short laws, none new as mathematics.
+* `Becoming.ConditionInTime` (L2, through `Becoming.GrammarScope` and `Becoming.FlowCenters`): the
+  continuation condition in time (board item J3, route (b)'s join). On a relation with no cycle the
+  returning elements are the sinks (`returnsAlong_iff_sink`). Where every condition comes at an earlier
+  step than what it conditions, the root's condition `«续无外»` holds exactly where from each center
+  everything later is reached (`«续无外于后»`) and nothing else lies at or before the center's step
+  (`«续无外当且仅当后与独»`): the one-center bound rests on the second part, and over what comes after two
+  centers meet the condition (`TwoSources.apart`). On occurrences read off a flow, an exchange before a
+  need (`Flow.AffectsBefore`, the link of `Flow.ReachesBefore`) and a formation going on
+  (`Flow.StepInTime`), no occurrence returns (`Flow.not_returnsAlong_stepInTime`); held de se at every
+  occurrence the condition from some step on is exactly mutual dependence in time from every step
+  (`Flow.unrestrictedEventually_iff_mutuallyDependentInTime`), and over every later step exactly each
+  formation affecting every other at the next (`Flow.unrestrictedAfter_iff_coupledEachStep`); mutual
+  dependence in time gives mutual dependence (`Flow.MutuallyDependentFrom.mutuallyDependent`). Witnesses:
+  `Recurring.inTime`, `RingOfThree.apart`, `Drawing.lapses`, `LatePair.apart`. A line with a member after a
+  window never overdrew in it (`Flow.member_after_never_overdrew`). A leaf; short laws, none new as
+  mathematics.
 * `Becoming.GrammarPath` (L1): what a line under a class must hold, and what a regularity takes in
   (board item PF), for every carrier, relation and class. Where a region is left under a class only
   into a set, a line under the class from inside to outside holds a member of that set alike to its

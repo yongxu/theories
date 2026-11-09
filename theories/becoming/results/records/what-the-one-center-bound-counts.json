@@ -1,0 +1,179 @@
+{
+  "schema_version": 2,
+  "id": "what-the-one-center-bound-counts",
+  "title": {
+    "en": "What the one-center bound counts",
+    "zh": "单一中心之界所计为何"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-09T14:47:00+00:00",
+  "statement": {
+    "en": "On a net going forward in time the root's condition is exactly: from each center everything later is reached, and nothing else lies at or before the center's step; the second part admits one center, and over what comes after two can meet it.",
+    "zh": "于时间中向前之网上，根上之条件恰为：自每个中心较后之一切可及，且无他物在中心之步或之前；第二部分只容一个中心，而于其后者，二中心可满足之。"
+  },
+  "laws": [
+    {
+      "en": "An element related to nothing returns, with no premise; on a relation without cycles the returning elements are exactly those, and held de se at them the condition holds exactly where, if there is a sink, there is only one element. On the net read off a continuation an occurrence returns exactly where nothing continues it.",
+      "zh": "不与任何物相关之元素回返，无须前提；于无环之关系上回返者恰为此等，于其处从己持有，条件恰在“若有汇则只有一个元素”处成立。于从延续读出之网上，出现回返恰在无物延续之处。",
+      "declarations": [
+        "Becoming.returnsAlong_of_sink",
+        "Becoming.returnsAlong_iff_sink",
+        "Becoming.ownClosure_unrestricted_atReturning_acyclic_iff",
+        "Becoming.Web.continuationStep_returns_iff"
+      ]
+    },
+    {
+      "en": "Where every condition comes at an earlier step than what it conditions, the root's condition holds exactly where, from each center, everything at a later step is reached on a line under the class, and nothing other than the center lies at or before its step. The second part, which nothing reached can meet, is what admits one center only.",
+      "zh": "凡每一缘之步早于其所缘者，根上之条件恰在：自每个中心，较后之步之一切于类下之线上可及，且除中心外无物在其步或之前。第二部分，所及无一能满足，正是只容一个中心之所在。",
+      "declarations": [
+        "Becoming.«续无外当且仅当后与独»",
+        "Becoming.«及则后»",
+        "Becoming.«后则无环»",
+        "Becoming.«续无外则续无外于后»"
+      ]
+    },
+    {
+      "en": "Over what comes after, two distinct centers meet the condition: two sources of one later occurrence, on a net without cycles where the root's condition fails; and on a flow exchanging at every step, every occurrence.",
+      "zh": "于其后者，二不同中心满足条件：同一较后出现之二源，于无环之网上而根上之条件不成立；于每步交换之流上，每个出现皆然。",
+      "declarations": [
+        "Becoming.TwoSources.apart",
+        "Becoming.Recurring.oneCenter_counts"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Any carrier, net and class; a step given to each occurrence, with every condition at an earlier step than what it conditions, where the split is stated.",
+      "zh": "不加公理。任意载体、网与类；陈述此分解处，每个出现有其步，每一缘之步早于其所缘者。"
+    },
+    {
+      "en": "The condition read over what comes after the center's step: a reading, which the condition's source states as continuation into the future.",
+      "zh": "条件读于中心之步其后者：一种读法；条件之源表述为向未来之延续。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That the root's condition admits one center in time: what it admits one center for is the part about what lies at or before each center.",
+      "zh": "根上之条件于时间中只容一个中心：其只容一个中心，是因关于各中心之时或之前者那一部分。",
+      "kind": "scope",
+      "witness": "Becoming.TwoSources.apart"
+    },
+    {
+      "en": "That a significance holding over what comes after is the continuation condition: wherever something lies at or before, it is a rival in the sense of the region law.",
+      "zh": "于其后者成立之意义即延续条件：凡有物在其时或之前处，依区域之律它是对手。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Anything of a relation with cycles: there the returning elements need not be sinks.",
+      "zh": "有环之关系：其处回返者不必为汇。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionInTime.lean",
+      "detail": {
+        "en": "TwoSources: a and b at the first step each condition z at the next; from each, z is reached, the net has no cycle, and the root's condition fails (TwoSources.apart).",
+        "zh": "TwoSources：首步之 a 与 b 各缘次步之 z；自各者 z 可及，网无环，而根上之条件不成立（TwoSources.apart）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "formal-not-empirical",
+    "names-provisional",
+    "discrete-steps"
+  ],
+  "validation_scope": {
+    "en": "Pure core, axiom reports empty; a leaf. Written by an AI; an AI reader of another model read the statements against the Lean, this record and the home section, cold, for overclaim (READER in the study folder); no human audit. Near-definitional compositions of the closure laws, with the witnesses checked on their models; none is new as mathematics.",
+    "zh": "纯核心，公理报告为空；叶模块。AI 所写；另一模型的一位 AI 读者对照 Lean、此记录与归属节冷读诸陈述，查是否言过其实（见研究目录 READER）；无人类审计。皆为闭包律之近于定义的组合，见证在其模型上检验；无一是新数学。"
+  },
+  "next_delta": {
+    "en": "The same split for a class coarser than the one, where a line continues past a member's end: which part of the condition a line under the class meets in time.",
+    "zh": "对粗于“一”之类作同样分解，其线越过成员之终而续：类下之线于时间中满足条件之哪一部分。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionInTime.lean",
+  "aliases": [
+    "what the one-center bound counts",
+    "单一中心之界所计为何",
+    "Becoming.«续无外当且仅当后与独»",
+    "Becoming.«续无外于后»",
+    "Becoming.returnsAlong_iff_sink"
+  ],
+  "dependencies": [
+    {
+      "id": "the-continuation-condition-on-the-root",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "«续无外», «续无外则同一中心» and «相续含于及».",
+        "zh": "「续无外」、「续无外则同一中心」与「相续含于及」。"
+      }
+    },
+    {
+      "id": "standpoints-read-off-a-flow",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "ReturnsAlong and ownClosure_unrestricted_atReturning_iff.",
+        "zh": "ReturnsAlong 与 ownClosure_unrestricted_atReturning_iff。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "rivals-bounded-in-time",
+      "detail": {
+        "en": "A rule bounded in time is a rival of the condition; the condition over what comes after is such a restriction.",
+        "zh": "限于时间之规则是条件之对手；于其后者之条件即此种限制。"
+      }
+    },
+    {
+      "id": "the-condition-in-time",
+      "detail": {
+        "en": "The same split on a flow read in time, where the condition over what comes after is coupling at every next step.",
+        "zh": "于以时间读之流上作同样分解，于其后者之条件即每下一步之耦合。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionInTime.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Recurring.oneCenter_counts",
+        "Becoming.TwoSources.apart",
+        "Becoming.TwoSources.forward",
+        "Becoming.Web.continuationStep_returns_iff",
+        "Becoming.ownClosure_unrestricted_atReturning_acyclic_iff",
+        "Becoming.returnsAlong_iff_sink",
+        "Becoming.returnsAlong_of_sink",
+        "Becoming.«及则后»",
+        "Becoming.«后则无环»",
+        "Becoming.«续无外于后»",
+        "Becoming.«续无外则续无外于后»",
+        "Becoming.«续无外当且仅当后与独»"
+      ],
+      "sha256": "9285fcd96bf20d5bc4db58ca4af07475a9f22d7355c64ed852958e80373542ba"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/j3-condition-in-time/NOTE.md",
+      "role": "integration",
+      "sha256": "f5794a892b3f24782bcfd8641a12b0c2264ed5866d53a287663e5eab18de5d8e",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "role": "statement",
+      "sha256": "0904a159f9de201d6dfc84a37e6266a790bfada58dd68ef1087ac24aec0b34ce",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [],
+  "history": [
+    {
+      "en": "9 November 2026, board item J3 (route (b)'s join, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md): added. Whether the condition's positive half holds in time, and what the one-center bound counts; study folder j3-condition-in-time.",
+      "zh": "2026年11月9日，看板项 J3（路线 (b) 之连接，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md）：新增。条件之正面一半在时间中是否成立，及单一中心之界所计为何；研究目录 j3-condition-in-time。"
+    }
+  ]
+}

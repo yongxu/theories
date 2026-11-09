@@ -1,0 +1,111 @@
+{
+  "schema_version": 2,
+  "id": "a-line-alive-after-a-window",
+  "title": {
+    "en": "A line alive after a window never overdrew in it",
+    "zh": "窗后尚存之线未曾于窗内透支"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F07",
+  "reviewed_at_utc": "2026-11-09T14:47:00+00:00",
+  "statement": {
+    "en": "Persisting read in finite, dated form: a member at a step past a window of joint excess from a short stock rules that window out, and reads only windows closing before the member.",
+    "zh": "以有限、有日期之形式读延续：于自短存量起之共同超出之窗后某步之成员，排除该窗；只读于该成员之前闭合之窗。"
+  },
+  "laws": [
+    {
+      "en": "Under balance, only active formations giving, activity needing support, the renewal of a family of conditions gated on the family and every member of every cohort depending on it, each at a need of at least m, a line with a member at a step later than T + n never had the family's uptake exceed its replenishment for the n steps from T from a stock below n + m.",
+      "zh": "在平衡、只有活动者给予、活动需支持，一族条件之更新以该族为闸，且每代每个成员依存于它，各需至少 m 之下：一条于晚于 T + n 之步有成员之线，从未在自 T 起之 n 步中、自低于 n + m 之存量，族之摄取超过其补充。",
+      "declarations": [
+        "Becoming.Flow.member_after_never_overdrew"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Balance; only active formations give; activity needs support; descent; the renewal of the family gated on it; every member of every cohort depending on the family; each at a need of at least m; one kind of relatum.",
+      "zh": "不加公理。平衡；只有活动者给予；活动需支持；世系；族之更新以族为闸；每代每个成员依存于族；各需至少 m；关系者为一种。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Anything of a window that closes at or after the member's step.",
+      "zh": "于成员之步或其后闭合之窗。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the line chose to keep: persisting is a filter on what happened, not a mechanism forming an order.",
+      "zh": "该线选择了保持：延续是对所发生者之过滤，而非形成次序之机制。",
+      "kind": "non-implication"
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "formal-not-empirical",
+    "names-provisional",
+    "discrete-steps"
+  ],
+  "validation_scope": {
+    "en": "Pure core, axiom reports empty; a leaf. Written by an AI; an AI reader of another model read the statements against the Lean, this record and the home section, cold, for overclaim (READER in the study folder); no human audit. Near-definitional compositions of the closure laws, with the witnesses checked on their models; none is new as mathematics.",
+    "zh": "纯核心，公理报告为空；叶模块。AI 所写；另一模型的一位 AI 读者对照 Lean、此记录与归属节冷读诸陈述，查是否言过其实（见研究目录 READER）；无人类审计。皆为闭包律之近于定义的组合，见证在其模型上检验；无一是新数学。"
+  },
+  "next_delta": {
+    "en": "Read on a lineage that carries its reading: which windows a line alive at a step rules out for the scopes it reads.",
+    "zh": "于携其读法之世系上读：一步尚存之线，对其所读之范围排除哪些窗。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionInTime.lean",
+  "aliases": [
+    "a line alive after a window never overdrew in it",
+    "窗后尚存之线未曾于窗内透支",
+    "Becoming.Flow.member_after_never_overdrew"
+  ],
+  "dependencies": [
+    {
+      "id": "what-persisting-shows-of-an-order",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The premises of Flow.persists_never_overdraws, whose one use of persisting is this member.",
+        "zh": "Flow.persists_never_overdraws 之诸前提，其对延续之唯一用处即此成员。"
+      }
+    },
+    {
+      "id": "groups-formed-by-descent",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "GroupEnding.Flow.family_childless.",
+        "zh": "GroupEnding.Flow.family_childless。"
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionInTime.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.member_after_never_overdrew"
+      ],
+      "sha256": "9285fcd96bf20d5bc4db58ca4af07475a9f22d7355c64ed852958e80373542ba"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/j3-condition-in-time/NOTE.md",
+      "role": "integration",
+      "sha256": "f5794a892b3f24782bcfd8641a12b0c2264ed5866d53a287663e5eab18de5d8e",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "role": "statement",
+      "sha256": "0904a159f9de201d6dfc84a37e6266a790bfada58dd68ef1087ac24aec0b34ce",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [],
+  "history": [
+    {
+      "en": "9 November 2026, board item J3 (route (b)'s join, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md): added. Whether the condition's positive half holds in time, and what the one-center bound counts; study folder j3-condition-in-time.",
+      "zh": "2026年11月9日，看板项 J3（路线 (b) 之连接，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md）：新增。条件之正面一半在时间中是否成立，及单一中心之界所计为何；研究目录 j3-condition-in-time。"
+    }
+  ]
+}

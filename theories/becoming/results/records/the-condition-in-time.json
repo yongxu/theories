@@ -1,0 +1,273 @@
+{
+  "schema_version": 2,
+  "id": "the-condition-in-time",
+  "title": {
+    "en": "The continuation condition in time",
+    "zh": "时间中的延续条件"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F07",
+  "reviewed_at_utc": "2026-11-09T14:47:00+00:00",
+  "statement": {
+    "en": "Read in time, an exchange before a need, the condition held de se at every occurrence holds from some step on exactly where the flow is mutually dependent in time, and over every later step where each formation affects every other at the next; at the returning occurrences it is vacuous.",
+    "zh": "以时间读，交换先于所需：在每个出现处从己持有之条件，自某步起恰在流于时间中彼此依存处成立，越过其后每步则恰在每个构成影响其余每个之下一步处；在回返之出现处为空洞。"
+  },
+  "laws": [
+    {
+      "en": "An occurrence affects a later one where, taking part at its step, it exchanges with a condition the later one requires at its step: the link through which a part's acts show on a later step. With a formation going on to its next step this is the relation in time. It has no cycle, so no occurrence returns along it: with the returning occurrences as standpoints the condition holds only vacuously.",
+      "zh": "一出现影响较后者：在其步参与，与较后者在其步所需之条件交换；此即一部分之所为显于较后之步所经之联。加上构成延续至下一步，即时间中之关系。它无环，故无出现沿之回返：以回返之出现为立场，条件只空洞成立。",
+      "declarations": [
+        "Becoming.Flow.reachesBefore_iff",
+        "Becoming.Flow.stepInTime_acyclic",
+        "Becoming.Flow.not_returnsAlong_stepInTime",
+        "Becoming.Flow.returningInTime_unrestricted",
+        "Becoming.Flow.returnsAlong_affectsBefore_iff"
+      ]
+    },
+    {
+      "en": "Held de se at every occurrence, the condition that from some step on every formation's continuation has significance holds exactly where the flow is mutually dependent in time from every step: from each formation at each step, every formation's continuation is reached later. Over every later step it holds exactly where at every step each formation affects every other at the next.",
+      "zh": "在每个出现处从己持有：自某步起每个构成之延续皆有意义，恰在流自每步起于时间中彼此依存处成立；越过其后每一步，恰在每步每个构成影响其余每个之下一步处成立。",
+      "declarations": [
+        "Becoming.Flow.unrestrictedEventually_iff_mutuallyDependentInTime",
+        "Becoming.Flow.unrestrictedAfter_iff_coupledEachStep",
+        "Becoming.UnrestrictedAfter.eventually",
+        "Becoming.unrestrictedAfter_iff_forward"
+      ]
+    },
+    {
+      "en": "What lies within an occurrence's closure in time lies within its formation's reach closure, so mutual dependence in time from any step gives mutual dependence and the first join's condition at the returning formations; from a step, it holds from every earlier one.",
+      "zh": "出现之时间闭包内者，在其构成之所及闭包内；故自任一步于时间中彼此依存，给出彼此依存及第一连接在回返构成处之条件；自某步成立，则自其前每步成立。",
+      "declarations": [
+        "Becoming.Flow.WithinTime.withinReach",
+        "Becoming.Flow.MutuallyDependentFrom.mutuallyDependent",
+        "Becoming.Flow.MutuallyDependentFrom.returning_unrestricted",
+        "Becoming.Flow.MutuallyDependentFrom.earlier"
+      ]
+    },
+    {
+      "en": "Witnesses: two formations exchanging at every step meet both conditions; a ring of three is mutually dependent in time and fails the one over every later step; a pair drawing only at the first step is so from that step and not from the next; a pair each taking after the other's only need is mutually dependent, meets the first join's condition, and nothing affects anything in time.",
+      "zh": "见证：每步交换之二构成满足两条件；三者之环于时间中彼此依存，而越过其后每步之条件不成立；只在首步汲取之一对，自首步如此，自次步不然；各于对方唯一之需后取用之一对，彼此依存、满足第一连接之条件，而时间中无物影响任何物。",
+      "declarations": [
+        "Becoming.Recurring.inTime",
+        "Becoming.RingOfThree.apart",
+        "Becoming.Drawing.lapses",
+        "Becoming.LatePair.apart"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. The relation read off one flow and one web: an exchange at a step before the step at which the other requires the condition, as in the feedback laws, and a formation going on to its next step.",
+      "zh": "不加公理。关系从同一流与依存网读出：交换之步先于对方需此条件之步，如反馈诸律；及构成延续至下一步。"
+    },
+    {
+      "en": "The going on keeps a formation's identity from one step to the next, as affecting read across all steps keeps it across every step, now forward only; it does not ask the formation to take part: a reading.",
+      "zh": "延续保持构成从一步到下一步之同一，如跨所有步读之“影响”保持其于每步之同一，此处只向前；不要求构成参与：一种读法。"
+    },
+    {
+      "en": "Every occurrence read as a standpoint, its own center; the condition read over what comes after the standpoint's step, from some step on or over every later step: readings.",
+      "zh": "每个出现读作立场，各为其自身之中心；条件读于立场之步其后者，自某步起或越过其后每步：皆为读法。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "The condition over every step: nothing is reached at a step before or beside an occurrence, so on dated closures that form fails wherever there are two formations.",
+      "zh": "跨每一步之条件：出现之前或同步之物无一可及，故于有日期之闭包上，凡有二构成处此形式不成立。",
+      "kind": "scope",
+      "witness": "Becoming.Recurring.oneCenter_counts"
+    },
+    {
+      "en": "The converse: mutual dependence read across all steps does not give mutual dependence in time from any step.",
+      "zh": "其逆：跨所有步读之彼此依存，不给出自任一步于时间中之彼此依存。",
+      "kind": "converse",
+      "witness": "Becoming.LatePair.apart"
+    },
+    {
+      "en": "That mutual dependence in time, once it holds from a step, holds from later steps: it can lapse.",
+      "zh": "于时间中彼此依存，自某步成立后即自较后各步成立：它可中止。",
+      "kind": "non-implication",
+      "witness": "Becoming.Drawing.lapses"
+    },
+    {
+      "en": "That the condition from some step on gives it over every later step.",
+      "zh": "自某步起之条件给出越过其后每步之条件。",
+      "kind": "non-implication",
+      "witness": "Becoming.RingOfThree.apart"
+    },
+    {
+      "en": "Mutual benefit: exchanging counts taking as well as giving, so mutual dependence in time includes mutual drain.",
+      "zh": "彼此受益：交换兼计取与予，故于时间中彼此依存含彼此汲取。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That an actual flow is mutually dependent in time: that is empirical.",
+      "zh": "实际之流于时间中彼此依存：此为经验问题。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionInTime.lean",
+      "detail": {
+        "en": "LatePair: each of two formations takes from the other's condition at the second step, after the other's only need at the first; mutually dependent across all steps, the first join's condition holds, and no occurrence affects any other in time (LatePair.apart).",
+        "zh": "LatePair：二构成各于次步取用对方之条件，在对方唯一之需（首步）之后；跨所有步彼此依存，第一连接之条件成立，而时间中无出现影响任何其他出现（LatePair.apart）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionInTime.lean",
+      "detail": {
+        "en": "RingOfThree: three formations each drawing on the next at every step; mutually dependent in time from every step, and the condition over every later step fails, the one two links away being reached two steps later (RingOfThree.apart).",
+        "zh": "RingOfThree：三构成每步各汲取下一个；自每步于时间中彼此依存，而越过其后每步之条件不成立，隔两联者两步之后方及（RingOfThree.apart）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "significance-related-not-asserted",
+    "no-ethical-premise",
+    "formal-not-empirical",
+    "names-provisional",
+    "discrete-steps"
+  ],
+  "validation_scope": {
+    "en": "Pure core, axiom reports empty; a leaf. Written by an AI; an AI reader of another model read the statements against the Lean, this record and the home section, cold, for overclaim (READER in the study folder); no human audit. Near-definitional compositions of the closure laws, with the witnesses checked on their models; none is new as mathematics.",
+    "zh": "纯核心，公理报告为空；叶模块。AI 所写；另一模型的一位 AI 读者对照 Lean、此记录与归属节冷读诸陈述，查是否言过其实（见研究目录 READER）；无人类审计。皆为闭包律之近于定义的组合，见证在其模型上检验；无一是新数学。"
+  },
+  "next_delta": {
+    "en": "A lineage carrying its reading on this relation, with the pool read off the course: which scopes persist in time, where a selection that removes its own readers can be stated.",
+    "zh": "于此关系上携其读法之世系，池从进程读出：哪些范围在时间中延续，能移除其自身读者之选择于何处可陈述。"
+  },
+  "correspondence": {
+    "en": "A time-respecting path in a temporal network: the condition from some step on is temporal strong connectivity from every time, here with a node's identity carried forward.",
+    "zh": "时序网络中尊重时间之路径：自某步起之条件即自每一时刻起之时序强连通，此处节点之同一向前携带。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionInTime.lean",
+  "aliases": [
+    "the continuation condition in time",
+    "时间中的延续条件",
+    "Becoming.Flow.unrestrictedEventually_iff_mutuallyDependentInTime",
+    "Becoming.Flow.unrestrictedAfter_iff_coupledEachStep",
+    "Becoming.Flow.MutuallyDependentInTime"
+  ],
+  "dependencies": [
+    {
+      "id": "standpoints-read-off-a-flow",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "ReturnsAlong, Becoming.Returning, ownClosure_unrestricted_of_none and Flow.returning_unrestricted_iff_mutuallyDependent.",
+        "zh": "ReturnsAlong、Becoming.Returning、ownClosure_unrestricted_of_none 与 Flow.returning_unrestricted_iff_mutuallyDependent。"
+      }
+    },
+    {
+      "id": "feedback-and-reach",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Flow.ReachesBefore, whose link is affecting before; Flow.Affects and Flow.WithinReach.",
+        "zh": "Flow.ReachesBefore，其联即先于之影响；Flow.Affects 与 Flow.WithinReach。"
+      }
+    },
+    {
+      "id": "mutual-dependence-and-its-pace",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Flow.MutuallyDependent, mutuallyDependent_iff_reach and the Drawing witness.",
+        "zh": "Flow.MutuallyDependent、mutuallyDependent_iff_reach 与 Drawing 见证。"
+      }
+    },
+    {
+      "id": "the-continuation-condition-on-the-root",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "withinClosure_iff_reached, reading the dated condition on the root.",
+        "zh": "withinClosure_iff_reached，于根上读有日期之条件。"
+      }
+    },
+    {
+      "id": "what-the-one-center-bound-counts",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "returnsAlong_iff_sink, «续无外于后» and «后则无环».",
+        "zh": "returnsAlong_iff_sink、「续无外于后」与「后则无环」。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "mutual-dependence-gives-the-condition-de-se",
+      "detail": {
+        "en": "Across all steps, with every formation a center, the condition is mutual dependence; here its counterpart in time.",
+        "zh": "跨所有步、每个构成皆为中心时，条件即彼此依存；此处为其时间中之对应。"
+      }
+    },
+    {
+      "id": "need-and-feeding-read-with-time",
+      "detail": {
+        "en": "Feeding read with time up to a step, backward; here affecting read forward from a step.",
+        "zh": "以时间读至某步之供养，向后；此处为自某步向前读之影响。"
+      }
+    },
+    {
+      "id": "rivals-bounded-in-time",
+      "detail": {
+        "en": "Significance holding exactly over what comes after a step is, by that law, a rival of the condition over every step wherever something lies at or before it.",
+        "zh": "恰于某步之后者成立之意义，依该律，凡有物在其时或之前处，即为跨每一步之条件之对手。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionInTime.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Drawing.lapses",
+        "Becoming.Flow.AffectsBefore",
+        "Becoming.Flow.MutuallyDependentFrom",
+        "Becoming.Flow.MutuallyDependentFrom.earlier",
+        "Becoming.Flow.MutuallyDependentFrom.mutuallyDependent",
+        "Becoming.Flow.MutuallyDependentFrom.returning_unrestricted",
+        "Becoming.Flow.MutuallyDependentInTime",
+        "Becoming.Flow.StepInTime",
+        "Becoming.Flow.WithinTime",
+        "Becoming.Flow.WithinTime.later",
+        "Becoming.Flow.WithinTime.withinReach",
+        "Becoming.Flow.not_returnsAlong_stepInTime",
+        "Becoming.Flow.reachesBefore_iff",
+        "Becoming.Flow.returningInTime_unrestricted",
+        "Becoming.Flow.returnsAlong_affectsBefore_iff",
+        "Becoming.Flow.stepInTime_acyclic",
+        "Becoming.Flow.unrestrictedAfter_iff_coupledEachStep",
+        "Becoming.Flow.unrestrictedEventually_iff_mutuallyDependentInTime",
+        "Becoming.LatePair.apart",
+        "Becoming.LatePair.not_affectsBefore",
+        "Becoming.Recurring.inTime",
+        "Becoming.RingOfThree.a_not_c",
+        "Becoming.RingOfThree.apart",
+        "Becoming.UnrestrictedAfter",
+        "Becoming.UnrestrictedAfter.eventually",
+        "Becoming.UnrestrictedEventually",
+        "Becoming.datedOwnClosure",
+        "Becoming.unrestrictedAfter_iff_forward"
+      ],
+      "sha256": "9285fcd96bf20d5bc4db58ca4af07475a9f22d7355c64ed852958e80373542ba"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/j3-condition-in-time/NOTE.md",
+      "role": "integration",
+      "sha256": "f5794a892b3f24782bcfd8641a12b0c2264ed5866d53a287663e5eab18de5d8e",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "role": "statement",
+      "sha256": "0904a159f9de201d6dfc84a37e6266a790bfada58dd68ef1087ac24aec0b34ce",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [],
+  "history": [
+    {
+      "en": "9 November 2026, board item J3 (route (b)'s join, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md): added. Whether the condition's positive half holds in time, and what the one-center bound counts; study folder j3-condition-in-time.",
+      "zh": "2026年11月9日，看板项 J3（路线 (b) 之连接，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md）：新增。条件之正面一半在时间中是否成立，及单一中心之界所计为何；研究目录 j3-condition-in-time。"
+    }
+  ]
+}
