@@ -9,7 +9,7 @@ stood at the build commit; a link to a path the repository does not track is sho
 of the site, anchor included, must resolve, or the build fails. At each result's anchor (`r-<record id>`), in a table cell
 or a list as at a line of its own, the page gets a small mark of the record's status, linked to the record. The home is
 README's generated first screen in its own words: its "Start with" paragraph comes last of its text, then the picture and
-its caption, bounded in height, then the ways in that `site.ways_in` lists, each with its reading time (`time` on a card says
+its caption, its height set to suit a tall picture, then the ways in that `site.ways_in` lists, each with its reading time (`time` on a card says
 what the time is of), counted as the page's own stated time is. A picture's image carries its SVG's width and height, so its
 box is kept before it loads. The pages of `site.chapters` get contents and previous and next links; the
 navigation line a generated page carries, as do the fronts in navigation.NAV_FRONTS and the Chinese fronts (zh_fronts), is dropped, the site having its own; `site.rewrites` changes the words of the pages a rule names, or of any page where a rule naming none matches, of named
@@ -528,7 +528,7 @@ class Page:
         if new.startswith('https://github.com/'):
             new = new.replace('/blob/', '/raw/', 1)
         size = self.links.sizes.get(posixpath.normpath(posixpath.join(posixpath.dirname(self.path), src.split('#')[0])))
-        box = f' width="{size[0]}" height="{size[1]}"' if size else ''  # the box is kept before the picture loads, so a lazy load starts
+        box = f' width="{size[0]}" height="{size[1]}"' if size else ''  # the box is known before the picture loads: a lazy load starts, and the page does not move
         img = f'<img src="{html.escape(new)}" alt="{html.escape(alt)}"{box} loading="lazy">'
         if src.split('#')[0].lower().endswith('.svg'):  # a picture opens at full size, and is shown wider than the text
             return f'<a class="picture" href="{html.escape(new)}" title="{self.say["picture"]}">{img}</a>'
@@ -728,7 +728,7 @@ RECORD_STATUS = re.compile(r'^(`[^`]+` · )\*\*([a-z-]+)\*\*( · )', re.M)
 
 
 def strip_nav_line(text):
-    """A page's text without the navigation line generated pages and navigation.NAV_FRONTS carry under their title (a line of links joined by ' · ',
+    """A page's text without the navigation line that generated pages, navigation.NAV_FRONTS and the Chinese fronts (zh_fronts) carry under their title (a line of links joined by ' · ',
     one of them to the home, or the home itself in bold on the page that is the home), the site having its own. Only one line
     near the top goes; any other line of links stays."""
     lines = text.split('\n')

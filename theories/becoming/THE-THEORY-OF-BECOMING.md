@@ -4,7 +4,7 @@ An account of how anything comes to be, lasts, changes and passes away within on
 
 [Home](../../README.md) · [中文](THE-THEORY-OF-BECOMING.zh.md) · **Read** · [One page](ONE-PAGE.md) · [The theory](THE-THEORY-OF-BECOMING.md) · [Chapters](chapters/README.md) · [Uses](USES.md) · **Check** · [Tests](../../TESTS.md) · [Results](../../RESULTS.md) · [Proofs](../../MAP.md#check-the-proofs-yourself) · [Open questions](../../OPEN-QUESTIONS.md) · [Reviewers](review/README.md) · **See** · [Graph](results/THEORY-GRAPH.md) · [Connections](results/atlas/CROSSWALK.md) · [How it grew](../LINEAGE.md) · [Glossary](../../GLOSSARY.md) · [Where everything is](../../MAP.md)
 
-*Sixty-four to eighty-four minutes to read.*
+*Sixty-four to eighty-three minutes to read.*
 
 ## How to read this
 

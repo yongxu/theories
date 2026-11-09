@@ -151,8 +151,8 @@ a.picture img { display: block; width: 100%; height: auto; }
 @media (min-width: 601px) and (max-width: 1040px) {
   header.top nav { -webkit-mask-image: linear-gradient(to right, #000 85%, transparent); mask-image: linear-gradient(to right, #000 85%, transparent); padding-right: 2rem; }
 }
-/* on the home the picture sits between the first screen's words and the cards, its height bounded so the cards stay near;
-   the link opens it at full size */
+/* on the home the picture sits between the first screen's words and the cards, its height set to min(78vh, 52rem), suited to
+   the spine's tall picture, so the cards stay near; the link opens it at full size */
 body.home a.picture { width: fit-content; max-width: 100%; margin: 1.2rem 0 1.4rem; transform: none; }
 body.home a.picture img { width: auto; height: min(78vh, 52rem); max-width: 100%; object-fit: contain; }
 section.ways h3.group { font-family: var(--sans); font-size: .9rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 1.6rem 0 .6rem; }

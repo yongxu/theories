@@ -685,6 +685,8 @@ class SiteTests(unittest.TestCase):
         self.assertEqual(site.svg_size(self.tmp / 'a/pic.svg'), (900, 1859))  # the root's own width, not its stroke's
         (self.tmp / 'a/pic.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" width="0" height="5" viewBox="0 0 30 15"></svg>')
         self.assertEqual(site.svg_size(self.tmp / 'a/pic.svg'), (30, 15))  # a zero size falls back to the viewBox
+        (self.tmp / 'a/pic.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" width="1.2.3" height="5" viewBox="0 0 30 15"></svg>')
+        self.assertEqual(site.svg_size(self.tmp / 'a/pic.svg'), (30, 15))  # a width that is no number falls back to the viewBox
         (self.tmp / 'a/pic.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0"></svg>')
         self.assertIsNone(site.svg_size(self.tmp / 'a/pic.svg'))
         (self.tmp / 'a/pic.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg"></svg>')
