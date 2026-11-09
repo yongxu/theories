@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-11-09T12:01:29+00:00",
+  "reviewed_at_utc": "2026-11-09T12:12:02+00:00",
   "statement": {
     "en": "In a mutually dependent flow, significance held de se as what lies within each center's closure under being affected, or under affecting, is the continuation condition; where every formation is a center, each is exactly mutual dependence.",
     "zh": "于相互依赖之流，以每一中心沿被影响或沿影响之闭包内者为自持之意义，即延续条件；凡每一形成皆为中心处，二者各恰为相互依赖。"
@@ -146,28 +146,28 @@
         "Becoming.Flow.mutuallyDependent_iff_unrestricted",
         "Becoming.Flow.unrestricted_of_mutuallyDependent"
       ],
-      "sha256": "798a5b33f6908fba328ca684283ff5cf0fdcb489de0fde10a59c3f4192acb22b"
+      "sha256": "c55d01f9a6f31b156a05f576ef2f9e33ffc5cdb65ce09c6bae7dd8f2bf5cd379"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T120030.596088Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T121052.645138Z/verification.json",
       "role": "receipt",
-      "sha256": "fbb011be2d7b07644895db7f8fa168eb0c859bedb38fe22720862b843a12db6c"
+      "sha256": "f0ea4c0d8e968b3353467727aadf6184a9f6df3eae7342bf6b06689d51c2351d"
     },
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "cba023f03e499225987a27cea0c41305ca26ae63dfaba57dc10670b285a17d2b"
+      "sha256": "975e5a65db18bb649f9b474066b95d9e55d699cd5a0d189d285c3a03f703883e"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/za-concern-formed/NOTE.md",
       "role": "integration",
-      "sha256": "02d546d1857d1ef3e3c536d117094438051a793c2e4134af4c78e303d4941dbd"
+      "sha256": "89850c5215b07bfc5f76a1fa4f390d4e63ce47c7ecad3ad21e3d2f466488fcaa"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T120030.596088Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T121052.645138Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.PersistingChoices",
       "success_pointer": "/status",
       "success_value": "passed"
