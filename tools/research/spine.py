@@ -1019,7 +1019,7 @@ def description(results, pairs, s, lang, modules=None):
                    f'{n.get("counting", 0)} 项为计数，{sum(n.values()) - n.get("derived", 0) - n.get("under a stated hypothesis", 0) - n.get("counting", 0)} 项处于一个指明的距离。' if n else '')
                 + '在地位之下，五条共律各有依于它的核心行与其中达到文法者（'
                 + '；'.join(f'{s["laws_zh"]["names"][nm]} {c} 行，{k} 行达到' + ('，平衡为表示，不推导' if rep_ else '') for nm, c, k, rep_ in strip)
-                + '）。延续条件（定范围：谁的损失算数）与 C（定次序）作为前提进入第七章，各在所用之处为假设，二者都不断言。T1 到 T8 在其所属之处，按检验结局着色。')
+                + '）。延续条件（定范围：谁的损失算数）与 C（定次序）作为读法进入第七章，各在所用之处为假设，二者都不断言。T1 到 T8 在其所属之处，按检验结局着色。')
     sizes = ', '.join(theory_graph.REGION_TITLES[k].split(':')[0] + ' ' + str(results[k]) for k in order)
     spokes = ', '.join(f'{theory_graph.REGION_TITLES[k].split(":")[0]} {modules[k][1]} of {modules[k][0]}' for k in order if k in modules)
     return (f'Eight chapters on a ring around the grammar, sized by their results ({sizes}); '
@@ -1257,30 +1257,34 @@ def circular_paragraph(graph, lang):
 
 def picture_key(s, lang, page='theories/becoming/ONE-PAGE.md'):
     """The short key under the picture on the one page and the overview: what a curve counts and who assigns its kind,
-    that uses run backward and no record closes a cycle, what a spoke counts, and the four standings, with a link to what
-    the picture shows and does not show; THEORY-GRAPH keeps the full paragraph (how_to_read). The numbers are 08 §7's
-    phrases in spine.json, and a test holds the fronts to this."""
+    that uses run backward and no record closes a cycle among its declared dependencies, what a spoke's width gives, and
+    the four standings, with a link to what the picture shows and does not show; THEORY-GRAPH keeps the full paragraph
+    (how_to_read). The numbers are 08 §7's phrases in spine.json, and a test holds the fronts to this."""
     n = {phrase_n: int(phrase_n) for phrase_n, *_ in s['standing']['counts']}
     gl = os.path.relpath('GLOSSARY.zh.md' if lang == 'zh' else 'GLOSSARY.md', Path(page).parent)
     tg = os.path.relpath(PAGE_ZH if lang == 'zh' else 'theories/becoming/results/THEORY-GRAPH.md', Path(page).parent)
     total, d, h, c, rest = n['117'], n['11'], n['1'], n['6'], n['99']
     if lang == 'zh':
         return (f'实线计一章的结果使用另一章结果、记为 formal-reuse 的次数：这一类由 AI 写成的记录指定，没有任何检查核对一次使用是否见于 Lean；'
-                f'较深的一条是逆向的，即章序在前的一章使用章序在后的一章，登记检查不让任何记录闭合环（[这是入册的条件，不是一项发现]({tg}#do-the-recorded-uses-form-a-cycle)）。'
-                f'辐条计该章在文法上陈述其律的核心模块，不是推导而得的结果。'
-                f'{total} 项核心声明中，{d} 项[推导而得]({gl}#derived)，{h} 项为一个根形式的一步、在一个所述的假设之下，{c} 项为计数之律，'
-                f'{rest} 项处于一个[指明的距离]({gl}#named-distance)（[这幅图显示什么、不显示什么]({tg}#the-spine-what-it-shows-and-does-not-show)）。')
-    return (f'A solid curve counts one chapter\'s uses of another\'s results recorded as formal-reuse, a kind the AI-written records assign '
-            f'and nothing checks against the Lean; a darker one runs backward, an earlier chapter using a later one, and no record may close a '
-            f'cycle ([a condition of entry, not a finding]({tg}#do-the-recorded-uses-form-a-cycle)). A spoke counts the chapter\'s modules that '
-            f'state their laws on the grammar, not results derived. Of the {total} central declarations, {d} are [derived]({gl}#derived), {h} '
-            f'is a root form at one step under a stated hypothesis, {c} are counting laws and {rest} stand at a [named distance]({gl}#named-distance) '
+                f'较深的一条是逆向的（章的编号是为阅读，不是证明的次序），即章序在前的一章使用章序在后的一章；登记检查不让任何记录闭合其已声明依赖之环'
+                f'（[这是入册的条件，不是一项发现]({tg}#do-the-recorded-uses-form-a-cycle)）。'
+                f'辐条的粗细是该章核心模块中在文法上陈述其律者所占的比例，计的是模块，不是推导而得的结果。'
+                f'{total} 项核心声明中，{d} 项[推导而得]({gl}#derived)，{h} 项为一个根形式的一步、在一个所述的假设之下，{c} 项为计数之律、位于文法以下，'
+                f'{rest} 项处于一个[指明的距离]({gl}#named-distance)、各有其理由（[这幅图显示什么、不显示什么]({tg}#the-spine-what-it-shows-and-does-not-show)）。')
+    return (f'A solid curve counts one chapter\'s uses of another\'s results recorded as formal-reuse, a kind the AI-written records assign, '
+            f'and nothing checks a use against the Lean; a darker one runs backward, an earlier chapter using a later one (the chapters are '
+            f'numbered for reading, not as an order of proof), and no record may close a cycle among its declared dependencies '
+            f'([a condition of entry, not a finding]({tg}#do-the-recorded-uses-form-a-cycle)). A spoke\'s width is the share of the chapter\'s '
+            f'core modules that state their laws on the grammar: modules, not results derived. Of the {total} central declarations, {d} are '
+            f'[derived]({gl}#derived), {h} is a root form at one step under a stated hypothesis, {c} are counting laws, below the grammar, and '
+            f'{rest} stand at a [named distance]({gl}#named-distance), each with its reason '
             f'([what the picture shows and does not show]({tg}#the-spine-what-it-shows-and-does-not-show)).')
 
 
 def how_to_read(s, lang, page='theories/becoming/ONE-PAGE.md'):
-    """The two sentences above the picture wherever it is shown: what its marks are, and the standings in plain words,
-    the numbers from 08 §7's phrases in spine.json (the one-page fronts copy them, and a test holds them to this)."""
+    """The full paragraph on reading the picture, above it on THEORY-GRAPH in both languages: what its marks are, and the
+    standings in plain words, the numbers from 08 §7's phrases in spine.json. The one page and the overview carry the
+    short key (picture_key) under the picture instead, and a test holds them to that."""
     n = {phrase_n: int(phrase_n) for phrase_n, *_ in s['standing']['counts']}
     wf = os.path.relpath(WORKFLOW, Path(page).parent)
     gl = os.path.relpath('GLOSSARY.zh.md' if lang == 'zh' else 'GLOSSARY.md', Path(page).parent)
@@ -1448,8 +1452,8 @@ def section(graph, page_path):
              + (f', {other_kind} of them drawn as {other_en}' if other_kind else '') + '; '
              f'not drawn as dashed curves: {plural(len(interp_small), "interpretive pair")} with fewer than '
              f'{INTERPRETIVE_MIN} ({sum(interp_small)} edges); and the counts of curves under {LABEL_MIN} uses are not '
-             f'written. The list under "Edge kinds between chapters" has every pair. Beside a circle, "within" counts formal-reuse between results of '
-             f'the same chapter; interpretive edges within a chapter are in the table. A spoke\'s width, and the "k of m '
+             f'written. The list under "Edge kinds between chapters" has every pair with an edge. Beside a circle, "within" counts formal-reuse between results of '
+             f'the same chapter; interpretive edges within a chapter are on the diagonal of the interpretive table. A spoke\'s width, and the "k of m '
              f'modules on the grammar" beside its chapter, count the region\'s core modules that state their laws on the grammar, as the region lists below '
              f'say. '
              + (f'Results in {", ".join(name.get(k, k) for k in others)} ({outside} edges touch them) are in that list only. '
@@ -1583,10 +1587,10 @@ def zh_page(graph):
              f'（{related} 条边）。不画作 formal-reuse 曲线的：少于 {DRAW_MIN} 次 formal-reuse 使用的 {len(small)} 个配对（共 '
              f'{sum(small)} 次）' + (f'，其中 {other_kind} 个画作{other_zh}' if other_kind else '') + f'；不画作虚线的：少于 '
              f'{INTERPRETIVE_MIN} 次的 {len(interp_small)} 个诠释配对（{sum(interp_small)} 条边）；少于 {LABEL_MIN} 次的曲线不标数字。“各章之间边的种类”末尾的配对列表列出'
-             f'每一个配对。圆旁的“章内使用”计同一章结果之间的 formal-reuse，章内的诠释边见表。章旁的“m 个模块中 k 个在文法上”与辐条的粗细，'
+             f'有边的每一个配对。圆旁的“章内使用”计同一章结果之间的 formal-reuse，章内的诠释边见 interpretive 表的对角线。章旁的“m 个模块中 k 个在文法上”与辐条的粗细，'
              f'计该区域核心模块中在文法上陈述其律的那些，如[英文版](THEORY-GRAPH.md)各区域的列表所示。'
              + (f'{"、".join("「" + zname(k) + "」" for k in others)}的结果（{outside} 条边涉及它们）只在那份列表中。' if outside else '')
-             + f'延续条件与 C 作为前提进入第七章：“{cap[4]["zh"]}”（[07]({rel(cap[4]["home"])})）。T1 到 T8 位于其所属之处，按检验'
+             + f'延续条件与 C 作为读法进入第七章：“{cap[4]["zh"]}”（[07]({rel(cap[4]["home"])})）。T1 到 T8 位于其所属之处，按检验'
              f'结局着色；它们的话选自[总览]({rel(s["theses_homes"]["zh"])})论题表中各自所在的行，地位在前，见上面的论题表。', '',
              f'**它不显示什么。** 一条边记录的是一种依赖、一次引用或一个已登记的读法，不是意义上的一致。曲线也不说一章的结果在多大'
              f'程度上达到文法，08 §7 以两种方式计这一点。“{cap[0]["zh"]}”；“{cap[1]["zh"]}”；“{cap[2]["zh"]}”'

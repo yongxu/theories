@@ -1,5 +1,5 @@
 {
- "about": "AI readings: who wrote the evidence of each turning point of theories/LINEAGE.md (lineage.json's points, numbered from 1), classified by three AI readers from what each file or its folder says and checked point by point by three more (RW's re-score, Q4, 8 November 2026). No person has read them. 'origin' is the point's: that of the first evidence entry that states the turning point. All 48 checks agreed. Point 49, added on 9 November 2026 when the cut moved to that day, was classified by the session that added it; the next round's AI readers found its first evidence did not state the change, and it was reclassified (round-5-readers-1.json).",
+ "about": "AI readings: who wrote the evidence of each turning point of theories/LINEAGE.md (lineage.json's points, numbered from 1), classified by three AI readers from what each file or its folder says and checked point by point by three more (RW's re-score, Q4, 8 November 2026). No person has read them. 'origin' is the point's: that of the first evidence entry that states the turning point. All 48 checks agreed. Point 49, added on 9 November 2026 when the cut moved to that day, was classified by the session that added it; that round's AI readers found its first evidence did not state the change, and it was reclassified, then classed AI-drafted from those words (round-5-readers-1.json, round-5-readers-2.json).",
  "classes": {
   "person": "the text that states it is a person's own writing, or a person's words kept verbatim (in `sources/`, or the excerpts of one person's turns), as the file or its folder says.",
   "drafted": "the text that states it was written by AI from a person's words, notes or conversation, as the file or its folder says: the ideas may be the person's, the wording is not.",
@@ -1522,13 +1522,13 @@
   {
    "index": 49,
    "id": "nov-within-becoming-no-should",
-   "origin": "ai",
-   "why": "Classified first as 'person' by the session that added the point (RW (c), 9 November 2026), from entry 0, a person's words kept verbatim. The next round's AI readers (round-5-readers-1.json: the lineage reader's finding on evidence[0] and the Chinese checker's) found that those words do not state the change, which AI-made texts state; the entries now open with the working rules (AGENTS.md), and the point is ai.",
+   "origin": "drafted",
+   "why": "Classified first as 'person' by the session that added the point (RW (c), 9 November 2026), from entry 0, a person's words kept verbatim. That round's AI readers (round-5-readers-1.json) found those words do not state the change, and it was reclassified 'ai'; the second reading (round-5-readers-2.json) found that the working rules were revised on those words, as the board's WB clause says ('on Ren's words of 8–9 November 2026'), as points 40 and 42's rewrites of AGENTS.md were, so the entries open with the working rules, AI-drafted from a person's words, and the point is drafted.",
    "evidence": [
     {
      "path": "AGENTS.md",
-     "origin": "ai",
-     "basis": "The working rules, AI-written and revised by the working sessions; the line is in '## Evaluation'."
+     "origin": "drafted",
+     "basis": "The working rules, revised by WB's session on a person's words of 8–9 November 2026 (the board's WB clause at 55cf6892e: 'on Ren's words of 8–9 November 2026'; the source file's messages asking to change AGENTS.md first); the line is in '## Evaluation'."
     },
     {
      "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",

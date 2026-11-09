@@ -33,7 +33,7 @@
 
 ![八章及其彼此记录下的使用：圆按结果数定大小，实线计各章结果之间记为 formal-reuse 的使用，章与章之间的虚线与点线是别种依赖，两种读法进入第七章，各在所用之处为假设，T1 到 T8 在其所属之处按检验结局着色](results/spine.zh.svg)
 
-**怎样读这幅图。** 实线计一章的结果使用另一章结果、记为 formal-reuse 的次数：这一类由 AI 写成的记录指定，没有任何检查核对一次使用是否见于 Lean；较深的一条是逆向的，即章序在前的一章使用章序在后的一章，登记检查不让任何记录闭合环（[这是入册的条件，不是一项发现](results/THEORY-GRAPH.zh.md#do-the-recorded-uses-form-a-cycle)）。辐条计该章在文法上陈述其律的核心模块，不是推导而得的结果。117 项核心声明中，11 项[推导而得](../../GLOSSARY.zh.md#derived)，1 项为一个根形式的一步、在一个所述的假设之下，6 项为计数之律，99 项处于一个[指明的距离](../../GLOSSARY.zh.md#named-distance)（[这幅图显示什么、不显示什么](results/THEORY-GRAPH.zh.md#the-spine-what-it-shows-and-does-not-show)）。
+**怎样读这幅图。** 实线计一章的结果使用另一章结果、记为 formal-reuse 的次数：这一类由 AI 写成的记录指定，没有任何检查核对一次使用是否见于 Lean；较深的一条是逆向的（章的编号是为阅读，不是证明的次序），即章序在前的一章使用章序在后的一章；登记检查不让任何记录闭合其已声明依赖之环（[这是入册的条件，不是一项发现](results/THEORY-GRAPH.zh.md#do-the-recorded-uses-form-a-cycle)）。辐条的粗细是该章核心模块中在文法上陈述其律者所占的比例，计的是模块，不是推导而得的结果。117 项核心声明中，11 项[推导而得](../../GLOSSARY.zh.md#derived)，1 项为一个根形式的一步、在一个所述的假设之下，6 项为计数之律、位于文法以下，99 项处于一个[指明的距离](../../GLOSSARY.zh.md#named-distance)、各有其理由（[这幅图显示什么、不显示什么](results/THEORY-GRAPH.zh.md#the-spine-what-it-shows-and-does-not-show)）。
 
 *围绕文法的各章，由工具依[理论图](results/THEORY-GRAPH.md)画出：一条实线计一章的结果使用另一章结果、记为 formal-reuse 的次数，这一类留给已核验的推理，由 AI 写成的记录指定，没有任何检查对照 Lean 核对，章与章之间的虚线与点线是别种依赖；一条曲线是一种依赖，不是意义上的一致。117 项核心声明中，11 项推导而得，各为文法之律的一个情形，经由在 Lean 中作为等价核验的桥接与审阅所读的支持（某行载有它们之处）；1 项在一个所述的假设之下，6 项为计数，位于文法以下，99 项处于一个指明的距离，各有其理由（[08 §7](chapters/08-METHOD.md#r-one-root-to-its-edge)）。这幅图显示什么、不显示什么，见[理论图：各章一览](results/THEORY-GRAPH.zh.md#the-spine-what-it-shows-and-does-not-show)。*
 

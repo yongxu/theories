@@ -10,7 +10,7 @@
 
 **What this is.** A theory of how anything comes to be, lasts, changes and passes away, without assuming that becoming is good. Its laws are proved on formal models, in mathematics checked by machine; that they explain how actual things go on is argued, not proved. Its makers want it to help people and trained systems predict, come to share an understanding and coordinate; the want is theirs and revisable, and nothing in the work shows it met.
 
-**Start with** [the one page](theories/becoming/ONE-PAGE.md) (16–20 minutes). [The opening](#truth-exists) is a first-person conviction (24–31 minutes).
+**Start with** [the one page](theories/becoming/ONE-PAGE.md) (16–21 minutes). [The opening](#truth-exists) is a first-person conviction (24–31 minutes).
 
 **What it is for.** Four questions for any reward, judge, market or vote: what does it read or need; what lies beyond that; can it do better on what it reads by lowering what lies beyond; can its rule lock on what it already selected. The work proves, on its models, [when doing best on what is read must drain what lies beyond](theories/becoming/ONE-PAGE.md), as far as any allowed outcome does, and when a rule read from the share of its own winners, favouring them, locks on them, without noise, while a loss it does not read grows. A ranking fed by its own clicks is one such rule, as a reading; that actual rankings meet the model is conjectured. [Its uses](theories/becoming/USES.md), in alignment, coordination and wisdom traditions, stand each at its own standing ([worked on a language-model judge](theories/becoming/USES-EXAMPLES.md#auditing-a-language-model-judge)); no test designed from it has yet run on a deployed pipeline.
 

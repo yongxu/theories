@@ -435,37 +435,38 @@ OV_TEXT = {
                   'prominently than divergence.'),
            'critic': 'A random check of {sampled} entries estimates that about {label}% of all {n} carry a wrong label or target role and {fails}% a wrong reading.',
            'folders': '{n} earlier folders', 'claims': 'claims', 'domains': '{n} domains of thought', 'sep': ' · ',
-           'desc': ' Drawn as a matrix: a row per folder or domain, a column per part of the account, in each cell a dot per relation, filled where the account takes the claim up and a ring where it is proposed here. The relations count the claims drawn; {with_relation} that stand only in history or are not carried also carry one, which the crosswalk’s table counts.',
+           'desc': ' Drawn as a matrix: a row per folder or domain, a column per part of the account, in each cell a dot per relation, filled for what the account takes up and, below it, a ring for what is proposed here. The relations count the claims drawn; {with_relation} that stand only in history or are not carried also carry one, which the crosswalk’s table counts.',
            'dot': '{n} claims, {relation}, read against {part}; {how}', 'dot_one': '{n} claim, {relation}, read against {part}; {how}',
            'stated': 'the account takes it up', 'fresh': 'proposed here, not stated by the account',
            'stated_key': 'filled: the account takes it up (states it, or says otherwise)', 'fresh_key': 'ring: proposed here, not stated by the account',
            'size': '{n} claims', 'size_one': '{n} claim',
-           'notes': ('In a cell, a dot per relation in the order above, its area growing with the claims; the stated dots above, the proposed below.',
+           'notes': ('In a cell, a dot per relation in the order above, its area growing with the claims; the dots the account takes up above, the proposed below.',
                      'The legend’s counts are drawn claims, by relation. The {loose} claims only in history or not carried draw no dot',
                      '({with_relation} of them carry a relation, which the crosswalk’s table counts).',
                      'Beside a folder or domain the number counts all its claims; beside a part of the account, the drawn claims read against it,',
                      'a claim read against several parts counting at each.',
                      None,
                      'Every claim with its targets and their standings: the crosswalk (CROSSWALK.md, in the same folder). The same data to explore:',
-                     'the connection map: on the reader’s site, once it is published, its Connections page; or from a clone map.html in this folder',
-                     '(GitHub shows it only as source).')},
+                     'the connection map: on the reader’s site, once it is published, its Connections page; or map.html in this folder,',
+                     'opened from a clone (GitHub shows it only as source).')},
     'zh': {'title': '早先的文件夹与各思想领域怎样与现行的本论相接',
            'lede': ('由 connection_map.py 依对照表的 {n} 条主张画出，每一条都对照现行的本论来读。一行是一个早先的文件夹或一个思想领域，',
                     '一列是它的主张所对照的本论那一部分；横着读一行。图中文字为 AI 所译，义以英文版为准。'),
            'ai': ('每一个点都是 AI 的读法，没有人的。一个点不是证明；相合画得并不比相分更显眼。', ''),
            'critic': '随机复核 {sampled} 条，据此估计全部 {n} 条中约 {label}% 的标签或目标角色有误，约 {fails}% 的读法有误。',
            'folders': '{n} 个早先的文件夹', 'claims': '主张', 'domains': '{n} 个思想领域', 'sep': ' · ',
-           'desc': '画成一张矩阵：每个文件夹或领域一行，本论每一部分一列，每格中每种关系一个点；本论承接者为实心，在此处提出者为空心圆环。关系计的是画出的主张；仅存于历史或未承继者中另有 {with_relation} 条也带有关系，对照表的表格计入它们。',
+           'desc': '画成一张矩阵：每个文件夹或领域一行，本论每一部分一列，每格中每种关系一个点；本论论及者为实心，在此处提出者为空心圆环。关系计的是画出的主张；仅存于历史或未承继者中另有 {with_relation} 条也带有关系，对照表的表格计入它们。',
            'dot': '{n} 条主张，{relation}，对照{part}；{how}', 'dot_one': '{n} 条主张，{relation}，对照{part}；{how}',
-           'stated': '本论承接它', 'fresh': '在此处提出，本论没有陈述',
-           'stated_key': '实心：本论承接它（陈述它，或另有说法）', 'fresh_key': '空心圆环：在此处提出，本论没有陈述',
+           'stated': '本论论及它', 'fresh': '在此处提出，本论没有陈述',
+           'stated_key': '实心：本论论及它（陈述它，或另有说法）', 'fresh_key': '空心圆环：在此处提出，本论没有陈述',
            'size': '{n} 条主张', 'size_one': '{n} 条主张',
-           'notes': ('每格中，每种关系一个点，次序同上，面积随主张数增加；陈述者在上，提出者在下。',
+           'notes': ('每格中，每种关系一个点，次序同上，面积随主张数增加；本论论及者在上，提出者在下。',
                      '图例中的计数是画出的主张，按关系计。仅存于历史或未承继的 {loose} 条主张不画点（其中 {with_relation} 条带有关系，对照表的表格计入它们）。',
                      '文件夹或领域旁的数字计其全部主张；本论某一部分旁的数字计对照它而画出的主张，一条主张对照几个部分，就在每一部分各计一次。',
                      None,
                      '每一条主张及其目标与地位：对照表（同一文件夹中的 CROSSWALK.md；中文概览是 CROSSWALK.zh.md）。',
-                     '同样的数据可在连接图中探索：读者网站发布后其上的“Connections”（连接图）页，或在克隆中打开此文件夹的 map.html（GitHub 只把它显示为源代码）。')}}
+                     '同样的数据可在连接图中探索：读者网站发布后其上的“Connections”（连接图）页，',
+                     '或在克隆中打开此文件夹的 map.html（GitHub 只把它显示为源代码）。')}}
 
 
 def _warp_zh(w: dict) -> str:
@@ -629,7 +630,7 @@ def overview_svg(data: dict, lang: str = 'en') -> str:
             _ov_text(OV_W / 2 + 14, y, words['fresh_key'], 13)]
     y += 24
     x = 24
-    for n in (1, 5, 20):
+    for n in (1, 10, 24):
         out.append(f'<circle cx="{x + 5}" cy="{y - 4.5}" r="{min(DOT_MAX, 1.0 + 0.4 * n ** 0.5):.2f}" fill="{OV_MUTED}"/>')
         label = (words['size_one'] if n == 1 else words['size']).format(n=n)
         out.append(_ov_text(x + 14, y, label, 13))
@@ -677,8 +678,8 @@ def start_here(data: dict, rows: int = 5) -> list[str]:
     here = posixpath.dirname(atlas_tool.CROSSWALK)
     ranked = sorted((t for t in overview_threads(data) if not t['fresh']), key=lambda t: (-t['n'], t['group'], t['warp'], t['relation']))
     threads = [t for t in ranked if len(ranked) <= rows or t['n'] >= ranked[rows - 1]['n']]  # a tie at the cut is kept whole
-    out = ['**Start here.** The thickest threads in the picture below that the account takes up (states, or says otherwise; '
-           'none proposed here), with any tie at the last: a folder or domain, the part of the account its claims are read '
+    out = ['**Start here.** The largest dots in the picture below that the account takes up (states, or says otherwise; '
+           'none proposed here), and any that tie with the fifth: a folder or domain, the part of the account its claims are read '
            "against, the relation and how many claims. Each folder's page gives its claims one by one.", '',
            '| Folder or domain | Read against | Relation | Claims |', '|---|---|---|---:|']
     for t in threads:
