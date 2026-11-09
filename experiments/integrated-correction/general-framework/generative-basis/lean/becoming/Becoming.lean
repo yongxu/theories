@@ -384,6 +384,7 @@ import Becoming.PremiseWitnesses
 import Becoming.PremisesTogether
 import Becoming.GrammarPath
 import Becoming.RoutesToC
+import Becoming.BeyondCoupling
 import Becoming.SignificanceStatements
 
 /-!
@@ -4713,6 +4714,25 @@ tagged instance or application.
   (`Weighting.increasing_iff_one_step`). On a listing of what lies downstream, P2 and P4 of the path in
   07 §4.6 with self-concern give increasing in admission
   (`Weighting.increasing_on_downstream_of_regularity`). A leaf; short laws, none new as mathematics.
+* `Becoming.BeyondCoupling` (L2, through `Becoming.GrammarScope` and `Becoming.Standpoints`): what
+  concern formed by continuation cannot reach (board item ZB, one of route (b)'s pieces). A selection
+  read off a group's continuations decides a level history by each member's admission at every step
+  (`Web.ReadOffContinuations`), or by what couples into the members at every step
+  (`Web.ReadOffCouplings`), over the whole run. `act_courses_unselected_pool` read over the whole
+  run (`act_courses_unselected_throughout`): two acts of a part, laws agreeing on what couples into
+  the pool's coupling closure, the rest following a law reading through coupling, the courses
+  feasible, are selected alike by every such selection; where the act reads significance only within
+  that closure (`ActReadsWithin`, a premise) so are two significances agreeing there
+  (`significance_courses_unselected`). Route (b)'s universal form in one theorem
+  (`routeB_universal_closed`): the own-closure significance is the condition exactly where every
+  closure is the whole, not on a relation with no cycle and two distinct centers, and not along a
+  relation returning to a center wherever something lies beyond its coupling closure. Where the
+  blindness lifts: histories are selected alike by every selection read off a group's couplings
+  exactly when alike through every member's couplings at every step
+  (`Web.readOffCouplings_alike_iff`, from `Web.selects_alike_all_iff`). Witnesses in `Clearing` and
+  `Diversion`, among them the failed candidate that coupling the dweller in turns the selection
+  against its loss (`Clearing.read_not_direction`). A leaf: it composes laws of modules that nothing
+  below imports together; short laws, none new as mathematics.
 * `Becoming.GrammarPath` (L1): what a line under a class must hold, and what a regularity takes in
   (board item PF), for every carrier, relation and class. Where a region is left under a class only
   into a set, a line under the class from inside to outside holds a member of that set alike to its

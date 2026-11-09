@@ -1,0 +1,244 @@
+{
+  "schema_version": 2,
+  "id": "where-the-blindness-lifts",
+  "title": {
+    "en": "Where selection's blindness beyond the coupling lifts",
+    "zh": "选择在耦合外之盲何处解除"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F04",
+  "reviewed_at_utc": "2026-11-09T12:00:00+00:00",
+  "statement": {
+    "en": "Some selection read off a group's continuations or couplings is turned by a difference exactly where it changes, at some step, what couples into a member; a loss beyond the closure turns one only once coupled in, through the dweller's continuation or its condition, and the direction stays open.",
+    "zh": "某个读自一组延续或耦合的选择恰在差异于某步改变耦合入某成员者处被它扭转；故耦合闭包外的失去只在经栖居者之延续或其条件被耦合入后才扭转此类选择，而耦合入不定方向。"
+  },
+  "laws": [
+    {
+      "en": "Two histories are selected alike by every selection read off a group's continuations exactly when they admit every member alike at every step, and by every selection read off its couplings exactly when they are alike through every member's couplings at every step, the latter from the law at each step. Where a member's continuation differs, the class of the first history is such a selection and separates them.",
+      "zh": "两段历史被读自一组延续的每个选择选得相同，恰当它们每步对每成员接纳相同；被读自其耦合的每个选择选得相同，恰当它们每步经每成员之耦合无别（后者出于每步之律）；若某成员之延续有别，前一历史之类即是这样的选择，于前者成立而于后者不成立。",
+      "declarations": [
+        "Becoming.Web.ContinuationClass",
+        "Becoming.Web.continuationClass_reads",
+        "Becoming.Web.readOffContinuations_alike_iff",
+        "Becoming.Web.readOffCouplings_alike_iff",
+        "Becoming.Web.separates_continuations"
+      ]
+    },
+    {
+      "en": "Witnesses, the loss coupled in. In Clearing the selection that the dweller is admitted at every step, read off the clearer's and the dweller's continuations, holds in the spared world only, and none read off the clearer's alone separates the two; with the habitat gauged by the clearer, one read off its couplings does, while in the clearing flow the dweller stays beyond its coupling closure.",
+      "zh": "见证：失去被耦合入。Clearing 中「栖居者每步被接纳」读自清除者与栖居者的延续，只在不清除世界成立，而只读自清除者者无一分开二者；栖息地经水平耦合入清除者时，读自其耦合的选择分开二者，栖居者仍在其耦合闭包外。",
+      "declarations": [
+        "Becoming.Clearing.clearerOrDweller",
+        "Becoming.Clearing.turned_by_dweller_read",
+        "Becoming.Clearing.habitatGauge",
+        "Becoming.Clearing.turned_by_habitat_gauge"
+      ]
+    },
+    {
+      "en": "A failed candidate kept: coupling the dweller in turns the joint selection against its loss. That the dweller is ended is read off the same continuations and holds only in the cleared world.",
+      "zh": "保留的失败候选：耦合入栖居者使联合选择反对其失去。「栖居者终结」读自同样的延续，只在清除世界成立。",
+      "declarations": [
+        "Becoming.Clearing.read_not_direction"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Discrete steps and natural levels; a web; a coupling by level supplied; who selects, and from whose continuations or couplings, supplied.",
+      "zh": "不加公理。离散步与自然数水平；一个网；经水平的耦合为给定；谁选择、读谁的延续或耦合为给定。"
+    },
+    {
+      "en": "With the selection-side law: the premises of selection-read-off-continuations for what it says of a loss beyond the coupling closure.",
+      "zh": "与选择一侧之律合用时：关于耦合闭包外之失去，用 selection-read-off-continuations 的前提。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "The direction: a loss coupled in can turn the selection either way.",
+      "zh": "方向：被耦合入的失去可把选择扭向任一方。",
+      "kind": "non-implication",
+      "witness": "Becoming.Clearing.read_not_direction"
+    },
+    {
+      "en": "That the shapers of a rule keep a reader of the loss: in the home section that is the AI's reading, and the witnesses show their own selection does not supply it.",
+      "zh": "规则的塑造者保留对失去的读者：家中此为 AI 的读法，见证表明他们自己的选择不提供它。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That the loss is read in time, before it passes its point of no return.",
+      "zh": "失去在过不可回之点前被及时读到。",
+      "kind": "scope"
+    },
+    {
+      "en": "That any actual rule, institution or training process couples in those who bear its losses.",
+      "zh": "任何实际的规则、制度或训练过程把承受其失去者耦合入。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean",
+      "detail": {
+        "en": "Against the candidate that coupling the dweller in turns the joint selection against its loss: the selection that the dweller is ended is read off the clearer's and the dweller's continuations and holds in the cleared world and not the spared one (Clearing.read_not_direction).",
+        "zh": "反对「耦合入栖居者使联合选择反对其失去」：「栖居者终结」读自清除者与栖居者的延续，于清除世界成立而于不清除世界不成立（Clearing.read_not_direction）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "names-provisional",
+    "formal-not-empirical",
+    "discrete-steps"
+  ],
+  "validation_scope": {
+    "en": "Pure core, axiom report empty; a leaf. Near-definitional: the class of a history is a selection read off what it reads; with the selection-side law it gives the condition under which the blindness lifts. Written by an AI; a reader of another model read the statements cold against this record and its home; no human audit.",
+    "zh": "纯核心，公理报告为空；叶模块。近于定义：一段历史之类即读自其所读者的选择；与选择一侧之律合用，给出盲解除的条件。AI 所写；另一模型的读者冷读对照；无人类审计。"
+  },
+  "next_delta": {
+    "en": "Joined to AJ's models of who reads: a reader whose couplings carry the loss, drawn from beyond the shapers' couplings, read in a model where the shaping changes what the rule reads, so that capture and accountable revision are told apart on the flow.",
+    "zh": "与 AJ 关于谁读的模型相接：耦合携带失去、取自塑造者耦合之外的读者，置于塑造改变规则所读者的模型中，使俘获与可问责的修订在流上得以分辨。"
+  },
+  "correspondence": {
+    "en": "Reading (the AI's): the first condition of generative alignment asks that where shaping the rule is selected by what comes back to the shapers, the rule still reads what lies beyond their share so that a loss there can turn it; AJ's models take what the rule reads from the readers' premise. On the flow that premise is this law: the rule reads the loss where the dweller, or the condition its continuation depends on, couples into a reader. Ostrom's third design principle, that most of those affected by the rules take part in changing them (1990), has this shape; the account adds that coupling in leaves the direction open.",
+    "zh": "解读（AI 的）：生成性对齐的第一条件要求，凡塑造规则因回到塑造者者而被选之处，规则仍读其份额之外者，使那里的失去能扭转它；AJ 的模型从读者前提取规则所读者。在流上该前提即此律：栖居者或其延续所依的条件耦合入某读者时，规则读到失去。Ostrom 第三设计原则（受规则影响者多参与修改规则，1990）有此形；本理论补充：耦合入不定方向。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean",
+  "aliases": [
+    "where the blindness lifts",
+    "the loss coupled in",
+    "盲何处解除",
+    "Becoming.Web.readOffContinuations_alike_iff",
+    "Becoming.Web.readOffCouplings_alike_iff"
+  ],
+  "dependencies": [
+    {
+      "id": "selection-read-off-continuations",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses selections read off continuations and couplings (Web.ReadOffContinuations, Web.ReadOffCouplings) and the Clearing reading of counting (Clearing.countingLevel, Clearing.DwellerKept, Clearing.counting_dweller_unselected).",
+        "zh": "复用读自延续与耦合的选择（Web.ReadOffContinuations、Web.ReadOffCouplings），及 Clearing 中计入之读法（Clearing.countingLevel、Clearing.DwellerKept、Clearing.counting_dweller_unselected）。"
+      },
+      "interface": {
+        "output": {
+          "en": "Selections read off a group, and their blindness beyond the closure.",
+          "zh": "读自一组的选择及其在闭包外之盲。"
+        },
+        "input": {
+          "en": "What such selections separate.",
+          "zh": "此类选择能分开什么。"
+        },
+        "conditions": {
+          "en": "None beyond its own.",
+          "zh": "无额外条件。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean"
+      }
+    },
+    {
+      "id": "testing-within-couplings",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses being alike through a formation's couplings, its symmetry and reflexivity, and Clearing.tested_by_dweller.",
+        "zh": "复用经形成之耦合无别及其对称、自反，与 Clearing.tested_by_dweller。"
+      },
+      "interface": {
+        "output": {
+          "en": "Likeness through the couplings.",
+          "zh": "经耦合无别。"
+        },
+        "input": {
+          "en": "The classes and witnesses.",
+          "zh": "类与见证。"
+        },
+        "conditions": {
+          "en": "None.",
+          "zh": "无。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean"
+      }
+    },
+    {
+      "id": "route-b-universal-form-closed",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses that the dweller lies beyond the clearer's coupling closure for every coupling by level (Clearing.dweller_beyond_every_coupling).",
+        "zh": "复用栖居者对一切经水平的耦合皆在清除者耦合闭包之外（Clearing.dweller_beyond_every_coupling）。"
+      },
+      "interface": {
+        "output": {
+          "en": "The dweller beyond the coupling closure.",
+          "zh": "栖居者在耦合闭包外。"
+        },
+        "input": {
+          "en": "The gauge witness.",
+          "zh": "测量之见证。"
+        },
+        "conditions": {
+          "en": "The witness.",
+          "zh": "见证。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "readers-drawn-from-the-selected",
+      "detail": {
+        "en": "What the rule reads taken from the readers' premise; here the flow-level form of reading a loss.",
+        "zh": "规则所读者取自读者前提；此处为读到失去在流层面的形式。"
+      }
+    },
+    {
+      "id": "shaping-the-rule-selected-by-what-comes-back",
+      "detail": {
+        "en": "Capture: shaping selected by what comes back to the shapers.",
+        "zh": "俘获：塑造因回到塑造者者而被选。"
+      }
+    },
+    {
+      "id": "loss-read-in-time-by-the-others",
+      "detail": {
+        "en": "Reading the loss in time, the second condition.",
+        "zh": "及时读到失去，第二条件。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Clearing.clearerOrDweller",
+        "Becoming.Clearing.habitatGauge",
+        "Becoming.Clearing.read_not_direction",
+        "Becoming.Clearing.turned_by_dweller_read",
+        "Becoming.Clearing.turned_by_habitat_gauge",
+        "Becoming.Web.ContinuationClass",
+        "Becoming.Web.continuationClass_reads",
+        "Becoming.Web.readOffContinuations_alike_iff",
+        "Becoming.Web.readOffCouplings_alike_iff",
+        "Becoming.Web.separates_continuations"
+      ],
+      "sha256": "f1b01742d4229540fd7b6ba8c5e51030cf89c6de718fd28bf3aa143f2041b92a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zb-beyond-coupling/NOTE.md",
+      "role": "integration",
+      "sha256": "f5eacf9189da5b72fc7202beee166f0470aae58e8b861e1f908b07a5d134fdee"
+    },
+    {
+      "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "role": "statement",
+      "sha256": "31317c9ea83ea8eb7d2fa77a583a72fe7cc09f515b6a5ebaa9c77f941d97ad23"
+    }
+  ],
+  "proof_bindings": [],
+  "history": [
+    {
+      "en": "9 November 2026, board item ZB, one of route (b)'s four pieces: added, as the law under which the blindness of selection-read-off-continuations lifts, checked against the first condition of generative alignment and AJ's plan. The direction has no law from coupling alone; the failed candidate is kept.",
+      "zh": "2026年11月9日，看板项 ZB，路线 (b) 四部分之一：新增，作为 selection-read-off-continuations 之盲解除的律，对照生成性对齐第一条件与 AJ 的计划核查。方向无单凭耦合之律；失败候选保留。"
+    }
+  ]
+}
