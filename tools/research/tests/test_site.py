@@ -978,6 +978,8 @@ class SiteTests(unittest.TestCase):
                  '{ globalThis.location = {pathname: p, hash: "#h", replace: u => out.push(u)}; new Function(src)(); } '
                  'console.log(JSON.stringify(out));')
         node = shutil.which('node')
+        if not node:
+            self.skipTest('node is not installed, so the 404 page\'s script cannot be run here')
         if node:  # the page a Markdown address names, on this site; an address that leads off the site is kept on it
             got = json.loads(subprocess.run([node, '-e', stage, str(self.tmp / 'onward.js')], capture_output=True, text=True, check=True).stdout)
             self.assertEqual(got, ['/r/a/index.html#h', '/r/a/X.html#h', '/evil.example/x.html#h', '/r/aREADME.html#h'])
@@ -993,7 +995,7 @@ class SiteTests(unittest.TestCase):
         index = json.loads(self.page('search.json'))
         heads = next(p for p in index['pages'] if p['u'] == 'a/ONE.html')['h']
         self.assertIn(['Thesis T4: The scope can be installed', 't4'], heads)
-        self.assertIn(['Thesis T6: A break is seen coming.', 't6'], heads)
+        self.assertIn(['Thesis T6: A break is seen coming', 't6'], heads)
         self.assertEqual(next(p for p in index['pages'] if p['u'] == 'a/chapters/index.html')['t'], 'Overview · T')
 
     def test_a_glossary_never_widens_and_a_changed_bullet_starts_a_new_list(self):
@@ -1004,6 +1006,9 @@ class SiteTests(unittest.TestCase):
         self.build(pages=SITE['pages'] + ['GLOSSARY.md'])
         self.assertNotIn('table wide', self.page('GLOSSARY.html'))
         self.assertIn('<ul><li>a</li></ul>\n<ul><li>b</li></ul>', self.page('a/ONE.html'))
+        (self.tmp / 'a/ONE.md').write_text('# One\n\n## What it is\n\n- a\n* b\n1. c\n2) d\n')
+        self.build(pages=SITE['pages'] + ['GLOSSARY.md'])
+        self.assertIn('<ul><li>a</li></ul>\n<ul><li>b</li></ul>\n<ol><li>c</li></ol>\n<ol start="2"><li>d</li></ol>', self.page('a/ONE.html'))
 
     def test_a_record_stated_in_chinese_says_so(self):
         record = 'theories/becoming/results/records/closed-capture.md'
@@ -1012,6 +1017,63 @@ class SiteTests(unittest.TestCase):
         self.files.add(record)
         self.build(pages=SITE['pages'] + [record])
         self.assertIn('stated in <span lang="zh-Hans">古文</span></a>', self.page(record[:-3] + '.html'))
+
+
+    def test_a_guide_or_label_is_no_lead_and_a_language_link_in_chinese_is_passed_over(self):
+        real = '<p>A real lead of forty characters or more, saying what the page is.</p>'
+        for guide in ('How to read this page. Start at the top.', 'Executable research. Rewritten 17 October 2026 in the restructure.',
+                      '请先读这一段。 本理论尚无独立的人工审查记录，读者请据此衡量。', 'Labels: Theorem with its model, Reading with its label.'):
+            self.assertEqual(site.lead(f'<p>{guide}</p>' + real), strip(real), guide)
+        thesis = '<p>论题。 古文中有一条关系之线。根之文法的诸定义是从所选古文重构的读法；本章检验其形式后果，并记下读不进、证不出之处。</p>'
+        self.assertEqual(site.lead(thesis)[:3], '论题。')  # a short opener before a statement, not a label: kept
+        self.assertTrue(site.LANGUAGE_LINK.match('<a href="x.zh.html"><span lang="zh-Hans">中文</span></a> · the rest'))
+        self.assertTrue(site.LANGUAGE_LINK.match('<a href="x.zh.html"><span lang="zh-Hans">中文（各章一览）</span></a> · the rest'))
+
+    def test_the_map_page_is_named_described_and_skippable_and_the_chinese_home_says_its_picture_opens(self):
+        from tools.research import connection_map
+
+        def stub(out_dir, link_base, site_paths=None, home='index.html', nav=None, search=None, name=None, languages=None):
+            out_dir = Path(out_dir)
+            out_dir.mkdir(parents=True, exist_ok=True)
+            (out_dir / 'map.html').write_text('<!doctype html><head><title>Becoming Connection Map</title></head><body>'
+                                              '<header class="top"><a class="brand" href="index.html">T</a></header><div class="wrap">map</div></body>')
+            return out_dir / 'map.html'
+        had, old = hasattr(connection_map, 'site_map'), getattr(connection_map, 'site_map', None)
+        connection_map.site_map = stub
+        (self.tmp / 'README.zh.md').write_text('# 题\n\n![图](p.svg)\n\n中文的首页。\n')
+        (self.tmp / 'p.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" width="10" height="20"></svg>')
+        self.files |= {'README.zh.md', 'p.svg'}
+        try:
+            self.build(map=True, pages=SITE['pages'] + ['README.zh.md'], assets=['p.svg'],
+                       nav=SITE['nav'] + [['connections.html', 'Connections']],
+                       ways_in=SITE['ways_in'] + [{'path': 'connections.html', 'label': 'The connections', 'text': 'Every claim drawn.'}])
+        finally:
+            if had:
+                connection_map.site_map = old
+            else:
+                del connection_map.site_map
+        drawn = self.page('connections.html')
+        for said in ('<title>Connections · T</title>', '<meta name="description" content="Every claim drawn.">',
+                     '<meta property="og:title" content="Connections · T">', '<a class="skip" href="#main">Skip to the text</a>\n<header class="top"',
+                     '<div class="wrap" id="main">', 'header.top nav{flex-wrap:wrap'):
+            self.assertIn(said, drawn)
+        entry = next(p for p in json.loads(self.page('search.json'))['pages'] if p['u'] == 'connections.html')
+        self.assertEqual((entry['t'], entry['k']), ('Connections', 'connection map'))
+        self.assertIn('<p class="open"><a href="p.svg">打开原尺寸的图</a></p>', self.page('README.zh.html'))
+
+    def test_the_search_says_a_kept_page_is_a_former_page(self):
+        data = {'pages': [{'t': 'Old claims', 'u': 'a/OLD.html', 'h': [], 'f': 2}, {'t': 'Old id (renamed)', 'u': 'o.html', 'h': [], 'f': 1},
+                          {'t': 'Connections', 'u': 'connections.html', 'h': [], 'k': 'connection map'}], 'results': []}
+        (self.tmp / 's.json').write_text(json.dumps(data))
+        (self.tmp / 'search.js').write_text(site.SEARCH_JS)
+        node = shutil.which('node')
+        if not node:
+            self.skipTest('node is not installed, so the search script cannot be run here')
+        run = lambda q: json.loads(subprocess.run([node, '-e', SEARCH_QUERY, str(self.tmp / 'search.js'), str(self.tmp / 's.json'), q],
+                                                  capture_output=True, text=True, check=True).stdout)
+        self.assertEqual(run('old claims'), [['Old claims', 'A former page, kept for its old links']])
+        self.assertEqual(run('old id'), [['Old id (renamed)', 'A former id, renamed']])
+        self.assertEqual(run('connection map'), [['Connections', '']])  # found by its key's words, which are not shown
 
 
 class ScreenPatternTests(unittest.TestCase):

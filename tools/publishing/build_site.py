@@ -82,7 +82,8 @@ CJK_RUN = re.compile(r'[　-〿㐀-䶿一-鿿豈-﫿！-｠]+')  # Han, CJK and 
 TEX_SUB = re.compile(r'\$([A-Za-z])_\{?(\d{1,2})\}?\$')  # $V_4$: a letter with a numeric subscript, as GitHub's math shows it
 # a thesis's paragraph: '**Thesis T7.** *its name*' (02, 03, 05) or '**Thesis T4. its name.**' (07)
 THESIS_LINE = re.compile(r'^\*\*Thesis (T\d+[a-z]?)\.(?:\*\*\s*\*([^*]+)\*|\s+([^*]+?)\.?\*\*)')
-LEAD_SKIP = re.compile(r'^(?:How to read\b|怎样读|Labels?: |No independent human review|本论尚无独立的人工审查|Rewritten \d)')  # a guide or label, no lead
+LEAD_SKIP = re.compile(r'^(?:[^.。]{1,24}[.。]\s*)?'  # after a short opener ('Executable research.', '请先读这一段。'):
+                       r'(?:How to read\b|怎样读|Labels?: |No independent human review|本(?:理)?论尚无独立的人工审查|Rewritten \d)')  # a guide or label, no lead
 KEPT_FOR_LINKS = 'kept so that links to it resolve'  # a page that says so is a former page, ranked below current names
 
 
@@ -323,7 +324,7 @@ class Page:
                     ident = thesis.group(1).lower()  # a thesis with no anchor line above it: the site gives it one, t4 as 02 gives t7
                     if ident not in self.ids:
                         attr = f' id="{self._id(ident)}"'
-                        self.toc.append((4, ident, f'Thesis {thesis.group(1)}: {plain_title(thesis.group(2) or thesis.group(3))}'))
+                        self.toc.append((4, ident, f'Thesis {thesis.group(1)}: {plain_title(thesis.group(2) or thesis.group(3)).rstrip(".")}'))
                 out.append(f'<p class="em"{attr}>{inner}</p>' if whole else f'<p{attr}>{inner}</p>')  # wholly in italics: a note
                 para = []
                 self.pending = set()
@@ -357,7 +358,7 @@ class Page:
                     self._id(ident)
                     thesis = THESIS_LINE.match(nxt) if re.fullmatch(r't\d+[a-z]?', ident) else None
                     if thesis:  # a thesis is found by the search as a section is: 'Thesis T7: its name'
-                        self.toc.append((4, ident, f'Thesis {thesis.group(1)}: {plain_title(thesis.group(2) or thesis.group(3))}'))
+                        self.toc.append((4, ident, f'Thesis {thesis.group(1)}: {plain_title(thesis.group(2) or thesis.group(3)).rstrip(".")}'))
                     if ident.startswith('r-'):
                         self.anchors.add(ident)
                         mark = self._record_mark(ident)
@@ -423,7 +424,7 @@ class Page:
             line = lines[i]
             m = re.match(r'^(\s*)([-*+]|\d+[.)])(\s+)(.*)$', line)
             if m and len(m.group(1).expandtabs(4)) == base:
-                if m.group(2)[0].isdigit() != ordered:
+                if m.group(2)[-1] != marker:  # another bullet or delimiter starts another list, as on GitHub
                     break
                 width = len(m.group(1)) + len(m.group(2)) + len(m.group(3))
                 items.append([m.group(4)])
@@ -1614,7 +1615,8 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
                     + f'<meta property="og:site_name" content="{html.escape(name)}">\n'
                     + '<style>header.top{font-size:.82rem;font-weight:400}header.top nav{flex-wrap:wrap;row-gap:.15rem;'
                     'overflow:visible;white-space:normal}header.top nav a{white-space:nowrap}'
-                    '@media (max-width:860px){header.top{position:static}}@media (min-width:1240px){#detail{top:64px}}'
+                    '@media (max-width:860px){header.top{position:static}}@media (min-width:861px){#main{scroll-margin-top:64px}}'
+                    '@media (min-width:1240px) and (max-width:1339px){#detail{top:64px;scroll-margin-top:64px}}'
                     'a.skip{position:absolute;left:-9999px;top:.5rem;z-index:4;padding:.3rem .6rem;background:var(--paper);'
                     'border:1px solid var(--ink);font:13px var(--sans)}a.skip:focus{left:16px}</style>\n')
             drawn = drawn.replace('</head>', head + '</head>', 1)
