@@ -21497,14 +21497,20 @@
    },
    "family": "H",
    "mechanism": {
-    "en": "A web's closures can be the whole in three ways: every system (sharing conditions throughout), every influence closure (mutual dependence: every continuation can be affected, at some remove, by every other) or every feeding closure (mutual feeding). Mutual feeding gives mutual dependence, which gives sharing throughout; neither converse holds. A flow is mutually dependent exactly where every reach closure is the whole. The pace is not given by mutual dependence: around a loop of m + 1 couplings holding at every step, a supplied premise, after R turns the carried amount at its condition, the most difference that can arrive there, is at least 2^R times what had reached it, and under 02's standard bounds at most D(1 + M)^t whatever the couplings, so around such a loop, under those bounds, it is exponential both ways. The lower bounds are of the carried amount, not of amounts under the first law. That an actual difference grows so, that a dependence couples at every step, and that the Earth is mutually dependent are supplied."
+    "en": "A web's closures can be the whole in three ways: every system (sharing conditions throughout), every influence closure (mutual dependence: every continuation can be affected, at some remove, by every other) or every feeding closure (mutual feeding). Mutual feeding gives mutual dependence, which gives sharing throughout; neither converse holds. A flow is mutually dependent exactly where every reach closure is the whole. The pace is not given by mutual dependence: around a loop of m + 1 couplings holding at every step, a supplied premise, after R turns the carried amount at its condition, the most difference that can arrive there, is at least 2^R times what had reached it, and under 02's standard bounds at most D(1 + M)^t whatever the couplings, so around such a loop, under those bounds, it is exponential both ways. The lower bounds are of the carried amount, not of amounts under the first law. That an actual difference grows so, that a dependence couples at every step, and that the Earth is mutually dependent are supplied. Read in time, on occurrences, with an exchange before a need and a formation going on, a flow is mutually dependent in time from a step where from each formation then every formation's continuation is reached then or later; that gives mutual dependence, not conversely, and holds from every earlier step but can lapse after it."
    },
    "records": [
-    "mutual-dependence-and-its-pace"
+    "mutual-dependence-and-its-pace",
+    "the-condition-in-time"
    ],
    "standing": [
     {
      "record": "mutual-dependence-and-its-pace",
+     "status": "recorded-checked",
+     "kind": "theorem"
+    },
+    {
+     "record": "the-condition-in-time",
      "status": "recorded-checked",
      "kind": "theorem"
     }
@@ -21517,7 +21523,12 @@
     "Becoming.carried_pow_around",
     "Becoming.carried_pow_downstream",
     "Becoming.carried_le_pow_always",
-    "Becoming.exponential_around"
+    "Becoming.exponential_around",
+    "Becoming.Flow.MutuallyDependentInTime",
+    "Becoming.Flow.MutuallyDependentFrom.mutuallyDependent",
+    "Becoming.Flow.MutuallyDependentFrom.earlier",
+    "Becoming.LatePair.apart",
+    "Becoming.Drawing.lapses"
    ],
    "base": "World",
    "hypotheses": [
@@ -21531,7 +21542,27 @@
     }
    ],
    "forbids": null,
-   "exits": [],
+   "exits": [
+    {
+     "to": null,
+     "law": "Becoming.Drawing.lapses",
+     "edge": {
+      "en": "Read in time, mutual dependence can lapse: the Drawing pair is mutually dependent in time from its first step and not from the next, while mutual dependence read across all steps stands (Drawing.lapses); read across all steps it can hold with nothing affecting anything in time (LatePair.apart)."
+     },
+     "strength": "witness",
+     "records": [
+      "the-condition-in-time"
+     ],
+     "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-condition-in-time",
+     "standing": [
+      {
+       "record": "the-condition-in-time",
+       "status": "recorded-checked",
+       "kind": "theorem"
+      }
+     ]
+    }
+   ],
    "transitions": [
     {
      "kind": "pace bound",
@@ -21572,7 +21603,8 @@
    "beyond": null,
    "sources": [
     "theories/becoming/chapters/05-COLLECTIVES.md#r-mutual-dependence-and-its-pace",
-    "theories/becoming/chapters/02-MAP.md#r-how-a-carried-difference-grows"
+    "theories/becoming/chapters/02-MAP.md#r-how-a-carried-difference-grows",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-condition-in-time"
    ],
    "standing_without_record": null
   },
