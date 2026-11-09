@@ -98,8 +98,8 @@
       "kind": "scope"
     },
     {
-      "en": "That the larger side is better: counting is a further premise, and C ranks neither side of a mixed pair.",
-      "zh": "较大的一方更好：计数是又一个前提，C 不把混合的一对中任何一方排得更高。",
+      "en": "That the larger side is better: counting is a further premise, and widening ranks neither side of a mixed pair above the other.",
+      "zh": "较大的一方更好：计数是又一个前提，扩大不把混合的一对中任何一方排在另一方之上。",
       "kind": "non-implication"
     }
   ],

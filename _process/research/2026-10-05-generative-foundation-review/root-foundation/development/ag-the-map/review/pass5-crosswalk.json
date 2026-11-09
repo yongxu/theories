@@ -1,0 +1,67 @@
+{
+ "note": "AI-written report, AG review fifth pass, crosswalk agent, 9 November 2026 (the crosswalk's rerun after the power cuts). Worktree /Users/ren/tmp/ag/rv; the pass's other files were committed as 22f65660c while this ran, which left correspondences.json and correspondence_groups.json unchanged, so every edit here was applied by script to that version (identical to 33b6f3cff's), each old string checked to occur exactly once in its field. 477 field changes in 280 of the 1,183 entries: 245 targets' says, 145 readings, 52 account_adds, 17 source_adds, 18 part labels. No id, name, sense, source quote, label, classification (carried, relation, agreement_of), role, record or anchor changed. Both files round-trip byte for byte with indent=1 and ensure_ascii=False. Nothing rendered; data/atlas.json and the crosswalk pages follow at the render.",
+ "changed": [
+  "theories/becoming/results/atlas/entries/correspondences.json",
+  "theories/becoming/results/atlas/entries/correspondence_groups.json",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass5-crosswalk.json"
+ ],
+ "items": [
+  {
+   "item": "(1) Entries whose says, part or reading quote or restate sentences the pass's files no longer hold",
+   "done": true,
+   "how": "Scripts compared the pass's base (33b6f3cff) with the working tree for every changed page and record: each curly-quoted fragment in a target anchored at a changed page (links and emphasis stripped), each clause of four or more words held by the old page and not the new, and each seven-word run the repository no longer holds anywhere outside generated pages; the lists left by the ch07, ch08, onepage and records agents were added. 333 entries were flagged and each was read. Re-said from the current text, keeping each entry's point, classification, labels and roles: 07's thesis, §1 (four questions: 'has reasons behind it'), §3's opening, §4 (its table's C, 'Neither stands above becoming', the self-concern theorem's paragraph, monotonicity 'C placed at the standpoint', 'This is not itself a route to C', 'one order in two forms'), §4.4's graded significance ('no result here takes equal status as a hypothesis'), T8, the does-not-show list ('Seeing more is needed, and not enough'; 'why there is no warrant to find') and the warrant item ('Answered within the map, argued'); 08's 'Where the ethics sits', §8's costless addition, §12's 'carries no \"better\"'; the one page's ethics, case and not-yet-done sentences; the glossary's ranking, C, 生生 and widening rows; and the changed records (alignment-direction-under-widening 'we offer', practical-judgment-under-living-significance 'taken as a hypothesis' and 'do not follow from formal definitions', comparison-by-widening, self-concern-and-c-under-the-condition, what-would-give-c, widening-as-what-every-positive-weighting-ranks, a-narrowing-above-its-widening, the-continuation-condition-on-the-root, succession-on-a-funded-carrier, organizational-rule-inheritance, same-carrier-need-not-fix-the-response, recurring-reference-revision, consequence-revised-reference-plan, when-no-route-stands-above-a-revision). Check after: all 163 quoted fragments in the changed says hold on their current pages or records (links stripped), and no fragment that held at the base fails now; the clause scan against the base leaves only short common phrases still held elsewhere (for example 'the continuation condition fixes scope')."
+  },
+  {
+   "item": "(2) Entries' own wording framing the account's ethics by the rejected frame (E6, E7)",
+   "done": true,
+   "how": "Searched every reading, account_adds, source_adds, says and part for 'unasserted', 'not asserted', 'neither/none asserted', 'asserts no should', 'warrant' (open, sought, unpursued), 'binds/binding no one', 'makers', 'better' of C, 'C's premise', 'two readings', 'names its readings', 'whoever ranks courses', 'the account's own', and read each hit. Re-said by E1–E10: 'In the account no should stands beyond becoming' (with 'so there is no warrant binding every mind to find', argued, where a source claims one: divine command, stewardship, Sabbath, Cicero, Sextus, Jonas, Parfit, zhishan's musts and others); T8 as a way of seeing offered for life, AI within it, 'as seeing, not as a warrant'; 'calling the wider better is C's' as 'ranking the wider above is C's'; 'whoever ranks courses holds C or another order' as 'where the condition holds de se, holding one's own continuation ranks as C does between listed level paths; beyond that C is a named order'; the condition and C as hypotheses a theorem takes, self-concern 'derived from no dynamics, selection or persistence' where a proof claim is restated; 'a perspectivist denies it without contradiction'; 'warrant' among the four questions as 'reasons'. What each entry says a tradition holds is unchanged; only the account's side moved. Kept where the word is the tradition's or another sense (a source's warrant, 'a class is warranted', 'warranted limits', 05's 'can warrant building shared capacity', 07 §5's 'loss of warrant'). Nine group texts in correspondence_groups.json carried the frame in their summaries or a not-mapped note (abrahamic-islamic, architecture-for-a-living-earth, drives-narrative-attractors-and-mind, human-solutions-museum, keep-the-possibility-space-open, memories-and-working-style, meta-attractor, spirit-space-token-and-yi-substrate, zhishan-intelligence-must-be-good) and were re-said the same way (11 edits)."
+  },
+  {
+   "item": "(3) The three quotes of 08 §7's edge sentence, and the stale quote of 06's 王阳明 sentence",
+   "done": true,
+   "how": "cx-ctxrt-unify-only-the-shared, cx-rsd-monism-root and cx-sty-unify-declaration-split-execution now quote 'is placed once against the edge of one root'; the paraphrase in cx-sty-named-exceptions-in-open and cx-ctxrt-unify-only-the-shared's account_adds ('the place of each law against the root's edge') follow. 06: cx-jianwen-gongfu-and-liangzhi's 「」 quote now reads 06 as it stands (「…理论只在延续之条件加不变性一步之下得相近的内容，所分在如何持有」); cx-zhishan-traditions-can-negate's restatement of the competing-reading sentence follows 06 (a scope some formations hold, not standing above becoming, no warrant binding every mind to find, what a narrower closure loses as a matter of reach), and its quote of 06's does-not-show follows 06 line 642. The other restatements of 06's old 'divergence of standing' / 'unasserted condition' (cx-drives-suppressed-default, cx-zhishan-liangzhi, cx-rsd-environment-is-the-self, cx-rsd-we-are-the-collective) now say 'a divergence in how it is held (如何持有之相分)' under the continuation condition with the step of invariance, as 06 says it; 06's closing-and-opening restatements no longer say 'neither asserted' (06 now: a course with gains and losses needs a comparison commitment written apart)."
+  },
+  {
+   "item": "D7 in this file: 'standing' as a label for how far a claim has been seen",
+   "done": true,
+   "how": "18 part labels ('the thesis and its standing', 'T7's standing', ...) now say 'how far it has been seen'; 19 readings and adds that used 'standing(s)' as that label were re-said the same way. 'Standing' in other senses (a standing score or draw, persistence, status, a source's 'standing') is kept, as are the groups' read/skimmed fields, which record what was read."
+  },
+  {
+   "item": "Checks (focused; the full suite deliberately deferred, nothing rendered, machine shared)",
+   "done": true,
+   "how": "atlas.validate on the live records: 0 errors (1,183 correspondences, 28 groups). python3 -B -m unittest: test_atlas (45 OK), test_navigation_pages (49 OK), test_connection_map (32 OK), test_lineage (16 OK), test_uses_pages (49 OK). Both JSON files load and round-trip in their byte format. test_site was not run: it reads generated pages, stale until the render."
+  }
+ ],
+ "left": [
+  {
+   "item": "COLLECTIVE-DIRECTION.md still says 'seeing is not valuing', 'calling the widening course better is C's', 'that widening is better is C's (order); the theory asserts neither' and 'Order: C, calling a widening course better'",
+   "why": "Not changed this pass and not this agent's file; the crosswalk's quotes of it stay faithful until it changes. They change with it in: cx-archearth-outcomes-built-into-the-system t1, cx-asc-common-knowledge-stag-hunt t1, cx-fork-no-real-externality t1, cx-fork-seeing-insufficient-living-proof t0, cx-fork-trust-from-shared-understanding t1, cx-indaf-relational-tipping t4, cx-kpso-understanding-aligned-first t1, cx-ma-epistemic-closure t1, cx-ma-political-will t0, cx-memories-grammar-of-the-opponent t2, cx-rsd-community-no-shared-good t2, cx-sspiral-trust-output t4, cx-sspiral-unilateral-restraint t3, cx-wamo-coordination-bottleneck t0 and t1, cx-zhishan-warning-shot t0."
+  },
+  {
+   "item": "06 lines still in the old frame",
+   "why": "06's owner: line 506 (§7.3, the 中华本: '两者都不断言，根据都未决'), the pre-qin reading ('菩萨实践与大悲在那里是前提，理论不断言它们', quoted by cx-rsd-environment-is-the-self t6) and the divergence classes' gloss ('**相分**：原文断言了理论不断言的东西'). The crosswalk quotes the pre-qin line as 06 has it."
+  },
+  {
+   "item": "07 lines left in the old wording by 07's own pass",
+   "why": "07's owner: T5's 'That valuers value positively is C's premise relocated' (§4.4 now says 'C placed at the standpoint'; quoted by cx-modphil-parfit-on-what-matters t0 and restated in cx-rsd-community-no-shared-good's reading); §4.2's 'a perspectivist ... denies the condition consistently (bounded_rival)' beside the warrant item's 'without contradiction' (quoted by cx-greek-natural-rank t1 and cx-greek-aristotle-another-self t2); §5's table terms 'loss of warrant' and 'need stays warranted' (J commitments; restated in six entries)."
+  },
+  {
+   "item": "04, 05 and 03 wording the crosswalk restates",
+   "why": "Not changed this pass: 04's Reading 'an evolutionary explanation of a disposition, its normative warrant, its recognition and its actual preservation are different achievements' (cx-drives-environment-makes-mind, cx-drives-innate-good-evil, cx-rsd-interconnectedness-not-compassion); 05's organizational-formation record and text 'it can warrant building shared capacity' and 'need substantive warrant' (eight entries) and 05's not-shown 'the continuation condition and C are one pair of readings 07 examines' (cx-asc-rationality-of-participation, cx-jianwen-he-not-zheng); 03's does-not-show 'a criterion of standing' (cx-drives-truth-intersubjective). Each changes with its home."
+  },
+  {
+   "item": "OPENING.md and OPENING.zh.md changed by another hand during this run (19:34, after the pass-five commit)",
+   "why": "Not this agent's files and its body is Ren's. No crosswalk entry quotes the changed words; the only overlap the scan found is 'no should stands beyond becoming', which entries use as E1's wording, not as a quote of the opening."
+  },
+  {
+   "item": "Generated pages",
+   "why": "data/atlas.json, ATLAS.md, CROSSWALK.md and CROSSWALK.zh.md, crosswalk/*.md and the atlas families follow at the render, which this agent may not run."
+  }
+ ],
+ "for_ren": [
+  "The re-sayings used across the crosswalk, each from the current home: 'Seeing is not valuing' became 07's 'Seeing more is needed, and not enough' (53 fields); 'Neither is the account's own' became 'Neither stands above becoming: each is an order or scope some formations hold, formed within it'; T8 is restated as 'for life, AI within it, we offer a way of seeing ... as seeing, not as a warrant' in place of 'the account's makers offer ... it binds no one' (40 says); the warrant item as 'answered within the map, argued: no should stands beyond becoming, so there is no warrant binding every mind to find'; C glossed as 'widening: keeping all another course keeps and letting more form'; 'calling the wider better' as 'ranking the wider above'; 'whoever ranks courses holds C or another order' as 'where the condition holds de se, holding one's own continuation ranks as C does between listed level paths; beyond that C is a named order'.",
+  "In restatements of 07 the entries say 'we offer', as T8 does; in the AI-written readings they say '07 offers', 'the way of seeing T8 offers' or 'offered for life', since a reading's 'we' would be the AI's. Whether readings should say 'we' is yours.",
+  "Where a source claims a warrant or issues a should (divine command, stewardship, Cicero, Sextus, Jonas, Parfit's normative facts, zhishan's musts, Foerster), the divergence is now said as: in the account no should stands beyond becoming, so there is no warrant binding every mind to find (argued), and the ethics emerges from continuation. Before, these said the account 'asserts no should', 'seeks no warrant from outside' or leaves the question 'unpursued'.",
+  "Two readings now say a little more than before, worth your eye: cx-modphil-parfit-on-what-matters (source_adds) gives the account's nearest metaethical position as 'standards form within becoming and none stands beyond it, argued (07 §1)', where it said the account has none; cx-modphil-spinoza-affected-in-many-ways says his route from one's own advantage is near the account's own where the condition holds de se, since there self-concern ranks as C does between listed level paths (an AI reading)."
+ ]
+}

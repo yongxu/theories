@@ -361,8 +361,8 @@
   ],
   "does_not_show": [
     {
-      "en": "That the lagged order, the lexical order or any order here is the second-order direction of widening or ranks a course better: a ranking rests on C or another named order, and the lag's verdict, which C leaves open, or a rule of precedence is a further premise.",
-      "zh": "滞后之序、字典序或此处任一序即扩大的二阶方向或把进程排得更好：排序依 C 或另一具名之次序，而 C 不定之滞后判定或优先之规则是又一前提。",
+      "en": "That the lagged order, the lexical order or any order here is the second-order direction of widening or ranks a course better: a ranking states its order, and the lag's verdict, which widening leaves open, or a rule of precedence is a further premise.",
+      "zh": "滞后之序、字典序或此处任一序即扩大的二阶方向或把进程排得更好：排序之果陈述其定理所取之次序，而扩大不定之滞后判定或优先之规则是又一前提。",
       "kind": "non-implication"
     },
     {
@@ -618,8 +618,8 @@
     {
       "id": "widening-as-what-every-positive-weighting-ranks",
       "detail": {
-        "en": "C read as widening; widening what can be reached is C's extension on the frame of reachable ranges, and no order here is adopted by C.",
-        "zh": "读作扩大的 C；可达之扩大即 C 于可达范围之框上之延展，此处无一序为 C 所采。"
+        "en": "Widening, what every positive weighting ranks higher; widening what can be reached is extension on the frame of reachable ranges, and no order here is the ranking by widening.",
+        "zh": "扩大，即每一正权重所排高者；可达之扩大即可达范围之框上之扩展，此处无一序即按扩大之排序。"
       }
     },
     {

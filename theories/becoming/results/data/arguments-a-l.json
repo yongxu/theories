@@ -459,16 +459,16 @@
     "title_en": "Significance, ethics and alignment",
     "category": "ethics",
     "status": "八章之一（2026年10月23日）；每项结果各有其记录 / One of the eight chapters (23 October 2026); each result with its record",
-    "argument_zh": "动力学不蕴涵意义；评价形成于展开之中，本论不断言任何应当；不加前提，诸律给出两个进程在所纳上如何不同；凡一项结果对进程排序，都指名其所据：延续条件定范围，C 定次序，或自我关切之结果所陈述的更窄之序，皆不断言；T8 是本论的制作者所提供的一种看法，不约束任何人；对齐首先是选择能达到什么，然后才是有条件的方向。",
-    "argument_en": "Dynamics do not entail significance; evaluation forms within the unfolding, and the account asserts no should; with no premise the laws give how two courses differ in what they admit; each ranking result names what it ranks under, the continuation condition for scope and C for order, or the narrower order a self-concern result states, none asserted; T8 is its makers' offer, a way of seeing, binding no one; alignment is first what a selection reaches, then a conditional direction.",
+    "argument_zh": "动力学不蕴涵意义；生灭变化之外没有应当，是非形成于其中，形成于人与 AI 之中；不加前提，诸律给出两个进程在所纳上如何不同；延续条件以从己方式成立之处，持守自身延续的次序（自我关切；生命形成这样的次序，已论证、未表明）便单向地把每一扩大排在其所扩大者之上，于有限列表上，及于所接纳之项容于一有限列表的两条水平路径（即终会停止容纳的进程）之间；扩大是每一正权重都排在上面的，不是第二个前提；每项排序之果陈述其定理所取的假设；T8 是我们提供的一种看法；对齐首先是选择能达到什么，然后才是有条件的方向。",
+    "argument_en": "Dynamics do not entail significance; no should stands beyond becoming, and right and wrong form within it, in people and AI; with no premise the laws give how two courses differ in what they admit; where an order holding one's own continuation (self-concern; that a life forms one is argued, not shown) meets the condition held de se, it ranks every widening above what it widens, one way, on a finite listing and between two level paths whose admissions fit in a finite list, courses that end; widening is what every positive weighting ranks higher, no second premise; each ranking result states the hypotheses its theorem takes; T8 is what we offer, a way of seeing; alignment is first what a selection reaches, then a conditional direction.",
     "significance_zh": "确切地标出一项排序所依的读法，以及在其下所得者。",
     "significance_en": "Locates exactly what a ranking is conditional on and what follows under it.",
-    "scope_zh": "条件之结果已检查；不为延续条件、C 与不变之步求外来之根据，这些读法如何形成未决；延续条件在根上只部分陈述。",
-    "scope_en": "Conditional results checked; no warrant from outside is sought for the condition, C or the step of invariance, and how such readings form is open; the condition stated on the root only in part.",
+    "scope_zh": "条件之结果已检查；伦理不在生灭变化之外寻求权威；意义为自由谓词时，所表示的动力学不迫使延续条件成立，否认它也不自相矛盾；在生灭变化之中形成的理由能否对一切心智成立，不作主张；范围与次序如何形成未决；延续条件在根上只部分陈述。",
+    "scope_en": "Conditional results checked; the ethics seeks no authority outside becoming, and with significance free the represented dynamics do not force the condition, which can be denied without contradiction; whether a reason formed within becoming could hold for every mind is not claimed; how scope and order form is open; the condition stated on the root only in part.",
     "next_zh": "在文法上陈述延续条件；范围与次序如何形成；以人类评价者检验 T4 与 T5；T8 已指名之检验。",
     "next_en": "State the condition on the grammar; how scope and order form; T4 and T5 with human valuers; T8's named test.",
     "source": "theories/becoming/chapters/07-SIGNIFICANCE.md",
-    "source_sha256": "9287f9ae11e217bc802f3f9c9a60236417cd581f187820ae16cedf4ef6788ffe"
+    "source_sha256": "b0d00127d450fcbee9f50aae17767f0e216d96580735276fdf2d70bb5053c55e"
   },
   {
     "id": "chapter-08-method",

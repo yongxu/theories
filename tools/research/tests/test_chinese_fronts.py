@@ -282,8 +282,18 @@ class LandingPageTests(unittest.TestCase):
         self.assertIn('伦理从延续中生出', text)
         self.assertIn('也没有凌驾其上的善与恶', text)
         self.assertIn('07-SIGNIFICANCE.md#r-self-concern-and-c-under-the-condition', text)
-        self.assertIn('尚未合为一条定理', text)
-        for old in ('两种读法', '扩大可形成者', '未奠定根据', '就会锁定', '所读之外的什么'):
+        # the sixth pass (messages 10 and 11 of 9 November 2026): going on before any order, the condition on its reading
+        # (续无外 as reach along a relation), relations closing read without time, widening no second premise, the
+        # ranking at its proved reach; not "listed courses", not 渐渐 (the English says no "gradually")
+        self.assertIn('生命依靠维持它的东西而延续', text)
+        self.assertIn('不计时间而读', text)
+        self.assertIn('在关系上读，即把从一个立场看有意义的，读作该立场之中心沿所选关系所及的范围', text)
+        self.assertIn('作为诸进程之间的一种次序来持守', text)
+        self.assertIn('它不是第二个前提', text)
+        self.assertIn('对不断有所形成、没有尽头的进程，这一点尚未表明', text)
+        self.assertIn('从相互依存到两条进程之间的这一排序，这条路尚未陈述为一条定理', text)
+        for old in ('两种读法', '扩大可形成者', '未奠定根据', '就会锁定', '所读之外的什么',
+                    '列出的进程', '尚未合为一条定理', '与之一同延续者', '渐渐', '一个继续下去的生命'):
             self.assertNotIn(old, text)
 
     def test_a_stated_time_is_kept_whole_in_a_table(self):

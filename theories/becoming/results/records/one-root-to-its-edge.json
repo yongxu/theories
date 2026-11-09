@@ -10,8 +10,8 @@
   "family": "F01",
   "reviewed_at_utc": "2026-11-01T09:47:31+00:00",
   "statement": {
-    "en": "Each central declaration is placed once against the edge of one root: on it, derived from grammar laws or under a stated hypothesis; counting, below the grammar; or a named distance with its reason. None is a premise: the condition for scope and C for order, hypotheses where used, are listed apart.",
-    "zh": "于一根之边各居一位：在边上，或推出为文法之律之例，或在所述假设之下为一根形之例而其每一假设皆必要；在文法之下，计数；或在有名之距，各有其理。无一为前提：排序之果所取之二假设，条件定范围、C 定序，另列。"
+    "en": "Each central declaration is placed once against the edge of one root: on it, derived from grammar laws or under a stated hypothesis; counting, below the grammar; or a named distance with its reason. None is a premise: the condition and C, hypotheses where used, are listed apart.",
+    "zh": "于一根之边各居一位：在边上，或推出为文法之律之例，或在所述假设之下为一根形之例而其每一假设皆必要；在文法之下，计数；或在有名之距，各有其理。无一为前提：条件与 C，用到之处为假设，另列。"
   },
   "laws": [
     {
@@ -876,7 +876,7 @@
         "declaration": "Becoming.unrestricted_iff_livingSignificance",
         "standing": "free significance",
         "basis": {
-          "en": "The continuation condition read as living significance, significance free; its root form, SignificanceStatements.noOutside_iff_paths_livingSignificance, holds at the own-closure reading on a web's level paths only, so it states less than the row, which is on any frame (U3). The condition itself is a premise of the ethics, listed apart."
+          "en": "The continuation condition read as living significance, significance free; its root form, SignificanceStatements.noOutside_iff_paths_livingSignificance, holds at the own-closure reading on a web's level paths only, so it states less than the row, which is on any frame (U3). The condition itself is listed apart, a hypothesis wherever a result takes it."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
       }
@@ -891,20 +891,20 @@
         "premise": "Becoming.Unrestricted",
         "not_entailed": "Becoming.ReadsOnlyDynamics.not_entails",
         "basis": {
-          "en": "For anything, its continuation into the future has significance: the condition fixes scope, whose losses count, and its content beyond the self's presupposition, the step of invariance, extends that scope to losses that return to no one. Where there is a standpoint and a formation, no statement reading only the dynamics and holding of some dynamics entails it. No should stands beyond becoming, so there is no warrant binding every mind to find, and the ethics, which emerges from continuation, does not wait on one (chapter 7: its §3 for the condition, its §4 for the order it gives with self-concern, its §8 for what is offered)."
+          "en": "For anything, its continuation into the future has significance: the condition fixes scope, whose losses count, and its content beyond the self's presupposition, the step of invariance, extends that scope to losses that return to no one. Where there is a standpoint and a formation, no statement reading only the dynamics and holding of some dynamics entails it, and a perspectivist denies it without contradiction. The ethics seeks no authority outside becoming (argued, on the thesis of one relational unfolding); whether a reason formed within becoming could hold for every mind is not claimed or settled (chapter 7: its §3 for the condition, its §4 for how self-concern ranks where it holds, its §8 for what is offered)."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
       },
       {
         "role": "order",
         "name": {
-          "en": "C (widening: keeping all another course keeps and letting more form)",
-          "zh": "C（扩大：保有另一进程所保有的一切，并让更多形成）"
+          "en": "an order ranking each course above every course it widens (C)",
+          "zh": "把每一进程排在它所扩大的每一进程之上的次序（C）"
         },
         "premise": "Becoming.Comparison",
         "not_entailed": "Becoming.ReadsNoOrder.not_entails",
         "basis": {
-          "en": "The condition by itself orders nothing. Where it holds de se, holding one's own continuation (self-concern, in the proofs a hypothesis derived from no dynamics) ranks every extension between listed level paths as C does, one way, so there C is not a second premise; beyond that C is a named order. Where a frame has an extension, no statement reading no order and holding at some order entails C; this is immediate, since \"better\" is free."
+          "en": "The condition by itself orders nothing. Where it holds de se, an order holding one's own continuation (self-concern, in the proofs a hypothesis derived from no dynamics) ranks every widening above what it widens, one way, on a finite listing and between two level paths whose admissions fit in a finite list, courses that end; there what C asks needs no premise of its own beside the condition. Widening is, on a finite listing, what every positive weighting ranks higher, so ranking by it is no second premise; a result taking C states it as a hypothesis. Where a frame has an extension, no statement reading no order and holding at some order entails C; this is immediate, since \"better\" is free."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-PREMISE-C.md"
       }

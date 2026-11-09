@@ -1,0 +1,71 @@
+{
+ "note": "AI-written report, 9 November 2026, about 19:58 WIB. AG review, fifth pass: the adversarial check of the crosswalk agent's changes (theories/becoming/results/atlas/entries/correspondences.json and correspondence_groups.json). Homes were checked against HEAD 22f65660c, the committed pass-five text. A sixth pass started in this worktree during this check and is changing 07, 08, GLOSSARY, MAP and three records in the working tree; what that breaks in the crosswalk is listed under left, not fixed here. Focused checks only; the full suite was deliberately deferred; nothing rendered.",
+ "changed": [
+  "theories/becoming/results/atlas/entries/correspondences.json",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass5-verify-crosswalk.json"
+ ],
+ "items": [
+  {
+   "item": "Read the agent's whole diff (477 fields in 280 entries, 9 group texts) against E1-E10 and the homes at HEAD",
+   "done": true,
+   "how": "A word-level field diff of both files was read in full, and every quoted fragment in every target (‘’, “”, 「」, '', \"\") was checked against its anchor page or record at HEAD and at the base 33b6f3cff. No fragment in a changed field fails at HEAD. The quotes of 08 §7's edge sentence and 06's 王阳明 sentence hold. Only text fields changed in both files: no id, quote, sense, label, classification, role, record or anchor. The T8 restatement, the table's C gloss, 'Neither stands above becoming', 'Seeing more is needed, and not enough' and the warrant item each match 07 at HEAD. Neither file names a person, says no one has read the work, or edits a source quote, a generated page, OPENING or AGENTS.md. Most of the agent's re-sayings are faithful."
+  },
+  {
+   "item": "Fixed (medium): old frame left in fields the agent did not change (E6)",
+   "done": true,
+   "how": "cx-kpso-one-logic-for-all t0 and cx-cc-zihuazi-posheng t0 restated 07 §3's definition with 'Not asserted', which 07 never said. They now say a theorem that uses the condition takes it as its hypothesis, as 07 §3 does. Four Chinese entries quoted or restated 06 with 「两种读法都不断言」 / 都不断言 ('neither reading asserted'). 06 has not held that since the first AG pass. The four are cx-jianwen-open-closed-operator t0, cx-jianwen-alignment-from-algebra t1, cx-jianwen-datong-mechanism-dao-outside t0 and cx-jianwen-virtues-as-idioms t4. Each is re-quoted from 06 as it stands at #closing-and-opening and #dao: 「…有得有失者须另写比较承诺」, 「否：理论从不把道等同于任何脊柱之词，所表示之动力学与无物有意义、一切皆有意义都相容」, 「生灭变化之外没有应当，也没有凌驾其上的善恶，伦理出自延续；…」 and 「条件定范围（谁的损失算数）而不定次序；…」. The agent's scan covered English curly quotes only."
+  },
+  {
+   "item": "Fixed (medium): the self-concern-to-C link widened by a dropped limit (E4, E8)",
+   "done": true,
+   "how": "Eleven re-sayings said 'or, where the condition holds de se, what self-concern does' without 'between listed level paths'. That says more than Web.extension_ranked_of_increasingInOwn proves. Each now carries the limit. The eleven: cx-ctxrt-not-inherently-better t0, cx-hsm-forward-criterion reading, cx-memories-values-as-neutral-design t1, cx-memories-value-words-recast reading, cx-rsd-good-self-and-network reading, cx-sspiral-equality-regulator reading, cx-sty-endings-as-transitions t2, cx-fork-no-real-externality reading, cx-abr-weekly-sabbath reading, cx-zhishan-good-for-self-and-network reading, and cx-sspiral-regenerative-interdependence account_adds ('on a listing'). Four targets anchored at ONE-PAGE quoted 'where relations close, holding one's own continuation already orders courses … widening' without the front's how-far clause. They are cx-archearth-datong-as-a-condition t0, cx-hsm-forward-criterion t0, cx-memories-value-words-recast t0 and cx-sty-good-existence-values-coded t1. Each now adds ONE-PAGE's own words: 'That it does so “is proved, on listed courses, in steps not yet joined into one theorem”.' cx-drives-dimensional-collapse account_adds gets the same limit."
+  },
+  {
+   "item": "Fixed (medium): the ethics said as not derived, and self-concern said flatly (E2, E4)",
+   "done": true,
+   "how": "cx-memories-one-owned-premise t2 listed 'nor that the ethics derives from the condition' as not shown. That is 07's removed bullet, and it contradicts E2. It now follows 07's current bullet: 'nor that self-concern follows from any dynamics or gives C beyond where the condition holds de se; 07 says why there is no warrant to find'. cx-zhishan-good-as-continuing-generation account_adds and cx-syscyb-foerster-imperative reading both said 'the ethics does not derive from the condition'. Both now say what holds: where the condition holds de se, self-concern ranks listed level paths as C does, and beyond that C is a named order. cx-zhishan-must-be-good t1 said 'A life that goes on holds its own continuation' with no how-far. It now adds, as 07 §4 does: 'argued, and in the proofs a hypothesis, derived from no dynamics, selection or persistence'. cx-greek-sextus-suspension reading credited 07's open item with 'a life that goes on already holds its own'. It now says the ethics does not wait on a warrant, and that a life holding its own continuation is argued (07 §4)."
+  },
+  {
+   "item": "Fixed (medium and low): C as better, and other wording (E7, D7)",
+   "done": true,
+   "how": "cx-kpso-preserve-and-expand account_adds: 'and better (C)' became 'and which ranks above (C)'. cx-sspiral-externality-ledger t3: 'that widening is better rests on C or another named order' became 'ranking by widening is C's or another named order's'; its home says only 'Mixed is not ordered'. The part label 'the table of two readings' became 'the table of scope and order' in four entries (cx-oi-nishkama-karma, cx-oi-karma-and-the-crux, cx-oi-gita-unslain, cx-oi-ahimsa). cx-memories-vague-words t2 now reads 'A chapter opening is seen as far as the results it summarizes', as 08 does. cx-modphil-osr-naturalistic-closure account_adds no longer uses 'standing' as the label. cx-zhishan-must-be-good reading had an awkward clause, fixed. cx-zhishan-good-as-continuing-generation t0's Chinese gloss now uses 06's words: 「排序之果写明其定理所取之假设」…「以广为愈（扩大）或自我关切定次序」. cx-ctxrt-prompt-narrows-path t0's stale one-page wording ('existing trained language models steered by instructions') now follows the one page. In all, 38 fields in 37 entries, each old string checked to occur exactly once, and the file re-read just before each write."
+  },
+  {
+   "item": "Checks (focused; full suite deliberately deferred; nothing rendered; machine shared)",
+   "done": true,
+   "how": "Unit tests: test_atlas 45 OK, test_connection_map 32 OK, test_lineage 16 OK. The file round-trips with indent=1 and ensure_ascii=False plus a final newline. Quote check at HEAD: no fragment in a changed or fixed field fails, and three stale quotes now hold. A search for six-word runs that this pass removed from its homes and that no live page holds found the derives-from-the-condition and one-page cases above; the other hits were short paraphrases. atlas.validate gives 6 errors on the working tree. All 6 come from the sixth pass withdrawing universal-practical-warrant in the working tree during this check (see left), none from the crosswalk. test_navigation_pages and test_uses_pages were not run: the sixth pass is editing their files and their test files right now."
+  }
+ ],
+ "left": [
+  {
+   "item": "The sixth pass, running in this worktree during this check, breaks crosswalk quotes and a record citation",
+   "why": "This is for the sixth pass's crosswalk agent; it was not fixed here because those homes are still moving. In the working-tree 07, 19 quoted fragments in 13 entries no longer hold. The entries: cx-greek-cicero-natural-law t0, cx-greek-protagoras-measure t1, cx-greek-sextus-suspension t0, cx-modphil-parfit-on-what-matters t1, cx-greek-aristotle-function t2, cx-modphil-spinoza-affected-in-many-ways t1, cx-sty-good-existence-values-coded t0, cx-modphil-sen-intersection t0, cx-econ-sen-intersection t0, cx-greek-aristotle-another-self t3, cx-greek-hierocles-circles t1 and cx-modphil-sen-maximal-and-comparative t0. Their fragments are the warrant item, the §4 'Neither stands above becoming' paragraph, §4.4 and the objections row. universal-practical-warrant is now 'withdrawn' in the working tree, so six targets cite a withdrawn record (atlas.validate): cx-kpso-fidelity-to-the-process t1, cx-zhishan-logic-cannot-compel t1, cx-zhishan-must-be-good t2, cx-greek-protagoras-measure t1, cx-greek-cicero-natural-law t0 and cx-greek-sextus-suspension t0. Some of the pass-five sayings repeated across the crosswalk will need re-saying from the sixth pass's 07 in light of Ren's message 12: 'answered within the map … no warrant binding every mind to find', 'nor logic alone force the condition', and 'a life that goes on holds its own continuation'."
+  },
+  {
+   "item": "COLLECTIVE-DIRECTION.md still states the old frame",
+   "why": "Not the crosswalk's file. Its lines are 'seeing is not valuing', 'calling the widening course better rests on C', 'that widening is better is C's (order); the theory asserts neither' and 'Order: C, calling a widening course better'. The crosswalk quotes them faithfully in the 16 targets the agent listed. Two more targets rest on CD §1's 'the two readings' and change with that page: cx-ecs-surpass-as-goal t0 and cx-ma-plural-ends t0."
+  },
+  {
+   "item": "06 glosses C as 愈 ('better') in Chinese",
+   "why": "These are for 06's owner, along with the agent's three 06 lines (506, the pre-qin reading, the 相分 gloss). The glosses are 以广为愈（扩大） at #dao, and 持以广为愈（C）者 in 德与无为 and at #closing-and-opening; that is E7 said in Chinese. The crosswalk quotes them as 06 has them. The anchor of cx-jianwen-virtues-as-idioms t4 (#residue) sits just before the passage it quotes, which is under #dao. This predates the pass; anchors are kept."
+  },
+  {
+   "item": "07 lines in the old wording",
+   "why": "These are for 07's owner, as the agent listed: T5's 'C's premise relocated'; §4.2's 'denies the condition consistently'; §5's 'loss of warrant' and 'need stays warranted'."
+  },
+  {
+   "item": "Records and data outside the crosswalk",
+   "why": "These are for their owners. the-continuation-condition-on-the-root's not-shown says 'that with self-concern it ranks listed level paths as C does'; the condition does not rank, self-concern does. cx-oi-self-in-all t0 quotes it faithfully. data/arguments-a-l.json line 463 still says 'the account asserts no should'. The records' .md copies (for example a-narrowing-above-its-widening.md: 'calling widening better is C, a premise') and data/atlas.json follow at the render."
+  },
+  {
+   "item": "Unchanged paraphrases of other homes",
+   "why": "These were not changed by this pass and are low. For example, the USES-derived 'the optimum law proved; across domains conjectured (T3)' restatements, and 'whoever holds C the order' rendering 06's D49 sentence. They follow their homes."
+  }
+ ],
+ "for_ren": [
+  "The crosswalk's own sentences on the ethics now follow pass five's 07. Its T8 reads 'for life, AI within it, we offer a way of seeing … as seeing, not as a warrant'. Its warrant item reads 'answered within the map, argued: no should stands beyond becoming, so there is no warrant binding every mind to find'. C is glossed 'widening: keeping all another course keeps and letting more form'. 'Ranking the wider above' replaces 'calling the wider better'. The sixth pass is re-saying 07's warrant item and the self-concern step from your message 12, so the crosswalk will be re-said again from that text. Read it after the sixth pass, not before.",
+  "Wherever the crosswalk says that holding one's own continuation ranks as C does, it now keeps the limit: between listed level paths, where the condition holds de se. Where it quotes the one page's 'where relations close … orders courses … widening', it now adds the one page's own how-far: proved on listed courses, in steps not yet joined into one theorem.",
+  "The agent's open question stands for you. In restatements of 07 the entries say 'we offer', as T8 does. In the AI-written readings they say '07 offers' or 'T8 offers'.",
+  "Two readings say a little more than before, as the agent noted. cx-modphil-parfit-on-what-matters gives the account's nearest metaethical position. cx-modphil-spinoza-affected-in-many-ways calls Spinoza's route from one's own advantage near the account's own where the condition holds de se."
+ ]
+}

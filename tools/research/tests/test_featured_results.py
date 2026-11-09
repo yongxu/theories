@@ -377,15 +377,27 @@ class FirstScreenTests(unittest.TestCase):
         self.assertNotIn('{{', screen)
         self.assertNotIn('\n#', '\n' + screen)
         # the ethics as the fifth pass says it (Ren, 9 November 2026: "there is no warrant, ethics emerges from continuation
-        # condition, not another way around, there is no any dualistic good or evil"): it emerges from continuation; where
-        # relations close, holding one's own continuation orders courses as widening does (07 §4), proved on listed courses in
-        # steps not yet joined; mixed courses weighed for no one; no warrant, no premises called unasserted, C not "better"
+        # condition, not another way around, there is no any dualistic good or evil"): it emerges from continuation; mixed
+        # courses weighed for no one; no warrant, no premises called unasserted, C not "better". The sixth pass (messages 10
+        # and 11: C as a second premise giving order was the mistake; widening stays): going on before any order (07 §4);
+        # the condition on its reading, where relations close read without time; widening no second premise; the ranking
+        # proved on a finite listing and between courses whose admissions fit in a finite list, not "listed courses"
         self.assertIn('The ethics emerges from continuation.', screen)
         self.assertIn('no good and evil set over it', screen)
+        self.assertIn('A life goes on through what sustains it.', screen)
+        self.assertIn('Where relations close, read without time', screen)
+        self.assertIn('on the reading that what has significance from a standpoint is what its center continues with', screen)
+        self.assertIn('where a life holds its own continuation as an order over courses', screen)
         self.assertIn('07-SIGNIFICANCE.md#r-self-concern-and-c-under-the-condition', screen)
-        self.assertIn('in steps not yet joined into one theorem', screen)
+        self.assertIn('it is no second premise', screen)
+        self.assertIn('seeing them is needed, and not enough', screen)
+        self.assertIn('for courses that go on forming without end it is not shown', screen)
+        # the one limit F3 keeps (07 §4): the route from a flow's mutual dependence to the ranking between level paths
+        self.assertIn('the route from mutual dependence to that ranking between two courses is not stated as one theorem', screen)
+        self.assertIn('That a life forms such an order is argued, not shown', screen)
         self.assertIn('the laws show it mixed and weigh it for no one', screen)
-        for old in ('unasserted', 'not asserted', 'warrant', 'two readings', 'widening what can form is better', 'not a grounded one'):
+        for old in ('unasserted', 'not asserted', 'warrant', 'two readings', 'widening what can form is better', 'not a grounded one',
+                    'listed courses', 'not yet joined', 'A life that goes on holds its own continuation', 'for order', 'named order'):
             self.assertNotIn(old, screen)
         # the meta-attractor's closed form with the closed-capture record's hypotheses, not "proved to lock" alone
         self.assertNotIn('proved to lock', screen)

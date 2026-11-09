@@ -197,8 +197,8 @@
     {
       "id": "one-root-to-its-edge",
       "detail": {
-        "en": "The edge of one root lists apart the two hypotheses the ranking results take, the condition for scope and C for order; this record gives the condition's root form and C their witnesses.",
-        "zh": "一根之边另列排序之果所取之二假设，条件定范围、C 定序；此记录予条件之根形与 C 以见证。"
+        "en": "The edge of one root lists apart the continuation condition and C (`Comparison`), hypotheses where a result takes them; this record gives the condition's root form and C their witnesses.",
+        "zh": "一根之边另列延续条件与 C（`Comparison`），凡结果取用之处皆为假设；此记录予条件之根形与 C 以见证。"
       }
     },
     {

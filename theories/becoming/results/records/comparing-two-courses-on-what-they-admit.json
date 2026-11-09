@@ -417,8 +417,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "That a comparison here ranks a course better: a ranking rests on C or another named order, and choosing between counting early steps and reading only tails is a further premise.",
-      "zh": "此处之比较把某进程排得更好：排序依 C 或另一具名之次序，在计早期之步与只读尾之间作选择是又一前提。",
+      "en": "That a comparison here ranks a course better: a result that ranks courses states the order its theorem takes, and choosing between counting early steps and reading only tails is a further premise.",
+      "zh": "此处之比较把某进程排得更好：排序之果陈述其定理所取之次序，在计早期之步与只读尾之间作选择是又一前提。",
       "kind": "non-implication"
     },
     {
@@ -576,8 +576,8 @@
     {
       "id": "widening-as-what-every-positive-weighting-ranks",
       "detail": {
-        "en": "C read as widening; no order here is adopted by C, and choosing one is a further premise.",
-        "zh": "读作扩大的 C；此处无一序为 C 所采，选取其一是又一前提。"
+        "en": "Widening, what every positive weighting ranks higher; no order here is the ranking by widening, and choosing one is a further premise.",
+        "zh": "扩大，即每一正权重所排高者；此处无一序即按扩大之排序，选取其一是又一前提。"
       }
     },
     {

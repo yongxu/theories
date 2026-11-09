@@ -1019,7 +1019,8 @@ def description(results, pairs, s, lang, modules=None):
                    f'{n.get("counting", 0)} 项为计数，{sum(n.values()) - n.get("derived", 0) - n.get("under a stated hypothesis", 0) - n.get("counting", 0)} 项处于一个指明的距离。' if n else '')
                 + '其下，五条共律各有依于它的核心行与其中达到文法者（'
                 + '；'.join(f'{s["laws_zh"]["names"][nm]} {c} 行，{k} 行达到' + ('，平衡为表示，不推导' if rep_ else '') for nm, c, k, rep_ in strip)
-                + '）。延续条件（定范围：谁的损失算数）与 C（定次序）作为排序结果所取的假设进入第七章，是某些形成所持的范围与次序，形成于生灭变化之中。T1 到 T8 在其所属之处，按检验结局着色。')
+                + '）。延续条件（谁的损失算数，单凭自身不排序）与 C（Comparison，把一个进程排在它所扩大的每一个进程之上的次序）在排序结果的定理取用它们之处作为假设进入第七章，'
+                '是某些形成所持的范围与次序，形成于生灭变化之中；扩大是每一个正的赋权都共同认可的，不是第二个前提。T1 到 T8 在其所属之处，按检验结局着色。')
     sizes = ', '.join(theory_graph.REGION_TITLES[k].split(':')[0] + ' ' + str(results[k]) for k in order)
     spokes = ', '.join(f'{theory_graph.REGION_TITLES[k].split(":")[0]} {modules[k][1]} of {modules[k][0]}' for k in order if k in modules)
     return (f'Eight chapters on a ring around the grammar, sized by their results ({sizes}); '
@@ -1031,8 +1032,9 @@ def description(results, pairs, s, lang, modules=None):
                f'{sum(n.values()) - n.get("derived", 0) - n.get("under a stated hypothesis", 0) - n.get("counting", 0)} at a named distance); ' if n else '')
             + 'under the places, the five shared laws with the central rows on each and those reaching the grammar ('
             + '; '.join(f'{nm} {c} rows, {k} reach' + (', represented, not derived' if rep_ else '') for nm, c, k, rep_ in strip)
-            + '); the continuation condition (scope, whose losses count) and C (order) come into chapter 7 as hypotheses a ranking result takes, a scope and an '
-            'order some formations hold, formed within becoming; T1 to T8 at their homes, coloured by test outcome.')
+            + '); the continuation condition (whose losses count, ranking nothing) and C (Comparison, an order ranking a course above every course it '
+            'widens) come into chapter 7 as hypotheses a ranking result takes where its theorem takes them, a scope and an order some formations hold, '
+            'formed within becoming; widening is what every positive weighting ranks higher, no second premise; T1 to T8 at their homes, coloured by test outcome.')
 
 
 def interface_counts(graph):
@@ -1356,9 +1358,11 @@ def lead(graph, page_path):
              f'**How to read it.** {how_to_read(s, "en", page_path)} Of the {total:,} uses between chapters, '
              f'{sum(into[k] for k in top):,} go into {name[top[0]].lower()} and {name[top[1]].lower()}, and {backward:,} run backward. '
              f'Under the places, a strip gives the five shared laws: the central rows resting on each and, hatched, those whose compiled '
-             f'type or value reaches the grammar ([their table](#the-five-shared-laws)). The two boxes are the two hypotheses most ranking results take, the continuation condition for '
-             f'scope and C for order, a scope and an order some formations hold, formed within becoming; where the condition holds de se, C is '
-             f'what self-concern does between listed courses; the badges T1 to T8 are the theses at the chapters that state them, coloured by how '
+             f'type or value reaches the grammar ([their table](#the-five-shared-laws)). The two boxes are the two hypotheses most ranking results take, each where its theorem takes it: '
+             f'the continuation condition, which says whose losses count and ranks nothing, and C (`Comparison`), an order ranking a course above every course it widens; '
+             f'a scope and an order some formations hold, formed within becoming. Widening is what every positive weighting ranks higher, no second premise, '
+             f'and where the condition holds de se, self-concern ranks every widening above, one way, on a finite listing and between two level paths '
+             f'whose admissions fit in a finite list, courses that end; the badges T1 to T8 are the theses at the chapters that state them, coloured by how '
              f'their frozen tests came out, each in its row\'s words in the table below.', '',
              f'![The eight chapters and their recorded uses of one another: circles sized by their results, solid curves counting formal-reuse uses '
              f'between chapters\' results and dashed and dotted ones other dependences, the five shared laws under the places, the continuation '
@@ -1455,7 +1459,7 @@ def section(graph, page_path):
              f'say. '
              + (f'Results in {", ".join(name.get(k, k) for k in others)} ({outside} edges touch them) are in that list only. '
                 if outside else '')
-             + f'The continuation condition and C come into chapter 7 as hypotheses: "{cap[4]["text"]}" '
+             + f'The continuation condition and C come into chapter 7 as hypotheses where a ranking result takes them: "{cap[4]["text"]}" '
              f'([07]({rel(cap[4]["home"])})). T1 to T8 stand at their homes, coloured by test outcome; their words, chosen '
              f'from their rows in [08 §9]({method}), saying first how far each has been seen, are in the theses table above.', '',
              f'**What it does not show.** An edge records a dependence, a citation or a registered reading, not an '
@@ -1544,7 +1548,9 @@ def zh_page(graph):
     body = ['## 各章一览', '<a id="the-spine"></a>', '',
             f'**怎样读它。** {how_to_read(s, "zh", PAGE_ZH)}章与章之间共 {total} 次使用，其中 {into[top[0]] + into[top[1]]} 次进入'
             f'「{zname(top[0])}」与「{zname(top[1])}」两章，{backward} 次是逆向的。图顶端说核心声明位置的那一行之下，条带给出五条共律：依于每一条的核心行，'
-            f'斜线部分是其编译后的类型或值达到文法的行（[其表](#the-five-shared-laws)）。两个方框是多数排序结果所取的两个假设，定范围的延续条件与定次序的 C，是某些形成所持的范围与次序，形成于生灭变化之中；在延续条件以从己方式成立之处，C 就是自我关切在列出的进程之间所做的；'
+            f'斜线部分是其编译后的类型或值达到文法的行（[其表](#the-five-shared-laws)）。两个方框是多数排序结果所取的两个假设，各在其定理取用之处写明：延续条件，说的是谁的损失算数，单凭自身不排序；C（`Comparison`），把一个进程排在它所扩大的每一个进程之上的次序；'
+            f'二者是某些形成所持的范围与次序，形成于生灭变化之中。扩大是每一个正的赋权都共同认可的，不是第二个前提；在延续条件以从己方式成立之处，自我关切在一个有限列表上，'
+            f'以及在容纳项可列入一个有限列表的两条水平路径（终会停止容纳的进程）之间，把每一个扩大都排在上面，只是单向的；'
             f'徽标 T1 到 T8 是各论题，位于陈述它们的那一章，按其冻结检验的结局着色，下表以各自所在行的话给出它们。', '',
             f'![八章及各章彼此之间有记录的使用：圆按结果数定大小，实线计各章结果之间记为 formal-reuse 的使用，章与章之间的虚线与点线是别种依赖，核心声明的位置之下是五条共律，延续条件与 C 作为假设进入第七章，T1 到 T8 '
             f'在其所属之处按检验结局着色]({rel(SVG["zh"])})', '',
@@ -1587,7 +1593,7 @@ def zh_page(graph):
              f'有边的每一个配对。圆旁的“章内使用”计同一章结果之间的 formal-reuse，章内的诠释边见 interpretive 表的对角线。章旁的“m 个模块中 k 个在文法上”与辐条的粗细，'
              f'计该区域核心模块中在文法上陈述其律的那些，如[英文版](THEORY-GRAPH.md)各区域的列表所示。'
              + (f'{"、".join("「" + zname(k) + "」" for k in others)}的结果（{outside} 条边涉及它们）只在那份列表中。' if outside else '')
-             + f'延续条件与 C 作为假设进入第七章：“{cap[4]["zh"]}”（[07]({rel(cap[4]["home"])})）。T1 到 T8 位于其所属之处，按检验'
+             + f'延续条件与 C 在排序结果取用它们之处作为假设进入第七章：“{cap[4]["zh"]}”（[07]({rel(cap[4]["home"])})）。T1 到 T8 位于其所属之处，按检验'
              f'结局着色；它们的话选自[总览]({rel(s["theses_homes"]["zh"])})论题表中各自所在的行，先说各自看到了多远，见上面的论题表。', '',
              f'**它不显示什么。** 一条边记录的是一种依赖、一次引用或一个已登记的读法，不是意义上的一致。曲线也不说一章的结果在多大'
              f'程度上达到文法，08 §7 以两种方式计这一点。“{cap[0]["zh"]}”；“{cap[1]["zh"]}”；“{cap[2]["zh"]}”'

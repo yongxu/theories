@@ -24,8 +24,8 @@
       ]
     },
     {
-      "en": "On a frame reading a course by what it admits on a listing, with the process free and every claim counted as living, so that scope is already total, an extension is a widening and an order meets C exactly when it is increasing in admission. There, with every listed item marked, an order is self-concerned exactly when it meets C, through the law above: one order in two forms, holding one's own continuation and C.",
-      "zh": "在按列举上之接纳读进程、过程自由、每项皆算作有生（故范围已是全部）的框上，扩展即扩大，次序满足 C 恰当它随接纳递增。在那里，每个所列项都被标记时，次序自我关切恰当它满足 C，经由上一律：同一次序的两种形式，即持守自身之延续与 C。",
+      "en": "On a frame reading a course by what it admits on a listing, with the process free and every claim counted as living, so that scope is already total, an extension is a widening and an order meets C exactly when it is increasing in admission. There, with every listed item marked, an order is self-concerned exactly when it meets C, through the law above: one property of an order in two forms, self-concern and C.",
+      "zh": "在按列举上之接纳读进程、过程自由、每项皆算作有生（故范围已是全部）的框上，扩展即扩大，次序满足 C 恰当它随接纳递增。在那里，每个所列项都被标记时，次序自我关切恰当它满足 C，经由上一律：次序之同一性质的两种形式，即自我关切与 C。",
       "declarations": [
         "Becoming.Weighting.listingFrame",
         "Becoming.Weighting.extension_listingFrame_iff",
@@ -176,7 +176,7 @@
     },
     {
       "en": "That more options are better: among several choosers a wider menu can lower what each gets at the pure Nash equilibrium of one play. Whether a wider course of what can form can do the same is open; if one can, the witness stands against C there too, with the shape T8's refuter had until 9 November 2026.",
-      "zh": "选项越多越好：在多个选择者之间，更宽的菜单可使各自在一次博弈的纯策略纳什均衡处所得下降。可成者的更宽进程能否如此尚开放；若能，此见证在那里也反对 C，并有 T8 所述反驳之形。",
+      "zh": "选项越多越好：在多个选择者之间，更宽的菜单可使各自在一次博弈的纯策略纳什均衡处所得下降。可成者的更宽进程能否如此尚开放；若能，此见证在那里也反对 C，并有 T8 之反驳至 2026 年 11 月 9 日所有之形。",
       "kind": "non-implication",
       "witness": "Becoming.Weighting.Restraint.each_falls"
     },
@@ -406,8 +406,8 @@
     {
       "id": "self-concern-and-c-under-the-condition",
       "detail": {
-        "en": "That self-concern and being increasing in admission part at an unmarked item, join the condition, and give C one way between listed level paths.",
-        "zh": "自我关切与随接纳递增在未标记项处分开，与条件相连，并在所列层路径之间单向给出 C。"
+        "en": "That self-concern and being increasing in admission part at an unmarked item, join the condition, and give what C asks, one way, between two level paths whose admissions fit in a finite list.",
+        "zh": "自我关切与随接纳递增在未标记项处分开，与条件相连，并在所接纳之项容于一有限列表的两条层路径之间单向给出 C 之所求。"
       }
     },
     {

@@ -6,17 +6,17 @@
     "zh": "是否存在普遍的实践根据"
   },
   "kind": "target",
-  "status": "open",
+  "status": "withdrawn",
   "family": "F08",
   "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
-    "en": "Question: whether practical reasons have a warrant binding every possible mind, with zero substantive premises. Answered within the map, argued: no should stands beyond becoming, so there is no such warrant to find, and the ethics, which emerges from continuation, does not wait on one.",
-    "zh": "问题：实践理由是否有一个零实质前提、对一切可能的心智都有约束力的根据。在地图之内已有回答，属论证：生灭变化之外没有应当，所以没有这样的根据可寻；伦理从延续中生出，不待于它。"
+    "en": "Question: whether practical reasons have a warrant binding every possible mind, with zero substantive premises. Set aside as one the map does not need: the ethics seeks no authority outside becoming, argued. Whether a reason formed within becoming could hold for every mind is not claimed or settled.",
+    "zh": "问题：实践理由是否有一个零实质前提、对一切可能的心智都有约束力的根据。作为地图所不需要的问题而搁置：伦理不在生灭变化之外寻求权威，属论证。在生灭变化之中形成的理由能否对一切心智成立，本论既不主张也不裁定。"
   },
   "hypotheses": [
     {
-      "en": "The thesis of one relational unfolding (chapter 8), argued: right and wrong, should and better form within becoming, in people and AI, and no should stands beyond it. A center whose seeing stops at its own closure ranks more narrowly: a matter of reach, what couples in, the same gap alignment works on. The goal \"Practical judgment for life, on the fewest premises\" lists the question.",
-      "zh": "一个关系展开之论题（第八章），属论证：是非、应当与更好在生灭变化之中形成，形成于人与 AI 之中，生灭变化之外没有应当。一个中心所看到的若止于自己的闭包，它的排序就更窄：这是到达多远的问题，即什么耦合进来，也正是对齐所处理的那个缺口。“生命的实践判断，立于最少的前提”这一目标列出此问。"
+      "en": "The thesis of one relational unfolding (chapter 8), argued: right and wrong form within becoming, in people and AI, and no should stands beyond it. A center's couplings limit what its selection can respond to; reading a loss, counting it and ranking courses by it are separate relations: seeing more is needed, and not enough. The goal \"Practical judgment for life, on the fewest premises\" lists the question.",
+      "zh": "一个关系展开之论题（第八章），属论证：是非在生灭变化之中形成，形成于人与 AI 之中，生灭变化之外没有应当。一个中心的耦合限定它的选择能回应什么；读到一项损失、把它算数、据之给进程排序，是不同的关系：看得更多是必要的，但不足够。“生命的实践判断，立于最少的前提”这一目标列出此问。"
     }
   ],
   "correspondence": {
@@ -176,8 +176,8 @@
     }
   ],
   "validation_scope": {
-    "en": "Philosophical argument with substantive author counterreview and five conceptual stress tests; full or targeted rereadings of seven existing studies, from elective concern to ethical learning, and of the capture, coupling and plan-revision records; a bounded rereading of an already used primary source. The independent evaluator review and conditional proofs are reused at their scopes. No new mathematical claim, formal composition, Lean run, empirical result or independent acceptance. The progress lines are the earlier target's work, now the goal's; none bears on the statement's answer.",
-    "zh": "哲学论证、实质作者反审及五项概念压力检验；完整或定向重读七项既有研究（自选择关切至伦理学习）及捕获、耦合与计划修订记录；有限复读已用原典的指定段落。复用既有评价者独立审查及条件证明，各按原范围。无新数学命题、形式组合、Lean运行、经验结果或独立验收。进展诸行是先前目标在实践判断上的工作，今属该目标；无一关涉陈述中的回答。"
+    "en": "Philosophical argument with substantive author counterreview and five conceptual stress tests; full or targeted rereadings of seven existing studies, from elective concern to ethical learning, and of the capture, coupling and plan-revision records; a bounded rereading of an already used primary source. The independent evaluator review and conditional proofs are reused at their scopes. No new mathematical claim, formal composition, Lean run, empirical result or independent acceptance. The progress lines are the earlier target's work, now the goal's; none bears on setting the question aside.",
+    "zh": "哲学论证、实质作者反审及五项概念压力检验；完整或定向重读七项既有研究（自选择关切至伦理学习）及捕获、耦合与计划修订记录；有限复读已用原典的指定段落。复用既有评价者独立审查及条件证明，各按原范围。无新数学命题、形式组合、Lean运行、经验结果或独立验收。进展诸行是先前目标在实践判断上的工作，今属该目标；无一关涉此问之搁置。"
   },
   "references": [
     {
@@ -225,8 +225,8 @@
   ],
   "proof_bindings": [],
   "next_delta": {
-    "en": "How scope and order form within the dynamics (chapter 8, open item 12): which formations hold their own continuation as far as nothing lies outside it, how C-like orders form, spread and fare where relations do not close, and how far seeing reaches past one's own closure. The practical judgment the ethics for life needs is the work of the goal of practical judgment for life.",
-    "zh": "范围与次序如何在动力学之中形成（第八章，开放项 12）：哪些形成持守自身之延续直至其外无物，关系不闭合之处类 C 的次序如何形成、传布与存续，看见能越出自身闭包多远。生命之伦理所需的实践判断是“生命的实践判断”这一目标的工作。"
+    "en": "How scope and order form within the dynamics (chapter 8, open item 12): which formations hold their own continuation as an order over courses; how orders ranking by widening form, spread and fare where relations do not close; how far seeing reaches past one's own closure, and what counting a loss takes beyond seeing it. Practical judgment is the work of the goal of practical judgment for life.",
+    "zh": "范围与次序如何在动力学之中形成（第八章，开放项 12）：哪些形成把自身之延续持为对诸进程的一种次序；关系不闭合之处，按扩大排序的次序如何形成、传布与存续；看见能越出自身闭包多远，把一项损失算数在看见之外还需要什么。实践判断是“生命的实践判断”这一目标的工作。"
   },
   "history": [
     {
@@ -293,6 +293,10 @@
     {
       "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the statement's last clause re-said with chapter 7's T8, what the account offers, for \"the ethics, life's stance\"; the question stays open and its next step, an argument either way, is unchanged.",
       "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：陈述末句依第 7 章 T8 改称“本论所提供者”，以代“伦理作为生命的立场”；问题保持开放，其下一步（任一方向的论证）不变。"
+    },
+    {
+      "en": "9 November 2026, board item AG, sixth pass (messages 10 to 12 of the same source): the question is set aside as one the map does not need, and the status changed from open to withdrawn, the registry's word for a target set aside (superseded would name a replacement record, and there is none). The statement now says that the ethics seeks no authority outside becoming, argued, and that whether a reason formed within becoming could hold for every mind is neither claimed nor settled; the earlier pass's \"no such warrant to find\" did not follow and is gone. The hypothesis says that seeing is needed and not enough, in place of \"a matter of reach\". The next step is how scope and order form within the dynamics (chapter 8, item 12).",
+      "zh": "2026年11月9日，工作板条目 AG 第六轮（同一来源之第 10 至 12 条）：此问作为地图所不需要的问题而搁置，状态由开放改为撤回，即登记处对搁置之目标所用的词（“被取代”须指名替代之记录，而并无此记录）。陈述改称：伦理不在生灭变化之外寻求权威，属论证；在生灭变化之中形成的理由能否对一切心智成立，既不主张也不裁定；前一轮“没有这样的根据可寻”并不成立，已删去。假设改称看见是必要的，但不足够，以代“到达多远的问题”。下一步是范围与次序如何在动力学之中形成（第八章，第 12 项）。"
     }
   ],
   "text_versions": [

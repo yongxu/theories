@@ -530,10 +530,10 @@ def start_here_lines(records, path, homes):
              'Each central result is set beside its closest prior result, with its verdict and what that prior result states that the account does not yet, in '
              + link(CHAPTERS + '/08-METHOD.md#known-results', path, 'method, known results') + '.', '']
     lines += [start_item(r, path, homes) for r in chosen]
-    # AG review, fifth pass: 07's Bases ("where a result ranks, the continuation condition for scope, and C or self-concern
-    # for order"), not "two readings"; the ethics emerges from continuation (07 §4)
+    # AG review, fifth pass: 07's Bases, not "two readings"; the ethics emerges from continuation (07 §4). Sixth pass
+    # (messages 10 and 11 of 9 November: C as a second premise giving order was the mistake): 07's Bases as it now says it.
     return lines + ['', 'No law here evaluates, and the ethics emerges from continuation; a ranking result states the hypotheses its theorem takes: '
-                    + link(CHAPTERS + '/07-SIGNIFICANCE.md#scope-and-order', path, 'the continuation condition for scope, and C or self-concern for order') + '.', '']
+                    + link(CHAPTERS + '/07-SIGNIFICANCE.md#scope-and-order', path, 'the continuation condition, self-concern or `Comparison` (C), as its theorem takes them') + '.', '']
 
 
 def law_family_table(records, base):
@@ -634,7 +634,7 @@ WHERE_TO_LOOK = [
     '- Same theorem under two names: `trace-law-equivalence`, `derivation-soundness`. Preserve historical names and receipts; count the underlying result once.',
     '- Similar statements with different semantics: `branching-target-uniqueness`, `joint-target-uniqueness`. Their local test languages differ.',
     '- Three shared-support results: `draws-on-a-shared-stock`, `exclusive-footprint-support`, `joint-plan-composition`. Their common obstruction does not establish a verified translation between them.',
-    '- Completed conditional alignment argument and its AI application: `practical-judgment-under-living-significance`, `alignment-direction-under-widening`. The question `universal-practical-warrant` is answered within the map, argued: no should stands beyond becoming, so there is no such warrant to find, and what stays open is how scope and order form. The independent target `wisdom-root` remains open.']
+    '- Completed conditional alignment argument and its AI application: `practical-judgment-under-living-significance`, `alignment-direction-under-widening`. The question `universal-practical-warrant` is set aside as one the map does not need: the ethics seeks no authority outside becoming, argued; whether a reason formed within becoming could hold for every mind is not claimed or settled, and the target kept is how scope and order form. The independent target `wisdom-root` remains open.']
 
 
 CH07, CH08 = CHAPTERS + '/07-SIGNIFICANCE.md', CHAPTERS + '/08-METHOD.md'
@@ -642,17 +642,20 @@ CH07, CH08 = CHAPTERS + '/07-SIGNIFICANCE.md', CHAPTERS + '/08-METHOD.md'
 # AG review, fifth pass (9 November 2026, Ren: "ethics emerges from continuation condition, not another way around"): the
 # lead opens with 07 §4's own first sentences, a life holding its own continuation and the order coming with the scope where
 # the condition holds de se, before the hypotheses a ranking result states; 'not-own' re-quoted as 07 now says it.
+# AG review, sixth pass (Ren, messages 10 and 11 of 9 November: C as a second premise giving order was the mistake): 07 §4's
+# lead as it now says it, going on not yet an order and self-concern, where a life holds it, argued and not shown; the
+# ranking on a finite listing and between level paths whose admissions fit in a finite list; the hypotheses a result takes.
 OPEN_LEAD = {
-    'life': (CH07, 'A life that goes on holds its own continuation: argued, since what does not hold it ceases, and in the proofs a hypothesis, derived from no dynamics, selection or persistence.'),
-    'scope-order': (CH07, 'How far that concern reaches is its scope, and how it ranks courses its order; the results here say where each holds, and where the condition holds de se the order comes with the scope, between listed courses'),
-    'premises': (CH07, 'Each ranking result names what it ranks under, the continuation condition for scope and C for order, or the narrower order a self-concern result states.'),
-    'not-own': (CH07, 'Neither stands above becoming: each is an order or scope some formations hold, formed within it, and the results say what follows where it is held.'),
+    'life': (CH07, 'A life goes on through what sustains it; where it holds its own continuation as an order over courses, ranking above what it widens every widening that adds to its own continuation, that order is self-concern (`Weighting.IncreasingInOwn`): in the proofs a hypothesis, derived from no dynamics, selection or persistence, and that a life forms such an order is argued, not shown.'),
+    'scope-order': (CH07, 'How far a concern reaches is its scope, and how it ranks courses its order; where the continuation condition holds de se, self-concern ranks every widening above what it widens, one way, on a finite listing and between two level paths whose admissions fit in a finite list, courses that end'),
+    'premises': (CH07, 'Each ranking result names the hypotheses its theorem takes: the continuation condition, self-concern or `Comparison` (C), and any further premise it uses.'),
+    'not-own': (CH07, 'Neither the condition nor self-concern stands above becoming: each is an order or scope some formations hold, formed within it, and the results say what follows where it is held.'),
     'crux': (CH07, 'whether all of one\'s effects are one\'s own, in the sense of whose losses count, argued for and against and not settled.'),
     'crux-laws': (CH07, 'The laws do not answer it.'),
     'crux-standing': (CH07, 'An AI reading throughout: argued, not proved.'),
-    'c-question': (CH08, 'Which formations hold C, which count past their own line (the step of invariance, which fixes scope), and how such orders form, spread, lock and fare.'),
+    'c-question': (CH08, 'Which formations hold an order ranking every widening above, which count past their own line (the step of invariance, which fixes scope), and how such orders form, spread, lock and fare.'),
     'c-definition': (CH08, 'C\'s no-loss extension is widening by definition, so the definition carries no "better"'),
-    'c-open': (CH08, 'which other scopes can count, the step of invariance among them; how C-like orders form; no formal work settles them'),
+    'c-open': (CH08, 'which other scopes can count, the step of invariance among them; how orders ranking widening above form; no formal work settles them'),
     'readings': (CH08, 'The readings stand as one account; where two did not fit, the account decided between them'),
 }
 OPEN_KEPT = '_process/OPEN-QUESTIONS-KEPT.md'  # what keeps OPEN-QUESTIONS.md, off the reader's page
@@ -685,7 +688,7 @@ def open_lead_lines(path):
     return ['## The crux, and how scope and order form', '',
             f'{q("life")} {q("scope-order")} (' + link(CH07 + '#scope-and-order', path, 'chapter 7, section 4') + f'). {q("not-own")} {q("premises")}', '',  # "Neither" after the scope and the order it names
             '- **The crux** (' + link(CH07 + '#crux', path, 'chapter 7, section 4.7') + f'; {q("crux-standing")[0].lower() + q("crux-standing")[1:-1]}). "{q("crux")}" "{q("crux-laws")}"',
-            f'- **How C and the scope form.** "{q("c-question")}" (' + link(CH08 + '#open-items-ranked', path, 'method, open item 12') + f') "{q("c-definition")}" ('
+            f'- **How the order and the scope form.** "{q("c-question")}" (' + link(CH08 + '#open-items-ranked', path, 'method, open item 12') + f') "{q("c-definition")}" ('
             + link(CH08 + '#philosophical-warrant', path, 'method, philosophical questions') + f'). Open: "{q("c-open")}" (' + link(CH08 + '#open-items-ranked', path, 'item 12') + ').', '']
 
 
@@ -854,8 +857,9 @@ def render_views(records):
                           'The condition is a scope some formations hold; ' + link(CHAPTERS + '/07-SIGNIFICANCE.md#condition', path, 'chapter 7, section 3')
                           + ' states what follows from it. The condition gives the continuation of everything significance from every standpoint, so the results under it '
                           'are the case of a significance that covers everything; the rules of comparison are derived without it, and the condition adds none. '
-                          'The ranking results state what they rank under as their theorems\' hypotheses: the condition for scope, whose losses count, and C or self-concern for order; '
-                          'where the condition holds de se, holding one\'s own continuation ranks every extension between listed level paths as C does, one way, and elsewhere C is a named order; '
+                          'The ranking results state the hypotheses their theorems take: the condition (whose losses count), self-concern or `Comparison` (C); '
+                          'where the condition holds de se, an order holding one\'s own continuation ranks every widening above, one way, on a finite listing and between two level paths '
+                          'whose admissions fit in a finite list, courses that end; on a finite listing widening is exactly what every positive weighting ranks higher, no second premise; '
                           'C\'s no-loss extension on level paths is widening by definition, more future, not a good set over less. '
                           'Open: how scope and order form within the dynamics, from what one\'s own continuation needs to the continuation of anything, the step of invariance among them.', '']
                 lines += result_block(first, path, '####')

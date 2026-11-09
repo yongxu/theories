@@ -347,6 +347,19 @@ class Drawing(unittest.TestCase):
         self.assertIn('](spine.zh.svg)', page)
         self.assertRegex(page, r'\*约 [0-9–]+ 分钟读完。\*')
 
+    def test_the_boxes_are_said_with_no_second_premise(self):
+        # AG review, sixth pass (Ren, messages 10 and 11): C is no premise "for order" beside the condition; widening is
+        # what every positive weighting agrees on; the ranking between level paths is of courses that end
+        lead = '\n'.join(spine.lead(graph(), 'theories/becoming/results/THEORY-GRAPH.md'))
+        self.assertIn('Widening is what every positive weighting ranks higher, no second premise', lead)
+        self.assertIn('between two level paths whose admissions fit in a finite list, courses that end', lead)
+        page = spine.zh_page(graph())
+        self.assertIn('扩大是每一个正的赋权都共同认可的，不是第二个前提', page)
+        for old in ('C for order', 'for scope', 'between listed courses'):
+            self.assertNotIn(old, lead)
+        for old in ('定次序', '定范围', '列出的进程'):
+            self.assertNotIn(old, page)
+
     def test_section_tables_every_pair_and_counts_what_is_not_drawn(self):
         g = graph()
         lines = spine.section(g, 'theories/becoming/results/THEORY-GRAPH.md')

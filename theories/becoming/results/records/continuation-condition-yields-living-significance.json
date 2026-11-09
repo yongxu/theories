@@ -179,8 +179,8 @@
       "en": "Correspondence: a claim's significance is read as that of some formation's continuation at some step (formation, step and reads); on readings that do not meet it the theorem says nothing."
     },
     {
-      "zh": "在水平路径的框架上，把“更好”读作保留且增加有意义者时 C 成立，而在条件之下这就是扩大（`Web.widens_iff_retains_adds`）：这是对“更好”的一种读法，不单由条件推出；在一般的框架上 C 是一种具名的次序，用到之处为假设。",
-      "en": "On the frame of level paths C holds with “better” read as retaining and adding what has significance, which under the condition is widening (`Web.widens_iff_retains_adds`): a reading of “better”, not a consequence of the condition alone; on a general frame C is a named order, a hypothesis where used."
+      "zh": "在水平路径的框架上，把“更好”读作保留且增加有意义者时 C 成立，而在条件之下这就是扩大（`Web.widens_iff_retains_adds`）：这是对“更好”的一种读法，不单由条件推出；在一般的框架上 C（`Comparison`）在某定理取用之处为假设。",
+      "en": "On the frame of level paths C holds with “better” read as retaining and adding what has significance, which under the condition is widening (`Web.widens_iff_retains_adds`): a reading of “better”, not a consequence of the condition alone; on a general frame C (`Comparison`) is a hypothesis where a theorem takes it."
     },
     {
       "zh": "离散的步（从第零步计）；自然数的水平、所需与数量；部分是可判定的家族（part : F → Bool）。",
@@ -233,8 +233,8 @@
       "witness": "Becoming.Web.significance_undetermined"
     },
     {
-      "en": "Counting theorems that take the condition as a hypothesis counts uses of a universal statement, not dependence on further content; the condition fixes scope, whose losses count (the step of invariance is part of it), and by itself ranks nothing (chapter 7 says how order emerges with it).",
-      "zh": "以条件为假设的定理之数，计的是一个全称命题的用处，不是对更多内容的依存；条件定范围，即谁的损失算数（不变的一步属于这个范围），单凭自身不排序（次序怎样与之一同生出，见第七章）。",
+      "en": "Counting theorems that take the condition as a hypothesis counts uses of a universal statement, not dependence on further content; the condition fixes whose losses count (the step of invariance is part of it) and by itself ranks nothing.",
+      "zh": "以条件为假设的定理之数，计的是一个全称命题的用处，不是对更多内容的依存；条件定谁的损失算数（不变的一步属于其中），单凭自身不排序。",
       "kind": "non-implication"
     }
   ],

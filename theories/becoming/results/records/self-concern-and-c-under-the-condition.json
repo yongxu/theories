@@ -10,8 +10,8 @@
   "family": "F07",
   "reviewed_at_utc": "2026-11-01T00:07:51+00:00",
   "statement": {
-    "en": "Self-concern and being increasing in admission coincide from every standpoint exactly where each marking is total: as a center's reach, where the root's condition holds; held de se, where the continuation condition does. There, admission decided, it ranks extensions between listed paths, one way.",
-    "zh": "自关切与于接纳上递增，于每立场恰在各标记皆全处相合：于自中心之所及，即根上之条件成立处；于自承，即延续条件成立处。彼成立且接纳可判定处，自关切把二所列层径间之每一扩展皆排定。"
+    "en": "Self-concern and being increasing in admission coincide from every standpoint exactly where each marking is total: where the condition holds, on the root or held de se. There it ranks, one way, every extension between two level paths whose admissions a finite list holds: courses that end.",
+    "zh": "自关切与于接纳上递增，于每立场恰在各标记皆全处相合，即条件成立处，于根上或于自承。彼处自关切单向地把二层径间之每一扩展皆排定，唯二径之所接纳容于一有限列表，即有终之进程。"
   },
   "laws": [
     {
@@ -72,14 +72,14 @@
       "zh": "就网上之排序：接纳由所予之二值读法判定，二层径所接纳者列为（步，构成）之项，每一主张计为活，每项以其构成之标记标之。"
     },
     {
-      "en": "This result assumes self-concern and the continuation condition held de se, with admission decided and two listed level paths, courses whose admissions end; it concludes, one way, the extension rankings C asks between those paths. Beyond listed paths and self-concerned orders, C is a named order.",
-      "zh": "此结果以自关切与自承之延续条件为假设，接纳可判定，二所列且接纳有终之层径；它单向推出 C 在这两条层径之间所求的扩展排序。所列层径与自关切之次序之外，C 是一种具名的次序。"
+      "en": "This result assumes self-concern and the continuation condition held de se, with admission decided and two level paths whose admitted pairs fit in a finite list, courses whose admissions end; it concludes, one way, the extension rankings C asks between those paths. For courses that go on forming without end it is not shown.",
+      "zh": "此结果以自关切与自承之延续条件为假设，接纳可判定，二层径所接纳之项容于一有限列表，即接纳有终之进程；它单向推出 C 在这两条层径之间所求的扩展排序。对无尽地形成下去的进程，未证。"
     }
   ],
   "does_not_show": [
     {
-      "en": "That C follows from self-concern on all of a web's level paths: the link holds between two listed paths, courses whose admissions end.",
-      "zh": "C 于网之全部层径上自自关切得出：此联系唯于二所列之径间成立，即其接纳有终之进程。",
+      "en": "That C follows from self-concern on all of a web's level paths: the link holds between two level paths whose admitted pairs fit in a finite list, courses whose admissions end.",
+      "zh": "C 于网之全部层径上自自关切得出：此联系唯于所接纳之项容于一有限列表的二层径间成立，即其接纳有终之进程。",
       "kind": "scope",
       "witness": "Becoming.Web.not_listsAdmitted_every"
     },
@@ -99,8 +99,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "That the condition holds, that self-concern follows from any dynamics, or that C holds without its stated hypotheses: each is a hypothesis where used; beyond what self-concern ranks here, C is a named order.",
-      "zh": "条件成立、自关切由某种动力学推出，或 C 无须所述假设便成立：各在用到之处为假设；此处自关切所排者之外，C 是具名的次序。",
+      "en": "That the condition holds, that a life forms such an order, that self-concern follows from any dynamics, or that C holds without its stated hypotheses: each is a hypothesis where used.",
+      "zh": "条件成立、生命形成这样的次序、自关切由某种动力学推出，或 C 无须所述假设便成立：各在用到之处为假设。",
       "kind": "non-implication"
     }
   ],
@@ -121,8 +121,8 @@
     "zh": "网上之另一半，于层径接纳见证之进程处；于有限视界上为每步皆有所接纳之进程立桥；人之审查。"
   },
   "correspondence": {
-    "en": "Self-concern is an order increasing in what one's own continuation marks; being increasing in admission is a Pareto-style monotonicity that gives what C asks between listed level paths (one way). Where one's own continuation marks everything, the two coincide, so there self-concern gives what C asks between listed level paths, one way; on all of a web's level paths it gives nothing this way. The reading of where that holds, the condition on the root, is near-definitional and claims no property of reach.",
-    "zh": "自关切为于自身延续所标者上递增之次序；于接纳上递增为帕累托式之单调，单向给出 C 于所列层径间之所求。自身延续标出一切处，二者相合，故于彼处自关切单向给出 C 于所列层径间之所求；于网之全部层径上，此路不给出任何东西。何处如此之读，即根上之条件，近乎定义，不主张所及之任何性质。"
+    "en": "Self-concern is an order increasing in what one's own continuation marks: a life's holding of its own continuation, read as an order over courses, which going on alone does not give. Being increasing in admission is a Pareto-style monotonicity that gives what C asks, one way, between two level paths whose admitted pairs fit in a finite list. Where one's own continuation marks everything, the two coincide, so there self-concern gives that too; on all of a web's level paths it gives nothing this way, and for courses that go on forming without end it is not shown. The reading of where that holds, the condition on the root, is near-definitional and claims no property of reach.",
+    "zh": "自关切为于自身延续所标者上递增之次序：生命对自身延续之持守，读作对诸进程的一种次序，单是继续下去并不给出它。于接纳上递增为帕累托式之单调，单向给出 C 于所接纳之项容于一有限列表的二层径间之所求。自身延续标出一切处，二者相合，故于彼处自关切亦给出之；于网之全部层径上，此路不给出任何东西；对无尽地形成下去的进程，未证。何处如此之读，即根上之条件，近乎定义，不主张所及之任何性质。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PremiseWitnesses.lean",
   "aliases": [
@@ -178,8 +178,8 @@
     {
       "id": "widening-as-what-every-positive-weighting-ranks",
       "detail": {
-        "en": "Widening is what every positive weighting ranks higher; through it an order increasing in admission ranks every extension between listed paths.",
-        "zh": "扩大即每一正权重所排高者；经之，于接纳上递增之次序把所列径间之每一扩展皆排定。"
+        "en": "Widening is what every positive weighting ranks higher; through it an order increasing in admission ranks every extension between two listed level paths, courses whose admissions end.",
+        "zh": "扩大即每一正权重所排高者；经之，于接纳上递增之次序把二所列层径（接纳有终之进程）间之每一扩展皆排定。"
       }
     }
   ],

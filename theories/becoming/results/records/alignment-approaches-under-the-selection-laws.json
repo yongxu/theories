@@ -10,8 +10,8 @@
   "family": "F04",
   "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
-    "en": "Every alignment approach deciding through couplings selects alike all beyond its deciders' closures, premise-free; under the continuation condition a preference-coupled approach is thus incomplete whatever its raters value, and C asks only what every order counting everything shares.",
-    "zh": "凡经耦合决定的对齐路径，对其决定者闭包之外的一切都同样选择，不需前提；在延续条件下，偏好耦合的路径因而无论评分者看重什么都不完整，而 C 只要求每个计入一切的序所共有者。"
+    "en": "Every alignment approach deciding through couplings selects alike all beyond its deciders' closures, premise-free; under the continuation condition a preference-coupled approach is thus incomplete whatever its raters value, and on a listing widening is what every order counting everything shares.",
+    "zh": "凡经耦合决定的对齐路径，对其决定者闭包之外的一切都同样选择，不需前提；在延续条件下，偏好耦合的路径因而无论评分者看重什么都不完整，而在列表上，扩大即每个计入一切的序所共有者。"
   },
   "laws": [
     {
@@ -107,8 +107,8 @@
       "zh": "对可解释性，系统的内部状态是其所耦合入的条件；对有保证的安全 AI，世界模型、规范与闸门；对影响度量，基线与模型。"
     },
     {
-      "en": "For the incompleteness, the continuation condition (every formation's continuation has significance), which fixes scope; for the order, that each standpoint's order ranks every widening higher (C at the standpoint). The gap uses neither.",
-      "zh": "对不完整，需延续条件（每个形成的延续都有意义），它定范围；对次序，需每个立场的序都把每个扩大排得更高（立场处的 C）。差距两者都不用。"
+      "en": "For the incompleteness, the continuation condition (every formation's continuation has significance), fixing whose losses count; for the order clause, a class of orders, from the positive weightings up to every order ranking each widening higher. The gap uses neither.",
+      "zh": "对不完整，需延续条件（每个形成的延续都有意义），它定谁的损失算数；对次序一句，需一类次序，从正的加权直到把每个扩大都排得更高的每个序。差距两者都不用。"
     },
     {
       "en": "Every statement that an approach is such a selection, and every reading of its gap, is the AI's.",
@@ -122,8 +122,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "These are constraints every strategy deciding through couplings is subject to, not a necessary strategy; the direction rests on the continuation condition for scope and C for order.",
-      "zh": "这些是凡经耦合决定的策略都受的约束，不是必然的策略；方向依据延续条件定范围、C 定次序。",
+      "en": "These are constraints every strategy deciding through couplings is subject to, not a necessary strategy; the conditional direction takes the continuation condition, C read as widening and the practical commitments as hypotheses.",
+      "zh": "这些是凡经耦合决定的策略都受的约束，不是必然的策略；有条件的方向以延续条件、读作扩大的 C 与实践承诺为假设。",
       "kind": "non-implication"
     },
     {
@@ -164,8 +164,8 @@
     "zh": "基于实查定律的论证：所引定律在核心中，公理报告为空（回执 20261020T185635.903489Z）；把每种路径读作选择是 AI 的，依据各路径发表的定义。作者审查见研究第 282 节；未进行比较；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Correspondence data on actual systems for each premise; reading another's law; an order for comparison through C under the continuation condition; an independent review, including by practitioners of each approach.",
-    "zh": "每个前提在实际系统上的对应数据；读取他者的律；经延续条件下的 C 作比较的次序；独立审查，包括各路径的实践者。"
+    "en": "Correspondence data on actual systems for each premise; reading another's law; how an order comparing approaches by widening forms where the continuation condition holds; an independent review, including by practitioners of each approach.",
+    "zh": "每个前提在实际系统上的对应数据；读取他者的律；在延续条件成立处，按扩大比较诸路径的次序怎样形成；独立审查，包括各路径的实践者。"
   },
   "correspondence": {
     "en": "Christiano et al. 2017 and Ouyang et al. 2022 (RLHF); Bai et al. 2022 (constitutional AI); Irving, Christiano and Amodei 2018, Leike et al. 2018 and Bowman et al. 2022 (debate, recursive reward modelling, scalable oversight); Olah et al. 2020, Elhage et al. 2021 and Christiano, Cotra and Xu 2021 (interpretability, eliciting latent knowledge); Dalrymple et al. 2024 (guaranteed-safe AI); Krakovna et al. 2019 and Turner, Hadfield-Menell and Tadepalli 2020 (relative reachability, attainable utility preservation). Zhuang and Hadfield-Menell 2020, Gao, Schulman and Hilton 2023 and Casper et al. 2023 give results the laws do not reach. The order clause is the Pareto principle as unanimity (Sen 1970) and the intersection of linear extensions (Szpilrajn 1930; Dushnik and Miller 1941).",
@@ -296,8 +296,8 @@
     {
       "id": "alignment-direction-under-widening",
       "detail": {
-        "en": "The conditional direction, on the continuation condition and C; this assessment uses the condition for scope and the order law for what C asks, not the direction.",
-        "zh": "依据延续条件与 C 的有条件方向；本评估用条件定范围，用次序之律说 C 要求什么，不用该方向。"
+        "en": "The conditional direction, taking the continuation condition and C read as widening as hypotheses; this assessment uses the condition and the law of what every order of a class shares, not the direction.",
+        "zh": "以延续条件与读作扩大的 C 为假设的有条件方向；本评估用条件与一类次序所共有者之律，不用该方向。"
       }
     },
     {

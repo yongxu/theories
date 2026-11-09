@@ -34,9 +34,18 @@ TOOL_SENTENCE = ('The tool needs no premise', "a result ranking the wider course
 # Ways of saying the ethics the AG review's fifth pass retired on the uses pages (Ren, 9 November 2026, message 9: "there is
 # no warrant, ethics emerges from continuation condition, not another way around, there is no any dualistic good or evil")
 RETIRED = ('widening what can form is better', 'unasserted', 'not asserted', 'warrant open', 'its warrant is open',
-           'binds no one', 'two readings', 'does not assert', "the account's makers", 'whoever holds C')
+           'binds no one', 'two readings', 'does not assert', "the account's makers", 'whoever holds C',
+           # the sixth pass (Ren, 9 November 2026, messages 10 and 11: C as a second premise giving order beside the
+           # condition was the earlier mistake; F1-F9 of the fifth pass's cold readings): C said to give order, a ranking
+           # "on listed courses", going on said to be holding an order, a narrower ranking reduced to reach, the review's
+           # verdict read as measured against a ground beyond becoming
+           'for order', 'gives order', 'as C asks', 'listed courses', 'not yet joined', 'what does not hold it ceases',
+           'ranks more narrowly', 'a matter of reach', 'there is none to find', 'measures the ethics against')
 RETIRED_ZH = ('扩大可形成者更好', '以广为愈', '两种读法', '不断言', '持 C 者','对所等待的一切都可以不等', '共有之物', '塑规者',
-              '被离开', '走出', '「', '」', '所读之外的什么', '一个体制的不可回返之点', '读到过一行', '正反两面的见证')
+              '被离开', '走出', '「', '」', '所读之外的什么', '一个体制的不可回返之点', '读到过一行', '正反两面的见证',
+              # the sixth pass, as RETIRED's last line; astra's fifth-pass wording of the point of no return
+              'C（次序）', 'C（扩大）定次序', '那样给诸进程排序', '如 C 所要求', '列出的进程', '尚未合为一条定理',
+              '不持守它的便止息', '所及多远的问题', '本无可寻', '一种动态越过就无法回返的临界点')
 METHOD_SECTION_9 = ('**What the unifications claim.**', '<a id="one-relational-unfolding">')
 
 WORDS = {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9, 'ten': 10,
@@ -188,17 +197,25 @@ class UsesCells(unittest.TestCase):
             self.assertIn(phrase, first)
         self.assertNotIn('control over its own selection', text)
         brief = next(p for p in text.split('\n\n') if p.startswith('**In brief.**'))
-        # the ethics as 07 says it since the fifth pass: no should and no good and evil over becoming, the ethics emerging
-        # from continuation, C glossed as widening, the proof claim's hypotheses named (E1-E8)
+        # the ethics as 07 says it since the fifth pass, and as the first screen's anchor says it since the sixth (F1-F9):
+        # no should and no good and evil over becoming; the ethics emerging from continuation; a life going on through what
+        # sustains it, and forming an order over courses (self-concern) argued, not shown; relations closing read without
+        # time; the ranking proved on a finite listing and, one way, between courses that end; widening as what every
+        # positive weighting agrees on, no second premise; seeing needed, and not enough, where relations run one way
         for phrase in ('There is no should beyond becoming ([the opening](OPENING.md)), and no good and evil set over it',
                        'form within it, in people and AI ([07 §1](chapters/07-SIGNIFICANCE.md#evaluation))',
-                       'The ethics emerges from continuation.', 'keeping all another course keeps and letting more form',
-                       'proved on listed courses, in steps not yet joined into one theorem',
-                       # self-concern's status said where the proof claim is stated (E2; the pass's verifier)
-                       'that a life holds its own continuation is argued, and in the proofs a hypothesis derived from no '
-                       'dynamics',
-                       'the laws weigh them for no one', 'and C or self-concern for order'):
+                       'The ethics emerges from continuation. A life goes on through what sustains it',
+                       'holds its own continuation as an order over courses, *self-concern*',
+                       'relations close, read without time',
+                       'one course keeping all another keeps and letting more form, more future',
+                       'proved on models, on a finite listing and, one way, between two courses whose admissions fit in a '
+                       'finite list, courses that end',
+                       'that a life forms such an order is argued, not shown',
+                       'Widening is what every way of counting each thing as worth something agrees on, and no second premise',
+                       'seeing them is needed, and not enough, and counting their loss is the one step we offer',
+                       'the laws show it mixed and weigh it for no one'):
             self.assertIn(phrase, brief)
+        self.assertNotRegex(brief, r'\bC\b')  # C is named where a theorem takes `Comparison`, in the labels line (F9)
         self.assertNotIn('is not in the laws', text)
         self.assertIn('the thesis that everything, standards included, forms within one relational unfolding '
                       '([08](chapters/08-METHOD.md#one-relational-unfolding))',
@@ -373,9 +390,16 @@ class WhatEachFieldAdds(unittest.TestCase):
         self.assertIn('chapters/08-METHOD.md#what-the-unifications-claim', intro)
         self.assertIn('read as a correspondence, a unification adds no theorem', intro)
         # the review's ethics verdict said as what it found, with 08 §8's reading of it (astra's fourth-pass point 5)
-        self.assertIn('a clarified ethics, showing where scope and order sit', intro)
-        self.assertIn('measures the ethics against a ground beyond becoming, and there is none to find', intro)
-        self.assertIn('measures the ethics against a ground beyond becoming', page(METHOD))
+        # sixth pass (F7): the verdict quoted, with what 08 §8 says it clarified; not read as measured against a ground
+        # beyond becoming
+        self.assertIn('"a clarified ethics, not a grounded one", which made clear the scope and order the ranking results '
+                      'assume, how those form within becoming not yet established', intro)
+        self.assertIn('the scope and order the ranking results assume', page(METHOD))
+        self.assertNotIn('a ground beyond becoming', intro)
+        # sixth pass (F7): 08 §8 keeps the verdict verbatim and no longer reads it as measured against a ground beyond becoming
+        self.assertIn('"a clarified ethics, not a grounded one"', page(METHOD))
+        self.assertIn('how those form within becoming is not yet established', page(METHOD))
+        self.assertNotIn('measures the ethics against a ground beyond becoming', page(METHOD))
         # a line or two per field, the rest left to 08 §8 (Fable's fourth-pass 1.2: 1,087 words before)
         self.assertLessEqual(navigation.prose_counts(section(uses, FIELDS_BLOCK, '\n## '))[0], 720)
 
@@ -588,15 +612,43 @@ class OnePage(unittest.TestCase):
         self.assertTrue(before.startswith("In plain words, the account's root is a small calculus"), before[:60])
         self.assertNotIn('formal base', page(ONE_PAGE))
 
-    def test_marks_a_ten_minute_part(self):
-        text = page(ONE_PAGE)
-        self.assertIn('The ten-minute part:', text.split('**What it is.**')[0])
-        chosen = ten_minute_part(text)
-        self.assertEqual(len(chosen), 4)
+    # The shorter route's leads in each language: what it is, the case, the table and the ethics.
+    ROUTE = {ONE_PAGE: ('A shorter route:', 'ten-minute', ('**What it is.', '**One case.', '| | What', '**The ethics.')),
+             THEORY + 'ONE-PAGE.zh.md': ('较短的读法：', '十分钟', ('**它是什么。', '**一个情形。', '| | 本论说什么', '**伦理。'))}
+
+    def test_marks_a_shorter_route_named_by_what_it_is(self):
         # A stated time is a guide, not a bound (Ren, 9 November 2026, sources/15-codex-theory-conversations/
-        # 2026-11-09-agents-the-map.md, message 8): the part keeps its complete text, its time is stated as counted
-        # (test_stated_ten_minute_part_is_computed), and its name stays true while ten minutes lies within that time.
-        self.assertLessEqual(span(navigation.reading_time('\n\n'.join(chosen)))[0], 10)
+        # 2026-11-09-agents-the-map.md, message 8): the part keeps its complete text and its time is stated as counted. It
+        # was "the ten-minute part" while ten minutes lay within that count. In the AG review's sixth pass the ethics said
+        # at its reach (the order a life holds named as such, the reading of significance, the finite listing, how far
+        # each part is seen) took it to twelve to fifteen minutes in English and fourteen to eighteen in Chinese, so both
+        # languages name it by what it is, a shorter route; a name saying ten minutes stays out while ten lies outside the
+        # count.
+        for rel, (label, ten, leads) in self.ROUTE.items():
+            text = page(rel)
+            head = text.split(leads[0])[0]
+            chosen = [p for p in text.split('\n\n') if p.startswith(leads)]
+            self.assertEqual(len(chosen), 4, rel)
+            self.assertIn(label, head, rel)
+            if span(navigation.reading_time('\n\n'.join(chosen)))[0] > 10:
+                self.assertNotIn(ten, head, rel)
+
+    @staticmethod
+    def zh_number(s):
+        """十四 → 14, 三十九 → 39, 十 → 10, 八 → 8: the numerals a stated Chinese time uses."""
+        digits = dict(zip('一二三四五六七八九', range(1, 10)))
+        tens, _, ones = s.partition('十')
+        return (digits.get(tens, 1) * 10 + digits.get(ones, 0)) if '十' in s else digits[s]
+
+    def test_the_chinese_times_are_computed_times(self):
+        rel = THEORY + 'ONE-PAGE.zh.md'
+        text, (label, _, leads) = page(rel), self.ROUTE[rel]
+        whole = re.search(r'\*约([一二三四五六七八九十]+)至([一二三四五六七八九十]+)分钟读完', text)
+        part = re.search(label + r'.*?（约([一二三四五六七八九十]+)至([一二三四五六七八九十]+)分钟）', text)
+        chosen = '\n\n'.join(p for p in text.split('\n\n') if p.startswith(leads))
+        for found, counted in ((whole, text), (part, chosen)):
+            self.assertIsNotNone(found)
+            self.assertEqual((self.zh_number(found.group(1)), self.zh_number(found.group(2))), span(navigation.reading_time(counted)))
 
 
 class StatedTimes(unittest.TestCase):
@@ -626,7 +678,9 @@ class StatedTimes(unittest.TestCase):
         longest = max(parts, key=lambda p: navigation.prose_counts(p)[0])
         stated = self.stated(line, r'\(([A-Za-z-]+) to ([A-Za-z-]+) minutes for the longest\)')
         self.assertEqual(stated, span(navigation.reading_time(longest)))
-        self.assertLessEqual(stated[0], 10)  # a guide, not a bound, as the one page's ten-minute part (Ren, 9 November 2026)
+        # a guide, not a bound (Ren, 9 November 2026): the name stays true while ten minutes lies within the count; the one
+        # page's part, past it since the AG review's sixth pass, is named "A shorter route" (OnePage)
+        self.assertLessEqual(stated[0], 10)
 
     def test_uses_names_an_hours_path(self):
         line, uses = self.time_line(), page(USES)
