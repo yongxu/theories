@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-09T14:47:00+00:00",
+  "reviewed_at_utc": "2026-11-09T15:20:00+00:00",
   "statement": {
     "en": "On a net going forward in time the root's condition is exactly: from each center everything later is reached, and nothing else lies at or before the center's step; the second part admits one center, and over what comes after two can meet it.",
     "zh": "于时间中向前之网上，根上之条件恰为：自每个中心较后之一切可及，且无他物在中心之步或之前；第二部分只容一个中心，而于其后者，二中心可满足之。"
@@ -25,10 +25,11 @@
       ]
     },
     {
-      "en": "Where every condition comes at an earlier step than what it conditions, the root's condition holds exactly where, from each center, everything at a later step is reached on a line under the class, and nothing other than the center lies at or before its step. The second part, which nothing reached can meet, is what admits one center only.",
-      "zh": "凡每一缘之步早于其所缘者，根上之条件恰在：自每个中心，较后之步之一切于类下之线上可及，且除中心外无物在其步或之前。第二部分，所及无一能满足，正是只容一个中心之所在。",
+      "en": "Where every condition comes at an earlier step than what it conditions, the root's condition holds exactly where, from each center, everything at a later step is reached on a line under the class, and nothing other than the center lies at or before its step. The second part alone admits one center, with no net, and nothing reached can meet it.",
+      "zh": "凡每一缘之步早于其所缘者，根上之条件恰在：自每个中心，较后之步之一切于类下之线上可及，且除中心外无物在其步或之前。第二部分单独即只容一个中心，无须网，所及无一能满足之。",
       "declarations": [
         "Becoming.«续无外当且仅当后与独»",
+        "Becoming.«独则同一中心»",
         "Becoming.«及则后»",
         "Becoming.«后则无环»",
         "Becoming.«续无外则续无外于后»"
@@ -150,22 +151,23 @@
         "Becoming.returnsAlong_of_sink",
         "Becoming.«及则后»",
         "Becoming.«后则无环»",
+        "Becoming.«独则同一中心»",
         "Becoming.«续无外于后»",
         "Becoming.«续无外则续无外于后»",
         "Becoming.«续无外当且仅当后与独»"
       ],
-      "sha256": "9285fcd96bf20d5bc4db58ca4af07475a9f22d7355c64ed852958e80373542ba"
+      "sha256": "105adddbbf6cbf8921a3ae8665204d0a9ee20e1a8a98dae04e8f77740db1a2cc"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/j3-condition-in-time/NOTE.md",
       "role": "integration",
-      "sha256": "f5794a892b3f24782bcfd8641a12b0c2264ed5866d53a287663e5eab18de5d8e",
+      "sha256": "c78d9d27c3e537b63d9384a80821ffe97a2d99be4463dbdaad978bb7d9df2805",
       "declarations": []
     },
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "0904a159f9de201d6dfc84a37e6266a790bfada58dd68ef1087ac24aec0b34ce",
+      "sha256": "07ba8cb977699d7cfdcd1c28eae9981468e7f1857800dc2d2681988966b993f3",
       "declarations": []
     }
   ],

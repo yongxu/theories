@@ -27,14 +27,16 @@ in, on occurrences `(t, f)`: a formation at a step.
   (`«续无外则同一中心»` of `Becoming.GrammarScope`) counts what lies before and beside a center, which
   no act can affect: over what comes after, two distinct centers can meet the condition
   (`TwoSources.apart`, `a₀ → z ← b₀`), and on a flow below every occurrence can
-  (`Recurring.oneCenter_counts`). Near-definitional, with the witnesses.
+  (`Recurring.oneCenter_counts`); the second part alone admits one center, with no net
+  (`«独则同一中心»`). Near-definitional, with the witnesses.
 * **A dated relation read off a flow.** An occurrence affects a later one where, taking part at its
   step, it exchanges with a condition the later one requires at its step (`Flow.AffectsBefore`): the
-  link of `Flow.ReachesBefore`, the one through which a part's acts show on a later step
-  (`Flow.reachesBefore_iff`; `Flow.Balances.admits_unreached_before` of `Becoming.Feedback`). Adding
+  link of `Flow.ReachesBefore` (`Flow.reachesBefore_iff`), without which a part's acts show nowhere at a
+  later step (`Flow.Balances.admits_unreached_before` of `Becoming.Feedback`). Adding
   a formation's going on to its next step gives a step in time (`Flow.StepInTime`). Each step goes
-  forward, so the relation has no cycle (`Flow.stepInTime_acyclic`); no occurrence returns along it,
-  so read with the returning occurrences as standpoints the condition holds only vacuously
+  forward, so the relation has no cycle (`Flow.stepInTime_acyclic`), and every occurrence goes on, so
+  none returns along it: read with the returning occurrences as standpoints the condition holds only
+  vacuously
   (`Flow.not_returnsAlong_stepInTime`, `Flow.returningInTime_unrestricted`); along affecting before
   alone, the returning occurrences are those that affect nothing later
   (`Flow.returnsAlong_affectsBefore_iff`). What lies within an occurrence's closure in time lies
@@ -47,23 +49,27 @@ in, on occurrences `(t, f)`: a formation at a step.
   (`Flow.unrestrictedEventually_iff_mutuallyDependentInTime`). This is the dated counterpart of the join
   with every formation a standpoint (`Flow.mutuallyDependent_iff_unrestricted` of
   `Becoming.PersistingChoices`), which along affecting gives the first join's condition; at the returning
-  occurrences, the first join's own standpoints, time gives nothing (above).
+  occurrences, the first join's own standpoints, the condition in time is vacuous (above). Both are
+  restrictions of the condition to what comes after a standpoint's step: over every step, held de se in
+  time at every occurrence, it fails wherever there is a formation, nothing reaching an earlier step
+  (`Flow.not_unrestricted_inTime`).
   The condition over every step after the standpoint's own (`UnrestrictedAfter`) holds exactly where,
   at every step, every formation affects every other at the next step
   (`Flow.unrestrictedAfter_iff_coupledEachStep`). Mutual dependence in time from any step gives mutual
   dependence (`Flow.MutuallyDependentFrom.mutuallyDependent`), and so the first join's condition
   (`Flow.MutuallyDependentFrom.returning_unrestricted`); the converse fails.
 * **Witnesses.** In `Recurring`, two formations each taking from and giving to the other's condition at
-  every step, both conditions hold, with two formations: the positive half survives in time, not only
-  vacuously (`Recurring.inTime`). In `RingOfThree`, three formations each drawing on the next, the flow is
+  every step, both restricted forms hold, with two formations, not only vacuously (`Recurring.inTime`);
+  the condition over every step does not. In `RingOfThree`, three formations each drawing on the next, the flow is
   mutually dependent in time and the condition over every later step fails: what lies two links away is
   reached two steps later, not at the next (`RingOfThree.apart`; the failed candidate, kept). In main's
-  `Drawing`, mutually dependent, the pair is mutually dependent in time from the first step and not from
-  the second: nothing is exchanged after it (`Drawing.lapses`). In `LatePair` each takes from what the
+  `Drawing`, mutually dependent, each taking at the first step only from what the other requires, the
+  pair is mutually dependent in time from the first step and not from the second (`Drawing.lapses`). In `LatePair` each takes from what the
   other required, after the only step it required it: the flow is mutually dependent and the first join's
   condition holds, while nothing affects anything in time (`LatePair.apart`).
-* **Persistence, dated.** A line with a member at a step later than `T + n` never overdrew, from a short
-  stock, across the `n` steps from `T` (`Flow.member_after_never_overdrew`): the one step at which
+* **Persistence, dated.** Under the laws of `Flow.persists_never_overdraws`, descent among them, a line
+  with a member at a step later than `T + n` never overdrew, from a short stock, across the `n` steps from
+  `T` (`Flow.member_after_never_overdrew`): the one step at which
   `Flow.persists_never_overdraws` (`Becoming.PersistingChoices`) uses its line, as a finite law.
 
 Premises: the relations are read off one flow and one web. The step in time keeps a formation's identity
@@ -167,6 +173,15 @@ theorem «续无外当且仅当后与独» {R E : «际» α} {time : α → Nat
    fun ⟨after, alone⟩ p x => match Nat.lt_or_ge (time (center p)) (time x) with
      | .inl later => after p x later
      | .inr early => .inl (alone p x early)⟩
+
+/-- **The part at and before the center admits one center** (独则同一中心). Where nothing other than each
+center lies at or before its step, any two centers are one: whichever comes no later lies at or before
+the other's step. No net enters. -/
+theorem «独则同一中心» {time : α → Nat} {center : Pos → α}
+    (alone : ∀ p x, time x ≤ time (center p) → center p = x) (p q : Pos) : center p = center q :=
+  match Nat.le_total (time (center p)) (time (center q)) with
+  | .inl early => (alone q (center p) early).symm
+  | .inr late => alone p (center q) late
 
 /-- Over what comes after, the condition reads only what is reached forward: on any net, the root's
 condition gives it. -/
@@ -396,6 +411,14 @@ end Dated
 namespace Flow
 
 variable {F C : Type} {L : Flow F C} {W : Web F C}
+
+/-- **Over every step, the condition in time fails wherever there is a formation**: held de se at every
+occurrence, the occurrence of a formation at the second step does not reach its occurrence at the first,
+nothing reaching an earlier step. -/
+theorem not_unrestricted_inTime (f : F) :
+    ¬ Unrestricted (datedOwnClosure (L.StepInTime W) (id : Nat × F → Nat × F)) :=
+  fun unrestricted => Nat.not_succ_le_zero 0
+    (WithinTime.le (L := L) (W := W) (unrestricted ((1, f), 0, f)))
 
 /-- **Held de se at every occurrence, the condition from some step on holds exactly where the flow is
 mutually dependent in time**: the dated counterpart of the join with every formation a standpoint
@@ -722,9 +745,9 @@ end LatePair
 /-! ## Persistence, dated -/
 
 /-- **A line with a member after a window never overdrew in it.** Under the laws of
-`Flow.persists_never_overdraws` (balance, only active formations giving, activity needing support, the
-renewal of a family of conditions gated on the family at a need of at least `m`, and every member of every
-cohort depending on some condition of the family at a need of at least `m`), a line with a member at a
+`Flow.persists_never_overdraws` (balance, only active formations giving, activity needing support, descent,
+the renewal of a family of conditions gated on the family at a need of at least `m`, and every member of
+every cohort depending on some condition of the family at a need of at least `m`), a line with a member at a
 step `s` later than `T + n` never had the family's uptake exceed its replenishment for the `n` steps from
 `T` from a stock below `n + m`. It says nothing of a window that closes at or after `s`. -/
 theorem Flow.member_after_never_overdrew {X : Type} {L : Flow X X} {W : Web X X}

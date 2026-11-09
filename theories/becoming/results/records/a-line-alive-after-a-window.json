@@ -8,15 +8,15 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-11-09T14:47:00+00:00",
+  "reviewed_at_utc": "2026-11-09T15:20:00+00:00",
   "statement": {
     "en": "Persisting read in finite, dated form: a member at a step past a window of joint excess from a short stock rules that window out, and reads only windows closing before the member.",
     "zh": "以有限、有日期之形式读延续：于自短存量起之共同超出之窗后某步之成员，排除该窗；只读于该成员之前闭合之窗。"
   },
   "laws": [
     {
-      "en": "Under balance, only active formations giving, activity needing support, the renewal of a family of conditions gated on the family and every member of every cohort depending on it, each at a need of at least m, a line with a member at a step later than T + n never had the family's uptake exceed its replenishment for the n steps from T from a stock below n + m.",
-      "zh": "在平衡、只有活动者给予、活动需支持，一族条件之更新以该族为闸，且每代每个成员依存于它，各需至少 m 之下：一条于晚于 T + n 之步有成员之线，从未在自 T 起之 n 步中、自低于 n + m 之存量，族之摄取超过其补充。",
+      "en": "Under balance, only active formations giving, activity needing support, descent, the renewal of a family of conditions gated on the family and every member of every cohort depending on it, each at a need of at least m, a line with a member at a step later than T + n never had the family's uptake exceed its replenishment for the n steps from T from a stock below n + m.",
+      "zh": "在平衡、只有活动者给予、活动需支持、世系，一族条件之更新以该族为闸，且每代每个成员依存于它，各需至少 m 之下：一条于晚于 T + n 之步有成员之线，从未在自 T 起之 n 步中、自低于 n + m 之存量，族之摄取超过其补充。",
       "declarations": [
         "Becoming.Flow.member_after_never_overdrew"
       ]
@@ -86,18 +86,18 @@
       "declarations": [
         "Becoming.Flow.member_after_never_overdrew"
       ],
-      "sha256": "9285fcd96bf20d5bc4db58ca4af07475a9f22d7355c64ed852958e80373542ba"
+      "sha256": "105adddbbf6cbf8921a3ae8665204d0a9ee20e1a8a98dae04e8f77740db1a2cc"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/j3-condition-in-time/NOTE.md",
       "role": "integration",
-      "sha256": "f5794a892b3f24782bcfd8641a12b0c2264ed5866d53a287663e5eab18de5d8e",
+      "sha256": "c78d9d27c3e537b63d9384a80821ffe97a2d99be4463dbdaad978bb7d9df2805",
       "declarations": []
     },
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "0904a159f9de201d6dfc84a37e6266a790bfada58dd68ef1087ac24aec0b34ce",
+      "sha256": "07ba8cb977699d7cfdcd1c28eae9981468e7f1857800dc2d2681988966b993f3",
       "declarations": []
     }
   ],

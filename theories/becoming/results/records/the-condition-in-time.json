@@ -8,15 +8,15 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-11-09T14:47:00+00:00",
+  "reviewed_at_utc": "2026-11-09T15:20:00+00:00",
   "statement": {
-    "en": "Read in time, an exchange before a need, the condition held de se at every occurrence holds from some step on exactly where the flow is mutually dependent in time, and over every later step where each formation affects every other at the next; at the returning occurrences it is vacuous.",
+    "en": "Read in time, an exchange before a need, the condition held de se at every occurrence holds from some step on exactly where the flow is mutually dependent in time, and over every later step exactly where each formation affects every other at the next; at the returning occurrences it is vacuous.",
     "zh": "以时间读，交换先于所需：在每个出现处从己持有之条件，自某步起恰在流于时间中彼此依存处成立，越过其后每步则恰在每个构成影响其余每个之下一步处；在回返之出现处为空洞。"
   },
   "laws": [
     {
-      "en": "An occurrence affects a later one where, taking part at its step, it exchanges with a condition the later one requires at its step: the link through which a part's acts show on a later step. With a formation going on to its next step this is the relation in time. It has no cycle, so no occurrence returns along it: with the returning occurrences as standpoints the condition holds only vacuously.",
-      "zh": "一出现影响较后者：在其步参与，与较后者在其步所需之条件交换；此即一部分之所为显于较后之步所经之联。加上构成延续至下一步，即时间中之关系。它无环，故无出现沿之回返：以回返之出现为立场，条件只空洞成立。",
+      "en": "An occurrence affects a later one where, taking part at its step, it exchanges with a condition the later one requires at its step: the link without which a part's acts show nowhere at a later step. With a formation going on to its next step this is the relation in time. It has no cycle and every occurrence goes on, so none returns: at the returning occurrences as standpoints the condition holds only vacuously.",
+      "zh": "一出现影响较后者：在其步参与，与较后者在其步所需之条件交换；无此联，一部分之所为不显于任何较后之步。加上构成延续至下一步，即时间中之关系。它无环且每个出现皆延续，故无出现沿之回返：以回返之出现为立场，条件只空洞成立。",
       "declarations": [
         "Becoming.Flow.reachesBefore_iff",
         "Becoming.Flow.stepInTime_acyclic",
@@ -26,9 +26,10 @@
       ]
     },
     {
-      "en": "Held de se at every occurrence, the condition that from some step on every formation's continuation has significance holds exactly where the flow is mutually dependent in time from every step: from each formation at each step, every formation's continuation is reached later. Over every later step it holds exactly where at every step each formation affects every other at the next.",
-      "zh": "在每个出现处从己持有：自某步起每个构成之延续皆有意义，恰在流自每步起于时间中彼此依存处成立；越过其后每一步，恰在每步每个构成影响其余每个之下一步处成立。",
+      "en": "Held de se at every occurrence, over every step the condition fails wherever there is a formation. Restricted to what comes after: from some step on, it holds exactly where the flow is mutually dependent in time from every step, each formation at each step reaching every continuation then or later; over every later step, exactly where at every step each formation affects every other at the next.",
+      "zh": "在每个出现处从己持有：跨每一步，凡有构成处条件皆不成立。限于其后者：自某步起，恰在流自每步起于时间中彼此依存处成立；越过其后每一步，恰在每步每个构成影响其余每个之下一步处成立。",
       "declarations": [
+        "Becoming.Flow.not_unrestricted_inTime",
         "Becoming.Flow.unrestrictedEventually_iff_mutuallyDependentInTime",
         "Becoming.Flow.unrestrictedAfter_iff_coupledEachStep",
         "Becoming.UnrestrictedAfter.eventually",
@@ -46,8 +47,8 @@
       ]
     },
     {
-      "en": "Witnesses: two formations exchanging at every step meet both conditions; a ring of three is mutually dependent in time and fails the one over every later step; a pair drawing only at the first step is so from that step and not from the next; a pair each taking after the other's only need is mutually dependent, meets the first join's condition, and nothing affects anything in time.",
-      "zh": "见证：每步交换之二构成满足两条件；三者之环于时间中彼此依存，而越过其后每步之条件不成立；只在首步汲取之一对，自首步如此，自次步不然；各于对方唯一之需后取用之一对，彼此依存、满足第一连接之条件，而时间中无物影响任何物。",
+      "en": "Witnesses: two formations exchanging at every step meet both restricted forms; a ring of three is mutually dependent in time and fails the one over every later step; a pair drawing only at the first step is so from that step and not from the next; a pair each taking after the other's only need is mutually dependent, meets the first join's condition, and nothing affects anything in time.",
+      "zh": "见证：每步交换之二构成满足两种限制形式；三者之环于时间中彼此依存，而越过其后每步之条件不成立；只在首步汲取之一对，自首步如此，自次步不然；各于对方唯一之需后取用之一对，彼此依存、满足第一连接之条件，而时间中无物影响任何物。",
       "declarations": [
         "Becoming.Recurring.inTime",
         "Becoming.RingOfThree.apart",
@@ -72,10 +73,10 @@
   ],
   "does_not_show": [
     {
-      "en": "The condition over every step: nothing is reached at a step before or beside an occurrence, so on dated closures that form fails wherever there are two formations.",
-      "zh": "跨每一步之条件：出现之前或同步之物无一可及，故于有日期之闭包上，凡有二构成处此形式不成立。",
+      "en": "The condition over every step: nothing reaches an earlier step, so held de se in time at every occurrence it fails wherever there is a formation.",
+      "zh": "跨每一步之条件：无物及于较早之步，故于时间中在每个出现处从己持有，凡有构成处皆不成立。",
       "kind": "scope",
-      "witness": "Becoming.Recurring.oneCenter_counts"
+      "witness": "Becoming.Flow.not_unrestricted_inTime"
     },
     {
       "en": "The converse: mutual dependence read across all steps does not give mutual dependence in time from any step.",
@@ -231,6 +232,7 @@
         "Becoming.Flow.WithinTime.later",
         "Becoming.Flow.WithinTime.withinReach",
         "Becoming.Flow.not_returnsAlong_stepInTime",
+        "Becoming.Flow.not_unrestricted_inTime",
         "Becoming.Flow.reachesBefore_iff",
         "Becoming.Flow.returningInTime_unrestricted",
         "Becoming.Flow.returnsAlong_affectsBefore_iff",
@@ -248,18 +250,18 @@
         "Becoming.datedOwnClosure",
         "Becoming.unrestrictedAfter_iff_forward"
       ],
-      "sha256": "9285fcd96bf20d5bc4db58ca4af07475a9f22d7355c64ed852958e80373542ba"
+      "sha256": "105adddbbf6cbf8921a3ae8665204d0a9ee20e1a8a98dae04e8f77740db1a2cc"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/j3-condition-in-time/NOTE.md",
       "role": "integration",
-      "sha256": "f5794a892b3f24782bcfd8641a12b0c2264ed5866d53a287663e5eab18de5d8e",
+      "sha256": "c78d9d27c3e537b63d9384a80821ffe97a2d99be4463dbdaad978bb7d9df2805",
       "declarations": []
     },
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "0904a159f9de201d6dfc84a37e6266a790bfada58dd68ef1087ac24aec0b34ce",
+      "sha256": "07ba8cb977699d7cfdcd1c28eae9981468e7f1857800dc2d2681988966b993f3",
       "declarations": []
     }
   ],

@@ -4778,11 +4778,12 @@ tagged instance or application.
   returning elements are the sinks (`returnsAlong_iff_sink`). Where every condition comes at an earlier
   step than what it conditions, the root's condition `«续无外»` holds exactly where from each center
   everything later is reached (`«续无外于后»`) and nothing else lies at or before the center's step
-  (`«续无外当且仅当后与独»`): the one-center bound rests on the second part, and over what comes after two
-  centers meet the condition (`TwoSources.apart`). On occurrences read off a flow, an exchange before a
+  (`«续无外当且仅当后与独»`): the second part alone admits one center (`«独则同一中心»`), and over what comes
+  after two centers meet the condition (`TwoSources.apart`). On occurrences read off a flow, an exchange before a
   need (`Flow.AffectsBefore`, the link of `Flow.ReachesBefore`) and a formation going on
   (`Flow.StepInTime`), no occurrence returns (`Flow.not_returnsAlong_stepInTime`); held de se at every
-  occurrence the condition from some step on is exactly mutual dependence in time from every step
+  occurrence the condition over every step fails wherever there is a formation
+  (`Flow.not_unrestricted_inTime`), and from some step on it is exactly mutual dependence in time from every step
   (`Flow.unrestrictedEventually_iff_mutuallyDependentInTime`), and over every later step exactly each
   formation affecting every other at the next (`Flow.unrestrictedAfter_iff_coupledEachStep`); mutual
   dependence in time gives mutual dependence (`Flow.MutuallyDependentFrom.mutuallyDependent`). Witnesses:

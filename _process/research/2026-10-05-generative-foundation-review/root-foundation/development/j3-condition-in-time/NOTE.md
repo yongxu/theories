@@ -33,7 +33,7 @@ Delta: (1) on a relation without cycles the returning elements are the sinks; (2
 Supplied premises / correspondence: the going on as a formation's identity forward (a reading); every
   occurrence a standpoint (a reading); the condition read over what comes after the standpoint's step (a
   reading; by the region law a rival of the condition over every step wherever something lies at or before).
-Evidence: Becoming.ConditionInTime, 48 theorems, 70 declarations, every axiom report empty (scratch build
+Evidence: Becoming.ConditionInTime, 50 theorems, 72 declarations, every axiom report empty (scratch build
   9 November 2026; the core run's receipt at landing).
 Boundary: TwoSources.apart, Recurring.oneCenter_counts, RingOfThree.apart, Drawing.lapses, LatePair.apart.
 Integration: 07 §4.11 (new); the board row; INTERFACES for the join, J3 section.
@@ -49,7 +49,7 @@ Integration: 07 §4.11 (new); the board row; INTERFACES for the join, J3 section
 
 **The standpoints.** No occurrence returns along the relation in time (`Flow.not_returnsAlong_stepInTime`): each goes on to its next step, which cannot reach it back. So G1's returning standpoints are empty in time, and the condition there is vacuous. Along affecting before alone, without the going on, the returning occurrences are the sinks (`Flow.returnsAlong_affectsBefore_iff`). By `ownClosure_unrestricted_atReturning_acyclic_iff`, the condition there fails wherever there is a sink and two occurrences, which `Nat × F` has whenever there is a formation (Fable's check). Either way G1's second reading of the standpoints gives nothing in time. The standpoints taken are every occurrence, the dated counterpart of every formation a standpoint (G3's `Flow.mutuallyDependent_iff_unrestricted`).
 
-**The condition.** `Unrestricted` asks significance at every step. On a dated closure nothing reaches a step before, or beside, an occurrence, so it fails wherever there are two formations (`Recurring.oneCenter_counts` on the root). Two restrictions to what comes after were stated:
+**The condition.** `Unrestricted` asks significance at every step. On a dated closure nothing reaches an earlier step, so held de se at every occurrence it fails wherever there is a formation (`Flow.not_unrestricted_inTime`); nothing reaches a step beside an occurrence either (`Recurring.oneCenter_counts` on the root). Two restrictions to what comes after were stated:
 
 - **Over every later step** (`UnrestrictedAfter`). This is the brief's "from each center at step t, significance of what lies after t". It holds exactly where every formation affects every other at the next step (`Flow.unrestrictedAfter_iff_coupledEachStep`), because what comes at the next step is reached only by one step in time. **Failed candidate, kept:** as mutual dependence in time it is too strong. A ring of three is mutually dependent in time and fails it (`RingOfThree.apart`).
 - **From some step on** (`UnrestrictedEventually`). This holds exactly where the flow is mutually dependent in time from every step (`Flow.unrestrictedEventually_iff_mutuallyDependentInTime`). That is the dated counterpart sought.
@@ -74,7 +74,7 @@ Both are restrictions of the condition to a region of steps, so by `rival_of_out
 **The one-center bound.**
 
 - On a net going forward in time, `«续无外»` is exactly `«续无外于后»` together with "nothing else at or before the center's step" (`«续无外当且仅当后与独»`).
-- The bound rests on the second part, which no act can meet.
+- The second part alone gives one center, with no net (`«独则同一中心»`), and no act can meet it; the first part does not (`TwoSources.apart`). `«续无外则同一中心»` itself holds on every net without cycles; the split is stated for nets whose conditions come at earlier steps.
 - Over what comes after, two centers meet the condition (`TwoSources.apart`), and on `Recurring` every occurrence does (`Recurring.oneCenter_counts`).
 - So "按时间展开的事件……续无外只容一个中心" is true of what the condition counts: the occurrences before and beside a center included. It is not a fact about time.
 
@@ -90,14 +90,18 @@ Both are restrictions of the condition to a region of steps, so by `rival_of_out
 
 - **Near-definitional:**
   - `returnsAlong_iff_sink`, `ownClosure_unrestricted_atReturning_acyclic_iff` and `Web.continuationStep_returns_iff`;
-  - `«续无外当且仅当后与独»` and `unrestrictedAfter_iff_forward`;
+  - `«续无外当且仅当后与独»`, `«独则同一中心»`, `unrestrictedAfter_iff_forward` and `Flow.not_unrestricted_inTime`;
   - both dated iffs, `WithinTime.withinReach` and `member_after_never_overdrew`, the last a copy of the landed proof with the member given instead of persistence.
 - **Witnesses** are checked on their models: `TwoSources`, `Recurring`, `RingOfThree`, `Drawing.lapses` and `LatePair`.
 - **Nothing is new as mathematics.** The temporal-network notion behind it, time-respecting paths and temporal connectivity, is standard.
 - **Proved:** everything named with a Lean name.
 - **Readings, not proved:** what a reading of the standpoints and of the going on means, and the sentences on "where relations close".
 
-## 6. Left open, for J1 and J2
+## 6. The cold read
+
+One AI reader of another model (Fable) read the module, the three records, 07 §4.11 and this note cold, for overclaim; its findings and what was done with each are in [READER.md](READER.md).
+
+## 7. Left open, for J1 and J2
 
 - **J1.** `Flow.persists_never_overdraws` could become a corollary of `member_after_never_overdrew`. `ReturnsAlong` moves to Frame; the sink lemmas move with it.
 - **J2.** Read the pool and the lineage on `StepInTime`. A lineage's members are occurrences that come to stand, so J2's lineage relation would be `StepInTime` with descent edges in place of, or beside, the going on.
