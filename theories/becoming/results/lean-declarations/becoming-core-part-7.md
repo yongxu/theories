@@ -11,6 +11,134 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 ## Becoming pure core, part 7 of 7
 
+<a id="module-a2a40d448b25"></a>
+
+<details>
+<summary>Witnesses.lean — 9 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Witnesses.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Witnesses.lean`
+
+Imports: `Becoming.World`
+
+No explicit theorem/lemma scanned; this may be an import, audit or definition module.
+
+Definitions and types:
+
+- `def` [Becoming.Witnesses.halted](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Witnesses.lean#L42) (L42)
+- `def` [Becoming.Witnesses.single](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Witnesses.lean#L45) (L45)
+- `def` [Becoming.Witnesses.profile](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Witnesses.lean#L50) (L50)
+- `def` [Becoming.Witnesses.emptyFlow](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Witnesses.lean#L58) (L58)
+- `def` [Becoming.Witnesses.giving](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Witnesses.lean#L62) (L62)
+- `def` [Becoming.Witnesses.unrequired](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Witnesses.lean#L66) (L66)
+- `inductive` [Becoming.Witnesses.Member](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Witnesses.lean#L72) (L72)
+- `def` [Becoming.Witnesses.relay](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Witnesses.lean#L80) (L80)
+- `def` [Becoming.Witnesses.relayWeb](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Witnesses.lean#L93) (L93)
+
+</details>
+
+<a id="module-7d8b73829c63"></a>
+
+<details>
+<summary>World.lean — 15 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-2026-10-20.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean`
+
+Imports: `Becoming.Frame`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.World.of_web](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L130) | 130 |
+| [Becoming.World.of_flow](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L134) | 134 |
+
+Definitions and types:
+
+- `structure` [Becoming.Dependence](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L48) (L48)
+- `abbrev` [Becoming.Web](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L57) (L57)
+- `structure` [Becoming.Flow](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L61) (L61)
+- `structure` [Becoming.Exchange](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L71) (L71)
+- `def` [Becoming.Exchange.taken](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L77) (L77)
+- `def` [Becoming.Exchange.given](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L81) (L81)
+- `structure` [Becoming.WebAt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L88) (L88)
+- `def` [Becoming.everyStep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L96) (L96)
+- `structure` [Becoming.World](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L100) (L100)
+- `def` [Becoming.World.web](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L109) (L109)
+- `def` [Becoming.World.flow](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L115) (L115)
+- `def` [Becoming.World.move](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L119) (L119)
+- `def` [Becoming.World.of](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean#L125) (L125)
+
+</details>
+
+<a id="module-9ee3e643d082"></a>
+
+<details>
+<summary>WorldRepresentation.lean — 48 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u1-balance-under-units/REVIEW-U1.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean`
+
+Imports: `Becoming.ContinuedClasses`, `Becoming.Decidedness`, `Becoming.Diagonal`, `Becoming.GrammarTransport`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.Web.sameStep_class](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L121) | 121 |
+| [Becoming.Steps.along_iff_itself](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L130) | 130 |
+| [Becoming.Steps.later_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L136) | 136 |
+| [Becoming.Steps.sameOrLater_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L149) | 149 |
+| [Becoming.World.arisingRecurs_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L179) | 179 |
+| [Becoming.World.ceasingRecurs_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L194) | 194 |
+| [Becoming.Reidentify.sameStep_carried](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L223) | 223 |
+| [Becoming.Reidentify.withinStep_carried](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L228) | 228 |
+| [Becoming.Reidentify.partialIdentity_carried](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L239) | 239 |
+| [Becoming.World.conserves_reidentify](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L251) | 251 |
+| [Becoming.World.conservationStep_reidentify](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L261) | 261 |
+| [Becoming.World.activityClass_reidentify](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L270) | 270 |
+| [Becoming.World.reidentify_carries](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L277) | 277 |
+| [Becoming.World.sheng_conservation_reidentify](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L308) | 308 |
+| [Becoming.World.ofRelations_relations](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L327) | 327 |
+| [Becoming.World.ofModel_model](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L342) | 342 |
+| [Becoming.World.conserves_form](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L357) | 357 |
+| [Becoming.World.ofConservationForm_conserves](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L370) | 370 |
+| [Becoming.World.conserves_iff_same_level](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L381) | 381 |
+| [Becoming.World.conserves_difunctional](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L388) | 388 |
+| [Becoming.World.conserves_decided](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L394) | 394 |
+| [Becoming.World.amounts_decided](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L398) | 398 |
+| [Becoming.World.conservation_iff_decided](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L406) | 406 |
+| [Becoming.World.decides_activity_iff_em](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L421) | 421 |
+| [Becoming.World.standingAt_alike](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L437) | 437 |
+| [Becoming.World.idleTwice_unbalanced](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L475) | 475 |
+| [Becoming.World.balance_needs_conservation](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L482) | 482 |
+| [Becoming.World.conserves_identity_injective](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L495) | 495 |
+| [Becoming.Diagonal.no_injection_of_predicates](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L508) | 508 |
+| [Becoming.World.not_conserves_identity](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L517) | 517 |
+| [Becoming.World.falls_exhaust](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L526) | 526 |
+| [Becoming.World.falls_not_endless](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L546) | 546 |
+| [Becoming.World.not_falls_everywhere](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L551) | 551 |
+| [Becoming.Steps.along_endless](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L561) | 561 |
+
+Definitions and types:
+
+- `def` [Becoming.Web.sameStep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L119) (L119)
+- `def` [Becoming.Web.partialIdentity](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L126) (L126)
+- `def` [Becoming.World.conservationStep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L167) (L167)
+- `def` [Becoming.World.withinStep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L174) (L174)
+- `def` [Becoming.Reidentify.atStep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L213) (L213)
+- `def` [Becoming.Reidentify.onOccurrences](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L218) (L218)
+- `def` [Becoming.World.ofRelations](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L321) (L321)
+- `def` [Becoming.World.ofModel](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L337) (L337)
+- `def` [Becoming.World.ofConservationForm](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L363) (L363)
+- `def` [Becoming.World.standingAt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L430) (L430)
+- `structure` [Becoming.World.ExchangeSigns](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L456) (L456)
+- `def` [Becoming.World.exchangeSigns](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L462) (L462)
+- `def` [Becoming.World.ExchangeSigns.Agree](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L467) (L467)
+- `def` [Becoming.World.idleTwice](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WorldRepresentation.lean#L472) (L472)
+
+</details>
+
 <a id="module-bc794121a016"></a>
 
 <details>

@@ -388,6 +388,7 @@ import Becoming.FlowCenters
 import Becoming.PersistingChoices
 import Becoming.BeyondCoupling
 import Becoming.OwnClass
+import Becoming.ConditionInTime
 import Becoming.ReadingsPersist
 import Becoming.SignificanceStatements
 
@@ -4790,6 +4791,23 @@ tagged instance or application.
   affects lies within that closure, the reach that everything within its reach does, exactly where its
   acts return with coupling by threshold only (`Flow.couplingClass_reach_iff_returns`), and the line is
   its loop (`Flow.couplingClass_line_iff_loop`); near-definitional. A leaf.
+* `Becoming.ConditionInTime` (L2, through `Becoming.GrammarScope` and `Becoming.FlowCenters`): the
+  continuation condition in time (board item J3, route (b)'s join). On a relation with no cycle the
+  returning elements are the sinks (`returnsAlong_iff_sink`). Where every condition comes at an earlier
+  step than what it conditions, the root's condition `«续无外»` holds exactly where from each center
+  everything later is reached (`«续无外于后»`) and nothing else lies at or before the center's step
+  (`«续无外当且仅当后与独»`): the second part alone admits one center (`«独则同一中心»`), and over what comes
+  after two centers meet the condition (`TwoSources.apart`). On occurrences read off a flow, an exchange before a
+  need (`Flow.AffectsBefore`, the link of `Flow.ReachesBefore`) and a formation going on
+  (`Flow.StepInTime`), no occurrence returns (`Flow.not_returnsAlong_stepInTime`); held de se at every
+  occurrence the condition over every step fails wherever there is a formation
+  (`Flow.not_unrestricted_inTime`), and from some step on it is exactly mutual dependence in time from every step
+  (`Flow.unrestrictedEventually_iff_mutuallyDependentInTime`), and over every later step exactly each
+  formation affecting every other at the next (`Flow.unrestrictedAfter_iff_coupledEachStep`); mutual
+  dependence in time gives mutual dependence (`Flow.MutuallyDependentFrom.mutuallyDependent`). Witnesses:
+  `Recurring.inTime`, `RingOfThree.apart`, `Drawing.lapses`, `LatePair.apart`. A line with a member after a
+  window never overdrew in it (`Flow.member_after_never_overdrew`). A leaf; short laws, none new as
+  mathematics.
 * `Becoming.ReadingsPersist` (L2, through `Becoming.PersistingChoices` and `Becoming.BeyondCoupling`):
   which readings persist (route (b)'s piece J2). A world whose relata act by the readings they carry
   (`ExchangeLaw.byReading`) is Bound's `law.withAct part (act sig)` where the part carries `sig`; a balanced

@@ -72,7 +72,7 @@ Hamilton 1975 read the Price equation's among-group share through assortment (re
 - related, not a proved adapter: [selection-with-returns-to-groupmates](selection-with-returns-to-groupmates.md). Every assortment between none and one: Hamilton's rule for returns to groupmates, of which this record is the assortment-one end.
 - related, not a proved adapter: [confined-rise-within-a-whole](confined-rise-within-a-whole.md). Within one whole founded by one part, a lineage confined to its conditions in excess has no member once they end, and where next founders carry their founder's value the mean founding value rises exactly where selection among wholes goes for it.
 
-**Used by:** [confined-rise-within-a-whole](confined-rise-within-a-whole.md) · [selection-with-returns-to-groupmates](selection-with-returns-to-groupmates.md)
+**Used by:** [a-line-alive-after-a-window](a-line-alive-after-a-window.md) · [confined-rise-within-a-whole](confined-rise-within-a-whole.md) · [selection-with-returns-to-groupmates](selection-with-returns-to-groupmates.md)
 
 <a id="sources--来源"></a>
 ### Sources
