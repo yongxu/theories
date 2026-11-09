@@ -49,7 +49,8 @@ leaves no descendant.
   member at a need of at least `m`) and the family's uptake exceeded its replenishment as in
   `Flow.family_excess_ends`, a member depending on any condition of the family leaves no
   descendant from then on (`Flow.family_childless`; `Flow.excess_childless` is the family of
-  one condition). Groups whose members depend on conditions of one such family end together:
+  one condition), so a generation every member of which so depends has no next generation
+  (`Flow.coupled_generation_childless`). Groups whose members depend on conditions of one such family end together:
   each leaves no offspring and nothing is selected among them (`Flow.coupled_end_together`).
   So ending selects among groups only between families: where the groups with less of an
   amount depend on a family that ran into excess, they leave nothing (`Flow.ended_of_family`).
@@ -229,6 +230,26 @@ theorem excess_childless (balances : L.Balances W) (acting : L.Acting W)
   family_childless (ds := [c]) balances acting dependent
     (fun t f present => Becoming.Flow.gate_single (gated t f present)) excess start k (.head [])
     depends high x
+
+/-- **A generation coupled to an overdrawn family leaves no next generation.** Under the premises
+of `family_childless`, where every member of the generation of descent at step `T + n + k` depends,
+at a need of at least `m`, on some condition of the family, the generation after it has no member:
+each would descend from a member that leaves no descendant there. -/
+theorem coupled_generation_childless (balances : L.Balances W) (acting : L.Acting W)
+    (dependent : W.Dependent) {G : Generations X} (descended : SelectionTerm.Flow.Descended L W G)
+    {ds : List X} {m : Nat}
+    (gated : ∀ t f, f ∈ L.present t → ∀ d, d ∈ ds → 0 < L.give t f d →
+      ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e)
+    {T n : Nat} (excess : ∀ k, k < n → L.replenishment ds (T + k) < L.uptake ds (T + k))
+    (start : W.stock ds T < n + m) (k : Nat)
+    (coupled : ∀ p, p ∈ G.family (T + n + k) →
+      ∃ e, e ∈ ds ∧ W.requires (T + n + k) p e ∧ m ≤ W.need (T + n + k) p e) (y : X) :
+    ¬ y ∈ G.family (T + n + k + 1) :=
+  fun mem => match ListTests.mem_flatMap_iff.mp mem with
+    | ⟨q, mq, kid⟩ => match coupled q mq with
+      | ⟨_, inside, depends, high⟩ =>
+        family_childless balances acting dependent gated excess start k inside depends high y
+          (descended (T + n + k) q y mq kid)
 
 /-- Over generations of descent, a member not active at a step has offspring number nothing. -/
 theorem offspring_zero (acting : L.Acting W) {G : Generations X}

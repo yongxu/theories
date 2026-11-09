@@ -54,7 +54,7 @@ Hume's is–ought gap, stated for the represented dynamics: no statement about t
 - **formal-reuse**: [rivals-bounded-in-time](rivals-bounded-in-time.md). ReadsOnlyDynamics.admits_rival uses bounded_rival for the rival it admits; rival_iff_lacks has rival_of_outside as its case.
 - related, not a proved adapter: [continuation-condition-yields-living-significance](continuation-condition-yields-living-significance.md). Web.significance_undetermined evaluates two constant significances on a web; this record states the non-entailment for every statement reading only the dynamics.
 
-**Used by:** [route-b-universal-form-closed](route-b-universal-form-closed.md)
+**Used by:** [route-b-joined](route-b-joined.md) (interpretive) · [route-b-universal-form-closed](route-b-universal-form-closed.md)
 
 <a id="sources--来源"></a>
 ### Sources

@@ -38,7 +38,9 @@ parameter is added. No definition of an earlier module changes.
   lives, a seed (`premises_of_noOutside`). That reading supplies the significance; the root gives
   only that every formation lies within every closure.
 * **Along 缘, one center.** Where the net has no cycle, the condition along it holds only with one
-  center: two centers each reached from the other would lie on a cycle (`«续无外则同一中心»`), and
+  center: two centers each reached from the other would lie on a cycle (`«续无外则同一中心»`), the
+  case of one class of `«各续无外则同一中心»`, where each center's line runs under a class of its own
+  and nothing is asked of the classes, and
   nothing conditions that center (`«续无外则中心无缘»`). In families at the one it asks only that the
   net be joined. The relations a self is drawn along in `Becoming.Weightings` (feeding, influence)
   run from what is fed or affected to what feeds or affects it, the converse of 缘: read along them,
@@ -212,15 +214,24 @@ theorem «无不穷则核无续» {R E : «际» α} (ends : ∀ y, ¬ «不穷�
     ¬ «续» R («核» R E) x y :=
   fun kept => ends y («守核则不穷» kept)
 
-/-- **Along a net without cycles the condition holds only with one center** (续无外则同一中心): two
-centers each reached from the other would lie on a cycle. -/
-theorem «续无外则同一中心» {R E : «际» α} {center : Pos → α} (acyclic : «无环» R)
-    (none : «续无外» R E center) (p q : Pos) : center p = center q :=
-  match none p (center q), none q (center p) with
+/-- **Along a net without cycles the condition, each center under a class of its own, holds only
+with one center** (各续无外则同一中心): two centers each reached from the other, on lines under
+whatever classes, would lie on a cycle. No class, regularity or holding premise is asked of the
+classes: a line under any class goes along the net (`«相续含于及»`). -/
+theorem «各续无外则同一中心» {R : «际» α} {E : Pos → «际» α} {center : Pos → α}
+    (acyclic : «无环» R) (all : ∀ p x, «所及» R (E p) (center p) x) (p q : Pos) :
+    center p = center q :=
+  match all p (center q), all q (center p) with
   | .inl e, _ => e
   | _, .inl e => e.symm
   | .inr there, .inr back =>
-    absurd («及之传递» («相续含于及» R E _ _ there) («相续含于及» R E _ _ back)) (acyclic _)
+    absurd («及之传递» («相续含于及» R (E p) _ _ there) («相续含于及» R (E q) _ _ back)) (acyclic _)
+
+/-- **Along a net without cycles the condition holds only with one center** (续无外则同一中心): the
+case of one class for every center (`«各续无外则同一中心»`). -/
+theorem «续无外则同一中心» {R E : «际» α} {center : Pos → α} (acyclic : «无环» R)
+    (none : «续无外» R E center) (p q : Pos) : center p = center q :=
+  «各续无外则同一中心» (E := fun _ => E) acyclic none p q
 
 /-- **And nothing conditions that center** (续无外则中心无缘): a condition of the center, reached from
 it, would close a cycle. -/

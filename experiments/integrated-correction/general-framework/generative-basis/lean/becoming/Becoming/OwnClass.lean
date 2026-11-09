@@ -32,16 +32,20 @@ module answers it for the classes meeting P2 and P4, and reads the class on a fl
   P2 and P4 at `m`, it does too (`«后类本类常闭»`); so it is the least such class (`«后类最细»`). It
   holds `m`'s effects with no premise, and meets P2 wherever it is decided, of each occurrence downstream
   of `m`, whether it conditions something (`«判则后类本类常闭»`), and with no decision wherever everything
-  within `m`'s closure has `m` within its own, as at an element returning along the net in
-  `Becoming.FlowCenters`'s sense (`«返则后类本类常闭»`, `ReturnsAlong.downstreamClass_regular`).
+  within `m`'s closure has `m` within its own, as at an element returning along the net
+  (`ReturnsAlong`, of the frame; `«返则后类本类常闭»`, `ReturnsAlong.downstreamClass_regular`).
 * **Every class meeting P2 and P4 reaches what the one reaches (本类常闭则所及即一之所及).** From a
   member, a line under any class meeting P2 and P4 there reaches exactly what a line under the one
   reaches: the member and everything downstream of it (`«本类常闭则所及即一之所及»`). Given P2, P4 is
   equivalent to that (`«本类常则闭当且仅当所及即一之所及»`). The least class reaches it with no premise
-  (`«后类之所及即一之所及»`); P2 is what makes every class holding one's effects reach the same. With each center under a class of its own
-  meeting P2 and P4 at it, the per-center condition along the net is the condition at the one
-  (`«各本类常闭则续无外即一之续无外»`), so along a net with no cycle it holds only where every center is
-  one and the same occurrence (`«各本类常闭续无外则同一中心»`).
+  (`«后类之所及即一之所及»`), so with each center under its least class the per-center condition along
+  the net is the condition at the one, with no premise (`«各后类续无外即一之续无外»`); P2 is what makes
+  every class holding one's effects reach the same. With each center under a class of its own meeting P2
+  and P4 at it, the per-center condition along the net is the condition at the one
+  (`«各本类常闭则续无外即一之续无外»`). Along a net with no cycle it holds only where every center is one
+  and the same occurrence, under any classes whatever (`«各续无外则同一中心»`, `Becoming.GrammarScope`;
+  this module's earlier corollary asked P2 and P4 there, which the law does not use, and went at
+  route (b)'s join).
 * **P2 alone fixes only the moment (静最细).** The identity meets P2 at every occurrence and is the least
   class that does (`«静之本类至终有常»`, `«静最细»`, near-definitional), and fails P4 wherever the occurrence conditions something other than itself
   (`«静不闭»`). P2 alone is not closed under meets: in `MeetBreaks`, two classes meet P2 at a member
@@ -227,17 +231,11 @@ theorem «判则后类本类常闭» {R : «际» α} {m : α}
     (fun u v mu step => «后类之本».mpr («所闭之闭» R m u v («后类之本».mp mu) step))
     (fun u mu => decided u («后类之本».mp mu))
 
-/-- The first step of a path. -/
-theorem «及之首步» {R : «际» α} {x y : α} (down : «及» R x y) : ∃ w, R x w :=
-  match down with
-  | .one s => ⟨_, s⟩
-  | .more s _ => ⟨_, s⟩
-
 /-- **At a member whose closure returns to it, the member's class of what follows it meets P2 and P4
 (返则后类本类常闭).** Where everything within `m`'s closure under the net has `m` within its own, no decision
 is needed: an occurrence alike to `m` other than `m` reaches `m`, so conditions something, and `m` conditions
 something wherever anything alike to it does. -/
-theorem «返则后类本类常闭» {R : «际» α} {m : α} (returns : ∀ x, «所闭» R m x → «所闭» R x m) :
+theorem «返则后类本类常闭» {R : «际» α} {m : α} (returns : ReturnsAlong R m) :
     «本类至终有常» R («后类» R m) m ∧ «所缘同于» R («后类» R m) m :=
   ⟨fun u u' mu mu' v step =>
      have inU : «所闭» R m u := «后类之本».mp mu
@@ -277,9 +275,7 @@ theorem «本类常闭则所及即一之所及» {R E : «际» α} (hE : «类�
    fun reached => match eq_or_reach_iff_reached.mpr reached with
      | .inl e => .inl e
      | .inr down =>
-       have goes : ∃ w, R m w := match down with
-         | .one s => ⟨_, s⟩
-         | .more s _ => ⟨_, s⟩
+       have goes : ∃ w, R m w := «及之首步» down
        .inr («本类常闭则后皆续» hE atClass goes held (hE.refl m) down).2⟩
 
 /-- **The line from a member under its class of what follows it reaches exactly what a line under the one
@@ -294,6 +290,13 @@ theorem «后类之所及即一之所及» (R : «际» α) (m t : α) :
      | .inl e => .inl e
      | .inr down => .inr («后皆同类则后皆续» («后类为类» R m)
          (fun _ d => «后类之本».mpr («及之所闭» _ _ d)) down)⟩
+
+/-- **With each center under its least class, the condition along the net is the condition at the one
+(各后类续无外即一之续无外),** with no premise: `«后类之所及即一之所及»` at each center. -/
+theorem «各后类续无外即一之续无外» {Pos : Type} {R : «际» α} {center : Pos → α} :
+    (∀ p x, «所及» R («后类» R (center p)) (center p) x) ↔ «续无外» R «一» center :=
+  ⟨fun all p x => («后类之所及即一之所及» R (center p) x).mp (all p x),
+   fun none p x => («后类之所及即一之所及» R (center p) x).mpr (none p x)⟩
 
 /-- **Given P2 at a member, P4 holds exactly where its line under the class reaches what the one's
 reaches (本类常则闭当且仅当所及即一之所及).** -/
@@ -312,15 +315,6 @@ theorem «各本类常闭则续无外即一之续无外» {Pos : Type} {R : «�
     (∀ p x, «所及» R (E p) (center p) x) ↔ «续无外» R «一» center :=
   ⟨fun all p x => («本类常闭则所及即一之所及» (each p) (atClass p) (held p) x).mp (all p x),
    fun none p x => («本类常闭则所及即一之所及» (each p) (atClass p) (held p) x).mpr (none p x)⟩
-
-/-- **And along a net with no cycle it holds only where every center is one and the same occurrence
-(各本类常闭续无外则同一中心).** -/
-theorem «各本类常闭续无外则同一中心» {Pos : Type} {R : «际» α} {E : Pos → «际» α}
-    {center : Pos → α} (acyclic : «无环» R) (each : ∀ p, «类» (E p))
-    (atClass : ∀ p, «本类至终有常» R (E p) (center p)) (held : ∀ p, «所缘同于» R (E p) (center p))
-    (all : ∀ p x, «所及» R (E p) (center p) x) (p q : Pos) : center p = center q :=
-  «续无外则同一中心» acyclic
-    ((«各本类常闭则续无外即一之续无外» each atClass held).mp all) p q
 
 /-! ## P2 alone: the moment -/
 
@@ -405,8 +399,7 @@ theorem «返之所及即环» {R : «际» α} {f t : α} :
 /-- **Under that class, everything downstream of a member lies on its line exactly where everything it
 reaches reaches it back (返之后皆续当且仅当皆返).** -/
 theorem «返之后皆续当且仅当皆返» {R : «际» α} {f : α} :
-    (∀ t, «及» R f t → «所及» R (Web.alikeBy («所闭» («逆» R) f)) f t) ↔
-      ∀ t, «所闭» R f t → «所闭» R t f :=
+    (∀ t, «及» R f t → «所及» R (Web.alikeBy («所闭» («逆» R) f)) f t) ↔ ReturnsAlong R f :=
   («内外之后皆续当且仅当后皆在内» («所闭之自反» _ f)).trans
     ⟨fun into t there => match «所闭当且仅当同一或及».mp there with
        | .inl e => by subst e; exact «所闭之自反» R _
@@ -425,10 +418,9 @@ theorem «无环则返之所及唯己» {R : «际» α} (acyclic : «无环» R
 
 end Region
 
-/-- **At an element returning along the net (`ReturnsAlong`, `Becoming.FlowCenters`), the element's class of
-what follows it meets P2 and P4, and is the least class meeting them.** `ReturnsAlong` is the hypothesis of
-`«返则后类本类常闭»`, stated through `WithinClosure`. -/
-theorem ReturnsAlong.downstreamClass_regular {X : Type} {R : «际» X} {m : X} (returns : ReturnsAlong R m) :
+/-- **At an element returning along the net (`ReturnsAlong`), the element's class of what follows it meets P2
+and P4, and is the least class meeting them** (`«返则后类本类常闭»` with `«后类最细»`). -/
+theorem ReturnsAlong.downstreamClass_regular {X : Type u} {R : «际» X} {m : X} (returns : ReturnsAlong R m) :
     («本类至终有常» R («后类» R m) m ∧ «所缘同于» R («后类» R m) m) ∧
       ∀ E, «类» E → «本类至终有常» R E m → «所缘同于» R E m → «则» («后类» R m) E :=
   have regular := «返则后类本类常闭» returns

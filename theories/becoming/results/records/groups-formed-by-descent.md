@@ -72,7 +72,7 @@ Hamilton 1975 read the Price equation's among-group share through assortment (re
 - related, not a proved adapter: [selection-with-returns-to-groupmates](selection-with-returns-to-groupmates.md). Every assortment between none and one: Hamilton's rule for returns to groupmates, of which this record is the assortment-one end.
 - related, not a proved adapter: [confined-rise-within-a-whole](confined-rise-within-a-whole.md). Within one whole founded by one part, a lineage confined to its conditions in excess has no member once they end, and where next founders carry their founder's value the mean founding value rises exactly where selection among wholes goes for it.
 
-**Used by:** [confined-rise-within-a-whole](confined-rise-within-a-whole.md) · [selection-with-returns-to-groupmates](selection-with-returns-to-groupmates.md)
+**Used by:** [a-line-alive-after-a-window](a-line-alive-after-a-window.md) · [confined-rise-within-a-whole](confined-rise-within-a-whole.md) · [selection-with-returns-to-groupmates](selection-with-returns-to-groupmates.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -95,6 +95,7 @@ Hamilton 1975 read the Price equation's among-group share through assortment (re
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json) | — |
 
 Aliases: `groups formed by descent`, `lineages`, `assortment`, `complete assortment`, `由世系形成的组`, `同类聚合`, `Becoming.SelectionLevels.rises_iff_lineages`, `Becoming.GroupEnding.Flow.lineages_not_lower`
 

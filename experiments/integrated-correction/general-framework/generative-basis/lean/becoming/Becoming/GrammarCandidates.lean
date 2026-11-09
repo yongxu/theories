@@ -136,10 +136,11 @@ theorem «无果则皆非能» (R : «际» α) (h : ¬ ∃ y, «所» R y) : �
 
 /-- **Time apart from going is not had (離去法去時不可得, ZL-02-018).** Reach, of which the order of
 time is the strict part, relates only what conditions to what is conditioned. -/
-theorem «及之两端» {R : «际» α} {x y : α} (h : «及» R x y) : «能» R x ∧ «所» R y := by
-  induction h with
-  | one r => exact ⟨⟨_, r⟩, ⟨_, r⟩⟩
-  | more r _ ih => exact ⟨⟨_, r⟩, ih.2⟩
+theorem «及之两端» {R : «际» α} {x y : α} (h : «及» R x y) : «能» R x ∧ «所» R y :=
+  ⟨«及之首步» h, by
+    induction h with
+    | one r => exact ⟨_, r⟩
+    | more _ _ ih => exact ih⟩
 
 /-- **因去故有住 (ZL-07-213).** Abiding is had through going on: what abides is continued and
 continues, and a stop (ending with a predecessor) has a going before it. -/

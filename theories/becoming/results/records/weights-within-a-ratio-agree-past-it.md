@@ -93,6 +93,7 @@ Equal weights and improper linear models (Einhorn and Hogarth 1975; Dawes 1979; 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261030T131028.245732Z/verification.json) | — |
 | proof | [Prelude.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean) | `Becoming.Naturals.mul_right_comm` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json) | — |
 
 Aliases: `weights within a ratio agree past it`, `比值之内的权重越过它即一致`, `Becoming.Weighting.every_within_iff`, `Becoming.Weighting.opposite_within_iff`, `Becoming.Weighting.tilted_ties`
 

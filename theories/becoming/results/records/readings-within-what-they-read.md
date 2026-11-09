@@ -106,6 +106,7 @@ Following Ren's “push the frontier, as far as possible” of 12 October 2026. 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
 | proof | [Prelude.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean) | `Becoming.gap_of_lt` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json) | — |
 
 Aliases: `Becoming.Diagonal.gap_unsaid`, `Becoming.Diagonal.fixed_of_complete`, `Becoming.Diagonal.claims_incomplete`, `Becoming.Frame.self_incomplete`, `Becoming.Diagonal.complete_iff_alike`, `Becoming.Diagonal.Unfolds`, `Becoming.Diagonal.Unfolds.never_returns`, `Becoming.Diagonal.Unfolds.unheld`, `Becoming.Diagonal.unfolding_open`, `Becoming.Diagonal.revision_never_rests`, `Becoming.Diagonal.negation_returns`, `diagonal`, `对角线`, `Lawvere fixed point`, `Lawvere 不动点`, `liar as rhythm`, `说谎者的节律`
 

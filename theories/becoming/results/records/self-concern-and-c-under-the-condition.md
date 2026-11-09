@@ -67,6 +67,8 @@ Self-concern is an order increasing in what one's own continuation marks; being 
 - related, not a proved adapter: [premises-met-and-failed](premises-met-and-failed.md). The nets on which the condition on the root holds and fails, which the fourth law reads for self-concern.
 - related, not a proved adapter: [widening-as-what-every-positive-weighting-ranks](widening-as-what-every-positive-weighting-ranks.md). Widening is what every positive weighting ranks higher; through it an order increasing in admission ranks every extension between listed paths.
 
+**Used by:** [route-b-joined](route-b-joined.md)
+
 <a id="sources--来源"></a>
 ### Sources
 
@@ -81,6 +83,7 @@ Self-concern is an order increasing in what one's own continuation marks; being 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T033635.582311Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json) | — |
 
 Aliases: `self-concern gives what C asks between listed level paths, one way`, `自关切于所列层径间单向给出 C 之所求`, `Becoming.Weighting.increasingInOwn_iff_increasing_iff_noOutside`, `Becoming.Weighting.increasingInOwn_iff_increasing_iff_unrestricted`, `Becoming.Web.extension_ranked_of_increasingInOwn`, `Becoming.increasingInOwn_with_net`
 
