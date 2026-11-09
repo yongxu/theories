@@ -6,7 +6,7 @@
 
 The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](vocabulary.json), [entries](entries)); it creates no result and strengthens no proof. It holds no standing of its own: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. No entry marks a dynamic good or bad; what one does to what lies beyond its couplings is under *Beyond its couplings*.
 
-Read so far for their premises and where their exits lead (PLAN §13, step 2): the families whose dynamics all say so. Their premises are in [the premise ledger](PREMISES.md), and the graph of their exits in [the terrain](TERRAIN.md).
+Read so far for their premises and where their exits lead (PLAN §13, step 2): family C, family D. Their premises are in [the premise ledger](PREMISES.md), and the graph of their exits in [the terrain](TERRAIN.md).
 
 177 dynamics, by family. It is a catalogue to look things up in, not to read through: each family has a page, which opens with its index, and an entry's section there holds the rest.
 
