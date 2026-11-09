@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-11-09T16:05:57+00:00",
+  "reviewed_at_utc": "2026-11-09T16:08:48+00:00",
   "statement": {
     "en": "With the pool read off the course, selection by persistence read off it passes every course whose lines settle, one removing every line included, while read off a fixed pool it is turned by every removal; a reader whose coupling closure the alternatives agree on is kept or removed alike.",
     "zh": "池读自其程时，诸系有定处读自其池之以存续之选择不记任何移除，移去诸系亦然；读自定池则为每一移除所转；诸选项于其耦合闭包皆一致之读者两程同留或同去。"
@@ -235,9 +235,14 @@
       "sha256": "edbeb105bd6032e40d4c1cf5605da5f7506966b0f2c11d9a3e4885567aabef31"
     },
     {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T160604.682692Z/verification.json",
+      "role": "receipt",
+      "sha256": "af998abed3b8d9d27921275268b7696a7cd286ee3adb0632b48876dd1782652f"
+    },
+    {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zj2-readings-persist/NOTE.md",
       "role": "integration",
-      "sha256": "fac52273ed0d479c4f41ab558432fd221f85646e68612e278a6fbd71ae13f8e8"
+      "sha256": "513ec30c74c5f1c2737e90a915fc7c80820effe43818eb7d5fd8bd5b871d43aa"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zj2-readings-persist/READER.md",
@@ -260,7 +265,15 @@
       "sha256": "79ea05a97a42a089756d26b70b4c03553ae8fc8e9114b51e7dd62087cc7cbf7d"
     }
   ],
-  "proof_bindings": [],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T160604.682692Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ReadingsPersist",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
   "history": [
     {
       "en": "9 November 2026, route (b)'s piece J2, on Ren's words of that day and of 8 November kept in sources (2026-11-09-route-b-ethics-forms.md, 2026-11-08-within-becoming-no-should.md): added. The join of route (b)'s four pieces found persisting a filter and the pool fixed across courses, and turned the next question from which order forms to which readings persist; this record answers part of it on a model of lines carrying inherited readings, on the course their acts generate.",
