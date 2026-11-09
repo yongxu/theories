@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-09T11:05:36+00:00",
+  "reviewed_at_utc": "2026-11-09T11:08:14+00:00",
   "statement": {
     "en": "Where a member conditions something and some class meets P2 and P4 at it, the class of the member with everything downstream of it meets both and lies within every class that does; such classes meet, and each gives the member's line the same reach.",
     "zh": "成员有所缘且有类于其处满足 P2 与 P4 处，此成员与其下游一切所成之类满足二者，且在每一满足者之内；此类可交，且各给成员之线同一所及。"
@@ -88,6 +88,7 @@
       "kind": "scope"
     }
   ],
+  "counterexamples": [],
   "standard_boundaries": [
     "no-ethical-premise",
     "no-evaluation",

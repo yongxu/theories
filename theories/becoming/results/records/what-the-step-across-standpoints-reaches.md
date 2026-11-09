@@ -84,7 +84,7 @@ The step across standpoints is Gewirth's argument from the sufficiency of agency
 - related, not a proved adapter: [widening-as-what-every-positive-weighting-ranks](widening-as-what-every-positive-weighting-ranks.md). The same section's order: once scope is fixed, C is what every positive weighting ranks higher.
 - related, not a proved adapter: [the-continuation-condition-on-the-root](the-continuation-condition-on-the-root.md). The de se own-closure condition read on the root: the root's condition at the one of the relation (GS2).
 
-**Used by:** [self-concern-through-dependence](self-concern-through-dependence.md) · [the-continuation-condition-on-the-root](the-continuation-condition-on-the-root.md)
+**Used by:** [mutual-dependence-gives-the-condition-de-se](mutual-dependence-gives-the-condition-de-se.md) · [self-concern-through-dependence](self-concern-through-dependence.md) · [the-continuation-condition-on-the-root](the-continuation-condition-on-the-root.md)
 
 <a id="sources--来源"></a>
 ### Sources

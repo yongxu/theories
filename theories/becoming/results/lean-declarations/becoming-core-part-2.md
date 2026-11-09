@@ -5452,5 +5452,33 @@ Definitions and types:
 
 </details>
 
+<a id="module-7efc10e14cbe"></a>
+
+<details>
+<summary>HistoryIdealsTraces.lean — 9 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HistoryIdealsTraces.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-2026-10-20.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HistoryIdealsTraces.lean`
+
+Imports: `Becoming.HistoryIdeals`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.HistoryIdealsTraces.classification](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HistoryIdealsTraces.lean#L50) | 50 |
+| [Becoming.HistoryIdealsTraces.course_settles](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HistoryIdealsTraces.lean#L61) | 61 |
+| [Becoming.HistoryIdealsTraces.run_initial_trace](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HistoryIdealsTraces.lean#L66) | 66 |
+| [Becoming.HistoryIdealsTraces.run_goesOn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HistoryIdealsTraces.lean#L81) | 81 |
+| [Becoming.HistoryIdealsTraces.countdown_down](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HistoryIdealsTraces.lean#L100) | 100 |
+| [Becoming.HistoryIdealsTraces.countdown_ends](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HistoryIdealsTraces.lean#L105) | 105 |
+| [Becoming.HistoryIdealsTraces.history_without_run](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HistoryIdealsTraces.lean#L127) | 127 |
+
+Definitions and types:
+
+- `def` [Becoming.HistoryIdealsTraces.HistoryOf](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HistoryIdealsTraces.lean#L45) (L45)
+- `def` [Becoming.HistoryIdealsTraces.countdown](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HistoryIdealsTraces.lean#L90) (L90)
+
+</details>
+
 [All topics and modules](../LEAN-DECLARATIONS.md) · [Becoming pure core, all parts](../lean-declarations/becoming-core.md) · [part 1](../lean-declarations/becoming-core-part-1.md) · [part 3](../lean-declarations/becoming-core-part-3.md)
 

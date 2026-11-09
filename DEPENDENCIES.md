@@ -5,7 +5,7 @@
 
 [Home](README.md) · [中文](README.zh.md) · **Read** · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Uses](theories/becoming/USES.md) · **Check** · [Tests](TESTS.md) · [Results](RESULTS.md) · [Proofs](MAP.md#check-the-proofs-yourself) · [Open questions](OPEN-QUESTIONS.md) · [Reviewers](theories/becoming/review/README.md) · **See** · [Graph](theories/becoming/results/THEORY-GRAPH.md) · [Connections](theories/becoming/results/atlas/CROSSWALK.md) · [How it grew](theories/LINEAGE.md) · [Glossary](GLOSSARY.md) · [Where everything is](MAP.md)
 
-536 registered results: 505 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`), 4 open targets (`open`) and 7 superseded (`superseded`). 1271 curated edges join 462 results to the results they draw on.
+539 registered results: 508 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`), 4 open targets (`open`) and 7 superseded (`superseded`). 1276 curated edges join 465 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem, as the AI-written records assign the kind; the registry checks that an interface has its fields and cites a reviewed source, and nothing checks that the Lean there uses the cited result; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -239,6 +239,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [multivalued-joining-common-structure][] ← <a id="multivalued-joining-common-structure--branching-tests-bisimulation"></a>[branching-tests-bisimulation][]
 - [mutation-and-the-balance-it-sets][] ← <a id="mutation-and-the-balance-it-sets--selection-term-over-generations"></a>[selection-term-over-generations][]
 - [mutual-dependence-and-its-pace][] ← <a id="mutual-dependence-and-its-pace--levels-of-closure"></a>[levels-of-closure][] · <a id="mutual-dependence-and-its-pace--comparison-where-the-rest-responds"></a>[comparison-where-the-rest-responds][] · <a id="mutual-dependence-and-its-pace--how-often-couplings-act"></a>[how-often-couplings-act][] · <a id="mutual-dependence-and-its-pace--target-capture"></a>[target-capture][]
+- [mutual-dependence-gives-the-condition-de-se][] ← <a id="mutual-dependence-gives-the-condition-de-se--mutual-dependence-and-its-pace"></a>[mutual-dependence-and-its-pace][] · <a id="mutual-dependence-gives-the-condition-de-se--what-the-step-across-standpoints-reaches"></a>[what-the-step-across-standpoints-reaches][]
 - [naming-attention-coverage][] ← <a id="naming-attention-coverage--encounter-selection-and-revision"></a>[encounter-selection-and-revision][] *(interpretive)*
 - [necessarily-drawn-is-not-returning][] ← <a id="necessarily-drawn-is-not-returning--attraction-is-not-returning"></a>[attraction-is-not-returning][] · <a id="necessarily-drawn-is-not-returning--target-capture"></a>[target-capture][] · <a id="necessarily-drawn-is-not-returning--returning-where-the-course-branches"></a>[returning-where-the-course-branches][]
 - [need-and-feeding-read-with-time][] ← <a id="need-and-feeding-read-with-time--self-concern-through-dependence"></a>[self-concern-through-dependence][] · <a id="need-and-feeding-read-with-time--feeding-closure"></a>[feeding-closure][]
@@ -381,6 +382,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [the-class-of-being-joined][] ← <a id="the-class-of-being-joined--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][] · <a id="the-class-of-being-joined--wen-in-the-grammar"></a>[wen-in-the-grammar][]
 - [the-continuation-condition-on-the-root][] ← <a id="the-continuation-condition-on-the-root--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][] · <a id="the-continuation-condition-on-the-root--what-the-step-across-standpoints-reaches"></a>[what-the-step-across-standpoints-reaches][]
 - [the-gap-for-ones-own-act][] ← <a id="the-gap-for-ones-own-act--selection-through-couplings"></a>[selection-through-couplings][] · <a id="the-gap-for-ones-own-act--counterfactual-is-the-course"></a>[counterfactual-is-the-course][]
+- [the-least-own-class][] ← <a id="the-least-own-class--constancy-read-at-a-members-class"></a>[constancy-read-at-a-members-class][]
 - [the-markov-blanket-as-a-coupling-structure][] ← <a id="the-markov-blanket-as-a-coupling-structure--selection-through-couplings"></a>[selection-through-couplings][] · <a id="the-markov-blanket-as-a-coupling-structure--generalization-through-lumping"></a>[generalization-through-lumping][]
 - [the-move-alone-underdetermines][] ← <a id="the-move-alone-underdetermines--weights-count-situations"></a>[weights-count-situations][]
 - [the-present-on-causal-set-growth][] ← <a id="the-present-on-causal-set-growth--precedence-and-its-links"></a>[precedence-and-its-links][] · <a id="the-present-on-causal-set-growth--what-can-be-born-next"></a>[what-can-be-born-next][] · <a id="the-present-on-causal-set-growth--normal-forms-need-decided-apartness"></a>[normal-forms-need-decided-apartness][] · <a id="the-present-on-causal-set-growth--order-of-exchanges-is-the-invariant"></a>[order-of-exchanges-is-the-invariant][] · <a id="the-present-on-causal-set-growth--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][] · <a id="the-present-on-causal-set-growth--counts-exist-where-decided"></a>[counts-exist-where-decided][]
@@ -442,6 +444,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [what-holding-for-a-reading-is-worth][] ← <a id="what-holding-for-a-reading-is-worth--what-choices-show-of-an-order"></a>[what-choices-show-of-an-order][] · <a id="what-holding-for-a-reading-is-worth--what-a-course-chosen-through-its-model-does-not-test"></a>[what-a-course-chosen-through-its-model-does-not-test][] · <a id="what-holding-for-a-reading-is-worth--when-to-inquire-and-when-to-respond"></a>[when-to-inquire-and-when-to-respond][]
 - [what-keeping-widening-needs][] ← <a id="what-keeping-widening-needs--eventual-widening"></a>[eventual-widening][] · <a id="what-keeping-widening-needs--returning-novelty-forgetting-on-levels"></a>[returning-novelty-forgetting-on-levels][] · <a id="what-keeping-widening-needs--where-novelty-gain-comes-from"></a>[where-novelty-gain-comes-from][] · <a id="what-keeping-widening-needs--more-needs-renewers"></a>[more-needs-renewers][] · <a id="what-keeping-widening-needs--support-passed-on"></a>[support-passed-on][] · <a id="what-keeping-widening-needs--support-from-the-supported"></a>[support-from-the-supported][] · <a id="what-keeping-widening-needs--a-pattern-lasts-through-passing"></a>[a-pattern-lasts-through-passing][] · <a id="what-keeping-widening-needs--generation-and-degeneration-at-two-grains"></a>[generation-and-degeneration-at-two-grains][] · <a id="what-keeping-widening-needs--classes-along-a-continuation"></a>[classes-along-a-continuation][] · <a id="what-keeping-widening-needs--widening-along-a-reading"></a>[widening-along-a-reading][] · <a id="what-keeping-widening-needs--loops-within-what-a-law-reads"></a>[loops-within-what-a-law-reads][]
 - [what-leaves-a-class-follows-its-line][] ← <a id="what-leaves-a-class-follows-its-line--what-a-line-holds-and-a-regularity-takes-in"></a>[what-a-line-holds-and-a-regularity-takes-in][]
+- [what-persisting-shows-of-an-order][] ← <a id="what-persisting-shows-of-an-order--what-choices-show-of-an-order"></a>[what-choices-show-of-an-order][] · <a id="what-persisting-shows-of-an-order--what-self-concern-alone-ranks"></a>[what-self-concern-alone-ranks][]
 - [what-pooled-coupling-reaches][] ← <a id="what-pooled-coupling-reaches--selection-through-couplings"></a>[selection-through-couplings][] · <a id="what-pooled-coupling-reaches--the-gap-for-ones-own-act"></a>[the-gap-for-ones-own-act][]
 - [what-position-reads][] ← <a id="what-position-reads--relative-position-is-zero-sum"></a>[relative-position-is-zero-sum][]
 - [what-readings-fix-of-the-unread][] ← <a id="what-readings-fix-of-the-unread--generalization-through-lumping"></a>[generalization-through-lumping][]
@@ -727,6 +730,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [multivalued-joining-common-structure]: theories/becoming/results/records/multivalued-joining-common-structure.md
 [mutation-and-the-balance-it-sets]: theories/becoming/results/records/mutation-and-the-balance-it-sets.md
 [mutual-dependence-and-its-pace]: theories/becoming/results/records/mutual-dependence-and-its-pace.md
+[mutual-dependence-gives-the-condition-de-se]: theories/becoming/results/records/mutual-dependence-gives-the-condition-de-se.md
 [naming-attention-coverage]: theories/becoming/results/records/naming-attention-coverage.md
 [necessarily-drawn-is-not-returning]: theories/becoming/results/records/necessarily-drawn-is-not-returning.md
 [need-and-feeding-read-with-time]: theories/becoming/results/records/need-and-feeding-read-with-time.md
@@ -877,6 +881,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [the-continuation-condition-on-the-root]: theories/becoming/results/records/the-continuation-condition-on-the-root.md
 [the-gap-for-ones-own-act]: theories/becoming/results/records/the-gap-for-ones-own-act.md
 [the-last-change-of-a-run]: theories/becoming/results/records/the-last-change-of-a-run.md
+[the-least-own-class]: theories/becoming/results/records/the-least-own-class.md
 [the-markov-blanket-as-a-coupling-structure]: theories/becoming/results/records/the-markov-blanket-as-a-coupling-structure.md
 [the-move-alone-underdetermines]: theories/becoming/results/records/the-move-alone-underdetermines.md
 [the-present-on-causal-set-growth]: theories/becoming/results/records/the-present-on-causal-set-growth.md
@@ -942,6 +947,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [what-holding-for-a-reading-is-worth]: theories/becoming/results/records/what-holding-for-a-reading-is-worth.md
 [what-keeping-widening-needs]: theories/becoming/results/records/what-keeping-widening-needs.md
 [what-leaves-a-class-follows-its-line]: theories/becoming/results/records/what-leaves-a-class-follows-its-line.md
+[what-persisting-shows-of-an-order]: theories/becoming/results/records/what-persisting-shows-of-an-order.md
 [what-pooled-coupling-reaches]: theories/becoming/results/records/what-pooled-coupling-reaches.md
 [what-position-reads]: theories/becoming/results/records/what-position-reads.md
 [what-readings-fix-of-the-unread]: theories/becoming/results/records/what-readings-fix-of-the-unread.md
