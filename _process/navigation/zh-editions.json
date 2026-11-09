@@ -10,25 +10,25 @@
   "_process/navigation/README-ZH.md": {
    "revised": "2026-11-09",
    "english": "efc39cbf3cd5783788577459270ea0e67d92ec5fbd2d40288b35701158724500",
-   "chinese": "ab95971847c6f1107b78cc4cfb8d9ba3b336c994164db326d9b94b11211e798b",
+   "chinese": "1b46fc27922ee97753c72b3c67e653ad4a07cb73aabf93fc32ddc5eaa0d64ccb",
    "english_commit": "cbcfc1332"
   },
   "theories/becoming/ONE-PAGE.zh.md": {
    "revised": "2026-11-09",
    "english": "89a0110f291bef3f6f0b859368e0d32183fc66fc2dedf5c6ddab73cf4a215ce6",
-   "chinese": "b280b0f3f89feea34e187baea6be9e2f090b0ca474a111d695f6dc6d1b8313dc",
+   "chinese": "5a230c127d300207b1c7d5737e88691d4fdc9a919f7d3c1a9bddaa6841586d17",
    "english_commit": "78a582223"
   },
   "theories/becoming/OPENING.zh.md": {
    "revised": "2026-11-09",
    "english": "99518920e9aca89a832f5fcd6cb5a692ba9b4e9c29b4c78280995e2a166ab84c",
-   "chinese": "ffad9ece88afe1458cf25379c95391606ce2a6452763839ff31f70cb0181fe2d",
-   "english_commit": "58e91095a"
+   "chinese": "624bb7415a7bc4938710182bfacc79fa72fd8d4ab5c913d9f408e64cac82eacc",
+   "english_commit": "223e6ea80"
   },
   "theories/becoming/THE-THEORY-OF-BECOMING.zh.md": {
    "revised": "2026-11-09",
    "english": "5e76bdbe6dfcba186d3d6b1e15180c7f97f98aa2f3ef0f8395b37051649cba88",
-   "chinese": "c658d8aeaf9a441141ae650f08b2a118acc4288fe1a036011a95bee0498150f7",
+   "chinese": "6da178693638abd2bd03f9aab078148254aa5ed0b33194079f28cda1d9bf56ad",
    "english_commit": "78a582223"
   },
   "theories/becoming/USES-EXAMPLES.zh.md": {
@@ -40,7 +40,7 @@
   "theories/becoming/USES.zh.md": {
    "revised": "2026-11-09",
    "english": "f7ef39887e5b2518a5f1215c8d6bc447206a998613d662376fb6190c7c1a2af6",
-   "chinese": "0e6844e7c266ff61383e68b953d61723202e0327ad0f683f73a8d837484f8f1b",
+   "chinese": "570730fa814fc5e4e9eae11903c7121921fc96eaddf33beee0b153a3b567789f",
    "english_commit": "cbcfc1332"
   },
   "theories/becoming/review/README.zh.md": {
