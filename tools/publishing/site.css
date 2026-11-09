@@ -46,7 +46,9 @@ h4, h5, h6 { font-size: 1rem; font-weight: 620; margin: 1.4rem 0 .5rem; }
 a.here { margin-left: .4rem; color: var(--rule); font-weight: 400; visibility: hidden; }
 h1:hover a.here, h2:hover a.here, h3:hover a.here, h4:hover a.here { visibility: visible; }
 [id] { scroll-margin-top: 3.5rem; }
-@media (min-width: 601px) and (max-width: 1300px) { [id] { scroll-margin-top: 5rem; } }  /* the header may take two lines */
+@media (min-width: 861px) and (max-width: 1300px) { [id] { scroll-margin-top: 5rem; } }  /* the header may take two lines */
+/* below 861px the wrapped line takes three or four: the header is not held on screen, as on a phone */
+@media (max-width: 860px) { header.top { position: static; } [id] { scroll-margin-top: .6rem; } }
 p { margin: 0 0 1rem; }
 ul, ol { padding-left: 1.4rem; margin: 0 0 1rem; }
 li { margin: .25rem 0; }
@@ -91,7 +93,8 @@ nav.contents p { margin: 0 0 .4rem; font-weight: 620; color: var(--muted); }
 nav.contents ul { list-style: none; padding: 0; margin: 0; }
 nav.contents > ul { columns: 2 16rem; column-gap: 1.6rem; }
 nav.contents li { margin: 0 0 .4rem; }
-nav.contents li li, nav.contents > ul > li:not(:has(ul)) { break-inside: avoid; }  /* a long section's list may go on in the next column */
+nav.contents li li { break-inside: avoid; }  /* a long section's list may go on in the next column */
+nav.contents > ul > li:not(:has(ul)) { break-inside: avoid; }
 nav.contents li ul { margin-top: .3rem; }
 nav.contents li ul { padding-left: .9rem; font-size: .94em; }
 nav.seq { display: flex; flex-wrap: wrap; gap: .3rem 1.2rem; font-family: var(--sans); font-size: .82rem; line-height: 1.35; margin: 0 0 1rem; }
@@ -118,7 +121,7 @@ section.hero h1 { font-size: 2.4rem; margin-top: 1rem; }
 section.hero p { font-size: 1.05rem; }
 section.hero p.ways-link { font-family: var(--sans); font-size: .9rem; }
 section.picture p { max-width: 44rem; }
-section.picture p.open { font-family: var(--sans); font-size: .85rem; margin-top: -.6rem; }
+p.open { font-family: var(--sans); font-size: .85rem; margin-top: -.6rem; }
 section.picture { margin-top: 2.4rem; }
 ul.cards { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); gap: .9rem; }
 ul.cards li { margin: 0; position: relative; }
@@ -167,7 +170,7 @@ section.ways h3.group { font-family: var(--sans); font-size: .9rem; text-transfo
 /* the Chinese home: its picture held to the height the English home gives it, and its table's first column kept whole */
 body.home-zh a.picture { width: fit-content; max-width: 100%; margin: 1.2rem 0 1.4rem; transform: none; }
 body.home-zh a.picture img { width: auto; height: min(78vh, 52rem); max-width: 100%; object-fit: contain; }
-body.home-zh td:first-child { white-space: nowrap; }
+@media (min-width: 601px) { body.home-zh td:first-child { white-space: nowrap; } }
 /* Chinese has no italic face: emphasis is upright, a term in it a little heavier, a paragraph wholly in it (a reading time,
    a note on the translation, a caption) in the muted colour */
 body.lang-zh em { font-style: normal; font-weight: 600; }

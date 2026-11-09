@@ -80,8 +80,10 @@ SAY_ZH = {'here': '本节的链接', 'back': '返回', 'nolink': '不在公开�
 MAP_MAX = 8_000_000  # bytes of the connection map, which MAX_PAGE exempts: past this its growth fails the build
 CJK_RUN = re.compile(r'[　-〿㐀-䶿一-鿿豈-﫿！-｠]+')  # Han, CJK and full-width marks
 TEX_SUB = re.compile(r'\$([A-Za-z])_\{?(\d{1,2})\}?\$')  # $V_4$: a letter with a numeric subscript, as GitHub's math shows it
-THESIS_LINE = re.compile(r'^\*\*Thesis (T\d+[a-z]?)\.\*\*\s*\*([^*]+)\*')  # 02's '**Thesis T7.** *name*', under <a id="t7">
-KEPT_FOR_LINKS = 'kept so that links to it resolve'  # a page that says so is a former page, ranked as a former id is
+# a thesis's paragraph: '**Thesis T7.** *its name*' (02, 03, 05) or '**Thesis T4. its name.**' (07)
+THESIS_LINE = re.compile(r'^\*\*Thesis (T\d+[a-z]?)\.(?:\*\*\s*\*([^*]+)\*|\s+([^*]+?)\.?\*\*)')
+LEAD_SKIP = re.compile(r'^(?:How to read\b|怎样读|Labels?: |No independent human review|本论尚无独立的人工审查|Rewritten \d)')  # a guide or label, no lead
+KEPT_FOR_LINKS = 'kept so that links to it resolve'  # a page that says so is a former page, ranked below current names
 
 
 class SiteError(Exception):
@@ -316,7 +318,13 @@ class Page:
             if para:
                 inner = self.inline(join_lines(para))
                 whole = inner.startswith('<em>') and inner.endswith('</em>') and inner.count('<em>') == 1
-                out.append(f'<p class="em">{inner}</p>' if whole else f'<p>{inner}</p>')  # a paragraph wholly in italics: a note
+                thesis, attr = THESIS_LINE.match(para[0].strip()), ''
+                if thesis and not any(t.startswith(f'Thesis {thesis.group(1)}:') for _, _, t in self.toc):
+                    ident = thesis.group(1).lower()  # a thesis with no anchor line above it: the site gives it one, t4 as 02 gives t7
+                    if ident not in self.ids:
+                        attr = f' id="{self._id(ident)}"'
+                        self.toc.append((4, ident, f'Thesis {thesis.group(1)}: {plain_title(thesis.group(2) or thesis.group(3))}'))
+                out.append(f'<p class="em"{attr}>{inner}</p>' if whole else f'<p{attr}>{inner}</p>')  # wholly in italics: a note
                 para = []
                 self.pending = set()
 
@@ -349,7 +357,7 @@ class Page:
                     self._id(ident)
                     thesis = THESIS_LINE.match(nxt) if re.fullmatch(r't\d+[a-z]?', ident) else None
                     if thesis:  # a thesis is found by the search as a section is: 'Thesis T7: its name'
-                        self.toc.append((4, ident, f'Thesis {thesis.group(1)}: {plain_title(thesis.group(2))}'))
+                        self.toc.append((4, ident, f'Thesis {thesis.group(1)}: {plain_title(thesis.group(2) or thesis.group(3))}'))
                     if ident.startswith('r-'):
                         self.anchors.add(ident)
                         mark = self._record_mark(ident)
@@ -408,6 +416,7 @@ class Page:
         m = re.match(r'^(\s*)([-*+]|\d+[.)])\s+', lines[i])
         base = len(m.group(1).expandtabs(4))
         ordered = m.group(2)[0].isdigit()
+        marker = m.group(2)[-1]  # the bullet, or the number's '.' or ')': GitHub starts a new list where it changes
         start = int(re.match(r'\d+', m.group(2)).group(0)) if ordered else 1
         items, width = [], base + 2
         while i < len(lines):
@@ -427,7 +436,7 @@ class Page:
                     i += 1
                     continue
                 sibling = re.match(r'^(\s*)([-*+]|\d+[.)])\s+', nxt)
-                if sibling and len(sibling.group(1).expandtabs(4)) == base and sibling.group(2)[0].isdigit() == ordered:
+                if sibling and len(sibling.group(1).expandtabs(4)) == base and sibling.group(2)[-1] == marker:
                     i += 1  # a blank line before the next item of the same list keeps the list one list, as on GitHub
                     continue
                 break
@@ -477,8 +486,8 @@ class Page:
         prose = max(sum(len(plain_title(c)) > 40 for c in r) for r in rows) if rows else 0
         # wider than the text where its rows hold prose in two cells or more; one long cell a row (a glossary's sense) reads
         # better at the text's measure than across the page
-        wide = len(head) >= WIDE_COLUMNS or (len(head) >= 3 and longest >= WIDE_ROW and prose >= 2)
-        glossary = posixpath.basename(self.path) in ('GLOSSARY.md', 'GLOSSARY.zh.md')
+        glossary = posixpath.basename(self.path) in ('GLOSSARY.md', 'GLOSSARY.zh.md')  # a term, its sense, its home: read down
+        wide = len(head) >= WIDE_COLUMNS or (len(head) >= 3 and longest >= WIDE_ROW and prose >= 2 and not glossary)
         stack = len(head) >= 3 and longest >= STACK_ROW and prose >= 2  # rows of prose stack; short numeric cells scroll
         labels = [plain_title(c) for c in head] if stack else []
 
@@ -1096,7 +1105,7 @@ def home_body(cfg, links, recs, root, files, rules=()):
             zh = f' <a class="zh" href="{html.escape(zh_href)}" lang="zh-Hans">中文</a>' if zh_href else ''
         cards.append(f'<li><a class="card" href="{html.escape(href)}"><span class="label">{html.escape(w["label"])}</span>'
                      + (f'<span class="time">{html.escape(time)}</span>' if time else '')
-                     + f'<span class="text">{Page("README.md", w["text"], links, recs).html[3:-4]}</span></a>{zh}</li>')
+                     + f'<span class="text">{re.sub(r"^<p[^>]*>|</p>$", "", Page("README.md", w["text"], links, recs).html)}</span></a>{zh}</li>')
     grouped, order = {}, []
     for w, c in zip(cfg.get('ways_in', []), cards):
         g = w.get('group', '')
@@ -1170,7 +1179,7 @@ LEAD_MAX = 360  # characters of a page's lead that the search reads
 LEAD_LOOK = 8  # the paragraphs that may be a page's lead: its first eight that pass lead_paragraphs
 LEAD_SHARED = 3  # a paragraph met word for word among the leading paragraphs of more pages than this is no page's lead
 STATUS_LINE = re.compile(r'<code>[^<]+</code> · <strong>')  # a record page's status line, as site_text leaves it (RECORD_STATUS)
-LANGUAGE_LINK = re.compile(r'<a [^>]*>\s*(?:中文|English)[^<]{0,24}</a>\s*(?: · |$)')  # '中文', '中文（各章一览）', 'English'
+LANGUAGE_LINK = re.compile(r'<a [^>]*>\s*(?:<span lang="zh-Hans">)?(?:中文|English)[^<]{0,24}(?:</span>)?[^<]{0,24}</a>\s*(?: · |$)')  # '中文', '中文（各章一览）', 'English'
 READING_LINE = 200  # characters below which a paragraph that states a time to read is a reading-time line (a third of it in Chinese)
 CLOSE = '["”’\')\\]]*'  # closing marks a sentence's period may sit inside
 SENTENCE = (r'(?:[^.]|\.(?!' + CLOSE + r'(?:\s|$))'  # a sentence's body: a period ends it only before a space or the end, closing
@@ -1220,6 +1229,8 @@ def lead_paragraphs(body_html):
             text = text[head.end():].strip()
             if len(text) < 40:
                 continue
+        if LEAD_SKIP.match(text):  # how to read the page, a key to its labels, a note on its review or its rewriting
+            continue
         yield text
 
 
@@ -1267,9 +1278,9 @@ def search_index(built, recs, home=None, extra=(), shared=None):
         elif rid and (page.title or '').endswith('(renamed)'):  # the page a former id keeps (registry.py), naming the id it became
             pages.append({'t': page.title or rid, 'u': out_path(p), 'h': [], 'f': 1})
         elif KEPT_FOR_LINKS in ' '.join(islice(lead_paragraphs(page.html), 2)):  # a former page, kept for its old links
-            pages.append({'t': page.title or posixpath.basename(p), 'u': out_path(p), 'h': [], 'f': 1})
+            pages.append({'t': page.title or posixpath.basename(p), 'u': out_path(p), 'h': [], 'f': 2})
         else:
-            pages.append(with_lead({'t': page.title or posixpath.basename(p), 'u': out_path(p),
+            pages.append(with_lead({'t': getattr(page, 'search_title', None) or page.title or posixpath.basename(p), 'u': out_path(p),
                                     'h': [[text, ident] for level, ident, text in page.toc if level > 1]}, page.html))
     return {'pages': pages, 'results': results}
 
@@ -1281,8 +1292,8 @@ SEARCH_JS = r"""/* The site's search over titles, headings, leads and result nam
   var button = document.querySelector('button.find');
   if (!button || !window.fetch) { return; }
   var zh = document.documentElement.lang.indexOf('zh') === 0;
-  var say = zh ? {label: '搜索', hint: '标题、小节、开头与成果名', none: '没有找到。', fail: '搜索要在网站上才能用，直接打开文件时用不了。', more: '只显示前 40 条。', result: '成果', renamed: '旧编号，已改名'}
-               : {label: 'Search', hint: 'Titles, sections, leads and result names', none: 'Nothing found.', fail: 'Search works on the site, not on files opened directly.', more: 'Showing the first 40.', result: 'Result', renamed: 'A former id, renamed'};
+  var say = zh ? {label: '搜索', hint: '标题、小节、开头与成果名', none: '没有找到。', fail: '搜索要在网站上才能用，直接打开文件时用不了。', more: '只显示前 40 条。', result: '成果', renamed: '旧编号，已改名', kept: '旧页，留以保全旧链接'}
+               : {label: 'Search', hint: 'Titles, sections, leads and result names', none: 'Nothing found.', fail: 'Search works on the site, not on files opened directly.', more: 'Showing the first 40.', result: 'Result', renamed: 'A former id, renamed', kept: 'A former page, kept for its old links'};
   var LIMIT = 40, panel, input, list, note, entries;
   button.hidden = false;
   button.setAttribute('aria-expanded', 'false');
@@ -1290,7 +1301,7 @@ SEARCH_JS = r"""/* The site's search over titles, headings, leads and result nam
   function flatten(data) {
     var out = [];
     data.pages.forEach(function (p) {
-      out.push({text: p.t, under: p.f ? say.renamed : '', href: p.u, key: p.t.toLowerCase(), lead: p.l || '', rank: p.f ? 0 : 3});
+      out.push({text: p.t, under: p.f === 2 ? say.kept : p.f ? say.renamed : '', href: p.u, key: (p.t + ' ' + (p.k || '')).toLowerCase(), lead: p.l || '', rank: p.f ? 0 : 3});
       p.h.forEach(function (h) { out.push({text: h[0], under: p.t, href: p.u + '#' + h[1], key: h[0].toLowerCase(), lead: '', rank: 2}); });
     });
     data.results.forEach(function (r) {
@@ -1403,8 +1414,8 @@ def not_found_body(cfg, pages):
     there is none, the 404 page shows again."""
     zh = f' <a href="{html.escape(out_path("README.zh.md"))}" lang="zh-Hans">中文首页</a>' if 'README.zh.md' in pages else ''
     where = f' <a href="{html.escape(out_path("MAP.md"))}">Where everything is</a> lists the rest.' if 'MAP.md' in pages else ''
-    onward = ('<script>(function () { var p = location.pathname;'
-              " if (/\\.md$/.test(p)) { location.replace(p.replace(/README\\.md$/, 'index.html').replace(/\\.md$/, '.html')"
+    onward = ('<script>(function () { var p = location.pathname.replace(/^[\\/\\\\]+/, \'/\');'  # '//host/x.md' stays on the site
+              " if (/\\.md$/.test(p)) { location.replace(p.replace(/(^|\\/)README\\.md$/, '$1index.html').replace(/\\.md$/, '.html')"
               ' + location.hash); } })();</script>\n')
     return (onward + '<h1>This page is not on the site</h1>\n<p>The address may be old or mistyped, or the file may be in the repository only. '
             f'<a href="index.html">The home</a> has the ways in.{where}{zh}</p>')
@@ -1416,7 +1427,7 @@ def map_entry(cfg):
     zh = next((label for target, label in cfg.get('nav_zh', []) if target == MAP_PAGE), '')
     zh = re.sub(r'（英文）$', '', zh)
     card = next((w for w in cfg.get('ways_in', []) if w['path'] == MAP_PAGE), None)
-    entry = {'t': en + (f' ({zh})' if zh else ''), 'u': MAP_PAGE, 'h': []}
+    entry = {'t': en + (f' ({zh})' if zh else ''), 'u': MAP_PAGE, 'h': [], 'k': 'connection map'}  # k: words found, not shown
     if card and card.get('text'):
         entry['l'] = plain_title(card['text'])
     return entry
@@ -1445,7 +1456,7 @@ def stated_in(built, links):
             continue
         links.internal.append((p, target, f'r-{rid}'))  # checked with every other link between pages
         href = relative(out_path(target), p) + f'#r-{rid}'
-        add = f' · <a href="{html.escape(href)}">{page.say["stated"]} {html.escape(built[target].title or target)}</a>'
+        add = f' · <a href="{html.escape(href)}">{page.say["stated"]} {page.marked_up(html.escape(built[target].title or target))}</a>'
         page.html = page.html[:line.start(1)] + add + page.html[line.start(1):]
 
 
@@ -1514,6 +1525,18 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
     for p in sequence:
         built[p].html = chapter_html(p, built[p], sequence, chapters.get('index'), built)
     stated_in(built, links)
+    for p, page in built.items():
+        zh = page.lang == 'zh'
+        name = (cfg.get('title_zh') if zh else None) or cfg.get('title', 'The Theory of Becoming')
+        label = nav_label(cfg, p, zh) if page.title == name and p != 'README.zh.md' else None
+        if label:  # the search names a page named as the site is as its tab does: 'Overview · The Theory of Becoming'
+            page.search_title = f'{label} · {name}'
+    if 'README.zh.md' in built:  # the Chinese home says, as the English home does, that its picture opens at full size
+        zh_home = built['README.zh.md']
+        full = re.search(r'<a class="picture" href="([^"]+)"[^>]*>.*?</a></p>', zh_home.html, re.S)
+        if full:
+            zh_home.html = (zh_home.html[:full.end()] + f'\n<p class="open"><a href="{full.group(1)}">{zh_home.say["picture"]}</a></p>'
+                            + zh_home.html[full.end():])
     home, home_lang = home_body(cfg, links, recs, root, files, rules)
     # every link between pages of the site resolves, its anchor included
     broken = []
@@ -1580,13 +1603,24 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
             # naming and describing a page, and the site's header line, which wraps where it does not fit, as site.css has it
             entry = map_entry(cfg)
             name = cfg.get('title', 'The Theory of Becoming')
-            drawn = re.sub(r'<title>[^<]*</title>', lambda m: f'<title>{html.escape(entry["t"].split(" (")[0])} · {html.escape(name)}</title>',
+            drawn = re.sub(r'<title>[^<]*</title>', lambda m: f'<title>{html.escape(entry["t"].split(" (")[0] + " · " + name)}</title>',
                            drawn, count=1)
+            title = f'{entry["t"].split(" (")[0]} · {name}'
+            said = entry.get('l', '')
             head = ('<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">\n'
-                    + (f'<meta name="description" content="{html.escape(entry["l"])}">\n' if entry.get('l') else '')
+                    + (f'<meta name="description" content="{html.escape(said)}">\n<meta property="og:description" content="{html.escape(said)}">\n'
+                       if said else '')
+                    + f'<meta property="og:title" content="{html.escape(title)}">\n<meta property="og:type" content="website">\n'
+                    + f'<meta property="og:site_name" content="{html.escape(name)}">\n'
                     + '<style>header.top{font-size:.82rem;font-weight:400}header.top nav{flex-wrap:wrap;row-gap:.15rem;'
-                    'overflow:visible;white-space:normal}header.top nav a{white-space:nowrap}</style>\n')
+                    'overflow:visible;white-space:normal}header.top nav a{white-space:nowrap}'
+                    '@media (max-width:860px){header.top{position:static}}@media (min-width:1240px){#detail{top:64px}}'
+                    'a.skip{position:absolute;left:-9999px;top:.5rem;z-index:4;padding:.3rem .6rem;background:var(--paper);'
+                    'border:1px solid var(--ink);font:13px var(--sans)}a.skip:focus{left:16px}</style>\n')
             drawn = drawn.replace('</head>', head + '</head>', 1)
+            if '<div class="wrap">' in drawn and '<header class="top"' in drawn:  # a way past the header to the map
+                drawn = drawn.replace('<div class="wrap">', '<div class="wrap" id="main">', 1)
+                drawn = drawn.replace('<header class="top"', f'<a class="skip" href="#main">{SAY_EN["skip"]}</a>\n<header class="top"', 1)
         bar = drawn.find('<header class="top"')
         if pushed is not True and bar >= 0 and '</header>' in drawn[bar:]:  # its links to GitHub are at the build commit too
             end = drawn.index('</header>', bar) + len('</header>')

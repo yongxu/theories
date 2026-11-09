@@ -803,7 +803,7 @@ class SiteTests(unittest.TestCase):
             self.assertIn('</header>\n<p class="pushed-note"', drawn)  # under the site's header
             self.assertIn(f'This page was built from commit <code>{COMMIT[:9]}</code>. This commit is not', drawn)  # it names the commit
             self.assertIn("This commit is not on the repository&#x27;s main branch", drawn)  # escaped
-            self.assertIn('may not resolve until it is pushed.</p><div class="wrap">', drawn.replace('&#x27;', "'"))
+            self.assertIn('may not resolve until it is pushed.</p><div class="wrap" id="main">', drawn.replace('&#x27;', "'"))
             self.assertEqual((drawn.count('pushed-note'), drawn.count('rel="icon"')), (1, 1))
             with patch.object(site, 'on_github', return_value=None):
                 self.build(map=True, nav=SITE['nav'] + [['connections.html', 'Map']])
@@ -925,14 +925,14 @@ class SiteTests(unittest.TestCase):
         self.assertIn(['meta-attractor (元吸引子)', 'term-meta-attractor'], entry['h'])
         self.assertEqual(site.map_entry({'nav': [['connections.html', 'Connections']], 'nav_zh': [['connections.html', '连接图（英文）']],
                                          'ways_in': [{'path': 'connections.html', 'text': 'Every *claim* drawn.'}]}),
-                         {'t': 'Connections (连接图)', 'u': 'connections.html', 'h': [], 'l': 'Every claim drawn.'})
+                         {'t': 'Connections (连接图)', 'u': 'connections.html', 'h': [], 'k': 'connection map', 'l': 'Every claim drawn.'})
 
     def test_a_page_kept_for_its_old_links_ranks_as_a_former_id(self):
         (self.tmp / 'a/OLD.md').write_text('# Old claims\n\nThis page earlier repeated the register of results. It is kept so that links to it resolve.\n')
         self.files.add('a/OLD.md')
         self.build(pages=SITE['pages'] + ['a/OLD.md'])
         old = next(p for p in json.loads(self.page('search.json'))['pages'] if p['u'] == 'a/OLD.html')
-        self.assertEqual((old.get('f'), 'l' in old), (1, False))
+        self.assertEqual((old.get('f'), 'l' in old), (2, False))  # 2: a former page, said as such, not as a renamed id
 
     def test_the_home_says_its_ways_and_its_picture_and_cards_offer_their_chinese(self):
         (self.tmp / 'a/ONE.zh.md').write_text('# 一页\n\n中文。\n')
@@ -962,8 +962,7 @@ class SiteTests(unittest.TestCase):
         (self.tmp / 'a/ONE.md').write_text('# One\n\n## What it is\n\n「$V_4$ is forced」, read as 生生 (`代码`).\n')
         self.build()
         one = self.page('a/ONE.html')
-        self.assertIn('<span lang="zh-Hans">「</span>V<sub>4</sub> is forced<span lang="zh-Hans">」，</span>'
-                      .replace('，', ''), one.replace('」,', '」'))
+        self.assertIn('<span lang="zh-Hans">「</span>V<sub>4</sub> is forced<span lang="zh-Hans">」</span>, read', one)
         self.assertIn('read as <span lang="zh-Hans">生生</span> (<code>代码</code>)', one)
 
     def test_every_page_has_a_way_past_its_header_and_the_404_page_follows_a_markdown_address(self):
@@ -973,7 +972,46 @@ class SiteTests(unittest.TestCase):
         self.assertIn('<main id="main">', one)
         missing = self.page('404.html')
         self.assertNotIn('class="skip"', missing)  # under its <base>, #main would lead to the home
-        self.assertIn("replace(/\\.md$/, '.html')", missing)
+        (self.tmp / 'onward.js').write_text(re.search(r'<script>(.*?)</script>', missing, re.S).group(1))
+        stage = ('const out = [], src = require("fs").readFileSync(process.argv[1], "utf8"); '
+                 'for (const p of ["/r/a/README.md", "/r/a/X.md", "//evil.example/x.md", "/r/a/X.html", "/r/aREADME.md"]) '
+                 '{ globalThis.location = {pathname: p, hash: "#h", replace: u => out.push(u)}; new Function(src)(); } '
+                 'console.log(JSON.stringify(out));')
+        node = shutil.which('node')
+        if node:  # the page a Markdown address names, on this site; an address that leads off the site is kept on it
+            got = json.loads(subprocess.run([node, '-e', stage, str(self.tmp / 'onward.js')], capture_output=True, text=True, check=True).stdout)
+            self.assertEqual(got, ['/r/a/index.html#h', '/r/a/X.html#h', '/evil.example/x.html#h', '/r/aREADME.html#h'])
+
+
+    def test_a_thesis_without_an_anchor_and_the_overview_are_found_by_their_names(self):
+        (self.tmp / 'a/ONE.md').write_text('# One\n\n## What it is\n\n**Thesis T4. The scope can be installed.** Text.\n\n'
+                                           '**Thesis T6.** *A break is seen coming.* Text.\n')
+        (self.tmp / 'a/chapters/README.md').write_text('# T\n\n' + CHAPTERS.split('\n', 2)[2])
+        self.build(nav=[['index.html', 'Home'], ['a/chapters/README.md', 'Overview']])
+        one = self.page('a/ONE.html')
+        self.assertIn('<p id="t4"><strong>Thesis T4.', one)
+        index = json.loads(self.page('search.json'))
+        heads = next(p for p in index['pages'] if p['u'] == 'a/ONE.html')['h']
+        self.assertIn(['Thesis T4: The scope can be installed', 't4'], heads)
+        self.assertIn(['Thesis T6: A break is seen coming.', 't6'], heads)
+        self.assertEqual(next(p for p in index['pages'] if p['u'] == 'a/chapters/index.html')['t'], 'Overview · T')
+
+    def test_a_glossary_never_widens_and_a_changed_bullet_starts_a_new_list(self):
+        (self.tmp / 'GLOSSARY.md').write_text('# Glossary\n\n| Term | Sense | Home |\n|---|---|---|\n'
+                                              '| generation, keeping, degeneration (生成, 守, 退化) | ' + 'what forms and lasts ' * 30 + '| x |\n')
+        (self.tmp / 'a/ONE.md').write_text('# One\n\n## What it is\n\n- a\n\n* b\n')
+        self.files.add('GLOSSARY.md')
+        self.build(pages=SITE['pages'] + ['GLOSSARY.md'])
+        self.assertNotIn('table wide', self.page('GLOSSARY.html'))
+        self.assertIn('<ul><li>a</li></ul>\n<ul><li>b</li></ul>', self.page('a/ONE.html'))
+
+    def test_a_record_stated_in_chinese_says_so(self):
+        record = 'theories/becoming/results/records/closed-capture.md'
+        (self.tmp / 'a/chapters/02-MAP.md').write_text(CHAPTER.replace('# The map', '# 古文'))
+        (self.tmp / record).write_text('# Closed\n\n`closed-capture` · **recorded-checked** · theorem · F01\n')
+        self.files.add(record)
+        self.build(pages=SITE['pages'] + [record])
+        self.assertIn('stated in <span lang="zh-Hans">古文</span></a>', self.page(record[:-3] + '.html'))
 
 
 class ScreenPatternTests(unittest.TestCase):
