@@ -875,9 +875,10 @@ def crosswalk_page(atlas: dict) -> str:
            _no_relation(entries, totals_r), '',
            START_HERE, '',
            f'![How the earlier folders and the domains of thought meet the live account]({_href(OVERVIEW)})', '',
-           '*Drawn by connection_map.py from the crosswalk’s claims, on the pages its table links: each thread joins a folder or domain to the part of the account its '
-           'claims are read against, coloured by relation, and every thread is an AI reading, no person’s. To explore the same data, '
-           f'open the connection map: on the reader’s site its Connections page, or [map.html]({_href(ATLAS + "/map.html")}) opened from a clone; GitHub shows map.html only as source.*', '',
+           '*Drawn by connection_map.py from the crosswalk’s claims, on the pages its table links: a row per folder or domain, a column per part of the account '
+           'its claims are read against, and in each cell a dot per relation, filled where the account takes the claim up and a ring where it is proposed here; '
+           'every dot is an AI reading, no person’s. To explore the same data, open the connection map: on the reader’s site, once it is published, its '
+           f'Connections page; or [map.html]({_href(ATLAS + "/map.html")}) opened from a clone; GitHub shows map.html only as source.*', '',
            *_crosswalk_lead(atlas, ATLAS),
            '<a id="the-groups"></a>', '', f'{len(entries)} entries in {len(groups)} groups, each on its own page:', '',
            '| Group | Entries | ' + ' | '.join(carried) + ' | ' + ' | '.join(relations) + ' | ' + ' | '.join(f'agreement of {a}' for a in agreements) + ' |',
@@ -978,7 +979,7 @@ def crosswalk_zh_page(atlas: dict) -> str:
     out = [GENERATED, '', '# 对照表：早先的理论文件夹与各思想领域', '', zh_fronts.nav_line(CROSSWALK_ZH), '', '{{time}}', '',
            '*由 AI 依[英文的对照表](CROSSWALK.md)写成，尚无人审查它的记录；义以英文版为准。各组的条目在英文页上。*', '',
            f'![早先的文件夹与各思想领域怎样与现行之论相接]({_href(OVERVIEW_ZH, ATLAS)})', '',
-           f'*由 connection_map.py 依同一份数据画出，图中文字为 AI 所译（[英文图]({_href(OVERVIEW, ATLAS)})）：每一条线把一个文件夹或领域连到它的主张所对照的本论那一部分，按关系着色；每一条线都是 AI 的读法，没有人的。*', '',
+           f'*由 connection_map.py 依同一份数据画出，图中文字为 AI 所译（[英文图]({_href(OVERVIEW, ATLAS)})）：每一行是一个文件夹或领域，每一列是它的主张所对照的本论那一部分；每格中每种关系一个点，按关系着色，本论承接者为实心，此处提出者为空心；每一个点都是 AI 的读法，没有人的。*', '',
            '**它是什么。** 每一个早先的理论文件夹与每一个思想领域：它以自己的话主张了什么，在现行之论中又成了什么。它是证据层，不是用来通读的。它不产生任何结果；'
            '每一条都是 AI 的读法，没有人的。共用一个词不是对应，结构上的相合不是意义上的相合，它也不代表任何传统发言。未承继是一种结局，不是缺陷。'
            '来源不存于此处时，所说的出自 AI 的知识，没有对照原文核对过。', '']

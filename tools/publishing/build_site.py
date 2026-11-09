@@ -1411,7 +1411,8 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
         map_nav = [(label, target if target in SPECIAL else out_path(target)) for target, label in cfg.get('nav', [])
                    if target in SPECIAL or target in pages]
         made = pathlib.Path(connection_map.site_map(tmp, f"https://github.com/{cfg['repository']}/blob/{commit}/",
-                                                    on_site, home='index.html', nav=map_nav, search='assets/search.js'))
+                                                    on_site, home='index.html', nav=map_nav, search='assets/search.js',
+                                                    name=cfg.get('title', 'The Theory of Becoming'), languages=LANGUAGE_LINKS))
         made.rename(out / MAP_PAGE)
         tmp.rmdir()
         drawn = (out / MAP_PAGE).read_text()

@@ -206,7 +206,7 @@
 <line x1="470" y1="1502.3" x2="496" y2="1502.3" stroke="#57534e" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
 <text x="506" y="1507.3" font-size="14" text-anchor="start" fill="#1c1917">应用（application），一个被复用的结果，连</text>
 <text x="506" y="1525.3" font-size="14" text-anchor="start" fill="#1c1917">同其对应与所添的前提（点线）。</text>
-<line x1="470" y1="1542.3" x2="496" y2="1542.3" stroke="#a8a29e" stroke-opacity="0.45" stroke-width="4" stroke-linecap="round"/>
+<line x1="470" y1="1542.3" x2="496" y2="1542.3" stroke="#a8a29e" stroke-opacity="0.45" stroke-width="3.4" stroke-linecap="round"/>
 <text x="506" y="1547.3" font-size="14" text-anchor="start" fill="#1c1917">辐条：粗细表示该章核心模块中在文法上陈述其</text>
 <text x="506" y="1565.3" font-size="14" text-anchor="start" fill="#1c1917">律者所占的比例，其数写在章旁，作“m 个模块</text>
 <text x="506" y="1583.3" font-size="14" text-anchor="start" fill="#1c1917">中 k 个在文法上”。它计的是模块，不是推导而</text>

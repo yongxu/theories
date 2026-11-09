@@ -298,14 +298,28 @@ class Drawing(unittest.TestCase):
         self.assertEqual(spine.drawn_otherwise({('a', 'b'): v(3, 5, 0), ('c', 'd'): v(3, 0, 1)})[:2], (2, 'a dashed or dotted curve of another kind'))
         self.assertEqual(spine.drawn_otherwise({('a', 'b'): v(12, 0, 0)})[0], 0)
 
-    def test_fronts_carry_the_two_sentences_above_the_picture(self):
+    def test_every_word_in_the_pictures_is_at_least_13_px(self):
+        g = (ROOT / 'theories/becoming/results/data/theory-graph.json').read_text(encoding='utf-8')
+        pages, errors = spine.render(g)
+        self.assertEqual(errors, [])
+        for path in (spine.SVG['en'], spine.SVG['zh'], spine.FIRST['en'], spine.FIRST['zh']):
+            sizes = [float(x) for x in re.findall(r'font-size="([0-9.]+)"', pages[path])]
+            self.assertTrue(sizes and min(sizes) >= 13, (path, min(sizes)))
+
+    def test_fronts_carry_the_short_key_under_the_picture(self):
         s = spine.spec()
         for path, lang in (('theories/becoming/ONE-PAGE.md', 'en'), ('theories/becoming/THE-THEORY-OF-BECOMING.md', 'en'),
                            ('theories/becoming/ONE-PAGE.zh.md', 'zh'), ('theories/becoming/THE-THEORY-OF-BECOMING.zh.md', 'zh')):
             text = (ROOT / path).read_text(encoding='utf-8')
-            sentences = spine.how_to_read(s, lang)
-            self.assertIn(sentences, text, path)
-            self.assertLess(text.index(sentences), text.index('results/spine'), path)
+            key = spine.picture_key(s, lang, path)
+            self.assertIn(key, text, path)
+            self.assertGreater(text.index(key), text.index('](results/spine'), path)  # the picture first, its key under it
+            self.assertNotIn(spine.how_to_read(s, lang), text, path)  # the full paragraph is THEORY-GRAPH's
+        key = spine.picture_key(s, 'en')
+        for kept in ('the AI-written records assign and nothing checks against the Lean', 'no record may close a cycle',
+                     'not results derived', '11 are [derived]', '1 is a root form', '6 are counting laws', '99 stand at a [named distance]',
+                     '#the-spine-what-it-shows-and-does-not-show'):
+            self.assertIn(kept, key)
         self.assertIn('About a tenth of the 117', spine.how_to_read(s, 'en'))
         self.assertIn('counting laws, below the grammar (6)', spine.how_to_read(s, 'en'))
 
@@ -334,15 +348,16 @@ class Drawing(unittest.TestCase):
         total = sum(int(c) for l in rows for c in l.strip('|').split('|')[2:])
         kinds = sum(1 for e in g['edges'] if e['type'] in spine.KINDS)
         self.assertEqual(total, kinds)
-        # each kind's matrix among the eight chapters agrees with the list's pairs among them
-        names = {spine.theory_graph.REGION_TITLES[k].split(':')[0]: k for k in spine.spec()['order']}
+        # each kind's matrix among the eight chapters agrees, cell by cell, with the list's pair for that row and column
+        order = spine.spec()['order']
+        names = [spine.theory_graph.REGION_TITLES[k].split(':')[0] for k in order]
+        listed = {(c[0].strip(), c[1].strip()): c[2:] for c in (l.strip('|').split('|') for l in rows)}
         for i, kind in enumerate(spine.KINDS):
             m = lines.index(f'**{kind}**' + (' (analogy, not a dependence)' if kind == 'related' else ''))
-            cells = [l for l in lines[m + 4:m + 4 + 8]]
-            matrix = sum(int(c) for l in cells for c in (x.strip() for x in l.strip('|').split('|')[1:]) if c != '·')
-            listed = sum(int(l.strip('|').split('|')[2 + i]) for l in rows
-                         if l.strip('|').split('|')[0].strip() in names and l.strip('|').split('|')[1].strip() in names)
-            self.assertEqual(matrix, listed, kind)
+            for a, line in zip(names, lines[m + 4:m + 4 + 8]):
+                for b, cell in zip(names, (x.strip() for x in line.strip('|').split('|')[1:])):
+                    want = int(listed[(a, b)][i]) if (a, b) in listed else 0
+                    self.assertEqual(0 if cell == '·' else int(cell), want, (kind, a, b))
 
 
 class Tables(unittest.TestCase):

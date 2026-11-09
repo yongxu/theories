@@ -212,7 +212,7 @@ class SiteTests(unittest.TestCase):
         from tools.research import connection_map
         calls = []
 
-        def stub(out_dir, link_base, site_paths=None, home='index.html', nav=None, search=None):
+        def stub(out_dir, link_base, site_paths=None, home='index.html', nav=None, search=None, name=None, languages=None):
             calls.append((link_base, dict(site_paths), home, list(nav or [])))
             out_dir = Path(out_dir)
             out_dir.mkdir(parents=True, exist_ok=True)
@@ -756,7 +756,7 @@ class SiteTests(unittest.TestCase):
     def test_the_map_says_when_github_may_not_have_the_commit(self):
         from tools.research import connection_map
 
-        def stub(out_dir, link_base, site_paths=None, home='index.html', nav=None, search=None):
+        def stub(out_dir, link_base, site_paths=None, home='index.html', nav=None, search=None, name=None, languages=None):
             out_dir = Path(out_dir)
             out_dir.mkdir(parents=True, exist_ok=True)
             (out_dir / 'map.html').write_text('<!doctype html><head><title>map</title></head><body><header class="top">'

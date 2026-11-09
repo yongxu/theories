@@ -325,15 +325,18 @@ def page(data: dict, bar: str = '') -> str:
 
 
 def site_bar(home: str = 'index.html', nav: list[tuple[str, str]] | None = None, search: str | None = None,
-             current: str = 'connections.html') -> str:
+             current: str = 'connections.html', name: str = 'The Theory of Becoming', languages: dict | None = None) -> str:
     """The site's header above the map, as every page of the site has it: its name linking home, its line of (label,
     href) links, each href relative to the map and the map's own marked as the current page, and, given the site's
     search script, the Search button that script opens."""
+    languages = {'中文': 'zh-Hans', 'English': 'en'} if languages is None else languages
     links = ''.join(f'<a href="{html.escape(href)}"' + (' aria-current="page"' if href == current else '') + f'>{html.escape(label)}</a>'
-                    for label, href in (nav or []))
+                    for label, href in (nav or []) if label not in languages)
+    lang = ''.join(f'<a class="lang" href="{html.escape(href)}" hreflang="{languages[label]}" lang="{languages[label]}">{html.escape(label)}</a>'
+                   for label, href in (nav or []) if label in languages)
     script = f'<script src="{html.escape(search)}" data-root="" defer></script>\n' if search else ''
-    return (f'{script}<header class="top"><a class="brand" href="{html.escape(home)}">The Theory of Becoming</a>'
-            f'<nav aria-label="Site">{links}</nav><button class="find" type="button" hidden>Search</button></header>\n')
+    return (f'{script}<header class="top"><a class="brand" href="{html.escape(home)}">{html.escape(name)}</a>'
+            f'<nav aria-label="Pages">{links}</nav>{lang}<button class="find" type="button" hidden>Search</button></header>\n')
 
 
 def check_site(link_base: str, site_paths: dict[str, str] | None = None) -> None:
@@ -347,7 +350,8 @@ def check_site(link_base: str, site_paths: dict[str, str] | None = None) -> None
 
 
 def site_map(out_dir: str | Path, link_base: str, site_paths: dict[str, str] | None = None, home: str = 'index.html',
-             nav: list[tuple[str, str]] | None = None, search: str | None = None) -> Path:
+             nav: list[tuple[str, str]] | None = None, search: str | None = None, name: str = 'The Theory of Becoming',
+             languages: dict | None = None) -> Path:
     """Write OUT_DIR/map.html for a site and return its path. A link that leaves the map goes to `link_base` followed by
     the repository path, `link_base` ending in / (a permalink prefix such as https://github.com/<owner>/<repo>/blob/<sha>/,
     or a relative path to a copy of the repository); a repository path in `site_paths` goes instead to the URL the site
@@ -365,7 +369,7 @@ def site_map(out_dir: str | Path, link_base: str, site_paths: dict[str, str] | N
     data['site'] = dict(sorted((site_paths or {}).items()))
     out = Path(out_dir) / 'map.html'
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(page(data, site_bar(home, nav, search)), encoding='utf-8')
+    out.write_text(page(data, site_bar(home, nav, search, name=name, languages=languages)), encoding='utf-8')
     return out
 
 
@@ -374,6 +378,7 @@ def site_map(out_dir: str | Path, link_base: str, site_paths: dict[str, str] | N
 OVERVIEW = atlas_tool.OVERVIEW
 OVERVIEW_ZH = atlas_tool.OVERVIEW_ZH
 OV_W = 900
+DOT_MAX = 2.9  # a dot's largest radius, under half the space between two relations' dots in a cell
 OV_INK, OV_MUTED, OV_PAPER, OV_RULE = '#1e1a15', '#6d6355', '#fcfcfb', '#d6d3d1'
 OV_COLOUR = {'agreement': '#1f6fbf', 'scope': '#b58a00', 'divergence': '#d1361b', 'contrary-reading': '#0f8a6e'}
 OV_DASH = {'scope': '7 3', 'contrary-reading': '1.5 3.5'}
@@ -430,10 +435,10 @@ OV_TEXT = {
                   'prominently than divergence.'),
            'critic': 'A random check of {sampled} entries estimates that about {label}% of all {n} carry a wrong label or target role and {fails}% a wrong reading.',
            'folders': '{n} earlier folders', 'claims': 'claims', 'domains': '{n} domains of thought', 'sep': ' · ',
-           'desc': ' Drawn as a matrix: a row per folder or domain, a column per part of the account, in each cell a dot per relation, filled where the account states the connection and a ring where it is proposed here. The relations count the claims drawn; {with_relation} that stand only in history or are not carried also carry one, which the crosswalk’s table counts.',
-           'dot': '{n} claims, {relation}, read against {part}; {how}',
-           'stated': 'the account states the connection', 'fresh': 'proposed here, not stated by the account',
-           'stated_key': 'filled: the account states the connection', 'fresh_key': 'ring: proposed here, not stated by the account',
+           'desc': ' Drawn as a matrix: a row per folder or domain, a column per part of the account, in each cell a dot per relation, filled where the account takes the claim up and a ring where it is proposed here. The relations count the claims drawn; {with_relation} that stand only in history or are not carried also carry one, which the crosswalk’s table counts.',
+           'dot': '{n} claims, {relation}, read against {part}; {how}', 'dot_one': '{n} claim, {relation}, read against {part}; {how}',
+           'stated': 'the account takes it up', 'fresh': 'proposed here, not stated by the account',
+           'stated_key': 'filled: the account takes it up (states it, or says otherwise)', 'fresh_key': 'ring: proposed here, not stated by the account',
            'size': '{n} claims', 'size_one': '{n} claim',
            'notes': ('In a cell, a dot per relation in the order above, its area growing with the claims; the stated dots above, the proposed below.',
                      'The legend’s counts are drawn claims, by relation. The {loose} claims only in history or not carried draw no dot',
@@ -442,24 +447,24 @@ OV_TEXT = {
                      'a claim read against several parts counting at each.',
                      None,
                      'Every claim with its targets and their standings: the crosswalk (CROSSWALK.md, in the same folder). The same data to explore:',
-                     'the connection map, on the reader’s site its Connections page, from a clone map.html in this folder (GitHub shows it only as source).')},
+                     'the connection map: on the reader’s site, once it is published, its Connections page; or from a clone map.html in this folder (GitHub shows it only as source).')},
     'zh': {'title': '早先的文件夹与各思想领域怎样与现行的本论相接',
            'lede': ('由 connection_map.py 依对照表的 {n} 条主张画出，每一条都对照现行的本论来读。一行是一个早先的文件夹或一个思想领域，',
                     '一列是它的主张所对照的本论那一部分；横着读一行。图中文字为 AI 所译，义以英文版为准。'),
            'ai': ('每一个点都是 AI 的读法，没有人的。一个点不是证明；相合画得并不比相分更显眼。', ''),
            'critic': '随机复核 {sampled} 条，据此估计全部 {n} 条中约 {label}% 的标签或目标角色有误，约 {fails}% 的读法有误。',
            'folders': '{n} 个早先的文件夹', 'claims': '主张', 'domains': '{n} 个思想领域', 'sep': ' · ',
-           'desc': '画成一张矩阵：每个文件夹或领域一行，本论每一部分一列，每格中每种关系一个点；本论陈述这一连接者为实心，在此处提出者为空心圆环。关系计的是画出的主张；仅存于历史或未承继者中另有 {with_relation} 条也带有关系，对照表的表格计入它们。',
-           'dot': '{n} 条主张，{relation}，对照{part}；{how}',
-           'stated': '本论陈述这一连接', 'fresh': '在此处提出，本论没有陈述',
-           'stated_key': '实心：本论陈述这一连接', 'fresh_key': '空心圆环：在此处提出，本论没有陈述',
+           'desc': '画成一张矩阵：每个文件夹或领域一行，本论每一部分一列，每格中每种关系一个点；本论承接者为实心，在此处提出者为空心圆环。关系计的是画出的主张；仅存于历史或未承继者中另有 {with_relation} 条也带有关系，对照表的表格计入它们。',
+           'dot': '{n} 条主张，{relation}，对照{part}；{how}', 'dot_one': '{n} 条主张，{relation}，对照{part}；{how}',
+           'stated': '本论承接它', 'fresh': '在此处提出，本论没有陈述',
+           'stated_key': '实心：本论承接它（陈述它，或另有说法）', 'fresh_key': '空心圆环：在此处提出，本论没有陈述',
            'size': '{n} 条主张', 'size_one': '{n} 条主张',
            'notes': ('每格中，每种关系一个点，次序同上，面积随主张数增加；陈述者在上，提出者在下。',
                      '图例中的计数是画出的主张，按关系计。仅存于历史或未承继的 {loose} 条主张不画点（其中 {with_relation} 条带有关系，对照表的表格计入它们）。',
                      '文件夹或领域旁的数字计其全部主张；本论某一部分旁的数字计对照它而画出的主张，一条主张对照几个部分，就在每一部分各计一次。',
                      None,
                      '每一条主张及其目标与地位：对照表（同一文件夹中的 CROSSWALK.md；中文概览是 CROSSWALK.zh.md）。',
-                     '同样的数据可在连接图中探索：读者网站上的“连接”页，或在克隆中打开此文件夹的 map.html（GitHub 只把它显示为源代码）。')}}
+                     '同样的数据可在连接图中探索：读者网站发布后其上的“Connections”（连接图）页，或在克隆中打开此文件夹的 map.html（GitHub 只把它显示为源代码）。')}}
 
 
 def _warp_zh(w: dict) -> str:
@@ -553,8 +558,10 @@ def overview_svg(data: dict, lang: str = 'en') -> str:
     bottom = (y0 + (len(domains) - 1) * row) if domains else top + (len(folders) - 1) * row
     height = int(bottom + 250)
     loose = sum(T['carried'].get(k, 0) for k in ABSENT)
-    desc = (' '.join(_ledes(data, pointer=False)) + words['desc'].format(with_relation=_with_relation(data))
-            if not zh else _ledes_zh(data) + words['desc'].format(with_relation=_with_relation(data)))
+    # the map's ledes, in the picture's own word for what it draws: a dot, where the map draws a thread
+    desc = (' '.join(_ledes(data, pointer=False)).replace('Every thread', 'Every dot').replace('A thread is', 'A dot is')
+            + words['desc'].format(with_relation=_with_relation(data)) if not zh else
+            _ledes_zh(data).replace('每一条线', '每一个点').replace('一条线不是证明', '一个点不是证明') + words['desc'].format(with_relation=_with_relation(data)))
     out = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {OV_W} {height}" width="{OV_W}" height="{height}" role="img" '
            f'aria-labelledby="cx-title cx-desc" font-family="{html.escape(OV_FONT)}">',
            f'<title id="cx-title">{html.escape(words["title"])}</title>',
@@ -602,9 +609,9 @@ def overview_svg(data: dict, lang: str = 'en') -> str:
         if t['group'] not in y_of or t['warp'] not in x_of:
             continue
         cx, cy = x_of[t['warp']] + slot[t['relation']], y_of[t['group']] + (4.5 if t['fresh'] else -4.5)
-        r = min(3.6, 1.0 + 0.55 * t['n'] ** 0.5)
+        r = min(DOT_MAX, 1.0 + 0.4 * t['n'] ** 0.5)
         fill = f'fill="{OV_PAPER}" stroke="{OV_COLOUR[t["relation"]]}" stroke-width="1.2"' if t['fresh'] else f'fill="{OV_COLOUR[t["relation"]]}"'
-        note = words['dot'].format(n=t['n'], relation=_rel_word(data, t['relation'], zh), part=names[t['warp']],
+        note = words['dot_one' if t['n'] == 1 else 'dot'].format(n=t['n'], relation=_rel_word(data, t['relation'], zh).lower(), part=names[t['warp']],
                                    how=words['fresh'] if t['fresh'] else words['stated'])
         out.append(f'<circle class="thread" cx="{cx:.1f}" cy="{cy:.1f}" r="{r:.2f}" {fill}><title>{html.escape(note)}</title></circle>')
     # the key: the relations with their drawn claims, filled and ring, and the sizes
@@ -622,7 +629,7 @@ def overview_svg(data: dict, lang: str = 'en') -> str:
     y += 24
     x = 24
     for n in (1, 5, 20):
-        out.append(f'<circle cx="{x + 5}" cy="{y - 4.5}" r="{min(3.6, 1.0 + 0.55 * n ** 0.5):.2f}" fill="{OV_MUTED}"/>')
+        out.append(f'<circle cx="{x + 5}" cy="{y - 4.5}" r="{min(DOT_MAX, 1.0 + 0.4 * n ** 0.5):.2f}" fill="{OV_MUTED}"/>')
         label = (words['size_one'] if n == 1 else words['size']).format(n=n)
         out.append(_ov_text(x + 14, y, label, 13))
         x += 34 + sum(13 if ord(ch) > 0x2e80 else 7 for ch in label)
@@ -667,15 +674,16 @@ def start_here(data: dict, rows: int = 5) -> list[str]:
     groups = {g['id']: g for g in data['groups']}
     warp = {w['id']: w for w in data['warp']}
     here = posixpath.dirname(atlas_tool.CROSSWALK)
-    threads = sorted((t for t in overview_threads(data) if not t['fresh']), key=lambda t: (-t['n'], t['group'], t['warp'], t['relation']))[:rows]
-    out = ['**Start here.** The thickest threads in the picture below that the account states (none proposed here): '
-           'a folder or domain, the part of the account its claims are read against, the relation and how many claims. '
-           "Each folder's page gives its claims one by one.", '',
+    ranked = sorted((t for t in overview_threads(data) if not t['fresh']), key=lambda t: (-t['n'], t['group'], t['warp'], t['relation']))
+    threads = [t for t in ranked if len(ranked) <= rows or t['n'] >= ranked[rows - 1]['n']]  # a tie at the cut is kept whole
+    out = ['**Start here.** The thickest threads in the picture below that the account takes up (states, or says otherwise; '
+           'none proposed here), with any tie at the last: a folder or domain, the part of the account its claims are read '
+           "against, the relation and how many claims. Each folder's page gives its claims one by one.", '',
            '| Folder or domain | Read against | Relation | Claims |', '|---|---|---|---:|']
     for t in threads:
         g, w = groups[t['group']], warp[t['warp']]
         out.append(f'| [{_short(g["title"])}]({posixpath.relpath(atlas_tool.group_path(g), here)}) | '
-                   f'[{w["title"]}]({posixpath.relpath(w["path"], here)}) | {t["relation"]} | {t["n"]} |')
+                   f'[{OV_WARP.get(w["id"], w["title"])}]({posixpath.relpath(w["path"], here)}) | {t["relation"]} | {t["n"]} |')
     return out
 
 
@@ -710,11 +718,14 @@ CSS = r'''
 header.top{position:sticky;top:0;z-index:2;display:flex;align-items:baseline;gap:1.2rem;padding:9px var(--gutter-r) 9px var(--gutter-l);border-bottom:1px solid var(--rule);font:500 14px/1.3 var(--sans);background:var(--paper)}
 header.top .brand{color:var(--ink);font-weight:600;white-space:nowrap;flex:none;text-decoration:none}
 header.top nav{display:flex;gap:.9rem;min-width:0;overflow-x:auto;white-space:nowrap;scrollbar-width:none}header.top nav::-webkit-scrollbar{display:none}
+header.top a.lang{flex:none;white-space:nowrap;color:var(--muted);text-decoration:none}
 header.top nav a{color:var(--muted);text-decoration:none}header.top nav a:hover{text-decoration:underline}header.top nav a[aria-current="page"]{color:var(--ink);border-bottom:2px solid var(--ink)}
 button.find{flex:none;margin-left:auto;font:inherit;color:var(--muted);background:none;border:1px solid var(--rule);border-radius:4px;padding:0 .5rem;cursor:pointer}button.find:hover{color:var(--ink);border-color:var(--muted)}
 div.find-panel{position:fixed;top:3rem;left:50%;transform:translateX(-50%);z-index:3;width:min(calc(100vw - 32px),40rem);max-height:76vh;overflow-y:auto;padding:.7rem;background:var(--panel);border:1px solid var(--rule);border-radius:6px;box-shadow:0 8px 28px rgba(0,0,0,.22);font:15px/1.35 var(--sans)}
 div.find-panel input{width:100%;font:inherit;padding:.4rem .5rem;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:4px}
 div.find-panel p{margin:.5rem 0 0;color:var(--muted)}div.find-panel p:empty{display:none}div.find-panel ul{list-style:none;padding:0;margin:.5rem 0 0}
+@media (max-width:600px){header.top{position:static;flex-wrap:wrap}header.top nav{order:3;flex-basis:100%;flex-wrap:wrap;white-space:normal;overflow:visible}div.find-panel{top:.6rem}}
+#detail{scroll-margin-top:56px}
 div.find-panel li{margin:0;border-top:1px solid var(--rule)}div.find-panel a{display:block;padding:.4rem .2rem;color:var(--ink)}div.find-panel small{display:block;color:var(--muted);font-size:.8em}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 var(--serif)}
@@ -743,7 +754,7 @@ nav.views a[aria-current=page]{color:var(--ink);border-bottom-color:var(--ink)}
 .c-agreement{--c:var(--agreement)}.c-scope{--c:var(--scope)}.c-divergence{--c:var(--divergence)}.c-contrary-reading{--c:var(--contrary-reading)}.c-none{--c:var(--muted)}
 .layout{display:grid;grid-template-columns:minmax(0,1fr);gap:24px}
 @media (min-width:1240px){.layout{grid-template-columns:minmax(0,1fr) 410px;align-items:start}
-#detail{position:sticky;top:12px;max-height:calc(100vh - 24px);overflow:auto}}
+#detail{position:sticky;top:56px;max-height:calc(100vh - 68px);overflow:auto}}
 .loom{position:relative;display:grid;grid-template-columns:minmax(0,1fr) clamp(56px,9vw,150px) minmax(0,.86fr) clamp(56px,9vw,150px) minmax(0,1fr);align-items:stretch}
 .loom svg{position:absolute;inset:0;pointer-events:none;overflow:visible}
 .col{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;justify-content:space-between;gap:4px;position:relative;z-index:1;min-width:0}

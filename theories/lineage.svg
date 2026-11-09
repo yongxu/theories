@@ -98,7 +98,7 @@
 <circle cx="891.1" cy="564.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
 <circle cx="910.7" cy="564.0" r="7" fill="#ffffff" stroke="#CC79A7" stroke-width="2.4"/>
 <circle cx="910.7" cy="547.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="950.0" cy="564.0" r="7" fill="#1c1917" stroke="#CC79A7" stroke-width="2.4"/>
+<circle cx="950.0" cy="564.0" r="7" fill="#ffffff" stroke="#CC79A7" stroke-width="2.4"/>
 <line x1="51.5" y1="555.0" x2="51.5" y2="289.0" stroke="#57534e" stroke-width="1"/>
 <text x="45.5" y="284.0" font-size="14" text-anchor="start" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">1 · Metamunity: the city as a structure</text>
 <line x1="179.3" y1="538.0" x2="179.3" y2="311.0" stroke="#0072B2" stroke-width="1"/>
@@ -130,7 +130,7 @@
 <line x1="891.1" y1="555.0" x2="891.1" y2="267.0" stroke="#57534e" stroke-width="1"/>
 <text x="897.1" y="262.0" font-size="14" text-anchor="end" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">46 · T2 narrowed</text>
 <line x1="950.0" y1="555.0" x2="950.0" y2="245.0" stroke="#CC79A7" stroke-width="1"/>
-<text x="956.0" y="240.0" font-size="14" font-weight="bold" text-anchor="end" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">49 · No should; T8 an offer</text>
+<text x="956.0" y="240.0" font-size="14" font-weight="bold" text-anchor="end" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">49 · Asserts no should; T8 its makers' offer</text>
 <text x="50.0" y="782.0" font-size="14" font-weight="bold" text-anchor="start" fill="#1c1917">Shape, what states it:</text>
 <circle cx="231.5" cy="777.0" r="7" fill="#e7e5e4" stroke="#1c1917" stroke-width="1.3"/>
 <text x="246.5" y="782.0" font-size="14" text-anchor="start" fill="#1c1917">public: all 49 so far (none yet labelled private and unpublished, or AI reconstruction)</text>
@@ -143,11 +143,11 @@
 <text x="647.6" y="808.0" font-size="14" text-anchor="start" fill="#1c1917">the ethics</text>
 <text x="50.0" y="834.0" font-size="14" font-weight="bold" text-anchor="start" fill="#1c1917">Fill, who wrote what states it:</text>
 <circle cx="292.3" cy="829.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<text x="307.3" y="834.0" font-size="14" text-anchor="start" fill="#1c1917">a person's words (16)</text>
+<text x="307.3" y="834.0" font-size="14" text-anchor="start" fill="#1c1917">a person's words (15)</text>
 <circle cx="490.9" cy="829.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
 <text x="505.9" y="834.0" font-size="14" text-anchor="start" fill="#1c1917">AI-drafted from a person's words (13)</text>
 <circle cx="801.6" cy="829.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
-<text x="816.6" y="834.0" font-size="14" text-anchor="start" fill="#1c1917">AI-made (19)</text>
+<text x="816.6" y="834.0" font-size="14" text-anchor="start" fill="#1c1917">AI-made (20)</text>
 <circle cx="292.3" cy="853.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/><circle cx="292.3" cy="853.0" r="2.2" fill="#1c1917"/>
 <text x="307.3" y="858.0" font-size="14" text-anchor="start" fill="#1c1917">not stated (1)</text>
 <text x="50.0" y="888.0" font-size="13" text-anchor="start" fill="#57534e">A point's height carries no meaning: it keeps marks apart and lifts a titled point above its neighbours; a bold title is</text>

@@ -192,6 +192,8 @@ class OverviewTests(unittest.TestCase):
         self.assertEqual(len(dots), len(threads))  # a dot per thread, in its row and column
         self.assertEqual(sum('stroke=' in d for d in dots), sum(t['fresh'] for t in threads))  # proposed here: a ring
         self.assertIn(f'fill="{cm.OV_COLOUR["divergence"]}"', self.svg)  # stated: filled in its relation's colour
+        self.assertIn('<title>1 claim, divergence, read against', self.svg)  # one claim, the relation in lower case
+        self.assertNotIn('thread', re.search(r'<desc id="cx-desc">(.*?)</desc>', self.svg, re.S).group(1).lower().replace('threads', ''))
 
     def test_a_title_with_markup_is_escaped_and_a_relation_without_a_colour_is_named(self):
         import xml.etree.ElementTree as ET
@@ -300,9 +302,12 @@ class SiteTests(unittest.TestCase):
         body = page.split('<body>', 1)[1]
         self.assertTrue(body.lstrip().startswith('<script src="assets/search.js" data-root="" defer></script>\n'
                                                  '<header class="top"><a class="brand" href="index.html">The Theory of Becoming</a>'
-                                                 '<nav aria-label="Site"><a href="chapters.html">Chapters</a>'
+                                                 '<nav aria-label="Pages"><a href="chapters.html">Chapters</a>'
                                                  '<a href="connections.html" aria-current="page">Connections</a></nav>'
                                                  '<button class="find" type="button" hidden>Search</button></header>'))  # the site's header, as every page has it
+        with_zh = cm.site_bar(nav=[('Chapters', 'chapters.html'), ('中文', 'README.zh.html')], name='A site')
+        self.assertIn('>A site</a><nav aria-label="Pages"><a href="chapters.html">Chapters</a></nav>'
+                      '<a class="lang" href="README.zh.html" hreflang="zh-Hans" lang="zh-Hans">中文</a>', with_zh)  # outside the line, as the site has it
         noscript = re.search(r'<noscript>(.*?)</noscript>', page, re.S).group(1)
         lede, sub = cm._ledes(self.data(page))
         self.assertIn(f'<p class="lede" id="lede">{html.escape(lede)}</p>', page)  # written in, the same with or without script
