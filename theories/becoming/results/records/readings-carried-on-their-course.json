@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-11-09T15:44:53+00:00",
+  "reviewed_at_utc": "2026-11-09T15:56:52+00:00",
   "statement": {
-    "en": "A world whose relata act by the readings they carry is the course those acts generate; the line read off it is descended by construction and carries its founders' inherited reading, and an ending pick is realized as an overdraw where every occasion picks that reading.",
-    "zh": "诸关系项依其所携读法而行之世界即此诸行为所生之程；读自其上之系由构造相传、携其始祖所传之读法；每一场合皆择此读法处，终止之择实现为透支。"
+    "en": "A world whose relata act by the readings they carry is the course those acts generate; the line read off it is descended by construction and carries its founders' inherited reading; with ending read as an overdraw of that course, G3's realization premise is the identity.",
+    "zh": "诸关系项依其所携读法而行之世界即此诸行为所生之程；读自其上之系由构造相传、携其始祖所传之读法；终读为此程之透支时，G3 之实现前提即为恒等。"
   },
   "laws": [
     {
@@ -50,8 +50,8 @@
       ]
     },
     {
-      "en": "Let alternatives be readings, each giving a world, and a reading end where its world's course overdraws a family from a short stock. Where every occasion picks the reading the line carries and the world is the course it generates, an ending pick is realized as an overdraw with nothing supplied, and the keeping-above-ending law follows for the line read off it.",
-      "zh": "设诸选项为读法，各给一世界；读法终者，其世界之程自短存而透支一族。每一场合皆择此系所携之读法、且世界即其所生之程处，终止之择无须给定即实现为透支，守高于终之律对读自其上之系成立。",
+      "en": "Let a reading end where its world's course overdraws a family from a short stock. Where every occasion picks the reading the line carries and the world is the course it generates, G3's realization premise is the identity, ending being defined as that overdraw; under G3's remaining premises some strict order according with the choices puts every non-ending reading above every ending one met with it.",
+      "zh": "设诸选项为读法，各给一世界；读法终者，其世界之程自短存而透支一族。每一场合皆择此系所携之读法、且世界即其所生之程处，G3 之实现前提即为恒等（终即定义为此透支）；在 G3 其余前提下，有一与诸择相合之严格序，置每一不终之读法于与之同遇之每一终者之上。",
       "declarations": [
         "Becoming.Flow.Overdraws",
         "Becoming.Flow.lineOf_persists_never_overdraws",
@@ -71,8 +71,8 @@
       ]
     },
     {
-      "en": "In the witness every course is the one the acts generate, each relatum acts by the reading it carries, readings are inherited along descent and the line carries its reading; the line reaches the dweller's line before the second step by clearing its habitat, and the dweller's line reaches the line only where it renews the source.",
-      "zh": "见证中每一程皆行为所生之程，各关系项依其所携读法而行，读法沿传承而继，此系携其读法；此系以清其栖地于第二步前及于栖者之系，栖者之系唯于续其源处及于此系。",
+      "en": "In the witness every course is the one the acts generate, each relatum acts by the reading it carries, readings are inherited along descent and the line carries its reading; the line reaches the dweller's line before the second step by clearing its habitat; with nothing coming back the dweller's line reaches nothing, and in the course where it renews the source it reaches the line.",
+      "zh": "见证中每一程皆行为所生之程，各关系项依其所携读法而行，读法沿传承而继，此系携其读法；此系以清其栖地于第二步前及于栖者之系；无所返时栖者之系无所及，于其续源之程则及于此系。",
       "declarations": [
         "Becoming.ReadingsPersist.Habitat.generated",
         "Becoming.ReadingsPersist.Habitat.world_byReading",
@@ -131,8 +131,8 @@
     "discrete-steps"
   ],
   "validation_scope": {
-    "en": "Pure core, axiom report empty; a leaf. Every law is near-definitional; the witness's courses are finite computations shown to be the generated ones. Written by an AI; a reader of another model read the statements cold against this record and its home (READER in the study folder); no human audit.",
-    "zh": "纯核心，公理报告为空；叶模块。诸律皆近于定义；见证之诸程为有限计算，并证其即所生之程。AI 所写；另一模型之读者对照本记录及其所在冷读诸陈述（见研究目录 READER）；无人类审计。"
+    "en": "Pure core, axiom report empty; a leaf. Every law is near-definitional; the witness has finitely many relata, its courses' balance proved for all steps and shown to be the generated ones. Written by an AI; readers of two other models read the statements cold against this record and its home (READER in the study folder); no human audit.",
+    "zh": "纯核心，公理报告为空；叶模块。诸律皆近于定义；见证之关系项有限，其诸程之平衡证于每一步，并证其即所生之程。AI 所写；另两模型之读者对照本记录及其所在冷读诸陈述（见研究目录 READER）；无人类审计。"
   },
   "next_delta": {
     "en": "A run made of the picks, so that occasions choosing different readings are realized on one course; and readings that vary along descent, so that how a reading arises, not only how it fares, is on the model.",
@@ -161,16 +161,16 @@
       },
       "interface": {
         "output": {
-          "en": "A line persisting through late cohorts never overdrew; its choices put keeping above ending.",
-          "zh": "存续至晚代之系从未透支；其择置守于终之上。"
+          "en": "A line persisting through late cohorts never overdrew; some strict order according with its choices puts keeping above ending on the pairs met.",
+          "zh": "存续至晚代之系从未透支；有一与其择相合之严格序，于同遇之对置守于终之上。"
         },
         "input": {
           "en": "The line read off the course its readings generate.",
           "zh": "读自其读法所生之程之系。"
         },
         "conditions": {
-          "en": "Balance, acting, dependence, gated renewal, coupled cohorts; every occasion picks the carried reading.",
-          "zh": "平衡、唯活者给、活需支撑、门控之更新、诸代耦合；每一场合皆择所携之读法。"
+          "en": "Balance, acting, dependence, gated renewal, coupled cohorts, no cycle shown; every occasion picks the carried reading.",
+          "zh": "平衡、唯活者给、活需支撑、门控之更新、诸代耦合、所示无环；每一场合皆择所携之读法。"
         },
         "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean"
       }
@@ -263,17 +263,22 @@
         "Becoming.ReadingsPersist.Habitat.lineD_slots",
         "Becoming.ReadingsPersist.Habitat.world_byReading"
       ],
-      "sha256": "42ae74726eb77a080decff5fafd1d98c6799276f01d35ee2e03b5f50b03f0f05"
+      "sha256": "42b5578ae541d8e6f942231710a2f22b31d48992c4ca9bf155fc6d3d5d7a8181"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zj2-readings-persist/NOTE.md",
       "role": "integration",
-      "sha256": "f9b8bf760e643068d69114e5c95ad8230072f6dcd95d2d67f6083de6046c9e43"
+      "sha256": "6bb337e441dd518d3f897304190b0a3f103ccedba36cb0272e5e8d14d3abb2a8"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zj2-readings-persist/READER.md",
+      "role": "review",
+      "sha256": "5a1fe08bd7ef565c523f82bd7cee20d93a94c5f86a95eda7625b060a47cbafad"
     },
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "3527ae9c5e501a0512dd3a5ff7145fdfd92aad0908510175bfb6f21738568be1"
+      "sha256": "9ea594a3dd3c1c09d8b7f932c5ad91c1577c38b2c10bbc29b0abcb7ad52c927f"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",

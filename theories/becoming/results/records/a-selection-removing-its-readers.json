@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-11-09T15:44:53+00:00",
+  "reviewed_at_utc": "2026-11-09T15:56:52+00:00",
   "statement": {
-    "en": "With the pool read off the course, a selection can remove its own readers: read off the pool its course gives, selection by persistence is never turned by removal, while read off a fixed pool it is; a reader whose coupling closure the alternatives agree on is kept alike.",
-    "zh": "池读自其程时，一选择可移除自身之读者：读自其程所给之池，以存续之选择从不为移除所转，读自定池则为所转；诸选项于其耦合闭包皆一致之读者两程无别。"
+    "en": "With the pool read off the course, selection by persistence read off it passes every course whose lines settle, one removing every line included, while read off a fixed pool it is turned by every removal; a reader whose coupling closure the alternatives agree on is kept or removed alike.",
+    "zh": "池读自其程时，诸系有定处读自其池之以存续之选择不记任何移除，移去诸系亦然；读自定池则为每一移除所转；诸选项于其耦合闭包皆一致之读者两程同留或同去。"
   },
   "laws": [
     {
@@ -27,8 +27,8 @@
       ]
     },
     {
-      "en": "Read off the pool its course gives, selection by persistence is not turned by removal: every course in which, from some step on, each line persists or is not alive passes it. Read off a fixed pool it is turned by every removal, and passing it there a course passes it read off its own pool.",
-      "zh": "读自其程所给之池，以存续之选择不为移除所转：自某步起各系或存续或不活之每一程皆过之。读自定池则为每一移除所转；于彼过之之程，读自其自身之池亦过之。",
+      "en": "Read off the pool its course gives, selection by persistence registers no removal: every course in which, from some step on, each line persists or is not alive passes it, one removing every line included. Read off a fixed pool it is turned by every removal, and passing it there a course passes it read off its own pool.",
+      "zh": "读自其程所给之池，以存续之选择不记移除：自某步起各系或存续或不活之每一程皆过之，移去诸系者亦然。读自定池则为每一移除所转；于彼过之之程，读自其自身之池亦过之。",
       "declarations": [
         "Becoming.survivorsPersist_of_settled",
         "Becoming.not_allPersist_of_removes",
@@ -43,8 +43,8 @@
       ]
     },
     {
-      "en": "In the course where the line reads its source and nothing comes back, selection by persistence read off the course's pool holds while the course removes the dweller's line, whose continuation reads the habitat; read off the fixed pool of both lines it fails there; in the course reading everything it holds read off either pool.",
-      "zh": "于此系读其源且无所返之程，读自程之池之以存续之选择成立，而此程移去栖者之系（其延续读栖地）；读自二系之定池则于此不成立；于读一切之程，读自二池皆成立。",
+      "en": "In the course where the line reads its source and nothing comes back, selection by persistence read off the course's pool holds while the course removes the dweller's line, read as a reader of the habitat; read off the fixed pool of both lines it fails there; in the course reading everything it holds read off either pool.",
+      "zh": "于此系读其源且无所返之程，读自程之池之以存续之选择成立，而此程移去栖者之系（读作栖地之读者）；读自二系之定池则于此不成立；于读一切之程，读自二池皆成立。",
       "declarations": [
         "Becoming.ReadingsPersist.Habitat.Line",
         "Becoming.ReadingsPersist.Habitat.slotsOf",
@@ -54,10 +54,13 @@
       ]
     },
     {
-      "en": "Where the dweller's line renews the source, the course removing it removes the line too.",
-      "zh": "栖者之系续源处，移去之之程亦移去此系。",
+      "en": "Where the dweller's line renews the source, the course removing it removes the line too, and selection by persistence read off the course's pool still passes it: what turns there is the line's own persistence.",
+      "zh": "栖者之系续源处，移去之之程亦移去此系，而读自程之池之以存续之选择仍过之：于此所转者为此系自身之存续。",
       "declarations": [
-        "Becoming.ReadingsPersist.Habitat.clearedBack_removes_both"
+        "Becoming.ReadingsPersist.Habitat.clearedBack_dweller_gone",
+        "Becoming.ReadingsPersist.Habitat.clearedBack_line_gone",
+        "Becoming.ReadingsPersist.Habitat.clearedBack_removes_both",
+        "Becoming.ReadingsPersist.Habitat.clearedBack_survivors_pass"
       ]
     }
   ],
@@ -87,10 +90,10 @@
       "kind": "non-implication"
     },
     {
-      "en": "That a reader whose loss returns to the selectors is kept in general: the witness shows one world.",
-      "zh": "其失去返回选择者之读者一般皆被留：见证只示一世界。",
-      "kind": "scope",
-      "witness": "Becoming.ReadingsPersist.Habitat.clearedBack_removes_both"
+      "en": "That selection read off the course's own pool is turned where the loss returns to the selectors: it passes the course removing both lines; what turns is the selecting line's own persistence.",
+      "zh": "读自程自身之池之选择于失去返回选择者处被转：它过移去二系之程；所转者为选择之系自身之存续。",
+      "kind": "non-implication",
+      "witness": "Becoming.ReadingsPersist.Habitat.clearedBack_survivors_pass"
     },
     {
       "en": "A reading in time, before a loss passes its point of no return.",
@@ -114,8 +117,8 @@
     "discrete-steps"
   ],
   "validation_scope": {
-    "en": "Pure core, axiom report empty; a leaf. The laws are near-definitional; the reader kept alike is act_courses_unselected_throughout with a reader's standing as the selection; the witnesses are finite computations. Written by an AI; a reader of another model read it cold (READER); no human audit.",
-    "zh": "纯核心，公理报告为空；叶模块。诸律近于定义；两程无别之读者为以读者之立为选择之 act_courses_unselected_throughout；见证为有限计算。AI 所写；另一模型之读者冷读（READER）；无人类审计。"
+    "en": "Pure core, axiom report empty; a leaf. The laws are near-definitional; the reader kept alike is act_courses_unselected_throughout with a reader's standing as the selection; the witnesses have finitely many relata, their courses proved for all steps. Written by an AI; readers of two other models read it cold (READER); no human audit.",
+    "zh": "纯核心，公理报告为空；叶模块。诸律近于定义；两程无别之读者为以读者之立为选择之 act_courses_unselected_throughout；见证之关系项有限，其诸程证于每一步。AI 所写；另两模型之读者冷读（READER）；无人类审计。"
   },
   "next_delta": {
     "en": "Selection by share among lines carrying different readings, read off the pool the course gives and joined to RuleShaping's counts, to state the meta-attractor as a rule coming to select for control; and the same read in time.",
@@ -128,7 +131,7 @@
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean",
   "aliases": [
     "a selection removing its own readers",
-    "the meta-attractor with the pool read off the course",
+    "the meta-attractor's shape, the pool read off the course",
     "移除自身读者之选择",
     "Becoming.RemovesItsReaders",
     "Becoming.survivorsPersist_of_settled",
@@ -207,7 +210,10 @@
         "Becoming.AllPersist",
         "Becoming.AllPersist.survivors",
         "Becoming.ReadingsPersist.Habitat.Line",
+        "Becoming.ReadingsPersist.Habitat.clearedBack_dweller_gone",
+        "Becoming.ReadingsPersist.Habitat.clearedBack_line_gone",
         "Becoming.ReadingsPersist.Habitat.clearedBack_removes_both",
+        "Becoming.ReadingsPersist.Habitat.clearedBack_survivors_pass",
         "Becoming.ReadingsPersist.Habitat.cleared_dweller_gone",
         "Becoming.ReadingsPersist.Habitat.cleared_removes_dweller",
         "Becoming.ReadingsPersist.Habitat.cleared_removes_its_readers",
@@ -220,17 +226,22 @@
         "Becoming.reader_kept_alike",
         "Becoming.survivorsPersist_of_settled"
       ],
-      "sha256": "42ae74726eb77a080decff5fafd1d98c6799276f01d35ee2e03b5f50b03f0f05"
+      "sha256": "42b5578ae541d8e6f942231710a2f22b31d48992c4ca9bf155fc6d3d5d7a8181"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zj2-readings-persist/NOTE.md",
       "role": "integration",
-      "sha256": "f9b8bf760e643068d69114e5c95ad8230072f6dcd95d2d67f6083de6046c9e43"
+      "sha256": "6bb337e441dd518d3f897304190b0a3f103ccedba36cb0272e5e8d14d3abb2a8"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zj2-readings-persist/READER.md",
+      "role": "review",
+      "sha256": "5a1fe08bd7ef565c523f82bd7cee20d93a94c5f86a95eda7625b060a47cbafad"
     },
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "3527ae9c5e501a0512dd3a5ff7145fdfd92aad0908510175bfb6f21738568be1"
+      "sha256": "9ea594a3dd3c1c09d8b7f932c5ad91c1577c38b2c10bbc29b0abcb7ad52c927f"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",

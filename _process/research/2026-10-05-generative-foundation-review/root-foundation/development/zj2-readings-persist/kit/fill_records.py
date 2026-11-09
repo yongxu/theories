@@ -101,11 +101,12 @@ def record_carried(ts):
             "由始祖与关系项之列，读自一流之系以一步中自某成员而传之所列关系项为其后裔。此系由构造即在流中相传，其后之成员皆立；读法沿传承而继处，每一代之每一成员皆携始祖之读法。",
             [B("Flow.descendsB"), B("Flow.descendsB_iff"), B("Flow.lineOf"), B("Flow.mem_lineOf_kids"),
              B("Flow.lineOf_descended"), B("Flow.lineOf_stands"), B("Flow.Inherits"), B("Flow.lineOf_carries")]),
-        law("Let alternatives be readings, each giving a world, and a reading end where its world's course overdraws a family "
-            "from a short stock. Where every occasion picks the reading the line carries and the world is the course it "
-            "generates, an ending pick is realized as an overdraw with nothing supplied, and the keeping-above-ending law "
-            "follows for the line read off it.",
-            "设诸选项为读法，各给一世界；读法终者，其世界之程自短存而透支一族。每一场合皆择此系所携之读法、且世界即其所生之程处，终止之择无须给定即实现为透支，守高于终之律对读自其上之系成立。",
+        law("Let a reading end where its world's course overdraws a family from a short stock. Where every occasion picks "
+            "the reading the line carries and the world is the course it generates, G3's realization premise is the "
+            "identity, ending being defined as that overdraw; under G3's "
+            "remaining premises some strict order according with the choices puts every non-ending reading above every "
+            "ending one met with it.",
+            "设诸选项为读法，各给一世界；读法终者，其世界之程自短存而透支一族。每一场合皆择此系所携之读法、且世界即其所生之程处，G3 之实现前提即为恒等（终即定义为此透支）；在 G3 其余前提下，有一与诸择相合之严格序，置每一不终之读法于与之同遇之每一终者之上。",
             [B("Flow.Overdraws"), B("Flow.lineOf_persists_never_overdraws"), B("Flow.carried_keeping_above_ending")]),
         law("A line is alive at a step where its cohort then has a member. It reaches a relatum before a step where a member "
             "of one of its cohorts, a member at that earlier step, exchanged with a condition the relatum then requires: reach "
@@ -116,8 +117,9 @@ def record_carried(ts):
              B("Flow.LineReachesBefore.reachesBefore"), B("Flow.LineReachesBefore.affects"), B("Flow.LinesReachBefore.alive")]),
         law("In the witness every course is the one the acts generate, each relatum acts by the reading it carries, readings "
             "are inherited along descent and the line carries its reading; the line reaches the dweller's line before the "
-            "second step by clearing its habitat, and the dweller's line reaches the line only where it renews the source.",
-            "见证中每一程皆行为所生之程，各关系项依其所携读法而行，读法沿传承而继，此系携其读法；此系以清其栖地于第二步前及于栖者之系，栖者之系唯于续其源处及于此系。",
+            "second step by clearing its habitat; with nothing coming back the dweller's line reaches nothing, and in the "
+            "course where it renews the source it reaches the line.",
+            "见证中每一程皆行为所生之程，各关系项依其所携读法而行，读法沿传承而继，此系携其读法；此系以清其栖地于第二步前及于栖者之系；无所返时栖者之系无所及，于其续源之程则及于此系。",
             [H("generated"), H("world_byReading"), H("inherits"), H("lineA_carries"), H("cleared_reaches_dweller"),
              H("lineD_slots"), H("cleared_dweller_reaches_nothing"), H("clearedBack_dweller_reaches_line"),
              H("cleared_standpoints_late")]),
@@ -134,9 +136,9 @@ def record_carried(ts):
         "reviewed_at_utc": NOW,
         "statement": T(
             "A world whose relata act by the readings they carry is the course those acts generate; the line read off it "
-            "is descended by construction and carries its founders' inherited reading, and an ending pick is realized as an "
-            "overdraw where every occasion picks that reading.",
-            "诸关系项依其所携读法而行之世界即此诸行为所生之程；读自其上之系由构造相传、携其始祖所传之读法；每一场合皆择此读法处，终止之择实现为透支。"),
+            "is descended by construction and carries its founders' inherited reading; with ending read as an overdraw of "
+            "that course, G3's realization premise is the identity.",
+            "诸关系项依其所携读法而行之世界即此诸行为所生之程；读自其上之系由构造相传、携其始祖所传之读法；终读为此程之透支时，G3 之实现前提即为恒等。"),
         "laws": laws,
         "hypotheses": [
             T("No axiom. Discrete steps and natural levels; one kind of relatum, each a formation and a condition; a web, "
@@ -167,10 +169,10 @@ def record_carried(ts):
         "counterexamples": [],
         "standard_boundaries": COMMON_BOUNDS,
         "validation_scope": T(
-            "Pure core, axiom report empty; a leaf. Every law is near-definitional; the witness's courses are finite "
-            "computations shown to be the generated ones. Written by an AI; a reader of another model read the statements "
-            "cold against this record and its home (READER in the study folder); no human audit.",
-            "纯核心，公理报告为空；叶模块。诸律皆近于定义；见证之诸程为有限计算，并证其即所生之程。AI 所写；另一模型之读者对照本记录及其所在冷读诸陈述（见研究目录 READER）；无人类审计。"),
+            "Pure core, axiom report empty; a leaf. Every law is near-definitional; the witness has finitely many relata, "
+            "its courses' balance proved for all steps and shown to be the generated ones. Written by an AI; readers of two "
+            "other models read the statements cold against this record and its home (READER in the study folder); no human audit.",
+            "纯核心，公理报告为空；叶模块。诸律皆近于定义；见证之关系项有限，其诸程之平衡证于每一步，并证其即所生之程。AI 所写；另两模型之读者对照本记录及其所在冷读诸陈述（见研究目录 READER）；无人类审计。"),
         "next_delta": T(
             "A run made of the picks, so that occasions choosing different readings are realized on one course; and readings "
             "that vary along descent, so that how a reading arises, not only how it fares, is on the model.",
@@ -188,11 +190,11 @@ def record_carried(ts):
                 "Reuses the persisting line's laws (Flow.persists_never_overdraws, Flow.persisting_keeping_above_ending), with "
                 "descent and the realization premise given by construction.",
                 "复用存续之系之律（Flow.persists_never_overdraws、Flow.persisting_keeping_above_ending），传承与实现前提由构造给出。",
-                "A line persisting through late cohorts never overdrew; its choices put keeping above ending.",
-                "存续至晚代之系从未透支；其择置守于终之上。",
+                "A line persisting through late cohorts never overdrew; some strict order according with its choices puts keeping above ending on the pairs met.",
+                "存续至晚代之系从未透支；有一与其择相合之严格序，于同遇之对置守于终之上。",
                 "The line read off the course its readings generate.", "读自其读法所生之程之系。",
-                "Balance, acting, dependence, gated renewal, coupled cohorts; every occasion picks the carried reading.",
-                "平衡、唯活者给、活需支撑、门控之更新、诸代耦合；每一场合皆择所携之读法。"),
+                "Balance, acting, dependence, gated renewal, coupled cohorts, no cycle shown; every occasion picks the carried reading.",
+                "平衡、唯活者给、活需支撑、门控之更新、诸代耦合、所示无环；每一场合皆择所携之读法。"),
             dep("counterfactual-is-the-course", "formal-reuse",
                 "Reuses the generated course (ExchangeLaw.levels_succ, ExchangeLaw.totals_under) to show that a balanced flow "
                 "following a law is its course, with no feasibility premise.",
@@ -229,11 +231,11 @@ def record_persist(ts):
         B("SelectionTerm.Generations.family_nil_from"), B("SelectionTerm.Generations.not_persists_of_nil"),
         B("SelectionTerm.Generations.persists_of_alive")]
     laws = [
-        law("Let a line carry one of two readings, the rest acting by a law of what has stood reading through coupling, the "
-            "two acts laws of what has stood agreeing on everything coupled into the line's coupling closure drawn through both "
-            "courses, both feasible, each slot's own standing coupled into it. The line's slots stand at arbitrarily late "
-            "steps in the one course exactly when in the other.",
-            "设一系携二读法之一，其余依读已成者、经耦合而读之律而行，二举为读已成者之律且在经两程所得之系耦合闭包内耦合入者上皆一致，两程可行，各位之自立耦合入之。则此系之诸位于一程中立至任意晚之步，恰如于另一程。",
+        law("Let a line carry one of two readings: the rest acts by a law of what has stood reading through coupling; the two "
+            "acts are laws of what has stood, the first reading each slot's couplings only, agreeing on everything coupled "
+            "into the line's coupling closure drawn through both courses; both feasible; each slot's own standing coupled in. "
+            "The slots stand late in the one course exactly when in the other.",
+            "设一系携二读法之一：其余依读已成者、经耦合而读之律；二举为读已成者之律，前者只读各位之耦合，且在经两程所得之系耦合闭包内耦合入者上皆一致；两程可行；各位之自立耦合入。则诸位于一程中立至晚步，恰如于另一程。",
             [B("StandsLate"), B("Web.standsLate_readOffCouplings"), B("Flow.lineOf_standsLate"),
              B("line_standing_unselected"), B("line_standing_unselected_of_reads")]),
         law("A witness world: a line of two slots passing its standing on and drawing on a source; a dweller's line of two "
@@ -249,8 +251,8 @@ def record_persist(ts):
             courses),
         law("Where the source renews itself, the line reading only itself ends; the line reading its source persists and the "
             "dweller's line ends; the line reading everything persists with the dweller's line. The law holds there with every "
-            "premise met by the model, so the line's persistence cannot tell clearing from sparing.",
-            "源自续处，唯读自身之系终；读其源之系存续而栖者之系终；读一切之系与栖者之系同存续。此律于此成立、诸前提皆由模型满足，故此系之存续不能分清与留。",
+            "premise met by the model, so the line's standing late cannot tell clearing from sparing.",
+            "源自续处，唯读自身之系终；读其源之系存续而栖者之系终；读一切之系与栖者之系同存续。此律于此成立、诸前提皆由模型满足，故此系之晚立不能分清与留。",
             [H("beyond_which_persist"), H("keep_persists"), H("cleared_persists"), H("overdrawn_ends"),
              H("beyond_standing"), H("standsLate_of_alt"), H("late_zero"), H("not_standsLate_of_gone"),
              H("beyond_standing_unselected"), H("inR"), H("quiet"), H("coupled_in_region"), H("not_exchanges"),
@@ -271,20 +273,22 @@ def record_persist(ts):
         "family": "F07",
         "reviewed_at_utc": NOW,
         "statement": T(
-            "A line's persistence tells readings apart only by what their acts do within its coupling closure. In a witness "
-            "where nothing comes back a line clearing a dweller's habitat persists as a sparing one does and an overdrawing "
+            "A line's standing late tells readings apart only by what their acts do within its coupling closure. In a witness "
+            "where nothing comes back a line clearing a dweller's habitat persists as a sparing one does, an overdrawing "
             "one ends; where the dweller renews the source, the clearing line ends with it.",
-            "系之存续只以诸读法之举在其耦合闭包内所为分之。见证中，无所返处，清栖者之栖地之系与留之系同存续，透支之系终；栖者续此系之源处，清之系与之同终。"),
+            "系之晚立只以诸读法之举在其耦合闭包内所为分之。见证中，无所返处，清栖者之栖地之系与留之系同存续，透支之系终；栖者续此系之源处，清之系与之同终。"),
         "laws": laws,
         "hypotheses": [
             T("No axiom. Discrete steps and natural levels; one kind of relatum; a web, the relata present and the starting "
               "levels supplied; a coupling by level supplied, holding each slot's own standing.",
               "不加公理。离散步与自然数水平；一种关系项；网、在场之关系项与起始水平为给定；经水平之耦合为给定，含各位之自立。"),
             T("The two acts agree on everything coupled into the line's coupling closure drawn through both courses: a premise "
-              "on the acts, met in the witness, not derived; where they differ there, the difference can be selected.",
-              "二举在经两程所得之系耦合闭包内耦合入者上一致：对二举之前提，于见证中满足，非推出；若于此不同，差异可被选。"),
-            T("The rest acts by a law of what has stood reading through coupling, and both courses are feasible.",
-              "其余依读已成者、经耦合而读之律，两程皆可行。"),
+              "on the acts, met in the witness, not derived; where they differ there, the difference can be selected, as the "
+              "witness's overdrawing reading shows.",
+              "二举在经两程所得之系耦合闭包内耦合入者上一致：对二举之前提，于见证中满足，非推出；若于此不同，差异可被选，如见证之透支读法所示。"),
+            T("The rest acts by a law of what has stood reading through coupling, the first act reads each slot's couplings "
+              "only, and both courses are feasible; the significance form needs every significance's course feasible.",
+              "其余依读已成者、经耦合而读之律，前一举只读各位之耦合，两程皆可行；意义之形需每一意义之程皆可行。"),
             T("The act each reading gives is supplied; in the witness, which conduct each reading gives is designed.",
               "各读法所给之举为给定；见证中各读法给何行为为所设。"),
         ],
@@ -309,9 +313,10 @@ def record_persist(ts):
         "standard_boundaries": COMMON_BOUNDS,
         "validation_scope": T(
             "Pure core, axiom report empty; a leaf. The law is act_courses_unselected_throughout with standing late as the "
-            "selection, near-definitional; the witness's courses are finite computations, every premise of the law "
-            "discharged. Written by an AI; a reader of another model read it cold (READER); no human audit.",
-            "纯核心，公理报告为空；叶模块。此律为以晚立为选择之 act_courses_unselected_throughout，近于定义；见证之诸程为有限计算，此律诸前提皆证。AI 所写；另一模型之读者冷读（READER）；无人类审计。"),
+            "selection, near-definitional; the witness has finitely many relata, balance and the lines' fates proved for all "
+            "steps, every premise of the law discharged. Written by an AI; readers of two other models read it cold (READER); "
+            "no human audit.",
+            "纯核心，公理报告为空；叶模块。此律为以晚立为选择之 act_courses_unselected_throughout，近于定义；见证之关系项有限，平衡与诸系之终存证于每一步，此律诸前提皆证。AI 所写；另两模型之读者冷读（READER）；无人类审计。"),
         "next_delta": T(
             "Several lines carrying different readings under selection by share, read off the course, joined to RuleShaping's "
             "counts; and readings that vary along descent, so that which readings arise is on the model with which persist.",
@@ -323,7 +328,7 @@ def record_persist(ts):
             "tragedy of the commons read on one line (Hardin 1968).",
             "解读（AI 据其知识）：内容不改承载者适应度之性状与之无协方差（Price 1970）；承载者耦合之外所承之代价为外部性，承载者自身之存续不记之（Pigou 1920）；代价经承载者自身之源返回处，即在一系上所读之公地悲剧（Hardin 1968）。"),
         "canonical_source": MODULE,
-        "aliases": ["which readings persist", "persistence selects no reading beyond the coupling closure", "何种读法存续",
+        "aliases": ["which readings persist", "standing late selects no reading beyond the coupling closure", "何种读法存续",
                     B("line_standing_unselected"), H("beyond_which_persist"), H("back_which_persist")],
         "dependencies": [
             dep("selection-read-off-continuations", "formal-reuse",
@@ -361,10 +366,10 @@ def record_removing(ts):
             "诸所列之系中，一程于某步所给之池为其时于程中活之诸系。读自此池之以存续之选择，于自某步起凡活之系皆存续处成立；读自定池者，于每系皆存续处成立。一程移去始活而自某步起不活之系；一选择于其成立之程移去一读者之系处，移除自身之读者。",
             [B("AliveIn"), B("SurvivorsPersist"), B("AllPersist"), B("RemovesLine"), B("RemovesItsReaders"),
              B("RemovesLine.not_standsLate")]),
-        law("Read off the pool its course gives, selection by persistence is not turned by removal: every course in which, "
-            "from some step on, each line persists or is not alive passes it. Read off a fixed pool it is turned by every "
-            "removal, and passing it there a course passes it read off its own pool.",
-            "读自其程所给之池，以存续之选择不为移除所转：自某步起各系或存续或不活之每一程皆过之。读自定池则为每一移除所转；于彼过之之程，读自其自身之池亦过之。",
+        law("Read off the pool its course gives, selection by persistence registers no removal: every course in which, from "
+            "some step on, each line persists or is not alive passes it, one removing every line included. Read off a fixed "
+            "pool it is turned by every removal, and passing it there a course passes it read off its own pool.",
+            "读自其程所给之池，以存续之选择不记移除：自某步起各系或存续或不活之每一程皆过之，移去诸系者亦然。读自定池则为每一移除所转；于彼过之之程，读自其自身之池亦过之。",
             [B("survivorsPersist_of_settled"), B("not_allPersist_of_removes"), B("AllPersist.survivors")]),
         law("A reader within a group's coupling closure drawn through two courses whose acts agree on everything coupled into "
             "that closure, its own standing coupled into it, stands at every step in the one course exactly when in the "
@@ -372,14 +377,16 @@ def record_removing(ts):
             "一读者在经两程所得之某组耦合闭包之内，两程之举在此闭包内耦合入者上皆一致，其自立耦合入之，则它于每步在一程中立恰如在另一程：此二举间无选择于一程所给之池移去之而另一程留之。",
             [B("reader_kept_alike")]),
         law("In the course where the line reads its source and nothing comes back, selection by persistence read off the "
-            "course's pool holds while the course removes the dweller's line, whose continuation reads the habitat; read off "
+            "course's pool holds while the course removes the dweller's line, read as a reader of the habitat; read off "
             "the fixed pool of both lines it fails there; in the course reading everything it holds read off either pool.",
-            "于此系读其源且无所返之程，读自程之池之以存续之选择成立，而此程移去栖者之系（其延续读栖地）；读自二系之定池则于此不成立；于读一切之程，读自二池皆成立。",
+            "于此系读其源且无所返之程，读自程之池之以存续之选择成立，而此程移去栖者之系（读作栖地之读者）；读自二系之定池则于此不成立；于读一切之程，读自二池皆成立。",
             [H("Line"), H("slotsOf"), H("cleared_dweller_gone"), H("cleared_removes_dweller"),
              H("cleared_removes_its_readers")]),
-        law("Where the dweller's line renews the source, the course removing it removes the line too.",
-            "栖者之系续源处，移去之之程亦移去此系。",
-            [H("clearedBack_removes_both")]),
+        law("Where the dweller's line renews the source, the course removing it removes the line too, and selection by "
+            "persistence read off the course's pool still passes it: what turns there is the line's own persistence.",
+            "栖者之系续源处，移去之之程亦移去此系，而读自程之池之以存续之选择仍过之：于此所转者为此系自身之存续。",
+            [H("clearedBack_dweller_gone"), H("clearedBack_line_gone"), H("clearedBack_removes_both"),
+             H("clearedBack_survivors_pass")]),
     ]
     decls = [d for l in laws for d in l["declarations"]]
     references, bindings = refs(decls, ts)
@@ -392,10 +399,10 @@ def record_removing(ts):
         "family": "F04",
         "reviewed_at_utc": NOW,
         "statement": T(
-            "With the pool read off the course, a selection can remove its own readers: read off the pool its course gives, "
-            "selection by persistence is never turned by removal, while read off a fixed pool it is; a reader whose coupling "
-            "closure the alternatives agree on is kept alike.",
-            "池读自其程时，一选择可移除自身之读者：读自其程所给之池，以存续之选择从不为移除所转，读自定池则为所转；诸选项于其耦合闭包皆一致之读者两程无别。"),
+            "With the pool read off the course, selection by persistence read off it passes every course whose lines settle, "
+            "one removing every line included, while read off a fixed pool it is turned by every removal; a reader whose "
+            "coupling closure the alternatives agree on is kept or removed alike.",
+            "池读自其程时，诸系有定处读自其池之以存续之选择不记任何移除，移去诸系亦然；读自定池则为每一移除所转；诸选项于其耦合闭包皆一致之读者两程同留或同去。"),
         "laws": laws,
         "hypotheses": [
             T("No axiom. Discrete steps and natural levels; lines listed with their slots; a line alive where a slot stands.",
@@ -413,9 +420,10 @@ def record_removing(ts):
             {**T("That every course removing its readers is selected: survivorship read off the survivors holds at it; nothing "
                  "here makes a selection prefer it.", "每一移除其读者之程皆被选：读自存者之存续于其成立；此处无使选择偏向之者。"),
              "kind": "non-implication"},
-            {**T("That a reader whose loss returns to the selectors is kept in general: the witness shows one world.",
-                 "其失去返回选择者之读者一般皆被留：见证只示一世界。"),
-             "kind": "scope", "witness": H("clearedBack_removes_both")},
+            {**T("That selection read off the course's own pool is turned where the loss returns to the selectors: it passes "
+                 "the course removing both lines; what turns is the selecting line's own persistence.",
+                 "读自程自身之池之选择于失去返回选择者处被转：它过移去二系之程；所转者为选择之系自身之存续。"),
+             "kind": "non-implication", "witness": H("clearedBack_survivors_pass")},
             {**T("A reading in time, before a loss passes its point of no return.", "及时之读，于失去过其不可返之点之前。"),
              "kind": "scope"},
         ],
@@ -425,9 +433,10 @@ def record_removing(ts):
         "standard_boundaries": COMMON_BOUNDS,
         "validation_scope": T(
             "Pure core, axiom report empty; a leaf. The laws are near-definitional; the reader kept alike is "
-            "act_courses_unselected_throughout with a reader's standing as the selection; the witnesses are finite "
-            "computations. Written by an AI; a reader of another model read it cold (READER); no human audit.",
-            "纯核心，公理报告为空；叶模块。诸律近于定义；两程无别之读者为以读者之立为选择之 act_courses_unselected_throughout；见证为有限计算。AI 所写；另一模型之读者冷读（READER）；无人类审计。"),
+            "act_courses_unselected_throughout with a reader's standing as the selection; the witnesses have finitely many "
+            "relata, their courses proved for all steps. Written by an AI; readers of two other models read it cold (READER); "
+            "no human audit.",
+            "纯核心，公理报告为空；叶模块。诸律近于定义；两程无别之读者为以读者之立为选择之 act_courses_unselected_throughout；见证之关系项有限，其诸程证于每一步。AI 所写；另两模型之读者冷读（READER）；无人类审计。"),
         "next_delta": T(
             "Selection by share among lines carrying different readings, read off the pool the course gives and joined to "
             "RuleShaping's counts, to state the meta-attractor as a rule coming to select for control; and the same read in "
@@ -438,7 +447,7 @@ def record_removing(ts):
             "its institutional shape; for trained systems, an evaluation read off the outputs a policy still produces.",
             "解读（AI 据其知识）：读自存者之存续，即作为选择规则之幸存者偏差（Wald 之装甲问题，1943）；移除其批评者、而后由余者评判之体制，为其制度之形；就训练之系统，读自策略尚产生之输出之评估。"),
         "canonical_source": MODULE,
-        "aliases": ["a selection removing its own readers", "the meta-attractor with the pool read off the course",
+        "aliases": ["a selection removing its own readers", "the meta-attractor's shape, the pool read off the course",
                     "移除自身读者之选择", B("RemovesItsReaders"), B("survivorsPersist_of_settled"), B("reader_kept_alike")],
         "dependencies": [
             dep("selection-read-off-continuations", "formal-reuse",

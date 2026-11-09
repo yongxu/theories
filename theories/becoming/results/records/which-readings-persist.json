@@ -8,15 +8,15 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-11-09T15:44:53+00:00",
+  "reviewed_at_utc": "2026-11-09T15:56:52+00:00",
   "statement": {
-    "en": "A line's persistence tells readings apart only by what their acts do within its coupling closure. In a witness where nothing comes back a line clearing a dweller's habitat persists as a sparing one does and an overdrawing one ends; where the dweller renews the source, the clearing line ends with it.",
-    "zh": "系之存续只以诸读法之举在其耦合闭包内所为分之。见证中，无所返处，清栖者之栖地之系与留之系同存续，透支之系终；栖者续此系之源处，清之系与之同终。"
+    "en": "A line's standing late tells readings apart only by what their acts do within its coupling closure. In a witness where nothing comes back a line clearing a dweller's habitat persists as a sparing one does, an overdrawing one ends; where the dweller renews the source, the clearing line ends with it.",
+    "zh": "系之晚立只以诸读法之举在其耦合闭包内所为分之。见证中，无所返处，清栖者之栖地之系与留之系同存续，透支之系终；栖者续此系之源处，清之系与之同终。"
   },
   "laws": [
     {
-      "en": "Let a line carry one of two readings, the rest acting by a law of what has stood reading through coupling, the two acts laws of what has stood agreeing on everything coupled into the line's coupling closure drawn through both courses, both feasible, each slot's own standing coupled into it. The line's slots stand at arbitrarily late steps in the one course exactly when in the other.",
-      "zh": "设一系携二读法之一，其余依读已成者、经耦合而读之律而行，二举为读已成者之律且在经两程所得之系耦合闭包内耦合入者上皆一致，两程可行，各位之自立耦合入之。则此系之诸位于一程中立至任意晚之步，恰如于另一程。",
+      "en": "Let a line carry one of two readings: the rest acts by a law of what has stood reading through coupling; the two acts are laws of what has stood, the first reading each slot's couplings only, agreeing on everything coupled into the line's coupling closure drawn through both courses; both feasible; each slot's own standing coupled in. The slots stand late in the one course exactly when in the other.",
+      "zh": "设一系携二读法之一：其余依读已成者、经耦合而读之律；二举为读已成者之律，前者只读各位之耦合，且在经两程所得之系耦合闭包内耦合入者上皆一致；两程可行；各位之自立耦合入。则诸位于一程中立至晚步，恰如于另一程。",
       "declarations": [
         "Becoming.StandsLate",
         "Becoming.Web.standsLate_readOffCouplings",
@@ -93,8 +93,8 @@
       ]
     },
     {
-      "en": "Where the source renews itself, the line reading only itself ends; the line reading its source persists and the dweller's line ends; the line reading everything persists with the dweller's line. The law holds there with every premise met by the model, so the line's persistence cannot tell clearing from sparing.",
-      "zh": "源自续处，唯读自身之系终；读其源之系存续而栖者之系终；读一切之系与栖者之系同存续。此律于此成立、诸前提皆由模型满足，故此系之存续不能分清与留。",
+      "en": "Where the source renews itself, the line reading only itself ends; the line reading its source persists and the dweller's line ends; the line reading everything persists with the dweller's line. The law holds there with every premise met by the model, so the line's standing late cannot tell clearing from sparing.",
+      "zh": "源自续处，唯读自身之系终；读其源之系存续而栖者之系终；读一切之系与栖者之系同存续。此律于此成立、诸前提皆由模型满足，故此系之晚立不能分清与留。",
       "declarations": [
         "Becoming.ReadingsPersist.Habitat.beyond_which_persist",
         "Becoming.ReadingsPersist.Habitat.keep_persists",
@@ -128,12 +128,12 @@
       "zh": "不加公理。离散步与自然数水平；一种关系项；网、在场之关系项与起始水平为给定；经水平之耦合为给定，含各位之自立。"
     },
     {
-      "en": "The two acts agree on everything coupled into the line's coupling closure drawn through both courses: a premise on the acts, met in the witness, not derived; where they differ there, the difference can be selected.",
-      "zh": "二举在经两程所得之系耦合闭包内耦合入者上一致：对二举之前提，于见证中满足，非推出；若于此不同，差异可被选。"
+      "en": "The two acts agree on everything coupled into the line's coupling closure drawn through both courses: a premise on the acts, met in the witness, not derived; where they differ there, the difference can be selected, as the witness's overdrawing reading shows.",
+      "zh": "二举在经两程所得之系耦合闭包内耦合入者上一致：对二举之前提，于见证中满足，非推出；若于此不同，差异可被选，如见证之透支读法所示。"
     },
     {
-      "en": "The rest acts by a law of what has stood reading through coupling, and both courses are feasible.",
-      "zh": "其余依读已成者、经耦合而读之律，两程皆可行。"
+      "en": "The rest acts by a law of what has stood reading through coupling, the first act reads each slot's couplings only, and both courses are feasible; the significance form needs every significance's course feasible.",
+      "zh": "其余依读已成者、经耦合而读之律，前一举只读各位之耦合，两程皆可行；意义之形需每一意义之程皆可行。"
     },
     {
       "en": "The act each reading gives is supplied; in the witness, which conduct each reading gives is designed.",
@@ -180,8 +180,8 @@
     "discrete-steps"
   ],
   "validation_scope": {
-    "en": "Pure core, axiom report empty; a leaf. The law is act_courses_unselected_throughout with standing late as the selection, near-definitional; the witness's courses are finite computations, every premise of the law discharged. Written by an AI; a reader of another model read it cold (READER); no human audit.",
-    "zh": "纯核心，公理报告为空；叶模块。此律为以晚立为选择之 act_courses_unselected_throughout，近于定义；见证之诸程为有限计算，此律诸前提皆证。AI 所写；另一模型之读者冷读（READER）；无人类审计。"
+    "en": "Pure core, axiom report empty; a leaf. The law is act_courses_unselected_throughout with standing late as the selection, near-definitional; the witness has finitely many relata, balance and the lines' fates proved for all steps, every premise of the law discharged. Written by an AI; readers of two other models read it cold (READER); no human audit.",
+    "zh": "纯核心，公理报告为空；叶模块。此律为以晚立为选择之 act_courses_unselected_throughout，近于定义；见证之关系项有限，平衡与诸系之终存证于每一步，此律诸前提皆证。AI 所写；另两模型之读者冷读（READER）；无人类审计。"
   },
   "next_delta": {
     "en": "Several lines carrying different readings under selection by share, read off the course, joined to RuleShaping's counts; and readings that vary along descent, so that which readings arise is on the model with which persist.",
@@ -194,7 +194,7 @@
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean",
   "aliases": [
     "which readings persist",
-    "persistence selects no reading beyond the coupling closure",
+    "standing late selects no reading beyond the coupling closure",
     "何种读法存续",
     "Becoming.line_standing_unselected",
     "Becoming.ReadingsPersist.Habitat.beyond_which_persist",
@@ -347,17 +347,22 @@
         "Becoming.line_standing_unselected",
         "Becoming.line_standing_unselected_of_reads"
       ],
-      "sha256": "42ae74726eb77a080decff5fafd1d98c6799276f01d35ee2e03b5f50b03f0f05"
+      "sha256": "42b5578ae541d8e6f942231710a2f22b31d48992c4ca9bf155fc6d3d5d7a8181"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zj2-readings-persist/NOTE.md",
       "role": "integration",
-      "sha256": "f9b8bf760e643068d69114e5c95ad8230072f6dcd95d2d67f6083de6046c9e43"
+      "sha256": "6bb337e441dd518d3f897304190b0a3f103ccedba36cb0272e5e8d14d3abb2a8"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zj2-readings-persist/READER.md",
+      "role": "review",
+      "sha256": "5a1fe08bd7ef565c523f82bd7cee20d93a94c5f86a95eda7625b060a47cbafad"
     },
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "3527ae9c5e501a0512dd3a5ff7145fdfd92aad0908510175bfb6f21738568be1"
+      "sha256": "9ea594a3dd3c1c09d8b7f932c5ad91c1577c38b2c10bbc29b0abcb7ad52c927f"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",

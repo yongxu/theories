@@ -21,14 +21,16 @@ selection is read off the course. No ranking, no ethical premise and no axiom en
   levels, has the levels the law generates (`ExchangeLaw.levels_of_follows`), and the course is feasible
   (`ExchangeLaw.feasible_of_follows`): balance gives the feasibility `ExchangeLaw.course_unique` takes as a
   premise. So whatever such a world shows is the course its acts generate, nothing supplied beyond the
-  acts, the start and the relata present.
+  acts, the web, the start and the relata present.
 * **The line read off the course.** From founders and a listing of the relata, a member's offspring
   across a step are the listed relata descending from it then (`Flow.lineOf`); the line is G3's
   `Descended` by construction (`Flow.lineOf_descended`). Where readings are inherited along descent
   (`Flow.Inherits`), every member of every cohort carries the founders' reading (`Flow.lineOf_carries`).
-  G3's premise `realized`, that an ending choice is realized as an overdraw, holds with nothing supplied
-  where every occasion picks the reading the line carries and the world is the course that reading's world
-  generates, and G3's keeping-above-ending law follows for the line read off it
+  Read a reading as ending where the course its world generates overdraws a family from a short stock.
+  Where every occasion picks the reading the line carries and the world is that reading's course, G3's
+  premise `realized` is then the identity, ending being defined as that overdraw: nothing is derived about
+  the stake. G3's keeping-above-ending law follows for the line read off the course under its remaining
+  premises (balance from feasibility, acting, dependence, gated renewal, coupled cohorts, no cycle shown)
   (`Flow.carried_keeping_above_ending`); with several occasions picking differently a run made of the
   picks would be needed, and is not built here. What does not hold by construction: Bound's
   `ActReadsWithin` is a property of how an act reads its index, and carrying the index changes nothing in
@@ -40,61 +42,87 @@ selection is read off the course. No ranking, no ethical premise and no axiom en
   (`Flow.LineReachesBefore`, `Flow.ReachesBefore` lifted to lines with membership dated). It is
   `ReachesBefore` for every part holding the line's members (`LineReachesBefore.reachesBefore`), and lies
   within affecting, which is blind to time (`LineReachesBefore.affects`).
-* **Persistence selects no reading beyond the line's coupling closure.** Let the line carry `sig` or
-  `sig'`, the rest acting by a law of what has stood reading through coupling, the two acts laws of what has
-  stood agreeing on everything coupled into the line's coupling closure drawn through the two courses, both
-  courses feasible, and each slot's own standing coupled into it. Then the line's slots stand at
-  arbitrarily late steps in one course exactly when in the other (`line_standing_unselected`; with the act
-  indexed by significance under `ActReadsWithin`, `line_standing_unselected_of_reads`). This is
+* **Standing late selects no reading beyond the line's coupling closure.** Let the line (`part`) carry
+  `sig` or `sig'`: the rest acts by a law of what has stood reading through coupling; the two acts are laws
+  of what has stood, the first reading, for each slot, only what couples into it, the two agreeing on
+  everything coupled into the coupling closure of a group drawn through the two courses; both courses are
+  feasible; the slots lie within that closure (with the group the line's slots, by reflexivity) and each
+  slot's own standing is coupled into it. Then the slots stand at arbitrarily late steps in one course
+  exactly when in the other (`line_standing_unselected`; with the act indexed by significance under
+  `ActReadsWithin`, every significance's course feasible, `line_standing_unselected_of_reads`). This is
   `act_courses_unselected_throughout` with standing late as the selection (`Web.standsLate_readOffCouplings`):
   near-definitional. A persisting line read off a flow stands late within any group holding its cohorts
-  (`Flow.lineOf_standsLate`).
-* **The pool read off the course, and a selection removing its own readers.** Among listed lines, the pool
-  a course gives at a step is the lines alive in it then (`AliveIn`). Selection by persistence read off that
-  pool holds where, from some step on, every line alive persists (`SurvivorsPersist`); read off a fixed
-  pool, where every line persists (`AllPersist`). A course removes a line from its pool where the line is
-  alive at the start and not from some step on (`RemovesLine`), and a selection removes its own readers
-  where it holds at a course removing a line of readers (`RemovesItsReaders`), stateable now that the pool
-  is read off the course. Read off the course's pool, selection by persistence is not turned by removal:
-  every course in which, from some step on, each line persists or is not alive passes it
-  (`survivorsPersist_of_settled`); read off a fixed pool it is turned by every removal
-  (`not_allPersist_of_removes`). A reader lying within a group's coupling closure drawn through two courses
-  whose acts agree on everything coupled into that closure stands at every step in the one exactly when in
-  the other (`reader_kept_alike`): no selection between those acts removes it. All near-definitional.
-* **Witnesses** (`ReadingsPersist.Habitat`, every course generated by the acts, `Habitat.generated`). A
-  line of two slots passing its standing on at every step draws on a source; a dweller's line of two slots
-  depends on a habitat. The line's reading is its own line only (draws two from the source, clears the
-  habitat), the line and its source (draws one, clears the habitat) or everything (draws one, spares it).
-  Where the source renews itself and nothing comes back from the dweller: the first reading's line
-  overdraws and ends; the second's persists and the dweller's line ends; the third's persists and so does
-  the dweller's (`Habitat.beyond_which_persist`). There `line_standing_unselected` holds with every premise
-  met by the model, so the line's persistence cannot tell the reading that clears from the one that spares
-  (`Habitat.beyond_standing_unselected`): a model meeting every premise of
-  `act_courses_unselected_throughout`, with the acts indexed by what the line carries. Where the dweller's line renews the source: the second reading's line ends with the dweller's,
-  and the third's persists with it (`Habitat.back_which_persist`). In the course of the second reading with
-  nothing coming back, selection by persistence read off the pool the course gives holds while the course
-  removes the dweller's line, whose continuation reads the habitat, from that pool; read off the fixed pool
-  it fails there (`Habitat.cleared_removes_its_readers`); where the dweller renews the source the course
-  removing it removes the line too (`Habitat.clearedBack_removes_both`). The line reaches the dweller's line
+  (`Flow.lineOf_standsLate`); the converse is not claimed: a slot can come to stand again, fed from outside
+  the line, without the line's descent going on. So the law is about standing late, which persistence
+  implies.
+* **The pool read off the course, and a selection removing its own readers.** Among listed lines, a line
+  is alive in a course at a step where one of its slots stands then (`AliveIn`, by standing, not by
+  cohort), and the pool the course gives at a step is the lines alive then. Selection by persistence read
+  off that pool holds where, from some step on, every line alive persists (`SurvivorsPersist`); read off a
+  fixed pool, where every line persists (`AllPersist`). A course removes a line from its pool where the
+  line is alive at the start and not from some step on (`RemovesLine`), and a selection removes its own
+  readers where it holds at a course removing a line of readers (`RemovesItsReaders`). Which lines read is
+  supplied, and nothing ties them to the selection or makes it prefer their removal: this is the
+  meta-attractor's shape with selection by persistence, stateable now that the pool is read off the
+  course, not the meta-attractor itself (a selection by share coming to select for control of its rule).
+  Read off the course's pool, selection by persistence registers no removal: every course in which, from
+  some step on, each line persists or is not alive passes it (`survivorsPersist_of_settled`), a course
+  removing every line included (the witness below); classically, with finitely many lines every course
+  settles (argued, not stated in Lean: the constructive laws here take settling as a premise). Read off a fixed pool it is turned by
+  every removal (`not_allPersist_of_removes`). Under the premises of `act_courses_unselected_throughout`
+  (the two acts agreeing, under every level history, on what couples into the group's closure), a reader
+  lying within the group's coupling closure drawn through the two courses, its own standing coupled into
+  it, stands at every step in the one exactly when in the other (`reader_kept_alike`): neither course
+  removes it while the other keeps it. A sufficient condition for alike outcomes; both courses may remove
+  it. All near-definitional.
+* **Witnesses** (`ReadingsPersist.Habitat`, every course generated by the acts, `Habitat.generated`;
+  finitely many relata, every course's balance and the lines' fates proved for all steps). A line of two
+  slots passes its standing on at every step while fed and draws on a source it requires at two; a
+  dweller's line of two slots requires a habitat. A member draws only while it stands and is fed, and a
+  clearing act clears the habitat at the first step only. The line's reading is its own line only (draws
+  two from the source, clears the habitat), the line and its source (draws one, clears the habitat) or
+  everything (draws one, spares it). Where the source renews itself and nothing comes back from the
+  dweller: the first reading's line draws two once, is no longer fed and ends, both lines gone from the
+  third step while the source then rises; the second's persists and the dweller's line ends, gone from the
+  third step; the third's persists and so does the dweller's (`Habitat.beyond_which_persist`). There
+  `line_standing_unselected` holds with every premise met by the model, so the line's standing late cannot
+  tell the reading that clears from the one that spares (`Habitat.beyond_standing_unselected`): a model
+  meeting every premise of `act_courses_unselected_throughout`, with the acts indexed by what the line
+  carries; that both lines persist is computed (`Habitat.beyond_which_persist`). Where the dweller's line
+  renews the source: under the second reading the habitat is gone from the second step, the dweller's line
+  from the third, the source then stays at one, and the line is gone from the fourth; the third reading's
+  line persists with the dweller's (`Habitat.back_which_persist`). In the course of the second reading
+  with nothing coming back, selection by persistence read off the pool the course gives holds while the
+  course removes the dweller's line, read as a reader of the habitat (its continuation requires the
+  habitat); read off the fixed pool it fails there (`Habitat.cleared_removes_its_readers`). Where the
+  dweller renews the source the course removing it removes the line too (`Habitat.clearedBack_removes_both`),
+  and selection by persistence read off its own pool still passes it (`Habitat.clearedBack_survivors_pass`):
+  what turns there is the line's own persistence, read off the line. The line reaches the dweller's line
   before the second step by clearing the habitat (`Habitat.cleared_reaches_dweller`); with nothing coming
-  back the dweller's line reaches nothing (`Habitat.cleared_dweller_reaches_nothing`), and where it renews
-  the source it reaches the line (`Habitat.clearedBack_dweller_reaches_line`).
+  back the dweller's line reaches nothing (`Habitat.cleared_dweller_reaches_nothing`), and in the course
+  where it renews the source it reaches the line (`Habitat.clearedBack_dweller_reaches_line`).
 
 **Readings (the AI's, 9 November 2026, not yet read by Ren).**
 - What persistence selects is an act's trace on what returns to the line, not a scope. Where something
-  lies beyond the line's coupling closure, a reading counting it and one leaving it out persist alike: the
-  critic's expectation holds, as a law and with a witness. Where the dweller's loss returns, the reading
-  whose act keeps it is the one that persists, because its act keeps what returns, not because it is wider;
-  a narrow reading whose act left the dweller alone would persist as well (the law, read the other way).
+  lies beyond the line's coupling closure, a reading counting it and one leaving it out, whose acts agree
+  on what couples into the closure, stand late alike: the critic's expectation holds, as a law (for
+  standing late) and with a witness (for persistence); the witness refutes a guarantee that the wider
+  reading survives where the narrower does not. In the witness's second world, where the dweller's loss
+  returns, the reading whose act keeps it is the one that persists, because its act keeps what returns,
+  not because it is wider; a narrow reading whose act agreed with it on everything coupled into the line's
+  closure would stand late as well, by the law. The readings' acts are assigned by design; no scope
+  predicate fixes them.
 - Read with Ren's 8 November words, a reading that does not keep what returns to its line ceases with it;
-  nothing here forms a reading wider than what returns, and nothing ranks the readings that persist. The
-  cascade a narrow reading brings beyond (the dweller's line ending) is not registered by the narrow line's
-  own persistence.
-- Read for alignment: survivorship read off the survivors cannot be turned by removing members, so a
-  selection read off the pool its own course gives can remove its readers without trace; it is turned only
-  where the removal returns to the selectors (the second world), or where the readers lie where the
-  selection's alternatives do not reach. That is GOALS' first condition put on the flow: keep the readers
-  coupled in, or out of the selection's reach.
+  this model gives no mechanism by which a reading wider than what returns forms, and nothing ranks the
+  readings that persist. The cascade a narrow reading brings beyond (the dweller's line ending) is not
+  registered by the narrow line's own persistence.
+- Read for alignment: a selection read off the pool its own course gives, by persistence, registers no
+  removal, its readers' or its own: it is empty as a selection. What registers a removal is a selection
+  read off a fixed pool, or off a line whose own continuation the removal ends (the second world, where the
+  loss returns to the selecting line). And by `reader_kept_alike`, a reader whose coupling closure the
+  alternatives agree on is not removed by the one while kept by the other. Read as GOALS' first condition
+  put on the flow: keep the readers in a pool that does not depend on the course selected, or couple their
+  loss back into the selectors' own continuation.
 
 What is not derived: how a reading arises or changes (readings here are carried and filtered, never varied
 or learned); the act a reading gives (supplied, with `ActReadsWithin` a premise); several lines competing
@@ -368,7 +396,7 @@ section Unselected
 variable {law : ExchangeLaw X X} {W : Web X X} {obs : X → X → Prop} {part : X → Bool}
   {group : X → Prop} {present : Nat → List X} {start : X → Nat}
 
-/-- **Persistence selects no reading beyond the line's coupling closure.** The rest acts by a law of what
+/-- **Standing late selects no reading beyond the line's coupling closure.** The rest acts by a law of what
 has stood reading through coupling; the line (`part`) carries `sig` or `sig'` and acts by the act each
 gives (`act`), laws of what has stood, `act sig` reading through its members' coupling, the two acts
 agreeing on every condition coupled into the coupling closure of `group` drawn through the two courses;
@@ -528,8 +556,10 @@ theorem Flow.lineOf_persists_never_overdraws [DecidableEq X] {L : Flow X X} {W :
 /-- **G3's `realized`, by construction.** Let the alternatives be readings, each giving a world law
 (`world`), and let a reading end where the course its world generates overdraws. Where every occasion
 picks the reading the line carries, `sig`, and the world is the course `world sig` generates, every ending
-pick is realized as an overdraw of that course: G3's premise `realized` holds with nothing supplied, and
-its keeping-above-ending law follows for the line read off the course. -/
+pick is realized as an overdraw of that course: G3's premise `realized` is the identity, ending being
+defined as that overdraw, so nothing is derived about the stake. G3's keeping-above-ending law follows for
+the line read off the course under its remaining premises (balance from feasibility, acting, dependence,
+gated renewal, coupled cohorts, no cycle shown). -/
 theorem Flow.carried_keeping_above_ending [DecidableEq X] {O : Type} {world : Sig → ExchangeLaw X X}
     {present : Nat → List X} {start : X → Nat} {W : Web X X} {sig : Sig}
     (na : (world sig).Nonanticipating) (feasible : (world sig).Feasible present start)
@@ -963,7 +993,7 @@ theorem clearedBack_balances : (flowOf true .source clearedBack).Balances (webOf
 
 /-- **Each is the course the acts generate.** The levels of each flow are the levels the world's law
 generates from the starting levels (`ExchangeLaw.levels_of_follows`): nothing about the courses is
-supplied beyond the acts, the starting levels and the relata present. -/
+supplied beyond the acts, the web, the starting levels and the relata present. -/
 theorem generated :
     (∀ back t c, keep t c = (world back .whole).levels present start t c) ∧
     (∀ t c, cleared t c = (world false .source).levels present start t c) ∧
@@ -1205,7 +1235,7 @@ theorem beyond_standing :
 
 /-! ### The pool read off the course: a selection removing its own readers -/
 
-/-- The two lines: the line `a` and the dweller's line `d`, whose continuation reads the habitat. -/
+/-- The two lines: the line `a` and the dweller's line `d`, whose continuation requires the habitat. -/
 inductive Line where
   | a | d
 
@@ -1229,8 +1259,8 @@ theorem cleared_removes_dweller : RemovesLine slotsOf cleared .d :=
 
 /-- **The meta-attractor's shape, witnessed.** In the course where the line reads the dweller out and
 nothing comes back, selection by persistence read off the pool the course gives holds, and the course
-removes the dweller's line, whose continuation reads the habitat, from that pool: a selection removing its
-own readers. Read off the fixed pool of both lines, the same selection fails there; in the course where
+removes the dweller's line, read as a reader of the habitat (its continuation requires the habitat), from
+that pool: a selection removing its own readers, with which lines read supplied. Read off the fixed pool of both lines, the same selection fails there; in the course where
 the line reads everything, it holds read off either pool. -/
 theorem cleared_removes_its_readers :
     RemovesItsReaders (SurvivorsPersist slotsOf) slotsOf (fun i => i = .d) cleared ∧
@@ -1244,20 +1274,39 @@ theorem cleared_removes_its_readers :
     | .a => standsLate_of_alt (x := .a0) (y := .a1) (.inl rfl) (.inr rfl) (fun _ => rfl) (fun _ => rfl)
     | .d => standsLate_of_alt (x := .d0) (y := .d1) (.inl rfl) (.inr rfl) (fun _ => rfl) (fun _ => rfl)⟩
 
+/-- Where the dweller renews the source and the habitat is cleared, the dweller's line is not alive from
+the third step on. -/
+theorem clearedBack_dweller_gone : ∀ t, 2 ≤ t → ¬ AliveIn slotsOf clearedBack t .d :=
+  fun t le ⟨_, slot, stands⟩ => match slot with
+  | .inl e => Nat.lt_irrefl 0 (Nat.lt_of_lt_of_le stands
+      (Nat.le_of_eq ((congrArg (clearedBack t) e).trans (late_zero t le).1)))
+  | .inr e => Nat.lt_irrefl 0 (Nat.lt_of_lt_of_le stands
+      (Nat.le_of_eq ((congrArg (clearedBack t) e).trans (late_zero t le).2)))
+
+/-- And the line is not alive from the fourth step on. -/
+theorem clearedBack_line_gone : ∀ t, 3 ≤ t → ¬ AliveIn slotsOf clearedBack t .a :=
+  fun t le ⟨_, slot, stands⟩ => match t, le, slot with
+  | _ + 3, _, .inl e => Nat.lt_irrefl 0 (Nat.lt_of_lt_of_le stands
+      (Nat.le_of_eq ((congrArg (clearedBack _) e).trans rfl)))
+  | _ + 3, _, .inr e => Nat.lt_irrefl 0 (Nat.lt_of_lt_of_le stands
+      (Nat.le_of_eq ((congrArg (clearedBack _) e).trans rfl)))
+
 /-- **Where the dweller renews the source, the course removing it removes the line too.** -/
 theorem clearedBack_removes_both :
     RemovesLine slotsOf clearedBack .d ∧ RemovesLine slotsOf clearedBack .a :=
-  ⟨⟨⟨.d0, .inl rfl, Nat.zero_lt_one⟩, 2, fun t le ⟨_, slot, stands⟩ => match slot with
-      | .inl e => Nat.lt_irrefl 0 (Nat.lt_of_lt_of_le stands
-          (Nat.le_of_eq ((congrArg (clearedBack t) e).trans (late_zero t le).1)))
-      | .inr e => Nat.lt_irrefl 0 (Nat.lt_of_lt_of_le stands
-          (Nat.le_of_eq ((congrArg (clearedBack t) e).trans (late_zero t le).2)))⟩,
-   ⟨⟨.a0, .inl rfl, Nat.zero_lt_one⟩, 3, fun t le ⟨_, slot, stands⟩ =>
-      match t, le, slot with
-      | _ + 3, _, .inl e => Nat.lt_irrefl 0 (Nat.lt_of_lt_of_le stands
-          (Nat.le_of_eq ((congrArg (clearedBack _) e).trans rfl)))
-      | _ + 3, _, .inr e => Nat.lt_irrefl 0 (Nat.lt_of_lt_of_le stands
-          (Nat.le_of_eq ((congrArg (clearedBack _) e).trans rfl)))⟩⟩
+  ⟨⟨⟨.d0, .inl rfl, Nat.zero_lt_one⟩, 2, clearedBack_dweller_gone⟩,
+   ⟨⟨.a0, .inl rfl, Nat.zero_lt_one⟩, 3, clearedBack_line_gone⟩⟩
+
+/-- **Selection by persistence read off the pool its course gives passes the removal of every line.** The
+course where the dweller renews the source and the line clears the habitat removes both lines, the
+selecting line's included, and passes that selection: read off its own pool, persistence registers no
+removal, not even its own ending. Read off the fixed pool it fails there. -/
+theorem clearedBack_survivors_pass :
+    SurvivorsPersist slotsOf clearedBack ∧ ¬ AllPersist slotsOf clearedBack :=
+  ⟨survivorsPersist_of_settled ⟨3, fun i => match i with
+      | .a => .inr clearedBack_line_gone
+      | .d => .inr fun t le => clearedBack_dweller_gone t (Nat.le_trans (Nat.le_succ 2) le)⟩,
+   not_allPersist_of_removes clearedBack_removes_both.1⟩
 
 /-! ### Standpoints in time -/
 
