@@ -479,7 +479,7 @@ def page(m: dict, atlas_data: dict, family_names: dict) -> str:
            'The map lives in five stores built apart. `tools/research/atlas_index.py` reads them into one SQLite index '
            f'(`python3 -B tools/research/atlas_index.py` writes it to `{DB}`, never committed) and counts where they meet. '
            f'This page is what that index finds missing: the gaps [the map-structures joint reading]({atlas._href(JOINT_READING, HERE)}) '
-           f'measured by hand (its §1), counted so that the next steps of [the atlas plan]({atlas._href(PLAN, HERE)}#13-the-next-phase-the-maps-structures-9-november-2026) '
+           f'measured once, on a fixed copy of main (its §1), counted here on every render so that the next steps of [the atlas plan]({atlas._href(PLAN, HERE)}#13-the-next-phase-the-maps-structures-9-november-2026) '
            '(§13) can be seen to close them.', '']
     out += ['## The counts', '', '| What | Measured |', '|---|---:|',
             f'| Exits that name a destination (a dynamic, or a state in words) | {_pct(m["exits_to_dynamic"] + m["exits_to_text"], m["exits"])} |',
