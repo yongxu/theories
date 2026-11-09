@@ -3,7 +3,7 @@
 One record, U4's boundary record, declares under `boundary` the standings of central declarations of COVERAGE.json:
 derived (a case of grammar laws, through declared bridges and support), on the root under a stated hypothesis (a root
 form, its hypotheses each with a countermodel and a fit, a recovery and a certificate), or a reading (a distance, or
-counting, with its basis); and the two premises of the ethics apart. What the Lean cannot show is declared and
+counting, with its basis); and the two readings the ranking results use apart. What the Lean cannot show is declared and
 reviewed; the rest is computed.
 
 This module holds the field's rules, which the check (registry.py) applies with the review's text and the generator

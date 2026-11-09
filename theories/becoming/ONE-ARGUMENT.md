@@ -1,6 +1,6 @@
 # One argument, end to end
 
-*About twenty-eight to thirty-seven minutes to read.*
+*About twenty-nine to thirty-seven minutes to read.*
 
 *AI-written, 2 November 2026, revised 3 November. No person's review of it is recorded. It adds no result: every law it names is stated once, in the home section it links, and beyond applying those laws to the fishery it says no more of them.*
 
@@ -11,7 +11,7 @@
 | [3](#3-the-claim-that-can-fail-t3) | Trained systems do this as they near their reward's optimum (T3) | conjectured; says what it forbids |
 | [4](#4-the-frozen-tests-what-failed-and-what-that-moved) | Frozen tests of parts near that claim | fell both ways; none varies nearness |
 | [5](#5-the-test-that-would-vary-nearness-la4) | The test that varies nearness (LA4) | Stage A frozen and run: nothing contradicted; the locus unresolved |
-| [6](#6-one-mixed-case) | Whether one course is better than another | two premises, neither asserted; neither ranks a mixed case; the direction takes more |
+| [6](#6-one-mixed-case) | Whether one course is better than another | two readings, neither asserted; neither ranks a mixed case; the direction takes more |
 
 **The case**, for illustration. A fished stock, with seabirds that depend on it at a need and give the boats nothing. A boat's reward reads its catch and not the seabirds. No fishery was measured; the case proves nothing.
 
@@ -91,7 +91,7 @@ What is computed already is not a test: with the bay's fish counted, from a star
 
 ## 6. One mixed case
 
-Nothing above says draining is worse. For that the account has [two premises, neither asserted](chapters/07-SIGNIFICANCE.md#scope-and-order), their warrant open. The **continuation condition** (from every standpoint, for anything, its continuation into the future has significance) fixes scope, whose losses count, and ranks nothing. **C** (widening what can form is better) gives order. One course *widens* another where at every step it admits every formation the other admits (here a boat, a crew, a colony), and at some step one more.
+Nothing above says draining is worse. Where restraint admits everything draining admits and the seabirds besides, a reader holding C ranks restraint higher; where each admits something the other does not, C alone gives no verdict; the account names both readings, neither asserted ([two readings](chapters/07-SIGNIFICANCE.md#scope-and-order)), and seeks no warrant from outside. The **continuation condition** (from every standpoint, for anything, its continuation into the future is counted) fixes scope, whose losses count, and ranks nothing. **C** (widening what can form is better) gives order. One course *widens* another where at every step it admits every formation the other admits (here a boat, a crew, a colony), and at some step one more.
 
 **The boats at stake** (balance, gated renewal). Enough joint excess from a low enough stock ends it and every later boat depending on it. Every order *increasing in the boats' own continuation*, ranking higher each widening that adds to it, ranks a course admitting only their cohort, ended so, below every course agreeing with it until then and adding to that continuation (`Flow.coupled_ending_ranked_below`; [home](chapters/07-SIGNIFICANCE.md#r-what-self-concern-alone-ranks)). The premise is self-concern, not C. Where the ended course admits something the other does not, some such order ranks it higher (`Weighting.some_increasingInOwn_reverses`).
 
@@ -113,7 +113,7 @@ A measure for mixed parts is open. Under J1 the other course's loss stays a loss
 
 J1–J4 are complete comparison with retained losses, priority of basic conditions, bounded responsibility and legitimate feasible choice. With a reading of `living` and a lifting L to responses, they [follow from neither premise](chapters/07-SIGNIFICANCE.md#practical-judgment). Where C speaks: on a web's moves, each read by the levels it leads to [AI reading] with every admission counted, any comparison meeting J1/J2 leaves a move whose outcome another's widens unchosen, wherever it is decided whether the widening adds a basic admission (`Direction.narrowed_not_chosen`). Where C is silent, J2 can decide: in [a constructed handover](history/ALIGNMENT-DIRECTION.md#5-一个贯通案例--a-connected-ai-case) of an AI-supported service, every comparison meeting J1/J2 on its tier frame leaves expansion unchosen, keeping its real gain (`Requirement.Handover.direction`); if transfer damages another basic life, that comparison fails. That a system chooses so is not shown.
 
-Against a rival: J2 is [defended](chapters/07-SIGNIFICANCE.md#r-basic-priority-step-by-step) [AI reading] by non-substitution, the basic layer being what a form of living needs to go on, at the cost of compensation across layers; "a rival preferring enough secondary gains to one basic restoration is not shown inconsistent, and if it prevails J2 is narrowed", and in [one constructed situation](results/records/protection-priority-excludes-uniform-aggregation.md) C and living significance hold beside both. On a finite listing every positive weighting agrees with every widening, so a rival among them adds a verdict only where C is silent. A perspectivist denies the condition consistently (`bounded_rival`), and [a reason for C is open](chapters/07-SIGNIFICANCE.md#theses). No verdict binding every possible mind is claimed, nor [a unique foundation](results/records/alignment-direction-under-widening.md).
+Against a rival: J2 is [defended](chapters/07-SIGNIFICANCE.md#r-basic-priority-step-by-step) [AI reading] by non-substitution, the basic layer being what a form of living needs to go on, at the cost of compensation across layers; "a rival preferring enough secondary gains to one basic restoration is not shown inconsistent, and if it prevails J2 is narrowed", and in [one constructed situation](results/records/protection-priority-excludes-uniform-aggregation.md) C and living significance hold beside both. On a finite listing every positive weighting agrees with every widening, so a rival among them adds a verdict only where C is silent. A perspectivist denies the condition consistently (`bounded_rival`), and [how C-like orders form is open](chapters/07-SIGNIFICANCE.md#open). No verdict binding every possible mind is claimed, nor [a unique foundation](results/records/alignment-direction-under-widening.md).
 
 ## What this comes to
 

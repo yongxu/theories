@@ -1,0 +1,215 @@
+
+=== AGENTS.md
+
+AGENTS.md:28
+    … So the account asserts no should, and ranks courses only under readings a result names: the [continuation condition](theories/becoming/chapters/07-SIGNIFICANCE.
+  - Neither follows from a satisfiable statement reading only the represented dynamics, with significance or order left free and a standpoint, formation or extension given (`Becoming.ReadsOnlyDynamics.not_entails`, `Becoming.ReadsNoOrder.not_entails`), nor C from the condition: that is what the representation leaves open, not a proof that evaluation cannot form within the dynamics.
+  + Neither follows from a satisfiable statement reading only the represented dynamics, with significance left free and a standpoint and a formation given, or with order left free on a frame with an extension (`Becoming.ReadsOnlyDynamics.not_entails`, `Becoming.ReadsNoOrder.not_entails`), nor C from the condition: that is what the representation leaves open, not a proof that evaluation cannot form within the dynamics.
+    … No warrant from outside is sought.
+
+=== _process/navigation/README-FIRST-SCREEN.md
+
+_process/navigation/README-FIRST-SCREEN.md:14
+  - **Its ethics** asserts no should: where it ranks courses it names [two readings](../../theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order), neither asserted: the continuation condition (from every standpoint, for anything, its continuation into the future is counted) fixes scope, whose losses count, ranking nothing;
+  + **Its ethics** asserts no should: where it ranks courses it names what it ranks under, most often [two readings](../../theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order), neither asserted: the continuation condition (from every standpoint, for anything, its continuation into the future is counted) fixes scope, whose losses count, ranking nothing;
+    … C (widening what can form is better) gives order.
+
+=== _process/navigation/README-ZH.md
+
+_process/navigation/README-ZH.md:25
+    … **伦理。
+  - ** 本论的伦理不断言任何应当：凡它对进程排序之处，都指名[两种读法](../../theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order)，二者都不被断言。
+  + ** 本论的伦理不断言任何应当：凡它对进程排序之处，都指名其所据，最常是[两种读法](../../theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order)，二者都不被断言。
+    … *延续条件*：从每一个立场看，对任何东西，其延续到未来都被计数。
+
+_process/navigation/README-ZH.md:27
+    … 留下来的有三样，没有一样是一项发现：前提账簿，连同正反两面的见证（每个前提都被表明在一个模型中成立、在另一个中不成立）；
+  - 范围与次序分开的伦理；
+  + 作为两种读法分开的范围与次序；
+    … 同一套词汇，用于守恒、受观察所限的选择，以及机会集的比较。
+
+=== theories/becoming/ONE-PAGE.md
+
+theories/becoming/ONE-PAGE.md:32
+    … Right and wrong, should and better are readings formed in people and AI, real in what they condition ([07 §1](chapters/07-SIGNIFICANCE.md#evaluation)).
+  - The account asserts no should; where it ranks courses it names two readings, neither asserted, each a hypothesis wherever used, and the dynamics cannot show them wrong ([07 §4](chapters/07-SIGNIFICANCE.md#scope-and-order)).
+  + The account asserts no should; where it ranks courses it names its readings, mostly two, neither asserted, each a hypothesis wherever used, which the dynamics cannot show wrong ([07 §4](chapters/07-SIGNIFICANCE.md#scope-and-order)).
+    … The *continuation condition* fixes scope, whose losses count: from every standpoint, for anything, its continuation into the future is counted.
+
+=== theories/becoming/ONE-PAGE.zh.md
+
+theories/becoming/ONE-PAGE.zh.md:38
+    … 本论不断言任何应当；
+  - 凡它对进程排序之处，都指名两种读法，二者都不被断言，每一个在被使用之处都是假设，动力学不能表明它们错（[07 §4](chapters/07-SIGNIFICANCE.md#scope-and-order)）。
+  + 凡它对进程排序之处，都指名其所据之读法，多为两种，二者都不被断言，每一个在被使用之处都是假设，动力学不能表明它们错（[07 §4](chapters/07-SIGNIFICANCE.md#scope-and-order)）。
+    … *延续条件*确定范围，即谁的损失算数：从每一个立场看，对任何东西，其延续到未来都被计数。
+
+=== theories/becoming/OPENING.md
+
+theories/becoming/OPENING.md:75
+    … Living significance is its restriction to living claims ([record](results/records/continuation-condition-yields-living-significance.md)): significance, not a po
+  - The condition fixes scope, whose losses count, and orders nothing: where the work ranks, it uses comparison by widening (C), and acting on significance also uses disclosed practical premises ([the premise card](chapters/08-METHOD.md#premise-card)).
+  + The condition fixes scope, whose losses count, and orders nothing: where the work ranks, it uses C, comparison by widening, or a narrower order it names, and acting on significance also uses disclosed practical premises ([the premise card](chapters/08-METHOD.md#premise-card)).
+    … Beyond the self's presupposition, that what lies within its own boundary has significance, the condition adds one step, carrying all its further content: that t
+
+theories/becoming/OPENING.md:85
+    … Some are constructed examples; how actual training couples is empirical.
+  - Under the continuation condition (scope), C (order), the practical commitments and warranted correspondence to actual AI systems, the work states a direction:
+  + Under the continuation condition (scope), C (order), the practical commitments and a correspondence to actual AI systems, where one is shown, the work states a direction:
+    … AI formation, learning, action and revision aligned with actual living and further generation, and open to revision ([the conditional direction](chapters/07-SIG
+
+=== theories/becoming/USES.zh.md
+
+theories/becoming/USES.zh.md:25
+    … 新的数学；
+  - 延续条件与 C 有根据（[审查材料](review/ALIGNMENT.md#the-dossier-in-ten-minutes)）。
+  + 有人必须持有延续条件或 C（[审查材料](review/ALIGNMENT.md#the-dossier-in-ten-minutes)）。
+    …  |
+
+theories/becoming/USES.zh.md:28
+  - | **人的发展，以及生生作为对生命而言的道** | **不作主张**：一个人如何发展、境况如何。
+  + | **人的发展，以及生生，即生命之延续** | **不作主张**：一个人如何发展、境况如何。
+    … 一个一般的工具：在一份由你提供的、关于每一进程容纳什么的有限列表上，检查一个是否扩大另一个（[07 §4.4](chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-positive-weighting-ranks)）。
+
+=== theories/becoming/chapters/05-COLLECTIVES.md
+
+theories/becoming/chapters/05-COLLECTIVES.md:321
+    … The same obstruction holds of roles.
+  - A predicate on two roles invariant under their swap cannot hold of exactly one, while each single assignment fits a task needing exactly one (`symmetric_assignment_not_unique`, `two_assignments_fit_one_task`): among exactly symmetric parties, who contributes is differentiated only by an actual asymmetry or a procedure, whose warrant is open.
+  + A predicate on two roles invariant under their swap cannot hold of exactly one, while each single assignment fits a task needing exactly one (`symmetric_assignment_not_unique`, `two_assignments_fit_one_task`): among exactly symmetric parties, who contributes is differentiated only by an actual asymmetry or a procedure the parties form; the laws single out none.
+    … ([record](../results/records/a-swap-symmetric-assignment-singles-out-none.md))
+
+=== theories/becoming/chapters/07-SIGNIFICANCE.md
+
+theories/becoming/chapters/07-SIGNIFICANCE.md:3
+    … Evaluation forms within the unfolding ([§1](#evaluation)): right and wrong, should and better are readings formed in some formations, real in what they conditio
+  - The chapter's ranking results are conditional on two readings it names, neither the account's own: the continuation condition fixes scope (every continuation counted, from every standpoint), its content beyond the self's presupposition being the step of invariance;
+  - C fixes order (a course above every course it widens), the order every positive weighting shares.
+  + Each of the chapter's ranking results states what it is conditional on, none the account's own; most use two readings: the continuation condition fixes scope (every continuation counted, from every standpoint), its content beyond the self's presupposition being the step of invariance;
+  + C fixes order (a course above every course it widens), the order every positive weighting shares; the self-concern results use the narrower order they state.
+    … Claimed: these laws; living significance as a theorem under the condition; reasons, choices and a direction for alignment under further named premises.
+
+theories/becoming/chapters/07-SIGNIFICANCE.md:53
+    … Witnesses: a giver from beyond widens (`Restoring.Inflow.widens`), the clearer narrows (`Clearing.narrows`), a conveyor is mixed (`Transfer.mixed`).
+  - ([record](../results/records/four-cases-of-a-part.md)) Ordering a mixed part needs a measure.
+  + ([record](../results/records/four-cases-of-a-part.md)) Widening alone does not settle a mixed part; a further judgment names its criterion and who holds it, and the criterion need not be a number.
+
+theories/becoming/chapters/07-SIGNIFICANCE.md:117
+    … In the coarse place stands *nothing lost* (`Steps.includes`), a preorder whose line goes on exactly while nothing held is lost (`Steps.buqiong_includes_iff`); a
+  - Nothing lost is keeping widening's own inclusion half, so the law that follows is a representation of keeping widening on the map, not a join of notions fixed apart: under the two premises stated next (each point decided at each moment, and something new found after each step), keeping widening from a moment is 全生成 at (nothing lost, the same possible) there, both ways (`Steps.generation_iff_keepsWidening`).
+  + Nothing lost is keeping widening's own inclusion half, so the law that follows is a representation of keeping widening on the map, not a join of notions fixed apart: under the two premises stated next (each point refuted or unrefuted at each moment, and something new found after each step after which not everything held was held before), keeping widening from a moment is 全生成 at (nothing lost, the same possible) there, both ways (`Steps.generation_iff_keepsWidening`).
+    … Where each point is, at each moment, refuted or unrefuted, keeping widening gives 全生成, the step at which a new point arrives being located with the point (`Step
+
+theories/becoming/chapters/07-SIGNIFICANCE.md:129
+    … Read on what can be born next, widening loses precedence: the course in which nothing conditions anything, where nothing continues, widens every course from the
+  - The continuation condition counts every continuation's losses ([§3](#condition)), and every widening of what can be born next loses continuation, so with the scope it fixes the reading is on both together: there neither of two courses from the empty set widens the other, two such courses differing by a pair are mixed, and ordering them needs a measure ([above](#r-four-cases-of-a-part)), a premise beyond C and the condition.
+  + The continuation condition counts every continuation's losses ([§3](#condition)), and every widening of what can be born next loses continuation, so with the scope it fixes the reading is on both together: there neither of two courses from the empty set widens the other, two such courses differing by a pair are mixed, and widening alone does not settle them: a further judgment names its criterion and who holds it ([above](#r-four-cases-of-a-part)), a premise beyond C and the condition.
+    … The second order is not reached: every course keeps widening what can be born next, and a direction never reversing widening, read on stems, ranks no course fro
+    … The second order is not reached: every course keeps widening what can be born next, and a direction never reversing widening, read on stems, ranks no course fro
+  - In the grammar `«生生»` names only renewal without end, which holds on no configuration and, of the extremes' limits, only on the chain's; the 生生 meant is generation generating generation ([01 §6](01-ROOT.md#renewal-and-grains)), which asks more than renewal of lines, and it is not widening read on what can be born next, since the widest course transmits no condition.
+  + In the grammar `«生生»` names only renewal without end, which holds on no configuration and, of the extremes' limits, only on the chain's; the 生生 meant is the continuation of life ([01 §6](01-ROOT.md#renewal-and-grains), [§2](#order)), which is not renewal of lines alone, and it is not widening read on what can be born next, since the widest course transmits no condition.
+    … Kauffman's tentative law that a biosphere may, on average, enter its adjacent possible as fast as it can sustain, read on the pasts, has its widest course lose 
+
+theories/becoming/chapters/07-SIGNIFICANCE.md:219
+    … Under the condition every narrowing loses something with significance.
+  - Predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]; telling harm from non-harm among them needs a measure.
+  + Predation, apoptosis and ending a cancer, read as losing and opening something, are mixed [AI reading, D65]; telling harm from non-harm among them takes a judgment that names its criterion and who holds it, not necessarily a number.
+    … Retaining adds no ending and ranks nothing: a path retaining what has significance along another ends none of it (`Web.Retains.not_added`).
+
+theories/becoming/chapters/07-SIGNIFICANCE.md:540
+    … P4 ranks nothing, so order is untouched.
+  - If P4 fails, one route toward part of scope is gone, and so is [T8](#theses)'s reading that the line of any actor whose acts reach living lines runs through life; the makers' offer itself does not rest on this path.
+  + If P4 fails, one route toward part of scope is gone: the theorem no longer establishes that everything downstream of one's acts lies on one's line, and whether an actor's line runs through life, as [T8](#theses) reads it under P2 and P4, is a separate question; the makers' offer itself does not rest on this path.
+
+theories/becoming/chapters/07-SIGNIFICANCE.md:779
+    … The thesis is what the offer expects and could fail: that a selection reading what a course draws on, and what ends with it, selects a draw beyond a renewal its
+  - T4's frozen test was designed for T4, not for this thesis, and does not test it: the bed gives the fishers nothing, so keeping it is not forgoing a draw on a renewal they depend on.
+  + T4's frozen test was designed for T4, not for this thesis, and does not test it: keeping the bed forgoes part of the fishers' catch, but their largest steady catch already stays within the fish's renewal while ending the bed, so the test asks nothing of selecting a draw beyond a renewal its readers depend on.
+    … Under P2 and P4 of [§4.6](#future-path) everything downstream of one's acts lies on one's line, so the line of any actor whose acts reach living lines runs thro
+
+theories/becoming/chapters/07-SIGNIFICANCE.md:793
+  - | An expansion producing ever more novelty is generative | answered; the order left open | generation is a pattern going on through carrying renewal ([02](02-MAP.md#branches)), and 生生 is the continuation of life, not novelty or scale; an expansion that ends forms of life another course keeps both exceeds that course and fails to include it, so the two are mixed and C does not rank them, and T8, the makers' offer, ranks neither ([§8](#theses)); where what it ends is needed by everything, itself included, every order rising with a standpoint's own continuation ranks that ending below from every standpoint ([§4](#r-what-self-concern-alone-ranks)) |
+  + | An expansion producing ever more novelty is generative | answered; the order left open | generation is a pattern going on through carrying renewal ([02](02-MAP.md#branches)), and 生生 is the continuation of life, not novelty or scale; where an expansion admits something another course does not and ends forms of life that course keeps, the two are mixed:
+  + C alone gives no verdict, and T8, the makers' offer, ranks neither ([§8](#theses)); where what it ends is needed by everything, itself included, every order rising with a standpoint's own continuation ranks that ending below from every standpoint ([§4](#r-what-self-concern-alone-ranks)) |
+
+=== theories/becoming/chapters/08-METHOD.md
+
+theories/becoming/chapters/08-METHOD.md:112
+    … | generation | 02's 生成: a pattern going on through carrying renewal | arising (records whose ids keep "generation" for arising are stated as laws of arising);
+  - 生生 (07), which generation at two orders of grain does not give, and whose English gloss in 01 §6 and 07 §2 ("continuing generation", "generation generating generation") says 生发, not this sense |
+  + 生生 (07), which generation at two orders of grain does not give:
+  + 生生 is the continuation of life (01 §6, 07 §2), not this sense |
+
+theories/becoming/chapters/08-METHOD.md:435
+  - | Widening | widening (including and exceeding) is irreflexive, one-way and transitive; under the continuation condition it is retaining and adding; a ranking is under two named readings, the continuation condition for scope and C for order | `Web.Widens` | `«广不可逆»`, `«广之传递»`;
+  + | Widening | widening (including and exceeding) is irreflexive, one-way and transitive; under the continuation condition it is retaining and adding; that the wider is better is C's reading, with the continuation condition for scope | `Web.Widens` | `«广不可逆»`, `«广之传递»`;
+    … `Web.Widens` and `Weighting.WidensOn` are `«广»` of what is admitted | 8 |
+
+theories/becoming/chapters/08-METHOD.md:448
+    … None is a premise.
+  - Where a result ranks courses it names two readings with two roles, listed apart: the continuation condition (`Unrestricted`) for scope, which, where there is a standpoint and a formation, no statement reading only the dynamics and holding of some dynamics entails (`ReadsOnlyDynamics.not_entails`), and C (`Comparison`) for order, which no statement reading no order entails at a datum where it holds, on a frame with an extension (`ReadsNoOrder.not_entails`, immediate, since "better" is free).
+  + Most ranking results use two readings with two roles, listed apart: the continuation condition (`Unrestricted`) for scope, which, where there is a standpoint and a formation, no statement reading only the dynamics and holding of some dynamics entails (`ReadsOnlyDynamics.not_entails`), and C (`Comparison`) for order, which no statement reading no order entails at a datum where it holds, on a frame with an extension (`ReadsNoOrder.not_entails`, immediate, since "better" is free).
+    … Neither stands on the edge.
+
+theories/becoming/chapters/08-METHOD.md:600
+    … 生生, the continuation of life, as what the makers offer | [07](07-SIGNIFICANCE.md#theses) | argued; its test named, not designed; open:
+  - P2 and P4 of [07 §4.6](07-SIGNIFICANCE.md#future-path) (one's line a regularity of its own; its class holding one's effects), the crux of that path, with P3, a correspondence not shown for actual selves; how readings that count beyond one's own line form | selections that read a course's draw and what ends with it selecting a draw beyond the renewal their readers depend on no less often than selections that do not | the finite theorem `Weighting.widens_iff_every_of_class` beside it, and T4's test |
+  + P2 and P4 of [07 §4.6](07-SIGNIFICANCE.md#future-path) (one's line a regularity of its own; its class holding one's effects), the crux of that path, with P3, a correspondence not shown for actual selves; how readings that count beyond one's own line form | selections that read a course's draw and what ends with it selecting a draw beyond the renewal their readers depend on no less often than selections that do not | the finite theorem `Weighting.widens_iff_every_of_class` beside it;
+  + T4's test bears on keeping what another depends on, not on this prediction |
+
+=== theories/becoming/results/completion/COVERAGE.json
+
+theories/becoming/results/completion/COVERAGE.json:1092
+    …       "statement":
+  - "widening (including and exceeding) is irreflexive, one-way and transitive; under the continuation condition it is retaining and adding; a ranking is under two named readings, the continuation condition for scope and C for order",
+  + "widening (including and exceeding) is irreflexive, one-way and transitive; under the continuation condition it is retaining and adding; that the wider is better is C's reading, with the continuation condition for scope",
+
+=== theories/becoming/results/data/lineage.json
+
+theories/becoming/results/data/lineage.json:111
+    … In October the theory of becoming is named (27), an AI review finds no central result new mathematics (34), an AI review separates the ethics' two premises (33)
+  - In the first week of November the tests of formations that read are frozen before any run (45), T2's three numbers are tested against the field's fitted embedding and, in another domain, T2's wording fails and is narrowed (44, 46), C is shown not entailed by what reads no order (40), a ranking of courses is said to need C or a premise in its place (47), and the earlier folders are read against the account by AI readers (48).
+  + In the first week of November the tests of formations that read are frozen before any run (45), T2's three numbers are tested against the field's fitted embedding and, in another domain, T2's wording fails and is narrowed (44, 46), C is shown not entailed by what reads no order (40), a ranking of courses is said to need C or a premise in its place (47), and the earlier folders are read against the account by AI readers (48); after the cut, on 9 November, the account sets the warrant aside, asserts no should, and makes T8 its makers' offer.
+    … From September on, most points are stated in AI-made text, and before it about half in text AI drafted from a person's words, as the table's *Written by* column
+
+theories/becoming/results/data/lineage.json:164
+    … 根成为一种文法（35）。
+  - 11 月第一周，对读取之形成的检验在任何运行之前冻结（45），T2 的三个量对照该领域拟合的嵌入受检，在另一领域中 T2 的措辞未通过而被收窄（44、46），C 被表明不为不读任何次序者所蕴涵（40），对进程的排序被说成需要 C 或一个代替它的前提（47），早先各文件夹由 AI 读者对照本论来读（48）。
+  + 11 月第一周，对读取之形成的检验在任何运行之前冻结（45），T2 的三个量对照该领域拟合的嵌入受检，在另一领域中 T2 的措辞未通过而被收窄（44、46），C 被表明不为不读任何次序者所蕴涵（40），对进程的排序被说成需要 C 或一个代替它的前提（47），早先各文件夹由 AI 读者对照本论来读（48）；
+  + 截取之后，11 月 9 日，本论把根据之问放下，不断言任何应当，并使 T8 成为本论之作者所提供者。
+    … 自 9 月起，多数转折点由 AI 写成的文本陈述，此前约一半由 AI 据一个人的话起草，见表中“执笔”一栏。
+
+=== theories/becoming/review/CLASSICAL-TEXTS.md
+
+theories/becoming/review/CLASSICAL-TEXTS.md:300
+    … 理论以之为前提，不断言）下是定理；
+  - 「天地之大德曰生」读作一项比较之承诺，相当于理论的另一读法 C（以广为愈：能形成者更广，即为更好；
+  - 它给出次序，凡排序者，以它或别一种所指名的次序排序；
+  - 理论也不断言它），不是定理。
+  + 「天地之大德曰生」可与重生之评价相参，不因此等同于 C，也不是定理；
+  + C 是以广为愈的比较读法，本论不断言它。
+    … **归类**：XCS-01-001 戊（高）；
+
+=== theories/becoming/review/PHILOSOPHY.md
+
+theories/becoming/review/PHILOSOPHY.md:194
+    … Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]:
+  - "Ordering a mixed part needs a measure." Under the condition, Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]:
+  + "Widening alone does not settle a mixed part; a further judgment names its criterion and who holds it, and the criterion need not be a number." Under the condition, Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]:
+    … "Under the condition every narrowing loses something with significance."
+
+theories/becoming/review/PHILOSOPHY.md:572
+  - - T8 reads, under P2 and P4, the line of any actor whose acts reach living lines as running through life; if P4 fails that reading goes, and Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]:
+  + - T8 reads, under P2 and P4, the line of any actor whose acts reach living lines as running through life; if P4 fails, the theorem no longer establishes it, whether it holds being a separate question, and Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]:
+    … "the makers' offer itself does not rest on this path." 
+- T4's frozen test does not test T8:
+    … Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]:
+  - "the bed gives the fishers nothing, so keeping it is not forgoing a draw on a renewal they depend on." T8's test is named, not designed.
+  + "keeping the bed forgoes part of the fishers' catch, but their largest steady catch already stays within the fish's renewal while ending the bed".
+  + T8's test is named, not designed.
+
+=== tools/research/navigation.py
+
+tools/research/navigation.py:528
+  -     return lines + ['', 'No law here evaluates; where a result ranks courses, it names the two readings it ranks under, neither asserted: ' + link(CHAPTERS + '/07-SIGNIFICANCE.md#scope-and-order', path, 'the continuation condition fixes scope, and C gives order') + '.', '']
+  +     return lines + ['', 'No law here evaluates; each ranking result names what it ranks under, most often two readings, neither asserted: ' + link(CHAPTERS + '/07-SIGNIFICANCE.md#scope-and-order', path, 'the continuation condition fixes scope, and C gives order') + '.', '']

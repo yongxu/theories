@@ -13,11 +13,11 @@ In reading order; the numbering is for reading, not an order of proof.
 | 1 | [The root: continuation relative to a class](01-ROOT.md) | The root: relation, condition, class, continuation, core | 86 | 178–231 minutes |
 | 2 | [Generation, keeping and degeneration](02-MAP.md) | The map: generation, keeping, degeneration, orders | 94 | 187–243 minutes |
 | 3 | [Knowing, learning and testing](03-KNOWING.md) | Knowing and testing | 110 | 236–307 minutes |
-| 4 | [Life and evolution](04-LIFE.md) | Life and evolution | 46 | 114–148 minutes |
-| 5 | [Joint activity and selection](05-COLLECTIVES.md) | Collectives and selection | 74 | 180–234 minutes |
-| 6 | [古文：读出、检验与分歧 (the classical texts: what they read out, how it is tested and where they diverge; in Chinese)](06-CLASSICAL-TEXTS.md) | The classical texts | 16 | 124–161 minutes |
-| 7 | [Significance, ethics and alignment](07-SIGNIFICANCE.md) | Significance and alignment | 82 | 300–390 minutes |
-| 8 | [Method and the formal core](08-METHOD.md) | Method and the formal core | 21 | 215–280 minutes |
+| 4 | [Life and evolution](04-LIFE.md) | Life and evolution | 46 | 114–149 minutes |
+| 5 | [Joint activity and selection](05-COLLECTIVES.md) | Collectives and selection | 74 | 181–235 minutes |
+| 6 | [古文：读出、检验与分歧 (the classical texts: what they read out, how it is tested and where they diverge; in Chinese)](06-CLASSICAL-TEXTS.md) | The classical texts | 16 | 125–163 minutes |
+| 7 | [Significance, ethics and alignment](07-SIGNIFICANCE.md) | Significance and alignment | 82 | 304–396 minutes |
+| 8 | [Method and the formal core](08-METHOD.md) | Method and the formal core | 21 | 216–281 minutes |
 
 Status: **chapter** is one of the eight chapters of the theory; **canonical** is the entry that states the theory; **reference** keeps material moved out of a chapter; **kept** is a live chapter kept at its own scope; **generated** is written by `make research-render`; **Chinese edition** is a `NAME.zh.md` split from a bilingual original, not maintained in step with the English file, which governs.
 

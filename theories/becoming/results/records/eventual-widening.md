@@ -45,7 +45,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- The second-order direction of 生生, a range whose widening keeps widening compared with one merely wider now: eventual widening needs no growth (a steady course eventually widens one that collapses) and is silent on a lag. It stays open, and the study names what a next attempt needs.
+- The second-order direction of widening, a range whose widening keeps widening compared with one merely wider now: eventual widening needs no growth (a steady course eventually widens one that collapses) and is silent on a lag. It stays open, and the study names what a next attempt needs.
 - That eventual widening is better: calling it better is a premise beyond C (C∞ in the study), named and not asserted. It would discount every loss confined to a finite stretch, its verdicts can be insulated against every record, and it is the unlimited continuation priority that the priority of basic conditions rejects.
 - That keeping widening or being opened by the opened is 生生, a direction or a ranking: ranking by either runs against widening (OwnCondition.not_monotone, Saturated.reverses).
 - A law relating 生成 to widening (02 stays open), or any gain, renewal or giver law; comparisons over branching courses; novelty; and that eventual widening entails overtaking as a theorem, which is an argument under finitely many admissions at each step.
@@ -126,6 +126,7 @@ Aliases: `Widening on late tails, and what carries a widening`, `在晚期尾段
 - 27 October 2026, board item UE10 (study section 424): the next step updated: what a course keeps reachable is read in what-a-course-keeps-reachable; no declaration changed.
 - 3 November 2026, CD (board item CD): law 2 says where one course of a pair widens the other, not where widening orders it, as the home section in 07 §2 says; the next step and two related lines say that widening with a lag and eventual widening relate a pair oppositely, not that they rank it, and what the lagged order on what a course keeps reachable puts above. Under the glossary's one sense, ranking and order (the ethics' role word) say which course is better, and widening says which admits more, with no premise. The claim is unchanged.
 - 6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.
+- 9 November 2026, board item WB: 'the second-order direction of 生生' re-said as the second-order direction of widening, since 生生 is read as the continuation of life and widening is not its measure; no change to the claim, its hypotheses or its Lean.
 
 </details>
 

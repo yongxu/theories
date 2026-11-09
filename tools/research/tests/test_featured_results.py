@@ -361,7 +361,7 @@ class FirstScreenTests(unittest.TestCase):
         screen = navigation.first_screen(records, navigation.readme_opening())
         self.assertNotIn('{{', screen)
         self.assertNotIn('\n#', '\n' + screen)
-        self.assertIn('fixes scope', screen)  # both premises with their roles
+        self.assertIn('fixes scope', screen)  # both readings with their roles (WB, 9 November 2026: the account names the readings it ranks under)
         self.assertIn('gives order', screen)  # not 'alone': 07's own theorem has self-concern rank one case with no C
         # a front page names no person; it says once, briefly, that the work was made with AI, the work and not its making
         # being the point, and never that no person has read it (Ren, 8 November 2026: sources/15-codex-theory-conversations/

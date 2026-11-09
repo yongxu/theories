@@ -233,8 +233,8 @@
       "witness": "Becoming.Web.significance_undetermined"
     },
     {
-      "en": "Counting theorems that take the condition as a hypothesis counts uses of a universal statement, not dependence on further content; the condition fixes scope, whose losses count, and what ranks lies in C or a premise in its place (the step of invariance is part of that scope).",
-      "zh": "以条件为假设的定理之数，计的是一个全称命题的用处，不是对更多内容的依存；条件定范围，即谁的损失算数，排序在于 C 或一个代替它的前提（不变的一步属于这个范围）。",
+      "en": "Counting theorems that take the condition as a hypothesis counts uses of a universal statement, not dependence on further content; the condition fixes scope, whose losses count, and what ranks is an order a reader holds, C or another (the step of invariance is part of that scope).",
+      "zh": "以条件为假设的定理之数，计的是一个全称命题的用处，不是对更多内容的依存；条件定范围，即谁的损失算数，排序在于读者所持之次序，C 或别一种（不变的一步属于这个范围）。",
       "kind": "non-implication"
     }
   ],
@@ -1299,6 +1299,10 @@
     {
       "en": "7 November 2026, board item LM1: a reader of LM found this said C orders alone, where a ranking of courses needs C or a premise in its place (07 §4.4); corrected. No law, premise or proof changed.",
       "zh": "2026年11月7日，工作板条目 LM1：LM 之读者指出此处谓唯 C 定序，而对进程的排序需要 C 或一个代替它的前提（07 §4.4）；已更正。诸律、前提与证明皆不变。"
+    },
+    {
+      "en": "9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.",
+      "zh": "2026年11月9日，工作板条目 WB：据 Ren 11 月 8–9 日之言重述伦理之框架：两个前提称为排序之果所用之两种读法，排序为排序者所持，不求外来之根据；主张、假设与 Lean 皆不变。"
     }
   ],
   "text_versions": [

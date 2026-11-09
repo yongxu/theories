@@ -35,7 +35,7 @@
 
 - Selection in sampled generations (Wright-Fisher with selection), where the fixation share has no closed count.
 - Weights that depend on more than the count, such as on time or the history, and mutation with drift.
-- Which history happens: the counts weigh histories; ranking goes through the comparison C or a premise in its place.
+- Which history happens: the counts weigh histories; a ranking holds the comparison C or another order.
 - **Counterexample:** The favoured kind is not sure to fix: from i its loss weighs at least b^i times every later history (Replacement.lost_ge). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Drift.lean)
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
@@ -98,6 +98,7 @@ Aliases: `fixation with selection`, `Moran fixation probability`, `replacement o
 - 3 November 2026, board item AJ8 (study section 503): the chain stated with weights read from the count and a weight of staying, every bound proved there and the constant case derived from it; bounds across a stretch where one kind's weight is at least the other's added.
 - 6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.
 - 7 November 2026, CX: this said ranking goes through the comparison C, where a ranking of courses needs C or a premise in its place (07 §4), the correction LM1 made in other records; corrected. No law, premise or proof changed.
+- 9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.
 
 </details>
 

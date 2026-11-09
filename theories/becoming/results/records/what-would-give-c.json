@@ -175,7 +175,7 @@
       "witness": "Becoming.Weighting.reach_eq_of_refused"
     },
     {
-      "en": "That more options are better: among several choosers a wider menu can lower what each gets at the pure Nash equilibrium of one play. Whether a wider course of what can form can do the same is open; if one can, the witness stands against C there too, with the shape of T8's stated refuter.",
+      "en": "That more options are better: among several choosers a wider menu can lower what each gets at the pure Nash equilibrium of one play. Whether a wider course of what can form can do the same is open; if one can, the witness stands against C there too, with the shape T8's refuter had until 9 November 2026.",
       "zh": "选项越多越好：在多个选择者之间，更宽的菜单可使各自在一次博弈的纯策略纳什均衡处所得下降。可成者的更宽进程能否如此尚开放；若能，此见证在那里也反对 C，并有 T8 所述反驳之形。",
       "kind": "non-implication",
       "witness": "Becoming.Weighting.Restraint.each_falls"
@@ -196,7 +196,7 @@
       "kind": "scope"
     },
     {
-      "en": "That a premise weaker at other data is any easier to warrant: not a question the Lean can answer.",
+      "en": "That a premise weaker at other data is any easier to argue for: not a question the Lean can answer.",
       "zh": "在别的数据上更弱的前提更易获得根据：这不是 Lean 能回答的问题。",
       "kind": "non-implication"
     }
@@ -548,12 +548,12 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "051f6da954447f78141e02476d2b35e12afa2ac76cc5869d0c82a212ecc39e39"
+      "sha256": "58a1264eadb4438f512993f76eebcc076f6bd2be8a5408b147ecd02b0654d4b9"
     },
     {
       "path": "theories/becoming/chapters/08-METHOD.md",
       "role": "statement",
-      "sha256": "a57bf759219b5bdd20a024435ff111560b7f801cfd90c770751c2bd1acafb743"
+      "sha256": "ec49b64eaeedf2db20f7b97588d35947b6dfc742b4216fb19e5607c87d942d6d"
     }
   ],
   "proof_bindings": [
@@ -569,6 +569,10 @@
     {
       "en": "6 November 2026, board item CW: added, the atlas plan's first Lean item. What \"weaker\" can mean, the frame on a listing, choosers and what their range must hold, standpoints, one item at a time and what lies downstream, each with where it stops. It does not derive C, the menu witness stands, and 08 §8's verdict does not move.",
       "zh": "2026年11月6日，看板项 CW：新增，图谱计划的第一项 Lean。“更弱”可作何解，列举之框，选择者及其范围须含什么，立场，一项一项与下游，各附止于何处。不推出 C，菜单之见证成立，08 §8 的判定不变。"
+    },
+    {
+      "en": "9 November 2026, board item WB: T8's refuter, which this record's last does-not-show line named, changed with T8 on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md); the line now names the refuter T8 had; 'warrant' read as 'argue for'. No change to the claim, its hypotheses or its Lean.",
+      "zh": "2026年11月9日，工作板条目 WB：此记录末一行「未表明」所称 T8 之驳斥者，随 T8 依 Ren 11 月 8–9 日之言而改；该行今称 T8 所曾有之驳斥者；“warrant”读作“为之论证”。主张、假设与 Lean 皆不变。"
     }
   ]
 }

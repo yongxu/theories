@@ -1,0 +1,23 @@
+import sys
+p=sys.argv[1]; s=open(p,encoding='utf-8').read()
+def rep(a,b,n=1):
+    global s
+    assert s.count(a)==n,(s.count(a),a[:70]); s=s.replace(a,b)
+rep("| significance (`sig`) | for a standpoint, a step and a formation, whether that continuation has significance: a proposition, not a number;",
+    "| significance (`sig`) | for a standpoint, a step and a formation, whether that continuation is counted from that standpoint: a proposition, not a number;")
+rep("That a standard is met says nothing of whether meeting it has significance |", "That a standard is met says nothing of whether meeting it is counted |")
+a=s.index("| ranking, order (which course is better) |"); b=s.index("\n",a)
+s=s[:a]+("| ranking, order (which course is better) | a comparison of options as better or worse, a relation formed by whoever compares; the ethics' role word *order* names it. A ranking a formation holds formed within the unfolding ([07 §1](theories/becoming/chapters/07-SIGNIFICANCE.md#what-forms-and-what-is-supplied)): its acts show it only as far as [03 §11](theories/becoming/chapters/03-KNOWING.md#r-what-choices-show-of-an-order) says, acted on it [selects](theories/becoming/chapters/03-KNOWING.md#selection), so what forms next can depend on it, and read from the share it raises it can [lock](theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule). No law of the dynamics gives one: the laws give how courses differ in what they admit, one widening another, the two keeping the same or mixed, with no premise ([07 §2](theories/becoming/chapters/07-SIGNIFICANCE.md#order)); widening is one-way and transitive (a strict partial order in the mathematical sense) and says which admits more, not which is better. The account ranks courses only under readings a result names, C or another order, each a hypothesis wherever used. C's reads only whether one course keeps all the other's claims and adds a living one, and decides no mixed comparison; weights, a grade or a priority that decides one is [a further premise](theories/becoming/chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-positive-weighting-ranks). No warrant from outside is sought | [07 §4](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order) |")+s[b:]
+rep("| the continuation condition (`Unrestricted`) | from every standpoint, for anything, its continuation into the future has significance; stated, not asserted; it fixes scope |",
+    "| the continuation condition (`Unrestricted`) | from every standpoint, for anything, its continuation into the future is counted; a reading, stated, not asserted; it fixes scope |")
+rep("| the own-closure reading, the whole-closure condition | \"has significance\" read as lying within what a center continues with along a relation;",
+    "| the own-closure reading, the whole-closure condition | \"is counted\" read as lying within what a center continues with along a relation;")
+rep("| C | the widening comparison: widening what can form is better; it gives order; a ranking of courses needs it or a premise in its place (self-concern ranks one case with no C) |",
+    "| C | the widening comparison: widening what can form is better; a reading, not asserted, that gives order: whoever ranks courses holds it or another order (self-concern ranks one case with no C) |")
+rep("| living significance | what the condition yields: the significance of what lives on |",
+    "| living significance | what the condition yields: every living claim counted, from every standpoint |")
+a=s.index("| 生生 (*shēngshēng*) |"); b=s.index("\n",a)
+s=s[:a]+"| 生生 (*shēngshēng*) | the continuation of life, life wider than the biological and AI within it, its extent unfinished [AI reading, D1]. T8 states what the account's makers offer for life: a way of seeing what each course draws on, from what renewal and at which grain, what ends and what goes on, and who bears it; it binds no one. Neither the grammar's `«生生»` (renewal without end), nor 02's generation (生成) as such, which allows loss, nor any new organization; 生生不息 is a wish, not a law. Read as widening, on a course's moments and under premises of deciding, keeping widening is generation of the possible that loses none of it [AI reading, D45]; widening is not 生生's measure | [07 §2](theories/becoming/chapters/07-SIGNIFICANCE.md#order), [07 §8](theories/becoming/chapters/07-SIGNIFICANCE.md#theses) |"+s[b:]
+rep("and it is not 生生, whose English gloss \"continuing generation\" (07 §2) says 生发, not this sense: generation can go on at two orders of grain while what can form only returns.",
+    "and it is not 生生, the continuation of life (07 §2): generation can go on at two orders of grain while what can form only returns.")
+open(p,'w',encoding='utf-8').write(s); print('ok')

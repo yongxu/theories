@@ -74,7 +74,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Transitions.** None.
 - **Tests.** None.
 - **Open.**
-  - None of this says whether a locked loop supports or damages 生生. ([02-MAP.md#capture](../../../chapters/02-MAP.md#capture))
+  - None of this ranks a locked loop: what it keeps, opens or closes, and for whom, is 07's question. ([02-MAP.md#capture](../../../chapters/02-MAP.md#capture))
   - Hijacking, how such targets form and pass on and how winning selects them, is not stated here. ([seeking-boundary.md#does-not-show--未表明](../../records/seeking-boundary.md#does-not-show--未表明))
 - **Beyond its couplings.** Where a seeking locked onto a target that cannot be met at rest draws on what stands, with the rest of the exchange fixed and balance on what couples in, its losses beyond its coupling closure do not return through its own feedback.
 - **Valence.** none asserted

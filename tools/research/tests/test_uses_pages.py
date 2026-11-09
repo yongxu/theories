@@ -161,7 +161,7 @@ class HowItStands(unittest.TestCase):
         self.assertIn('The names come from the texts, the operations do not.', scope)
 
     def test_tool_sentence_split_at_its_semicolons(self):
-        lines = self.lines('Human development, and 生生 as the way for life')
+        lines = self.lines('Human development, and 生生, the continuation of life')
         by_label = {}
         for line in lines:
             by_label.setdefault(LABEL.match(line).group(1), line)

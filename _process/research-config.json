@@ -222,8 +222,8 @@
     "repository": "yongxu/theories",
     "title": "The Theory of Becoming",
     "title_zh": "生灭变化之论",
-    "description": "One account of how things form, persist, change and end, with Lean-checked models and frozen tests; its ethics rests on two unasserted premises: the continuation condition (scope) and C, widening what can form is better (order).",
-    "description_zh": "一套解释，讲任何东西怎样在同一个关系性的展开中出现、持续、变化和消逝；附有以 Lean 检验的模型与冻结的检验。",
+    "description": "One account of how things form, persist, change and end, with Lean-checked models and frozen tests; it asserts no should, and ranks courses only under readings it names, most often the continuation condition (scope) and C, widening what can form is better (order).",
+    "description_zh": "一套解释，讲任何东西怎样在同一个关系性的展开中出现、持续、变化和消逝；附有以 Lean 检验的模型与冻结的检验；它不断言任何应当，只在它所指名的读法之下对进程排序，最常是延续条件（范围）与 C，即扩大可形成者更好（次序）。",
     "pages": [
       "README.zh.md",
       "MAP.md",

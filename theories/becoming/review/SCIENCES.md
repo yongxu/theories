@@ -21,7 +21,7 @@
 
 [T3's](#s-03) law for optima is proved ([S-13](#s-13), [S-20](#s-20)), across domains conjectured, supported in simulation; its clause on trained systems, conjectured with partial support, is the alignment dossier's.
 
-**What is not claimed.** New mathematics. A science's law. That actual systems meet the models' premises, which is not shown. That the root's calculus explains how things go on, which is argued, not proved, and on a first count a rival with no word for continuation ties it ([08 §9](../chapters/08-METHOD.md#what-would-defeat-the-reading)). The account's ethics, which rests on two premises it does not assert, the continuation condition (for anything, its continuation has significance) for scope and C (widening what can form is better) for order, is not treated here but in [the philosophy dossier](PHILOSOPHY.md). Independent human review.
+**What is not claimed.** New mathematics. A science's law. That actual systems meet the models' premises, which is not shown. That the root's calculus explains how things go on, which is argued, not proved, and on a first count a rival with no word for continuation ties it ([08 §9](../chapters/08-METHOD.md#what-would-defeat-the-reading)). The account's ethics, which asserts no should and ranks only under two readings it does not assert, the continuation condition (for anything, its continuation is counted) for scope and C (widening what can form is better) for order, is not treated here but in [the philosophy dossier](PHILOSOPHY.md). Independent human review.
 
 **Where to read, by field.** Physics, [S-04](#s-04) to [S-06](#s-06). Evolution, [S-07](#s-07) to [S-10](#s-10). Ecology and renewable resources, [S-11](#s-11) to [S-16](#s-16). Mind and inference, [S-17](#s-17) to [S-20](#s-20), with [the free-energy principle in the theory](../FREE-ENERGY-PRINCIPLE.md). Order and open-endedness, [S-21](#s-21) to [S-23](#s-23).
 
@@ -44,7 +44,7 @@ The terms:
 - **Restated, near-definitional.** A result is *restated* when it is a known result in the theory's terms, *near-definitional* when it follows almost at once from its definitions.
 - **Labels.** *(root)*: proved on the theory's grammar, for every carrier, relation and class. *(any type)*, *(any process)*: proved for every type or step relation. *(World)*: proved on the World model, with its premises and local hypotheses named. *(the regime)*, *(any `R`)*: proved for one condition under any giving law, or for any renewal law `R`, in whole numbers. *(periphery)*: proved with Mathlib, whose axioms are reported.
 - **Standings.** *Theorem*: proved in Lean as stated. *Witness*: one constructed model, showing that something can happen, not that it does. *Reading* [AI reading, Dn]: an interpretation registered with its argument in the decision register; it changes no theorem. *Assessment*: a scoped evaluation with evidence and no Lean. *Thesis Tn*: an empirical claim, with its standing, what it forbids and the evidence so far.
-- **Premises of the ethics.** The theory names two premises for its ethics, the continuation condition (whose losses count) and C (that widening is better), and asserts neither. No item here uses either ([the philosophy dossier, P-04](PHILOSOPHY.md#p-04)).
+- **The readings the ethics ranks under.** The theory names two readings, the continuation condition (whose losses count) and C (that widening is better), and asserts neither; its ethics is its makers' offer, a way of seeing, not a verdict. No item here uses either ([the philosophy dossier, P-04](PHILOSOPHY.md#p-04)).
 
 ---
 

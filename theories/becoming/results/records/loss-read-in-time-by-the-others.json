@@ -191,8 +191,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "That a reading in time supports 生生, or that a course turned is better than one kept: no evaluation enters, and ranking courses needs C or a premise in its place.",
-      "zh": "及时之读支持生生，或所转之进程优于所留者：不入评价，排序进程须 C 或代替它的前提。",
+      "en": "That a reading in time keeps 生生, the continuation of life, or that a course turned is better than one kept: no evaluation enters, and a ranking of courses rests on C or another named order.",
+      "zh": "及时之读保有生生（生命之延续），或所转之进程优于所留者：不入评价，排序进程者持 C 或别一种次序。",
       "kind": "non-implication"
     }
   ],
@@ -416,12 +416,12 @@
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "60c85e264f30258b2c2c9fa1e96f556dd3aed3e74adc461b34bf0bfa174fa5cd"
+      "sha256": "decc90c5ac4f2f5ed5a3029dcd29c98b46ae9e474c042f212caa1e4bd1a9cc79"
     },
     {
       "path": "theories/becoming/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "4a38ebe0d1dba679744f4d195b9922a74047c2ffebf759be3794b3cb3fe59969"
+      "sha256": "76fb3efa06da17099453f3d0d0821c5d66f57ac9f2c8598316d1bce369f3ab99"
     },
     {
       "path": "theories/meta-attractor/README.md",
@@ -468,6 +468,10 @@
     {
       "en": "7 November 2026, CX: the correspondence corrected where a reader of the crosswalk found it wider than its source or its home (the crosswalk's live flags, checked at home); no law, premise or scope of this record changed.",
       "zh": "2026年11月7日，CX：交叉对照之读者发现对应说得比其来源或本处更宽，于本处查实后更正；本记录之律、前提与范围均未变。"
+    },
+    {
+      "en": "9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.",
+      "zh": "2026年11月9日，工作板条目 WB：据 Ren 11 月 8–9 日之言重述伦理之框架：两个前提称为排序之果所用之两种读法，排序为排序者所持，不求外来之根据；主张、假设与 Lean 皆不变。"
     }
   ]
 }

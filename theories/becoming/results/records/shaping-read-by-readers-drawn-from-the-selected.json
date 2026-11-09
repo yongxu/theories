@@ -110,8 +110,8 @@
       "kind": "scope"
     },
     {
-      "en": "That capture damages or supports 生生, or that a course below the critical mass is better than one above it: no evaluation enters, and ranking courses needs C or a premise in its place.",
-      "zh": "捕获损害或支持生生，或临界量之下之进程优于其上者：不入评价，排序进程须 C 或代替它的前提。",
+      "en": "That capture closes or keeps 生生, the continuation of life, or that a course below the critical mass is better than one above it: no evaluation enters, and a ranking of courses rests on C or another named order.",
+      "zh": "捕获对生生（生命之延续）闭掉或保有什么，或临界量之下之进程优于其上者：不入评价，排序进程者持 C 或别一种次序。",
       "kind": "non-implication"
     }
   ],
@@ -317,12 +317,12 @@
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "aecb20fb0a5482ac0992cddc3f494f84b418b2bbd5f6b54d664897a6e9182c61"
+      "sha256": "decc90c5ac4f2f5ed5a3029dcd29c98b46ae9e474c042f212caa1e4bd1a9cc79"
     },
     {
       "path": "theories/becoming/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "4a38ebe0d1dba679744f4d195b9922a74047c2ffebf759be3794b3cb3fe59969"
+      "sha256": "76fb3efa06da17099453f3d0d0821c5d66f57ac9f2c8598316d1bce369f3ab99"
     },
     {
       "path": "theories/meta-attractor/README.md",
@@ -389,6 +389,10 @@
     {
       "en": "7 November 2026, board item LM1: this said ranking needs C, where a ranking of courses needs C or a premise in its place (07 §4); corrected. No law, premise or proof changed.",
       "zh": "2026年11月7日，工作板条目 LM1：此处谓排序须 C，而对进程的排序需要 C 或一个代替它的前提（07 §4）；已更正。诸律、前提与证明皆不变。"
+    },
+    {
+      "en": "9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.",
+      "zh": "2026年11月9日，工作板条目 WB：据 Ren 11 月 8–9 日之言重述伦理之框架：两个前提称为排序之果所用之两种读法，排序为排序者所持，不求外来之根据；主张、假设与 Lean 皆不变。"
     }
   ]
 }

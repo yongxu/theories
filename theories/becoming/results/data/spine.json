@@ -238,17 +238,17 @@
    "home": "significance",
    "outcome": "argued",
    "en": {
-    "title": "生生 as the direction",
+    "title": "what the makers offer",
     "words": [
      "argued",
-     "open: P2 and P4",
-     "and a reason for C"
+     "named, not designed",
+     "open: P2 and P4"
     ]
    },
    "zh": {
-    "title": "对生命而言，道是生生",
+    "title": "本论之作者提供一种看法",
     "words": [
-     "已论证；未决： … P2 与 P4 … 以及 C 的理由"
+     "已论证；其检验已指名，未设计 … P2 与 P4"
     ]
    },
    "anchor": "theses"
@@ -261,7 +261,7 @@
     "lines": [
      "The continuation condition",
      "scope: fixes whose losses count; does not rank anything",
-     "a premise, not asserted; warrant open"
+     "a reading, not asserted"
     ],
     "quotes": [
      [
@@ -274,7 +274,7 @@
      ],
      [
       "theories/becoming/THE-THEORY-OF-BECOMING.md",
-      "Scope: the continuation condition (§7) | A premise, not asserted; warrant open"
+      "Scope: the continuation condition (§7) | A reading, not asserted; ranks nothing"
      ]
     ]
    },
@@ -282,7 +282,7 @@
     "lines": [
      "延续条件",
      "确定范围：谁的损失算数；它不对任何东西排序",
-     "前提，不断言；根据未决"
+     "读法，不断言"
     ],
     "quotes": [
      [
@@ -295,7 +295,7 @@
      ],
      [
       "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
-      "前提，不断言；根据未决"
+      "读法，不断言；不对任何东西排序"
      ]
     ]
    }
@@ -306,12 +306,12 @@
     "lines": [
      "C, widening what can form is better",
      "order: ranks a course above every course it widens; does not rank mixed comparisons",
-     "a premise, not asserted; warrant open"
+     "a reading, not asserted"
     ],
     "quotes": [
      [
       "theories/becoming/THE-THEORY-OF-BECOMING.md",
-      "Order: C, widening what can form is better (§7) | A premise, not asserted; warrant open"
+      "Order: C, widening what can form is better (§7) | A reading, not asserted, held by whoever ranks so"
      ],
      [
       "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -327,7 +327,7 @@
     "lines": [
      "C，即扩大可形成者更好",
      "确定次序：把一个进程排在它所扩大的每一个进程之上，而不判定任何混合的比较",
-     "前提，不断言；根据未决"
+     "读法，不断言"
     ],
     "quotes": [
      [
@@ -336,7 +336,7 @@
      ],
      [
       "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
-      "前提，不断言；根据未决"
+      "读法，不断言，为如此排序者所持"
      ]
     ]
    }
@@ -370,8 +370,8 @@
   {
    "home": "theories/becoming/chapters/07-SIGNIFICANCE.md",
    "anchor": "",
-   "text": "Evaluation enters through the ethics' two premises, each a hypothesis where used and neither asserted: the continuation condition for scope, C for order",
-   "zh": "评价经由伦理的两个前提进入，各在所用之处为假设，二者都不断言：延续条件定范围，C 定次序"
+   "text": "the ranking results take two readings as hypotheses where used, neither asserted: the continuation condition for scope, C for order",
+   "zh": "排序之果所用之两种读法，各在所用之处为假设，二者都不断言：延续条件定范围，C 定次序"
   },
   {
    "home": "theories/becoming/chapters/08-METHOD.md",

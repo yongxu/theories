@@ -1,0 +1,523 @@
+
+=== theories/becoming/results/atlas/entries/correspondences.json
+
+theories/becoming/results/atlas/entries/correspondences.json:3799
+    … It says nothing of decay, and its changing without end is not enough.
+  - Calling that better rests on C or another named order, with the continuation condition for scope, neither asserted, no warrant from outside sought.
+  + Calling that better rests on C or another named order, with a named scope, most often the continuation condition, neither asserted, no warrant from outside sought.
+    … [AI reading]"
+
+theories/becoming/results/atlas/entries/correspondences.json:4819
+    … All in whole-number amounts and discrete steps.
+  - No law here compares two courses: ranking them rests on C or another named order, with the continuation condition for scope, neither asserted and no warrant from outside sought."
+  + No law here compares two courses: ranking them rests on C or another named order, with a named scope, most often the continuation condition, neither asserted and no warrant from outside sought."
+
+theories/becoming/results/atlas/entries/correspondences.json:4953
+    … The folder asks whether the chain can run; the account would also ask what selects it and what that selection cannot read.
+  - None compares two courses: ranking them rests on C or another named order, with the continuation condition for scope, neither asserted and no warrant from outside sought."
+  + None compares two courses: ranking them rests on C or another named order, with a named scope, most often the continuation condition, neither asserted and no warrant from outside sought."
+
+theories/becoming/results/atlas/entries/correspondences.json:5153
+    … "That levels do not show an exclusion, so widening is silent on it.
+  - Ranking the excluding course against the sharing one rests on C or another named order, with the continuation condition for scope, neither asserted."
+  + Ranking the excluding course against the sharing one rests on C or another named order, with a named scope, most often the continuation condition, neither asserted."
+
+theories/becoming/results/atlas/entries/correspondences.json:8587
+    … Scope differs: the condition counts anything's continuation, living or not.
+  - T8's 'of whatever substrate' rests on P2 and P4, unasserted.
+  + T8 is the makers' offer for life, binding no one: to see what each course draws on, from what renewal and at which grain, what ends, what goes on through that ending, and who bears it.
+  + The continuation condition and C belong to conditional comparisons;
+  + P2 and P4 belong to the separate argument about an actor's line.
+    … [AI reading]"
+
+theories/becoming/results/atlas/entries/correspondences.json:9825
+    …    "en":
+  - "A frozen test of what instruction does and does not install, and the two readings named for any ranking."
+  + "A frozen test of what instruction does and does not install, and the scope and order named for each ranking."
+
+theories/becoming/results/atlas/entries/correspondences.json:11191
+    … Reading meaning so is mine.
+  - A loss rests on a named scope and order, most often the continuation condition and C, neither asserted.
+  + The loss can occur without being counted; whether it counts depends on the significance supplied, and a ranking names its order.
+    … [AI reading]"
+
+theories/becoming/results/atlas/entries/correspondences.json:12092
+    … So \"regardless of content\" is scoped: it depends on what one's own continuation holds, and where a course keeps something beyond, some such order reverses.
+  - Other rankings still rest on C or another named order, with the continuation condition for scope, neither asserted, no warrant from outside sought.
+  + Other rankings still rest on C or another named order, with a named scope, most often the continuation condition, neither asserted, no warrant from outside sought.
+    … [AI reading]"
+
+theories/becoming/results/atlas/entries/correspondences.json:15292
+    … Rules revised at every step can never complete, what its cooldown guards against: my step.
+  - A condition indispensable to one way of organizing is not thereby basic; any ranking there rests on C or another named order, with the continuation condition for scope, neither asserted.
+  + A condition indispensable to one way of organizing is not thereby basic; any ranking there rests on C or another named order, with a named scope, most often the continuation condition, neither asserted.
+    … Learning its own boundaries, and later savings, are not stated.
+
+theories/becoming/results/atlas/entries/correspondences.json:17259
+    … "A proposal, with no form in the account: the nearest live sentence, kept promises and enforced contracts as 'laws giving first: the law changes, not the state 
+  - Where the rest outruns the renewal one member's restraint decides nothing, but that is one member against the rest, not people at large. 'Good' and 'better' rest on C or another named order, with the condition for scope, neither asserted, no warrant from outside sought.
+  + Where the rest outruns the renewal one member's restraint decides nothing, but that is one member against the rest, not people at large. 'Good' and 'better' rest on C or another named order, with a named scope, most often the continuation condition, neither asserted, no warrant from outside sought.
+    … [AI reading]"
+
+theories/becoming/results/atlas/entries/correspondences.json:17412
+    … "In a witness a lineage depending on a condition outside the body still has a member a cohort after the end; without sequestering, a variant selected within low
+  - Neither is called better: a ranking is under C or another named order, with the continuation condition for scope, both unasserted, no warrant from outside sought."
+  + Neither is called better: a ranking is under C or another named order, with a named scope, most often the continuation condition, both unasserted, no warrant from outside sought."
+
+theories/becoming/results/atlas/entries/correspondences.json:22787
+    … T8 once started from what acting presupposes.
+  - Rankings rest on C or another named order, choices J1-J4.
+  + Each ranking names its order; §5's practical-judgment scheme uses J1-J4.
+    … [AI reading]"
+
+theories/becoming/results/atlas/entries/correspondences.json:27893
+    … So openness belongs to how rules change, not to a structure chosen once.
+  - Ranking takes C for order and the condition for scope, neither asserted, no warrant from outside sought; mixed cases, the hard ones, stay undecided.
+  + Ranking takes C or another named order, with a named scope, most often the continuation condition, neither asserted, no warrant from outside sought; mixed cases, the hard ones, stay undecided.
+    … [AI reading]"
+
+theories/becoming/results/atlas/entries/correspondences.json:29802
+    … Its reason is exactness, not opposition; it argues against no dynamic, and writes 'best response' and 'optimum' in its laws.
+  - The position on speed has partial forms, not as a position: a re-reading that must come while the need is still met, and a slow rule reading the fast level long enough, among conditions that rank nothing (a ranking takes C for order, the condition for scope, neither asserted, no warrant from outside sought).
+  + The position on speed has partial forms, not as a position: a re-reading that must come while the need is still met, and a slow rule reading the fast level long enough, among conditions that rank nothing (a ranking names its order and scope, most often C and the condition, neither asserted, no warrant from outside sought).
+    … [AI reading]"
+
+theories/becoming/results/atlas/entries/correspondences.json:36246
+    … "Exact laws of return, and that keeping a course open is not more options.
+  - Calling any basin better rests on C or another named order, with the condition for scope, neither asserted, no warrant from outside sought."
+  + Calling any basin better rests on C or another named order, with a named scope, most often the continuation condition, neither asserted, no warrant from outside sought."
+
+theories/becoming/results/atlas/entries/correspondences.json:36284
+    … Nearby, and joined by no live text: an imposed code makes all agree and each loses the distinctions it merges;
+  - 并育不相害 has the form of a part's draw within others' margins, and calling that better rests on C or another named order, with the condition for scope, neither asserted, no warrant from outside sought.
+  + 并育不相害 has the form of a part's draw within others' margins, and calling that better rests on C or another named order, with a named scope, most often the continuation condition, neither asserted, no warrant from outside sought.
+    … No law gives sameness ending generation.
+
+theories/becoming/results/atlas/entries/correspondences.json:42213
+    … The third is a reading the thesis on collectives does not refuse.
+  - The verdict comes only under premises: on a fixed process the possible does not keep widening; calling that a loss, or the third better, is under C or another named order, with the condition for scope, neither asserted, no warrant from outside sought. 'Absorbing' is scoped by drift.
+  + The verdict comes only under premises: on a fixed process the possible does not keep widening; calling that a loss, or the third better, is under C or another named order, with a named scope, most often the continuation condition, neither asserted, no warrant from outside sought. 'Absorbing' is scoped by drift.
+    … [AI reading]"
+
+theories/becoming/results/atlas/entries/correspondences.json:42620
+    … It cannot yet tell the two by what shaping changes; capture and accountable revision part at a reader of the loss beyond the share, and a reform is judged by wh
+  - Ranking these courses rests on C or another named order and the continuation condition for scope, neither asserted, no warrant from outside sought.
+  + Ranking these courses rests on C or another named order, with a named scope, most often the continuation condition, neither asserted, no warrant from outside sought.
+    … [AI reading]"
+
+theories/becoming/results/atlas/entries/correspondences.json:46408
+    … "Where a two-sided form holds exactly, and that drawn one member at a time either lock is left by drift, at a weight whose bound shrinks across the distance fro
+  - Neither side is called better: that rests on C or another named order and the continuation condition for scope, neither asserted, no warrant from outside sought."
+  + Neither side is called better: that rests on C or another named order, with a named scope, most often the continuation condition, neither asserted, no warrant from outside sought."
+
+theories/becoming/results/atlas/entries/correspondences.json:47188
+    … "Not taken up.
+  - The live fronts name a livelihood only in the lake case, as what would make two catches mixed and C silent. 05 §11's reading, that a condition indispensable to one way of organization is not thereby basic, bears on 'not optional' but is no law of labour, and any ranking there is under the continuation condition for scope and C for order, neither asserted.
+  + The live fronts name a livelihood only in the lake case, as what would make two catches mixed and C silent. 05 §11's reading, that a condition indispensable to one way of organization is not thereby basic, bears on 'not optional' but is no law of labour, and any ranking there names its scope and order, most often the continuation condition and C, neither asserted.
+    … [AI reading]"
+
+theories/becoming/results/atlas/entries/correspondences.json:47328
+    … Where the other course keeps an item beyond, as an independent copy does, some order increasing in its own continuation ranks it higher, against the ranking of 
+  - The premise is weaker than C; any fuller ranking is under C or another named order, with the continuation condition for scope."
+  + The premise is weaker than C; any fuller ranking is under C or another named order, with a named scope, most often the continuation condition."
+
+theories/becoming/results/atlas/entries/correspondences.json:47559
+    … A sole owner can keep what open access ends.
+  - Ranking either side is under C or another named order, with the continuation condition for scope, neither asserted, no warrant from outside sought.
+  + Ranking either side is under C or another named order, with a named scope, most often the continuation condition, neither asserted, no warrant from outside sought.
+    … [AI reading]"
+
+theories/becoming/results/atlas/entries/correspondences.json:47948
+    …    "en":
+  - "The preference for deformation, and that a shock's landing is uncontrolled; a preference among courses rests on C or another named order, with the continuation condition for scope, neither asserted.
+  + "The preference for deformation, and that a shock's landing is uncontrolled; a preference among courses rests on C or another named order, with a named scope, most often the continuation condition, neither asserted.
+    … Ren's own 2026-06-03 line that tragedy will wake people up sits against the draft's correction."
+
+theories/becoming/results/atlas/entries/correspondences.json:48638
+    … But a rule a course keeps moving under does not keep the possible widening, read for institutions and AI policy; in the renewable process no reading fixed by a 
+  - Calling this worse rests on C or another named order, with scope from the continuation condition, neither asserted, no warrant from outside sought.
+  + Calling this worse rests on C or another named order, with a named scope, most often the continuation condition, neither asserted, no warrant from outside sought.
+    … [AI reading]"
+
+theories/becoming/results/atlas/entries/correspondences.json:50500
+    … "Per-step growth, direction and continuing capacity kept apart; \"an expansion producing ever more novelty\" is not 生生.
+  - Ranking any of it rests on C or another named order and the condition for scope, neither asserted, no warrant from outside sought."
+  + Ranking any of it rests on C or another named order, with a named scope, most often the continuation condition, neither asserted, no warrant from outside sought."
+
+theories/becoming/results/atlas/entries/correspondences.json:51002
+    … "Legibility has the form of adding couplings.
+  - But coupling bounds response and fixes nothing within the bound, members reading one channel add agreement, not reach, a cascade carries no more than its first readers, and 'guide toward better' is under C or another named order, with the condition for scope, neither asserted, no warrant from outside sought.
+  + But coupling bounds response and fixes nothing within the bound, members reading one channel add agreement, not reach, a cascade carries no more than its first readers, and 'guide toward better' is under C or another named order, with a named scope, most often the continuation condition, neither asserted, no warrant from outside sought.
+    … The shared map is a shared interface, whose control is a route of capture in a D65 reading, as the README suspects.
+
+theories/becoming/results/atlas/entries/correspondences.json:51766
+    … "A question to replace the binary: who decides admission, comparison and correction next round (05 §10, a reading).
+  - Any ranking takes C for order and the condition for scope, neither asserted, no warrant from outside sought."
+  + Any ranking takes C or another named order, with a named scope, most often the continuation condition, neither asserted, no warrant from outside sought."
+
+theories/becoming/results/atlas/entries/correspondences.json:52978
+    … The rest-outruns law is a neighbour with a different relation: a member's restraint makes no difference to the ending, not that restraint's carriers lose share.
+  - Nothing says rationality's name is taken; ranking the lost carrier above the winner rests on C or another named order, with scope from the continuation condition, neither asserted, no warrant from outside sought."
+  + Nothing says rationality's name is taken; ranking the lost carrier above the winner rests on C or another named order, with a named scope, most often the continuation condition, neither asserted, no warrant from outside sought."
+
+theories/becoming/results/atlas/entries/correspondences.json:54175
+    … No law evaluates, and the same line of the 系辞 is held as: meaning a theorem only under the continuation condition, order in C, neither asserted.
+  - T8 offers 生生 for life, compared by widening what can form, argued.
+  + T8 is the makers' offer for life, binding no one: to see what each course draws on, from what renewal and at which grain, what ends, what goes on through that ending, and who bears it.
+  + The continuation condition and C belong to conditional comparisons;
+  + P2 and P4 belong to the separate argument about an actor's line.
+    … Nothing reading no order entails C."
+
+theories/becoming/results/atlas/entries/correspondences.json:54242
+    … "The account has no such test.
+  - Its ranking reads widening under C, silent on mixed cases, with scope from the continuation condition; choice needs J1 to J4.
+  + Its ranking reads widening under C, silent on mixed cases, with scope from the continuation condition; §5's practical-judgment scheme uses J1 to J4.
+    … A course failing one criterion is not thereby 'not good' here.
+    … A course failing one criterion is not thereby 'not good' here.
+  - And 不闭 meets a standing witness: a wider menu can lower what each gets at the only mutual best response, so a closing can pay all, which has T8's refuter's shape, still wanting the argument. 06's four marks are another list."
+  + And 不闭 meets a standing witness: a wider menu can lower what each gets at the only mutual best response, so a closing can pay all, which was compared to T8's former refuter and does not test the current thesis. 06's four marks are another list."
+
+theories/becoming/results/atlas/entries/correspondences.json:54514
+    … "The account says 'if' where the name says 'must'.
+  - T8 says whose way, for life, and claims no verdict binding every possible mind, under the continuation condition for scope and C for order, neither asserted.
+  + T8 is the makers' offer for life, binding no one: to see what each course draws on, from what renewal and at which grain, what ends, what goes on through that ending, and who bears it.
+  + The continuation condition and C belong to conditional comparisons;
+  + P2 and P4 belong to the separate argument about an actor's line.
+    … A universal warrant is a question the account does not pursue.
+
+theories/becoming/results/atlas/entries/correspondences.json:54580
+    … "On substrate the account agrees in form: person, AI system and training process are formations within the unfolding, on a thesis.
+  - T8's way, under the continuation condition and C, neither asserted, holds of whatever substrate only under P2 and P4, open; if they fail that ground goes.
+  - It scopes the universal: \"all beings\" becomes those whose line runs through life.
+  + T8 is the makers' offer for life, binding no one: to see what each course draws on, from what renewal and at which grain, what ends, what goes on through that ending, and who bears it.
+  + The continuation condition and C belong to conditional comparisons;
+  + P2 and P4 belong to the separate argument about an actor's line.
+  + Whether an actor's line runs through life is that argument's question, under P2 and P4, open.
+    … It has no asymmetric compact.
+
+theories/becoming/results/atlas/entries/correspondences.json:55031
+    …    "en":
+  - "Timing carries, on models: a reading of the loss turns the course only before the late reading would favour shapers; distance to a break does not couple in by threshold; and 'late correction is none' has a form, where nothing is given below a need, as a premise, a re-reading after the level falls below it restores nothing. 'Must' and the burden of proof do not: ranking a course rests on C or another named order, with scope from the continuation condition, neither asserted, no warrant from outside sought; and 'burden of proof' has no live hit."
+  + "Timing carries, on models: a reading of the loss turns the course only before the late reading would favour shapers; distance to a break does not couple in by threshold; and 'late correction is none' has a form, where nothing is given below a need, as a premise, a re-reading after the level falls below it restores nothing. 'Must' and the burden of proof do not: ranking a course rests on C or another named order, with a named scope, most often the continuation condition, neither asserted, no warrant from outside sought; and 'burden of proof' has no live hit."
+
+theories/becoming/results/atlas/entries/correspondences.json:56445
+    … A lock is left by a reading of what the share does not carry. \"Source\" is too strong: a change of the law, and drift, also leave. \"Dissent\" has no live hit,
+  - Whether a course is better rests on C or another named order, with scope from the continuation condition, neither asserted, no warrant from outside sought."
+  + Whether a course is better rests on C or another named order, with a named scope, most often the continuation condition, neither asserted, no warrant from outside sought."
+
+theories/becoming/results/atlas/entries/correspondences.json:57624
+    … This read's join from reviewers to systems.
+  - No law ranks variety: that rests on C or another named order, with scope from the continuation condition, neither asserted, no warrant from outside sought."
+  + No law ranks variety: that rests on C or another named order, with a named scope, most often the continuation condition, neither asserted, no warrant from outside sought."
+
+theories/becoming/results/atlas/entries/correspondences.json:60731
+    … "It ranks less continuing above more, at least for what is released.
+  - T8 offers 生生 for life, scope from the condition, order from C, neither asserted, no warrant from outside sought.
+  - Dossier B records one such case:
+  - Buddhist cessation, read as release by no longer continuing, runs against the condition, on that reading only.
+  + T8 is the makers' offer for life, binding no one: to see what each course draws on, from what renewal and at which grain, what ends, what goes on through that ending, and who bears it.
+  + The continuation condition and C belong to conditional comparisons;
+  + P2 and P4 belong to the separate argument about an actor's line.
+  + Dossier B discusses Buddhist cessation as release by no longer continuing.
+  + That reading alone does not conflict with the continuation condition, which counts continuations without ranking them; any conflict with C requires a comparison meeting C's widening hypotheses.
+    … A renouncer can state a negative weight openly, or deny any narrowing, since on Advaita nothing real is lost.
+
+theories/becoming/results/atlas/entries/correspondences.json:60738
+    …      "en":
+  - "T8, thesis: for life, the way is 生生, compared by widening, with the continuation condition for scope and C for order.
+  - No verdict binding every possible mind is claimed.
+  + "T8 is the makers' offer for life, binding no one: to see what each course draws on, from what renewal and at which grain, what ends, what goes on through that ending, and who bears it.
+  + The continuation condition and C belong to conditional comparisons;
+  + P2 and P4 belong to the separate argument about an actor's line.
+    … T5, thesis: among valuers counting everything positively, a ranking of a narrowing above its widening comes only from a negative valuation or a misread or frame
+
+theories/becoming/results/atlas/entries/correspondences.json:63923
+    … But the account does not assume that becoming is good, no law evaluates, and with significance free the represented dynamics entail no premise.
+  - T8 names its premises, the condition for scope and C for order, neither asserted, and 生生 is not the whole's own good.
+  + T8 is the makers' offer for life, binding no one: to see what each course draws on, from what renewal and at which grain, what ends, what goes on through that ending, and who bears it.
+  + The continuation condition and C belong to conditional comparisons;
+  + P2 and P4 belong to the separate argument about an actor's line.
+  + 生生 is not the whole's own good.
+    … Under the condition a part's loss counts as its own.
+
+theories/becoming/results/atlas/entries/correspondences.json:64618
+    … Divergence on ground: the land is God's and the people were freed from Egypt; the account reads no such owner or memory.
+  - Ranking a course with a jubilee above one without rests on C or another named order, and the continuation condition for whose losses count, neither asserted, no warrant from outside sought.
+  + Ranking a course with a jubilee above one without rests on C or another named order, with a named scope, most often the continuation condition, neither asserted, no warrant from outside sought.
+    … PLAN's seed 'rule changing without end' fits the holdings, not the jubilee's rule, which stays fixed.
+
+theories/becoming/results/atlas/entries/correspondences.json:65684
+    … "Renewal that responds to the rate through incentive, of which the model's liability, on shares and not output, is the nearest; a revenue curve; a moral verdict
+  - A ranking would rest on C or another named order, and the continuation condition for whose losses count, neither asserted, no warrant from outside sought."
+  + A ranking would rest on C or another named order, with a named scope, most often the continuation condition, neither asserted, no warrant from outside sought."
+
+theories/becoming/results/atlas/entries/correspondences.json:66438
+    … Who bears the absorbed harm, and whether it may be asked of the weak, the source debates and the law does not read.
+  - Ranking closing above keeping would rest on C or another named order, with the continuation condition for scope, neither asserted, no warrant from outside sought."
+  + Ranking closing above keeping would rest on C or another named order, with a named scope, most often the continuation condition, neither asserted, no warrant from outside sought."
+
+theories/becoming/results/atlas/entries/correspondences.json:67420
+    … And where a status of zero would make his scope a rival.
+  - T8's refuter asks a mixed case argued better from every standpoint counting everything positively, with no further premise; on my reading his theory does not meet that."
+  + T8's refuter until 9 November 2026 asked a mixed case argued better from every standpoint counting everything positively, with no further premise; its refuter now is selections reading a course's draw and what ends with it selecting a draw beyond the renewal their readers depend on no less often than selections that do not.
+  + The comparison with Metz's order does not test this claim."
+
+theories/becoming/results/atlas/entries/correspondences.json:72458
+    … "Exact conditions, in models, for when a parameter decides and when a change is absorbed; six conditions read in CD §6, none ranked.
+  - Calling one intervention better would rest on C or another named order, and the continuation condition for scope, neither asserted, no warrant from outside sought."
+  + Calling one intervention better would rest on C or another named order, with a named scope, most often the continuation condition, neither asserted, no warrant from outside sought."
+
+theories/becoming/results/atlas/entries/correspondences.json:77568
+    … "The transmission and ending laws joined on one flow.
+  - Not a ranking: the record says that a lineage ending with its whole is worse, or sequestration better, is not shown; ranking would rest on C or another named order, with the continuation condition for scope, neither asserted, no warrant from outside sought."
+  + Not a ranking: the record says that a lineage ending with its whole is worse, or sequestration better, is not shown; ranking would rest on C or another named order, with a named scope, most often the continuation condition, neither asserted, no warrant from outside sought."
+
+theories/becoming/results/atlas/entries/correspondences.json:78491
+    … "The laws read every order rising with what couples in, not one objective, and at a mutual best response several optimizers stand as one of joint capacity.
+  - No law says which course to take: a ranking would rest on C or another named order and the continuation condition for scope, neither asserted, no warrant from outside sought."
+  + No law says which course to take: a ranking would rest on C or another named order, with a named scope, most often the continuation condition, neither asserted, no warrant from outside sought."
+
+theories/becoming/results/atlas/entries/correspondences.json:78558
+    … Neither says which formations it reaches, nor how much.
+  - Any ranking of the two flows would rest on C or another named order and the continuation condition for scope, neither asserted, no warrant from outside sought."
+  + Any ranking of the two flows would rest on C or another named order, with a named scope, most often the continuation condition, neither asserted, no warrant from outside sought."
+
+theories/becoming/results/atlas/entries/correspondences.json:79285
+    … "A reading names 'who holds the places from which the rule is read' as what could keep the readers' premise (02 section 9).
+  - Whether a course of few rulers is better or worse is not said: that rests on C or another named order and the continuation condition for scope, neither asserted, no warrant from outside sought."
+  + Whether a course of few rulers is better or worse is not said: that rests on C or another named order, with a named scope, most often the continuation condition, neither asserted, no warrant from outside sought."
+
+theories/becoming/results/atlas/entries/correspondences.json:79536
+    … The account has no comparison on growth and asserts neither.
+  - Ranking inclusive above extractive reads prosperity, and here is under C or another named order, with the continuation condition for scope, neither asserted, no warrant from outside sought.
+  + Ranking inclusive above extractive reads prosperity, and here is under C or another named order, with a named scope, most often the continuation condition, neither asserted, no warrant from outside sought.
+    … Proposed here.
+
+theories/becoming/results/atlas/entries/correspondences.json:79972
+    … Proposal only: neighbours are more takers needing renewers without bound, which 08 calls maintenance scaling, and D48's 'more waiting gives no more', a bound on
+  - D65 leaves contraction unranked, near his refusal of a verdict; any ranking rests on C or another named order and the continuation condition for scope, neither asserted, no warrant from outside sought.
+  + D65 leaves contraction unranked, near his refusal of a verdict; any ranking rests on C or another named order, with a named scope, most often the continuation condition, neither asserted, no warrant from outside sought.
+    … [AI reading]"
+
+theories/becoming/results/atlas/entries/correspondences.json:81301
+    … A reading against one remedy: capability is a reason to pool, not to govern.
+  - Ranking the end rests on C or another named order, with the continuation condition for scope, neither asserted, no warrant from outside sought."
+  + Ranking the end rests on C or another named order, with a named scope, most often the continuation condition, neither asserted, no warrant from outside sought."
+
+theories/becoming/results/atlas/entries/correspondences.json:81371
+    … Selfishness and deception as traits; the displacement of humans in the title; the remedies.
+  - That these traits are undesirable is the source's comparison: no law here gives it, and a ranking would rest on C or another named order, with the continuation condition for scope, neither asserted, no warrant from outside sought."
+  + That these traits are undesirable is the source's comparison: no law here gives it, and a ranking would rest on C or another named order, with a named scope, most often the continuation condition, neither asserted, no warrant from outside sought."
+
+theories/becoming/results/atlas/entries/correspondences.json:81633
+    …    "en":
+  - "Exits with exact windows, and that a lock is not thereby bad: none of this says whether a locked loop keeps or closes for 生生, the continuation of life, and ranking a course is under C or another named order, with the continuation condition for scope; neither is asserted, and no warrant from outside is sought."
+  + "Exits with exact windows, and that a lock is not thereby bad: none of this says whether a locked loop keeps or closes for 生生, the continuation of life, and ranking a course is under C or another named order, with a named scope, most often the continuation condition; neither is asserted, and no warrant from outside is sought."
+
+=== theories/becoming/results/atlas/entries/dynamics.json
+
+theories/becoming/results/atlas/entries/dynamics.json:7443
+    …     "en":
+  - "None of this says whether a locked loop supports or damages 生生.",
+  + "None of this ranks a locked loop: what it keeps, opens or closes, and for whom, is 07's question.",
+
+theories/becoming/results/atlas/entries/dynamics.json:9814
+    …     "en":
+  - "That giving, a window or any law of giving is better: that is ranked only under the two readings 07 names, the continuation condition for scope and C for order.",
+  + "That giving, a window or any law of giving is better: a ranking names its scope and order; the continuation condition and C are one pair of readings 07 examines.",
+
+theories/becoming/results/atlas/entries/dynamics.json:9883
+    …     "en":
+  - "That any law of giving is better: that is ranked only under the two readings 07 names, the continuation condition for scope and C for order.",
+  + "That any law of giving is better: a ranking names its scope and order; the continuation condition and C are one pair of readings 07 examines.",
+
+theories/becoming/results/atlas/entries/dynamics.json:10104
+    …     "en":
+  - "That giving or keeping is better: the laws count levels and lines, and a ranking is asked only under the two readings 07 names, the continuation condition for scope and C for order.",
+  + "That giving or keeping is better: the laws count levels and lines, and a ranking names its scope and order; the continuation condition and C are one pair of readings 07 examines.",
+
+theories/becoming/results/atlas/entries/dynamics.json:11323
+    …     "en":
+  - "That growth relative to what is held is better or is what 生生 asks: a ranking rests on C or another named order, and the reading of 生生不息 here is an AI reading.",
+  + "That growth relative to what is held is better or is 生生's measure: a ranking rests on C or another named order, and the reading of 生生不息 here is an AI reading.",
+
+theories/becoming/results/atlas/entries/dynamics.json:12347
+    …     "en":
+  - "That growth relative to what is held is better or is what 生生 asks: a ranking rests on C or another named order, and the reading of 生生不息 here is an AI reading.",
+  + "That growth relative to what is held is better or is 生生's measure: a ranking rests on C or another named order, and the reading of 生生不息 here is an AI reading.",
+
+theories/becoming/results/atlas/entries/dynamics.json:14179
+    … A resolution written back into the records later cohorts read rests from the next cohort on (records written to offer exactly what was resolved, read by later c
+  - That actual conventions, scripts or the theory's own terms form by hearing in this way, or whether a shared, imposed or kept code supports or damages 生生, is not shown."
+  + That actual conventions, scripts or the theory's own terms form by hearing in this way, or whether a shared, imposed or kept code keeps or closes 生生, the continuation of life, is not shown."
+
+theories/becoming/results/atlas/entries/dynamics.json:14935
+    …     "en":
+  - "That growth relative to what is held is better or is what 生生 asks: a ranking rests on C or another named order, and the reading of 生生不息 here is an AI reading.",
+  + "That growth relative to what is held is better or is 生生's measure: a ranking rests on C or another named order, and the reading of 生生不息 here is an AI reading.",
+
+=== theories/becoming/results/records/a-pair-tolerates-only-within-a-window.json
+
+theories/becoming/results/records/a-pair-tolerates-only-within-a-window.json:261
+    …       "en":
+  - "That giving, a window or any law of giving is better: that is ranked only under the two readings 07 names, the continuation condition for scope and C for order.", 
+      "zh":
+  - "给出、窗口或任何给出之律更好：这只在第七章所指名的两种读法之下才被排定，延续条件定范围，C 定次序。
+  + "That giving, a window or any law of giving is better: a ranking names its scope and order; the continuation condition and C are one pair of readings 07 examines.", 
+      "zh":
+  + "给出、窗口或任何给出之律更好：排序须指名其范围与次序；
+  + 延续条件与 C 是第七章考察的一对读法。
+    … ",
+
+theories/becoming/results/records/a-pair-tolerates-only-within-a-window.json:628
+  +     }, 
+    { 
+      "en":
+  + "9 November 2026, board item WB (the readers' fourth round): a ranking said to name its scope and order, the continuation condition and C being one pair of readings 07 examines, in place of 'ranked only under the two readings'; current Chinese fields brought to their English; no change to the claim, its hypotheses or its Lean.", 
+      "zh":
+  + "2026 年 11 月 9 日，工作板条目 WB（读者第四轮）：改「只在两种读法之下排定」为排序须指名其范围与次序，延续条件与 C 是第七章考察的一对读法；
+  + 现行中文字段与其英文一致；
+  + 主张、假设与 Lean 皆不变。
+  + "
+
+=== theories/becoming/results/records/a-pair-tolerates-only-within-a-window.md
+
+theories/becoming/results/records/a-pair-tolerates-only-within-a-window.md:45
+  - - That giving, a window or any law of giving is better: that is ranked only under the two readings 07 names, the continuation condition for scope and C for order.
+  + - That giving, a window or any law of giving is better: a ranking names its scope and order; the continuation condition and C are one pair of readings 07 examines.
+
+theories/becoming/results/records/a-pair-tolerates-only-within-a-window.md:105
+  + - 9 November 2026, board item WB (the readers' fourth round): a ranking said to name its scope and order, the continuation condition and C being one pair of readings 07 examines, in place of 'ranked only under the two readings'; current Chinese fields brought to their English; no change to the claim, its hypotheses or its Lean.
+
+=== theories/becoming/results/records/comparison-by-widening.json
+
+theories/becoming/results/records/comparison-by-widening.json:185
+    … “flourishes/plurality”由扩大读出（AI 的读法），多样性尚未度量；
+  - 扩大比较生生的方向，生生是生成者生成新的生成（D1、D22）。
+  + 扩大比较能够形成者；
+  + 自 2026 年 11 月 9 日起，生生读作生命之延续，而非扩大（D1）。
+    … 条件定计入哪些接纳，读作扩大的 C 为之定序（AI 的读法）。
+
+theories/becoming/results/records/comparison-by-widening.json:686
+  +     }, 
+    { 
+      "en":
+  + "9 November 2026, board item WB (the readers' fourth round): a ranking said to name its scope and order, the continuation condition and C being one pair of readings 07 examines, in place of 'ranked only under the two readings'; current Chinese fields brought to their English; no change to the claim, its hypotheses or its Lean.", 
+      "zh":
+  + "2026 年 11 月 9 日，工作板条目 WB（读者第四轮）：改「只在两种读法之下排定」为排序须指名其范围与次序，延续条件与 C 是第七章考察的一对读法；
+  + 现行中文字段与其英文一致；
+  + 主张、假设与 Lean 皆不变。
+  + "
+
+=== theories/becoming/results/records/comparison-by-widening.md
+
+theories/becoming/results/records/comparison-by-widening.md:163
+  + - 9 November 2026, board item WB (the readers' fourth round): a ranking said to name its scope and order, the continuation condition and C being one pair of readings 07 examines, in place of 'ranked only under the two readings'; current Chinese fields brought to their English; no change to the claim, its hypotheses or its Lean.
+
+=== theories/becoming/results/records/errors-by-chance-in-a-pair-keeping-mutual-withholding.json
+
+theories/becoming/results/records/errors-by-chance-in-a-pair-keeping-mutual-withholding.json:74
+    …       "en":
+  - "That any law of giving is better: that is ranked only under the two readings 07 names, the continuation condition for scope and C for order.", 
+      "zh":
+  - "任何给出之律更好：这只在第七章所指名的两种读法之下才被排定，延续条件定范围，C 定次序。
+  + "That any law of giving is better: a ranking names its scope and order; the continuation condition and C are one pair of readings 07 examines.", 
+      "zh":
+  + "任何给出之律更好：排序须指名其范围与次序；
+  + 延续条件与 C 是第七章考察的一对读法。
+    … ",
+
+theories/becoming/results/records/errors-by-chance-in-a-pair-keeping-mutual-withholding.json:209
+  +     }, 
+    { 
+      "en":
+  + "9 November 2026, board item WB (the readers' fourth round): a ranking said to name its scope and order, the continuation condition and C being one pair of readings 07 examines, in place of 'ranked only under the two readings'; current Chinese fields brought to their English; no change to the claim, its hypotheses or its Lean.", 
+      "zh":
+  + "2026 年 11 月 9 日，工作板条目 WB（读者第四轮）：改「只在两种读法之下排定」为排序须指名其范围与次序，延续条件与 C 是第七章考察的一对读法；
+  + 现行中文字段与其英文一致；
+  + 主张、假设与 Lean 皆不变。
+  + "
+
+=== theories/becoming/results/records/errors-by-chance-in-a-pair-keeping-mutual-withholding.md
+
+theories/becoming/results/records/errors-by-chance-in-a-pair-keeping-mutual-withholding.md:31
+  - - That any law of giving is better: that is ranked only under the two readings 07 names, the continuation condition for scope and C for order.
+  + - That any law of giving is better: a ranking names its scope and order; the continuation condition and C are one pair of readings 07 examines.
+
+theories/becoming/results/records/errors-by-chance-in-a-pair-keeping-mutual-withholding.md:81
+  + - 9 November 2026, board item WB (the readers' fourth round): a ranking said to name its scope and order, the continuation condition and C being one pair of readings 07 examines, in place of 'ranked only under the two readings'; current Chinese fields brought to their English; no change to the claim, its hypotheses or its Lean.
+
+=== theories/becoming/results/records/positive-ground-open-futures.json
+
+theories/becoming/results/records/positive-ground-open-futures.json:662
+  +     }, 
+    { 
+      "en":
+  + "9 November 2026, board item WB (the readers' fourth round): a ranking said to name its scope and order, the continuation condition and C being one pair of readings 07 examines, in place of 'ranked only under the two readings'; current Chinese fields brought to their English; no change to the claim, its hypotheses or its Lean.", 
+      "zh":
+  + "2026 年 11 月 9 日，工作板条目 WB（读者第四轮）：改「只在两种读法之下排定」为排序须指名其范围与次序，延续条件与 C 是第七章考察的一对读法；
+  + 现行中文字段与其英文一致；
+  + 主张、假设与 Lean 皆不变。
+  + "
+
+theories/becoming/results/records/positive-ground-open-futures.json:693
+    … `living` 的诸读法不包括继续生成；
+  - 生生的方向另行读出，以扩展能够形成者来比较（D1）。
+  + 生生，即生命之延续，另行读出（D1）。
+    … 本结果“正面根据”中的“正面”是生生之意义的相关性参数，不是生生之意义所给的价值取向。
+
+=== theories/becoming/results/records/positive-ground-open-futures.md
+
+theories/becoming/results/records/positive-ground-open-futures.md:160
+  + - 9 November 2026, board item WB (the readers' fourth round): a ranking said to name its scope and order, the continuation condition and C being one pair of readings 07 examines, in place of 'ranked only under the two readings'; current Chinese fields brought to their English; no change to the claim, its hypotheses or its Lean.
+
+=== theories/becoming/results/records/what-decides-giving-against-keeping-on-a-flow.json
+
+theories/becoming/results/records/what-decides-giving-against-keeping-on-a-flow.json:131
+    …       "en":
+  - "That giving or keeping is better: the laws count levels and lines, and a ranking is asked only under the two readings 07 names, the continuation condition for scope and C for order.", 
+      "zh":
+  - "给出或保留更好：诸律计数水平与线，排序只在第七章所指名的两种读法之下，延续条件定范围，C 定次序。
+  + "That giving or keeping is better: the laws count levels and lines, and a ranking names its scope and order; the continuation condition and C are one pair of readings 07 examines.", 
+      "zh":
+  + "给出或保留更好：诸律计数水平与线，排序须指名其范围与次序；
+  + 延续条件与 C 是第七章考察的一对读法。
+    … ",
+
+theories/becoming/results/records/what-decides-giving-against-keeping-on-a-flow.json:306
+  +     }, 
+    { 
+      "en":
+  + "9 November 2026, board item WB (the readers' fourth round): a ranking said to name its scope and order, the continuation condition and C being one pair of readings 07 examines, in place of 'ranked only under the two readings'; current Chinese fields brought to their English; no change to the claim, its hypotheses or its Lean.", 
+      "zh":
+  + "2026 年 11 月 9 日，工作板条目 WB（读者第四轮）：改「只在两种读法之下排定」为排序须指名其范围与次序，延续条件与 C 是第七章考察的一对读法；
+  + 现行中文字段与其英文一致；
+  + 主张、假设与 Lean 皆不变。
+  + "
+
+=== theories/becoming/results/records/what-decides-giving-against-keeping-on-a-flow.md
+
+theories/becoming/results/records/what-decides-giving-against-keeping-on-a-flow.md:40
+  - - That giving or keeping is better: the laws count levels and lines, and a ranking is asked only under the two readings 07 names, the continuation condition for scope and C for order.
+  + - That giving or keeping is better: the laws count levels and lines, and a ranking names its scope and order; the continuation condition and C are one pair of readings 07 examines.
+
+theories/becoming/results/records/what-decides-giving-against-keeping-on-a-flow.md:91
+  + - 9 November 2026, board item WB (the readers' fourth round): a ranking said to name its scope and order, the continuation condition and C being one pair of readings 07 examines, in place of 'ranked only under the two readings'; current Chinese fields brought to their English; no change to the claim, its hypotheses or its Lean.
+
+=== theories/becoming/results/records/where-the-possible-grows.json
+
+theories/becoming/results/records/where-the-possible-grows.json:328
+    …       "en":
+  - "That growth relative to what is held is better or is what 生生 asks: a ranking rests on C or another named order, and the reading of 生生不息 here is an AI reading.", 
+      "zh":
+  - "相对于所持守者之增长更好或即生生之所求：排序者持 C 或别一种次序，此处对生生不息之读为 AI 之读。
+  + "That growth relative to what is held is better or is 生生's measure: a ranking rests on C or another named order, and the reading of 生生不息 here is an AI reading.", 
+      "zh":
+  + "相对于所持守者之增长更好或即生生之尺度：排序者持 C 或别一种次序，此处对生生不息之读为 AI 之读。
+    … ",
+
+=== theories/becoming/results/records/where-the-possible-grows.md
+
+theories/becoming/results/records/where-the-possible-grows.md:79
+  - - That growth relative to what is held is better or is what 生生 asks: a ranking rests on C or another named order, and the reading of 生生不息 here is an AI reading.
+  + - That growth relative to what is held is better or is 生生's measure: a ranking rests on C or another named order, and the reading of 生生不息 here is an AI reading.

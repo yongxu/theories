@@ -204,8 +204,8 @@
       "kind": "scope"
     },
     {
-      "en": "That coming to rest supports or damages 生生.",
-      "zh": "停息支持或损害生生。",
+      "en": "That coming to rest keeps or closes 生生, the continuation of life.",
+      "zh": "停息对生生（生命之延续）保有或闭掉什么。",
       "kind": "non-implication"
     }
   ],
@@ -879,6 +879,10 @@
     {
       "en": "21 October 2026, EC3 (study section 319): declarations moved with their full names: World.rests_unrefuted_enclosed to Becoming.InAmounts. The cited Lean sources and their proof bindings follow them; the claim is unchanged.",
       "zh": "2026年10月21日，EC3（研究第 319 节）：声明以完整名称移动：World.rests_unrefuted_enclosed to Becoming.InAmounts。所引 Lean 源及其证明绑定随之；论断不变。"
+    },
+    {
+      "en": "9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.",
+      "zh": "2026年11月9日，工作板条目 WB：据 Ren 11 月 8–9 日之言重述伦理之框架：两个前提称为排序之果所用之两种读法，排序为排序者所持，不求外来之根据；主张、假设与 Lean 皆不变。"
     }
   ],
   "text_versions": [

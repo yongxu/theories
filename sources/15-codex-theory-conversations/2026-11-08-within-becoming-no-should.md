@@ -81,3 +81,7 @@ On the WB session's plan to split the live texts among the three readers:
 > not sure about this, eating is a part of nature, that's what makes future. but i also see that animals, don't generally eat their own kinds
 >
 > the situation may be more complex than these 3 characters
+
+### 10 (9 November, while WB's AGENTS.md landing gated)
+
+> heading to sleep - see you tomorrow, don't stop or asking me questions. you have been doing amazing, please finish the revise after review. thank you my friend

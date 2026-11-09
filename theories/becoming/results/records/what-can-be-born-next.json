@@ -385,8 +385,8 @@
       "kind": "scope"
     },
     {
-      "en": "Which course is better: with every continuation's losses counted the reading is on both together, where C ranks no two courses from the empty set; ordering them needs a measure, beyond C and the condition. AI readings.",
-      "zh": "何历程更好：计每一相续之所失，则兼读二者，C 于此不排任何二自空集起之历程；排之需度量，在 C 与条件之外。皆 AI 之读。",
+      "en": "Which course is better: with every continuation's losses counted the reading is on both together, where C ranks no two courses from the empty set; widening alone does not settle them, and a further judgment names its criterion and who holds it, beyond C and the condition. AI readings.",
+      "zh": "何历程更好：计每一相续之所失，则兼读二者，C 于此不排任何二自空集起之历程；单凭扩大不能定之，进一步之判断须指名其准则与持有者，在 C 与条件之外。皆 AI 之读。",
       "kind": "non-implication"
     },
     {
@@ -765,7 +765,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "19829e18c51d8e53c87dc3eeb0ef5cec0311df7d1d6a42f3165c81504a5c7500"
+      "sha256": "58a1264eadb4438f512993f76eebcc076f6bd2be8a5408b147ecd02b0654d4b9"
     }
   ],
   "proof_bindings": [
@@ -793,6 +793,10 @@
     {
       "en": "3 November 2026, CD (board item CD): the statement says that read on what continues the inclusion reverses, not the order; law 16 and a counterexample say that the two widenings put the antichain and the chain above each other, not that they rank them; what the record does not show names the start C's verdict on both readings together needs, from the empty set (Starts.not_rangeWidens_formsOrContinues_needs_starts). Under the glossary's one sense, ranking and order (the ethics' role word) say which course is better, and widening says which admits more, with no premise. The claim is unchanged.",
       "zh": "2026年11月3日，工作板条目 CD：陈述改说读于相续则包含反转，而非序反转；律 16 与一个反例改说二种扩大把反链与链互置于对方之上，而非对之排序；本记录未表明者写明 C 于兼读二者时之判定所需之起点，即自空集起（Starts.not_rangeWidens_formsOrContinues_needs_starts）。按词汇表的单一词义，排序与次序（伦理的角色词）说哪个进程更好，扩大说哪个所纳更多，不需前提。主张不变。"
+    },
+    {
+      "en": "9 November 2026, board item WB: the non-implication on ordering two courses re-said as 07 §2 now says it: widening alone does not settle them, and a further judgment names its criterion and who holds it, not necessarily a measure; no change to the claim, its hypotheses or its Lean.",
+      "zh": "2026 年 11 月 9 日，工作板条目 WB：关于为二历程排序之非蕴涵，依第七章 §2 今之说法改述：单凭扩大不能定之，进一步之判断须指名其准则与持有者，未必是度量；主张、假设与 Lean 皆不变。"
     }
   ]
 }

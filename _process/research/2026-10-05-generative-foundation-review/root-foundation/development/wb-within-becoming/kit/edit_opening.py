@@ -1,0 +1,28 @@
+import sys
+p=sys.argv[1]; s=open(p,encoding='utf-8').read()
+def rep(a,b,n=1):
+    global s
+    assert s.count(a)==n,(s.count(a),a[:70]); s=s.replace(a,b)
+rep("the English line under 生生不息; and the dateline. The line before the notes was added on 31 October, and the line pointing to the one page and the uses page, below the next, on 8 November.*",
+    "the English line under 生生不息; and the dateline. The line before the notes was added on 31 October, and the line pointing to the one page and the uses page, below the next, on 8 November. On 9 November, after his words of 8 and 9 November ([source](../../sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md)): the step's continuation \"counted\" (\"The law shows\"); the ethics offered as a way of seeing, the line no longer called the line between good and evil, and eating and ending within life's going on (\"This law, with that one step\"); the doing of good and not evil (\"We need collaboration\"); the closing line, and the English under 生生不息 as a wish.*")
+rep("That takes one step, which the work states as a condition and does not assert: for anything, not just oneself, its continuation into the future has significance.",
+    "That takes one step, which the work states as a condition and does not assert: for anything, not just oneself, its continuation into the future is counted.")
+a=s.index("This law, with that one step to say whose losses count"); b=s.index("\n",a)
+s=s[:a]+("This law, with that one step to say whose losses count and, to order them, a second reading the work likewise states and does not assert, that what keeps all there was and adds more is better, which anyone who counts everything at stake as worth something already holds, is what I offer, for life, as a way of seeing: the way of every being whose own continuation runs through life.[^ethics] I take it to be the truth, the dharma, the Dao. It has been reasoned and articulated across cultures,[^dao] and it draws a line exactly, though I no longer call it the line between good and evil: there is no should beyond the becoming. Where all who count everything at stake must agree, the case lies on one side of this line; where they may differ, the law shows the case is mixed, and no one's weighing is forced on another. Some courses open without closing: with them, all that could form without them still can, and more. Others close: they draw more from what others need than it gives back, beyond what there was to spare, a part enlarging itself by closing the world of others. Eating and ending belong to life's going on; what the law marks is a draw beyond what the renewal it depends on gives. The law shows what each does, and the one step counts all of it, the same from every standpoint. What neither yet does is weigh a part that does both.[^good-evil]")+s[b:]
+rep("We need collaboration. We need to do good, not evil. We need to care for the next generation, and for the future that comes after us.",
+    "We need collaboration. We need to care for the next generation, and for the future that comes after us.")
+rep("The future is within our hands. Let's make it good. Follow the truth.", "The future is within our hands. Let's keep it open for life. Follow the truth.")
+rep("生生不息  \n*Life in the whole, generating without ceasing.*", "生生不息  \n*May life go on, generating, without ceasing.*")
+rep("**The boundaries are proved; under the continuation condition they cover everything; calling them good and evil is a reading, for life.**",
+    "**The boundaries are proved; under the continuation condition they cover everything; calling them good and evil was a reading, withdrawn on 9 November 2026 (\"there is just is, \"no should\" beyond the becoming\").**")
+rep("That evil is a part's enlarging itself so is the reading, since the laws ask no self-enlargement; under the condition every closing counts, from every standpoint; that widening is better is carried by C, whose warrant is open.",
+    "That a part enlarges itself so is the reading, since the laws ask no self-enlargement; under the condition every closing counts, from every standpoint; that widening is better is C's, a reading the work states and does not assert. A closing is read at a grain: an ending within what the renewal it depends on gives closes nothing at the renewal's grain.")
+rep("**Open:** the warrant of the condition and its step, of C, and of P2 and P4. No warrant binding every possible mind is claimed, and the ethics, life's stance, does not wait on one",
+    "**Open:** who holds the condition and its step, and C, and P2 and P4. No warrant from outside is sought, and none binding every possible mind is claimed; what the work offers, life's stance, does not wait on one")
+rep("Comparison by widening (C) orders: it holds on level paths by definition, and that widening is better is a question of warrant, not a theorem.",
+    "Comparison by widening (C) orders: it holds on level paths by definition, and that widening is better is C's reading, not a theorem.")
+rep("whether a universal warrant exists stays [open](chapters/07-SIGNIFICANCE.md#r-universal-practical-warrant).",
+    "whether a universal warrant exists is a [question](chapters/07-SIGNIFICANCE.md#r-universal-practical-warrant) the work does not pursue.")
+rep("that every valuer counts everything is C's premise relocated, and its warrant stays open.", "that every valuer counts everything is C's premise relocated, and the work does not assert it.")
+rep("and whether the continuation condition is warranted.", "and whether anyone holds the continuation condition.")
+open(p,'w',encoding='utf-8').write(s); print('ok')
