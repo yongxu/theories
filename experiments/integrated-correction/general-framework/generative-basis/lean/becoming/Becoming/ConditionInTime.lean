@@ -2,6 +2,7 @@ import Becoming.FlowCenters
 import Becoming.GroupEnding
 import Becoming.SelectionTerm
 import Becoming.Identity
+import Becoming.PersistingChoices
 
 /-!
 # ConditionInTime: the continuation condition in time (续无外之时)
@@ -70,7 +71,9 @@ in, on occurrences `(t, f)`: a formation at a step.
 * **Persistence, dated.** Under the laws of `Flow.persists_never_overdraws`, descent among them, a line
   with a member at a step later than `T + n` never overdrew, from a short stock, across the `n` steps from
   `T` (`Flow.member_after_never_overdrew`): the one step at which
-  `Flow.persists_never_overdraws` (`Becoming.PersistingChoices`) uses its line, as a finite law.
+  `Flow.persists_never_overdraws` uses its line, as a finite law. It was proved here first and now stands
+  in `Becoming.PersistingChoices`, from `GroupEnding.Flow.coupled_generation_childless`, with
+  `Flow.persists_never_overdraws` its corollary (board rule 9, at route (b)'s join).
 
 Premises: the relations are read off one flow and one web. The step in time keeps a formation's identity
 from one step to the next, as `Flow.Affects` keeps it across all steps, now forward only; it does not ask
@@ -741,33 +744,5 @@ theorem apart :
      (Flow.unrestrictedEventually_iff_mutuallyDependentInTime.mp eventually 0)⟩
 
 end LatePair
-
-/-! ## Persistence, dated -/
-
-/-- **A line with a member after a window never overdrew in it.** Under the laws of
-`Flow.persists_never_overdraws` (balance, only active formations giving, activity needing support, descent,
-the renewal of a family of conditions gated on the family at a need of at least `m`, and every member of
-every cohort depending on some condition of the family at a need of at least `m`), a line with a member at a
-step `s` later than `T + n` never had the family's uptake exceed its replenishment for the `n` steps from
-`T` from a stock below `n + m`. It says nothing of a window that closes at or after `s`. -/
-theorem Flow.member_after_never_overdrew {X : Type} {L : Flow X X} {W : Web X X}
-    (balances : L.Balances W) (acting : L.Acting W) (dependent : W.Dependent)
-    {G : SelectionTerm.Generations X} (descended : SelectionTerm.Flow.Descended L W G)
-    {ds : List X} {m : Nat}
-    (gated : ∀ t f, f ∈ L.present t → ∀ d, d ∈ ds → 0 < L.give t f d →
-      ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e)
-    (coupled : ∀ s p, p ∈ G.family s → ∃ e, e ∈ ds ∧ W.requires s p e ∧ m ≤ W.need s p e)
-    {T n s : Nat} {y : X} (late : T + n < s) (member : y ∈ G.family s) :
-    ¬ ((∀ k, k < n → L.replenishment ds (T + k) < L.uptake ds (T + k)) ∧ W.stock ds T < n + m) :=
-  fun ⟨excess, start⟩ =>
-    have ended : ∀ k y, ¬ y ∈ G.family (T + n + k + 1) := fun k y mem =>
-      match ListTests.mem_flatMap_iff.mp mem with
-      | ⟨q, mq, kid⟩ => match coupled (T + n + k) q mq with
-        | ⟨_, inside, depends, high⟩ =>
-          GroupEnding.Flow.family_childless balances acting dependent gated excess start k inside
-            depends high y (descended (T + n + k) q y mq kid)
-    match Nat.le.dest (Nat.succ_le_of_lt late) with
-    | ⟨k, at_⟩ => ended k y (Eq.subst (motive := fun r => y ∈ G.family r)
-        ((Nat.add_right_comm (T + n) 1 k).symm.trans at_).symm member)
 
 end Becoming

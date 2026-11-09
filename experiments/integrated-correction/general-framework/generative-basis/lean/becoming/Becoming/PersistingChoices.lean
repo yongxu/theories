@@ -55,7 +55,9 @@ board item ZC's, `Becoming.OwnClass`, and which formations are centers ZA-G1's, 
   family and every member of every cohort of descent depending on the family, each at a need of at least
   `m`, a line with members in arbitrarily late cohorts (`SelectionTerm.Generations.Persists`) never had the
   family's uptake exceed its replenishment for `n` steps from a stock below `n + m`
-  (`Flow.persists_never_overdraws`, from `GroupEnding.Flow.coupled_generation_childless`). Where a chosen course that
+  (`Flow.persists_never_overdraws`, from `GroupEnding.Flow.coupled_generation_childless`), the case at a late
+  member of its dated form: a line with a member past `T + n` never overdrew across the `n` steps from `T`
+  (`Flow.member_after_never_overdrew`). Where a chosen course that
   ends what the line depends on is realized as such an overdraw, the persisting line's choices, coming from
   some strict order, are consistent with keeping above ending (`Flow.persisting_keeping_above_ending`), and
   with self-concern on the occasions met wherever only ending was at stake there
@@ -422,12 +424,34 @@ def Persists {X : Type} (G : SelectionTerm.Generations X) : Prop :=
 
 end SelectionTerm.Generations
 
+/-- **A line with a member after a window never overdrew in it.** Under the laws of
+`Flow.persists_never_overdraws` (balance, only active formations giving, activity needing support, descent,
+the renewal of a family of conditions gated on the family at a need of at least `m`, and every member of
+every cohort depending on some condition of the family at a need of at least `m`), a line with a member at a
+step `s` later than `T + n` never had the family's uptake exceed its replenishment for the `n` steps from
+`T` from a stock below `n + m`: the generation after `T + n` and every later one would be empty
+(`GroupEnding.Flow.coupled_generation_childless`). It says nothing of a window that closes at or after `s`. -/
+theorem Flow.member_after_never_overdrew {X : Type} {L : Flow X X} {W : Web X X}
+    (balances : L.Balances W) (acting : L.Acting W) (dependent : W.Dependent)
+    {G : SelectionTerm.Generations X} (descended : SelectionTerm.Flow.Descended L W G)
+    {ds : List X} {m : Nat}
+    (gated : ∀ t f, f ∈ L.present t → ∀ d, d ∈ ds → 0 < L.give t f d →
+      ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e)
+    (coupled : ∀ s p, p ∈ G.family s → ∃ e, e ∈ ds ∧ W.requires s p e ∧ m ≤ W.need s p e)
+    {T n s : Nat} {y : X} (late : T + n < s) (member : y ∈ G.family s) :
+    ¬ ((∀ k, k < n → L.replenishment ds (T + k) < L.uptake ds (T + k)) ∧ W.stock ds T < n + m) :=
+  fun ⟨excess, start⟩ => match Nat.le.dest (Nat.succ_le_of_lt late) with
+    | ⟨k, at_⟩ =>
+      GroupEnding.Flow.coupled_generation_childless balances acting dependent descended gated excess start k
+        (coupled (T + n + k)) y (Eq.subst (motive := fun r => y ∈ G.family r)
+          ((Nat.add_right_comm (T + n) 1 k).symm.trans at_).symm member)
+
 /-- **A line that persists never overdrew what it depends on from a short stock.** Under balance, with
 only active formations giving and activity needing support, let the renewal of a family of conditions be
 gated on the family as one at a need of at least `m`, and let every member of every cohort of descent
 depend on some condition of the family at a need of at least `m`. If the line persists through arbitrarily
 late cohorts, then at no step `T` did the family's uptake exceed its replenishment for `n` steps from a
-stock below `n + m` (from `GroupEnding.Flow.coupled_generation_childless`). -/
+stock below `n + m`: the case of `Flow.member_after_never_overdrew` at a member past `T + n`. -/
 theorem Flow.persists_never_overdraws {X : Type} {L : Flow X X} {W : Web X X}
     (balances : L.Balances W) (acting : L.Acting W) (dependent : W.Dependent)
     {G : SelectionTerm.Generations X} (descended : SelectionTerm.Flow.Descended L W G)
@@ -437,14 +461,9 @@ theorem Flow.persists_never_overdraws {X : Type} {L : Flow X X} {W : Web X X}
     (coupled : ∀ s p, p ∈ G.family s → ∃ e, e ∈ ds ∧ W.requires s p e ∧ m ≤ W.need s p e)
     (persists : G.Persists) (T n : Nat) :
     ¬ ((∀ k, k < n → L.replenishment ds (T + k) < L.uptake ds (T + k)) ∧ W.stock ds T < n + m) :=
-  fun ⟨excess, start⟩ =>
-    have ended : ∀ k y, ¬ y ∈ G.family (T + n + k + 1) := fun k =>
-      GroupEnding.Flow.coupled_generation_childless balances acting dependent descended gated excess
-        start k (coupled (T + n + k))
-    match persists (T + n + 1) with
-    | ⟨_, y, late, member⟩ => match Nat.le.dest late with
-      | ⟨k, at_⟩ => ended k y (Eq.subst (motive := fun r => y ∈ G.family r)
-          ((Nat.add_right_comm (T + n) 1 k).symm.trans at_).symm member)
+  match persists (T + n + 1) with
+  | ⟨_, _, late, member⟩ => Flow.member_after_never_overdrew balances acting dependent descended gated coupled
+      (Nat.lt_of_succ_le late) member
 
 /-- **A persisting line's choices put keeping above ending.** Under the laws of `persists_never_overdraws`,
 let the line persist, let a chosen alternative that ends be realized as an overdraw of the family from a

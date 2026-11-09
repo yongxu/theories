@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-11-09T15:20:00+00:00",
+  "reviewed_at_utc": "2026-11-09T16:27:17+00:00",
   "statement": {
     "en": "Persisting read in finite, dated form: a member at a step past a window of joint excess from a short stock rules that window out, and reads only windows closing before the member.",
     "zh": "以有限、有日期之形式读延续：于自短存量起之共同超出之窗后某步之成员，排除该窗；只读于该成员之前闭合之窗。"
@@ -59,7 +59,7 @@
     "en": "Read on a lineage that carries its reading: which windows a line alive at a step rules out for the scopes it reads.",
     "zh": "于携其读法之世系上读：一步尚存之线，对其所读之范围排除哪些窗。"
   },
-  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionInTime.lean",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
   "aliases": [
     "a line alive after a window never overdrew in it",
     "窗后尚存之线未曾于窗内透支",
@@ -86,12 +86,12 @@
   "related": [],
   "references": [
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionInTime.lean",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
       "role": "proof",
       "declarations": [
         "Becoming.Flow.member_after_never_overdrew"
       ],
-      "sha256": "105adddbbf6cbf8921a3ae8665204d0a9ee20e1a8a98dae04e8f77740db1a2cc"
+      "sha256": "62a0506e6f6519ca180776773db4e3fc8fae54e383e387203e4ce59a143b4ad2"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T150154.198993Z/verification.json",
@@ -114,9 +114,9 @@
   ],
   "proof_bindings": [
     {
-      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionInTime.lean",
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T150154.198993Z/verification.json",
-      "sha256_pointer": "/source_sha256/Becoming.ConditionInTime",
+      "sha256_pointer": "/source_sha256/Becoming.PersistingChoices",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -125,6 +125,10 @@
     {
       "en": "9 November 2026, board item J3 (route (b)'s join, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md): added. Whether the condition's positive half holds in time, and what the one-center bound counts; study folder j3-condition-in-time.",
       "zh": "2026年11月9日，看板项 J3（路线 (b) 之连接，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md）：新增。条件之正面一半在时间中是否成立，及单一中心之界所计为何；研究目录 j3-condition-in-time。"
+    },
+    {
+      "en": "9 November 2026, J1 (route (b)'s join, board rule 9): Flow.member_after_never_overdrew moved, with its name and statement, from ConditionInTime to PersistingChoices, where Flow.persists_never_overdraws is now its corollary; its proof takes the ending step from GroupEnding.Flow.coupled_generation_childless. The claim is unchanged.",
+      "zh": "2026年11月9日，J1（路线 (b) 之合观，看板规则 9）：Flow.member_after_never_overdrew 连同其名与陈述自 ConditionInTime 移至 PersistingChoices，Flow.persists_never_overdraws 今为其推论；其证明之终结一步取自 GroupEnding.Flow.coupled_generation_childless。所陈未变。"
     }
   ]
 }

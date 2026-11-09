@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-11-09T15:53:07+00:00",
+  "reviewed_at_utc": "2026-11-09T16:29:47+00:00",
   "statement": {
     "en": "At the formations whose acts return along affecting, given one, each under its least class, the de se condition is exactly mutual dependence; nothing beyond their coupling closures counts from them; orders a persisting line's choices allow give C only along what they show, never the course taken.",
     "zh": "于沿影响其举回返之形成处（有其一时），各在其最细类下，自指之延续条件恰为相互依赖；其耦合闭包外者从它们无意义；存续之系之择所容之序，唯沿其所示给出 C，从不及所取之程。"
@@ -102,6 +102,7 @@
         "Becoming.Weighting.IncreasingInOwnOn",
         "Becoming.«各续无外则同一中心»",
         "Becoming.GroupEnding.Flow.coupled_generation_childless",
+        "Becoming.Flow.member_after_never_overdrew",
         "Becoming.«及之首步»"
       ]
     }
@@ -384,10 +385,11 @@
       "declarations": [
         "Becoming.ChoiceOccasions.increasingInOwnOn_of_keeping",
         "Becoming.ChoiceOccasions.selfConcerned_consistent_of_kept",
+        "Becoming.Flow.member_after_never_overdrew",
         "Becoming.Flow.persists_not_listsAdmitted",
         "Becoming.PersistingChoices.Crossed.not_selfConcerned"
       ],
-      "sha256": "19d7da15e8a3d69fec480c33128b644ea95b9dee3a0c8a3fffe3447ced9910e4"
+      "sha256": "62a0506e6f6519ca180776773db4e3fc8fae54e383e387203e4ce59a143b4ad2"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PremiseWitnesses.lean",
@@ -420,12 +422,12 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "2de709cc89ac7c8f58bc15b0965aa3674314a51fc2df08bbd3642ad841d0dc8f"
+      "sha256": "63ed8c4acc2ddc7848468470476faee2e3ddc5dda2c3fdb93a1324ceaf7684b7"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/j1-route-b-joined/NOTE.md",
       "role": "integration",
-      "sha256": "51f40d3f694299452e000dbb7bc486487a8c54cb03d9c4e88a9024ce8b16c345"
+      "sha256": "17dc03209da2cec59acb7eb534ccd68256967d05fe70a0834e6e4affeb6374bf"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",
@@ -435,7 +437,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/j1-route-b-joined/READER.md",
       "role": "review",
-      "sha256": "3e4ba115c061e377c00a1e38d29bb451a02fe262e4fe652ea89ee2df9b54d5d0"
+      "sha256": "7af205c735b0ef99642de926ad407bd31e02456e880508bd268fcb91534df3fa"
     }
   ],
   "proof_bindings": [],

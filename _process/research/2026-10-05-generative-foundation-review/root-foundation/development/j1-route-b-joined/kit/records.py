@@ -115,6 +115,7 @@ LAWS = [
                      "Weighting.IncreasingInOwnOn"],
       "GrammarScope": ["«各续无外则同一中心»"],
       "GroupEnding": ["GroupEnding.Flow.coupled_generation_childless"],
+      "PersistingChoices": ["Flow.member_after_never_overdrew"],
       "Grammar": ["«及之首步»"]}),
 ]
 EXTRA = {FTD: [f"{ALT}.unit_self", f"{ALT}.unit_other", f"{ALT}.family_eq", f"{ALT}.balances_at",
