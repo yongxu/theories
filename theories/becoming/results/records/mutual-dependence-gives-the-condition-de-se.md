@@ -67,7 +67,7 @@ AI reading: read with 07 §4.3, under mutual dependence every center's closure i
 | Role | Source | Declarations |
 |---|---|---|
 | proof | [PersistingChoices.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean) | `Becoming.Clearing.not_unrestricted_ownClosure`, `Becoming.Flow.mutuallyDependent_iff_unrestricted`, `Becoming.Flow.unrestricted_of_mutuallyDependent` |
-| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T120030.596088Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T121052.645138Z/verification.json) | — |
 | statement | [07-SIGNIFICANCE.md](../../chapters/07-SIGNIFICANCE.md) | — |
 | integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/za-concern-formed/NOTE.md) | — |
 
@@ -80,4 +80,4 @@ Aliases: `mutual dependence gives the condition de se`, `相互依赖给出自�
 
 </details>
 
-Documentary review UTC: `2026-11-09T12:01:29+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T12:12:02+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
