@@ -665,6 +665,23 @@ class SiteTests(unittest.TestCase):
     def test_emphasis_inside_a_word_as_github_has_it(self):
         self.assertEqual(site.emphasis('each T*n* and the *scope*'), 'each T<em>n</em> and the <em>scope</em>')
         self.assertEqual(site.emphasis('2 * 3 * 4, and a star*'), '2 * 3 * 4, and a star*')  # spaced or lone stars stay
+        self.assertEqual(site.emphasis('**Thesis T*n*.**'), '<strong>Thesis T<em>n</em>.</strong>')
+        (self.tmp / 'a/ONE.md').write_text(ONE + '\nIn code `T*n*` stays, and T*n* does not.\n')
+        self.build()
+        self.assertIn('<code>T*n*</code> stays, and T<em>n</em> does not.', self.page('a/ONE.html'))
+
+    def test_a_picture_keeps_its_box_before_it_loads(self):
+        (self.tmp / 'a/pic.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1859"></svg>')
+        (self.tmp / 'a/ONE.md').write_text(ONE + '\n![The picture](pic.svg)\n')
+        self.files.add('a/pic.svg')
+        self.build(assets=['a/pic.svg'])
+        self.assertIn('alt="The picture" width="900" height="1859" loading="lazy">', self.page('a/ONE.html'))
+        self.assertEqual(site.svg_size(self.tmp / 'a/pic.svg'), (900, 1859))
+        (self.tmp / 'a/pic.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" width="10.4" height="20px" viewBox="0 0 1 1"></svg>')
+        self.assertEqual(site.svg_size(self.tmp / 'a/pic.svg'), (10, 20))  # width and height first
+        (self.tmp / 'a/pic.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg"></svg>')
+        self.assertIsNone(site.svg_size(self.tmp / 'a/pic.svg'))
+        self.assertIsNone(site.svg_size(self.tmp / 'a/none.svg'))
 
     # -- the home
     def test_the_picture_follows_the_words_and_the_cards_follow_the_picture(self):
@@ -897,6 +914,13 @@ class RepositoryConfigTests(unittest.TestCase):
         card = next(w for w in site.site_config()['ways_in'] if w['label'] == 'The opening')
         body = site.navigation.readme_opening().partition('\n### Notes\n')[0]  # what the first screen's {{time:opening}} times
         self.assertEqual(site.card_time(card, ROOT, site.tracked_files()), site.navigation.reading_time(body) + ', without its notes')
+
+    def test_the_one_page_is_timed_alike_on_its_card_in_start_with_and_on_itself(self):
+        card = next(w for w in site.site_config()['ways_in'] if w['path'] == 'theories/becoming/ONE-PAGE.md')
+        page = (ROOT / 'theories/becoming/ONE-PAGE.md').read_text()
+        said = site.navigation.reading_time(page)  # what README's {{time:theories/becoming/ONE-PAGE.md}} and the page's own line count
+        self.assertTrue(site.card_time(card, ROOT, site.tracked_files()).startswith(said), (site.card_time(card, ROOT, site.tracked_files()), said))
+        self.assertIn(f'[the one page](theories/becoming/ONE-PAGE.md) ({said})', (ROOT / 'README.md').read_text())
 
     def test_the_chinese_pages_and_navigation(self):
         cfg = site.site_config()

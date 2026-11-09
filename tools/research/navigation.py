@@ -588,7 +588,7 @@ NAV = [('README.md', 'Home'), ('README.zh.md', '中文'),
        (None, '**Check**'), ('TESTS.md', 'Tests'), ('RESULTS.md', 'Results'), ('MAP.md#check-the-proofs-yourself', 'Proofs'), ('OPEN-QUESTIONS.md', 'Open questions'), (THEORY + '/review/README.md', 'Reviewers'),
        (None, '**See**'), (THEORY + '/results/THEORY-GRAPH.md', 'Graph'), (CROSSWALK, 'Connections'), ('theories/LINEAGE.md', 'How it grew'), ('GLOSSARY.md', 'Glossary'), ('MAP.md', 'Where everything is')]
 # Hand-written fronts that carry the line, each with its Chinese edition where it has one (the line's 中文 then goes there).
-NAV_FRONTS = {  # hand-written fronts that carry the generated pages' navigation line under their title, its 中文 link to the page's edition
+NAV_FRONTS = {
     'MAP.md': None,
     'GLOSSARY.md': 'GLOSSARY.zh.md',
     'theories/becoming/ONE-PAGE.md': 'theories/becoming/ONE-PAGE.zh.md',
@@ -616,8 +616,8 @@ def nav_front_errors(root=ROOT):
     errors = []
     for page, zh in NAV_FRONTS.items():
         text = (root / page).read_text() if (root / page).is_file() else ''
-        if nav_line(page, zh) not in text.split('\n'):
-            errors.append(f'{page}: its navigation line is missing or differs; under its title it should read: {nav_line(page, zh)}')
+        if nav_line(page, zh) not in text.split('\n')[:20]:  # near the top, where the site's strip of it looks
+            errors.append(f'{page}: its navigation line is missing, differs or is not in its first 20 lines; under its title it should read: {nav_line(page, zh)}')
     return errors
 
 

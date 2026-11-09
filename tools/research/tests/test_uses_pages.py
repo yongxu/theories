@@ -109,7 +109,7 @@ class UsesCells(unittest.TestCase):
     def test_standings_named(self):
         text = page(USES)
         for phrase in ('none shown to hold of an actual collective', 'The matching proves no coverage of wisdom',
-                       '**Nothing claimed** of how a person develops or fares', '[AI reading, [D45](', '[[D26](', '[[D65](', 'DELEGATED-CHOICES.md#0-how-to-read-this-record', '[J1–J4](chapters/07-SIGNIFICANCE.md#',
+                       '**Nothing claimed** of how a person develops or fares', '[AI reading, [D45](', '[[D26](', '[[D65](', 'DELEGATED-CHOICES.md#d45-', 'DELEGATED-CHOICES.md#d65-', 'DELEGATED-CHOICES.md#d26-', '[J1–J4](chapters/08-METHOD.md#premise-card)',
                        'USES-EXAMPLES.md#auditing-a-language-model-judge', 'review/ALIGNMENT.md#the-dossier-in-ten-minutes'):
             self.assertIn(phrase, text)
         top = text.split('## Field by field')[0]
