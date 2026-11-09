@@ -10818,7 +10818,7 @@
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean",
-      "sha256": "4b2e8adfa6fd2253f34da13258366a5e9707de978581a61d078b5e0137ef5522",
+      "sha256": "539ef9aa5e76911d455ad7ab620142a872e328c151e6d4ca829cdfa03e61e867",
       "role": "working-source",
       "group": "becoming-core",
       "receipt_layer": "core",
@@ -192146,259 +192146,6 @@
       },
       "print_axioms_commands": 0
     },
-    "4b2e8adfa6fd2253f34da13258366a5e9707de978581a61d078b5e0137ef5522": {
-      "byte_size": 26958,
-      "line_count": 456,
-      "imports": [
-        "Becoming.Centers",
-        "Becoming.MutualDependence",
-        "Becoming.Weightings",
-        "Becoming.GrammarScope"
-      ],
-      "declarations": [
-        {
-          "kind": "def",
-          "name": "ReturnsAlong",
-          "qualified_name_hint": "Becoming.ReturnsAlong",
-          "line": 102
-        },
-        {
-          "kind": "abbrev",
-          "name": "Returning",
-          "qualified_name_hint": "Becoming.Returning",
-          "line": 106
-        },
-        {
-          "kind": "theorem",
-          "name": "ReturnsAlong.loop",
-          "qualified_name_hint": "Becoming.ReturnsAlong.loop",
-          "line": 112
-        },
-        {
-          "kind": "theorem",
-          "name": "returnsAlong_of_whole",
-          "qualified_name_hint": "Becoming.returnsAlong_of_whole",
-          "line": 117
-        },
-        {
-          "kind": "theorem",
-          "name": "ReturnsAlong.whole",
-          "qualified_name_hint": "Becoming.ReturnsAlong.whole",
-          "line": 122
-        },
-        {
-          "kind": "theorem",
-          "name": "ownClosure_unrestricted_atReturning_iff",
-          "qualified_name_hint": "Becoming.ownClosure_unrestricted_atReturning_iff",
-          "line": 128
-        },
-        {
-          "kind": "theorem",
-          "name": "ownClosure_unrestricted_of_none",
-          "qualified_name_hint": "Becoming.ownClosure_unrestricted_of_none",
-          "line": 138
-        },
-        {
-          "kind": "theorem",
-          "name": "ownClosure_standpointInvariant_atReturning_iff",
-          "qualified_name_hint": "Becoming.ownClosure_standpointInvariant_atReturning_iff",
-          "line": 144
-        },
-        {
-          "kind": "theorem",
-          "name": "mutuallyFed_iff_unrestricted",
-          "qualified_name_hint": "Becoming.Flow.mutuallyFed_iff_unrestricted",
-          "line": 161
-        },
-        {
-          "kind": "theorem",
-          "name": "covering_of_acting",
-          "qualified_name_hint": "Becoming.Flow.covering_of_acting",
-          "line": 172
-        },
-        {
-          "kind": "abbrev",
-          "name": "Returning",
-          "qualified_name_hint": "Becoming.Flow.Returning",
-          "line": 177
-        },
-        {
-          "kind": "theorem",
-          "name": "reachReturns_iff_returnsAlong",
-          "qualified_name_hint": "Becoming.Flow.reachReturns_iff_returnsAlong",
-          "line": 180
-        },
-        {
-          "kind": "theorem",
-          "name": "mutuallyDependent_of_returning_unrestricted",
-          "qualified_name_hint": "Becoming.Flow.mutuallyDependent_of_returning_unrestricted",
-          "line": 187
-        },
-        {
-          "kind": "theorem",
-          "name": "returning_unrestricted_iff_mutuallyDependent",
-          "qualified_name_hint": "Becoming.Flow.returning_unrestricted_iff_mutuallyDependent",
-          "line": 197
-        },
-        {
-          "kind": "theorem",
-          "name": "mutuallyDependent_of_returning_noOutside",
-          "qualified_name_hint": "Becoming.Flow.mutuallyDependent_of_returning_noOutside",
-          "line": 205
-        },
-        {
-          "kind": "theorem",
-          "name": "MutuallyDependent.reachReturns",
-          "qualified_name_hint": "Becoming.Flow.MutuallyDependent.reachReturns",
-          "line": 212
-        },
-        {
-          "kind": "theorem",
-          "name": "atReturning_unrestricted_iff",
-          "qualified_name_hint": "Becoming.Flow.atReturning_unrestricted_iff",
-          "line": 218
-        },
-        {
-          "kind": "theorem",
-          "name": "covered_by_returning",
-          "qualified_name_hint": "Becoming.Flow.covered_by_returning",
-          "line": 230
-        },
-        {
-          "kind": "theorem",
-          "name": "unrestricted_of_returning_standpointInvariant",
-          "qualified_name_hint": "Becoming.Flow.unrestricted_of_returning_standpointInvariant",
-          "line": 241
-        },
-        {
-          "kind": "theorem",
-          "name": "returning_influence_unrestricted_iff",
-          "qualified_name_hint": "Becoming.Flow.returning_influence_unrestricted_iff",
-          "line": 253
-        },
-        {
-          "kind": "theorem",
-          "name": "returning_influence_unrestricted_iff_invariant",
-          "qualified_name_hint": "Becoming.Flow.returning_influence_unrestricted_iff_invariant",
-          "line": 267
-        },
-        {
-          "kind": "theorem",
-          "name": "dweller_reach_closed",
-          "qualified_name_hint": "Becoming.Clearing.dweller_reach_closed",
-          "line": 282
-        },
-        {
-          "kind": "theorem",
-          "name": "dweller_returns",
-          "qualified_name_hint": "Becoming.Clearing.dweller_returns",
-          "line": 288
-        },
-        {
-          "kind": "theorem",
-          "name": "clearer_not_returns",
-          "qualified_name_hint": "Becoming.Clearing.clearer_not_returns",
-          "line": 295
-        },
-        {
-          "kind": "theorem",
-          "name": "source_not_returns",
-          "qualified_name_hint": "Becoming.Clearing.source_not_returns",
-          "line": 299
-        },
-        {
-          "kind": "theorem",
-          "name": "reachReturns_iff",
-          "qualified_name_hint": "Becoming.Clearing.reachReturns_iff",
-          "line": 304
-        },
-        {
-          "kind": "theorem",
-          "name": "dweller_influence_whole",
-          "qualified_name_hint": "Becoming.Clearing.dweller_influence_whole",
-          "line": 311
-        },
-        {
-          "kind": "theorem",
-          "name": "returning_apart",
-          "qualified_name_hint": "Becoming.Clearing.returning_apart",
-          "line": 322
-        },
-        {
-          "kind": "theorem",
-          "name": "returning_loses_dweller",
-          "qualified_name_hint": "Becoming.Clearing.returning_loses_dweller",
-          "line": 344
-        },
-        {
-          "kind": "theorem",
-          "name": "dweller_feeding_closed",
-          "qualified_name_hint": "Becoming.Clearing.dweller_feeding_closed",
-          "line": 357
-        },
-        {
-          "kind": "theorem",
-          "name": "clearer_beyond_returning_feeding",
-          "qualified_name_hint": "Becoming.Clearing.clearer_beyond_returning_feeding",
-          "line": 370
-        },
-        {
-          "kind": "theorem",
-          "name": "returning_feeding_apart",
-          "qualified_name_hint": "Becoming.Drawing.returning_feeding_apart",
-          "line": 387
-        },
-        {
-          "kind": "def",
-          "name": "flow",
-          "qualified_name_hint": "Becoming.Unexchanged.flow",
-          "line": 409
-        },
-        {
-          "kind": "def",
-          "name": "web",
-          "qualified_name_hint": "Becoming.Unexchanged.web",
-          "line": 415
-        },
-        {
-          "kind": "theorem",
-          "name": "not_affects",
-          "qualified_name_hint": "Becoming.Unexchanged.not_affects",
-          "line": 423
-        },
-        {
-          "kind": "theorem",
-          "name": "reach_self",
-          "qualified_name_hint": "Becoming.Unexchanged.reach_self",
-          "line": 427
-        },
-        {
-          "kind": "theorem",
-          "name": "every_returns",
-          "qualified_name_hint": "Becoming.Unexchanged.every_returns",
-          "line": 431
-        },
-        {
-          "kind": "theorem",
-          "name": "apart",
-          "qualified_name_hint": "Becoming.Unexchanged.apart",
-          "line": 440
-        }
-      ],
-      "declaration_counts": {
-        "abbrev": 2,
-        "def": 3,
-        "theorem": 33
-      },
-      "textual_markers": {
-        "sorry": [],
-        "admit": [],
-        "axiom": [],
-        "native_decide": [],
-        "unsafe": []
-      },
-      "print_axioms_commands": 0
-    },
     "4bc270b4e4dbaa25c964018f70bf15e5e5011bcb317b03278f454456af9a5cfa": {
       "byte_size": 73488,
       "line_count": 1288,
@@ -209955,6 +209702,259 @@
         "def": 9,
         "structure": 1,
         "theorem": 10
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "539ef9aa5e76911d455ad7ab620142a872e328c151e6d4ca829cdfa03e61e867": {
+      "byte_size": 27455,
+      "line_count": 462,
+      "imports": [
+        "Becoming.Centers",
+        "Becoming.MutualDependence",
+        "Becoming.Weightings",
+        "Becoming.GrammarScope"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "ReturnsAlong",
+          "qualified_name_hint": "Becoming.ReturnsAlong",
+          "line": 107
+        },
+        {
+          "kind": "abbrev",
+          "name": "Returning",
+          "qualified_name_hint": "Becoming.Returning",
+          "line": 111
+        },
+        {
+          "kind": "theorem",
+          "name": "ReturnsAlong.loop",
+          "qualified_name_hint": "Becoming.ReturnsAlong.loop",
+          "line": 117
+        },
+        {
+          "kind": "theorem",
+          "name": "returnsAlong_of_whole",
+          "qualified_name_hint": "Becoming.returnsAlong_of_whole",
+          "line": 122
+        },
+        {
+          "kind": "theorem",
+          "name": "ReturnsAlong.whole",
+          "qualified_name_hint": "Becoming.ReturnsAlong.whole",
+          "line": 127
+        },
+        {
+          "kind": "theorem",
+          "name": "ownClosure_unrestricted_atReturning_iff",
+          "qualified_name_hint": "Becoming.ownClosure_unrestricted_atReturning_iff",
+          "line": 133
+        },
+        {
+          "kind": "theorem",
+          "name": "ownClosure_unrestricted_of_none",
+          "qualified_name_hint": "Becoming.ownClosure_unrestricted_of_none",
+          "line": 143
+        },
+        {
+          "kind": "theorem",
+          "name": "ownClosure_standpointInvariant_atReturning_iff",
+          "qualified_name_hint": "Becoming.ownClosure_standpointInvariant_atReturning_iff",
+          "line": 149
+        },
+        {
+          "kind": "theorem",
+          "name": "mutuallyFed_iff_unrestricted",
+          "qualified_name_hint": "Becoming.Flow.mutuallyFed_iff_unrestricted",
+          "line": 167
+        },
+        {
+          "kind": "theorem",
+          "name": "covering_of_acting",
+          "qualified_name_hint": "Becoming.Flow.covering_of_acting",
+          "line": 178
+        },
+        {
+          "kind": "abbrev",
+          "name": "Returning",
+          "qualified_name_hint": "Becoming.Flow.Returning",
+          "line": 183
+        },
+        {
+          "kind": "theorem",
+          "name": "reachReturns_iff_returnsAlong",
+          "qualified_name_hint": "Becoming.Flow.reachReturns_iff_returnsAlong",
+          "line": 186
+        },
+        {
+          "kind": "theorem",
+          "name": "mutuallyDependent_of_returning_unrestricted",
+          "qualified_name_hint": "Becoming.Flow.mutuallyDependent_of_returning_unrestricted",
+          "line": 193
+        },
+        {
+          "kind": "theorem",
+          "name": "returning_unrestricted_iff_mutuallyDependent",
+          "qualified_name_hint": "Becoming.Flow.returning_unrestricted_iff_mutuallyDependent",
+          "line": 203
+        },
+        {
+          "kind": "theorem",
+          "name": "mutuallyDependent_of_returning_noOutside",
+          "qualified_name_hint": "Becoming.Flow.mutuallyDependent_of_returning_noOutside",
+          "line": 211
+        },
+        {
+          "kind": "theorem",
+          "name": "MutuallyDependent.reachReturns",
+          "qualified_name_hint": "Becoming.Flow.MutuallyDependent.reachReturns",
+          "line": 218
+        },
+        {
+          "kind": "theorem",
+          "name": "atReturning_unrestricted_iff",
+          "qualified_name_hint": "Becoming.Flow.atReturning_unrestricted_iff",
+          "line": 224
+        },
+        {
+          "kind": "theorem",
+          "name": "covered_by_returning",
+          "qualified_name_hint": "Becoming.Flow.covered_by_returning",
+          "line": 236
+        },
+        {
+          "kind": "theorem",
+          "name": "unrestricted_of_returning_standpointInvariant",
+          "qualified_name_hint": "Becoming.Flow.unrestricted_of_returning_standpointInvariant",
+          "line": 247
+        },
+        {
+          "kind": "theorem",
+          "name": "returning_influence_unrestricted_iff",
+          "qualified_name_hint": "Becoming.Flow.returning_influence_unrestricted_iff",
+          "line": 259
+        },
+        {
+          "kind": "theorem",
+          "name": "returning_influence_unrestricted_iff_invariant",
+          "qualified_name_hint": "Becoming.Flow.returning_influence_unrestricted_iff_invariant",
+          "line": 273
+        },
+        {
+          "kind": "theorem",
+          "name": "dweller_reach_closed",
+          "qualified_name_hint": "Becoming.Clearing.dweller_reach_closed",
+          "line": 288
+        },
+        {
+          "kind": "theorem",
+          "name": "dweller_returns",
+          "qualified_name_hint": "Becoming.Clearing.dweller_returns",
+          "line": 294
+        },
+        {
+          "kind": "theorem",
+          "name": "clearer_not_returns",
+          "qualified_name_hint": "Becoming.Clearing.clearer_not_returns",
+          "line": 301
+        },
+        {
+          "kind": "theorem",
+          "name": "source_not_returns",
+          "qualified_name_hint": "Becoming.Clearing.source_not_returns",
+          "line": 305
+        },
+        {
+          "kind": "theorem",
+          "name": "reachReturns_iff",
+          "qualified_name_hint": "Becoming.Clearing.reachReturns_iff",
+          "line": 310
+        },
+        {
+          "kind": "theorem",
+          "name": "dweller_influence_whole",
+          "qualified_name_hint": "Becoming.Clearing.dweller_influence_whole",
+          "line": 317
+        },
+        {
+          "kind": "theorem",
+          "name": "returning_apart",
+          "qualified_name_hint": "Becoming.Clearing.returning_apart",
+          "line": 328
+        },
+        {
+          "kind": "theorem",
+          "name": "returning_loses_dweller",
+          "qualified_name_hint": "Becoming.Clearing.returning_loses_dweller",
+          "line": 350
+        },
+        {
+          "kind": "theorem",
+          "name": "dweller_feeding_closed",
+          "qualified_name_hint": "Becoming.Clearing.dweller_feeding_closed",
+          "line": 363
+        },
+        {
+          "kind": "theorem",
+          "name": "clearer_beyond_returning_feeding",
+          "qualified_name_hint": "Becoming.Clearing.clearer_beyond_returning_feeding",
+          "line": 376
+        },
+        {
+          "kind": "theorem",
+          "name": "returning_feeding_apart",
+          "qualified_name_hint": "Becoming.Drawing.returning_feeding_apart",
+          "line": 393
+        },
+        {
+          "kind": "def",
+          "name": "flow",
+          "qualified_name_hint": "Becoming.Unexchanged.flow",
+          "line": 415
+        },
+        {
+          "kind": "def",
+          "name": "web",
+          "qualified_name_hint": "Becoming.Unexchanged.web",
+          "line": 421
+        },
+        {
+          "kind": "theorem",
+          "name": "not_affects",
+          "qualified_name_hint": "Becoming.Unexchanged.not_affects",
+          "line": 429
+        },
+        {
+          "kind": "theorem",
+          "name": "reach_self",
+          "qualified_name_hint": "Becoming.Unexchanged.reach_self",
+          "line": 433
+        },
+        {
+          "kind": "theorem",
+          "name": "every_returns",
+          "qualified_name_hint": "Becoming.Unexchanged.every_returns",
+          "line": 437
+        },
+        {
+          "kind": "theorem",
+          "name": "apart",
+          "qualified_name_hint": "Becoming.Unexchanged.apart",
+          "line": 446
+        }
+      ],
+      "declaration_counts": {
+        "abbrev": 2,
+        "def": 3,
+        "theorem": 33
       },
       "textual_markers": {
         "sorry": [],
