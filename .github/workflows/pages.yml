@@ -32,6 +32,9 @@ jobs:
             /experiments/*/README.md
             /experiments/critical-mass-located/DESIGN.md
             /experiments/reform-events/HOLD.md
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'  # the version the site is built and reviewed with here; the runner image's own moves
       - name: Test the site builder
         run: python3 -B -m unittest tools.research.tests.test_site tools.research.tests.test_connection_map
       - name: Build the site
