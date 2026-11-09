@@ -109,7 +109,7 @@ class UsesCells(unittest.TestCase):
     def test_standings_named(self):
         text = page(USES)
         for phrase in ('none shown to hold of an actual collective', 'The matching proves no coverage of wisdom',
-                       '**Nothing claimed** of how a person develops or fares', '[AI reading, D45]', '[D26]', '[D65]',
+                       '**Nothing claimed** of how a person develops or fares', '[AI reading, [D45](', '[[D26](', '[[D65](', 'DELEGATED-CHOICES.md#0-how-to-read-this-record', '[J1–J4](chapters/07-SIGNIFICANCE.md#',
                        'USES-EXAMPLES.md#auditing-a-language-model-judge', 'review/ALIGNMENT.md#the-dossier-in-ten-minutes'):
             self.assertIn(phrase, text)
         top = text.split('## Field by field')[0]
@@ -497,7 +497,7 @@ class StatedTimes(unittest.TestCase):
         uses = page(USES)
         self.assertEqual(self.stated(uses, r'\*([A-Za-z-]+) to ([A-Za-z-]+) minutes to read, the table'), span(navigation.reading_time(uses)))
         table = '\n'.join(l for l in uses.splitlines() if l.startswith('|'))
-        self.assertEqual(self.stated(uses, r'the table ([A-Za-z-]+) to ([A-Za-z-]+) of them'), span(navigation.reading_time(table)))
+        self.assertEqual(self.stated(uses, r'the tables? ([A-Za-z-]+) to ([A-Za-z-]+) of them'), span(navigation.reading_time(table)))
         for rel in (EXAMPLES, ONE_PAGE):
             text = page(rel)
             self.assertEqual(self.stated(text, r'\*([A-Za-z-]+) to ([A-Za-z-]+) minutes to read'), span(navigation.reading_time(text)), rel)
