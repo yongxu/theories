@@ -338,7 +338,7 @@ SCOPE = (
     "decided of each alike occurrence whether it conditions something; the classes meeting both are closed under meets of two and "
     "of any family with a member, and not under joins; the least is the occurrence with everything downstream of it, wherever "
     "some class meets both; under every such class the line reaches what the one's reaches, so with each center under such a "
-    "class the condition along the net is that at the one; the identity meets the first everywhere and the second nowhere an "
+    "class the per-center condition along the net is that at the one; the identity meets the first everywhere and the second nowhere an "
     "effect differs from the occurrence, and the first alone is not closed under meets; read on a flow with the class of a "
     "formation's coupling closure, everything downstream lies on the line exactly where everything within reach lies within that "
     "closure, with coupling by threshold only exactly where acts return, and the line is the formation's loop. "

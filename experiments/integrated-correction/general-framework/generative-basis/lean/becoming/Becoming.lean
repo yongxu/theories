@@ -4721,7 +4721,7 @@ tagged instance or application.
   something), so the classes meeting both are closed under meets (`«本类常闭之交»`, `«本类常闭之遍交»`) and
   not under joins (`JoinBreaks`); the least is the occurrence with everything downstream of it (`«后类»`,
   `«后类最细»`), and every one reaches what the one reaches (`«本类常闭则所及即一之所及»`), so with each
-  center under such a class the condition along the net is that at the one
+  center under such a class the per-center condition along the net is that at the one
   (`«各本类常闭则续无外即一之续无外»`). The identity meets P2 everywhere and P4 nowhere an effect differs
   from oneself (`«静之本类至终有常»`, `«静不闭»`); P2 alone is not closed under meets (`MeetBreaks`). Read
   on a flow with the class of a formation's coupling closure (`Flow.CouplingClass`), P4 is that what it

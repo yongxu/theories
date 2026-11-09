@@ -27,12 +27,14 @@ module answers it for the classes meeting P2 and P4, and reads the class on a fl
   `m` alike with everything within its closure under the net and nothing else with anything; it is
   defined from the net and the member alone. Every class meeting P2 and P4 at `m` contains it
   (`«本类常闭则含后类»`), with no premise that `m` conditions anything, and wherever some class meets
-  P2 and P4 at `m`, it does too (`«后类本类常闭»`); so it is the least such class (`«后类最细»`).
+  P2 and P4 at `m`, it does too (`«后类本类常闭»`); so it is the least such class (`«后类最细»`). It
+  holds `m`'s effects with no premise, and meets P2 wherever it is decided, of each occurrence downstream
+  of `m`, whether it conditions something (`«判则后类本类常闭»`).
 * **Every class meeting P2 and P4 reaches what the one reaches (本类常闭则所及即一之所及).** From a
   member, a line under any class meeting P2 and P4 there reaches exactly what a line under the one
   reaches: the member and everything downstream of it (`«本类常闭则所及即一之所及»`). Given P2, P4 is
   equivalent to that (`«本类常则闭当且仅当所及即一之所及»`). With each center under a class of its own
-  meeting P2 and P4 at it, the condition along the net is the condition at the one
+  meeting P2 and P4 at it, the per-center condition along the net is the condition at the one
   (`«各本类常闭则续无外即一之续无外»`), so along a net with no cycle it holds only with one center
   (`«各本类常闭续无外则同一中心»`).
 * **P2 alone fixes only the moment (静之本类至终有常).** The identity meets P2 at every occurrence
@@ -57,14 +59,16 @@ module answers it for the classes meeting P2 and P4, and reads the class on a fl
   under a class stays in its block (`«线内同类»`). On the root the same reading, the class of what can
   reach a member, has its line reach exactly the member's loop (`«返之所及即环»`), only the member itself
   along a net with no cycle (`«无环则返之所及唯己»`), and the reach can hold
-  while P2 fails at it (`ReturnsNotRegular`): P2 and P4 together ask that the block be closed under the
-  net (`Flow.couplingClass_closed`), more than that acts return.
+  while P2 fails at it (`ReturnsNotRegular`): at a formation that affects something, P2 and P4 together
+  ask that its coupling closure be closed under affecting (`Flow.couplingClass_closed`), more than that
+  acts return.
 
-Read together: wherever a center's own class meets P2 and P4, the net fixes the least such class and
-fixes the reach of every such class, as everything downstream of the center; the class itself drops
-out of the reach. What the net does not fix is whether one's own class meets P4: at every occurrence
-that conditions something other than itself both the identity, which meets P2 and not P4, and
-`«后类»`, which meets both, are classes. So the de se question, on §4.6's path, is P4 and nothing
+Read together [a reading, not a theorem]: wherever a center's own class meets P2 and P4, the net fixes
+the least such class and the reach of every such class, everything downstream of the center; which of
+those classes is one's own it does not fix, and nothing the line reaches turns on it. Nor does the net
+fix whether one's own class meets P4: at every occurrence that conditions something other than itself
+the identity meets P2 and not P4, while `«后类»` holds its effects and meets P2 wherever any class meets
+both or it is decided as above. So, granted P2, the de se question on §4.6's path is P4 and nothing
 more, the crux of §4.7. Which class is one's own, and whether acting presupposes a class meeting P4,
 are not settled here.
 
@@ -208,6 +212,15 @@ theorem «后类本类常闭» {R E : «际» α} (hE : «类» E) {m : α} (atC
      | .inl ⟨w, hw, _⟩ => .inl ⟨w, hw, .inr ⟨«所闭之闭» R m u v inU step, «所闭之闭» R m u' w inU' hw⟩⟩
      | .inr stops => .inr stops,
    fun _ step => «后类之本».mpr («及之所闭» _ _ (.one step))⟩
+
+/-- **Where it is decided, of each occurrence downstream of a member, whether it conditions something, the
+member's class of what follows it meets P2 and P4 (判则后类本类常闭).** -/
+theorem «判则后类本类常闭» {R : «际» α} {m : α}
+    (decided : ∀ u, «所闭» R m u → (∃ w, R u w) ∨ ∀ w, ¬ R u w) :
+    «本类至终有常» R («后类» R m) m ∧ «所缘同于» R («后类» R m) m :=
+  «类闭则本类常闭» («后类为类» R m)
+    (fun u v mu step => «后类之本».mpr («所闭之闭» R m u v («后类之本».mp mu) step))
+    (fun u mu => decided u («后类之本».mp mu))
 
 /-- **The least class meeting P2 and P4 at a member (后类最细).** Wherever some class meets them at
 `m`, `«后类» R m` meets them, and every class that meets them contains it. -/
