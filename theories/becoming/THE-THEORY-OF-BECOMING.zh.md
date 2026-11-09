@@ -4,7 +4,7 @@
 
 [English](THE-THEORY-OF-BECOMING.md) · [首页](../../README.zh.md) · [一页](ONE-PAGE.zh.md) · [用途](USES.zh.md) · [实例](USES-EXAMPLES.zh.md) · **总览** · [八章（英文）](chapters/README.md) · [古文（第六章）](chapters/06-CLASSICAL-TEXTS.md) · [检验](../../TESTS.zh.md) · [对照表](results/atlas/CROSSWALK.zh.md) · [怎样长成](../LINEAGE.zh.md) · [术语表](../../GLOSSARY.zh.md) · [审查包](review/README.zh.md)
 
-*约五十八分钟至一小时十六分钟读完。*
+*约五十八分钟至一小时十五分钟读完。*
 
 *AI 译自英文版，尚无人审查它的记录；义以英文版为准，英文版又以其所链接之处为准。*
 
@@ -33,7 +33,7 @@
 
 **怎样读这幅图。** 实线计一章的结果使用另一章结果、记为 formal-reuse 的次数：这一类由 AI 写成的记录指定，没有任何检查核对一次使用是否见于 Lean；较深的曲线是逆向的（章的编号是为阅读，不是证明的次序），即章序在前的一章的结果使用章序在后的一章的结果；登记检查不让任何记录闭合其已声明依赖之环（[这是入册的条件，不是一项发现](results/THEORY-GRAPH.zh.md#do-the-recorded-uses-form-a-cycle)）。辐条的粗细是该章核心模块中在文法上陈述其律者所占的比例，计的是模块，不是推导而得的结果。117 项核心声明中，11 项[推导而得](../../GLOSSARY.zh.md#derived)，1 项为一个根形式的一步情形、在一个所述的假设之下，6 项为计数之律、位于文法以下，99 项处于一个[指明的距离](../../GLOSSARY.zh.md#named-distance)、各有其理由（[这幅图显示什么、不显示什么](results/THEORY-GRAPH.zh.md#the-spine-what-it-shows-and-does-not-show)）。
 
-*八章，由工具依[理论图](results/THEORY-GRAPH.md)画出：一条实线计一章的结果使用另一章结果、记为 formal-reuse 的次数，这一类留给已核验的推理，由 AI 写成的记录指定，没有任何检查对照 Lean 核对，章与章之间的虚线与点线是别种依赖；一条曲线是一种依赖，不是意义上的一致。117 项核心声明中，11 项推导而得，各为文法之律的一个情形，经由在 Lean 中作为等价核验的桥接与审阅所读的支持（某行载有它们之处）；1 项在一个所述的假设之下，6 项为计数，位于文法以下，99 项处于一个指明的距离，各有其理由（[08 §7](chapters/08-METHOD.md#r-one-root-to-its-edge)）。这幅图显示什么、不显示什么，见理论图中的[那一节](results/THEORY-GRAPH.zh.md#the-spine-what-it-shows-and-does-not-show)；诸模型共有的五条律（平衡是被表示而非被推出），见[其表](results/THEORY-GRAPH.zh.md#the-five-shared-laws)。*
+*由工具依[理论图](results/THEORY-GRAPH.md)画出：少于 10 次 formal-reuse 使用之配对的实线不画，15 次及以上才标数字；一条曲线是一种依赖，不是意义上的一致。以 [08 §7](chapters/08-METHOD.md#r-one-root-to-its-edge) 的话所述的各项地位，见[理论图：各章一览](results/THEORY-GRAPH.zh.md#the-spine)；这幅图显示什么、不显示什么，见理论图中的[那一节](results/THEORY-GRAPH.zh.md#the-spine-what-it-shows-and-does-not-show)；诸模型共有的五条律（平衡是被表示而非被推出），见[其表](results/THEORY-GRAPH.zh.md#the-five-shared-laws)。*
 
 每一项主张都带有一个地位（[标签](chapters/08-METHOD.md#standings-and-bases)）：
 
