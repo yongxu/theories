@@ -10,7 +10,7 @@ WB (landed 9 November 2026, content `6cf2950b3`) revised what readers are told a
 - the one page's ethics paragraph and T8 row;
 - the glossary's ethics rows.
 
-It also used three homes these entries quote: 02 §7, 06's D49 and D65 readings (in Chinese), and COLLECTIVE-DIRECTION §4 and §8. Texts only: no Lean, no record, no new result, nothing paid.
+It also used three homes these entries quote: 02 §7, 06's D49 and D65 readings (in Chinese), and COLLECTIVE-DIRECTION §4 and §8. The same scan, run over the crosswalk's group summaries (`correspondence_groups.json`, 28 groups), found four more in the old frame, and they are re-said too. Texts only: no Lean, no record, no new result, nothing paid.
 
 ## What changed
 
