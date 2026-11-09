@@ -787,7 +787,7 @@ def _entry(d: dict, names: dict, homes: dict, here: str, premises: dict | None =
     exits = []
     for x in d['exits']:
         to = (f'[{names[x["to"]]}]({_section(x["to"], homes, here)})' if isinstance(x['to'], str)
-              else 'a destination not yet read' if x['to'] is None else _line(x['to']))
+              else 'a destination not yet read' if x['to'] is None else f'a state, in words: “{_line(x["to"])}”')
         law = f', by `{x["law"]}`' if x['law'] else ''
         recs = f' Records: {_standings(x["standing"], at)}.' if x['standing'] else ''
         drops = ''

@@ -1,0 +1,4473 @@
+[
+ {
+  "id": "k3-balance",
+  "name": {
+   "en": "balance"
+  },
+  "statement": {
+   "en": "every change of a level is exactly what is taken from it and given to it"
+  },
+  "kind": "World premise",
+  "lean": [
+   "Becoming.World.Balanced",
+   "Becoming.Flow.Balances",
+   "Becoming.Flow.BalancesOn"
+  ],
+  "holds_in": [
+   "Becoming.World.contingent",
+   "Becoming.World.independent"
+  ],
+  "fails_in": [
+   "Becoming.World.contingent",
+   "Becoming.World.independent"
+  ],
+  "home": "theories/becoming/chapters/01-ROOT.md#world-premises",
+  "seeded_from": [
+   "K3",
+   "08 card"
+  ]
+ },
+ {
+  "id": "k3-dissipation",
+  "name": {
+   "en": "dissipation"
+  },
+  "statement": {
+   "en": "on every family without repetition closed across a step, each taker gives it no more than it takes, and at least one unit less"
+  },
+  "kind": "World premise",
+  "lean": [
+   "Becoming.World.Dissipative",
+   "Becoming.Flow.Dissipative",
+   "Becoming.Flow.DissipatesOn"
+  ],
+  "holds_in": [
+   "Becoming.World.contingent",
+   "Becoming.World.independent"
+  ],
+  "fails_in": [
+   "Becoming.World.contingent",
+   "Becoming.World.independent"
+  ],
+  "home": "theories/becoming/chapters/01-ROOT.md#world-premises",
+  "seeded_from": [
+   "K3",
+   "08 card"
+  ]
+ },
+ {
+  "id": "k3-embodiment",
+  "name": {
+   "en": "embodiment"
+  },
+  "statement": {
+   "en": "a relatum stands as a condition exactly while active"
+  },
+  "kind": "World premise",
+  "lean": [
+   "Becoming.World.Embodied",
+   "Becoming.World.ArisingEmbodied"
+  ],
+  "holds_in": [
+   "Becoming.World.contingent",
+   "Becoming.World.independent"
+  ],
+  "fails_in": [
+   "Becoming.World.contingent",
+   "Becoming.World.independent"
+  ],
+  "home": "theories/becoming/chapters/01-ROOT.md#world-premises",
+  "seeded_from": [
+   "K3",
+   "08 card"
+  ]
+ },
+ {
+  "id": "k3-activity-needing-support",
+  "name": {
+   "en": "activity needing support"
+  },
+  "statement": {
+   "en": "a relatum is active only where the levels meet everything it then requires"
+  },
+  "kind": "World premise",
+  "lean": [
+   "Becoming.World.Dependent",
+   "Becoming.Web.Dependent"
+  ],
+  "holds_in": [
+   "Becoming.World.contingent",
+   "Becoming.World.independent"
+  ],
+  "fails_in": [
+   "Becoming.World.contingent",
+   "Becoming.World.independent"
+  ],
+  "home": "theories/becoming/chapters/01-ROOT.md#world-premises",
+  "seeded_from": [
+   "K3",
+   "08 card"
+  ]
+ },
+ {
+  "id": "k3-only-active-relata-give",
+  "name": {
+   "en": "only active relata give"
+  },
+  "statement": {
+   "en": "whatever gives across a step is active there"
+  },
+  "kind": "World premise",
+  "lean": [
+   "Becoming.World.Acting",
+   "Becoming.Flow.Acting"
+  ],
+  "holds_in": [
+   "Becoming.World.contingent",
+   "Becoming.World.independent"
+  ],
+  "fails_in": [
+   "Becoming.World.contingent",
+   "Becoming.World.independent"
+  ],
+  "home": "theories/becoming/chapters/01-ROOT.md#world-premises",
+  "seeded_from": [
+   "K3",
+   "08 card"
+  ]
+ },
+ {
+  "id": "k3-only-active-relata-take",
+  "name": {
+   "en": "only active relata take"
+  },
+  "statement": {
+   "en": "whatever takes is active and draws on what it takes from"
+  },
+  "kind": "World premise",
+  "lean": [
+   "Becoming.World.Taking",
+   "Becoming.Flow.Taking"
+  ],
+  "holds_in": [
+   "Becoming.World.contingent",
+   "Becoming.World.independent"
+  ],
+  "fails_in": [
+   "Becoming.World.contingent",
+   "Becoming.World.independent"
+  ],
+  "home": "theories/becoming/chapters/01-ROOT.md#world-premises",
+  "seeded_from": [
+   "K3",
+   "08 card"
+  ]
+ },
+ {
+  "id": "k3-a-census",
+  "name": {
+   "en": "a census"
+  },
+  "statement": {
+   "en": "the relata active at each step are listed, each once"
+  },
+  "kind": "World premise",
+  "lean": [
+   "Becoming.World.Counted",
+   "Becoming.Web.Census",
+   "Becoming.Web.StandingCensus"
+  ],
+  "holds_in": [
+   "Becoming.World.independent"
+  ],
+  "fails_in": [
+   "Becoming.World.independent"
+  ],
+  "home": "theories/becoming/chapters/01-ROOT.md#world-premises",
+  "seeded_from": [
+   "K3",
+   "08 card"
+  ]
+ },
+ {
+  "id": "k3-bounded-transmission",
+  "name": {
+   "en": "bounded transmission"
+  },
+  "statement": {
+   "en": "descent transmits every dependence within one bound"
+  },
+  "kind": "World premise",
+  "lean": [
+   "Becoming.World.Transmitting",
+   "Becoming.Flow.TransmitsWithin"
+  ],
+  "holds_in": [
+   "Becoming.World.independent"
+  ],
+  "fails_in": [
+   "Becoming.World.independent"
+  ],
+  "home": "theories/becoming/chapters/01-ROOT.md#world-premises",
+  "seeded_from": [
+   "K3",
+   "08 card"
+  ]
+ },
+ {
+  "id": "k3-a-reserve",
+  "name": {
+   "en": "a reserve"
+  },
+  "statement": {
+   "en": "some reserve carries activity beyond support"
+  },
+  "kind": "World premise",
+  "lean": [
+   "Becoming.World.Carried",
+   "Becoming.Web.Carries"
+  ],
+  "holds_in": [
+   "Becoming.World.contingent"
+  ],
+  "fails_in": [
+   "Becoming.World.contingent"
+  ],
+  "home": "theories/becoming/chapters/01-ROOT.md#r-space-and-its-parts",
+  "seeded_from": [
+   "K3"
+  ]
+ },
+ {
+  "id": "k3-finite",
+  "name": {
+   "en": "finite"
+  },
+  "statement": {
+   "en": "finitely many relata, each listed once"
+  },
+  "kind": "local hypothesis",
+  "lean": [
+   "Becoming.World.Finite"
+  ],
+  "holds_in": [
+   "Becoming.World.strained_finite"
+  ],
+  "fails_in": [
+   "Becoming.World.throughput_world"
+  ],
+  "home": "theories/becoming/chapters/08-METHOD.md#premise-card",
+  "seeded_from": [
+   "K3",
+   "08 card"
+  ]
+ },
+ {
+  "id": "k3-enclosed",
+  "name": {
+   "en": "enclosed"
+  },
+  "statement": {
+   "en": "a step's exchange lies within a finite family without repetition"
+  },
+  "kind": "local hypothesis",
+  "lean": [
+   "Becoming.Flow.Enclosed",
+   "Becoming.Flow.Around"
+  ],
+  "holds_in": [
+   "Becoming.Flow.enclosed_of_finite"
+  ],
+  "fails_in": [
+   "Becoming.World.exposed_world"
+  ],
+  "home": "theories/becoming/chapters/08-METHOD.md#premise-card",
+  "seeded_from": [
+   "K3",
+   "08 card"
+  ]
+ },
+ {
+  "id": "k3-decided",
+  "name": {
+   "en": "decided"
+  },
+  "statement": {
+   "en": "decided where a law counts or names: the proposition the law counts or names by is decided (it holds or it fails), in Lean an instance of Decidable or DecidableEq in the law's binders (the modules Becoming.Decidedness and Becoming.Listing)"
+  },
+  "kind": "local hypothesis",
+  "lean": [
+   "Becoming.Listing"
+  ],
+  "holds_in": [
+   "Becoming.Decided.exists_below"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/08-METHOD.md#premise-card",
+  "seeded_from": [
+   "K3",
+   "08 card"
+  ]
+ },
+ {
+  "id": "k3-a-supplied-law-of-exchange",
+  "name": {
+   "en": "a supplied law of exchange"
+  },
+  "statement": {
+   "en": "what each formation takes from and gives to each condition across a step is read off a level history by a supplied law of exchange; read off one exchange with the rest counted as one relatum, its world's four tying premises hold by the reading"
+  },
+  "kind": "local hypothesis",
+  "lean": [
+   "Becoming.ExchangeLaw",
+   "Becoming.ExchangeLaw.readWorld_glue"
+  ],
+  "holds_in": [
+   "Becoming.ExchangeLaw.contingent"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/08-METHOD.md#supplied-parameters",
+  "seeded_from": [
+   "K3",
+   "08 card"
+  ]
+ },
+ {
+  "id": "k3-the-continuation-condition",
+  "name": {
+   "en": "the continuation condition"
+  },
+  "statement": null,
+  "kind": "local hypothesis",
+  "lean": [
+   "Becoming.Unrestricted"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/08-METHOD.md#premise-card",
+  "seeded_from": [
+   "K3",
+   "08 card"
+  ]
+ },
+ {
+  "id": "k3-living-significance",
+  "name": {
+   "en": "living significance"
+  },
+  "statement": null,
+  "kind": "local hypothesis",
+  "lean": [
+   "Becoming.LivingSignificance"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/08-METHOD.md#premise-card",
+  "seeded_from": [
+   "K3",
+   "08 card"
+  ]
+ },
+ {
+  "id": "k3-c-the-widening-comparison",
+  "name": {
+   "en": "C, a requirement an order may meet"
+  },
+  "statement": null,
+  "kind": "local hypothesis",
+  "lean": [
+   "Becoming.Comparison"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/08-METHOD.md#premise-card",
+  "seeded_from": [
+   "K3",
+   "08 card"
+  ]
+ },
+ {
+  "id": "k3-l-lifting",
+  "name": {
+   "en": "L, lifting"
+  },
+  "statement": null,
+  "kind": "local hypothesis",
+  "lean": [
+   "Becoming.LiftBetter"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/08-METHOD.md#premise-card",
+  "seeded_from": [
+   "K3",
+   "08 card"
+  ]
+ },
+ {
+  "id": "card-discrete-steps",
+  "name": {
+   "en": "discrete steps, one shared index"
+  },
+  "statement": {
+   "en": "activity, levels and exchange indexed by one sequence of natural-number steps"
+  },
+  "kind": "commitment of the representation",
+  "lean": [
+   "Becoming.World",
+   "Becoming.Web",
+   "Becoming.Flow"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/08-METHOD.md#modelling-commitments",
+  "seeded_from": [
+   "08 card"
+  ]
+ },
+ {
+  "id": "card-natural-number-amounts",
+  "name": {
+   "en": "natural-number amounts"
+  },
+  "statement": {
+   "en": "a positive amount is at least one unit"
+  },
+  "kind": "commitment of the representation",
+  "lean": [
+   "Becoming.Web.level",
+   "Becoming.Flow.take",
+   "Becoming.Flow.give"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/08-METHOD.md#modelling-commitments",
+  "seeded_from": [
+   "08 card"
+  ]
+ },
+ {
+  "id": "card-finite-presence",
+  "name": {
+   "en": "finite presence at each step"
+  },
+  "statement": {
+   "en": "the formations taking part in a flow at a step are given as a finite list"
+  },
+  "kind": "commitment of the representation",
+  "lean": [
+   "Becoming.Flow.present"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/08-METHOD.md#modelling-commitments",
+  "seeded_from": [
+   "08 card"
+  ]
+ },
+ {
+  "id": "card-prop-valued-activity",
+  "name": {
+   "en": "prop-valued activity"
+  },
+  "statement": {
+   "en": "activity is a proposition"
+  },
+  "kind": "commitment of the representation",
+  "lean": [
+   "Becoming.Web.active"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/08-METHOD.md#modelling-commitments",
+  "seeded_from": [
+   "08 card"
+  ]
+ },
+ {
+  "id": "card-one-kind-of-relatum",
+  "name": {
+   "en": "one kind of relatum"
+  },
+  "statement": {
+   "en": "formations and conditions are two roles of one relatum"
+  },
+  "kind": "commitment of the representation",
+  "lean": [
+   "Becoming.World.ofRoles"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/08-METHOD.md#modelling-commitments",
+  "seeded_from": [
+   "08 card"
+  ]
+ },
+ {
+  "id": "card-naming-of-relata",
+  "name": {
+   "en": "the naming of relata"
+  },
+  "statement": {
+   "en": "which condition is which relatum is given, not derived"
+  },
+  "kind": "commitment of the representation",
+  "lean": [
+   "Becoming.Web.relabel"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/08-METHOD.md#modelling-commitments",
+  "seeded_from": [
+   "08 card"
+  ]
+ },
+ {
+  "id": "card-requirements-as-thresholds",
+  "name": {
+   "en": "requirements as thresholds"
+  },
+  "statement": {
+   "en": "support is need ≤ level"
+  },
+  "kind": "commitment of the representation",
+  "lean": [
+   "Becoming.Web.requires",
+   "Becoming.Web.need",
+   "Becoming.Web.Supported"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/08-METHOD.md#modelling-commitments",
+  "seeded_from": [
+   "08 card"
+  ]
+ },
+ {
+  "id": "card-identity-by-naming",
+  "name": {
+   "en": "identity by naming"
+  },
+  "statement": {
+   "en": "which formation continues which is named"
+  },
+  "kind": "commitment of the representation",
+  "lean": [
+   "Becoming.Identity"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/08-METHOD.md#modelling-commitments",
+  "seeded_from": [
+   "08 card"
+  ]
+ },
+ {
+  "id": "card-pointwise-statements",
+  "name": {
+   "en": "pointwise statements"
+  },
+  "statement": {
+   "en": "properties of counts respecting their values at each step"
+  },
+  "kind": "commitment of the representation",
+  "lean": [
+   "Becoming.Pointwise"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/08-METHOD.md#modelling-commitments",
+  "seeded_from": [
+   "08 card"
+  ]
+ },
+ {
+  "id": "card-context-free-claims",
+  "name": {
+   "en": "context-free claims (frames)"
+  },
+  "statement": {
+   "en": "what is shown of a claim is independent of what is shown with it"
+  },
+  "kind": "commitment of the representation",
+  "lean": [
+   "Becoming.Context"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/08-METHOD.md#modelling-commitments",
+  "seeded_from": [
+   "08 card"
+  ]
+ },
+ {
+  "id": "card-listed",
+  "name": {
+   "en": "listed"
+  },
+  "statement": {
+   "en": "what holds at each step listed once"
+  },
+  "kind": "local hypothesis",
+  "lean": [
+   "Becoming.Listed",
+   "Becoming.Web.Census",
+   "Becoming.Distinct"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/08-METHOD.md#premise-card",
+  "seeded_from": [
+   "08 card"
+  ]
+ },
+ {
+  "id": "card-process",
+  "name": {
+   "en": "process"
+  },
+  "statement": {
+   "en": "admissible changes"
+  },
+  "kind": "application obligation",
+  "lean": [
+   "Generative.Process"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/08-METHOD.md#premise-card",
+  "seeded_from": [
+   "08 card"
+  ]
+ },
+ {
+  "id": "card-observables",
+  "name": {
+   "en": "observables"
+  },
+  "statement": {
+   "en": "claims realized, levels, dependence and drawing correspond to actual histories"
+  },
+  "kind": "application obligation",
+  "lean": [
+   "Becoming.Frame.realized",
+   "Becoming.Conditions"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/08-METHOD.md#premise-card",
+  "seeded_from": [
+   "08 card"
+  ]
+ },
+ {
+  "id": "card-formation",
+  "name": {
+   "en": "formation"
+  },
+  "statement": {
+   "en": "the lives and relations evaluated form within the unfolding"
+  },
+  "kind": "application obligation",
+  "lean": [],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/08-METHOD.md#premise-card",
+  "seeded_from": [
+   "08 card"
+  ]
+ },
+ {
+  "id": "card-connection",
+  "name": {
+   "en": "connection"
+  },
+  "statement": {
+   "en": "living claims are joined through formed relations"
+  },
+  "kind": "application obligation",
+  "lean": [
+   "Becoming.Valuation.Connected"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/08-METHOD.md#premise-card",
+  "seeded_from": [
+   "08 card"
+  ]
+ },
+ {
+  "id": "card-readings-of-living",
+  "name": {
+   "en": "readings of living"
+  },
+  "statement": {
+   "en": "whole-run, stepwise, relation level"
+  },
+  "kind": "application obligation",
+  "lean": [
+   "Becoming.Conditions.valuation",
+   "Becoming.Web.valuation",
+   "Becoming.Web.relations"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/08-METHOD.md#premise-card",
+  "seeded_from": [
+   "08 card"
+  ]
+ },
+ {
+  "id": "card-held",
+  "name": {
+   "en": "held"
+  },
+  "statement": {
+   "en": "every living claim lies in some standpoint's own region"
+  },
+  "kind": "application obligation",
+  "lean": [
+   "Becoming.Valuation.Held"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/08-METHOD.md#premise-card",
+  "seeded_from": [
+   "08 card"
+  ]
+ },
+ {
+  "id": "capture-carriers",
+  "name": {
+   "en": "carriers leave at least a"
+  },
+  "statement": {
+   "en": "each parent carrying the target leaves at least a offspring among its listed offspring"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.share_not_lower",
+   "Becoming.share_rises",
+   "Becoming.CaptureWorlds.share_rises_of_unsupported"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/target-capture.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "capture-others",
+  "name": {
+   "en": "others leave at most b"
+  },
+  "statement": {
+   "en": "each parent not carrying the target leaves at most b offspring among its listed offspring"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.share_not_lower",
+   "Becoming.share_rises"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/target-capture.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "capture-descend",
+  "name": {
+   "en": "listed offspring descend"
+  },
+  "statement": {
+   "en": "the listed offspring of each parent not carrying the target descend from it across the step (Flow.DescendsAt)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.CaptureWorlds.share_rises_of_unsupported",
+   "Becoming.CaptureWorlds.unsupported_leave_none"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/target-capture.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "capture-unsupported",
+  "name": {
+   "en": "others not supported"
+  },
+  "statement": {
+   "en": "each parent not carrying the target is not supported at the step: it is not the case that every condition it then requires has its need at most its level (¬ Web.Supported); this does not name a condition whose need is above its level"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.CaptureWorlds.share_rises_of_unsupported",
+   "Becoming.CaptureWorlds.unsupported_leave_none"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/target-capture.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "seekingruns-byrule",
+  "name": {
+   "en": "the next configuration by the rule"
+  },
+  "statement": {
+   "en": "the next configuration depends on the rule and not on the state: from any two states under one rule, the law gives the same next configuration"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Law.perturbation_reabsorbed"
+  ],
+  "holds_in": [
+   "Becoming.Captured.byRule"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/target-capture.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "rulecapture-raises",
+  "name": {
+   "en": "Raises"
+  },
+  "statement": {
+   "en": "selection under a favouring rule does not lower the share"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.RuleCapture.Raises"
+  ],
+  "holds_in": [
+   "Becoming.RuleCapture.CarrierCounts.raises",
+   "Becoming.ChoiceCountCapture.choose_raises"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/capture-through-the-rule.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "rulecapture-readsshare",
+  "name": {
+   "en": "ReadsShare, on the rule"
+  },
+  "statement": {
+   "en": "the rule read is a monotone function of the share alone: read at a share not lower, the rule is not lower, whatever rules the two readings meet"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.RuleCapture.ReadsShare"
+  ],
+  "holds_in": [
+   "Becoming.RuleCapture.CarrierCounts.threshold_reads",
+   "Becoming.ChoiceCountCapture.weighted_reads",
+   "Becoming.ClosedCapture.Drawn.pool_reads"
+  ],
+  "fails_in": [
+   "Becoming.DrawnShaping.Against.not_locked"
+  ],
+  "home": "theories/becoming/results/records/capture-through-the-rule.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "rulecapture-upper",
+  "name": {
+   "en": "favouring kept upward, in RuleCapture"
+  },
+  "statement": {
+   "en": "a rule not lower than a favouring rule favours"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.RuleCapture.locked_stays",
+   "Becoming.RuleCapture.perturbation_absorbed"
+  ],
+  "holds_in": [
+   "Becoming.RuleCapture.CarrierCounts.upper"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/capture-through-the-rule.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "closedcapture-upper",
+  "name": {
+   "en": "favouring kept upward, in ClosedCapture"
+  },
+  "statement": {
+   "en": "a rule not lower than a favouring rule favours"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ClosedCapture.lock_outlives_loss",
+   "Becoming.ClosedCapture.reading_absorbed",
+   "Becoming.ClosedCapture.agreeing_stays"
+  ],
+  "holds_in": [
+   "Becoming.RuleCapture.CarrierCounts.upper"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/closed-capture.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "grammarregularity-upper",
+  "name": {
+   "en": "favouring kept upward, in GrammarRegularity"
+  },
+  "statement": {
+   "en": "a rule not lower than a favouring rule favours"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ClosedCapture.lock_line"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/rules-that-change-themselves-in-the-grammar.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "rulecapture-uniform",
+  "name": {
+   "en": "the reading favours at every share"
+  },
+  "statement": {
+   "en": "the rule read favours at every share, whatever rule is in force"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.RuleCapture.uniform_locks",
+   "Becoming.RuleCapture.favouring_locks",
+   "Becoming.RuleCapture.pair_locks"
+  ],
+  "holds_in": [
+   "Becoming.RuleCapture.CarrierCounts.threshold_favours",
+   "Becoming.ClosedCapture.Drawn.pool_favours"
+  ],
+  "fails_in": [
+   "Becoming.RuleCapture.Alternating.never_locked"
+  ],
+  "home": "theories/becoming/results/records/capture-through-the-rule.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "rulecapture-locked",
+  "name": {
+   "en": "Locked"
+  },
+  "statement": {
+   "en": "the configuration is locked: the rule in force favours, and it is not above the rule the reading gives at that share and rule"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.RuleCapture.Locked"
+  ],
+  "holds_in": [
+   "Becoming.RuleCapture.Alternating.before_locked",
+   "Becoming.ClosedCapture.Proportional.start_locked"
+  ],
+  "fails_in": [
+   "Becoming.RuleCapture.Alternating.never_locked"
+  ],
+  "home": "theories/becoming/results/records/capture-through-the-rule.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "closedcapture-unread",
+  "name": {
+   "en": "Unread"
+  },
+  "statement": {
+   "en": "neither the share's next value nor the rule read reads what lies beyond the share: configurations alike in share and rule, whatever lies beyond, give the same next share and the same rule read"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ClosedCapture.Unread"
+  ],
+  "holds_in": [
+   "Becoming.ClosedCapture.join_unread",
+   "Becoming.ClosedCapture.Beyond.closed_locked"
+  ],
+  "fails_in": [
+   "Becoming.ClosedCapture.Beyond.open_reads",
+   "Becoming.ClosedCapture.Thinned.late_reads_loss"
+  ],
+  "home": "theories/becoming/results/records/closed-capture.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "closedcapture-accrues",
+  "name": {
+   "en": "Accrues"
+  },
+  "statement": {
+   "en": "every step adds at least one to what lies beyond the share"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ClosedCapture.Accrues"
+  ],
+  "holds_in": [
+   "Becoming.ClosedCapture.Thinned.lossStep_accrues"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/closed-capture.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "closedcapture-turns",
+  "name": {
+   "en": "a reading that turns past a loss bound, in ClosedCapture"
+  },
+  "statement": {
+   "en": "the rule read favours at no configuration whose loss (what lies beyond the share) is at least N"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ClosedCapture.turned_by_loss"
+  ],
+  "holds_in": [
+   "Becoming.ClosedCapture.Beyond.lossRead_turns"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/closed-capture.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "grammarregularity-turns",
+  "name": {
+   "en": "a reading that turns past a loss bound, in GrammarRegularity"
+  },
+  "statement": {
+   "en": "the rule read favours at no configuration whose loss (what lies beyond the share) is at least N"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ClosedCapture.loss_ends_line"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/rules-that-change-themselves-in-the-grammar.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "closedcapture-readmono",
+  "name": {
+   "en": "the rule read monotonically from the reading and the share"
+  },
+  "statement": {
+   "en": "read at a reading and a share each not lower, the rule read is not lower"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ClosedCapture.both_reads",
+   "Becoming.ClosedCapture.reading_absorbed",
+   "Becoming.ClosedCapture.readers_uniform_locks"
+  ],
+  "holds_in": [
+   "Becoming.ClosedCapture.Proportional.readMono"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/closed-capture.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "closedcapture-readsshare",
+  "name": {
+   "en": "ReadsShare, on the reading (mind)"
+  },
+  "statement": {
+   "en": "how the rule is read is itself a monotone function of the share alone: ReadsShare applied to the reading mind, not to the rule"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.RuleCapture.ReadsShare"
+  ],
+  "holds_in": [
+   "Becoming.ClosedCapture.Proportional.formed"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/closed-capture.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "closedcapture-uniform",
+  "name": {
+   "en": "the rule read favours at every reading and share"
+  },
+  "statement": {
+   "en": "the rule read through any reading favours at every share, whatever rule is in force"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ClosedCapture.readers_uniform_locks"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/closed-capture.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "closedcapture-drawn-pool",
+  "name": {
+   "en": "the pool of readers"
+  },
+  "statement": {
+   "en": "the rule read is the pool of its readers' readings: each carrier among the readers reads the rule as u and each other as v, and the rule read gives each kind the sum of the two readings, each counted as the population counts its readers"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ClosedCapture.Drawn.pool"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/readers-drawn-from-the-selected.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "closedcapture-drawn-readers",
+  "name": {
+   "en": "readers, each kind for its own"
+  },
+  "statement": {
+   "en": "each carrier's reading favours the carriers at least as much as each other's (order.le v u)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ClosedCapture.Drawn.pool_through",
+   "Becoming.ClosedCapture.Drawn.through_locks"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/readers-drawn-from-the-selected.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "closedcapture-drawn-readers-against",
+  "name": {
+   "en": "readers, against"
+  },
+  "statement": {
+   "en": "each carrier's reading favours the carriers at most as much as each other's (order.le u v)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ClosedCapture.Drawn.pool_against"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/readers-drawn-from-the-selected.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "closedcapture-drawn-formed",
+  "name": {
+   "en": "who reads formed from the share"
+  },
+  "statement": {
+   "en": "who reads is formed monotonically from the share: at a share not lower, mind gives a count not lower"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ClosedCapture.Drawn.pool_through",
+   "Becoming.ClosedCapture.Drawn.through_locks"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/readers-drawn-from-the-selected.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "closedcapture-drawn-fu",
+  "name": {
+   "en": "the carriers' reading favours the carriers"
+  },
+  "statement": {
+   "en": "the reading u of each carrier among the readers favours the carriers"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ClosedCapture.Drawn.through_locks"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/readers-drawn-from-the-selected.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "closedcapture-drawn-fv",
+  "name": {
+   "en": "the others' reading favours the carriers"
+  },
+  "statement": {
+   "en": "the reading v of each other among the readers favours the carriers"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ClosedCapture.Drawn.through_locks"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/readers-drawn-from-the-selected.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "rulecapture-carriercounts-select",
+  "name": {
+   "en": "selection on listed counts"
+  },
+  "statement": {
+   "en": "selection by a rule on counts: each carrier leaves the rule's count for carriers and each other its count for the others, offspring counted as their parent's kind; the counts are multiplied, not drawn"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.RuleCapture.CarrierCounts.select"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/capture-through-the-rule.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "closedcapture-drawn-mirror",
+  "name": {
+   "en": "a mirrored reading"
+  },
+  "statement": {
+   "en": "the others' reading w is the carriers' reading u mirrored: w gives the carriers what u gives the others, and the others what u gives the carriers"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ClosedCapture.Drawn.mirror_favours_iff",
+   "Becoming.ClosedCapture.Drawn.mirror_disfavours_iff",
+   "Becoming.ClosedCapture.Thinned.kept_iff",
+   "Becoming.ClosedCapture.Thinned.turned_iff"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/readers-drawn-from-the-selected.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "closedcapture-drawn-strict",
+  "name": {
+   "en": "the carriers' reading favours them strictly"
+  },
+  "statement": {
+   "en": "the carriers' reading u gives each carrier more offspring than each other (u.other < u.carrier)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ClosedCapture.Drawn.mirror_favours_iff",
+   "Becoming.ClosedCapture.Drawn.mirror_disfavours_iff",
+   "Becoming.ClosedCapture.Thinned.kept_iff",
+   "Becoming.ClosedCapture.Thinned.turned_iff"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/readers-drawn-from-the-selected.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "closedcapture-thinned-losspool",
+  "name": {
+   "en": "the loss read by the others alone"
+  },
+  "statement": {
+   "en": "the carriers among the readers read the rule as u whatever the loss; the others read it as v while the loss is below N and as w from then on"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ClosedCapture.Thinned.lossPool"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/readers-drawn-from-the-selected.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "closedcapture-thinned-readers",
+  "name": {
+   "en": "the late reading not above the carriers'"
+  },
+  "statement": {
+   "en": "the others' late reading favours the carriers at most as much as the carriers' reading (order.le w u)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ClosedCapture.Thinned.read_late_kept"
+  ],
+  "holds_in": [
+   "Becoming.ClosedCapture.Thinned.late_kept"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/readers-drawn-from-the-selected.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "ruleshaping-shaped",
+  "name": {
+   "en": "the rule after shaping"
+  },
+  "statement": {
+   "en": "each shaper leaves a + s + p offspring and each other a + c + p: a what each leaves without shaping, positive; s the part that comes back to the shapers alone; p the part that comes to every member alike; c the cost of shaping"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.RuleShaping.shaped"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "ruleshaping-byback",
+  "name": {
+   "en": "what comes back read from the share"
+  },
+  "statement": {
+   "en": "at a reading step the rule read is the rule after shaping with what comes back to the shapers alone given by a function σ of the share"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.RuleShaping.byBack"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "ruleshaping-mono",
+  "name": {
+   "en": "what comes back monotone in the share"
+  },
+  "statement": {
+   "en": "what comes back to the shapers alone is read monotonically from the share: at a share not lower, σ is not lower"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.RuleShaping.covering_locks"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "ruleshaping-covers",
+  "name": {
+   "en": "what comes back covers the cost"
+  },
+  "statement": {
+   "en": "at every share, what comes back to the shapers alone is at least the cost (c ≤ σ x)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.RuleShaping.covering_locks"
+  ],
+  "holds_in": [],
+  "fails_in": [
+   "Becoming.RuleShaping.nothing_back_falls"
+  ],
+  "home": "theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "ruleshaping-thresholdback",
+  "name": {
+   "en": "what comes back at a threshold"
+  },
+  "statement": {
+   "en": "what comes back is hi where the shapers are at least as many as the others and lo where they are fewer"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.RuleShaping.thresholdBack"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "ruleshaping-step",
+  "name": {
+   "en": "what comes back below not above what comes back above"
+  },
+  "statement": {
+   "en": "what comes back below the threshold is not above what comes back above it (lo ≤ hi)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.RuleShaping.threshold_rises",
+   "Becoming.RuleShaping.threshold_falls"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "ruleshaping-grouped",
+  "name": {
+   "en": "Grouped"
+  },
+  "statement": {
+   "en": "listed as groups, each member shaping (one) or not (none): in each group each shaper leaves the shapers' count of the rule after shaping and each other the others' count, the shared part being q for each shaper in the group"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.RuleShaping.Grouped"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/shaping-selected-among-groups.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "ruleshaping-equal",
+  "name": {
+   "en": "groups of equal size"
+  },
+  "statement": {
+   "en": "every group has m members"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.RuleShaping.grouped_rises_iff",
+   "Becoming.RuleShaping.grouped_alike_iff"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/shaping-selected-among-groups.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "ruleshaping-alike",
+  "name": {
+   "en": "groups alike in shapers"
+  },
+  "statement": {
+   "en": "every group holds the same number d of shapers"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.RuleShaping.grouped_alike_iff"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/shaping-selected-among-groups.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "drawnshaping-step",
+  "name": {
+   "en": "each kind of reader for its own, in DrawnShaping"
+  },
+  "statement": {
+   "en": "the shapers among the readers read at least as much coming back to the shapers as the others among them do (lo ≤ hi)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.DrawnShaping.critical_mass_iff",
+   "Becoming.DrawnShaping.drawn_locks",
+   "Becoming.DrawnShaping.drawn_from_below",
+   "Becoming.DrawnShaping.drawn_locked_either",
+   "Becoming.DrawnShaping.drawn_rises",
+   "Becoming.DrawnShaping.drawn_falls"
+  ],
+  "holds_in": [
+   "Becoming.DrawnShaping.CriticalMass.even_locks"
+  ],
+  "fails_in": [
+   "Becoming.DrawnShaping.Against.not_locked"
+  ],
+  "home": "theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "drawnreplacement-step",
+  "name": {
+   "en": "each kind of reader for its own, in DrawnReplacement"
+  },
+  "statement": {
+   "en": "lo ≤ hi for the readings behind the chain's weights, so that the shapers' weight does not fall as their count grows"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.DrawnReplacement.fixation",
+   "Becoming.DrawnReplacement.lost_above",
+   "Becoming.DrawnReplacement.fixed_below"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/drawn-shaping-drawn-one-at-a-time.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "readintime-step",
+  "name": {
+   "en": "each kind of reader for its own, in ReadInTime"
+  },
+  "statement": {
+   "en": "the shapers among the readers read at least as much coming back to the shapers as the others among them read before the loss reaches its bound (lo ≤ hi)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ReadInTime.late_never_falls",
+   "Becoming.ReadInTime.kept_early_iff",
+   "Becoming.ReadInTime.turned_early_iff",
+   "Becoming.ReadInTime.in_time_earlier",
+   "Becoming.ReadInTime.at_most_one_between",
+   "Becoming.ReadInTime.kept_once_favoured",
+   "Becoming.ReadInTime.deadline"
+  ],
+  "holds_in": [
+   "Becoming.ReadInTime.Window.between"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/loss-read-in-time-by-the-others.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "drawnshaping-readers",
+  "name": {
+   "en": "readers against"
+  },
+  "statement": {
+   "en": "the shapers among the readers read at most as much coming back to the shapers as the others among them do (hi ≤ lo)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.DrawnShaping.drawn_against"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "drift-replacement-valueby",
+  "name": {
+   "en": "replacement one member at a time"
+  },
+  "statement": {
+   "en": "among M + 1 members, i of the first kind: from a mixed population a step moves the count up with weight u i, down with d i and leaves it with e i, and a population of one kind stays with weight T; valueBy totals a reading of the count after k steps, each history weighed by its steps (in DrawnReplacement u, d and e are the counts of the rule read at the count)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Drift.Replacement.valueBy"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/drawn-shaping-drawn-one-at-a-time.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "readintime-readers",
+  "name": {
+   "en": "the late reading not above the shapers'"
+  },
+  "statement": {
+   "en": "the others' late reading reads at most as much coming back to the shapers as the shapers' reading does (lo' ≤ hi)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ReadInTime.kept_iff",
+   "Becoming.ReadInTime.turned_iff",
+   "Becoming.ReadInTime.late_never_falls",
+   "Becoming.ReadInTime.kept_early_iff",
+   "Becoming.ReadInTime.turned_early_iff",
+   "Becoming.ReadInTime.in_time_earlier",
+   "Becoming.ReadInTime.kept_next_round_iff",
+   "Becoming.ReadInTime.kept_once_favoured",
+   "Becoming.ReadInTime.deadline"
+  ],
+  "holds_in": [
+   "Becoming.ReadInTime.Window.in_time"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/loss-read-in-time-by-the-others.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "identificationruns-valuesthrough",
+  "name": {
+   "en": "ValuesThrough"
+  },
+  "statement": {
+   "en": "value reads what couples into g: at each step two levels take one value exactly where they admit g alike and the conditions coupled into g by level stand alike"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Web.ValuesThrough"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/capture-by-counted-choices.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "choicecountcapture-choose",
+  "name": {
+   "en": "a choice by the rule"
+  },
+  "statement": {
+   "en": "the chooser takes the first policy where its rule weighs it at least as much as the second, and the first policy's count rises by one; elsewhere the second policy's count rises by one"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ChoiceCountCapture.choose"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/capture-by-counted-choices.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "choicecountcapture-weighted",
+  "name": {
+   "en": "a standing score"
+  },
+  "statement": {
+   "en": "the rule read from the counts weighs each count by what a standing score gives its policy (κc the first, κo the second, κo positive); the rule in force is not read"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ChoiceCountCapture.weighted"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/capture-by-counted-choices.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "choicecountcapture-in-sync-start",
+  "name": {
+   "en": "the in-sync start"
+  },
+  "statement": {
+   "en": "the rule in force at the start is the rule read from the start's counts: the course starts at (x, weighted κc κo pos x x)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ChoiceCountCapture.counted_locks",
+   "Becoming.ChoiceCountCapture.counted_chooses",
+   "Becoming.ChoiceCountCapture.counted_locks_down",
+   "Becoming.ChoiceCountCapture.counted_outlives_loss"
+  ],
+  "holds_in": [],
+  "fails_in": [
+   "Becoming.ChoiceCountCapture.Witness.Stale.above_but_stale_locks_down",
+   "Becoming.ChoiceCountCapture.Witness.Stale.devalued_read_late_locks_up"
+  ],
+  "home": "theories/becoming/results/records/capture-by-counted-choices.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "choicecountcapture-byscore",
+  "name": {
+   "en": "counting the posterior at a fixed scale"
+  },
+  "statement": {
+   "en": "selection by ⟨s + κc, s + κo⟩: the counts scaled by s with the posterior's weights added, the scale s fixed along the course"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ChoiceCountCapture.byScore"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/capture-by-counted-choices.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "sharedcodes-always",
+  "name": {
+   "en": "hearings that take the form heard"
+  },
+  "statement": {
+   "en": "in every hearing the hearer takes the speaker's form for the sense heard"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.SharedCodes.always"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-code-formed-between-formations.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "sharedcodes-agreeat",
+  "name": {
+   "en": "AgreeAt"
+  },
+  "statement": {
+   "en": "the formations of the group give the sense m one form"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.SharedCodes.AgreeAt"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-code-formed-between-formations.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "sharedcodes-closed",
+  "name": {
+   "en": "hearings closed for a group"
+  },
+  "statement": {
+   "en": "a hearing is closed for the group at m: where a member hears m, the speaker is a member"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.SharedCodes.Closed"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-code-formed-between-formations.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "sharedcodes-apart",
+  "name": {
+   "en": "two forms that differ"
+  },
+  "statement": {
+   "en": "there are two different forms (a ≠ b)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.SharedCodes.agrees_every_start_iff",
+   "Becoming.SharedCodes.run_agrees_every_start_iff"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-code-formed-between-formations.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "sharedcodes-every",
+  "name": {
+   "en": "a list of every formation"
+  },
+  "statement": {
+   "en": "a list holds every formation"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.SharedCodes.shared_iff_in_use",
+   "Becoming.SharedCodes.coined_returns"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-code-formed-between-formations.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "sharedcodes-keepsexchange",
+  "name": {
+   "en": "KeepsExchange"
+  },
+  "statement": {
+   "en": "the law of codes keeps the exchange of formations by π: it privileges none of the formations π exchanges"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.SharedCodes.KeepsExchange"
+  ],
+  "holds_in": [
+   "Becoming.SharedCodes.impose_keeps_exchange",
+   "Becoming.SharedCodes.TwoFormations.preferred_keeps_exchange"
+  ],
+  "fails_in": [
+   "Becoming.SharedCodes.TwoFormations.centre_breaks_exchange",
+   "Becoming.SharedCodes.TwoFormations.ordered_breaks_exchange"
+  ],
+  "home": "theories/becoming/results/records/a-code-formed-between-formations.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "sharedcodes-keepsrenaming",
+  "name": {
+   "en": "KeepsRenaming"
+  },
+  "statement": {
+   "en": "the law of codes keeps the renaming of forms by τ: it privileges none of the forms τ exchanges"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.SharedCodes.KeepsRenaming"
+  ],
+  "holds_in": [
+   "Becoming.SharedCodes.hear_keeps_renaming",
+   "Becoming.SharedCodes.TwoFormations.centre_keeps_renaming",
+   "Becoming.SharedCodes.TwoFormations.ordered_keeps_renaming"
+  ],
+  "fails_in": [
+   "Becoming.SharedCodes.TwoFormations.preferred_breaks_renaming",
+   "Becoming.SharedCodes.impose_privileges_forms"
+  ],
+  "home": "theories/becoming/results/records/a-code-formed-between-formations.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "sharedcodes-relabels",
+  "name": {
+   "en": "a symmetric start"
+  },
+  "statement": {
+   "en": "the start relabelled by the exchange of formations π together with the renaming of forms τ is itself"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.SharedCodes.Relabels"
+  ],
+  "holds_in": [
+   "Becoming.SharedCodes.TwoFormations.start_symmetric"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-code-formed-between-formations.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "sharedcodes-moves",
+  "name": {
+   "en": "the renaming moves every form"
+  },
+  "statement": {
+   "en": "the renaming τ moves every form at the sense m"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.SharedCodes.never_agrees_of_both"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-code-formed-between-formations.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "sharedcodes-writesexactly",
+  "name": {
+   "en": "records written exactly"
+  },
+  "statement": {
+   "en": "the record written of e bears on the form, offers e and offers nothing else"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.SharedCodes.WritesExactly"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-code-formed-between-formations.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "countedcodes-keepsrelation",
+  "name": {
+   "en": "a law keeping the exchange with the renaming"
+  },
+  "statement": {
+   "en": "the law keeps the exchange of agents by π together with the renaming of words by σ, count by count"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Law.KeepsRelation applied to Becoming.CountedCodes.Renamed"
+  ],
+  "holds_in": [
+   "Becoming.CountedCodes.addSpeaker_keeps"
+  ],
+  "fails_in": [
+   "Becoming.CountedCodes.Witness.sayFirst_shared"
+  ],
+  "home": "theories/becoming/results/records/a-code-held-as-counts.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "countedcodes-renamed",
+  "name": {
+   "en": "a start related to itself"
+  },
+  "statement": {
+   "en": "exchanged by π and renamed by σ, count by count, the start is itself"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.CountedCodes.Renamed"
+  ],
+  "holds_in": [
+   "Becoming.CountedCodes.Witness.zero_symmetric",
+   "Becoming.CountedCodes.Witness.opposite_symmetric"
+  ],
+  "fails_in": [
+   "Becoming.CountedCodes.Witness.lead_not_symmetric"
+  ],
+  "home": "theories/becoming/results/records/a-code-held-as-counts.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "countedcodes-irrefl",
+  "name": {
+   "en": "counts irreflexive"
+  },
+  "statement": {
+   "en": "the order of counts is irreflexive"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.CountedCodes.never_shared",
+   "Becoming.CountedCodes.never_shared_of_involution",
+   "Becoming.CountedCodes.shared_no_unique_greatest"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-code-held-as-counts.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "countedcodes-trans",
+  "name": {
+   "en": "counts transitive"
+  },
+  "statement": {
+   "en": "the order of counts is transitive"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.CountedCodes.never_shared",
+   "Becoming.CountedCodes.never_shared_of_involution"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-code-held-as-counts.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "countedcodes-onto",
+  "name": {
+   "en": "the renaming onto"
+  },
+  "statement": {
+   "en": "the renaming of words at the meaning is onto"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.CountedCodes.unique_greatest_exchanged_run",
+   "Becoming.CountedCodes.never_shared"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-code-held-as-counts.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "countedcodes-moves",
+  "name": {
+   "en": "the renaming moves every word"
+  },
+  "statement": {
+   "en": "the renaming moves every word: at the meaning m, or, in the free-energy laws, on the listed words"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.CountedCodes.never_shared",
+   "Becoming.CountedCodes.never_shared_of_involution",
+   "Becoming.CountedCodes.shared_no_unique_greatest",
+   "Becoming.CountedCodes.addSpeaker_tied",
+   "Becoming.CountedCodes.minimizer_no_unique_greatest",
+   "Becoming.CountedCodes.shared_minimizer_no_unique_greatest"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-code-held-as-counts.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "countedcodes-involution",
+  "name": {
+   "en": "the exchange an involution"
+  },
+  "statement": {
+   "en": "exchanging the agents twice gives each agent back (π (π i) = i)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.CountedCodes.never_shared_of_involution",
+   "Becoming.CountedCodes.addSpeaker_tied"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-code-held-as-counts.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "countedcodes-involution-speaker",
+  "name": {
+   "en": "two agents hearing each other"
+  },
+  "statement": {
+   "en": "the speaker map p is an involution: each agent hears the agent that hears it"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.CountedCodes.addSpeaker_shares"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-code-held-as-counts.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "countedcodes-commutes",
+  "name": {
+   "en": "the speaker map commutes with the exchange"
+  },
+  "statement": {
+   "en": "the agent an exchanged agent hears is the exchange of the agent it hears (p (π i) = π (p i))"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.CountedCodes.hear_keeps",
+   "Becoming.CountedCodes.addHeard_keeps",
+   "Becoming.CountedCodes.gatedHear_keeps"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-code-held-as-counts.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "countedcodes-readscountbycount",
+  "name": {
+   "en": "ReadsCountByCount"
+  },
+  "statement": {
+   "en": "the rule reads counts count by count: counts that agree at every word give one result"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.CountedCodes.ReadsCountByCount"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-code-held-as-counts.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "countedcodes-commuteswithrenaming",
+  "name": {
+   "en": "CommutesWithRenaming"
+  },
+  "statement": {
+   "en": "the rule commutes with renaming the words"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.CountedCodes.CommutesWithRenaming"
+  ],
+  "holds_in": [],
+  "fails_in": [
+   "Becoming.CountedCodes.Witness.sayFirst_not_alike"
+  ],
+  "home": "theories/becoming/results/records/a-code-held-as-counts.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "countedcodes-reads",
+  "name": {
+   "en": "what is heard read count by count"
+  },
+  "statement": {
+   "en": "what is heard reads the speaker's counts count by count"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.CountedCodes.addHeard_keeps",
+   "Becoming.CountedCodes.gatedHear_keeps"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-code-held-as-counts.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "countedcodes-alike",
+  "name": {
+   "en": "what is heard commutes with renaming"
+  },
+  "statement": {
+   "en": "what is heard of renamed counts, at a word, is what is heard of the counts at the renamed word"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.CountedCodes.addHeard_keeps",
+   "Becoming.CountedCodes.gatedHear_keeps"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-code-held-as-counts.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "countedcodes-invariant",
+  "name": {
+   "en": "a gate unchanged by the renaming"
+  },
+  "statement": {
+   "en": "the gate, read off the hearer's whole model, is unchanged by the renaming"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.CountedCodes.gatedHear_keeps"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-code-held-as-counts.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "countedcodes-every",
+  "name": {
+   "en": "a listing of every word"
+  },
+  "statement": {
+   "en": "the listing holds every word"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.CountedCodes.minimizer_no_unique_greatest",
+   "Becoming.CountedCodes.shared_minimizer_no_unique_greatest"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-code-held-as-counts.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "countedcodes-fixed",
+  "name": {
+   "en": "weights the renaming fixes"
+  },
+  "statement": {
+   "en": "the weights are unchanged by the renaming"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.CountedCodes.minimizer_no_unique_greatest"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-code-held-as-counts.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "countedcodes-permutes",
+  "name": {
+   "en": "the renaming permutes the listing"
+  },
+  "statement": {
+   "en": "the renaming permutes the listing of words"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.CountedCodes.bound_invariant"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-code-held-as-counts.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "countedcodes-positive",
+  "name": {
+   "en": "a positive total weight"
+  },
+  "statement": {
+   "en": "the weights have a positive total"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.CountedCodes.minimizer_no_unique_greatest",
+   "Becoming.CountedCodes.shared_minimizer_no_unique_greatest"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-code-held-as-counts.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "rulecapture-against",
+  "name": {
+   "en": "a reading against the share"
+  },
+  "statement": {
+   "en": "the rule is read against the share: read at a share not lower, the rule is not higher (ReadsShare with the rule order reversed)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.RuleCapture.ReadsShare"
+  ],
+  "holds_in": [
+   "Becoming.ClosedCapture.Drawn.pool_against",
+   "Becoming.DrawnShaping.drawn_against"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-reading-against-the-share-does-not-ratchet.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "rulecapture-favouring",
+  "name": {
+   "en": "rules favouring along the course"
+  },
+  "statement": {
+   "en": "the rule in force favours at every step of the course"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.RuleCapture.share_kept_along",
+   "Becoming.RuleCapture.against_not_rising"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-reading-against-the-share-does-not-ratchet.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "seeking-morethannow",
+  "name": {
+   "en": "MoreThanNow"
+  },
+  "statement": {
+   "en": "the quantity q rises across the step from n along g: q (g n) < q (g (n + 1)); a target of more than now is met there"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.MoreThanNow"
+  ],
+  "holds_in": [
+   "Becoming.succ_more"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/seeking-boundary.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "seeking-aboveall",
+  "name": {
+   "en": "AboveAll"
+  },
+  "statement": {
+   "en": "seeker i stands above all others at s: every other seeker's quantity there is below its own"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.AboveAll"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/seeking-boundary.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "seeking-rises-recur",
+  "name": {
+   "en": "rises at arbitrarily late steps"
+  },
+  "statement": {
+   "en": "the condition c rises at arbitrarily late steps: for every N there is a step t ≥ N across which its level rises"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Flow.more_needs_unrun"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/seeking-boundary.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "locality-runsdown",
+  "name": {
+   "en": "RunsDown"
+  },
+  "statement": {
+   "en": "across the step from t what stands runs down: some family without repetition holds whatever stands before or after the step, and the flow balances and dissipates on it"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Flow.RunsDown",
+   "Becoming.Flow.RunsDownOn"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/seeking-boundary.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "admission-withheldlevels",
+  "name": {
+   "en": "WithheldLevels"
+  },
+  "statement": {
+   "en": "l are the levels without the part: they start at the web's levels and change across every step by what the flow with the part withheld takes and gives"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Flow.WithheldLevels"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/selection-through-couplings.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "testing-withincoupling",
+  "name": {
+   "en": "WithinCoupling"
+  },
+  "statement": {
+   "en": "g lies within f's coupling closure: the closure under being affected through what couples in"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Flow.WithinCoupling"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/selection-through-couplings.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "selection-selectsthrough",
+  "name": {
+   "en": "SelectsThrough"
+  },
+  "statement": {
+   "en": "a selection is through f's couplings up to t: level histories alike through f's couplings up to t are selected alike"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Web.SelectsThrough"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/selection-through-couplings.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "readingloop-breaks",
+  "name": {
+   "en": "breaks"
+  },
+  "statement": {
+   "en": "at each step (before the horizon N in alike_within), where the second world's answer to the first course's act at its value sensed differs from the first world's, that answer breaks the task K"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ReadingLoop.alike_within",
+   "Becoming.ReadingLoop.alike_of_kept"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/what-a-course-chosen-through-its-model-does-not-test.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "readingloop-kept",
+  "name": {
+   "en": "kept"
+  },
+  "statement": {
+   "en": "the task K holds of every value the formation senses in the second world from step one on (through N in alike_within)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ReadingLoop.alike_within",
+   "Becoming.ReadingLoop.alike_of_kept"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/what-a-course-chosen-through-its-model-does-not-test.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "readingloop-faithful",
+  "name": {
+   "en": "faithful in a kept region"
+  },
+  "statement": {
+   "en": "the world's moves keep a region Q, and a listed candidate predicts as the world answers wherever the world lies in Q"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ReadingLoop.Loop.faithful_kept"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/what-a-course-chosen-through-its-model-does-not-test.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "readingloop-unrefuted",
+  "name": {
+   "en": "unrefuted"
+  },
+  "statement": {
+   "en": "every listed candidate predicts, at the value sensed and the act chosen, the answer the world gives there"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ReadingLoop.Loop.rests_of_unrefuted"
+  ],
+  "holds_in": [
+   "Becoming.HeldForReading.SignLoop.rests_unread"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/what-a-course-chosen-through-its-model-does-not-test.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "readingloop-start-fixed",
+  "name": {
+   "en": "answered, stays, chosen"
+  },
+  "statement": {
+   "en": "at the start the formation chooses the start's act from the candidates listed, the world answers that act with the value sensed, and the world's move leaves it as it is"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ReadingLoop.Loop.rests_of_unrefuted"
+  ],
+  "holds_in": [
+   "Becoming.ReadingLoop.Untested.rests",
+   "Becoming.ReadingLoop.Untested.order_rests",
+   "Becoming.HeldForReading.SignLoop.rests_unread"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/what-a-course-chosen-through-its-model-does-not-test.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "readingloop-predict-alike",
+  "name": {
+   "en": "listed, alike"
+  },
+  "statement": {
+   "en": "two candidates are both listed or neither, and predict alike, at the value sensed and the act taken, at every step of the course before n"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ReadingLoop.Loop.kept_alike"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/what-a-course-chosen-through-its-model-does-not-test.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "readingloop-world-stays",
+  "name": {
+   "en": "the world stays"
+  },
+  "statement": {
+   "en": "the world does not move: the blanketed law's external step leaves the world as it is"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ReadingLoop.Untested.floor_forgoes",
+   "Becoming.ReadingLoop.Untested.floor_never_high"
+  ],
+  "holds_in": [
+   "Becoming.ReadingLoop.Untested.loop"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/what-a-course-chosen-through-its-model-does-not-test.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "readingloop-reply-sensed",
+  "name": {
+   "en": "sensed by the witness's answer"
+  },
+  "statement": {
+   "en": "the blanketed law senses the witness's answer: the known act answers the middle value in both worlds, the untried act the high value in the first world and the low value in the second"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ReadingLoop.Untested.floor_forgoes",
+   "Becoming.ReadingLoop.Untested.floor_never_high"
+  ],
+  "holds_in": [
+   "Becoming.ReadingLoop.Untested.loop"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/what-a-course-chosen-through-its-model-does-not-test.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "readingloop-floor",
+  "name": {
+   "en": "floor"
+  },
+  "statement": {
+   "en": "the formation never senses the low value in the second world (down)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ReadingLoop.Untested.floor_forgoes",
+   "Becoming.ReadingLoop.Untested.floor_never_high"
+  ],
+  "holds_in": [
+   "Becoming.ReadingLoop.Untested.rests"
+  ],
+  "fails_in": [
+   "Becoming.ReadingLoop.Untested.explorer_low_once"
+  ],
+  "home": "theories/becoming/results/records/what-a-course-chosen-through-its-model-does-not-test.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "readingloop-relation-kept",
+  "name": {
+   "en": "steps, observed"
+  },
+  "statement": {
+   "en": "a relation between the configurations of two blanketed laws that both steps keep, under which the values sensed and the acts are one"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ReadingLoop.observed_alike"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/acts-alike-from-a-model-or-from-an-order.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "lumpedseeking-tied",
+  "name": {
+   "en": "Tied"
+  },
+  "statement": {
+   "en": "a likelihood ties two hypotheses: its weights on them agree at every value of the record"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.LumpedSeeking.Tied"
+  ],
+  "holds_in": [
+   "Becoming.LumpedSeeking.Agree.ties"
+  ],
+  "fails_in": [
+   "Becoming.LumpedSeeking.Agree.readBoth"
+  ],
+  "home": "theories/becoming/results/records/what-seeking-cannot-separate.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "lumpedseeking-weighs",
+  "name": {
+   "en": "weighs, in LumpedSeeking"
+  },
+  "statement": {
+   "en": "the record weighs something under the pair: its mass under the first hypothesis's likelihood is positive"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.LumpedSeeking.posterior_le_iff_prior",
+   "Becoming.LumpedSeeking.order_kept",
+   "Becoming.LumpedSeeking.seeking_keeps_order"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/what-seeking-cannot-separate.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "expectedfreeenergyreals-weighs",
+  "name": {
+   "en": "weighs, in ExpectedFreeEnergyReals"
+  },
+  "statement": {
+   "en": "the record of courses weighs something under the first hypothesis where each experiment is chosen by a rule reading expected free energies: its mass under h₁'s seeking weight under efeChoice is positive"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ExpectedFreeEnergy.efe_seeking_keeps_order"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/expected-free-energy-and-its-terms.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "heldforreading-all-predict-gain",
+  "name": {
+   "en": "all predict a gain"
+  },
+  "statement": {
+   "en": "every candidate the listing holds predicts that going on gains"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.HeldForReading.SignLoop.rests_unread",
+   "Becoming.HeldForReading.SignLoop.never_senses_stop"
+  ],
+  "holds_in": [
+   "Becoming.HeldForReading.SignLoop.refuted_senses_stop"
+  ],
+  "fails_in": [
+   "Becoming.HeldForReading.SignLoop.both_off"
+  ],
+  "home": "theories/becoming/results/records/what-holding-for-a-reading-is-worth.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "reflexiveprediction-moves",
+  "name": {
+   "en": "the response moves every value"
+  },
+  "statement": {
+   "en": "the response moves every value: r v ≠ v for every v"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ReflexivePrediction.none_right_of_moves",
+   "Becoming.ReflexivePrediction.no_predictor_right"
+  ],
+  "holds_in": [
+   "Becoming.ReflexivePrediction.Negating.negate",
+   "Becoming.ListTests.not_ne_self"
+  ],
+  "fails_in": [
+   "Becoming.ReflexivePrediction.Reflecting.middle_right"
+  ],
+  "home": "theories/becoming/results/records/a-prediction-read-by-what-it-predicts.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "keeping-choiceover",
+  "name": {
+   "en": "Viability.ChoiceOver"
+  },
+  "statement": {
+   "en": "choice over O into α: every relation giving each value in O something in α is met by one function"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Viability.ChoiceOver"
+  ],
+  "holds_in": [
+   "Becoming.Viability.choiceOver_fin"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-reading-kept-by-its-update.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "reflexiveprediction-right",
+  "name": {
+   "en": "Right"
+  },
+  "statement": {
+   "en": "a published prediction p is right for the response r: r p = p"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ReflexivePrediction.Right"
+  ],
+  "holds_in": [
+   "Becoming.ReflexivePrediction.Reflecting.middle_right"
+  ],
+  "fails_in": [
+   "Becoming.ReflexivePrediction.Negating.none_right"
+  ],
+  "home": "theories/becoming/results/records/a-prediction-read-by-what-it-predicts.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "reflexiveprediction-within",
+  "name": {
+   "en": "within"
+  },
+  "statement": {
+   "en": "the response maps the chain 0 to n into itself"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ReflexivePrediction.on_chain",
+   "Becoming.ReflexivePrediction.rises",
+   "Becoming.ReflexivePrediction.bottom_rests"
+  ],
+  "holds_in": [
+   "Becoming.ReflexivePrediction.ThresholdResponse.within"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-prediction-read-by-what-it-predicts.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "reflexiveprediction-keeps",
+  "name": {
+   "en": "keeps"
+  },
+  "statement": {
+   "en": "the response keeps the order on the chain 0 to n"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ReflexivePrediction.rises",
+   "Becoming.ReflexivePrediction.below_right",
+   "Becoming.ReflexivePrediction.bottom_rests"
+  ],
+  "holds_in": [
+   "Becoming.ReflexivePrediction.ThresholdResponse.keeps"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-prediction-read-by-what-it-predicts.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "runaway-present",
+  "name": {
+   "en": "present"
+  },
+  "statement": {
+   "en": "the two flows have the same formations present at every step"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Flow.policy_keeps_difference",
+   "Becoming.Flow.policy_uses_after_failure"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/runaway-distance-uncoupled.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "runaway-policythrough",
+  "name": {
+   "en": "PolicyThrough"
+  },
+  "statement": {
+   "en": "g's policy goes through its couplings: wherever the two flows have been alike through g's couplings up to a step, g takes from and gives to every condition coupled into it alike across that step"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Flow.PolicyThrough"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/runaway-distance-uncoupled.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "runaway-othersfixed",
+  "name": {
+   "en": "OthersFixed"
+  },
+  "statement": {
+   "en": "the rest of the exchange on what couples into g is fixed: every other formation takes from and gives to every condition coupled into g alike in the two flows, at every step"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Flow.OthersFixed"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/runaway-distance-uncoupled.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "feedback-dependson",
+  "name": {
+   "en": "Web.DependsOn"
+  },
+  "statement": {
+   "en": "g depends on c: at some step g requires c"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Web.DependsOn"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/runaway-distance-uncoupled.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "runaway-unobserved",
+  "name": {
+   "en": "unobserved"
+  },
+  "statement": {
+   "en": "the stock c does not couple into g by level (¬ obs g c): it reaches g only through what g requires of it, by threshold"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Flow.policy_keeps_difference",
+   "Becoming.Web.alikeThrough_raise",
+   "Becoming.Web.break_not_bounded"
+  ],
+  "holds_in": [
+   "Becoming.SupportDrawn.break_uncoupled",
+   "Becoming.Attracting.higher_breaks_first"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/runaway-distance-uncoupled.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "runaway-supported",
+  "name": {
+   "en": "supported"
+  },
+  "statement": {
+   "en": "g is supported at the steps the law names, at every step in policy_keeps_difference and at the step t in alikeThrough_raise: every condition g then requires has its need at most its level"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Flow.policy_keeps_difference",
+   "Becoming.Web.alikeThrough_raise"
+  ],
+  "holds_in": [
+   "Becoming.SupportDrawn.break_uncoupled"
+  ],
+  "fails_in": [
+   "Becoming.SupportDrawn.break_uncoupled"
+  ],
+  "home": "theories/becoming/results/records/runaway-distance-uncoupled.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "testing-coupledinto",
+  "name": {
+   "en": "CoupledInto"
+  },
+  "statement": {
+   "en": "c couples into g: g depends on c or observes it by level"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Web.CoupledInto"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/runaway-distance-uncoupled.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "runaway-observed",
+  "name": {
+   "en": "observed"
+  },
+  "statement": {
+   "en": "the stock c couples into g by level (obs g c)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Web.observed_raise_couples"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/runaway-distance-uncoupled.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "runaway-others-met",
+  "name": {
+   "en": "others met"
+  },
+  "statement": {
+   "en": "up to the horizon u, every requirement of g other than c has its need at most its level"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Web.break_not_bounded"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/runaway-distance-uncoupled.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "learning-lumped",
+  "name": {
+   "en": "Learning.Lumped"
+  },
+  "statement": {
+   "en": "g goes alike across what π lumps: inputs π sends alike, g sends alike"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Learning.Lumped"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/the-markov-blanket-as-a-coupling-structure.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "blanket-reads-through-four",
+  "name": {
+   "en": "a reading through step four"
+  },
+  "statement": {
+   "en": "the reading of the internal course reads it only through step 4: two internal courses alike at steps 0 to 4 are read alike"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Blanket.ThresholdDrain.any_model"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/the-markov-blanket-as-a-coupling-structure.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "readingloop-keptby",
+  "name": {
+   "en": "KeptBy"
+  },
+  "statement": {
+   "en": "a reading kept by the update: wherever the state reads the world and the world becomes w' under any act, the state updated by the value then sensed reads w'"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ReadingLoop.KeptBy"
+  ],
+  "holds_in": [
+   "Becoming.ReadingLoop.everything_kept",
+   "Becoming.ReadingLoop.nothing_kept",
+   "Becoming.ReadingLoop.possible_kept"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-reading-kept-by-its-update.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "grammarlaws-bi",
+  "name": {
+   "en": "«闭» (closed)"
+  },
+  "statement": {
+   "en": "a region is closed under a relation: from the region the relation leads only into it"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.«闭»"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-reading-kept-by-its-update.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "readingloop-leadsinto",
+  "name": {
+   "en": "LeadsInto"
+  },
+  "statement": {
+   "en": "every world the state's reading admits becomes, under the act, only worlds where the task K holds"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ReadingLoop.LeadsInto"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-reading-kept-by-its-update.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "counterfactual-nonanticipating",
+  "name": {
+   "en": "ExchangeLaw.Nonanticipating"
+  },
+  "statement": {
+   "en": "the law reads what has stood: across the step from t it reads the level history up to t only"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ExchangeLaw.Nonanticipating"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/what-training-installs.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "training-along",
+  "name": {
+   "en": "along"
+  },
+  "statement": {
+   "en": "two act laws give alike, for each member of the part, along the levels the first generates in every situation (in the exploring form, at the steps the schedule leaves to them)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Training.same_courses_of_along",
+   "Becoming.Training.trained_alike_of_along",
+   "Becoming.Training.explored_same_courses"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/what-training-installs.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "training-reads",
+  "name": {
+   "en": "Training.Reads"
+  },
+  "statement": {
+   "en": "a training reads each candidate through its courses: candidates with the same courses are selected alike"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Training.Reads"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/what-training-installs.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "training-readsthrough",
+  "name": {
+   "en": "Training.ReadsThrough"
+  },
+  "statement": {
+   "en": "an act law reads through a lumping for the part: each member exchanges alike under histories the lumping makes alike up to the step"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Training.ReadsThrough"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/what-training-installs.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "training-samecourses",
+  "name": {
+   "en": "Training.SameCourses"
+  },
+  "statement": {
+   "en": "two executions generate the same courses: in every situation the same levels and the same exchanges, every formation's, at every step"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Training.SameCourses"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/what-training-installs.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "training-lumped-with-course",
+  "name": {
+   "en": "lumped with a course"
+  },
+  "statement": {
+   "en": "the history is lumped, for the member at the step, with the levels of a course the law generates in some situation"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Training.installed_where_lumped"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/what-training-installs.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "training-unlumped",
+  "name": {
+   "en": "off"
+  },
+  "statement": {
+   "en": "for every situation and every member of the part, the history m is not lumped at the step with the levels of the course the act law generates"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Training.free_where_unlumped",
+   "Becoming.Training.response_free_where_unlumped"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/what-training-installs.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "training-improving",
+  "name": {
+   "en": "Training.Improving"
+  },
+  "statement": {
+   "en": "a search step stays or moves to a candidate the reward rewards more"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Training.Improving"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/what-training-installs.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "training-settles",
+  "name": {
+   "en": "Training.Settles"
+  },
+  "statement": {
+   "en": "the reward settles on θ: no candidate is rewarded more"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Training.Settles"
+  ],
+  "holds_in": [
+   "Becoming.Training.Commons.outrun_drawing_settles"
+  ],
+  "fails_in": [
+   "Becoming.Training.Commons.outrun_restraint_unsettled"
+  ],
+  "home": "theories/becoming/results/records/what-training-installs.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "training-reward-bounded",
+  "name": {
+   "en": "bounded"
+  },
+  "statement": {
+   "en": "the reward is at most B at every candidate"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Training.comes_to_rest"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/what-training-installs.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "training-localsearch",
+  "name": {
+   "en": "Training.LocalSearch"
+  },
+  "statement": {
+   "en": "a local search over the neighbourhood relation near: from each candidate it stays or moves to a neighbour the reward rewards more, and it moves wherever some neighbour is rewarded more"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Training.LocalSearch"
+  ],
+  "holds_in": [
+   "Becoming.Training.Commons.outrun_neighbourhood_decides"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/what-training-installs.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "counterfactual-through",
+  "name": {
+   "en": "ExchangeLaw.Through"
+  },
+  "statement": {
+   "en": "the law reads, for each formation outside the part, only what couples into that formation"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ExchangeLaw.Through"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/what-training-installs.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "counterfactual-feasible",
+  "name": {
+   "en": "ExchangeLaw.Feasible"
+  },
+  "statement": {
+   "en": "the law never takes more from a condition than stands on it and is given to it"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ExchangeLaw.Feasible"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/what-training-installs.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "training-agree-on-closure",
+  "name": {
+   "en": "agree on the closure"
+  },
+  "statement": {
+   "en": "the two candidates take and give alike, for each member of the part, on every condition coupled into a member of r's coupling closure drawn through their two courses"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Training.trained_alike_beyond_closure"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/what-training-installs.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "training-trainsthrough",
+  "name": {
+   "en": "Training.TrainsThrough"
+  },
+  "statement": {
+   "en": "a training through r's couplings up to T: candidates whose levels are alike through r's couplings up to T in every situation are selected alike"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Training.TrainsThrough"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/what-training-installs.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "training-gated-renewal",
+  "name": {
+   "en": "gated"
+  },
+  "statement": {
+   "en": "in every candidate's course, whatever present formation gives to the condition c at a step requires c there, at need at least one"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Training.outrun_settles_iff"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/what-training-installs.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "training-rest-outruns",
+  "name": {
+   "en": "taking, outruns, low"
+  },
+  "statement": {
+   "en": "in every candidate's course, the rest's members taking from c at each of n steps from T are present there, the rest takes jointly more from c than is given to it at each of those steps, and c stands at most n at T"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Training.outrun_settles_iff"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/what-training-installs.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "training-score-reads-late",
+  "name": {
+   "en": "the score reads late"
+  },
+  "statement": {
+   "en": "the score reads the condition c only from step T + n on: histories alike on c from T + n are scored alike"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Training.outrun_settles_iff"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/what-training-installs.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "commuting-commutes",
+  "name": {
+   "en": "Law.Commutes"
+  },
+  "statement": {
+   "en": "the law T commutes with σ: T (σ x) = σ (T x) for every configuration x"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Law.Commutes"
+  ],
+  "holds_in": [
+   "Becoming.Weighted.Pooling.commutes"
+  ],
+  "fails_in": [
+   "Becoming.Hexagram.wane_breaks"
+  ],
+  "home": "theories/becoming/results/records/what-a-commuting-law-keeps-apart.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "diagonal-moves",
+  "name": {
+   "en": "Diagonal.Moves"
+  },
+  "statement": {
+   "en": "the map moves every value: no value is alike, under the likeness, with its image"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Diagonal.Moves"
+  ],
+  "holds_in": [
+   "Becoming.Hexagram.complement_moves"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/readings-within-what-they-read.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "weightedcommuting-commutes",
+  "name": {
+   "en": "Weighted.Commutes"
+  },
+  "statement": {
+   "en": "the weighted law commutes with σ: every weighted total over the successors of σ x is the total over the successors of x carried by σ"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Weighted.Commutes"
+  ],
+  "holds_in": [
+   "Becoming.Weighted.Reinforcing.commutes"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-commuting-learner-drives-no-unread-choice.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "weightedcommuting-unchanged",
+  "name": {
+   "en": "Weighted.Unchanged"
+  },
+  "statement": {
+   "en": "the starting weights are left unchanged by σ: every total over them equals the total carried by σ"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Weighted.Unchanged"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-commuting-learner-drives-no-unread-choice.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "weightedcommuting-samples-carried",
+  "name": {
+   "en": "permutes, weight, update"
+  },
+  "statement": {
+   "en": "a map τ of the samples permutes them, a sample's weight at σ x is its image's weight at x, and the update at σ x is σ of the update at x from the image sample"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Weighted.Commutes.of_samples"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-commuting-learner-drives-no-unread-choice.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "diagonal-unfolds",
+  "name": {
+   "en": "Diagonal.Unfolds"
+  },
+  "statement": {
+   "en": "a family of readings unfolds: what one reading says the next says too, and the next says the gap of the one before"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Diagonal.Unfolds"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/readings-within-what-they-read.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "diagonal-same-transitive",
+  "name": {
+   "en": "trans"
+  },
+  "statement": {
+   "en": "the likeness of values is transitive"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Diagonal.Unfolds.gaps_differ",
+   "Becoming.Diagonal.Unfolds.unheld"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/readings-within-what-they-read.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "diagonal-same-symmetric",
+  "name": {
+   "en": "symm"
+  },
+  "statement": {
+   "en": "the likeness of values is symmetric"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Diagonal.Unfolds.unheld"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/readings-within-what-they-read.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "normativeactivity-closedlocal",
+  "name": {
+   "en": "ClosedLocal"
+  },
+  "statement": {
+   "en": "the event is closed locally: an inspection, uptake, closure, repetition, production, suspension or rest; every other event, a reopening among them, is not"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Generative.NormativeActivity.ClosedLocal"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/adaptive-closure-cannot-resolve.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "normativeactivity-closeddomain",
+  "name": {
+   "en": "ClosedDomain"
+  },
+  "statement": {
+   "en": "inspection is closed at the state (inspectionOpen = false)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Generative.NormativeActivity.ClosedDomain"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/adaptive-closure-cannot-resolve.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "knowledgecorrespondence-soundon",
+  "name": {
+   "en": "KnowledgeCorrespondence.SoundOn"
+  },
+  "statement": {
+   "en": "on the domain, wherever the answer read from the evidence gives a value, that value is the target"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Generative.KnowledgeCorrespondence.SoundOn"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/adaptive-closure-cannot-resolve.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "calibratedupdater-nonzero-gain",
+  "name": {
+   "en": "nonzero gain, in CalibratedUpdater"
+  },
+  "statement": {
+   "en": "the affine channel's gain is nonzero"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "CalibratedUpdater.acquired_local_exact"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/correction-is-not-calibration.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "calibrationrenewal-nonzero-gain",
+  "name": {
+   "en": "nonzero gain, in CalibrationRenewal"
+  },
+  "statement": {
+   "en": "the old channel's gain is nonzero (in renewed_run, every channel's gain)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "CalibrationRenewal.all_signs_transfer_iff",
+   "CalibrationRenewal.renewed_run"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/correction-is-not-calibration.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "calibrationrenewal-connected",
+  "name": {
+   "en": "connected"
+  },
+  "statement": {
+   "en": "the apparatus is connected: every channel is wired and the inhibition is on"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "CalibrationRenewal.connected"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/correction-is-not-calibration.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "calibrationrenewal-fuel",
+  "name": {
+   "en": "at least seven units"
+  },
+  "statement": {
+   "en": "the renewal holds at least seven units (7 ≤ x.fuel)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "CalibrationRenewal.renewed_run"
+  ],
+  "holds_in": [
+   "CalibrationRenewal.actual_repair_after_inspection"
+  ],
+  "fails_in": [
+   "CalibrationRenewal.six_units_cannot_revise"
+  ],
+  "home": "theories/becoming/results/records/correction-is-not-calibration.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "learning-two-values",
+  "name": {
+   "en": "two values"
+  },
+  "statement": {
+   "en": "two different values x ≠ y"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Learning.no_prefix_fixes_next",
+   "Becoming.Learning.no_prefix_fixes_next_finite"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/learning-by-refutation.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "learning-moves",
+  "name": {
+   "en": "the map other moves every value"
+  },
+  "statement": {
+   "en": "the map other moves every value: other v ≠ v for every v"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Learning.diagonal_misses",
+   "Becoming.Learning.diagonal_unrested",
+   "Becoming.Learning.diagonal_not_lasso",
+   "Becoming.Learning.merged_unrested"
+  ],
+  "holds_in": [
+   "Becoming.Learning.swapTo_moves"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/learning-by-refutation.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "learning-accords",
+  "name": {
+   "en": "Learning.Accords"
+  },
+  "statement": {
+   "en": "the extrapolation accords with the course: it misses at no step"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Learning.Accords"
+  ],
+  "holds_in": [
+   "Becoming.Learning.lasso_accords"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/learning-by-refutation.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "learning-lasso",
+  "name": {
+   "en": "Learning.Lasso"
+  },
+  "statement": {
+   "en": "from step i on, the course repeats with period q + 1"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Learning.Lasso"
+  ],
+  "holds_in": [
+   "Becoming.Learning.Alternate.repeats",
+   "Becoming.Learning.holdFrom_lasso"
+  ],
+  "fails_in": [
+   "Becoming.Learning.diagonal_not_lasso"
+  ],
+  "home": "theories/becoming/results/records/learning-by-refutation.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "learning-orbit-held",
+  "name": {
+   "en": "held"
+  },
+  "statement": {
+   "en": "every configuration the orbit of the determined law passes lies in the list l"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Learning.held_byElimination_bounded",
+   "Becoming.Learning.held_rest_unrefuted"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/learning-by-refutation.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "reachedcascade-readsonlyactsalong",
+  "name": {
+   "en": "Turns.ReadsOnlyActsAlong"
+  },
+  "statement": {
+   "en": "from member k on, every member acts alike whatever its own coupling, at the list of acts the world w gives it"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Turns.ReadsOnlyActsAlong"
+  ],
+  "holds_in": [
+   "Becoming.Turns.Unreached.along"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-cascade-at-the-histories-reached.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "cascade-readsonlyactsfrom",
+  "name": {
+   "en": "Turns.ReadsOnlyActsFrom"
+  },
+  "statement": {
+   "en": "from member k on, every member acts alike whatever its own coupling, on every list of earlier acts, histories no run reaches included"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Turns.ReadsOnlyActsFrom"
+  ],
+  "holds_in": [],
+  "fails_in": [
+   "Becoming.Turns.Unreached.not_from"
+  ],
+  "home": "theories/becoming/results/records/readers-reading-readers.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "reachedcascade-lawalikealong",
+  "name": {
+   "en": "Turns.LawAlikeAlong"
+  },
+  "statement": {
+   "en": "from member k on, every member gives one act for the couplings of the worlds w and w' at the list of acts w gives it"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Turns.LawAlikeAlong"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-cascade-at-the-histories-reached.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "cascade-alikebefore",
+  "name": {
+   "en": "Turns.AlikeBefore"
+  },
+  "statement": {
+   "en": "the two worlds give alike couplings to every member before k"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Turns.AlikeBefore"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/readers-reading-readers.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "testing-alikethroughupto",
+  "name": {
+   "en": "AlikeThroughUpTo"
+  },
+  "statement": {
+   "en": "two level histories are alike through g's couplings at every step up to t"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Web.AlikeThroughUpTo"
+  ],
+  "holds_in": [
+   "Becoming.PoolCourse.keeper_alike"
+  ],
+  "fails_in": [
+   "Becoming.PoolCourse.reader_apart"
+  ],
+  "home": "theories/becoming/results/records/a-pool-that-recruits-through-itself.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "selection-selectsthroughall",
+  "name": {
+   "en": "SelectsThroughAll"
+  },
+  "statement": {
+   "en": "a selection is through the couplings of every member of a group up to t: histories alike through every member's couplings up to t are selected alike"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Web.SelectsThroughAll"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-pool-that-recruits-through-itself.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "poolcourse-recruitsthrough",
+  "name": {
+   "en": "Web.RecruitsThrough"
+  },
+  "statement": {
+   "en": "the pool admits its next members through its own pooled coupling: under two histories with the same members at t, alike through every member's couplings up to t, the members at t + 1 are the same"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Web.RecruitsThrough"
+  ],
+  "holds_in": [
+   "Becoming.PoolCourse.alone_through",
+   "Becoming.PoolCourse.scheduled_through"
+  ],
+  "fails_in": [
+   "Becoming.PoolCourse.called_not_through"
+  ],
+  "home": "theories/becoming/results/records/a-pool-that-recruits-through-itself.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "poolcourse-samemembers",
+  "name": {
+   "en": "Web.SameMembers at the start"
+  },
+  "statement": {
+   "en": "the pool has the same members at step 0 under the two histories"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Web.SameMembers"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-pool-that-recruits-through-itself.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "testing-alikethroughall",
+  "name": {
+   "en": "AlikeThroughAll"
+  },
+  "statement": {
+   "en": "two level histories are alike up to t through the couplings of every member of a group"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Web.AlikeThroughAll"
+  ],
+  "holds_in": [
+   "Becoming.PoolCourse.alone_never_apart"
+  ],
+  "fails_in": [
+   "Becoming.PoolCourse.called_apart"
+  ],
+  "home": "theories/becoming/results/records/a-pool-that-recruits-through-itself.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "poolcourse-differ",
+  "name": {
+   "en": "differ"
+  },
+  "statement": {
+   "en": "a member g of the pool at t has coupled the two histories apart up to a step s at or before t: they are not alike through g's couplings up to s"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Web.apart_while_member"
+  ],
+  "holds_in": [
+   "Becoming.PoolCourse.reader_apart"
+  ],
+  "fails_in": [
+   "Becoming.PoolCourse.keeper_alike"
+  ],
+  "home": "theories/becoming/results/records/a-pool-that-recruits-through-itself.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "revision-old-equivalence",
+  "name": {
+   "en": "refl, symm, trans"
+  },
+  "statement": {
+   "en": "the old relation is reflexive, symmetric and transitive"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Learning.Training.keeps_through_iff",
+   "Becoming.Learning.Training.lost_choice"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/selection-when-the-lumping-changes.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "stock-balanced",
+  "name": {
+   "en": "Stock.Balanced"
+  },
+  "statement": {
+   "en": "across every step, what stands after it and what it draws equal what stood before it and what it replenishes"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Stock.Balanced"
+  ],
+  "holds_in": [
+   "Becoming.Revising.stock_balanced_held"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/selection-when-the-lumping-changes.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "stock-drawsheld",
+  "name": {
+   "en": "Stock.DrawsHeld"
+  },
+  "statement": {
+   "en": "a step draws only from what is held before it"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Stock.DrawsHeld"
+  ],
+  "holds_in": [
+   "Becoming.Revising.stock_balanced_held"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/selection-when-the-lumping-changes.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "learning-through",
+  "name": {
+   "en": "Learning.Training.Through"
+  },
+  "statement": {
+   "en": "a selection among candidates is through a relation of being alike: alike candidates are selected alike"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Learning.Training.Through"
+  ],
+  "holds_in": [
+   "Becoming.Revising.opens_with_correction"
+  ],
+  "fails_in": [
+   "Becoming.Revising.closes_choice"
+  ],
+  "home": "theories/becoming/results/records/selection-when-the-lumping-changes.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "temporalinspection-actual-among-possible",
+  "name": {
+   "en": "known"
+  },
+  "statement": {
+   "en": "the actual world is among the possible ones"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "TemporalInspection.received_actual_retained",
+   "TemporalInspection.current_pool_sound"
+  ],
+  "holds_in": [],
+  "fails_in": [
+   "TemporalInspection.understated_change_can_leave_false_confidence"
+  ],
+  "home": "theories/becoming/results/records/evidence-through-change.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "temporalinspection-report-fits",
+  "name": {
+   "en": "lawful report"
+  },
+  "statement": {
+   "en": "the report read in the domain fits the actual world"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "TemporalInspection.received_actual_retained"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/evidence-through-change.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "temporalinspection-history",
+  "name": {
+   "en": "TemporalInspection.History"
+  },
+  "statement": {
+   "en": "a lawful history: each event lawful at the state before it (a reading that fits the actual world, a move to a successor of the actual world under the recorded change, or a command) and executed"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "TemporalInspection.History",
+   "TemporalInspection.Lawful"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/evidence-through-change.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "temporalinspection-known",
+  "name": {
+   "en": "TemporalInspection.Known"
+  },
+  "statement": {
+   "en": "the actual world is among the possible ones, and every possible world is a represented world"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "TemporalInspection.Known"
+  ],
+  "holds_in": [],
+  "fails_in": [
+   "TemporalInspection.understated_change_can_leave_false_confidence"
+  ],
+  "home": "theories/becoming/results/records/evidence-through-change.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "temporalinspection-represented",
+  "name": {
+   "en": "represented"
+  },
+  "statement": {
+   "en": "the actual world is among the represented worlds"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "TemporalInspection.current_pool_sound"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/evidence-through-change.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "temporalinspection-faithful",
+  "name": {
+   "en": "faithful"
+  },
+  "statement": {
+   "en": "every domain on the actual model's roster whose vulnerability the actual world's command roots do not make fail warrants P where it is supported"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "TemporalInspection.current_pool_sound",
+   "TemporalInspection.history_to_current_certificate"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/evidence-through-change.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "temporalinspection-certificate-accepted",
+  "name": {
+   "en": "accepted"
+  },
+  "statement": {
+   "en": "the certificate over the actual model's roster, the pooled models of the possible worlds and the supports passes"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "TemporalInspection.current_pool_sound",
+   "TemporalInspection.history_to_current_certificate"
+  ],
+  "holds_in": [
+   "TemporalInspection.predicting_change_reopens_relevant_alternatives"
+  ],
+  "fails_in": [
+   "TemporalInspection.predicting_change_reopens_relevant_alternatives"
+  ],
+  "home": "theories/becoming/results/records/evidence-through-change.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "changingdependency-certified",
+  "name": {
+   "en": "ChangingDependency.certified"
+  },
+  "statement": {
+   "en": "the intervention u lies within [0, S], and the reading's error interval r ± E, moved by u, lies within the target [lower, upper]"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "ChangingDependency.certified"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/evidence-through-change.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "listingvaluation-undemonstrated",
+  "name": {
+   "en": "none demonstrated"
+  },
+  "statement": {
+   "en": "the holding formation takes no demonstrating act before step n on the course at the first world"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.ListingValuation.undemonstrated_alike"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-reading-informed-and-revalued.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ }
+]
