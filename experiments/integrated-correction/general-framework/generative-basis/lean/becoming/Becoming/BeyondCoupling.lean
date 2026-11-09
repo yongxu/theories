@@ -1,4 +1,5 @@
 import Becoming.SelectionPool
+import Becoming.FlowCenters
 import Becoming.GrammarScope
 import Becoming.Standpoints
 
@@ -45,10 +46,18 @@ relation and centers supplied. No ranking or axiom enters.
   the cleared and the spared world alike, while the dweller ends in the one and not the other
   (`Clearing.counting_dweller_unselected`, `Clearing.pool_closes_gap` read over the whole run).
   Where the two acts differ on a condition that couples in, the premise would fail and the
-  difference can be selected, as in `Diversion`. There the act that ends the dweller also raises the store the
+  difference can be selected, as in `Diversion`, a witness of that pattern outside the law's
+  setting (supplied flows, no act indexed by significance), not of `ActReadsWithin` failing. There the act that ends the dweller also raises the store the
   taker gauges, while in the diverting flow the dweller lies beyond the taker's coupling closure. A selection read off what couples into
   the taker holds at that act and fails at refraining (`Diversion.counting_selected_against`). What
   is selected is an act's trace on what couples in, never the loss beyond.
+* **Pooled over the returning formations, nothing lies beyond.** With finitely many formations
+  listed and reach decided, every formation lies within the coupling closure of the group of
+  formations whose acts return (`Flow.returning_pool_covers`, from `Flow.covered_by_returning` and
+  `Flow.withinCoupling_of_withinInfluence`; through two flows, `Flow.returning_pool_covers_either`).
+  So the laws above say nothing of a selection read off every returning formation of such a flow;
+  they bite for a pool that leaves some out, as the clearer alone leaves out the dweller, the one
+  formation of `Clearing` whose acts return.
 * **Route (b)'s universal form, closed.** Take a significance read as each standpoint's center's
   closure under a relation. It is the continuation condition exactly where every center's closure
   is the whole (`ownClosure_unrestricted_iff`). On a relation with no cycle and two standpoints
@@ -68,10 +77,13 @@ relation and centers supplied. No ranking or axiom enters.
   couplings exactly when they are alike through every member's couplings at every step
   (`Web.readOffCouplings_alike_iff`, `Web.selects_alike_all_iff` read over the whole run). Where a
   member's continuation differs, the class of the first history separates them
-  (`Web.separates_continuations`). So some selection read off a group is turned by a difference
-  exactly where it changes, at some step, what couples into some member: some member's admission,
-  or the level of some condition a member gauges. With the law above, under its premises, a loss
-  beyond the group's coupling closure changes nothing there. The witnesses couple it in two such
+  (`Web.separates_continuations`). So no selection read off a group tells two histories apart
+  while they are alike through every member's couplings at every step, and where a member's
+  continuation differs at a supplied step, some such selection does. (Which member and step, when
+  not every selection agrees, is not extracted: the laws are constructive.) With the law above,
+  under its premises, a loss beyond the group's coupling closure changes nothing there; to turn a
+  selection it must change what couples into a member, some member's admission or the level of a
+  condition a member gauges. The witnesses couple it in two such
   ways, the dweller's continuation read as a member's and the habitat gauged by the clearer; any
   member's continuation or gauged condition the loss changes would do. In `Clearing` the selection
   read off the clearer's and the
@@ -85,7 +97,8 @@ relation and centers supplied. No ranking or axiom enters.
   "coupling the dweller in turns the joint selection against its loss" fails and is kept.
 
 **Readings (the AI's, 9 November 2026, not yet read by Ren).**
-- Concern formed by continuation and selection reaches what comes back through couplings. Take two
+- Concern formed by continuation and selection reaches at most what comes back through couplings:
+  a bound, not a claim that every distinction available is used. Take two
   courses whose acts agree on what couples into the centers' pooled coupling closure, under the
   premises above. No selection read off the centers' continuations, pooled or one by one, holds at
   the one course and not the other, whatever loss either makes beyond. With feedback read as being
@@ -95,8 +108,9 @@ relation and centers supplied. No ranking or axiom enters.
 - For alignment, read the two acts one level up as a rule that keeps a reader of the dweller and
   one that does not; that keeping the reader gives the sparing act is supplied. The shapers'
   selection of the rule, read off what couples into them, then selects the two alike wherever
-  keeping the reader changes nothing that couples into them (the shape of `Clearing`). It selects
-  against keeping it where keeping it costs them (the shape of `Diversion`). So the first condition
+  keeping the reader changes nothing that couples into them (the shape of `Clearing`). Where keeping
+  it costs them, a selection read off their couplings can select against keeping it, as one does
+  in the shape of `Diversion`; cost does not do so in general. So the first condition
   of generative alignment, that the rule still reads what lies beyond the shapers' share, is not
   supplied by the shapers' own selection. On the flow it holds where the loss is coupled into a
   reader of the selection.
@@ -295,6 +309,34 @@ theorem significance_courses_unselected {Pos : Type}
     members reads
 
 end Courses
+
+/-! ## Pooled over the returning formations, nothing lies beyond -/
+
+namespace Flow
+
+variable {L L' : Flow F C} {W : Web F C}
+
+/-- **Pooled over the returning formations, nothing lies beyond.** With finitely many formations
+listed and reach decided, every formation lies within the coupling closure of the group of
+formations whose acts return, for every coupling by level: it lies within the influence closure of
+one (`Flow.covered_by_returning`), and an influence closure lies within the coupling closure
+(`Flow.withinCoupling_of_withinInfluence`). So the laws above say nothing of a selection read off
+every returning formation of such a flow; they bite for a pool that leaves some out. -/
+theorem returning_pool_covers (members : List F) (listed : ∀ g, g ∈ members)
+    (decided : ∀ a b, Decidable (L.WithinReach W a b)) (obs : F → C → Prop) (g : F) :
+    WithinClosureOf (L.CoupledFrom W obs) (L.ReachReturns W) g :=
+  match covered_by_returning members listed decided g with
+  | ⟨c, within⟩ => ⟨c.1, c.2, withinCoupling_of_withinInfluence within⟩
+
+/-- The same drawn through two flows, as the closures of `act_courses_unselected_throughout` are:
+the returning formations of the first flow, pooled, leave nothing beyond. -/
+theorem returning_pool_covers_either (members : List F) (listed : ∀ g, g ∈ members)
+    (decided : ∀ a b, Decidable (L.WithinReach W a b)) (obs : F → C → Prop) (g : F) :
+    WithinClosureOf (L.CoupledFromEither W L' obs) (L.ReachReturns W) g :=
+  match returning_pool_covers members listed decided obs g with
+  | ⟨f, member, within⟩ => ⟨f, member, WithinClosure.mono (fun _ _ related => .inl related) within⟩
+
+end Flow
 
 /-! ## Route (b)'s universal form, closed -/
 

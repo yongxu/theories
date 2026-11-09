@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261107T050428.932891Z",
- "core_sources_sha256": "56d397b55104aa2049701643d7c739fce228b0c1ef57ad502f102b84cafea9e2",
+ "core_receipt": "20261109T111610.530713Z",
+ "core_sources_sha256": "d880ddce9bdc3a5a0979fdef88491c8bee8d9f98d0c2caa04dd144103f94408e",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,16 +58,16 @@
   ]
  },
  "counts": {
-  "laws": 4171,
+  "laws": 4180,
   "no_declarations": 9,
   "outside": 391,
-  "grammar": 912,
+  "grammar": 921,
   "balance, represented": 626,
   "anchor, not reached": 137,
   "no shared law": 2096,
-  "vocabulary_only": 86,
-  "closure": 529,
-  "balance": 844,
+  "vocabulary_only": 87,
+  "closure": 538,
+  "balance": 845,
   "return": 256,
   "lumping": 84,
   "order": 95
@@ -14400,6 +14400,45 @@
      "Becoming.RegimeMargin.Coupled.Indexed.Chain.first_falls",
      "Becoming.RegimeMargin.Coupled.Indexed.Chain.cascades",
      "Becoming.RegimeMargin.Coupled.Indexed.Chain.stopped"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   }
+  ],
+  "covering-by-the-returning-formations": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.Flow.covered_by_returning",
+     "Becoming.Flow.unrestricted_of_returning_standpointInvariant"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.Flow.returning_influence_unrestricted_iff",
+     "Becoming.Flow.returning_influence_unrestricted_iff_invariant"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.Flow.covering_of_acting",
+     "Becoming.Clearing.dweller_feeding_closed",
+     "Becoming.Clearing.clearer_beyond_returning_feeding"
     ],
     "shared_laws": [
      "closure"
@@ -47034,6 +47073,101 @@
     "dependence": "grammar"
    }
   ],
+  "standpoints-read-off-a-flow": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.ReturnsAlong",
+     "Becoming.Returning",
+     "Becoming.ReturnsAlong.loop",
+     "Becoming.returnsAlong_of_whole",
+     "Becoming.ReturnsAlong.whole",
+     "Becoming.ownClosure_unrestricted_atReturning_iff",
+     "Becoming.ownClosure_unrestricted_of_none",
+     "Becoming.ownClosure_standpointInvariant_atReturning_iff"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.Flow.Returning",
+     "Becoming.Flow.reachReturns_iff_returnsAlong",
+     "Becoming.Flow.mutuallyDependent_of_returning_unrestricted",
+     "Becoming.Flow.returning_unrestricted_iff_mutuallyDependent",
+     "Becoming.Flow.mutuallyDependent_of_returning_noOutside",
+     "Becoming.Flow.MutuallyDependent.reachReturns"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.Flow.atReturning_unrestricted_iff",
+     "Becoming.Flow.mutuallyFed_iff_unrestricted"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.Drawing.returning_feeding_apart"
+    ],
+    "shared_laws": [
+     "closure",
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.Clearing.dweller_reach_closed",
+     "Becoming.Clearing.dweller_returns",
+     "Becoming.Clearing.clearer_not_returns",
+     "Becoming.Clearing.source_not_returns",
+     "Becoming.Clearing.reachReturns_iff",
+     "Becoming.Clearing.dweller_influence_whole",
+     "Becoming.Clearing.returning_apart",
+     "Becoming.Clearing.returning_loses_dweller"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.Unexchanged.flow",
+     "Becoming.Unexchanged.web",
+     "Becoming.Unexchanged.not_affects",
+     "Becoming.Unexchanged.reach_self",
+     "Becoming.Unexchanged.every_returns",
+     "Becoming.Unexchanged.apart"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   }
+  ],
   "steps-met-again-after-a-fall": [
    {
     "law": 1,
@@ -64328,7 +64462,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "14cd1a9b47c9949caf0c62e5cc95b4d89468dae94f032d09013de25b0dcabcb1",
+   "modules_sha256": "d98057e8ecd97b6794a473924f612f4eb67f1b244c678cb873a932cd430c25f5",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },

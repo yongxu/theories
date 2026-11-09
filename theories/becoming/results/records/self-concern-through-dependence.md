@@ -127,7 +127,7 @@ The ecological Self (Næss 1987): self-concern for a self drawn widely is care f
 - related, not a proved adapter: [loss-beyond-a-region](loss-beyond-a-region.md). What lies beyond every center's closure, as Clearing's dweller does, is left to the step.
 - related, not a proved adapter: [what-self-concern-alone-ranks](what-self-concern-alone-ranks.md). The same route's order: what self-concern alone ranks, given the scope fixed here.
 
-**Used by:** [need-and-feeding-read-with-time](need-and-feeding-read-with-time.md)
+**Used by:** [need-and-feeding-read-with-time](need-and-feeding-read-with-time.md) · [standpoints-read-off-a-flow](standpoints-read-off-a-flow.md)
 
 <a id="sources--来源"></a>
 ### Sources

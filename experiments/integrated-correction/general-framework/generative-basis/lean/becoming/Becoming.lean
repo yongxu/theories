@@ -384,6 +384,7 @@ import Becoming.PremiseWitnesses
 import Becoming.PremisesTogether
 import Becoming.GrammarPath
 import Becoming.RoutesToC
+import Becoming.FlowCenters
 import Becoming.BeyondCoupling
 import Becoming.SignificanceStatements
 
@@ -4714,6 +4715,21 @@ tagged instance or application.
   (`Weighting.increasing_iff_one_step`). On a listing of what lies downstream, P2 and P4 of the path in
   07 §4.6 with self-concern give increasing in admission
   (`Weighting.increasing_on_downstream_of_regularity`). A leaf; short laws, none new as mathematics.
+* `Becoming.FlowCenters` (L2, through `Becoming.GrammarScope`): the standpoints and the relation of the
+  own-closure reading read off a flow (board item ZA-G1, route (b)'s first piece). An element returns along a
+  relation where whatever lies within its closure has it within its own (`ReturnsAlong`); held de se at the
+  returning elements, given one, the presupposition is the condition exactly where every closure is the whole
+  (`ownClosure_unrestricted_atReturning_iff`). On a flow the formations whose acts return (`Flow.Returning`) are
+  one reading of the standpoints and every formation the other: held de se along affecting at the returning
+  formations the condition gives mutual dependence (`Flow.mutuallyDependent_of_returning_unrestricted`, and its
+  root form), along feeding with every formation a center it is mutual feeding (`Flow.mutuallyFed_iff_unrestricted`).
+  On finitely many formations with reach decided every formation lies within the influence closure of a returning
+  one (`Flow.covered_by_returning`), so the step along being affected at them gives the condition
+  (`Flow.unrestricted_of_returning_standpointInvariant`), and held de se along being affected the condition is
+  that they lie in one loop (`Flow.returning_influence_unrestricted_iff`). Witnesses: `Clearing.returning_apart`
+  (only the dweller returns; the supplied clearer and it part), `Clearing.clearer_beyond_returning_feeding`,
+  `Drawing.returning_feeding_apart`, `Unexchanged.apart`. Which relation and which reading of the standpoints
+  stay choices. A leaf; short compositions, none new as mathematics.
 * `Becoming.BeyondCoupling` (L2, through `Becoming.GrammarScope` and `Becoming.Standpoints`): what
   concern formed by continuation cannot reach (board item ZB, one of route (b)'s pieces). A selection
   read off a group's continuations decides a level history by each member's admission at every step
@@ -4722,7 +4738,8 @@ tagged instance or application.
   run (`act_courses_unselected_throughout`): two acts of a part, laws of what has stood, the first
   reading through its members' coupling, agreeing on what couples into a group's coupling closure,
   the rest following a law reading through coupling, the courses feasible, are selected alike by
-  every such selection of a pool within the closure; where the act reads significance only within
+  every such selection of a pool within the closure, a bound with content only for a pool leaving some
+  returning formation out (`Flow.returning_pool_covers`); where the act reads significance only within
   that closure (`ActReadsWithin`, a premise) so are two significances agreeing there
   (`significance_courses_unselected`). Route (b)'s universal form in one theorem
   (`routeB_universal_closed`): the own-closure significance is the condition exactly where every

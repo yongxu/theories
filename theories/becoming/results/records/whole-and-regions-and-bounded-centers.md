@@ -88,7 +88,7 @@ Ren's statement of the continuation condition is “for anything, its continuati
 - related, not a proved adapter: [presupposition-scopes](presupposition-scopes.md). The order of Retains.within reads as three readings of the presupposition: super-true; sub-true along affecting, at the reach closure; sub-true along the empty relation, at the self (Flow.presupposition_order; the AI's reading).
 - related, not a proved adapter: [levels-of-closure](levels-of-closure.md). The reach closure, not the system, reads Ren's middle level “the system that one is in” (an AI reading): one common condition makes the system the whole.
 
-**Used by:** [closure-verdict-meets-continuation-condition](closure-verdict-meets-continuation-condition.md) · [feeding-closure](feeding-closure.md) · [presupposition-scopes](presupposition-scopes.md) · [relative-position-is-zero-sum](relative-position-is-zero-sum.md) · [rivals-bounded-in-time](rivals-bounded-in-time.md) · [what-a-center-can-know-by-a-step](what-a-center-can-know-by-a-step.md) (interpretive)
+**Used by:** [closure-verdict-meets-continuation-condition](closure-verdict-meets-continuation-condition.md) · [feeding-closure](feeding-closure.md) · [presupposition-scopes](presupposition-scopes.md) · [relative-position-is-zero-sum](relative-position-is-zero-sum.md) · [rivals-bounded-in-time](rivals-bounded-in-time.md) · [standpoints-read-off-a-flow](standpoints-read-off-a-flow.md) · [what-a-center-can-know-by-a-step](what-a-center-can-know-by-a-step.md) (interpretive)
 
 <a id="sources--来源"></a>
 ### Sources

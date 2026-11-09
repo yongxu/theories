@@ -11,12 +11,12 @@ On each part, theorems and lemmas are individually listed and definitions and ty
 
 ## Becoming pure core
 
-This group's 373 modules are listed on 6 parts of about equal size, the largest 789,355 bytes, under the size at which GitHub stops showing a Markdown file. Browser find on a part finds the names on that part only; the module table below says which part holds each module.
+This group's 374 modules are listed on 6 parts of about equal size, the largest 792,080 bytes, under the size at which GitHub stops showing a Markdown file. Browser find on a part finds the names on that part only; the module table below says which part holds each module.
 
 | Page | Modules, in the catalogue's order | theorem/lemma occurrences |
 |---|---|---:|
 | [Part 1 of 6](../lean-declarations/becoming-core-part-1.md) | 72, from GenerativeCore.lean to Decidedness.lean | 2,991 |
-| [Part 2 of 6](../lean-declarations/becoming-core-part-2.md) | 64, from Dependence.lean to HistoryIdeals.lean | 3,137 |
+| [Part 2 of 6](../lean-declarations/becoming-core-part-2.md) | 65, from Dependence.lean to HistoryIdeals.lean | 3,170 |
 | [Part 3 of 6](../lean-declarations/becoming-core-part-3.md) | 63, from HistoryIdealsTraces.lean to Loops.lean | 3,178 |
 | [Part 4 of 6](../lean-declarations/becoming-core-part-4.md) | 50, from LossMatching.lean to Ranking.lean | 3,130 |
 | [Part 5 of 6](../lean-declarations/becoming-core-part-5.md) | 59, from ReachableRanges.lean to SelectionLevels.lean | 3,042 |
@@ -125,6 +125,7 @@ This group's 373 modules are listed on 6 parts of about equal size, the largest 
 | <a id="module-8abf1ff0ab50"></a>[Feeding.lean](../lean-declarations/becoming-core-part-2.md#module-8abf1ff0ab50) | part 2 | 41 |
 | <a id="module-80a1866043b2"></a>[FinerTraces.lean](../lean-declarations/becoming-core-part-2.md#module-80a1866043b2) | part 2 | 11 |
 | <a id="module-1ab3e6b83532"></a>[Flow.lean](../lean-declarations/becoming-core-part-2.md#module-1ab3e6b83532) | part 2 | 105 |
+| <a id="module-3c07105e81a2"></a>[FlowCenters.lean](../lean-declarations/becoming-core-part-2.md#module-3c07105e81a2) | part 2 | 33 |
 | <a id="module-55adace3d90c"></a>[FormedLoops.lean](../lean-declarations/becoming-core-part-2.md#module-55adace3d90c) | part 2 | 7 |
 | <a id="module-e7f9a14d0de5"></a>[Founding.lean](../lean-declarations/becoming-core-part-2.md#module-e7f9a14d0de5) | part 2 | 42 |
 | <a id="module-a5c04e9c349b"></a>[Fragments.lean](../lean-declarations/becoming-core-part-2.md#module-a5c04e9c349b) | part 2 | 23 |

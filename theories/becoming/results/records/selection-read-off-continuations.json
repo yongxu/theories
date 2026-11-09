@@ -56,6 +56,14 @@
         "Becoming.Diversion.countingLevel",
         "Becoming.Diversion.counting_selected_against"
       ]
+    },
+    {
+      "en": "Pooled over the formations whose acts return, nothing lies beyond: with finitely many formations listed and reach decided, every formation lies within their pooled coupling closure, for every coupling by level, since it lies within the influence closure of one. The law above bites only for a pool leaving one out.",
+      "zh": "以一切回返之形成为池，则无外：有限个形成列出且所及可判定时，每个形成都在其合并的耦合闭包之内（对一切经水平的耦合），因它在某一回返形成的影响闭包之内。上面的律只对漏掉某回返形成的池起作用。",
+      "declarations": [
+        "Becoming.Flow.returning_pool_covers",
+        "Becoming.Flow.returning_pool_covers_either"
+      ]
     }
   ],
   "hypotheses": [
@@ -98,6 +106,12 @@
       "kind": "scope"
     },
     {
+      "en": "That anything lies beyond a pool of every returning formation: on finitely many formations with reach decided, nothing does, so the law bites only for a pool leaving some returning formation out.",
+      "zh": "有东西在含一切回返之形成的池之外：在有限个形成且所及可判定时没有，故此律只对漏掉某回返之形成的池起作用。",
+      "kind": "scope",
+      "witness": "Becoming.Flow.returning_pool_covers"
+    },
+    {
       "en": "That actual selections, a reward, a market, a vote, a training run, are read off what couples into the selector.",
       "zh": "实际的选择（奖励、市场、投票、训练）读自耦合入选择者者。",
       "kind": "correspondence"
@@ -107,8 +121,8 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean",
       "detail": {
-        "en": "Against the reading that an act whose loss lies beyond a selector's coupling closure is never selected: in Diversion the act that ends the dweller, which in the diverting flow lies beyond the taker's coupling closure, raises the store the taker gauges, and a selection read off the taker's couplings holds at it and fails at refraining (Diversion.counting_selected_against). The premise that the acts agree on what couples in is needed.",
-        "zh": "反对这一读法：其失去在选择者耦合闭包外之举永不被选。Diversion 中，终结栖居者（在转引之流中位于取用者耦合闭包之外）之举抬高取用者所测的储存，读自取用者耦合的选择于此举成立、于克制不成立（Diversion.counting_selected_against）。两举在耦合入者上一致这一前提是需要的。"
+        "en": "Against the reading that an act whose loss lies beyond a selector's coupling closure is never selected: in Diversion the act that ends the dweller, which in the diverting flow lies beyond the taker's coupling closure, raises the store the taker gauges, and a selection read off the taker's couplings holds at it and fails at refraining (Diversion.counting_selected_against). The witness lies outside the law's setting (supplied flows, no act indexed by significance): it shows the agreement pattern failing, not ActReadsWithin.",
+        "zh": "反对这一读法：其失去在选择者耦合闭包外之举永不被选。Diversion 中，终结栖居者（在转引之流中位于取用者耦合闭包之外）之举抬高取用者所测的储存，读自取用者耦合的选择于此举成立、于克制不成立（Diversion.counting_selected_against）。此见证在该律的设定之外（给定之流，无以意义为索引之举）：它显示一致之形不成立，而非 ActReadsWithin 不成立。"
       }
     }
   ],
@@ -234,6 +248,13 @@
       }
     },
     {
+      "id": "covering-by-the-returning-formations",
+      "detail": {
+        "en": "Every formation lies within the influence closure of a formation whose acts return, on finitely many formations with reach decided; with it, pooled over those formations, nothing lies beyond the coupling closure.",
+        "zh": "有限个形成且所及可判定时，每个形成都在某回返形成的影响闭包之内；以之为池，耦合闭包外无物。"
+      }
+    },
+    {
       "id": "where-the-blindness-lifts",
       "detail": {
         "en": "The converse at the level of histories: what a selection read off a group's couplings separates.",
@@ -254,6 +275,8 @@
         "Becoming.Diversion.counting",
         "Becoming.Diversion.countingLevel",
         "Becoming.Diversion.counting_selected_against",
+        "Becoming.Flow.returning_pool_covers",
+        "Becoming.Flow.returning_pool_covers_either",
         "Becoming.Web.ReadOffContinuations",
         "Becoming.Web.ReadOffContinuations.couplings",
         "Becoming.Web.ReadOffCouplings",
@@ -266,12 +289,12 @@
         "Becoming.not_tracks_of_alike",
         "Becoming.significance_courses_unselected"
       ],
-      "sha256": "d57b13c8e3c70283ae2acbb28e98f91c2f09bfe40b5e29de4f0b49edcff662fc"
+      "sha256": "c2d814f139ddb8e2b45de0f247be8bddf7458c7c7364e9340055f4df308ce3e1"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zb-beyond-coupling/NOTE.md",
       "role": "integration",
-      "sha256": "43a8e10152db41e1bb8f2e9eb3e51fc63377a5e0de0fb6a2047f0935b94b8c5d"
+      "sha256": "584e586ad1bcc02dd33c6a8eb590a0c33215b72764de460ed37e402a70cbf607"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zb-beyond-coupling/READER.md",
@@ -281,7 +304,12 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "e751adb8d88cc2b6a127ad00798623c7330f7d5817fae1172d65908d98e73f3f"
+      "sha256": "162d201d896f4ccb4b8a5ac5f58d2673ede529048b0b32091820df109e4b2411"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",
+      "role": "provenance",
+      "sha256": "fbcc4332efd9f6c3739111666ccd7e54476fa4a80f1020dfea6aa7428954c1dc"
     }
   ],
   "proof_bindings": [],

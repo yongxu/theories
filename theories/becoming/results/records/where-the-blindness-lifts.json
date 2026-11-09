@@ -10,8 +10,8 @@
   "family": "F04",
   "reviewed_at_utc": "2026-11-09T12:00:00+00:00",
   "statement": {
-    "en": "Some selection read off a group's continuations or couplings is turned by a difference exactly where it changes, at some step, what couples into a member; a loss beyond the closure turns one only once coupled in, through some member's continuation or gauged condition, and the direction stays open.",
-    "zh": "某个读自一组延续或耦合的选择恰在差异于某步改变耦合入某成员者处被它扭转；故耦合闭包外的失去只在经某成员之延续或所测条件被耦合入后才扭转此类选择，而耦合入不定方向。"
+    "en": "Every selection read off a group's continuations or couplings selects two histories alike exactly when they are alike through every member's couplings at every step; a member's differing continuation separates them. A loss beyond turns none until coupled in, and the direction stays open.",
+    "zh": "读自一组延续或耦合的每个选择对两段历史选得相同，恰当它们每步经每成员之耦合无别；某成员之延续有别则分开二者；闭包外的失去在被耦合入之前不扭转任何此类选择，而耦合入不定方向。"
   },
   "laws": [
     {
@@ -221,12 +221,12 @@
         "Becoming.Web.readOffCouplings_alike_iff",
         "Becoming.Web.separates_continuations"
       ],
-      "sha256": "d57b13c8e3c70283ae2acbb28e98f91c2f09bfe40b5e29de4f0b49edcff662fc"
+      "sha256": "c2d814f139ddb8e2b45de0f247be8bddf7458c7c7364e9340055f4df308ce3e1"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zb-beyond-coupling/NOTE.md",
       "role": "integration",
-      "sha256": "43a8e10152db41e1bb8f2e9eb3e51fc63377a5e0de0fb6a2047f0935b94b8c5d"
+      "sha256": "584e586ad1bcc02dd33c6a8eb590a0c33215b72764de460ed37e402a70cbf607"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zb-beyond-coupling/READER.md",
@@ -236,7 +236,12 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "e751adb8d88cc2b6a127ad00798623c7330f7d5817fae1172d65908d98e73f3f"
+      "sha256": "162d201d896f4ccb4b8a5ac5f58d2673ede529048b0b32091820df109e4b2411"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",
+      "role": "provenance",
+      "sha256": "fbcc4332efd9f6c3739111666ccd7e54476fa4a80f1020dfea6aa7428954c1dc"
     }
   ],
   "proof_bindings": [],
