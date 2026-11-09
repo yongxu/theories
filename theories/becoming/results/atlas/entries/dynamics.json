@@ -6033,7 +6033,8 @@
     ],
     "source": "theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule",
     "drops": [
-     "rulecapture-uniform"
+     "rulecapture-uniform",
+     "rulecapture-keeps"
     ]
    }
   ],
@@ -6091,7 +6092,8 @@
     "takes": [
      "rulecapture-raises",
      "rulecapture-readsshare",
-     "rulecapture-uniform"
+     "rulecapture-uniform",
+     "rulecapture-start-favours"
     ]
    },
    {
@@ -6109,7 +6111,8 @@
      "rulecapture-raises",
      "rulecapture-readsshare",
      "rulecapture-upper",
-     "rulecapture-locked"
+     "rulecapture-locked",
+     "rulecapture-keeps"
     ]
    },
    {
@@ -6288,7 +6291,7 @@
     "takes": [
      "rulecapture-raises",
      "rulecapture-readsshare",
-     "closedcapture-upper",
+     "rulecapture-upper",
      "closedcapture-accrues",
      "rulecapture-locked",
      "closedcapture-unread",
@@ -6314,10 +6317,11 @@
     "law": "Becoming.ClosedCapture.reading_absorbed",
     "takes": [
      "rulecapture-raises",
-     "closedcapture-upper",
+     "rulecapture-upper",
      "closedcapture-readmono",
      "closedcapture-readsshare",
-     "rulecapture-locked"
+     "rulecapture-locked",
+     "rulecapture-keeps"
     ]
    },
    {
@@ -6338,7 +6342,7 @@
     "takes": [
      "rulecapture-raises",
      "rulecapture-readsshare",
-     "grammarregularity-upper",
+     "rulecapture-upper",
      "closedcapture-accrues",
      "rulecapture-locked",
      "closedcapture-unread",
@@ -6349,8 +6353,9 @@
     "law": "Becoming.ClosedCapture.loss_ends_line",
     "takes": [
      "closedcapture-accrues",
-     "grammarregularity-turns",
-     "card-natural-number-amounts"
+     "closedcapture-turns",
+     "card-natural-number-amounts",
+     "rulecapture-start-favours"
     ]
    }
   ]
@@ -6394,7 +6399,7 @@
   "exits": [
    {
     "to": {
-     "en": "where the carriers are fewer than the others at the reading step at which the loss has reached its bound, the rule in force favouring the carriers, the course is not locked under the late pool at the next step; in the witness read from the start (one carrier to eight others), it is locked the other way from step 2 and the carriers' share falls from step 2 to step 3"
+     "en": "where the carriers are fewer than the others at the reading step at which the loss has reached its bound, the rule in force favouring the carriers, the course is not locked for good under the late pool from the next step on"
     },
     "law": "Becoming.ClosedCapture.Thinned.kept_iff",
     "edge": {
@@ -6406,8 +6411,8 @@
     ],
     "source": "theories/becoming/chapters/02-MAP.md#r-readers-drawn-from-the-selected",
     "drops": [
-     "closedcapture-drawn-pool",
-     "closedcapture-drawn-fv"
+     "closedcapture-drawn-fv",
+     "closedcapture-unread"
     ]
    }
   ],
@@ -6539,7 +6544,7 @@
     "takes": [
      "rulecapture-raises",
      "rulecapture-readsshare",
-     "closedcapture-upper"
+     "rulecapture-upper"
     ]
    },
    {
@@ -6860,7 +6865,8 @@
     "law": "Becoming.RuleShaping.grouped_rises_iff_sized",
     "takes": [
      "ruleshaping-grouped",
-     "ruleshaping-shaped"
+     "ruleshaping-shaped",
+     "ruleshaping-common"
     ]
    },
    {
@@ -6869,7 +6875,8 @@
      "ruleshaping-grouped",
      "ruleshaping-equal",
      "ruleshaping-alike",
-     "ruleshaping-shaped"
+     "ruleshaping-shaped",
+     "ruleshaping-varies"
     ]
    }
   ]
@@ -6921,7 +6928,9 @@
   },
   "exits": [
    {
-    "to": "loss-read-in-time-by-the-others",
+    "to": {
+     "en": "from a start the rule read there favours, the others reading the loss from step N, steps N and N + 1 reading: locked the other way under the late reading at every step from N + 2, exactly where the late reading favours the others (ties included) at the share of step N + 1"
+    },
     "law": "Becoming.ReadInTime.turned_early_iff",
     "edge": {
      "en": "Read the loss in time: with lo ≤ hi and lo' ≤ hi, the loss growing by one a step, from a start favouring the shapers, a reading, the next step reading too, turns the course for good exactly where the late reading still favours the others at the share a step on; once it would favour the shapers every later reading keeps the lock, at most one step lies between, and a deadline bounds the window."
@@ -6932,7 +6941,7 @@
     ],
     "source": "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
     "drops": [
-     "closedcapture-drawn-pool"
+     "closedcapture-unread"
     ]
    },
    {
@@ -7013,7 +7022,7 @@
       "en": "drawn one member at a time, at counts above the critical mass, where the rule read at count s favours the shapers"
      },
      "to": {
-      "en": "every shaper lost, the histories' weight, times the shapers' weights over s + 1 … s + n, at most t · down^n times the whole weight; below the mass, fixing them is bounded the other way"
+      "en": "every shaper lost, the histories' weight, times the shapers' weights over s + 1 … s + n, at most t · down^n times the whole weight"
      }
     }
    },
@@ -7150,7 +7159,7 @@
     "law": "Becoming.DrawnReplacement.fixation",
     "takes": [
      "drift-replacement-valueby",
-     "drawnreplacement-step"
+     "drawnshaping-step"
     ]
    },
    {
@@ -7169,14 +7178,14 @@
     "law": "Becoming.DrawnReplacement.lost_above",
     "takes": [
      "drift-replacement-valueby",
-     "drawnreplacement-step"
+     "drawnshaping-step"
     ]
    },
    {
     "law": "Becoming.DrawnReplacement.fixed_below",
     "takes": [
      "drift-replacement-valueby",
-     "drawnreplacement-step"
+     "drawnshaping-step"
     ]
    },
    {
@@ -7229,7 +7238,9 @@
   "forbids": null,
   "exits": [
    {
-    "to": "shaping-read-by-readers-drawn-from-the-selected",
+    "to": {
+     "en": "at a reading step r at which the loss has reached its bound, r + 1 reading too: locked the other way under the late reading (lo′ in place of lo) at every step from r + 2, exactly where the late reading favours the others at the share at r + 1"
+    },
     "law": "Becoming.ReadInTime.turned_iff",
     "edge": {
      "en": "Where every step adds at least one to the loss and lo' ≤ hi, at a reading step at which the loss has reached N and the late reading favours the others at the share there (ties included), the next step reading too, the course is locked the other way for good from two steps after the reading exactly where the late reading favours the others at the share of the next step; it can do so where control is selected (Window.in_time, a witness)."
@@ -7370,7 +7381,7 @@
    {
     "law": "Becoming.ReadInTime.late_never_falls",
     "takes": [
-     "readintime-step",
+     "drawnshaping-step",
      "readintime-readers",
      "closedcapture-drawn-pool",
      "ruleshaping-shaped",
@@ -7380,7 +7391,7 @@
    {
     "law": "Becoming.ReadInTime.kept_early_iff",
     "takes": [
-     "readintime-step",
+     "drawnshaping-step",
      "readintime-readers",
      "closedcapture-accrues",
      "closedcapture-thinned-losspool",
@@ -7392,7 +7403,7 @@
    {
     "law": "Becoming.ReadInTime.turned_early_iff",
     "takes": [
-     "readintime-step",
+     "drawnshaping-step",
      "readintime-readers",
      "closedcapture-accrues",
      "closedcapture-thinned-losspool",
@@ -7404,7 +7415,7 @@
    {
     "law": "Becoming.ReadInTime.in_time_earlier",
     "takes": [
-     "readintime-step",
+     "drawnshaping-step",
      "readintime-readers",
      "closedcapture-drawn-pool",
      "ruleshaping-shaped",
@@ -7414,7 +7425,7 @@
    {
     "law": "Becoming.ReadInTime.at_most_one_between",
     "takes": [
-     "readintime-step",
+     "drawnshaping-step",
      "closedcapture-drawn-pool",
      "ruleshaping-shaped",
      "rulecapture-carriercounts-select"
@@ -7434,7 +7445,7 @@
    {
     "law": "Becoming.ReadInTime.kept_once_favoured",
     "takes": [
-     "readintime-step",
+     "drawnshaping-step",
      "readintime-readers",
      "closedcapture-accrues",
      "closedcapture-thinned-losspool",
@@ -7453,7 +7464,7 @@
    {
     "law": "Becoming.ReadInTime.deadline",
     "takes": [
-     "readintime-step",
+     "drawnshaping-step",
      "readintime-readers",
      "closedcapture-accrues",
      "closedcapture-thinned-losspool",
@@ -7593,7 +7604,8 @@
     "takes": [
      "admission-withheldlevels",
      "k3-balance",
-     "identificationruns-valuesthrough"
+     "identificationruns-valuesthrough",
+     "testing-withincoupling"
     ]
    },
    {
@@ -7908,7 +7920,7 @@
     ],
     "source": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
     "drops": [
-     "rulecapture-readsshare"
+     "closedcapture-unread"
     ]
    }
   ],
@@ -8054,7 +8066,7 @@
    },
    {
     "to": {
-     "en": "every formation holds the imposed form at the sense at every later step, under every rule: hearing alone does not bring a merged distinction back"
+     "en": "leaving needs a formation holding a form other than the imposed one at the sense (or a coined form); without one, every formation holds the imposed form at the sense at every later step, under every rule"
     },
     "law": "Becoming.SharedCodes.outside_needed",
     "edge": {
@@ -8099,7 +8111,7 @@
    },
    {
     "to": {
-     "en": "in a witness of two formations from a symmetric disagreement, each of three laws (a centre both take, a preferred form, one hearing in order) brings the two to agree in one step"
+     "en": "in a witness of two formations from a symmetric disagreement, each of three laws brings the two to agree in one step: a centre both take and one hearing in order break the exchange symmetry and keep the renaming one, a preferred form breaks the renaming symmetry and keeps the exchange one"
     },
     "law": "Becoming.SharedCodes.TwoFormations.three_agree",
     "edge": {
@@ -8484,7 +8496,8 @@
      "countedcodes-moves",
      "countedcodes-every",
      "countedcodes-fixed",
-     "countedcodes-positive"
+     "countedcodes-positive",
+     "countedcodes-reaches"
     ]
    },
    {
@@ -8495,7 +8508,8 @@
      "countedcodes-moves",
      "countedcodes-every",
      "countedcodes-positive",
-     "card-pointwise-statements"
+     "card-pointwise-statements",
+     "countedcodes-reaches"
     ]
    },
    {
@@ -8737,9 +8751,7 @@
     "law": "Becoming.Flow.more_exhausted",
     "takes": [
      "k3-a-census",
-     "locality-runsdown",
-     "k3-balance",
-     "k3-dissipation"
+     "locality-runsdown"
     ]
    },
    {
@@ -8916,7 +8928,7 @@
   "exits": [
    {
     "to": {
-     "en": "the two worlds give the formation different sensed courses from the step after the first one at which they answer the act it takes, at the value it senses, differently"
+     "en": "the values the formation senses in the two worlds differ at the step after the first one at which the worlds answer the act it takes, at the value it senses, differently"
     },
     "law": "Becoming.ReadingLoop.sensed_alike_iff",
     "edge": {
@@ -9500,10 +9512,10 @@
     ],
     "between": {
      "from": {
-      "en": "repeated publication under the threshold response on 0, 1, 2 starting from 1, a prediction that is not right (the response to 1 is 2)"
+      "en": "publication under the threshold response on 0, 1, 2 starting at 0: it stays 0, itself right"
      },
      "to": {
-      "en": "the right prediction 2, published at every step from step one on; publication from 0, itself right, stays 0"
+      "en": "publication starting at 1 or above: it reaches the right prediction 2 after one step and stays there"
      }
     }
    },
@@ -9690,7 +9702,7 @@
   "exits": [
    {
     "to": {
-     "en": "with the stock coupled into the formation by level, any positive raise sets the webs apart through its couplings at every step: how far off the break is couples in"
+     "en": "with the stock coupled into the formation by level, any positive raise sets the webs apart through its couplings at every step: a raise of the stock couples in"
     },
     "law": "Becoming.Web.observed_raise_couples",
     "edge": {
@@ -11510,7 +11522,8 @@
      "selection-when-the-lumping-changes"
     ],
     "source": "theories/becoming/chapters/03-KNOWING.md#r-selection-when-the-lumping-changes",
-    "drops": []
+    "drops": [],
+    "to_law": "Becoming.OpenedCorrection.Linked.opens_after_replenishing"
    }
   ],
   "transitions": [

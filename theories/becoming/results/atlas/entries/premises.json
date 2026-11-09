@@ -338,7 +338,7 @@
    "en": "the continuation condition"
   },
   "statement": null,
-  "kind": "local hypothesis",
+  "kind": "ethics or practice",
   "lean": [
    "Becoming.Unrestricted"
   ],
@@ -356,7 +356,7 @@
    "en": "living significance"
   },
   "statement": null,
-  "kind": "local hypothesis",
+  "kind": "ethics or practice",
   "lean": [
    "Becoming.LivingSignificance"
   ],
@@ -374,7 +374,7 @@
    "en": "C, a requirement an order may meet"
   },
   "statement": null,
-  "kind": "local hypothesis",
+  "kind": "ethics or practice",
   "lean": [
    "Becoming.Comparison"
   ],
@@ -392,7 +392,7 @@
    "en": "L, lifting"
   },
   "statement": null,
-  "kind": "local hypothesis",
+  "kind": "ethics or practice",
   "lean": [
    "Becoming.LiftBetter"
   ],
@@ -627,9 +627,9 @@
    "en": "process"
   },
   "statement": {
-   "en": "admissible changes"
+   "en": "admissible changes (08 §4's standing: a view of the one unfolding)"
   },
-  "kind": "application obligation",
+  "kind": "dynamics and correspondence",
   "lean": [
    "Generative.Process"
   ],
@@ -646,9 +646,9 @@
    "en": "observables"
   },
   "statement": {
-   "en": "claims realized, levels, dependence and drawing correspond to actual histories"
+   "en": "claims realized, levels, dependence and drawing correspond to actual histories (08 §4's standing: an application obligation, a premise of no theorem)"
   },
-  "kind": "application obligation",
+  "kind": "dynamics and correspondence",
   "lean": [
    "Becoming.Frame.realized",
    "Becoming.Conditions"
@@ -666,9 +666,9 @@
    "en": "formation"
   },
   "statement": {
-   "en": "the lives and relations evaluated form within the unfolding"
+   "en": "the lives and relations evaluated form within the unfolding (08 §4's standing: an application obligation, a premise of no theorem)"
   },
-  "kind": "application obligation",
+  "kind": "dynamics and correspondence",
   "lean": [],
   "holds_in": [],
   "fails_in": [],
@@ -683,9 +683,9 @@
    "en": "connection"
   },
   "statement": {
-   "en": "living claims are joined through formed relations"
+   "en": "living claims are joined through formed relations (08 §4's standing: an application obligation, a premise of no theorem)"
   },
-  "kind": "application obligation",
+  "kind": "dynamics and correspondence",
   "lean": [
    "Becoming.Valuation.Connected"
   ],
@@ -702,9 +702,9 @@
    "en": "readings of living"
   },
   "statement": {
-   "en": "whole-run, stepwise, relation level"
+   "en": "whole-run, stepwise, relation level (08 §4's standing: a disclosed choice; none reads 生生 [AI reading, D1])"
   },
-  "kind": "application obligation",
+  "kind": "dynamics and correspondence",
   "lean": [
    "Becoming.Conditions.valuation",
    "Becoming.Web.valuation",
@@ -723,9 +723,9 @@
    "en": "held"
   },
   "statement": {
-   "en": "every living claim lies in some standpoint's own region"
+   "en": "every living claim lies in some standpoint's own region (08 §4's standing: reads what wants its continuation [AI reading, D11])"
   },
-  "kind": "application obligation",
+  "kind": "dynamics and correspondence",
   "lean": [
    "Becoming.Valuation.Held"
   ],
@@ -896,55 +896,17 @@
   "kind": "hypothesis of a law",
   "lean": [
    "Becoming.RuleCapture.locked_stays",
-   "Becoming.RuleCapture.perturbation_absorbed"
+   "Becoming.RuleCapture.perturbation_absorbed",
+   "Becoming.ClosedCapture.lock_outlives_loss",
+   "Becoming.ClosedCapture.reading_absorbed",
+   "Becoming.ClosedCapture.agreeing_stays",
+   "Becoming.ClosedCapture.lock_line"
   ],
   "holds_in": [
    "Becoming.RuleCapture.CarrierCounts.upper"
   ],
   "fails_in": [],
   "home": "theories/becoming/results/records/capture-through-the-rule.md#conditions--条件",
-  "seeded_from": [
-   "Lean"
-  ]
- },
- {
-  "id": "closedcapture-upper",
-  "name": {
-   "en": "favouring kept upward, in ClosedCapture"
-  },
-  "statement": {
-   "en": "a rule not lower than a favouring rule favours"
-  },
-  "kind": "hypothesis of a law",
-  "lean": [
-   "Becoming.ClosedCapture.lock_outlives_loss",
-   "Becoming.ClosedCapture.reading_absorbed",
-   "Becoming.ClosedCapture.agreeing_stays"
-  ],
-  "holds_in": [
-   "Becoming.RuleCapture.CarrierCounts.upper"
-  ],
-  "fails_in": [],
-  "home": "theories/becoming/results/records/closed-capture.md#conditions--条件",
-  "seeded_from": [
-   "Lean"
-  ]
- },
- {
-  "id": "grammarregularity-upper",
-  "name": {
-   "en": "favouring kept upward, in GrammarRegularity"
-  },
-  "statement": {
-   "en": "a rule not lower than a favouring rule favours"
-  },
-  "kind": "hypothesis of a law",
-  "lean": [
-   "Becoming.ClosedCapture.lock_line"
-  ],
-  "holds_in": [],
-  "fails_in": [],
-  "home": "theories/becoming/results/records/rules-that-change-themselves-in-the-grammar.md#conditions--条件",
   "seeded_from": [
    "Lean"
   ]
@@ -1055,32 +1017,14 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
-   "Becoming.ClosedCapture.turned_by_loss"
+   "Becoming.ClosedCapture.turned_by_loss",
+   "Becoming.ClosedCapture.loss_ends_line"
   ],
   "holds_in": [
    "Becoming.ClosedCapture.Beyond.lossRead_turns"
   ],
   "fails_in": [],
   "home": "theories/becoming/results/records/closed-capture.md#conditions--条件",
-  "seeded_from": [
-   "Lean"
-  ]
- },
- {
-  "id": "grammarregularity-turns",
-  "name": {
-   "en": "a reading that turns past a loss bound, in GrammarRegularity"
-  },
-  "statement": {
-   "en": "the rule read favours at no configuration whose loss (what lies beyond the share) is at least N"
-  },
-  "kind": "hypothesis of a law",
-  "lean": [
-   "Becoming.ClosedCapture.loss_ends_line"
-  ],
-  "holds_in": [],
-  "fails_in": [],
-  "home": "theories/becoming/results/records/rules-that-change-themselves-in-the-grammar.md#conditions--条件",
   "seeded_from": [
    "Lean"
   ]
@@ -1548,7 +1492,7 @@
    "en": "each kind of reader for its own, in DrawnShaping"
   },
   "statement": {
-   "en": "the shapers among the readers read at least as much coming back to the shapers as the others among them do (lo ≤ hi)"
+   "en": "lo ≤ hi: the shapers among the readers read at least as much coming back to the shapers as the others among them do"
   },
   "kind": "hypothesis of a law",
   "lean": [
@@ -1557,50 +1501,10 @@
    "Becoming.DrawnShaping.drawn_from_below",
    "Becoming.DrawnShaping.drawn_locked_either",
    "Becoming.DrawnShaping.drawn_rises",
-   "Becoming.DrawnShaping.drawn_falls"
-  ],
-  "holds_in": [
-   "Becoming.DrawnShaping.CriticalMass.even_locks"
-  ],
-  "fails_in": [
-   "Becoming.DrawnShaping.Against.not_locked"
-  ],
-  "home": "theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.md#conditions--条件",
-  "seeded_from": [
-   "Lean"
-  ]
- },
- {
-  "id": "drawnreplacement-step",
-  "name": {
-   "en": "each kind of reader for its own, in DrawnReplacement"
-  },
-  "statement": {
-   "en": "lo ≤ hi for the readings behind the chain's weights, so that the shapers' weight does not fall as their count grows"
-  },
-  "kind": "hypothesis of a law",
-  "lean": [
+   "Becoming.DrawnShaping.drawn_falls",
    "Becoming.DrawnReplacement.fixation",
    "Becoming.DrawnReplacement.lost_above",
-   "Becoming.DrawnReplacement.fixed_below"
-  ],
-  "holds_in": [],
-  "fails_in": [],
-  "home": "theories/becoming/results/records/drawn-shaping-drawn-one-at-a-time.md#conditions--条件",
-  "seeded_from": [
-   "Lean"
-  ]
- },
- {
-  "id": "readintime-step",
-  "name": {
-   "en": "each kind of reader for its own, in ReadInTime"
-  },
-  "statement": {
-   "en": "the shapers among the readers read at least as much coming back to the shapers as the others among them read before the loss reaches its bound (lo ≤ hi)"
-  },
-  "kind": "hypothesis of a law",
-  "lean": [
+   "Becoming.DrawnReplacement.fixed_below",
    "Becoming.ReadInTime.late_never_falls",
    "Becoming.ReadInTime.kept_early_iff",
    "Becoming.ReadInTime.turned_early_iff",
@@ -1610,10 +1514,13 @@
    "Becoming.ReadInTime.deadline"
   ],
   "holds_in": [
+   "Becoming.DrawnShaping.CriticalMass.even_locks",
    "Becoming.ReadInTime.Window.between"
   ],
-  "fails_in": [],
-  "home": "theories/becoming/results/records/loss-read-in-time-by-the-others.md#conditions--条件",
+  "fails_in": [
+   "Becoming.DrawnShaping.Against.not_locked"
+  ],
+  "home": "theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.md#conditions--条件",
   "seeded_from": [
    "Lean"
   ]
@@ -2764,9 +2671,7 @@
   "holds_in": [
    "Becoming.LumpedSeeking.Agree.ties"
   ],
-  "fails_in": [
-   "Becoming.LumpedSeeking.Agree.readBoth"
-  ],
+  "fails_in": [],
   "home": "theories/becoming/results/records/what-seeking-cannot-separate.md#laws--规律",
   "seeded_from": [
    "Lean"
@@ -2850,7 +2755,6 @@
    "Becoming.ReflexivePrediction.no_predictor_right"
   ],
   "holds_in": [
-   "Becoming.ReflexivePrediction.Negating.negate",
    "Becoming.ListTests.not_ne_self"
   ],
   "fails_in": [
@@ -4466,6 +4370,106 @@
   "holds_in": [],
   "fails_in": [],
   "home": "theories/becoming/results/records/a-reading-informed-and-revalued.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "rulecapture-keeps",
+  "name": {
+   "en": "the perturbed rule favours"
+  },
+  "statement": {
+   "en": "the rule a perturbation puts in force still favours"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.RuleCapture.perturbation_absorbed",
+   "Becoming.ClosedCapture.reading_absorbed"
+  ],
+  "holds_in": [],
+  "fails_in": [
+   "Becoming.RuleCapture.Reversed.not_absorbed"
+  ],
+  "home": "theories/becoming/results/records/capture-through-the-rule.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "rulecapture-start-favours",
+  "name": {
+   "en": "the rule at the start favours"
+  },
+  "statement": {
+   "en": "the rule in force at the start favours"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.RuleCapture.favouring_locks",
+   "Becoming.ClosedCapture.loss_ends_line"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/capture-through-the-rule.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "countedcodes-reaches",
+  "name": {
+   "en": "the belief at the free-energy bound"
+  },
+  "statement": {
+   "en": "the count belief meets the free-energy bound with equality for the weights over the listing"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.CountedCodes.minimizer_no_unique_greatest",
+   "Becoming.CountedCodes.shared_minimizer_no_unique_greatest"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-code-held-as-counts.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "ruleshaping-common",
+  "name": {
+   "en": "a common multiple of the group sizes"
+  },
+  "statement": {
+   "en": "every group times its weight comes to one positive common multiple n of the group sizes"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.RuleShaping.grouped_rises_iff_sized"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "ruleshaping-varies",
+  "name": {
+   "en": "shaping varies"
+  },
+  "statement": {
+   "en": "shaping varies across the whole: its concordance with itself is positive"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.RuleShaping.grouped_alike_iff"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.md#conditions--条件",
   "seeded_from": [
    "Lean"
   ]

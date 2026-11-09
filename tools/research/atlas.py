@@ -115,7 +115,7 @@ DYNAMIC_OPTIONAL = ('premises',)
 PARTS = {'hypotheses': ('record', 'index'), 'exits': ('to', 'law', 'edge', 'strength', 'records', 'source'),
          'transitions': ('kind', 'condition', 'declarations', 'records'), 'tests': ('path', 'thesis', 'state'),
          'open': ('en', 'source')}
-OPTIONAL = {'open': ('zh',), 'exits': ('drops',), 'transitions': ('between',)}
+OPTIONAL = {'open': ('zh',), 'exits': ('drops', 'to_law'), 'transitions': ('between',)}
 # The vocabulary's closed lists. A family is named by its letter (`id`), every other item by its `en`.
 LISTS = ('families', 'bases', 'transition_kinds', 'exit_strengths', 'standings_without_record', 'test_states', 'domains',
          'carried', 'relations', 'agreement_of', 'target_roles', 'group_kinds', 'source_bases')
@@ -516,6 +516,10 @@ def _dynamic(e, at: str, closed: dict, by_id: dict, repo: Repository, known) -> 
             fail(where + '.to', 'neither null, an entry id nor a text {en, zh}')
         if 'drops' in x:
             premised(where + '.drops', x['drops'])
+        if 'to_law' in x:
+            if not isinstance(to, str):
+                fail(where + '.to_law', 'only an exit to a dynamic names the law that places it there')
+            declared(where + '.to_law', [x['to_law']] if isinstance(x['to_law'], str) else x['to_law'])
         if x['law'] is not None and not (isinstance(x['law'], str) and x['law']):
             fail(where + '.law', 'neither null nor a declaration name')
         elif x['law'] is not None:
@@ -788,6 +792,8 @@ def _entry(d: dict, names: dict, homes: dict, here: str, premises: dict | None =
     for x in d['exits']:
         to = (f'[{names[x["to"]]}]({_section(x["to"], homes, here)})' if isinstance(x['to'], str)
               else 'a destination not yet read' if x['to'] is None else f'a state, in words: “{_line(x["to"])}”')
+        if x.get('to_law'):
+            to += f' (placed there by `{x["to_law"]}`)'
         law = f', by `{x["law"]}`' if x['law'] else ''
         recs = f' Records: {_standings(x["standing"], at)}.' if x['standing'] else ''
         drops = ''
@@ -801,7 +807,7 @@ def _entry(d: dict, names: dict, homes: dict, here: str, premises: dict | None =
         recs = f' Records: {_standings(t["standing"], at)}.' if t['standing'] else ''
         between = ''
         if t.get('between'):
-            ends = [f'[{names[v]}]({_section(v, homes, here)})' if isinstance(v, str) else 'not read' if v is None else _line(v)
+            ends = [f'[{names[v]}]({_section(v, homes, here)})' if isinstance(v, str) else '(an end not stated)' if v is None else _line(v)
                     for v in (t['between']['from'], t['between']['to'])]
             between = f' Between {ends[0]} and {ends[1]}.'
         transitions.append(f'{t["kind"]}: {_line(t["condition"])}{decls}.{between}{recs}')
@@ -842,8 +848,10 @@ def page(atlas: dict) -> str:
     taken = set(_headings(['The atlas of dynamics'] + [f'{f["id"]}. {f["en"]}' for f in families])) | {f'family-{f["id"].lower()}' for f in families}
     keep = {d['id']: _marks([d['id'], old[d['id']]], taken) for d in atlas['dynamics']}
     out = [GENERATED, '', '# The atlas of dynamics', '', _navigation(PAGE), '', _atlas_lead(ATLAS), '',
-           *([f'Read so far for their premises and where their exits lead (PLAN §13, step 2): the families whose dynamics all say '
-              f'so. Their premises are in [the premise ledger]({_href(PREMISES_PAGE)}), and the graph of their exits in '
+           *([f'Read so far for their premises and where their exits lead (PLAN §13, step 2): '
+              + ', '.join(f'family {f["id"]}' for f in families if all('premises' in d for d in atlas['dynamics'] if d['family'] == f['id'])
+                          and any(d['family'] == f['id'] for d in atlas['dynamics']))
+              + f'. Their premises are in [the premise ledger]({_href(PREMISES_PAGE)}), and the graph of their exits in '
               f'[the terrain]({_href(TERRAIN)}).', ''] if atlas.get('premises') else []),
            f'{len(atlas["dynamics"])} dynamics, by family. It is a catalogue to look things up in, not to read through: each '
            "family has a page, which opens with its index, and an entry's section there holds the rest.", '',
@@ -1248,6 +1256,16 @@ def _mermaid(text: str) -> str:
     return re.sub(r'["<>{}|\[\]#;`]', "'", ' '.join(text.split()))
 
 
+def _clip(text: str, n: int) -> str:
+    """At most n characters, cut at a word and with no parenthesis left open."""
+    if len(text) <= n:
+        return text
+    cut = text[:n].rsplit(' ', 1)[0]
+    if cut.count('(') > cut.count(')'):
+        cut = cut[:cut.rfind('(')].rstrip()
+    return cut.rstrip(',;:') + '…'
+
+
 def premises_page(atlas: dict) -> str:
     """PREMISES.md: the premise ledger, by kind: each premise, its statement and Lean, where it holds and fails, the
     laws that take it and the exits that drop it, all read off the entries."""
@@ -1271,11 +1289,17 @@ def premises_page(atlas: dict) -> str:
         return f'[{_cell(names[i])}]({_section(i, homes, PREMISES_PAGE)})'
 
     out = [GENERATED, '', '# The premise ledger', '', _navigation(PREMISES_PAGE), '',
-           '*AI-written, from the entries (PLAN §13, step 2). A premise here is a hypothesis a law takes or a commitment the '
-           'representation makes, named once, with the Lean that states it, where it is shown holding and failing, the laws '
-           'that take it and the exits that leave by dropping it. Every list is read off the entries at each render; none is '
-           'typed. A premise is no result and the ledger proves nothing; whether one holds of an actual system is never '
-           'established here.*', '',
+           '*AI-written, from the entries (PLAN §13, step 2). A premise here is a hypothesis a law takes, a commitment the '
+           'representation makes, or what applying a law to actual histories needs (08 §4), with the Lean that states it, where '
+           'it is shown holding and failing, the dynamics whose laws take it and the exits that leave by dropping it. Every list '
+           'is read off the entries at each render; none is typed. A premise is no result and the ledger proves nothing; whether '
+           'one holds of an actual system is never established here.*', '',
+           'How the lists are read. A law takes the hypotheses its Lean binders state, start and state conditions included, and '
+           'a premise it holds by its form (the joined laws of closed capture hold Unread by construction). One proposition '
+           'passed unchanged from law to law is one premise; one name with two senses (ReadsShare on the rule and on the '
+           'reading) is two. One commitment, discrete steps, is taken by every law read, each stated on natural-number steps, '
+           'and is listed on none; natural-number amounts is listed where a law\'s statement turns on the least unit. An exit '
+           'drops the premise its law shows failing as the course leaves.', '',
            f'{len(atlas.get("premises", []))} premises. The laws and exits read for them so far: '
            + (', '.join(f'family {f} ({n} dynamics)' for f, n in sorted(by_family.items())) or 'none') + '. '
            'Two premises with one name in different Lean modules are two premises. A premise whose statement is withheld is '
@@ -1336,7 +1360,9 @@ def terrain_page(atlas: dict) -> str:
            'sufficient one, and dashed for a witness (a constructed course that leaves, with no condition) or a necessary '
            'one (what leaving requires, not that it happens), each edge labelled with its strength. A route follows exits that name a dynamic; its '
            'weakest step is ranked exact, sufficient, witness, necessary, from the step that most establishes the route to '
-           'the one that least does. Nothing here ranks courses or says where a course should go.*', '']
+           'the one that least does. A route chains exits that name a dynamic without checking that one exit\'s destination '
+           'meets the next exit\'s conditions: it says where the stated exits point, not that a course goes there. Nothing here '
+           'ranks courses or says where a course should go.*', '']
     for f in atlas['vocabulary']['families']:
         listed = [d for d in atlas['dynamics'] if d['family'] == f['id']]
         if not listed or not all('premises' in d for d in listed):
@@ -1357,9 +1383,9 @@ def terrain_page(atlas: dict) -> str:
                     ends += 1
                     target = f'e{ends}'
                     label = _mermaid(_line(x['to'])) if x['to'] else 'not yet read'
-                    lines.append(f'  {target}(["{label[:70] + ("…" if len(label) > 70 else "")}"])')
+                    lines.append(f'  {target}(["{_clip(label, 70)}"])')
                 lines.append(f'  {node(d["id"])} {arrows[x["strength"]]}|{x["strength"]}| {target}')
-        decl = [f'  {n}["{_mermaid(names[i])[:60]}"]' + (':::other' if i not in ids else '') for i, n in nodes.items()]
+        decl = [f'  {n}["{_clip(_mermaid(names[i]), 60)}"]' + (':::other' if i not in ids else '') for i, n in nodes.items()]
         out += [f'## {f["id"]}. {f["en"]}', '', f'{len(listed)} dynamics, {sum(len(d["exits"]) for d in listed)} exits.', '',
                 '```mermaid', 'flowchart LR', *decl, *lines, '  classDef other stroke-dasharray: 3 3', '```', '',
                 '| Dynamic | Leaves to | Reaches by named exits (weakest step) |', '|---|---|---|']
@@ -1369,7 +1395,8 @@ def terrain_page(atlas: dict) -> str:
                 to = (f'[{_cell(names[x["to"]])}]({_section(x["to"], homes, TERRAIN)})' if isinstance(x['to'], str)
                       else 'not yet read' if x['to'] is None else _cell(_line(x['to'])))
                 drop = (' dropping ' + ', '.join(_premise_link(p, premises, ATLAS) for p in x['drops'])) if x.get('drops') else ''
-                leaves.append(f'{i}. {to} ({x["strength"]}{drop})')
+                tag = '' if x['strength'] == 'witness' and isinstance(x['to'], dict) and _line(x['to']).endswith('(a witness)') else x['strength']
+                leaves.append(f'{i}. {to} (' + '; '.join(p for p in (tag, drop.strip()) if p) + ')')
             reach = ', '.join(f'[{_cell(names[t])}]({_section(t, homes, TERRAIN)}) ({w})' for t, w in sorted(routes[d['id']].items()))
             out.append(f'| [{_cell(names[d["id"]])}]({_section(d["id"], homes, TERRAIN)}) | '
                        + ('<br>'.join(leaves) or '**none: no exit is stated**') + f' | {reach or "—"} |')

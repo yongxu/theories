@@ -679,6 +679,12 @@ class PremiseTests(AtlasCase):
         self.assertIn('`Becoming.ClosedCapture.turned_by_loss`: [Unread](../PREMISES.md#closedcapture-unread)', family)
         self.assertIn('[the premise ledger](PREMISES.md)', pages[atlas.PAGE])
 
+    def test_only_an_exit_to_a_dynamic_names_the_law_placing_it(self):
+        placed = carriers(family='G', exits=[exit_(to='closed-capture', to_law='Becoming.ClosedCapture.turned_by_loss')])
+        self.assertEqual(self.check([self.read(), placed], [premise()]), [])
+        loose = self.read(exits=[exit_(drops=['closedcapture-unread'], to_law='Becoming.ClosedCapture.turned_by_loss')])
+        self.assertOne(self.check([loose], [premise()]), 'exits[0].to_law', 'only an exit to a dynamic')
+
     def test_routes_keep_their_strongest_weakest_step(self):
         a = {'dynamics': [{'id': 'a', 'exits': [{'to': 'b', 'strength': 'exact'}, {'to': 'c', 'strength': 'witness'}]},
                           {'id': 'b', 'exits': [{'to': 'c', 'strength': 'sufficient'}]},
