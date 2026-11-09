@@ -19,6 +19,7 @@ CH07 = "theories/becoming/chapters/07-SIGNIFICANCE.md"
 STUDY = "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zc-own-class"
 NOTE = f"{STUDY}/NOTE.md"
 REVIEW = f"{STUDY}/COLD-READ.md"
+SOURCE = "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md"
 RECORDS = ROOT / "theories/becoming/results/records"
 
 
@@ -39,7 +40,8 @@ def receipt_refs(ts):
 def common_refs(decls):
     refs = [{"path": MODULE, "role": "proof", "declarations": sorted(decls), "sha256": sha(MODULE)},
             {"path": CH07, "role": "statement", "sha256": sha(CH07)},
-            {"path": NOTE, "role": "provenance", "sha256": sha(NOTE)}]
+            {"path": NOTE, "role": "provenance", "sha256": sha(NOTE)},
+            {"path": SOURCE, "role": "provenance", "sha256": sha(SOURCE)}]
     if (ROOT / REVIEW).exists():
         refs.append({"path": REVIEW, "role": "review", "sha256": sha(REVIEW)})
     return refs

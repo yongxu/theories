@@ -57,6 +57,9 @@ The theorem text of §4.8, the module docstring's bullets and both records' `law
 
 ## What was done (AI-written, the author)
 
+The section the reader calls §4.8 became §4.10 after the read, since G1 holds §4.8 and G3 §4.9. Nothing in it changed with the number.
+
+
 Every finding was taken, in 07 §4.8, the module's docstring, the note and the records:
 
 1. The sentence is replaced by the reader's form, granted P2, citing `«本类常则闭当且仅当所及即一之所及»` and `«后类»`. The step's study's "privileged relation" is now called a reading.

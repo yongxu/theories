@@ -553,7 +553,7 @@ P2 excludes the organism, does not exclude the intended self and is no test of t
 5. Does a loss counted on one's own line count as the other's, and can a scope that follows occurrences count what never occurs on the course taken?
 
 <a id="own-class"></a>
-### 4.8 Which class is one's own: what the net fixes
+### 4.10 Which class is one's own: what the net fixes
 
 §4.6's path asks two things of the class of one's line at oneself, P2 and P4, and §4.7 argues whether P4 holds. This section asks the question before them, the de se question of the [Open](#open) list on the root: of the classes meeting P2 and P4 at a center, does the net fix one? It also reads the class on a flow, as what a formation can represent.
 

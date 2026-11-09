@@ -1,6 +1,6 @@
 # ZC: a center's own class, what the net fixes (route (b), G2 with G5)
 
-AI-written (Claude Opus 5.5, a side session of the zero-axiom reading), 9 November 2026. Board row ZC. Ren's words for route (b) ("ok - 这一类请平行化认真完成，非常重要") are kept with route (b)'s first landing in `sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md`. The Lean is [`Becoming.OwnClass`](../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OwnClass.lean). Its home is 07 §4.8, and its records are `what-the-net-fixes-of-ones-own-class` and `the-own-class-read-on-a-flow`.
+AI-written (Claude Opus 5.5, a side session of the zero-axiom reading), 9 November 2026. Board row ZC. Ren's words for route (b) ("ok - 这一类请平行化认真完成，非常重要") are kept with route (b)'s first landing in `sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md`. The Lean is [`Becoming.OwnClass`](../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OwnClass.lean). Its home is 07 §4.10, and its records are `what-the-net-fixes-of-ones-own-class` and `the-own-class-read-on-a-flow`.
 
 ## 1. The question
 
@@ -15,7 +15,7 @@ The zero-axiom readings of 9 November (`/Users/ren/tmp/za-how-far/`) named this 
 
 ## 2. What holds
 
-**The conjecture is false for P2 and P4 together. It is true of P2 alone.**
+**The conjecture is false for P2 and P4 together. Its prediction that meets fail holds of P2 alone; whether P2 alone is closed under joins is not checked.**
 
 1. *P2 ∧ P4 is one closure.* At an `m` that conditions something, P2 ∧ P4 ⟹ the block `E m` is closed under `R`. This is `«本类常闭则所缘同类»` (GrammarPath) read as a region. Conversely, if the block is closed, P4 is its case at `m`. P2 holds wherever it is decided, of each alike occurrence, whether it conditions something: if `u'` conditions some `w`, then `w` lies in the block, and so does `v`, so `w` serves as the witness `v'`. The decision is needed because P2 is a disjunction, and the core uses no classical principle. (`«本类常闭则类闭»`, `«类闭则本类常闭»`, `«本类常闭当且仅当类闭»`.)
 2. *Closed under meets.* The ∀∃ in P2 is defeated by P4. Under P4 every effect of an alike occurrence lies in the block of every class in the family, so the witness that one class's P2 gives serves the meet. That witness is used only to decide whether `u'` conditions anything. This holds for binary meets (`«本类常闭之交»`) and for meets of any family with a member (`«本类常闭之遍交»`). The family needs a member because the empty meet is the one, and the one meets P2 only where the decision is available.
@@ -48,4 +48,4 @@ On a flow, take `R = L.Affects W` and the class `Flow.CouplingClass L W obs f :=
 
 ## 5. Cold read
 
-Claude Fable read the Lean, 07 §4.8, this note and the two record drafts cold, before landing ([COLD-READ.md](COLD-READ.md), with the full report and what was done for each finding). It found the theorem text and the records' laws exact. It found six substantive faults in the Readings. One was a false sentence: a self narrower than the one need not fail P4, and only a self whose forward reach is narrower does, given P2. The others were "the net fixes it" for what fixes only the least class and the reach; `«后类»`'s P2 stated without its premise; P2 presupposed in "nothing left but P4"; `couplingClass_closed`'s premise dropped; and the loop equated with "what it depends on" where it lies within the influence closure. All thirteen findings were taken. One lemma was added: `«判则后类本类常闭»`.
+Claude Fable read the Lean, 07 §4.10, this note and the two record drafts cold, before landing ([COLD-READ.md](COLD-READ.md), with the full report and what was done for each finding). It found the theorem text and the records' laws exact. It found six substantive faults in the Readings. One was a false sentence: a self narrower than the one need not fail P4, and only a self whose forward reach is narrower does, given P2. The others were "the net fixes it" for what fixes only the least class and the reach; `«后类»`'s P2 stated without its premise; P2 presupposed in "nothing left but P4"; `couplingClass_closed`'s premise dropped; and the loop equated with "what it depends on" where it lies within the influence closure. All thirteen findings were taken. One lemma was added: `«判则后类本类常闭»`.
