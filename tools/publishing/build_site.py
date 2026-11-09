@@ -52,7 +52,7 @@ SAFE_SCHEMES = {'http', 'https', 'mailto'}  # any other scheme (javascript:, dat
 # Attributes a raw tag may keep; everything else (handlers, style, srcdoc, formaction) is dropped.
 SAFE_ATTRS = {'href', 'src', 'id', 'name', 'alt', 'title', 'class', 'align', 'colspan', 'rowspan', 'start', 'open', 'width',
               'height', 'lang'}
-MAX_PAGE = 2_000_000  # bytes of one built page; the connection map, which carries its data inline, is exempt
+MAX_PAGE = 2_000_000  # bytes of one built page; the connection map, which carries its data inline, has MAP_MAX instead
 STATUS_MARK = {'recorded-checked': 'Lean receipt', 'reviewed-scoped': 'reviewed at its scope', 'open': 'open target',
                'superseded': 'superseded', 'withdrawn': 'withdrawn'}
 RECORDS = 'theories/becoming/results/records/'
@@ -72,9 +72,16 @@ FAVICON = ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect wi
 RESULT_ANCHOR = re.compile(r'<a\b[^<>]*\b(?:id|name)="(r-[^"]+)"[^<>]*></a>')
 # What the site's own markup says to a reader (labels read aloud, titles shown on hover), in the page's language.
 SAY_EN = {'here': 'Link to this section', 'back': 'Back', 'nolink': 'Not in the public repository',
-          'picture': 'Open the picture at full size', 'pages': 'Pages', 'search': 'Search', 'contents': 'Contents', 'chapters': 'Chapters'}
+          'picture': 'Open the picture at full size', 'pages': 'Pages', 'search': 'Search', 'contents': 'Contents', 'chapters': 'Chapters',
+          'skip': 'Skip to the text', 'ways': 'Ways in ↓', 'stated': 'stated in'}
 SAY_ZH = {'here': '本节的链接', 'back': '返回', 'nolink': '不在公开的仓库中', 'picture': '打开原尺寸的图',
-          'pages': '页面', 'search': '搜索', 'contents': '目录', 'chapters': '章节'}
+          'pages': '页面', 'search': '搜索', 'contents': '目录', 'chapters': '章节', 'skip': '跳到正文', 'ways': '从哪里读起 ↓',
+          'stated': '见于'}
+MAP_MAX = 8_000_000  # bytes of the connection map, which MAX_PAGE exempts: past this its growth fails the build
+CJK_RUN = re.compile(r'[　-〿㐀-䶿一-鿿豈-﫿！-｠]+')  # Han, CJK and full-width marks
+TEX_SUB = re.compile(r'\$([A-Za-z])_\{?(\d{1,2})\}?\$')  # $V_4$: a letter with a numeric subscript, as GitHub's math shows it
+THESIS_LINE = re.compile(r'^\*\*Thesis (T\d+[a-z]?)\.\*\*\s*\*([^*]+)\*')  # 02's '**Thesis T7.** *name*', under <a id="t7">
+KEPT_FOR_LINKS = 'kept so that links to it resolve'  # a page that says so is a former page, ranked as a former id is
 
 
 class SiteError(Exception):
@@ -229,6 +236,7 @@ class Page:
         self.first_heading = None
         self.toc = []  # (level, id, plain text) of each heading
         self.anchors, self.marked = set(), set()  # result anchors seen, and those given their record's mark
+        self.pending = set()  # ids an <a id> line just gave, which the heading right under it does not give again
         text = strip_comments(text)
         self.lang = 'zh' if path.endswith('.zh.md') or cjk_share(text) > 0.3 else 'en'  # before the blocks: their labels follow it
         self.say = SAY_ZH if self.lang == 'zh' else SAY_EN
@@ -274,13 +282,17 @@ class Page:
         base = reading_catalogue.slug(text)
         n = self.slugs.get(base, 0)
         self.slugs[base] = n + 1
-        ident = self._id(base if not n else f'{base}-{n}')
+        ident = base if not n else f'{base}-{n}'
+        given = ident in self.pending  # an <a id> line right above already gives this id: one element has it, as HTML asks
+        self.pending = set()
+        self._id(ident)
         if level == 1 and self.title is None:
             self.title = plain_title(text)
         if self.first_heading is None:
             self.first_heading = plain_title(text)
         self.toc.append((level, ident, plain_title(text)))
-        return f'<h{level} id="{html.escape(ident)}">{self.inline(text)}<a class="here" href="#{html.escape(ident)}" aria-label="{self.say["here"]}">#</a></h{level}>'
+        attr = '' if given else f' id="{html.escape(ident)}"'
+        return f'<h{level}{attr}>{self.inline(text)}<a class="here" href="#{html.escape(ident)}" aria-label="{self.say["here"]}">#</a></h{level}>'
 
     def _record_mark(self, ident):
         rid = ident[2:]
@@ -302,12 +314,17 @@ class Page:
         def flush():
             nonlocal para
             if para:
-                out.append(f'<p>{self.inline(join_lines(para))}</p>')
+                inner = self.inline(join_lines(para))
+                whole = inner.startswith('<em>') and inner.endswith('</em>') and inner.count('<em>') == 1
+                out.append(f'<p class="em">{inner}</p>' if whole else f'<p>{inner}</p>')  # a paragraph wholly in italics: a note
                 para = []
+                self.pending = set()
 
         while i < len(lines):
             line = lines[i]
             stripped = line.strip()
+            if stripped and not re.match(r'\s*(?:<a\s+(?:id|name)=|#{1,6}\s)', line):
+                self.pending = set()  # an id given above a block that is not a heading stays that block's alone
             fence = re.match(r'^(\s*)(```+|~~~+)\s*([\w+-]*)', line)
             if fence:
                 flush()
@@ -324,9 +341,15 @@ class Page:
             anchors = re.fullmatch(r'\s*((?:<a\s+(?:id|name)="[^"]+"\s*>\s*</a>\s*)+)', line)
             if anchors:
                 flush()
+                nxt = next((l for l in lines[i + 1:] if l.strip()), '')
                 for ident in re.findall(r'<a\s+(?:id|name)="([^"]+)"', anchors.group(1)):
+                    if ident not in self.ids:  # an id the page already gives (a title's) is not given twice
+                        out.append(f'<a id="{html.escape(ident)}"></a>')
+                        self.pending.add(ident)
                     self._id(ident)
-                    out.append(f'<a id="{html.escape(ident)}"></a>')
+                    thesis = THESIS_LINE.match(nxt) if re.fullmatch(r't\d+[a-z]?', ident) else None
+                    if thesis:  # a thesis is found by the search as a section is: 'Thesis T7: its name'
+                        self.toc.append((4, ident, f'Thesis {thesis.group(1)}: {plain_title(thesis.group(2))}'))
                     if ident.startswith('r-'):
                         self.anchors.add(ident)
                         mark = self._record_mark(ident)
@@ -403,6 +426,10 @@ class Page:
                     items[-1].append('')
                     i += 1
                     continue
+                sibling = re.match(r'^(\s*)([-*+]|\d+[.)])\s+', nxt)
+                if sibling and len(sibling.group(1).expandtabs(4)) == base and sibling.group(2)[0].isdigit() == ordered:
+                    i += 1  # a blank line before the next item of the same list keeps the list one list, as on GitHub
+                    continue
                 break
             indent = len(line) - len(line.lstrip(' '))
             if indent > base and items:
@@ -447,15 +474,29 @@ class Page:
             rows.append(split_row(lines[i]))
             i += 1
         longest = max(sum(len(plain_title(c)) for c in r) for r in [head] + rows)
-        wide = len(head) >= WIDE_COLUMNS or (len(head) >= 3 and longest >= WIDE_ROW)
         prose = max(sum(len(plain_title(c)) > 40 for c in r) for r in rows) if rows else 0
+        # wider than the text where its rows hold prose in two cells or more; one long cell a row (a glossary's sense) reads
+        # better at the text's measure than across the page
+        wide = len(head) >= WIDE_COLUMNS or (len(head) >= 3 and longest >= WIDE_ROW and prose >= 2)
+        glossary = posixpath.basename(self.path) in ('GLOSSARY.md', 'GLOSSARY.zh.md')
         stack = len(head) >= 3 and longest >= STACK_ROW and prose >= 2  # rows of prose stack; short numeric cells scroll
         labels = [plain_title(c) for c in head] if stack else []
 
         def cell(tag, c, k):
             a = align[k] if k < len(align) and align[k] else ''
             label = f' data-label="{html.escape(labels[k])}"' if tag == 'td' and k < len(labels) and labels[k] else ''
-            return f'<{tag}{label}' + (f' style="text-align:{a}"' if a else '') + f'>{self.inline(c)}</{tag}>'
+            term = ''
+            if glossary and tag == 'td' and k == 0 and plain_title(c):  # a glossary's term can be linked to and searched for
+                name = plain_title(c).split(' (')[0].split('（')[0].strip()
+                base = 'term-' + (reading_catalogue.slug(name) or slug_id(name))  # its own prefix: no heading's anchor moves
+                ident, n = base, 1
+                while ident in self.ids:
+                    n += 1
+                    ident = f'{base}-{n}'
+                self._id(ident)
+                self.toc.append((4, ident, plain_title(c)))
+                term = f' id="{html.escape(ident)}"'
+            return f'<{tag}{term}{label}' + (f' style="text-align:{a}"' if a else '') + f'>{self.inline(c)}</{tag}>'
         kinds = 'table' + (' wide' if wide else '') + (' stack' if stack else '')
         t = f'<div class="{kinds}"><table><thead><tr>' + ''.join(cell('th', c, k) for k, c in enumerate(head)) + '</tr></thead><tbody>'
         for r in rows:
@@ -472,7 +513,11 @@ class Page:
         for name in order:
             body = self.footnotes[name]
             ident = self._id(f'fn-{slug_id(name)}')
-            items.append(f'<li id="{ident}">{self.inline(body)} <a class="back" href="#fnref-{slug_id(name)}" aria-label="{self.say["back"]}">↩</a></li>')
+            # a way back to each place that calls the note, as GitHub gives: ↩ to the first, ↩2 to the second
+            backs = ' '.join(f'<a class="back" href="#fnref-{slug_id(name)}{f"-{k}" if k > 1 else ""}" '
+                             f'aria-label="{self.say["back"]}{f" {k}" if k > 1 else ""}">↩{k if k > 1 else ""}</a>'
+                             for k in range(1, max(1, self.fn_refs.get(name, 1)) + 1))
+            items.append(f'<li id="{ident}">{self.inline(body)} {backs}</li>')
         return '\n<section class="footnotes"><ol>' + ''.join(items) + '</ol></section>'
 
     # -- inline
@@ -495,8 +540,7 @@ class Page:
                        lambda m: hold(self._a(m.group(2), self.inline_text(m.group(1), keep))), t)
             t = re.sub(r'\[((?:[^\[\]]|\x00\d+\x00)+)\]\[([^\]]*)\]',
                        lambda m: hold(self._ref(m.group(1), m.group(2), keep)), t)
-        t = html.escape(t, quote=False)
-        t = emphasis(t)
+        t = self.marked_up(html.escape(t, quote=False))
         t = re.sub(r'(?: {2,}|\\)\n', '<br>', t)
         for _ in range(4):
             if '\x00' not in t:
@@ -506,7 +550,15 @@ class Page:
 
     def inline_text(self, text, keep):
         """A link's text: escaped and emphasized, placeholders kept for the outer pass."""
-        return emphasis(html.escape(text, quote=False))
+        return self.marked_up(html.escape(text, quote=False))
+
+    def marked_up(self, t):
+        """Escaped text with its marks: a lone $X_n$ as GitHub's math shows it, emphasis, and on a page in English each run
+        of Chinese said to be Chinese, so that it is read aloud as Chinese."""
+        t = emphasis(TEX_SUB.sub(r'\1<sub>\2</sub>', t))
+        if self.lang == 'en':
+            t = CJK_RUN.sub(lambda m: f'<span lang="zh-Hans">{m.group(0)}</span>', t)
+        return t
 
     def _ref(self, text, ref, keep):
         key = (ref or re.sub(r'\x00\d+\x00', '', text)).lower()
@@ -839,7 +891,18 @@ def pushed_note(pushed, zh=False):
     return ''
 
 
-def template(page_path, title, body, lang, cfg, commit, date, nav_html, source_href, home=False, dirty=False, base=None, pushed=True):
+def nav_label(cfg, page_path, zh):
+    """The navigation line's name for a page, where the line names it (a language link's label is no page's name)."""
+    for target, label in cfg.get('nav_zh' if zh and cfg.get('nav_zh') else 'nav', []):
+        if target == page_path and label not in LANGUAGE_LINKS:
+            return label
+    return None
+
+
+def template(page_path, title, body, lang, cfg, commit, date, nav_html, source_href, home=False, dirty=False, base=None, pushed=True,
+             said=''):
+    """A page: `said` is its own lead (the search's), which describes it where a link to it is shown; else the site's
+    description does."""
     root = root_prefix(page_path)
     zh = lang == 'zh'
     say = SAY_ZH if zh else SAY_EN
@@ -851,7 +914,13 @@ def template(page_path, title, body, lang, cfg, commit, date, nav_html, source_h
         name, description = cfg.get('title_zh') or name, cfg.get('description_zh') or description
         if 'README.zh.md' in cfg.get('pages', []):
             home_href = root + out_path('README.zh.md')
-    head_title = name if home or title == name else f'{title} · {name}'  # a page named as the site is, the name once
+    zh_home = page_path == 'README.zh.md'
+    # a page named as the site is: the name once on a home, and the navigation line's name for it before the name elsewhere
+    # (the overview, so that its tab is not the home's)
+    label = None if home or zh_home or title != name else nav_label(cfg, page_path, zh)
+    head_title = name if home or (title == name and not label) else f'{label or title} · {name}'
+    description = said or description
+    kind = 'home' if home else 'page' + (' home-zh' if zh_home else '')
     changed = ', with local paths and words true only off the site changed at build' if cfg.get('rewrites') else ''
     tree, repo = f"https://github.com/{cfg['repository']}/tree/{commit}", f"https://github.com/{cfg['repository']}"
     if zh:  # a Chinese page's footer says the same in Chinese
@@ -872,13 +941,17 @@ def template(page_path, title, body, lang, cfg, commit, date, nav_html, source_h
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{html.escape(head_title)}</title>
 <meta name="description" content="{html.escape(description)}">
+<meta property="og:title" content="{html.escape(head_title)}">
+<meta property="og:description" content="{html.escape(description)}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{html.escape(name)}">
 {f'<base href="{html.escape(base)}">' + chr(10) if base else ''}<link rel="stylesheet" href="{css}">
 <link rel="icon" href="{root}assets/favicon.svg" type="image/svg+xml">
 <script src="{root}assets/search.js" data-root="{root}" defer></script>
 </head>
-<body class="{'home' if home else 'page'} lang-{lang}">
-<header class="top"><a class="brand" href="{home_href}">{html.escape(name)}</a>{nav_html}<button class="find" type="button" hidden>{say['search']}</button></header>
-<main>
+<body class="{kind} lang-{lang}">
+{'' if base else f'<a class="skip" href="#main">{say["skip"]}</a>' + chr(10)}<header class="top"><a class="brand" href="{home_href}">{html.escape(name)}</a>{nav_html}<button class="find" type="button" hidden>{say['search']}</button></header>
+<main id="main">
 {body}
 </main>
 <footer><p>{footer}</p></footer>
@@ -909,14 +982,17 @@ LANGUAGE_LINKS = {'中文': 'zh-Hans', 'English': 'en'}  # a navigation entry of
 
 def nav(cfg, page_path, pages, lang='en'):
     """The site's navigation line: on a page in Chinese its Chinese line, and the language link goes to this page's own
-    other edition where it has one. The language link stands after the line, outside it, so that it shows at every width
-    (between a phone's width and a wide screen the line scrolls sideways and fades at its end)."""
+    other edition where it has one, and a Chinese page with no English edition sends 'English' to the English home. The
+    language link stands after the line, outside it, so that it shows at every width (where the line does not fit on one
+    line it wraps, every item in reach)."""
     items, language = [], []
     zh = lang == 'zh' or page_path.endswith('.zh.md')
     other = edition(page_path, pages)
     for target, label in cfg.get('nav_zh' if zh and cfg.get('nav_zh') else 'nav', []):
         if label in LANGUAGE_LINKS and other:
             target = other
+        elif LANGUAGE_LINKS.get(label) == 'en' and page_path != 'index.html':
+            target = 'index.html'  # a Chinese page with no English edition: its 'English' goes to the English home
         if target not in pages and target not in SPECIAL:
             raise SiteError('site.nav names a page not in site.pages: ' + target)
         built = target if target in SPECIAL else out_path(target)
@@ -990,7 +1066,7 @@ def arrange_first_screen(blocks):
         k += 1
         if block.startswith('<p><a class="picture"'):
             pictures.append(block)
-            if k < len(blocks) and blocks[k].startswith('<p><em>'):
+            if k < len(blocks) and blocks[k].startswith(('<p><em>', '<p class="em"><em>')):
                 pictures.append(blocks[k])
                 k += 1
         elif not start and 'Start with' in strip_tags(block):
@@ -1013,8 +1089,10 @@ def home_body(cfg, links, recs, root, files, rules=()):
         if href is None:
             raise SiteError('site.ways_in names a path not in the repository: ' + target)
         zh = ''
-        if w.get('zh'):
-            zh_href = links.resolve(w['zh'], 'README.md')
+        # a card's Chinese: the one `zh` names, or else its page's Chinese edition where the site has one
+        zh_target = w.get('zh') if 'zh' in w else edition(target.split('#')[0], links.pages)
+        if zh_target and zh_target not in SPECIAL:
+            zh_href = links.resolve(zh_target, 'README.md')
             zh = f' <a class="zh" href="{html.escape(zh_href)}" lang="zh-Hans">中文</a>' if zh_href else ''
         cards.append(f'<li><a class="card" href="{html.escape(href)}"><span class="label">{html.escape(w["label"])}</span>'
                      + (f'<span class="time">{html.escape(time)}</span>' if time else '')
@@ -1028,8 +1106,12 @@ def home_body(cfg, links, recs, root, files, rules=()):
         grouped[g].append(c)
     body = ''.join((f'<h3 class="group">{html.escape(g)}</h3>' if g else '') + '<ul class="cards">' + ''.join(grouped[g]) + '</ul>'
                    for g in order)
+    # the hero ends with a way down to the cards, which a reader past "Start with" would otherwise not know are there
+    parts[0] = parts[0][:-len('</section>')] + f'<p class="ways-link"><a href="#ways-in">{page.say["ways"]}</a></p></section>'
     if pictures:  # the picture right after the first screen's words, above the cards, where a reader still is
-        parts.append('<section class="picture">' + '\n'.join(pictures) + '</section>')
+        full = re.search(r'<a class="picture" href="([^"]+)"', pictures[0])
+        open_link = (f'<p class="open"><a href="{full.group(1)}">{page.say["picture"]}</a></p>' if full else '')  # said, not only hovered
+        parts.append('<section class="picture">' + pictures[0] + open_link + '\n'.join([''] + pictures[1:]) + '</section>')
     parts.append('<section class="ways"><h2 id="ways-in">Ways in</h2>' + body + '</section>')
     return '\n'.join(parts), page.lang
 
@@ -1162,18 +1244,20 @@ def shared_paragraphs(bodies):
     return frozenset(text for text, pages in seen.items() if pages > LEAD_SHARED)
 
 
-def search_index(built, recs, home=None):
-    """What the site's search reads: each page's title, headings and lead, each result's name and its record's lead (a record
-    page, its status said, its id and Chinese title findable too), and `home`, the home's entry, first. A page kept only so
-    that a former id's links resolve is marked (`f`), for the search to rank it below every current name, and its lead is not
-    read. A paragraph that more than LEAD_SHARED pages open with alike (shared_paragraphs) is no page's lead. Only pages built
-    go in; a record's Chinese title, from its public JSON, is findable even where its page does not show it."""
-    shared = shared_paragraphs([page.html for page in built.values()])
+def search_index(built, recs, home=None, extra=(), shared=None):
+    """What the site's search reads: each page's title, headings and lead (its headings including a thesis's anchor and a
+    glossary's terms, which Page puts with them), each result's name and its record's lead (a record page, its status said,
+    its id and Chinese title findable too), and `home`, the home's entry, first, then `extra` (the connection map's). A page
+    kept only so that a former id's links resolve, or one that says it is kept so that links to it resolve, is marked (`f`),
+    for the search to rank it below every current name, and its lead is not read. A paragraph that more than LEAD_SHARED
+    pages open with alike (shared_paragraphs) is no page's lead. Only pages built go in; a record's Chinese title, from its
+    public JSON, is findable even where its page does not show it."""
+    shared = shared_paragraphs([page.html for page in built.values()]) if shared is None else shared
 
     def with_lead(entry, body):
         said = lead(body, shared)
         return dict(entry, l=said) if said else entry
-    pages, results = ([home] if home else []), []
+    pages, results = ([home] if home else []) + list(extra), []
     for p, page in built.items():
         rid = posixpath.basename(p)[:-3] if p.startswith(RECORDS) else None
         if rid in recs:
@@ -1182,6 +1266,8 @@ def search_index(built, recs, home=None):
                                       's': navigation.STATUS_TEXT.get(rec['status'], rec['status'])}, page.html))
         elif rid and (page.title or '').endswith('(renamed)'):  # the page a former id keeps (registry.py), naming the id it became
             pages.append({'t': page.title or rid, 'u': out_path(p), 'h': [], 'f': 1})
+        elif KEPT_FOR_LINKS in ' '.join(islice(lead_paragraphs(page.html), 2)):  # a former page, kept for its old links
+            pages.append({'t': page.title or posixpath.basename(p), 'u': out_path(p), 'h': [], 'f': 1})
         else:
             pages.append(with_lead({'t': page.title or posixpath.basename(p), 'u': out_path(p),
                                     'h': [[text, ident] for level, ident, text in page.toc if level > 1]}, page.html))
@@ -1312,11 +1398,55 @@ def site_root(cfg):
 
 
 def not_found_body(cfg, pages):
-    """The 404 page's text. GitHub serves it at whatever depth the address had, so its links are read from the site's root."""
+    """The 404 page's text. GitHub serves it at whatever depth the address had, so its links are read from the site's root.
+    An address that names a page's Markdown (X.md, a folder's README.md) is sent on to the page the site makes of it; where
+    there is none, the 404 page shows again."""
     zh = f' <a href="{html.escape(out_path("README.zh.md"))}" lang="zh-Hans">中文首页</a>' if 'README.zh.md' in pages else ''
     where = f' <a href="{html.escape(out_path("MAP.md"))}">Where everything is</a> lists the rest.' if 'MAP.md' in pages else ''
-    return ('<h1>This page is not on the site</h1>\n<p>The address may be old or mistyped, or the file may be in the repository only. '
+    onward = ('<script>(function () { var p = location.pathname;'
+              " if (/\\.md$/.test(p)) { location.replace(p.replace(/README\\.md$/, 'index.html').replace(/\\.md$/, '.html')"
+              ' + location.hash); } })();</script>\n')
+    return (onward + '<h1>This page is not on the site</h1>\n<p>The address may be old or mistyped, or the file may be in the repository only. '
             f'<a href="index.html">The home</a> has the ways in.{where}{zh}</p>')
+
+
+def map_entry(cfg):
+    """The connection map's entry in the search, named as the navigation lines name it and described as its card is."""
+    en = next((label for target, label in cfg.get('nav', []) if target == MAP_PAGE), 'Connections')
+    zh = next((label for target, label in cfg.get('nav_zh', []) if target == MAP_PAGE), '')
+    zh = re.sub(r'（英文）$', '', zh)
+    card = next((w for w in cfg.get('ways_in', []) if w['path'] == MAP_PAGE), None)
+    entry = {'t': en + (f' ({zh})' if zh else ''), 'u': MAP_PAGE, 'h': []}
+    if card and card.get('text'):
+        entry['l'] = plain_title(card['text'])
+    return entry
+
+
+def stated_in(built, links):
+    """A record page's status line links the section where its result is stated: the page of the site that carries the
+    result's anchor (r-<id>), a chapter before any other page and a page in English before one in Chinese; a record whose
+    result no page states keeps its line as it was."""
+    homes = {}
+    for p, page in built.items():
+        if p.startswith(RECORDS):
+            continue
+        rank = (0 if '/chapters/' in p else 1, 0 if page.lang == 'en' else 1)
+        for ident in page.anchors:
+            if ident not in homes or rank < homes[ident][0]:
+                homes[ident] = (rank, p)
+    for p, page in built.items():
+        rid = posixpath.basename(p)[:-3] if p.startswith(RECORDS) else None
+        home = homes.get(f'r-{rid}') if rid else None
+        if not home:
+            continue
+        target = home[1]
+        line = re.search(r'<p>' + STATUS_LINE.pattern + r'.*?(</p>)', page.html)
+        if not line:
+            continue
+        links.internal.append((p, target, f'r-{rid}'))  # checked with every other link between pages
+        href = relative(out_path(target), p) + f'#r-{rid}'
+        add = f' · <a href="{html.escape(href)}">{page.say["stated"]} {html.escape(built[target].title or target)}</a>'
+        page.html = page.html[:line.start(1)] + add + page.html[line.start(1):]
 
 
 def expand_pages(entries, files):
@@ -1383,6 +1513,7 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
         built[p] = page
     for p in sequence:
         built[p].html = chapter_html(p, built[p], sequence, chapters.get('index'), built)
+    stated_in(built, links)
     home, home_lang = home_body(cfg, links, recs, root, files, rules)
     # every link between pages of the site resolves, its anchor included
     broken = []
@@ -1399,13 +1530,16 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
                             cwd=root, capture_output=True, text=True)
     dirty = status.returncode == 0 and bool(status.stdout.strip())
     pushed = on_github(commit, root)
+    shared = shared_paragraphs([page.html for page in built.values()])
     written = []
     for p, page in built.items():
         dest = out / out_path(p)
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(template(p, page.title or posixpath.basename(p), page.html, page.lang, cfg, commit, date,
-                                 nav(cfg, p, set(pages), page.lang), links.github(p), dirty=dirty, pushed=pushed))
+                                 nav(cfg, p, set(pages), page.lang), links.github(p), dirty=dirty, pushed=pushed,
+                                 said=lead(page.html, shared)))
         written.append(dest)
+    home_lead = lead(home)
     (out / 'index.html').write_text(template('index.html', cfg.get('title', ''), home, home_lang, cfg, commit, date,
                                              nav(cfg, 'index.html', set(pages)), links.github('README.md'), home=True, dirty=dirty,
                                              pushed=pushed))
@@ -1414,10 +1548,11 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
                                            nav(cfg, 'index.html', set(pages)).replace(' aria-current="page"', ''), None, dirty=dirty,
                                            base=site_root(cfg), pushed=pushed))
     written.append(out / '404.html')
-    home_lead = lead(home)
     home_entry = dict({'t': cfg.get('title', ''), 'u': 'index.html', 'h': [['Ways in', 'ways-in']]}, **({'l': home_lead} if home_lead else {}))
+    extra = [map_entry(cfg)] if map_ok else []
     # the search's data and script, and the favicon: written here so that the scans below read them with the rest
-    for name, content in (('search.json', json.dumps(search_index(built, recs, home_entry), ensure_ascii=False, separators=(',', ':'))),
+    for name, content in (('search.json', json.dumps(search_index(built, recs, home_entry, extra, shared), ensure_ascii=False,
+                                                     separators=(',', ':'))),
                           ('assets/search.js', SEARCH_JS), ('assets/favicon.svg', FAVICON)):
         (out / name).write_text(content)
         (out / name).chmod(0o644)
@@ -1441,8 +1576,17 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
         made.rename(out / MAP_PAGE)
         tmp.rmdir()
         drawn = (out / MAP_PAGE).read_text()
-        if '</head>' in drawn:  # the favicon is the one thing the map's own page does not have from its generator
-            drawn = drawn.replace('</head>', '<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">\n</head>', 1)
+        if '</head>' in drawn:  # what the map's own page does not have from its generator: the favicon, the site's way of
+            # naming and describing a page, and the site's header line, which wraps where it does not fit, as site.css has it
+            entry = map_entry(cfg)
+            name = cfg.get('title', 'The Theory of Becoming')
+            drawn = re.sub(r'<title>[^<]*</title>', lambda m: f'<title>{html.escape(entry["t"].split(" (")[0])} · {html.escape(name)}</title>',
+                           drawn, count=1)
+            head = ('<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">\n'
+                    + (f'<meta name="description" content="{html.escape(entry["l"])}">\n' if entry.get('l') else '')
+                    + '<style>header.top{font-size:.82rem;font-weight:400}header.top nav{flex-wrap:wrap;row-gap:.15rem;'
+                    'overflow:visible;white-space:normal}header.top nav a{white-space:nowrap}</style>\n')
+            drawn = drawn.replace('</head>', head + '</head>', 1)
         bar = drawn.find('<header class="top"')
         if pushed is not True and bar >= 0 and '</header>' in drawn[bar:]:  # its links to GitHub are at the build commit too
             end = drawn.index('</header>', bar) + len('</header>')
@@ -1464,8 +1608,8 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
         rel = str(w.relative_to(out))
         if refused(rel, private):
             problems.append('a private path was written: ' + rel)
-        if w.suffix == '.html' and w.name != MAP_PAGE and w.stat().st_size > MAX_PAGE:
-            problems.append(f'{rel} is {w.stat().st_size} bytes, over {MAX_PAGE}')
+        if w.suffix == '.html' and w.stat().st_size > (MAP_MAX if w.name == MAP_PAGE else MAX_PAGE):
+            problems.append(f'{rel} is {w.stat().st_size} bytes, over {MAP_MAX if w.name == MAP_PAGE else MAX_PAGE}')
         if w.suffix in TEXT_WRITTEN:
             text = w.read_text()
             hit = secrets.search(text)

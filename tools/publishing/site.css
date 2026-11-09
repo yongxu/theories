@@ -26,14 +26,17 @@ a:hover { text-decoration: underline; }
 header.top { position: sticky; top: 0; z-index: 2; background: var(--bg); border-bottom: 1px solid var(--rule);
   display: flex; align-items: baseline; gap: 1.2rem; padding: .55rem 16px; font-family: var(--sans); font-size: .82rem; }
 header.top .brand { color: var(--ink); font-weight: 600; white-space: nowrap; flex: none; }
-header.top nav { display: flex; gap: .9rem; min-width: 0; overflow-x: auto; white-space: nowrap; scrollbar-width: none; }
-header.top nav::-webkit-scrollbar { display: none; }
-header.top nav a { color: var(--muted); }
+/* the line wraps where it does not fit, so that every item is in reach whatever the width and whatever the pointer */
+header.top nav { display: flex; flex-wrap: wrap; gap: .15rem .9rem; min-width: 0; }
+header.top nav a { color: var(--muted); white-space: nowrap; }
 header.top nav a[aria-current="page"] { color: var(--ink); border-bottom: 2px solid var(--accent); }
-/* the language link, after the line and outside it: shown at every width, where the line scrolls and fades and where it wraps */
+/* the language link, after the line and outside it: shown at every width, beside the line or under it where it wraps */
 header.top a.lang { flex: none; white-space: nowrap; color: var(--muted); }
 header.top a.lang[aria-current="page"] { color: var(--ink); }
-main { max-width: 46rem; margin: 0 auto; padding: 1.5rem 16px 3rem; }
+/* a way past the header for a keyboard, shown only when it has the focus */
+a.skip { position: absolute; left: -9999px; top: .5rem; z-index: 4; padding: .3rem .6rem; background: var(--bg); border: 1px solid var(--accent); font-family: var(--sans); font-size: .85rem; }
+a.skip:focus { left: 16px; }
+main { max-width: 46rem; margin: 0 auto; padding: 1.5rem 16px 3rem; overflow-wrap: break-word; }  /* a long name or path breaks rather than run off a phone */
 body.home main { max-width: 60rem; }
 h1, h2, h3, h4, h5, h6 { font-family: var(--sans); line-height: 1.25; }
 h1 { font-size: 2rem; font-weight: 650; margin: .6rem 0 1.2rem; letter-spacing: -.01em; }
@@ -43,6 +46,7 @@ h4, h5, h6 { font-size: 1rem; font-weight: 620; margin: 1.4rem 0 .5rem; }
 a.here { margin-left: .4rem; color: var(--rule); font-weight: 400; visibility: hidden; }
 h1:hover a.here, h2:hover a.here, h3:hover a.here, h4:hover a.here { visibility: visible; }
 [id] { scroll-margin-top: 3.5rem; }
+@media (min-width: 601px) and (max-width: 1300px) { [id] { scroll-margin-top: 5rem; } }  /* the header may take two lines */
 p { margin: 0 0 1rem; }
 ul, ol { padding-left: 1.4rem; margin: 0 0 1rem; }
 li { margin: .25rem 0; }
@@ -52,6 +56,7 @@ hr { border: none; border-top: 1px solid var(--rule); margin: 2rem 0; }
 code { font-family: var(--mono); font-size: .84em; background: var(--code); padding: .05em .3em; border-radius: 3px; overflow-wrap: anywhere; }
 pre { background: var(--code); padding: .8rem 1rem; overflow-x: auto; border-radius: 4px; font-size: .82rem; line-height: 1.5; }
 pre code { background: none; padding: 0; font-size: inherit; overflow-wrap: normal; }
+td code { overflow-wrap: break-word; }  /* in a cell, a name keeps its column's width and the table scrolls, not a name cut to letters */
 /* a table overflows sideways inside its box; a shade at an edge says there is more that way (each shade is covered, while the
    box is scrolled to that end, by a patch of the page's colour that moves with the content) */
 div.table { overflow-x: auto; margin: 0 0 1.4rem; border-top: 1px solid var(--rule);
@@ -85,7 +90,8 @@ nav.contents { font-family: var(--sans); font-size: .86rem; line-height: 1.4; ma
 nav.contents p { margin: 0 0 .4rem; font-weight: 620; color: var(--muted); }
 nav.contents ul { list-style: none; padding: 0; margin: 0; }
 nav.contents > ul { columns: 2 16rem; column-gap: 1.6rem; }
-nav.contents li { margin: 0 0 .4rem; break-inside: avoid; }
+nav.contents li { margin: 0 0 .4rem; }
+nav.contents li li, nav.contents > ul > li:not(:has(ul)) { break-inside: avoid; }  /* a long section's list may go on in the next column */
 nav.contents li ul { margin-top: .3rem; }
 nav.contents li ul { padding-left: .9rem; font-size: .94em; }
 nav.seq { display: flex; flex-wrap: wrap; gap: .3rem 1.2rem; font-family: var(--sans); font-size: .82rem; line-height: 1.35; margin: 0 0 1rem; }
@@ -110,6 +116,9 @@ body.home footer { max-width: 60rem; }
 section.hero { max-width: 44rem; }
 section.hero h1 { font-size: 2.4rem; margin-top: 1rem; }
 section.hero p { font-size: 1.05rem; }
+section.hero p.ways-link { font-family: var(--sans); font-size: .9rem; }
+section.picture p { max-width: 44rem; }
+section.picture p.open { font-family: var(--sans); font-size: .85rem; margin-top: -.6rem; }
 section.picture { margin-top: 2.4rem; }
 ul.cards { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); gap: .9rem; }
 ul.cards li { margin: 0; position: relative; }
@@ -120,6 +129,7 @@ a.card .label { font-family: var(--sans); font-weight: 620; color: var(--accent)
 a.card .time { font-family: var(--sans); font-size: .75rem; color: var(--muted); }
 a.card .text { font-size: .92rem; line-height: 1.5; }
 ul.cards a.zh { position: absolute; top: .9rem; right: 1rem; font-family: var(--sans); font-size: .78rem; }
+ul.cards li:has(a.zh) a.card .label { padding-right: 2.6rem; }  /* a long label stays clear of the 中文 link */
 @media (max-width: 600px) {
   body { font-size: 17px; }
   h1 { font-size: 1.6rem; }
@@ -138,6 +148,8 @@ ul.cards a.zh { position: absolute; top: .9rem; right: 1rem; font-family: var(--
   div.table.stack td { padding: .2rem 0; border: 0; text-align: left !important; }
   div.table.stack td:empty { display: none; }
   div.table.stack td[data-label]::before { content: attr(data-label); display: block; font-family: var(--sans); font-size: .72rem; font-weight: 600; color: var(--muted); }
+  /* a wide table that scrolls keeps its first column (a name) wide enough to read */
+  div.table.wide:not(.stack) td:first-child { min-width: 9rem; }
 }
 @media print {
   header.top, footer, a.here, nav.seq { display: none; }
@@ -147,12 +159,16 @@ ul.cards a.zh { position: absolute; top: .9rem; right: 1rem; font-family: var(--
 a.picture { display: block; width: min(calc(100vw - 32px), 64rem); margin: 1.2rem 0 1.4rem 50%; transform: translateX(-50%);
   background: #fff; border: 1px solid var(--rule); border-radius: 6px; padding: .6rem; cursor: zoom-in; }
 a.picture img { display: block; width: 100%; height: auto; }
-/* between a phone's wrapped line and a screen that fits it all, the line scrolls sideways; a fade at its edge says there is more */
-@media (min-width: 601px) and (max-width: 1040px) {
-  header.top nav { -webkit-mask-image: linear-gradient(to right, #000 85%, transparent); mask-image: linear-gradient(to right, #000 85%, transparent); padding-right: 2rem; }
-}
 /* on the home the picture sits between the first screen's words and the cards, its height set to min(78vh, 52rem), suited to
    the spine's tall picture, so the cards stay near; the link opens it at full size */
 body.home a.picture { width: fit-content; max-width: 100%; margin: 1.2rem 0 1.4rem; transform: none; }
 body.home a.picture img { width: auto; height: min(78vh, 52rem); max-width: 100%; object-fit: contain; }
 section.ways h3.group { font-family: var(--sans); font-size: .9rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 1.6rem 0 .6rem; }
+/* the Chinese home: its picture held to the height the English home gives it, and its table's first column kept whole */
+body.home-zh a.picture { width: fit-content; max-width: 100%; margin: 1.2rem 0 1.4rem; transform: none; }
+body.home-zh a.picture img { width: auto; height: min(78vh, 52rem); max-width: 100%; object-fit: contain; }
+body.home-zh td:first-child { white-space: nowrap; }
+/* Chinese has no italic face: emphasis is upright, a term in it a little heavier, a paragraph wholly in it (a reading time,
+   a note on the translation, a caption) in the muted colour */
+body.lang-zh em { font-style: normal; font-weight: 600; }
+body.lang-zh p.em, body.lang-zh p.em em { font-weight: inherit; color: var(--muted); }

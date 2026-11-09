@@ -193,7 +193,7 @@ class SiteTests(unittest.TestCase):
         report = self.build()
         one = self.page('a/ONE.html')
         for word in ('javascript', 'JaVaScRiPt', 'data:text', 'onerror', 'onmouseover', 'style=', 'alert(', '&#106;'):
-            self.assertNotIn(word, one.split('<main>')[1].split('</main>')[0].replace('&lt;', '<').split('<script>no')[0], word)
+            self.assertNotIn(word, one.split('<main id="main">')[1].split('</main>')[0].replace('&lt;', '<').split('<script>no')[0], word)
         self.assertIn('<a href="#what-it-is">h</a>', one)
         self.assertEqual(report['links']['refused'], 8)  # seven here and the fixture's own
 
@@ -466,9 +466,9 @@ class SiteTests(unittest.TestCase):
         (self.tmp / 'a/chapters/README.md').write_text('# 中文首页\n\n[English](../ONE.md) · **首页** · [一页](../ONE.md#what-it-is)\n\n'
                                                        + CHAPTERS.split('\n', 1)[1])  # the Chinese landing's form: the home in bold
         self.build()
-        main = self.page('a/ONE.html').split('<main>')[1].split('</main>')[0]
+        main = self.page('a/ONE.html').split('<main id="main">')[1].split('</main>')[0]
         self.assertNotIn('>Home<', main)
-        landing = self.page('a/chapters/index.html').split('<main>')[1].split('</main>')[0]
+        landing = self.page('a/chapters/index.html').split('<main id="main">')[1].split('</main>')[0]
         self.assertNotIn('首页</strong>', landing)
         self.assertIn('<a href="02-MAP.html">The map</a>', landing)  # the page's own text stays
         self.assertIn('Text. <a href="chapters/index.html">Chapters</a>', main)  # a line of links that is not the navigation stays
@@ -846,9 +846,12 @@ class SiteTests(unittest.TestCase):
                      '<nav aria-label="页面">', 'aria-label="本节的链接"', 'aria-label="返回"', 'title="不在公开的仓库中"',
                      '<button class="find" type="button" hidden>搜索</button>'):
             self.assertIn(said, zh)
-        for said in ('<a class="brand" href="../index.html">T</a>', '<meta name="description" content="d">', '<nav aria-label="Pages">',
-                     'aria-label="Link to this section"'):
+        for said in ('<a class="brand" href="../index.html">T</a>', '<nav aria-label="Pages">', 'aria-label="Link to this section"'):
             self.assertIn(said, en)
+        # a page is described by its own lead where it has one, and by the site's description where it has none
+        self.assertIn('<meta name="description" content="See the chapter, chapters, a record, a scratch note, a line and a folder.">', en)
+        self.assertIn('<meta property="og:title" content="One page · T">', en)
+        self.assertIn('<meta name="description" content="d">', self.page('a/OPENING.html'))
 
     def test_a_page_named_as_the_site_is_titled_with_the_name_once(self):
         (self.tmp / 'README.zh.md').write_text('# 题\n\n中文的首页。\n')
@@ -877,6 +880,100 @@ class SiteTests(unittest.TestCase):
         self.assertIn('<strong>an existing Lean receipt is recorded</strong> · theorem', page)
         self.assertNotIn('<strong>recorded-checked</strong>', page)
         self.assertIn('The word <code>recorded-checked</code> in a sentence stays.', page)
+
+
+    # -- what the site review of 10 November 2026 found
+    def test_a_record_page_links_the_section_that_states_its_result(self):
+        record = 'theories/becoming/results/records/closed-capture.md'
+        (self.tmp / record).write_text('# Closed\n\n`closed-capture` · **recorded-checked** · theorem · F01 · [register](../../../../a/ONE.md)\n')
+        self.files.add(record)
+        self.build(pages=SITE['pages'] + [record])
+        page = self.page(record[:-3] + '.html')
+        self.assertIn('<a href="../../../../a/chapters/02-MAP.html#r-closed-capture">stated in The map</a></p>', page)
+
+    def test_one_list_across_blank_lines_and_one_id_for_one_place(self):
+        (self.tmp / 'a/ONE.md').write_text('# One\n\n## What it is\n\n1. one\n2. two\n\n   ```\n   code\n   ```\n\n3. three\n\n'
+                                           '- a\n\n- b\n\n<a id="what"></a>\n## What\n\n<a id="one"></a>\n\nText.[^n] Again.[^n]\n\n[^n]: A note.\n')
+        self.build()
+        one = self.page('a/ONE.html')
+        self.assertNotIn('<ol start="3">', one)  # step 3 in the list of steps 1 and 2, not a list of its own
+        self.assertIn('<li>three</li></ol>', one)
+        self.assertIn('<ul><li>a</li><li>b</li></ul>', one)
+        self.assertEqual(one.count('id="what"'), 1)  # the anchor line's id, not the heading's again
+        self.assertIn('<h2>What<a class="here" href="#what"', one)
+        self.assertEqual(one.count('id="one"'), 1)  # the title's id is not given again by a later anchor line
+        self.assertIn('<a class="back" href="#fnref-n" aria-label="Back">↩</a> <a class="back" href="#fnref-n-2" aria-label="Back 2">↩2</a>', one)
+        ids = re.findall(r'\bid="([^"]+)"', one)
+        self.assertEqual(len(ids), len(set(ids)), ids)
+
+    def test_the_search_finds_a_thesis_a_glossary_term_and_the_map(self):
+        (self.tmp / 'a/ONE.md').write_text('# One\n\n## What it is\n\n<a id="t7"></a>\n**Thesis T7.** *A measure outlives its refutation*: so.\n')
+        (self.tmp / 'GLOSSARY.md').write_text('# Glossary\n\n## The map\n\n| Term | Sense | Home |\n|---|---|---|\n'
+                                              '| meta-attractor (元吸引子) | ' + 'a selection that comes to select for control over its selection ' * 9 + '| x |\n'
+                                              '| map | the account |  |\n')
+        self.files.add('GLOSSARY.md')
+        self.build(pages=SITE['pages'] + ['GLOSSARY.md'])
+        index = json.loads(self.page('search.json'))
+        one = next(p for p in index['pages'] if p['u'] == 'a/ONE.html')
+        self.assertIn(['Thesis T7: A measure outlives its refutation', 't7'], one['h'])
+        glossary = self.page('GLOSSARY.html')
+        self.assertIn('<td id="term-meta-attractor">', glossary)
+        self.assertIn('id="the-map"', glossary)  # a term does not move a heading's anchor
+        self.assertIn('id="term-map"', glossary)
+        self.assertNotIn('table wide', glossary)  # one long cell a row: kept at the text's measure
+        entry = next(p for p in index['pages'] if p['u'] == 'GLOSSARY.html')
+        self.assertIn(['meta-attractor (元吸引子)', 'term-meta-attractor'], entry['h'])
+        self.assertEqual(site.map_entry({'nav': [['connections.html', 'Connections']], 'nav_zh': [['connections.html', '连接图（英文）']],
+                                         'ways_in': [{'path': 'connections.html', 'text': 'Every *claim* drawn.'}]}),
+                         {'t': 'Connections (连接图)', 'u': 'connections.html', 'h': [], 'l': 'Every claim drawn.'})
+
+    def test_a_page_kept_for_its_old_links_ranks_as_a_former_id(self):
+        (self.tmp / 'a/OLD.md').write_text('# Old claims\n\nThis page earlier repeated the register of results. It is kept so that links to it resolve.\n')
+        self.files.add('a/OLD.md')
+        self.build(pages=SITE['pages'] + ['a/OLD.md'])
+        old = next(p for p in json.loads(self.page('search.json'))['pages'] if p['u'] == 'a/OLD.html')
+        self.assertEqual((old.get('f'), 'l' in old), (1, False))
+
+    def test_the_home_says_its_ways_and_its_picture_and_cards_offer_their_chinese(self):
+        (self.tmp / 'a/ONE.zh.md').write_text('# 一页\n\n中文。\n')
+        (self.tmp / 'p.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" width="10" height="20"></svg>')
+        (self.tmp / 'README.md').write_text(README.replace('**An account**', '![The picture](p.svg)\n\n*Its caption.*\n\n**An account**'))
+        self.files |= {'a/ONE.zh.md', 'p.svg'}
+        self.build(pages=SITE['pages'] + ['a/ONE.zh.md'], assets=['p.svg'])
+        home = self.page('index.html')
+        self.assertIn('<p class="ways-link"><a href="#ways-in">Ways in ↓</a></p></section>', home)
+        self.assertIn('<p class="open"><a href="p.svg">Open the picture at full size</a></p>', home)
+        self.assertIn('<a class="zh" href="a/ONE.zh.html" lang="zh-Hans">中文</a>', home)  # from the page's edition, no `zh` named
+        self.assertIn('<p class="em"><em>Its caption.</em></p>', home)
+
+    def test_a_chinese_page_without_an_english_edition_goes_to_the_english_home(self):
+        (self.tmp / 'a/ZH.md').write_text('# 第六章\n\n这一章只有中文。\n')
+        self.files.add('a/ZH.md')
+        self.build(pages=SITE['pages'] + ['a/ZH.md'], nav_zh=[['a/ZH.md', '第六章'], ['a/ONE.md', 'English']])
+        self.assertIn('<a class="lang" href="../index.html" hreflang="en" lang="en">English</a>', self.page('a/ZH.html'))
+
+    def test_the_overview_is_titled_by_its_name_in_the_line(self):
+        (self.tmp / 'a/chapters/README.md').write_text('# T\n\n' + CHAPTERS.split('\n', 2)[2])
+        self.build(nav=[['index.html', 'Home'], ['a/chapters/README.md', 'Overview']])
+        self.assertIn('<title>Overview · T</title>', self.page('a/chapters/index.html'))
+        self.assertIn('<title>T</title>', self.page('index.html'))
+
+    def test_chinese_on_an_english_page_is_said_to_be_chinese_and_a_subscript_shows(self):
+        (self.tmp / 'a/ONE.md').write_text('# One\n\n## What it is\n\n「$V_4$ is forced」, read as 生生 (`代码`).\n')
+        self.build()
+        one = self.page('a/ONE.html')
+        self.assertIn('<span lang="zh-Hans">「</span>V<sub>4</sub> is forced<span lang="zh-Hans">」，</span>'
+                      .replace('，', ''), one.replace('」,', '」'))
+        self.assertIn('read as <span lang="zh-Hans">生生</span> (<code>代码</code>)', one)
+
+    def test_every_page_has_a_way_past_its_header_and_the_404_page_follows_a_markdown_address(self):
+        self.build()
+        one = self.page('a/ONE.html')
+        self.assertLess(one.index('<a class="skip" href="#main">Skip to the text</a>'), one.index('<header class="top">'))
+        self.assertIn('<main id="main">', one)
+        missing = self.page('404.html')
+        self.assertNotIn('class="skip"', missing)  # under its <base>, #main would lead to the home
+        self.assertIn("replace(/\\.md$/, '.html')", missing)
 
 
 class ScreenPatternTests(unittest.TestCase):
@@ -956,9 +1053,10 @@ class RepositoryConfigTests(unittest.TestCase):
         css = (ROOT / 'tools/publishing/site.css').read_text()
         narrow = css.split('@media (max-width: 600px)')[1].split('@media print')[0]
         self.assertRegex(narrow, r'header\.top nav \{[^}]*flex-wrap: wrap')
-        masked = re.findall(r'(@media[^{]*\{\s*)?header\.top nav \{[^}]*mask-image', css)
-        self.assertEqual(len(masked), 1)  # one rule fades the line, and only at the widths where it scrolls
-        self.assertIn('min-width: 601px', masked[0])
+        # at every width the line wraps where it does not fit, so that no item is out of reach of a mouse or a keyboard
+        self.assertRegex(css, r'(?m)^header\.top nav \{[^}]*flex-wrap: wrap')
+        self.assertNotIn('mask-image', css)
+        self.assertNotRegex(css, r'header\.top nav \{[^}]*overflow-x')
 
     def test_the_stylesheet_has_no_dead_figure_rule_and_no_mark_over_text(self):
         css = (ROOT / 'tools/publishing/site.css').read_text()
