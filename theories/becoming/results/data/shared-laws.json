@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261109T141048.279821Z",
- "core_sources_sha256": "149d18cf5f0adc1aa728abe35b95d2a5f4f84f45433f4840b0bcca4d73790027",
+ "core_receipt": "20261109T150154.198993Z",
+ "core_sources_sha256": "ee8283d5570216958f25161f34eecb9fe05603583712a604074ab64d18935b36",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,16 +58,16 @@
   ]
  },
  "counts": {
-  "laws": 4213,
+  "laws": 4221,
   "no_declarations": 9,
   "outside": 391,
-  "grammar": 950,
-  "balance, represented": 627,
+  "grammar": 957,
+  "balance, represented": 628,
   "anchor, not reached": 137,
   "no shared law": 2099,
   "vocabulary_only": 88,
-  "closure": 557,
-  "balance": 853,
+  "closure": 563,
+  "balance": 856,
   "return": 256,
   "lumping": 84,
   "order": 100
@@ -2034,6 +2034,19 @@
     ],
     "grammar": false,
     "dependence": "anchor, not reached"
+   }
+  ],
+  "a-line-alive-after-a-window": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.Flow.member_after_never_overdrew"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
    }
   ],
   "a-narrowing-above-its-widening": [
@@ -49925,6 +49938,67 @@
     "dependence": "grammar"
    }
   ],
+  "the-condition-in-time": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.Flow.reachesBefore_iff",
+     "Becoming.Flow.stepInTime_acyclic",
+     "Becoming.Flow.not_returnsAlong_stepInTime",
+     "Becoming.Flow.returningInTime_unrestricted",
+     "Becoming.Flow.returnsAlong_affectsBefore_iff"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.Flow.not_unrestricted_inTime",
+     "Becoming.Flow.unrestrictedEventually_iff_mutuallyDependentInTime",
+     "Becoming.Flow.unrestrictedAfter_iff_coupledEachStep",
+     "Becoming.UnrestrictedAfter.eventually",
+     "Becoming.unrestrictedAfter_iff_forward"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.Flow.WithinTime.withinReach",
+     "Becoming.Flow.MutuallyDependentFrom.mutuallyDependent",
+     "Becoming.Flow.MutuallyDependentFrom.returning_unrestricted",
+     "Becoming.Flow.MutuallyDependentFrom.earlier"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.Recurring.inTime",
+     "Becoming.RingOfThree.apart",
+     "Becoming.Drawing.lapses",
+     "Becoming.LatePair.apart"
+    ],
+    "shared_laws": [
+     "closure",
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   }
+  ],
   "the-continuation-condition-on-the-root": [
    {
     "law": 1,
@@ -60468,6 +60542,48 @@
     "dependence": "grammar"
    }
   ],
+  "what-the-one-center-bound-counts": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.returnsAlong_of_sink",
+     "Becoming.returnsAlong_iff_sink",
+     "Becoming.ownClosure_unrestricted_atReturning_acyclic_iff",
+     "Becoming.Web.continuationStep_returns_iff"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.«续无外当且仅当后与独»",
+     "Becoming.«独则同一中心»",
+     "Becoming.«及则后»",
+     "Becoming.«后则无环»",
+     "Becoming.«续无外则续无外于后»"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.TwoSources.apart",
+     "Becoming.Recurring.oneCenter_counts"
+    ],
+    "shared_laws": [
+     "closure",
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   }
+  ],
   "what-the-step-across-standpoints-reaches": [
    {
     "law": 1,
@@ -64978,7 +65094,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "769b228320edb6da16d891862b7e6849fbe7a7bcc4fc3aff07e286898ed53ff5",
+   "modules_sha256": "a8d17c19640ba38435b6b1a3d8114b9ba8feb616d8adf04414a69269c927d305",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },
