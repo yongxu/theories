@@ -2741,10 +2741,25 @@
    "base": "old-base",
    "note": "ConditionInTime J3: the finite, dated form of a persisting line never overdrawing (07 §4.11)"
   },
+  "readings-carried-on-their-course": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "ReadingsPersist J2: lines carrying inherited readings on the course their acts generate; the line read off the course, G3's realization the identity under a chosen definition, reach before a step lifted to lines (07 §4.12)"
+  },
+  "which-readings-persist": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "ReadingsPersist J2: standing late selects no reading beyond the line's coupling closure; witnesses where nothing comes back and where the dweller renews the source (07 §4.12)"
+  },
+  "a-selection-removing-its-readers": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "ReadingsPersist J2: the pool read off the course; selection by persistence read off it registers no removal on settled courses, a reader kept or removed alike (07 §4.12)"
+  },
   "route-b-joined": {
    "region": "significance",
    "base": "old-base",
-   "note": "FromTheDynamics J1: route (b) joined, the scope at the returning formations under the least class iff mutual dependence, the bound there, C read from what persisting shows, a joint witness (07 §4.12)"
+   "note": "FromTheDynamics J1: route (b) joined, the scope at the returning formations under the least class iff mutual dependence, the bound there, C read from what persisting shows, a joint witness (07 §4.13)"
   }
  },
  "modules": {
@@ -4712,6 +4727,11 @@
    "region": "significance",
    "base": "old-base",
    "note": "the continuation condition in time: sinks, what the one-center bound counts, mutual dependence in time (route (b), J3)"
+  },
+  "Becoming.ReadingsPersist": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "which readings persist: lines carrying inherited readings, the pool read off the course, a selection removing its own readers (route (b), J2)"
   },
   "Becoming.FromTheDynamics": {
    "region": "significance",

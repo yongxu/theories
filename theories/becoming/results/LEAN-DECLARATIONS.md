@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 378 | 18,678 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 379 | 18,761 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 18 | 1,054 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -739,6 +739,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [ReadingLoop.lean](lean-declarations/becoming-core-part-5.md#module-556b9c23cf58) | Becoming pure core |
 | [ReadingSchedule.lean](lean-declarations/becoming-core-part-5.md#module-16e3283cf0a7) | Becoming pure core |
 | [Readings.lean](lean-declarations/becoming-core-part-5.md#module-fed2c4df4559) | Becoming pure core |
+| [ReadingsPersist.lean](lean-declarations/becoming-core-part-5.md#module-71731e539e9a) | Becoming pure core |
 | [Readout.lean](lean-declarations/becoming-core-part-5.md#module-0049adde4457) | Becoming pure core |
 | [RealFeedback.lean](lean-declarations/learning.md#module-0a13f9949122) | Learning, prediction and dynamics |
 | [ReasonPreparation.lean](lean-declarations/shared.md#module-817e5110d349) | Organizational formation through revisable evaluation |
@@ -886,9 +887,9 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [SecuredContent.lean](lean-declarations/becoming-core-part-5.md#module-b5264900f26d) | Becoming pure core |
 | [SeedReach.lean](lean-declarations/becoming-ring.md#module-25b9446099f2) | Becoming instances and applications |
 | [SeededContinuation.lean](lean-declarations/learning.md#module-37af2e7fffc1) | Learning, prediction and dynamics |
-| [Seeking.lean](lean-declarations/becoming-core-part-5.md#module-543aeee61b83) | Becoming pure core |
-| [SeekingRuns.lean](lean-declarations/becoming-core-part-5.md#module-6d45c97c270f) | Becoming pure core |
-| [Segmentation.lean](lean-declarations/becoming-core-part-5.md#module-6e0ec291c7d2) | Becoming pure core |
+| [Seeking.lean](lean-declarations/becoming-core-part-6.md#module-543aeee61b83) | Becoming pure core |
+| [SeekingRuns.lean](lean-declarations/becoming-core-part-6.md#module-6d45c97c270f) | Becoming pure core |
+| [Segmentation.lean](lean-declarations/becoming-core-part-6.md#module-6e0ec291c7d2) | Becoming pure core |
 | [Selection.lean](lean-declarations/becoming-core-part-6.md#module-8b0687844bea) | Becoming pure core |
 | [SelectionGap.lean](lean-declarations/becoming-core-part-6.md#module-bff05f8dbe13) | Becoming pure core |
 | [SelectionLevels.lean](lean-declarations/becoming-core-part-6.md#module-0babad5be0a3) | Becoming pure core |
@@ -1021,8 +1022,8 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [WisdomResponseStructure.lean](lean-declarations/core.md#module-25c8adeade56) | Generative core and relational structure |
 | [Withholding.lean](lean-declarations/becoming-core-part-6.md#module-f047a0ccf338) | Becoming pure core |
 | [WitnessHull.lean](lean-declarations/abstraction.md#module-72d18a9b2453) | Abstraction, applicability and constitution |
-| [WitnessRefinement.lean](lean-declarations/becoming-core-part-6.md#module-0717096c6252) | Becoming pure core |
-| [WitnessRefinementRuns.lean](lean-declarations/becoming-core-part-6.md#module-14e9a16c1bc9) | Becoming pure core |
+| [WitnessRefinement.lean](lean-declarations/becoming-core-part-7.md#module-0717096c6252) | Becoming pure core |
+| [WitnessRefinementRuns.lean](lean-declarations/becoming-core-part-7.md#module-14e9a16c1bc9) | Becoming pure core |
 | [Witnesses.lean](lean-declarations/becoming-core-part-7.md#module-a2a40d448b25) | Becoming pure core |
 | [World.lean](lean-declarations/becoming-core-part-7.md#module-7d8b73829c63) | Becoming pure core |
 | [WorldRepresentation.lean](lean-declarations/becoming-core-part-7.md#module-9ee3e643d082) | Becoming pure core |

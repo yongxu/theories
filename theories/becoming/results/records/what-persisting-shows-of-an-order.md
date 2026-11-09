@@ -78,7 +78,7 @@ Rationalizing strict choices by a strict partial order with required comparisons
 - related, not a proved adapter: [what-training-installs](what-training-installs.md). AI reading: off the occasions met the order is free, as a trained response is free where unlumped.
 - related, not a proved adapter: [mutual-dependence-gives-the-condition-de-se](mutual-dependence-gives-the-condition-de-se.md). The same landing: scope where everything is entangled.
 
-**Used by:** [a-line-alive-after-a-window](a-line-alive-after-a-window.md)
+**Used by:** [a-line-alive-after-a-window](a-line-alive-after-a-window.md) · [readings-carried-on-their-course](readings-carried-on-their-course.md)
 
 <a id="sources--来源"></a>
 ### Sources

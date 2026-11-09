@@ -117,7 +117,7 @@ Abbreviations: LB = `experiments/integrated-correction/general-framework/generat
 - **M2** taken: the record's statement now reads "at the formations whose acts return along affecting, given one".
 - **L1, L2** taken: "some returning formation out" and "for any coupling by level" in 07, the docstring and the record.
 - **L3** taken: the link points to `#r-self-concern-and-c-under-the-condition`.
-- **L4**: J3 holds 07 §4.11 and lands first; J1's section is §4.12 after it, and the note cites §4.12.
+- **L4**: J3 holds 07 §4.11 and J2 §4.12, both landed first; J1's section is §4.13 after them, and the note cites §4.13.
 - **L5** taken in Lean: `Alternating.recurs` proves that each formation stands at some step past every step, and it is a conjunct of `Alternating.joined`; 07 says "each formation standing again and again".
 - **L6** taken in Lean: `P keep drain` is a conjunct of `Alternating.joined`; 07 says "according with the choice, so putting keeping above ending".
 - **L7** taken: "the web's actual levels" in the record.
