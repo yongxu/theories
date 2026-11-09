@@ -519,7 +519,10 @@ def _dynamic(e, at: str, closed: dict, by_id: dict, repo: Repository, known) -> 
         if 'to_law' in x:
             if not isinstance(to, str):
                 fail(where + '.to_law', 'only an exit to a dynamic names the law that places it there')
-            declared(where + '.to_law', [x['to_law']] if isinstance(x['to_law'], str) else x['to_law'])
+            if not isinstance(x['to_law'], str):
+                fail(where + '.to_law', 'not a declaration name')
+            else:
+                declared(where + '.to_law', [x['to_law']])
         if x['law'] is not None and not (isinstance(x['law'], str) and x['law']):
             fail(where + '.law', 'neither null nor a declaration name')
         elif x['law'] is not None:
@@ -1290,20 +1293,25 @@ def premises_page(atlas: dict) -> str:
 
     out = [GENERATED, '', '# The premise ledger', '', _navigation(PREMISES_PAGE), '',
            '*AI-written, from the entries (PLAN §13, step 2). A premise here is a hypothesis a law takes, a commitment the '
-           'representation makes, or what applying a law to actual histories needs (08 §4), with the Lean that states it, where '
+           'representation makes, or a premise of dynamics, correspondence, ethics or practice that 08 §4 lists, with the Lean that states it, where '
            'it is shown holding and failing, the dynamics whose laws take it and the exits that leave by dropping it. Every list '
            'is read off the entries at each render; none is typed. A premise is no result and the ledger proves nothing; whether '
            'one holds of an actual system is never established here.*', '',
-           'How the lists are read. A law takes the hypotheses its Lean binders state, start and state conditions included, and '
-           'a premise it holds by its form (the joined laws of closed capture hold Unread by construction). One proposition '
-           'passed unchanged from law to law is one premise; one name with two senses (ReadsShare on the rule and on the '
-           'reading) is two. One commitment, discrete steps, is taken by every law read, each stated on natural-number steps, '
-           'and is listed on none; natural-number amounts is listed where a law\'s statement turns on the least unit. An exit '
-           'drops the premise its law shows failing as the course leaves.', '',
+           'How the lists are read. A law\'s list holds the hypotheses its Lean binders state on the model (the rule, the reading, '
+           'the counts, the world) and a premise it holds by its form (the joined laws of closed capture hold Unread by '
+           'construction). It holds a condition on the start or the state a statement is about only where a reader asked for '
+           'one (keeps, a favouring start, the free-energy bound, shaping varies), and not every such condition: **a list is not '
+           'all a law needs, so read the law\'s statement before applying it** (the lock of `DrawnShaping.drawn_locks` holds only '
+           'from a start the rule read there favours). One proposition passed unchanged from law to law is one premise; one name '
+           'with two senses (ReadsShare on the rule and on the reading) is two. Discrete steps is taken by every law read that runs '
+           'on steps (a course, a run or an orbit) and is listed on none; laws with no step index (the diagonal and fixed-point '
+           'laws, the free-energy minimizer) do not take it. Natural-number amounts is listed on every law taking Accrues (at least '
+           'one a step) and where a reader found a statement turning on the least unit. An exit drops the premise its law shows '
+           'failing as the course leaves; where its law reads beyond the share, it drops Unread, which the dynamic\'s own laws '
+           'hold by having nothing beyond the share.', '',
            f'{len(atlas.get("premises", []))} premises. The laws and exits read for them so far: '
            + (', '.join(f'family {f} ({n} dynamics)' for f, n in sorted(by_family.items())) or 'none') + '. '
-           'Two premises with one name in different Lean modules are two premises. A premise whose statement is withheld is '
-           'one whose home is being re-said; its statement waits for that.', '']
+           'A premise whose statement is withheld is one whose home is being re-said; its statement waits for that.', '']
     for kind in [k['en'] for k in atlas['vocabulary'].get('premise_kinds', [])]:
         held = [p for p in atlas.get('premises', []) if p['kind'] == kind]
         if not held:
@@ -1315,7 +1323,8 @@ def premises_page(atlas: dict) -> str:
             lean = ', '.join(f'`{n}`' for n in p['lean']) or '—'
             holds = ', '.join(f'`{x}`' for x in p['holds_in']) or '—'
             fails = ', '.join(f'`{x}`' for x in p['fails_in']) or '—'
-            by = ', '.join(dyn(i) for i in sorted(taken.get(p['id'], ()))) or '—'
+            by = ', '.join(dyn(i) for i in sorted(taken.get(p['id'], ()))) or ('every law read that runs on steps, not listed one by one'
+                                                                             if p['id'] == 'card-discrete-steps' else '—')
             drops = ', '.join(f'{dyn(i)} (exit {n})' for i, n in dropped.get(p['id'], [])) or '—'
             out.append(f'| <a id="{p["id"]}"></a>**{_cell(p["name"]["en"])}** `{p["id"]}` | {statement} | {lean} | {holds} | {fails} | '
                        f'{by} | {drops} | {_source(p["home"])} |')
@@ -1395,8 +1404,10 @@ def terrain_page(atlas: dict) -> str:
                 to = (f'[{_cell(names[x["to"]])}]({_section(x["to"], homes, TERRAIN)})' if isinstance(x['to'], str)
                       else 'not yet read' if x['to'] is None else _cell(_line(x['to'])))
                 drop = (' dropping ' + ', '.join(_premise_link(p, premises, ATLAS) for p in x['drops'])) if x.get('drops') else ''
-                tag = '' if x['strength'] == 'witness' and isinstance(x['to'], dict) and _line(x['to']).endswith('(a witness)') else x['strength']
-                leaves.append(f'{i}. {to} (' + '; '.join(p for p in (tag, drop.strip()) if p) + ')')
+                said = isinstance(x['to'], dict) and re.search(r'\(a witness[;)][^()]*\)?$', _line(x['to']))
+                tag = '' if x['strength'] == 'witness' and said else x['strength']
+                inner = '; '.join(p for p in (tag, drop.strip()) if p)
+                leaves.append(f'{i}. {to}' + (f' ({inner})' if inner else ''))
             reach = ', '.join(f'[{_cell(names[t])}]({_section(t, homes, TERRAIN)}) ({w})' for t, w in sorted(routes[d['id']].items()))
             out.append(f'| [{_cell(names[d["id"]])}]({_section(d["id"], homes, TERRAIN)}) | '
                        + ('<br>'.join(leaves) or '**none: no exit is stated**') + f' | {reach or "—"} |')
@@ -1405,7 +1416,9 @@ def terrain_page(atlas: dict) -> str:
             for i, x in enumerate(d['exits'], 1):
                 for p in x.get('drops') or []:
                     released.setdefault(p, []).append(f'[{_cell(names[d["id"]])}]({_section(d["id"], homes, TERRAIN)}) (exit {i})')
-        out += ['', '**Which premise releases which lock.** Each premise an exit of the family drops, and the exits that drop it.', '',
+        out += ['', '**Which premise releases which lock.** Each premise an exit of the family drops, and the exits that drop it. '
+                'Where an exit\'s law reads beyond the share, the exit drops Unread, which the dynamic\'s own laws hold by having '
+                'nothing beyond the share.', '',
                 '| Premise | Dropped by |', '|---|---|']
         out += [f'| {_premise_link(p, premises, ATLAS)} | {", ".join(v)} |' for p, v in sorted(released.items(), key=lambda kv: (-len(kv[1]), kv[0]))]
         out += ['' if released else 'No exit of the family drops a premise.', '']

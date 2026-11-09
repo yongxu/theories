@@ -296,9 +296,7 @@
    "en": "decided where a law counts or names: the proposition the law counts or names by is decided (it holds or it fails), in Lean an instance of Decidable or DecidableEq in the law's binders (the modules Becoming.Decidedness and Becoming.Listing)"
   },
   "kind": "local hypothesis",
-  "lean": [
-   "Becoming.Listing"
-  ],
+  "lean": [],
   "holds_in": [
    "Becoming.Decided.exists_below"
   ],
@@ -888,7 +886,7 @@
  {
   "id": "rulecapture-upper",
   "name": {
-   "en": "favouring kept upward, in RuleCapture"
+   "en": "favouring kept upward"
   },
   "statement": {
    "en": "a rule not lower than a favouring rule favours"
@@ -1489,7 +1487,7 @@
  {
   "id": "drawnshaping-step",
   "name": {
-   "en": "each kind of reader for its own, in DrawnShaping"
+   "en": "each kind of reader for its own"
   },
   "statement": {
    "en": "lo ≤ hi: the shapers among the readers read at least as much coming back to the shapers as the others among them do"
@@ -4442,7 +4440,7 @@
    "en": "a common multiple of the group sizes"
   },
   "statement": {
-   "en": "every group times its weight comes to one positive common multiple n of the group sizes"
+   "en": "each group's size times its factor f g is one positive n, a common multiple of the sizes"
   },
   "kind": "hypothesis of a law",
   "lean": [
@@ -4450,7 +4448,7 @@
   ],
   "holds_in": [],
   "fails_in": [],
-  "home": "theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.md#conditions--条件",
+  "home": "theories/becoming/results/records/shaping-selected-among-groups.md#conditions--条件",
   "seeded_from": [
    "Lean"
   ]
@@ -4469,7 +4467,7 @@
   ],
   "holds_in": [],
   "fails_in": [],
-  "home": "theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.md#conditions--条件",
+  "home": "theories/becoming/results/records/shaping-selected-among-groups.md#conditions--条件",
   "seeded_from": [
    "Lean"
   ]
