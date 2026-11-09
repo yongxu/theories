@@ -60,3 +60,19 @@ Verdict, condensed: no high finding; the hashes current; one medium, four low.
 ## Round 4 (the round-3 fixes)
 
 The five changed sentences read as described, each saying what the Lean gives, and the records' hashes matched the files. No high or medium finding remained, so the rounds stop here, by the rule of stopping at the first round with none.
+
+## The readings of route (b)'s join (astra, Opus, Fable)
+
+*Three independent AI readings of the joined pieces, read-only, kept by the session joining them (`/Users/ren/tmp/za-how-far/route-b/join/`), relayed with their items on this piece. Each was checked against the Lean.*
+
+| Item | Reader | Done |
+|---|---|---|
+| "Some selection is turned exactly where some member differs at some step" extracts a member and step the constructive laws do not give. | astra | Worded as proved: every selection alike exactly when alike through every member at every step; a differing continuation at a given step separates; which member and step is not extracted. |
+| Diversion is no counterexample to `ActReadsWithin`: no act indexed by significance is built. | astra | Called a witness of the agreement pattern failing, outside the law's setting. |
+| "Reaches" is a bound; cost selects against a reader only in the witness; independent readers are a design proposal. | astra | "Reaches at most"; "can select against, as one does in the shape of `Diversion`"; the proposal labelled. |
+| Pooled over every returning formation of a finite flow with reach decided, nothing lies beyond. | astra | Proved: `Flow.returning_pool_covers` (and `_either`), from G1's `Flow.covered_by_returning` and `Flow.withinCoupling_of_withinInfluence`; 07, the record and the notes say the bound bites only for a pool leaving a returning formation out. |
+| The third law's premise fails along affecting, where G1's standpoints are; state the per-center form once. | Opus, Fable | `Flow.ownClosure_rival_of_within`, with its two cases `Flow.returning_ownClosure_rival` (by `mono`) and `Flow.reachReturns_ownClosure_rival` (by `Flow.ReachReturns.represented`); `routeB_universal_closed`'s third conjunct takes the per-center form. |
+| `Flow.ownClosure_within_coupling` is `WithinClosure.mono` restated; `Becoming.Standpoints` is imported and unused. | Opus, Fable | Both removed. |
+| `ownClosure_not_unrestricted_of_acyclic` uses only GrammarScope; move it there. | Opus | Kept in this leaf so that GrammarScope's bytes and the records bound to them do not move for a two-line corollary; said in the note, for the join to decide. |
+| The note's wording: the pool's closure, "selected against", the separating selection for couplings, "one of two ways". | Opus, Fable | The group's closure with the pool inside; "that one selection, read with counting"; separation stated for continuations only; the two ways are witnesses. |
+| The group is fixed across two courses while G1's standpoints depend on the flow; `Affects` is time-blind, so the acyclic law bites on a dated net. | Opus, Fable | Both stated in the note, the hand-over and, for the second, in 07 and the route (b) record. |

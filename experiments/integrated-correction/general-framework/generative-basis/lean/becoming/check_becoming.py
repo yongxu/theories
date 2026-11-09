@@ -347,7 +347,7 @@ SCOPE = (
     "coupling and both courses feasible, are selected alike by every such selection of a pool within the closure, and where the act reads significance only within it so are two "
     "significances agreeing there; a significance read as each center's closure under a relation is the condition "
     "exactly where every closure is the whole, is not on a relation with no cycle and two distinct centers, and is not "
-    "along a relation returning to a center wherever something lies beyond its coupling closure; two histories are "
+    "wherever a center\'s own closure lies within its coupling closure and something lies beyond that; two histories are "
     "selected alike by every selection read off a group's couplings exactly when they are alike through every "
     "member's couplings at every step; witnesses in the clearing and the diversion, one a failed candidate. "
     "PremiseWitnesses: premises met and failed. The condition on the root varies with the net: at the one the "

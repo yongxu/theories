@@ -1,7 +1,6 @@
 import Becoming.SelectionPool
 import Becoming.FlowCenters
 import Becoming.GrammarScope
-import Becoming.Standpoints
 
 /-!
 # BeyondCoupling: what concern formed by continuation cannot reach
@@ -62,10 +61,14 @@ relation and centers supplied. No ranking or axiom enters.
   closure under a relation. It is the continuation condition exactly where every center's closure
   is the whole (`ownClosure_unrestricted_iff`). On a relation with no cycle and two standpoints
   with distinct centers it is not (`ownClosure_not_unrestricted_of_acyclic`, from
-  `«续无外则同一中心»`). And along every relation that returns to the center, within being
-  affected through what couples in (whatever is related to a formation exchanges with a condition
-  coupled into it), it gives no significance to what lies beyond the center's coupling closure, a
-  rival (`Flow.returning_ownClosure_rival`). The three together are `routeB_universal_closed`. In
+  `«续无外则同一中心»`); the relation's lack of a cycle is supplied, and aggregated over time
+  affecting need not lack one. And wherever a center's own closure lies within its coupling
+  closure, what lies beyond the coupling closure has no significance from it, a rival
+  (`Flow.ownClosure_rival_of_within`). Two cases: along every relation that returns to the center,
+  within being affected through what couples in (whatever is related to a formation exchanges with
+  a condition coupled into it; `Flow.returning_ownClosure_rival`), and along affecting at a center
+  whose acts return (`Flow.reachReturns_ownClosure_rival`, from `Flow.ReachReturns.represented`),
+  the standpoints a flow gives. The three laws together are `routeB_universal_closed`. In
   `Clearing` the dweller exchanges with nothing, so in the clearing flow it lies beyond the
   clearer's coupling closure whatever couples in by level (`Clearing.dweller_beyond_every_coupling`).
   So along every returning relation the clearer's own closure leaves it out and the condition
@@ -355,45 +358,64 @@ theorem ownClosure_not_unrestricted_of_acyclic {rel : F → F → Prop} {center 
   fun unrestricted =>
     distinct («续无外则同一中心» acyclic (ownClosure_unrestricted_iff_noOutside.mp unrestricted) p q)
 
-/-- **Along a relation that returns, the own closure stays within the coupling closure.** Along
-every relation under which whatever is related to a formation exchanges with a condition coupled
-into it, a formation's own closure lies within its coupling closure: what lies beyond the
-coupling closure lies beyond the own closure. -/
-theorem Flow.ownClosure_within_coupling {L : Flow F C} {W : Web F C} {obs : F → C → Prop}
-    {rel : F → F → Prop} (returns : ∀ g h, rel g h → L.CoupledFrom W obs g h) {f h : F}
-    (beyond : ¬ L.WithinCoupling W obs f h) : ¬ WithinClosure rel f h :=
-  fun within => beyond (WithinClosure.mono returns within)
+/-- **Within the own closure and beyond the coupling closure.** Where everything within a
+standpoint's center's own closure under a relation lies within the center's coupling closure, what
+lies beyond the coupling closure has no significance from that standpoint at any step, and the
+own-closure significance is a rival. The two cases below are its instances. -/
+theorem Flow.ownClosure_rival_of_within {L : Flow F C} {W : Web F C} {obs : F → C → Prop}
+    {rel : F → F → Prop} {center : Pos → F} {p : Pos}
+    (inside : ∀ g, WithinClosure rel (center p) g → L.WithinCoupling W obs (center p) g)
+    {h : F} (beyond : ¬ L.WithinCoupling W obs (center p) h) :
+    (∀ t, ¬ selfAscribed (ownClosure rel) center p t h) ∧
+      ¬ Unrestricted (selfAscribed (ownClosure rel) center) ∧
+      Rival (selfAscribed (ownClosure rel) center) :=
+  have lacks : ∀ t, ¬ selfAscribed (ownClosure rel) center p t h :=
+    fun _ within => beyond (inside h within)
+  ⟨lacks, fun unrestricted => lacks 0 (unrestricted (p, 0, h)),
+   rival_iff_lacks.mpr ⟨p, 0, h, lacks 0⟩⟩
 
-/-- **Along a relation that returns, what lies beyond a center's coupling closure has no
-significance from its standpoint, and the own-closure significance is a rival.** -/
+/-- **Along a relation that returns to the center.** Along every relation under which whatever is
+related to a formation exchanges with a condition coupled into it, the own closure lies within the
+coupling closure (`WithinClosure.mono`), so what lies beyond a center's coupling closure has no
+significance from its standpoint, and the significance is a rival. -/
 theorem Flow.returning_ownClosure_rival {L : Flow F C} {W : Web F C} {obs : F → C → Prop}
     {rel : F → F → Prop} (returns : ∀ g h, rel g h → L.CoupledFrom W obs g h)
     {center : Pos → F} {p : Pos} {h : F} (beyond : ¬ L.WithinCoupling W obs (center p) h) :
     (∀ t, ¬ selfAscribed (ownClosure rel) center p t h) ∧
       ¬ Unrestricted (selfAscribed (ownClosure rel) center) ∧
       Rival (selfAscribed (ownClosure rel) center) :=
-  have lacks : ∀ t, ¬ selfAscribed (ownClosure rel) center p t h :=
-    fun _ => Flow.ownClosure_within_coupling returns beyond
-  ⟨lacks, fun unrestricted => lacks 0 (unrestricted (p, 0, h)),
-   rival_iff_lacks.mpr ⟨p, 0, h, lacks 0⟩⟩
+  Flow.ownClosure_rival_of_within (fun _ within => WithinClosure.mono returns within) beyond
+
+/-- **Along affecting, at a center whose acts return.** Where a center's acts return, what lies
+within its reach closure lies within its coupling closure (`Flow.ReachReturns.represented`), so
+held along affecting, what lies beyond its coupling closure has no significance from its
+standpoint, and the significance is a rival: the case of the standpoints a flow gives, the
+formations whose acts return. -/
+theorem Flow.reachReturns_ownClosure_rival {L : Flow F C} {W : Web F C} {obs : F → C → Prop}
+    {center : Pos → F} {p : Pos} (returns : L.ReachReturns W (center p)) {h : F}
+    (beyond : ¬ L.WithinCoupling W obs (center p) h) :
+    (∀ t, ¬ selfAscribed (ownClosure (L.Affects W)) center p t h) ∧
+      ¬ Unrestricted (selfAscribed (ownClosure (L.Affects W)) center) ∧
+      Rival (selfAscribed (ownClosure (L.Affects W)) center) :=
+  Flow.ownClosure_rival_of_within (fun _ within => returns.represented within) beyond
 
 /-- **Route (b)'s universal form, closed.** For a significance read as each standpoint's center's
 closure under a relation: it is the continuation condition exactly where every center's closure is
-the whole; on a relation with no cycle and two standpoints with distinct centers it is not; and
-along every relation within being affected through what couples in, under any flow, web and
-coupling by level, it is not wherever something lies beyond some center's coupling closure. -/
+the whole; on a relation with no cycle and two standpoints with distinct centers it is not; and,
+under any flow, web and coupling by level, wherever some center's own closure lies within its
+coupling closure and something lies beyond that, it is not. -/
 theorem routeB_universal_closed :
     (∀ (rel : F → F → Prop) (center : Pos → F),
       Unrestricted (selfAscribed (ownClosure rel) center) ↔ ∀ p g, WithinClosure rel (center p) g) ∧
     (∀ (rel : F → F → Prop) (center : Pos → F), «无环» rel → ∀ p q, center p ≠ center q →
       ¬ Unrestricted (selfAscribed (ownClosure rel) center)) ∧
-    (∀ (L : Flow F C) (W : Web F C) (obs : F → C → Prop) (rel : F → F → Prop) (center : Pos → F),
-      (∀ g h, rel g h → L.CoupledFrom W obs g h) →
-      ∀ p h, ¬ L.WithinCoupling W obs (center p) h →
+    (∀ (L : Flow F C) (W : Web F C) (obs : F → C → Prop) (rel : F → F → Prop) (center : Pos → F)
+      (p : Pos), (∀ g, WithinClosure rel (center p) g → L.WithinCoupling W obs (center p) g) →
+      ∀ h, ¬ L.WithinCoupling W obs (center p) h →
         ¬ Unrestricted (selfAscribed (ownClosure rel) center)) :=
   ⟨fun _ _ => ownClosure_unrestricted_iff,
    fun _ _ acyclic _ _ distinct => ownClosure_not_unrestricted_of_acyclic acyclic distinct,
-   fun _ _ _ _ _ returns _ _ beyond => (Flow.returning_ownClosure_rival returns beyond).2.1⟩
+   fun _ _ _ _ _ _ inside _ beyond => (Flow.ownClosure_rival_of_within inside beyond).2.1⟩
 
 end RouteB
 

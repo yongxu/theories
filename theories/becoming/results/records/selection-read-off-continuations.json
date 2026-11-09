@@ -289,12 +289,12 @@
         "Becoming.not_tracks_of_alike",
         "Becoming.significance_courses_unselected"
       ],
-      "sha256": "c2d814f139ddb8e2b45de0f247be8bddf7458c7c7364e9340055f4df308ce3e1"
+      "sha256": "ad7d3dec85f92b5f8b71bf40cdfa9a741a849bc673c2df3cc79215b8a9633895"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zb-beyond-coupling/NOTE.md",
       "role": "integration",
-      "sha256": "584e586ad1bcc02dd33c6a8eb590a0c33215b72764de460ed37e402a70cbf607"
+      "sha256": "70096f7f7bca4780d10c50a85d49ccf6d7df4d39ef1614456c86652cf7945292"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zb-beyond-coupling/READER.md",
@@ -304,7 +304,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "162d201d896f4ccb4b8a5ac5f58d2673ede529048b0b32091820df109e4b2411"
+      "sha256": "96a2db7b05d4b8a8bcb545516241bee9d820eb62d719f1205694d4147cffe508"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",

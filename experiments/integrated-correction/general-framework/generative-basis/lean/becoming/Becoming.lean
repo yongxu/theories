@@ -4730,7 +4730,7 @@ tagged instance or application.
   (only the dweller returns; the supplied clearer and it part), `Clearing.clearer_beyond_returning_feeding`,
   `Drawing.returning_feeding_apart`, `Unexchanged.apart`. Which relation and which reading of the standpoints
   stay choices. A leaf; short compositions, none new as mathematics.
-* `Becoming.BeyondCoupling` (L2, through `Becoming.GrammarScope`, `Becoming.Standpoints` and `Becoming.FlowCenters`): what
+* `Becoming.BeyondCoupling` (L2, through `Becoming.GrammarScope` and `Becoming.FlowCenters`): what
   concern formed by continuation cannot reach (board item ZB, one of route (b)'s pieces). A selection
   read off a group's continuations decides a level history by each member's admission at every step
   (`Web.ReadOffContinuations`), or by what couples into the members at every step
@@ -4743,8 +4743,9 @@ tagged instance or application.
   that closure (`ActReadsWithin`, a premise) so are two significances agreeing there
   (`significance_courses_unselected`). Route (b)'s universal form in one theorem
   (`routeB_universal_closed`): the own-closure significance is the condition exactly where every
-  closure is the whole, not on a relation with no cycle and two distinct centers, and not along a
-  relation returning to a center wherever something lies beyond its coupling closure. Where the
+  closure is the whole, not on a relation with no cycle and two distinct centers, and not wherever
+  a center's own closure lies within its coupling closure and something lies beyond that, as along a
+  relation returning to the center or along affecting at a center whose acts return. Where the
   blindness lifts: histories are selected alike by every selection read off a group's couplings
   exactly when alike through every member's couplings at every step
   (`Web.readOffCouplings_alike_iff`, from `Web.selects_alike_all_iff`). Witnesses in `Clearing` and
