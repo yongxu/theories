@@ -106,3 +106,10 @@ astra read the route (b) pieces read-only and wrote an AI reading at `/Users/ren
 3. INTERFACES now gives `couplingClass_closed`'s premise and the right counts. The claim "P2 alone has the moment as its least class" now has a theorem, `«静最细»` (near-definitional).
 4. `«返则后类本类常闭»` lands with this landing. `«及之首步»` repeats G3's `ChoiceOccasions.reach_first_step`, and which one derives the other is left to the join.
 5. 07's order at the merge after G3 is G1's §4.8, G3's §4.9, then §4.10.
+
+## The join's checkers (relayed)
+
+1. "The widest self" in §4.10 is the least class only because P4 is granted, and a reader could take it to say that the net makes one's effects one's own. 07, record 1's correspondence and the note now state the condition where the phrase is used.
+2. P2 does no work in the least class's reach. This is proved: `«后类之所及即一之所及»` holds with no premise, from the definition and `«后皆同类则后皆续»`. 07, the records and the note now say plainly that P2 is needed only to make every class holding one's effects reach the same.
+3. The generalization of `«续无外则同一中心»` to classes indexed by centers is left to the join.
+4. 07's order after G3's merge is §4.8, §4.9, §4.10.

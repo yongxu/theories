@@ -37,7 +37,8 @@ module answers it for the classes meeting P2 and P4, and reads the class on a fl
 * **Every class meeting P2 and P4 reaches what the one reaches (本类常闭则所及即一之所及).** From a
   member, a line under any class meeting P2 and P4 there reaches exactly what a line under the one
   reaches: the member and everything downstream of it (`«本类常闭则所及即一之所及»`). Given P2, P4 is
-  equivalent to that (`«本类常则闭当且仅当所及即一之所及»`). With each center under a class of its own
+  equivalent to that (`«本类常则闭当且仅当所及即一之所及»`). The least class reaches it with no premise
+  (`«后类之所及即一之所及»`); P2 is what makes every class holding one's effects reach the same. With each center under a class of its own
   meeting P2 and P4 at it, the per-center condition along the net is the condition at the one
   (`«各本类常闭则续无外即一之续无外»`), so along a net with no cycle it holds only where every center is
   one and the same occurrence (`«各本类常闭续无外则同一中心»`).
@@ -280,6 +281,19 @@ theorem «本类常闭则所及即一之所及» {R E : «际» α} (hE : «类�
          | .one s => ⟨_, s⟩
          | .more s _ => ⟨_, s⟩
        .inr («本类常闭则后皆续» hE atClass goes held (hE.refl m) down).2⟩
+
+/-- **The line from a member under its class of what follows it reaches exactly what a line under the one
+reaches (后类之所及即一之所及),** with no premise: everything downstream of the member is alike to it by
+definition (`«后皆同类则后皆续»`). -/
+theorem «后类之所及即一之所及» (R : «际» α) (m t : α) :
+    «所及» R («后类» R m) m t ↔ «所及» R «一» m t :=
+  ⟨fun reached => match reached with
+     | .inl e => .inl e
+     | .inr line => .inr («及之单调» (fun _ _ c => ⟨c.1, trivial⟩) _ _ line),
+   fun reached => match eq_or_reach_iff_reached.mpr reached with
+     | .inl e => .inl e
+     | .inr down => .inr («后皆同类则后皆续» («后类为类» R m)
+         (fun _ d => «后类之本».mpr («及之所闭» _ _ d)) down)⟩
 
 /-- **Given P2 at a member, P4 holds exactly where its line under the class reaches what the one's
 reaches (本类常则闭当且仅当所及即一之所及).** -/
