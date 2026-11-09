@@ -315,9 +315,9 @@
       "sha256": "539ef9aa5e76911d455ad7ab620142a872e328c151e6d4ca829cdfa03e61e867"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T111610.530713Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T124151.227669Z/verification.json",
       "role": "receipt",
-      "sha256": "b3901fbae67b1357c63e584a31706c719a0fcfd083cc663548da4248a0b2ca5e",
+      "sha256": "6a12c6f0f50eea2b813b3b1b07b018dd58150f56cb14e25358f22bd3d6739516",
       "declarations": []
     },
     {
@@ -335,14 +335,14 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "6bed5850e878154d6d481ab25d3bc7fd5ccbba7a501c95a61760d82dd40cfd0f",
+      "sha256": "0976d12e43dbb0539587fc52ffbb6e882cd2fd8aafa55eab3efef6ba1281c40c",
       "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T111610.530713Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T124151.227669Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.FlowCenters",
       "success_pointer": "/status",
       "success_value": "passed"
