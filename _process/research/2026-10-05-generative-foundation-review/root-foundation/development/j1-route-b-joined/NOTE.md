@@ -1,6 +1,6 @@
 # J1: route (b) joined, and its rule-9 moves (AI-written, Claude Opus 5.5, 9 November 2026)
 
-Board row J1. Ren's words for route (b): [2026-11-09-route-b-ethics-forms.md](../../../../../../sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md) ("ok - 这一类请平行化认真完成，非常重要"). Home: [07 §4.11](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#route-b-joined). Record: [route-b-joined](../../../../../../theories/becoming/results/records/route-b-joined.md). Module: [`Becoming.FromTheDynamics`](../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FromTheDynamics.lean).
+Board row J1. Ren's words for route (b): [2026-11-09-route-b-ethics-forms.md](../../../../../../sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md) ("ok - 这一类请平行化认真完成，非常重要"). Home: [07 §4.12](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#route-b-joined). Record: [route-b-joined](../../../../../../theories/becoming/results/records/route-b-joined.md). Module: [`Becoming.FromTheDynamics`](../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FromTheDynamics.lean).
 
 Route (b) had four pieces, each landed on its own: G1 the standpoints and the relation read off a flow (`Becoming.FlowCenters`, 07 §4.8), G3 what persisting shows of an order (`Becoming.PersistingChoices`, ZA, 07 §4.9), G2 a center's own class (`Becoming.OwnClass`, ZC, 07 §4.10) and the bound, what selection read off continuation cannot reach (`Becoming.BeyondCoupling`, ZB, 07 §3.5). Three AI readings of the join (Opus, Fable, astra), eight adversarial checkers and a completeness critic read them together; their files are outside the repository, in the route's shared notes (`/Users/ren/tmp/za-how-far/route-b/join/`: `NEXT.md`, the three readings, `check-*`, `critic.md`). This note says what J1 did with what they settled. Its two siblings are separate pieces: J2 (which readings persist) and J3 (the condition in time).
 
@@ -21,7 +21,7 @@ Near-definitional by necessity: with significance free, no statement reading onl
 - That any order is held: only consistent with choices; nothing between degrees of keeping (`Forgoing`).
 - Anything in time: every relation is read across all steps (`Affects` is time-blind; own closure ignores the step). J3's piece.
 - A selection whose pool is read off the course (the meta-attractor): the pool is fixed in `act_courses_unselected_throughout`. J2's piece.
-- That the four pieces' "centers" are one object: no theorem identifies them (07 §4.11's table). `Alternating` is one model where the line's members are the returning formations, a witness, not an identification.
+- That the four pieces' "centers" are one object: no theorem identifies them (07 §4.12's table). `Alternating` is one model where the line's members are the returning formations, a witness, not an identification.
 - Persistence favouring restraint (Opus's conjecture): unsupported (`check-order-*`); not stated.
 
 ## 3. The rule-9 moves (board rule 9: the general law below, the special derived)
@@ -45,4 +45,4 @@ Scratch build (`scratch_build.py`, the checker's own steps) of the 141-module cl
 
 ## 5. Sentences for AG (07's existing wording, 08 §12)
 
-Sent to AG's session, not edited here: 07 §1's table row "Read … no law here picks the relation or the centers"; 07 §3.3's last sentence (D18, D19), which §3.5 and §4.11 now give theorem forms; 07 §4.8's "G3's `Flow.mutuallyDependent_iff_unrestricted`" (now FlowCenters'); 08 §12 item 12, "How scope and order form". One edit was made in an existing section because a removal would have left a dangling name: 07 §4.10's acyclic clause now cites `«各续无外则同一中心»`.
+Sent to AG's session, not edited here: 07 §1's table row "Read … no law here picks the relation or the centers"; 07 §3.3's last sentence (D18, D19), which §3.5 and §4.12 now give theorem forms; 07 §4.8's "G3's `Flow.mutuallyDependent_iff_unrestricted`" (now FlowCenters'); 08 §12 item 12, "How scope and order form". One edit was made in an existing section because a removal would have left a dangling name: 07 §4.10's acyclic clause now cites `«各续无外则同一中心»`.
