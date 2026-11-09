@@ -1,4 +1,4 @@
-<!-- 中文首页的模板（RW，2026 年 11 月 8 日）：README.zh.md 由 tools/research/zh_fronts.py 依此生成（make research-render），阅读时间、结果之数、检验之数与导航行在生成时填入，规则与英文首页相同（检验之数与英文首页由同一个函数 tests_page.screen_count 数出），图注与“古文”一段的几个数字抄自其所属之处，其余不手抄。首屏依英文首页与《一页》的中文写成，由两位 AI 起草者各自起草、一位 AI 评判者合成，再经两位独立的 AI 中文读者各自核对。首屏各段与英文首页同序：这是什么、先读、有什么用、一个情形、伦理、现状；只在中文版里的“古文”一段在一个情形与伦理之间，“这是什么”一段里关于名字“生灭变化”的一句、“现状”一段末审查包的链接，也只在中文版里。“有什么用”一段里那个按自身点击排序的排名，与英文首页相同，读作一种读法，实际的排名满足这一模型是猜想；先前只在中文版里的那个推荐系统之例已去掉。依主持这项工作的人 2026 年 11 月 8 日的话（sources/15-codex-theory-conversations/2026-11-08-ai-briefly-and-read.md），首屏与英文首页一样，只在“现状”一段用一句话说这项工作借助 AI 做成，以及主持它的人读过其中重要的部分；不再说无人读过或无人审查（那样说不对），而说尚无独立的人工审查记录（《一页》与第八章也这样说）。全文 AI 写成，尚无人审查它的记录；与它所链接之处不一致时，以所链接之处为准。改动请改此文件。 -->
+<!-- 中文首页的模板（RW，2026 年 11 月 8 日）：README.zh.md 由 tools/research/zh_fronts.py 依此生成（make research-render），阅读时间、结果之数、检验之数与导航行在生成时填入，规则与英文首页相同（检验之数与英文首页由同一个函数 tests_page.screen_count 数出），图注与“古文”一段的几个数字抄自其所属之处，其余不手抄。首屏依英文首页与《一页》的中文写成，由两位 AI 起草者各自起草、一位 AI 评判者合成，再经两位独立的 AI 中文读者各自核对。首屏各段与英文首页同序：这是什么、先读、有什么用、一个情形、伦理、现状；只在中文版里的“古文”一段在一个情形与伦理之间，“这是什么”一段里关于名字“生灭变化”的一句、“现状”一段末审查包的链接，也只在中文版里。“有什么用”一段里那个按自身点击排序的排名，与英文首页相同，读作一种读法，实际的排名满足这一模型是猜想；先前只在中文版里的那个推荐系统之例已去掉。依主持这项工作的人 2026 年 11 月 8 日的话（sources/15-codex-theory-conversations/2026-11-08-ai-briefly-and-read.md），首屏与英文首页一样，只在“现状”一段用一句话说这项工作借助 AI 做成，以及主持它的人读过其中重要的部分；不再说无人读过或无人审查（那样说不对），而说尚无独立的人工审查记录（《一页》与第八章也这样说）。开篇的中文版（theories/becoming/OPENING.zh.md）由 AI 译自英文版，首屏的“先读”与表格链接它，其正文的时间由 {{time:opening-zh}} 依同一规则计出，注释不计。全文 AI 写成，尚无人审查它的记录；与它所链接之处不一致时，以所链接之处为准。改动请改此文件。 -->
 
 # 生灭变化之论
 
@@ -12,7 +12,7 @@
 
 **这是什么。** 一套理论，讲任何东西怎样出现、持续、变化和消逝，不预先认定生灭变化是好的。名字里的“生灭变化”说的就是这些（英文 becoming）。它的律在形式模型上得到证明，用的是经机器检验的数学；说这些律能解释实际的事物怎样继续下去，这一点已论证，未证明。它的制作者希望它帮助人与训练出的系统作出预测、达成共同的理解并彼此协调；这一希望是他们的，可以修订，而这项工作中没有任何东西表明这一希望已经实现。
 
-**先读**[一页](../../theories/becoming/ONE-PAGE.zh.md)（约 {{time:theories/becoming/ONE-PAGE.zh.md}}）。[开篇](../../theories/becoming/OPENING.md)是第一人称写下的信念（英文，正文约 {{time:opening}}）。
+**先读**[一页](../../theories/becoming/ONE-PAGE.zh.md)（约 {{time:theories/becoming/ONE-PAGE.zh.md}}）。[开篇](../../theories/becoming/OPENING.zh.md)是第一人称写下的信念，由 AI 译自英文版（正文约 {{time:opening-zh}}）。
 
 **有什么用。** 对任何奖励、评判者、市场或投票，都可以问四个问题：它读取或需要什么；什么在这之外；它能不能靠压低外部之物，在所读之物上做得更好；它的规则能不能锁定在它已选中的东西上。这项工作在它的模型上证明了[在什么条件下把所读之物做到最好，必定耗竭外部之物](../../theories/becoming/ONE-PAGE.zh.md)，耗竭到任何合格结果所耗竭的程度；以及，在无噪声时，一条读自自身胜者份额、偏好这些胜者的规则在什么条件下会锁定在它们身上，而它读不到的损失不断增长。依一种读法，一个以它自己带来的点击为输入的排名，就是这样一条规则；实际的排名满足这一模型，是猜想。本论的[用途](../../theories/becoming/USES.zh.md)涉及对齐、协调与智慧传统，各在其自身的地位上（[以一个语言模型评判者为例逐问走一遍](../../theories/becoming/USES-EXAMPLES.zh.md#auditing-a-language-model-judge)）；迄今没有一项依它设计的检验在已部署的流水线上运行过。
 
@@ -38,7 +38,7 @@
 | [用途](../../theories/becoming/USES.zh.md) | 逐个领域：今天能用它做什么，能做到多远，不主张什么 | 约 {{time:theories/becoming/USES.zh.md}} |
 | [实例](../../theories/becoming/USES-EXAMPLES.zh.md) | 每个领域一例或数例，各在其真实的地位上 | 约 {{time:theories/becoming/USES-EXAMPLES.zh.md}} |
 | [总览](../../theories/becoming/THE-THEORY-OF-BECOMING.zh.md) | 全论的一小时层，按八章的顺序 | 约 {{time:theories/becoming/THE-THEORY-OF-BECOMING.zh.md}} |
-| [开篇](../../theories/becoming/OPENING.md) | 第一人称写下的信念：这件事为什么要紧；英文，尚无中文版 | 正文约 {{time:opening}}，注释另计 |
+| [开篇](../../theories/becoming/OPENING.zh.md) | 第一人称写下的信念：这件事为什么要紧；AI 译自[英文版](../../theories/becoming/OPENING.md)，义以英文版为准 | 正文约 {{time:opening-zh}}，注释另计 |
 | [八章](../../theories/becoming/chapters/README.md) | 各章正文，诸结果的所属之处；除第六章外为英文 | 每章约 {{time:chapters}} |
 | [古文（第六章）](../../theories/becoming/chapters/06-CLASSICAL-TEXTS.md) | 从古文读出文法，检验它，记下分歧；中文 | 约 {{time:theories/becoming/chapters/06-CLASSICAL-TEXTS.md}} |
 | [检验](../../TESTS.zh.md) | 冻结的检验，按论题计数，再按结局排列，未通过者在前，每项一句话（[全表](../../TESTS.md)为英文） | 约 {{time:TESTS.zh.md}} |
