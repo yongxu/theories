@@ -77,8 +77,8 @@
           "zh": "网之动作上的次序。"
         },
         "conditions": {
-          "en": "The reading that better is widening, an open warrant.",
-          "zh": "“更好”即扩大的读法，不求外来之根据。"
+          "en": "C read as widening, taken as a hypothesis.",
+          "zh": "读作扩大的 C，作为假设。"
         },
         "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Direction.lean"
       }
@@ -561,8 +561,8 @@
       "zh": "能够评价并修订目的的 AI 对齐"
     },
     "summary": {
-      "en": "The direction its makers offer AI, read under scope and order: align AI formation, learning, action, revision, transfer and appropriate ending with actual living and further generation within the whole, governing trade-offs through real losses, basic living conditions, bounded responsibility and legitimate participation, with effective opportunities to understand, challenge and revise. Human instructions, institutional objectives and an AI’s current goals all admit ethical evaluation. Ends, evaluations and the rules selecting future intelligence change living too, so they enter the same appraisal. This holds under the stated premises (the continuation condition for scope, C for order, and the practical commitments): the argument does not establish this formulation as the uniquely possible foundation of every alignment theory.",
-      "zh": "其制作者向 AI 提供的方向，在范围与次序之下读：使 AI 的形成、学习、行动、修订、交接与适当结束指向真实的生与整体之中的进一步生成，以真实损失、基本生存条件、有界责任与正当参与处理取舍，并有理解、质疑与修订的实际机会。人类指令、机构目标及 AI 当前目的都可以接受伦理评价。目的、评价以及选择未来智能的规则也改变生，因此进入同一评价。这在所述前提之下成立（延续条件定范围，C 定次序，加上实践承诺）；论证不声称该表述是每一种对齐理论唯一可能的基础。"
+      "en": "The direction we offer AI, read under scope and order: align AI formation, learning, action, revision, transfer and appropriate ending with actual living and further generation within the whole, governing trade-offs through real losses, basic living conditions, bounded responsibility and legitimate participation, with effective opportunities to understand, challenge and revise. Human instructions, institutional objectives and an AI’s current goals all admit ethical evaluation. Ends, evaluations and the rules selecting future intelligence change living too, so they enter the same appraisal. This holds under the stated premises (the continuation condition for scope, C for order, and the practical commitments): the argument does not establish this formulation as the uniquely possible foundation of every alignment theory.",
+      "zh": "我们向 AI 提供的方向，在范围与次序之下读：使 AI 的形成、学习、行动、修订、交接与适当结束指向真实的生与整体之中的进一步生成，以真实损失、基本生存条件、有界责任与正当参与处理取舍，并有理解、质疑与修订的实际机会。人类指令、机构目标及 AI 当前目的都可以接受伦理评价。目的、评价以及选择未来智能的规则也改变生，因此进入同一评价。这在所述前提之下成立（延续条件定范围，C 定次序，加上实践承诺）；论证不声称该表述是每一种对齐理论唯一可能的基础。"
     },
     "evidence": {
       "zh": "已完成并经独立审查的哲学论证，含一个说明哪些变化会改变判断的 AI 案例。Lean 检查案例中的判断确由所述生生之意义与实践承诺推出，交叉基本损失不排序（经独立重编译）。另行检查表明：基本保护优先不由 C 推出（生生之意义不约束排序）；在一个所给磨损规律下，一步的形成计数把消耗型接续排在持续形成之前，而这种消耗随后终止共享形成。前提是否正确、部署系统是否认可或遵循，是另外的问题。在脊柱上，一个核心模式在读作扩大的 C 与实践承诺之下陈述网之动作上的方向，区分两个动作者只经耦合入它的组被选择。",

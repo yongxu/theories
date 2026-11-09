@@ -212,7 +212,7 @@ Before the account goes to readers outside the work (the review packet, a note f
 - a derivation of balance, whose failure U1's verdict wrote down, which meets that part;
 - further models of plan §八 step 9's test systems, which is modelling work beyond the unification;
 - real amounts, continuous time, quantum dynamics and consciousness;
-- the warrant of the two premises, which the account names and does not assert.
+- a warrant binding every mind for the continuation condition or C: no should stands beyond becoming, so there is none to find, and the ethics, which emerges from continuation, does not wait on one ([07](../../../../../../theories/becoming/chapters/07-SIGNIFICANCE.md#r-universal-practical-warrant); argued). (Re-said 9 November 2026, AI-written on Ren's words that day, [source](../../../../../../sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md), message 9; until then this item read "the warrant of the two premises, which the account names and does not assert".)
 
 **Why a gate and not the whole plan.** Plan §十三 asks for steps 5 to 10 in full. That measures the unification, not what a reader needs. The gate takes what would change a statement a release makes (items 1 to 4) and what a reader needs to check it (items 5 and 6). No date is set. OU3 was estimated at five to eight weeks (plan §十一) and took about one, 23 to 30 October 2026, but item 2 has no such precedent.
 

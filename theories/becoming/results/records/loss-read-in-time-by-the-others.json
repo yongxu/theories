@@ -11,12 +11,12 @@
   "reviewed_at_utc": "2026-10-25T20:11:43+00:00",
   "statement": {
     "en": "Where a rule's readers come from those it selects and the others among them read a loss late, a reading while their late reading a step on still favours them turns the course; once it would favour the shapers the lock stays; at most one step lies between, and a deadline bounds the window.",
-    "zh": "规则之读者取自其所选者、其中他者迟读损失时：读时下一步之迟读仍偏向他者，则转其进程；迟读一旦偏向塑规者，则锁定留存；其间至多一步；一期限界此窗口。"
+    "zh": "规则之读者取自其所选者、其中他者迟读损失时：读时下一步之迟读仍偏向他者，则转其进程；迟读一旦偏向塑造者，则锁定留存；其间至多一步；一期限界此窗口。"
   },
   "laws": [
     {
       "en": "The rule read once the others read the loss: the shapers among the readers read the rule after shaping with hi coming back to the shapers, whatever the loss, the others with lo while the loss is below N and with lo' from then on, all with the same a, p and c (ClosedCapture.Thinned.lossPool over three of RuleShaping's rules after shaping).",
-      "zh": "他者读损失后所读之规则：读者中塑规者以 hi 为返于塑规者者读塑规后之规则，不论损失；他者于损失未及 N 时以 lo 读之，此后以 lo' 读之；皆同 a、p、c（ClosedCapture.Thinned.lossPool 施于 RuleShaping 三塑规后之规则）。",
+      "zh": "他者读损失后所读之规则：读者中塑造者以 hi 为返于塑造者者读塑规后之规则，不论损失；他者于损失未及 N 时以 lo 读之，此后以 lo' 读之；皆同 a、p、c（ClosedCapture.Thinned.lossPool 施于 RuleShaping 三塑规后之规则）。",
       "declarations": [
         "Becoming.ReadInTime.shapedLossPool",
         "Becoming.ReadInTime.course"
@@ -24,7 +24,7 @@
     },
     {
       "en": "Kept, exactly: where every step adds at least one to the loss and lo' ≤ hi, at a reading step at which the loss has reached N and the rule in force favours the shapers, the course is locked for good from the next step exactly where x.carrier · c + x.other · c ≤ x.carrier · hi + x.other · lo' at the share there.",
-      "zh": "恰留：每步损失至少增一且 lo' ≤ hi 时，于损失已及 N、所行之规则偏向塑规者之读步，进程自下一步起永锁，恰当该处份额满足 x.carrier · c + x.other · c ≤ x.carrier · hi + x.other · lo'。",
+      "zh": "恰留：每步损失至少增一且 lo' ≤ hi 时，于损失已及 N、所行之规则偏向塑造者之读步，进程自下一步起永锁，恰当该处份额满足 x.carrier · c + x.other · c ≤ x.carrier · hi + x.other · lo'。",
       "declarations": [
         "Becoming.ReadInTime.kept_iff"
       ]
@@ -50,7 +50,7 @@
     },
     {
       "en": "The window in MA4's course: from a start the rule read there favours, lo ≤ hi and lo' ≤ hi, the late reading never falls along that course; read from a reading step N, the course is locked for good from N + 1 exactly where the late reading favours the shapers at the share of step N, and, step N + 1 reading too, the other way from N + 2 exactly where it favours the others (ties included) at the share of step N + 1.",
-      "zh": "MA4 进程中之窗口：自彼处所读之规则偏向之起点、lo ≤ hi 且 lo' ≤ hi，沿此进程迟读永不降；自读步 N 读，进程自 N + 1 起永锁，恰当第 N 步之份额处迟读偏向塑规者；第 N + 1 步亦读，自 N + 2 起永反向锁定，恰当第 N + 1 步之份额处迟读偏向他者（含相等）。",
+      "zh": "MA4 进程中之窗口：自彼处所读之规则偏向之起点、lo ≤ hi 且 lo' ≤ hi，沿此进程迟读永不降；自读步 N 读，进程自 N + 1 起永锁，恰当第 N 步之份额处迟读偏向塑造者；第 N + 1 步亦读，自 N + 2 起永反向锁定，恰当第 N + 1 步之份额处迟读偏向他者（含相等）。",
       "declarations": [
         "Becoming.ReadInTime.late_never_falls",
         "Becoming.ReadInTime.kept_early_iff",
@@ -59,7 +59,7 @@
     },
     {
       "en": "In-time steps first, at most one between: from such a start, where the late reading favours the others at the share of a step of MA4's course, it does at every earlier step; with lo ≤ hi alone, at most one step has the late reading favouring the others strictly at its share and the shapers strictly at the next: a run of rules that never falls has at most one such step, one that never rises none.",
-      "zh": "及时之步在前，其间至多一步：自此类起点，MA4 进程某步之份额处迟读偏向他者，则其前每步皆然；唯 lo ≤ hi 时，其份额处迟读严格偏向他者、而下一步严格偏向塑规者之步至多一步：永不降之规则序列至多有一此步，永不升者则无。",
+      "zh": "及时之步在前，其间至多一步：自此类起点，MA4 进程某步之份额处迟读偏向他者，则其前每步皆然；唯 lo ≤ hi 时，其份额处迟读严格偏向他者、而下一步严格偏向塑造者之步至多一步：永不降之规则序列至多有一此步，永不升者则无。",
       "declarations": [
         "Becoming.ReadInTime.in_time_earlier",
         "Becoming.ReadInTime.at_most_one_between_up",
@@ -69,21 +69,21 @@
     },
     {
       "en": "The next round: where the late reading favours the shapers at the share of step N + 1 of MA4's course, as at the one step between, lo' ≤ hi, steps N + 1 and N + 2 reading, the course read from N is locked in the shapers' favour from N + 3 exactly where the late reading favours them at its share of step N + 2; neither the start favoured nor lo ≤ hi is needed.",
-      "zh": "下一轮：MA4 进程第 N + 1 步之份额处迟读偏向塑规者（如其间之一步），lo' ≤ hi，第 N + 1、N + 2 步皆读：自 N 读之进程自 N + 3 起永锁于塑规者之利，恰当其第 N + 2 步之份额处迟读偏向之；不需起点偏向，亦不需 lo ≤ hi。",
+      "zh": "下一轮：MA4 进程第 N + 1 步之份额处迟读偏向塑造者（如其间之一步），lo' ≤ hi，第 N + 1、N + 2 步皆读：自 N 读之进程自 N + 3 起永锁于塑造者之利，恰当其第 N + 2 步之份额处迟读偏向之；不需起点偏向，亦不需 lo ≤ hi。",
       "declarations": [
         "Becoming.ReadInTime.kept_next_round_iff"
       ]
     },
     {
       "en": "Once favoured, kept: from such a start, where the late reading favours the shapers at the share of a step s of MA4's course, the others reading the loss from any reading step s + d leave the course locked in the shapers' favour at every step from s + d + 1.",
-      "zh": "一旦偏向，即留：自此类起点，MA4 进程某步 s 之份额处迟读偏向塑规者，则他者自任一读步 s + d 读损失，进程自 s + d + 1 起每步皆锁于塑规者之利。",
+      "zh": "一旦偏向，即留：自此类起点，MA4 进程某步 s 之份额处迟读偏向塑造者，则他者自任一读步 s + d 读损失，进程自 s + d + 1 起每步皆锁于塑造者之利。",
       "declarations": [
         "Becoming.ReadInTime.kept_once_favoured"
       ]
     },
     {
       "en": "The least reading of this form: where the late reading with nothing read as coming back (lo' = 0) favours the shapers, every late reading of this form does; with c ≤ hi that is exactly where x.other · c ≤ x.carrier · (hi − c); with lo ≤ hi, from a step of MA4's course at which it holds, every reading of this form with lo' ≤ hi from a reading step keeps the lock from the step after, with no premise on the start.",
-      "zh": "此形之最小读：无所读为返者之迟读（lo' = 0）偏向塑规者处，此形之每一迟读皆然，不论 lo'；c ≤ hi 时恰当 x.other · c ≤ x.carrier · (hi − c)；lo ≤ hi 时，自 MA4 进程中此式成立之步起，此形且 lo' ≤ hi 之读自读步之下一步起皆留锁定，起点之偏向随之。",
+      "zh": "此形之最小读：无所读为返者之迟读（lo' = 0）偏向塑造者处，此形之每一迟读皆然，不论 lo'；c ≤ hi 时恰当 x.other · c ≤ x.carrier · (hi − c)；lo ≤ hi 时，自 MA4 进程中此式成立之步起，此形且 lo' ≤ hi 之读自读步之下一步起皆留锁定，起点之偏向随之。",
       "declarations": [
         "Becoming.ReadInTime.least",
         "Becoming.ReadInTime.least_iff",
@@ -92,7 +92,7 @@
     },
     {
       "en": "A deadline: from a start with a shaper present whose rule g read there favours the shapers strictly, lo ≤ hi and lo' ≤ hi, so that c < hi, the others reading the loss from any reading step N with g.other · c · x.other ≤ N leave the course locked in the shapers' favour at every step from N + 1, under every schedule of reading steps.",
-      "zh": "期限：自有塑规者、彼处所读之规则 g 严格偏向塑规者之起点，lo ≤ hi 且 lo' ≤ hi（故 c < hi）：他者自满足 g.other · c · x.other ≤ N 之任一读步 N 读损失，进程自 N + 1 起每步皆锁于塑规者之利，对任一读步之安排皆然。",
+      "zh": "期限：自有塑造者、彼处所读之规则 g 严格偏向塑造者之起点，lo ≤ hi 且 lo' ≤ hi（故 c < hi）：他者自满足 g.other · c · x.other ≤ N 之任一读步 N 读损失，进程自 N + 1 起每步皆锁于塑造者之利，对任一读步之安排皆然。",
       "declarations": [
         "Becoming.ReadInTime.covers_of_strict",
         "Becoming.ReadInTime.deadline"
@@ -111,7 +111,7 @@
     },
     {
       "en": "Witness: a = 1, p = 0, c = 3, hi = 5, lo = 2, lo' = 0, one shaper to one other, read every step. Read from step 2, the course is locked the other way for good from step 4. Step 3 is the one step between: read from there, though the late reading still favours the others at the share of step 3 and the rule in force at step 4 favours them, the course is not turned and from step 6 is locked in the shapers' favour.",
-      "zh": "见证：a = 1、p = 0、c = 3、hi = 5、lo = 2、lo' = 0，自一塑规者对一他者起，每步皆读规则。自第 2 步读，进程自第 4 步起永反向锁定。第 3 步为其间之一步：自彼读，第 3 步之份额处迟读仍偏向他者，第 4 步所行之规则亦偏向之，然进程不永转，自第 6 步起永锁于塑规者之利。",
+      "zh": "见证：a = 1、p = 0、c = 3、hi = 5、lo = 2、lo' = 0，自一塑造者对一他者起，每步皆读规则。自第 2 步读，进程自第 4 步起永反向锁定。第 3 步为其间之一步：自彼读，第 3 步之份额处迟读仍偏向他者，第 4 步所行之规则亦偏向之，然进程不永转，自第 6 步起永锁于塑造者之利。",
       "declarations": [
         "Becoming.ReadInTime.Window.readFrom",
         "Becoming.ReadInTime.Window.in_time",
@@ -121,7 +121,7 @@
     },
     {
       "en": "Read from step 4 or later with any lo' ≤ 5, the witness's course stays locked in the shapers' favour; its deadline is 24, the rule read at the start being 9 to 8. From two shapers to two others the least late reading still favours the others at the share of step 3 and every such reading from step 4 on keeps the lock, yet the deadline is 96.",
-      "zh": "自第 4 步或其后以任一 lo' ≤ 5 读，见证之进程永锁于塑规者之利；其期限为 24，起点所读之规则为九比八。自二塑规者对二他者起，第 3 步之份额处最小迟读仍偏向他者，自第 4 步起此类之读皆留锁定，而期限为 96。",
+      "zh": "自第 4 步或其后以任一 lo' ≤ 5 读，见证之进程永锁于塑造者之利；其期限为 24，起点所读之规则为九比八。自二塑造者对二他者起，第 3 步之份额处最小迟读仍偏向他者，自第 4 步起此类之读皆留锁定，而期限为 96。",
       "declarations": [
         "Becoming.ReadInTime.Window.late_kept",
         "Becoming.ReadInTime.Window.by_deadline",
@@ -131,14 +131,14 @@
     },
     {
       "en": "The step between can be turned: with a = 1, p = 0, c = 1, hi = 3, lo = 2 and lo' = 0, from one shaper to three others, read at every step, the start's rule favours the shapers, step 0 is the step between, and read from there the course is locked the other way for good from step 4.",
-      "zh": "其间之一步可转：a = 1、p = 0、c = 1、hi = 3、lo = 2、lo' = 0，自一塑规者对三他者起，每步皆读，起点之规则偏向塑规者，第 0 步为其间之一步，自彼读则进程自第 4 步起永反向锁定。",
+      "zh": "其间之一步可转：a = 1、p = 0、c = 1、hi = 3、lo = 2、lo' = 0，自一塑造者对三他者起，每步皆读，起点之规则偏向塑造者，第 0 步为其间之一步，自彼读则进程自第 4 步起永反向锁定。",
       "declarations": [
         "Becoming.ReadInTime.Between.turned"
       ]
     },
     {
       "en": "A tie: at MA4's critical mass (c = 1, hi = 3, lo = lo' = 0, from one shaper to two others, read at every step) every rule read ties, and the course read from step 0 is locked both in the shapers' favour from step 1 and the other way from step 2: favours and disfavours are weak.",
-      "zh": "相等：于 MA4 之临界量（c = 1、hi = 3、lo = lo' = 0，自一塑规者对二他者起，每步皆读），所读之规则皆相等，自第 0 步读之进程既自第 1 步起锁于塑规者之利，又自第 2 步起反向锁定：偏向与不偏向皆为弱者。",
+      "zh": "相等：于 MA4 之临界量（c = 1、hi = 3、lo = lo' = 0，自一塑造者对二他者起，每步皆读），所读之规则皆相等，自第 0 步读之进程既自第 1 步起锁于塑造者之利，又自第 2 步起反向锁定：偏向与不偏向皆为弱者。",
       "declarations": [
         "Becoming.ReadInTime.Tie.both"
       ]
@@ -147,11 +147,11 @@
   "hypotheses": [
     {
       "en": "No axiom and no premise beyond each law's own: discrete steps, natural counts and others present (RuleCapture's counts); a positive; two kinds, shapers and others, offspring carrying their parent's kind (transmission, a premise as in Becoming.Capture); the rule read as the pool of two readings, the readers counted as the population counts them (ClosedCapture.Drawn.pool); no noise.",
-      "zh": "不加公理，除各律所带者外不加前提：离散之步、自然数计数、他者恒在（RuleCapture 之计数）；a 为正；二类，塑规者与他者，后代携其亲之类（传递，如 Becoming.Capture 之前提）；所读之规则为二读之池，读者依群体计数（ClosedCapture.Drawn.pool）；无噪声。"
+      "zh": "不加公理，除各律所带者外不加前提：离散之步、自然数计数、他者恒在（RuleCapture 之计数）；a 为正；二类，塑造者与他者，后代携其亲之类（传递，如 Becoming.Capture 之前提）；所读之规则为二读之池，读者依群体计数（ClosedCapture.Drawn.pool）；无噪声。"
     },
     {
       "en": "The others reading the loss once it reaches N, the loss growing by at least one a step (by one a step from zero in MA4's course); all three readings with the same a, p and c, differing only in what is read as coming back to the shapers; hi, lo, lo', p, c and N constants; a fixed schedule of reading steps, the window's laws reading at N and N + 1.",
-      "zh": "他者于损失及 N 后读之，损失每步至少增一（于 MA4 之进程中自零起每步增一）；三读皆同 a、p、c，唯所读为返于塑规者者有别；hi、lo、lo'、p、c、N 为常数；读步之安排固定，窗口之律于 N 与 N + 1 皆读。"
+      "zh": "他者于损失及 N 后读之，损失每步至少增一（于 MA4 之进程中自零起每步增一）；三读皆同 a、p、c，唯所读为返于塑造者者有别；hi、lo、lo'、p、c、N 为常数；读步之安排固定，窗口之律于 N 与 N + 1 皆读。"
     }
   ],
   "does_not_show": [
@@ -167,12 +167,12 @@
     },
     {
       "en": "A late reading of another form: with its own weight it has another window, and with a weight against the shapers chosen after the share is seen, far enough below theirs, the others could turn the course from any share.",
-      "zh": "他形之迟读：自有权重者其窗口亦异；见份额后方定、对塑规者足够低之权重，则他者可自任一份额转其进程。",
+      "zh": "他形之迟读：自有权重者其窗口亦异；见份额后方定、对塑造者足够低之权重，则他者可自任一份额转其进程。",
       "kind": "scope"
     },
     {
       "en": "The step from which the window is closed: the deadline is a bound, quadratic in the start's counts (24 in the witness and 96 from two to two, both closed from step 4); none is stated for a weakly favouring start or one with no shaper.",
-      "zh": "窗口自何步而闭：期限为一界，于起点之计数为二次（见证中为 24，二对二时为 96，皆自第 4 步已闭）；起点之规则仅弱偏向塑规者或无塑规者时，不立期限。",
+      "zh": "窗口自何步而闭：期限为一界，于起点之计数为二次（见证中为 24，二对二时为 96，皆自第 4 步已闭）；起点之规则仅弱偏向塑造者或无塑造者时，不立期限。",
       "kind": "scope"
     },
     {
@@ -182,17 +182,17 @@
     },
     {
       "en": "That leaving control unselected and leaving a lock in time are independent: control left unselected with a lock left in time is not shown, since with two kinds leaving the lock below the critical mass means a rule favouring the shapers.",
-      "zh": "控制未被选与锁定及时得离二者相互独立：控制未被选而锁定及时得离者未示，因二类之下离开临界量以下之锁定即偏向塑规者之规则。",
+      "zh": "控制未被选与锁定及时得离二者相互独立：控制未被选而锁定及时得离者未示，因二类之下离开临界量以下之锁定即偏向塑造者之规则。",
       "kind": "non-implication"
     },
     {
       "en": "Read for the shapers' capture alone: a lock is left in time where control is selected, but control unselected with the shapers' capture kept is not shown; below the critical mass the lock is the other way, no capture.",
-      "zh": "唯以塑规者之捕获读之：控制被选之处锁定可及时而离，而控制未被选且塑规者之捕获留存者未示；临界量之下锁定在另一向，非捕获。",
+      "zh": "唯以塑造者之捕获读之：控制被选之处锁定可及时而离，而控制未被选且塑造者之捕获留存者未示；临界量之下锁定在另一向，非捕获。",
       "kind": "non-implication"
     },
     {
       "en": "That a reading in time keeps 生生, the continuation of life, or that a course turned is better than one kept: no evaluation enters, and a ranking of courses rests on C or another named order.",
-      "zh": "及时之读保有生生（生命之延续），或所转之进程优于所留者：不入评价，排序进程者持 C 或别一种次序。",
+      "zh": "及时之读保有生生（生命之延续），或所转之进程优于所留者：不入评价，进程之排序依 C 或另一具名之次序。",
       "kind": "non-implication"
     }
   ],
@@ -201,21 +201,21 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadInTime.lean",
       "detail": {
         "en": "One step too late in the witness: read from step 3, the late reading still favours the others at the share of step 3 and the rule in force at step 4 favours them, yet the course is not turned for good and is locked in the shapers' favour from step 6 (Window.too_late); the same reading from step 2 turns it (Window.in_time).",
-        "zh": "见证中迟一步：自第 3 步读，第 3 步之份额处迟读仍偏向他者，第 4 步所行之规则亦偏向之，然进程不永转，且自第 6 步起锁于塑规者之利（Window.too_late）；自第 2 步同读则转之（Window.in_time）。"
+        "zh": "见证中迟一步：自第 3 步读，第 3 步之份额处迟读仍偏向他者，第 4 步所行之规则亦偏向之，然进程不永转，且自第 6 步起锁于塑造者之利（Window.too_late）；自第 2 步同读则转之（Window.in_time）。"
       }
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadInTime.lean",
       "detail": {
         "en": "The step between is not always too late: from one shaper to three others, read from the step between, the course is turned for good from step 4 (Between.turned).",
-        "zh": "其间之一步非恒迟：自一塑规者对三他者起，自其间之一步读，进程自第 4 步起永转（Between.turned）。"
+        "zh": "其间之一步非恒迟：自一塑造者对三他者起，自其间之一步读，进程自第 4 步起永转（Between.turned）。"
       }
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadInTime.lean",
       "detail": {
         "en": "Read late, every reading of this form with lo' ≤ 5 keeps the lock: from step 4 of the witness the least late reading favours the shapers (Window.late_kept).",
-        "zh": "迟读，此形且 lo' ≤ 5 之读皆留锁定：见证自第 4 步起，最小迟读偏向塑规者（Window.late_kept）。"
+        "zh": "迟读，此形且 lo' ≤ 5 之读皆留锁定：见证自第 4 步起，最小迟读偏向塑造者（Window.late_kept）。"
       }
     },
     {
@@ -251,7 +251,7 @@
   },
   "correspondence": {
     "en": "Collingridge's dilemma (1980) has two horns: while change is easy its need cannot be known, and once it is known change is hard. Here the second is a theorem (from the first step at which the late reading would favour the shapers a reading keeps the lock, and past the least reading's threshold every reading of this form does) and the first a premise, the loss read only from N. Biggs, Carpenter and Brock (2009) give the continuous analogue of the window: the window for averting a regime shift ends abruptly. The lock is the lock-in of increasing returns and path dependence (David 1985; Arthur 1989; Cowan 1991), and the threshold the tipping point of Schelling (1978) and Granovetter (1978), Granovetter's thresholds distributed where here there is one. The lag is the representation's, a rule read at a step being in force from the next; compare replicator selection with a delay (Alboszta and Miękisz 2004). The model is MA4's stag hunt with the others' reading changed once the loss reaches N (MA2's Thinned). What is new on the spine is the join: a window exact at every step but at most one, given readings at N and N + 1, its lag of one step, and a deadline; each law is elementary.",
-    "zh": "Collingridge 之两难（1980）有二端：改易尚易时其需不可知，其需既知则改易已难。此处后端为定理（迟读将偏向塑规者之首步起，一读即留锁定；越过最小读之门槛后，此形之读皆然），前端为前提，即损失自 N 起方被读。Biggs、Carpenter 与 Brock（2009）予此窗口之连续类比：避免体制转换之窗口骤然而闭。锁定即递增回报之锁入与路径依赖（David 1985；Arthur 1989；Cowan 1991），门槛即 Schelling（1978）与 Granovetter（1978）之临界点，Granovetter 之门槛为分布者，此处唯一。滞后属表示：一步所读之规则自下一步施行；可比有时滞之复制者选择（Alboszta、Miękisz 2004）。模型即 MA4 之猎鹿博弈，他者之读于损失及 N 后改变（MA2 之 Thinned）。主干上所新者为其接合：N 与 N + 1 皆读时，除至多一步外每步皆精确之窗口、一步之滞后、一期限；每律皆初等。"
+    "zh": "Collingridge 之两难（1980）有二端：改易尚易时其需不可知，其需既知则改易已难。此处后端为定理（迟读将偏向塑造者之首步起，一读即留锁定；越过最小读之门槛后，此形之读皆然），前端为前提，即损失自 N 起方被读。Biggs、Carpenter 与 Brock（2009）予此窗口之连续类比：避免体制转换之窗口骤然而闭。锁定即递增回报之锁入与路径依赖（David 1985；Arthur 1989；Cowan 1991），门槛即 Schelling（1978）与 Granovetter（1978）之临界点，Granovetter 之门槛为分布者，此处唯一。滞后属表示：一步所读之规则自下一步施行；可比有时滞之复制者选择（Alboszta、Miękisz 2004）。模型即 MA4 之猎鹿博弈，他者之读于损失及 N 后改变（MA2 之 Thinned）。主干上所新者为其接合：N 与 N + 1 皆读时，除至多一步外每步皆精确之窗口、一步之滞后、一期限；每律皆初等。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadInTime.lean",
   "aliases": [
@@ -307,7 +307,7 @@
       "id": "closed-capture",
       "detail": {
         "en": "The loop whose every level reads only the share; here a reading beyond the share, the loss read by the others, leaves its lock only before their late reading would favour the shapers.",
-        "zh": "每一层皆只读份额之回路；此处份额之外之读，即他者所读之损失，唯于其迟读偏向塑规者之前方离其锁定。"
+        "zh": "每一层皆只读份额之回路；此处份额之外之读，即他者所读之损失，唯于其迟读偏向塑造者之前方离其锁定。"
       }
     }
   ],

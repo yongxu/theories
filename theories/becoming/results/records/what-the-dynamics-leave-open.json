@@ -52,8 +52,8 @@
       "kind": "scope"
     },
     {
-      "en": "That the continuation condition holds, or that it is needed: the results locate what a proof of it would need, a premise about significance excluding every rival, and the theory asserts none.",
-      "zh": "延续之条件成立，或其为必需：诸结果只指明其证明所需者，即一排除一切对手之关于意义之前提，理论不主张之。",
+      "en": "That the continuation condition holds, or that it is needed: the results locate what a proof of it would need, a premise about significance excluding every rival, and a result takes one only as a hypothesis it states.",
+      "zh": "延续之条件成立，或其为必需：诸结果只指明其证明所需者，即一排除一切对手之关于意义之前提；结果取之，唯作其所述之假设。",
       "kind": "non-implication"
     },
     {
@@ -76,8 +76,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T103619.721318Z）：本记录所引 12 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 347 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "An independent review; whether a premise about significance that excludes every rival has a warrant (the chapter's open question of warrant).",
-    "zh": "独立审查；排除一切对手之关于意义之前提是否有据（章中关于依据之开放问题）。"
+    "en": "An independent review; where, read on relations, the condition holds, and how scope forms within the dynamics (chapter 8, open item 12).",
+    "zh": "独立审查；就关系而读，条件于何处成立，范围怎样在动力学之中形成（第八章，开放项 12）。"
   },
   "correspondence": {
     "en": "Hume's is–ought gap, stated for the represented dynamics: no statement about the dynamics alone fixes significance; independence of a parameter from the laws that do not read it.",

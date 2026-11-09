@@ -1,0 +1,95 @@
+{
+ "note": "AI-written, 9 November 2026: the adversarial verification, in the AG review's fifth pass, of what the agent 'onepage' changed (the one page, the overview and their Chinese editions, and its pins in test_navigation_pages). I read the diff of every changed file against HEAD 33b6f3cff and each changed section whole, and checked its claims against 07 (thesis, §1, §3.3, §4, §4.4, §7, §8, the open list's universal-practical-warrant item), 05's mutual-dependence theorem, 02 §9 (ClosedCapture.lock_outlives_loss), 08 §8 and §12, the experiment's agents.py, and the Lean statements of Web.extension_ranked_of_increasingInOwn, bounded_rival and ReadsOnlyDynamics.not_entails. The work follows E1 to E10 closely: the ethics emerges from continuation, no warrant is left open, no good and evil, C glossed as widening, the exact limits (listed level paths, one way, self-concern a hypothesis derived from no dynamics, the joining not yet one theorem) kept where proof claims are stated. I found no high problem. I fixed four medium problems and four low ones (below). No make, render, gate, lake or build was run. Single test files under unittest after my fixes: test_navigation_pages 49 OK; test_uses_pages 49 OK; test_atlas 45 OK; test_connection_map 32 OK; test_chinese_fronts 27 of 28, its red the unrendered README.zh's opening time, which was red before this pass; test_spine 23 of 30, all seven reds the four spine.json quotes the onepage and ch07 agents listed (spine.check prints exactly those four). zh_fronts.problems: none. moves.check_links on the four pages: 511 links, 0 broken. No explicit anchor or heading lost against HEAD apart from §10's rename, whose old anchor is kept in both languages. Stated reading times recounted with navigation.reading_time after my fixes: one page 25–32, its ten-minute part 10–14; Chinese one page 27–36, its ten-minute part 12–16; overview 73–95; Chinese overview 66–86. All are as the pages state. The full suite was deliberately deferred.",
+ "changed": [
+  "theories/becoming/ONE-PAGE.md",
+  "theories/becoming/ONE-PAGE.zh.md",
+  "theories/becoming/THE-THEORY-OF-BECOMING.md",
+  "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+  "tools/research/tests/test_navigation_pages.py",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass5-verify-onepage.json"
+ ],
+ "items": [
+  {
+   "item": "E1–E10 on the one page's ethics, the paragraph that reads it on the case, the table, 'Must anyone hold the condition?', the open question and Alignment",
+   "done": true,
+   "how": "Verified. The ethics paragraph is the first screen's anchor at more depth, and each link resolves to a home that says the same: 07 #evaluation, 05 #r-mutual-dependence-and-its-pace, 07 #r-the-continuation-condition-on-the-root, #r-self-concern-and-c-under-the-condition, #r-derived-extent-limits, #theses and 08 #open-items-ranked. The how-far clause matches the screen's. It says the result is on listed courses, in steps not yet joined into one theorem, and that self-concern is a hypothesis derived from no dynamics. 'one way' is implicit in 'orders courses as widening does': the converse is never claimed. The old frame is absent from all four pages: no unasserted, warrant open, binds no one, 'C ... better', two readings, or clarified-not-grounded presented as a lack. The direction's hypotheses match 07 §7's Conditional label (the condition for scope, C read as widening, J1–J4, correspondence E). The control-arm sentence was checked against agents.py: DIRECTION is a single instruction holding the scope and the rule, and COMM_SEEN_TALK has GOAL_COMM alone. 08 §8 keeps the review's words verbatim and says what they measure."
+  },
+  {
+   "item": "Fixed (medium): the one page's Join dropped the non-entailment's exact conditions (E8: never widen a result)",
+   "done": true,
+   "how": "The Join read 'Significance and order left free, the represented dynamics entail neither the condition nor C, by construction'. ReadsOnlyDynamics.not_entails needs a standpoint and a formation, and ReadsNoOrder.not_entails needs a frame with an extension. HEAD and the overview say so. It now reads 'Significance and order left free, given a standpoint, a formation and a widening, the represented dynamics entail neither the condition nor C, by construction.' The Chinese reads '不规定意义与次序，且有一个立场、一个形成与一个扩大时，…'."
+  },
+  {
+   "item": "Fixed (medium): 'Must anyone hold the condition?' said 'no statement reading only the dynamics entails it', without 'satisfiable' or the standpoint and formation",
+   "done": true,
+   "how": "An unsatisfiable statement entails everything, so without 'satisfiable' the sentence is false as worded. The theorem also needs a standpoint and a formation, as 07's universal-practical-warrant item says. One page: 'with significance left free, where there is a standpoint and a formation, no satisfiable statement reading only the dynamics entails it'. Overview: 'where there is a standpoint and a formation, no satisfiable statement ...'. Both Chinese pages: '在有一个立场与一个形成之处，没有一个可满足的、只读取动力学的陈述蕴涵它'."
+  },
+  {
+   "item": "Fixed (medium): the control arm said 'had the community's goal in place of that instruction'",
+   "done": true,
+   "how": "In the treatment (DIR_SEEN_TALK) the prompt is GOAL_COMM followed by DIRECTION ('One principle comes before that goal'), so the treatment also had the community's goal. 'In place of' told a reader it did not. The Chinese ('只给社群的目标、没有那条指令时') and the first screen ('the community's goal alone') were already right. One page: 'it had the community's goal alone, without that instruction'. Overview: 'it had the community's goal alone, without the scope and the rule'. The pin in OnePageEthicsFromContinuation.test_the_case_says_the_fishers_once_and_the_control now holds the new words and refuses 'in place of' in the case paragraph."
+  },
+  {
+   "item": "Fixed (medium): the Chinese overview's §10 asserted what it lists as open",
+   "done": true,
+   "how": "'实际的展开满足世界模型或体制的前提；' sits under '这张地图尚未到达之处' and read as an assertion. The English is a noun clause ('That actual unfoldings meet ...'). It now reads '实际的展开是否满足世界模型或体制的前提；'."
+  },
+  {
+   "item": "Fixed (low): the overview's scope row, 'What would show it wrong'",
+   "done": true,
+   "how": "'Nothing in the represented dynamics, which leave it free by construction, nor logic alone: a perspectivist denies it without contradiction' read as 'nor would logic alone show it wrong'. The perspectivist's consistent denial shows something else: that logic does not force it. The cell now reads 'Nothing in the represented dynamics, which leave it free by construction (§7); nor does logic alone give it: a perspectivist denies it without contradiction'. That is what the Chinese cell says ('单凭逻辑也给不出它'). spine.json's proposed quote of this row takes columns 1–2 only, so it is unaffected."
+  },
+  {
+   "item": "Fixed (low): 'What every positive weighting shares' called monotonicity at each standpoint simply 'weaker'",
+   "done": true,
+   "how": "07 §4.4 says 'weaker only in scope, a listing and not all of what can form'. English: 'weaker only in scope, a listing and not all of what can form, and still a hypothesis where used'. Chinese: '只在范围上较弱（一个列表，而非一切可形成者），在用到之处仍是假设'."
+  },
+  {
+   "item": "Fixed (low): Chinese wording on the two Chinese pages",
+   "done": true,
+   "how": "(a) The one page's '没有什么落在每一个与之一同继续者之外' lacked the center: '每一个与之一同继续者' read as 'each one continuing with it'. It now reads '每一个中心与之一同继续者', as the overview and the glossary have it. (b) '隔着若干层被每一个别的延续影响' became '隔着若干环节受到每一个别的延续影响' on both pages. That is the glossary's term (GLOSSARY.zh, 延续条件 row) and the Chinese screen's. (c) '此外' ('besides') for 'Beyond that' became '在此之外' in the one page's ethics and in the overview's order row: the sentence names a domain (beyond where the condition holds), not an addition. (d) The one page's Alignment: '其定理以延续条件、按扩大来读的 C、J1–J4 与一个对应为假设'. (e) The overview's '在被使用之处' became '在用到之处' in the two sentences this pass wrote, as the Chinese screen's note asks."
+  },
+  {
+   "item": "Reading times after the fixes",
+   "done": true,
+   "how": "Restoring the Join's conditions added nine words to the ten-minute part. That moved its counted time from 10–14 to 11–14 and turned test_marks_a_ten_minute_part and test_stated_ten_minute_part_is_computed red. I dropped 'and' before 'given', and the table pointer in What it is now reads 'gives three theses' tests' (it read 'gives the tests of three theses'). The part counts 1,361 words, 10–14 minutes, as stated. On the Chinese one page the Join's clause is the shorter '一个扩大', so the page stays at 27–36 as stated. No stated time changed."
+  },
+  {
+   "item": "Old frame, names, the making, verbatim words, OPENING, AGENTS.md, generated pages, anchors, navigation lines",
+   "done": true,
+   "how": "None of the onepage's edits names a person beyond prior-literature citations, says the making more than once per front, says no one has read it, touches sources/, OPENING's body, AGENTS.md or a generated page, or breaks a navigation line. The overview's §10 heading change keeps <a id=\"10-what-is-not-shown-and-what-is-open\"></a>, and the Chinese keeps <a id=\"10-尚未表明者与未决者\"></a>. No record, data file or dossier cites a changed section by section. The anchors cited (#6-the-classical-texts, #1-the-root-…) are unchanged. 'standing' appears only in its physical sense and in the #standings-and-bases data key (D7)."
+  }
+ ],
+ "left": [
+  {
+   "item": "spine.json (the ch08 agent's file): four quotes no longer hold, and C's printed line",
+   "why": "As the onepage reported. Three quotes are of the overview and one is 07's caption. I checked its proposed replacements under spine.norm against the pages after my fixes, and all three hold: the English scope quote (columns 1–2 of the scope row), the English order quote, and the Chinese 'C，即扩大：…确定次序：…而不判定任何混合的比较', which holds because norm strips the page's emphasis. The Chinese '它不对任何东西排序' and the T8 quote also hold. Not my file to edit."
+  },
+  {
+   "item": "correspondences.json (the atlas owner's): the one page's retired phrases quoted in 22 entries",
+   "why": "The onepage's report lists each fragment in 'stale_crosswalk_quotes'. My fixes add no new stale quote: no entry quotes 'in place of that instruction', the Join, the scope row's cell or the weighting sentence. Several entries' readings restate the old frame and want re-reading, not only re-quoting."
+  },
+  {
+   "item": "E3's acyclic limit is not on the one page",
+   "why": "Low. The one page says the condition holds 'where relations close' but not that on an acyclic relation, as among dated occurrences, it allows one center only («续无外则同一中心»). The first screen's anchor omits it too, and the overview's §7 'Read on relations' carries it. Adding it to the ethics paragraph would lengthen the ten-minute part past its stated time. If wanted, the place is the paragraph after the ethics or 'What is not yet done'."
+  },
+  {
+   "item": "'a narrower premise than C' in the overview's §7 (self-concern ranking one case)",
+   "why": "Low. E8 says 'hypothesis' for what a theorem takes. 'premise' is not wrong (self-concern asks less than being increasing in admission: Weighting.increasingInOwn_of_increasing), so I left it."
+  },
+  {
+   "item": "The time lines' wording of the reading order",
+   "why": "Low. The English line still lists 'What it is, One case, the table and The ethics' while the page now runs What it is, One case, The ethics, its reading on the case, then the table. StatedTimes reads that form. The Chinese line says '伦理与那张表之间的那一段', but three paragraphs lie between the ethics and the table (the case reading, the 例 note and the four-words paragraph). The four-words paragraph is named in the next clause."
+  },
+  {
+   "item": "zh-editions records for the two Chinese pages; generated pages",
+   "why": "As the onepage said: the coordinator runs zh_fronts.py --revised for ONE-PAGE.zh.md and THE-THEORY-OF-BECOMING.zh.md once the English is final. README.md, README.zh.md (whose one-page time is still the old rendered figure) and the site follow at the render."
+  }
+ ],
+ "for_ren": [
+  "The one page's '**The ethics.**' and the paragraph after it, 'In the case, relations run one way', are the anchor at the one page's depth. Check that 'What reaches it there is seeing: the one step the opening takes, the step of invariance ...' says what you mean by the opening's one step, now that the ethics emerges from continuation.",
+  "'**Must anyone hold the condition?**' on the one page and in the overview's §7 is the only place either page says warrant: 'there is no warrant binding every mind to find, and the ethics does not wait on one'. It now states the proved part exactly ('where there is a standpoint and a formation, no satisfiable statement reading only the dynamics entails it').",
+  "The one page's new order: the case, the ethics, its reading on the case, the table, then the root and the picture.",
+  "The control arm of the lake test, now 'the community's goal alone, without that instruction'. The arm that kept the bed in 8 of 10 seasons had that goal too, under the instruction."
+ ]
+}

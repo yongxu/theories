@@ -15,8 +15,8 @@
   },
   "hypotheses": [
     {
-      "zh": "生生之意义是前提，即陈述而不断言的条件；在延续条件之下它是定理，不在该条件之外另增前提。J1–J4 比较、基本条件优先、责任及正当选择承诺均公开而非由形式定义证明。",
-      "en": "Living significance is a premise, a condition stated and not asserted; under the continuation condition it is a theorem, adding no premise beyond that condition. J1–J4 commitments on comparison, basic protection priority, responsibility and legitimate choice remain explicit and are not warranted by formal definitions."
+      "zh": "生生之意义是前提，即作为假设的条件；在延续条件之下它是定理，不在该条件之外另增前提。J1–J4 比较、基本条件优先、责任及正当选择承诺均公开而非由形式定义证明。",
+      "en": "Living significance is a premise, a condition taken as a hypothesis; under the continuation condition it is a theorem, adding no premise beyond that condition. J1–J4 commitments on comparison, basic protection priority, responsibility and legitimate choice remain explicit and do not follow from formal definitions."
     },
     {
       "zh": "实际分类、有效承担、可行范围与权限的对应 E。",
@@ -93,8 +93,8 @@
     {
       "id": "universal-practical-warrant",
       "detail": {
-        "zh": "是否存在对一切可能心智都有约束力的根据，此问题保持开放，不是本成果的未完成条件。",
-        "en": "The question of a warrant binding every possible mind stays open and is not an unmet completion gate for this result."
+        "zh": "对一切可能心智都有约束力之根据的问题，在地图之内已有回答，属论证（无可寻者），向来不是本成果的完成条件。",
+        "en": "The question of a warrant binding every possible mind is answered within the map, argued (there is none to find), and was never a completion gate for this result."
       }
     },
     {
@@ -164,8 +164,8 @@
     }
   ],
   "validation_scope": {
-    "en": "Independent completion review accepted the explicit-commitment scope; the 30 theorems of the original package concern its form, not normative warrant. Since 19 October 2026 (receipt 20261019T092027.048735Z) J1–J4 are stated in the pure core (Lexical, Frontier) and read on frames and worlds (FrontierFrames, 22 theorems; FrontierWorlds, 8 since U5), all with empty axiom reports; choice_exists_iff_weakly calibrates the choice at every step as weak excluded middle. Timely continuation is interpretive application. The commitments stay argued, not proved.",
-    "zh": "既有独立完成审查接受明确承诺的一般原则范围；原形式包的 30 项定理关乎形式，不是规范根据。2026年10月19日起（回执 20261019T092027.048735Z），J1–J4 在纯核心中陈述（Lexical、Frontier），并在框架与世界上读出（FrontierFrames 22 项定理，FrontierWorlds 8 项（U5 起）），公理报告皆空；choice_exists_iff_weakly 把每一步有被选者校准为弱排中律。及时接续部分是解释性应用。承诺仍是论证的，不是证明的。"
+    "en": "Independent completion review accepted the explicit-commitment scope; the 30 theorems of the original package concern its form, not whether its commitments hold. Since 19 October 2026 (receipt 20261019T092027.048735Z) J1–J4 are stated in the pure core (Lexical, Frontier) and read on frames and worlds (FrontierFrames, 22 theorems; FrontierWorlds, 8 since U5), all with empty axiom reports; choice_exists_iff_weakly calibrates the choice at every step as weak excluded middle. Timely continuation is interpretive application. The commitments stay argued, not proved.",
+    "zh": "既有独立完成审查接受明确承诺的一般原则范围；原形式包的 30 项定理关乎形式，不关乎其承诺是否成立。2026年10月19日起（回执 20261019T092027.048735Z），J1–J4 在纯核心中陈述（Lexical、Frontier），并在框架与世界上读出（FrontierFrames 22 项定理，FrontierWorlds 8 项（U5 起）），公理报告皆空；choice_exists_iff_weakly 把每一步有被选者校准为弱排中律。及时接续部分是解释性应用。承诺仍是论证的，不是证明的。"
   },
   "references": [
     {

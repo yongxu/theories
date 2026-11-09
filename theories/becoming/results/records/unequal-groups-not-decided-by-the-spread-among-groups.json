@@ -68,7 +68,7 @@
     },
     {
       "en": "That keeping is better where it is selected for: the counts are read, and a ranking of courses rests on C or another named order.",
-      "zh": "被选处保留更好：所读者为计数，排序进程者持 C 或别一种次序。",
+      "zh": "被选处保留更好：所读者为计数，进程之排序依 C 或另一具名之次序。",
       "kind": "non-implication"
     }
   ],
@@ -160,7 +160,7 @@
       "id": "shaping-selected-among-groups",
       "detail": {
         "en": "The same pair as a capacity to shape a rule, each member gaining two for each shaper in its group (RuleShaping.Sized.either_verdict).",
-        "zh": "同一对列法作为塑规之能，每成员为其群每一塑规者得二（RuleShaping.Sized.either_verdict）。"
+        "zh": "同一对列法作为塑规之能，每成员为其群每一塑造者得二（RuleShaping.Sized.either_verdict）。"
       }
     }
   ],

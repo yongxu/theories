@@ -66,6 +66,22 @@ Ren quoted the README's Chinese first paragraph ("What this is"), whose English 
 >
 > this is wrong - there is no warrant, ethics emerges from continuation condition, not another way around, there is no any dualistic good or evil
 
+### 10 (on the session's reply, quoting its plan to re-say 07's paragraph "It does not derive C")
+
+> "它不推出 C"一段
+>
+> 围绕着这个C，可能就是我们之前的一个“错误”，如果有现在的意识，就不会这么做了
+
+### 11 (on the session's reading of message 10: C as a second premise giving order was the mistake; widening, and what every way of counting everything agrees on, stay)
+
+> 我们在向我们的方向前进 - 我错了也得改
+>
+> 我认可你的判断
+
+### 12 (on the session's report of the fifth pass's cold readings: holding one's continuation is not yet an order; the condition equals 续无外 on a reading; the proved ranking is for courses that end; no authority outside becoming, said at its reach; seeing is needed and not enough; and that the ethics emerges on the half where relations close, while alignment works on the half where they run one way)
+
+> 认可你的判断
+
 ## What was done (AI-authored)
 
 Claude Fable and GPT astra (via Codex) each read the same whole material read-only, without the session's view; the session wrote its own reading first. The three readings and the brief are in [ag-the-map/readings](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/readings/). They agreed: the file set the direction "defend the standing of each claim" in place of the work's purpose, and contained the words alignment, meta-attractor, wisdom and map zero times. AGENTS.md was replaced by the draft Ren read ([before](../../_process/history/2026-11-09-instructions/AGENTS-before-the-map.md)), with one line added from the earlier text (a limit holds while its reason does). On message 7 its paragraph on saying was rewritten from within the map (principles, truthfulness and this file included, as patterns within it; how far a claim has been seen, not its "standing"), and "What does not bend" became "What we keep", each item with what it keeps in relation. It is the third time Ren asked for this file to be changed in this direction: on 3 November ("dragging the progress and constraining in unnecessary or even wrong ways", [source](2026-11-03-agents-review.md)) and on 8 November ("concise, and follows our latest direction elegantly", [source](2026-11-08-within-becoming-no-should.md)); each AI rewrite kept the defensive frame. The new file's line "This file's direction changes only after he has read the change" answers that.

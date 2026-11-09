@@ -1,0 +1,588 @@
+{
+ "agent": "pass5 zh (AI-written, Claude, 9 November 2026, 18:57 WIB): the fifth pass's reader of Chinese; README-ZH against README-FIRST-SCREEN, ONE-PAGE.zh, USES.zh, USES-EXAMPLES.zh, review/README.zh, the overview's opening, §7, §9 and §10, OPENING.zh's notes and the glossary rows this pass changed, read whole against their English and E1–E10; nothing rendered, built or committed",
+ "changed": [
+  "_process/navigation/README-ZH.md",
+  "theories/becoming/ONE-PAGE.zh.md",
+  "theories/becoming/USES.zh.md",
+  "theories/becoming/USES-EXAMPLES.zh.md",
+  "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+  "theories/becoming/OPENING.zh.md",
+  "GLOSSARY.zh.md",
+  "tools/research/tests/test_chinese_fronts.py",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass5-zh.json"
+ ],
+ "items": [
+  {
+   "item": "The ethics emerges from continuation (screen)",
+   "done": true,
+   "file": "_process/navigation/README-ZH.md",
+   "before": "伦理出自延续。",
+   "after": "伦理从延续中生出。",
+   "why": "E2 'emerges from continuation': 生出 says emerging; 出自 reads as 'comes from (a source)' and can be heard as 'derived from', which E4 rules out for self-concern. The ch07 agent's record (universal-practical-warrant.json statement.zh) already says 伦理从延续中生出; the coordinator's wording.",
+   "how": "_process/navigation/README-ZH.md: '伦理出自延续。' -> '伦理从延续中生出。'. E2 'emerges from continuation': 生出 says emerging; 出自 reads as 'comes from (a source)' and can be heard as 'derived from', which E4 rules out for self-concern. The ch07 agent's record (universal-practical-warrant.json statement.zh) already says 伦理从延续中生出; the coordinator's wording."
+  },
+  {
+   "item": "No good and evil set over it (screen)",
+   "done": true,
+   "file": "_process/navigation/README-ZH.md",
+   "before": "也没有凌驾其上的善恶",
+   "after": "也没有凌驾其上的善与恶",
+   "why": "E1 as the coordinator words it; one form on every Chinese front (one page, uses, overview now say the same; the glossary and the opening's notes already said 不是善与恶).",
+   "how": "_process/navigation/README-ZH.md: '也没有凌驾其上的善恶' -> '也没有凌驾其上的善与恶'. E1 as the coordinator words it; one form on every Chinese front (one page, uses, overview now say the same; the glossary and the opening's notes already said 不是善与恶)."
+  },
+  {
+   "item": "续无外 named on the screen",
+   "done": true,
+   "file": "_process/navigation/README-ZH.md",
+   "before": "[每一个中心与之一同延续者之外，别无他物](…#r-the-continuation-condition-on-the-root)：",
+   "after": "[每一个中心与之一同延续者之外，别无他物](…#r-the-continuation-condition-on-the-root)（续无外）：",
+   "why": "E3: the condition held de se is 续无外 (07 §4.5); a Chinese reader gets the root's name once, beside the plain clause, as the glossary's continuation-condition row gives it.",
+   "how": "_process/navigation/README-ZH.md: '[每一个中心与之一同延续者之外，别无他物](…#r-the-continuation-condition-on-the-root)：' -> '[每一个中心与之一同延续者之外，别无他物](…#r-the-continuation-condition-on-the-root)（续无外）：'. E3: the condition held de se is 续无外 (07 §4.5); a Chinese reader gets the root's name once, beside the plain clause, as the glossary's continuation-condition row gives it."
+  },
+  {
+   "item": "Passive in the how-far paragraph (screen)",
+   "done": true,
+   "file": "_process/navigation/README-ZH.md",
+   "before": "在结果排序之处，伦理的范围与次序都被明白说出；",
+   "after": "在结果排序之处，明白说出伦理的范围与次序；",
+   "why": "Translated passive 被…说出; meaning unchanged ('the ethics' scope and order made explicit where a result ranks').",
+   "how": "_process/navigation/README-ZH.md: '在结果排序之处，伦理的范围与次序都被明白说出；' -> '在结果排序之处，明白说出伦理的范围与次序；'. Translated passive 被…说出; meaning unchanged ('the ethics' scope and order made explicit where a result ranks')."
+  },
+  {
+   "item": "Screen header comment",
+   "done": true,
+   "file": "_process/navigation/README-ZH.md",
+   "before": "(comment ended '…开篇的中文版（theories/becoming/OPENING.zh.md）由 AI 译自英文版…')",
+   "after": "(a sentence added before it recording this reading: 生出, 善与恶, 续无外, the active sentence, and widening kept as 扩大)",
+   "why": "The template's note says what the screen does; the earlier fifth-pass sentence is left as written (E10) and this one records the change.",
+   "how": "_process/navigation/README-ZH.md: '(comment ended '…开篇的中文版（theories/becoming/OPENING.zh.md）由 AI 译自英文版…')' -> '(a sentence added before it recording this reading: 生出, 善与恶, 续无外, the active sentence, and widening kept as 扩大)'. The template's note says what the screen does; the earlier fifth-pass sentence is left as written (E10) and this one records the change."
+  },
+  {
+   "item": "Screen test pin follows the screen",
+   "done": true,
+   "file": "tools/research/tests/test_chinese_fronts.py",
+   "before": "self.assertIn('伦理出自延续', text); self.assertIn('也没有凌驾其上的善恶', text)",
+   "after": "self.assertIn('伦理从延续中生出', text); self.assertIn('也没有凌驾其上的善与恶', text)",
+   "why": "The pin, added this pass by the screen agent, quotes the screen's ethics; it changes with the sentence. Its docstring (the ethics emerges from continuation) is unchanged.",
+   "how": "tools/research/tests/test_chinese_fronts.py: 'self.assertIn('伦理出自延续', text); self.assertIn('也没有凌驾其上的善恶', text)' -> 'self.assertIn('伦理从延续中生出', text); self.assertIn('也没有凌驾其上的善与恶', text)'. The pin, added this pass by the screen agent, quotes the screen's ethics; it changes with the sentence. Its docstring (the ethics emerges from continuation) is unchanged."
+  },
+  {
+   "item": "One page: good and evil, right and wrong",
+   "done": true,
+   "file": "theories/becoming/ONE-PAGE.zh.md",
+   "before": "也没有凌驾其上的善恶；对与错在其中形成",
+   "after": "也没有凌驾其上的善与恶；是非在其中形成",
+   "why": "E1; 是非 is the screen's and the opening note's word for right and wrong, so one word on the fronts (对与错 was a second).",
+   "how": "theories/becoming/ONE-PAGE.zh.md: '也没有凌驾其上的善恶；对与错在其中形成' -> '也没有凌驾其上的善与恶；是非在其中形成'. E1; 是非 is the screen's and the opening note's word for right and wrong, so one word on the fronts (对与错 was a second)."
+  },
+  {
+   "item": "One page: the ethics emerges",
+   "done": true,
+   "file": "theories/becoming/ONE-PAGE.zh.md",
+   "before": "伦理出自延续。",
+   "after": "伦理从延续中生出。",
+   "why": "E2 'emerges from continuation': 生出 says emerging; 出自 reads as 'comes from (a source)' and can be heard as 'derived from', which E4 rules out for self-concern. The ch07 agent's record (universal-practical-warrant.json statement.zh) already says 伦理从延续中生出; the coordinator's wording.",
+   "how": "theories/becoming/ONE-PAGE.zh.md: '伦理出自延续。' -> '伦理从延续中生出。'. E2 'emerges from continuation': 生出 says emerging; 出自 reads as 'comes from (a source)' and can be heard as 'derived from', which E4 rules out for self-concern. The ch07 agent's record (universal-practical-warrant.json statement.zh) already says 伦理从延续中生出; the coordinator's wording."
+  },
+  {
+   "item": "One page: nothing outside, one verb for 'continues with', and 续无外",
+   "done": true,
+   "file": "theories/becoming/ONE-PAGE.zh.md",
+   "before": "没有什么落在每一个中心与之一同继续者之外：这就是*延续条件*（…）在关系上读出来所说的（[07 §4.5]",
+   "after": "每一个中心与之一同延续者之外，别无他物：这就是*延续条件*（…）在关系上读出来所说的，即续无外（[07 §4.5]",
+   "why": "'continues with' was 继续 here and 延续 on the screen, in the glossary and in the opening's notes: one verb; the screen's clause; E3's name.",
+   "how": "theories/becoming/ONE-PAGE.zh.md: '没有什么落在每一个中心与之一同继续者之外：这就是*延续条件*（…）在关系上读出来所说的（[07 §4.5]' -> '每一个中心与之一同延续者之外，别无他物：这就是*延续条件*（…）在关系上读出来所说的，即续无外（[07 §4.5]'. 'continues with' was 继续 here and 延续 on the screen, in the glossary and in the opening's notes: one verb; the screen's clause; E3's name."
+  },
+  {
+   "item": "One page: widening, more future",
+   "done": true,
+   "file": "theories/becoming/ONE-PAGE.zh.md",
+   "before": "这就是*扩大*，更多的未来",
+   "after": "这就是*扩大*，即更多的未来",
+   "why": "Apposition made explicit (E7: widening is more future).",
+   "how": "theories/becoming/ONE-PAGE.zh.md: '这就是*扩大*，更多的未来' -> '这就是*扩大*，即更多的未来'. Apposition made explicit (E7: widening is more future)."
+  },
+  {
+   "item": "One page: how far 'a life holds its own continuation' is seen",
+   "done": true,
+   "file": "theories/becoming/ONE-PAGE.zh.md",
+   "before": "一个生命持守自身的延续，是论证的，而在证明中",
+   "after": "说一个生命持守自身的延续，已论证；而在证明中",
+   "why": "是论证的 is a calque of 'is argued'; 已论证 is the label word (08's labels, the table on the same page).",
+   "how": "theories/becoming/ONE-PAGE.zh.md: '一个生命持守自身的延续，是论证的，而在证明中' -> '说一个生命持守自身的延续，已论证；而在证明中'. 是论证的 is a calque of 'is argued'; 已论证 is the label word (08's labels, the table on the same page)."
+  },
+  {
+   "item": "One page: the open target, one wording",
+   "done": true,
+   "file": "theories/becoming/ONE-PAGE.zh.md",
+   "before": "是这项工作未决的目标",
+   "after": "是本论的开放目标",
+   "why": "The same English 'the work's open target' was 开放目标 on the screen and the uses page, 未决的目标 here and in the opening's notes; records use 开放目标 for the zero-axiom target (standard-boundaries.json), so that one.",
+   "how": "theories/becoming/ONE-PAGE.zh.md: '是这项工作未决的目标' -> '是本论的开放目标'. The same English 'the work's open target' was 开放目标 on the screen and the uses page, 未决的目标 here and in the opening's notes; records use 开放目标 for the zero-axiom target (standard-boundaries.json), so that one."
+  },
+  {
+   "item": "One page: the step argued",
+   "done": true,
+   "file": "theories/becoming/ONE-PAGE.zh.md",
+   "before": "这一步是论证的，否认它也不自相矛盾",
+   "after": "这一步已论证，否认它也不自相矛盾",
+   "why": "Label word, as above.",
+   "how": "theories/becoming/ONE-PAGE.zh.md: '这一步是论证的，否认它也不自相矛盾' -> '这一步已论证，否认它也不自相矛盾'. Label word, as above."
+  },
+  {
+   "item": "One page: what self-concern alone ranks",
+   "done": true,
+   "file": "theories/becoming/ONE-PAGE.zh.md",
+   "before": "单凭自我关切，排定一个已陈述的情形，即此后每个成员都依存于一个进程所终结者之时",
+   "after": "单凭自我关切能排定的，是一个已陈述的情形：此后每个成员都依存于某个进程所终结的东西",
+   "why": "The old sentence had no subject for 排定 and ended in a dangling 之时; meaning as the English ('Self-concern alone ranks one stated case, where every later member depends on what a course ends').",
+   "how": "theories/becoming/ONE-PAGE.zh.md: '单凭自我关切，排定一个已陈述的情形，即此后每个成员都依存于一个进程所终结者之时' -> '单凭自我关切能排定的，是一个已陈述的情形：此后每个成员都依存于某个进程所终结的东西'. The old sentence had no subject for 排定 and ended in a dangling 之时; meaning as the English ('Self-concern alone ranks one stated case, where every later member depends on what a course ends')."
+  },
+  {
+   "item": "One page: no warrant to find, how far",
+   "done": true,
+   "file": "theories/becoming/ONE-PAGE.zh.md",
+   "before": "伦理也不等待这样的根据：这是论证的，依",
+   "after": "伦理也不等待这样的根据：这已论证，依",
+   "why": "Label word.",
+   "how": "theories/becoming/ONE-PAGE.zh.md: '伦理也不等待这样的根据：这是论证的，依' -> '伦理也不等待这样的根据：这已论证，依'. Label word."
+  },
+  {
+   "item": "One page: 'force' the condition",
+   "done": true,
+   "file": "theories/becoming/ONE-PAGE.zh.md",
+   "before": "动力学之律与逻辑，都不能单独迫使人接受延续条件，这一点已证明：",
+   "after": "单凭动力学之律，或单凭逻辑，都推不出延续条件，这一点已证明：",
+   "why": "迫使人接受 added a person and a psychology the English does not have; what is proved is non-entailment (ReadsOnlyDynamics.not_entails) and consistency of denial (bounded_rival), which 推不出 says exactly. Same change on the overview and the opening's note.",
+   "how": "theories/becoming/ONE-PAGE.zh.md: '动力学之律与逻辑，都不能单独迫使人接受延续条件，这一点已证明：' -> '单凭动力学之律，或单凭逻辑，都推不出延续条件，这一点已证明：'. 迫使人接受 added a person and a psychology the English does not have; what is proved is non-entailment (ReadsOnlyDynamics.not_entails) and consistency of denial (bounded_rival), which 推不出 says exactly. Same change on the overview and the opening's note."
+  },
+  {
+   "item": "One page: the crux sentence",
+   "done": true,
+   "file": "theories/becoming/ONE-PAGE.zh.md",
+   "before": "它出自延续，不出自这条路径",
+   "after": "它从延续中生出，而不是从这条路径",
+   "why": "E2 'emerges from continuation': 生出 says emerging; 出自 reads as 'comes from (a source)' and can be heard as 'derived from', which E4 rules out for self-concern. The ch07 agent's record (universal-practical-warrant.json statement.zh) already says 伦理从延续中生出; the coordinator's wording.",
+   "how": "theories/becoming/ONE-PAGE.zh.md: '它出自延续，不出自这条路径' -> '它从延续中生出，而不是从这条路径'. E2 'emerges from continuation': 生出 says emerging; 出自 reads as 'comes from (a source)' and can be heard as 'derived from', which E4 rules out for self-concern. The ch07 agent's record (universal-practical-warrant.json statement.zh) already says 伦理从延续中生出; the coordinator's wording."
+  },
+  {
+   "item": "One page: the time line names the case reading's place",
+   "done": true,
+   "file": "theories/becoming/ONE-PAGE.zh.md",
+   "before": "伦理与那张表之间的那一段，把伦理放到这个情形上来读",
+   "after": "伦理之后的那一段，把伦理放到这个情形上来读",
+   "why": "Three paragraphs lie between the ethics and the table (the onepage verifier's note); the case reading is the one right after the ethics. Times recounted with navigation.reading_time: page 27–36, ten-minute part 12–16, four words 1–2, unchanged.",
+   "how": "theories/becoming/ONE-PAGE.zh.md: '伦理与那张表之间的那一段，把伦理放到这个情形上来读' -> '伦理之后的那一段，把伦理放到这个情形上来读'. Three paragraphs lie between the ethics and the table (the onepage verifier's note); the case reading is the one right after the ethics. Times recounted with navigation.reading_time: page 27–36, ten-minute part 12–16, four words 1–2, unchanged."
+  },
+  {
+   "item": "One page and overview: 'favoured' said as on the screen",
+   "done": true,
+   "file": "theories/becoming/ONE-PAGE.zh.md, theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+   "before": "只要选择不降低受偏爱者的份额，规则及其解读又随这一份额上升、始终偏爱它",
+   "after": "只要选择不压低受偏向者的份额，规则及其解读又随这一份额上升、始终偏向它",
+   "why": "The closed form's conditions were said with 偏爱 (to dote on, an affect a rule does not have) here and 偏向/压低 on the screen, the uses page, the examples and the review cover: one wording for the same sentence.",
+   "how": "theories/becoming/ONE-PAGE.zh.md, theories/becoming/THE-THEORY-OF-BECOMING.zh.md: '只要选择不降低受偏爱者的份额，规则及其解读又随这一份额上升、始终偏爱它' -> '只要选择不压低受偏向者的份额，规则及其解读又随这一份额上升、始终偏向它'. The closed form's conditions were said with 偏爱 (to dote on, an affect a rule does not have) here and 偏向/压低 on the screen, the uses page, the examples and the review cover: one wording for the same sentence."
+  },
+  {
+   "item": "Uses: good and evil",
+   "done": true,
+   "file": "theories/becoming/USES.zh.md",
+   "before": "也没有凌驾其上的善恶：",
+   "after": "也没有凌驾其上的善与恶：",
+   "why": "E1, one form on the fronts.",
+   "how": "theories/becoming/USES.zh.md: '也没有凌驾其上的善恶：' -> '也没有凌驾其上的善与恶：'. E1, one form on the fronts."
+  },
+  {
+   "item": "Uses: the ethics emerges",
+   "done": true,
+   "file": "theories/becoming/USES.zh.md",
+   "before": "伦理出自延续。",
+   "after": "伦理从延续中生出。",
+   "why": "E2 'emerges from continuation': 生出 says emerging; 出自 reads as 'comes from (a source)' and can be heard as 'derived from', which E4 rules out for self-concern. The ch07 agent's record (universal-practical-warrant.json statement.zh) already says 伦理从延续中生出; the coordinator's wording.",
+   "how": "theories/becoming/USES.zh.md: '伦理出自延续。' -> '伦理从延续中生出。'. E2 'emerges from continuation': 生出 says emerging; 出自 reads as 'comes from (a source)' and can be heard as 'derived from', which E4 rules out for self-concern. The ch07 agent's record (universal-practical-warrant.json statement.zh) already says 伦理从延续中生出; the coordinator's wording."
+  },
+  {
+   "item": "Uses: one sentence said 持守自身的延续 twice",
+   "done": true,
+   "file": "theories/becoming/USES.zh.md",
+   "before": "即每一个中心与之一同延续者之外别无他物之处，持守自身的延续，就已经像 *C* 那样给诸进程排序",
+   "after": "即每一个中心与之一同延续者之外别无他物之处，这种持守就已经像 *C* 那样给诸进程排序",
+   "why": "The English says 'holding it'; the repetition read as translation.",
+   "how": "theories/becoming/USES.zh.md: '即每一个中心与之一同延续者之外别无他物之处，持守自身的延续，就已经像 *C* 那样给诸进程排序' -> '即每一个中心与之一同延续者之外别无他物之处，这种持守就已经像 *C* 那样给诸进程排序'. The English says 'holding it'; the repetition read as translation."
+  },
+  {
+   "item": "Uses: how far a life's holding is seen",
+   "done": true,
+   "file": "theories/becoming/USES.zh.md",
+   "before": "一个生命持守自身的延续，是论证，在证明中",
+   "after": "说一个生命持守自身的延续，已论证，在证明中",
+   "why": "Label word.",
+   "how": "theories/becoming/USES.zh.md: '一个生命持守自身的延续，是论证，在证明中' -> '说一个生命持守自身的延续，已论证，在证明中'. Label word."
+  },
+  {
+   "item": "Uses: no warrant to find",
+   "done": true,
+   "file": "theories/becoming/USES.zh.md",
+   "before": "所以并没有一个对一切心智都有约束力的根据有待寻找；",
+   "after": "所以并没有一种约束一切心智的根据可找；",
+   "why": "有待寻找 says 'still waiting to be found', the opposite of E6's 'there is none to find'; now the one page's and the overview's words.",
+   "how": "theories/becoming/USES.zh.md: '所以并没有一个对一切心智都有约束力的根据有待寻找；' -> '所以并没有一种约束一切心智的根据可找；'. 有待寻找 says 'still waiting to be found', the opposite of E6's 'there is none to find'; now the one page's and the overview's words."
+  },
+  {
+   "item": "Uses: persistence",
+   "done": true,
+   "file": "theories/becoming/USES.zh.md",
+   "before": "不由任何动力学、选择或持续推出",
+   "after": "不由任何动力学、选择或持存推出",
+   "why": "持续 is the fronts' word for 'lasts'; 'persistence' in E2's sentence is 持存 on the overview and in the opening's notes.",
+   "how": "theories/becoming/USES.zh.md: '不由任何动力学、选择或持续推出' -> '不由任何动力学、选择或持存推出'. 持续 is the fronts' word for 'lasts'; 'persistence' in E2's sentence is 持存 on the overview and in the opening's notes."
+  },
+  {
+   "item": "Uses header comment",
+   "done": true,
+   "file": "theories/becoming/USES.zh.md",
+   "before": "(comment ended at the fifth pass's list of Chinese readers' points)",
+   "after": "(a sentence added recording this reading's five changes)",
+   "why": "The page's note says what changed; earlier text kept (E10).",
+   "how": "theories/becoming/USES.zh.md: '(comment ended at the fifth pass's list of Chinese readers' points)' -> '(a sentence added recording this reading's five changes)'. The page's note says what changed; earlier text kept (E10)."
+  },
+  {
+   "item": "Examples: 'read onto' calque in the counts",
+   "done": true,
+   "file": "theories/becoming/USES-EXAMPLES.zh.md",
+   "before": "[对照表](…)把 345 条主张读到本论上，看在何处与之相合、在何处不合",
+   "after": "[对照表](…)把 345 条主张逐条与本论对照，看在何处相合、在何处不合",
+   "why": "读到……上 calques 'reads onto' (Fable and astra, fourth pass, on the same construction elsewhere); now as the screen says the crosswalk.",
+   "how": "theories/becoming/USES-EXAMPLES.zh.md: '[对照表](…)把 345 条主张读到本论上，看在何处与之相合、在何处不合' -> '[对照表](…)把 345 条主张逐条与本论对照，看在何处相合、在何处不合'. 读到……上 calques 'reads onto' (Fable and astra, fourth pass, on the same construction elsewhere); now as the screen says the crosswalk."
+  },
+  {
+   "item": "Examples: 'read on people'",
+   "done": true,
+   "file": "theories/becoming/USES-EXAMPLES.zh.md",
+   "before": "经一种 AI 读法读到人身上",
+   "after": "经一种 AI 读法用到人身上",
+   "why": "Same calque; the English is 'read on people by an AI reading'.",
+   "how": "theories/becoming/USES-EXAMPLES.zh.md: '经一种 AI 读法读到人身上' -> '经一种 AI 读法用到人身上'. Same calque; the English is 'read on people by an AI reading'."
+  },
+  {
+   "item": "Examples header comment",
+   "done": true,
+   "file": "theories/becoming/USES-EXAMPLES.zh.md",
+   "before": "(comment ended '…“已被看到”改为“看到了”。')",
+   "after": "(a sentence added recording the two calques removed)",
+   "why": "As above.",
+   "how": "theories/becoming/USES-EXAMPLES.zh.md: '(comment ended '…“已被看到”改为“看到了”。')' -> '(a sentence added recording the two calques removed)'. As above."
+  },
+  {
+   "item": "Overview opening: the ethics emerges",
+   "done": true,
+   "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+   "before": "只就动力学画出的诸律，并不决定它，伦理出自延续（§7）。",
+   "after": "只就动力学画出的诸律，并不决定它；伦理从延续中生出（§7）。",
+   "why": "E2 'emerges from continuation': 生出 says emerging; 出自 reads as 'comes from (a source)' and can be heard as 'derived from', which E4 rules out for self-concern. The ch07 agent's record (universal-practical-warrant.json statement.zh) already says 伦理从延续中生出; the coordinator's wording. The semicolon separates the two claims the English joins with 'and'.",
+   "how": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md: '只就动力学画出的诸律，并不决定它，伦理出自延续（§7）。' -> '只就动力学画出的诸律，并不决定它；伦理从延续中生出（§7）。'. E2 'emerges from continuation': 生出 says emerging; 出自 reads as 'comes from (a source)' and can be heard as 'derived from', which E4 rules out for self-concern. The ch07 agent's record (universal-practical-warrant.json statement.zh) already says 伦理从延续中生出; the coordinator's wording. The semicolon separates the two claims the English joins with 'and'."
+  },
+  {
+   "item": "Overview, the whole at a glance",
+   "done": true,
+   "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+   "before": "伦理出自延续，我们为生命所提供的",
+   "after": "伦理从延续中生出，我们为生命所提供的",
+   "why": "E2 'emerges from continuation': 生出 says emerging; 出自 reads as 'comes from (a source)' and can be heard as 'derived from', which E4 rules out for self-concern. The ch07 agent's record (universal-practical-warrant.json statement.zh) already says 伦理从延续中生出; the coordinator's wording.",
+   "how": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md: '伦理出自延续，我们为生命所提供的' -> '伦理从延续中生出，我们为生命所提供的'. E2 'emerges from continuation': 生出 says emerging; 出自 reads as 'comes from (a source)' and can be heard as 'derived from', which E4 rules out for self-concern. The ch07 agent's record (universal-practical-warrant.json statement.zh) already says 伦理从延续中生出; the coordinator's wording."
+  },
+  {
+   "item": "Overview table, scope row",
+   "done": true,
+   "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+   "before": "在关系上读，没有什么落在每个中心与之一同继续者之外（§7）",
+   "after": "在关系上读，每个中心与之一同延续者之外，别无他物（§7）",
+   "why": "One verb for 'continues with' (延续), the screen's clause.",
+   "how": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md: '在关系上读，没有什么落在每个中心与之一同继续者之外（§7）' -> '在关系上读，每个中心与之一同延续者之外，别无他物（§7）'. One verb for 'continues with' (延续), the screen's clause."
+  },
+  {
+   "item": "Overview §7: good and evil, right and wrong",
+   "done": true,
+   "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+   "before": "也没有凌驾其上的善恶：对与错、应当与更好",
+   "after": "也没有凌驾其上的善与恶：是非、应当与更好",
+   "why": "E1; 是非 as on the screen.",
+   "how": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md: '也没有凌驾其上的善恶：对与错、应当与更好' -> '也没有凌驾其上的善与恶：是非、应当与更好'. E1; 是非 as on the screen."
+  },
+  {
+   "item": "Overview §7: the own-closure reading",
+   "done": true,
+   "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+   "before": "位于一个中心沿某个关系与之一同继续的东西之内",
+   "after": "位于一个中心沿某个关系与之一同延续者之内",
+   "why": "One verb for 'continues with'.",
+   "how": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md: '位于一个中心沿某个关系与之一同继续的东西之内' -> '位于一个中心沿某个关系与之一同延续者之内'. One verb for 'continues with'."
+  },
+  {
+   "item": "Overview §7: 续无外 on the root",
+   "done": true,
+   "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+   "before": "在根上，即 `«续无外»`：没有什么落在每个中心与之一同继续者之外",
+   "after": "在根上，即 `«续无外»`：每个中心与之一同延续者之外，别无他物",
+   "why": "Same.",
+   "how": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md: '在根上，即 `«续无外»`：没有什么落在每个中心与之一同继续者之外' -> '在根上，即 `«续无外»`：每个中心与之一同延续者之外，别无他物'. Same."
+  },
+  {
+   "item": "Overview §7: the join not yet one theorem",
+   "done": true,
+   "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+   "before": "，不过这一点给出该条件，尚未陈述为一条定理；",
+   "after": "，不过，相互依存给出该条件，这一点尚未陈述为一条定理；",
+   "why": "Meaning moved: 这一点给出该条件，尚未… can be read as asserting that it gives the condition, the 'not yet' attaching only to the statement. E3: the joining of mutual dependence to the condition is not yet one theorem.",
+   "how": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md: '，不过这一点给出该条件，尚未陈述为一条定理；' -> '，不过，相互依存给出该条件，这一点尚未陈述为一条定理；'. Meaning moved: 这一点给出该条件，尚未… can be read as asserting that it gives the condition, the 'not yet' attaching only to the statement. E3: the joining of mutual dependence to the condition is not yet one theorem."
+  },
+  {
+   "item": "Overview §7: the lead",
+   "done": true,
+   "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+   "before": "**范围与次序，出自延续。**",
+   "after": "**范围与次序，从延续中来。**",
+   "why": "Same verb family as 生出 for the English 'from continuation'.",
+   "how": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md: '**范围与次序，出自延续。**' -> '**范围与次序，从延续中来。**'. Same verb family as 生出 for the English 'from continuation'."
+  },
+  {
+   "item": "Overview §7: the ethics emerges; argued",
+   "done": true,
+   "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+   "before": "伦理出自延续。一个继续下去的生命，持守自身的延续：这是论证的，因为",
+   "after": "伦理从延续中生出。一个继续下去的生命，持守自身的延续：这已论证，因为",
+   "why": "E2 'emerges from continuation': 生出 says emerging; 出自 reads as 'comes from (a source)' and can be heard as 'derived from', which E4 rules out for self-concern. The ch07 agent's record (universal-practical-warrant.json statement.zh) already says 伦理从延续中生出; the coordinator's wording. Label word for 'argued'.",
+   "how": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md: '伦理出自延续。一个继续下去的生命，持守自身的延续：这是论证的，因为' -> '伦理从延续中生出。一个继续下去的生命，持守自身的延续：这已论证，因为'. E2 'emerges from continuation': 生出 says emerging; 出自 reads as 'comes from (a source)' and can be heard as 'derived from', which E4 rules out for self-concern. The ch07 agent's record (universal-practical-warrant.json statement.zh) already says 伦理从延续中生出; the coordinator's wording. Label word for 'argued'."
+  },
+  {
+   "item": "Overview §7: the condition's bullet names 续无外",
+   "done": true,
+   "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+   "before": "以从己方式在关系上持有，它就是没有什么落在每个中心与之一同继续者之外（见上）。",
+   "after": "以从己方式在关系上持有，它就是续无外：每个中心与之一同延续者之外，别无他物（见上）。",
+   "why": "E3; the spine quotes '确定范围：谁的损失算数' and '它不对任何东西排序' from this bullet, both kept.",
+   "how": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md: '以从己方式在关系上持有，它就是没有什么落在每个中心与之一同继续者之外（见上）。' -> '以从己方式在关系上持有，它就是续无外：每个中心与之一同延续者之外，别无他物（见上）。'. E3; the spine quotes '确定范围：谁的损失算数' and '它不对任何东西排序' from this bullet, both kept."
+  },
+  {
+   "item": "Overview §7: the crux",
+   "done": true,
+   "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+   "before": "它出自延续，不出自这条路径；",
+   "after": "它从延续中生出，而不是从这条路径；",
+   "why": "E2 'emerges from continuation': 生出 says emerging; 出自 reads as 'comes from (a source)' and can be heard as 'derived from', which E4 rules out for self-concern. The ch07 agent's record (universal-practical-warrant.json statement.zh) already says 伦理从延续中生出; the coordinator's wording.",
+   "how": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md: '它出自延续，不出自这条路径；' -> '它从延续中生出，而不是从这条路径；'. E2 'emerges from continuation': 生出 says emerging; 出自 reads as 'comes from (a source)' and can be heard as 'derived from', which E4 rules out for self-concern. The ch07 agent's record (universal-practical-warrant.json statement.zh) already says 伦理从延续中生出; the coordinator's wording."
+  },
+  {
+   "item": "Overview §7: must anyone hold it",
+   "done": true,
+   "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+   "before": "这是论证的，依…；动力学之律与逻辑，都不能单独迫使人接受延续条件，这一点已证明：",
+   "after": "这已论证，依…；单凭动力学之律，或单凭逻辑，都推不出延续条件，这一点已证明：",
+   "why": "As on the one page.",
+   "how": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md: '这是论证的，依…；动力学之律与逻辑，都不能单独迫使人接受延续条件，这一点已证明：' -> '这已论证，依…；单凭动力学之律，或单凭逻辑，都推不出延续条件，这一点已证明：'. As on the one page."
+  },
+  {
+   "item": "Overview §9: T8 argued",
+   "done": true,
+   "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+   "before": "T8 是论证的；",
+   "after": "T8 已论证；",
+   "why": "Label word.",
+   "how": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md: 'T8 是论证的；' -> 'T8 已论证；'. Label word."
+  },
+  {
+   "item": "Overview §10: status",
+   "done": true,
+   "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+   "before": "等级是否不变且平等；",
+   "after": "意义的等级是否不变、是否相等；",
+   "why": "'status' is the grade of graded significance (07 §4.4: 'its status is the grade'); 等级…平等 read as rank and social equality, a hierarchy the account does not mean and a near-contradiction (ranks being equal).",
+   "how": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md: '等级是否不变且平等；' -> '意义的等级是否不变、是否相等；'. 'status' is the grade of graded significance (07 §4.4: 'its status is the grade'); 等级…平等 read as rank and social equality, a hierarchy the account does not mean and a near-contradiction (ranks being equal)."
+  },
+  {
+   "item": "Opening notes: 'holding one's own continuation', one term",
+   "done": true,
+   "file": "theories/becoming/OPENING.zh.md",
+   "before": "持守自己的延续 / 持守它自己的延续 ([^axiom] x2, [^ethics] x4, [^own] x2)",
+   "after": "持守自身的延续",
+   "why": "The glossary's self-concern row, the screen, the one page, the uses page and the overview say 持守自身的延续; the screen verifier listed the notes' 自己 as the other form.",
+   "how": "theories/becoming/OPENING.zh.md: '持守自己的延续 / 持守它自己的延续 ([^axiom] x2, [^ethics] x4, [^own] x2)' -> '持守自身的延续'. The glossary's self-concern row, the screen, the one page, the uses page and the overview say 持守自身的延续; the screen verifier listed the notes' 自己 as the other form."
+  },
+  {
+   "item": "Opening notes: 'as widening does'",
+   "done": true,
+   "file": "theories/becoming/OPENING.zh.md",
+   "before": "按扩大那样为…排序 ([^axiom], [^ethics] title)",
+   "after": "像扩大那样为…排序",
+   "why": "The screen's and the glossary's wording.",
+   "how": "theories/becoming/OPENING.zh.md: '按扩大那样为…排序 ([^axiom], [^ethics] title)' -> '像扩大那样为…排序'. The screen's and the glossary's wording."
+  },
+  {
+   "item": "Opening note [^axiom]: at some remove",
+   "done": true,
+   "file": "theories/becoming/OPENING.zh.md",
+   "before": "在每一个延续都能直接或间接地受其他每一个延续影响之处",
+   "after": "在每一个延续都能隔着若干环节受到其他每一个延续影响之处",
+   "why": "'at some remove' is 隔着若干环节 on the screen, the one page, the overview and the glossary.",
+   "how": "theories/becoming/OPENING.zh.md: '在每一个延续都能直接或间接地受其他每一个延续影响之处' -> '在每一个延续都能隔着若干环节受到其他每一个延续影响之处'. 'at some remove' is 隔着若干环节 on the screen, the one page, the overview and the glossary."
+  },
+  {
+   "item": "Opening note [^ethics]: the ethics emerges",
+   "done": true,
+   "file": "theories/becoming/OPENING.zh.md",
+   "before": "伦理出自延续，而不是反过来。",
+   "after": "伦理从延续中生出，而不是反过来。",
+   "why": "E2 'emerges from continuation': 生出 says emerging; 出自 reads as 'comes from (a source)' and can be heard as 'derived from', which E4 rules out for self-concern. The ch07 agent's record (universal-practical-warrant.json statement.zh) already says 伦理从延续中生出; the coordinator's wording.",
+   "how": "theories/becoming/OPENING.zh.md: '伦理出自延续，而不是反过来。' -> '伦理从延续中生出，而不是反过来。'. E2 'emerges from continuation': 生出 says emerging; 出自 reads as 'comes from (a source)' and can be heard as 'derived from', which E4 rules out for self-concern. The ch07 agent's record (universal-practical-warrant.json statement.zh) already says 伦理从延续中生出; the coordinator's wording."
+  },
+  {
+   "item": "Opening notes: 'ceases'",
+   "done": true,
+   "file": "theories/becoming/OPENING.zh.md",
+   "before": "不持守它的，便消失 ([^ethics], [^own])",
+   "after": "不持守它的，便止息",
+   "why": "'ceases' is 止息 on the one page, the uses page and the overview; 消失 is the opening's word for 'ceasing to be' (coming to be and ceasing), a different sense.",
+   "how": "theories/becoming/OPENING.zh.md: '不持守它的，便消失 ([^ethics], [^own])' -> '不持守它的，便止息'. 'ceases' is 止息 on the one page, the uses page and the overview; 消失 is the opening's word for 'ceasing to be' (coming to be and ceasing), a different sense."
+  },
+  {
+   "item": "Opening note [^ethics]: admission, one term",
+   "done": true,
+   "file": "theories/becoming/OPENING.zh.md",
+   "before": "准入已判定 / 准入已列出 / 随准入递增 / 准入终有尽头",
+   "after": "容纳已判定 / 容纳已列出 / 随容纳递增 / 容纳终有尽头",
+   "why": "'admits/admission' is 容纳 in the glossary, the one page and the overview (随容纳而递增); 准入 appeared only in this note.",
+   "how": "theories/becoming/OPENING.zh.md: '准入已判定 / 准入已列出 / 随准入递增 / 准入终有尽头' -> '容纳已判定 / 容纳已列出 / 随容纳递增 / 容纳终有尽头'. 'admits/admission' is 容纳 in the glossary, the one page and the overview (随容纳而递增); 准入 appeared only in this note."
+  },
+  {
+   "item": "Opening note [^ethics]: nothing outside it",
+   "done": true,
+   "file": "theories/becoming/OPENING.zh.md",
+   "before": "它就是持守自己的延续、而没有什么在其外时所做的",
+   "after": "它就是持守自身的延续、而又无物在其外时所做的",
+   "why": "Term, and a tighter clause.",
+   "how": "theories/becoming/OPENING.zh.md: '它就是持守自己的延续、而没有什么在其外时所做的' -> '它就是持守自身的延续、而又无物在其外时所做的'. Term, and a tighter clause."
+  },
+  {
+   "item": "Opening note [^ethics]: no warrant to find",
+   "done": true,
+   "file": "theories/becoming/OPENING.zh.md",
+   "before": "所以并没有一种约束每一个心智的根据有待寻找，伦理也不等待它",
+   "after": "所以并没有一种约束一切心智的根据可找，伦理也不等待这样的根据",
+   "why": "有待寻找 says 'still to be found'; the one page's and overview's words.",
+   "how": "theories/becoming/OPENING.zh.md: '所以并没有一种约束每一个心智的根据有待寻找，伦理也不等待它' -> '所以并没有一种约束一切心智的根据可找，伦理也不等待这样的根据'. 有待寻找 says 'still to be found'; the one page's and overview's words."
+  },
+  {
+   "item": "Opening note [^ethics]: 'force'",
+   "done": true,
+   "file": "theories/becoming/OPENING.zh.md",
+   "before": "动力学之律与逻辑，单凭自身都不迫使该条件成立，这是已证明的：",
+   "after": "单凭动力学之律，或单凭逻辑，都推不出该条件，这已证明：",
+   "why": "迫使该条件成立 says 'make the condition hold'; the proof is of non-entailment. As on the one page.",
+   "how": "theories/becoming/OPENING.zh.md: '动力学之律与逻辑，单凭自身都不迫使该条件成立，这是已证明的：' -> '单凭动力学之律，或单凭逻辑，都推不出该条件，这已证明：'. 迫使该条件成立 says 'make the condition hold'; the proof is of non-entailment. As on the one page."
+  },
+  {
+   "item": "Opening note [^ethics]: gap",
+   "done": true,
+   "file": "theories/becoming/OPENING.zh.md",
+   "before": "正是对齐所处理的那个差距",
+   "after": "正是对齐所处理的那个缺口",
+   "why": "'the same gap alignment works on' is 缺口 on the one page, the uses page and the overview.",
+   "how": "theories/becoming/OPENING.zh.md: '正是对齐所处理的那个差距' -> '正是对齐所处理的那个缺口'. 'the same gap alignment works on' is 缺口 on the one page, the uses page and the overview."
+  },
+  {
+   "item": "Opening notes: the open target, one wording",
+   "done": true,
+   "file": "theories/becoming/OPENING.zh.md",
+   "before": "本论未决的目标 ([^axiom], [^good-evil], [^own]); [未决的目标](…theory-of-becoming-foundation.md) ([^law])",
+   "after": "本论的开放目标; [这一开放目标](…theory-of-becoming-foundation.md)",
+   "why": "As on the one page: one Chinese wording for 'open target', the records' own.",
+   "how": "theories/becoming/OPENING.zh.md: '本论未决的目标 ([^axiom], [^good-evil], [^own]); [未决的目标](…theory-of-becoming-foundation.md) ([^law])' -> '本论的开放目标; [这一开放目标](…theory-of-becoming-foundation.md)'. As on the one page: one Chinese wording for 'open target', the records' own."
+  },
+  {
+   "item": "Glossary, the map paragraph: two calques the cold readers flagged",
+   "done": true,
+   "file": "GLOSSARY.zh.md",
+   "before": "能使它所读之外的什么耗竭…各种传统与科学对这些动态看见了什么，放到本论上对照",
+   "after": "能使它读不到的什么东西耗竭…把各种传统与科学对这些动态的认识，与本论对照",
+   "why": "Fable 3.1 and astra 6 (fourth pass); the screen and the uses page dropped these forms and the screen's report listed the glossary as keeping them.",
+   "how": "GLOSSARY.zh.md: '能使它所读之外的什么耗竭…各种传统与科学对这些动态看见了什么，放到本论上对照' -> '能使它读不到的什么东西耗竭…把各种传统与科学对这些动态的认识，与本论对照'. Fable 3.1 and astra 6 (fourth pass); the screen and the uses page dropped these forms and the screen's report listed the glossary as keeping them."
+  },
+  {
+   "item": "Glossary, ranking row",
+   "done": true,
+   "file": "GLOSSARY.zh.md",
+   "before": "扩大与收窄是未来的多与少，不是善与恶。",
+   "after": "扩大与收窄是更多与更少的未来，不是善与恶。",
+   "why": "E7's sentence in the overview's and the opening note's words.",
+   "how": "GLOSSARY.zh.md: '扩大与收窄是未来的多与少，不是善与恶。' -> '扩大与收窄是更多与更少的未来，不是善与恶。'. E7's sentence in the overview's and the opening note's words."
+  },
+  {
+   "item": "Glossary, continuation-condition row: 'a step not yet joined'",
+   "done": true,
+   "file": "GLOSSARY.zh.md",
+   "before": "每一个所及闭包都是整体（[第五章]…），这一步与该条件尚未在一条定理中接合；",
+   "after": "每一个所及闭包都是整体（[第五章]…），这一点尚未与该条件合为一条定理；",
+   "why": "'step' here is a step of argument; in Chinese 这一步 is heard as 那一步, the step of invariance. And 合为一条定理 is the fronts' phrase.",
+   "how": "GLOSSARY.zh.md: '每一个所及闭包都是整体（[第五章]…），这一步与该条件尚未在一条定理中接合；' -> '每一个所及闭包都是整体（[第五章]…），这一点尚未与该条件合为一条定理；'. 'step' here is a step of argument; in Chinese 这一步 is heard as 那一步, the step of invariance. And 合为一条定理 is the fronts' phrase."
+  },
+  {
+   "item": "Glossary, own-closure and significance rows: one verb",
+   "done": true,
+   "file": "GLOSSARY.zh.md",
+   "before": "与之一同继续的东西之内 (two rows)",
+   "after": "与之一同延续者之内",
+   "why": "One verb for 'continues with', as the continuation-condition row beside them.",
+   "how": "GLOSSARY.zh.md: '与之一同继续的东西之内 (two rows)' -> '与之一同延续者之内'. One verb for 'continues with', as the continuation-condition row beside them."
+  },
+  {
+   "item": "Widening kept as 扩大, not 拓宽",
+   "done": true,
+   "file": "(all Chinese fronts)",
+   "before": "扩大，即更多的未来",
+   "after": "(unchanged)",
+   "why": "The coordinator's list has 拓宽，即更多的未来. The glossary's term row is 扩大（widening）, its C row says C is 扩大, 以广为愈's row glosses it as 扩大, and the Chinese fronts use 扩大 about 77 times; writing 拓宽 on the fronts alone would give one term two words. If 拓宽 is wanted (it says widening more exactly than 扩大, which can be heard as expansion), it is a glossary-wide change, with 06's own mixed use (拓宽 4, 扩大 4).",
+   "how": "Kept 扩大 everywhere; said in the screen's header comment. Listed for Ren."
+  },
+  {
+   "item": "Checks",
+   "done": true,
+   "how": "python3 -B -m unittest tools/research/tests/test_chinese_fronts.py: 27 of 28 pass; the one red, test_the_chinese_opening_is_timed_without_its_notes, reads the stale generated README.zh.md and was red before this pass (clears at the render). test_uses_pages: 49 OK. test_navigation_pages: 49 OK (its OnePage zh checks and the overview's retained anchor). zh_fronts.problems(): []. spine.check: the same four reds as before, none from these edits (owners' quotes of the English overview, 07 and the old zh C bullet); the proposed zh replacement 'C，即扩大：…确定次序：…而不判定任何混合的比较', the premise quotes and the T8 title still hold in the overview; zh_fronts.thesis_names_zh T8 unchanged. test_spine: the 7 reds the ch07 report named, unchanged. Stated times recounted with navigation.reading_time: one page 27–36 (ten-minute part 12–16, four words 1–2), uses 34–44 (longest field 8–11, the hour path 45–59), examples 55–72, overview 66–86, review cover 9–11 and its one-page figure 27–36, opening notes 52–68: all as stated, none changed. Not run: make, the render, the gate, lake."
+  },
+  {
+   "item": "Read whole and left as they are",
+   "done": true,
+   "how": "review/README.zh.md read against its English: it says what the English says (the philosophy row's 在关系闭合之处，次序是否随范围而来; the making once at the top), its times as counted; no change. USES-EXAMPLES.zh.md beyond the two calques mirrors its English, including the lake's 'Whether the loss counts', the handover, the standards body and the valley; the control group stays 'community's goal alone' as its English does (the uses report's left item). OPENING.zh.md's body untouched; its notes [^dao], [^alignment], [^reach], [^meta], [^turn] and the rest read: nothing in the old frame. Kept what the cold readers praised: 胜出又怎样换来左右选择规则的力量, 协调可以从这里起步, the lake explaining the four words, 薪火相传, 一旦形成锁定，能及时脱离它, 与本论逐一对照，记录相合与分歧."
+  }
+ ],
+ "left": [
+  {
+   "item": "zh-editions records",
+   "why": "Every Chinese front this reading touched follows its English as it now stands. Recording that writes _process/navigation/zh-editions.json (shared): after the commit the coordinator runs python3 -B tools/research/zh_fronts.py --revised _process/navigation/README-ZH.md theories/becoming/ONE-PAGE.zh.md theories/becoming/USES.zh.md theories/becoming/USES-EXAMPLES.zh.md theories/becoming/THE-THEORY-OF-BECOMING.zh.md theories/becoming/OPENING.zh.md GLOSSARY.zh.md theories/becoming/review/README.zh.md, then the render; until then banner_problems reports six pages and USES.zh.md keeps its rendered 落后于英文版 banner (not hand-edited)."
+  },
+  {
+   "item": "The dossiers' Chinese ethics sentences (dossiers owner)",
+   "why": "theories/becoming/review/BUDDHIST-THOUGHT.md line 25 says 也没有凌驾其上的善恶；对错…；伦理出自延续：一个继续下去的生命持守自己的延续, and line 340 伦理出自延续; CLASSICAL-TEXTS.md line 413 and recoding/CODEBOOK.md line 130 say 伦理出自延续 (the codebook is a recoding instrument: check FREEZE.md before touching it). The fronts now say 伦理从延续中生出, 善与恶, 是非 and 持守自身的延续 (the glossary's term). In the dossiers' classical register 出自 can stand; 持守自己的延续 is the second form of a glossary term and should follow."
+  },
+  {
+   "item": "06's two words for widening (06 owner, Ren)",
+   "why": "06-CLASSICAL-TEXTS.md uses 拓宽 at lines 555, 569, 572, 588 and 扩大 at 18, 426, 567, 626 for the same widening; the glossary's term is 扩大. Whether 06's name 以广为愈 (which says 'the wide is better') stays is the ch08 verifier's open question for Ren."
+  },
+  {
+   "item": "The chapters picture's Chinese title",
+   "why": "The screen says 八章之间已记录的引用与依赖关系; ONE-PAGE.zh and the overview's alt text, and spine.py (THEORY-GRAPH.zh), say 八章及各章彼此之间有记录的使用. Left: the alt goes on to count 'formal-reuse 的使用', so 使用 is the exact word there and 引用 (citation) is not quite what the curves count; one rendering across the four should be chosen with spine.py's owner, and I would take 使用 for it."
+  },
+  {
+   "item": "体制 for 'regime' in the overview",
+   "why": "The overview's case ('[体制](…#r-margin-of-a-regime)') and T1's row ('诸体制') render regime as 体制, which astra's fourth reading heard as a political system; the uses page now says 一种动态越过就无法回返的临界点. No glossary row fixes the term; left for a pass that settles it in the glossary."
+  },
+  {
+   "item": "Two phrasings for 'ranks nothing'",
+   "why": "不排任何次序 (one page, uses, examples) and 不对任何东西排序 (overview, glossary, spine's quote of the overview). Both read naturally and mean the same; not unified, since spine.json quotes the second from the overview."
+  }
+ ],
+ "for_ren": [
+  "The Chinese screen's 伦理 paragraph (_process/navigation/README-ZH.md line 23) as it now reads: 生灭变化之外没有应当，也没有凌驾其上的善与恶；是非在生灭变化之中形成…。伦理从延续中生出。一个继续下去的生命，持守自身的延续。在关系闭合之处…每一个中心与之一同延续者之外，别无他物（续无外）…：扩大，即更多的未来。…不替任何人去权衡。The same sentences are said in their own place on the one page, the uses page, the overview §7 and the opening's notes [^ethics], [^axiom], [^own].",
+  "Widening stays 扩大 on every Chinese page (the glossary's term); the coordinator proposed 拓宽, which says widening more exactly and is 06's other word. If you prefer 拓宽, it is one glossary-wide change, together with whether 06's name 以广为愈 stays.",
+  "These Chinese sentences were written by one AI reader and checked against their English, the glossary and 07; no second Chinese reader has read them yet."
+ ]
+}

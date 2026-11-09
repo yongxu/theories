@@ -455,8 +455,8 @@
   ],
   "does_not_show": [
     {
-      "en": "That a formation computes by these counts, or that its listing, weights and valuation are formed as supplied: they are supplied, their formation and warrant outside these counts.",
-      "zh": "形成依此诸计而算，或其列、权与值如所予而成：皆为所予，其成与其据在此诸计之外。",
+      "en": "That a formation computes by these counts, or that its listing, weights and valuation are formed as supplied: they are supplied, their formation outside these counts.",
+      "zh": "形成依此诸计而算，或其列、权与值如所予而成：皆为所予，其成在此诸计之外。",
       "kind": "non-implication"
     },
     {

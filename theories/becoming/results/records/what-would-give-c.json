@@ -24,8 +24,8 @@
       ]
     },
     {
-      "en": "On a frame reading a course by what it admits on a listing, with the process free and every claim counted as living, so that scope is already total, an extension is a widening and an order meets C exactly when it is increasing in admission. There, with every listed item marked, an order is self-concerned exactly when it meets C, through the law above: one premise in two forms.",
-      "zh": "在按列举上之接纳读进程、过程自由、每项皆算作有生（故范围已是全部）的框上，扩展即扩大，次序满足 C 恰当它随接纳递增。在那里，每个所列项都被标记时，次序自我关切恰当它满足 C，经由上一律：一个前提的两种形式。",
+      "en": "On a frame reading a course by what it admits on a listing, with the process free and every claim counted as living, so that scope is already total, an extension is a widening and an order meets C exactly when it is increasing in admission. There, with every listed item marked, an order is self-concerned exactly when it meets C, through the law above: one order in two forms, holding one's own continuation and C.",
+      "zh": "在按列举上之接纳读进程、过程自由、每项皆算作有生（故范围已是全部）的框上，扩展即扩大，次序满足 C 恰当它随接纳递增。在那里，每个所列项都被标记时，次序自我关切恰当它满足 C，经由上一律：同一次序的两种形式，即持守自身之延续与 C。",
       "declarations": [
         "Becoming.Weighting.listingFrame",
         "Becoming.Weighting.extension_listingFrame_iff",
@@ -159,8 +159,8 @@
   ],
   "does_not_show": [
     {
-      "en": "A reason for C: calling better what no chooser does worse from and some does better from, self-concern at each standpoint, and one verdict on every one-item widening are each a premise reading an order.",
-      "zh": "C 的理由：称无选择者更差且有选择者更好者为更好、各立场的自我关切、每个一项之扩大同一判定，都是读次序的前提。",
+      "en": "That a route gives C without an order: calling better what no chooser does worse from and some does better from, self-concern at each standpoint, and one verdict on every one-item widening each read an order.",
+      "zh": "有路不经次序而给出 C：称无选择者更差且有选择者更好者为更好、各立场的自我关切、每个一项之扩大同一判定，各读一种次序。",
       "kind": "non-implication"
     },
     {

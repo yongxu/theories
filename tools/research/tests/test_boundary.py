@@ -725,46 +725,46 @@ class ThePages(unittest.TestCase):
 
     def test_each_standings_sentence(self):
         self.assertEqual(self.line('Becoming.Flow.row'),
-                         f'*Standing of `Becoming.Flow.row`:* derived, a case of `{LAW}` through `Becoming.Flow.bridge_iff`, with the '
+                         f'*Place of `Becoming.Flow.row`:* derived, a case of `{LAW}` through `Becoming.Flow.bridge_iff`, with the '
                          f'support `Becoming.Flow.support`, using also `{LAW2}` (declared in [edge](edge.md); the closed set checked against '
                          'the Lean, the bridges checked as equivalences; the case read in [review.md](../../../../_process/review.md)). '
                          'Root theorems its proofs name: `Becoming.helper` (Init not shown).')
         self.assertEqual(self.line('Becoming.Flow.two'),
-                         '*Standing of `Becoming.Flow.two`:* under a stated hypothesis, the root form `Becoming.Leaf.form` at its model, '
+                         '*Place of `Becoming.Flow.two`:* under a stated hypothesis, the root form `Becoming.Leaf.form` at its model, '
                          'with hypothesis `Becoming.Leaf.H`, with its countermodel and fit (declared in [edge](edge.md); checked in Lean: the '
                          'form, its countermodels, the certificate and the discharge condition; the hypotheses read as the row\'s relational '
                          'content in [review.md](../../../../_process/review.md)).')
         self.assertEqual(self.line('Becoming.Flow.counted'),
-                         '*Standing of `Becoming.Flow.counted`:* counting, a reading: Why it stands so ([review.md](../../../../_process/review.md)); '
+                         '*Place of `Becoming.Flow.counted`:* counting, a reading: Why it stands so ([review.md](../../../../_process/review.md)); '
                          "the rule gives unplaced (none of the rule's tests holds).")
         self.assertEqual(self.line('Becoming.Flow.via_helper'),  # a reading where the rule differs: its label and its reason
-                         '*Standing of `Becoming.Flow.via_helper`:* amounts, a reading: Why it stands so ([review.md](../../../../_process/review.md)); '
+                         '*Place of `Becoming.Flow.via_helper`:* amounts, a reading: Why it stands so ([review.md](../../../../_process/review.md)); '
                          f'the rule gives connected (it reaches `{LAW}` among its reasons; not declared a case of one).')
         self.assertEqual(self.line('Becoming.Flow.balanced'),
-                         '*Standing of `Becoming.Flow.balanced`:* balance in its statement, a reading: Why it stands so '
+                         '*Place of `Becoming.Flow.balanced`:* balance in its statement, a reading: Why it stands so '
                          '([review.md](../../../../_process/review.md)); the rule gives the same; its relational part: `Becoming.Leaf.part`.')
         self.assertEqual(self.line('Becoming.Flow.forwarder'),
-                         f'*Standing of `Becoming.Flow.forwarder`, by the rule:* connected (it reaches `{LAW}` among its reasons; not '
+                         f'*Place of `Becoming.Flow.forwarder`, by the rule:* connected (it reaches `{LAW}` among its reasons; not '
                          'declared a case of one).')
         self.assertEqual(self.line('Becoming.Flow.written'),
-                         '*Standing of `Becoming.Flow.written`, by the rule:* balance in its statement (balance written out in its statement).')
+                         '*Place of `Becoming.Flow.written`, by the rule:* balance in its statement (balance written out in its statement).')
         self.assertEqual(self.line('Becoming.Flow.modelled'),
-                         "*Standing of `Becoming.Flow.modelled`, by the rule:* at a represented model (F5's verified items at the occurrence model).")
+                         "*Place of `Becoming.Flow.modelled`, by the rule:* at a represented model (F5's verified items at the occurrence model).")
         self.assertEqual(self.line('Becoming.Flow.own'),
-                         "*Standing of `Becoming.Flow.own`, by the rule:* own carrier (F5's verified items on its own carrier only).")
+                         "*Place of `Becoming.Flow.own`, by the rule:* own carrier (F5's verified items on its own carrier only).")
         self.assertEqual(self.line('Becoming.Flow.absent'),  # an unverified entry: the reason does not say none was declared
-                         "*Standing of `Becoming.Flow.absent`, by the rule:* unplaced (no standing verified, and none of the rule's tests holds; "
-                         'the declared standing, counting, is unverified: not in the spine run: Becoming.Flow.absent).')
+                         "*Place of `Becoming.Flow.absent`, by the rule:* unplaced (no place verified, and none of the rule's tests holds; "
+                         'the declared place, counting, is unverified: not in the spine run: Becoming.Flow.absent).')
         self.assertEqual(self.line('Becoming.Flow.steps'),
-                         f'*Standing of `Becoming.Flow.steps`, by the rule:* connected (it reaches `{LAW}` among its reasons; not verified as a '
-                         'case of one; the declared standing, derived, is unverified: D2: the proofs name theorems that are neither grammar '
+                         f'*Place of `Becoming.Flow.steps`, by the rule:* connected (it reaches `{LAW}` among its reasons; not verified as a '
+                         'case of one; the declared place, derived, is unverified: D2: the proofs name theorems that are neither grammar '
                          'laws, root theorems nor declared lemmas: Becoming.Flow.fact).')
         unplaced = copy.deepcopy(self.declared)
         unplaced['boundary']['standings'].pop()
         self.data = {'boundary': boundary.report(CONSTANTS, CENTRAL, AT_MODEL, F5, unplaced, ANCHORS, lean=lean_passing)}
         self.declared = unplaced
         self.assertEqual(self.line('Becoming.Flow.absent'),
-                         "*Standing of `Becoming.Flow.absent`, by the rule:* unplaced (no standing declared, and none of the rule's tests holds).")
+                         "*Place of `Becoming.Flow.absent`, by the rule:* unplaced (no place declared, and none of the rule's tests holds).")
 
     def test_the_other_sentences(self):
         # a forwarder row, standing 2 with two hypotheses and a bridge, an anchor in the statement, two represented models
@@ -776,17 +776,17 @@ class ThePages(unittest.TestCase):
         line = lambda d: registry.standing_line(d, self.records([d], matched_at_model=('m:2', 'm:3', 'm:4'))[0]['_standings']['rows'][d],
                                                 'edge', lambda i: f'[{i}]({i}.md)', registry.ROOT / 'theories/becoming/results/records')
         self.assertEqual(line('Becoming.Flow.forwarder'),
-                         f'*Standing of `Becoming.Flow.forwarder`:* derived, a case of `{LAW}` (it forwards to `{LAW}`, of kind pure) (declared '
+                         f'*Place of `Becoming.Flow.forwarder`:* derived, a case of `{LAW}` (it forwards to `{LAW}`, of kind pure) (declared '
                          'in [edge](edge.md); the closed set checked against the Lean; the case read in [review.md](../../../../_process/review.md)).')
         self.assertEqual(line('Becoming.Flow.two'),
-                         '*Standing of `Becoming.Flow.two`:* under a stated hypothesis, the root form `Becoming.Leaf.form` at its model, with '
+                         '*Place of `Becoming.Flow.two`:* under a stated hypothesis, the root form `Becoming.Leaf.form` at its model, with '
                          'hypotheses `Becoming.Leaf.H` and `Becoming.Leaf.H2`, each with its countermodel and fit, through the bridges '
                          '`Becoming.Leaf.bridge` (declared in [edge](edge.md); checked in Lean: the form, its countermodels, the certificate and '
                          "the discharge condition; the hypotheses read as the row's relational content in [review.md](../../../../_process/review.md)).")
         self.assertEqual(line('Becoming.Flow.balanced'),
-                         '*Standing of `Becoming.Flow.balanced`, by the rule:* balance in its statement (`Becoming.Flow.Balances` in its statement).')
+                         '*Place of `Becoming.Flow.balanced`, by the rule:* balance in its statement (`Becoming.Flow.Balances` in its statement).')
         self.assertEqual(line('Becoming.Flow.modelled'),
-                         "*Standing of `Becoming.Flow.modelled`, by the rule:* at a represented model (F5's verified items at the occurrence and "
+                         "*Place of `Becoming.Flow.modelled`, by the rule:* at a represented model (F5's verified items at the occurrence and "
                          'process models).')
 
     def test_the_section_follows_the_laws(self):
@@ -796,8 +796,11 @@ class ThePages(unittest.TestCase):
         r.pop('_standings', None)
         r['_boundary'] = edge['_boundary']
         page = registry.render_record_v2(r)
-        self.assertLess(page.index('## Laws'), page.index('## Standings on the edge'))
-        self.assertLess(page.index('## Standings on the edge'), page.index('## Conditions'))
+        self.assertLess(page.index('## Laws'), page.index('## Places on the edge'))
+        self.assertLess(page.index('## Places on the edge'), page.index('## Conditions'))
+        # AG review, 9 November 2026: 08 §7 places each central declaration; the old heading's anchor still lands
+        self.assertIn('<a id="standings-on-the-edge"></a>\n## Places on the edge', page)
+        self.assertNotIn('Standing of `', page)
 
     def test_one_line_per_central_declaration_and_record(self):
         records = self.records(['Becoming.Flow.row', 'Becoming.Flow.fact', 'Becoming.Flow.counted', 'Becoming.Flow.row'], ['Becoming.Flow.row'])
@@ -807,8 +810,8 @@ class ThePages(unittest.TestCase):
                                    'laws': records[0]['laws'], '_standings': records[0]['_standings']}, ensure_ascii=False))
         r.pop('_shared_laws', None)
         page = registry.render_record_v2(r)
-        self.assertEqual(page.count('   - *Standing of `Becoming.Flow.row`:*'), 1)  # a child of law 1, once though named twice
-        self.assertEqual(page.count('   - *Standing of `Becoming.Flow.counted`:*'), 1)
+        self.assertEqual(page.count('   - *Place of `Becoming.Flow.row`:*'), 1)  # a child of law 1, once though named twice
+        self.assertEqual(page.count('   - *Place of `Becoming.Flow.counted`:*'), 1)
 
     def test_lines_hidden_when_not_matched(self):
         now = copy.deepcopy(self.declared)
@@ -888,7 +891,7 @@ class ThePages(unittest.TestCase):
         self.assertIn('- `Becoming.Flow.two`: under a stated hypothesis (a checked entry): the form `Becoming.Leaf.form`; `Becoming.Leaf.H` '
                       '(countermodel `Becoming.Leaf.form.needs_H`, fit `Becoming.Leaf.form.H_needed`); recovery `Becoming.Leaf.recovery`; '
                       'certificate `Becoming.Leaf.certified`.', text)
-        self.assertIn('- `Becoming.Flow.steps`: connected (by the rule; the declared standing, derived, is unverified).', text)
+        self.assertIn('- `Becoming.Flow.steps`: connected (by the rule; the declared place, derived, is unverified).', text)
         self.assertIn('- `Becoming.Flow.balanced`: balance in its statement (a reading; the rule gives the same).', text)
         self.assertIn('- `Becoming.Flow.counted`: counting (a reading; the rule gives unplaced).', text)
         for group in ('On the edge', 'Below the grammar', 'Distances', 'Unplaced'):

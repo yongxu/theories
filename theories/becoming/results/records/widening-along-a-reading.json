@@ -95,8 +95,8 @@
       "kind": "scope"
     },
     {
-      "en": "That widening is better (C, the order) or that a grown world is generative in D1's sense: the law says where growth widens, not that it should.",
-      "zh": "扩大更好（C，次序），或长成的世界在 D1 意义上是生成的：规律说生长在何处扩大，不说它应当。",
+      "en": "That a wider course ranks above a narrower one (C, an order) or that a grown world is generative in D1's sense: the law says where growth widens, not that it should.",
+      "zh": "较宽之进程排在较窄者之上（C，一种次序），或长成的世界在 D1 意义上是生成的：规律说生长在何处扩大，不说它应当。",
       "kind": "non-implication"
     },
     {
@@ -152,8 +152,8 @@
           "zh": "沿读法跨网的扩大，以及在长成的世界上的扩大。"
         },
         "conditions": {
-          "en": "That widening is better is C's open warrant; nothing here uses it.",
-          "zh": "扩大更好是 C 的开放根据；此处不用它。"
+          "en": "Ranking by widening is C, an order; nothing here uses it.",
+          "zh": "按扩大排序是 C，一种次序；此处不用它。"
         },
         "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Growth.lean"
       }

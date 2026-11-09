@@ -120,8 +120,8 @@
   ],
   "hypotheses": [
     {
-      "en": "No axiom. Standpoints and formations as types, each standpoint's center given as a function; significance a Prop-valued family indexed by standpoint, step and formation; the presupposition and the step of invariance as hypotheses of the laws they appear in, never asserted.",
-      "zh": "不加公理。立场与构成为类型，每个立场的中心由一个函数给出；意义为按立场、步与构成索引的命题族；预设与不变之步只作为出现它们的规律的假设，从不断言。"
+      "en": "No axiom. Standpoints and formations as types, each standpoint's center given as a function; significance a Prop-valued family indexed by standpoint, step and formation; the presupposition and the step of invariance as hypotheses of the laws they appear in, and nothing more.",
+      "zh": "不加公理。立场与构成为类型，每个立场的中心由一个函数给出；意义为按立场、步与构成索引的命题族；预设与不变之步只作为出现它们的规律的假设。"
     }
   ],
   "does_not_show": [
@@ -136,8 +136,8 @@
       "kind": "scope"
     },
     {
-      "en": "That gaining what the narrower scope retains is better, or that losing what lies beyond it is worse: scope is fixed, order is C's.",
-      "zh": "较窄范围所保留者的获得是更好的，或失去其外者是更坏的：范围已定，定序属于 C。",
+      "en": "That gaining what the narrower scope retains is better, or that losing what lies beyond it is worse: scope is fixed here, and order is C's or self-concern's where a result states it.",
+      "zh": "较窄范围所保留者的获得是更好的，或失去其外者是更坏的：范围在此已定，次序则在某结果所述之处属 C 或自我关切。",
       "kind": "non-implication"
     },
     {

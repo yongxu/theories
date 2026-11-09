@@ -274,6 +274,18 @@ class LandingPageTests(unittest.TestCase):
         self.assertEqual(text.count('以所链接之处为准'), 1)
         self.assertEqual(text.count('尚无独立的人工审查记录'), 1)
 
+    def test_the_template_says_the_ethics_as_the_english_screen(self):
+        """The fifth pass (9 November 2026, on Ren's word that day that the ethics emerges from continuation, with no warrant
+        and no dualistic good or evil): the Chinese screen's ethics mirrors the English anchor, and the closed form of the
+        meta-attractor is said with its model's conditions, not as locking by itself."""
+        text = re.sub(r'<!--.*?-->', '', (ROOT / zh_fronts.TEMPLATE).read_text(encoding='utf-8'), flags=re.S)
+        self.assertIn('伦理从延续中生出', text)
+        self.assertIn('也没有凌驾其上的善与恶', text)
+        self.assertIn('07-SIGNIFICANCE.md#r-self-concern-and-c-under-the-condition', text)
+        self.assertIn('尚未合为一条定理', text)
+        for old in ('两种读法', '扩大可形成者', '未奠定根据', '就会锁定', '所读之外的什么'):
+            self.assertNotIn(old, text)
+
     def test_a_stated_time_is_kept_whole_in_a_table(self):
         (self.root / 'theories/LINEAGE.zh.md').write_text('# 长成\n\n*全文约 9–12 分钟 | 另 3 分钟。*\n', encoding='utf-8')
         pages, errors = self.render('# 首\n\n| a | {{stated:theories/LINEAGE.zh.md}} |\n')

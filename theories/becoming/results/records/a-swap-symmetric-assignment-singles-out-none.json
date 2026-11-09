@@ -37,8 +37,8 @@
   ],
   "does_not_show": [
     {
-      "en": "What warrant an asymmetry or a procedure singling out one role has, or which role ought to contribute.",
-      "zh": "打破对称、单挑一角之不对称或程序有何根据，或哪一角应当出力。",
+      "en": "Whether an asymmetry or a procedure singling out one role is right, or which role ought to contribute.",
+      "zh": "打破对称、单挑一角之不对称或程序是否为对，或哪一角应当出力。",
       "kind": "non-implication"
     },
     {

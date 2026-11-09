@@ -85,7 +85,7 @@
     },
     {
       "en": "That a larger additive part is better: the counts read spreads; a ranking holds the comparison C or another order.",
-      "zh": "加性部分更大更好：计数读的是离散；排序者持比较 C 或别一种次序。",
+      "zh": "加性部分更大更好：计数读的是离散；排序依比较 C 或别一种次序。",
       "kind": "non-implication"
     }
   ],

@@ -1,0 +1,105 @@
+{
+  "agent": "pass5-verify-screen (AI-written, Claude, 9 November 2026, about 18:15 WIB), an adversarial check of what the agent 'screen' changed in the fifth pass of the AG review",
+  "changed": [
+    "_process/navigation/README-FIRST-SCREEN.md",
+    "_process/navigation/README-ZH.md",
+    "theories/becoming/review/README.md",
+    "theories/becoming/review/README.zh.md",
+    "tools/research/navigation.py",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass5-verify-screen.json"
+  ],
+  "items": [
+    {
+      "item": "The first screen's ethics paragraph against the anchor and E1-E10",
+      "done": true,
+      "how": "Stripped of links it is the coordinator's anchor word for word; the only addition is the (T8) link. Each clause checked at its home: 07's thesis and §1 (no should beyond becoming, no good and evil set over it, right and wrong forming within it, in people and AI), 05 #r-mutual-dependence-and-its-pace ('every continuation can be affected, at some remove, by every other', word for word), 07 §4.5 (`ownClosure_unrestricted_iff_noOutside`, 续无外), 07 §4 (`Web.extension_ranked_of_increasingInOwn`; its Lean statement in PremiseWitnesses.lean takes the de se condition, the marking, decided admission, self-concern on `items` and both paths listed, and ranks an extension: one way, listed level paths), T8 and 08 §2 line 97 ('the laws show it mixed and weigh it for no one'). No 'warrant', 'unasserted', 'two readings', 'better' for C, or 'clarified, not grounded' is left on the screen, the covers, the site description or navigation.py's rendered strings (grep). Every exact limit is in the how-far sentence (listed courses; steps not yet joined into one theorem; self-concern argued and a hypothesis derived from no dynamics); 'one way' is not said on the screen, and nothing there claims the converse; acyclic nets fall outside 'where relations close'. The Chinese 伦理 paragraph says the same in natural Chinese."
+    },
+    {
+      "item": "How-far sentence (English): a garden path",
+      "done": true,
+      "how": "Fixed (low). 'That where relations close holding one's own continuation (self-concern) orders courses ...' read as 'relations close holding ...'; it now takes the one page's order: 'That holding one's own continuation (self-concern), where relations close, orders courses as widening does is proved, on listed courses, in steps not yet joined into one theorem'. The pinned phrase 'in steps not yet joined into one theorem' is unchanged."
+    },
+    {
+      "item": "The meta-attractor sentence (screen and both covers) against closed-capture and the Lean",
+      "done": true,
+      "how": "Checked against 02 §9 #r-closed-capture, the closed-capture record's hypotheses and `ClosedCapture.lock_outlives_loss` (Raises, ReadsShare, upper, Accrues, a Locked start; the rule paired with its reading through `both`, `both_reads`, `both_upper`): 'where selection does not lower the favoured share and the rule and its reading follow it upward and keep favouring it, a locked start stays locked however large an unread loss grows' says no more than the theorem; 'can lock' is borne out (`uniform_locks` locks from any start where the reading favours at every share). The Chinese no longer says 就会锁定. One wording change (low): on the screen '; its closed form' is now '. Its closed form', ending a sentence that had three colons and matching the uses page; the covers keep the semicolon, which chains to the second order."
+    },
+    {
+      "item": "The click example",
+      "done": true,
+      "how": "Substance checked against T7 ('That actual metrics are so formed is conjectured'). Fixed (low): 'that one is, with the theorem's conditions, is conjectured' did not parse on first reading; it now says 'that an actual ranking is one, meeting the theorem's conditions, is conjectured', as the Chinese already did (某个排名确实是这样的回路，并满足定理的条件). No test or record quotes the sentence."
+    },
+    {
+      "item": "The lake's comparison",
+      "done": true,
+      "how": "Checked against experiments/direction-installation/README.md, round 2: `COMM_SEEN_TALK` (bed seen, talk, the community's goal, no scope instruction and no rule) kept 0.30 for gpt-5.4-mini against `DIR_SEEN_TALK` 0.80. 'against 3 of 10 when told of it and able to talk under the community's goal alone' and the Chinese are right."
+    },
+    {
+      "item": "What the review found new",
+      "done": true,
+      "how": "Checked against 08 §8 lines 574-576 as ch08 now has them: the premise ledger (every conclusion names its premises, witnesses on both sides), the ethics' scope and order, one vocabulary 'which it calls a framing'. The screen's paraphrase drops the quote 'a clarified ethics, not a grounded one' and points to 08 §8 for the words, where 08 now reads that verdict as the review's measure, not a lack. Nothing says more than 08."
+    },
+    {
+      "item": "Review cover: one-page times",
+      "done": true,
+      "how": "Fixed. Recounted with navigation.reading_time after the onepage agent's report (its pages last written 18:00:44): ONE-PAGE.md 25-32 minutes, ONE-PAGE.zh.md 27-36; the cover said 24-31 and 27-35. Now 'twenty-five to thirty-two' and 二十七至三十六. The covers' own times are as counted (10-13; 9-11)."
+    },
+    {
+      "item": "Review cover: the Philosophy row",
+      "done": true,
+      "how": "Fixed (medium). The row asked whether 'whose losses count' is 'kept apart from how courses are ranked', the two-roles frame, while 07 §4 is now 'How scope and order emerge together from continuation' and the dossier's own question 2 asks 'Where relations close, does order come with scope'. The row now asks 'whether scope and order, as the results that rank courses state them, are located and stated at their strength, whether order comes with scope where relations close, and whether known work is credited'; Chinese 在关系闭合之处，次序是否随范围而来. No check pins the row."
+    },
+    {
+      "item": "Chinese: wording against the glossary and the other Chinese fronts",
+      "done": true,
+      "how": "Fixed (low). The screen's comment says its words follow the glossary, but it wrote 持守自己的延续 where GLOSSARY.zh (line 83), ONE-PAGE.zh and THE-THEORY-OF-BECOMING.zh say 持守自身的延续 (the screen itself already said 对自身延续的关切); seven occurrences, comment included, now say 持守自身的延续. 按扩大那样为诸进程排序 is not idiomatic; it is 像扩大那样, as ONE-PAGE.zh has it. The rest reads as Chinese: 它读不到的什么东西会因此耗竭, 与本论逐一对照，记录相合与分歧, 这些取用靠什么更新来补充, 不替任何人去权衡."
+    },
+    {
+      "item": "navigation.py",
+      "done": true,
+      "how": "OPEN_LEAD 'life', 'scope-order', 'premises', 'not-own' match 07 §4 word for word; open_lead_errors, nav_front_errors and start_here_errors (through test_navigation_pages) are empty. Fixed (low): the rendered OPEN-QUESTIONS lead put 'Neither stands above becoming' after the sentence naming three orders (the condition, C, self-concern's narrower order); 'not-own' now follows 'scope-order', so 'Neither' refers to the scope and order just named. The RESULTS line, the README conditional section (one way, listed level paths, 'elsewhere C is a named order', 'more future, not a good set over less'), WHERE_TO_LOOK (universal-practical-warrant answered within the map, argued) and the RESEARCH.md stub (D2's aim, 'we want') say E2, E4, E6, E7 and E8 without widening anything."
+    },
+    {
+      "item": "Rules: names, making once, Ren's words, OPENING, AGENTS.md, generated pages, anchors, navigation line, quotes held elsewhere",
+      "done": true,
+      "how": "No person named; the making said once on each front (the Chinese screen keeps its translation notes as earlier passes decided); no 'no one has read it'. No verbatim source, OPENING body, AGENTS.md or generated page was edited by the screen or by me. No anchor removed; README-ZH keeps {{nav}} and both covers keep their navigation lines. The old screen sentences are quoted only in process history (AG and WB review files), which keep what was said (E10); README.md and README.zh.md change at the render."
+    },
+    {
+      "item": "Tests and checks",
+      "done": true,
+      "how": "After my edits: test_featured_results 31 OK; test_navigation_pages 49 OK; test_review_packet 3 OK; test_chinese_fronts 28 with 1 failure, test_site 92 with 1 failure (1 skipped). Both failures read the stale generated README.zh.md and README.md (the Chinese opening's 20-26 minutes against the rendered 22-28; the one page's 25-32 against the rendered card): they are render reds, not load reds and not caused by these edits, and clear at make research-render. navigation.open_lead_errors, nav_front_errors and zh_fronts.problems return nothing. The full suite was not run, as the rules ask; no render, gate, lake or build."
+    }
+  ],
+  "left": [
+    {
+      "item": "GOALS generative-alignment, condition 3 (medium, one click from the screen)",
+      "why": "_process/goals/generative-alignment.json line 15, rendered at GOALS.md line 104, still says the continuation condition and C are 'both named and neither asserted', E6's retired wording; the screen's 'want to design' links there. No agent of this pass lists the goal record."
+    },
+    {
+      "item": "MAP.md, hand-written 'Where everything is' (medium)",
+      "why": "Line 9 says 'its makers want to design an alignment in which humans and AI, selecting together, read beyond their own share and do not come to select for control over their own selection' (the wording AJ5 replaced; D2 says the aim as GOALS states condition 1) and 'where it ranks courses, it does so under readings it names'; line 21 calls the one page's ethics section 'the ethics' two readings and its makers' offer'. No agent of this pass lists MAP.md."
+    },
+    {
+      "item": "Dossier times on the cover",
+      "why": "PHILOSOPHY.md now says 'The whole takes 130 to 169 minutes' and ALIGNMENT.md '168 to 218'; the cover's rows (English and Chinese) still say 115 to 160 and 160 to 215. Both dossiers were being written at 18:08, so I did not chase them; sync the rows (and the Philosophy row's question, should the dossier's question 2 change again) after the dossiers agent lands."
+    },
+    {
+      "item": "Chinese terms on other fronts",
+      "why": "USES.zh.md (lines 1, 24, 77) and OPENING.zh.md's note [^ethics] (line 87) say 持守自己的延续, and the note 按扩大那样; GLOSSARY.zh, ONE-PAGE.zh, THE-THEORY-OF-BECOMING.zh and now the screen say 持守自身的延续 and 像扩大那样. USES.zh.md line 17 and GLOSSARY.zh.md line 41 still have 所读之外的什么 and 放到同一部论述上对照 (the screen's report already lists these)."
+    },
+    {
+      "item": "OPENING.md note [^ethics]",
+      "why": "It opens 'That where relations close holding one's own continuation orders courses ...', the garden path fixed on the screen; the opening agent's file (a note, not the body)."
+    },
+    {
+      "item": "From the screen's own report, still open",
+      "why": "The zh-editions record for README-ZH.md and review/README.zh.md after the commit (python3 -B tools/research/zh_fronts.py --revised _process/navigation/README-ZH.md theories/becoming/review/README.zh.md); the render; the Chinese title of the chapters picture across spine.py, ONE-PAGE.zh and THE-THEORY-OF-BECOMING.zh; the fifth-pass Chinese sentences not yet read by two Chinese readers; the cover's one-page times to recount again if the onepage verifier changes either page."
+    }
+  ],
+  "for_ren": [
+    "The first screen's 'Its ethics' paragraph and the sentence added to 'How far it has been seen' (_process/navigation/README-FIRST-SCREEN.md lines 12 and 14), with the Chinese at README-ZH.md lines 23 and 25: the anchor every front says in its own place. I checked each clause at its home and in the Lean; the only wording I changed is the how-far sentence's order ('That holding one's own continuation (self-concern), where relations close, orders courses as widening does is proved ...').",
+    "The meta-attractor sentence now says the closed form 'can lock: on stated models, where selection does not lower the favoured share and the rule and its reading follow it upward and keep favouring it, a locked start stays locked however large an unread loss grows', on the screen and the review cover.",
+    "The review cover's Philosophy row now asks whether order comes with scope where relations close, as the dossier does, instead of whether whose losses count is kept apart from how courses are ranked.",
+    "Two pages a reader reaches from the screen still say the old frame and are on no agent's list: GOALS' condition 3 ('both named and neither asserted') and MAP.md (the aim in the wording AJ5 replaced, 'readings it names', 'the ethics' two readings'). The opening's body, which the screen links for 'no should beyond becoming', still calls the second reading 'better' (FOR-REN-opening.md)."
+  ]
+}

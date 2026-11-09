@@ -235,8 +235,8 @@
           "en": "Comparison in classification_robust_iff and strict-order inputs to formation_required_without_fixed_classification."
         },
         "conditions": {
-          "zh": "生生之意义、实践承诺与实际对应仍须有根据；不是逻辑公理审计所取得。",
-          "en": "Living significance, the practical commitments and actual correspondence retain their substantive warrant, not supplied by logical axiom auditing."
+          "zh": "生生之意义、实践承诺与实际对应仍是实质前提；不是逻辑公理审计所取得。",
+          "en": "Living significance, the practical commitments and actual correspondence remain substantive premises, not supplied by logical axiom auditing."
         },
         "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ClassificationRobustJudgment.lean"
       }

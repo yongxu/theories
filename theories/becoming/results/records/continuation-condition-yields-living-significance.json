@@ -171,16 +171,16 @@
   ],
   "hypotheses": [
     {
-      "zh": "延续条件：Unrestricted sig，即从每个立场，任何东西在每一步的延续都有意义（对指标 (p, t, f) 的边界中立）。它是定理的假设，陈述而不断言，也不被证明；把“for anything, its continuation into the future has significance”读作 Unrestricted 是 AI 的读法（D16）。",
-      "en": "The continuation condition: Unrestricted sig, that from every standpoint the continuation of anything has significance at every step (boundary neutrality over the index (p, t, f)). It is a hypothesis of the theorems, stated and not asserted, and is not proved; reading “for anything, its continuation into the future has significance” as Unrestricted is an AI reading (D16)."
+      "zh": "延续条件：Unrestricted sig，即从每个立场，任何东西在每一步的延续都有意义（对指标 (p, t, f) 的边界中立）。它是定理的假设，此处不加证明；把“for anything, its continuation into the future has significance”读作 Unrestricted 是 AI 的读法（D16）。",
+      "en": "The continuation condition: Unrestricted sig, that from every standpoint the continuation of anything has significance at every step (boundary neutrality over the index (p, t, f)). It is a hypothesis of the theorems and is not proved here; reading “for anything, its continuation into the future has significance” as Unrestricted is an AI reading (D16)."
     },
     {
       "zh": "对应：主张的意义读作某形成在某步之延续的意义（formation、step 与 reads）；不满足它的读法上，定理不说什么。",
       "en": "Correspondence: a claim's significance is read as that of some formation's continuation at some step (formation, step and reads); on readings that do not meet it the theorem says nothing."
     },
     {
-      "zh": "在水平路径的框架上，把“更好”读作保留且增加有意义者时 C 成立，而在条件之下这就是扩大（`Web.widens_iff_retains_adds`）：这是对“更好”的一种读法，不是条件的推论；在一般的框架上 C 仍是前提。",
-      "en": "On the frame of level paths C holds with “better” read as retaining and adding what has significance, which under the condition is widening (`Web.widens_iff_retains_adds`): a reading of “better”, not a consequence of the condition; on a general frame C remains a premise."
+      "zh": "在水平路径的框架上，把“更好”读作保留且增加有意义者时 C 成立，而在条件之下这就是扩大（`Web.widens_iff_retains_adds`）：这是对“更好”的一种读法，不单由条件推出；在一般的框架上 C 是一种具名的次序，用到之处为假设。",
+      "en": "On the frame of level paths C holds with “better” read as retaining and adding what has significance, which under the condition is widening (`Web.widens_iff_retains_adds`): a reading of “better”, not a consequence of the condition alone; on a general frame C is a named order, a hypothesis where used."
     },
     {
       "zh": "离散的步（从第零步计）；自然数的水平、所需与数量；部分是可判定的家族（part : F → Bool）。",
@@ -202,8 +202,8 @@
       "kind": "converse"
     },
     {
-      "zh": "不证明延续条件本身，不给出它的规范根据。",
-      "en": "The continuation condition itself is not proved here, and its normative warrant is not given.",
+      "zh": "不证明延续条件本身；诸定理以之为假设。",
+      "en": "The continuation condition itself is not proved here; the theorems take it as a hypothesis.",
       "kind": "non-implication"
     },
     {
@@ -233,8 +233,8 @@
       "witness": "Becoming.Web.significance_undetermined"
     },
     {
-      "en": "Counting theorems that take the condition as a hypothesis counts uses of a universal statement, not dependence on further content; the condition fixes scope, whose losses count, and what ranks is an order a reader holds, C or another (the step of invariance is part of that scope).",
-      "zh": "以条件为假设的定理之数，计的是一个全称命题的用处，不是对更多内容的依存；条件定范围，即谁的损失算数，排序在于读者所持之次序，C 或别一种（不变的一步属于这个范围）。",
+      "en": "Counting theorems that take the condition as a hypothesis counts uses of a universal statement, not dependence on further content; the condition fixes scope, whose losses count (the step of invariance is part of it), and by itself ranks nothing (chapter 7 says how order emerges with it).",
+      "zh": "以条件为假设的定理之数，计的是一个全称命题的用处，不是对更多内容的依存；条件定范围，即谁的损失算数（不变的一步属于这个范围），单凭自身不排序（次序怎样与之一同生出，见第七章）。",
       "kind": "non-implication"
     }
   ],

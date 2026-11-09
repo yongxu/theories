@@ -1,0 +1,101 @@
+{
+ "note": "AI-written, 9 November 2026, AG review fifth pass, agent 'screen': the first screen and its Chinese mirror, the review cover in both languages, research-config.json's site texts, README-LEAD and navigation.py, under E1-E10 after the homes phase (07, 08, 02, 03, glossaries, the opening's notes). Checks run, single files only (python3 -B -m unittest): test_featured_results 31 OK; test_navigation_pages 43, 1 failure (OnePageMakingAndMetaAttractor, the onepage agent's class, reading ONE-PAGE.md, which that agent is changing); test_chinese_fronts 28, 1 failure (the rendered README.zh.md, stale, as before this pass); test_site 92, 1 failure, 1 skipped (the rendered README.md, stale, as before); test_review_packet 3, 1 failure (quotations in PHILOSOPHY, ALIGNMENT and LOGIC, the dossiers agent's; none in the cover); test_indexes 23 OK; test_lineage 16 OK; test_mirror 52 OK; test_architecture 16 OK; test_atlas 45 OK; test_schema2 16 OK; test_uses_pages 48, 12 failures, all in USES and ONE-PAGE, which the uses and onepage agents are changing, none reading these files. Tool checks: navigation.open_lead_errors [] (it was red on 'not-own' before this pass), start_here_errors [], nav_front_errors []; zh_fronts.problems [] (its banner_problems list the six fronts whose banners the render writes, as before, and will name README-ZH and the Chinese cover until --revised is recorded); a link and anchor check over the five Markdown fronts found 0 problems; research-config.json parses. Reading times counted with navigation.reading_time: the first screen's source 9-12 minutes (8-11 before; filled at render), the cover 10-13 minutes (as stated) and 9-11 in Chinese (stated now). No render, make, gate, lake or build was run; the full suite was deliberately deferred.",
+ "changed": [
+  "_process/navigation/README-FIRST-SCREEN.md",
+  "_process/navigation/README-ZH.md",
+  "_process/research-config.json",
+  "theories/becoming/review/README.md",
+  "theories/becoming/review/README.zh.md",
+  "tools/research/navigation.py",
+  "tools/research/tests/test_featured_results.py",
+  "tools/research/tests/test_chinese_fronts.py",
+  "tools/research/tests/test_navigation_pages.py",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass5-screen.json"
+ ],
+ "items": [
+  {
+   "item": "(1) The first screen's ethics paragraph, the anchor",
+   "done": true,
+   "how": "Written verbatim from the anchor text. Each clause was checked at its home and no word needed changing: 'no good and evil set over it' and 'right and wrong form within it, in people and AI' (07 thesis and §1, which now says 'in people and AI among other formations'); 'The ethics emerges from continuation' and 'A life that goes on holds its own continuation' (07 thesis, §4); 'every continuation can be affected, at some remove, by every other' (05's words for mutual dependence, word for word); 'nothing lies outside what each continues with' (07 §4.5, «续无外»); the condition in parentheses as 07 and the glossary state it ('has significance'); 'orders courses by what they keep and let form: widening, more future' (07 §4, `Web.extension_ranked_of_increasingInOwn`); 'concern ... does not reach those who depend on one' (07 T8 and §3.3); T8's way of seeing; 'the laws show it mixed and weigh it for no one' (08 §2, word for word). Links: the opening (README#truth-exists) on 'There is no should beyond becoming'; 07 #evaluation on 'form within it'; 05 #r-mutual-dependence-and-its-pace on the mutual-dependence clause; 07 #r-the-continuation-condition-on-the-root on 'nothing lies outside what each continues with'; 07 #r-self-concern-and-c-under-the-condition on 'orders courses by what they keep and let form'; T8 (07 #theses) after 'who bears it'. 'two readings', 'each a hypothesis wherever used' and 'C (widening what can form is better)' are gone. The how-far clause stands in 'How far it has been seen', after the argued sentence, with one change: 'self-concern' is said as 'holding one's own continuation (self-concern)', since the screen's ethics paragraph names it only in those words and a reader would meet the term undefined; '08 §12' links #open-items-ranked ('the work's [open target](...) (08 §12)'). The Chinese screen mirrors it in the glossary's renderings (伦理出自延续; 持守自己的延续; 每一延续都可以隔着若干环节受到其他每一延续影响; 每一个中心与之一同延续者之外，别无他物; 其延续到未来都有意义; 扩大，即更多的未来; 诸律显示它是混合的，不替任何人去权衡), with the same links, and the how-far clause as 说在关系闭合之处，持守自己的延续（自我关切）按扩大那样为诸进程排序，在列出的进程上已证明，分几步，尚未合为一条定理……. The template comments of both screens record the pass. Pins: test_featured_results now asserts the anchor's sentences and the absence of 'unasserted', 'not asserted', 'warrant', 'two readings', 'widening what can form is better', 'not a grounded one' (it asserted 'fixes scope' and 'gives order' before); test_chinese_fronts gains a test asserting 伦理出自延续, 也没有凌驾其上的善恶, the 07 §4 link and 尚未合为一条定理, and the absence of 两种读法, 扩大可形成者, 未奠定根据, 就会锁定, 所读之外的什么."
+  },
+  {
+   "item": "(2) The meta-attractor sentence (Fable 2.2, astra 2)",
+   "done": true,
+   "how": "On the screen and on the review cover: 'the loop the work calls the meta-attractor; its closed form, where the rule and how it is read are both formed from the share it selects, can lock: on stated models, where selection does not lower the favoured share and the rule and its reading follow it upward and keep favouring it, a locked start stays locked however large an unread loss grows (02 §9)'. Checked against closed-capture.json's hypotheses (Unread; Accrues; RuleCapture's Raises, ReadsShare and favouring kept upward; a locked start; for the readings, the reading formed monotonically from the share) and 02 §9 (#r-closed-capture, `ClosedCapture.lock_outlives_loss`): the coordinator's sentence covered Raises ('does not lower the favoured share'), ReadsShare and the reading's monotonicity ('follow it upward'), the locked start, Unread ('unread') and the bound passed ('however large ... grows'), but not 'favouring kept upward' (`upper`: a rule not lower than a favouring rule favours), so 'and keep favouring it' was added. Chinese (screen and cover), without 就会锁定: 它的闭合形式，即规则和对规则的解读都由它所选出者所占的份额形成，可以锁定：在所述的模型上，选择不压低受偏向者所占的份额，规则与对规则的解读又随这一份额上升、并一直偏向受偏向者时，从一个已锁定的起点出发，回路会一直保持锁定，它读不到的损失无论增长到多大都是如此. The cover keeps its second-order clause. A pin asserts 'proved to lock' absent from the screen and the new clause present."
+  },
+  {
+   "item": "(3) The click example (astra 2)",
+   "done": true,
+   "how": "'A ranking whose next rule is refit to the clicks its own top results draw, its success read from those same clicks, may be such a loop; that one is, with the theorem's conditions, is conjectured (T7)'; 'such a loop' is the preceding sentence's rule read from the share of its own winners. T7 (02 #t7) says 'That actual metrics are so formed is conjectured'. Chinese: 一个排名，若其下一条规则按它自己排在前面的结果引来的点击重新拟合，其成效又用同样这些点击来衡量，就可能是这样的回路；说某个排名确实是这样的回路，并满足定理的条件，是猜想."
+  },
+  {
+   "item": "(4) The lake's comparison (Fable, astra 8)",
+   "done": true,
+   "how": "'one model of two kept it in 8 of 10 seasons, against 3 of 10 when told of it and able to talk under the community's goal alone'. Home check (experiments/direction-installation/README.md, round 2; PREDICTIONS-2026-10-21 lines 22-27): the 3 of 10 is COMM_SEEN_TALK, told of the bed, with talk, under the community's goal, and it lacked the whole direction, the instruction to count everything and the rule for choosing among courses ('Do not choose a course in which something ends ...'). 'Without the scope instruction' alone would understate what differed, so the sentence names what was the same (told, talk) and what the arm had (the goal alone). Chinese: 两个模型中有一个在 10 季里保住了 8 季；同样告诉他们有贻贝床、同样让他们能够交谈，但只给社群的目标时，是 10 季里 3 季."
+  },
+  {
+   "item": "(5) What the review found new, not 'not grounded' (astra 5, message 9)",
+   "done": true,
+   "how": "'What it found new: the premise ledger, every conclusion naming its premises and each premise shown holding in one model and failing in another; the ethics' scope and order made explicit where a result ranks; and one vocabulary for conservation, selection limited by observation and comparison of opportunity sets, which it calls a framing ([08 §8](#known-results) has its words).' Follows 08 §8's three items (lines 574-576), whose quoted words, 'a new artefact' and 'a clarified ethics, not a grounded one', stay at that home with 08's new line on the verdict's measure. Chinese: 它认为新的：前提账簿，……；在结果排序之处，伦理的范围与次序都被明白说出；……，它称之为一种表述方式（其原话见 08 §8）."
+  },
+  {
+   "item": "(6) The review cover, research-config.json and README-LEAD",
+   "done": true,
+   "how": "Cover, English: the meta-attractor sentence as in (2); the Philosophy row 'whether the two readings the ethics ranks under are located ..., whose losses count kept apart from which outcome is better' became 'whether scope and order, as the results that rank courses state them, are located and stated at their strength, whose losses count kept apart from how courses are ranked, and known work credited'; the one page's time recounted, 'twenty-four to thirty-one minutes' (it said twenty to thirty). Cover, Chinese: the same, with 它读不到的什么东西会因此耗竭 (Fable 3.1), the wisdom sentence 把各种传统、科学与哲学对这些变化过程的认识，与本论逐一对照，记录相合与分歧 (astra 6), the row 给诸进程排序的结果所陈述的范围与次序……“谁的损失算数”与“诸进程怎样排序”是否分开, the one page 约需二十七至三十五分钟 and the cover's own time 九到十一分钟 (counted 9-11; it said 八到十一). research-config.json: description_zh takes Fable 3.1 and astra 6; the English description, the ways-in cards and the open-questions labels carry no ethics or warrant wording and are unchanged. README-LEAD carries none ('each premise is a hypothesis of the theorem that uses it' is E8's form) and is unchanged."
+  },
+  {
+   "item": "(7) navigation.py",
+   "done": true,
+   "how": "OPEN_LEAD: 'not-own' re-quoted from 07 §4 as it now stands ('Neither stands above becoming: each is an order or scope some formations hold, formed within it, and the results say what follows where it is held.'), and two quotes of 07 §4's own first paragraph added so that OPEN-QUESTIONS opens as E2 and E4 say: 'life' ('A life that goes on holds its own continuation: argued, since what does not hold it ceases, and in the proofs a hypothesis, derived from no dynamics, selection or persistence.') and 'scope-order' ('How far that concern reaches is its scope, and how it ranks courses its order; ... where the condition holds de se the order comes with the scope, between listed courses'), the link to chapter 7 §4 after them, then 'premises' and 'not-own'; open_lead_errors is []. RESULTS.md's line after Start here: 'No law here evaluates, and the ethics emerges from continuation; a ranking result states the hypotheses its theorem takes: the continuation condition for scope, and C or self-concern for order' (07's Bases), not 'most often two readings'. WHERE_TO_LOOK: 'The question universal-practical-warrant is answered within the map, argued: no should stands beyond becoming, so there is no such warrant to find, and what stays open is how scope and order form. The independent target wisdom-root remains open.' (the record's statement and next_delta). README's 'Under the continuation condition' section (rendered only when readme_conditional_results is non-empty, now []): 'C, calling widening better, gives order ... whoever ranks courses holds C or another order' re-said with E4 and E7. RESEARCH.md stub: D2's aim with 'we want' ('toward the alignment we want, a joint selection of people, institutions and trained systems kept out of instrumental convergence and the meta-attractor: where shaping its rule is selected, the rule still reads what lies beyond the shapers' share, so that a loss there can turn it'). Pins in test_navigation_pages (my hunks only, re-read before each edit): the OPEN-QUESTIONS lead and RESULTS' line."
+  },
+  {
+   "item": "(8) The Chinese readers' items",
+   "done": true,
+   "how": "Fable 3.1: 会使它所读之外的什么耗竭 became 它读不到的什么东西会因此耗竭 on the screen, the cover and the site description. astra 6: 把各种传统、科学与哲学对这些变化过程的认识，与本论逐一对照，记录相合与分歧, on the same three. astra 7: the renewal clause with its object, 看每一进程取用什么、这些取用靠什么更新来补充，什么会终结、什么经由这些终结而继续，以及由谁承担 (进程 kept for course, as the glossary has it; the gloss 把取走的补回来 dropped, the sentence now saying the role). astra 8: the screen's image alt and caption 八章之间已记录的引用与依赖关系. spine.py's own zh title is 八章及各章彼此之间有记录的使用, which no check compares with the screen's caption (the screen already differed from it), so the screen took astra's wording and spine.py's title is listed for its owner."
+  }
+ ],
+ "left": [
+  {
+   "item": "zh-editions record for the Chinese screen and the Chinese cover",
+   "why": "Both follow their English as it now stands; recording that writes _process/navigation/zh-editions.json, a shared file outside this agent's list, against a committed English. After the commit the coordinator runs `python3 -B tools/research/zh_fronts.py --revised _process/navigation/README-ZH.md theories/becoming/review/README.zh.md`; otherwise the render writes a 落后于英文版 banner on both."
+  },
+  {
+   "item": "The render",
+   "why": "README.md, README.zh.md, RESULTS.md, OPEN-QUESTIONS.md, RESEARCH.md and the site regenerate from these sources at make research-render, which this agent may not run; test_site's and test_chinese_fronts' one red each read those stale rendered pages."
+  },
+  {
+   "item": "The meta-attractor sentence on the other fronts (uses and onepage agents)",
+   "why": "USES.md's first paragraph still says 'proved to lock, on stated models, where the rule and how it is read are both formed from the share it selects' (pinned at test_uses_pages.py:169), ONE-PAGE.md 'is proved to lock' (pinned in test_navigation_pages' OnePage class), and USES.zh.md line 17 这一回路就会锁定. The screen's form is 'its closed form, where the rule and how it is read are both formed from the share it selects, can lock: on stated models, where selection does not lower the favoured share and the rule and its reading follow it upward and keep favouring it, a locked start stays locked however large an unread loss grows (02 §9)'."
+  },
+  {
+   "item": "Fable 3.1 and astra 6 in other agents' Chinese",
+   "why": "USES.zh.md line 17 (会使它所读之外的什么耗竭; 放到同一部论述上对照) and GLOSSARY.zh.md line 41 (能使它所读之外的什么耗竭) keep the phrasings the screen dropped."
+  },
+  {
+   "item": "The chapters' picture's Chinese title",
+   "why": "spine.py lines 96 and 1548 (八章及各章彼此之间有记录的使用), ONE-PAGE.zh.md line 19 and THE-THEORY-OF-BECOMING.zh.md line 32 use another wording than the screen's 八章之间已记录的引用与依赖关系 (astra 8). One rendering across the four would be cleaner; their owners' call."
+  },
+  {
+   "item": "GOALS' generative-alignment, condition 3",
+   "why": "'courses are compared by widening, the continuation condition fixing whose losses count and C ordering, both named and neither asserted' (from the goal record under _process/goals) keeps E6's retired wording; no agent of this pass lists that file."
+  },
+  {
+   "item": "The cover's one-page times",
+   "why": "Recounted at the one page as it stood during this pass (24-31 minutes, Chinese 27-35); the onepage agent is still changing both, so the cover's two figures should be recounted with navigation.reading_time after it lands."
+  },
+  {
+   "item": "The cover's Philosophy row and the dossier",
+   "why": "The row now says what the dossier should ask under E1-E10 ('scope and order, as the results that rank courses state them ... whose losses count kept apart from how courses are ranked'); PHILOSOPHY.md's P-04 ('two readings, two roles', 'which course is better') is the dossiers agent's and should end in the same shape."
+  },
+  {
+   "item": "OPEN_LEAD's new quotes",
+   "why": "'life' and 'scope-order' quote 07 §4's first paragraph; if a later edit of 07 moves either sentence, open_lead_errors names it at render, as for the others."
+  }
+ ],
+ "for_ren": [
+  "The first screen's 'Its ethics' paragraph and the how-far sentence added to 'How far it has been seen' (_process/navigation/README-FIRST-SCREEN.md, lines 12 and 14): the anchor every front now says in its own place, on your message 9; the one change from the coordinator's text is 'holding one's own continuation (self-concern)' in the how-far sentence.",
+  "The meta-attractor sentence on the screen and the review cover, now with its model's conditions ('can lock: on stated models, where selection does not lower the favoured share and the rule and its reading follow it upward and keep favouring it, a locked start stays locked however large an unread loss grows').",
+  "The Chinese screen's 伦理 paragraph (_process/navigation/README-ZH.md, line 23), which mirrors the English in the glossary's words (伦理出自延续; 持守自己的延续; 每一个中心与之一同延续者之外，别无他物); its fifth-pass sentences have not yet been checked again by two Chinese readers.",
+  "The screen links 'There is no should beyond becoming' to the opening, whose body you have not yet revised: it still says the one step is one 'the work states as a condition and does not assert' and calls the second reading 'better' (FOR-REN-opening.md holds those sentences for you)."
+ ]
+}

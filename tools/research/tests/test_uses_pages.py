@@ -25,9 +25,18 @@ SECOND_CLAUSE = ('not to choose a course in which something ends when another co
 # the first clause's two qualifiers, "you" made "them" (the same DIRECTION)
 FIRST_CLAUSE_QUALIFIERS = ('whether or not it has any say here and whether or not its loss would ever come back to them '
                            'or to the community')
-# WB's sentence in the Human development row, split at its semicolons into three labelled lines (RW's fifth round)
-TOOL_SENTENCE = ('The tool needs no premise', "that the wider is better is C's",
+# WB's sentence in the Human development row, split at its semicolons into three labelled lines (RW's fifth round); its
+# second part re-said in the AG review's fifth pass (9 November 2026, Ren's message 9): not "that the wider is better is
+# C's" but the order a ranking result takes as its theorem's hypothesis
+TOOL_SENTENCE = ('The tool needs no premise', "a result ranking the wider course above names its order among its theorem's "
+                 'hypotheses: self-concern with the condition held de se, or C (`Comparison`)',
                  'that a listing matches an actual course is not shown')
+# Ways of saying the ethics the AG review's fifth pass retired on the uses pages (Ren, 9 November 2026, message 9: "there is
+# no warrant, ethics emerges from continuation condition, not another way around, there is no any dualistic good or evil")
+RETIRED = ('widening what can form is better', 'unasserted', 'not asserted', 'warrant open', 'its warrant is open',
+           'binds no one', 'two readings', 'does not assert', "the account's makers", 'whoever holds C')
+RETIRED_ZH = ('扩大可形成者更好', '以广为愈', '两种读法', '不断言', '持 C 者','对所等待的一切都可以不等', '共有之物', '塑规者',
+              '被离开', '走出', '「', '」', '所读之外的什么', '一个体制的不可回返之点', '读到过一行', '正反两面的见证')
 METHOD_SECTION_9 = ('**What the unifications claim.**', '<a id="one-relational-unfolding">')
 
 WORDS = {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9, 'ten': 10,
@@ -124,9 +133,11 @@ class UsesCells(unittest.TestCase):
         self.assertNotIn('one joint selection', do)
         # what the questions are for, as GOALS' current goal says it (AG review, fourth pass, 9 November 2026: not "does not
         # select for control over itself", the wording AJ5 replaced on 29 October), then whose plan and how far its direction goes
-        self.assertIn("so that, where shaping it is selected, it still reads beyond the shapers' share and a loss there can turn it",
-                      do)
+        self.assertIn("so that a loss beyond the shapers' share can turn the rule", do)
         self.assertNotIn('control over itself', do)
+        # the third question as 02's shaping law asks it (AG review, fifth pass; astra's fourth-pass Chinese point 1)
+        self.assertIn("who receives what shaping brings back and whether it covers the shapers' cost", do)
+        self.assertNotIn('whether control comes back', do)
         self.assertIn('an AI-authored plan', next(l for l in lines if l.startswith('**Reading.** The three questions')))
         self.assertIn('conditional on the continuation condition', next(l for l in lines if l.startswith('**Conditional.**')))
 
@@ -138,7 +149,7 @@ class UsesCells(unittest.TestCase):
     def test_standings_named(self):
         text = page(USES)
         for phrase in ('none shown to hold of an actual collective', 'The matching proves no coverage of wisdom',
-                       'Of how a person develops or fares the account says nothing yet', '[AI reading, [D45](', '[[D26](', '[[D65](', 'DELEGATED-CHOICES.md#d45-', 'DELEGATED-CHOICES.md#d65-', 'DELEGATED-CHOICES.md#d26-', '[J1–J4](chapters/08-METHOD.md#premise-card)',
+                       'their bearing on actual human development and well-being has not yet been established', '[AI reading, [D45](', '[[D26](', '[[D65](', 'DELEGATED-CHOICES.md#d45-', 'DELEGATED-CHOICES.md#d65-', 'DELEGATED-CHOICES.md#d26-', '[J1–J4](chapters/08-METHOD.md#premise-card)',
                        'USES-EXAMPLES.md#auditing-a-language-model-judge', 'review/ALIGNMENT.md#the-dossier-in-ten-minutes'):
             self.assertIn(phrase, text)
         top = text.split('## Field by field')[0]
@@ -165,22 +176,45 @@ class UsesCells(unittest.TestCase):
         a loss counts forming within becoming, the laws not settling it (AG review, fourth pass, 9 November 2026)."""
         text = page(USES)
         first = next(p for p in text.split('\n\n') if p.startswith('The account is a map'))
+        # the closed form said as able to lock, with its conditions (AG review, fifth pass; astra's fourth-pass point 2)
         for phrase in ('how winning comes to buy power over the rule that selects: the loop the work calls the '
-                       '[meta-attractor](../meta-attractor/README.md), proved to lock, on stated models, where the rule and how '
-                       'it is read are both formed from the share it selects ([02 §9](chapters/02-MAP.md#r-closed-capture))',
+                       '[meta-attractor](../meta-attractor/README.md). Its closed form, where the rule and how it is read are '
+                       'both formed from the share it selects, can lock: on stated models, where selection does not lower the '
+                       'favoured share and the rule and its reading follow it upward and keep favouring it, a locked start '
+                       'stays locked however large an unread loss grows ([02 §9](chapters/02-MAP.md#r-closed-capture))',
                        'falls into neither instrumental convergence nor the meta-attractor: where shaping its rule is selected, '
                        "the rule still reads what lies beyond the shapers' share, so that a loss there can turn it "
                        '([the goal](../../GOALS.md#generative-alignment))'):
             self.assertIn(phrase, first)
         self.assertNotIn('control over its own selection', text)
         brief = next(p for p in text.split('\n\n') if p.startswith('**In brief.**'))
-        self.assertIn('There is no should beyond becoming ([the opening](OPENING.md))', brief)
-        self.assertIn('form within it too, in what people and AI come to read ([07 §1](chapters/07-SIGNIFICANCE.md#evaluation))',
-                      brief)
+        # the ethics as 07 says it since the fifth pass: no should and no good and evil over becoming, the ethics emerging
+        # from continuation, C glossed as widening, the proof claim's hypotheses named (E1-E8)
+        for phrase in ('There is no should beyond becoming ([the opening](OPENING.md)), and no good and evil set over it',
+                       'form within it, in people and AI ([07 §1](chapters/07-SIGNIFICANCE.md#evaluation))',
+                       'The ethics emerges from continuation.', 'keeping all another course keeps and letting more form',
+                       'proved on listed courses, in steps not yet joined into one theorem',
+                       # self-concern's status said where the proof claim is stated (E2; the pass's verifier)
+                       'that a life holds its own continuation is argued, and in the proofs a hypothesis derived from no '
+                       'dynamics',
+                       'the laws weigh them for no one', 'and C or self-concern for order'):
+            self.assertIn(phrase, brief)
         self.assertNotIn('is not in the laws', text)
         self.assertIn('the thesis that everything, standards included, forms within one relational unfolding '
                       '([08](chapters/08-METHOD.md#one-relational-unfolding))',
                       next(p for p in text.split('\n\n') if p.startswith(LEGEND)))
+
+    def test_the_retired_ways_of_saying_the_ethics_are_gone(self):
+        """No warrant, no C glossed as "better", no two readings, on the four uses pages (AG review, fifth pass). Notes in
+        comments and the dated sentence on what T8 read before 9 November 2026 record what was said, and stay (E10)."""
+        def live(text):
+            text = re.sub(r'<!--.*?-->|<a id="[^"]*"></a>', '', text, flags=re.S)  # notes and kept anchors are data
+            return re.sub(r'(Until 9 November 2026 T8 read|2026 年 11 月 9 日以前，T8 把)[^\n]*?(\)|）)[。.]', '', text)
+        for rel, retired in ((USES, RETIRED), (EXAMPLES, RETIRED), (THEORY + 'USES.zh.md', RETIRED_ZH),
+                             (THEORY + 'USES-EXAMPLES.zh.md', RETIRED_ZH)):
+            text = live(page(rel))
+            for phrase in retired:
+                self.assertNotIn(phrase, text, (rel, phrase))
 
 
 class HowItStands(unittest.TestCase):
@@ -232,7 +266,10 @@ class HowItStands(unittest.TestCase):
         for line in lines:
             by_label.setdefault(LABEL.match(line).group(1), line)
         first, second, third = TOOL_SENTENCE
-        self.assertTrue(by_label['Proved'].startswith(f'**Proved.** {first}. In [04 §8]'), by_label['Proved'][:60])
+        self.assertTrue(by_label['Proved'].startswith(f'**Proved.** {first}. '), by_label['Proved'][:60])
+        self.assertIn('In [04 §8]', by_label['Proved'])
+        self.assertIn('they are mixed, some positive weighting ranking them each way, and the laws weigh them for no one',
+                      by_label['Proved'])
         self.assertIn(f'**Conditional.** {second[0].upper() + second[1:]}.', lines)
         self.assertTrue(by_label['Open'].startswith(f'**Open.** {third[0].upper() + third[1:]}. '), by_label['Open'][:60])
         self.assertNotIn('; '.join(TOOL_SENTENCE), page(USES))  # no longer one line under one label
@@ -273,11 +310,10 @@ class HowItStands(unittest.TestCase):
 
 
 class WhatEachFieldAdds(unittest.TestCase):
-    # 08's own words, which the lines copy before shortening (theories/becoming/chapters/08-METHOD.md#known-results)
-    COPIED = ('more weakly than their continuous results',
+    # 08's own words, which the lines copy before shortening (theories/becoming/chapters/08-METHOD.md#known-results); since
+    # the AG review's fifth pass (Fable's fourth-pass 1.2) a line or two per field, the rest left to 08 §8
+    COPIED = ('not its regressional or causal kinds',
               'observability with the reader inside the plant, the corrupted reward channel and closed-loop identifiability',
-              "the responsive closure, pools and a re-reading's deadline",
-              'what they map for alignment, not why alignment is hard',
               "overshoot, externality and Goodhart's law as one law of the optimum under room",
               "steps of joint excess from below the renewal's reach end every dependent at that need, whatever each drawer's own draw",
               'opportunity sets (Pattanaik and Xu 1990)',
@@ -285,24 +321,16 @@ class WhatEachFieldAdds(unittest.TestCase):
               'deadbeat control and requisite variety', 'harvesting under depensation and the fold',
               'known as the Malthusian bound', 'conservation, renewal over time or a threshold',
               'the evidence bound of variational Bayes',
-              # restored in RW's fifth round
-              'not its regressional or causal kinds', 'the concealment premise of 03 §11 taken',
               'the exact condition at every loss of the routes and at every value',
-              "one threshold joining the model's openness, the reading's shortfall and what holding forgoes",
               'where the stages cannot be told apart', 'joint excess under the gate')
     # 08 §9's unifications table, which the "Claimed beyond the field" clauses copy before shortening
     UNIFICATIONS = ('supervisory control (Ramadge and Wonham 1987), under partial observation (Lin and Wonham 1988; '
                     'Cieslak, Desclaux, Fawaz and Varaiya 1988)',
-                    'reward, training, natural selection, prices and votes as one selection through couplings; '
-                    'the drain lies wherever room lies (the commons in evolutionary biology, Rankin, Bargum and Kokko 2007)',
+                    'reward, training, natural selection, prices and votes as one selection through couplings',
                     'one law across domains conjectured (T3)',
                     'their remedy of a proxy re-read',
-                    'the remedy read, by analogy, as a widening of what couples into the joint selector, in time, by '
-                    'readers who are themselves selected',
                     "in simulation, before T3 was worded, the draw against margin forecast an exact best response's side "
                     'effects (8 of 8) and failed for tabular learners (80 of 151; MQ1)',
-                    "their continuous setting, their Theorem 2's non-convergent case and converse, and the improvement of "
-                    "a principal's utility not reached",
                     'a unification adds no theorem and changes no verdict of')
 
     def test_one_line_per_field_in_the_tables_order(self):
@@ -344,16 +372,22 @@ class WhatEachFieldAdds(unittest.TestCase):
         intro = known_intro(uses)
         self.assertIn('chapters/08-METHOD.md#what-the-unifications-claim', intro)
         self.assertIn('read as a correspondence, a unification adds no theorem', intro)
+        # the review's ethics verdict said as what it found, with 08 §8's reading of it (astra's fourth-pass point 5)
+        self.assertIn('a clarified ethics, showing where scope and order sit', intro)
+        self.assertIn('measures the ethics against a ground beyond becoming, and there is none to find', intro)
+        self.assertIn('measures the ethics against a ground beyond becoming', page(METHOD))
+        # a line or two per field, the rest left to 08 §8 (Fable's fourth-pass 1.2: 1,087 words before)
+        self.assertLessEqual(navigation.prose_counts(section(uses, FIELDS_BLOCK, '\n## '))[0], 720)
 
     def test_added_only_for_what_08_calls_added(self):
         line = self.fields()['Alignment of AI systems']
         restated, added = line.split(' Added: ', 1)
-        added = added.split(' The laws say', 1)[0]
-        self.assertIn("restated with the responsive closure, pools and a re-reading's deadline (08's verdict)", restated)
+        added = added.split(' Claimed beyond the field', 1)[0]
+        self.assertIn('not its regressional or causal kinds', restated)
         self.assertNotIn('responsive closure', added)
         self.assertNotIn('in the last three an exact condition or threshold', line)
         for part in ('for corrigibility, the exact condition', 'for the waiting, one threshold',
-                     'for deceptive alignment, where the stages cannot be told apart (the absent-minded case), the exact threshold'):
+                     'for deceptive alignment, where the stages cannot be told apart, the exact threshold'):
             self.assertIn(part, added)
         method = page(METHOD)
         self.assertIn('What it adds is the exact condition', method)
@@ -363,9 +397,8 @@ class WhatEachFieldAdds(unittest.TestCase):
     def test_wisdom_credits_as_08_gives_them(self):
         line = self.fields()['Wisdom traditions']
         self.assertNotIn('credited there to the sciences', line)
-        for phrase in ("08's review read the laws against the literature it knew",
-                       'so whether a tradition holds these results is not settled there',
-                       "That these are among the credits falling on those laws is this page's reading",
+        for phrase in ('08 credits no tradition with a result and names nothing added for one',
+                       "Which laws those are is this page's reading",
                        'to Hume; to Fine and Wilf (1965); to Moore (1956); and to Gold (1967).',
                        'BECOMING-TWENTY-FIRST-REVIEW.md#5-how-the-traditions-and-the-sciences-map-onto-it'):
             self.assertIn(phrase, line)
@@ -373,7 +406,9 @@ class WhatEachFieldAdds(unittest.TestCase):
 
 class Exits(unittest.TestCase):
     def setUp(self):
-        self.text = section(page(USES), '## Exits and design laws\n', '## Worked examples')
+        # before what each field already has since the AG review's fifth pass (astra's fourth-pass point 6)
+        self.text = section(page(USES), '## Exits and design laws\n', '<a id="what-each-field-already-has">')
+        self.assertLess(page(USES).index('## Exits and design laws'), page(USES).index(FIELDS_BLOCK))
 
     def test_also_what_not_to_build_on(self):
         self.assertIn('what a rule or a reward could be built on or, where the aim is to keep a condition, what not to build on',

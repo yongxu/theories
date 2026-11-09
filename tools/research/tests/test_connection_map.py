@@ -157,8 +157,11 @@ class PageTests(unittest.TestCase):
 
     def test_it_names_both_readings_where_it_speaks_of_the_ethics(self):
         self.assertIn('the continuation condition for scope and C for order', self.page)
-        # AG review, 9 November 2026: the two readings said from within, as 07 §4 says them, not against a warrant from outside
-        self.assertIn('Each is an order or scope some formations hold, and neither stands on the edge', self.page)
+        # AG review, 9 November 2026: the two readings said from within, as 07 §4 says them, not against a warrant from outside;
+        # fifth pass: hypotheses a theorem takes, not "readings", and C, where the condition holds de se, self-concern's order (07 §4)
+        self.assertIn('Each is an order or scope some formations hold, formed within becoming, and neither stands on the edge', self.page)
+        self.assertIn('where the condition holds de se is what self-concern does between listed courses', self.page)
+        self.assertNotIn('two readings', self.page)
         self.assertNotIn('no warrant from outside is sought', self.page)
         self.assertNotIn('derives from the condition', self.page)
 

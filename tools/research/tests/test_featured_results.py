@@ -376,8 +376,20 @@ class FirstScreenTests(unittest.TestCase):
         screen = navigation.first_screen(records, navigation.readme_opening())
         self.assertNotIn('{{', screen)
         self.assertNotIn('\n#', '\n' + screen)
-        self.assertIn('fixes scope', screen)  # both readings with their roles (WB, 9 November 2026: the account names the readings it ranks under)
-        self.assertIn('gives order', screen)  # not 'alone': 07's own theorem has self-concern rank one case with no C
+        # the ethics as the fifth pass says it (Ren, 9 November 2026: "there is no warrant, ethics emerges from continuation
+        # condition, not another way around, there is no any dualistic good or evil"): it emerges from continuation; where
+        # relations close, holding one's own continuation orders courses as widening does (07 §4), proved on listed courses in
+        # steps not yet joined; mixed courses weighed for no one; no warrant, no premises called unasserted, C not "better"
+        self.assertIn('The ethics emerges from continuation.', screen)
+        self.assertIn('no good and evil set over it', screen)
+        self.assertIn('07-SIGNIFICANCE.md#r-self-concern-and-c-under-the-condition', screen)
+        self.assertIn('in steps not yet joined into one theorem', screen)
+        self.assertIn('the laws show it mixed and weigh it for no one', screen)
+        for old in ('unasserted', 'not asserted', 'warrant', 'two readings', 'widening what can form is better', 'not a grounded one'):
+            self.assertNotIn(old, screen)
+        # the meta-attractor's closed form with the closed-capture record's hypotheses, not "proved to lock" alone
+        self.assertNotIn('proved to lock', screen)
+        self.assertIn('a locked start stays locked however large an unread loss grows', screen)
         # the aim as GOALS#generative-alignment and AJ's plan §1 state it, not the wording AJ5 replaced on 29 October
         # (it forbids accountable revision whose capacity is rewarded); the meta-attractor's closed form at 02 §9; and
         # whether a loss counts said as forming within becoming, not as a reading attached to neutral laws (07 §1)

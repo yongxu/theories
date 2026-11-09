@@ -10,8 +10,8 @@
   "family": "F07",
   "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
-    "en": "On level paths an extension with every claim counted is exactly a widening of what can form, so with “better” read as widening, C holds for every reading of living: C's normative content moves into calling widening better.",
-    "zh": "在水平路径上，每个主张都计入的扩展恰是扩大能形成者；所以把“更好”读作扩大，C 对 living 的每种读法成立：C 的规范内容移到把扩大称作更好之中。"
+    "en": "On level paths an extension with every claim counted is exactly a widening of what can form, so with “better” read as widening, C holds for every reading of living: what C adds moves into ranking by widening.",
+    "zh": "在水平路径上，每个主张都计入的扩展恰是扩大能形成者；所以把“更好”读作扩大，C 对 living 的每种读法成立：C 所加者移到按扩大排序之中。"
   },
   "laws": [
     {
@@ -100,8 +100,8 @@
       ]
     },
     {
-      "en": "On the root, for every reading of living, C holds on level paths with “better” read as the grammar's widening, «广», of what the paths admit; that this relation is better is C's content, supplied, not shown.",
-      "zh": "在根上，对 living 的每种读法，以“更好”读作路径所接纳者之文法之「广」时，C 在水平路径上成立；此关系之为更好是 C 的内容，系所给，非所证。",
+      "en": "On the root, for every reading of living, C holds on level paths with “better” read as the grammar's widening, «广», of what the paths admit; that courses are ranked by this relation is C's content, read in, not derived from the grammar.",
+      "zh": "在根上，对 living 的每种读法，以“更好”读作路径所接纳者之文法之「广」时，C 在水平路径上成立；按此关系排序是 C 的内容，系读入，非由文法推出。",
       "declarations": [
         "Becoming.SignificanceStatements.paths_comparison_grammar"
       ],
@@ -153,8 +153,8 @@
       "witness": "Becoming.Transfer.mixed"
     },
     {
-      "en": "That widening is better is not shown: C's normative content moves into calling widening better, where the condition's step of invariance becomes the content of calling the generative space good.",
-      "zh": "没有表明扩大是更好：C 的规范内容移到把扩大称作更好之中，在那里延续条件的不变之步成为称生成的空间为好的内容。",
+      "en": "That ranking by widening follows from the grammar: what C adds moves into ranking by widening, which self-concern does, one way, between listed level paths where the condition holds de se.",
+      "zh": "按扩大排序由文法推出：C 所加者移到按扩大排序之中；条件以自承成立之处，自关切在所列水平路径之间即单向如此排序。",
       "kind": "non-implication"
     }
   ],
@@ -177,8 +177,8 @@
     "zh": "由合并的 Lean 4.29.1 检查器实查：核心模块 Becoming.Extension、Regions、Admission、Significance、Relevance 与 ValuationFrames 的当前字节绑定到 becoming-checks 中通过的回执，所引声明公理报告皆空，核心只用 Lean 前导即可编译。作者反审；无独立审查。"
   },
   "next_delta": {
-    "zh": "在一般的框架上把 C 读作规律需要什么；混合部分的度量；称生成的空间为好的根据。",
-    "en": "What reading C as a law needs on a general frame; a measure for mixed parts; the warrant for calling the generative space good."
+    "zh": "在一般的框架上把 C 读作规律需要什么；混合部分的度量；按扩大之排序怎样在动力学之中形成。",
+    "en": "What reading C as a law needs on a general frame; a measure for mixed parts; how ranking by widening forms within the dynamics."
   },
   "correspondence": {
     "en": "Ren asked on 11 October 2026: “can we reduce is \"for anything, its continuation into the future leads to more futures(flourishes/plurality) from generatively\" - so we can be like \"these are space where generatively happens\", which allows us to derive everything without axiom?”. The AI's reading: widening reads “leads to more futures”, possibilities being what can form next; what can form now is the generative space, and where a part widens it is the region Ren's sentence names (D22, revised). “Flourishes/plurality” is read by widening (an AI reading), plurality an aspect not yet measured; widening compares what can form; 生生 is read since 9 November 2026 as the continuation of life, not as widening (D1). The condition fixes which admissions count, and C read as widening orders them (an AI reading).",

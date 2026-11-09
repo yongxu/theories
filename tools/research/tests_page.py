@@ -239,7 +239,7 @@ def render_page(data):
         + ' '.join(f'"{q["text"]}{"…" if q.get("continues") else ""}"' for q in data.get('method_quotes', [])),
         '',
         'Results here are by test: each row is one test in the setting or settings it names, a thesis can pass in one and fail in another, so no '
-        'row or count below is a verdict on a thesis as a whole (method §9\'s table gives each thesis\'s standing), and a row\'s '
+        'row or count below is a verdict on a thesis as a whole (method §9\'s table gives how far each thesis has been seen), and a row\'s '
         'class is read by the rule stated under that class\'s heading below.',
         '',
         '## By thesis',

@@ -11,7 +11,7 @@
   "reviewed_at_utc": "2026-10-25T04:58:08+00:00",
   "statement": {
     "en": "In a selection whose rule, and how the rule is read, are read from the share it selects, a loss the loop does not read leaves it locked however large it grows, and a change of the reading is absorbed; what leaves is a change of the law, such as a reading of what lies beyond the share.",
-    "zh": "在规则及规则怎样被读都从所选出份额读出的选择中，回路不读的损失不论多大都使它保持锁定，读法的改变被吸收；离开的是律的改变，例如对份额之外者的读取。"
+    "zh": "在规则及对规则的解读都从所选出份额读出的选择中，回路不读的损失不论多大都使它保持锁定，读法的改变被吸收；离开的是律的改变，例如对份额之外者的读取。"
   },
   "laws": [
     {
@@ -58,7 +58,7 @@
     },
     {
       "en": "The reading read from the share: where how the rule is read is formed from the share at the reading step (mind) and the rule read from the share through it (read), monotonically, rule and reading are one rule read from the share in the order of pairs; locked, none of share, rule and reading falls below where it was; a change of the reading, either way, the rule still favouring, is absorbed at the next reading step.",
-      "zh": "从份额读出的读法：规则怎样被读在读取步由份额形成（mind），规则经由它从份额读出（read），且都单调时，规则与其读法在对的序中合为一个从份额读出的规则；锁定时份额、规则与读法都不低于曾在之处；读法的改变，不论大小与方向，只要规则仍偏向，在下一读取步被吸收。",
+      "zh": "从份额读出的读法：对规则的解读在读取步由份额形成（mind），规则经由它从份额读出（read），且都单调时，规则与其读法在对的序中合为一个从份额读出的规则；锁定时份额、规则与读法都不低于曾在之处；读法的改变，不论大小与方向，只要规则仍偏向，在下一读取步被吸收。",
       "declarations": [
         "Becoming.ClosedCapture.both",
         "Becoming.ClosedCapture.readers",

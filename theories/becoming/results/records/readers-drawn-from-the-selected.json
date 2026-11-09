@@ -235,14 +235,14 @@
       "id": "shaping-read-by-readers-drawn-from-the-selected",
       "detail": {
         "en": "MA4: the pool of two of RuleShaping's rules after shaping, hi coming back where a shaper reads and lo where an other does; there ReadsShare is equivalent to lo ≤ hi, and a critical mass decides the direction.",
-        "zh": "MA4：RuleShaping 二塑规后规则之池，塑规者读时所返为 hi、他者读时为 lo；于彼 ReadsShare 等价于 lo ≤ hi，临界量定其向。"
+        "zh": "MA4：RuleShaping 二塑规后规则之池，塑造者读时所返为 hi、他者读时为 lo；于彼 ReadsShare 等价于 lo ≤ hi，临界量定其向。"
       }
     },
     {
       "id": "loss-read-in-time-by-the-others",
       "detail": {
         "en": "MA4b: Thinned joined to MA4's critical mass; read past the bound, the counts when the loss is read decide, exactly and with no mirror premise, and a reading turns the course only before the late reading would favour the shapers.",
-        "zh": "MA4b：Thinned 接于 MA4 之临界量；界后而读，读损失时之计数定其向，恰如其分且不需镜像前提；读唯于迟读偏向塑规者之前方转其进程。"
+        "zh": "MA4b：Thinned 接于 MA4 之临界量；界后而读，读损失时之计数定其向，恰如其分且不需镜像前提；读唯于迟读偏向塑造者之前方转其进程。"
       }
     }
   ],

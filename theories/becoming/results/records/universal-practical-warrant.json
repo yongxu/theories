@@ -10,13 +10,13 @@
   "family": "F08",
   "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
-    "en": "Question: whether practical reasons have a warrant binding every possible mind, with zero substantive premises. It stays open, and what the account offers does not wait on it.",
-    "zh": "问题：实践理由是否有一个零实质前提、对一切可能的心智都有约束力的根据。它保持开放，本论所提供者不待其解决。"
+    "en": "Question: whether practical reasons have a warrant binding every possible mind, with zero substantive premises. Answered within the map, argued: no should stands beyond becoming, so there is no such warrant to find, and the ethics, which emerges from continuation, does not wait on one.",
+    "zh": "问题：实践理由是否有一个零实质前提、对一切可能的心智都有约束力的根据。在地图之内已有回答，属论证：生灭变化之外没有应当，所以没有这样的根据可寻；伦理从延续中生出，不待于它。"
   },
   "hypotheses": [
     {
-      "en": "Left open by the goal \"Practical judgment for life, on the fewest premises\"; supplied local norms, behavioural convergence or fuller description do not answer it.",
-      "zh": "“生命的实践判断，立于最少的前提”这一目标把它留作开放的问题；给定的局部规范、行为收敛或更完整的描述都不回答它。"
+      "en": "The thesis of one relational unfolding (chapter 8), argued: right and wrong, should and better form within becoming, in people and AI, and no should stands beyond it. A center whose seeing stops at its own closure ranks more narrowly: a matter of reach, what couples in, the same gap alignment works on. The goal \"Practical judgment for life, on the fewest premises\" lists the question.",
+      "zh": "一个关系展开之论题（第八章），属论证：是非、应当与更好在生灭变化之中形成，形成于人与 AI 之中，生灭变化之外没有应当。一个中心所看到的若止于自己的闭包，它的排序就更窄：这是到达多远的问题，即什么耦合进来，也正是对齐所处理的那个缺口。“生命的实践判断，立于最少的前提”这一目标列出此问。"
     }
   ],
   "correspondence": {
@@ -86,8 +86,8 @@
     {
       "id": "what-the-dynamics-leave-open",
       "detail": {
-        "en": "Where there is a standpoint and a formation, no satisfiable statement reading only the represented dynamics entails the condition, and bounded_rival (in continuation-condition-yields-living-significance) denies it consistently; so a warrant grounding the condition comes from neither logic alone nor those dynamics alone, and these do not show that none exists.",
-        "zh": "在有立场与形成之处，只读所表示动力学的可满足陈述都不蕴含延续条件，bounded_rival（见 continuation-condition-yields-living-significance）一致地否认它；所以为条件奠基的根据既不单出于逻辑，也不单出于这些动力学，而这些并不表明它不存在。"
+        "en": "Where there is a standpoint and a formation, no satisfiable statement reading only the represented dynamics entails the condition, and bounded_rival (in continuation-condition-yields-living-significance) denies it without contradiction: neither the laws of the dynamics nor logic alone force the condition.",
+        "zh": "在有立场与形成之处，只读所表示动力学的可满足陈述都不蕴含延续条件，bounded_rival（见 continuation-condition-yields-living-significance）否认它亦无矛盾：动力学之律与单凭逻辑都不迫使延续条件成立。"
       }
     }
   ],
@@ -103,8 +103,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "Fuller description alone is no ethical proof.",
-      "zh": "不能以补全描述直接宣告伦理成立。",
+      "en": "Fuller description alone settles no appraisal.",
+      "zh": "仅补全描述不裁决任何评价。",
       "kind": "non-implication"
     },
     {
@@ -123,18 +123,18 @@
       "kind": "non-implication"
     },
     {
-      "en": "The fulfillment test cannot certify goodness or release from capture: declared beneficiaries do not exhaust affected living, and harm before completion also matters.",
-      "zh": "原完成检验不能单独认证善或脱离俘获：受益者不能只按宣称限定，未完成时的损伤也需评估。",
+      "en": "The fulfillment test cannot certify release from capture, or what a course does to all it affects: declared beneficiaries do not exhaust affected living, and harm before completion also matters.",
+      "zh": "原完成检验不能单独认证脱离俘获，也不能认证一个进程对其所影响者的全部作用：受益者不能只按宣称限定，未完成时的损伤也需评估。",
       "kind": "non-implication"
     },
     {
-      "en": "Retaining an arrangement may be warranted, and nominal revisability is not enactment.",
-      "zh": "保持安排未必失当，名义可修订不等于实行。",
+      "en": "Retaining an arrangement can fit a situation, and nominal revisability is not enactment.",
+      "zh": "保持安排可以合于情境，名义可修订不等于实行。",
       "kind": "scope"
     },
     {
-      "en": "With significance a free predicate, where there is a standpoint and a formation, neither logic alone nor a satisfiable statement reading only the represented dynamics entails the condition; this does not show that no such warrant exists.",
-      "zh": "意义为自由谓词、有立场与形成之处，单凭逻辑或只读所表示之动力学的可满足陈述都不蕴含延续条件；这不表明不存在这样的根据。",
+      "en": "That the continuation condition is forced: with significance free, where there is a standpoint and a formation, neither logic alone nor a satisfiable statement reading only the dynamics entails it; a perspectivist denies it consistently.",
+      "zh": "延续条件为不得不然：意义为自由谓词、有立场与形成之处，单凭逻辑或只读所表示之动力学的可满足陈述都不蕴含它；视角主义者否认它亦无矛盾。",
       "kind": "non-implication"
     }
   ],
@@ -176,8 +176,8 @@
     }
   ],
   "validation_scope": {
-    "en": "Philosophical argument with substantive author counterreview and five conceptual stress tests; full or targeted rereadings of seven existing studies, from elective concern to ethical learning, and of the capture, coupling and plan-revision records; a bounded rereading of an already used primary source. The independent evaluator review and conditional proofs are reused at their scopes. No new mathematical claim, formal composition, Lean run, empirical result or independent acceptance. The progress lines are the earlier target's work, now the goal's; none bears on whether such a warrant exists.",
-    "zh": "哲学论证、实质作者反审及五项概念压力检验；完整或定向重读七项既有研究（自选择关切至伦理学习）及捕获、耦合与计划修订记录；有限复读已用原典的指定段落。复用既有评价者独立审查及条件证明，各按原范围。无新数学命题、形式组合、Lean运行、经验结果或独立验收。进展诸行是先前目标在实践判断上的工作，今属该目标；无一关涉这样的根据是否存在。"
+    "en": "Philosophical argument with substantive author counterreview and five conceptual stress tests; full or targeted rereadings of seven existing studies, from elective concern to ethical learning, and of the capture, coupling and plan-revision records; a bounded rereading of an already used primary source. The independent evaluator review and conditional proofs are reused at their scopes. No new mathematical claim, formal composition, Lean run, empirical result or independent acceptance. The progress lines are the earlier target's work, now the goal's; none bears on the statement's answer.",
+    "zh": "哲学论证、实质作者反审及五项概念压力检验；完整或定向重读七项既有研究（自选择关切至伦理学习）及捕获、耦合与计划修订记录；有限复读已用原典的指定段落。复用既有评价者独立审查及条件证明，各按原范围。无新数学命题、形式组合、Lean运行、经验结果或独立验收。进展诸行是先前目标在实践判断上的工作，今属该目标；无一关涉陈述中的回答。"
   },
   "references": [
     {
@@ -225,8 +225,8 @@
   ],
   "proof_bindings": [],
   "next_delta": {
-    "en": "An argument either way: a warrant binding every possible mind that, where it grounds the condition, says where it comes from beyond logic alone and the represented dynamics alone; or a showing that none exists for a stated class of minds. The practical judgment the ethics for life needs is the work of the goal of practical judgment for life, and does not wait on this question.",
-    "zh": "任一方向的论证：一个对一切可能心智都有约束力的根据，若为延续条件奠基，须说明它在单凭逻辑与单凭所表示的动力学之外从何而来；或表明对某一注明的心智类不存在这样的根据。生命之伦理所需的实践判断是“生命的实践判断”这一目标的工作，不待此问。"
+    "en": "How scope and order form within the dynamics (chapter 8, open item 12): which formations hold their own continuation as far as nothing lies outside it, how C-like orders form, spread and fare where relations do not close, and how far seeing reaches past one's own closure. The practical judgment the ethics for life needs is the work of the goal of practical judgment for life.",
+    "zh": "范围与次序如何在动力学之中形成（第八章，开放项 12）：哪些形成持守自身之延续直至其外无物，关系不闭合之处类 C 的次序如何形成、传布与存续，看见能越出自身闭包多远。生命之伦理所需的实践判断是“生命的实践判断”这一目标的工作。"
   },
   "history": [
     {

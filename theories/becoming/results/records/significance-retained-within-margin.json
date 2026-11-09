@@ -152,8 +152,8 @@
   ],
   "hypotheses": [
     {
-      "zh": "延续条件：Unrestricted sig，即从每个立场，任何东西在每一步的延续都有意义（对指标 (p, t, f) 的边界中立）。它是定理的假设，陈述而不断言，也不被证明；把“for anything, its continuation into the future has significance”读作 Unrestricted 是 AI 的读法（D16）。",
-      "en": "The continuation condition: Unrestricted sig, that from every standpoint the continuation of anything has significance at every step (boundary neutrality over the index (p, t, f)). It is a hypothesis of the theorems, stated and not asserted, and is not proved; reading “for anything, its continuation into the future has significance” as Unrestricted is an AI reading (D16)."
+      "zh": "延续条件：Unrestricted sig，即从每个立场，任何东西在每一步的延续都有意义（对指标 (p, t, f) 的边界中立）。它是定理的假设，此处不加证明；把“for anything, its continuation into the future has significance”读作 Unrestricted 是 AI 的读法（D16）。",
+      "en": "The continuation condition: Unrestricted sig, that from every standpoint the continuation of anything has significance at every step (boundary neutrality over the index (p, t, f)). It is a hypothesis of the theorems and is not proved here; reading “for anything, its continuation into the future has significance” as Unrestricted is an AI reading (D16)."
     },
     {
       "zh": "平衡（Flow.Balances）；扣留后的水平存在（WithheldLevels，每个见证给出它）。",

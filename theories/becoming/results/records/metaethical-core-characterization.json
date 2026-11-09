@@ -133,8 +133,8 @@
   ],
   "hypotheses": [
     {
-      "zh": "种子、关系中立、立场中立与 A 是公开的规范前提，本结果不证明它们。本结果刻画生生之意义，并不断言它；在延续条件之下，于主张之意义即某形成之延续之意义的读法上，它是定理（continuation-condition-yields-living-significance）。从生生之意义到这些前提的一侧几乎是平凡的，内容在反方向与极小性。",
-      "en": "The seed, both neutralities and A are explicit normative premises, not proved here. The result characterizes living significance without asserting it; under the continuation condition, where a claim's significance is a formation's continuation, it is a theorem (continuation-condition-yields-living-significance). Living significance gives the premises nearly at once; the content lies in the converse and minimality."
+      "zh": "种子、关系中立、立场中立与 A 是公开的规范前提，本结果不证明它们。本结果刻画生生之意义，并不确立它；在延续条件之下，于主张之意义即某形成之延续之意义的读法上，它是定理（continuation-condition-yields-living-significance）。从生生之意义到这些前提的一侧几乎是平凡的，内容在反方向与极小性。",
+      "en": "The seed, both neutralities and A are explicit normative premises, not proved here. The result characterizes living significance, not establishing it; under the continuation condition, where a claim's significance is a formation's continuation, it is a theorem (continuation-condition-yields-living-significance). Living significance gives the premises nearly at once; the content lies in the converse and minimality."
     },
     {
       "zh": "A 是关于有贡献理由的外在论表述：在所见范围上确保从自身立场有意义的新内容、且有通达，即有一项支持理由；不以认同为条件。",
@@ -147,8 +147,8 @@
   ],
   "does_not_show": [
     {
-      "en": "It proves none of self-significance, the neutralities, A, C, L or the practical commitments, and binds no position that rejects them.",
-      "zh": "不证明自身意义、两种中立、A、C、L 或实践承诺，不约束拒绝它们的立场。",
+      "en": "It proves none of self-significance, the neutralities, A, C, L or the practical commitments, and refutes no position rejecting them.",
+      "zh": "不证明自身意义、两种中立、A、C、L 或实践承诺，不驳倒拒绝它们的立场。",
       "kind": "non-implication"
     },
     {
@@ -224,8 +224,8 @@
     "zh": "由合并的 Lean 4.29.1 检查器实查：核心模块 Becoming.Metaethics、ValuationFrames、Extension、Inquiry、Frame 与基础模块 InquirySufficiency、GenerativeCore 的当前字节绑定到 becoming-checks 中通过的回执，所引声明的公理报告皆为空，并核对核心只用 Lean 前导即可编译。只有作者的审查，尚无独立审查。"
   },
   "next_delta": {
-    "en": "An independent review of A's externalist defence and of the neutralities' philosophical warrant; readings of living and related that hold across runs, connected to the universal reason; the philosophical argument for the reading chosen for comparison.",
-    "zh": "独立审查 A 的外在论辩护与两种中立的哲学根据；跨运行成立的 living 与 related 读法，并与普遍理由接通；为比较所选读法的哲学论证。"
+    "en": "An independent review of A's externalist defence and of the argument for the neutralities; readings of living and related that hold across runs, connected to the universal reason; the philosophical argument for the reading chosen for comparison.",
+    "zh": "独立审查 A 的外在论辩护与两种中立的论证；跨运行成立的 living 与 related 读法，并与普遍理由接通；为比较所选读法的哲学论证。"
   },
   "correspondence": {
     "zh": "living 读作生生（AI 的读法）；对应生生之意义时取更新型形成的关系读法（relational-renewal-classification、relational-reading-comparison），这是对应，不是本模块的 Lean 结果。related 是非零的已形成关系（条件、依存、传承、合作），在应用中须有证据；位置的通达可写成被实现的主张（AccessAt）。有限模型中的两个立场与三个生命只用于极小性。在 Becoming 层，living 与 related 的读法都取自一次运行（becoming-renewal-reading、becoming-stepwise-reading），所以连通与 universal_reason 的应用相对于该运行；不依赖运行的读法尚未给出。",
@@ -263,8 +263,8 @@
     {
       "id": "universal-practical-warrant",
       "detail": {
-        "zh": "关涉而未回答：把普遍理由所需的规范内容精确定位为种子、两条中立与 A；不及于拒绝它们的立场。",
-        "en": "Bears on it without answering it: locates the normative content universal reasons need exactly in a seed, two neutralities and A; positions rejecting them are not bound."
+        "zh": "关涉之：把普遍理由所需的规范内容精确定位为种子、两条中立与 A，不驳倒拒绝它们的立场。",
+        "en": "Bears on it: locates the normative content universal reasons need exactly in a seed, two neutralities and A, and refutes no position rejecting them."
       }
     },
     {

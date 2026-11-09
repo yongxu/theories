@@ -209,8 +209,10 @@ class RegisterHeadTests(unittest.TestCase):
         self.assertIn('not a ranking', page)
         self.assertLess(page.index('Results [the one page](theories/becoming/ONE-PAGE.md) leans on'), page.index('- **'))  # the first screen links one of the six
         self.assertNotIn('the first screen', page.split('## Registered results')[0])
-        for premise in ('the continuation condition fixes scope', 'C gives order'):
+        # fifth pass: 07's Bases, the hypotheses a ranking result's theorem takes, not "two readings"
+        for premise in ('the ethics emerges from continuation', 'the continuation condition for scope, and C or self-concern for order'):
             self.assertIn(premise, page.split('## Registered results')[0])
+        self.assertNotIn('two readings', page.split('## Registered results')[0])
         for sentence in ('one editable JSON record', 'Hash drift requires'):
             self.assertGreater(page.index(sentence), page.index('## How this register is kept'))
         self.assertLess(page.index('neither certifies a stronger claim'), page.index('## Start here'))
@@ -319,7 +321,12 @@ class OpenQuestionsHeadTests(unittest.TestCase):
         for key in navigation.OPEN_LEAD:
             self.assertIn(navigation.OPEN_LEAD[key][1][1:].rstrip('.'), page)
         self.assertIn('the continuation condition for scope and C for order', page)
-        self.assertIn("Neither is the account's own: each is an order or scope some formations hold", page)
+        # fifth pass: the ethics emerges from continuation, so the lead opens with a life holding its own continuation
+        # and the order coming with the scope where the condition holds de se (07 §4), and no order or scope stands above becoming
+        self.assertLess(page.index('A life that goes on holds its own continuation'), page.index('Each ranking result names'))
+        self.assertIn('where the condition holds de se the order comes with the scope, between listed courses', page)
+        self.assertIn('Neither stands above becoming: each is an order or scope some formations hold, formed within it', page)
+        self.assertNotIn("Neither is the account's own", page)
         self.assertNotIn('Neither is asserted', page)
         self.assertNotIn('no warrant from outside is sought', page)
 
@@ -455,7 +462,8 @@ class FeaturedTests(unittest.TestCase):
 
 class OnePageMakingAndMetaAttractor(unittest.TestCase):
     """AG review, fourth pass (9 November 2026): the one page says what it is first and how it was made once, at its end;
-    the meta-attractor is the folder's loop with its closed form what 02 §9 proves; the aim is GOALS' current goal."""
+    the meta-attractor is the folder's loop with its closed form what 02 §9 proves (in the fifth pass, that it can lock and
+    under what conditions); the aim is GOALS' current goal."""
 
     def page(self, rel):
         return (registry.ROOT / 'theories/becoming' / rel).read_text(encoding='utf-8')
@@ -476,7 +484,10 @@ class OnePageMakingAndMetaAttractor(unittest.TestCase):
         what = self.paragraph(self.page('ONE-PAGE.md'), '**What it is.**')
         self.assertIn('Where winning comes to buy power over the rule that selects, the loop is what the work calls the '
                       '[meta-attractor](../meta-attractor/README.md)', what)
-        self.assertIn('is proved to lock ([02 §9](chapters/02-MAP.md#r-closed-capture))', what)
+        # AG review, fifth pass: the closed form can lock, under the conditions 02 §9 states (astra, fourth cold reading, 2)
+        self.assertIn('can lock ([02 §9](chapters/02-MAP.md#r-closed-capture)): where selection does not lower the favoured share '
+                      'and the rule and its reading follow it upward and keep favouring it, a course once locked stays locked', what)
+        self.assertNotIn('is proved to lock', what)
         self.assertNotIn('is not in the laws but in a reading', what)
         aim = self.paragraph(self.page('ONE-PAGE.md'), '**Alignment.**')
         self.assertIn('the rule still reads what lies beyond their share, so that a loss there can turn it', aim)
@@ -484,6 +495,81 @@ class OnePageMakingAndMetaAttractor(unittest.TestCase):
         for text in (what, aim):
             self.assertNotIn('control over its own selection', text)
             self.assertNotIn("AJ's plan", text)
+
+
+class OnePageEthicsFromContinuation(unittest.TestCase):
+    """AG review, fifth pass (9 November 2026), on Ren's message 9 that day ("there is no warrant, ethics emerges from
+    continuation condition, not another way around, there is no any dualistic good or evil"): the one page and the overview
+    say the ethics from continuation, with no warrant left open; that there is none to find is said once, where a reader
+    would ask, outside the ten-minute part."""
+
+    OLD_FRAME = ('unasserted', 'not asserted', 'stated and not asserted', 'neither asserted', 'warrant open', 'its warrant is open',
+                 'no warrant from outside is sought', 'binds no one', 'widening what can form is better', 'stay readings',
+                 'Two readings, two roles', 'No warrant binding every possible mind is claimed', 'a clarified ethics, not a grounded one')
+
+    def page(self, rel):
+        return (registry.ROOT / 'theories/becoming' / rel).read_text(encoding='utf-8')
+
+    def paragraph(self, text, lead):
+        return next(p for p in text.split('\n\n') if p.startswith(lead))
+
+    def test_the_old_frame_is_gone(self):
+        for rel in ('ONE-PAGE.md', 'THE-THEORY-OF-BECOMING.md'):
+            text = self.page(rel)
+            for phrase in self.OLD_FRAME:
+                self.assertNotIn(phrase, text, (rel, phrase))
+        for rel in ('ONE-PAGE.zh.md', 'THE-THEORY-OF-BECOMING.zh.md'):
+            text = self.page(rel)
+            for phrase in ('扩大可形成者更好', '仍是读法', '两种读法，两种作用', '澄清了、却未奠定根据的伦理', '不主张对一切可能的心智都有约束力的根据'):
+                self.assertNotIn(phrase, text, (rel, phrase))
+
+    def test_the_ethics_emerges_from_continuation(self):
+        ethics = self.paragraph(self.page('ONE-PAGE.md'), '**The ethics.**')
+        for phrase in ('There is no should beyond becoming', 'and no good and evil set over it', 'The ethics emerges from continuation.',
+                       'A life that goes on holds its own continuation', 'Where relations close',
+                       '#r-mutual-dependence-and-its-pace', '#r-the-continuation-condition-on-the-root',
+                       '#r-self-concern-and-c-under-the-condition', 'the condition alone ranks nothing',
+                       'Where relations run one way', '#r-derived-extent-limits',
+                       'the laws show it mixed and weigh it for no one', 'in steps not yet joined into one theorem',
+                       'is a hypothesis derived from no dynamics', '#open-items-ranked'):
+            self.assertIn(phrase, ethics)
+        self.assertNotIn('warrant', ethics)
+        self.assertNotIn('perspectivist', ethics)  # Fable, fourth cold reading, 1.3: said where a reader would ask
+
+    def test_no_warrant_is_said_once_where_a_reader_would_ask(self):
+        for rel in ('ONE-PAGE.md', 'THE-THEORY-OF-BECOMING.md'):
+            text = self.page(rel)
+            self.assertEqual(text.count('there is no warrant binding every mind to find'), 1, rel)
+            hold = self.paragraph(text, '**Must anyone hold the condition?**')
+            self.assertIn('a perspectivist denies it without contradiction', hold)
+            self.assertIn('the same gap alignment works on', hold)
+        one = self.page('ONE-PAGE.md')
+        self.assertGreater(one.index('**Must anyone hold the condition?**'), one.index('| | What the account says'))
+
+    def test_the_case_says_the_fishers_once_and_the_control(self):
+        one = self.page('ONE-PAGE.md')
+        case = self.paragraph(one, '**One case.**')
+        self.assertIn('three AI fishers, existing language models told what to do and not trained in the test, share a lake', case)
+        self.assertNotIn('none was trained or fine-tuned', one)
+        # the control arm (COMM_SEEN_TALK) had the community's goal and not the instruction; the treatment had both, so not
+        # "in place of" (fifth pass, verifier)
+        self.assertIn('against 3 of 10 when, told of the bed and able to talk, it had the community\'s goal alone, without that instruction', case)
+        self.assertNotIn('in place of', case)
+        self.assertNotIn('none was trained or fine-tuned', self.page('THE-THEORY-OF-BECOMING.md'))
+
+    def test_the_case_carries_the_reader_to_the_ethics_first(self):
+        # astra, fourth cold reading, 6: the root, the picture and the table follow the lake's ethics
+        one = self.page('ONE-PAGE.md')
+        order = [one.index(lead) for lead in ('**One case.**', '**The ethics.**', 'In the case, relations run one way',
+                                              '| | What the account says', '**The root.**', '](results/spine.svg)')]
+        self.assertEqual(order, sorted(order))
+
+    def test_the_overview_says_what_is_open_and_each_limit_at_its_claim(self):
+        text = self.page('THE-THEORY-OF-BECOMING.md')
+        self.assertIn('<a id="10-what-is-not-shown-and-what-is-open"></a>\n## 10. What is open\n', text)
+        self.assertIn('<a id="10-尚未表明者与未决者"></a>\n## 10. 未决者\n', self.page('THE-THEORY-OF-BECOMING.zh.md'))
+        self.assertIn('the joining of mutual dependence to the condition in one theorem', text)
+        self.assertEqual(text.count('no independent human review is recorded yet') + text.count('No independent human review is recorded yet'), 1)
 
 
 if __name__ == '__main__':

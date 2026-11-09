@@ -64,16 +64,16 @@
       "zh": "不加公理。有限之列表；二值之接纳；次序为进程上之关系，不设其完备或可传递；各立场之标记为所予，依各律所述读之（律只用读法之一半者，只此一半）。"
     },
     {
-      "en": "Self-concern (Weighting.IncreasingInOwn) and the condition, on the root («续无外») or held de se (Unrestricted of the own closure), are hypotheses: neither is asserted, and the condition varies with the net, the class and the direction.",
-      "zh": "自关切（Weighting.IncreasingInOwn）与条件，于根上（«续无外»）或自承（自身闭包之 Unrestricted），皆为假设：皆不被断言，且条件随网、类与方向而变。"
+      "en": "Self-concern (Weighting.IncreasingInOwn) and the condition, on the root («续无外») or held de se (Unrestricted of the own closure), are hypotheses, self-concern derived from no dynamics, selection or persistence, and the condition varying with the net, the class and the direction.",
+      "zh": "自关切（Weighting.IncreasingInOwn）与条件，于根上（«续无外»）或自承（自身闭包之 Unrestricted），皆为假设：自关切不由任何动力学、选择或持存推出，且条件随网、类与方向而变。"
     },
     {
       "en": "For the ranking on a web: admission decided by a supplied two-valued reading, what both level paths admit listed as (step, formation) items, every claim counted as living, each item marked by the marking of its formation.",
       "zh": "就网上之排序：接纳由所予之二值读法判定，二层径所接纳者列为（步，构成）之项，每一主张计为活，每项以其构成之标记标之。"
     },
     {
-      "en": "This result assumes self-concern and the continuation condition held de se, with admission decided and two listed level paths, courses whose admissions end; it concludes, one way, the extension rankings C asks between those paths. Whoever ranks courses still holds C or another order.",
-      "zh": "此结果以自关切与自承之延续条件为假设，接纳可判定，二所列且接纳有终之层径；它单向推出 C 在这两条层径之间所求的扩展排序。凡对进程排序者，仍持 C 或别一种次序。"
+      "en": "This result assumes self-concern and the continuation condition held de se, with admission decided and two listed level paths, courses whose admissions end; it concludes, one way, the extension rankings C asks between those paths. Beyond listed paths and self-concerned orders, C is a named order.",
+      "zh": "此结果以自关切与自承之延续条件为假设，接纳可判定，二所列且接纳有终之层径；它单向推出 C 在这两条层径之间所求的扩展排序。所列层径与自关切之次序之外，C 是一种具名的次序。"
     }
   ],
   "does_not_show": [
@@ -99,8 +99,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "That the condition holds, that self-concern is warranted, or that C holds without its stated hypotheses: each stays a hypothesis where used, and C is a reading the account does not assert.",
-      "zh": "条件成立、自关切有据，或 C 无须所述假设便成立：各自在用到之处仍是假设，C 是本论不断言的一种读法。",
+      "en": "That the condition holds, that self-concern follows from any dynamics, or that C holds without its stated hypotheses: each is a hypothesis where used; beyond what self-concern ranks here, C is a named order.",
+      "zh": "条件成立、自关切由某种动力学推出，或 C 无须所述假设便成立：各在用到之处为假设；此处自关切所排者之外，C 是具名的次序。",
       "kind": "non-implication"
     }
   ],
