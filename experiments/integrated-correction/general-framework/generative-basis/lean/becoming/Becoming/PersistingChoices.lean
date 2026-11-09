@@ -65,11 +65,13 @@ each stops (board item ZA).
   occurrence alike only to itself (`OwnClass.downstreamClass`), meets both
   (`OwnClass.downstreamClass_constant_at`, `OwnClass.downstreamClass_held`) and lies within every class
   that does (`OwnClass.downstreamClass_least`). The meet of two such classes meets both
-  (`OwnClass.meet_constant_at`, `OwnClass.meet_held`), and under every one of them the member's line
-  reaches exactly what lies downstream of it (`OwnClass.reach_iff_downstream`). Where whether each
+  (`OwnClass.meet_constant_at`, `OwnClass.meet_held`); under P2, holding the member's effects is exactly
+  containing that class (`OwnClass.held_iff_contains_downstream`, `«本类常则闭当且仅当后皆同类»` read on it);
+  and under every one of them the member's line reaches exactly what lies downstream of it
+  (`OwnClass.reach_iff_downstream`). Where whether each
   occurrence conditions anything is decided, the one meets both, so the least exists outright
-  (`OwnClass.least_own_class`). The conjecture that such classes are closed only under joins, with a
-  witness of two whose meet fails, is false.
+  (`OwnClass.least_own_class`). These laws are near-definitional. The conjecture that such classes are
+  closed only under joins, with a witness of two whose meet fails, is false.
 
 **Readings** (the AI's; correspondences, not theorems).
 - *Survivorship.* Persisting is a filter on what was chosen, not a mechanism forming an order. Where a choice
@@ -855,6 +857,14 @@ theorem meet_constant_at {E E' : «际» α} (hE : «类» E) (hE' : «类» E')
           (hF.symm («本类常闭则所缘同类» hF atF goes heldF (hF.symm au') step'))
       .inl ⟨v', step', inE hE atClass held mu.1 mu'.1, inE hE' atClass' held' mu.2 mu'.2⟩
     | .inr stops => .inr stops
+
+/-- **Under P2, holding a member's effects is containing its downstream class.** Where a class meets P2 at a
+member that conditions something, it holds the member's effects exactly where the downstream class lies within
+it: `«本类常则闭当且仅当后皆同类»` read on that class. The backward direction needs no P2. -/
+theorem held_iff_contains_downstream {E : «际» α} (hE : «类» E) {m : α} (atClass : «本类至终有常» R E m)
+    (goes : ∃ w, R m w) : «所缘同于» R E m ↔ «则» (downstreamClass R m) E :=
+  ⟨fun held => downstreamClass_least hE atClass goes held,
+   fun within v step => within m v (downstreamClass_held m v step)⟩
 
 /-- **Every such class gives the same reach.** Under a class meeting P2 and P4 at a member that
 conditions something, the member's line reaches exactly what lies downstream of it. -/
