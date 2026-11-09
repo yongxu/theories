@@ -73,4 +73,6 @@ The module grew from 80 to 83 theorems (131 declarations), every axiom report st
 
 ## Round 3, astra on the diff of round 2's fixes (`3fabcfa9b..40f1aa578`)
 
-No high finding; one medium: the settling restriction restored in the English of a `does_not_show` entry but not in its Chinese ("读自存者之存续于其成立"). Taken: "诸系有定处，读自存者之存续于其成立", in the generator and the record. The other round-2 fixes landed, and no new overclaim was found. One medium in the Chinese of one clause, fixed as the reader proposed; the rounds stop here, with Fable's second round and astra's third, the last of them with no high finding and its one medium a single Chinese clause.
+No high finding; one medium: the settling restriction restored in the English of a `does_not_show` entry but not in its Chinese ("读自存者之存续于其成立"). Taken: "诸系有定处，读自存者之存续于其成立", in the generator and the record. The other round-2 fixes landed, and no new overclaim was found. ## Round 4, astra on that one-line diff (`40f1aa578..018263fa9`)
+
+No high or medium finding: the Chinese clause now carries the settling restriction, matching the English, and this file reported round 3 faithfully. One low (this file's chronology), taken here. The rounds stop: Fable's at its second, astra's at its fourth, each the first with no high or medium finding.

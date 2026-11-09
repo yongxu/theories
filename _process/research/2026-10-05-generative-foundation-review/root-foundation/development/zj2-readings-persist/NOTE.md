@@ -73,4 +73,4 @@ How a reading arises or changes: readings are never varied or learned here. The 
 
 ## Checks
 
-Scratch build (`scratch_build.py`, the checker's own steps), 9 November 2026: 131 declarations, 83 theorems, every axiom report empty, no warning. Readers: Fable and astra, round 1 ([READER.md](READER.md)), every finding taken (the extinction witness `clearedBack_survivors_pass` added from astra's). Core run and the gate: see the end of this note as they are done.
+Scratch build (`scratch_build.py`, the checker's own steps), 9 November 2026: 131 declarations, 83 theorems, every axiom report empty, no warning. Readers: Fable (two rounds) and astra (four rounds), each stopping at its first round with no high or medium finding ([READER.md](READER.md)); every finding taken, the extinction witness `clearedBack_survivors_pass` added from astra's first. Core run and the gate: see the end of this note as they are done.

@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-11-09T16:00:45+00:00",
+  "reviewed_at_utc": "2026-11-09T16:03:37+00:00",
   "statement": {
     "en": "A world whose relata act by their carried readings is the course those acts generate; the line read off it is descended by construction and carries its founders' reading; with ending read as that course's overdraw, every occasion picking that reading, G3's realization premise is the identity.",
     "zh": "诸关系项依其所携读法而行之世界即此诸行为所生之程；读自其上之系由构造相传、携其始祖所传之读法；终读为此程之透支、且每一场合皆择所携之读法时，G3 之实现前提即为恒等。"
@@ -268,12 +268,12 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zj2-readings-persist/NOTE.md",
       "role": "integration",
-      "sha256": "d75fd0d323c68e5f23b7f62e70e320b1e6f0cae8bd7023d1b1f5792421f883ff"
+      "sha256": "cc6efcbc5e2abf686ac9fd5204a32b59d18d72edf1ec661cd16847c650f6a9c2"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zj2-readings-persist/READER.md",
       "role": "review",
-      "sha256": "5a1fe08bd7ef565c523f82bd7cee20d93a94c5f86a95eda7625b060a47cbafad"
+      "sha256": "ac51abb55a4baf992f1e3324f20147bbe0d6b621bcea40c9e5e8e7cfc0226a4b"
     },
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
