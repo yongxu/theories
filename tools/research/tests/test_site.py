@@ -554,6 +554,47 @@ class SiteTests(unittest.TestCase):
                        '<code>coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it</code> · <strong>an existing Lean receipt is '
                        'recorded</strong> · theorem · F01 · <a href="x.json">record</a> · <a href="R.html">register</a>'):
             self.assertEqual(site.lead('<p>' + before + '</p>\n' + said), strip(said), before)  # a language link, a time to read, a status line
+        for before in ('Board item LA1b, 27 October 2026. AI-written (a Claude Code session).',
+                       'Board item SE1 (line E), 20 October 2026. AI-written (a Claude Code session started from the significance-aim '
+                       'session). Study section 263 of BECOMING-RENEWAL-READING. Literature check: significance review, "side effects".',
+                       'Board item UE32, 3 November 2026; run 4 November 2026. AI-written (a Claude Code session; no person\'s review of '
+                       'it is recorded). About twenty to twenty-seven minutes to read, the result fourteen to nineteen of them.'):
+            self.assertEqual(site.lead('<p>' + before + '</p>\n' + said), strip(said), before)  # a paragraph of provenance only
+        for before, rest in (('Board item LA1, 22 October 2026. AI-written (a Claude Code session). ',
+                              'Claude Haiku, through the Claude Code CLI, takes the member\'s place in a commons that renews.'),
+                             ('UE32, 3 November 2026. AI-written (a Claude Code session, through a subagent it sent to read). ',
+                              'It is the reading behind UE32: the field that reads a state from a series of counts.'),
+                             ('AI-authored study, 6 October 2026. ', 'The protocol was written, frozen and committed before the code existed.'),
+                             ('Board item IN1, 21 October 2026. AI-written (a Claude Code session). Predictions, verdict rules and code frozen '
+                              'before any experimental model call: PREDICTIONS-2026-10-21.md. Prior art: significance review, installation check. ',
+                              'Three fishers share a lake, and a bed of mussels that gives them nothing depends on the fish.'),
+                             ('6 October 2026. ', 'Executable counterpart of the mathematical market study, its connection named.'),
+                             ('Board item X1, 2 May 2026. Literature check: Smith et al. 2020, sections 2.1 and 3. ',
+                              'The test reads the bed and the fish, each season, from the frozen tables.'),
+                             ('AI-assisted mathematical experiment, 5 October 2026. ',
+                              'This evaluates the existing finite-material shared-renewal process, with all event rates retained.'),
+                             ('Board item X2, 3 May 2026. Literature check: the review "Seabirds and forage fish." ',
+                              'The test reads the colonies and the catch, each season, from the frozen tables.'),
+                             ('Board item X3, 4 May 2026. Literature check: Dai et al. ',
+                              'The test reads the colonies and the catch, each season, from the frozen tables.'),
+                             ('Board item X4, 2 May 2026. Literature check: GovSim (Piatti et al.) and the commons literature. ',
+                              'The test reads the colonies and the catch, each season, from the frozen tables.'),
+                             ('Board item X5, 2 May 2026. Literature check: e.g. Ostrom 1990, and commons work, cf. Hardin 1968. ',
+                              'The test reads the colonies and the catch, each season, from the frozen tables.'),
+                             ('Board item X6, 3 Oct. 2026. AI-written (a Claude Code session). ',
+                              'The test reads the colonies and the catch, each season, from the frozen tables.'),
+                             ('Board item T1N, 5 Nov. 2026. AI-written (a Claude Code session). ',
+                              'The rules read the lakes below the need, each with its fate resolved, from the frozen layout.')):
+            self.assertEqual(site.lead('<p>' + before + rest + '</p>\n' + said), rest, before)  # what follows the provenance is the lead
+        for plain in ('Board games and AI-written essays are read here as one case among many, and nothing about them is provenance.',
+                      'AI-written essays are read here as one case among many, and nothing about them is provenance at all.',
+                      'About the lake: the bed dies the first month fewer than seventy tons are left, whatever the fishers read.',
+                      'About what it takes to read a state from a series, the field has said little, and the test asks why.',
+                      'Board items of the old kind are not provenance, whatever their date or their reader says.',
+                      'Study sections of this kind are read here as text, and the search should show them whole.',
+                      'Predictions frozen before the run failed in four lakes of five, and the fifth was not read at all.',
+                      'Predictions frozen before the run. It failed in four lakes of five, and the fifth was not read at all.'):
+            self.assertEqual(site.lead('<p>' + plain + '</p>'), plain)  # a sentence that only starts like provenance stays
         long = '<p>' + 'A paragraph long enough to be a lead says how long it takes, about ten minutes to read, and more. ' * 3 + '</p>'
         self.assertEqual(site.lead(long), strip(long))  # a paragraph of text that names a time is still text
         zh = '<p>正文的第一段：一个选择可以成功，而它所不度量的东西却失去了；这一段足够长，可以作为本页的引言来读。</p>'
@@ -687,6 +728,63 @@ class SiteTests(unittest.TestCase):
         with patch.object(site, 'on_github', return_value=True):
             self.build()
         self.assertNotIn('may not resolve', self.page('a/ONE.html'))
+
+    def test_a_chinese_page_has_its_footer_in_chinese(self):
+        (self.tmp / 'a/ONE.zh.md').write_text('# 一页\n\n中文的一页。\n')
+        self.files.add('a/ONE.zh.md')
+        with patch.object(site, 'on_github', return_value=False):
+            self.build(pages=SITE['pages'] + ['a/ONE.zh.md'])
+        zh, one = self.page('a/ONE.zh.html'), self.page('a/ONE.html')
+        footer = zh[zh.index('<footer>'):]
+        self.assertIn(f'本站由<a href="https://github.com/o/r">本仓库</a>的提交 <a href="https://github.com/o/r/tree/{COMMIT}"><code>{COMMIT[:9]}</code></a> 构建', footer)
+        self.assertIn('此提交不在本地克隆上次获取的仓库主分支（origin/main）上', footer)
+        self.assertIn('本页的源文件</a>。', footer)
+        self.assertNotIn('Built from', footer)
+        self.assertIn('Built from', one[one.index('<footer>'):])  # an English page keeps the English
+        with patch.object(site, 'on_github', return_value=None):
+            self.build(pages=SITE['pages'] + ['a/ONE.zh.md'])
+        self.assertIn('从本地克隆无法查明 GitHub 是否已有此提交', self.page('a/ONE.zh.html'))
+        with patch.object(site, 'on_github', return_value=True):
+            self.build(pages=SITE['pages'] + ['a/ONE.zh.md'], rewrites=[{'pattern': 'not on any page'}])
+        zh = self.page('a/ONE.zh.html')
+        self.assertNotIn('打不开', zh)
+        self.assertIn('每一页都由仓库中的文本转换而来，只在站外才成立的本地路径与词句在构建时已改；', zh)  # the build's changes, in Chinese
+        dirty = site.template('a/ONE.zh.md', '一页', '<p>x</p>', 'zh', SITE | {'repository': 'o/r'}, COMMIT, '2026-11-09', '', '', dirty=True)
+        self.assertIn(f'<code>{COMMIT[:9]}</code></a> 及其上尚未提交的改动构建（2026-11-09）', dirty)
+        self.assertNotIn('Built from', dirty)
+
+    def test_the_map_says_when_github_may_not_have_the_commit(self):
+        from tools.research import connection_map
+
+        def stub(out_dir, link_base, site_paths=None, home='index.html', nav=None):
+            out_dir = Path(out_dir)
+            out_dir.mkdir(parents=True, exist_ok=True)
+            (out_dir / 'map.html').write_text('<!doctype html><head><title>map</title></head><body><nav class="sitebar" aria-label="Site">'
+                                              '<a class="home" href="index.html">Home</a></nav><div class="wrap">map</div></body>')
+            return out_dir / 'map.html'
+        had = hasattr(connection_map, 'site_map')
+        old = getattr(connection_map, 'site_map', None)
+        connection_map.site_map = stub
+        try:
+            with patch.object(site, 'on_github', return_value=False):
+                self.build(map=True, nav=SITE['nav'] + [['connections.html', 'Map']])
+            drawn = (self.out / 'connections.html').read_text()
+            self.assertIn('</nav>\n<p class="pushed-note"', drawn)  # under the site bar
+            self.assertIn(f'This page was built from commit <code>{COMMIT[:9]}</code>. This commit is not', drawn)  # it names the commit
+            self.assertIn("This commit is not on the repository&#x27;s main branch", drawn)  # escaped
+            self.assertIn('may not resolve until it is pushed.</p><div class="wrap">', drawn.replace('&#x27;', "'"))
+            self.assertEqual((drawn.count('pushed-note'), drawn.count('rel="icon"')), (1, 1))
+            with patch.object(site, 'on_github', return_value=None):
+                self.build(map=True, nav=SITE['nav'] + [['connections.html', 'Map']])
+            self.assertIn('could not be checked from this clone', (self.out / 'connections.html').read_text())
+            with patch.object(site, 'on_github', return_value=True):
+                self.build(map=True, nav=SITE['nav'] + [['connections.html', 'Map']])
+            self.assertNotIn('pushed-note', (self.out / 'connections.html').read_text())
+        finally:
+            if had:
+                connection_map.site_map = old
+            else:
+                del connection_map.site_map
 
     def test_whether_github_has_the_commit(self):
         git = ['git', '-c', 'user.name=x', '-c', 'user.email=x@x', '-c', 'commit.gpgsign=false']
