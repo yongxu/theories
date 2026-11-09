@@ -8,15 +8,15 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-11-09T11:08:14+00:00",
+  "reviewed_at_utc": "2026-11-09T12:01:29+00:00",
   "statement": {
     "en": "In a mutually dependent flow, significance held de se as what lies within each center's closure under being affected, or under affecting, is the continuation condition; where every formation is a center, each is exactly mutual dependence.",
     "zh": "于相互依赖之流，以每一中心沿被影响或沿影响之闭包内者为自持之意义，即延续条件；凡每一形成皆为中心处，二者各恰为相互依赖。"
   },
   "laws": [
     {
-      "en": "Mutual dependence gives the condition held de se along being affected, what can affect a center's continuation at some remove (by the definition of mutual dependence), and along affecting, what it can affect at some remove (through mutual dependence read forward), for every assignment of centers.",
-      "zh": "相互依赖给出沿被影响（可于某远处影响中心之延续者，依相互依赖之定义）与沿影响（中心可于某远处影响者，经相互依赖之前读）而自持之条件，于中心之每一指派皆然。",
+      "en": "Mutual dependence gives the condition held de se along being affected, what can affect a center's continuation at some remove (the bounded law of mutual dependence, its significance this one by definition), and along affecting, what it can affect at some remove (through mutual dependence read forward), for every assignment of centers.",
+      "zh": "相互依赖给出沿被影响（可于某远处影响中心之延续者，即相互依赖之有界之律，其意义依定义即此）与沿影响（中心可于某远处影响者，经相互依赖之前读）而自持之条件，于中心之每一指派皆然。",
       "declarations": [
         "Becoming.Flow.unrestricted_of_mutuallyDependent"
       ]
@@ -85,8 +85,8 @@
     "formal-not-empirical"
   ],
   "validation_scope": {
-    "en": "Pure core, every axiom report empty; a leaf importing Weightings, MutualDependence, ShownOrder and GrammarPath, checked by the core run named in the references. Written by an AI and checked against the Lean by its author; no person's review recorded. Short laws, none new as mathematics. A composition of two landed laws, near-definitional.",
-    "zh": "纯核，公理报告皆空；叶模块，引 Weightings、MutualDependence、ShownOrder 与 GrammarPath，经参考所列之核运行检查。AI 所写，作者对照 Lean 自查；尚无人之审查记录。诸律皆短，无新数学。 二已落地之律之合成，近乎依定义。"
+    "en": "Pure core, every axiom report empty; a leaf importing Weightings, MutualDependence and ShownOrder, checked by the core run named in the references. Written by an AI and checked against the Lean by its author; no person's review recorded. Short laws, none new as mathematics. A composition of two landed laws, near-definitional.",
+    "zh": "纯核，公理报告皆空；叶模块，引 Weightings、MutualDependence 与 ShownOrder，经参考所列之核运行检查。AI 所写，作者对照 Lean 自查；尚无人之审查记录。诸律皆短，无新数学。 二已落地之律之合成，近乎依定义。"
   },
   "next_delta": {
     "en": "Centers read from the dynamics, a self-bearing formation whose reach returns, so that the map of centers is no longer supplied; and which relation a center's concern is drawn along.",
@@ -108,7 +108,7 @@
       "id": "mutual-dependence-and-its-pace",
       "relation": "formal-reuse",
       "detail": {
-        "en": "Mutual dependence and its reading forward (Flow.MutuallyDependent, Flow.mutuallyDependent_iff_reach), and the clearer's world not mutually dependent (Clearing.shares_not_mutual).",
+        "en": "Mutual dependence, its bounded law and its reading forward (Flow.MutuallyDependent, Flow.MutuallyDependent.unrestricted, Flow.mutuallyDependent_iff_reach), and the clearer's world not mutually dependent (Clearing.shares_not_mutual).",
         "zh": "相互依赖及其前读（Flow.MutuallyDependent、Flow.mutuallyDependent_iff_reach），及清除者之世界非相互依赖（Clearing.shares_not_mutual）。"
       }
     },
@@ -146,28 +146,28 @@
         "Becoming.Flow.mutuallyDependent_iff_unrestricted",
         "Becoming.Flow.unrestricted_of_mutuallyDependent"
       ],
-      "sha256": "71268b5459b994f6a29a92d515acb94be5400094a04dd844810c77db8698acf7"
+      "sha256": "798a5b33f6908fba328ca684283ff5cf0fdcb489de0fde10a59c3f4192acb22b"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T110024.252629Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T120030.596088Z/verification.json",
       "role": "receipt",
-      "sha256": "829ea8a7e6b54f7e7cc56e38b51828d094a6b092e51d9fd93749a9611f72ff8f"
+      "sha256": "fbb011be2d7b07644895db7f8fa168eb0c859bedb38fe22720862b843a12db6c"
     },
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "1cf52ba762b04183e12f1ccbf2e02e43b7a9b87274f2ad3553ee3677e056e880"
+      "sha256": "cba023f03e499225987a27cea0c41305ca26ae63dfaba57dc10670b285a17d2b"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/za-concern-formed/NOTE.md",
       "role": "integration",
-      "sha256": "b98e45c8548bb389a17acd92a829d9a03d89f417db6f615a1d393ab7bd728471"
+      "sha256": "02d546d1857d1ef3e3c536d117094438051a793c2e4134af4c78e303d4941dbd"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T110024.252629Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T120030.596088Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.PersistingChoices",
       "success_pointer": "/status",
       "success_value": "passed"
