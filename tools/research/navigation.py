@@ -591,8 +591,24 @@ NAV = [('README.md', 'Home'), ('README.zh.md', '中文'),
        (None, '**Read**'), (THEORY + '/ONE-PAGE.md', 'One page'), (CANONICAL, 'The theory'), (CHAPTERS + '/README.md', 'Chapters'), (THEORY + '/USES.md', 'Uses'),
        (None, '**Check**'), ('TESTS.md', 'Tests'), ('RESULTS.md', 'Results'), ('MAP.md#check-the-proofs-yourself', 'Proofs'), ('OPEN-QUESTIONS.md', 'Open questions'), (THEORY + '/review/README.md', 'Reviewers'),
        (None, '**See**'), (THEORY + '/results/THEORY-GRAPH.md', 'Graph'), (CROSSWALK, 'Connections'), ('theories/LINEAGE.md', 'How it grew'), ('GLOSSARY.md', 'Glossary'), ('MAP.md', 'Where everything is')]
+NAV_TOP = 20  # a page's navigation line stands within its first NAV_TOP lines, where the site's strip of it looks
 # Hand-written fronts that carry the line, each with its Chinese edition where it has one (the line's 中文 then goes there).
-NAV_FRONTS = {'MAP.md': None, 'GLOSSARY.md': 'GLOSSARY.zh.md'}
+NAV_FRONTS = {
+    'MAP.md': None,
+    'GLOSSARY.md': 'GLOSSARY.zh.md',
+    'theories/becoming/ONE-PAGE.md': 'theories/becoming/ONE-PAGE.zh.md',
+    'theories/becoming/THE-THEORY-OF-BECOMING.md': 'theories/becoming/THE-THEORY-OF-BECOMING.zh.md',
+    'theories/becoming/USES.md': 'theories/becoming/USES.zh.md',
+    'theories/becoming/USES-EXAMPLES.md': 'theories/becoming/USES-EXAMPLES.zh.md',
+    'theories/becoming/review/README.md': 'theories/becoming/review/README.zh.md',
+    'theories/becoming/chapters/01-ROOT.md': None,
+    'theories/becoming/chapters/02-MAP.md': None,
+    'theories/becoming/chapters/03-KNOWING.md': None,
+    'theories/becoming/chapters/04-LIFE.md': None,
+    'theories/becoming/chapters/05-COLLECTIVES.md': None,
+    'theories/becoming/chapters/07-SIGNIFICANCE.md': None,
+    'theories/becoming/chapters/08-METHOD.md': None,
+}
 
 
 def nav_line(path, zh=None):
@@ -605,8 +621,8 @@ def nav_front_errors(root=ROOT):
     errors = []
     for page, zh in NAV_FRONTS.items():
         text = (root / page).read_text() if (root / page).is_file() else ''
-        if nav_line(page, zh) not in text.split('\n'):
-            errors.append(f'{page}: its navigation line is missing or differs; under its title it should read: {nav_line(page, zh)}')
+        if nav_line(page, zh) not in text.split('\n')[:NAV_TOP]:
+            errors.append(f'{page}: its navigation line is missing, differs or is not in its first {NAV_TOP} lines; under its title it should read: {nav_line(page, zh)}')
     return errors
 
 

@@ -1,6 +1,6 @@
 # Review packet
 
-[中文](README.zh.md) · [The theory in one page](../ONE-PAGE.md) · [What it is for, and how far](../USES.md) · [The overview](../THE-THEORY-OF-BECOMING.md) · [The chapters](../chapters/README.md)
+[Home](../../../README.md) · [中文](README.zh.md) · **Read** · [One page](../ONE-PAGE.md) · [The theory](../THE-THEORY-OF-BECOMING.md) · [Chapters](../chapters/README.md) · [Uses](../USES.md) · **Check** · [Tests](../../../TESTS.md) · [Results](../../../RESULTS.md) · [Proofs](../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../OPEN-QUESTIONS.md) · [Reviewers](README.md) · **See** · [Graph](../results/THEORY-GRAPH.md) · [Connections](../results/atlas/CROSSWALK.md) · [How it grew](../../LINEAGE.md) · [Glossary](../../../GLOSSARY.md) · [Where everything is](../../../MAP.md)
 
 *This cover takes eight to eleven minutes to read; each dossier gives its own times in its opening section.*
 

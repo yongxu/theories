@@ -8,10 +8,11 @@ another page of the site becomes a link to its HTML; a link to any other tracked
 stood at the build commit; a link to a path the repository does not track is shown as its text. Every link between pages
 of the site, anchor included, must resolve, or the build fails. At each result's anchor (`r-<record id>`), in a table cell
 or a list as at a line of its own, the page gets a small mark of the record's status, linked to the record. The home is
-README's generated first screen in its own words: its "Start with" paragraph comes last of its text, the ways in that
-`site.ways_in` lists come right after it, each with its reading time (`time` on a card says what the time is of), and the
-picture and its caption come after them. The pages of `site.chapters` get contents and previous and next links; the
-navigation line a generated page carries is dropped, the site having its own; `site.rewrites` changes the words of the pages a rule names, or of any page where a rule naming none matches, of named
+README's generated first screen in its own words: its "Start with" paragraph comes last of its text, then the picture and
+its caption, its height set to suit a tall picture, then the ways in that `site.ways_in` lists, each with its reading time (`time` on a card says
+what the time is of), counted as the page's own stated time is. A picture's image carries its SVG's width and height, so its
+box is kept before it loads. The pages of `site.chapters` get contents and previous and next links; the
+navigation line a generated page carries, as do the fronts in navigation.NAV_FRONTS and the Chinese fronts (zh_fronts), is dropped, the site having its own; `site.rewrites` changes the words of the pages a rule names, or of any page where a rule naming none matches, of named
 pages at build, where a frozen copy binds the source or the words are true only off the site, or adds a link only the site
 serves. With `site.map`, the
 connection map is written by its generator's site mode (tools/research/connection_map.py), its links to pages of the site
@@ -144,6 +145,7 @@ class Links:
         self.internal = []  # (page, target page, anchor) for the anchor check
         self.counts = {'site': 0, 'github': 0, 'untracked': 0, 'external': 0, 'private': 0, 'refused': 0}
         self.private = None  # the push screen's pattern, set by build: a link to a private path is shown as text
+        self.sizes = {}  # an SVG asset's (width, height), set by build, so a picture's box is known before it loads
         self.untracked = []
         self.unbuilt = set()  # special pages this build does not write (the map, when site.map is off)
 
@@ -525,7 +527,9 @@ class Page:
             return html.escape(alt)
         if new.startswith('https://github.com/'):
             new = new.replace('/blob/', '/raw/', 1)
-        img = f'<img src="{html.escape(new)}" alt="{html.escape(alt)}" loading="lazy">'
+        size = self.links.sizes.get(posixpath.normpath(posixpath.join(posixpath.dirname(self.path), src.split('#')[0])))
+        box = f' width="{size[0]}" height="{size[1]}"' if size else ''  # the box is known before the picture loads: a lazy load starts, and the page does not move
+        img = f'<img src="{html.escape(new)}" alt="{html.escape(alt)}"{box} loading="lazy">'
         if src.split('#')[0].lower().endswith('.svg'):  # a picture opens at full size, and is shown wider than the text
             return f'<a class="picture" href="{html.escape(new)}" title="{self.say["picture"]}">{img}</a>'
         return img
@@ -590,6 +594,7 @@ class _TagParser(__import__('html.parser').parser.HTMLParser):
 def emphasis(t):
     t = re.sub(r'\*\*\*(?!\s)(.+?)(?<!\s)\*\*\*', r'<strong><em>\1</em></strong>', t)
     t = re.sub(r'\*\*(?!\s)(.+?)(?<!\s)\*\*', r'<strong>\1</strong>', t)
+    t = re.sub(r'(?<=[A-Za-z0-9])\*([A-Za-z0-9]{1,3})\*(?![*])', r'<em>\1</em>', t)  # inside a word, as GitHub has it: T*n*
     t = re.sub(r'(?<![A-Za-z0-9_*\\])\*(?![\s*])(.+?)(?<![\s\\])\*(?![A-Za-z0-9_*])', r'<em>\1</em>', t)
     t = re.sub(r'(?<![\w\\])__(?!\s)(.+?)(?<!\s)__(?!\w)', r'<strong>\1</strong>', t)
     t = re.sub(r'(?<![\w\\])_(?![\s_])(.+?)(?<![\s\\])_(?!\w)', r'<em>\1</em>', t)
@@ -723,11 +728,11 @@ RECORD_STATUS = re.compile(r'^(`[^`]+` · )\*\*([a-z-]+)\*\*( · )', re.M)
 
 
 def strip_nav_line(text):
-    """A page's text without the navigation line generated pages carry under their title (a line of links joined by ' · ',
+    """A page's text without the navigation line that generated pages, navigation.NAV_FRONTS and the Chinese fronts (zh_fronts) carry under their title (a line of links joined by ' · ',
     one of them to the home, or the home itself in bold on the page that is the home), the site having its own. Only one line
     near the top goes; any other line of links stays."""
     lines = text.split('\n')
-    for k, line in enumerate(lines[:20]):
+    for k, line in enumerate(lines[:navigation.NAV_TOP]):
         if NAV_LINE.match(line) and re.search(r'\[(?:Home|首页)\]\(|\*\*(?:Home|首页)\*\*', line):
             return '\n'.join(lines[:k] + lines[k + 1:])
     return text
@@ -764,7 +769,7 @@ def rewritten(path, text, rules):
 
 
 def site_text(path, text, rules=()):
-    """A page's Markdown as the site publishes it: rewritten as site.rewrites says, its generated navigation line dropped,
+    """A page's Markdown as the site publishes it: rewritten as site.rewrites says, its navigation line (a generated page's, a NAV_FRONTS front's or a Chinese front's) dropped,
     and on a record page the status said in words."""
     text = strip_nav_line(rewritten(path, text, rules))
     if path.startswith(RECORDS):
@@ -780,6 +785,25 @@ def first_screen(readme: str) -> str:
     start = next(k for k, l in enumerate(lines) if l.startswith('> '))
     end = next(k for k, l in enumerate(lines) if k > start and l.startswith('## '))
     return '\n'.join(lines[start:end]).strip()
+
+
+def svg_size(path):
+    """An SVG's (width, height) in whole units from its root element's width and height, or else its viewBox; None where
+    neither can be read."""
+    try:
+        head = path.read_text(errors='replace')[:2000]
+    except OSError:
+        return None
+    root = re.search(r'<svg\b[^>]*>', head)
+    if not root:
+        return None
+    tag = root.group(0)
+    w, h = (re.search(rf'\s{k}="(\d+(?:\.\d+)?)(?:px)?"', tag) for k in ('width', 'height'))  # not stroke-width; no percentage
+    size = (round(float(w.group(1))), round(float(h.group(1)))) if w and h else None
+    if not (size and all(size)):  # a zero width or height falls back to the viewBox
+        box = re.search(r'\sviewBox="\s*-?[\d.]+[\s,]+-?[\d.]+[\s,]+(\d+(?:\.\d+)?)[\s,]+(\d+(?:\.\d+)?)\s*"', tag)
+        size = (round(float(box.group(1))), round(float(box.group(2)))) if box else None
+    return size if size and all(size) else None
 
 
 def root_prefix(page_path):
@@ -927,7 +951,7 @@ def card_time(w, root, files):
     p = root / target
     if not (p.is_file() and target.endswith('.md')):
         return w.get('time', '')
-    whole = strip_nav_line(strip_comments(p.read_text()))
+    whole = strip_comments(p.read_text())  # counted as every stated time and README's time fields count it, its navigation line in
     text = whole
     if w.get('time_until'):  # the part a reader is sent to: up to the named heading line
         assert w['time_until'] in text, ('site.ways_in times up to a heading the page lacks', target, w['time_until'])
@@ -953,7 +977,7 @@ def card_time(w, root, files):
         matched = expand_pages([m.group(1)[len('all:'):]], files)
         if not matched:
             raise SiteError('site.ways_in times a pattern that matches nothing: ' + m.group(1))
-        return hours(navigation.reading_time('\n'.join(strip_nav_line(strip_comments((root / f).read_text())) for f in matched)))
+        return hours(navigation.reading_time('\n'.join(strip_comments((root / f).read_text()) for f in matched)))
     return re.sub(r'\{(time|whole|body|all:[^}]+|said:[^}]+)\}', field, w['time'])
 
 
@@ -1004,9 +1028,9 @@ def home_body(cfg, links, recs, root, files, rules=()):
         grouped[g].append(c)
     body = ''.join((f'<h3 class="group">{html.escape(g)}</h3>' if g else '') + '<ul class="cards">' + ''.join(grouped[g]) + '</ul>'
                    for g in order)
-    parts.append('<section class="ways"><h2 id="ways-in">Ways in</h2>' + body + '</section>')
-    if pictures:
+    if pictures:  # the picture right after the first screen's words, above the cards, where a reader still is
         parts.append('<section class="picture">' + '\n'.join(pictures) + '</section>')
+    parts.append('<section class="ways"><h2 id="ways-in">Ways in</h2>' + body + '</section>')
     return '\n'.join(parts), page.lang
 
 
@@ -1331,6 +1355,7 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
         return not map_ok and (target or '').split('#')[0] == MAP_PAGE
     aliases = {k: v for k, v in (cfg.get('aliases') or {}).items() if not unbuilt(v)}  # no link to an unbuilt map
     links = Links(set(pages), assets, files, dirs, cfg['repository'], commit, aliases)
+    links.sizes = {a: svg_size(root / a) for a in assets if a.lower().endswith('.svg')}
     links.private = private
     links.unbuilt = set() if map_ok else {MAP_PAGE}
     if map_ok and not hasattr(connection_map, 'site_map'):

@@ -171,7 +171,9 @@ def chapters_index(root: Path = ROOT, generated: set[str] | None = None) -> str:
         status, note = chapter_status(name, table, generated)
         rows.append((order[status], name, status, table.get(name, ('', ''))[0] if status not in ('canonical', 'chapter') else status.capitalize(), note))
     counts = Counter(r[2] for r in rows)
+    from tools.research import navigation
     lines = ['# Chapters of the Theory of Becoming', '', marker('Edit the chapters or the move receipts, not this page.'), '',
+             navigation.nav_line(page), '',
              f'The [overview](../THE-THEORY-OF-BECOMING.md) states the theory in one account, and [the one page](../ONE-PAGE.md) in a page. The eight numbered chapters below state every result once, in its home section, anchored by its record id; [the theory graph](../results/THEORY-GRAPH.md) joins sections, results, Lean modules and texts. The chapters they replace are in history (below), bytes unchanged.', '',
              ] + reader_list(root) + [
              'Status: **chapter** is one of the eight chapters of the theory; **canonical** is the entry that states the theory; **reference** keeps material moved out of a chapter; **kept** is a live chapter kept at its own scope; **generated** is written by `make research-render`; **Chinese edition** is a `NAME.zh.md` split from a bilingual original, not maintained in step with the English file, which governs.', '',

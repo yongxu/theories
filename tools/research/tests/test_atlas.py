@@ -584,5 +584,23 @@ class PageSizeTests(unittest.TestCase):
                 self.assertLessEqual((ROOT / p).stat().st_size, atlas.PAGE_LIMIT)
 
 
+
+class ChineseCrosswalkTests(unittest.TestCase):
+    def test_the_chinese_table_names_and_counts_every_group(self):
+        """CROSSWALK.zh's table: each of the live atlas's groups by its Chinese name, linking its page, with the counts
+        CROSSWALK.md's table gives it (what became of its entries, then their relations)."""
+        live = json.loads((ROOT / 'theories/becoming/results/data/atlas.json').read_text(encoding='utf-8'))
+        page = atlas.crosswalk_zh_page(live)
+        carried = [c['en'] for c in live['vocabulary']['carried']]
+        relations = [r['en'] for r in live['vocabulary']['relations']]
+        for g in live['correspondence_groups']:
+            with self.subTest(group=g['id']):
+                self.assertIn(g['id'], atlas.GROUP_ZH)  # no group falls back to its English name
+                row = next(l for l in page.split('\n') if l.startswith(f'| [{atlas.GROUP_ZH[g["id"]]}]('))
+                cells = [c.strip() for c in row.strip('|').split('|')][2:]
+                self.assertEqual(cells, [str(g['entries'])] + [str(g['by_carried'][c]) for c in carried]
+                                 + [str(g['by_relation'][r]) for r in relations])
+
+
 if __name__ == '__main__':
     unittest.main()

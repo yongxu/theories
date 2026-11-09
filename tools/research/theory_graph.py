@@ -426,10 +426,16 @@ def page(graph):
               'the restructure\'s remaining formal work. A result marked · is not yet stated by a section of a live '
               'chapter.', '']
     text = '\n'.join(lines).rstrip() + '\n'
-    full = navigation.reading_time(text.replace('{time}', '', 1))
     part = navigation.reading_time('\n'.join(lead + section))
-    return text.replace('{time}', f'[中文（各章一览）](THEORY-GRAPH.zh.md) · {full} to read in full; the chapters at a glance, what the picture shows and the edge kinds, with their tables, in '
-                                  f'{part}.', 1)
+    line = lambda full: (f'[中文（各章一览）](THEORY-GRAPH.zh.md) · {full} to read in full; the chapters at a glance, what the picture '
+                         f'shows and the edge kinds, with their tables, in {part}.')
+    full = navigation.reading_time(text.replace('{time}', '', 1))
+    for _ in range(3):  # the page as read includes this line: count it filled, until its own figure stays
+        counted = navigation.reading_time(text.replace('{time}', line(full), 1))
+        if counted == full:
+            break
+        full = counted
+    return text.replace('{time}', line(full), 1)
 
 
 def render(records):

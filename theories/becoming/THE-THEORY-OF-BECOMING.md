@@ -2,9 +2,9 @@
 
 A map of how anything comes to be, lasts, changes and passes away within one relational unfolding, of how life, evolution and knowing take shape inside it and how far evaluation does, without first assuming that becoming is good: drawn first for alignment, to show what a selection reaches, what it can drain beyond that and how its rule can lock, and as a map of wisdom too, where what traditions and sciences have seen meets it and where not.
 
-[中文](THE-THEORY-OF-BECOMING.zh.md) · [The one page](ONE-PAGE.md) · [The eight chapters](chapters/README.md) · [The theory graph](results/THEORY-GRAPH.md) · [How it grew](../LINEAGE.md)
+[Home](../../README.md) · [中文](THE-THEORY-OF-BECOMING.zh.md) · **Read** · [One page](ONE-PAGE.md) · [The theory](THE-THEORY-OF-BECOMING.md) · [Chapters](chapters/README.md) · [Uses](USES.md) · **Check** · [Tests](../../TESTS.md) · [Results](../../RESULTS.md) · [Proofs](../../MAP.md#check-the-proofs-yourself) · [Open questions](../../OPEN-QUESTIONS.md) · [Reviewers](review/README.md) · **See** · [Graph](results/THEORY-GRAPH.md) · [Connections](results/atlas/CROSSWALK.md) · [How it grew](../LINEAGE.md) · [Glossary](../../GLOSSARY.md) · [Where everything is](../../MAP.md)
 
-*About an hour to an hour and twenty minutes to read.*
+*Sixty-four to eighty-three minutes to read.*
 
 ## How to read this
 
@@ -29,7 +29,7 @@ Its centre: a selection, whether a knower, a training run, a market or an optimi
 
 **How to read the picture.** A solid curve counts one chapter's uses of another's results recorded as formal-reuse, a kind the AI-written records assign, and nothing checks a use against the Lean; a darker one runs backward, an earlier chapter using a later one (the chapters are numbered for reading, not as an order of proof), and no record may close a cycle among its declared dependencies ([a condition of entry, not a finding](results/THEORY-GRAPH.md#do-the-recorded-uses-form-a-cycle)). A spoke's width is the share of the chapter's core modules that state their laws on the grammar: modules, not results derived. Of the 117 central declarations, 11 are [derived](../../GLOSSARY.md#derived), 1 is a root form at one step under a stated hypothesis, 6 are counting laws, below the grammar, and 99 stand at a [named distance](../../GLOSSARY.md#named-distance), each with its reason ([what the picture shows and does not show](results/THEORY-GRAPH.md#the-spine-what-it-shows-and-does-not-show)).
 
-*The eight chapters, drawn from [the theory graph](results/THEORY-GRAPH.md) by a tool: a solid curve counts the uses of one chapter's results by another's recorded as formal-reuse, and dashed and dotted curves between chapters are other dependences; a curve is a dependence, not an agreement in meaning. The standings, in [08 §7](chapters/08-METHOD.md#r-one-root-to-its-edge)'s words, are in [the chapters at a glance](results/THEORY-GRAPH.md#the-spine). What the picture shows and does not: [its section](results/THEORY-GRAPH.md#the-spine-what-it-shows-and-does-not-show); the five laws the models share, balance represented and not derived: [their table](results/THEORY-GRAPH.md#the-five-shared-laws).*
+*Drawn by a tool from [the theory graph](results/THEORY-GRAPH.md): the formal-reuse curves of pairs under 10 uses are left out, and counts are written from 15; a curve is a dependence, not an agreement in meaning. The standings in [08 §7](chapters/08-METHOD.md#r-one-root-to-its-edge)'s words: [the chapters at a glance](results/THEORY-GRAPH.md#the-spine); what the picture shows and does not: [its section](results/THEORY-GRAPH.md#the-spine-what-it-shows-and-does-not-show); the five laws the models share, balance represented and not derived: [their table](results/THEORY-GRAPH.md#the-five-shared-laws).*
 
 Each claim says how far it has been seen, in these words ([the labels](chapters/08-METHOD.md#standings-and-bases)):
 

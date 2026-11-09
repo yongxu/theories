@@ -85,6 +85,24 @@ class TestsPageTests(unittest.TestCase):
         self.assertIn(zh_fronts.nav_line(zh_fronts.TESTS_PAGE), page)
         self.assertIn('一项通过 \\| 以竖线', page)
 
+    def test_by_thesis_counts_the_english_tables_cells(self):
+        """TESTS.zh's 按论题 table: on the live data, each row's cells are TESTS.md's, under the Chinese class names, each
+        thesis named as the overview's theses table names it, and the number naming a thesis the first screen's total."""
+        import json
+        from tools.research import tests_page as english_tests
+        rows = json.loads((ROOT / zh_fronts.TESTS_DATA).read_text(encoding='utf-8'))['tests']
+        page = zh_fronts.tests_page()[0][zh_fronts.TESTS_PAGE]
+        section = page[page.index('<a id="by-thesis"></a>'):page.index('\n## ', page.index('## 按论题') + 1)]
+        mine = [l for l in section.split('\n') if l.startswith('| ') and not l.startswith('| 论题')]
+        theirs = [l for l in english_tests.by_thesis(rows) if l.startswith('| ') and not l.startswith('| Thesis')]
+        self.assertEqual([l.split(' | ')[1:] for l in mine], [l.split(' | ')[1:] for l in theirs])
+        names = zh_fronts.thesis_names_zh()
+        self.assertEqual(names['T3'], '在有余地之处，优化耗竭其耦合之外者')
+        for t, name in names.items():
+            if any(t in r['thesis'] for r in rows):
+                self.assertIn(f'[{t}]({zh_fronts.METHOD_THESES}) {name} |', section)
+        self.assertIn(f'指明论题的检验共 {english_tests.screen_count("total")} 项', section)
+
     def test_the_landing_page_render_writes_and_times_it(self):
         import tempfile
         with tempfile.TemporaryDirectory() as tmp:
@@ -231,6 +249,17 @@ class LandingPageTests(unittest.TestCase):
         pages, errors = self.render('# 首\n\n约 {{time:RESULTS.md}}\n')
         self.assertEqual(pages, {})
         self.assertTrue(any('render writes after this one' in e for e in errors), errors)
+
+    def test_the_chinese_opening_is_timed_without_its_notes(self):
+        """{{time:opening-zh}}: the Chinese opening's body, its footnotes split off as navigation.endnotes splits the English's."""
+        from tools.research import navigation
+        text = re.sub(r'<!--.*?-->', '', (ROOT / zh_fronts.OPENING_ZH).read_text(encoding='utf-8'), flags=re.S)
+        body, _, notes = navigation.endnotes(text).partition('\n### Notes\n')
+        self.assertTrue(notes.strip())
+        self.assertNotIn('[^', body)
+        landing = (ROOT / zh_fronts.PAGE).read_text(encoding='utf-8')
+        self.assertIn(f'由 AI 译自英文版（正文约 {zh_fronts.zh_time(body)}）', landing)
+        self.assertIn(f'| 正文约 {zh_fronts.zh_time(body)}，注释另计 |', landing)
 
     def test_a_stated_time_is_kept_whole_in_a_table(self):
         (self.root / 'theories/LINEAGE.zh.md').write_text('# 长成\n\n*全文约 9–12 分钟 | 另 3 分钟。*\n', encoding='utf-8')

@@ -4,7 +4,7 @@
 
 [Home](../../../README.md) · [中文](../../../README.zh.md) · **Read** · [One page](../ONE-PAGE.md) · [The theory](../THE-THEORY-OF-BECOMING.md) · [Chapters](../chapters/README.md) · [Uses](../USES.md) · **Check** · [Tests](../../../TESTS.md) · [Results](../../../RESULTS.md) · [Proofs](../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../OPEN-QUESTIONS.md) · [Reviewers](../review/README.md) · **See** · [Graph](THEORY-GRAPH.md) · [Connections](atlas/CROSSWALK.md) · [How it grew](../../LINEAGE.md) · [Glossary](../../../GLOSSARY.md) · [Where everything is](../../../MAP.md)
 
-[中文（各章一览）](THEORY-GRAPH.zh.md) · 77–100 minutes to read in full; the chapters at a glance, what the picture shows and the edge kinds, with their tables, in 34–44 minutes.
+[中文（各章一览）](THEORY-GRAPH.zh.md) · 77–101 minutes to read in full; the chapters at a glance, what the picture shows and the edge kinds, with their tables, in 34–44 minutes.
 
 One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts, the chapter sections that state results and the review dossiers, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3220 nodes, 6892 edges. An edge records a dependence, a citation or a registered reading, not an agreement in meaning.
 
