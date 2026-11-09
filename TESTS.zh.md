@@ -4,7 +4,7 @@
 
 [English](TESTS.md) · [首页](README.zh.md) · [一页](theories/becoming/ONE-PAGE.zh.md) · [用途](theories/becoming/USES.zh.md) · [实例](theories/becoming/USES-EXAMPLES.zh.md) · [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) · [八章（英文）](theories/becoming/chapters/README.md) · [古文（第六章）](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) · **检验** · [对照表](theories/becoming/results/atlas/CROSSWALK.zh.md) · [怎样长成](theories/LINEAGE.zh.md) · [术语表](GLOSSARY.zh.md) · [审查包](theories/becoming/review/README.zh.md)
 
-*约 15–20 分钟读完。*
+*约 17–22 分钟读完。*
 
 *AI 依英文版写成，尚无人审查它的记录；义以英文版为准，英文版又以各项检验的文件夹为准。*
 
@@ -13,6 +13,23 @@
 每行链接该项检验的文件夹（英文）；那句话由 AI 读取其记录写成，是一种读法。冻结，指预测或规则定下的那一天。各项检验的结局按所在文件夹的判定归类，引文与来源在英文的全表里。论题各说什么、禁止什么，见[方法一章的论题](theories/becoming/chapters/08-METHOD.md#theses)（英文）。
 
 这里的结局按检验列出：每一行是一项检验，在它所指明的一种或几种情形之中；一个论题可以在一种情形中通过、在另一种中未通过，所以下面没有哪一行、哪一个计数是对一个论题整体的裁断（每个论题的地位，见[方法一章 §9 的表](theories/becoming/chapters/08-METHOD.md#theses)，英文）；一行归入哪一类，按下面该类标题之下写明的规则来读。
+
+<a id="by-thesis"></a>
+
+## 按论题
+
+每个论题的检验各有多少项落入各类结局（一项检验涉及两个论题，就在两处各计一次，所以各论题行相加多于指明论题的检验数；「·」表示没有）。指明论题的检验共 36 项，[首页](README.zh.md)的计数只计这些；未指明论题的 30 项列在最后一行。论题名取自[总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md)的论题表，各论题说什么、禁止什么，见[方法一章 §9](theories/becoming/chapters/08-METHOD.md#theses)（英文）。
+
+| 论题 | 未通过 | 有通过，有未通过 | 评分之前被拒绝 | 什么也没有判定 | 部分通过 | 未被拒绝 | 通过 | 由登记的规则判定 | 只作报告、没有判定 | 已冻结、尚未运行 | 暂缓、未冻结 | 运行之前放弃 | 并非本论的预测 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| [T1](theories/becoming/chapters/08-METHOD.md#theses) 持续担保联合取用 | 1 | 5 | 2 | · | · | · | · | · | · | · | · | · | · |
+| [T2](theories/becoming/chapters/08-METHOD.md#theses) 一个可更新的缘在取用之下的状态，就是它的水平、近来的给予与一个滞后，其位置在读数据之前定下 | 2 | 3 | · | 1 | · | · | 1 | · | · | · | · | · | · |
+| [T3](theories/becoming/chapters/08-METHOD.md#theses) 在有余地之处，优化耗竭其耦合之外者 | · | 11 | · | · | 1 | · | 3 | · | · | · | 1 | · | · |
+| [T4](theories/becoming/chapters/08-METHOD.md#theses) 范围可以被安装，并且它能迁移 | · | 2 | · | · | · | · | · | · | · | · | · | 1 | · |
+| [T5](theories/becoming/chapters/08-METHOD.md#theses) 次序为每一个把一切都计为正的评价者所共有 | 1 | 1 | · | · | · | · | · | · | · | · | · | · | · |
+| [T6](theories/becoming/chapters/08-METHOD.md#theses) 断裂只有经由耦合进断裂者的东西才能被预见 | · | · | · | · | · | 3 | · | · | · | · | · | · | · |
+| [T7](theories/becoming/chapters/08-METHOD.md#theses) 一个从它所选择者读出的度量，存续得比对它的驳倒更久 | · | 1 | · | · | · | · | · | · | · | · | 1 | · | · |
+| 未指明论题 | · | 2 | · | · | 1 | · | 1 | 2 | 2 | 11 | 1 | · | 10 |
 
 ## 未通过
 
