@@ -43,8 +43,26 @@ def page(rel):
     return (ROOT / rel).read_text(encoding='utf-8')
 
 
-def table_rows(text):
-    return [[c.strip() for c in line.strip('|').split(' | ')] for line in text.splitlines() if line.startswith('| **')]
+def field_sections(text):
+    """The six fields' sections under "Field by field" (the two tables until the AG review's fourth pass, 9 November 2026):
+    (name, what you can do today, the lines on what it rests on, the whole section). "Other fields" is not one of them."""
+    body = text.split('\n## Field by field\n', 1)[1].split('\n## ', 1)[0]
+    out = []
+    for chunk in body.split('\n### ')[1:]:
+        chunk = re.sub(r'(\n<a id="[^"]+"></a>)+\s*$', '', chunk.rstrip())
+        name = chunk.split('\n', 1)[0]
+        if name == 'Other fields':
+            continue
+        paras = chunk.split('\n\n')
+        do = next(p for p in paras if p.startswith('**Do today.**'))
+        lines = [l[2:] for l in chunk.splitlines() if l.startswith('- **')]
+        out.append((name, do, lines, chunk))
+    return out
+
+
+def rests_on(field, text):
+    """A field's lines on what it rests on, each opening with how far it has been seen."""
+    return next(f for f in field_sections(text) if f[0] == field)[2]
 
 
 def span(time):
@@ -59,28 +77,32 @@ def ten_minute_part(text):
     return [p for p in text.split('\n\n') if p.startswith(('**What it is.', '**One case.', '| | What', '**The ethics.'))]
 
 
-# the labels a "How it stands" line opens with, in the order a cell gives them (08's standings, shortened)
+# the labels a line on what a field rests on opens with, in the order a section gives them (08's labels, shortened)
 LABELS = ('Proved', 'Tested', 'Reading', 'Conditional', 'Argued', 'Open')
 LABEL = re.compile(r'\*\*(' + '|'.join(LABELS) + r')\b[^*]*\.\*\* ')
-FIELDS_BLOCK = '**What each field already has, and what the account adds.**'
+FIELDS_BLOCK = '## What each field already has, and what the account adds\n'
+LEGEND = 'In each field, the lines on what it rests on open with how far each part has been seen'
 
 
 def field_lines(text):
-    block = text.split(FIELDS_BLOCK, 1)[1].split('\n\n**Fields with no row.**', 1)[0]
+    block = text.split(FIELDS_BLOCK, 1)[1].split('\n## ', 1)[0]
     return [l for l in block.splitlines() if l.startswith('- **')]
+
+
+def known_intro(text):
+    """The opening of what each field already has, before its field lines."""
+    return text.split(FIELDS_BLOCK, 1)[1].strip().split('\n\n', 1)[0]
 
 
 def uses_ten_minute_parts(text):
     """The first paragraph (what the account is a map of and for; AG review, 9 November 2026), In brief, the line on the
-    labels, the table's head, and each field's row with its line on what is restated."""
+    labels, and each field's section (since the fourth pass; before it, the table's head, the field's row, the opening of
+    what each field already has and the field's line there)."""
     paras = text.split('\n\n')
     first = next(p for p in paras if p.startswith('The account is a map'))
     brief = next(p for p in paras if p.startswith('**In brief.**'))
-    legend = next(p for p in paras if p.startswith('In the column *How it stands*'))
-    head = '\n'.join(l for l in text.splitlines() if l.startswith(('| Field', '|---')))
-    block = next(p for p in paras if p.startswith('**What each field already has'))  # the block's opening, before its field lines
-    return ['\n\n'.join((first, brief, legend, head + '\n' + '| ' + ' | '.join(row) + ' |', block, line))
-            for row, line in zip(table_rows(text), field_lines(text))]
+    legend = next(p for p in paras if p.startswith(LEGEND))
+    return ['\n\n'.join((first, brief, legend, '### ' + section)) for _, _, _, section in field_sections(text)]
 
 
 def judge_audit(text):
@@ -90,72 +112,112 @@ def judge_audit(text):
 
 class UsesCells(unittest.TestCase):
     def test_what_you_can_do_is_one_plain_sentence_and_one_link(self):
-        rows = table_rows(page(USES))
-        self.assertEqual(len(rows), 6)
-        for row in rows:
-            cell = row[1]
-            self.assertEqual(len(re.findall(r'\]\(', cell)), 1, row[0])
-            self.assertLessEqual(navigation.prose_counts(cell)[0], 50, row[0])
+        fields = field_sections(page(USES))
+        self.assertEqual(len(fields), 6)
+        for name, do, _, _ in fields:
+            self.assertEqual(len(re.findall(r'\]\(', do)), 1, name)
+            self.assertLessEqual(navigation.prose_counts(do)[0], 50, name)
 
     def test_people_and_ai_cell_in_the_old_leads_shape(self):
-        row = next(r for r in table_rows(page(USES)) if r[0] == '**People and AI together**')
-        self.assertTrue(row[1].startswith('Ask of a rule people and AI share whether it reads its own share'), row[1][:60])
-        self.assertNotIn('one joint selection', row[1])
-        # what the questions are for, then whose plan and how far its direction goes (AG review, 9 November 2026)
-        self.assertIn('so that their joint selection reads beyond its share and does not select for control over itself', row[1])
-        self.assertIn('an AI-authored plan, its direction conditional', row[1])
+        name, do, lines, _ = next(f for f in field_sections(page(USES)) if f[0] == 'People and AI together')
+        self.assertTrue(do.startswith('**Do today.** Ask of a rule people and AI share whether it reads its own share'), do[:70])
+        self.assertNotIn('one joint selection', do)
+        # what the questions are for, as GOALS' current goal says it (AG review, fourth pass, 9 November 2026: not "does not
+        # select for control over itself", the wording AJ5 replaced on 29 October), then whose plan and how far its direction goes
+        self.assertIn("so that, where shaping it is selected, it still reads beyond the shapers' share and a loss there can turn it",
+                      do)
+        self.assertNotIn('control over itself', do)
+        self.assertIn('an AI-authored plan', next(l for l in lines if l.startswith('**Reading.** The three questions')))
+        self.assertIn('conditional on the continuation condition', next(l for l in lines if l.startswith('**Conditional.**')))
 
-    def test_no_undefined_symbols_in_the_table(self):
-        table = '\n'.join(l for l in page(USES).splitlines() if l.startswith('|'))
-        for name in ('`hi`', '`lo`', '`c`'):
-            self.assertNotIn(name, table)
+    def test_no_undefined_symbols_in_the_fields(self):
+        for name, do, lines, _ in field_sections(page(USES)):
+            for symbol in ('`hi`', '`lo`', '`c`'):
+                self.assertNotIn(symbol, do + '\n'.join(lines), name)
 
     def test_standings_named(self):
         text = page(USES)
         for phrase in ('none shown to hold of an actual collective', 'The matching proves no coverage of wisdom',
-                       '**Nothing claimed** of how a person develops or fares', '[AI reading, [D45](', '[[D26](', '[[D65](', 'DELEGATED-CHOICES.md#d45-', 'DELEGATED-CHOICES.md#d65-', 'DELEGATED-CHOICES.md#d26-', '[J1–J4](chapters/08-METHOD.md#premise-card)',
+                       'Of how a person develops or fares the account says nothing yet', '[AI reading, [D45](', '[[D26](', '[[D65](', 'DELEGATED-CHOICES.md#d45-', 'DELEGATED-CHOICES.md#d65-', 'DELEGATED-CHOICES.md#d26-', '[J1–J4](chapters/08-METHOD.md#premise-card)',
                        'USES-EXAMPLES.md#auditing-a-language-model-judge', 'review/ALIGNMENT.md#the-dossier-in-ten-minutes'):
             self.assertIn(phrase, text)
         top = text.split('## Field by field')[0]
         self.assertIn('USES-EXAMPLES.md', top)
         self.assertIn('review/ALIGNMENT.md#the-dossier-in-ten-minutes', top)
 
+    def test_what_is_not_claimed_is_no_column(self):
+        """What is not claimed is said where a reader of a field would otherwise believe it, not as a column or a bold lead
+        (AG review, fourth pass, on the third pass's cold readings), and the making is said once, in the last section."""
+        text = page(USES)
+        self.assertNotIn('Not claimed', text)
+        self.assertNotIn('**Nothing claimed**', text)
+        self.assertNotIn('that is not a finding that', text)
+        self.assertNotIn("no person's review", text)
+        last = text.split('## What this page does\n', 1)[1]
+        self.assertEqual(text.count('no independent human review is recorded yet'), 1)
+        self.assertIn('the person who directs the work has read its important parts, and no independent human review is '
+                      'recorded yet', last)
+        for anchor in ('the-full-table', 'exits-and-design-laws-at-their-standing', 'what-this-page-does-not-do'):
+            self.assertIn(f'<a id="{anchor}"></a>', text)
+
+    def test_the_map_and_the_aim_as_their_homes_say_them(self):
+        """The meta-attractor in the folder's words, its closed form as 02 §9 proves it; the aim as GOALS' current goal; whether
+        a loss counts forming within becoming, the laws not settling it (AG review, fourth pass, 9 November 2026)."""
+        text = page(USES)
+        first = next(p for p in text.split('\n\n') if p.startswith('The account is a map'))
+        for phrase in ('how winning comes to buy power over the rule that selects: the loop the work calls the '
+                       '[meta-attractor](../meta-attractor/README.md), proved to lock, on stated models, where the rule and how '
+                       'it is read are both formed from the share it selects ([02 §9](chapters/02-MAP.md#r-closed-capture))',
+                       'falls into neither instrumental convergence nor the meta-attractor: where shaping its rule is selected, '
+                       "the rule still reads what lies beyond the shapers' share, so that a loss there can turn it "
+                       '([the goal](../../GOALS.md#generative-alignment))'):
+            self.assertIn(phrase, first)
+        self.assertNotIn('control over its own selection', text)
+        brief = next(p for p in text.split('\n\n') if p.startswith('**In brief.**'))
+        self.assertIn('There is no should beyond becoming ([the opening](OPENING.md))', brief)
+        self.assertIn('form within it too, in what people and AI come to read ([07 §1](chapters/07-SIGNIFICANCE.md#evaluation))',
+                      brief)
+        self.assertNotIn('is not in the laws', text)
+        self.assertIn('the thesis that everything, standards included, forms within one relational unfolding '
+                      '([08](chapters/08-METHOD.md#one-relational-unfolding))',
+                      next(p for p in text.split('\n\n') if p.startswith(LEGEND)))
+
 
 class HowItStands(unittest.TestCase):
-    """The "How it stands" cells, 66 to 179 words of one run at the start of RW's fifth round, are labelled lines."""
+    """The lines on what each field rests on (the "How it stands" cells until the AG review's fourth pass; 66 to 179 words of
+    one run at the start of RW's fifth round) are labelled lines."""
 
     def test_each_line_opens_with_its_standing(self):
-        for row in table_rows(page(USES)):
-            lines = row[2].split('<br>')
-            self.assertGreaterEqual(len(lines), 2, row[0])
+        for name, _, lines, _ in field_sections(page(USES)):
+            self.assertGreaterEqual(len(lines), 2, name)
             order = []
             for line in lines:
                 m = LABEL.match(line)
-                self.assertIsNotNone(m, (row[0], line[:50]))
+                self.assertIsNotNone(m, (name, line[:50]))
                 order.append(LABELS.index(m.group(1)))
-                self.assertLessEqual(navigation.prose_counts(line)[0], 90, (row[0], line[:50]))  # 85 at most when split
-            self.assertEqual(order, sorted(order), row[0])
+                self.assertLessEqual(navigation.prose_counts(line)[0], 90, (name, line[:50]))  # 85 at most when split
+            self.assertEqual(order, sorted(order), name)
 
     def test_labels_defined_before_the_table(self):
         text = page(USES)
-        legend = next(p for p in text.split('\n\n') if p.startswith('In the column *How it stands*'))
+        legend = next(p for p in text.split('\n\n') if p.startswith(LEGEND))
         self.assertIn('chapters/08-METHOD.md#standings-and-bases', legend)
-        used = {LABEL.match(line).group(1) for row in table_rows(text) for line in row[2].split('<br>')}
+        used = {LABEL.match(line).group(1) for _, _, lines, _ in field_sections(text) for line in lines}
         for label in used:
             self.assertIn(f'**{label}**', legend)
-        self.assertLess(text.index(legend), text.index('| Field |'))
+        self.assertLess(text.index(legend), text.index('\n### '))
 
     def lines(self, field):
-        return next(r for r in table_rows(page(USES)) if r[0] == f'**{field}**')[2].split('<br>')
+        return rests_on(field, page(USES))
 
     def test_no_proved_line_carries_what_is_not_proved(self):
         """A "Proved." line holds no premise of the ethics, nothing not shown and no reading (RW's fifth round: the Wisdom
         row's line and C's clause in Human development were labelled Proved)."""
-        for row in table_rows(page(USES)):
-            for line in row[2].split('<br>'):
+        for name, _, lines, _ in field_sections(page(USES)):
+            for line in lines:
                 if LABEL.match(line).group(1) == 'Proved':
-                    for word in ('not shown', "C's", 'AI reading', "AI's"):
-                        self.assertNotIn(word, line, (row[0], word))
+                    for word in ('not shown', "C's", 'AI reading', "AI's", 'a reading'):
+                        self.assertNotIn(word, line, (name, word))
 
     def test_wisdom_row_has_no_proved_line(self):
         lines = self.lines('Wisdom traditions')
@@ -177,20 +239,21 @@ class HowItStands(unittest.TestCase):
 
     def test_legend_says_its_labels_are_shortened(self):
         text = page(USES)
-        legend = next(p for p in text.split('\n\n') if p.startswith('In the column *How it stands*'))
+        legend = next(p for p in text.split('\n\n') if p.startswith(LEGEND))
         self.assertIn("shortened from [08's labels](chapters/08-METHOD.md#standings-and-bases)", legend)
         self.assertNotIn("in [08's labels]", legend)
         for phrase in ('**Proved** for a Theorem on its base', '**Tested** for a Thesis T*n*',
-                       '**Reading** for a Reading, an AI reading, and here also for an AI review or an Assessment',
+                       '**Reading** for a Reading, and here also for an AI review or an Assessment',
                        '**Conditional** as in 08', '**Argued** for a Thesis (philosophical)', '**Open** as in 08'):
             self.assertIn(phrase, legend)
-        standings = section(page(METHOD), '## 2. Standings and bases', '<a id="four-layers">')
+        # 08 §2 by its anchor, whose heading the AG review may rename (it named "standing" as a label)
+        standings = section(page(METHOD), '<a id="standings-and-bases">', '<a id="four-layers">')
         for label in ('| **Theorem** (root)', '| **Conditional.** |', '| **Thesis T*n*.** |', '| **Thesis** (philosophical) |',
                       '| **Reading** [AI reading', '| **Assessment.** |', '| **Open.** |'):
             self.assertIn(label, standings)
 
     def test_la2_judge_a_language_model_judging_in_context(self):
-        cell = next(r for r in table_rows(page(USES)) if r[0] == '**Alignment of AI systems**')[2]
+        cell = '\n'.join(rests_on('Alignment of AI systems', page(USES)))
         for phrase in ('a language model judging in context (formation by training untested)', 'as worded before its clause on drift',
                        "T7's other cases untouched", 'which it does not meet', 'T7: conjectured',
                        'USES-EXAMPLES.md#auditing-a-language-model-judge'):
@@ -245,8 +308,8 @@ class WhatEachFieldAdds(unittest.TestCase):
     def test_one_line_per_field_in_the_tables_order(self):
         text = page(USES)
         names = [re.match(r'- \*\*(.+?)\.\*\*', l).group(1) for l in field_lines(text)]
-        self.assertEqual(names, [r[0].strip('*') for r in table_rows(text)])
-        self.assertIn('chapters/08-METHOD.md#known-results', text.split(FIELDS_BLOCK, 1)[1].split('\n', 1)[0])
+        self.assertEqual(names, [f[0] for f in field_sections(text)])
+        self.assertIn('chapters/08-METHOD.md#known-results', known_intro(text).split('\n', 1)[0])
 
     def test_each_line_says_what_is_restated_and_what_is_added(self):
         for line in field_lines(page(USES)):
@@ -278,7 +341,7 @@ class WhatEachFieldAdds(unittest.TestCase):
         self.assertEqual(len(claims), 2)
         for line in claims:
             self.assertIn('Claimed beyond the field, known in substance as ', line, line[:40])
-        intro = uses.split(FIELDS_BLOCK, 1)[1].split('\n', 1)[0]
+        intro = known_intro(uses)
         self.assertIn('chapters/08-METHOD.md#what-the-unifications-claim', intro)
         self.assertIn('read as a correspondence, a unification adds no theorem', intro)
 
@@ -301,8 +364,8 @@ class WhatEachFieldAdds(unittest.TestCase):
         line = self.fields()['Wisdom traditions']
         self.assertNotIn('credited there to the sciences', line)
         for phrase in ("08's review read the laws against the literature it knew",
-                       'so that is not a finding that a tradition has none of these results',
-                       "That these are among the credits falling on those laws is this page's AI reading",
+                       'so whether a tradition holds these results is not settled there',
+                       "That these are among the credits falling on those laws is this page's reading",
                        'to Hume; to Fine and Wilf (1965); to Moore (1956); and to Gold (1967).',
                        'BECOMING-TWENTY-FIRST-REVIEW.md#5-how-the-traditions-and-the-sciences-map-onto-it'):
             self.assertIn(phrase, line)
@@ -425,7 +488,11 @@ class AuditSheet(unittest.TestCase):
         # said once each where the audit is (AG review, 9 November 2026): the test not yet run, the page's review line
         audit = section(self.text, '### Auditing a language-model judge', '### The judge audit as a sheet')
         self.assertIn('no test designed from the theory on a deployed pipeline has run', audit)
-        self.assertIn("no person's review of this page is recorded", self.text.split('## ', 1)[0])
+        # the making, said once, in the line on how far each example has been seen (AG review, fourth pass, D5)
+        head = self.text.split('## ', 1)[0]
+        self.assertIn('the person who directs the work has read its important parts, and no independent human review is '
+                      'recorded yet', head)
+        self.assertNotIn("no person's review", head.split('-->', 1)[1])
         self.assertIn('it does not say the law is false. Where a row says so, an answer may instead count against a '
                       "conjecture (T3's clause, in row 3).", self.sheet)
 
@@ -505,9 +572,9 @@ class StatedTimes(unittest.TestCase):
 
     def test_stated_times_are_computed_times(self):
         uses = page(USES)
-        self.assertEqual(self.stated(uses, r'\*([A-Za-z-]+) to ([A-Za-z-]+) minutes to read, the table'), span(navigation.reading_time(uses)))
-        table = '\n'.join(l for l in uses.splitlines() if l.startswith('|'))
-        self.assertEqual(self.stated(uses, r'the tables? ([A-Za-z-]+) to ([A-Za-z-]+) of them'), span(navigation.reading_time(table)))
+        # the page has no table since the AG review's fourth pass, so no time of its tables is stated
+        self.assertEqual(self.stated(uses, r'\*([A-Za-z-]+) to ([A-Za-z-]+) minutes to read\. '), span(navigation.reading_time(uses)))
+        self.assertNotRegex(uses, r'the tables? [A-Za-z-]+ to [A-Za-z-]+ of them')
         for rel in (EXAMPLES, ONE_PAGE):
             text = page(rel)
             self.assertEqual(self.stated(text, r'\*([A-Za-z-]+) to ([A-Za-z-]+) minutes to read'), span(navigation.reading_time(text)), rel)
@@ -518,8 +585,7 @@ class StatedTimes(unittest.TestCase):
 
     def test_uses_names_a_ten_minute_part(self):
         line, text = self.time_line(), page(USES)
-        self.assertIn('The ten-minute part: the first paragraph, **In brief**, the line on the labels, your field\'s row, the opening of '
-                      '**What each field already has** and your field\'s line under it', line)
+        self.assertIn("The ten-minute part: the first paragraph, **In brief**, the line on the labels and your field's section", line)
         parts = uses_ten_minute_parts(text)
         self.assertEqual(len(parts), 6)
         longest = max(parts, key=lambda p: navigation.prose_counts(p)[0])
@@ -534,8 +600,9 @@ class StatedTimes(unittest.TestCase):
         path = span(navigation.reading_time(uses + '\n\n' + judge_audit(page(EXAMPLES))))
         self.assertEqual(self.stated(line, r'\(([A-Za-z-]+) to ([A-Za-z-]+) minutes at the most\)'), path)
         # A stated time is a guide, not a bound: "一小时也不是最重要的，如果做不到，追求完整表达即可" (Ren, 9 November 2026,
-        # sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, message 8). The path kept its complete text at
-        # 49–64 minutes and is said as about an hour; this guards only that "about" stays true.
+        # sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, message 8). The path keeps its complete text, at
+        # 47–61 minutes since the fourth pass (49–64 before it), and is said as about an hour; this guards only that "about"
+        # stays true.
         self.assertLessEqual(path[-1], 65)
         for example in re.split(r'\n(?=### )', page(EXAMPLES))[1:]:  # any one example with the page stays within it
             example = re.split(r'\n(?=## )', example)[0]

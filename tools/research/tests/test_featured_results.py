@@ -378,6 +378,13 @@ class FirstScreenTests(unittest.TestCase):
         self.assertNotIn('\n#', '\n' + screen)
         self.assertIn('fixes scope', screen)  # both readings with their roles (WB, 9 November 2026: the account names the readings it ranks under)
         self.assertIn('gives order', screen)  # not 'alone': 07's own theorem has self-concern rank one case with no C
+        # the aim as GOALS#generative-alignment and AJ's plan §1 state it, not the wording AJ5 replaced on 29 October
+        # (it forbids accountable revision whose capacity is rewarded); the meta-attractor's closed form at 02 §9; and
+        # whether a loss counts said as forming within becoming, not as a reading attached to neutral laws (07 §1)
+        self.assertNotIn('control over its own selection', screen)
+        self.assertIn("the rule still reads what lies beyond the shapers' share", screen)
+        self.assertIn('02-MAP.md#r-closed-capture', screen)
+        self.assertNotIn('not in the laws but in a reading', screen)
         self.assert_making_said_once(screen)
         self.assertIn('The work was made with AI', screen)
         self.assertIn('the person who directs it has read its important parts', screen)

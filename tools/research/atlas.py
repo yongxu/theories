@@ -646,8 +646,10 @@ def _atlas_lead(at: str) -> str:
             f'([vocabulary]({_href(VOCABULARY, at)}), [entries]({_href(ENTRIES, at)})); it creates no result and strengthens no '
             "proof. It holds no standing of its own: an entry shows each of its records' status and kind as the record says, "
             'never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, '
-            "and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. No "
-            'entry marks a dynamic good or bad; what one does to what lies beyond its couplings is under *Beyond its couplings*.')
+            "and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. The "
+            'atlas maps dynamics: whether what one opens or closes is better is '
+            f"[chapter 7's question]({_href('theories/becoming/chapters/07-SIGNIFICANCE.md', at)}), so no entry marks a dynamic "
+            'good or bad, and what one does to what lies beyond its couplings is under *Beyond its couplings*.')
 
 
 def _family_table(listed: list, homes: dict, here: str, keep: dict | None = None) -> list[str]:
@@ -697,7 +699,6 @@ def _entry(d: dict, names: dict, homes: dict, here: str) -> list[str]:
             *items('Tests', [f'[{t["path"]}]({_href(t["path"], at)}): {t["thesis"]}, {t["state"]}' for t in d['tests']]),
             *items('Open', [f'{_line(o)} ({_source(o["source"], at)})' for o in d['open']]),
             f'- **Beyond its couplings.** {_line(d["beyond"]) if d["beyond"] else "Not stated."}',
-            f'- **Valence.** {d["valence"]}',
             '- **Sources.** ' + (', '.join(_source(s, at) for s in d['sources']) or 'None.'), '']
 
 
@@ -1035,7 +1036,7 @@ def crosswalk_zh_page(atlas: dict) -> str:
             + '，'.join(f'{ZH_CARRIED.get(k, k)} {n:,}' for k, n in carried.items()) + '。按关系：'
             + '，'.join(f'{zh} {n:,}' + (agreement if key == 'agreement' else '') for key, (zh, n) in relation.items()) + '。' + _no_relation_zh(entries, relation) + '只有一个目标所承载的才算作连接。', '',
             '**离中文文本最近的两个领域。**', '', *domains, '',
-            f'**全部 {len(groups)} 组**，每组一页，都在英文页上：它以自己的话主张了什么，在现行的本论中成了什么，以及每一条的目标与地位。'
+            f'**全部 {len(groups)} 组**，每组一页，都在英文页上：它以自己的话主张了什么，在现行的本论中成了什么，以及每一条的目标与各目标看到的程度。'
             f'下表列出每一组的条数，按结局与按关系各计（组名为 AI 所译，有的有所缩短；[英文索引](CROSSWALK.md#the-groups)有这些计数，并把相合再分为与已检查之律、与论题或方法、与一种读法相合三种）：', '',
             *_groups_zh(groups, vocabulary), '']
     body = _finish(out)

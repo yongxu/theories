@@ -1,0 +1,103 @@
+{
+ "agent": "pass4 verify-zhterm (AI-written, Claude, 9 November 2026): an adversarial check of zhterm's fourth-pass changes (the Chinese term for how far a claim has been seen, the glossary's 元吸引子 row by D1, 06's labels and time, spine.py/spine.json, zh_fronts.py, lineage.json), with fixes; nothing rendered, built or committed",
+ "changed": [
+  "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+  "theories/becoming/review/CLASSICAL-TEXTS.md",
+  "GLOSSARY.zh.md",
+  "theories/becoming/results/data/lineage.json",
+  "theories/becoming/results/data/tests.zh.json",
+  "tools/research/spine.py",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass4-verify-zhterm.json"
+ ],
+ "items": [
+  {
+   "item": "zhterm's changes, checked against their homes",
+   "done": true,
+   "how": "Held. The GLOSSARY.zh 元吸引子 row mirrors the English row and D1: the folder's loop first, linked; its closed form as 02 §9's definition (02 line 406), proved to lock on stated models (#r-closed-capture, lock_outlives_loss); the second order (#r-shaping-selected-among-groups); 02's readings labelled [AI 读法，D26、D45]; the GENERATIVE-REGIMES definition is not presented; and the lock is not called the meta-attractor. Its wording 胜出换来左右选择规则之力量 is the fronts' (README-ZH, research-config). The 根之边 row's four places match 08 §7's list. 06's 127–165 minutes is what navigation.reading_time counts, said once. §7.3's “此本称为四种‘地位’” is true: the Zhonghua edition calls its four kinds 地位 (lines 47, 54, 88). spine.json's T8 title matches the overview's T8 cell. lineage's pinned evidence holds the quote at 70276b2f9 line 66. The kept 地位 uses in lineage are the timeline's social position and Ren's own word (message 7: 地位在map中). No Ren verbatim, OPENING body, AGENTS.md or generated page was edited. Nav lines are intact, and the old anchor 地位 plus standing and 看到了多远 are kept."
+  },
+  {
+   "item": "06: 地位 still used as a label at lines 581 and 628 (medium; fixed)",
+   "done": true,
+   "how": "zhterm left both, citing a quote and a dossier, but neither binds the sentence. correspondences.json's quote of 581 is already stale: it has an older wording that 06 no longer holds. The dossier uses 地位之相分 in its own reading and in C-37's heading; it does not quote 628. Changes: 581's 这是地位上的相分 → 所分在如何持有. 628's **地位之相分。** … （戊，地位） → **如何持有之相分。** … （戊，如何持有）. The new words are the dossier's own gloss: tradition states it as a recognized fact, and the account holds it under the continuation condition plus the invariance step. That is a matter of how it is held, not how far it has been seen. Dossier: the C-37 heading 程颢、阳明之地位 (which in Chinese reads as their social status) → 程颢之一体、阳明之良知, with its old slug kept as <a id>. Its （地位之相分） is dropped and 所分在如何持有 stays. No record cites 06 by anchor. test_review_packet passes."
+  },
+  {
+   "item": "lineage.json: the whitepaper entry restated the glossary and ethics as they no longer stand (medium; fixed)",
+   "done": true,
+   "how": "In paper-generative-foundations-whitepaper, stands (en and zh) said four things. The glossary keeps meta-attractor 'as \"closed capture\"', which under D1 is the closed form presented as the meta-attractor. It says it '\"never means the corpus's working definition\"', which was gone from GLOSSARY.md before this pass. The live ethics 'names two unasserted premises', the old frame. And the glossary gives 生生 as 'life in the whole and its continuing generation'. The current glossary and ethics say none of these. Now: the glossary gives meta-attractor as \"the loop in which winning comes to buy power over the rule that selects\", its closed form 02 §9's definition, proved to lock on stated models. The live ethics names the two readings most rankings use, each a scope or an order some formations hold (07 §4 added to stands_basis). The glossary gives 生生 as \"the continuation of life\". The Chinese says the same. The terms agent did not list this, and lineage.check does not read stands. lineage.check is empty."
+  },
+  {
+   "item": "lineage.json: zhterm's re-pinned 08 quote (low-medium; fixed)",
+   "done": true,
+   "how": "The Chinese 当时方法章中编号的论题 dated the row's wording to the point's time, 20–21 October. The row entered 08 on 23 October (0d7a397a5), so it is now 方法章中编号的论题，曾各自陈述. label_why said 'as it stood before 9 November 2026 (commit 70276b2f9)', but 70276b2f9 is itself from 9 November (11:19 +0700). It now says 'at commit 70276b2f9 (9 November 2026), before that row's \"with its standing\" became \"with how far it has been seen\"'."
+  },
+  {
+   "item": "GLOSSARY.zh 看到了多远 row: mirror and marking (low; fixed)",
+   "done": true,
+   "how": "2026 年 11 月 9 日之前 → 直到 2026 年 11 月 9 日, as the English says 'until'. The Chinese-only content is now marked （中文版所加：…） as the 锁定 row's addition is: the earlier translation 地位 and its social sense, how to write the term, and that the edge's 位置 is another thing. The glossary says the English governs, so additions are marked."
+  },
+  {
+   "item": "tests.zh.json IN1 gloss: 地位 in the how-far sense (low; fixed)",
+   "done": true,
+   "how": "T4 在 07 和 08 中的地位按模型分别计算 → 07 和 08 记 T4 看到了多远时，按模型分别计算，记为部分通过. No agent holds the file. Its en check field is unchanged. zh_fronts.tests_page renders with no errors and no 地位."
+  },
+  {
+   "item": "spine.py: English uses of 'standing' in the theses sense (low; fixed)",
+   "done": true,
+   "how": "These are D7's sense in a file zhterm changed: WORDS['en']['theses_note'] 'its standing and its tests' → 'how far it has been seen and its tests'. The theses lead 'its standing first' → 'saying first how far it has been seen'. The closing 'standing first' → 'saying first how far each has been seen'. This mirrors the Chinese 先说各自看到了多远. The edge sense ('standings against the edge of one root') stays, as 08 §7 keeps it. spine.render gives no errors, and test_spine passes."
+  },
+  {
+   "item": "06 基与标: the labels table linked without its section (low; fixed)",
+   "done": true,
+   "how": "依[第八章](08-METHOD.md)的标签表 → 依[第八章 §2](08-METHOD.md#standings-and-bases)的标签表. The anchor exists. moves.check_links on 06, the dossier and GLOSSARY.zh finds 454 links and 0 broken."
+  },
+  {
+   "item": "Checks run",
+   "done": true,
+   "how": "At load 14 to 29. spine.check [] and lineage.check []. spine.render gives no errors and five pages, none with 地位. zh_fronts.tests_page gives no errors. Single files under unittest: test_spine OK (twice), test_lineage OK, test_classical_verifiers OK, test_links OK, test_style OK (1 skipped), test_navigation_pages OK, test_review_packet OK (3). test_chinese_fronts passes 26 of 27. The one red, test_the_chinese_opening_is_timed_without_its_notes, is README.zh.md not yet re-rendered, the same one zhterm and pass 3 recorded. 06 recounted: 127–165 minutes after the edits. No make, render, gate, lake or build was run. The full suite is deliberately deferred."
+  }
+ ],
+ "left": [
+  {
+   "item": "06 family table: the column head 看到了多远 over values such as 新, 推论, 定义之展开, 模型之前提 (low)",
+   "why": "The values are kinds of result. 新 (a new law) under 'how far seen' reads oddly. A head such as 标 (the chapter's own word for its labels) or 何种结果 would fit the cells more exactly. The glossary's rule (看到了多远 as a column head) was followed, so this is the coordinator's choice."
+  },
+  {
+   "item": "06's header time is written in digits: 约 127–165 分钟读完 (low)",
+   "why": "The hand-written zh fronts write Chinese numerals (约六十二至八十分钟; 约五十三分钟至一小时九分钟). The generated pages and README-ZH's {{time:…}} use digits. The figure is right either way."
+  },
+  {
+   "item": "06's opening says the making more than once (low; pre-existing, not zhterm's)",
+   "why": "在整幅地图中 ends with 归类、对应与读法都是 AI 所为. 基与标 ends with 本章的读法都是 AI 读法. 本章所在 says 尚待之人审. 06 is a chapter, not a front, so D5 may not reach it."
+  },
+  {
+   "item": "06 line 508 and the dossier's line 582: 体例、地位与对照之名; 06 §7.3's “地位” (kept)",
+   "why": "Here 地位 is the Zhonghua edition's own word for its four kinds, and §7.3 quotes it. 508 restates the history chapter (CIVILIZATION-THOUGHT-AND-BECOMING line 208, not to be edited). If re-said, change 508 and the dossier's 582 together, for example to 体例、四种“地位”与对照之名."
+  },
+  {
+   "item": "correspondences.json (and atlas.json and the crosswalk after render): the 06 王阳明 quote",
+   "why": "It quotes an older 06 wording (…理论只在一个不断言的条件之下持有相近的内容，这是地位上的相分) that 06 no longer held before this pass. 06 now ends that sentence with 所分在如何持有. It is the onepage agent's file this pass. Re-quote it from 06 when that agent is done."
+  },
+  {
+   "item": "D7-sense 'standing' or 地位 in files neither zhterm nor I hold",
+   "why": "atlas.py line 1039 (每一条的目标与地位) and connection_map.py line 442 are the terms agent's files. tests.json's English IN1 gloss ('T4's standing in 07 and 08…') and tests_page.py line 242 ('method §9's table gives each thesis's standing') are English. USES.zh.md writes 看到多远 where the other fronts and the glossary write 看到了多远 (the uses agent's file). spine.py's docstrings (lines 22 and 1258) are internal."
+  },
+  {
+   "item": "Data keys kept under D7",
+   "why": "spine.json's standing and counts_zh. The edge record's boundary.standings and its standing values, which THEORY-GRAPH.zh shows as `boundary.standings`. spine.py's STANDING_FILL and standings_svg. The pictures standings.svg and standings.zh.svg. lineage.json's stands, stands_basis and words.zh.stands. GLOSSARY.zh's anchors standing and 地位, and the dossier's old-slug anchor c-37-…之地位."
+  },
+  {
+   "item": "Record drift: conditional-laws-of-the-corpus pins 06",
+   "why": "Its reviewed sha of 06 matches main 70276b2f9. 06 had already drifted at the AG branch's merge 7d7fd963f. The record cites 06 by no anchor, so registry.scoped_drift counts every edit, zhterm's and mine included. The reviewed hash is renewed at landing (the coordinator's)."
+  },
+  {
+   "item": "zh-editions and cross-agent rechecks",
+   "why": "After GLOSSARY.md is final, the coordinator runs python3 -B tools/research/zh_fronts.py --revised GLOSSARY.zh.md. Run spine.check and lineage.check again once the onepage and terms agents are done. The spine.zh T8 title quotes the overview's T8 cell, and lineage quotes 08, the glossary and ONE-PAGE."
+  }
+ ],
+ "for_ren": [
+  "The Chinese word for how far a claim has been seen. 看到了多远 is the name and column head. In prose it stays a clause, and 看到的程度 is used where a noun is needed. A central declaration's standing against the root's edge is 位置, a place. GLOSSARY.zh says once, marked as a Chinese-edition addition, that the earlier translation was 地位, which in Chinese mostly means social status.",
+  "06's divergence on 程颢 and 阳明 was called 地位之相分 and is now 如何持有之相分 (所分在如何持有, the dossier's own gloss). Tradition states it as a recognized fact; the account holds similar content under the continuation condition plus the step of invariance. The dossier's C-37 heading, 程颢、阳明之地位, read in Chinese as their social status; it is now 程颢之一体、阳明之良知.",
+  "The lineage's reading of the whitepaper said the glossary defines the meta-attractor as closed capture and that the ethics names two unasserted premises. It now says what the glossary and the ethics say today.",
+  "The glossary's 元吸引子 row follows D1. The folder's loop is the meta-attractor. Its closed form is 02 §9's definition, proved to lock on stated models. The lock alone is not the meta-attractor."
+ ]
+}

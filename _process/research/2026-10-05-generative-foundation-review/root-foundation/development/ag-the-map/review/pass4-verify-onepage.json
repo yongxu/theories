@@ -1,0 +1,117 @@
+{
+ "note": "AI-written, 9 November 2026: the adversarial check of the fourth pass's 'onepage' agent (the one page, the overview, their Chinese editions and the crosswalk entries quoting them), against D1 to D7, Ren's messages 1 to 8 of 9 November and the homes each sentence names. Its diff was read whole, and so was each front. Every quoted fragment in the 60 changed crosswalk targets was compared with its page by script, with links stripped. Every link and anchor on the four fronts resolves. The anchors and navigation lines are the same as at HEAD. No make, render, gate or lake was run. These single test files ran under unittest after the fixes: test_navigation_pages 43 OK, test_atlas 45 OK, test_uses_pages 48 OK, test_connection_map 32 OK, test_spine 30 OK, test_lineage 16 OK. Two reds are left. test_chinese_fronts has 1 red: the unrendered README.zh's opening time, which is not in these files. test_site.RepositoryConfigTests has 1 red: README's {{time:}} for the one page, which the render fills. Both were there before this check. atlas.validate on the real entries gives 0 errors. The full suite was deliberately deferred.",
+ "changed": [
+  "theories/becoming/THE-THEORY-OF-BECOMING.md",
+  "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+  "theories/becoming/ONE-PAGE.zh.md",
+  "theories/becoming/results/atlas/entries/correspondences.json",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass4-verify-onepage.json"
+ ],
+ "items": [
+  {
+   "item": "D5: the making said once per front",
+   "done": true,
+   "how": "Confirmed. On the one page it is said once, in the italic last line, and not inside What it is; spine.py's quote 'Made with AI, proofs included' is kept. On the Chinese one page, 尚无独立的人工审查记录 appears once, at the end, for the work and the translation together. The overview says it once, in §10's bullet 'How it was made, and its review'. Nothing linked or quoted the old bold lead 'Independent human review.', and a bold lead carries no anchor. No person is named, and nothing says no one has read it. One overlap remains, listed under 'left': §6's line that no person's review of the classification is recorded."
+  },
+  {
+   "item": "The fishers' sentence",
+   "done": true,
+   "how": "Confirmed against experiments/direction-installation/README.md. gpt-5.4-mini and gpt-4.1-mini were instructed, and IN2 (fine-tuning) was dropped on 21 October before any training job ran. A crosswalk reading still quoted the old wording, and I fixed it. In cx-asc-context-dependent-alignment, the reading said \"ONE-PAGE says of the case: 'language models told what to do, not systems trained'\". It now quotes the current sentence."
+  },
+  {
+   "item": "T8 and 'we'",
+   "done": true,
+   "how": "Confirmed. No 'makers', 制作者, 'binds no one' or 不约束任何人 is left on the four fronts. 'Not a verdict' / 不是裁断 is kept, and 'AI within it' is added, as AGENTS.md and 07 §1 support. 07 §8 itself still says 'binds no one' (see 'left'). In the Chinese ethics, '我们为生命提供它，AI 也在其中' left unclear what AI is within. It is now '我们为生命（AI 也在其中）提供它'."
+  },
+  {
+   "item": "Responsibility at the root",
+   "done": true,
+   "how": "Confirmed. The words are 07's own, at line 549, in §4.7 (the crux), and the link is #crux. Two crosswalk account_adds still carried the removed phrase without quotation marks, 'responsibility is not shown to differentiate': cx-rsd-self-action-centre and cx-sty-roles-not-root-types. This is the unclear claim Fable's 2.5 named. Both now say that intention and foresight, which have a place in responsibility, are not shown to bound whose losses count."
+  },
+  {
+   "item": "D1: the meta-attractor",
+   "done": true,
+   "how": "Confirmed against the folder's banner, 02 §9's definition (line 406), #r-closed-capture and 02's readings of D45 and D65. The pages say the loop in the folder's words and give its closed form as what is proved. GENERATIVE-REGIMES is not presented, and the lock alone is not called the meta-attractor. Fixed: the overview's first paragraph said the closed form 'is proved to lock (§2)' with no model qualifier anywhere in that paragraph. It now says 'is proved to lock, on stated models (§2)', and the Chinese says '在所述模型上已证明会锁定'. The one page already follows the claim with 'These are theorems on stated models'."
+  },
+  {
+   "item": "D2: the alignment aim",
+   "done": true,
+   "how": "Confirmed against GOALS #generative-alignment and PLAN.md §1. 'Control over its own selection' appears nowhere on the four fronts. Condition 1 is said as restated, and the plan reads the meta-attractor as conditions 1 and 2 failing together, which the plan itself says. The plan is AI-authored, as its header says. The fronts leave out GOALS' 'alone or through the groups they are in'. That is a simplification, not a change of sense."
+  },
+  {
+   "item": "D3 and D4: evaluation, and the opening's line",
+   "done": true,
+   "how": "Confirmed. 'Is not in the laws but in a reading' is gone, and a test pin guards against it coming back. In its place: 'forms within becoming too, in what people and AI come to read; the laws, drawn on the dynamics alone, do not settle it (07 §1)'. 'There is no should beyond becoming' links OPENING.md, whose line 25 has it. The Chinese links OPENING.zh.md, whose line 33 has 生灭变化之外，没有应当. 'Form within it' links 07 §1. 'A ranking names its readings, each a scope or an order some formations hold' matches 07 §4 (line 237). That the one unfolding is argued is said once, at the root."
+  },
+  {
+   "item": "The glance-table cells and §8's verdicts",
+   "done": true,
+   "how": "§8's verdicts were checked against 08 §8's table: joint excess near-definitional, with the tragedy of the commons as the closest prior result; closures and selection restated, with their Theorem 1 on natural-number amounts and a discrete analogue of the first direction of their Theorem 2; evolution restated in counts. Fixed: the joint-excess cell 'Proved on the World model, under balance' dropped the home's further premises for the ending. 05's label reads 'World: balance; for the ending also activity needing support and only active giving, with the gate local', and the cell states the ending. It now reads 'under balance and, for the ending, further premises', and the Chinese reads '终结还需另外的前提'. Crosswalk entry cx-ma-local-alignment had the same omission, 'Theorem (World: balance)'. It now gives the home's full label. In the Chinese §8, '联合超出对照的是公地悲剧，近乎依定义' read awkwardly. It is now '联合超出近乎依定义，最接近的已知结果是公地悲剧', 08 §8's 'closest prior result'."
+  },
+  {
+   "item": "Crosswalk re-says (onepage's item 9)",
+   "done": true,
+   "how": "By script: every fragment in quotation marks in the changed targets anchored at the four fronts is on its page. Two fragments are labelled 'ONE-PAGE:' but anchored at 03, and their text is on the one page. cx-ma-narrow-optimizer and cx-ma-response-capacity say the record reads the law as Theorem 1 in discrete, conserved form. Line 70 of the record says so. cx-memories-acceptance-is-human paraphrases review/README.md, which still says 'not every word' (see 'left'). Of the 58 changed entries, 12 are another agent's (the terms pass: 'how far a claim has been seen', and the warrant 'does not wait on it'). They are kept and are not judged here. I fixed the three stale phrases named above."
+  },
+  {
+   "item": "Chinese: 根",
+   "done": true,
+   "how": "'本论以这套演算为共同的表达起点' said more than the English and the home. The English has no such clause. The overview's §10 says most laws are proved on the World or on processes and are not stated on the grammar, and 08 §7 says most central results use none of the root's laws. It replaced the earlier overstatement 这是整套解释的最底层 with another one. The Chinese now mirrors the English: '**根。** 只有一种符号：关系，读作缘（条件）。'. No test or quote held either wording."
+  },
+  {
+   "item": "Chinese: the overview's §2 link",
+   "done": true,
+   "how": "'（[那个文件夹](../meta-attractor/README.md)）' read as a calque of 'the folder'. It is now '（见[元吸引子文件夹](../meta-attractor/README.md)）'."
+  },
+  {
+   "item": "Reading times",
+   "done": true,
+   "how": "Recounted with navigation.reading_time after the fixes, and they are unchanged. One page: 22–28 minutes, ten-minute part 10–13. Chinese one page: 25–32, ten-minute part 12–15, lake paragraph 1–2. Overview: 68–89. Chinese overview: 62–80. The stated times match."
+  },
+  {
+   "item": "Rules",
+   "done": true,
+   "how": "These are untouched by onepage and by this check: sources/, OPENING.md's body, AGENTS.md and the generated pages. The four fronts are hand-written, and CROSSWALK is built from the entries edited here. Headings and <a id>s are the same as at HEAD, and the navigation lines are the same. No record or lineage.json sentence quotes a changed front sentence. The two Chinese hits are in lineage.json: '本论的制作者' and '不约束任何人'. They narrate 07's history, not the fronts."
+  }
+ ],
+ "left": [
+  {
+   "item": "The overview's §10, 'What is not shown, and what is open', is a closing list. D6 asks that what is not claimed be said where a reader would otherwise believe it, not as a closing list. The one page's 'What is not yet done' reads as work to do and fits.",
+   "why": "Many of its bullets are the map's frontier (what is open), which belongs on the page. Recasting a nine-bullet section is a structural choice for the coordinator, not a verifier's fix. Medium."
+  },
+  {
+   "item": "Ren's message 9 (added to the source during this pass) bears on the overview's §10 bullet 'How scope and order form. No warrant binding every possible mind is claimed: a warrant grounding the condition would come neither from ...'. It also bears on §7's 'each is a hypothesis wherever used'.",
+   "why": "Message 9 says 'there is no warrant, ethics emerges from continuation condition'. D1 to D7 cover messages 1 to 8, and the warrant wording also sits in 07 and in crosswalk entries another agent is re-saying. The coordinator decides the wording. The one page does not say warrant or 'unasserted'."
+  },
+  {
+   "item": "'intention and foresight have a place in responsibility, and none has been shown to bound whose losses count': with two subjects, 'neither' would be the English word",
+   "why": "'none' is 07's word, at line 549, where it covers four things. Six crosswalk targets quote the front's sentence as it stands. Low."
+  },
+  {
+   "item": "The overview's §6 says no person's review of the classification is recorded, and §10's bullet lists the classical classification again. The Chinese overview says 尚无…审查的记录 twice.",
+   "why": "§6 gives the scope of one reading where a reader would otherwise believe it reviewed (D6), and cx-hsm-ai-candidate-links quotes it. Dropping the classification from §10's list is the coordinator's call. Low."
+  },
+  {
+   "item": "The overview's §7 still says 'Evaluation forms within the unfolding, and no law evaluates'. The one page now says 'the laws, drawn on the dynamics alone, evaluate nothing'.",
+   "why": "The overview's §7 gives 07's qualification just above, where the distinction is introduced: non-entailment by the represented dynamics, not that becoming leaves significance undetermined. That answers astra's point. Harmonizing the wording is optional. Low."
+  },
+  {
+   "item": "astra's point 3: the one page still moves from the lake through the root, the picture and the table to a long prior-art paragraph ('The evidence') before the ethics' use",
+   "why": "None of D1 to D7 covers this, and onepage did not restructure. The verdicts there are 08 §8's and the paragraph is accurate. Its place and length are a design choice for the coordinator."
+  },
+  {
+   "item": "Pages that are not onepage's files. 07 §8 says 'The offer binds no one' and 'the account's makers offer', and 39 crosswalk targets quote it at 07 #theses. 07 §7 says 'its makers offer AI'. review/README.md still says 'not every word'. records/chinese-sources-on-the-spine and one crosswalk target say 'nine parts'. 08's heading 'Standings and bases' sits under the one page's table header link.",
+   "why": "Each quote changes with its home. D7's keys are left: the anchor #standings-and-bases, linked from the table headers of both one pages."
+  },
+  {
+   "item": "test_chinese_fronts (the Chinese opening's time on README.zh) and test_site (README's one-page time)",
+   "why": "Both read generated pages that a render refreshes. They were red before this pass's fixes and are not in these files."
+  }
+ ],
+ "for_ren": [
+  "The meta-attractor on the one page and the overview: where winning comes to buy power over the rule that selects, the loop is what the work calls the meta-attractor. Its closed form, the rule and how it is read both formed from the share it selects, is proved to lock on stated models (02 §9). The overview's first paragraph now carries 'on stated models' too.",
+  "The aim is said as GOALS' current goal, with condition 1 as restated on 29 October. AGENTS.md's 'does not select for control over its own selection' appears on none of these pages. PLAN §1 notes that the restated condition still awaits your read.",
+  "Your message 9 ('there is no warrant, ethics emerges from continuation condition') bears on the overview's §10 line 'No warrant binding every possible mind is claimed ...'. No wording for it has been decided.",
+  "'We offer it for life, AI within it, as T8's way of seeing'; 'a way of seeing, not a verdict'. 'Binds no one' left the fronts, and 07 §8 still says it."
+ ]
+}

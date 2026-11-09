@@ -176,7 +176,7 @@
    "labels_key": "形状，陈述它的是什么：",
    "arc": "**弧线全文。** 最早的文字把城市诊断为一种结构（转折点 1），在一种关于变化的存在论中定义可能性（2），并把 molochs 列为一个社群面对的挑战（3）。从 2024 年起，诊断得到复利（compounding）与一条选择律；[九月时间线](../_process/history/2026-09-consolidation/TIMELINE.md#the-shape-of-the-arc)（它本身是 AI 据材料写成的）把这一机制读作「at every scale」（在每一尺度上）反复出现：「a system rewards winners with more capacity to win, the winners acquire the standing to write the rules, they write them through their own way of seeing, and the way of seeing then reproduces itself」（一个系统以更多的获胜能力奖励获胜者，获胜者取得书写规则的地位，透过自己的观看方式书写规则，这种观看方式又再生产自身）（6、8–11、13；观看方式在 19 明确）。2026 年 2 月，问题转向 AI：「how could there be a future for humans in this winner takes all game?」（在这场赢者通吃的游戏里，人类怎么还会有未来？）（14）。5 月带来作为形式语言的文言与作为检验器的 Lean（16、18），这个月有 573 个文件，此前全部语料为 504 个；时间线举例而未计数，把这一加速「almost entirely」（几乎完全）归于智能体工具的到来。9 月，文字被汇入各文件夹，九月总图（也是 AI 写成的）把它们读作既非十五种理论、也非一种：「one diagnostic mechanism restated four times under successive names」（同一个诊断机制，以先后不同的名字重述了四次），旁边是不可化约为它的相邻承诺与工程系统（22）；一篇由 AI 起草的论文为每一主张配上反驳条件（23），10 月 2 日本仓库首批预先给定的预测写下（25）。10 月，生灭变化之论得名（27）；选择机制以经由规则的捕获、继而闭合的捕获落在脊柱上，在其模型上得到证明：环所不读的损失无论增长多大，都让它保持锁定（32）；一次 AI 审阅把伦理的两个前提分开（33）：延续条件定范围，C（扩大可形成者更好）定次序，今为其排序结果所取的读法；一次 AI 审阅发现没有哪项核心结果是新的数学（34）；一份计划把本论植根于一种文法（35）；在一个训练出的系统中，T7 的冻结检验每一裁决都通过，而它所检验的猜想对这个评判者不成立（38）。11 月第一周，对读取之形成的检验在任何运行之前冻结（45），T2 的三个量对照该领域拟合的嵌入受检，在另一领域中 T2 的措辞未通过而被收窄（44、46），C 被表明不为不读任何次序者所蕴涵（40），对进程的排序被说成需要 C 或一个代替它的前提（47），早先各文件夹与十二个思想领域由 AI 读者对照本论来读（48）；11 月 9 日，对与错被读作形成于生灭变化之内，生灭变化之外没有应当，T8 成为本论的制作者所提供者（49；[07 §8](becoming/chapters/07-SIGNIFICANCE.md#theses)）；同日，工作规则转向地图：为对齐而画的地图，也是智慧的地图，诚实与地位「在map之中，而不是map之上」（50）。自 9 月起，多数转折点由 AI 写成的文本陈述，此前约一半由 AI 据一个人的话起草，见表中“执笔”一栏。",
    "coverage": "**覆盖与日期。** 记录并不均匀。九月时间线提醒说，它所依据的对话导出止于 2026 年 5 月 5 日，「the silence after that date is the edge of the export」（此后的沉默是导出的边界），有些文件日期是后来提取或检出时的时间戳。一个转折点的日期，精确到其证据所给的程度。许多转折点（其中有 16 至 21 与 23）是 AI 据一个人的话起草的，而转折点又是选出来的，所以填色不能衡量一个人在任何时候写了多少。",
-   "chosen": "**转折点是怎样选的。** AI 读者为每个时期各收集 12 至 14 个（2021 至 2025 年；2026 年至 10 月 4 日；10 月其余时间；11 月第一周），一位对抗性的读者逐一核对，第三位按[其指令](../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rw-spine/workflows/2-lineage-finalize.js)为每个时期至多保留九或十个，即「the real turning points, where vocabulary, method, structure or standing changed」（词汇、方法、结构或地位发生改变的真正转折点）；另有七个循选择机制，三个来自论文一层，其中有审阅包。每个时期都恰在其配额上，所以没有哪个时期的数目说明当时发生了多少事。第 49 与第 50 个转折点不经这一选择：第 49 个是截取移到 11 月 9 日时由那一次的 AI 会话加入的，第 50 个是同日替换工作规则的那一次 AI 会话在选择之外加入并归类的。",
+   "chosen": "**转折点是怎样选的。** AI 读者为每个时期各收集 12 至 14 个（2021 至 2025 年；2026 年至 10 月 4 日；10 月其余时间；11 月第一周），一位对抗性的读者逐一核对，第三位按[其指令](../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rw-spine/workflows/2-lineage-finalize.js)为每个时期至多保留九或十个，即「the real turning points, where vocabulary, method, structure or standing changed」（词汇、方法、结构或看到的程度发生改变的真正转折点）；另有七个循选择机制，三个来自论文一层，其中有审阅包。每个时期都恰在其配额上，所以没有哪个时期的数目说明当时发生了多少事。第 49 与第 50 个转折点不经这一选择：第 49 个是截取移到 11 月 9 日时由那一次的 AI 会话加入的，第 50 个是同日替换工作规则的那一次 AI 会话在选择之外加入并归类的。",
    "strands": "**这些转折点循什么。** {total} 个转折点中，{on_threads} 个标在下文所循的三条线索上（选择机制、根与伦理），其余 {on_none} 个不在任何线索上。它们的证据引用 {folders_n} 个早先文件夹中 {cited} 个的 README 或文件；其他文件夹的材料可能经由 `sources/` 进入。每个文件夹后来如何，见[对照]({crosswalk})；多数文件夹自身的历史，见其 README 中的谱系一节（[各文件夹]({folders})）。",
    "threads_key": "圆环，下文所循的线索：",
    "arc_short": "**弧线简述。** 最早的文字（2021–2023）把城市诊断为一种结构，在一种关于变化的存在论中定义可能性，并把 molochs（得名于 Moloch，「the optimizer for value」，为价值而优化者）列为一个社群面对的挑战。2024–2025 年，一种选择机制成形：一种价值被选作权力的象征，一个环选出纯粹的资本优化者，一个元吸引子捕获选择机制本身。2026 年，问题成为：在一场与 AI 的赢者通吃的游戏中，人类怎样还有未来；一种分岔叙事（向一个 AI 要来的、关于有了 AI 之后的未来的故事）被提出又被放下，間（一切是间）成为唯一原语，Lean 成为融贯检验器。到 10 月 6 日，诸篇写作被汇入各理论文件夹，最早的预先给定的预测写成。10 月，生灭变化之论得名，一份计划把本论植根于一种文法，其排序的范围与次序（延续条件与 C）被分开，闭合的捕获（一个选择的锁定）在一个模型中得到证明。11 月，读取之形成的各项检验（检验例如选择显示出一种次序的哪些方面这类律）在任何运行之前冻结；T2 原先关于什么确定一个可更新条件下一次给予的表述，在甲虫培养中未通过，T2 被收窄，AI 读者把早先各文件夹与十二个思想领域对着本论来读。11 月 9 日，T8，为生命的一种看法，成为本论的制作者所提供的；工作规则转向地图：为对齐而画，也画智慧，诚实与地位「在map之中，而不是map之上」。",
@@ -1549,8 +1549,8 @@
     "zh": "并无新数学；主张改以带驳倒条件的论题陈述"
    },
    "what": {
-    "en": "A read-only, adversarial AI review concluded: \"No central result is a new theorem of research-level mathematics.\" An AI-written brief of 21 October read the answer as \"not weaker claims but strong claims with their standing stated and their refutation conditions named\"; the method chapter's numbered theses each state \"an empirical claim, with its standing, what it forbids and the evidence so far\".",
-    "zh": "一次只读、对抗性的 AI 审查得出结论：「No central result is a new theorem of research-level mathematics.」（没有一项中心结果是研究级数学的新定理。）10 月 21 日一份 AI 撰写的简报把回应读作「not weaker claims but strong claims with their standing stated and their refutation conditions named」（不是更弱的主张，而是陈述其地位、指明其驳倒条件的强主张）；方法章中编号的论题，各自陈述「an empirical claim, with its standing, what it forbids and the evidence so far」（一项经验主张，连同其地位、它所禁止者与迄今的证据）。"
+    "en": "A read-only, adversarial AI review concluded: \"No central result is a new theorem of research-level mathematics.\" An AI-written brief of 21 October read the answer as \"not weaker claims but strong claims with their standing stated and their refutation conditions named\"; the method chapter's numbered theses each stated \"an empirical claim, with its standing, what it forbids and the evidence so far\".",
+    "zh": "一次只读、对抗性的 AI 审查得出结论：「No central result is a new theorem of research-level mathematics.」（没有一项中心结果是研究级数学的新定理。）10 月 21 日一份 AI 撰写的简报把回应读作「not weaker claims but strong claims with their standing stated and their refutation conditions named」（不是更弱的主张，而是说明它们看到了多远、指明其驳倒条件的强主张）；方法章中编号的论题，曾各自陈述「an empirical claim, with its standing, what it forbids and the evidence so far」（一项经验主张，连同它看到了多远、它所禁止者与迄今的证据）。"
    },
    "evidence": [
     {
@@ -1567,13 +1567,14 @@
     },
     {
      "path": "theories/becoming/chapters/08-METHOD.md",
-     "locator": "§2 standings table, row 'Thesis Tn', line 64",
+     "locator": "§2 standings table, row 'Thesis Tn', line 66",
      "quote": "an empirical claim, with its standing, what it forbids and the evidence so far",
-     "private": false
+     "private": false,
+     "commit": "70276b2f9"
     }
    ],
    "label": "public",
-   "label_why": "The verdict is in a tracked dated review, the response in a tracked dated source, and the thesis form in the live method chapter. The outside critique of 19 October that prompted the review is cited there but not stored here.",
+   "label_why": "The verdict is in a tracked dated review, the response in a tracked dated source, and the thesis form in the method chapter at commit 70276b2f9 (9 November 2026), before that row's 'with its standing' became 'with how far it has been seen'. The outside critique of 19 October that prompted the review is cited there but not stored here.",
    "origin": "ai"
   },
   {
@@ -2643,13 +2644,14 @@
     "zh": "摘要（v1.1）：生命、认知与评价在世界的生成中形成；「Meta-Attractor 追踪奖励如何选择认知、优势如何进入规则、规则如何塑造证据与后来行动。」它统一生生不息、至善、Meta-Attractor、Speculative Future、三层现实、智能向善与大同。其 README 说第十一章的方法学试点、供给模型、清迈田野记录与对称案例尚待实作，文稿供审阅，「目前未对外发布」。v0.1 至 v1.0 注明 2026 年 9 月 5 日，v1.1 注明 9 月 6 日。"
    },
    "stands": {
-    "en": "[AI reading] The whitepaper's terms 三层现实, 七尺, 智能向善 and 大同 were searched for in the live chapters, the one page, the overview and the glossary and not found (searched, not read). The glossary keeps meta-attractor (元吸引子) as \"closed capture\" and says it \"never means the corpus's working definition\". The crosswalk's 智善 group says \"The programme asserts what the account only states conditionally or not at all: intelligence must be good; whatever continues 生生 is good; evil is owning a gate\". The live ethics instead names two unasserted premises, the continuation condition for scope and C for order; the glossary keeps 生生 as \"life in the whole and its continuing generation\".",
-    "zh": "［AI 读法］白皮书的三层现实、七尺、智能向善、大同等词，在现行各章、一页概要、总览与术语表中检索未见（已检索，未通读）。术语表保留元吸引子（meta-attractor），释为「closed capture」（闭合的捕获），并说它「never means the corpus's working definition」（绝不指语料的工作定义）。对照表的智善组说：「The programme asserts what the account only states conditionally or not at all: intelligence must be good; whatever continues 生生 is good; evil is owning a gate」（纲领断言了本论只有条件地陈述或根本不陈述者：智能必须向善；凡延续生生者为善；恶就是据有一道门）。现行伦理则指名两个不断言的前提：延续条件定范围，C 定次序；术语表把生生释为「life in the whole and its continuing generation」（整体中的生命及其持续的生发）。"
+    "en": "[AI reading] The whitepaper's terms 三层现实, 七尺, 智能向善 and 大同 were searched for in the live chapters, the one page, the overview and the glossary and not found (searched, not read). The glossary gives meta-attractor (元吸引子) as \"the loop in which winning comes to buy power over the rule that selects\", its closed form 02 §9's definition, proved to lock on stated models. The crosswalk's 智善 group says \"The programme asserts what the account only states conditionally or not at all: intelligence must be good; whatever continues 生生 is good; evil is owning a gate\". The live ethics instead names the two readings most rankings use, the continuation condition for scope and C for order, each a scope or an order some formations hold; the glossary gives 生生 as \"the continuation of life\".",
+    "zh": "［AI 读法］白皮书的三层现实、七尺、智能向善、大同等词，在现行各章、一页概要、总览与术语表中检索未见（已检索，未通读）。术语表把元吸引子（meta-attractor）释为「the loop in which winning comes to buy power over the rule that selects」（胜出换来左右选择规则之力量的那个回路），其闭合形式是第二章 §9 的定义，在所述的模型上已证明会锁定。对照表的智善组说：「The programme asserts what the account only states conditionally or not at all: intelligence must be good; whatever continues 生生 is good; evil is owning a gate」（纲领断言了本论只有条件地陈述或根本不陈述者：智能必须向善；凡延续生生者为善；恶就是据有一道门）。现行伦理则指名多数排序所用的两种读法，延续条件定范围，C 定次序，各是某些形成所持的范围或次序；术语表把生生释为「the continuation of life」（生命之延续）。"
    },
    "stands_basis": [
     "theories/becoming/results/atlas/CROSSWALK.md#cxg-zhishan-intelligence-must-be-good",
     "GLOSSARY.md",
-    "theories/becoming/chapters/07-SIGNIFICANCE.md#theses"
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#theses",
+    "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order"
    ],
    "label": "public"
   },
@@ -2664,7 +2666,7 @@
    ],
    "claimed": {
     "en": "A one-page fiction canvas whose status is a \"Speculative future\": \"The dates and institutional arrangements below are proposed story elements.\" Its tagline: \"Shared abundance, mutual care and a regenerative culture give diverse people and communities the means to cultivate a flourishing world together.\" Its 'Basis' section calls it \"a new synthesis, not a quotation\"; the revision note is dated 2026-09-16. The two PDFs are byte-identical.",
-    "zh": "一页的虚构画布，其地位为「Speculative future」（推想的未来）：「The dates and institutional arrangements below are proposed story elements.」（下文的日期与制度安排是拟议的故事元素。）其标语：「Shared abundance, mutual care and a regenerative culture give diverse people and communities the means to cultivate a flourishing world together.」（共享的丰裕、相互照护与再生的文化，使多样的人与社群得以共同培育一个繁盛的世界。）其依据一节称之为「a new synthesis, not a quotation」（新的综合，而非引述）；修订说明注明 2026-09-16。两份 PDF 逐字节相同。"
+    "zh": "一页的虚构画布，标明是「Speculative future」（推想的未来）：「The dates and institutional arrangements below are proposed story elements.」（下文的日期与制度安排是拟议的故事元素。）其标语：「Shared abundance, mutual care and a regenerative culture give diverse people and communities the means to cultivate a flourishing world together.」（共享的丰裕、相互照护与再生的文化，使多样的人与社群得以共同培育一个繁盛的世界。）其依据一节称之为「a new synthesis, not a quotation」（新的综合，而非引述）；修订说明注明 2026-09-16。两份 PDF 逐字节相同。"
    },
    "stands": {
     "en": "[AI reading] A fiction, not a claim of the account. The crosswalk's group for the folder it draws on (cooperative abundance, historical home The Fork) says the live account \"has no abundance layer or provision and no ownership variable\".",

@@ -1,0 +1,505 @@
+{
+ "agent": "pass4 zh (AI-written, Claude, 9 November 2026): the fourth pass's reader of Chinese; README-ZH, ONE-PAGE.zh, USES.zh, review/README.zh, the overview's opening and the glossary rows this pass changed, read whole against their English; nothing rendered, built or committed",
+ "changed": [
+  "_process/navigation/README-ZH.md",
+  "theories/becoming/ONE-PAGE.zh.md",
+  "theories/becoming/USES.zh.md",
+  "theories/becoming/review/README.zh.md",
+  "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+  "GLOSSARY.zh.md",
+  "_process/research-config.json",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass4-zh.json"
+ ],
+ "items": [
+  {
+   "item": "Calque of 'read onto' on the Chinese screen",
+   "done": true,
+   "file": "_process/navigation/README-ZH.md",
+   "before": "[对照到同一部论述上](…CROSSWALK.zh.md)，哪里相合，哪里不合",
+   "after": "[放到同一部论述上对照](…CROSSWALK.zh.md)，看哪里相合，哪里不合",
+   "why": "对照 takes an object; 对照到……上 calques 'read onto' (Fable zh 6, astra zh 4). The same wording now on the one page, the uses page, the review cover, the glossary's map section and the site's description_zh.",
+   "how": "_process/navigation/README-ZH.md: '[对照到同一部论述上](…CROSSWALK.zh.md)，哪里相合，哪里不合' -> '[放到同一部论述上对照](…CROSSWALK.zh.md)，看哪里相合，哪里不合'. 对照 takes an object; 对照到……上 calques 'read onto' (Fable zh 6, astra zh 4). The same wording now on the one page, the uses page, the review cover, the glossary's map section and the site's description_zh."
+  },
+  {
+   "item": "'doing best on what is read' and 'allowed outcome'",
+   "done": true,
+   "file": "_process/navigation/README-ZH.md",
+   "before": "在什么条件下，把所读之物做到最好，必定使外部之物耗竭……耗竭的程度不亚于任何合格结果",
+   "after": "在什么条件下，在所读之物上做到最好，必定使外部之物耗竭……耗竭的程度不亚于任何容许的结果",
+   "why": "把所读之物做到最好 says 'make what is read the best' (meaning moved); the four questions on the same screen say 在所读之物上做得更好. The English says 'allowed outcome', which the one page renders 容许的结果; 合格 is the table's word for 'eligible'.",
+   "how": "_process/navigation/README-ZH.md: '在什么条件下，把所读之物做到最好，必定使外部之物耗竭……耗竭的程度不亚于任何合格结果' -> '在什么条件下，在所读之物上做到最好，必定使外部之物耗竭……耗竭的程度不亚于任何容许的结果'. 把所读之物做到最好 says 'make what is read the best' (meaning moved); the four questions on the same screen say 在所读之物上做得更好. The English says 'allowed outcome', which the one page renders 容许的结果; 合格 is the table's word for 'eligible'."
+  },
+  {
+   "item": "Renewal said with one word and its gloss on first use (task: 更新 with its gloss)",
+   "done": true,
+   "file": "_process/navigation/README-ZH.md",
+   "before": "取自哪种再生",
+   "after": "取自哪种更新（把取走的补回来）",
+   "why": "再生 was a third word for renewal; the one page, the uses page and the glossary use 更新 (02's renewal) and 复生 (the root's), and the one page glosses 更新 on first use. First use on the screen, so glossed.",
+   "how": "_process/navigation/README-ZH.md: '取自哪种再生' -> '取自哪种更新（把取走的补回来）'. 再生 was a third word for renewal; the one page, the uses page and the glossary use 更新 (02's renewal) and 复生 (the root's), and the one page glosses 更新 on first use. First use on the screen, so glossed."
+  },
+  {
+   "item": "Passive calque in the ethics paragraph",
+   "done": true,
+   "file": "_process/navigation/README-ZH.md",
+   "before": "每一种在被使用之处都是假设",
+   "after": "每一种在用到之处都是假设",
+   "why": "被使用 is a translated passive; meaning unchanged ('each a hypothesis wherever used').",
+   "how": "_process/navigation/README-ZH.md: '每一种在被使用之处都是假设' -> '每一种在用到之处都是假设'. 被使用 is a translated passive; meaning unchanged ('each a hypothesis wherever used')."
+  },
+  {
+   "item": "08 §8's 'a clarified ethics, not a grounded one', one rendering on every front",
+   "done": true,
+   "file": "_process/navigation/README-ZH.md",
+   "before": "“澄清了伦理，而没有为它奠定根据”（a clarified ethics, not a grounded one）",
+   "after": "“一种澄清了、却未奠定根据的伦理”（a clarified ethics, not a grounded one）",
+   "why": "The screen, the one page, the uses page and the overview gave three renderings (a verb phrase, 伦理的前提被说清了，却没有因此得到奠基, 一种得到澄清、而非得到奠基的伦理). Now one noun phrase that mirrors the English noun phrase, no passive. 'A new artefact' is 一套新的形式化成果 on the screen, the one page and the overview (08 §8 line 573: the pure-core development).",
+   "how": "_process/navigation/README-ZH.md: '“澄清了伦理，而没有为它奠定根据”（a clarified ethics, not a grounded one）' -> '“一种澄清了、却未奠定根据的伦理”（a clarified ethics, not a grounded one）'. The screen, the one page, the uses page and the overview gave three renderings (a verb phrase, 伦理的前提被说清了，却没有因此得到奠基, 一种得到澄清、而非得到奠基的伦理). Now one noun phrase that mirrors the English noun phrase, no passive. 'A new artefact' is 一套新的形式化成果 on the screen, the one page and the overview (08 §8 line 573: the pure-core development)."
+  },
+  {
+   "item": "The opening's AI-translation label said twice on the screen (task: each label once)",
+   "done": true,
+   "file": "_process/navigation/README-ZH.md",
+   "before": "| 第一人称写下的信念：这件事为什么要紧；AI 译自[英文版](../../theories/becoming/OPENING.md) |",
+   "after": "| 第一人称写下的信念：这件事为什么要紧（[英文原文](../../theories/becoming/OPENING.md)） |",
+   "why": "先读 already says 中文版由 AI 译自英文版 (pinned by test_chinese_fronts); the row keeps the link to the English. The row's third cell, which the test pins, is untouched.",
+   "how": "_process/navigation/README-ZH.md: '| 第一人称写下的信念：这件事为什么要紧；AI 译自[英文版](../../theories/becoming/OPENING.md) |' -> '| 第一人称写下的信念：这件事为什么要紧（[英文原文](../../theories/becoming/OPENING.md)） |'. 先读 already says 中文版由 AI 译自英文版 (pinned by test_chinese_fronts); the row keeps the link to the English. The row's third cell, which the test pins, is untouched."
+  },
+  {
+   "item": "Calque in the crosswalk row",
+   "done": true,
+   "file": "_process/navigation/README-ZH.md",
+   "before": "早先的理论文件夹与各思想领域，读作现行的本论中的什么",
+   "after": "早先的理论文件夹与各思想领域，在现行的本论中各读作什么",
+   "why": "Word order of the English 'read as what in the current account'; the Chinese reads as a question about each folder and domain.",
+   "how": "_process/navigation/README-ZH.md: '早先的理论文件夹与各思想领域，读作现行的本论中的什么' -> '早先的理论文件夹与各思想领域，在现行的本论中各读作什么'. Word order of the English 'read as what in the current account'; the Chinese reads as a question about each folder and domain."
+  },
+  {
+   "item": "The template's comment",
+   "done": true,
+   "file": "_process/navigation/README-ZH.md",
+   "before": "renewal 译作“再生”; 第四轮所改之句……尚未经两位中文读者再核",
+   "after": "renewal 译作“更新”，首次出现时注“把取走的补回来”……; 第四轮末又由一位 AI 中文读者对照英文首屏通读一遍，所改见下 (and the list of this reader's changes)",
+   "why": "The comment said what the page no longer does; it now records this reading. Comments are dropped before the test reads the template.",
+   "how": "_process/navigation/README-ZH.md: 'renewal 译作“再生”; 第四轮所改之句……尚未经两位中文读者再核' -> 'renewal 译作“更新”，首次出现时注“把取走的补回来”……; 第四轮末又由一位 AI 中文读者对照英文首屏通读一遍，所改见下 (and the list of this reader's changes)'. The comment said what the page no longer does; it now records this reading. Comments are dropped before the test reads the template."
+  },
+  {
+   "item": "The site's Chinese link preview carried the same calque",
+   "done": true,
+   "file": "_process/research-config.json",
+   "before": "description_zh: ……对这些动态看见了什么，对照到同一部论述上。",
+   "after": "description_zh: ……对这些动态看见了什么，放到同一部论述上对照。",
+   "why": "Outside the five named files (the screen agent's), changed because it is the first Chinese sentence a link preview shows and mirrors README-ZH; one phrase, CJK share unchanged; test_site's one red is the stale rendered README.md, as before.",
+   "how": "_process/research-config.json: 'description_zh: ……对这些动态看见了什么，对照到同一部论述上。' -> 'description_zh: ……对这些动态看见了什么，放到同一部论述上对照。'. Outside the five named files (the screen agent's), changed because it is the first Chinese sentence a link preview shows and mirrors README-ZH; one phrase, CJK share unchanged; test_site's one red is the stale rendered README.md, as before."
+  },
+  {
+   "item": "耗竭 with an object, in What it is",
+   "done": true,
+   "file": "theories/becoming/ONE-PAGE.zh.md",
+   "before": "可以把外部之物耗竭到任何容许的结果所耗竭的程度",
+   "after": "可以使外部之物耗竭，耗竭的程度不亚于任何容许的结果",
+   "why": "耗竭 is intransitive in ordinary Chinese (Fable zh 3); the screen's form, kept as the corpus's term. 'As far as any allowed outcome does' = no less than any.",
+   "how": "theories/becoming/ONE-PAGE.zh.md: '可以把外部之物耗竭到任何容许的结果所耗竭的程度' -> '可以使外部之物耗竭，耗竭的程度不亚于任何容许的结果'. 耗竭 is intransitive in ordinary Chinese (Fable zh 3); the screen's form, kept as the corpus's term. 'As far as any allowed outcome does' = no less than any."
+  },
+  {
+   "item": "D1: the meta-attractor said one way across the fronts",
+   "done": true,
+   "file": "theories/becoming/ONE-PAGE.zh.md",
+   "before": "胜出若换来左右选择规则的力量，这个回路便是本论所说的元吸引子；其闭合形式，即规则由它所选中者的份额定出，规则怎样被读也由这一份额形成，其中没有什么读取这一份额之外的东西，已证明会锁定（[第二章 §9]）",
+   "after": "胜出若换来左右选择规则的力量，这样形成的回路，便是本论所说的元吸引子；它的闭合形式已证明会锁定：在这一形式中，规则和对规则的解读都由它所选出者所占的份额形成，其中没有什么读取这一份额之外的东西（[02 §9]）",
+   "why": "这个回路 pointed at no loop named before it; the long appositive subject is split; 'how it is read' and 'the share it selects' are now the screen's, the uses page's and the cover's words (对规则的解读, 它所选出者所占的份额); the link label is 02 §9 like every other chapter link on the page. The overview's opening and glance paragraph and the glossary row say the same.",
+   "how": "theories/becoming/ONE-PAGE.zh.md: '胜出若换来左右选择规则的力量，这个回路便是本论所说的元吸引子；其闭合形式，即规则由它所选中者的份额定出，规则怎样被读也由这一份额形成，其中没有什么读取这一份额之外的东西，已证明会锁定（[第二章 §9]）' -> '胜出若换来左右选择规则的力量，这样形成的回路，便是本论所说的元吸引子；它的闭合形式已证明会锁定：在这一形式中，规则和对规则的解读都由它所选出者所占的份额形成，其中没有什么读取这一份额之外的东西（[02 §9]）'. 这个回路 pointed at no loop named before it; the long appositive subject is split; 'how it is read' and 'the share it selects' are now the screen's, the uses page's and the cover's words (对规则的解读, 它所选出者所占的份额); the link label is 02 §9 like every other chapter link on the page. The overview's opening and glance paragraph and the glossary row say the same."
+  },
+  {
+   "item": "D3 sentence aligned with the screen",
+   "done": true,
+   "file": "theories/becoming/ONE-PAGE.zh.md",
+   "before": "在人与 AI 渐渐读到什么之中；只就动力学画出的诸律，不能决定它",
+   "after": "在人与 AI 渐渐读到的东西里形成；只就动力学画出的诸律，并不决定它",
+   "why": "The clause had no verb; 不能 ('cannot') is stronger than the English 'do not settle'.",
+   "how": "theories/becoming/ONE-PAGE.zh.md: '在人与 AI 渐渐读到什么之中；只就动力学画出的诸律，不能决定它' -> '在人与 AI 渐渐读到的东西里形成；只就动力学画出的诸律，并不决定它'. The clause had no verb; 不能 ('cannot') is stronger than the English 'do not settle'."
+  },
+  {
+   "item": "Link text to the uses page",
+   "done": true,
+   "file": "theories/becoming/ONE-PAGE.zh.md",
+   "before": "[本论有什么用，用到多远](USES.zh.md)",
+   "after": "[本论有什么用，看到了多远](USES.zh.md)",
+   "why": "Follows the uses page's title, retitled below.",
+   "how": "theories/becoming/ONE-PAGE.zh.md: '[本论有什么用，用到多远](USES.zh.md)' -> '[本论有什么用，看到了多远](USES.zh.md)'. Follows the uses page's title, retitled below."
+  },
+  {
+   "item": "Responsibility at the root: passive calque",
+   "done": true,
+   "file": "theories/becoming/ONE-PAGE.zh.md",
+   "before": "但没有一样[被表明划定谁的损失算数]",
+   "after": "但尚未表明其中哪一样能[划定谁的损失算数]",
+   "why": "Same claim (07 #crux: none has been shown to bound whose losses count), without 被表明.",
+   "how": "theories/becoming/ONE-PAGE.zh.md: '但没有一样[被表明划定谁的损失算数]' -> '但尚未表明其中哪一样能[划定谁的损失算数]'. Same claim (07 #crux: none has been shown to bound whose losses count), without 被表明."
+  },
+  {
+   "item": "Quotation marks",
+   "done": true,
+   "file": "theories/becoming/ONE-PAGE.zh.md",
+   "before": "「未通过」「有通过，有未通过」「评分之前被拒绝」 (T1 cell); 结局为「有通过，有未通过」者 (evidence)",
+   "after": "“未通过”“有通过，有未通过”“评分之前被拒绝”; 结局为“有通过，有未通过”者",
+   "why": "The page otherwise uses “” (Fable zh 11).",
+   "how": "theories/becoming/ONE-PAGE.zh.md: '「未通过」「有通过，有未通过」「评分之前被拒绝」 (T1 cell); 结局为「有通过，有未通过」者 (evidence)' -> '“未通过”“有通过，有未通过”“评分之前被拒绝”; 结局为“有通过，有未通过”者'. The page otherwise uses “” (Fable zh 11)."
+  },
+  {
+   "item": "Second join row pointed to the wrong place (meaning moved)",
+   "done": true,
+   "file": "theories/becoming/ONE-PAGE.zh.md",
+   "before": "一个扩大（见下一行），单凭模型所表示的动力学，推不出表下“伦理”一段的两种读法中的任何一种",
+   "after": "一个扩大，单凭模型所表示的动力学，推不出表下“伦理”一段所说的两种读法中的任何一种（扩大也在那一段定义）",
+   "why": "The next row is T8, which does not define widening; the ethics paragraph below the table does. The pointer is Chinese-only, so it now points where widening is defined.",
+   "how": "theories/becoming/ONE-PAGE.zh.md: '一个扩大（见下一行），单凭模型所表示的动力学，推不出表下“伦理”一段的两种读法中的任何一种' -> '一个扩大，单凭模型所表示的动力学，推不出表下“伦理”一段所说的两种读法中的任何一种（扩大也在那一段定义）'. The next row is T8, which does not define widening; the ethics paragraph below the table does. The pointer is Chinese-only, so it now points where widening is defined."
+  },
+  {
+   "item": "T8's refuter, still hard to parse",
+   "done": true,
+   "file": "theories/becoming/ONE-PAGE.zh.md",
+   "before": "读取一个进程取用什么、什么随之终结的选择，选取超出其读者所依之更新的取用，并不比不读取这些的选择更少",
+   "after": "那些读取一个进程取用什么、什么随之终结的选择，选中超出其读者所依存之更新的取用，次数并不比不读取这些的选择少",
+   "why": "'No less often' is a frequency; 并不比……更少 left 'less of what' open (astra zh 6).",
+   "how": "theories/becoming/ONE-PAGE.zh.md: '读取一个进程取用什么、什么随之终结的选择，选取超出其读者所依之更新的取用，并不比不读取这些的选择更少' -> '那些读取一个进程取用什么、什么随之终结的选择，选中超出其读者所依存之更新的取用，次数并不比不读取这些的选择少'. 'No less often' is a frequency; 并不比……更少 left 'less of what' open (astra zh 6)."
+  },
+  {
+   "item": "'a perspectivist denies it consistently'",
+   "done": true,
+   "file": "theories/becoming/ONE-PAGE.zh.md",
+   "before": "视角主义者自洽地否认它",
+   "after": "视角主义者可以否认它而不自相矛盾",
+   "why": "The English says the denial is consistent, i.e. possible without contradiction; 自洽地否认 reads as an adverb on an act the perspectivist performs.",
+   "how": "theories/becoming/ONE-PAGE.zh.md: '视角主义者自洽地否认它' -> '视角主义者可以否认它而不自相矛盾'. The English says the denial is consistent, i.e. possible without contradiction; 自洽地否认 reads as an adverb on an act the perspectivist performs."
+  },
+  {
+   "item": "Alignment's second condition, and the 02 link label",
+   "done": true,
+   "file": "theories/becoming/ONE-PAGE.zh.md",
+   "before": "（[第二章 §9](…#r-shaping-selected-among-groups)）……形成的锁定能及时走出",
+   "after": "（[02 §9](…#r-shaping-selected-among-groups)）……一旦形成锁定，能及时脱离它",
+   "why": "'A lock that forms is left in time': the lock is not what walks out (astra zh 5, Fable zh 9). 脱离 is now the one verb for leaving a lock on the one page, the uses page, the overview and the glossary's 锁定 row.",
+   "how": "theories/becoming/ONE-PAGE.zh.md: '（[第二章 §9](…#r-shaping-selected-among-groups)）……形成的锁定能及时走出' -> '（[02 §9](…#r-shaping-selected-among-groups)）……一旦形成锁定，能及时脱离它'. 'A lock that forms is left in time': the lock is not what walks out (astra zh 5, Fable zh 9). 脱离 is now the one verb for leaving a lock on the one page, the uses page, the overview and the glossary's 锁定 row."
+  },
+  {
+   "item": "The evidence: the lock's addition and 08 §8's phrases",
+   "done": true,
+   "file": "theories/becoming/ONE-PAGE.zh.md",
+   "before": "规则怎样被读，本身也由份额形成; 一项新的成果（“a new artefact”）; 伦理的前提被说清了，却没有因此得到奠基（“a clarified ethics, not a grounded one”）",
+   "after": "对规则的解读本身也由份额形成; 一套新的形式化成果（“a new artefact”）; 一种澄清了、却未奠定根据的伦理（“a clarified ethics, not a grounded one”）",
+   "why": "One term for the reading of the rule and one rendering of 08 §8's phrases across the fronts.",
+   "how": "theories/becoming/ONE-PAGE.zh.md: '规则怎样被读，本身也由份额形成; 一项新的成果（“a new artefact”）; 伦理的前提被说清了，却没有因此得到奠基（“a clarified ethics, not a grounded one”）' -> '对规则的解读本身也由份额形成; 一套新的形式化成果（“a new artefact”）; 一种澄清了、却未奠定根据的伦理（“a clarified ethics, not a grounded one”）'. One term for the reading of the rule and one rendering of 08 §8's phrases across the fronts."
+  },
+  {
+   "item": "The page's title used another word for 'how far'",
+   "done": true,
+   "file": "theories/becoming/USES.zh.md",
+   "before": "# 本论有什么用，用到多远",
+   "after": "<a id=\"本论有什么用用到多远\"></a>\\n# 本论有什么用，看到了多远",
+   "why": "用到多远 ('how far it can be used') merged what a reader can do with how far each part has been seen, which the page keeps apart; the term is 看到了多远 (GLOSSARY.zh). The old heading slug is kept as an explicit anchor; the explicit what-the-account-is-for-and-how-far stays.",
+   "how": "theories/becoming/USES.zh.md: '# 本论有什么用，用到多远' -> '<a id=\"本论有什么用用到多远\"></a>\\n# 本论有什么用，看到了多远'. 用到多远 ('how far it can be used') merged what a reader can do with how far each part has been seen, which the page keeps apart; the term is 看到了多远 (GLOSSARY.zh). The old heading slug is kept as an explicit anchor; the explicit what-the-account-is-for-and-how-far stays."
+  },
+  {
+   "item": "Shapers: 塑规者 and 塑造者 on the fronts",
+   "done": true,
+   "file": "theories/becoming/USES.zh.md",
+   "before": "塑规者（塑造规则的人）, 塑规者 (8 in all)",
+   "after": "塑造者 (the gloss 即塑造规则的成员 kept where the exits first name them)",
+   "why": "The screen, the one page, the review cover, the overview and the glossary's 元吸引子 row say 塑造者, and test_chinese_fronts pins 规则仍读取塑造者份额之外的东西 on the screen; 塑规者 is a coinage a reader must decode.",
+   "how": "theories/becoming/USES.zh.md: '塑规者（塑造规则的人）, 塑规者 (8 in all)' -> '塑造者 (the gloss 即塑造规则的成员 kept where the exits first name them)'. The screen, the one page, the review cover, the overview and the glossary's 元吸引子 row say 塑造者, and test_chinese_fronts pins 规则仍读取塑造者份额之外的东西 on the screen; 塑规者 is a coinage a reader must decode."
+  },
+  {
+   "item": "'read onto' and 'how far seen' in the first paragraph",
+   "done": true,
+   "file": "theories/becoming/USES.zh.md",
+   "before": "对照到同一部论述上，哪里相合，哪里不合。……各部分已看到多远",
+   "after": "放到同一部论述上对照，看哪里相合，哪里不合。……各部分看到了多远",
+   "why": "As on the screen; the term as the glossary gives it.",
+   "how": "theories/becoming/USES.zh.md: '对照到同一部论述上，哪里相合，哪里不合。……各部分已看到多远' -> '放到同一部论述上对照，看哪里相合，哪里不合。……各部分看到了多远'. As on the screen; the term as the glossary gives it."
+  },
+  {
+   "item": "Passives and the term in the labels line and the examples line",
+   "done": true,
+   "file": "theories/becoming/USES.zh.md",
+   "before": "二者在被使用之处都是假设; 都以它已被看到多远开头; 每一例都在标题下说明它已被看到多远",
+   "after": "二者在用到之处都是假设; 开头都标出看到了多远; 每一例都在标题下说明看到了多远",
+   "why": "已被看到多远 is a passive calque; one term.",
+   "how": "theories/becoming/USES.zh.md: '二者在被使用之处都是假设; 都以它已被看到多远开头; 每一例都在标题下说明它已被看到多远' -> '二者在用到之处都是假设; 开头都标出看到了多远; 每一例都在标题下说明看到了多远'. 已被看到多远 is a passive calque; one term."
+  },
+  {
+   "item": "Alignment, Proved: the lock stated stronger than the English",
+   "done": true,
+   "file": "theories/becoming/USES.zh.md",
+   "before": "规则若读自它所选中者所占的份额，便会锁定，它读不到的损失再大，锁定仍然保持",
+   "after": "规则若读自它所选中者所占的份额，就可以锁定；它读不到的损失再大，锁定仍然保持",
+   "why": "The English is 'The lock of a rule read from the share it selects, which outlasts a loss'; 02 §9 proves it from a locked start. 便会 ('will lock') said every such rule locks; 可以 is the one page's 'can lock'.",
+   "how": "theories/becoming/USES.zh.md: '规则若读自它所选中者所占的份额，便会锁定，它读不到的损失再大，锁定仍然保持' -> '规则若读自它所选中者所占的份额，就可以锁定；它读不到的损失再大，锁定仍然保持'. The English is 'The lock of a rule read from the share it selects, which outlasts a loss'; 02 §9 proves it from a locked start. 便会 ('will lock') said every such rule locks; 可以 is the one page's 'can lock'."
+  },
+  {
+   "item": "Alignment, T7 line: an untranslatable clause",
+   "done": true,
+   "file": "theories/becoming/USES.zh.md",
+   "before": "（经训练的形成未经检验）……就作为关于本身是训练出的模型的评判者的主张而言，这算作不利于该情形的证据",
+   "after": "（评判者靠训练形成的情形未经检验）……把该情形当作关于由训练出的模型充当的评判者的主张，这算作不利于它的证据",
+   "why": "Same claim, said as the one page says the parenthesis.",
+   "how": "theories/becoming/USES.zh.md: '（经训练的形成未经检验）……就作为关于本身是训练出的模型的评判者的主张而言，这算作不利于该情形的证据' -> '（评判者靠训练形成的情形未经检验）……把该情形当作关于由训练出的模型充当的评判者的主张，这算作不利于它的证据'. Same claim, said as the one page says the parenthesis."
+  },
+  {
+   "item": "People and AI: the third question",
+   "done": true,
+   "file": "theories/becoming/USES.zh.md",
+   "before": "控制是否回来",
+   "after": "控制是否回到控制者那里",
+   "why": "The checklist the line links asks 'Does control come back to the controller?' (控制是否回到控制者？ in USES-EXAMPLES.zh); 控制是否回来 left 'to whom' open.",
+   "how": "theories/becoming/USES.zh.md: '控制是否回来' -> '控制是否回到控制者那里'. The checklist the line links asks 'Does control come back to the controller?' (控制是否回到控制者？ in USES-EXAMPLES.zh); 控制是否回来 left 'to whom' open."
+  },
+  {
+   "item": "Obedience: passive",
+   "done": true,
+   "file": "theories/becoming/USES.zh.md",
+   "before": "这样的反应一般而言未被表明存在",
+   "after": "这样的反应一般而言尚未表明存在",
+   "why": "No change of claim.",
+   "how": "theories/becoming/USES.zh.md: '这样的反应一般而言未被表明存在' -> '这样的反应一般而言尚未表明存在'. No change of claim."
+  },
+  {
+   "item": "08 §8's ethics phrase",
+   "done": true,
+   "file": "theories/becoming/USES.zh.md",
+   "before": "一种得到澄清、而非得到奠基的伦理",
+   "after": "一种澄清了、却未奠定根据的伦理",
+   "why": "One rendering across the fronts.",
+   "how": "theories/becoming/USES.zh.md: '一种得到澄清、而非得到奠基的伦理' -> '一种澄清了、却未奠定根据的伦理'. One rendering across the fronts."
+  },
+  {
+   "item": "被离开 (named by the task)",
+   "done": true,
+   "file": "theories/becoming/USES.zh.md",
+   "before": "一次抽取一员时，临界量的两种锁定都会因漂移而被离开，其权重之界随离临界量的距离而缩小",
+   "after": "一次抽取一员时，漂移会使进程脱离临界量的两种锁定，这种脱离的权重有一个界，随离临界量的距离而缩小",
+   "why": "The course leaves the lock; 两种 kept, 02 §9 says 'Noise leaves either lock'.",
+   "how": "theories/becoming/USES.zh.md: '一次抽取一员时，临界量的两种锁定都会因漂移而被离开，其权重之界随离临界量的距离而缩小' -> '一次抽取一员时，漂移会使进程脱离临界量的两种锁定，这种脱离的权重有一个界，随离临界量的距离而缩小'. The course leaves the lock; 两种 kept, 02 §9 says 'Noise leaves either lock'."
+  },
+  {
+   "item": "The making line repeated the translation label (task: label once)",
+   "done": true,
+   "file": "theories/becoming/USES.zh.md",
+   "before": "英文版由 AI 读者于……写成并核对，中文版由 AI 译出；其中的读法……",
+   "after": "英文版由 AI 读者于……写成并核对；其中的读法……",
+   "why": "The top line says 本页由 AI 译自英文版; the making stays once, at the end (D5).",
+   "how": "theories/becoming/USES.zh.md: '英文版由 AI 读者于……写成并核对，中文版由 AI 译出；其中的读法……' -> '英文版由 AI 读者于……写成并核对；其中的读法……'. The top line says 本页由 AI 译自英文版; the making stays once, at the end (D5)."
+  },
+  {
+   "item": "The comment",
+   "done": true,
+   "file": "theories/becoming/USES.zh.md",
+   "before": "各条标明它已被看到多远。",
+   "after": "各条标明看到了多远。 + a note of this reading's changes",
+   "why": "Records the reading.",
+   "how": "theories/becoming/USES.zh.md: '各条标明它已被看到多远。' -> '各条标明看到了多远。 + a note of this reading's changes'. Records the reading."
+  },
+  {
+   "item": "Review cover: 'read onto'",
+   "done": true,
+   "file": "theories/becoming/review/README.zh.md",
+   "before": "对照到同一部论述上，哪里相合，哪里不合",
+   "after": "放到同一部论述上对照，看哪里相合，哪里不合",
+   "why": "As on the screen.",
+   "how": "theories/becoming/review/README.zh.md: '对照到同一部论述上，哪里相合，哪里不合' -> '放到同一部论述上对照，看哪里相合，哪里不合'. As on the screen."
+  },
+  {
+   "item": "Review cover: the one page's name and time",
+   "done": true,
+   "file": "theories/becoming/review/README.zh.md",
+   "before": "[一页概要](../ONE-PAGE.zh.md)约二十到三十分钟说出全体",
+   "after": "[一页](../ONE-PAGE.zh.md)说出全体，约需二十五至三十二分钟",
+   "why": "The cover's own navigation line calls it 一页; the time is the Chinese one page's as counted by navigation.reading_time (25–32 minutes, the figure ONE-PAGE.zh states), not the English page's hand-stated guide. The cover still counts 8–11 minutes.",
+   "how": "theories/becoming/review/README.zh.md: '[一页概要](../ONE-PAGE.zh.md)约二十到三十分钟说出全体' -> '[一页](../ONE-PAGE.zh.md)说出全体，约需二十五至三十二分钟'. The cover's own navigation line calls it 一页; the time is the Chinese one page's as counted by navigation.reading_time (25–32 minutes, the figure ONE-PAGE.zh states), not the English page's hand-stated guide. The cover still counts 8–11 minutes."
+  },
+  {
+   "item": "Review cover: 'whose losses count' in the corpus's words",
+   "done": true,
+   "file": "theories/becoming/review/README.zh.md",
+   "before": "“谁之所失算数”与“何者为更好”是否分开",
+   "after": "“谁的损失算数”与“哪个结果更好”是否分开",
+   "why": "谁的损失算数 is the term on every other front; 'which outcome is better'.",
+   "how": "theories/becoming/review/README.zh.md: '“谁之所失算数”与“何者为更好”是否分开' -> '“谁的损失算数”与“哪个结果更好”是否分开'. 谁的损失算数 is the term on every other front; 'which outcome is better'."
+  },
+  {
+   "item": "Overview opening: 耗竭 with an object and the meta-attractor",
+   "done": true,
+   "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+   "before": "在它所读之物上做到最好能在其外耗竭什么……这个回路便是元吸引子，其闭合形式，即规则与规则怎样被读都由它所选中者的份额形成",
+   "after": "在它所读之物上做到最好，能使其外的什么耗竭……这样形成的回路便是元吸引子，它的闭合形式，即规则和对规则的解读都由它所选出者所占的份额形成",
+   "why": "As on the one page.",
+   "how": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md: '在它所读之物上做到最好能在其外耗竭什么……这个回路便是元吸引子，其闭合形式，即规则与规则怎样被读都由它所选中者的份额形成' -> '在它所读之物上做到最好，能使其外的什么耗竭……这样形成的回路便是元吸引子，它的闭合形式，即规则和对规则的解读都由它所选出者所占的份额形成'. As on the one page."
+  },
+  {
+   "item": "Overview opening: D3 sentence",
+   "done": true,
+   "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+   "before": "在人与 AI 渐渐读到什么之中；只就动力学画出的诸律，不能决定它（§7）",
+   "after": "在人与 AI 渐渐读到的东西里形成；只就动力学画出的诸律，并不决定它（§7）",
+   "why": "As on the one page.",
+   "how": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md: '在人与 AI 渐渐读到什么之中；只就动力学画出的诸律，不能决定它（§7）' -> '在人与 AI 渐渐读到的东西里形成；只就动力学画出的诸律，并不决定它（§7）'. As on the one page."
+  },
+  {
+   "item": "Overview, How to read this",
+   "done": true,
+   "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+   "before": "一个最优解能在其外耗竭什么……即胜出换来左右规则之力量的回路",
+   "after": "一个最优解能使其外的什么耗竭……即胜出换来左右选择规则之力量的回路",
+   "why": "耗竭 intransitive; 'the rule that selects', the fronts' words.",
+   "how": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md: '一个最优解能在其外耗竭什么……即胜出换来左右规则之力量的回路' -> '一个最优解能使其外的什么耗竭……即胜出换来左右选择规则之力量的回路'. 耗竭 intransitive; 'the rule that selects', the fronts' words."
+  },
+  {
+   "item": "Overview, One case: renewal's first use and 'widens fifty'",
+   "done": true,
+   "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+   "before": "各条渔船各自都在种群所更新者之内; 那么再加上贻贝床，它便扩大五十吨; C 不作声",
+   "after": "各条渔船各自取的都不超过种群所更新的量（更新即把取走的补回来）; 那么它容纳五十吨所容纳的一切，还多了贻贝床，即扩大了五十吨; C 不在二者之间判定",
+   "why": "更新 glossed at its first use on the page; 扩大五十吨 read as 'enlarge [the catch by] fifty tons' (astra zh 5), now as the one page says it; 'C silent' as the one page's C 不在二者之间判定.",
+   "how": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md: '各条渔船各自都在种群所更新者之内; 那么再加上贻贝床，它便扩大五十吨; C 不作声' -> '各条渔船各自取的都不超过种群所更新的量（更新即把取走的补回来）; 那么它容纳五十吨所容纳的一切，还多了贻贝床，即扩大了五十吨; C 不在二者之间判定'. 更新 glossed at its first use on the page; 扩大五十吨 read as 'enlarge [the catch by] fifty tons' (astra zh 5), now as the one page says it; 'C silent' as the one page's C 不在二者之间判定."
+  },
+  {
+   "item": "Overview, The whole at a glance",
+   "done": true,
+   "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+   "before": "这个回路就是元吸引子，其闭合形式，即对规则的读取也由这些结果形成……把它们读到实际的选择上",
+   "after": "这样形成的回路就是元吸引子，其闭合形式，即对规则的解读也由这些结果形成……拿它们去读实际的选择",
+   "why": "As on the one page; 'reading them onto actual selections' was a calque.",
+   "how": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md: '这个回路就是元吸引子，其闭合形式，即对规则的读取也由这些结果形成……把它们读到实际的选择上' -> '这样形成的回路就是元吸引子，其闭合形式，即对规则的解读也由这些结果形成……拿它们去读实际的选择'. As on the one page; 'reading them onto actual selections' was a calque."
+  },
+  {
+   "item": "Overview §8 (beyond the opening, same terms)",
+   "done": true,
+   "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+   "before": "一项新的成果（“a new artefact”）……伦理的前提被说清了，却没有因此得到奠基（“a clarified ethics, not a grounded one”）",
+   "after": "一套新的形式化成果（“a new artefact”）……一种澄清了、却未奠定根据的伦理（“a clarified ethics, not a grounded one”）",
+   "why": "Otherwise the overview would keep the renderings the one page dropped.",
+   "how": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md: '一项新的成果（“a new artefact”）……伦理的前提被说清了，却没有因此得到奠基（“a clarified ethics, not a grounded one”）' -> '一套新的形式化成果（“a new artefact”）……一种澄清了、却未奠定根据的伦理（“a clarified ethics, not a grounded one”）'. Otherwise the overview would keep the renderings the one page dropped."
+  },
+  {
+   "item": "Overview §7 and §9 (beyond the opening): leaving a lock",
+   "done": true,
+   "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+   "before": "形成的锁定能及时走出; 临界量两侧的锁定都可仅因漂移而被离开，其权重之界随……缩小; 在所读者一无改变时被离开，其频率超过……",
+   "after": "一旦形成锁定，能及时脱离它; 单凭漂移也会使进程脱离临界量两侧的锁定，这种脱离的权重有一个界，随……缩小; 在所读者一无改变时，选择者离开它的频率超过……",
+   "why": "被离开 and 走出 with the lock as subject (named in the task); §7's condition is the one page's sentence. The T7 row's name cell, which zh_fronts.thesis_names_zh reads, is untouched.",
+   "how": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md: '形成的锁定能及时走出; 临界量两侧的锁定都可仅因漂移而被离开，其权重之界随……缩小; 在所读者一无改变时被离开，其频率超过……' -> '一旦形成锁定，能及时脱离它; 单凭漂移也会使进程脱离临界量两侧的锁定，这种脱离的权重有一个界，随……缩小; 在所读者一无改变时，选择者离开它的频率超过……'. 被离开 and 走出 with the lock as subject (named in the task); §7's condition is the one page's sentence. The T7 row's name cell, which zh_fronts.thesis_names_zh reads, is untouched."
+  },
+  {
+   "item": "GLOSSARY.zh 元吸引子 row: one word for 'loop', the share, and an ambiguous clause",
+   "done": true,
+   "file": "GLOSSARY.zh.md",
+   "before": "一个选择之环，其规则与其对规则的读取都由它所选择的份额形成，环中没有任何东西读取份额之外者; 二者是一个环; 第二章把闭合之环读作文件夹之元吸引子的一部分，那个元吸引子还说及承载者、领域与纠正，并把文件夹的第二阶读作……",
+   "after": "一个选择的回路，其规则与对规则的解读都由它所选出者所占的份额形成，回路中没有任何东西读取这一份额之外的东西; 二者是同一个回路; 第二章把闭合的回路读作文件夹所说之元吸引子的一部分（文件夹的元吸引子还说及承载者、领域与纠正），又把文件夹的第二阶读作……",
+   "why": "The row opened with 回路 (the fronts' word for the meta-attractor's loop) and then said 环, so a reader met two things; 它所选择的份额 reads as 'the share it chose'; in the last sentence 并把 could take 那个元吸引子 as its subject. The row's first phrase, 胜出换来左右选择规则之力量的那个回路, is unchanged because lineage.json (paper-generative-foundations-whitepaper, zh) glosses the English glossary with it.",
+   "how": "GLOSSARY.zh.md: '一个选择之环，其规则与其对规则的读取都由它所选择的份额形成，环中没有任何东西读取份额之外者; 二者是一个环; 第二章把闭合之环读作文件夹之元吸引子的一部分，那个元吸引子还说及承载者、领域与纠正，并把文件夹的第二阶读作……' -> '一个选择的回路，其规则与对规则的解读都由它所选出者所占的份额形成，回路中没有任何东西读取这一份额之外的东西; 二者是同一个回路; 第二章把闭合的回路读作文件夹所说之元吸引子的一部分（文件夹的元吸引子还说及承载者、领域与纠正），又把文件夹的第二阶读作……'. The row opened with 回路 (the fronts' word for the meta-attractor's loop) and then said 环, so a reader met two things; 它所选择的份额 reads as 'the share it chose'; in the last sentence 并把 could take 那个元吸引子 as its subject. The row's first phrase, 胜出换来左右选择规则之力量的那个回路, is unchanged because lineage.json (paper-generative-foundations-whitepaper, zh) glosses the English glossary with it."
+  },
+  {
+   "item": "GLOSSARY.zh 论题 row",
+   "done": true,
+   "file": "GLOSSARY.zh.md",
+   "before": "（T8 已论证，未经检验）",
+   "after": "（T8 已论证，无检验）",
+   "why": "English 'with no test'; the one page and the overview say 已论证，无检验.",
+   "how": "GLOSSARY.zh.md: '（T8 已论证，未经检验）' -> '（T8 已论证，无检验）'. English 'with no test'; the one page and the overview say 已论证，无检验."
+  },
+  {
+   "item": "GLOSSARY.zh 看到了多远 row: what the English says, outside the Chinese-only note",
+   "done": true,
+   "file": "GLOSSARY.zh.md",
+   "before": "直到……英文称之为 standing。（中文版所加：……；核心声明相对于根之边的位置是另一回事，见上“根之边”。）",
+   "after": "直到……英文称之为 standing；英文仍用 standing 一词说持续（一个水平 stands、comes to stand、ceases to stand，见第二章）。核心声明相对于根之边的位置是另一义，见上“根之边”。（中文版所加：此前中文版译作“地位”……须用名词处写“看到的程度”。）",
+   "why": "The English row says both that the word stays for persistence and that the edge sense is another; the Chinese omitted the first and marked the second as a Chinese addition.",
+   "how": "GLOSSARY.zh.md: '直到……英文称之为 standing。（中文版所加：……；核心声明相对于根之边的位置是另一回事，见上“根之边”。）' -> '直到……英文称之为 standing；英文仍用 standing 一词说持续（一个水平 stands、comes to stand、ceases to stand，见第二章）。核心声明相对于根之边的位置是另一义，见上“根之边”。（中文版所加：此前中文版译作“地位”……须用名词处写“看到的程度”。）'. The English row says both that the word stays for persistence and that the edge sense is another; the Chinese omitted the first and marked the second as a Chinese addition."
+  },
+  {
+   "item": "GLOSSARY.zh map section (the two senses of 地图): 耗竭 with an object and 'read onto'",
+   "done": true,
+   "file": "GLOSSARY.zh.md",
+   "before": "在它所读之外能耗竭什么……读到本论上",
+   "after": "能使它所读之外的什么耗竭……放到本论上对照",
+   "why": "Not a row this pass changed, but the definition of 整幅地图 the task names; the fronts' wording.",
+   "how": "GLOSSARY.zh.md: '在它所读之外能耗竭什么……读到本论上' -> '能使它所读之外的什么耗竭……放到本论上对照'. Not a row this pass changed, but the definition of 整幅地图 the task names; the fronts' wording."
+  },
+  {
+   "item": "GLOSSARY.zh 锁定 row (not changed this pass): leaving a lock",
+   "done": true,
+   "file": "GLOSSARY.zh.md",
+   "before": "才让它离开；有噪声时，有些锁定单凭漂移也会离开",
+   "after": "才能使进程脱离它；有噪声时，单凭漂移也能脱离其中一些锁定",
+   "why": "The lock does not leave; the course leaves it. The same verb as the fronts now use. Nothing quotes the row's Chinese.",
+   "how": "GLOSSARY.zh.md: '才让它离开；有噪声时，有些锁定单凭漂移也会离开' -> '才能使进程脱离它；有噪声时，单凭漂移也能脱离其中一些锁定'. The lock does not leave; the course leaves it. The same verb as the fronts now use. Nothing quotes the row's Chinese."
+  },
+  {
+   "item": "Checked and kept",
+   "done": true,
+   "how": "Kept what both cold readers praised: 生灭变化 with its gloss (README-ZH), 胜出又怎样换来左右选择规则的力量 (screen, uses, cover), 薪火相传 and the lake paragraph explaining the four words (one page), 好让人与 AI 能共有一种任何心智都能核对的理解，协调可以从这里起步. Governing clauses: 义以英文版为准 and 以所链接之处为准 once each on README-ZH (pinned), once each in the italic line of the one page, the overview and the cover; the uses page's 以英文版为准 in its render-written lag banner is temporary (lifts with zh_fronts --revised). AI-translation label once per page (README-ZH's 开篇 row trimmed; USES.zh's end line trimmed). Terms now one way across the five pages: 元吸引子 (D1, closed form 对规则的解读……由它所选出者所占的份额形成), 看到了多远, 表述方式 for framing, 更新 glossed on first use (再生 gone), 谁的损失算数, 塑造者, 脱离 for leaving a lock; 地图 for the whole map and 第二章的地图 for 02's only in the overview, as GLOSSARY.zh's map section says; 地位 only in GLOSSARY.zh's note on the old word and its kept anchor. Meaning checked sentence by sentence against README-FIRST-SCREEN.md, ONE-PAGE.md, USES.md, review/README.md, the overview's opening and GLOSSARY.md; no other place where the Chinese said what the English does not was found. Before each change the old wording was grepped in records/*.json, lineage.json, atlas entries, data/*.json, tools/research/*.py and tests, the dossiers under review/ and research-config.json: no quote of any changed sentence (塑规者 and 规则怎样被读 occur in records' own Chinese, not as quotes of these pages)."
+  },
+  {
+   "item": "Checks",
+   "done": true,
+   "how": "Load 5.6-6.8. python3 -B -m unittest, one file at a time: test_chinese_fronts 26 of 27 (the one red, test_the_chinese_opening_is_timed_without_its_notes, reads the rendered README.zh.md, stale until the render, as every agent of this pass found); test_uses_pages 48 OK; test_navigation_pages 43 OK (pins the one page's making line and What it is); test_spine 30 OK (pins the picture keys on ONE-PAGE.zh and the overview, untouched); test_review_packet 3 OK; test_links 5 OK; test_style 22 OK (1 skipped); test_lineage 16 OK; test_site 92, 1 red (the rendered README.md's one-page time, stale, not these files). moves.check_links over the six edited Markdown files: 552 links, 0 broken; zh_fronts.problems() empty. Times recounted with navigation.reading_time: ONE-PAGE.zh 25–32 (ten-minute part 12–15, lake 1–2), USES.zh 33–43 (longest ten-minute part 6–8), review/README.zh 8–11, overview 62–80: all as the pages state; GLOSSARY.zh 24–31 to 24–32 (stated only by README.zh's render field). No make, render, gate, lake or build; the full suite deliberately deferred."
+  }
+ ],
+ "left": [
+  {
+   "item": "Rendered README.zh.md (and README.md) stale",
+   "why": "The template changed; test_chinese_fronts' one red clears at the render (make research-render), the coordinator's step."
+  },
+  {
+   "item": "zh-editions records",
+   "why": "After the English sources are committed, the coordinator runs python3 -B tools/research/zh_fronts.py --revised for the Chinese pages revised this pass (README-ZH, ONE-PAGE.zh, USES.zh, USES-EXAMPLES.zh, review/README.zh, THE-THEORY-OF-BECOMING.zh, GLOSSARY.zh) so the lag banners lift; USES.zh still carries its render-written banner."
+  },
+  {
+   "item": "OPENING.zh.md line 17 links the uses page as 本论有什么用，用到多远",
+   "why": "Not edited: the opening's files are not this reader's; the link has no anchor and still lands; its text no longer matches the retitled page (本论有什么用，看到了多远)."
+  },
+  {
+   "item": "USES-EXAMPLES.zh.md: 塑规者, 形成的锁定能被及时走出 (line ~110), 任一锁定都会因漂移而被离开 (line ~169), 「」 in the quoted 24 October aim",
+   "why": "Not in this reading's files; the same fixes as USES.zh (塑造者, 一旦形成锁定，能及时脱离它, 漂移会使进程脱离……) would make the examples page say what the uses page now says."
+  },
+  {
+   "item": "塑规者 in eight records' Chinese, theory-graph.json and atlas.json; 规则怎样被读 in closed-capture.json's Chinese",
+   "why": "Records' own Chinese, not quotes of the fronts; the fronts now say 塑造者 and 对规则的解读. One term would read better; records are not this reader's."
+  },
+  {
+   "item": "'the dynamics' as 动态 (README-ZH 诸律只读动态, USES.zh 诸律只就动态而立) and 动力学 (ONE-PAGE.zh and the overview, 只就动力学画出的诸律)",
+   "why": "Both read naturally and the English itself words the D3 clause two ways ('which read only the dynamics', 'drawn on the dynamics alone'); left rather than churn a pinned-adjacent sentence. If one word is wanted, 动力学 is 07's sense (the represented dynamics)."
+  },
+  {
+   "item": "GLOSSARY.zh 根之边 row lists the four places (推导而得、在一个所述的假设之下、计数，或处于一个指明的距离)",
+   "why": "Accurate (08 §7) and helpful, but a Chinese-only addition not marked （中文版所加）as the glossary's other additions are. Low."
+  },
+  {
+   "item": "The English review cover says the one page takes 'twenty to thirty minutes'",
+   "why": "A hand-stated guide; the English one page counts 22–28. The Chinese cover now gives the Chinese one page's counted 25–32."
+  },
+  {
+   "item": "'Open question': 未决的问题 (one page) and 开放问题 (review cover's philosophy row)",
+   "why": "开放问题 is the standard Chinese term and the records use it; left."
+  },
+  {
+   "item": "GLOSSARY.zh 生生 row: T8 陈述本论的制作者为生命所提供者",
+   "why": "Mirrors GLOSSARY.md ('what the account's makers offer'), which follows 07 §8; changes with the English and 07."
+  },
+  {
+   "item": "GLOSSARY.zh's header and italic line say 尚无经人审查的记录 (older form)",
+   "why": "A translation's review status, not the making; the glossary is not one of the five pages read whole. Low."
+  },
+  {
+   "item": "Ren's message 9 and the ethics clause 每一种在用到之处都是假设 (README-ZH), 二者在用到之处都是假设 (USES.zh)",
+   "why": "The Chinese follows the English ('each a hypothesis wherever used'); whether that clause reads as what Ren rejected is the coordinator's and Ren's, as the screen verifier reported."
+  }
+ ],
+ "for_ren": [
+  "One Chinese wording for the meta-attractor on every front, as D1: 胜出又怎样换来左右选择规则的力量：本论把这一回路称为元吸引子 (screen, uses, cover) or 胜出若换来左右选择规则的力量，这样形成的回路便是元吸引子 (one page, overview), its closed form 规则和对规则的解读都由它所选出者所占的份额形成, proved to lock on stated models; the lock alone is not called it.",
+  "08 §8's two phrases, now said one way on the screen, the one page, the uses page and the overview: “一套新的形式化成果”（a new artefact）and “一种澄清了、却未奠定根据的伦理”（a clarified ethics, not a grounded one）.",
+  "Renewal is 更新, glossed 把取走的补回来 at its first use on each page; 再生 is gone from the screen. Shapers are 塑造者 on every front (the records still say 塑规者). Leaving a lock is 脱离 (进程脱离锁定), replacing 被离开 and 走出.",
+  "The uses page's Chinese title is now 本论有什么用，看到了多远 (it was 用到多远, 'how far it can be used'); the opening's Chinese pointer still names the old title.",
+  "The site's Chinese link preview (research-config description_zh) changed one phrase to match the screen: 放到同一部论述上对照."
+ ]
+}

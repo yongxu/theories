@@ -37,6 +37,7 @@ FILES = {
     'experiments/tests/t7/FROZEN.sha256': '0 design.md\n',
     'theories/early/README.md': '# An earlier folder\n',
     'theories/becoming/results/README.md': '# The results\n',
+    'theories/becoming/chapters/07-SIGNIFICANCE.md': '# Significance\n',  # the atlas's lead links chapter 7's question
     atlas.ATLAS + '/map.html': '<!doctype html>\n',
 }
 TRACKED = (LEAF, 'experiments/history/Old.lean')
@@ -277,6 +278,8 @@ class RenderTests(AtlasCase):
         self.assertIn('hypothesis 2: Modelling choices: two kinds, counted.', family)
         self.assertIn('To [Closed capture (元吸引子)](c.md#closed-capture): sufficient', other)  # an exit to another family's page
         self.assertNotIn('- **Mechanism.**', index)  # the sections are on the families' pages
+        self.assertNotIn('**Valence.**', family + other)  # the data keep the field; the lead says once what it means
+        self.assertIn("chapter 7's question", index)
         self.assertIn('Families: **C**, [G](g.md).', family)
         checked = 0
         for name in (atlas.PAGE, atlas.FAMILY_PAGES + '/c.md', atlas.FAMILY_PAGES + '/g.md'):

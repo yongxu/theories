@@ -261,6 +261,19 @@ class LandingPageTests(unittest.TestCase):
         self.assertIn(f'由 AI 译自英文版（正文约 {zh_fronts.zh_time(body)}）', landing)
         self.assertIn(f'| 正文约 {zh_fronts.zh_time(body)}，注释另计 |', landing)
 
+    def test_the_template_says_the_aim_and_its_governing_clauses_as_the_english_screen(self):
+        """The Chinese screen's template, as the reader sees it (its note dropped): the aim as GOALS#generative-alignment
+        and AJ's plan §1 state it, not the wording AJ5 replaced; the meta-attractor's closed form at 02 §9; and each
+        governing clause once on the page (AG review, fourth pass, 9 November 2026)."""
+        text = re.sub(r'<!--.*?-->', '', (ROOT / zh_fronts.TEMPLATE).read_text(encoding='utf-8'), flags=re.S)
+        self.assertNotIn('对自身之选择的控制', text)
+        self.assertIn('规则仍读取塑造者份额之外的东西', text)
+        self.assertIn('02-MAP.md#r-closed-capture', text)
+        self.assertNotIn('不在诸律之中', text)
+        self.assertEqual(text.count('义以英文版为准'), 1)
+        self.assertEqual(text.count('以所链接之处为准'), 1)
+        self.assertEqual(text.count('尚无独立的人工审查记录'), 1)
+
     def test_a_stated_time_is_kept_whole_in_a_table(self):
         (self.root / 'theories/LINEAGE.zh.md').write_text('# 长成\n\n*全文约 9–12 分钟 | 另 3 分钟。*\n', encoding='utf-8')
         pages, errors = self.render('# 首\n\n| a | {{stated:theories/LINEAGE.zh.md}} |\n')

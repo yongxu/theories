@@ -453,5 +453,38 @@ class FeaturedTests(unittest.TestCase):
             navigation.featured_results([result('law', statement=False)], {'readme_featured_results': ['law']})
 
 
+class OnePageMakingAndMetaAttractor(unittest.TestCase):
+    """AG review, fourth pass (9 November 2026): the one page says what it is first and how it was made once, at its end;
+    the meta-attractor is the folder's loop with its closed form what 02 §9 proves; the aim is GOALS' current goal."""
+
+    def page(self, rel):
+        return (registry.ROOT / 'theories/becoming' / rel).read_text(encoding='utf-8')
+
+    def paragraph(self, text, lead):
+        return next(p for p in text.split('\n\n') if p.startswith(lead))
+
+    def test_the_making_is_said_once_at_the_end(self):
+        en, zh = self.page('ONE-PAGE.md'), self.page('ONE-PAGE.zh.md')
+        self.assertEqual(en.count('no independent human review is recorded yet'), 1)
+        self.assertTrue(en.rstrip().split('\n\n')[-1].startswith('*Made with AI, proofs included.'))
+        self.assertNotIn('Made with AI', self.paragraph(en, '**What it is.**'))
+        self.assertEqual(zh.count('审查记录') + zh.count('审查的记录'), 1)
+        self.assertTrue(zh.rstrip().split('\n\n')[-1].startswith('*它借助 AI 做成，证明也在内。'))
+        self.assertNotIn('借助 AI', self.paragraph(zh, '**它是什么。**'))
+
+    def test_the_meta_attractor_and_the_aim(self):
+        what = self.paragraph(self.page('ONE-PAGE.md'), '**What it is.**')
+        self.assertIn('Where winning comes to buy power over the rule that selects, the loop is what the work calls the '
+                      '[meta-attractor](../meta-attractor/README.md)', what)
+        self.assertIn('is proved to lock ([02 §9](chapters/02-MAP.md#r-closed-capture))', what)
+        self.assertNotIn('is not in the laws but in a reading', what)
+        aim = self.paragraph(self.page('ONE-PAGE.md'), '**Alignment.**')
+        self.assertIn('the rule still reads what lies beyond their share, so that a loss there can turn it', aim)
+        self.assertIn('(../../GOALS.md#generative-alignment)', aim)
+        for text in (what, aim):
+            self.assertNotIn('control over its own selection', text)
+            self.assertNotIn("AJ's plan", text)
+
+
 if __name__ == '__main__':
     unittest.main()
