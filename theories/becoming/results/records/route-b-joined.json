@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-11-09T15:01:26+00:00",
+  "reviewed_at_utc": "2026-11-09T15:41:52+00:00",
   "statement": {
     "en": "At the formations whose acts return, each under its least class, the condition read de se holds exactly where the flow is mutually dependent; nothing beyond their coupling closures counts from them; orders a persisting line's choices allow give C only along what they show, never the course taken.",
     "zh": "于其举回返之形成处，各在其最细类下，自指读出之延续条件恰于流相互依赖处成立；其耦合闭包外者从它们无意义；存续之系之择所容之序，唯沿其所示给出 C，从不及所取之程。"
@@ -34,8 +34,8 @@
       ]
     },
     {
-      "en": "Every strict order according with the choices and increasing in its own continuation on the pairs met ranks one course above another exactly where the first reaches the second in the shown relation with every own-widening met added. An extension between listed level paths met together is one step of it, so every such order gives C there, and C for an order increasing everywhere is its case of every pair.",
-      "zh": "凡与诸择相合、于所遇之对随己之延续而增之严序，排一程于另一程之上，恰当前者于加入所遇之己扩大后之所示关系中及于后者。同遇之二列出水平路径间之延展为其一步，故凡此序于彼给出 C；于每对皆随己之延续而增之序之 C，为每对之情形。",
+      "en": "Where the shown relation with every own-widening met added has no cycle, every strict order according with the choices and increasing in its own continuation on the pairs met ranks a course above another exactly where the first reaches the second in that relation. An extension between listed level paths met together is one step, so such orders give C there; C for an order increasing everywhere is the every-pair case.",
+      "zh": "加入所遇之己扩大后之所示关系无环处，凡与诸择相合、于所遇之对随己之延续而增之严序，排一程于另一程之上，恰当前者于此关系中及于后者。同遇之二列出水平路径间之延展为其一步，故凡此序于彼给出 C；于每对皆随己之延续而增之序之 C，为每对之情形。",
       "declarations": [
         "Becoming.ChoiceOccasions.selfConcerned_above_iff_reach",
         "Becoming.Web.extension_reached_of_met",
@@ -45,8 +45,8 @@
       ]
     },
     {
-      "en": "Where only ending was at stake on the occasions met, the pair the met-pair C ranks is a course that does not end above one that ends, and every order putting keeping above ending is increasing in its own continuation on the pairs met: self-concern there is a corollary of keeping above ending, and weaker.",
-      "zh": "所遇之时唯终结攸关处，同遇之 C 所排之对，乃不终结之程居终结之程之上；凡置存于终之上之序，于所遇之对皆随己之延续而增：彼处之自我关切为存居终上之推论，且较弱。",
+      "en": "Where only ending was at stake on the occasions met, the pair the met-pair C ranks is a course that does not end above one that ends, and every order putting keeping above ending is increasing in its own continuation on the pairs met: self-concern there is a corollary of keeping above ending, which also ranks keeping above an ending course it does not widen.",
+      "zh": "所遇之时唯终结攸关处，同遇之 C 所排之对，乃不终结之程居终结之程之上；凡置存于终之上之序，于所遇之对皆随己之延续而增：彼处之自我关切为存居终上之推论；存居终上亦排存于其所不扩大之终程之上。",
       "declarations": [
         "Becoming.Web.extension_met_keeps_above_ending",
         "Becoming.ChoiceOccasions.increasingInOwnOn_of_keeping",
@@ -77,6 +77,7 @@
         "Becoming.FromTheDynamics.Alternating.acting",
         "Becoming.FromTheDynamics.Alternating.dependent",
         "Becoming.FromTheDynamics.Alternating.descended",
+        "Becoming.FromTheDynamics.Alternating.member_stands",
         "Becoming.FromTheDynamics.Alternating.persists",
         "Becoming.FromTheDynamics.Alternating.gated",
         "Becoming.FromTheDynamics.Alternating.coupled",
@@ -304,6 +305,7 @@
         "Becoming.FromTheDynamics.Alternating.keep",
         "Becoming.FromTheDynamics.Alternating.kept",
         "Becoming.FromTheDynamics.Alternating.mem_both",
+        "Becoming.FromTheDynamics.Alternating.member_stands",
         "Becoming.FromTheDynamics.Alternating.mutuallyDependent",
         "Becoming.FromTheDynamics.Alternating.noCycle",
         "Becoming.FromTheDynamics.Alternating.order",
@@ -320,7 +322,7 @@
         "Becoming.Web.extension_met_keeps_above_ending",
         "Becoming.Web.extension_reached_of_met"
       ],
-      "sha256": "20d2dcddfc780565b9534c5d1849dc4565885d1da5bc885404a222a617bcac0e"
+      "sha256": "8efd3d526fa130de64621056ff11d663b4fdd740abf996fc192a72ee49ee931f"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean",
@@ -383,7 +385,7 @@
         "Becoming.Flow.persists_not_listsAdmitted",
         "Becoming.PersistingChoices.Crossed.not_selfConcerned"
       ],
-      "sha256": "c0615f4974e5b81cc279348b525cb5e17a15bd4a017291a5a8ef6451b4bec760"
+      "sha256": "19d7da15e8a3d69fec480c33128b644ea95b9dee3a0c8a3fffe3447ced9910e4"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PremiseWitnesses.lean",
@@ -416,12 +418,12 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "379832f2d04b222b59474e07f0ae530626eb5335b0b50fb74e6d2e6e2efab558"
+      "sha256": "83e9616bc62a17ae169726b2a5129982d097d027bfa63263044e7b4faf6c4cc4"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/j1-route-b-joined/NOTE.md",
       "role": "integration",
-      "sha256": "cd510c7cf046da4b1919788250c01b605c90c80888a0154d3ac298b39ff92664"
+      "sha256": "2f6e73d06a0ba7ae019b518867e39d380c7513c113545fee5a10e8235e3ae3ab"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",

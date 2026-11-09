@@ -68,20 +68,20 @@ LAWS = [
       "zh": "回返之立场之耦合闭包外者，从它无意义，此意义为对手。于有限而可判所及之流，合诸回返之形成为池，则无外者：读自延续之选择之界，唯于池漏某形成时有内容。"},
      {FTD: ["Flow.returning_beyond_coupling"],
       "BeyondCoupling": ["Flow.reachReturns_ownClosure_rival", "Flow.returning_pool_covers"]}),
-    ({"en": "Every strict order according with the choices and increasing in its own continuation on the pairs met "
-            "ranks one course above another exactly where the first reaches the second in the shown relation with "
-            "every own-widening met added. An extension between listed level paths met together is one step of it, "
-            "so every such order gives C there, and C for an order increasing everywhere is its case of every "
-            "pair.",
-      "zh": "凡与诸择相合、于所遇之对随己之延续而增之严序，排一程于另一程之上，恰当前者于加入所遇之己扩大后之所示关系中及于后者。同遇之二列出水平路径间之延展为其一步，"
+    ({"en": "Where the shown relation with every own-widening met added has no cycle, every strict order according "
+            "with the choices and increasing in its own continuation on the pairs met ranks a course above another "
+            "exactly where the first reaches the second in that relation. An extension between listed level paths met together is one step, "
+            "so such orders give C there; C for an order increasing everywhere is the every-pair case.",
+      "zh": "加入所遇之己扩大后之所示关系无环处，凡与诸择相合、于所遇之对随己之延续而增之严序，排一程于另一程之上，恰当前者于此关系中及于后者。同遇之二列出水平路径间之延展为其一步，"
             "故凡此序于彼给出 C；于每对皆随己之延续而增之序之 C，为每对之情形。"},
      {FTD: ["ChoiceOccasions.selfConcerned_above_iff_reach", "Web.extension_reached_of_met"],
       "PremiseWitnesses": ["Web.extension_ownWidens", "Web.extension_ranked_of_increasingInOwnOn",
                            "Web.extension_ranked_of_increasingInOwn"]}),
     ({"en": "Where only ending was at stake on the occasions met, the pair the met-pair C ranks is a course that does "
             "not end above one that ends, and every order putting keeping above ending is increasing in its own "
-            "continuation on the pairs met: self-concern there is a corollary of keeping above ending, and weaker.",
-      "zh": "所遇之时唯终结攸关处，同遇之 C 所排之对，乃不终结之程居终结之程之上；凡置存于终之上之序，于所遇之对皆随己之延续而增：彼处之自我关切为存居终上之推论，且较弱。"},
+            "continuation on the pairs met: self-concern there is a corollary of keeping above ending, which also "
+            "ranks keeping above an ending course it does not widen.",
+      "zh": "所遇之时唯终结攸关处，同遇之 C 所排之对，乃不终结之程居终结之程之上；凡置存于终之上之序，于所遇之对皆随己之延续而增：彼处之自我关切为存居终上之推论；存居终上亦排存于其所不扩大之终程之上。"},
      {FTD: ["Web.extension_met_keeps_above_ending"],
       "PersistingChoices": ["ChoiceOccasions.increasingInOwnOn_of_keeping",
                             "ChoiceOccasions.selfConcerned_consistent_of_kept"]}),
@@ -101,7 +101,7 @@ LAWS = [
       "zh": "合见之例：二形成轮流而立，各取己之所立并予他者以其所立。流平衡且相互依赖，故每一形成皆回返，范围之条件成立；一传承之系经此二者而存续，从不过取；"
             "其水平从不被列；择于存与终者择存，合于存居终上，并合于所遇之时之自我关切。"},
      {FTD: [f"{ALT}.stands", f"{ALT}.unit", f"{ALT}.flow", f"{ALT}.web", f"{ALT}.generations", f"{ALT}.balances",
-            f"{ALT}.acting", f"{ALT}.dependent", f"{ALT}.descended", f"{ALT}.persists", f"{ALT}.gated",
+            f"{ALT}.acting", f"{ALT}.dependent", f"{ALT}.descended", f"{ALT}.member_stands", f"{ALT}.persists", f"{ALT}.gated",
             f"{ALT}.coupled", f"{ALT}.mutuallyDependent", f"{ALT}.returns", f"{ALT}.choices", f"{ALT}.noCycle",
             f"{ALT}.stake", f"{ALT}.realized", f"{ALT}.joined"]}),
     ({"en": "The general laws the four pieces shared, now below them: returning along a relation, at the frame; the "

@@ -354,8 +354,8 @@ theorem selfConcerned_consistent_iff :
 /-- **Where only ending is at stake, keeping above ending is self-concern on the occasions met.** Where, on
 the occasions met, a course adds to the own continuation beyond one it widens only where it does not end and
 the other does (`stake`), every relation putting what does not end above what ends wherever the two were met
-together is increasing in its own continuation on the pairs met. The converse fails: keeping above ending
-also ranks a keeping course above an ending one it does not widen. -/
+together is increasing in its own continuation on the pairs met. Keeping above ending asks more: it also ranks
+a keeping course above an ending one met with it that it does not widen. -/
 theorem increasingInOwnOn_of_keeping {ends : (X → Bool) → Prop}
     (stake : ∀ a b, ch.Met a b → Weighting.WidensOn items a b → Weighting.AddsOwn items own a b →
       ¬ ends a ∧ ends b)
