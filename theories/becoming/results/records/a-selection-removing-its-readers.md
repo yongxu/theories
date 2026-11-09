@@ -79,7 +79,7 @@ Reading (the AI's, from its knowledge): survivorship read off the survivors is s
 | Role | Source | Declarations |
 |---|---|---|
 | proof | [ReadingsPersist.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean) | `Becoming.AliveIn`, `Becoming.AllPersist`, `Becoming.AllPersist.survivors`, `Becoming.ReadingsPersist.Habitat.Line`, `Becoming.ReadingsPersist.Habitat.clearedBack_dweller_gone`, `Becoming.ReadingsPersist.Habitat.clearedBack_line_gone`, `Becoming.ReadingsPersist.Habitat.clearedBack_removes_both`, `Becoming.ReadingsPersist.Habitat.clearedBack_survivors_pass`, `Becoming.ReadingsPersist.Habitat.cleared_dweller_gone`, `Becoming.ReadingsPersist.Habitat.cleared_removes_dweller`, `Becoming.ReadingsPersist.Habitat.cleared_removes_its_readers`, `Becoming.ReadingsPersist.Habitat.slotsOf`, `Becoming.RemovesItsReaders`, `Becoming.RemovesLine`, `Becoming.RemovesLine.not_standsLate`, `Becoming.SurvivorsPersist`, `Becoming.not_allPersist_of_removes`, `Becoming.reader_kept_alike`, `Becoming.survivorsPersist_of_settled` |
-| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T160604.682692Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T162721.876918Z/verification.json) | — |
 | integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zj2-readings-persist/NOTE.md) | — |
 | review | [READER.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zj2-readings-persist/READER.md) | — |
 | statement | [07-SIGNIFICANCE.md](../../chapters/07-SIGNIFICANCE.md) | — |
@@ -95,4 +95,4 @@ Aliases: `a selection removing its own readers`, `the meta-attractor's shape, th
 
 </details>
 
-Documentary review UTC: `2026-11-09T16:08:48+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T16:28:51+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
