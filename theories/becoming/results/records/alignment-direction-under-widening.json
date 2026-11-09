@@ -161,8 +161,8 @@
   ],
   "progress": [
     {
-      "zh": "公开推理链：生生的正面意义（生生之意义）→ 有根据的比较（实践承诺）→ 实践要求 → AI 对齐方向及其修订条件；实际对应 E 含证据充分性与规范根据。",
-      "en": "Disclosed chain: positive significance of living and further generation (living significance) → warranted comparison (the practical commitments) → practical requirements → AI direction and revision conditions; E covers evidential adequacy and normative warrant.",
+      "zh": "公开推理链：生生的正面意义（生生之意义）→ 有根据的比较（实践承诺）→ 实践要求 → AI 对齐方向及其修订条件；实际对应 E 含证据充分性，以及基本分类、承担与权限之根据。",
+      "en": "Disclosed chain: positive significance of living and further generation (living significance) → warranted comparison (the practical commitments) → practical requirements → AI direction and revision conditions; E covers evidential adequacy and the grounds for basic classifications, undertakings and authority.",
       "source": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/ALIGNMENT-DIRECTION-INTEGRATION.md#1-result-and-inference-advanced"
     },
     {
@@ -539,6 +539,10 @@
     {
       "en": "10 November 2026, AG review, seventh pass (on Ren's messages 9 to 12 of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, and the sixth pass's two cold readings): 'C read as widening' is re-said as the Lean has it: moves compared by what their outcomes admit, where extension is widening (Direction.extension_iff_widens), with J1/J2 as Priority the hypothesis on the comparison; no theorem here takes C (Comparison), and law 6 says 'C is not used'. No law, premise or proof changed.",
       "zh": "2026年11月10日，AG 审查第七轮（据 Ren 2026 年 11 月 9 日之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md，及第六轮两份冷读）：「读作扩大的 C」依 Lean 改述：按结果所接纳者比较动作，其中扩展即扩大（Direction.extension_iff_widens），比较上的假设是作为 Priority 的 J1/J2；此处无定理取 C（Comparison），第六律言「不用 C」。诸律、前提与证明不变。"
+    },
+    {
+      "en": "10 November 2026, AG eighth pass: a progress line says what E covers as hypothesis 2 does, \"the grounds for basic classifications, undertakings and authority\", in place of \"normative warrant\": the ethics seeks no warrant above becoming (Ren, 9 November 2026); its source is unchanged. No law changed. (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第八轮：一条进展依第二项假设言 E 之所含：「基本分类、承担与权限之根据」，以代「规范根据」：伦理不在生灭变化之上寻求根据（Ren，2026 年 11 月 9 日）；其来源不变。诸律不变。（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ],
   "text_versions": [

@@ -59,7 +59,7 @@
     },
     {
       "en": "Of the premises no theorem concludes by name (the audit's measure, which misses a proof of the unfolded form: Overshoot.closure_whole already shows mutual feeding), thirteen, chosen by reading, each hold, with the premises named here, in small models, and where it costs a line fail in another. The link to C between listed level paths: one formation needing one unit at every step, one level path admitting it at the first step alone and one at no step, admission decided and what the two admit listed, so an order counting what is admitted ranks the extension; with a self-concerned order in its place the condition held de se holds as well, and the counting order is one. On that web the condition reads no order, holds, and does not give C. A choice through the map, of two alternatives the one with the greater entry and nothing at a tie. Removing idle steps, with one idle step in it; mutual feeding of two formations, failing where only one is fed; the one passage's joining with listed outcomes and roles and connected from its start; readiness and covering of a reconfiguration's bound; one relation for both readings of matched courses; portions returning less than one for one, met where nothing left stands next and failed where the whole stands as it was left. Laws asking more of these models are not met here: excluded middle, a transaction's response and faithfulness, sufficiency and adequacy of matching, a perfect profile. These show the premises named can hold together, and nothing of how often they do.",
-      "zh": "无定理按其名得出之诸前提（此乃审计之尺度，于展开之形之证明则失之：Overshoot.closure_whole 已示相互供给），其中十三个经阅读选出，各连同此处所列之前提，于小模型中成立，代价仅一行处亦于另一模型不成。所列层级路径之间通往 C 之联结：一形成每步需一单位，一层级路径仅于首步纳之，一路径无步纳之，纳与否可判，二者所纳已列，故计所纳之序排其扩展；以自我关切之序代之，自持之条件亦成立，而计所纳之序即其一。于该网上，条件不读次序、成立，且不给出 C。经映射之选择：二者之中取值大者，相等则不取。去闲步，其中有一闲步；二形成相互供给，仅一方被供给则不成；一次传递之联结，结果与角色皆可列，自起点连通；重配之界之已备与所覆；匹配历程二读法同于一关系；回报不及一比一之份额，所留不立于下一步时成，全体如所留而立时不成。于此等模型要求更多之律，此处未满足：排中、事务之响应与忠实、匹配之充足与适当、完全之轮廓。此示所列诸前提可同时成立，于其多常成立则无所言。",
+      "zh": "无定理按其名得出之诸前提（此乃审计之尺度，于展开之形之证明则失之：Overshoot.closure_whole 已示相互供给），其中十三个经阅读选出，各连同此处所列之前提，于小模型中成立，代价仅一行处亦于另一模型不成。所列层级路径之间通往 C 之联结：一形成每步需一单位，一层级路径仅于首步纳之，一路径无步纳之，纳与否可判，二者所纳已列，故计所纳之序排其扩展；以自我关切之序代之，从己之条件亦成立，而计所纳之序即其一。于该网上，条件不读次序、成立，且不给出 C。经映射之选择：二者之中取值大者，相等则不取。去闲步，其中有一闲步；二形成相互供给，仅一方被供给则不成；一次传递之联结，结果与角色皆可列，自起点连通；重配之界之已备与所覆；匹配历程二读法同于一关系；回报不及一比一之份额，所留不立于下一步时成，全体如所留而立时不成。于此等模型要求更多之律，此处未满足：排中、事务之响应与忠实、匹配之充足与适当、完全之轮廓。此示所列诸前提可同时成立，于其多常成立则无所言。",
       "declarations": [
         "Becoming.ListedPaths.premises_hold",
         "Becoming.ListedPaths.premises_hold_de_se",
@@ -368,6 +368,10 @@
     {
       "en": "9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.",
       "zh": "2026年11月9日，工作板条目 WB：据 Ren 11 月 8–9 日之言重述伦理之框架：两个前提称为排序之果所用之两种读法，排序为排序者所持，不求外来之根据；主张、假设与 Lean 皆不变。"
+    },
+    {
+      "en": "10 November 2026, AG eighth pass: in Chinese, de se is 从己 (for 自持), as the glossary has it. No law changed. (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第八轮：中文 de se 作从己（代自持），与术语表一致。诸律不变。（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ]
 }

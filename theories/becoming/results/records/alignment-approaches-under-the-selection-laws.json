@@ -303,8 +303,8 @@
     {
       "id": "widening-as-what-every-positive-weighting-ranks",
       "detail": {
-        "en": "What C asks: the order every order increasing in admission shares.",
-        "zh": "C 要求什么：每个在接纳上递增的序所共有的次序。"
+        "en": "Widening, by which C asks an order to rank when every claim counts as living: on a finite listing, what every additive weighting counting each listed item above zero ranks higher, as does every order of any class holding these and ranking each widening higher.",
+        "zh": "扩大，即每个主张都算作活时 C 要求次序据以排序者：在有限列举上，凡给每个所列项大于零之权重的可加加权都把它排得更高，含这些加权且把每个扩大排得更高的任一类序中每个序亦然。"
       }
     },
     {
@@ -384,6 +384,10 @@
     {
       "en": "10 November 2026, AG review, seventh pass (on Ren's messages 9 to 12 of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, and the sixth pass's two cold readings): the conditional direction's hypotheses are said as its theorems take them, the continuation condition and the practical commitments on moves compared by what their outcomes admit, in place of 'C read as widening' (no Direction theorem takes Comparison). No law or proof changed.",
       "zh": "2026年11月10日，AG 审查第七轮（据 Ren 2026 年 11 月 9 日之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md，及第六轮两份冷读）：有条件之方向的假设依其定理所取而述：延续条件与实践承诺，按结果所接纳者比较动作，以代「读作扩大的 C」（Direction 中无定理取 Comparison）。诸律与证明不变。"
+    },
+    {
+      "en": "10 November 2026, AG eighth pass: the related line to widening-as-what-every-positive-weighting-ranks says widening as its record states it, what every additive weighting counting each listed item above zero, and every order of any class holding these and ranking each widening higher, ranks higher on a finite listing, every claim counted as living, in place of \"the order every order increasing in admission shares\" for what C asks (C is a requirement on an order). No law changed. (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第八轮：关联 widening-as-what-every-positive-weighting-ranks 一行依该记录之陈述言扩大：在有限列举上，凡给每个所列项大于零之权重的可加加权，以及含这些加权且把每个扩大排得更高的任一类序，都排得更高者（每个主张都算作活），以代把「每个在接纳上递增的序所共有的次序」说成 C 之所求（C 是对次序的一项要求）。诸律不变。（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ]
 }

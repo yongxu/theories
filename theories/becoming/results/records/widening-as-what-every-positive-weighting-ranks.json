@@ -169,7 +169,7 @@
   "aliases": [
     "widening as what every weighting ranks",
     "扩大即每个加权所排者",
-    "C as the order every positive weighting shares",
+    "widening as what every positive weighting shares",
     "partiality decides the mixed comparisons",
     "Becoming.Weighting.widens_iff_every_positive",
     "Becoming.Weighting.mixed_either_way",
@@ -600,6 +600,10 @@
     {
       "en": "10 November 2026, AG review, seventh pass (on Ren's messages 9 to 12 of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, and the sixth pass's two cold readings): the statement is said at the theorems' reach: on a finite listing, one course widens another exactly when every additive weighting counting each listed item above zero ranks it higher, and exactly when every order of any class holding these and ranking each widening higher does; 'one weight for all ranks by number' stays in the laws, to keep the statement within its cap. No law changed.",
       "zh": "2026年11月10日，AG 审查第七轮（据 Ren 2026 年 11 月 9 日之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md，及第六轮两份冷读）：陈述依定理所及而述：在有限列举上，一条进程扩大另一条，恰当每个给每个所列项大于零之权重的可加加权都把它排得更高，也恰当含这些加权且把每个扩大排得更高的任一类序中每个序都如此；「一律同权即按数目排」留在诸律中，以使陈述不超其限。诸律不变。"
+    },
+    {
+      "en": "10 November 2026, AG eighth pass: an alias that read C as an order (\"C as the order every positive weighting shares\") now says what the law shows, \"widening as what every positive weighting shares\"; C is a requirement on an order. No law changed (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第八轮：一个把 C 读作次序的别名（「C as the order every positive weighting shares」）改言此律所示者「widening as what every positive weighting shares」；C 是对次序的一项要求。诸律不变（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ],
   "former_ids": [

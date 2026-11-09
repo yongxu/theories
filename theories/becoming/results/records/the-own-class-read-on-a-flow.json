@@ -104,8 +104,8 @@
     "zh": "以由流读出之中心，问持立场之形成者是否即行为返回者，使此读法与路线 (b) 之范围于彼相合。"
   },
   "correspondence": {
-    "en": "Read with the class of what a formation can represent, the path stays within its coupling closure; with coupling by threshold only it reaches no further than route (b)'s outer bound, the influence closure: its line is its loop, within what can affect it, and the reach the path asks is that its acts return. Along dated occurrences the line is the occurrence alone. The path's wider reach needs a class that holds what does not come back. The reading is the AI's.",
-    "zh": "以形成者所能表征者之类读之，此路不出其耦合闭包；仅按阈值耦合时，所及不出路线 (b) 之外界，即影响闭包：其线为其环，在能影响它者之内，此路所问之及即其行为返回。沿有日期之事件，其线唯此事件。此路较宽之及须一持不返回者之类。读法为 AI 之。"
+    "en": "Read with the class of what a formation can represent, the path stays within its coupling closure; with coupling by threshold only it reaches no further than route (b)'s outer bound, the influence closure: its line is its loop, within what can affect it, and the reach the path asks is that its acts return. Along dated occurrences, a net going forward in time and so without cycles («后则无环»), the line under the class of what can reach an occurrence is the occurrence alone («无环则返之所及唯己»). The path's wider reach needs a class that holds what does not come back. The reading is the AI's.",
+    "zh": "以形成者所能表征者之类读之，此路不出其耦合闭包；仅按阈值耦合时，所及不出路线 (b) 之外界，即影响闭包：其线为其环，在能影响它者之内，此路所问之及即其行为返回。沿有日期之事件，即按时间向前因而无环之网（«后则无环»），以能及于一事件者之类读之，其线唯此事件（«无环则返之所及唯己»）。此路较宽之及须一持不返回者之类。读法为 AI 之。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OwnClass.lean",
   "aliases": [
@@ -222,6 +222,10 @@
     {
       "en": "9 November 2026: added (ZC, route (b)'s piece G5): the class read on a flow; near-definitional, as expected.",
       "zh": "2026年11月9日：新增（ZC，路线 (b) 之 G5）：类于流上读之；近乎定义，如所料。"
+    },
+    {
+      "en": "10 November 2026, AG eighth pass: the reading along dated occurrences names its law, «无环则返之所及唯己», under the class of what can reach an occurrence, on a net going forward in time and so without cycles («后则无环»), as 07 §4.10 says it; it is not the one-center result. No law changed. (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第八轮：沿有日期之事件之读，指名其律 «无环则返之所及唯己»，以能及于一事件者之类读之，在按时间向前因而无环之网上（«后则无环»），如第七章 §4.10 所言；它不是一中心之结果。诸律不变。（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ]
 }

@@ -16,14 +16,14 @@
   "laws": [
     {
       "en": "Held de se as each standpoint's center's closure under a relation, the presupposition is the continuation condition exactly where every center's closure is the whole; the three laws of this record are stated together in one theorem.",
-      "zh": "以各立场中心在某关系下的闭包作自指持有时，该预设恰在每个中心闭包皆为整体处是延续条件；本记录三律合于一定理。",
+      "zh": "以各立场中心在某关系下的闭包作从己持有时，该预设恰在每个中心闭包皆为整体处是延续条件；本记录三律合于一定理。",
       "declarations": [
         "Becoming.routeB_universal_closed"
       ]
     },
     {
-      "en": "On a relation with no cycle, wherever two standpoints have distinct centers, it is not the condition: held de se it is the root's 续无外 at the one of the relation, which on a net with no cycle holds only with one center.",
-      "zh": "在无环关系上，凡两立场中心不同处，它不是延续条件：自指持有即根上在该关系与「一」之下的续无外，而无环之网上续无外只容一个中心。",
+      "en": "On a relation with no cycle, wherever two standpoints have distinct centers, it is not the condition: held de se it is the root's 续无外 at the one of the relation, and where that holds on a net with no cycle every standpoint has the same center.",
+      "zh": "在无环关系上，凡两立场中心不同处，它不是延续条件：从己持有即根上在该关系与「一」之下的续无外，而在无环之网上续无外成立之处，每个立场的中心都相同。",
       "declarations": [
         "Becoming.ownClosure_not_unrestricted_of_acyclic"
       ]
@@ -67,8 +67,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "That the relation an unfolding gives has no cycle: dated occurrences make none, while relations between formations, affecting aggregated over time among them, can close, as under mutual dependence.",
-      "zh": "展开给出的关系无环：带日期的发生不成环，而形成之间的关系可闭合，如相互依存，那里每个闭包可为整体。",
+      "en": "That the relation an unfolding gives has no cycle: one going forward in time has none, the one-center bound there counting what lies at or before a center's step (over what comes after two centers can meet it); affecting can close.",
+      "zh": "展开给出的关系无环：按时间向前者无环，而在那里一中心之界所计的是中心之步及其前者（就其后者而言两个中心可满足条件）；形成之间的影响可闭合。",
       "kind": "scope"
     },
     {
@@ -123,12 +123,12 @@
       "relation": "formal-reuse",
       "detail": {
         "en": "Reuses the own-closure content held de se and its law (ownClosure, selfAscribed, ownClosure_unrestricted_iff).",
-        "zh": "复用自指持有的自身闭包内容及其律（ownClosure、selfAscribed、ownClosure_unrestricted_iff）。"
+        "zh": "复用从己持有的自身闭包内容及其律（ownClosure、selfAscribed、ownClosure_unrestricted_iff）。"
       },
       "interface": {
         "output": {
           "en": "The condition held de se exactly where every closure is the whole.",
-          "zh": "自指持有的条件恰在每个闭包为整体处成立。"
+          "zh": "从己持有的条件恰在每个闭包为整体处成立。"
         },
         "input": {
           "en": "Route (b)'s first law.",
@@ -145,13 +145,13 @@
       "id": "the-continuation-condition-on-the-root",
       "relation": "formal-reuse",
       "detail": {
-        "en": "Reuses the condition held de se as the root's 续无外 (ownClosure_unrestricted_iff_noOutside) and one center on a net with no cycle («续无外则同一中心»).",
-        "zh": "复用自指持有之条件即根上的续无外（ownClosure_unrestricted_iff_noOutside），及无环之网上只一中心（«续无外则同一中心»）。"
+        "en": "Reuses the condition held de se as the root's 续无外 (ownClosure_unrestricted_iff_noOutside) and that, where it holds on a net with no cycle, every standpoint has the same center («续无外则同一中心»).",
+        "zh": "复用从己持有之条件即根上的续无外（ownClosure_unrestricted_iff_noOutside），及无环之网上此条件成立之处每个立场的中心都相同（«续无外则同一中心»）。"
       },
       "interface": {
         "output": {
-          "en": "On a net with no cycle the condition holds only with one center.",
-          "zh": "无环之网上条件只容一个中心。"
+          "en": "Where the condition holds on a net with no cycle, every standpoint has the same center.",
+          "zh": "无环之网上条件成立之处，每个立场的中心都相同。"
         },
         "input": {
           "en": "Route (b)'s second law.",
@@ -311,6 +311,10 @@
     {
       "en": "9 November 2026, board item ZB, one of route (b)'s four pieces: added. The three laws had stood apart (own-closure, the root's one center, Clearing's center not derived); an AI reading of that day proposed stating them once, and the third is new in its per-center form.",
       "zh": "2026年11月9日，看板项 ZB，路线 (b) 四部分之一：新增。三律原各自分立（自身闭包、根上一中心、Clearing 的中心不由动力学推出）；当日一份 AI 读法提议合而陈述，第三律之每个中心的形式为新。"
+    },
+    {
+      "en": "10 November 2026, AG eighth pass: the one-center law is said with its hypothesis, \"where the condition holds on a net with no cycle, every standpoint has the same center\", in place of \"holds only with one center\"; \"dated occurrences make none\" is re-said by what-the-one-center-bound-counts: a net going forward in time has no cycle, and there the bound counts what lies at or before a center's step, while over what comes after two centers can meet the condition; de se is 从己 in Chinese. No law changed (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第八轮：一中心之律依其假设而言：「在无环之网上条件成立之处，每个立场的中心都相同」，代「只容一个中心」；「带日期的发生不成环」依 what-the-one-center-bound-counts 改言：按时间向前之网无环，而在那里此界所计的是中心之步及其前者，就其后者而言两个中心可满足条件；de se 中文作从己。诸律不变（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ]
 }

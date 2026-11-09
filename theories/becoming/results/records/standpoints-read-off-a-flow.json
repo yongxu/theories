@@ -177,8 +177,8 @@
     "zh": "纯核心，公理报告为空；叶模块。AI 所写；另一模型的一位 AI 读者对照 Lean、此记录与归属节冷读诸陈述，查是否言过其实，再读其修正（见研究目录 READER）；无人类审计。每条规律都是闭包律的简短组合，唯一实质一步是已有之律：构成有限时每个构成所及之内有一个回返者；无一是新数学。"
   },
   "next_delta": {
-    "en": "Join with the joining lemma and the class, route (b)'s other pieces, into one statement; then read which flow relation a self is drawn along off the dynamics, or show on one flow that two relations' standpoints both fit it.",
-    "zh": "与路线 (b) 的其余部分（连接引理与类）合为一个陈述；再从动力读出自我沿哪个流关系来画，或在同一个流上表明两个关系的立场都与之相合。"
+    "en": "Joined with route (b)'s other pieces (route-b-joined); next, read which flow relation a self is drawn along off the dynamics, or show on one flow that two relations' standpoints both fit it.",
+    "zh": "已与路线 (b) 的其余部分相连（route-b-joined）；其次，从动力读出自我沿哪个流关系来画，或在同一个流上表明两个关系的立场都与之相合。"
   },
   "correspondence": {
     "en": "In graph terms a formation's acts return exactly where its strongly connected component of the affecting graph is a sink: no arc leaves it. That every vertex of a finite digraph reaches a sink component is standard.",
@@ -377,6 +377,10 @@
     {
       "en": "10 November 2026, AG review, seventh pass (completeness critic; on Ren's messages 9 to 12 of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the hypotheses no longer call the condition and the step 'never asserted', the withdrawn frame's word; they are hypotheses or conclusions and nothing more, as the sibling records what-the-step-across-standpoints-reaches and self-concern-through-dependence say it. No law changed.",
       "zh": "2026年11月10日，AG 审查第七轮（完整性核查；据 Ren 2026 年 11 月 9 日之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：假设一项不再称条件与不变之步“从不断言”，此为已撤回之框架之词；二者只作假设或结论，与 what-the-step-across-standpoints-reaches、self-concern-through-dependence 二记录同。诸律不变。"
+    },
+    {
+      "en": "10 November 2026, AG eighth pass: the next step said done: the four pieces of route (b) are joined in route-b-joined, as its home section now says. No law changed (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第八轮：下一步之第一项已成：路线 (b) 之四部分已于 route-b-joined 相连，如其所在之节今所言。诸律不变（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ]
 }

@@ -11,7 +11,7 @@
   "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
   "statement": {
     "zh": "在有限非空的合格接续中，若每种缺少某项组织关系的接续都有充分更好的合格构造，则所有未被击败的选择都包含该关系；这可支持建设或增强共同能力而不预定唯一承载。",
-    "en": "In a finite nonempty eligible range, if every continuation lacking an organizational relation has a strictly better eligible construction, every undefeated choice includes that relation. This can warrant building or strengthening shared capacity without fixing one carrier."
+    "en": "In a finite nonempty eligible range, if every continuation lacking an organizational relation has a strictly better eligible construction, every undefeated choice includes that relation. This can support building or strengthening shared capacity without fixing one carrier."
   },
   "laws": [
     {
@@ -49,8 +49,8 @@
       "en": "The continuation condition through living significance, the comparison C (the requirement that an order rank each course above every course it widens) with the practical commitments J1–J4, and complete relational correspondence, each a hypothesis; ethics is not deduced from monism alone."
     },
     {
-      "zh": "确切列出的非空合格范围，其上弱可判定、反自反且传递的比较，其上可判定的该关系（外围以经典逻辑供给这两项判定），以及每个缺失情形的实际改善见证；规范资格与基本分类仍须实质辩护。",
-      "en": "An exactly listed nonempty eligible range, an irreflexive, transitive comparison weakly decided on it, the relation decided on it (both decisions supplied by classical logic in the periphery), and actual improvement witnesses for every deficient case; normative eligibility and basic classifications require substantive warrant."
+      "zh": "确切列出的非空合格范围，其上弱可判定、反自反且传递的比较，其上可判定的该关系（外围以经典逻辑供给这两项判定），以及每个缺失情形的实际改善见证；合格与基本分类是所给的，各须其自身的论证。",
+      "en": "An exactly listed nonempty eligible range, an irreflexive, transitive comparison weakly decided on it, the relation decided on it (both decisions supplied by classical logic in the periphery), and actual improvement witnesses for every deficient case; eligibility and the basic classifications are supplied, each needing its own argument."
     }
   ],
   "correspondence": {
@@ -493,6 +493,10 @@
     {
       "en": "10 November 2026, AG review, seventh pass (on Ren's messages 9 to 12 of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, and the sixth pass's two cold readings): the first hypothesis says C as the requirement that an order rank each course above every course it widens, not as an order. No law changed.",
       "zh": "2026年11月10日，AG 审查第七轮（据 Ren 2026 年 11 月 9 日之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md，及第六轮两份冷读）：第一条假设把 C 说为对次序的要求，即把每一进程排在它所扩大的每一进程之上，而不是一种次序。诸律不变。"
+    },
+    {
+      "en": "10 November 2026, AG eighth pass: \"warrant\" in its normative sense is re-said: the result \"can support\" building shared capacity (as the Chinese says), and eligibility and the basic classifications are supplied, each needing its own argument; the ethics seeks no warrant above becoming (Ren, 9 November 2026). No law changed. (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第八轮：规范意义上的「根据」改言：此结果「可支持」建设共同能力（如中文所言），合格与基本分类是所给的，各须其自身的论证；伦理不在生灭变化之上寻求根据（Ren，2026 年 11 月 9 日）。诸律不变。（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ],
   "text_versions": [

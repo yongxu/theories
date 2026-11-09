@@ -649,9 +649,12 @@ CH07, CH08 = CHAPTERS + '/07-SIGNIFICANCE.md', CHAPTERS + '/08-METHOD.md'
 # AG review, seventh pass (the sixth pass's cold readings): that a life forms such an order is not shown, persisting a filter
 # on what was chosen and not an order formed (07 §4.9); the ranking on a finite listing and, one way, between level paths
 # whose admissions end; the condition and self-concern each a scope or a property of an order, used as hypotheses.
+# AG review, eighth pass (the seventh pass's cold readings, H14, H15): "one way" names only relations running one way, not
+# the path result's direction; the ranking between level paths takes decided admission and admitted pairs in a finite list,
+# self-concern's own continuation read as what lies within its center's reach (07 §4's lead as it now says it).
 OPEN_LEAD = {
     'life': (CH07, 'A life goes on through what sustains it; where it holds its own continuation as an order over courses, ranking above what it widens every widening that adds to its own continuation, that order is self-concern (`Weighting.IncreasingInOwn`). That a life forms such an order is not shown: in the proofs it is a hypothesis, derived from no dynamics, selection or persistence, and what the models show of persisting is a filter on what was chosen, not an order formed.'),
-    'scope-order': (CH07, 'How far a concern reaches is its scope, and how it ranks courses its order; where the continuation condition holds de se, self-concern ranks every widening above what it widens on a finite listing and, one way, between two level paths whose admissions fit in a finite list, courses whose admissions end'),
+    'scope-order': (CH07, 'How far a concern reaches is its scope, and how it ranks courses its order; where the continuation condition holds de se and a life\'s own continuation is read as what lies within its center\'s reach, self-concern ranks every widening above what it widens on a finite listing and, with admission decided, between two level paths whose admitted pairs fit in a finite list, so that their admissions end'),
     'premises': (CH07, 'Each ranking result names the hypotheses its theorem takes: the continuation condition, self-concern or `Comparison` (C), and any further premise it uses.'),
     'not-own': (CH07, 'Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and whether and how formations come to hold them is the open target; the results say what follows where they are held.'),
     'crux': (CH07, 'whether all of one\'s effects are one\'s own, in the sense of whose losses count, argued for and against and not settled.'),
@@ -861,14 +864,20 @@ def render_views(records):
                 # where a theorem takes it (07 §4); the ranking on a finite listing and, one way, between level paths whose
                 # admissions end, with admission decided; widening what every additive weighting counting each listed item
                 # above zero ranks higher; no premise beside the life's own concern; that a life forms such an order not shown.
+                # Eighth pass (the seventh pass's cold readings): C with its `living` parameter, as 07's thesis says it (H12);
+                # self-concern defined, its own continuation read as its center's reach (H14); "one way" dropped as the path
+                # result's label, and the course of a line persisting without end never fitting such a list (H15, 07 §4.9).
                 lines += [H('###', 'Under the continuation condition', 'Under the continuation condition (section 6.4)'), '',
                           'The condition represents a scope within the account, a hypothesis where a theorem takes it; ' + link(CHAPTERS + '/07-SIGNIFICANCE.md#condition', path, 'chapter 7, section 3')
                           + ' states what follows from it. The condition gives the continuation of everything significance from every standpoint, so the results under it '
                           'are the case of a significance that covers everything; the rules of comparison are derived without it, and the condition adds none. '
                           'The ranking results state the hypotheses their theorems take: the condition (whose losses count), self-concern or `Comparison` '
-                          '(C, the requirement that an order rank each course above every course it widens); '
-                          'where the condition holds de se, an order holding one\'s own continuation ranks every widening above on a finite listing and, one way, with admission decided, '
-                          'between two level paths whose admitted pairs fit in a finite list, so that their admissions end; on a finite listing widening is exactly what every additive '
+                          '(C, the requirement that an order rank each course above every course it widens, with every claim counted as living; in general, above every course '
+                          'it extends by a claim counted as living); '
+                          'where the condition holds de se, a self-concerned order, ranking above what it widens every widening that adds to its own continuation, read as what lies '
+                          'within its center\'s reach, ranks every widening above on a finite listing and, with admission decided, '
+                          'between two level paths whose admitted pairs fit in a finite list, so that their admissions end; the course of a line that persists without end never fits '
+                          'such a list, so there this route is silent; on a finite listing widening is exactly what every additive '
                           'weighting that counts each listed item above zero ranks higher, and ranking by widening adds no premise beside the life\'s own concern: where the condition holds, that concern already does it; '
                           'that a life forms such an order is not shown. C\'s no-loss extension on level paths is widening by definition, more future, not a good set over less. '
                           'Open: how scope and order form within the dynamics, from what one\'s own continuation needs to the continuation of anything, the step of invariance among them.', '']

@@ -1,0 +1,105 @@
+{
+ "changed": [
+  "_process/navigation/README-FIRST-SCREEN.md",
+  "_process/navigation/README-ZH.md",
+  "theories/becoming/review/README.md",
+  "theories/becoming/review/README.zh.md",
+  "tools/research/tests/test_featured_results.py",
+  "tools/research/tests/test_chinese_fronts.py",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass8-verify-screen.json"
+ ],
+ "items": [
+  {
+   "item": "English ethics paragraph (H10, H13, H14, H16a, H19)",
+   "done": true,
+   "how": "Verified sentence by sentence against the Lean. Self-concern is defined as IncreasingInOwn (Weightings.lean:6020) with the reach reading, and the ranking 'there' matches increasingInOwn_iff_increasing_of_unrestricted (PremiseWitnesses.lean:412), which takes Unrestricted (selfAscribed (ownClosure rel) center). The in-time sentence matches not_unrestricted_inTime and unrestrictedEventually_iff_mutuallyDependentInTime (ConditionInTime.lean:421, 430; MutuallyDependentInTime :277 is 'from every step, every formation's continuation within its closure in time at some step'). There is no per-step 'only from the steps where they do'. 'For a choice to answer to their loss' is H13. 'And', not 'so', is H19. 'The ethics emerges from continuation.' is kept (H10). The screen agent departed from the anchor: widening is now defined on its own, followed by 'where the condition holds, read across all steps, whatever a widening adds lies within the life's own reach'. The departure is right: after the in-time sentence, 'There' would point at UnrestrictedEventually, which no theorem composes with self-concern. ONE-PAGE.md and USES.md now say the same sentence word for word. No old frame survives: no unasserted, warrant, second premise, two readings, 'continues with', 'C read as widening' or 'counts every continuation'."
+  },
+  {
+   "item": "FIXED (medium): 'How far', the ranking's referent after the in-time clause",
+   "done": true,
+   "how": "The ranking clause, 'under the condition a self-concerned order ranks...', came straight after 'read in time, from some step on, it holds exactly where the flow is mutually dependent in time'. Its nearest referent was therefore the in-time reading. That says more than the Lean: Web.extension_ranked_of_increasingInOwn and increasingInOwn_iff_increasing_of_unrestricted take Unrestricted, and no theorem composes UnrestrictedEventually with self-concern. The screen agent made this same point about the ethics paragraph but left 'How far' as it was. It now reads 'under the condition read across all steps, a self-concerned order ranks...', ONE-PAGE.md's words. The Chinese '在延续条件之下' now reads '在延续条件（跨越所有步来读）之下', as ONE-PAGE.zh.md says it. Both are pinned (test_featured_results, test_chinese_fronts), and a dated note is added to each template comment."
+  },
+  {
+   "item": "FIXED (medium): Chinese 'this route is silent'",
+   "done": true,
+   "how": "'所以这条路径对它什么也没有说' came right after '两条水平路径'. 这条路径 reads as 'this (level) path', and a path that 'says nothing' makes no sense. It now reads '所以这一论证路线对它什么也没有说', GLOSSARY.zh.md's word (这一论证路线). The pin is updated."
+  },
+  {
+   "item": "FIXED (low): Chinese self-concern definition pronoun",
+   "done": true,
+   "how": "'只要多出的东西里有属于自身延续的，它就把前者排在后者之上': 它 could be read as the process. It now reads '这一次序就……', as USES.zh.md has it."
+  },
+  {
+   "item": "English and Chinese 'How far' (H9, H15, H3)",
+   "done": true,
+   "how": "Each clause was checked. The path result names level paths, decided admission and admitted pairs in a finite list, matching the hypotheses of Web.extension_ranked_of_increasingInOwn (PremiseWitnesses.lean:531). 'One way' is dropped as that result's label (H15); the Chinese keeps （只证明了这一个方向）, which H15 allows. The persisting line is said at §4.9's reach as a bound of this route (Flow.persists_not_listsAdmitted). 'Mutual dependence and that ranking compose directly, though no single theorem states the composite' is 07's thesis wording (07:5), and H9 holds. widens_iff_every_positive is said on a finite listing. The not-shown sentence and 尚未表明 are kept (H3). F7's 'clarified' and the AI-made sentence appear once (D5)."
+  },
+  {
+   "item": "Case paragraph's last sentence (H13)",
+   "done": true,
+   "how": "Checked against the home. experiments/direction-installation/README.md:57 says 'No condition kept a dependent no member was told of'; DIR_UNSEEN is the count-everything instruction with the bed untold. ONE-PAGE.md:13 says 'In the test, no instruction tried preserved the untold bed'. The screen's 'In the test, no instruction tried, the one to count everything included, kept a bed no fisher was told of' and the Chinese 在这次检验中……所试过的指令没有一条保住了它 are exact."
+  },
+  {
+   "item": "navigation.py strings",
+   "done": true,
+   "how": "C's gloss with its living parameter matches Comparison/Extension (Extension.lean:57). The self-concerned order is defined with the reach reading. ', one way,' is dropped, and the persisting line's sentence is added. Nothing in the screen's section touches the direction or the handover (H11). The diff against HEAD also changes OPEN_LEAD['scope-order']. Its comment says this follows 07 §4's lead, so it is another agent's quote of 07 (the screen's report says it did not touch OPEN_LEAD), and open_lead_errors() returns []. WHERE_TO_LOOK carries no retired frame."
+  },
+  {
+   "item": "Review cover",
+   "done": true,
+   "how": "The Philosophy row (both languages) defines self-concern with the reach reading and is accurate. The cover's own times were recounted after my edits: 11-14 minutes and 9-12 分钟, as stated. FIXED (medium): the times the cover quotes were stale against the pages it quotes. The dossiers now say Philosophy 150-195 and Alignment 179-233 minutes (PHILOSOPHY.md:41, ALIGNMENT.md:27); the cover said 144-187 and 175-227. ONE-PAGE.md says 29-37 and ONE-PAGE.zh.md 32-42; the cover said 28-36 and 31-40. All are now synced in both languages. check_dossiers on both covers: 0 problems."
+  },
+  {
+   "item": "Rules",
+   "done": true,
+   "how": "No person is named, no Ren verbatim text or OPENING body is touched, and no AGENTS.md, goal file, Lean file or generated page is edited. Template comments are stripped at render (navigation.py:213); the sixth pass's one-center gloss stays there as history (E10). Neither screen body states the one-center result (H16b). All anchors and the {{nav}} line are kept. moves.check_links on the four files: 176 links, 0 broken. zh_fronts.problems(), nav_front_errors() and open_lead_errors() all return []. No quote of a changed sentence exists outside history, pass reports, test negative lists, records' history fields, stale generated READMEs and correspondences.json (the Crosswalk phase's)."
+  },
+  {
+   "item": "Checks run (single files; the full suite was deliberately not run)",
+   "done": true,
+   "how": "test_featured_results: 31 OK. test_navigation_pages: 52 OK. test_review_packet: 3 OK. test_style: 22 OK, 1 skipped. test_chinese_fronts: 27 of 28. Its one red, test_the_chinese_opening_is_timed_without_its_notes, reads the generated README.zh.md, which has not been rendered in this worktree for several passes (it still carries 两种读法). That red is render-stale, not a real failure."
+  }
+ ],
+ "left": [
+  {
+   "item": "这条路径 in the other Chinese fronts",
+   "why": "ONE-PAGE.zh.md, USES.zh.md (twice) and THE-THEORY-OF-BECOMING.zh.md (twice) use '所以这条路径对它什么也没有说' right after '两条水平路径'. The screen now uses GLOSSARY.zh.md's 这一论证路线. Carry it to those fronts (their owners' or the coordinator's)."
+  },
+  {
+   "item": "ONE-PAGE.zh.md self-concern pronoun",
+   "why": "It keeps '它就把前者排在后者之上'; USES.zh.md and the screen say '这一次序就'."
+  },
+  {
+   "item": "One Chinese word for 'line'",
+   "why": "谱系 is used on the screen, ONE-PAGE.zh, USES.zh and THE-THEORY.zh; GLOSSARY.zh.md says 一条无尽持存的世系, and USES.zh/GLOSSARY.zh also use 世系 for the descent hypotheses. The coordinator should pick one term for every front."
+  },
+  {
+   "item": "07 thesis referent (ch07 owner)",
+   "why": "07:5 follows the in-time and one-center sentences with 'Where it holds de se, self-concern ... ranks every widening'. The theorem names make this exact in the home, but a reader could take 'it' to be the in-time reading, as on the screen before the fix. Saying 'Where the condition, read across all steps, holds de se' would remove the doubt."
+  },
+  {
+   "item": "Cover times at landing",
+   "why": "The dossiers agent was still editing (SCIENCES.md modified at 04:17, no pass8-dossiers.json yet). Re-sync the cover's Philosophy, Alignment, Sciences and one-page figures in both languages to the pages' final lines at landing."
+  },
+  {
+   "item": "'并没有形成一种次序' in five Chinese fronts",
+   "why": "It can read as a negative claim about persisting. '而不是一种已形成的次序' is closer to 'not an order formed'. The same wording stands in ONE-PAGE.zh, USES.zh (twice) and THE-THEORY.zh (twice), so it is one choice for all of them; low."
+  },
+  {
+   "item": "Small English points (low, the anchor's words)",
+   "why": "The first screen does not name the hypotheses of Flow.persists_not_listsAdmitted (activity, support, descent); 'Proved on its models' covers them, and USES.zh names them. 'The flow' appears on the screen undefined. 'Self-concerned' and 'ranks every widening above what it widens' link to the same anchor in adjacent clauses."
+  },
+  {
+   "item": "Render and editions",
+   "why": "The generated README.md and README.zh.md are stale; regenerate at make research-render. zh_fronts.stale() lists every Chinese front, the screen template included, as behind its English. Record the editions (zh_fronts.py --revised) after the Chinese readers' round, which is the coordinator's."
+  },
+  {
+   "item": "Chinese sentences unread by Chinese readers",
+   "why": "The eighth pass's Chinese screen, the verifier's three small changes included, was written by AI sessions and has not been read by the two Chinese readers (the template comment says so)."
+  }
+ ],
+ "for_ren": [
+  "The first screen's ethics paragraph as it now stands, in both languages. It departs from the coordinator's anchor in one place: widening is defined on its own, and the reach clause is said where the condition holds, read across all steps, because after the in-time sentence 'There' would have meant the in-time reading. ONE-PAGE and USES say the same.",
+  "The Chinese ethics is now three paragraphs (frame and condition; what is proved under which reading; the step offered), while the English stays one."
+ ]
+}

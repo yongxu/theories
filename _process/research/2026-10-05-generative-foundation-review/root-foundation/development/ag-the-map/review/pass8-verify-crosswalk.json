@@ -1,0 +1,85 @@
+{
+ "note": "AI-written verification report, AG review eighth pass, verifier of the crosswalk agent, 10 November 2026. Worktree /Users/ren/tmp/ag/rv at HEAD a2200f38e with the eighth pass's uncommitted changes in place. Read: the crosswalk's diff against HEAD (249 field changes in correspondences.json, 2 in correspondence_groups.json), its report, 07 §4, §4.4, §5, §7, §9 and the does-not-show list, ONE-PAGE's ethics paragraph, COLLECTIVE-DIRECTION's answer in brief, §1 and §4, 05:396 and its record, 08:483 and 08:791, and the Lean of Requirement.required_of_bettered (Frontier.lean:141), Weighting.increasingInOwn_iff_increasing_iff_marks (PremiseWitnesses.lean:318), increasingInOwn_iff_increasing_iff_unrestricted (:399), increasingInOwn_iff_increasing_of_unrestricted (:412) and Web.extension_ranked_of_increasingInOwn (:531). Every quoted fragment (straight and curly quotes, 「」, split at ellipses, eight characters or more) in every changed field was checked by script against the target's page and record with links, emphasis and backticks stripped: all hold; the only misses are source-side words and apostrophe artefacts. Then every string field of both files was scanned for H11 to H20 and the old frame. Fixed directly: 15 fields in 13 entries (correspondences.json only), each an exact substring replacement written back with indent=1 and ensure_ascii=False (the file round-trips byte for byte); no id, label, classification, role, anchor, record key, sense, quote or source field touched. Checks after the fixes: the atlas in-memory render (tools/research/atlas.py without --check, writes nothing) 0 errors, 1,183 correspondences; test_atlas 45 OK, test_atlas_index 9 OK, test_connection_map 32 OK, test_navigation_pages 52 OK, test_lineage 16 OK. No make, render, gate, lake or build; the full suite was deliberately not run.",
+ "changed": [
+  "theories/becoming/results/atlas/entries/correspondences.json",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass8-verify-crosswalk.json"
+ ],
+ "items": [
+  {
+   "item": "Quotes in the crosswalk's changed fields hold on their homes",
+   "done": true,
+   "how": "Independent script over the 249 changed fields: every fragment holds on its target page or record, including the re-quotes of the one page's self-concern definition, 07 §4's C sentence with `living`, 08:483's and 08:791's path sentences, the 07 §7 label, 05:396's new label, 03's selection-through-couplings sentence, 06:567, 06:572 (扩大), 06's Open item and B-34. Generated pages (CROSSWALK pages, atlas.json, map.html) still carry the old text and follow at the render."
+  },
+  {
+   "item": "H11, the direction takes J1/J2, not C",
+   "done": true,
+   "how": "The crosswalk's 33 fields follow 07 §7's label and the fronts' short form. It missed five fields in three entries and one more entry, now fixed: cx-zhishan-output-with-its-world (targets[0] 'Under the condition, C and J1–J4.' and its reading 'the direction holds only under the continuation condition, C and J1 to J4'), cx-zhishan-do-not-fight-for-us (reading: a direction 'proposed' under 'the continuation condition, C and J1 to J4'; 'proposed' is also no longer 07's word, which is 'offer'), cx-zhishan-corrigible-not-obedient (reading: 'under the continuation condition, C and J1 to J4'). Each now reads 'the continuation condition, J1 to J4 (J1–J4) and a correspondence (correspondence E), with moves compared by widening'. cx-abr-promised-end account_adds gave 'an order ranking by widening' as a premise of CD's direction; now 'a direction as a criterion only, widening, which gives the generative direction where courses are ranked by it, as a self-concerned order ranks them where the continuation condition holds de se; choices take further premises' (CD's answer in brief). Per H11's last clause I checked other results said to take C: 07 §5's practical judgment is 'Conditional (living significance, J1–J4, correspondence E)', so cx-archearth-mechanical-against-ecological-return's 'Preserve is a candidate only, under the continuation condition, an order meeting C and J1-J4' now reads 'under living significance, J1–J4 and correspondence E'; the relation-level law of easing ('Conditional (C, for the ranking)'), ranking under readings ('Conditional (C; World)') and organizational formation (its reading takes an order meeting C) do take C, and the entries saying so stand."
+  },
+  {
+   "item": "Old frame: C as better",
+   "done": true,
+   "how": "cx-fork-no-real-externality targets[1] (CD §4) said 'Order: C, calling a widening course better.', the withdrawn frame, untouched by this pass. Now CD §4's own content: 'the condition by itself orders nothing; where it holds de se, self-concern ranks every widening above what it widens on a finite listing and, with admission decided, between two level paths whose admitted pairs fit in a finite list; elsewhere each ranking result names the requirement on an order it takes: C (`Comparison`) in many, J1 and J2 in the direction's, self-concern alone in some.' No 'unasserted', 'warrant open', 'neither asserted', 'binds no one', 'second premise', 'C giving order' or C-as-better remains in either file; 'two readings' remains only for other things (readings of living, a recorder theorem)."
+  },
+  {
+   "item": "H12, C with its living parameter",
+   "done": true,
+   "how": "The 41 glosses match 07 §4 ('C names the requirement that an order rank each course above every course it widens (`Comparison`) where every claim is counted as living'). Two paraphrases of 06's D49 reading still gave the short gloss without it; added 'every claim counted as living' in cx-hsm-new-problems targets[5] (outside its 「」 quote) and cx-kpso-good-and-evil-by-closure's reading, as the crosswalk did for the other D49 paraphrases."
+  },
+  {
+   "item": "H13, seeing needed for a choice to answer to a loss",
+   "done": true,
+   "how": "All 83 fields follow their homes: T8 entries 07's 'needed there for a choice to answer to their loss', 07 does-not-show entries 'needed for a selection to answer to a loss', CD §6 entries likewise. No field keeps 'needed, and not enough'. About 15 readings say only 'seeing more is not enough', which claims no necessity; left as the crosswalk said. Untold-bed statements are all given as IN1's or T4's results."
+  },
+  {
+   "item": "H14, self-concern defined",
+   "done": true,
+   "how": "The re-quotes of the one page's definition are verbatim; 'holding one's own continuation' remains only in quotes of 07 §4.4 ('one order in two forms, holding one's own continuation and C') and 07's does-not-show, which 07 still says and defines in its thesis and §4."
+  },
+  {
+   "item": "H15, quantifiers and the path result",
+   "done": true,
+   "how": "The crosswalk's 27 path fields carry decided admission and admitted pairs in a finite list, and no 'one way' labels the path result. Fixed: two readings stated the coincidence without its quantifier, which over-says the 'only if' half (`Weighting.increasingInOwn_iff_increasing_iff_marks` is about every order): cx-zhishan-good-for-self-and-network ('a self-concerned order and an order increasing in admission coincide exactly where…') and cx-rsd-false-split; both now 'for every order on a fixed listing … coincide exactly when … marks everything listed', the first adding 'and, with markings reading the closures, for every standpoint, listing and order exactly when the continuation condition holds de se' (PremiseWitnesses.lean:399). Two quotes of 07 §4's 'self-concern does what C asks between two such level paths' had no antecedent for 'such' (cx-sty-good-existence-values-coded, cx-greek-aristotle-function); each now adds 'with admission decided and the two paths' admitted pairs in a finite list' after the quote. cx-archearth-flourishing-as-the-aim targets[3] 'self-concern so ranks, with admission decided, two level paths' now '… between two level paths'."
+  },
+  {
+   "item": "H16 to H20",
+   "done": true,
+   "how": "No entry has a one-center sentence, an in-time sentence other than the one page's quoted one (cx-archearth-datong-as-a-condition, correct and without 'over what comes after'), a J1 wording, THE-THEORY's 'reason of its own' (two entries quote 07 §3.3's own route (b) sentence, which 07 still says), 'so ranking by widening', or 'counts every continuation'. 'Where relations close' always carries 'read across all steps'."
+  },
+  {
+   "item": "H1–H10, E1, E8–E10, F2–F9, D1–D7 kept",
+   "done": true,
+   "how": "'compose directly, though no single theorem states the composite' kept wherever the composite is named; H2 kept with 'where the condition holds'; 05:396's new label checked against Frontier.lean:141 (the decision hypotheses are supplied classically in the periphery, as 05 says). No source, quote, sense or history field changed; no new 'standing', 地位, person's name or 'no one has read'. Only says, reading, account_adds and part fields changed; 'part' is display text, not an anchor."
+  },
+  {
+   "item": "The crosswalk's report",
+   "done": true,
+   "how": "Its counts and test results reproduce. Its first for_ren line, 'no entry lists C, or an order ranking by widening, among the direction's hypotheses any more', was not true until this verifier's fixes (the three zhishan entries and cx-abr-promised-end)."
+  }
+ ],
+ "left": [
+  {
+   "item": "05:396 still says 'Under these premises it can warrant building shared capacity'; its record and now every crosswalk entry say 'support'",
+   "why": "05 is rest's file. cx-ma-positive-recursion's reading said 'can be warranted' and now says 'can be supported', consistent with the rest of that entry."
+  },
+  {
+   "item": "'J1-J4' with a hyphen in four readings the crosswalk re-said (cx-kpso-preserve-and-expand, cx-kpso-stop-using-ai-to-compete, cx-sspiral-delegate-to-ai and older ones), where the homes write 'J1–J4'",
+   "why": "Low, cosmetic; the older entries already mixed both."
+  },
+  {
+   "item": "The crosswalk's own left: 25 older fragments in 21 entries not on the ethics frame, the ~30 entries whose 'Neither the condition nor self-concern stands above becoming' omits 07 §4's 'and whether and how formations come to hold them is the open target', and the ~15 'seeing more is not enough' readings",
+   "why": "Agreed: none says more than its home on the ethics; a later crosswalk pass."
+  },
+  {
+   "item": "07 §6's endorsement label 'Conditional (the continuation condition, an order ranking by widening and the practical commitments; an argument)' and the does-not-show's 'an order ranking by widening' are still quoted by entries",
+   "why": "07 still says them (ch07's file); they are not the direction's hypotheses, so H11 does not reach them. If ch07 re-says them, the entries quoting them (cx-asc-ends-are-output-of-the-game, cx-kpso-self-freezing, cx-rsd-shaping-legitimacy, cx-sty-consent-door, cx-sspiral-human-nature and the does-not-show quotes) follow."
+  },
+  {
+   "item": "Generated pages (data/atlas.json, ATLAS.md, CROSSWALK.md, CROSSWALK.zh.md, the crosswalk group pages, the family pages, map.html)",
+   "why": "They follow at the render, which this pass may not run; the in-memory render has 0 errors."
+  }
+ ],
+ "for_ren": [
+  "Three entries on the folder 'zhishan' still listed C among the direction's hypotheses after the crosswalk's pass ('Under the condition, C and J1–J4'); they now read as 07 §7 does: the continuation condition, J1–J4 and a correspondence, with moves compared by widening.",
+  "One entry still said 'Order: C, calling a widening course better', the frame withdrawn on 9 November; it now says what COLLECTIVE-DIRECTION §4 says: the condition orders nothing, self-concern ranks every widening where the condition holds de se, and elsewhere each result names the requirement it takes."
+ ]
+}

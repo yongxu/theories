@@ -164,13 +164,19 @@ class PageTests(unittest.TestCase):
         # fifth pass: hypotheses a theorem takes, not "readings", and C, where the condition holds de se, self-concern's order (07 §4)
         # seventh pass (H3, H5, H8): C a requirement on an order; each a scope or a property of an order within the account,
         # used as a hypothesis, not 'some formations hold'; courses whose admissions end
-        self.assertIn('in most of them any order meeting the requirement C', self.page)
+        # eighth pass (H1, H11, H12, H15): the requirement on an order a result takes, counted in the Lean (C in many, J1 and J2
+        # in the direction's, self-concern in others: "most" was not borne out); the path result with decided admission and
+        # admitted pairs, without "one way"; three hypotheses, so "none"
+        self.assertIn('the continuation condition, and the requirement on an order it takes, in many of them C (Comparison), in the direction\\\'s J1 and J2', self.page)
         self.assertIn('Each represents a scope or a property of an order within the account, used as a hypothesis where a theorem '
-                      'takes it, and neither stands on the edge', self.page)
-        self.assertIn('self-concern ranks every extension between two level paths whose admissions fit in a finite list, one way, '
-                      'so that their admissions end', self.page)
+                      'takes it, and none stands on the edge', self.page)
+        self.assertIn('a self-concerned order ranks every extension between two level paths whose admitted pairs fit in a finite list, '
+                      'with admission decided, so that their admissions end', self.page)
         self.assertNotIn('some formations hold', self.page)
         self.assertNotIn('in most of them C;', self.page)
+        self.assertNotIn('the order it ranks by', self.page)
+        self.assertNotIn('finite list, one way', self.page)
+        self.assertNotIn("stands on the edge.',link(", self.page)  # eighth pass verifier: the space before the link
         self.assertNotIn('two readings', self.page)
         self.assertNotIn('no warrant from outside is sought', self.page)
         self.assertNotIn('derives from the condition', self.page)

@@ -385,7 +385,11 @@ class FirstScreenTests(unittest.TestCase):
         # The seventh pass (the sixth pass's two cold readings): going on not yet an order; the condition as reach, read
         # across all steps; widening what every additive weighting counting each thing above zero ranks higher; ranking by
         # widening adding no premise beside the life's own concern; one way, need not count those who depend on one; whose
-        # admissions end; the two results composing directly; that a life forms such an order not shown (07 §4.9)
+        # admissions end; the two results composing directly; that a life forms such an order not shown (07 §4.9).
+        # The eighth pass (the seventh pass's two cold readings): self-concern defined, its own continuation read as its
+        # reach, and the ranking said where the condition holds read across all steps; the condition read in time (07 §4.11);
+        # seeing needed for a choice to answer to a loss; the lake's untold bed as the test's result; level paths with
+        # admission decided, "one way" no longer the path result's label; the persisting line's course never listed (07 §4.9)
         self.assertIn('The ethics emerges from continuation.', screen)
         self.assertIn('no good and evil set over it', screen)
         self.assertIn('A life goes on through what sustains it, and', screen)
@@ -393,16 +397,27 @@ class FirstScreenTests(unittest.TestCase):
         self.assertIn('Where relations close, read across all steps', screen)
         self.assertIn("nothing lies outside each one's reach along that relation", screen)
         self.assertIn("on the reading that what has significance from a standpoint is what lies within its center's reach", screen)
-        self.assertIn('if a life holds its own continuation as an order over courses', screen)
+        self.assertIn('Call a life\'s order over courses [self-concerned](', screen)
+        self.assertIn('when it ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach', screen)
+        self.assertIn("where the condition holds, read across all steps, whatever a widening adds lies within the life's own reach", screen)
+        self.assertIn('[Read in time](theories/becoming/chapters/07-SIGNIFICANCE.md#condition-in-time), it holds only from some step on', screen)
+        self.assertIn("each one's acts, from every step, come to bear on every other's later continuation", screen)
+        self.assertIn('In the test, no instruction tried, the one to count everything included, kept a bed no fisher was told of', screen)
         self.assertIn('07-SIGNIFICANCE.md#r-self-concern-and-c-under-the-condition', screen)
         self.assertIn('Every way of adding up worth that counts each thing above zero', screen)
         self.assertIn("ranking by widening adds no premise beside the life's own concern", screen)
         self.assertIn('need not count those who depend on one', screen)
-        self.assertIn('seeing them is needed, and not enough', screen)
+        self.assertIn('seeing them is needed for a choice to answer to their loss, and not enough', screen)
         self.assertIn('so that their admissions end', screen)
-        self.assertIn('for courses that go on forming without end it is not shown', screen)
-        # 07 §4: the two compose directly, though no single theorem states the composite
-        self.assertIn('the two results compose directly, though no single theorem states the composite', screen)
+        self.assertIn('between two level paths whose admitted pairs fit in a finite list, with admission decided', screen)
+        self.assertIn('the course of a line that persists without end [never fits such a list](', screen)
+        self.assertIn('so there this route is silent', screen)
+        self.assertIn('read in time, from some step on, it holds exactly where the flow is mutually dependent in time', screen)
+        # the eighth pass's verifier: the ranking under the condition read across all steps (ONE-PAGE's words), not the in-time
+        # reading just named, a different predicate no theorem composes with self-concern
+        self.assertIn('under the condition read across all steps, a self-concerned order ranks every widening above', screen)
+        # 07's thesis: mutual dependence and that ranking compose directly, though no single theorem states the composite
+        self.assertIn('mutual dependence and that ranking compose directly, though no single theorem states the composite', screen)
         self.assertIn('every additive weighting that counts each listed thing above zero ranks it above', screen)
         self.assertIn('That a life forms such an order is not shown: in the proofs it is a hypothesis', screen)
         self.assertIn('a filter on what was chosen, not an order formed', screen)
@@ -411,7 +426,10 @@ class FirstScreenTests(unittest.TestCase):
         for old in ('unasserted', 'not asserted', 'warrant', 'two readings', 'widening what can form is better', 'not a grounded one',
                     'listed courses', 'not yet joined', 'A life that goes on holds its own continuation', 'for order', 'named order',
                     'argued, not shown', 'continues with', 'read without time', 'without time', 'dated occurrences', 'worth something',
-                    'second premise', 'does not reach', 'courses that end', 'not stated as one theorem', 'every positive weighting'):
+                    'second premise', 'does not reach', 'courses that end', 'not stated as one theorem', 'every positive weighting',
+                    'if a life holds its own continuation', "an order holding one's own continuation", 'one way, between', ', one way,',
+                    'forming without end it is not shown', 'seeing them is needed, and not enough', 'As a reading: no instruction',
+                    'and only from the steps where they do', 'holds only with one center', 'C read as widening'):
             self.assertNotIn(old, screen)
         # the meta-attractor's closed form with the closed-capture record's hypotheses, not "proved to lock" alone
         self.assertNotIn('proved to lock', screen)

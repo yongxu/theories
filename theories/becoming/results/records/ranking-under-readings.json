@@ -2,16 +2,16 @@
   "schema_version": 2,
   "id": "ranking-under-readings",
   "title": {
-    "zh": "比较原则 C 在各读法下的排序",
-    "en": "What comparison principle C ranks under each reading"
+    "zh": "满足 C 的每种次序在各读法下的排序",
+    "en": "What every order meeting C ranks under each reading"
   },
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
   "reviewed_at_utc": "2026-10-25T17:03:04+00:00",
   "statement": {
-    "zh": "对每个继续族，一条定律恰好说明更新每个条件的继续在两种 living 读法下何时扩展另一个。逐步读法下 C 保持共享优于以消耗取胜、节制优于过度汲取，而过度汲取者在损失前有被记入的事件时，不再保持其不在场更好；可能性读法三者都保持。",
-    "en": "For every family of courses, a law says exactly when a renewing course extends another under either living reading. Stepwise C keeps sharing above winning by consumption and restraint above overdraw, not the absence of an overdrawer included before the loss; the possibility reading keeps all three."
+    "zh": "对每个继续族，一条定律恰好说明更新每个条件的继续在两种 living 读法下何时扩展另一个。逐步读法下，满足 C 的每种次序都把共享排在以消耗取胜之上、把节制排在过度汲取之上，但过度汲取者在损失前有被记入的事件时，未必把其不在场排在上面；可能性读法下三者皆然。",
+    "en": "For any family of courses a law says exactly when a renewing course extends another. Stepwise, every order meeting C ranks sharing above winning by consumption and restraint above overdraw, but need not rank absence above an overdrawer included before the loss; on the possibility reading, all three."
   },
   "laws": [
     {
@@ -398,7 +398,9 @@
     "Becoming.Ranking.extendsUnder_iff_of_exact",
     "Becoming.Ranking.wholeRun_extends_iff_of_eases",
     "Becoming.Ranking.ThirdParty.renewal_needed",
-    "Becoming.Ranking.ThirdParty.stepwise_not_monotone"
+    "Becoming.Ranking.ThirdParty.stepwise_not_monotone",
+    "What comparison principle C ranks under each reading",
+    "比较原则 C 在各读法下的排序"
   ],
   "dependencies": [
     {
@@ -410,8 +412,8 @@
       },
       "interface": {
         "output": {
-          "zh": "整段读法下的不在场继续与 C 的排序。",
-          "en": "The continuation without the formation and C's ranking under the whole-run reading."
+          "zh": "整段读法下的不在场继续，满足 C 的每种次序都把它排在上面。",
+          "en": "The continuation without the formation, which every order meeting C ranks above under the whole-run reading."
         },
         "input": {
           "zh": "两种读法下排序的比较。",
@@ -558,15 +560,15 @@
     {
       "id": "stepwise-law-of-easing",
       "detail": {
-        "en": "The stepwise law of easing, exact: easing withdraws exactly the events the easing course undermines; restraint that takes within what it gives extends overdraw for any number of drawers exactly where it includes an event overdraw withholds, and C ranks it above.",
-        "zh": "确切的逐步缓和之律：缓和所撤回的恰是缓和之进程所侵蚀的事件；所取不超过所给的节制对任意多个汲取者扩展过度汲取，恰在它记入过度汲取扣下的某个事件之处，C 把它排在其上。"
+        "en": "The stepwise law of easing, exact: easing withdraws exactly the events the easing course undermines; restraint that takes within what it gives extends overdraw for any number of drawers exactly where it includes an event overdraw withholds, and every order meeting C ranks it above.",
+        "zh": "确切的逐步缓和之律：缓和所撤回的恰是缓和之进程所侵蚀的事件；所取不超过所给的节制对任意多个汲取者扩展过度汲取，恰在它记入过度汲取扣下的某个事件之处，满足 C 的每种次序都把它排在其上。"
       }
     },
     {
       "id": "relation-level-law-of-easing",
       "detail": {
-        "en": "The relation-level reading on courses: under easing it withdraws exactly the relations the easing course no longer takes part in or undermines; restraint that keeps taking part extends overdraw under it too exactly where it includes a relation overdraw withholds, and C ranks it above.",
-        "zh": "进程上的关系层读法：在缓和下它所撤回的恰是缓和之进程不再参与或所侵蚀的关系；仍参与的节制在它之下也扩展过度汲取，恰在它记入过度汲取扣下的某个关系之处，C 把它排在其上。"
+        "en": "The relation-level reading on courses: under easing it withdraws exactly the relations the easing course no longer takes part in or undermines; restraint that keeps taking part extends overdraw under it too exactly where it includes a relation overdraw withholds, and every order meeting C ranks it above.",
+        "zh": "进程上的关系层读法：在缓和下它所撤回的恰是缓和之进程不再参与或所侵蚀的关系；仍参与的节制在它之下也扩展过度汲取，恰在它记入过度汲取扣下的某个关系之处，满足 C 的每种次序都把它排在其上。"
       }
     },
     {
@@ -1156,6 +1158,10 @@
     {
       "en": "3 November 2026, CD (board item CD): two related lines follow the restated statements of the stepwise and relation-level laws of easing: restraint extends overdraw exactly where it includes an event, or a relation, overdraw withholds, and C ranks it above. The claim is unchanged.",
       "zh": "2026年11月3日，工作板条目 CD：两条相关说明随逐步与关系层缓和之律重述后的陈述：节制扩展过度汲取，恰在它记入过度汲取扣下的某个事件或关系之处，C 把它排在其上。主张不变。"
+    },
+    {
+      "en": "10 November 2026, AG eighth pass: C is said as a requirement on an order where the theorems take Comparison (ComparisonUnder): the title is \"What every order meeting C ranks under each reading\" (the old title kept as an alias), and the statement, two related lines and an interface say \"every order meeting C ranks\" in place of \"C keeps\" and \"C ranks\"; the stepwise pair C asks nothing of is said as \"need not rank absence above an overdrawer included before the loss\" (law 6). No law changed. (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第八轮：在定理取 Comparison（ComparisonUnder）之处，C 作对次序的一项要求而言：标题作「满足 C 的每种次序在各读法下的排序」（旧标题留作别名），陈述、两条关联与一处接口以「满足 C 的每种次序都把……排在上面」代「C 保持」「C 把……排在其上」；逐步读法下 C 无所要求的那一对，言作「未必把其不在场排在上面」（第六律）。诸律不变。（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ],
   "text_versions": [

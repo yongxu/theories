@@ -10,8 +10,8 @@
   "family": "F07",
   "reviewed_at_utc": "2026-11-01T00:07:51+00:00",
   "statement": {
-    "en": "Self-concern and being increasing in admission coincide from every standpoint exactly where each marking is total: where the condition holds, on the root or held de se. There it ranks, one way, every extension between two level paths whose admissions a finite list holds, admissions that end.",
-    "zh": "自关切与于接纳上递增，于每立场恰在各标记皆全处相合，即条件成立处，于根上或于自承。彼处自关切单向地把二层径间之每一扩展皆排定，唯二径之所接纳容于一有限列表，即接纳有终之进程。"
+    "en": "On a listing, self-concern and being increasing in admission coincide for every order exactly when each listed item is marked; with markings reading closures, for every standpoint, listing and order exactly where the condition holds de se. There it ranks each extension between listed level paths.",
+    "zh": "于一固定列表，自关切与于接纳上递增对每一次序皆相合，恰在每一所列之项皆被标记时；标记读闭包时，对每一立场、列表与次序，恰在条件以从己方式成立处相合。彼处，接纳可判定时，自关切把二层径间之每一扩展皆排定，唯二径之所接纳容于一有限列表。"
   },
   "laws": [
     {
@@ -25,7 +25,7 @@
     },
     {
       "en": "With each marking reading what the line under a class from the standpoint's center reaches along a relation, the two coincide everywhere exactly where the condition on the root holds; with it reading the center's closure along a relation, exactly where the condition held de se does. Near-definitional: the schema above at those readings. One half each: where it holds they coincide; an item outside parts them.",
-      "zh": "各标记读自立场之中心于一类下沿一关系之线所及者，则二者处处相合，恰当根上之条件成立；读中心沿一关系之闭包，则恰当自承之延续条件成立。近乎定义：即上之模式于此等读法。各半：条件成立处二者相合；一在外之项使之分。",
+      "zh": "各标记读自立场之中心于一类下沿一关系之线所及者，则二者处处相合，恰当根上之条件成立；读中心沿一关系之闭包，则恰当从己之延续条件成立。近乎定义：即上之模式于此等读法。各半：条件成立处二者相合；一在外之项使之分。",
       "declarations": [
         "Becoming.Weighting.increasingInOwn_iff_increasing_of_noOutside",
         "Becoming.Weighting.exists_increasingInOwn_not_increasing_of_outside",
@@ -36,7 +36,7 @@
     },
     {
       "en": "With admission decided and what two level paths admit listed, an order increasing in admission ranks every extension between them, every claim counted as living; where the de se condition holds, so does an order increasing in the own continuation, each item marked by its formation. Listed paths admit nothing from some step on, and once there is a formation no list holds what every level path admits.",
-      "zh": "接纳可判定，且二层径所接纳者已列，则于接纳上递增之次序把其间每一扩展皆排定，每一主张皆计为活；自承之条件成立处，于自身延续上递增之次序亦然，每项以其构成标之。所列之径自某步起无所接纳；一有构成，即无一列表含每一层径之所接纳。",
+      "zh": "接纳可判定，且二层径所接纳者已列，则于接纳上递增之次序把其间每一扩展皆排定，每一主张皆计为活；从己之条件成立处，于自身延续上递增之次序亦然，每项以其构成标之。所列之径自某步起无所接纳；一有构成，即无一列表含每一层径之所接纳。",
       "declarations": [
         "Becoming.Web.admits_need",
         "Becoming.Web.admits_nothing_from_of_listed",
@@ -65,15 +65,15 @@
     },
     {
       "en": "Self-concern (Weighting.IncreasingInOwn) and the condition, on the root («续无外») or held de se (Unrestricted of the own closure), are hypotheses, self-concern derived from no dynamics, selection or persistence, and the condition varying with the net, the class and the direction; that a life forms such an order is not shown: persisting, in the models, filters what was chosen and forms no order.",
-      "zh": "自关切（Weighting.IncreasingInOwn）与条件，于根上（«续无外»）或自承（自身闭包之 Unrestricted），皆为假设：自关切不由任何动力学、选择或持存推出，且条件随网、类与方向而变；生命是否形成这种次序尚未表明：模型中的持存只过滤所择者，并不形成次序。"
+      "zh": "自关切（Weighting.IncreasingInOwn）与条件，于根上（«续无外»）或从己持有（自身闭包之 Unrestricted），皆为假设：自关切不由任何动力学、选择或持存推出，且条件随网、类与方向而变；生命是否形成这种次序尚未表明：模型中的持存只过滤所择者，并不形成次序。"
     },
     {
       "en": "For the ranking on a web: admission decided by a supplied two-valued reading, what both level paths admit listed as (step, formation) items, every claim counted as living, each item marked by the marking of its formation.",
       "zh": "就网上之排序：接纳由所予之二值读法判定，二层径所接纳者列为（步，构成）之项，每一主张计为活，每项以其构成之标记标之。"
     },
     {
-      "en": "This result assumes self-concern and the continuation condition held de se, with admission decided and two level paths whose admitted pairs fit in a finite list, courses whose admissions end; it concludes, one way, the extension rankings C asks between those paths. For courses that go on forming without end it is not shown. Of the condition the proof uses only its instance at the life's own standpoint.",
-      "zh": "此结果以自关切与自承之延续条件为假设，接纳可判定，二层径所接纳之项容于一有限列表，即接纳有终之进程；它单向推出 C 在这两条层径之间所求的扩展排序。对无尽地形成下去的进程，未证。证明只用到条件在该生命自身立场上的实例。"
+      "en": "This result assumes self-concern and the condition held de se, admission decided and two level paths whose admitted pairs fit in a finite list, courses whose admissions end; it concludes the extension rankings C asks between them, not the converse. A line persisting without end takes a course no such list holds (what-persisting-shows-of-an-order). The proof uses the condition only at the life's own standpoint.",
+      "zh": "此结果以自关切与从己之延续条件为假设，接纳可判定，二层径所接纳之项容于一有限列表，即接纳有终之进程；它推出 C 在这两条层径之间所求的扩展排序，不推出其逆。持存无尽之世系实际所取之进程从不容于这样的列表（what-persisting-shows-of-an-order），此路于彼处无所言。证明只用到条件在该生命自身立场上的实例。"
     }
   ],
   "does_not_show": [
@@ -121,13 +121,13 @@
     "zh": "网上之另一半，于层径接纳见证之进程处；于有限视界上为每步皆有所接纳之进程立桥；人之审查。"
   },
   "correspondence": {
-    "en": "Self-concern is an order increasing in what one's own continuation marks: a life's holding of its own continuation, read as an order over courses, which going on alone does not give. Being increasing in admission is a Pareto-style monotonicity that gives what C asks, one way, between two level paths whose admitted pairs fit in a finite list. Where one's own continuation marks everything, the two coincide, so there self-concern gives that too; on all of a web's level paths it gives nothing this way, and for courses that go on forming without end it is not shown. The reading of where that holds, the condition on the root, is near-definitional and claims no property of reach.",
-    "zh": "自关切为于自身延续所标者上递增之次序：生命对自身延续之持守，读作对诸进程的一种次序，单是继续下去并不给出它。于接纳上递增为帕累托式之单调，单向给出 C 于所接纳之项容于一有限列表的二层径间之所求。自身延续标出一切处，二者相合，故于彼处自关切亦给出之；于网之全部层径上，此路不给出任何东西；对无尽地形成下去的进程，未证。何处如此之读，即根上之条件，近乎定义，不主张所及之任何性质。"
+    "en": "Self-concern is an order increasing in what one's own continuation marks: a life's holding of its own continuation, read as an order over courses, which going on alone does not give. Being increasing in admission is a Pareto-style monotonicity that gives what C asks between two level paths whose admitted pairs fit in a finite list, with admission decided, and not the converse. Where one's own continuation marks everything, the two coincide, so there self-concern gives that too; on all of a web's level paths it gives nothing this way, and the course of a line that persists without end never fits such a list, so there this route is silent. The reading of where that holds, the condition on the root, is near-definitional and claims no property of reach.",
+    "zh": "自关切为于自身延续所标者上递增之次序：生命对自身延续之持守，读作对诸进程的一种次序，单是继续下去并不给出它。于接纳上递增为帕累托式之单调，接纳可判定时，给出 C 于所接纳之项容于一有限列表的二层径间之所求，不给出其逆。自身延续标出一切处，二者相合，故于彼处自关切亦给出之；于网之全部层径上，此路不给出任何东西；持存无尽之世系实际所取之进程从不容于这样的列表，此路于彼处无所言。何处如此之读，即根上之条件，近乎定义，不主张所及之任何性质。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PremiseWitnesses.lean",
   "aliases": [
-    "self-concern gives what C asks between listed level paths, one way",
-    "自关切于所列层径间单向给出 C 之所求",
+    "self-concern gives what C asks between listed level paths",
+    "自关切于所列层径间给出 C 之所求",
     "Becoming.Weighting.increasingInOwn_iff_increasing_iff_noOutside",
     "Becoming.Weighting.increasingInOwn_iff_increasing_iff_unrestricted",
     "Becoming.Web.extension_ranked_of_increasingInOwn",
@@ -186,7 +186,7 @@
       "id": "mutual-dependence-gives-the-condition-de-se",
       "detail": {
         "en": "Mutual dependence gives the condition held de se along being affected, and the ranking here takes that condition for any relation on the same web: the two compose directly, though no single theorem states the composite.",
-        "zh": "相互依赖给出沿被影响而自承之条件；此处之排序对同一网上任一关系取此条件为假设：二者直接合成，唯无单一定理陈述此合成。"
+        "zh": "相互依赖给出沿被影响而从己持有之条件；此处之排序对同一网上任一关系取此条件为假设：二者直接组合，唯无单一定理陈述此组合。"
       }
     }
   ],
@@ -297,6 +297,10 @@
     {
       "en": "9 November 2026, AG seventh pass (the sixth pass's two cold readings, on Ren's messages 9 to 12 of sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): \"courses that end\" re-said as admissions that end; a hypothesis now adds that a life forms such an order is not shown, persisting being in the models a filter on what was chosen, not an order formed; that the proof uses the condition only at the life's own standpoint; widening said as what every additive positive weighting ranks higher on a finite listing; a related link says how the ranking composes with mutual dependence. No change to the claim's mathematics or its Lean.",
       "zh": "2026年11月9日，AG 第七轮（据第六轮两份冷读，就 Ren 于 sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md 之第 9 至 12 条）：陈述中「有终之进程」改称接纳有终；一条假设增言：生命是否形成这种次序尚未表明，模型中的持存只是对所择者的过滤，不形成次序；言证明只用到条件在该生命自身立场上之实例；扩大改言为有限列表上每一正之可加权重所排高者；增一相关链接，言此排序如何与相互依赖合成。主张之数学与其 Lean 不变。"
+    },
+    {
+      "en": "10 November 2026, AG eighth pass: the statement says the quantifiers of the coincidence (for every order on a fixed listing, exactly when every listed item is marked; for every standpoint, listing and order, exactly where the condition holds de se); \"one way\" is no longer the label of the path result's direction (the converse is not shown); \"for courses that go on forming without end it is not shown\" is re-said as what is proved, that the course of a line persisting without end never fits such a list, so there this route is silent; de se is 从己 and the composition 组合 in Chinese. No change to the claim's mathematics or its Lean (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第八轮：陈述写明相合之量词（于一固定列表对每一次序，恰在每一所列之项皆被标记时；对每一立场、列表与次序，恰在条件以从己方式成立处）；路径之果之方向不再以「单向」标之（其逆未证）；「对无尽地形成下去的进程，未证」改言已证者：持存无尽之世系实际所取之进程从不容于这样的列表，此路于彼处无所言；de se 中文作从己，合成作组合。主张之数学与其 Lean 不变（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ]
 }

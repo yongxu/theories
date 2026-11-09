@@ -28,9 +28,11 @@ FIRST_CLAUSE_QUALIFIERS = ('whether or not it has any say here and whether or no
 # WB's sentence in the Human development row, split at its semicolons into three labelled lines (RW's fifth round); its
 # second part re-said in the AG review's fifth pass (9 November 2026, Ren's message 9): not "that the wider is better is
 # C's" but the order a ranking result takes as its theorem's hypothesis; in the seventh, C a requirement an order meets
-# (`Comparison` is a property of a supplied relation, not one order), not the order itself
+# (`Comparison` is a property of a supplied relation, not one order), not the order itself; in the eighth (10 November
+# 2026, H11), J1/J2 named beside it, since the direction's and the handover's theorems take `Priority`, not `Comparison`
 TOOL_SENTENCE = ('The tool needs no premise', "a result ranking the wider course above names its order among its theorem's "
-                 'hypotheses: self-concern with the condition held de se, or an order meeting C (`Comparison`)',
+                 'hypotheses: self-concern with the condition held de se, an order meeting C (`Comparison`), or the '
+                 'practical commitments J1/J2 (`Priority`)',
                  'that a listing matches an actual course is not shown')
 # Ways of saying the ethics the AG review's fifth pass retired on the uses pages (Ren, 9 November 2026, message 9: "there is
 # no warrant, ethics emerges from continuation condition, not another way around, there is no any dualistic good or evil")
@@ -51,7 +53,15 @@ RETIRED = ('widening what can form is better', 'unasserted', 'not asserted', 'wa
            'self-concern, is argued', 'continues with', 'as among dated occurrences', 'read without time',
            'not stated as one theorem', 'does not reach those who depend on one', 'concern for their own continuation reaches',
            'courses that end', 'on the widening reading', 'the order ranking a course above every course it widens',
-           'The ten-minute part')
+           'The ten-minute part',
+           # the eighth pass (10 November 2026, the seventh pass's two cold readings and critic, H11-H20): C listed among
+           # the direction's hypotheses, where its theorems take J1/J2; self-concern left undefined; "one way" labelling the
+           # path result; the persisting course left "not shown" where 07 §4.9 proves this route silent; seeing said needed
+           # for every preservation; 04 §8's evaluation said as a warrant; "so" before "adds no premise"
+           'read as widening', "take C (`Comparison`)", 'if a life holds its own continuation as an order',
+           'if a life holds one', 'one way, between', 'one way, with admission', 'go on forming without end',
+           'seeing them is needed, and not enough', 'is needed there, and not enough', 'normative warrant',
+           'so comparing by widening adds no premise', 'so on such a listing')
 RETIRED_ZH = ('扩大可形成者更好', '以广为愈', '两种读法', '不断言', '持 C 者','对所等待的一切都可以不等', '共有之物', '塑规者',
               '被离开', '走出', '「', '」', '所读之外的什么', '一个体制的不可回返之点', '读到过一行', '正反两面的见证',
               # the sixth pass, as RETIRED's last line; astra's fifth-pass wording of the point of no return
@@ -60,12 +70,16 @@ RETIRED_ZH = ('扩大可形成者更好', '以广为愈', '两种读法', '不�
               # the seventh pass, as RETIRED's last lines
               '有所值的计法', '不是第二个前提', '已论证、未表明', '与之一同延续', '沿关系所及的范围之外，别无他物', '标有日期的诸发生',
               '不计时间而读', '尚未陈述为一条定理', '终会停止容纳', '达不到依存于自己者', '及不到贻贝床', '在扩大之读法下',
-              '十分钟的部分')
+              '十分钟的部分',
+              # the eighth pass, as RETIRED's last lines
+              '读作扩大的 C', '把 C（`Comparison`', '却不足够', '规范根据', '不断有所形成、没有尽头', '所以在这样的列表上',
+              '只证明了这一方向', '所以以扩大来比较')
 METHOD_SECTION_9 = ('**What the unifications claim.**', '<a id="one-relational-unfolding">')
 
 WORDS = {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9, 'ten': 10,
          'eleven': 11, 'twelve': 12, 'thirteen': 13, 'fourteen': 14, 'fifteen': 15, 'sixteen': 16, 'seventeen': 17,
-         'eighteen': 18, 'nineteen': 19, 'twenty': 20, 'thirty': 30, 'forty': 40, 'fifty': 50, 'sixty': 60, 'seventy': 70}
+         'eighteen': 18, 'nineteen': 19, 'twenty': 20, 'thirty': 30, 'forty': 40, 'fifty': 50, 'sixty': 60, 'seventy': 70,
+         'eighty': 80}
 
 
 def number(words):
@@ -227,12 +241,22 @@ class UsesCells(unittest.TestCase):
                        "remove, by every other, nothing lies outside each one's reach along that relation",
                        'on the reading that what has significance from a standpoint is what lies within its center\'s reach, '
                        'that is the *continuation condition*',
-                       'if a life holds its own continuation as an order over courses, *self-concern*, that order already '
-                       'ranks every *widening* above what it widens',
-                       'one course keeping all another keeps and letting more form, more future',
+                       # the eighth pass (10 November 2026, H14-H16): the condition in time (07 §4.11), self-concern
+                       # defined as the first screen's anchor defines it, the path result with its finite list and decided
+                       # admission, and the persisting course's list said as 07 §4.9 proves it
+                       'Read in time, it holds only from some step on, and there exactly where each one\'s acts, from every '
+                       'step, come to bear on every other\'s later continuation '
+                       '(proved on models, [07 §4.11](chapters/07-SIGNIFICANCE.md#condition-in-time))',  # its reach said there (verifier)
+                       'A course *widens* another when it keeps all the other keeps and lets more form, more future; where '
+                       "the condition holds, read across all steps, whatever a widening adds lies within the life's own reach.",
+                       "Call a life's order over courses *self-concerned* when it ranks above what it widens every widening "
+                       'that adds to its own continuation, read as what lies within its reach: there, that order already '
+                       'ranks every widening above what it widens',
                        'proved on models, self-concern a hypothesis',
-                       'on a finite listing and, one way, between two courses whose admissions end',
-                       'the two compose directly, though no single theorem states the composite',
+                       'on a finite listing and, with admission decided, between two level paths whose admitted pairs fit '
+                       'in a finite list, so that their admissions end',
+                       'the course of a line that persists without end never fits such a list, so there this route is silent',
+                       'the two results compose directly, though no single theorem states the composite',
                        'On a finite listing, every way of adding up worth that counts each thing above zero ranks the wider '
                        "course higher, and ranking by widening adds no premise beside the life's own concern: where the "
                        'condition holds, that concern already does it.',
@@ -240,7 +264,8 @@ class UsesCells(unittest.TestCase):
                        'what was chosen, not an order formed ([07 §4.9](chapters/07-SIGNIFICANCE.md#what-persisting-shows))',
                        "how such orders form is the work's open target",
                        "concern for one's own continuation need not count those who depend on one",
-                       'seeing them is needed, and not enough, and counting their loss is the one step we offer',
+                       'seeing them is needed for a choice to answer to their loss, and not enough, and counting their loss '
+                       'is the one step we offer',
                        'the laws show it mixed and weigh it for no one'):
             self.assertIn(phrase, brief)
         self.assertNotRegex(brief, r'\bC\b')  # C is named where a theorem takes `Comparison`, in the labels line (F9)
@@ -277,8 +302,26 @@ class UsesCells(unittest.TestCase):
                        'mutual dependence and this ranking compose directly, though no single theorem states the composite',
                        "concern for one's own continuation need not count those who depend on one",
                        'That a life forms self-concern is not shown: going on is not yet such an order, in the proofs it is a '
-                       'hypothesis, and what the models show of persisting is a filter on what was chosen, not an order formed'):
+                       'hypothesis, and what the models show of persisting is a filter on what was chosen, not an order formed',
+                       # the eighth pass (10 November 2026, H11-H16): the condition in time, the one-center bound with
+                       # what it comes from on a net going forward in time, the path result with decided admission and no
+                       # "one way", the persisting course's list as 07 §4.9 proves it, seeing needed for a choice to answer
+                       # to a loss, 04's evaluation in its words, and J1/J2 named beside C
+                       "read in time, only from some step on, where each one's acts, from every step, come to bear on every "
+                       "other's later continuation",
+                       'Where the condition holds, on an acyclic relation every standpoint has the same center',
+                       "on a net going forward in time this comes from the condition's asking that nothing other than the "
+                       "center lie at or before the center's step, and over what comes after two centers can meet it",
+                       "a self-concerned order, its own continuation read as what lies within its reach, ranks every widening "
+                       'above what it widens on a finite listing, and, with admission decided, every extension between two '
+                       'level paths whose admitted pairs fit in a finite list',
+                       'the course of a line that persists without end never fits such a list, so there this route is silent',
+                       'seeing them is needed for a choice to answer to their loss, and not enough',
+                       'its evaluation as right or wrong (which forms within becoming, in those who judge it, not in its '
+                       'explanation)',
+                       'That self-concern ranks the course of a line that persists without end is not shown'):
             self.assertIn(phrase, joined)
+        self.assertNotIn('one way, with admission', joined)
         for line in lines:
             if 'forms self-concern' in line:
                 self.assertTrue(line.startswith('**Open.**'), line[:40])
@@ -295,18 +338,41 @@ class UsesCells(unittest.TestCase):
         self.assertIn("preserving the fishers' own continuation does not require preserving the bed", counts)
         self.assertIn('every additive weighting that counts each listed thing above zero, the bed included, ranks it above', counts)
         handover = next(p for p in text.split('\n\n') if p.startswith('**Whose losses count, and what ranks.**'))
-        self.assertIn('C (`Comparison`), the requirement that an order rank a course above every course it widens, as a '
-                      'hypothesis', handover)
+        # the eighth pass (10 November 2026, H11): the verdicts take J1/J2, not C (`Requirement.Handover.direction` takes
+        # `Priority`); C is what an order meeting J1/J2 meets where it is decided whether an extension adds a basic claim
+        # (`Priority.comparison`), said with the frame's gains counted as living (H12)
+        for phrase in ("The case's verdicts take J1/J2 (below), not C, as their hypothesis "
+                       '(`Requirement.Handover.direction` takes `Priority`)',
+                       'An order meeting J1/J2 meets C (`Comparison`) wherever it is decided whether an extension adds a '
+                       'basic condition (`Priority.comparison`)',
+                       'keeping every basic condition and gain the other has and adding a gain'):
+            self.assertIn(phrase, handover)
+        handover_line = next(l for l in text.splitlines() if l.startswith('*Constructed, not observed: an AI-written case'))
+        self.assertIn('its verdicts conditional on the continuation condition, J1–J4 and a correspondence', handover_line)
+        lake = next(p for p in text.split('\n\n') if p.startswith('**What the laws say.**'))
+        self.assertIn('in the test no instruction tried preserved it', lake)  # the test's result, as its README says (H13)
+        self.assertIn('Seeing the bed is needed there for a choice to answer to its loss, and not enough', counts)
         for start in ('**What needs no premise.**', '**What ranks, and under what**'):
             para = next(p for p in text.split('\n\n') if p.startswith(start))
             self.assertIn('every additive weighting that counts each listed thing above zero', para, start)
         zh = page(THEORY + 'USES-EXAMPLES.zh.md')
         self.assertIn('保住渔民自身的延续，并不要求保住贻贝床', zh)
         self.assertIn('凡给每个所列之物一个大于零的权重、再把权重相加的计法', zh)
+        # the eighth pass's verifier: 扩展 names the plan Expand in this case, so the extension C reads is said without it
+        self.assertNotIn('一个扩展是否增加一项基本条件', zh)
+        for phrase in ('这一情形的裁断取作假设的是 J1/J2（见下），不是 C', '要让选择因贻贝床的损失而改变，就得看见它，但看见还不够',
+                       '在这次检验中，试过的指令没有一条保住了它'):
+            self.assertIn(phrase, zh)
         uses_zh = page(THEORY + 'USES.zh.md')
-        for phrase in ('生命是否会形成这种次序，尚未表明：模型中的持存只是对所择者的过滤，并不形成次序',
+        # the eighth pass: persisting and self-concern said as the Chinese first screen says them (README-ZH, 10 November
+        # 2026), seeing needed for a choice to answer to a loss (H13), the condition in time (H16)
+        for phrase in ('生命是否会形成这种次序，尚未表明：模型对持续存在所显示的，只是对已作选择的一道筛选，而不是一种已形成的次序',
                        '依存若只沿一个方向，对自身延续的关切未必把依存于它的那些也算进来',
-                       '在生命自身的关切之外不另加前提', '跨越所有步来读', '较短的读法：'):
+                       '要让选择因它们的损失而改变，就得看见它们，但看见还不够',
+                       '在生命自身的关切之外不另加前提', '跨越所有步来读', '较短的读法：',
+                       '按时间来读，它只从某一步起才成立', '这里称为*自我关切*', '在容纳已判定时',
+                       '只要多出的东西里有属于自身延续的，这一次序就把前者排在后者之上',
+                       '对它的是非评价（这一评价在生灭变化之中、在评判它的人之中形成，不在它的解释之中）'):
             self.assertIn(phrase, uses_zh)
 
 
@@ -773,8 +839,11 @@ class StatedTimes(unittest.TestCase):
         # A stated time is a guide, not a bound: "一小时也不是最重要的，如果做不到，追求完整表达即可" (Ren, 9 November 2026,
         # sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, message 8). The path keeps its complete text, at
         # 47–61 minutes since the fourth pass (49–64 before it), and is said as about an hour; this guards only that "about"
-        # stays true.
-        self.assertLessEqual(path[-1], 65)
+        # stays true. In the eighth pass (10 November 2026) the ethics said at its theorems' reach (the condition in time,
+        # self-concern defined, the path result's finite list and decided admission, the one-center bound and the persisting
+        # course, 07 §4.11 and §4.9) took the path from 50–65 to 52–68 minutes; the guard is relaxed by the counted three,
+        # complete expression first.
+        self.assertLessEqual(path[-1], 68)
         for example in re.split(r'\n(?=### )', page(EXAMPLES))[1:]:  # any one example with the page stays within it
             example = re.split(r'\n(?=## )', example)[0]
             self.assertLessEqual(span(navigation.reading_time(uses + '\n\n' + example))[-1], path[-1], example[:50])
@@ -791,27 +860,58 @@ class MethodAndGlossariesAtTheirStrength(unittest.TestCase):
     ranks higher (`Weighting.widens_iff_every_positive`), not what every way of counting agrees on; ranking by it adds no
     premise beside a life's own concern; that a life forms such an order is not shown (07 §4.9: persisting filters what was
     chosen); one-way concern need not count dependents; C is a requirement on an order; the one-center result and the
-    mutual-dependence route are read across all steps and compose directly; admissions end, not courses."""
+    mutual-dependence route are read across all steps and compose directly; admissions end, not courses.
+
+    Eighth pass (10 November 2026), on the seventh pass's two cold readings: C has a `living` parameter, and the short gloss
+    holds with every claim counted as living (H12); self-concern is defined where it is used, with its quantifiers (H14,
+    H15); "one way" names only relations running one way, not the path result's direction, and the path result keeps its
+    finite list and decided admission (H15); seeing is needed for a choice to answer to a loss (H13); the condition in
+    time, from J3 (07 §4.11): from some step on, exactly mutual dependence in time, and the one-center bound from what lies
+    at or before a center (H16); ranking by widening adds no premise "and", not "so" (H19); item 12 by J1 (H17)."""
 
     RETIRED = ('every way of counting each thing as worth something', 'argued, not shown', 'what each center continues with',
                'as among dated occurrences', 'read without time', 'not stated as one theorem',
-               'does not reach those who depend on one', 'names the property of an order', 'no second premise beside')
-    RETIRED_ZH = ('有所值的计法', '已论证、未表明', '与之一同延续', '标有日期的诸发生', '不计时间而读', '持续推出', '不是第二个前提')
+               'does not reach those who depend on one', 'names the property of an order', 'no second premise beside',
+               # the eighth pass
+               'so ranking by widening adds no premise', 'So ranking by widening adds no premise',
+               'seeing them is needed and not enough', 'seeing them is needed, and not enough',
+               'if a life holds its own continuation as an order', 'an order holding one\'s own continuation ranks',
+               'one way, every extension', 'one way (`Web.extension_ranked', 'fit in a finite list, one way',
+               'admissions end, one way', 'one way only', 'This fixes, one way,', 'courses that go on forming without end it is not shown',
+               'holds along an acyclic relation, every standpoint', 'which relation a center continues along')
+    RETIRED_ZH = ('有所值的计法', '已论证、未表明', '与之一同延续', '标有日期的诸发生', '不计时间而读', '持续推出', '不是第二个前提',
+                  # the eighth pass
+                  '看见它们是必要的，却不足够')
 
     def test_method(self):
         text = page(METHOD)
         ethics = text[text.index('<a id="where-the-ethics-sits">'):text.index('**A premise used is not a premise discharged.**')]
         for phrase in ('The ethics emerges from continuation.', '"Emerges" names neither a derivation nor a shown development',
                        'every additive weighting that counts each listed item above zero ranks it higher',
-                       "So ranking by widening adds no premise beside the life's own concern: where the condition holds, "
-                       'that concern already does it.',
+                       "Ranking by widening adds no premise beside the life's own concern: where the condition holds, "
+                       'that concern already does it (the bullet above).',
+                       'Call a life\'s order over courses *self-concerned* when it ranks above what it widens every widening '
+                       'that adds to its own continuation, read as what lies within its reach',
+                       'C is a requirement on an order (`Comparison F living Better`)',
+                       'With every claim counted as living, as on level paths (`Web.paths_extension_iff_widens`)',
+                       'For every order on a fixed listing, self-concern and increasing admission coincide exactly when every '
+                       'listed item is marked',
+                       'the course of a line that persists without end never fits such a list',
+                       'so there this route is silent',
+                       'between two level paths whose admitted pairs fit in a finite list, with admission decided, so that '
+                       'their admissions end',
+                       'Read in time, it holds only from some step on, and there exactly where each one\'s acts, from every '
+                       'step, come to bear on every other\'s later continuation',
+                       '`Flow.unrestrictedEventually_iff_mutuallyDependentInTime`', '`Drawing.lapses`', '`RingOfThree.apart`',
+                       '`«续无外当且仅当后与独»`', '`TwoSources.apart`',
+                       'Seeing them is needed there for a choice to answer to their loss, and not enough',
                        'C names the requirement that an order rank each course above every course it widens',
                        'C is no longer introduced as a second foundation of the ethics; the name stays for the requirement '
                        'particular theorems take.',
                        'what the models show of persisting is a filter on what was chosen, not an order formed',
                        'whose proof uses the condition only at the standpoint whose order it is',
                        'compose directly, though no single theorem states the composite',
-                       'Where `«续无外»` holds along an acyclic relation, every standpoint has the same center',
+                       'Where `«续无外»` holds, on an acyclic relation every standpoint has the same center',
                        "concern for one's own continuation need not count those who depend on one: nothing in it requires "
                        'their losses to count'):
             self.assertIn(phrase, ethics)
@@ -822,6 +922,14 @@ class MethodAndGlossariesAtTheirStrength(unittest.TestCase):
                       'judgment in A, L and the practical commitments, and it proves that the condition alone ranks nothing"',
                       text)
         self.assertNotIn('C is the monotonicity of opportunity sets', text)
+        # item 12 by J1's wording (07 §4.13), with the stake a hypothesis, never "only where ending alone is at stake" (H17)
+        item = text[text.index('12. **How scope and order form**'):text.index('The goal records\' targets map onto these items')]
+        for phrase in ('wherever only ending was at stake there', '`Flow.returning_downstream_iff_mutuallyDependent`',
+                       'the course a persisting line takes is never such a path', 'so that their admissions end',
+                       'additive weightings counting each listed item above zero'):
+            self.assertIn(phrase, item)
+        for phrase in ('only where ending alone is at stake', 'courses that end', 'from the positive weightings'):
+            self.assertNotIn(phrase, item)
 
     def test_glossaries_and_map(self):
         en, zh, where = page('GLOSSARY.md'), page('GLOSSARY.zh.md'), page('MAP.md')
@@ -830,7 +938,9 @@ class MethodAndGlossariesAtTheirStrength(unittest.TestCase):
             for phrase in self.RETIRED + ('the order ranking a course above every course it widens',):
                 self.assertNotIn(phrase, text)
         self.assertIn('every additive weighting that counts each listed item above zero ranks it higher', en)
-        self.assertIn('生命是否会形成这种次序，尚未表明；在证明中它是假设；模型中的持存只是对所择者的过滤，并不形成次序', zh)
+        # the eighth pass's Chinese reader: persisting said as the Chinese fronts say it, and the quantifier placed as
+        # `increasingInOwn_iff_increasing_iff_marks` states it, (for every order, coincide) exactly when every item is marked
+        self.assertIn('生命是否会形成这种次序，尚未表明；在证明中它是假设；模型对持续存在所显示的，只是对已作选择的一道筛选，而不是一种已形成的次序', zh)
         self.assertIn('凡给每个所列之物一个大于零的权重、再把权重相加的计法，一致排得更高的，恰好就是扩大', zh)
         self.assertIn('依存若只沿一个方向，对自身延续的关切未必把依存于它的那些也算进来', zh)
         self.assertIn('| 广者居上（第六章之名；中文版专有） |', zh)
@@ -842,6 +952,25 @@ class MethodAndGlossariesAtTheirStrength(unittest.TestCase):
         # one Chinese term for de se in the glossary: 从己, not the records' 自承
         self.assertNotIn('自承', zh)
         self.assertIn('| 从己、从言（de se, de dicto） |', zh)
+        # the eighth pass: C with `living`, self-concern defined with its quantifiers, the condition in time, the
+        # one-center bound, seeing needed for a choice to answer to a loss, "and" before "adds no premise"
+        for phrase in ('the name of a requirement on an order (`Comparison`, with a parameter `living`)',
+                       "holding one's own continuation as an order over courses: ranking above what it widens every widening "
+                       "that adds to one's own continuation",
+                       'For every order on a fixed listing, self-concern and increasing admission coincide exactly when every '
+                       'listed item is marked',
+                       '`Flow.unrestrictedEventually_iff_mutuallyDependentInTime`', '`«续无外当且仅当后与独»`', '`TwoSources.apart`',
+                       'seeing them is needed for a choice to answer to their loss, and not enough',
+                       "and ranking by widening adds no premise beside a life's own concern"):
+            self.assertIn(phrase, en)
+        for phrase in ('对一种次序的一项要求之名（`Comparison`，带一个参数 `living`）', '它把一个进程排在它所扩大的每一个进程之上',
+                       '在一个固定列表上，自我关切与随容纳而递增对每一种次序都重合，恰在每个所列之物都被标记之时',
+                       '`Flow.unrestrictedEventually_iff_mutuallyDependentInTime`', '`«续无外当且仅当后与独»`', '`TwoSources.apart`',
+                       '要让选择因它们的损失而改变，就得看见它们，但看见还不够', '而按扩大排序'):
+            self.assertIn(phrase, zh)
+        self.assertIn('a self-concerned order, one ranking above what it widens every widening that adds to its own continuation',
+                      where)
+        self.assertIn('read in time, the condition holds only from some step on', where)
 
 
 if __name__ == '__main__':

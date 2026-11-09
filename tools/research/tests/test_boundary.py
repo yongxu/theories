@@ -1507,10 +1507,18 @@ class TheRepositoryFile(unittest.TestCase):
             for old in ('no second premise', 'courses that end', 'every positive weighting', 'argued, not shown',
                         'fixes scope', 'an order ranking each course'):
                 self.assertNotIn(old, said, (r['id'], old))
+            # 10 November 2026 (AG eighth pass, H12, H14, H15): C keeps its reading of living; self-concern is defined, not
+            # "an order holding one's own continuation"; "one way" no longer labels the path result; the persisting course is
+            # said as proved (it never fits a finite list), not "not shown"
+            for old in ('one way', 'go on forming without end', "an order holding one's own continuation", '单向'):
+                self.assertNotIn(old, said, (r['id'], old))
             order = next(p for p in premises if p.get('role') == 'order')
             self.assertIn('requirement', order['name']['en'])
             self.assertIn('self-concern', order['name']['en'])
+            self.assertIn('counted as living', order['name']['en'])
+            self.assertIn('admission decided', order['name']['en'])
             self.assertIn('additive', order['basis']['en'])
+            self.assertIn('never fits such a list', order['basis']['en'])
 
 
 if __name__ == '__main__':

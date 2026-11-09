@@ -76,8 +76,8 @@
       "kind": "scope"
     },
     {
-      "en": "That anyone must hold the condition; where it holds de se, self-concern ranks every extension between two level paths whose admissions fit in a finite list, one way (self-concern-and-c-under-the-condition).",
-      "zh": "任何人须持此条件；条件从己成立处，自关切单向排定所接纳之项容于一有限列表的二层径间之每一扩展（self-concern-and-c-under-the-condition）。",
+      "en": "That anyone must hold the condition; where it holds de se, with admission decided, self-concern ranks every extension between two level paths whose admissions fit in a finite list, not the converse (self-concern-and-c-under-the-condition).",
+      "zh": "任何人须持此条件；条件从己成立处，接纳可判定，自关切排定所接纳之项容于一有限列表的二层径间之每一扩展，不推出其逆（self-concern-and-c-under-the-condition）。",
       "kind": "non-implication"
     }
   ],
@@ -258,6 +258,10 @@
     {
       "en": "10 November 2026, AG review, seventh pass (on Ren's messages 9 to 12 of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, and the sixth pass's two cold readings): the statement and correspondence say the condition as reach, every occurrence reached on every center's line, nothing outside each center's reach, and the structural reading as what lies within a center's reach along a relation, in place of 'lies within every center's continuing' and 'within its continuing'; the one-center law says that on a net with no cycle, where the condition holds, every standpoint has the same center; the Chinese renders de se as 从己. No declaration or proof changed.",
       "zh": "2026年11月10日，AG 审查第七轮（据 Ren 2026 年 11 月 9 日之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md，及第六轮两份冷读）：陈述与对应以所及言条件：凡事皆为每一中心之线所及，无物在每一中心所及之外，结构之读言中心之所计在其沿一关系所及之内，以代「皆在每一中心之续中」与「在其沿一关系之续中」；一中心之律改言：无环之网中，此条件成立处，诸立场之中心皆同；中文以「从己」译 de se。声明与证明皆不变。"
+    },
+    {
+      "en": "10 November 2026, AG eighth pass: \"one way\" no longer labels the direction of the path result (the converse is not shown), and decided admission is named; its home section says the one-center law with what the bound counts on a net going forward in time (what-the-one-center-bound-counts). No law changed (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第八轮：路径之果之方向不再以「单向」标之（其逆未证），并写明接纳可判定；其所在之节以按时间向前之网上此界所计者述一中心之律（what-the-one-center-bound-counts）。诸律不变（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ]
 }

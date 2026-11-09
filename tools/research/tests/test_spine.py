@@ -364,22 +364,28 @@ class Drawing(unittest.TestCase):
         self.assertEqual([p['id'] for p in s['premises']], ['condition', 'self-concern', 'C'])
         self.assertEqual(spine.WORDS['en']['premises'], 'What ranking results take as hypotheses')
         lead = '\n'.join(spine.lead(graph(), 'theories/becoming/results/THEORY-GRAPH.md'))
+        # eighth pass (H2, H12, H14, H15): self-concern defined, C with every claim counted as living, the path result with
+        # decided admission and admitted pairs, no "one way"; the no-premise sentence with what does it
         for new in ('The three boxes are what ranking results take as hypotheses',
                     'drawn as hypotheses and not as premises of the ethics',
-                    'the requirement that an order rank each course above every course it widens',
-                    'whose admissions fit in a finite list, so that their admissions end',
+                    "self-concern, an order ranking above what it widens every widening that adds to one's own continuation",
+                    'a requirement on an order: with every claim counted as living, that it rank each course above every course it widens',
+                    'with admission decided, between two level paths whose admitted pairs fit in a finite list, so that their admissions end',
                     'that a life forms self-concern is not shown',
                     'every additive weighting counting each listed item above zero ranks higher, and ranking by it adds no premise '
-                    "beside a life's own concern"):
+                    "beside a life's own concern: where the condition holds, that concern already does it"):
             self.assertIn(new, lead)
         page = spine.zh_page(graph())
         for new in ('画作假设，不画作伦理的前提', '对次序的一项要求', '生命是否会形成自我关切，尚未表明',
                     '凡给每个所列之物一个大于零的权重、再把权重相加的计法，一致排得更高的，恰好就是扩大',
-                    '按扩大排序，在生命自身的关切之外不另加前提'):
+                    '按扩大排序，在生命自身的关切之外不另加前提：在延续条件成立之处，这一关切已经这样排序',
+                    '在每一个主张都算作活之时', '并在容纳已判定时'):
             self.assertIn(new, page)
         for old in ('C for order', 'for scope', 'between listed courses', 'no second premise', 'courses that end',
-                    'every positive weighting', 'some formations hold', 'an order ranking a course above'):
+                    'every positive weighting', 'some formations hold', 'an order ranking a course above',
+                    "an order holding one's own continuation", 'one way, between', ', one way,'):
             self.assertNotIn(old, lead)
+        self.assertNotIn("an order holding one's own continuation", json.dumps(s, ensure_ascii=False))
         for old in ('定次序', '定范围', '列出的进程', '不是第二个前提', '某些形成所持', '每一个正的赋权都共同认可'):
             self.assertNotIn(old, page)
 

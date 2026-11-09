@@ -1,0 +1,103 @@
+{
+ "note": "AI-written report, AG review eighth pass, crosswalk agent, 10 November 2026 (about 04:45 to 05:05 WIB). Worktree /Users/ren/tmp/ag/rv at HEAD a2200f38e, with the eighth pass's other agents' uncommitted changes in place. Every edit is an exact substring of one field, applied by script and written back with indent=1 and ensure_ascii=False; both files round-trip byte for byte. 249 field changes in 173 of the 1,183 entries (190 targets' says, 42 readings, 10 account_adds, 7 part labels) and 2 in correspondence_groups.json. No id, name, sense, source quote, label, classification (carried, relation, agreement_of), role, anchor or record key changed (checked by script against a2200f38e), and what each entry says a tradition says is unchanged. Checks run: atlas.validate (0 errors), the atlas render in memory (41 pages, 0 errors, nothing written), test_atlas (45, OK), test_atlas_index (9, OK), test_navigation_pages (52, OK), test_connection_map (32, OK). No make, render, gate, lake or build; the full suite was deliberately not run.",
+ "changed": [
+  "theories/becoming/results/atlas/entries/correspondences.json",
+  "theories/becoming/results/atlas/entries/correspondence_groups.json",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass8-crosswalk.json"
+ ],
+ "items": [
+  {
+   "item": "(1) Quoted fragments that held at a2200f38e and fail on the files changed since",
+   "done": true,
+   "how": "A script took every fragment in straight single quotes, double quotes, “” and 「」 (split at ellipses, eight characters at least) in every entry's says, part, reading, account_adds, source_adds and sense, and checked it against the target's page and record (and every changed page and record), with links, emphasis, backticks and HTML tags stripped, now and at a2200f38e (git show). The first run stripped '<…>' too greedily (a '<' in 'n q < d p' ate text up to the next '>'); fixed to tags only and rerun. On the entries as they were at a2200f38e: 20 fragments in 18 entries held then and failed now. After the edits: none. A second script checked each of the 42 fragments the edits introduced: all hold on their homes now."
+  },
+  {
+   "item": "(1) What this pass's agents listed in 'left' for the crosswalk",
+   "done": true,
+   "how": "ch07: 07's 'Seeing more is needed, and not enough' (bold heading, lower case and every reading's own restatement) now 'Seeing more is needed for a selection to answer to a loss, and not enough' (37 fields and the human-solutions-museum group's not_mapped note); \"each route to C's order rests\" now 'each route to an order meeting C rests' (9 fields; §4.4's title 'What would give C's order on a listing' kept, 07 keeps it); 'deciding what C leaves mixed' now 'deciding mixed pairs, of which C asks nothing'; §5's sentence re-quoted ('an order meeting C ranks a course above each course it extends there ... and C asks nothing of any other pair'); 'gives what C asks, one way' re-quoted as '(the converse is not shown, below)'; the path result without 'one way'. onepage: cx-hsm-forward-criterion, cx-memories-value-words-recast, cx-sty-good-existence-values-coded re-quote the page's self-concern definition; cx-greek-anaximander-justice and cx-modphil-marx-historical-tendency the seeing sentence; cx-memories-operationability-reflex the direction sentence; the two Join-row quotes carry 'with every claim counted as living'. records: 'it can warrant building' now 'it can support building' (or 'can be supported') as organizational-formation's record says it (11 fields); entry 878 (cx-oi-ahimsa) 'every order meeting C ranks it above'; entry 597 (cx-sspiral-equality-regulator) Pigou-Dalton re-said; entries 89 and 127 'C asks nothing of it/of which C asks nothing'. rest: CD §6's 'seeing is needed, and not enough, since…' in its 8 entries (and the two others restating it) now 'seeing is needed for a selection to answer to a loss, and not enough, since…'; cx-asc-generativity-licenses-competition 'and …: where the condition holds, that concern already does it'; cx-archearth-datong-as-a-condition and cx-drives-dimensional-collapse re-said (self-concern defined, in time, level paths, decided admission, 'mutual dependence and that ranking compose directly'); 06:572's 拓宽 now 扩大 in cx-jianwen-every-character-definite and cx-jianwen-single-character-preference (says and reading). verify-rest: 05:396's label re-said in its 11 entries as 05 now has it ('its theorems take an irreflexive, transitive comparison on an exactly listed nonempty eligible range and actual improvement witnesses for every deficient case; the reading takes the continuation condition, through living significance, an order meeting C, with J1–J4, and complete relational correspondence'), checked against `Requirement.required_of_bettered` (Frontier.lean:141), and the four readings and adds that listed C among what the theorem takes now say the comparison and witnesses are the theorem's and the rest the reading's; 02:14's paraphrase (cx-jianwen-alignment-from-algebra) with decided admission and admitted pairs. screen: correspondences.json:5847 (cx-archearth-datong-as-a-condition) and :44667 (cx-sty-good-existence-values-coded) re-said. verify-ch08: cx-memories-value-words-recast's 08 §12 sentence re-quoted; cx-ctxrt-not-inherently-better's GLOSSARY sentence now carries the path half. verify-records: correspondence_groups.json [7] (cxg-keep-the-possibility-space-open) summary now 'where the condition holds de se, self-concern gives what C asks on a finite listing and, with admission decided, between two level paths whose admitted pairs fit in a finite list, so that their admissions end', with C glossed 'with every claim counted as living'."
+  },
+  {
+   "item": "(2) Seventh pass: 07 §7's label 'C read as widening' (pass7-critic item 1, pass7-crosswalk and verify left)",
+   "done": true,
+   "how": "All 21 fields re-said as 07 §7's label now reads: 'Conditional (the continuation condition, J1–J4, correspondence E; moves compared by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`)' (cx-sty-explainable-authority keeps its 'each a hypothesis'; cx-zhishan-corrigible-not-obedient's short form 'Under the continuation condition, J1–J4 and correspondence E, moves compared by widening'). By H11 also the 12 readings that gave the direction's hypotheses as 'the continuation condition, an order ranking by widening, J1–J4 (and correspondence E)' now say 'the continuation condition, J1–J4 and a correspondence (correspondence E), with moves compared by widening'. Kept: quotes of 07 §6's own label 'Conditional (the continuation condition, an order ranking by widening and the practical commitments; an argument)' and of 07's does-not-show 'an order ranking by widening', which 07 still says."
+  },
+  {
+   "item": "(2) Seventh pass: 07 §4.4's \"each route to C's order rests\" and 'deciding what C leaves mixed', §5's 'C ranks a course above each course it extends there'",
+   "done": true,
+   "how": "Re-quoted from 07 as it now is (see the ch07 item above)."
+  },
+  {
+   "item": "(2) cx-archearth-provision-apart-from-membership account_adds ('neither of them asserted')",
+   "done": true,
+   "how": "'That basic priority is a premise beyond C and the continuation condition, each a hypothesis where a theorem takes it: a trading ordering satisfying C stands beside it, in one constructed situation.'"
+  },
+  {
+   "item": "(2) cx-kpso-seedbed ('with C giving order')",
+   "done": true,
+   "how": "'Under the continuation condition, which says whose losses count, what has not yet formed counts (Preemption).'"
+  },
+  {
+   "item": "(2) cx-oi-moksha targets[3] (B-34's old weakness)",
+   "done": true,
+   "how": "'Its weakness, as the dossier now says it: 「所以“相反”是相对于延续条件说的，不是相对于本论之律」.' (BUDDHIST-THOUGHT.md B-34, checked verbatim)."
+  },
+  {
+   "item": "(2) cx-jianwen-datong-mechanism-dao-outside (06's 道 reading)",
+   "done": true,
+   "how": "Re-quoted from 06:567: 「…伦理从延续中生出；…生命是否会形成自我关切这样的次序，尚未表明」."
+  },
+  {
+   "item": "(2) cx-modphil-parfit-future-generations ('an order meeting C \"also ranks …\"')",
+   "done": true,
+   "how": "No change needed: P-07 now says 'an order meeting C (`Comparison`) ranks it above … such an order also ranks adding a life not worth living above not adding it', so the entry's 'an order meeting C (`Comparison`) \"also ranks …\"' paraphrases the subject and quotes the predicate verbatim; its reading already says 'C is a requirement on an order'."
+  },
+  {
+   "item": "(2) correspondences.json:~5847 (an earlier screen's 'what each continues with')",
+   "done": true,
+   "how": "That line was cx-archearth-datong-as-a-condition; 'what each continues with' was already gone at a2200f38e, and the entry's remaining old screen wording ('if a life holds its own continuation…', 'one way, between two courses whose admissions end') is re-said from the one page as it now stands."
+  },
+  {
+   "item": "(2) cx-oi-ahimsa (the record's 'C ranks it above')",
+   "done": true,
+   "how": "targets[2] now 'and every order meeting C ranks it above', as relation-level-law-of-easing's statement says; its reading's gloss of C carries 'every claim counted as living'."
+  },
+  {
+   "item": "(2) pass7-crosswalk 'left': 36 older fragments in 30 entries failing since before the sixth pass",
+   "done": false,
+   "how": "Rechecked with the corrected script (42 fragments now). Re-quoted where the home's present sentence was found and says the same: cx-econ-goodhart-regularity (08's 'in simulation, before T3 was worded'), cx-econ-ostrom-commons, cx-syscyb-ostrom-against-hardin and cx-wamo-moloch-coordinates-better (the record's Ostrom sentence), cx-jianwen-dual-expression-invariant (06 Open), cx-modphil-osr-naturalistic-closure (08's sentence with its ellipsis), cx-hsm-new-problems (CD §7's 'Strict continuing widening relative to a held rule is then a property…'), cx-ctxrt-legibility-test and cx-ctxrt-projection-not-neutral (the old one-page sentence replaced by 03's own, at their 03 anchor). The rest are listed under left."
+  },
+  {
+   "item": "(3) H11 to H20 in every entry's own wording",
+   "done": true,
+   "how": "Scanned all string fields of both files for: C read as widening; seeing needed without what it is needed for (H13); 'one way' as the path result's label, 'courses whose admissions end', 'go on forming without end' (H15); 'holds/holding one's own continuation' as an undefined order (H14); 'counts every continuation and' (H20); 'so ranking by widening' (H19); 'reason of its own' (H18); one-center wordings, 'dated occurrences', 'only from the steps', 'ending alone' (H16, H17); C's short gloss without its living reading (H12); 'C's order', 'C does not decide/rank', 'neither asserted', 'warrant'. Re-said: H11 above; H13 in every seeing sentence (selection or choice, as each home words it); H14 in the one page's, 08 §2's and CD's restatements and two entries' own wording ('what self-concern does where nothing lies outside one's own continuation'), 'a self-concerned order' in cx-greek-sextus-suspension and cx-zhishan-avowed-position; H15: the path result with decided admission and admitted pairs ('self-concern does what C asks between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end', or its home's wording) in 27 fields, 'one way' dropped as its label in 10; H19 in one reading; H12: C's short gloss now carries its living reading in 41 fields: 07 §4's 'C names the requirement that an order rank each course above every course it widens' followed by 'where every claim is counted as living' (25), or, inside a quote, by 07's '(`Comparison`) where every claim is counted as living' (4), and readings' and 06-paraphrase glosses with '(every claim counted as living)' or 'every claim counted as living'; 07's objection on an expansion ending forms of life re-said as 07 now has it ('the two are mixed: widening alone gives no verdict, and T8 ranks neither') in 8 says, in place of 'C does not rank them'. Found none to change for H16 (no one-center sentence in either file), H17 (no quote of 08 §12 item 12's stake), H18 and H20. Kept as their homes still say them: 07's 'one order in two forms, holding one's own continuation and C', 07 §4.4's 'what holding one's own continuation does where nothing lies outside it' (quoted), 07's does-not-show 'That a life forms an order holding its own continuation', route (b)'s 'a reason of its own; it does not produce the response' (07 §3.3), 'positive weightings' where 07 §4.4 defines them additive, the tests' results on untold dependents (T4/IN1 as results)."
+  }
+ ],
+ "left": [
+  {
+   "item": "Older drift, 25 fragments in 21 entries: cx-abr-neighbor-and-stranger, cx-buddhist-avidya-first-link, cx-ctxrt-context-is-a-fold, cx-ctxrt-operator-context-existence, cx-ctxrt-operator-not-empty, cx-drives-self-as-narrative, cx-ecoevo-alternative-stable-states, cx-ecoevo-fisher-runaway-cost-is-read, cx-econ-acemoglu-persistence, cx-econ-campbell-corruption, cx-econ-ostrom-commons (targets[3]), cx-econ-sen-intersection, cx-greek-aristotle-function, cx-hsm-information-upward, cx-hsm-value-or-tool-alone, cx-ma-the-word, cx-modphil-marx-capital-self-valorizing, cx-modphil-marx-reproduces-the-relation, cx-modphil-marx-surplus-not-from-circulation, cx-modphil-simondon-transindividual, cx-rsd-rebuild-feedbacks (and the source-side words in readings: 'context is existence', 'Each swap mistranslates', 'No terminal mechanism', 'Reachable by mechanism', 'better coordinated', which quote sources, not homes)",
+   "why": "Failing since before the sixth pass, none on the ethics frame; each needs its home reread (GLOSSARY's meta-attractor row, 02's capture and basins sections, ALIGNMENT A-08 and A-10, 03's 无明 sentence, 05's giving-waits and code sections). cx-econ-sen-capability targets[1] quotes 08 verbatim at a 07 anchor and holds; not drift. A later crosswalk pass."
+  },
+  {
+   "item": "05:396 body still says 'Under these premises it can warrant building shared capacity without fixing one carrier' while its record organizational-formation-from-generative-comparison says 'can support building'",
+   "why": "The crosswalk now follows the record ('support'); 05 is rest's file. If 05 keeps 'warrant', cx-hsm-private-to-public's former quote of it is now a paraphrase of the record."
+  },
+  {
+   "item": "The standard re-saying 'Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it' in about 30 entries still leaves out 07 §4's next clause, 'and whether and how formations come to hold them is the open target'",
+   "why": "Low, as the seventh pass's verifier found; it does not say the forming is shown, and most of those entries say elsewhere that it is not. Not changed, to keep the diff to what a reader would misread."
+  },
+  {
+   "item": "Readings that say 'seeing more is not enough' without 'is needed' (about 15, e.g. cx-kpso-lens-not-source, cx-ma-political-will, cx-greek-plato-cave)",
+   "why": "They say less than H13's sentence and nothing it corrects (no claim that every preservation needs seeing); kept."
+  },
+  {
+   "item": "Generated pages",
+   "why": "data/atlas.json, ATLAS.md, CROSSWALK.md, CROSSWALK.zh.md, the crosswalk group pages and the atlas family pages follow at the render, which this agent may not run (the in-memory render has 0 errors)."
+  }
+ ],
+ "for_ren": [
+  "Every entry citing the direction we offer AI now gives its hypotheses as 07 §7 does: the continuation condition, J1–J4 and correspondence E, moves compared by what their outcomes admit (an extension being a widening, `Direction.extension_iff_widens`), and J1/J2 giving C wherever it is decided whether an extension adds a basic claim (`Priority.comparison`); no entry lists C, or 'an order ranking by widening', among the direction's hypotheses any more (33 fields).",
+  "The organizational-formation entries (11) now say its theorems take only an irreflexive, transitive comparison on an exactly listed eligible range and improvement witnesses, and the continuation condition, an order meeting C, J1–J4 and correspondence are the reading's; 'can warrant building shared capacity' is now 'can support building', as its record says. 05's own sentence still says 'warrant'.",
+  "Seeing is now 'needed for a selection to answer to a loss, and not enough' (or 'for a choice to answer to their loss', as each home words it) in every entry that said 'needed, and not enough' (83 fields).",
+  "Where entries said 'C does not rank' a mixed pair (an expansion that ends forms of life another course keeps), they now follow 07's objection: 'the two are mixed: widening alone gives no verdict, and T8 ranks neither'. Worth your eye in cx-pal-gradual-disempowerment's reading, which says it in its own words: 'where one ends, a course wider elsewhere is mixed with the course that keeps it, and C asks nothing of the pair'."
+ ]
+}

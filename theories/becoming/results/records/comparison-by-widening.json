@@ -10,8 +10,8 @@
   "family": "F07",
   "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
-    "en": "On level paths an extension with every claim counted is exactly a widening of what can form, so with “better” read as widening, C holds for every reading of living: there what C requires, that each course be ranked above every course it widens, is met by ranking by widening.",
-    "zh": "在水平路径上，每个主张都计入的扩展恰是扩大能形成者；所以把“更好”读作扩大，C 对 living 的每种读法成立：在那里，C 的要求（把每个进程排在它所扩大的每个进程之上）由按扩大排序满足。"
+    "en": "On level paths an extension with every claim counted is exactly a widening, so with “better” read as widening, C holds for every reading of living: every extension there is a widening, and with every claim counted C requires exactly that each course rank above every course it widens.",
+    "zh": "在水平路径上，每个主张都计入的扩展恰是扩大能形成者；所以把“更好”读作扩大，C 对 living 的每种读法成立：那里每个扩展都是扩大；每个主张都计入时，C 恰要求把每个进程排在它所扩大的每个进程之上。"
   },
   "laws": [
     {
@@ -153,8 +153,8 @@
       "witness": "Becoming.Transfer.mixed"
     },
     {
-      "en": "That ranking by widening follows from the grammar: on level paths C asks that each course rank above all it widens; where the condition holds de se, self-concern ranks so, one way, between two level paths whose admissions fit a finite list.",
-      "zh": "按扩大排序由文法推出：在水平路径上，C 恰要求把每个进程排在它所扩大的每个进程之上；条件以自承成立之处，自关切在二水平路径之间单向地如此排序，唯二径之所接纳容于一有限列表。",
+      "en": "That ranking by widening follows from the grammar: on level paths, all claims counted, C asks each course ranked above all it widens; where the condition holds de se, self-concern so ranks two level paths whose admissions fit a finite list.",
+      "zh": "按扩大排序由文法推出：在水平路径上，每个主张都计入时，C 恰要求把每个进程排在它所扩大的每个进程之上；条件以从己方式成立之处，自关切在二水平路径之间如此排序，唯二径之所接纳容于一有限列表。",
       "kind": "non-implication"
     }
   ],
@@ -701,6 +701,10 @@
     {
       "en": "9 November 2026, AG seventh pass (the sixth pass's two cold readings, on Ren's messages 9 to 12 of sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): C said as a requirement on an order, that it rank each course above every course it widens, which ranking by widening meets on level paths, in place of \"the order C names\"; widening said as what every additive weighting counting each listed item above zero ranks higher on a finite listing. No change to the claim's mathematics or its Lean.",
       "zh": "2026年11月9日，AG 第七轮（据第六轮两份冷读，就 Ren 于 sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md 之第 9 至 12 条）：C 改言为对次序的一项要求，即把每个进程排在它所扩大的每个进程之上，在水平路径上按扩大排序满足之，以代「C 所指的次序」；扩大改言为在有限列表上，每一给每个所列之项大于零之权重的可加计法所排高者。主张之数学与其 Lean 不变。"
+    },
+    {
+      "en": "10 November 2026, AG eighth pass: what C requires is said with its reading of living: on level paths every extension, under any reading, is a widening, so ranking by widening meets what C requires, and with every claim counted C requires exactly that each course rank above every course it widens; \"one way\" no longer labels the path result; de se is 从己 in Chinese. No law changed (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第八轮：C 之所求依其 living 之读法而言：在水平路径上，任何读法下的扩展都是扩大，故按扩大排序满足 C 之所求；每个主张都计入时，C 恰要求把每个进程排在它所扩大者之上；路径之果不再以「单向」标之；de se 中文作从己。诸律不变（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ],
   "text_versions": [

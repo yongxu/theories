@@ -137,8 +137,8 @@
       "en": "The formation corollary additionally requires a finite nonempty practically warranted menu and an eligible robust improvement witness for every unformed case."
     },
     {
-      "zh": "所有分类谓词组成保守数学检验范围；不假定每种任意分类都有现实伦理根据。",
-      "en": "All classification predicates form a conservative mathematical test family; arbitrary assignments are not presumed ethically warranted in reality."
+      "zh": "所有分类谓词组成保守数学检验范围；不假定任意分类都与现实的生活相符。",
+      "en": "All classification predicates form a conservative mathematical test family; an arbitrary assignment is not presumed to classify actual lives as they are."
     }
   ],
   "does_not_show": [
@@ -848,6 +848,10 @@
     {
       "en": "28 October 2026: migrated to schema 2 (DF3, study section 436): a statement written from the home section; the claim split into eleven laws, each read against its declarations in Becoming.Lexical, Becoming.Frontier, Becoming.FrontierFrames and Becoming.Bundles (the comparator read as the lexical order Above, which the practical commitment of basic priority makes a comparison; the decisions, the weakly decided comparisons and the listed menu written in); the limitations and the claim's last clause to five does-not-show items and the standard boundary names-provisional; in the second hypothesis the label \"existing J1/J2\" replaced by the practical commitment of basic priority, the other hypotheses kept; the next step's instruction not to reopen settled questions left to the snapshot; Lexical.Included, StrictIncluded, Above, BasicPriority, adjoin, classifiedBasic, classifiedGain, classified, Requirement.Frontier, Required, Routes.Route, Routes.fresh, Routes.formed and Regimes.freshJoint added to the references of their files; no premise's content, status or source hash changed. Every earlier sentence is mapped in [classification-robust-generative-comparison.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/classification-robust-generative-comparison.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, a related entry, a dependency interface, each read against the Lean it cites.",
       "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 436 节）：依主章写出陈述；主张拆为十一条规律，各条对照其在 Becoming.Lexical、Frontier、FrontierFrames 与 Bundles 中的声明核读（比较读作字典序 Above，由实践承诺中的基本优先使之成为比较；判定、弱判定的比较与列出的菜单写入规律）；限制与主张末句分入五条“未表明”与通用边界 names-provisional；第二条前提中的标签“既有 J1/J2”改为实践承诺中的基本优先，其余前提保留；下一步中不重开已定问题的指示留在快照中；Lexical.Included、StrictIncluded、Above、BasicPriority、adjoin、classifiedBasic、classifiedGain、classified、Requirement.Frontier、Required、Routes.Route、Routes.fresh、Routes.formed 与 Regimes.freshJoint 加入其文件的引用；前提内容、状态与来源哈希均未改变。每句旧文本的去向见 [classification-robust-generative-comparison.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/classification-robust-generative-comparison.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律、相关条目、依赖接口，各条对照所引 Lean 核读。"
+    },
+    {
+      "en": "10 November 2026, AG eighth pass: \"ethically warranted in reality\" is said by its sense, that an arbitrary assignment is not presumed to classify actual lives as they are; the ethics seeks no warrant above becoming (Ren, 9 November 2026). No law changed. (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第八轮：「有现实伦理根据」依其意而言：不假定任意分类都与现实的生活相符；伦理不在生灭变化之上寻求根据（Ren，2026 年 11 月 9 日）。诸律不变。（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ],
   "text_versions": [

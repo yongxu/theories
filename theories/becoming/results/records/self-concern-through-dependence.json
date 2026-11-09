@@ -652,8 +652,8 @@
     {
       "id": "mutual-dependence-and-its-pace",
       "detail": {
-        "en": "The whole-world case: on a mutually dependent or mutually fed flow, significance bounded by each center's closure is the continuation condition; here only the centers need depend on one another.",
-        "zh": "整体的情形：在彼此依存或彼此供养的流上，以各中心闭包为界的意义即延续条件；此处只需诸中心彼此依存。"
+        "en": "The whole-world case: on a mutually dependent or mutually fed flow, read across all steps, significance bounded by each center's closure is the continuation condition (read in time, only from some step on, where the flow is mutually dependent in time: the-condition-in-time); here only the centers need depend on one another.",
+        "zh": "整体的情形：在彼此依存或彼此供养的流上，跨所有步来读，以各中心闭包为界的意义即延续条件（按时间读，只自某步起、在流于时间中彼此依存之处成立：the-condition-in-time）；此处只需诸中心彼此依存。"
       }
     },
     {
@@ -1121,6 +1121,10 @@
     {
       "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
       "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
+    },
+    {
+      "en": "10 November 2026, AG eighth pass: the whole-world case is read across all steps, with its limit in time beside it (the-condition-in-time). No law changed. (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第八轮：整体的情形跨所有步来读，并附其时间中的限度（the-condition-in-time）。诸律不变。（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ]
 }

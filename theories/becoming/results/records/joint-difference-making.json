@@ -362,8 +362,8 @@
     {
       "id": "relational-reading-comparison",
       "detail": {
-        "zh": "用单一部分的、整段层面的 but-for 差别制造代替参与，不能满足该结果所记录的 C 的排序；那些排序把 Ren 所采纳的问题形式化（整合文档 §8.5、§11、§12）。",
-        "en": "Replacing participation by single-part, run-level but-for difference-making cannot meet the C rankings recorded in that result, which formalize the problem Ren adopted (integration note §§8.5, 11, 12)."
+        "zh": "用单一部分的、整段层面的 but-for 差别制造代替参与，不能满足该结果为满足 C 的每种次序所记录的排序；那些排序把 Ren 所采纳的问题形式化（整合文档 §8.5、§11、§12）。",
+        "en": "Replacing participation by single-part, run-level but-for difference-making cannot meet the rankings that result records for every order meeting C, which formalize the problem Ren adopted (integration note §§8.5, 11, 12)."
       }
     },
     {
@@ -770,6 +770,10 @@
     {
       "en": "1 November 2026, board item ND (study section 492): declarations renamed so that each name states what it means, not a command, a value or an ownership: difference_belongs_to_the_joint → difference_only_together. The statements are kept but for the names; the claim is unchanged.",
       "zh": "2026年11月1日，工作板条目 ND（研究第 492 节）：声明更名，使名言其所指，不言命令、价值或所有：difference_belongs_to_the_joint → difference_only_together。陈述除名外不变；论断不变。"
+    },
+    {
+      "en": "10 November 2026, AG eighth pass: \"the C rankings\" is said as \"the rankings that result records for every order meeting C\", in a related line. No law changed. (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第八轮：「C 的排序」作「该结果为满足 C 的每种次序所记录的排序」，见于一条关联。诸律不变。（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ],
   "text_versions": [
