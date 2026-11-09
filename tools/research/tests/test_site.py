@@ -212,7 +212,7 @@ class SiteTests(unittest.TestCase):
         from tools.research import connection_map
         calls = []
 
-        def stub(out_dir, link_base, site_paths=None, home='index.html', nav=None):
+        def stub(out_dir, link_base, site_paths=None, home='index.html', nav=None, search=None, name=None, languages=None):
             calls.append((link_base, dict(site_paths), home, list(nav or [])))
             out_dir = Path(out_dir)
             out_dir.mkdir(parents=True, exist_ok=True)
@@ -785,11 +785,11 @@ class SiteTests(unittest.TestCase):
     def test_the_map_says_when_github_may_not_have_the_commit(self):
         from tools.research import connection_map
 
-        def stub(out_dir, link_base, site_paths=None, home='index.html', nav=None):
+        def stub(out_dir, link_base, site_paths=None, home='index.html', nav=None, search=None, name=None, languages=None):
             out_dir = Path(out_dir)
             out_dir.mkdir(parents=True, exist_ok=True)
-            (out_dir / 'map.html').write_text('<!doctype html><head><title>map</title></head><body><nav class="sitebar" aria-label="Site">'
-                                              '<a class="home" href="index.html">Home</a></nav><div class="wrap">map</div></body>')
+            (out_dir / 'map.html').write_text('<!doctype html><head><title>map</title></head><body><header class="top">'
+                                              '<a class="brand" href="index.html">Home</a><nav aria-label="Site"></nav></header><div class="wrap">map</div></body>')
             return out_dir / 'map.html'
         had = hasattr(connection_map, 'site_map')
         old = getattr(connection_map, 'site_map', None)
@@ -798,7 +798,7 @@ class SiteTests(unittest.TestCase):
             with patch.object(site, 'on_github', return_value=False):
                 self.build(map=True, nav=SITE['nav'] + [['connections.html', 'Map']])
             drawn = (self.out / 'connections.html').read_text()
-            self.assertIn('</nav>\n<p class="pushed-note"', drawn)  # under the site bar
+            self.assertIn('</header>\n<p class="pushed-note"', drawn)  # under the site's header
             self.assertIn(f'This page was built from commit <code>{COMMIT[:9]}</code>. This commit is not', drawn)  # it names the commit
             self.assertIn("This commit is not on the repository&#x27;s main branch", drawn)  # escaped
             self.assertIn('may not resolve until it is pushed.</p><div class="wrap">', drawn.replace('&#x27;', "'"))

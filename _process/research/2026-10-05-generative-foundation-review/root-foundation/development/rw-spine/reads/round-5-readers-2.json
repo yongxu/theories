@@ -1,0 +1,753 @@
+[
+ {
+  "key": "connections",
+  "findings": [
+   {
+    "where": "theories/becoming/results/atlas/CROSSWALK.md:31, the caption's last sentence (tools/research/atlas.py crosswalk_page), as the reader's site renders it",
+    "text": "To explore the same data, open the connection map: on the reader’s site, once it is published, its Connections page; or [map.html](map.html) opened from a clone; GitHub shows map.html only as source.",
+    "severity": "medium",
+    "why": "The fix brought the qualifier back (the checker's missed finding), but in new words. The site's rewrite, research-config site.rewrites[2], removes only main's wording: \" on the reader[’']s site, once it is published, or from a clone; GitHub shows it only as source\". The new sentence does not match it, so on the site CROSSWALK's page tells a reader who is on the site that the site is yet to be published, and sends them to a clone. The focused test goes red: test_site.RepositoryConfigTests.test_no_page_of_the_site_says_the_site_is_yet_to_come fails with \"'once it is published' matches ... theories/becoming/results/atlas/CROSSWALK.md\". A scan of every site page after the rewrites finds only this one. At 3c8b5e08f the line had no 'once' and the test passed, so the fix introduced the failure.",
+    "fix": "Put main's sentence back in atlas.py, the one rewrites[2] already reduces to \"open [the connection map](map.html).\" on the site: \"To explore the same data, open [the connection map](map.html) on the reader’s site, once it is published, or from a clone; GitHub shows it only as source.\" Alternatively, add a rewrite for the new wording. Re-render and rerun test_site."
+   },
+   {
+    "where": "connections.svg and connections.zh.svg, first note line under the key (OV_TEXT notes[0])",
+    "text": "In a cell, a dot per relation in the order above, its area growing with the claims; the stated dots above, the proposed below.  /  zh: 陈述者在上，提出者在下",
+    "severity": "medium",
+    "why": "The fix corrected the key to \"filled: the account takes it up (states it, or says otherwise)\" and changed the tooltip, the desc and both captions to match. The note two lines below still calls every filled dot \"stated\". The picture's own lede keeps these apart: \"It states 491 in whole or in part and takes up 189 to say otherwise.\" The filled dots include those 189. The note therefore still says what the first reading's finding 2 removed from the key, for example for the 間 and 文言 → 06 dot, which is 22 changed and 2 in part.",
+    "fix": "notes[0]: \"...; the dots the account takes up above, the proposed below.\" zh: “本论承接者在上，提出者在下”."
+   },
+   {
+    "where": "CROSSWALK.md:19, the Start-here lead (connection_map.start_here)",
+    "text": "The thickest threads in the picture below that the account takes up",
+    "severity": "low",
+    "why": "The checker of the first reading's finding 1 added this place, and it was not changed. The caption right under the picture now says \"a row per folder or domain, a column per part ... in each cell a dot per relation\", and the svg says \"Every dot is an AI reading\". The picture has dots whose size grows with the claims, not threads with a thickness.",
+    "fix": "\"The largest dots in the picture below that the account takes up ...\""
+   },
+   {
+    "where": "connections.zh.svg, the last footer line (OV_TEXT['zh'] notes[-1])",
+    "text": "同样的数据可在连接图中探索：读者网站发布后其上的“Connections”（连接图）页，或在克隆中打开此文件夹的 map.html（GitHub 只把它显示为源代码）。",
+    "severity": "low",
+    "why": "The fix lengthened the line by about eight characters. Measured in Chrome, its box runs from 24.0 to 900.7 against a frame whose right edge is 899.5 and a viewBox 900 wide. A 3× crop shows the closing “）。” ending about 4 px from the frame, where every other line keeps a 24 px gutter. With a wider CJK font it would be cut off. The English line was split onto two lines for exactly this reason (commit 176c8a31c, \"inside its width\"), but the Chinese line was not.",
+    "fix": "Split it as the English is: end the first line after “（连接图）页，” and start the second with “或在克隆中打开此文件夹的 map.html（GitHub 只把它显示为源代码）。”"
+   },
+   {
+    "where": "connections.svg dots and size key (DOT_MAX = 2.9, r = 1.0 + 0.4·√n)",
+    "text": "• 1 claim   • 5 claims   ● 20 claims",
+    "severity": "low",
+    "why": "The fix resolves the overlap: measured in Chrome, no two of the 692 dots touch, ring strokes included, and 2·2.9 < the 6 px slot. But it narrows the size range. The radii for 1, 5 and 20 claims are now 1.40, 1.89 and 2.79, where they were 1.55, 2.23 and 3.46, so 1 against 5 differs by 0.49 px instead of 0.68. That is the other half of the first reading's finding 10, and at 900 px it is now harder to read. The note still says the dot's \"area growing with the claims\".",
+    "fix": "Let the size key show steps a reader can see, e.g. 1, 10 and 24 claims (r 1.40, 2.26, 2.90). Or say in notes[0] that sizes below about 5 claims differ only slightly."
+   },
+   {
+    "where": "CROSSWALK.md:31 caption and the svg desc (OV_TEXT desc), with the zh caption",
+    "text": "in each cell a dot per relation, filled where the account takes the claim up and a ring where it is proposed here",
+    "severity": "low",
+    "why": "Measured over overview_threads, 158 of the 534 cell-and-relation pairs draw two dots: a filled one above and a ring below, as notes[0] says (\"the stated dots above, the proposed below\"). \"a dot per relation\" tells a reader each relation has one dot in a cell, either filled or a ring.",
+    "fix": "\"in each cell a dot per relation, filled for what the account takes up and, below it, a ring for what is proposed here\" (zh: 每格中每种关系：本论承接者一个实心点，其下此处提出者一个空心圆环)."
+   },
+   {
+    "where": "connections.svg, the last two footer lines (OV_TEXT['en'] notes[-2:])",
+    "text": "or from a clone map.html in this folder / (GitHub shows it only as source).",
+    "severity": "low",
+    "why": "The missing 'or' is back, but \"from a clone map.html\" reads as one noun phrase. CROSSWALK's line has \"or [map.html](map.html) opened from a clone\".",
+    "fix": "\"...its Connections page; or map.html in this folder, opened from a clone\" / \"(GitHub shows it only as source).\""
+   },
+   {
+    "where": "CROSSWALK.md:19, the Start-here lead (connection_map.start_here)",
+    "text": "with any tie at the last",
+    "severity": "low",
+    "why": "It is unclear what 'the last' refers to. The code keeps every thread whose n equals the fifth row's n, which here gives a sixth row (智善 → 07 divergence 14, tied with Alignment and Wamotopia → 05 at 14).",
+    "fix": "\"and any that tie with the fifth\""
+   }
+  ],
+  "earlier": [
+   {
+    "where": "CROSSWALK.md:31 caption and the svg <desc> (each thread joins ...; Every thread / A thread is)",
+    "resolved": "partly",
+    "note": "The caption now says \"a row per folder or domain, a column per part ... a dot per relation\", and both descs say \"Every dot\" and \"A dot is not proof\" (zh 每一个点 / 一个点不是证明). The checker's added place, the Start-here lead's \"The thickest threads in the picture below\", is unchanged; it is reported again as low."
+   },
+   {
+    "where": "connections.svg key \"filled: the account states the connection\"; tooltip; Start-here lead",
+    "resolved": "partly",
+    "note": "The key, tooltips, desc, both captions and the Start-here lead now say \"takes it up (states it, or says otherwise)\" (zh 承接). notes[0] still says \"the stated dots above\" (zh 陈述者在上); reported again as medium."
+   },
+   {
+    "where": "CROSSWALK.md Start-here cut at five rows (tie at 14)",
+    "resolved": "yes",
+    "note": "A tie at the cut is kept, giving six rows, 智善 → 07 divergence 14 included. Recomputed: the next thread down is 13, and the table equals start_here(data). The lead's \"with any tie at the last\" is unclear (low)."
+   },
+   {
+    "where": "map page: #detail sticky top:12px under the sticky header at ≥1240 px",
+    "resolved": "yes",
+    "note": "#detail is now top:56px with max-height calc(100vh - 68px). Measured on a site_map page built in the scratchpad at 1400 px after scrolling: header 0–39, detail top 56."
+   },
+   {
+    "where": "connections.zh.svg footer “读者网站上的“连接”页”",
+    "resolved": "yes",
+    "note": "It now reads “读者网站发布后其上的“Connections”（连接图）页”, which names the English nav label. The longer line now runs to the frame's edge (reported again as low)."
+   },
+   {
+    "where": "site_bar: 中文 inside the nav, aria-label \"Site\", brand hard-coded",
+    "resolved": "yes",
+    "note": "The language link is rendered after </nav> as <a class=\"lang\" hreflang lang>, using build_site.LANGUAGE_LINKS. aria-label is \"Pages\", and the brand comes from cfg title. The built header was checked, and test_connection_map covers it."
+   },
+   {
+    "where": "connections.svg footer missing 'or'",
+    "resolved": "yes",
+    "note": "The 'or' is back and the line is split into two inside the width. \"from a clone map.html\" still reads oddly (low)."
+   },
+   {
+    "where": "connections.svg dot tooltips \"1 claims, Scope\"",
+    "resolved": "yes",
+    "note": "dot_one is used for n = 1 and the relation is lower-cased: \"1 claim, scope, read against 07 Significance, ethics, alignment; the account takes it up\"."
+   },
+   {
+    "where": "CROSSWALK.md Start-here 06 cell in Chinese",
+    "resolved": "yes",
+    "note": "The cell now reads \"06 The classical texts (in Chinese)\" from OV_WARP, the same as the picture's column."
+   },
+   {
+    "where": "connections.svg dots touch; 1 vs 5 sizes hard to tell",
+    "resolved": "partly",
+    "note": "Measured: no dots touch now, ring strokes included. Sizes for 1, 5 and 20 claims shrink to radii 1.40, 1.89 and 2.79, so 1 against 5 is harder to tell apart than before (low)."
+   },
+   {
+    "where": "missed: the caption and svg footers drop 'once it is published' for an unpublished site",
+    "resolved": "partly",
+    "note": "Restored in the CROSSWALK caption and both svg footers. The caption's new wording escapes the site rewrite site.rewrites[2], so the site page says the site is yet to be published, and test_site's test_no_page_of_the_site_says_the_site_is_yet_to_come fails (medium, introduced by the fix)."
+   },
+   {
+    "where": "missed: no phone rule; detail scrolled under the sticky header below 1240 px",
+    "resolved": "yes",
+    "note": "The site's phone rule was copied (header static and wrapping, nav on its own row, find-panel at .6rem), and #detail has scroll-margin-top:56px. Measured at 1000 px: header 0–39 sticky. At the narrow width: the header is static, the brand and 中文 are on the first line and the nav wraps below."
+   }
+  ],
+  "read": "Read in full:\n- The first reading's connections entry in reads/round-5-readers-1.json: its findings, verdicts and missed items.\n- The fix diff 3c8b5e08f..176c8a31c (with --stat) for CROSSWALK.md, CROSSWALK.zh.md, map.html, build_site.py, atlas.py, connection_map.py, test_connection_map.py and test_site.py.\n- CROSSWALK.md lines 1-32 and CROSSWALK.zh.md lines 1-16.\n- build_site.py: LANGUAGE_LINKS, nav(), and the map build block with the pushed-note placement (lines 1395-1440).\n- test_site's two \"promise\" tests (lines 933-950).\n- research-config site.rewrites, all entries.\n- The <desc> and tooltips of both svgs.\n\nSearched only:\n- site.css, for header.top, a.lang, scroll-margin and the phone rule.\n- connection_map.py, for \"of all\".\n\nLooked at and measured:\n- Headless-Chrome screenshots of connections.svg (900×1380, and 2×) and connections.zh.svg (900×1278), plus a 3× crop of the zh footer, in /private/tmp/claude-501/-Users-ren-theories/52d6b47e-68c8-4189-8383-b1a9e9047d9a/scratchpad/r5-shots-2.\n- In-browser getBBox of every text: only the zh last footer line passes the frame, reaching 900.7.\n- Dot overlap including ring strokes: 0 touching of 692.\n- Recomputed with python3 -B: payload, overview_threads and start_here. The table equals the file, and the ranks run 24/19/16/14/14/14/13. Both svgs equal a fresh overview_svg. 158 of 534 cell-relation pairs draw two dots.\n- Built a site-mode map page with site_map(..., name, languages=LANGUAGE_LINKS) in the scratchpad. Checked its header markup. Measured header and #detail geometry at 1400, 1000 and a narrow width, and screenshotted it.\n- Ran every site page through site_text: only CROSSWALK.md still says \"once it is published\".\n\nTests:\n- test_connection_map + test_site: 120 ran, 1 failure (test_no_page_of_the_site_says_the_site_is_yet_to_come, on CROSSWALK.md), 1 skipped. It is a content failure, not a load timeout.\n- test_atlas: 44 OK.\n- I did not run test_spine or test_lineage (outside this scope), and I did not run the full suite.\n\nI edited nothing in the repository and ran no render. This is an AI reading; no person's review is recorded.",
+  "verdicts": [
+   {
+    "where": "theories/becoming/results/atlas/CROSSWALK.md:31 caption (atlas.py crosswalk_page), as the site renders it",
+    "agree": true,
+    "severity": "medium",
+    "why": "Confirmed. I ran the focused tests (test_spine, test_lineage, test_connection_map, test_atlas, test_site) and exactly one failed: test_site.RepositoryConfigTests.test_no_page_of_the_site_says_the_site_is_yet_to_come, with \"'once it is published' matches ... CROSSWALK.md\". research-config site.rewrites[2] only removes main's wording, \" on the reader[’']s site, once it is published, or from a clone; GitHub shows it only as source\". The new sentence (\"open the connection map: on the reader’s site, once it is published, its Connections page; or [map.html](map.html) opened from a clone; GitHub shows map.html only as source\") does not match that pattern. So a reader who is already on the site is told the site is not yet published and is sent to a clone. Medium is right, and this also turns the gate red. The smallest fix is to put back main's sentence (\"To explore the same data, open [the connection map](map.html) on the reader’s site, once it is published, or from a clone; GitHub shows it only as source.\"). The rewrite already handles that sentence, and it keeps the caption's qualifier. Read in full: the round-5-readers-1 connections block (findings, verdicts, missed); the 3c8b5e08f..176c8a31c diff for atlas.py, connection_map.py, build_site.py, test_connection_map.py, test_site.py and CROSSWALK.zh.md; CROSSWALK.md lines 15–33; both svgs' desc and every text line; both svgs as Chrome screenshots; build_site.nav() and the map call; the site.css header and phone rules; research-config site rewrites, nav and nav_zh. Only searched: other .md files that link connections*.svg (just the two CROSSWALK pages)."
+   },
+   {
+    "where": "connections.svg / connections.zh.svg notes[0]",
+    "agree": true,
+    "severity": "medium",
+    "why": "Confirmed in both pictures: \"the stated dots above, the proposed below\" and zh \"陈述者在上\". The key directly above now reads \"filled: the account takes it up (states it, or says otherwise)\". The lede, which is the home, keeps the two apart: \"It states 491 in whole or in part and takes up 189 to say otherwise.\" The note calls every filled dot stated, including the 189, so it says more than its home, and it contradicts the key two lines above it. Medium, by the rule that a restatement wider than its home is medium. Fix: \"the dots the account takes up above, the proposed below\" (zh “本论承接者在上，提出者在下”)."
+   },
+   {
+    "where": "CROSSWALK.md:19 Start-here lead, \"The thickest threads in the picture below\"",
+    "agree": true,
+    "severity": "low",
+    "why": "Not changed by the fix. The picture right below it is a matrix of dots, and its desc and caption now say \"dot\". It is a wording mismatch rather than a false claim, so low. Fix: \"The largest dots in the picture below that the account takes up ...\"."
+   },
+   {
+    "where": "connections.zh.svg last footer line",
+    "agree": true,
+    "severity": "low",
+    "why": "Visible in the 900×1278 screenshot: “源代码）。” ends at the frame's right edge, while every other line keeps the 24 px gutter. The English line was split in 176c8a31c for this reason and the Chinese line was not. Low; split it after “（连接图）页，”."
+   },
+   {
+    "where": "connections.svg dot sizes (DOT_MAX 2.9, r = 1 + 0.4·√n)",
+    "agree": true,
+    "severity": "low",
+    "why": "Recomputed: the radii are 1.40, 1.89 and 2.79 for 1, 5 and 20 claims, against 1.55, 2.23 and 3.46 before, so 1 and 5 are now harder to tell apart. Only one dot (n = 24) reaches the cap. Nothing overlaps in the screenshot. Low."
+   },
+   {
+    "where": "CROSSWALK.md:31 caption, svg desc, zh caption: \"in each cell a dot per relation, filled ... and a ring ...\"",
+    "agree": true,
+    "severity": "low",
+    "why": "Measured from overview_threads on the repository data: 692 dots, 534 distinct (group, part, relation) cells, and 158 of those draw both a filled dot and a ring. So \"a dot per relation\" undercounts, but notes[0] in the picture states the two positions. Low is right."
+   },
+   {
+    "where": "connections.svg footer \"or from a clone map.html in this folder\"",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed in the text extraction. The 'or' is back, but \"from a clone map.html\" reads as one noun phrase. Wording only, so low."
+   },
+   {
+    "where": "CROSSWALK.md:19 \"with any tie at the last\"",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed. The code keeps every thread equal to the fifth row's n. Measured: the fourth to sixth rows are at 14 (Alignment → 05, Wamotopia → 05, 智善 → 07) and the next is 13 (meta-attractor → 02). The table is right; only the phrase is unclear. Low; fix: \"and any that tie with the fifth\"."
+   },
+   {
+    "where": "Reviewer's 'resolved' verdicts on the first reading (caption/desc thread→dot partly; key partly; tie yes; #detail top yes; zh “连接” yes; site_bar yes; 'or' yes; tooltips yes; 06 cell yes; dots partly; once-published partly; phone rule yes)",
+    "agree": true,
+    "severity": "none",
+    "why": "Each one checked against the files. The desc no longer contains 'thread' (en \"Every dot is an AI reading\", \"A dot is not proof\"; zh 每一个点 / 一个点不是证明). Tooltips use dot_one and a lower-case relation. The Start-here 06 cell is \"06 The classical texts (in Chinese)\". site_bar puts a.lang with hreflang/lang after </nav>, with aria-label \"Pages\" and the name taken from cfg title. In the CSS, #detail is top:56px with max-height calc(100vh - 68px) at ≥1240, and the 600 px phone rule copies site.css (static, wrap, nav order 3, find-panel .6rem). The only 'resolved: yes' that leans on a missing piece is the zh footer's “Connections”. That entry exists only in the English bar, and the Chinese bar entry is left on purpose. None of the 'yes' or 'partly' verdicts is wrong."
+   }
+  ],
+  "missed": []
+ },
+ {
+  "key": "spine",
+  "findings": [
+   {
+    "where": "theories/becoming/ONE-PAGE.md:17, THE-THEORY-OF-BECOMING.md:30 and both .zh.md editions (spine.py picture_key)",
+    "text": "\"a darker one runs backward, an earlier chapter using a later one, and no record may close a cycle\" (zh: 登记检查不让任何记录闭合环)",
+    "severity": "medium",
+    "why": "Home (THEORY-GRAPH, how_to_read and the cycle section): \"the registry refuses a record that would close a cycle among its declared dependencies, so this is a condition of entry, not a finding about the results\". The key drops \"among its declared dependencies\", so it is wider than its home. Measured in theory-graph.json: 486 of the 1,420 related edges have a reverse edge, so related lists do form cycles, and the chapter curves run both ways (01→02 60, 02→01 42). Right after \"an earlier chapter using a later one\", a reader can take the bare \"no record may close a cycle\" to mean the chapters' uses form no cycle, or that no record's links do.",
+    "fix": "\"...and no record may close a cycle among its declared dependencies ([a condition of entry, not a finding](...))\". zh: 登记检查不让任何记录闭合其已声明依赖之环."
+   },
+   {
+    "where": "spine.py picture_key, English (ONE-PAGE.md:17, THE-THEORY-OF-BECOMING.md:30); test_spine.py:319",
+    "text": "\"a kind the AI-written records assign and nothing checks against the Lean\"",
+    "severity": "low",
+    "why": "Home (how_to_read): \"the AI-written records assign it, and nothing checks a use against the Lean\". Q1.3 asks the key to keep that nothing checks a use against the Lean. With \"a use\" dropped, the sentence reads as if no check touches the Lean at all. The cycle section says the registry does check that 797 of the 1,162 edges cite a Lean file. The zh key keeps the use (没有任何检查核对一次使用是否见于 Lean).",
+    "fix": "\"a kind the AI-written records assign, and nothing checks a use against the Lean\". Update the kept phrase in test_spine.py:319 to match."
+   },
+   {
+    "where": "spine.py picture_key, English (ONE-PAGE.md:17, THE-THEORY-OF-BECOMING.md:30)",
+    "text": "\"A spoke counts the chapter's modules that state their laws on the grammar, not results derived.\"",
+    "severity": "low",
+    "why": "Home (how_to_read): \"a spoke's width gives the share, and the count beside its chapter the number, of the chapter's core modules that state their laws on the grammar\". The legend says \"its width is the share of the chapter's core modules\". The English key drops \"core\", which widens the count from core modules to all of the chapter's modules. It also says the spoke counts, where its width is a share. The zh key keeps 核心模块, so the two editions now differ.",
+    "fix": "\"A spoke's width is the share of the chapter's core modules that state their laws on the grammar, not results derived.\""
+   },
+   {
+    "where": "spine.py picture_key, both languages (the standings sentence)",
+    "text": "\"6 are counting laws and 99 stand at a [named distance]\" (zh: 6 项为计数之律，99 项处于一个指明的距离)",
+    "severity": "low",
+    "why": "08 §7: \"Six are counting, below the grammar. The other 99 stand at a named distance, each with its reason\". how_to_read also keeps \"below the grammar\" and \"each with its reason named\". The key drops both, so nothing on the front tells a reader that the six are below the grammar rather than on it. The picture's own standings line keeps \"6 counting, below the grammar\".",
+    "fix": "\"6 are counting laws, below the grammar, and 99 stand at a named distance, each with its reason\" (zh: 6 项为计数之律，位于文法以下，99 项处于一个指明的距离，各有其理由)."
+   },
+   {
+    "where": "theories/becoming/results/THEORY-GRAPH.md:104 and THEORY-GRAPH.zh.md:87 (spine.py section() and zh_page())",
+    "text": "\"The list under \"Edge kinds between chapters\" has every pair. Beside a circle, \"within\" counts formal-reuse between results of the same chapter; interpretive edges within a chapter are in the table.\" (zh: 章内的诠释边见表)",
+    "severity": "low",
+    "why": "The fix renamed two references to point at \"the list\" but left \"in the table\" in the same paragraph. Five tables now follow, so \"the table\" names none of them; the within-chapter interpretive edges are on the interpretive matrix's diagonal and in the list. \"Every pair\" is also loose: the list has 75 rows, the pairs with at least one edge among the 9 regions' 81. The 6 pairs with no edges show only as dots in the matrices.",
+    "fix": "\"...interpretive edges within a chapter are on the diagonal of the interpretive table\" and \"The list ... has every pair with an edge\". zh: 章内的诠释边见 interpretive 表的对角线；配对列表列出有边的每一个配对."
+   },
+   {
+    "where": "theories/becoming/THE-THEORY-OF-BECOMING.md:30-32 and THE-THEORY-OF-BECOMING.zh.md:36-38 (the key followed by the italic caption)",
+    "text": "key: \"1 is a root form at one step under a stated hypothesis, 6 are counting laws\"; caption right under it: \"1 is under a stated hypothesis, 6 are counting, below the grammar, and 99 stand at a named distance, each with its reason\"",
+    "severity": "low",
+    "why": "Q1.3 put a short key under the picture, but on the overview the older caption still follows it. The caption restates the formal-reuse sentence, the AI-assigned kind and all four standings in different words, and links \"what the picture shows and does not\" a second time. A reader gets two versions of the standings back to back and may wonder whether they differ. ONE-PAGE's caption carries only provenance and links.",
+    "fix": "Cut the overview caption (en and zh) to ONE-PAGE's form: drawn by a tool, the cut at 10 and 15, a curve is a dependence, and the 08 §7 and five-laws links."
+   },
+   {
+    "where": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md:38 (caption, unchanged by the fix)",
+    "text": "围绕文法的各章，由工具依[理论图]...画出 ... 这幅图显示什么、不显示什么，见[理论图：各章一览](results/THEORY-GRAPH.zh.md#the-spine-what-it-shows-and-does-not-show)",
+    "severity": "low",
+    "why": "The English caption begins \"The eight chapters, drawn from\". Q3 item 4 retired the hub framing (\"around one grammar\") from the alt texts and the SVG title, but the zh caption keeps 围绕文法. Its link text also names 各章一览 (the chapters at a glance), while the link goes to the shows/does-not-show section.",
+    "fix": "八章，由工具依[理论图]...画出; and change the link text to 这幅图显示什么、不显示什么."
+   },
+   {
+    "where": "tools/research/tests/test_spine.py:308-324 and 351-360",
+    "text": "for kept in ('the AI-written records assign and nothing checks against the Lean', ..., 'no record may close a cycle', ...): self.assertIn(kept, picture_key(s, 'en')); the cell-by-cell loop reads only THEORY-GRAPH.md",
+    "severity": "low",
+    "why": "Q1.3's required content is checked only in the English key, so the zh key could drop the AI-assignment, cycle or standings clauses and still pass. The new cell-by-cell check covers only the English matrices. The zh matrices are generated separately (edge_matrices(pairs, s, 'zh')) and are unchecked. The test also doesn't check that the key sits between the picture and its caption, only that it comes after the picture.",
+    "fix": "Run the kept-phrase loop on picture_key(s, 'zh') with the zh phrases (由 AI 写成的记录指定, 闭合, 不是推导而得的结果, 11 项, 1 项, 6 项, 99 项). Run the cell loop on THEORY-GRAPH.zh.md's four matrices against the zh list."
+   },
+   {
+    "where": "tools/research/spine.py:1282-1283 (how_to_read docstring)",
+    "text": "\"The two sentences above the picture wherever it is shown ... (the one-page fronts copy them, and a test holds them to this)\"",
+    "severity": "low",
+    "why": "After Q1.3 the fronts no longer carry how_to_read; the test now asserts it is absent from them. On THEORY-GRAPH, its only place, the paragraph is several sentences long. picture_key's docstring says THEORY-GRAPH keeps the full paragraph, so the two docstrings contradict each other.",
+    "fix": "\"The full paragraph above the picture on THEORY-GRAPH (en and zh); the fronts carry picture_key instead, and a test holds them to that.\""
+   }
+  ],
+  "earlier": [
+   {
+    "where": "spine F1: README alt text for spine.svg / spine.zh.svg",
+    "resolved": "left to another holder",
+    "note": "Unchanged by the fix. It was left on purpose for the coordinator, so it is not re-reported."
+   },
+   {
+    "where": "spine F2: THEORY-GRAPH.md:112 lead of the matrices (\"whose results use\" covering related)",
+    "resolved": "yes",
+    "note": "It now reads \"a row is the chapter whose results use (for related, list) the column's, a column the chapter whose results are used (listed)\". The verb has its object and related is marked as listing. zh: 行是使用（related：列出）者结果所在的章 … 被使用（被列出）者. The parenthesis inside the compound noun is awkward but correct."
+   },
+   {
+    "where": "spine F3: THEORY-GRAPH.md:104 \"The table below has every pair\" / \"in the table only\"",
+    "resolved": "partly",
+    "note": "Both sentences now point to \"the list under 'Edge kinds between chapters'\" and \"that list\", in both languages. But the same paragraph still says \"interpretive edges within a chapter are in the table\" (zh 章内的诠释边见表). \"Every pair\" also still means every pair with an edge (75 of 81). Re-reported as low."
+   },
+   {
+    "where": "spine F4: \"Then every pair, the regions beyond the eight chapters included\"",
+    "resolved": "yes",
+    "note": "Now generated from the regions outside the eight: \"Then every pair, To retire included:\" and 再是每一对区域，「待退役」也在内：. The list's regions are the eight plus To retire, and 9 names were measured."
+   },
+   {
+    "where": "spine F5: spine.svg legend spoke sample wider than any spoke",
+    "resolved": "partly",
+    "note": "The sample is now 1 + 6 × 0.4 = 3.4, the widest spoke drawn (06), in both SVGs. In the 2x crop it no longer looks heavier than the spokes. It carries no share label, and the legend still says \"its width is the share\" for an affine scale with a 1 px floor. The order of widths shows only at the extremes; the counts beside each chapter carry the numbers. Low; not re-reported."
+   },
+   {
+    "where": "spine F6: test_spine.py matrix test compares totals only; no 13 px test",
+    "resolved": "yes",
+    "note": "Each matrix is now compared cell by cell with the list's (row, column) entry, '·' counting as 0. That catches a transposed matrix. A new test checks every font-size ≥ 13 in spine, spine.zh, standings and standings.zh from a fresh render. Both checks are English-only for the matrices, so the zh matrices remain unchecked (noted in a new low). test_spine: 30 tests OK."
+   },
+   {
+    "where": "spine F7: label \"17\" on the 02→03 curve",
+    "resolved": "no",
+    "note": "Unchanged, and the fix was optional. In the fresh render the arrow still runs close by the label, which stays readable. Not re-reported."
+   },
+   {
+    "where": "chinese missed 3: THEORY-GRAPH.zh.md matrices lead (related as row uses column)",
+    "resolved": "yes",
+    "note": "It now reads 行是使用（related：列出）者结果所在的章，列是被使用（被列出）者结果所在的章, and matches the English fix."
+   }
+  ],
+  "read": "Read in full: the spine entry of round-5-readers-1.json, all 7 findings and their verdicts (it lists no missed ones), plus the chinese entry's findings and missed list, scanned for spine items (its missed item 3 is in scope). The fix diff's --stat. The diffs 3c8b5e08f..176c8a31c for tools/research/spine.py, tools/research/tests/test_spine.py, spine.svg, spine.zh.svg, ONE-PAGE.md/.zh.md, THE-THEORY-OF-BECOMING.md/.zh.md and THEORY-GRAPH.md/.zh.md, with a word diff for the md files, and the README.md/README.zh.md word diff (reading times only). picture_key and how_to_read in spine.py (lines 1258-1305). In THEORY-GRAPH.md: lines 1-20 (head and the full how_to_read paragraph), the five-laws note and the cycle section (lines 60-83), \\\"What it shows / does not show\\\" and the edge-kinds lead (lines 100-116), the matrix rows shown and the list's end. The ONE-PAGE.md picture block (lines 10-22). The extracted text of spine.svg and spine.zh.svg, all of it. Looked at: headless-Chrome screenshots of spine.svg (900x1859) and spine.zh.svg (900x1767), with a 2x crop of the English legend and a crop of the centre, in /private/tmp/claude-501/-Users-ren-theories/52d6b47e-68c8-4189-8383-b1a9e9047d9a/scratchpad/r5-shots-2. Measured with python3 -B: in theory-graph.json, 486 of the 1,420 related edges have a reverse edge, against 0 for formal-reuse and 0 for interpretive. The pair list has 75 rows over 9 regions (8 chapters and To retire) and no all-zero row. 01→02 is 60 and 02→01 is 42. The anchors #derived and #named-distance exist in GLOSSARY.md and GLOSSARY.zh.md, and #do-the-recorded-uses-form-a-cycle and #the-spine-what-it-shows-and-does-not-show exist in THEORY-GRAPH.md and THEORY-GRAPH.zh.md. The key's standings add to 117 (11+1+6+99). Tests: test_spine alone, 30 tests OK. test_lineage, test_connection_map, test_atlas and test_site were not run (outside this scope), and the full suite was deliberately not run. Only searched: 08-METHOD §7's wording, through THEORY-GRAPH's quotations of it (the chapter file itself was not opened). The THE-THEORY-OF-BECOMING(.zh) and ONE-PAGE.zh picture blocks, read in the diff context. The leftover 'in the table' / 章内的诠释边见表 (grep). Uses of how_to_read and picture_key (grep). Nothing in the repository was edited and no render was run. No sources/12-*, 13-*, 18-* or friend-conversation drafts were opened. This is an AI reading; no person's review of this work is recorded.",
+  "verdicts": [
+   {
+    "where": "ONE-PAGE.md:17, THE-THEORY-OF-BECOMING.md:30 and both .zh.md editions (picture_key): \"no record may close a cycle\" / 登记检查不让任何记录闭合环",
+    "agree": true,
+    "severity": "medium",
+    "why": "This holds. The home (spine.py how_to_read, on THEORY-GRAPH.md:15, and circular_paragraph) says \"the registry refuses a record that would close a cycle among its declared dependencies\", and the zh home says 拒绝会闭合其已声明依赖之环的记录. Both keys drop the qualifier, so they are wider than their home, which the rubric rates medium. I measured theory-graph.json: formal-reuse, and formal-reuse with interpretive and application, form no cycle at the result level. related forms cycles: 486 of 1,420 edges have a reverse, and a DFS finds 435 back edges. The picture right above the key also draws 01→02 (60) and 02→01 (42). So the bare clause leaves the reader unsure what cannot cycle. The fix restores the home's words and fits the space."
+   },
+   {
+    "where": "picture_key en: \"a kind the AI-written records assign and nothing checks against the Lean\"; test_spine.py:319",
+    "agree": true,
+    "severity": "low",
+    "why": "This holds. The home's words are \"nothing checks a use against the Lean\" (how_to_read), and the zh key keeps 一次使用. The cycle section says the registry checks that 797 of 1,162 edges cite a Lean file, so \"nothing checks against the Lean\" says slightly too much. The test at line 319 pins the dropped form. The overview's English caption has the same wording, and it was already there before round 5."
+   },
+   {
+    "where": "picture_key en: \"A spoke counts the chapter's modules that state their laws on the grammar\"",
+    "agree": true,
+    "severity": "low",
+    "why": "This holds. The home and the svg legend say \"core modules\", the zh key keeps 核心模块, and the counts beside the chapters (\"22 of 74 modules\") are core modules. Dropping \"core\" widens what is counted, and the two editions now differ."
+   },
+   {
+    "where": "picture_key both languages: \"6 are counting laws and 99 stand at a [named distance]\"",
+    "agree": true,
+    "severity": "low",
+    "why": "This holds. 08 §7's table has \"counting | 6 | | below the grammar\" and its prose has \"Six are counting, below the grammar. The other 99 stand at a named distance, each with its reason\". how_to_read keeps both qualifiers. The picture's standings strip, directly above the key, does carry \"6 counting, below the grammar\", so this is low."
+   },
+   {
+    "where": "THEORY-GRAPH.md:104 / THEORY-GRAPH.zh.md:87: \"interpretive edges within a chapter are in the table\" (章内的诠释边见表); \"has every pair\"",
+    "agree": true,
+    "severity": "low",
+    "why": "This holds. The fix renamed the other two pointers to \"the list\" / \"that list\", but section() and zh_page() still say \"in the table\" / 见表 in the same paragraph, and five tables follow. I counted the list: 75 rows, the same in en and zh, against 81 pairs of 9 regions, so \"every pair\" means every pair with an edge."
+   },
+   {
+    "where": "THE-THEORY-OF-BECOMING.md:30-32 and .zh.md:36-38, key followed by the older italic caption",
+    "agree": true,
+    "severity": "low",
+    "why": "This holds. The overview's caption, unchanged since 21649c5d8, restates the formal-reuse kind, the AI assignment and all four standings directly under the new key, and links shows/does-not-show a second time. ONE-PAGE's caption carries only provenance and links. The two versions agree in their numbers, so this is redundancy, not error."
+   },
+   {
+    "where": "THE-THEORY-OF-BECOMING.zh.md:38, 围绕文法的各章 and link text 理论图：各章一览",
+    "agree": true,
+    "severity": "low",
+    "why": "This holds. The caption is unchanged from main (21649c5d8 line 38). It keeps the hub framing that Q3 retired elsewhere. Its link text names the at-a-glance section while the anchor is #the-spine-what-it-shows-and-does-not-show; the English has \"[its section]\" there. It also has the same \"没有任何检查对照 Lean 核对\" drop of a use."
+   },
+   {
+    "where": "test_spine.py:308-324 and 351-360 (English-only kept phrases and cell loop)",
+    "agree": true,
+    "severity": "low",
+    "why": "This holds. The kept-phrase loop runs only on picture_key(s, 'en'), and the cell loop reads only THEORY-GRAPH.md. Position is checked only as after the picture. I compared the zh matrices and list with the en ones by script and they are identical in numbers, so nothing is wrong now. The tests do not hold it. test_spine: 30 tests OK."
+   },
+   {
+    "where": "spine.py:1282-1283 how_to_read docstring",
+    "agree": true,
+    "severity": "low",
+    "why": "This holds. The docstring still says the fronts copy how_to_read, while test line 317 now asserts it is absent from them. On THEORY-GRAPH it is a multi-sentence paragraph. This is code-only and no reader sees it."
+   },
+   {
+    "where": "Verdicts on the first reading: F2 resolved, F3 partly, F4 resolved, F5 partly, F6 resolved, F7 no, chinese missed 3 resolved",
+    "agree": true,
+    "severity": "none",
+    "why": "Each one checks out. F2: lead now \"use (for related, list) the column's ... used (listed)\", en and zh. F3: two pointers fixed, \"in the table\" left (re-reported). F4: generated \"Then every pair, To retire included:\" / 「待退役」也在内. F5: the legend sample is now 1 + 6 × 0.4 = 3.4 in both svgs; the screenshot shows it no heavier than 06's spoke. F6: the cell-by-cell loop and the ≥13 px test exist and pass, en only. F7: unchanged and optional, and \"17\" is still readable in the fresh screenshot. F1 (README alt) was left on purpose."
+   }
+  ],
+  "missed": [
+   {
+    "where": "ONE-PAGE.md:17, THE-THEORY-OF-BECOMING.md:30 and both .zh.md (picture_key): the backward clause",
+    "text": "\"a darker one runs backward, an earlier chapter using a later one\" (zh: 较深的一条是逆向的，即章序在前的一章使用章序在后的一章)",
+    "severity": "low",
+    "why": "Home (how_to_read, THEORY-GRAPH.md:15): \"The chapters are numbered for reading, not as an order of proof, and uses run both ways: a darker curve is an earlier chapter's results using a later one's\". The key keeps \"runs backward\" but drops the qualifier that makes \"backward\" harmless. Followed directly by \"no record may close a cycle\", it can read as if the numbering were a proof order and the darker curves a defect. The picture's subtitle and legend do carry \"numbered for reading, not as an order of proof\", so this is low.",
+    "fix": "\"...a darker one runs backward, an earlier chapter using a later one (the chapters are numbered for reading, not as an order of proof), and no record may close a cycle among its declared dependencies...\"; zh: 较深的一条是逆向的（章的编号是为阅读，不是证明的次序）."
+   },
+   {
+    "where": "tools/research/tests/test_spine.py:355-360 (the new cell-by-cell loop)",
+    "text": "for a, line in zip(names, lines[m + 4:m + 4 + 8]): for b, cell in zip(names, ...)",
+    "severity": "low",
+    "why": "The loop takes row and column identity from the position in spine.spec()['order']. It never compares the row label or the header's column labels with names. zip also stops silently on a short row or table. A matrix whose labels were wrong, or a row with missing cells, would therefore pass, although the lead tells readers what a row and a column are.",
+    "fix": "Assert len(rows) == 8 and len(cells) == 8. Assert each row's first cell starts with its region's number and the header row lists the eight numbers in order. Run the same on THEORY-GRAPH.zh.md."
+   }
+  ]
+ },
+ {
+  "key": "lineage",
+  "findings": [
+   {
+    "where": "theories/LINEAGE.md line 11 (the arc in brief), lineage.json words.en.arc_short; the same in LINEAGE.zh.md line 13 (今为其排序所取的读法)",
+    "text": "\"its ethics' two premises (the continuation condition for scope, C for order), now the readings its rankings take, separated\"",
+    "severity": "medium",
+    "why": "The fix for the first reading's finding 10 and the checker's missed finding proposed \"now the readings its rankings take where used\", and the arc in full and the thread intro keep it (\"the readings its ranking results take where used\"). The brief dropped \"where used\". The homes say less. 07 line 7 has \"the ranking results take two readings as hypotheses where used\". 07 line 3 has \"most use two readings ... the self-concern results use the narrower order they state\". T8 (07 line 779) has \"under C or another named order\". AGENTS.md line 28 has \"... C ... for order, and any further premise\". GLOSSARY's C entry has \"whoever ranks courses holds it or another order (self-concern ranks one case with no C)\". The ten-minute reader is told every ranking takes C, which is the 'ranking needs C' wording that point 47 records as corrected.",
+    "fix": "\"..., now the readings its rankings take where used, separated\" (234 words, inside the 240). In zh: 今为其排序在用到处所取的读法."
+   },
+   {
+    "where": "reads/lineage-origins.json entry 49 (origin, evidence[0] AGENTS.md origin and basis); LINEAGE.md row 49 Written by, the origins counts (15/13/20), the phase line \"1 AI-drafted, 9 AI-made\", the white fill of 49 in lineage.svg and lineage.zh.svg",
+    "text": "AGENTS.md: origin \"ai\", basis \"The working rules, AI-written and revised by the working sessions\"; point 49 \"AI-made\"; \"it is now classed by the working rules that do\"",
+    "severity": "medium",
+    "why": "Point 49's own evidence says the stating text was written from a person's words. The board's WB clause at 55cf6892e reads \"WB's AGENTS.md landed ...: on Ren's words of 8–9 November 2026, ... AGENTS.md's Method, Evaluation and Words say ...\". The point's sources file records the request \"change AGENTS.md first\" (message 8) and a reply to the AGENTS.md draft (message 9). The class 'drafted' is \"written by AI from a person's words, notes or conversation, as the file or its folder says\". The same classification sets a precedent: AGENTS.md rewrites made in a session from a person's messages are 'drafted' for points 40 and 42 (\"written by the AI from the person's verbatim messages\"). The fix swung from 'a person's words' to 'AI-made', and a reader is now told the change is the repository's own AI-made work, with the person's part dropped from the fill.",
+    "fix": "Class AGENTS.md's entry and point 49 as 'drafted', with the basis citing the board's 'on Ren's words of 8–9 November 2026' and the source's messages 8–9. The counts become 15 / 14 / 19 / 1 and the phase line \"1 AI-drafted, 8 AI-made\" becomes \"2 AI-drafted, 8 AI-made\". Write \"it is now classed by the working rules, AI-drafted from those words, which do\"."
+   },
+   {
+    "where": "theories/LINEAGE.md line 11 (the arc in brief), lineage.json words.en.arc_short; zh line 13 (向一个 AI 要来的、关于 AI 未来的故事)",
+    "text": "\"a Fork narrative (a story of AI's future, asked of an AI) is proposed and left\"",
+    "severity": "low",
+    "why": "Point 14: \"a pasted scenario projection, organized by AI, Automated Feudalism versus Automated Commons, ... asks for a narrative from it, called The Fork\". The projection is headed 'Fully automated production and its future implications' (hb-02 line 3482) and is about the future of a civilization whose production is automated, and so of humans. It is not about AI's own future, and the narrative itself is not in the corpus (TIMELINE line 125). The binary is gone, which resolves the high finding, but the new gloss names a subject the home does not give.",
+    "fix": "\"a Fork narrative (asked of an AI from a projection of fully automated production) is proposed and left\". Or drop the parenthesis. Same in zh."
+   },
+   {
+    "where": "theories/LINEAGE.md line 34 (origins paragraph), lineage_static.json origins_intro; reads/lineage-origins.json about and entry 49 why",
+    "text": "\"the next round's AI readers found that its first evidence, a person's words, does not state the change\"",
+    "severity": "low",
+    "why": "Point 49 was added in round 5 (6dd1a59ce, 'RW (c) round 5, the fifth re-score's asks'), and the reading linked is round-5-readers-1.json, a reading of that same round. The sentence it replaced said \"an AI reader of that round\". So 'the next round's' names a round that has not happened.",
+    "fix": "\"that round's AI readers found ...\" (and the same in lineage-origins.json's about and entry 49's why)."
+   },
+   {
+    "where": "theories/LINEAGE.md line 11 (the arc in brief); zh 每一项至多驳倒一个对应",
+    "text": "\"each refuting at most a correspondence, never a theorem\"",
+    "severity": "low",
+    "why": "Home (experiments/formations-that-read/README.md line 5): \"No run refutes a theorem. Each test refutes at most a named correspondence or bridge\". Point 45: 'refutes at most a named correspondence'. By dropping 'or bridge', the gloss says less than the tests can refute.",
+    "fix": "\"each refuting at most a named correspondence or bridge, never a theorem\" (or \"... a correspondence or bridge ...\" to stay under 240 words)."
+   }
+  ],
+  "earlier": [
+   {
+    "where": "Finding 0 (high): arc in brief, Fork gloss \"(Automated Feudalism or Automated Commons)\"",
+    "resolved": "yes",
+    "note": "The binary the person denied is gone in en and zh. The replacement \"a story of AI's future, asked of an AI\" misnames the projection's subject, which is reported as a new low finding."
+   },
+   {
+    "where": "Finding 1 (medium, checker: low): 間 (the in-between; \"all is 间\")",
+    "resolved": "yes",
+    "note": "Now \"(all is 间)\" with no quotation marks, point 16's own rendering. zh: 間（一切是间）."
+   },
+   {
+    "where": "Finding 2 (medium): \"tests of the proved laws of formations that read\"",
+    "resolved": "yes",
+    "note": "Now \"tests of formations that read (...), each refuting at most a correspondence, never a theorem\". The theorem-is-tested misreading is gone. Dropping 'named ... or bridge' is reported as a new low finding."
+   },
+   {
+    "where": "Finding 3 (medium): point 49's what presented the two readings as the whole set",
+    "resolved": "yes",
+    "note": "Lines 85 and 139 now read \"the continuation condition for scope, C for order, and any further premise\", which copies AGENTS.md line 28. zh lines 87 and 143 have 以及任何其他前提."
+   },
+   {
+    "where": "Finding 4 (medium, checker: low): \"sets the warrant aside\"",
+    "resolved": "yes",
+    "note": "The arc in full says \"seeks no warrant from outside\" and the thread intro says \"sought no warrant from outside\", matching AGENTS.md line 28 and 07 line 779."
+   },
+   {
+    "where": "Finding 5 (medium, checker: low): How the points were chosen covers only 48",
+    "resolved": "yes",
+    "note": "Adds \"Point 49 was added outside these periods, by the AI session that moved the cut to 9 November.\""
+   },
+   {
+    "where": "Finding 6 (medium): an unrecorded check of point 49 was stated",
+    "resolved": "yes",
+    "note": "The page no longer claims a check. It now says the round's readers found the first evidence did not state the change, and links round-5-readers-1.json, where that finding and its verdict are recorded. Its 'the next round's' should read 'that round's' (new low finding)."
+   },
+   {
+    "where": "Finding 7 (low): point 49 classed 'person' from line 27's words",
+    "resolved": "partly",
+    "note": "The evidence was reordered with AGENTS.md first, and the point was reclassed 'ai'. By the classification's own rule and the precedent of points 40 and 42, plus the board's 'on Ren's words of 8–9 November 2026', the stating text is AI-drafted from a person's words, not AI-made (new medium finding). The suggested line 29 quote was not added; with the reclass it is no longer needed."
+   },
+   {
+    "where": "Finding 8 (low): \"Lean a proof checker\"",
+    "resolved": "yes",
+    "note": "Now \"Lean a coherence checker\". zh: 融贯检验器."
+   },
+   {
+    "where": "Finding 9 (low): molochs (after Moloch, \"the optimizer for value\")",
+    "resolved": "no",
+    "note": "Unchanged in en line 11 and zh line 13. The theme camp's later definition is still attached to the manifesto's word."
+   },
+   {
+    "where": "Finding 10 (low): October \"its ethics' two readings\"",
+    "resolved": "partly",
+    "note": "Now \"its ethics' two premises (...), now the readings its rankings take, separated\", so the time naming is fixed. The added apposition drops 'where used' and is wider than 07, T8, AGENTS and GLOSSARY (new medium finding)."
+   },
+   {
+    "where": "Checker's missed 1 (medium): ethics thread intro and brief made the two readings the ethics'",
+    "resolved": "partly",
+    "note": "The thread intro (line 76) is fixed: \"How the account came to the two readings its ranking results take as hypotheses where used, ... (called the ethics' premises until 9 November), and its ethics to its makers' offer\", which copies 07 line 7. The brief took the suggested wording without 'where used'; see the new medium finding."
+   },
+   {
+    "where": "Checker's missed 2 (low): the 9 Nov growth bar invisible (48 of 1810)",
+    "resolved": "no",
+    "note": "lineage.svg is unchanged there. In a fresh screenshot (r5-shots-2/lineage.png) the 9 Nov bar is still a faint dash, with no minimum height and no caption note."
+   }
+  ],
+  "read": "Read in full:\n- theories/LINEAGE.md lines 1–48 (the head, the arc in brief, the picture, the arc in full, In brief, labels, the origins paragraph and counts, Coverage, How the points were chosen, What the points follow).\n- git diff --word-diff 3c8b5e08f..176c8a31c of LINEAGE.md, including the ethics thread intro (line 76), point 49's thread entry (line 85) and its table row with sources (line 139).\n- The diffs of reads/lineage-origins.json (about, entry 49) and theories/lineage.svg.\n- Entry 49 of lineage-origins.json in full, plus every AGENTS.md evidence entry in it (points 40, 42, 49).\n- The first reading's lineage findings, verdicts and missed items in round-5-readers-1.json.\n- AGENTS.md lines 20–45 (Method, Evaluation, Proof, Words).\n- 07-SIGNIFICANCE.md lines 3, 7 and 779 (Thesis T8).\n- The board at 55cf6892e: WB's AGENTS.md landed clause and WB's revision clause ('07's ethics and T8 as its makers' offer, binding no one'; 'most often the continuation condition and C, the self-concern results ...').\n- sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md, all 87 lines.\n- lineage.json points 3, 14, 15, 16, 18, 45 and 46 (what and evidence), and words en/zh arc_short.\n- hb-02.md lines 3482–3492, 3604–3612 and 3625–3628.\n- experiments/formations-that-read/README.md line 5.\n- LINEAGE.zh.md lines 9–16 and point 49 (lines 87, 143).\n\nOnly searched:\n- TIMELINE.md for 'fork'.\n- GLOSSARY.md for C's row.\n- ONE-PAGE/07/GLOSSARY for 'widening what can form is better'.\n- LINEAGE.md for 'molochs'.\n- git log for the commit that added point 49 (6dd1a59ce, round 5) and for AGENTS.md's 9 November commits.\n\nMeasured and looked at:\n- The arc in brief is 232 words (≤240).\n- Origin counts are 15/13/20/1 = 49, and phase 40–49 is 1 drafted + 9 AI-made.\n- lineage.svg was screenshotted with headless Chrome at 1000×976 (/private/tmp/claude-501/-Users-ren-theories/52d6b47e-68c8-4189-8383-b1a9e9047d9a/scratchpad/r5-shots-2/lineage.png). 49's new label 'Asserts no should; T8 its makers' offer' fits and overlaps no text, 49's fill is white, the key reads 15/13/20, and the 9 Nov bar is still a dash.\n\nTests: ran test_lineage (16 OK). The other focused tests and the full suite were not run; the full suite was deliberately deferred. Nothing in the repository was edited and no render was run. sources/12-*, 13-*, 18-* and the friend-conversation drafts were not opened. This is an AI reading; no person's review of this work is recorded.",
+  "verdicts": [
+   {
+    "where": "Finding 0: theories/LINEAGE.md line 11 (arc in brief), lineage.json words.en.arc_short; LINEAGE.zh.md line 13 (今为其排序所取的读法)",
+    "agree": true,
+    "severity": "medium",
+    "why": "Confirmed. The brief reads \"its ethics' two premises (the continuation condition for scope, C for order), now the readings its rankings take, separated\". It took the first-reading checker's fix (\"now the readings its rankings take where used\") without \"where used\". The homes are narrower. 07 line 3 has \"most use two readings ... the self-concern results use the narrower order they state\". 07 line 7 has \"the ranking results take two readings as hypotheses where used\". GLOSSARY line 71 has \"whoever ranks courses holds it or another order (self-concern ranks one case with no C)\". The board at 55cf6892e has \"rankings only under readings a result names, most often the continuation condition and C, the self-concern results under their narrower order\". The arc in full (line 15) and the thread intro (line 76) on the same page keep \"where used\". With \"where used\" restored the brief is 234 words by the data's count (232 now), inside the 240. Medium is right: it is wider than the home, and the brief's last sentence (\"ranking only under readings a result names\") only partly offsets it."
+   },
+   {
+    "where": "Finding 1: reads/lineage-origins.json entry 49 (origin 'ai', AGENTS.md basis), LINEAGE.md row 49 'AI-made', the counts 15/13/20, the phase line, the white fill of 49 in both svgs",
+    "agree": true,
+    "severity": "medium",
+    "why": "Confirmed. Entry 49's AGENTS.md basis reads \"The working rules, AI-written and revised by the working sessions\". The board at 55cf6892e reads \"WB's AGENTS.md landed ...: on Ren's words of 8–9 November 2026, \\\"there is just is, \\\"no should\\\" beyond the becoming\\\" and \\\"change AGENTS.md first\\\", AGENTS.md's Method, Evaluation and Words say ...\". The source file has message 8 (\"change AGENTS.md first\") and message 9 (a reply to the AGENTS.md draft). The same classification calls AGENTS.md rewrites made from a person's messages 'drafted' for point 40's entry 2 and all of point 42. So the class for this entry and point is 'drafted', not 'ai', and the white fill drops the person's part, which the board itself names. One slip in the fix: the phase line is now \"1 AI-drafted, 9 AI-made\" (LINEAGE.md line 29), so it should become \"2 AI-drafted, 8 AI-made\", not change from \"1 AI-drafted, 8 AI-made\". The counts 15/14/19/1 add to 49."
+   },
+   {
+    "where": "Finding 2: LINEAGE.md line 11 and zh line 13, the Fork gloss \"(a story of AI's future, asked of an AI)\"",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed. Point 14 says only that the narrative was asked for from \"a pasted scenario projection, organized by AI, Automated Feudalism versus Automated Commons\". hb-02 line 3482 heads that conversation \"Fully automated production and its future implications\", and TIMELINE line 125 says the narrative was meant for a person's friends. The subject is a future of automated production, not AI's own future. \"Asked of an AI\" holds, because the conversation is in an AI chat export. The high finding (the denied binary) is resolved. Low is right."
+   },
+   {
+    "where": "Finding 3: LINEAGE.md line 34 (origins paragraph), lineage_static.json origins_intro, zh line 36 (下一轮的 AI 读者), lineage-origins.json about and entry 49 why",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed. Point 49 was added in 6dd1a59ce (\"RW (c) round 5, the fifth re-score's asks\"), and the reading cited is round-5-readers-1.json, the first reading of that same round. \"The next round's\" names a round that has not happened. The finding attributed to that reading does exist: the lineage reader's finding 7 says \"the person's entry states the provocation, not the change\", and the Chinese checker's missed medium says the same. \"That round's\" is the fix, in all four places (en, zh, about, why)."
+   },
+   {
+    "where": "Finding 4: LINEAGE.md line 11, \"each refuting at most a correspondence, never a theorem\"; zh 每一项至多驳倒一个对应",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed. experiments/formations-that-read/README.md line 5 has \"No run refutes a theorem. Each test refutes at most a named correspondence or bridge\", and point 45 has \"refutes at most a named correspondence\". The brief drops 'named' and 'or bridge'. That is precision only, so low."
+   },
+   {
+    "where": "The reader's 'resolved' verdicts on the first reading's findings 0–10 and the checker's two missed",
+    "agree": true,
+    "severity": "none",
+    "why": "Each one checks out against the files. Lines 85 and 139 now end \"the continuation condition for scope, C for order, and any further premise\", which copies AGENTS.md line 28. Lines 15 and 76 say \"seeks/sought no warrant from outside\". \"Point 49 was added outside these periods\" is at line 43. \"Lean a coherence checker\" is fixed. The molochs gloss is unchanged, so finding 9 is unresolved. The 9 Nov growth bar is still a faint dash: in my screenshots (r5-shots-2/lin-en-b.png and lin-zh-b.png) it shows at about x 953. The new label \"49 · Asserts no should; T8 its makers' offer\" (and 49 · 不断言应当；T8 为本论之作者所提供) fits inside the frame and overlaps nothing. That also resolves the Chinese checker's medium on 无应当, which this reader did not list. test_lineage passes (16 tests)."
+   }
+  ],
+  "missed": [
+   {
+    "where": "theories/LINEAGE.md line 11 (arc in brief), lineage.json words.en.arc_short; zh line 13 读取之形成的各项检验（例如选择显示出一种次序的哪些方面）",
+    "text": "\"In November tests of formations that read (such as what choices show of an order), each refuting at most a correspondence, never a theorem, are frozen before any run\"",
+    "severity": "low",
+    "why": "The fix introduced this. Before it, the parenthesis gave an example of a law (\"tests of the proved laws of formations that read (such as ...)\"). With \"the proved laws of\" cut, it now attaches to \"formations that read\", so a reader is told that \"what choices show of an order\" is a formation that reads. The home (experiments/formations-that-read/README.md line 5) says \"RF proved nine laws of formations that read ...: what choices show of an order (RF1), ...\": it is a law, the first of nine.",
+    "fix": "\"tests of formations that read (of laws such as what choices show of an order), each refuting at most a named correspondence or bridge, never a theorem, ...\" (zh: 读取之形成的各项检验（检验例如「选择显示出一种次序的哪些方面」这类律）). Check that the brief stays within 240 words alongside finding 0's \"where used\"."
+   },
+   {
+    "where": "theories/LINEAGE.md line 15 (arc in full) and line 76 (ethics thread intro); zh lines 15 and 78",
+    "text": "\"on 9 November the account seeks no warrant from outside, asserts no should, and makes T8 its makers' offer (49)\" / \"the account sought no warrant from outside: ... (49; 07 §8)\"",
+    "severity": "low",
+    "why": "The wording is fixed, but the first reading's Chinese checker also asked for the citation to hold, and it still does not. Point 49's what (line 85) says nothing about warrant. The home is 07 T8 (line 779, \"no warrant from outside is sought\") and AGENTS.md line 28. The thread intro also cites 07 §8, which covers it there. In the arc in full, the warrant clause rests on a point that does not state it.",
+    "fix": "In the arc in full, write \"(49; 07 §8)\" as the thread intro does. Or add \"and that no warrant from outside is sought\" to point 49's what, quoting 07 line 779."
+   }
+  ]
+ },
+ {
+  "key": "chinese",
+  "findings": [
+   {
+    "where": "theories/becoming/results/atlas/CROSSWALK.zh.md:13 (caption, atlas.py crosswalk_zh_page); connections.zh.svg key line 'stated_key', every filled dot's <title> and the <desc> (connection_map.py OV_TEXT zh 'stated', 'stated_key', 'desc')",
+    "text": "本论承接者为实心，此处提出者为空心 / 实心：本论承接它（陈述它，或另有说法） / <title>…；本论承接它</title>",
+    "severity": "medium",
+    "why": "Filled means not fresh: connection_map.overview_threads sets fresh only for carried == 'fresh-reading', so filled dots cover 承继 3, 部分承继 488 and 改变 189, and the svg's own desc glosses 改变 as （本论另有说法）. 承接 reads in Chinese as 'carries on, inherits', next to the status word 承继 used for 'carried' in the counts paragraph two lines below. The caption gives 承接 with no gloss, and each dot's tooltip says 本论承接它 even on 相分 and 反读 dots. A Chinese reader is told the account carries every filled connection, including the 189 where it says otherwise. The English 'takes it up' does not carry that sense.",
+    "fix": "In connection_map.py and atlas.py, replace 承接 with 论及: caption 本论论及者（承继、部分承继或另有说法）为实心; key 实心：本论论及它（陈述它，或另有说法）; tooltip 本论论及它; desc 本论论及者为实心. Then re-render."
+   },
+   {
+    "where": "theories/becoming/results/atlas/CROSSWALK.md:31 caption (atlas.py crosswalk_page), outside the Chinese scope but introduced by the fixes; the focused test tools/research/tests/test_site.py:945",
+    "text": "open the connection map: on the reader’s site, once it is published, its Connections page; or [map.html](map.html) opened from a clone",
+    "severity": "medium",
+    "why": "test_site.RepositoryConfigTests.test_no_page_of_the_site_says_the_site_is_yet_to_come fails on this page: 'once it is published' matches. It is a plain assertion, not a load timeout (210 run, 1 failure, 1 skipped). The site's rewrite rules strip the old phrasing (test_the_site_does_not_promise_itself) but not the new one. On the published site, the English crosswalk would tell readers that the site they are reading is yet to come. Keeping 'once it is published' in the repository caption is deliberate, but its site rewrite was not carried over. The Chinese caption has no such clause.",
+    "fix": "Add a rewrite in _process/research-config.json that turns the new caption clause into 'open the connection map: [the Connections page](map.html)' on the site, so the repository page keeps its wording and test_site passes."
+   },
+   {
+    "where": "theories/becoming/results/atlas/connections.zh.svg:835 (last footer line; connection_map.py OV_TEXT zh footer)",
+    "text": "同样的数据可在连接图中探索：读者网站发布后其上的“Connections”（连接图）页，或在克隆中打开此文件夹的 map.html（GitHub 只把它显示为源代码）。",
+    "severity": "low",
+    "why": "In a headless-Chrome screenshot at 900×1278, this line starts at x=24 and ends at about x=893, against the frame's border at 899.5. No other line passes about 876. The English footer was split onto two lines in 176c8a31c to keep it inside its width; the Chinese was left on one. With a wider CJK font it would touch or cross the border.",
+    "fix": "Break it after 页， as the English is broken, so that the second line starts at 或在克隆中打开…"
+   },
+   {
+    "where": "connections.zh.svg note line (y=1177.8); same in connections.svg 'the stated dots above, the proposed below'",
+    "text": "每格中，每种关系一个点，次序同上，面积随主张数增加；陈述者在上，提出者在下。",
+    "severity": "low",
+    "why": "The key now says filled means 本论承接它（陈述它，或另有说法） (English: 'takes it up (states it, or says otherwise)'). This note still calls the filled dots 陈述者, the old word, so the two lines of the legend name the same dots differently.",
+    "fix": "论及者在上，提出者在下 (English: 'the dots taken up above, the proposed below')."
+   },
+   {
+    "where": "theories/becoming/results/THEORY-GRAPH.zh.md:87 (它显示什么, spine.py line 1589) and spine.zh.svg <desc> (spine.py line 1022)",
+    "text": "延续条件与 C 作为前提进入第七章",
+    "severity": "low",
+    "why": "The English at both places says 'come into chapter 7 as readings'. LINEAGE.zh, as fixed, says they were 称为伦理的前提 only until 9 November and are now readings. The Chinese graph page and picture description keep the old name. This predates the fixes, but the fixes made the rename a point of the page set.",
+    "fix": "延续条件与 C 作为读法进入第七章, in both strings of spine.py."
+   },
+   {
+    "where": "theories/LINEAGE.md 'How the points were chosen' (lineage_static.json en.chosen) against LINEAGE.zh.md:45",
+    "text": "Point 49 was added outside these periods, by the AI session that moved the cut to 9 November. / 第 49 个转折点不经这一选择，是截取移到 11 月 9 日时由那一次的 AI 会话加入的。",
+    "severity": "low",
+    "why": "The first reading's finding asked both languages to say that point 49 did not pass through the gather, check and keep process. The Chinese says so (不经这一选择). The English, which governs, says only that it lies 'outside these periods', which a reader can take as one more period that was put through the same selection. The Chinese therefore says more than its English.",
+    "fix": "English: 'Point 49 was not chosen this way: the AI session that moved the cut to 9 November added it.'"
+   },
+   {
+    "where": "theories/LINEAGE.zh.md:13 (弧线简述; lineage_static.json zh.arc_short); English 'a story of AI's future, asked of an AI'",
+    "text": "一种分岔叙事（向一个 AI 要来的、关于 AI 未来的故事）",
+    "severity": "low",
+    "why": "Point 14, the home, says a conversation 'takes up a pasted scenario projection, organized by AI, Automated Feudalism versus Automated Commons' and asks for a narrative from it. Its question is 'how could there be a future for humans in this winner takes all game?'. The story was about society's and humans' future under automation and AI, not about AI's own future. 关于 AI 未来 shifts the subject.",
+    "fix": "（据一份 AI 整理的情景推演向 AI 要来的、关于有了 AI 之后的未来的故事）; English: '(a story of the future with AI, asked of an AI)'."
+   },
+   {
+    "where": "theories/becoming/ONE-PAGE.zh.md and THE-THEORY-OF-BECOMING.zh.md, the short key (spine.picture_key zh); same in English",
+    "text": "较深的一条是逆向的，即章序在前的一章使用章序在后的一章",
+    "severity": "low",
+    "why": "The home paragraph (THEORY-GRAPH's how_to_read, and the svg desc) says 章的编号是为阅读，不是证明的次序, and then calls the darker curves backward. The short key keeps 'backward' (逆向) but drops that qualifier, so a reader of the fronts can take chapter order for an order of proof that these curves break. The required items (formal-reuse assigned by AI-written records with no check against the Lean, spokes counting modules and not results derived, the cycle rule as a condition of entry, and 11/1/6/99) are all kept, and the counts match.",
+    "fix": "较深的一条是逆向的（章的编号是为阅读，不是证明的次序），即章序在前的一章使用章序在后的一章; English: 'a darker one runs backward (chapters are numbered for reading, not as an order of proof)'."
+   }
+  ],
+  "earlier": [
+   {
+    "where": "#0 LINEAGE.zh.md:13 弧线简述, Fork parenthesis (Automated Feudalism 或 Automated Commons)",
+    "resolved": "yes",
+    "note": "The binary that point 15's correction denies is gone. The parenthesis now says where the story came from (向一个 AI 要来的), in both languages. A smaller slip in the new gloss, 关于 AI 未来, is reported as a new low finding."
+   },
+   {
+    "where": "#1 lineage.zh.svg point 49's label 无应当；T8 为作者所提供",
+    "resolved": "yes",
+    "note": "The label is now 49 · 不断言应当；T8 为本论之作者所提供, and the English reads 'Asserts no should; T8 its makers' offer'. In screenshots at 1000×886 and 1000×976 the longer labels fit with no overlap."
+   },
+   {
+    "where": "#2 CROSSWALK.zh.md:13 caption, 每一条线",
+    "resolved": "partly",
+    "note": "The caption now describes the matrix: rows, columns, a dot per relation, 每一个点都是 AI 的读法. The new word for filled dots, 本论承接者, reads as 'carried' and covers the 189 改变 claims. Reported as a new medium finding."
+   },
+   {
+    "where": "#3 connections.zh.svg footer “连接”页",
+    "resolved": "yes",
+    "note": "It now reads 读者网站发布后其上的“Connections”（连接图）页, the site's English page name glossed, with 'once it is published' kept as intended. The line runs nearly to the frame's edge (new low finding)."
+   },
+   {
+    "where": "#4 LINEAGE.zh.md:13 Lean 成为证明检验器",
+    "resolved": "yes",
+    "note": "Lean 成为融贯检验器, and English 'Lean a coherence checker', as in point 18 and the phase entry."
+   },
+   {
+    "where": "#5 LINEAGE.zh.md:28, 87, 143 所指明",
+    "resolved": "yes",
+    "note": "The phase entry, point 49 in the thread, the table row and lineage.json all now say 所指名. No 所指明 is left on the page."
+   },
+   {
+    "where": "#6 LINEAGE.zh.md:87, 143 （一种看法，不是裁决）",
+    "resolved": "yes",
+    "note": "Now （一种看法，不是裁断）, as in README.zh and USES.zh. The 裁决 left on the page means a test's frozen verdicts, a different sense."
+   },
+   {
+    "where": "#7 LINEAGE.zh.md:45 转折点是怎样选的, point 49 outside the selection",
+    "resolved": "partly",
+    "note": "The Chinese adds 第 49 个转折点不经这一选择. The English adds only that it was added 'outside these periods', which does not say it skipped the selection (new low finding)."
+   },
+   {
+    "where": "#8 README.zh.md:48 理论图 约 77–101 分钟",
+    "resolved": "no",
+    "note": "README.zh still says 约 77–101 分钟, while THEORY-GRAPH.md:7 says 77–100. The fixes changed the other reading times on README.zh (18–24, 58–75, 126–163, 35–45) but not this one."
+   },
+   {
+    "where": "#9 LINEAGE.zh.md:13 （例如选择显示出次序的什么）",
+    "resolved": "yes",
+    "note": "Now （例如选择显示出一种次序的哪些方面）. The brief now also says each test 至多驳倒一个对应，从不驳倒一条定理, within point 45's 'refutes at most a named correspondence'."
+   },
+   {
+    "where": "missed #0: point 49 classed as a person's words (black fill, 16, phase '1 出自一个人')",
+    "resolved": "yes",
+    "note": "Point 49 is now 'ai', with AGENTS.md first among its evidence and the sources/15 entry moved last. The key reads 一个人的话（15）/ AI 所作（20）. Point 49's fill in both svgs is white. The phase reads 1 AI 起草，9 AI 所作 (sums to 10), the table row reads AI 所作, and the origins paragraph says why it was reclassified, linking the reading. No stale 16 or 19 is left in theories/, the READMEs or tools/research."
+   },
+   {
+    "where": "missed #1: 弧线全文 and the ethics thread, 本论把根据之问放下 (49)",
+    "resolved": "yes",
+    "note": "Now 本论不求外来的根据, and English 'seeks no warrant from outside', which matches AGENTS.md Evaluation 'No warrant from outside is sought.'. That line is point 49's first evidence (AGENTS.md line 28), so the citation holds through its evidence, though point 49's own text does not say it."
+   },
+   {
+    "where": "missed #2: THEORY-GRAPH.zh.md matrices' lead, row 'uses' column also for related",
+    "resolved": "yes",
+    "note": "Now 行是使用（related：列出）者结果所在的章，列是被使用（被列出）者结果所在的章, matching the English. 再是每一对区域，「待退役」也在内 is accurate: the pair list holds the eight chapters and 待退役 only."
+   },
+   {
+    "where": "missed #3: CROSSWALK.zh.md has no 从这里开始 table and no line naming the map page",
+    "resolved": "no",
+    "note": "CROSSWALK.zh.md changed only in its caption. The English Start here table, now with a tie kept at its cut, has no Chinese counterpart."
+   }
+  ],
+  "read": "Read in full:\n- The first reading's four scopes in round-5-readers-1.json, with the Chinese scope's 10 findings, verdicts and 4 missed.\n- git diff --stat 3c8b5e08f..176c8a31c.\n- The word diff 3c8b5e08f..176c8a31c of theories/LINEAGE.zh.md and theories/LINEAGE.md: reading time, 弧线简述, 弧线全文, the phase 检验、读者版与对照, the origins paragraph and counts, 转折点是怎样选的, the ethics thread's intro, point 49 in the thread and the table, and the src-48 and src-49 rows.\n- The diffs of lineage.json (point 49's short label, what, evidence order and origin; the phase's zh; the ethics intro), lineage_static.json, reads/lineage-origins.json, lineage.svg and lineage.zh.svg.\n- The diffs of CROSSWALK.md, CROSSWALK.zh.md, atlas.py, connection_map.py (OV_TEXT en and zh, start_here, the dot sizes), build_site.py, map.html, README.md and README.zh.md.\n- The diffs of THEORY-GRAPH.md and THEORY-GRAPH.zh.md (the how-to-read paragraph replaced by the short key, 它显示什么, the matrices' lead, the pair-list lead), and of ONE-PAGE(.zh).md and THE-THEORY-OF-BECOMING(.zh).md (the key).\n- CROSSWALK.zh.md lines 1-20.\n- ONE-PAGE.zh.md and THE-THEORY-OF-BECOMING.zh.md from their heads through the picture and its key.\n- THEORY-GRAPH.zh.md lines 60-100 and its pair list; the regions it names were checked.\n- README.zh.md lines 27-33 and its 理论图 row; README.md's spine caption.\n- Points 14, 15 and 45 in both languages.\n- AGENTS.md lines 20-45 (Method, Evaluation, Proof and naming, Words and decisions).\n- spine.py lines 1015-1036 and its zh 'it shows' string (line 1589).\n- The text of connections.zh.svg and connections.svg: title, desc, header lines, key and footer.\n\nLooked at:\n- Headless-Chrome screenshots of lineage.zh.svg (1000×886), lineage.svg (1000×976) and connections.zh.svg (900×1278), plus a crop of the zh footer, in /private/tmp/claude-501/-Users-ren-theories/52d6b47e-68c8-4189-8383-b1a9e9047d9a/scratchpad/r5-shots-2.\n- spine.zh.svg was not re-shot: its only change is one legend stroke width.\n\nChecked:\n- connection_map.overview_threads: fresh is only carried == 'fresh-reading'.\n- Both anchors the key links to exist in THEORY-GRAPH.zh.md.\n- No stale 一个人的话（16）, a person's words (16), 无应当 or 'No should; T8' is left in theories/, the READMEs or tools/research.\n- No 所指明 is left in LINEAGE.zh.md.\n- Naming in the changed Chinese: 本论 names the account and 生灭变化之论 the theory; no 说明 names the account; no new 生成; 本论之作者所提供 and 读法 are used.\n\nTests:\n- Ran test_spine, test_lineage, test_connection_map, test_atlas and test_site: 210 ran, 1 failure, 1 skipped, at load average about 12.\n- The failure is test_site's test_no_page_of_the_site_says_the_site_is_yet_to_come on CROSSWALK.md. It is a plain assertion, not a timeout.\n- The full suite was not run.\n\nOnly searched:\n- spine.zh.svg, for 前提.\n- tools/publishing/build_site.py and test_site.py, around the failing test.\n\nNot opened: sources/12-*, 13-*, 18-* or the friend-conversation drafts. Nothing in the repository was edited and no render was run. No person's review of this work is recorded; this is an AI reading.",
+  "verdicts": [
+   {
+    "where": "#1 CROSSWALK.zh.md:13 caption / connections.zh.svg key, tooltips and desc: 本论承接者为实心 / 本论承接它",
+    "agree": true,
+    "severity": "medium",
+    "why": "Confirmed in connection_map.py OV_TEXT zh ('stated': '本论承接它', 'stated_key', 'desc') and atlas.py:982. 397 filled-dot tooltips say 本论承接它, including dots for divergence, e.g. '1 条主张，相分，对照02 生成、守与退化（英文）；本论承接它'. 承接 reads as 'carries on' and sits next to the status word 承继, so a reader of a divergence dot is told the account carries it. The key's gloss （陈述它，或另有说法） is not on the caption or the tooltips. Medium is right."
+   },
+   {
+    "where": "#2 CROSSWALK.md:31 caption, 'once it is published' fails test_site",
+    "agree": true,
+    "severity": "medium",
+    "why": "I reran the focused tests: test_site.RepositoryConfigTests.test_no_page_of_the_site_says_the_site_is_yet_to_come fails with \"Regex matched: 'once it is published'\" on the generated CROSSWALK.md, and it is the only failure. It is a plain assertion, not a load red. Keeping the phrase in the repository caption is deliberate, but the site rewrite for the new wording is missing, so the published site would say it is yet to come."
+   },
+   {
+    "where": "#3 connections.zh.svg:831 last footer line runs to the frame",
+    "agree": true,
+    "severity": "low",
+    "why": "Screenshot at 900×1278 (/private/tmp/claude-501/-Users-ren-theories/52d6b47e-68c8-4189-8383-b1a9e9047d9a/scratchpad/r5-shots-2/connections.zh.png): the line ending '（GitHub 只把它显示为源代码）。' stops a few pixels inside the frame's right border. The English was split onto two lines, and this one was not."
+   },
+   {
+    "where": "#4 connections.zh.svg note '陈述者在上，提出者在下'",
+    "agree": true,
+    "severity": "low",
+    "why": "OV_TEXT zh notes[0] still says 陈述者 while the key two lines above names the same dots by 本论承接它（陈述它，或另有说法）. English 'the stated dots above' has the same mismatch with 'takes it up'."
+   },
+   {
+    "where": "#5 THEORY-GRAPH.zh.md:87 and spine.zh.svg desc, 延续条件与 C 作为前提进入第七章",
+    "agree": true,
+    "severity": "low",
+    "why": "spine.py:1022 and :1589 say 前提, but the English at :1034 and :1457 says 'as readings'. The image alt text on the same page says 两种读法进入第七章, so the zh page now names the two differently in two places."
+   },
+   {
+    "where": "#6 LINEAGE.md 'Point 49 was added outside these periods'",
+    "agree": true,
+    "severity": "low",
+    "why": "LINEAGE.zh.md:45 says 第 49 个转折点不经这一选择 (it did not go through the selection). The governing English says only 'outside these periods', which does not say that. So the Chinese says more than its English."
+   },
+   {
+    "where": "#7 LINEAGE.zh.md:13 （向一个 AI 要来的、关于 AI 未来的故事）",
+    "agree": true,
+    "severity": "low",
+    "why": "Point 14 (lineage.json) has a narrative asked from a scenario projection of Automated Feudalism versus Automated Commons, under the question of humans' future. That is a story of society's future with AI, not of AI's own future. 关于 AI 未来 shifts the subject slightly. Low."
+   },
+   {
+    "where": "#8 short key on the fronts drops 'numbered for reading, not as an order of proof'",
+    "agree": true,
+    "severity": "low",
+    "why": "spine.picture_key keeps 'backward'/逆向 but drops the qualifier that how_to_read gives (章的编号是为阅读，不是证明的次序；使用也是双向的). The required items are kept, and 11+1+6+99=117 matches 08 §7's phrases."
+   },
+   {
+    "where": "verdict #0 (Fork binary gone), #1 (point 49 label), #3 (footer page name), #4 (融贯检验器), #5 (所指名), #6 (裁断), #9 (哪些方面; at most a correspondence), missed #0 (point 49 reclassed ai), missed #1 (不求外来的根据), missed #2 (matrices' lead) marked resolved",
+    "agree": true,
+    "severity": "none",
+    "why": "Spot-checked against the files. LINEAGE.zh.md:13 no longer has the binary and has Lean 成为融贯检验器. lineage.zh.svg shows '49 · 不断言应当；T8 为本论之作者所提供', and it fits in a 1000×886 screenshot. Point 49's circle fill is #ffffff. The key reads 一个人的话（15）/ AI 所作（20). The phase counts sum to 15/13/20/1. No 所指明 or （一种看法，不是裁决） is left. The ethics thread has 本论不求外来的根据, and AGENTS.md line 28 has 'No warrant from outside is sought.'. THEORY-GRAPH.zh's lead reads 行是使用（related：列出）者."
+   },
+   {
+    "where": "verdicts #2 partly, #7 partly, #8 no (README.zh 77–101 against 77–100), missed #3 no (CROSSWALK.zh has no 从这里开始 table and no map line)",
+    "agree": true,
+    "severity": "low",
+    "why": "Confirmed. README.zh.md's 理论图 row still reads 约 77–101 分钟, while THEORY-GRAPH.md:7 says 77–100. CROSSWALK.zh.md changed only in its caption, which names neither the Connections page nor map.html."
+   }
+  ],
+  "missed": [
+   {
+    "where": "theories/becoming/ONE-PAGE.md and THE-THEORY-OF-BECOMING.md, the short key (spine.py picture_key, en branch)",
+    "text": "A spoke counts the chapter's modules that state their laws on the grammar, not results derived.",
+    "severity": "low",
+    "why": "Home (how_to_read and the legend 'spoke'): \"the chapter's core modules that state their laws on the grammar at the centre (modules, not results derived)\". The English key drops 'core', so it is wider than its home. The Chinese key keeps 核心模块, so the Chinese says more than the English that governs.",
+    "fix": "A spoke counts the chapter's core modules that state their laws on the grammar, not results derived."
+   },
+   {
+    "where": "ONE-PAGE.zh.md and THE-THEORY-OF-BECOMING.zh.md, the short key (spine.picture_key zh); same in English 'no record may close a cycle'",
+    "text": "登记检查不让任何记录闭合环",
+    "severity": "low",
+    "why": "Home: \"登记检查拒绝会闭合其已声明依赖之环的记录\" / \"the registry refuses a record that would close a cycle among its declared dependencies\". The key does not say what the cycle is made of, and in Chinese a bare 闭合环 leaves the reader to guess which loop. The linked section answers it, but the gloss is vaguer than its home.",
+    "fix": "登记检查不让任何记录闭合已声明依赖之环; English: 'no record may close a cycle of declared dependencies'."
+   },
+   {
+    "where": "README.md:13 'Start with' (computed {{time}}) against theories/becoming/ONE-PAGE.md:5; outside the Chinese scope, introduced by the fixes",
+    "text": "[the one page](theories/becoming/ONE-PAGE.md) (16–20 minutes) / *Sixteen to twenty-one minutes to read.*",
+    "severity": "low",
+    "why": "The fixes shortened the one page's key, and README's computed time moved to 16–20. The one page's own hand-written header still says sixteen to twenty-one. In Chinese the two agree (README.zh and ONE-PAGE.zh both say 18–24 / 十八至二十四).",
+    "fix": "Set ONE-PAGE.md's header to 'Sixteen to twenty minutes to read', or whatever the computed range is at render."
+   }
+  ]
+ }
+]
