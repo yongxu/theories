@@ -50,8 +50,9 @@ board item ZC's, `Becoming.OwnClass`, and which formations are centers ZA-G1's, 
   family's uptake exceed its replenishment for `n` steps from a stock below `n + m`
   (`Flow.persists_never_overdraws`, from `GroupEnding.Flow.family_childless`). Where a chosen course that
   ends what the line depends on is realized as such an overdraw, the persisting line's choices, coming from
-  some strict order, are consistent with self-concern on the occasions met wherever only ending was at stake
-  there (`Flow.persisting_consistent_with_selfConcern`).
+  some strict order, are consistent with keeping above ending (`Flow.persisting_keeping_above_ending`), and
+  with self-concern on the occasions met wherever only ending was at stake there
+  (`Flow.persisting_consistent_with_selfConcern`).
 * **A witness: the stake cannot be dropped.** In `PersistingChoices.Forgoing` a line of one member a step,
   each giving the next its standing and all requiring a commons, balances, acts, depends and descends, and
   persists; it never overdraws (`PersistingChoices.Forgoing.never_overdraws`). Offered, as courses on a
@@ -488,6 +489,28 @@ theorem Flow.persists_never_overdraws {X : Type} {L : Flow X X} {W : Web X X}
     | ⟨_, y, late, member⟩ => match Nat.le.dest late with
       | ⟨k, at_⟩ => ended k y (Eq.subst (motive := fun r => y ∈ G.family r)
           ((Nat.add_right_comm (T + n) 1 k).symm.trans at_).symm member)
+
+/-- **A persisting line's choices put keeping above ending.** Under the laws of `persists_never_overdraws`,
+let the line persist, let a chosen alternative that ends be realized as an overdraw of the family from a
+short stock (`realized`), and let the choices come from some strict order. Then some strict order according
+with the choices puts every alternative that does not end above every one that ends and was open with it at
+some occasion (`ChoiceOccasions.keeping_above_ending`, its `kept` given by the survivorship law). -/
+theorem Flow.persisting_keeping_above_ending {X α O : Type} {L : Flow X X} {W : Web X X}
+    (balances : L.Balances W) (acting : L.Acting W) (dependent : W.Dependent)
+    {G : SelectionTerm.Generations X} (descended : SelectionTerm.Flow.Descended L W G)
+    {ds : List X} {m : Nat}
+    (gated : ∀ t f, f ∈ L.present t → ∀ d, d ∈ ds → 0 < L.give t f d →
+      ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e)
+    (coupled : ∀ s p, p ∈ G.family s → ∃ e, e ∈ ds ∧ W.requires s p e ∧ m ≤ W.need s p e)
+    (persists : G.Persists) {ch : ChoiceOccasions α O} {ends : α → Prop}
+    (realized : ∀ o, ends (ch.pick o) → ∃ T n,
+      (∀ k, k < n → L.replenishment ds (T + k) < L.uptake ds (T + k)) ∧ W.stock ds T < n + m)
+    (none : «无环» ch.Shown) :
+    ∃ P : «际» α, (∀ x, ¬ P x x) ∧ (∀ x y z, P x y → P y z → P x z) ∧ ch.Accords P ∧
+      ∀ x y, ch.Met x y → ¬ ends x → ends y → P x y :=
+  ChoiceOccasions.keeping_above_ending none fun o ends_o => match realized o ends_o with
+    | ⟨T, n, overdraw⟩ => Flow.persists_never_overdraws balances acting dependent descended gated coupled
+        persists T n overdraw
 
 /-- **A persisting line's choices are consistent with self-concern on the occasions it met, where only
 ending was at stake.** Under the laws of `persists_never_overdraws`, let the line persist, let a chosen
