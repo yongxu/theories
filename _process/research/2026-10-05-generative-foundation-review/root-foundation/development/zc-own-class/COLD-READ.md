@@ -86,3 +86,15 @@ The reader found that all thirteen fixes landed as meant, and that the new lemma
 4. The registration lines (the root module's list, both READMEs and the checker's scope) now carry the premise that it is decided of each alike occurrence whether it conditions something.
 5. Record 1's correspondence now names the identity's premise, an occurrence that conditions something other than itself.
 6. Record 1's first law now follows 07's split by direction.
+
+## An independent reading of the join (GPT astra, relayed by the session that started the route (b) pieces)
+
+astra read the route (b) pieces read-only and wrote an AI reading at `/Users/ren/tmp/za-how-far/route-b/join/astra.md`. The starting session relayed seven items on G2's texts and asked that each be checked against the Lean. Each was checked:
+
+1. "Exactly as far as P4 is granted" needs P2, and concerns what the line reaches, not which class is held. Only the hand-over note said it, and the note is fixed.
+2. "The least class (both)" needs a premise. The hand-over note now names the three premises under which `«后类»` meets P2: some class meets both, it is decided, or the closure returns.
+3. "The line is one's loop" and the bound by the influence closure need coupling by threshold only, and with general coupling the bound is the coupling closure. This was said too broadly in 07's second Reading, in record 2's correspondence and in the note. All three now separate the two cases.
+4. "P4 tells them apart" was a reading, and too strong, since two classes can both hold one's effects and differ in P2. 07 and the note now say that where every effect comes back the two classes reach the same and can still differ in P2 (`ReturnsNotRegular`). Where some effect does not come back, the representation class fails to hold some effect on the line (`«后皆续当且仅当自与线皆闭»`).
+5. "Only with one center" means that every center is one and the same occurrence. 07, the docstring and record 1 now say so.
+6. At an element whose closure returns, `«后类»` meets P2 and P4 with no decision. This was proved as astra sketched it: the first step of the path back gives the effect. The results are `«返则后类本类常闭»` and `«及之首步»`, and, stated with G1's definition, `ReturnsAlong.downstreamClass_regular`, which also gives leastness through `«后类最细»`.
+7. Generalizing `«续无外则同一中心»` to classes indexed by centers needs no P2 or P4, since each line projects into the net. It is left to the join, as the relay asked: it would edit `GrammarScope`, below many modules.

@@ -2690,6 +2690,16 @@
    "region": "significance",
    "base": "old-base",
    "note": "FlowCenters ZA-G1: covering by the formations whose acts return on finite flows; the condition along being affected at them (07 §4.8)"
+  },
+  "what-the-net-fixes-of-ones-own-class": {
+   "region": "significance",
+   "base": "grammar",
+   "note": "OwnClass ZC: the classes meeting P2 and P4 at an occurrence, closed under meets, least the occurrence with all that follows it, every one reaching what the one reaches (07 §4.10)"
+  },
+  "the-own-class-read-on-a-flow": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "OwnClass ZC: the class of a formation's coupling closure on a flow; the reach exactly where acts return, the line its loop (07 §4.10)"
   }
  },
  "modules": {
@@ -4637,6 +4647,11 @@
    "region": "significance",
    "base": "old-base",
    "note": "the standpoints and the relation of the own-closure reading read off a flow (route (b), ZA-G1)"
+  },
+  "Becoming.OwnClass": {
+   "region": "significance",
+   "base": "grammar",
+   "note": "a center's own class under P2 and P4 (后类最细), and read on a flow (route (b), ZC)"
   }
  }
 }
