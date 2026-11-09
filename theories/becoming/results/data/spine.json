@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "about": "Curated input of the spine picture (tools/research/spine.py, board item RW (c)): the chapters' short labels, the theses' homes and the words each copies from 08 §9 and the overview's Chinese table, the two premises' words from 07 and the overview, and the caption's quotations with their homes (THEORY-GRAPH.md's section on the picture). Every quoted phrase is checked at its home on each render; a phrase its home no longer holds stops the render. The counts come from the theory graph. The Chinese of the caption's and the standings' quotations ('zh' in caption and standing.counts_zh) is an AI translation for THEORY-GRAPH.zh.md, not checked against its home.",
+ "about": "Curated input of the spine picture (tools/research/spine.py, board item RW (c)): the chapters' short labels, the theses' homes and the words each copies from 08 §9 and the overview's Chinese table, the two readings' words from 07 and the overview, and the caption's quotations with their homes (THEORY-GRAPH.md's section on the picture). Every quoted phrase is checked at its home on each render; a phrase its home no longer holds stops the render. The counts come from the theory graph. The Chinese of the caption's and the standings' quotations ('zh' in caption and standing.counts_zh) is an AI translation for THEORY-GRAPH.zh.md, not checked against its home.",
  "order": [
   "root",
   "map",
@@ -238,7 +238,7 @@
    "home": "significance",
    "outcome": "argued",
    "en": {
-    "title": "what the makers offer",
+    "title": "生生, the continuation of life, as what the makers offer",
     "words": [
      "argued",
      "named, not designed",
@@ -246,7 +246,7 @@
     ]
    },
    "zh": {
-    "title": "本论的制作者提供一种看法",
+    "title": "为生命，本论的制作者提供一种看法 … 生生即生命之延续",
     "words": [
      "已论证；其检验已指名，未设计 … P2 与 P4"
     ]
@@ -261,7 +261,7 @@
     "lines": [
      "The continuation condition",
      "scope: fixes whose losses count; does not rank anything",
-     "a reading, not asserted"
+     "a scope some formations hold"
     ],
     "quotes": [
      [
@@ -274,7 +274,11 @@
      ],
      [
       "theories/becoming/THE-THEORY-OF-BECOMING.md",
-      "Scope: the continuation condition (§7) | A reading, not asserted; ranks nothing"
+      "Scope: the continuation condition (§7) | A reading; ranks nothing"
+     ],
+     [
+      "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "each is an order or scope some formations hold"
      ]
     ]
    },
@@ -282,7 +286,7 @@
     "lines": [
      "延续条件",
      "确定范围：谁的损失算数；它不对任何东西排序",
-     "读法，不断言"
+     "某些形成所持的范围"
     ],
     "quotes": [
      [
@@ -294,8 +298,8 @@
       "它不对任何东西排序"
      ],
      [
-      "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
-      "读法，不断言；不对任何东西排序"
+      "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "each is an order or scope some formations hold"
      ]
     ]
    }
@@ -306,12 +310,12 @@
     "lines": [
      "C, widening what can form is better",
      "order: ranks a course above every course it widens; does not rank mixed comparisons",
-     "a reading, not asserted"
+     "an order some formations hold"
     ],
     "quotes": [
      [
       "theories/becoming/THE-THEORY-OF-BECOMING.md",
-      "Order: C, widening what can form is better (§7) | A reading, not asserted, held by whoever ranks so"
+      "Order: C, widening what can form is better (§7) | A reading, held by whoever ranks so"
      ],
      [
       "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -320,6 +324,10 @@
      [
       "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "| rank mixed comparisons |"
+     ],
+     [
+      "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "each is an order or scope some formations hold"
      ]
     ]
    },
@@ -327,7 +335,7 @@
     "lines": [
      "C，即扩大可形成者更好",
      "确定次序：把一个进程排在它所扩大的每一个进程之上，而不判定任何混合的比较",
-     "读法，不断言"
+     "某些形成所持的次序"
     ],
     "quotes": [
      [
@@ -335,8 +343,8 @@
       "C，即扩大可形成者更好，确定次序：它把一个进程排在它所扩大的每一个进程之上，而不判定任何混合的比较"
      ],
      [
-      "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
-      "读法，不断言，为如此排序者所持"
+      "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "each is an order or scope some formations hold"
      ]
     ]
    }
@@ -370,8 +378,8 @@
   {
    "home": "theories/becoming/chapters/07-SIGNIFICANCE.md",
    "anchor": "",
-   "text": "the ranking results take two readings as hypotheses where used, neither asserted: the continuation condition for scope, C for order",
-   "zh": "排序之果所用之两种读法，各在所用之处为假设，二者都不断言：延续条件定范围，C 定次序"
+   "text": "the ranking results take two readings as hypotheses where used: the continuation condition for scope, C for order",
+   "zh": "排序之果所用之两种读法，各在所用之处为假设：延续条件定范围，C 定次序"
   },
   {
    "home": "theories/becoming/chapters/08-METHOD.md",
@@ -437,7 +445,7 @@
    "Balance": "一个水平由所给与所取而变化，在每一步，也在每一段上",
    "Finite runs": "当一个列表包含每一构型时，一条律恰在每一构型都返回之处不并合（`Law.lossless_iff_returns`）；对每一条律，无须列表，一个构型恰在它不返回之处被吸入（`Law.drawn_iff_not_returns`）；当每一个无上升而后有最小下降的进程都终止时，沿一条不上升的线的下降不会再现，而在有限预算之内，最小损失使这些进程终止（`Amounts.rests`）；静止不是被吸入的一种情形",
    "Lumping": "一个单独读取的部分恰在其余部分对它不造成差别之处带有一条律",
-   "Widening": "扩大（包含并超出）是非自反、单向且传递的；在延续条件之下，它是保留并添加；伦理加上延续条件定范围、C 定次序"
+   "Widening": "扩大（包含并超出）是非自反、单向且传递的；在延续条件之下，它是保留并添加；更广者更好，是 C 的读法"
   }
  },
  "first_view": {
@@ -448,7 +456,7 @@
    "distance": "{n} at a named distance, each with its reason",
    "example": "For example,",
    "footer": [
-    "A named distance says why a declaration is not read as a case of grammar laws; the edge record does not show that a distance is a gap or a failure. The ethics’ two premises, the continuation condition for scope and C for order, are not among these: neither stands on the edge.",
+    "A named distance says why a declaration is not read as a case of grammar laws; the edge record does not show that a distance is a gap or a failure. The two readings most ranking results take, the continuation condition for scope and C for order, are not among these: neither stands on the edge.",
     "Each declaration's standing is in the edge record, one-root-to-its-edge: {b} have a basis in words, in its data, and the other {r} the label a rule gives; the page of each record whose laws name a declaration prints its standing, with what it rests on. 08 §7's table of standings gives no reason for the classes with balance in their statements (it gives an example), on amounts and laws of their models, and places the 16 at a represented model and the 6 on their own carrier by F5's verified items: theorems, each carried by a law, that state a row of that law's record at a represented model or on the row's own carrier; shared_laws.py verifies what the Lean can show, and that a theorem states its row is a reader's judgment. The terms edge of one root, derived and named distance are in GLOSSARY.md.",
     "Generated by tools/research/spine.py from shared-laws.json and spine.json."
    ],
@@ -461,7 +469,7 @@
    "distance": "{n} 项处于一个指明的距离，各有其理由",
    "example": "例如",
    "footer": [
-    "指明的距离说的是一项声明为何不被读作文法之律的情形；根之边的记录并不表明有距离就是缺口或失败。伦理的两个前提，定范围的延续条件与定次序的 C，不在其中：二者都不在根之边上。",
+    "指明的距离说的是一项声明为何不被读作文法之律的情形；根之边的记录并不表明有距离就是缺口或失败。多数排序结果所取的两种读法，定范围的延续条件与定次序的 C，不在其中：二者都不在根之边上。",
     "每项声明的地位见根之边的记录（one-root-to-its-edge）：{b} 项有文字的依据，在其数据中，其余 {r} 项是规则所给的标签；凡其律中列有某项声明的记录，其页面印出该声明的地位及其所依。08 §7 的地位表对“陈述中有平衡”（附一例）、“依于数量”“为其模型之律”三类未列理由，并依 F5 已核验的项定出在一个被表示的模型上的 16 项与在其自身的载体上的 6 项：这些项是各由一条律所带、在一个被表示的模型上或在该行自身的载体上陈述该律之记录中某一行的定理；shared_laws.py 核验 Lean 能显示的部分，一个定理确实陈述其行，这是读者的判断。根之边、推导而得、指明的距离这几个词，见 GLOSSARY.zh.md。",
     "图中文字为 AI 所译，义以英文版为准。由 tools/research/spine.py 依 shared-laws.json 与 spine.json 画出。"
    ],

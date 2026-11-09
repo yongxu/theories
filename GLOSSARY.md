@@ -28,7 +28,7 @@ The words of the Theory of Becoming, each in one sense and with one home: the se
 
 ## The map
 
-The work as a whole is drawn as a map ([the overview](theories/becoming/THE-THEORY-OF-BECOMING.md)): first for alignment, what a selection reaches, what it can drain beyond what it reads and how its rule can lock; also of wisdom, what traditions and sciences saw of these dynamics, read onto the account ([the crosswalk](theories/becoming/results/atlas/CROSSWALK.md)). The words below are chapter 2's map, of generation, keeping and degeneration on branches; a map in 文 (below) is a function on states.
+*Map* has two senses in the account's own words. **The whole map** is the work as a whole ([the overview](theories/becoming/THE-THEORY-OF-BECOMING.md)): first a map for alignment, what a selection reaches, what it can drain beyond what it reads and how its rule can lock; also a map of wisdom, what traditions and sciences saw of these dynamics, read onto the account ([the crosswalk](theories/becoming/results/atlas/CROSSWALK.md)). **Chapter 2's map** (02's map in the overview) is the map of formations within it: where a pattern generates, keeps or degenerates on branches, and what ends a formation or keeps it going ([02](theories/becoming/chapters/02-MAP.md#the-map)). Where the chapters speak of *the map*, they mean chapter 2's; the terms below are its own, with *formation* from 04. In the mathematics, a map in 文 (below), or one a selection reads *through* ([03 §1](theories/becoming/chapters/03-KNOWING.md#r-selection-through-a-model-of-the-options)), is a function.
 
 | Term | Sense | Home |
 |---|---|---|

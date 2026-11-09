@@ -2,7 +2,7 @@
 
 > English only. Ren's words stay quoted in their original language. The Chinese summaries that earlier followed many entries are kept in the [Chinese edition](RESEARCH-DIRECTIVES.zh.md) (17 October 2026).
 
-The [scope directory](../GOALS.md) distinguishes project directions, independently authorized sessions and completed routes. Current global method and working rules are in [AGENTS.md](../AGENTS.md). Scope routing does not cancel any authorization.
+The [scope directory](../GOALS.md) distinguishes project directions, independently authorized sessions and completed routes. What the work is for, what to work on and how sessions work on it together are in [AGENTS.md](../AGENTS.md). Scope routing does not cancel any authorization.
 
 Each entry records a directive as read on its date. A limit in one ("wait for", "before any", "until") that stated a fact about its moment holds only while its reason does, and none forbids the work that would change it ([AGENTS.md](../AGENTS.md); Ren, 3 November 2026, in the [source record](../sources/15-codex-theory-conversations/2026-11-03-agents-review.md)). Those that have lapsed are marked where they stand.
 

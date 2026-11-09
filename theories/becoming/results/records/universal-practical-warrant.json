@@ -10,8 +10,8 @@
   "family": "F08",
   "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
-    "en": "Question: whether practical reasons have a warrant binding every possible mind, with zero substantive premises. It stays open as a question the account does not pursue: on its method no warrant from outside is sought, and what it offers does not wait on one.",
-    "zh": "问题：实践理由是否有一个零实质前提、对一切可能的心智都有约束力的根据。它作为本论不追求的问题保持开放：按其方法不求外来之根据，其所提供者也不待此。"
+    "en": "Question: whether practical reasons have a warrant binding every possible mind, with zero substantive premises. It stays open, and what the account offers does not wait on it.",
+    "zh": "问题：实践理由是否有一个零实质前提、对一切可能的心智都有约束力的根据。它保持开放，本论所提供者不待其解决。"
   },
   "hypotheses": [
     {
@@ -225,8 +225,8 @@
   ],
   "proof_bindings": [],
   "next_delta": {
-    "en": "None pursued here: the question stays open as one the account does not pursue, since on its method no warrant from outside is sought (chapter 7). The practical judgment the ethics for life needs is the work of the goal of practical judgment for life, and does not wait on this question.",
-    "zh": "此处不作追求：这一问题保持开放，是本论不追求的问题，因为按其方法不求外来之根据（第 7 章）。生命之伦理所需的实践判断是“生命的实践判断”这一目标的工作，不待此问。"
+    "en": "An argument either way: a warrant binding every possible mind that, where it grounds the condition, says where it comes from beyond logic alone and the represented dynamics alone; or a showing that none exists for a stated class of minds. The practical judgment the ethics for life needs is the work of the goal of practical judgment for life, and does not wait on this question.",
+    "zh": "任一方向的论证：一个对一切可能心智都有约束力的根据，若为延续条件奠基，须说明它在单凭逻辑与单凭所表示的动力学之外从何而来；或表明对某一注明的心智类不存在这样的根据。生命之伦理所需的实践判断是“生命的实践判断”这一目标的工作，不待此问。"
   },
   "history": [
     {
@@ -291,8 +291,8 @@
       "zh": "2026年10月30日：重述为它现在所是的问题，即是否存在对一切可能心智都有约束力的根据。目标 zero-axiom-session 于 10 月 30 日重述并获批为生命的实践判断，把本记录列为该问题；伦理是生命的立场（第七章 T8），不待其解决。标题、陈述、假设与下一步随第七章的未决条目一并改写；第七章之不蕴含得到链接，并在 does_not_show 中确切陈述，替换关于先前完成问句之条目；两条相关说明改称问题；共享边界 zero-axiom-target-open（其问题即本记录）移去。类别仍为 target，即登记处对未决条目之类别。validation_scope 缩短所列研究，并说明进展诸行是先前目标在实践判断上的工作，今属该目标，无一关涉这样的根据是否存在。先前字节见 text_versions；无新证明。"
     },
     {
-      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): statement and next step re-said with chapter 7's home: the question stays open as one the account does not pursue, since on its method no warrant from outside is sought; the question itself is unchanged.",
-      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：陈述与下一步依第 7 章之本处重述：此问题作为本论不追求的问题保持开放，因为按其方法不求外来之根据；问题本身不变。"
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the statement's last clause re-said with chapter 7's T8, what the account offers, for \"the ethics, life's stance\"; the question stays open and its next step, an argument either way, is unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：陈述末句依第 7 章 T8 改称“本论所提供者”，以代“伦理作为生命的立场”；问题保持开放，其下一步（任一方向的论证）不变。"
     }
   ],
   "text_versions": [

@@ -234,13 +234,14 @@ def _ledes(data: dict, pointer: bool = True) -> tuple[str, str]:
     T, checks = data['totals'], data.get('checks')
     carried, of = T['carried'], T['agreement_of']
     stated = carried.get('carried', 0) + carried.get('carried-in-part', 0)
-    lede = (f'{T["entries"]:,} claims from {T["folders"]} earlier folders and {T["domains"]} domains of thought, each read against the '
+    lede = (f'What {T["folders"]} earlier theory folders and {T["domains"]} domains of thought, from Chinese and Buddhist thought to systems '
+            f'thinking, ecology, economics and AI alignment, claim in their own terms: {T["entries"]:,} claims, each read against the '
             f'live account. It states {stated:,} in whole or in part and takes up {carried.get("changed", 0):,} to say otherwise. '
             f'{carried.get("fresh-reading", 0):,} it does not state: a reader proposes the connection here. '
             f'{carried.get("not-carried", 0):,} it does not take up, and {carried.get("history-only", 0):,} stand only in its history.')
     sub = (f'Every thread is an AI reading, and no person’s. Of {T["relation"].get("agreement", 0):,} agreements, {of.get("law", 0):,} are '
            f'with a checked law, {of.get("thesis-or-method", 0):,} with a thesis or method, and {of.get("reading", 0):,} rest on a '
-           'reader’s join. A thread is not proof, a shared word is not a correspondence, and agreement is drawn no more prominently '
+           'reader’s join. A shared word is not a correspondence, and agreement is drawn no more prominently '
            f'than divergence. {T["from_knowledge"]:,} entries rest on the AI’s knowledge of a text not stored here, unchecked against '
            'that text.')
     second = (checks or {}).get('second_critic')
@@ -255,13 +256,14 @@ def _ledes_zh(data: dict) -> str:
     T, checks = data['totals'], data.get('checks')
     carried, of = T['carried'], T['agreement_of']
     num = str
-    out = (f'{num(T["entries"])} 条主张，出自 {T["folders"]} 个早先的文件夹与 {T["domains"]} 个思想领域，每一条都对照现行的本论来读。'
+    out = (f'{T["folders"]} 个早先的理论文件夹与 {T["domains"]} 个思想领域（从中国与佛教思想到系统思维、生态学、经济学与 AI 对齐）以自己的话所主张的：'
+           f'{num(T["entries"])} 条主张，每一条都对照现行的本论来读。'
            f'其中 {num(carried.get("carried", 0))} 条承继，{num(carried.get("carried-in-part", 0))} 条部分承继，{num(carried.get("changed", 0))} 条改变（本论另有说法）；'
            f'{num(carried.get("fresh-reading", 0))} 条是此处提出的新读法：本论没有陈述，由读者在此提出这一连接；'
            f'{num(carried.get("not-carried", 0))} 条未承继，{num(carried.get("history-only", 0))} 条仅存于历史。'
            f'每一条线都是 AI 的读法，没有人的。{num(T["relation"].get("agreement", 0))} 处相合中，{num(of.get("law", 0))} 处与一条已核验的律相合，'
            f'{num(of.get("thesis-or-method", 0))} 处与一个论题或方法相合，{num(of.get("reading", 0))} 处依于读者的接合。'
-           '一条线不是证明，共用一个词不是对应，相合画得并不比相分更显眼。'
+           '共用一个词不是对应，相合画得并不比相分更显眼。'
            f'{num(T["from_knowledge"])} 条条目依于 AI 对一份不存于此处之文本的了解，未对照该文本核验。')
     second = (checks or {}).get('second_critic')
     if second:
@@ -403,8 +405,8 @@ OV_TEXT = {
     'en': {'title': 'How the earlier folders and the domains of thought meet the live account',
            'lede': ('Drawn by connection_map.py from the crosswalk’s {n} claims, each read against the live account. A row is an earlier',
                     'folder or a domain of thought, a column the part of the account its claims are read against; read a row across.'),
-           'ai': ('Every dot is an AI reading, no person’s. A dot is not proof, and agreement is drawn no more',
-                  'prominently than divergence.'),
+           'ai': ('Every dot is an AI reading, no person’s. Agreement is drawn no more prominently',
+                  'than divergence.'),
            'critic': 'A random check of {sampled} entries estimates that about {label}% of all {n} carry a wrong label or target role and {fails}% a wrong reading.',
            'folders': '{n} earlier folders', 'claims': 'claims', 'domains': '{n} domains of thought', 'sep': ' · ',
            'desc': ' Drawn as a matrix: a row per folder or domain, a column per part of the account, in each cell up to two dots per relation, filled for what the account takes up and, below it, a ring for what is proposed here. The relations count the claims drawn; {with_relation} that stand only in history or are not carried also carry one, which the crosswalk’s table counts.',
@@ -424,7 +426,7 @@ OV_TEXT = {
     'zh': {'title': '早先的文件夹与各思想领域怎样与现行的本论相接',
            'lede': ('由 connection_map.py 依对照表的 {n} 条主张画出，每一条都对照现行的本论来读。一行是一个早先的文件夹或一个思想领域，',
                     '一列是它的主张所对照的本论那一部分；横着读一行。图中文字为 AI 所译，义以英文版为准。'),
-           'ai': ('每一个点都是 AI 的读法，没有人的。一个点不是证明；相合画得并不比相分更显眼。', ''),
+           'ai': ('每一个点都是 AI 的读法，没有人的。相合画得并不比相分更显眼。', ''),
            'critic': '随机复核 {sampled} 条，据此估计全部 {n} 条中约 {label}% 的标签或目标角色有误，约 {fails}% 的读法有误。',
            'folders': '{n} 个早先的文件夹', 'claims': '主张', 'domains': '{n} 个思想领域', 'sep': ' · ',
            'desc': '画成一张矩阵：每个文件夹或领域一行，本论每一部分一列，每格中每种关系至多两个点：本论论及者为实心点，在此处提出者为其下的空心圆环。关系计的是画出的主张；仅存于历史或未承继者中另有 {with_relation} 条也带有关系，对照表的表格计入它们。',
@@ -936,7 +938,7 @@ function viewRoot(){const v=document.querySelector('[data-view=root]');v.textCon
 const row=k=>D.standings.flatMap(g=>g.rows).find(r=>r.key===k);const distance=D.standings.find(g=>g.title.indexOf('At a named distance')===0);
 v.append(el('h2',{},'How far the root reaches'),el('p',{class:'note'},'Each of the '+n+' distinct central declarations has one standing against the edge of one root. The strictest sense of unified is a law derived on that edge, each a case of grammar laws: '+(row('derived')?row('derived').n:0)+' are; '+(row('under a stated hypothesis')?row('under a stated hypothesis').n:0)+' is under a stated hypothesis and '+(row('counting')?row('counting').n:0)+' are counting, below the grammar. The other '+(distance?distance.n:0)+' stand at a named distance, each with its reason, named below. Each declaration and its standing is in ',link('theories/becoming/results/records/one-root-to-its-edge.md','the edge record'),D.bases?': '+D.bases.with+' have a basis in words, in ':'.',D.bases?link('theories/becoming/results/records/one-root-to-its-edge.json','its data'):'',D.bases?', and the other '+(n-D.bases.with)+' the label a rule gives; each at a distance has its named reason, its class, and '+D.bases.distance+' of them a basis in words.':''));
 D.standings.forEach(g=>{v.append(el('h3',{},g.title+' · '+g.n),bars(g.rows,max));});
-v.append(el('p',{class:'note'},'None of these is a premise. Most ranking results use two readings, listed apart: the continuation condition for scope and C for order. Neither is asserted, no warrant from outside is sought, and neither stands on the edge. ',link('theories/becoming/chapters/08-METHOD.md','Chapter 8'),' states the standings.'));
+v.append(el('p',{class:'note'},'None of these is a premise. Most ranking results use two readings, listed apart: the continuation condition for scope and C for order. Each is an order or scope some formations hold, and neither stands on the edge. ',link('theories/becoming/chapters/08-METHOD.md','Chapter 8'),' states the standings.'));
 const m2=Math.max(...D.reach.map(r=>r.n));v.append(el('h3',{style:'margin-top:22px'},'The same declarations, by Lean dependency'),el('p',{class:'small'},'A measurement of Lean dependency only: whether each declaration\'s compiled type or value reaches the grammar and, where it does not, where the declaration is stated (at a represented model, on its own carrier, or neither). ',link('theories/becoming/chapters/08-METHOD.md#shared-laws-and-connectivity','08 §7'),' also sorts the same declarations by the shared law they rest on.'),bars(D.reach,m2));}
 
 function viewCorpus(){const v=document.querySelector('[data-view=corpus]');v.textContent='';const c=D.corpus;

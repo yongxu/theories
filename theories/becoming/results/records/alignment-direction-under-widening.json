@@ -149,8 +149,8 @@
       "kind": "scope"
     },
     {
-      "zh": "代理退化的界：选择部分定性地重述代理问题，加上回应的闭包与池，不给这样的界；Zhuang and Hadfield-Menell（NeurIPS 2020）证明了更强的定理。",
-      "en": "A bound on proxy degradation: the selection part restates the proxy problem qualitatively and adds the responsive closure and the pool, giving no such bound; Zhuang and Hadfield-Menell (NeurIPS 2020) prove the stronger theorem.",
+      "zh": "代理问题之外没有关于对齐的结果：选择的规律定性地陈述它，Zhuang and Hadfield-Menell（NeurIPS 2020）证明了更强的定理。",
+      "en": "No result on alignment beyond the known proxy problem: the selection laws state it qualitatively, and Zhuang and Hadfield-Menell (NeurIPS 2020) prove a stronger theorem.",
       "kind": "correspondence"
     },
     {
@@ -533,8 +533,8 @@
       "zh": "2026年11月9日，工作板条目 WB：据 Ren 11 月 8–9 日之言重述伦理之框架：两个前提称为排序之果所用之两种读法，排序为排序者所持，不求外来之根据；主张、假设与 Lean 皆不变。"
     },
     {
-      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the not-shown item on the proxy problem re-said as what is not shown, a bound on proxy degradation, with what the selection part adds (the responsive closure and the pool); the README overview's summary re-said as the direction its makers offer, from chapter 7's home, in place of a normative framework that must; the claim and its Lean unchanged.",
-      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：关于代理问题的未表明之项重述为所未表明者，即代理退化的界，并说明选择部分所加者（回应的闭包与池）；README 概览之摘要依第 7 章之本处重述为其制作者所提供的方向，不再是一个“必须”的规范框架；主张与 Lean 皆不变。"
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the README overview's summary re-said as the direction its makers offer, from chapter 7's home, in place of a normative framework that must; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：README 概览之摘要依第 7 章之本处重述为其制作者所提供的方向，不再是一个“必须”的规范框架；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

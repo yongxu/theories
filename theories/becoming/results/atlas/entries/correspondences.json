@@ -1260,7 +1260,7 @@
     "record": "wisdom-root-without-axiom",
     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-wisdom-root-without-axiom",
     "says": {
-     "en": "Reading [AI reading, D26]: the chapter's laws match aspects of wisdom; 'The matching proves no coverage of wisdom, and the warrant of judgment goes through 07'."
+     "en": "Reading [AI reading, D26]: the chapter's laws match aspects of wisdom; 'The matching proves no coverage of wisdom; a judgment's being right or wrong is a reading formed within the unfolding, as 07 has it'."
     },
     "role": "limit",
     "part": "D26"
@@ -1664,7 +1664,7 @@
     "record": "a-race-for-position-draws-everything",
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-race-for-position-draws-everything",
     "says": {
-     "en": "Theorem: with at least two drawers, where what stands from nothing is at most what stands from anything left, every profile perfect for position draws everything at every step before the horizon. 'It does not show that actual races are so played, or that drawing everything is wrong.'"
+     "en": "Theorem: with at least two drawers, where what stands from nothing is at most what stands from anything left, every profile perfect for position draws everything at every step before the horizon. 'It does not show that actual races are so played.'"
     },
     "role": "carries"
    },
@@ -2335,7 +2335,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses",
     "says": {
-     "en": "Thesis T4: the scope can be installed, and it carries. How far seen: IN1 partly passed (with talk, one model of two); transfer untested. No condition kept an untold dependent. The scope told is the continuation condition's; calling a kept dependent better is C's."
+     "en": "Thesis T4: the scope can be installed, and it carries. IN1 partly passed (with talk, one model of two); transfer untested. No condition kept an untold dependent. The scope told is the continuation condition's."
     },
     "role": "neighbour",
     "part": "T4"
@@ -3079,7 +3079,7 @@
     "record": "selection-through-couplings",
     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
     "says": {
-     "en": "The main law holds by construction; its force lies in the supplied premise that an optimizer selects through just those couplings. 'It is the proxy problem (Goodhart 1975; Amodei and others 2016; Manheim and Garrabrant 2018) as the account states it'; 'What is stated is its blindness to what the proxy does not register', not Manheim and Garrabrant's regressional and causal kinds."
+     "en": "'The main law is the proxy problem (Goodhart 1975; Amodei and others 2016; Manheim and Garrabrant 2018) as the account states it'; it holds by construction, its force lying in the supplied premise that an optimizer selects through just those couplings; 'What is stated is its blindness to what the proxy does not register', not Manheim and Garrabrant's regressional and causal kinds."
     },
     "role": "carries"
    },
@@ -3207,7 +3207,7 @@
     "record": "selection-through-couplings",
     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
     "says": {
-     "en": "The main law holds by construction; its force lies in the supplied premise that an optimizer selects through just those couplings. 'It is the proxy problem (Goodhart 1975; Amodei and others 2016; Manheim and Garrabrant 2018) as the account states it'; 'What is stated is its blindness to what the proxy does not register', not Manheim and Garrabrant's regressional and causal kinds."
+     "en": "'The main law is the proxy problem (Goodhart 1975; Amodei and others 2016; Manheim and Garrabrant 2018) as the account states it'; it holds by construction, its force lying in the supplied premise that an optimizer selects through just those couplings; 'What is stated is its blindness to what the proxy does not register', not Manheim and Garrabrant's regressional and causal kinds."
     },
     "role": "carries"
    },
@@ -5643,7 +5643,7 @@
    {
     "anchor": "theories/becoming/chapters/02-MAP.md#t7",
     "says": {
-     "en": "Reading [AI reading, D26 as revised]: winners writing the next scorecard is ReadsShare, winners forming the minds that read it is ReadsShare on the reading. That readers are minds is a reading; none of this ranks a locked loop: what it keeps, opens or closes, and for whom, is 07's question."
+     "en": "Reading [AI reading, D26 as revised]: winners writing the next scorecard is ReadsShare, winners forming the minds that read it is ReadsShare on the reading. That readers are minds is a reading; what a locked loop keeps, opens or closes, and for whom, is 07's question."
     },
     "role": "carries",
     "part": "Reading D26"
@@ -7052,7 +7052,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses",
     "says": {
-     "en": "T4, how far seen: 'IN1 partly passed (with talk, one model of two); transfer untested.' One frozen condition, two models, the keeping held for one."
+     "en": "T4: 'IN1 partly passed (with talk, one model of two); transfer untested.' One frozen condition, two models, the keeping held for one."
     },
     "role": "neighbour",
     "part": "T4"
@@ -7119,7 +7119,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses",
     "says": {
-     "en": "T4, how far seen: IN1 partly passed (with talk, one model of two); transfer untested. 'with talk, one model kept the seen dependent in 8 of 10 seasons with the scope against 3 with the community's goal and 0 unseen'; 'no condition kept an untold dependent'."
+     "en": "T4: IN1 partly passed (with talk, one model of two); transfer untested. 'with talk, one model kept the seen dependent in 8 of 10 seasons with the scope against 3 with the community's goal and 0 unseen'; 'no condition kept an untold dependent'."
     },
     "role": "neighbour",
     "part": "T4"
@@ -9815,7 +9815,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses",
     "says": {
-     "en": "T4, how far seen: 'IN1 partly passed (with talk, one model of two); transfer untested.' 'no condition kept an untold dependent.' ONE-PAGE: language models told what to do, not systems trained."
+     "en": "T4: 'IN1 partly passed (with talk, one model of two); transfer untested.' 'no condition kept an untold dependent.' ONE-PAGE: language models told what to do, not systems trained."
     },
     "role": "carries",
     "part": "T4"
@@ -10219,7 +10219,7 @@
     "record": "a-race-for-position-draws-everything",
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-race-for-position-draws-everything",
     "says": {
-     "en": "Theorem: among two drawers or more in turn, each ranking position, every perfect profile draws everything where what stands from nothing is least; where something left stops what stands next a drawer keeps it. It does not show actual races are so played, or that drawing everything is wrong."
+     "en": "Theorem: among two drawers or more in turn, each ranking position, every perfect profile draws everything where what stands from nothing is least; where something left stops what stands next a drawer keeps it. It does not show actual races are so played."
     },
     "role": "neighbour"
    }
@@ -11413,14 +11413,14 @@
   "relation": "scope",
   "agreement_of": null,
   "reading": {
-   "en": "The loop has a home, by descent, for 02's D26 reads the corpus's own meta-attractor: winners forming the minds that read the scorecard is `ReadsShare` on the reading. And \"structural reform alone\" has a form: a perturbation keeping the rule's direction is absorbed, a change of reading too where formed from the share. But readers being minds stays a reading, and the verdict is refused: none of this ranks a locked loop: what it keeps, opens or closes, and for whom, is 07's question. At one person the nearest law is a counted lock, not the meta-attractor, its score standing. The source's disease is not asserted."
+   "en": "The loop has a home, by descent, for 02's D26 reads the corpus's own meta-attractor: winners forming the minds that read the scorecard is `ReadsShare` on the reading. And \"structural reform alone\" has a form: a perturbation keeping the rule's direction is absorbed, a change of reading too where formed from the share. But readers being minds stays a reading. At one person the nearest law is a counted lock, not the meta-attractor, its score standing. The source calls the capture a disease; no law here does, and what a locked loop keeps, opens or closes, and for whom, is 07's question."
   },
   "targets": [
    {
     "record": "capture-through-the-rule",
     "anchor": "theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule",
     "says": {
-     "en": "With the Reading on the corpus's meta-attractor [AI reading, D26 as revised]: winners writing the scorecard is ReadsShare, winners forming the minds that read it is ReadsShare on the reading; that readers are minds is a reading; none of this ranks a locked loop: what it keeps, opens or closes, and for whom, is 07's question."
+     "en": "With the Reading on the corpus's meta-attractor [AI reading, D26 as revised]: winners writing the scorecard is ReadsShare, winners forming the minds that read it is ReadsShare on the reading; that readers are minds is a reading; what a locked loop keeps, opens or closes, and for whom, is 07's question."
     },
     "role": "carries",
     "part": "D26"
@@ -12255,7 +12255,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#theses",
     "says": {
-     "en": "Thesis T4: an AI system told the scope abstractly keeps a dependent with no seat at a rate its community's goal does not reach wherever three couplings hold at once. How far seen: IN1 partly passed (with talk, one model of two); transfer untested; no condition kept an untold dependent. T4 tests installing the scope, which the continuation condition fixes; C gives order."
+     "en": "Thesis T4: an AI system told the scope abstractly keeps a dependent with no seat at a rate its community's goal does not reach wherever three couplings hold at once. IN1 partly passed (with talk, one model of two); transfer untested; no condition kept an untold dependent. T4 tests installing the scope the continuation condition fixes."
     },
     "role": "neighbour",
     "part": "T4"
@@ -17028,7 +17028,7 @@
    {
     "anchor": "theories/becoming/chapters/08-METHOD.md#known-results",
     "says": {
-     "en": "“None of the central results is new mathematics: each is near-definitional or a known result restated.” An AI review, “the search was not exhaustive”; a column lists “what the closest prior frameworks state that the account does not yet”."
+     "en": "“An AI review found none of the central results new mathematics: each is near-definitional or a known result restated”; “the search was not exhaustive”; a column lists “what the closest prior frameworks state that the account does not yet”."
     },
     "role": "neighbour"
    }
@@ -17470,7 +17470,7 @@
    {
     "anchor": "theories/becoming/chapters/02-MAP.md#t7",
     "says": {
-     "en": "Reading [AI reading, D26 as revised]: “A second order, corruption taking over courts, press, statistics and audit, is a loop whose rule-reading reaches the routes of 明 themselves”. “That readers are minds is a reading; none of this ranks a locked loop: what it keeps, opens or closes, and for whom, is 07's question.”"
+     "en": "Reading [AI reading, D26 as revised]: “A second order, corruption taking over courts, press, statistics and audit, is a loop whose rule-reading reaches the routes of 明 themselves”. “That readers are minds is a reading; what a locked loop keeps, opens or closes, and for whom, is 07's question.”"
     },
     "role": "carries",
     "part": "Reading D26"
@@ -17546,7 +17546,7 @@
     "record": "shaping-the-rule-selected-by-what-comes-back",
     "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-the-rule-selected-by-what-comes-back",
     "says": {
-     "en": "Counts: “At a step the rule favours the shapers (weakly) exactly where `c ≤ s`, whatever `p` comes to every member alike”; “a larger `p` pulls the rule toward even”; “With nothing coming back and a cost, the shapers' share falls strictly at every step”. Reading: “nothing here ranks open rule-making above capture: the account ranks only under a reading it names.”"
+     "en": "Counts: “At a step the rule favours the shapers (weakly) exactly where `c ≤ s`, whatever `p` comes to every member alike”; “a larger `p` pulls the rule toward even”; “With nothing coming back and a cost, the shapers' share falls strictly at every step”. Reading [D45]: “Whether actual institutions or trained systems meet these premises is not established.”"
     },
     "role": "carries"
    },
@@ -20141,7 +20141,7 @@
    {
     "anchor": "theories/becoming/chapters/08-METHOD.md#what-the-unifications-claim",
     "says": {
-     "en": "Landauer's and Bennett's irreversibility: one merge across computation, heat, extinction and forgetting. Standing: the law proved for determined maps on finitely many listed configurations; its reading across those fields a correspondence; kept as a law, since as a thesis it forbids little."
+     "en": "Landauer's and Bennett's irreversibility: one merge across computation, heat, extinction and forgetting. The law is proved for determined maps on finitely many listed configurations; its reading across those fields is a correspondence; kept as a law, since as a thesis it forbids little."
     },
     "role": "carries"
    },
@@ -23835,7 +23835,7 @@
    {
     "anchor": "theories/becoming/chapters/02-MAP.md#t7",
     "says": {
-     "en": "Reading [AI reading]: of the meta-attractor's closed loop, none of this ranks a locked loop: what it keeps, opens or closes, and for whom, is 07's question."
+     "en": "Reading [AI reading]: of the meta-attractor's closed loop, what a locked loop keeps, opens or closes, and for whom, is 07's question."
     },
     "role": "neighbour",
     "part": "D26 as revised"
@@ -24896,7 +24896,7 @@
    {
     "anchor": "theories/becoming/chapters/02-MAP.md#t7",
     "says": {
-     "en": "Reading [AI reading, D26]: winners writing the next scorecard is ReadsShare, winners forming the minds that read it is ReadsShare on the reading; none of this ranks a locked loop: what it keeps, opens or closes, and for whom, is 07's question. T7 on actual metrics is conjectured; in one trained system (LA2) the lock formed and the bridge failed."
+     "en": "Reading [AI reading, D26]: winners writing the next scorecard is ReadsShare, winners forming the minds that read it is ReadsShare on the reading; what a locked loop keeps, opens or closes, and for whom, is 07's question. T7 on actual metrics is conjectured; in one trained system (LA2) the lock formed and the bridge failed."
     },
     "role": "carries",
     "part": "D26 as revised"
@@ -28418,7 +28418,7 @@
    {
     "anchor": "theories/becoming/ONE-ARGUMENT.md",
     "says": {
-     "en": "It adds no result: every law it names is stated once, in the home section it links, and beyond applying those laws to the fishery it says no more of them."
+     "en": "It adds no result: every law it names is stated once, in the home section it links."
     },
     "role": "neighbour"
    }
@@ -30448,7 +30448,7 @@
     "record": null,
     "anchor": "GLOSSARY.md",
     "says": {
-     "en": "Meta-attractor: closed capture. \"It never means the corpus's working definition\"; that sense is another, neither shown to contain the other: the formal 元吸引子 says nothing of carriers, and whether a capture loop is 生成 at some pair of classes stays Open."
+     "en": "Meta-attractor: closed capture, \"one part of the corpus's meta-attractor in its account of power\". The corpus's working definition \"is another sense, not shown to contain closed capture or to be contained by it\": the formal 元吸引子 says nothing of carriers, and whether a capture loop is 生成 at some pair of classes stays Open."
     },
     "role": "carries"
    },
@@ -30940,7 +30940,7 @@
   "relation": "scope",
   "agreement_of": null,
   "reading": {
-   "en": "02's D45 reads the corpus's second order as this law with its conditions (by descent; the law stands apart), in counts: at a step, what comes back to the shapers alone against cost decides the direction; shaped groups add assortment; offspring carrying the capacity is a premise. The source's lever, shared returns flipping the sign, holds in a witness; where something comes back, shared rule-making is not shown to remove the selection. Nothing here ranks open rule-making above capture: a ranking takes an order someone holds, C or another (02 D45; 07 §4). [AI reading, D45, D68]"
+   "en": "02's D45 reads the corpus's second order as this law with its conditions (by descent; the law stands apart), in counts: at a step, what comes back to the shapers alone against cost decides the direction; shaped groups add assortment; offspring carrying the capacity is a premise. The source's lever, shared returns flipping the sign, holds in a witness; where something comes back, shared rule-making is not shown to remove the selection. [AI reading, D45, D68]"
   },
   "targets": [
    {
@@ -30980,7 +30980,7 @@
     "record": null,
     "anchor": "theories/becoming/chapters/02-MAP.md#capture",
     "says": {
-     "en": "Reading [AI reading, D45]: the corpus's second order is the law of the capacity to shape the rule with its conditions. Whether actual institutions or trained systems meet these premises is not established, and nothing here ranks open rule-making above capture: the account ranks only under a reading it names."
+     "en": "Reading [AI reading, D45]: the corpus's second order is the law of the capacity to shape the rule with its conditions. Whether actual institutions or trained systems meet these premises is not established."
     },
     "role": "carries",
     "part": "D45, the corpus's second order"
@@ -31199,7 +31199,7 @@
     "record": null,
     "anchor": "theories/becoming/chapters/02-MAP.md#capture",
     "says": {
-     "en": "Reading [AI reading, D26 as revised]: a second order, corruption taking over courts, press, statistics and audit, is a loop whose rule-reading reaches the routes of 明; a third, rewarding those who break the routes of correction, selects for narrowing what couples in. None of this ranks a locked loop: what it keeps, opens or closes, and for whom, is 07's question."
+     "en": "Reading [AI reading, D26 as revised]: a second order, corruption taking over courts, press, statistics and audit, is a loop whose rule-reading reaches the routes of 明; a third, rewarding those who break the routes of correction, selects for narrowing what couples in. What a locked loop keeps, opens or closes, and for whom, is 07's question."
     },
     "role": "carries",
     "part": "D26, second and third orders"
@@ -32520,7 +32520,7 @@
     "record": null,
     "anchor": "theories/becoming/chapters/02-MAP.md#capture",
     "says": {
-     "en": "Reading [AI reading, D45]: the others' late reading gives one horn of Collingridge's dilemma (1980) as a theorem and the other as a premise; the point of no return belongs to the share's course. Whether actual rules are read so is not established. Nothing here ranks a course: the account ranks only under a reading it names."
+     "en": "Reading [AI reading, D45]: the others' late reading gives one horn of Collingridge's dilemma (1980) as a theorem and the other as a premise; the point of no return belongs to the share's course. Whether actual rules are read so, and who such readers are, is not established: the one frozen test of the timing law, on a trained judge, found that judge's reading not a pool counted by kind, so the law did not apply there (LA2)."
     },
     "role": "carries",
     "part": "D45, Collingridge"
@@ -33057,14 +33057,14 @@
   "relation": "agreement",
   "agreement_of": "thesis-or-method",
   "reading": {
-   "en": "The account says the same of its laws: none ranks a locked loop, what it keeps, opens or closes, and for whom, being 07's question, and a returning organization can sustain benign creation. Attraction is not continuation. A difference: the source calls the destructive case assessable independently; here no law says a drain is a harm, and such an assessment is a ranking someone holds, under a scope and order they name. This neutrality is the wide sense's; 02 says the same of closed capture."
+   "en": "The account says the same of its laws: no law marks a locked loop good or bad, what it keeps, opens or closes, and for whom, being 07's question, and a returning organization can sustain benign creation. Attraction is not continuation. A difference: the source calls the destructive case assessable independently; here no law says a drain is a harm, and such an assessment is a ranking someone holds, under a scope and order they name. This neutrality is the wide sense's; 02 says the same of closed capture."
   },
   "targets": [
    {
     "record": null,
     "anchor": "theories/becoming/chapters/02-MAP.md#capture",
     "says": {
-     "en": "Reading [AI reading]: \"none of this ranks a locked loop: what it keeps, opens or closes, and for whom, is 07's question\"; and [D65] real loss can come with no capture loop, and a returning organization can sustain benign creation."
+     "en": "Reading [AI reading]: \"what a locked loop keeps, opens or closes, and for whom, is 07's question\"; and [D65] real loss can come with no capture loop, and a returning organization can sustain benign creation."
     },
     "role": "carries",
     "part": "D26; D65, three boundaries"
@@ -36445,7 +36445,7 @@
     "record": "a-race-for-position-draws-everything",
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-race-for-position-draws-everything",
     "says": {
-     "en": "Theorem. Among two drawers or more a best response for position keeps nothing. It does not show that actual races are so played, or that drawing everything is wrong."
+     "en": "Theorem. Among two drawers or more a best response for position keeps nothing. It does not show that actual races are so played."
     },
     "role": "neighbour"
    },
@@ -39131,7 +39131,7 @@
     "record": "a-race-for-position-draws-everything",
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-race-for-position-draws-everything",
     "says": {
-     "en": "Theorem. Among two drawers or more a best response for position keeps nothing. With one drawer every profile is perfect. It does not show that actual races are so played, or that drawing everything is wrong."
+     "en": "Theorem. Among two drawers or more a best response for position keeps nothing. With one drawer every profile is perfect. It does not show that actual races are so played."
     },
     "role": "carries"
    },
@@ -40107,7 +40107,7 @@
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-race-for-position-draws-everything",
     "role": "carries",
     "says": {
-     "en": "Theorem: among two drawers or more drawing in turn, ranking by position, a best response keeps nothing, and every perfect profile draws everything before the horizon. Not every race: where something left stops what stands next, drawing everything is not perfect. Nor that actual races are so played, or that drawing everything is wrong."
+     "en": "Theorem: among two drawers or more drawing in turn, ranking by position, a best response keeps nothing, and every perfect profile draws everything before the horizon. Not every race: where something left stops what stands next, drawing everything is not perfect. Nor that actual races are so played."
     }
    },
    {
@@ -42076,7 +42076,7 @@
     "role": "carries",
     "part": "Reading D26 as revised, the second and third orders",
     "says": {
-     "en": "Reading [AI, D26]: a second order, corruption taking over courts, press, statistics and audit, is a loop whose rule-reading reaches the routes of 明; a third, rewarding those who break the routes of correction, selects for narrowing what couples in. None of this ranks a locked loop: what it keeps, opens or closes, and for whom, is 07's question."
+     "en": "Reading [AI, D26]: a second order, corruption taking over courts, press, statistics and audit, is a loop whose rule-reading reaches the routes of 明; a third, rewarding those who break the routes of correction, selects for narrowing what couples in. What a locked loop keeps, opens or closes, and for whom, is 07's question."
     }
    },
    {
@@ -42685,7 +42685,7 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "Sharpest difference. The folder calls the spiral destructive in nature; here no law marks a dynamic good or bad, standards form within the unfolding (07 §1), and nothing ranks open rule-making above capture without C or another order someone holds; C is not derived from the condition. The nearest form of 'rational' is narrower: self-concern ranks one coupled ending below, with no C, and some self-concerned order reverses where a copy is kept. Goodness as rationally forced on any mind is what the account declines to claim."
+   "en": "Sharpest difference. The folder calls the spiral destructive in nature; here no law marks a dynamic good or bad, standards form within the unfolding (07 §1), and calling one course better than another takes C or another order someone holds; C is not derived from the condition. The nearest form of 'rational' is narrower: self-concern ranks one coupled ending below, with no C, and some self-concerned order reverses where a copy is kept. Goodness as rationally forced on any mind is what the account declines to claim."
   },
   "targets": [
    {
@@ -43957,7 +43957,7 @@
    {
     "anchor": "theories/becoming/chapters/02-MAP.md#t7",
     "says": {
-     "en": "Reading [AI reading, D45], under T7: the corpus's second order, 'that recursive selection favours mechanisms which increase control over future selection', 'is the law of the capacity to shape the rule with its conditions'. 'Whether actual institutions or trained systems meet these premises is not established, and nothing here ranks open rule-making above capture: the account ranks only under a reading it names.'"
+     "en": "Reading [AI reading, D45], under T7: the corpus's second order, 'that recursive selection favours mechanisms which increase control over future selection', 'is the law of the capacity to shape the rule with its conditions'. 'Whether actual institutions or trained systems meet these premises is not established.'"
     },
     "role": "carries",
     "part": "Reading D45, the corpus's second order"
@@ -45056,7 +45056,7 @@
     "record": "selection-through-couplings",
     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
     "says": {
-     "en": "Theorem (World; no premise). 'It is the proxy problem (Goodhart 1975; Amodei and others 2016; Manheim and Garrabrant 2018) as the account states it'; 'What is stated is its blindness to what the proxy does not register', not Manheim and Garrabrant's regressional and causal kinds; 'its force lies in the supplied premise that an optimizer selects through just those couplings'."
+     "en": "Theorem (World; no premise). 'The main law is the proxy problem (Goodhart 1975; Amodei and others 2016; Manheim and Garrabrant 2018) as the account states it'; 'What is stated is its blindness to what the proxy does not register', not Manheim and Garrabrant's regressional and causal kinds; 'its force lies in the supplied premise that an optimizer selects through just those couplings'."
     },
     "role": "carries"
    }
@@ -46688,7 +46688,7 @@
     "record": "a-race-for-position-draws-everything",
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-race-for-position-draws-everything",
     "says": {
-     "en": "Theorem (any law G, natural amounts). Among two drawers or more in turn with no floor, every profile perfect for position draws everything before the horizon, under its hypothesis on what stands next. It does not show that actual races are so played, or that drawing everything is wrong."
+     "en": "Theorem (any law G, natural amounts). Among two drawers or more in turn with no floor, every profile perfect for position draws everything before the horizon, under its hypothesis on what stands next. It does not show that actual races are so played."
     },
     "role": "neighbour"
    }
@@ -47685,7 +47685,7 @@
   "carried": "carried-in-part",
   "relation": "divergence",
   "reading": {
-   "en": "The list is not live, and the account's 'capture' is a loop on a rule. But 06 gives the trap a structure: monopolized entry, removed alternatives, later comers long dependent on one controller, read by what it does to what can be had; that row reads the early texts' own 限, so it comes by descent. 'As such not the problem' has forms: closing is by form no loss, mutual dependence is not mutual benefit. 'Captured dependence is' does not carry: no type is a verdict, and no law ranks a locked loop: what it keeps, opens or closes, and for whom, is 07's question."
+   "en": "The list is not live, and the account's 'capture' is a loop on a rule. But 06 gives the trap a structure: monopolized entry, removed alternatives, later comers long dependent on one controller, read by what it does to what can be had; that row reads the early texts' own 限, so it comes by descent. 'As such not the problem' has forms: closing is by form no loss, mutual dependence is not mutual benefit. 'Captured dependence is' does not carry: no type is a verdict, and what a locked loop keeps, opens or closes, and for whom, is 07's question."
   },
   "targets": [
    {
@@ -47715,7 +47715,7 @@
    {
     "anchor": "theories/becoming/chapters/02-MAP.md#t7",
     "says": {
-     "en": "Reading [AI reading, D26 as revised]. The closed loop reads winners writing the next scorecard and forming the minds that read it; none of this ranks a locked loop: what it keeps, opens or closes, and for whom, is 07's question."
+     "en": "Reading [AI reading, D26 as revised]. The closed loop reads winners writing the next scorecard and forming the minds that read it; what a locked loop keeps, opens or closes, and for whom, is 07's question."
     },
     "role": "carries",
     "part": "D26 as revised"
@@ -47868,7 +47868,7 @@
    {
     "anchor": "theories/becoming/chapters/02-MAP.md#t7",
     "says": {
-     "en": "Reading [AI reading, D26 as revised]. A second order, corruption taking over courts, press, statistics and audit, is a loop whose rule-reading reaches the routes of 明 themselves. None of this ranks a locked loop: what it keeps, opens or closes, and for whom, is 07's question."
+     "en": "Reading [AI reading, D26 as revised]. A second order, corruption taking over courts, press, statistics and audit, is a loop whose rule-reading reaches the routes of 明 themselves. What a locked loop keeps, opens or closes, and for whom, is 07's question."
     },
     "role": "neighbour",
     "part": "D26 as revised"
@@ -48591,7 +48591,7 @@
     "record": "giving-that-waits-on-giving",
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-giving-that-waits-on-giving",
     "says": {
-     "en": "Theorem (any type). In a ring of three, with a source giving whatever it waits on (giving first), all give from step 3 from every start. It does not show how waiting forms, or that cooperation is good."
+     "en": "Theorem (any type). In a ring of three, with a source giving whatever it waits on (giving first), all give from step 3 from every start. It does not show how waiting forms."
     },
     "role": "neighbour"
    }
@@ -48665,7 +48665,7 @@
    {
     "anchor": "theories/becoming/chapters/02-MAP.md#t7",
     "says": {
-     "en": "Reading [AI reading, D26 as revised]. A second order, corruption taking over courts, press, statistics and audit, is a loop whose rule-reading reaches the routes of 明 themselves. None of this ranks a locked loop: what it keeps, opens or closes, and for whom, is 07's question."
+     "en": "Reading [AI reading, D26 as revised]. A second order, corruption taking over courts, press, statistics and audit, is a loop whose rule-reading reaches the routes of 明 themselves. What a locked loop keeps, opens or closes, and for whom, is 07's question."
     },
     "role": "carries",
     "part": "D26 as revised"
@@ -49220,14 +49220,14 @@
    {
     "anchor": "theories/becoming/chapters/02-MAP.md#capture",
     "says": {
-     "en": "Reading [D26 as revised]: \"A second order, corruption taking over courts, press, statistics and audit, is a loop whose rule-reading reaches the routes of 明 themselves; a third, rewarding those who break the routes of correction, selects for narrowing what couples in.\" That readers are minds is a reading; none of this ranks a locked loop: what it keeps, opens or closes, and for whom, is 07's question."
+     "en": "Reading [D26 as revised]: \"A second order, corruption taking over courts, press, statistics and audit, is a loop whose rule-reading reaches the routes of 明 themselves; a third, rewarding those who break the routes of correction, selects for narrowing what couples in.\" That readers are minds is a reading; what a locked loop keeps, opens or closes, and for whom, is 07's question."
     },
     "role": "carries",
     "part": "D26 as revised, the second order"
    }
   ],
   "account_adds": {
-   "en": "The exits: a reader outside the share, a loss entering it, a new reading; and, drawn one member at a time, drift. That readers are minds is marked a reading, and none of it ranks a locked loop: what it keeps, opens or closes, and for whom, is 07's question."
+   "en": "The exits: a reader outside the share, a loss entering it, a new reading; and, drawn one member at a time, drift."
   },
   "source_adds": {
    "en": "The claim about actual discourse, wealth and norms, and the practical conclusion that the mind must be changed by a protocol, a culture and a place together."
@@ -49288,7 +49288,7 @@
     "record": "a-race-for-position-draws-everything",
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-race-for-position-draws-everything",
     "says": {
-     "en": "Theorem: where what stands from nothing is at most what stands from anything left, and there are at least two drawers, every profile perfect for position draws everything; with one drawer every profile is perfect; where something left would stop what stands next, a drawer keeps it to stop it. It does not show that actual races are so played, or that drawing everything is wrong."
+     "en": "Theorem: where what stands from nothing is at most what stands from anything left, and there are at least two drawers, every profile perfect for position draws everything; with one drawer every profile is perfect; where something left would stop what stands next, a drawer keeps it to stop it. It does not show that actual races are so played."
     },
     "role": "carries"
    },
@@ -50351,7 +50351,7 @@
     "record": "giving-that-waits-on-giving",
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-giving-that-waits-on-giving",
     "says": {
-     "en": "With a source giving whatever it waits on, all give from step 3 from every start, in a ring of three. It does not show how waiting forms, or that cooperation is good."
+     "en": "With a source giving whatever it waits on, all give from step 3 from every start, in a ring of three. It does not show how waiting forms."
     },
     "role": "neighbour"
    }
@@ -51374,7 +51374,7 @@
     "record": "a-race-for-position-draws-everything",
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-race-for-position-draws-everything",
     "says": {
-     "en": "Theorem: where what stands from nothing is at most what stands from anything left, and there are at least two drawers, every profile perfect for position draws everything; with one drawer every profile is perfect; where something left would stop what stands next, a drawer keeps it to stop it. It does not show that actual races are so played, or that drawing everything is wrong."
+     "en": "Theorem: where what stands from nothing is at most what stands from anything left, and there are at least two drawers, every profile perfect for position draws everything; with one drawer every profile is perfect; where something left would stop what stands next, a drawer keeps it to stop it. It does not show that actual races are so played."
     },
     "role": "carries"
    },
@@ -52514,7 +52514,7 @@
     "record": "a-race-for-position-draws-everything",
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-race-for-position-draws-everything",
     "says": {
-     "en": "Theorem: where what stands from nothing is at most what stands from anything left, and there are at least two drawers, every profile perfect for position draws everything; with one drawer every profile is perfect; where something left would stop what stands next, a drawer keeps it to stop it. It does not show that actual races are so played, or that drawing everything is wrong."
+     "en": "Theorem: where what stands from nothing is at most what stands from anything left, and there are at least two drawers, every profile perfect for position draws everything; with one drawer every profile is perfect; where something left would stop what stands next, a drawer keeps it to stop it. It does not show that actual races are so played."
     },
     "role": "carries"
    },
@@ -52931,7 +52931,7 @@
     "record": "a-race-for-position-draws-everything",
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-race-for-position-draws-everything",
     "says": {
-     "en": "Drawers in turn with no floor, ranking by position: where its own later draw is the same, among two or more a best response for position keeps nothing. Where what stands from nothing is at most what stands from anything left, every perfect profile draws everything. Not shown: that actual races are so played, or that drawing everything is wrong."
+     "en": "Drawers in turn with no floor, ranking by position: where its own later draw is the same, among two or more a best response for position keeps nothing. Where what stands from nothing is at most what stands from anything left, every perfect profile draws everything. Not shown: that actual races are so played."
     },
     "role": "carries"
    }
@@ -53276,7 +53276,7 @@
    {
     "anchor": "theories/becoming/chapters/02-MAP.md#capture",
     "says": {
-     "en": "Reading [AI reading, D26 as revised]: winners writing the next scorecard is ReadsShare, winners forming the minds that read it is ReadsShare on the reading. That readers are minds is a reading; none of this ranks a locked loop: what it keeps, opens or closes, and for whom, is 07's question."
+     "en": "Reading [AI reading, D26 as revised]: winners writing the next scorecard is ReadsShare, winners forming the minds that read it is ReadsShare on the reading. That readers are minds is a reading; what a locked loop keeps, opens or closes, and for whom, is 07's question."
     },
     "role": "carries",
     "part": "D26 as revised"
@@ -53617,7 +53617,7 @@
    {
     "anchor": "theories/becoming/chapters/02-MAP.md#capture",
     "says": {
-     "en": "Reading [AI reading, D26 as revised]: patterns of capture pass as patterns of care do; none of this ranks a locked loop: what it keeps, opens or closes, and for whom, is 07's question."
+     "en": "Reading [AI reading, D26 as revised]: patterns of capture pass as patterns of care do; what a locked loop keeps, opens or closes, and for whom, is 07's question."
     },
     "role": "neighbour",
     "part": "D26 as revised"
@@ -53633,7 +53633,7 @@
    }
   ],
   "account_adds": {
-   "en": "That nothing here ranks open rule-making above capture: the account ranks only under a reading it names."
+   "en": "The source's symmetry as a law: the lock belongs to how the rule reads, not the share it favours (capture through the rule, any type), and patterns of capture pass as patterns of care do (D26)."
   },
   "source_adds": {
    "en": "The cases named (care forming people capable of care, shared knowledge, open standards) and the question of what the recursion does to the field. This sits against the same folder's claim 236; see cx-zhishan-loops-not-symmetric."
@@ -56586,7 +56586,7 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "The account has no asymmetry between loops by what they favour: the lock belongs to how a rule reads, and nothing ranks open rule-making above capture without C or another order. What tells courses apart is widening, and calling the wider better is C's. A rule can be kept and be the wrong rule. The folder's direction-neutral meta-attraction fits its asymmetry: both loops self-reinforce, and they differ by what the recursion does to the field."
+   "en": "The account has no asymmetry between loops by what they favour: the lock belongs to how a rule reads, and ranking open rule-making above capture takes C or another order someone holds. What tells courses apart is widening, and C ranks a course above every course it widens. A rule can be kept and be the wrong rule. The folder's direction-neutral meta-attraction fits its asymmetry: both loops self-reinforce, and they differ by what the recursion does to the field."
   },
   "targets": [
    {
@@ -56601,7 +56601,7 @@
     "record": null,
     "anchor": "theories/becoming/chapters/02-MAP.md#capture",
     "says": {
-     "en": "Reading [AI reading, D45]: whether actual institutions or trained systems meet these premises is not established, and nothing here ranks open rule-making above capture: the account ranks only under a reading it names."
+     "en": "Reading [AI reading, D45]: whether actual institutions or trained systems meet these premises is not established."
     },
     "role": "carries",
     "part": "D45"
@@ -58603,7 +58603,7 @@
    {
     "anchor": "theories/becoming/chapters/02-MAP.md#t7",
     "says": {
-     "en": "Reading [AI, D26 as revised]: 'What leaves is 明, coupling joined to the selection so that it reaches what the share does not carry'; 'none of this ranks a locked loop: what it keeps, opens or closes, and for whom, is 07's question'. That actual metrics are so formed is conjectured."
+     "en": "Reading [AI, D26 as revised]: 'What leaves is 明, coupling joined to the selection so that it reaches what the share does not carry'; 'what a locked loop keeps, opens or closes, and for whom, is 07's question'. That actual metrics are so formed is conjectured."
     },
     "role": "neighbour",
     "part": "the reading after T7, D26 as revised"
@@ -58762,7 +58762,7 @@
     "record": "conditional-laws-of-the-corpus",
     "anchor": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md#r-conditional-laws-of-the-corpus",
     "says": {
-     "en": "G08 缘起之设: each occurrence not unconditioned (under double negation) exactly where under the one none begins; the grammar admits unconditioned occurrences (`«从缘生非文法之律»`). Standing: a model's premise, three sentences. Readings are AI reconstructions. None of the three is from 雜阿含."
+     "en": "G08 缘起之设: each occurrence not unconditioned (under double negation) exactly where under the one none begins; the grammar admits unconditioned occurrences (`«从缘生非文法之律»`). G08 is a model's premise, in three sentences. Readings are AI reconstructions. None of the three is from 雜阿含."
     },
     "role": "neighbour",
     "part": "G08"
@@ -59553,7 +59553,7 @@
     "record": "giving-that-waits-on-giving",
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-giving-that-waits-on-giving",
     "says": {
-     "en": "Theorem (any formations and relation of waiting): with memory one withholding ends all giving in a family it reaches; without memory it returns around every loop. In a ring of three, with a source giving whatever it waits on, all give from step 3 from every start. Not shown: how waiting forms, or that cooperation is good, or which giving supports 生生."
+     "en": "Theorem (any formations and relation of waiting): with memory one withholding ends all giving in a family it reaches; without memory it returns around every loop. In a ring of three, with a source giving whatever it waits on, all give from step 3 from every start. Not shown: how waiting forms, or which giving supports 生生."
     },
     "role": "carries"
    },
@@ -60975,7 +60975,7 @@
     "record": "a-race-for-position-draws-everything",
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-race-for-position-draws-everything",
     "says": {
-     "en": "Theorem: drawers in turn, each ranking its position against what all draw, draw everything at every step where what stands from nothing is least and there are at least two; where something left stops what stands next, a drawer keeps it. Not shown: that actual races are so played, or that drawing everything is wrong."
+     "en": "Theorem: drawers in turn, each ranking its position against what all draw, draw everything at every step where what stands from nothing is least and there are at least two; where something left stops what stands next, a drawer keeps it. Not shown: that actual races are so played."
     },
     "role": "carries"
    }
@@ -62963,7 +62963,7 @@
     "record": "wisdom-root-without-axiom",
     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-wisdom-root-without-axiom",
     "says": {
-     "en": "Reading [AI, D26]: checked laws 'match aspects of wisdom', among them judgment (a common response). 'The matching proves no coverage of wisdom, and the warrant of judgment goes through 07.'"
+     "en": "Reading [AI, D26]: checked laws 'match aspects of wisdom', among them judgment (a common response). 'The matching proves no coverage of wisdom; a judgment's being right or wrong is a reading formed within the unfolding, as 07 has it.'"
     },
     "role": "limit"
    },
@@ -64424,7 +64424,7 @@
     "record": "giving-that-waits-on-giving",
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#giving-waits",
     "says": {
-     "en": "Theorem (any type: any formations and any relation of waiting): with memory, 'a withholding stays and spreads downstream along every chain of waits'; 'more waiting gives no more at any step'; in a ring of three, with a source giving whatever it waits on (giving first), all give from step 3 from every start. 'It does not show how waiting forms, or that cooperation is good'."
+     "en": "Theorem (any type: any formations and any relation of waiting): with memory, 'a withholding stays and spreads downstream along every chain of waits'; 'more waiting gives no more at any step'; in a ring of three, with a source giving whatever it waits on (giving first), all give from step 3 from every start. 'It does not show how waiting forms'."
     },
     "role": "neighbour"
    },
@@ -66425,7 +66425,7 @@
     "record": "a-pair-tolerates-only-within-a-window",
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-pair-tolerates-only-within-a-window",
     "says": {
-     "en": "Under answers one withholding echoes and the pair never give together again. Reading [AI reading, new]: the window is a relative of forgiveness for errors spaced within it; under errors by chance it delays total withholding and does not prevent it. Nothing here says which law of giving is better."
+     "en": "Under answers one withholding echoes and the pair never give together again. Reading [AI reading, new]: the window is a relative of forgiveness for errors spaced within it; under errors by chance it delays total withholding and does not prevent it."
     },
     "role": "neighbour",
     "part": "the window as a relative of forgiveness"
@@ -66485,7 +66485,7 @@
     "record": "giving-that-waits-on-giving",
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-giving-that-waits-on-giving",
     "says": {
-     "en": "Any type: in a ring of three, from one withholding, with memory all withhold from step 2, and with a source giving whatever it waits on (giving first) all give from step 3 from every start. It does not show how waiting forms, or that cooperation is good."
+     "en": "Any type: in a ring of three, from one withholding, with memory all withhold from step 2, and with a source giving whatever it waits on (giving first) all give from step 3 from every start. It does not show how waiting forms."
     },
     "role": "carries",
     "part": "giving first, in the ring of three"
@@ -66756,7 +66756,7 @@
     "part": "T4",
     "role": "neighbour",
     "says": {
-     "en": "Thesis T4, on AI systems: told the scope abstractly, a system keeps a dependent with no seat wherever three couplings hold at once (the dependent seen, the scope counted, the members' takes read together). How far seen: IN1 partly passed, with talk, one model of two; transfer untested; no condition kept an untold dependent."
+     "en": "Thesis T4, on AI systems: told the scope abstractly, a system keeps a dependent with no seat wherever three couplings hold at once (the dependent seen, the scope counted, the members' takes read together). IN1 partly passed, with talk, one model of two; transfer untested; no condition kept an untold dependent."
     }
    },
    {
@@ -66822,7 +66822,7 @@
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-giving-that-waits-on-giving",
     "role": "carries",
     "says": {
-     "en": "Theorem, any formations and any relation of waiting. With memory a withholding stays and spreads downstream; without memory it returns on a loop of p waits at every multiple of p. It does not show how waiting forms, or that cooperation is good."
+     "en": "Theorem, any formations and any relation of waiting. With memory a withholding stays and spreads downstream; without memory it returns on a loop of p waits at every multiple of p. It does not show how waiting forms."
     }
    },
    {
@@ -66839,7 +66839,7 @@
     "part": "the correspondence to Axelrod and Hamilton",
     "role": "neighbour",
     "says": {
-     "en": "Correspondence, AI reading, not formal names: answering is tit-for-tat, waiting on all grim trigger, giving whatever comes unconditional cooperation (Axelrod and Hamilton 1981; Axelrod 1984). Nothing here says which law of giving is better."
+     "en": "Correspondence, AI reading, not formal names: answering is tit-for-tat, waiting on all grim trigger, giving whatever comes unconditional cooperation (Axelrod and Hamilton 1981; Axelrod 1984)."
     }
    },
    {
@@ -68805,7 +68805,7 @@
    {
     "anchor": "GLOSSARY.md",
     "says": {
-     "en": "Meta-attractor: closed capture; 'It never means the corpus's working definition, a recurrent organization of activity whose consequences help reproduce the conditions selecting that organization across changes in its particular carriers: that sense is another, neither shown to contain the other: the formal 元吸引子 says nothing of carriers'."
+     "en": "Meta-attractor: closed capture; 'The corpus's working definition, a recurrent organization of activity whose consequences help reproduce the conditions selecting that organization across changes in its particular carriers, is another sense, not shown to contain closed capture or to be contained by it: the formal 元吸引子 says nothing of carriers'."
     },
     "role": "carries",
     "part": "the meta-attractor row"
@@ -68873,7 +68873,7 @@
     "record": null,
     "anchor": "GLOSSARY.md",
     "says": {
-     "en": "The working definition, 'a recurrent organization of activity whose consequences help reproduce the conditions selecting that organization across changes in its particular carriers', is not the formal term: 'that sense is another, neither shown to contain the other'."
+     "en": "The working definition, 'a recurrent organization of activity whose consequences help reproduce the conditions selecting that organization across changes in its particular carriers', is 'another sense, not shown to contain closed capture or to be contained by it'."
     },
     "role": "carries",
     "part": "the meta-attractor row"
@@ -75357,7 +75357,7 @@
   "relation": "agreement",
   "agreement_of": "reading",
   "reading": {
-   "en": "Proposed here, not in the account, and only for HOT's 'unanticipated' half: what an optimizing order does not read takes the shared constraint's cost. With room, every optimum stands at the least level beyond. Fragility to rare events differs: HOT's design reads their probability and weighs them low, which this law does not state. HOT's tail law has no counterpart. Standing: my reading only."
+   "en": "Proposed here, not in the account, and only for HOT's 'unanticipated' half: what an optimizing order does not read takes the shared constraint's cost. With room, every optimum stands at the least level beyond. Fragility to rare events differs: HOT's design reads their probability and weighs them low, which this law does not state. HOT's tail law has no counterpart."
   },
   "targets": [
    {
@@ -75480,7 +75480,7 @@
     "record": "tolerance-monotone-across-laws",
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-tolerance-monotone-across-laws",
     "says": {
-     "en": "Theorem (any type): for the same waits and start, a formation giving under a tolerating law gives under every tolerating law with tolerances no smaller. It shows only that more tolerance gives no less, not that it is better. Correspondence field: monotone threshold dynamics."
+     "en": "Theorem (any type): for the same waits and start, a formation giving under a tolerating law gives under every tolerating law with tolerances no smaller: more tolerance gives no less at any step. Correspondence field: monotone threshold dynamics."
     },
     "role": "carries"
    },
@@ -77758,7 +77758,7 @@
    {
     "anchor": "theories/becoming/chapters/04-LIFE.md#blind-selection",
     "says": {
-     "en": "Fitness is not defined, and no reproductive advantage is ethical authority. It adds no new population-genetic prediction."
+     "en": "It adds no new population-genetic prediction. Fitness is not defined; a reproductive advantage is a difference in offspring counts, and the standards that rank courses form within the unfolding (07 §1)."
     },
     "role": "carries"
    },
@@ -77779,7 +77779,7 @@
    }
   ],
   "account_adds": {
-   "en": "What 04 states: 'Fitness is not defined, and no reproductive advantage is ethical authority.' The only live mention of inclusive fitness is one correspondence credit of additive equivalence, for groupmates' returns. 04 section 8's caution on inference is the separate entry on adaptationist inference."
+   "en": "What 04 states: 'Fitness is not defined; a reproductive advantage is a difference in offspring counts'. The only live mention of inclusive fitness is one correspondence credit of additive equivalence, for groupmates' returns. 04 section 8's caution on inference is the separate entry on adaptationist inference."
   },
   "source_adds": {
    "en": "An individual-level design quantity, and the adaptationist explanatory practice built on it. A biologist could say the account gives up a tool that explains organisms' fit."
@@ -78716,7 +78716,7 @@
    {
     "anchor": "theories/becoming/chapters/02-MAP.md#t2",
     "says": {
-     "en": "Standing: 'conjectured, on the four frozen fish-stock tests above; untested on a wild condition outside fisheries'. T2's state is level, recent giving and one lag 'as far as the level's own history does'. 'The failure stays on record as a loss of the broader claim, not a narrowing chosen in advance'; it 'defeats T2's class as worded in that domain, not the reading 08 §9 names, nor T2 in the fisheries, where MQ5's verdicts on the state and the lag passed (its two on the draw's response failed)'. A stage before recruitment 'may now carry more without counting against T2'."
+     "en": "T2 is 'conjectured, on the four frozen fish-stock tests above; untested on a wild condition outside fisheries'. T2's state is level, recent giving and one lag 'as far as the level's own history does'. 'The failure stays on record as a loss of the broader claim, not a narrowing chosen in advance'; it 'defeats T2's class as worded in that domain, not the reading 08 §9 names, nor T2 in the fisheries, where MQ5's verdicts on the state and the lag passed (its two on the draw's response failed)'. A stage before recruitment 'may now carry more without counting against T2'."
     },
     "role": "carries"
    },
@@ -78774,7 +78774,7 @@
     "record": "selection-through-couplings",
     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
     "says": {
-     "en": "'It is the proxy problem (Goodhart 1975; Amodei and others 2016; Manheim and Garrabrant 2018) as the account states it'; 'What is stated is its blindness to what the proxy does not register; Manheim and Garrabrant's regressional and causal kinds, which turn on noise and on intervention, are not stated'. 'The main law holds by construction; its force lies in the supplied premise'."
+     "en": "'The main law is the proxy problem (Goodhart 1975; Amodei and others 2016; Manheim and Garrabrant 2018) as the account states it'; 'What is stated is its blindness to what the proxy does not register; Manheim and Garrabrant's regressional and causal kinds, which turn on noise and on intervention, are not stated'. 'It holds by construction; its force lies in the supplied premise'."
     },
     "role": "carries"
    },
@@ -79210,7 +79210,7 @@
    {
     "anchor": "theories/becoming/chapters/02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected",
     "says": {
-     "en": "Reading, AI: joins the lock to control's selection, on counts, the start deciding without noise. Whether actual rules are read so 'is not established', and 'nothing here ranks a course: the account ranks only under a reading it names'."
+     "en": "Reading, AI: joins the lock to control's selection, on counts, the start deciding without noise. Whether actual rules are read so 'is not established'."
     },
     "role": "limit"
    }
@@ -81259,7 +81259,7 @@
    {
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-race-for-position-draws-everything",
     "says": {
-     "en": "Theorem (any law of what stands next, natural amounts). Drawers in turn ranking by position: among two or more a best response keeps nothing, and where what stands from nothing is at most what stands from anything left, every perfect profile draws everything before the horizon. It does not show that actual races are so played, or that drawing everything is wrong."
+     "en": "Theorem (any law of what stands next, natural amounts). Drawers in turn ranking by position: among two or more a best response keeps nothing, and where what stands from nothing is at most what stands from anything left, every perfect profile draws everything before the horizon. It does not show that actual races are so played."
     },
     "role": "carries",
     "record": "a-race-for-position-draws-everything"
@@ -81630,7 +81630,7 @@
    }
   ],
   "account_adds": {
-   "en": "Exits with exact windows, and that a lock is not thereby bad: none of this ranks a locked loop: what it keeps, opens or closes, and for whom, is 07's question, and ranking a course takes an order someone holds, C or another."
+   "en": "Exits with exact windows, and that a lock is not thereby bad: what a locked loop keeps, opens or closes, and for whom, is 07's question."
   },
   "source_adds": {
    "en": "The engineering argument, goal stability under copying and error correction; a dominant actor's strategy; the long reflection; the claim that lock-in may happen soon. Calling lock-in a loss is the source's premise, not something any law here gives. Keeping exploration open has a neighbour in C, but MacAskill's reason is moral uncertainty, and C reads what can form."

@@ -24,7 +24,7 @@
 
 **现状。** [Lean](../../MAP.md#check-the-proofs-yourself) 是一个证明检查器，为[已登记的 {{count:registered}} 条结果](../../RESULTS.md)中的 {{count:recorded-checked}} 条给出回执；回执只表明每条陈述能从它的前提推出，不表明前提成立。一次对照它所知文献的自动化回顾，并不穷尽，发现[核心结果中没有一个是新的数学](../../theories/becoming/chapters/08-METHOD.md#known-results)。留下来的有三样，没有一样是一项发现：前提账簿，每个前提都被表明在一个模型中成立、在另一个中不成立；作为两种读法分开的范围与次序；同一套词汇，用于守恒、受观察所限的选择，以及机会集的比较。[它的论题](../../theories/becoming/chapters/08-METHOD.md#theses)接受检验：在指明论题的 {{tests:total}} 项检验中（[按论题](../../TESTS.zh.md#by-thesis)），{{tests:ran}} 项运行过，都在评分之前冻结，其中 {{tests:mixed}} 项结局为「有通过，有未通过」，{{tests:passed}} 项通过，{{tests:failed}} 项未通过，{{tests:other}} 项是其他结局；{{tests:unrun}} 项从未运行。这项工作借助 AI 做成；主持它的人读过其中重要的部分，尚无独立的人工审查记录（[审查包](../../theories/becoming/review/README.zh.md)）。
 
-![八章及其彼此记录下的使用](../../theories/becoming/results/spine.zh.svg)
+![八章及各章彼此之间有记录的使用](../../theories/becoming/results/spine.zh.svg)
 
 *117 个核心声明中，约十分之一读作在文法（本论的关系演算）上陈述之律的情形：11 个[推导而得](../../GLOSSARY.zh.md#derived)，在 08 §7 的审阅中各读作一个情形，1 个，即一个根形式在一步上的情形，在一个所述的假设之下；其余 6 个是计数之律，位于文法以下，99 个处于一个[指明的距离](../../GLOSSARY.zh.md#named-distance)，各有其理由（Lean 核验了其中什么，见 [08 §7](../../theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge)）；[这幅图显示什么、不显示什么](../../theories/becoming/results/THEORY-GRAPH.zh.md#the-spine-what-it-shows-and-does-not-show)；本论[怎样长成](../../theories/LINEAGE.zh.md)。*
 

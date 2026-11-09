@@ -117,6 +117,6 @@ Against a rival: J2 is [defended](chapters/07-SIGNIFICANCE.md#r-basic-priority-s
 
 ## What this comes to
 
-The steps are not one deduction; the table says how far each has been seen. One law, proved in Lean of optima with room and known in another form (step 2), meets trained systems in T3, a claim that can fail (step 3); the frozen tests near it fell both ways (step 4), and the first to vary nearness, LA4's Stage A, contradicted nothing and left the locus unresolved (step 5). A refutation of T3 would remove no theorem; an LA4 pass would be first support on systems trained by gradient, in a toy season, on the families tested, saying nothing of scale or of real deployments. Where the courses are mixed, step 6 names what each further judgment would take to decide.
+The steps are not one deduction; the table says how far each has been seen. A refutation of T3 would remove no theorem, and step 5 says what an LA4 pass would be. Where the courses are mixed, step 6 names what each further judgment would take to decide.
 
 *Asked for by two AI cold readers of the fronts; read by independent AI readers ([first](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/REVIEW-ONE-ARGUMENT.md), [second](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/REVIEW-RESYNC.md)).*
