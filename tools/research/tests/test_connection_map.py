@@ -295,10 +295,14 @@ class SiteTests(unittest.TestCase):
                 cm.main(argv)
 
     def test_the_site_page_has_its_line_home_and_a_summary_without_script(self):
-        page = cm.site_map(self.out, self.base, {cm.CROSSWALK_PATH: 'crosswalk.html'}, nav=[('Chapters', 'chapters.html')]).read_text()
+        page = cm.site_map(self.out, self.base, {cm.CROSSWALK_PATH: 'crosswalk.html'}, nav=[('Chapters', 'chapters.html'), ('Connections', 'connections.html')],
+                           search='assets/search.js').read_text()
         body = page.split('<body>', 1)[1]
-        self.assertTrue(body.lstrip().startswith('<nav class="sitebar" aria-label="Site"><a class="home" href="index.html">The Theory of Becoming</a>'
-                                                 '<a href="chapters.html">Chapters</a></nav>'))
+        self.assertTrue(body.lstrip().startswith('<script src="assets/search.js" data-root="" defer></script>\n'
+                                                 '<header class="top"><a class="brand" href="index.html">The Theory of Becoming</a>'
+                                                 '<nav aria-label="Site"><a href="chapters.html">Chapters</a>'
+                                                 '<a href="connections.html" aria-current="page">Connections</a></nav>'
+                                                 '<button class="find" type="button" hidden>Search</button></header>'))  # the site's header, as every page has it
         noscript = re.search(r'<noscript>(.*?)</noscript>', page, re.S).group(1)
         lede, sub = cm._ledes(self.data(page))
         self.assertIn(f'<p class="lede" id="lede">{html.escape(lede)}</p>', page)  # written in, the same with or without script
@@ -313,7 +317,7 @@ class SiteTests(unittest.TestCase):
 
     def test_the_repository_page_has_the_summary_and_no_site_line(self):
         page = cm.page(cm.payload(atlas(entry('cx-a', 'cxg-early')), GRAPH, SHARED))
-        self.assertNotIn('class="sitebar"', page)
+        self.assertNotIn('<header class="top"', page)
         self.assertIn('<a href="../../../../' + cm.CROSSWALK_PATH + '">the crosswalk</a>', page)
         self.assertNotIn("getElementById('lede').textContent", page)  # the header is written in, not by the script
         fragment = cm.fragment(cm.payload(atlas(entry('cx-a', 'cxg-early')), GRAPH, SHARED, base=None))

@@ -22,8 +22,15 @@
 --beam:#e6dfd0;--beam-ink:#17140f;--beam-muted:#5d5548;--bar:#a89e8c;--focus:#ece6d9;
 --agreement:#4a90e2;--scope:#b48c0e;--divergence:#cf3f22;--contrary-reading:#10a586;}
 *{box-sizing:border-box}
-.sitebar{display:flex;flex-wrap:wrap;gap:4px 18px;padding:10px var(--gutter-r) 10px var(--gutter-l);border-bottom:1px solid var(--rule);font:500 14px/1.3 var(--sans);background:var(--panel)}
-.sitebar a{color:var(--ink-2);text-decoration:none}.sitebar a.home{color:var(--ink);font-weight:600}.sitebar a:hover{text-decoration:underline}
+header.top{position:sticky;top:0;z-index:2;display:flex;align-items:baseline;gap:1.2rem;padding:9px var(--gutter-r) 9px var(--gutter-l);border-bottom:1px solid var(--rule);font:500 14px/1.3 var(--sans);background:var(--paper)}
+header.top .brand{color:var(--ink);font-weight:600;white-space:nowrap;flex:none;text-decoration:none}
+header.top nav{display:flex;gap:.9rem;min-width:0;overflow-x:auto;white-space:nowrap;scrollbar-width:none}header.top nav::-webkit-scrollbar{display:none}
+header.top nav a{color:var(--muted);text-decoration:none}header.top nav a:hover{text-decoration:underline}header.top nav a[aria-current="page"]{color:var(--ink);border-bottom:2px solid var(--ink)}
+button.find{flex:none;margin-left:auto;font:inherit;color:var(--muted);background:none;border:1px solid var(--rule);border-radius:4px;padding:0 .5rem;cursor:pointer}button.find:hover{color:var(--ink);border-color:var(--muted)}
+div.find-panel{position:fixed;top:3rem;left:50%;transform:translateX(-50%);z-index:3;width:min(calc(100vw - 32px),40rem);max-height:76vh;overflow-y:auto;padding:.7rem;background:var(--panel);border:1px solid var(--rule);border-radius:6px;box-shadow:0 8px 28px rgba(0,0,0,.22);font:15px/1.35 var(--sans)}
+div.find-panel input{width:100%;font:inherit;padding:.4rem .5rem;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:4px}
+div.find-panel p{margin:.5rem 0 0;color:var(--muted)}div.find-panel p:empty{display:none}div.find-panel ul{list-style:none;padding:0;margin:.5rem 0 0}
+div.find-panel li{margin:0;border-top:1px solid var(--rule)}div.find-panel a{display:block;padding:.4rem .2rem;color:var(--ink)}div.find-panel small{display:block;color:var(--muted);font-size:.8em}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 var(--serif)}
 .wrap{max-width:1560px;margin:0 auto;padding:28px var(--gutter-r) 64px var(--gutter-l)}

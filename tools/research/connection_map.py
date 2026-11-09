@@ -324,12 +324,16 @@ def page(data: dict, bar: str = '') -> str:
             f'<style>{CSS}</style>\n</head>\n<body>\n{bar}{_body(data)}</body>\n</html>\n')
 
 
-def site_bar(home: str = 'index.html', nav: list[tuple[str, str]] | None = None) -> str:
-    """The site's line above the map: its name linking home, then any further (label, href) the site gives, each href
-    relative to the map."""
-    items = [f'<a class="home" href="{html.escape(home)}">The Theory of Becoming</a>']
-    items += [f'<a href="{html.escape(href)}">{html.escape(label)}</a>' for label, href in (nav or [])]
-    return f'<nav class="sitebar" aria-label="Site">{"".join(items)}</nav>\n'
+def site_bar(home: str = 'index.html', nav: list[tuple[str, str]] | None = None, search: str | None = None,
+             current: str = 'connections.html') -> str:
+    """The site's header above the map, as every page of the site has it: its name linking home, its line of (label,
+    href) links, each href relative to the map and the map's own marked as the current page, and, given the site's
+    search script, the Search button that script opens."""
+    links = ''.join(f'<a href="{html.escape(href)}"' + (' aria-current="page"' if href == current else '') + f'>{html.escape(label)}</a>'
+                    for label, href in (nav or []))
+    script = f'<script src="{html.escape(search)}" data-root="" defer></script>\n' if search else ''
+    return (f'{script}<header class="top"><a class="brand" href="{html.escape(home)}">The Theory of Becoming</a>'
+            f'<nav aria-label="Site">{links}</nav><button class="find" type="button" hidden>Search</button></header>\n')
 
 
 def check_site(link_base: str, site_paths: dict[str, str] | None = None) -> None:
@@ -343,13 +347,14 @@ def check_site(link_base: str, site_paths: dict[str, str] | None = None) -> None
 
 
 def site_map(out_dir: str | Path, link_base: str, site_paths: dict[str, str] | None = None, home: str = 'index.html',
-             nav: list[tuple[str, str]] | None = None) -> Path:
+             nav: list[tuple[str, str]] | None = None, search: str | None = None) -> Path:
     """Write OUT_DIR/map.html for a site and return its path. A link that leaves the map goes to `link_base` followed by
     the repository path, `link_base` ending in / (a permalink prefix such as https://github.com/<owner>/<repo>/blob/<sha>/,
     or a relative path to a copy of the repository); a repository path in `site_paths` goes instead to the URL the site
     gives it (relative to map.html, or absolute), the link's #anchor kept. The page reads the atlas's, the graph's and
     the shared laws' data as rendered in this checkout, so a site is built after a render. Above the map stands the site's
-    line: its name linking `home`, then `nav`'s (label, href) pairs, each href relative to map.html."""
+    header: its name linking `home`, then `nav`'s (label, href) pairs, each href relative to map.html, and, given `search`
+    (the site's search script, relative to map.html), its Search button."""
     check_site(link_base, site_paths)
     if not isinstance(home, str) or any(not (isinstance(pair, (tuple, list)) and len(pair) == 2 and all(isinstance(x, str) for x in pair))
                                          for pair in (nav or [])):
@@ -360,7 +365,7 @@ def site_map(out_dir: str | Path, link_base: str, site_paths: dict[str, str] | N
     data['site'] = dict(sorted((site_paths or {}).items()))
     out = Path(out_dir) / 'map.html'
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(page(data, site_bar(home, nav)), encoding='utf-8')
+    out.write_text(page(data, site_bar(home, nav, search)), encoding='utf-8')
     return out
 
 
@@ -702,8 +707,15 @@ CSS = r'''
 --beam:#e6dfd0;--beam-ink:#17140f;--beam-muted:#5d5548;--bar:#a89e8c;--focus:#ece6d9;
 --agreement:#4a90e2;--scope:#b48c0e;--divergence:#cf3f22;--contrary-reading:#10a586;}
 *{box-sizing:border-box}
-.sitebar{display:flex;flex-wrap:wrap;gap:4px 18px;padding:10px var(--gutter-r) 10px var(--gutter-l);border-bottom:1px solid var(--rule);font:500 14px/1.3 var(--sans);background:var(--panel)}
-.sitebar a{color:var(--ink-2);text-decoration:none}.sitebar a.home{color:var(--ink);font-weight:600}.sitebar a:hover{text-decoration:underline}
+header.top{position:sticky;top:0;z-index:2;display:flex;align-items:baseline;gap:1.2rem;padding:9px var(--gutter-r) 9px var(--gutter-l);border-bottom:1px solid var(--rule);font:500 14px/1.3 var(--sans);background:var(--paper)}
+header.top .brand{color:var(--ink);font-weight:600;white-space:nowrap;flex:none;text-decoration:none}
+header.top nav{display:flex;gap:.9rem;min-width:0;overflow-x:auto;white-space:nowrap;scrollbar-width:none}header.top nav::-webkit-scrollbar{display:none}
+header.top nav a{color:var(--muted);text-decoration:none}header.top nav a:hover{text-decoration:underline}header.top nav a[aria-current="page"]{color:var(--ink);border-bottom:2px solid var(--ink)}
+button.find{flex:none;margin-left:auto;font:inherit;color:var(--muted);background:none;border:1px solid var(--rule);border-radius:4px;padding:0 .5rem;cursor:pointer}button.find:hover{color:var(--ink);border-color:var(--muted)}
+div.find-panel{position:fixed;top:3rem;left:50%;transform:translateX(-50%);z-index:3;width:min(calc(100vw - 32px),40rem);max-height:76vh;overflow-y:auto;padding:.7rem;background:var(--panel);border:1px solid var(--rule);border-radius:6px;box-shadow:0 8px 28px rgba(0,0,0,.22);font:15px/1.35 var(--sans)}
+div.find-panel input{width:100%;font:inherit;padding:.4rem .5rem;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:4px}
+div.find-panel p{margin:.5rem 0 0;color:var(--muted)}div.find-panel p:empty{display:none}div.find-panel ul{list-style:none;padding:0;margin:.5rem 0 0}
+div.find-panel li{margin:0;border-top:1px solid var(--rule)}div.find-panel a{display:block;padding:.4rem .2rem;color:var(--ink)}div.find-panel small{display:block;color:var(--muted);font-size:.8em}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 var(--serif)}
 .wrap{max-width:1560px;margin:0 auto;padding:28px var(--gutter-r) 64px var(--gutter-l)}
