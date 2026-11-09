@@ -1,0 +1,64 @@
+{
+ "file": "theories/becoming/chapters/03-KNOWING.md",
+ "edited": [
+  {
+   "file": "theories/becoming/chapters/03-KNOWING.md",
+   "changes": 7
+  }
+ ],
+ "skipped": [],
+ "applied": [
+  {
+   "line": 5,
+   "kind": "under-saying",
+   "done": "Thesis: after the 文 clause, added the sentences about what a reader of a formation's acts fixes (§11: what strict choices with no cycle show, the act at an unread occasion left open, and when complying when read is uniquely best among four plans in two stages) and about the reading loop (§12: candidates kept exactly where they fit the answers to the formation's own acts; what holding for a reading that tells the candidate is worth, and a rule's shortfall), plus a labelled reading [AI reading, new] naming goal misgeneralization, evaluation and deployment, deceptive alignment's incentive and the off-switch game. Added T6's three frozen field tests to its Open clause, in line 495's words. Applied as the verifier modified it, with one scope put back: the shortfall clause now says 'any other rule of stopping that is a function of the candidate' (HeldForReading.byRule, line 545)."
+  },
+  {
+   "line": 7,
+   "kind": "under-saying",
+   "done": "Where this chapter sits: it now hands §11 (#what-the-acts-show) and §12 (#the-reading-loop) to alignment along with what a selection reaches, pointing to 07 §6 (#alignment-without-premise) and §7 (#direction). Every anchor was checked in 03 and 07. 07 links §11 at lines 665 and 691 and §11/§12 at lines 736, 738, 741 and 746."
+  },
+  {
+   "line": 29,
+   "kind": "defence",
+   "done": "The paragraph now opens with 'The main law is the proxy problem (...) as the account states it: ...', followed by 'It holds by construction; its force lies in ...'. The next sentence, 'What is stated is its blindness ...', is left as it was. Six atlas entries quote it verbatim, and it still reads clearly."
+  },
+  {
+   "line": 545,
+   "kind": "defence",
+   "done": "Removed 'none claimed new as mathematics,' from the theorem header. The kind ('near-definitional compositions and general laws') is kept, and so is line 547's 'None of it is claimed new as mathematics.', next to the credits."
+  },
+  {
+   "line": 550,
+   "kind": "defence",
+   "done": "Removed 'none claimed new as mathematics,' from the theorem header. 'compositions of [what holding for a reading is worth] with exact criteria' is kept."
+  },
+  {
+   "line": 474,
+   "kind": "above-map",
+   "done": "'..., and the warrant of judgment goes through [07]' became '; a judgment's being right or wrong is a reading formed within the unfolding, as [07](07-SIGNIFICANCE.md#evaluation) has it.' Uses the verifier's wording. 'proves no coverage of wisdom' is kept."
+  },
+  {
+   "line": 477,
+   "kind": "defence",
+   "done": "'ranking only under the readings it names, the continuation condition for scope and C for order ([07])' became 'ranking only under the readings [07](07-SIGNIFICANCE.md) names'. This departs from the verifier's replacement on purpose: 'only' is kept, because the quantifier is a true scope (07's thesis: each ranking result states what it is conditional on), and dropping it would change what the sentence ranks under. Line 9 still names the two readings."
+  }
+ ],
+ "same_landing_outside_this_file": [
+  "theories/becoming/results/records/wisdom-root-without-axiom.json: the limits (near line 416) and the adapter detail (near line 356), both en and zh, still read 'The ethical warrant of judgment goes through ...'. Per the record-and-home rule, the records fixer re-says these, and the .md is rendered. This file was not touched.",
+  "theories/becoming/results/records/wisdom-root.json: another agent already edited it in this worktree (the hypothesis re-said within the map, with a history line for 9 November). Its condition keeps 'ranks only under the readings it names, the continuation condition for scope and C for order (chapter 7)', which is the record's own full statement. The home now points to 07 for the readings, consistent with that.",
+  "theories/becoming/results/atlas/entries/correspondences.json: these entries quote the changed 03 sentences and need re-pointing from the entries (not data/atlas.json, which is generated). 'The main law holds by construction' with 'It is the proxy problem': /42, /44, /82, /844, /1045, /1050, /1062, /1140, /1172. §12's novelty label: /108, /514, /602. 'the warrant of judgment goes through': /15, /912.",
+  "theories/becoming/review/ALIGNMENT.md has 'with exact criteria, none claimed new as mathematics' and SCIENCES.md has 'The main law holds by construction'. Both are restatements for their owners to re-read. These files are already modified in this worktree by other agents."
+ ],
+ "restatements_to_reread": [
+  "Any front or generated page that quotes 03's Thesis or 'Where this chapter sits' (the thesis now covers §11, §12 and T6's field tests). Exact-phrase searches for the old 'Open: T6's conjectured \"only where\";' and 'what a selection reaches to alignment in' found no live copies outside history/."
+ ],
+ "checks_run": [
+  "Each quote was confirmed as an exact, unique substring (grep -cF) before editing.",
+  "Every added clause was compared by reading against its home theorem or reading in this file: lines 495, 502, 505, 510, 515, 517, 530, 532, 545 and 547.",
+  "The anchors #what-the-acts-show and #the-reading-loop (03) and #alignment-without-premise, #direction and #evaluation (07) were confirmed to exist.",
+  "The diff was read with git diff --word-diff: one file, 7 lines changed.",
+  "No render, gate, test, lake or build was run, as the task requires. Link and render checks are left to the single render and gate after the fix stage."
+ ],
+ "notes": "All seven findings were applied to theories/becoming/chapters/03-KNOWING.md, which is a hand-written source and contains no verbatim words of Ren's. Two places differ from the verifier's replacement text. First, line 477 keeps 'only', so the sentence still says the account ranks only under the readings 07 names. Second, line 5's shortfall clause puts back 'that is a function of the candidate'. The sentence after line 29's reordered paragraph ('What is stated is its blindness ...') was left unchanged to avoid more quote drift in the atlas. Nothing was skipped."
+}

@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-11-06T14:04:13+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "Beside what reads no order and holds, a premise giving C implies it. On a listing, widening is what no chooser, over every valuation, does worse from and some better from; where every item is someone's own, what every self-concerned profile not ranking it below ranks by Pareto. Each reads an order.",
     "zh": "在不读次序且成立者旁，给出 C 的前提蕴含 C。在列举上，扩大是遍及每个赋值时无选择者更差且有选择者更好之处；每项都为某立场所有时，也是每个不把扩大排在下面的自我关切剖面以帕累托关系所排者。每条路仍读次序。"
@@ -239,8 +239,8 @@
     "formal-not-empirical"
   ],
   "validation_scope": {
-    "en": "Pure core, axiom reports empty; a leaf. Written by an AI; AI readers, in rounds, against the Lean, findings taken or answered (READER in the study folder); no human audit. Attributions checked by an AI reader: Strotz read in the source; Foster in his working papers (OPHI WP35, WP34's abstract); Nehring and Puppe in selected pages of working paper 97-7; Kreps, Luce, Gul and Pesendorfer 2001, Schelling, Arrow and Fisher, Braess through abstracts, excerpts or others' accounts; G. Dworkin 1982 by its listing only. Every law is short; none is new as mathematics.",
-    "zh": "纯核心，公理报告为空；叶模块。AI 所写；AI 读者分轮对照 Lean，发现已处理或作答（见目录 READER）；无人类审计。文献由 AI 读者核对：Strotz 读原文；Foster 读其工作论文（OPHI WP35、WP34 摘要）；Nehring 与 Puppe 读工作论文 97-7 的选页；Kreps、Luce、Gul 与 Pesendorfer 2001、Schelling、Arrow 与 Fisher、Braess 经摘要、摘录或他人转述；G. Dworkin 1982 仅据书目。各律皆短，无新数学。"
+    "en": "Pure core, axiom reports empty; a leaf. Written by an AI; AI readers, in rounds, against the Lean, findings taken or answered (READER in the study folder); no human audit. Attributions checked by an AI reader: Strotz read in the source; Foster in his working papers (OPHI WP35, WP34's abstract); Nehring and Puppe in selected pages of working paper 97-7; Kreps, Luce, Gul and Pesendorfer 2001, Schelling, Arrow and Fisher, Braess through abstracts, excerpts or others' accounts; G. Dworkin 1982 by its listing only.",
+    "zh": "纯核心，公理报告为空；叶模块。AI 所写；AI 读者分轮对照 Lean，发现已处理或作答（见目录 READER）；无人类审计。文献由 AI 读者核对：Strotz 读原文；Foster 读其工作论文（OPHI WP35、WP34 摘要）；Nehring 与 Puppe 读工作论文 97-7 的选页；Kreps、Luce、Gul 与 Pesendorfer 2001、Schelling、Arrow 与 Fisher、Braess 经摘要、摘录或他人转述；G. Dworkin 1982 仅据书目。"
   },
   "next_delta": {
     "en": "Several choosers compared by C on courses, joining Optimum.MutualBest, which has them on a flow, to the menu witness, to say whether it bears on C and on the drains; a chooser who learns, joined to holding for a reading; refusal at a price; people who have read it saying whether any of these premises is easier to hold than C.",
@@ -573,6 +573,10 @@
     {
       "en": "9 November 2026, board item WB: T8's refuter, which this record's last does-not-show line named, changed with T8 on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md); the line now names the refuter T8 had; 'warrant' read as 'argue for'. No change to the claim, its hypotheses or its Lean.",
       "zh": "2026年11月9日，工作板条目 WB：此记录末一行「未表明」所称 T8 之驳斥者，随 T8 依 Ren 11 月 8–9 日之言而改；该行今称 T8 所曾有之驳斥者；“warrant”读作“为之论证”。主张、假设与 Lean 皆不变。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the verdict that no law is new as mathematics dropped from the validation scope; the attribution checks kept; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：验证范围中“各律皆短，无新数学”的断语删去；文献核对保留；主张与 Lean 皆不变。"
     }
   ]
 }

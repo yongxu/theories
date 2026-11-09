@@ -12,10 +12,10 @@ The AI read the one page, the work board, the method chapter's open programme, t
 
 - coverage is largely done (every phase, differentiation and domain has central laws);
 - unity is weak: the root landed on 22–23 October and most laws are stated on its models, not on it; the ethics is not stated on it;
-- the zero-axiom target is not reached for the ethics, and SD1 shows the dynamics alone cannot reach it, so the work there is warrant, not proof;
+- the zero-axiom target is not reached for the ethics, and SD1 shows that no statement reading only the represented dynamics, and holding of some dynamics, entails the continuation condition, so the work there was read as warrant, not proof;
 - by the theory's own review no central result is new mathematics; the contribution is the premise ledger, scope and order apart, and one vocabulary;
 - the frozen tests are mixed, and the test systems have no models;
-- no human has reviewed anything.
+- no independent human review was recorded.
 
 It proposed, in order: human review; lifting the dozen central laws, not all of them; slowing the extension lines; one decisive test of T3; one real test system.
 
@@ -28,7 +28,7 @@ It proposed, in order: human review; lifting the dozen central laws, not all of 
 The purpose, as OPENING and Ren's talk of 2 October state it: a truth any mind can check, so shared understanding, so coordination out of the race, so a good future, AI alignment included; Lean so that the truth is held by no guardian. Measured against that:
 
 1. The proofs are strongest where least needed: those blocking coordination do not dispute the dynamics, which are known results. OPENING names the bottleneck itself: "The wisdom exists, but we cannot coordinate."
-2. Where most needed, the proofs are silent, and SD1 proves they must be: the ethics turns on one question, whether what each holds of itself it holds of itself alone. Formal work on it (IV3a–j) works on an item the method chapter says no formal work settles.
+2. Where most needed, the proofs are silent, and SD1 proves they must be (a reading corrected the same day, when significance was seen as a dualist word: SD1 holds by construction, significance being a free slot no other statement reads, so it says what the representation leaves open, [source](2026-10-24-significance-a-dualist-word.md)): the ethics turns on one question, whether what each holds of itself it holds of itself alone. Formal work on it (IV3a–j) works on an item the method chapter says no formal work settles.
 3. The project fails its own central law: a selection reaches only what couples into its selector. Its selectors are the Lean checker, K1–K7, AI reviewers and the queue; human readers, coordination and actual AI training lie beyond them, so nothing inside the process can tell whether it serves its purpose. The AI named its own part: "keep going, take the next gap" selects for the next refinable gap.
 4. The pace of refinement does not match the urgency OPENING states.
 

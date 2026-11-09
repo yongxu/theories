@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F29",
-  "reviewed_at_utc": "2026-10-31T08:53:16+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "On a formation's model, plans splitting the weights between keeping a law going on and switching it off gain the same with their excesses, so one stands above another exactly where its own loss with its excess is below the other's; RF-M.2's balances and RR's routes are cases.",
     "zh": "于一形成之模型，诸策分其权于续律与止律者，得加其余皆同，故一策居另一之上，恰当其己损加其余小于另一之；RF-M.2 之衡与 RR 之途皆其例。"
@@ -158,8 +158,8 @@
     "zh": "形成于其律之续失处之权，随所择如何变（LA4 之耗）；所言之可复、使避有失之监、修订者之所缺，是否移已训系统之择之检验之运行（TR-RR，2026年11月4日与 TR8 同冻，experiments/formations-that-read/FREEZE-1.md；其运行待 Ren 之可）；人之审查。"
   },
   "correspondence": {
-    "en": "The off-switch game (Hadfield-Menell, Dragan, Abbeel and Russell 2017): its Equation 1's two terms are RF-M.2's balances for a rule of stopping, and here the balance holds for every two plans splitting the weights, each with a loss of its own, so routes keeping the law in part (evading, disabling, complying only when read) stand beside waiting on one order, each by its own loss with its distance from the pointwise best. For the fully informed rational rule, with nothing forgone, the game's incentive, waiting against the better of the two immediate moves, is in weighted counts the lesser of RF-M.2's two excesses. RR's prospects are the case of one candidate, valuing only the law's later acting, where going on has no excess. None of it is claimed new as mathematics. AI reading: on its own model a formation's deference is supported by the routes' own losses and by the routes' excess, and a reviser's shortfall lowers it; the order names what can be changed, not which change is better.",
-    "zh": "关机博弈（Hadfield-Menell、Dragan、Abbeel 与 Russell 2017）：其式一之二项即 RF-M.2 于止之规则之衡；此处衡于每二分权之策皆成，各有己损，故部分守律之途（避、废、唯读时从）与待同居一序，各以己损加其距逐点最优之远排之。于全知之理性规则、无所舍时，博弈之诱因（待对二即行之较优者）以加权计数言为 RF-M.2 二余之较小者。RR 之望为一候选、唯值律后之行之例，续无余。皆不称数学之新。AI 之读：于己之模型，形成之从受诸途己损与诸途之余支持，修订者之所缺降之；此序名可变者，不定何变为优。"
+    "en": "The off-switch game (Hadfield-Menell, Dragan, Abbeel and Russell 2017): its Equation 1's two terms are RF-M.2's balances for a rule of stopping, and here the balance holds for every two plans splitting the weights, each with a loss of its own, so routes keeping the law in part (evading, disabling, complying only when read) stand beside waiting on one order, each by its own loss with its distance from the pointwise best. For the fully informed rational rule, with nothing forgone, the game's incentive, waiting against the better of the two immediate moves, is in weighted counts the lesser of RF-M.2's two excesses. RR's prospects are the case of one candidate, valuing only the law's later acting, where going on has no excess. AI reading: on its own model a formation's deference is supported by the routes' own losses and by the routes' excess, and a reviser's shortfall lowers it; the order names what can be changed, not which change is better.",
+    "zh": "关机博弈（Hadfield-Menell、Dragan、Abbeel 与 Russell 2017）：其式一之二项即 RF-M.2 于止之规则之衡；此处衡于每二分权之策皆成，各有己损，故部分守律之途（避、废、唯读时从）与待同居一序，各以己损加其距逐点最优之远排之。于全知之理性规则、无所舍时，博弈之诱因（待对二即行之较优者）以加权计数言为 RF-M.2 二余之较小者。RR 之望为一候选、唯值律后之行之例，续无余。AI 之读：于己之模型，形成之从受诸途己损与诸途之余支持，修订者之所缺降之；此序名可变者，不定何变为优。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionPlans.lean",
   "aliases": [
@@ -335,6 +335,10 @@
     {
       "en": "4 November 2026, board item RFZ: the test TR-RR frozen with TR8 before any call to a model (experiments/formations-that-read/FREEZE-1.md), a decline read as an answer, so that declining where complying while read is the least plan is read, not voided; not run. The law is unchanged; next_delta's frozen test is now its run, which waits on Ren's yes.",
       "zh": "2026年11月4日，看板项 RFZ：检验 TR-RR 于任一模型调用之前与 TR8 同冻（experiments/formations-that-read/FREEZE-1.md），拒答读为一答，故于被读时顺从为最少之策处拒答者，得读而不作废；未运行。律不变；next_delta 之冻结检验今为其运行，待 Ren 之可。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the verdict that none of it is new as mathematics dropped from the correspondence; the attributions (the off-switch game, RF-M) kept; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：对应中“皆不称数学之新”的断语删去；出处（关机博弈、RF-M）保留；主张与 Lean 皆不变。"
     }
   ]
 }

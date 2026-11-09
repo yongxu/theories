@@ -522,10 +522,14 @@ def start_here_lines(records, path, homes):
     if not chosen:
         return []
     lines = ['## Start here', '', 'Results ' + link(ONE_PAGE, path, 'the one page') + ' leans on, chosen by an AI reader: a way in, not a ranking. '
-             'Each opens with the one page\'s plain line, then its record\'s statement and its standing in its homes\' words, and holds under the hypotheses its record states. An automated review against the literature it knew, not exhaustive, finds '
-             + link(CHAPTERS + '/08-METHOD.md#known-results', path, 'none of the central results new mathematics') + '.', '']
+             'Each opens with the one page\'s plain line, then its record\'s statement and its standing in its homes\' words, and holds under the hypotheses its record states. '
+             'Four of them answer, on their models, questions the work asks of any reward, judge, market or vote: what it reaches (selection through the couplings), '
+             'what doing best on what it reads drains beyond it where there is room (an optimum beyond what couples in), what takers each within a renewal can '
+             'together exceed (joint excess), and when a rule read from its own share locks on what it selected (closed capture). '
+             'Each central result is set beside its closest prior result, with its verdict and what that prior result states that the account does not yet, in '
+             + link(CHAPTERS + '/08-METHOD.md#known-results', path, 'method, known results') + '.', '']
     lines += [start_item(r, path, homes) for r in chosen]
-    return lines + ['', 'No law here evaluates; each ranking result names what it ranks under, most often two readings, neither asserted: ' + link(CHAPTERS + '/07-SIGNIFICANCE.md#scope-and-order', path, 'the continuation condition fixes scope, and C gives order') + '.', '']
+    return lines + ['', 'No law here evaluates; each ranking result names what it ranks under, most often two readings, each an order or scope some formations hold: ' + link(CHAPTERS + '/07-SIGNIFICANCE.md#scope-and-order', path, 'the continuation condition fixes scope, and C gives order') + '.', '']
 
 
 def law_family_table(records, base):
@@ -732,7 +736,10 @@ def stub_lines(path, kind, goal_records):
     if path == THEORY + '/README.md':
         lines += ['The canonical entry is ' + link(CANONICAL, path, 'The Theory of Becoming') + '; the opening, in its author\'s first person and revised in place since 1 November 2026 (each revised passage named under its heading), is ' + link(THEORY + '/OPENING.md', path, 'OPENING.md') + '.', '']
     if path == 'RESEARCH.md':  # since RW, the home of the directions under way, which README names
-        return lines + ['The directions under way, each with its summary, its next step and the results it has established, follow. '
+        return lines + ['The work draws one map: for alignment, what a selection reaches, drains beyond what it reads and locks on, toward the '
+                        'alignment its makers want, a joint selection of humans and AI that reads beyond its own share and does not come to select '
+                        'for control over its own selection; and of wisdom, what traditions and sciences saw of these dynamics, read onto the account. '
+                        'The directions under way follow, each with its summary, its next step and the results it has established. '
                         'The register of results is ' + link('RESULTS.md', path, 'RESULTS.md') + '; scopes and their authorization are in '
                         + link('GOALS.md', path, 'GOALS.md') + ', open questions in ' + link('OPEN-QUESTIONS.md', path, 'OPEN-QUESTIONS.md')
                         + ' and connections between results in ' + link('DEPENDENCIES.md', path, 'DEPENDENCIES.md') + '.', '',
@@ -809,7 +816,7 @@ def render_views(records):
                     lines += ['*' + config['readme_featured_note'] + '*', '']
             if featured:
                 lines += [H('###', 'Laws of the theory without axiom (sections 1–6)', 'Leading results'), '',
-                          'Each is checked in Lean on the pure core: every source declaration has an empty axiom report. That is a constructive discipline, not an absence of premises. '
+                          'Each is checked in Lean on the pure core: every source declaration has an empty axiom report. '
                           'Each holds under the hypotheses its record states, with the commitments of the representation (discrete steps, natural-number amounts); '
                           'a result saying that something can happen is shown by a constructed example.', '']
                 for r in featured:
@@ -817,12 +824,12 @@ def render_views(records):
             if conditional:
                 first, rest = conditional[0], conditional[1:]
                 lines += [H('###', 'Under the continuation condition', 'Under the continuation condition (section 6.4)'), '',
-                          'The theory does not assert this condition; ' + link(CHAPTERS + '/07-SIGNIFICANCE.md#condition', path, 'chapter 7, section 3')
+                          'The condition is a scope some formations hold; ' + link(CHAPTERS + '/07-SIGNIFICANCE.md#condition', path, 'chapter 7, section 3')
                           + ' states what follows from it. The condition gives the continuation of everything significance from every standpoint, so the results under it '
                           'are the case of a significance that covers everything; the rules of comparison are derived without it, and the condition adds none. '
-                          'The ranking results name what they rank under, none asserted: the condition fixes scope, whose losses count, C, calling widening better, gives order, and the self-concern results state a narrower order; whoever ranks courses holds C or another order; '
+                          'The ranking results name what they rank under: the condition fixes scope, whose losses count, C, calling widening better, gives order, and the self-concern results state a narrower order; whoever ranks courses holds C or another order; '
                           'C\'s no-loss extension on level paths is widening by definition. '
-                          'Open: how the condition, C and the step of invariance, from what one\'s own continuation needs to the continuation of anything, come to be held; no warrant from outside is sought.', '']
+                          'Open: how the condition, C and the step of invariance, from what one\'s own continuation needs to the continuation of anything, come to be held.', '']
                 lines += result_block(first, path, '####')
                 if rest:
                     lines += ['Further results under the same condition and disclosed practical premises: '
@@ -858,8 +865,9 @@ def render_views(records):
         if kind == 'open':
             groups = open_question_links(config)
             targets = [r for r in records if r['kind'] == 'target']
-            lines += ['Where the theory is open: the crux and the warrant of C, the open targets, the open programme in method (chapter 8), and what lies beyond the readings. '
-                      f'No reading waits on anyone: "{OPEN_LEAD["readings"][1]}" (' + link(CH08 + '#readings-adopted', path, 'method, readings adopted') + '). '
+            lines += ['Where the theory is open: the crux and how scope and order form, the open targets, the open programme in method (chapter 8), and what lies beyond the readings; '
+                      'the tests frozen and not run, and those held, are on ' + link('TESTS.md#frozen-not-run', path, 'the tests page') + '. '
+                      f'How readings are decided: "{OPEN_LEAD["readings"][1]}" (' + link(CH08 + '#readings-adopted', path, 'method, readings adopted') + '). '
                       'A completed result\'s own next step is on its record page.', '']
             lines += open_lead_lines(path)
             lines += anchor_lines('registered-results', '已登记成果--registered-results')
@@ -874,7 +882,9 @@ def render_views(records):
             unmarked = [g for g in goal_records if g.get('state') == 'unmarked']
             lines += anchor_lines('decisions-pending-ren')
             lines += [H('##', 'Beyond the readings', 'Beyond the readings'), '',
-                      'The readings are decided by argument and can be revised by a better one. What waits on the author is his authorizations and releases: the goal scopes and their states, the licence, pushing to the public remote, '
+                      'The direction is the aim the author holds and shares, argued with him where his words seem wrong. Readings are decided by argument, '
+                      'reading his words where they bear on them and asking him only where a consequential ambiguity remains, and a better argument revises them. '
+                      'Beyond the direction, what waits on him is his authorizations and releases: the goal scopes and their states, the licence, pushing to the public remote, '
                       'who is sent what, and money or machine time for runs. The body of the opening and the curated generativity chain began as the author\'s text '
                       'and are revised on argument, the opening\'s revisions named under its heading and the chain\'s in its maintenance record. The choice of results featured on the home page is open to revision on argument.', '']
             lines += ['- ' + link(x['path'], path, x['label']) for x in groups['pending_ren']]

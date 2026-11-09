@@ -1921,8 +1921,8 @@
     "zh": "UE32：T2 的三个量对该领域拟合的延迟嵌入"
    },
    "what": {
-    "en": "On assessed fish stocks, by the field's own criterion of out-of-sample skill and a test frozen before any series was read by it (it drew on MQ5's earlier in-sample fits of the same stocks), the frozen verdict was 'T2 better than the field's fitted embedding', where the design had expected 'not separated'. Both states forecast worse than persistence in most stocks, and the run's README reads that this does not change 08's verdict that what survives of the account is no discovery.",
-    "zh": "在经评估的鱼类种群上，按该领域自己的样本外预报判据，以一项在它读任何序列之前已冻结的检验（它用到了 MQ5 早先对同一批种群的样本内拟合），冻结裁决是「T2 better than the field's fitted embedding」（T2 胜过该领域拟合的嵌入），而设计原先预期的是「not separated」（无从区分）。在多数种群中，二者都不如直接沿用上一次的给予；该次运行的说明读为：这不改变第八章的裁断，即本论留下来的不是发现。"
+    "en": "On assessed fish stocks, by the field's own criterion of out-of-sample skill and a test frozen before any series was read by it (it drew on MQ5's earlier in-sample fits of the same stocks), the frozen verdict was 'T2 better than the field's fitted embedding', where the design had expected 'not separated'. Both states forecast worse than persistence in most stocks; the run's README reads what it found as the three numbers' sufficiency against the embedding at these lengths, not the lag's place in the state or T2's law.",
+    "zh": "在经评估的鱼类种群上，按该领域自己的样本外预报判据，以一项在它读任何序列之前已冻结的检验（它用到了 MQ5 早先对同一批种群的样本内拟合），冻结裁决是「T2 better than the field's fitted embedding」（T2 胜过该领域拟合的嵌入），而设计原先预期的是「not separated」（无从区分）。在多数种群中，二者都不如直接沿用上一次的给予；该次运行的说明把所得读为：在这些长度上，三个量相对于该嵌入是充分的，而不是滞后在状态中的位置，也不是 T2 的律。"
    },
    "evidence": [
     {
@@ -1933,14 +1933,14 @@
     },
     {
      "path": "experiments/README.md",
-     "locator": "lessons list (line 61)",
+     "locator": "lessons list (line 63)",
      "quote": "UE32 expected \"not separated\" from one model of MQ5's in-sample readings",
      "private": false
     },
     {
      "path": "experiments/state-against-embedding/README.md",
-     "locator": "Against 08's verdict on what is new (line 67)",
-     "quote": "This one does not change it: both T2's numbers and the embedding trail persistence in most stocks",
+     "locator": "How far it reaches (line 67)",
+     "quote": "both T2's numbers and the embedding trail persistence in most stocks",
      "private": false
     },
     {

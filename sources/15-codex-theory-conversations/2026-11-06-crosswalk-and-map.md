@@ -8,7 +8,7 @@
 
 ## Context (AI-authored)
 
-The session answered that the account was whole by its own checklist, partly unified and connected only as far as the Chinese texts; that no picture of it existed until one drawn in the reply; and that no person had read it. It recommended sending edition 4, and offered a crosswalk from each folder and tradition to where it landed, the theory graph's missing edges and a viewable map.
+The session answered that the account was whole by its own checklist, partly unified and connected only as far as the Chinese texts; that no picture of it existed until one drawn in the reply; and that no independent review of it was recorded. It recommended sending edition 4, and offered a crosswalk from each folder and tradition to where it landed, the theory graph's missing edges and a viewable map.
 
 ## Ren's words
 

@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-19T07:15:58+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "Under every course, guards decompose exactly; along some course they do not, and no rule on the separate keepabilities decides the joint one. No course leaving a part's guard decides neither renewal nor what the run does to others.",
     "zh": "在每条进程下，守卫恰好分解；沿某条进程则不，且没有作用于各自可保持性的规则决定联合的可保持性。没有进程离开一个部分的守卫，既不决定更新，也不决定运行对他者做了什么。"
@@ -109,8 +109,8 @@
     "zh": "在一个时域上、由交换律给出选择的联合保持；容错与 Becoming.FaultEnvelopes 相连；独立审查。"
   },
   "correspondence": {
-    "en": "An account of social viability Ren brought on 19 October 2026 lists eight constraints and a unifying ninth; the AI's mapping found this one carries two of the five pushbacks as laws: the product formula decides joint viability only under every course, and survival of a part is not renewal. Ren's words are provenance, not warrant; the reading onto collectives is the AI's (D48).",
-    "zh": "Ren 于 2026年10月19日带来的一段社会可存续性文字列出八条约束与统一它们的第九条；AI 的对照发现此条以定律承载五条反驳中的两条：乘积公式只在每条进程下决定联合可存续性，部分的存续不是更新。Ren 的话是出处，不是依据；读到集体上是 AI 的（D48）。"
+    "en": "An account of social viability Ren brought on 19 October 2026 lists eight constraints and a unifying ninth; the AI's mapping found this one carries two of the five pushbacks as laws: the product formula decides joint viability only under every course, and survival of a part is not renewal. The reading onto collectives is the AI's (D48).",
+    "zh": "Ren 于 2026年10月19日带来的一段社会可存续性文字列出八条约束与统一它们的第九条；AI 的对照发现此条以定律承载五条反驳中的两条：乘积公式只在每条进程下决定联合可存续性，部分的存续不是更新。读到集体上是 AI 的（D48）。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointKeeping.lean",
   "aliases": [
@@ -391,6 +391,10 @@
     {
       "en": "30 October 2026 (U2, study section 461): a law at the model added, stating `Becoming.Viability.kernel_and_iff` where its terms are the grammar's, through the row (F5's statements_at_model, reviewed in RECHECK-U2); the row's statement, proof and every other law unchanged.",
       "zh": "2026年10月30日（U2，研究第 461 节）：增模型上之律，于其项为文法之处陈述 `Becoming.Viability.kernel_and_iff`，经其本行（F5 之 statements_at_model，经 RECHECK-U2 复核）；本行之陈述、证明与他律皆不改。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：对应中 Ren 所引之言后所附的标注删去，其言原样保留，AI 的标注保留；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

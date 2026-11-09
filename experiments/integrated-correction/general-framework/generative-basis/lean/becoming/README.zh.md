@@ -3,7 +3,7 @@
 
 > **中文版（2026-10-17）。** 正典文本是[英文版](README.md)；本版由重构时从双语原文拆出，不与英文同步维护，两者有出入时以英文为准。
 
-一个关系展开，只陈述一次。本目录是 Lean 包 `Becoming`。理论叙述见[正典章节 §9](../../../../../../theories/becoming/history/THE-THEORY-OF-BECOMING.md#9-the-formal-spine)，方向与阶段见[统一计划](../../../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-UNIFICATION-PLAN.md)。
+一个关系展开，只陈述一次。本目录是 Lean 包 `Becoming`。它是这张地图的形式核心，以 Lean 写成：任何运行 Lean 的人都可以不必信任任何人而复核每一条定理；一条陈述是否说出它的英文句子所说的、它的前提是否成立，仍是判断（[说明 13，英文](../../../../../../README.md#note-guardian)）。理论叙述见[总览](../../../../../../theories/becoming/THE-THEORY-OF-BECOMING.zh.md)，诸环见[方法 §3（英文）](../../../../../../theories/becoming/chapters/08-METHOD.md#pure-core-and-periphery)；定下其阶段的[统一计划](../../../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-UNIFICATION-PLAN.md)存于历史。
 
 <a id="三环--three-rings"></a>
 ## 三环

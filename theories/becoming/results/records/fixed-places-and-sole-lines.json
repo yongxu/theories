@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-19T12:07:55+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "Read with no fixed place at the bottom and top, every statement of place in the 彖 and the 小象 holds; no parity of the top place can. A line answered by all others is unique, rests on no place or phase, never lasts a step of waxing and waning, and leaves at the top to enter at the bottom.",
     "zh": "以初上无位读之，彖与小象言位之句皆成立，上位任一奇偶都不能如此。独应之爻唯一，不依位与正，在消息之律下不延续一步，自上位出、自初位入。"
@@ -265,8 +265,8 @@
       "kind": "scope"
     },
     {
-      "en": "That holding a place, answering or being alone of a kind is good, fortunate, beautiful or supports 生生; the module has no ethical predicate and no judgment.",
-      "zh": "在位、相应或独一是善的、吉的、美的或支持生生；模块没有伦理谓词，也没有判断。",
+      "en": "That holding a place, answering or being alone of a kind is good, fortunate or beautiful; the module has no ethical predicate and no judgment.",
+      "zh": "在位、相应或独一是善的、吉的或美的；模块没有伦理谓词，也没有判断。",
       "kind": "non-implication"
     }
   ],
@@ -288,8 +288,8 @@
     "zh": "王弼所举的其他之主（居中、得位、有应之爻）作为各自的关系；时与位合读（明卦適變通爻）；存入王弼《周易注》并逐爻对照；文言中言位之处；独立审查。"
   },
   "correspondence": {
-    "en": "Continues place-relations-in-context (Y2), which listed 初上无位, the line answered by all others and 王弼's 《周易略例》 as not done, on Ren's request of 19 October 2026, “我要你把这个系统完全建立起来，要变成库的一部分，要确保它在spine上有明确的mapping” (provenance, not warrant). The chapter on the 易传 maps 23 passages that cite this module: 14 agreements, 5 exact scopes and 4 divergences. Reading (the AI's, D53): the 彖 and the 象 speak of place by the second relation, and 王弼's argument for it is a law of their statements; 需's top line moves from divergence to agreement under it while the parity of six places stays as stated; 上下應之, 乘五剛 and 成卦之體，在斯一爻 read one line against all the others; 王弼's 主 is taken as that relation and his 治眾, 貴賤 and 美 diverge.",
-    "zh": "接续 place-relations-in-context（Y2）所列未做的初上无位、一爻为众爻所应与王弼《周易略例》，按 Ren 2026年10月19日的要求 “我要你把这个系统完全建立起来，要变成库的一部分，要确保它在spine上有明确的mapping”（来历，不是根据）。论易传的一章中引本模块者 23 段：相合 14、定域 5、相分 4。读法（AI 的，D53）：彖与象言位用的是第二个关系，王弼为之所立之论是其言之律；需上六在其下由相分变为相合，六位之奇偶如其所述保留；上下應之、乘五剛与“成卦之體，在斯一爻”读一爻与其余诸爻；王弼之“主”只取此关系，其“治眾”“貴賤”“美”相分。"
+    "en": "Continues place-relations-in-context (Y2), which listed 初上无位, the line answered by all others and 王弼's 《周易略例》 as not done, on Ren's request of 19 October 2026, “我要你把这个系统完全建立起来，要变成库的一部分，要确保它在spine上有明确的mapping”. The chapter on the 易传 maps 23 passages that cite this module: 14 agreements, 5 exact scopes and 4 divergences. Reading (the AI's, D53): the 彖 and the 象 speak of place by the second relation, and 王弼's argument for it is a law of their statements; 需's top line moves from divergence to agreement under it while the parity of six places stays as stated; 上下應之, 乘五剛 and 成卦之體，在斯一爻 read one line against all the others; 王弼's 主 is taken as that relation and his 治眾, 貴賤 and 美 diverge.",
+    "zh": "接续 place-relations-in-context（Y2）所列未做的初上无位、一爻为众爻所应与王弼《周易略例》，按 Ren 2026年10月19日的要求 “我要你把这个系统完全建立起来，要变成库的一部分，要确保它在spine上有明确的mapping”。论易传的一章中引本模块者 23 段：相合 14、定域 5、相分 4。读法（AI 的，D53）：彖与象言位用的是第二个关系，王弼为之所立之论是其言之律；需上六在其下由相分变为相合，六位之奇偶如其所述保留；上下應之、乘五剛与“成卦之體，在斯一爻”读一爻与其余诸爻；王弼之“主”只取此关系，其“治眾”“貴賤”“美”相分。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HexagramSites.lean",
   "aliases": [
@@ -1025,6 +1025,10 @@
     {
       "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
       "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): 'supports 生生' dropped from a not-shown item, where it stood beside good and fortunate as a criterion; the item's non-implication kept; the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：一条未表明之项中与善、吉并列为判准的“支持生生”删去；该项之不蕴含保留；对应中 Ren 所引之言后所附的标注删去，其言原样保留，AI 的标注保留；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

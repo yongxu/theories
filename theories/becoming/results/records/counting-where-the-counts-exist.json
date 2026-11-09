@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-01T09:47:31+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "Every law of counting of Becoming.Counting that takes decided activity holds of every counted census, the counts taken as relations, for every property of the counts and with decision asked only where a count exists; the one law left is a statement of logical strength.",
     "zh": "Becoming.Counting 中取已判定活动的每条计数之律，对每个被计数的普查成立，计数作为关系，对计数的每个性质皆然，判定只在计数存在之处被要求；留下的一条是关于逻辑强度的陈述。"
@@ -158,8 +158,8 @@
     "zh": "在判定形式被使用之处使用计数形式；以被计数的关系陈述以依赖而读的律；独立审查。"
   },
   "correspondence": {
-    "en": "The open programme of the chapter named one exception to the localized decidability: the counting laws take decidability of activity for every relatum and step, and hold for pointwise properties only. Ren, 18 October 2026: \"Start R2: localize the counting laws' decidability of activity.\" (provenance, not warrant). The counted laws remove both conditions for the laws under the premises, each selection, enclosure and finite worlds: counts are relations, as Becoming.Decidedness reads them (the AI's reading, taken by Ren on 18 October 2026, DELEGATED-CHOICES D43), so a law needs a decision only where a count exists, and the uniqueness of counts makes every property respect them. Ren, 18 October 2026: \"Start R2b: restate the binding family of the counting laws over counted censuses.\" (provenance, not warrant). The binding laws and the rest of the family follow, the same witnesses read as counts.",
-    "zh": "本章的开放纲领指出局部化可判定性的一个例外：计数之律对每个关系项与每步取活动的可判定性，且只对逐点性质成立。Ren，2026年10月18日：“Start R2: localize the counting laws' decidability of activity.”（来历，不是根据）。对前提、每个选择、封闭与有限世界下的律，计数之律去掉这两个条件：计数是关系，如 Becoming.Decidedness 所读（AI 的读法，Ren 2026-10-18 取，DELEGATED-CHOICES D43），所以一条律只在计数存在之处需要判定，计数的唯一性使每个性质都尊重它们。Ren，2026年10月18日：“Start R2b: restate the binding family of the counting laws over counted censuses.”（来历，不是根据）。约束之律与族中其余之律随之，同样的见证世界作为计数而读。"
+    "en": "The open programme of the chapter named one exception to the localized decidability: the counting laws take decidability of activity for every relatum and step, and hold for pointwise properties only. Ren, 18 October 2026: \"Start R2: localize the counting laws' decidability of activity.\". The counted laws remove both conditions for the laws under the premises, each selection, enclosure and finite worlds: counts are relations, as Becoming.Decidedness reads them (the AI's reading, taken by Ren on 18 October 2026, DELEGATED-CHOICES D43), so a law needs a decision only where a count exists, and the uniqueness of counts makes every property respect them. Ren, 18 October 2026: \"Start R2b: restate the binding family of the counting laws over counted censuses.\". The binding laws and the rest of the family follow, the same witnesses read as counts.",
+    "zh": "本章的开放纲领指出局部化可判定性的一个例外：计数之律对每个关系项与每步取活动的可判定性，且只对逐点性质成立。Ren，2026年10月18日：“Start R2: localize the counting laws' decidability of activity.”。对前提、每个选择、封闭与有限世界下的律，计数之律去掉这两个条件：计数是关系，如 Becoming.Decidedness 所读（AI 的读法，Ren 2026-10-18 取，DELEGATED-CHOICES D43），所以一条律只在计数存在之处需要判定，计数的唯一性使每个性质都尊重它们。Ren，2026年10月18日：“Start R2b: restate the binding family of the counting laws over counted censuses.”。约束之律与族中其余之律随之，同样的见证世界作为计数而读。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CensusCounts.lean",
   "aliases": [
@@ -453,6 +453,10 @@
     {
       "en": "1 November 2026, board item ND (study section 492): declarations renamed so that each name states what it means, not a command, a value or an ownership: CountsHold.obey → CountsHold.marks, countsHold_of_obey → countsHold_of_marks. The statements are kept but for the names; the claim is unchanged.",
       "zh": "2026年11月1日，工作板条目 ND（研究第 492 节）：声明更名，使名言其所指，不言命令、价值或所有：CountsHold.obey → CountsHold.marks, countsHold_of_obey → countsHold_of_marks。陈述除名外不变；论断不变。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：对应中 Ren 所引之言后所附的标注删去，其言原样保留，AI 的标注保留；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

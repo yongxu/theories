@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-28T12:00:10+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "On level paths an extension with every claim counted is exactly a widening of what can form, so with “better” read as widening, C holds for every reading of living: C's normative content moves into calling widening better.",
     "zh": "在水平路径上，每个主张都计入的扩展恰是扩大能形成者；所以把“更好”读作扩大，C 对 living 的每种读法成立：C 的规范内容移到把扩大称作更好之中。"
@@ -181,8 +181,8 @@
     "en": "What reading C as a law needs on a general frame; a measure for mixed parts; the warrant for calling the generative space good."
   },
   "correspondence": {
-    "en": "Ren asked on 11 October 2026: “can we reduce is \"for anything, its continuation into the future leads to more futures(flourishes/plurality) from generatively\" - so we can be like \"these are space where generatively happens\", which allows us to derive everything without axiom?” (provenance, not warrant). The AI's reading: widening reads “leads to more futures”, possibilities being what can form next; what can form now is the generative space, and where a part widens it is the region Ren's sentence names (D22, revised). “Flourishes/plurality” is read by widening (an AI reading), plurality an aspect not yet measured; widening compares what can form; 生生 is read since 9 November 2026 as the continuation of life, not as widening (D1). The condition fixes which admissions count, and C read as widening orders them (an AI reading).",
-    "zh": "Ren 2026-10-11 问：“can we reduce is \"for anything, its continuation into the future leads to more futures(flourishes/plurality) from generatively\" - so we can be like \"these are space where generatively happens\", which allows us to derive everything without axiom?”（来历，不是根据）。AI 的读法：扩大读“leads to more futures”，可能性读作接下来能形成的；当下能形成者是生成的空间，部分在其中扩大它之处是 Ren 那句话所说的区域（D22，经修订）。“flourishes/plurality”由扩大读出（AI 的读法），多样性尚未度量；扩大比较能够形成者；自 2026 年 11 月 9 日起，生生读作生命之延续，而非扩大（D1）。条件定计入哪些接纳，读作扩大的 C 为之定序（AI 的读法）。"
+    "en": "Ren asked on 11 October 2026: “can we reduce is \"for anything, its continuation into the future leads to more futures(flourishes/plurality) from generatively\" - so we can be like \"these are space where generatively happens\", which allows us to derive everything without axiom?”. The AI's reading: widening reads “leads to more futures”, possibilities being what can form next; what can form now is the generative space, and where a part widens it is the region Ren's sentence names (D22, revised). “Flourishes/plurality” is read by widening (an AI reading), plurality an aspect not yet measured; widening compares what can form; 生生 is read since 9 November 2026 as the continuation of life, not as widening (D1). The condition fixes which admissions count, and C read as widening orders them (an AI reading).",
+    "zh": "Ren 2026-10-11 问：“can we reduce is \"for anything, its continuation into the future leads to more futures(flourishes/plurality) from generatively\" - so we can be like \"these are space where generatively happens\", which allows us to derive everything without axiom?”。AI 的读法：扩大读“leads to more futures”，可能性读作接下来能形成的；当下能形成者是生成的空间，部分在其中扩大它之处是 Ren 那句话所说的区域（D22，经修订）。“flourishes/plurality”由扩大读出（AI 的读法），多样性尚未度量；扩大比较能够形成者；自 2026 年 11 月 9 日起，生生读作生命之延续，而非扩大（D1）。条件定计入哪些接纳，读作扩大的 C 为之定序（AI 的读法）。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean",
   "aliases": [
@@ -687,6 +687,10 @@
     {
       "en": "9 November 2026, board item WB (the readers' fourth round): the current Chinese description of 生生 aligned with the English, read as the continuation of life, not widening; no change to the claim, its hypotheses or its Lean.",
       "zh": "2026 年 11 月 9 日，工作板条目 WB（读者第四轮）：现行中文对生生的描述与英文一致，读作生命之延续，而非扩大；主张、假设与 Lean 皆不变。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：对应中 Ren 所引之言后所附的标注删去，其言原样保留，AI 的标注保留；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

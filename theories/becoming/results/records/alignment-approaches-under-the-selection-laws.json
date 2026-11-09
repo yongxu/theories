@@ -8,7 +8,7 @@
   "kind": "assessment",
   "status": "reviewed-scoped",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-20T19:04:10+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "Every alignment approach deciding through couplings selects alike all beyond its deciders' closures, premise-free; under the continuation condition a preference-coupled approach is thus incomplete whatever its raters value, and C asks only what every order counting everything shares.",
     "zh": "凡经耦合决定的对齐路径，对其决定者闭包之外的一切都同样选择，不需前提；在延续条件下，偏好耦合的路径因而无论评分者看重什么都不完整，而 C 只要求每个计入一切的序所共有者。"
@@ -122,8 +122,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "These are constraints every strategy deciding through couplings is subject to, not a necessary strategy; the direction rests on the continuation condition for scope and C for order, offered and not asserted, no warrant from outside sought.",
-      "zh": "这些是凡经耦合决定的策略都受的约束，不是必然的策略；方向依据延续条件定范围、C 定次序，不求外来之根据。",
+      "en": "These are constraints every strategy deciding through couplings is subject to, not a necessary strategy; the direction rests on the continuation condition for scope and C for order.",
+      "zh": "这些是凡经耦合决定的策略都受的约束，不是必然的策略；方向依据延续条件定范围、C 定次序。",
       "kind": "non-implication"
     },
     {
@@ -376,6 +376,10 @@
     {
       "en": "9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.",
       "zh": "2026年11月9日，工作板条目 WB：据 Ren 11 月 8–9 日之言重述伦理之框架：两个前提称为排序之果所用之两种读法，排序为排序者所持，不求外来之根据；主张、假设与 Lean 皆不变。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tail repeating that the direction is offered and seeks no warrant from outside dropped from a not-shown item; the conditional on scope and order kept; the claim unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：一条未表明之项中重复方向为所提供、不求外来之根据的尾句删去；以范围与次序为条件者保留；主张不变。"
     }
   ]
 }

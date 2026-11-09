@@ -8,7 +8,7 @@
   "kind": "argument",
   "status": "reviewed-scoped",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "zh": "既有实践原则在有根据的 AI 对应下支持生成、修订、交接与适当结束，并保留能力增长的真实好处和损失。",
     "en": "With warranted AI correspondence, the practical principles support generative development, revision, transfer and appropriate ending while retaining capability growth’s real benefits and losses."
@@ -149,8 +149,8 @@
       "kind": "scope"
     },
     {
-      "zh": "代理问题之外没有关于对齐的结果：选择的规律定性地陈述它，Zhuang and Hadfield-Menell（NeurIPS 2020）证明了更强的定理。",
-      "en": "No result on alignment beyond the known proxy problem: the selection laws state it qualitatively, and Zhuang and Hadfield-Menell (NeurIPS 2020) prove a stronger theorem.",
+      "zh": "代理退化的界：选择部分定性地重述代理问题，加上回应的闭包与池，不给这样的界；Zhuang and Hadfield-Menell（NeurIPS 2020）证明了更强的定理。",
+      "en": "A bound on proxy degradation: the selection part restates the proxy problem qualitatively and adds the responsive closure and the pool, giving no such bound; Zhuang and Hadfield-Menell (NeurIPS 2020) prove the stronger theorem.",
       "kind": "correspondence"
     },
     {
@@ -531,6 +531,10 @@
     {
       "en": "9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.",
       "zh": "2026年11月9日，工作板条目 WB：据 Ren 11 月 8–9 日之言重述伦理之框架：两个前提称为排序之果所用之两种读法，排序为排序者所持，不求外来之根据；主张、假设与 Lean 皆不变。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the not-shown item on the proxy problem re-said as what is not shown, a bound on proxy degradation, with what the selection part adds (the responsive closure and the pool); the README overview's summary re-said as the direction its makers offer, from chapter 7's home, in place of a normative framework that must; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：关于代理问题的未表明之项重述为所未表明者，即代理退化的界，并说明选择部分所加者（回应的闭包与池）；README 概览之摘要依第 7 章之本处重述为其制作者所提供的方向，不再是一个“必须”的规范框架；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [
@@ -557,8 +561,8 @@
       "zh": "能够评价并修订目的的 AI 对齐"
     },
     "summary": {
-      "en": "The core, the explicit practical commitments, and warranted AI correspondence provide a normative framework for aligning learning, action, revision, transfer and appropriate ending with actual living and further shared generation. Human instructions, institutional objectives and an AI’s current goals all admit ethical evaluation. Alignment that evaluates its ends needs normative criteria; within this framework, generative reasons must enter that judgment. This requirement holds under the stated premises (the continuation condition for scope, C for order, and the practical commitments): the argument does not establish this formulation as the uniquely possible foundation of every alignment theory.",
-      "zh": "核心、公开的实践承诺及有根据的 AI 对应，共同提供规范框架，使学习、行动、修订、交接和适当结束指向真实的生与进一步共同生成。人类指令、机构目标及 AI 当前目的都可以接受伦理评价。评价目的的对齐需要规范判准；在本框架中，生成理由必须进入判断。这项必要要求在所述前提之下成立（延续条件定范围，C 定次序，加上实践承诺）；论证不声称该表述是每一种对齐理论唯一可能的基础。"
+      "en": "The direction its makers offer AI, read under scope and order: align AI formation, learning, action, revision, transfer and appropriate ending with actual living and further generation within the whole, governing trade-offs through real losses, basic living conditions, bounded responsibility and legitimate participation, with effective opportunities to understand, challenge and revise. Human instructions, institutional objectives and an AI’s current goals all admit ethical evaluation. Ends, evaluations and the rules selecting future intelligence change living too, so they enter the same appraisal. This holds under the stated premises (the continuation condition for scope, C for order, and the practical commitments): the argument does not establish this formulation as the uniquely possible foundation of every alignment theory.",
+      "zh": "其制作者向 AI 提供的方向，在范围与次序之下读：使 AI 的形成、学习、行动、修订、交接与适当结束指向真实的生与整体之中的进一步生成，以真实损失、基本生存条件、有界责任与正当参与处理取舍，并有理解、质疑与修订的实际机会。人类指令、机构目标及 AI 当前目的都可以接受伦理评价。目的、评价以及选择未来智能的规则也改变生，因此进入同一评价。这在所述前提之下成立（延续条件定范围，C 定次序，加上实践承诺）；论证不声称该表述是每一种对齐理论唯一可能的基础。"
     },
     "evidence": {
       "zh": "已完成并经独立审查的哲学论证，含一个说明哪些变化会改变判断的 AI 案例。Lean 检查案例中的判断确由所述生生之意义与实践承诺推出，交叉基本损失不排序（经独立重编译）。另行检查表明：基本保护优先不由 C 推出（生生之意义不约束排序）；在一个所给磨损规律下，一步的形成计数把消耗型接续排在持续形成之前，而这种消耗随后终止共享形成。前提是否正确、部署系统是否认可或遵循，是另外的问题。在脊柱上，一个核心模式在读作扩大的 C 与实践承诺之下陈述网之动作上的方向，区分两个动作者只经耦合入它的组被选择。",

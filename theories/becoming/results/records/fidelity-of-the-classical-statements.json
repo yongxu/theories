@@ -8,7 +8,7 @@
   "kind": "assessment",
   "status": "reviewed-scoped",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-25T14:25:00+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "Over 270 條, the 中华本's 經 introduce fewer referents the Lean statement lacks than the canonical chapter's English clauses (means per 條 0.09 against 0.81; difference CI [-0.92, -0.54]) and fewer agents, and leave out fewer binders; LLM-coded, provisional.",
     "zh": "在 270 條上，中华本之经引入 Lean 陈述所没有之所指少于英文本之句（以條计之均值 0.09 对 0.81），施动者亦少，所漏变元亦少；大模型编码，暂定。"
@@ -57,8 +57,8 @@
     "zh": "主集之经之第二编码者与人工复核；F3、F4 与阅读试验；并在名表下之经上检验作者模型于己文之检出（在英文陈述上未见作者特有之短缺：fidelity-coders-on-own-and-other-texts）。受控英文之对照已运行（fidelity-under-one-discipline）。"
   },
   "correspondence": {
-    "en": "Board item FC1, on Ren's request to run the fidelity count; the scope was cut by his direction during the run (provenance, not warrant). Reading (the AI's, D63): the classical statements are the more exact reading code of the two compared, not the best expression.",
-    "zh": "看板项 FC1，按 Ren 运行忠实之测之要求；范围在运行中按其指示收缩（来历，不是根据）。读法（AI 的，D63）：所比二者中，古典之经是较精确之读码，不是最好之表达。"
+    "en": "Board item FC1, on Ren's request to run the fidelity count; the scope was cut by his direction during the run. Reading (the AI's, D63): the classical statements are the more exact reading code of the two compared, not the best expression.",
+    "zh": "看板项 FC1，按 Ren 运行忠实之测之要求；范围在运行中按其指示收缩。读法（AI 的，D63）：所比二者中，古典之经是较精确之读码，不是最好之表达。"
   },
   "canonical_source": "experiments/wenli-reading-transfer/FIDELITY-RESULTS.md",
   "aliases": [
@@ -153,6 +153,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the unit of the means corrected to per 條, the interval being the difference's; the coders named by model family (the authors' and another) rather than by product in the premise and the boundary on language and discipline (that boundary also shortened), the identities staying in the evidence.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：均值之单位改为以條计，区间为差之区间；前提与语言纪律之边界中之编码者以模型族（作者之族与另一族）称之，不以产品名称之（该边界亦缩短），其身份仍在证据中。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：对应中 Ren 所引之言后所附的标注删去，其言原样保留，AI 的标注保留；主张不变。"
     }
   ]
 }

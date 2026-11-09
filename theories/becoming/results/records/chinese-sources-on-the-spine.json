@@ -8,7 +8,7 @@
   "kind": "assessment",
   "status": "reviewed-scoped",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-25T14:48:32+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "248 passages of nine parts of Chinese thought, quoted verbatim, are tied to the spine as agreement, exact scope or divergence. The relational start holds across the lines; their universal forms mostly need a scope; four non-relational overlays recur, each answered inside its tradition.",
     "zh": "中国思想九个部分的 248 段文字，从所存文本逐字引出，逐段以相合、定域或相分对应到脊柱。关系性的起点贯穿诸线；其全称形式大多需要定域；四种非关系之层反复出现，各在本传统内部得到回应。"
@@ -58,8 +58,8 @@
     "zh": "跨多个条件之分的霍尔型存在条件；以闭包层级分等的次序能否成律，若成律，它保留差等的哪一部分。"
   },
   "correspondence": {
-    "en": "Ren, 19 October 2026, after sharing the 易道体系图 v1.3.0: “整个中国思想的源头，道家，易经，以及整个文字符号系统，包括武（止戈 ），和一些其他的理论体系中，例如儒家，也延续了这一套“relational ontology”，因此，我希望你好好阅读，把两者之间的关系map出来，可以用sub agents，然后再体系性的整合进我们的理论” (provenance, not warrant). The chapter maps 248 passages of the 易传 beyond Y1–Y4, the 老子 with three commentaries and the excavated witnesses, the 儒家 line, the script with 止戈, 庄子 and 玄学, 墨辩 and 名家, 兵家, 法家, 管子 and 纵横, the Buddhist lines received in China, and others. Reading (the AI's, D54): the thesis holds for what the lines start from and observe, its universal forms mostly need a scope, and four non-relational overlays recur, each answered inside its tradition.",
-    "zh": "Ren，2026年10月19日，分享易道体系图 v1.3.0 之后说：“整个中国思想的源头，道家，易经，以及整个文字符号系统，包括武（止戈 ），和一些其他的理论体系中，例如儒家，也延续了这一套“relational ontology”，因此，我希望你好好阅读，把两者之间的关系map出来，可以用sub agents，然后再体系性的整合进我们的理论”（来历，不是根据）。章节对应 248 段：易传（Y1–Y4 之外）、老子及三家注与出土诸本、儒家、文字与止戈、庄子与玄学、墨辩与名家、兵家、法家、管子与纵横、汉传佛教及其他。读法（AI 的，D54）：论题在诸线的起点与观察上成立，其全称形式大多需要定域，四种非关系之层反复出现，各在本传统内部得到回应。"
+    "en": "Ren, 19 October 2026, after sharing the 易道体系图 v1.3.0: “整个中国思想的源头，道家，易经，以及整个文字符号系统，包括武（止戈 ），和一些其他的理论体系中，例如儒家，也延续了这一套“relational ontology”，因此，我希望你好好阅读，把两者之间的关系map出来，可以用sub agents，然后再体系性的整合进我们的理论”. The chapter maps 248 passages of the 易传 beyond Y1–Y4, the 老子 with three commentaries and the excavated witnesses, the 儒家 line, the script with 止戈, 庄子 and 玄学, 墨辩 and 名家, 兵家, 法家, 管子 and 纵横, the Buddhist lines received in China, and others. Reading (the AI's, D54): the thesis holds for what the lines start from and observe, its universal forms mostly need a scope, and four non-relational overlays recur, each answered inside its tradition.",
+    "zh": "Ren，2026年10月19日，分享易道体系图 v1.3.0 之后说：“整个中国思想的源头，道家，易经，以及整个文字符号系统，包括武（止戈 ），和一些其他的理论体系中，例如儒家，也延续了这一套“relational ontology”，因此，我希望你好好阅读，把两者之间的关系map出来，可以用sub agents，然后再体系性的整合进我们的理论”。章节对应 248 段：易传（Y1–Y4 之外）、老子及三家注与出土诸本、儒家、文字与止戈、庄子与玄学、墨辩与名家、兵家、法家、管子与纵横、汉传佛教及其他。读法（AI 的，D54）：论题在诸线的起点与观察上成立，其全称形式大多需要定域，四种非关系之层反复出现，各在本传统内部得到回应。"
   },
   "canonical_source": "theories/becoming/history/CHINESE-SOURCES-AND-BECOMING.md",
   "aliases": [
@@ -244,6 +244,10 @@
     {
       "en": "4 November 2026, board item RAE (AA Phase 0's E3, E1, E2): verify_ro.py had pointed at the chapter RA moved to history/ (23 October), so it failed, and it ran in no test; the map named a record CD renamed (whole-first-and-bounded-centers, now whole-and-regions-and-bounded-centers, 10 citations) and a declaration ND renamed in OU7 (Pool.difference_belongs_to_the_joint, now Pool.difference_only_together, 2 declarations and their readings). passages.json rebuilt by build_passages.py with ND's pair, and two readings that stated the ownership ND renamed away given the home's words; the verifier now checks 06-CLASSICAL-TEXTS §六's table of counts and its total, fails on a missing chapter, and runs with research-test; the validation scope is restated from the passing run's own summary, and, to keep within the length rule, no longer says that \"the integrator checked every quotation, declaration and record and read every reading\" or that \"four agreements became exact scopes under D62 (board item ZHK)\", both true of that work as before. Claims, kinds and the law unchanged.",
       "zh": "2026年11月4日，看板项 RAE（AA 第零阶段之 E3、E1、E2）：verify_ro.py 原指向 RA 于 10 月 23 日移入 history/ 之章，故不通过，且不在任何测试中；对应表引一份 CD 已更名之记录（whole-first-and-bounded-centers，今为 whole-and-regions-and-bounded-centers，10 处）与一个 ND 于 OU7 更名之声明（Pool.difference_belongs_to_the_joint，今为 Pool.difference_only_together，2 个声明及其读法）。passages.json 以 build_passages.py 加 ND 之对重建，两段读法所述 ND 已去之“属于”改用本章之语；检查脚本今核 06-CLASSICAL-TEXTS 第六节之数表与总数，缺章即不通过，并随 research-test 运行；验证范围依通过之运行自身之摘要重写，并为合长度之规，不再写“整合者核对每条引文、声明与记录，通读每条读法”与“四段相合依 D62 改为定域（看板项 ZHK）”，二者于其工作仍真。断言、类别与律未变。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：对应中 Ren 所引之言后所附的标注删去，其言原样保留，AI 的标注保留；主张不变。"
     }
   ],
   "text_versions": [

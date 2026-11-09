@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F09",
-  "reviewed_at_utc": "2026-10-28T11:47:48+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "Histories fitting dated records all explain an earlier packet by its actual content exactly where every rival giving it another content is told apart by a dated control; values agreeing at a span's ends settle the dates between exactly where at most one change is admitted or none lies between.",
     "zh": "以符合日期化记录的历史解释旧报告包，每个解释都给出实际内容，恰当每个以另一内容给出同一包的对手都被某一日期化控制区分；区间两端值相同时，其间每个日期被确定，恰当至多容许一次变化或其间无日期。"
@@ -214,8 +214,8 @@
     "zh": "在匹配的发育程序中识别已形成的访问及所保留的来源与次序信息如何引导实际使用，区分当前依赖与对旧内容的认可。"
   },
   "correspondence": {
-    "zh": "同一报告关系改变，旧内容保留而后得证据改变其历史解释。控制探测与儿童熟悉命名不等同；当前信任调整也不识别回溯重释。 发育与比较原典要求区分访问辨别的取得、来源／次序保持及特定任务中的使用；一种成功不验证全部接口。以日期化记录过滤候选历史是标准方法，不是这里的新发明。",
-    "en": "Reporting relations change while old contents persist; later evidence changes their historical interpretation. Controlled probes are not equivalent to children’s familiar naming, and present trust adjustment does not identify retrospective reinterpretation. Developmental and comparative primary evidence requires distinguishing acquired access sensitivity, source/order retention and task-specific use; one successful response does not validate every interface. Filtering candidate histories by dated records is a standard method, not new here."
+    "zh": "同一报告关系改变，旧内容保留而后得证据改变其历史解释。控制探测与儿童熟悉命名不等同；当前信任调整也不识别回溯重释。 发育与比较原典要求区分访问辨别的取得、来源／次序保持及特定任务中的使用；一种成功不验证全部接口。以日期化记录过滤候选历史是标准方法。",
+    "en": "Reporting relations change while old contents persist; later evidence changes their historical interpretation. Controlled probes are not equivalent to children’s familiar naming, and present trust adjustment does not identify retrospective reinterpretation. Developmental and comparative primary evidence requires distinguishing acquired access sensitivity, source/order retention and task-specific use; one successful response does not validate every interface. Filtering candidate histories by dated records is a standard method."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/HistoricalBinding.lean",
   "aliases": [
@@ -566,6 +566,10 @@
     {
       "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): statement written from the claim and the home section; the claim split into fourteen laws, each read against its declarations in Retrodiction.lean, Courses.lean, RetrodictionInstances.lean, HistoricalBinding.lean, RetrospectiveBinding.lean and AcquiredBinding.lean (the core reading and change laws, their reading on runs, the four-moment instances and the source-binding witnesses); the limitations to five does-not-show items, the remark on filtering to the correspondence; the last sentence of the next step, a boundary of the evidence, to a sixth does-not-show item; the conditions of the core laws (types, decidability, natural-number dates, two distinct values) written as a fourth hypothesis, as the triage proposed and the 25 October note began; stepAt, late_assessment_alone_leaves_the_old_binding_open and unknown_packet_disturbance_preserves_uncertainty, the last witnessing the counterexample's unknown disturbance, added to their files' references; the shared boundaries no-ethical-premise-core-axiom-free and decidability cited; no premise, status or source hash changed. Every earlier sentence is mapped in [historical-source-binding.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/historical-source-binding.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, each read against the Lean it cites.",
       "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：依主张与主章节写出陈述；主张拆为十四条规律，各条对照 Retrodiction.lean、Courses.lean、RetrodictionInstances.lean、HistoricalBinding.lean、RetrospectiveBinding.lean 与 AcquiredBinding.lean 中的声明核读（核心的读取律与变化律、其在运行上的读法、四时刻实例与来源绑定见证）；限制改为五条“未表明”，关于过滤的一句移入对应；下一步的末句（证据的边界）改为第六条“未表明”；核心规律的条件（类型、可判定性、自然数日期、两个不同的值）按分诊建议、接续10月25日的说明，写为第四条前提；stepAt、late_assessment_alone_leaves_the_old_binding_open 与 unknown_packet_disturbance_preserves_uncertainty（后者见证反例中的未知扰动）加入其文件的引用；引用通用边界 no-ethical-premise-core-axiom-free 与 decidability；前提、状态与来源哈希均未改变。每句旧文本的去向见 [historical-source-binding.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/historical-source-binding.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律，各条对照所引 Lean 核读。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): 'not new here' dropped from the correspondence; the method named as standard; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：对应中“不是这里的新发明”删去；方法仍称标准；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

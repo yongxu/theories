@@ -1,7 +1,7 @@
 <a id="becoming生成之论的形式核心--the-formal-core-of-the-theory-of-becoming"></a>
 # Becoming: the formal core of the Theory of Becoming
 
-One relational unfolding, stated once. This directory is the Lean package `Becoming`. The canonical chapter gives the account; the unification plan gives the direction and phases.
+One relational unfolding, stated once. This directory is the Lean package `Becoming`. It is the map's formal core, in Lean, so that anyone who runs Lean can recheck every theorem without trusting anyone; that a statement says what its English sentence says, and whether its premises hold, remain judgments ([note 13](../../../../../../README.md#note-guardian)). [The theory](../../../../../../theories/becoming/THE-THEORY-OF-BECOMING.md) gives the account and [method §3](../../../../../../theories/becoming/chapters/08-METHOD.md#pure-core-and-periphery) its rings; the [unification plan](../../../../../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/BECOMING-UNIFICATION-PLAN.md) that set its phases is kept in history.
 
 <a id="三环--three-rings"></a>
 ## Three rings

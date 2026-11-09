@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-22T11:07:36+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "Codes changed only by hearing keep agreement exactly through closed hearings; the start and the order fix the form reached; reading across holds where codes agree; no law privileging neither form nor formation settles a symmetric disagreement; imposed and written-back codes stay.",
     "zh": "只经听取而变的编码，恰经封闭的听取保持相合；所成之形由起点与次序固定；编码相合处可互读；既不特许形式也不特许形成者的律不能解决对称的分歧；强加的与写回的编码保持。"
@@ -199,8 +199,8 @@
       "kind": "scope"
     },
     {
-      "en": "That actual conventions, scripts or the theory's own terms form by hearing in this way, or whether a shared, imposed or kept code keeps or closes 生生, the continuation of life.",
-      "zh": "实际的约定、文字或理论自己的术语以这种听取方式形成，或共有的、强加的、保留的编码支持还是损害生生。",
+      "en": "That actual conventions, scripts or the theory's own terms form by hearing in this way. These laws rank no code: what a shared, imposed or kept code keeps, opens or closes, and for whom, is chapter 7's question.",
+      "zh": "实际的约定、文字或理论自己的术语以这种听取方式形成。这些律不给编码排序：共有的、强加的、保留的编码保持、打开或关闭什么，对谁，是第 7 章的问题。",
       "kind": "non-implication"
     }
   ],
@@ -763,6 +763,10 @@
     {
       "en": "9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.",
       "zh": "2026年11月9日，工作板条目 WB：据 Ren 11 月 8–9 日之言重述伦理之框架：两个前提称为排序之果所用之两种读法，排序为排序者所持，不求外来之根据；主张、假设与 Lean 皆不变。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the not-shown item on codes re-said with chapter 5's home: these laws rank no code; what a code keeps, opens or closes, and for whom, is chapter 7's question, in place of whether it keeps or closes 生生; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：关于编码的未表明之项依第 5 章之本处重述：这些律不给编码排序；编码保持、打开或关闭什么，对谁，是第 7 章的问题，不再问它支持还是损害生生；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

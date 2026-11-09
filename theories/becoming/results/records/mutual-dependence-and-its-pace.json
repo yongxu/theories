@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-19T14:51:35+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "Mutual dependence (every influence closure the whole) lies strictly between sharing conditions and mutual feeding, and makes bounded significance the continuation condition. Around couplings acting at every step the most difference that can arrive is exponential both ways.",
     "zh": "相互依存（每个影响闭包都是整体）严格介于共享条件与相互供给之间，并使有界的意义成为延续条件。在每步都作用的耦合回路上，能到达的最大差别两边都是指数。"
@@ -177,8 +177,8 @@
     "zh": "把依存接到以导出强度按水平耦合的规律；实数强度或连续时间下的步速规律；传递有噪声的选择；独立审查。"
   },
   "correspondence": {
-    "en": "Reads the opening's \"the whole Earth has become a highly entangled system\", \"heavily coupled into it\" and \"an exponential pace, which leaves us very little time to react\" (OPENING, Ren's voice; provenance, not warrant): \"entangled\" as mutual dependence, revising D39's loop reading of 18 October after Ren's reply of 19 October; \"exponential pace\" as the growth around loops of couplings acting at every step and, in a selection, as the share ratio's; \"little time\" through half_stands. The note [^present] cites this record. The readings are the AI's; study section 212.",
-    "zh": "读开篇的“the whole Earth has become a highly entangled system”“heavily coupled into it”与“an exponential pace, which leaves us very little time to react”（OPENING，Ren 的口吻；是出处，不是依据）：依 Ren 10 月 19 日的回复，“entangled”读作相互依存，修订 D39 10 月 18 日的回路读法；“exponential pace”读作每步都作用的耦合回路上的增长，在选择中读作份额之比的增长；“little time”经 half_stands 读出。注 [^present] 引本记录。读法是 AI 的；研究第 212 节。"
+    "en": "Reads the opening's \"the whole Earth has become a highly entangled system\", \"heavily coupled into it\" and \"an exponential pace, which leaves us very little time to react\" (OPENING, Ren's voice): \"entangled\" as mutual dependence, revising D39's loop reading of 18 October after Ren's reply of 19 October; \"exponential pace\" as the growth around loops of couplings acting at every step and, in a selection, as the share ratio's; \"little time\" through half_stands. The note [^present] cites this record. The readings are the AI's; study section 212.",
+    "zh": "读开篇的“the whole Earth has become a highly entangled system”“heavily coupled into it”与“an exponential pace, which leaves us very little time to react”（OPENING，Ren 的口吻）：依 Ren 10 月 19 日的回复，“entangled”读作相互依存，修订 D39 10 月 18 日的回路读法；“exponential pace”读作每步都作用的耦合回路上的增长，在选择中读作份额之比的增长；“little time”经 half_stands 读出。注 [^present] 引本记录。读法是 AI 的；研究第 212 节。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MutualDependence.lean",
   "aliases": [
@@ -564,6 +564,10 @@
     {
       "en": "26 October 2026, board item DF1b (study section 422): The Chinese edition writes the spine's first law (Flow.Gainless) 第一律, as the account does, not 第一定律, which names thermodynamics' first law.",
       "zh": "2026年10月26日，工作板条目 DF1b（研究第 422 节）：中文版把脊柱的第一律（Flow.Gainless）写作第一律，与本说明一致，而不写作第一定律，后者指热力学第一定律。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：对应中 Ren 所引之言后所附的标注删去，其言原样保留，AI 的标注保留；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

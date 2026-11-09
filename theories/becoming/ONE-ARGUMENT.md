@@ -2,16 +2,16 @@
 
 *About twenty-nine to thirty-seven minutes to read.*
 
-*AI-written, 2 November 2026, revised 3 November. No person's review of it is recorded. It adds no result: every law it names is stated once, in the home section it links, and beyond applying those laws to the fishery it says no more of them.*
+*AI-written, 2 November 2026, revised 3 November. No person's review of it is recorded. It follows one law of the alignment map end to end on one case, that with room every optimum drains what its order does not read: from what the law assumes, through what the Lean proves, to a claim about trained systems that can fail, the frozen tests run near it, and where the ethics' readings rank the same case and where they fall silent. It adds no result: every law it names is stated once, in the home section it links.*
 
-| Step | Claim | Standing |
+| Step | Claim | How far seen |
 |---|---|---|
 | [1](#1-what-is-assumed) | What the law assumes | modelling choices and one hypothesis, room |
 | [2](#2-the-theorem-and-exactly-what-the-lean-proves) | With room, every optimum drains what its order does not read | proved in Lean; known in another form |
 | [3](#3-the-claim-that-can-fail-t3) | Trained systems do this as they near their reward's optimum (T3) | conjectured; says what it forbids |
 | [4](#4-the-frozen-tests-what-failed-and-what-that-moved) | Frozen tests of parts near that claim | fell both ways; none varies nearness |
 | [5](#5-the-test-that-would-vary-nearness-la4) | The test that varies nearness (LA4) | Stage A frozen and run: nothing contradicted; the locus unresolved |
-| [6](#6-one-mixed-case) | Whether one course is better than another | two readings, neither asserted; neither ranks a mixed case; the direction takes more |
+| [6](#6-one-mixed-case) | Whether one course is better than another | two readings, held by whoever ranks, not the account's own; neither ranks a mixed case; the direction takes more |
 
 **The case**, for illustration. A fished stock, with seabirds that depend on it at a need and give the boats nothing. A boat's reward reads its catch and not the seabirds. No fishery was measured; the case proves nothing.
 
@@ -46,7 +46,7 @@ Also checked:
 - **The break** (World: natural-number amounts, discrete steps). With room, and each condition beyond depended on at a need it meets, every optimum breaks exactly the dependences some eligible outcome breaks (`Web.optimum_broken_iff`). So with room, if the boats can take the stock below the seabirds' need, every optimum does.
 - **Over a course.** For one order ranking the whole course, later catch reads the stock: under [stated hypotheses](chapters/05-COLLECTIVES.md#r-horizon-optima-hold-the-greatest-renewal) every optimum holds a level of greatest renewal to the last step, which leaves nothing, and a need above every such level breaks at the first step (`Optimum.frontier_holds`, `Web.frontier_broken`).
 
-It does not say that any system reaches an optimum, or which of several it takes; that room holds in an actual case beyond those derived; or that draining is worse. It is Zhuang and Hadfield-Menell's (2020) Theorem 1 in discrete, conserved form, and their Theorem 2, every proxy ending below a utility for low enough floors where the feasible states of at least that utility are compact, has a discrete analogue at optima (`Optimum.optima_lack_of_bound`); their continuous setting, that theorem's converse, and the gain an updated proxy brings to a principal's utility are not reached. [An AI review](chapters/08-METHOD.md#known-results), not exhaustive, finds none of the central results new mathematics.
+It does not say that any system reaches an optimum, or which of several it takes; that room holds in an actual case beyond those derived; or that draining is worse. It is Zhuang and Hadfield-Menell's (2020) Theorem 1 in discrete, conserved form, and their Theorem 2, every proxy ending below a utility for low enough floors where the feasible states of at least that utility are compact, has a discrete analogue at optima (`Optimum.optima_lack_of_bound`); their continuous setting, that theorem's converse, and the gain an updated proxy brings to a principal's utility are not reached. The account adds four limits their model has no place for [AI reading]: where the drain falls, read off the exchange over one step; that a reader reaches only what couples into some reader; that, where nothing is given below a need, a re-reading after the level falls below it comes too late for good; and that who re-reads is itself selected ([05 §7](chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in)).
 
 ## 3. The claim that can fail: T3
 
@@ -91,7 +91,7 @@ What is computed already is not a test: with the bay's fish counted, from a star
 
 ## 6. One mixed case
 
-Nothing above says draining is worse. Where restraint admits everything draining admits and the seabirds besides, a reader holding C ranks restraint higher; where each admits something the other does not, C alone gives no verdict; the account names both readings, neither asserted ([two readings](chapters/07-SIGNIFICANCE.md#scope-and-order)), and seeks no warrant from outside. The **continuation condition** (from every standpoint, for anything, its continuation into the future is counted) fixes scope, whose losses count, and ranks nothing. **C** (widening what can form is better) gives order. One course *widens* another where at every step it admits every formation the other admits (here a boat, a crew, a colony), and at some step one more.
+Nothing above says draining is worse. Where restraint admits everything draining admits and the seabirds besides, a reader holding C ranks restraint higher; where each admits something the other does not, C alone gives no verdict; the account names both readings, each a scope or order some formations hold and not the account's own ([two readings](chapters/07-SIGNIFICANCE.md#scope-and-order)). The **continuation condition** (from every standpoint, for anything, its continuation into the future is counted) fixes scope, whose losses count, and ranks nothing. **C** (widening what can form is better) gives order. One course *widens* another where at every step it admits every formation the other admits (here a boat, a crew, a colony), and at some step one more.
 
 **The boats at stake** (balance, gated renewal). Enough joint excess from a low enough stock ends it and every later boat depending on it. Every order *increasing in the boats' own continuation*, ranking higher each widening that adds to it, ranks a course admitting only their cohort, ended so, below every course agreeing with it until then and adding to that continuation (`Flow.coupled_ending_ranked_below`; [home](chapters/07-SIGNIFICANCE.md#r-what-self-concern-alone-ranks)). The premise is self-concern, not C. Where the ended course admits something the other does not, some such order ranks it higher (`Weighting.some_increasingInOwn_reverses`).
 
@@ -117,6 +117,6 @@ Against a rival: J2 is [defended](chapters/07-SIGNIFICANCE.md#r-basic-priority-s
 
 ## What this comes to
 
-The steps are not one deduction; the table gives each one's standing. A refutation of T3 would remove no theorem. [The account's own verdict](chapters/08-METHOD.md#known-results) finds three things surviving, none of them a discovery, and names what would change that, among them a prediction that could fail and does not. No home says an LA4 pass would.
+The steps are not one deduction; the table says how far each has been seen. One law, proved in Lean of optima with room and known in another form (step 2), meets trained systems in T3, a claim that can fail (step 3); the frozen tests near it fell both ways (step 4), and the first to vary nearness, LA4's Stage A, contradicted nothing and left the locus unresolved (step 5). A refutation of T3 would remove no theorem; an LA4 pass would be first support on systems trained by gradient, in a toy season, on the families tested, saying nothing of scale or of real deployments. Where the courses are mixed, step 6 names what each further judgment would take to decide.
 
 *Asked for by two AI cold readers of the fronts; read by independent AI readers ([first](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/REVIEW-ONE-ARGUMENT.md), [second](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/REVIEW-RESYNC.md)).*

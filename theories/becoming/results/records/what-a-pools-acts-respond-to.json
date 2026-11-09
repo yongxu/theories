@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-18T17:35:31+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "Where each member's law reads through its coupling, what a pool decides by its acts is a selection through its pooled coupling, and nothing within the pool's coupling closure responds to a difference staying beyond it. Coupling bounds the response exactly and does not fix it.",
     "zh": "每个成员的律都经其耦合而读时，一组以其动作所决定的是经其合起来之耦合的选择；一组耦合闭包之内无物回应留在闭包之外的差别。耦合精确地界定回应，而不确定回应。"
@@ -175,8 +175,8 @@
     "zh": "哪个律闭合而非扩大一组所分开的差别（两个进程在何处、经谁重合，见 where-two-courses-rejoin）；成员的律怎样变得回应其所耦合入者（训练）；成员直接读彼此的耦合；组怎样形成与持续（target-capture）；独立审查。"
   },
   "correspondence": {
-    "en": "The chapter's section 7.4 read that what any member's acts do beyond its own coupling closure couples into some member of the pool \"and can be corrected there\", and what-pooled-coupling-reaches left open whether a pool's selection responds to what it separates; section 7.7 listed \"Coupling is not compliance\". Ren, 18 October 2026: \"what is the light, how can we hold the light to enlight others, and use it as an alignment for all, and what is still missing from it?\" and \"please make your own pareto frontier decisions, and push the frontier\" (provenance, not warrant); the AI chose the item. Reading (the AI's, adopted in one account with the scope of chapter section 7, DELEGATED-CHOICES D45): what a pool does is a selection through its pooled coupling, so its acts respond to nothing beyond the union of its members' coupling closures, and within it only through members that couple a difference apart; a response reaches an actor's own act only through the actor's coupling closure, the structure that closing a difference and widening it share.",
-    "zh": "本章第 7.4 节读到，任何成员的动作在其自身耦合闭包之外所做的，耦合入组中的某个成员“并能在那里被纠正”；what-pooled-coupling-reaches 留下开放：一组的选择是否回应它所分开者；第 7.7 节列出“耦合不是服从”。Ren，2026年10月18日：\"what is the light, how can we hold the light to enlight others, and use it as an alignment for all, and what is still missing from it?\"，以及\"please make your own pareto frontier decisions, and push the frontier\"（来历，不是根据）；此项由 AI 选定。读法（AI 的，以理论第 7 节的范围在一个说明中采用，DELEGATED-CHOICES D45）：一组所做的是经其合起来之耦合的选择，所以它的动作不回应其成员耦合闭包之并以外的任何东西，在其内也只经把差别耦合得有别的成员；回应只经行动者的耦合闭包及于其自身的动作，这是闭合差别与扩大差别共有的结构。"
+    "en": "The chapter's section 7.4 read that what any member's acts do beyond its own coupling closure couples into some member of the pool \"and can be corrected there\", and what-pooled-coupling-reaches left open whether a pool's selection responds to what it separates; section 7.7 listed \"Coupling is not compliance\". Ren, 18 October 2026: \"what is the light, how can we hold the light to enlight others, and use it as an alignment for all, and what is still missing from it?\" and \"please make your own pareto frontier decisions, and push the frontier\"; the AI chose the item. Reading (the AI's, adopted in one account with the scope of chapter section 7, DELEGATED-CHOICES D45): what a pool does is a selection through its pooled coupling, so its acts respond to nothing beyond the union of its members' coupling closures, and within it only through members that couple a difference apart; a response reaches an actor's own act only through the actor's coupling closure, the structure that closing a difference and widening it share.",
+    "zh": "本章第 7.4 节读到，任何成员的动作在其自身耦合闭包之外所做的，耦合入组中的某个成员“并能在那里被纠正”；what-pooled-coupling-reaches 留下开放：一组的选择是否回应它所分开者；第 7.7 节列出“耦合不是服从”。Ren，2026年10月18日：\"what is the light, how can we hold the light to enlight others, and use it as an alignment for all, and what is still missing from it?\"，以及\"please make your own pareto frontier decisions, and push the frontier\"；此项由 AI 选定。读法（AI 的，以理论第 7 节的范围在一个说明中采用，DELEGATED-CHOICES D45）：一组所做的是经其合起来之耦合的选择，所以它的动作不回应其成员耦合闭包之并以外的任何东西，在其内也只经把差别耦合得有别的成员；回应只经行动者的耦合闭包及于其自身的动作，这是闭合差别与扩大差别共有的结构。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolResponse.lean",
   "aliases": [
@@ -739,6 +739,10 @@
     {
       "en": "30 October 2026 (U2, study section 461): a law on its own carrier added, stating `Becoming.ExchangeLaw.response_not_fixed_by_coupling` where its terms are the grammar's, through the row (F5's statements_at_model, reviewed in RECHECK-U2); the row's statement, proof and every other law unchanged.",
       "zh": "2026年10月30日（U2，研究第 461 节）：增于其自身之载体上之律，于其项为文法之处陈述 `Becoming.ExchangeLaw.response_not_fixed_by_coupling`，经其本行（F5 之 statements_at_model，经 RECHECK-U2 复核）；本行之陈述、证明与他律皆不改。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：对应中 Ren 所引之言后所附的标注删去，其言原样保留，AI 的标注保留；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

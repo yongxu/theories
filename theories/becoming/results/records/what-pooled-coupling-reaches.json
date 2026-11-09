@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "A pool's selections are blind beyond the union of its members' coupling closures and separate exactly what the members do not all couple alike. An act differing only beyond that union, the pool's own included, is selected alike within it; a formation whose admission the act changes separates it.",
     "zh": "一组的选择在其成员耦合闭包之并以外不见，恰分开并非每个成员都耦合得无别者。差别留在此闭包之外的动作（这组自身的动作在内）在闭包内被选得相同；接纳被此动作改变的形成分开它。"
@@ -171,8 +171,8 @@
     "zh": "哪些形成合起来，一组怎样形成、持续并抵抗由其所奖励者书写的规则（target-capture）；哪个律闭合而非扩大一组所分开的差别（一组的动作能回应什么，见 what-a-pools-acts-respond-to）；独立审查。"
   },
   "correspondence": {
-    "en": "The chapter's section 7.4, restated by M1 on 18 October 2026, read \"alignment for all is pooled coupling across intelligences\" as an open AI reading, adopted on 19 October 2026 by its place in one account (DELEGATED-CHOICES D45), and section 7.3 bounded pooled coupling only for a pool within one formation's coupling closure (Flow.unselected_beyond_coupling_all). Ren, 18 October 2026: \"what is the light, how can we hold the light to enlight others, and use it as an alignment for all, and what is still missing from it?\" and \"please make your own pareto frontier decisions, and push the frontier\" (provenance, not warrant); the AI chose the item. Reading (the AI's, adopted in one account with the scope of chapter section 7, DELEGATED-CHOICES D45): no pool, however wide, selects what its own joint act does beyond its joint coupling closure; that is selected only through formations beyond it that couple the difference apart, such as those whose support the act changes.",
-    "zh": "本章第 7.4 节由 M1 于 2026年10月18日重述，把“alignment for all is pooled coupling across intelligences”作为开放的 AI 读法（2026年10月19日以其在一个说明中的位置采用，DELEGATED-CHOICES D45）；第 7.3 节只对一个形成耦合闭包之内的组界定合起来的耦合（Flow.unselected_beyond_coupling_all）。Ren，2026年10月18日：\"what is the light, how can we hold the light to enlight others, and use it as an alignment for all, and what is still missing from it?\"，以及\"please make your own pareto frontier decisions, and push the frontier\"（来历，不是根据）；此项由 AI 选定。读法（AI 的，以理论第 7 节的范围在一个说明中采用，DELEGATED-CHOICES D45）：没有哪个组，无论多宽，选出它自身合起来的动作在其合起来的耦合闭包之外所做的；那只经闭包之外、经其耦合使差别有别的形成被选出，例如支持被此动作改变的形成。"
+    "en": "The chapter's section 7.4, restated by M1 on 18 October 2026, read \"alignment for all is pooled coupling across intelligences\" as an open AI reading, adopted on 19 October 2026 by its place in one account (DELEGATED-CHOICES D45), and section 7.3 bounded pooled coupling only for a pool within one formation's coupling closure (Flow.unselected_beyond_coupling_all). Ren, 18 October 2026: \"what is the light, how can we hold the light to enlight others, and use it as an alignment for all, and what is still missing from it?\" and \"please make your own pareto frontier decisions, and push the frontier\"; the AI chose the item. Reading (the AI's, adopted in one account with the scope of chapter section 7, DELEGATED-CHOICES D45): no pool, however wide, selects what its own joint act does beyond its joint coupling closure; that is selected only through formations beyond it that couple the difference apart, such as those whose support the act changes.",
+    "zh": "本章第 7.4 节由 M1 于 2026年10月18日重述，把“alignment for all is pooled coupling across intelligences”作为开放的 AI 读法（2026年10月19日以其在一个说明中的位置采用，DELEGATED-CHOICES D45）；第 7.3 节只对一个形成耦合闭包之内的组界定合起来的耦合（Flow.unselected_beyond_coupling_all）。Ren，2026年10月18日：\"what is the light, how can we hold the light to enlight others, and use it as an alignment for all, and what is still missing from it?\"，以及\"please make your own pareto frontier decisions, and push the frontier\"；此项由 AI 选定。读法（AI 的，以理论第 7 节的范围在一个说明中采用，DELEGATED-CHOICES D45）：没有哪个组，无论多宽，选出它自身合起来的动作在其合起来的耦合闭包之外所做的；那只经闭包之外、经其耦合使差别有别的形成被选出，例如支持被此动作改变的形成。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionPool.lean",
   "aliases": [
@@ -676,6 +676,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the premise names the record by its current id, selection-through-couplings, for its former id; nothing else changed.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：前提以现行编号 selection-through-couplings 称该记录，取代其旧编号；别无改变。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：对应中 Ren 所引之言后所附的标注删去，其言原样保留，AI 的标注保留；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

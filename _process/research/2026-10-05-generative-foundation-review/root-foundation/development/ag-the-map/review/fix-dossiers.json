@@ -1,0 +1,30 @@
+{
+ "edited": [
+  {
+   "file": "theories/becoming/review/ALIGNMENT.md",
+   "changes": 13
+  },
+  {
+   "file": "theories/becoming/review/BUDDHIST-THOUGHT.md",
+   "changes": 5
+  },
+  {
+   "file": "theories/becoming/review/CLASSICAL-TEXTS.md",
+   "changes": 6
+  },
+  {
+   "file": "theories/becoming/review/LOGIC.md",
+   "changes": 3
+  },
+  {
+   "file": "theories/becoming/review/SCIENCES.md",
+   "changes": 8
+  },
+  {
+   "file": "theories/becoming/review/PHILOSOPHY.md",
+   "changes": 10
+  }
+ ],
+ "skipped": [],
+ "notes": "Every verified finding was applied as its replacement was worded. Each old string was checked to occur exactly once before it was replaced, and the edits were made with Edit or a replace-once script. ALIGNMENT (13 changes): line 7 gained the meta-attractor and aim sentences; line 25 got the readings tail; the Terms entry is now 'Readings and premises'; the six listed A-16 pattern places were changed (the heading, the table row, 'neither reading', 'Keeping the two readings apart', 'the reading C', 'the readings named apart'); the three known-form places (214, 346, 383) were changed. One more change was made by judgment under the same rule: in A-16's Standing and use, 'The philosophy dossier takes the premises up in depth' became 'takes the readings and the further premises up in depth', because the links there cover both the readings (P-04, P-07, P-20) and P-21's practical premises. 'Part 4. Direction and premises' (item list and heading) was left as it is: A-17 in that part takes the practical premises as hypotheses, and changing the heading would move its slug. No file links A-16's old heading slug (git grep for a-16-two-premises: no hits). BUDDHIST (5): the purpose sentence on line 9; the line 7 paragraph rewritten ('这些读法怎样做成'); the Terms entry on line 25; B-24 (line 340) and B-34 (line 476). Two remaining '不断言' (line 9 and the 三种关系 note) define what 相分 is ('经文断言了理论所不断言者'), a classification and not the readings' tail, so they stay. CLASSICAL (6): the purpose on line 5; the line 5 vow '本卷不隐去已知的弱点：' removed under the BUDDHIST line 7 finding; C-37 (line 627); C-24 (line 413); and the two C-17 places on line 300. Line 15's definition '“前提”是证明所设而理论不断言者' is a term's definition and was not flagged, so it stays. LOGIC (3): the line 3 purpose; the line 9 heading; the line 709 Standing replacement, done as one replacement with its extended 07 quotation, which was checked to be an exact substring of 07-SIGNIFICANCE.md line 23. SCIENCES (8): the cover's purpose sentence; the line 10 lead and the deletion of its last sentence; line 72's survivors clause; and the four line 24/47 edits (dropped 'New mathematics.', 'whose rankings mostly take two readings as hypotheses', dropped ' Independent human review.', ', and asserts neither;' to ';'). The quote at line 598 that remains ('not asserted') quotes a record and stays. PHILOSOPHY (10): the cover; the two line 14 edits (the anchor r-universal-practical-warrant was checked in 07 line 819); the five pattern edits (lines 8, 10, 33 twice, 66, 280); line 690's provenance entry, now dated to amendment 1. Left for other finders or a later pass, not changed here: PHILOSOPHY's P-04 is still headed 'Two premises, two roles' (line 138 and the table at line 653), while ALIGNMENT's A-16 now reads 'Two readings, two roles'. A-16's Meaning quotes 07's 'Neither is asserted, and neither is the account's own', and that quote follows 07's home. 06 line 424 still says '第七章只在两种读法之下给出排序' and '理论也不断言它们', and 06 line 579 has the same posture; these belong to the 06 area's finder. No make, render, gate, test, lake or build was run. Only the six owned files and this report were written."
+}

@@ -8,7 +8,7 @@
   "kind": "assessment",
   "status": "reviewed-scoped",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-21T22:12:39+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "Every one of the 5,673 judgments of 《中华思想脉络》 v1.0 is read against the spine: 3,514 bear on its structures, each placed once in its flagged cluster, in 1,300 checked entries (453 agreements, 647 exact scopes, 200 divergences). 449 classical names, one per concept, state the theory in the 中华本《变化论》.",
     "zh": "《中华思想脉络》v1.0 的 5,673 条判断逐条对照脊柱：3,514 条关乎其结构，各在所标之簇恰落一处，成 1,300 个已检查条目（相合 453、定域 647、相分 200）；449 个古典之名，每概念一个，写成中华本《变化论》。"
@@ -63,8 +63,8 @@
     "zh": "古典文字提出的缺口，各先认领再写：互为函数的见证；机之度量；按份额加权的池。然后把本章判定的 RO 与易传三处类别写入那两份对应。"
   },
   "correspondence": {
-    "en": "Ren, 19 October 2026, after extending his database to Chinese culture: “请把中华文化中所有在theory of becoming上有映射，或者对应的，找出来，并寻找到非同于英文系统的一套符号系统，这个系统存在于古中文之中，在历史长河中一直在演变和迭代……现在不用改英文版本，我们只是做中华版本，用中华的体系和符号系统 - 它自然就是一元的，关系的，动态的……同时，请把我做的这个脉络，也整合进我们的theories” (provenance, not warrant). The chapter places the 脉络 in the theory and tests the thesis judgment by judgment; the 中华本 states the theory in the classical names, with 經, 說 and 證 for each law and the classical passages set beside it. Reading (the AI's, D62): the thesis holds at the root and in most mapped judgments, needs a scope in its universal forms, and fails as a property of every system.",
-    "zh": "Ren，2026年10月19日，把数据库扩展到中华文化之后说：“请把中华文化中所有在theory of becoming上有映射，或者对应的，找出来，并寻找到非同于英文系统的一套符号系统，这个系统存在于古中文之中，在历史长河中一直在演变和迭代……现在不用改英文版本，我们只是做中华版本，用中华的体系和符号系统 - 它自然就是一元的，关系的，动态的……同时，请把我做的这个脉络，也整合进我们的theories”（来历，不是根据）。本章把脉络安放在理论中，并逐条检验论题；中华本以古典之名陈述理论，每条律有经、说、证，并列出相对照的古典文字。读法（AI 的，D62）：论题在根上与大多数已对应的判断中成立，其全称形式需要定域，作为每一体系的性质不成立。"
+    "en": "Ren, 19 October 2026, after extending his database to Chinese culture: “请把中华文化中所有在theory of becoming上有映射，或者对应的，找出来，并寻找到非同于英文系统的一套符号系统，这个系统存在于古中文之中，在历史长河中一直在演变和迭代……现在不用改英文版本，我们只是做中华版本，用中华的体系和符号系统 - 它自然就是一元的，关系的，动态的……同时，请把我做的这个脉络，也整合进我们的theories”. The chapter places the 脉络 in the theory and tests the thesis judgment by judgment; the 中华本 states the theory in the classical names, with 經, 說 and 證 for each law and the classical passages set beside it. Reading (the AI's, D62): the thesis holds at the root and in most mapped judgments, needs a scope in its universal forms, and fails as a property of every system.",
+    "zh": "Ren，2026年10月19日，把数据库扩展到中华文化之后说：“请把中华文化中所有在theory of becoming上有映射，或者对应的，找出来，并寻找到非同于英文系统的一套符号系统，这个系统存在于古中文之中，在历史长河中一直在演变和迭代……现在不用改英文版本，我们只是做中华版本，用中华的体系和符号系统 - 它自然就是一元的，关系的，动态的……同时，请把我做的这个脉络，也整合进我们的theories”。本章把脉络安放在理论中，并逐条检验论题；中华本以古典之名陈述理论，每条律有经、说、证，并列出相对照的古典文字。读法（AI 的，D62）：论题在根上与大多数已对应的判断中成立，其全称形式需要定域，作为每一体系的性质不成立。"
   },
   "canonical_source": "theories/becoming/history/CIVILIZATION-THOUGHT-AND-BECOMING.md",
   "aliases": [
@@ -485,6 +485,10 @@
     {
       "en": "5 November 2026, board item RAE3 (AA Phase 0's E4; ED3's classical reader's E3C-04, -06, -10): of the 6 judgments kept in one cluster and rejected in another, 5 are rejected where the rejection names the cluster that takes them (LE-R020 and LE-R021 in C02, WP-XCS-C01-S01-R04 in C08, LL-R015 in C11, RU1-LY-18-10-R02 in C13), and verify_zh.py now checks that every such rejection does; the sixth, TP-H22-X4-R01, which C17's reviser had asked to be moved out of C07's rejections, is a parallel of xiaoxiang-weidang in C07 too (zhonghua/resolve_2026-11-05.py). Fifteen judgments the sweep had left unflagged were placed in the map (seven entries rest on them alone); each is flagged for the cluster that places it (zhonghua/flag_2026-11-05.py), so 3,514 bear on the structures, not 3,499, and verify_zh.py refuses an unflagged judgment in the map. Read across clusters by one rule (build_tables.placements: a judgment's kind where a cluster takes it, its own first; not taken only where none does), 245 are taken nowhere, so 06 §七's mapped count is 3,269; its shares are unchanged. make_record.py and catalogue_entries.py write the current wording and refuse to overwrite. The scope now lists the chapters' checks to 23 October only as having run (the RAE notes above list them). The entries, their count and their kinds are unchanged.",
       "zh": "2026年11月5日，看板项 RAE3（AA 第零阶段之 E4；ED3 古典读者之 E3C-04、-06、-10）：一簇取而他簇不取之 6 条中，5 条之不取皆注明取之之簇（LE-R020、LE-R021 于 C02，WP-XCS-C01-S01-R04 于 C08，LL-R015 于 C11，RU1-LY-18-10-R02 于 C13），verify_zh.py 今查每一此类不取皆如此；第六条 TP-H22-X4-R01，C17 之修订者已请移出 C07 之不取，今于 C07 亦为 xiaoxiang-weidang 之并列（zhonghua/resolve_2026-11-05.py）。分拣未标之 15 条已入对应（七个条目只依之），今各标为所落之簇（zhonghua/flag_2026-11-05.py），故关乎结构者 3,514 条，非 3,499，verify_zh.py 拒对应中未标之判断。以一规则跨簇而读（build_tables.placements：判断之类取自取之之簇，先所标之簇；无簇取之方为不取），各簇皆不取者 245 条，故 06 第七节之已对应数为 3,269；其比例不变。make_record.py 与 catalogue_entries.py 今写现行之语，且不覆写。验证范围于诸章之核只言其止于 10 月 23 日（所核之项见上 RAE 之注）。条目、其数与其类均未改。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：对应中 Ren 所引之言后所附的标注删去，其言原样保留，AI 的标注保留；主张不变。"
     }
   ]
 }

@@ -1,0 +1,138 @@
+{
+ "file": "theories/becoming/chapters/08-METHOD.md",
+ "edited": [
+  {
+   "file": "theories/becoming/chapters/08-METHOD.md",
+   "changes": 22
+  }
+ ],
+ "skipped": [],
+ "applied": [
+  {
+   "line": 5,
+   "kind": "purpose",
+   "done": "Thesis: added 'so that anyone, human or AI, can check that each law follows from its stated premises without trusting anyone'."
+  },
+  {
+   "line": 7,
+   "kind": "under-saying",
+   "done": "Where this chapter sits: list now names the labels that say how each claim is shown, the pure core and its checks, the shared laws, where the results meet known ones, the theses with what each forbids and its evidence."
+  },
+  {
+   "line": 9,
+   "kind": "defence (pattern of 646)",
+   "done": "Bases: 'the ranking results use two readings, neither asserted: ...' became ', and a ranking result names the readings it ranks under.'"
+  },
+  {
+   "line": 95,
+   "kind": "defence",
+   "done": "Cut 'and wherever a ranking result is restated, the readings it uses are named with their roles'."
+  },
+  {
+   "line": 95,
+   "kind": "purpose (pattern)",
+   "done": "Offer sentence replaced with 07 T8's words: a way of seeing, not a verdict: what each course draws on ... and who bears it."
+  },
+  {
+   "line": 220,
+   "kind": "defence (pattern of 646)",
+   "done": "'**Ethics, none asserted**' became '**Ethics**'."
+  },
+  {
+   "line": 234,
+   "kind": "above-map (pattern of 758)",
+   "done": "C's Standing: 'a reading, not asserted, no warrant from outside sought' became 'a reading, not asserted'."
+  },
+  {
+   "line": 435,
+   "kind": "defence (pattern of 646)",
+   "done": "Widening row: cut ', with the continuation condition for scope'."
+  },
+  {
+   "line": 504,
+   "kind": "defence",
+   "done": "'**The verdict.** None of the central results is new mathematics' became '**Where the central results meet known ones.** An AI review found none of the central results new mathematics'; the paragraph's other sentences unchanged (its third sentence is quoted by a dossier)."
+  },
+  {
+   "line": 564,
+   "kind": "ai-over-aim",
+   "done": "Dropped 'or found it' and 'which is neither why alignment is hard nor a foundation for it'; now ends 'how far a reader reaches: what they map for alignment, not why alignment is hard'. Every scope kept."
+  },
+  {
+   "line": 569,
+   "kind": "defence",
+   "done": "'**What survives.** Three things survive, none of them a discovery:' became '**What the review found new.** By that review, what is new is the artefact, not its mathematics, in three things:'."
+  },
+  {
+   "line": 646,
+   "kind": "defence",
+   "done": "Cut the paragraph's last sentence 'Either way, each ranking result names what it ranks under, ...'."
+  },
+  {
+   "line": 710,
+   "kind": "purpose (pattern of 95)",
+   "done": "'what the account's makers offer is said as theirs' became 'for life, the account's makers offer a way of seeing, not a verdict'."
+  },
+  {
+   "line": 710,
+   "kind": "above-map",
+   "done": "Cut ', and no warrant from outside is sought'; the readings stay."
+  },
+  {
+   "line": 728,
+   "kind": "purpose",
+   "done": "'a truth anyone can check' became 'a map, for alignment and of wisdom, that any mind can check', with an AGENTS link (../../../AGENTS.md) beside OPENING."
+  },
+  {
+   "line": 728,
+   "kind": "old-order",
+   "done": "'weighed by which of these it serves ..., and a refinement that serves none waits' became 'weighed by what it serves before it is claimed, and coupling these in is work that no check inside the work can stand in for'."
+  },
+  {
+   "line": 745,
+   "kind": "above-map (with 750)",
+   "done": "Class list now 'further proof, philosophical or empirical'."
+  },
+  {
+   "line": 750,
+   "kind": "above-map",
+   "done": "Item 4's class '(philosophical warrant;' became '(philosophical;'; its Open part now says whether actual systems meet the premises, questions of correspondence and, for the comparison, of how orders form (item 12); the claim about actual AI systems is argued (07#direction); the frozen tests on trained systems are with the theses (§9). Item 4 keeps '*Open:*' for K7."
+  },
+  {
+   "line": 758,
+   "kind": "above-map / defence (also the OPEN-QUESTIONS finding)",
+   "done": "Item 12: cut '; no warrant from outside is sought'."
+  },
+  {
+   "line": 758,
+   "kind": "above-map",
+   "done": "Item 12's Open: cut 'whether a universal practical warrant exists is kept as a question the account does not pursue (T8);'. The statement stays at its home, Philosophical questions (line 781)."
+  },
+  {
+   "line": 760,
+   "kind": "above-map",
+   "done": "'a stronger practical warrant is item 12;' became 'whether a universal practical warrant exists is kept as a question the account does not pursue ([below](#philosophical-warrant));'."
+  },
+  {
+   "line": 765,
+   "kind": "under-saying",
+   "done": "Added the atlas sentence in ATLAS.md's own description, linked ../results/atlas/ATLAS.md."
+  }
+ ],
+ "same_landing_outside_this_file": [
+  "tools/research/navigation.py OPEN_LEAD['c-question']: end '... and how such orders form, spread, lock and fare.' (open_lead_errors fails the render otherwise; OPEN-QUESTIONS.md is generated from it).",
+  "tools/research/navigation.py OPEN_LEAD['c-open']: set to 'how C-like orders form; no formal work settles them' (it currently quotes the cut clause).",
+  "tools/research/tests/test_uses_pages.py WhatEachFieldAdds.COPIED pins 'which is neither why alignment is hard nor a foundation for it' in 08 and USES.md: change to 'what they map for alignment, not why alignment is hard', and USES.md line 32's copy to match (rw-iter4 holds USES.md until its landed clause).",
+  "theories/becoming/review/LOGIC.md line 9 quotes 'None of the central results is new mathematics: each is near-definitional or a known result restated.' for check_dossiers.py; it no longer matches (checked by substring over every dossier quote of 08: this is the only one the edits break). It can quote 'none of the central results new mathematics: each is near-definitional or a known result restated.'",
+  "theories/becoming/review/SCIENCES.md: the finding said it quotes 'Three things survive, none of them a discovery'; in this tree it does not (its 08 quotes are 'one vocabulary for conservation, ...' and 'carry the verdicts of the audit of the third parts', both still matching). Its paraphrase 'Of what survives, 08 §8 counts three things' is a restatement to re-read.",
+  "theories/becoming/results/completion/COVERAGE.json (shared law 'order', line 1092) keeps 'that the wider is better is C's reading, with the continuation condition for scope'; COMPLETION.md renders it. No check compares it with 08's row, but the two restatements now differ; cut it there too for consistency."
+ ],
+ "restatements_to_reread": [
+  "_process/navigation/README-FIRST-SCREEN.md line 14 ('none of them a discovery'; rw-iter4's)",
+  "theories/becoming/ONE-ARGUMENT.md line 120 ('The account's own verdict', 'none of them a discovery')",
+  "theories/LINEAGE.md, LINEAGE.zh.md, theories/becoming/results/data/lineage.json, theories/becoming/USES.md: quote 'None of the central results is new mathematics'",
+  "results/atlas/entries/correspondences.json (indices 243, 397, 488: the verdict sentence; 425: '[AI reading, D66] An item is weighed by which of these it serves ...'; entries quoting 'a truth anyone can check'), and the crosswalk pages and map.html generated from them, for the crosswalk pass"
+ ],
+ "checks_run": "Each quote matched exactly once before replacement (asserted by the script); a word diff of the file was read hunk by hunk; every dossier quote of 08 under theories/becoming/review was tested by substring against the old and new text; tool and test strings quoting removed 08 text were searched. No render, test, gate or build was run, as instructed.",
+ "notes": "All 16 findings applied as given (22 replacements). No quote missing; no replacement says more than its cited home (07 T8, OPENING, AGENTS.md, ATLAS.md, 07#direction, §9)."
+}

@@ -11,7 +11,7 @@ Authority is scoped. A record controls the maintained summary and reuse identity
 
 ## Before starting or continuing a study
 
-1. Read the entry points and the governing method ([AGENTS.md](../AGENTS.md)). Search the register by claim, supplied premises and theorem aliases, and inspect the linked sources. Search studies and Lean declarations too, because migration is incomplete.
+1. Read the entry points, what the work is for and how sessions work together ([AGENTS.md](../AGENTS.md)) and, for formal work, [method](../theories/becoming/chapters/08-METHOD.md). Search the register by claim, supplied premises and theorem aliases, and inspect the linked sources. Search studies and Lean declarations too, because migration is incomplete.
 2. In the existing study note, name the result IDs reused and the exact new contribution: stronger conclusion, weaker premise, new correspondence, application, counterexample, correction, or a previously missing composition. For an unmigrated claim, identify its source and migrate it when the study substantively changes it. Do not create a new study copy to get a fresh workspace.
 3. State the output-to-input connection addressed and what would change the account. A new source survey, recheck, proof wrapper, notation change or repeated acceptance is evidence for the same result unless it changes substantive content. Completed mechanisms are reused; a historical "next step" is not automatically today's task.
 
@@ -38,7 +38,7 @@ Integration: which existing record changed; which output now meets which input
 | Conceptual connection | Use `interpretive` for an argument dependency, or `related` for analogy. Neither is a checked adapter. |
 | Counterexample or failed candidate | Preserve the case and its target scope. Revise or withdraw the affected claim without erasing its history. |
 
-Identical wording can cite different namespaces, definitions and test scopes, so it does not establish a duplicate. Several local results holding separately are not a composed proof in one history. Normative warrant, recognition, motivation, implementation and continued preservation each keep their own inferential burden.
+Identical wording can cite different namespaces, definitions and test scopes, so it does not establish a duplicate. Several local results holding separately are not a composed proof in one history. How an evaluation forms (in whom, reading what), whether it is recognized, what moves an actor, whether it is implemented and whether it goes on are different relations; a result showing one does not show another.
 
 ## Update and verify
 
