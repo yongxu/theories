@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261109T133249.498674Z",
- "core_sources_sha256": "11afe145a6a4e3904b1af638eb6d55cd5d54eec463f7e8358111eb262e22d302",
+ "core_receipt": "20261109T141048.279821Z",
+ "core_sources_sha256": "149d18cf5f0adc1aa728abe35b95d2a5f4f84f45433f4840b0bcca4d73790027",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,15 +58,15 @@
   ]
  },
  "counts": {
-  "laws": 4204,
+  "laws": 4213,
   "no_declarations": 9,
   "outside": 391,
-  "grammar": 941,
+  "grammar": 950,
   "balance, represented": 627,
   "anchor, not reached": 137,
   "no shared law": 2099,
   "vocabulary_only": 88,
-  "closure": 551,
+  "closure": 557,
   "balance": 853,
   "return": 256,
   "lumping": 84,
@@ -50230,6 +50230,67 @@
     "dependence": "no shared law"
    }
   ],
+  "the-own-class-read-on-a-flow": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.«内外之所缘同于»",
+     "Becoming.Flow.CouplingClass",
+     "Becoming.Flow.couplingClass_class",
+     "Becoming.Flow.couplingClass_held_iff",
+     "Becoming.Flow.couplingClass_held_iff_back"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.«内外之后皆续当且仅当后皆在内»",
+     "Becoming.Flow.couplingClass_reach_iff",
+     "Becoming.Flow.ReachReturns.couplingClass_reach",
+     "Becoming.Flow.couplingClass_reach_iff_returns"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.«内外之线不出»",
+     "Becoming.Flow.couplingClass_line_within",
+     "Becoming.Flow.couplingClass_line_iff_loop",
+     "Becoming.«返之线»",
+     "Becoming.«返之所及即环»",
+     "Becoming.«返之后皆续当且仅当皆返»",
+     "Becoming.«无环则返之所及唯己»"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.Flow.couplingClass_closed",
+     "Becoming.ReturnsNotRegular.reach_without_regularity",
+     "Becoming.ReturnsNotRegular.returns"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   }
+  ],
   "the-present-on-causal-set-growth": [
    {
     "law": 1,
@@ -60321,6 +60382,92 @@
     "dependence": "no shared law"
    }
   ],
+  "what-the-net-fixes-of-ones-own-class": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.«本类常闭则类闭»",
+     "Becoming.«类闭则本类常闭»",
+     "Becoming.«本类常闭当且仅当类闭»"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.«合为类»",
+     "Becoming.«本类常闭之交»",
+     "Becoming.«皆»",
+     "Becoming.«皆为类»",
+     "Becoming.«本类常闭之遍交»",
+     "Becoming.JoinBreaks.J_least",
+     "Becoming.JoinBreaks.J_fails",
+     "Becoming.JoinBreaks.E_meets",
+     "Becoming.JoinBreaks.F_meets",
+     "Becoming.JoinBreaks.E_le_J",
+     "Becoming.JoinBreaks.F_le_J"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.«后类»",
+     "Becoming.«后类为类»",
+     "Becoming.«后类之本»",
+     "Becoming.«本类常闭则后皆同»",
+     "Becoming.«本类常闭则含后类»",
+     "Becoming.«后类本类常闭»",
+     "Becoming.«后类最细»",
+     "Becoming.«判则后类本类常闭»",
+     "Becoming.«及之首步»",
+     "Becoming.«返则后类本类常闭»",
+     "Becoming.ReturnsAlong.downstreamClass_regular"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.«本类常闭则所及即一之所及»",
+     "Becoming.«后类之所及即一之所及»",
+     "Becoming.«本类常则闭当且仅当所及即一之所及»",
+     "Becoming.«各本类常闭则续无外即一之续无外»",
+     "Becoming.«各本类常闭续无外则同一中心»"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.«静之本类至终有常»",
+     "Becoming.«静最细»",
+     "Becoming.«静不闭»",
+     "Becoming.MeetBreaks.E_constant",
+     "Becoming.MeetBreaks.F_constant",
+     "Becoming.MeetBreaks.meet_not_constant",
+     "Becoming.MeetBreaks.meet_not_constant_at",
+     "Becoming.MeetBreaks.not_held",
+     "Becoming.MeetBreaks.idle_both",
+     "Becoming.MeetBreaks.idle_meet_not_constant"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   }
+  ],
   "what-the-step-across-standpoints-reaches": [
    {
     "law": 1,
@@ -64831,7 +64978,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "79620a16d82eff5061f2ee9f2f1ac9cf3db8a75b02112a256dfbf3bee8612819",
+   "modules_sha256": "769b228320edb6da16d891862b7e6849fbe7a7bcc4fc3aff07e286898ed53ff5",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },

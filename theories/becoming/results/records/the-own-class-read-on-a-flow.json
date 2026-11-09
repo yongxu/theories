@@ -1,0 +1,221 @@
+{
+  "schema_version": 2,
+  "id": "the-own-class-read-on-a-flow",
+  "title": {
+    "en": "The own class read on a flow",
+    "zh": "于流上读己之类"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F07",
+  "reviewed_at_utc": "2026-11-09T14:12:08+00:00",
+  "statement": {
+    "en": "With a formation's class read as its coupling closure, the path's reach holds exactly where everything within its reach lies in that closure; with coupling by threshold only, exactly where its acts return, and its line is then its loop.",
+    "zh": "以形成者之耦合闭包读其类，此路之及恰当其所及皆在此闭包内时成立；仅按阈值耦合时，恰在其行为返回处，其线即其环。"
+  },
+  "laws": [
+    {
+      "en": "Read on a flow as a net along affecting, with a formation's class \"within its coupling closure or not\", P4 holds exactly where everything the formation affects lies within its coupling closure, and with coupling by threshold only, exactly where whatever it affects can affect it back at some remove.",
+      "zh": "以流为沿影响之网读之，形成者之类取「在其耦合闭包内与否」，则 P4 恰当其所影响者皆在其耦合闭包内时成立；仅按阈值耦合时，恰当其所影响者皆能辗转影响回它。",
+      "declarations": [
+        "Becoming.«内外之所缘同于»",
+        "Becoming.Flow.CouplingClass",
+        "Becoming.Flow.couplingClass_class",
+        "Becoming.Flow.couplingClass_held_iff",
+        "Becoming.Flow.couplingClass_held_iff_back"
+      ]
+    },
+    {
+      "en": "Everything downstream of the formation lies on its line under this class exactly where everything within its reach lies within its coupling closure: wherever its acts return, for every coupling by level, and with coupling by threshold only, exactly there.",
+      "zh": "此类下，形成者下游一切在其线上，恰当其所及皆在其耦合闭包内：凡其行为返回处，对每一按水平之耦合皆然；仅按阈值耦合时，恰在彼处。",
+      "declarations": [
+        "Becoming.«内外之后皆续当且仅当后皆在内»",
+        "Becoming.Flow.couplingClass_reach_iff",
+        "Becoming.Flow.ReachReturns.couplingClass_reach",
+        "Becoming.Flow.couplingClass_reach_iff_returns"
+      ]
+    },
+    {
+      "en": "The line stays within the formation's reach and its coupling closure, and with coupling by threshold only it reaches exactly the formation's loop. On the root, with the class of what can reach an occurrence, the line reaches exactly its loop, only itself along a net with no cycle.",
+      "zh": "其线不出形成者之所及与其耦合闭包；仅按阈值耦合时，恰及其环。于根上，以能及于一事件者之类，其线恰及其环；于无环之网，唯及自身。",
+      "declarations": [
+        "Becoming.«内外之线不出»",
+        "Becoming.Flow.couplingClass_line_within",
+        "Becoming.Flow.couplingClass_line_iff_loop",
+        "Becoming.«返之线»",
+        "Becoming.«返之所及即环»",
+        "Becoming.«返之后皆续当且仅当皆返»",
+        "Becoming.«无环则返之所及唯己»"
+      ]
+    },
+    {
+      "en": "At a formation that affects something, P2 and P4 together, so read, ask that its coupling closure be closed under affecting, more than return: in a net where two occurrences condition each other and a third conditions the first and something reaching neither, the reach holds at the first and P2 fails there.",
+      "zh": "于有所影响之形成者，如此读之，P2 与 P4 合而要求其耦合闭包对影响封闭，多于返回：于二事件相缘、第三者缘其一并缘一不及二者之物之网，此及于其一成立而 P2 于彼不成立。",
+      "declarations": [
+        "Becoming.Flow.couplingClass_closed",
+        "Becoming.ReturnsNotRegular.reach_without_regularity",
+        "Becoming.ReturnsNotRegular.returns"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom and no premise beyond each law's own: reach, influence and coupling closures read off one flow and one web, as in where a formation's acts return; coupling by threshold only where stated; the root witness's net supplied, with no flow built whose affecting is that net.",
+      "zh": "不加公理，除各律所带者外不加前提：所及、影响与耦合之闭包由一流一网读出，如形成者之行为何处返回；按阈值耦合处已明言；根上见证之网为所给，未建以此网为影响之流。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That a formation's own class is its coupling closure: that is one reading, beside the class of what follows it.",
+      "zh": "形成者之己之类即其耦合闭包：此为一读法，与其下游之类并列。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That the path's regularity holds under this class wherever acts return.",
+      "zh": "凡行为返回处，此类下此路之理成立。",
+      "kind": "converse",
+      "witness": "Becoming.ReturnsNotRegular.reach_without_regularity"
+    },
+    {
+      "en": "That actual formations' acts return, or that their coupling is by threshold only.",
+      "zh": "实际形成者之行为返回，或其耦合唯按阈值。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "Anything substantive about the dynamics beyond the closures' definitions: the laws are near-definitional.",
+      "zh": "闭包定义之外关于动力之实质内容：诸律近乎定义。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261109T141048.279821Z): Becoming.OwnClass, every declaration with an empty axiom report. Read cold for overclaim by one other model before landing (the study's cold read).",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261109T141048.279821Z）：Becoming.OwnClass，公理报告皆空。落地前经另一模型冷读，查其言过其实处。"
+  },
+  "next_delta": {
+    "en": "With centers read off a flow, whether the formations that hold standpoints are those whose acts return, so that this reading and route (b)'s scope coincide on them.",
+    "zh": "以由流读出之中心，问持立场之形成者是否即行为返回者，使此读法与路线 (b) 之范围于彼相合。"
+  },
+  "correspondence": {
+    "en": "Read with the class of what a formation can represent, the path stays within its coupling closure; with coupling by threshold only it reaches no further than route (b)'s outer bound, the influence closure: its line is its loop, within what can affect it, and the reach the path asks is that its acts return. Along dated occurrences the line is the occurrence alone. The path's wider reach needs a class that holds what does not come back. The reading is the AI's.",
+    "zh": "以形成者所能表征者之类读之，此路不出其耦合闭包；仅按阈值耦合时，所及不出路线 (b) 之外界，即影响闭包：其线为其环，在能影响它者之内，此路所问之及即其行为返回。沿有日期之事件，其线唯此事件。此路较宽之及须一持不返回者之类。读法为 AI 之。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OwnClass.lean",
+  "aliases": [
+    "The own class read on a flow",
+    "于流上读己之类",
+    "Becoming.Flow.CouplingClass",
+    "Becoming.Flow.couplingClass_reach_iff_returns",
+    "Becoming.Flow.couplingClass_line_iff_loop",
+    "Becoming.«返之所及即环»"
+  ],
+  "dependencies": [
+    {
+      "id": "where-a-formations-acts-return",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Flow.ReachReturns, Flow.InOneLoop, Flow.withinReach_iff_influence, ReachReturns.represented and reachReturns_iff_represented.",
+        "zh": "Flow.ReachReturns、Flow.InOneLoop、Flow.withinReach_iff_influence、ReachReturns.represented 与 reachReturns_iff_represented。"
+      }
+    },
+    {
+      "id": "what-the-net-fixes-of-ones-own-class",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "«本类常闭则类闭», for what P2 and P4 ask under this class.",
+        "zh": "«本类常闭则类闭»，用于此类下 P2 与 P4 之所问。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "constancy-read-at-a-members-class",
+      "detail": {
+        "en": "Its reach law, read with this class.",
+        "zh": "其及之律，以此类读之。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OwnClass.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.CouplingClass",
+        "Becoming.Flow.ReachReturns.couplingClass_reach",
+        "Becoming.Flow.couplingClass_class",
+        "Becoming.Flow.couplingClass_closed",
+        "Becoming.Flow.couplingClass_held_iff",
+        "Becoming.Flow.couplingClass_held_iff_back",
+        "Becoming.Flow.couplingClass_line_iff_loop",
+        "Becoming.Flow.couplingClass_line_within",
+        "Becoming.Flow.couplingClass_reach_iff",
+        "Becoming.Flow.couplingClass_reach_iff_returns",
+        "Becoming.ReturnsNotRegular.Occ",
+        "Becoming.ReturnsNotRegular.back",
+        "Becoming.ReturnsNotRegular.g_back",
+        "Becoming.ReturnsNotRegular.h_not_back",
+        "Becoming.ReturnsNotRegular.k_back",
+        "Becoming.ReturnsNotRegular.reach_without_regularity",
+        "Becoming.ReturnsNotRegular.returns",
+        "Becoming.ReturnsNotRegular.step",
+        "Becoming.ReturnsNotRegular.within_f",
+        "Becoming.«内外之后皆续当且仅当后皆在内»",
+        "Becoming.«内外之所缘同于»",
+        "Becoming.«内外之线不出»",
+        "Becoming.«无环则返之所及唯己»",
+        "Becoming.«返之后皆续当且仅当皆返»",
+        "Becoming.«返之所及即环»",
+        "Becoming.«返之线»"
+      ],
+      "sha256": "022ae3a42ed24d045c67a9772df51ce6d17d4d77ae34819de05fada0ee99216d"
+    },
+    {
+      "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "role": "statement",
+      "sha256": "658bda1f0c9a507653de0019fc2e4cd7d72c2b9dd6b9826d90e88fd0d2f0511a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zc-own-class/NOTE.md",
+      "role": "provenance",
+      "sha256": "b227698341e12fcc90feaf7eb3c148dc6399b001f4807db9b76d68e14d52c2d0"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",
+      "role": "provenance",
+      "sha256": "fbcc4332efd9f6c3739111666ccd7e54476fa4a80f1020dfea6aa7428954c1dc"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zc-own-class/COLD-READ.md",
+      "role": "review",
+      "sha256": "fdea8b2c2275ce8e1b3954b311723b8610b954668c715b1414620a615a8edaa2"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T141048.279821Z/verification.json",
+      "role": "receipt",
+      "sha256": "a455945244dbeee7b4be23061a6f87d0743879c6f5d9af8fcf46fdd213102b7c"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OwnClass.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T141048.279821Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.OwnClass",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "9 November 2026: added (ZC, route (b)'s piece G5): the class read on a flow; near-definitional, as expected.",
+      "zh": "2026年11月9日：新增（ZC，路线 (b) 之 G5）：类于流上读之；近乎定义，如所料。"
+    }
+  ]
+}
