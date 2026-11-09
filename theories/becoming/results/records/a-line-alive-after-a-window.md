@@ -31,7 +31,7 @@
 
 Pure core, axiom reports empty; a leaf. Written by an AI; an AI reader of another model read the statements against the Lean, this record and the home section, cold, for overclaim (READER in the study folder); no human audit. Near-definitional compositions of the closure laws, with the witnesses checked on their models; none is new as mathematics.
 
-Canonical source: [ConditionInTime.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionInTime.lean)
+Canonical source: [PersistingChoices.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean)
 
 <a id="next--下一步"></a>
 ## Next
@@ -56,10 +56,11 @@ A finite, dated form of a survival filter: a lineage observed alive at a time ru
 
 | Role | Source | Declarations |
 |---|---|---|
-| proof | [ConditionInTime.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionInTime.lean) | `Becoming.Flow.member_after_never_overdrew` |
+| proof | [PersistingChoices.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean) | `Becoming.Flow.member_after_never_overdrew` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T150154.198993Z/verification.json) | — |
 | integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/j3-condition-in-time/NOTE.md) | — |
 | statement | [07-SIGNIFICANCE.md](../../chapters/07-SIGNIFICANCE.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json) | — |
 
 Aliases: `a line alive after a window never overdrew in it`, `窗后尚存之线未曾于窗内透支`, `Becoming.Flow.member_after_never_overdrew`
 
@@ -67,7 +68,8 @@ Aliases: `a line alive after a window never overdrew in it`, `窗后尚存之线
 ### History
 
 - 9 November 2026, board item J3 (route (b)'s join, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md): added. Whether the condition's positive half holds in time, and what the one-center bound counts; study folder j3-condition-in-time.
+- 9 November 2026, J1 (route (b)'s join, board rule 9): Flow.member_after_never_overdrew moved, with its name and statement, from ConditionInTime to PersistingChoices, where Flow.persists_never_overdraws is now its corollary; its proof takes the ending step from GroupEnding.Flow.coupled_generation_childless. The claim is unchanged.
 
 </details>
 
-Documentary review UTC: `2026-11-09T15:20:00+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T16:27:17+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

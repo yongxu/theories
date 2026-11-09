@@ -92,6 +92,7 @@ GrownFragmentation proved its bypass and its certified tree cuts for two hand-bu
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T182341.971697Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json) | — |
 
 Aliases: `which links a closure needs`, `闭包需要哪些联系`, `cut changes no closure exactly where bypassed`, `被绕过的切断不改变闭包`, `every link grown by attachment is needed`, `依附式生长的每条联系都被需要`, `which conditions a system needs`, `系统需要哪些条件`, `Becoming.Cuts.closure_unchanged_iff_bypassed`, `Becoming.Cuts.attached_link_separates`, `Becoming.Flow.system_unchanged_without_iff`, `every condition of a world grown by attachment is needed`, `依附式生长的世界的每个条件都被需要`, `Becoming.Flow.GrownBy.condition_needed`, `Becoming.Flow.GrownBy.cut_unchanged_iff`
 

@@ -114,6 +114,7 @@ Following Ren's “move towards 100%” of 12 October 2026: completeness in the 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json) | — |
 
 Aliases: `Becoming.Admits`, `Becoming.ShownBy`, `Becoming.SpliceClosed`, `Becoming.family_iff`, `Becoming.ConsistentFamily`, `Becoming.determined_family_iff`, `Becoming.live`, `Becoming.same_histories_iff`, `Becoming.DeadEnd.not_live`, `splice-closed`, `含有拼接`, `live steps`, `活的步`, `law and history complete`, `律与历史的完备对应`, `Becoming.same_finite_histories_iff`, `Becoming.MadeOfSteps`, `Becoming.finite_family_iff`, `histories that stop`, `会停止的历史`
 
