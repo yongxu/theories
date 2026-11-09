@@ -732,7 +732,7 @@ def strip_nav_line(text):
     one of them to the home, or the home itself in bold on the page that is the home), the site having its own. Only one line
     near the top goes; any other line of links stays."""
     lines = text.split('\n')
-    for k, line in enumerate(lines[:20]):
+    for k, line in enumerate(lines[:navigation.NAV_TOP]):
         if NAV_LINE.match(line) and re.search(r'\[(?:Home|首页)\]\(|\*\*(?:Home|首页)\*\*', line):
             return '\n'.join(lines[:k] + lines[k + 1:])
     return text
@@ -769,7 +769,7 @@ def rewritten(path, text, rules):
 
 
 def site_text(path, text, rules=()):
-    """A page's Markdown as the site publishes it: rewritten as site.rewrites says, its generated navigation line dropped,
+    """A page's Markdown as the site publishes it: rewritten as site.rewrites says, its navigation line (a generated page's, or a NAV_FRONTS front's) dropped,
     and on a record page the status said in words."""
     text = strip_nav_line(rewritten(path, text, rules))
     if path.startswith(RECORDS):
@@ -798,11 +798,12 @@ def svg_size(path):
     if not root:
         return None
     tag = root.group(0)
-    w, h = (re.search(rf'\b{k}="([\d.]+)(?:px)?"', tag) for k in ('width', 'height'))
-    if w and h:
-        return round(float(w.group(1))), round(float(h.group(1)))
-    box = re.search(r'\bviewBox="[\d.\-]+[ ,]+[\d.\-]+[ ,]+([\d.]+)[ ,]+([\d.]+)"', tag)
-    return (round(float(box.group(1))), round(float(box.group(2)))) if box else None
+    w, h = (re.search(rf'\s{k}="(\d+(?:\.\d+)?)(?:px)?"', tag) for k in ('width', 'height'))  # not stroke-width; no percentage
+    size = (round(float(w.group(1))), round(float(h.group(1)))) if w and h else None
+    if not size:
+        box = re.search(r'\sviewBox="\s*-?[\d.]+[\s,]+-?[\d.]+[\s,]+(\d+(?:\.\d+)?)[\s,]+(\d+(?:\.\d+)?)\s*"', tag)
+        size = (round(float(box.group(1))), round(float(box.group(2)))) if box else None
+    return size if size and all(size) else None
 
 
 def root_prefix(page_path):

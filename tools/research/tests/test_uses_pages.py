@@ -501,7 +501,7 @@ class StatedTimes(unittest.TestCase):
         for rel in (EXAMPLES, ONE_PAGE):
             text = page(rel)
             self.assertEqual(self.stated(text, r'\*([A-Za-z-]+) to ([A-Za-z-]+) minutes to read'), span(navigation.reading_time(text)), rel)
-        self.assertEqual(self.stated(uses, r'on their own page, ([A-Za-z-]+) to ([A-Za-z-]+) more'), span(navigation.reading_time(page(EXAMPLES))))
+        self.assertEqual(self.stated(uses, r'on their own page\]?(?:\([^)]*\))?, ([A-Za-z-]+) to ([A-Za-z-]+) more'), span(navigation.reading_time(page(EXAMPLES))))
 
     def time_line(self):
         return next(l for l in page(USES).splitlines() if l.startswith('*') and 'minutes to read' in l)
