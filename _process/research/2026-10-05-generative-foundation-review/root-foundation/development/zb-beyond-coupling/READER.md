@@ -59,4 +59,4 @@ Verdict, condensed: no high finding; the hashes current; one medium, four low.
 
 ## Round 4 (the round-3 fixes)
 
-Pending at the time of writing.
+The five changed sentences read as described, each saying what the Lean gives, and the records' hashes matched the files. No high or medium finding remained, so the rounds stop here, by the rule of stopping at the first round with none.
