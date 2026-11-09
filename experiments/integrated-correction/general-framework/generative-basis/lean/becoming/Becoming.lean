@@ -4720,15 +4720,17 @@ tagged instance or application.
   where every formation is a center (`Flow.unrestricted_of_mutuallyDependent`,
   `Flow.mutuallyDependent_iff_unrestricted`). Some strict order accords with choices and makes required
   comparisons exactly where the shown relation with them added has no cycle
-  (`ChoiceOccasions.accorded_containing_iff`); where no choice ends what the chooser depends on, some puts
-  keeping above ending (`ChoiceOccasions.keeping_above_ending`). On the World a line persisting through
+  (`ChoiceOccasions.accorded_containing_iff`); where the choices come from some strict order and no choice
+  ends, some puts keeping above ending (`ChoiceOccasions.keeping_above_ending`). On the World a line persisting through
   arbitrarily late cohorts never overdrew the gated family it depends on from a short stock
-  (`Flow.persists_never_overdraws`), so where an ending choice is realized as such an overdraw and only ending
-  is at stake on the occasions met, its choices are consistent with an order increasing in its own
-  continuation on those occasions (`Flow.persisting_consistent_with_selfConcern`); off them a consistent order
-  reverses it (`ChoiceOccasions.reversed_off_met`), and a persisting chooser choosing by a strict order of its
-  own, never ending, is consistent with none (`PersistingChoices.Forgoing.persists_not_selfConcerned`). A
-  leaf; short laws, none new as mathematics.
+  (`Flow.persists_never_overdraws`), so where an ending choice is realized as such an overdraw, the choices
+  come from some strict order and only ending is at stake on the occasions met, its choices are consistent
+  with an order increasing in its own continuation on those occasions
+  (`Flow.persisting_consistent_with_selfConcern`); a course never met is ranked below one it widens by some
+  such order (`ChoiceOccasions.reversed_off_met`); and in one witness a persisting line whose choice accords
+  with a strict order, never ending, is consistent with no strict order increasing in its own continuation on
+  the occasion met (`PersistingChoices.Forgoing.persists_not_selfConcerned`). A leaf; short laws, none new as
+  mathematics.
 * `Becoming.GrammarPath` (L1): what a line under a class must hold, and what a regularity takes in
   (board item PF), for every carrier, relation and class. Where a region is left under a class only
   into a set, a line under the class from inside to outside holds a member of that set alike to its

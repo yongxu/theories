@@ -7,9 +7,9 @@ import Becoming.ShownOrder
 
 Self-concern, an order increasing in one's own continuation (`Weighting.IncreasingInOwn`), enters every
 ranking result that uses it as a hypothesis, and the continuation condition read de se takes its relation
-and its class as given. This module asks what the dynamics give in place of self-concern, and where a
-center's closure is the whole, and where each stops (board item ZA; which class is one's own is board item
-ZC's, `Becoming.OwnClass`, and which formations are centers ZA-G1's, `Becoming.FlowCenters`).
+and its class as given. This module asks what the dynamics give in place of self-concern, and where every
+center's closure is the whole, and says where each answer stops (board item ZA; which class is one's own is
+board item ZC's, `Becoming.OwnClass`, and which formations are centers ZA-G1's, `Becoming.FlowCenters`).
 
 * **Mutual dependence gives the condition held de se, along being affected and along affecting.** In a
   mutually dependent flow, significance held de se as what lies within a center's closure under being
@@ -26,21 +26,23 @@ ZC's, `Becoming.OwnClass`, and which formations are centers ZA-G1's, `Becoming.F
   (`ChoiceOccasions.above_in_every_containing_iff_reach`), and beyond it some such order ranks either way
   (`ChoiceOccasions.above_in_some_containing_of_unreached`). These are `ShownOrder`'s laws on the
   enlarged occasions.
-* **Where no choice ends, keeping stands above ending.** Where no chosen alternative ends what the chooser
-  depends on and the choices come from some strict order, some strict order according with them puts
-  every alternative that does not end above every one that ends and was open with it
-  (`ChoiceOccasions.keeping_above_ending`).
+* **Where no choice ends, keeping stands above ending.** Let `ends` be any predicate on alternatives, read
+  as ending what the chooser depends on. Where the choices come from some strict order and no chosen
+  alternative ends, some strict order according with them puts every alternative that does not end above
+  every one that ends and was open with it (`ChoiceOccasions.keeping_above_ending`).
 * **Self-concern on the occasions met: consistent with the choices, not shown to be held.** Read an order
   on courses as increasing in its own continuation on the pairs met together
   (`Weighting.IncreasingInOwnOn`). Some strict order according with the choices is so exactly where the
   shown relation with every own-widening met added has no cycle
-  (`ChoiceOccasions.selfConcerned_consistent_iff`). Where no chosen course ends and, on the occasions met,
-  a course adds to the own continuation beyond one it widens only by not ending where the other ends, some
-  is (`ChoiceOccasions.selfConcerned_consistent_of_kept`), as where every course open keeps all of the own
-  continuation listed or none (`ChoiceOccasions.selfConcerned_consistent_of_allOrNone`). Off the occasions
-  met it is free: where a course met nowhere widens another and adds to the own continuation, some strict
+  (`ChoiceOccasions.selfConcerned_consistent_iff`). Where the choices come from some strict order, no
+  chosen course ends, and on the occasions met a course adds to the own continuation beyond one it widens
+  only where it does not end and the other does, some is (`ChoiceOccasions.selfConcerned_consistent_of_kept`),
+  as where every course open keeps all of the own continuation listed or none
+  (`ChoiceOccasions.selfConcerned_consistent_of_allOrNone`). Off the occasions met it is free: where some
+  such order exists and a course met nowhere widens another and adds to the own continuation, some strict
   order according with the choices and increasing in its own continuation on the pairs met ranks the other
-  above it, and so is not increasing in its own continuation (`ChoiceOccasions.reversed_off_met`).
+  above it, and so is not increasing in its own continuation (`ChoiceOccasions.reversed_off_met`). Pairs
+  never met together, of courses each met, can still be fixed through what was met, by transitivity.
 * **A line that persists never overdrew what it depends on.** On the World, under balance, only active
   formations giving and activity needing support, with the renewal of a family of conditions gated on the
   family and every member of every cohort of descent depending on the family, each at a need of at least
@@ -50,22 +52,26 @@ ZC's, `Becoming.OwnClass`, and which formations are centers ZA-G1's, `Becoming.F
   ends what the line depends on is realized as such an overdraw, the persisting line's choices, coming from
   some strict order, are consistent with self-concern on the occasions met wherever only ending was at stake
   there (`Flow.persisting_consistent_with_selfConcern`).
-* **A persisting chooser that is not self-concerned.** In `PersistingChoices.Forgoing` a line of one member
-  a step, each giving the next its standing and all requiring a commons, balances, acts, depends and
-  descends, and persists; it never overdraws (`PersistingChoices.Forgoing.never_overdraws`). Offered one
-  more child, the line as it is, or an ending, it chooses the line as it is by a strict order of its own
-  that reads each course whole. No choice ends, and some strict order according with its choice puts both
-  keeping courses above the ending (`PersistingChoices.Forgoing.keeping_above_drain`); none is increasing
-  in its own continuation on the occasion met, the chosen course being widened by one adding to the own
-  continuation (`PersistingChoices.Forgoing.persists_not_selfConcerned`). Persisting filtered out the
-  ending and fixed nothing between degrees of keeping.
+* **A witness: the stake cannot be dropped.** In `PersistingChoices.Forgoing` a line of one member a step,
+  each giving the next its standing and all requiring a commons, balances, acts, depends and descends, and
+  persists; it never overdraws (`PersistingChoices.Forgoing.never_overdraws`). Offered, as courses on a
+  listing, one more child, the line as it is, or an ending, it chooses the line as it is, a choice according
+  with a strict order (the witness's stipulated valuation, `PersistingChoices.Forgoing.order_accords`). No
+  choice ends, and some strict order according with its choice puts both keeping courses above the ending
+  (`PersistingChoices.Forgoing.keeping_above_drain`); no strict order according with it is increasing in
+  its own continuation on the occasion met, the chosen course being widened by one adding to the own
+  continuation (`PersistingChoices.Forgoing.persists_not_selfConcerned`). With ending read as admitting none
+  of the own continuation, it meets every premise of `Flow.persisting_consistent_with_selfConcern` but the
+  stake; there no reading of ending meets both the stake and `realized`. The choice is tied to the flow by
+  `realized` alone, which holds vacuously, and the line persists whatever is chosen.
 
 **Readings** (the AI's; correspondences, not theorems).
 - *Survivorship.* Persisting is a filter on what was chosen, not a mechanism forming an order. Where a choice
   ending what the line depends on is realized as an overdraw, persisting removes such choices, and leaves the
-  choices consistent with ranking keeping above ending where that was at stake, and with nothing more.
-- *Goal misgeneralization.* Whatever persisting fixes, it fixes on the occasions met; off them, strict orders
-  according with every choice rank either way (`ChoiceOccasions.reversed_off_met`; as in
+  choices consistent with ranking keeping above ending where that was at stake; by itself it fixes nothing
+  between degrees of keeping.
+- *Goal misgeneralization.* Whatever persisting fixes, it fixes on the occasions met; a course never met is
+  ranked either way by strict orders according with every choice (`ChoiceOccasions.reversed_off_met`; as in
   `ChoiceOccasions.Untried`, and for a trained response `Training.response_free_where_unlumped`).
 - *Revealed preference.* `ChoiceOccasions.selfConcerned_consistent_iff` is rationalizing strict choices by a
   strict partial order (Richter 1966) with required comparisons added.
@@ -299,7 +305,8 @@ theorem noCycle_withPairs_of_kept {ends : α → Prop} (none : «无环» ch.Sho
         | .inr ⟨q, _⟩ => (runs _ _ q).1 ended
 
 /-- **Where no choice ends, keeping stands above ending.** Where the choices come from some strict order
-(no cycle shown) and no chosen alternative ends what the chooser depends on, some strict order according
+(no cycle shown) and no chosen alternative ends (`ends`, any predicate, read as ending what the chooser
+depends on), some strict order according
 with the choices puts every alternative that does not end above every alternative that ends and was open
 with it at some occasion. -/
 theorem keeping_above_ending {ends : α → Prop} (none : «无环» ch.Shown)
@@ -399,8 +406,8 @@ theorem selfConcerned_consistent_iff :
 
 /-- **Where only ending is at stake, keeping gives self-concern on the occasions met.** Where the choices
 come from some strict order, no chosen course ends (`ends`), and on the occasions met a course adds to the
-own continuation beyond one it widens only by not ending where the other ends (`stake`), some strict
-order according with the choices is increasing in its own continuation on the pairs met. It is consistent
+own continuation beyond one it widens only where it does not end and the other does (`stake`), some
+strict order according with the choices is increasing in its own continuation on the pairs met. It is consistent
 with the choices; the choices do not show that it is held. -/
 theorem selfConcerned_consistent_of_kept {ends : (X → Bool) → Prop} (none : «无环» ch.Shown)
     (kept : ∀ o, ¬ ends (ch.pick o))
@@ -484,8 +491,8 @@ theorem Flow.persists_never_overdraws {X : Type} {L : Flow X X} {W : Web X X}
 ending was at stake.** Under the laws of `persists_never_overdraws`, let the line persist, let a chosen
 course that ends what the line depends on be realized as an overdraw of the family from a short stock
 (`realized`), let the choices come from some strict order, and let a course on the occasions met add to the
-own continuation beyond one it widens only by not ending where the other ends (`stake`). Then some strict
-order according with the choices is increasing in its own continuation on the pairs met. -/
+own continuation beyond one it widens only where it does not end and the other does (`stake`). Then some
+strict order according with the choices is increasing in its own continuation on the pairs met. -/
 theorem Flow.persisting_consistent_with_selfConcern {X Y O : Type} {L : Flow X X} {W : Web X X}
     (balances : L.Balances W) (acting : L.Acting W) (dependent : W.Dependent)
     {G : SelectionTerm.Generations X} (descended : SelectionTerm.Flow.Descended L W G)
@@ -667,18 +674,18 @@ def choices : ChoiceOccasions (Item → Bool) Unit where
   menu _ c := c = more ∨ c = fewer ∨ c = drain
   pick _ := fewer
 
-/-- The chooser's own valuation, reading each course whole: the line as it is first, one more child
-second, the ending last. -/
+/-- A valuation stipulated for the witness: the line as it is first, one more child second, the ending
+last. -/
 def score (c : Item → Bool) : Nat := cond (c .extra) 1 (cond (c .member) 2 0)
 
-/-- The chooser's order: a course above another where it scores higher. -/
+/-- The order the witness's choice accords with: a course above another where it scores higher. -/
 def order : «际» (Item → Bool) := fun x y => score y < score x
 
 /-- The chooser's order is strict. -/
 theorem order_strict : (∀ a, ¬ order a a) ∧ (∀ a b c, order a b → order b c → order a c) :=
   ⟨fun _ h => Nat.lt_irrefl _ h, fun _ _ _ first second => Nat.lt_trans second first⟩
 
-/-- **Its choice comes from its order**: the chosen course stands above every other course open. -/
+/-- **Its choice accords with the order**: the chosen course stands above every other course open. -/
 theorem order_accords : choices.Accords order := fun _ y open_y other => by
   cases open_y with
   | inl is_more =>
@@ -735,9 +742,9 @@ theorem not_selfConcerned :
       (increasing more fewer met widens adds))
 
 /-- **A persisting chooser that is not self-concerned.** The flow balances, only active formations give,
-activity needs support, the cohorts descend and the line persists; the chooser's choice comes from a
-strict order of its own reading each course whole, and no choice ends the own continuation; and no
-strict order according with its choice is increasing in its own continuation on the occasion met. -/
+activity needs support, the cohorts descend and the line persists; the chooser's choice accords with a
+strict order, and no choice ends the own continuation; and no strict order according with its choice is
+increasing in its own continuation on the occasion met. -/
 theorem persists_not_selfConcerned :
     flow.Balances web ∧ flow.Acting web ∧ web.Dependent ∧
       SelectionTerm.Flow.Descended flow web generations ∧ generations.Persists ∧
