@@ -68,3 +68,13 @@ The same reader read the corrections (`git diff 56964d2c1 5ef2eac33`) and the Le
 - The Chinese of the changed sentences matches the English.
 
 No round 3: round 2 had no high or medium finding.
+
+## A later reading: astra, of route (b)'s join (9 November 2026)
+
+After the landing, the session that joins route (b)'s pieces had astra (an AI model, through Codex) read the join, read-only. Three of its items concern G1's texts; in the author's words (AI-written):
+
+1. That finitely many formations with reach decided give a returning formation needs a formation to start from (`Flow.exists_reachReturns` starts from a supplied one); on an empty carrier there is none. The module docstring, 07 §4.8, the first record's hypothesis, this folder's note and the hand-over said it without that. All now say "wherever there is a formation".
+2. The shared notes (INTERFACES) still said 32 theorems and that G1 does not state the converse. Both were already out of date when read. They now say 33 theorems and name `Flow.returning_unrestricted_iff_mutuallyDependent`.
+3. Covering from activity covers the formations that exchange with some condition (`∃ c, L.Exchanges g c`), not every formation. The docstring, 07, the second record's law and the note now say so.
+
+Its suggestion to place the generic `ReturnsAlong` below `Becoming.Centers`, and the mutual-dependence adapters below both route (b) modules, is for the joining (board rule 9).

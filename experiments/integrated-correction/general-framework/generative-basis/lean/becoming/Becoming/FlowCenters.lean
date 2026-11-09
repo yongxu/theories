@@ -19,8 +19,9 @@ read two ways: every formation, as 03 reads them; or only the formations whose a
   exactly where the flow is mutually dependent (route (b)'s G3 piece,
   `Flow.mutuallyDependent_iff_unrestricted`, not imported here), and along feeding exactly where it
   is mutually fed (`Flow.mutuallyFed_iff_unrestricted`). With every formation that exchanges with
-  some condition a standpoint, covering holds by reflexivity alone; so read, covering from activity
-  is near-definitional (`Flow.covering_of_acting`).
+  some condition a standpoint, each such formation lies within its own closure, by reflexivity
+  alone, and a formation that exchanges with nothing is covered only if some standpoint's closure
+  holds it; so read, covering from activity is near-definitional (`Flow.covering_of_acting`).
 * **Returning along a relation.** An element returns along a relation where whatever lies within
   its closure has it within its own (`ReturnsAlong`); along affecting this is `Flow.ReachReturns`
   (`Flow.reachReturns_iff_returnsAlong`). A returning element's own closure is its loop
@@ -43,8 +44,9 @@ read two ways: every formation, as 03 reads them; or only the formations whose a
   The step from each standpoint's own continuation, at the returning formations, gives the
   condition exactly where every formation's acts return (`Flow.atReturning_unrestricted_iff`).
 * **Finitely many formations: covering, and the relation reversed.** With finitely many formations
-  listed and reach decided, some formation's acts return, and every formation lies within the
-  influence closure of one (`Flow.covered_by_returning`, from `Flow.exists_reachReturns`). So the
+  listed and reach decided, every formation lies within the influence closure of one whose acts
+  return (`Flow.covered_by_returning`, from `Flow.exists_reachReturns`), so that where there is a
+  formation, some formation's acts return. So the
   step across standpoints, drawn along being affected at the returning formations, gives the
   condition on every such flow, covering met by the flow rather than by making every formation a
   standpoint (`Flow.unrestricted_of_returning_standpointInvariant`). Held de se along being affected

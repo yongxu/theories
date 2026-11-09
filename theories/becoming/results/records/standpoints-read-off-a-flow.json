@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-11-09T11:17:48+00:00",
+  "reviewed_at_utc": "2026-11-09T12:00:18+00:00",
   "statement": {
     "en": "Held de se along affecting at the formations whose acts return, given one, the continuation condition is exactly mutual dependence, as it is with every formation a standpoint; along being affected or feeding, the readings of the standpoints and the relation give different conditions.",
     "zh": "沿“影响”在所为回返的构成处从己持有、且有一个时，延续条件恰是彼此依存，与每个构成都是立场时相同；沿“受影响”或“供养”，立场的读法与关系给出不同的条件。"
@@ -88,8 +88,8 @@
       "zh": "不加公理。第一条规律对任何类型与关系。在流上，关系为“影响”“受影响”或“供养”，如反馈诸律从同一流与依存网读出，取哪一个是选择。"
     },
     {
-      "en": "Which formations are the standpoints is a reading: every formation, or those whose acts return. The laws at the returning formations ask one of them, which finitely many formations with reach decided give.",
-      "zh": "哪些构成是立场是一种读法：每个构成，或所为回返者。在回返构成处的规律要求至少有一个，构成有限且所及可判定时即有。"
+      "en": "Which formations are the standpoints is a reading: every formation, or those whose acts return. The laws at the returning formations ask one of them, which finitely many formations with reach decided give wherever there is a formation.",
+      "zh": "哪些构成是立场是一种读法：每个构成，或所为回返者。在回返构成处的规律要求至少有一个；构成有限、所及可判定且至少有一个构成时即有。"
     },
     {
       "en": "Significance read as lying within a center's own closure, held de se, with the class the one of the relation; the condition and the step are hypotheses or conclusions, never asserted.",
@@ -301,7 +301,7 @@
         "Becoming.Unexchanged.every_returns",
         "Becoming.Unexchanged.apart"
       ],
-      "sha256": "4b2e8adfa6fd2253f34da13258366a5e9707de978581a61d078b5e0137ef5522"
+      "sha256": "1a37e82126ff0e1ffa23a5535a04080786a5f22e4fd71ed09013390221c87bc3"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T111610.530713Z/verification.json",
@@ -312,19 +312,19 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/za-g1-centers/READER.md",
       "role": "review",
-      "sha256": "3db691ec482e9d23caea1c87b0696ac083dd0ef201226d7c30493fbe01a03fb2",
+      "sha256": "9290eadd1caff761bad266d92d8bc512d6ecb5c5ecb986902652a1773395d2b1",
       "declarations": []
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/za-g1-centers/NOTE.md",
       "role": "integration",
-      "sha256": "3f5620781a3d1aac0e03487cbbbd9ce4229e517b43036b21a0df0954222417f3",
+      "sha256": "0ee2d7f4927a4d07b53e9eba646f032e16eb517aaa7c76b7470f422f13aa0b69",
       "declarations": []
     },
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "342f4a5b5460895c9227eff73d8c3cf8d8be5afce21155e1c7f0442df0cbf6fa",
+      "sha256": "937a5385d5ebd64791948c9fe70fca565fe4d08a97cba2227b1d97faf3b0de53",
       "declarations": []
     }
   ],
@@ -341,6 +341,10 @@
     {
       "en": "9 November 2026, board item ZA-G1 (route (b) of the zero-axiom target, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md): added. The relation and the standpoints of the own-closure reading read off a flow; one AI reader of another model read the statements cold for overclaim, then the corrections; study folder za-g1-centers.",
       "zh": "2026年11月9日，看板项 ZA-G1（零公理目标的路线 (b)，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md）：新增。自身闭包读法的关系与立场从流读出；另一模型的一位 AI 读者冷读诸陈述，查是否言过其实，再读其修正；研究目录 za-g1-centers。"
+    },
+    {
+      "en": "9 November 2026, after an AI reading of route (b)'s join (astra, read-only): a returning formation is said to exist on finitely many formations with reach decided only where there is a formation, and covering from activity to cover only the formations that exchange; the Lean's docstring, the home section and these records corrected. No law changed.",
+      "zh": "2026年11月9日，经对路线 (b) 之连接的一次 AI 阅读（astra，只读）后：所为回返之构成，于构成有限且所及可判定时，只在至少有一个构成处才说存在；由活动而来的覆盖只说覆盖有所交换的构成；Lean 文档串、归属节与此二记录随之更正。诸律不变。"
     }
   ]
 }
