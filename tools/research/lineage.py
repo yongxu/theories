@@ -831,10 +831,15 @@ def page(s, lang, weeks, undated, by_folder, totals, groups=(), against=None):
         lines.append('')
     lines += [f'## {words["sources_heading"]}', '', words['sources']]
     body = '\n'.join(lines).rstrip() + '\n'
-    full, first = navigation.reading_time(body), navigation.reading_time(part)
-    if lang == 'zh':
-        full, first = full.replace(' minutes', ' 分钟').replace('a minute', '一分钟'), first.replace(' minutes', ' 分钟').replace('a minute', '一分钟')
-    return body.replace('{time}', words['reading_time'].format(full=full, first=first), 1)
+    said = (lambda t: t.replace(' minutes', ' 分钟').replace('a minute', '一分钟')) if lang == 'zh' else (lambda t: t)
+    first = said(navigation.reading_time(part))
+    full = navigation.reading_time(body)
+    for _ in range(3):  # the page as read includes its time line: count it filled, until its own figure stays
+        counted = navigation.reading_time(body.replace('{time}', words['reading_time'].format(full=said(full), first=first), 1))
+        if counted == full:
+            break
+        full = counted
+    return body.replace('{time}', words['reading_time'].format(full=said(full), first=first), 1)
 
 
 def render(atlas_json=None, against=None):

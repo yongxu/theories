@@ -930,6 +930,13 @@ class RepositoryConfigTests(unittest.TestCase):
         self.assertTrue(site.card_time(card, ROOT, site.tracked_files()).startswith(said), (site.card_time(card, ROOT, site.tracked_files()), said))
         self.assertIn(f'[the one page](theories/becoming/ONE-PAGE.md) ({said})', (ROOT / 'README.md').read_text())
 
+    def test_generated_pages_state_the_time_of_the_page_as_written(self):
+        import re as re_
+        for page in ('theories/becoming/results/THEORY-GRAPH.md', 'theories/LINEAGE.md', 'theories/LINEAGE.zh.md'):
+            text = (ROOT / page).read_text()
+            stated = re_.search(r'(\d+–\d+) (?:minutes|分钟)', text).group(1)  # the first time on the page, its whole
+            self.assertEqual(stated + ' minutes', site.navigation.reading_time(text), page)  # its own time line counted
+
     def test_the_chinese_pages_and_navigation(self):
         cfg = site.site_config()
         for page in ('theories/becoming/results/THEORY-GRAPH.zh.md', 'theories/becoming/results/atlas/CROSSWALK.zh.md'):

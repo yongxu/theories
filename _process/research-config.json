@@ -473,8 +473,7 @@
         "zh": "theories/LINEAGE.zh.md",
         "label": "How it grew",
         "text": "From the writings of 2021 to the account today: turning points, each labelled by what states it, gathered by AI readers, and three threads followed through (the selection mechanism, the root and the ethics).",
-        "time_until": "## Turning points",
-        "time_note": "the picture, the labels and the threads",
+        "time": "{said:with the labels and the threads, (\\S+ minutes)}, the picture, the labels and the threads",
         "group": "See"
       },
       {
