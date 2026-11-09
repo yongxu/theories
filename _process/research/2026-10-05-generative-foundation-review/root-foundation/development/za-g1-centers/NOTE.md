@@ -1,6 +1,6 @@
 # ZA-G1: the standpoints and the relation read off a flow (route (b), first piece)
 
-AI-written (Claude Code desktop session za-g1-centers, Opus), 9 November 2026. Board row ZA-G1. One of four pieces of route (b) of the zero-axiom target, run in parallel on Ren's "ok - 这一类请平行化认真完成，非常重要" ([his words, 9 November 2026](../../../../../../../sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md)); the other pieces are G3 (ZA's row: the joining lemma and self-concern from persistence), G2 (ZC's row: a center's own class) and Bound (ZB's row). The session that started them joins the landed pieces. The readings that set out the gap, and a check of every Lean claim in them, are in `/Users/ren/tmp/za-how-far/` (local, not in the repository); the gap is quoted below.
+AI-written (Claude Code desktop session za-g1-centers, Opus), 9 November 2026. Board row ZA-G1. One of four pieces of route (b) of the zero-axiom target, run in parallel on Ren's "ok - 这一类请平行化认真完成，非常重要" ([his words, 9 November 2026](../../../../../../sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md)); the other pieces are G3 (ZA's row: the joining lemma and self-concern from persistence), G2 (ZC's row: a center's own class) and Bound (ZB's row). The session that started them joins the landed pieces. The readings that set out the gap, and a check of every Lean claim in them, are in `/Users/ren/tmp/za-how-far/` (local, not in the repository); the gap is quoted below.
 
 ## 1. The gap
 
