@@ -27,7 +27,7 @@
 ## Conditions
 
 - No axiom. The first law for any type and relation. On a flow, the relation is affecting, being affected or feeding, read off one flow and one web as in the feedback laws, and which of them is a choice.
-- Which formations are the standpoints is a reading: every formation, or those whose acts return. The laws at the returning formations ask one of them, which finitely many formations with reach decided give.
+- Which formations are the standpoints is a reading: every formation, or those whose acts return. The laws at the returning formations ask one of them, which finitely many formations with reach decided give wherever there is a formation.
 - Significance read as lying within a center's own closure, held de se, with the class the one of the relation; the condition and the step are hypotheses or conclusions, never asserted.
 
 <a id="does-not-show--未表明"></a>
@@ -37,6 +37,8 @@
 - That the standpoints are the formations whose acts return: the flow does not fix it. The readings agree along affecting and part along being affected, as in Clearing, which is not mutually dependent. Witness: `Becoming.Clearing.returning_apart`.
 - Which class a center's own line runs under: the own-closure reading takes the one of the relation, and the de se question stays open.
 - That significance is own closure at all: that stays a reading, and moving the inputs into definitions does not discharge them.
+- That mutual dependence is mutual benefit: exchanging counts taking as well as giving, so a pair each only drawing on what the other depends on meets the condition along affecting. Witness: `Becoming.Drawing.returning_feeding_apart`.
+- Anything about order in time: the relations are read across all steps, a dependence at some step and an exchange at some step, and own closure ignores the step.
 - That an actual flow is mutually dependent, or which of its formations return: both are empirical.
 - That a returning formation persists or holds any significance: returning is a property of one flow's reach, and a formation acting on nothing returns vacuously. Witness: `Becoming.Clearing.dweller_returns`.
 - **Counterexample:** Clearing: only the dweller's acts return; held de se along being affected the condition holds at it and fails at the clearer as the one center supplied, and the verdict on the clearer's part changes with the center (Clearing.returning_apart, Clearing.returning_loses_dweller). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean)
@@ -86,7 +88,7 @@ In graph terms a formation's acts return exactly where its strongly connected co
 | Role | Source | Declarations |
 |---|---|---|
 | proof | [FlowCenters.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean) | `Becoming.ReturnsAlong`, `Becoming.Returning`, `Becoming.ReturnsAlong.loop`, `Becoming.returnsAlong_of_whole`, `Becoming.ReturnsAlong.whole`, `Becoming.ownClosure_unrestricted_atReturning_iff`, `Becoming.ownClosure_unrestricted_of_none`, `Becoming.ownClosure_standpointInvariant_atReturning_iff`, `Becoming.Flow.Returning`, `Becoming.Flow.reachReturns_iff_returnsAlong`, `Becoming.Flow.mutuallyDependent_of_returning_unrestricted`, `Becoming.Flow.returning_unrestricted_iff_mutuallyDependent`, `Becoming.Flow.mutuallyDependent_of_returning_noOutside`, `Becoming.Flow.MutuallyDependent.reachReturns`, `Becoming.Flow.atReturning_unrestricted_iff`, `Becoming.Flow.mutuallyFed_iff_unrestricted`, `Becoming.Drawing.returning_feeding_apart`, `Becoming.Clearing.dweller_reach_closed`, `Becoming.Clearing.dweller_returns`, `Becoming.Clearing.clearer_not_returns`, `Becoming.Clearing.source_not_returns`, `Becoming.Clearing.reachReturns_iff`, `Becoming.Clearing.dweller_influence_whole`, `Becoming.Clearing.returning_apart`, `Becoming.Clearing.returning_loses_dweller`, `Becoming.Unexchanged.flow`, `Becoming.Unexchanged.web`, `Becoming.Unexchanged.not_affects`, `Becoming.Unexchanged.reach_self`, `Becoming.Unexchanged.every_returns`, `Becoming.Unexchanged.apart` |
-| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T111610.530713Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T124151.227669Z/verification.json) | — |
 | review | [READER.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/za-g1-centers/READER.md) | — |
 | integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/za-g1-centers/NOTE.md) | — |
 | statement | [07-SIGNIFICANCE.md](../../chapters/07-SIGNIFICANCE.md) | — |
@@ -97,7 +99,8 @@ Aliases: `the standpoints read off a flow`, `standpoints and relation read off a
 ### History
 
 - 9 November 2026, board item ZA-G1 (route (b) of the zero-axiom target, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md): added. The relation and the standpoints of the own-closure reading read off a flow; one AI reader of another model read the statements cold for overclaim, then the corrections; study folder za-g1-centers.
+- 9 November 2026, after AI readings of route (b)'s join (astra, then the joining session's checkers, read-only): a returning formation said to exist only where there is a formation; covering from activity said to cover only the formations that exchange; mutual dependence said to include mutual drain, and the laws to say nothing of order in time. Docstring, home section and records corrected; no law changed.
 
 </details>
 
-Documentary review UTC: `2026-11-09T11:17:48+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T12:27:23+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

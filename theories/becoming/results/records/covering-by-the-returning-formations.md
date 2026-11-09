@@ -14,7 +14,7 @@
    - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 2. Held de se along being affected at the formations whose acts return, with no step, the condition holds exactly where they lie in one loop, which is exactly where, held de se along affecting, it is standpoint-invariant at them. One formation every other can affect at some remove, affecting nothing beyond itself, is enough. (`Becoming.Flow.returning_influence_unrestricted_iff`, `Becoming.Flow.returning_influence_unrestricted_iff_invariant`)
    - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
-3. Covering from activity, read with every formation that exchanges with some condition a standpoint, holds by reflexivity alone. Along feeding, by the formations whose acts return, it fails: in Clearing the clearer takes from its resource and lies within no returning formation's feeding closure. (`Becoming.Flow.covering_of_acting`, `Becoming.Clearing.dweller_feeding_closed`, `Becoming.Clearing.clearer_beyond_returning_feeding`)
+3. Covering from activity, read with every formation that exchanges with some condition a standpoint, covers each such formation by reflexivity alone, and says nothing of one that exchanges with nothing. Along feeding, by the formations whose acts return, it fails: in Clearing the clearer takes from its resource and lies within no returning formation's feeding closure. (`Becoming.Flow.covering_of_acting`, `Becoming.Clearing.dweller_feeding_closed`, `Becoming.Clearing.clearer_beyond_returning_feeding`)
    - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
@@ -69,7 +69,7 @@ In a finite digraph every vertex reaches a sink strongly connected component, on
 | Role | Source | Declarations |
 |---|---|---|
 | proof | [FlowCenters.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean) | `Becoming.Flow.covered_by_returning`, `Becoming.Flow.unrestricted_of_returning_standpointInvariant`, `Becoming.Flow.returning_influence_unrestricted_iff`, `Becoming.Flow.returning_influence_unrestricted_iff_invariant`, `Becoming.Flow.covering_of_acting`, `Becoming.Clearing.dweller_feeding_closed`, `Becoming.Clearing.clearer_beyond_returning_feeding` |
-| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T111610.530713Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T124151.227669Z/verification.json) | — |
 | review | [READER.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/za-g1-centers/READER.md) | — |
 | integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/za-g1-centers/NOTE.md) | — |
 | statement | [07-SIGNIFICANCE.md](../../chapters/07-SIGNIFICANCE.md) | — |
@@ -80,7 +80,8 @@ Aliases: `covering by the returning formations`, `由回返构成的覆盖`, `Be
 ### History
 
 - 9 November 2026, board item ZA-G1 (route (b) of the zero-axiom target, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md): added. The relation and the standpoints of the own-closure reading read off a flow; one AI reader of another model read the statements cold for overclaim, then the corrections; study folder za-g1-centers.
+- 9 November 2026, after AI readings of route (b)'s join (astra, then the joining session's checkers, read-only): a returning formation said to exist only where there is a formation; covering from activity said to cover only the formations that exchange; mutual dependence said to include mutual drain, and the laws to say nothing of order in time. Docstring, home section and records corrected; no law changed.
 
 </details>
 
-Documentary review UTC: `2026-11-09T11:17:48+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T12:27:23+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
