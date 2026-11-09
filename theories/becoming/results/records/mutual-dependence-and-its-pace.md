@@ -89,7 +89,7 @@ Reads the opening's "the whole Earth has become a highly entangled system", "hea
 - related, not a proved adapter: [runaway-distance-uncoupled](runaway-distance-uncoupled.md). Nothing coupled in by threshold bounds the distance to the break; half_stands adds that under a draw exceeding everything drawn before, what stands gives no warning.
 - related, not a proved adapter: [relative-position-is-zero-sum](relative-position-is-zero-sum.md). Drawing is a race in which each draws on what the other depends on: mutual dependence without mutual feeding.
 
-**Used by:** [ending-laws-as-regimes-on-a-lineage](ending-laws-as-regimes-on-a-lineage.md)
+**Used by:** [ending-laws-as-regimes-on-a-lineage](ending-laws-as-regimes-on-a-lineage.md) · [mutual-dependence-gives-the-condition-de-se](mutual-dependence-gives-the-condition-de-se.md) · [standpoints-read-off-a-flow](standpoints-read-off-a-flow.md)
 
 <a id="sources--来源"></a>
 ### Sources

@@ -1845,6 +1845,18 @@
    "page": "theories/becoming/results/records/coupling-closures-of-training-pipelines.md"
   },
   {
+   "id": "record:covering-by-the-returning-formations",
+   "type": "result",
+   "record": "covering-by-the-returning-formations",
+   "title": "Covering by the returning formations",
+   "title_zh": "由回返构成的覆盖",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/covering-by-the-returning-formations.md"
+  },
+  {
    "id": "record:degeneration-from-a-horizon",
    "type": "result",
    "record": "degeneration-from-a-horizon",
@@ -3585,6 +3597,18 @@
    "page": "theories/becoming/results/records/mutual-dependence-and-its-pace.md"
   },
   {
+   "id": "record:mutual-dependence-gives-the-condition-de-se",
+   "type": "result",
+   "record": "mutual-dependence-gives-the-condition-de-se",
+   "title": "Mutual dependence gives the condition held de se",
+   "title_zh": "相互依赖给出自持之延续条件",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/mutual-dependence-gives-the-condition-de-se.md"
+  },
+  {
    "id": "record:naming-attention-coverage",
    "type": "result",
    "record": "naming-attention-coverage",
@@ -4821,6 +4845,18 @@
    "page": "theories/becoming/results/records/rooms-tested-by-a-window.md"
   },
   {
+   "id": "record:route-b-universal-form-closed",
+   "type": "result",
+   "record": "route-b-universal-form-closed",
+   "title": "Route (b)'s universal form, closed",
+   "title_zh": "路线 (b) 的普遍形式，闭合",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/route-b-universal-form-closed.md"
+  },
+  {
    "id": "record:rules-that-change-themselves-in-the-grammar",
    "type": "result",
    "record": "rules-that-change-themselves-in-the-grammar",
@@ -4903,6 +4939,18 @@
    "region": "life",
    "base": "old-base",
    "page": "theories/becoming/results/records/selection-among-groups-by-ending.md"
+  },
+  {
+   "id": "record:selection-read-off-continuations",
+   "type": "result",
+   "record": "selection-read-off-continuations",
+   "title": "No selection read off a continuation selects beyond the coupling",
+   "title_zh": "读自延续的选择不及耦合之外",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/selection-read-off-continuations.md"
   },
   {
    "id": "record:selection-right-exactly-where-read",
@@ -5191,6 +5239,18 @@
    "region": "root",
    "base": "grammar",
    "page": "theories/becoming/results/records/standings-not-read-off-the-occurrence-model.md"
+  },
+  {
+   "id": "record:standpoints-read-off-a-flow",
+   "type": "result",
+   "record": "standpoints-read-off-a-flow",
+   "title": "The standpoints and the relation read off a flow",
+   "title_zh": "从流读出的立场与关系",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/standpoints-read-off-a-flow.md"
   },
   {
    "id": "record:steps-met-again-after-a-fall",
@@ -5515,6 +5575,18 @@
    "region": "root",
    "base": "general",
    "page": "theories/becoming/results/records/the-move-alone-underdetermines.md"
+  },
+  {
+   "id": "record:the-own-class-read-on-a-flow",
+   "type": "result",
+   "record": "the-own-class-read-on-a-flow",
+   "title": "The own class read on a flow",
+   "title_zh": "于流上读己之类",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/the-own-class-read-on-a-flow.md"
   },
   {
    "id": "record:the-present-on-causal-set-growth",
@@ -6333,6 +6405,18 @@
    "page": "theories/becoming/results/records/what-leaves-a-class-follows-its-line.md"
   },
   {
+   "id": "record:what-persisting-shows-of-an-order",
+   "type": "result",
+   "record": "what-persisting-shows-of-an-order",
+   "title": "What persisting shows of an order",
+   "title_zh": "存续所示之序",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/what-persisting-shows-of-an-order.md"
+  },
+  {
    "id": "record:what-pooled-coupling-reaches",
    "type": "result",
    "record": "what-pooled-coupling-reaches",
@@ -6439,6 +6523,18 @@
    "region": "knowing",
    "base": "general",
    "page": "theories/becoming/results/records/what-the-existence-claim-forbids.md"
+  },
+  {
+   "id": "record:what-the-net-fixes-of-ones-own-class",
+   "type": "result",
+   "record": "what-the-net-fixes-of-ones-own-class",
+   "title": "What the net fixes of one's own class",
+   "title_zh": "网于己之类所定者",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/what-the-net-fixes-of-ones-own-class.md"
   },
   {
    "id": "record:what-the-step-across-standpoints-reaches",
@@ -6619,6 +6715,18 @@
    "region": "map",
    "base": "old-base",
    "page": "theories/becoming/results/records/where-novelty-gain-comes-from.md"
+  },
+  {
+   "id": "record:where-the-blindness-lifts",
+   "type": "result",
+   "record": "where-the-blindness-lifts",
+   "title": "Where selection's blindness beyond the coupling lifts",
+   "title_zh": "选择在耦合外之盲何处解除",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/where-the-blindness-lifts.md"
   },
   {
    "id": "record:where-the-possible-grows",
@@ -11019,6 +11127,50 @@
    "theorems": 74,
    "region": "significance",
    "base": "general",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.FlowCenters",
+   "type": "module",
+   "name": "Becoming.FlowCenters",
+   "level": "L2",
+   "theorems": 33,
+   "region": "significance",
+   "base": "old-base",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.PersistingChoices",
+   "type": "module",
+   "name": "Becoming.PersistingChoices",
+   "level": "L2",
+   "theorems": 53,
+   "region": "significance",
+   "base": "old-base",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.BeyondCoupling",
+   "type": "module",
+   "name": "Becoming.BeyondCoupling",
+   "level": "L2",
+   "theorems": 27,
+   "region": "significance",
+   "base": "old-base",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.OwnClass",
+   "type": "module",
+   "name": "Becoming.OwnClass",
+   "level": "L2",
+   "theorems": 67,
+   "region": "significance",
+   "base": "grammar",
    "on_grammar": true,
    "reaches_grammar": true
   },
@@ -31052,6 +31204,24 @@
    "anchor": "r-whole-and-regions-and-bounded-centers"
   },
   {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-selection-read-off-continuations",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-selection-read-off-continuations"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-route-b-universal-form-closed",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-route-b-universal-form-closed"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-where-the-blindness-lifts",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-where-the-blindness-lifts"
+  },
+  {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-self-concern-and-c-under-the-condition",
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -31164,6 +31334,42 @@
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
    "anchor": "r-constancy-read-at-a-members-class"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-standpoints-read-off-a-flow",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-standpoints-read-off-a-flow"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-covering-by-the-returning-formations",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-covering-by-the-returning-formations"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-mutual-dependence-gives-the-condition-de-se",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-mutual-dependence-gives-the-condition-de-se"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-persisting-shows-of-an-order",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-what-persisting-shows-of-an-order"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-the-net-fixes-of-ones-own-class",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-what-the-net-fixes-of-ones-own-class"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-own-class-read-on-a-flow",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-the-own-class-read-on-a-flow"
   },
   {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-ranking-under-readings",
@@ -31825,6 +32031,21 @@
   {
    "from": "module:Becoming.BalanceRegions",
    "to": "module:Becoming.GrammarCrossing",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.BeyondCoupling",
+   "to": "module:Becoming.FlowCenters",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.BeyondCoupling",
+   "to": "module:Becoming.GrammarScope",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.BeyondCoupling",
+   "to": "module:Becoming.SelectionPool",
    "type": "imports"
   },
   {
@@ -32775,6 +32996,26 @@
   {
    "from": "module:Becoming.Flow",
    "to": "module:Becoming.Witnesses",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.FlowCenters",
+   "to": "module:Becoming.Centers",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.FlowCenters",
+   "to": "module:Becoming.GrammarScope",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.FlowCenters",
+   "to": "module:Becoming.MutualDependence",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.FlowCenters",
+   "to": "module:Becoming.Weightings",
    "type": "imports"
   },
   {
@@ -34188,6 +34429,31 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.OwnClass",
+   "to": "module:Becoming.Centers",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.OwnClass",
+   "to": "module:Becoming.FlowCenters",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.OwnClass",
+   "to": "module:Becoming.GrammarPath",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.OwnClass",
+   "to": "module:Becoming.GrammarScope",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.OwnClass",
+   "to": "module:Becoming.Identity",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.OwnWidening",
    "to": "module:Becoming.Retaining",
    "type": "imports"
@@ -34315,6 +34581,26 @@
   {
    "from": "module:Becoming.Persistence",
    "to": "module:Becoming.Witnesses",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PersistingChoices",
+   "to": "module:Becoming.EventualWideningInstances",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PersistingChoices",
+   "to": "module:Becoming.MutualDependence",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PersistingChoices",
+   "to": "module:Becoming.ShownOrder",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PersistingChoices",
+   "to": "module:Becoming.Weightings",
    "type": "imports"
   },
   {
@@ -41850,6 +42136,36 @@
    "type": "application"
   },
   {
+   "from": "record:covering-by-the-returning-formations",
+   "to": "module:Becoming.FlowCenters",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:covering-by-the-returning-formations",
+   "to": "record:continuation-condition-decomposition",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:covering-by-the-returning-formations",
+   "to": "record:self-concern-through-dependence",
+   "type": "related"
+  },
+  {
+   "from": "record:covering-by-the-returning-formations",
+   "to": "record:standpoints-read-off-a-flow",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:covering-by-the-returning-formations",
+   "to": "record:what-the-step-across-standpoints-reaches",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:covering-by-the-returning-formations",
+   "to": "record:where-a-formations-acts-return",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:degeneration-from-a-horizon",
    "to": "module:Becoming.GrammarMap",
    "type": "proved-in"
@@ -48254,6 +48570,31 @@
    "interface": true
   },
   {
+   "from": "record:mutual-dependence-gives-the-condition-de-se",
+   "to": "module:Becoming.PersistingChoices",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:mutual-dependence-gives-the-condition-de-se",
+   "to": "record:mutual-dependence-and-its-pace",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:mutual-dependence-gives-the-condition-de-se",
+   "to": "record:self-concern-through-dependence",
+   "type": "related"
+  },
+  {
+   "from": "record:mutual-dependence-gives-the-condition-de-se",
+   "to": "record:what-persisting-shows-of-an-order",
+   "type": "related"
+  },
+  {
+   "from": "record:mutual-dependence-gives-the-condition-de-se",
+   "to": "record:what-the-step-across-standpoints-reaches",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:naming-attention-coverage",
    "to": "record:encounter-selection-and-revision",
    "type": "interpretive"
@@ -53044,6 +53385,56 @@
    "interface": true
   },
   {
+   "from": "record:route-b-universal-form-closed",
+   "to": "module:Becoming.BeyondCoupling",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:route-b-universal-form-closed",
+   "to": "record:derived-extent-limits",
+   "type": "related"
+  },
+  {
+   "from": "record:route-b-universal-form-closed",
+   "to": "record:levels-of-closure",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:route-b-universal-form-closed",
+   "to": "record:selection-read-off-continuations",
+   "type": "related"
+  },
+  {
+   "from": "record:route-b-universal-form-closed",
+   "to": "record:standpoints-read-off-a-flow",
+   "type": "related"
+  },
+  {
+   "from": "record:route-b-universal-form-closed",
+   "to": "record:testing-within-couplings",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:route-b-universal-form-closed",
+   "to": "record:the-continuation-condition-on-the-root",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:route-b-universal-form-closed",
+   "to": "record:what-the-dynamics-leave-open",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:route-b-universal-form-closed",
+   "to": "record:what-the-step-across-standpoints-reaches",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
    "from": "record:rules-that-change-themselves-in-the-grammar",
    "to": "module:Becoming.GrammarRegularity",
    "type": "proved-in"
@@ -53379,6 +53770,54 @@
   {
    "from": "record:selection-among-groups-by-ending",
    "to": "record:what-bounds-offspring-numbers",
+   "type": "related"
+  },
+  {
+   "from": "record:selection-read-off-continuations",
+   "to": "module:Becoming.BeyondCoupling",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:selection-read-off-continuations",
+   "to": "record:covering-by-the-returning-formations",
+   "type": "related"
+  },
+  {
+   "from": "record:selection-read-off-continuations",
+   "to": "record:derived-extent-limits",
+   "type": "related"
+  },
+  {
+   "from": "record:selection-read-off-continuations",
+   "to": "record:raising-what-couples-in-draws-from-beyond",
+   "type": "related"
+  },
+  {
+   "from": "record:selection-read-off-continuations",
+   "to": "record:selection-through-couplings",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:selection-read-off-continuations",
+   "to": "record:testing-within-couplings",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:selection-read-off-continuations",
+   "to": "record:the-gap-for-ones-own-act",
+   "type": "related"
+  },
+  {
+   "from": "record:selection-read-off-continuations",
+   "to": "record:what-pooled-coupling-reaches",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:selection-read-off-continuations",
+   "to": "record:where-the-blindness-lifts",
    "type": "related"
   },
   {
@@ -54689,6 +55128,61 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:standpoints-read-off-a-flow",
+   "to": "module:Becoming.FlowCenters",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:standpoints-read-off-a-flow",
+   "to": "record:covering-by-the-returning-formations",
+   "type": "related"
+  },
+  {
+   "from": "record:standpoints-read-off-a-flow",
+   "to": "record:derived-extent-limits",
+   "type": "related"
+  },
+  {
+   "from": "record:standpoints-read-off-a-flow",
+   "to": "record:levels-of-closure",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:standpoints-read-off-a-flow",
+   "to": "record:loss-beyond-a-region",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:standpoints-read-off-a-flow",
+   "to": "record:mutual-dependence-and-its-pace",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:standpoints-read-off-a-flow",
+   "to": "record:self-concern-through-dependence",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:standpoints-read-off-a-flow",
+   "to": "record:the-continuation-condition-on-the-root",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:standpoints-read-off-a-flow",
+   "to": "record:what-the-step-across-standpoints-reaches",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:standpoints-read-off-a-flow",
+   "to": "record:where-a-formations-acts-return",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:standpoints-read-off-a-flow",
+   "to": "record:whole-and-regions-and-bounded-centers",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:steps-met-again-after-a-fall",
    "to": "module:Becoming.Optimum",
    "type": "proved-in"
@@ -55657,6 +56151,26 @@
   {
    "from": "record:the-move-alone-underdetermines",
    "to": "record:weights-count-situations",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-own-class-read-on-a-flow",
+   "to": "module:Becoming.OwnClass",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-own-class-read-on-a-flow",
+   "to": "record:constancy-read-at-a-members-class",
+   "type": "related"
+  },
+  {
+   "from": "record:the-own-class-read-on-a-flow",
+   "to": "record:what-the-net-fixes-of-ones-own-class",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-own-class-read-on-a-flow",
+   "to": "record:where-a-formations-acts-return",
    "type": "formal-reuse"
   },
   {
@@ -58909,6 +59423,31 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:what-persisting-shows-of-an-order",
+   "to": "module:Becoming.PersistingChoices",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-persisting-shows-of-an-order",
+   "to": "record:mutual-dependence-gives-the-condition-de-se",
+   "type": "related"
+  },
+  {
+   "from": "record:what-persisting-shows-of-an-order",
+   "to": "record:what-choices-show-of-an-order",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-persisting-shows-of-an-order",
+   "to": "record:what-self-concern-alone-ranks",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-persisting-shows-of-an-order",
+   "to": "record:what-training-installs",
+   "type": "related"
+  },
+  {
    "from": "record:what-pooled-coupling-reaches",
    "to": "module:Becoming.Clearing",
    "type": "proved-in"
@@ -59170,6 +59709,46 @@
   {
    "from": "record:what-the-existence-claim-forbids",
    "to": "record:the-markov-blanket-as-a-coupling-structure",
+   "type": "related"
+  },
+  {
+   "from": "record:what-the-net-fixes-of-ones-own-class",
+   "to": "module:Becoming.OwnClass",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-the-net-fixes-of-ones-own-class",
+   "to": "record:constancy-read-at-a-members-class",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-the-net-fixes-of-ones-own-class",
+   "to": "record:reach-past-ones-own-end",
+   "type": "related"
+  },
+  {
+   "from": "record:what-the-net-fixes-of-ones-own-class",
+   "to": "record:standpoints-read-off-a-flow",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-the-net-fixes-of-ones-own-class",
+   "to": "record:the-class-of-being-joined",
+   "type": "related"
+  },
+  {
+   "from": "record:what-the-net-fixes-of-ones-own-class",
+   "to": "record:the-continuation-condition-on-the-root",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-the-net-fixes-of-ones-own-class",
+   "to": "record:the-own-class-read-on-a-flow",
+   "type": "related"
+  },
+  {
+   "from": "record:what-the-net-fixes-of-ones-own-class",
+   "to": "record:what-a-line-holds-and-a-regularity-takes-in",
    "type": "related"
   },
   {
@@ -60051,6 +60630,44 @@
    "from": "record:where-novelty-gain-comes-from",
    "to": "record:whole-persists-through-generation",
    "type": "related"
+  },
+  {
+   "from": "record:where-the-blindness-lifts",
+   "to": "module:Becoming.BeyondCoupling",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:where-the-blindness-lifts",
+   "to": "record:loss-read-in-time-by-the-others",
+   "type": "related"
+  },
+  {
+   "from": "record:where-the-blindness-lifts",
+   "to": "record:readers-drawn-from-the-selected",
+   "type": "related"
+  },
+  {
+   "from": "record:where-the-blindness-lifts",
+   "to": "record:route-b-universal-form-closed",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:where-the-blindness-lifts",
+   "to": "record:selection-read-off-continuations",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:where-the-blindness-lifts",
+   "to": "record:shaping-the-rule-selected-by-what-comes-back",
+   "type": "related"
+  },
+  {
+   "from": "record:where-the-blindness-lifts",
+   "to": "record:testing-within-couplings",
+   "type": "formal-reuse",
+   "interface": true
   },
   {
    "from": "record:where-the-possible-grows",
@@ -63473,6 +64090,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-covering-by-the-returning-formations",
+   "to": "record:covering-by-the-returning-formations",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-derived-extent-limits",
    "to": "record:derived-extent-limits",
    "type": "states"
@@ -63535,6 +64157,11 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-metaethical-core-characterization",
    "to": "record:metaethical-core-characterization",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-mutual-dependence-gives-the-condition-de-se",
+   "to": "record:mutual-dependence-gives-the-condition-de-se",
    "type": "states"
   },
   {
@@ -63633,6 +64260,16 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-route-b-universal-form-closed",
+   "to": "record:route-b-universal-form-closed",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-selection-read-off-continuations",
+   "to": "record:selection-read-off-continuations",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-self-concern-and-c-under-the-condition",
    "to": "record:self-concern-and-c-under-the-condition",
    "type": "states"
@@ -63650,6 +64287,11 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-significance-through-a-common-condition",
    "to": "record:significance-through-a-common-condition",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-standpoints-read-off-a-flow",
+   "to": "record:standpoints-read-off-a-flow",
    "type": "states"
   },
   {
@@ -63680,6 +64322,11 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-gap-for-ones-own-act",
    "to": "record:the-gap-for-ones-own-act",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-own-class-read-on-a-flow",
+   "to": "record:the-own-class-read-on-a-flow",
    "type": "states"
   },
   {
@@ -63728,6 +64375,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-persisting-shows-of-an-order",
+   "to": "record:what-persisting-shows-of-an-order",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-self-concern-alone-ranks",
    "to": "record:what-self-concern-alone-ranks",
    "type": "states"
@@ -63740,6 +64392,11 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-the-dynamics-leave-open",
    "to": "record:what-the-dynamics-leave-open",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-the-net-fixes-of-ones-own-class",
+   "to": "record:what-the-net-fixes-of-ones-own-class",
    "type": "states"
   },
   {
@@ -63765,6 +64422,11 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-when-no-route-stands-above-a-revision",
    "to": "record:when-no-route-stands-above-a-revision",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-where-the-blindness-lifts",
+   "to": "record:where-the-blindness-lifts",
    "type": "states"
   },
   {

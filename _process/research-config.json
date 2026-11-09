@@ -365,6 +365,14 @@
         "Results"
       ],
       [
+        "OPEN-QUESTIONS.md",
+        "Open questions"
+      ],
+      [
+        "theories/becoming/review/README.md",
+        "Reviewers"
+      ],
+      [
         "theories/becoming/results/THEORY-GRAPH.md",
         "Graph"
       ],
@@ -375,6 +383,10 @@
       [
         "theories/LINEAGE.md",
         "How it grew"
+      ],
+      [
+        "GLOSSARY.md",
+        "Glossary"
       ],
       [
         "MAP.md",

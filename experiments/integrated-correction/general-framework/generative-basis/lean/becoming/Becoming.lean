@@ -384,6 +384,10 @@ import Becoming.PremiseWitnesses
 import Becoming.PremisesTogether
 import Becoming.GrammarPath
 import Becoming.RoutesToC
+import Becoming.FlowCenters
+import Becoming.PersistingChoices
+import Becoming.BeyondCoupling
+import Becoming.OwnClass
 import Becoming.SignificanceStatements
 
 /-!
@@ -4713,6 +4717,78 @@ tagged instance or application.
   (`Weighting.increasing_iff_one_step`). On a listing of what lies downstream, P2 and P4 of the path in
   07 §4.6 with self-concern give increasing in admission
   (`Weighting.increasing_on_downstream_of_regularity`). A leaf; short laws, none new as mathematics.
+* `Becoming.FlowCenters` (L2, through `Becoming.GrammarScope`): the standpoints and the relation of the
+  own-closure reading read off a flow (board item ZA-G1, route (b)'s first piece). An element returns along a
+  relation where whatever lies within its closure has it within its own (`ReturnsAlong`); held de se at the
+  returning elements, given one, the presupposition is the condition exactly where every closure is the whole
+  (`ownClosure_unrestricted_atReturning_iff`). On a flow the formations whose acts return (`Flow.Returning`) are
+  one reading of the standpoints and every formation the other: held de se along affecting at the returning
+  formations the condition gives mutual dependence (`Flow.mutuallyDependent_of_returning_unrestricted`, and its
+  root form), along feeding with every formation a center it is mutual feeding (`Flow.mutuallyFed_iff_unrestricted`).
+  On finitely many formations with reach decided every formation lies within the influence closure of a returning
+  one (`Flow.covered_by_returning`), so the step along being affected at them gives the condition
+  (`Flow.unrestricted_of_returning_standpointInvariant`), and held de se along being affected the condition is
+  that they lie in one loop (`Flow.returning_influence_unrestricted_iff`). Witnesses: `Clearing.returning_apart`
+  (only the dweller returns; the supplied clearer and it part), `Clearing.clearer_beyond_returning_feeding`,
+  `Drawing.returning_feeding_apart`, `Unexchanged.apart`. Which relation and which reading of the standpoints
+  stay choices. A leaf; short compositions, none new as mathematics.
+* `Becoming.PersistingChoices` (L2, through `Becoming.Weightings` and `Becoming.MutualDependence`): what
+  persisting shows of an order (board item ZA). Mutual dependence gives the
+  continuation condition held de se along being affected and along affecting, each exactly mutual dependence
+  where every formation is a center (`Flow.unrestricted_of_mutuallyDependent`,
+  `Flow.mutuallyDependent_iff_unrestricted`). Some strict order accords with choices and makes required
+  comparisons exactly where the shown relation with them added has no cycle
+  (`ChoiceOccasions.accorded_containing_iff`); where the choices come from some strict order and no choice
+  ends, some puts keeping above ending (`ChoiceOccasions.keeping_above_ending`). On the World a line persisting through
+  arbitrarily late cohorts never overdrew the gated family it depends on from a short stock
+  (`Flow.persists_never_overdraws`), so where an ending choice is realized as such an overdraw, the choices
+  come from some strict order, they are consistent with keeping above ending
+  (`Flow.persisting_keeping_above_ending`), and where only ending is at stake on the occasions met, with an
+  order increasing in its own continuation on those occasions (`Flow.persisting_consistent_with_selfConcern`); a course never met that widens another and adds to the own
+  continuation is ranked below it by some such order (`ChoiceOccasions.reversed_off_met`); and in one witness a persisting line whose choice accords
+  with a strict order, never ending, is consistent with no strict order increasing in its own continuation on
+  the occasion met (`PersistingChoices.Forgoing.persists_not_selfConcerned`); in another, with every course met, two
+  crossed choices are consistent with no strict order increasing in its own continuation
+  (`PersistingChoices.Crossed.not_selfConcerned`); where a line persists, the web's actual levels are never a
+  listed level path (`Flow.persists_not_listsAdmitted`). A leaf; short laws, none new as mathematics.
+* `Becoming.BeyondCoupling` (L2, through `Becoming.GrammarScope` and `Becoming.FlowCenters`): what
+  selection read off continuation cannot reach (board item ZB, one of route (b)'s pieces). A selection
+  read off a group's continuations decides a level history by each member's admission at every step
+  (`Web.ReadOffContinuations`), or by what couples into the members at every step
+  (`Web.ReadOffCouplings`), over the whole run. `act_courses_unselected_pool` read over the whole
+  run (`act_courses_unselected_throughout`): two acts of a part, laws of what has stood, the first
+  reading through its members' coupling, agreeing on what couples into a group's coupling closure,
+  the rest following a law reading through coupling, the courses feasible, are selected alike by
+  every such selection of a pool within the closure, a bound with content only for a pool leaving some
+  returning formation out (`Flow.returning_pool_covers`); where the act reads significance only within
+  that closure (`ActReadsWithin`, a premise) so are two significances agreeing there
+  (`significance_courses_unselected`). Route (b)'s universal form in one theorem
+  (`routeB_universal_closed`): the own-closure significance is the condition exactly where every
+  closure is the whole, not on a relation with no cycle and two distinct centers, and not wherever
+  a center's own closure lies within its coupling closure and something lies beyond that, as along a
+  relation within coupling in or along affecting at a center whose acts return. Where the
+  blindness lifts: histories are selected alike by every selection read off a group's couplings
+  exactly when alike through every member's couplings at every step
+  (`Web.readOffCouplings_alike_iff`, from `Web.selects_alike_all_iff`). Witnesses in `Clearing` and
+  `Diversion`, among them the failed candidate that coupling the dweller in turns the selection
+  against its loss (`Clearing.read_not_direction`). A leaf: it composes laws of modules that nothing
+  below imports together; short laws, none new as mathematics.
+* `Becoming.OwnClass` (L2, through `Becoming.GrammarScope`, `Becoming.Centers`, `Becoming.FlowCenters` and
+  `Becoming.Identity`): a center's own class,
+  what the net fixes of it (board item ZC, route (b)'s de se piece). At an occurrence that conditions
+  something, a class meeting 07 §4.6's P2 and P4 has its block closed under the net, and the converse
+  holds where it is decided of each alike occurrence whether it conditions something
+  (`«本类常闭当且仅当类闭»`), so the classes meeting both are closed under meets (`«本类常闭之交»`, `«本类常闭之遍交»`) and
+  not under joins (`JoinBreaks`); the least is the occurrence with everything downstream of it (`«后类»`,
+  `«后类最细»`), meeting both with no decision at an element returning along the net
+  (`ReturnsAlong.downstreamClass_regular`), and every one reaches what the one reaches (`«本类常闭则所及即一之所及»`), so with each
+  center under such a class the per-center condition along the net is that at the one
+  (`«各本类常闭则续无外即一之续无外»`). The identity meets P2 everywhere and P4 nowhere an effect differs
+  from oneself (`«静之本类至终有常»`, `«静不闭»`); P2 alone is not closed under meets (`MeetBreaks`). Read
+  on a flow with the class of a formation's coupling closure (`Flow.CouplingClass`), P4 is that what it
+  affects lies within that closure, the reach that everything within its reach does, exactly where its
+  acts return with coupling by threshold only (`Flow.couplingClass_reach_iff_returns`), and the line is
+  its loop (`Flow.couplingClass_line_iff_loop`); near-definitional. A leaf.
 * `Becoming.GrammarPath` (L1): what a line under a class must hold, and what a regularity takes in
   (board item PF), for every carrier, relation and class. Where a region is left under a class only
   into a set, a line under the class from inside to outside holds a member of that set alike to its

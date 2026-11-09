@@ -1,0 +1,340 @@
+{
+  "schema_version": 2,
+  "id": "selection-read-off-continuations",
+  "title": {
+    "en": "No selection read off a continuation selects beyond the coupling",
+    "zh": "读自延续的选择不及耦合之外"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F04",
+  "reviewed_at_utc": "2026-11-09T13:34:10+00:00",
+  "statement": {
+    "en": "Over the whole run, a selection read off a pool's continuations or couplings selects alike two courses whose acts, laws agreeing on what couples into a coupling closure holding the pool, differ only beyond it; so do two significances whose acts agree there, whatever loss either makes beyond.",
+    "zh": "遍及全程读自一池延续或耦合的选择，对两条进程选得相同，只要其举（在含该池之某组耦合闭包内耦合入者上一致的律）只在闭包外不同；故其举在此一致的两种意义被选得相同，无论二者在外造成何种失去。"
+  },
+  "laws": [
+    {
+      "en": "A selection is read off a group's continuations where it decides a level history by whether levels admit each member at each step and by nothing else; off its couplings where histories alike through every member's couplings at every step are selected alike. The first is the second by threshold only; one through the couplings up to a step is a case; what all such select alike at each step, all whole-run ones do.",
+      "zh": "选择读自一组的延续：它只按水平在每步是否接纳各成员判定一段水平历史；读自其耦合：经每个成员之耦合在每步无别的历史被选得相同。前者即只经阈的后者；直到某步经耦合的选择是其一例；每步此类选择都选得相同者，遍及全程者亦然。",
+      "declarations": [
+        "Becoming.Web.ReadOffContinuations",
+        "Becoming.Web.ReadOffCouplings",
+        "Becoming.Web.ReadOffContinuations.couplings",
+        "Becoming.Web.readOffCouplings_thresholdOnly_iff",
+        "Becoming.Web.SelectsThroughAll.readOffCouplings",
+        "Becoming.Web.SelectsThrough.readOffCouplings",
+        "Becoming.Web.ReadOffCouplings.mono",
+        "Becoming.Web.readOffCouplings_alike_of_steps"
+      ]
+    },
+    {
+      "en": "The pool form of the gap for one's own act over the whole run: a part acting by one of two laws of what has stood, the first reading through its members' coupling, the two agreeing on what couples into a group's closure drawn through both courses; the rest by a law reading through coupling; both courses feasible. Every such selection of a pool within the closure selects the two alike, so none tracks the act.",
+      "zh": "己举之隙的池形式遍及全程：部分依两条读已成者之律之一而行，前者经其成员之耦合而读，二者在经两条进程所得的池之闭包内耦合入者上一致；其余依经耦合而读之律；两条进程皆可行。闭包内一组的每个此类选择对两者选得相同，故无一追踪此举。",
+      "declarations": [
+        "Becoming.act_courses_unselected_throughout",
+        "Becoming.not_tracks_of_alike"
+      ]
+    },
+    {
+      "en": "Where the part acts by the law its significance gives and that act reads significance only within the closure on what couples in, a premise met here by no act that reads significance, two significances agreeing on every formation of the closure are selected alike by every such selection, whatever they say of what lies beyond.",
+      "zh": "若部分依其意义所给之律而行，且此举只在闭包内、在耦合入者上读意义（前提，此处无读意义之举满足它），则在闭包每个形成上一致的两种意义被每个此类选择选得相同，无论二者对闭包外说什么。",
+      "declarations": [
+        "Becoming.ActReadsWithin",
+        "Becoming.significance_courses_unselected"
+      ]
+    },
+    {
+      "en": "Witnesses of two conducts, read as counting the dweller or not. In Clearing every selection read off what couples into the clearer and its source by threshold only selects sparing and clearing alike, while the dweller ends under clearing. In Diversion the act ending the dweller raises the store the taker gauges, and a selection read off the taker's couplings holds at it and fails at refraining.",
+      "zh": "两种行为之见证，读作计入或不计入栖居者。Clearing 中，读自只经阈耦合入清除者及其源者的每个选择对保留与清除选得相同，而栖居者在清除下终结。Diversion 中，终结栖居者之举抬高取用者所测的储存，读自取用者耦合的选择于此举成立、于克制不成立。",
+      "declarations": [
+        "Becoming.Clearing.counting",
+        "Becoming.Clearing.countingLevel",
+        "Becoming.Clearing.DwellerKept",
+        "Becoming.Clearing.counting_dweller_unselected",
+        "Becoming.Diversion.counting",
+        "Becoming.Diversion.countingLevel",
+        "Becoming.Diversion.counting_selected_against"
+      ]
+    },
+    {
+      "en": "Pooled over the formations whose acts return, nothing lies beyond: with finitely many formations listed and reach decided, every formation lies within their pooled coupling closure, for every coupling by level, since it lies within the influence closure of one. The law above bites only for a pool leaving one out.",
+      "zh": "以一切回返之形成为池，则无外：有限个形成列出且所及可判定时，每个形成都在其合并的耦合闭包之内（对一切经水平的耦合），因它在某一回返形成的影响闭包之内。上面的律只对漏掉某回返形成的池起作用。",
+      "declarations": [
+        "Becoming.Flow.returning_pool_covers",
+        "Becoming.Flow.returning_pool_covers_either"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Discrete steps and natural levels; a web, laws of exchange, the formations present and the starting levels supplied; a coupling by level supplied.",
+      "zh": "不加公理。离散步与自然数水平；一个网、交换之律、在场的形成与起始水平为给定；经水平的耦合为给定。"
+    },
+    {
+      "en": "The part acts by one of two laws of what has stood, the first reading through its members' coupling; the rest follows a law of what has stood reading through coupling; both courses are feasible, so each course, its levels and its balance come from the laws.",
+      "zh": "部分依两条读已成者之律之一而行，前者经其成员之耦合而读；其余依读已成者、经耦合而读之律；两条进程皆可行，故进程、其水平与平衡皆出于律。"
+    },
+    {
+      "en": "The two acts agree on every condition coupled into the group's coupling closure drawn through both courses: a premise on the two acts, not derived. Where they differ there, the difference can be selected.",
+      "zh": "两举在经两条进程所得的池之耦合闭包内每个耦合入者上一致：这是对两举的前提，非推出。若在此不同，差异可被选。"
+    },
+    {
+      "en": "For significances: the act reads significance only within that closure on what couples in (ActReadsWithin), a premise on how significance acts; which act a significance gives is supplied.",
+      "zh": "就意义而言：此举只在该闭包内、在耦合入者上读意义（ActReadsWithin），是关于意义如何起作用的前提；一种意义给出何种举为给定。"
+    },
+    {
+      "en": "Who selects, and that a selection is read off a continuation or the couplings, are supplied; in the witnesses, that the two conducts are read as counting the dweller or not is a reading.",
+      "zh": "谁选择、选择读自延续或耦合，皆为给定；见证中，把两种行为读作计入或不计入栖居者是一种解读。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That acts whose losses lie beyond the closure are never selected apart: where the act's difference couples in, as in Diversion, it is selected.",
+      "zh": "其失去在闭包外之举永不被选开：举之差异若耦合入（如 Diversion），它就被选。",
+      "kind": "non-implication",
+      "witness": "Becoming.Diversion.counting_selected_against"
+    },
+    {
+      "en": "That any formation holds a significance, counts the dweller or acts on what it counts.",
+      "zh": "有形成持有意义、计入栖居者或依其所计而行。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Selections reading more than the members' couplings: one read off a formation outside the closure, or through a model of the part's exchange, can tell the two apart.",
+      "zh": "读得多于成员之耦合的选择：读自闭包外形成者，或经部分之交换的模型者，可分开二者。",
+      "kind": "scope"
+    },
+    {
+      "en": "That anything lies beyond a pool of every returning formation: on finitely many formations with reach decided, nothing does, so the law bites only for a pool leaving some returning formation out.",
+      "zh": "有东西在含一切回返之形成的池之外：在有限个形成且所及可判定时没有，故此律只对漏掉某回返之形成的池起作用。",
+      "kind": "scope",
+      "witness": "Becoming.Flow.returning_pool_covers"
+    },
+    {
+      "en": "A selection that removes its own readers, or one reading in time: the pool is fixed across the two courses and the selection is read over the whole run.",
+      "zh": "移除自身读者的选择，或及时读到的选择：池在两条进程间固定，选择遍及全程而读。",
+      "kind": "scope"
+    },
+    {
+      "en": "That actual selections, a reward, a market, a vote, a training run, are read off what couples into the selector.",
+      "zh": "实际的选择（奖励、市场、投票、训练）读自耦合入选择者者。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean",
+      "detail": {
+        "en": "Against the reading that an act whose loss lies beyond a selector's coupling closure is never selected: in Diversion the act that ends the dweller, which in the diverting flow lies beyond the taker's coupling closure, raises the store the taker gauges, and a selection read off the taker's couplings holds at it and fails at refraining (Diversion.counting_selected_against). The witness lies outside the law's setting (supplied flows, no act indexed by significance): it shows the agreement pattern failing, not ActReadsWithin.",
+        "zh": "反对这一读法：其失去在选择者耦合闭包外之举永不被选。Diversion 中，终结栖居者（在转引之流中位于取用者耦合闭包之外）之举抬高取用者所测的储存，读自取用者耦合的选择于此举成立、于克制不成立（Diversion.counting_selected_against）。此见证在该律的设定之外（给定之流，无以意义为索引之举）：它显示一致之形不成立，而非 ActReadsWithin 不成立。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "significance-related-not-asserted",
+    "names-provisional",
+    "formal-not-empirical",
+    "discrete-steps"
+  ],
+  "validation_scope": {
+    "en": "Pure core, axiom report empty; a leaf. The dynamics are act_courses_unselected_pool's, read over the whole run through selects_alike_all_iff; the selection half is near-definitional. What is new is the statement: the selection read off the continuation over the whole run, and significance as the act's index. Written by an AI; a reader of another model read the statements cold against this record and its home (READER in the study folder); no human audit.",
+    "zh": "纯核心，公理报告为空；叶模块。动力学是 act_courses_unselected_pool 的，经 selects_alike_all_iff 遍及全程；选择一半近于定义。新者是陈述：选择遍及全程读自延续，以意义为举之索引。AI 所写；另一模型的读者冷读对照（见研究目录 READER）；无人类审计。"
+  },
+  "next_delta": {
+    "en": "Joined to route (b)'s other pieces: a conduct read off the choices a persisting line shows (G3) at the centers a flow gives (G1), to say where the premise that two acts agree on what couples in holds of such a chooser, and where a compound act like Diversion's breaks it.",
+    "zh": "与路线 (b) 其他部分相接：以持续之线所显之选择（G3）在流所给的中心（G1）处读出行为，以判两种行为在耦合入者上一致的前提对这样的选择者何处成立，何处被 Diversion 那样的复合之举打破。"
+  },
+  "correspondence": {
+    "en": "Reading (the AI's, from its knowledge): a selection read off the bearer's continuation is fitness read off the bearer; a trait's content that leaves fitness unchanged has no covariance with it and does not change in frequency (Price 1970), the shape here; a cost borne by third parties is absent from the agent's private return, Pigou's externality (1920); a reward that cannot read a side effect cannot train against it (Amodei and others, Concrete Problems in AI Safety, 2016, on negative side effects). Diversion is the case where the act that ends the dweller also pays the actor: selection then favours it, Goodhart's shape.",
+    "zh": "解读（AI 据其知识）：读自承载者延续的选择即读自承载者的适应度；不改变适应度的性状内容与适应度无协方差，频率不变（Price 1970），即此处之形；第三方承担的代价不在行为者的私人回报中，即 Pigou 的外部性（1920）；读不到副作用的奖励不能训练以避之（Amodei 等，Concrete Problems in AI Safety，2016，论负面副作用）。Diversion 是终结栖居者之举同时回报行为者之例：选择于是偏向它，即 Goodhart 之形。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean",
+  "aliases": [
+    "selection read off a continuation",
+    "no selection read off a continuation selects beyond the coupling",
+    "读自延续的选择",
+    "Becoming.act_courses_unselected_throughout",
+    "Becoming.significance_courses_unselected",
+    "Becoming.Web.ReadOffContinuations"
+  ],
+  "dependencies": [
+    {
+      "id": "what-pooled-coupling-reaches",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the pool form of the gap with both acts laws (act_courses_unselected_pool) and Clearing.pool_closes_gap, read over the whole run.",
+        "zh": "复用两举皆为律时隙的池形式（act_courses_unselected_pool）与 Clearing.pool_closes_gap，遍及全程读之。"
+      },
+      "interface": {
+        "output": {
+          "en": "Courses selected alike by every selection through the pooled coupling up to every step.",
+          "zh": "直到每步经池耦合的每个选择都对两条进程选得相同。"
+        },
+        "input": {
+          "en": "Selections read off the couplings over the whole run.",
+          "zh": "遍及全程读自耦合的选择。"
+        },
+        "conditions": {
+          "en": "Laws of what has stood; the rest reading through coupling; feasible courses; acts agreeing on what couples in.",
+          "zh": "读已成者之律；其余经耦合而读；进程可行；两举在耦合入者上一致。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean"
+      }
+    },
+    {
+      "id": "testing-within-couplings",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses Clearing's spared world and that the dweller is ended in the cleared one (Clearing.tested_by_dweller).",
+        "zh": "复用 Clearing 的不清除世界与栖居者在清除世界终结（Clearing.tested_by_dweller）。"
+      },
+      "interface": {
+        "output": {
+          "en": "The two worlds of the witness.",
+          "zh": "见证的两个世界。"
+        },
+        "input": {
+          "en": "The Clearing witness.",
+          "zh": "Clearing 见证。"
+        },
+        "conditions": {
+          "en": "The witness.",
+          "zh": "见证。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean"
+      }
+    },
+    {
+      "id": "selection-through-couplings",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses selections through the couplings up to a step (Web.SelectsThrough, Web.SelectsThroughAll) as cases, their law Web.selects_alike_all_iff, and Diversion's flows, levels and gauge with Diversion.favours.",
+        "zh": "复用直到某步经耦合的选择（Web.SelectsThrough、Web.SelectsThroughAll）作为其例、其律 Web.selects_alike_all_iff，及 Diversion 的流、水平、测量与 Diversion.favours。"
+      },
+      "interface": {
+        "output": {
+          "en": "Selections through the couplings; a selection favouring reaching beyond.",
+          "zh": "经耦合的选择；偏向伸出的选择。"
+        },
+        "input": {
+          "en": "Selections read off the couplings over the whole run.",
+          "zh": "遍及全程读自耦合的选择。"
+        },
+        "conditions": {
+          "en": "Finite horizon in the cases; the witness's flows.",
+          "zh": "其例为有限时域；见证之流。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "derived-extent-limits",
+      "detail": {
+        "en": "Along dependence the center is not derived and the clearer meets every requirement so derived while ending the dweller; here no selection read off the clearer's continuation selects for counting it.",
+        "zh": "沿依存中心不由动力学推出，清除者满足如此推出的每项要求而终结栖居者；此处读自清除者延续的选择不选计入它。"
+      }
+    },
+    {
+      "id": "raising-what-couples-in-draws-from-beyond",
+      "detail": {
+        "en": "Selection favours reaching beyond where it raises what couples in; here, read with counting, the same witness selects against counting what lies beyond.",
+        "zh": "伸出若抬高耦合入者，选择偏向它；此处以计入来读，同一见证选去对区域外的计入。"
+      }
+    },
+    {
+      "id": "the-gap-for-ones-own-act",
+      "detail": {
+        "en": "The finite-horizon law for one actor, of which this is the pooled form over the whole run.",
+        "zh": "单一行为者的有限时域之律，此为其遍及全程的池形式。"
+      }
+    },
+    {
+      "id": "covering-by-the-returning-formations",
+      "detail": {
+        "en": "Every formation lies within the influence closure of a formation whose acts return, on finitely many formations with reach decided; with it, pooled over those formations, nothing lies beyond the coupling closure.",
+        "zh": "有限个形成且所及可判定时，每个形成都在某回返形成的影响闭包之内；以之为池，耦合闭包外无物。"
+      }
+    },
+    {
+      "id": "where-the-blindness-lifts",
+      "detail": {
+        "en": "The converse at the level of histories: what a selection read off a group's couplings separates.",
+        "zh": "历史层面的逆命题：读自一组耦合的选择能分开什么。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ActReadsWithin",
+        "Becoming.Clearing.DwellerKept",
+        "Becoming.Clearing.counting",
+        "Becoming.Clearing.countingLevel",
+        "Becoming.Clearing.counting_dweller_unselected",
+        "Becoming.Diversion.counting",
+        "Becoming.Diversion.countingLevel",
+        "Becoming.Diversion.counting_selected_against",
+        "Becoming.Flow.returning_pool_covers",
+        "Becoming.Flow.returning_pool_covers_either",
+        "Becoming.Web.ReadOffContinuations",
+        "Becoming.Web.ReadOffContinuations.couplings",
+        "Becoming.Web.ReadOffCouplings",
+        "Becoming.Web.ReadOffCouplings.mono",
+        "Becoming.Web.SelectsThrough.readOffCouplings",
+        "Becoming.Web.SelectsThroughAll.readOffCouplings",
+        "Becoming.Web.readOffCouplings_alike_of_steps",
+        "Becoming.Web.readOffCouplings_thresholdOnly_iff",
+        "Becoming.act_courses_unselected_throughout",
+        "Becoming.not_tracks_of_alike",
+        "Becoming.significance_courses_unselected"
+      ],
+      "sha256": "cc9230e4efe09f94ceee055ad69082cbac677adbdb41c9983983839be800739a"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T133249.498674Z/verification.json",
+      "role": "receipt",
+      "sha256": "da8fca250b8e2a684bda8b5a8c3b4b703af1d4003d391a3672e480b2d50f2442"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zb-beyond-coupling/NOTE.md",
+      "role": "integration",
+      "sha256": "46809a27d83066ba9135892e589bc2d79b80b805fa8af6375cfe69f3ed662be0"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zb-beyond-coupling/READER.md",
+      "role": "review",
+      "sha256": "0ece271d4fe79936a20ba9b434bc917fa7474255586bd2c20970cf2632f6d9f5"
+    },
+    {
+      "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "role": "statement",
+      "sha256": "b3a7eec7b1d8a0a9e7299c09f54ff4cbae2697e29e7c05379b07925f94e3e941"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",
+      "role": "provenance",
+      "sha256": "fbcc4332efd9f6c3739111666ccd7e54476fa4a80f1020dfea6aa7428954c1dc"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T133249.498674Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.BeyondCoupling",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "9 November 2026, board item ZB, one of route (b)'s four pieces (with G1, G2 and G3), on Ren's words of that day kept in sources (2026-11-09-route-b-ethics-forms.md): added. The checker of the zero-axiom readings found that Flow.unselected_beyond_coupling compares levels with and without a withheld part and takes no significance, so the impossibility that no selection selects for what lies beyond the coupling needed a new statement; this is it, built on the pool form of the gap for one's own act, with significance as the act's index and the selection read off the continuation over the whole run. A first draft re-instantiated the reach blindness with the rest's response supplied; it was replaced before landing by this form, where the courses come from laws.",
+      "zh": "2026年11月9日，看板项 ZB，路线 (b) 四部分之一（与 G1、G2、G3 并行），依 Ren 当日之言（存于 sources 的 2026-11-09-route-b-ethics-forms.md）：新增。零公理诸读法的核查者指出 Flow.unselected_beyond_coupling 比较扣下某部分与否的水平而不取意义，故「无选择选中耦合之外者」需要新陈述；此即是，建于己举之隙的池形式之上，以意义为举之索引，选择遍及全程读自延续。初稿以给定的其余回应重用所及之盲；落地前改为此形式，进程出于律。"
+    }
+  ]
+}

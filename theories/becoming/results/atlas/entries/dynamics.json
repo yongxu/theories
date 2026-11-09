@@ -5632,7 +5632,9 @@
    "the-gap-for-ones-own-act",
    "what-pooled-coupling-reaches",
    "what-a-pools-acts-respond-to",
-   "where-two-courses-rejoin"
+   "where-two-courses-rejoin",
+   "selection-read-off-continuations",
+   "where-the-blindness-lifts"
   ],
   "declarations": [
    "Becoming.Web.selects_alike_iff",
@@ -5666,7 +5668,12 @@
    "Becoming.Flow.gap_made_up",
    "Becoming.Flow.closes_through_coupling_apart",
    "Becoming.Flow.stays_beyond_response",
-   "Becoming.Replenishing.closes_through"
+   "Becoming.Replenishing.closes_through",
+   "Becoming.act_courses_unselected_throughout",
+   "Becoming.significance_courses_unselected",
+   "Becoming.Diversion.counting_selected_against",
+   "Becoming.Web.readOffCouplings_alike_iff",
+   "Becoming.Clearing.read_not_direction"
   ],
   "base": "World",
   "hypotheses": [
@@ -5717,6 +5724,18 @@
    {
     "record": "where-two-courses-rejoin",
     "index": 2
+   },
+   {
+    "record": "selection-read-off-continuations",
+    "index": 2
+   },
+   {
+    "record": "selection-read-off-continuations",
+    "index": 3
+   },
+   {
+    "record": "selection-read-off-continuations",
+    "index": 4
    }
   ],
   "forbids": null,
@@ -5780,6 +5799,18 @@
      "where-two-courses-rejoin"
     ],
     "source": "theories/becoming/results/records/where-two-courses-rejoin.md#laws--规律"
+   },
+   {
+    "to": null,
+    "law": "Becoming.Web.readOffCouplings_alike_iff",
+    "edge": {
+     "en": "Over the whole run, some selection read off a group's continuations or couplings is turned exactly where a difference changes, at some step, what couples into some member: the loss coupled in, through the dweller's continuation read as a member's or a condition it depends on gauged by a member. Coupling in does not fix the direction (Clearing.read_not_direction)."
+    },
+    "strength": "exact",
+    "records": [
+     "where-the-blindness-lifts"
+    ],
+    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-where-the-blindness-lifts"
    }
   ],
   "transitions": [],

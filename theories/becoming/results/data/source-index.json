@@ -31,6 +31,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/AssurancePlans.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Attraction.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Blanket.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketWeights.lean",
@@ -89,6 +90,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FaultEnvelopes.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Feedback.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Founding.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FreeEnergyCounting.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FreeEnergyGuarantees.lean",
@@ -182,6 +184,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OrderNormal.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OwnClass.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OwnWidening.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Pace.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairChance.lean",
@@ -189,6 +192,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairSelection.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Parting.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PatternPassing.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PlaceTransitionNets.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolCourse.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolResponse.lean",
@@ -2265,6 +2269,21 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean"
       ]
     },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/za-concern-formed/NOTE.md": {
+      "title": "ZA: concern formed within the dynamics",
+      "local_links": [
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+        "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",
+        "theories/becoming/chapters/07-SIGNIFICANCE.md"
+      ]
+    },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zc-own-class/NOTE.md": {
+      "title": "ZC: a center's own class, what the net fixes (route (b), G2 with G5)",
+      "local_links": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zc-own-class/COLD-READ.md",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OwnClass.lean"
+      ]
+    },
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/twenty-first-review/X3-SCIENCES-AND-TEXTS-CROSS-MODEL.md": {
       "title": "Cross-model review X3: how the sciences and the wisdom traditions map onto the theory",
       "local_links": [
@@ -2833,6 +2852,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Attraction.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/AttractionRuns.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BalanceRegions.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Blanket.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketWeights.lean",
@@ -2921,6 +2941,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Feeding.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FinerTraces.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FormedLoops.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Founding.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Fragments.lean",
@@ -3049,6 +3070,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OrderNormal.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OwnClass.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OwnWidening.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Pace.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairChance.lean",
@@ -3059,6 +3081,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Parting.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PatternPassing.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PlaceTransitionNets.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolCourse.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolResponse.lean",
@@ -3231,6 +3254,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Attraction.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BalanceRegions.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Blanket.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketWeights.lean",
@@ -3281,6 +3305,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Feeding.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FinerTraces.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FormedLoops.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Founding.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean",
@@ -3349,6 +3374,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OptimumSeason.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OrderNormal.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OwnClass.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OwnWidening.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairChance.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairFlow.lean",
@@ -3356,6 +3382,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ParityReadings.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Parting.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Persistence.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PremiseWitnesses.lean",
@@ -5920,6 +5947,7 @@
       "title": "Significance, ethics and alignment",
       "local_links": [
         "GLOSSARY.md",
+        "GOALS.md",
         "MAP.md",
         "OPEN-QUESTIONS.md",
         "README.md",
@@ -5941,11 +5969,16 @@
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue4-second-order/DESIGN.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue7-what-keeps-widening/NOTE.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue9-comparing-courses/NOTE.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/za-concern-formed/NOTE.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zc-own-class/NOTE.md",
         "experiments/commons-outrun-generalizing/README.md",
         "experiments/direction-installation/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Boundaries.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarPath.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OwnClass.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PremiseWitnesses.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",

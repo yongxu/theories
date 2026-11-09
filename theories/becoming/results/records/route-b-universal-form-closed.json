@@ -1,0 +1,316 @@
+{
+  "schema_version": 2,
+  "id": "route-b-universal-form-closed",
+  "title": {
+    "en": "Route (b)'s universal form, closed",
+    "zh": "路线 (b) 的普遍形式，闭合"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F07",
+  "reviewed_at_utc": "2026-11-09T13:34:10+00:00",
+  "statement": {
+    "en": "Read as each center's closure under a relation, significance is the continuation condition exactly where every closure is the whole; two distinct centers break it on a relation with no cycle; and where a center's own closure lies within its coupling closure, what lies beyond has none from it.",
+    "zh": "读作各中心在某关系下的闭包时，意义恰在每个闭包皆为整体处是延续条件；在无环关系上两个不同中心使其不成立；沿每个中心之自身闭包在其耦合闭包内时，闭包外者从它无意义。"
+  },
+  "laws": [
+    {
+      "en": "Held de se as each standpoint's center's closure under a relation, the presupposition is the continuation condition exactly where every center's closure is the whole; the three laws of this record are stated together in one theorem.",
+      "zh": "以各立场中心在某关系下的闭包作自指持有时，该预设恰在每个中心闭包皆为整体处是延续条件；本记录三律合于一定理。",
+      "declarations": [
+        "Becoming.routeB_universal_closed"
+      ]
+    },
+    {
+      "en": "On a relation with no cycle, wherever two standpoints have distinct centers, it is not the condition: held de se it is the root's 续无外 at the one of the relation, which on a net with no cycle holds only with one center.",
+      "zh": "在无环关系上，凡两立场中心不同处，它不是延续条件：自指持有即根上在该关系与「一」之下的续无外，而无环之网上续无外只容一个中心。",
+      "declarations": [
+        "Becoming.ownClosure_not_unrestricted_of_acyclic"
+      ]
+    },
+    {
+      "en": "Where a center's own closure lies within its coupling closure, what lies beyond the coupling closure has no significance from its standpoint at any step, and the significance is a rival. So along every relation within coupling in (whatever is related to a formation exchanges with a condition coupled into it), and along affecting at a center whose acts return.",
+      "zh": "中心之自身闭包在其耦合闭包之内时，耦合闭包外者在任何一步从其立场皆无意义，该意义是对手。故沿每个在经耦合入者受影响之内的关系（凡相关者都与耦合入它的条件交换），及沿「影响」于其举回返的中心处皆然。",
+      "declarations": [
+        "Becoming.Flow.ownClosure_rival_of_within",
+        "Becoming.Flow.couplingIn_ownClosure_rival",
+        "Becoming.Flow.reachReturns_ownClosure_rival"
+      ]
+    },
+    {
+      "en": "Witness. In Clearing the dweller exchanges with nothing, so in the clearing flow it lies beyond the clearer's coupling closure for every coupling by level: every relation within coupling in leaves it out and the condition fails. Along affecting the clearer's own closure holds it, so its own closure is not within its coupling closure there.",
+      "zh": "见证。Clearing 中栖居者不与任何东西交换，故在清除之流中无论经水平如何耦合都在清除者耦合闭包之外：每个在耦合入之内的关系都把它排除，条件不成立。沿「影响」清除者的自身闭包含有它，故沿「影响」其自身闭包不在其耦合闭包之内。",
+      "declarations": [
+        "Becoming.Clearing.dweller_beyond_every_coupling",
+        "Becoming.Clearing.couplingIn_leaves_dweller"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Any type of formations and of standpoints; the relation and each standpoint's center supplied, not read off the flow.",
+      "zh": "不加公理。形成与立场为任意类型；关系与各立场之中心为给定，非读自流。"
+    },
+    {
+      "en": "The second law: the relation has no cycle (无环), and two standpoints have distinct centers.",
+      "zh": "第二律：关系无环，且两个立场的中心不同。"
+    },
+    {
+      "en": "The third law: a flow, a web and a coupling by level; the center's own closure lies within its coupling closure (given by a relation within coupling in, or by the center's acts returning along affecting), and something lies beyond it.",
+      "zh": "第三律：一个流、一个网与经水平的耦合；中心之自身闭包在其耦合闭包之内（由在经耦合入者受影响之内的关系，或中心之举沿「影响」回返而得），且有东西在其外。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That the dynamics fix the relation or the centers: both are supplied here.",
+      "zh": "动力学确定关系或中心：此处二者皆为给定。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That the relation an unfolding gives has no cycle: dated occurrences make none, while relations between formations, affecting aggregated over time among them, can close, as under mutual dependence.",
+      "zh": "展开给出的关系无环：带日期的发生不成环，而形成之间的关系可闭合，如相互依存，那里每个闭包可为整体。",
+      "kind": "scope"
+    },
+    {
+      "en": "That significance must be read as an own closure: a free significance is the case of what the dynamics leave open.",
+      "zh": "意义必须读作自身闭包：自由的意义属于动力学留开的情形。",
+      "kind": "scope"
+    },
+    {
+      "en": "Which class a center's own line runs under, or whose future past every present center is reached.",
+      "zh": "中心自身之线在哪一类下延续，或一切现存中心之后的未来由谁所及。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean",
+      "detail": {
+        "en": "Against the reading that significance held as an own closure along a relation within coupling in reaches the whole: in Clearing the dweller exchanges with nothing, lies in the clearing flow beyond the clearer's coupling closure for every coupling by level, and has no significance from the clearer along any such relation, while it lies within the clearer's reach (Clearing.dweller_beyond_every_coupling, Clearing.couplingIn_leaves_dweller).",
+        "zh": "反对这一读法：沿在经耦合入者受影响之内的关系、作为自身闭包持有的意义及于整体。Clearing 中栖居者不与任何东西交换，在清除之流中对一切经水平的耦合皆在清除者耦合闭包之外，沿任何这样的关系从清除者皆无意义，而它在清除者所及之内（Clearing.dweller_beyond_every_coupling、Clearing.couplingIn_leaves_dweller）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "significance-related-not-asserted",
+    "names-provisional",
+    "conditional-not-universal"
+  ],
+  "validation_scope": {
+    "en": "Pure core, axiom report empty; a leaf. Each law is a near-definitional composition of laws already proved; what is new is that they are stated together and that the third law takes the per-center form, every relation within coupling in and affecting at a returning center among its cases, with Clearing's dweller for every coupling by level. Written by an AI; a reader of another model read the statements cold against this record and its home; no human audit.",
+    "zh": "纯核心，公理报告为空；叶模块。各律皆是已证之律的近于定义的组合；新者是合而陈述，及第三律取每个中心之形式，在经耦合入者受影响之内的每个关系与回返中心处的「影响」皆为其例，以 Clearing 的栖居者对一切经水平的耦合成立。AI 所写；另一模型的读者冷读对照；无人类审计。"
+  },
+  "next_delta": {
+    "en": "With the centers a flow gives (G1) in place of supplied centers, and mutual dependence giving the condition along being affected (G3), say on which flows the first law's whole closure is met and on which the second or third law bites.",
+    "zh": "以流所给的中心（G1）代替给定中心，并以相互依存沿受影响给出条件（G3），判哪些流满足第一律的整体闭包，哪些流上第二或第三律起作用。"
+  },
+  "correspondence": {
+    "en": "Reading (the AI's): route (b)'s should, a center's boundary matching what it depends on, reaches the whole only where every center's closure is the whole; these laws are 07's D18 and D19 in theorem form for the own-closure reading. Where the own closure stays within the coupling closure, the dweller of Clearing, whose loss comes back to no one, is out of reach.",
+    "zh": "解读（AI 的）：路线 (b) 的「应当」（中心之边界与其所依存相合）仅在每个中心闭包皆为整体处及于整体；这些律是 07 的 D18、D19 在自身闭包读法下的定理形式。自身闭包在耦合闭包之内时，Clearing 中其失去回不到任何人的栖居者不可及。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean",
+  "aliases": [
+    "route (b)'s universal form closed",
+    "路线 (b) 的普遍形式闭合",
+    "Becoming.routeB_universal_closed",
+    "Becoming.ownClosure_not_unrestricted_of_acyclic",
+    "Becoming.Flow.couplingIn_ownClosure_rival"
+  ],
+  "dependencies": [
+    {
+      "id": "what-the-step-across-standpoints-reaches",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the own-closure content held de se and its law (ownClosure, selfAscribed, ownClosure_unrestricted_iff).",
+        "zh": "复用自指持有的自身闭包内容及其律（ownClosure、selfAscribed、ownClosure_unrestricted_iff）。"
+      },
+      "interface": {
+        "output": {
+          "en": "The condition held de se exactly where every closure is the whole.",
+          "zh": "自指持有的条件恰在每个闭包为整体处成立。"
+        },
+        "input": {
+          "en": "Route (b)'s first law.",
+          "zh": "路线 (b) 第一律。"
+        },
+        "conditions": {
+          "en": "Relation and centers supplied.",
+          "zh": "关系与中心为给定。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean"
+      }
+    },
+    {
+      "id": "the-continuation-condition-on-the-root",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the condition held de se as the root's 续无外 (ownClosure_unrestricted_iff_noOutside) and one center on a net with no cycle («续无外则同一中心»).",
+        "zh": "复用自指持有之条件即根上的续无外（ownClosure_unrestricted_iff_noOutside），及无环之网上只一中心（«续无外则同一中心»）。"
+      },
+      "interface": {
+        "output": {
+          "en": "On a net with no cycle the condition holds only with one center.",
+          "zh": "无环之网上条件只容一个中心。"
+        },
+        "input": {
+          "en": "Route (b)'s second law.",
+          "zh": "路线 (b) 第二律。"
+        },
+        "conditions": {
+          "en": "No cycle; the one of the relation.",
+          "zh": "无环；关系之一。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean"
+      }
+    },
+    {
+      "id": "what-the-dynamics-leave-open",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses a rival as a point lacking significance (Rival, rival_iff_lacks).",
+        "zh": "复用对手即缺意义之点（Rival、rival_iff_lacks）。"
+      },
+      "interface": {
+        "output": {
+          "en": "A rival.",
+          "zh": "对手。"
+        },
+        "input": {
+          "en": "Route (b)'s third law.",
+          "zh": "路线 (b) 第三律。"
+        },
+        "conditions": {
+          "en": "None.",
+          "zh": "无。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean"
+      }
+    },
+    {
+      "id": "testing-within-couplings",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the coupling closure and being affected through what couples in (Flow.WithinCoupling, Flow.CoupledFrom).",
+        "zh": "复用耦合闭包与经耦合入者受影响（Flow.WithinCoupling、Flow.CoupledFrom）。"
+      },
+      "interface": {
+        "output": {
+          "en": "The coupling closure.",
+          "zh": "耦合闭包。"
+        },
+        "input": {
+          "en": "Relations within coupling in.",
+          "zh": "在经耦合入者受影响之内的关系。"
+        },
+        "conditions": {
+          "en": "A coupling by level supplied.",
+          "zh": "经水平的耦合为给定。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean"
+      }
+    },
+    {
+      "id": "levels-of-closure",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses that the dweller lies within the clearer's reach closure (Clearing.reach_middle).",
+        "zh": "复用栖居者在清除者所及闭包之内（Clearing.reach_middle）。"
+      },
+      "interface": {
+        "output": {
+          "en": "The dweller within reach.",
+          "zh": "栖居者在所及之内。"
+        },
+        "input": {
+          "en": "The witness's contrast along affecting.",
+          "zh": "见证沿「影响」的对照。"
+        },
+        "conditions": {
+          "en": "The witness.",
+          "zh": "见证。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "derived-extent-limits",
+      "detail": {
+        "en": "Along dependence the center is not derived from the dynamics, though along every formed relation it would be; here the same line for every relation that returns.",
+        "zh": "沿依存中心不由动力学推出，沿每个已成之关系则可；此处对每个在经耦合入者受影响之内的关系作同一界线。"
+      }
+    },
+    {
+      "id": "standpoints-read-off-a-flow",
+      "detail": {
+        "en": "The standpoints read off a flow as the formations whose acts return; the laws here take any supplied center, so they hold there too.",
+        "zh": "立场读自流，即其举回返的形成；此处的律取任何给定中心，故在那里亦成立。"
+      }
+    },
+    {
+      "id": "selection-read-off-continuations",
+      "detail": {
+        "en": "What no selection read off a center's continuation selects, the selection-side form of the same bound.",
+        "zh": "读自中心延续的选择所不选者，同一界限在选择一侧的形式。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Clearing.couplingIn_leaves_dweller",
+        "Becoming.Clearing.dweller_beyond_every_coupling",
+        "Becoming.Flow.couplingIn_ownClosure_rival",
+        "Becoming.Flow.ownClosure_rival_of_within",
+        "Becoming.Flow.reachReturns_ownClosure_rival",
+        "Becoming.ownClosure_not_unrestricted_of_acyclic",
+        "Becoming.routeB_universal_closed"
+      ],
+      "sha256": "cc9230e4efe09f94ceee055ad69082cbac677adbdb41c9983983839be800739a"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T133249.498674Z/verification.json",
+      "role": "receipt",
+      "sha256": "da8fca250b8e2a684bda8b5a8c3b4b703af1d4003d391a3672e480b2d50f2442"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zb-beyond-coupling/NOTE.md",
+      "role": "integration",
+      "sha256": "46809a27d83066ba9135892e589bc2d79b80b805fa8af6375cfe69f3ed662be0"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zb-beyond-coupling/READER.md",
+      "role": "review",
+      "sha256": "0ece271d4fe79936a20ba9b434bc917fa7474255586bd2c20970cf2632f6d9f5"
+    },
+    {
+      "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "role": "statement",
+      "sha256": "b3a7eec7b1d8a0a9e7299c09f54ff4cbae2697e29e7c05379b07925f94e3e941"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",
+      "role": "provenance",
+      "sha256": "fbcc4332efd9f6c3739111666ccd7e54476fa4a80f1020dfea6aa7428954c1dc"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T133249.498674Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.BeyondCoupling",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "9 November 2026, board item ZB, one of route (b)'s four pieces: added. The three laws had stood apart (own-closure, the root's one center, Clearing's center not derived); an AI reading of that day proposed stating them once, and the third is new in its per-center form.",
+      "zh": "2026年11月9日，看板项 ZB，路线 (b) 四部分之一：新增。三律原各自分立（自身闭包、根上一中心、Clearing 的中心不由动力学推出）；当日一份 AI 读法提议合而陈述，第三律之每个中心的形式为新。"
+    }
+  ]
+}

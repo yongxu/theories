@@ -22,7 +22,7 @@
 
 **伦理。** 本论的伦理不断言任何应当；它的排序多依于[两种读法](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order)，二者都不被断言。*延续条件*：从每一个立场看，对任何东西，其延续到未来都被计数。它确定范围，即谁的损失算数，不给任何东西排序。*C*：扩大可形成者（一个进程让什么能够形成）更好，它给出次序。本论的制作者提供一种看法，不是裁断（[论题 T8](theories/becoming/chapters/07-SIGNIFICANCE.md#theses)）。
 
-**现状。** [Lean](MAP.md#check-the-proofs-yourself) 是一个证明检查器，为[已登记的 536 条结果](RESULTS.md)中的 505 条给出回执；回执只表明每条陈述能从它的前提推出，不表明前提成立。一次对照它所知文献的自动化回顾，并不穷尽，发现[核心结果中没有一个是新的数学](theories/becoming/chapters/08-METHOD.md#known-results)。留下来的有三样，没有一样是一项发现：前提账簿，每个前提都被表明在一个模型中成立、在另一个中不成立；作为两种读法分开的范围与次序；同一套词汇，用于守恒、受观察所限的选择，以及机会集的比较。[它的论题](theories/becoming/chapters/08-METHOD.md#theses)接受检验：在指明论题的 36 项检验中（[按论题](TESTS.zh.md#by-thesis)），33 项运行过，都在评分之前冻结，其中 18 项结局为「有通过，有未通过」，4 项通过，4 项未通过，7 项是其他结局；3 项从未运行。这项工作借助 AI 做成；主持它的人读过其中重要的部分，尚无独立的人工审查记录（[审查包](theories/becoming/review/README.zh.md)）。
+**现状。** [Lean](MAP.md#check-the-proofs-yourself) 是一个证明检查器，为[已登记的 545 条结果](RESULTS.md)中的 514 条给出回执；回执只表明每条陈述能从它的前提推出，不表明前提成立。一次对照它所知文献的自动化回顾，并不穷尽，发现[核心结果中没有一个是新的数学](theories/becoming/chapters/08-METHOD.md#known-results)。留下来的有三样，没有一样是一项发现：前提账簿，每个前提都被表明在一个模型中成立、在另一个中不成立；作为两种读法分开的范围与次序；同一套词汇，用于守恒、受观察所限的选择，以及机会集的比较。[它的论题](theories/becoming/chapters/08-METHOD.md#theses)接受检验：在指明论题的 36 项检验中（[按论题](TESTS.zh.md#by-thesis)），33 项运行过，都在评分之前冻结，其中 18 项结局为「有通过，有未通过」，4 项通过，4 项未通过，7 项是其他结局；3 项从未运行。这项工作借助 AI 做成；主持它的人读过其中重要的部分，尚无独立的人工审查记录（[审查包](theories/becoming/review/README.zh.md)）。
 
 ![八章及其彼此记录下的使用](theories/becoming/results/spine.zh.svg)
 
@@ -39,11 +39,11 @@
 | [实例](theories/becoming/USES-EXAMPLES.zh.md) | 每个领域一例或数例，各在其真实的地位上 | 约 52–67 分钟 |
 | [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) | 全论的一小时层，按八章的顺序 | 约 58–75 分钟 |
 | [开篇](theories/becoming/OPENING.zh.md) | 第一人称写下的信念：这件事为什么要紧；AI 译自[英文版](theories/becoming/OPENING.md)，义以英文版为准 | 正文约 22–28 分钟，注释另计 |
-| [八章](theories/becoming/chapters/README.md) | 各章正文，诸结果的所属之处；除第六章外为英文 | 每章约 2–6.5 小时 |
+| [八章](theories/becoming/chapters/README.md) | 各章正文，诸结果的所属之处；除第六章外为英文 | 每章约 2–7.5 小时 |
 | [古文（第六章）](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) | 从古文读出文法，检验它，记下分歧；中文 | 约 125–163 分钟 |
 | [检验](TESTS.zh.md) | 冻结的检验，按论题计数，再按结局排列，未通过者在前，每项一句话（[全表](TESTS.md)为英文） | 约 17–22 分钟 |
 | [对照表](theories/becoming/results/atlas/CROSSWALK.zh.md) | 早先的理论文件夹与各思想领域，读作现行的本论中的什么，附图、计数与各组一览；各组的条目在英文页上 | 约 8–10 分钟 |
-| [理论图](theories/becoming/results/THEORY-GRAPH.md) | 概念、结果、模块、文本与各章之间的连接；英文，其中的各章一览有[中文版](theories/becoming/results/THEORY-GRAPH.zh.md)（约 32–41 分钟） | 约 77–101 分钟 |
+| [理论图](theories/becoming/results/THEORY-GRAPH.md) | 概念、结果、模块、文本与各章之间的连接；英文，其中的各章一览有[中文版](theories/becoming/results/THEORY-GRAPH.zh.md)（约 32–41 分钟） | 约 78–102 分钟 |
 | [怎样长成](theories/LINEAGE.zh.md) | 本论怎样从更早的文字与理论文件夹长成 | 全文约 128–166 分钟；十分钟的部分是“弧线简述”、“简述”中的六个阶段与图及其图例；加上标签与这些线索，约 35–46 分钟 |
 | [术语表](GLOSSARY.zh.md) | 每个词的一义与其所属之处 | 约 22–29 分钟 |
 | [审查包](theories/becoming/review/README.zh.md) | 给审读者的材料与问题；古文、佛学两份与重新归类的编码手册为中文 | 封面约 7–9 分钟 |
