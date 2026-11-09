@@ -18,7 +18,7 @@
   "readme_first_screen": "_process/navigation/README-FIRST-SCREEN.md",
   "readme_lead": "_process/navigation/README-LEAD.md",
   "readme_repository": "_process/navigation/REPOSITORY.md",
-  "readme_featured_note": "Ordered as one argument about AI and human coordination: why a race to be more, or above all others, cannot come to rest; why each counting only its own draw can together end what all depend on, the winner included; what anything that wants to go on must count, and where that stops; why selection and policy through a selector's couplings are blind to what does not couple in, including how far off the break is; why reforming the state without changing the rule is re-absorbed; why what cannot be undone cannot be tested by trial; what closing and opening the future exactly take; and why relations and wholes go on only through joint action and continuing generation. Each is checked in Lean on the pure core, whose source declarations have empty axiom reports; that is a constructive discipline, not an absence of premises, and each holds under the hypotheses its record states. Where a result says that something can happen, a constructed example shows that it can, not how often it does. None is new mathematics: each is near-definitional or a known result in the theory's vocabulary (the commons and overshoot, ranking-function termination, transitive closure, the proxy problem, Price's selection differential, opportunity-set inclusion), and the chapter's [relation to known results](theories/becoming/chapters/THE-THEORY-OF-BECOMING.md#relation-to-known-results) names the closest prior result of each; what the work adds is that they are stated in one model with every premise named. Chosen for significance; the selection is open to revision.",
+  "readme_featured_note": "Ordered as one argument about AI and human coordination: why a race to be more, or above all others, cannot come to rest; why each counting only its own draw can together end what all depend on, the winner included; what anything that wants to go on must count, and where that stops; why selection and policy through a selector's couplings are blind to what does not couple in, including how far off the break is; why reforming the state without changing the rule is re-absorbed; why what cannot be undone cannot be tested by trial; what closing and opening the future exactly take; and why relations and wholes go on only through joint action and continuing generation. Each is checked in Lean on the pure core, whose source declarations have empty axiom reports, and holds under the hypotheses its record states. Where a result says that something can happen, a constructed example shows that it can, not how often it does. Each is near-definitional or a known result restated in the theory's vocabulary (the commons and overshoot, ranking-function termination, transitive closure, the proxy problem, Price's selection differential, opportunity-set inclusion), and [method's known results](theories/becoming/chapters/08-METHOD.md#known-results) name the closest prior result of each; what the work adds is that they are stated in one model with every premise named. Chosen for significance; the selection is open to revision.",
   "readme_featured_results": [],
   "readme_featured_selection": {
     "by": "AI",
@@ -65,7 +65,7 @@
       },
       {
         "path": "theories/becoming/chapters/08-METHOD.md#philosophical-warrant",
-        "label": "Method, philosophical warrant"
+        "label": "Method, philosophical questions"
       },
       {
         "path": "theories/becoming/chapters/08-METHOD.md#logical-commitment",
@@ -222,8 +222,8 @@
     "repository": "yongxu/theories",
     "title": "The Theory of Becoming",
     "title_zh": "生灭变化之论",
-    "description": "One account of how things form, persist, change and end, with Lean-checked models and frozen tests; it asserts no should, and ranks courses only under readings it names, most often the continuation condition (scope) and C, widening what can form is better (order).",
-    "description_zh": "一套解释，讲任何东西怎样在同一个关系性的展开中出现、持续、变化和消逝；附有以 Lean 检验的模型与冻结的检验；它不断言任何应当，只在它所指名的读法之下对进程排序，最常是延续条件（范围）与 C，即扩大可形成者更好（次序）。",
+    "description": "A map of how anything forms, lasts, changes and ends, drawn so that people and AI can see the way together: a map for alignment, of what a selection reaches, what it drains beyond what it reads and how it comes to lock on what it already chose, and a map of wisdom, of what traditions, sciences and philosophies have seen of these dynamics; its laws proved on models and checked in Lean, the tests of its theses frozen before scoring.",
+    "description_zh": "一张地图，画的是任何东西怎样形成、持续、变化和终结，让人与 AI 能一起看见道路：一张为对齐而画的地图，画一个选择能触及什么、在它所读之外耗竭什么、怎样锁定在它已经选中的东西上；也是一张智慧的地图，画各种传统、科学与哲学对这些动态看见了什么；其律在模型上证明，经 Lean 检验；其论题的检验在评分之前冻结。",
     "pages": [
       "README.zh.md",
       "MAP.md",
@@ -390,7 +390,7 @@
         "path": "theories/becoming/ONE-PAGE.md",
         "zh": "theories/becoming/ONE-PAGE.zh.md",
         "label": "One page",
-        "text": "What the account claims, how each claim stands, and what would show it wrong.",
+        "text": "What the account claims, how far each claim has been seen, and what would show it wrong.",
         "group": "Read"
       },
       {
@@ -417,7 +417,7 @@
       {
         "path": "theories/becoming/OPENING.md",
         "label": "The opening",
-        "text": "A first-person conviction, with a note on how far each sentence is proved.",
+        "text": "Why the work is being made, in its author's first person; its notes say how far each sentence has been seen.",
         "time": "{body}, without its notes",
         "group": "Read"
       },

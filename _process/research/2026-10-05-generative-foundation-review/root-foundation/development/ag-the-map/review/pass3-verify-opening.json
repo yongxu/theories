@@ -1,0 +1,118 @@
+{
+ "changed": [
+  "theories/becoming/OPENING.md",
+  "theories/becoming/OPENING.zh.md",
+  "drafts/2026-10-10-opening/README.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass3-verify-opening.json"
+ ],
+ "items": [
+  {
+   "item": "Header: the 374-word ledger became one sentence naming the revised paragraphs and linking the history",
+   "done": true,
+   "how": "Medium problem found and fixed. The sentence names every body paragraph that differs from version 12 (checked paragraph by paragraph against OPENING-V12.md: the nine named paragraphs, the closing line, the English under 生生不息 and the dateline, nothing else). But it dropped what the old ledger and the held finding's replacement both kept: the key line under it, a passage of version 12 revised on 1 and 9 November, and the two lines added since (the pointer to the one page and the uses page, 8 November; the line before the notes, 31 October). The file's own comment says the line 'names each passage revised since version 12, so that no revised sentence passes for his words'. Both languages now end the list with '... the dateline and the line below this one; the line after that and the line before the notes were added since' (zh: '日期一行与本行之下的那一行；再下一行与注释之前的那一行，是此后加上的'). The drafts README's AG paragraph now says the sentence names 'the revised paragraphs and lines'. The old frame does not survive in the new header: it no longer describes each revision by its hedge."
+  },
+  {
+   "item": "The ledger moved to drafts/2026-10-10-opening/README.md, with its Chinese",
+   "done": true,
+   "how": "Verified byte for byte against HEAD in both languages. Its links resolve from the drafts page, which sits at the same depth. Nothing needed fixing."
+  },
+  {
+   "item": "The new list 'The passages revised since version 12' and the 9 November paragraphs in the drafts README",
+   "done": true,
+   "how": "Checked against the sources and the record. Ren's quoted words are verbatim: 'it is just for us as life' (30 October); 'there is just is, \"no should\" beyond the becoming' (8 November, message 2); 'eating is a part of nature' (9 November, message 9); 生生 as the continuation of life (message 5). 'Before dawn' matches WB's commit times (02:55 to 04:42 +0700). DF1b, version 13's A1, C1, D1 and D2, and LN match the earlier paragraphs. Item 11 attributed WB's reading 'a wish, not a description' to Ren's words through its punctuation. That is low; fixed by saying WB made the line a wish. The page names Ren, but it is a history page, not a front."
+  },
+  {
+   "item": "Body restorations to version 12: 'in the model' ('The rest holds'); C's 'the work likewise states and does not assert'; 'I hold that'; 'a thesis about how coordination forms, not a theorem, and untested here'",
+   "done": true,
+   "how": "Each addition only qualified its sentence or hedged it in the third person, so restoring it follows the critic's rule. Each scope still stands in the note on that sentence. [^conditions] keeps 'in the model' and T1 as a claim about actual conditions, with its three passes and four failures and the refused field test as they fell. [^ethics] keeps 'C's reading, not a theorem' and that a valuer's being such a weighting is not shown. [^guardian] now says the thesis is 'untested here', with 08 §12's reason, which 08 §12 states in those terms ('Human readers, coordination among people and trained systems couple into none of them'). No failure is dropped and no Lean claim is widened. The corrections of false statements (World.independent, DF1b, the bound on lasting, D1 and D2, the self law, Weighting.widens_iff_every_positive, Optimum.Shared.room, LN, 'closed off from') are kept. Every change touches his first-person body, so all of them are listed for Ren, as the agent did."
+  },
+  {
+   "item": "Key line: 'how far its sentence has been seen'; pointer line: what each page gives",
+   "done": true,
+   "how": "Correct. The pointer uses the uses page's own self-description ('This page says, field by field, what a reader can do with it today') and the pages' titles, so 'standing' no longer appears as a label."
+  },
+  {
+   "item": "[^axiom]: lead 'how far it has been seen'; the warrant sentence removed",
+   "done": true,
+   "how": "The removal is right: it was the WB tail that the plan names. But the agent relied on [^ethics] to say the warrant once, and [^ethics] said 'a question the work does not pursue'. That is the same frame (07: 'on its method no warrant from outside is sought'). It also differs from the record universal-practical-warrant ('It stays open, and the ethics, life's stance, does not wait on it'), which lists seven items of progress, and from 08 as fixed in this tree ('It stays open, and what the account offers does not wait on it'). Fixed in both languages: '... stays an open [question], and what the work offers does not wait on it'. These are the words of the record and of 08, and 07 holds them too ('what it offers does not wait on one'). The drafts README says so."
+  },
+  {
+   "item": "[^ethics] lead; [^good-evil] 'C's reading'; [^own] tail removed",
+   "done": true,
+   "how": "Correct. Each standing that was removed is kept by the lead or by the sentence ('A reading.', 'C's reading, not a theorem', 'calling them good and evil was a reading'). 'Binds no one' stays once, beside T8."
+  },
+  {
+   "item": "[^alignment]: the lead names the two judgments; three denials became one; T3's standing",
+   "done": true,
+   "how": "Correct. The body says 'a foundation', so 'not shown to be the only foundation' answered nothing the body says. 'No Lean theorem' is covered by the lead's 'the direction is argued under conditions'. The T3 clause matches 05's Standing in nearly the same words, and #t3 resolves. T3's failed first wording and CG1's failed prediction stay in its home, which the note links."
+  },
+  {
+   "item": "[^alignment]: 'In use, the laws let one find ..., an AI reading worked on a language-model judge'; drafts README: 'the laws are used in an audit of a language-model judge'",
+   "done": true,
+   "how": "Medium problem found and fixed: this said more than is there. A reader takes it to mean that an actual judge was audited. The home (USES-EXAMPLES, 'Auditing a language-model judge') applies the laws to a model-as-judge pipeline and states that 'no test designed from the theory on a deployed pipeline has run'. Now: 'an AI reading of proved laws worked through for a pipeline with a language-model judge ([the audit]); no test designed from the theory on a deployed pipeline has run'. The Chinese uses USES-EXAMPLES.zh's own words, and the drafts README is corrected to match. T7's frozen test on one trained judge stays in [^turn]."
+  },
+  {
+   "item": "[^sages]: the crosswalk and 06",
+   "done": true,
+   "how": "Correct. The crosswalk has 28 groups, 12 of them domains of thought (listed). The sayings come from three of them (chinese-classical, buddhist, abrahamic-islamic), with nine others. Its relations include divergence and contrary-reading, and its front says every entry is an AI reading. 06 is written in Chinese. 'Not as proof' is kept."
+  },
+  {
+   "item": "[^reach]: 'Chapter 8 says what the work's own checks reach, and what is open'",
+   "done": true,
+   "how": "Correct. 08 has no list of objections. §12 links one study of objections raised in conversation, and its 'What the checks reach' and its open register are what the new sentence names."
+  },
+  {
+   "item": "OPENING.zh.md mirror",
+   "done": true,
+   "how": "Every change is mirrored, my three fixes included. The navigation line and the AI-translation label are untouched. My additions moved the notes' time to 48–63 minutes by navigation.reading_time, so the page's stated line now reads '一小时三分钟' (was '二分钟'). The body stays 20–26."
+  },
+  {
+   "item": "Rules: names, AI, readers, Ren's words, generated pages, navigation line",
+   "done": true,
+   "how": "Nothing is broken. The front names no person: the header says 'its author', and Ren appears only in the HTML comment and on the history page. Nothing says that no one has read the work. Ren's verbatim words in sources/ are not edited, and the quotes in [^good-evil] and in the list are verbatim. README.md and README.zh.md (generated) are not touched. The Chinese navigation line is kept. No authorship mention of AI was added. The two new 'AI reading' labels in the notes ([^sages], [^alignment]) say how far something has been seen, in the repository's kinds."
+  },
+  {
+   "item": "Checks run",
+   "done": true,
+   "how": "python3 -B -m unittest tools.research.tests.test_links: 5 OK. tools.research.tests.test_chinese_fronts: 25 OK, 1 red. The red is the generated README.zh.md's opening time, which waits on the render, the same red the agent reported. All relative links and anchors in the three files resolve (a script check). No render, gate, lake or full suite was run; the full suite is deferred to the merged tree. pytest is not installed in this Python, so the single files ran under unittest."
+  }
+ ],
+ "left": [
+  {
+   "item": "Body: 'The work's selection laws restate the proxy problem.' (paragraph 'This is a foundation')",
+   "why": "Medium, and the old frame: the sentence measures the work by known results right after the purpose sentence, and it is less exact than its note, which gives the proxy problem's scope and Zhuang and Hadfield-Menell's theorems. It is an AI sentence of 3 November in Ren's first person, and restoring version 12 would bring back 'It shows why alignment is hard, and how hard', which 08 §8 lists as more than the laws show. So it is Ren's to read, as the agent left it. A third option, besides the held replacement: cut the sentence. That is version 12 without its over-claim and adds no new words in his voice; [^alignment] keeps the restatement with its scope."
+  },
+  {
+   "item": "Body: 'though I no longer call it the line between good and evil' (held under-saying finding) and the C clause's fuller rewording",
+   "why": "These change his first-person body beyond restoring version 12, so they wait for Ren with their text, as the agent listed."
+  },
+  {
+   "item": "Body: version 12's own 'which the work states as a condition and does not assert', with [^axiom]'s 'not asserting it'",
+   "why": "The step's non-assertion is said twice, once in the body and once in the note. The body sentence is version 12's, so it is Ren's to read."
+  },
+  {
+   "item": "07 §8's r-universal-practical-warrant still reads 'a question the account does not pursue: on its method no warrant from outside is sought'",
+   "why": "That is not in these files. [^ethics] now follows the record and 08, and 07's owner should say it once in the same way."
+  },
+  {
+   "item": "Times after render",
+   "why": "README's first screen will time the English opening's body at 22–28 minutes (the agent's report said 21–28; my header addition adds a minute), and README.zh.md the Chinese at 20–26. The English notes are 50–66 minutes. READING-BUDGETS' row for the opening's notes ([^alignment] grew by about twenty more words) belongs to the rest agent. A stated time is a guide (Ren, 9 November)."
+  },
+  {
+   "item": "_process/navigation/zh-editions.json",
+   "why": "Run zh_fronts.py --revised theories/becoming/OPENING.zh.md after the English lands, as the agent noted. That file is not mine."
+  },
+  {
+   "item": "The header does not say the revisions are AI-written",
+   "why": "This was the agent's deliberate choice under Ren's 8 November words ('we only need to briefly mention ai'), and the HTML comment and the history list both say it. AGENTS.md asks that AI-written text say so, and these revisions are AI-written in Ren's first person. Whether the header should add two words ('by AI') is his call; it is not changed here."
+  }
+ ],
+ "for_ren": [
+  "Everything the opening agent listed for you still stands: the four restorations of version 12 in your body ('in the model', C's 'likewise states and does not assert', 'I hold that', the thesis clause), the one-sentence header, and the three held body findings not applied.",
+  "The header now also names 'the line below this one' (the key line, revised since version 12) and says that 'the line after that and the line before the notes were added since'. The old ledger said this, and the one-sentence version had dropped it.",
+  "[^ethics]: 'whether a universal warrant exists is a question the work does not pursue' now reads 'whether a universal warrant exists stays an open question, and what the work offers does not wait on it'. These are the words of the record universal-practical-warrant and of 08 as revised here; 07 §8 still says 'does not pursue'.",
+  "[^alignment]: the audit is now said as what it is, 'an AI reading of proved laws worked through for a pipeline with a language-model judge; no test designed from the theory on a deployed pipeline has run'. The earlier wording read as an audit of an actual judge.",
+  "My recommendation on 'The work's selection laws restate the proxy problem.': cut it from your body and leave the restatement, with its exact scope, in [^alignment]. The held finding's replacement would put new AI words in your voice, and restoring version 12 would bring back 'why alignment is hard', which 08 §8 says the laws do not show.",
+  "Whether the header of your first-person text should say that its revisions are AI-written (AGENTS.md) or leave that to the comment and the history (your 8 November words) is your choice. It is left as the agent wrote it."
+ ]
+}

@@ -462,17 +462,18 @@ START_PLAIN = {
     'own-count-misses-joint-excess': (ONE_PAGE, 'Takers each within what a renewal gives can together exceed it; where the renewal depends on what it renews, enough such steps in a row from a low enough level end it and what depends on the condition as much'),
     'one-root-to-its-edge': (ONE_PAGE, 'Of the central results a few are cases of the root, more use its laws in their proofs and most use none'),
 }
-# Each result's standing in its homes' words, the one page's table first, which its record's hypotheses do not carry (closed
-# capture's noise, which its record names only under what it does not show), then where to read on, if anywhere.
+# How far each result has been seen, in its homes' words: the one page's column of that name first (AG review, 9 November
+# 2026: until then "How it stands", printed as "Its standing"), which its record's hypotheses do not carry (closed capture's
+# noise, which its record names only under what it does not show), then where to read on, if anywhere.
 START_STANDING = {
-    'continuation-relative-to-a-class': ([(ONE_PAGE, 'Theorems for every relation and class, so they forbid no relation. That this explains how things go on: argued. That every becoming fits it: open')], None, None),
-    'selection-through-couplings': ([(ONE_PAGE, 'Proved, near-definitional; its force is the premise that a selector selects through just those')], None, None),
-    'what-an-optimum-does-beyond-what-couples-in': ([(ONE_PAGE, 'Proved; a known theorem restated')], None, None),
+    'continuation-relative-to-a-class': ([(ONE_PAGE, 'Proved for every relation and class. That this explains how things go on: argued. That every becoming fits it: open')], None, None),
+    'selection-through-couplings': ([(ONE_PAGE, 'Proved on its model; its force is the premise that a selector selects through just those')], None, None),
+    'what-an-optimum-does-beyond-what-couples-in': ([(ONE_PAGE, 'Proved for any set of outcomes')], None, None),
     'closed-capture': ([(ONE_PAGE, 'Proved for any type, in the model only, without noise'),
                         (MAP_CHAPTER, 'Drawn one member at a time, the critical mass\'s locks are left by drift alone, with no new reader and no change in what is read, at a weight whose bound shrinks across the distance from the mass'),
                         (MAP_CHAPTER, 'for capture through the rule this is a reading')],
                        MAP_CHAPTER + '#which-locks-noise-leaves', 'which locks noise leaves'),
-    'own-count-misses-joint-excess': ([(ONE_PAGE, 'Proved on models; restates the commons')], None, None),
+    'own-count-misses-joint-excess': ([(ONE_PAGE, 'Proved on its model')], None, None),
 }
 
 
@@ -488,7 +489,7 @@ def word_for_word_errors(where, sentences, root=ROOT):
 
 def start_here_errors(records, root=ROOT):
     """A result START_HERE names that is missing or is not a completed scoped result, one without a plain line, and a plain line
-    or standing its source no longer holds."""
+    or a phrase on how far it has been seen that its source no longer holds."""
     by_id = {r['id']: r for r in records}
     errors = ['navigation.START_HERE: ' + i + (' is not a registered result' if i not in by_id else ' is not a completed scoped result')
               for i in START_HERE if i not in by_id or by_id[i]['status'] not in COMPLETED or by_id[i]['kind'] == 'target']
@@ -502,8 +503,8 @@ def sentence_end(text):
 
 
 def start_item(r, path, homes):
-    """One result of the list: its plain line, its record's statement with its one term glossed, its standing in its homes'
-    words where they give one, and its status."""
+    """One result of the list: its plain line, its record's statement with its one term glossed, how far it has been seen
+    in its homes' words where they give it, and its status."""
     home = ' (' + link(homes[r['id']][0] + '#r-' + r['id'], path, 'home section') + ')' if r['id'] in homes else ''
     plain = sentence_end(START_PLAIN[r['id']][1]) + ' ' if r['id'] in START_PLAIN else ''
     statement = registry.en(r.get('statement') or r.get('claim') or {}).replace('缘', '缘 (' + link('GLOSSARY.md#the-root', path, 'condition') + ', *yuán*)', 1)
@@ -512,7 +513,7 @@ def start_item(r, path, homes):
         pairs, target, label = START_STANDING[r['id']]
         said = '; '.join(s if k == 0 else s[0].lower() + s[1:] for k, (_, s) in enumerate(pairs))
         said = said.replace("at a weight whose bound shrinks across the distance from the mass", "at a weight whose bound shrinks across the distance from the mass (" + link(MAP_CHAPTER + '#r-drawn-shaping-drawn-one-at-a-time', path, 'drawn one at a time') + ')', 1)  # 02 cites its model there
-        standing = ' *Its standing:* ' + (f'{said} (' + link(target, path, label) + ').' if target else sentence_end(said))
+        standing = ' *How far it has been seen:* ' + (f'{said} (' + link(target, path, label) + ').' if target else sentence_end(said))
     return '- **' + link(page_of(r), path, registry.en(r['title'])) + f'**{home}. {plain}*Its record:* {statement}{standing}' + f' `{r["status"]}`, {STATUS_TEXT[r["status"]]}.'
 
 
@@ -522,7 +523,7 @@ def start_here_lines(records, path, homes):
     if not chosen:
         return []
     lines = ['## Start here', '', 'Results ' + link(ONE_PAGE, path, 'the one page') + ' leans on, chosen by an AI reader: a way in, not a ranking. '
-             'Each opens with the one page\'s plain line, then its record\'s statement and its standing in its homes\' words, and holds under the hypotheses its record states. '
+             'Each opens with the one page\'s plain line, then its record\'s statement and how far it has been seen, in its homes\' words, and holds under the hypotheses its record states. '
              'Four of them answer, on their models, questions the work asks of any reward, judge, market or vote: what it reaches (selection through the couplings), '
              'what doing best on what it reads drains beyond it where there is room (an optimum beyond what couples in), what takers each within a renewal can '
              'together exceed (joint excess), and when a rule read from its own share locks on what it selected (closed capture). '
@@ -637,13 +638,13 @@ CH07, CH08 = CHAPTERS + '/07-SIGNIFICANCE.md', CHAPTERS + '/08-METHOD.md'
 # OPEN-QUESTIONS opens with these, each in its home's words; a sentence its home no longer holds is an error at render.
 OPEN_LEAD = {
     'premises': (CH07, 'Each ranking result names what it ranks under, the continuation condition for scope and C for order, or the narrower order a self-concern result states.'),
-    'unasserted': (CH07, 'Neither is asserted, and neither is the account\'s own: each is an order or scope some formations hold, and the results say what follows where it is held.'),
+    'not-own': (CH07, 'Neither is the account\'s own: each is an order or scope some formations hold, and the results say what follows where it is held.'),
     'crux': (CH07, 'whether all of one\'s effects are one\'s own, in the sense of whose losses count, argued for and against and not settled.'),
     'crux-laws': (CH07, 'The laws do not answer it.'),
     'crux-standing': (CH07, 'An AI reading throughout: argued, not proved.'),
-    'c-question': (CH08, 'Which formations hold C, which count past their own line (the step of invariance, which fixes scope), and how such orders form, spread, lock and fare; no warrant from outside is sought.'),
+    'c-question': (CH08, 'Which formations hold C, which count past their own line (the step of invariance, which fixes scope), and how such orders form, spread, lock and fare.'),
     'c-definition': (CH08, 'C\'s no-loss extension is widening by definition, so the definition carries no "better"'),
-    'c-open': (CH08, 'how C-like orders form; whether a universal practical warrant exists is kept as a question the account does not pursue (T8)'),
+    'c-open': (CH08, 'which other scopes can count, the step of invariance among them; how C-like orders form; no formal work settles them'),
     'readings': (CH08, 'The readings stand as one account; where two did not fit, the account decided between them'),
 }
 OPEN_KEPT = '_process/OPEN-QUESTIONS-KEPT.md'  # what keeps OPEN-QUESTIONS.md, off the reader's page
@@ -674,7 +675,7 @@ def open_lead_lines(path):
     """The opening of OPEN-QUESTIONS.md: what the ethics leaves most open, in its homes' words."""
     q = lambda key: OPEN_LEAD[key][1]
     return ['## The crux, and how scope and order form', '',
-            f'{q("premises")} {q("unasserted")} (' + link(CH07 + '#scope-and-order', path, 'chapter 7, section 4') + ')', '',
+            f'{q("premises")} {q("not-own")} (' + link(CH07 + '#scope-and-order', path, 'chapter 7, section 4') + ')', '',
             '- **The crux** (' + link(CH07 + '#crux', path, 'chapter 7, section 4.7') + f'; {q("crux-standing")[0].lower() + q("crux-standing")[1:-1]}). "{q("crux")}" "{q("crux-laws")}"',
             f'- **How C and the scope form.** "{q("c-question")}" (' + link(CH08 + '#open-items-ranked', path, 'method, open item 12') + f') "{q("c-definition")}" ('
             + link(CH08 + '#philosophical-warrant', path, 'method, philosophical questions') + f'). Open: "{q("c-open")}" (' + link(CH08 + '#open-items-ranked', path, 'item 12') + ').', '']

@@ -56,6 +56,10 @@ Ren quoted the README's Chinese first paragraph ("What this is"), whose English 
 >
 > 道可道非常道，名可名非常名
 
+### 8 (during the review, told that a test held the uses page's hour's path at its 60-minute bound, so a word added there needed one taken)
+
+> 一小时也不是最重要的，如果做不到，追求完整表达即可
+
 ## What was done (AI-authored)
 
 Claude Fable and GPT astra (via Codex) each read the same whole material read-only, without the session's view; the session wrote its own reading first. The three readings and the brief are in [ag-the-map/readings](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/readings/). They agreed: the file set the direction "defend the standing of each claim" in place of the work's purpose, and contained the words alignment, meta-attractor, wisdom and map zero times. AGENTS.md was replaced by the draft Ren read ([before](../../_process/history/2026-11-09-instructions/AGENTS-before-the-map.md)), with one line added from the earlier text (a limit holds while its reason does). On message 7 its paragraph on saying was rewritten from within the map (principles, truthfulness and this file included, as patterns within it; how far a claim has been seen, not its "standing"), and "What does not bend" became "What we keep", each item with what it keeps in relation. It is the third time Ren asked for this file to be changed in this direction: on 3 November ("dragging the progress and constraining in unnecessary or even wrong ways", [source](2026-11-03-agents-review.md)) and on 8 November ("concise, and follows our latest direction elegantly", [source](2026-11-08-within-becoming-no-should.md)); each AI rewrite kept the defensive frame. The new file's line "This file's direction changes only after he has read the change" answers that.

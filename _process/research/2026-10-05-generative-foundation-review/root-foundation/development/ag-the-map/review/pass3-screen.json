@@ -1,0 +1,113 @@
+{
+ "changed": [
+  "_process/navigation/README-FIRST-SCREEN.md",
+  "_process/navigation/README-ZH.md",
+  "_process/navigation/README-LEAD.md",
+  "_process/research-config.json"
+ ],
+ "items": [
+  {
+   "item": "First screen, What this is: the meta-attractor and the aim",
+   "done": true,
+   "how": "The lock alone was called the meta-attractor; GLOSSARY's sense is closed capture and the folder's is 'winning buys power over the rule that selects', so the sentence now names both the lock and how winning comes to buy power over the rule, 'the loop the work calls the meta-attractor'. The aim had dropped instrumental convergence: it now reads 'out of instrumental convergence and that loop', as GOALS#generative-alignment and AGENTS.md say, with 'want to design' linked to the goal. The wisdom sentence's 'so that understanding any mind can check can be shared' became 'so that people and AI can share an understanding any mind can check, from which coordination can start' (still a purpose, not a claim met)."
+  },
+  {
+   "item": "First screen, Start with: the opening 'in its author's words'",
+   "done": true,
+   "how": "OPENING.md is the author's first person revised in place, its revised passages AI-written and listed under its heading, so 'in its author's words' said more than is there; now 'in its author's first person'. Chinese: 作者以第一人称写在开篇里."
+  },
+  {
+   "item": "First screen, What it is for: the click ranking",
+   "done": true,
+   "how": "The coordinator's 'is one such rule, as a reading' had dropped that actual rankings meeting the model is conjectured. Now 'would be one such rule if actual rankings are so formed, which is conjectured', with the link to T7 (02#t7: 'that actual metrics are so formed conjectured'). The example has no home except this screen, so T7 is its nearest home. Chinese mirrors it and no longer leads with 依一种读法."
+  },
+  {
+   "item": "First screen, Its ethics: T8, 'most often', the readings' how-far",
+   "done": true,
+   "how": "'what it opens and closes' became 07 §8's T8 words: what each course draws on and from what renewal, what ends and what goes on through that ending, and who bears it, with T8 linked. Added a 07 §1 link for 'no should beyond becoming': §1 says none outside the unfolding owns value, on the thesis of one unfolding. '生生, AI within it' became '生生 (the continuation of life, AI within it)'. The phrase 'names the two readings it ranks under' said more than 07 §4, where a result ranks under the condition and C or a narrower self-concern order; it is now 'names what it ranks under, most often two readings'. Their how-far is said once, 'each a hypothesis wherever used' (07 §4.7). 'and ranks nothing' is restored from 07's table. The pins 'fixes scope' and 'gives order' are kept."
+  },
+  {
+   "item": "First screen, How far it has been seen: receipts, premises, 08 §8",
+   "done": true,
+   "how": "The receipts now say what they show: each follows from its stated premises, and anyone can recheck it. 'tested where a test could fail and argued elsewhere' became 'conjectured, and tested where a test could fail', as ONE-PAGE and T1, T3 and T7 have it. 'That the laws explain how things go on is argued' is restored (ONE-PAGE row 1). 'each central law known in some field' said less precisely than 08 §8; it is now 08's 'each central result near-definitional or a known result restated, and names the closest prior result of each'. The coordinator's 'what the account adds is their statement as one map' was not the review's; it is now 08's 'What the review found new' in its own words: 'a new artefact' (the premise ledger), 'a clarified ethics, not a grounded one' (scope and order apart), and one vocabulary 'which it calls a framing'."
+  },
+  {
+   "item": "First screen, the spine caption",
+   "done": true,
+   "how": "The caption now says first what the picture shows, following ONE-PAGE's alt text for spine.svg: the eight chapters and their recorded uses, and T1 to T8 at their homes coloured by test outcome (the SVG carries T1 to T8). 'The eight chapters, on one relational calculus' implied the chapters stand on the grammar, which 08 §7 gives for 11 of 117, so it is now 'Read against one relational calculus'. '1 under a stated hypothesis' became 08 §7's '1 is a root form at one step under a stated hypothesis'. All counts are unchanged."
+  },
+  {
+   "item": "Chinese screen: mirror of every change above, and natural Chinese",
+   "done": true,
+   "how": "Each English change is mirrored: 元吸引子 as lock plus 胜出又怎样换来左右选择规则的力量; 既不落入工具性趋同，也不落入这一回路 with the GOALS link; the T7 conjecture; T8 in ONE-PAGE.zh's words (取自何种更新，什么终结、什么经由那终结继续); 多是两种读法，每一种在被使用之处都是假设; 本身不排任何次序; the 08 §8 verdict and what it found new in its words; the caption. Two phrasings said more than the English and were re-said: '这样…才能为人所共有', which made it a necessary condition, became 好让…; and 'X 是否满足…是论证' became 说…满足这些前提，是猜想，在检验可能失败之处接受检验."
+  },
+  {
+   "item": "Chinese screen: 'no review recorded' said four times (held finding, pattern-in-file)",
+   "done": true,
+   "how": "Removed 尚无经人审查的记录 from the banner, from the 古文 paragraph and from 语言. Kept every AI label (AI 依…写成; 读法都是 AI 的; 各中文版由 AI 译自英文；义以英文版为准). The one statement stays in 看到了多远, as Ren's rule of 8 November has it. The 古文 paragraph now leads with what chapter 6 does (九家 248 段, checked against USES-EXAMPLES.zh and 06 §六), then the names-not-operations line and the AI label, then 相合不是印证 with its example, and B-02 kept."
+  },
+  {
+   "item": "Chinese template comment",
+   "done": true,
+   "how": "现状 renamed to 看到了多远 throughout. The T8 link is no longer listed as Chinese-only. The click ranking is described as the English now has it. It records that the review-record clause is now said once, and that the sentences were checked against their homes on 9 November."
+  },
+  {
+   "item": "README-LEAD.md: held finding (opens on standing, repeats 'argued')",
+   "done": true,
+   "how": "The first sentence 'The account below says what is proved and under which premises; that the theory explains how things go on is its claim, argued from its laws' is cut; the screen says how far the work has been seen. The lead now opens 'The map's laws are checked in Lean', in the screen's word. 'On the core this is a constructive discipline, not an absence of premises' is re-said positively, as ONE-PAGE says it: 'An empty axiom report concerns logic only: each premise is a hypothesis…'. 'The theory is written in four layers' became 'The account is written…', because the list's item 3 links chapter 2 as 'the map'. The comment says what moved. The test pins that remain hold: the Lean package link, and no 'is an account of', 'two premises' or 'fixes scope'."
+  },
+  {
+   "item": "research-config.json site.description and description_zh (the link preview; held finding)",
+   "done": true,
+   "how": "Replaced 'One account … it asserts no should, and ranks courses only under readings it names…' with the screen's words. It now says what the work is first: a map of how anything forms, lasts, changes and ends, drawn so that people and AI can see the way together; a map for alignment (what a selection reaches, drains beyond what it reads, and locks on) and a map of wisdom; laws proved on models and checked in Lean; theses put to tests frozen before scoring. The Chinese mirrors it, and its CJK share passes test_site's check (over 0.5)."
+  },
+  {
+   "item": "research-config.json readme_featured_note (held finding; dormant while readme_featured_results is empty)",
+   "done": true,
+   "how": "Dropped the lead 'None is new mathematics:'. The sentence now reads 'Each is near-definitional or a known result restated in the theory's vocabulary'. Dropped '; that is a constructive discipline, not an absence of premises,' and kept 'holds under the hypotheses its record states'. The dead link chapters/THE-THEORY-OF-BECOMING.md#relation-to-known-results now points to theories/becoming/chapters/08-METHOD.md#known-results. Kept 'what the work adds is that they are stated in one model with every premise named'."
+  },
+  {
+   "item": "Other readme_* keys",
+   "done": true,
+   "how": "Read readme_status, readme_opening, readme_repository, readme_featured_selection and readme_research_goals; none carries the old frame, and none was changed."
+  },
+  {
+   "item": "Checks run",
+   "done": true,
+   "how": "Ran only single test files, with python3 -B -m unittest (pytest is not installed). test_featured_results: 31 tests, 2 fail on pins the checks agent owns (below). test_chinese_fronts: 26 tests, 1 fails because README.zh.md has not been re-rendered; the pinned '由 AI 译自英文版（正文约' is still in the new template text. test_site RepositoryConfigTests: 18 tests, 1 fails on the stale README's one-page time, which is not mine. navigation.first_screen renders the new screen with every field filled and no heading, and the lead check passes. No render, make, gate or lake was run, and the full suite was deferred."
+  }
+ ],
+ "left": [
+  {
+   "item": "Test pins for the checks agent (test_featured_results.py)",
+   "why": "Line 263 pins the screen phrase 'of how anything comes to be', which the coordinator's rewrite removed; a pin like 'A map of how anything forms' would fit. It also pins the lead phrase 'The account below says what is proved', which this pass removed; \"The map's laws are checked in Lean\" would fit. FirstScreenTests line 370 asserts that the token AI occurs exactly once on the screen, and the same for everything above the opening. The screen now has 7 occurrences, because 'people and AI' is the subject of the map (AGENTS.md). Ren's rule of 8 November is about the work's making, so the pin should count that clause instead: 'made with AI' once, no other 'AI-written' or 'AI reading' on the screen, and no person named. The ways-in table above the opening also contains 'people and AI', 'an AI reading' and 'AI readers'. I did not touch tests."
+  },
+  {
+   "item": "research-config.json site.ways_in texts, which render on README's first screen (the Ways in table)",
+   "why": "These keys are outside my listed keys (readme_* and the site description). The One page card reads 'What the account claims, how each claim stands, and what would show it wrong'; 'how each claim stands' is the standing frame. 'What the account says, how far each part has been seen, and what would show it wrong' would fit. The uses card lists 'human development' among the fields, and the held finding on USES leaves that row out of the uses' fields."
+  },
+  {
+   "item": "research-config.json programme label 'Method, philosophical warrant' (held finding, line 68)",
+   "why": "It is not a readme_* key or the site description. The fix is 'Method, philosophical questions', as 08's heading and OPEN_LEAD have it, with the anchor kept."
+  },
+  {
+   "item": "Render",
+   "why": "README.md, README.zh.md and the site are generated from these sources and were not rendered, as this pass instructs. Until the render, the views show the old screen."
+  },
+  {
+   "item": "The screen's restatements depend on homes that other agents are editing now",
+   "why": "The screen restates ONE-PAGE's 'What it is', USES's six fields, OPENING's header, 08 §8's 'What the review found new' and 07's T8 as they stood at 13:20 on 9 November. If the onepage, uses, opening or 08 owners change these, the screen's sentences need re-checking after the merge: 'in its author's first person', 'its uses in six fields', and the review's three quoted items."
+  },
+  {
+   "item": "Two senses of 'map' in README-LEAD",
+   "why": "The lead opens with \"The map's laws\" (the whole account, the screen's word), while its list item 3 links chapter 2 as 'the map'. GLOSSARY marks both senses. Relabelling chapter 2's link to its title ('generation, keeping and degeneration') would remove the collision, but I left the chapter labels as they are."
+  }
+ ],
+ "for_ren": [
+  "The first screen's aim, and its Chinese: 'From it we want to design an alignment that keeps people and AI, selecting together, out of instrumental convergence and that loop', linked to GOALS#generative-alignment. Both GOALS and AGENTS.md name instrumental convergence; the coordinator's draft had dropped it.",
+  "The meta-attractor on the screen now reads 'how it comes to lock on what it already chose, and how winning comes to buy power over the rule that selects, the loop the work calls the meta-attractor'. Chinese: 胜出又怎样换来左右选择规则的力量. Is this the loop you mean on the first screen?",
+  "The review's verdict is kept on the first screen in its own words: 'a clarified ethics, not a grounded one'. It sits in 'How far it has been seen', beside the ethics paragraph's 'There is no should beyond becoming'. Read whether you want it there or only in 08 §8.",
+  "In the ethics paragraph, the readings are said once as 'each a hypothesis wherever used', and results rank under them 'most often'. Your 8 November words say ethics need not be ranking; the screen says only that where a result ranks, it names what it ranks under.",
+  "The site description is the one sentence the world sees in a link preview, in both languages. It now says only what the work is and how far its laws and theses go; the ethics tail is gone from it."
+ ]
+}

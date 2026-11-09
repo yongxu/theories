@@ -205,7 +205,7 @@ class RegisterHeadTests(unittest.TestCase):
         ident = navigation.START_HERE[0]
         page = self.page([result(ident), result('a')])
         self.assertLess(page.index('## Start here'), page.index('## Registered results'))
-        self.assertRegex(page, re.escape(ident + ' does this.') + r' (\*Its standing:\* [^`]+ )?`recorded-checked`, an existing Lean receipt is recorded\.')
+        self.assertRegex(page, re.escape(ident + ' does this.') + r' (\*How far it has been seen:\* [^`]+ )?`recorded-checked`, an existing Lean receipt is recorded\.')
         self.assertIn('not a ranking', page)
         self.assertLess(page.index('Results [the one page](theories/becoming/ONE-PAGE.md) leans on'), page.index('- **'))  # the first screen links one of the six
         self.assertNotIn('the first screen', page.split('## Registered results')[0])
@@ -229,7 +229,7 @@ class RegisterHeadTests(unittest.TestCase):
         ident = 'closed-capture'
         page = self.page([result(ident)]).split('## Registered results')[0]
         item = next(line for line in page.split('\n') if line.startswith('- **'))
-        self.assertIn('*Its standing:* Proved for any type, in the model only, without noise; drawn one member at a time, the critical mass\'s '
+        self.assertIn('*How far it has been seen:* Proved for any type, in the model only, without noise; drawn one member at a time, the critical mass\'s '
                       'locks are left by drift alone, with no new reader and no change in what is read, at a weight whose bound shrinks across '
                       'the distance from the mass ([drawn one at a time](theories/becoming/chapters/02-MAP.md#r-drawn-shaping-drawn-one-at-a-time)); '
                       'for capture through the rule this is a reading', item)
@@ -237,15 +237,17 @@ class RegisterHeadTests(unittest.TestCase):
         self.assertLess(item.index(ident + ' does this.'), item.index('without noise'))
         self.assertLess(item.index('without noise'), item.index('`recorded-checked`'))
 
-    def test_each_start_result_carries_its_standing_in_the_one_pages_words(self):
+    def test_each_start_result_carries_how_far_it_has_been_seen_in_the_one_pages_words(self):
         page = self.page([result(i) for i in navigation.START_HERE]).split('## Registered results')[0]
         items = {i: next(line for line in page.split('\n') if line.startswith('- **') and i + ' does this.' in line) for i in navigation.START_HERE}
-        self.assertIn('*Its standing:* Proved, near-definitional; its force is the premise that a selector selects through just those.', items['selection-through-couplings'])
-        self.assertIn('*Its standing:* Proved; a known theorem restated.', items['what-an-optimum-does-beyond-what-couples-in'])
-        self.assertIn('*Its standing:* Proved on models; restates the commons.', items['own-count-misses-joint-excess'])
-        self.assertIn('That this explains how things go on: argued. That every becoming fits it: open.', items['continuation-relative-to-a-class'])
-        self.assertNotIn('*Its standing:*', items['one-root-to-its-edge'])  # its record carries its standing
-        self.assertIn("its record's statement and its standing in its homes' words", page)
+        # AG, 9 November 2026: the one page's column is "How far it has been seen", and its cells say only that
+        self.assertIn('*How far it has been seen:* Proved on its model; its force is the premise that a selector selects through just those.', items['selection-through-couplings'])
+        self.assertIn('*How far it has been seen:* Proved for any set of outcomes.', items['what-an-optimum-does-beyond-what-couples-in'])
+        self.assertIn('*How far it has been seen:* Proved on its model.', items['own-count-misses-joint-excess'])
+        self.assertIn('*How far it has been seen:* Proved for every relation and class. That this explains how things go on: argued. That every becoming fits it: open.', items['continuation-relative-to-a-class'])
+        self.assertNotIn('*How far it has been seen:*', items['one-root-to-its-edge'])  # its record says it
+        self.assertNotIn('*Its standing:*', page)
+        self.assertIn("its record's statement and how far it has been seen, in its homes' words", page)
 
     def test_the_one_unglossed_term_is_glossed_as_the_glossary_does(self):
         r = result(navigation.START_HERE[0])
@@ -312,12 +314,14 @@ class OpenQuestionsHeadTests(unittest.TestCase):
 
     def test_the_page_opens_with_the_crux_and_the_warrant_in_their_homes_words(self):
         page = self.views()['OPEN-QUESTIONS.md']
-        # WB, 9 November 2026: the heading names how scope and order form; no warrant from outside is sought
+        # WB, 9 November 2026: the heading names how scope and order form; AG, 9 November: the lead quotes 07 and 08 as they now say it
         self.assertLess(page.index('## The crux, and how scope and order form'), page.index('## Open targets'))
         for key in navigation.OPEN_LEAD:
             self.assertIn(navigation.OPEN_LEAD[key][1][1:].rstrip('.'), page)
         self.assertIn('the continuation condition for scope and C for order', page)
-        self.assertIn("Neither is asserted, and neither is the account's own", page)
+        self.assertIn("Neither is the account's own: each is an order or scope some formations hold", page)
+        self.assertNotIn('Neither is asserted', page)
+        self.assertNotIn('no warrant from outside is sought', page)
 
     def test_the_repository_homes_still_say_the_lead(self):
         self.assertEqual(navigation.open_lead_errors(), [])

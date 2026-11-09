@@ -1,0 +1,123 @@
+{
+ "changed": [
+  "theories/becoming/OPENING.md",
+  "theories/becoming/OPENING.zh.md",
+  "drafts/2026-10-10-opening/README.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass3-opening.json"
+ ],
+ "items": [
+  {
+   "item": "(1) \"There is a set\": version 12's \"where one fails, the law says exactly which conclusion goes with it\" became (9 Nov, WB) \"no longer guarantees the conclusions that used it, and constructed worlds show each premise can fail while the others hold\"",
+   "done": true,
+   "how": "Kept. Version 12 was false: a failed premise removes the guarantee, not the conclusion (World.independent)."
+  },
+  {
+   "item": "(1) \"The rest holds\": (a) \"a least amount\" became \"some fixed amount\" (1 Nov); (b) \"forgets something of what it held\" became \"destroys at least some fixed amount of available work\" (1 Nov, DF1b); (c) \"lasting proves the joint draw\" became \"lasting bounds\", run past the spare \"long enough to end it\", \"through such renewals\" (9 Nov); \"in the model\" was added with (c)",
+   "done": true,
+   "how": "(a) to (c) kept: (a) is wording, (b) and (c) correct a misstated law. \"In the model,\" removed: it was a standing label only, and [^conditions] already says \"in the model\" and that as a claim about actual conditions the sentence is T1, with its tests as they fell."
+  },
+  {
+   "item": "(1) \"Apart from the reading\": \"None of this needs an axiom\" became \"Apart from the reading of our physics, none of this uses an axiom of logic … where its real assumptions lie\"; reactions \"read as such nets\" (1 Nov, D1 and D2)",
+   "done": true,
+   "how": "Kept. Version 12 misled: the physics reading uses Lean's standard axioms through Mathlib's reals, and \"as theorems … and so of every reaction\" made a modelling correspondence a theorem."
+  },
+  {
+   "item": "(1) \"Under these conditions\": the self law in its home's words and the absolute self defined by it, in place of \"There is no absolute self\" (3 Nov)",
+   "done": true,
+   "how": "Kept. 08 §8 listed the unscoped sentence among prose saying more than the theorems."
+  },
+  {
+   "item": "(1) \"The law shows\": \"must count\" became \"depends on, and so must count if it is to see its own course\"; \"has significance\" became \"is counted\"; \"and how far\" was added",
+   "done": true,
+   "how": "Kept. The first corrects a dependence read as a requirement (9 Nov). The second follows Ren's words of 8 November. The third is 07 §4.6's path (1 Nov). \"Which the work states as a condition and does not assert\" is version 12's own text, so restoring version 12 keeps it, though the task's list gave it as an example; it is listed for Ren."
+  },
+  {
+   "item": "(1) \"This law, with that one step\": C's gloss, the ethics' scope, the line no longer called good and evil, \"no should beyond the becoming\", eating and ending, \"counts all of it\"",
+   "done": true,
+   "how": "\"The work likewise states and does not assert\" removed, since [^ethics] says C is a reading, not a theorem; version 12's comma before \"and, to order them\" restored. Kept: the proved gloss of C, which corrects version 12's false \"what anyone who counts everything … already holds\" (Weighting.widens_iff_every_positive, finite listing), and \"a second reading\" as its noun. Kept as Ren's own later words: \"for life, as a way of seeing, not as every being's way\" (30 Oct, 8 Nov), the withdrawal of good and evil and \"no should\" (8 Nov), and \"Eating and ending\" (9 Nov, message 9)."
+  },
+  {
+   "item": "(1) \"This is a foundation\": \"restate the proxy problem\" (3 Nov), \"from which a unit can pass into\" (1 Nov), \"no map here is shown to couple into everything … others among them\" (9 Nov), \"I hold that\" (7 Nov), \"a thesis about how coordination forms, not a theorem, and untested here\" (7 Nov)",
+   "done": true,
+   "how": "\"I hold that\" and the thesis clause removed, which restores version 12's two sentences; [^guardian] says the thesis, now with \"untested here\" and 08 §12's reason. The other three kept as corrections: 08 §8 lists \"why alignment is hard\" as more than the laws show; \"shares\" was ambiguous (Optimum.Shared.room); no result shows every map partial."
+  },
+  {
+   "item": "(1) \"This influence is deeply rooted\": \"is a law\" became \"follows from the laws\" (1 Nov, LN); \"owns\" became \"is closed off from\" (9 Nov)",
+   "done": true,
+   "how": "Kept as corrections: 08 §10's two senses of law, and material dependence does not refute ownership."
+  },
+  {
+   "item": "(1) \"We need collaboration\" (\"We need to do good, not evil\" removed), the closing line (\"keep it open for life\"), the English under 生生不息 (\"May life go on, life from life, without ceasing\"), the dateline",
+   "done": true,
+   "how": "Kept: the first three on Ren's words of 8 and 9 November, the dateline as a fact. No other paragraph of the body differs from version 12."
+  },
+  {
+   "item": "(2) The 374-word revision ledger under the heading",
+   "done": true,
+   "how": "Replaced by one sentence (80 words). It links version 12 and names the revised paragraphs by their first words, keeping the 31 October option Ren chose (\"a note at its top names each passage revised since your own last text and links that text\"), and points to a new list. That list is in drafts/2026-10-10-opening/README.md#revised-passages and gives each passage, what changed, when and why. The ledger is moved verbatim, with its Chinese translation, under \"The line under the heading, until 9 November 2026\". Paragraphs for WB's 9 November revisions and for this review were added. The sentence does not say \"AI-written\", since the first screen says once that the work was made with AI (Ren's 8 November rule); the list in the history says it."
+  },
+  {
+   "item": "(3) Held findings: the line pointing to the one page and the uses page (both copies)",
+   "done": true,
+   "how": "Applied in the opening finder's wording, which is the uses page's own: what the claims are and how far each has been seen; what a reader can do today, field by field, and how far that goes."
+  },
+  {
+   "item": "(3) Held findings in the notes: [^guardian] \"untested here\"; [^good-evil] \"C's reading\"; [^own] \"stated and not asserted\" removed; [^alignment]'s lead, its three denials, and T3 with the audit; [^axiom]'s warrant sentence removed; [^ethics]'s lead; [^sages] and the crosswalk",
+   "done": true,
+   "how": "All applied. The facts were checked against 08 §12 (\"coordination among people … couple into none of them\"), 05's T3 standing, the USES-EXAMPLES anchor, and the crosswalk's 28 groups (12 domains: chinese-classical, buddhist and abrahamic-islamic plus nine others). The Chinese versions link CROSSWALK.zh and USES-EXAMPLES.zh."
+  },
+  {
+   "item": "(3) Held body findings beyond version 12: line 27 (\"restate the proxy problem\" → \"say how far a selection reaches and where its drain falls\"), line 25 under-saying (\"between opening and closing; … and right and wrong form within it\"), and line 25 defence's fuller rewording of the C clause",
+   "done": false,
+   "how": "Not applied; listed for Ren. The restoration in (1) already takes out the hedge that the line 25 defence finding names."
+  },
+  {
+   "item": "Also, within the direction: labels of standing in the notes and key line",
+   "done": true,
+   "how": "[^axiom]'s lead \"and where it stands\" (Chinese 及其地位) became \"and how far it has been seen\" (以及对它看到了多远). [^reach]'s \"the objections the work has met and where they stand\" became \"Chapter 8 says what the work's own checks reach, and what is open\", which is what 08 §12 holds; it lists no objections. The key line's \"how far its sentence is proved\" became \"has been seen\", since its kinds include a judgment and a conviction."
+  },
+  {
+   "item": "(4) Mirror in OPENING.zh.md",
+   "done": true,
+   "how": "Every change mirrored: the header sentence, the key and pointer lines, the three body restorations and the notes. The page's AI-translation label is kept, and its stated reading time is now 20–26 minutes for the body and 48–62 for the notes, by navigation.reading_time."
+  },
+  {
+   "item": "Checks run",
+   "done": true,
+   "how": "Relative links in the three files resolve; pass3-opening.json is this file. test_chinese_fronts: 25 pass and 1 red, the opening's time in the generated README.zh.md, which waits on the render. test_site's opening-timing test passes. test_links passes. test_featured_results has 2 reds and test_navigation_pages has 3 reds; all five are from other agents' files (the screen, 07 and ONE-PAGE quotes), not the opening. No render, gate, lake or full suite was run; the full suite is deferred to the merged tree."
+  }
+ ],
+ "left": [
+  {
+   "item": "README.md and README.zh.md (generated) still carry the old opening and its time",
+   "why": "Render is not run here. After render, the first screen times the English body at 21–28 minutes (was 24–31), and README.zh.md times the Chinese at 20–26 (was 22–28). That clears test_chinese_fronts' timing test."
+  },
+  {
+   "item": "_process/navigation/zh-editions.json: OPENING.zh.md's entry",
+   "why": "Not my file. Run python3 -B tools/research/zh_fronts.py --revised theories/becoming/OPENING.zh.md after the English lands, so that the render writes no lagging banner."
+  },
+  {
+   "item": "READING-BUDGETS' row for the opening's notes",
+   "why": "Not my file (the rest agent's). The notes are now 6,502 words (6,424 before). [^alignment] went from 404 to 462, over its three minutes, by T3's tests and the audit; [^sages] from 91 to 137; [^axiom] from 318 to 292. A stated time is a guide (Ren, 9 November)."
+  },
+  {
+   "item": "Body changes beyond restoring version 12",
+   "why": "Each is Ren's to read; they are listed in for_ren with their text."
+  },
+  {
+   "item": "Board line 103 (held finding in the same set)",
+   "why": "It targets _process/BECOMING-WORKBOARD.md, which is not among my files."
+  }
+ ],
+ "for_ren": [
+  "Everything below changes his first-person body (or its header) and is for his read before it lands; each restores version 12's sentence and leaves the note to say how far it has been seen.",
+  "\"The rest holds\": \"So, in the model, whatever has lasted through such renewals has never …\" → \"So whatever has lasted through such renewals has never, with all who draw with it, run past what there was to spare long enough to end it: lasting bounds the joint draw\". Version 12's form, without its label; the 9 November correction (bounds, not proves; long enough to end it) is kept, and [^conditions] says \"in the model\" and T1.",
+  "\"This law, with that one step\": \"…whose losses count and, to order them, a second reading the work likewise states and does not assert, that what keeps…\" → \"…whose losses count, and, to order them, a second reading, that what keeps…\". The proved gloss of C after it, which corrects version 12's \"what anyone who counts everything at stake as worth something already holds\", is kept.",
+  "\"This is a foundation\": \"and I hold that this foundation supplies that too\" → \"and this foundation supplies that too\" (version 12). The opening's own review finding had kept \"I hold that\" as first person; if he prefers it, it goes back without touching the note.",
+  "\"This is a foundation\": \"Coordination needs understanding to be shared first, a thesis about how coordination forms, not a theorem, and untested here; and what anyone can check\" → \"Coordination needs understanding to be shared first, and what anyone can check\" (version 12). [^guardian] now says it is a thesis, not a theorem, untested here, because coordination among people couples into none of the work's checks (08 §12).",
+  "The header: the 374-word ledger is now one sentence: \"Revised in place since version 12, the last text its author chose, kept as written there, in the paragraphs beginning … ; each revised passage, with why, is listed in the opening's history\". It names the paragraphs to keep his 31 October choice. The shorter form the task proposed (\"Revised in place since version 12; each revised passage, and why, is listed in the opening's history\") would name none; that is his choice.",
+  "Not applied, his to decide, with their text: (a) line 27, \"The work's selection laws restate the proxy problem.\" → \"The work's selection laws say how far a selection reaches and where its drain falls.\" (08 §8's own description); (b) line 25, \"and it draws a line exactly, though I no longer call it the line between good and evil: there is no should beyond the becoming.\" → \"and it draws a line exactly, between opening and closing; there is no should beyond the becoming, and right and wrong form within it.\"; (c) line 25, the C clause as \"and a second reading to order them, that what keeps all there was and adds more is better, as on a finite listing every additive weighting counting each thing at stake as worth something ranks it,\".",
+  "Kept, but they read as how-far-seen inside his voice; he may want them otherwise: version 12's own \"which the work states as a condition and does not assert\" (\"The law shows\"; [^axiom] says the same); and two corrections, \"no map here is shown to couple into everything\" and \"The work's selection laws restate the proxy problem\".",
+  "The Chinese edition (an AI translation, labelled) mirrors each of these."
+ ]
+}

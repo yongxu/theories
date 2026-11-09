@@ -38,6 +38,8 @@
 
 ## 地图
 
+*地图*在本论自己的话里有两义。**整幅地图**是这项工作的全体（[总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md)）：首先是一张为对齐而画的地图，看一个选择能触及什么，在它所读之外能耗竭什么，它的规则又怎样能锁定；也是一张智慧的地图，各种传统与科学对这些动态看见了什么，读到本论上（[对照表](theories/becoming/results/atlas/CROSSWALK.zh.md)）。**第二章的地图**（总览中即称“第二章的地图”）是其中诸形成的地图：一个样式在诸分支上何处生成、守或退化，什么使一个形成终结或继续下去（[第二章](theories/becoming/chapters/02-MAP.md#the-map)）。各章说到*地图*时，指的是第二章的地图；下列诸词都是它自己的，“形成”取自第四章。在数学中，文（见下）中的映射，或一个选择*透过*它来读取的映射（[第三章 §1](theories/becoming/chapters/03-KNOWING.md#r-selection-through-a-model-of-the-options)），是一个函数。
+
 | 术语 | 义 | 出处 |
 |---|---|---|
 | 形成（formation） | 在世界模型中，一个关系项可以在其中活跃、依存、取用、取与给的角色；同一关系项也可以作为处于某一水平的缘，为他者所依存、所取用 | [第四章](theories/becoming/chapters/04-LIFE.md#life-as-condition) |
@@ -50,7 +52,7 @@
 | 机（juncture） | 一个损失经过之处 | [第二章](theories/becoming/chapters/02-MAP.md#return) |
 | 环、耦合、所携之量（loop, coupling, carried amount） | 影响的一条闭合路径；一个水平对另一个水平反应的强度；一个差异沿一条路径所携带的东西 | [第二章](theories/becoming/chapters/02-MAP.md#loops) |
 | 第一律（first law） | `Flow.Gainless` 的脊柱之名：一个没有重复的封闭同族，所得回的至多是从它所取走的；在㶲平衡之下，以可用功读出的热力学第二定律给出它（`EntropyProduction.gainless_of_secondLaw`）。热力学第一定律，即能量守恒，总是以全名称之 | [第二章](theories/becoming/chapters/02-MAP.md#how-to-read) |
-| 元吸引子（meta-attractor） | 封闭的捕获：一个选择之环，其规则与其对规则的读取都由它所选择的份额形成，环中没有任何东西读取份额之外者。它从不指语料的工作定义，即一种活动的反复出现的组织，其后果有助于在其具体承载者的变化之中再生产选择这一组织的条件：那是另一义，二者都未被表明包含对方：形式的元吸引子不说及承载者，所以一个捕获之环在某一对类上是否生成，仍属未决 | [第二章](theories/becoming/chapters/02-MAP.md#capture) |
+| 元吸引子（meta-attractor） | 封闭的捕获：一个选择之环，其规则与其对规则的读取都由它所选择的份额形成，环中没有任何东西读取份额之外者。它是语料之元吸引子在其权力叙述中的一部分，该叙述还说及承载者、领域与纠正；语料的二阶，即对选择之控制本身被选择，第二章读作塑造规则之能力的律，连同其条件，并在规则的读者取自其所选者之处、在其所述的条件之下，把二者读作同一个环［AI 读法，D26、D45］。语料的工作定义，即一种活动的反复出现的组织，其后果有助于在其具体承载者的变化之中再生产选择这一组织的条件，是另一义，未被表明包含封闭的捕获，也未被表明为其所包含：形式的元吸引子不说及承载者，所以一个捕获之环在某一对类上是否生成，仍属未决 | [第二章](theories/becoming/chapters/02-MAP.md#capture) |
 | <a id="锁定"></a>锁定（lock） | 一条读自它所提高之份额的规则所处的一种构形：在这一构形中，规则一直偏好它所选中的东西，份额与规则都不低于起点，而它读不到的损失可以越过任何界限；无噪声时，唯有它所读之物的改变（一个在损失超过某界限时便不再偏好的读取，这是一条充分的出路，未表明是唯一的），或律、读法、选择的改变，才让它离开；有噪声时，有些锁定单凭漂移也会离开，并非全部（有的已证明，如逐一抽取的临界量；对经由规则的捕获，是[一种读法](theories/becoming/chapters/02-MAP.md#which-locks-noise-leaves)）。（中文版所加：无明一行所说的“锁定于一个目标”是寻求的锁定，不是这里的构形。） | [第二章 §9](theories/becoming/chapters/02-MAP.md#r-closed-capture) |
 
 ## 认知
@@ -75,15 +77,15 @@
 | 中心（center） | 作为立场的一个形成 | [第七章 §1](theories/becoming/chapters/07-SIGNIFICANCE.md#evaluation) |
 | 标准（standard） | 衡量某物所依据的东西，使它可以被达到或未被达到：对一个水平的要求、一个可接受的行为集、一项任务。一条选择规则、一种编码或从所作的抉择中读出的一个次序，只有在某种读法之下才是一个标准。一个标准被达到，并不说明达到它是否被计数 | [第七章 §1](theories/becoming/chapters/07-SIGNIFICANCE.md#what-forms-and-what-is-supplied) |
 | 扩大（widening） | 在每一步都容纳另一者所容纳的每一个形成，并在某一步多容纳一个 | [第七章 §2](theories/becoming/chapters/07-SIGNIFICANCE.md#order) |
-| 排序、次序（哪一个进程更好）（ranking, order (which course is better)） | 把诸选项比较为更好或更坏，是由比较者所形成的一种关系；伦理中担任这一角色的词*次序*指的就是它。动力学没有一条律给出排序：诸律给出的是诸进程在所容纳者上如何不同，一个扩大另一个，二者保持相同，或者混合，这不需前提（[第七章 §2](theories/becoming/chapters/07-SIGNIFICANCE.md#order)）；扩大是单向且传递的（数学意义上的严格偏序），说的是哪一个容纳更多，不是哪一个更好。本论只在一个结果所指名的读法之下排序，C 或别一种次序，凡用之处都是假设。C 的排序只读一个进程是否保有另一个的全部主张并增加一个活的主张，不判定任何混合的比较；判定混合比较的权重、等级或优先，是[一个进一步的前提](theories/becoming/chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-positive-weighting-ranks)。不求外来之根据。一个形成所持有的排序，是在展开之中形成的（[第七章 §1](theories/becoming/chapters/07-SIGNIFICANCE.md#what-forms-and-what-is-supplied)）：它的行为只在[第三章 §11](theories/becoming/chapters/03-KNOWING.md#r-what-choices-show-of-an-order)所说的范围内显示它；据之而行，它就[选择](theories/becoming/chapters/03-KNOWING.md#selection)，所以接下来形成什么可以依赖于它；而从它所提高的份额读出时，它可以[锁定](theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule) | [第七章 §4](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order) |
-| 延续条件（the continuation condition）`Unrestricted` | 从每一个立场看，对任何东西，其延续到未来都被计数；一种读法，陈述而不断言；它确定范围 | [第七章 §3](theories/becoming/chapters/07-SIGNIFICANCE.md#condition) |
+| 排序、次序（哪一个进程更好）（ranking, order (which course is better)） | 把诸选项比较为更好或更坏，是由比较者所形成的一种关系；伦理中担任这一角色的词*次序*指的就是它。动力学没有一条律给出排序：诸律给出的是诸进程在所容纳者上如何不同，一个扩大另一个，二者保持相同，或者混合，这不需前提（[第七章 §2](theories/becoming/chapters/07-SIGNIFICANCE.md#order)）；扩大是单向且传递的（数学意义上的严格偏序），说的是哪一个容纳更多，不是哪一个更好。本论只在一个结果所指名的读法之下排序，C 或别一种次序，凡用之处都是假设。C 的排序只读一个进程是否保有另一个的全部主张并增加一个活的主张，不判定任何混合的比较；判定混合比较的权重、等级或优先，是[一个进一步的前提](theories/becoming/chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-positive-weighting-ranks)。一个形成所持有的排序，是在展开之中形成的（[第七章 §1](theories/becoming/chapters/07-SIGNIFICANCE.md#what-forms-and-what-is-supplied)）：它的行为只在[第三章 §11](theories/becoming/chapters/03-KNOWING.md#r-what-choices-show-of-an-order)所说的范围内显示它；据之而行，它就[选择](theories/becoming/chapters/03-KNOWING.md#selection)，所以接下来形成什么可以依赖于它；而从它所提高的份额读出时，它可以[锁定](theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule) | [第七章 §4](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order) |
+| 延续条件（the continuation condition）`Unrestricted` | 从每一个立场看，对任何东西，其延续到未来都被计数；一种读法，凡结果用到它之处都是假设；它确定范围 | [第七章 §3](theories/becoming/chapters/07-SIGNIFICANCE.md#condition) |
 | 自闭包读法、全闭包条件（the own-closure reading, the whole-closure condition） | 把“被计数”读作位于一个中心沿一个关系与之一同继续的东西之内；延续条件在这一读法之下所成为的：每一个中心沿该关系的闭包都是整体。这是一个关于关系的陈述，有的网满足它，有的网不满足，而不是意义保持自由时的那个前提 | [第七章 §4.5](theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-continuation-condition-on-the-root) |
-| C | 扩大之比较：扩大可形成者更好；一种读法，不被断言，给出次序：凡对诸进程排序者，皆持它或别一种次序（单凭自我关切，无需 C 便排定一种情形） | [第七章 §4](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order) |
+| C | 扩大之比较：扩大可形成者更好；一种给出次序的读法，凡用之处都是假设：凡对诸进程排序者，皆持它或别一种次序（单凭自我关切，无需 C 便排定一种情形） | [第七章 §4](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order) |
 | 延续之条件、凡续皆有顾（第六章之名；中文版专有） | 第六章称延续条件为延续之条件，它在 §7.3 所述的中华本以古名称之为凡续皆有顾；义即延续条件（见上），只有一义 | [第六章](theories/becoming/chapters/06-CLASSICAL-TEXTS.md#thesis)、[§7.3](theories/becoming/chapters/06-CLASSICAL-TEXTS.md#zhonghua) |
 | 以广为愈（第六章之名；中文版专有） | 第六章与中华本称 C（扩大可形成者更好）为以广为愈；义即 C（见上），只有一义 | [第六章](theories/becoming/chapters/06-CLASSICAL-TEXTS.md#thesis)、[§7.3](theories/becoming/chapters/06-CLASSICAL-TEXTS.md#zhonghua) |
 | 不变之步（the step of invariance） | 延续条件在自我之预设以外的内容 | [第七章 §4](theories/becoming/chapters/07-SIGNIFICANCE.md#step) |
 | 存活之意义（living significance） | 该条件所给出的：活着延续者之意义，每一个活的主张从每一个立场都被计数 | [第七章 §3](theories/becoming/chapters/07-SIGNIFICANCE.md#living-significance) |
-| 生生（*shēngshēng*） | 生命之延续，生命广于生物学之义，人工智能亦在其中，其外延未定［AI 读法，D1］。T8 陈述本论的制作者为生命所提供者：一种看法，看每一进程取用什么、取自何种更新、在何种粒度上，什么终结、什么继续，由谁承担；它不约束任何人。它既不是文法的 `«生生»`（无尽的复生），也不是第二章的生成本身（生成容许损失），也不是任何新的组织；生生不息是一个愿，不是一条律。读作扩大时，在一个进程的诸时刻上、在判定的前提之下，保持扩大是可能者的生成，且不失去其中任何一个［AI 读法，D45］；扩大不是生生的尺度 | [第七章 §2](theories/becoming/chapters/07-SIGNIFICANCE.md#order)，[第七章 §8](theories/becoming/chapters/07-SIGNIFICANCE.md#theses) |
+| 生生（*shēngshēng*） | 生命之延续，生命广于生物学之义，人工智能亦在其中，其外延未定［AI 读法，D1］。T8 陈述本论的制作者为生命所提供者：一种看法，看每一进程取用什么、取自何种更新、在何种粒度上，什么终结、什么继续，由谁承担。它既不是文法的 `«生生»`（无尽的复生），也不是第二章的生成本身（生成容许损失），也不是任何新的组织；生生不息是一个愿，不是一条律。读作扩大时，在一个进程的诸时刻上、在判定的前提之下，保持扩大是可能者的生成，且不失去其中任何一个［AI 读法，D45］；扩大不是生生的尺度 | [第七章 §2](theories/becoming/chapters/07-SIGNIFICANCE.md#order)，[第七章 §8](theories/becoming/chapters/07-SIGNIFICANCE.md#theses) |
 
 ## 方法
 

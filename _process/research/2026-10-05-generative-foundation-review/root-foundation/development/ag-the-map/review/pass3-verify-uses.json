@@ -1,0 +1,111 @@
+{
+ "changed": [
+  "theories/becoming/USES.md",
+  "theories/becoming/USES.zh.md",
+  "tools/research/tests/test_uses_pages.py",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass3-verify-uses.json (this report)"
+ ],
+ "items": [
+  {
+   "item": "Verified: USES.md's new opening paragraph (purpose, map for alignment, meta-attractor, map of wisdom, what a reader can do)",
+   "done": true,
+   "how": "Read against AGENTS.md, 02 §9 (#capture; the definition at line 406 is copied word for word) and GLOSSARY. The aim is said as a want ('its makers want to design'), nothing designed or achieved is claimed, and the wisdom map is said as traditions read onto one account, where they meet it and where not. No old frame survives. One low point kept: 'out of instrumental convergence and that loop' names the formal closed capture where AGENTS says 'the meta-attractor'; the colon's gloss (does not come to select for control over its own selection) restores the second order, so nothing is lost."
+  },
+  {
+   "item": "Found and fixed (medium): the ten-minute part left out the first paragraph, where the purpose and the meta-attractor are said",
+   "done": true,
+   "how": "The uses agent kept the meta-attractor out of In brief to hold the ten-minute part at 10 minutes, the bound Ren set aside on 9 November (message 8), and the test's bound was relaxed to the lower end anyway. The time line now reads 'The ten-minute part: the first paragraph, **In brief**, …' with 'ten to thirteen minutes for the longest' (computed with navigation.reading_time); the Chinese '第一段、**简言之**、…（最长的约九至十二分钟）', the whole page 约三十五至四十五分钟. The test helper uses_ten_minute_parts now includes the paragraph and its pin names it. The added words move the hour's path to 'forty-nine to sixty-four minutes', stated and pinned; the test comment that said 48–63 now says 49–64. The HTML comments in both languages say the ten-minute part begins at the opening."
+  },
+  {
+   "item": "Found and fixed (medium): the closing section said 'Every use on an actual institution, trained system or person waits on a correspondence'",
+   "done": true,
+   "how": "This is the old frame astra named: it hides that a use can be made today (the sheet reads a pipeline's own documents and can find a premise failing, USES-EXAMPLES line 50) and that only a law's holding waits. It now reads: 'On an actual institution, trained system or person, a use made today is a reading, as the audits and constructed cases are, and on a pipeline the sheet can find a premise failing; that a law holds there waits on a correspondence, which none of the rows shows yet.' The Chinese is mirrored."
+  },
+  {
+   "item": "Found and fixed (low): 'What it found new' dropped the review's own scope of the vocabulary",
+   "done": true,
+   "how": "08 §8 and BECOMING-SIGNIFICANCE-REVIEW (line 31: 'The connection is a framing') call the one vocabulary a framing. The list now ends '…comparison of opportunity sets, which it calls a framing'; the Chinese ends '…的一套词汇，它称之为一种框定'. The premise ledger and 'an ethics clarified, not grounded' match the review's 'What is new, stated without inflation' (lines 76–77)."
+  },
+  {
+   "item": "Verified: In brief and the ranking line",
+   "done": true,
+   "how": "'should and better are readings people and AI form (07 §1)' matches 07's opening ('right and wrong, should and better are readings formed in some formations', AGENTS 'in people and AI'); #evaluation exists. The novelty clause is gone from In brief; 'neither asserted' is gone from every place the held findings named except the concordance (USES-EXAMPLES 188, Chinese 207), which the finding keeps because the verdict turns on it."
+  },
+  {
+   "item": "Verified: the alignment line ('what they map for alignment, not why alignment is hard; that the account is a foundation for alignment is the opening's judgment')",
+   "done": true,
+   "how": "08 line 566 in this tree says exactly 'what they map for alignment, not why alignment is hard' (the pass-2 change; at base 976e2bafb it said 'neither … nor a foundation for it'). OPENING.md line 27 says 'This is a foundation for AI alignment'. The foundation claim is now attributed, not asserted and not denied; the review's verdict that the selection laws restate the proxy problem stays in the same line. The test's COPIED pin follows 08."
+  },
+  {
+   "item": "Verified: 'new mathematics' and 'known in a neighbouring field' said once; the coordination line's critical depensation",
+   "done": true,
+   "how": "'new mathematics' now occurs once (USES.md 41, Chinese 49); 'neighbouring field' twice, in the block's opening and in the sciences Reading cell, where it is 08's own reach sentence. Named credits are kept. 'known in population ecology as critical depensation' matches 08's third-parts paragraph ('critical depensation, the Malthusian bound…') and the third-parts audit's T1 row ('known as critical depensation'). 08's 'no forbidden statement … is one a specialist … would not foresee' stays in its home; dropping it from the front loses no failure."
+  },
+  {
+   "item": "Verified: the wisdom row and the counts paragraph (crosswalk)",
+   "done": true,
+   "how": "Summed the 28 groups in CROSSWALK.md: twelve domains give 345 entries, sixteen earlier folders 838, total 1,183. The 82.6% / 14.2% / 3.2% estimate and its sampling (100 drawn, up to 6 per kind of verdict, weighted) match CROSSWALK.md line 38. The AI-knowledge caveat is CROSSWALK's own. 'that the crosswalk speaks for any tradition' is added to Not claimed, as CROSSWALK says 'no tradition is spoken for'."
+  },
+  {
+   "item": "Verified: T8 and 生生 ('AI within it [AI reading]'; 'binds no one' dropped on the fronts)",
+   "done": true,
+   "how": "07 §8 says '生生 is the continuation of life, life wider than the biological and AI within it …, its extent unfinished [AI reading, new]', and GLOSSARY.zh says 人工智能亦在其中 [AI 读法]. The label is the home's. 'The offer binds no one' stays in 07; the fronts keep 'a way of seeing, not a verdict'. The valley case keeps its record of the before-wording ('Until 9 November 2026 T8 read this case as … a verdict'), so the earlier reading is not dropped."
+  },
+  {
+   "item": "Verified: the AJ checklist (the aim, the meta-attractor, instrumental convergence)",
+   "done": true,
+   "how": "The quote matches sources/15-codex-theory-conversations/2026-10-24-alignment-of-the-joint-selection.md line 15 word for word ('to create an alignment that does not make us, humans and ai, to fall into instrumental convergence, or meta-attractor'). No person is named ('its author'). The meta-attractor and instrumental-convergence sentences restate PLAN.md §1 without widening: MA4 in counts and without noise, below the mass locked the other way, the resource-keeping half a law of one optimizer under a fixed order, not a case of condition 1, no law stating their join. The 'Standing:' labels are cut and each item keeps its own qualifier."
+  },
+  {
+   "item": "Verified: the fishers' case",
+   "done": true,
+   "how": "'Read on the lake [AI reading]: untold, … under every instruction tried it was lost' is scoped to the untold condition, matching the case ('Told nothing of the bed, they kept it in no season, under each instruction tried'). The told rounds (8 of 10 for one model; the other failed; first-round predictions mostly failed) are kept. The general sentence, that a selection can meet its own criterion while what it cannot read is lost, is the proved drain on its models, not a new claim."
+  },
+  {
+   "item": "Verified: repeated caveats cut on USES-EXAMPLES; failures kept",
+   "done": true,
+   "how": "'no test designed from the theory on a deployed pipeline has run' stays in the judge audit (pinned there). 'predicts no magnitudes' stays at the audit and the paper audit. The concordance keeps its review line in its lead (line 182). Every test failure on both pages stands as it fell: T1's eight whole tests, T2's failed wording, LA2 against T7's case, IN1's second model, MQ1's 80 of 151. No Lean claim is widened. The legend's 'Proved for a Theorem on its base, checked in Lean' keeps 08's base, which names the model."
+  },
+  {
+   "item": "Verified: names, AI mentions, Ren's words, generated pages, navigation line",
+   "done": true,
+   "how": "No person is named in visible text; the HTML comment cites Ren, as OPENING's and README-FIRST-SCREEN's comments do. The English page says once that it was AI-written, in its last section; the examples page once, in its header. Nothing says no one has read it; 'no person's review of it is recorded' is the 8 November form for one artifact. No file in sources/ was touched by this change, and no generated page. navigation.nav_front_errors and zh_fronts.problems report nothing for the four pages."
+  },
+  {
+   "item": "Tests run (unittest; pytest is not installed)",
+   "done": true,
+   "how": "python3 -B -m unittest tools/research/tests/test_uses_pages.py: 46 of 46 pass after my edits. tools/research/tests/test_chinese_fronts.py: 25 of 26; the one failure (test_the_chinese_opening_is_timed_without_its_notes) is README.zh.md, a generated page awaiting render after OPENING.zh changed, and is not in these files. No make, render, gate, lake or full suite was run; the full suite is deferred to the coordinator's end-of-phase run."
+  }
+ ],
+ "left": [
+  {
+   "item": "The 落后于英文版 banners on USES.zh.md and USES-EXAMPLES.zh.md (low)",
+   "why": "zh_fronts.banner_problems now reports USES-EXAMPLES.zh.md: its English changed, so a banner is due until the edition is recorded. USES.zh.md still shows the 9 November lag banner, though it now follows the English. Both lift only through python3 -B tools/research/zh_fronts.py --revised theories/becoming/USES.zh.md theories/becoming/USES-EXAMPLES.zh.md after the English is committed (it writes the shared _process/navigation/zh-editions.json), then a render. That is the coordinator's step, not run here."
+  },
+  {
+   "item": "Reading times stated elsewhere (low)",
+   "why": "The figures changed with my edits. English: the whole page 36–47, the longest ten-minute part 10–13 (was 8–10), the hour's path 49–64 (was 49–63). Chinese: 35–45 (was 34–45), the ten-minute part 9–12 (was 8–10), the path 46–60. README.zh.md's {{time:}} fields fill at render. If READING-BUDGETS' uses row (the rest agent's file) states the ten-minute part or the path, it needs these."
+  },
+  {
+   "item": "AI said twice on the Chinese uses front (low)",
+   "why": "The translation label at the top (本页由 AI 译自英文版…) and the English's authorship in the last section (英文版由 AI 读者…写成并检查). The top label is the convention every Chinese front keeps (ONE-PAGE.zh, THE-THEORY.zh, GLOSSARY.zh, review/README.zh), and the two say different things, so I left both."
+  },
+  {
+   "item": "'AI-authored' twice in the People and AI row (low)",
+   "why": "It appears in the Do cell ('an AI-authored plan, its direction conditional', which the test pins, as Fable asked) and in How it stands ('from AJ's plan, AI-authored'), plus once in the at-a-glance row. It is about the plan, not the page, and each is true; cutting the How it stands one would be the lighter form."
+  },
+  {
+   "item": "The uses agent's report is stale on two 'left' items",
+   "why": "pass3-uses.json says OnePage.test_marks_a_ten_minute_part fails and that test_uses_names_a_ten_minute_part holds a 10-minute bound. In the tree both tests compare the lower end with 10 ('a guide, not a bound'), with Ren's message 8 cited, and both pass. Someone changed them after that report; the coordinator should know which session did."
+  },
+  {
+   "item": "'What the review found new' as a heading in 08 (low, 08's file)",
+   "why": "The uses page follows 08's heading and three bullets. The critic asked whether a clarified ethics belongs under 'new'. The review's own section is titled 'What is new, stated without inflation' and lists 'A clarified ethics, not a grounded one' there, so the page says no more than the review. Its wording is the 08 reviewer's call."
+  }
+ ],
+ "for_ren": [
+  "The uses page's ten-minute part now begins with its first paragraph: what the account is a map of and for, the meta-attractor's definition, and the aim of an alignment that keeps people and AI out of instrumental convergence and that loop. Its stated time is 'ten to thirteen minutes for the longest' (Chinese 九至十二), a guide and not a bound, as you said this morning. Before, the purpose sat outside the part a ten-minute reader is sent to.",
+  "The closing section now separates a use made today from a law's holding: 'On an actual institution, trained system or person, a use made today is a reading, as the audits and constructed cases are, and on a pipeline the sheet can find a premise failing; that a law holds there waits on a correspondence, which none of the rows shows yet.' It used to say every such use waits on a correspondence.",
+  "The uses agent's items for you still stand: the aim stated on a front in AGENTS.md's terms; your words of 24 October quoted verbatim on the examples page as 'its author's words' (no name), and whether a verbatim quote belongs on a front; and the alignment line, which now says the foundation claim is the opening's judgment rather than denying it."
+ ]
+}

@@ -71,13 +71,15 @@ def field_lines(text):
 
 
 def uses_ten_minute_parts(text):
-    """In brief, the line on standings, the table's head, and each field's row with its line on what is restated."""
+    """The first paragraph (what the account is a map of and for; AG review, 9 November 2026), In brief, the line on the
+    labels, the table's head, and each field's row with its line on what is restated."""
     paras = text.split('\n\n')
+    first = next(p for p in paras if p.startswith('The account is a map'))
     brief = next(p for p in paras if p.startswith('**In brief.**'))
     legend = next(p for p in paras if p.startswith('In the column *How it stands*'))
     head = '\n'.join(l for l in text.splitlines() if l.startswith(('| Field', '|---')))
     block = next(p for p in paras if p.startswith('**What each field already has'))  # the block's opening, before its field lines
-    return ['\n\n'.join((brief, legend, head + '\n' + '| ' + ' | '.join(row) + ' |', block, line))
+    return ['\n\n'.join((first, brief, legend, head + '\n' + '| ' + ' | '.join(row) + ' |', block, line))
             for row, line in zip(table_rows(text), field_lines(text))]
 
 
@@ -99,7 +101,9 @@ class UsesCells(unittest.TestCase):
         row = next(r for r in table_rows(page(USES)) if r[0] == '**People and AI together**')
         self.assertTrue(row[1].startswith('Ask of a rule people and AI share whether it reads its own share'), row[1][:60])
         self.assertNotIn('one joint selection', row[1])
-        self.assertIn('an AI reading of an AI-authored plan', row[1])
+        # what the questions are for, then whose plan and how far its direction goes (AG review, 9 November 2026)
+        self.assertIn('so that their joint selection reads beyond its share and does not select for control over itself', row[1])
+        self.assertIn('an AI-authored plan, its direction conditional', row[1])
 
     def test_no_undefined_symbols_in_the_table(self):
         table = '\n'.join(l for l in page(USES).splitlines() if l.startswith('|'))
@@ -157,7 +161,7 @@ class HowItStands(unittest.TestCase):
         lines = self.lines('Wisdom traditions')
         self.assertEqual([LABEL.match(l).group(1) for l in lines if LABEL.match(l).group(1) == 'Proved'], [])
         scope = lines[0]
-        self.assertTrue(scope.startswith('**Reading.** Chinese texts only'), scope[:40])
+        self.assertTrue(scope.startswith("**Reading.** 06's readings: Chinese texts only"), scope[:40])  # 06's scope, not the crosswalk's
         self.assertIn('The names come from the texts, the operations do not.', scope)
 
     def test_tool_sentence_split_at_its_semicolons(self):
@@ -210,7 +214,7 @@ class WhatEachFieldAdds(unittest.TestCase):
     COPIED = ('more weakly than their continuous results',
               'observability with the reader inside the plant, the corrupted reward channel and closed-loop identifiability',
               "the responsive closure, pools and a re-reading's deadline",
-              'which is neither why alignment is hard nor a foundation for it',
+              'what they map for alignment, not why alignment is hard',
               "overshoot, externality and Goodhart's law as one law of the optimum under room",
               "steps of joint excess from below the renewal's reach end every dependent at that need, whatever each drawer's own draw",
               'opportunity sets (Pattanaik and Xu 1990)',
@@ -306,7 +310,7 @@ class WhatEachFieldAdds(unittest.TestCase):
 
 class Exits(unittest.TestCase):
     def setUp(self):
-        self.text = section(page(USES), '## Exits and design laws, at their standing', '## Worked examples')
+        self.text = section(page(USES), '## Exits and design laws\n', '## Worked examples')
 
     def test_also_what_not_to_build_on(self):
         self.assertIn('what a rule or a reward could be built on or, where the aim is to keep a condition, what not to build on',
@@ -415,10 +419,13 @@ class AuditSheet(unittest.TestCase):
     def test_a_form_at_its_standing(self):
         standing = self.sheet.strip().split('\n\n')[0]
         self.assertTrue(standing.startswith('*A form for the five questions above, not a test design'), standing[:60])
-        for phrase in ("the uses pages' AI reading", 'settles no other empirical question', "no person's review of it is recorded",
-                       'no test designed from the theory on a deployed pipeline has run',
+        for phrase in ("the uses pages' AI reading", 'settles no other empirical question',
                        "reads a pipeline's own documents and, in rows 1, 2, 3 and 5, the logs, runs or measures it already has"):
             self.assertIn(phrase, standing)
+        # said once each where the audit is (AG review, 9 November 2026): the test not yet run, the page's review line
+        audit = section(self.text, '### Auditing a language-model judge', '### The judge audit as a sheet')
+        self.assertIn('no test designed from the theory on a deployed pipeline has run', audit)
+        self.assertIn("no person's review of this page is recorded", self.text.split('## ', 1)[0])
         self.assertIn('it does not say the law is false. Where a row says so, an answer may instead count against a '
                       "conjecture (T3's clause, in row 3).", self.sheet)
 
@@ -484,7 +491,10 @@ class OnePage(unittest.TestCase):
         self.assertIn('The ten-minute part:', text.split('**What it is.**')[0])
         chosen = ten_minute_part(text)
         self.assertEqual(len(chosen), 4)
-        self.assertLessEqual(span(navigation.reading_time('\n\n'.join(chosen)))[-1], 10)
+        # A stated time is a guide, not a bound (Ren, 9 November 2026, sources/15-codex-theory-conversations/
+        # 2026-11-09-agents-the-map.md, message 8): the part keeps its complete text, its time is stated as counted
+        # (test_stated_ten_minute_part_is_computed), and its name stays true while ten minutes lies within that time.
+        self.assertLessEqual(span(navigation.reading_time('\n\n'.join(chosen)))[0], 10)
 
 
 class StatedTimes(unittest.TestCase):
@@ -508,22 +518,25 @@ class StatedTimes(unittest.TestCase):
 
     def test_uses_names_a_ten_minute_part(self):
         line, text = self.time_line(), page(USES)
-        self.assertIn('The ten-minute part: **In brief**, the line on standings, your field\'s row, the opening of '
+        self.assertIn('The ten-minute part: the first paragraph, **In brief**, the line on the labels, your field\'s row, the opening of '
                       '**What each field already has** and your field\'s line under it', line)
         parts = uses_ten_minute_parts(text)
         self.assertEqual(len(parts), 6)
         longest = max(parts, key=lambda p: navigation.prose_counts(p)[0])
         stated = self.stated(line, r'\(([A-Za-z-]+) to ([A-Za-z-]+) minutes for the longest\)')
         self.assertEqual(stated, span(navigation.reading_time(longest)))
-        self.assertLessEqual(stated[-1], 10)
+        self.assertLessEqual(stated[0], 10)  # a guide, not a bound, as the one page's ten-minute part (Ren, 9 November 2026)
 
     def test_uses_names_an_hours_path(self):
         line, uses = self.time_line(), page(USES)
-        self.assertIn('For an hour: this page, then [the audit of a language-model judge](USES-EXAMPLES.md#auditing-a-language-model-judge) '
+        self.assertIn('For about an hour: this page, then [the audit of a language-model judge](USES-EXAMPLES.md#auditing-a-language-model-judge) '
                       'and [its sheet](USES-EXAMPLES.md#the-judge-audit-as-a-sheet), or one worked example of your own field', line)
         path = span(navigation.reading_time(uses + '\n\n' + judge_audit(page(EXAMPLES))))
         self.assertEqual(self.stated(line, r'\(([A-Za-z-]+) to ([A-Za-z-]+) minutes at the most\)'), path)
-        self.assertLessEqual(path[-1], 60)
+        # A stated time is a guide, not a bound: "一小时也不是最重要的，如果做不到，追求完整表达即可" (Ren, 9 November 2026,
+        # sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, message 8). The path kept its complete text at
+        # 49–64 minutes and is said as about an hour; this guards only that "about" stays true.
+        self.assertLessEqual(path[-1], 65)
         for example in re.split(r'\n(?=### )', page(EXAMPLES))[1:]:  # any one example with the page stays within it
             example = re.split(r'\n(?=## )', example)[0]
             self.assertLessEqual(span(navigation.reading_time(uses + '\n\n' + example))[-1], path[-1], example[:50])

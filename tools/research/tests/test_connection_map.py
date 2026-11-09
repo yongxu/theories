@@ -157,7 +157,9 @@ class PageTests(unittest.TestCase):
 
     def test_it_names_both_readings_where_it_speaks_of_the_ethics(self):
         self.assertIn('the continuation condition for scope and C for order', self.page)
-        self.assertIn('no warrant from outside is sought', self.page)
+        # AG review, 9 November 2026: the two readings said from within, as 07 §4 says them, not against a warrant from outside
+        self.assertIn('Each is an order or scope some formations hold, and neither stands on the edge', self.page)
+        self.assertNotIn('no warrant from outside is sought', self.page)
         self.assertNotIn('derives from the condition', self.page)
 
 
@@ -313,7 +315,9 @@ class SiteTests(unittest.TestCase):
         self.assertIn(f'<p class="lede" id="lede">{html.escape(lede)}</p>', page)  # written in, the same with or without script
         self.assertIn(f'<p class="note small" id="sublede">{html.escape(sub)}</p>', page)
         self.assertIn('<li><b>1</b>carried</li>', page)
-        self.assertTrue(lede.startswith('1 claims from 1 earlier folders and 1 domains of thought'))
+        # what the folders and domains of thought claim, then the count (AG review, 9 November 2026: the map of wisdom first)
+        self.assertTrue(lede.startswith('What 1 earlier theory folders and 1 domains of thought, from Chinese and Buddhist thought to '
+                                        'systems thinking, ecology, economics and AI alignment, claim in their own terms: 1 claims, each read'), lede[:120])
         self.assertEqual(page.count('<h1>'), 1)
         self.assertIn('<a href="crosswalk.html">the crosswalk</a>', noscript)  # the site's page for the crosswalk
         self.assertNotIn('<script', noscript)

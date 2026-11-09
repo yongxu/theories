@@ -107,7 +107,11 @@ class FeaturedResultsTests(unittest.TestCase):
         self.assertIn('[canonical source](theories/second.md)', root)
         self.assertIn('[conditions and evidence](theories/results/records/second.md)', root)
         self.assertNotIn('second 摘要', root)
-        self.assertIn('We investigate how relations form', views['_process/BRIEF.md'])
+        # AG, 9 November 2026: the brief opens with what the work is for, in AGENTS.md's terms
+        self.assertIn('We are drawing a map of how relations form', views['_process/BRIEF.md'])
+        for aim in ('so that humans and AI can check it and see the way together', 'first a map for alignment', 'also a map of wisdom'):
+            self.assertIn(aim, views['_process/BRIEF.md'])
+        self.assertNotIn('universal warrant', views['_process/BRIEF.md'])
         self.assertIn('Canonical entry:', views['_process/BRIEF.md'])
         self.assertNotIn('## What is established', views['_process/BRIEF.md'])
         for path, body in views.items():
@@ -260,7 +264,7 @@ class OpeningTests(unittest.TestCase):
         root = views['README.md']
         self.assertTrue(root.startswith('# The Theory of Becoming\n'))
         self.assertLess(root.index('[Home]'), root.index('> Ongoing work.'))
-        screen, lead = 'of how anything comes to be', 'The account below says what is proved'
+        screen, lead = 'A map of how anything forms', "The map's laws are checked in Lean"
         self.assertLess(root.index('> Ongoing work.'), root.index(screen))
         self.assertLess(root.index(screen), root.index('## Truth exists'))
         # the ways in stand between the screen and the rule above the opening
@@ -354,6 +358,17 @@ class FirstScreenTests(unittest.TestCase):
         self.assertEqual(adapt('[q](../../README.md?x=1#a) [r](../../README.md)', here, 'README.md'), '[q](README.md?x=1#a) [r](README.md)')
         self.assertEqual(adapt('[o](../../README.md#truth-exists)', here, '_process/BRIEF.md'), '[o](../README.md#truth-exists)')
 
+    def assert_making_said_once(self, text):
+        """A front page names no person and says once, briefly, that the work was made with AI, never that no person has
+        read it (Ren, 8 November 2026: sources/15-codex-theory-conversations/2026-11-08-ai-briefly-and-read.md). People and
+        AI are the map's subject (AGENTS.md, 9 November 2026), so the screen may name AI as what the map is for, as many
+        times as it says so; what it says once is the making, and no other label says who wrote, read or reviewed a part."""
+        self.assertNotRegex(text, r'\b(Ren|Claude|Fable|astra|Codex|GPT)\b')
+        self.assertEqual(len(re.findall(r'(?i)\bmade with AI\b', text)), 1)
+        self.assertNotRegex(text, r'(?i)\bAI[- ](written|authored|generated|drafted|readings?|readers?|reviews?|reviewers?|translat\w*)\b'
+                                  r'|\b(written|authored|drafted|generated|translated|read|reviewed|checked|made) (with|by) (an )?AI\b(?<!made with AI)')
+        self.assertNotRegex(text, r'(?i)no human review|no person has (yet )?(read|reviewed)|no human has|nobody|no one has|not (been )?(reviewed|checked) by (a|any) person')
+
     def test_the_repository_first_screen_fills(self):
         # the real first screen: every field filled, no heading (the opening's ends the screen), and nothing of it
         # said again in the lead after the opening
@@ -363,18 +378,13 @@ class FirstScreenTests(unittest.TestCase):
         self.assertNotIn('\n#', '\n' + screen)
         self.assertIn('fixes scope', screen)  # both readings with their roles (WB, 9 November 2026: the account names the readings it ranks under)
         self.assertIn('gives order', screen)  # not 'alone': 07's own theorem has self-concern rank one case with no C
-        # a front page names no person; it says once, briefly, that the work was made with AI, the work and not its making
-        # being the point, and never that no person has read it (Ren, 8 November 2026: sources/15-codex-theory-conversations/
-        # 2026-11-08-ai-briefly-and-read.md)
-        self.assertNotRegex(screen, r'\b(Ren|Claude)\b')
-        self.assertEqual(len(re.findall(r'\bAI\b', screen)), 1)
+        self.assert_making_said_once(screen)
         self.assertIn('The work was made with AI', screen)
-        self.assertNotRegex(screen, r'(?i)no human review|no person has (yet )?(read|reviewed)|no human has|nobody|no one has|not (been )?(reviewed|checked) by (a|any) person')
+        self.assertIn('the person who directs it has read its important parts', screen)
         self.assertIn('no independent human review is recorded', screen)
         # and so does everything above the opening as README renders it: the title, the navigation and status lines
         above = re.sub(r'<!--.*?-->', '', (registry.ROOT / 'README.md').read_text().split('\n## Truth exists\n', 1)[0], flags=re.S)
-        self.assertNotRegex(above, r'\b(Ren|Claude)\b')
-        self.assertEqual(len(re.findall(r'\bAI\b', above)), 1)
+        self.assert_making_said_once(above)
         lead = navigation.markdown_file('readme_lead', 'README.md')
         self.assertNotIn('is an account of', lead)
         self.assertNotIn('two premises', lead)

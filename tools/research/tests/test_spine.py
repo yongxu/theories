@@ -315,16 +315,27 @@ class Drawing(unittest.TestCase):
             self.assertIn(key, text, path)
             self.assertGreater(text.index(key), text.index('](results/spine'), path)  # the picture first, its key under it
             self.assertNotIn(spine.how_to_read(s, lang), text, path)  # the full paragraph is THEORY-GRAPH's
-        for lang, kept in (('en', ('the AI-written records assign, and nothing checks a use against the Lean', 'not as an order of proof',
-                                   'no record may close a cycle among its declared dependencies', 'core modules', 'modules, not results derived', '11 are [derived]',
+        # AG review, 9 November 2026: the key says first what is drawn (the grammar, the ring, the spokes, the theses by outcome),
+        # then what a solid curve counts and who assigns its kind, then the standings; that the chapters are numbered for reading,
+        # not as an order of proof, and that a spoke counts modules stay in the picture's own lines, and the cycle in
+        # THEORY-GRAPH's paragraph (test_a_cycle_among_recorded_uses_is_found)
+        for lang, kept in (('en', ('The grammar is at the centre and the eight chapters on a ring around it', 'core modules',
+                                   'that the AI-written records class as formal-reuse (nothing checks a use against the Lean)',
+                                   "darker where an earlier chapter's results use a later one's",
+                                   'T1 to T8 stand at their homes, coloured by how their tests came out (T8, argued, has none)', '11 are [derived]',
                                    '1 is a root form', '6 are counting laws, below the grammar', '99 stand at a [named distance]', 'each with its reason',
                                    '#the-spine-what-it-shows-and-does-not-show')),
-                           ('zh', ('由 AI 写成的记录指定，没有任何检查核对一次使用是否见于 Lean', '不是证明的次序', '闭合其已声明依赖之环',
-                                   '核心模块', '不是推导而得的结果', '位于文法以下', '各有其理由', '11 项[推导而得]', '1 项为一个根形式', '6 项为计数之律', '99 项处于一个[指明的距离]',
+                           ('zh', ('文法在中央，八章围绕它排成一圈', '核心模块', '由 AI 写成的记录归为 formal-reuse 的次数（没有任何检查核对一次使用是否见于 Lean）',
+                                   '章序在前的一章的结果使用章序在后的一章的结果时较深', 'T1 到 T8 位于其所属之处，按检验结局着色（T8 已论证，无检验）',
+                                   '位于文法以下', '各有其理由', '11 项[推导而得]', '1 项为一个根形式', '6 项为计数之律', '99 项处于一个[指明的距离]',
                                    '#the-spine-what-it-shows-and-does-not-show'))):
             key = spine.picture_key(s, lang)
             for phrase in kept:
                 self.assertIn(phrase, key, lang)
+        for lang, numbering, spoke in (('en', 'not as an order of proof', 'It counts modules, not results derived'),
+                                       ('zh', '不是证明的次序', '它计的是模块，不是推导而得的结果')):
+            self.assertIn(numbering, spine.WORDS[lang]['numbering'], lang)
+            self.assertIn(spoke, spine.WORDS[lang]['spoke'], lang)
         self.assertIn('About a tenth of the 117', spine.how_to_read(s, 'en'))
         self.assertIn('counting laws, below the grammar (6)', spine.how_to_read(s, 'en'))
 
@@ -411,10 +422,12 @@ class Tables(unittest.TestCase):
         g['edges'] = g['edges'][1:]
         self.assertEqual(spine.formal_cycles(g), (3, 4, []))
         paragraph = '\n'.join(spine.circular_paragraph(g, 'en'))
-        self.assertTrue(paragraph.startswith('<a id="do-the-recorded-uses-form-a-cycle"></a>'))  # the caption links here
+        self.assertTrue(paragraph.startswith('<a id="do-the-recorded-uses-form-a-cycle"></a>'))
         self.assertIn('no result reaches itself', paragraph)
         self.assertIn('condition of entry, not a finding', paragraph)
-        self.assertIn('#do-the-recorded-uses-form-a-cycle', spine.how_to_read(spine.spec(), 'en'))
+        lead = '\n'.join(spine.lead(graph(), 'theories/becoming/results/THEORY-GRAPH.md'))  # the same page as how to read it
+        self.assertIn('<a id="do-the-recorded-uses-form-a-cycle"></a>', lead)
+        self.assertIn('condition of entry, not a finding', lead)
         self.assertIn('id="do-the-recorded-uses-form-a-cycle"', '\n'.join(spine.circular_paragraph(g, 'zh')))
 
     def test_a_law_in_english_from_its_docstring(self):

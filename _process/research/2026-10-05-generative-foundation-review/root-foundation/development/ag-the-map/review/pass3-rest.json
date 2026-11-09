@@ -1,0 +1,116 @@
+{
+ "changed": [
+  "theories/becoming/review/README.md",
+  "theories/becoming/review/README.zh.md",
+  "GLOSSARY.zh.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/READING-BUDGETS.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/the-way-now-before.md"
+ ],
+ "items": [
+  {
+   "item": "Review cover (English), line 7: the bold lead 'No independent human review of this theory is recorded yet.'",
+   "done": true,
+   "how": "The first paragraph now opens with what the packet asks (faithful readings, claims at their right strength, what is missing) and that each part is for one field and can be done alone (moved up from the paragraph under the table, so it is said once). Then, unbolded and once: written with AI, the Lean proofs included; proofs checked by machine, the rest by further AI reviews; the person who directs the work has read its important parts, not every word; no independent human review recorded yet. Every fact kept."
+  },
+  {
+   "item": "Review cover (English), 'What the theory is': nothing on what the work is for",
+   "done": true,
+   "how": "First sentence kept; added that it is drawn as a map so people and AI can see the way together: a map for alignment (what a selection reaches, what it drains beyond what it reads, how a rule read from the share it raises can lock, closing into the meta-attractor, linked to 02 §9, where the rule's reading is formed from that share too; its makers want to design an alignment that keeps people and AI, selecting together, out of that loop) and a map of wisdom (traditions, sciences and philosophies read onto one account, where they meet and where not; the crosswalk). The meta-attractor clause and the 'want to design' clause go past the held replacement, in AGENTS.md's and the first screen's terms, said as a want."
+  },
+  {
+   "item": "Review cover (English), line 37: 'a claim put too strongly is restated'",
+   "done": true,
+   "how": "Now 'a claim put too strongly or too weakly is restated'."
+  },
+  {
+   "item": "Review cover (Chinese): the same three findings",
+   "done": true,
+   "how": "Same changes, the Chinese following the English: 本论借助 AI 写成… said once, unbolded, after what the packet asks; the map paragraph uses README-ZH's terms (一张为对齐而画的地图, 一张智慧的地图, 元吸引子这一回路, 本论的制作者想由此设计一种对齐); 说得过强或过弱的主张重新陈述."
+  },
+  {
+   "item": "Review covers' stated times",
+   "done": true,
+   "how": "Restated as counted by README's rule: English nine to twelve minutes (1,187 words, 78 characters), Chinese 八到十分钟. The one page's time, copied as 'sixteen to twenty-one' (it counts 17–22 and is being re-said now), is given as 'about twenty minutes' / 约二十多分钟, a guide that does not need copying again."
+  },
+  {
+   "item": "GLOSSARY.zh.md meta-attractor row ('它从不指语料的工作定义…')",
+   "done": true,
+   "how": "The held replacement applied as given, mirroring English row 45: closed capture as one part of the corpus's meta-attractor in its account of power, the second order read by 02 as the law of the capacity to shape the rule, one loop where the rule's readers are drawn from those it selects [AI 读法，D26、D45]; the working definition another sense, neither shown to contain the other. The tail after it stays."
+  },
+  {
+   "item": "GLOSSARY.zh.md pattern: 不求外来之根据 / 陈述而不断言 / 不被断言 / 它不约束任何人",
+   "done": true,
+   "how": "Following the English as pass 2 left it: the ranking row's 不求外来之根据 cut; the continuation condition is 一种读法，凡结果用到它之处都是假设 ('a hypothesis wherever a result uses it'); C is 一种给出次序的读法，凡用之处都是假设; 生生's 它不约束任何人 cut."
+  },
+  {
+   "item": "GLOSSARY.zh.md: the English's new paragraph on the two senses of map",
+   "done": true,
+   "how": "Mirrored under 地图: 整幅地图 (the work as a whole: for alignment and of wisdom, linking the Chinese overview and crosswalk) and 第二章的地图 (the map of formations; the chapters' 'the map'; a map in 文 is a function). Not in the held findings; the Chinese edition follows its English, which pass 2 changed."
+  },
+  {
+   "item": "WHAT-REMAINS item 6: amendment 1's never-cut list",
+   "done": true,
+   "how": "Added amendment 5 (9 November 2026, AI-written on Ren's words, source and AGENTS.md linked; the AG critic §5 cited for the finding that the list put a standing on every front sentence). Each item stays where the claim it bears on is said, once; a layer that does not state a claim links its home; the two premises are re-said as the readings a ranking rests on, with their roles, where a ranking is said; 'each claim's standing' becomes how far the claim has been seen (proved, tested, argued, a reading, or wanted); what is not claimed is said where a reader would otherwise believe it; a front says first what the work is, what it is for and what a reader can do. Budgets become guides, complete expression first (Ren's message 8 quoted), and a test that holds a time bound follows the text. Amendments 1 to 4 are not deleted or rewritten; 'Adopted, with four amendments.' notes the fifth."
+  },
+  {
+   "item": "READING-BUDGETS: never-cut list and the first screen, one page and USES rows",
+   "done": true,
+   "how": "Never-cut list rewritten to amendment 5, with its old wording and old last line kept in a dated note; it adds amendment 1's two items it lacked (how far a claim has been seen, the axiom report); 'The budget stays' becomes 'The time is a guide'; a 'First on a front' line. First screen and one page rows: a dated lead (AG rewrite, counted when it lands), budget cells marked as guides, and a closing sentence reading their 'amendment 1' excess under amendment 5. New USES row: base counts (4,401 words and 15 characters, 33.9 to 44.1 minutes; Chinese 31 to 40 minutes), the hour's path held at sixty by test_uses_pages.py, and Ren's message 8. The cover row was updated for this change. The header gets a dated line, and the page's own time is restated: it said 'about ten minutes' and counts 57 to 74, 45 to 59 of them the rows. 'Adopted' names the fifth amendment."
+  },
+  {
+   "item": "Copy of the board's 'The way now' before it is replaced",
+   "done": true,
+   "how": "Written to ag-the-map/the-way-now-before.md under the heading asked for, with an AI-written dated note. The text (board lines 31 to 36: the paragraph, its three items and the 'Behind these in the queue' paragraph) is byte-identical to the board on main at 9a2b39984 and in the worktree. It is kept in a fenced block because its links are relative to _process/ and would fail the link check from that folder. The board was not edited."
+  },
+  {
+   "item": "Checks run",
+   "done": true,
+   "how": "Link check (moves.check_links) on the six files: 258 links, 0 broken. Single test files: test_chinese_fronts has 1 failure (test_the_chinese_opening_is_timed_without_its_notes, from README-ZH and OPENING.zh, other agents' files in flux). test_navigation_pages has 3 failures: OPEN_LEAD quotes in 07 and 08, and a START_HERE quote in ONE-PAGE.md. test_review_packet has 1 failure: nine dossier quotations of 03, 07 and 08, already known from critic §3; none is in the cover. None comes from my files. No make, render, gate or lake run; the full suite was deliberately deferred."
+  }
+ ],
+ "left": [
+  {
+   "item": "WHAT-REMAINS release gate, 'What does not hold a release': '- the warrant of the two premises, which the account names and does not assert.'",
+   "why": "Outside item 6, so outside my brief. process.json has a verified replacement for it, dated, with the old words kept."
+  },
+  {
+   "item": "_process/navigation/zh-editions.json for GLOSSARY.zh.md and theories/becoming/review/README.zh.md",
+   "why": "Not my file, and only the command writes it: after the English files are final, run python3 -B tools/research/zh_fronts.py --revised GLOSSARY.zh.md theories/becoming/review/README.zh.md. Otherwise the render puts a 'lagging' banner on both. GLOSSARY.zh already lagged its English from pass 2."
+  },
+  {
+   "item": "results/atlas/entries/correspondences.json, entry cx-memories-acceptance-is-human, target anchor theories/becoming/review/README.md",
+   "why": "Its 'says' quotes the cover's old first two sentences ('No independent human review of this theory is recorded yet. It was written with AI…'). Not my file. Re-say it from the new cover's sentence. No checker fails on it, but it now quotes text the cover no longer has."
+  },
+  {
+   "item": "地位 in GLOSSARY.zh.md as the rendering of 08 §2's defined term 'standing' (rows 论题, 根之边, 推导而得, 指明的距离, 地位)",
+   "why": "Kept because it is the shared Chinese term across the zh fronts, zh_fronts.py's TESTS.zh line and LINEAGE.zh, and the English glossary keeps 'standing' as 08 §2's term for kinds of claim. A re-rendering (for example 主张之类) should go across every Chinese page and the generator at once, after deciding the English term in 08 §2."
+  },
+  {
+   "item": "New counts for the first screen, the one page and USES in READING-BUDGETS",
+   "why": "Those pages are being re-said now by other agents. Their rows give the base counts and say they are counted when the rewrite lands (amendment 3: counts are read, not copied)."
+  },
+  {
+   "item": "READING-BUDGETS rows for the overview, dossier fronts and the opening's notes",
+   "why": "Their ledgers still name amendment 1's items as history, and their budget cells are not marked as guides. Amendment 5 and the rewritten list cover them, but I did not re-say each row, which my brief did not name."
+  },
+  {
+   "item": "WHAT-REMAINS amendment 1's own lines (388-389) and process.json's two in-place replacements",
+   "why": "Not rewritten in place. Amendment 1 is a dated, adopted decision, and the brief said not to delete it. Amendment 5 says how it is read from now on and carries the re-said items."
+  },
+  {
+   "item": "Ren's message 8, cited as 'message 8' in amendment 5 and READING-BUDGETS",
+   "why": "It sits in the worktree's uncommitted edit to sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md (not mine). The citation holds only if that edit lands with these files."
+  },
+  {
+   "item": "Red tests seen in single-file runs (test_chinese_fronts 1, test_navigation_pages 3, test_review_packet 1)",
+   "why": "None is from my files: README-ZH and OPENING.zh, the OPEN_LEAD and START_HERE quotes in 07, 08 and ONE-PAGE, and dossier quotations of 03, 07 and 08 (critic §3). The owners of those files or the coordinator fix them."
+  }
+ ],
+ "for_ren": [
+  "WHAT-REMAINS item 6, amendment 5 (9 November 2026), the release gate's rule: never-cut items (deciding hypothesis, the readings a ranking rests on with their roles, a failure as it fell, a frozen rule's caveat, post hoc and AI labels, how far a claim has been seen, what an empty axiom report shows) are kept where their claim is said, once, and a front does not carry each. What is not claimed is said where a reader would otherwise believe it. Reading budgets are guides, not bounds, complete expression first (your message 8 quoted), and a test that holds a time bound follows the text. File: _process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md, end of item 6's amendments.",
+  "READING-BUDGETS' never-cut list rewritten to match: 'The budget stays' becomes 'The time is a guide', and a new line 'First on a front: what the work is, what it is for and what a reader can do with it; how far each part has been seen, once, where that part is said'. The old list is kept in a dated note. File: _process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/READING-BUDGETS.md, 'Never cut, cut first'.",
+  "The review cover's purpose sentences, the first a reviewer reads after what is asked: 'from it its makers want to design an alignment that keeps people and AI, selecting together, out of that loop' (Chinese: 本论的制作者想由此设计一种对齐，让人与 AI 共同作出的选择不落入这一回路). It states your aim to outside reviewers, as a want. File: theories/becoming/review/README.md and README.zh.md, 'What the theory is'.",
+  "The board's 'The way now' is only copied (ag-the-map/the-way-now-before.md). Its replacement is the coordinator's and, by the review plan, comes to you before it lands."
+ ]
+}
