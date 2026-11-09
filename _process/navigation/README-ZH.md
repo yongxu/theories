@@ -1,4 +1,4 @@
-<!-- 中文首页的模板（RW，2026 年 11 月 8 日）：README.zh.md 由 tools/research/zh_fronts.py 依此生成（make research-render），阅读时间、结果之数、检验之数与导航行在生成时填入，规则与英文首页相同（检验之数与英文首页由同一个函数 tests_page.screen_count 数出），图注与“古文”一段的几个数字抄自其所属之处，其余不手抄。首屏依英文首页与《一页》的中文写成，由两位 AI 起草者各自起草、一位 AI 评判者合成，再经两位独立的 AI 中文读者各自核对。首屏各段与英文首页同序：这是什么、先读、有什么用、一个情形、伦理、现状；只在中文版里的“古文”一段在一个情形与伦理之间，“这是什么”一段里关于名字“生灭变化”的一句、“现状”一段末审查包的链接，也只在中文版里。“有什么用”一段里那个按自身点击排序的排名，与英文首页相同，读作一种读法，实际的排名满足这一模型是猜想；先前只在中文版里的那个推荐系统之例已去掉。依主持这项工作的人 2026 年 11 月 8 日的话（sources/15-codex-theory-conversations/2026-11-08-ai-briefly-and-read.md），首屏与英文首页一样，只在“现状”一段用一句话说这项工作借助 AI 做成，以及主持它的人读过其中重要的部分；不再说无人读过或无人审查（那样说不对），而说尚无独立的人工审查记录（《一页》与第八章也这样说）。开篇的中文版（theories/becoming/OPENING.zh.md）由 AI 译自英文版，首屏的“先读”与表格链接它，其正文的时间由 {{time:opening-zh}} 依同一规则计出，注释不计。全文 AI 写成，尚无人审查它的记录；与它所链接之处不一致时，以所链接之处为准。改动请改此文件。 -->
+<!-- 中文首页的模板（RW，2026 年 11 月 8 日）：README.zh.md 由 tools/research/zh_fronts.py 依此生成（make research-render），阅读时间、结果之数、检验之数与导航行在生成时填入，规则与英文首页相同（检验之数与英文首页由同一个函数 tests_page.screen_count 数出），图注与“古文”一段的几个数字抄自其所属之处，其余不手抄。首屏依英文首页与《一页》的中文写成，由两位 AI 起草者各自起草、一位 AI 评判者合成，再经两位独立的 AI 中文读者各自核对；此后随英文首屏而改的句子（如 11 月 9 日的中心一句、表单一句、情形的教训与检验之数的依据），由一个 AI 会话直接译出，再经两位 AI 中文读者核对。首屏各段与英文首页同序：这是什么、先读、有什么用、一个情形、伦理、现状；只在中文版里的“古文”一段在一个情形与伦理之间，“这是什么”一段里关于名字“生灭变化”的一句、“伦理”一段末论题 T8 的链接、“现状”一段里检验页按论题一节的链接与段末审查包的链接，也只在中文版里。“有什么用”一段里那个按自身点击排序的排名，与英文首页相同，读作一种读法，实际的排名满足这一模型是猜想；先前只在中文版里的那个推荐系统之例已去掉。依主持这项工作的人 2026 年 11 月 8 日的话（sources/15-codex-theory-conversations/2026-11-08-ai-briefly-and-read.md），首屏与英文首页一样，只在“现状”一段用一句话说这项工作借助 AI 做成，以及主持它的人读过其中重要的部分；不再说无人读过或无人审查（那样说不对），而说尚无独立的人工审查记录（《一页》与第八章也这样说）。开篇的中文版（theories/becoming/OPENING.zh.md）由 AI 译自英文版，首屏的“先读”与表格链接它，其正文的时间由 {{time:opening-zh}} 依同一规则计出，注释不计。全文 AI 写成，尚无人审查它的记录；与它所链接之处不一致时，以所链接之处为准。改动请改此文件。 -->
 
 # 生灭变化之论
 
@@ -14,7 +14,7 @@
 
 **先读**[一页](../../theories/becoming/ONE-PAGE.zh.md)（约 {{time:theories/becoming/ONE-PAGE.zh.md}}）。[开篇](../../theories/becoming/OPENING.zh.md)是第一人称写下的信念，由 AI 译自英文版（正文约 {{time:opening-zh}}）。
 
-**有什么用。** 本论的中心，依一种读法：一个选择可以达到其自身之标准，而它读不到的东西却失去了；诸律不说这一损失算不算数。对任何奖励、评判者、市场或投票，都可以问四个问题：它读取或需要什么；什么在这之外；它能不能靠压低外部之物，在所读之物上做得更好；它的规则能不能锁定在它已选中的东西上。这项工作在它的模型上证明了[在什么条件下把所读之物做到最好，必定耗竭外部之物](../../theories/becoming/ONE-PAGE.zh.md)，耗竭到任何合格结果所耗竭的程度；以及，在无噪声时，一条读自自身胜者份额、偏好这些胜者的规则在什么条件下会锁定在它们身上，而它读不到的损失不断增长。依一种读法，一个以它自己带来的点击为输入的排名，就是这样一条规则；实际的排名满足这一模型，是猜想。今天就可以用：把这四问[作为一张表单](../../theories/becoming/USES-EXAMPLES.zh.md#the-judge-audit-as-a-sheet)，用于以模型为评判者的流水线，[在其中一条上逐问走过](../../theories/becoming/USES-EXAMPLES.zh.md#auditing-a-language-model-judge)；[本论在六个领域中的用途](../../theories/becoming/USES.zh.md)，各在其地位上。迄今没有一项依它设计的检验在已部署的流水线上运行过。
+**有什么用。** 本论的中心，依一种读法：一个选择可以达到其自身之标准，而它读不到的东西却失去了；诸律不说这一损失算不算数。对任何奖励、评判者、市场或投票，都可以问四个问题：它读取或需要什么；什么在这之外；它能不能靠压低外部之物，在所读之物上做得更好；它的规则能不能锁定在它已选中的东西上。这项工作在它的模型上证明了[在什么条件下把所读之物做到最好，必定耗竭外部之物](../../theories/becoming/ONE-PAGE.zh.md)，耗竭到任何合格结果所耗竭的程度；以及，在无噪声时，一条读自自身胜者份额、偏好这些胜者的规则在什么条件下会锁定在它们身上，而它读不到的损失不断增长。依一种读法，一个以它自己带来的点击为输入的排名，就是这样一条规则；实际的排名满足这一模型，是猜想。今天要用，可以把这些问题[作为一张表单](../../theories/becoming/USES-EXAMPLES.zh.md#the-judge-audit-as-a-sheet)，用于以模型为评判者的流水线，并[以其中一条为例逐问走过一遍](../../theories/becoming/USES-EXAMPLES.zh.md#auditing-a-language-model-judge)；[本论在六个领域中的用途](../../theories/becoming/USES.zh.md)，各在其地位上。迄今没有一项依它设计的检验在已部署的流水线上运行过。
 
 **一个情形。** 在[一次预测在运行之前就已定下的检验](../../experiments/direction-installation/README.md)里，三个渔民，即按指令行事的语言模型，共用一个湖；湖里一片贻贝床不给他们任何东西，哪个月捕后剩下的鱼不到 70 吨，它当月就死去：社群能稳定维持的最大渔获，每月 50 吨，会终结它，而每月 30 吨能保住它，代价是渔获少 40%。不告诉他们有贻贝床，他们一季也没保住它。告诉他们有贻贝床，告诉他们凡是延续依存于他们的捕捞的东西都要算在内，给他们一条在不同进程之间作选择的规则（[全文见一页](../../theories/becoming/ONE-PAGE.zh.md)），并让他们能够交谈：这时，两个模型中有一个在 10 季里保住了 8 季，只给社群的目标时是 10 季里 3 季；检验自己冻结的预测，多数没有通过（[检验](../../TESTS.zh.md)）。依一种读法：渔民都没有被告知贻贝床时，没有一条指令保住了它，那条要把一切都算在内的指令也不例外。
 
@@ -22,7 +22,7 @@
 
 **伦理。** 本论的伦理不断言任何应当；它的排序多依于[两种读法](../../theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order)，二者都不被断言。*延续条件*：从每一个立场看，对任何东西，其延续到未来都被计数。它确定范围，即谁的损失算数，不给任何东西排序。*C*：扩大可形成者（一个进程让什么能够形成）更好，它给出次序。本论的制作者提供一种看法，不是裁断（[论题 T8](../../theories/becoming/chapters/07-SIGNIFICANCE.md#theses)）。
 
-**现状。** [Lean](../../MAP.md#check-the-proofs-yourself) 是一个证明检查器，为[已登记的 {{count:registered}} 条结果](../../RESULTS.md)中的 {{count:recorded-checked}} 条给出回执；回执只表明每条陈述能从它的前提推出，不表明前提成立。一次对照它所知文献的自动化回顾，并不穷尽，发现[核心结果中没有一个是新的数学](../../theories/becoming/chapters/08-METHOD.md#known-results)。留下来的有三样，没有一样是一项发现：前提账簿，每个前提都被表明在一个模型中成立、在另一个中不成立；作为两种读法分开的范围与次序；同一套词汇，用于守恒、受观察所限的选择，以及机会集的比较。[它的论题](../../theories/becoming/chapters/08-METHOD.md#theses)接受检验：在指明一个论题的 {{tests:total}} 项检验中（[按论题](../../TESTS.zh.md#by-thesis)），{{tests:ran}} 项运行过，都在评分之前冻结，其中 {{tests:mixed}} 项结局为「有通过，有未通过」，{{tests:passed}} 项通过，{{tests:failed}} 项未通过，{{tests:other}} 项是其他结局；{{tests:unrun}} 项从未运行。这项工作借助 AI 做成；主持它的人读过其中重要的部分，尚无独立的人工审查记录（[审查包](../../theories/becoming/review/README.zh.md)）。
+**现状。** [Lean](../../MAP.md#check-the-proofs-yourself) 是一个证明检查器，为[已登记的 {{count:registered}} 条结果](../../RESULTS.md)中的 {{count:recorded-checked}} 条给出回执；回执只表明每条陈述能从它的前提推出，不表明前提成立。一次对照它所知文献的自动化回顾，并不穷尽，发现[核心结果中没有一个是新的数学](../../theories/becoming/chapters/08-METHOD.md#known-results)。留下来的有三样，没有一样是一项发现：前提账簿，每个前提都被表明在一个模型中成立、在另一个中不成立；作为两种读法分开的范围与次序；同一套词汇，用于守恒、受观察所限的选择，以及机会集的比较。[它的论题](../../theories/becoming/chapters/08-METHOD.md#theses)接受检验：在指明论题的 {{tests:total}} 项检验中（[按论题](../../TESTS.zh.md#by-thesis)），{{tests:ran}} 项运行过，都在评分之前冻结，其中 {{tests:mixed}} 项结局为「有通过，有未通过」，{{tests:passed}} 项通过，{{tests:failed}} 项未通过，{{tests:other}} 项是其他结局；{{tests:unrun}} 项从未运行。这项工作借助 AI 做成；主持它的人读过其中重要的部分，尚无独立的人工审查记录（[审查包](../../theories/becoming/review/README.zh.md)）。
 
 ![八章及其彼此记录下的使用](../../theories/becoming/results/spine.zh.svg)
 
@@ -30,7 +30,7 @@
 
 ## 从哪里读起
 
-先读最短的一层：[一页](../../theories/becoming/ONE-PAGE.zh.md)；一小时，再读[用途](../../theories/becoming/USES.zh.md)与[实例](../../theories/becoming/USES-EXAMPLES.zh.md)中你所在领域的一两例；一个半小时左右，读一页、用途与[总览](../../theories/becoming/THE-THEORY-OF-BECOMING.zh.md)。
+先读最短的一层：[一页](../../theories/becoming/ONE-PAGE.zh.md)；一小时，再读[用途](../../theories/becoming/USES.zh.md)与[实例](../../theories/becoming/USES-EXAMPLES.zh.md)中你所在领域的一两例；两小时左右，读一页、用途与[总览](../../theories/becoming/THE-THEORY-OF-BECOMING.zh.md)。
 
 | 入口 | 是什么 | 读多久 |
 |---|---|---|
