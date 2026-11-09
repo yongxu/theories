@@ -1850,26 +1850,26 @@
    },
    "evidence": [
     {
-     "path": "AGENTS.md",
-     "locator": "## What moves it, item 1 (line 13)",
+     "path": "_process/history/2026-11-09-instructions/AGENTS-before-the-map.md",
+     "locator": "the working rules before the map, ## What moves it, item 1 (line 13)",
      "quote": "What is false or misleading in what a reader is told, where it would change what they believe.",
      "private": false
     },
     {
-     "path": "AGENTS.md",
-     "locator": "## What moves it (line 11)",
+     "path": "_process/history/2026-11-09-instructions/AGENTS-before-the-map.md",
+     "locator": "the working rules before the map, ## What moves it (line 11)",
      "quote": "none of the account's central results is new mathematics, and better text cannot change that.",
      "private": false
     },
     {
-     "path": "AGENTS.md",
-     "locator": "## Evaluation (line 28)",
+     "path": "_process/history/2026-11-09-instructions/AGENTS-before-the-map.md",
+     "locator": "the working rules before the map, ## Evaluation (line 28)",
      "quote": "better, winning or optimal is a relation formed by whatever compares",
      "private": false
     }
    ],
    "label": "public",
-   "label_why": "The current AGENTS.md and its tracked before-copy (_process/history/2026-11-03-instructions/) state the change; commits 0423d4000, 6677b7bba and eb9968dcf of 2026-11-03 date it.",
+   "label_why": "Its tracked before-copies (_process/history/2026-11-03-instructions/ and, for the text it put in place, _process/history/2026-11-09-instructions/AGENTS-before-the-map.md) state the change; commits 0423d4000, 6677b7bba and eb9968dcf of 2026-11-03 date it.",
    "origin": "drafted"
   },
   {
@@ -2138,13 +2138,13 @@
     "zh": "不断言应当；T8 为本论之作者所提供"
    },
    "what": {
-    "en": "On 8 November a person's words, kept verbatim, read right and wrong as \"cognitive structures/dynamics\" within the whole. On 9 November the working rules say that \"the account asserts no should, and ranks courses only under readings a result names\": the continuation condition for scope, C for order, and any further premise; and the texts follow: chapter 7 states T8 as what the account's makers offer, \"a way of seeing, not a verdict\", and the board records 07's ethics and T8 \"as its makers' offer, binding no one\".",
-    "zh": "11 月 8 日，一个人的话（逐字保存）把对与错读作整体之内的「cognitive structures/dynamics」（认知结构／动态）。11 月 9 日，工作规则说「the account asserts no should, and ranks courses only under readings a result names」（本论不断言任何应当，只在某项结果所指名的读法之下对进程排序）：定范围的延续条件、定次序的 C，以及任何其他前提；各文本随之修订：第七章把 T8 陈述为本论之作者所提供的，「a way of seeing, not a verdict」（一种看法，不是裁断）；工作板记下 07 的伦理与 T8「as its makers' offer, binding no one」（为本论之作者所提供，不约束任何人）。"
+    "en": "On 8 November a person's words, kept verbatim, read right and wrong as \"cognitive structures/dynamics\" within the whole. On 9 November the working rules said that \"the account asserts no should, and ranks courses only under readings a result names\": the continuation condition for scope, C for order, and any further premise; and the texts follow: chapter 7 states T8 as what the account's makers offer, \"a way of seeing, not a verdict\", and the board records 07's ethics and T8 \"as its makers' offer, binding no one\".",
+    "zh": "11 月 8 日，一个人的话（逐字保存）把对与错读作整体之内的「cognitive structures/dynamics」（认知结构／动态）。11 月 9 日，工作规则写道「the account asserts no should, and ranks courses only under readings a result names」（本论不断言任何应当，只在某项结果所指名的读法之下对进程排序）：定范围的延续条件、定次序的 C，以及任何其他前提；各文本随之修订：第七章把 T8 陈述为本论之作者所提供的，「a way of seeing, not a verdict」（一种看法，不是裁断）；工作板记下 07 的伦理与 T8「as its makers' offer, binding no one」（为本论之作者所提供，不约束任何人）。"
    },
    "evidence": [
     {
-     "path": "AGENTS.md",
-     "locator": "## Evaluation (line 28)",
+     "path": "_process/history/2026-11-09-instructions/AGENTS-before-the-map.md",
+     "locator": "the working rules before the map, ## Evaluation (line 28)",
      "quote": "So the account asserts no should, and ranks courses only under readings a result names",
      "private": false
     },
@@ -2169,7 +2169,48 @@
     }
    ],
    "label": "public",
-   "label_why": "The tracked working rules (AGENTS.md), revised on a person's words of 8–9 November as the board's WB clause says, chapter 7 and the board at commit 55cf6892e of 2026-11-09 state the change; the person's words, kept verbatim in sources/15-codex-theory-conversations, precede it.",
+   "label_why": "The working rules as they then stood (their tracked before-copy, _process/history/2026-11-09-instructions/AGENTS-before-the-map.md), revised on a person's words of 8–9 November as the board's WB clause says, chapter 7 and the board at commit 55cf6892e of 2026-11-09 state the change; the person's words, kept verbatim in sources/15-codex-theory-conversations, precede it.",
+   "origin": "drafted"
+  },
+  {
+   "id": "nov-the-map",
+   "date": "2026-11-09",
+   "title": {
+    "en": "Working rules turned to the map: for alignment, of wisdom",
+    "zh": "工作规则转向这张图：为对齐而画，也画智慧"
+   },
+   "what": {
+    "en": "On 9 November a person's words, kept verbatim, said that the working rules had \"missed the point of our effort\": the work is a map for alignment and a map of wisdom, a basis for shared understanding, and honesty and standing are \"in the map, not above the map\". The rules were replaced the same day; they begin \"We are drawing a map of how anything forms, persists, changes and ends, so that humans and AI can see the way together\", and their earlier order (what is false in what a reader is told first) is kept in a before-copy.",
+    "zh": "11 月 9 日，一个人的话（逐字保存）说工作规则「missed the point of our effort」（偏离了这项工作的用意）：这项工作是为对齐而画的图，也是智慧的图，给人共同理解的基础；诚实与地位「在map之中，而不是在map之上」。规则当天被替换，开头是「We are drawing a map of how anything forms, persists, changes and ends, so that humans and AI can see the way together」（我们在画一张图：任何东西怎样出现、持续、变化和消逝，让人和 AI 一起看清道路）；此前的次序（先排除告诉读者的内容中的错误）保存在替换前的副本里。"
+   },
+   "evidence": [
+    {
+     "path": "AGENTS.md",
+     "locator": "## What we are doing (line 5)",
+     "quote": "We are drawing a map of how anything forms, persists, changes and ends, so that humans and AI can see the way together.",
+     "private": false
+    },
+    {
+     "path": "sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md",
+     "locator": "### 3",
+     "quote": "missed the point of our effort",
+     "private": false
+    },
+    {
+     "path": "sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md",
+     "locator": "### 7",
+     "quote": "在map之中，而不是map之上",
+     "private": false
+    },
+    {
+     "path": "_process/history/2026-11-09-instructions/AGENTS-before-the-map.md",
+     "locator": "## What moves it, item 1 (line 13)",
+     "quote": "What is false or misleading in what a reader is told, where it would change what they believe.",
+     "private": false
+    }
+   ],
+   "label": "public",
+   "label_why": "The tracked working rules (AGENTS.md), their before-copy and the person's words, kept verbatim in sources/15-codex-theory-conversations, state the change.",
    "origin": "drafted"
   }
  ],
