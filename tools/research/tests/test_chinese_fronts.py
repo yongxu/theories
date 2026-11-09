@@ -250,6 +250,17 @@ class LandingPageTests(unittest.TestCase):
         self.assertEqual(pages, {})
         self.assertTrue(any('render writes after this one' in e for e in errors), errors)
 
+    def test_the_chinese_opening_is_timed_without_its_notes(self):
+        """{{time:opening-zh}}: the Chinese opening's body, its footnotes split off as navigation.endnotes splits the English's."""
+        from tools.research import navigation
+        text = re.sub(r'<!--.*?-->', '', (ROOT / zh_fronts.OPENING_ZH).read_text(encoding='utf-8'), flags=re.S)
+        body, _, notes = navigation.endnotes(text).partition('\n### Notes\n')
+        self.assertTrue(notes.strip())
+        self.assertNotIn('[^', body)
+        landing = (ROOT / zh_fronts.PAGE).read_text(encoding='utf-8')
+        self.assertIn(f'由 AI 译自英文版（正文约 {zh_fronts.zh_time(body)}）', landing)
+        self.assertIn(f'| 正文约 {zh_fronts.zh_time(body)}，注释另计 |', landing)
+
     def test_a_stated_time_is_kept_whole_in_a_table(self):
         (self.root / 'theories/LINEAGE.zh.md').write_text('# 长成\n\n*全文约 9–12 分钟 | 另 3 分钟。*\n', encoding='utf-8')
         pages, errors = self.render('# 首\n\n| a | {{stated:theories/LINEAGE.zh.md}} |\n')

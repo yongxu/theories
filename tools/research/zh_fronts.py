@@ -556,7 +556,8 @@ def render(records: list, outputs: dict, root: Path = ROOT) -> tuple[dict, list[
                 return m.group(0)
             return zh_time(body_of_opening)
         if kind == 'time' and arg == 'opening-zh':  # the Chinese opening's body, without its notes, as the English's above
-            body_zh = text_of(OPENING_ZH).partition('\n### 注释\n')[0] if (root / OPENING_ZH).is_file() else ''
+            text_zh = re.sub(r'<!--.*?-->', '', text_of(OPENING_ZH), flags=re.S) if (root / OPENING_ZH).is_file() else ''
+            body_zh = navigation.endnotes(text_zh).partition('\n### Notes\n')[0]  # its footnotes split off as the English's are
             if not body_zh.strip():
                 errors.append(f'{TEMPLATE} times the Chinese opening, which is missing or has no body')
                 return m.group(0)

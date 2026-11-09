@@ -2,8 +2,6 @@
 
 [English](ONE-PAGE.md) · [首页](../../README.zh.md) · **一页** · [用途](USES.zh.md) · [实例](USES-EXAMPLES.zh.md) · [总览](THE-THEORY-OF-BECOMING.zh.md) · [八章（英文）](chapters/README.md) · [古文（第六章）](chapters/06-CLASSICAL-TEXTS.md) · [检验](../../TESTS.zh.md) · [对照表](results/atlas/CROSSWALK.zh.md) · [怎样长成](../LINEAGE.zh.md) · [术语表](../../GLOSSARY.zh.md) · [审查包](review/README.zh.md)
 
-*本版落后于英文版：它依 2026 年 11 月 9 日的[英文版](ONE-PAGE.md)译出，英文版此后有改动，本版尚未随之修订；有出入处，以英文版为准。*
-
 *约二十至二十六分钟读完。十分钟的部分：**它是什么**、**一个情形**、那张表（连同表前用这个湖说明四个词的那一段）与**伦理**（约十一至十五分钟）；伦理之后的那一段，把伦理放到这个情形上来读。若有一小时，读[总览](THE-THEORY-OF-BECOMING.zh.md)，约五十八分钟至一小时十六分钟。*
 
 *本页通向各章（第六章除外）的链接是英文页；理论图除各章一览外为英文。*
