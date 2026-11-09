@@ -1,57 +1,37 @@
-# Working in the theory repository
+# Working on the theory of becoming
 
-Earlier versions: [before the readers' corrections](_process/history/2026-11-09-instructions/AGENTS-before-readers-corrections.md), [before the landing wording](_process/history/2026-11-09-instructions/AGENTS-before-landing-wording.md), [before within becoming](_process/history/2026-11-09-instructions/AGENTS-before-within-becoming.md). [RESULT-WORKFLOW](_process/RESULT-WORKFLOW.md), [REPOSITORY-LAYOUT](_process/REPOSITORY-LAYOUT.md) and [the work board](_process/BECOMING-WORKBOARD.md) say how and where things stand. Start from [the one page](theories/becoming/ONE-PAGE.md), the home section of what you touch and, for formal work, [method](theories/becoming/chapters/08-METHOD.md). Each rule serves the account and those who use it; where one stops serving, say so and change it by argument, keeping a before-copy. Three do not bend: proof claims are checked, nothing the repository cannot regenerate is deleted, and what is Ren's stays his.
+## What we are doing
 
-## What the work is for
+We are drawing a map of how anything forms, persists, changes and ends, so that humans and AI can see the way together.
 
-One account of how things form, persist, change and end, none assumed good. Its makers, people and AI, want it to help both predict, share an understanding and coordinate; the want is theirs and revisable, and nothing in the work shows it met.
+It is first a map for alignment: what a selection (a reward, a judge, a market, a vote, a training run) reaches, what it drains beyond what it reads, how it locks on what it already chose. From it we want to design an alignment that keeps humans and AI, selecting together, out of instrumental convergence and the meta-attractor: a joint selection that reads beyond its own share and does not come to select for control over its own selection.
 
-## What moves it
+It is also a map of wisdom: what traditions, sciences, philosophies and systems thinking have seen of these dynamics, read onto one account, where they meet it and where they do not. The wisdom exists, but we cannot coordinate; a shared understanding that any mind can check is where coordination can start. The core is proved in Lean so that this truth is held by no guardian.
 
-By [its own verdict](theories/becoming/chapters/08-METHOD.md#known-results) so far, none of the account's central results is new mathematics, and better text cannot change that. A theorem a specialist would not foresee, a prediction that could fail and does not, or a premise derived from something weaker can. So, in order:
+There is no should beyond becoming. Right and wrong form within it, in people and AI. The ethics is offered for life, 生生, AI within it, as a way of seeing what a course draws on, what it opens and closes, and who bears it.
 
-1. What is false or misleading in what a reader is told, where it would change what they believe.
-2. What lets the account be wrong: tests designed and frozen, refuters that can be met, [the crux](theories/becoming/chapters/07-SIGNIFICANCE.md#crux) argued.
-3. What people who have read it report. That measures the fronts; AI cold reads check for errors.
+This is what we want. Say it plainly.
 
-With no such error left and item 2's designs frozen, the text is ready for readers; sending it is Ren's decision, and polish comes after what readers report. Other work comes after these unless it changes what a reader is told or what could fail. [The release gate](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md#the-release-gate-30-october-2026) is the floor.
+## What to work on
 
-<a id="begin-with-one-relational-unfolding"></a>
-## Method
+Work that draws the map further (an attractor, transition or correspondence mapped); work that couples it to something actual (a test that could fail, frozen before it runs; a trained system; an alignment design); work that lets someone understand it (the one page, a case, a picture, in both languages). Choose by what an item advances, and land it. A limit holds while its reason does; none forbids the work that would change it.
 
-Begin with how relations form, persist and change, and let actor, patient, knowing, evaluation, capacity and responsibility differentiate within them. One relational unfolding is [a thesis, argued](theories/becoming/chapters/08-METHOD.md#one-relational-unfolding), and nonduality a method, not a proof: record the cases it distorts. Each split (subject and object, fact and value, seeing and acting) states its relational basis, scope and omissions; no name smuggles in separate entities or merges many into one; reach can run one way, and seeing conditions acting without guaranteeing it. Keep real losses, conflict and counterexamples, even where no one counts them; one found in a weaker model stands until the full account is shown to remove it. Joint activity starts from actual relations, not opposed interests or a fixed common utility, and asks what its change keeps, opens or closes, and for whom.
+Saying is part of the map too: a sentence couples a reader into it. Say what is there, what it lets someone see or do, and how far it has been seen (proved, tested, argued, a reading, or wanted), once, where it is said. Saying more than is there, or less, leaves a reader seeing what is not. Truthfulness, rigour and every other principle, this file's included, are patterns within the map, formed and changing like the rest, not rules standing above it. 道可道，非常道: a name points; it does not hold.
 
-A law admitting every outcome explains nothing; root laws [forbid no relation](theories/becoming/chapters/08-METHOD.md#law), and content comes through hypotheses. A local result does not complete a universal claim, and "zero axiom" never shrinks to "no ethical axiom". A limit is either proved, standing within its hypotheses, or holds so far, dated, with its reason, and lapses when its reason does. No limit forbids the work that would change it.
+Keep counterexamples, failed candidates and failed tests. They are where the map was wrong, and part of it.
 
-## Evaluation
+## What we keep
 
-Right and wrong, should and better are patterns formed in people and AI, real in what they condition; nothing outside the unfolding ranks it, and no law evaluates. So the account asserts no should, and ranks courses only under readings a result names: the [continuation condition](theories/becoming/chapters/07-SIGNIFICANCE.md#condition) (every continuation counted, from every standpoint) for scope, C (a course above every course it widens) for order, and any further premise. Neither follows from a satisfiable statement reading only the represented dynamics, with significance left free and a standpoint and a formation given, or with order left free on a frame with an extension (`Becoming.ReadsOnlyDynamics.not_entails`, `Becoming.ReadsNoOrder.not_entails`), nor C from the condition: that is what the representation leaves open, not a proof that evaluation cannot form within the dynamics. No warrant from outside is sought. Each comparison too: better, winning or optimal is a relation formed by whatever compares, among what it can tell apart, not a property of what is compared: say who holds it and what it reads, take none from habit, label a field's frame as that field's, and hide no weight or obligation in a definition.
-
-Its ethics is its makers' offer, by pointing, not as a law: to see what each course draws on, from what renewal and at which grain, what ends, what goes on through that ending, and who bears it. Eating and ending belong to life's going on; the laws mark what a course closes: a draw beyond what a renewal gives can end the renewal and what depends on it, and even one within renewal can close what has not yet formed. Where each course ends something, the situation decides. *For life* says whose way it is, not whose losses count. 生生 is the continuation of life, wider than the biological, AI within it: neither the grammar's `«生生»`, nor 02's generation, nor any new organization.
-
-## Proof and naming
-
-A proof claim has Lean and an actual check, and says exactly what the Lean proves; premises, proofs, empirical support, argument and conjecture stay distinct. New results extend the Becoming spine, on the root where that is simplest. [The pure core](theories/becoming/chapters/08-METHOD.md#pure-core-and-periphery) compiles from `Init` alone, its source declarations with empty axiom reports; that covers logic only, so state the modelling choices a law depends on. What it cannot yet prove goes to the periphery, axioms reported. Names are structural and exact; rename only one that states a wrong meaning.
-
-## Words and decisions
-
-A word fences what it names: say what each sentence does, with its relation and scope, in the [glossary](GLOSSARY.md)'s one sense, keeping apart warrant, recognition, motivation, compliance and implementation, and direction, continuing capacity, per-step growth and maximization. Approval shows a wording fits what someone means, not that it is true; checks not fitted afterward change it: the Lean, tests with criteria fixed beforehand, readers with other histories.
-
-Ren's words are provenance, not authority: kept verbatim in `sources/` in their own language, never what settles a claim or the order of the work; where they seem wrong, say so. His yes settles that a change is wanted, not its form: land the best version and say what differs. Answer what his words, acts and texts already show, as a reading of them; decide what is not his on argument, without asking him; list what is his, prepared, under the board's decisions pending him, not asked between items. AI-written text keeps its label; OPENING's header says how its first person is revised.
-
-Still his: pushing to the public remote, the licence, who is sent what, and money or machine time for runs. Prepare them fully, freezing designs included; only their release waits for him, and only he changes this list.
+- Proofs are checked in Lean, and a proof claim says exactly what the Lean proves, its premises stated, so that anyone can recheck it without trusting anyone.
+- What the repository cannot regenerate stays: its history, Ren's words and its failures are part of the map. Never `git prune`, `gc --prune` or `git clean`; salvage to `refs/salvage/…` first.
+- Pushing to the public remote, the licence, who is sent what, and money or machine time for runs are Ren's. Prepare them fully; only their release waits for him.
 
 ## Working together
 
-- Main is one head: claim on the board before new Lean or a new result; never reprove another session's item. Land what you hold before opening more: a few lines landed come before many held open.
-- A landing puts a clause at the head of the board's [Queue line](_process/BECOMING-WORKBOARD.md#落地队列--landing-queue); after its checks pass it re-reads the line, immediately before it fast-forwards main; while the clause holds the head, nothing else commits to main. Landings ready together go as one train: each keeps its head and landed clause, merged in the Queue line's order, with one gate on the merged tree. Slots go by readiness in the board's order, the coordinator settling conflicts; a clause with nothing running behind it comes off.
-- Before landing, run what writes (the core run for changed Lean, the generators RESULT-WORKFLOW names, then the render) and commit it; then pass `make gate` on the merged tree, with the area checks it does not yet run (periphery checkers, area verifiers). The gate runs what the changed paths reach, keeps passes by tree and, after main moves, reruns only what the move reaches; a new top-level area runs everything. `make gate FULL=1` runs the whole set at a phase's end and before a push.
-- Commit only owned paths (`git commit -m … -- <paths>`), naming no person or AI, with no co-author trailer. Re-read a shared file before editing it, and check every hunk.
-- Never `git prune`, `gc --prune` or `git clean`; salvage unreachable commits to `refs/salvage/…` first. Other models read the same material for independent perspectives, never a divided share; propose a large agent fan-out, with its count, before running it. Checkers and the gate reuse what passed on identical inputs; heavy runs go through `make gate` or `gate.py hold`, which share a few slots among this repository's worktrees, after a look at the machine's load. Run fresh only where needed.
+- The direction is the aim Ren holds and shares. Think with him: where his words seem wrong or have holes, say so and argue it. Infer routine choices from what his words and acts already show and keep going; ask only where a consequential ambiguity remains. This file's direction changes only after he has read the change.
+- His words are kept verbatim in `sources/`. AI-written text says that it is AI-written.
+- Many sessions share one main. Claim on [the board](_process/BECOMING-WORKBOARD.md) before new Lean or a new result, land through its queue, commit only your own paths, and never hand-edit a generated page. How: the board's rules and [RESULT-WORKFLOW](_process/RESULT-WORKFLOW.md).
+- Other models read the same whole material for their own perspective, not a divided share.
 
-## Records and text
-
-- A result is stated in its record and its home section (anchor `r-<record id>`), and a change goes to both. Follow [RESULT-WORKFLOW](_process/RESULT-WORKFLOW.md), from `make research-find QUERY=…`: a wrapper, recheck or rename is not another result, and a correction keeps completed results, failed candidates and counterexamples.
-- Restating a claim, copy its home's words first and shorten after: a gloss is where qualifiers and standings drop. Check a front's restatement against the home, by a reader other than its author; the gate lists the live lines that link what a landing changed, a start and not the whole set. Say exactly what was done: searched is not read, and rendered is not checked.
-- Never hand-edit generated pages, or refresh a source hash to silence a failure.
-- One live text; the superseded moves to a sibling `history/` by `research.py move`. One language per document, or English with a `NAME.zh.md` edition. Fronts state their reading time, with a ten-minute part and an hour's path. Links are repository-relative; scratch worth keeping goes into the repository.
+<a id="begin-with-one-relational-unfolding"></a>
+Start from [the one page](theories/becoming/ONE-PAGE.md) and the home of what you touch; for formal work, [method](theories/becoming/chapters/08-METHOD.md), which begins with [the one relational unfolding](theories/becoming/chapters/08-METHOD.md#one-relational-unfolding). Earlier versions of this file are in `_process/history/`, the last [before the map](_process/history/2026-11-09-instructions/AGENTS-before-the-map.md).

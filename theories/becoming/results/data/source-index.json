@@ -1665,7 +1665,6 @@
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/REGISTRATION-VOCABULARY-STUDY.md": {
       "title": "Naming study: \"registration\" and the learning vocabulary",
       "local_links": [
-        "AGENTS.md",
         "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/n1-migration/RENAME-TABLE.json",
         "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/n1-migration/apply_renames.py",
         "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/n1-migration/rebind_records.py",
@@ -1676,6 +1675,7 @@
         "sources/15-codex-theory-conversations/2026-10-11-wisdom-from-registration.md",
         "sources/15-codex-theory-conversations/2026-10-17-registration-dualist-vocabulary.md",
         "sources/15-codex-theory-conversations/2026-10-19-correct-is-dualist.md",
+        "theories/becoming/chapters/08-METHOD.md",
         "theories/becoming/history/ALIGNMENT-DIRECTION.md",
         "theories/becoming/history/ALIGNMENT-THROUGH-CHANGE.md",
         "theories/becoming/history/ETHICAL-LEARNING.md",
@@ -2223,9 +2223,9 @@
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wb-within-becoming/readings/11-astra-round2.md": {
       "title": "11-astra-round2.md",
       "local_links": [
-        "AGENTS.md",
         "GLOSSARY.md",
         "README.md",
+        "_process/history/2026-11-09-instructions/AGENTS-before-the-map.md",
         "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/G0-AND-KNOWLEDGE.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",

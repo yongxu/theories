@@ -2,7 +2,7 @@
 <title id="lineage-title">本论是怎样长成的</title>
 <rect x="0.5" y="0.5" width="999" height="885" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
 <text x="24.0" y="38.0" font-size="22" font-weight="bold" text-anchor="start" fill="#1c1917">本论是怎样长成的</text>
-<text x="24.0" y="64.0" font-size="15" text-anchor="start" fill="#57534e">从最早的文字（2021）到现行的本论（2026 年 11 月 9 日）的 49 个转折点，分为六个阶段，各阶段的宽度按其</text>
+<text x="24.0" y="64.0" font-size="15" text-anchor="start" fill="#57534e">从最早的文字（2021）到现行的本论（2026 年 11 月 9 日）的 50 个转折点，分为六个阶段，各阶段的宽度按其</text>
 <text x="24.0" y="83.0" font-size="15" text-anchor="start" fill="#57534e">转折点数而定，不按时间比例；每个转折点都标明是什么陈述了它；主要的转折点附标题，编号同下表。</text>
 <rect x="50.0" y="150" width="72.5" height="404" fill="#efece6"/>
 <text x="86.3" y="170.0" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c1917">早期写作</text>
@@ -42,7 +42,7 @@
 <text x="950.0" y="686.0" font-size="13" text-anchor="end" fill="#57534e">灰条：各记录的历史条目，按周计（最多的一周 1810 条）。</text>
 <path d="M179.3,481.0 L210.2,481.0 L271.0,498.0 L291.7,481.0 L401.4,481.0 L673.5,464.0 L738.0,498.0" fill="none" stroke="#0072B2" stroke-width="1.8" stroke-dasharray="5 3"/>
 <path d="M66.6,481.0 L381.5,447.0 L385.1,464.0 L581.4,498.0 L710.4,464.0" fill="none" stroke="#E69F00" stroke-width="1.8" stroke-dasharray="5 3"/>
-<path d="M370.4,498.0 L383.7,481.0 L599.8,498.0 L682.7,498.0 L774.8,498.0 L792.8,481.0 L910.7,498.0 L950.0,498.0" fill="none" stroke="#CC79A7" stroke-width="1.8" stroke-dasharray="5 3"/>
+<path d="M370.4,498.0 L383.7,481.0 L599.8,498.0 L682.7,498.0 L774.8,498.0 L792.8,481.0 L910.7,498.0 L950.0,481.0" fill="none" stroke="#CC79A7" stroke-width="1.8" stroke-dasharray="5 3"/>
 <circle cx="51.5" cy="498.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
 <circle cx="66.6" cy="481.0" r="7" fill="#1c1917" stroke="#E69F00" stroke-width="2.4"/>
 <circle cx="119.9" cy="498.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
@@ -91,7 +91,8 @@
 <circle cx="891.1" cy="498.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
 <circle cx="910.7" cy="498.0" r="7" fill="#ffffff" stroke="#CC79A7" stroke-width="2.4"/>
 <circle cx="910.7" cy="481.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="950.0" cy="498.0" r="7" fill="#a8a29e" stroke="#CC79A7" stroke-width="2.4"/>
+<circle cx="950.0" cy="481.0" r="7" fill="#a8a29e" stroke="#CC79A7" stroke-width="2.4"/>
+<circle cx="950.0" cy="498.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
 <line x1="51.5" y1="489.0" x2="51.5" y2="245.0" stroke="#57534e" stroke-width="1"/>
 <text x="45.5" y="240.0" font-size="14" text-anchor="start" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">1 · 元社区：城市作为一种结构</text>
 <line x1="179.3" y1="472.0" x2="179.3" y2="267.0" stroke="#0072B2" stroke-width="1"/>
@@ -122,11 +123,11 @@
 <text x="857.8" y="284.0" font-size="14" text-anchor="end" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">45 · 检验在任何运行之前冻结</text>
 <line x1="891.1" y1="489.0" x2="891.1" y2="267.0" stroke="#57534e" stroke-width="1"/>
 <text x="897.1" y="262.0" font-size="14" text-anchor="end" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">46 · T2 收窄</text>
-<line x1="950.0" y1="489.0" x2="950.0" y2="245.0" stroke="#CC79A7" stroke-width="1"/>
+<line x1="950.0" y1="472.0" x2="950.0" y2="245.0" stroke="#CC79A7" stroke-width="1"/>
 <text x="956.0" y="240.0" font-size="14" font-weight="bold" text-anchor="end" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">49 · 不断言应当；T8 为本论之作者所提供</text>
 <text x="50.0" y="716.0" font-size="14" font-weight="bold" text-anchor="start" fill="#1c1917">形状，陈述它的是什么：</text>
 <circle cx="240.2" cy="711.0" r="7" fill="#e7e5e4" stroke="#1c1917" stroke-width="1.3"/>
-<text x="255.2" y="716.0" font-size="14" text-anchor="start" fill="#1c1917">公开：迄今全部 49 个；尚无「私人、未发表」「AI 重构」</text>
+<text x="255.2" y="716.0" font-size="14" text-anchor="start" fill="#1c1917">公开：迄今全部 50 个；尚无「私人、未发表」「AI 重构」</text>
 <text x="50.0" y="742.0" font-size="14" font-weight="bold" text-anchor="start" fill="#1c1917">圆环，下文所循的线索：</text>
 <circle cx="240.2" cy="737.0" r="7" fill="#e7e5e4" stroke="#0072B2" stroke-width="2.4"/>
 <text x="255.2" y="742.0" font-size="14" text-anchor="start" fill="#1c1917">选择机制</text>
@@ -138,7 +139,7 @@
 <circle cx="299.6" cy="763.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
 <text x="314.6" y="768.0" font-size="14" text-anchor="start" fill="#1c1917">一个人的话（15）</text>
 <circle cx="467.0" cy="763.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
-<text x="482.0" y="768.0" font-size="14" text-anchor="start" fill="#1c1917">AI 据一个人的话起草（14）</text>
+<text x="482.0" y="768.0" font-size="14" text-anchor="start" fill="#1c1917">AI 据一个人的话起草（15）</text>
 <circle cx="692.8" cy="763.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
 <text x="707.8" y="768.0" font-size="14" text-anchor="start" fill="#1c1917">AI 所作（19）</text>
 <circle cx="834.7" cy="763.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/><circle cx="834.7" cy="763.0" r="2.2" fill="#1c1917"/>
