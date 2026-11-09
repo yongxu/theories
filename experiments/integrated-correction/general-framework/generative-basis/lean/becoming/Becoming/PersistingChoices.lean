@@ -101,12 +101,12 @@ variable {F C Pos : Type} {L : Flow F C} {W : Web F C}
 affecting.** In a mutually dependent flow, significance held de se as what lies within a center's closure
 under being affected (what can affect the center's continuation, at some remove) is the continuation
 condition, and so is significance held de se as what lies within its closure under affecting (what it can
-affect, at some remove), for every assignment of centers: the first by definition of mutual dependence, the
-second through `mutuallyDependent_iff_reach`. -/
+affect, at some remove), for every assignment of centers: the first is `MutuallyDependent.unrestricted`, whose
+significance is this one by definition, the second through `mutuallyDependent_iff_reach`. -/
 theorem unrestricted_of_mutuallyDependent (dependent : L.MutuallyDependent W) (center : Pos → F) :
     Unrestricted (selfAscribed (ownClosure (L.AffectedBy W)) center) ∧
       Unrestricted (selfAscribed (ownClosure (L.Affects W)) center) :=
-  ⟨ownClosure_unrestricted_of_whole fun p g => dependent (center p) g,
+  ⟨dependent.unrestricted center,
    ownClosure_unrestricted_of_whole fun p g => mutuallyDependent_iff_reach.mp dependent (center p) g⟩
 
 /-- **Where every formation is a center, each de se reading is mutual dependence.** Where every formation is
