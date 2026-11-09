@@ -1,8 +1,8 @@
 # The Theory of Becoming in one page
 
-[中文](ONE-PAGE.zh.md) · [What it is for](USES.md) · [The overview](THE-THEORY-OF-BECOMING.md) · [The eight chapters](chapters/README.md) · [The theory graph](results/THEORY-GRAPH.md) · [How it grew](../LINEAGE.md)
+[Home](../../README.md) · [中文](ONE-PAGE.zh.md) · **Read** · [One page](ONE-PAGE.md) · [The theory](THE-THEORY-OF-BECOMING.md) · [Chapters](chapters/README.md) · [Uses](USES.md) · **Check** · [Tests](../../TESTS.md) · [Results](../../RESULTS.md) · [Proofs](../../MAP.md#check-the-proofs-yourself) · [Open questions](../../OPEN-QUESTIONS.md) · [Reviewers](review/README.md) · **See** · [Graph](results/THEORY-GRAPH.md) · [Connections](results/atlas/CROSSWALK.md) · [How it grew](../LINEAGE.md) · [Glossary](../../GLOSSARY.md) · [Where everything is](../../MAP.md)
 
-*Sixteen to twenty-one minutes to read. The ten-minute part: **What it is**, **One case**, the table and **The ethics** (eight to ten minutes); the paragraph after it reads the ethics on the case. For an hour, [the overview](THE-THEORY-OF-BECOMING.md), about an hour to an hour and twenty.*
+*Seventeen to twenty-two minutes to read. The ten-minute part: **What it is**, **One case**, the table and **The ethics** (eight to ten minutes); the paragraph after it reads the ethics on the case. For an hour or a little more, [the overview](THE-THEORY-OF-BECOMING.md), sixty-five to eighty-four minutes.*
 
 **What it is.** An account of how anything comes to be, lasts, changes and passes away within one relational unfolding, of how life and knowing take shape there and how far evaluation does, without assuming that becoming is good. Made with AI, proofs included; the proofs are checked by machine and the rest by AI review, the person who directs the work has read its important parts, and no independent human review is recorded yet ([the review packet](review/README.md)). Its centre [AI reading]: a selection can meet its own criterion while what it cannot read is lost, and the laws do not say whether that loss counts ([what it is for, and how far](USES.md)).
 

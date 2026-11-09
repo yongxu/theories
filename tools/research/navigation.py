@@ -588,7 +588,22 @@ NAV = [('README.md', 'Home'), ('README.zh.md', '中文'),
        (None, '**Check**'), ('TESTS.md', 'Tests'), ('RESULTS.md', 'Results'), ('MAP.md#check-the-proofs-yourself', 'Proofs'), ('OPEN-QUESTIONS.md', 'Open questions'), (THEORY + '/review/README.md', 'Reviewers'),
        (None, '**See**'), (THEORY + '/results/THEORY-GRAPH.md', 'Graph'), (CROSSWALK, 'Connections'), ('theories/LINEAGE.md', 'How it grew'), ('GLOSSARY.md', 'Glossary'), ('MAP.md', 'Where everything is')]
 # Hand-written fronts that carry the line, each with its Chinese edition where it has one (the line's 中文 then goes there).
-NAV_FRONTS = {'MAP.md': None, 'GLOSSARY.md': 'GLOSSARY.zh.md'}
+NAV_FRONTS = {  # hand-written fronts that carry the generated pages' navigation line under their title, its 中文 link to the page's edition
+    'MAP.md': None,
+    'GLOSSARY.md': 'GLOSSARY.zh.md',
+    'theories/becoming/ONE-PAGE.md': 'theories/becoming/ONE-PAGE.zh.md',
+    'theories/becoming/THE-THEORY-OF-BECOMING.md': 'theories/becoming/THE-THEORY-OF-BECOMING.zh.md',
+    'theories/becoming/USES.md': 'theories/becoming/USES.zh.md',
+    'theories/becoming/USES-EXAMPLES.md': 'theories/becoming/USES-EXAMPLES.zh.md',
+    'theories/becoming/review/README.md': 'theories/becoming/review/README.zh.md',
+    'theories/becoming/chapters/01-ROOT.md': None,
+    'theories/becoming/chapters/02-MAP.md': None,
+    'theories/becoming/chapters/03-KNOWING.md': None,
+    'theories/becoming/chapters/04-LIFE.md': None,
+    'theories/becoming/chapters/05-COLLECTIVES.md': None,
+    'theories/becoming/chapters/07-SIGNIFICANCE.md': None,
+    'theories/becoming/chapters/08-METHOD.md': None,
+}
 
 
 def nav_line(path, zh=None):

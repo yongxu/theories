@@ -2,9 +2,9 @@
 
 An account of how anything comes to be, lasts, changes and passes away within one relational unfolding, and of how life, evolution and knowing take shape inside it, and how far evaluation does, without first assuming that becoming is good.
 
-[中文](THE-THEORY-OF-BECOMING.zh.md) · [The one page](ONE-PAGE.md) · [The eight chapters](chapters/README.md) · [The theory graph](results/THEORY-GRAPH.md) · [How it grew](../LINEAGE.md)
+[Home](../../README.md) · [中文](THE-THEORY-OF-BECOMING.zh.md) · **Read** · [One page](ONE-PAGE.md) · [The theory](THE-THEORY-OF-BECOMING.md) · [Chapters](chapters/README.md) · [Uses](USES.md) · **Check** · [Tests](../../TESTS.md) · [Results](../../RESULTS.md) · [Proofs](../../MAP.md#check-the-proofs-yourself) · [Open questions](../../OPEN-QUESTIONS.md) · [Reviewers](review/README.md) · **See** · [Graph](results/THEORY-GRAPH.md) · [Connections](results/atlas/CROSSWALK.md) · [How it grew](../LINEAGE.md) · [Glossary](../../GLOSSARY.md) · [Where everything is](../../MAP.md)
 
-*About an hour to an hour and twenty minutes to read.*
+*Sixty-five to eighty-four minutes to read.*
 
 ## How to read this
 

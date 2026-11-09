@@ -662,15 +662,19 @@ class SiteTests(unittest.TestCase):
         self.assertTrue(self.page('assets/favicon.svg').startswith('<svg'))
         self.assertIn('<link rel="icon" href="../assets/favicon.svg"', self.page('a/ONE.html'))
 
+    def test_emphasis_inside_a_word_as_github_has_it(self):
+        self.assertEqual(site.emphasis('each T*n* and the *scope*'), 'each T<em>n</em> and the <em>scope</em>')
+        self.assertEqual(site.emphasis('2 * 3 * 4, and a star*'), '2 * 3 * 4, and a star*')  # spaced or lone stars stay
+
     # -- the home
-    def test_the_cards_follow_start_with_and_the_picture_follows_the_cards(self):
+    def test_the_picture_follows_the_words_and_the_cards_follow_the_picture(self):
         (self.tmp / 'a/pic.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg"></svg>')
         self.files.add('a/pic.svg')
         (self.tmp / 'README.md').write_text('# T\n\n> Still being revised.\n\n**First.** What it is.\n\n**Start with** [the one page](a/ONE.md).\n\n'
                                             '**Receipts** prove less than they seem.\n\n![The picture](a/pic.svg)\n\n*The caption.*\n\n---\n\n## Truth exists\n\nThe opening.\n')
         self.build(assets=['a/pic.svg'])
         home = self.page('index.html')
-        order = [home.index(w) for w in ('Still being revised', 'First.', 'Receipts', 'Start with', 'id="ways-in"', 'class="picture"', 'The caption.')]
+        order = [home.index(w) for w in ('Still being revised', 'First.', 'Receipts', 'Start with', 'class="picture"', 'The caption.', 'id="ways-in"')]
         self.assertEqual(order, sorted(order))  # no qualifier falls below the cards; the words are all there
         self.assertNotIn('<hr>', home)
 

@@ -590,6 +590,7 @@ class _TagParser(__import__('html.parser').parser.HTMLParser):
 def emphasis(t):
     t = re.sub(r'\*\*\*(?!\s)(.+?)(?<!\s)\*\*\*', r'<strong><em>\1</em></strong>', t)
     t = re.sub(r'\*\*(?!\s)(.+?)(?<!\s)\*\*', r'<strong>\1</strong>', t)
+    t = re.sub(r'(?<=[A-Za-z0-9])\*([A-Za-z0-9]{1,3})\*(?![*])', r'<em>\1</em>', t)  # inside a word, as GitHub has it: T*n*
     t = re.sub(r'(?<![A-Za-z0-9_*\\])\*(?![\s*])(.+?)(?<![\s\\])\*(?![A-Za-z0-9_*])', r'<em>\1</em>', t)
     t = re.sub(r'(?<![\w\\])__(?!\s)(.+?)(?<!\s)__(?!\w)', r'<strong>\1</strong>', t)
     t = re.sub(r'(?<![\w\\])_(?![\s_])(.+?)(?<![\s\\])_(?!\w)', r'<em>\1</em>', t)
@@ -1004,9 +1005,9 @@ def home_body(cfg, links, recs, root, files, rules=()):
         grouped[g].append(c)
     body = ''.join((f'<h3 class="group">{html.escape(g)}</h3>' if g else '') + '<ul class="cards">' + ''.join(grouped[g]) + '</ul>'
                    for g in order)
-    parts.append('<section class="ways"><h2 id="ways-in">Ways in</h2>' + body + '</section>')
-    if pictures:
+    if pictures:  # the picture right after the first screen's words, above the cards, where a reader still is
         parts.append('<section class="picture">' + '\n'.join(pictures) + '</section>')
+    parts.append('<section class="ways"><h2 id="ways-in">Ways in</h2>' + body + '</section>')
     return '\n'.join(parts), page.lang
 
 

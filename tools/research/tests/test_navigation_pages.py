@@ -149,9 +149,19 @@ class NavigationLineTests(unittest.TestCase):
             root = Path(folder)
             (root / 'MAP.md').write_text('# Where\n\n' + navigation.nav_line('MAP.md') + '\n')
             (root / 'GLOSSARY.md').write_text('# Glossary\n\n[中文](GLOSSARY.zh.md)\n')
+            for page, zh in navigation.NAV_FRONTS.items():  # every other front carries its line
+                if page not in ('MAP.md', 'GLOSSARY.md'):
+                    (root / page).parent.mkdir(parents=True, exist_ok=True)
+                    (root / page).write_text('# A front\n\n' + navigation.nav_line(page, zh) + '\n')
             errors = navigation.nav_front_errors(root)
         self.assertEqual(len(errors), 1)
         self.assertIn('GLOSSARY.md: its navigation line is missing', errors[0])
+
+    def test_the_fronts_readers_meet_first_and_the_chapters_carry_the_line(self):
+        fronts = set(navigation.NAV_FRONTS)
+        for page in ('ONE-PAGE.md', 'THE-THEORY-OF-BECOMING.md', 'USES.md', 'USES-EXAMPLES.md', 'review/README.md',
+                     *(f'chapters/{c}.md' for c in ('01-ROOT', '02-MAP', '03-KNOWING', '04-LIFE', '05-COLLECTIVES', '07-SIGNIFICANCE', '08-METHOD'))):
+            self.assertIn('theories/becoming/' + page, fronts)
 
     def test_the_repository_fronts_carry_the_line(self):
         self.assertEqual(navigation.nav_front_errors(), [])
