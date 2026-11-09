@@ -756,6 +756,11 @@ ROLE_WORD = {'carries': 'Read against', 'neighbour': 'Beside it, not carrying it
 AGREEMENT_WORD = {'law': 'a law', 'thesis-or-method': 'a thesis or method', 'reading': 'a reading'}
 
 
+# Where CROSSWALK.md's start-here table goes: connection_map.py, which counts the map's threads, writes it there when the
+# render runs it after this page (a comment, so a page rendered without the map shows nothing).
+START_HERE = '<!-- start here: the thickest threads, written by connection_map.py -->'
+
+
 def group_path(group: dict) -> str:
     """A folder's or domain's page: crosswalk/<its id without cxg->.md."""
     return f'{CROSSWALK_PAGES}/{group["id"].removeprefix("cxg-")}.md'
@@ -868,9 +873,11 @@ def crosswalk_page(atlas: dict) -> str:
            '| What became of it | ' + ' | '.join(carried) + ' |', '|---|' + '---:|' * len(carried), '| Entries | ' + ' | '.join(map(str, totals_c)) + ' |', '',
            '| Relation | ' + ' | '.join(relations) + ' |', '|---|' + '---:|' * len(relations), '| Entries | ' + ' | '.join(map(str, totals_r)) + ' |', '',
            _no_relation(entries, totals_r), '',
+           START_HERE, '',
            f'![How the earlier folders and the domains of thought meet the live account]({_href(OVERVIEW)})', '',
-           '*Drawn by connection_map.py from the crosswalk’s claims, on the pages its table links: each thread joins a folder or domain to the part of the account its '
-           'claims are read against, coloured by relation, and every thread is an AI reading, no person’s. To explore the same data, '
+           '*Drawn by connection_map.py from the crosswalk’s claims, on the pages its table links: a row per folder or domain, a column per part of the account '
+           'its claims are read against, and in each cell up to two dots per relation, filled for what the account takes up and, below it, a ring for what is proposed here; '
+           'every dot is an AI reading, no person’s. To explore the same data, '
            f'open [the connection map]({_href(ATLAS + "/map.html")}) on the reader’s site, once it is published, or from a clone; GitHub shows it only as source.*', '',
            *_crosswalk_lead(atlas, ATLAS),
            '<a id="the-groups"></a>', '', f'{len(entries)} entries in {len(groups)} groups, each on its own page:', '',
@@ -1018,7 +1025,7 @@ def crosswalk_zh_page(atlas: dict) -> str:
     out = [GENERATED, '', '# 对照表：早先的理论文件夹与各思想领域', '', zh_fronts.nav_line(CROSSWALK_ZH), '', '{{time}}', '',
            '*由 AI 依[英文的对照表](CROSSWALK.md)写成，尚无人审查它的记录；义以英文版为准。各组的条目在英文页上。*', '',
            f'![早先的文件夹与各思想领域怎样与现行的本论相接]({_href(OVERVIEW_ZH, ATLAS)})', '',
-           f'*由 connection_map.py 依同一份数据画出，图中文字为 AI 所译（[英文图]({_href(OVERVIEW, ATLAS)})）：每一条线把一个文件夹或领域连到它的主张所对照的本论那一部分，按关系着色；每一条线都是 AI 的读法，没有人的。*', '',
+           f'*由 connection_map.py 依同一份数据画出，图中文字为 AI 所译（[英文图]({_href(OVERVIEW, ATLAS)})）：每一行是一个文件夹或领域，每一列是它的主张所对照的本论那一部分；每格中每种关系至多两个点：本论论及者为实心点，此处提出者为其下的空心圆环，按关系着色；每一个点都是 AI 的读法，没有人的。*', '',
            '**它是什么。** 每一个早先的理论文件夹与每一个思想领域：它以自己的话主张了什么，在现行的本论中又成了什么。它是证据层，不是用来通读的。它不产生任何结果；'
            '每一条都是 AI 的读法，没有人的。共用一个词不是对应，结构上的相合不是意义上的相合，它也不代表任何传统发言。未承继是一种结局，不是缺陷。'
            '来源不存于此处时，所说的出自 AI 的知识，没有对照原文核对过。', '']

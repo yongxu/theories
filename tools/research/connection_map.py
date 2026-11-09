@@ -18,6 +18,7 @@ import argparse
 import html
 import hashlib
 import json
+import posixpath
 import re
 import sys
 import unicodedata
@@ -323,12 +324,19 @@ def page(data: dict, bar: str = '') -> str:
             f'<style>{CSS}</style>\n</head>\n<body>\n{bar}{_body(data)}</body>\n</html>\n')
 
 
-def site_bar(home: str = 'index.html', nav: list[tuple[str, str]] | None = None) -> str:
-    """The site's line above the map: its name linking home, then any further (label, href) the site gives, each href
-    relative to the map."""
-    items = [f'<a class="home" href="{html.escape(home)}">The Theory of Becoming</a>']
-    items += [f'<a href="{html.escape(href)}">{html.escape(label)}</a>' for label, href in (nav or [])]
-    return f'<nav class="sitebar" aria-label="Site">{"".join(items)}</nav>\n'
+def site_bar(home: str = 'index.html', nav: list[tuple[str, str]] | None = None, search: str | None = None,
+             current: str = 'connections.html', name: str = 'The Theory of Becoming', languages: dict | None = None) -> str:
+    """The site's header above the map, as every page of the site has it: its name linking home, its line of (label,
+    href) links, each href relative to the map and the map's own marked as the current page, and, given the site's
+    search script, the Search button that script opens."""
+    languages = {'中文': 'zh-Hans', 'English': 'en'} if languages is None else languages
+    links = ''.join(f'<a href="{html.escape(href)}"' + (' aria-current="page"' if href == current else '') + f'>{html.escape(label)}</a>'
+                    for label, href in (nav or []) if label not in languages)
+    lang = ''.join(f'<a class="lang" href="{html.escape(href)}" hreflang="{languages[label]}" lang="{languages[label]}">{html.escape(label)}</a>'
+                   for label, href in (nav or []) if label in languages)
+    script = f'<script src="{html.escape(search)}" data-root="" defer></script>\n' if search else ''
+    return (f'{script}<header class="top"><a class="brand" href="{html.escape(home)}">{html.escape(name)}</a>'
+            f'<nav aria-label="Pages">{links}</nav>{lang}<button class="find" type="button" hidden>Search</button></header>\n')
 
 
 def check_site(link_base: str, site_paths: dict[str, str] | None = None) -> None:
@@ -342,13 +350,15 @@ def check_site(link_base: str, site_paths: dict[str, str] | None = None) -> None
 
 
 def site_map(out_dir: str | Path, link_base: str, site_paths: dict[str, str] | None = None, home: str = 'index.html',
-             nav: list[tuple[str, str]] | None = None) -> Path:
+             nav: list[tuple[str, str]] | None = None, search: str | None = None, name: str = 'The Theory of Becoming',
+             languages: dict | None = None) -> Path:
     """Write OUT_DIR/map.html for a site and return its path. A link that leaves the map goes to `link_base` followed by
     the repository path, `link_base` ending in / (a permalink prefix such as https://github.com/<owner>/<repo>/blob/<sha>/,
     or a relative path to a copy of the repository); a repository path in `site_paths` goes instead to the URL the site
     gives it (relative to map.html, or absolute), the link's #anchor kept. The page reads the atlas's, the graph's and
     the shared laws' data as rendered in this checkout, so a site is built after a render. Above the map stands the site's
-    line: its name linking `home`, then `nav`'s (label, href) pairs, each href relative to map.html."""
+    header: its name linking `home`, then `nav`'s (label, href) pairs, each href relative to map.html, and, given `search`
+    (the site's search script, relative to map.html), its Search button."""
     check_site(link_base, site_paths)
     if not isinstance(home, str) or any(not (isinstance(pair, (tuple, list)) and len(pair) == 2 and all(isinstance(x, str) for x in pair))
                                          for pair in (nav or [])):
@@ -359,7 +369,7 @@ def site_map(out_dir: str | Path, link_base: str, site_paths: dict[str, str] | N
     data['site'] = dict(sorted((site_paths or {}).items()))
     out = Path(out_dir) / 'map.html'
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(page(data, site_bar(home, nav)), encoding='utf-8')
+    out.write_text(page(data, site_bar(home, nav, search, name=name, languages=languages)), encoding='utf-8')
     return out
 
 
@@ -368,6 +378,7 @@ def site_map(out_dir: str | Path, link_base: str, site_paths: dict[str, str] | N
 OVERVIEW = atlas_tool.OVERVIEW
 OVERVIEW_ZH = atlas_tool.OVERVIEW_ZH
 OV_W = 900
+DOT_MAX = 2.9  # a dot's largest radius, under half the space between two relations' dots in a cell
 OV_INK, OV_MUTED, OV_PAPER, OV_RULE = '#1e1a15', '#6d6355', '#fcfcfb', '#d6d3d1'
 OV_COLOUR = {'agreement': '#1f6fbf', 'scope': '#b58a00', 'divergence': '#d1361b', 'contrary-reading': '#0f8a6e'}
 OV_DASH = {'scope': '7 3', 'contrary-reading': '1.5 3.5'}
@@ -390,35 +401,44 @@ OV_WARP_ZH = {'one-page': '一页', 'overview': '总览', 'collective-direction'
               'one-argument': '一个论证，从头到尾', 'glossary': '术语表', 'review': '审查包'}
 OV_TEXT = {
     'en': {'title': 'How the earlier folders and the domains of thought meet the live account',
-           'lede': ('Drawn by connection_map.py from the crosswalk’s {n} claims, each read against the live account. A thread',
-                    'joins an earlier folder or a domain of thought to the part of the account its claims are read against.'),
-           'ai': ('Every thread is an AI reading, no person’s. A thread is not proof, and agreement is drawn',
-                  'no more prominently than divergence.'),
+           'lede': ('Drawn by connection_map.py from the crosswalk’s {n} claims, each read against the live account. A row is an earlier',
+                    'folder or a domain of thought, a column the part of the account its claims are read against; read a row across.'),
+           'ai': ('Every dot is an AI reading, no person’s. A dot is not proof, and agreement is drawn no more',
+                  'prominently than divergence.'),
            'critic': 'A random check of {sampled} entries estimates that about {label}% of all {n} carry a wrong label or target role and {fails}% a wrong reading.',
-           'folders': '{n} earlier folders', 'claims': 'claims', 'parts': 'The parts of the account they are read against',
-           'domains': '{n} domains of thought', 'sep': ' · ',
-           'notes': ('The legend’s counts are drawn claims, by relation; dashes only tell relations apart. A thread’s width grows with its',
-                     'claims; a lighter thread is a connection the account does not state, proposed here.',
-                     'The {loose} claims only in history or not carried draw no thread ({with_relation} of them carry a relation, which the crosswalk’s table counts).',
+           'folders': '{n} earlier folders', 'claims': 'claims', 'domains': '{n} domains of thought', 'sep': ' · ',
+           'desc': ' Drawn as a matrix: a row per folder or domain, a column per part of the account, in each cell up to two dots per relation, filled for what the account takes up and, below it, a ring for what is proposed here. The relations count the claims drawn; {with_relation} that stand only in history or are not carried also carry one, which the crosswalk’s table counts.',
+           'dot': '{n} claims, {relation}, read against {part}; {how}', 'dot_one': '{n} claim, {relation}, read against {part}; {how}',
+           'stated': 'the account takes it up', 'fresh': 'proposed here, not stated by the account',
+           'stated_key': 'filled: the account takes it up (states it, or says otherwise)', 'fresh_key': 'ring: proposed here, not stated by the account',
+           'size': '{n} claims', 'size_one': '{n} claim',
+           'notes': ('In a cell, up to two dots per relation in the order above, its area growing with the claims; the dots the account takes up above, the proposed below.',
+                     'The legend’s counts are drawn claims, by relation. The {loose} claims only in history or not carried draw no dot',
+                     '({with_relation} of them carry a relation, which the crosswalk’s table counts).',
                      'Beside a folder or domain the number counts all its claims; beside a part of the account, the drawn claims read against it,',
                      'a claim read against several parts counting at each.',
                      None,
                      'Every claim with its targets and their standings: the crosswalk (CROSSWALK.md, in the same folder). The same data to explore:',
-                     'map.html in that folder, which GitHub shows only as source.')},
+                     'the connection map: on the reader’s site, once it is published, its Connections page; or map.html in this folder,',
+                     'opened from a clone (GitHub shows it only as source).')},
     'zh': {'title': '早先的文件夹与各思想领域怎样与现行的本论相接',
-           'lede': ('由 connection_map.py 依对照表的 {n} 条主张画出，每一条都对照现行的本论来读。一条线把一个早先的文件夹或一个思想领域，',
-                    '连到它的主张所对照的本论那一部分。图中文字为 AI 所译，义以英文版为准。'),
-           'ai': ('每一条线都是 AI 的读法，没有人的。一条线不是证明；相合画得并不比相分更显眼。', ''),
+           'lede': ('由 connection_map.py 依对照表的 {n} 条主张画出，每一条都对照现行的本论来读。一行是一个早先的文件夹或一个思想领域，',
+                    '一列是它的主张所对照的本论那一部分；横着读一行。图中文字为 AI 所译，义以英文版为准。'),
+           'ai': ('每一个点都是 AI 的读法，没有人的。一个点不是证明；相合画得并不比相分更显眼。', ''),
            'critic': '随机复核 {sampled} 条，据此估计全部 {n} 条中约 {label}% 的标签或目标角色有误，约 {fails}% 的读法有误。',
-           'folders': '{n} 个早先的文件夹', 'claims': '主张', 'parts': '它们所对照的本论各部分',
-           'domains': '{n} 个思想领域', 'sep': ' · ',
-           'notes': ('图例中的计数是画出的主张，按关系计；虚线只用来区分关系。一条线的粗细随其主张数增加；较浅的线是本论没有陈述、',
-                     '在此处提出的连接。',
-                     '仅存于历史或未承继的 {loose} 条主张不画线（其中 {with_relation} 条带有关系，对照表的表格计入它们）。',
+           'folders': '{n} 个早先的文件夹', 'claims': '主张', 'domains': '{n} 个思想领域', 'sep': ' · ',
+           'desc': '画成一张矩阵：每个文件夹或领域一行，本论每一部分一列，每格中每种关系至多两个点：本论论及者为实心点，在此处提出者为其下的空心圆环。关系计的是画出的主张；仅存于历史或未承继者中另有 {with_relation} 条也带有关系，对照表的表格计入它们。',
+           'dot': '{n} 条主张，{relation}，对照{part}；{how}', 'dot_one': '{n} 条主张，{relation}，对照{part}；{how}',
+           'stated': '本论论及它', 'fresh': '在此处提出，本论没有陈述',
+           'stated_key': '实心：本论论及它（陈述它，或另有说法）', 'fresh_key': '空心圆环：在此处提出，本论没有陈述',
+           'size': '{n} 条主张', 'size_one': '{n} 条主张',
+           'notes': ('每格中，每种关系至多两个点，次序同上，面积随主张数增加；本论论及者在上，提出者在下。',
+                     '图例中的计数是画出的主张，按关系计。仅存于历史或未承继的 {loose} 条主张不画点（其中 {with_relation} 条带有关系，对照表的表格计入它们）。',
                      '文件夹或领域旁的数字计其全部主张；本论某一部分旁的数字计对照它而画出的主张，一条主张对照几个部分，就在每一部分各计一次。',
                      None,
                      '每一条主张及其目标与地位：对照表（同一文件夹中的 CROSSWALK.md；中文概览是 CROSSWALK.zh.md）。',
-                     '同样的数据可在该文件夹的 map.html 中探索；GitHub 只把它显示为源代码。')}}
+                     '同样的数据可在连接图中探索：读者网站发布后其上的“Connections”（连接图）页，',
+                     '或在克隆中打开此文件夹的 map.html（GitHub 只把它显示为源代码）。')}}
 
 
 def _warp_zh(w: dict) -> str:
@@ -484,10 +504,12 @@ def overview_threads(data: dict) -> list[dict]:
 
 
 def overview_svg(data: dict, lang: str = 'en') -> str:
-    """A static picture of the map's overview: the earlier folders and the domains of thought on the left, the parts of the
-    account their claims are read against on the right, threads coloured by relation, the counts, and that every thread
-    is an AI reading. Drawn at its own width, so its words read at their size where it is shown at 900 pixels; in
-    Chinese (`lang='zh'`) its words and names are AI translations, the drawing the same."""
+    """A static picture of the map's overview as a matrix a reader can follow: a row per earlier folder or domain of
+    thought, a column per part of the account its claims are read against, and in each cell up to two dots per relation, its
+    area growing with the claims, filled where the account takes the claim up (states it, or says otherwise) and a ring
+    where a reader proposes it here;
+    the counts, and that every dot is an AI reading. Drawn at its own width, its words at least 12 pixels where it is
+    shown at 900; in Chinese (`lang='zh'`) its words and names are AI translations, the drawing the same."""
     words = OV_TEXT[lang]
     zh = lang == 'zh'
     num = (lambda n: f'{n}') if zh else (lambda n: f'{n:,}')
@@ -495,87 +517,115 @@ def overview_svg(data: dict, lang: str = 'en') -> str:
     relations = _relations(data)
     folders = [g for g in groups if g['side'] == 'folders']
     domains = [g for g in groups if g['side'] == 'domains']
-    top, row, gap = 208, 19, 44
+    threads = overview_threads(data)
+    label_r, count_x, x0, right = 352, 358, 394, OV_W - 86  # room on the right for the rising labels
+    col = min(33.0, (right - x0) / max(1, len(warp)))
+    x_of = {w['id']: x0 + (i + 0.5) * col for i, w in enumerate(warp)}
+    head_top = 170
+    names = {w['id']: _warp_zh(w) if zh else OV_WARP.get(w['id'], w['title']) for w in warp}
+    longest = max((sum(13 if ord(ch) > 0x2e80 else 6.6 for ch in f'{names[w["id"]]} {w["n"]}') for w in warp), default=0)
+    head_bottom = head_top + 22 + longest * 0.82  # the labels rise at 55 degrees
+    row, gap = 24, 34
+    top = head_bottom + 18
     y_of = {g['id']: top + i * row for i, g in enumerate(folders)}
     y0 = top + len(folders) * row + gap
     y_of.update({g['id']: y0 + i * row for i, g in enumerate(domains)})
-    bottom = y0 + (len(domains) - 1) * row
-    step = max(22, (bottom - top) / max(1, len(warp) - 1))
-    w_of = {w['id']: top + i * step for i, w in enumerate(warp)}
-    bottom = max(bottom, top + step * (len(warp) - 1))
-    left_label, left_count, x1, x2, right_label = 340, 348, 380, 556, 566
-    threads = overview_threads(data)
-    height = bottom + 212
+    bottom = (y0 + (len(domains) - 1) * row) if domains else top + (len(folders) - 1) * row
+    height = int(bottom + 250)
     loose = sum(T['carried'].get(k, 0) for k in ABSENT)
-    desc = (' '.join(_ledes(data, pointer=False)) + f' The relations count the claims drawn; {_with_relation(data)} that stand only in history or are not carried also carry one, which the crosswalk’s table counts.'
-            if not zh else _ledes_zh(data) + f'关系计的是画出的主张；仅存于历史或未承继者中另有 {_with_relation(data)} 条也带有关系，对照表的表格计入它们。')
+    # the map's ledes, in the picture's own word for what it draws: a dot, where the map draws a thread
+    desc = (' '.join(_ledes(data, pointer=False)).replace('Every thread', 'Every dot').replace('A thread is', 'A dot is')
+            + words['desc'].format(with_relation=_with_relation(data)) if not zh else
+            _ledes_zh(data).replace('每一条线', '每一个点').replace('一条线不是证明', '一个点不是证明') + words['desc'].format(with_relation=_with_relation(data)))
     out = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {OV_W} {height}" width="{OV_W}" height="{height}" role="img" '
            f'aria-labelledby="cx-title cx-desc" font-family="{html.escape(OV_FONT)}">',
            f'<title id="cx-title">{html.escape(words["title"])}</title>',
            f'<desc id="cx-desc">{html.escape(desc)}</desc>',
            f'<rect x="0.5" y="0.5" width="{OV_W - 1}" height="{height - 1}" rx="10" fill="{OV_PAPER}" stroke="{OV_RULE}"/>',
-           _ov_text(24, 34, words['title'], 17, 'bold'),
-           _ov_text(24, 54, words['lede'][0].format(n=num(T['entries'])), 11.5, fill=OV_MUTED),
-           _ov_text(24, 69, words['lede'][1], 11.5, fill=OV_MUTED),
-           _ov_text(24, 92, words['ai'][0], 12.5, 'bold')]
+           _ov_text(24, 34, words['title'], 18, 'bold'),
+           _ov_text(24, 56, words['lede'][0].format(n=num(T['entries'])), 13, fill=OV_MUTED),
+           _ov_text(24, 73, words['lede'][1], 13, fill=OV_MUTED),
+           _ov_text(24, 96, words['ai'][0], 13, 'bold')]
     if words['ai'][1]:
-        out.append(_ov_text(24, 109, words['ai'][1], 12.5, 'bold'))
-    x = 24
+        out.append(_ov_text(24, 113, words['ai'][1], 13, 'bold'))
     parts = []
     for k, label in STATS:
         parts.append(f'<tspan font-weight="bold">{num(T["carried"].get(k, 0))}</tspan> {html.escape(atlas_tool.ZH_CARRIED.get(k, label) if zh else label)}')
     second = (data.get('checks') or {}).get('second_critic')
     if second:
-        out.append(_ov_text(24, 128 if words['ai'][1] else 112, words['critic'].format(
+        out.append(_ov_text(24, 132 if words['ai'][1] else 116, words['critic'].format(
             sampled=second['sampled'], label=f'{second["estimate_percent"]["label"]:g}', n=num(T['entries']),
-            fails=f'{second["estimate_percent"]["fails"]:g}'), 11.5, fill=OV_MUTED))
-    out.append(f'<text x="{x}" y="154" font-size="13" fill="{OV_INK}">' + f'<tspan fill="#6d6355">{words["sep"]}</tspan>'.join(parts) + '</text>')
-    out += [_ov_text(left_label, 186, words['folders'].format(n=len(folders)), 12.5, 'bold', 'end'),
-            _ov_text(left_count, 186, words['claims'], 10.5, anchor='start', fill=OV_MUTED),
-            _ov_text(right_label, 186, words['parts'], 12.5, 'bold'),
-            _ov_text(left_label, y0 - 22, words['domains'].format(n=len(domains)), 12.5, 'bold', 'end')]
-    out.append('<g fill="none" stroke-linecap="round">')
-    order = sorted(threads, key=lambda t: (not t['fresh'], -t['n'], _tie(t)))
-    for t in order:
-        if t['group'] not in y_of or t['warp'] not in w_of:
-            continue
-        ya = y_of[t['group']] - 4 + (relations.index(t['relation']) - (len(relations) - 1) / 2) * 1.3
-        spread = ((ya - top) / max(1, bottom - top) - 0.5) * 16
-        yb = w_of[t['warp']] - 4 + spread
-        mx = (x1 + x2) / 2
-        dash = f' stroke-dasharray="{OV_DASH[t["relation"]]}"' if t['relation'] in OV_DASH else ''
-        out.append(f'<path d="M{x1} {ya:.1f}C{mx:g} {ya:.1f} {mx:g} {yb:.1f} {x2} {yb:.1f}" stroke="{OV_COLOUR[t["relation"]]}" '
-                   f'stroke-width="{0.7 + 0.5 * t["n"] ** 0.5:.2f}" stroke-opacity="{0.2 if t["fresh"] else 0.5}"{dash}/>')
+            fails=f'{second["estimate_percent"]["fails"]:g}'), 12.5, fill=OV_MUTED))
+    out.append(f'<text x="24" y="156" font-size="13" fill="{OV_INK}">' + f'<tspan fill="{OV_MUTED}">{words["sep"]}</tspan>'.join(parts) + '</text>')
+    # the columns: a part of the account each, its drawn claims beside its name, the names rising to the right
+    out.append(f'<g stroke="{OV_RULE}" stroke-width="0.6">')
+    for i in range(len(warp) + 1):
+        out.append(f'<line x1="{x0 + i * col:.1f}" y1="{head_bottom + 6:.1f}" x2="{x0 + i * col:.1f}" y2="{bottom + 14:.1f}"/>')
     out.append('</g>')
-    for g in folders + domains:
-        y = y_of[g['id']]
-        name = OV_SHORT_ZH.get(g['id'], g['title']) if zh else OV_SHORT.get(g['id']) or _short(g['title'])
-        out += [_ov_text(left_label, y, name, 12 if len(name) <= 50 else 11, anchor='end'),
-                _ov_text(left_count, y, f'{g["n"]}', 10.5, fill=OV_MUTED)]
     for w in warp:
-        y = w_of[w['id']]
-        out.append(f'<text x="{right_label}" y="{y:.1f}" font-size="12" fill="{OV_INK}">{html.escape(_warp_zh(w) if zh else OV_WARP.get(w["id"], w["title"]))}'
-                   f'<tspan fill="{OV_MUTED}" font-size="10.5"> {w["n"]}</tspan></text>')
-    y = bottom + 44
+        x = x_of[w['id']]
+        out.append(f'<text transform="translate({x + 4:.1f},{head_bottom:.1f}) rotate(-55)" font-size="13" fill="{OV_INK}">'
+                   f'{html.escape(names[w["id"]])}<tspan fill="{OV_MUTED}"> {w["n"]}</tspan></text>')
+    # the rows: a folder or domain each, shaded in turn so a row can be followed across
+    out += [_ov_text(label_r, top - 22, words['folders'].format(n=len(folders)), 13, 'bold', 'end'),
+            _ov_text(count_x, top - 22, words['claims'], 12, fill=OV_MUTED)]
+    if domains:
+        out.append(_ov_text(label_r, y0 - 20, words['domains'].format(n=len(domains)), 13, 'bold', 'end'))
+    for i, g in enumerate(folders + domains):
+        y = y_of[g['id']]
+        if i % 2 == 0:
+            out.append(f'<rect x="20" y="{y - row / 2:.1f}" width="{right - 16:.0f}" height="{row}" fill="{OV_RULE}" fill-opacity="0.28"/>')
+        name = OV_SHORT_ZH.get(g['id'], g['title']) if zh else OV_SHORT.get(g['id']) or _short(g['title'])
+        out += [_ov_text(label_r, y + 4.5, name, 13 if len(name) <= 44 else 12, anchor='end'),
+                _ov_text(count_x, y + 4.5, f'{g["n"]}', 12, fill=OV_MUTED)]
+    # the cells: in the legend's order, a dot per relation, the stated ones above and the proposed ones below
+    slot = {r: (i - (len(relations) - 1) / 2) * min(7.5, (col - 4) / max(1, len(relations))) for i, r in enumerate(relations)}
+    for t in sorted(threads, key=lambda t: (t['fresh'], _tie(t))):
+        if t['group'] not in y_of or t['warp'] not in x_of:
+            continue
+        cx, cy = x_of[t['warp']] + slot[t['relation']], y_of[t['group']] + (4.5 if t['fresh'] else -4.5)
+        r = min(DOT_MAX, 1.0 + 0.4 * t['n'] ** 0.5)
+        fill = f'fill="{OV_PAPER}" stroke="{OV_COLOUR[t["relation"]]}" stroke-width="1.2"' if t['fresh'] else f'fill="{OV_COLOUR[t["relation"]]}"'
+        note = words['dot_one' if t['n'] == 1 else 'dot'].format(n=t['n'], relation=_rel_word(data, t['relation'], zh).lower(), part=names[t['warp']],
+                                   how=words['fresh'] if t['fresh'] else words['stated'])
+        out.append(f'<circle class="thread" cx="{cx:.1f}" cy="{cy:.1f}" r="{r:.2f}" {fill}><title>{html.escape(note)}</title></circle>')
+    # the key: the relations with their drawn claims, filled and ring, and the sizes
+    y = bottom + 46
     x = 24
     for r in relations:
-        dash = f' stroke-dasharray="{OV_DASH[r]}"' if r in OV_DASH else ''
-        out.append(f'<line x1="{x}" y1="{y - 4}" x2="{x + 26}" y2="{y - 4}" stroke="{OV_COLOUR[r]}" stroke-width="2.5" stroke-linecap="round"{dash}/>')
-        word = next((v.get('zh', r) for v in data['relations'] if v['en'] == r), r) if zh else OV_WORD[r]
-        label = f'{word} {num(T["relation"].get(r, 0))}'
-        out.append(_ov_text(x + 32, y, label, 12))
-        x += 44 + sum(12 if ord(ch) > 0x2e80 else 7 for ch in label)
-    with_relation = _with_relation(data)
-    notes = [line.format(loose=num(loose), with_relation=with_relation) if line else None for line in words['notes']]
-    yy = y + 22
+        out.append(f'<circle cx="{x + 5}" cy="{y - 4.5}" r="3.6" fill="{OV_COLOUR[r]}"/>')
+        label = f'{_rel_word(data, r, zh)} {num(T["relation"].get(r, 0))}'
+        out.append(_ov_text(x + 14, y, label, 13))
+        x += 34 + sum(13 if ord(ch) > 0x2e80 else 7 for ch in label)
+    y += 24
+    out += [f'<circle cx="29" cy="{y - 4.5}" r="3.6" fill="{OV_INK}"/>', _ov_text(38, y, words['stated_key'], 13),
+            f'<circle cx="{OV_W / 2 + 5:.0f}" cy="{y - 4.5}" r="3.6" fill="{OV_PAPER}" stroke="{OV_INK}" stroke-width="1.2"/>',
+            _ov_text(OV_W / 2 + 14, y, words['fresh_key'], 13)]
+    y += 24
+    x = 24
+    for n in (1, 10, 24):
+        out.append(f'<circle cx="{x + 5}" cy="{y - 4.5}" r="{min(DOT_MAX, 1.0 + 0.4 * n ** 0.5):.2f}" fill="{OV_MUTED}"/>')
+        label = (words['size_one'] if n == 1 else words['size']).format(n=n)
+        out.append(_ov_text(x + 14, y, label, 13))
+        x += 34 + sum(13 if ord(ch) > 0x2e80 else 7 for ch in label)
+    notes = [line.format(loose=num(loose), with_relation=_with_relation(data)) if line else None for line in words['notes']]
+    yy = y + 26
     for line in notes:
         if line is None:
             yy += 6
             continue
-        out.append(_ov_text(24, yy, line, 11, fill=OV_MUTED))
-        yy += 16
+        out.append(_ov_text(24, yy, line, 12.5, fill=OV_MUTED))
+        yy += 17
+    out[0] = out[0].replace(f'viewBox="0 0 {OV_W} {height}" width="{OV_W}" height="{height}"',
+                            f'viewBox="0 0 {OV_W} {int(yy + 10)}" width="{OV_W}" height="{int(yy + 10)}"')
+    out[3] = out[3].replace(f'height="{height - 1}"', f'height="{int(yy + 9)}"')
     out.append('</svg>')
     return '\n'.join(out) + '\n'
+
+
+def _rel_word(data: dict, r: str, zh: bool) -> str:
+    """A relation's word in the picture, in its language."""
+    return next((v.get('zh', r) for v in data['relations'] if v['en'] == r), r) if zh else OV_WORD[r]
 
 
 def read_against(atlas_json: str, graph_json: str) -> dict:
@@ -593,11 +643,34 @@ def _shared() -> dict:
     return json.loads((ROOT / registry.SHARED_LAWS).read_text(encoding='utf-8'))
 
 
-def render(atlas_json: str, graph_json: str) -> dict:
-    """The map's page and its overview's picture, from one payload."""
+def start_here(data: dict, rows: int = 5) -> list[str]:
+    """CROSSWALK.md's start: the picture's largest dots that the account takes up (not proposed here), each with its
+    folder or domain, the part of the account its claims are read against, the relation and how many claims."""
+    groups = {g['id']: g for g in data['groups']}
+    warp = {w['id']: w for w in data['warp']}
+    here = posixpath.dirname(atlas_tool.CROSSWALK)
+    ranked = sorted((t for t in overview_threads(data) if not t['fresh']), key=lambda t: (-t['n'], t['group'], t['warp'], t['relation']))
+    threads = [t for t in ranked if len(ranked) <= rows or t['n'] >= ranked[rows - 1]['n']]  # a tie at the cut is kept whole
+    out = ['**Start here.** The five largest dots in the picture below that the account takes up (states, or says otherwise; '
+           'none proposed here), and any that tie with the fifth: a folder or domain, the part of the account its claims are read '
+           "against, the relation and how many claims. Each folder's page gives its claims one by one.", '',
+           '| Folder or domain | Read against | Relation | Claims |', '|---|---|---|---:|']
+    for t in threads:
+        g, w = groups[t['group']], warp[t['warp']]
+        out.append(f'| [{_short(g["title"])}]({posixpath.relpath(atlas_tool.group_path(g), here)}) | '
+                   f'[{OV_WARP.get(w["id"], w["title"])}]({posixpath.relpath(w["path"], here)}) | {t["relation"]} | {t["n"]} |')
+    return out
+
+
+def render(atlas_json: str, graph_json: str, crosswalk: str | None = None) -> dict:
+    """The map's page and its overview's picture, from one payload; given CROSSWALK.md as the atlas wrote it, that page
+    with its start-here table in place."""
     from tools.research import spine
     data = payload(json.loads(atlas_json), json.loads(graph_json), _shared(), bases=spine.edge_bases())
-    return {PAGE: page(data), OVERVIEW: overview_svg(data), OVERVIEW_ZH: overview_svg(data, 'zh')}
+    out = {PAGE: page(data), OVERVIEW: overview_svg(data), OVERVIEW_ZH: overview_svg(data, 'zh')}
+    if crosswalk and atlas_tool.START_HERE in crosswalk:
+        out[atlas_tool.CROSSWALK] = crosswalk.replace(atlas_tool.START_HERE, '\n'.join(start_here(data)), 1)
+    return out
 
 
 CSS = r'''
@@ -617,8 +690,18 @@ CSS = r'''
 --beam:#e6dfd0;--beam-ink:#17140f;--beam-muted:#5d5548;--bar:#a89e8c;--focus:#ece6d9;
 --agreement:#4a90e2;--scope:#b48c0e;--divergence:#cf3f22;--contrary-reading:#10a586;}
 *{box-sizing:border-box}
-.sitebar{display:flex;flex-wrap:wrap;gap:4px 18px;padding:10px var(--gutter-r) 10px var(--gutter-l);border-bottom:1px solid var(--rule);font:500 14px/1.3 var(--sans);background:var(--panel)}
-.sitebar a{color:var(--ink-2);text-decoration:none}.sitebar a.home{color:var(--ink);font-weight:600}.sitebar a:hover{text-decoration:underline}
+header.top{position:sticky;top:0;z-index:2;display:flex;align-items:baseline;gap:1.2rem;padding:9px var(--gutter-r) 9px var(--gutter-l);border-bottom:1px solid var(--rule);font:500 14px/1.3 var(--sans);background:var(--paper)}
+header.top .brand{color:var(--ink);font-weight:600;white-space:nowrap;flex:none;text-decoration:none}
+header.top nav{display:flex;gap:.9rem;min-width:0;overflow-x:auto;white-space:nowrap;scrollbar-width:none}header.top nav::-webkit-scrollbar{display:none}
+header.top a.lang{flex:none;white-space:nowrap;color:var(--muted);text-decoration:none}
+header.top nav a{color:var(--muted);text-decoration:none}header.top nav a:hover{text-decoration:underline}header.top nav a[aria-current="page"]{color:var(--ink);border-bottom:2px solid var(--ink)}
+button.find{flex:none;margin-left:auto;font:inherit;color:var(--muted);background:none;border:1px solid var(--rule);border-radius:4px;padding:0 .5rem;cursor:pointer}button.find:hover{color:var(--ink);border-color:var(--muted)}
+div.find-panel{position:fixed;top:3rem;left:50%;transform:translateX(-50%);z-index:3;width:min(calc(100vw - 32px),40rem);max-height:76vh;overflow-y:auto;padding:.7rem;background:var(--panel);border:1px solid var(--rule);border-radius:6px;box-shadow:0 8px 28px rgba(0,0,0,.22);font:15px/1.35 var(--sans)}
+div.find-panel input{width:100%;font:inherit;padding:.4rem .5rem;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:4px}
+div.find-panel p{margin:.5rem 0 0;color:var(--muted)}div.find-panel p:empty{display:none}div.find-panel ul{list-style:none;padding:0;margin:.5rem 0 0}
+@media (max-width:600px){header.top{position:static;flex-wrap:wrap}header.top nav{order:3;flex-basis:100%;flex-wrap:wrap;white-space:normal;overflow:visible}div.find-panel{top:.6rem}}
+#detail{scroll-margin-top:56px}
+div.find-panel li{margin:0;border-top:1px solid var(--rule)}div.find-panel a{display:block;padding:.4rem .2rem;color:var(--ink)}div.find-panel small{display:block;color:var(--muted);font-size:.8em}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 var(--serif)}
 .wrap{max-width:1560px;margin:0 auto;padding:28px var(--gutter-r) 64px var(--gutter-l)}
@@ -646,7 +729,7 @@ nav.views a[aria-current=page]{color:var(--ink);border-bottom-color:var(--ink)}
 .c-agreement{--c:var(--agreement)}.c-scope{--c:var(--scope)}.c-divergence{--c:var(--divergence)}.c-contrary-reading{--c:var(--contrary-reading)}.c-none{--c:var(--muted)}
 .layout{display:grid;grid-template-columns:minmax(0,1fr);gap:24px}
 @media (min-width:1240px){.layout{grid-template-columns:minmax(0,1fr) 410px;align-items:start}
-#detail{position:sticky;top:12px;max-height:calc(100vh - 24px);overflow:auto}}
+#detail{position:sticky;top:56px;max-height:calc(100vh - 68px);overflow:auto}}
 .loom{position:relative;display:grid;grid-template-columns:minmax(0,1fr) clamp(56px,9vw,150px) minmax(0,.86fr) clamp(56px,9vw,150px) minmax(0,1fr);align-items:stretch}
 .loom svg{position:absolute;inset:0;pointer-events:none;overflow:visible}
 .col{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;justify-content:space-between;gap:4px;position:relative;z-index:1;min-width:0}

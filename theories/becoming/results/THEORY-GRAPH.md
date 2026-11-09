@@ -4,7 +4,7 @@
 
 [Home](../../../README.md) · [中文](../../../README.zh.md) · **Read** · [One page](../ONE-PAGE.md) · [The theory](../THE-THEORY-OF-BECOMING.md) · [Chapters](../chapters/README.md) · [Uses](../USES.md) · **Check** · [Tests](../../../TESTS.md) · [Results](../../../RESULTS.md) · [Proofs](../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../OPEN-QUESTIONS.md) · [Reviewers](../review/README.md) · **See** · [Graph](THEORY-GRAPH.md) · [Connections](atlas/CROSSWALK.md) · [How it grew](../../LINEAGE.md) · [Glossary](../../../GLOSSARY.md) · [Where everything is](../../../MAP.md)
 
-[中文（各章一览）](THEORY-GRAPH.zh.md) · 74–97 minutes to read in full; the chapters at a glance, what the picture shows and the edge kinds, with their tables, in 31–41 minutes.
+[中文（各章一览）](THEORY-GRAPH.zh.md) · 77–100 minutes to read in full; the chapters at a glance, what the picture shows and the edge kinds, with their tables, in 34–44 minutes.
 
 One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts, the chapter sections that state results and the review dossiers, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3220 nodes, 6892 edges. An edge records a dependence, a citation or a registered reading, not an agreement in meaning.
 
@@ -101,13 +101,69 @@ A region's results are the records whose home section is in its chapter, so the 
 
 ## What the picture shows and does not show
 
-**What it shows.** Each circle is a chapter's region, its area proportional to the results the region holds; the centre is the grammar (41 concepts). A solid curve from one chapter to another counts uses of the second's results by the first's under `formal-reuse`, which [RESULT-WORKFLOW](../../../_process/RESULT-WORKFLOW.md) keeps for "a verified inference using the cited result": the records, made with AI ("Made with AI, proofs included", [the one page](../ONE-PAGE.md)), assign the kind, the registry checks that an interface has its fields and cites a file among the record's hashed references (on 797 of all 1,162 such edges; each cites a Lean file), and nothing checks that the Lean there uses the cited result. Darker curves are an earlier chapter's results using a later one's: 6 of the 17 pairs drawn, the largest the root to the map with 60. Dashed curves between chapters are `interpretive`, kept for "an argument dependency", and dotted ones `application`; `related`, which RESULT-WORKFLOW keeps for analogy, is not drawn (1,420 edges). Not drawn as formal-reuse curves: 25 pairs with fewer than 10 formal-reuse uses (114 uses), 2 of them drawn as a dotted application curve; not drawn as dashed curves: 16 interpretive pairs with fewer than 3 (20 edges); and the counts of curves under 15 uses are not written. The table below has every pair. Beside a circle, "within" counts formal-reuse between results of the same chapter; interpretive edges within a chapter are in the table. A spoke's width, and the "k of m modules on the grammar" beside its chapter, count the region's core modules that state their laws on the grammar, as the region lists below say. Results in To retire (33 edges touch them) are in the table only. The continuation condition and C come into chapter 7 as readings: "the ranking results take two readings as hypotheses where used, neither asserted: the continuation condition for scope, C for order" ([07](../chapters/07-SIGNIFICANCE.md)). T1 to T8 stand at their homes, coloured by test outcome; their words, chosen from their rows in [08 §9](../chapters/08-METHOD.md#theses), standing first, are in the theses table above.
+**What it shows.** Each circle is a chapter's region, its area proportional to the results the region holds; the centre is the grammar (41 concepts). A solid curve from one chapter to another counts uses of the second's results by the first's under `formal-reuse`, which [RESULT-WORKFLOW](../../../_process/RESULT-WORKFLOW.md) keeps for "a verified inference using the cited result": the records, made with AI ("Made with AI, proofs included", [the one page](../ONE-PAGE.md)), assign the kind, the registry checks that an interface has its fields and cites a file among the record's hashed references (on 797 of all 1,162 such edges; each cites a Lean file), and nothing checks that the Lean there uses the cited result. Darker curves are an earlier chapter's results using a later one's: 6 of the 17 pairs drawn, the largest the root to the map with 60. Dashed curves between chapters are `interpretive`, kept for "an argument dependency", and dotted ones `application`; `related`, which RESULT-WORKFLOW keeps for analogy, is not drawn (1,420 edges). Not drawn as formal-reuse curves: 25 pairs with fewer than 10 formal-reuse uses (114 uses), 2 of them drawn as a dotted application curve; not drawn as dashed curves: 16 interpretive pairs with fewer than 3 (20 edges); and the counts of curves under 15 uses are not written. The list under "Edge kinds between chapters" has every pair with an edge. Beside a circle, "within" counts formal-reuse between results of the same chapter; interpretive edges within a chapter are on the diagonal of the interpretive table. A spoke's width, and the "k of m modules on the grammar" beside its chapter, count the region's core modules that state their laws on the grammar, as the region lists below say. Results in To retire (33 edges touch them) are in that list only. The continuation condition and C come into chapter 7 as readings: "the ranking results take two readings as hypotheses where used, neither asserted: the continuation condition for scope, C for order" ([07](../chapters/07-SIGNIFICANCE.md)). T1 to T8 stand at their homes, coloured by test outcome; their words, chosen from their rows in [08 §9](../chapters/08-METHOD.md#theses), standing first, are in the theses table above.
 
 **What it does not show.** An edge records a dependence, a citation or a registered reading, not an agreement in meaning, as this page begins. Nor does a curve say how far a chapter's results reach the grammar, which 08 §7 counts two ways. "Each of the 117 distinct central declarations has one standing against the edge of one root. Eleven are derived, each a case of grammar laws, through bridges checked in Lean as equivalences and support the review reads where a row has them"; "One, `GroupEnding.Flow.all_end`, is under a stated hypothesis"; "Six are counting, below the grammar. The other 99 stand at a named distance, each with its reason: 22 connected, reaching grammar laws without being declared a case of one" ([08 §7](../chapters/08-METHOD.md#r-one-root-to-its-edge)). And "The connectivity measure counts, at each landing, the shared laws that a central declaration's compiled type or value reaches"; "Counted once each, the 117 distinct declarations fall four ways: 45 reach the grammar; 30 rest on balance, which the grammar represents both ways and cannot state without amounts, so they are no gap" ([08 §7](../chapters/08-METHOD.md#shared-laws-and-connectivity)). Reaching the grammar is that dependence of a declaration's compiled type or value; being derived is a standing, a declaration read as a case of grammar laws through bridges checked in Lean as equivalences and support the review reads where a row has them. So 45 and 11 count different things, and the curves draw neither. Nor does a spoke: it counts modules that state their laws on the grammar, not results that reach it.
 
 ## Edge kinds between chapters
 
 Edges from the results of the first region to the results of the second, by the kind each record gives its dependence (`formal-reuse`, `interpretive`, `application`) and its `related` list (analogy, not a dependence). A row whose two regions are the same counts edges within the region.
+
+First, one table per kind among the eight chapters: a row is the chapter whose results use (for related, list) the column's, a column the chapter whose results are used (listed), the diagonal within a chapter, and a dot none.
+
+**formal-reuse**
+
+| from \ to | 01 | 02 | 03 | 04 | 05 | 06 | 07 | 08 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| 01 Root | 137 | 60 | 26 | 10 | 6 | 1 | 9 | 7 |
+| 02 Map | 42 | 141 | 17 | 8 | 2 | · | 20 | 3 |
+| 03 Knowing and testing | 40 | 15 | 102 | · | 4 | 1 | 13 | 2 |
+| 04 Life and evolution | 6 | 14 | 2 | 54 | 5 | · | 6 | · |
+| 05 Collectives and selection | 11 | 15 | 13 | 6 | 81 | · | 8 | · |
+| 06 Classical texts | 11 | 5 | 9 | · | · | 14 | · | · |
+| 07 Significance and alignment | 35 | 29 | 12 | 3 | 3 | · | 117 | 4 |
+| 08 Method and the formal core | 6 | 2 | 3 | · | · | · | 3 | 5 |
+
+**interpretive**
+
+| from \ to | 01 | 02 | 03 | 04 | 05 | 06 | 07 | 08 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| 01 Root | 2 | · | 1 | · | · | · | · | · |
+| 02 Map | 1 | · | · | · | · | · | 1 | · |
+| 03 Knowing and testing | 5 | 3 | 43 | 1 | · | · | 7 | · |
+| 04 Life and evolution | · | · | 2 | 1 | · | · | · | · |
+| 05 Collectives and selection | · | 1 | · | 2 | 4 | · | 1 | · |
+| 06 Classical texts | 1 | · | 2 | · | 1 | 5 | · | 1 |
+| 07 Significance and alignment | · | 2 | · | · | · | · | 8 | · |
+| 08 Method and the formal core | 1 | 1 | · | · | · | 1 | · | · |
+
+**application**
+
+| from \ to | 01 | 02 | 03 | 04 | 05 | 06 | 07 | 08 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| 01 Root | · | · | · | · | · | 1 | · | · |
+| 02 Map | 1 | 2 | · | · | · | · | · | · |
+| 03 Knowing and testing | · | · | · | · | · | · | · | · |
+| 04 Life and evolution | · | · | · | · | · | · | · | · |
+| 05 Collectives and selection | · | · | · | · | · | · | · | · |
+| 06 Classical texts | · | · | · | · | · | · | · | · |
+| 07 Significance and alignment | · | 1 | · | · | 3 | · | 3 | · |
+| 08 Method and the formal core | · | · | · | · | · | · | · | · |
+
+**related** (analogy, not a dependence)
+
+| from \ to | 01 | 02 | 03 | 04 | 05 | 06 | 07 | 08 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| 01 Root | 104 | 29 | 21 | 6 | 2 | 4 | 6 | 30 |
+| 02 Map | 27 | 153 | 21 | 10 | 15 | 17 | 24 | 13 |
+| 03 Knowing and testing | 15 | 31 | 184 | 6 | 3 | 4 | 12 | 8 |
+| 04 Life and evolution | 8 | 12 | 3 | 79 | 5 | 4 | 3 | 3 |
+| 05 Collectives and selection | 2 | 21 | 10 | 2 | 115 | 10 | 17 | 1 |
+| 06 Classical texts | 4 | 19 | 9 | 4 | 11 | 18 | 3 | · |
+| 07 Significance and alignment | 7 | 29 | 16 | 6 | 14 | 3 | 157 | 3 |
+| 08 Method and the formal core | 20 | 8 | 11 | 2 | 1 | · | 10 | 6 |
+
+Then every pair with an edge, To retire included:
 
 | Edges from results of | to results of | formal-reuse | interpretive | application | related |
 |---|---|---:|---:|---:|---:|

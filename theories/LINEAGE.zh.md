@@ -4,15 +4,17 @@
 
 [English](LINEAGE.md) · [首页](../README.zh.md) · [一页](becoming/ONE-PAGE.zh.md) · [用途](becoming/USES.zh.md) · [实例](becoming/USES-EXAMPLES.zh.md) · [总览](becoming/THE-THEORY-OF-BECOMING.zh.md) · [八章（英文）](becoming/chapters/README.md) · [古文（第六章）](becoming/chapters/06-CLASSICAL-TEXTS.md) · [检验](../TESTS.zh.md) · [对照表](becoming/results/atlas/CROSSWALK.zh.md) · **怎样长成** · [术语表](../GLOSSARY.zh.md) · [审查包](becoming/review/README.zh.md)
 
-*全文约 122–159 分钟；十分钟的部分是“弧线简述”、“简述”中的六个阶段与图及其图例；加上标签与这些线索，约 33–42 分钟。*
+*全文约 126–164 分钟；十分钟的部分是“弧线简述”、“简述”中的六个阶段与图及其图例；加上标签与这些线索，约 35–46 分钟。*
 
 *AI 依英文版写成，尚无人审查它的记录；义以英文版为准。*
 
-本论是怎样长成的：从 2021 年的文字，经由它读过、承继或放下的早先各理论文件夹，到现在的[生灭变化之论](becoming/ONE-PAGE.zh.md)。本页由[谱系数据](becoming/results/data/lineage.json)、各记录的历史与[对照表](becoming/results/atlas/CROSSWALK.zh.md)写出。在 `7040940cd`（2026 年 11 月 8 日）本仓库共有 6087 次提交，这是在那次提交时的计数；其第一次提交是 2026 年 9 月 6 日的，此前的东西都是带入仓库的材料。本页接续[九月时间线](../_process/history/2026-09-consolidation/TIMELINE.md)，那是「a narrative, not an index」（一份叙述，不是索引），止于 2026 年 10 月 4 日。本页的转折点由 AI 读者收集并核对，非人所为。
+本论是怎样长成的：从 2021 年的文字，经由它读过、承继或放下的早先各理论文件夹，到现在的[生灭变化之论](becoming/ONE-PAGE.zh.md)。本页由[谱系数据](becoming/results/data/lineage.json)、各记录的历史与[对照表](becoming/results/atlas/CROSSWALK.zh.md)写出。在 `55cf6892e`（2026 年 11 月 9 日）本仓库共有 6465 次提交，这是在那次提交时的计数；其第一次提交是 2026 年 9 月 6 日的，此前的东西都是带入仓库的材料。本页接续[九月时间线](../_process/history/2026-09-consolidation/TIMELINE.md)，那是「a narrative, not an index」（一份叙述，不是索引），止于 2026 年 10 月 4 日。本页的转折点由 AI 读者收集并核对，非人所为。
 
-**弧线简述。** 最早的文字（2021–2023）把城市诊断为一种结构，在一种关于变化的存在论中定义可能性，并把 molochs 列为一个社群面对的挑战。2024–2025 年，一种选择机制成形：一种价值被选作权力的象征，一个环选出纯粹的资本优化者，一个元吸引子捕获选择机制本身。2026 年，问题成为：在一场与 AI 的赢者通吃的游戏中，人类怎样还有未来；一种分岔叙事被提出又被放下，間成为唯一原语，Lean 成为检验器。到 10 月 6 日，诸篇写作被汇入各理论文件夹，本仓库最早的预先给定的预测写成。10 月，生灭变化之论得名，一份计划把本论植根于一种文法，伦理的两个前提（定范围的延续条件、定次序的 C）被分开。11 月，关于读取之形成的各项检验在任何运行之前冻结；T2 原先的表述在甲虫培养中未通过，T2 被收窄，AI 读者把早先各文件夹对着本论来读。
+**弧线简述。** 最早的文字（2021–2023）把城市诊断为一种结构，在一种关于变化的存在论中定义可能性，并把 molochs（得名于 Moloch，「the optimizer for value」，为价值而优化者）列为一个社群面对的挑战。2024–2025 年，一种选择机制成形：一种价值被选作权力的象征，一个环选出纯粹的资本优化者，一个元吸引子捕获选择机制本身。2026 年，问题成为：在一场与 AI 的赢者通吃的游戏中，人类怎样还有未来；一种分岔叙事（向一个 AI 要来的、关于有了 AI 之后的未来的故事）被提出又被放下，間（一切是间）成为唯一原语，Lean 成为融贯检验器。到 10 月 6 日，诸篇写作被汇入各理论文件夹，本仓库最早的预先给定的预测写成。10 月，生灭变化之论得名，一份计划把本论植根于一种文法，伦理的两个前提（定范围的延续条件、定次序的 C）被分开，今为其排序结果在所用之处所取的读法。11 月，读取之形成的各项检验（检验例如选择显示出一种次序的哪些方面这类律）在任何运行之前冻结，每一项至多驳倒一个指名的对应或桥接，从不驳倒一条定理；T2 原先关于什么确定一个可更新条件下一次给予的表述，在甲虫培养中未通过，T2 被收窄，AI 读者把早先各文件夹对着本论来读。11 月 9 日，本论不断言任何应当，只在一项结果所指名的读法之下对进程排序；T8，为生命的一种看法，成为本论之作者所提供的。
 
-**弧线全文。** 最早的文字把城市诊断为一种结构（转折点 1），在一种关于变化的存在论中定义可能性（2），并把 molochs 列为一个社群面对的挑战（3）。从 2024 年起，诊断得到复利（compounding）与一条选择律；[九月时间线](../_process/history/2026-09-consolidation/TIMELINE.md#the-shape-of-the-arc)（它本身是 AI 据材料写成的）把这一机制读作「at every scale」（在每一尺度上）反复出现：「a system rewards winners with more capacity to win, the winners acquire the standing to write the rules, they write them through their own way of seeing, and the way of seeing then reproduces itself」（一个系统以更多的获胜能力奖励获胜者，获胜者取得书写规则的地位，透过自己的观看方式书写规则，这种观看方式又再生产自身）（6、8–11、13；观看方式在 19 明确）。2026 年 2 月，问题转向 AI：「how could there be a future for humans in this winner takes all game?」（在这场赢者通吃的游戏里，人类怎么还会有未来？）（14）。5 月带来作为形式语言的文言与作为检验器的 Lean（16、18），这个月有 573 个文件，此前全部语料为 504 个；时间线举例而未计数，把这一加速「almost entirely」（几乎完全）归于智能体工具的到来。9 月，文字被汇入各文件夹，九月总图（也是 AI 写成的）把它们读作既非十五种理论、也非一种：「one diagnostic mechanism restated four times under successive names」（同一个诊断机制，以先后不同的名字重述了四次），旁边是不可化约为它的相邻承诺与工程系统（22）；一篇由 AI 起草的论文为每一主张配上反驳条件（23），10 月 2 日本仓库首批预先给定的预测写下（25）。10 月，生灭变化之论得名（27），一次 AI 审阅发现没有哪项核心结果是新的数学（34），一次 AI 审阅把伦理的两个前提分开（33）：延续条件定范围，C（扩大可形成者更好）定次序；按本论现在的写法，二者都只陈述、不断言；一份计划把本论植根于一种文法（35）。11 月第一周，对读取之形成的检验在任何运行之前冻结（45），T2 的三个量对照该领域拟合的嵌入受检，在另一领域中 T2 的措辞未通过而被收窄（44、46），C 被表明不为不读任何次序者所蕴涵（40），对进程的排序被说成需要 C 或一个代替它的前提（47），早先各文件夹由 AI 读者对照本论来读（48）；截取之后，11 月 9 日，本论把根据之问放下，不断言任何应当，并使 T8 成为本论的制作者所提供者。自 9 月起，多数转折点由 AI 写成的文本陈述，此前约一半由 AI 据一个人的话起草，见表中“执笔”一栏。
+![本论是怎样长成的](lineage.zh.svg)
+
+**弧线全文。** 最早的文字把城市诊断为一种结构（转折点 1），在一种关于变化的存在论中定义可能性（2），并把 molochs 列为一个社群面对的挑战（3）。从 2024 年起，诊断得到复利（compounding）与一条选择律；[九月时间线](../_process/history/2026-09-consolidation/TIMELINE.md#the-shape-of-the-arc)（它本身是 AI 据材料写成的）把这一机制读作「at every scale」（在每一尺度上）反复出现：「a system rewards winners with more capacity to win, the winners acquire the standing to write the rules, they write them through their own way of seeing, and the way of seeing then reproduces itself」（一个系统以更多的获胜能力奖励获胜者，获胜者取得书写规则的地位，透过自己的观看方式书写规则，这种观看方式又再生产自身）（6、8–11、13；观看方式在 19 明确）。2026 年 2 月，问题转向 AI：「how could there be a future for humans in this winner takes all game?」（在这场赢者通吃的游戏里，人类怎么还会有未来？）（14）。5 月带来作为形式语言的文言与作为检验器的 Lean（16、18），这个月有 573 个文件，此前全部语料为 504 个；时间线举例而未计数，把这一加速「almost entirely」（几乎完全）归于智能体工具的到来。9 月，文字被汇入各文件夹，九月总图（也是 AI 写成的）把它们读作既非十五种理论、也非一种：「one diagnostic mechanism restated four times under successive names」（同一个诊断机制，以先后不同的名字重述了四次），旁边是不可化约为它的相邻承诺与工程系统（22）；一篇由 AI 起草的论文为每一主张配上反驳条件（23），10 月 2 日本仓库首批预先给定的预测写下（25）。10 月，生灭变化之论得名（27），一次 AI 审阅发现没有哪项核心结果是新的数学（34），一次 AI 审阅把伦理的两个前提分开（33）：延续条件定范围，C（扩大可形成者更好）定次序；二者都只陈述、不断言，今为其排序结果在所用之处所取的读法；一份计划把本论植根于一种文法（35）。11 月第一周，对读取之形成的检验在任何运行之前冻结（45），T2 的三个量对照该领域拟合的嵌入受检，在另一领域中 T2 的措辞未通过而被收窄（44、46），C 被表明不为不读任何次序者所蕴涵（40），对进程的排序被说成需要 C 或一个代替它的前提（47），早先各文件夹由 AI 读者对照本论来读（48）；11 月 9 日，本论不求外来的根据，不断言任何应当，并使 T8 成为本论之作者所提供者（49；[07 §8](becoming/chapters/07-SIGNIFICANCE.md#theses)）。自 9 月起，多数转折点由 AI 写成的文本陈述，此前约一半由 AI 据一个人的话起草，见表中“执笔”一栏。
 
 ## 简述
 
@@ -23,28 +25,26 @@
 - **2026 年的转向**（2026-02 – 2026-07）。2026 年 2 月至 7 月，问题转向 AI，提出一种分岔叙事与一条规则，随后分岔叙事被放下，合作不被当作本身就好；間成为唯一原语（同日的另一版本以系代之），古文成为一种形式语言；Lean 作为融贯检验器进入；在一份由 AI 写成的工作立场中，选择被读作集中一种观看方式，即心中的 Moloch。（转折点 14–21；皆为公开；2 出自一个人，6 AI 起草）
 - **文件夹、论文与预测**（2026-09 – 2026-10-06）。2026 年 9 月至 10 月 6 日，诸篇写作被汇入各理论文件夹；一篇由 AI 起草的论文从可纠正性立论，每项主张都配有可驳倒它的观察；本仓库最早的预先给定的预测写于运行之前，其中一项在试运行中未通过；一条会议论文线被并入生成性解释，但未达到同日一项不作假设之指令的要求，该章今已移入历史。（转折点 22–26；皆为公开；1 出自一个人，1 AI 起草，3 AI 所作）
 - **生灭变化之论**（2026-10-09 – 2026-10-30）。2026 年 10 月 9 日至 30 日，生灭变化之论得名；它的 Lean 脊柱有了公理报告为空（仅就逻辑而言）的纯核；伦理的范围前提与次序前提（延续条件与 C）被分开；一次 AI 审阅认为没有一项核心结果是研究水平的新数学定理；一份计划把本论植根于一种相对于类的续的文法，其第一个模块落地；本论分为四层；T7 的冻结检验每一裁决都通过，而其桥接不成立，并且 T7 所禁止的一种情形，按当时的表述，发生了。（转折点 27–39；皆为公开；5 出自一个人，8 AI 所作）
-- **检验、读者版与对照**（2026-11-01 – 2026-11-07）。2026 年 11 月 1 日至 7 日，C 被表明不为不读任何次序者所蕴涵；关于读取之形成的各项检验在任何运行之前冻结；T2 的原先措辞在甲虫培养物上未通过，T2 被收窄；本论被冻结为读者版；早先各文件夹由 AI 读者在对照中对着它来读。（转折点 40–48；皆为公开；1 AI 起草，8 AI 所作）
-
-![本论是怎样长成的](lineage.zh.svg)
+- **检验、读者版与对照**（2026-11-01 – 2026-11-09）。2026 年 11 月 1 日至 7 日，C 被表明不为不读任何次序者所蕴涵；关于读取之形成的各项检验在任何运行之前冻结；T2 的原先措辞在甲虫培养物上未通过，T2 被收窄；本论被冻结为读者版；早先各文件夹由 AI 读者在对照中对着它来读；11 月 9 日，本论说它不断言任何应当，只在某项结果所指名的读法之下对进程排序，其伦理为本论之作者所提供。（转折点 40–49；皆为公开；2 AI 起草，8 AI 所作）
 
 每个转折点按陈述它的东西带一个标签。引自英文来源的话，以「」保留英文原文、附中文释义，或标明为译文；原文见[英文版](LINEAGE.md)。
 
-- **公开**（48）：本仓库中一个受跟踪的文件陈述了它。
+- **公开**（49）：本仓库中一个受跟踪的文件陈述了它。
 - **私人、未发表**（目前没有）：只有未在此发表的材料陈述了它（私人笔记与对话，或未存于此的材料），并有一个公开文本引用它。
 - **AI 重构**（目前没有）：没有来源陈述它；它是从材料中推断的，由 AI 读者推断，或由九月时间线这样的叙述推断，而那份叙述本身也是从材料中重构的。
 
-每个转折点也标明陈述它的文本出自谁之手，即其证据中首先陈述它的那一条：见“执笔”一栏，以及图中标记的填色（未说明者，标记中心有一点）。三位 AI 读者依文件、其所在文件夹或较早文件夹的来源列表的说明逐一归类，另三位逐条核对，48 条全部一致。所标的是那一条证据的执笔者：一行中的其他证据，以及取自它们的引文，可能出自别人之手。各条读法及其依据见[归类](../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rw-spine/reads/lineage-origins.json)。归类的条目依数据中的证据列表，其中可能两次引用同一处；表的每一行中，同一处只列一次。48 个转折点中：
+每个转折点也标明陈述它的文本出自谁之手，即其证据中首先陈述它的那一条：见“执笔”一栏，以及图中标记的填色（未说明者，标记中心有一点）。三位 AI 读者依文件、其所在文件夹或较早文件夹的来源列表的说明逐一归类，另三位逐条核对，48 条全部一致。第 49 个转折点是截取移到 11 月 9 日时加入的，由加入它的 AI 归类；其后的 AI 读者发现，它原先的第一条证据，即一个人的话，并不陈述这一改变；今其证据以陈述了它的工作规则开头，这些规则由 AI 依那些话起草（[第一次读法](../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rw-spine/reads/round-5-readers-1.json)、[第二次](../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rw-spine/reads/round-5-readers-2.json)）。所标的是那一条证据的执笔者：一行中的其他证据，以及取自它们的引文，可能出自别人之手。各条读法及其依据见[归类](../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rw-spine/reads/lineage-origins.json)。归类的条目依数据中的证据列表，其中可能两次引用同一处；表的每一行中，同一处只列一次。49 个转折点中：
 
 - **一个人的话**（15）：陈述它的文本是一个人自己写的，或是逐字保留的一个人的话（在 `sources/` 中，或是摘出的同一个人的发言），以文件或其所在文件夹的说明为据。
-- **AI 据一个人的话起草**（13）：陈述它的文本由 AI 依一个人的话、笔记或对话写成，以文件或其所在文件夹的说明为据：想法可能是那个人的，措辞不是。
+- **AI 据一个人的话起草**（14）：陈述它的文本由 AI 依一个人的话、笔记或对话写成，以文件或其所在文件夹的说明为据：想法可能是那个人的，措辞不是。
 - **AI 所作**（19）：陈述它的文本是本仓库自己由 AI 做成的工作：记录、各章、工作板、审阅、设计与 AI 的读法。
 - **未说明**（1）：找不到说明是谁写的，或说到它的文本彼此不一。
 
 **覆盖与日期。** 记录并不均匀。九月时间线提醒说，它所依据的对话导出止于 2026 年 5 月 5 日，「the silence after that date is the edge of the export」（此后的沉默是导出的边界），有些文件日期是后来提取或检出时的时间戳。一个转折点的日期，精确到其证据所给的程度。许多转折点（其中有 16 至 21 与 23）是 AI 据一个人的话起草的，而转折点又是选出来的，所以填色不能衡量一个人在任何时候写了多少。
 
-**转折点是怎样选的。** AI 读者为每个时期各收集 12 至 14 个（2021 至 2025 年；2026 年至 10 月 4 日；10 月其余时间；11 月第一周），一位对抗性的读者逐一核对，第三位按[其指令](../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rw-spine/workflows/2-lineage-finalize.js)为每个时期至多保留九或十个，即「the real turning points, where vocabulary, method, structure or standing changed」（词汇、方法、结构或地位发生改变的真正转折点）；另有七个循选择机制，三个来自论文一层，其中有审阅包。每个时期都恰在其配额上，所以没有哪个时期的数目说明当时发生了多少事。
+**转折点是怎样选的。** AI 读者为每个时期各收集 12 至 14 个（2021 至 2025 年；2026 年至 10 月 4 日；10 月其余时间；11 月第一周），一位对抗性的读者逐一核对，第三位按[其指令](../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rw-spine/workflows/2-lineage-finalize.js)为每个时期至多保留九或十个，即「the real turning points, where vocabulary, method, structure or standing changed」（词汇、方法、结构或地位发生改变的真正转折点）；另有七个循选择机制，三个来自论文一层，其中有审阅包。每个时期都恰在其配额上，所以没有哪个时期的数目说明当时发生了多少事。第 49 个转折点不经这一选择，是截取移到 11 月 9 日时由那一次的 AI 会话加入的。
 
-**这些转折点循什么。** 48 个转折点中，19 个标在下文所循的三条线索上（选择机制、根与伦理），其余 29 个不在任何线索上。它们的证据引用 16 个早先文件夹中 4 个的 README 或文件；其他文件夹的材料可能经由 `sources/` 进入。每个文件夹后来如何，见[对照](becoming/results/atlas/CROSSWALK.zh.md)；多数文件夹自身的历史，见其 README 中的谱系一节（[各文件夹](README.md)）。
+**这些转折点循什么。** 49 个转折点中，20 个标在下文所循的三条线索上（选择机制、根与伦理），其余 29 个不在任何线索上。它们的证据引用 16 个早先文件夹中 4 个的 README 或文件；其他文件夹的材料可能经由 `sources/` 进入。每个文件夹后来如何，见[对照](becoming/results/atlas/CROSSWALK.zh.md)；多数文件夹自身的历史，见其 README 中的谱系一节（[各文件夹](README.md)）。
 
 `_process/history/2026-09-consolidation/reading-notes-inputs/hb-*.md` 这些文件，是从未入库的对话导出中摘出的同一个人的发言；引用它们的转折点标为公开，因为摘录本身已入库。
 
@@ -75,7 +75,7 @@
 
 ## 第三条线索：伦理
 
-伦理怎样走到它的两个前提：延续条件定范围，C（扩大可形成者更好）定次序，二者都只陈述、不断言。合作并不被视为本身就好（15）；保持开放而不是扩大一个度量（17），这是本论改变了的一项主张，因为 C 读作「admits more」（容纳更多），是[对照所记](becoming/results/atlas/crosswalk/keep-the-possibility-space-open.md#cx-kpso-open-is-not-c)（英文）的一处分歧［AI 读法］；G0（后来名为存活之意义）不再是所采用的公理（29）；范围与次序分开（33）；道为生命而提出，*对生命而言*说的是这是谁的道，不是谁的损失算数（39）；C 被表明不从不读任何次序者得出（40）；对进程的排序被说成需要 C 或一个代替它的前提（47）。截取之后，2026 年 11 月 9 日，本论把根据之问放下：其伦理不断言任何应当，只在一项结果所指名的读法之下排序；T8 成为本论的制作者所提供的一种看法，不约束任何人（[07 §8](becoming/chapters/07-SIGNIFICANCE.md#theses)）。
+本论怎样走到其排序结果在所用之处作为假设所取的两种读法：延续条件定范围，C（扩大可形成者更好）定次序，二者都不断言（11 月 9 日之前称为伦理的前提）；其伦理又怎样成为本论之作者所提供的：合作并不被视为本身就好（15）；保持开放而不是扩大一个度量（17），这是本论改变了的一项主张，因为 C 读作「admits more」（容纳更多），是[对照所记](becoming/results/atlas/crosswalk/keep-the-possibility-space-open.md#cx-kpso-open-is-not-c)（英文）的一处分歧［AI 读法］；G0（后来名为存活之意义）不再是所采用的公理（29）；范围与次序分开（33）；道为生命而提出，*对生命而言*说的是这是谁的道，不是谁的损失算数（39）；C 被表明不从不读任何次序者得出（40）；对进程的排序被说成需要 C 或一个代替它的前提（47）；11 月 9 日，本论不求外来的根据：它不断言任何应当，只在一项结果所指名的读法之下对进程排序；T8 成为本论之作者所提供的一种看法，不约束任何人（49；[07 §8](becoming/chapters/07-SIGNIFICANCE.md#theses)）。
 
 - **15.** **2026-04-16，The Fork（分岔）叙事被放下；合作本身并非善。** The Fork（分岔）叙事被放下：「I think I have moved on from the fork narrative, it becomes simpler」（我想我已经从分岔叙事走出来了，它变得更简单）；此前 2026-03-18 有过一次校正，说 The Fork 从未被表述为「in a way that was neo-feudalism vs automated commons」（新封建对自动化公地的方式）：「the actual possibility space that we can pursuit is huge」（我们实际能追求的可能性空间极大）。合作并不被视为本身为善：「cooperative on the wrong thing could be why worse than just competing on it」（在错误的事上合作，可能比单纯在其上竞争更糟）；The Fork 文件夹把这读作生成与退化（generative versus degenerative）之判据，而这两个词要到 2026-04-28 才出现。
 - **17.** **2026-05-04，以开为根：护未成之域不闭，非扩张可测之物。** 《生生不息论》v9（开境护闭校正版；据该文件夹，大多由模型起草的文言表述被带入其中）写道「生生不息 ≠ 复杂性必然上升」「复杂性上升 ≠ 善」，所论之善非「扩张某可测量之物」，乃「护未成之域不闭」。一份由 AI 写成的文件夹综述记开取代「expanding the possibility space」（扩张可能性空间）成为根范畴；但 2026-05-07 的报告仍以「可能性空间之持续扩张」释生生不息，并保留论证唯一一种「稳定可奠基」之 alignment 的目标。
@@ -84,6 +84,7 @@
 - **39.** **2026-10-30，生命之伦理，并无绝对之善。** 10 月 30 日的一则消息认为「there is no absolute universal good vs evil - it is just for us as life」（并无绝对普遍的善与恶，这只是对作为生命的我们而言）。论题 T8 写道「For life, the way is 生生, life in the whole and its continuing generation」（对生命而言，道是生生，即整体之中的生命及其持续的生发；对生生的这一释义是 AI 的读法，D1）；又写道「*For life* says whose way it is, not whose losses count: every continuation's still does」（*对生命而言*说的是这是谁的道，不是谁的损失算数：每一个延续的损失仍然算数）；范围由延续条件给出，次序由 C 给出。经对一则 AI 起草之措辞的认可，目标题名由「所有智能的普遍元伦理」改为「生命之伦理，及在其中形成的一切智能」。
 - **40.** **2026-11-01，C 不为不读任何次序者所蕴涵。** 一条 Lean 结果 `ReadsNoOrder.not_entails` 表明：「A statement reading no order entails C only where it fails」（一个不读任何次序的陈述，只在它不成立之处才蕴涵 C），C 即扩大可形成者更好这一前提；第七章称这一点「immediate, since "better" is free: it shows that a frame fixes no order.」（是直接的，因为“更好”是自由的：它表明一个框架不确定任何次序。）工作规则据此写明：不得写伦理由延续条件推出，而「deriving C from a weaker premise is open work」（从更弱的前提推出 C 是尚待去做的工作）。
 - **47.** **2026-11-07，不再说 C 独自给出次序；Lean 中重复的证明削减。** 凡文本说 C 独自给出次序，或说排序需要 C 之处，「it now says a ranking of courses needs C or a premise in its place」（现在都说：对进程的排序需要 C，或一个代替它的前提）。一次对编译后之项的审计（所在一节标为 11 月 6 日）走遍 Lean 包的每一个常量；借一次近乎完整的重建，每一份公理报告为空，「no new mathematics」（没有新的数学），被证明不止一次的陈述由 113 组减为 21 组。两项更正都于 11 月 7 日落地。
+- **49.** **2026-11-09，在生灭变化之内：本论不断言任何应当；T8 为本论之作者所提供。** 11 月 8 日，一个人的话（逐字保存）把对与错读作整体之内的「cognitive structures/dynamics」（认知结构／动态）。11 月 9 日，工作规则说「the account asserts no should, and ranks courses only under readings a result names」（本论不断言任何应当，只在某项结果所指名的读法之下对进程排序）：定范围的延续条件、定次序的 C，以及任何其他前提；各文本随之修订：第七章把 T8 陈述为本论之作者所提供的，「a way of seeing, not a verdict」（一种看法，不是裁断）；工作板记下 07 的伦理与 T8「as its makers' offer, binding no one」（为本论之作者所提供，不约束任何人）。
 
 ## 转折点
 
@@ -139,6 +140,7 @@
 | 46 | 2026-11-06 | **UE31b 使 T2 的措辞未通过；T2 收窄为水平自身的历史所及。** 按单元读面粉甲虫的培养物，T2 的措辞「as far as anything measured does」（凡量度所及）败于蛹与成虫，「a class of fewer variables」（变量更少的类）；这一失败算作不利于“凡在取用之下的可更新的缘都如此”这一主张的证据，但「does not defeat T2 in the fisheries」（并不因此在渔业中推翻 T2）。第二章现在说，这三个量连同取用确定下一次给予，「as far as the level's own history does」（水平自身的历史所及）。 | [来源 2 处](#src-46) | 公开 | AI 所作 |
 | 47 | 2026-11-07 | **不再说 C 独自给出次序；Lean 中重复的证明削减。** 凡文本说 C 独自给出次序，或说排序需要 C 之处，「it now says a ranking of courses needs C or a premise in its place」（现在都说：对进程的排序需要 C，或一个代替它的前提）。一次对编译后之项的审计（所在一节标为 11 月 6 日）走遍 Lean 包的每一个常量；借一次近乎完整的重建，每一份公理报告为空，「no new mathematics」（没有新的数学），被证明不止一次的陈述由 113 组减为 21 组。两项更正都于 11 月 7 日落地。 | [来源 3 处](#src-47) | 公开 | AI 所作 |
 | 48 | 2026-11-07 | **对照表：以现行之论读此前各文件夹与各思想领域。** 1,183 条条目以现行之论读此前的 16 个理论文件夹与 12 个思想领域，旁附一张关联图；该对照表「creates no result, and every entry is an AI reading with no person's behind it」（不产生任何结果，每一条都是 AI 的读法，背后没有任何人的读法）。第二位批评者读了随机抽取的 100 条，据此「estimates 82.6% holding」（估计 82.6% 成立），其余条目未再读；读者标出之处中，有 26 处在现行文本中于其所属之处改正，另有九处「gave ranking to C alone in other words」（换了说法，把排序单单交给 C）。 | [来源 3 处](#src-48) | 公开 | AI 所作 |
+| 49 | 2026-11-09 | **在生灭变化之内：本论不断言任何应当；T8 为本论之作者所提供。** 11 月 8 日，一个人的话（逐字保存）把对与错读作整体之内的「cognitive structures/dynamics」（认知结构／动态）。11 月 9 日，工作规则说「the account asserts no should, and ranks courses only under readings a result names」（本论不断言任何应当，只在某项结果所指名的读法之下对进程排序）：定范围的延续条件、定次序的 C，以及任何其他前提；各文本随之修订：第七章把 T8 陈述为本论之作者所提供的，「a way of seeing, not a verdict」（一种看法，不是裁断）；工作板记下 07 的伦理与 T8「as its makers' offer, binding no one」（为本论之作者所提供，不约束任何人）。 | [来源 4 处](#src-49) | 公开 | AI 据一个人的话起草 |
 
 ### 各行来源
 
@@ -189,7 +191,8 @@
 - <a id="src-45"></a>**45.** [`experiments/README.md`](../experiments/README.md?plain=1#L33)（formations-that-read row（第 33 行））；提交 `d7aab6cd1` 中的 `_process/BECOMING-WORKBOARD.md`（the board's decisions section，the review packet's decisions）；提交 `bfd7657af` 中的 `_process/BECOMING-WORKBOARD.md`（the board's decisions section，the review packet's decisions）；[`experiments/formations-that-read/README.md`](../experiments/formations-that-read/README.md?plain=1#L59)（## The runs made，TR7's Stage A）
 - <a id="src-46"></a>**46.** [`experiments/state-named-in-advance/README.md`](../experiments/state-named-in-advance/README.md?plain=1#L80)（## UE31b's result（第 80 行））；[`theories/becoming/chapters/02-MAP.md`](becoming/chapters/02-MAP.md?plain=1#L281)（Thesis T2（第 281 行））
 - <a id="src-47"></a>**47.** 提交 `b29f69449` 中的 `_process/BECOMING-WORKBOARD.md`（Queue line，'LM1 landed' clause）；[`_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md`](../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md?plain=1#L515)（## LM: what rode the near-full rebuild（第 515 行））；提交 `16c55965c` 中的 `_process/BECOMING-WORKBOARD.md`（Queue line，'LM landed: the Lean made whole' clause）
-- <a id="src-48"></a>**48.** 提交 `448f15a6e` 中的 `_process/BECOMING-WORKBOARD.md`（Queue line，CX landed clause）；[`theories/becoming/results/atlas/CROSSWALK.md`](becoming/results/atlas/CROSSWALK.md?plain=1#L23)（opening（第 23 行））；[`theories/becoming/results/atlas/CROSSWALK.md`](becoming/results/atlas/CROSSWALK.md?plain=1#L27)（How far to trust it（第 27 行））
+- <a id="src-48"></a>**48.** 提交 `448f15a6e` 中的 `_process/BECOMING-WORKBOARD.md`（Queue line，CX landed clause）；[`theories/becoming/results/atlas/CROSSWALK.md`](becoming/results/atlas/CROSSWALK.md?plain=1#L34)（opening（第 34 行））；[`theories/becoming/results/atlas/CROSSWALK.md`](becoming/results/atlas/CROSSWALK.md?plain=1#L38)（How far to trust it（第 38 行））
+- <a id="src-49"></a>**49.** [`AGENTS.md`](../AGENTS.md?plain=1#L28)（## Evaluation（第 28 行））；[`theories/becoming/chapters/07-SIGNIFICANCE.md`](becoming/chapters/07-SIGNIFICANCE.md?plain=1#L779)（Thesis T8（第 779 行））；提交 `55cf6892e` 中的 `_process/BECOMING-WORKBOARD.md`（Queue line，WB's landed clause）；[`sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md`](../sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md?plain=1#L27)（### 2（8 November）（第 27 行））
 
 ## 改名
 
@@ -281,7 +284,7 @@
 
 ## 记录中的增长
 
-各记录的历史条目，按其开头日期所在的周计，截至 2026 年 11 月 8 日（上文提交计数的日期），按各记录现在的样子：有日期的 4805 条；没有开头日期的 184 条，以及此后的条目，不计。一个条目是对一项结果之改动的一条带日期的记载，所以这个计数量的是记下的改动，而不是结果。
+各记录的历史条目，按其开头日期所在的周计，截至 2026 年 11 月 9 日（上文提交计数的日期），按各记录现在的样子：有日期的 4853 条；没有开头日期的 184 条，以及此后的条目，不计。一个条目是对一项结果之改动的一条带日期的记载，所以这个计数量的是记下的改动，而不是结果。
 
 | 周（自周一） | 条目 |
 |---|---:|
@@ -290,6 +293,7 @@
 | 2026-10-19 | 1775 |
 | 2026-10-26 | 456 |
 | 2026-11-02 | 304 |
+| 2026-11-09 | 48 |
 
 ## 本页所依据的
 
