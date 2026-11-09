@@ -387,6 +387,7 @@ import Becoming.RoutesToC
 import Becoming.FlowCenters
 import Becoming.PersistingChoices
 import Becoming.BeyondCoupling
+import Becoming.ReadingsPersist
 import Becoming.SignificanceStatements
 
 /-!
@@ -4772,6 +4773,24 @@ tagged instance or application.
   `Diversion`, among them the failed candidate that coupling the dweller in turns the selection
   against its loss (`Clearing.read_not_direction`). A leaf: it composes laws of modules that nothing
   below imports together; short laws, none new as mathematics.
+* `Becoming.ReadingsPersist` (L2, through `Becoming.PersistingChoices` and `Becoming.BeyondCoupling`):
+  which readings persist (route (b)'s piece J2). A world whose relata act by the readings they carry
+  (`ExchangeLaw.byReading`) is Bound's `law.withAct part (act sig)` where the part carries `sig`; a balanced
+  flow following a law of what has stood has the levels it generates and the course is feasible
+  (`ExchangeLaw.levels_of_follows`, `ExchangeLaw.feasible_of_follows`). The line read off a flow
+  (`Flow.lineOf`) is G3's `Descended` by construction and carries its founders' inherited reading
+  (`Flow.lineOf_carries`); G3's `realized` holds by construction where every occasion picks the carried
+  reading (`Flow.carried_keeping_above_ending`); `Flow.ReachesBefore` lifted to lines with dated
+  membership (`Flow.LineReachesBefore`). Persistence selects no reading beyond the line's coupling closure
+  (`line_standing_unselected`, `act_courses_unselected_throughout` with standing late as the selection).
+  With the pool read off the course, selection by persistence is not turned by removal
+  (`survivorsPersist_of_settled`) while read off a fixed pool it is (`not_allPersist_of_removes`); a
+  selection removing its own readers is stated (`RemovesItsReaders`), and a reader the alternatives do not
+  reach is kept alike (`reader_kept_alike`). Witnesses in `ReadingsPersist.Habitat`, every course generated
+  by the acts: where nothing comes back from a dweller, the line reading its source persists and clears the
+  dweller's habitat as the line reading everything persists and spares it, the line reading itself alone
+  ends, and the persisting course removes its readers; where the dweller renews the source, the clearing
+  reading ends with the dweller. A leaf; short laws, none new as mathematics.
 * `Becoming.GrammarPath` (L1): what a line under a class must hold, and what a regularity takes in
   (board item PF), for every carrier, relation and class. Where a region is left under a class only
   into a set, a line under the class from inside to outside holds a member of that set alike to its
