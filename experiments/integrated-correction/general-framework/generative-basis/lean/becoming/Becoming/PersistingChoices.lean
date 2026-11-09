@@ -72,8 +72,8 @@ board item ZC's, `Becoming.OwnClass`, and which formations are centers ZA-G1's, 
   choices consistent with ranking keeping above ending where that was at stake; where degrees of keeping are
   at stake it does not force self-concern (the witness).
 - *Goal misgeneralization.* Whatever persisting fixes, it fixes on the occasions met; where some consistent
-  order is self-concerned there, a course never met is ranked either way by strict orders according with
-  every choice (`ChoiceOccasions.reversed_off_met`; as in
+  order is self-concerned there, a course never met can be ranked below the course it widens by strict
+  orders according with every choice (`ChoiceOccasions.reversed_off_met`; as in
   `ChoiceOccasions.Untried`, and for a trained response `Training.response_free_where_unlumped`).
 - *Revealed preference.* `ChoiceOccasions.selfConcerned_consistent_iff` is rationalizing strict choices by a
   strict partial order (Richter 1966) with required comparisons added.
