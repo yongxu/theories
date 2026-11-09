@@ -215,7 +215,7 @@
 <text x="506" y="1641.3" font-size="14" text-anchor="start" fill="#1c1917">以及少于 10 次 formal-reuse 使用之配对的实</text>
 <text x="506" y="1659.3" font-size="14" text-anchor="start" fill="#1c1917">线；少于 15 次的不标数字。理论图“各章一览”</text>
 <text x="506" y="1677.3" font-size="14" text-anchor="start" fill="#1c1917">的中文版（THEORY-GRAPH.zh.md）中各章之间边</text>
-<text x="506" y="1695.3" font-size="14" text-anchor="start" fill="#1c1917">的种类表列出全部。</text>
+<text x="506" y="1695.3" font-size="14" text-anchor="start" fill="#1c1917">的种类（各表与配对列表）列出全部。</text>
 <text x="24" y="1737" font-size="13" text-anchor="start" fill="#57534e">图中文字为 AI 所译，义以英文版为准。由 tools/research/spine.py 依 theory-graph.json 与 spine.json 画出；</text>
 <text x="24" y="1753" font-size="13" text-anchor="start" fill="#57534e">它显示什么、不显示什么，见 THEORY-GRAPH.zh.md 的“这幅图显示什么、不显示什么”。</text>
 </svg>

@@ -163,7 +163,7 @@ First, one table per kind among the eight chapters: a row is the chapter whose r
 | 07 Significance and alignment | 7 | 29 | 16 | 6 | 14 | 3 | 157 | 3 |
 | 08 Method and the formal core | 20 | 8 | 11 | 2 | 1 | · | 10 | 6 |
 
-Then every pair, To retire included:
+Then every pair with an edge, To retire included:
 
 | Edges from results of | to results of | formal-reuse | interpretive | application | related |
 |---|---|---:|---:|---:|---:|

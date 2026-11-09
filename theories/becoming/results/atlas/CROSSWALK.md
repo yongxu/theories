@@ -16,7 +16,7 @@ All 1183 entries, in 28 groups, summed; every entry is an AI reading, no person'
 
 The relations sum to 1,059: the other 124 entries have none (105 not-carried, 19 history-only). 3 history-only entries have one, which [the connection map](map.html) draws as a short end, not a thread, though its group counts include them.
 
-**Start here.** The largest dots in the picture below that the account takes up (states, or says otherwise; none proposed here), and any that tie with the fifth: a folder or domain, the part of the account its claims are read against, the relation and how many claims. Each folder's page gives its claims one by one.
+**Start here.** The five largest dots in the picture below that the account takes up (states, or says otherwise; none proposed here), and any that tie with the fifth: a folder or domain, the part of the account its claims are read against, the relation and how many claims. Each folder's page gives its claims one by one.
 
 | Folder or domain | Read against | Relation | Claims |
 |---|---|---|---:|
@@ -29,7 +29,7 @@ The relations sum to 1,059: the other 124 entries have none (105 not-carried, 19
 
 ![How the earlier folders and the domains of thought meet the live account](connections.svg)
 
-*Drawn by connection_map.py from the crosswalk’s claims, on the pages its table links: a row per folder or domain, a column per part of the account its claims are read against, and in each cell a dot per relation, filled for what the account takes up and, below it, a ring for what is proposed here; every dot is an AI reading, no person’s. To explore the same data, open [the connection map](map.html) on the reader’s site, once it is published, or from a clone; GitHub shows it only as source.*
+*Drawn by connection_map.py from the crosswalk’s claims, on the pages its table links: a row per folder or domain, a column per part of the account its claims are read against, and in each cell up to two dots per relation, filled for what the account takes up and, below it, a ring for what is proposed here; every dot is an AI reading, no person’s. To explore the same data, open [the connection map](map.html) on the reader’s site, once it is published, or from a clone; GitHub shows it only as source.*
 
 Each earlier theory folder and each domain of thought: what it claimed in its own terms, and what became of that in the live account. The evidence layer, not for reading through. It creates no result, and every entry is an AI reading with no person's behind it. A shared word is not a correspondence, structural agreement is not agreement in meaning, and no tradition is spoken for. Not carried is an outcome, not a defect. Where a source is not stored here, what is said of it comes from the AI's knowledge and has not been checked against a text.
 

@@ -86,7 +86,7 @@ WORDS = {
         'laws_head': 'The five shared laws (08 §7): central rows on each; hatched, those whose compiled type or value reaches the grammar',
         'law_all': '{c} rows, all {c} reach', 'law_some': '{c} rows, {k} reach', 'law_rep': 'represented both ways, not derived',
         'laws_note': 'Rows, not declarations: {rested} of the {rows} central rows (nine declarations stand in two) rest on at least one law, some on several. Reaching the grammar is not being derived: only the {d} derived above are read as cases of grammar laws, and {h} as a root form at one step, under a stated hypothesis. A bar of few rows is widened to be seen; the words give the counts.',
-        'related': 'Not drawn: related, for analogy ({n} edges), and the formal-reuse curves of pairs under {m} uses; counts under {k} are not written. THEORY-GRAPH.md’s table of edge kinds between chapters has them all.',
+        'related': 'Not drawn: related, for analogy ({n} edges), and the formal-reuse curves of pairs under {m} uses; counts under {k} are not written. THEORY-GRAPH.md’s edge kinds between chapters, its tables and pair list, have them all.',
         'theses': 'The theses',
         'theses_note': 'T1–T8 at their homes; what each claims, its standing and its tests: the theses table in THEORY-GRAPH.md, “The chapters at a glance”.',
         'premises': 'Two readings, each a hypothesis where used',
@@ -109,7 +109,7 @@ WORDS = {
         'laws_head': '五条共律（08 §7）：依于每一条的核心行；斜线部分是其编译后的类型或值达到文法的行',
         'law_all': '{c} 行，全部达到', 'law_some': '{c} 行，{k} 行达到', 'law_rep': '双向表示，不推导',
         'laws_note': '计的是行，不是声明：{rows} 个核心行（九项声明各占两行）中，{rested} 行至少依于一条律，有的依于多条。达到文法不等于推导而得：被读作文法之律之情形的，只有上面推导而得的 {d} 项，另有 {h} 项在一个所述的假设之下被读作一个根形式的一步。行数很少的条加宽以便看见；数目以文字为准。',
-        'related': '不画出：相关（related，用于类比，{n} 条边），以及少于 {m} 次 formal-reuse 使用之配对的实线；少于 {k} 次的不标数字。理论图“各章一览”的中文版（THEORY-GRAPH.zh.md）中各章之间边的种类表列出全部。',
+        'related': '不画出：相关（related，用于类比，{n} 条边），以及少于 {m} 次 formal-reuse 使用之配对的实线；少于 {k} 次的不标数字。理论图“各章一览”的中文版（THEORY-GRAPH.zh.md）中各章之间边的种类（各表与配对列表）列出全部。',
         'theses': '论题',
         'theses_note': 'T1 到 T8 在其所属之处；各自主张什么、地位如何、检验如何：见理论图“各章一览”的中文版（THEORY-GRAPH.zh.md）中的论题表。',
         'premises': '两种读法，各在所用之处为假设',
@@ -1266,10 +1266,10 @@ def picture_key(s, lang, page='theories/becoming/ONE-PAGE.md'):
     total, d, h, c, rest = n['117'], n['11'], n['1'], n['6'], n['99']
     if lang == 'zh':
         return (f'实线计一章的结果使用另一章结果、记为 formal-reuse 的次数：这一类由 AI 写成的记录指定，没有任何检查核对一次使用是否见于 Lean；'
-                f'较深的一条是逆向的（章的编号是为阅读，不是证明的次序），即章序在前的一章使用章序在后的一章；登记检查不让任何记录闭合其已声明依赖之环'
+                f'较深的曲线是逆向的（章的编号是为阅读，不是证明的次序），即章序在前的一章的结果使用章序在后的一章的结果；登记检查不让任何记录闭合其已声明依赖之环'
                 f'（[这是入册的条件，不是一项发现]({tg}#do-the-recorded-uses-form-a-cycle)）。'
                 f'辐条的粗细是该章核心模块中在文法上陈述其律者所占的比例，计的是模块，不是推导而得的结果。'
-                f'{total} 项核心声明中，{d} 项[推导而得]({gl}#derived)，{h} 项为一个根形式的一步、在一个所述的假设之下，{c} 项为计数之律、位于文法以下，'
+                f'{total} 项核心声明中，{d} 项[推导而得]({gl}#derived)，{h} 项为一个根形式的一步情形、在一个所述的假设之下，{c} 项为计数之律、位于文法以下，'
                 f'{rest} 项处于一个[指明的距离]({gl}#named-distance)、各有其理由（[这幅图显示什么、不显示什么]({tg}#the-spine-what-it-shows-and-does-not-show)）。')
     return (f'A solid curve counts one chapter\'s uses of another\'s results recorded as formal-reuse, a kind the AI-written records assign, '
             f'and nothing checks a use against the Lean; a darker one runs backward, an earlier chapter using a later one (the chapters are '
@@ -1477,7 +1477,7 @@ def section(graph, page_path):
              'First, one table per kind among the eight chapters: a row is the chapter whose results use (for related, list) the '
              'column\'s, a column the chapter whose results are used (listed), the diagonal within a chapter, and a dot none.', '',
              *edge_matrices(pairs, s, 'en'),
-             'Then every pair' + (f', {", ".join(name.get(k, k) for k in others)} included' if others else '') + ':', '',
+             'Then every pair with an edge' + (f', {", ".join(name.get(k, k) for k in others)} included' if others else '') + ':', '',
              '| Edges from results of | to results of | formal-reuse | interpretive | application | related |',
              '|---|---|---:|---:|---:|---:|']
     full = list(theory_graph.REGION_ORDER)
@@ -1604,7 +1604,7 @@ def zh_page(graph):
              '英文区域名见[英文版](THEORY-GRAPH.md#the-regions)。', '',
              '先是八章之间每一种边各一张表：行是使用（related：列出）者结果所在的章，列是被使用（被列出）者结果所在的章，对角线是一章之内，圆点表示没有。', '',
              *edge_matrices(pairs, s, 'zh'),
-             '再是每一对区域' + (f'，{"、".join("「" + zname(k) + "」" for k in others)}也在内' if others else '') + '：', '',
+             '再是有边的每一对区域' + (f'，{"、".join("「" + zname(k) + "」" for k in others)}也在内' if others else '') + '：', '',
              '| 从此区域的结果 | 到此区域的结果 | formal-reuse | interpretive | application | related |',
              '|---|---|---:|---:|---:|---:|']
     full = list(theory_graph.REGION_ORDER)

@@ -1,5 +1,5 @@
 {
- "about": "AI readings: who wrote the evidence of each turning point of theories/LINEAGE.md (lineage.json's points, numbered from 1), classified by three AI readers from what each file or its folder says and checked point by point by three more (RW's re-score, Q4, 8 November 2026). No person has read them. 'origin' is the point's: that of the first evidence entry that states the turning point. All 48 checks agreed. Point 49, added on 9 November 2026 when the cut moved to that day, was classified by the session that added it; that round's AI readers found its first evidence did not state the change, and it was reclassified, then classed AI-drafted from those words (round-5-readers-1.json, round-5-readers-2.json).",
+ "about": "AI readings: who wrote the evidence of each turning point of theories/LINEAGE.md (lineage.json's points, numbered from 1), classified by three AI readers from what each file or its folder says and checked point by point by three more (RW's re-score, Q4, 8 November 2026). No person has read them. 'origin' is the point's: that of the first evidence entry that states the turning point. All 48 checks agreed. Point 49, added on 9 November 2026 when the cut moved to that day, was classified by the session that added it; that round's AI readers found its first evidence, a person's words, did not state the change, and it was reclassified, then classed AI-drafted from those words (round-5-readers-1.json, round-5-readers-2.json).",
  "classes": {
   "person": "the text that states it is a person's own writing, or a person's words kept verbatim (in `sources/`, or the excerpts of one person's turns), as the file or its folder says.",
   "drafted": "the text that states it was written by AI from a person's words, notes or conversation, as the file or its folder says: the ideas may be the person's, the wording is not.",
@@ -1528,7 +1528,7 @@
     {
      "path": "AGENTS.md",
      "origin": "drafted",
-     "basis": "The working rules, revised by WB's session on a person's words of 8–9 November 2026 (the board's WB clause at 55cf6892e: 'on Ren's words of 8–9 November 2026'; the source file's messages asking to change AGENTS.md first); the line is in '## Evaluation'."
+     "basis": "The working rules, revised by WB's session on a person's words of 8–9 November 2026 (the board's WB clause at 55cf6892e: 'on Ren's words of 8–9 November 2026'; the source file's message 8 asking to change AGENTS.md first, and message 9 on its draft); the line is in '## Evaluation'."
     },
     {
      "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",

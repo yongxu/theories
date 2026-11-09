@@ -435,12 +435,12 @@ OV_TEXT = {
                   'prominently than divergence.'),
            'critic': 'A random check of {sampled} entries estimates that about {label}% of all {n} carry a wrong label or target role and {fails}% a wrong reading.',
            'folders': '{n} earlier folders', 'claims': 'claims', 'domains': '{n} domains of thought', 'sep': ' · ',
-           'desc': ' Drawn as a matrix: a row per folder or domain, a column per part of the account, in each cell a dot per relation, filled for what the account takes up and, below it, a ring for what is proposed here. The relations count the claims drawn; {with_relation} that stand only in history or are not carried also carry one, which the crosswalk’s table counts.',
+           'desc': ' Drawn as a matrix: a row per folder or domain, a column per part of the account, in each cell up to two dots per relation, filled for what the account takes up and, below it, a ring for what is proposed here. The relations count the claims drawn; {with_relation} that stand only in history or are not carried also carry one, which the crosswalk’s table counts.',
            'dot': '{n} claims, {relation}, read against {part}; {how}', 'dot_one': '{n} claim, {relation}, read against {part}; {how}',
            'stated': 'the account takes it up', 'fresh': 'proposed here, not stated by the account',
            'stated_key': 'filled: the account takes it up (states it, or says otherwise)', 'fresh_key': 'ring: proposed here, not stated by the account',
            'size': '{n} claims', 'size_one': '{n} claim',
-           'notes': ('In a cell, a dot per relation in the order above, its area growing with the claims; the dots the account takes up above, the proposed below.',
+           'notes': ('In a cell, up to two dots per relation in the order above, its area growing with the claims; the dots the account takes up above, the proposed below.',
                      'The legend’s counts are drawn claims, by relation. The {loose} claims only in history or not carried draw no dot',
                      '({with_relation} of them carry a relation, which the crosswalk’s table counts).',
                      'Beside a folder or domain the number counts all its claims; beside a part of the account, the drawn claims read against it,',
@@ -455,12 +455,12 @@ OV_TEXT = {
            'ai': ('每一个点都是 AI 的读法，没有人的。一个点不是证明；相合画得并不比相分更显眼。', ''),
            'critic': '随机复核 {sampled} 条，据此估计全部 {n} 条中约 {label}% 的标签或目标角色有误，约 {fails}% 的读法有误。',
            'folders': '{n} 个早先的文件夹', 'claims': '主张', 'domains': '{n} 个思想领域', 'sep': ' · ',
-           'desc': '画成一张矩阵：每个文件夹或领域一行，本论每一部分一列，每格中每种关系一个点；本论论及者为实心，在此处提出者为空心圆环。关系计的是画出的主张；仅存于历史或未承继者中另有 {with_relation} 条也带有关系，对照表的表格计入它们。',
+           'desc': '画成一张矩阵：每个文件夹或领域一行，本论每一部分一列，每格中每种关系至多两个点：本论论及者为实心点，在此处提出者为其下的空心圆环。关系计的是画出的主张；仅存于历史或未承继者中另有 {with_relation} 条也带有关系，对照表的表格计入它们。',
            'dot': '{n} 条主张，{relation}，对照{part}；{how}', 'dot_one': '{n} 条主张，{relation}，对照{part}；{how}',
            'stated': '本论论及它', 'fresh': '在此处提出，本论没有陈述',
            'stated_key': '实心：本论论及它（陈述它，或另有说法）', 'fresh_key': '空心圆环：在此处提出，本论没有陈述',
            'size': '{n} 条主张', 'size_one': '{n} 条主张',
-           'notes': ('每格中，每种关系一个点，次序同上，面积随主张数增加；本论论及者在上，提出者在下。',
+           'notes': ('每格中，每种关系至多两个点，次序同上，面积随主张数增加；本论论及者在上，提出者在下。',
                      '图例中的计数是画出的主张，按关系计。仅存于历史或未承继的 {loose} 条主张不画点（其中 {with_relation} 条带有关系，对照表的表格计入它们）。',
                      '文件夹或领域旁的数字计其全部主张；本论某一部分旁的数字计对照它而画出的主张，一条主张对照几个部分，就在每一部分各计一次。',
                      None,
@@ -533,8 +533,9 @@ def overview_threads(data: dict) -> list[dict]:
 
 def overview_svg(data: dict, lang: str = 'en') -> str:
     """A static picture of the map's overview as a matrix a reader can follow: a row per earlier folder or domain of
-    thought, a column per part of the account its claims are read against, and in each cell a dot per relation, its area
-    growing with the claims, filled where the account states the connection and a ring where a reader proposes it here;
+    thought, a column per part of the account its claims are read against, and in each cell up to two dots per relation, its
+    area growing with the claims, filled where the account takes the claim up (states it, or says otherwise) and a ring
+    where a reader proposes it here;
     the counts, and that every dot is an AI reading. Drawn at its own width, its words at least 12 pixels where it is
     shown at 900; in Chinese (`lang='zh'`) its words and names are AI translations, the drawing the same."""
     words = OV_TEXT[lang]
@@ -671,14 +672,14 @@ def _shared() -> dict:
 
 
 def start_here(data: dict, rows: int = 5) -> list[str]:
-    """CROSSWALK.md's start: the map's thickest threads that the account states (not proposed here), each with its
+    """CROSSWALK.md's start: the picture's largest dots that the account takes up (not proposed here), each with its
     folder or domain, the part of the account its claims are read against, the relation and how many claims."""
     groups = {g['id']: g for g in data['groups']}
     warp = {w['id']: w for w in data['warp']}
     here = posixpath.dirname(atlas_tool.CROSSWALK)
     ranked = sorted((t for t in overview_threads(data) if not t['fresh']), key=lambda t: (-t['n'], t['group'], t['warp'], t['relation']))
     threads = [t for t in ranked if len(ranked) <= rows or t['n'] >= ranked[rows - 1]['n']]  # a tie at the cut is kept whole
-    out = ['**Start here.** The largest dots in the picture below that the account takes up (states, or says otherwise; '
+    out = ['**Start here.** The five largest dots in the picture below that the account takes up (states, or says otherwise; '
            'none proposed here), and any that tie with the fifth: a folder or domain, the part of the account its claims are read '
            "against, the relation and how many claims. Each folder's page gives its claims one by one.", '',
            '| Folder or domain | Read against | Relation | Claims |', '|---|---|---|---:|']

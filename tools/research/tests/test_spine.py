@@ -316,11 +316,11 @@ class Drawing(unittest.TestCase):
             self.assertGreater(text.index(key), text.index('](results/spine'), path)  # the picture first, its key under it
             self.assertNotIn(spine.how_to_read(s, lang), text, path)  # the full paragraph is THEORY-GRAPH's
         for lang, kept in (('en', ('the AI-written records assign, and nothing checks a use against the Lean', 'not as an order of proof',
-                                   'no record may close a cycle among its declared dependencies', 'modules, not results derived', '11 are [derived]',
-                                   '1 is a root form', '6 are counting laws, below the grammar', '99 stand at a [named distance]',
+                                   'no record may close a cycle among its declared dependencies', 'core modules', 'modules, not results derived', '11 are [derived]',
+                                   '1 is a root form', '6 are counting laws, below the grammar', '99 stand at a [named distance]', 'each with its reason',
                                    '#the-spine-what-it-shows-and-does-not-show')),
                            ('zh', ('由 AI 写成的记录指定，没有任何检查核对一次使用是否见于 Lean', '不是证明的次序', '闭合其已声明依赖之环',
-                                   '不是推导而得的结果', '11 项[推导而得]', '1 项为一个根形式', '6 项为计数之律', '99 项处于一个[指明的距离]',
+                                   '核心模块', '不是推导而得的结果', '位于文法以下', '各有其理由', '11 项[推导而得]', '1 项为一个根形式', '6 项为计数之律', '99 项处于一个[指明的距离]',
                                    '#the-spine-what-it-shows-and-does-not-show'))):
             key = spine.picture_key(s, lang)
             for phrase in kept:
