@@ -45,7 +45,7 @@ relation and centers supplied. No ranking or axiom enters.
   the cleared and the spared world alike, while the dweller ends in the one and not the other
   (`Clearing.counting_dweller_unselected`, `Clearing.pool_closes_gap` read over the whole run).
   Where the two acts differ on a condition that couples in, the premise would fail and the
-  difference is selected. In `Diversion` the act that ends the dweller also raises the store the
+  difference can be selected, as in `Diversion`. There the act that ends the dweller also raises the store the
   taker gauges, while in the diverting flow the dweller lies beyond the taker's coupling closure. A selection read off what couples into
   the taker holds at that act and fails at refraining (`Diversion.counting_selected_against`). What
   is selected is an act's trace on what couples in, never the loss beyond.

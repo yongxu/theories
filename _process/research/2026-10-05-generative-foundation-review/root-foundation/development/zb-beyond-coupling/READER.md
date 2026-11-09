@@ -47,4 +47,16 @@ Also found by the record check (not the reader): the route (b) record lacked a c
 
 ## Round 3 (the round-2 fixes)
 
+Verdict, condensed: no high finding; the hashes current; one medium, four low.
+
+| # | Severity | Finding | Done |
+|---|---|---|---|
+| 1 | medium | "Where the two acts differ on a condition that couples in, … the difference is selected" read as a law; the Lean gives the Diversion instance, and in general only that *some* selection separates where a member's admission or a gauged level differs (two acts can differ on a coupled condition and leave every level alike). | "The difference can be selected, as in `Diversion`", in the module and 07; the record already had "can". |
+| 2 | low | The first record's zh statement kept group and pool the wrong way round. | 读自一池……在含该池之某组耦合闭包内. |
+| 3 | low | The note's header kept "the pool's coupling closure". | "A group's coupling closure holding the pool." |
+| 4 | low | The note kept an ambiguous "which" in the Diversion sentence. | Restructured as in 07. |
+| 5 | low | The route (b) record's counterexample omitted "in the clearing flow". | Added, in both languages. |
+
+## Round 4 (the round-3 fixes)
+
 Pending at the time of writing.

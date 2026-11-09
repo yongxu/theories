@@ -221,22 +221,22 @@
         "Becoming.Web.readOffCouplings_alike_iff",
         "Becoming.Web.separates_continuations"
       ],
-      "sha256": "99b348881150bee825095a0bd75e91a643de7c59645695a67a338bd9584148ca"
+      "sha256": "d57b13c8e3c70283ae2acbb28e98f91c2f09bfe40b5e29de4f0b49edcff662fc"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zb-beyond-coupling/NOTE.md",
       "role": "integration",
-      "sha256": "b6524266c35b4c0e6de4369086028ad07aaf7ff82ff7858d6e0f3e79ad0fa4c3"
+      "sha256": "43a8e10152db41e1bb8f2e9eb3e51fc63377a5e0de0fb6a2047f0935b94b8c5d"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zb-beyond-coupling/READER.md",
       "role": "review",
-      "sha256": "6302ac3cf753c1860bd18f363f1a28f44249e39b92d5df9185ca89c793d50c8a"
+      "sha256": "939227ca44424f98425ee883794033dfbb7f98a28255a8ab0d1566bdfbf1d5dc"
     },
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "bf4a45a830d9c5426d8f0c3292dfedfa7ea16536dfdfebe021dcff33ad88266f"
+      "sha256": "e751adb8d88cc2b6a127ad00798623c7330f7d5817fae1172d65908d98e73f3f"
     }
   ],
   "proof_bindings": [],
