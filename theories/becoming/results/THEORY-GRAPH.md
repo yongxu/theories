@@ -6,7 +6,7 @@
 
 [中文（各章一览）](THEORY-GRAPH.zh.md) · 78–101 minutes to read in full; the chapters at a glance, what the picture shows and the edge kinds, with their tables, in 34–44 minutes.
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts, the chapter sections that state results and the review dossiers, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3230 nodes, 6930 edges. An edge records a dependence, a citation or a registered reading, not an agreement in meaning.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts, the chapter sections that state results and the review dossiers, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3230 nodes, 6931 edges. An edge records a dependence, a citation or a registered reading, not an agreement in meaning.
 
 <a id="the-spine"></a>
 

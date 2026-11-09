@@ -11086,7 +11086,7 @@
    "type": "module",
    "name": "Becoming.PersistingChoices",
    "level": "L2",
-   "theorems": 47,
+   "theorems": 53,
    "region": "significance",
    "base": "old-base",
    "on_grammar": true,
@@ -34429,6 +34429,11 @@
   {
    "from": "module:Becoming.Persistence",
    "to": "module:Becoming.Witnesses",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PersistingChoices",
+   "to": "module:Becoming.EventualWideningInstances",
    "type": "imports"
   },
   {
