@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-11-09T16:46:59+00:00",
+  "reviewed_at_utc": "2026-11-09T18:04:40+00:00",
   "statement": {
     "en": "At the formations whose acts return along affecting, given one, each under its least class, the de se condition is exactly mutual dependence; nothing beyond their coupling closures counts from them; orders a persisting line's choices allow give C only along what they show, never the course taken.",
     "zh": "于沿影响其举回返之形成处（有其一时），各在其最细类下，自指之延续条件恰为相互依赖；其耦合闭包外者从它们无意义；存续之系之择所容之序，唯沿其所示给出 C，从不及所取之程。"
@@ -272,6 +272,13 @@
         "en": "The covering the pool's law rests on.",
         "zh": "池之律所依之覆盖。"
       }
+    },
+    {
+      "id": "a-selection-removing-its-readers",
+      "detail": {
+        "en": "A selection that removes its own readers, with the pool read off the course: what this record's fixed pool leaves unstated.",
+        "zh": "去其自身读者之选择，池读自所行之程：本记录之固定池所未陈者。"
+      }
     }
   ],
   "references": [
@@ -422,7 +429,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "14aa42f47d559e3078a08af1e7e3c150862410c5ef58b12b3d260abc844f6c83"
+      "sha256": "b91f77221dc0640a8d6dd99ab8ee90cf5b56fa78055ca9b2436b6320fdc19538"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/j1-route-b-joined/NOTE.md",
@@ -528,6 +535,10 @@
     {
       "en": "9 November 2026, board item J1 (route (b)'s join, after G1, G3, G2 and the bound landed): added. Three AI readings of the join, eight adversarial checkers and a critic settled what composes; this record states it once, with a joint witness where none had existed, and the general laws the pieces shared moved below them (board rule 9).",
       "zh": "2026年11月9日，看板项 J1（路线 (b) 之合观，于 G1、G3、G2 与界落地之后）：新增。三份 AI 合观读法、八个对抗查验者与一评者定其可组合者；本记录合而陈之，立一前所未有之合见之例，并将诸部分共用之通律移至其下（看板规则 9）。"
+    },
+    {
+      "en": "10 November 2026: related to a-selection-removing-its-readers, which states a selection removing its own readers with the pool read off the course; 07's matching sentence points to it (a reader's note relayed by the coordinator). The claim is unchanged.",
+      "zh": "2026年11月10日：关联 a-selection-removing-its-readers，其陈池读自所行之程而去其自身读者之选择；07 相应之句指向之（协调者转达之读者意见）。所陈未变。"
     }
   ]
 }

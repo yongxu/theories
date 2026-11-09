@@ -723,7 +723,7 @@ Where it stops:
 - Readings, not derived: that significance is own closure, the relation it is drawn along, that the standpoints are the returning formations, and that the class is the least one.
 - No order is shown to be held, only consistent with the choices, and none between degrees of keeping ([§4.9](#r-what-persisting-shows-of-an-order)'s witness).
 - Nothing here is in time. Every relation is read across all steps, and own closure ignores the step; [§4.11](#condition-in-time) reads the condition in time.
-- The pool a selection reads is fixed across courses, so a selection that removes its own readers is not stated.
+- The pool a selection reads is fixed across courses, so a selection that removes its own readers is not stated here; [§4.12](#r-a-selection-removing-its-readers) states one, with the pool read off the course.
 
 **Which "center".** No theorem identifies the centers of the four pieces.
 
