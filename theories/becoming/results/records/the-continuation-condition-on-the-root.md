@@ -60,7 +60,7 @@ SW §3's structural reading (what counts for a center is what lies within its co
 - **formal-reuse**: [what-the-step-across-standpoints-reaches](what-the-step-across-standpoints-reaches.md). ownClosure_unrestricted_iff, selfAscribed, ownClosure.
 - related, not a proved adapter: [reach-past-ones-own-end](reach-past-ones-own-end.md). Which class a center's own line runs under, and when the dynamics fix it.
 
-**Used by:** [premises-met-and-failed](premises-met-and-failed.md) · [route-b-universal-form-closed](route-b-universal-form-closed.md) · [self-concern-and-c-under-the-condition](self-concern-and-c-under-the-condition.md) · [shared-laws-on-the-grammar](shared-laws-on-the-grammar.md) · [standpoints-read-off-a-flow](standpoints-read-off-a-flow.md) · [the-condition-in-time](the-condition-in-time.md) · [what-the-net-fixes-of-ones-own-class](what-the-net-fixes-of-ones-own-class.md) · [what-the-one-center-bound-counts](what-the-one-center-bound-counts.md)
+**Used by:** [premises-met-and-failed](premises-met-and-failed.md) · [route-b-universal-form-closed](route-b-universal-form-closed.md) · [self-concern-and-c-under-the-condition](self-concern-and-c-under-the-condition.md) · [shared-laws-on-the-grammar](shared-laws-on-the-grammar.md) · [standpoints-read-off-a-flow](standpoints-read-off-a-flow.md) · [what-the-net-fixes-of-ones-own-class](what-the-net-fixes-of-ones-own-class.md)
 
 <a id="sources--来源"></a>
 ### Sources

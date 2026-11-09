@@ -89,7 +89,7 @@ Ren's long-term objectives: “I want to push the frontier as strong as possible
 - related, not a proved adapter: [counterfactual-is-the-course](counterfactual-is-the-course.md). Answers this record's next_delta item of a comparison whose responses the dynamics give, where the rest follows a law of exchange reading what has stood.
 - related, not a proved adapter: [how-much-difference-arrives](how-much-difference-arrives.md). Answers the measure in its next step: where the rest follows a law with given coupling strengths, the difference that arrives is at most the carried amount, which is attained (most_difference_arrives).
 
-**Used by:** [comparison-where-the-rest-responds](comparison-where-the-rest-responds.md) · [comparison-within-reach](comparison-within-reach.md) · [selection-through-couplings](selection-through-couplings.md) · [testing-within-couplings](testing-within-couplings.md) · [the-condition-in-time](the-condition-in-time.md)
+**Used by:** [comparison-where-the-rest-responds](comparison-where-the-rest-responds.md) · [comparison-within-reach](comparison-within-reach.md) · [selection-through-couplings](selection-through-couplings.md) · [testing-within-couplings](testing-within-couplings.md)
 
 <a id="sources--来源"></a>
 ### Sources

@@ -11,17 +11,16 @@ On each part, theorems and lemmas are individually listed and definitions and ty
 
 ## Becoming pure core
 
-This group's 378 modules are listed on 7 parts of about equal size, the largest 795,420 bytes, under the size at which GitHub stops showing a Markdown file. Browser find on a part finds the names on that part only; the module table below says which part holds each module.
+This group's 377 modules are listed on 6 parts of about equal size, the largest 795,653 bytes, under the size at which GitHub stops showing a Markdown file. Browser find on a part finds the names on that part only; the module table below says which part holds each module.
 
 | Page | Modules, in the catalogue's order | theorem/lemma occurrences |
 |---|---|---:|
-| [Part 1 of 7](../lean-declarations/becoming-core-part-1.md) | 73, from GenerativeCore.lean to Cuts.lean | 2,994 |
-| [Part 2 of 7](../lean-declarations/becoming-core-part-2.md) | 65, from Decidedness.lean to Histories.lean | 3,172 |
-| [Part 3 of 7](../lean-declarations/becoming-core-part-3.md) | 63, from HistoryIdeals.lean to LoopReturn.lean | 3,148 |
-| [Part 4 of 7](../lean-declarations/becoming-core-part-4.md) | 49, from Loops.lean to ProjectedLaws.lean | 3,180 |
-| [Part 5 of 7](../lean-declarations/becoming-core-part-5.md) | 60, from Propagation.lean to Segmentation.lean | 3,044 |
-| [Part 6 of 7](../lean-declarations/becoming-core-part-6.md) | 63, from Selection.lean to WitnessRefinementRuns.lean | 3,053 |
-| [Part 7 of 7](../lean-declarations/becoming-core-part-7.md) | 5, from Witnesses.lean to InquirySufficiency.lean | 87 |
+| [Part 1 of 6](../lean-declarations/becoming-core-part-1.md) | 73, from GenerativeCore.lean to Decidedness.lean | 3,018 |
+| [Part 2 of 6](../lean-declarations/becoming-core-part-2.md) | 66, from Dependence.lean to HistoryIdealsTraces.lean | 3,177 |
+| [Part 3 of 6](../lean-declarations/becoming-core-part-3.md) | 62, from HistoryLanguages.lean to Loops.lean | 3,171 |
+| [Part 4 of 6](../lean-declarations/becoming-core-part-4.md) | 51, from LossMatching.lean to Quantum.lean | 3,198 |
+| [Part 5 of 6](../lean-declarations/becoming-core-part-5.md) | 60, from Ranking.lean to SelectionLevels.lean | 3,094 |
+| [Part 6 of 6](../lean-declarations/becoming-core-part-6.md) | 65, from SelectionPace.lean to InquirySufficiency.lean | 2,970 |
 
 | Module | Page | theorem/lemma |
 |---|---|---:|
@@ -69,7 +68,6 @@ This group's 378 modules are listed on 7 parts of about equal size, the largest 
 | <a id="module-135f427c041b"></a>[Commuting.lean](../lean-declarations/becoming-core-part-1.md#module-135f427c041b) | part 1 | 17 |
 | <a id="module-8f4ea8f7874b"></a>[ComparingCourses.lean](../lean-declarations/becoming-core-part-1.md#module-8f4ea8f7874b) | part 1 | 189 |
 | <a id="module-46edffc53f68"></a>[Composition.lean](../lean-declarations/becoming-core-part-1.md#module-46edffc53f68) | part 1 | 40 |
-| <a id="module-33c3af2ea4d8"></a>[ConditionInTime.lean](../lean-declarations/becoming-core-part-1.md#module-33c3af2ea4d8) | part 1 | 50 |
 | <a id="module-151bbdf2e7b7"></a>[ConditionalWeights.lean](../lean-declarations/becoming-core-part-1.md#module-151bbdf2e7b7) | part 1 | 93 |
 | <a id="module-354cdb92f8d9"></a>[ContactCourses.lean](../lean-declarations/becoming-core-part-1.md#module-354cdb92f8d9) | part 1 | 3 |
 | <a id="module-294d98ad3b6e"></a>[Contacts.lean](../lean-declarations/becoming-core-part-1.md#module-294d98ad3b6e) | part 1 | 23 |
@@ -98,7 +96,7 @@ This group's 378 modules are listed on 7 parts of about equal size, the largest 
 | <a id="module-031f22d71259"></a>[Courses.lean](../lean-declarations/becoming-core-part-1.md#module-031f22d71259) | part 1 | 91 |
 | <a id="module-03b040af0e79"></a>[CrossSituational.lean](../lean-declarations/becoming-core-part-1.md#module-03b040af0e79) | part 1 | 33 |
 | <a id="module-7573e98940d6"></a>[Cuts.lean](../lean-declarations/becoming-core-part-1.md#module-7573e98940d6) | part 1 | 51 |
-| <a id="module-54715c46f69e"></a>[Decidedness.lean](../lean-declarations/becoming-core-part-2.md#module-54715c46f69e) | part 2 | 74 |
+| <a id="module-54715c46f69e"></a>[Decidedness.lean](../lean-declarations/becoming-core-part-1.md#module-54715c46f69e) | part 1 | 74 |
 | <a id="module-be65fab29fa3"></a>[Dependence.lean](../lean-declarations/becoming-core-part-2.md#module-be65fab29fa3) | part 2 | 44 |
 | <a id="module-1103d0222e3c"></a>[Dephasing.lean](../lean-declarations/becoming-core-part-2.md#module-1103d0222e3c) | part 2 | 63 |
 | <a id="module-e14e9f5564a8"></a>[Derivation.lean](../lean-declarations/becoming-core-part-2.md#module-e14e9f5564a8) | part 2 | 26 |
@@ -163,8 +161,8 @@ This group's 378 modules are listed on 7 parts of about equal size, the largest 
 | <a id="module-f899adf2ad43"></a>[HeldForReading.lean](../lean-declarations/becoming-core-part-2.md#module-f899adf2ad43) | part 2 | 97 |
 | <a id="module-8004abb8cade"></a>[HeldPossible.lean](../lean-declarations/becoming-core-part-2.md#module-8004abb8cade) | part 2 | 89 |
 | <a id="module-41f2b00bb90e"></a>[Histories.lean](../lean-declarations/becoming-core-part-2.md#module-41f2b00bb90e) | part 2 | 26 |
-| <a id="module-53b317abd0cf"></a>[HistoryIdeals.lean](../lean-declarations/becoming-core-part-3.md#module-53b317abd0cf) | part 3 | 72 |
-| <a id="module-7efc10e14cbe"></a>[HistoryIdealsTraces.lean](../lean-declarations/becoming-core-part-3.md#module-7efc10e14cbe) | part 3 | 7 |
+| <a id="module-53b317abd0cf"></a>[HistoryIdeals.lean](../lean-declarations/becoming-core-part-2.md#module-53b317abd0cf) | part 2 | 72 |
+| <a id="module-7efc10e14cbe"></a>[HistoryIdealsTraces.lean](../lean-declarations/becoming-core-part-2.md#module-7efc10e14cbe) | part 2 | 7 |
 | <a id="module-9e9246f66d1f"></a>[HistoryLanguages.lean](../lean-declarations/becoming-core-part-3.md#module-9e9246f66d1f) | part 3 | 34 |
 | <a id="module-de8b7fa464e2"></a>[HistorySums.lean](../lean-declarations/becoming-core-part-3.md#module-de8b7fa464e2) | part 3 | 39 |
 | <a id="module-35179900d759"></a>[Horizon.lean](../lean-declarations/becoming-core-part-3.md#module-35179900d759) | part 3 | 32 |
@@ -226,7 +224,7 @@ This group's 378 modules are listed on 7 parts of about equal size, the largest 
 | <a id="module-b3c201a9c528"></a>[LocalUnits.lean](../lean-declarations/becoming-core-part-3.md#module-b3c201a9c528) | part 3 | 45 |
 | <a id="module-0ddb9a8ad442"></a>[Locality.lean](../lean-declarations/becoming-core-part-3.md#module-0ddb9a8ad442) | part 3 | 47 |
 | <a id="module-ea338218110d"></a>[LoopReturn.lean](../lean-declarations/becoming-core-part-3.md#module-ea338218110d) | part 3 | 77 |
-| <a id="module-4b39d999f04e"></a>[Loops.lean](../lean-declarations/becoming-core-part-4.md#module-4b39d999f04e) | part 4 | 102 |
+| <a id="module-4b39d999f04e"></a>[Loops.lean](../lean-declarations/becoming-core-part-3.md#module-4b39d999f04e) | part 3 | 102 |
 | <a id="module-34f775b6e095"></a>[LossMatching.lean](../lean-declarations/becoming-core-part-4.md#module-34f775b6e095) | part 4 | 29 |
 | <a id="module-4072d141b8b3"></a>[LumpedSeeking.lean](../lean-declarations/becoming-core-part-4.md#module-4072d141b8b3) | part 4 | 14 |
 | <a id="module-234f732a5fe8"></a>[MapInstances.lean](../lean-declarations/becoming-core-part-4.md#module-234f732a5fe8) | part 4 | 54 |
@@ -275,9 +273,9 @@ This group's 378 modules are listed on 7 parts of about equal size, the largest 
 | <a id="module-649ffce719ee"></a>[ProcessRepresentation.lean](../lean-declarations/becoming-core-part-4.md#module-649ffce719ee) | part 4 | 52 |
 | <a id="module-cfe7a096681c"></a>[ProfileReach.lean](../lean-declarations/becoming-core-part-4.md#module-cfe7a096681c) | part 4 | 16 |
 | <a id="module-321a4be2da04"></a>[ProjectedLaws.lean](../lean-declarations/becoming-core-part-4.md#module-321a4be2da04) | part 4 | 28 |
-| <a id="module-b54c1e7958f2"></a>[Propagation.lean](../lean-declarations/becoming-core-part-5.md#module-b54c1e7958f2) | part 5 | 73 |
-| <a id="module-bad5c43d98a0"></a>[PropositionIdentity.lean](../lean-declarations/becoming-core-part-5.md#module-bad5c43d98a0) | part 5 | 12 |
-| <a id="module-ba93c076fc78"></a>[Quantum.lean](../lean-declarations/becoming-core-part-5.md#module-ba93c076fc78) | part 5 | 35 |
+| <a id="module-b54c1e7958f2"></a>[Propagation.lean](../lean-declarations/becoming-core-part-4.md#module-b54c1e7958f2) | part 4 | 73 |
+| <a id="module-bad5c43d98a0"></a>[PropositionIdentity.lean](../lean-declarations/becoming-core-part-4.md#module-bad5c43d98a0) | part 4 | 12 |
+| <a id="module-ba93c076fc78"></a>[Quantum.lean](../lean-declarations/becoming-core-part-4.md#module-ba93c076fc78) | part 4 | 35 |
 | <a id="module-fbc6f2c56a91"></a>[Ranking.lean](../lean-declarations/becoming-core-part-5.md#module-fbc6f2c56a91) | part 5 | 52 |
 | <a id="module-2ede4c2bfdff"></a>[ReachableRanges.lean](../lean-declarations/becoming-core-part-5.md#module-2ede4c2bfdff) | part 5 | 135 |
 | <a id="module-7feb5981d198"></a>[ReachedCascade.lean](../lean-declarations/becoming-core-part-5.md#module-7feb5981d198) | part 5 | 8 |
@@ -335,9 +333,9 @@ This group's 378 modules are listed on 7 parts of about equal size, the largest 
 | <a id="module-543aeee61b83"></a>[Seeking.lean](../lean-declarations/becoming-core-part-5.md#module-543aeee61b83) | part 5 | 13 |
 | <a id="module-6d45c97c270f"></a>[SeekingRuns.lean](../lean-declarations/becoming-core-part-5.md#module-6d45c97c270f) | part 5 | 7 |
 | <a id="module-6e0ec291c7d2"></a>[Segmentation.lean](../lean-declarations/becoming-core-part-5.md#module-6e0ec291c7d2) | part 5 | 17 |
-| <a id="module-8b0687844bea"></a>[Selection.lean](../lean-declarations/becoming-core-part-6.md#module-8b0687844bea) | part 6 | 70 |
-| <a id="module-bff05f8dbe13"></a>[SelectionGap.lean](../lean-declarations/becoming-core-part-6.md#module-bff05f8dbe13) | part 6 | 7 |
-| <a id="module-0babad5be0a3"></a>[SelectionLevels.lean](../lean-declarations/becoming-core-part-6.md#module-0babad5be0a3) | part 6 | 93 |
+| <a id="module-8b0687844bea"></a>[Selection.lean](../lean-declarations/becoming-core-part-5.md#module-8b0687844bea) | part 5 | 70 |
+| <a id="module-bff05f8dbe13"></a>[SelectionGap.lean](../lean-declarations/becoming-core-part-5.md#module-bff05f8dbe13) | part 5 | 7 |
+| <a id="module-0babad5be0a3"></a>[SelectionLevels.lean](../lean-declarations/becoming-core-part-5.md#module-0babad5be0a3) | part 5 | 93 |
 | <a id="module-4798dff64094"></a>[SelectionPace.lean](../lean-declarations/becoming-core-part-6.md#module-4798dff64094) | part 6 | 103 |
 | <a id="module-2ab3fe374991"></a>[SelectionPool.lean](../lean-declarations/becoming-core-part-6.md#module-2ab3fe374991) | part 6 | 48 |
 | <a id="module-fbecd7401f01"></a>[SelectionReach.lean](../lean-declarations/becoming-core-part-6.md#module-fbecd7401f01) | part 6 | 18 |
@@ -398,8 +396,8 @@ This group's 378 modules are listed on 7 parts of about equal size, the largest 
 | <a id="module-f047a0ccf338"></a>[Withholding.lean](../lean-declarations/becoming-core-part-6.md#module-f047a0ccf338) | part 6 | 40 |
 | <a id="module-0717096c6252"></a>[WitnessRefinement.lean](../lean-declarations/becoming-core-part-6.md#module-0717096c6252) | part 6 | 44 |
 | <a id="module-14e9a16c1bc9"></a>[WitnessRefinementRuns.lean](../lean-declarations/becoming-core-part-6.md#module-14e9a16c1bc9) | part 6 | 25 |
-| <a id="module-a2a40d448b25"></a>[Witnesses.lean](../lean-declarations/becoming-core-part-7.md#module-a2a40d448b25) | part 7 | 0 |
-| <a id="module-7d8b73829c63"></a>[World.lean](../lean-declarations/becoming-core-part-7.md#module-7d8b73829c63) | part 7 | 2 |
-| <a id="module-9ee3e643d082"></a>[WorldRepresentation.lean](../lean-declarations/becoming-core-part-7.md#module-9ee3e643d082) | part 7 | 34 |
-| <a id="module-bc794121a016"></a>[RelationalRenewal.lean](../lean-declarations/becoming-core-part-7.md#module-bc794121a016) | part 7 | 35 |
-| <a id="module-8f3efb8aecfe"></a>[InquirySufficiency.lean](../lean-declarations/becoming-core-part-7.md#module-8f3efb8aecfe) | part 7 | 16 |
+| <a id="module-a2a40d448b25"></a>[Witnesses.lean](../lean-declarations/becoming-core-part-6.md#module-a2a40d448b25) | part 6 | 0 |
+| <a id="module-7d8b73829c63"></a>[World.lean](../lean-declarations/becoming-core-part-6.md#module-7d8b73829c63) | part 6 | 2 |
+| <a id="module-9ee3e643d082"></a>[WorldRepresentation.lean](../lean-declarations/becoming-core-part-6.md#module-9ee3e643d082) | part 6 | 34 |
+| <a id="module-bc794121a016"></a>[RelationalRenewal.lean](../lean-declarations/becoming-core-part-6.md#module-bc794121a016) | part 6 | 35 |
+| <a id="module-8f3efb8aecfe"></a>[InquirySufficiency.lean](../lean-declarations/becoming-core-part-6.md#module-8f3efb8aecfe) | part 6 | 16 |

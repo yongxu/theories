@@ -193,7 +193,7 @@
 - <a id="src-46"></a>**46.** [`experiments/state-named-in-advance/README.md`](../experiments/state-named-in-advance/README.md?plain=1#L80)（## UE31b's result（第 80 行））；[`theories/becoming/chapters/02-MAP.md`](becoming/chapters/02-MAP.md?plain=1#L283)（Thesis T2（第 283 行））
 - <a id="src-47"></a>**47.** 提交 `b29f69449` 中的 `_process/BECOMING-WORKBOARD.md`（Queue line，'LM1 landed' clause）；[`_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md`](../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md?plain=1#L515)（## LM: what rode the near-full rebuild（第 515 行））；提交 `16c55965c` 中的 `_process/BECOMING-WORKBOARD.md`（Queue line，'LM landed: the Lean made whole' clause）
 - <a id="src-48"></a>**48.** 提交 `448f15a6e` 中的 `_process/BECOMING-WORKBOARD.md`（Queue line，CX landed clause）；[`theories/becoming/results/atlas/CROSSWALK.md`](becoming/results/atlas/CROSSWALK.md?plain=1#L34)（opening（第 34 行））；[`theories/becoming/results/atlas/CROSSWALK.md`](becoming/results/atlas/CROSSWALK.md?plain=1#L38)（How far to trust it（第 38 行））
-- <a id="src-49"></a>**49.** [`_process/history/2026-11-09-instructions/AGENTS-before-the-map.md`](../_process/history/2026-11-09-instructions/AGENTS-before-the-map.md?plain=1#L28)（the working rules before the map，## Evaluation（第 28 行））；[`theories/becoming/chapters/07-SIGNIFICANCE.md`](becoming/chapters/07-SIGNIFICANCE.md?plain=1#L903)（Thesis T8（第 903 行））；提交 `55cf6892e` 中的 `_process/BECOMING-WORKBOARD.md`（Queue line，WB's landed clause）；[`sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md`](../sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md?plain=1#L27)（### 2（8 November）（第 27 行））
+- <a id="src-49"></a>**49.** [`_process/history/2026-11-09-instructions/AGENTS-before-the-map.md`](../_process/history/2026-11-09-instructions/AGENTS-before-the-map.md?plain=1#L28)（the working rules before the map，## Evaluation（第 28 行））；[`theories/becoming/chapters/07-SIGNIFICANCE.md`](becoming/chapters/07-SIGNIFICANCE.md?plain=1#L877)（Thesis T8（第 877 行））；提交 `55cf6892e` 中的 `_process/BECOMING-WORKBOARD.md`（Queue line，WB's landed clause）；[`sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md`](../sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md?plain=1#L27)（### 2（8 November）（第 27 行））
 - <a id="src-50"></a>**50.** [`AGENTS.md`](../AGENTS.md?plain=1#L5)（## What we are doing（第 5 行））；[`sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md`](../sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md?plain=1#L27)（### 3）；[`sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md`](../sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md?plain=1#L55)（### 7）；[`_process/history/2026-11-09-instructions/AGENTS-before-the-map.md`](../_process/history/2026-11-09-instructions/AGENTS-before-the-map.md?plain=1#L13)（## What moves it，item 1（第 13 行））
 
 ## 改名
@@ -286,7 +286,7 @@
 
 ## 记录中的增长
 
-各记录的历史条目，按其开头日期所在的周计，截至 2026 年 11 月 9 日（上文提交计数的日期），按各记录现在的样子：有日期的 4868 条；没有开头日期的 184 条，以及此后的条目，不计。一个条目是对一项结果之改动的一条带日期的记载，所以这个计数量的是记下的改动，而不是结果。
+各记录的历史条目，按其开头日期所在的周计，截至 2026 年 11 月 9 日（上文提交计数的日期），按各记录现在的样子：有日期的 4865 条；没有开头日期的 184 条，以及此后的条目，不计。一个条目是对一项结果之改动的一条带日期的记载，所以这个计数量的是记下的改动，而不是结果。
 
 | 周（自周一） | 条目 |
 |---|---:|
@@ -295,7 +295,7 @@
 | 2026-10-19 | 1775 |
 | 2026-10-26 | 456 |
 | 2026-11-02 | 304 |
-| 2026-11-09 | 63 |
+| 2026-11-09 | 60 |
 
 ## 本页所依据的
 
