@@ -62,16 +62,18 @@ board item ZC's, `Becoming.OwnClass`, and which formations are centers ZA-G1's, 
   its own continuation on the occasion met, the chosen course being widened by one adding to the own
   continuation (`PersistingChoices.Forgoing.persists_not_selfConcerned`). With ending read as admitting none
   of the own continuation, it meets every premise of `Flow.persisting_consistent_with_selfConcern` but the
-  stake; there no reading of ending meets both the stake and `realized`. The choice is tied to the flow by
+  stake; there no reading of ending meets both the stake and `realized` (argued from `never_overdraws`,
+  `kept` and `not_selfConcerned`; no single theorem states it). The choice is tied to the flow by
   `realized` alone, which holds vacuously, and the line persists whatever is chosen.
 
 **Readings** (the AI's; correspondences, not theorems).
 - *Survivorship.* Persisting is a filter on what was chosen, not a mechanism forming an order. Where a choice
   ending what the line depends on is realized as an overdraw, persisting removes such choices, and leaves the
-  choices consistent with ranking keeping above ending where that was at stake; by itself it fixes nothing
-  between degrees of keeping.
-- *Goal misgeneralization.* Whatever persisting fixes, it fixes on the occasions met; a course never met is
-  ranked either way by strict orders according with every choice (`ChoiceOccasions.reversed_off_met`; as in
+  choices consistent with ranking keeping above ending where that was at stake; where degrees of keeping are
+  at stake it does not force self-concern (the witness).
+- *Goal misgeneralization.* Whatever persisting fixes, it fixes on the occasions met; where some consistent
+  order is self-concerned there, a course never met is ranked either way by strict orders according with
+  every choice (`ChoiceOccasions.reversed_off_met`; as in
   `ChoiceOccasions.Untried`, and for a trained response `Training.response_free_where_unlumped`).
 - *Revealed preference.* `ChoiceOccasions.selfConcerned_consistent_iff` is rationalizing strict choices by a
   strict partial order (Richter 1966) with required comparisons added.
@@ -681,7 +683,7 @@ def score (c : Item → Bool) : Nat := cond (c .extra) 1 (cond (c .member) 2 0)
 /-- The order the witness's choice accords with: a course above another where it scores higher. -/
 def order : «际» (Item → Bool) := fun x y => score y < score x
 
-/-- The chooser's order is strict. -/
+/-- The order is strict. -/
 theorem order_strict : (∀ a, ¬ order a a) ∧ (∀ a b c, order a b → order b c → order a c) :=
   ⟨fun _ h => Nat.lt_irrefl _ h, fun _ _ _ first second => Nat.lt_trans second first⟩
 

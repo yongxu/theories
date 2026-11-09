@@ -4726,8 +4726,8 @@ tagged instance or application.
   (`Flow.persists_never_overdraws`), so where an ending choice is realized as such an overdraw, the choices
   come from some strict order and only ending is at stake on the occasions met, its choices are consistent
   with an order increasing in its own continuation on those occasions
-  (`Flow.persisting_consistent_with_selfConcern`); a course never met is ranked below one it widens by some
-  such order (`ChoiceOccasions.reversed_off_met`); and in one witness a persisting line whose choice accords
+  (`Flow.persisting_consistent_with_selfConcern`); a course never met that widens another and adds to the own
+  continuation is ranked below it by some such order (`ChoiceOccasions.reversed_off_met`); and in one witness a persisting line whose choice accords
   with a strict order, never ending, is consistent with no strict order increasing in its own continuation on
   the occasion met (`PersistingChoices.Forgoing.persists_not_selfConcerned`). A leaf; short laws, none new as
   mathematics.
