@@ -472,7 +472,7 @@ def tests_page(root: Path = ROOT, checked: bool = True) -> tuple[dict, list[str]
             f'各论题说什么、禁止什么，见[方法一章 §9]({METHOD_THESES})（英文）。', '',
             *by_thesis_zh(rows, thesis_names_zh(root)), '']
     head = lambda t: [TESTS_GENERATED, '', '# 检验', '', nav_line(TESTS_PAGE), '', f'*约 {t}读完。*', '',
-                      '*AI 依英文版写成，尚无人审查它的记录；义以英文版为准，英文版又以各项检验的文件夹为准。*', '']
+                      '*AI 依英文版写成，尚无经人审查的记录；义以英文版为准，英文版又以各项检验的文件夹为准。*', '']
     final = lambda t: '\n'.join(head(t) + lead + body).rstrip('\n') + '\n'
     page = final(settle(lambda t: zh_time(final(t))))
     return {TESTS_PAGE: page}, errors

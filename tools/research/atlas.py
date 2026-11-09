@@ -1023,7 +1023,7 @@ def crosswalk_zh_page(atlas: dict) -> str:
         if gid in by:
             domains.append(f'- **{name}**（{by[gid]["entries"]} 条，[英文页]({_href(group_path(by[gid]), ATLAS)})）：{note}。')
     out = [GENERATED, '', '# 对照表：早先的理论文件夹与各思想领域', '', zh_fronts.nav_line(CROSSWALK_ZH), '', '{{time}}', '',
-           '*由 AI 依[英文的对照表](CROSSWALK.md)写成，尚无人审查它的记录；义以英文版为准。各组的条目在英文页上。*', '',
+           '*由 AI 依[英文的对照表](CROSSWALK.md)写成，尚无经人审查的记录；义以英文版为准。各组的条目在英文页上。*', '',
            f'![早先的文件夹与各思想领域怎样与现行的本论相接]({_href(OVERVIEW_ZH, ATLAS)})', '',
            f'*由 connection_map.py 依同一份数据画出，图中文字为 AI 所译（[英文图]({_href(OVERVIEW, ATLAS)})）：每一行是一个文件夹或领域，每一列是它的主张所对照的本论那一部分；每格中每种关系至多两个点：本论论及者为实心点，此处提出者为其下的空心圆环，按关系着色；每一个点都是 AI 的读法，没有人的。要浏览同一份数据，可打开[连接图](map.html)：读者网站发布之后可在网站上打开，也可在本地克隆中打开；GitHub 只显示它的源码。*', '',
            '**它是什么。** 每一个早先的理论文件夹与每一个思想领域：它以自己的话主张了什么，在现行的本论中又成了什么。它是证据层，不是用来通读的。它不产生任何结果；'

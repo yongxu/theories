@@ -1,9 +1,9 @@
-<!-- GLOSSARY.md 的中文版（RW，2026 年 11 月 8 日，AI 译自英文版，尚无人审查它的记录）。义以英文版为准；英文版改动时，本版随之修订。 -->
+<!-- GLOSSARY.md 的中文版（RW，2026 年 11 月 8 日，AI 译自英文版，尚无经人审查的记录）。义以英文版为准；英文版改动时，本版随之修订。 -->
 # 术语表
 
 [English](GLOSSARY.md) · [首页](README.zh.md) · [一页](theories/becoming/ONE-PAGE.zh.md) · [用途](theories/becoming/USES.zh.md) · [实例](theories/becoming/USES-EXAMPLES.zh.md) · [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) · [八章（英文）](theories/becoming/chapters/README.md) · [古文（第六章）](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) · [检验](TESTS.zh.md) · [对照表](theories/becoming/results/atlas/CROSSWALK.zh.md) · [怎样长成](theories/LINEAGE.zh.md) · **术语表** · [审查包](theories/becoming/review/README.zh.md)
 
-*AI 译自英文版，尚无人审查它的记录；义以英文版为准。*
+*AI 译自英文版，尚无经人审查的记录；义以英文版为准。*
 
 生灭变化之论的词语，每一个只有一义、一个所属之处：定义它的那一章的那一节。别处用到一个词，都取这一义，并链接到那里。汉语术语在引入之处释义一次。除第六章外，各章与理论图皆为英文（理论图的各章一览有中文版）。文法的每一个概念及其 Lean 名称，都列在[理论图](theories/becoming/results/THEORY-GRAPH.md#the-grammars-concepts)中；较早文本所用的标签与现行术语的对照，见[方法一章](theories/becoming/chapters/08-METHOD.md#names)。本页所取代的术语表（规范章的 §10，连同其形式术语索引及其与语料词汇的对照）与该章一同保存在历史之中；九月的语料术语表（192 个词条）保存在[它自己的历史](_process/history/2026-09-consolidation/GLOSSARY.md)中。
 
