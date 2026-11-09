@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-11-09T12:00:00+00:00",
+  "reviewed_at_utc": "2026-11-09T11:17:48+00:00",
   "statement": {
     "en": "Held de se along affecting at the formations whose acts return, given one, the continuation condition is exactly mutual dependence, as it is with every formation a standpoint; along being affected or feeding, the readings of the standpoints and the relation give different conditions.",
     "zh": "沿“影响”在所为回返的构成处从己持有、且有一个时，延续条件恰是彼此依存，与每个构成都是立场时相同；沿“受影响”或“供养”，立场的读法与关系给出不同的条件。"
@@ -301,22 +301,42 @@
         "Becoming.Unexchanged.every_returns",
         "Becoming.Unexchanged.apart"
       ],
-      "sha256": "46e6aa5e5bb262361907f722f3dbd65b0ec10b942a7846882f9193c42d97c26f"
+      "sha256": "4b2e8adfa6fd2253f34da13258366a5e9707de978581a61d078b5e0137ef5522"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T111610.530713Z/verification.json",
+      "role": "receipt",
+      "sha256": "b3901fbae67b1357c63e584a31706c719a0fcfd083cc663548da4248a0b2ca5e",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/za-g1-centers/READER.md",
+      "role": "review",
+      "sha256": "fe5a017530586b72e3b46df634063a144390712f9b0d2d13395b5058db264fe0",
+      "declarations": []
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/za-g1-centers/NOTE.md",
       "role": "integration",
-      "sha256": "b29c854ab0944694fa93ec38471f7c59aaee34f7d53da961ec4878cb378039d3",
+      "sha256": "92c48bb0a9ac6a8c4f374b30b1f63ac62c0bf1796a01968a42df25a473a5ea6a",
       "declarations": []
     },
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "03e562326d74ce0c8540633d36d9391b8cdfb22eac86d45d1f45ba9db2e65a3c",
+      "sha256": "342f4a5b5460895c9227eff73d8c3cf8d8be5afce21155e1c7f0442df0cbf6fa",
       "declarations": []
     }
   ],
-  "proof_bindings": [],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T111610.530713Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.FlowCenters",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
   "history": [
     {
       "en": "9 November 2026, board item ZA-G1 (route (b) of the zero-axiom target, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md): added. The relation and the standpoints of the own-closure reading read off a flow; one AI reader of another model read the statements cold for overclaim, then the corrections; study folder za-g1-centers.",
