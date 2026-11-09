@@ -384,6 +384,7 @@ import Becoming.PremiseWitnesses
 import Becoming.PremisesTogether
 import Becoming.GrammarPath
 import Becoming.RoutesToC
+import Becoming.OwnClass
 import Becoming.SignificanceStatements
 
 /-!
@@ -4713,6 +4714,20 @@ tagged instance or application.
   (`Weighting.increasing_iff_one_step`). On a listing of what lies downstream, P2 and P4 of the path in
   07 §4.6 with self-concern give increasing in admission
   (`Weighting.increasing_on_downstream_of_regularity`). A leaf; short laws, none new as mathematics.
+* `Becoming.OwnClass` (L2, through `Becoming.GrammarScope` and `Becoming.Centers`): a center's own class,
+  what the net fixes of it (board item ZC, route (b)'s de se piece). At an occurrence that conditions
+  something, a class meets 07 §4.6's P2 and P4 exactly where its block is closed under the net
+  (`«本类常闭当且仅当类闭»`, the converse where it is decided of each alike occurrence whether it conditions
+  something), so the classes meeting both are closed under meets (`«本类常闭之交»`, `«本类常闭之遍交»`) and
+  not under joins (`JoinBreaks`); the least is the occurrence with everything downstream of it (`«后类»`,
+  `«后类最细»`), and every one reaches what the one reaches (`«本类常闭则所及即一之所及»`), so with each
+  center under such a class the condition along the net is that at the one
+  (`«各本类常闭则续无外即一之续无外»`). The identity meets P2 everywhere and P4 nowhere an effect differs
+  from oneself (`«静之本类至终有常»`, `«静不闭»`); P2 alone is not closed under meets (`MeetBreaks`). Read
+  on a flow with the class of a formation's coupling closure (`Flow.CouplingClass`), P4 is that what it
+  affects lies within that closure, the reach that everything within its reach does, exactly where its
+  acts return with coupling by threshold only (`Flow.couplingClass_reach_iff_returns`), and the line is
+  its loop (`Flow.couplingClass_line_iff_loop`); near-definitional. A leaf.
 * `Becoming.GrammarPath` (L1): what a line under a class must hold, and what a regularity takes in
   (board item PF), for every carrier, relation and class. Where a region is left under a class only
   into a set, a line under the class from inside to outside holds a member of that set alike to its
