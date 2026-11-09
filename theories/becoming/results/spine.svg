@@ -54,21 +54,21 @@
 <rect x="700.8" y="349" width="21.2" height="11" fill="#ffffff" stroke="#57534e" stroke-width="0.5"><title>8</title></rect>
 <rect x="700.8" y="349" width="2.7" height="11" fill="url(#reach)" stroke="#57534e" stroke-width="0.5"><title>1</title></rect>
 <text x="700.8" y="376" font-size="13" text-anchor="start" fill="#1c1917">8 rows, 1 reach</text>
-<text x="32" y="413" font-size="12.5" text-anchor="start" fill="#57534e">Rows, not declarations: 87 of the 126 central rows (nine declarations stand in two) rest on at least one law,</text>
-<text x="32" y="429" font-size="12.5" text-anchor="start" fill="#57534e">some on several. Reaching the grammar is not being derived: only the 11 derived above are read as cases of</text>
-<text x="32" y="445" font-size="12.5" text-anchor="start" fill="#57534e">grammar laws, and 1 as a root form at one step, under a stated hypothesis. A bar of few rows is widened to be</text>
-<text x="32" y="461" font-size="12.5" text-anchor="start" fill="#57534e">seen; the words give the counts.</text>
-<line x1="450" y1="657.3" x2="450" y2="789.6" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="3.7" stroke-linecap="round"/>
-<line x1="584.2" y1="715.4" x2="492.4" y2="807.2" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2.7" stroke-linecap="round"/>
-<line x1="635.1" y1="849.6" x2="510" y2="849.6" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2.4" stroke-linecap="round"/>
-<line x1="596.6" y1="996.2" x2="492.4" y2="892.1" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="4.1" stroke-linecap="round"/>
-<line x1="450" y1="1046" x2="450" y2="909.6" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round"/>
-<line x1="291.6" y1="1008" x2="407.6" y2="892.1" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="4.6" stroke-linecap="round"/>
-<line x1="256.3" y1="849.6" x2="390" y2="849.6" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2.7" stroke-linecap="round"/>
-<line x1="294.1" y1="693.7" x2="407.6" y2="807.2" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2.4" stroke-linecap="round"/>
+<text x="32" y="413" font-size="13" text-anchor="start" fill="#57534e">Rows, not declarations: 87 of the 126 central rows (nine declarations stand in two) rest on at least one law,</text>
+<text x="32" y="429" font-size="13" text-anchor="start" fill="#57534e">some on several. Reaching the grammar is not being derived: only the 11 derived above are read as cases of</text>
+<text x="32" y="445" font-size="13" text-anchor="start" fill="#57534e">grammar laws, and 1 as a root form at one step, under a stated hypothesis. A bar of few rows is widened to be</text>
+<text x="32" y="461" font-size="13" text-anchor="start" fill="#57534e">seen; the words give the counts.</text>
+<line x1="450" y1="657.3" x2="450" y2="789.6" stroke="#a8a29e" stroke-opacity="0.45" stroke-width="2.8" stroke-linecap="round"/>
+<line x1="584.2" y1="715.4" x2="492.4" y2="807.2" stroke="#a8a29e" stroke-opacity="0.45" stroke-width="2.1" stroke-linecap="round"/>
+<line x1="635.1" y1="849.6" x2="510" y2="849.6" stroke="#a8a29e" stroke-opacity="0.45" stroke-width="2" stroke-linecap="round"/>
+<line x1="596.6" y1="996.2" x2="492.4" y2="892.1" stroke="#a8a29e" stroke-opacity="0.45" stroke-width="3.1" stroke-linecap="round"/>
+<line x1="450" y1="1046" x2="450" y2="909.6" stroke="#a8a29e" stroke-opacity="0.45" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="291.6" y1="1008" x2="407.6" y2="892.1" stroke="#a8a29e" stroke-opacity="0.45" stroke-width="3.4" stroke-linecap="round"/>
+<line x1="256.3" y1="849.6" x2="390" y2="849.6" stroke="#a8a29e" stroke-opacity="0.45" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="294.1" y1="693.7" x2="407.6" y2="807.2" stroke="#a8a29e" stroke-opacity="0.45" stroke-width="1.9" stroke-linecap="round"/>
 <circle cx="450" cy="849.6" r="58" fill="#f5f5f4" stroke="#1c1917" stroke-width="1.5"/>
 <text x="450" y="847.6" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c1917">The grammar</text>
-<text x="450" y="865.6" font-size="12" text-anchor="middle" fill="#57534e">41 concepts</text>
+<text x="450" y="865.6" font-size="13" text-anchor="middle" fill="#57534e">41 concepts</text>
 <path d="M498.9,630.2 Q532.3,651 567.2,659.1" fill="none" stroke="#1c1917" stroke-opacity="0.85" stroke-width="7" marker-end="url(#back)"/>
 <path d="M566.8,677.2 Q520,680.6 488.4,644" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="6" marker-end="url(#fwd)"/>
 <path d="M571.2,696 Q501.7,724.9 472.3,653.9" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
@@ -186,8 +186,8 @@
 <text x="20" y="1643.3" font-size="14" text-anchor="start" fill="#1c1917">and its tests: the theses table in THEORY-GRAPH.md,</text>
 <text x="20" y="1661.3" font-size="14" text-anchor="start" fill="#1c1917">“The chapters at a glance”.</text>
 <text x="470" y="1251.3" font-size="16" font-weight="bold" text-anchor="start" fill="#1c1917">How to read it</text>
-<circle cx="483" cy="1272.25566257523" r="10" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
-<text x="483" y="1276.3" font-size="10" font-weight="bold" text-anchor="middle" fill="#57534e">01</text>
+<circle cx="483" cy="1272.25566257523" r="12" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
+<text x="483" y="1276.8" font-size="13" font-weight="bold" text-anchor="middle" fill="#57534e">01</text>
 <text x="506" y="1277.3" font-size="14" text-anchor="start" fill="#1c1917">Circle: a chapter, its area by its results; its</text>
 <text x="506" y="1295.3" font-size="14" text-anchor="start" fill="#1c1917">number inside it; beside it, its name, its results</text>
 <text x="506" y="1313.3" font-size="14" text-anchor="start" fill="#1c1917">and the formal-reuse uses within it.</text>
@@ -212,7 +212,7 @@
 <line x1="470" y1="1612.3" x2="496" y2="1612.3" stroke="#57534e" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
 <text x="506" y="1617.3" font-size="14" text-anchor="start" fill="#1c1917">application, a reused result with its</text>
 <text x="506" y="1635.3" font-size="14" text-anchor="start" fill="#1c1917">correspondence and added premises (dotted).</text>
-<line x1="470" y1="1652.3" x2="496" y2="1652.3" stroke="#a8a29e" stroke-width="6" stroke-linecap="round"/>
+<line x1="470" y1="1652.3" x2="496" y2="1652.3" stroke="#a8a29e" stroke-opacity="0.45" stroke-width="4" stroke-linecap="round"/>
 <text x="506" y="1657.3" font-size="14" text-anchor="start" fill="#1c1917">Spoke: its width is the share of the chapter’s</text>
 <text x="506" y="1675.3" font-size="14" text-anchor="start" fill="#1c1917">core modules that state their laws on the grammar,</text>
 <text x="506" y="1693.3" font-size="14" text-anchor="start" fill="#1c1917">given beside the chapter as “k of m modules on the</text>
@@ -221,6 +221,6 @@
 <text x="506" y="1751.3" font-size="14" text-anchor="start" fill="#1c1917">the formal-reuse curves of pairs under 10 uses;</text>
 <text x="506" y="1769.3" font-size="14" text-anchor="start" fill="#1c1917">counts under 15 are not written. THEORY-GRAPH.md’s</text>
 <text x="506" y="1787.3" font-size="14" text-anchor="start" fill="#1c1917">table of edge kinds between chapters has them all.</text>
-<text x="24" y="1829" font-size="12" text-anchor="start" fill="#57534e">Generated by tools/research/spine.py from theory-graph.json and spine.json; THEORY-GRAPH.md, “What the picture shows and</text>
-<text x="24" y="1844" font-size="12" text-anchor="start" fill="#57534e">does not show”, says so.</text>
+<text x="24" y="1829" font-size="13" text-anchor="start" fill="#57534e">Generated by tools/research/spine.py from theory-graph.json and spine.json; THEORY-GRAPH.md, “What the picture</text>
+<text x="24" y="1845" font-size="13" text-anchor="start" fill="#57534e">shows and does not show”, says so.</text>
 </svg>

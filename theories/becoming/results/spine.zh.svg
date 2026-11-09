@@ -51,20 +51,20 @@
 <rect x="700.8" y="291" width="21.2" height="11" fill="#ffffff" stroke="#57534e" stroke-width="0.5"><title>8</title></rect>
 <rect x="700.8" y="291" width="2.7" height="11" fill="url(#reach)" stroke="#57534e" stroke-width="0.5"><title>1</title></rect>
 <text x="700.8" y="318" font-size="13" text-anchor="start" fill="#1c1917">8 行，1 行达到</text>
-<text x="32" y="355" font-size="12.5" text-anchor="start" fill="#57534e">计的是行，不是声明：126 个核心行（九项声明各占两行）中，87 行至少依于一条律，有的依于多条。达到文法不等</text>
-<text x="32" y="371" font-size="12.5" text-anchor="start" fill="#57534e">于推导而得：被读作文法之律之情形的，只有上面推导而得的 11 项，另有 1 项在一个所述的假设之下被读作一个根</text>
-<text x="32" y="387" font-size="12.5" text-anchor="start" fill="#57534e">形式的一步。行数很少的条加宽以便看见；数目以文字为准。</text>
-<line x1="450" y1="583.3" x2="450" y2="715.6" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="3.7" stroke-linecap="round"/>
-<line x1="584.2" y1="641.4" x2="492.4" y2="733.2" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2.7" stroke-linecap="round"/>
-<line x1="635.1" y1="775.6" x2="510" y2="775.6" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2.4" stroke-linecap="round"/>
-<line x1="596.6" y1="922.2" x2="492.4" y2="818.1" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="4.1" stroke-linecap="round"/>
-<line x1="450" y1="972" x2="450" y2="835.6" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round"/>
-<line x1="291.6" y1="934" x2="407.6" y2="818.1" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="4.6" stroke-linecap="round"/>
-<line x1="256.3" y1="775.6" x2="390" y2="775.6" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2.7" stroke-linecap="round"/>
-<line x1="294.1" y1="619.7" x2="407.6" y2="733.2" stroke="#a8a29e" stroke-opacity="0.75" stroke-width="2.4" stroke-linecap="round"/>
+<text x="32" y="355" font-size="13" text-anchor="start" fill="#57534e">计的是行，不是声明：126 个核心行（九项声明各占两行）中，87 行至少依于一条律，有的依于多条。达到文法不等</text>
+<text x="32" y="371" font-size="13" text-anchor="start" fill="#57534e">于推导而得：被读作文法之律之情形的，只有上面推导而得的 11 项，另有 1 项在一个所述的假设之下被读作一个根</text>
+<text x="32" y="387" font-size="13" text-anchor="start" fill="#57534e">形式的一步。行数很少的条加宽以便看见；数目以文字为准。</text>
+<line x1="450" y1="583.3" x2="450" y2="715.6" stroke="#a8a29e" stroke-opacity="0.45" stroke-width="2.8" stroke-linecap="round"/>
+<line x1="584.2" y1="641.4" x2="492.4" y2="733.2" stroke="#a8a29e" stroke-opacity="0.45" stroke-width="2.1" stroke-linecap="round"/>
+<line x1="635.1" y1="775.6" x2="510" y2="775.6" stroke="#a8a29e" stroke-opacity="0.45" stroke-width="2" stroke-linecap="round"/>
+<line x1="596.6" y1="922.2" x2="492.4" y2="818.1" stroke="#a8a29e" stroke-opacity="0.45" stroke-width="3.1" stroke-linecap="round"/>
+<line x1="450" y1="972" x2="450" y2="835.6" stroke="#a8a29e" stroke-opacity="0.45" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="291.6" y1="934" x2="407.6" y2="818.1" stroke="#a8a29e" stroke-opacity="0.45" stroke-width="3.4" stroke-linecap="round"/>
+<line x1="256.3" y1="775.6" x2="390" y2="775.6" stroke="#a8a29e" stroke-opacity="0.45" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="294.1" y1="619.7" x2="407.6" y2="733.2" stroke="#a8a29e" stroke-opacity="0.45" stroke-width="1.9" stroke-linecap="round"/>
 <circle cx="450" cy="775.6" r="58" fill="#f5f5f4" stroke="#1c1917" stroke-width="1.5"/>
 <text x="450" y="773.6" font-size="17" font-weight="bold" text-anchor="middle" fill="#1c1917">文法</text>
-<text x="450" y="791.6" font-size="12" text-anchor="middle" fill="#57534e">41 个概念</text>
+<text x="450" y="791.6" font-size="13" text-anchor="middle" fill="#57534e">41 个概念</text>
 <path d="M498.9,556.2 Q532.3,577 567.2,585.1" fill="none" stroke="#1c1917" stroke-opacity="0.85" stroke-width="7" marker-end="url(#back)"/>
 <path d="M566.8,603.2 Q520,606.6 488.4,570" fill="none" stroke="#8a817c" stroke-opacity="0.85" stroke-width="6" marker-end="url(#fwd)"/>
 <path d="M571.2,622 Q501.7,650.9 472.3,579.9" fill="none" stroke="#57534e" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
@@ -182,8 +182,8 @@
 <text x="20" y="1532.3" font-size="14" text-anchor="start" fill="#1c1917">检验如何：见理论图“各章一览”的中文版</text>
 <text x="20" y="1550.3" font-size="14" text-anchor="start" fill="#1c1917">（THEORY-GRAPH.zh.md）中的论题表。</text>
 <text x="470" y="1177.3" font-size="16" font-weight="bold" text-anchor="start" fill="#1c1917">怎样读这幅图</text>
-<circle cx="483" cy="1198.25566257523" r="10" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
-<text x="483" y="1202.3" font-size="10" font-weight="bold" text-anchor="middle" fill="#57534e">01</text>
+<circle cx="483" cy="1198.25566257523" r="12" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
+<text x="483" y="1202.8" font-size="13" font-weight="bold" text-anchor="middle" fill="#57534e">01</text>
 <text x="506" y="1203.3" font-size="14" text-anchor="start" fill="#1c1917">圆：一章，面积按其结果数；圆内是章号；圆旁</text>
 <text x="506" y="1221.3" font-size="14" text-anchor="start" fill="#1c1917">是章名、结果数与章内 formal-reuse 使用数。</text>
 <line x1="470" y1="1238.3" x2="496" y2="1238.3" stroke="#8a817c" stroke-width="3.2" marker-end="url(#fwd)"/>
@@ -206,7 +206,7 @@
 <line x1="470" y1="1502.3" x2="496" y2="1502.3" stroke="#57534e" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
 <text x="506" y="1507.3" font-size="14" text-anchor="start" fill="#1c1917">应用（application），一个被复用的结果，连</text>
 <text x="506" y="1525.3" font-size="14" text-anchor="start" fill="#1c1917">同其对应与所添的前提（点线）。</text>
-<line x1="470" y1="1542.3" x2="496" y2="1542.3" stroke="#a8a29e" stroke-width="6" stroke-linecap="round"/>
+<line x1="470" y1="1542.3" x2="496" y2="1542.3" stroke="#a8a29e" stroke-opacity="0.45" stroke-width="4" stroke-linecap="round"/>
 <text x="506" y="1547.3" font-size="14" text-anchor="start" fill="#1c1917">辐条：粗细表示该章核心模块中在文法上陈述其</text>
 <text x="506" y="1565.3" font-size="14" text-anchor="start" fill="#1c1917">律者所占的比例，其数写在章旁，作“m 个模块</text>
 <text x="506" y="1583.3" font-size="14" text-anchor="start" fill="#1c1917">中 k 个在文法上”。它计的是模块，不是推导而</text>
@@ -216,6 +216,6 @@
 <text x="506" y="1659.3" font-size="14" text-anchor="start" fill="#1c1917">线；少于 15 次的不标数字。理论图“各章一览”</text>
 <text x="506" y="1677.3" font-size="14" text-anchor="start" fill="#1c1917">的中文版（THEORY-GRAPH.zh.md）中各章之间边</text>
 <text x="506" y="1695.3" font-size="14" text-anchor="start" fill="#1c1917">的种类表列出全部。</text>
-<text x="24" y="1737" font-size="12" text-anchor="start" fill="#57534e">图中文字为 AI 所译，义以英文版为准。由 tools/research/spine.py 依 theory-graph.json 与 spine.json 画出；它显示</text>
-<text x="24" y="1752" font-size="12" text-anchor="start" fill="#57534e">什么、不显示什么，见 THEORY-GRAPH.zh.md 的“这幅图显示什么、不显示什么”。</text>
+<text x="24" y="1737" font-size="13" text-anchor="start" fill="#57534e">图中文字为 AI 所译，义以英文版为准。由 tools/research/spine.py 依 theory-graph.json 与 spine.json 画出；</text>
+<text x="24" y="1753" font-size="13" text-anchor="start" fill="#57534e">它显示什么、不显示什么，见 THEORY-GRAPH.zh.md 的“这幅图显示什么、不显示什么”。</text>
 </svg>

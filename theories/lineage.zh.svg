@@ -2,126 +2,131 @@
 <title id="lineage-title">本论是怎样长成的</title>
 <rect x="0.5" y="0.5" width="999" height="885" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
 <text x="24.0" y="38.0" font-size="22" font-weight="bold" text-anchor="start" fill="#1c1917">本论是怎样长成的</text>
-<text x="24.0" y="64.0" font-size="15" text-anchor="start" fill="#57534e">从最早的文字（2021）到现行的本论（2026 年 11 月 8 日）的转折点，分为六个阶段，各阶段的宽度按其转折点</text>
-<text x="24.0" y="83.0" font-size="15" text-anchor="start" fill="#57534e">数而定，不按时间比例；每个转折点都标明是什么陈述了它；主要的转折点附标题，编号同下表。</text>
-<rect x="50.0" y="150" width="73.6" height="404" fill="#efece6"/>
-<text x="86.8" y="170.0" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c1917">早期写作</text>
-<text x="86.8" y="540.0" font-size="12.5" text-anchor="middle" fill="#57534e">2021-10</text>
-<text x="86.8" y="555.0" font-size="12.5" text-anchor="middle" fill="#57534e">– 2023-12</text>
-<rect x="141.6" y="150" width="159.5" height="404" fill="#f6f3ed"/>
-<text x="221.4" y="170.0" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c1917">选择机制</text>
-<text x="221.4" y="560.0" font-size="12.5" text-anchor="middle" fill="#57534e">2024-03 – 2025-08</text>
-<rect x="319.2" y="150" width="135.0" height="404" fill="#efece6"/>
-<text x="386.7" y="170.0" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c1917">2026 年的转向</text>
-<text x="386.7" y="544.0" font-size="12.5" text-anchor="middle" fill="#57534e">2026-02 – 2026-07</text>
-<rect x="472.2" y="150" width="98.2" height="404" fill="#f6f3ed"/>
-<text x="521.3" y="170.0" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c1917">文件夹、论文</text>
-<text x="521.3" y="188.0" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c1917">与预测</text>
-<text x="521.3" y="540.0" font-size="12.5" text-anchor="middle" fill="#57534e">2026-09</text>
-<text x="521.3" y="555.0" font-size="12.5" text-anchor="middle" fill="#57534e">– 2026-10-06</text>
-<rect x="588.4" y="150" width="196.4" height="404" fill="#efece6"/>
-<text x="686.5" y="170.0" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c1917">生灭变化之论</text>
-<text x="686.5" y="544.0" font-size="12.5" text-anchor="middle" fill="#57534e">2026-10-09 – 2026-10-30</text>
-<rect x="802.7" y="150" width="147.3" height="404" fill="#f6f3ed"/>
-<text x="876.4" y="170.0" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c1917">检验、读者版与对照</text>
-<text x="876.4" y="540.0" font-size="12.5" text-anchor="middle" fill="#57534e">2026-11-01</text>
-<text x="876.4" y="555.0" font-size="12.5" text-anchor="middle" fill="#57534e">– 2026-11-07</text>
+<text x="24.0" y="64.0" font-size="15" text-anchor="start" fill="#57534e">从最早的文字（2021）到现行的本论（2026 年 11 月 9 日）的 49 个转折点，分为六个阶段，各阶段的宽度按其</text>
+<text x="24.0" y="83.0" font-size="15" text-anchor="start" fill="#57534e">转折点数而定，不按时间比例；每个转折点都标明是什么陈述了它；主要的转折点附标题，编号同下表。</text>
+<rect x="50.0" y="150" width="72.5" height="404" fill="#efece6"/>
+<text x="86.3" y="170.0" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c1917">早期写作</text>
+<text x="86.3" y="540.0" font-size="12.5" text-anchor="middle" fill="#57534e">2021-10</text>
+<text x="86.3" y="555.0" font-size="12.5" text-anchor="middle" fill="#57534e">– 2023-12</text>
+<rect x="140.5" y="150" width="157.2" height="404" fill="#f6f3ed"/>
+<text x="219.1" y="170.0" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c1917">选择机制</text>
+<text x="219.1" y="560.0" font-size="12.5" text-anchor="middle" fill="#57534e">2024-03 – 2025-08</text>
+<rect x="315.7" y="150" width="133.0" height="404" fill="#efece6"/>
+<text x="382.2" y="170.0" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c1917">2026 年的转向</text>
+<text x="382.2" y="544.0" font-size="12.5" text-anchor="middle" fill="#57534e">2026-02 – 2026-07</text>
+<rect x="466.7" y="150" width="96.7" height="404" fill="#f6f3ed"/>
+<text x="515.0" y="170.0" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c1917">文件夹、论</text>
+<text x="515.0" y="188.0" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c1917">文与预测</text>
+<text x="515.0" y="540.0" font-size="12.5" text-anchor="middle" fill="#57534e">2026-09</text>
+<text x="515.0" y="555.0" font-size="12.5" text-anchor="middle" fill="#57534e">– 2026-10-06</text>
+<rect x="581.4" y="150" width="193.4" height="404" fill="#efece6"/>
+<text x="678.1" y="170.0" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c1917">生灭变化之论</text>
+<text x="678.1" y="544.0" font-size="12.5" text-anchor="middle" fill="#57534e">2026-10-09 – 2026-10-30</text>
+<rect x="792.8" y="150" width="157.2" height="404" fill="#f6f3ed"/>
+<text x="871.4" y="170.0" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c1917">检验、读者版与对照</text>
+<text x="871.4" y="540.0" font-size="12.5" text-anchor="middle" fill="#57534e">2026-11-01</text>
+<text x="871.4" y="555.0" font-size="12.5" text-anchor="middle" fill="#57534e">– 2026-11-09</text>
 <line x1="50" y1="514" x2="950" y2="514" stroke="#1c1917" stroke-width="1.5"/>
-<rect x="567.6" y="584.0" width="7" height="14.0" fill="#a8a29e"/>
-<rect x="616.4" y="584.0" width="7" height="55.0" fill="#a8a29e"/>
-<rect x="681.9" y="584.0" width="7" height="53.9" fill="#a8a29e"/>
-<rect x="747.3" y="584.0" width="7" height="13.9" fill="#a8a29e"/>
-<rect x="827.3" y="584.0" width="7" height="9.2" fill="#a8a29e"/>
-<text x="571.1" y="653.0" font-size="11" text-anchor="middle" fill="#57534e">10月5日</text>
-<text x="619.9" y="666.0" font-size="11" text-anchor="middle" fill="#57534e">10月12日</text>
-<text x="685.4" y="653.0" font-size="11" text-anchor="middle" fill="#57534e">10月19日</text>
-<text x="750.8" y="653.0" font-size="11" text-anchor="middle" fill="#57534e">10月26日</text>
-<text x="830.8" y="653.0" font-size="11" text-anchor="middle" fill="#57534e">11月2日</text>
+<rect x="560.6" y="584.0" width="7" height="14.0" fill="#a8a29e"/>
+<rect x="609.0" y="584.0" width="7" height="55.0" fill="#a8a29e"/>
+<rect x="673.5" y="584.0" width="7" height="53.9" fill="#a8a29e"/>
+<rect x="738.0" y="584.0" width="7" height="13.9" fill="#a8a29e"/>
+<rect x="812.5" y="584.0" width="7" height="9.2" fill="#a8a29e"/>
+<rect x="950.0" y="584.0" width="7" height="1.5" fill="#a8a29e"/>
+<text x="564.1" y="653.0" font-size="11" text-anchor="middle" fill="#57534e">10月5日</text>
+<text x="612.5" y="666.0" font-size="11" text-anchor="middle" fill="#57534e">10月12日</text>
+<text x="677.0" y="653.0" font-size="11" text-anchor="middle" fill="#57534e">10月19日</text>
+<text x="741.5" y="653.0" font-size="11" text-anchor="middle" fill="#57534e">10月26日</text>
+<text x="816.0" y="653.0" font-size="11" text-anchor="middle" fill="#57534e">11月2日</text>
+<text x="953.5" y="653.0" font-size="11" text-anchor="middle" fill="#57534e">11月9日</text>
 <text x="950.0" y="686.0" font-size="13" text-anchor="end" fill="#57534e">灰条：各记录的历史条目，按周计（最多的一周 1810 条）。</text>
-<path d="M180.9,481.0 L212.4,481.0 L274.1,498.0 L295.1,481.0 L406.2,481.0 L681.9,464.0 L747.3,498.0" fill="none" stroke="#0072B2" stroke-width="1.8" stroke-dasharray="5 3"/>
-<path d="M66.9,481.0 L385.9,447.0 L389.7,464.0 L588.4,498.0 L719.3,464.0" fill="none" stroke="#E69F00" stroke-width="1.8" stroke-dasharray="5 3"/>
-<path d="M374.7,498.0 L388.2,481.0 L607.1,498.0 L691.2,498.0 L784.7,498.0 L802.7,481.0 L950.0,498.0" fill="none" stroke="#CC79A7" stroke-width="1.8" stroke-dasharray="5 3"/>
+<path d="M179.3,481.0 L210.2,481.0 L271.0,498.0 L291.7,481.0 L401.4,481.0 L673.5,464.0 L738.0,498.0" fill="none" stroke="#0072B2" stroke-width="1.8" stroke-dasharray="5 3"/>
+<path d="M66.6,481.0 L381.5,447.0 L385.1,464.0 L581.4,498.0 L710.4,464.0" fill="none" stroke="#E69F00" stroke-width="1.8" stroke-dasharray="5 3"/>
+<path d="M370.4,498.0 L383.7,481.0 L599.8,498.0 L682.7,498.0 L774.8,498.0 L792.8,481.0 L910.7,498.0 L950.0,498.0" fill="none" stroke="#CC79A7" stroke-width="1.8" stroke-dasharray="5 3"/>
 <circle cx="51.5" cy="498.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="66.9" cy="481.0" r="7" fill="#1c1917" stroke="#E69F00" stroke-width="2.4"/>
-<circle cx="120.9" cy="498.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="146.6" cy="498.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="155.0" cy="481.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="180.9" cy="481.0" r="7" fill="#1c1917" stroke="#0072B2" stroke-width="2.4"/>
-<circle cx="185.0" cy="498.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="212.4" cy="481.0" r="7" fill="#a8a29e" stroke="#0072B2" stroke-width="2.4"/>
-<circle cx="214.1" cy="498.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="241.5" cy="498.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="274.1" cy="498.0" r="7" fill="#ffffff" stroke="#0072B2" stroke-width="2.4"/><circle cx="274.1" cy="498.0" r="2.2" fill="#1c1917"/>
-<circle cx="295.1" cy="498.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="295.1" cy="481.0" r="7" fill="#a8a29e" stroke="#0072B2" stroke-width="2.4"/>
-<circle cx="325.2" cy="498.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="374.7" cy="498.0" r="7" fill="#1c1917" stroke="#CC79A7" stroke-width="2.4"/>
-<circle cx="385.9" cy="447.0" r="7" fill="#a8a29e" stroke="#E69F00" stroke-width="2.4"/>
-<circle cx="388.2" cy="481.0" r="7" fill="#a8a29e" stroke="#CC79A7" stroke-width="2.4"/>
-<circle cx="389.7" cy="464.0" r="7" fill="#a8a29e" stroke="#E69F00" stroke-width="2.4"/>
-<circle cx="406.2" cy="481.0" r="7" fill="#a8a29e" stroke="#0072B2" stroke-width="2.4"/>
-<circle cx="412.9" cy="498.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="442.2" cy="498.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="477.8" cy="498.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="550.7" cy="498.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="559.1" cy="481.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="559.1" cy="464.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="570.4" cy="498.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="588.4" cy="481.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="588.4" cy="498.0" r="7" fill="#1c1917" stroke="#E69F00" stroke-width="2.4"/>
-<circle cx="607.1" cy="498.0" r="7" fill="#ffffff" stroke="#CC79A7" stroke-width="2.4"/>
-<circle cx="663.2" cy="498.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="672.5" cy="481.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="681.9" cy="464.0" r="7" fill="#ffffff" stroke="#0072B2" stroke-width="2.4"/>
-<circle cx="691.2" cy="498.0" r="7" fill="#ffffff" stroke="#CC79A7" stroke-width="2.4"/>
-<circle cx="691.2" cy="481.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="719.3" cy="464.0" r="7" fill="#ffffff" stroke="#E69F00" stroke-width="2.4"/>
-<circle cx="719.3" cy="498.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="728.6" cy="481.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="747.3" cy="498.0" r="7" fill="#ffffff" stroke="#0072B2" stroke-width="2.4"/>
-<circle cx="784.7" cy="498.0" r="7" fill="#1c1917" stroke="#CC79A7" stroke-width="2.4"/>
-<circle cx="802.7" cy="481.0" r="7" fill="#ffffff" stroke="#CC79A7" stroke-width="2.4"/>
-<circle cx="802.7" cy="498.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="851.8" cy="498.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="66.6" cy="481.0" r="7" fill="#1c1917" stroke="#E69F00" stroke-width="2.4"/>
+<circle cx="119.9" cy="498.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="145.4" cy="498.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="153.7" cy="481.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="179.3" cy="481.0" r="7" fill="#1c1917" stroke="#0072B2" stroke-width="2.4"/>
+<circle cx="183.3" cy="498.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="210.2" cy="481.0" r="7" fill="#a8a29e" stroke="#0072B2" stroke-width="2.4"/>
+<circle cx="211.9" cy="498.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="238.9" cy="498.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="271.0" cy="498.0" r="7" fill="#ffffff" stroke="#0072B2" stroke-width="2.4"/><circle cx="271.0" cy="498.0" r="2.2" fill="#1c1917"/>
+<circle cx="291.7" cy="498.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="291.7" cy="481.0" r="7" fill="#a8a29e" stroke="#0072B2" stroke-width="2.4"/>
+<circle cx="321.6" cy="498.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="370.4" cy="498.0" r="7" fill="#1c1917" stroke="#CC79A7" stroke-width="2.4"/>
+<circle cx="381.5" cy="447.0" r="7" fill="#a8a29e" stroke="#E69F00" stroke-width="2.4"/>
+<circle cx="383.7" cy="481.0" r="7" fill="#a8a29e" stroke="#CC79A7" stroke-width="2.4"/>
+<circle cx="385.1" cy="464.0" r="7" fill="#a8a29e" stroke="#E69F00" stroke-width="2.4"/>
+<circle cx="401.4" cy="481.0" r="7" fill="#a8a29e" stroke="#0072B2" stroke-width="2.4"/>
+<circle cx="408.1" cy="498.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="436.9" cy="498.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="472.2" cy="498.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="544.1" cy="498.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="552.3" cy="481.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="552.3" cy="464.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="563.4" cy="498.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="581.4" cy="481.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="581.4" cy="498.0" r="7" fill="#1c1917" stroke="#E69F00" stroke-width="2.4"/>
+<circle cx="599.8" cy="498.0" r="7" fill="#ffffff" stroke="#CC79A7" stroke-width="2.4"/>
+<circle cx="655.1" cy="498.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="664.3" cy="481.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="673.5" cy="464.0" r="7" fill="#ffffff" stroke="#0072B2" stroke-width="2.4"/>
+<circle cx="682.7" cy="498.0" r="7" fill="#ffffff" stroke="#CC79A7" stroke-width="2.4"/>
+<circle cx="682.7" cy="481.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="710.4" cy="464.0" r="7" fill="#ffffff" stroke="#E69F00" stroke-width="2.4"/>
+<circle cx="710.4" cy="498.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="719.6" cy="481.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="738.0" cy="498.0" r="7" fill="#ffffff" stroke="#0072B2" stroke-width="2.4"/>
+<circle cx="774.8" cy="498.0" r="7" fill="#1c1917" stroke="#CC79A7" stroke-width="2.4"/>
+<circle cx="792.8" cy="481.0" r="7" fill="#ffffff" stroke="#CC79A7" stroke-width="2.4"/>
+<circle cx="792.8" cy="498.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="832.1" cy="498.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="832.1" cy="481.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="851.8" cy="498.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
 <circle cx="851.8" cy="481.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="876.4" cy="498.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="876.4" cy="481.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="925.5" cy="498.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="950.0" cy="498.0" r="7" fill="#ffffff" stroke="#CC79A7" stroke-width="2.4"/>
-<circle cx="950.0" cy="481.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="891.1" cy="498.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="910.7" cy="498.0" r="7" fill="#ffffff" stroke="#CC79A7" stroke-width="2.4"/>
+<circle cx="910.7" cy="481.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
+<circle cx="950.0" cy="498.0" r="7" fill="#1c1917" stroke="#CC79A7" stroke-width="2.4"/>
 <line x1="51.5" y1="489.0" x2="51.5" y2="245.0" stroke="#57534e" stroke-width="1"/>
 <text x="45.5" y="240.0" font-size="14" text-anchor="start" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">1 · 元社区：城市作为一种结构</text>
-<line x1="180.9" y1="472.0" x2="180.9" y2="267.0" stroke="#0072B2" stroke-width="1"/>
-<text x="180.9" y="262.0" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">6 · 一种价值作为权力的象征</text>
-<line x1="212.4" y1="472.0" x2="212.4" y2="289.0" stroke="#0072B2" stroke-width="1"/>
-<text x="206.4" y="284.0" font-size="14" font-weight="bold" text-anchor="start" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">8 · 环被写下</text>
-<line x1="274.1" y1="489.0" x2="274.1" y2="311.0" stroke="#0072B2" stroke-width="1"/>
-<text x="268.1" y="306.0" font-size="14" font-weight="bold" text-anchor="start" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">11 · 元吸引子捕获选择之机制</text>
-<line x1="295.1" y1="472.0" x2="295.1" y2="333.0" stroke="#0072B2" stroke-width="1"/>
-<text x="289.1" y="328.0" font-size="14" font-weight="bold" text-anchor="start" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">13 · 二阶吸引子</text>
-<line x1="385.9" y1="438.0" x2="385.9" y2="355.0" stroke="#E69F00" stroke-width="1"/>
-<text x="385.9" y="350.0" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">16 · 間 作为唯一原语</text>
-<line x1="406.2" y1="472.0" x2="406.2" y2="377.0" stroke="#0072B2" stroke-width="1"/>
-<text x="400.2" y="372.0" font-size="14" font-weight="bold" text-anchor="start" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">19 · Moloch 在心中</text>
-<line x1="477.8" y1="489.0" x2="477.8" y2="399.0" stroke="#57534e" stroke-width="1"/>
-<text x="471.8" y="394.0" font-size="14" text-anchor="start" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">22 · 语料汇入理论文件夹</text>
-<line x1="588.4" y1="472.0" x2="588.4" y2="421.0" stroke="#57534e" stroke-width="1"/>
-<text x="588.4" y="416.0" font-size="14" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">27 · 生灭变化之论得名</text>
-<line x1="681.9" y1="455.0" x2="681.9" y2="377.0" stroke="#0072B2" stroke-width="1"/>
-<text x="687.9" y="372.0" font-size="14" font-weight="bold" text-anchor="end" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">32 · 脊柱上的捕获</text>
-<line x1="719.3" y1="455.0" x2="719.3" y2="355.0" stroke="#E69F00" stroke-width="1"/>
-<text x="725.3" y="350.0" font-size="14" font-weight="bold" text-anchor="end" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">35 · 文法作为根</text>
-<line x1="747.3" y1="489.0" x2="747.3" y2="333.0" stroke="#0072B2" stroke-width="1"/>
-<text x="753.3" y="328.0" font-size="14" font-weight="bold" text-anchor="end" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">38 · T7 的桥接不成立</text>
-<line x1="802.7" y1="472.0" x2="802.7" y2="311.0" stroke="#CC79A7" stroke-width="1"/>
-<text x="808.7" y="306.0" font-size="14" font-weight="bold" text-anchor="end" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">40 · 不读任何次序者不蕴涵 C</text>
-<line x1="876.4" y1="472.0" x2="876.4" y2="289.0" stroke="#57534e" stroke-width="1"/>
-<text x="876.4" y="284.0" font-size="14" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">45 · 检验在任何运行之前冻结</text>
-<line x1="925.5" y1="489.0" x2="925.5" y2="421.0" stroke="#57534e" stroke-width="1"/>
-<text x="925.5" y="416.0" font-size="14" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">46 · T2 收窄</text>
+<line x1="179.3" y1="472.0" x2="179.3" y2="267.0" stroke="#0072B2" stroke-width="1"/>
+<text x="179.3" y="262.0" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">6 · 一种价值作为权力的象征</text>
+<line x1="210.2" y1="472.0" x2="210.2" y2="289.0" stroke="#0072B2" stroke-width="1"/>
+<text x="204.2" y="284.0" font-size="14" font-weight="bold" text-anchor="start" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">8 · 环被写下</text>
+<line x1="271.0" y1="489.0" x2="271.0" y2="311.0" stroke="#0072B2" stroke-width="1"/>
+<text x="265.0" y="306.0" font-size="14" font-weight="bold" text-anchor="start" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">11 · 元吸引子捕获选择之机制</text>
+<line x1="291.7" y1="472.0" x2="291.7" y2="333.0" stroke="#0072B2" stroke-width="1"/>
+<text x="285.7" y="328.0" font-size="14" font-weight="bold" text-anchor="start" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">13 · 二阶吸引子</text>
+<line x1="381.5" y1="438.0" x2="381.5" y2="355.0" stroke="#E69F00" stroke-width="1"/>
+<text x="381.5" y="350.0" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">16 · 間 作为唯一原语</text>
+<line x1="401.4" y1="472.0" x2="401.4" y2="377.0" stroke="#0072B2" stroke-width="1"/>
+<text x="395.4" y="372.0" font-size="14" font-weight="bold" text-anchor="start" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">19 · Moloch 在心中</text>
+<line x1="472.2" y1="489.0" x2="472.2" y2="399.0" stroke="#57534e" stroke-width="1"/>
+<text x="466.2" y="394.0" font-size="14" text-anchor="start" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">22 · 语料汇入理论文件夹</text>
+<line x1="581.4" y1="472.0" x2="581.4" y2="421.0" stroke="#57534e" stroke-width="1"/>
+<text x="581.4" y="416.0" font-size="14" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">27 · 生灭变化之论得名</text>
+<line x1="673.5" y1="455.0" x2="673.5" y2="377.0" stroke="#0072B2" stroke-width="1"/>
+<text x="679.5" y="372.0" font-size="14" font-weight="bold" text-anchor="end" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">32 · 脊柱上的捕获</text>
+<line x1="710.4" y1="455.0" x2="710.4" y2="355.0" stroke="#E69F00" stroke-width="1"/>
+<text x="716.4" y="350.0" font-size="14" font-weight="bold" text-anchor="end" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">35 · 文法作为根</text>
+<line x1="738.0" y1="489.0" x2="738.0" y2="333.0" stroke="#0072B2" stroke-width="1"/>
+<text x="744.0" y="328.0" font-size="14" font-weight="bold" text-anchor="end" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">38 · T7 的桥接不成立</text>
+<line x1="792.8" y1="472.0" x2="792.8" y2="311.0" stroke="#CC79A7" stroke-width="1"/>
+<text x="798.8" y="306.0" font-size="14" font-weight="bold" text-anchor="end" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">40 · 不读任何次序者不蕴涵 C</text>
+<line x1="851.8" y1="472.0" x2="851.8" y2="289.0" stroke="#57534e" stroke-width="1"/>
+<text x="857.8" y="284.0" font-size="14" text-anchor="end" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">45 · 检验在任何运行之前冻结</text>
+<line x1="891.1" y1="489.0" x2="891.1" y2="267.0" stroke="#57534e" stroke-width="1"/>
+<text x="897.1" y="262.0" font-size="14" text-anchor="end" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">46 · T2 收窄</text>
+<line x1="950.0" y1="489.0" x2="950.0" y2="245.0" stroke="#CC79A7" stroke-width="1"/>
+<text x="956.0" y="240.0" font-size="14" font-weight="bold" text-anchor="end" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">49 · 无应当；T8 为作者所提供</text>
 <text x="50.0" y="716.0" font-size="14" font-weight="bold" text-anchor="start" fill="#1c1917">形状，陈述它的是什么：</text>
 <circle cx="240.2" cy="711.0" r="7" fill="#e7e5e4" stroke="#1c1917" stroke-width="1.3"/>
-<text x="255.2" y="716.0" font-size="14" text-anchor="start" fill="#1c1917">公开：迄今全部 48 个；尚无「私人、未发表」「AI 重构」</text>
+<text x="255.2" y="716.0" font-size="14" text-anchor="start" fill="#1c1917">公开：迄今全部 49 个；尚无「私人、未发表」「AI 重构」</text>
 <text x="50.0" y="742.0" font-size="14" font-weight="bold" text-anchor="start" fill="#1c1917">圆环，下文所循的线索：</text>
 <circle cx="240.2" cy="737.0" r="7" fill="#e7e5e4" stroke="#0072B2" stroke-width="2.4"/>
 <text x="255.2" y="742.0" font-size="14" text-anchor="start" fill="#1c1917">选择机制</text>
@@ -131,7 +136,7 @@
 <text x="429.2" y="742.0" font-size="14" text-anchor="start" fill="#1c1917">伦理</text>
 <text x="50.0" y="768.0" font-size="14" font-weight="bold" text-anchor="start" fill="#1c1917">填色，陈述它的文本出自谁之手：</text>
 <circle cx="299.6" cy="763.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
-<text x="314.6" y="768.0" font-size="14" text-anchor="start" fill="#1c1917">一个人的话（15）</text>
+<text x="314.6" y="768.0" font-size="14" text-anchor="start" fill="#1c1917">一个人的话（16）</text>
 <circle cx="467.0" cy="763.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
 <text x="482.0" y="768.0" font-size="14" text-anchor="start" fill="#1c1917">AI 据一个人的话起草（13）</text>
 <circle cx="692.8" cy="763.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>

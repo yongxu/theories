@@ -16,9 +16,19 @@ All 1183 entries, in 28 groups, summed; every entry is an AI reading, no person'
 
 The relations sum to 1,059: the other 124 entries have none (105 not-carried, 19 history-only). 3 history-only entries have one, which [the connection map](map.html) draws as a short end, not a thread, though its group counts include them.
 
+**Start here.** The thickest threads in the picture below that the account states (none proposed here): a folder or domain, the part of the account its claims are read against, the relation and how many claims. Each folder's page gives its claims one by one.
+
+| Folder or domain | Read against | Relation | Claims |
+|---|---|---|---:|
+| [間 and 文言 as formal language](crosswalk/jian-and-wenyan-as-formal-language.md) | [06 古文：读出、检验与分歧](../../chapters/06-CLASSICAL-TEXTS.md) | divergence | 24 |
+| [The selfishness spiral and narrative-value frames](crosswalk/selfishness-spiral-and-narrative-value-frames.md) | [05 Joint activity and selection](../../chapters/05-COLLECTIVES.md) | scope | 19 |
+| [Memories and working style](crosswalk/memories-and-working-style.md) | [08 Method and the formal core](../../chapters/08-METHOD.md) | agreement | 16 |
+| [Alignment as selection on cognition](crosswalk/alignment-selection-on-cognition.md) | [05 Joint activity and selection](../../chapters/05-COLLECTIVES.md) | scope | 14 |
+| [Wamotopia and the Wamo Protocol](crosswalk/wamotopia-and-the-wamo-protocol.md) | [05 Joint activity and selection](../../chapters/05-COLLECTIVES.md) | scope | 14 |
+
 ![How the earlier folders and the domains of thought meet the live account](connections.svg)
 
-*Drawn by connection_map.py from the crosswalk’s claims, on the pages its table links: each thread joins a folder or domain to the part of the account its claims are read against, coloured by relation, and every thread is an AI reading, no person’s. To explore the same data, open [the connection map](map.html) on the reader’s site, once it is published, or from a clone; GitHub shows it only as source.*
+*Drawn by connection_map.py from the crosswalk’s claims, on the pages its table links: each thread joins a folder or domain to the part of the account its claims are read against, coloured by relation, and every thread is an AI reading, no person’s. To explore the same data, open the connection map: on the reader’s site its Connections page, or [map.html](map.html) opened from a clone; GitHub shows map.html only as source.*
 
 Each earlier theory folder and each domain of thought: what it claimed in its own terms, and what became of that in the live account. The evidence layer, not for reading through. It creates no result, and every entry is an AI reading with no person's behind it. A shared word is not a correspondence, structural agreement is not agreement in meaning, and no tradition is spoken for. Not carried is an outcome, not a defect. Where a source is not stored here, what is said of it comes from the AI's knowledge and has not been checked against a text.
 

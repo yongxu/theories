@@ -4,7 +4,7 @@
 
 [Home](../../../README.md) · [中文](../../../README.zh.md) · **Read** · [One page](../ONE-PAGE.md) · [The theory](../THE-THEORY-OF-BECOMING.md) · [Chapters](../chapters/README.md) · [Uses](../USES.md) · **Check** · [Tests](../../../TESTS.md) · [Results](../../../RESULTS.md) · [Proofs](../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../OPEN-QUESTIONS.md) · [Reviewers](../review/README.md) · **See** · [Graph](THEORY-GRAPH.md) · [Connections](atlas/CROSSWALK.md) · [How it grew](../../LINEAGE.md) · [Glossary](../../../GLOSSARY.md) · [Where everything is](../../../MAP.md)
 
-[中文（各章一览）](THEORY-GRAPH.zh.md) · 74–97 minutes to read in full; the chapters at a glance, what the picture shows and the edge kinds, with their tables, in 31–41 minutes.
+[中文（各章一览）](THEORY-GRAPH.zh.md) · 77–100 minutes to read in full; the chapters at a glance, what the picture shows and the edge kinds, with their tables, in 34–44 minutes.
 
 One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts, the chapter sections that state results and the review dossiers, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3220 nodes, 6892 edges. An edge records a dependence, a citation or a registered reading, not an agreement in meaning.
 
@@ -108,6 +108,62 @@ A region's results are the records whose home section is in its chapter, so the 
 ## Edge kinds between chapters
 
 Edges from the results of the first region to the results of the second, by the kind each record gives its dependence (`formal-reuse`, `interpretive`, `application`) and its `related` list (analogy, not a dependence). A row whose two regions are the same counts edges within the region.
+
+First, one table per kind among the eight chapters: a row is the chapter whose results use, a column the chapter whose results are used, the diagonal within a chapter, and a dot none.
+
+**formal-reuse**
+
+| from \ to | 01 | 02 | 03 | 04 | 05 | 06 | 07 | 08 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| 01 Root | 137 | 60 | 26 | 10 | 6 | 1 | 9 | 7 |
+| 02 Map | 42 | 141 | 17 | 8 | 2 | · | 20 | 3 |
+| 03 Knowing and testing | 40 | 15 | 102 | · | 4 | 1 | 13 | 2 |
+| 04 Life and evolution | 6 | 14 | 2 | 54 | 5 | · | 6 | · |
+| 05 Collectives and selection | 11 | 15 | 13 | 6 | 81 | · | 8 | · |
+| 06 Classical texts | 11 | 5 | 9 | · | · | 14 | · | · |
+| 07 Significance and alignment | 35 | 29 | 12 | 3 | 3 | · | 117 | 4 |
+| 08 Method and the formal core | 6 | 2 | 3 | · | · | · | 3 | 5 |
+
+**interpretive**
+
+| from \ to | 01 | 02 | 03 | 04 | 05 | 06 | 07 | 08 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| 01 Root | 2 | · | 1 | · | · | · | · | · |
+| 02 Map | 1 | · | · | · | · | · | 1 | · |
+| 03 Knowing and testing | 5 | 3 | 43 | 1 | · | · | 7 | · |
+| 04 Life and evolution | · | · | 2 | 1 | · | · | · | · |
+| 05 Collectives and selection | · | 1 | · | 2 | 4 | · | 1 | · |
+| 06 Classical texts | 1 | · | 2 | · | 1 | 5 | · | 1 |
+| 07 Significance and alignment | · | 2 | · | · | · | · | 8 | · |
+| 08 Method and the formal core | 1 | 1 | · | · | · | 1 | · | · |
+
+**application**
+
+| from \ to | 01 | 02 | 03 | 04 | 05 | 06 | 07 | 08 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| 01 Root | · | · | · | · | · | 1 | · | · |
+| 02 Map | 1 | 2 | · | · | · | · | · | · |
+| 03 Knowing and testing | · | · | · | · | · | · | · | · |
+| 04 Life and evolution | · | · | · | · | · | · | · | · |
+| 05 Collectives and selection | · | · | · | · | · | · | · | · |
+| 06 Classical texts | · | · | · | · | · | · | · | · |
+| 07 Significance and alignment | · | 1 | · | · | 3 | · | 3 | · |
+| 08 Method and the formal core | · | · | · | · | · | · | · | · |
+
+**related** (analogy, not a dependence)
+
+| from \ to | 01 | 02 | 03 | 04 | 05 | 06 | 07 | 08 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| 01 Root | 104 | 29 | 21 | 6 | 2 | 4 | 6 | 30 |
+| 02 Map | 27 | 153 | 21 | 10 | 15 | 17 | 24 | 13 |
+| 03 Knowing and testing | 15 | 31 | 184 | 6 | 3 | 4 | 12 | 8 |
+| 04 Life and evolution | 8 | 12 | 3 | 79 | 5 | 4 | 3 | 3 |
+| 05 Collectives and selection | 2 | 21 | 10 | 2 | 115 | 10 | 17 | 1 |
+| 06 Classical texts | 4 | 19 | 9 | 4 | 11 | 18 | 3 | · |
+| 07 Significance and alignment | 7 | 29 | 16 | 6 | 14 | 3 | 157 | 3 |
+| 08 Method and the formal core | 20 | 8 | 11 | 2 | 1 | · | 10 | 6 |
+
+Then every pair, the regions beyond the eight chapters included:
 
 | Edges from results of | to results of | formal-reuse | interpretive | application | related |
 |---|---|---:|---:|---:|---:|
