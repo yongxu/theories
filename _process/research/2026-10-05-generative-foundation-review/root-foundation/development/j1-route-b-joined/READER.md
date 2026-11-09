@@ -58,7 +58,7 @@ Abbreviations: LB = `experiments/integrated-correction/general-framework/generat
 
 #### L3. Dangling anchor `#r-c-from-extension`
 
-- Where: 07:661, "every such order gives [C](#r-c-from-extension) between them".
+- Where: 07:661, "every such order gives `[C](#r-c-from-extension)` between them" (the link set in code here, so this quotation does not link a missing anchor).
 - Fact: no `id="r-c-from-extension"` exists in `theories/` or `_process/`. The C theorem between listed level paths is at `#r-self-concern-and-c-under-the-condition` (07:258).
 - Fix: point the link there.
 
