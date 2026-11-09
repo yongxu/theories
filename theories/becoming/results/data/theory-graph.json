@@ -489,6 +489,18 @@
    "page": "theories/becoming/results/records/a-law-through-coupling-along-one-run.md"
   },
   {
+   "id": "record:a-line-alive-after-a-window",
+   "type": "result",
+   "record": "a-line-alive-after-a-window",
+   "title": "A line alive after a window never overdrew in it",
+   "title_zh": "窗后尚存之线未曾于窗内透支",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/a-line-alive-after-a-window.md"
+  },
+  {
    "id": "record:a-narrowing-above-its-widening",
    "type": "result",
    "record": "a-narrowing-above-its-widening",
@@ -5517,6 +5529,18 @@
    "page": "theories/becoming/results/records/the-class-of-being-joined.md"
   },
   {
+   "id": "record:the-condition-in-time",
+   "type": "result",
+   "record": "the-condition-in-time",
+   "title": "The continuation condition in time",
+   "title_zh": "时间中的延续条件",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/the-condition-in-time.md"
+  },
+  {
    "id": "record:the-continuation-condition-on-the-root",
    "type": "result",
    "record": "the-continuation-condition-on-the-root",
@@ -6535,6 +6559,18 @@
    "region": "significance",
    "base": "grammar",
    "page": "theories/becoming/results/records/what-the-net-fixes-of-ones-own-class.md"
+  },
+  {
+   "id": "record:what-the-one-center-bound-counts",
+   "type": "result",
+   "record": "what-the-one-center-bound-counts",
+   "title": "What the one-center bound counts",
+   "title_zh": "单一中心之界所计为何",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/what-the-one-center-bound-counts.md"
   },
   {
    "id": "record:what-the-step-across-standpoints-reaches",
@@ -11171,6 +11207,17 @@
    "theorems": 67,
    "region": "significance",
    "base": "grammar",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.ConditionInTime",
+   "type": "module",
+   "name": "Becoming.ConditionInTime",
+   "level": "L2",
+   "theorems": 50,
+   "region": "significance",
+   "base": "old-base",
    "on_grammar": true,
    "reaches_grammar": true
   },
@@ -31372,6 +31419,24 @@
    "anchor": "r-the-own-class-read-on-a-flow"
   },
   {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-the-one-center-bound-counts",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-what-the-one-center-bound-counts"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-condition-in-time",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-the-condition-in-time"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-line-alive-after-a-window",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-a-line-alive-after-a-window"
+  },
+  {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-ranking-under-readings",
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -32331,6 +32396,26 @@
   {
    "from": "module:Becoming.Composition",
    "to": "module:Becoming.Witnesses",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ConditionInTime",
+   "to": "module:Becoming.FlowCenters",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ConditionInTime",
+   "to": "module:Becoming.GroupEnding",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ConditionInTime",
+   "to": "module:Becoming.Identity",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ConditionInTime",
+   "to": "module:Becoming.SelectionTerm",
    "type": "imports"
   },
   {
@@ -36717,6 +36802,21 @@
    "to": "record:testing-within-couplings",
    "type": "formal-reuse",
    "interface": true
+  },
+  {
+   "from": "record:a-line-alive-after-a-window",
+   "to": "module:Becoming.ConditionInTime",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-line-alive-after-a-window",
+   "to": "record:groups-formed-by-descent",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-line-alive-after-a-window",
+   "to": "record:what-persisting-shows-of-an-order",
+   "type": "formal-reuse"
   },
   {
    "from": "record:a-narrowing-above-its-widening",
@@ -56002,6 +56102,51 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:the-condition-in-time",
+   "to": "module:Becoming.ConditionInTime",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-condition-in-time",
+   "to": "record:feedback-and-reach",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-condition-in-time",
+   "to": "record:mutual-dependence-and-its-pace",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-condition-in-time",
+   "to": "record:mutual-dependence-gives-the-condition-de-se",
+   "type": "related"
+  },
+  {
+   "from": "record:the-condition-in-time",
+   "to": "record:need-and-feeding-read-with-time",
+   "type": "related"
+  },
+  {
+   "from": "record:the-condition-in-time",
+   "to": "record:rivals-bounded-in-time",
+   "type": "related"
+  },
+  {
+   "from": "record:the-condition-in-time",
+   "to": "record:standpoints-read-off-a-flow",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-condition-in-time",
+   "to": "record:the-continuation-condition-on-the-root",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-condition-in-time",
+   "to": "record:what-the-one-center-bound-counts",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:the-continuation-condition-on-the-root",
    "to": "module:Becoming.GrammarScope",
    "type": "proved-in"
@@ -59750,6 +59895,31 @@
    "from": "record:what-the-net-fixes-of-ones-own-class",
    "to": "record:what-a-line-holds-and-a-regularity-takes-in",
    "type": "related"
+  },
+  {
+   "from": "record:what-the-one-center-bound-counts",
+   "to": "module:Becoming.ConditionInTime",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-the-one-center-bound-counts",
+   "to": "record:rivals-bounded-in-time",
+   "type": "related"
+  },
+  {
+   "from": "record:what-the-one-center-bound-counts",
+   "to": "record:standpoints-read-off-a-flow",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-the-one-center-bound-counts",
+   "to": "record:the-condition-in-time",
+   "type": "related"
+  },
+  {
+   "from": "record:what-the-one-center-bound-counts",
+   "to": "record:the-continuation-condition-on-the-root",
+   "type": "formal-reuse"
   },
   {
    "from": "record:what-the-step-across-standpoints-reaches",
@@ -63995,6 +64165,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-line-alive-after-a-window",
+   "to": "record:a-line-alive-after-a-window",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-narrowing-above-its-widening",
    "to": "record:a-narrowing-above-its-widening",
    "type": "states"
@@ -64315,6 +64490,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-condition-in-time",
+   "to": "record:the-condition-in-time",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-continuation-condition-on-the-root",
    "to": "record:the-continuation-condition-on-the-root",
    "type": "states"
@@ -64397,6 +64577,11 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-the-net-fixes-of-ones-own-class",
    "to": "record:what-the-net-fixes-of-ones-own-class",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-the-one-center-bound-counts",
+   "to": "record:what-the-one-center-bound-counts",
    "type": "states"
   },
   {
