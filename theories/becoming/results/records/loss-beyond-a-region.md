@@ -82,7 +82,7 @@ Of levels Ren wrote: “i think it should be the whole, and a weaker version is 
 - related, not a proved adapter: [own-count-misses-joint-excess](own-count-misses-joint-excess.md). Counting one's own draw misses joint excess; here closing nothing within one's dependence misses the loss beyond it.
 - related, not a proved adapter: [feeding-closure](feeding-closure.md). alongDependence is exactly the clearer's feeding closure (Clearing.dependenceRegion_iff); a loss beyond the closure need not return.
 
-**Used by:** [closure-verdict-meets-continuation-condition](closure-verdict-meets-continuation-condition.md) · [comparison-within-reach](comparison-within-reach.md) · [feeding-closure](feeding-closure.md) · [levels-of-closure](levels-of-closure.md) · [whole-and-regions-and-bounded-centers](whole-and-regions-and-bounded-centers.md)
+**Used by:** [closure-verdict-meets-continuation-condition](closure-verdict-meets-continuation-condition.md) · [comparison-within-reach](comparison-within-reach.md) · [feeding-closure](feeding-closure.md) · [levels-of-closure](levels-of-closure.md) · [standpoints-read-off-a-flow](standpoints-read-off-a-flow.md) · [whole-and-regions-and-bounded-centers](whole-and-regions-and-bounded-centers.md)
 
 <a id="sources--来源"></a>
 ### Sources

@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 373 | 18,448 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 374 | 18,481 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 18 | 1,054 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -364,6 +364,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [FiniteInquiryClassification.lean](lean-declarations/inquiry.md#module-13aee3c0e811) | Attainable inquiry, contact and process laws |
 | [FiniteSupportObstruction.lean](lean-declarations/other.md#module-805a098f4dbd) | Other formal studies |
 | [Flow.lean](lean-declarations/becoming-core-part-2.md#module-1ab3e6b83532) | Becoming pure core |
+| [FlowCenters.lean](lean-declarations/becoming-core-part-2.md#module-3c07105e81a2) | Becoming pure core |
 | [FormationAccounts.lean](lean-declarations/shared.md#module-411df828cbbe) | Organizational formation through revisable evaluation |
 | [FormationClosure.lean](lean-declarations/inquiry.md#module-d330223ee429) | Attainable inquiry, contact and process laws |
 | [FormationDraw.lean](lean-declarations/inquiry.md#module-1d28de9ca37e) | Attainable inquiry, contact and process laws |
