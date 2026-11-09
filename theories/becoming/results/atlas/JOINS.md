@@ -300,7 +300,7 @@ Where two rows share a folder (LA4's two stages, IN1's two rounds), only an id c
 
 ## Pilot: premise ids
 
-K3's 17 premises (`COVERAGE.json`) were the one place premises were data until step 2 of the next phase made premises entries of their own ([the premise ledger](PREMISES.md)), seeded from them and from 08's card; this pilot, measured on K3's patterns, is still measured at each render. For each, a proposed id, the live record hypotheses that name it in words and those its Lean pattern matches, the dynamics that quote such a hypothesis, and how many of its witnesses the core run lists. A hypothesis is text, so a match is a candidate join, not a reading of it. 426 of the 1,264 live hypotheses match some premise, and 98 match more than one.
+K3's 17 premises (`COVERAGE.json`) were the one place premises were data until step 2 of the next phase made premises entries of their own ([the premise ledger](PREMISES.md)), seeded from them and from 08's card; this pilot is still measured, at each render, on K3's patterns. For each, a proposed id, the live record hypotheses that name it in words and those its Lean pattern matches, the dynamics that quote such a hypothesis, and how many of its witnesses the core run lists. A hypothesis is text, so a match is a candidate join, not a reading of it. 426 of the 1,264 live hypotheses match some premise, and 98 match more than one.
 
 | Premise | Proposed id | Hypotheses naming it (records) | Matching its pattern (records) | Dynamics quoting one | Witnesses in the core |
 |---|---|---:|---:|---:|---:|

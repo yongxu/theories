@@ -94,7 +94,7 @@ flowchart LR
 | [A code held as counts, learned from what is heard](families/c.md#a-code-held-as-counts) | 1. from no counts, one hearing of the first word of greatest count, a tie going to the first word, gives both agents that word as uniquely greatest: a shared uniquely greatest word (witness; dropping [a law keeping the exchange with the renaming](PREMISES.md#countedcodes-keepsrelation), [CommutesWithRenaming](PREMISES.md#countedcodes-commuteswithrenaming))<br>2. from counts 1, 0 for one agent and 0, 0 for the other, one step of adding the speaker's counts gives both agents 1, 0, the first word uniquely greatest for each (witness; dropping [a start related to itself](PREMISES.md#countedcodes-renamed)) | — |
 | [A reading against the share does not ratchet](families/c.md#a-reading-against-the-share-does-not-ratchet) | **none: no exit is stated** | — |
 
-**Which premise releases which lock.** Each premise an exit of the family drops, and the exits that drop it. Where an exit's law reads beyond the share, the exit drops Unread, which the dynamic's own laws hold by having nothing beyond the share.
+**Which premise releases which lock.** Each premise an exit of the family drops, and the exits that drop it. Where an exit's law reads beyond the share, the exit drops Unread, which the laws of the lock it leaves hold by having nothing beyond the share (and do not list).
 
 | Premise | Dropped by |
 |---|---|
@@ -225,7 +225,7 @@ flowchart LR
 | [Chosen encounters: records only narrow the candidates, and a wrong unique binding can meet the stopping rule](families/d.md#encounter-selection-and-revision) | 1. the meaning is no longer a candidate after n + k steps: some bearing move between steps n and n + k does not offer it, and it stays out at every later step (exact)<br>2. after surveying the place again, the recalled access report is the current one, the earlier reports kept, and the next choice is (0, 1) where the stale report gave (2, 2) (a witness; the rearrangement and the survey are supplied interventions) | — |
 | [A reading informed and revalued along one law: the updates commute, the courses do not](families/d.md#a-reading-informed-and-revalued) | 1. along the course from both worlds listed, the agreeing valuation and a scheduled demonstration, holding for the reading formation's answer falls short, by the reference on the listing of both worlds, by 1 at step 1 and by nothing at step 2 (a witness; there being shown removes the least shortfall)<br>2. along the course from the first world alone, the reversed valuation and a presented input, the answer falls short of the reference by 1 at step 1 and by nothing at step 2 (a witness; there revaluing removes the residual) | — |
 
-**Which premise releases which lock.** Each premise an exit of the family drops, and the exits that drop it. Where an exit's law reads beyond the share, the exit drops Unread, which the dynamic's own laws hold by having nothing beyond the share.
+**Which premise releases which lock.** Each premise an exit of the family drops, and the exits that drop it.
 
 | Premise | Dropped by |
 |---|---|

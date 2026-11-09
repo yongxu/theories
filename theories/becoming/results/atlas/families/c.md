@@ -38,7 +38,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [target-capture](../../records/target-capture.md), hypothesis 1: The share theorems assume only bounds on offspring numbers; that offspring carry their parents' target (transmission) is the premise needed to read them as shares, as with TransmitsWithin in Becoming.Evolution.
   - [target-capture](../../records/target-capture.md), hypothesis 2: The descent theorems assume what stands is listed at each step, a local condition written into them; perturbation_reabsorbed assumes the next configuration does not depend on the state.
   - [target-capture](../../records/target-capture.md), hypothesis 3: Discrete steps; natural-number amounts.
-- **Premises, by law.**
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Becoming.share_not_lower`: [carriers leave at least a](../PREMISES.md#capture-carriers), [others leave at most b](../PREMISES.md#capture-others)
   - `Becoming.share_rises`: [carriers leave at least a](../PREMISES.md#capture-carriers), [others leave at most b](../PREMISES.md#capture-others)
   - `Becoming.CaptureWorlds.share_rises_of_unsupported`: [only active relata give](../PREMISES.md#k3-only-active-relata-give), [activity needing support](../PREMISES.md#k3-activity-needing-support), [listed offspring descend](../PREMISES.md#capture-descend), [others not supported](../PREMISES.md#capture-unsupported), [carriers leave at least a](../PREMISES.md#capture-carriers), [requirements as thresholds](../PREMISES.md#card-requirements-as-thresholds)
@@ -66,7 +66,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Hypotheses, quoted from the records.**
   - [capture-through-the-rule](../../records/capture-through-the-rule.md), hypothesis 1: No axiom. Each statement names its hypotheses: the fast step does not lower the share under a favouring rule (Raises); the rule read is a monotone function of the share alone (ReadsShare); favouring is kept upward; and, as the statement needs, the start locked (Locked), the start's rule and every rule read favouring, or the reading favouring at every share. The order statements add selection monotone in the share and the rule. On counts, offspring numbers per carrier and per other, others present.
   - [two-rules-lock-together](../../records/two-rules-lock-together.md), hypothesis 1: No axiom; the premises of favouring_locks for the pair: selection under both favouring does not lower the share, each rule read monotonically from the share and favouring at every share.
-- **Premises, by law.**
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Becoming.RuleCapture.favouring_locks`: [Raises](../PREMISES.md#rulecapture-raises), [ReadsShare, on the rule](../PREMISES.md#rulecapture-readsshare), [the reading favours at every share](../PREMISES.md#rulecapture-uniform), [the rule at the start favours](../PREMISES.md#rulecapture-start-favours)
   - `Becoming.RuleCapture.locked_stays`: [Raises](../PREMISES.md#rulecapture-raises), [ReadsShare, on the rule](../PREMISES.md#rulecapture-readsshare), [favouring kept upward](../PREMISES.md#rulecapture-upper), [Locked](../PREMISES.md#rulecapture-locked)
   - `Becoming.RuleCapture.perturbation_absorbed`: [Raises](../PREMISES.md#rulecapture-raises), [ReadsShare, on the rule](../PREMISES.md#rulecapture-readsshare), [favouring kept upward](../PREMISES.md#rulecapture-upper), [Locked](../PREMISES.md#rulecapture-locked), [the perturbed rule favours](../PREMISES.md#rulecapture-keeps)
@@ -97,7 +97,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Hypotheses, quoted from the records.**
   - [closed-capture](../../records/closed-capture.md), hypothesis 1: No axiom. Each statement names its hypotheses: Unread (neither the next share nor the rule read reads what lies beyond); Accrues (each step adds at least one beyond); RuleCapture's Raises, ReadsShare and favouring kept upward; a locked start; for the readings, the reading formed monotonically from the share (ReadsShare on mind) and the rule read monotonically from the reading and the share.
   - [rules-that-change-themselves-in-the-grammar](../../records/rules-that-change-themselves-in-the-grammar.md), hypothesis 3: For the lock line, the premises of lock_outlives_loss (selection not lowering the share under a favouring rule, the rule read monotonically from the share, favouring kept upward, every step adding to the loss); for the line under favouring, those of turned_by_loss (any reading favouring at no loss past a bound, a reading step past it, a favouring start); discrete steps and natural-number losses.
-- **Premises, by law.**
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Becoming.ClosedCapture.courses_alike_iff_unread`: none beyond its types
   - `Becoming.ClosedCapture.lock_outlives_loss`: [Raises](../PREMISES.md#rulecapture-raises), [ReadsShare, on the rule](../PREMISES.md#rulecapture-readsshare), [favouring kept upward](../PREMISES.md#rulecapture-upper), [Accrues](../PREMISES.md#closedcapture-accrues), [Locked](../PREMISES.md#rulecapture-locked), [Unread](../PREMISES.md#closedcapture-unread), [natural-number amounts](../PREMISES.md#card-natural-number-amounts)
   - `Becoming.ClosedCapture.turned_by_loss`: [Accrues](../PREMISES.md#closedcapture-accrues), [a reading that turns past a loss bound, in ClosedCapture](../PREMISES.md#closedcapture-turns), [natural-number amounts](../PREMISES.md#card-natural-number-amounts)
@@ -135,7 +135,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Declarations.** `Becoming.ClosedCapture.Drawn.pool`, `Becoming.ClosedCapture.Drawn.pool_reads_iff`, `Becoming.ClosedCapture.Drawn.pool_against`, `Becoming.ClosedCapture.Drawn.pool_through`, `Becoming.ClosedCapture.Drawn.through_locks`, `Becoming.ClosedCapture.Drawn.mirror_favours_iff`, `Becoming.ClosedCapture.Drawn.mirror_disfavours_iff`, `Becoming.ClosedCapture.Thinned.lossPool`, `Becoming.ClosedCapture.agreeing_stays`, `Becoming.ClosedCapture.Thinned.read_late_kept`, `Becoming.ClosedCapture.Thinned.kept_iff`, `Becoming.ClosedCapture.Thinned.turned_iff`
 - **Hypotheses, quoted from the records.**
   - [readers-drawn-from-the-selected](../../records/readers-drawn-from-the-selected.md), hypothesis 1: No axiom. Each statement names its hypotheses: the pool form (two kinds of reader, each reading alike, summed unnormalized, counted as the population counts them); the others' reading not above the carriers' (readers); for the loss, Accrues and a reading step at which the loss has reached its bound; for the counts, the others' late reading the mirror of the carriers' and the carriers' reading favouring strictly.
-- **Premises, by law.**
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Becoming.ClosedCapture.Drawn.pool_reads_iff`: [the pool of readers](../PREMISES.md#closedcapture-drawn-pool)
   - `Becoming.ClosedCapture.Drawn.pool_against`: [the pool of readers](../PREMISES.md#closedcapture-drawn-pool), [readers, against](../PREMISES.md#closedcapture-drawn-readers-against)
   - `Becoming.ClosedCapture.Drawn.pool_through`: [the pool of readers](../PREMISES.md#closedcapture-drawn-pool), [readers, each kind for its own](../PREMISES.md#closedcapture-drawn-readers), [who reads formed from the share](../PREMISES.md#closedcapture-drawn-formed)
@@ -172,7 +172,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Hypotheses, quoted from the records.**
   - [shaping-the-rule-selected-by-what-comes-back](../../records/shaping-the-rule-selected-by-what-comes-back.md), hypothesis 1: No axiom and no premise beyond each law's own: discrete steps, natural counts and others present (RuleCapture's counts); a positive; two kinds, shapers and others, offspring carrying their parent's kind (transmission, a premise as in Becoming.Capture); for the loop, what comes back read at reading steps as a function of the share; for the tipping point, the threshold where the shapers are at least as many as the others.
   - [shaping-selected-among-groups](../../records/shaping-selected-among-groups.md), hypothesis 1: No axiom and no premise beyond each law's own: discrete steps and natural counts; a positive; groups listed as given, of equal size m for the spread among groups and of any sizes, with a positive common multiple n of the sizes, for the covariance form; each member shaping (one) or not (none); in each group the rule after shaping with the shared part q times the group's shapers, the cost counted as extra offspring to the others; the whole read as the whole's spread with the step law's exact transmission.
-- **Premises, by law.**
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Becoming.RuleShaping.favours_iff`: [the rule after shaping](../PREMISES.md#ruleshaping-shaped)
   - `Becoming.RuleShaping.favours_alike`: [the rule after shaping](../PREMISES.md#ruleshaping-shaped)
   - `Becoming.RuleShaping.lower_c_raises`: [the rule after shaping](../PREMISES.md#ruleshaping-shaped)
@@ -215,7 +215,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Hypotheses, quoted from the records.**
   - [shaping-read-by-readers-drawn-from-the-selected](../../records/shaping-read-by-readers-drawn-from-the-selected.md), hypothesis 1: No axiom and no premise beyond each law's own: discrete steps, natural counts and others present (RuleCapture's counts); a positive; two kinds, shapers and others, offspring carrying their parent's kind (transmission, a premise as in Becoming.Capture); the rule read as the pool of two readings, the readers counted as the population counts them (ClosedCapture.Drawn.pool); both kinds of reader reading the same a, p and c and differing only in what comes back to the shapers alone; hi, lo, p and c constants; for the loop, lo ≤ hi and a start under the rule read there; no noise.
   - [drawn-shaping-drawn-one-at-a-time](../../records/drawn-shaping-drawn-one-at-a-time.md), hypothesis 1: No axiom and no premise beyond each law's own: DrawnShaping's model (readers counted as the population counts them, a positive, hi, lo, p and c constants, lo ≤ hi for the chain); offspring drawn one member at a time among M + 1, each member counted among its own readers; a step leaving the count weighed only to make every step weigh alike.
-- **Premises, by law.**
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Becoming.DrawnShaping.drawn_reads_iff`: [the pool of readers](../PREMISES.md#closedcapture-drawn-pool), [the rule after shaping](../PREMISES.md#ruleshaping-shaped)
   - `Becoming.DrawnShaping.drawn_against`: [the pool of readers](../PREMISES.md#closedcapture-drawn-pool), [the rule after shaping](../PREMISES.md#ruleshaping-shaped), [readers against](../PREMISES.md#drawnshaping-readers)
   - `Becoming.DrawnShaping.critical_iff`: [the pool of readers](../PREMISES.md#closedcapture-drawn-pool), [the rule after shaping](../PREMISES.md#ruleshaping-shaped)
@@ -260,7 +260,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Hypotheses, quoted from the records.**
   - [loss-read-in-time-by-the-others](../../records/loss-read-in-time-by-the-others.md), hypothesis 1: No axiom and no premise beyond each law's own: discrete steps, natural counts and others present (RuleCapture's counts); a positive; two kinds, shapers and others, offspring carrying their parent's kind (transmission, a premise as in Becoming.Capture); the rule read as the pool of two readings, the readers counted as the population counts them (ClosedCapture.Drawn.pool); no noise.
   - [loss-read-in-time-by-the-others](../../records/loss-read-in-time-by-the-others.md), hypothesis 2: The others reading the loss once it reaches N, the loss growing by at least one a step (by one a step from zero in MA4's course); all three readings with the same a, p and c, differing only in what is read as coming back to the shapers; hi, lo, lo', p, c and N constants; a fixed schedule of reading steps, the window's laws reading at N and N + 1.
-- **Premises, by law.**
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Becoming.ReadInTime.kept_iff`: [Accrues](../PREMISES.md#closedcapture-accrues), [the late reading not above the shapers'](../PREMISES.md#readintime-readers), [the loss read by the others alone](../PREMISES.md#closedcapture-thinned-losspool), [the pool of readers](../PREMISES.md#closedcapture-drawn-pool), [the rule after shaping](../PREMISES.md#ruleshaping-shaped), [selection on listed counts](../PREMISES.md#rulecapture-carriercounts-select), [natural-number amounts](../PREMISES.md#card-natural-number-amounts)
   - `Becoming.ReadInTime.turned_iff`: [Accrues](../PREMISES.md#closedcapture-accrues), [the late reading not above the shapers'](../PREMISES.md#readintime-readers), [the loss read by the others alone](../PREMISES.md#closedcapture-thinned-losspool), [the pool of readers](../PREMISES.md#closedcapture-drawn-pool), [the rule after shaping](../PREMISES.md#ruleshaping-shaped), [selection on listed counts](../PREMISES.md#rulecapture-carriercounts-select), [natural-number amounts](../PREMISES.md#card-natural-number-amounts)
   - `Becoming.ReadInTime.late_never_falls`: [each kind of reader for its own](../PREMISES.md#drawnshaping-step), [the late reading not above the shapers'](../PREMISES.md#readintime-readers), [the pool of readers](../PREMISES.md#closedcapture-drawn-pool), [the rule after shaping](../PREMISES.md#ruleshaping-shaped), [selection on listed counts](../PREMISES.md#rulecapture-carriercounts-select)
@@ -301,7 +301,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Declarations.** `Becoming.ChoiceCountCapture.selectsThrough`, `Becoming.ChoiceCountCapture.unchosen_beyond_coupling`, `Becoming.ChoiceCountCapture.choose`, `Becoming.ChoiceCountCapture.weighted`, `Becoming.ChoiceCountCapture.weighted_reads`, `Becoming.ChoiceCountCapture.weighted_favours_iff`, `Becoming.ChoiceCountCapture.counted_locks`, `Becoming.ChoiceCountCapture.counted_chooses`, `Becoming.ChoiceCountCapture.counted_locks_down`, `Becoming.ChoiceCountCapture.counted_outlives_loss`, `Becoming.ChoiceCountCapture.posterior_course_falls`
 - **Hypotheses, quoted from the records.**
   - [capture-by-counted-choices](../../records/capture-by-counted-choices.md), hypothesis 1: No axiom and no premise beyond each law's own: for the selection laws, a reading of each step's values that reads exactly the formation's admission and the conditions coupled into it (ValuesThrough), and for the blindness laws the hypotheses of Flow.unselected_beyond_coupling and Flow.unselected_beyond_pool; for the count laws, discrete steps, natural counts with the second positive (RuleCapture's CarrierCounts), a choice taking the policy its rule weighs more with ties to the first, a standing score entering as two whole-number weights with the second positive, and the rule in force read from the counts at the start.
-- **Premises, by law.**
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Becoming.ChoiceCountCapture.selectsThrough`: [ValuesThrough](../PREMISES.md#identificationruns-valuesthrough)
   - `Becoming.ChoiceCountCapture.unchosen_beyond_coupling`: [WithheldLevels](../PREMISES.md#admission-withheldlevels), [balance](../PREMISES.md#k3-balance), [ValuesThrough](../PREMISES.md#identificationruns-valuesthrough), [WithinCoupling](../PREMISES.md#testing-withincoupling)
   - `Becoming.ChoiceCountCapture.weighted_reads`: [a standing score](../PREMISES.md#choicecountcapture-weighted)
@@ -334,7 +334,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Standing.** open, with no record
 - **Declarations.** None.
 - **Hypotheses, quoted from the records.** None.
-- **Premises, by law.** None.
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
 - **Forbids.** Not stated.
 - **Exits.** None.
 - **Transitions.** None.
@@ -353,7 +353,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Standing.** reading, with no record
 - **Declarations.** None.
 - **Hypotheses, quoted from the records.** None.
-- **Premises, by law.** None.
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
 - **Forbids.** Not stated.
 - **Exits.** None.
 - **Transitions.** None.
@@ -371,7 +371,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Standing.** reading, with no record
 - **Declarations.** None.
 - **Hypotheses, quoted from the records.** None.
-- **Premises, by law.** None.
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
 - **Forbids.** Not stated.
 - **Exits.** None.
 - **Transitions.** None.
@@ -389,7 +389,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Standing.** reading, with no record
 - **Declarations.** `Becoming.ChoiceCountCapture.counted_locks`, `Becoming.ChoiceCountCapture.counted_locks_down`, `Becoming.ChoiceCountCapture.counted_outlives_loss`, `Becoming.ChoiceCountCapture.Witness.moved_locks_down`, `Becoming.ChoiceCountCapture.Witness.Stale.devalued_read_at_once_locks_down`
 - **Hypotheses, quoted from the records.** None.
-- **Premises, by law.**
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Becoming.ChoiceCountCapture.counted_locks`: [a choice by the rule](../PREMISES.md#choicecountcapture-choose), [a standing score](../PREMISES.md#choicecountcapture-weighted), [the in-sync start](../PREMISES.md#choicecountcapture-in-sync-start)
   - `Becoming.ChoiceCountCapture.counted_locks_down`: [a choice by the rule](../PREMISES.md#choicecountcapture-choose), [a standing score](../PREMISES.md#choicecountcapture-weighted), [the in-sync start](../PREMISES.md#choicecountcapture-in-sync-start)
   - `Becoming.ChoiceCountCapture.counted_outlives_loss`: [a choice by the rule](../PREMISES.md#choicecountcapture-choose), [a standing score](../PREMISES.md#choicecountcapture-weighted), [the in-sync start](../PREMISES.md#choicecountcapture-in-sync-start), [Accrues](../PREMISES.md#closedcapture-accrues), [Unread](../PREMISES.md#closedcapture-unread), [natural-number amounts](../PREMISES.md#card-natural-number-amounts)
@@ -418,7 +418,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Standing.** reading, with no record
 - **Declarations.** `Becoming.RuleCapture.uniform_locks`, `Becoming.RuleCapture.locked_stays`, `Becoming.RuleCapture.Reversed.not_absorbed`, `Becoming.RuleCapture.Alternating.never_locked`, `Becoming.ClosedCapture.turned_by_loss`
 - **Hypotheses, quoted from the records.** None.
-- **Premises, by law.**
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Becoming.RuleCapture.uniform_locks`: [Raises](../PREMISES.md#rulecapture-raises), [ReadsShare, on the rule](../PREMISES.md#rulecapture-readsshare), [the reading favours at every share](../PREMISES.md#rulecapture-uniform)
   - `Becoming.RuleCapture.locked_stays`: [Raises](../PREMISES.md#rulecapture-raises), [ReadsShare, on the rule](../PREMISES.md#rulecapture-readsshare), [favouring kept upward](../PREMISES.md#rulecapture-upper), [Locked](../PREMISES.md#rulecapture-locked)
   - `Becoming.RuleCapture.Reversed.not_absorbed`: none beyond its types
@@ -447,7 +447,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [a-code-formed-between-formations](../../records/a-code-formed-between-formations.md), hypothesis 1: No axiom. The codes, the hearings and the rule of adoption are given; every other premise is named where it is used: hearings closed for a group; hearings that take the form heard; two forms that differ; a list of every formation; a rule reading codes alike after a renaming; a law keeping an exchange and a renaming; a renaming moving every form at the sense; records written to offer exactly what was resolved; decided equality of formations and senses where an order is stepped back through.
   - [imposing-a-code-breaks-the-symmetry](../../records/imposing-a-code-breaks-the-symmetry.md), hypothesis 1: No axiom; any type of formations, senses and forms.
   - [synonyms-and-coined-forms](../../records/synonyms-and-coined-forms.md), hypothesis 1: No axiom; codes as maps from senses to forms, decidable equality of formations and senses where coining is stated.
-- **Premises, by law.**
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Becoming.SharedCodes.run_changes_iff`: [decided](../PREMISES.md#k3-decided)
   - `Becoming.SharedCodes.agreement_kept`: [hearings closed for a group](../PREMISES.md#sharedcodes-closed), [decided](../PREMISES.md#k3-decided), [AgreeAt](../PREMISES.md#sharedcodes-agreeat)
   - `Becoming.SharedCodes.run_kept_iff`: [decided](../PREMISES.md#k3-decided), [AgreeAt](../PREMISES.md#sharedcodes-agreeat)
@@ -500,7 +500,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [a-code-held-as-counts](../../records/a-code-held-as-counts.md), hypothesis 2: Discrete synchronous steps of a determined law; a renaming of the words for each meaning, the same at every step; relations of counts stated count by count, the pure core assuming no function extensionality.
   - [a-code-held-as-counts](../../records/a-code-held-as-counts.md), hypothesis 3: Learning from what is heard: the hearer given the meaning; the speaker map commuting with the exchange; the rule reading count by count and commuting with renaming; for a weight on what is heard read off the whole model, the weight unchanged by the renaming.
   - [a-code-held-as-counts](../../records/a-code-held-as-counts.md), hypothesis 4: For the headline: a law keeping the relation, a start related to itself, and at the meaning a renaming onto and moving every word, or moving every word with the exchange an involution.
-- **Premises, by law.**
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Becoming.CountedCodes.unique_greatest_exchanged_run`: [a law keeping the exchange with the renaming](../PREMISES.md#countedcodes-keepsrelation), [a start related to itself](../PREMISES.md#countedcodes-renamed), [the renaming onto](../PREMISES.md#countedcodes-onto), [pointwise statements](../PREMISES.md#card-pointwise-statements)
   - `Becoming.CountedCodes.never_shared`: [counts irreflexive](../PREMISES.md#countedcodes-irrefl), [counts transitive](../PREMISES.md#countedcodes-trans), [a law keeping the exchange with the renaming](../PREMISES.md#countedcodes-keepsrelation), [a start related to itself](../PREMISES.md#countedcodes-renamed), [the renaming onto](../PREMISES.md#countedcodes-onto), [the renaming moves every word](../PREMISES.md#countedcodes-moves), [pointwise statements](../PREMISES.md#card-pointwise-statements)
   - `Becoming.CountedCodes.never_shared_of_involution`: [counts irreflexive](../PREMISES.md#countedcodes-irrefl), [counts transitive](../PREMISES.md#countedcodes-trans), [a law keeping the exchange with the renaming](../PREMISES.md#countedcodes-keepsrelation), [a start related to itself](../PREMISES.md#countedcodes-renamed), [the exchange an involution](../PREMISES.md#countedcodes-involution), [the renaming moves every word](../PREMISES.md#countedcodes-moves), [pointwise statements](../PREMISES.md#card-pointwise-statements)
@@ -538,7 +538,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Declarations.** `Becoming.RuleCapture.share_kept_along`, `Becoming.RuleCapture.against_not_rising`
 - **Hypotheses, quoted from the records.**
   - [a-reading-against-the-share-does-not-ratchet](../../records/a-reading-against-the-share-does-not-ratchet.md), hypothesis 1: No axiom; selection under a favouring rule does not lower the share; the rule read against the share (the reading monotone into the reversed order); rules favouring along the course.
-- **Premises, by law.**
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Becoming.RuleCapture.share_kept_along`: [Raises](../PREMISES.md#rulecapture-raises), [rules favouring along the course](../PREMISES.md#rulecapture-favouring)
   - `Becoming.RuleCapture.against_not_rising`: [Raises](../PREMISES.md#rulecapture-raises), [a reading against the share](../PREMISES.md#rulecapture-against), [rules favouring along the course](../PREMISES.md#rulecapture-favouring)
 - **Forbids.** Not stated.

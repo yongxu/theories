@@ -65,15 +65,15 @@
     "theories/becoming/results/atlas/crosswalk/zhishan-intelligence-must-be-good.md": "69242a4c9e364376478971d3ead2c9db4bc851b3c1f85ab11e0d77b6b770f7fd",
     "theories/becoming/results/atlas/families/a.md": "8e42a935322b2e15855859125744f1dd12afad44921ae199607d539f18d7a98f",
     "theories/becoming/results/atlas/families/b.md": "44116cfd13dd0a057d11a19193e2abdada6d98b7e7e0db3edb22817d9ab1d073",
-    "theories/becoming/results/atlas/families/c.md": "5fbecef36607b28cc8da0790043c4d0d4492f9cb5bff8de873f3fadeaeab881b",
-    "theories/becoming/results/atlas/families/d.md": "821251baa531d4d9d046fe3db2b9e946b08868dc043f7e1b9d46c863e59fcfb4",
+    "theories/becoming/results/atlas/families/c.md": "b05f0418c972ae3334bf18526f4b42a23e43e63c42a2414a44c15f0b671ea950",
+    "theories/becoming/results/atlas/families/d.md": "fa27c4643f3b4823fb887099e7aed4de70faea1c5e95f487340f3a9a6c8cdeb0",
     "theories/becoming/results/atlas/families/e.md": "0747737500a32f3cf3e65c73be60ad1d892c4a79f1c3f228d059cf2cccaaab31",
     "theories/becoming/results/atlas/families/f.md": "4cc10680b8cb035f9f7e8d6f0b5430ff68201ab0a44ee08d2a295b5756ab5f44",
     "theories/becoming/results/atlas/families/g.md": "281dec530f7bd57a9c5171f9140b531b5ea38313be6b2c4ae7d5d6b13195d6cb",
     "theories/becoming/results/atlas/families/h.md": "5be62d08ea456f0cfe698e4bbe1eef73f32817fe145bd0c446028a09f37a1d56",
     "theories/becoming/results/atlas/map.html": "fc2666e5b1506091197a44a26ec4b348d05ff002fffc493eab24e215ac8a9de4",
     "theories/becoming/results/completion/COMPLETION.md": "c8caf50b88f1362a02ac99406cdacfb882f4bbe4805986dc45dbfb39d9b1782b",
-    "theories/becoming/results/data/atlas.json": "4c4ae4aa050b9b4d1033b91064501c46506223510e78da6e0ca9dab983c6aaba",
+    "theories/becoming/results/data/atlas.json": "e346da690623cdf0f2a47a6d68f75905c7c2fe262adc3cf4b5815046ca56b821",
     "theories/becoming/results/data/lean-index.json": "c47bedf1602d5c8ca114c4083f0cdf3eb8cea3374a3dc9ceebf30aaffe176dd8",
     "theories/becoming/results/data/source-index.json": "c0ebf33fdf075d0ba71e2aa594d3d12a49558cbb6f4a2d71db3f494b8dcc7fc9",
     "theories/becoming/results/data/theory-graph.json": "65c97e2934790b6f6316459bf51bc24bea2e9eaeec44a98cec48035cd7bdd8cb",
@@ -1363,8 +1363,8 @@
     "theories/becoming/results/records/readings-carried-on-their-course.md": "932f848c791d129f64232df88c6e35629e244f39b90b494f5af8946894657df0",
     "theories/becoming/results/records/which-readings-persist.md": "6f11c2839ee1aff206c66afd23f5fa502ecafe69d99d26b5d59cc3bce0f56e59",
     "theories/becoming/results/records/route-b-joined.md": "9a524a054c898b29028b8bba6444cce51601577530117563915c4a4df526b1e4",
-    "theories/becoming/results/atlas/JOINS.md": "001a4193bcc8eea25db43af396d98a6f4135c40b5e565a166d56dcd88a096fc2",
-    "theories/becoming/results/atlas/PREMISES.md": "dc1aa17c1990fdd8047515e7a88261752b7d6e12bc5aa7ef3425f6e7b3ab7d08",
-    "theories/becoming/results/atlas/TERRAIN.md": "f7908fdc46cca41dbeba4c9d18a1458dad8f052c96a0b9c476a673bd56b43118"
+    "theories/becoming/results/atlas/JOINS.md": "348269f43cb1b4aa18988d55354910cefcc216aa69768775a08a140d21011b9f",
+    "theories/becoming/results/atlas/PREMISES.md": "e43b84309cab978e286cf3709a1a4b574611cafd4e0447c278fefcecf3f953e8",
+    "theories/becoming/results/atlas/TERRAIN.md": "6c59bc6191edceff9705cd816f1215e0ae04db91b68324481bcfcea34abeb255"
   }
 }

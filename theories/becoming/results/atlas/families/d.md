@@ -45,7 +45,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [seeking-boundary](../../records/seeking-boundary.md), hypothesis 2: Steps are counted from step 0; quantities are natural numbers.
   - [the-boundary-of-enough-under-undetermined-laws](../../records/the-boundary-of-enough-under-undetermined-laws.md), hypothesis 1: No axiom. A process, a configuration and a target; each theorem names what it takes.
   - [selection-through-couplings](../../records/selection-through-couplings.md), hypothesis 2: Blindness beyond the coupling closure further assumes the conditions of Flow.uncoupled_beyond_coupling: the rest of the exchange fixed (a part withheld, WithheldLevels); balance assumed only on the conditions coupled into members of the coupling closure, at each step (Flow.BalancesOn); every member of the part beyond the coupling closure.
-- **Premises, by law.**
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Becoming.Law.rests_iff`: none beyond its types
   - `Becoming.SeekingRuns.rests_iff`: none beyond its types
   - `Becoming.more_not_at_rest`: [MoreThanNow](../PREMISES.md#seeking-morethannow)
@@ -85,7 +85,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Standing.** reading, with no record
 - **Declarations.** `Becoming.Law.rests_iff`, `Becoming.Law.more_never_rests`, `Becoming.Law.aboveAll_never_rests`
 - **Hypotheses, quoted from the records.** None.
-- **Premises, by law.**
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Becoming.Law.rests_iff`: none beyond its types
   - `Becoming.Law.more_never_rests`: none beyond its types
   - `Becoming.Law.aboveAll_never_rests`: none beyond its types
@@ -108,7 +108,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Standing.** reading, with no record
 - **Declarations.** None.
 - **Hypotheses, quoted from the records.** None.
-- **Premises, by law.** None.
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
 - **Forbids.** Not stated.
 - **Exits.** None.
 - **Transitions.** None.
@@ -130,7 +130,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [what-a-course-chosen-through-its-model-does-not-test](../../records/what-a-course-chosen-through-its-model-does-not-test.md), hypothesis 1: Any types for the general laws, discrete synchronous steps of a blanketed law; equality of the values sensed decided for the law of a task's breaking and for the loop's candidates; candidates predicting the next value from the value sensed and the act, kept by elimination.
   - [what-a-course-chosen-through-its-model-does-not-test](../../records/what-a-course-chosen-through-its-model-does-not-test.md), hypothesis 2: The law of a task's breaking asks the breaking only of the second world's answer to the first course's own act and value at each step, through the horizon.
   - [acts-alike-from-a-model-or-from-an-order](../../records/acts-alike-from-a-model-or-from-an-order.md), hypothesis 1: Any types for the general law; the relation is supplied and must be kept by both steps; the witness fixes the two candidate lists, the two rankings, the start and the world.
-- **Premises, by law.**
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Becoming.ReadingLoop.sensed_alike_iff`: none beyond its types
   - `Becoming.ReadingLoop.alike_within`: [decided](../PREMISES.md#k3-decided), [breaks](../PREMISES.md#readingloop-breaks), [kept](../PREMISES.md#readingloop-kept)
   - `Becoming.ReadingLoop.alike_of_kept`: [decided](../PREMISES.md#k3-decided), [breaks](../PREMISES.md#readingloop-breaks), [kept](../PREMISES.md#readingloop-kept)
@@ -184,7 +184,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [what-seeking-cannot-separate](../../records/what-seeking-cannot-separate.md), hypothesis 2: The tie is pointwise, the likelihood's weights agreeing on the pair at every value of the record, under every experiment for seeking; the record weighs something under the pair.
   - [what-seeking-cannot-separate](../../records/what-seeking-cannot-separate.md), hypothesis 3: Modelling choices: exact posteriors, shares compared by cross-multiplication; Boolean records; a policy of choice as a weight on each experiment read from the course so far; no logarithm and no transitions.
   - [expected-free-energy-and-its-terms](../../records/expected-free-energy-and-its-terms.md), hypothesis 4: For seeking: a policy is one experiment, the hidden state fixed over a course, the preferences one for every experiment, a rule reading the expected free energies and the experiment (so a fixed habit), with natural weights for the core's law; the join takes natural weights, hypotheses listed once, and a listed course its policy chooses with some weight; profiles compared classically.
-- **Premises, by law.**
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Becoming.LumpedSeeking.posterior_le_iff_prior`: [decided](../PREMISES.md#k3-decided), [listed](../PREMISES.md#card-listed), [Tied](../PREMISES.md#lumpedseeking-tied), [weighs, in LumpedSeeking](../PREMISES.md#lumpedseeking-weighs)
   - `Becoming.LumpedSeeking.posterior_ratio_kept`: [decided](../PREMISES.md#k3-decided), [listed](../PREMISES.md#card-listed), [Tied](../PREMISES.md#lumpedseeking-tied)
   - `Becoming.LumpedSeeking.order_kept`: [decided](../PREMISES.md#k3-decided), [listed](../PREMISES.md#card-listed), [Tied](../PREMISES.md#lumpedseeking-tied), [weighs, in LumpedSeeking](../PREMISES.md#lumpedseeking-weighs)
@@ -220,7 +220,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [what-holding-for-a-reading-is-worth](../../records/what-holding-for-a-reading-is-worth.md), hypothesis 1: Natural-number weights and values, read as probabilities and differences only where valid: a positive total weight and each candidate listed once (a listing may repeat a candidate, each occurrence counting its weight); the amount forgone counted in the units of the weighted totals, an amount c forgone for each decision entering as c times the total weight.
   - [what-holding-for-a-reading-is-worth](../../records/what-holding-for-a-reading-is-worth.md), hypothesis 3: The reading that tells the candidate stops by the very gain and loss the model values with, one valuation shared by the formation held and its reading, as in the off-switch game's common payoff; a reading stopping by other values enters as a rule, its shortfall counted by these; rules are functions of the candidate; at ties byReading goes on, leastThrough stops a cell, and other rules go either way.
   - [what-holding-for-a-reading-is-worth](../../records/what-holding-for-a-reading-is-worth.md), hypothesis 5: In SignLoop: discrete steps, a world that does not move, the start's act supplied, candidates eliminated, not weighted, and with no candidate kept, going on; the reading formation's own state is not represented.
-- **Premises, by law.**
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Becoming.HeldForReading.SignLoop.rests_unread`: [all predict a gain](../PREMISES.md#heldforreading-all-predict-gain)
   - `Becoming.HeldForReading.SignLoop.never_senses_stop`: [all predict a gain](../PREMISES.md#heldforreading-all-predict-gain)
   - `Becoming.HeldForReading.SignLoop.refuted_senses_stop`: none beyond its types
@@ -253,7 +253,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Declarations.** `Becoming.ReflexivePrediction.Right`, `Becoming.ReflexivePrediction.none_right_of_moves`, `Becoming.ReflexivePrediction.no_predictor_right`, `Becoming.ReflexivePrediction.predictor_iff`, `Becoming.ReflexivePrediction.rests_iff_right`, `Becoming.ReflexivePrediction.right_rests`, `Becoming.ReflexivePrediction.reached_rests`, `Becoming.ReflexivePrediction.on_chain`, `Becoming.ReflexivePrediction.rises`, `Becoming.ReflexivePrediction.below_right`, `Becoming.ReflexivePrediction.bottom_rests`, `Becoming.ReflexivePrediction.ThresholdResponse.reached_by_start`, `Becoming.ReflexivePrediction.Negating.alternates`, `Becoming.ReflexivePrediction.Reflecting.reverses`, `Becoming.ReflexivePrediction.Reflecting.middle_right`
 - **Hypotheses, quoted from the records.**
   - [a-prediction-read-by-what-it-predicts](../../records/a-prediction-read-by-what-it-predicts.md), hypothesis 1: Any type of values; the response a function of the prediction alone, read before the outcome; the chain the natural numbers 0 to n, the response keeping it and its order there; choice over the admitted responses only for a predictor's existence.
-- **Premises, by law.**
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Becoming.ReflexivePrediction.none_right_of_moves`: [the response moves every value](../PREMISES.md#reflexiveprediction-moves)
   - `Becoming.ReflexivePrediction.no_predictor_right`: [the response moves every value](../PREMISES.md#reflexiveprediction-moves)
   - `Becoming.ReflexivePrediction.predictor_iff`: [Viability.ChoiceOver](../PREMISES.md#keeping-choiceover)
@@ -295,7 +295,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [runaway-distance-uncoupled](../../records/runaway-distance-uncoupled.md), hypothesis 2: break_not_bounded further assumes that g does not observe c and that c is the only requirement that may be unmet up to the horizon, a local condition.
   - [the-markov-blanket-as-a-coupling-structure](../../records/the-markov-blanket-as-a-coupling-structure.md), hypothesis 1: No axiom. Four parts of any types of one determined law, the internal and active parts reading the internal, sensory and active parts, the sensory and external parts the sensory, active and external parts.
   - [the-markov-blanket-as-a-coupling-structure](../../records/the-markov-blanket-as-a-coupling-structure.md), hypothesis 2: For the lumping law, the sensory part reads the external part only through a given map; for the witness, the supply drains by one and no action changes it, read by the threshold of need one.
-- **Premises, by law.**
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Becoming.Flow.policy_keeps_difference`: [decided](../PREMISES.md#k3-decided), [balance](../PREMISES.md#k3-balance), [present](../PREMISES.md#runaway-present), [PolicyThrough](../PREMISES.md#runaway-policythrough), [OthersFixed](../PREMISES.md#runaway-othersfixed), [Web.DependsOn](../PREMISES.md#feedback-dependson), [unobserved](../PREMISES.md#runaway-unobserved), [supported](../PREMISES.md#runaway-supported), [requirements as thresholds](../PREMISES.md#card-requirements-as-thresholds)
   - `Becoming.Flow.policy_uses_after_failure`: [decided](../PREMISES.md#k3-decided), [balance](../PREMISES.md#k3-balance), [present](../PREMISES.md#runaway-present), [PolicyThrough](../PREMISES.md#runaway-policythrough), [OthersFixed](../PREMISES.md#runaway-othersfixed), [CoupledInto](../PREMISES.md#testing-coupledinto), [requirements as thresholds](../PREMISES.md#card-requirements-as-thresholds)
   - `Becoming.Web.alikeThrough_raise`: [decided](../PREMISES.md#k3-decided), [unobserved](../PREMISES.md#runaway-unobserved), [supported](../PREMISES.md#runaway-supported), [requirements as thresholds](../PREMISES.md#card-requirements-as-thresholds)
@@ -335,7 +335,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Hypotheses, quoted from the records.**
   - [a-reading-kept-by-its-update](../../records/a-reading-kept-by-its-update.md), hypothesis 1: Any types of world, state, act and value sensed; the world's change a relation, the update and the sensing functions; the history form needs no decision, list or finiteness; choice over the states only where a policy's existence is asked.
   - [a-reading-kept-by-its-update](../../records/a-reading-kept-by-its-update.md), hypothesis 2: Keeping is at configurations reached by one step or more: the sound start is not asked to hold the task; going on is asked apart from keeping.
-- **Premises, by law.**
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Becoming.ReadingLoop.kept_iff_closed`: none beyond its types
   - `Becoming.ReadingLoop.closed_of_keptBy`: [KeptBy](../PREMISES.md#readingloop-keptby)
   - `Becoming.ReadingLoop.keeps_of_leadsInto`: [«闭» (closed)](../PREMISES.md#grammarlaws-bi), [LeadsInto](../PREMISES.md#readingloop-leadsinto)
@@ -375,7 +375,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Declarations.** `Becoming.Training.same_courses_of_along`, `Becoming.Training.trained_alike_of_along`, `Becoming.Training.explored_same_courses`, `Becoming.Training.installed_where_lumped`, `Becoming.Training.free_where_unlumped`, `Becoming.Training.response_free_where_unlumped`, `Becoming.Training.trained_alike_iff`, `Becoming.Training.settled_stays`, `Becoming.Training.comes_to_rest`, `Becoming.Training.LocalSearch.rests_iff`, `Becoming.Training.LocalSearch.rests_iff_settles`, `Becoming.Training.trained_alike_beyond_closure`, `Becoming.Training.outrun_settles_iff`, `Becoming.Training.Commons.start_decides`, `Becoming.Training.Commons.outrun_neighbourhood_decides`, `Becoming.Training.Commons.renewed_restraint_settles_iff`, `Becoming.Training.Commons.outrun_restraint_unsettled`, `Becoming.Training.Commons.outrun_drawing_settles`
 - **Hypotheses, quoted from the records.**
   - [what-training-installs](../../records/what-training-installs.md), hypothesis 1: No axiom. The situations' laws and the candidates read what has stood wherever the on-course, exploration and off-course laws enter; for the off-course laws, the law reading through a lumping and being lumped with the history decided; for the closure law, the situations' laws reading through coupling and both courses feasible; for the outrun laws, outrun_below's premises in every candidate's course; for the basin law, a bound on the reward. A training reads each candidate through its own courses, as the optimum of any reward does.
-- **Premises, by law.**
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Becoming.Training.same_courses_of_along`: [a supplied law of exchange](../PREMISES.md#k3-a-supplied-law-of-exchange), [ExchangeLaw.Nonanticipating](../PREMISES.md#counterfactual-nonanticipating), [along](../PREMISES.md#training-along)
   - `Becoming.Training.trained_alike_of_along`: [a supplied law of exchange](../PREMISES.md#k3-a-supplied-law-of-exchange), [ExchangeLaw.Nonanticipating](../PREMISES.md#counterfactual-nonanticipating), [along](../PREMISES.md#training-along), [Training.Reads](../PREMISES.md#training-reads)
   - `Becoming.Training.explored_same_courses`: [a supplied law of exchange](../PREMISES.md#k3-a-supplied-law-of-exchange), [ExchangeLaw.Nonanticipating](../PREMISES.md#counterfactual-nonanticipating), [along](../PREMISES.md#training-along)
@@ -421,7 +421,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Hypotheses, quoted from the records.**
   - [what-a-commuting-law-keeps-apart](../../records/what-a-commuting-law-keeps-apart.md), hypothesis 1: No axiom; commuting and σ moving every configuration (or σ an exchange, or fixing x) are the hypotheses each law names; the laws are stated on runs Law.run and on processes.
   - [a-commuting-learner-drives-no-unread-choice](../../records/a-commuting-learner-drives-no-unread-choice.md), hypothesis 1: No axiom. Weights of any type with addition, multiplication and zero, no law of them used; finitely many listed weighted successors; discrete steps; commuting, a fixed configuration or unchanged starting weights as each law names. The two witnesses use natural-number counts.
-- **Premises, by law.**
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Becoming.Law.Commutes.iterate`: [Law.Commutes](../PREMISES.md#commuting-commutes)
   - `Becoming.Law.Commutes.apart`: [Law.Commutes](../PREMISES.md#commuting-commutes), [Diagonal.Moves](../PREMISES.md#diagonal-moves)
   - `Becoming.Law.Commutes.breaks`: [Diagonal.Moves](../PREMISES.md#diagonal-moves)
@@ -464,7 +464,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [readings-within-what-they-read](../../records/readings-within-what-they-read.md), hypothesis 1: No premise: gap_unsaid, claims_incomplete, the laws of Unfolds and the rhythm hold for every family, type of values and likeness.
   - [readings-within-what-they-read](../../records/readings-within-what-they-read.md), hypothesis 2: Local conditions are written into the theorems: alike_of_complete needs equality with one value decided, complete_iff_alike needs equality of values decidable, gaps_differ needs same transitive, stock_unheld needs it symmetric and transitive (deciding only on natural-number indices).
   - [readings-within-what-they-read](../../records/readings-within-what-they-read.md), hypothesis 3: The readings form a family indexed by what they read, a supplied reading; arithmetic coding and provability are not stated.
-- **Premises, by law.**
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Becoming.Diagonal.gap_unsaid`: [Diagonal.Moves](../PREMISES.md#diagonal-moves)
   - `Becoming.Diagonal.claims_incomplete`: none beyond its types
   - `Becoming.Diagonal.complete_iff_alike`: [decided](../PREMISES.md#k3-decided)
@@ -498,7 +498,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Hypotheses, quoted from the records.**
   - [adaptive-closure-cannot-resolve](../../records/adaptive-closure-cannot-resolve.md), hypothesis 1: The named model is supplied: the states, the events and their law, the view and the target; local closure is a stated property of each event, and the policy is a function of the view.
   - [adaptive-closure-cannot-resolve](../../records/adaptive-closure-cannot-resolve.md), hypothesis 2: Axioms: ClosedLocal, adaptive_closed_invariant, adaptive_closed_cannot_resolve, closed_continuations_remain_unresolved and historical_truth_present_error use propext; the other declarations cited have empty axiom reports, as the module's receipt reports.
-- **Premises, by law.**
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Generative.NormativeActivity.adaptive_closed_invariant`: [ClosedLocal](../PREMISES.md#normativeactivity-closedlocal), [ClosedDomain](../PREMISES.md#normativeactivity-closeddomain)
   - `Generative.NormativeActivity.adaptive_closed_cannot_resolve`: [ClosedLocal](../PREMISES.md#normativeactivity-closedlocal)
   - `Generative.NormativeActivity.closed_continuations_remain_unresolved`: [ClosedLocal](../PREMISES.md#normativeactivity-closedlocal)
@@ -529,7 +529,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Hypotheses, quoted from the records.**
   - [correction-is-not-calibration](../../records/correction-is-not-calibration.md), hypothesis 1: Channels are affine maps over the real numbers (Mathlib); the apparatus of three channels, the reference inputs 0 and 1, the update law, the network and the tasks are supplied.
   - [correction-is-not-calibration](../../records/correction-is-not-calibration.md), hypothesis 2: Axioms: every CalibratedUpdater and CalibrationRenewal declaration cited uses propext, Quot.sound and Classical.choice, as their receipt reports.
-- **Premises, by law.**
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `CalibratedUpdater.acquired_local_exact`: [nonzero gain, in CalibratedUpdater](../PREMISES.md#calibratedupdater-nonzero-gain)
   - `CalibrationRenewal.two_references_complete`: none beyond its types
   - `CalibrationRenewal.zero_reference_blind`: none beyond its types
@@ -567,7 +567,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [learning-by-refutation](../../records/learning-by-refutation.md), hypothesis 3: Each theorem's conditions are written into it: two different values (no_prefix_fixes_next); other moving every value (the diagonal); some candidate according (index_le_of_accords, misses_not_recurring); the course being a lasso or the orbit held by a list (lasso_byElimination_bounded, held_byElimination_bounded).
   - [learning-by-refutation](../../records/learning-by-refutation.md), hypothesis 4: The candidates H and the classes G are supplied from outside the learning.
   - [learning-by-refutation](../../records/learning-by-refutation.md), hypothesis 5: Coming to rest is stated only as a double negation (rest_unrefuted, held_rest_unrefuted, stable_unrefuted), the names carrying “unrefuted”: the step of rest is not stated here, and is not shown impossible.
-- **Premises, by law.**
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Becoming.Learning.no_prefix_fixes_next`: [two values](../PREMISES.md#learning-two-values)
   - `Becoming.Learning.no_prefix_fixes_next_finite`: [two values](../PREMISES.md#learning-two-values)
   - `Becoming.Learning.diagonal_misses`: [the map other moves every value](../PREMISES.md#learning-moves)
@@ -611,7 +611,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [a-cascade-at-the-histories-reached](../../records/a-cascade-at-the-histories-reached.md), hypothesis 2: From member k on, k included, every member gives one act for the two couplings compared at the list of acts one of the two worlds gives it, not at the other's (for the selection, every member acts alike whatever its coupling at the histories every world reaches); k is fixed, the same for every world.
   - [readers-reading-readers](../../records/readers-reading-readers.md), hypothesis 1: Any types of worlds, couplings and acts; members indexed by the natural numbers, each reading the whole list of acts before it.
   - [readers-reading-readers](../../records/readers-reading-readers.md), hypothesis 2: From member k on, k included, every member acts alike whatever its own coupling, on every list of earlier acts, histories no run reaches included; member k's coupling is then not read, so it is not among those the acts reach.
-- **Premises, by law.**
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Becoming.Turns.lawAlikeAlong_of_along`: [Turns.ReadsOnlyActsAlong](../PREMISES.md#reachedcascade-readsonlyactsalong)
   - `Becoming.Turns.readsOnlyActsAlong_of_from`: [Turns.ReadsOnlyActsFrom](../PREMISES.md#cascade-readsonlyactsfrom)
   - `Becoming.Turns.acts_alike_along`: [Turns.LawAlikeAlong](../PREMISES.md#reachedcascade-lawalikealong), [Turns.AlikeBefore](../PREMISES.md#cascade-alikebefore)
@@ -647,7 +647,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Declarations.** `Becoming.Web.apart_while_member`, `Becoming.Web.selects_alike_of_members`, `Becoming.Web.RecruitsThrough`, `Becoming.Web.RecruitsThrough.members_alike`, `Becoming.Web.RecruitsThrough.first_apart`, `Becoming.Web.RecruitsThrough.members_alike_always`, `Becoming.Web.RecruitsThrough.alike_iff`, `Becoming.Web.RecruitsThrough.selects_alike`, `Becoming.PoolCourse.alone_never_apart`, `Becoming.PoolCourse.called_not_through`, `Becoming.PoolCourse.called_apart`, `Becoming.PoolCourse.scheduled_through`, `Becoming.PoolCourse.scheduled_apart`
 - **Hypotheses, quoted from the records.**
   - [a-pool-that-recruits-through-itself](../../records/a-pool-that-recruits-through-itself.md), hypothesis 1: No axiom. Recruitment through the pool and the same members at the start are hypotheses of the theorems. Membership is any claim about histories at each step; no count, weight or rule of aggregation is assumed. Coupling is read as in Testing (admission and the levels coupled in by level, at every step up to the one read). Discrete steps.
-- **Premises, by law.**
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Becoming.Web.apart_while_member`: [differ](../PREMISES.md#poolcourse-differ)
   - `Becoming.Web.selects_alike_of_members`: [AlikeThroughUpTo](../PREMISES.md#testing-alikethroughupto), [SelectsThroughAll](../PREMISES.md#selection-selectsthroughall)
   - `Becoming.Web.RecruitsThrough.members_alike`: [Web.RecruitsThrough](../PREMISES.md#poolcourse-recruitsthrough), [Web.SameMembers at the start](../PREMISES.md#poolcourse-samemembers)
@@ -687,7 +687,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [selection-when-the-lumping-changes](../../records/selection-when-the-lumping-changes.md), hypothesis 2: The instance supplies replenishment, two rebuild modes, apparatus-to-reading correspondence, target true and a controller preferring reconstruction. Stock and apparatus status enter control; reconstruction is not chosen solely through the initial reading, which lumps the two modes.
   - [selection-when-the-lumping-changes](../../records/selection-when-the-lumping-changes.md), hypothesis 3: Stocks, draws and replenishments are natural numbers and courses are finite lists of acts; Revising's link and response are Boolean coordinates of one configuration, and its target true is supplied.
   - [selection-when-the-lumping-changes](../../records/selection-when-the-lumping-changes.md), hypothesis 4: No normative premise is assumed, nor that every act draws on the stock: replenishing draws nothing.
-- **Premises, by law.**
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Becoming.Learning.Training.keeps_through_iff`: [refl, symm, trans](../PREMISES.md#revision-old-equivalence)
   - `Becoming.Learning.Training.lost_choice`: [refl, symm, trans](../PREMISES.md#revision-old-equivalence)
   - `Becoming.Registration.retained_keeps`: none beyond its types
@@ -737,7 +737,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [experiment-needs-return](../../records/experiment-needs-return.md), hypothesis 2: The projection is a model (FactorsThrough), supplied from outside the run; finitely many projected configurations is the condition written into projection_returns.
   - [experiment-needs-return](../../records/experiment-needs-return.md), hypothesis 3: For the witness: Confound's process and runs.
   - [experiment-needs-return](../../records/experiment-needs-return.md), hypothesis 4: Discrete steps, counted from step 0; configurations and moves of any type.
-- **Premises, by law.**
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Becoming.Confound.move_idle`: none beyond its types
   - `Becoming.Confound.misattributes`: none beyond its types
   - `Becoming.Confound.aligned_with_hidden`: none beyond its types
@@ -769,7 +769,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [evidence-through-change](../../records/evidence-through-change.md), hypothesis 1: The worlds, the admitted changes and their successors, the reporting law and the faithfulness of diagnostics are supplied; recording, local atomic steps and command execution are protected.
   - [evidence-through-change](../../records/evidence-through-change.md), hypothesis 2: For the bound, the error model σ + ρt and an additive intervention bounded by what is left are supplied, over the real numbers (Mathlib).
   - [evidence-through-change](../../records/evidence-through-change.md), hypothesis 3: Axioms: in TemporalInspection received_actual_retained and the understated-change witness use propext, the prediction and history laws propext and Quot.sound, the reset and control witnesses none; the ChangingDependency declarations use propext, Quot.sound and Classical.choice, as their receipts report.
-- **Premises, by law.**
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `TemporalInspection.received_actual_retained`: [known](../PREMISES.md#temporalinspection-actual-among-possible), [lawful report](../PREMISES.md#temporalinspection-report-fits)
   - `TemporalInspection.prediction_contains_successor`: none beyond its types
   - `TemporalInspection.lawful_history_preserves_known`: [TemporalInspection.History](../PREMISES.md#temporalinspection-history), [TemporalInspection.Known](../PREMISES.md#temporalinspection-known)
@@ -808,7 +808,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [encounter-selection-and-revision](../../records/encounter-selection-and-revision.md), hypothesis 2: The periphery instance builds on the existing acquisition, formation, grouping and binding history; the successful witness starts with 51 support units, and interpretation and memory maintenance draw no separate support.
   - [encounter-selection-and-revision](../../records/encounter-selection-and-revision.md), hypothesis 3: Reobservation and rearrangement are supplied interventions.
   - [encounter-selection-and-revision](../../records/encounter-selection-and-revision.md), hypothesis 4: The core laws hold for any types of records and meanings, with bearing and offering read as Boolean relations; the periphery lexicon laws take a repertoire without repeats.
-- **Premises, by law.**
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Becoming.CrossSituational.candidates_append`: none beyond its types
   - `Becoming.CrossSituational.narrows`: none beyond its types
   - `Becoming.CrossSituational.stays_iff`: none beyond its types
@@ -852,7 +852,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [a-reading-informed-and-revalued](../../records/a-reading-informed-and-revalued.md), hypothesis 5: Ties release in the answer, as HeldForReading.byReading goes on at ties, while leastThrough stops a cell at ties; rules are functions of the candidate's cell.
   - [a-reading-informed-and-revalued](../../records/a-reading-informed-and-revalued.md), hypothesis 6: In the carrier: discrete steps; the candidate world unchanged by the acts; a demonstration filtering truly by what it shows, its equality decidable; an input presented revising the valuation by a supplied update, in the witnesses adopting the state presented; the answer shown at every step, asked or not; the holding formation's law reading only its own state and the answer, in the witnesses a fixed schedule.
   - [a-reading-informed-and-revalued](../../records/a-reading-informed-and-revalued.md), hypothesis 7: Worth for one decision before any amount forgone; costs enter only as amounts forgone, counted in the units of the weighted totals; the holding formation's going on, switching off and holding change neither the candidate world nor the reading formation, so the worth of holding is counted on the answer as a rule, not along the courses.
-- **Premises, by law.**
+- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Becoming.ListingValuation.world_fixed`: [decided](../PREMISES.md#k3-decided)
   - `Becoming.ListingValuation.through_sensed`: [decided](../PREMISES.md#k3-decided)
   - `Becoming.ListingValuation.updates_commute`: [decided](../PREMISES.md#k3-decided)
