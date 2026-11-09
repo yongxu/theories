@@ -9,63 +9,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 [All topics and modules](../LEAN-DECLARATIONS.md) · [Becoming pure core, all parts](../lean-declarations/becoming-core.md) · [part 3](../lean-declarations/becoming-core-part-3.md) · [part 5](../lean-declarations/becoming-core-part-5.md)
 
-## Becoming pure core, part 4 of 6
-
-<a id="module-34f775b6e095"></a>
-
-<details>
-<summary>LossMatching.lean — 37 explicit declarations</summary>
-
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-2026-10-20.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/CROSSED-CLAIMS-ARGUMENT.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
-
-`experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean`
-
-Imports: `Becoming.Population`, `Becoming.Frame`, `Becoming.Extension`
-
-| Theorem or lemma | Line |
-|---|---:|
-| [Becoming.LossMatching.total_middle](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L45) | 45 |
-| [Becoming.Frame.StrictLossMatch.trans](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L81) | 81 |
-| [Becoming.Frame.StrictLossMatch.mono](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L93) | 93 |
-| [Becoming.Frame.strictLossMatch_of_extension](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L106) | 106 |
-| [Becoming.Frame.SufficientMatching.comparison](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L123) | 123 |
-| [Becoming.Frame.SufficientMatching.not_mutual](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L133) | 133 |
-| [Becoming.Frame.SufficientMatching.not_self](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L139) | 139 |
-| [Becoming.Frame.StrictLossMatch.length_lt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L152) | 152 |
-| [Becoming.Frame.StrictLossMatch.irrefl](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L172) | 172 |
-| [Becoming.Frame.StrictLossMatch.asymm](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L178) | 178 |
-| [Becoming.Frame.not_strictLossMatch_of_length_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L186) | 186 |
-| [Becoming.Frame.StrictLossMatch.counterpart](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L194) | 194 |
-| [Becoming.Frame.not_strictLossMatch_of_kept](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L200) | 200 |
-| [Becoming.Frame.not_strictLossMatch_of_base_lost](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L209) | 209 |
-| [Becoming.Frame.StrictLossMatch.classCount_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L229) | 229 |
-| [Becoming.Frame.matching_of_counts](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L250) | 250 |
-| [Becoming.Frame.exists_fresh](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L301) | 301 |
-| [Becoming.Frame.strictLossMatch_of_counts](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L312) | 312 |
-| [Becoming.Frame.strictLossMatch_iff_counts](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L329) | 329 |
-| [Becoming.Frame.classCount_unit](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L339) | 339 |
-| [Becoming.Frame.strictLossMatch_iff_length_of_alike](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L344) | 344 |
-| [Becoming.Frame.mem_lostOf](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L368) | 368 |
-| [Becoming.Frame.distinct_lostOf](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L392) | 392 |
-| [Becoming.Frame.lossesListed_lostOf](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L407) | 407 |
-| [Becoming.Frame.ReadsAt.loss_retained](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L423) | 423 |
-| [Becoming.Frame.readsAt_iff_settled](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L429) | 429 |
-| [Becoming.Frame.not_readsAt_of_recovery](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L437) | 437 |
-| [Becoming.EndlessLosses.self_match](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L452) | 452 |
-| [Becoming.EndlessLosses.no_sufficient_matching](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L457) | 457 |
-
-Definitions and types:
-
-- `def` [Becoming.LossMatching.decideDistinct](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L52) (L52)
-- `def` [Becoming.Frame.StrictLossMatch](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L70) (L70)
-- `def` [Becoming.Frame.SufficientMatching](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L116) (L116)
-- `def` [Becoming.Frame.LossesListed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L147) (L147)
-- `def` [Becoming.Frame.classCount](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L224) (L224)
-- `def` [Becoming.Frame.lostOf](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L363) (L363)
-- `def` [Becoming.Frame.ReadsAt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L417) (L417)
-- `def` [Becoming.EndlessLosses.frame](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LossMatching.lean#L449) (L449)
-
-</details>
+## Becoming pure core, part 4 of 7
 
 <a id="module-4072d141b8b3"></a>
 
