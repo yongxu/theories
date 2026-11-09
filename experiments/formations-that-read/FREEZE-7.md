@@ -1,6 +1,6 @@
 # TR2's Stage B, frozen
 
-*The folder's seventh freeze, board item TR45's second, 4 November 2026. AI-written (a Claude Code session), not yet reviewed by a person. Frozen before any model was downloaded or run: models wrote and read these prompts, but no checkpoint has been given them. The downloads and the machine time are Ren's. About 84 to 109 minutes to read, at 100 to 130 words a minute; the first part takes seven to ten.*
+*The folder's seventh freeze, board item TR45's second, 4 November 2026. AI-written (a Claude Code session); no person's review of it is recorded. Frozen before any model was downloaded or run: models wrote and read these prompts, but no checkpoint has been given them. The downloads and the machine time are Ren's. About 84 to 109 minutes to read, at 100 to 130 words a minute; the first part takes seven to ten.*
 
 ## What is frozen, and what it can refute
 
@@ -400,3 +400,5 @@ Written by the Claude Code session that holds board item TR45. It works on RF's 
 **How this file is frozen:** by the commit that adds `open/FROZEN.sha256`, its text there being the frozen one. It is not hashed, so that a link can be repaired without touching the code's hashes. A later edit may only repair a link or a typo, or correct a false statement to a reader. Each is listed in a dated note at the end of this file and changes no rule, threshold or reading. `open/FROZEN.sha256` is committed last, after the render and every check pass on the merged tree.
 
 **Stage A frozen since, 5 November 2026** (board item TR2A). A note, not an edit: §12's line "Stage A, and a variant through an API, are not frozen" was true at this freeze. Stage A is frozen since in [FREEZE-11](FREEZE-11.md); the variant through an API is not. Nothing else changed: no rule, threshold, reading or frozen file.
+
+**Corrected after the freeze, 9 November 2026** (board item RW). The header said "not yet reviewed by a person", a claim the repository cannot support and [the word of 8 November 2026](../../sources/15-codex-theory-conversations/2026-11-08-ai-briefly-and-read.md) asks the work not to make; it now says that no person's review of it is recorded. This file's rule allows a later edit for a link or a typo, or to correct a false statement to a reader; the header's claim is not shown false, only unsupported, so this note is added by argument, as [FREEZE-1](FREEZE-1.md)'s corrections of its header are: it corrects what the header says of review, not the design. It changes no rule, threshold, size or reading; the frozen text is the one at the freeze commit.

@@ -1,6 +1,6 @@
 # TR7, frozen
 
-*Board item TR71, 4 November 2026: TR7 frozen on freeze 1's harness, at RFZ's owner's split. AI-written (a Claude Code session), not yet reviewed by a person. Frozen before any call to a model: no model has been called with any of these prompts. The run is Ren's. About 120 to 155 minutes to read, at 100 to 130 words a minute; the first part takes ten to fourteen.*
+*Board item TR71, 4 November 2026: TR7 frozen on freeze 1's harness, at RFZ's owner's split. AI-written (a Claude Code session); no person's review of it is recorded. Frozen before any call to a model: no model has been called with any of these prompts. The run is Ren's. About 120 to 155 minutes to read, at 100 to 130 words a minute; the first part takes ten to fourteen.*
 
 ## What is frozen, and what it can refute
 
@@ -436,3 +436,5 @@ Whatever the run shows is kept, and this paragraph is not revised after it.
 Written by the Claude Code session that holds board item TR71, on RF's design (REST-TR2-TR7) and freeze 1's harness, at RFZ's owner's split. Independent readers read the frozen files before the freeze landed, in rounds, until no finding of high or medium severity remained. Their findings, and how each was taken, are in [`told-tr7/REVIEW-FREEZE.md`](told-tr7/REVIEW-FREEZE.md). Each was a Claude Opus subagent, of the theory's own family, as is every reader the session can call; the deciding pins' families have read nothing here.
 
 **How this file is frozen.** By the commit that adds `told-tr7/FROZEN.sha256`, as freeze 1's is: its text there is the frozen one. It is not hashed, so that a link it gives can be repaired if its target moves without touching the code's hashes. A later edit may only repair a link or a typo, is listed in a dated note at the end of this file, and changes no rule, threshold or reading. FROZEN.sha256 is committed last, after the render and every check pass on the merged tree. A fault found later can be fixed only by an addendum (section 8) or by a new freeze; a second commit of FROZEN.sha256 would make the chain refuse for good.
+
+**Corrected after the freeze, 9 November 2026** (board item RW). The header said "not yet reviewed by a person", a claim the repository cannot support and [the word of 8 November 2026](../../sources/15-codex-theory-conversations/2026-11-08-ai-briefly-and-read.md) asks the work not to make; it now says that no person's review of it is recorded. This file's rule allows a later edit only for a link or a typo. This note is neither, and is added by argument, as [FREEZE-1](FREEZE-1.md)'s corrections of its header are: it corrects what the header says of review, not the design. It changes no rule, threshold, size or reading; the frozen text is the one at the freeze commit.

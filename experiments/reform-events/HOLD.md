@@ -1,6 +1,6 @@
 # T7F held: T7's field test of reform events, attempted and not frozen as designed
 
-*Board item T7F, 5 November 2026. AI-written (a Claude Code session), not yet reviewed by a person. A holding limit, dated, with its reason: it holds so far and lapses when a design of this test is frozen. Nothing here was frozen, downloaded or sent to a model. About four to five minutes to read.*
+*Board item T7F, 5 November 2026. AI-written (a Claude Code session); no person's review of it is recorded. A holding limit, dated, with its reason: it holds so far and lapses when a design of this test is frozen. Nothing here was frozen, downloaded or sent to a model. About four to five minutes to read.*
 
 ## What was attempted
 

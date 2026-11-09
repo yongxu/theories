@@ -22,7 +22,7 @@
 
 ![The eight chapters around one grammar](theories/becoming/results/spine.svg)
 
-*About a tenth of the 117 central declarations are [read as cases of laws stated on the grammar, the account's relational calculus](theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge) (11 derived, and 1, a root form at one step, under a stated hypothesis); the rest are counting laws, below the grammar (6), or stand at a named distance, each with its reason (99); [what the picture shows and does not show](theories/becoming/results/THEORY-GRAPH.md#the-spine-what-it-shows-and-does-not-show); [how the account grew](theories/LINEAGE.md).*
+*About a tenth of the 117 central declarations are [read as cases of laws stated on the grammar, the account's relational calculus](theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge) (11 [derived](GLOSSARY.md#derived), and 1, a root form at one step, under a stated hypothesis); the rest are counting laws, below the grammar (6), or stand at a [named distance](GLOSSARY.md#named-distance), each with its reason (99); [what the picture shows and does not show](theories/becoming/results/THEORY-GRAPH.md#the-spine-what-it-shows-and-does-not-show); [how the account grew](theories/LINEAGE.md).*
 
 ## Ways in
 

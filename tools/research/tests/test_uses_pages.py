@@ -298,7 +298,8 @@ class WhatEachFieldAdds(unittest.TestCase):
         self.assertNotIn('credited there to the sciences', line)
         for phrase in ("08's review read the laws against the literature it knew",
                        'so that is not a finding that a tradition has none of these results',
-                       "that these are among the credits falling on those laws is this page's AI reading",
+                       "That these are among the credits falling on those laws is this page's AI reading",
+                       'to Hume; to Fine and Wilf (1965); to Moore (1956); and to Gold (1967).',
                        'BECOMING-TWENTY-FIRST-REVIEW.md#5-how-the-traditions-and-the-sciences-map-onto-it'):
             self.assertIn(phrase, line)
 

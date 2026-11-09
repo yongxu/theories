@@ -1,6 +1,6 @@
 # The field's published estimates for the stocks T2's tests read
 
-UE32, 3 November 2026. AI-written (a Claude Code session; no person has checked it). For each stock that T2's three frozen fish-stock tests read, the field's own published estimate of how many delays forecast its series best, where one was found. About ten minutes to read.
+UE32, 3 November 2026. AI-written (a Claude Code session; no person's review of it is recorded). For each stock that T2's three frozen fish-stock tests read, the field's own published estimate of how many delays forecast its series best, where one was found. About ten minutes to read.
 
 **What T2's tests read.** MQ4 and MQ5 fitted 277 stocks of the RAM Legacy Stock Assessment Database v4.66 between them, none in both ([MQ4's](../margin-measured/results/mq4/VERDICTS-mq4.json) 76 primary, 11 control and 92 other; [MQ5's](../margin-measured/results/mq5/VERDICTS-mq5.json) 69, 5 and 24). MQ7's stocks, from ICES and NOAA Stock SMART (21 in its primary group; its verdict drew on 5), are not counted here; an independent reader of these documents found none of MQ7's 21 primary stocks, as its predictions list them, among Pierre's 53. The level each test read matters below: MQ4 read total biomass (`TB-MT` in its fits), MQ5 spawning biomass.
 

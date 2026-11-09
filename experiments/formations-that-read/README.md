@@ -32,7 +32,7 @@ for n in 1 2 3 4 5 6 7 8 9 _rr; do python3 -B tr$n.py; done
 <a id="the-runs-made"></a>
 ## The runs made
 
-*AI-written (a Claude Code session); no person has checked it.* TR1's, TR2's and TR7's Stage A. Each was run once by its frozen command, on Ren's yes of 6 November 2026 ([his words](../../sources/15-codex-theory-conversations/2026-11-06-go-ahead-with-everything.md)), with no model call and no download. The tests that call a model have not run.
+*AI-written (a Claude Code session); no person's review of it is recorded.* TR1's, TR2's and TR7's Stage A. Each was run once by its frozen command, on Ren's yes of 6 November 2026 ([his words](../../sources/15-codex-theory-conversations/2026-11-06-go-ahead-with-everything.md)), with no model call and no download. The tests that call a model have not run.
 
 **TR1's Stage A** ([FREEZE-10 §9](FREEZE-10.md#9-stage-a), [`told-tr1a/results/stage-a.json`](told-tr1a/results/stage-a.json)). Small choosers trained on the met menus, 20 seeds a cell, read on all 70 presentations by FREEZE-5's rule on their exact choice probabilities.
 

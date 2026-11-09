@@ -59,7 +59,7 @@ None of this tests T2. The controls are not the primary group, and the design's 
 <a id="ue31bs-result"></a>
 ## UE31b's result
 
-*About 4 minutes to read. AI-written (a Claude Code session); no person has checked it.*
+*About 4 minutes to read. AI-written (a Claude Code session); no person's review of it is recorded.*
 
 Run once on 6 November 2026, on Ren's yes ([his words](../../sources/15-codex-theory-conversations/2026-11-06-go-ahead-with-everything.md)), by its frozen script: [`cells/results/run-cells.json`](cells/results/run-cells.json) and [`run-cells.out`](cells/results/run-cells.out). The workbook's sha-256 was checked before anything was read, and the recording check let it through: 8 of 360 rows have more recruits than pupae, against the 12.5% that would stop the reading.
 
