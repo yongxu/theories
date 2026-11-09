@@ -9053,7 +9053,8 @@
       "rulecapture-carriercounts-select",
       "closedcapture-accrues",
       "closedcapture-drawn-mirror",
-      "closedcapture-drawn-strict"
+      "closedcapture-drawn-strict",
+      "card-natural-number-amounts"
      ]
     },
     {
@@ -9064,7 +9065,8 @@
       "rulecapture-carriercounts-select",
       "closedcapture-accrues",
       "closedcapture-drawn-mirror",
-      "closedcapture-drawn-strict"
+      "closedcapture-drawn-strict",
+      "card-natural-number-amounts"
      ]
     }
    ]
@@ -9865,7 +9867,7 @@
    "exits": [
     {
      "to": {
-      "en": "at a reading step r at which the loss has reached its bound, r + 1 reading too: locked the other way under the late reading (lo′ in place of lo) at every step from r + 2, exactly where the late reading favours the others at the share at r + 1"
+      "en": "at a reading step r at which the loss has reached its bound and the late reading favours the others there (ties included), r + 1 reading too: locked the other way under the late reading (lo′ in place of lo) at every step from r + 2, exactly where the late reading favours the others (ties included) at the share at r + 1"
      },
      "law": "Becoming.ReadInTime.turned_iff",
      "edge": {
@@ -10018,7 +10020,8 @@
       "closedcapture-thinned-losspool",
       "closedcapture-drawn-pool",
       "ruleshaping-shaped",
-      "rulecapture-carriercounts-select"
+      "rulecapture-carriercounts-select",
+      "card-natural-number-amounts"
      ]
     },
     {
@@ -10029,7 +10032,8 @@
       "closedcapture-thinned-losspool",
       "closedcapture-drawn-pool",
       "ruleshaping-shaped",
-      "rulecapture-carriercounts-select"
+      "rulecapture-carriercounts-select",
+      "card-natural-number-amounts"
      ]
     },
     {
@@ -10051,7 +10055,8 @@
       "closedcapture-thinned-losspool",
       "closedcapture-drawn-pool",
       "ruleshaping-shaped",
-      "rulecapture-carriercounts-select"
+      "rulecapture-carriercounts-select",
+      "card-natural-number-amounts"
      ]
     },
     {
@@ -10063,7 +10068,8 @@
       "closedcapture-thinned-losspool",
       "closedcapture-drawn-pool",
       "ruleshaping-shaped",
-      "rulecapture-carriercounts-select"
+      "rulecapture-carriercounts-select",
+      "card-natural-number-amounts"
      ]
     },
     {
@@ -10093,7 +10099,8 @@
       "closedcapture-thinned-losspool",
       "closedcapture-drawn-pool",
       "ruleshaping-shaped",
-      "rulecapture-carriercounts-select"
+      "rulecapture-carriercounts-select",
+      "card-natural-number-amounts"
      ]
     },
     {
@@ -10105,7 +10112,8 @@
       "closedcapture-thinned-losspool",
       "closedcapture-drawn-pool",
       "ruleshaping-shaped",
-      "rulecapture-carriercounts-select"
+      "rulecapture-carriercounts-select",
+      "card-natural-number-amounts"
      ]
     },
     {
@@ -10124,7 +10132,8 @@
       "closedcapture-thinned-losspool",
       "closedcapture-drawn-pool",
       "ruleshaping-shaped",
-      "rulecapture-carriercounts-select"
+      "rulecapture-carriercounts-select",
+      "card-natural-number-amounts"
      ]
     },
     {
@@ -10608,7 +10617,8 @@
      ],
      "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
      "drops": [
-      "rulecapture-uniform"
+      "rulecapture-uniform",
+      "rulecapture-keeps"
      ],
      "standing": [
       {
@@ -12524,10 +12534,10 @@
      ],
      "between": {
       "from": {
-       "en": "publication under the threshold response on 0, 1, 2 starting at 0: it stays 0, itself right"
+       "en": "publication under the threshold response on 0, 1, 2 starting at 0, which stays 0 (itself right)"
       },
       "to": {
-       "en": "publication starting at 1 or above: it reaches the right prediction 2 after one step and stays there"
+       "en": "publication starting at 1, which reaches the right prediction 2 after one step and stays there"
       }
      },
      "standing": [
@@ -27756,9 +27766,7 @@
     "en": "decided where a law counts or names: the proposition the law counts or names by is decided (it holds or it fails), in Lean an instance of Decidable or DecidableEq in the law's binders (the modules Becoming.Decidedness and Becoming.Listing)"
    },
    "kind": "local hypothesis",
-   "lean": [
-    "Becoming.Listing"
-   ],
+   "lean": [],
    "holds_in": [
     "Becoming.Decided.exists_below"
    ],
@@ -28348,7 +28356,7 @@
   {
    "id": "rulecapture-upper",
    "name": {
-    "en": "favouring kept upward, in RuleCapture"
+    "en": "favouring kept upward"
    },
    "statement": {
     "en": "a rule not lower than a favouring rule favours"
@@ -28949,7 +28957,7 @@
   {
    "id": "drawnshaping-step",
    "name": {
-    "en": "each kind of reader for its own, in DrawnShaping"
+    "en": "each kind of reader for its own"
    },
    "statement": {
     "en": "lo ≤ hi: the shapers among the readers read at least as much coming back to the shapers as the others among them do"
@@ -31902,7 +31910,7 @@
     "en": "a common multiple of the group sizes"
    },
    "statement": {
-    "en": "every group times its weight comes to one positive common multiple n of the group sizes"
+    "en": "each group's size times its factor f g is one positive n, a common multiple of the sizes"
    },
    "kind": "hypothesis of a law",
    "lean": [
@@ -31910,7 +31918,7 @@
    ],
    "holds_in": [],
    "fails_in": [],
-   "home": "theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.md#conditions--条件",
+   "home": "theories/becoming/results/records/shaping-selected-among-groups.md#conditions--条件",
    "seeded_from": [
     "Lean"
    ]
@@ -31929,7 +31937,7 @@
    ],
    "holds_in": [],
    "fails_in": [],
-   "home": "theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.md#conditions--条件",
+   "home": "theories/becoming/results/records/shaping-selected-among-groups.md#conditions--条件",
    "seeded_from": [
     "Lean"
    ]

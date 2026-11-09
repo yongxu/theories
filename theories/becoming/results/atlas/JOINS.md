@@ -92,7 +92,7 @@ The map lives in five stores built apart. `tools/research/atlas_index.py` reads 
 | [horizon-optima-hold-the-greatest-renewal](families/b.md#horizon-optima-hold-the-greatest-renewal) (exit 3) | [keeping-forgoes-the-renewal-at-the-need](families/b.md#keeping-forgoes-the-renewal-at-the-need) | sufficient |
 | [keeping-forgoes-the-renewal-at-the-need](families/b.md#keeping-forgoes-the-renewal-at-the-need) (exit 2) | [a-step-coupling-keeps-at-every-horizon](families/h.md#a-step-coupling-keeps-at-every-horizon) | sufficient |
 | [loss-of-renewal-for-good](families/a.md#loss-of-renewal-for-good) (exit 2) | [three-outcomes-of-a-loss](families/a.md#three-outcomes-of-a-loss) | necessary |
-| [loss-read-in-time-by-the-others](families/c.md#loss-read-in-time-by-the-others) (exit 1) | at a reading step r at which the loss has reached its bound, r + 1 reading too: locked the other way under the late reading (lo′ in place of lo) at every step from r + 2, exactly where the late reading favours the others at the share at r + 1 | exact |
+| [loss-read-in-time-by-the-others](families/c.md#loss-read-in-time-by-the-others) (exit 1) | at a reading step r at which the loss has reached its bound and the late reading favours the others there (ties included), r + 1 reading too: locked the other way under the late reading (lo′ in place of lo) at every step from r + 2, exactly where the late reading favours the others (ties included) at the share at r + 1 | exact |
 | [market-finite-support-obstruction](families/a.md#market-finite-support-obstruction) (exit 1) | [never-leaving-a-guard](families/h.md#never-leaving-a-guard) | sufficient |
 | [market-finite-support-obstruction](families/a.md#market-finite-support-obstruction) (exit 2) | [never-leaving-a-guard](families/h.md#never-leaving-a-guard) | exact |
 | [own-count-misses-joint-excess](families/b.md#own-count-misses-joint-excess) (exit 2) | [division-by-exclusive-footprints](families/h.md#division-by-exclusive-footprints) | sufficient |
@@ -300,7 +300,7 @@ Where two rows share a folder (LA4's two stages, IN1's two rounds), only an id c
 
 ## Pilot: premise ids
 
-K3's 17 premises (`COVERAGE.json`) were the one place premises were data until step 2 of the next phase made premises entries of their own ([the premise ledger](PREMISES.md)), seeded from them and from 08's card; this pilot, measured on K3's patterns, is kept as it was taken. For each, a proposed id, the live record hypotheses that name it in words and those its Lean pattern matches, the dynamics that quote such a hypothesis, and how many of its witnesses the core run lists. A hypothesis is text, so a match is a candidate join, not a reading of it. 426 of the 1,264 live hypotheses match some premise, and 98 match more than one.
+K3's 17 premises (`COVERAGE.json`) were the one place premises were data until step 2 of the next phase made premises entries of their own ([the premise ledger](PREMISES.md)), seeded from them and from 08's card; this pilot, measured on K3's patterns, is still measured at each render. For each, a proposed id, the live record hypotheses that name it in words and those its Lean pattern matches, the dynamics that quote such a hypothesis, and how many of its witnesses the core run lists. A hypothesis is text, so a match is a candidate join, not a reading of it. 426 of the 1,264 live hypotheses match some premise, and 98 match more than one.
 
 | Premise | Proposed id | Hypotheses naming it (records) | Matching its pattern (records) | Dynamics quoting one | Witnesses in the core |
 |---|---|---:|---:|---:|---:|
