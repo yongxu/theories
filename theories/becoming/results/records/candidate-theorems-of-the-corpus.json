@@ -152,7 +152,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean",
       "role": "proof",
-      "sha256": "d3abca975408d6e01c26174d5ca68376acd2a9c6888b400afda8853dca7d037b",
+      "sha256": "aece661df0a0ca8a46ccba17fb4d8fcfdf79cd3d82b43a4e3a8530847cafdb1a",
       "declarations": [
         "Becoming.«三法相因待»",
         "Becoming.«不可致诘而有常则混而为一»",
@@ -263,7 +263,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
       "role": "proof",
-      "sha256": "247dc207637fd2878b48187bad6824ceb4f795da93db91a3f971cafb796d5cf1",
+      "sha256": "2093db006e8951b772c73a94ef8ca565b606d25055d44794c42e6d5b4a13c7b9",
       "declarations": [
         "Becoming.«四相俱时»"
       ]
@@ -279,19 +279,25 @@
       "role": "receipt",
       "sha256": "65ea4a1e6b35020a27ade1d94dbbdc614477054b423f6d85ce73396c37494c44",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json",
+      "role": "receipt",
+      "sha256": "b2a4a06d538e8e7d391c8947e4c85eb6183fa84004a1f4fd8eb13d765d628a14",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T170123.418765Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarCandidates",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Grammar",
       "success_pointer": "/status",
       "success_value": "passed"

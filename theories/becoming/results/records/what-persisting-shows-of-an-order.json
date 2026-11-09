@@ -364,7 +364,7 @@
         "Becoming.Weighting.WidensOn.ne",
         "Becoming.Weighting.adds_ends_of_allOrNone"
       ],
-      "sha256": "3766ee8db4f5e5c08927cd52fbdd877d6543ddda5cd43bcce5ba448804499205"
+      "sha256": "62a0506e6f6519ca180776773db4e3fc8fae54e383e387203e4ce59a143b4ad2"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
@@ -398,12 +398,18 @@
         "Becoming.«及之首步»"
       ],
       "sha256": "2093db006e8951b772c73a94ef8ca565b606d25055d44794c42e6d5b4a13c7b9"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json",
+      "role": "receipt",
+      "sha256": "b2a4a06d538e8e7d391c8947e4c85eb6183fa84004a1f4fd8eb13d765d628a14",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T130231.019057Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.PersistingChoices",
       "success_pointer": "/status",
       "success_value": "passed"
