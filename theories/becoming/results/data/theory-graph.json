@@ -53739,6 +53739,11 @@
   },
   {
    "from": "record:route-b-joined",
+   "to": "record:a-selection-removing-its-readers",
+   "type": "related"
+  },
+  {
+   "from": "record:route-b-joined",
    "to": "record:covering-by-the-returning-formations",
    "type": "related"
   },

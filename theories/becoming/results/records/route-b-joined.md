@@ -79,6 +79,7 @@ Reading (the AI's): persisting's filter, keeping above ending, is the self-prese
 - **interpretive**: [what-the-dynamics-leave-open](what-the-dynamics-leave-open.md). Why the join is near-definitional: no statement reading only the dynamics entails the condition (ReadsOnlyDynamics.not_entails).
 - related, not a proved adapter: [mutual-dependence-gives-the-condition-de-se](mutual-dependence-gives-the-condition-de-se.md). The condition held de se at every center under mutual dependence; here at the returning standpoints under their least class.
 - related, not a proved adapter: [covering-by-the-returning-formations](covering-by-the-returning-formations.md). The covering the pool's law rests on.
+- related, not a proved adapter: [a-selection-removing-its-readers](a-selection-removing-its-readers.md). A selection that removes its own readers, with the pool read off the course: what this record's fixed pool leaves unstated.
 
 <a id="sources--来源"></a>
 ### Sources
@@ -108,7 +109,8 @@ Aliases: `route (b) joined`, `路线 (b) 合观`, `Becoming.Flow.returning_downs
 ### History
 
 - 9 November 2026, board item J1 (route (b)'s join, after G1, G3, G2 and the bound landed): added. Three AI readings of the join, eight adversarial checkers and a critic settled what composes; this record states it once, with a joint witness where none had existed, and the general laws the pieces shared moved below them (board rule 9).
+- 10 November 2026: related to a-selection-removing-its-readers, which states a selection removing its own readers with the pool read off the course; 07's matching sentence points to it (a reader's note relayed by the coordinator). The claim is unchanged.
 
 </details>
 
-Documentary review UTC: `2026-11-09T16:46:59+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T18:04:40+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

@@ -218,7 +218,7 @@
 <text x="506" y="1675.3" font-size="14" text-anchor="start" fill="#1c1917">core modules that state their laws on the grammar,</text>
 <text x="506" y="1693.3" font-size="14" text-anchor="start" fill="#1c1917">given beside the chapter as “k of m modules on the</text>
 <text x="506" y="1711.3" font-size="14" text-anchor="start" fill="#1c1917">grammar”. It counts modules, not results derived.</text>
-<text x="506" y="1733.3" font-size="14" text-anchor="start" fill="#1c1917">Not drawn: related, for analogy (1,457 edges), and</text>
+<text x="506" y="1733.3" font-size="14" text-anchor="start" fill="#1c1917">Not drawn: related, for analogy (1,458 edges), and</text>
 <text x="506" y="1751.3" font-size="14" text-anchor="start" fill="#1c1917">the formal-reuse curves of pairs under 10 uses;</text>
 <text x="506" y="1769.3" font-size="14" text-anchor="start" fill="#1c1917">counts under 15 are not written. THEORY-GRAPH.md’s</text>
 <text x="506" y="1787.3" font-size="14" text-anchor="start" fill="#1c1917">edge kinds between chapters, its tables and pair</text>

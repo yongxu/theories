@@ -212,7 +212,7 @@
 <text x="506" y="1565.3" font-size="14" text-anchor="start" fill="#1c1917">律者所占的比例，其数写在章旁，作“m 个模块</text>
 <text x="506" y="1583.3" font-size="14" text-anchor="start" fill="#1c1917">中 k 个在文法上”。它计的是模块，不是推导而</text>
 <text x="506" y="1601.3" font-size="14" text-anchor="start" fill="#1c1917">得的结果。</text>
-<text x="506" y="1623.3" font-size="14" text-anchor="start" fill="#1c1917">不画出：相关（related，用于类比，1457 条边），</text>
+<text x="506" y="1623.3" font-size="14" text-anchor="start" fill="#1c1917">不画出：相关（related，用于类比，1458 条边），</text>
 <text x="506" y="1641.3" font-size="14" text-anchor="start" fill="#1c1917">以及少于 10 次 formal-reuse 使用之配对的实</text>
 <text x="506" y="1659.3" font-size="14" text-anchor="start" fill="#1c1917">线；少于 15 次的不标数字。理论图“各章一览”</text>
 <text x="506" y="1677.3" font-size="14" text-anchor="start" fill="#1c1917">的中文版（THEORY-GRAPH.zh.md）中各章之间边</text>
