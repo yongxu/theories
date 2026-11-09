@@ -69,15 +69,14 @@ board item ZC's, `Becoming.OwnClass`, and which formations are centers ZA-G1's, 
   `realized` alone, which holds vacuously, and the line persists whatever is chosen.
 * **Every course met, and still no order increasing in its own continuation everywhere.** In
   `PersistingChoices.Crossed` two occasions each choose a course that a course open at the other occasion,
-  adding to the own continuation, widens; every course is open somewhere and no choice ends, yet the two
-  choices with the two widenings form a cycle, so no strict order according with the choices is increasing in
-  its own continuation (`PersistingChoices.Crossed.not_selfConcerned`). Self-concern consistent with the
-  choices is self-concern on the pairs met together.
+  adding to the own continuation, widens; each of the four courses is open somewhere and no choice ends, yet
+  the two choices with the two widenings form a cycle, so no strict order according with the choices is
+  increasing in its own continuation (`PersistingChoices.Crossed.not_selfConcerned`).
 * **The course taken is never a listed level path.** Under only active formations giving and activity
-  needing support, with descent, a line persisting through arbitrarily late cohorts leaves the actual levels
-  admitting some formation at arbitrarily late steps, so no finite listing holds what they admit
-  (`Flow.persists_not_listsAdmitted`): an order ranking listed level paths, as C does between them, ranks
-  only courses not taken.
+  needing support, with descent, a line persisting through arbitrarily late cohorts leaves the web's actual
+  levels admitting some formation at arbitrarily late steps, so no finite listing holds what they admit
+  (`Flow.persists_not_listsAdmitted`): an order ranking listed level paths, as C does between them, never
+  ranks the course actually taken.
 
 **Readings** (the AI's; correspondences, not theorems).
 - *Survivorship.* Persisting is a filter on what was chosen, not a mechanism forming an order. Where a choice
@@ -89,8 +88,8 @@ board item ZC's, `Becoming.OwnClass`, and which formations are centers ZA-G1's, 
   orders according with every choice (`ChoiceOccasions.reversed_off_met`; as in
   `ChoiceOccasions.Untried`, and for a trained response `Training.response_free_where_unlumped`).
 - *Convergence, not ethics.* Where a reward channel or an operator's assent is among the conditions the
-  line depends on, keeping above ending (`Flow.persisting_keeping_above_ending`) reads as the self-preservation
-  side of instrumental convergence; AJ's plan reads its resource-keeping side, under a fixed order, as of the
+  line depends on, choices consistent with keeping above ending (`Flow.persisting_keeping_above_ending`) read
+  as the self-preservation side of instrumental convergence; AJ's plan reads its resource-keeping side, under a fixed order, as of the
   same kind as the drain beyond the couplings. What persisting gives is a filter, not an ethics.
 - *Revealed preference.* `ChoiceOccasions.selfConcerned_consistent_iff` is rationalizing strict choices by a
   strict partial order (Richter 1966) with required comparisons added.
@@ -860,7 +859,7 @@ theorem widens₂ : Weighting.WidensOn items b₂ a₁ :=
     | .x, _ => rfl, ⟨.w, .tail _ (.tail _ (.tail _ (.head _))), rfl, rfl⟩⟩
 
 /-- **Every course met, and no strict order according with the choices is increasing in its own
-continuation.** Each of the four courses is open at an occasion, and no chosen course ends the own
+continuation.** Each of the four named courses is open at an occasion, and no chosen course ends the own
 continuation; yet the two choices with the two widenings across the occasions form a cycle. -/
 theorem not_selfConcerned :
     (∀ c, c = a₁ ∨ c = b₁ ∨ c = a₂ ∨ c = b₂ → ∃ o, choices.menu o c) ∧
@@ -886,11 +885,11 @@ end PersistingChoices.Crossed
 
 /-! ## The course taken is never a listed level path -/
 
-/-- **A persisting line's own course is never listed.** Under only active formations giving and activity
-needing support, with descent, a line persisting through arbitrarily late cohorts leaves the web's actual
-levels admitting some formation at arbitrarily late steps, so no finite listing holds what those levels
-admit: an order ranking listed level paths, as C does between them, never ranks the course the line
-takes. -/
+/-- **Where a line persists, the course taken is never listed.** Under only active formations giving and
+activity needing support, with descent, a line persisting through arbitrarily late cohorts leaves the web's
+actual levels admitting some formation at arbitrarily late steps, so no finite listing holds what those
+levels admit: an order ranking listed level paths, as C does between them, never ranks the course actually
+taken. -/
 theorem Flow.persists_not_listsAdmitted {X : Type} {L : Flow X X} {W : Web X X} (acting : L.Acting W)
     (dependent : W.Dependent) {G : SelectionTerm.Generations X}
     (descended : SelectionTerm.Flow.Descended L W G) (persists : G.Persists) (items : List (Nat × X)) :
