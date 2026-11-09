@@ -503,6 +503,8 @@ Beside these is a Lean item, named in MS's row and not yet claimed: higher-order
 
 Step 1 uses no agents. Each later step has its agent count proposed to Ren before it runs (§11, item 1). By the joint reading, none of them makes a paid run or designs a new test, so none is held by his hold of 6 November.
 
+**Step 1 landed** on 10 November 2026, with this section ([what does not join](../../../../../../theories/becoming/results/atlas/JOINS.md)). Measured on the tree it landed on: 22 of 286 exits name a destination and 56 of 177 dynamics have no exit; none of the 66 test rows names a record or a dynamic, and by route 6 tests join records exactly, 26 only through a folder other tests share, 44 join a dynamic through the folder the atlas links, and 14 join nothing; 2,196 of 3,768 crosswalk targets resolve to a record and 693 of 1,183 entries reach a dynamic; 296 of 522 live theorem records are cited by no dynamic. The page counts them again at every render.
+
 ---
 
 ## Appendix A. First pass of the dynamics
