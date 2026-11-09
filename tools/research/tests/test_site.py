@@ -681,6 +681,12 @@ class SiteTests(unittest.TestCase):
         self.assertEqual(site.svg_size(self.tmp / 'a/pic.svg'), (10, 20))  # width and height first
         (self.tmp / 'a/pic.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" stroke-width="2" width="100%" viewBox="-5 -5 40 20"></svg>')
         self.assertEqual(site.svg_size(self.tmp / 'a/pic.svg'), (40, 20))  # neither a stroke's width nor a percentage is a size
+        (self.tmp / 'a/pic.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" stroke-width="2" width="900" height="1859"></svg>')
+        self.assertEqual(site.svg_size(self.tmp / 'a/pic.svg'), (900, 1859))  # the root's own width, not its stroke's
+        (self.tmp / 'a/pic.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" width="0" height="5" viewBox="0 0 30 15"></svg>')
+        self.assertEqual(site.svg_size(self.tmp / 'a/pic.svg'), (30, 15))  # a zero size falls back to the viewBox
+        (self.tmp / 'a/pic.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0"></svg>')
+        self.assertIsNone(site.svg_size(self.tmp / 'a/pic.svg'))
         (self.tmp / 'a/pic.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg"></svg>')
         self.assertIsNone(site.svg_size(self.tmp / 'a/pic.svg'))
         self.assertIsNone(site.svg_size(self.tmp / 'a/none.svg'))

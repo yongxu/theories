@@ -12,7 +12,7 @@ README's generated first screen in its own words: its "Start with" paragraph com
 its caption, bounded in height, then the ways in that `site.ways_in` lists, each with its reading time (`time` on a card says
 what the time is of), counted as the page's own stated time is. A picture's image carries its SVG's width and height, so its
 box is kept before it loads. The pages of `site.chapters` get contents and previous and next links; the
-navigation line a generated page carries, as do the fronts in navigation.NAV_FRONTS, is dropped, the site having its own; `site.rewrites` changes the words of the pages a rule names, or of any page where a rule naming none matches, of named
+navigation line a generated page carries, as do the fronts in navigation.NAV_FRONTS and the Chinese fronts (zh_fronts), is dropped, the site having its own; `site.rewrites` changes the words of the pages a rule names, or of any page where a rule naming none matches, of named
 pages at build, where a frozen copy binds the source or the words are true only off the site, or adds a link only the site
 serves. With `site.map`, the
 connection map is written by its generator's site mode (tools/research/connection_map.py), its links to pages of the site
@@ -769,7 +769,7 @@ def rewritten(path, text, rules):
 
 
 def site_text(path, text, rules=()):
-    """A page's Markdown as the site publishes it: rewritten as site.rewrites says, its navigation line (a generated page's, or a NAV_FRONTS front's) dropped,
+    """A page's Markdown as the site publishes it: rewritten as site.rewrites says, its navigation line (a generated page's, a NAV_FRONTS front's or a Chinese front's) dropped,
     and on a record page the status said in words."""
     text = strip_nav_line(rewritten(path, text, rules))
     if path.startswith(RECORDS):
@@ -800,7 +800,7 @@ def svg_size(path):
     tag = root.group(0)
     w, h = (re.search(rf'\s{k}="(\d+(?:\.\d+)?)(?:px)?"', tag) for k in ('width', 'height'))  # not stroke-width; no percentage
     size = (round(float(w.group(1))), round(float(h.group(1)))) if w and h else None
-    if not size:
+    if not (size and all(size)):  # a zero width or height falls back to the viewBox
         box = re.search(r'\sviewBox="\s*-?[\d.]+[\s,]+-?[\d.]+[\s,]+(\d+(?:\.\d+)?)[\s,]+(\d+(?:\.\d+)?)\s*"', tag)
         size = (round(float(box.group(1))), round(float(box.group(2)))) if box else None
     return size if size and all(size) else None
