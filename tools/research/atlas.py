@@ -926,6 +926,37 @@ def group_page(atlas: dict, g: dict) -> str:
 CROSSWALK_ZH = ATLAS + '/CROSSWALK.zh.md'
 ZH_CARRIED = {'carried': '承继', 'carried-in-part': '部分承继', 'changed': '改变', 'fresh-reading': '此处提出的新读法',
               'history-only': '仅存于历史', 'not-carried': '未承继'}
+# Each group's name in Chinese (AI translation, as CROSSWALK.zh says), for CROSSWALK.zh's table and the Chinese
+# connections picture: the folders keep the Chinese their titles carry; a group with no name here shows its English, marked.
+GROUP_ZH = {
+    'cxg-alignment-selection-on-cognition': '对齐即对认知的选择（心中的摩洛克）',
+    'cxg-architecture-for-a-living-earth': '为一个活的地球的建筑',
+    'cxg-context-as-existence-runtimes': '语境即存在：上下文运行时',
+    'cxg-drives-narrative-attractors-and-mind': '驱力、叙事吸引子与心智的建构',
+    'cxg-evolving-community-swarms': '演化的社群集群',
+    'cxg-human-solutions-museum': '人类解决问题的方法博物馆',
+    'cxg-jian-and-wenyan-as-formal-language': '間与文言作为形式语言',
+    'cxg-keep-the-possibility-space-open': '保持可能性空间敞开（护开不闭）',
+    'cxg-memories-and-working-style': '记忆与工作方式',
+    'cxg-meta-attractor': '元吸引子',
+    'cxg-relational-self-and-datong': '关系性的自我与大同',
+    'cxg-selfishness-spiral-and-narrative-value-frames': '自私螺旋与叙事价值框架',
+    'cxg-spirit-space-token-and-yi-substrate': 'Spirit、Token、Space 与易的基底',
+    'cxg-the-fork-and-cooperative-infrastructure': '合作的丰裕与自由建造的世界（分岔）',
+    'cxg-wamotopia-and-the-wamo-protocol': 'Wamotopia 与 Wamo 协议（瓦猫）',
+    'cxg-zhishan-intelligence-must-be-good': '智善：智能必须向善',
+    'cxg-chinese-classical': '中国古典思想：现有映射尚未到达之处',
+    'cxg-buddhist': '佛教思想，就本论已到达之处而言',
+    'cxg-other-indian': '佛教以外的印度思想',
+    'cxg-greek-roman': '希腊与罗马思想',
+    'cxg-abrahamic-islamic': '亚伯拉罕诸教与伊斯兰思想',
+    'cxg-indigenous-african': '原住民与非洲思想',
+    'cxg-modern-philosophy': '现代哲学',
+    'cxg-systems-cybernetics': '系统思维与控制论',
+    'cxg-dynamics-physics-complexity': '动力系统、物理与复杂性',
+    'cxg-ecology-evolution': '生态与演化',
+    'cxg-economics-politics-sociology': '经济、政治与社会学',
+    'cxg-psychology-alignment-logic': '心理学、AI 对齐与逻辑'}
 # The two domains a Chinese reader reaches first, each with what its group holds and does not.
 ZH_DOMAINS = (('cxg-chinese-classical', '中国古典思想',
                '本组只收现有映射尚未到达之处；中国古典的大部分在[第六章](../../chapters/06-CLASSICAL-TEXTS.md)，那里有段落的映射与一部图谱的条目'),
@@ -941,6 +972,21 @@ def _no_relation_zh(entries: list, relation: dict) -> str:
     if kept:
         out += (f'另有 {sum(kept.values())} 条{"、".join(ZH_CARRIED.get(k, k) for k in sorted(kept))}者有关系，[连接图](map.html)把它们画作一个短端而非一条线，'
                 f'但其分组计数包含它们。')
+    return out
+
+
+def _groups_zh(groups: list, vocabulary: dict) -> list:
+    """CROSSWALK.zh's table: each group by its Chinese name, linking its English page, with its entries counted by what
+    became of them and by relation, as CROSSWALK.md's table counts them."""
+    carried = [c['en'] for c in vocabulary['carried']]
+    relations = [(r['en'], r.get('zh') or r['en']) for r in vocabulary['relations']]
+    out = ['| 组 | 类 | 条数 | ' + ' | '.join(ZH_CARRIED.get(c, c) for c in carried) + ' | ' + ' | '.join(zh for _, zh in relations) + ' |',
+           '|---|---|---:|' + '---:|' * (len(carried) + len(relations))]
+    for g in groups:
+        name = GROUP_ZH.get(g['id']) or g['title']['en'] + '（英文）'
+        out.append(f'| [{_cell(name)}]({_href(group_path(g), ATLAS)}) | {"文件夹" if g["domain"] == EARLIER else "领域"} | {g["entries"]} | '
+                   + ' | '.join(str(g['by_carried'][c]) for c in carried) + ' | '
+                   + ' | '.join(str(g['by_relation'][r]) for r, _ in relations) + ' |')
     return out
 
 
@@ -982,7 +1028,9 @@ def crosswalk_zh_page(atlas: dict) -> str:
             + '，'.join(f'{ZH_CARRIED.get(k, k)} {n:,}' for k, n in carried.items()) + '。按关系：'
             + '，'.join(f'{zh} {n:,}' + (agreement if key == 'agreement' else '') for key, (zh, n) in relation.items()) + '。' + _no_relation_zh(entries, relation) + '只有一个目标所承载的才算作连接。', '',
             '**离中文文本最近的两个领域。**', '', *domains, '',
-            f'**全部 {len(groups)} 组**，每组一页，都在[英文索引](CROSSWALK.md)里：它以自己的话主张了什么，现行之论中成了什么，以及每一条的目标与地位。', '']
+            f'**全部 {len(groups)} 组**，每组一页，都在英文页上：它以自己的话主张了什么，现行之论中成了什么，以及每一条的目标与地位。'
+            f'下表列出每一组的条数，按结局与按关系各计（组名为 AI 所译；[英文索引](CROSSWALK.md)有同样的计数）：', '',
+            *_groups_zh(groups, vocabulary), '']
     body = _finish(out)
     return body.replace('{{time}}', f'*约 {zh_fronts.settle(lambda t: zh_fronts.zh_time(body.replace("{{time}}", f"*约 {t}读完。*")))}读完。*')
 

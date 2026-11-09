@@ -22,11 +22,11 @@
 
 **伦理。** 本论的伦理不断言任何应当；它的排序多依于[两种读法](../../theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order)，二者都不被断言。*延续条件*：从每一个立场看，对任何东西，其延续到未来都被计数。它确定范围，即谁的损失算数，不给任何东西排序。*C*：扩大可形成者（一个进程让什么能够形成）更好，它给出次序。本论之作者提供一种看法，不是裁断（[论题 T8](../../theories/becoming/chapters/07-SIGNIFICANCE.md#theses)）。
 
-**现状。** [Lean](../../MAP.md#check-the-proofs-yourself) 是一个证明检查器，为[已登记的 {{count:registered}} 条结果](../../RESULTS.md)中的 {{count:recorded-checked}} 条给出回执；回执只表明每条陈述能从它的前提推出，不表明前提成立。一次对照它所知文献的自动化回顾，并不穷尽，发现[核心结果中没有一个是新的数学](../../theories/becoming/chapters/08-METHOD.md#known-results)。留下来的有三样，没有一样是一项发现：前提账簿，每个前提都被表明在一个模型中成立、在另一个中不成立；作为两种读法分开的范围与次序；同一套词汇，用于守恒、受观察所限的选择，以及机会集的比较。[它的论题](../../theories/becoming/chapters/08-METHOD.md#theses)接受的是评分前就已冻结的检验：运行过的 {{tests:ran}} 项里，{{tests:mixed}} 项结局为「有通过，有未通过」，{{tests:passed}} 项通过，{{tests:failed}} 项未通过，{{tests:other}} 项是其他结局；另有 {{tests:unrun}} 项从未运行。这项工作借助 AI 做成；主持它的人读过其中重要的部分，尚无独立的人工审查记录（[审查包](../../theories/becoming/review/README.zh.md)）。
+**现状。** [Lean](../../MAP.md#check-the-proofs-yourself) 是一个证明检查器，为[已登记的 {{count:registered}} 条结果](../../RESULTS.md)中的 {{count:recorded-checked}} 条给出回执；回执只表明每条陈述能从它的前提推出，不表明前提成立。一次对照它所知文献的自动化回顾，并不穷尽，发现[核心结果中没有一个是新的数学](../../theories/becoming/chapters/08-METHOD.md#known-results)。留下来的有三样，没有一样是一项发现：前提账簿，每个前提都被表明在一个模型中成立、在另一个中不成立；作为两种读法分开的范围与次序；同一套词汇，用于守恒、受观察所限的选择，以及机会集的比较。[它的论题](../../theories/becoming/chapters/08-METHOD.md#theses)接受的是评分前就已冻结的检验：在指明论题的 {{tests:total}} 项检验中（[按论题](../../TESTS.zh.md#by-thesis)），运行过的 {{tests:ran}} 项里，{{tests:mixed}} 项结局为「有通过，有未通过」，{{tests:passed}} 项通过，{{tests:failed}} 项未通过，{{tests:other}} 项是其他结局；另有 {{tests:unrun}} 项从未运行。这项工作借助 AI 做成；主持它的人读过其中重要的部分，尚无独立的人工审查记录（[审查包](../../theories/becoming/review/README.zh.md)）。
 
 ![围绕一个文法的八章](../../theories/becoming/results/spine.zh.svg)
 
-*117 个核心声明中，约十分之一读作在文法（本论的关系演算）上陈述之律的情形：11 个推导而得，在 08 §7 的审阅中各读作一个情形，1 个，即一个根形式在一步上的情形，在一个所述的假设之下；其余 6 个是计数之律，位于文法以下，99 个处于一个指明的距离，各有其理由（Lean 核验了其中什么，见 [08 §7](../../theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge)）；这幅图显示什么、不显示什么，见[理论图：各章一览](../../theories/becoming/results/THEORY-GRAPH.zh.md#the-spine)；本论[怎样长成](../../theories/LINEAGE.zh.md)。*
+*117 个核心声明中，约十分之一读作在文法（本论的关系演算）上陈述之律的情形：11 个[推导而得](../../GLOSSARY.zh.md#derived)，在 08 §7 的审阅中各读作一个情形，1 个，即一个根形式在一步上的情形，在一个所述的假设之下；其余 6 个是计数之律，位于文法以下，99 个处于一个[指明的距离](../../GLOSSARY.zh.md#named-distance)，各有其理由（Lean 核验了其中什么，见 [08 §7](../../theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge)）；这幅图显示什么、不显示什么，见[理论图：各章一览](../../theories/becoming/results/THEORY-GRAPH.zh.md#the-spine)；本论[怎样长成](../../theories/LINEAGE.zh.md)。*
 
 ## 从哪里读起
 
@@ -41,8 +41,8 @@
 | [开篇](../../theories/becoming/OPENING.md) | 第一人称写下的信念：这件事为什么要紧；英文，尚无中文版 | 正文约 {{time:opening}}，注释另计 |
 | [八章](../../theories/becoming/chapters/README.md) | 各章正文，诸结果的所属之处；除第六章外为英文 | 每章约 {{time:chapters}} |
 | [古文（第六章）](../../theories/becoming/chapters/06-CLASSICAL-TEXTS.md) | 从古文读出文法，检验它，记下分歧；中文 | 约 {{time:theories/becoming/chapters/06-CLASSICAL-TEXTS.md}} |
-| [检验](../../TESTS.zh.md) | 冻结的检验，按结局排列，未通过者在前，每项一句话（[全表](../../TESTS.md)为英文） | 约 {{time:TESTS.zh.md}} |
-| [对照表](../../theories/becoming/results/atlas/CROSSWALK.zh.md) | 早先的理论文件夹与各思想领域，读作现行之论中的什么，附图与计数；各组在英文页上 | 约 {{time:theories/becoming/results/atlas/CROSSWALK.zh.md}} |
+| [检验](../../TESTS.zh.md) | 冻结的检验，按论题计数，再按结局排列，未通过者在前，每项一句话（[全表](../../TESTS.md)为英文） | 约 {{time:TESTS.zh.md}} |
+| [对照表](../../theories/becoming/results/atlas/CROSSWALK.zh.md) | 早先的理论文件夹与各思想领域，读作现行之论中的什么，附图、计数与各组一览；各组的条目在英文页上 | 约 {{time:theories/becoming/results/atlas/CROSSWALK.zh.md}} |
 | [理论图](../../theories/becoming/results/THEORY-GRAPH.md) | 概念、结果、模块、文本与各章之间的连接；英文，其中的各章一览有[中文版](../../theories/becoming/results/THEORY-GRAPH.zh.md)（约 {{time:theories/becoming/results/THEORY-GRAPH.zh.md}}） | 约 {{time:theories/becoming/results/THEORY-GRAPH.md}} |
 | [怎样长成](../../theories/LINEAGE.zh.md) | 本论怎样从更早的文字与理论文件夹长成 | {{stated:theories/LINEAGE.zh.md}} |
 | [术语表](../../GLOSSARY.zh.md) | 每个词的一义与其所属之处 | 约 {{time:GLOSSARY.zh.md}} |

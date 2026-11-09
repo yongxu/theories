@@ -383,37 +383,9 @@ OV_SHORT = {'cxg-chinese-classical': 'Chinese classical thought: what the maps h
             'cxg-drives-narrative-attractors-and-mind': 'Drives, narrative attractors and the construction of mind',
             'cxg-the-fork-and-cooperative-infrastructure': 'Cooperative abundance and freely built worlds (The Fork)'}
 OV_WARP = {'ch-06': '06 The classical texts (in Chinese)'}
-# The Chinese picture's names (AI translation, as CROSSWALK.zh says): the folders keep the Chinese their titles carry, and
-# the chapters take the overview's Chinese headings from spine.json.
-OV_SHORT_ZH = {
-    'cxg-alignment-selection-on-cognition': '对齐即对认知的选择（心中的摩洛克）',
-    'cxg-architecture-for-a-living-earth': '为一个活的地球的建筑',
-    'cxg-context-as-existence-runtimes': '语境即存在：上下文运行时',
-    'cxg-drives-narrative-attractors-and-mind': '驱力、叙事吸引子与心智的建构',
-    'cxg-evolving-community-swarms': '演化的社群集群',
-    'cxg-human-solutions-museum': '人类解决问题的方法博物馆',
-    'cxg-jian-and-wenyan-as-formal-language': '間与文言作为形式语言',
-    'cxg-keep-the-possibility-space-open': '保持可能性空间敞开（护开不闭）',
-    'cxg-memories-and-working-style': '记忆与工作方式',
-    'cxg-meta-attractor': '元吸引子',
-    'cxg-relational-self-and-datong': '关系性的自我与大同',
-    'cxg-selfishness-spiral-and-narrative-value-frames': '自私螺旋与叙事价值框架',
-    'cxg-spirit-space-token-and-yi-substrate': 'Spirit、Token、Space 与易的基底',
-    'cxg-the-fork-and-cooperative-infrastructure': '合作的丰裕与自由建造的世界（分岔）',
-    'cxg-wamotopia-and-the-wamo-protocol': 'Wamotopia 与 Wamo 协议（瓦猫）',
-    'cxg-zhishan-intelligence-must-be-good': '智善：智能必须向善',
-    'cxg-chinese-classical': '中国古典思想：现有映射尚未到达之处',
-    'cxg-buddhist': '佛教思想，就本论已到达之处而言',
-    'cxg-other-indian': '佛教以外的印度思想',
-    'cxg-greek-roman': '希腊与罗马思想',
-    'cxg-abrahamic-islamic': '亚伯拉罕诸教与伊斯兰思想',
-    'cxg-indigenous-african': '原住民与非洲思想',
-    'cxg-modern-philosophy': '现代哲学',
-    'cxg-systems-cybernetics': '系统思维与控制论',
-    'cxg-dynamics-physics-complexity': '动力系统、物理与复杂性',
-    'cxg-ecology-evolution': '生态与演化',
-    'cxg-economics-politics-sociology': '经济、政治与社会学',
-    'cxg-psychology-alignment-logic': '心理学、AI 对齐与逻辑'}
+# The Chinese picture's names (AI translation, as CROSSWALK.zh says): the groups' from atlas.GROUP_ZH, which CROSSWALK.zh's
+# table also names them by, and the chapters the overview's Chinese headings from spine.json.
+OV_SHORT_ZH = atlas_tool.GROUP_ZH
 OV_WARP_ZH = {'one-page': '一页', 'overview': '总览', 'collective-direction': '集体方向', 'free-energy': '自由能原理',
               'one-argument': '一个论证，从头到尾', 'glossary': '术语表', 'review': '审查包'}
 OV_TEXT = {

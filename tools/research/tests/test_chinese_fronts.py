@@ -85,6 +85,24 @@ class TestsPageTests(unittest.TestCase):
         self.assertIn(zh_fronts.nav_line(zh_fronts.TESTS_PAGE), page)
         self.assertIn('一项通过 \\| 以竖线', page)
 
+    def test_by_thesis_counts_the_english_tables_cells(self):
+        """TESTS.zh's 按论题 table: on the live data, each row's cells are TESTS.md's, under the Chinese class names, each
+        thesis named as the overview's theses table names it, and the number naming a thesis the first screen's total."""
+        import json
+        from tools.research import tests_page as english_tests
+        rows = json.loads((ROOT / zh_fronts.TESTS_DATA).read_text(encoding='utf-8'))['tests']
+        page = zh_fronts.tests_page()[0][zh_fronts.TESTS_PAGE]
+        section = page[page.index('<a id="by-thesis"></a>'):page.index('\n## ', page.index('## 按论题') + 1)]
+        mine = [l for l in section.split('\n') if l.startswith('| ') and not l.startswith('| 论题')]
+        theirs = [l for l in english_tests.by_thesis(rows) if l.startswith('| ') and not l.startswith('| Thesis')]
+        self.assertEqual([l.split(' | ')[1:] for l in mine], [l.split(' | ')[1:] for l in theirs])
+        names = zh_fronts.thesis_names_zh()
+        self.assertEqual(names['T3'], '在有余地之处，优化耗竭其耦合之外者')
+        for t, name in names.items():
+            if any(t in r['thesis'] for r in rows):
+                self.assertIn(f'[{t}]({zh_fronts.METHOD_THESES}) {name} |', section)
+        self.assertIn(f'指明论题的检验共 {english_tests.screen_count("total")} 项', section)
+
     def test_the_landing_page_render_writes_and_times_it(self):
         import tempfile
         with tempfile.TemporaryDirectory() as tmp:
