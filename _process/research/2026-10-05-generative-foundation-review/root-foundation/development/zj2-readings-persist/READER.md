@@ -70,3 +70,7 @@ The module grew from 80 to 83 theorems (131 declarations), every axiom report st
 - *Low:* "that both lines persist" was ambiguous (it is the line under both readings).
 
 **What was done.** All taken: "stands late as well, under the law's premises"; "on every course whose lines settle (classically, every course with finitely many lines)", with the infinite-pool limit stated in the note; the remaining premises listed in the module's two summaries; "every occasion picking that reading" in the record statement; the significances' agreement added in §4.12 and the module; "under every level history" in the record; "the line persists under both readings"; and Fable's six lows as proposed. astra reads the round-2 diff next.
+
+## Round 3, astra on the diff of round 2's fixes (`3fabcfa9b..40f1aa578`)
+
+No high finding; one medium: the settling restriction restored in the English of a `does_not_show` entry but not in its Chinese ("读自存者之存续于其成立"). Taken: "诸系有定处，读自存者之存续于其成立", in the generator and the record. The other round-2 fixes landed, and no new overclaim was found. One medium in the Chinese of one clause, fixed as the reader proposed; the rounds stop here, with Fable's second round and astra's third, the last of them with no high finding and its one medium a single Chinese clause.

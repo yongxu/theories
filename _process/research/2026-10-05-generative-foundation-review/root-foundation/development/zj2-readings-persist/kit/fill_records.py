@@ -418,7 +418,7 @@ def record_removing(ts):
                  "are not joined here.", "作为以份额之选择渐选对其规则之控制之元吸引子：此处未接 RuleShaping 之计数。"),
              "kind": "scope"},
             {**T("That every course removing its readers is selected: survivorship read off the survivors holds at it where "
-                 "the lines settle; nothing here makes a selection prefer it.", "每一移除其读者之程皆被选：读自存者之存续于其成立；此处无使选择偏向之者。"),
+                 "the lines settle; nothing here makes a selection prefer it.", "每一移除其读者之程皆被选：诸系有定处，读自存者之存续于其成立；此处无使选择偏向之者。"),
              "kind": "non-implication"},
             {**T("That selection read off the course's own pool is turned where the loss returns to the selectors: it passes "
                  "the course removing both lines; what turns is the selecting line's own persistence.",

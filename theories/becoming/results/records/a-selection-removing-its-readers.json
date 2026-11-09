@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-11-09T16:00:45+00:00",
+  "reviewed_at_utc": "2026-11-09T16:02:46+00:00",
   "statement": {
     "en": "With the pool read off the course, selection by persistence read off it passes every course whose lines settle, one removing every line included, while read off a fixed pool it is turned by every removal; a reader whose coupling closure the alternatives agree on is kept or removed alike.",
     "zh": "池读自其程时，诸系有定处读自其池之以存续之选择不记任何移除，移去诸系亦然；读自定池则为每一移除所转；诸选项于其耦合闭包皆一致之读者两程同留或同去。"
@@ -86,7 +86,7 @@
     },
     {
       "en": "That every course removing its readers is selected: survivorship read off the survivors holds at it where the lines settle; nothing here makes a selection prefer it.",
-      "zh": "每一移除其读者之程皆被选：读自存者之存续于其成立；此处无使选择偏向之者。",
+      "zh": "每一移除其读者之程皆被选：诸系有定处，读自存者之存续于其成立；此处无使选择偏向之者。",
       "kind": "non-implication"
     },
     {
@@ -242,7 +242,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zj2-readings-persist/READER.md",
       "role": "review",
-      "sha256": "5a1fe08bd7ef565c523f82bd7cee20d93a94c5f86a95eda7625b060a47cbafad"
+      "sha256": "acce9f7533fe105c93201914f3d38428a12f52ac0882c8eb15042d3f12ab793a"
     },
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
