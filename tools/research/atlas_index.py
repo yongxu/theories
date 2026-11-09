@@ -628,8 +628,8 @@ def page(m: dict, atlas_data: dict, family_names: dict) -> str:
 
     out += ['## Pilot: premise ids', '',
             f'K3\'s {len(m["premises"])} premises (`COVERAGE.json`) were the one place premises were data until step 2 of the next phase made '
-            'premises entries of their own ([the premise ledger](PREMISES.md)), seeded from them and from 08\'s card; this pilot, measured on '
-            'K3\'s patterns, is still measured at each render. For each, a proposed id, '
+            'premises entries of their own ([the premise ledger](PREMISES.md)), seeded from them and from 08\'s card; this pilot is still measured, at each '
+            'render, on K3\'s patterns. For each, a proposed id, '
             'the live record hypotheses that name it in words and those its Lean pattern matches, the dynamics that quote such a '
             'hypothesis, and how many of its witnesses the core run lists. A hypothesis is text, so a match is a candidate join, '
             f'not a reading of it. {_n(m["premise_hypotheses"])} of the {_n(m["hypotheses"])} live hypotheses match some premise, '

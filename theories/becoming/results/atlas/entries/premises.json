@@ -296,7 +296,9 @@
    "en": "decided where a law counts or names: the proposition the law counts or names by is decided (it holds or it fails), in Lean an instance of Decidable or DecidableEq in the law's binders (the modules Becoming.Decidedness and Becoming.Listing)"
   },
   "kind": "local hypothesis",
-  "lean": [],
+  "lean": [
+   "Becoming.Decided"
+  ],
   "holds_in": [
    "Becoming.Decided.exists_below"
   ],
