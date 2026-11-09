@@ -1029,7 +1029,7 @@ def crosswalk_zh_page(atlas: dict) -> str:
             + '，'.join(f'{zh} {n:,}' + (agreement if key == 'agreement' else '') for key, (zh, n) in relation.items()) + '。' + _no_relation_zh(entries, relation) + '只有一个目标所承载的才算作连接。', '',
             '**离中文文本最近的两个领域。**', '', *domains, '',
             f'**全部 {len(groups)} 组**，每组一页，都在英文页上：它以自己的话主张了什么，在现行的本论中成了什么，以及每一条的目标与地位。'
-            f'下表列出每一组的条数，按结局与按关系各计（组名为 AI 所译，有的有所缩短；[英文索引](CROSSWALK.md#the-groups)有这些计数，并把相合再分为与律、与论题或方法、与读法三种）：', '',
+            f'下表列出每一组的条数，按结局与按关系各计（组名为 AI 所译，有的有所缩短；[英文索引](CROSSWALK.md#the-groups)有这些计数，并把相合再分为与已检查之律、与论题或方法、与一种读法相合三种）：', '',
             *_groups_zh(groups, vocabulary), '']
     body = _finish(out)
     return body.replace('{{time}}', f'*约 {zh_fronts.settle(lambda t: zh_fronts.zh_time(body.replace("{{time}}", f"*约 {t}读完。*")))}读完。*')

@@ -83,7 +83,7 @@
 | 以广为愈（第六章之名；中文版专有） | 第六章与中华本称 C（扩大可形成者更好）为以广为愈；义即 C（见上），只有一义 | [第六章](theories/becoming/chapters/06-CLASSICAL-TEXTS.md#thesis)、[§7.3](theories/becoming/chapters/06-CLASSICAL-TEXTS.md#zhonghua) |
 | 不变之步（the step of invariance） | 延续条件在自我之预设以外的内容 | [第七章 §4](theories/becoming/chapters/07-SIGNIFICANCE.md#step) |
 | 存活之意义（living significance） | 该条件所给出的：活着延续者之意义，每一个活的主张从每一个立场都被计数 | [第七章 §3](theories/becoming/chapters/07-SIGNIFICANCE.md#living-significance) |
-| 生生（*shēngshēng*） | 生命之延续，生命广于生物学之义，人工智能亦在其中，其外延未定［AI 读法，D1］。T8 陈述本论之作者为生命所提供者：一种看法，看每一进程取用什么、取自何种更新、在何种粒度上，什么终结、什么继续，由谁承担；它不约束任何人。它既不是文法的 `«生生»`（无尽的复生），也不是第二章的生成本身（生成容许损失），也不是任何新的组织；生生不息是一个愿，不是一条律。读作扩大时，在一个进程的诸时刻上、在判定的前提之下，保持扩大是可能者的生成，且不失去其中任何一个［AI 读法，D45］；扩大不是生生的尺度 | [第七章 §2](theories/becoming/chapters/07-SIGNIFICANCE.md#order)，[第七章 §8](theories/becoming/chapters/07-SIGNIFICANCE.md#theses) |
+| 生生（*shēngshēng*） | 生命之延续，生命广于生物学之义，人工智能亦在其中，其外延未定［AI 读法，D1］。T8 陈述本论的制作者为生命所提供者：一种看法，看每一进程取用什么、取自何种更新、在何种粒度上，什么终结、什么继续，由谁承担；它不约束任何人。它既不是文法的 `«生生»`（无尽的复生），也不是第二章的生成本身（生成容许损失），也不是任何新的组织；生生不息是一个愿，不是一条律。读作扩大时，在一个进程的诸时刻上、在判定的前提之下，保持扩大是可能者的生成，且不失去其中任何一个［AI 读法，D45］；扩大不是生生的尺度 | [第七章 §2](theories/becoming/chapters/07-SIGNIFICANCE.md#order)，[第七章 §8](theories/becoming/chapters/07-SIGNIFICANCE.md#theses) |
 
 ## 方法
 
