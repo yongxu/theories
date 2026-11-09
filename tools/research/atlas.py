@@ -1017,9 +1017,9 @@ def crosswalk_zh_page(atlas: dict) -> str:
             domains.append(f'- **{name}**（{by[gid]["entries"]} 条，[英文页]({_href(group_path(by[gid]), ATLAS)})）：{note}。')
     out = [GENERATED, '', '# 对照表：早先的理论文件夹与各思想领域', '', zh_fronts.nav_line(CROSSWALK_ZH), '', '{{time}}', '',
            '*由 AI 依[英文的对照表](CROSSWALK.md)写成，尚无人审查它的记录；义以英文版为准。各组的条目在英文页上。*', '',
-           f'![早先的文件夹与各思想领域怎样与现行之论相接]({_href(OVERVIEW_ZH, ATLAS)})', '',
+           f'![早先的文件夹与各思想领域怎样与现行的本论相接]({_href(OVERVIEW_ZH, ATLAS)})', '',
            f'*由 connection_map.py 依同一份数据画出，图中文字为 AI 所译（[英文图]({_href(OVERVIEW, ATLAS)})）：每一条线把一个文件夹或领域连到它的主张所对照的本论那一部分，按关系着色；每一条线都是 AI 的读法，没有人的。*', '',
-           '**它是什么。** 每一个早先的理论文件夹与每一个思想领域：它以自己的话主张了什么，在现行之论中又成了什么。它是证据层，不是用来通读的。它不产生任何结果；'
+           '**它是什么。** 每一个早先的理论文件夹与每一个思想领域：它以自己的话主张了什么，在现行的本论中又成了什么。它是证据层，不是用来通读的。它不产生任何结果；'
            '每一条都是 AI 的读法，没有人的。共用一个词不是对应，结构上的相合不是意义上的相合，它也不代表任何传统发言。未承继是一种结局，不是缺陷。'
            '来源不存于此处时，所说的出自 AI 的知识，没有对照原文核对过。', '']
     if trust:
@@ -1028,8 +1028,8 @@ def crosswalk_zh_page(atlas: dict) -> str:
             + '，'.join(f'{ZH_CARRIED.get(k, k)} {n:,}' for k, n in carried.items()) + '。按关系：'
             + '，'.join(f'{zh} {n:,}' + (agreement if key == 'agreement' else '') for key, (zh, n) in relation.items()) + '。' + _no_relation_zh(entries, relation) + '只有一个目标所承载的才算作连接。', '',
             '**离中文文本最近的两个领域。**', '', *domains, '',
-            f'**全部 {len(groups)} 组**，每组一页，都在英文页上：它以自己的话主张了什么，现行之论中成了什么，以及每一条的目标与地位。'
-            f'下表列出每一组的条数，按结局与按关系各计（组名为 AI 所译；[英文索引](CROSSWALK.md)有同样的计数）：', '',
+            f'**全部 {len(groups)} 组**，每组一页，都在英文页上：它以自己的话主张了什么，在现行的本论中成了什么，以及每一条的目标与地位。'
+            f'下表列出每一组的条数，按结局与按关系各计（组名为 AI 所译，有的有所缩短；[英文索引](CROSSWALK.md#the-groups)有这些计数，并把相合再分为与律、与论题或方法、与读法三种）：', '',
             *_groups_zh(groups, vocabulary), '']
     body = _finish(out)
     return body.replace('{{time}}', f'*约 {zh_fronts.settle(lambda t: zh_fronts.zh_time(body.replace("{{time}}", f"*约 {t}读完。*")))}读完。*')

@@ -33,7 +33,7 @@
 
 ![八章及其彼此记录下的使用：圆按结果数定大小，实线计各章结果之间记为 formal-reuse 的使用，章与章之间的虚线与点线是别种依赖，诸模型共有的五条律列在各项地位之下，两种读法进入第七章，各在所用之处为假设，T1 到 T8 在其所属之处按检验结局着色](results/spine.zh.svg)
 
-*围绕文法的各章，由工具依[理论图](results/THEORY-GRAPH.md)画出：一条实线计一章的结果使用另一章结果、记为 formal-reuse 的次数，这一类留给已核验的推理，由 AI 写成的记录指定，没有任何检查对照 Lean 核对，章与章之间的虚线与点线是别种依赖；一条曲线是一种依赖，不是意义上的一致。117 项核心声明中，11 项推导而得，各为文法之律的一个情形，经由在 Lean 中作为等价核验的桥接与审阅所读的支持（某行载有它们之处）；1 项在一个所述的假设之下，6 项为计数，位于文法以下，99 项处于一个指明的距离，各有其理由（[08 §7](chapters/08-METHOD.md#r-one-root-to-its-edge)）。这幅图显示什么、不显示什么，见[其中一节](results/THEORY-GRAPH.zh.md#the-spine-what-it-shows-and-does-not-show)；诸模型共有的五条律（平衡是被表示而非被推出），见[其表](results/THEORY-GRAPH.zh.md#the-five-shared-laws)。*
+*围绕文法的各章，由工具依[理论图](results/THEORY-GRAPH.md)画出：一条实线计一章的结果使用另一章结果、记为 formal-reuse 的次数，这一类留给已核验的推理，由 AI 写成的记录指定，没有任何检查对照 Lean 核对，章与章之间的虚线与点线是别种依赖；一条曲线是一种依赖，不是意义上的一致。117 项核心声明中，11 项推导而得，各为文法之律的一个情形，经由在 Lean 中作为等价核验的桥接与审阅所读的支持（某行载有它们之处）；1 项在一个所述的假设之下，6 项为计数，位于文法以下，99 项处于一个指明的距离，各有其理由（[08 §7](chapters/08-METHOD.md#r-one-root-to-its-edge)）。这幅图显示什么、不显示什么，见理论图中的[那一节](results/THEORY-GRAPH.zh.md#the-spine-what-it-shows-and-does-not-show)；诸模型共有的五条律（平衡是被表示而非被推出），见[其表](results/THEORY-GRAPH.zh.md#the-five-shared-laws)。*
 
 每一项主张都带有一个地位（[标签](chapters/08-METHOD.md#standings-and-bases)）：
 
