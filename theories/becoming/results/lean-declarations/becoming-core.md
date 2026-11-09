@@ -11,15 +11,15 @@ On each part, theorems and lemmas are individually listed and definitions and ty
 
 ## Becoming pure core
 
-This group's 374 modules are listed on 6 parts of about equal size, the largest 792,080 bytes, under the size at which GitHub stops showing a Markdown file. Browser find on a part finds the names on that part only; the module table below says which part holds each module.
+This group's 375 modules are listed on 6 parts of about equal size, the largest 793,034 bytes, under the size at which GitHub stops showing a Markdown file. Browser find on a part finds the names on that part only; the module table below says which part holds each module.
 
 | Page | Modules, in the catalogue's order | theorem/lemma occurrences |
 |---|---|---:|
 | [Part 1 of 6](../lean-declarations/becoming-core-part-1.md) | 72, from GenerativeCore.lean to Decidedness.lean | 2,991 |
 | [Part 2 of 6](../lean-declarations/becoming-core-part-2.md) | 65, from Dependence.lean to HistoryIdeals.lean | 3,170 |
 | [Part 3 of 6](../lean-declarations/becoming-core-part-3.md) | 63, from HistoryIdealsTraces.lean to Loops.lean | 3,178 |
-| [Part 4 of 6](../lean-declarations/becoming-core-part-4.md) | 50, from LossMatching.lean to Ranking.lean | 3,130 |
-| [Part 5 of 6](../lean-declarations/becoming-core-part-5.md) | 59, from ReachableRanges.lean to SelectionLevels.lean | 3,042 |
+| [Part 4 of 6](../lean-declarations/becoming-core-part-4.md) | 50, from LossMatching.lean to Quantum.lean | 3,125 |
+| [Part 5 of 6](../lean-declarations/becoming-core-part-5.md) | 60, from Ranking.lean to SelectionLevels.lean | 3,094 |
 | [Part 6 of 6](../lean-declarations/becoming-core-part-6.md) | 65, from SelectionPace.lean to InquirySufficiency.lean | 2,970 |
 
 | Module | Page | theorem/lemma |
@@ -256,6 +256,7 @@ This group's 374 modules are listed on 6 parts of about equal size, the largest 
 | <a id="module-cfce0a952f3b"></a>[Parting.lean](../lean-declarations/becoming-core-part-4.md#module-cfce0a952f3b) | part 4 | 42 |
 | <a id="module-d0eea37890b9"></a>[PatternPassing.lean](../lean-declarations/becoming-core-part-4.md#module-d0eea37890b9) | part 4 | 33 |
 | <a id="module-d452c7cb8398"></a>[Persistence.lean](../lean-declarations/becoming-core-part-4.md#module-d452c7cb8398) | part 4 | 86 |
+| <a id="module-bb253a899bbd"></a>[PersistingChoices.lean](../lean-declarations/becoming-core-part-4.md#module-bb253a899bbd) | part 4 | 47 |
 | <a id="module-034ebac54637"></a>[PoolCourse.lean](../lean-declarations/becoming-core-part-4.md#module-034ebac54637) | part 4 | 17 |
 | <a id="module-618dbf62e7d3"></a>[PoolResponse.lean](../lean-declarations/becoming-core-part-4.md#module-618dbf62e7d3) | part 4 | 18 |
 | <a id="module-df2e497ed5db"></a>[PooledEnvelopes.lean](../lean-declarations/becoming-core-part-4.md#module-df2e497ed5db) | part 4 | 44 |
@@ -273,7 +274,7 @@ This group's 374 modules are listed on 6 parts of about equal size, the largest 
 | <a id="module-b54c1e7958f2"></a>[Propagation.lean](../lean-declarations/becoming-core-part-4.md#module-b54c1e7958f2) | part 4 | 73 |
 | <a id="module-bad5c43d98a0"></a>[PropositionIdentity.lean](../lean-declarations/becoming-core-part-4.md#module-bad5c43d98a0) | part 4 | 12 |
 | <a id="module-ba93c076fc78"></a>[Quantum.lean](../lean-declarations/becoming-core-part-4.md#module-ba93c076fc78) | part 4 | 35 |
-| <a id="module-fbc6f2c56a91"></a>[Ranking.lean](../lean-declarations/becoming-core-part-4.md#module-fbc6f2c56a91) | part 4 | 52 |
+| <a id="module-fbc6f2c56a91"></a>[Ranking.lean](../lean-declarations/becoming-core-part-5.md#module-fbc6f2c56a91) | part 5 | 52 |
 | <a id="module-2ede4c2bfdff"></a>[ReachableRanges.lean](../lean-declarations/becoming-core-part-5.md#module-2ede4c2bfdff) | part 5 | 135 |
 | <a id="module-7feb5981d198"></a>[ReachedCascade.lean](../lean-declarations/becoming-core-part-5.md#module-7feb5981d198) | part 5 | 8 |
 | <a id="module-ecee224bb970"></a>[ReadInTime.lean](../lean-declarations/becoming-core-part-5.md#module-ecee224bb970) | part 5 | 34 |

@@ -385,6 +385,7 @@ import Becoming.PremisesTogether
 import Becoming.GrammarPath
 import Becoming.RoutesToC
 import Becoming.FlowCenters
+import Becoming.PersistingChoices
 import Becoming.SignificanceStatements
 
 /-!
@@ -4729,6 +4730,23 @@ tagged instance or application.
   (only the dweller returns; the supplied clearer and it part), `Clearing.clearer_beyond_returning_feeding`,
   `Drawing.returning_feeding_apart`, `Unexchanged.apart`. Which relation and which reading of the standpoints
   stay choices. A leaf; short compositions, none new as mathematics.
+* `Becoming.PersistingChoices` (L2, through `Becoming.Weightings` and `Becoming.MutualDependence`): what
+  persisting shows of an order (board item ZA). Mutual dependence gives the
+  continuation condition held de se along being affected and along affecting, each exactly mutual dependence
+  where every formation is a center (`Flow.unrestricted_of_mutuallyDependent`,
+  `Flow.mutuallyDependent_iff_unrestricted`). Some strict order accords with choices and makes required
+  comparisons exactly where the shown relation with them added has no cycle
+  (`ChoiceOccasions.accorded_containing_iff`); where the choices come from some strict order and no choice
+  ends, some puts keeping above ending (`ChoiceOccasions.keeping_above_ending`). On the World a line persisting through
+  arbitrarily late cohorts never overdrew the gated family it depends on from a short stock
+  (`Flow.persists_never_overdraws`), so where an ending choice is realized as such an overdraw, the choices
+  come from some strict order, they are consistent with keeping above ending
+  (`Flow.persisting_keeping_above_ending`), and where only ending is at stake on the occasions met, with an
+  order increasing in its own continuation on those occasions (`Flow.persisting_consistent_with_selfConcern`); a course never met that widens another and adds to the own
+  continuation is ranked below it by some such order (`ChoiceOccasions.reversed_off_met`); and in one witness a persisting line whose choice accords
+  with a strict order, never ending, is consistent with no strict order increasing in its own continuation on
+  the occasion met (`PersistingChoices.Forgoing.persists_not_selfConcerned`). A leaf; short laws, none new as
+  mathematics.
 * `Becoming.GrammarPath` (L1): what a line under a class must hold, and what a regularity takes in
   (board item PF), for every carrier, relation and class. Where a region is left under a class only
   into a set, a line under the class from inside to outside holds a member of that set alike to its

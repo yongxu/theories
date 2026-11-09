@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 374 | 18,481 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 375 | 18,528 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 18 | 1,054 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -661,6 +661,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [PeriodWindowPeriodicity.lean](lean-declarations/inquiry.md#module-bc23878b6dca) | Attainable inquiry, contact and process laws |
 | [PeriodWindowPruning.lean](lean-declarations/inquiry.md#module-7792c30d5fe3) | Attainable inquiry, contact and process laws |
 | [Persistence.lean](lean-declarations/becoming-core-part-4.md#module-d452c7cb8398) | Becoming pure core |
+| [PersistingChoices.lean](lean-declarations/becoming-core-part-4.md#module-bb253a899bbd) | Becoming pure core |
 | [PhaseCycleDerivation.lean](lean-declarations/inquiry.md#module-3fd985dc0b59) | Attainable inquiry, contact and process laws |
 | [PhasePeriodSelection.lean](lean-declarations/inquiry.md#module-96e1d00a32d0) | Attainable inquiry, contact and process laws |
 | [PhasePeriodUniversal.lean](lean-declarations/inquiry.md#module-669a6ea433f9) | Attainable inquiry, contact and process laws |
@@ -724,7 +725,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [PurposeCorrection.lean](lean-declarations/concern.md#module-51689dfd2a2c) | Concern and shared activity |
 | [PurposeCorrectionHistory.lean](lean-declarations/concern.md#module-41ff61a5ae5b) | Concern and shared activity |
 | [Quantum.lean](lean-declarations/becoming-core-part-4.md#module-ba93c076fc78) | Becoming pure core |
-| [Ranking.lean](lean-declarations/becoming-core-part-4.md#module-fbc6f2c56a91) | Becoming pure core |
+| [Ranking.lean](lean-declarations/becoming-core-part-5.md#module-fbc6f2c56a91) | Becoming pure core |
 | [ReachableRanges.lean](lean-declarations/becoming-core-part-5.md#module-2ede4c2bfdff) | Becoming pure core |
 | [ReachedCascade.lean](lean-declarations/becoming-core-part-5.md#module-7feb5981d198) | Becoming pure core |
 | [ReachedInquiryComposition.lean](lean-declarations/inquiry.md#module-c8393ae20838) | Attainable inquiry, contact and process laws |

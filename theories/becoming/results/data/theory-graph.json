@@ -3597,6 +3597,18 @@
    "page": "theories/becoming/results/records/mutual-dependence-and-its-pace.md"
   },
   {
+   "id": "record:mutual-dependence-gives-the-condition-de-se",
+   "type": "result",
+   "record": "mutual-dependence-gives-the-condition-de-se",
+   "title": "Mutual dependence gives the condition held de se",
+   "title_zh": "相互依赖给出自持之延续条件",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/mutual-dependence-gives-the-condition-de-se.md"
+  },
+  {
    "id": "record:naming-attention-coverage",
    "type": "result",
    "record": "naming-attention-coverage",
@@ -6355,6 +6367,18 @@
    "region": "significance",
    "base": "grammar",
    "page": "theories/becoming/results/records/what-leaves-a-class-follows-its-line.md"
+  },
+  {
+   "id": "record:what-persisting-shows-of-an-order",
+   "type": "result",
+   "record": "what-persisting-shows-of-an-order",
+   "title": "What persisting shows of an order",
+   "title_zh": "存续所示之序",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/what-persisting-shows-of-an-order.md"
   },
   {
    "id": "record:what-pooled-coupling-reaches",
@@ -11052,6 +11076,17 @@
    "name": "Becoming.FlowCenters",
    "level": "L2",
    "theorems": 33,
+   "region": "significance",
+   "base": "old-base",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.PersistingChoices",
+   "type": "module",
+   "name": "Becoming.PersistingChoices",
+   "level": "L2",
+   "theorems": 47,
    "region": "significance",
    "base": "old-base",
    "on_grammar": true,
@@ -31213,6 +31248,18 @@
    "anchor": "r-covering-by-the-returning-formations"
   },
   {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-mutual-dependence-gives-the-condition-de-se",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-mutual-dependence-gives-the-condition-de-se"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-persisting-shows-of-an-order",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-what-persisting-shows-of-an-order"
+  },
+  {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-ranking-under-readings",
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -34382,6 +34429,21 @@
   {
    "from": "module:Becoming.Persistence",
    "to": "module:Becoming.Witnesses",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PersistingChoices",
+   "to": "module:Becoming.MutualDependence",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PersistingChoices",
+   "to": "module:Becoming.ShownOrder",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PersistingChoices",
+   "to": "module:Becoming.Weightings",
    "type": "imports"
   },
   {
@@ -48351,6 +48413,31 @@
    "interface": true
   },
   {
+   "from": "record:mutual-dependence-gives-the-condition-de-se",
+   "to": "module:Becoming.PersistingChoices",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:mutual-dependence-gives-the-condition-de-se",
+   "to": "record:mutual-dependence-and-its-pace",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:mutual-dependence-gives-the-condition-de-se",
+   "to": "record:self-concern-through-dependence",
+   "type": "related"
+  },
+  {
+   "from": "record:mutual-dependence-gives-the-condition-de-se",
+   "to": "record:what-persisting-shows-of-an-order",
+   "type": "related"
+  },
+  {
+   "from": "record:mutual-dependence-gives-the-condition-de-se",
+   "to": "record:what-the-step-across-standpoints-reaches",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:naming-attention-coverage",
    "to": "record:encounter-selection-and-revision",
    "type": "interpretive"
@@ -59061,6 +59148,31 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:what-persisting-shows-of-an-order",
+   "to": "module:Becoming.PersistingChoices",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:what-persisting-shows-of-an-order",
+   "to": "record:mutual-dependence-gives-the-condition-de-se",
+   "type": "related"
+  },
+  {
+   "from": "record:what-persisting-shows-of-an-order",
+   "to": "record:what-choices-show-of-an-order",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-persisting-shows-of-an-order",
+   "to": "record:what-self-concern-alone-ranks",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:what-persisting-shows-of-an-order",
+   "to": "record:what-training-installs",
+   "type": "related"
+  },
+  {
    "from": "record:what-pooled-coupling-reaches",
    "to": "module:Becoming.Clearing",
    "type": "proved-in"
@@ -63695,6 +63807,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-mutual-dependence-gives-the-condition-de-se",
+   "to": "record:mutual-dependence-gives-the-condition-de-se",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-need-and-feeding-read-with-time",
    "to": "record:need-and-feeding-read-with-time",
    "type": "states"
@@ -63887,6 +64004,11 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-leaves-a-class-follows-its-line",
    "to": "record:what-leaves-a-class-follows-its-line",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-persisting-shows-of-an-order",
+   "to": "record:what-persisting-shows-of-an-order",
    "type": "states"
   },
   {
