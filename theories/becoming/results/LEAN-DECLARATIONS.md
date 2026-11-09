@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 376 | 18,561 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 377 | 18,628 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 18 | 1,054 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -465,7 +465,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [Histories.lean](lean-declarations/becoming-core-part-2.md#module-41f2b00bb90e) | Becoming pure core |
 | [HistoryIdeals.lean](lean-declarations/becoming-core-part-2.md#module-53b317abd0cf) | Becoming pure core |
 | [HistoryIdeals.lean](lean-declarations/abstraction.md#module-81928aacbe61) | Abstraction, applicability and constitution |
-| [HistoryIdealsTraces.lean](lean-declarations/becoming-core-part-3.md#module-7efc10e14cbe) | Becoming pure core |
+| [HistoryIdealsTraces.lean](lean-declarations/becoming-core-part-2.md#module-7efc10e14cbe) | Becoming pure core |
 | [HistoryLanguages.lean](lean-declarations/becoming-core-part-3.md#module-9e9246f66d1f) | Becoming pure core |
 | [HistoryRealization.lean](lean-declarations/core.md#module-a7d9b0de6d97) | Generative core and relational structure |
 | [HistorySums.lean](lean-declarations/becoming-core-part-3.md#module-de8b7fa464e2) | Becoming pure core |
@@ -632,6 +632,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [OrganizedScaleLoop.lean](lean-declarations/learning.md#module-fa24e61409c5) | Learning, prediction and dynamics |
 | [OutcomeContinuation.lean](lean-declarations/core.md#module-c48ee824a0b3) | Generative core and relational structure |
 | [OverExchange.lean](lean-declarations/becoming-core-part-4.md#module-958bcd7f9971) | Becoming pure core |
+| [OwnClass.lean](lean-declarations/becoming-core-part-4.md#module-ba36a94fd1ca) | Becoming pure core |
 | [OwnWidening.lean](lean-declarations/becoming-core-part-4.md#module-4cd46e389136) | Becoming pure core |
 | [Pace.lean](lean-declarations/becoming-core-part-4.md#module-f1acf0f3e260) | Becoming pure core |
 | [PacketLawDerivation.lean](lean-declarations/inquiry.md#module-db5cafd783d9) | Attainable inquiry, contact and process laws |
