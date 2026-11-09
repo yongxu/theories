@@ -10,7 +10,7 @@
 <a id="laws--规律"></a>
 ## Laws
 
-1. Mutual dependence gives the condition held de se along being affected, what can affect a center's continuation at some remove (by the definition of mutual dependence), and along affecting, what it can affect at some remove (through mutual dependence read forward), for every assignment of centers. (`Becoming.Flow.unrestricted_of_mutuallyDependent`)
+1. Mutual dependence gives the condition held de se along being affected, what can affect a center's continuation at some remove (the bounded law of mutual dependence, its significance this one by definition), and along affecting, what it can affect at some remove (through mutual dependence read forward), for every assignment of centers. (`Becoming.Flow.unrestricted_of_mutuallyDependent`)
    - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 2. Where every formation is some standpoint's center, the condition held de se along being affected holds exactly where the flow is mutually dependent, and likewise along affecting. (`Becoming.Flow.mutuallyDependent_iff_unrestricted`)
    - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
@@ -37,7 +37,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Pure core, every axiom report empty; a leaf importing Weightings, MutualDependence, ShownOrder and GrammarPath, checked by the core run named in the references. Written by an AI and checked against the Lean by its author; no person's review recorded. Short laws, none new as mathematics. A composition of two landed laws, near-definitional.
+Pure core, every axiom report empty; a leaf importing Weightings, MutualDependence and ShownOrder, checked by the core run named in the references. Written by an AI and checked against the Lean by its author; no person's review recorded. Short laws, none new as mathematics. A composition of two landed laws, near-definitional.
 
 Canonical source: [PersistingChoices.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean)
 
@@ -56,7 +56,7 @@ AI reading: read with 07 §4.3, under mutual dependence every center's closure i
 <a id="dependencies--依赖"></a>
 ### Dependencies
 
-- **formal-reuse**: [mutual-dependence-and-its-pace](mutual-dependence-and-its-pace.md). Mutual dependence and its reading forward (Flow.MutuallyDependent, Flow.mutuallyDependent_iff_reach), and the clearer's world not mutually dependent (Clearing.shares_not_mutual).
+- **formal-reuse**: [mutual-dependence-and-its-pace](mutual-dependence-and-its-pace.md). Mutual dependence, its bounded law and its reading forward (Flow.MutuallyDependent, Flow.MutuallyDependent.unrestricted, Flow.mutuallyDependent_iff_reach), and the clearer's world not mutually dependent (Clearing.shares_not_mutual).
 - **formal-reuse**: [what-the-step-across-standpoints-reaches](what-the-step-across-standpoints-reaches.md). The own-closure reading held de se and the condition where every center's closure is the whole (selfAscribed, ownClosure, ownClosure_unrestricted_iff, ownClosure_unrestricted_of_whole).
 - related, not a proved adapter: [self-concern-through-dependence](self-concern-through-dependence.md). Self-concern held de se along dependence is one from every center's standpoint where the centers lie within one another's closures; here every closure is the whole.
 - related, not a proved adapter: [what-persisting-shows-of-an-order](what-persisting-shows-of-an-order.md). The same landing: what persisting shows of an order.
@@ -67,7 +67,7 @@ AI reading: read with 07 §4.3, under mutual dependence every center's closure i
 | Role | Source | Declarations |
 |---|---|---|
 | proof | [PersistingChoices.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean) | `Becoming.Clearing.not_unrestricted_ownClosure`, `Becoming.Flow.mutuallyDependent_iff_unrestricted`, `Becoming.Flow.unrestricted_of_mutuallyDependent` |
-| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T110024.252629Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T120030.596088Z/verification.json) | — |
 | statement | [07-SIGNIFICANCE.md](../../chapters/07-SIGNIFICANCE.md) | — |
 | integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/za-concern-formed/NOTE.md) | — |
 
@@ -80,4 +80,4 @@ Aliases: `mutual dependence gives the condition de se`, `相互依赖给出自�
 
 </details>
 
-Documentary review UTC: `2026-11-09T11:08:14+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T12:01:29+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
