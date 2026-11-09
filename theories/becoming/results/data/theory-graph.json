@@ -3604,8 +3604,8 @@
    "title_zh": "相互依赖给出自持之延续条件",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "unassigned",
-   "base": "",
+   "region": "significance",
+   "base": "old-base",
    "page": "theories/becoming/results/records/mutual-dependence-gives-the-condition-de-se.md"
   },
   {
@@ -6376,8 +6376,8 @@
    "title_zh": "存续所示之序",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "unassigned",
-   "base": "",
+   "region": "significance",
+   "base": "old-base",
    "page": "theories/becoming/results/records/what-persisting-shows-of-an-order.md"
   },
   {
@@ -11087,8 +11087,8 @@
    "name": "Becoming.PersistingChoices",
    "level": "L2",
    "theorems": 47,
-   "region": "unassigned",
-   "base": "",
+   "region": "significance",
+   "base": "old-base",
    "on_grammar": true,
    "reaches_grammar": true
   },

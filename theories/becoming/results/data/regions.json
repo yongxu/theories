@@ -2690,6 +2690,16 @@
    "region": "significance",
    "base": "old-base",
    "note": "FlowCenters ZA-G1: covering by the formations whose acts return on finite flows; the condition along being affected at them (07 §4.8)"
+  },
+  "mutual-dependence-gives-the-condition-de-se": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "PersistingChoices ZA: mutual dependence gives the condition held de se along being affected and along affecting (07 §4.9)"
+  },
+  "what-persisting-shows-of-an-order": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "PersistingChoices ZA: a persisting line's choices are consistent with keeping above ending, and with self-concern where only ending was at stake; consistent with, not had (07 §4.9)"
   }
  },
  "modules": {
@@ -4637,6 +4647,11 @@
    "region": "significance",
    "base": "old-base",
    "note": "the standpoints and the relation of the own-closure reading read off a flow (route (b), ZA-G1)"
+  },
+  "Becoming.PersistingChoices": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "what persisting shows of an order: the condition de se under mutual dependence, survivorship on the World, choices consistent with self-concern on the occasions met (route (b), ZA)"
   }
  }
 }
