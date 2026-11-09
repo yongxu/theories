@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-11-09T15:41:38+00:00",
+  "reviewed_at_utc": "2026-11-09T15:44:53+00:00",
   "statement": {
     "en": "A line's persistence tells readings apart only by what their acts do within its coupling closure. In a witness where nothing comes back a line clearing a dweller's habitat persists as a sparing one does and an overdrawing one ends; where the dweller renews the source, the clearing line ends with it.",
     "zh": "系之存续只以诸读法之举在其耦合闭包内所为分之。见证中，无所返处，清栖者之栖地之系与留之系同存续，透支之系终；栖者续此系之源处，清之系与之同终。"
@@ -162,6 +162,15 @@
       "en": "That actual lineages, institutions or trained systems act by readings so carried.",
       "zh": "实际之谱系、制度或训练之系统依如此所携之读法而行。",
       "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean",
+      "detail": {
+        "en": "Against the reading that persistence selects the wider reading: where nothing comes back from the dweller, the line reading its source clears the habitat and persists as the line reading everything does, and the law holds there with every premise met (Habitat.beyond_which_persist, Habitat.beyond_standing_unselected).",
+        "zh": "反对存续择较宽读法之读法：栖者无所返处，读其源之系清栖地而存续，如读一切之系然，且此律于此成立、诸前提皆满足（Habitat.beyond_which_persist、Habitat.beyond_standing_unselected）。"
+      }
     }
   ],
   "standard_boundaries": [
@@ -348,7 +357,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "3a6bf8061111846fd13129e03de5f776570141e3f8afba9ca854717667117a72"
+      "sha256": "3527ae9c5e501a0512dd3a5ff7145fdfd92aad0908510175bfb6f21738568be1"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",

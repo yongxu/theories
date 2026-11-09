@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-11-09T15:41:38+00:00",
+  "reviewed_at_utc": "2026-11-09T15:44:53+00:00",
   "statement": {
     "en": "With the pool read off the course, a selection can remove its own readers: read off the pool its course gives, selection by persistence is never turned by removal, while read off a fixed pool it is; a reader whose coupling closure the alternatives agree on is kept alike.",
     "zh": "池读自其程时，一选择可移除自身之读者：读自其程所给之池，以存续之选择从不为移除所转，读自定池则为所转；诸选项于其耦合闭包皆一致之读者两程无别。"
@@ -96,6 +96,15 @@
       "en": "A reading in time, before a loss passes its point of no return.",
       "zh": "及时之读，于失去过其不可返之点之前。",
       "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean",
+      "detail": {
+        "en": "Against the reading that selection by persistence turns against a course removing its readers: read off the pool the course gives it holds at the course clearing the habitat, which removes the dweller's line; only read off a fixed pool does it fail there (Habitat.cleared_removes_its_readers).",
+        "zh": "反对以存续之选择转而反对移除其读者之程之读法：读自程所给之池，它于清栖地之程成立，而此程移去栖者之系；唯读自定池时于此不成立（Habitat.cleared_removes_its_readers）。"
+      }
     }
   ],
   "standard_boundaries": [
@@ -221,7 +230,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "3a6bf8061111846fd13129e03de5f776570141e3f8afba9ca854717667117a72"
+      "sha256": "3527ae9c5e501a0512dd3a5ff7145fdfd92aad0908510175bfb6f21738568be1"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",

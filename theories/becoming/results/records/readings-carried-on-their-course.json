@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-11-09T15:41:38+00:00",
+  "reviewed_at_utc": "2026-11-09T15:44:53+00:00",
   "statement": {
     "en": "A world whose relata act by the readings they carry is the course those acts generate; the line read off it is descended by construction and carries its founders' inherited reading, and an ending pick is realized as an overdraw where every occasion picks that reading.",
     "zh": "诸关系项依其所携读法而行之世界即此诸行为所生之程；读自其上之系由构造相传、携其始祖所传之读法；每一场合皆择此读法处，终止之择实现为透支。"
@@ -123,6 +123,7 @@
       "witness": "Becoming.Flow.LineReachesBefore.reachesBefore"
     }
   ],
+  "counterexamples": [],
   "standard_boundaries": [
     "no-ethical-premise",
     "names-provisional",
@@ -272,7 +273,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "3a6bf8061111846fd13129e03de5f776570141e3f8afba9ca854717667117a72"
+      "sha256": "3527ae9c5e501a0512dd3a5ff7145fdfd92aad0908510175bfb6f21738568be1"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",

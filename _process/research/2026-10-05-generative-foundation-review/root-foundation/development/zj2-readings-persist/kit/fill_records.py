@@ -164,6 +164,7 @@ def record_carried(ts):
                  "以不计时之部分于步前之及，给出系之有时日之及：提升只一向。"),
              "kind": "converse", "witness": B("Flow.LineReachesBefore.reachesBefore")},
         ],
+        "counterexamples": [],
         "standard_boundaries": COMMON_BOUNDS,
         "validation_scope": T(
             "Pure core, axiom report empty; a leaf. Every law is near-definitional; the witness's courses are finite "
@@ -302,6 +303,9 @@ def record_persist(ts):
                  "实际之谱系、制度或训练之系统依如此所携之读法而行。"),
              "kind": "correspondence"},
         ],
+        "counterexamples": [{"path": MODULE, "detail": T(
+            "Against the reading that persistence selects the wider reading: where nothing comes back from the dweller, the line reading its source clears the habitat and persists as the line reading everything does, and the law holds there with every premise met (Habitat.beyond_which_persist, Habitat.beyond_standing_unselected).",
+            "反对存续择较宽读法之读法：栖者无所返处，读其源之系清栖地而存续，如读一切之系然，且此律于此成立、诸前提皆满足（Habitat.beyond_which_persist、Habitat.beyond_standing_unselected）。")}],
         "standard_boundaries": COMMON_BOUNDS,
         "validation_scope": T(
             "Pure core, axiom report empty; a leaf. The law is act_courses_unselected_throughout with standing late as the "
@@ -415,6 +419,9 @@ def record_removing(ts):
             {**T("A reading in time, before a loss passes its point of no return.", "及时之读，于失去过其不可返之点之前。"),
              "kind": "scope"},
         ],
+        "counterexamples": [{"path": MODULE, "detail": T(
+            "Against the reading that selection by persistence turns against a course removing its readers: read off the pool the course gives it holds at the course clearing the habitat, which removes the dweller's line; only read off a fixed pool does it fail there (Habitat.cleared_removes_its_readers).",
+            "反对以存续之选择转而反对移除其读者之程之读法：读自程所给之池，它于清栖地之程成立，而此程移去栖者之系；唯读自定池时于此不成立（Habitat.cleared_removes_its_readers）。")}],
         "standard_boundaries": COMMON_BOUNDS,
         "validation_scope": T(
             "Pure core, axiom report empty; a leaf. The laws are near-definitional; the reader kept alike is "

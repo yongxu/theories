@@ -2725,6 +2725,21 @@
    "region": "significance",
    "base": "old-base",
    "note": "OwnClass ZC: the class of a formation's coupling closure on a flow; the reach exactly where acts return, the line its loop (07 §4.10)"
+  },
+  "readings-carried-on-their-course": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "ReadingsPersist J2: lines carrying inherited readings on the course their acts generate; the line read off the course, G3's realization by construction, reach before a step lifted to lines (07 §4.12)"
+  },
+  "which-readings-persist": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "ReadingsPersist J2: persistence selects no reading beyond the line's coupling closure; witnesses where nothing comes back and where the dweller renews the source (07 §4.12)"
+  },
+  "a-selection-removing-its-readers": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "ReadingsPersist J2: the pool read off the course; selection by persistence not turned by removal, a reader out of reach kept (07 §4.12)"
   }
  },
  "modules": {
@@ -4687,6 +4702,11 @@
    "region": "significance",
    "base": "grammar",
    "note": "a center's own class under P2 and P4 (后类最细), and read on a flow (route (b), ZC)"
+  },
+  "Becoming.ReadingsPersist": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "which readings persist: lines carrying inherited readings, the pool read off the course, a selection removing its own readers (route (b), J2)"
   }
  }
 }
