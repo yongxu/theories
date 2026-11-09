@@ -29,14 +29,16 @@ module answers it for the classes meeting P2 and P4, and reads the class on a fl
   (`«本类常闭则含后类»`), with no premise that `m` conditions anything, and wherever some class meets
   P2 and P4 at `m`, it does too (`«后类本类常闭»`); so it is the least such class (`«后类最细»`). It
   holds `m`'s effects with no premise, and meets P2 wherever it is decided, of each occurrence downstream
-  of `m`, whether it conditions something (`«判则后类本类常闭»`).
+  of `m`, whether it conditions something (`«判则后类本类常闭»`), and with no decision wherever everything
+  within `m`'s closure has `m` within its own, as at an element whose closure returns to it
+  (`«返则后类本类常闭»`).
 * **Every class meeting P2 and P4 reaches what the one reaches (本类常闭则所及即一之所及).** From a
   member, a line under any class meeting P2 and P4 there reaches exactly what a line under the one
   reaches: the member and everything downstream of it (`«本类常闭则所及即一之所及»`). Given P2, P4 is
   equivalent to that (`«本类常则闭当且仅当所及即一之所及»`). With each center under a class of its own
   meeting P2 and P4 at it, the per-center condition along the net is the condition at the one
-  (`«各本类常闭则续无外即一之续无外»`), so along a net with no cycle it holds only with one center
-  (`«各本类常闭续无外则同一中心»`).
+  (`«各本类常闭则续无外即一之续无外»`), so along a net with no cycle it holds only where every center is
+  one and the same occurrence (`«各本类常闭续无外则同一中心»`).
 * **P2 alone fixes only the moment (静之本类至终有常).** The identity meets P2 at every occurrence
   (`«静之本类至终有常»`) and fails P4 wherever the occurrence conditions something other than itself
   (`«静不闭»`). P2 alone is not closed under meets: in `MeetBreaks`, two classes meet P2 at a member
@@ -222,6 +224,33 @@ theorem «判则后类本类常闭» {R : «际» α} {m : α}
     (fun u v mu step => «后类之本».mpr («所闭之闭» R m u v («后类之本».mp mu) step))
     (fun u mu => decided u («后类之本».mp mu))
 
+/-- The first step of a path. -/
+theorem «及之首步» {R : «际» α} {x y : α} (down : «及» R x y) : ∃ w, R x w :=
+  match down with
+  | .one s => ⟨_, s⟩
+  | .more s _ => ⟨_, s⟩
+
+/-- **At a member whose closure returns to it, the member's class of what follows it meets P2 and P4
+(返则后类本类常闭).** Where everything within `m`'s closure under the net has `m` within its own, no decision
+is needed: an occurrence alike to `m` other than `m` reaches `m`, so conditions something, and `m` conditions
+something wherever anything alike to it does. -/
+theorem «返则后类本类常闭» {R : «际» α} {m : α} (returns : ∀ x, «所闭» R m x → «所闭» R x m) :
+    «本类至终有常» R («后类» R m) m ∧ «所缘同于» R («后类» R m) m :=
+  ⟨fun u u' mu mu' v step =>
+     have inU : «所闭» R m u := «后类之本».mp mu
+     have inU' : «所闭» R m u' := «后类之本».mp mu'
+     have inV : «所闭» R m v := «所闭之闭» R m u v inU step
+     have goes' : ∃ w, R u' w := match «所闭当且仅当同一或及».mp (returns u' inU') with
+       | .inr down => «及之首步» down
+       | .inl e => by
+         subst e
+         exact match «所闭当且仅当同一或及».mp inU with
+           | .inl e' => by subst e'; exact ⟨v, step⟩
+           | .inr down => «及之首步» down
+     match goes' with
+     | ⟨w, hw⟩ => .inl ⟨w, hw, .inr ⟨inV, «所闭之闭» R m u' w inU' hw⟩⟩,
+   fun _ step => «后类之本».mpr («及之所闭» _ _ (.one step))⟩
+
 /-- **The least class meeting P2 and P4 at a member (后类最细).** Wherever some class meets them at
 `m`, `«后类» R m` meets them, and every class that meets them contains it. -/
 theorem «后类最细» {R : «际» α} {m : α}
@@ -268,7 +297,8 @@ theorem «各本类常闭则续无外即一之续无外» {Pos : Type} {R : «�
   ⟨fun all p x => («本类常闭则所及即一之所及» (each p) (atClass p) (held p) x).mp (all p x),
    fun none p x => («本类常闭则所及即一之所及» (each p) (atClass p) (held p) x).mpr (none p x)⟩
 
-/-- **And along a net with no cycle it holds only with one center (各本类常闭续无外则同一中心).** -/
+/-- **And along a net with no cycle it holds only where every center is one and the same occurrence
+(各本类常闭续无外则同一中心).** -/
 theorem «各本类常闭续无外则同一中心» {Pos : Type} {R : «际» α} {E : Pos → «际» α}
     {center : Pos → α} (acyclic : «无环» R) (each : ∀ p, «类» (E p))
     (atClass : ∀ p, «本类至终有常» R (E p) (center p)) (held : ∀ p, «所缘同于» R (E p) (center p))
