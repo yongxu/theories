@@ -116,8 +116,8 @@ theorem returning_downstream_iff_mutuallyDependent (some : ∃ c, L.ReachReturns
 
 /-! ## (b) The bound at those standpoints -/
 
-/-- **Beyond a returning standpoint's coupling closure.** What lies beyond the coupling closure of a
-formation whose acts return has no significance from it, held de se along affecting at the
+/-- **Beyond a returning standpoint's coupling closure.** For any coupling by level, what lies beyond
+the coupling closure of a formation whose acts return has no significance from it, held de se along affecting at the
 returning formations, and the significance is a rival: `Flow.reachReturns_ownClosure_rival` at the
 standpoints a flow gives. -/
 theorem returning_beyond_coupling (obs : F → C → Prop) (c : L.Returning W) {h : F}

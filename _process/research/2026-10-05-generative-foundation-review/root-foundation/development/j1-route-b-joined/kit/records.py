@@ -96,10 +96,10 @@ LAWS = [
     ({"en": "A joint witness: two formations standing in turn, each taking its own standing and giving the other its "
             "standing. The flow balances and is mutually dependent, so every formation returns and the scope's "
             "condition holds; a line of descent persists through the two and never overdraws; the web's levels are "
-            "never listed; its chooser keeps, consistent with keeping above ending and self-concern "
+            "never listed; a supplied chooser keeps, consistent with keeping above ending and self-concern "
             "on the occasion met.",
       "zh": "合见之例：二形成轮流而立，各取己之所立并予他者以其所立。流平衡且相互依赖，故每一形成皆回返，范围之条件成立；一传承之系经此二者而存续，从不过取；"
-            "其水平从不被列；择于存与终者择存，合于存居终上，并合于所遇之时之自我关切。"},
+            "网之水平从不被列；所给之择者择存，合于存居终上，并合于所遇之时之自我关切。"},
      {FTD: [f"{ALT}.stands", f"{ALT}.unit", f"{ALT}.flow", f"{ALT}.web", f"{ALT}.generations", f"{ALT}.balances",
             f"{ALT}.acting", f"{ALT}.dependent", f"{ALT}.descended", f"{ALT}.member_stands", f"{ALT}.recurs", f"{ALT}.persists", f"{ALT}.gated",
             f"{ALT}.coupled", f"{ALT}.mutuallyDependent", f"{ALT}.returns", f"{ALT}.choices", f"{ALT}.noCycle",

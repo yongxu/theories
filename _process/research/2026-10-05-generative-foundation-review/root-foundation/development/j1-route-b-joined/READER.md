@@ -124,3 +124,70 @@ Abbreviations: LB = `experiments/integrated-correction/general-framework/generat
 - **L8** taken: "given one" in the summary.
 - **L9** taken: the summary's bound line now describes §4.12's bound (near-definitional; with a listing and decided reach, nothing beyond the returning formations pooled).
 - **L10** taken: "on this reading" in 07 and the docstring; "cannot fail on any model" replaced by "an equivalence or a short composition of imported laws".
+
+## Round 2 (9 November 2026), the same reader on the diff
+
+## Cold read 2: J1, route (b) joined, the fixes to round 1
+
+AI-written, Fable 5.1 (claude-fable-5-1), 9 November 2026. Read only; nothing built or run. Scope: `git diff f671d08bf` in the worktree (f671d08bf is HEAD, so this is the uncommitted working tree) over LB/FromTheDynamics.lean, 07 §4.12, the record, the NOTE and the kit's records.py, plus READER.md's disposition list. Same abbreviations as round 1.
+
+### Counts
+
+- High: 0.
+- Medium: 0.
+- Low: 4 (three residuals of round-1 fixes not carried into every file, one wording).
+
+### Round-1 findings, one by one
+
+- **M1 (ends := False, the World adds nothing)**: fixed as stated in 07:665, REC law 5 (en and zh), the module docstring (e) and NOTE:15. The new wording ("ending read as the empty predicate, so that the realization premise and the stake hold vacuously … The World is a model of those laws; nothing about the choices depends on it") says exactly what `crossed_joined` (LB/FromTheDynamics.lean) instantiates. No new overclaim.
+- **M2 (record statement's premises)**: fixed. `statement.en` now "At the formations whose acts return along affecting, given one, each under its least class, the de se condition is exactly mutual dependence; …" (297 chars). "is exactly mutual dependence" is the `↔ L.MutuallyDependent W` of `returning_downstream_iff_mutuallyDependent`. zh "（有其一时）" carries the premise.
+- **L1 ("some returning formation out")**: fixed in 07:660, docstring (b), REC law 2 en and zh, records.py. Not carried into NOTE:12, which still reads "has content only for a pool that leaves some formation out" (see R1 below).
+- **L2 ("for any coupling by level")**: fixed in 07:660, docstring (b), REC law 2. The theorem's own docstring (`returning_beyond_coupling`, LB/FromTheDynamics.lean:119–122) still omits it; the statement carries `obs`, so this is wording only (R4).
+- **L3 (dangling anchor)**: fixed; the link is `#r-self-concern-and-c-under-the-condition`, which exists at 07:258.
+- **L4 (4.10 → 4.12 numbering)**: not changed; READER.md says J3 holds §4.11 and lands first. That is a landing-order dependency, not a text error: if J1 lands before J3 the gap shows. NOTE:3 and :24 now cite §4.12, consistent with the heading.
+- **L5 (recurrence argued, not proved)**: fixed in Lean. `Alternating.recurs (b : Bool) (N : Nat) : ∃ t, N ≤ t ∧ stands t = b` (LB/FromTheDynamics.lean:296–302) is now a conjunct of `joined` (`∀ b N, ∃ t, N ≤ t ∧ stands t = b`). The proof matches on `stands N` and `b`, returning `N` or `N + 1`; the `N + 1` cases rest on `stands (N + 1)` unfolding to `!stands N` definitionally, which the structural definition gives. I did not type-check it; NOTE §4 reports a whole-package scratch build. 07:666 "each formation standing again and again" and the docstring's "(`Alternating.recurs`)" now state what is proved.
+- **L6 ("putting keeping above ending" not a conjunct)**: fixed in Lean. `P keep drain` is a conjunct, derived as `accords () drain (.inr rfl) drain_ne_keep`: `Accords P := ∀ o y, menu o y → y ≠ pick o → P (pick o) y` with `menu () drain` by `.inr rfl` and `drain ≠ keep`; correct. 07:666 now "according with the choice, so putting keeping above ending"; the docstring "so putting keeping above draining". Exact.
+- **L7 (the web's levels, not the line's)**: fixed in REC law 5 en and zh and law 6 en ("the web's levels are never listed"). Law 6 zh still "其水平从不被列" (R2).
+- **L8 ("given one" in the summary)**: fixed, 07:672.
+- **L9 (bound summary cited `ActReadsWithin`)**: fixed, 07:673 now describes §4.12's bound ("with a listing and decided reach, nothing lies beyond the returning formations pooled"), which is `returning_pool_covers`.
+- **L10 ("by necessity" as a consequence; "cannot fail on any model")**: fixed in 07:654 ("So, on this reading, …") and the module docstring ("Every law here is an equivalence or a short composition of imported laws, so its content is in those readings"). Not carried into NOTE:9, which still has "So the join cannot fail on any model once its readings are taken" (R1).
+
+### New text checked for overclaim (none found)
+
+- `joined`'s two earlier new conjuncts from f671d08bf, `(∀ g : Bool, g ∈ both)` and `(∀ t y, y ∈ generations.family t → y = stands t ∧ flow.ReachReturns web y)` (`mem_both`, `member_stands`, `returns`), match 07:666 "Both are listed, so the flow is finite" and "every member of every cohort is the formation standing then, a returning formation: the line's members are standpoints".
+- 07:665 "Take two occasions whose four courses are each open somewhere" is `Crossed.not_selfConcerned.1`; "no strict order … on every pair" is `.2.2`.
+- REC law 5 "C between listed level paths never ranks the course taken where a line persists: no finite listing holds the web's actual levels" is `Flow.persists_not_listsAdmitted` exactly.
+- NOTE witness paragraph now cites `Alternating.recurs` for the recurrence and says "the web's actual levels".
+
+### Low
+
+#### R1. Two round-1 fixes not carried into the NOTE
+
+- Where: NOTE:12 "the bound on selection has content only for a pool that leaves some formation out"; NOTE:9 "So the join cannot fail on any model once its readings are taken".
+- Fix: "some returning formation out" (as 07, the docstring and the record now say); replace the second with the docstring's "every law is an equivalence or a short composition of imported laws, so its content is in the readings". NOTE §4's "all taken" is then true of the NOTE too.
+
+#### R2. Record law 6's Chinese still says the line's levels
+
+- Where: REC laws[5].zh "其水平从不被列" where the en now reads "the web's levels are never listed".
+- Fix: "网之水平从不被列".
+
+#### R3. "its chooser keeps" in record law 6
+
+- Where: REC laws[5].en "a line of descent persists through the two and never overdraws; the web's levels are never listed; its chooser keeps, …".
+- Why: "its" reads as the flow's or the line's chooser, while `does_not_show` and 07 say the chooser is supplied and tied to the flow only by `realized`.
+- Fix: "a supplied chooser keeps".
+
+#### R4. `returning_beyond_coupling`'s own docstring lacks "for any coupling by level"
+
+- Where: LB/FromTheDynamics.lean:119–122.
+- Fact: the statement quantifies `obs : F → C → Prop`; the module docstring (b), 07 and the record now say so; the theorem's docstring does not.
+- Fix: "For any coupling by level, what lies beyond …".
+
+### Noted, not a finding
+
+- NOTE §4 now records this cold read ("no high finding, two medium and ten low, all taken") and a whole-package scratch build (396 modules). I cannot verify the build; the counts are round 1's.
+- L4's disposition (J3 takes §4.11) is a landing-order fact outside this diff; worth a check at landing that §4.11 exists in 07 when J1's section is rendered as 4.12.
+
+## What was done with round 2
+
+All four low residuals taken: R1 (the note's two sentences), R2 (the record's Chinese, the web's levels), R3 ("a supplied chooser"), R4 ("for any coupling by level" in `returning_beyond_coupling`'s docstring). Round 2 had no high or medium finding, so the rounds stop here.
