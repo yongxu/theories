@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-11-09T16:08:48+00:00",
+  "reviewed_at_utc": "2026-11-09T16:28:51+00:00",
   "statement": {
     "en": "A world whose relata act by their carried readings is the course those acts generate; the line read off it is descended by construction and carries its founders' reading; with ending read as that course's overdraw, every occasion picking that reading, G3's realization premise is the identity.",
     "zh": "诸关系项依其所携读法而行之世界即此诸行为所生之程；读自其上之系由构造相传、携其始祖所传之读法；终读为此程之透支、且每一场合皆择所携之读法时，G3 之实现前提即为恒等。"
@@ -266,9 +266,9 @@
       "sha256": "edbeb105bd6032e40d4c1cf5605da5f7506966b0f2c11d9a3e4885567aabef31"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T160604.682692Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T162721.876918Z/verification.json",
       "role": "receipt",
-      "sha256": "af998abed3b8d9d27921275268b7696a7cd286ee3adb0632b48876dd1782652f"
+      "sha256": "c25e5771c29937389dcd04e1e798093f2d1bdd1dad6d1c4236fdb2950020f047"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zj2-readings-persist/NOTE.md",
@@ -283,7 +283,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "9b866f94de5f363c3b74c8a5cce3c6eb8450548ab246d6b9ce766edff1929b1d"
+      "sha256": "b583823cfc6601a1aab2f1990e3e5d191eaf2a1ef3dbcbfdf08a8267df713c10"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",
@@ -299,7 +299,7 @@
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T160604.682692Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T162721.876918Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.ReadingsPersist",
       "success_pointer": "/status",
       "success_value": "passed"
