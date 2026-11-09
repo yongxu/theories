@@ -15,11 +15,11 @@ selection read off continuation cannot reach (`Becoming.BeyondCoupling`). This m
 they give together, and where it stops.
 
 **Near-definitional by necessity.** With significance a free parameter, no statement reading only
-the dynamics entails the condition (`ReadsOnlyDynamics.not_entails`). So route (b) can only read
-significance off the flow (own closure along one of its relations, held de se at standpoints it
-gives, under a class it gives) and find which fact of the flow the condition then is. Every law
-here is a short composition and cannot fail on any model once its readings are taken; its content
-is in those readings, and the steps doing dynamical work are imported (`Flow.exists_reachReturns`,
+the dynamics entails the condition (`ReadsOnlyDynamics.not_entails`). So, on this reading, route (b)
+can only read significance off the flow (own closure along one of its relations, held de se at
+standpoints it gives, under a class it gives) and find which fact of the flow the condition then is.
+Every law here is an equivalence or a short composition of imported laws, so its content is in those
+readings; the steps doing dynamical work are imported (`Flow.exists_reachReturns`,
 `GroupEnding.Flow.coupled_generation_childless`, `act_courses_unselected_pool`).
 
 * **(a) The scope joined.** At the formations whose acts return (`Flow.Returning`, the standpoints
@@ -31,11 +31,12 @@ is in those readings, and the steps doing dynamical work are imported (`Flow.exi
   returning or not (`«各后类续无外即一之续无外»`); P2 makes the class admissible on §4.6's path, and
   it is the least class that is (`ReturnsAlong.downstreamClass_regular`). Mutual dependence counts
   taking as well as giving, so it includes mutual drain.
-* **(b) The bound at those standpoints.** What lies beyond a returning standpoint's coupling closure
-  has no significance from it, and the significance is a rival (`Flow.returning_beyond_coupling`,
-  `Flow.reachReturns_ownClosure_rival` at `Subtype.val`). Pooled over every returning formation of a
-  finite flow with reach decided, nothing lies beyond (`Flow.returning_pool_covers`): the bound on
-  selection read off continuation bites only for a pool that leaves some formation out.
+* **(b) The bound at those standpoints.** For any coupling by level, what lies beyond a returning
+  standpoint's coupling closure has no significance from it, and the significance is a rival
+  (`Flow.returning_beyond_coupling`, `Flow.reachReturns_ownClosure_rival` at `Subtype.val`). Pooled
+  over every returning formation of a finite flow with reach decided, nothing lies beyond
+  (`Flow.returning_pool_covers`): the bound on selection read off continuation bites only for a pool
+  that leaves some returning formation out.
 * **(c) C read from what persisting shows.** Where the shown relation with every own-widening met
   added has no cycle, every strict order according with the choices and increasing in its own
   continuation on the pairs met (what persisting is consistent with) ranks one course above another
@@ -52,14 +53,17 @@ is in those readings, and the steps doing dynamical work are imported (`Flow.exi
 * **(d) C never ranks the persisting course itself.** Where a line persists, the web's actual
   levels are listed by no finite listing (`Flow.persists_not_listsAdmitted`), so C between listed
   level paths ranks only alternatives not taken.
-* **(e) Self-concern everywhere does not follow.** On a World meeting every law G3 uses, with the
-  choices of `PersistingChoices.Crossed` (every course met, no choice ends), every premise of
-  `Flow.persisting_consistent_with_selfConcern` holds, and no strict order according with the
-  choices is increasing in its own continuation on all pairs (`Alternating.crossed_joined`).
+* **(e) Self-concern everywhere does not follow.** With the choices of `PersistingChoices.Crossed`
+  (every course met) and ending read as the empty predicate, so that the realization premise and the
+  stake hold vacuously, every premise of `Flow.persisting_consistent_with_selfConcern` holds on a World
+  meeting the persistence laws (`Alternating`), and no strict order according with the choices is
+  increasing in its own continuation on all pairs (`Alternating.crossed_joined`). The World is a model
+  of those laws; nothing about the choices depends on it.
 * **A joint witness.** `Alternating`: two formations, each in turn standing and giving the other its
   standing. The two are listed, so the flow is finite; it is balanced and mutually dependent, so every
   formation returns and (a)'s condition holds; a line persists through the two, each member coming to
-  stand again and again, and every member of every cohort is a returning formation, a standpoint; it never overdraws; the actual levels are never listed; a
+  stand again and again (`Alternating.recurs`), and every member of every cohort is a returning
+  formation, a standpoint; it never overdraws; the actual levels are never listed; a
   chooser offered keeping or ending keeps, and some strict order according with it puts keeping
   above ending and is increasing in its own continuation on the occasion met
   (`Alternating.joined`). The chooser is supplied: it is tied to the flow only by the realization
@@ -289,6 +293,14 @@ theorem member_stands (t : Nat) (y : Bool) (mem : y ∈ generations.family t) : 
   | head => rfl
   | tail _ h => nomatch h
 
+/-- **Each formation stands again and again**: past every step each stands at some later step. -/
+theorem recurs (b : Bool) (N : Nat) : ∃ t, N ≤ t ∧ stands t = b :=
+  match h : stands N, b with
+  | false, false => ⟨N, Nat.le_refl N, h⟩
+  | false, true => ⟨N + 1, Nat.le_succ N, (congrArg Bool.not h).trans rfl⟩
+  | true, false => ⟨N + 1, Nat.le_succ N, (congrArg Bool.not h).trans rfl⟩
+  | true, true => ⟨N, Nat.le_refl N, h⟩
+
 /-- **The line persists**: every step has a member. -/
 theorem persists : generations.Persists :=
   fun N => ⟨N, stands N, Nat.le_refl N,
@@ -395,31 +407,36 @@ theorem realized : ∀ o, Weighting.EndsOwn both own (choices.pick o) → ∃ T 
 /-- **A joint witness.** On two formations standing in turn, both listed: the flow balances, only
 active formations give, activity needs support, it is mutually dependent and every formation's acts
 return; with each standpoint's line under its least class the condition holds at every returning
-formation; the line of descent through the two persists, every member of every cohort being the
-formation standing then, a returning formation, and never overdraws its family; the web's actual levels
+formation; the line of descent through the two persists, each formation standing again and again
+and every member of every cohort being the formation standing then, a returning formation, and never
+overdraws its family; the web's actual levels
 are listed by no finite listing; and the chooser, offered keeping or ending, keeps, consistent with a
-strict order putting keeping above ending and increasing in its own continuation on the occasion
-met. -/
+strict order according with the choice, so putting keeping above draining, and increasing in its own
+continuation on the occasion met. -/
 theorem joined :
     (∀ g : Bool, g ∈ both) ∧
       flow.Balances web ∧ flow.Acting web ∧ web.Dependent ∧ flow.MutuallyDependent web ∧
       (∀ c, flow.ReachReturns web c) ∧
       (∀ (c : flow.Returning web) x, «所及» (flow.Affects web) («后类» (flow.Affects web) c.1) c.1 x) ∧
       SelectionTerm.Flow.Descended flow web generations ∧ generations.Persists ∧
+      (∀ b N, ∃ t, N ≤ t ∧ stands t = b) ∧
       (∀ t y, y ∈ generations.family t → y = stands t ∧ flow.ReachReturns web y) ∧
       (∀ T n, ¬ ((∀ k, k < n → flow.replenishment both (T + k) < flow.uptake both (T + k)) ∧
         web.stock both T < n + 1)) ∧
       (∀ items : List (Nat × Bool), ¬ web.ListsAdmitted items web.level) ∧
       ∃ P : «际» (Bool → Bool), (∀ a, ¬ P a a) ∧ (∀ a b c, P a b → P b c → P a c) ∧
-        choices.Accords P ∧ Weighting.IncreasingInOwnOn choices.Met both own (fun b a => P a b) :=
+        choices.Accords P ∧ P keep drain ∧
+        Weighting.IncreasingInOwnOn choices.Met both own (fun b a => P a b) :=
   ⟨mem_both, balances, acting, dependent, mutuallyDependent, returns,
    (Flow.returning_downstream_iff_mutuallyDependent ⟨true, returns true⟩).2.mpr mutuallyDependent,
-   descended, persists,
+   descended, persists, recurs,
    fun t y mem => ⟨member_stands t y mem, returns y⟩,
    Flow.persists_never_overdraws balances acting dependent descended gated coupled persists,
    Flow.persists_not_listsAdmitted acting dependent descended persists,
-   Flow.persisting_consistent_with_selfConcern balances acting dependent descended gated coupled
-     persists realized noCycle stake⟩
+   match Flow.persisting_consistent_with_selfConcern balances acting dependent descended gated coupled
+       persists realized noCycle stake with
+   | ⟨P, irrefl, trans, accords, increasing⟩ =>
+     ⟨P, irrefl, trans, accords, accords () drain (.inr rfl) drain_ne_keep, increasing⟩⟩
 
 /-! ### The crossed choices on this World -/
 

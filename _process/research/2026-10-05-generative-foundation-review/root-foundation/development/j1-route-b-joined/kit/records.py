@@ -61,11 +61,11 @@ LAWS = [
             "须有一回返之形成。此等价不用 P2：此类下之线及其成员之全闭包，无须前提。"},
      {FTD: ["Flow.returning_downstream_iff_mutuallyDependent"],
       "OwnClass": ["«各后类续无外即一之续无外»", "«返则后类本类常闭»", "ReturnsAlong.downstreamClass_regular"]}),
-    ({"en": "What lies beyond a returning standpoint's coupling closure has no significance from it, and the "
-            "significance is a rival. Pooled over every returning formation of a finite flow with reach decided, "
-            "nothing lies beyond: the bound on selection read off continuation has content only for a pool that "
-            "leaves some formation out.",
-      "zh": "回返之立场之耦合闭包外者，从它无意义，此意义为对手。于有限而可判所及之流，合诸回返之形成为池，则无外者：读自延续之选择之界，唯于池漏某形成时有内容。"},
+    ({"en": "For any coupling by level, what lies beyond a returning standpoint's coupling closure has no "
+            "significance from it, and the significance is a rival. Pooled over every returning formation of a finite "
+            "flow with reach decided, nothing lies beyond: the bound on selection read off continuation has content "
+            "only for a pool that leaves some returning formation out.",
+      "zh": "对任一按水平之耦合，回返之立场之耦合闭包外者，从它无意义，此意义为对手。于有限而可判所及之流，合诸回返之形成为池，则无外者：读自延续之选择之界，唯于池漏某回返之形成时有内容。"},
      {FTD: ["Flow.returning_beyond_coupling"],
       "BeyondCoupling": ["Flow.reachReturns_ownClosure_rival", "Flow.returning_pool_covers"]}),
     ({"en": "Where the shown relation with every own-widening met added has no cycle, every strict order according "
@@ -85,23 +85,23 @@ LAWS = [
      {FTD: ["Web.extension_met_keeps_above_ending"],
       "PersistingChoices": ["ChoiceOccasions.increasingInOwnOn_of_keeping",
                             "ChoiceOccasions.selfConcerned_consistent_of_kept"]}),
-    ({"en": "C between listed level paths never ranks the course a persisting line takes: no finite listing holds "
-            "its actual levels. On a World meeting every law the persistence laws use, with every course met and "
-            "none ending, their premises hold, and no strict order according with the choices is increasing in its "
-            "own continuation on every pair.",
-      "zh": "列出水平路径间之 C 从不排存续之系所取之程：其实际水平无有限列表可列。于满足存续诸律所用之每一世界之律、诸程皆遇且无一终结之世界，其前提皆成立，"
+    ({"en": "C between listed level paths never ranks the course taken where a line persists: no finite listing "
+            "holds the web's actual levels. With every course met and ending read as the empty predicate, the "
+            "persistence laws' premises hold on a World meeting them, and no strict order according with the choices "
+            "is increasing in its own continuation on every pair.",
+      "zh": "列出水平路径间之 C 从不排系存续处所取之程：网之实际水平无有限列表可列。诸程皆遇、终结读作空谓词时，存续诸律之前提于满足之之世界皆成立，"
             "而无与诸择相合之严序于每对皆随己之延续而增。"},
      {"PersistingChoices": ["Flow.persists_not_listsAdmitted", "PersistingChoices.Crossed.not_selfConcerned"],
       FTD: [f"{ALT}.crossed_noCycle", f"{ALT}.crossed_stake", f"{ALT}.crossed_joined"]}),
     ({"en": "A joint witness: two formations standing in turn, each taking its own standing and giving the other its "
             "standing. The flow balances and is mutually dependent, so every formation returns and the scope's "
-            "condition holds; a line of descent persists through the two and never overdraws; its levels are never "
-            "listed; a chooser keeps rather than ends, consistent with keeping above ending and self-concern "
+            "condition holds; a line of descent persists through the two and never overdraws; the web's levels are "
+            "never listed; its chooser keeps, consistent with keeping above ending and self-concern "
             "on the occasion met.",
       "zh": "合见之例：二形成轮流而立，各取己之所立并予他者以其所立。流平衡且相互依赖，故每一形成皆回返，范围之条件成立；一传承之系经此二者而存续，从不过取；"
             "其水平从不被列；择于存与终者择存，合于存居终上，并合于所遇之时之自我关切。"},
      {FTD: [f"{ALT}.stands", f"{ALT}.unit", f"{ALT}.flow", f"{ALT}.web", f"{ALT}.generations", f"{ALT}.balances",
-            f"{ALT}.acting", f"{ALT}.dependent", f"{ALT}.descended", f"{ALT}.member_stands", f"{ALT}.persists", f"{ALT}.gated",
+            f"{ALT}.acting", f"{ALT}.dependent", f"{ALT}.descended", f"{ALT}.member_stands", f"{ALT}.recurs", f"{ALT}.persists", f"{ALT}.gated",
             f"{ALT}.coupled", f"{ALT}.mutuallyDependent", f"{ALT}.returns", f"{ALT}.choices", f"{ALT}.noCycle",
             f"{ALT}.stake", f"{ALT}.realized", f"{ALT}.joined"]}),
     ({"en": "The general laws the four pieces shared, now below them: returning along a relation, at the frame; the "
@@ -148,11 +148,11 @@ def j1_record():
         "family": "F07",
         "reviewed_at_utc": NOW,
         "statement": {
-            "en": "At the formations whose acts return, each under its least class, the condition read de se holds "
-                  "exactly where the flow is mutually dependent; nothing beyond their coupling closures counts from "
-                  "them; orders a persisting line's choices allow give C only along what they show, never the course "
-                  "taken.",
-            "zh": "于其举回返之形成处，各在其最细类下，自指读出之延续条件恰于流相互依赖处成立；其耦合闭包外者从它们无意义；存续之系之择所容之序，唯沿其所示给出 C，从不及所取之程。"},
+            "en": "At the formations whose acts return along affecting, given one, each under its least class, the "
+                  "de se condition is exactly mutual dependence; nothing beyond their coupling closures counts "
+                  "from them; orders a persisting line's choices allow give C only along what they show, never the "
+                  "course taken.",
+            "zh": "于沿影响其举回返之形成处（有其一时），各在其最细类下，自指之延续条件恰为相互依赖；其耦合闭包外者从它们无意义；存续之系之择所容之序，唯沿其所示给出 C，从不及所取之程。"},
         "laws": laws,
         "hypotheses": [
             {"en": "No axiom. Read off one flow and one web, as in the four pieces: the relation is affecting, the "
