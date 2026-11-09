@@ -253,6 +253,12 @@
       "sha256": "105adddbbf6cbf8921a3ae8665204d0a9ee20e1a8a98dae04e8f77740db1a2cc"
     },
     {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T150154.198993Z/verification.json",
+      "role": "receipt",
+      "sha256": "54848a3b7024da9f784d328ee84c85b557c370bd154555a7cbce54e57089d7c4",
+      "declarations": []
+    },
+    {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/j3-condition-in-time/NOTE.md",
       "role": "integration",
       "sha256": "1cc7e2370d30c0680477cc7132da6f6f3ed0bb28f0fffa9a17c5bf4572a22c8c",
@@ -265,7 +271,15 @@
       "declarations": []
     }
   ],
-  "proof_bindings": [],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionInTime.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T150154.198993Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ConditionInTime",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
   "history": [
     {
       "en": "9 November 2026, board item J3 (route (b)'s join, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md): added. Whether the condition's positive half holds in time, and what the one-center bound counts; study folder j3-condition-in-time.",
