@@ -68,7 +68,7 @@
 
 | 术语 | 义 | 出处 |
 |---|---|---|
-| 余地（room） | 有余地，是说每一个在外部某缘上高于另一者的合格结果，都在耦合进来者上被某一合格结果超过（`Optimum.Room`） | [第五章](theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in) |
+| 余地（room） | 有余地，是说每一个在外部某缘上高于另一者的合格结果，都在耦合进来者上被某一合格结果胜过（每一样都不低于它，至少有一样高于它）（`Optimum.Room`） | [第五章](theories/becoming/chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in) |
 | 更新之门、门控更新（the gate (of a renewal), gated renewal） | 给予一个缘的每一个形成，都以至少 `m` 的需要依存于它，于是更新依存于它所更新者。不是移动上的门 | [第五章](theories/becoming/chapters/05-COLLECTIVES.md#collectives) |
 | 最优解、取用者、池、共有的编码（optimum, drawer, pool, shared code） | 各依其引入之处的定义 | [第五章](theories/becoming/chapters/05-COLLECTIVES.md) |
 | 意义（significance）`sig` | 对一个立场、一个步与一个形成而言，那一延续是否从该立场被计数：一个命题，不是一个数；在自闭包读法之下、以从己方式（de se）持有，即它位于该中心沿一个关系与之一同继续的东西之内 | [第七章 §1](theories/becoming/chapters/07-SIGNIFICANCE.md#evaluation) |

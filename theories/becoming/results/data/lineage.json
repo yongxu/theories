@@ -146,9 +146,9 @@
    "to": "新名",
    "where": "在哪里、为什么",
    "folders_heading": "早先各文件夹后来如何",
-   "folders_intro": "对照表把十六个早先的理论文件夹与十二个思想领域对着现行之论来读：共 {total} 条，每一条都是 AI 的读法，尚无人审查它们的记录。它对一份随机样本的复核「estimates 82.6% holding, 14.2% with a label or role wrong and 3.2% with a wrong reading over all 1183」（估计全部 1183 条中 82.6% 成立，14.2% 标签或角色有误，3.2% 读法有误；[怎样核对的]({crosswalk})）。[文件夹索引]({index})给出每个文件夹的计数，[对照表]({crosswalk})给出每一条。*新读法*（fresh-reading）是说本论并不陈述这一联系，而是读者在那里提出它。",
+   "folders_intro": "对照表把十六个早先的理论文件夹与十二个思想领域对着现行的本论来读：共 {total} 条，每一条都是 AI 的读法，尚无人审查它们的记录。它对一份随机样本的复核「estimates 82.6% holding, 14.2% with a label or role wrong and 3.2% with a wrong reading over all 1183」（估计全部 1183 条中 82.6% 成立，14.2% 标签或角色有误，3.2% 读法有误；[怎样核对的]({crosswalk})）。[文件夹索引]({index})给出每个文件夹的计数，[对照表]({crosswalk})给出每一条。*新读法*（fresh-reading）是说本论并不陈述这一联系，而是读者在那里提出它。",
    "papers_heading": "论文",
-   "papers_intro": "为仓库之外的读者写的草稿，以及其中什么在现行之论里仍成立。[output/](../output/README.md) 中有什么，在那里说明。",
+   "papers_intro": "为仓库之外的读者写的草稿，以及其中什么在现行的本论里仍成立。[output/](../output/README.md) 中有什么，在那里说明。",
    "paper": "论文",
    "claimed": "它主张什么",
    "stands": "其中什么仍成立",
@@ -1070,7 +1070,7 @@
    },
    "what": {
     "en": "The writings were gathered into fifteen folders under theories/ on 2026-09-03, two more following by 2026-09-13, and the September map reads them as neither fifteen theories nor one: \"one diagnostic mechanism restated four times under successive names\", beside a small set of adjacent commitments not reducible to it and engineering systems that write them in code. The folders are \"syntheses first written in September 2026 and kept in place\", each first written before the live account. On 9 October 2026 one of the seventeen was renamed `theories/becoming/`, so sixteen stand beside it.",
-    "zh": "2026-09-03，诸篇写作被汇入 theories/ 下的十五个文件夹，至 2026-09-13 又增两个；九月的总图把它们读作既非十五种理论、也非一种：「one diagnostic mechanism restated four times under successive names」（同一个诊断机制，以先后不同的名字重述了四次），旁边是一小组不可化约为它的相邻承诺，以及把这些承诺写成代码的工程系统。这些文件夹是「syntheses first written in September 2026 and kept in place」（2026 年 9 月首次写成并保留原处的综述），每一个都写于现行之论之前。2026 年 10 月 9 日，十七个之一改名为 `theories/becoming/`，于是有十六个与它并列。"
+    "zh": "2026-09-03，诸篇写作被汇入 theories/ 下的十五个文件夹，至 2026-09-13 又增两个；九月的总图把它们读作既非十五种理论、也非一种：「one diagnostic mechanism restated four times under successive names」（同一个诊断机制，以先后不同的名字重述了四次），旁边是一小组不可化约为它的相邻承诺，以及把这些承诺写成代码的工程系统。这些文件夹是「syntheses first written in September 2026 and kept in place」（2026 年 9 月首次写成并保留原处的综述），每一个都写于现行的本论之前。2026 年 10 月 9 日，十七个之一改名为 `theories/becoming/`，于是有十六个与它并列。"
    },
    "evidence": [
     {
@@ -1394,7 +1394,7 @@
    },
    "what": {
     "en": "A message of 17 October asks that earlier words be kept, but no longer as the \"truth\"; the AI-authored context of its record reads that they stay preserved verbatim, but \"They no longer decide what the live theory says.\" Labels such as \"G0\", \"Part I\" and \"Part II\" are history, renamed by what they state: \"living significance for G0, the continuation condition for the one axiom, the theory without axiom for Part I\".",
-    "zh": "10 月 17 日的一则消息要求保留早先的话，但不再把它们当作「truth」（真理）；其记录中由 AI 撰写的背景读作：这些话仍逐字保存，但「They no longer decide what the live theory says.」（它们不再决定现行之论说什么。）「G0」「Part I」（第一部分）「Part II」（第二部分）这类标签已成历史，按其所述改名：「living significance for G0, the continuation condition for the one axiom, the theory without axiom for Part I」（G0 称存活之意义，那一条公理称延续条件，第一部分称无公理的理论）。"
+    "zh": "10 月 17 日的一则消息要求保留早先的话，但不再把它们当作「truth」（真理）；其记录中由 AI 撰写的背景读作：这些话仍逐字保存，但「They no longer decide what the live theory says.」（它们不再决定现行的本论说什么。）「G0」「Part I」（第一部分）「Part II」（第二部分）这类标签已成历史，按其所述改名：「living significance for G0, the continuation condition for the one axiom, the theory without axiom for Part I」（G0 称存活之意义，那一条公理称延续条件，第一部分称无公理的理论）。"
    },
    "evidence": [
     {
@@ -2088,11 +2088,11 @@
    "date": "2026-11-07",
    "title": {
     "en": "The crosswalk: earlier folders and domains read against the account",
-    "zh": "对照表：以现行之论读此前各文件夹与各思想领域"
+    "zh": "对照表：以现行的本论读此前各文件夹与各思想领域"
    },
    "what": {
     "en": "1,183 entries read the 16 earlier theory folders and 12 domains of thought against the live account, with a connection map beside them; the crosswalk 'creates no result, and every entry is an AI reading with no person's behind it'. A second critic's read of 100 entries drawn at random 'estimates 82.6% holding', the other entries not read again, and the readers' flags corrected 26 places in the live text at their homes, and nine more that 'gave ranking to C alone in other words'.",
-    "zh": "1,183 条条目以现行之论读此前的 16 个理论文件夹与 12 个思想领域，旁附一张关联图；该对照表「creates no result, and every entry is an AI reading with no person's behind it」（不产生任何结果，每一条都是 AI 的读法，背后没有任何人的读法）。第二位批评者读了随机抽取的 100 条，据此「estimates 82.6% holding」（估计 82.6% 成立），其余条目未再读；读者标出之处中，有 26 处在现行文本中于其所属之处改正，另有九处「gave ranking to C alone in other words」（换了说法，把排序单单交给 C）。"
+    "zh": "1,183 条条目以现行的本论读此前的 16 个理论文件夹与 12 个思想领域，旁附一张关联图；该对照表「creates no result, and every entry is an AI reading with no person's behind it」（不产生任何结果，每一条都是 AI 的读法，背后没有任何人的读法）。第二位批评者读了随机抽取的 100 条，据此「estimates 82.6% holding」（估计 82.6% 成立），其余条目未再读；读者标出之处中，有 26 处在现行文本中于其所属之处改正，另有九处「gave ranking to C alone in other words」（换了说法，把排序单单交给 C）。"
    },
    "evidence": [
     {
@@ -2233,7 +2233,7 @@
    "to": "totalizing attractor / 总体化吸引子",
    "where": {
     "en": "In the 2026 talks and the 智善 research drafts on the meta-attractor: a January 2026 talk transcript already says \"totalizing attractors\" (sources/02-wamotopia/transcripts/2026-01-note-chiangmai-festival-talk.txt, line 149), and the folder's versions v0.3 to v0.9, dated 2026-07-03, use only 总体化吸引子 and are titled with it from v0.3; the reason given is that \"meta-\" had been used with opposite valence in the same month. Only the September timeline's ledger states the replacement, dating it 2026-02 → 2026-07, and the account later keeps 元吸引子 (meta-attractor) for closed capture.",
-    "zh": "见于 2026 年的演讲与智善关于元吸引子的研究稿：2026 年 1 月一次演讲的转写已说「totalizing attractors」（总体化吸引子）（sources/02-wamotopia/transcripts/2026-01-note-chiangmai-festival-talk.txt 第 149 行），该文件夹 2026-07-03 的 v0.3 至 v0.9 只用「总体化吸引子」，自 v0.3 起以之为题；所给理由是「\"Meta-\" had been used with opposite valence in the same month」（“元”在同月曾以相反的价值取向使用）。只有九月时间线的词汇表陈述了这一替换，并记为 2026-02 → 2026-07；现行之论后来为闭合的捕获保留了「元吸引子」一名。"
+    "zh": "见于 2026 年的演讲与智善关于元吸引子的研究稿：2026 年 1 月一次演讲的转写已说「totalizing attractors」（总体化吸引子）（sources/02-wamotopia/transcripts/2026-01-note-chiangmai-festival-talk.txt 第 149 行），该文件夹 2026-07-03 的 v0.3 至 v0.9 只用「总体化吸引子」，自 v0.3 起以之为题；所给理由是「\"Meta-\" had been used with opposite valence in the same month」（“元”在同月曾以相反的价值取向使用）。只有九月时间线的词汇表陈述了这一替换，并记为 2026-02 → 2026-07；现行的本论后来为闭合的捕获保留了「元吸引子」一名。"
    },
    "evidence_path": "_process/history/2026-09-consolidation/TIMELINE.md",
    "quote": "\"Meta-\" had been used with opposite valence in the same month; the new term names the property that matters — that it swallows the alternatives",
@@ -2577,7 +2577,7 @@
    },
    "stands": {
     "en": "[AI reading] Drafted at 16:07 and followed the same afternoon by the unified whitepaper (v0.1 16:57; v1.1 on 6 September; see that entry), by the file times the September timeline gives. The live account carries no organizational stance; the crosswalk's 智善 group lists \"AI must not be a party; the current direction must stop\" among what the programme asserts and \"the account only states conditionally or not at all\".",
-    "zh": "［AI 读法］按九月时间线所记的文件时间，此稿成于 16:07，同日下午即有统一白皮书接续（v0.1 16:57；v1.1 于 9 月 6 日；见该条）。现行之论不带任何组织立场；对照表的智善组把「AI must not be a party; the current direction must stop」（AI 不得成为一方；当前方向必须停止）列为纲领所断言、而「the account only states conditionally or not at all」（本论只有条件地陈述或根本不陈述）者。"
+    "zh": "［AI 读法］按九月时间线所记的文件时间，此稿成于 16:07，同日下午即有统一白皮书接续（v0.1 16:57；v1.1 于 9 月 6 日；见该条）。现行的本论不带任何组织立场；对照表的智善组把「AI must not be a party; the current direction must stop」（AI 不得成为一方；当前方向必须停止）列为纲领所断言、而「the account only states conditionally or not at all」（本论只有条件地陈述或根本不陈述）者。"
    },
    "stands_basis": [
     "theories/becoming/results/atlas/CROSSWALK.md#cxg-zhishan-intelligence-must-be-good",
@@ -2627,7 +2627,7 @@
    },
    "stands": {
     "en": "[AI reading] A fiction, not a claim of the account. The crosswalk's group for the folder it draws on (cooperative abundance, historical home The Fork) says the live account \"has no abundance layer or provision and no ownership variable\".",
-    "zh": "［AI 读法］是虚构，不是本论的主张。对照表中其所依据文件夹（合作丰裕，历史归属 The Fork）一组说，现行之论「has no abundance layer or provision and no ownership variable」（没有丰裕层或供给，也没有所有权变量）。"
+    "zh": "［AI 读法］是虚构，不是本论的主张。对照表中其所依据文件夹（合作丰裕，历史归属 The Fork）一组说，现行的本论「has no abundance layer or provision and no ownership variable」（没有丰裕层或供给，也没有所有权变量）。"
    },
    "stands_basis": [
     "theories/becoming/results/atlas/CROSSWALK.md#cxg-the-fork-and-cooperative-infrastructure"
@@ -2649,7 +2649,7 @@
    },
    "stands": {
     "en": "[AI reading] A community statement, not part of the account; the live account states no community mission. No crosswalk entry names its folder (searched, not read).",
-    "zh": "［AI 读法］是一份社区声明，不属于本论；现行之论不陈述任何社区使命。对照表中没有条目指名此文件夹（已检索，未通读）。"
+    "zh": "［AI 读法］是一份社区声明，不属于本论；现行的本论不陈述任何社区使命。对照表中没有条目指名此文件夹（已检索，未通读）。"
    },
    "stands_basis": [],
    "label": "public"
@@ -2671,7 +2671,7 @@
    },
    "stands": {
     "en": "[AI reading] The crosswalk's group on the relational self and 大同 says \"大同, 五常 and the 人类命运共同体 formalism are absent, and what links to 大同 is mostly proposed here\", and that \"no law evaluates, relation gives no cooperation\". The live account takes no civilizational or national stance.",
-    "zh": "［AI 读法］对照表中关系性自我与大同一组说「大同, 五常 and the 人类命运共同体 formalism are absent, and what links to 大同 is mostly proposed here」（大同、五常与人类命运共同体的形式化都不在现行之论中，与大同相连者大多是在此处提议的），并说「no law evaluates, relation gives no cooperation」（没有律作评价，关系不给出合作）。现行之论不取任何文明或国家立场。"
+    "zh": "［AI 读法］对照表中关系性自我与大同一组说「大同, 五常 and the 人类命运共同体 formalism are absent, and what links to 大同 is mostly proposed here」（大同、五常与人类命运共同体的形式化都不在现行的本论中，与大同相连者大多是在此处提议的），并说「no law evaluates, relation gives no cooperation」（没有律作评价，关系不给出合作）。现行的本论不取任何文明或国家立场。"
    },
    "stands_basis": [
     "theories/becoming/results/atlas/CROSSWALK.md#cxg-relational-self-and-datong"
@@ -2735,7 +2735,7 @@
    },
    "stands": {
     "en": "[AI reading] 02-MAP reads the corpus's \"selecting the selectors\" as \"the pool counted as the population is\" (`Drawn.pool_reads`), an AI reading (D67); 07 states \"When control over the selection is itself selected\" as laws on stated models, and its D68 reading says \"capable assistance to whoever shapes the rule does not lower the selection for control\", the direction of v2's Cor. 3. The crosswalk's entry naming this folder (cx-ma-field-capture) says field capture is \"Not in the live account as a law or a claim\". The 6 October integration of six V7.3 mechanisms is now in theories/becoming/history/, made \"with no new scientific run, formal theorem\". 08: \"None of the central results is new mathematics\".",
-    "zh": "［AI 读法］02-MAP 把语料中的「selecting the selectors」（选择选择者）读作「the pool counted as the population is」（池被当作种群来计）（`Drawn.pool_reads`），为 AI 读法（D67）；07 把「When control over the selection is itself selected」（当对选择的控制本身被选择时）作为基于所述模型的律来陈述，其 D68 读法说「capable assistance to whoever shapes the rule does not lower the selection for control」（给塑造规则者的有力协助不会降低对控制的选择），与 v2 推论 3 同向。对照表中指名此文件夹的条目（cx-ma-field-capture）说，场域捕获「Not in the live account as a law or a claim」（不作为律或主张存在于现行之论中）。10 月 6 日对 V7.3 六种机制的整合今已在 theories/becoming/history/ 中，「with no new scientific run, formal theorem」（其中没有新的科学运行或形式定理）。08 说「None of the central results is new mathematics」（核心结果中没有一个是新数学）。"
+    "zh": "［AI 读法］02-MAP 把语料中的「selecting the selectors」（选择选择者）读作「the pool counted as the population is」（池被当作种群来计）（`Drawn.pool_reads`），为 AI 读法（D67）；07 把「When control over the selection is itself selected」（当对选择的控制本身被选择时）作为基于所述模型的律来陈述，其 D68 读法说「capable assistance to whoever shapes the rule does not lower the selection for control」（给塑造规则者的有力协助不会降低对控制的选择），与 v2 推论 3 同向。对照表中指名此文件夹的条目（cx-ma-field-capture）说，场域捕获「Not in the live account as a law or a claim」（不作为律或主张存在于现行的本论中）。10 月 6 日对 V7.3 六种机制的整合今已在 theories/becoming/history/ 中，「with no new scientific run, formal theorem」（其中没有新的科学运行或形式定理）。08 说「None of the central results is new mathematics」（核心结果中没有一个是新数学）。"
    },
    "stands_basis": [
     "theories/becoming/chapters/02-MAP.md",
@@ -2762,7 +2762,7 @@
    },
    "stands": {
     "en": "[AI reading] Until 9 November 2026 the live account kept the move of declaring rather than deriving the normative step, in a different form: two premises stated and not asserted (the continuation condition for scope, C for order). Since then it asserts no should and ranks only under readings a result names, and the glossary gives 生生 one sense, \"the continuation of life\", and keeps it apart from generation (生成) and the grammar's «生生». The book's further terms (protection functions, totalization, the AI stack) were not checked against the live text term by term.",
-    "zh": "［AI 读法］直到 2026 年 11 月 9 日，现行之论以另一种形式保留了宣示而非推导规范一步的做法：两个陈述而不断言的前提（延续条件定范围，C 定次序）。自那以后，它不断言任何应当，只在一项结果所指名的读法之下排序；术语表给生生一个意义，「the continuation of life」（生命之延续），并把它与生成、与文法的 «生生» 分开。书中其余术语（保护功能、总体化、AI 栈）未逐项与现行文本核对。"
+    "zh": "［AI 读法］直到 2026 年 11 月 9 日，现行的本论以另一种形式保留了宣示而非推导规范一步的做法：两个陈述而不断言的前提（延续条件定范围，C 定次序）。自那以后，它不断言任何应当，只在一项结果所指名的读法之下排序；术语表给生生一个意义，「the continuation of life」（生命之延续），并把它与生成、与文法的 «生生» 分开。书中其余术语（保护功能、总体化、AI 栈）未逐项与现行文本核对。"
    },
    "stands_basis": [
     "GLOSSARY.md",
@@ -2829,7 +2829,7 @@
    },
    "stands": {
     "en": "[AI reading] The live account states no such slogan; nearest are capture through the rule (05, 02) and the opening's \"no winning certifies that anything lasts\", which the opening's notes scope as what position reads.",
-    "zh": "［AI 读法］现行之论不陈述这样的口号；最近者是经由规则的捕获（05、02），以及开篇的「no winning certifies that anything lasts」（没有任何胜利能担保任何东西会持续），开篇说明把它限定为位置所读取者。"
+    "zh": "［AI 读法］现行的本论不陈述这样的口号；最近者是经由规则的捕获（05、02），以及开篇的「no winning certifies that anything lasts」（没有任何胜利能担保任何东西会持续），开篇说明把它限定为位置所读取者。"
    },
    "stands_basis": [
     "theories/becoming/chapters/05-COLLECTIVES.md#markets",
@@ -2873,7 +2873,7 @@
    },
    "stands": {
     "en": "[AI reading] Not cited by the live account. What of selection for influence over evaluators stands is as in the IASEAI line entry.",
-    "zh": "［AI 读法］现行之论未引用它。对评估者影响力之选择，其中成立者见 IASEAI 论文线一条。"
+    "zh": "［AI 读法］现行的本论未引用它。对评估者影响力之选择，其中成立者见 IASEAI 论文线一条。"
    },
    "stands_basis": [
     "theories/becoming/chapters/07-SIGNIFICANCE.md"
@@ -2918,7 +2918,7 @@
    },
    "stands": {
     "en": "[AI reading] The live account carries its two named commitments as the continuation condition (scope) and C (order), neither asserted, and its 'one unfolding' as the thesis of one relational unfolding, argued. The record eventual-widening says \"The question it answers in part is THE-CORE's\".",
-    "zh": "［AI 读法］现行之论以延续条件（范围）与 C（次序）承接其两项指名的承诺，二者都不断言；其所说的一个展开（one unfolding）成为一个关系性展开的论题，经论证。记录 eventual-widening 说「The question it answers in part is THE-CORE's」（它部分回答的问题是 THE-CORE 的问题）。"
+    "zh": "［AI 读法］现行的本论以延续条件（范围）与 C（次序）承接其两项指名的承诺，二者都不断言；其所说的一个展开（one unfolding）成为一个关系性展开的论题，经论证。记录 eventual-widening 说「The question it answers in part is THE-CORE's」（它部分回答的问题是 THE-CORE 的问题）。"
    },
    "stands_basis": [
     "theories/becoming/results/records/eventual-widening.md",
@@ -2948,7 +2948,7 @@
    },
    "stands": {
     "en": "Edition 5 is the current one per the board's 'Which edition to send' line; \"Editions 1 to 4 are kept as history and are not to be sent.\" Each edition is a frozen snapshot of the live account at its commit; the live sources in theories/becoming/ have moved on since.",
-    "zh": "按工作板「Which edition to send」（发送哪一版）一行，第 5 版为现行版；「Editions 1 to 4 are kept as history and are not to be sent.」（第 1 至 4 版作为历史保存，不予发送。）每一版都是现行之论在其提交时的冻结快照；theories/becoming/ 中的现行来源此后已继续变化。"
+    "zh": "按工作板「Which edition to send」（发送哪一版）一行，第 5 版为现行版；「Editions 1 to 4 are kept as history and are not to be sent.」（第 1 至 4 版作为历史保存，不予发送。）每一版都是现行的本论在其提交时的冻结快照；theories/becoming/ 中的现行来源此后已继续变化。"
    },
    "stands_basis": [
     "_process/BECOMING-WORKBOARD.md",
