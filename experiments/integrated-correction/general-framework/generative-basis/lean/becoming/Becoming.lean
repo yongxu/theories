@@ -4730,7 +4730,8 @@ tagged instance or application.
   (only the dweller returns; the supplied clearer and it part), `Clearing.clearer_beyond_returning_feeding`,
   `Drawing.returning_feeding_apart`, `Unexchanged.apart`. Which relation and which reading of the standpoints
   stay choices. A leaf; short compositions, none new as mathematics.
-* `Becoming.OwnClass` (L2, through `Becoming.GrammarScope`, `Becoming.Centers` and `Becoming.FlowCenters`): a center's own class,
+* `Becoming.OwnClass` (L2, through `Becoming.GrammarScope`, `Becoming.Centers`, `Becoming.FlowCenters` and
+  `Becoming.Identity`): a center's own class,
   what the net fixes of it (board item ZC, route (b)'s de se piece). At an occurrence that conditions
   something, a class meeting 07 §4.6's P2 and P4 has its block closed under the net, and the converse
   holds where it is decided of each alike occurrence whether it conditions something

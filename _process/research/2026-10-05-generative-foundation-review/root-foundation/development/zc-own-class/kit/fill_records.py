@@ -65,9 +65,9 @@ G2_LAWS = [
     ({"en": "Under every class meeting P2 and P4 at an occurrence, its line reaches exactly what a line under the one reaches; given P2, P4 is equivalent to that. With each center under a class of its own meeting P2 and P4, the per-center condition along the net is the condition at the one, and along a net with no cycle it holds only where every center is one and the same occurrence.",
       "zh": "凡于一事件满足 P2 与 P4 之类，其线所及恰为一之线所及；有 P2 时，P4 等价于此。各中心皆在其自满足 P2 与 P4 之类下时，各中心之沿网之条件即一之条件；于无环之网，唯诸中心为同一事件时成立。"},
      ["«本类常闭则所及即一之所及»", "«本类常则闭当且仅当所及即一之所及»", "«各本类常闭则续无外即一之续无外»", "«各本类常闭续无外则同一中心»"]),
-    ({"en": "The identity meets P2 at every occurrence and fails P4 wherever the occurrence conditions something other than itself. P2 alone is not closed under meets, and where the occurrence conditions nothing the meet of two classes meeting P2 and P4 can fail P2.",
-      "zh": "同一处处满足 P2，凡事件有异于自身之所缘处不满足 P4。单有 P2 对交不封闭；事件无所缘处，满足 P2 与 P4 之二类之交可不满足 P2。"},
-     ["«静之本类至终有常»", "«静不闭»", "MeetBreaks.E_constant", "MeetBreaks.F_constant", "MeetBreaks.meet_not_constant",
+    ({"en": "The identity meets P2 at every occurrence, the least class that does, and fails P4 wherever the occurrence conditions something other than itself. P2 alone is not closed under meets, and where the occurrence conditions nothing the meet of two classes meeting P2 and P4 can fail P2.",
+      "zh": "同一处处满足 P2，为满足之最细类，凡事件有异于自身之所缘处不满足 P4。单有 P2 对交不封闭；事件无所缘处，满足 P2 与 P4 之二类之交可不满足 P2。"},
+     ["«静之本类至终有常»", "«静最细»", "«静不闭»", "MeetBreaks.E_constant", "MeetBreaks.F_constant", "MeetBreaks.meet_not_constant",
       "MeetBreaks.meet_not_constant_at", "MeetBreaks.not_held", "MeetBreaks.idle_both", "MeetBreaks.idle_meet_not_constant"]),
 ]
 
@@ -79,7 +79,7 @@ G2_EXTRA = ["JoinBreaks.Occ", "JoinBreaks.step", "JoinBreaks.labelE", "JoinBreak
 G5_LAWS = [
     ({"en": "Read on a flow as a net along affecting, with a formation's class \"within its coupling closure or not\", P4 holds exactly where everything the formation affects lies within its coupling closure, and with coupling by threshold only, exactly where whatever it affects can affect it back at some remove.",
       "zh": "以流为沿影响之网读之，形成者之类取「在其耦合闭包内与否」，则 P4 恰当其所影响者皆在其耦合闭包内时成立；仅按阈值耦合时，恰当其所影响者皆能辗转影响回它。"},
-     ["«内外»", "«内外为类»", "«内外之所缘同于»", "Flow.CouplingClass", "Flow.couplingClass_class", "Flow.couplingClass_held_iff",
+     ["«内外之所缘同于»", "Flow.CouplingClass", "Flow.couplingClass_class", "Flow.couplingClass_held_iff",
       "Flow.couplingClass_held_iff_back"]),
     ({"en": "Everything downstream of the formation lies on its line under this class exactly where everything within its reach lies within its coupling closure: wherever its acts return, for every coupling by level, and with coupling by threshold only, exactly there.",
       "zh": "此类下，形成者下游一切在其线上，恰当其所及皆在其耦合闭包内：凡其行为返回处，对每一按水平之耦合皆然；仅按阈值耦合时，恰在彼处。"},
@@ -196,7 +196,7 @@ def main():
                     B("Flow.couplingClass_line_iff_loop"), B("«返之所及即环»")],
         "dependencies": [
             {"id": "where-a-formations-acts-return", "relation": "formal-reuse",
-             "detail": {"en": "Flow.ReachReturns, Flow.InOneLoop, Flow.withinReach_iff_influence and ReachReturns.represented.", "zh": "Flow.ReachReturns、Flow.InOneLoop、Flow.withinReach_iff_influence 与 ReachReturns.represented。"}},
+             "detail": {"en": "Flow.ReachReturns, Flow.InOneLoop, Flow.withinReach_iff_influence, ReachReturns.represented and reachReturns_iff_represented.", "zh": "Flow.ReachReturns、Flow.InOneLoop、Flow.withinReach_iff_influence、ReachReturns.represented 与 reachReturns_iff_represented。"}},
             {"id": "what-the-net-fixes-of-ones-own-class", "relation": "formal-reuse",
              "detail": {"en": "«本类常闭则类闭», for what P2 and P4 ask under this class.", "zh": "«本类常闭则类闭»，用于此类下 P2 与 P4 之所问。"}}],
         "related": [

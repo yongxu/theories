@@ -2,6 +2,7 @@ import Becoming.GrammarPath
 import Becoming.GrammarScope
 import Becoming.Centers
 import Becoming.FlowCenters
+import Becoming.Identity
 
 /-!
 # A center's own class: what the net fixes of it (本类之定)
@@ -40,8 +41,8 @@ module answers it for the classes meeting P2 and P4, and reads the class on a fl
   meeting P2 and P4 at it, the per-center condition along the net is the condition at the one
   (`«各本类常闭则续无外即一之续无外»`), so along a net with no cycle it holds only where every center is
   one and the same occurrence (`«各本类常闭续无外则同一中心»`).
-* **P2 alone fixes only the moment (静之本类至终有常).** The identity meets P2 at every occurrence
-  (`«静之本类至终有常»`) and fails P4 wherever the occurrence conditions something other than itself
+* **P2 alone fixes only the moment (静最细).** The identity meets P2 at every occurrence and is the least
+  class that does (`«静之本类至终有常»`, `«静最细»`, near-definitional), and fails P4 wherever the occurrence conditions something other than itself
   (`«静不闭»`). P2 alone is not closed under meets: in `MeetBreaks`, two classes meet P2 at a member
   that conditions something and their meet does not (`MeetBreaks.meet_not_constant_at`). Where the
   member conditions nothing, P4 asks nothing and the meet of two classes meeting both can fail P2
@@ -313,36 +314,46 @@ theorem «各本类常闭续无外则同一中心» {Pos : Type} {R : «际» α
 theorem «静之本类至终有常» (R : «际» α) (m : α) : «本类至终有常» R «静» m :=
   fun u u' (mu : m = u) (mu' : m = u') v step => by subst mu; subst mu'; exact .inl ⟨v, step, rfl⟩
 
+/-- **The identity is the least class meeting P2 at an occurrence (静最细):** it meets P2 there, and every
+class contains it. Near-definitional: every class is reflexive. -/
+theorem «静最细» (R : «际» α) (m : α) :
+    «本类至终有常» R «静» m ∧ ∀ E : «际» α, «类» E → «则» «静» E :=
+  ⟨«静之本类至终有常» R m, fun _ hE x _ e => by subst e; exact hE.refl x⟩
+
 /-- **It fails P4 wherever the occurrence conditions something other than itself (静不闭).** -/
 theorem «静不闭» {R : «际» α} {m v : α} (step : R m v) (other : m ≠ v) : ¬ «所缘同于» R «静» m :=
   fun held => other (held v step)
 
-/-! ## A region read as a class -/
+end OwnClass
 
-/-- **A region read as a class (内外):** alike where both lie in it or both outside it. -/
-def «内外» (S : α → Prop) : «际» α := fun x y => (S x ↔ S y)
+/-! ## A region read as a class
 
-theorem «内外为类» (S : α → Prop) : «类» («内外» S) := ⟨fun _ => Iff.rfl, Iff.symm, Iff.trans⟩
+The class of a region is `Web.alikeBy` (`Becoming.Identity`): two occurrences are alike when both lie in it or
+neither does. It is stated for carriers in `Type`, so the laws of this part are too. -/
+
+section Region
+
+variable {α : Type}
 
 /-- **A line from inside a region, under the region's class, stays inside it (内外之线不出).** -/
 theorem «内外之线不出» {R : «际» α} {S : α → Prop} {f t : α} (inside : S f)
-    (reached : «所及» R («内外» S) f t) : S t :=
+    (reached : «所及» R (Web.alikeBy S) f t) : S t :=
   match reached with
   | .inl e => e ▸ inside
-  | .inr line => («线内同类» («内外为类» S) line).mp inside
+  | .inr line => («线内同类» (Web.alikeBy_class S) line).mp inside
 
 /-- **Under a region's class, P4 at a member inside it is that everything it conditions lies inside
 (内外之所缘同于).** -/
 theorem «内外之所缘同于» {R : «际» α} {S : α → Prop} {f : α} (inside : S f) :
-    «所缘同于» R («内外» S) f ↔ ∀ v, R f v → S v :=
+    «所缘同于» R (Web.alikeBy S) f ↔ ∀ v, R f v → S v :=
   ⟨fun held v step => (held v step).mp inside,
    fun into v step => ⟨fun _ => into v step, fun _ => inside⟩⟩
 
 /-- **Under a region's class, everything downstream of a member inside it lies on its line exactly
 where everything downstream of it lies inside (内外之后皆续当且仅当后皆在内).** -/
 theorem «内外之后皆续当且仅当后皆在内» {R : «际» α} {S : α → Prop} {f : α} (inside : S f) :
-    (∀ t, «及» R f t → «所及» R («内外» S) f t) ↔ ∀ t, «及» R f t → S t :=
-  («后皆续当且仅当后皆同类» («内外为类» S)).trans
+    (∀ t, «及» R f t → «所及» R (Web.alikeBy S) f t) ↔ ∀ t, «及» R f t → S t :=
+  («后皆续当且仅当后皆同类» (Web.alikeBy_class S)).trans
     ⟨fun alike t down => (alike t down).mp inside,
      fun into t down => ⟨fun _ => into t down, fun _ => inside⟩⟩
 
@@ -351,7 +362,7 @@ theorem «内外之后皆续当且仅当后皆在内» {R : «际» α} {S : α 
 /-- A path along the net to an occurrence that reaches `f` back lies on a line under the class of what
 can reach `f`. -/
 theorem «返之线» {R : «际» α} {f a t : α} (down : «及» R a t) (back : «所闭» R t f) :
-    «相续» R («内外» («所闭» («逆» R) f)) a t := by
+    «相续» R (Web.alikeBy («所闭» («逆» R) f)) a t := by
   revert back
   induction down with
   | @one a b step =>
@@ -367,7 +378,7 @@ theorem «返之线» {R : «际» α} {f a t : α} (down : «及» R a t) (back
 /-- **Under the class of what can reach a member, its line reaches exactly its loop (返之所及即环):**
 what it reaches that reaches it back. -/
 theorem «返之所及即环» {R : «际» α} {f t : α} :
-    «所及» R («内外» («所闭» («逆» R) f)) f t ↔ «所闭» R f t ∧ «所闭» R t f :=
+    «所及» R (Web.alikeBy («所闭» («逆» R) f)) f t ↔ «所闭» R f t ∧ «所闭» R t f :=
   ⟨fun reached =>
      ⟨match reached with
        | .inl e => by subst e; exact «所闭之自反» R _
@@ -380,7 +391,7 @@ theorem «返之所及即环» {R : «际» α} {f t : α} :
 /-- **Under that class, everything downstream of a member lies on its line exactly where everything it
 reaches reaches it back (返之后皆续当且仅当皆返).** -/
 theorem «返之后皆续当且仅当皆返» {R : «际» α} {f : α} :
-    (∀ t, «及» R f t → «所及» R («内外» («所闭» («逆» R) f)) f t) ↔
+    (∀ t, «及» R f t → «所及» R (Web.alikeBy («所闭» («逆» R) f)) f t) ↔
       ∀ t, «所闭» R f t → «所闭» R t f :=
   («内外之后皆续当且仅当后皆在内» («所闭之自反» _ f)).trans
     ⟨fun into t there => match «所闭当且仅当同一或及».mp there with
@@ -391,14 +402,14 @@ theorem «返之后皆续当且仅当皆返» {R : «际» α} {f : α} :
 /-- **Along a net with no cycle, the line from an occurrence under the class of what can reach it reaches
 only the occurrence itself (无环则返之所及唯己).** -/
 theorem «无环则返之所及唯己» {R : «际» α} (acyclic : «无环» R) {f t : α}
-    (reached : «所及» R («内外» («所闭» («逆» R) f)) f t) : f = t :=
+    (reached : «所及» R (Web.alikeBy («所闭» («逆» R) f)) f t) : f = t :=
   match «返之所及即环».mp reached with
   | ⟨there, back⟩ => match «所闭当且仅当同一或及».mp there, «所闭当且仅当同一或及».mp back with
     | .inl e, _ => e
     | _, .inl e => e.symm
     | .inr a, .inr b => absurd («及之传递» a b) (acyclic f)
 
-end OwnClass
+end Region
 
 /-- **At an element returning along the net (`ReturnsAlong`, `Becoming.FlowCenters`), the element's class of
 what follows it meets P2 and P4, and is the least class meeting them.** `ReturnsAlong` is the hypothesis of
@@ -688,7 +699,7 @@ def step : «际» Occ
   | .h, .h => False
 
 /-- The class of what can reach `f`. -/
-def back : «际» Occ := «内外» («所闭» («逆» step) .f)
+def back : «际» Occ := Web.alikeBy («所闭» («逆» step) .f)
 
 theorem within_f {t : Occ} (within : «所闭» step .f t) : t = .f ∨ t = .k :=
   within (fun x => x = .f ∨ x = .k) (fun u v inside s => by
@@ -716,9 +727,9 @@ theorem reach_without_regularity :
     (∀ t, «及» step .f t → «所及» step back .f t) ∧ «所缘同于» step back .f ∧
       ¬ «本类至终有常» step back .f :=
   have reach := «返之后皆续当且仅当皆返».mpr returns
-  ⟨reach, «后皆续则所缘同于» («内外为类» _) reach, fun atClass =>
+  ⟨reach, «后皆续则所缘同于» (Web.alikeBy_class _) reach, fun atClass =>
     match atClass .g .f ⟨fun _ => «所闭之逆».mpr g_back, fun _ => «所闭之自反» _ _⟩
-        ((«内外为类» _).refl _) .h (show step .g .h from trivial) with
+        ((Web.alikeBy_class _).refl _) .h (show step .g .h from trivial) with
     | .inl ⟨v', s, e⟩ => by
       cases v' <;> first
         | exact False.elim s
@@ -738,9 +749,9 @@ variable {L : Flow F C} {W : Web F C} {obs : F → C → Prop} {f g : F}
 /-- **The class of a formation's coupling closure (CouplingClass):** alike where both lie within it,
 or both beyond it. -/
 def CouplingClass (L : Flow F C) (W : Web F C) (obs : F → C → Prop) (f : F) : «际» F :=
-  «内外» (L.WithinCoupling W obs f)
+  Web.alikeBy (L.WithinCoupling W obs f)
 
-theorem couplingClass_class : «类» (L.CouplingClass W obs f) := «内外为类» _
+theorem couplingClass_class : «类» (L.CouplingClass W obs f) := Web.alikeBy_class _
 
 /-- **P4 read on a flow:** the class of `f`'s coupling closure holds `f`'s effects exactly where
 everything `f` affects lies within its coupling closure. -/
@@ -779,9 +790,7 @@ theorem ReachReturns.couplingClass_reach (returns : L.ReachReturns W f) :
 theorem couplingClass_reach_iff_returns :
     (∀ g, «及» (L.Affects W) f g → «所及» (L.Affects W) (L.CouplingClass W thresholdOnly f) f g) ↔
       L.ReachReturns W f :=
-  couplingClass_reach_iff.trans
-    ⟨fun into g within => withinReach_iff_influence.mpr (withinCoupling_thresholdOnly.mp (into g within)),
-     fun returns _ within => returns.represented within⟩
+  couplingClass_reach_iff.trans reachReturns_iff_represented.symm
 
 /-- **The line from `f` under the class of its coupling closure stays within its reach and its coupling
 closure.** -/

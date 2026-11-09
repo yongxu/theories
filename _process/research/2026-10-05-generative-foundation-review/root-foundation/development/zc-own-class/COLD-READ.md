@@ -98,3 +98,11 @@ astra read the route (b) pieces read-only and wrote an AI reading at `/Users/ren
 5. "Only with one center" means that every center is one and the same occurrence. 07, the docstring and record 1 now say so.
 6. At an element whose closure returns, `«后类»` meets P2 and P4 with no decision. This was proved as astra sketched it: the first step of the path back gives the effect. The results are `«返则后类本类常闭»` and `«及之首步»`, and, stated with G1's definition, `ReturnsAlong.downstreamClass_regular`, which also gives leastness through `«后类最细»`.
 7. Generalizing `«续无外则同一中心»` to classes indexed by centers needs no P2 or P4, since each line projects into the net. It is left to the join, as the relay asked: it would edit `GrammarScope`, below many modules.
+
+## Two more readings of the join (Opus and Fable, relayed by the starting session)
+
+1. Ren's route (b) words have one copy, main's. G1's, which landed first, was taken at the merge.
+2. Board rule 9. The draft's `«内外»` and `«内外为类»` are `Web.alikeBy` and `Web.alikeBy_class` (Identity). They are dropped, and the module imports Identity and uses `alikeBy`, so the region laws are stated for carriers in `Type`. GrammarPath's `«二分»` is the Bool-decided form. `Flow.couplingClass_reach_iff_returns` is now derived from Centers' `reachReturns_iff_represented` instead of re-proving it.
+3. INTERFACES now gives `couplingClass_closed`'s premise and the right counts. The claim "P2 alone has the moment as its least class" now has a theorem, `«静最细»` (near-definitional).
+4. `«返则后类本类常闭»` lands with this landing. `«及之首步»` repeats G3's `ChoiceOccasions.reach_first_step`, and which one derives the other is left to the join.
+5. 07's order at the merge after G3 is G1's §4.8, G3's §4.9, then §4.10.
