@@ -17,10 +17,10 @@ read two ways: every formation, as 03 reads them; or only the formations whose a
 * **Every formation its own center.** Where every formation is some standpoint's center, held de
   se along affecting or along being affected the presupposition is the continuation condition
   exactly where the flow is mutually dependent (route (b)'s G3 piece,
-  `Flow.mutuallyDependent_iff_unrestricted`), and along feeding exactly where it is mutually fed
-  (`Flow.mutuallyFed_iff_unrestricted`). With every formation that takes part a standpoint,
-  covering holds by reflexivity alone; so read, covering from activity is near-definitional
-  (`Flow.covering_of_acting`).
+  `Flow.mutuallyDependent_iff_unrestricted`, not imported here), and along feeding exactly where it
+  is mutually fed (`Flow.mutuallyFed_iff_unrestricted`). With every formation that exchanges with
+  some condition a standpoint, covering holds by reflexivity alone; so read, covering from activity
+  is near-definitional (`Flow.covering_of_acting`).
 * **Returning along a relation.** An element returns along a relation where whatever lies within
   its closure has it within its own (`ReturnsAlong`); along affecting this is `Flow.ReachReturns`
   (`Flow.reachReturns_iff_returnsAlong`). A returning element's own closure is its loop
@@ -31,13 +31,14 @@ read two ways: every formation, as 03 reads them; or only the formations whose a
   standpoint (`ownClosure_unrestricted_of_none`). It is standpoint-invariant exactly where any two
   returning elements lie in one loop (`ownClosure_standpointInvariant_atReturning_iff`).
 * **The returning formations as the standpoints.** Held de se along affecting at the formations
-  whose acts return (`Flow.Returning`), the presupposition is the continuation condition only where
-  the flow is mutually dependent, given one of them
-  (`Flow.mutuallyDependent_of_returning_unrestricted`; on the root, `«续无外»` at the one of
-  affecting, `Flow.mutuallyDependent_of_returning_noOutside`). Mutual dependence gives it at every
-  center (`Flow.unrestricted_of_mutuallyDependent`, G3's piece), so along affecting it is exactly
-  mutual dependence, as with every formation a center: the two readings of the standpoints give one
-  condition there, a property of the flow alone.
+  whose acts return (`Flow.Returning`), given one of them, the presupposition is the continuation
+  condition exactly where the flow is mutually dependent
+  (`Flow.returning_unrestricted_iff_mutuallyDependent`; the direction from the condition,
+  `Flow.mutuallyDependent_of_returning_unrestricted`, is the one route (b)'s joining lemma,
+  `Flow.unrestricted_of_mutuallyDependent`, G3's and not imported here, does not give; on the root,
+  `«续无外»` at the one of affecting, `Flow.mutuallyDependent_of_returning_noOutside`). So along
+  affecting the two readings of the standpoints give one condition, as with every formation a
+  center: a property of the flow alone.
   Under mutual dependence every formation's acts return (`Flow.MutuallyDependent.reachReturns`).
   The step from each standpoint's own continuation, at the returning formations, gives the
   condition exactly where every formation's acts return (`Flow.atReturning_unrestricted_iff`).
@@ -58,9 +59,9 @@ read two ways: every formation, as 03 reads them; or only the formations whose a
   (`Clearing.reachReturns_iff`). Held de se along being affected, the presupposition is the
   condition at the returning formations, and is not with the clearer as the one center supplied;
   along affecting it is not, and the flow is not mutually dependent (`Clearing.returning_apart`).
-  With the clearer as the one center, the step from its own continuation retains under the
-  clearer's part, while from the dweller, under the significance held de se along being affected at
-  the returning formations, the part loses the dweller (`Clearing.returning_loses_dweller`).
+  Under that one reading the clearer's part retains with the clearer as the one center and loses
+  the dweller from the dweller (`Clearing.returning_loses_dweller`): the verdict changes with the
+  center alone.
 * **The relation still matters.** In `Drawing`, a balanced pair each taking from what the other
   depends on, every formation's acts return; held de se at them the presupposition is the condition
   along affecting and along being affected, and not along feeding
@@ -69,7 +70,8 @@ read two ways: every formation, as 03 reads them; or only the formations whose a
   in `Clearing` the clearer takes part, and lies within the feeding closure of no formation whose
   acts return (`Clearing.clearer_beyond_returning_feeding`). Standpoints read as bearing on
   themselves (`Web.SelfBearing`) as well as returning: in `Unexchanged` every formation's acts
-  return and none bears on itself, so that reading has no standpoint and covers nothing; there the
+  return and none bears on itself, so that reading has no standpoint and, there being formations,
+  covers none of them; there the
   step from each standpoint's own continuation at the returning formations gives the condition,
   and the de se condition along affecting fails (`Unexchanged.apart`).
 
@@ -154,8 +156,8 @@ variable {F C : Type} {L : Flow F C} {W : Web F C}
 
 /-- **Where every formation is some standpoint's center, held de se along feeding, the
 presupposition is the continuation condition exactly where the flow is mutually fed.** Along
-affecting and along being affected it is mutual dependence (`Flow.mutuallyDependent_iff_unrestricted`
-of route (b)'s G3 piece); along feeding it is the stronger mutual feeding. -/
+affecting and along being affected it is mutual dependence (`Flow.mutuallyDependent_iff_unrestricted`,
+route (b)'s G3 piece, not imported here); along feeding it is the stronger mutual feeding. -/
 theorem mutuallyFed_iff_unrestricted {Pos : Type} {center : Pos → F}
     (onto : ∀ f, ∃ p, center p = f) :
     L.MutuallyFed W ↔ Unrestricted (selfAscribed (ownClosure (L.FedFrom W)) center) :=
@@ -164,9 +166,9 @@ theorem mutuallyFed_iff_unrestricted {Pos : Type} {center : Pos → F}
      | ⟨p, at_⟩ => Eq.subst (motive := fun x => L.WithinFeeding W x g) at_
          (ownClosure_unrestricted_iff.mp unrestricted p g)⟩
 
-/-- **Covering from activity, read with every formation that takes part a standpoint.** Every
-formation that takes from or gives to some condition lies within some such standpoint's closure,
-along any relation: its own, by reflexivity. Near-definitional. -/
+/-- **Covering from activity, read with every formation that exchanges with some condition a
+standpoint.** Every such formation lies within some such standpoint's closure, along any relation:
+its own, by reflexivity. Near-definitional. -/
 theorem covering_of_acting (rel : F → F → Prop) {g : F} (acts : ∃ c, L.Exchanges g c) :
     ∃ p : {f : F // ∃ c, L.Exchanges f c}, WithinClosure rel p.1 g :=
   ⟨⟨g, acts⟩, WithinClosure.refl g⟩
@@ -187,6 +189,15 @@ theorem mutuallyDependent_of_returning_unrestricted (some : ∃ c, L.ReachReturn
       Unrestricted (selfAscribed (ownClosure (L.Affects W)) (Subtype.val : L.Returning W → F))) :
     L.MutuallyDependent W :=
   mutuallyDependent_iff_reach.mpr ((ownClosure_unrestricted_atReturning_iff some).mp unrestricted)
+
+/-- **Held de se along affecting at the returning formations, the presupposition is the
+continuation condition exactly where the flow is mutually dependent**, given one of them: the first
+law with mutual dependence read forward. Its backward half is also route (b)'s joining lemma
+(`Flow.unrestricted_of_mutuallyDependent`, G3's, not imported here) at these centers. -/
+theorem returning_unrestricted_iff_mutuallyDependent (some : ∃ c, L.ReachReturns W c) :
+    Unrestricted (selfAscribed (ownClosure (L.Affects W)) (Subtype.val : L.Returning W → F)) ↔
+      L.MutuallyDependent W :=
+  (ownClosure_unrestricted_atReturning_iff some).trans mutuallyDependent_iff_reach.symm
 
 /-- **On the root, at the returning formations and along affecting, the condition `«续无外»` holds
 only where the flow is mutually dependent**, given one of them: `ownClosure_unrestricted_iff_noOutside`
@@ -326,15 +337,20 @@ theorem returning_apart :
      reach_centred (ownClosure_unrestricted_iff.mp unrestricted ⟨.dweller, dweller_returns⟩ .clearer),
    shares_not_mutual.2⟩
 
-/-- **The verdicts part with the center.** With the clearer as the one center, the step from its
-own continuation retains under the clearer's part; from the dweller, under the significance held
-de se along being affected at the returning formations, the part loses the dweller. -/
+/-- **The verdicts part with the center.** Under one reading, significance held de se along being
+affected, the clearer's part retains with the clearer as the one center, the dweller lying beyond
+the clearer's influence closure, and loses the dweller from the dweller, the formation whose acts
+return. -/
 theorem returning_loses_dweller {l : Nat → Place → Nat}
     (without : flow.WithheldLevels clearerPart web l) :
-    web.Retains (atCenters fun (_ : Unit) => Formation.clearer) () web.level l ∧
+    web.Retains (selfAscribed (ownClosure (flow.AffectedBy web))
+        (fun (_ : Unit) => Formation.clearer)) () web.level l ∧
       ¬ web.Retains (selfAscribed (ownClosure (flow.AffectedBy web))
         (Subtype.val : flow.Returning web → Formation)) ⟨.dweller, dweller_returns⟩ web.level l :=
-  ⟨(centers_retain_yet_loses without (sig := fun _ _ _ => True) fun _ => trivial).1,
+  ⟨(Web.retains_bounded_iff
+      (region := fun (_ : Unit) g => flow.WithinInfluence web .clearer g)).mpr fun t =>
+        ((loses_beyond without).1 t).2.2.narrow
+          fun _ within => within alongDependence alongDependence_closed trivial,
    (clearer_loses_dweller without returning_apart.2.1 ⟨.dweller, dweller_returns⟩).2.1⟩
 
 /-- Nothing feeds the dweller's continuation: nothing gives to its habitat. -/
@@ -378,8 +394,7 @@ theorem returning_feeding_apart :
         (Subtype.val : flow.Returning web → Bool)) :=
   have returns := Flow.MutuallyDependent.reachReturns mutuallyDependent
   ⟨returns,
-   (ownClosure_unrestricted_atReturning_iff ⟨true, returns true⟩).mpr
-     (Flow.mutuallyDependent_iff_reach.mp mutuallyDependent),
+   (Flow.returning_unrestricted_iff_mutuallyDependent ⟨true, returns true⟩).mpr mutuallyDependent,
    ownClosure_unrestricted_iff.mpr fun p g => mutuallyDependent p.1 g,
    fun unrestricted =>
      mutual_not_fed.2.2.1 (ownClosure_unrestricted_iff.mp unrestricted ⟨true, returns true⟩ false)⟩

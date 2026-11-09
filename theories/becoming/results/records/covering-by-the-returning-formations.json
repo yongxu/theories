@@ -31,8 +31,8 @@
       ]
     },
     {
-      "en": "Covering from activity, read with every formation that takes part a standpoint, holds by reflexivity alone. Along feeding, by the formations whose acts return, it fails: in Clearing the clearer takes part and lies within no returning formation's feeding closure.",
-      "zh": "由活动而来的覆盖，若以每个参与的构成为立场，只凭自反即成立。沿“供养”、以所为回返的构成，则不成立：在 Clearing 中清除者参与，却不在任何回返构成的供养闭包内。",
+      "en": "Covering from activity, read with every formation that exchanges with some condition a standpoint, holds by reflexivity alone. Along feeding, by the formations whose acts return, it fails: in Clearing the clearer takes from its resource and lies within no returning formation's feeding closure.",
+      "zh": "由活动而来的覆盖，若以每个与某条件交换的构成为立场，只凭自反即成立。沿“供养”、以所为回返的构成，则不成立：在 Clearing 中清除者取用其资源，却不在任何回返构成的供养闭包内。",
       "declarations": [
         "Becoming.Flow.covering_of_acting",
         "Becoming.Clearing.dweller_feeding_closed",
@@ -95,16 +95,16 @@
     "decidability"
   ],
   "validation_scope": {
-    "en": "Pure core, axiom reports empty; a leaf. Written by an AI; one AI reader of another model read the statements against this record and the home section, cold, for overclaim (READER in the study folder); no human audit. Every law is a short composition of the closure laws, the one substantive step being the existing law that a returning formation lies in every formation's reach on finitely many; none is new as mathematics.",
-    "zh": "纯核心，公理报告为空；叶模块。AI 所写；另一模型的一位 AI 读者对照此记录与归属节冷读诸陈述，查是否言过其实（见研究目录 READER）；无人类审计。每条规律都是闭包律的简短组合，唯一实质一步是已有之律：构成有限时每个构成所及之内有一个回返者；无一是新数学。"
+    "en": "Pure core, axiom reports empty; a leaf. Written by an AI; one AI reader of another model read the statements against the Lean, this record and the home section, cold, for overclaim, then the corrections (READER in the study folder); no human audit. Every law is a short composition of the closure laws, the one substantive step being the existing law that a returning formation lies in every formation's reach on finitely many; none is new as mathematics.",
+    "zh": "纯核心，公理报告为空；叶模块。AI 所写；另一模型的一位 AI 读者对照 Lean、此记录与归属节冷读诸陈述，查是否言过其实，再读其修正（见研究目录 READER）；无人类审计。每条规律都是闭包律的简短组合，唯一实质一步是已有之律：构成有限时每个构成所及之内有一个回返者；无一是新数学。"
   },
   "next_delta": {
     "en": "Covering where formations are not finitely many, read with time: whether a run whose reach keeps growing has formations whose acts return, and what the step then reaches.",
     "zh": "构成非有限时、以时间读的覆盖：所及不断增长的运行是否有所为回返的构成，以及此时不变之步达到什么。"
   },
   "correspondence": {
-    "en": "In a finite digraph every vertex reaches a terminal strongly connected component; here that is covering by the returning formations along being affected.",
-    "zh": "有限有向图中每个顶点都可达某个终端强连通分支；此处即沿“受影响”由回返构成的覆盖。"
+    "en": "In a finite digraph every vertex reaches a sink strongly connected component, one no arc leaves; here that is covering by the returning formations along being affected.",
+    "zh": "有限有向图中每个顶点都可达某个汇点强连通分支，即无弧离开者；此处即沿“受影响”由回返构成的覆盖。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean",
   "aliases": [
@@ -169,7 +169,7 @@
         "Becoming.Clearing.dweller_feeding_closed",
         "Becoming.Clearing.clearer_beyond_returning_feeding"
       ],
-      "sha256": "2447adb43a6efbb71e6c7166c8d3a359cecffe7d4d86aea078b9ba0da2a8db55"
+      "sha256": "46e6aa5e5bb262361907f722f3dbd65b0ec10b942a7846882f9193c42d97c26f"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/za-g1-centers/NOTE.md",
@@ -180,15 +180,15 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "c2e14289264a251fda111a57cbce00b986f10098700e49c7ce93ba1014f87789",
+      "sha256": "03e562326d74ce0c8540633d36d9391b8cdfb22eac86d45d1f45ba9db2e65a3c",
       "declarations": []
     }
   ],
   "proof_bindings": [],
   "history": [
     {
-      "en": "9 November 2026, board item ZA-G1 (route (b) of the zero-axiom target, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md): added. The relation and the standpoints of the own-closure reading read off a flow; one AI reader of another model read the statements cold for overclaim; study folder za-g1-centers.",
-      "zh": "2026年11月9日，看板项 ZA-G1（零公理目标的路线 (b)，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md）：新增。自身闭包读法的关系与立场从流读出；另一模型的一位 AI 读者冷读诸陈述，查是否言过其实；研究目录 za-g1-centers。"
+      "en": "9 November 2026, board item ZA-G1 (route (b) of the zero-axiom target, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md): added. The relation and the standpoints of the own-closure reading read off a flow; one AI reader of another model read the statements cold for overclaim, then the corrections; study folder za-g1-centers.",
+      "zh": "2026年11月9日，看板项 ZA-G1（零公理目标的路线 (b)，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md）：新增。自身闭包读法的关系与立场从流读出；另一模型的一位 AI 读者冷读诸陈述，查是否言过其实，再读其修正；研究目录 za-g1-centers。"
     }
   ]
 }

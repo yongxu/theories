@@ -42,20 +42,20 @@ What each gives, with the laws restated at it:
 | standpoints | condition along affecting | along being affected | covering | exists |
 |---|---|---|---|---|
 | every formation (03) | mutual dependence (G3's `Flow.mutuallyDependent_iff_unrestricted`) | mutual dependence | by reflexivity | always |
-| formations whose acts return | mutual dependence, given one (`Flow.mutuallyDependent_of_returning_unrestricted` and the generic iff) | they lie in one loop (finite; `Flow.returning_influence_unrestricted_iff`) | along being affected, finite (`Flow.covered_by_returning`) | finite (`Flow.exists_reachReturns`) |
-| returning and bearing on themselves | as above, given one | as above, given one | fails: none in `Unexchanged` | fails (`Unexchanged.apart`) |
+| formations whose acts return | mutual dependence, given one (`Flow.returning_unrestricted_iff_mutuallyDependent`; the new direction `Flow.mutuallyDependent_of_returning_unrestricted`) | they lie in one loop (finite; `Flow.returning_influence_unrestricted_iff`) | along being affected, finite (`Flow.covered_by_returning`) | finite (`Flow.exists_reachReturns`) |
+| returning and bearing on themselves | not proved here (the forward direction would follow as above, given one) | not proved here (the iff's backward half needs covering, which fails) | fails: none in `Unexchanged` | fails (`Unexchanged.apart`) |
 | lines continuing to the net's end | needs the class (G2) | | | |
 
 The returning formations are chosen as the second reading because the laws hold at them as statements about the flow (the condition along affecting is mutual dependence, as with every formation; covering and existence are theorems on finite flows, not obtained by making everything a standpoint), and because at them what a formation acts on lies within what it can represent (`ReachReturns.represented`), which is where route (b)'s "should" has no gap for its own act (07 §3.3). `Web.SelfBearing` narrows them and adds no law, and loses existence and covering. The line candidate needs the class. The choice is a reading; the flow does not make it.
 
-What the returning reading costs, said plainly: a formation that acts on nothing returns vacuously (the dweller in `Clearing`; every formation in `Unexchanged`), and on an acyclic flow the returning formations are exactly those that reach nothing beyond themselves.
+What the returning reading costs, said plainly: a formation that acts on nothing returns vacuously (the dweller in `Clearing`; every formation in `Unexchanged`), and on an acyclic flow the returning formations are exactly those that reach nothing beyond themselves (argued here, not stated in Lean: a returning formation reaching another would lie on a cycle with it).
 
 ## 4. Failed candidates and witnesses, kept
 
-- **Covering from activity along feeding** (Fable's `Flow.covering_of_acting`, proposed as "every formation that gives or takes lies within some active formation's feeding closure"). Read with every acting formation a standpoint it holds by reflexivity and says nothing (`Flow.covering_of_acting`, near-definitional). Read with the returning formations as standpoints, along feeding it fails: in `Clearing` the clearer takes part and lies within no returning formation's feeding closure (`Clearing.clearer_beyond_returning_feeding`). Covering holds along being affected (`Flow.covered_by_returning`).
+- **Covering from activity along feeding** (Fable's `Flow.covering_of_acting`, proposed as "every formation that gives or takes lies within some active formation's feeding closure"). Read with every formation that exchanges with some condition a standpoint it holds by reflexivity and says nothing (`Flow.covering_of_acting`, near-definitional). Read with the returning formations as standpoints, along feeding it fails: in `Clearing` the clearer takes from its resource and lies within no returning formation's feeding closure (`Clearing.clearer_beyond_returning_feeding`). Covering holds along being affected, on finitely many formations with reach decided (`Flow.covered_by_returning`).
 - **Self-bearing standpoints.** `Unexchanged`: every formation returns, none bears on itself.
 - **The relation.** `Drawing`: every formation returns; the condition holds along affecting and being affected, not along feeding.
-- **The center.** `Clearing`: only the dweller returns; along being affected the condition holds at it and fails with the clearer as the one center supplied, and the verdict on the clearer's part changes with the center (`Clearing.returning_apart`, `Clearing.returning_loses_dweller`). G3's `Clearing.not_unrestricted_ownClosure` (with every formation a center, neither de se reading is the condition) is the other reading's half: the two readings of the standpoints part on `Clearing` along being affected.
+- **The center.** `Clearing`: only the dweller returns; along being affected the condition holds at it and fails with the clearer as the one center supplied (`Clearing.returning_apart`), and under that one reading the clearer's part retains with the clearer as the center and loses the dweller from the dweller, so the verdict changes with the center alone (`Clearing.returning_loses_dweller`). G3's `Clearing.not_unrestricted_ownClosure` (with every formation a center, neither de se reading is the condition) is the other reading's half: the two readings of the standpoints part on `Clearing` along being affected.
 
 ## 5. What route (b)'s three supplied inputs are now
 
@@ -67,8 +67,8 @@ And still supplied beyond these: that significance is own closure at all (07 §1
 
 ## 6. Not re-proved
 
-`Flow.unrestricted_of_mutuallyDependent` and `Flow.mutuallyDependent_iff_unrestricted` are G3's (branch `claude/unruffled-dirac-983955`). This piece states the direction they do not (at the returning formations, the condition gives mutual dependence) and the feeding counterpart of the second (`Flow.mutuallyFed_iff_unrestricted`). The iff at the returning formations is one line for the joining (in the shared notes).
+`Flow.unrestricted_of_mutuallyDependent` and `Flow.mutuallyDependent_iff_unrestricted` are G3's (branch `claude/unruffled-dirac-983955`). This piece states the direction they do not (at the returning formations, the condition gives mutual dependence, `Flow.mutuallyDependent_of_returning_unrestricted`) and the feeding counterpart of the second (`Flow.mutuallyFed_iff_unrestricted`). The iff at the returning formations, `Flow.returning_unrestricted_iff_mutuallyDependent`, is the first law with `mutuallyDependent_iff_reach`; its backward half is also G3's lemma at these centers, which the module does not import.
 
 ## 7. Readers
 
-(Below, once read.)
+One AI reader of another model (Fable 5.1), cold, read-only, against the Lean: round 1 found no high finding, three medium and nine low; all were taken (one, the Clearing verdict witness, had been tightened before the report arrived and went to round 2 with the corrections). Round 2 read the corrections. The reports are in [READER.md](READER.md). No person's review is recorded.
