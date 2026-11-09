@@ -793,3 +793,16 @@ EDITS += [
      "the absence of any verdict binding every possible mind.",
      "the absence of any warrant binding every possible mind.", 1),
 ]
+
+# --- the reader's second round (review/reader-2.md): no high or medium; its three lows ---
+EDITS += [
+    (['cx-wamo-human-north-star'],
+     "Scope beyond the human, and the absence of any warrant binding every possible mind.",
+     "Scope beyond the human, and no claim of a warrant binding every possible mind.", 1),
+    (['cx-rsd-three-axes'],
+     "comes through a comparer's reading, with the condition for scope and whoever holds C for order, both unasserted.",
+     "comes through a comparer's reading, the continuation condition fixing scope and whoever holds C the order, neither reading asserted.", 1),
+    (['cx-fork-marks-of-capture'],
+     "A limit ending generation (monopolized entry,",
+     "A limit severing life (绝生之限) (monopolized entry,", 1),
+]

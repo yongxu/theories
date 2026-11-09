@@ -14,7 +14,7 @@ It also used three homes these entries quote: 02 §7, 06's D49 and D65 readings 
 
 ## What changed
 
-There are 243 exact replacements, in 253 fields of 200 entries: 246 fields of 194 crosswalk entries, 3 fields of 2 dynamics entries, and 4 group summaries. The count includes the reader's fixes (below). Each re-says the field from its home's current words. [`kit/edits.py`](kit/edits.py) lists every replacement with the entries it may touch and the number of fields it must change. [`kit/apply.py`](kit/apply.py) stops if any count differs. [`review/fields-changed.md`](review/fields-changed.md) gives every changed field before and after, with the home it restates. These are the shapes the pass found, in WB's readers' terms:
+There are 246 exact replacements, in 253 fields of 200 entries: 246 fields of 194 crosswalk entries, 3 fields of 2 dynamics entries, and 4 group summaries. The count includes the reader's fixes (below). Each re-says the field from its home's current words. [`kit/edits.py`](kit/edits.py) lists every replacement with the entries it may touch and the number of fields it must change. [`kit/apply.py`](kit/apply.py) stops if any count differs. [`review/fields-changed.md`](review/fields-changed.md) gives every changed field before and after, with the home it restates. These are the shapes the pass found, in WB's readers' terms:
 
 - **A ranking given a compulsory scope** (about 80 fields). Forms: "widening is better only under C for order, with the continuation condition for scope"; "asked only under the continuation condition for scope and C for order"; "scope from the condition"; "whose losses count is the condition's"; "the condition fixes only whose losses count". Each now names its scope and order, or says only that calling the wider better is C's.
 - **The ethics as two readings or two premises** (about 20). Examples: "the account rests its ethics on two unasserted premises", "in the ethics the condition fixes scope and C order", "the ethics' premises", "one chosen premise becomes two". Each now says the account asserts no should and that, where it ranks, a result names its readings, most often these two.
@@ -47,14 +47,13 @@ The window and quotation scans find quotations, not every restatement. The shape
 
 ## Hits kept, with their reasons
 
-After the edits and the reader's fixes, `check.py` reports 35 hits. Each is kept for one of the reasons below.
+After the edits and the reader's fixes, `check.py` reports 34 hits. Each is kept for one of the reasons below.
 
-- **The home still says it** (26 hits):
+- **The home still says it** (25 hits):
   - 07 §7's direction is Conditional on the continuation condition for scope, C read as widening for order, J1–J4 and correspondence E (6 hits);
   - 05's required organization is Conditional on the condition for scope through living significance, C for order with J1–J4, and correspondence (3);
   - 07's RR reading says "under C, with the continuation condition for scope, a comparison apart from the prospects' order" (3);
   - 07 §6's assessment says "With the condition for scope a loss beyond every rater's closure counts" (5);
-  - 06's D49 reading says 延续之条件定范围，持以广为愈（C）者定拓宽与收窄之序 (1);
   - 05's D65 reading is bracketed "scope by the continuation condition, and a ranking only under C or another named order" (1);
   - COLLECTIVE-DIRECTION §8 says "mixed comparisons stay unranked" (1);
   - 07's D45 reading at keeping widening says "生生 read as widening is generation of the possible that loses none of it" (3);
@@ -62,7 +61,7 @@ After the edits and the reader's fixes, `check.py` reports 35 hits. Each is kept
   - 07 §3.4's frame, "Under the continuation condition for scope, which ranks nothing" (1);
   - a true conditional, "with the continuation condition for scope every narrowing loses something with significance" (1).
 - **Dated history** (1): T8's former refuter, dated 9 November 2026.
-- **The field quotes its record, which is out of step with 05** (4, not matched by the scan's patterns): the code record's not-shown line, listed under the records below.
+- **The field quotes its record, which is out of step with 02 and 05** (8, not matched by the scan's patterns): the code record's not-shown line in four crosswalk `says` fields and three dynamics fields (`a-code-formed-between-formations` open.1, `merged-distinctions-stay-merged` mechanism and open.1), and `least-loss-rest` open.1; both records are listed below.
 - **The field quotes its record's own not-shown line** (5): "which giving supports 生生" (4) and "that returning, waxing or waning is good or supports 生生" (1). They match ten records' not-shown items. Read with 生生 as the continuation of life, they are not false.
 - **Not a wrong form** (3):
   - "that this is the 生生 of the ethics is no claim of the law";
@@ -79,7 +78,8 @@ These are not this pass's to change. They are homes or records, and an entry res
 - **Records.**
   - `generation-and-degeneration-at-two-grains`: its not-shown line and gloss say "the 生生 of life in the whole". The dynamics atlas now says "生生, the continuation of life". The record wants the same re-saying, with a history note.
   - `whole-drawing-beyond-renewal-ends`: its not-shown line points to "chapter 6" for significance, which is chapter 7.
-  - `a-code-formed-between-formations`: its not-shown line says "whether a shared, imposed or kept code keeps or closes 生生", and its Chinese 支持还是损害生生, where 05 now says "None ranks a code: what it keeps, opens or closes, and for whom, is 07's question". Four crosswalk `says` fields quote the record (`cx-ecs-scoped-adoption`, `cx-sspiral-what-can-be-said`, `cx-wamo-creation-coordination-edge`, `cx-cc-huang-jilei-mofan`) and are kept until it is re-said.
+  - `least-loss-rest`: its not-shown line reads "That coming to rest keeps or closes 生生, the continuation of life". One dynamics field quotes it.
+  - `a-code-formed-between-formations`: its not-shown line says "whether a shared, imposed or kept code keeps or closes 生生", and its Chinese 支持还是损害生生, where 05 now says "None ranks a code: what it keeps, opens or closes, and for whom, is 07's question". Four crosswalk `says` fields quote the record (`cx-ecs-scoped-adoption`, `cx-sspiral-what-can-be-said`, `cx-wamo-creation-coordination-edge`, `cx-cc-huang-jilei-mofan`), and so do three dynamics fields; all are kept until it is re-said.
   - Ten records carry "supports 生生" in not-shown items (kept above). For example `giving-that-waits-on-giving`, `hexagram-world-laws` and `where-two-courses-rejoin`.
 - **Stale quotations outside the ethics frame.** The quotation check found them, and this pass did not change them:
   - 05's former pool sentence, "resisting a capture hiding a loss needs a member admitted by what the pool does not yet read" (two crosswalk entries and two dynamics `open` items);
@@ -101,12 +101,14 @@ One reader other than the author, an AI subagent, read all 233 changed fields th
 - eleven unchanged fields still in 06's former D49 wording, six of them presented as 06's words;
 - two more fields in the old frame.
 
-All were fixed in its words or the home's ([`kit/edits.py`](kit/edits.py), the block after its heading), and the field list now shows every change against main. Its disagreements with this note were taken: the code record and its four fields are listed, 07 §2's sentence is named as an error in a live home, and the D49 claim now holds. The fixes were not read by a second round.
+All were fixed in its words or the home's ([`kit/edits.py`](kit/edits.py), the block after its heading), and the field list now shows every change against main. Its disagreements with this note were taken: the code record and its fields are listed, 07 §2's sentence is named as an error in a live home, and the D49 claim now holds.
+
+In a second round ([its report](review/reader-2.md)), the same reader read the 41 fields these fixes changed ([the list](review/fields-fixed-round1.md)) and found no high or medium. It found three lows, applied: a warrant's absence said as if none existed, a plural "both", and 06's 绝生之限 rendered with *generation*. It also found two corrections to this note, made. The rounds stop there, at the first with no high or medium.
 
 ## Checks
 
 - **Render.** `python3 -B tools/research/gate.py hold -- make research-render` (see the Queue line's landed clause for the result).
 - **Strict check and links.** `make research-check-strict` and `make research-links`.
-- **The reader.** One reader other than the author read the 233 fields first changed, and its findings are fixed ([above](#the-reader)); the 20 fields its fixes and the D49 sweep added were not read again.
+- **The reader.** One reader other than the author read the 233 fields first changed and, in a second round, the 41 its fixes changed; the second round found no high or medium ([above](#the-reader)).
 - **The gate.** `make gate` on the merged tree.
 - **Deferred.** The full suite is deferred to the phase's end.
