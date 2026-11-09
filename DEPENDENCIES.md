@@ -5,7 +5,7 @@
 
 [Home](README.md) · [中文](README.zh.md) · **Read** · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Uses](theories/becoming/USES.md) · **Check** · [Tests](TESTS.md) · [Results](RESULTS.md) · [Proofs](MAP.md#check-the-proofs-yourself) · [Open questions](OPEN-QUESTIONS.md) · [Reviewers](theories/becoming/review/README.md) · **See** · [Graph](theories/becoming/results/THEORY-GRAPH.md) · [Connections](theories/becoming/results/atlas/CROSSWALK.md) · [How it grew](theories/LINEAGE.md) · [Glossary](GLOSSARY.md) · [Where everything is](MAP.md)
 
-548 registered results: 517 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`), 4 open targets (`open`) and 7 superseded (`superseded`). 1309 curated edges join 474 results to the results they draw on.
+545 registered results: 514 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`), 4 open targets (`open`) and 7 superseded (`superseded`). 1303 curated edges join 471 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem, as the AI-written records assign the kind; the registry checks that an interface has its fields and cites a reviewed source, and nothing checks that the Lean there uses the cited result; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -39,7 +39,6 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [a-revision-that-opens-a-correction][] ← <a id="a-revision-that-opens-a-correction--when-to-inquire-and-when-to-respond"></a>[when-to-inquire-and-when-to-respond][] · <a id="a-revision-that-opens-a-correction--selection-when-the-lumping-changes"></a>[selection-when-the-lumping-changes][]
 - [a-rise-past-the-inflow-is-drawn-from-beyond][] ← <a id="a-rise-past-the-inflow-is-drawn-from-beyond--entropy-history-and-record"></a>[entropy-history-and-record][] · <a id="a-rise-past-the-inflow-is-drawn-from-beyond--what-a-rise-draws-from-beyond"></a>[what-a-rise-draws-from-beyond][] · <a id="a-rise-past-the-inflow-is-drawn-from-beyond--selection-through-couplings"></a>[selection-through-couplings][]
 - [a-rule-rebuilt-from-the-members-it-limits][] ← <a id="a-rule-rebuilt-from-the-members-it-limits--own-count-misses-joint-excess"></a>[own-count-misses-joint-excess][] *(interpretive)* · <a id="a-rule-rebuilt-from-the-members-it-limits--the-stock-buys-time-where-the-rebuild-draws-on-it"></a>[the-stock-buys-time-where-the-rebuild-draws-on-it][] *(interpretive)*
-- [a-selection-removing-its-readers][] ← <a id="a-selection-removing-its-readers--selection-read-off-continuations"></a>[selection-read-off-continuations][] · <a id="a-selection-removing-its-readers--which-readings-persist"></a>[which-readings-persist][]
 - [a-source-before-a-juncture][] ← <a id="a-source-before-a-juncture--every-loss-passes-a-juncture"></a>[every-loss-passes-a-juncture][] · <a id="a-source-before-a-juncture--timely-response-necessity"></a>[timely-response-necessity][]
 - [a-step-coupling-keeps-at-every-horizon][] ← <a id="a-step-coupling-keeps-at-every-horizon--keeping-forgoes-the-renewal-at-the-need"></a>[keeping-forgoes-the-renewal-at-the-need][] · <a id="a-step-coupling-keeps-at-every-horizon--horizon-optima-hold-the-greatest-renewal"></a>[horizon-optima-hold-the-greatest-renewal][] · <a id="a-step-coupling-keeps-at-every-horizon--what-an-optimum-does-beyond-what-couples-in"></a>[what-an-optimum-does-beyond-what-couples-in][]
 - [a-weighting-faster-than-renewal-ends-the-base][] ← <a id="a-weighting-faster-than-renewal-ends-the-base--horizon-optima-hold-the-greatest-renewal"></a>[horizon-optima-hold-the-greatest-renewal][] · <a id="a-weighting-faster-than-renewal-ends-the-base--a-step-coupling-keeps-at-every-horizon"></a>[a-step-coupling-keeps-at-every-horizon][] · <a id="a-weighting-faster-than-renewal-ends-the-base--what-an-optimum-does-beyond-what-couples-in"></a>[what-an-optimum-does-beyond-what-couples-in][]
@@ -295,7 +294,6 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [reading-anothers-couplings-is-pooling][] ← <a id="reading-anothers-couplings-is-pooling--what-pooled-coupling-reaches"></a>[what-pooled-coupling-reaches][] · <a id="reading-anothers-couplings-is-pooling--the-gap-for-ones-own-act"></a>[the-gap-for-ones-own-act][]
 - [reading-through-a-pool][] ← <a id="reading-through-a-pool--how-fast-a-rule-may-change"></a>[how-fast-a-rule-may-change][]
 - [readings-a-response-needs][] ← <a id="readings-a-response-needs--assured-route-criterion"></a>[assured-route-criterion][]
-- [readings-carried-on-their-course][] ← <a id="readings-carried-on-their-course--what-persisting-shows-of-an-order"></a>[what-persisting-shows-of-an-order][] · <a id="readings-carried-on-their-course--counterfactual-is-the-course"></a>[counterfactual-is-the-course][]
 - [readings-within-what-they-read][] ← <a id="readings-within-what-they-read--recurrence-without-premise"></a>[recurrence-without-premise][]
 - [recoverable-mediated-change][] ← <a id="recoverable-mediated-change--mediated-evidence-transport"></a>[mediated-evidence-transport][]
 - [recurrence-without-decidedness][] ← <a id="recurrence-without-decidedness--coming-and-ceasing-keep-pace"></a>[coming-and-ceasing-keep-pace][] · <a id="recurrence-without-decidedness--space-and-its-parts"></a>[space-and-its-parts][]
@@ -475,7 +473,6 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [where-two-courses-rejoin][] ← <a id="where-two-courses-rejoin--comparison-where-the-rest-responds"></a>[comparison-where-the-rest-responds][] · <a id="where-two-courses-rejoin--counterfactual-is-the-course"></a>[counterfactual-is-the-course][]
 - [whether-a-loop-closes-a-difference][] ← <a id="whether-a-loop-closes-a-difference--recurrence-without-premise"></a>[recurrence-without-premise][] · <a id="whether-a-loop-closes-a-difference--how-a-carried-difference-grows"></a>[how-a-carried-difference-grows][] · <a id="whether-a-loop-closes-a-difference--how-much-difference-arrives"></a>[how-much-difference-arrives][] · <a id="whether-a-loop-closes-a-difference--where-two-courses-rejoin"></a>[where-two-courses-rejoin][]
 - [which-links-a-closure-needs][] ← <a id="which-links-a-closure-needs--levels-of-closure"></a>[levels-of-closure][]
-- [which-readings-persist][] ← <a id="which-readings-persist--selection-read-off-continuations"></a>[selection-read-off-continuations][] · <a id="which-readings-persist--readings-carried-on-their-course"></a>[readings-carried-on-their-course][]
 - [whole-and-regions-and-bounded-centers][] ← <a id="whole-and-regions-and-bounded-centers--loss-beyond-a-region"></a>[loss-beyond-a-region][] · <a id="whole-and-regions-and-bounded-centers--significance-retained-within-margin"></a>[significance-retained-within-margin][] · <a id="whole-and-regions-and-bounded-centers--continuation-condition-yields-living-significance"></a>[continuation-condition-yields-living-significance][] · <a id="whole-and-regions-and-bounded-centers--derived-extent-limits"></a>[derived-extent-limits][] *(interpretive)*
 - [whole-drawing-beyond-renewal-ends][] ← <a id="whole-drawing-beyond-renewal-ends--whole-persists-through-generation"></a>[whole-persists-through-generation][] · <a id="whole-drawing-beyond-renewal-ends--groups-whose-conditions-are-coupled"></a>[groups-whose-conditions-are-coupled][]
 - [whole-law-of-counting][] ← <a id="whole-law-of-counting--census-balance"></a>[census-balance][] · <a id="whole-law-of-counting--coming-and-ceasing-keep-pace"></a>[coming-and-ceasing-keep-pace][] · <a id="whole-law-of-counting--map-of-premises"></a>[map-of-premises][] · <a id="whole-law-of-counting--life-as-condition-of-life"></a>[life-as-condition-of-life][] · <a id="whole-law-of-counting--no-finite-part-bears-taking"></a>[no-finite-part-bears-taking][] · <a id="whole-law-of-counting--space-and-its-parts"></a>[space-and-its-parts][] · <a id="whole-law-of-counting--laws-of-one-step"></a>[laws-of-one-step][]
@@ -514,7 +511,6 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [a-revision-that-opens-a-correction]: theories/becoming/results/records/a-revision-that-opens-a-correction.md
 [a-rise-past-the-inflow-is-drawn-from-beyond]: theories/becoming/results/records/a-rise-past-the-inflow-is-drawn-from-beyond.md
 [a-rule-rebuilt-from-the-members-it-limits]: theories/becoming/results/records/a-rule-rebuilt-from-the-members-it-limits.md
-[a-selection-removing-its-readers]: theories/becoming/results/records/a-selection-removing-its-readers.md
 [a-source-before-a-juncture]: theories/becoming/results/records/a-source-before-a-juncture.md
 [a-step-coupling-keeps-at-every-horizon]: theories/becoming/results/records/a-step-coupling-keeps-at-every-horizon.md
 [a-weighting-faster-than-renewal-ends-the-base]: theories/becoming/results/records/a-weighting-faster-than-renewal-ends-the-base.md
@@ -796,7 +792,6 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [reading-anothers-couplings-is-pooling]: theories/becoming/results/records/reading-anothers-couplings-is-pooling.md
 [reading-through-a-pool]: theories/becoming/results/records/reading-through-a-pool.md
 [readings-a-response-needs]: theories/becoming/results/records/readings-a-response-needs.md
-[readings-carried-on-their-course]: theories/becoming/results/records/readings-carried-on-their-course.md
 [readings-within-what-they-read]: theories/becoming/results/records/readings-within-what-they-read.md
 [recoverable-mediated-change]: theories/becoming/results/records/recoverable-mediated-change.md
 [recurrence-without-decidedness]: theories/becoming/results/records/recurrence-without-decidedness.md
@@ -990,7 +985,6 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [where-two-courses-rejoin]: theories/becoming/results/records/where-two-courses-rejoin.md
 [whether-a-loop-closes-a-difference]: theories/becoming/results/records/whether-a-loop-closes-a-difference.md
 [which-links-a-closure-needs]: theories/becoming/results/records/which-links-a-closure-needs.md
-[which-readings-persist]: theories/becoming/results/records/which-readings-persist.md
 [whole-and-regions-and-bounded-centers]: theories/becoming/results/records/whole-and-regions-and-bounded-centers.md
 [whole-drawing-beyond-renewal-ends]: theories/becoming/results/records/whole-drawing-beyond-renewal-ends.md
 [whole-law-of-counting]: theories/becoming/results/records/whole-law-of-counting.md

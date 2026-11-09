@@ -693,18 +693,6 @@
    "page": "theories/becoming/results/records/a-selected-template-need-not-raise-structure.md"
   },
   {
-   "id": "record:a-selection-removing-its-readers",
-   "type": "result",
-   "record": "a-selection-removing-its-readers",
-   "title": "A selection removing its own readers",
-   "title_zh": "移除自身读者之选择",
-   "status": "recorded-checked",
-   "kind": "theorem",
-   "region": "significance",
-   "base": "old-base",
-   "page": "theories/becoming/results/records/a-selection-removing-its-readers.md"
-  },
-  {
    "id": "record:a-source-before-a-juncture",
    "type": "result",
    "record": "a-source-before-a-juncture",
@@ -4305,18 +4293,6 @@
    "page": "theories/becoming/results/records/readings-a-response-needs.md"
   },
   {
-   "id": "record:readings-carried-on-their-course",
-   "type": "result",
-   "record": "readings-carried-on-their-course",
-   "title": "Lines carrying their readings, on the course their acts generate",
-   "title_zh": "携其读法之系，于其行为所生之程",
-   "status": "recorded-checked",
-   "kind": "theorem",
-   "region": "significance",
-   "base": "old-base",
-   "page": "theories/becoming/results/records/readings-carried-on-their-course.md"
-  },
-  {
    "id": "record:readings-within-what-they-read",
    "type": "result",
    "record": "readings-within-what-they-read",
@@ -6799,18 +6775,6 @@
    "region": "root",
    "base": "old-base",
    "page": "theories/becoming/results/records/which-links-a-closure-needs.md"
-  },
-  {
-   "id": "record:which-readings-persist",
-   "type": "result",
-   "record": "which-readings-persist",
-   "title": "Which readings persist",
-   "title_zh": "何种读法存续",
-   "status": "recorded-checked",
-   "kind": "theorem",
-   "region": "significance",
-   "base": "old-base",
-   "page": "theories/becoming/results/records/which-readings-persist.md"
   },
   {
    "id": "record:whole-and-regions-and-bounded-centers",
@@ -11207,17 +11171,6 @@
    "theorems": 67,
    "region": "significance",
    "base": "grammar",
-   "on_grammar": true,
-   "reaches_grammar": true
-  },
-  {
-   "id": "module:Becoming.ReadingsPersist",
-   "type": "module",
-   "name": "Becoming.ReadingsPersist",
-   "level": "L2",
-   "theorems": 83,
-   "region": "significance",
-   "base": "old-base",
    "on_grammar": true,
    "reaches_grammar": true
   },
@@ -31419,24 +31372,6 @@
    "anchor": "r-the-own-class-read-on-a-flow"
   },
   {
-   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-readings-carried-on-their-course",
-   "type": "section",
-   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
-   "anchor": "r-readings-carried-on-their-course"
-  },
-  {
-   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-which-readings-persist",
-   "type": "section",
-   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
-   "anchor": "r-which-readings-persist"
-  },
-  {
-   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-selection-removing-its-readers",
-   "type": "section",
-   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
-   "anchor": "r-a-selection-removing-its-readers"
-  },
-  {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-ranking-under-readings",
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -35029,16 +34964,6 @@
    "type": "imports"
   },
   {
-   "from": "module:Becoming.ReadingsPersist",
-   "to": "module:Becoming.BeyondCoupling",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.ReadingsPersist",
-   "to": "module:Becoming.PersistingChoices",
-   "type": "imports"
-  },
-  {
    "from": "module:Becoming.Readout",
    "to": "module:Becoming.Learning",
    "type": "imports"
@@ -37258,33 +37183,6 @@
    "from": "record:a-selected-template-need-not-raise-structure",
    "to": "record:selection-term-over-generations",
    "type": "related"
-  },
-  {
-   "from": "record:a-selection-removing-its-readers",
-   "to": "module:Becoming.ReadingsPersist",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:a-selection-removing-its-readers",
-   "to": "record:readers-drawn-from-the-selected",
-   "type": "related"
-  },
-  {
-   "from": "record:a-selection-removing-its-readers",
-   "to": "record:selection-read-off-continuations",
-   "type": "formal-reuse",
-   "interface": true
-  },
-  {
-   "from": "record:a-selection-removing-its-readers",
-   "to": "record:shaping-the-rule-selected-by-what-comes-back",
-   "type": "related"
-  },
-  {
-   "from": "record:a-selection-removing-its-readers",
-   "to": "record:which-readings-persist",
-   "type": "formal-reuse",
-   "interface": true
   },
   {
    "from": "record:a-source-before-a-juncture",
@@ -51487,38 +51385,6 @@
    "type": "related"
   },
   {
-   "from": "record:readings-carried-on-their-course",
-   "to": "module:Becoming.ReadingsPersist",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:readings-carried-on-their-course",
-   "to": "record:counterfactual-is-the-course",
-   "type": "formal-reuse",
-   "interface": true
-  },
-  {
-   "from": "record:readings-carried-on-their-course",
-   "to": "record:feedback-and-reach",
-   "type": "related"
-  },
-  {
-   "from": "record:readings-carried-on-their-course",
-   "to": "record:selection-read-off-continuations",
-   "type": "related"
-  },
-  {
-   "from": "record:readings-carried-on-their-course",
-   "to": "record:what-persisting-shows-of-an-order",
-   "type": "formal-reuse",
-   "interface": true
-  },
-  {
-   "from": "record:readings-carried-on-their-course",
-   "to": "record:which-readings-persist",
-   "type": "related"
-  },
-  {
    "from": "record:readings-within-what-they-read",
    "to": "module:Becoming.Diagonal",
    "type": "proved-in"
@@ -61081,33 +60947,6 @@
    "interface": true
   },
   {
-   "from": "record:which-readings-persist",
-   "to": "module:Becoming.ReadingsPersist",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:which-readings-persist",
-   "to": "record:a-selection-removing-its-readers",
-   "type": "related"
-  },
-  {
-   "from": "record:which-readings-persist",
-   "to": "record:readings-carried-on-their-course",
-   "type": "formal-reuse",
-   "interface": true
-  },
-  {
-   "from": "record:which-readings-persist",
-   "to": "record:selection-read-off-continuations",
-   "type": "formal-reuse",
-   "interface": true
-  },
-  {
-   "from": "record:which-readings-persist",
-   "to": "record:what-persisting-shows-of-an-order",
-   "type": "related"
-  },
-  {
    "from": "record:whole-and-regions-and-bounded-centers",
    "to": "module:Becoming.Clearing",
    "type": "proved-in"
@@ -64161,11 +64000,6 @@
    "type": "states"
   },
   {
-   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-selection-removing-its-readers",
-   "to": "record:a-selection-removing-its-readers",
-   "type": "states"
-  },
-  {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-alignment-approaches-under-the-selection-laws",
    "to": "record:alignment-approaches-under-the-selection-laws",
    "type": "states"
@@ -64396,11 +64230,6 @@
    "type": "states"
   },
   {
-   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-readings-carried-on-their-course",
-   "to": "record:readings-carried-on-their-course",
-   "type": "states"
-  },
-  {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-recoverable-mediated-change",
    "to": "record:recoverable-mediated-change",
    "type": "states"
@@ -64603,11 +64432,6 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-where-the-possible-grows",
    "to": "record:where-the-possible-grows",
-   "type": "states"
-  },
-  {
-   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-which-readings-persist",
-   "to": "record:which-readings-persist",
    "type": "states"
   },
   {
