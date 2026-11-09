@@ -7823,7 +7823,9 @@
     "the-gap-for-ones-own-act",
     "what-pooled-coupling-reaches",
     "what-a-pools-acts-respond-to",
-    "where-two-courses-rejoin"
+    "where-two-courses-rejoin",
+    "selection-read-off-continuations",
+    "where-the-blindness-lifts"
    ],
    "standing": [
     {
@@ -7848,6 +7850,16 @@
     },
     {
      "record": "where-two-courses-rejoin",
+     "status": "recorded-checked",
+     "kind": "theorem"
+    },
+    {
+     "record": "selection-read-off-continuations",
+     "status": "recorded-checked",
+     "kind": "theorem"
+    },
+    {
+     "record": "where-the-blindness-lifts",
      "status": "recorded-checked",
      "kind": "theorem"
     }
@@ -7884,7 +7896,12 @@
     "Becoming.Flow.gap_made_up",
     "Becoming.Flow.closes_through_coupling_apart",
     "Becoming.Flow.stays_beyond_response",
-    "Becoming.Replenishing.closes_through"
+    "Becoming.Replenishing.closes_through",
+    "Becoming.act_courses_unselected_throughout",
+    "Becoming.significance_courses_unselected",
+    "Becoming.Diversion.counting_selected_against",
+    "Becoming.Web.readOffCouplings_alike_iff",
+    "Becoming.Clearing.read_not_direction"
    ],
    "base": "World",
    "hypotheses": [
@@ -7983,6 +8000,30 @@
       "en": "The course without the act is a comparison, not a standard: the laws do not say that rejoining it is better than keeping or widening the difference; which of these supports 生生 goes through the comparison and the condition of the chapter's section 6.4.",
       "zh": "无动作的进程是比较，不是标准：这些规律不说重合优于保持或扩大差别；其中哪个支持生生，经本章第 6.4 节的比较与条件。"
      }
+    },
+    {
+     "record": "selection-read-off-continuations",
+     "index": 2,
+     "text": {
+      "en": "The part acts by one of two laws of what has stood, the first reading through its members' coupling; the rest follows a law of what has stood reading through coupling; both courses are feasible, so each course, its levels and its balance come from the laws.",
+      "zh": "部分依两条读已成者之律之一而行，前者经其成员之耦合而读；其余依读已成者、经耦合而读之律；两条进程皆可行，故进程、其水平与平衡皆出于律。"
+     }
+    },
+    {
+     "record": "selection-read-off-continuations",
+     "index": 3,
+     "text": {
+      "en": "The two acts agree on every condition coupled into the group's coupling closure drawn through both courses: a premise on the two acts, not derived. Where they differ there, the difference can be selected.",
+      "zh": "两举在经两条进程所得的池之耦合闭包内每个耦合入者上一致：这是对两举的前提，非推出。若在此不同，差异可被选。"
+     }
+    },
+    {
+     "record": "selection-read-off-continuations",
+     "index": 4,
+     "text": {
+      "en": "For significances: the act reads significance only within that closure on what couples in (ActReadsWithin), a premise on how significance acts; which act a significance gives is supplied.",
+      "zh": "就意义而言：此举只在该闭包内、在耦合入者上读意义（ActReadsWithin），是关于意义如何起作用的前提；一种意义给出何种举为给定。"
+     }
     }
    ],
    "forbids": null,
@@ -8077,6 +8118,25 @@
      "standing": [
       {
        "record": "where-two-courses-rejoin",
+       "status": "recorded-checked",
+       "kind": "theorem"
+      }
+     ]
+    },
+    {
+     "to": null,
+     "law": "Becoming.Web.readOffCouplings_alike_iff",
+     "edge": {
+      "en": "Over the whole run, some selection read off a group's continuations or couplings is turned exactly where a difference changes, at some step, what couples into some member: the loss coupled in, through the dweller's continuation read as a member's or a condition it depends on gauged by a member. Coupling in does not fix the direction (Clearing.read_not_direction)."
+     },
+     "strength": "exact",
+     "records": [
+      "where-the-blindness-lifts"
+     ],
+     "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-where-the-blindness-lifts",
+     "standing": [
+      {
+       "record": "where-the-blindness-lifts",
        "status": "recorded-checked",
        "kind": "theorem"
       }
