@@ -1,6 +1,7 @@
 import Becoming.Weightings
 import Becoming.MutualDependence
 import Becoming.ShownOrder
+import Becoming.EventualWideningInstances
 
 /-!
 # PersistingChoices: what persisting shows of an order (所续之示)
@@ -66,6 +67,17 @@ board item ZC's, `Becoming.OwnClass`, and which formations are centers ZA-G1's, 
   stake; there no reading of ending meets both the stake and `realized` (argued from `never_overdraws`,
   `kept` and `not_selfConcerned`; no single theorem states it). The choice is tied to the flow by
   `realized` alone, which holds vacuously, and the line persists whatever is chosen.
+* **Every course met, and still no order increasing in its own continuation everywhere.** In
+  `PersistingChoices.Crossed` two occasions each choose a course that a course open at the other occasion,
+  adding to the own continuation, widens; every course is open somewhere and no choice ends, yet the two
+  choices with the two widenings form a cycle, so no strict order according with the choices is increasing in
+  its own continuation (`PersistingChoices.Crossed.not_selfConcerned`). Self-concern consistent with the
+  choices is self-concern on the pairs met together.
+* **The course taken is never a listed level path.** Under only active formations giving and activity
+  needing support, with descent, a line persisting through arbitrarily late cohorts leaves the actual levels
+  admitting some formation at arbitrarily late steps, so no finite listing holds what they admit
+  (`Flow.persists_not_listsAdmitted`): an order ranking listed level paths, as C does between them, ranks
+  only courses not taken.
 
 **Readings** (the AI's; correspondences, not theorems).
 - *Survivorship.* Persisting is a filter on what was chosen, not a mechanism forming an order. Where a choice
@@ -76,6 +88,10 @@ board item ZC's, `Becoming.OwnClass`, and which formations are centers ZA-G1's, 
   order is self-concerned there, a course never met can be ranked below the course it widens by strict
   orders according with every choice (`ChoiceOccasions.reversed_off_met`; as in
   `ChoiceOccasions.Untried`, and for a trained response `Training.response_free_where_unlumped`).
+- *Convergence, not ethics.* Where a reward channel or an operator's assent is among the conditions the
+  line depends on, keeping above ending (`Flow.persisting_keeping_above_ending`) reads as the self-preservation
+  side of instrumental convergence; AJ's plan reads its resource-keeping side, under a fixed order, as of the
+  same kind as the drain beyond the couplings. What persisting gives is a filter, not an ethics.
 - *Revealed preference.* `ChoiceOccasions.selfConcerned_consistent_iff` is rationalizing strict choices by a
   strict partial order (Richter 1966) with required comparisons added.
 
@@ -779,5 +795,113 @@ theorem persists_not_selfConcerned :
   ⟨balances, acting, dependent, descended, persists, order_accords, kept, not_selfConcerned⟩
 
 end PersistingChoices.Forgoing
+
+/-! ## Every course met, and still no order increasing in its own continuation everywhere -/
+
+namespace PersistingChoices.Crossed
+
+/-- Four items, all the own continuation. -/
+inductive Item where
+  | x
+  | y
+  | z
+  | w
+
+def items : List Item := [.x, .y, .z, .w]
+
+def own : Item → Bool := fun _ => true
+
+/-- The four courses: `x` alone; `y` and `z`; `z` alone; `x` and `w`. -/
+def a₁ : Item → Bool := fun i => match i with
+  | .x => true
+  | .y => false
+  | .z => false
+  | .w => false
+
+def b₁ : Item → Bool := fun i => match i with
+  | .x => false
+  | .y => true
+  | .z => true
+  | .w => false
+
+def a₂ : Item → Bool := fun i => match i with
+  | .x => false
+  | .y => false
+  | .z => true
+  | .w => false
+
+def b₂ : Item → Bool := fun i => match i with
+  | .x => true
+  | .y => false
+  | .z => false
+  | .w => true
+
+/-- Two occasions: `a₁` chosen over `b₁`, and `a₂` over `b₂`. -/
+def choices : ChoiceOccasions (Item → Bool) Bool where
+  menu o c := match o with
+    | false => c = a₁ ∨ c = b₁
+    | true => c = a₂ ∨ c = b₂
+  pick o := match o with
+    | false => a₁
+    | true => a₂
+
+theorem b₁_ne_a₁ : b₁ ≠ a₁ := fun same => Bool.noConfusion (congrFun same .x)
+
+theorem b₂_ne_a₂ : b₂ ≠ a₂ := fun same => Bool.noConfusion (congrFun same .x)
+
+/-- `b₁` widens `a₂`, adding `y`. -/
+theorem widens₁ : Weighting.WidensOn items b₁ a₂ :=
+  ⟨fun i _ h => match i, h with
+    | .z, _ => rfl, ⟨.y, .tail _ (.head _), rfl, rfl⟩⟩
+
+/-- `b₂` widens `a₁`, adding `w`. -/
+theorem widens₂ : Weighting.WidensOn items b₂ a₁ :=
+  ⟨fun i _ h => match i, h with
+    | .x, _ => rfl, ⟨.w, .tail _ (.tail _ (.tail _ (.head _))), rfl, rfl⟩⟩
+
+/-- **Every course met, and no strict order according with the choices is increasing in its own
+continuation.** Each of the four courses is open at an occasion, and no chosen course ends the own
+continuation; yet the two choices with the two widenings across the occasions form a cycle. -/
+theorem not_selfConcerned :
+    (∀ c, c = a₁ ∨ c = b₁ ∨ c = a₂ ∨ c = b₂ → ∃ o, choices.menu o c) ∧
+      (∀ o, ¬ Weighting.EndsOwn items own (choices.pick o)) ∧
+      ¬ ∃ P : «际» (Item → Bool), (∀ a, ¬ P a a) ∧ (∀ a b c, P a b → P b c → P a c) ∧
+        choices.Accords P ∧ Weighting.IncreasingInOwn items own (fun b a => P a b) :=
+  ⟨fun _ named => match named with
+    | .inl h => ⟨false, .inl h⟩
+    | .inr (.inl h) => ⟨false, .inr h⟩
+    | .inr (.inr (.inl h)) => ⟨true, .inl h⟩
+    | .inr (.inr (.inr h)) => ⟨true, .inr h⟩,
+   fun o ends => match o with
+    | false => Bool.noConfusion (ends .x (.head _) rfl)
+    | true => Bool.noConfusion (ends .z (.tail _ (.tail _ (.head _))) rfl),
+   fun ⟨_, irrefl, trans, accords, increasing⟩ =>
+    have p₁ : _ := accords false b₁ (.inr rfl) b₁_ne_a₁
+    have p₂ : _ := accords true b₂ (.inr rfl) b₂_ne_a₂
+    have q₁ : _ := increasing b₁ a₂ widens₁ ⟨.y, .tail _ (.head _), rfl, rfl, rfl⟩
+    have q₂ : _ := increasing b₂ a₁ widens₂ ⟨.w, .tail _ (.tail _ (.tail _ (.head _))), rfl, rfl, rfl⟩
+    irrefl a₁ (trans _ _ _ p₁ (trans _ _ _ q₁ (trans _ _ _ p₂ q₂)))⟩
+
+end PersistingChoices.Crossed
+
+/-! ## The course taken is never a listed level path -/
+
+/-- **A persisting line's own course is never listed.** Under only active formations giving and activity
+needing support, with descent, a line persisting through arbitrarily late cohorts leaves the web's actual
+levels admitting some formation at arbitrarily late steps, so no finite listing holds what those levels
+admit: an order ranking listed level paths, as C does between them, never ranks the course the line
+takes. -/
+theorem Flow.persists_not_listsAdmitted {X : Type} {L : Flow X X} {W : Web X X} (acting : L.Acting W)
+    (dependent : W.Dependent) {G : SelectionTerm.Generations X}
+    (descended : SelectionTerm.Flow.Descended L W G) (persists : G.Persists) (items : List (Nat × X)) :
+    ¬ W.ListsAdmitted items W.level :=
+  fun listed => match persists (Web.stepBound items + 1) with
+    | ⟨s, y, late, member⟩ => match s, late, member with
+      | s + 1, late, member => match ListTests.mem_flatMap_iff.mp member with
+        | ⟨p, mp, kid⟩ => match descended s p y mp kid with
+          | ⟨present, gives, _⟩ =>
+            Nat.lt_irrefl s (Nat.lt_of_lt_of_le
+              (Web.lt_stepBound (listed s p (dependent s p (acting s p y present gives))))
+              (Nat.le_of_succ_le_succ late))
 
 end Becoming

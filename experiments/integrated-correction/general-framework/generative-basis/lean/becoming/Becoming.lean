@@ -4745,8 +4745,10 @@ tagged instance or application.
   order increasing in its own continuation on those occasions (`Flow.persisting_consistent_with_selfConcern`); a course never met that widens another and adds to the own
   continuation is ranked below it by some such order (`ChoiceOccasions.reversed_off_met`); and in one witness a persisting line whose choice accords
   with a strict order, never ending, is consistent with no strict order increasing in its own continuation on
-  the occasion met (`PersistingChoices.Forgoing.persists_not_selfConcerned`). A leaf; short laws, none new as
-  mathematics.
+  the occasion met (`PersistingChoices.Forgoing.persists_not_selfConcerned`); with every course met, two
+  crossed choices are consistent with no strict order increasing in its own continuation
+  (`PersistingChoices.Crossed.not_selfConcerned`); a persisting line's own course is never a listed level path
+  (`Flow.persists_not_listsAdmitted`). A leaf; short laws, none new as mathematics.
 * `Becoming.GrammarPath` (L1): what a line under a class must hold, and what a regularity takes in
   (board item PF), for every carrier, relation and class. Where a region is left under a class only
   into a set, a line under the class from inside to outside holds a member of that set alike to its
