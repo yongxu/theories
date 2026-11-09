@@ -4719,9 +4719,10 @@ tagged instance or application.
   read off a group's continuations decides a level history by each member's admission at every step
   (`Web.ReadOffContinuations`), or by what couples into the members at every step
   (`Web.ReadOffCouplings`), over the whole run. `act_courses_unselected_pool` read over the whole
-  run (`act_courses_unselected_throughout`): two acts of a part, laws agreeing on what couples into
-  the pool's coupling closure, the rest following a law reading through coupling, the courses
-  feasible, are selected alike by every such selection; where the act reads significance only within
+  run (`act_courses_unselected_throughout`): two acts of a part, laws of what has stood, the first
+  reading through its members' coupling, agreeing on what couples into a group's coupling closure,
+  the rest following a law reading through coupling, the courses feasible, are selected alike by
+  every such selection of a pool within the closure; where the act reads significance only within
   that closure (`ActReadsWithin`, a premise) so are two significances agreeing there
   (`significance_courses_unselected`). Route (b)'s universal form in one theorem
   (`routeB_universal_closed`): the own-closure significance is the condition exactly where every

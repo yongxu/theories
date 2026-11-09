@@ -28,10 +28,10 @@ relation and centers supplied. No ranking or axiom enters.
 * **No selection read off a continuation selects between acts alike on what couples in.** This is
   `act_courses_unselected_pool` read over the whole run (`act_courses_unselected_throughout`). The
   part acts by one of two laws of what has stood, the first reading through its members' coupling,
-  the two agreeing on every condition coupled into the pool's coupling closure drawn through the
-  two courses. The rest follows a law of what has stood reading through coupling, and both courses
-  are feasible. Then every selection read off what couples into a group within that closure
-  selects the two courses alike. The courses, their levels and the rest's response come from the
+  the two agreeing on every condition coupled into the coupling closure of a group (`group`), drawn
+  through the two courses. The rest follows a law of what has stood reading through coupling, and
+  both courses are feasible. Then every selection read off what couples into a pool (`pool`)
+  within that closure selects the two courses alike. The courses, their levels and the rest's response come from the
   laws, through balance at every step; none is supplied. So no such selection holds exactly where
   a property of the act holds, where it holds of one and not the other (`not_tracks_of_alike`).
 * **Significance enters selection only through the act.** Let the part act by the law its
@@ -44,9 +44,9 @@ relation and centers supplied. No ranking or axiom enters.
   off what couples into the clearer and its source by threshold only, over the whole run, selects
   the cleared and the spared world alike, while the dweller ends in the one and not the other
   (`Clearing.counting_dweller_unselected`, `Clearing.pool_closes_gap` read over the whole run).
-  Where the act's difference couples in, the premise fails and the difference is selected. In
-  `Diversion` the act that ends the dweller, which in the diverting flow lies beyond the taker's
-  coupling closure, also raises the store the taker gauges. A selection read off what couples into
+  Where the two acts differ on a condition that couples in, the premise would fail and the
+  difference is selected. In `Diversion` the act that ends the dweller also raises the store the
+  taker gauges, while in the diverting flow the dweller lies beyond the taker's coupling closure. A selection read off what couples into
   the taker holds at that act and fails at refraining (`Diversion.counting_selected_against`). What
   is selected is an act's trace on what couples in, never the loss beyond.
 * **Route (b)'s universal form, closed.** Take a significance read as each standpoint's center's
@@ -69,10 +69,12 @@ relation and centers supplied. No ranking or axiom enters.
   (`Web.readOffCouplings_alike_iff`, `Web.selects_alike_all_iff` read over the whole run). Where a
   member's continuation differs, the class of the first history separates them
   (`Web.separates_continuations`). So some selection read off a group is turned by a difference
-  exactly where it changes, at some step, what couples into some member. With the law above, under
-  its premises, a loss beyond the group's coupling closure changes nothing there. The loss is
-  coupled in either through the dweller's continuation read as a member's, or through a condition
-  it depends on gauged by a member. In `Clearing` the selection read off the clearer's and the
+  exactly where it changes, at some step, what couples into some member: some member's admission,
+  or the level of some condition a member gauges. With the law above, under its premises, a loss
+  beyond the group's coupling closure changes nothing there. The witnesses couple it in two such
+  ways, the dweller's continuation read as a member's and the habitat gauged by the clearer; any
+  member's continuation or gauged condition the loss changes would do. In `Clearing` the selection
+  read off the clearer's and the
   dweller's continuations that the dweller is admitted at every step holds in the spared world and
   fails in the cleared one, while none read off the clearer's alone separates them
   (`Clearing.turned_by_dweller_read`; `Clearing.pool_closes_gap` gives the finite form). With the

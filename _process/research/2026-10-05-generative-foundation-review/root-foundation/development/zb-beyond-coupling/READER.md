@@ -28,4 +28,23 @@ Verdict, condensed: the Lean and the prose agree on every named theorem; the ove
 
 ## Round 2 (the restructured text)
 
-Pending at the time of writing; its report is added here.
+Verdict, condensed: no high finding; result (1) now says exactly what `act_courses_unselected_throughout` and `significance_courses_unselected` prove, premises named; all fifteen round-1 findings fixed.
+
+| # | Severity | Finding | Done |
+|---|---|---|---|
+| 1 | medium | The two ways the loss is coupled in (the dweller's continuation, a gauged condition) read as exhaustive; the Lean gives any member's admission or any gauged condition's level. | "Some member's admission, or the level of a condition some member gauges"; the two named ways are the witnesses. |
+| 2 | low | The records cited a stale hash of the note. | Recomputed after the edits (and again at landing). |
+| 3 | low | Hypothesis 1 of the first record named a supplied flow; the courses come from laws. | "A web, laws of exchange, the formations present and the starting levels supplied." |
+| 4 | low | The prose used "pool" and "group" the other way round from the Lean. | The closure is a group's; the selection is read off a pool within it. |
+| 5 | low | A relative clause attached "beyond the coupling closure" to the act, not the dweller. | Restructured. |
+| 6 | low | Diversion's flows are not law-generated courses, so "the premise fails" is by inspection. | "The two acts differ on a condition that couples in, so the premise would fail." |
+| 7 | low | A does-not-show line said the witnesses show the shapers' selection; they are base-level. | "Have the shape under which their own selection would not supply it." |
+| 8 | low | The note's header kept the first draft's words. | Fixed. |
+| 9 | low | "Has to keep" read as design beside a sentence disclaiming design. | "A coupling to keep, on this reading." |
+| 10 | low | The scope sentence and index entry omitted that the first act reads through its members' coupling. | Added. |
+
+Also found by the record check (not the reader): the route (b) record lacked a counterexamples list; it now keeps Clearing's dweller as the counterexample to reaching the whole along a returning relation.
+
+## Round 3 (the round-2 fixes)
+
+Pending at the time of writing.

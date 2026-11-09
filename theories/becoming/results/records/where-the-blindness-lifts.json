@@ -10,8 +10,8 @@
   "family": "F04",
   "reviewed_at_utc": "2026-11-09T12:00:00+00:00",
   "statement": {
-    "en": "Some selection read off a group's continuations or couplings is turned by a difference exactly where it changes, at some step, what couples into a member; a loss beyond the closure turns one only once coupled in, through the dweller's continuation or its condition, and the direction stays open.",
-    "zh": "某个读自一组延续或耦合的选择恰在差异于某步改变耦合入某成员者处被它扭转；故耦合闭包外的失去只在经栖居者之延续或其条件被耦合入后才扭转此类选择，而耦合入不定方向。"
+    "en": "Some selection read off a group's continuations or couplings is turned by a difference exactly where it changes, at some step, what couples into a member; a loss beyond the closure turns one only once coupled in, through some member's continuation or gauged condition, and the direction stays open.",
+    "zh": "某个读自一组延续或耦合的选择恰在差异于某步改变耦合入某成员者处被它扭转；故耦合闭包外的失去只在经某成员之延续或所测条件被耦合入后才扭转此类选择，而耦合入不定方向。"
   },
   "laws": [
     {
@@ -61,7 +61,7 @@
       "witness": "Becoming.Clearing.read_not_direction"
     },
     {
-      "en": "That the shapers of a rule keep a reader of the loss: in the home section that is the AI's reading, and the witnesses show their own selection does not supply it.",
+      "en": "That the shapers of a rule keep a reader of the loss: in the home section that is the AI's reading, and the witnesses have the shape under which their own selection would not supply it.",
       "zh": "规则的塑造者保留对失去的读者：家中此为 AI 的读法，见证表明他们自己的选择不提供它。",
       "kind": "non-implication"
     },
@@ -221,17 +221,22 @@
         "Becoming.Web.readOffCouplings_alike_iff",
         "Becoming.Web.separates_continuations"
       ],
-      "sha256": "f1b01742d4229540fd7b6ba8c5e51030cf89c6de718fd28bf3aa143f2041b92a"
+      "sha256": "99b348881150bee825095a0bd75e91a643de7c59645695a67a338bd9584148ca"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zb-beyond-coupling/NOTE.md",
       "role": "integration",
-      "sha256": "f5eacf9189da5b72fc7202beee166f0470aae58e8b861e1f908b07a5d134fdee"
+      "sha256": "b6524266c35b4c0e6de4369086028ad07aaf7ff82ff7858d6e0f3e79ad0fa4c3"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zb-beyond-coupling/READER.md",
+      "role": "review",
+      "sha256": "6302ac3cf753c1860bd18f363f1a28f44249e39b92d5df9185ca89c793d50c8a"
     },
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "31317c9ea83ea8eb7d2fa77a583a72fe7cc09f515b6a5ebaa9c77f941d97ad23"
+      "sha256": "bf4a45a830d9c5426d8f0c3292dfedfa7ea16536dfdfebe021dcff33ad88266f"
     }
   ],
   "proof_bindings": [],

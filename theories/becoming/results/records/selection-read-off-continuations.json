@@ -10,7 +10,7 @@
   "family": "F04",
   "reviewed_at_utc": "2026-11-09T12:00:00+00:00",
   "statement": {
-    "en": "Over the whole run, a selection read off a group's continuations or couplings selects alike two courses whose acts, laws agreeing on what couples into the pool's coupling closure, differ only beyond it; so do two significances whose acts agree there, whatever loss either makes beyond.",
+    "en": "Over the whole run, a selection read off a pool's continuations or couplings selects alike two courses whose acts, laws agreeing on what couples into a coupling closure holding the pool, differ only beyond it; so do two significances whose acts agree there, whatever loss either makes beyond.",
     "zh": "遍及全程读自一组延续或耦合的选择，对两条进程选得相同，只要其举（在池之耦合闭包内耦合入者上一致的律）只在闭包外不同；故其举在此一致的两种意义被选得相同，无论二者在外造成何种失去。"
   },
   "laws": [
@@ -29,7 +29,7 @@
       ]
     },
     {
-      "en": "The pool form of the gap for one's own act over the whole run: a part acting by one of two laws of what has stood, the first reading through its members' coupling, the two agreeing on what couples into the pool's closure drawn through both courses; the rest by a law reading through coupling; both courses feasible. Every such selection of a group within the closure selects the two alike, and so none tracks the act.",
+      "en": "The pool form of the gap for one's own act over the whole run: a part acting by one of two laws of what has stood, the first reading through its members' coupling, the two agreeing on what couples into a group's closure drawn through both courses; the rest by a law reading through coupling; both courses feasible. Every such selection of a pool within the closure selects the two alike, so none tracks the act.",
       "zh": "己举之隙的池形式遍及全程：部分依两条读已成者之律之一而行，前者经其成员之耦合而读，二者在经两条进程所得的池之闭包内耦合入者上一致；其余依经耦合而读之律；两条进程皆可行。闭包内一组的每个此类选择对两者选得相同，故无一追踪此举。",
       "declarations": [
         "Becoming.act_courses_unselected_throughout",
@@ -60,15 +60,15 @@
   ],
   "hypotheses": [
     {
-      "en": "No axiom. Discrete steps and natural levels; a flow and a web; a coupling by level supplied.",
-      "zh": "不加公理。离散步与自然数水平；一个流与一个网；经水平的耦合为给定。"
+      "en": "No axiom. Discrete steps and natural levels; a web, laws of exchange, the formations present and the starting levels supplied; a coupling by level supplied.",
+      "zh": "不加公理。离散步与自然数水平；一个网、交换之律、在场的形成与起始水平为给定；经水平的耦合为给定。"
     },
     {
       "en": "The part acts by one of two laws of what has stood, the first reading through its members' coupling; the rest follows a law of what has stood reading through coupling; both courses are feasible, so each course, its levels and its balance come from the laws.",
       "zh": "部分依两条读已成者之律之一而行，前者经其成员之耦合而读；其余依读已成者、经耦合而读之律；两条进程皆可行，故进程、其水平与平衡皆出于律。"
     },
     {
-      "en": "The two acts agree on every condition coupled into the pool's coupling closure drawn through both courses: a premise on the two acts, not derived. Where they differ there, the difference can be selected.",
+      "en": "The two acts agree on every condition coupled into the group's coupling closure drawn through both courses: a premise on the two acts, not derived. Where they differ there, the difference can be selected.",
       "zh": "两举在经两条进程所得的池之耦合闭包内每个耦合入者上一致：这是对两举的前提，非推出。若在此不同，差异可被选。"
     },
     {
@@ -266,17 +266,22 @@
         "Becoming.not_tracks_of_alike",
         "Becoming.significance_courses_unselected"
       ],
-      "sha256": "f1b01742d4229540fd7b6ba8c5e51030cf89c6de718fd28bf3aa143f2041b92a"
+      "sha256": "99b348881150bee825095a0bd75e91a643de7c59645695a67a338bd9584148ca"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zb-beyond-coupling/NOTE.md",
       "role": "integration",
-      "sha256": "f5eacf9189da5b72fc7202beee166f0470aae58e8b861e1f908b07a5d134fdee"
+      "sha256": "b6524266c35b4c0e6de4369086028ad07aaf7ff82ff7858d6e0f3e79ad0fa4c3"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zb-beyond-coupling/READER.md",
+      "role": "review",
+      "sha256": "6302ac3cf753c1860bd18f363f1a28f44249e39b92d5df9185ca89c793d50c8a"
     },
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "31317c9ea83ea8eb7d2fa77a583a72fe7cc09f515b6a5ebaa9c77f941d97ad23"
+      "sha256": "bf4a45a830d9c5426d8f0c3292dfedfa7ea16536dfdfebe021dcff33ad88266f"
     }
   ],
   "proof_bindings": [],
