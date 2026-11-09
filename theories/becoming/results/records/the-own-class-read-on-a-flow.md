@@ -71,6 +71,7 @@ Read with the class of what a formation can represent, the path stays within its
 | provenance | [2026-11-09-route-b-ethics-forms.md](../../../../sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md) | — |
 | review | [COLD-READ.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zc-own-class/COLD-READ.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T141048.279821Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json) | — |
 
 Aliases: `The own class read on a flow`, `于流上读己之类`, `Becoming.Flow.CouplingClass`, `Becoming.Flow.couplingClass_reach_iff_returns`, `Becoming.Flow.couplingClass_line_iff_loop`, `Becoming.«返之所及即环»`
 

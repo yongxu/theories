@@ -182,6 +182,13 @@ class Drawing(unittest.TestCase):
         self.assertNotIn('>3</text>', drawing)
         self.assertIn('1 of 1 modules', drawing)
 
+    def test_a_count_in_a_bundle_takes_a_lead_above_the_floor_these_tests_hold(self):
+        # where no place is LEAD nearer its own curve and 1 px clear of every other stroke, the render takes LEAD_FLOOR,
+        # still above the LEAD - 0.5 the live picture's test holds, and clears every other stroke itself (07's count to 01
+        # beside 06's curve to 01, 9 November 2026)
+        self.assertGreater(spine.LEAD_FLOOR, spine.LEAD - 0.5)
+        self.assertLessEqual(spine.LEAD_FLOOR, spine.LEAD)
+
     def test_each_count_in_the_live_picture_sits_by_its_own_curve(self):
         g = json.loads((ROOT / 'theories/becoming/results/data/theory-graph.json').read_text(encoding='utf-8'))
         s = spine.spec()
@@ -219,7 +226,7 @@ class Drawing(unittest.TestCase):
 
     def test_a_count_with_no_place_stops_the_render(self):
         g = (ROOT / 'theories/becoming/results/data/theory-graph.json').read_text(encoding='utf-8')
-        with mock.patch.object(spine, 'LEAD', 500):
+        with mock.patch.object(spine, 'LEAD', 500), mock.patch.object(spine, 'LEAD_FLOOR', 500):
             pages, errors = spine.render(g)
         self.assertEqual(pages, {})
         self.assertTrue(any('no place for the count' in e for e in errors), errors)

@@ -2,6 +2,7 @@ import Becoming.Weightings
 import Becoming.MutualDependence
 import Becoming.ShownOrder
 import Becoming.EventualWideningInstances
+import Becoming.FlowCenters
 
 /-!
 # PersistingChoices: what persisting shows of an order (所续之示)
@@ -19,7 +20,9 @@ board item ZC's, `Becoming.OwnClass`, and which formations are centers ZA-G1's, 
   formation is some standpoint's center, each is exactly mutual dependence
   (`Flow.mutuallyDependent_iff_unrestricted`). In `Clearing`, every formation a center, neither holds
   (`Clearing.not_unrestricted_ownClosure`). Mutual dependence is closure under being affected; mutual
-  feeding gives it, and not conversely (`Becoming.MutualDependence`).
+  feeding gives it, and not conversely (`Becoming.MutualDependence`). These three laws were proved here
+  first and now stand in `Becoming.FlowCenters`, with the standpoints a flow gives (board rule 9, at
+  route (b)'s join); this module imports them.
 * **Choices with comparisons required.** Read a relation's pairs as further occasions of choosing
   (`ChoiceOccasions.withPairs`). Some strict order accords with the choices and makes every required
   comparison exactly where the shown relation with those pairs added has no cycle
@@ -37,7 +40,10 @@ board item ZC's, `Becoming.OwnClass`, and which formations are centers ZA-G1's, 
   shown relation with every own-widening met added has no cycle
   (`ChoiceOccasions.selfConcerned_consistent_iff`). Where the choices come from some strict order, no
   chosen course ends, and on the occasions met a course adds to the own continuation beyond one it widens
-  only where it does not end and the other does, some is (`ChoiceOccasions.selfConcerned_consistent_of_kept`),
+  only where it does not end and the other does, some is (`ChoiceOccasions.selfConcerned_consistent_of_kept`):
+  there every order putting keeping above ending is increasing in its own continuation on the occasions met
+  (`ChoiceOccasions.increasingInOwnOn_of_keeping`), so self-concern on the occasions met is a corollary of
+  keeping above ending,
   as where every course open keeps all of the own continuation listed or none
   (`ChoiceOccasions.selfConcerned_consistent_of_allOrNone`). Off the occasions met it is free: where some
   such order exists and a course met nowhere widens another and adds to the own continuation, some strict
@@ -49,7 +55,9 @@ board item ZC's, `Becoming.OwnClass`, and which formations are centers ZA-G1's, 
   family and every member of every cohort of descent depending on the family, each at a need of at least
   `m`, a line with members in arbitrarily late cohorts (`SelectionTerm.Generations.Persists`) never had the
   family's uptake exceed its replenishment for `n` steps from a stock below `n + m`
-  (`Flow.persists_never_overdraws`, from `GroupEnding.Flow.family_childless`). Where a chosen course that
+  (`Flow.persists_never_overdraws`, from `GroupEnding.Flow.coupled_generation_childless`), the case at a late
+  member of its dated form: a line with a member past `T + n` never overdrew across the `n` steps from `T`
+  (`Flow.member_after_never_overdrew`). Where a chosen course that
   ends what the line depends on is realized as such an overdraw, the persisting line's choices, coming from
   some strict order, are consistent with keeping above ending (`Flow.persisting_keeping_above_ending`), and
   with self-concern on the occasions met wherever only ending was at stake there
@@ -106,58 +114,6 @@ orders are supplied mathematical relations.
 -/
 
 namespace Becoming
-
-/-! ## Mutual dependence and the condition held de se -/
-
-namespace Flow
-
-variable {F C Pos : Type} {L : Flow F C} {W : Web F C}
-
-/-- **Mutual dependence gives the continuation condition held de se, along being affected and along
-affecting.** In a mutually dependent flow, significance held de se as what lies within a center's closure
-under being affected (what can affect the center's continuation, at some remove) is the continuation
-condition, and so is significance held de se as what lies within its closure under affecting (what it can
-affect, at some remove), for every assignment of centers: the first is `MutuallyDependent.unrestricted`, whose
-significance is this one by definition, the second through `mutuallyDependent_iff_reach`. -/
-theorem unrestricted_of_mutuallyDependent (dependent : L.MutuallyDependent W) (center : Pos → F) :
-    Unrestricted (selfAscribed (ownClosure (L.AffectedBy W)) center) ∧
-      Unrestricted (selfAscribed (ownClosure (L.Affects W)) center) :=
-  ⟨dependent.unrestricted center,
-   ownClosure_unrestricted_of_whole fun p g => mutuallyDependent_iff_reach.mp dependent (center p) g⟩
-
-/-- **Where every formation is a center, each de se reading is mutual dependence.** Where every formation is
-some standpoint's center, the continuation condition holds for the own closure under being affected, held
-de se, exactly where the flow is mutually dependent, and likewise for the own closure under affecting. -/
-theorem mutuallyDependent_iff_unrestricted {center : Pos → F} (onto : ∀ f, ∃ p, center p = f) :
-    (L.MutuallyDependent W ↔ Unrestricted (selfAscribed (ownClosure (L.AffectedBy W)) center)) ∧
-      (L.MutuallyDependent W ↔ Unrestricted (selfAscribed (ownClosure (L.Affects W)) center)) :=
-  ⟨⟨fun dependent => (unrestricted_of_mutuallyDependent dependent center).1,
-    fun unrestricted f g => match onto f with
-      | ⟨p, at_⟩ => Eq.subst (motive := fun x => L.WithinInfluence W x g) at_
-          (ownClosure_unrestricted_iff.mp unrestricted p g)⟩,
-   ⟨fun dependent => (unrestricted_of_mutuallyDependent dependent center).2,
-    fun unrestricted => mutuallyDependent_iff_reach.mpr fun f g => match onto f with
-      | ⟨p, at_⟩ => Eq.subst (motive := fun x => L.WithinReach W x g) at_
-          (ownClosure_unrestricted_iff.mp unrestricted p g)⟩⟩
-
-end Flow
-
-namespace Clearing
-
-/-- **In the clearer's world neither de se reading is the condition.** With every formation its own center,
-the own closure under being affected and the own closure under affecting, each held de se, leave some
-formation out: the flow is not mutually dependent, the dweller lying beyond the clearer's influence closure
-(`shares_not_mutual`). -/
-theorem not_unrestricted_ownClosure :
-    ¬ Unrestricted (selfAscribed (ownClosure (flow.AffectedBy web)) (fun f : Formation => f)) ∧
-      ¬ Unrestricted (selfAscribed (ownClosure (flow.Affects web)) (fun f : Formation => f)) :=
-  have onto : ∀ f : Formation, ∃ p : Formation, (fun f : Formation => f) p = f := fun f => ⟨f, rfl⟩
-  ⟨fun unrestricted => shares_not_mutual.2 ((Flow.mutuallyDependent_iff_unrestricted onto).1.mpr
-      unrestricted),
-   fun unrestricted => shares_not_mutual.2 ((Flow.mutuallyDependent_iff_unrestricted onto).2.mpr
-      unrestricted)⟩
-
-end Clearing
 
 /-! ## Choices with comparisons added -/
 
@@ -267,17 +223,11 @@ theorem above_in_some_containing_of_unreached (none : «无环» (ch.withPairs Q
     ⟨P, irrefl, trans, (accords_withPairs_iff.mp accords).1, (accords_withPairs_iff.mp accords).2,
      above⟩
 
-/-- A reach begins with a step. -/
-theorem reach_first_step {R : «际» α} {a b : α} (reach : «及» R a b) : ∃ c, R a c :=
-  match reach with
-  | .one h => ⟨_, h⟩
-  | .more h _ => ⟨_, h⟩
-
 /-- Nothing is reached from an alternative the choices never meet, where `Q` relates it to something only
 if it is open at some occasion. -/
 theorem not_reach_of_unmet {a b : α} (unmet : ch.Unmet a) (from_met : ∀ y, Q a y → ∃ o, ch.menu o a) :
     ¬ «及» (ch.withPairs Q).Shown a b :=
-  fun reach => match reach_first_step reach with
+  fun reach => match «及之首步» reach with
     | ⟨_, step⟩ => match shown_withPairs_iff.mp step with
       | .inl ⟨o, picked, _, _⟩ => unmet.2 o picked
       | .inr ⟨q, _⟩ => match from_met _ q with
@@ -307,7 +257,7 @@ theorem reach_withPairs_of_kept {ends : α → Prop} (kept : ∀ o, ¬ ends (ch.
       | inl r => exact .inl (.more s r)
       | inr e => exact .inr e
     | inr q =>
-      match reach_first_step rest with
+      match «及之首步» rest with
       | ⟨_, step⟩ => exact absurd (runs _ _ q.1).2 (source _ _ step)
 
 /-- **What ends is a sink.** Where no chosen alternative ends and `Q` runs only from what does not end to
@@ -317,7 +267,7 @@ theorem noCycle_withPairs_of_kept {ends : α → Prop} (none : «无环» ch.Sho
     «无环» (ch.withPairs Q).Shown :=
   fun a loop => match reach_withPairs_of_kept kept runs loop with
     | .inl back => none a back
-    | .inr ended => match reach_first_step loop with
+    | .inr ended => match «及之首步» loop with
       | ⟨_, step⟩ => match shown_withPairs_iff.mp step with
         | .inl ⟨o, picked, _, _⟩ => kept o (picked ▸ ended)
         | .inr ⟨q, _⟩ => (runs _ _ q).1 ended
@@ -344,25 +294,6 @@ end ChoiceOccasions
 namespace Weighting
 
 variable {X : Type}
-
-/-- An order is *increasing in its own continuation on the pairs `met` relates*: wherever `met` relates
-`a` to `b` and `a` widens `b` adding to what `own` marks, it ranks `a` above `b`. `R b a` reads "`a` is
-ranked above `b`", as in `IncreasingInOwn`. -/
-def IncreasingInOwnOn (met : (X → Bool) → (X → Bool) → Prop) (items : List X) (own : X → Bool)
-    (R : (X → Bool) → (X → Bool) → Prop) : Prop :=
-  ∀ a b, met a b → WidensOn items a b → AddsOwn items own a b → R b a
-
-/-- An order increasing in its own continuation is so on any pairs. -/
-theorem increasingInOwnOn_of_increasingInOwn {met : (X → Bool) → (X → Bool) → Prop} {items : List X}
-    {own : X → Bool} {R : (X → Bool) → (X → Bool) → Prop} (increasing : IncreasingInOwn items own R) :
-    IncreasingInOwnOn met items own R :=
-  fun a b _ => increasing a b
-
-/-- On every pair, it is being increasing in its own continuation. -/
-theorem increasingInOwnOn_every_iff {items : List X} {own : X → Bool}
-    {R : (X → Bool) → (X → Bool) → Prop} :
-    IncreasingInOwnOn (fun _ _ => True) items own R ↔ IncreasingInOwn items own R :=
-  ⟨fun on a b => on a b trivial, increasingInOwnOn_of_increasingInOwn⟩
 
 /-- A widening differs from what it widens. -/
 theorem WidensOn.ne {items : List X} {a b : X → Bool} (widens : WidensOn items a b) : b ≠ a :=
@@ -422,19 +353,34 @@ theorem selfConcerned_consistent_iff :
     | ⟨P, irrefl, trans, accords, contains⟩ =>
       ⟨P, irrefl, trans, accords, contains_iff_increasingInOwnOn.mp contains⟩⟩
 
+/-- **Where only ending is at stake, keeping above ending is self-concern on the occasions met.** Where, on
+the occasions met, a course adds to the own continuation beyond one it widens only where it does not end and
+the other does (`stake`), every relation putting what does not end above what ends wherever the two were met
+together is increasing in its own continuation on the pairs met. Keeping above ending asks more: it also ranks
+a keeping course above an ending one met with it that it does not widen. -/
+theorem increasingInOwnOn_of_keeping {ends : (X → Bool) → Prop}
+    (stake : ∀ a b, ch.Met a b → Weighting.WidensOn items a b → Weighting.AddsOwn items own a b →
+      ¬ ends a ∧ ends b)
+    {P : «际» (X → Bool)} (above : ∀ x y, ch.Met x y → ¬ ends x → ends y → P x y) :
+    Weighting.IncreasingInOwnOn ch.Met items own (fun b a => P a b) :=
+  fun a b met widens adds => match stake a b met widens adds with
+    | ⟨keeps, ended⟩ => above a b met keeps ended
+
 /-- **Where only ending is at stake, keeping gives self-concern on the occasions met.** Where the choices
 come from some strict order, no chosen course ends (`ends`), and on the occasions met a course adds to the
 own continuation beyond one it widens only where it does not end and the other does (`stake`), some
-strict order according with the choices is increasing in its own continuation on the pairs met. It is consistent
-with the choices; the choices do not show that it is held. -/
+strict order according with the choices is increasing in its own continuation on the pairs met: the order
+`keeping_above_ending` gives (`increasingInOwnOn_of_keeping`). It is consistent with the choices; the
+choices do not show that it is held. -/
 theorem selfConcerned_consistent_of_kept {ends : (X → Bool) → Prop} (none : «无环» ch.Shown)
     (kept : ∀ o, ¬ ends (ch.pick o))
     (stake : ∀ a b, ch.Met a b → Weighting.WidensOn items a b → Weighting.AddsOwn items own a b →
       ¬ ends a ∧ ends b) :
     ∃ P : «际» (X → Bool), (∀ a, ¬ P a a) ∧ (∀ a b c, P a b → P b c → P a c) ∧ ch.Accords P ∧
       Weighting.IncreasingInOwnOn ch.Met items own (fun b a => P a b) :=
-  selfConcerned_consistent_iff.mpr (noCycle_withPairs_of_kept none kept
-    fun a b q => stake a b q.1 q.2.1 q.2.2)
+  match keeping_above_ending none kept with
+  | ⟨P, irrefl, trans, accords, above⟩ =>
+    ⟨P, irrefl, trans, accords, increasingInOwnOn_of_keeping stake above⟩
 
 /-- **The same, where each course keeps all of the own continuation or none.** Where the choices come from
 some strict order, no chosen course admits none of the own continuation listed, and every course open
@@ -478,12 +424,34 @@ def Persists {X : Type} (G : SelectionTerm.Generations X) : Prop :=
 
 end SelectionTerm.Generations
 
+/-- **A line with a member after a window never overdrew in it.** Under the laws of
+`Flow.persists_never_overdraws` (balance, only active formations giving, activity needing support, descent,
+the renewal of a family of conditions gated on the family at a need of at least `m`, and every member of
+every cohort depending on some condition of the family at a need of at least `m`), a line with a member at a
+step `s` later than `T + n` never had the family's uptake exceed its replenishment for the `n` steps from
+`T` from a stock below `n + m`: the generation after `T + n` and every later one would be empty
+(`GroupEnding.Flow.coupled_generation_childless`). It says nothing of a window that closes at or after `s`. -/
+theorem Flow.member_after_never_overdrew {X : Type} {L : Flow X X} {W : Web X X}
+    (balances : L.Balances W) (acting : L.Acting W) (dependent : W.Dependent)
+    {G : SelectionTerm.Generations X} (descended : SelectionTerm.Flow.Descended L W G)
+    {ds : List X} {m : Nat}
+    (gated : ∀ t f, f ∈ L.present t → ∀ d, d ∈ ds → 0 < L.give t f d →
+      ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e)
+    (coupled : ∀ s p, p ∈ G.family s → ∃ e, e ∈ ds ∧ W.requires s p e ∧ m ≤ W.need s p e)
+    {T n s : Nat} {y : X} (late : T + n < s) (member : y ∈ G.family s) :
+    ¬ ((∀ k, k < n → L.replenishment ds (T + k) < L.uptake ds (T + k)) ∧ W.stock ds T < n + m) :=
+  fun ⟨excess, start⟩ => match Nat.le.dest (Nat.succ_le_of_lt late) with
+    | ⟨k, at_⟩ =>
+      GroupEnding.Flow.coupled_generation_childless balances acting dependent descended gated excess start k
+        (coupled (T + n + k)) y (Eq.subst (motive := fun r => y ∈ G.family r)
+          ((Nat.add_right_comm (T + n) 1 k).symm.trans at_).symm member)
+
 /-- **A line that persists never overdrew what it depends on from a short stock.** Under balance, with
 only active formations giving and activity needing support, let the renewal of a family of conditions be
 gated on the family as one at a need of at least `m`, and let every member of every cohort of descent
 depend on some condition of the family at a need of at least `m`. If the line persists through arbitrarily
 late cohorts, then at no step `T` did the family's uptake exceed its replenishment for `n` steps from a
-stock below `n + m` (from `GroupEnding.Flow.family_childless`). -/
+stock below `n + m`: the case of `Flow.member_after_never_overdrew` at a member past `T + n`. -/
 theorem Flow.persists_never_overdraws {X : Type} {L : Flow X X} {W : Web X X}
     (balances : L.Balances W) (acting : L.Acting W) (dependent : W.Dependent)
     {G : SelectionTerm.Generations X} (descended : SelectionTerm.Flow.Descended L W G)
@@ -493,17 +461,9 @@ theorem Flow.persists_never_overdraws {X : Type} {L : Flow X X} {W : Web X X}
     (coupled : ∀ s p, p ∈ G.family s → ∃ e, e ∈ ds ∧ W.requires s p e ∧ m ≤ W.need s p e)
     (persists : G.Persists) (T n : Nat) :
     ¬ ((∀ k, k < n → L.replenishment ds (T + k) < L.uptake ds (T + k)) ∧ W.stock ds T < n + m) :=
-  fun ⟨excess, start⟩ =>
-    have ended : ∀ k y, ¬ y ∈ G.family (T + n + k + 1) := fun k y mem =>
-      match ListTests.mem_flatMap_iff.mp mem with
-      | ⟨q, mq, kid⟩ => match coupled (T + n + k) q mq with
-        | ⟨_, inside, depends, high⟩ =>
-          GroupEnding.Flow.family_childless balances acting dependent gated excess start k inside
-            depends high y (descended (T + n + k) q y mq kid)
-    match persists (T + n + 1) with
-    | ⟨_, y, late, member⟩ => match Nat.le.dest late with
-      | ⟨k, at_⟩ => ended k y (Eq.subst (motive := fun r => y ∈ G.family r)
-          ((Nat.add_right_comm (T + n) 1 k).symm.trans at_).symm member)
+  match persists (T + n + 1) with
+  | ⟨_, _, late, member⟩ => Flow.member_after_never_overdrew balances acting dependent descended gated coupled
+      (Nat.lt_of_succ_le late) member
 
 /-- **A persisting line's choices put keeping above ending.** Under the laws of `persists_never_overdraws`,
 let the line persist, let a chosen alternative that ends be realized as an overdraw of the family from a

@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-11-09T12:27:23+00:00",
+  "reviewed_at_utc": "2026-11-09T15:00:40+00:00",
   "statement": {
     "en": "Held de se along affecting at the formations whose acts return, given one, the continuation condition is exactly mutual dependence, as it is with every formation a standpoint; along being affected or feeding, the readings of the standpoints and the relation give different conditions.",
     "zh": "沿“影响”在所为回返的构成处从己持有、且有一个时，延续条件恰是彼此依存，与每个构成都是立场时相同；沿“受影响”或“供养”，立场的读法与关系给出不同的条件。"
@@ -280,11 +280,7 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean",
       "role": "proof",
       "declarations": [
-        "Becoming.ReturnsAlong",
         "Becoming.Returning",
-        "Becoming.ReturnsAlong.loop",
-        "Becoming.returnsAlong_of_whole",
-        "Becoming.ReturnsAlong.whole",
         "Becoming.ownClosure_unrestricted_atReturning_iff",
         "Becoming.ownClosure_unrestricted_of_none",
         "Becoming.ownClosure_standpointInvariant_atReturning_iff",
@@ -312,7 +308,18 @@
         "Becoming.Unexchanged.every_returns",
         "Becoming.Unexchanged.apart"
       ],
-      "sha256": "539ef9aa5e76911d455ad7ab620142a872e328c151e6d4ca829cdfa03e61e867"
+      "sha256": "318b0fdeead1687bbde7f36b91542f42dd2f49b9e8868e2a37e66a96d8743b98"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ReturnsAlong",
+        "Becoming.ReturnsAlong.loop",
+        "Becoming.ReturnsAlong.whole",
+        "Becoming.returnsAlong_of_whole"
+      ],
+      "sha256": "587cbe0f1adb0ceffa160d6b268afcc07cbc8bcd5ffa8e3b7538132823418466"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T124151.227669Z/verification.json",
@@ -337,12 +344,18 @@
       "role": "statement",
       "sha256": "0976d12e43dbb0539587fc52ffbb6e882cd2fd8aafa55eab3efef6ba1281c40c",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json",
+      "role": "receipt",
+      "sha256": "b2a4a06d538e8e7d391c8947e4c85eb6183fa84004a1f4fd8eb13d765d628a14",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T124151.227669Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.FlowCenters",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -356,6 +369,10 @@
     {
       "en": "9 November 2026, after AI readings of route (b)'s join (astra, then the joining session's checkers, read-only): a returning formation said to exist only where there is a formation; covering from activity said to cover only the formations that exchange; mutual dependence said to include mutual drain, and the laws to say nothing of order in time. Docstring, home section and records corrected; no law changed.",
       "zh": "2026年11月9日，经对路线 (b) 之连接的 AI 阅读（astra 及连接会话之核查者，只读）后：所为回返之构成只在至少有一个构成处才说存在；由活动而来的覆盖只说覆盖有所交换者；彼此依存含彼此汲取，诸律不言时间先后。文档串、归属节与记录随之更正；诸律不变。"
+    },
+    {
+      "en": "9 November 2026, J1 (route (b)'s join, board rule 9): ReturnsAlong and its three laws moved, with their names and statements, from FlowCenters to the frame, stated for elements of any type, and Centers' Flow.ReachReturns is now defined as its case along affecting; ownClosure_unrestricted_atReturning_iff and Flow.mutuallyFed_iff_unrestricted are cases of two laws in Weightings, and the backward half of Flow.returning_unrestricted_iff_mutuallyDependent is Flow.unrestricted_of_mutuallyDependent. The claim is unchanged.",
+      "zh": "2026年11月9日，J1（路线 (b) 之合观，看板规则 9）：ReturnsAlong 及其三律连同名与陈述自 FlowCenters 移至框架，对任意类型之元素陈述，Centers 之 Flow.ReachReturns 今定义为其沿影响之情形；ownClosure_unrestricted_atReturning_iff 与 Flow.mutuallyFed_iff_unrestricted 为 Weightings 中二律之情形，Flow.returning_unrestricted_iff_mutuallyDependent 之逆半为 Flow.unrestricted_of_mutuallyDependent。所陈未变。"
     },
     {
       "en": "10 November 2026, AG review, seventh pass (completeness critic; on Ren's messages 9 to 12 of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the hypotheses no longer call the condition and the step 'never asserted', the withdrawn frame's word; they are hypotheses or conclusions and nothing more, as the sibling records what-the-step-across-standpoints-reaches and self-concern-through-dependence say it. No law changed.",

@@ -83,7 +83,7 @@ Reading (the AI's, from its knowledge): a selection read off the bearer's contin
 - related, not a proved adapter: [covering-by-the-returning-formations](covering-by-the-returning-formations.md). Every formation lies within the influence closure of a formation whose acts return, on finitely many formations with reach decided; with it, pooled over those formations, nothing lies beyond the coupling closure.
 - related, not a proved adapter: [where-the-blindness-lifts](where-the-blindness-lifts.md). The converse at the level of histories: what a selection read off a group's couplings separates.
 
-**Used by:** [where-the-blindness-lifts](where-the-blindness-lifts.md)
+**Used by:** [a-selection-removing-its-readers](a-selection-removing-its-readers.md) · [route-b-joined](route-b-joined.md) · [where-the-blindness-lifts](where-the-blindness-lifts.md) · [which-readings-persist](which-readings-persist.md)
 
 <a id="sources--来源"></a>
 ### Sources

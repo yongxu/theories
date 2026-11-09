@@ -1552,6 +1552,26 @@ theorem ownClosure_unrestricted_iff {rel : F → F → Prop} {center : Pos → F
     Unrestricted (selfAscribed (ownClosure rel) center) ↔ ∀ p g, WithinClosure rel (center p) g :=
   ⟨fun unrestricted p g => unrestricted (p, 0, g), fun whole i => whole i.1 i.2.2⟩
 
+/-- **Where every element is some standpoint's center, held de se the presupposition is the
+continuation condition exactly where every closure is the whole.** -/
+theorem ownClosure_unrestricted_iff_of_onto {rel : F → F → Prop} {center : Pos → F}
+    (onto : ∀ f, ∃ p, center p = f) :
+    Unrestricted (selfAscribed (ownClosure rel) center) ↔ ∀ f g, WithinClosure rel f g :=
+  ⟨fun unrestricted f g => match onto f with
+     | ⟨p, at_⟩ => Eq.subst (motive := fun x => WithinClosure rel x g) at_
+         (ownClosure_unrestricted_iff.mp unrestricted p g),
+   fun whole => ownClosure_unrestricted_iff.mpr fun p g => whole (center p) g⟩
+
+/-- **Where some standpoint's center returns, held de se the presupposition is the continuation
+condition exactly where every closure is the whole**: that center's closure is then the whole, and
+one returning element whose closure is the whole makes every closure the whole
+(`ReturnsAlong.whole`). -/
+theorem ownClosure_unrestricted_iff_of_returning {rel : F → F → Prop} {center : Pos → F} (p : Pos)
+    (returns : ReturnsAlong rel (center p)) :
+    Unrestricted (selfAscribed (ownClosure rel) center) ↔ ∀ f g, WithinClosure rel f g :=
+  ⟨fun unrestricted => returns.whole (ownClosure_unrestricted_iff.mp unrestricted p),
+   fun whole => ownClosure_unrestricted_iff.mpr fun q g => whole (center q) g⟩
+
 /-- The de dicto reading of the presupposition: from every standpoint, the continuation of what
 lies within some center's closure. -/
 def withinSome (rel : F → F → Prop) (center : Pos → F) : Pos → Nat → F → Prop :=
@@ -6007,6 +6027,25 @@ theorem increasingInOwn_of_increasing {items : List X} {own : X → Bool}
     IncreasingInOwn items own R :=
   fun a b widens _ => increasing a b widens
 
+/-- An order is *increasing in its own continuation on the pairs `met` relates*: wherever `met` relates
+`a` to `b` and `a` widens `b` adding to what `own` marks, it ranks `a` above `b`. `R b a` reads "`a` is
+ranked above `b`", as in `IncreasingInOwn`. -/
+def IncreasingInOwnOn (met : (X → Bool) → (X → Bool) → Prop) (items : List X) (own : X → Bool)
+    (R : (X → Bool) → (X → Bool) → Prop) : Prop :=
+  ∀ a b, met a b → WidensOn items a b → AddsOwn items own a b → R b a
+
+/-- An order increasing in its own continuation is so on any pairs. -/
+theorem increasingInOwnOn_of_increasingInOwn {met : (X → Bool) → (X → Bool) → Prop} {items : List X}
+    {own : X → Bool} {R : (X → Bool) → (X → Bool) → Prop} (increasing : IncreasingInOwn items own R) :
+    IncreasingInOwnOn met items own R :=
+  fun a b _ => increasing a b
+
+/-- On every pair, it is being increasing in its own continuation. -/
+theorem increasingInOwnOn_every_iff {items : List X} {own : X → Bool}
+    {R : (X → Bool) → (X → Bool) → Prop} :
+    IncreasingInOwnOn (fun _ _ => True) items own R ↔ IncreasingInOwn items own R :=
+  ⟨fun on a b => on a b trivial, increasingInOwnOn_of_increasingInOwn⟩
+
 /-- **Drawn as everything listed, the self's monotonicity is C's premise.** Where `own` marks
 every listed item, an order is increasing in its own continuation exactly when it is increasing
 in admission. -/
@@ -6093,12 +6132,9 @@ theorem Flow.coupled_ending_ranked_below {X : Type} {L : Flow X X} {W : Web X X}
     (agree : ∀ x, x ∈ items → x.1 ≤ T + n → a x = b x)
     {own : Pos → Nat × X → Bool} (p : Pos) (adds : Weighting.AddsOwn items (own p) a b) :
     ∀ R, Weighting.IncreasingInOwn items (own p) R → R b a :=
-  have ended : ∀ k y, ¬ y ∈ G.family (T + n + k + 1) := fun k y mem =>
-    match ListTests.mem_flatMap_iff.mp mem with
-    | ⟨q, mq, kid⟩ => match coupled k q mq with
-      | ⟨_, inside, depends, high⟩ =>
-        GroupEnding.Flow.family_childless balances acting dependent gated excess start k inside
-          depends high y (descended (T + n + k) q y mq kid)
+  have ended : ∀ k y, ¬ y ∈ G.family (T + n + k + 1) := fun k =>
+    GroupEnding.Flow.coupled_generation_childless balances acting dependent descended gated excess
+      start k (coupled k)
   (Weighting.every_increasingInOwn_iff_includes adds).mpr fun x listed admits =>
     match Nat.lt_or_ge (T + n) x.1 with
     | .inl after => match Nat.le.dest after with

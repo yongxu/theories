@@ -1,0 +1,398 @@
+{
+  "schema_version": 2,
+  "id": "which-readings-persist",
+  "title": {
+    "en": "Which readings persist",
+    "zh": "何种读法存续"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F07",
+  "reviewed_at_utc": "2026-11-09T16:28:51+00:00",
+  "statement": {
+    "en": "A line's standing late tells readings apart only by what their acts do within its coupling closure. In a witness where nothing comes back a line clearing a dweller's habitat persists as a sparing one does, an overdrawing one ends; where the dweller renews the source, the clearing line ends with it.",
+    "zh": "系之晚立只以诸读法之举在其耦合闭包内所为分之。见证中，无所返处，清栖者之栖地之系与留之系同存续，透支之系终；栖者续此系之源处，清之系与之同终。"
+  },
+  "laws": [
+    {
+      "en": "Let a line carry one of two readings: the rest acts by a law of what has stood reading through coupling; the two acts are laws of what has stood, the first reading each slot's couplings only, agreeing under every history on what couples into the line's coupling closure drawn through both courses; both feasible; own standing coupled in. The slots stand late in the one course exactly when in the other.",
+      "zh": "设一系携二读法之一：其余依读已成者、经耦合而读之律；二举为读已成者之律，前者只读各位之耦合，且于每一历史下在经两程所得之系耦合闭包内耦合入者上皆一致；两程可行；各位之自立耦合入。则诸位于一程中立至晚步，恰如于另一程。",
+      "declarations": [
+        "Becoming.StandsLate",
+        "Becoming.Web.standsLate_readOffCouplings",
+        "Becoming.Flow.lineOf_standsLate",
+        "Becoming.line_standing_unselected",
+        "Becoming.line_standing_unselected_of_reads"
+      ]
+    },
+    {
+      "en": "A witness world: a line of two slots passing its standing on and drawing on a source; a dweller's line of two slots requiring a habitat; three readings (the line only, drawing two and clearing; the line and its source, drawing one and clearing; everything, drawing one and sparing). The acts read what has stood and only what couples into their relatum.",
+      "zh": "见证世界：一系二位，传其立并取于一源；栖者之系二位，需一栖地；三读法（唯此系，取二而清；此系及其源，取一而清；一切，取一而留）。诸举读已成者，且只读耦合入其关系项者。",
+      "declarations": [
+        "Becoming.ReadingsPersist.Habitat.Rel",
+        "Becoming.ReadingsPersist.Habitat.Reading",
+        "Becoming.ReadingsPersist.Habitat.stands",
+        "Becoming.ReadingsPersist.Habitat.fed",
+        "Becoming.ReadingsPersist.Habitat.draw",
+        "Becoming.ReadingsPersist.Habitat.clears",
+        "Becoming.ReadingsPersist.Habitat.first",
+        "Becoming.ReadingsPersist.Habitat.conduct",
+        "Becoming.ReadingsPersist.Habitat.act",
+        "Becoming.ReadingsPersist.Habitat.isA",
+        "Becoming.ReadingsPersist.Habitat.readOf",
+        "Becoming.ReadingsPersist.Habitat.restLaw",
+        "Becoming.ReadingsPersist.Habitat.world",
+        "Becoming.ReadingsPersist.Habitat.members",
+        "Becoming.ReadingsPersist.Habitat.listed",
+        "Becoming.ReadingsPersist.Habitat.requires",
+        "Becoming.ReadingsPersist.Habitat.need",
+        "Becoming.ReadingsPersist.Habitat.webOf",
+        "Becoming.ReadingsPersist.Habitat.flowOf",
+        "Becoming.ReadingsPersist.Habitat.flowOf_follows",
+        "Becoming.ReadingsPersist.Habitat.ble_congr",
+        "Becoming.ReadingsPersist.Habitat.fed_of_agree",
+        "Becoming.ReadingsPersist.Habitat.admits_iff",
+        "Becoming.ReadingsPersist.Habitat.fed_of_admits",
+        "Becoming.ReadingsPersist.Habitat.act_alike",
+        "Becoming.ReadingsPersist.Habitat.act_nonanticipating",
+        "Becoming.ReadingsPersist.Habitat.act_readsThroughOwn",
+        "Becoming.ReadingsPersist.Habitat.world_nonanticipating"
+      ]
+    },
+    {
+      "en": "Its courses, by closed levels proved balanced at every step: both lines kept; the habitat cleared with nothing coming back; the source overdrawn; the habitat cleared where the dweller renews the source. The lines read off them persist or end as computed.",
+      "zh": "其诸程，以闭式水平逐步证其平衡：二系皆存；无所返而清栖地；源被透支；栖者续源处清栖地。读自其上之诸系如所算或存或终。",
+      "declarations": [
+        "Becoming.ReadingsPersist.Habitat.alt",
+        "Becoming.ReadingsPersist.Habitat.alt'",
+        "Becoming.ReadingsPersist.Habitat.alt_or",
+        "Becoming.ReadingsPersist.Habitat.second",
+        "Becoming.ReadingsPersist.Habitat.keep",
+        "Becoming.ReadingsPersist.Habitat.cleared",
+        "Becoming.ReadingsPersist.Habitat.overSource",
+        "Becoming.ReadingsPersist.Habitat.overdrawn",
+        "Becoming.ReadingsPersist.Habitat.clearedBack",
+        "Becoming.ReadingsPersist.Habitat.start",
+        "Becoming.ReadingsPersist.Habitat.present",
+        "Becoming.ReadingsPersist.Habitat.keep_balances",
+        "Becoming.ReadingsPersist.Habitat.cleared_balances_late",
+        "Becoming.ReadingsPersist.Habitat.cleared_balances",
+        "Becoming.ReadingsPersist.Habitat.overdrawn_balances",
+        "Becoming.ReadingsPersist.Habitat.clearedBack_balances",
+        "Becoming.ReadingsPersist.Habitat.lineA",
+        "Becoming.ReadingsPersist.Habitat.lineD",
+        "Becoming.ReadingsPersist.Habitat.keep_lineA_shift",
+        "Becoming.ReadingsPersist.Habitat.keep_lineD_shift",
+        "Becoming.ReadingsPersist.Habitat.cleared_lineA_shift",
+        "Becoming.ReadingsPersist.Habitat.keep_lineA_alive",
+        "Becoming.ReadingsPersist.Habitat.keep_lineD_alive",
+        "Becoming.ReadingsPersist.Habitat.cleared_lineA_alive",
+        "Becoming.SelectionTerm.Generations.family_nil_from",
+        "Becoming.SelectionTerm.Generations.not_persists_of_nil",
+        "Becoming.SelectionTerm.Generations.persists_of_alive"
+      ]
+    },
+    {
+      "en": "Where the source renews itself, the line reading only itself ends; the line reading its source persists and the dweller's line ends; the line reading everything persists with the dweller's line. The law holds there with every premise met by the model, so the line's standing late cannot tell clearing from sparing.",
+      "zh": "源自续处，唯读自身之系终；读其源之系存续而栖者之系终；读一切之系与栖者之系同存续。此律于此成立、诸前提皆由模型满足，故此系之晚立不能分清与留。",
+      "declarations": [
+        "Becoming.ReadingsPersist.Habitat.beyond_which_persist",
+        "Becoming.ReadingsPersist.Habitat.keep_persists",
+        "Becoming.ReadingsPersist.Habitat.cleared_persists",
+        "Becoming.ReadingsPersist.Habitat.overdrawn_ends",
+        "Becoming.ReadingsPersist.Habitat.beyond_standing",
+        "Becoming.ReadingsPersist.Habitat.standsLate_of_alt",
+        "Becoming.ReadingsPersist.Habitat.late_zero",
+        "Becoming.ReadingsPersist.Habitat.not_standsLate_of_gone",
+        "Becoming.ReadingsPersist.Habitat.beyond_standing_unselected",
+        "Becoming.ReadingsPersist.Habitat.inR",
+        "Becoming.ReadingsPersist.Habitat.quiet",
+        "Becoming.ReadingsPersist.Habitat.coupled_in_region",
+        "Becoming.ReadingsPersist.Habitat.not_exchanges",
+        "Becoming.ReadingsPersist.Habitat.region_closed",
+        "Becoming.ReadingsPersist.Habitat.closure_in_region"
+      ]
+    },
+    {
+      "en": "Where the dweller's line renews the source, the line reading its source clears the habitat and ends with the dweller's line; the line reading everything persists with it.",
+      "zh": "栖者之系续源处，读其源之系清栖地而与栖者之系同终；读一切之系与之同存续。",
+      "declarations": [
+        "Becoming.ReadingsPersist.Habitat.back_which_persist",
+        "Becoming.ReadingsPersist.Habitat.clearedBack_ends"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Discrete steps and natural levels; one kind of relatum; a web, the relata present and the starting levels supplied; a coupling by level supplied, holding each slot's own standing.",
+      "zh": "不加公理。离散步与自然数水平；一种关系项；网、在场之关系项与起始水平为给定；经水平之耦合为给定，含各位之自立。"
+    },
+    {
+      "en": "The two acts agree, under every level history, on everything coupled into the line's coupling closure drawn through both courses: a premise on the acts, met in the witness, not derived; where they differ there, the difference can be selected, as the witness's overdrawing reading shows.",
+      "zh": "二举于每一水平史下在经两程所得之系耦合闭包内耦合入者上一致：对二举之前提，于见证中满足，非推出；若于此不同，差异可被选，如见证之透支读法所示。"
+    },
+    {
+      "en": "The rest acts by a law of what has stood reading through coupling, the first act reads each slot's couplings only, and both courses are feasible; the significance form needs every significance's course feasible.",
+      "zh": "其余依读已成者、经耦合而读之律，前一举只读各位之耦合，两程皆可行；意义之形需每一意义之程皆可行。"
+    },
+    {
+      "en": "The act each reading gives is supplied; in the witness, which conduct each reading gives is designed.",
+      "zh": "各读法所给之举为给定；见证中各读法给何行为为所设。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That a wider reading persists where its loss returns because it is wider: a narrow reading whose act agrees on everything coupled into the line's closure stands late as well, under the law's premises.",
+      "zh": "其失去返回处，较宽之读法因宽而存续：其举在系闭包内耦合入者上皆一致之窄读法亦晚立，在此律之前提下。",
+      "kind": "non-implication",
+      "witness": "Becoming.line_standing_unselected"
+    },
+    {
+      "en": "Which readings persist among several lines competing for a share: selection here is persistence, all or nothing.",
+      "zh": "诸系争一份额时何种读法存续：此处之选择为存续，全有或全无。",
+      "kind": "scope"
+    },
+    {
+      "en": "That persistence implies a line's slots stand late and conversely: only the first direction is proved.",
+      "zh": "存续蕴含系之诸位立至晚步，及其逆：只证前一向。",
+      "kind": "converse",
+      "witness": "Becoming.Flow.lineOf_standsLate"
+    },
+    {
+      "en": "That actual lineages, institutions or trained systems act by readings so carried.",
+      "zh": "实际之谱系、制度或训练之系统依如此所携之读法而行。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean",
+      "detail": {
+        "en": "Against the reading that persistence selects the wider reading: where nothing comes back from the dweller, the line reading its source clears the habitat and persists as the line reading everything does, and the law holds there with every premise met (Habitat.beyond_which_persist, Habitat.beyond_standing_unselected).",
+        "zh": "反对存续择较宽读法之读法：栖者无所返处，读其源之系清栖地而存续，如读一切之系然，且此律于此成立、诸前提皆满足（Habitat.beyond_which_persist、Habitat.beyond_standing_unselected）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "names-provisional",
+    "formal-not-empirical",
+    "discrete-steps"
+  ],
+  "validation_scope": {
+    "en": "Pure core, axiom report empty; a leaf. The law is act_courses_unselected_throughout with standing late as the selection, near-definitional; the witness has finitely many relata, balance and the lines' fates proved for all steps, every premise of the law discharged. Written by an AI; readers of two other models read it cold (READER); no human audit.",
+    "zh": "纯核心，公理报告为空；叶模块。此律为以晚立为选择之 act_courses_unselected_throughout，近于定义；见证之关系项有限，平衡与诸系之终存证于每一步，此律诸前提皆证。AI 所写；另两模型之读者冷读（READER）；无人类审计。"
+  },
+  "next_delta": {
+    "en": "Several lines carrying different readings under selection by share, read off the course, joined to RuleShaping's counts; and readings that vary along descent, so that which readings arise is on the model with which persist.",
+    "zh": "携不同读法之诸系受份额之选择、读自其程，并接 RuleShaping 之计数；及沿传承而变之读法，使何种读法生与何种存续同在模型之上。"
+  },
+  "correspondence": {
+    "en": "Reading (the AI's, from its knowledge): a trait whose content leaves the bearer's fitness unchanged has no covariance with it (Price 1970); a cost borne beyond the bearer's coupling is an externality the bearer's own persistence does not register (Pigou 1920); where the cost returns through the bearer's own source, it is the tragedy of the commons read on one line (Hardin 1968).",
+    "zh": "解读（AI 据其知识）：内容不改承载者适应度之性状与之无协方差（Price 1970）；承载者耦合之外所承之代价为外部性，承载者自身之存续不记之（Pigou 1920）；代价经承载者自身之源返回处，即在一系上所读之公地悲剧（Hardin 1968）。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean",
+  "aliases": [
+    "which readings persist",
+    "standing late selects no reading beyond the coupling closure",
+    "何种读法存续",
+    "Becoming.line_standing_unselected",
+    "Becoming.ReadingsPersist.Habitat.beyond_which_persist",
+    "Becoming.ReadingsPersist.Habitat.back_which_persist"
+  ],
+  "dependencies": [
+    {
+      "id": "selection-read-off-continuations",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses act_courses_unselected_throughout and significance_courses_unselected with standing late as the selection.",
+        "zh": "复用 act_courses_unselected_throughout 与 significance_courses_unselected，以晚立为选择。"
+      },
+      "interface": {
+        "output": {
+          "en": "Courses selected alike by every whole-run selection read off what couples in.",
+          "zh": "遍及全程读自耦合入者之每一选择皆对两程选得相同。"
+        },
+        "input": {
+          "en": "Standing late among the line's slots.",
+          "zh": "系诸位之晚立。"
+        },
+        "conditions": {
+          "en": "Laws of what has stood; the rest reading through coupling; feasible courses; acts agreeing on what couples in.",
+          "zh": "读已成者之律；其余经耦合而读；进程可行；二举在耦合入者上一致。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean"
+      }
+    },
+    {
+      "id": "readings-carried-on-their-course",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the generated course and the line read off it.",
+        "zh": "复用所生之程与读自其上之系。"
+      },
+      "interface": {
+        "output": {
+          "en": "The course the acts generate; the line read off it.",
+          "zh": "行为所生之程；读自其上之系。"
+        },
+        "input": {
+          "en": "The witness's courses and lines.",
+          "zh": "见证之诸程与诸系。"
+        },
+        "conditions": {
+          "en": "Balanced flows following the world's law.",
+          "zh": "依世界之律之平衡之流。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "what-persisting-shows-of-an-order",
+      "detail": {
+        "en": "Persisting a filter on what was chosen; here the filter read on readings.",
+        "zh": "存续为所择之筛；此处读于读法之上。"
+      }
+    },
+    {
+      "id": "a-selection-removing-its-readers",
+      "detail": {
+        "en": "The course clearing the habitat, read as removing its readers.",
+        "zh": "清栖地之程，读为移除其读者。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.lineOf_standsLate",
+        "Becoming.ReadingsPersist.Habitat.Reading",
+        "Becoming.ReadingsPersist.Habitat.Rel",
+        "Becoming.ReadingsPersist.Habitat.act",
+        "Becoming.ReadingsPersist.Habitat.act_alike",
+        "Becoming.ReadingsPersist.Habitat.act_nonanticipating",
+        "Becoming.ReadingsPersist.Habitat.act_readsThroughOwn",
+        "Becoming.ReadingsPersist.Habitat.admits_iff",
+        "Becoming.ReadingsPersist.Habitat.alt",
+        "Becoming.ReadingsPersist.Habitat.alt'",
+        "Becoming.ReadingsPersist.Habitat.alt_or",
+        "Becoming.ReadingsPersist.Habitat.back_which_persist",
+        "Becoming.ReadingsPersist.Habitat.beyond_standing",
+        "Becoming.ReadingsPersist.Habitat.beyond_standing_unselected",
+        "Becoming.ReadingsPersist.Habitat.beyond_which_persist",
+        "Becoming.ReadingsPersist.Habitat.ble_congr",
+        "Becoming.ReadingsPersist.Habitat.cleared",
+        "Becoming.ReadingsPersist.Habitat.clearedBack",
+        "Becoming.ReadingsPersist.Habitat.clearedBack_balances",
+        "Becoming.ReadingsPersist.Habitat.clearedBack_ends",
+        "Becoming.ReadingsPersist.Habitat.cleared_balances",
+        "Becoming.ReadingsPersist.Habitat.cleared_balances_late",
+        "Becoming.ReadingsPersist.Habitat.cleared_lineA_alive",
+        "Becoming.ReadingsPersist.Habitat.cleared_lineA_shift",
+        "Becoming.ReadingsPersist.Habitat.cleared_persists",
+        "Becoming.ReadingsPersist.Habitat.clears",
+        "Becoming.ReadingsPersist.Habitat.closure_in_region",
+        "Becoming.ReadingsPersist.Habitat.conduct",
+        "Becoming.ReadingsPersist.Habitat.coupled_in_region",
+        "Becoming.ReadingsPersist.Habitat.draw",
+        "Becoming.ReadingsPersist.Habitat.fed",
+        "Becoming.ReadingsPersist.Habitat.fed_of_admits",
+        "Becoming.ReadingsPersist.Habitat.fed_of_agree",
+        "Becoming.ReadingsPersist.Habitat.first",
+        "Becoming.ReadingsPersist.Habitat.flowOf",
+        "Becoming.ReadingsPersist.Habitat.flowOf_follows",
+        "Becoming.ReadingsPersist.Habitat.inR",
+        "Becoming.ReadingsPersist.Habitat.isA",
+        "Becoming.ReadingsPersist.Habitat.keep",
+        "Becoming.ReadingsPersist.Habitat.keep_balances",
+        "Becoming.ReadingsPersist.Habitat.keep_lineA_alive",
+        "Becoming.ReadingsPersist.Habitat.keep_lineA_shift",
+        "Becoming.ReadingsPersist.Habitat.keep_lineD_alive",
+        "Becoming.ReadingsPersist.Habitat.keep_lineD_shift",
+        "Becoming.ReadingsPersist.Habitat.keep_persists",
+        "Becoming.ReadingsPersist.Habitat.late_zero",
+        "Becoming.ReadingsPersist.Habitat.lineA",
+        "Becoming.ReadingsPersist.Habitat.lineD",
+        "Becoming.ReadingsPersist.Habitat.listed",
+        "Becoming.ReadingsPersist.Habitat.members",
+        "Becoming.ReadingsPersist.Habitat.need",
+        "Becoming.ReadingsPersist.Habitat.not_exchanges",
+        "Becoming.ReadingsPersist.Habitat.not_standsLate_of_gone",
+        "Becoming.ReadingsPersist.Habitat.overSource",
+        "Becoming.ReadingsPersist.Habitat.overdrawn",
+        "Becoming.ReadingsPersist.Habitat.overdrawn_balances",
+        "Becoming.ReadingsPersist.Habitat.overdrawn_ends",
+        "Becoming.ReadingsPersist.Habitat.present",
+        "Becoming.ReadingsPersist.Habitat.quiet",
+        "Becoming.ReadingsPersist.Habitat.readOf",
+        "Becoming.ReadingsPersist.Habitat.region_closed",
+        "Becoming.ReadingsPersist.Habitat.requires",
+        "Becoming.ReadingsPersist.Habitat.restLaw",
+        "Becoming.ReadingsPersist.Habitat.second",
+        "Becoming.ReadingsPersist.Habitat.stands",
+        "Becoming.ReadingsPersist.Habitat.standsLate_of_alt",
+        "Becoming.ReadingsPersist.Habitat.start",
+        "Becoming.ReadingsPersist.Habitat.webOf",
+        "Becoming.ReadingsPersist.Habitat.world",
+        "Becoming.ReadingsPersist.Habitat.world_nonanticipating",
+        "Becoming.SelectionTerm.Generations.family_nil_from",
+        "Becoming.SelectionTerm.Generations.not_persists_of_nil",
+        "Becoming.SelectionTerm.Generations.persists_of_alive",
+        "Becoming.StandsLate",
+        "Becoming.Web.standsLate_readOffCouplings",
+        "Becoming.line_standing_unselected",
+        "Becoming.line_standing_unselected_of_reads"
+      ],
+      "sha256": "edbeb105bd6032e40d4c1cf5605da5f7506966b0f2c11d9a3e4885567aabef31"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T162721.876918Z/verification.json",
+      "role": "receipt",
+      "sha256": "c25e5771c29937389dcd04e1e798093f2d1bdd1dad6d1c4236fdb2950020f047"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zj2-readings-persist/NOTE.md",
+      "role": "integration",
+      "sha256": "513ec30c74c5f1c2737e90a915fc7c80820effe43818eb7d5fd8bd5b871d43aa"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zj2-readings-persist/READER.md",
+      "role": "review",
+      "sha256": "ac51abb55a4baf992f1e3324f20147bbe0d6b621bcea40c9e5e8e7cfc0226a4b"
+    },
+    {
+      "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "role": "statement",
+      "sha256": "b583823cfc6601a1aab2f1990e3e5d191eaf2a1ef3dbcbfdf08a8267df713c10"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",
+      "role": "provenance",
+      "sha256": "fbcc4332efd9f6c3739111666ccd7e54476fa4a80f1020dfea6aa7428954c1dc"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md",
+      "role": "provenance",
+      "sha256": "79ea05a97a42a089756d26b70b4c03553ae8fc8e9114b51e7dd62087cc7cbf7d"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T162721.876918Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ReadingsPersist",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "9 November 2026, route (b)'s piece J2, on Ren's words of that day and of 8 November kept in sources (2026-11-09-route-b-ethics-forms.md, 2026-11-08-within-becoming-no-should.md): added. The join of route (b)'s four pieces found persisting a filter and the pool fixed across courses, and turned the next question from which order forms to which readings persist; this record answers part of it on a model of lines carrying inherited readings, on the course their acts generate.",
+      "zh": "2026年11月9日，路线 (b) 之 J2，依 Ren 当日及11月8日之言（存于 sources 的 2026-11-09-route-b-ethics-forms.md、2026-11-08-within-becoming-no-should.md）：新增。路线 (b) 四部分之接合发现存续为一筛、池在诸程间固定，遂把下一问从何种次序形成转为何种读法存续；本记录在携传承读法之系、于其行为所生之程之模型上回答其一部分。"
+    }
+  ]
+}

@@ -135,6 +135,7 @@ The open item of testing-within-couplings (review F6): what an act does compares
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T213154.508889Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json) | — |
 
 Aliases: `Becoming.Run.Fixes`, `Becoming.Run.fixes_of_takes`, `Becoming.Run.not_fixes_of_untaken`, `Becoming.Run.fixes_on_return`, `Becoming.Run.not_fixes_other_of_new`, `Becoming.keepHistory`, `Becoming.keepHistory_new`, `Becoming.keepHistory_fixes_nothing_else`, `Becoming.Run.FixesThrough`, `Becoming.FactorsThrough`, `Becoming.Run.generalizes`, `Becoming.Run.projection_returns`, `Becoming.Confound.misattributes`, `Becoming.Confound.confounded`, `Becoming.Confound.varied_refutes`, `experiment`, `实验`, `replication`, `重复`, `control`, `对照`, `confound`, `混杂`
 

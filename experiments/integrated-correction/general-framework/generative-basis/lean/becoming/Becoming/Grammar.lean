@@ -97,6 +97,12 @@ theorem «及之传递» {R : «际» α} {x y z : α} (h₁ : «及» R x y) (h
   | one h => exact .more h h₂
   | more h _ ih => exact .more h (ih h₂)
 
+/-- **A reach begins with a step (及之首步):** what reaches something conditions something. -/
+theorem «及之首步» {R : «际» α} {x y : α} (h : «及» R x y) : ∃ w, R x w :=
+  match h with
+  | .one r => ⟨_, r⟩
+  | .more r _ => ⟨_, r⟩
+
 theorem «及之单调» {R S : «际» α} (h : «则» R S) : «则» («及» R) («及» S) := by
   intro x y hr
   induction hr with
@@ -272,9 +278,7 @@ theorem «生生最大» {R E : «际» α} {S : α → Prop}
 theorem «生生则复生» {R E : «际» α} {x : α} (h : «生生» R E x) : «复生» R E x :=
   match «生生之展» h with
   | ⟨y, _, hr, hb, hl, _⟩ =>
-    ⟨y, hr, hb, match hl with
-      | .one c => ⟨_, c⟩
-      | .more c _ => ⟨_, c⟩⟩
+    ⟨y, hr, hb, «及之首步» hl⟩
 
 /-- Under the one there is no renewal without end. -/
 theorem «一之下无生生» (R : «际» α) (x : α) : ¬ «生生» R «一» x :=
@@ -665,9 +669,7 @@ occurrence that does not renew renews into nothing. Ceasing, like renewal withou
 an occurrence renews into, not its line: an occurrence that does not renew ceases even where its line
 goes on into renewal without end. -/
 theorem «自不复生则息» {R E : «际» α} {x : α} (h : ¬ «复生» R E x) : «息» R E x :=
-  .mk fun _ ⟨y, hr, hb, hl⟩ => absurd ⟨y, hr, hb, match hl with
-    | .one c => ⟨_, c⟩
-    | .more c _ => ⟨_, c⟩⟩ h
+  .mk fun _ ⟨y, hr, hb, hl⟩ => absurd ⟨y, hr, hb, «及之首步» hl⟩ h
 
 /-- Where nothing on the line from `x` renews, `x` ceases: the old reading of ceasing (no renewal
 anywhere on the line) implies the new one. Only the instance at `x` itself is used: the law is

@@ -71,6 +71,7 @@ Stages of bisimulation and the Hennessy-Milner theorem (Hennessy and Milner 1985
 | proof | [GrammarCandidates.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean) | `Becoming.«层即诘»`, `Becoming.«诘之降»`, `Becoming.«层在类内»`, `Becoming.«层之对称»`, `Becoming.«每层不分而有常则核当且仅当每层不分»`, `Becoming.«致诘不尽»` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T170123.418765Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json) | — |
 
 Aliases: `Becoming.Room`, `Becoming.Room.alike`, `Becoming.Room.closed`, `Becoming.Room.opened`, `Becoming.Room.same`, `Becoming.Room.same_alike`, `Becoming.Room.same_constant`, `Becoming.Room.same_symm`, `Becoming.Room.warm`, `Becoming.«可分则不在核»`, `Becoming.«层»`, `Becoming.«恒温与平衡»`, `Becoming.«核在每层之内»`
 

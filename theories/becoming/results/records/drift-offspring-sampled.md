@@ -99,6 +99,7 @@ Wright-Fisher sampling (Fisher 1930; Wright 1931): binomial sampling of a two-al
 | proof | [Reproduction.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean) | `Becoming.Reproduction.square_mul` |
 | proof | [Prelude.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean) | `Becoming.Naturals.twice_le` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json) | — |
 
 Aliases: `drift`, `genetic drift`, `Wright-Fisher sampling`, `漂变`, `offspring sampled rather than listed`, `Becoming.Drift.falls_back`, `Becoming.Drift.expected_ones`, `Becoming.Drift.falls_back_ge`, `Becoming.Drift.Flow.ended_falls_back`
 

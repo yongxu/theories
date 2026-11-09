@@ -183,7 +183,7 @@
         "Becoming.Line.open_b_returns",
         "Becoming.Line.open_not_returns"
       ],
-      "sha256": "bc3e400f3ea27df2340bb62b89466e92f82a431f67cfc8010f9e46cc093dae97"
+      "sha256": "12c2557dec88dbb7465ad22e8094b6d0af0323a523961104b7c79cb8f0e595af"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T132056.171285Z/verification.json",
@@ -199,12 +199,18 @@
       "path": "theories/becoming/history/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
       "sha256": "0f0af9391df4c30ece1f642d21665f06f7128b83663fa60632e58477e6d20878"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json",
+      "role": "receipt",
+      "sha256": "b2a4a06d538e8e7d391c8947e4c85eb6183fa84004a1f4fd8eb13d765d628a14",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Centers.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T132056.171285Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Centers",
       "success_pointer": "/status",
       "success_value": "passed"

@@ -18,7 +18,7 @@ In reading order; the numbering is for reading, not an order of proof.
 | 4 | [Life and evolution](04-LIFE.md) | Life and evolution | 46 | 114–149 minutes |
 | 5 | [Joint activity and selection](05-COLLECTIVES.md) | Collectives and selection | 74 | 181–235 minutes |
 | 6 | [古文：读出、检验与分歧 (the classical texts: what they read out, how it is tested and where they diverge; in Chinese)](06-CLASSICAL-TEXTS.md) | The classical texts | 16 | 125–163 minutes |
-| 7 | [Significance, ethics and alignment](07-SIGNIFICANCE.md) | Significance and alignment | 91 | 349–453 minutes |
+| 7 | [Significance, ethics and alignment](07-SIGNIFICANCE.md) | Significance and alignment | 98 | 383–498 minutes |
 | 8 | [Method and the formal core](08-METHOD.md) | Method and the formal core | 21 | 217–282 minutes |
 
 Status: **chapter** is one of the eight chapters of the theory; **canonical** is the entry that states the theory; **reference** keeps material moved out of a chapter; **kept** is a live chapter kept at its own scope; **generated** is written by `make research-render`; **Chinese edition** is a `NAME.zh.md` split from a bilingual original, not maintained in step with the English file, which governs.
