@@ -1,0 +1,346 @@
+{
+  "schema_version": 2,
+  "id": "standpoints-read-off-a-flow",
+  "title": {
+    "en": "The standpoints and the relation read off a flow",
+    "zh": "从流读出的立场与关系"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F07",
+  "reviewed_at_utc": "2026-11-09T11:17:48+00:00",
+  "statement": {
+    "en": "Held de se along affecting at the formations whose acts return, given one, the continuation condition is exactly mutual dependence, as it is with every formation a standpoint; along being affected or feeding, the readings of the standpoints and the relation give different conditions.",
+    "zh": "沿“影响”在所为回返的构成处从己持有、且有一个时，延续条件恰是彼此依存，与每个构成都是立场时相同；沿“受影响”或“供养”，立场的读法与关系给出不同的条件。"
+  },
+  "laws": [
+    {
+      "en": "An element returns along a relation where whatever lies within its closure has it within its own; its own closure is then its loop. One returning element whose closure is the whole makes every closure the whole. So, held de se at the returning elements and given one, the presupposition is the continuation condition exactly where every closure is the whole; with none it holds vacuously.",
+      "zh": "一元素沿一关系回返，指凡在其闭包内者都使它在自身闭包内；其自身闭包即其环。一个闭包为整体的回返元素使每个闭包都是整体。所以在诸回返元素处从己持有、且有一个时，预设恰在每个闭包皆为整体处即延续条件；一个也无时空真成立。",
+      "declarations": [
+        "Becoming.ReturnsAlong",
+        "Becoming.Returning",
+        "Becoming.ReturnsAlong.loop",
+        "Becoming.returnsAlong_of_whole",
+        "Becoming.ReturnsAlong.whole",
+        "Becoming.ownClosure_unrestricted_atReturning_iff",
+        "Becoming.ownClosure_unrestricted_of_none",
+        "Becoming.ownClosure_standpointInvariant_atReturning_iff"
+      ]
+    },
+    {
+      "en": "On a flow a formation's acts return exactly where it returns along affecting. Held de se along affecting at the formations whose acts return, given one, the condition holds exactly where the flow is mutually dependent; the direction from the condition is the new one, and on the root «续无外» at the one of affecting gives mutual dependence likewise. Under mutual dependence every formation's acts return.",
+      "zh": "在流上，一构成之所为回返，恰在其沿“影响”回返处。沿“影响”在所为回返的诸构成处从己持有、且有一个时，条件恰在流彼此依存处成立；由条件推出依存的方向是新的，在根上影响之一处的«续无外»亦给出彼此依存。彼此依存时每个构成之所为皆回返。",
+      "declarations": [
+        "Becoming.Flow.Returning",
+        "Becoming.Flow.reachReturns_iff_returnsAlong",
+        "Becoming.Flow.mutuallyDependent_of_returning_unrestricted",
+        "Becoming.Flow.returning_unrestricted_iff_mutuallyDependent",
+        "Becoming.Flow.mutuallyDependent_of_returning_noOutside",
+        "Becoming.Flow.MutuallyDependent.reachReturns"
+      ]
+    },
+    {
+      "en": "At the formations whose acts return, given one, the step from each standpoint's own continuation gives the condition exactly where every formation's acts return. With every formation some standpoint's center, held de se along feeding the condition holds exactly where the flow is mutually fed, which is stronger than mutual dependence.",
+      "zh": "在所为回返的诸构成处、且有一个时，由各立场自身延续之步恰在每个构成之所为皆回返处给出条件。每个构成都是某立场之中心时，沿“供养”从己持有，条件恰在流彼此供养处成立，强于彼此依存。",
+      "declarations": [
+        "Becoming.Flow.atReturning_unrestricted_iff",
+        "Becoming.Flow.mutuallyFed_iff_unrestricted"
+      ]
+    },
+    {
+      "en": "In Drawing, a balanced pair each taking from what the other depends on, every formation's acts return; held de se at them the condition holds along affecting and along being affected, and not along feeding.",
+      "zh": "在 Drawing 中，一对平衡者各取对方所依之条件，每个构成之所为皆回返；在它们处从己持有，条件沿“影响”与“受影响”成立，沿“供养”不成立。",
+      "declarations": [
+        "Becoming.Drawing.returning_feeding_apart"
+      ]
+    },
+    {
+      "en": "In Clearing only the dweller's acts return, and it acts on nothing. Held de se along being affected, the condition holds at it and fails with the clearer as the one center supplied; along affecting it fails. Under that one reading the clearer's part retains with the clearer as the center and loses the dweller from the dweller: the verdict changes with the center alone.",
+      "zh": "在 Clearing 中只有栖居者之所为回返，且它无所作用。沿“受影响”从己持有，条件在它处成立，以清除者为所给唯一中心时不成立；沿“影响”不成立。同一读法下，以清除者为中心，清除者之份保留；从栖居者看，此份失去栖居者：判定只随中心而变。",
+      "declarations": [
+        "Becoming.Clearing.dweller_reach_closed",
+        "Becoming.Clearing.dweller_returns",
+        "Becoming.Clearing.clearer_not_returns",
+        "Becoming.Clearing.source_not_returns",
+        "Becoming.Clearing.reachReturns_iff",
+        "Becoming.Clearing.dweller_influence_whole",
+        "Becoming.Clearing.returning_apart",
+        "Becoming.Clearing.returning_loses_dweller"
+      ]
+    },
+    {
+      "en": "In Unexchanged, where nothing is exchanged, every formation's acts return and none depends on its own standing: the step from each standpoint's own continuation gives the condition at them, held de se along affecting it fails, and standpoints read as bearing on themselves and returning are none.",
+      "zh": "在 Unexchanged 中无所交换，每个构成之所为皆回返，无一依于自身之立：由各立场自身延续之步在它们处给出条件，沿“影响”从己持有则不成立，读作既自依又回返的立场一个也无。",
+      "declarations": [
+        "Becoming.Unexchanged.flow",
+        "Becoming.Unexchanged.web",
+        "Becoming.Unexchanged.not_affects",
+        "Becoming.Unexchanged.reach_self",
+        "Becoming.Unexchanged.every_returns",
+        "Becoming.Unexchanged.apart"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. The first law for any type and relation. On a flow, the relation is affecting, being affected or feeding, read off one flow and one web as in the feedback laws, and which of them is a choice.",
+      "zh": "不加公理。第一条规律对任何类型与关系。在流上，关系为“影响”“受影响”或“供养”，如反馈诸律从同一流与依存网读出，取哪一个是选择。"
+    },
+    {
+      "en": "Which formations are the standpoints is a reading: every formation, or those whose acts return. The laws at the returning formations ask one of them, which finitely many formations with reach decided give.",
+      "zh": "哪些构成是立场是一种读法：每个构成，或所为回返者。在回返构成处的规律要求至少有一个，构成有限且所及可判定时即有。"
+    },
+    {
+      "en": "Significance read as lying within a center's own closure, held de se, with the class the one of the relation; the condition and the step are hypotheses or conclusions, never asserted.",
+      "zh": "意义读作位于中心自身闭包之内，从己持有，类为该关系之一；条件与不变之步只作假设或结论，从不断言。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Which flow relation a self is drawn along: affecting, being affected and feeding give different conditions, and the verdicts differ with it.",
+      "zh": "自我沿哪个流关系来画：“影响”“受影响”“供养”给出不同的条件，判定随之不同。",
+      "kind": "non-implication",
+      "witness": "Becoming.Drawing.returning_feeding_apart"
+    },
+    {
+      "en": "That the standpoints are the formations whose acts return: the flow does not fix it. The readings agree along affecting and part along being affected, as in Clearing, which is not mutually dependent.",
+      "zh": "立场就是所为回返的构成：流并不定此。两种读法沿“影响”一致，沿“受影响”分开，如在不彼此依存的 Clearing 中。",
+      "kind": "non-implication",
+      "witness": "Becoming.Clearing.returning_apart"
+    },
+    {
+      "en": "Which class a center's own line runs under: the own-closure reading takes the one of the relation, and the de se question stays open.",
+      "zh": "中心自身之线在哪一类下延续：自身闭包读法取该关系之一，从己问题仍未定。",
+      "kind": "scope"
+    },
+    {
+      "en": "That significance is own closure at all: that stays a reading, and moving the inputs into definitions does not discharge them.",
+      "zh": "意义本就是自身闭包：这仍是一种读法；把输入移进定义并不消除它们。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That an actual flow is mutually dependent, or which of its formations return: both are empirical.",
+      "zh": "某实际的流彼此依存，或其中哪些构成回返：二者都是经验问题。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "That a returning formation persists or holds any significance: returning is a property of one flow's reach, and a formation acting on nothing returns vacuously.",
+      "zh": "回返的构成会延续或持有任何意义：回返只是一个流之所及的性质，无所作用的构成空真地回返。",
+      "kind": "scope",
+      "witness": "Becoming.Clearing.dweller_returns"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean",
+      "detail": {
+        "en": "Clearing: only the dweller's acts return; held de se along being affected the condition holds at it and fails at the clearer as the one center supplied, and the verdict on the clearer's part changes with the center (Clearing.returning_apart, Clearing.returning_loses_dweller).",
+        "zh": "Clearing：只有栖居者之所为回返；沿“受影响”从己持有，条件在它处成立，在作为所给唯一中心的清除者处不成立，对清除者之份的判定随中心而变（Clearing.returning_apart、Clearing.returning_loses_dweller）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean",
+      "detail": {
+        "en": "Drawing: every formation's acts return; held de se at them the condition holds along affecting and being affected and not along feeding (Drawing.returning_feeding_apart).",
+        "zh": "Drawing：每个构成之所为皆回返；在它们处从己持有，条件沿“影响”“受影响”成立，沿“供养”不成立（Drawing.returning_feeding_apart）。"
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean",
+      "detail": {
+        "en": "Unexchanged: every formation's acts return and none bears on itself, so standpoints read as bearing on themselves and returning are none (Unexchanged.apart).",
+        "zh": "Unexchanged：每个构成之所为皆回返，无一自依，读作既自依又回返的立场一个也无（Unexchanged.apart）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "significance-related-not-asserted",
+    "no-ethical-premise",
+    "formal-not-empirical",
+    "names-provisional",
+    "no-definition-by-verdict"
+  ],
+  "validation_scope": {
+    "en": "Pure core, axiom reports empty; a leaf. Written by an AI; one AI reader of another model read the statements against the Lean, this record and the home section, cold, for overclaim, then the corrections (READER in the study folder); no human audit. Every law is a short composition of the closure laws, the one substantive step being the existing law that a returning formation lies in every formation's reach on finitely many; none is new as mathematics.",
+    "zh": "纯核心，公理报告为空；叶模块。AI 所写；另一模型的一位 AI 读者对照 Lean、此记录与归属节冷读诸陈述，查是否言过其实，再读其修正（见研究目录 READER）；无人类审计。每条规律都是闭包律的简短组合，唯一实质一步是已有之律：构成有限时每个构成所及之内有一个回返者；无一是新数学。"
+  },
+  "next_delta": {
+    "en": "Join with the joining lemma and the class, route (b)'s other pieces, into one statement; then read which flow relation a self is drawn along off the dynamics, or show on one flow that two relations' standpoints both fit it.",
+    "zh": "与路线 (b) 的其余部分（连接引理与类）合为一个陈述；再从动力读出自我沿哪个流关系来画，或在同一个流上表明两个关系的立场都与之相合。"
+  },
+  "correspondence": {
+    "en": "In graph terms a formation's acts return exactly where its strongly connected component of the affecting graph is a sink: no arc leaves it. That every vertex of a finite digraph reaches a sink component is standard.",
+    "zh": "以图论言，一构成之所为回返，恰在其于“影响”图中的强连通分支为汇点分支处：无弧离开它。有限有向图的每个顶点都可达某汇点分支，是标准结论。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean",
+  "aliases": [
+    "the standpoints read off a flow",
+    "standpoints and relation read off a flow",
+    "从流读出的立场",
+    "Becoming.ownClosure_unrestricted_atReturning_iff",
+    "Becoming.Flow.mutuallyDependent_of_returning_unrestricted",
+    "Becoming.Clearing.returning_apart"
+  ],
+  "dependencies": [
+    {
+      "id": "where-a-formations-acts-return",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Flow.ReachReturns and the reach closure, read here as the returning formations.",
+        "zh": "Flow.ReachReturns 与所及闭包，此处读作回返的构成。"
+      }
+    },
+    {
+      "id": "what-the-step-across-standpoints-reaches",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "ownClosure, selfAscribed, ownClosure_unrestricted_iff, ownClosure_unrestricted_of_whole and unrestricted_atCenters_iff, instantiated at the returning elements.",
+        "zh": "ownClosure、selfAscribed、ownClosure_unrestricted_iff、ownClosure_unrestricted_of_whole 与 unrestricted_atCenters_iff，在回返元素处实例化。"
+      }
+    },
+    {
+      "id": "self-concern-through-dependence",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "ownClosure_standpointInvariant_iff_centersWithin, at the returning elements.",
+        "zh": "ownClosure_standpointInvariant_iff_centersWithin，在回返元素处。"
+      }
+    },
+    {
+      "id": "mutual-dependence-and-its-pace",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Flow.MutuallyDependent, Flow.MutuallyFed, Flow.mutuallyDependent_iff_reach, Drawing and Clearing.shares_not_mutual.",
+        "zh": "Flow.MutuallyDependent、Flow.MutuallyFed、Flow.mutuallyDependent_iff_reach、Drawing 与 Clearing.shares_not_mutual。"
+      }
+    },
+    {
+      "id": "the-continuation-condition-on-the-root",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "«续无外» and ownClosure_unrestricted_iff_noOutside, for the root form.",
+        "zh": "«续无外» 与 ownClosure_unrestricted_iff_noOutside，用于根上之形。"
+      }
+    },
+    {
+      "id": "levels-of-closure",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Clearing.levels, Clearing.reach_middle and Clearing.reach_centred, for which of Clearing's formations return.",
+        "zh": "Clearing.levels、Clearing.reach_middle 与 Clearing.reach_centred，用以判定 Clearing 中哪些构成回返。"
+      }
+    },
+    {
+      "id": "whole-and-regions-and-bounded-centers",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Clearing.clearer_loses_dweller, at the significance held de se along being affected at the returning formations, and Web.retains_bounded_iff.",
+        "zh": "Clearing.clearer_loses_dweller，取沿“受影响”在回返构成处从己持有的意义；及 Web.retains_bounded_iff。"
+      }
+    },
+    {
+      "id": "loss-beyond-a-region",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Clearing.loses_beyond: within the clearer and its source the part admits all the withheld levels admit, so it retains with the clearer as the center.",
+        "zh": "Clearing.loses_beyond：在清除者及其来源之内，此份接纳所留层所接纳者，故以清除者为中心时保留。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "covering-by-the-returning-formations",
+      "detail": {
+        "en": "Covering by the returning formations on finite flows, and the condition along being affected at them.",
+        "zh": "有限流上由回返构成的覆盖，及在它们处沿“受影响”的条件。"
+      }
+    },
+    {
+      "id": "derived-extent-limits",
+      "detail": {
+        "en": "Clearing.center_not_derived: along dependence the center is not derived from the dynamics; here the standpoints are read off the flow, as a reading.",
+        "zh": "Clearing.center_not_derived：沿依存，中心不从动力推出；此处立场从流读出，作为一种读法。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ReturnsAlong",
+        "Becoming.Returning",
+        "Becoming.ReturnsAlong.loop",
+        "Becoming.returnsAlong_of_whole",
+        "Becoming.ReturnsAlong.whole",
+        "Becoming.ownClosure_unrestricted_atReturning_iff",
+        "Becoming.ownClosure_unrestricted_of_none",
+        "Becoming.ownClosure_standpointInvariant_atReturning_iff",
+        "Becoming.Flow.Returning",
+        "Becoming.Flow.reachReturns_iff_returnsAlong",
+        "Becoming.Flow.mutuallyDependent_of_returning_unrestricted",
+        "Becoming.Flow.returning_unrestricted_iff_mutuallyDependent",
+        "Becoming.Flow.mutuallyDependent_of_returning_noOutside",
+        "Becoming.Flow.MutuallyDependent.reachReturns",
+        "Becoming.Flow.atReturning_unrestricted_iff",
+        "Becoming.Flow.mutuallyFed_iff_unrestricted",
+        "Becoming.Drawing.returning_feeding_apart",
+        "Becoming.Clearing.dweller_reach_closed",
+        "Becoming.Clearing.dweller_returns",
+        "Becoming.Clearing.clearer_not_returns",
+        "Becoming.Clearing.source_not_returns",
+        "Becoming.Clearing.reachReturns_iff",
+        "Becoming.Clearing.dweller_influence_whole",
+        "Becoming.Clearing.returning_apart",
+        "Becoming.Clearing.returning_loses_dweller",
+        "Becoming.Unexchanged.flow",
+        "Becoming.Unexchanged.web",
+        "Becoming.Unexchanged.not_affects",
+        "Becoming.Unexchanged.reach_self",
+        "Becoming.Unexchanged.every_returns",
+        "Becoming.Unexchanged.apart"
+      ],
+      "sha256": "4b2e8adfa6fd2253f34da13258366a5e9707de978581a61d078b5e0137ef5522"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T111610.530713Z/verification.json",
+      "role": "receipt",
+      "sha256": "b3901fbae67b1357c63e584a31706c719a0fcfd083cc663548da4248a0b2ca5e",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/za-g1-centers/READER.md",
+      "role": "review",
+      "sha256": "3db691ec482e9d23caea1c87b0696ac083dd0ef201226d7c30493fbe01a03fb2",
+      "declarations": []
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/za-g1-centers/NOTE.md",
+      "role": "integration",
+      "sha256": "3f5620781a3d1aac0e03487cbbbd9ce4229e517b43036b21a0df0954222417f3",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "role": "statement",
+      "sha256": "342f4a5b5460895c9227eff73d8c3cf8d8be5afce21155e1c7f0442df0cbf6fa",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T111610.530713Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.FlowCenters",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "9 November 2026, board item ZA-G1 (route (b) of the zero-axiom target, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md): added. The relation and the standpoints of the own-closure reading read off a flow; one AI reader of another model read the statements cold for overclaim, then the corrections; study folder za-g1-centers.",
+      "zh": "2026年11月9日，看板项 ZA-G1（零公理目标的路线 (b)，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md）：新增。自身闭包读法的关系与立场从流读出；另一模型的一位 AI 读者冷读诸陈述，查是否言过其实，再读其修正；研究目录 za-g1-centers。"
+    }
+  ]
+}

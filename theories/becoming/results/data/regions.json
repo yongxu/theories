@@ -2680,6 +2680,16 @@
    "region": "significance",
    "base": "general",
    "note": "RoutesToC: the routes to C's order on a listing, each with where it stops; gives no reason for C"
+  },
+  "standpoints-read-off-a-flow": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "FlowCenters ZA-G1: the own-closure reading with the relation and the standpoints read off a flow (07 §4.8)"
+  },
+  "covering-by-the-returning-formations": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "FlowCenters ZA-G1: covering by the formations whose acts return on finite flows; the condition along being affected at them (07 §4.8)"
   }
  },
  "modules": {
@@ -4622,6 +4632,11 @@
    "region": "significance",
    "base": "general",
    "note": "what would give C's order on a listing: what weaker can mean, choosers, standpoints, one item at a time, what lies downstream"
+  },
+  "Becoming.FlowCenters": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "the standpoints and the relation of the own-closure reading read off a flow (route (b), ZA-G1)"
   }
  }
 }

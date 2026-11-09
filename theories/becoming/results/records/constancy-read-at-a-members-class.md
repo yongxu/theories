@@ -69,7 +69,7 @@ Read with the path's P2: a self's regularity of its own is constancy up to the n
 - **formal-reuse**: [what-a-line-holds-and-a-regularity-takes-in](what-a-line-holds-and-a-regularity-takes-in.md). «至终有常», «所缘同于», the witnesses FiniteFamilies and FiniteSharedCondition, the module's conventions; its laws under constancy up to the net's end are now corollaries of the forms at a member's class.
 - related, not a proved adapter: [what-leaves-a-class-follows-its-line](what-leaves-a-class-follows-its-line.md). Its laws are now corollaries of the forms at a member's class, and its next step (which class P2 reads, and a two-block characterization with the blocks given decidably) is answered here.
 
-**Used by:** [the-least-own-class](the-least-own-class.md) · [what-would-give-c](what-would-give-c.md)
+**Used by:** [what-would-give-c](what-would-give-c.md)
 
 <a id="sources--来源"></a>
 ### Sources

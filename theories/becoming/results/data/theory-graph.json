@@ -1845,6 +1845,18 @@
    "page": "theories/becoming/results/records/coupling-closures-of-training-pipelines.md"
   },
   {
+   "id": "record:covering-by-the-returning-formations",
+   "type": "result",
+   "record": "covering-by-the-returning-formations",
+   "title": "Covering by the returning formations",
+   "title_zh": "由回返构成的覆盖",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/covering-by-the-returning-formations.md"
+  },
+  {
    "id": "record:degeneration-from-a-horizon",
    "type": "result",
    "record": "degeneration-from-a-horizon",
@@ -3585,18 +3597,6 @@
    "page": "theories/becoming/results/records/mutual-dependence-and-its-pace.md"
   },
   {
-   "id": "record:mutual-dependence-gives-the-condition-de-se",
-   "type": "result",
-   "record": "mutual-dependence-gives-the-condition-de-se",
-   "title": "Mutual dependence gives the condition held de se",
-   "title_zh": "相互依赖给出自持之延续条件",
-   "status": "recorded-checked",
-   "kind": "theorem",
-   "region": "unassigned",
-   "base": "",
-   "page": "theories/becoming/results/records/mutual-dependence-gives-the-condition-de-se.md"
-  },
-  {
    "id": "record:naming-attention-coverage",
    "type": "result",
    "record": "naming-attention-coverage",
@@ -5205,6 +5205,18 @@
    "page": "theories/becoming/results/records/standings-not-read-off-the-occurrence-model.md"
   },
   {
+   "id": "record:standpoints-read-off-a-flow",
+   "type": "result",
+   "record": "standpoints-read-off-a-flow",
+   "title": "The standpoints and the relation read off a flow",
+   "title_zh": "从流读出的立场与关系",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/standpoints-read-off-a-flow.md"
+  },
+  {
    "id": "record:steps-met-again-after-a-fall",
    "type": "result",
    "record": "steps-met-again-after-a-fall",
@@ -5503,18 +5515,6 @@
    "region": "method",
    "base": "general",
    "page": "theories/becoming/results/records/the-last-change-of-a-run.md"
-  },
-  {
-   "id": "record:the-least-own-class",
-   "type": "result",
-   "record": "the-least-own-class",
-   "title": "Under P2 and P4 the own class has a least form",
-   "title_zh": "P2、P4 之下己类有最小者",
-   "status": "recorded-checked",
-   "kind": "theorem",
-   "region": "unassigned",
-   "base": "",
-   "page": "theories/becoming/results/records/the-least-own-class.md"
   },
   {
    "id": "record:the-markov-blanket-as-a-coupling-structure",
@@ -6355,18 +6355,6 @@
    "region": "significance",
    "base": "grammar",
    "page": "theories/becoming/results/records/what-leaves-a-class-follows-its-line.md"
-  },
-  {
-   "id": "record:what-persisting-shows-of-an-order",
-   "type": "result",
-   "record": "what-persisting-shows-of-an-order",
-   "title": "What persisting shows of an order",
-   "title_zh": "存续所示之序",
-   "status": "recorded-checked",
-   "kind": "theorem",
-   "region": "unassigned",
-   "base": "",
-   "page": "theories/becoming/results/records/what-persisting-shows-of-an-order.md"
   },
   {
    "id": "record:what-pooled-coupling-reaches",
@@ -11059,13 +11047,13 @@
    "reaches_grammar": true
   },
   {
-   "id": "module:Becoming.PersistingChoices",
+   "id": "module:Becoming.FlowCenters",
    "type": "module",
-   "name": "Becoming.PersistingChoices",
+   "name": "Becoming.FlowCenters",
    "level": "L2",
-   "theorems": 61,
-   "region": "unassigned",
-   "base": "",
+   "theorems": 33,
+   "region": "significance",
+   "base": "old-base",
    "on_grammar": true,
    "reaches_grammar": true
   },
@@ -31213,22 +31201,16 @@
    "anchor": "r-constancy-read-at-a-members-class"
   },
   {
-   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-mutual-dependence-gives-the-condition-de-se",
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-standpoints-read-off-a-flow",
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
-   "anchor": "r-mutual-dependence-gives-the-condition-de-se"
+   "anchor": "r-standpoints-read-off-a-flow"
   },
   {
-   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-persisting-shows-of-an-order",
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-covering-by-the-returning-formations",
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
-   "anchor": "r-what-persisting-shows-of-an-order"
-  },
-  {
-   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-least-own-class",
-   "type": "section",
-   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
-   "anchor": "r-the-least-own-class"
+   "anchor": "r-covering-by-the-returning-formations"
   },
   {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-ranking-under-readings",
@@ -32843,6 +32825,26 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.FlowCenters",
+   "to": "module:Becoming.Centers",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.FlowCenters",
+   "to": "module:Becoming.GrammarScope",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.FlowCenters",
+   "to": "module:Becoming.MutualDependence",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.FlowCenters",
+   "to": "module:Becoming.Weightings",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.FormedLoops",
    "to": "module:Becoming.CourseWorlds",
    "type": "imports"
@@ -34380,26 +34382,6 @@
   {
    "from": "module:Becoming.Persistence",
    "to": "module:Becoming.Witnesses",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.PersistingChoices",
-   "to": "module:Becoming.GrammarPath",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.PersistingChoices",
-   "to": "module:Becoming.MutualDependence",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.PersistingChoices",
-   "to": "module:Becoming.ShownOrder",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.PersistingChoices",
-   "to": "module:Becoming.Weightings",
    "type": "imports"
   },
   {
@@ -41935,6 +41917,36 @@
    "type": "application"
   },
   {
+   "from": "record:covering-by-the-returning-formations",
+   "to": "module:Becoming.FlowCenters",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:covering-by-the-returning-formations",
+   "to": "record:continuation-condition-decomposition",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:covering-by-the-returning-formations",
+   "to": "record:self-concern-through-dependence",
+   "type": "related"
+  },
+  {
+   "from": "record:covering-by-the-returning-formations",
+   "to": "record:standpoints-read-off-a-flow",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:covering-by-the-returning-formations",
+   "to": "record:what-the-step-across-standpoints-reaches",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:covering-by-the-returning-formations",
+   "to": "record:where-a-formations-acts-return",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:degeneration-from-a-horizon",
    "to": "module:Becoming.GrammarMap",
    "type": "proved-in"
@@ -48337,31 +48349,6 @@
    "to": "record:target-capture",
    "type": "formal-reuse",
    "interface": true
-  },
-  {
-   "from": "record:mutual-dependence-gives-the-condition-de-se",
-   "to": "module:Becoming.PersistingChoices",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:mutual-dependence-gives-the-condition-de-se",
-   "to": "record:mutual-dependence-and-its-pace",
-   "type": "formal-reuse"
-  },
-  {
-   "from": "record:mutual-dependence-gives-the-condition-de-se",
-   "to": "record:self-concern-through-dependence",
-   "type": "related"
-  },
-  {
-   "from": "record:mutual-dependence-gives-the-condition-de-se",
-   "to": "record:what-persisting-shows-of-an-order",
-   "type": "related"
-  },
-  {
-   "from": "record:mutual-dependence-gives-the-condition-de-se",
-   "to": "record:what-the-step-across-standpoints-reaches",
-   "type": "formal-reuse"
   },
   {
    "from": "record:naming-attention-coverage",
@@ -54799,6 +54786,61 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:standpoints-read-off-a-flow",
+   "to": "module:Becoming.FlowCenters",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:standpoints-read-off-a-flow",
+   "to": "record:covering-by-the-returning-formations",
+   "type": "related"
+  },
+  {
+   "from": "record:standpoints-read-off-a-flow",
+   "to": "record:derived-extent-limits",
+   "type": "related"
+  },
+  {
+   "from": "record:standpoints-read-off-a-flow",
+   "to": "record:levels-of-closure",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:standpoints-read-off-a-flow",
+   "to": "record:loss-beyond-a-region",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:standpoints-read-off-a-flow",
+   "to": "record:mutual-dependence-and-its-pace",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:standpoints-read-off-a-flow",
+   "to": "record:self-concern-through-dependence",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:standpoints-read-off-a-flow",
+   "to": "record:the-continuation-condition-on-the-root",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:standpoints-read-off-a-flow",
+   "to": "record:what-the-step-across-standpoints-reaches",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:standpoints-read-off-a-flow",
+   "to": "record:where-a-formations-acts-return",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:standpoints-read-off-a-flow",
+   "to": "record:whole-and-regions-and-bounded-centers",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:steps-met-again-after-a-fall",
    "to": "module:Becoming.Optimum",
    "type": "proved-in"
@@ -55697,26 +55739,6 @@
   {
    "from": "record:the-last-change-of-a-run",
    "to": "record:where-a-run-of-a-regime-comes-to-rest",
-   "type": "related"
-  },
-  {
-   "from": "record:the-least-own-class",
-   "to": "module:Becoming.PersistingChoices",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:the-least-own-class",
-   "to": "record:constancy-read-at-a-members-class",
-   "type": "formal-reuse"
-  },
-  {
-   "from": "record:the-least-own-class",
-   "to": "record:what-a-line-holds-and-a-regularity-takes-in",
-   "type": "related"
-  },
-  {
-   "from": "record:the-least-own-class",
-   "to": "record:what-persisting-shows-of-an-order",
    "type": "related"
   },
   {
@@ -59037,36 +59059,6 @@
    "from": "record:what-leaves-a-class-follows-its-line",
    "to": "record:what-a-line-holds-and-a-regularity-takes-in",
    "type": "formal-reuse"
-  },
-  {
-   "from": "record:what-persisting-shows-of-an-order",
-   "to": "module:Becoming.PersistingChoices",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:what-persisting-shows-of-an-order",
-   "to": "record:mutual-dependence-gives-the-condition-de-se",
-   "type": "related"
-  },
-  {
-   "from": "record:what-persisting-shows-of-an-order",
-   "to": "record:the-least-own-class",
-   "type": "related"
-  },
-  {
-   "from": "record:what-persisting-shows-of-an-order",
-   "to": "record:what-choices-show-of-an-order",
-   "type": "formal-reuse"
-  },
-  {
-   "from": "record:what-persisting-shows-of-an-order",
-   "to": "record:what-self-concern-alone-ranks",
-   "type": "formal-reuse"
-  },
-  {
-   "from": "record:what-persisting-shows-of-an-order",
-   "to": "record:what-training-installs",
-   "type": "related"
   },
   {
    "from": "record:what-pooled-coupling-reaches",
@@ -63633,6 +63625,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-covering-by-the-returning-formations",
+   "to": "record:covering-by-the-returning-formations",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-derived-extent-limits",
    "to": "record:derived-extent-limits",
    "type": "states"
@@ -63695,11 +63692,6 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-metaethical-core-characterization",
    "to": "record:metaethical-core-characterization",
-   "type": "states"
-  },
-  {
-   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-mutual-dependence-gives-the-condition-de-se",
-   "to": "record:mutual-dependence-gives-the-condition-de-se",
    "type": "states"
   },
   {
@@ -63818,6 +63810,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-standpoints-read-off-a-flow",
+   "to": "record:standpoints-read-off-a-flow",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-stepwise-law-of-easing",
    "to": "record:stepwise-law-of-easing",
    "type": "states"
@@ -63845,11 +63842,6 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-gap-for-ones-own-act",
    "to": "record:the-gap-for-ones-own-act",
-   "type": "states"
-  },
-  {
-   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-least-own-class",
-   "to": "record:the-least-own-class",
    "type": "states"
   },
   {
@@ -63895,11 +63887,6 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-leaves-a-class-follows-its-line",
    "to": "record:what-leaves-a-class-follows-its-line",
-   "type": "states"
-  },
-  {
-   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-persisting-shows-of-an-order",
-   "to": "record:what-persisting-shows-of-an-order",
    "type": "states"
   },
   {

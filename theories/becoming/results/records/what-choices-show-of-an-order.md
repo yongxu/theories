@@ -79,7 +79,7 @@ Rationalizing strict choices by a strict partial order, through the least transi
 - related, not a proved adapter: [the-present-on-causal-set-growth](the-present-on-causal-set-growth.md). The linear-extension form on finite causal sets with precedence decided: what every course keeps is precedence, unrelated elements born either way; here strict partial orders on any carrier, with nothing decided.
 - related, not a proved adapter: [what-holding-for-a-reading-is-worth](what-holding-for-a-reading-is-worth.md). The shown reach joined to the worth of holding a pick for a reading: for listed candidates of positive weight whose comparisons are transitive and accord with the choices, the shown reach makes the corresponding fixed pick attain the reading's value, and holding gains over both picks only where neither alternative reaches the other.
 
-**Used by:** [acts-alike-from-a-model-or-from-an-order](acts-alike-from-a-model-or-from-an-order.md) · [what-holding-for-a-reading-is-worth](what-holding-for-a-reading-is-worth.md) · [what-persisting-shows-of-an-order](what-persisting-shows-of-an-order.md)
+**Used by:** [acts-alike-from-a-model-or-from-an-order](acts-alike-from-a-model-or-from-an-order.md) · [what-holding-for-a-reading-is-worth](what-holding-for-a-reading-is-worth.md)
 
 <a id="sources--来源"></a>
 ### Sources

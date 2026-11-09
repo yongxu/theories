@@ -384,6 +384,7 @@ import Becoming.PremiseWitnesses
 import Becoming.PremisesTogether
 import Becoming.GrammarPath
 import Becoming.RoutesToC
+import Becoming.FlowCenters
 import Becoming.PersistingChoices
 import Becoming.SignificanceStatements
 
@@ -4714,6 +4715,21 @@ tagged instance or application.
   (`Weighting.increasing_iff_one_step`). On a listing of what lies downstream, P2 and P4 of the path in
   07 §4.6 with self-concern give increasing in admission
   (`Weighting.increasing_on_downstream_of_regularity`). A leaf; short laws, none new as mathematics.
+* `Becoming.FlowCenters` (L2, through `Becoming.GrammarScope`): the standpoints and the relation of the
+  own-closure reading read off a flow (board item ZA-G1, route (b)'s first piece). An element returns along a
+  relation where whatever lies within its closure has it within its own (`ReturnsAlong`); held de se at the
+  returning elements, given one, the presupposition is the condition exactly where every closure is the whole
+  (`ownClosure_unrestricted_atReturning_iff`). On a flow the formations whose acts return (`Flow.Returning`) are
+  one reading of the standpoints and every formation the other: held de se along affecting at the returning
+  formations the condition gives mutual dependence (`Flow.mutuallyDependent_of_returning_unrestricted`, and its
+  root form), along feeding with every formation a center it is mutual feeding (`Flow.mutuallyFed_iff_unrestricted`).
+  On finitely many formations with reach decided every formation lies within the influence closure of a returning
+  one (`Flow.covered_by_returning`), so the step along being affected at them gives the condition
+  (`Flow.unrestricted_of_returning_standpointInvariant`), and held de se along being affected the condition is
+  that they lie in one loop (`Flow.returning_influence_unrestricted_iff`). Witnesses: `Clearing.returning_apart`
+  (only the dweller returns; the supplied clearer and it part), `Clearing.clearer_beyond_returning_feeding`,
+  `Drawing.returning_feeding_apart`, `Unexchanged.apart`. Which relation and which reading of the standpoints
+  stay choices. A leaf; short compositions, none new as mathematics.
 * `Becoming.PersistingChoices` (L2, through `Becoming.Weightings` and `Becoming.MutualDependence`): what
   persisting shows of an order (board item ZA). Mutual dependence gives the
   continuation condition held de se along being affected and along affecting, each exactly mutual dependence
