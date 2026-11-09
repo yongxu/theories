@@ -907,7 +907,7 @@ class SiteTests(unittest.TestCase):
         self.assertEqual(len(ids), len(set(ids)), ids)
 
     def test_the_search_finds_a_thesis_a_glossary_term_and_the_map(self):
-        (self.tmp / 'a/ONE.md').write_text('# One\n\n## What it is\n\n<a id="t7"></a>\n**Thesis T7.** *A measure outlives its refutation*: so.\n')
+        (self.tmp / 'a/ONE.md').write_text('# One\n\n## What it is\n\n<a id="t7"></a>\n**Thesis T7.** *A measure outlives its refutation.* So.\n')
         (self.tmp / 'GLOSSARY.md').write_text('# Glossary\n\n## The map\n\n| Term | Sense | Home |\n|---|---|---|\n'
                                               '| meta-attractor (元吸引子) | ' + 'a selection that comes to select for control over its selection ' * 9 + '| x |\n'
                                               '| map | the account |  |\n')
@@ -980,9 +980,9 @@ class SiteTests(unittest.TestCase):
         node = shutil.which('node')
         if not node:
             self.skipTest('node is not installed, so the 404 page\'s script cannot be run here')
-        if node:  # the page a Markdown address names, on this site; an address that leads off the site is kept on it
-            got = json.loads(subprocess.run([node, '-e', stage, str(self.tmp / 'onward.js')], capture_output=True, text=True, check=True).stdout)
-            self.assertEqual(got, ['/r/a/index.html#h', '/r/a/X.html#h', '/evil.example/x.html#h', '/r/aREADME.html#h'])
+        # the page a Markdown address names, on this site; an address that leads off the site is kept on it
+        got = json.loads(subprocess.run([node, '-e', stage, str(self.tmp / 'onward.js')], capture_output=True, text=True, check=True).stdout)
+        self.assertEqual(got, ['/r/a/index.html#h', '/r/a/X.html#h', '/evil.example/x.html#h', '/r/aREADME.html#h'])
 
 
     def test_a_thesis_without_an_anchor_and_the_overview_are_found_by_their_names(self):
@@ -1022,7 +1022,7 @@ class SiteTests(unittest.TestCase):
     def test_a_guide_or_label_is_no_lead_and_a_language_link_in_chinese_is_passed_over(self):
         real = '<p>A real lead of forty characters or more, saying what the page is.</p>'
         for guide in ('How to read this page. Start at the top.', 'Executable research. Rewritten 17 October 2026 in the restructure.',
-                      '请先读这一段。 本理论尚无独立的人工审查记录，读者请据此衡量。', 'Labels: Theorem with its model, Reading with its label.'):
+                      '请先读这一段。 本理论尚无独立的人工审查记录；主持这项工作的人读过其中重要的部分，并非每一个字。', 'Labels: Theorem with its model, Reading with its label.'):
             self.assertEqual(site.lead(f'<p>{guide}</p>' + real), strip(real), guide)
         thesis = '<p>论题。 古文中有一条关系之线。根之文法的诸定义是从所选古文重构的读法；本章检验其形式后果，并记下读不进、证不出之处。</p>'
         self.assertEqual(site.lead(thesis)[:3], '论题。')  # a short opener before a statement, not a label: kept
@@ -1055,7 +1055,8 @@ class SiteTests(unittest.TestCase):
         drawn = self.page('connections.html')
         for said in ('<title>Connections · T</title>', '<meta name="description" content="Every claim drawn.">',
                      '<meta property="og:title" content="Connections · T">', '<a class="skip" href="#main">Skip to the text</a>\n<header class="top"',
-                     '<div class="wrap" id="main">', 'header.top nav{flex-wrap:wrap'):
+                     '<div class="wrap" id="main">', 'header.top nav{flex-wrap:wrap', '#main,#detail{scroll-margin-top:64px}',
+                     '(max-width:1339px){#detail{top:64px}'):
             self.assertIn(said, drawn)
         entry = next(p for p in json.loads(self.page('search.json'))['pages'] if p['u'] == 'connections.html')
         self.assertEqual((entry['t'], entry['k']), ('Connections', 'connection map'))

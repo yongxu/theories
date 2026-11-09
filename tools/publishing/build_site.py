@@ -1615,8 +1615,8 @@ def build(out: pathlib.Path, commit: str, root: pathlib.Path = ROOT, config_path
                     + f'<meta property="og:site_name" content="{html.escape(name)}">\n'
                     + '<style>header.top{font-size:.82rem;font-weight:400}header.top nav{flex-wrap:wrap;row-gap:.15rem;'
                     'overflow:visible;white-space:normal}header.top nav a{white-space:nowrap}'
-                    '@media (max-width:860px){header.top{position:static}}@media (min-width:861px){#main{scroll-margin-top:64px}}'
-                    '@media (min-width:1240px) and (max-width:1339px){#detail{top:64px;scroll-margin-top:64px}}'
+                    '@media (max-width:860px){header.top{position:static}}@media (min-width:861px){#main,#detail{scroll-margin-top:64px}}'
+                    '@media (min-width:1240px) and (max-width:1339px){#detail{top:64px}}'
                     'a.skip{position:absolute;left:-9999px;top:.5rem;z-index:4;padding:.3rem .6rem;background:var(--paper);'
                     'border:1px solid var(--ink);font:13px var(--sans)}a.skip:focus{left:16px}</style>\n')
             drawn = drawn.replace('</head>', head + '</head>', 1)
