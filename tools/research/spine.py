@@ -59,6 +59,8 @@ KEEP = GR + 26        # the base distance of a pair's curves from the centre is 
 LANE_STEP = 16        # between the lanes of pairs that pass near the grammar
 LABEL_MIN = 15        # counts written on the picture
 LEAD = 5              # how much nearer its own curve than any other a count must stand
+LEAD_FLOOR = 4.75     # where no place gives LEAD clear of every other stroke by 1 px: the least lead a count takes,
+                      # with every other stroke cleared exactly (the tests hold LEAD - 0.5 and the stroke itself)
 BAR_MIN = 16          # the narrowest bar in the shared laws' strip
 SPOKE_MAX = 6         # a spoke's extra width when every module of its chapter states its laws on the grammar
 STANDING_FILL = ('#1c1917', '#57534e', '#a8a29e', '#e7e5e4')  # derived, under a hypothesis, counting, at a distance
@@ -451,9 +453,11 @@ def place_box(candidates, w, h, circles, boxes, pad=2.0, soft=(), accept=None):
     return best[1]
 
 
-def along(point, prefer, offsets=(0, 6, 12, 18, 24)):
-    """Candidate centres on and either side of a curve, nearest `prefer` along it first."""
-    ts = sorted((i / 50 for i in range(5, 46)), key=lambda t: abs(t - prefer))
+def along(point, prefer, offsets=(0, 6, 12, 18, 24), steps=50):
+    """Candidate centres on and either side of a curve, nearest `prefer` along it first: at `steps` points along it, from
+    a tenth of the way to nine tenths with `steps` 50, from a twentieth to nineteen twentieths with more."""
+    lo = 5 if steps <= 50 else steps // 20
+    ts = sorted((i / steps for i in range(lo, steps - lo + 1)), key=lambda t: abs(t - prefer))
     out = []
     for t in ts:
         (x0, y0), (x1, y1) = point(max(0.0, t - 0.01)), point(min(1.0, t + 0.01))
@@ -764,24 +768,34 @@ def svg(graph, s, lang, info=None):
         strict = hard + [(x, y, r - 0.5) for o in L['curves'] if o is not c and o not in mates for x, y, r in under[id(o)]] + spoke_soft
         box = place_box(along(c['point'], 0.5, offsets=(0, 3, 6, 9, 12, 15, 18, 21, 24)), w, h, strict, boxes + [l[0] for l in labels],
                         pad=0.0, soft=soft, accept=nearest_is(c))
-        if not all(clear_of_circle(box, o) for o in strict):
-            # no place both clear of every other stroke and nearer its own curve: of the places nearer its own curve and
-            # clear of the circles, labels and its pair's curves, the one farthest from every other curve's and spoke's stroke
+        lead = LEAD
+        if not all(clear_of_circle(box, o) for o in strict) or not nearest_is(c)((box[0] + box[2]) / 2, (box[1] + box[3]) / 2):
+            # no place both clear of every other stroke by 1 px and LEAD nearer its own curve: of the places, every hundredth
+            # of the way along the curve and every pixel either side, LEAD_FLOOR nearer its own curve and clear of the circles, labels
+            # and its pair's curves, the one farthest from every other curve's and spoke's stroke (a bundle of two curves
+            # LEAD apart, as where 07's curve to 01 meets 06's, leaves room only there)
+            lead = LEAD_FLOOR
             taken = boxes + [l[0] for l in labels]
             def room(x, y):
                 b = (x - w / 2, y - h / 2, x + w / 2, y + h / 2)
                 return min(math.hypot(px - min(max(px, b[0]), b[2]), py - min(max(py, b[1]), b[3])) - r for px, py, r in strict[len(hard):])
-            fits = [(x, y) for x, y in along(c['point'], 0.5, offsets=(0, 3, 6, 9, 12, 15, 18, 21, 24))
-                    if nearest_is(c)(x, y) and all(clear_of_circle((x - w / 2, y - h / 2, x + w / 2, y + h / 2), o) for o in hard)
-                    and not any(overlaps((x - w / 2, y - h / 2, x + w / 2, y + h / 2), b) for b in taken)]
+            fits = [(x, y) for x, y in along(c['point'], 0.5, offsets=tuple(range(25)), steps=100)
+                    if all(clear_of_circle((x - w / 2, y - h / 2, x + w / 2, y + h / 2), o) for o in hard)
+                    and not any(overlaps((x - w / 2, y - h / 2, x + w / 2, y + h / 2), b) for b in taken)
+                    and nearest_is(c, lead)(x, y)]
             # place_box takes the first candidate that clears, so ordering by room picks the roomiest
             box = place_box(sorted(fits, key=lambda p: -room(*p)) or along(c['point'], 0.5), w, h, hard, taken, pad=0.0,
-                            soft=() if fits else soft, accept=nearest_is(c))
+                            soft=() if fits else soft, accept=nearest_is(c, lead))
         cx_, cy_ = (box[0] + box[2]) / 2, (box[1] + box[3]) / 2
-        if (not nearest_is(c)(cx_, cy_) or not all(clear_of_circle(box, o) for o in hard)
-                or any(overlaps(box, b) for b in boxes + [l[0] for l in labels])):
+        # the stroke itself, not the 1 px beyond it: what the tests hold, so no count is drawn across another curve
+        crossed = [o for o in L['curves'] if o is not c and o not in mates and not all(
+            clear_of_circle(box, (px, py, 0.4 + 0.4 * math.sqrt(o['n']) if o['kind'] == 'formal-reuse' else 1)) for px, py in fine[id(o)])]
+        if (not nearest_is(c, lead)(cx_, cy_) or not all(clear_of_circle(box, o) for o in hard)
+                or any(overlaps(box, b) for b in boxes + [l[0] for l in labels]) or crossed
+                or not all(clear_of_circle(box, (x, y, r - 1)) for x, y, r in spoke_soft)):
             raise ValueError(f'spine picture ({lang}): no place for the count {c["n"]} of {c["from"]} to {c["to"]} '
-                             f'nearer its own curve than any other and clear of the circles, the labels and its pair\'s curves')
+                             f'nearer its own curve than any other and clear of the circles, the labels, its pair\'s curves '
+                             f'and every other stroke' + (f' (it would cross {crossed[0]["from"]} to {crossed[0]["to"]})' if crossed else ''))
         labels.append((box, text((box[0] + box[2]) / 2, box[3] - 3.5, body, 14, 'bold' if back else 'normal', 'middle',
                                  BACKWARD if back else FORWARD, True)))
         if info is not None:
