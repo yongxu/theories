@@ -5201,7 +5201,7 @@
   ],
   "valence": "none asserted",
   "beyond": {
-   "en": "In the clearing witness, what the continuing greatest part ends has significance only under a significance (Conditional): under the continuation condition, one significance counting the loss and not the only one, the clearer's part loses the dweller from every standpoint, and where nothing has significance it loses nothing."
+   "en": "In the clearing witness, what the continuing greatest part ends has significance only under a significance (Conditional): under the continuation condition, one significance counting the loss and not the only one, the clearer's part loses the dweller from every standpoint, and where nothing has significance an empty predicate counts no loss, though the dweller still ends."
   },
   "sources": [
    "theories/becoming/chapters/05-COLLECTIVES.md#r-relative-position-is-zero-sum",
@@ -14280,7 +14280,7 @@
   },
   "family": "H",
   "mechanism": {
-   "en": "For every carrier, relation and pair of classes, read at a fine and a coarse class: going on along some branch and ending on every branch exclude each other; generation and keeping each exclude degeneration, and can share a point along different branches (生守相杂, a witness), and on a single line exclude each other. 全生成, 全守 and 有终 exclude each other pairwise; with excluded middle as a hypothesis every point lies in one of them, and in one of 生成, 后守 and 退化, on a single line exactly one. The short life renews and still ends on every branch, so renewal does not decide the region. Read along renewing into under the one, the grammar's `«生生»` of the root, renewal without end, is going on along some branch: a Lean name with that meaning, no premise on what the pattern is or whether its going on is good, and not the 生生 of life in the whole. For any sequence of classes, no order of grain assumed, generation at order k keeps order k + 1 from ending on every branch."
+   "en": "For every carrier, relation and pair of classes, read at a fine and a coarse class: going on along some branch and ending on every branch exclude each other; generation and keeping each exclude degeneration, and can share a point along different branches (生守相杂, a witness), and on a single line exclude each other. 全生成, 全守 and 有终 exclude each other pairwise; with excluded middle as a hypothesis every point lies in one of them, and in one of 生成, 后守 and 退化, on a single line exactly one. The short life renews and still ends on every branch, so renewal does not decide the region. Read along renewing into under the one, the grammar's `«生生»` of the root, renewal without end, is going on along some branch: a Lean name with that meaning, no premise on what the pattern is or whether its going on is good, and not 生生, the continuation of life. For any sequence of classes, no order of grain assumed, generation at order k keeps order k + 1 from ending on every branch."
   },
   "records": [
    "generation-and-degeneration-at-two-grains"
@@ -14317,7 +14317,7 @@
   "tests": [],
   "open": [
    {
-    "en": "That generation here is the 生生 of life in the whole: it is the continuation of a pattern through renewal of its parts, with no premise on what the pattern is or whether its going on is good.",
+    "en": "That generation here is 生生, the continuation of life: it is the continuation of a pattern through renewal of its parts, with no premise on what the pattern is or whether its going on is good.",
     "source": "theories/becoming/results/records/generation-and-degeneration-at-two-grains.md#does-not-show--未表明"
    },
    {
