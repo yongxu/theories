@@ -122,8 +122,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "These are constraints every strategy deciding through couplings is subject to, not a necessary strategy; the conditional direction takes the continuation condition, C read as widening and the practical commitments as hypotheses.",
-      "zh": "这些是凡经耦合决定的策略都受的约束，不是必然的策略；有条件的方向以延续条件、读作扩大的 C 与实践承诺为假设。",
+      "en": "These are constraints on every strategy deciding through couplings, not a necessary strategy; the conditional direction takes the continuation condition and the practical commitments as hypotheses, comparing moves by what they admit.",
+      "zh": "这些是凡经耦合决定的策略都受的约束，不是必然的策略；有条件的方向以延续条件与实践承诺为假设，按结果所接纳者比较动作。",
       "kind": "non-implication"
     },
     {
@@ -296,8 +296,8 @@
     {
       "id": "alignment-direction-under-widening",
       "detail": {
-        "en": "The conditional direction, taking the continuation condition and C read as widening as hypotheses; this assessment uses the condition and the law of what every order of a class shares, not the direction.",
-        "zh": "以延续条件与读作扩大的 C 为假设的有条件方向；本评估用条件与一类次序所共有者之律，不用该方向。"
+        "en": "The conditional direction, taking the continuation condition and the practical commitments as hypotheses on moves compared by what their outcomes admit; this assessment uses the condition and the law of what every order of a class shares, not the direction.",
+        "zh": "以延续条件与实践承诺为假设、按结果所接纳者比较动作的有条件方向；本评估用条件与一类次序所共有者之律，不用该方向。"
       }
     },
     {
@@ -380,6 +380,10 @@
     {
       "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tail repeating that the direction is offered and seeks no warrant from outside dropped from a not-shown item; the conditional on scope and order kept; the claim unchanged.",
       "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：一条未表明之项中重复方向为所提供、不求外来之根据的尾句删去；以范围与次序为条件者保留；主张不变。"
+    },
+    {
+      "en": "10 November 2026, AG review, seventh pass (on Ren's messages 9 to 12 of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, and the sixth pass's two cold readings): the conditional direction's hypotheses are said as its theorems take them, the continuation condition and the practical commitments on moves compared by what their outcomes admit, in place of 'C read as widening' (no Direction theorem takes Comparison). No law or proof changed.",
+      "zh": "2026年11月10日，AG 审查第七轮（据 Ren 2026 年 11 月 9 日之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md，及第六轮两份冷读）：有条件之方向的假设依其定理所取而述：延续条件与实践承诺，按结果所接纳者比较动作，以代「读作扩大的 C」（Direction 中无定理取 Comparison）。诸律与证明不变。"
     }
   ]
 }

@@ -348,16 +348,32 @@ class Drawing(unittest.TestCase):
         self.assertRegex(page, r'\*约 [0-9–]+ 分钟读完。\*')
 
     def test_the_boxes_are_said_with_no_second_premise(self):
-        # AG review, sixth pass (Ren, messages 10 and 11): C is no premise "for order" beside the condition; widening is
-        # what every positive weighting agrees on; the ranking between level paths is of courses that end
+        # AG review, sixth pass (Ren, messages 10 and 11): C is no premise "for order" beside the condition. Seventh pass:
+        # the boxes are what ranking results take as hypotheses (the condition held de se, self-concern, C), C a requirement
+        # on an order; widening on a finite listing is what every additive weighting counting each listed item above zero
+        # ranks higher, and ranking by it adds no premise beside a life's own concern; the ranking between level paths is of
+        # courses whose admissions end, and that a life forms self-concern is not shown
+        s = spine.spec()
+        self.assertEqual([p['id'] for p in s['premises']], ['condition', 'self-concern', 'C'])
+        self.assertEqual(spine.WORDS['en']['premises'], 'What ranking results take as hypotheses')
         lead = '\n'.join(spine.lead(graph(), 'theories/becoming/results/THEORY-GRAPH.md'))
-        self.assertIn('Widening is what every positive weighting ranks higher, no second premise', lead)
-        self.assertIn('between two level paths whose admissions fit in a finite list, courses that end', lead)
+        for new in ('The three boxes are what ranking results take as hypotheses',
+                    'drawn as hypotheses and not as premises of the ethics',
+                    'the requirement that an order rank each course above every course it widens',
+                    'whose admissions fit in a finite list, so that their admissions end',
+                    'that a life forms self-concern is not shown',
+                    'every additive weighting counting each listed item above zero ranks higher, and ranking by it adds no premise '
+                    "beside a life's own concern"):
+            self.assertIn(new, lead)
         page = spine.zh_page(graph())
-        self.assertIn('扩大是每一个正的赋权都共同认可的，不是第二个前提', page)
-        for old in ('C for order', 'for scope', 'between listed courses'):
+        for new in ('画作假设，不画作伦理的前提', '对次序的一项要求', '生命是否会形成自我关切，尚未表明',
+                    '凡给每个所列之物一个大于零的权重、再把权重相加的计法，一致排得更高的，恰好就是扩大',
+                    '按扩大排序，在生命自身的关切之外不另加前提'):
+            self.assertIn(new, page)
+        for old in ('C for order', 'for scope', 'between listed courses', 'no second premise', 'courses that end',
+                    'every positive weighting', 'some formations hold', 'an order ranking a course above'):
             self.assertNotIn(old, lead)
-        for old in ('定次序', '定范围', '列出的进程'):
+        for old in ('定次序', '定范围', '列出的进程', '不是第二个前提', '某些形成所持', '每一个正的赋权都共同认可'):
             self.assertNotIn(old, page)
 
     def test_section_tables_every_pair_and_counts_what_is_not_drawn(self):

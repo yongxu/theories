@@ -42,8 +42,8 @@
       "zh": "任一形成、条件与立场之类型；一流与一网；中心为自立场至形成之任一映射；逆向需每一形成皆为某立场之中心。"
     },
     {
-      "en": "Significance is the own-closure reading held de se, what lies within the center's closure under a relation, supplied; the relation is being affected or affecting.",
-      "zh": "意义取己闭包之自持之读，即中心沿一关系之闭包内者，为所设；关系为被影响或影响。"
+      "en": "Significance is the own-closure reading held de se, what lies within the center's closure under a relation, supplied; the relation is being affected or affecting, read across all steps (a dependence at some step and an exchange at some step, in either order), so nothing here says what comes before what.",
+      "zh": "意义取己闭包之自持之读，即中心沿一关系之闭包内者，为所设；关系为被影响或影响，跨一切步而读（某步之依赖与某步之交换，先后不论），故此处不言何者在先。"
     }
   ],
   "does_not_show": [
@@ -135,6 +135,13 @@
         "en": "The same landing: what persisting shows of an order.",
         "zh": "同次落地：存续所示之序。"
       }
+    },
+    {
+      "id": "self-concern-and-c-under-the-condition",
+      "detail": {
+        "en": "The ranking there takes the condition held de se for any relation on the same web; with the condition given here along being affected, the two compose directly, though no single theorem states the composite.",
+        "zh": "彼处之排序对同一网上任一关系取自承之条件为假设；以此处沿被影响所给之条件代入，二者直接合成，唯无单一定理陈述此合成。"
+      }
     }
   ],
   "references": [
@@ -177,6 +184,10 @@
     {
       "en": "9 November 2026, board item ZA (Ren, 9 November 2026: how far the zero-axiom target is, after \"ethics emerges from continuation condition, not another way around\"): added. The composition the readings named as ready: mutual dependence gives the condition held de se, along being affected and along affecting, each exactly mutual dependence where every formation is a center; the checker's note kept: mutual dependence is closure under being affected, not feeding.",
       "zh": "2026年11月9日，工作板条目 ZA（Ren 2026年11月9日问零公理目标尚有多远）：新增。诸读所称已备之合成：相互依赖给出沿被影响与沿影响而自持之条件，凡每一形成皆为中心处各恰为相互依赖；保留查核者之注：相互依赖为被影响之闭包，非供养之闭包。"
+    },
+    {
+      "en": "9 November 2026, AG seventh pass (the sixth pass's two cold readings): a hypothesis now says the relations are read across all steps, so nothing here says what comes before what; a related link says how the condition composes with the ranking of self-concern. No change to the claim or its Lean.",
+      "zh": "2026年11月9日，AG 第七轮（据第六轮两份冷读）：一条假设改言诸关系跨一切步而读，故此处不言何者在先；增一相关链接，言此条件如何与自我关切之排序合成。主张与其 Lean 不变。"
     }
   ]
 }

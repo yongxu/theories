@@ -10,8 +10,8 @@
   "family": "F07",
   "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
   "statement": {
-    "en": "Over a finite listing, one course widens another exactly when every order ranking each widening higher ranks it higher, additive or not, as every positive weighting does; a mixed comparison is decided both ways; a zero weight ties; one weight for all ranks by number.",
-    "zh": "在有限列举上，一条进程扩大另一条，恰当每个把每个扩大排得更高的序都把它排得更高，可加与否皆然，每个正的加权亦然；混合的比较两个方向都能决定；零权持平；一律同权即按数目排。"
+    "en": "Over a finite listing, one course widens another exactly when every additive weighting counting each listed item above zero ranks it higher, and exactly when every order of any class holding these and ranking each widening higher does; a mixed comparison is decided both ways; a zero weight ties.",
+    "zh": "在有限列举上，一条进程扩大另一条，恰当每个给每个所列项大于零之权重的可加加权都把它排得更高，也恰当含这些加权且把每个扩大排得更高的任一类序中每个序都如此；混合的比较两个方向都能决定；零权持平。"
   },
   "laws": [
     {
@@ -590,6 +590,10 @@
     {
       "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
       "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
+    },
+    {
+      "en": "10 November 2026, AG review, seventh pass (on Ren's messages 9 to 12 of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, and the sixth pass's two cold readings): the statement is said at the theorems' reach: on a finite listing, one course widens another exactly when every additive weighting counting each listed item above zero ranks it higher, and exactly when every order of any class holding these and ranking each widening higher does; 'one weight for all ranks by number' stays in the laws, to keep the statement within its cap. No law changed.",
+      "zh": "2026年11月10日，AG 审查第七轮（据 Ren 2026 年 11 月 9 日之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md，及第六轮两份冷读）：陈述依定理所及而述：在有限列举上，一条进程扩大另一条，恰当每个给每个所列项大于零之权重的可加加权都把它排得更高，也恰当含这些加权且把每个扩大排得更高的任一类序中每个序都如此；「一律同权即按数目排」留在诸律中，以使陈述不超其限。诸律不变。"
     }
   ],
   "former_ids": [

@@ -27,9 +27,10 @@ FIRST_CLAUSE_QUALIFIERS = ('whether or not it has any say here and whether or no
                            'or to the community')
 # WB's sentence in the Human development row, split at its semicolons into three labelled lines (RW's fifth round); its
 # second part re-said in the AG review's fifth pass (9 November 2026, Ren's message 9): not "that the wider is better is
-# C's" but the order a ranking result takes as its theorem's hypothesis
+# C's" but the order a ranking result takes as its theorem's hypothesis; in the seventh, C a requirement an order meets
+# (`Comparison` is a property of a supplied relation, not one order), not the order itself
 TOOL_SENTENCE = ('The tool needs no premise', "a result ranking the wider course above names its order among its theorem's "
-                 'hypotheses: self-concern with the condition held de se, or C (`Comparison`)',
+                 'hypotheses: self-concern with the condition held de se, or an order meeting C (`Comparison`)',
                  'that a listing matches an actual course is not shown')
 # Ways of saying the ethics the AG review's fifth pass retired on the uses pages (Ren, 9 November 2026, message 9: "there is
 # no warrant, ethics emerges from continuation condition, not another way around, there is no any dualistic good or evil")
@@ -40,12 +41,26 @@ RETIRED = ('widening what can form is better', 'unasserted', 'not asserted', 'wa
            # "on listed courses", going on said to be holding an order, a narrower ranking reduced to reach, the review's
            # verdict read as measured against a ground beyond becoming
            'for order', 'gives order', 'as C asks', 'listed courses', 'not yet joined', 'what does not hold it ceases',
-           'ranks more narrowly', 'a matter of reach', 'there is none to find', 'measures the ethics against')
+           'ranks more narrowly', 'a matter of reach', 'there is none to find', 'measures the ethics against',
+           # the seventh pass (the sixth pass's two cold readings): widening as what every way of counting agrees on, where
+           # the theorem quantifies over additive weightings counting each listed item above zero; "no second premise",
+           # read as "one premise"; self-concern's forming "argued", where no home argues it; "continues with" for reach;
+           # one-center and mutual dependence glossed with time; the composite route called open; one-way concern said
+           # not to reach dependents; "courses that end" for admissions that end; better read as widening; C as an order
+           'every way of counting each thing as worth something', 'no second premise', 'forms such an order is argued',
+           'self-concern, is argued', 'continues with', 'as among dated occurrences', 'read without time',
+           'not stated as one theorem', 'does not reach those who depend on one', 'concern for their own continuation reaches',
+           'courses that end', 'on the widening reading', 'the order ranking a course above every course it widens',
+           'The ten-minute part')
 RETIRED_ZH = ('扩大可形成者更好', '以广为愈', '两种读法', '不断言', '持 C 者','对所等待的一切都可以不等', '共有之物', '塑规者',
               '被离开', '走出', '「', '」', '所读之外的什么', '一个体制的不可回返之点', '读到过一行', '正反两面的见证',
               # the sixth pass, as RETIRED's last line; astra's fifth-pass wording of the point of no return
               'C（次序）', 'C（扩大）定次序', '那样给诸进程排序', '如 C 所要求', '列出的进程', '尚未合为一条定理',
-              '不持守它的便止息', '所及多远的问题', '本无可寻', '一种动态越过就无法回返的临界点')
+              '不持守它的便止息', '所及多远的问题', '本无可寻', '一种动态越过就无法回返的临界点',
+              # the seventh pass, as RETIRED's last lines
+              '有所值的计法', '不是第二个前提', '已论证、未表明', '与之一同延续', '沿关系所及的范围之外，别无他物', '标有日期的诸发生',
+              '不计时间而读', '尚未陈述为一条定理', '终会停止容纳', '达不到依存于自己者', '及不到贻贝床', '在扩大之读法下',
+              '十分钟的部分')
 METHOD_SECTION_9 = ('**What the unifications claim.**', '<a id="one-relational-unfolding">')
 
 WORDS = {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9, 'ten': 10,
@@ -197,21 +212,34 @@ class UsesCells(unittest.TestCase):
             self.assertIn(phrase, first)
         self.assertNotIn('control over its own selection', text)
         brief = next(p for p in text.split('\n\n') if p.startswith('**In brief.**'))
-        # the ethics as 07 says it since the fifth pass, and as the first screen's anchor says it since the sixth (F1-F9):
-        # no should and no good and evil over becoming; the ethics emerging from continuation; a life going on through what
-        # sustains it, and forming an order over courses (self-concern) argued, not shown; relations closing read without
-        # time; the ranking proved on a finite listing and, one way, between courses that end; widening as what every
-        # positive weighting agrees on, no second premise; seeing needed, and not enough, where relations run one way
+        # the ethics as 07 says it since the fifth pass, and as the first screen's anchor says it since the sixth, at its
+        # strength since the seventh (the sixth pass's cold readings): no should and no good and evil over becoming; the
+        # ethics emerging from continuation, going on not yet an order; relations closing read across all steps, nothing
+        # outside each one's reach, which is the condition on the reach reading; the ranking proved with self-concern a
+        # hypothesis, on a finite listing and, one way, between courses whose admissions end, the two steps composing
+        # directly; additive weightings counting each thing above zero, so no premise beside the life's own concern; that a
+        # life forms such an order not shown (07 §4.9), how such orders form open; one-way concern need not count dependents
         for phrase in ('There is no should beyond becoming ([the opening](OPENING.md)), and no good and evil set over it',
                        'form within it, in people and AI ([07 §1](chapters/07-SIGNIFICANCE.md#evaluation))',
-                       'The ethics emerges from continuation. A life goes on through what sustains it',
-                       'holds its own continuation as an order over courses, *self-concern*',
-                       'relations close, read without time',
+                       'The ethics emerges from continuation. A life goes on through what sustains it, and going on is not '
+                       'yet an order over courses.',
+                       'Where relations close, read across all steps, so that every continuation can be affected, at some '
+                       "remove, by every other, nothing lies outside each one's reach along that relation",
+                       'on the reading that what has significance from a standpoint is what lies within its center\'s reach, '
+                       'that is the *continuation condition*',
+                       'if a life holds its own continuation as an order over courses, *self-concern*, that order already '
+                       'ranks every *widening* above what it widens',
                        'one course keeping all another keeps and letting more form, more future',
-                       'proved on models, on a finite listing and, one way, between two courses whose admissions fit in a '
-                       'finite list, courses that end',
-                       'that a life forms such an order is argued, not shown',
-                       'Widening is what every way of counting each thing as worth something agrees on, and no second premise',
+                       'proved on models, self-concern a hypothesis',
+                       'on a finite listing and, one way, between two courses whose admissions end',
+                       'the two compose directly, though no single theorem states the composite',
+                       'On a finite listing, every way of adding up worth that counts each thing above zero ranks the wider '
+                       "course higher, and ranking by widening adds no premise beside the life's own concern: where the "
+                       'condition holds, that concern already does it.',
+                       'That a life forms such an order is not shown: what the models show of persisting is a filter on '
+                       'what was chosen, not an order formed ([07 §4.9](chapters/07-SIGNIFICANCE.md#what-persisting-shows))',
+                       "how such orders form is the work's open target",
+                       "concern for one's own continuation need not count those who depend on one",
                        'seeing them is needed, and not enough, and counting their loss is the one step we offer',
                        'the laws show it mixed and weigh it for no one'):
             self.assertIn(phrase, brief)
@@ -232,6 +260,54 @@ class UsesCells(unittest.TestCase):
             text = live(page(rel))
             for phrase in retired:
                 self.assertNotIn(phrase, text, (rel, phrase))
+
+    def test_human_development_at_its_strength(self):
+        """AG review, seventh pass (9 November 2026), on the sixth pass's two cold readings: the lines say what 07 proves and
+        no more. Widening is what every additive weighting counting each listed thing above zero ranks higher
+        (`Weighting.widens_iff_every_positive`); the condition is nothing outside each center's reach on the reach reading,
+        read across all steps; on an acyclic relation every standpoint has the same center (`«续无外则同一中心»`); the
+        ranking is between courses whose admissions end; the route from mutual dependence composes directly; that a life
+        forms self-concern is not shown, so it is no Argued line but an Open one; one-way concern need not count dependents."""
+        lines = rests_on('Human development, and 生生, the continuation of life', page(USES))
+        joined = '\n'.join(lines)
+        for phrase in ('every additive weighting that counts each listed thing above zero ranks it higher',
+                       "the continuation condition held de se is nothing lying outside each center's reach along it",
+                       'read across all steps', 'every standpoint has the same center (`«续无外则同一中心»`',
+                       'so that their admissions end',
+                       'mutual dependence and this ranking compose directly, though no single theorem states the composite',
+                       "concern for one's own continuation need not count those who depend on one",
+                       'That a life forms self-concern is not shown: going on is not yet such an order, in the proofs it is a '
+                       'hypothesis, and what the models show of persisting is a filter on what was chosen, not an order formed'):
+            self.assertIn(phrase, joined)
+        for line in lines:
+            if 'forms self-concern' in line:
+                self.assertTrue(line.startswith('**Open.**'), line[:40])
+            if line.startswith('**Argued.**'):
+                self.assertNotIn('not shown', line)
+        self.assertNotIn('not stated as one theorem', joined)
+
+    def test_examples_at_their_strength(self):
+        """The lake, the checklist, the handover and the valley at the same strength (seventh pass): on the lake, preserving
+        the fishers' own continuation does not require preserving the bed (`Clearing.center_not_derived` is a witness, not a
+        ban on wider concern); the handover's C a requirement an order meets, not an order; no "widening reading"."""
+        text = page(EXAMPLES)
+        counts = next(p for p in text.split('\n\n') if p.startswith('**Whether the loss counts.**'))
+        self.assertIn("preserving the fishers' own continuation does not require preserving the bed", counts)
+        self.assertIn('every additive weighting that counts each listed thing above zero, the bed included, ranks it above', counts)
+        handover = next(p for p in text.split('\n\n') if p.startswith('**Whose losses count, and what ranks.**'))
+        self.assertIn('C (`Comparison`), the requirement that an order rank a course above every course it widens, as a '
+                      'hypothesis', handover)
+        for start in ('**What needs no premise.**', '**What ranks, and under what**'):
+            para = next(p for p in text.split('\n\n') if p.startswith(start))
+            self.assertIn('every additive weighting that counts each listed thing above zero', para, start)
+        zh = page(THEORY + 'USES-EXAMPLES.zh.md')
+        self.assertIn('保住渔民自身的延续，并不要求保住贻贝床', zh)
+        self.assertIn('凡给每个所列之物一个大于零的权重、再把权重相加的计法', zh)
+        uses_zh = page(THEORY + 'USES.zh.md')
+        for phrase in ('生命是否会形成这种次序，尚未表明：模型中的持存只是对所择者的过滤，并不形成次序',
+                       '依存若只沿一个方向，对自身延续的关切未必把依存于它的那些也算进来',
+                       '在生命自身的关切之外不另加前提', '跨越所有步来读', '较短的读法：'):
+            self.assertIn(phrase, uses_zh)
 
 
 class HowItStands(unittest.TestCase):
@@ -392,8 +468,9 @@ class WhatEachFieldAdds(unittest.TestCase):
         # the review's ethics verdict said as what it found, with 08 §8's reading of it (astra's fourth-pass point 5)
         # sixth pass (F7): the verdict quoted, with what 08 §8 says it clarified; not read as measured against a ground
         # beyond becoming
-        self.assertIn('"a clarified ethics, not a grounded one", which made clear the scope and order the ranking results '
-                      'assume, how those form within becoming not yet established', intro)
+        # seventh pass: "which" attaches to the review, not to the ethics (the sixth pass's verifier)
+        self.assertIn('the scope and order the ranking results assume, made clear, which it called "a clarified ethics, not a '
+                      'grounded one", how those form within becoming not yet established', intro)
         self.assertIn('the scope and order the ranking results assume', page(METHOD))
         self.assertNotIn('a ground beyond becoming', intro)
         # sixth pass (F7): 08 §8 keeps the verdict verbatim and no longer reads it as measured against a ground beyond becoming
@@ -623,7 +700,8 @@ class OnePage(unittest.TestCase):
         # at its reach (the order a life holds named as such, the reading of significance, the finite listing, how far
         # each part is seen) took it to twelve to fifteen minutes in English and fourteen to eighteen in Chinese, so both
         # languages name it by what it is, a shorter route; a name saying ten minutes stays out while ten lies outside the
-        # count.
+        # count. The seventh pass (what is shown, offered and open said beside "emerges") counts twelve to sixteen and
+        # fifteen to nineteen.
         for rel, (label, ten, leads) in self.ROUTE.items():
             text = page(rel)
             head = text.split(leads[0])[0]
@@ -631,7 +709,8 @@ class OnePage(unittest.TestCase):
             self.assertEqual(len(chosen), 4, rel)
             self.assertIn(label, head, rel)
             if span(navigation.reading_time('\n\n'.join(chosen)))[0] > 10:
-                self.assertNotIn(ten, head, rel)
+                # not a numeral's tail: 四十分钟 states a time, not a ten-minute name
+                self.assertNotRegex(head, '(?<![一二三四五六七八九])' + ten, rel)
 
     @staticmethod
     def zh_number(s):
@@ -670,17 +749,20 @@ class StatedTimes(unittest.TestCase):
     def time_line(self):
         return next(l for l in page(USES).splitlines() if l.startswith('*') and 'minutes to read' in l)
 
-    def test_uses_names_a_ten_minute_part(self):
+    def test_uses_names_a_shorter_route(self):
         line, text = self.time_line(), page(USES)
-        self.assertIn("The ten-minute part: the first paragraph, **In brief**, the line on the labels and your field's section", line)
+        self.assertIn("A shorter route: the first paragraph, **In brief**, the line on the labels and your field's section", line)
         parts = uses_ten_minute_parts(text)
         self.assertEqual(len(parts), 6)
         longest = max(parts, key=lambda p: navigation.prose_counts(p)[0])
         stated = self.stated(line, r'\(([A-Za-z-]+) to ([A-Za-z-]+) minutes for the longest\)')
         self.assertEqual(stated, span(navigation.reading_time(longest)))
-        # a guide, not a bound (Ren, 9 November 2026): the name stays true while ten minutes lies within the count; the one
-        # page's part, past it since the AG review's sixth pass, is named "A shorter route" (OnePage)
-        self.assertLessEqual(stated[0], 10)
+        # a guide, not a bound (Ren, 9 November 2026): "the ten-minute part" while ten minutes lay within the count; since
+        # the AG review's seventh pass, the ethics said at its strength took the longest to twelve to fifteen minutes, so
+        # the part is named by what it is, as the one page's is (OnePage), and no name saying ten minutes stays while ten
+        # lies outside the count
+        if stated[0] > 10:
+            self.assertNotIn('ten-minute', line)
 
     def test_uses_names_an_hours_path(self):
         line, uses = self.time_line(), page(USES)
@@ -701,6 +783,65 @@ class StatedTimes(unittest.TestCase):
         text = page(ONE_PAGE)
         stated = self.stated(text, r'\*\*The ethics\*\* \(([A-Za-z-]+) to ([A-Za-z-]+) minutes\)')
         self.assertEqual(stated, span(navigation.reading_time('\n\n'.join(ten_minute_part(text)))))
+
+
+class MethodAndGlossariesAtTheirStrength(unittest.TestCase):
+    """AG review, seventh pass (9 November 2026), on the sixth pass's two cold readings: 08, the glossaries and MAP say the
+    ethics no stronger than its theorems. Widening is what every additive weighting counting each listed item above zero
+    ranks higher (`Weighting.widens_iff_every_positive`), not what every way of counting agrees on; ranking by it adds no
+    premise beside a life's own concern; that a life forms such an order is not shown (07 §4.9: persisting filters what was
+    chosen); one-way concern need not count dependents; C is a requirement on an order; the one-center result and the
+    mutual-dependence route are read across all steps and compose directly; admissions end, not courses."""
+
+    RETIRED = ('every way of counting each thing as worth something', 'argued, not shown', 'what each center continues with',
+               'as among dated occurrences', 'read without time', 'not stated as one theorem',
+               'does not reach those who depend on one', 'names the property of an order', 'no second premise beside')
+    RETIRED_ZH = ('有所值的计法', '已论证、未表明', '与之一同延续', '标有日期的诸发生', '不计时间而读', '持续推出', '不是第二个前提')
+
+    def test_method(self):
+        text = page(METHOD)
+        ethics = text[text.index('<a id="where-the-ethics-sits">'):text.index('**A premise used is not a premise discharged.**')]
+        for phrase in ('The ethics emerges from continuation.', '"Emerges" names neither a derivation nor a shown development',
+                       'every additive weighting that counts each listed item above zero ranks it higher',
+                       "So ranking by widening adds no premise beside the life's own concern: where the condition holds, "
+                       'that concern already does it.',
+                       'C names the requirement that an order rank each course above every course it widens',
+                       'C is no longer introduced as a second foundation of the ethics; the name stays for the requirement '
+                       'particular theorems take.',
+                       'what the models show of persisting is a filter on what was chosen, not an order formed',
+                       'whose proof uses the condition only at the standpoint whose order it is',
+                       'compose directly, though no single theorem states the composite',
+                       'Where `«续无外»` holds along an acyclic relation, every standpoint has the same center',
+                       "concern for one's own continuation need not count those who depend on one: nothing in it requires "
+                       'their losses to count'):
+            self.assertIn(phrase, ethics)
+        for phrase in self.RETIRED:
+            self.assertNotIn(phrase, text)
+        # the review's verdict quoted in its own words and dated, not paraphrased in the present (F7)
+        self.assertIn('"The theory shows exactly where its ethics\' premises sit: scope in the condition, order in C, practical '
+                      'judgment in A, L and the practical commitments, and it proves that the condition alone ranks nothing"',
+                      text)
+        self.assertNotIn('C is the monotonicity of opportunity sets', text)
+
+    def test_glossaries_and_map(self):
+        en, zh, where = page('GLOSSARY.md'), page('GLOSSARY.zh.md'), page('MAP.md')
+        for text in (en, where):
+            self.assertIn('the requirement that an order rank each course above every course it widens', text)
+            for phrase in self.RETIRED + ('the order ranking a course above every course it widens',):
+                self.assertNotIn(phrase, text)
+        self.assertIn('every additive weighting that counts each listed item above zero ranks it higher', en)
+        self.assertIn('生命是否会形成这种次序，尚未表明；在证明中它是假设；模型中的持存只是对所择者的过滤，并不形成次序', zh)
+        self.assertIn('凡给每个所列之物一个大于零的权重、再把权重相加的计法，一致排得更高的，恰好就是扩大', zh)
+        self.assertIn('依存若只沿一个方向，对自身延续的关切未必把依存于它的那些也算进来', zh)
+        self.assertIn('| 广者居上（第六章之名；中文版专有） |', zh)
+        self.assertEqual(zh.count('以广为愈'), 1)
+        self.assertIn('旧名以广为愈（至 2026 年 11 月 9 日）', zh)
+        self.assertNotIn('以从己方式（de se）持有，即它位于该中心沿一个关系与之一同延续者之内', zh)
+        for phrase in self.RETIRED_ZH:
+            self.assertNotIn(phrase, zh)
+        # one Chinese term for de se in the glossary: 从己, not the records' 自承
+        self.assertNotIn('自承', zh)
+        self.assertIn('| 从己、从言（de se, de dicto） |', zh)
 
 
 if __name__ == '__main__':

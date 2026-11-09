@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "about": "Curated input of the spine picture (tools/research/spine.py, board item RW (c)): the chapters' short labels, the theses' homes and the words each copies from 08 §9 and the overview's Chinese table, the two hypotheses' words from 07 and the glossaries, and the caption's quotations with their homes (THEORY-GRAPH.md's section on the picture). Every quoted phrase is checked at its home on each render; a phrase its home no longer holds stops the render. The counts come from the theory graph. The Chinese of the caption's and the standings' quotations ('zh' in caption and standing.counts_zh) is an AI translation for THEORY-GRAPH.zh.md, not checked against its home.",
+ "about": "Curated input of the spine picture (tools/research/spine.py, board item RW (c)): the chapters' short labels, the theses' homes and the words each copies from 08 §9 and the overview's Chinese table, the words of what ranking results take as hypotheses (the continuation condition held de se, self-concern and C), from 07 and the glossaries, and the caption's quotations with their homes (THEORY-GRAPH.md's section on the picture). Every quoted phrase is checked at its home on each render; a phrase its home no longer holds stops the render. The counts come from the theory graph. The Chinese of the caption's and the standings' quotations ('zh' in caption and standing.counts_zh) is an AI translation for THEORY-GRAPH.zh.md, not checked against its home.",
  "order": [
   "root",
   "map",
@@ -179,7 +179,7 @@
    "zh": {
     "title": "次序为每一个把一切都计为正的评价者所共有",
     "words": [
-     "对净加权已证明归约；界是猜想；实际的评价者把每一项都计为高于零，是它所取的，未表明",
+     "对净赋权已证明归约 … 界是猜想；实际的评价者把每一项都计为高于零，是它所取的，未表明",
      "在角色扮演的判断上，第一项冻结检验每条规则都未通过，第二项四条中通过两条；人类评价者未经检验"
     ]
    },
@@ -259,9 +259,9 @@
    "id": "condition",
    "en": {
     "lines": [
-     "The continuation condition",
+     "The continuation condition, held de se",
      "fixes whose losses count; by itself ranks nothing",
-     "a scope some formations hold"
+     "a scope within the account, a hypothesis where a theorem takes it"
     ],
     "quotes": [
      [
@@ -274,15 +274,19 @@
      ],
      [
       "theories/becoming/chapters/07-SIGNIFICANCE.md",
-      "each is an order or scope some formations hold"
+      "each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it"
+     ],
+     [
+      "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "where the continuation condition holds de se"
      ]
     ]
    },
    "zh": {
     "lines": [
-     "延续条件",
+     "延续条件，以从己方式成立",
      "谁的损失算数，每一个延续的都算；单凭自身不对任何东西排序",
-     "某些形成所持的范围"
+     "本论之中的一个范围，在定理取用它之处为假设"
     ],
     "quotes": [
      [
@@ -295,7 +299,56 @@
      ],
      [
       "theories/becoming/chapters/07-SIGNIFICANCE.md",
-      "each is an order or scope some formations hold"
+      "each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it"
+     ],
+     [
+      "GLOSSARY.zh.md",
+      "在延续条件以从己方式成立之处"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "self-concern",
+   "en": {
+    "lines": [
+     "Self-concern, an order holding one's own continuation",
+     "where the condition holds de se, ranks every widening above on a finite listing",
+     "a hypothesis where a theorem takes it; that a life forms it is not shown"
+    ],
+    "quotes": [
+     [
+      "GLOSSARY.md",
+      "holding one's own continuation as an order over courses"
+     ],
+     [
+      "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "self-concern ranks every widening above what it widens on a finite listing"
+     ],
+     [
+      "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "That a life forms such an order is not shown: in the proofs it is a hypothesis"
+     ]
+    ]
+   },
+   "zh": {
+    "lines": [
+     "自我关切，随自身延续而递增的次序",
+     "在延续条件以从己方式成立之处，在一个有限列表上把每一个扩大都排在上面",
+     "在定理取用它之处为假设；生命是否会形成这种次序，尚未表明"
+    ],
+    "quotes": [
+     [
+      "GLOSSARY.zh.md",
+      "一种随自身延续而递增的次序"
+     ],
+     [
+      "GLOSSARY.zh.md",
+      "在延续条件以从己方式成立之处，它在一个有限列表上把每一个扩大都排在上面"
+     ],
+     [
+      "GLOSSARY.zh.md",
+      "生命是否会形成这种次序，尚未表明；在证明中它是假设"
      ]
     ]
    }
@@ -304,14 +357,14 @@
    "id": "C",
    "en": {
     "lines": [
-     "C, an order ranking by widening",
-     "ranks a course above every course it widens",
-     "a hypothesis where a theorem takes it, not a premise the ethics adds beside the condition"
+     "C, a requirement on an order",
+     "that it rank each course above every course it widens",
+     "a hypothesis where a theorem takes it, no second foundation of the ethics"
     ],
     "quotes": [
      [
       "theories/becoming/chapters/07-SIGNIFICANCE.md",
-      "ranks a course above every course it widens"
+      "rank each course above every course it widens"
      ],
      [
       "GLOSSARY.md",
@@ -319,15 +372,15 @@
      ],
      [
       "GLOSSARY.md",
-      "not a premise the ethics adds beside the condition"
+      "C is no longer introduced as a second foundation of the ethics"
      ]
     ]
    },
    "zh": {
     "lines": [
-     "C，按扩大排序的次序",
+     "C，对次序的一项要求",
      "把一个进程排在它所扩大的每一个进程之上",
-     "只在某条定理取用它之处才是假设，不是伦理在该条件之外另加的前提"
+     "只在某条定理取用它之处才是假设，不再当作伦理的第二个根基"
     ],
     "quotes": [
      [
@@ -340,7 +393,7 @@
      ],
      [
       "GLOSSARY.zh.md",
-      "它不是伦理在该条件之外另加的前提"
+      "本论不再把 C 当作伦理的第二个根基"
      ]
     ]
    }
@@ -452,7 +505,7 @@
    "distance": "{n} at a named distance, each with its reason",
    "example": "For example,",
    "footer": [
-    "A named distance says why a declaration is not read as a case of grammar laws; the edge record does not show that a distance is a gap or a failure. The hypotheses most ranking results take, the continuation condition and the order they rank by, in most of them C, are not among these: neither stands on the edge.",
+    "A named distance says why a declaration is not read as a case of grammar laws; the edge record does not show that a distance is a gap or a failure. The hypotheses a ranking result takes, the continuation condition and the order it ranks by, in most of them any order meeting the requirement C, are not among these: neither stands on the edge.",
     "Each declaration's place is in the edge record, one-root-to-its-edge: {b} have a basis in words, in its data, and the other {r} the label a rule gives; the page of each record whose laws name a declaration prints its place, with what it rests on. 08 §7's table of places gives no reason for the classes with balance in their statements (it gives an example), on amounts and laws of their models, and places the 16 at a represented model and the 6 on their own carrier by F5's verified items: theorems, each carried by a law, that state a row of that law's record at a represented model or on the row's own carrier; shared_laws.py verifies what the Lean can show, and that a theorem states its row is a reader's judgment. The terms edge of one root, derived and named distance are in GLOSSARY.md.",
     "Generated by tools/research/spine.py from shared-laws.json and spine.json."
    ],
@@ -465,7 +518,7 @@
    "distance": "{n} 项处于一个指明的距离，各有其理由",
    "example": "例如",
    "footer": [
-    "指明的距离说的是一项声明为何不被读作文法之律的情形；根之边的记录并不表明有距离就是缺口或失败。多数排序结果所取的假设，延续条件与其所依的次序（多为 C），不在其中：二者都不在根之边上。",
+    "指明的距离说的是一项声明为何不被读作文法之律的情形；根之边的记录并不表明有距离就是缺口或失败。排序结果所取的假设，延续条件与其所依的次序（多为满足 C 这一要求的任何次序），不在其中：二者都不在根之边上。",
     "每项声明的位置见根之边的记录（one-root-to-its-edge）：{b} 项有文字的依据，在其数据中，其余 {r} 项是规则所给的标签；凡其律中列有某项声明的记录，其页面印出该声明的位置及其所依。08 §7 的表对“陈述中有平衡”（附一例）、“依于数量”“为其模型之律”三类未列理由，并依 F5 已核验的项定出在一个被表示的模型上的 16 项与在其自身的载体上的 6 项：这些项是各由一条律所带、在一个被表示的模型上或在该行自身的载体上陈述该律之记录中某一行的定理；shared_laws.py 核验 Lean 能显示的部分，一个定理确实陈述其行，这是读者的判断。根之边、推导而得、指明的距离这几个词，见 GLOSSARY.zh.md。",
     "图中文字为 AI 所译，义以英文版为准。由 tools/research/spine.py 依 shared-laws.json 与 spine.json 画出。"
    ],

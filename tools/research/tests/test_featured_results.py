@@ -381,23 +381,37 @@ class FirstScreenTests(unittest.TestCase):
         # courses weighed for no one; no warrant, no premises called unasserted, C not "better". The sixth pass (messages 10
         # and 11: C as a second premise giving order was the mistake; widening stays): going on before any order (07 §4);
         # the condition on its reading, where relations close read without time; widening no second premise; the ranking
-        # proved on a finite listing and between courses whose admissions fit in a finite list, not "listed courses"
+        # proved on a finite listing and between courses whose admissions fit in a finite list, not "listed courses".
+        # The seventh pass (the sixth pass's two cold readings): going on not yet an order; the condition as reach, read
+        # across all steps; widening what every additive weighting counting each thing above zero ranks higher; ranking by
+        # widening adding no premise beside the life's own concern; one way, need not count those who depend on one; whose
+        # admissions end; the two results composing directly; that a life forms such an order not shown (07 §4.9)
         self.assertIn('The ethics emerges from continuation.', screen)
         self.assertIn('no good and evil set over it', screen)
-        self.assertIn('A life goes on through what sustains it.', screen)
-        self.assertIn('Where relations close, read without time', screen)
-        self.assertIn('on the reading that what has significance from a standpoint is what its center continues with', screen)
-        self.assertIn('where a life holds its own continuation as an order over courses', screen)
+        self.assertIn('A life goes on through what sustains it, and', screen)
+        self.assertIn('going on is not yet an order over courses', screen)
+        self.assertIn('Where relations close, read across all steps', screen)
+        self.assertIn("nothing lies outside each one's reach along that relation", screen)
+        self.assertIn("on the reading that what has significance from a standpoint is what lies within its center's reach", screen)
+        self.assertIn('if a life holds its own continuation as an order over courses', screen)
         self.assertIn('07-SIGNIFICANCE.md#r-self-concern-and-c-under-the-condition', screen)
-        self.assertIn('it is no second premise', screen)
+        self.assertIn('Every way of adding up worth that counts each thing above zero', screen)
+        self.assertIn("ranking by widening adds no premise beside the life's own concern", screen)
+        self.assertIn('need not count those who depend on one', screen)
         self.assertIn('seeing them is needed, and not enough', screen)
+        self.assertIn('so that their admissions end', screen)
         self.assertIn('for courses that go on forming without end it is not shown', screen)
-        # the one limit F3 keeps (07 §4): the route from a flow's mutual dependence to the ranking between level paths
-        self.assertIn('the route from mutual dependence to that ranking between two courses is not stated as one theorem', screen)
-        self.assertIn('That a life forms such an order is argued, not shown', screen)
+        # 07 §4: the two compose directly, though no single theorem states the composite
+        self.assertIn('the two results compose directly, though no single theorem states the composite', screen)
+        self.assertIn('every additive weighting that counts each listed thing above zero ranks it above', screen)
+        self.assertIn('That a life forms such an order is not shown: in the proofs it is a hypothesis', screen)
+        self.assertIn('a filter on what was chosen, not an order formed', screen)
+        self.assertIn('07-SIGNIFICANCE.md#what-persisting-shows', screen)
         self.assertIn('the laws show it mixed and weigh it for no one', screen)
         for old in ('unasserted', 'not asserted', 'warrant', 'two readings', 'widening what can form is better', 'not a grounded one',
-                    'listed courses', 'not yet joined', 'A life that goes on holds its own continuation', 'for order', 'named order'):
+                    'listed courses', 'not yet joined', 'A life that goes on holds its own continuation', 'for order', 'named order',
+                    'argued, not shown', 'continues with', 'read without time', 'without time', 'dated occurrences', 'worth something',
+                    'second premise', 'does not reach', 'courses that end', 'not stated as one theorem', 'every positive weighting'):
             self.assertNotIn(old, screen)
         # the meta-attractor's closed form with the closed-capture record's hypotheses, not "proved to lock" alone
         self.assertNotIn('proved to lock', screen)

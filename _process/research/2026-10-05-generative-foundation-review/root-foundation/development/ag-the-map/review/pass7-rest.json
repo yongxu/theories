@@ -1,0 +1,127 @@
+{
+ "note": "AI-written, 10 November 2026 (begun 9 November), AG review seventh pass, agent rest: chapters 01-06's ethics lines, COLLECTIVE-DIRECTION, ONE-ARGUMENT, AJ PLAN's ethics sentence, the spine picture (spine.json boxes, spine.py captions) and the map page's note, under H1-H10 and the frame still in force. Checks run on single files only: test_spine 30 of 31 (the one red is the pre-existing layout red, count 37 significance->map, which the ch07 and ch08 verifiers showed identical with HEAD's spine.json), test_connection_map 32 OK, test_navigation_pages 51 OK, test_uses_pages 54 OK; spine.check [], zh_fronts.problems [], navigation.open_lead_errors [], nav_front_errors [], lineage.check [], check_dossiers 0 problems, atlas.validate the same 6 withdrawn-record errors (Crosswalk's), moves.check_links on the nine Markdown files 1,668 links 0 broken, registry.validate 0 errors. No make, render, gate, lake or build; the full suite deliberately deferred.",
+ "changed": [
+  "theories/becoming/chapters/01-ROOT.md",
+  "theories/becoming/chapters/02-MAP.md",
+  "theories/becoming/chapters/03-KNOWING.md",
+  "theories/becoming/chapters/04-LIFE.md",
+  "theories/becoming/chapters/05-COLLECTIVES.md",
+  "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+  "theories/becoming/COLLECTIVE-DIRECTION.md",
+  "theories/becoming/ONE-ARGUMENT.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md",
+  "theories/becoming/results/data/spine.json",
+  "tools/research/spine.py",
+  "tools/research/tests/test_spine.py",
+  "tools/research/connection_map.py",
+  "tools/research/tests/test_connection_map.py",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass7-rest.json"
+ ],
+ "items": [
+  {
+   "item": "01-ROOT: 'The root and the ethics' (line 672); 288 and 433",
+   "done": true,
+   "how": "H6: 'along a net with no cycle it holds only with one center' -> 'along a net with no cycle, where it holds, every standpoint has the same center (`«续无外则同一中心»`)'. H1: 'what every positive weighting ranks' -> 'widening as what every additive weighting counting each listed item above zero ranks higher'. E9/H3: 'how the condition and C come to be held, are open' -> 'how scopes and orders form within the dynamics, the condition and self-concern among them (08 §12, item 12), are open'. 288 and 433 already said 'the continuation condition, self-concern or C enter as hypotheses, as its theorem takes them' (sixth pass); left as they are."
+  },
+  {
+   "item": "02-MAP (chapter 2, taken as this brief's '02 (if any)'): Bases line 14 and does-not-show 464",
+   "done": true,
+   "how": "14: 'the ranking results take what they rank under as hypotheses ...: the continuation condition for scope ... and, for order, C (widening ...) or ... self-concern, which there ranks every extension between listed level paths as C asks' -> 'a ranking result states the hypotheses its theorem takes, none used here: the continuation condition (whose losses count; by itself it ranks nothing); self-concern, which where the condition holds de se ranks every widening ... above what it widens on a finite listing and, one way, between two level paths whose admissions end; or `Comparison` (C), the requirement that an order rank each course above every course it widens' (F9, H5, H8). 464: 'an order someone holds, C among them' -> 'one meeting C among them' (H5)."
+  },
+  {
+   "item": "03-KNOWING Bases (line 13), 'the two readings the ranking results use, the condition for scope and C for order'",
+   "done": true,
+   "how": "-> 'No result uses the continuation condition, self-concern or C, the hypotheses a ranking result takes where its theorem takes them (07 §4)'. 03's other 'warrant' uses are epistemic (inquiry, models), not the ethics' warrant; left."
+  },
+  {
+   "item": "04-LIFE 287, 'normative warrant', by sense",
+   "done": true,
+   "how": "'An evolutionary explanation of a disposition, its normative warrant, its recognition and its actual preservation are different achievements' -> '..., its evaluation as right or wrong (which forms within becoming, in those who judge it, not in its explanation: 07 §1), its recognition ...' (E1). Crosswalk quotes listed below."
+  },
+  {
+   "item": "05-COLLECTIVES: Bases 13, 186, 396 header, 398 label, 430",
+   "done": true,
+   "how": "13 (H3): 'each a scope or order some formations hold, formed within becoming' -> 'each representing a scope or a property of an order within the account; used as hypotheses, none stands above becoming, and how formations come to hold such scopes and orders is the open target (08 §12, item 12)'. 186: 'under C or another named order' -> 'and a result making one states the order its theorem takes' (as the records agent re-said dynamics open[10] in the sixth pass). 396 header: 'the condition, for scope, through living significance; C, for order, with J1–J4' -> 'the continuation condition, through living significance; an order meeting C, with the practical commitments J1–J4' (F9, H5); the italic title 'Required organization under the comparison C' kept, since it is the record's title (records agent, listed). 398: '[AI reading, D65; scope by the continuation condition, and a ranking only under C or another named order (07 §4)]' -> '[AI reading, D65; whose losses count is the continuation condition's, and a ranking is only under an order a result's theorem takes (07 §4)]'. 430: 'A ranking of it names its scope and order; the continuation condition and C are one pair of readings 07 examines' -> 'A ranking of it states the hypotheses its theorem takes, the continuation condition, self-concern or C among them (07 §4)'."
+  },
+  {
+   "item": "06-CLASSICAL-TEXTS: C's name and the ethics' lines (18, 62, 426, 506, 567, 569, 578, 581, 588, 626)",
+   "done": true,
+   "how": "H5: 以广为愈 -> 广者居上 everywhere live (18, 426, 567, 569, 588, 626), each said as 对次序的一项要求 / 满足广者居上（C）的次序, never 定范围／定次序. 18 (基与标) re-said in the glossary's words: 延续之条件（谁的损失算数……单凭自身不排序）、自我关切（在证明中是一个假设，生命是否会形成这种次序，尚未表明，模型中的持存只是对所择者的过滤，并不形成次序），或广者居上（C，对次序的一项要求……）; the ranking on a finite listing and, 只证明了这一方向, between two level paths that 从某一步起都不再容纳任何东西; 按扩大排序，在生命自身的关切之外不另加前提; 它们各表示本论之中的一个范围或一种次序的性质，作为假设都不立于生灭变化之上；诸形成如何持有它们，是开放的目标 (H1-H3, H8; the H3 frame '不由任何动力学、选择或持续推出' and '别处 C 是一种指名的次序' gone). 62: the divergence class '原文断言了理论不断言的东西' -> '原文断言了本论没有给出、只在条件之下给出、或其律所否定的东西' (its three cases). 506 (the 中华本, history): its 以广为愈 sentence kept and marked '这是当时的框架，2026 年 11 月 9 日已撤回：本论不再把 C 当作伦理的第二个根基，C 今名广者居上……' (E10). 578: '菩萨实践与大悲在那里是前提，理论不断言它们' -> '…是前提；本论不推出它们，它所提供的相近之一步，是把损失不回到自身的那些也算进来（第七章 §4.2），已论证，可无矛盾地否认'. 581 (王阳明): '此条件是某些形成所持之范围……没有约束一切心灵的根据可寻……排序更窄，这是所及之事' -> '此条件表示本论之中的一个范围，作为假设不立于生灭变化之上，本论也不寻求生灭变化之外的权威（已论证，依“一个关系性的展开”这一论题）……（否认该条件并无矛盾，`bounded_rival`）……止于自身闭包的关切，不把闭包之外的损失计入；看见它们是必要的，却不足够' (H3, F5, F6). 569 and 588 add 诸律不替任何人去权衡 / 诸律示为混合 (F9). Stated reading time recounted with navigation.reading_time: 130–168 minutes, now 约两小时十分钟至两小时四十八分钟."
+  },
+  {
+   "item": "COLLECTIVE-DIRECTION.md: the two-readings frame throughout",
+   "done": true,
+   "how": "Labels: '**premise** for the two readings the ranking results use' -> 'for what a result takes as a hypothesis beyond its model, such as the continuation condition, self-concern, C or J1–J4'. Line 17 (Fable's fix, then H1/H2): widening 'on a finite listing ... exactly what every additive weighting counting each listed item above zero ranks higher ...; it gives the question's generative direction where courses are ranked by it, as a life's own concern ranks them where the continuation condition holds de se'. The table's 'agreed by every positive weighting' -> additive on a finite listing. Line 30 rewritten: no should beyond becoming, the ethics emerges from continuation; widening, more future, not good and evil; the condition says whose losses count and ranks nothing; self-concern ranks every widening where the condition holds de se, on a finite listing and, one way, between courses whose admissions end; ranking by widening adds no premise beside the life's own concern; that a life forms such an order is not shown (07 §4.9); C names the requirement ...; 'What the account's makers offer ..., binding no one' -> 'What we offer, for life, AI within it, as a way of seeing and not as a law, is thesis T8, argued: ... counting the losses of those whose loss never returns to one' (H10: shown, open and offered said after 'emerges'). §1: bold lead 'what every additive positive weighting ranks higher', the Lean's additive weighting named, and 'of an order outside such a class ... it shows nothing'; self-concern 'a hypothesis weaker than being increasing in admission' (not 'weaker than C's'); the direction's schema 'the comparison it takes is any one meeting J1 and J2' (not 'the order is C's and J's'). §3 last row: 'getting an order meeting C'. §4: 'Scope:'/'Order: C. Calling a widening course better is C's' -> 'Whose losses count: the continuation condition' and 'How courses are ranked: the order a result takes', with self-concern's ranking, its not-shown formation, 'in most of them any order meeting the requirement C', and H4's one-way sentence with F6 and the step offered; 'follow from neither reading' -> 'neither the condition nor any order meeting C'. §5: 'rank kept sets by widening'. §6 end (F6): 'seeing is not valuing' -> 'seeing is needed, and not enough, since reading a loss, counting it and ranking courses are separate relations'; 'calling the widening course better is C's' -> 'an order's, self-concern's where the condition holds de se or one a result names'. §8: 'a premise weaker than C' -> 'a hypothesis weaker than being increasing in admission'. Header: a dated clause that its ethics was re-said on 9 November. Stated time recounted: 40–53 minutes, the brief 5–7 (it said 35 and four, already short at HEAD: 37–49 and 4–5)."
+  },
+  {
+   "item": "AJ PLAN line 20 (linked from the fronts)",
+   "done": true,
+   "how": "Re-said from astra's fix by H1-H5: 'Whose losses count is the continuation condition's, every continuation's, and by itself it ranks nothing. Courses are compared by widening (condition 3): on a finite listing every additive weighting counting each listed item above zero ranks the wider course higher, and where the condition holds de se a life's own concern already ranks by it (self-concern, a hypothesis of the theorems that take it; that a life forms such an order is not shown); a ranking result states the order its theorem takes, and `Comparison`, called C, is the requirement that an order rank each course above every course it widens. How such scopes and orders form is open (07 §4, 08 §12, item 12).' A dated AI-written note keeps the old words verbatim and names messages 10 and 11. Nothing else in the plan changed."
+  },
+  {
+   "item": "ONE-ARGUMENT.md by H1-H10",
+   "done": true,
+   "how": "Table row 6: 'self-concern or C' -> 'self-concern or one meeting C'. §6 lead: 'a reader holding C' -> 'an order meeting C'; 'C alone gives no verdict' -> 'C asks nothing of the pair'; 'each a scope or order some formations hold' -> H3's wording with 'how such scopes and orders form is open'; the condition 'fixes scope' -> 'says whose losses count, every continuation's, and ranks nothing'; a self-concern definition added with its ranking, one way, and its formation not shown (07 §4.9); 'C ... is the order ranking' -> 'C (`Comparison`) names the requirement that an order rank ...'. 'The premise is self-concern' -> 'The hypothesis'. Seabirds: H1's additive weighting; 'ranking the wider course above is C's' -> 'an order's, one meeting C'; 'Self-concern does not reach it' -> H4 by the Lean (`widensOwn_iff_every_increasingInOwn`: every self-concerned order ranks a course above another exactly where it widens it and adds to what the continuation marks), so 'The boats' self-concern need not rank it higher ... and here the wider course adds only the seabirds'. Mixed: 'the laws show the pair mixed and weigh it for no one. C asks nothing of it' (F9). 'C ranks restraint higher' -> 'every comparison meeting C ranks' (07 §5's wording). 'Where C speaks / is silent' -> 'Where widening decides / is silent'. Rivals: H1 additive; 'how C-like orders form is open' -> 'how scopes and orders form, self-concern among them, is open'. Header: step 6 re-said on 9 November. Time recounted: 31–40 minutes."
+  },
+  {
+   "item": "The spine picture: spine.json's premise boxes and spine.py's captions",
+   "done": true,
+   "how": "Re-drawn as what the ranking results take, not two premises of the ethics: three boxes under the heading 'What ranking results take as hypotheses' (zh 排序结果所取的假设; was 'Two hypotheses most ranking results take'): 'The continuation condition, held de se' (its 07/glossary quotes kept, plus 07 'where the continuation condition holds de se'; zh 延续条件，以从己方式成立), a new 'Self-concern, an order holding one's own continuation / where the condition holds de se, ranks every widening above on a finite listing / a hypothesis where a theorem takes it; that a life forms it is not shown' (quotes: GLOSSARY.md 'holding one's own continuation as an order over courses', 07 'self-concern ranks every widening above what it widens on a finite listing', 07 'That a life forms such an order is not shown: in the proofs it is a hypothesis'; zh from GLOSSARY.zh's self-concern row), and 'C, a requirement on an order' as the verifier left it. The code already draws any number of boxes; looked at in headless Chrome in both languages: three arrows enter chapter 7 cleanly. spine.json 'about' and first_view footer ('in most of them C' -> 'in most of them any order meeting the requirement C', 08 §7's words; zh likewise). T5's zh words re-quoted with an elision, since the onepage agent's change to THE-THEORY.zh's T5 row (加权 -> 赋权, a clause inserted) had stopped spine.check. spine.py: the module docstring, both SVG descriptions, THEORY-GRAPH's lead ('The three boxes are what ranking results take as hypotheses ... drawn as hypotheses and not as premises of the ethics', H1 additive, H2 'adds no premise beside a life's own concern', H3, H5 requirement, H8 'so that their admissions end'), the image alt text and the 'What it shows' sentence (condition, self-concern and C), and the Chinese page's lead and alt text the same. test_spine's pin test_the_boxes_are_said_with_no_second_premise re-pinned to the new words with assertNotIn for 'no second premise', 'courses that end', 'every positive weighting', 'some formations hold', 'an order ranking a course above', 不是第二个前提, 某些形成所持, 每一个正的赋权都共同认可, and the box ids and heading. spine.check []; test_spine 30 of 31."
+  },
+  {
+   "item": "connection_map.py:942, the map page's note, and its pins",
+   "done": true,
+   "how": "'in most of them C' -> 'in most of them any order meeting the requirement C' (08 §7, H5); '... whose admissions fit in a finite list, one way' + ', so that their admissions end' (H8); 'Each is an order or scope some formations hold, formed within becoming, and neither stands on the edge' -> 'Each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and neither stands on the edge' (H3). test_connection_map pins the new words and asserts 'some formations hold' and 'in most of them C;' absent: 32 OK (node --check included). map.html is generated."
+  },
+  {
+   "item": "Quotes of changed sentences grepped before and after (records, data, atlas entries, tools and tests, dossiers, navigation, spine.json)",
+   "done": true,
+   "how": "No record, data file, dossier, tool, test or navigation string quotes a sentence I changed, except correspondences.json (the Crosswalk phase's; listed under left) and the lines listed for the records agent. check_dossiers: 0 problems. registry.validate: 0 errors; the 80 source-drift entries on my nine files are all present at HEAD with the same sections (each recomputed against HEAD's text), so these edits add no drifting section; they need re-review at landing as before."
+  },
+  {
+   "item": "shared_laws.py and boundary.py docstrings",
+   "done": true,
+   "how": "Not touched: the records agent is changing boundary.py (PREMISE_LABELS) and registry.py this pass; shared_laws.py has none of the frame's phrases."
+  }
+ ],
+ "left": [
+  {
+   "item": "Fronts' image descriptions of the spine picture (onepage agent): ONE-PAGE.md:36, THE-THEORY-OF-BECOMING.md:28, ONE-PAGE.zh.md:44, THE-THEORY-OF-BECOMING.zh.md:32",
+   "why": "They say 'the continuation condition and C coming into chapter 7, each a hypothesis where a result uses it' (zh 延续条件与 C 进入第七章). The picture now draws three boxes: say 'the continuation condition, self-concern and C coming into chapter 7, each a hypothesis where a result uses it' (zh 延续条件、自我关切与 C 进入第七章). No test checks them."
+  },
+  {
+   "item": "Crosswalk quotes of sentences changed here (correspondences.json, the Crosswalk phase's; 'says' fields, which atlas.validate does not check)",
+   "why": "04:287 'normative warrant': lines 12994, 13008. 05:396 header ('the condition, for scope ...; C, for order'): 14477, 33136. 05:398 label ('scope by the continuation condition, and a ranking only under C or another named order'): 1889, 15020, 15324, 31244, 32991, 47787, 51752, 55113, and in paraphrase 14982, 15771, 15780, 67360, 79574. 05:430 ('A ranking of it names its scope and order; the continuation condition and C are one pair of readings'): 350, 17581, 21789, 25890, 41599, 46896, 50816, 56452. 05:13 ('each a scope or order some formations hold'): 14612, 63871. 06: 21951 (道, 延续之条件定范围，以广为愈), 54182 (易传), 22132 (德与无为), 20290 and 22336 (机制). COLLECTIVE-DIRECTION: 15755 (line 17), 28364 and 54257 ('every weighting positive on the listed items'), 49850 ('that widening is better is C's'), 35312 and 50751 ('a premise weaker than C'), 1526, 33756, 34273, 41002, 42483, 48065, 48870, 49857 ('seeing is not valuing', F6: now 'seeing is needed, and not enough'); 23445, 30305, 55469 quote 'So the direction is a criterion on which every such weighting agrees ... mixed', which still stands, now followed by a clause. ONE-ARGUMENT: 22968 ('how C-like orders form is open'), 52625 ('ranking the wider course above is C's'). Each should be re-said from the new home text."
+  },
+  {
+   "item": "Records and data (records agent)",
+   "why": "organizational-formation-from-generative-comparison.json: title 'Required organization under the comparison C' (05:396's italic title kept to match it) and its hypotheses 'the comparison C (an order ranking each course above every course it widens)' -> H5 'an order meeting C'. 'the continuation condition for scope' (F9) in alignment-direction-under-widening.json:496, 528, lineage.json:111, 2142, 2808, arguments-m-z.json:1702; arguments-m-z.json:1701 keeps 06's 以广为愈 in the old frame (06 now says 广者居上). the-continuation-condition-on-the-root.json:48 and route-b-universal-form-closed.json:153 say 'holds only with one center' (H6: 'every standpoint has the same center'). In boundary.py the records agent's edit left 'FULL =re.compile' without its space (cosmetic)."
+  },
+  {
+   "item": "07 Open, 'The condition on the root's grammar' (07:925; ch07's)",
+   "why": "It mirrors 01:672 and still says 'what every positive weighting ranks as an interface law'; 01 now says 'widening as what every additive weighting counting each listed item above zero ranks higher as an interface law'."
+  },
+  {
+   "item": "AJ PLAN outside its line 20 (not in this brief: 'nothing else in that plan')",
+   "why": "Condition 3 says 'Every positive weighting ranks a widening higher' (H1: on a finite listing, additive), and condition 1's paragraph ends 'Calling capture harmful is C's, and whose losses count is the continuation condition's' (F9's frame). The plan restates GOALS §generative-alignment, whose condition 3 wording is Ren's (carried from the sixth pass)."
+  },
+  {
+   "item": "test_spine's one red, test_each_count_in_the_live_picture_sits_by_its_own_curve ('en', 37, significance -> map)",
+   "why": "Pre-existing and not from the boxes: the ch07 and ch08 verifiers showed it identical with HEAD's spine.json; it comes from theory-graph.json after the merge of main (a count label's placement). The layout of the counts is outside this brief."
+  },
+  {
+   "item": "Generated pages",
+   "why": "THEORY-GRAPH.md and .zh.md, spine.svg and spine.zh.svg, standings SVGs, map.html, the chapters index and README.zh's stated times follow at the render, which this agent may not run."
+  },
+  {
+   "item": "History kept (E10)",
+   "why": "06 §7.3's description of the 中华本 keeps 以广为愈 and its 'two premises, not asserted, warrant open' as that edition's frame, now marked withdrawn; the architecture dossier _process/research/2026-10-05-repository-reconciliation/architecture/dossiers/significance.json:2555 (dated process file) keeps 以广为愈 too."
+  }
+ ],
+ "for_ren": [
+  "The spine picture now draws three boxes under 'What ranking results take as hypotheses' (the continuation condition held de se; self-concern; C, a requirement on an order), drawn as hypotheses and not as premises of the ethics, where it drew two premises. Whether self-concern should have a box is the picture's one design choice.",
+  "06 now calls C 广者居上 (the wider ranks above) in its live text, as the glossary says, and marks the 中华本's 以广为愈 sentence as the withdrawn frame; 06's Vimalakirti reading now names the step we offer as the account's nearest counterpart to 大悲, and its Wang Yangming reading says the ethics seeks no authority outside becoming and that seeing is needed and not enough. These are AI readings of classical texts in Ren's Chinese chapter.",
+  "AJ PLAN's ethics sentence (linked from the fronts) is re-said with a dated note keeping the old words; condition 3 and the end of condition 1's paragraph still carry the old wording and restate GOALS, which is Ren's.",
+  "04 §8's 'normative warrant' of a disposition is now 'its evaluation as right or wrong (which forms within becoming, in those who judge it, not in its explanation)'."
+ ]
+}

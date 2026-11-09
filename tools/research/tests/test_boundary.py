@@ -881,11 +881,15 @@ class ThePages(unittest.TestCase):
         text = '\n'.join(x if isinstance(x, str) else x[1] for x in section)
         self.assertIn(f'**Counts** of the {len(CENTRAL)} central declarations: on the edge 2 (derived 1, under a stated hypothesis 1); '
                       'below the grammar 1; distances', text)
-        # each premise's theorem in 08 §7's words (RW): the condition's reads only the dynamics, C's reads no order
-        self.assertIn('- **For scope**, the continuation condition: `Becoming.Unrestricted`; where there is a standpoint and a '
+        # each premise's theorem in 08 §7's words (RW): the condition's reads only the dynamics, C's reads no order;
+        # since 9 November 2026 the items are said as the hypotheses ranking results take, not as scope and order roles
+        self.assertIn('**Hypotheses the ranking results take**, each only where a theorem takes it:', text)
+        self.assertIn('- **Whose losses count:** the continuation condition, `Becoming.Unrestricted`; where there is a standpoint and a '
                       'formation, no statement reading only the dynamics and holding of some dynamics entails it, by '
                       '`Becoming.ReadsOnlyDynamics.not_entails`', text)
-        self.assertIn('- **For order**, C: `Becoming.Comparison`; no theorem shows it unentailed by the dynamics: No theorem shows it.', text)
+        self.assertIn('- **How courses are ranked:** C, `Becoming.Comparison`; no theorem shows it unentailed by the dynamics: No theorem shows it.', text)
+        self.assertNotIn('**For scope**', text)
+        self.assertNotIn('**For order**', text)
         self.assertIn(f'- `Becoming.Flow.row`: derived (a checked entry): a case of `{LAW}`; bridges `Becoming.Flow.bridge_iff`; support '
                       '`Becoming.Flow.support`.', text)
         self.assertIn('- `Becoming.Flow.two`: under a stated hypothesis (a checked entry): the form `Becoming.Leaf.form`; `Becoming.Leaf.H` '
@@ -905,7 +909,7 @@ class ThePages(unittest.TestCase):
         for bad in ('No theorem shows it.', ['x'], 1.5):
             edge['_boundary']['premises_of_the_ethics'][1]['absent'] = bad
             text = '\n'.join(x for x in registry.boundary_section(edge, registry.ROOT) if isinstance(x, str))
-            self.assertIn('- **For order**, C: `Becoming.Comparison`; no theorem shows it unentailed by the dynamics.', text)
+            self.assertIn('- **How courses are ranked:** C, `Becoming.Comparison`; no theorem shows it unentailed by the dynamics.', text)
 
     def test_what_re_renders_after_a_change_to_the_boundary_record(self):
         records = [{'id': 'edge', '_record_path': 'theories/becoming/results/records/edge.json', 'boundary': {}, 'references': [],
@@ -1489,6 +1493,24 @@ class TheRepositoryFile(unittest.TestCase):
         self.assertEqual(sum(b['groups'].values()), len(b['rows']))
         self.assertEqual(set(b['counts']), set(boundary.LABELS))
         self.assertEqual(set(data['counts_at_boundary_record']), set(data['counts']))
+
+    def test_the_premises_are_said_as_the_hypotheses_ranking_results_take(self):
+        # 9 November 2026 (AG seventh pass): C is a requirement on an order, not a second premise of the ethics; widening
+        # is what additive weightings counting each listed item above zero rank higher; the ranking reaches courses whose
+        # admissions end; that a life forms a self-concerned order is not shown
+        carriers = [r for r in registry.load_records()[0] if isinstance(r.get('boundary'), dict)]
+        if not carriers:
+            self.skipTest('no record carries the boundary field')
+        for r in carriers:
+            premises = r['boundary']['premises_of_the_ethics']
+            said = json.dumps(premises, ensure_ascii=False)
+            for old in ('no second premise', 'courses that end', 'every positive weighting', 'argued, not shown',
+                        'fixes scope', 'an order ranking each course'):
+                self.assertNotIn(old, said, (r['id'], old))
+            order = next(p for p in premises if p.get('role') == 'order')
+            self.assertIn('requirement', order['name']['en'])
+            self.assertIn('self-concern', order['name']['en'])
+            self.assertIn('additive', order['basis']['en'])
 
 
 if __name__ == '__main__':

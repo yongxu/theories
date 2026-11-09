@@ -794,6 +794,8 @@ def boundary_section(r, base):
         inner = ', '.join(f'{label} {c[label]}' for label in labels if c[label])
         parts.append(f'{group} {b["groups"][group]}' + (f' ({inner})' if inner and len(labels) > 1 else ''))
     lines += [f'**Counts** of the {sum(b["groups"].values())} central declarations: ' + '; '.join(parts) + '.', '']
+    if b['premises_of_the_ethics']:  # since 9 November 2026 said as the hypotheses ranking results take, not as roles
+        lines += ['**Hypotheses the ranking results take**, each only where a theorem takes it:', '']
     for p in b['premises_of_the_ethics']:
         absent = en(p['absent']).strip().rstrip('.') if isinstance(p.get('absent'), dict) else ''
         theorem = str(p.get('not_entailed', ''))
@@ -808,7 +810,8 @@ def boundary_section(r, base):
                 'not shown': 'no theorem shows it unentailed by the dynamics' + (': ' + absent if absent else ''),
                 'unverified': 'unverified: ' + '; '.join(map(str, p.get('failed', [])))}.get(p.get('result'), p.get('result'))
         name = en(p['name']) if isinstance(p.get('name'), dict) else p.get('name')
-        lines += [f'- **For {p.get("role")}**, {name}: `{p.get("premise")}`; {what}.']
+        label = boundary.PREMISE_LABELS.get(p.get('role'), f'For {p.get("role")}')
+        lines += [f'- **{label}:** {name}, `{p.get("premise")}`; {what}.']
     for group, labels in boundary.GROUPS.items():
         rows = sorted(((d, x) for d, x in b['rows'].items() if x['label'] in labels), key=lambda dx: (labels.index(dx[1]['label']), dx[0]))
         if not rows:

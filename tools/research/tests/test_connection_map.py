@@ -162,8 +162,15 @@ class PageTests(unittest.TestCase):
         self.assertNotIn('between listed courses', self.page)
         # AG review, 9 November 2026: the two readings said from within, as 07 §4 says them, not against a warrant from outside;
         # fifth pass: hypotheses a theorem takes, not "readings", and C, where the condition holds de se, self-concern's order (07 §4)
-        self.assertIn('Each is an order or scope some formations hold, formed within becoming, and neither stands on the edge', self.page)
-        self.assertIn('self-concern ranks every extension between two level paths whose admissions fit in a finite list, one way', self.page)
+        # seventh pass (H3, H5, H8): C a requirement on an order; each a scope or a property of an order within the account,
+        # used as a hypothesis, not 'some formations hold'; courses whose admissions end
+        self.assertIn('in most of them any order meeting the requirement C', self.page)
+        self.assertIn('Each represents a scope or a property of an order within the account, used as a hypothesis where a theorem '
+                      'takes it, and neither stands on the edge', self.page)
+        self.assertIn('self-concern ranks every extension between two level paths whose admissions fit in a finite list, one way, '
+                      'so that their admissions end', self.page)
+        self.assertNotIn('some formations hold', self.page)
+        self.assertNotIn('in most of them C;', self.page)
         self.assertNotIn('two readings', self.page)
         self.assertNotIn('no warrant from outside is sought', self.page)
         self.assertNotIn('derives from the condition', self.page)

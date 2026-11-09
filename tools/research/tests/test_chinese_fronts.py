@@ -283,17 +283,34 @@ class LandingPageTests(unittest.TestCase):
         self.assertIn('也没有凌驾其上的善与恶', text)
         self.assertIn('07-SIGNIFICANCE.md#r-self-concern-and-c-under-the-condition', text)
         # the sixth pass (messages 10 and 11 of 9 November 2026): going on before any order, the condition on its reading
-        # (续无外 as reach along a relation), relations closing read without time, widening no second premise, the
-        # ranking at its proved reach; not "listed courses", not 渐渐 (the English says no "gradually")
+        # (续无外 as reach along a relation), the ranking at its proved reach; not "listed courses", not 渐渐 (the English
+        # says no "gradually"). The seventh pass (the sixth pass's two cold readings): read across all steps, said as reading
+        # influences at different times together; 续无外 as reaching everything from each center; self-concern said once as
+        # a property of an order; widening what every additive weighting counting each thing above zero ranks higher; no
+        # premise beside the life's own concern; one way, need not count those who depend on it; admissions that end; the
+        # theorem's one direction; the two results composing directly; that a life forms such an order not shown (07 §4.9)
         self.assertIn('生命依靠维持它的东西而延续', text)
-        self.assertIn('不计时间而读', text)
-        self.assertIn('在关系上读，即把从一个立场看有意义的，读作该立场之中心沿所选关系所及的范围', text)
-        self.assertIn('作为诸进程之间的一种次序来持守', text)
-        self.assertIn('它不是第二个前提', text)
+        self.assertIn('延续本身还不是诸进程之间的一种次序', text)
+        self.assertIn('把不同时刻的影响合在一起看、不要求各环节按时间先后衔接', text)
+        self.assertIn('跨越所有步来读', text)
+        self.assertIn('从每个中心都能到达一切', text)
+        self.assertIn('若把从一个立场看有意义的，读作该立场之中心所能到达的范围', text)
+        self.assertIn('这里把一种排序性质称为*自我关切*', text)
+        self.assertIn('凡给每样东西一个大于零的权重、再把权重相加的计法', text)
+        self.assertIn('也不在生命自身的关切之外另加前提', text)
+        self.assertIn('未必把依存于它的那些也算进来', text)
+        self.assertIn('同时提出的，是一种看法', text)
+        self.assertIn('从某一步起都不再容纳任何东西', text)
+        self.assertIn('只证明了这一个方向', text)
         self.assertIn('对不断有所形成、没有尽头的进程，这一点尚未表明', text)
-        self.assertIn('从相互依存到两条进程之间的这一排序，这条路尚未陈述为一条定理', text)
+        self.assertIn('这两项结果可以直接组合，只是没有一条定理单独陈述这一组合', text)
+        self.assertIn('凡给每个所列之物一个大于零的权重、再把权重相加的计法', text)
+        self.assertIn('生命是否会形成这种次序，尚未表明', text)
+        self.assertIn('模型中的持存只是对所择者的过滤，并不形成次序', text)
         for old in ('两种读法', '扩大可形成者', '未奠定根据', '就会锁定', '所读之外的什么',
-                    '列出的进程', '尚未合为一条定理', '与之一同延续者', '渐渐', '一个继续下去的生命'):
+                    '列出的进程', '尚未合为一条定理', '与之一同延续者', '渐渐', '一个继续下去的生命',
+                    '不计时间', '第二个前提', '有所值', '已论证', '达不到', '与之同提', '终会停止容纳', '尚未陈述为一条定理',
+                    '来持守', '在那里', '正的赋权', '别无他物'):
             self.assertNotIn(old, text)
 
     def test_a_stated_time_is_kept_whole_in_a_table(self):

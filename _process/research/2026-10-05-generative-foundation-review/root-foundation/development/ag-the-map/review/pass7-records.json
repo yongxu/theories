@@ -1,0 +1,120 @@
+{
+ "agent": "pass7-records (AI-written, Claude Opus, 10 November 2026, about 00:20 WIB). The records, atlas dynamics, data registers and the edge record's boundary model in the seventh pass of the AG review, by H1-H10 with E1, E8-E10, F2-F9 and D5-D7, checked against 07, 08 and the glossaries as the homes phase left them and against the Lean they name (Weightings.lean widens_iff_every_positive and widens_iff_every_of_class; Extension.lean Comparison; FrontierFrames.lean Priority; Direction.lean extension_iff_widens and narrowed_not_chosen; PremiseWitnesses.lean ReadsNoOrder.not_entails). No make, render, gate, lake or build; the full suite deliberately deferred.",
+ "changed": [
+  "theories/becoming/results/records/one-root-to-its-edge.json",
+  "theories/becoming/results/records/alignment-approaches-under-the-selection-laws.json",
+  "theories/becoming/results/records/alignment-direction-under-widening.json",
+  "theories/becoming/results/records/comparing-two-courses-on-what-they-admit.json",
+  "theories/becoming/results/records/continuation-condition-decomposition.json",
+  "theories/becoming/results/records/eventual-widening.json",
+  "theories/becoming/results/records/relational-reading-comparison.json",
+  "theories/becoming/results/records/shared-laws-on-the-grammar.json",
+  "theories/becoming/results/records/the-continuation-condition-on-the-root.json",
+  "theories/becoming/results/records/weights-within-a-ratio-agree-past-it.json",
+  "theories/becoming/results/records/what-a-course-keeps-reachable.json",
+  "theories/becoming/results/records/what-the-step-across-standpoints-reaches.json",
+  "theories/becoming/results/records/what-would-give-c.json",
+  "theories/becoming/results/records/widening-along-a-reading.json",
+  "theories/becoming/results/records/widening-as-what-every-positive-weighting-ranks.json",
+  "theories/becoming/results/data/lineage.json",
+  "theories/becoming/results/data/arguments-a-l.json",
+  "theories/becoming/results/data/arguments-m-z.json",
+  "theories/becoming/results/data/generativity-chain.json",
+  "theories/becoming/results/data/regions.json",
+  "tools/research/boundary.py",
+  "tools/research/registry.py",
+  "tools/research/tests/test_boundary.py",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass7-records.json"
+ ],
+ "items": [
+  {
+   "item": "(1) H1-H10 in records' current fields (15 records; ch07's five untouched)",
+   "done": true,
+   "how": "Each edit is an exact substring asserted once per field, written back in the file's own format, so a diff shows only the changed lines. H1: 'every positive weighting' in an ethics or widening sense now says 'on a finite listing ... every additive weighting counting each listed item above zero' in comparing-two-courses related[2], what-a-course-keeps-reachable related[3], what-the-step-across-standpoints-reaches related[1] (which also drops 'once scope is fixed, C is ...'), shared-laws-on-the-grammar does_not_show[9], and the statement of widening-as-what-every-positive-weighting-ranks. That statement now reads 'exactly when every additive weighting counting each listed item above zero ranks it higher, and exactly when every order of any class holding these and ranking each widening higher does' (widens_iff_every_positive and widens_iff_every_of_class at their reach; 296 of 300 characters; 'one weight for all ranks by number' stays in law 6). Records whose own laws define a weighting as additive natural weights (weights-within-a-ratio, the widening record's laws) keep 'positive weighting' as their defined term. H5: widening-along-a-reading ('(C, an order)' and 'Ranking by widening is C, an order' are now what C asks of an order), eventual-widening ('an order beyond C' is now 'a requirement beyond C (C-infinity in the study)'), what-would-give-c's title ('What would give an order meeting C on a listing', as 07 §4 now says; the old title stays an alias), alignment-direction laws[5] ('C is not used'). 'C read as widening' in alignment-direction (hypotheses[0], dependencies[1], overview summary and evidence) and alignment-approaches (does_not_show[1], related[9]) was not only redundant but inexact. Direction.lean takes no `Comparison`: the order hypothesis is J1/J2 as `Priority` (FrontierFrames.lean:418, a lexical order of basic then living claims), and 'C read as widening' names the frame on which extension is widening (`Direction.extension_iff_widens`, a theorem). The lines now say 'moves compared by what their outcomes admit, where extension is widening; no theorem here takes C'. relational-reading-comparison related[0] no longer says C is the conditional alignment route's comparison premise; that route (practical-judgment) states J1-J4. 'widening ranks neither side' (weights-within-a-ratio does_not_show[3]) now says 'the laws rank neither side'. H6 and H7, the-continuation-condition-on-the-root: the statement says 'every occurrence is reached on every center's line under the class' (its law 0's words) in place of 'lies within every center's continuing'; the correspondence's AI reading says 'nothing lies outside each center's reach (续无外)'; law 3 says 'Along a net with no cycle, where the condition holds, every standpoint has the same center' (`«续无外则同一中心»` gives no standpoint's existence). Nothing about time is said. Scans of every current field (history and lineage points excluded) for 'argued, not shown', 'courses that end', 'not yet joined', 'as among dated occurrences', 'read without time', 'continues with' in the 续无外 sense, 'answered within the map', 'emerge together', 'does not reach' in the dependents' sense and 'no second premise' leave only other senses: Feynman diagrams' 'not yet joined', theorem-level reach ('the wolves' part does not reach the forest'), a center's end, and the derived extent of 07 §3.3. positioned-positive-reason and practical-judgment already said 'set aside as one the map does not need' (sixth pass). One dated history line per changed record, in both languages, dated 10 November 2026 by the clock."
+  },
+  {
+   "item": "(2) The edge record's premises_of_the_ethics and the boundary model",
+   "done": true,
+   "how": "one-root-to-its-edge. The condition's basis now says the condition says whose losses count and by itself ranks nothing. It says the ranking results take it held de se, and that on the reading that what has significance from a standpoint is what lies within its center's reach along a relation it is then the root's 续无外 (ownClosure_unrestricted_iff_noOutside). The F5 sentence is unchanged. The C item's name is now 'C, the requirement that an order rank each course above every course it widens, where a theorem takes it; where the condition holds de se, self-concern does what it asks, one way, between level paths whose admissions end' (zh in step), replacing 'an order ranking each course above every course it widens (C)'. The name carries self-concern because the page prints the name and not the basis. The basis now says: 'in the proofs a hypothesis, and that a life forms such an order is not shown'; the ranking on a finite listing and, one way, between level paths whose admitted (step, formation) pairs fit in a finite list, 'so that their admissions end'; 'for courses that go on forming without end it is not shown'; 'ranking by widening adds no premise beside the life's own concern: that concern already does it'; and widening as what every additive weighting counting each listed item above zero ranks higher. The premise declarations (Becoming.Unrestricted, Becoming.Comparison), their not-entailed theorems and their reviews are unchanged, so Q1 and the review-naming rule still hold. boundary.py gains PREMISE_LABELS = {'scope': 'Whose losses count', 'order': 'How courses are ranked'}. registry.py prints '**Hypotheses the ranking results take**, each only where a theorem takes it:', then '- **Whose losses count:** <name>, `<premise>`; ...' and '- **How courses are ranked:** ...', in place of '**For scope**' and '**For order**'. The keys stay 'scope'/'order' and 'premises_of_the_ethics': the generated shared-laws.json, boundary.field_findings' schema messages, registry.boundary_matching/boundary_status and test_boundary's fixtures all carry them, so renaming would break data the render writes. test_boundary's two page pins were re-pinned, with assertNotIn for '**For scope**' and '**For order**'. A new repository test holds the edge record's premises free of 'no second premise', 'courses that end', 'every positive weighting', 'argued, not shown', 'fixes scope' and 'an order ranking each course', and holds that the order item names the requirement and self-concern and its basis says additive."
+  },
+  {
+   "item": "(3a) dynamics.json",
+   "done": true,
+   "how": "No change was needed. No entry quotes a line this pass changed (checked by phrase for each changed line). A script compared all 659 open items citing a record's does-not-show anchor with the record's current lines. The 39 that are not word for word are older paraphrases, none touching the ethics' frame (for example reserve-defers-ending's parenthesis and hexagrams-on-the-spine's '生生'). The file's C mentions are where a theorem takes Comparison (the conditional direction, 'under C and the continuation condition') or lists (176: 'A, C, L')."
+  },
+  {
+   "item": "(3b) lineage.json, current-state fields",
+   "done": true,
+   "how": "arc_short's last sentence now reads: 'On 9 November that frame is withdrawn, C no longer a second foundation of the ethics, which emerges from continuation; the working rules turn to the map, ...'. 'That frame' is the October separation the brief tells the sentence before. It stays at the 240-word cap (counted as test_lineage counts) by dropping 'asked of an AI' from the Fork narrative's gloss and one 'the'. zh in step: 这一框架撤回，C 不再作为伦理的第二个根基. arc (en, zh): 'C is no second premise' became 'C is no longer introduced as a second foundation of the ethics' (H2). threads[2].intro (en, zh): ranking by widening adding no premise beside a life's own concern where the condition holds, with widening, on a finite listing, as what every additive weighting counting each listed thing above zero ranks higher; 'C was taken as a second premise giving order'; 'since C asks that a wider course, one that \"admits more\", rank above' replaces 'since C reads \"admits more\"'. papers[2] and papers[15].stands (en, zh): the one-way clause now stands where the theorem puts it ('on a finite listing and, one way, between two level paths ...'); additive weightings (H1); 'that a life forms such an order is not shown' (H3, H10); 自承 became 以从己方式 (the glossary's de se). History is kept: points, papers[8]'s dated clause, phases, and the arcs' account of points 33 and 49. lineage.check: []."
+  },
+  {
+   "item": "(3c) arguments-*.json: chapter 7, g0-warrant, the 中华本",
+   "done": true,
+   "how": "chapter-07-significance (arguments-a-l row 19): argument_en/zh take ch07's proposal, adjusted to 07's thesis and §4 as they now stand. They open the ranking with 'the ethics emerges from continuation:' and say that a life forms the order is not shown (a hypothesis; persisting a filter). The ranking is on a finite listing and, one way, between level paths whose admissions end. Widening is said with additive weightings, and ranking by it adds no premise beside the life's own concern. scope_en/zh add '(argued, on the thesis of one relational unfolding)' to the F5 clause, which the sixth verifier found missing, and say 'how scope and order form within the dynamics is the open target (08 §12)'. Its source_sha256 was refreshed to 07 as it stands (0383b181407d...) after rereading 07's thesis, §4's lead, table and paragraphs, and the dated note on C. reading_catalogue --check then no longer lists chapter-07 under reading_drift. g0-warrant (row 58): status and next are current fields and were re-said by F5: the universal practical warrant was set aside on 9 November 2026 as a question the map does not need, and the target kept is how scope and order form (08 §12). The argument, significance and scope describe history/G0-WARRANT.md and stay. Its source_sha256 is not refreshed, because the source drifted before this pass and I did not reread it. the-theory-of-becoming-zhonghua (arguments-m-z row 58) describes a history edition, so the old name 以广为愈 stays (H5). '(此框架于 2026 年 11 月 9 日撤回)' / ', a frame withdrawn on 9 November 2026' is added so that a reader does not take the two-premise frame as standing."
+  },
+  {
+   "item": "(4) 以广为愈 -> 广者居上, and 自承 -> 从己",
+   "done": true,
+   "how": "No current field in my files uses 以广为愈 as C's name; the one occurrence describes the 中华本, a history edition, and keeps it with the withdrawal note. 自承 for de se became 从己 in the-continuation-condition-on-the-root does_not_show[3] (条件从己成立处), continuation-condition-decomposition next_delta (以从己方式所持), and lineage papers[2] and [15] (以从己方式成立). one-root-to-its-edge's is in history[12] and stays. The other 自承 are other words (独自承担, 自承载, 出自承之律, 自承者 in what-the-claims-do-not-read)."
+  },
+  {
+   "item": "Other data: generativity-chain scope, regions notes",
+   "done": true,
+   "how": "generativity-chain scope_en/zh: 'compared by widening, what every positive weighting ranks higher and no second premise' and 'C, the order ranking each course ...' became 'compared by widening, which on a finite listing is exactly what every additive weighting counting each listed thing above zero ranks higher; where the condition holds, ranking by it adds no premise beside a life's own concern ... C, the requirement that an order rank each course above every course it widens'. The entries keep the labels of their time, as the scope says. generative_chain.validate: []. regions.json notes (curators' labels, not rendered as text): 'comparison C read as widening', \"C's order on a listing\" (twice), 'C as widening' (Direction), 'what C ranks' (Ranking) and 'one way to C between listed level paths' were re-said as a requirement on an order. standard-boundaries.json, theory-map.json and tests(.zh).json had nothing the frame corrects."
+  },
+  {
+   "item": "Checks (focused; load 15-31; no make, render, gate, lake or build; the full suite deliberately deferred)",
+   "done": true,
+   "how": "All changed JSON parses, and each file keeps its own format. style.lint on every changed record against HEAD finds no new finding and no error. Three fields that grew past soft caps were shortened back: alignment-approaches does_not_show[1] is at 233, eventual-widening does_not_show[1] shrank, and alignment-direction hypotheses[0] zh grew 16 characters on an already-over warning, within the growth tolerance. Results: test_style OK (22, 1 skip); test_lineage OK (16); test_law_families OK (3); test_indexes OK (23); test_theory_graph OK (13); test_atlas OK (45); test_registry OK (21, 388 s under load 20-50). test_boundary ran 55 tests in nine classes, all OK. Its TheLeanCheck class was not run, since it compiles Lean stubs with the installed toolchain. atlas.validate gives the same 6 errors as the sixth pass (universal-practical-warrant withdrawn, cited by six crosswalk entries) and none from these edits. lineage.check: []. generative_chain.validate: []. spine.check: 0. check_dossiers: 0 problems. reading_catalogue --check: chapter-07 is out of reading_drift. Its one error is the stale generated results/README.md, a render item."
+  }
+ ],
+ "left": [
+  {
+   "item": "route-b-universal-form-closed (laws[1], dependencies[1]: 'holds only with one center'; does_not_show[1]: 'dated occurrences make none')",
+   "why": "Route (b) is the session J3's, which lands soon and says what holds over what comes after. To avoid a conflict with it I left the record. By H6, its 'on a net with no cycle holds only with one center' would read 'where it holds, every standpoint has the same center'."
+  },
+  {
+   "item": "correspondences.json (Crosswalk phase)",
+   "why": "23 entries say 'C read as widening' and 2 'Ranking by widening is C'. The six atlas.validate errors (citing the withdrawn universal-practical-warrant) are unchanged. Also those ch07 and ch08 listed: 'does not reach those who depend on one', 'order or scope some formations hold', C as an order, and the Parfit cell. No correspondence quotes a record line changed here (checked by phrase)."
+  },
+  {
+   "item": "shared-laws.json and the generated pages",
+   "why": "The edge record's premise names and bases now differ from the generated shared-laws.json. Its page shows '*Not matched:* the data read another version of this field (premises_of_the_ethics)' until `python3 -B tools/research/shared_laws.py` and the render. The new labels appear only then. The record .md pages, LINEAGE(.zh).md, the reading catalogue's results/README.md, the theory graph (what-would-give-c's new title), the generativity chain page and data/atlas.json show old text until the render. I ran none of them."
+  },
+  {
+   "item": "g0-warrant's source_sha256 and status_code",
+   "why": "Its source (history/G0-WARRANT.md) was already in reading_drift before this pass. Refreshing the hash needs a reread of that file, which I did not do. status_code 'defended-open' is kept: it describes the history study's own state, and no tool reads a vocabulary for it."
+  },
+  {
+   "item": "'C ranks it above' as shorthand in records whose theorems take Comparison",
+   "why": "relation-level-law-of-easing (statement at 300 of the 300 hard cap) and stepwise-law-of-easing (294) say 'C ranks it above'. So do ranking-under-readings related[2] and [3], stepwise related[0] and does_not_show[2], relational-reading-comparison statement ('comparison principle C ranks it strictly higher') and renewing-consuming-formation. F9 keeps C where a theorem takes Comparison, and their laws say 'every comparison satisfying C ranks ...' exactly. Saying 'every order meeting C ranks it above' would push two statements past their hard cap, so it waits for whoever re-words those records."
+  },
+  {
+   "item": "Titles and aliases kept",
+   "why": "widening-as-what-every-positive-weighting-ranks keeps its title (07's link text and anchor), and keeps its alias 'C as the order every positive weighting shares' as a lookup name. In its own laws a weighting is additive by definition (law 0). what-would-give-c keeps its old title as an alias. The Lean docstrings (Direction.lean 'C read as widening on the moves', RoutesToC.lean \"What would give C's order on a listing\") and 08 line 545 are not mine."
+  },
+  {
+   "item": "History descriptions in the reading registers",
+   "why": "The rows describe fixed history sources at their hashes and stay as they are. the-step-of-invariance (arguments-m-z row 55) says 'On order, C is exactly what every positive weighting that counts everything shares'; the-theory-of-becoming (row 56) says 'what C ranks depends on the reading'; many 'next' fields describe old studies' warrant questions. The coordinator may add a register note that the two-premise frame was withdrawn on 9 November."
+  },
+  {
+   "item": "chapter-08-method row (arguments-a-l row 20)",
+   "why": "08 changed this pass, so the row drifts. A reread and hash refresh belong with 08's owner or the coordinator. Its scope_en 'every review so far is not by a human reader' might say 'no independent human review is recorded yet' (Ren, 8 November). Not changed."
+  },
+  {
+   "item": "History lines for the sixth pass's 48 records",
+   "why": "The sixth pass changed 48 records without history lines and left this to the coordinator. I added one line only to the 15 records changed in this pass."
+  },
+  {
+   "item": "boundary.py was changed by this agent",
+   "why": "PREMISE_LABELS was added after PREMISE_ROLES, and the module docstring was not touched. The rest agent's docstring edits, if any, should re-read the file first."
+  }
+ ],
+ "for_ren": [
+  "The edge record (one-root-to-its-edge), the field listing the ethics' hypotheses. After the render its page will print '**Hypotheses the ranking results take**, each only where a theorem takes it:', then 'Whose losses count: the continuation condition' and 'How courses are ranked: C, the requirement that an order rank each course above every course it widens, where a theorem takes it; where the condition holds de se, self-concern does what it asks, one way, between level paths whose admissions end'. It no longer prints 'For scope' and 'For order'. The basis says that a life forms such an order is not shown, that the ranking holds on a finite listing and, one way, between level paths whose admissions end, and that ranking by widening adds no premise beside the life's own concern.",
+  "alignment-direction-under-widening and alignment-approaches. 'C read as widening, a hypothesis' turned out not to match the Lean: no Direction theorem takes C. The conditional direction ranks by J1/J2 (Priority) on moves compared by what their outcomes admit, where extension is widening. The overview's hypotheses line now reads '(the continuation condition, moves compared by what their outcomes admit, and the practical commitments)'.",
+  "The lineage page's brief arc now ends: 'On 9 November that frame is withdrawn, C no longer a second foundation of the ethics, which emerges from continuation; the working rules turn to the map, for alignment and of wisdom, honesty and standing within it, not above it.' To keep the 240-word cap, the Fork narrative's gloss lost 'asked of an AI'.",
+  "The reading register's g0-warrant row now has the status 'the universal practical warrant set aside as a question the map does not need'. Its next field says the warrant was set aside on 9 November and that the target kept is how scope and order form (08 §12).",
+  "widening-as-what-every-positive-weighting-ranks: the statement now says additive weightings counting each listed item above zero, and that the class result holds only for orders that already rank each widening higher. Its title still says 'every positive weighting', which its laws define as additive."
+ ]
+}

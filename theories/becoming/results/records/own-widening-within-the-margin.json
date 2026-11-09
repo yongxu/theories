@@ -84,8 +84,8 @@
   ],
   "does_not_show": [
     {
-      "en": "That gaining reach beyond the margin is worse: the comparison is mixed, and neither the continuation condition nor C orders a mixed comparison.",
-      "zh": "超出余量地扩大所及是更坏的：这一比较是混合的，延续条件与 C 都不为混合的比较定序。",
+      "en": "That gaining reach beyond the margin is worse: the comparison is mixed, and neither the continuation condition nor C settles a mixed comparison.",
+      "zh": "超出余量地扩大所及是更坏的：这一比较是混合的，延续条件与 C 都不裁定混合的比较。",
       "kind": "non-implication"
     },
     {
@@ -271,6 +271,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the fifth law said the own-region comparison 'registers' a change (a retired word); it now says what the Lean concludes: at some step the levels without the part do not admit within the own region what the levels with it admit there.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：第五条律原说只读自身区域的比较“记下”变化（已退休之词）；今说 Lean 所得：在某步，无该部分的水平在自身区域之内不接纳有它的水平在那里所接纳者。"
+    },
+    {
+      "en": "10 November 2026, AG review, seventh pass (completeness critic; on Ren's messages 9 to 12 of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the first does-not-show item says that C does not settle a mixed comparison, not that it does not order one, C being the requirement that an order rank each course above every course it widens, not an order; the crosswalk's paraphrases already say 'settles'. No law changed.",
+      "zh": "2026年11月10日，AG 审查第七轮（完整性核查；据 Ren 2026 年 11 月 9 日之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：所不表明之第一项改说 C 不裁定混合的比较，而不说它不为之定序；C 是要求一种次序把每一进程排在它所扩大者之上，不是一种次序；对照表之转述已说“裁定”（settles）。诸律不变。"
     }
   ]
 }

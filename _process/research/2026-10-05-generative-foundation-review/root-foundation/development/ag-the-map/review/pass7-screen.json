@@ -1,0 +1,96 @@
+{
+ "note": "AI-written, 9 November 2026, AG review seventh pass, agent screen: the first screen's ethics paragraph and how-far sentences in both languages, the review cover in both languages, navigation.py's Start-here tail, WHERE_TO_LOOK and the 'Under the continuation condition' section, research-config.json and README-LEAD, under H1-H10 from the sixth pass's two cold readings. Every clause checked against 07 as the ch07 agent left it (thesis, §4's lead and table, the paragraph after it, the self-concern theorem's closing paragraph, §3.3's derived-extent-limits, §4.9's lead, T8, What this chapter does not show, Open) and 08 §8 and §12. No make, render, gate, lake or build; single test files only (load 10-15, another session's make gate running); the full suite deliberately deferred.",
+ "changed": [
+  "_process/navigation/README-FIRST-SCREEN.md",
+  "_process/navigation/README-ZH.md",
+  "theories/becoming/review/README.md",
+  "theories/becoming/review/README.zh.md",
+  "tools/research/navigation.py",
+  "tools/research/tests/test_featured_results.py",
+  "tools/research/tests/test_chinese_fronts.py",
+  "tools/research/tests/test_navigation_pages.py",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass7-screen.json"
+ ],
+ "items": [
+  {
+   "item": "(1) The English ethics paragraph from the anchor, with its links",
+   "done": true,
+   "how": "Written from the coordinator's anchor and checked clause by clause against 07. Links: 'There is no should beyond becoming' -> README#truth-exists (kept); 'form within it' -> 07#evaluation; new 'going on is not yet an order over courses' -> 07#scope-and-order (07 §4's lead says it); 'every continuation can be affected...' -> 05#r-mutual-dependence-and-its-pace; 'nothing lies outside each one's reach along that relation' -> 07#r-the-continuation-condition-on-the-root (H7); 'ranks every widening above what it widens' -> 07#r-self-concern-and-c-under-the-condition; new 'Every way of adding up worth that counts each thing above zero' -> 07#r-widening-as-what-every-positive-weighting-ranks (H1, the plain-words form, the how-far clause carrying the theorem); new 'need not count those who depend on one' -> 07#r-derived-extent-limits (H4: 07's thesis cites §3.3 there; Clearing.center_not_derived is a witness); T8 -> 07#theses. Two departures from the anchor, both from the check: (a) 'ranks the wider course higher, so ranking by widening adds no premise beside the life's own concern' became 'ranks the wider course higher, and ranking by widening adds no premise beside the life's own concern: there, that concern already does it' — that every additive positive weighting ranks the wider higher is not why the ranking adds no premise; the self-concern theorem is (07 §4: 'Ranking by widening adds no premise beside the life's own concern: where the condition holds de se, that concern already does it, and on a finite listing widening is exactly what every additive weighting... ranks higher' — two facts joined by 'and'); (b) how-far 'the two compose directly' became 'the two results compose directly', since the clause before it is about courses without end. Everything else is the anchor word for word. H10: 'The ethics emerges from continuation' kept; after it the paragraph says what holds conditionally ('if a life holds...'), what is offered ('the one step we offer'), and the how-far clause what is proved and what is open."
+  },
+  {
+   "item": "(1) The English how-far sentences",
+   "done": true,
+   "how": "The anchor's sentences replace the sixth pass's ('without time', 'courses that end', 'not stated as one theorem', 'every positive weighting', 'argued, not shown'), with '(07 §4.9)' linked to 07#what-persisting-shows and 08 §12's link kept. Checked: mutual dependence read across all steps gives the condition as each center's reach along being affected (Flow.MutuallyDependent.unrestricted, near-definitional); under it self-concern ranks every widening on a finite listing (increasingInOwn_iff_increasing_of_unrestricted) and, one way, between two level paths whose admitted pairs fit in a finite list, so that their admissions end (Web.extension_ranked_of_increasingInOwn, Web.admits_nothing_from_of_listed; 'admission decided' left at screen depth, as the sixth verifier judged); the two compose directly (07's closing paragraph: unrestricted_of_mutuallyDependent then extension_ranked_of_increasingInOwn); widens_iff_every_positive with 'additive' and 'counts each listed thing above zero' (H1). That a life forms such an order: 'not shown... a filter on what was chosen, not an order formed (07 §4.9)' (H3), 'argued' removed. Also 08 §8's second find said with 08's own word, 'the scope and order the ranking results assume, clarified' (was 'made explicit'; F7)."
+  },
+  {
+   "item": "(1) The Chinese mirror, with the cold readers' fixes",
+   "done": true,
+   "how": "README-ZH's 伦理 paragraph and 看到了多远 re-written in natural Chinese following the glossary's terms. Fable 1: no sentence opens on 在那里 (在关系闭合之处 / 关系闭合时). Fable 2: 依存于它的那些 (H4's Chinese verbatim: 依存若只沿一个方向，对自身延续的关切未必把依存于它的那些也算进来). Fable 3: 同时提出的，是一种看法. Fable 6 and H8: 两条进程若能用一个有限列表列全它们所容纳的（步，形成）项，因而从某一步起都不再容纳任何东西. astra 1: self-concern defined once as an ordering property ('这里把一种排序性质称为*自我关切*：凡一个进程扩大另一个、多出的东西里有属于自身延续的，就把前者排在后者之上'), then why, where relations close, it ranks every widening ('一切都在自身所能到达的范围之内', the theorem's mechanism: the marking reading the closure marks everything); no more 作为…次序来持守. astra 2 and H1: plain '凡给每样东西一个大于零的权重、再把权重相加的计法' in the paragraph and H1's exact '凡给每个所列之物一个大于零的权重、再把权重相加的计法' in how-far. astra 3 and H7: '沿“受影响”这一关系，从每个中心都能到达一切'; '若把从一个立场看有意义的，读作该立场之中心所能到达的范围，延续条件…在这种读法下说的正是这个，根上称之为续无外'. astra 4: '把不同时刻的影响合在一起来读、不要求各环节按时间先后衔接时（跨越所有步来读）', 不计时间 gone. astra 6 and H3: '生命是否会形成这种次序，尚未表明：在证明中它是假设；模型中的持存只是对所择者的过滤，并不形成次序（07 §4.9）'. astra 7: H4's Chinese. astra 9: the theorem's direction '只证明了这一个方向，反过来未证'; 单向 not used for it (nor anywhere on the page now). H2: '而按扩大排序，也不在生命自身的关切之外另加前提，因为关系闭合时，这一关切本身已经这样排序' (not 它不是第二个前提; joined by 而, not 所以, as in the English). H9: '这两项结果可以直接组合，只是没有一条定理单独陈述这一组合'. astra 10's small repair for 08 §8: '把排序结果所预设的范围与次序说清楚'. The template comment gains a dated seventh-pass note saying this, and that the sentences are not yet re-read by two Chinese readers."
+  },
+  {
+   "item": "Screen comments and test pins",
+   "done": true,
+   "how": "README-FIRST-SCREEN's comment gains a dated seventh-pass sentence (what each clause now says and why, history kept, E10). test_featured_results.test_the_repository_first_screen_fills re-pinned to the new clauses, with assertNotIn for 'argued, not shown', 'continues with', 'without time', 'dated occurrences', 'worth something', 'second premise', 'does not reach', 'courses that end', 'not stated as one theorem', 'every positive weighting'. test_chinese_fronts.test_the_template_says_the_ethics_as_the_english_screen re-pinned likewise, with assertNotIn for 不计时间, 第二个前提, 有所值, 已论证, 达不到, 与之同提, 终会停止容纳, 尚未陈述为一条定理, 来持守, 在那里, 正的赋权, 别无他物."
+  },
+  {
+   "item": "(2) The review cover in both languages",
+   "done": true,
+   "how": "Philosophy row: 'whether, where relations close, read across all steps, an order holding one's own continuation ranks every widening above on a finite listing, as chapter 7 says' (zh: 在关系闭合之处（跨越所有步来读），随自身延续而递增的次序（自我关切），是否如第七章所说在一个有限列表上把每一个扩大都排在上面). Times recounted with measure_layers.py and navigation.reading_time at the end of this pass, while the dossiers and one-page agents were still editing: the dossiers now count, and their own 'How long' lines now say, philosophy 142 to 185 and alignment 174 to 226 minutes (the brief's 137-178 and 171-222 were the sixth pass's; the dossiers grew since), so the cover says 142 to 185 and 174 to 226 (zh 一百四十二到一百八十五, 一百七十四到二百二十六). Also as counted: the cover 10-14 minutes ('ten to fourteen', was ten to thirteen; zh 9-11 unchanged); the one page 27-36 ('twenty-seven to thirty-six', was twenty-five to thirty-two), the Chinese one page 30-39 (三十至三十九, was 二十七至三十六, matching ONE-PAGE.zh's own statement). Sciences (171-223 counted) stays inside its stated 165 to 225; Logic, Classical texts and Buddhist thought inside theirs. check_dossiers on both cover files: 0 problems."
+  },
+  {
+   "item": "(3) navigation.py Start-here tail and WHERE_TO_LOOK, with pins",
+   "done": true,
+   "how": "Start-here tail now 07's own sentence, 'takes' once: 'No law here evaluates, and the ethics emerges from continuation; each ranking result names the hypotheses its theorem takes: [the continuation condition, self-concern or `Comparison` (C)](07#scope-and-order), and any further premise it uses.' test_navigation_pages' start-here pin re-pinned, with assertNotIn 'as its theorem takes them'. WHERE_TO_LOOK (F5): 'The question `universal-practical-warrant` is set aside as a question the map does not need (07, Open): the ethics seeks no authority outside becoming and offers itself without one, argued on the thesis of one relational unfolding; whether a reason formed within becoming could hold for every mind is not claimed or settled, and the target kept is how scope and order form within the dynamics' (it already said 'does not need', not 'answered within the map'; now in 07 Open's words). No pin needed one."
+  },
+  {
+   "item": "navigation.py's other ethics string: 'Under the continuation condition'",
+   "done": true,
+   "how": "Re-said by H1, H2, H3, H5, H8 (the ch07 agent's proposal, with admission decided added, the sixth verifier's low item): 'The condition represents a scope within the account, a hypothesis where a theorem takes it'; C 'the requirement that an order rank each course above every course it widens'; the ranking 'on a finite listing and, one way, with admission decided, between two level paths whose admitted pairs fit in a finite list, so that their admissions end'; 'every additive weighting that counts each listed item above zero'; 'ranking by widening adds no premise beside the life's own concern, which there already does it; that a life forms such an order is not shown'. Not rendered while readme_conditional_results is empty; only its heading is pinned. OPEN_LEAD untouched (the ch07 agent's); open_lead_errors []; start_here_errors []."
+  },
+  {
+   "item": "(4) research-config.json and README-LEAD",
+   "done": true,
+   "how": "Read whole for the ethics: no sentence in the frame H1-H10 corrects. README-LEAD says nothing of the ethics. research-config's site descriptions (en, zh) and ways-in say no ethics clause; readme_featured_note's 'what anything that wants to go on must count, and where that stops' is the need-closure scope result (07 §3.3's 'runs one way... and ends with the want'), consistent with H4, and is not rendered while readme_featured_results is empty. Unchanged."
+  },
+  {
+   "item": "Checks run",
+   "done": true,
+   "how": "test_featured_results: 31 OK. test_chinese_fronts: 27 of 28; the red, test_the_chinese_opening_is_timed_without_its_notes, reads the generated README.zh.md (its opening time 22-28 stale against 20-26; regenerates at render; not from these edits). test_navigation_pages: 48 of 50; both reds are OnePageEthicsFromContinuation's pins of ONE-PAGE.md and THE-THEORY, the onepage agent's, mid-edit. test_site: 91 of 92 (1 skipped); the red, test_the_one_page_is_timed_alike_on_its_card_in_start_with_and_on_itself, reads the generated README.md (stale one-page time; render). zh_fronts.problems(): []. navigation.open_lead_errors(), nav_front_errors(), start_here_errors(): []. check_dossiers on the two cover files: 0 problems. Every relative link and anchor in my five Markdown files resolves (script). No make, render, gate, lake or build; the full suite deliberately deferred."
+  }
+ ],
+ "left": [
+  {
+   "item": "The anchor's 'so' on the other fronts",
+   "why": "The screen joins the weighting sentence and 'ranking by widening adds no premise beside the life's own concern' with 'and ... : there, that concern already does it', since the weighting characterization is not the reason the ranking adds no premise (the self-concern theorem is). ONE-PAGE.md, as the onepage agent has it now, says '..., so ranking by widening adds no premise beside the life's own concern'; the coordinator should carry the same fix to every front that took the anchor's 'so' (one page, uses, overview, both languages)."
+  },
+  {
+   "item": "'one way' twice in English",
+   "why": "The anchor uses 'one way' for the theorem's direction (how-far) and for relations running one way (the paragraph). The Chinese now separates them (astra 9: 只证明了这一个方向; 依存若只沿一个方向); the English could say 'in one direction only' for the theorem. Left as the anchor says it, for the coordinator to decide for every front at once."
+  },
+  {
+   "item": "zh_fronts edition records",
+   "why": "README-ZH.md and review/README.zh.md now follow their English; recording that writes the editions file, the coordinator's: python3 -B tools/research/zh_fronts.py --revised _process/navigation/README-ZH.md theories/becoming/review/README.zh.md, after the Chinese readers' round."
+  },
+  {
+   "item": "The Chinese screen's seventh-pass sentences",
+   "why": "Written by one AI session; not yet read by two Chinese readers (the template comment says so)."
+  },
+  {
+   "item": "Generated README.md and README.zh.md",
+   "why": "Regenerate at make research-render (not run here); the one red each in test_site and test_chinese_fronts reads them."
+  },
+  {
+   "item": "Cover times at landing",
+   "why": "Counted while the dossiers and one-page agents were still editing (PHILOSOPHY.md, ALIGNMENT.md and ONE-PAGE.md modified minutes before). The cover says what the pages count now (philosophy 142-185, alignment 174-226, the one page 27-36, its Chinese 30-39); ONE-PAGE.md's own line still says 'Twenty-seven to thirty-five'. Re-sync the cover's figures to the pages' final counts at landing."
+  },
+  {
+   "item": "Quotes of my changed strings elsewhere",
+   "why": "None found for the screen's changed clauses outside its own pins (git grep). spine.json line 377 quotes 07's Bases ('as its theorem takes them'), which 07 still says; not the Start-here tail. correspondences.json quotes of earlier screens (sixth-pass verifier's list) are the Crosswalk phase's."
+  }
+ ],
+ "for_ren": [
+  "The first screen's ethics paragraph and its how-far sentences, in English and Chinese (_process/navigation/README-FIRST-SCREEN.md, README-ZH.md), the anchor every front follows. What changed from the sixth pass: the condition said as reach ('nothing lies outside each one's reach'), relations closing 'read across all steps'; widening as what 'every way of adding up worth that counts each thing above zero' ranks higher, with the theorem's additive form in the how-far clause; 'ranking by widening adds no premise beside the life's own concern: there, that concern already does it' in place of 'it is no second premise'; one way, concern for one's own continuation 'need not count' those who depend on one; and 'That a life forms such an order is not shown' in place of 'argued, not shown', what the models show of persisting being a filter on what was chosen, not an order formed (07 §4.9).",
+  "One change to the coordinator's anchor: 'and', not 'so', between 'every way of adding up worth... ranks the wider course higher' and 'ranking by widening adds no premise beside the life's own concern', since the reason it adds no premise is the self-concern theorem, not the weighting characterization.",
+  "The Chinese ethics paragraph defines self-concern once as a property of an order and says why, where relations close, it ranks every widening (everything lies within one's own reach); the English leaves this inside 'if a life holds its own continuation as an order over courses'."
+ ]
+}

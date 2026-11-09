@@ -575,8 +575,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "That widening being what every positive weighting ranks higher is a law of the grammar (Weighting.widens_iff_every_positive): the grammar has no weights.",
-      "zh": "扩大即每一正权重皆排之更高者，为文法之律（Weighting.widens_iff_every_positive）：文法无权重。",
+      "en": "That widening being, on a finite listing, what every additive weighting positive on each listed item ranks higher is a law of the grammar (Weighting.widens_iff_every_positive): the grammar has no weights.",
+      "zh": "扩大在有限列举上即每一在每个所列项上为正之可加权重皆排之更高者，为文法之律（Weighting.widens_iff_every_positive）：文法无权重。",
       "kind": "non-implication"
     },
     {
@@ -1961,6 +1961,10 @@
     {
       "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
       "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
+    },
+    {
+      "en": "10 November 2026, AG review, seventh pass (on Ren's messages 9 to 12 of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, and the sixth pass's two cold readings): the tenth does-not-show line says widening is, on a finite listing, what every additive weighting positive on each listed item ranks higher. No law changed.",
+      "zh": "2026年11月10日，AG 审查第七轮（据 Ren 2026 年 11 月 9 日之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md，及第六轮两份冷读）：第十条「未表明」改言：扩大在有限列举上即每一在每个所列项上为正之可加权重皆排之更高者。诸律不变。"
     }
   ],
   "former_ids": [

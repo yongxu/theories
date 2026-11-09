@@ -95,8 +95,8 @@
       "kind": "scope"
     },
     {
-      "en": "That a wider course ranks above a narrower one (C, an order) or that a grown world is generative in D1's sense: the law says where growth widens, not that it should.",
-      "zh": "较宽之进程排在较窄者之上（C，一种次序），或长成的世界在 D1 意义上是生成的：规律说生长在何处扩大，不说它应当。",
+      "en": "That a wider course ranks above a narrower one (what C asks of an order) or that a grown world is generative in D1's sense: the law says where growth widens, not that it should.",
+      "zh": "较宽之进程排在较窄者之上（C 对次序之所求），或长成的世界在 D1 意义上是生成的：规律说生长在何处扩大，不说它应当。",
       "kind": "non-implication"
     },
     {
@@ -152,8 +152,8 @@
           "zh": "沿读法跨网的扩大，以及在长成的世界上的扩大。"
         },
         "conditions": {
-          "en": "Ranking by widening is C, an order; nothing here uses it.",
-          "zh": "按扩大排序是 C，一种次序；此处不用它。"
+          "en": "C, the requirement that an order rank each course above every course it widens, is not used here.",
+          "zh": "C，即要求次序把每一进程排在它所扩大的每一进程之上，此处不用。"
         },
         "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Growth.lean"
       }
@@ -310,6 +310,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the third law's English says the widening is not shown when read on the old formations alone, instead of the retired word 'register'. No law changed. The Chinese of law 3 no longer uses the registration rendering 计入; it says, as the English, that widening read on the old formations alone does not show it.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：第三条规律的英文改为：只在旧形成上读时，这一扩大显示不出来，不再用退役词“register”。规律未变。规律三的中文不再用登记义的“计入”，与英文同：只在旧形成上读扩大，显示不出它。"
+    },
+    {
+      "en": "10 November 2026, AG review, seventh pass (on Ren's messages 9 to 12 of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, and the sixth pass's two cold readings): C is said as what it asks of an order, a requirement, in place of 'C, an order'. No law changed.",
+      "zh": "2026年11月10日，AG 审查第七轮（据 Ren 2026 年 11 月 9 日之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md，及第六轮两份冷读）：C 改言为它对次序之所求，即一项要求，以代「C，一种次序」。诸律不变。"
     }
   ]
 }

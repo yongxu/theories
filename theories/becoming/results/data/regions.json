@@ -429,7 +429,7 @@
   "comparison-by-widening": {
    "region": "significance",
    "base": "old-base",
-   "note": "comparison C read as widening"
+   "note": "comparison by widening: on level paths extension is widening (C on frames)"
   },
   "comparison-content-under-regrouping": {
    "region": "significance",
@@ -1924,7 +1924,7 @@
   "self-concern-and-c-under-the-condition": {
    "region": "significance",
    "base": "grammar",
-   "note": "PremiseWitnesses DU: self-concern and being increasing in admission coincide exactly where the marking is total, «续无外» at reach and the condition held de se (near-definitional); one way to C between listed level paths (Web)"
+   "note": "PremiseWitnesses DU: self-concern and being increasing in admission coincide exactly where the marking is total, «续无外» at reach and the condition held de se (near-definitional); one way, what C asks between level paths whose admissions end (Web)"
   },
   "self-concern-through-dependence": {
    "region": "significance",
@@ -2679,7 +2679,7 @@
   "what-would-give-c": {
    "region": "significance",
    "base": "general",
-   "note": "RoutesToC: the routes to C's order on a listing, each with where it stops; gives no reason for C"
+   "note": "RoutesToC: the routes to an order meeting C on a listing, each with where it stops; gives no reason for C"
   },
   "standpoints-read-off-a-flow": {
    "region": "significance",
@@ -3111,7 +3111,7 @@
   "Becoming.Direction": {
    "region": "significance",
    "base": "old-base",
-   "note": "R44 direction on a web's moves; C as widening"
+   "note": "R44 direction on a web's moves; extension as widening on the moves"
   },
   "Becoming.Dispatch": {
    "region": "significance",
@@ -3991,7 +3991,7 @@
   "Becoming.Ranking": {
    "region": "significance",
    "base": "old-base",
-   "note": "what C ranks: sharing over consumption, restraint over overdraw"
+   "note": "what an order meeting C ranks: sharing over consumption, restraint over overdraw"
   },
   "Becoming.ReachableRanges": {
    "region": "significance",
@@ -4666,7 +4666,7 @@
   "Becoming.RoutesToC": {
    "region": "significance",
    "base": "general",
-   "note": "what would give C's order on a listing: what weaker can mean, choosers, standpoints, one item at a time, what lies downstream"
+   "note": "what would give an order meeting C on a listing: what weaker can mean, choosers, standpoints, one item at a time, what lies downstream"
   },
   "Becoming.FlowCenters": {
    "region": "significance",

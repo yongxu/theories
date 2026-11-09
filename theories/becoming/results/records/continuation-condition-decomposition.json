@@ -177,7 +177,7 @@
     "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261013T094743.528770Z; current Becoming.Metaethics bound to receipt 20261014T091930.724493Z): the theorems of Becoming.Boundaries have empty axiom reports; core purity verified. Author counterreview in the integration note; reviewed before integration by the sixteenth independent review (listed under sources), whose treatment is in the integration note; the text after that treatment has not been independently reviewed."
   },
   "next_delta": {
-    "zh": "预设在何处为自承所持，不变之一步在何处成立，以及各自怎样在动力学之中形成。",
+    "zh": "预设在何处以从己方式所持，不变之一步在何处成立，以及各自怎样在动力学之中形成。",
     "en": "Where the presupposition is held de se and where the step of invariance holds, and how each forms within the dynamics."
   },
   "correspondence": {
@@ -851,6 +851,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the retired label replaced by the current term: 'the axiom' in the dependency interfaces, related details and correspondence reads 'the continuation condition', and readings are labelled as AI readings instead of 'adopted on Ren's delegation', quoted words kept verbatim; and G0, S0, N_rel and N_std in the correspondence, the dependency details and interfaces and the related detail read living significance, self-significance and relational and standpoint neutrality, 'folded' reading 'restated as a condition'. No law changed.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：退役标签改为现行术语：依赖接口、相关说明与对应中的“公理”改为“延续条件”，读法标为 AI 的读法，不再写“依 Ren 的交托采用”，引语原样保留；对应、依赖说明与接口及相关说明中的 G0、S0、N_rel、N_std 改为生生之意义、自身意义、关系中立与立场中立，“折叠”改为“改述为条件”。规律未变。"
+    },
+    {
+      "en": "10 November 2026, AG review, seventh pass (on Ren's messages 9 to 12 of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, and the sixth pass's two cold readings): the Chinese of the next step renders de se as 从己, as the glossary does, in place of 自承. No law changed.",
+      "zh": "2026年11月10日，AG 审查第七轮（据 Ren 2026 年 11 月 9 日之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md，及第六轮两份冷读）：下一步之中文以「从己」译 de se，与术语表一致，以代「自承」。诸律不变。"
     }
   ],
   "text_versions": [

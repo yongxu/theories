@@ -53,6 +53,10 @@ REQUIRED = {'derived': ('law',), 'under a stated hypothesis': ('form', 'hypothes
 HYPOTHESIS_KEYS = ('hypothesis', 'countermodel', 'fit')
 PREMISE_KEYS = ('role', 'name', 'premise', 'not_entailed', 'absent', 'basis', 'review')
 PREMISE_ROLES = ('scope', 'order')
+# What each role says on a page: the hypotheses the ranking results take, each where a theorem takes it. The data keys
+# 'scope' and 'order' stay, since the generated shared-laws data and its checks carry them; neither names a premise the
+# ethics adds (9 November 2026: C is no longer introduced as a second foundation of the ethics).
+PREMISE_LABELS = {'scope': 'Whose losses count', 'order': 'How courses are ranked'}
 FULL = re.compile(r'(?:Becoming|Generative)\.\S+')  # a full Lean name: a module root of the package, then the rest
 
 # Lean's generated auxiliaries (§3.0; normative), each by the kinds of declaration (the dump's `k`) Lean generates it

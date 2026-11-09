@@ -10,8 +10,8 @@
   "family": "F01",
   "reviewed_at_utc": "2026-11-01T09:47:31+00:00",
   "statement": {
-    "en": "Stated on continuation relative to a class, the condition is that every occurrence lies within every center's continuing under the class; held de se along a relation, it is exactly the root's condition at the one of that relation taken as the net.",
-    "zh": "以相对于类之续而述，条件为：凡事皆在每一中心于此类下之续中；依一关系 de se 而持，恰即以该关系为网、于其一下之根之条件。"
+    "en": "Stated on continuation relative to a class, the condition is that every occurrence is reached on every center's line under the class; held de se along a relation, it is exactly the root's condition at the one of that relation taken as the net.",
+    "zh": "以相对于类之续而述，条件为：凡事皆为每一中心于此类下之线所及；依一关系 de se 而持，恰即以该关系为网、于其一下之根之条件。"
   },
   "laws": [
     {
@@ -45,8 +45,8 @@
       ]
     },
     {
-      "en": "Along a net with no cycle the condition holds only with one center: two centers each reached from the other would lie on a cycle, and nothing conditions that center.",
-      "zh": "无环之网中，此条件唯于一中心成立：二中心互相所及则成环，且无物为此中心之缘。",
+      "en": "Along a net with no cycle, where the condition holds, every standpoint has the same center: two centers each reached from the other would lie on a cycle, and nothing conditions that center.",
+      "zh": "无环之网中，此条件成立处，诸立场之中心皆同：二中心互相所及则成环，且无物为此中心之缘。",
       "declarations": [
         "Becoming.«续无外则中心无缘»",
         "Becoming.«续无外则同一中心»"
@@ -77,7 +77,7 @@
     },
     {
       "en": "That anyone must hold the condition; where it holds de se, self-concern ranks every extension between two level paths whose admissions fit in a finite list, one way (self-concern-and-c-under-the-condition).",
-      "zh": "任何人须持此条件；条件以自承成立处，自关切单向排定所接纳之项容于一有限列表的二层径间之每一扩展（self-concern-and-c-under-the-condition）。",
+      "zh": "任何人须持此条件；条件从己成立处，自关切单向排定所接纳之项容于一有限列表的二层径间之每一扩展（self-concern-and-c-under-the-condition）。",
       "kind": "non-implication"
     }
   ],
@@ -97,8 +97,8 @@
     "zh": "除于网之水平路径上、自闭包读下所述之三条（U3）外，本章以条件为前提之其他定理，经根之条件述为其例；多中心之族之条件；中心之自线在何类下，论证或建模。"
   },
   "correspondence": {
-    "en": "SW §3's structural reading (what counts for a center is what lies within its continuing along a relation) carried to the root; the source's \"for anything, its continuation into the future has significance\" read as \"everything lies on every center's continuing\".",
-    "zh": "SW §3 之结构之读（中心之所计，在其沿一关系之续中者）移于根上；来源之「凡物之续入未来皆有义」读为「凡中心之续无外」。"
+    "en": "SW §3's structural reading (what counts for a center is what lies within its reach along a relation) carried to the root; the source's \"for anything, its continuation into the future has significance\" read as \"every occurrence is reached on every center's line\": nothing lies outside each center's reach (续无外).",
+    "zh": "SW §3 之结构之读（中心之所计，在其沿一关系所及之内者）移于根上；来源之「凡物之续入未来皆有义」读为「凡事皆为每一中心之线所及」：无物在每一中心所及之外（续无外）。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
   "aliases": [
@@ -248,6 +248,10 @@
     {
       "en": "7 November 2026, board item LM1: a reader of LM found this said C orders alone, where a ranking of courses needs C or a premise in its place (07 §4.4); corrected. No law, premise or proof changed.",
       "zh": "2026年11月7日，工作板条目 LM1：LM 之读者指出此处谓唯 C 定序，而对进程的排序需要 C 或一个代替它的前提（07 §4.4）；已更正。诸律、前提与证明皆不变。"
+    },
+    {
+      "en": "10 November 2026, AG review, seventh pass (on Ren's messages 9 to 12 of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, and the sixth pass's two cold readings): the statement and correspondence say the condition as reach, every occurrence reached on every center's line, nothing outside each center's reach, and the structural reading as what lies within a center's reach along a relation, in place of 'lies within every center's continuing' and 'within its continuing'; the one-center law says that on a net with no cycle, where the condition holds, every standpoint has the same center; the Chinese renders de se as 从己. No declaration or proof changed.",
+      "zh": "2026年11月10日，AG 审查第七轮（据 Ren 2026 年 11 月 9 日之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md，及第六轮两份冷读）：陈述与对应以所及言条件：凡事皆为每一中心之线所及，无物在每一中心所及之外，结构之读言中心之所计在其沿一关系所及之内，以代「皆在每一中心之续中」与「在其沿一关系之续中」；一中心之律改言：无环之网中，此条件成立处，诸立场之中心皆同；中文以「从己」译 de se。声明与证明皆不变。"
     }
   ]
 }

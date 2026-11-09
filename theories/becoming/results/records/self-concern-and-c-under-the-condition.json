@@ -10,8 +10,8 @@
   "family": "F07",
   "reviewed_at_utc": "2026-11-01T00:07:51+00:00",
   "statement": {
-    "en": "Self-concern and being increasing in admission coincide from every standpoint exactly where each marking is total: where the condition holds, on the root or held de se. There it ranks, one way, every extension between two level paths whose admissions a finite list holds: courses that end.",
-    "zh": "自关切与于接纳上递增，于每立场恰在各标记皆全处相合，即条件成立处，于根上或于自承。彼处自关切单向地把二层径间之每一扩展皆排定，唯二径之所接纳容于一有限列表，即有终之进程。"
+    "en": "Self-concern and being increasing in admission coincide from every standpoint exactly where each marking is total: where the condition holds, on the root or held de se. There it ranks, one way, every extension between two level paths whose admissions a finite list holds, admissions that end.",
+    "zh": "自关切与于接纳上递增，于每立场恰在各标记皆全处相合，即条件成立处，于根上或于自承。彼处自关切单向地把二层径间之每一扩展皆排定，唯二径之所接纳容于一有限列表，即接纳有终之进程。"
   },
   "laws": [
     {
@@ -64,16 +64,16 @@
       "zh": "不加公理。有限之列表；二值之接纳；次序为进程上之关系，不设其完备或可传递；各立场之标记为所予，依各律所述读之（律只用读法之一半者，只此一半）。"
     },
     {
-      "en": "Self-concern (Weighting.IncreasingInOwn) and the condition, on the root («续无外») or held de se (Unrestricted of the own closure), are hypotheses, self-concern derived from no dynamics, selection or persistence, and the condition varying with the net, the class and the direction.",
-      "zh": "自关切（Weighting.IncreasingInOwn）与条件，于根上（«续无外»）或自承（自身闭包之 Unrestricted），皆为假设：自关切不由任何动力学、选择或持存推出，且条件随网、类与方向而变。"
+      "en": "Self-concern (Weighting.IncreasingInOwn) and the condition, on the root («续无外») or held de se (Unrestricted of the own closure), are hypotheses, self-concern derived from no dynamics, selection or persistence, and the condition varying with the net, the class and the direction; that a life forms such an order is not shown: persisting, in the models, filters what was chosen and forms no order.",
+      "zh": "自关切（Weighting.IncreasingInOwn）与条件，于根上（«续无外»）或自承（自身闭包之 Unrestricted），皆为假设：自关切不由任何动力学、选择或持存推出，且条件随网、类与方向而变；生命是否形成这种次序尚未表明：模型中的持存只过滤所择者，并不形成次序。"
     },
     {
       "en": "For the ranking on a web: admission decided by a supplied two-valued reading, what both level paths admit listed as (step, formation) items, every claim counted as living, each item marked by the marking of its formation.",
       "zh": "就网上之排序：接纳由所予之二值读法判定，二层径所接纳者列为（步，构成）之项，每一主张计为活，每项以其构成之标记标之。"
     },
     {
-      "en": "This result assumes self-concern and the continuation condition held de se, with admission decided and two level paths whose admitted pairs fit in a finite list, courses whose admissions end; it concludes, one way, the extension rankings C asks between those paths. For courses that go on forming without end it is not shown.",
-      "zh": "此结果以自关切与自承之延续条件为假设，接纳可判定，二层径所接纳之项容于一有限列表，即接纳有终之进程；它单向推出 C 在这两条层径之间所求的扩展排序。对无尽地形成下去的进程，未证。"
+      "en": "This result assumes self-concern and the continuation condition held de se, with admission decided and two level paths whose admitted pairs fit in a finite list, courses whose admissions end; it concludes, one way, the extension rankings C asks between those paths. For courses that go on forming without end it is not shown. Of the condition the proof uses only its instance at the life's own standpoint.",
+      "zh": "此结果以自关切与自承之延续条件为假设，接纳可判定，二层径所接纳之项容于一有限列表，即接纳有终之进程；它单向推出 C 在这两条层径之间所求的扩展排序。对无尽地形成下去的进程，未证。证明只用到条件在该生命自身立场上的实例。"
     }
   ],
   "does_not_show": [
@@ -178,8 +178,15 @@
     {
       "id": "widening-as-what-every-positive-weighting-ranks",
       "detail": {
-        "en": "Widening is what every positive weighting ranks higher; through it an order increasing in admission ranks every extension between two listed level paths, courses whose admissions end.",
-        "zh": "扩大即每一正权重所排高者；经之，于接纳上递增之次序把二所列层径（接纳有终之进程）间之每一扩展皆排定。"
+        "en": "On a finite listing, widening is what every additive weighting counting each listed item above zero ranks higher; through it an order increasing in admission ranks every extension between two listed level paths, courses whose admissions end.",
+        "zh": "在有限列表上，扩大即每一给每个所列之项大于零之权重的可加计法所排高者；经之，于接纳上递增之次序把二所列层径（接纳有终之进程）间之每一扩展皆排定。"
+      }
+    },
+    {
+      "id": "mutual-dependence-gives-the-condition-de-se",
+      "detail": {
+        "en": "Mutual dependence gives the condition held de se along being affected, and the ranking here takes that condition for any relation on the same web: the two compose directly, though no single theorem states the composite.",
+        "zh": "相互依赖给出沿被影响而自承之条件；此处之排序对同一网上任一关系取此条件为假设：二者直接合成，唯无单一定理陈述此合成。"
       }
     }
   ],
@@ -280,6 +287,10 @@
     {
       "en": "9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.",
       "zh": "2026年11月9日，工作板条目 WB：据 Ren 11 月 8–9 日之言重述伦理之框架：两个前提称为排序之果所用之两种读法，排序为排序者所持，不求外来之根据；主张、假设与 Lean 皆不变。"
+    },
+    {
+      "en": "9 November 2026, AG seventh pass (the sixth pass's two cold readings, on Ren's messages 9 to 12 of sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): \"courses that end\" re-said as admissions that end; a hypothesis now adds that a life forms such an order is not shown, persisting being in the models a filter on what was chosen, not an order formed; that the proof uses the condition only at the life's own standpoint; widening said as what every additive positive weighting ranks higher on a finite listing; a related link says how the ranking composes with mutual dependence. No change to the claim's mathematics or its Lean.",
+      "zh": "2026年11月9日，AG 第七轮（据第六轮两份冷读，就 Ren 于 sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md 之第 9 至 12 条）：陈述中「有终之进程」改称接纳有终；一条假设增言：生命是否形成这种次序尚未表明，模型中的持存只是对所择者的过滤，不形成次序；言证明只用到条件在该生命自身立场上之实例；扩大改言为有限列表上每一正之可加权重所排高者；增一相关链接，言此排序如何与相互依赖合成。主张之数学与其 Lean 不变。"
     }
   ]
 }
