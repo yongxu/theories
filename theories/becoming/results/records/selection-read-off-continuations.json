@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-11-09T12:00:00+00:00",
+  "reviewed_at_utc": "2026-11-09T13:34:10+00:00",
   "statement": {
     "en": "Over the whole run, a selection read off a pool's continuations or couplings selects alike two courses whose acts, laws agreeing on what couples into a coupling closure holding the pool, differ only beyond it; so do two significances whose acts agree there, whatever loss either makes beyond.",
     "zh": "遍及全程读自一池延续或耦合的选择，对两条进程选得相同，只要其举（在含该池之某组耦合闭包内耦合入者上一致的律）只在闭包外不同；故其举在此一致的两种意义被选得相同，无论二者在外造成何种失去。"
@@ -297,6 +297,11 @@
       "sha256": "cc9230e4efe09f94ceee055ad69082cbac677adbdb41c9983983839be800739a"
     },
     {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T133249.498674Z/verification.json",
+      "role": "receipt",
+      "sha256": "da8fca250b8e2a684bda8b5a8c3b4b703af1d4003d391a3672e480b2d50f2442"
+    },
+    {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zb-beyond-coupling/NOTE.md",
       "role": "integration",
       "sha256": "46809a27d83066ba9135892e589bc2d79b80b805fa8af6375cfe69f3ed662be0"
@@ -309,7 +314,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "1d11b08bc2f39b43c1c1f2fde93bd561faf383d4937d49557f1f8906c0371e46"
+      "sha256": "b3a7eec7b1d8a0a9e7299c09f54ff4cbae2697e29e7c05379b07925f94e3e941"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",
@@ -317,7 +322,15 @@
       "sha256": "fbcc4332efd9f6c3739111666ccd7e54476fa4a80f1020dfea6aa7428954c1dc"
     }
   ],
-  "proof_bindings": [],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T133249.498674Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.BeyondCoupling",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
   "history": [
     {
       "en": "9 November 2026, board item ZB, one of route (b)'s four pieces (with G1, G2 and G3), on Ren's words of that day kept in sources (2026-11-09-route-b-ethics-forms.md): added. The checker of the zero-axiom readings found that Flow.unselected_beyond_coupling compares levels with and without a withheld part and takes no significance, so the impossibility that no selection selects for what lies beyond the coupling needed a new statement; this is it, built on the pool form of the gap for one's own act, with significance as the act's index and the selection read off the continuation over the whole run. A first draft re-instantiated the reach blindness with the rest's response supplied; it was replaced before landing by this form, where the courses come from laws.",
