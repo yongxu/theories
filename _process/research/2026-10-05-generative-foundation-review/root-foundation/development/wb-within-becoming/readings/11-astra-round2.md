@@ -55,7 +55,7 @@ I would keep AGENTS’ purpose—prediction, shared understanding and coordinati
 
 This retains practical norms. If “no should” means no command issued from outside the world, these commitments survive. If it means no standards governing inquiry at all, the word-review cannot distinguish correction from pleasing alteration. Calling our standards formed explains their provenance; it does not render every result equally accurate.
 
-**C.** The fourth-round lexicon moves too quickly from diagnosing a use to prohibiting a word. Its opening explanation of “numbness” is already mistaken: a distinction between healthy and sick is not objectionable merely because it is a pair. The question is whether that distinction fits the phenomenon and carries an acknowledged valuation. AGENTS requires analytic distinctions to state their basis; it does not prohibit distinctions. [AGENTS, “Method”](../../../../../../../AGENTS.md#begin-with-one-relational-unfolding)
+**C.** The fourth-round lexicon moves too quickly from diagnosing a use to prohibiting a word. Its opening explanation of “numbness” is already mistaken: a distinction between healthy and sick is not objectionable merely because it is a pair. The question is whether that distinction fits the phenomenon and carries an acknowledged valuation. AGENTS requires analytic distinctions to state their basis; it does not prohibit distinctions. [AGENTS, “Method”](../../../../../../../_process/history/2026-11-09-instructions/AGENTS-before-the-map.md#begin-with-one-relational-unfolding)
 
 Here is my assessment of every proposed substitution in the fourth-round reply (`/private/tmp/claude-501/-Users-ren-theories/c48bde41-6664-4ba1-a486-1e00591a0cf6/scratchpad/alignment/coordinator-round4-reply.md`).
 

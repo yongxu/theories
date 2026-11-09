@@ -2,7 +2,7 @@
 <title id="lineage-title">How the account grew</title>
 <rect x="0.5" y="0.5" width="999" height="975" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
 <text x="24.0" y="38.0" font-size="22" font-weight="bold" text-anchor="start" fill="#1c1917">How the account grew</text>
-<text x="24.0" y="64.0" font-size="15" text-anchor="start" fill="#57534e">49 turning points from the first writings (2021) to the live account (9 November 2026) in six phases, each as</text>
+<text x="24.0" y="64.0" font-size="15" text-anchor="start" fill="#57534e">50 turning points from the first writings (2021) to the live account (9 November 2026) in six phases, each as</text>
 <text x="24.0" y="83.0" font-size="15" text-anchor="start" fill="#57534e">wide as its points need and not to time scale, each point marked by what states it; the major points titled</text>
 <text x="24.0" y="102.0" font-size="15" text-anchor="start" fill="#57534e">and numbered as in the table below.</text>
 <rect x="50.0" y="150" width="72.5" height="470" fill="#efece6"/>
@@ -49,7 +49,7 @@
 <text x="950.0" y="752.0" font-size="13" text-anchor="end" fill="#57534e">Grey bars: the records' history entries by week (largest week 1810).</text>
 <path d="M179.3,547.0 L210.2,547.0 L271.0,564.0 L291.7,547.0 L401.4,547.0 L673.5,530.0 L738.0,564.0" fill="none" stroke="#0072B2" stroke-width="1.8" stroke-dasharray="5 3"/>
 <path d="M66.6,547.0 L381.5,513.0 L385.1,530.0 L581.4,564.0 L710.4,530.0" fill="none" stroke="#E69F00" stroke-width="1.8" stroke-dasharray="5 3"/>
-<path d="M370.4,564.0 L383.7,547.0 L599.8,564.0 L682.7,564.0 L774.8,564.0 L792.8,547.0 L910.7,564.0 L950.0,564.0" fill="none" stroke="#CC79A7" stroke-width="1.8" stroke-dasharray="5 3"/>
+<path d="M370.4,564.0 L383.7,547.0 L599.8,564.0 L682.7,564.0 L774.8,564.0 L792.8,547.0 L910.7,564.0 L950.0,547.0" fill="none" stroke="#CC79A7" stroke-width="1.8" stroke-dasharray="5 3"/>
 <circle cx="51.5" cy="564.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
 <circle cx="66.6" cy="547.0" r="7" fill="#1c1917" stroke="#E69F00" stroke-width="2.4"/>
 <circle cx="119.9" cy="564.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
@@ -98,7 +98,8 @@
 <circle cx="891.1" cy="564.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
 <circle cx="910.7" cy="564.0" r="7" fill="#ffffff" stroke="#CC79A7" stroke-width="2.4"/>
 <circle cx="910.7" cy="547.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
-<circle cx="950.0" cy="564.0" r="7" fill="#a8a29e" stroke="#CC79A7" stroke-width="2.4"/>
+<circle cx="950.0" cy="547.0" r="7" fill="#a8a29e" stroke="#CC79A7" stroke-width="2.4"/>
+<circle cx="950.0" cy="564.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
 <line x1="51.5" y1="555.0" x2="51.5" y2="289.0" stroke="#57534e" stroke-width="1"/>
 <text x="45.5" y="284.0" font-size="14" text-anchor="start" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">1 · Metamunity: the city as a structure</text>
 <line x1="179.3" y1="538.0" x2="179.3" y2="311.0" stroke="#0072B2" stroke-width="1"/>
@@ -129,11 +130,11 @@
 <text x="857.8" y="284.0" font-size="14" text-anchor="end" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">45 · Tests frozen before any run</text>
 <line x1="891.1" y1="555.0" x2="891.1" y2="267.0" stroke="#57534e" stroke-width="1"/>
 <text x="897.1" y="262.0" font-size="14" text-anchor="end" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">46 · T2 narrowed</text>
-<line x1="950.0" y1="555.0" x2="950.0" y2="245.0" stroke="#CC79A7" stroke-width="1"/>
+<line x1="950.0" y1="538.0" x2="950.0" y2="245.0" stroke="#CC79A7" stroke-width="1"/>
 <text x="956.0" y="240.0" font-size="14" font-weight="bold" text-anchor="end" fill="#1c1917" stroke="#fcfcfb" stroke-width="3.5" paint-order="stroke">49 · Asserts no should; T8 its makers' offer</text>
 <text x="50.0" y="782.0" font-size="14" font-weight="bold" text-anchor="start" fill="#1c1917">Shape, what states it:</text>
 <circle cx="231.5" cy="777.0" r="7" fill="#e7e5e4" stroke="#1c1917" stroke-width="1.3"/>
-<text x="246.5" y="782.0" font-size="14" text-anchor="start" fill="#1c1917">public: all 49 so far (none yet labelled private and unpublished, or AI reconstruction)</text>
+<text x="246.5" y="782.0" font-size="14" text-anchor="start" fill="#1c1917">public: all 50 so far (none yet labelled private and unpublished, or AI reconstruction)</text>
 <text x="50.0" y="808.0" font-size="14" font-weight="bold" text-anchor="start" fill="#1c1917">Rings, the threads followed below:</text>
 <circle cx="314.4" cy="803.0" r="7" fill="#e7e5e4" stroke="#0072B2" stroke-width="2.4"/>
 <text x="329.4" y="808.0" font-size="14" text-anchor="start" fill="#1c1917">the selection mechanism</text>
@@ -145,7 +146,7 @@
 <circle cx="292.3" cy="829.0" r="7" fill="#1c1917" stroke="#1c1917" stroke-width="1.3"/>
 <text x="307.3" y="834.0" font-size="14" text-anchor="start" fill="#1c1917">a person's words (15)</text>
 <circle cx="490.9" cy="829.0" r="7" fill="#a8a29e" stroke="#1c1917" stroke-width="1.3"/>
-<text x="505.9" y="834.0" font-size="14" text-anchor="start" fill="#1c1917">AI-drafted from a person's words (14)</text>
+<text x="505.9" y="834.0" font-size="14" text-anchor="start" fill="#1c1917">AI-drafted from a person's words (15)</text>
 <circle cx="801.6" cy="829.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/>
 <text x="816.6" y="834.0" font-size="14" text-anchor="start" fill="#1c1917">AI-made (19)</text>
 <circle cx="292.3" cy="853.0" r="7" fill="#ffffff" stroke="#1c1917" stroke-width="1.3"/><circle cx="292.3" cy="853.0" r="2.2" fill="#1c1917"/>
