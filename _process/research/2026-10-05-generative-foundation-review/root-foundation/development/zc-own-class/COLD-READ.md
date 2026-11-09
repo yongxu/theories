@@ -75,3 +75,14 @@ Every finding was taken, in 07 §4.8, the module's docstring, the note and the r
 11. §4.8 now says that `«判则后类本类常闭»` states in Lean, with its premise, the regularity §4.7's table gives the widest self by argument. §4.7's own cell is left as it is, since that wording is AG's to revise.
 12. Record 2's statement now puts "with coupling by threshold only" before both the return and the loop clauses.
 13. "Some formation downstream of it lies on no line from it."
+
+## Second read, of the diff (the same reader)
+
+The reader found that all thirteen fixes landed as meant, and that the new lemma proves what the three places citing it say. It found no high or medium finding. It found six low ones:
+
+1. §4.7's table still says of the widest self's P2 that no Lean states it. §4.10 now says that `«判则后类本类常闭»` states it under another premise than the table's. The table cell is left alone, since it is AG's wording.
+2. The note's remark that the one meets both where it is decided now cites `«类闭则本类常闭»` and says that no declaration states it for the one.
+3. The note's summary of the first read now says that three of its findings were in the theorem text or the laws.
+4. The registration lines (the root module's list, both READMEs and the checker's scope) now carry the premise that it is decided of each alike occurrence whether it conditions something.
+5. Record 1's correspondence now names the identity's premise, an occurrence that conditions something other than itself.
+6. Record 1's first law now follows 07's split by direction.

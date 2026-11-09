@@ -4716,9 +4716,9 @@ tagged instance or application.
   (`Weighting.increasing_on_downstream_of_regularity`). A leaf; short laws, none new as mathematics.
 * `Becoming.OwnClass` (L2, through `Becoming.GrammarScope` and `Becoming.Centers`): a center's own class,
   what the net fixes of it (board item ZC, route (b)'s de se piece). At an occurrence that conditions
-  something, a class meets 07 §4.6's P2 and P4 exactly where its block is closed under the net
-  (`«本类常闭当且仅当类闭»`, the converse where it is decided of each alike occurrence whether it conditions
-  something), so the classes meeting both are closed under meets (`«本类常闭之交»`, `«本类常闭之遍交»`) and
+  something, a class meeting 07 §4.6's P2 and P4 has its block closed under the net, and the converse
+  holds where it is decided of each alike occurrence whether it conditions something
+  (`«本类常闭当且仅当类闭»`), so the classes meeting both are closed under meets (`«本类常闭之交»`, `«本类常闭之遍交»`) and
   not under joins (`JoinBreaks`); the least is the occurrence with everything downstream of it (`«后类»`,
   `«后类最细»`), and every one reaches what the one reaches (`«本类常闭则所及即一之所及»`), so with each
   center under such a class the per-center condition along the net is that at the one

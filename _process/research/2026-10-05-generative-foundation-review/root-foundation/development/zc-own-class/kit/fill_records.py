@@ -52,8 +52,8 @@ def B(name):
 
 
 G2_LAWS = [
-    ({"en": "At an occurrence that conditions something, a class meets P2 (constancy up to the net's end at its class) and P4 (holding its effects) exactly where its block is closed under the net: whatever anything alike to it conditions is alike to it. The converse direction asks that it be decided, of each alike occurrence, whether it conditions something.",
-      "zh": "在有所缘之事件处，一类满足 P2（于其类之至网之终有常）与 P4（持其所缘），恰当其块对网封闭：凡与之同类者所缘，皆与之同类。逆向须于每一同类者可判其是否有所缘。"},
+    ({"en": "At an occurrence that conditions something, a class meeting P2 (constancy up to the net's end at its class) and P4 (holding its effects) has its block closed under the net: whatever anything alike to it conditions is alike to it. Conversely, a closed block gives P4, and P2 wherever it is decided of each alike occurrence whether it conditions something.",
+      "zh": "在有所缘之事件处，满足 P2（于其类之至网之终有常）与 P4（持其所缘）之类，其块对网封闭：凡与之同类者所缘，皆与之同类。反之，块封闭则得 P4，于每一同类者可判其是否有所缘处并得 P2。"},
      ["«本类常闭则类闭»", "«类闭则本类常闭»", "«本类常闭当且仅当类闭»"]),
     ({"en": "At an occurrence that conditions something, the meet of two classes meeting P2 and P4 meets them, and so does the meet of any family of them with a member; the family is not closed under joins: two such classes can have a least common coarsening that holds an occurrence alike to the member and not its effect.",
       "zh": "在有所缘之事件处，满足 P2 与 P4 之二类之交亦满足之，其任一有成员之族之交亦然；此族对并不封闭：二此类之最小共同粗化可持一与员同类者而不持其所缘。"},
@@ -142,8 +142,8 @@ def main():
         "validation_scope": scope_g2,
         "next_delta": {"en": "The crux, now the whole of the de se question on the path: whether acting presupposes a class holding one's effects, put to philosophers; and, with centers read off a flow, the per-center condition restated on them.",
                        "zh": "关键，今即此路上 de se 问题之全部：行动是否预设一持己之所缘之类，交哲学家；并以由流读出之中心，重述各中心之条件。"},
-        "correspondence": {"en": "Read de se: where one's own class meets the path's two conditions, the net fixes the least such class, oneself with everything one's acts condition at any remove, the widest self of 07's table, and what every such class reaches, that same downstream; which of them is one's own it does not fix, and nothing the line reaches turns on it. So, granted the regularity, the de se question on the path has nothing left but whether one's class holds one's effects; the identity, a self of one moment, meets the regularity and not that. The reading is the AI's.",
-                           "zh": "以 de se 读之：己之类满足此路二条件处，网定其最细者，即己连同己之行为辗转所缘之一切，07 表中最宽之自，并定凡此类之所及，即同一下游；何者为己之类，网不定之，而线之所及不系于此。故许此理，此路上 de se 问题只余己之类是否持己之所缘；同一，一刹那之自，满足此理而不满足彼。读法为 AI 之。"},
+        "correspondence": {"en": "Read de se: where one's own class meets the path's two conditions, the net fixes the least such class, oneself with everything one's acts condition at any remove, the widest self of 07's table, and what every such class reaches, that same downstream; which of them is one's own it does not fix, and nothing the line reaches turns on it. So, granted the regularity, the de se question on the path has nothing left but whether one's class holds one's effects; at an occurrence that conditions something other than itself, the identity, a self of one moment, meets the regularity and not that. The reading is the AI's.",
+                           "zh": "以 de se 读之：己之类满足此路二条件处，网定其最细者，即己连同己之行为辗转所缘之一切，07 表中最宽之自，并定凡此类之所及，即同一下游；何者为己之类，网不定之，而线之所及不系于此。故许此理，此路上 de se 问题只余己之类是否持己之所缘；于有异于自身之所缘之事件处，同一，一刹那之自，满足此理而不满足彼。读法为 AI 之。"},
         "canonical_source": MODULE,
         "aliases": ["What the net fixes of one's own class", "网于己之类所定者", B("«后类»"), B("«后类最细»"), B("«本类常闭当且仅当类闭»"),
                     B("«本类常闭之交»"), B("«本类常闭则所及即一之所及»")],
