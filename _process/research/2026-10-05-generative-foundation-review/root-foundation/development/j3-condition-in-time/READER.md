@@ -26,3 +26,16 @@ The reader's answers to the brief's questions:
 - The hypotheses match the Lean, apart from finding 5.
 
 After the corrections the module has 50 theorems and 72 declarations, every axiom report empty (scratch build).
+
+## Round 2: the same reader on the corrections
+
+The reader read this file and the diff `8ae451185..40713ec88`. It checked the two new theorems against their uses and found **no high or medium finding**. Every round-1 item was answered: the reader checked each against the changed text, not only against this table. It found four low findings, all now taken:
+
+| # | Finding (summarized) | Done |
+|---|---|---|
+| 1 | The atlas entry's new sentence said "every formation's *later* continuation is reached". That is round 1's finding 8 again: `MutuallyDependentFrom` is `∃ u`. | "is reached then or later". |
+| 2 | 07's lead-in "Two restrictions … hold where:" is followed by three bullets, and the third is not a restriction. | "Two restrictions of it to what comes after a standpoint's step, and what they give:". |
+| 3 | NOTE §3 applied `rival_of_outside` to both forms. In the eventual form the step is chosen per standpoint and formation, so it is not a fixed region. | The region law is now cited for the first form only, and `Flow.not_unrestricted_inTime` for both. |
+| 4 | NOTE §3: "nothing reaches a step beside an occurrence" is general, with one witness. | "(by `«及则后»`; witnessed in `Recurring.oneCenter_counts`)". |
+
+Stopped here: the round had no high or medium finding. Nothing in the diff reads as a claim about actual systems or ethics.

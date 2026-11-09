@@ -255,13 +255,13 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/j3-condition-in-time/NOTE.md",
       "role": "integration",
-      "sha256": "c78d9d27c3e537b63d9384a80821ffe97a2d99be4463dbdaad978bb7d9df2805",
+      "sha256": "1cc7e2370d30c0680477cc7132da6f6f3ed0bb28f0fffa9a17c5bf4572a22c8c",
       "declarations": []
     },
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "07ba8cb977699d7cfdcd1c28eae9981468e7f1857800dc2d2681988966b993f3",
+      "sha256": "616adcd33f12f25ee3f1e8434e09f9ad0bbecf0f26d7378d6fe8140a7369ed60",
       "declarations": []
     }
   ],
