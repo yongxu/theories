@@ -1,0 +1,194 @@
+{
+  "schema_version": 2,
+  "id": "covering-by-the-returning-formations",
+  "title": {
+    "en": "Covering by the returning formations",
+    "zh": "由回返构成的覆盖"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F07",
+  "reviewed_at_utc": "2026-11-09T12:00:00+00:00",
+  "statement": {
+    "en": "On a finite flow every formation lies within the influence closure of one whose acts return, so the step across standpoints along being affected gives the condition with covering met; held de se with no step, it holds exactly where those formations lie in one loop.",
+    "zh": "在有限流上，每个构成都在某个所为回返者的影响闭包之内，故沿“受影响”的跨立场之步给出条件，覆盖已满足；从己持有而无此步，条件恰在这些构成同处一环处成立。"
+  },
+  "laws": [
+    {
+      "en": "With finitely many formations listed and reach decided, every formation lies within the influence closure of one whose acts return. So every significance making each such formation's presupposition sub-true at its influence closure and standpoint-invariant is the continuation condition: covering is met by the flow.",
+      "zh": "构成有限列出、所及可判定时，每个构成都在某个所为回返的构成之影响闭包内。所以凡使每个这样的构成之预设在其影响闭包处次真、且对立场不变的意义，都是延续条件：覆盖由流满足。",
+      "declarations": [
+        "Becoming.Flow.covered_by_returning",
+        "Becoming.Flow.unrestricted_of_returning_standpointInvariant"
+      ]
+    },
+    {
+      "en": "Held de se along being affected at the formations whose acts return, with no step, the condition holds exactly where they lie in one loop, which is exactly where, held de se along affecting, it is standpoint-invariant at them. One formation every other can affect at some remove, affecting nothing beyond itself, is enough.",
+      "zh": "沿“受影响”在所为回返的诸构成处从己持有、无须不变之步，条件恰在它们同处一环处成立，即恰在沿“影响”从己持有时于它们对立场不变处。有一个构成为其余每个构成间接可影响、而自身不影响其外者，即已足够。",
+      "declarations": [
+        "Becoming.Flow.returning_influence_unrestricted_iff",
+        "Becoming.Flow.returning_influence_unrestricted_iff_invariant"
+      ]
+    },
+    {
+      "en": "Covering from activity, read with every formation that takes part a standpoint, holds by reflexivity alone. Along feeding, by the formations whose acts return, it fails: in Clearing the clearer takes part and lies within no returning formation's feeding closure.",
+      "zh": "由活动而来的覆盖，若以每个参与的构成为立场，只凭自反即成立。沿“供养”、以所为回返的构成，则不成立：在 Clearing 中清除者参与，却不在任何回返构成的供养闭包内。",
+      "declarations": [
+        "Becoming.Flow.covering_of_acting",
+        "Becoming.Clearing.dweller_feeding_closed",
+        "Becoming.Clearing.clearer_beyond_returning_feeding"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Finitely many formations listed and reach decided; the relations read off one flow and one web, as in the feedback laws.",
+      "zh": "不加公理。构成有限列出，所及可判定；诸关系如反馈诸律从同一流与依存网读出。"
+    },
+    {
+      "en": "For the step: each returning formation's presupposition sub-true at its influence closure, and significance standpoint-invariant, both hypotheses.",
+      "zh": "就不变之步：每个回返构成之预设在其影响闭包处次真，意义对立场不变，二者皆为假设。"
+    },
+    {
+      "en": "The formations whose acts return read as the standpoints, each its own center: a reading.",
+      "zh": "所为回返的构成读作立场，各为其自身之中心：一种读法。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "The step itself: standpoint-invariance stays a hypothesis; only covering, which the step also needed, is met by the flow.",
+      "zh": "不变之步本身：对立场不变仍是假设；只有该步同样需要的覆盖由流满足。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Covering along feeding: by the returning formations it fails.",
+      "zh": "沿“供养”的覆盖：以回返构成则不成立。",
+      "kind": "scope",
+      "witness": "Becoming.Clearing.clearer_beyond_returning_feeding"
+    },
+    {
+      "en": "Covering on infinitely many formations, where a formation's reach may hold no returning formation.",
+      "zh": "构成无穷时的覆盖：那里一构成之所及可无回返者。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the returning formations of an actual flow lie in one loop: that is empirical.",
+      "zh": "实际之流的回返构成同处一环：此为经验问题。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean",
+      "detail": {
+        "en": "Clearing: the clearer takes part and lies within no returning formation's feeding closure, the only one being the dweller, to whose habitat nothing gives (Clearing.clearer_beyond_returning_feeding).",
+        "zh": "Clearing：清除者参与，却不在任何回返构成的供养闭包内；唯一的回返者是栖居者，无物给予其栖地（Clearing.clearer_beyond_returning_feeding）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "significance-related-not-asserted",
+    "no-ethical-premise",
+    "formal-not-empirical",
+    "names-provisional",
+    "no-definition-by-verdict",
+    "decidability"
+  ],
+  "validation_scope": {
+    "en": "Pure core, axiom reports empty; a leaf. Written by an AI; one AI reader of another model read the statements against this record and the home section, cold, for overclaim (READER in the study folder); no human audit. Every law is a short composition of the closure laws, the one substantive step being the existing law that a returning formation lies in every formation's reach on finitely many; none is new as mathematics.",
+    "zh": "纯核心，公理报告为空；叶模块。AI 所写；另一模型的一位 AI 读者对照此记录与归属节冷读诸陈述，查是否言过其实（见研究目录 READER）；无人类审计。每条规律都是闭包律的简短组合，唯一实质一步是已有之律：构成有限时每个构成所及之内有一个回返者；无一是新数学。"
+  },
+  "next_delta": {
+    "en": "Covering where formations are not finitely many, read with time: whether a run whose reach keeps growing has formations whose acts return, and what the step then reaches.",
+    "zh": "构成非有限时、以时间读的覆盖：所及不断增长的运行是否有所为回返的构成，以及此时不变之步达到什么。"
+  },
+  "correspondence": {
+    "en": "In a finite digraph every vertex reaches a terminal strongly connected component; here that is covering by the returning formations along being affected.",
+    "zh": "有限有向图中每个顶点都可达某个终端强连通分支；此处即沿“受影响”由回返构成的覆盖。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean",
+  "aliases": [
+    "covering by the returning formations",
+    "由回返构成的覆盖",
+    "Becoming.Flow.covered_by_returning",
+    "Becoming.Flow.returning_influence_unrestricted_iff"
+  ],
+  "dependencies": [
+    {
+      "id": "where-a-formations-acts-return",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Flow.exists_reachReturns and Flow.withinReach_iff_influence.",
+        "zh": "Flow.exists_reachReturns 与 Flow.withinReach_iff_influence。"
+      }
+    },
+    {
+      "id": "continuation-condition-decomposition",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "unrestricted_of_standpointInvariant, its covering met here by the returning formations.",
+        "zh": "unrestricted_of_standpointInvariant，其覆盖此处由回返构成满足。"
+      }
+    },
+    {
+      "id": "standpoints-read-off-a-flow",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Flow.Returning and ownClosure_standpointInvariant_atReturning_iff.",
+        "zh": "Flow.Returning 与 ownClosure_standpointInvariant_atReturning_iff。"
+      }
+    },
+    {
+      "id": "what-the-step-across-standpoints-reaches",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "ownClosure_unrestricted_iff.",
+        "zh": "ownClosure_unrestricted_iff。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "self-concern-through-dependence",
+      "detail": {
+        "en": "Where the centers lie within one another's closures, the de se readings are one; here along affecting at the returning formations, and along being affected it is the condition.",
+        "zh": "诸中心彼此在对方闭包内处，从己诸读法为一；此处在回返构成处沿“影响”，沿“受影响”即为条件。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.covered_by_returning",
+        "Becoming.Flow.unrestricted_of_returning_standpointInvariant",
+        "Becoming.Flow.returning_influence_unrestricted_iff",
+        "Becoming.Flow.returning_influence_unrestricted_iff_invariant",
+        "Becoming.Flow.covering_of_acting",
+        "Becoming.Clearing.dweller_feeding_closed",
+        "Becoming.Clearing.clearer_beyond_returning_feeding"
+      ],
+      "sha256": "2447adb43a6efbb71e6c7166c8d3a359cecffe7d4d86aea078b9ba0da2a8db55"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/za-g1-centers/NOTE.md",
+      "role": "integration",
+      "sha256": "b29c854ab0944694fa93ec38471f7c59aaee34f7d53da961ec4878cb378039d3",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "role": "statement",
+      "sha256": "c2e14289264a251fda111a57cbce00b986f10098700e49c7ce93ba1014f87789",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [],
+  "history": [
+    {
+      "en": "9 November 2026, board item ZA-G1 (route (b) of the zero-axiom target, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md): added. The relation and the standpoints of the own-closure reading read off a flow; one AI reader of another model read the statements cold for overclaim; study folder za-g1-centers.",
+      "zh": "2026年11月9日，看板项 ZA-G1（零公理目标的路线 (b)，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md）：新增。自身闭包读法的关系与立场从流读出；另一模型的一位 AI 读者冷读诸陈述，查是否言过其实；研究目录 za-g1-centers。"
+    }
+  ]
+}
