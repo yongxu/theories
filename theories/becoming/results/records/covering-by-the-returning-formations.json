@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-11-09T12:00:18+00:00",
+  "reviewed_at_utc": "2026-11-09T12:27:23+00:00",
   "statement": {
     "en": "On a finite flow every formation lies within the influence closure of one whose acts return, so the step across standpoints along being affected gives the condition with covering met; held de se with no step, it holds exactly where those formations lie in one loop.",
     "zh": "在有限流上，每个构成都在某个所为回返者的影响闭包之内，故沿“受影响”的跨立场之步给出条件，覆盖已满足；从己持有而无此步，条件恰在这些构成同处一环处成立。"
@@ -169,7 +169,7 @@
         "Becoming.Clearing.dweller_feeding_closed",
         "Becoming.Clearing.clearer_beyond_returning_feeding"
       ],
-      "sha256": "1a37e82126ff0e1ffa23a5535a04080786a5f22e4fd71ed09013390221c87bc3"
+      "sha256": "539ef9aa5e76911d455ad7ab620142a872e328c151e6d4ca829cdfa03e61e867"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T111610.530713Z/verification.json",
@@ -180,7 +180,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/za-g1-centers/READER.md",
       "role": "review",
-      "sha256": "9290eadd1caff761bad266d92d8bc512d6ecb5c5ecb986902652a1773395d2b1",
+      "sha256": "d9b5f1ffb2da57330a6ea4b1c5f5c2e982f66e89d7e47f082600204156cb5e6a",
       "declarations": []
     },
     {
@@ -192,7 +192,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "937a5385d5ebd64791948c9fe70fca565fe4d08a97cba2227b1d97faf3b0de53",
+      "sha256": "6bed5850e878154d6d481ab25d3bc7fd5ccbba7a501c95a61760d82dd40cfd0f",
       "declarations": []
     }
   ],
@@ -211,8 +211,8 @@
       "zh": "2026年11月9日，看板项 ZA-G1（零公理目标的路线 (b)，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md）：新增。自身闭包读法的关系与立场从流读出；另一模型的一位 AI 读者冷读诸陈述，查是否言过其实，再读其修正；研究目录 za-g1-centers。"
     },
     {
-      "en": "9 November 2026, after an AI reading of route (b)'s join (astra, read-only): a returning formation is said to exist on finitely many formations with reach decided only where there is a formation, and covering from activity to cover only the formations that exchange; the Lean's docstring, the home section and these records corrected. No law changed.",
-      "zh": "2026年11月9日，经对路线 (b) 之连接的一次 AI 阅读（astra，只读）后：所为回返之构成，于构成有限且所及可判定时，只在至少有一个构成处才说存在；由活动而来的覆盖只说覆盖有所交换的构成；Lean 文档串、归属节与此二记录随之更正。诸律不变。"
+      "en": "9 November 2026, after AI readings of route (b)'s join (astra, then the joining session's checkers, read-only): a returning formation said to exist only where there is a formation; covering from activity said to cover only the formations that exchange; mutual dependence said to include mutual drain, and the laws to say nothing of order in time. Docstring, home section and records corrected; no law changed.",
+      "zh": "2026年11月9日，经对路线 (b) 之连接的 AI 阅读（astra 及连接会话之核查者，只读）后：所为回返之构成只在至少有一个构成处才说存在；由活动而来的覆盖只说覆盖有所交换者；彼此依存含彼此汲取，诸律不言时间先后。文档串、归属节与记录随之更正；诸律不变。"
     }
   ]
 }

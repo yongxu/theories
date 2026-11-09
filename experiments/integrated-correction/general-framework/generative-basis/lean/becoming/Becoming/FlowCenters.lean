@@ -78,7 +78,10 @@ read two ways: every formation, as 03 reads them; or only the formations whose a
   and the de se condition along affecting fails (`Unexchanged.apart`).
 
 Premises: the relation and the standpoints are read off one flow and one web, as in
-`Becoming.Feedback` and `Becoming.Centers`. Which flow relation a center's own closure is drawn
+`Becoming.Feedback` and `Becoming.Centers`. The relations are read across all steps (a dependence
+at some step, an exchange at some step) and own closure ignores its step, so nothing here is about
+order in time. Exchanging counts taking as well as giving, so mutual dependence includes mutual
+drain (`Drawing`): it is not mutual benefit. Which flow relation a center's own closure is drawn
 along (affecting, being affected, feeding) is still a choice: the laws above differ by it. Which
 formations are the standpoints (every formation, or those whose acts return) is a reading, not
 something the flow fixes; the two agree along affecting and part along being affected. The class
@@ -159,11 +162,12 @@ variable {F C : Type} {L : Flow F C} {W : Web F C}
 /-- **Where every formation is some standpoint's center, held de se along feeding, the
 presupposition is the continuation condition exactly where the flow is mutually fed.** Along
 affecting and along being affected it is mutual dependence (`Flow.mutuallyDependent_iff_unrestricted`,
-route (b)'s G3 piece, not imported here); along feeding it is the stronger mutual feeding. -/
+route (b)'s G3 piece, not imported here); along feeding it is the stronger mutual feeding. The
+forward half is `Flow.MutuallyFed.unrestricted`. -/
 theorem mutuallyFed_iff_unrestricted {Pos : Type} {center : Pos → F}
     (onto : ∀ f, ∃ p, center p = f) :
     L.MutuallyFed W ↔ Unrestricted (selfAscribed (ownClosure (L.FedFrom W)) center) :=
-  ⟨fun fed => ownClosure_unrestricted_of_whole fun p g => fed (center p) g,
+  ⟨fun fed => fed.unrestricted center,
    fun unrestricted f g => match onto f with
      | ⟨p, at_⟩ => Eq.subst (motive := fun x => L.WithinFeeding W x g) at_
          (ownClosure_unrestricted_iff.mp unrestricted p g)⟩

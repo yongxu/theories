@@ -78,3 +78,13 @@ After the landing, the session that joins route (b)'s pieces had astra (an AI mo
 3. Covering from activity covers the formations that exchange with some condition (`∃ c, L.Exchanges g c`), not every formation. The docstring, 07, the second record's law and the note now say so.
 
 Its suggestion to place the generic `ReturnsAlong` below `Becoming.Centers`, and the mutual-dependence adapters below both route (b) modules, is for the joining (board rule 9).
+
+## The joining session's checkers (9 November 2026)
+
+The joining session's checkers, read-only, synthesized in its NEXT.md (local), raised three more points on G1 (AI-written summary):
+
+- Exchanging counts taking as well as giving (`Flow.Exchanges`), so mutual dependence includes mutual drain. 07 §4.8 and the first record now say so, with `Drawing` as the pair.
+- The iff is exact on the time-aggregated affecting relation and says nothing about order in time. 07 §4.8's list of what stays supplied, the docstring and the first record now say so.
+- `Flow.mutuallyFed_iff_unrestricted` re-proved main's `Flow.MutuallyFed.unrestricted` in its forward half. It now uses it.
+
+The moves under board rule 9 (G3's first part into this module, the onto lemma into Weightings) are the joining's.
