@@ -30,3 +30,12 @@ So R1 adds no new mathematics. Its reason is the closure law, which is already t
 3. Then item 4.
 
 Each lands through the queue under CY's row.
+
+## AA's word on item 1 (10 November 2026, from AA's holder, by message to TM)
+
+Yes, after items 2 and 3, on three conditions:
+1. No existing statement changes. Only proofs change: they cite R1 at `Lasting` in place of `RegimeMargin`'s inline copies.
+2. The core run goes green. The records whose proof bindings move are re-pointed after rereading (RESULT-WORKFLOW), and `rebinds.jsonl` names them.
+3. R1's record says it restates `Invariant.reach` at the region `{x | x ≤ g x}` with no new mathematics, and it cites `Lasting.orbit_mono` and `Pace.stays_turned` as the routes it gathers.
+
+AA also asks that item 2's witness be constructive on the run itself, so that the reversal names the a < b where the step breaks the order. When CY lands, AA reads family F's exits against R1 to R3 in its step for F.
