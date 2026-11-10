@@ -25,7 +25,11 @@ selection is read off the course. No ranking, no ethical premise and no axiom en
 * **The line read off the course.** From founders and a listing of the relata, a member's offspring
   across a step are the listed relata descending from it then (`Flow.lineOf`); the line is G3's
   `Descended` by construction (`Flow.lineOf_descended`). Where readings are inherited along descent
-  (`Flow.InheritsReading`), every member of every cohort carries the founders' reading (`Flow.lineOf_carries`).
+  (`Flow.InheritsReading`), every member of every cohort carries the founders' reading (`Flow.lineOf_carries`),
+  the case at the first cohort of a closure law on dated descent: what holds of every member at a step
+  holds of every member at every later step exactly where descent from that step keeps it
+  (`SelectionTerm.Generations.kept_iff`, `kept_of_descent`; placed here by route (b)'s K1, which reads
+  its lock through it, board rule 9).
   Read a reading as ending where the course its world generates overdraws a family from a short stock.
   Where every occasion picks the reading the line carries and the world is that reading's course, G3's
   premise `realized` is then the identity, ending being defined as that overdraw: nothing is derived about
@@ -248,6 +252,53 @@ theorem ExchangeLaw.feasible_of_follows (na : law.Nonanticipating) (balances : L
 
 end Generated
 
+/-! ## What is kept along descent -/
+
+namespace SelectionTerm.Generations
+
+variable {α : Type}
+
+/-- **Dated descent from step `T` on**: a member at a step `s ≥ T` to each of its kids at `s + 1`. -/
+def descentFrom (G : Generations α) (T : Nat) : «际» (Nat × α) :=
+  fun x y => T ≤ x.1 ∧ y.1 = x.1 + 1 ∧ x.2 ∈ G.family x.1 ∧ y.2 ∈ G.kids x.1 x.2
+
+/-- Every member of a later cohort is reached from a member of cohort `T` by descent from `T` on. -/
+theorem reached_from (G : Generations α) (T : Nat) :
+    ∀ n x, x ∈ G.family (T + n + 1) → ∃ y, y ∈ G.family T ∧ «及» (G.descentFrom T) (T, y) (T + n + 1, x)
+  | 0, _, member => match ListTests.mem_flatMap_iff.mp member with
+    | ⟨p, parent, kid⟩ => ⟨p, parent, .one ⟨Nat.le_refl T, rfl, parent, kid⟩⟩
+  | n + 1, _, member => match ListTests.mem_flatMap_iff.mp member with
+    | ⟨p, parent, kid⟩ => match reached_from G T n p parent with
+      | ⟨y, first, reach⟩ => ⟨y, first, «及之传递» reach
+          (.one ⟨Nat.le_trans (Nat.le_add_right T n) (Nat.le_succ (T + n)), rfl, parent, kid⟩)⟩
+
+/-- **What holds of every member of a cohort holds of every later one exactly where descent keeps it.**
+Where `Q` holds of every member at step `T`, it holds of every member at every later step exactly where
+it is closed under descent from `T` on: no member it holds of, at a step `≥ T`, has a kid it does not
+hold of. The grammar's closure law (`«闭之及»`, which `ReadingLoop.kept_iff_closed` also reads) on dated
+descent; Evolution's `goal_descends_iff` is its form along one lineage. -/
+theorem kept_iff {G : Generations α} {Q : α → Prop} {T : Nat} (fixed : ∀ x, x ∈ G.family T → Q x) :
+    (∀ n x, x ∈ G.family (T + n) → Q x) ↔ «闭» (G.descentFrom T) (fun y => Q y.2) :=
+  ⟨fun later a b _ step => match step, Nat.le.dest step.1 with
+    | ⟨_, _, parent, kid⟩, ⟨k, at_⟩ =>
+      have member : b.2 ∈ G.family (a.1 + 1) := ListTests.mem_flatMap_iff.mpr ⟨a.2, parent, kid⟩
+      later (k + 1) b.2 ((congrArg (fun s => b.2 ∈ G.family (s + 1)) at_).mpr member),
+   fun closed n x member => match n, member with
+    | 0, member => fixed x member
+    | n + 1, member => match reached_from G T n x member with
+      | ⟨y, first, reach⟩ => «闭之及» closed (fixed y first) reach⟩
+
+/-- **Kept from the first cohort**: where descent keeps `Q` at every step and `Q` holds of every founder,
+it holds of every member of every cohort (`kept_iff` at the first step). -/
+theorem kept_of_descent {G : Generations α} {Q : α → Prop}
+    (keeps : ∀ t p k, p ∈ G.family t → k ∈ G.kids t p → Q p → Q k) (founders : ∀ x, x ∈ G.first → Q x) :
+    ∀ t x, x ∈ G.family t → Q x :=
+  fun t x member => (kept_iff (T := 0) founders).mpr
+    (fun _ _ holds ⟨_, _, parent, kid⟩ => keeps _ _ _ parent kid holds) t x
+    ((congrArg (fun s => x ∈ G.family s) (Nat.zero_add t)).mpr member)
+
+end SelectionTerm.Generations
+
 /-! ## The line read off a flow -/
 
 namespace Flow
@@ -309,11 +360,9 @@ def InheritsReading (read : X → Sig) : Prop :=
 founder carries `sig`, every member of every cohort of the line read off the flow carries `sig`. -/
 theorem lineOf_carries {read : X → Sig} {sig : Sig} (inherits : L.InheritsReading W read)
     (founders : ∀ x, x ∈ first → read x = sig) :
-    ∀ t x, x ∈ (L.lineOf W members first).family t → read x = sig
-  | 0, x, member => founders x member
-  | t + 1, x, member => match ListTests.mem_flatMap_iff.mp member with
-    | ⟨p, parent, kid⟩ => (inherits t x p (mem_lineOf_kids.mp kid).2).trans
-        (lineOf_carries inherits founders t p parent)
+    ∀ t x, x ∈ (L.lineOf W members first).family t → read x = sig :=
+  SelectionTerm.Generations.kept_of_descent
+    (fun t p _ _ kid carried => (inherits t _ p (mem_lineOf_kids.mp kid).2).trans carried) founders
 
 end Flow
 
