@@ -349,7 +349,7 @@ Each claim is read by what the map asks: which dynamics it joins and which law i
 
 **Its own sense.** A proverb, with counts: 孔甲 disordered 夏 and it fell in four generations; 玄王 worked for 商 and it rose in fourteen; 帝甲 disordered it and it fell in seven; 后稷 worked for 周 and it rose in fifteen.
 
-**In the text** (guoyu-03-zhouyu-xia.json, 周語下, 靈王二十二年, 太子晉諫): 「諺曰：『從善如登，從惡如崩。』昔孔甲亂夏，四世而隕；玄王勤商，十有四世而興。」. The crosswalk's recollection of the counts (cx-cc-congshan-rudeng, locator unverified) is right: four and seven generations down, fourteen and fifteen up.
+**In the text** (guoyu-03-zhouyu-xia.json, 周語下, 靈王二十二年, 太子晉諫): 「諺曰：『從善如登，從惡如崩。』昔孔甲亂夏，四世而隕；玄王勤商，十有四世而興。」. The counts are as the crosswalk's cx-cc-congshan-rudeng now quotes them from this stored page: four and seven generations down, fourteen and fifteen up.
 
 - **agreement, sufficient** · [The draws before decide the level under one draw](../../../../../../../theories/becoming/results/records/the-draws-before.md) (recorded-checked): Under a draw above every giving the level falls to the inflow within a bounded number of steps; leaving the inflow needs a lower draw; and two histories ending at the same draw stay apart. The way down is bounded and the way back needs a different condition, which is the asymmetry. `DrawHistory.collapses` `DrawHistory.leaving_needs_a_lower_draw` `DrawHistory.histories_differ`
 
@@ -361,7 +361,7 @@ Each claim is read by what the map asks: which dynamics it joins and which law i
 
 **On the map.** law; corrected: map.
 
-**What the source adds.** A correction for the crosswalk: cx-cc-congshan-rudeng says that no law gives distinct thresholds for collapse and recovery. Since CY's hysteresis (the-draws-before, landed 10 November 2026) one does, at separated bounds; the entry's locator can now be given. Proposed to AA, which holds the crosswalk.
+**What the source adds.** A correction for the crosswalk, taken by AA (main 179d679ff, 11 November 2026): cx-cc-congshan-rudeng had said that no law gives distinct thresholds for collapse and recovery. Since CY's hysteresis (the-draws-before, landed 10 November 2026) one law gives separated bounds under one draw, and the entry now says so, quoting this stored page.
 
 <a id="zh-chu-sheng"></a>
 ## 若生子，罔不在厥初生，自貽哲命 · As with a child, all is in the first life
