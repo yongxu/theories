@@ -5939,7 +5939,48 @@
    "theories/becoming/chapters/02-MAP.md#capture",
    "theories/becoming/chapters/02-MAP.md#r-target-capture"
   ],
-  "standing_without_record": null
+  "standing_without_record": null,
+  "premises": [
+   {
+    "law": "Becoming.share_not_lower",
+    "takes": [
+     "capture-carriers",
+     "capture-others"
+    ]
+   },
+   {
+    "law": "Becoming.share_rises",
+    "takes": [
+     "capture-carriers",
+     "capture-others"
+    ]
+   },
+   {
+    "law": "Becoming.CaptureWorlds.share_rises_of_unsupported",
+    "takes": [
+     "k3-only-active-relata-give",
+     "k3-activity-needing-support",
+     "capture-descend",
+     "capture-unsupported",
+     "capture-carriers",
+     "card-requirements-as-thresholds"
+    ]
+   },
+   {
+    "law": "Becoming.Law.perturbation_reabsorbed",
+    "takes": [
+     "seekingruns-byrule"
+    ]
+   },
+   {
+    "law": "Becoming.Captured.state_perturbation_returns",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Captured.rule_perturbation_changes",
+    "takes": []
+   }
+  ]
  },
  {
   "id": "capture-through-the-rule",
@@ -5979,7 +6020,9 @@
   "forbids": null,
   "exits": [
    {
-    "to": null,
+    "to": {
+     "en": "from the locked configuration carriers two to one under hi (each carrier four offspring to each other's one), the rule reversed to lo and held one step before the threshold reading reads: the course is locked the other way from step 1, neither share nor rule rises at any later step, and the rule after the first reading step is below hi"
+    },
     "law": "Becoming.RuleCapture.Reversed.not_absorbed",
     "edge": {
      "en": "A perturbation reversing the rule's direction, held past the threshold, is not absorbed: from the step after it neither share nor rule rises, and the rule after the first reading step is below the one before (a witness, under a threshold reading)."
@@ -5988,7 +6031,11 @@
     "records": [
      "capture-through-the-rule"
     ],
-    "source": "theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule"
+    "source": "theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule",
+    "drops": [
+     "rulecapture-uniform",
+     "rulecapture-keeps"
+    ]
    }
   ],
   "transitions": [
@@ -6003,7 +6050,15 @@
     ],
     "records": [
      "capture-through-the-rule"
-    ]
+    ],
+    "between": {
+     "from": {
+      "en": "a course from any start, share and rule perturbed or the rule against the reading included, under a reading favouring at every share: not necessarily locked at the step after its first reading step"
+     },
+     "to": {
+      "en": "locked from the step after its second reading step"
+     }
+    }
    }
   ],
   "tests": [],
@@ -6030,7 +6085,57 @@
    "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions"
   ],
-  "standing_without_record": null
+  "standing_without_record": null,
+  "premises": [
+   {
+    "law": "Becoming.RuleCapture.favouring_locks",
+    "takes": [
+     "rulecapture-raises",
+     "rulecapture-readsshare",
+     "rulecapture-uniform",
+     "rulecapture-start-favours"
+    ]
+   },
+   {
+    "law": "Becoming.RuleCapture.locked_stays",
+    "takes": [
+     "rulecapture-raises",
+     "rulecapture-readsshare",
+     "rulecapture-upper",
+     "rulecapture-locked"
+    ]
+   },
+   {
+    "law": "Becoming.RuleCapture.perturbation_absorbed",
+    "takes": [
+     "rulecapture-raises",
+     "rulecapture-readsshare",
+     "rulecapture-upper",
+     "rulecapture-locked",
+     "rulecapture-keeps"
+    ]
+   },
+   {
+    "law": "Becoming.RuleCapture.uniform_locks",
+    "takes": [
+     "rulecapture-raises",
+     "rulecapture-readsshare",
+     "rulecapture-uniform"
+    ]
+   },
+   {
+    "law": "Becoming.RuleCapture.Reversed.not_absorbed",
+    "takes": []
+   },
+   {
+    "law": "Becoming.RuleCapture.pair_locks",
+    "takes": [
+     "rulecapture-raises",
+     "rulecapture-readsshare",
+     "rulecapture-uniform"
+    ]
+   }
+  ]
  },
  {
   "id": "closed-capture",
@@ -6075,7 +6180,9 @@
   },
   "exits": [
    {
-    "to": null,
+    "to": {
+     "en": "at the step after every reading step r with N ≤ b + r, the rule in force does not favour, so the course is not locked there, whatever the share"
+    },
     "law": "Becoming.ClosedCapture.turned_by_loss",
     "edge": {
      "en": "Read what lies beyond the share: a reading favouring at no loss above a bound unlocks the course after every reading step past it; where the reading too is formed monotonically from the share, a change of it of any size is absorbed."
@@ -6084,10 +6191,15 @@
     "records": [
      "closed-capture"
     ],
-    "source": "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions"
+    "source": "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+    "drops": [
+     "closedcapture-unread"
+    ]
    },
    {
-    "to": null,
+    "to": {
+     "en": "along the joined two-level step, from a start whose rule favours, the line under the class of favouring or not is not unending: past the reading step the rule no longer favours"
+    },
     "law": "Becoming.ClosedCapture.loss_ends_line",
     "edge": {
      "en": "Read in the grammar: along a two-level step whose reading favours at no loss past a bound, with a reading step past the bound, the line under favouring or not from a favouring start is not unending."
@@ -6096,7 +6208,10 @@
     "records": [
      "rules-that-change-themselves-in-the-grammar"
     ],
-    "source": "theories/becoming/chapters/02-MAP.md#r-rules-that-change-themselves-in-the-grammar"
+    "source": "theories/becoming/chapters/02-MAP.md#r-rules-that-change-themselves-in-the-grammar",
+    "drops": [
+     "closedcapture-unread"
+    ]
    }
   ],
   "transitions": [
@@ -6110,7 +6225,15 @@
     ],
     "records": [
      "closed-capture"
-    ]
+    ],
+    "between": {
+     "from": {
+      "en": "a course from any start, whatever rule and reading, the rule read favouring at every reading and every share"
+     },
+     "to": {
+      "en": "locked from the step after its second reading step"
+     }
+    }
    }
   ],
   "tests": [
@@ -6157,7 +6280,85 @@
    "theories/becoming/chapters/02-MAP.md#t7",
    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions"
   ],
-  "standing_without_record": null
+  "standing_without_record": null,
+  "premises": [
+   {
+    "law": "Becoming.ClosedCapture.courses_alike_iff_unread",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ClosedCapture.lock_outlives_loss",
+    "takes": [
+     "rulecapture-raises",
+     "rulecapture-readsshare",
+     "rulecapture-upper",
+     "closedcapture-accrues",
+     "rulecapture-locked",
+     "closedcapture-unread",
+     "card-natural-number-amounts"
+    ]
+   },
+   {
+    "law": "Becoming.ClosedCapture.turned_by_loss",
+    "takes": [
+     "closedcapture-accrues",
+     "closedcapture-turns",
+     "card-natural-number-amounts"
+    ]
+   },
+   {
+    "law": "Becoming.ClosedCapture.both_reads",
+    "takes": [
+     "closedcapture-readmono",
+     "closedcapture-readsshare"
+    ]
+   },
+   {
+    "law": "Becoming.ClosedCapture.reading_absorbed",
+    "takes": [
+     "rulecapture-raises",
+     "rulecapture-upper",
+     "closedcapture-readmono",
+     "closedcapture-readsshare",
+     "rulecapture-locked",
+     "rulecapture-keeps"
+    ]
+   },
+   {
+    "law": "Becoming.ClosedCapture.readers_uniform_locks",
+    "takes": [
+     "rulecapture-raises",
+     "closedcapture-readmono",
+     "closedcapture-readsshare",
+     "closedcapture-uniform"
+    ]
+   },
+   {
+    "law": "Becoming.ClosedCapture.constant_iff_unread",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ClosedCapture.lock_line",
+    "takes": [
+     "rulecapture-raises",
+     "rulecapture-readsshare",
+     "rulecapture-upper",
+     "closedcapture-accrues",
+     "rulecapture-locked",
+     "closedcapture-unread",
+     "card-natural-number-amounts"
+    ]
+   },
+   {
+    "law": "Becoming.ClosedCapture.loss_ends_line",
+    "takes": [
+     "closedcapture-accrues",
+     "closedcapture-turns",
+     "card-natural-number-amounts",
+     "rulecapture-start-favours"
+    ]
+   }
+  ]
  },
  {
   "id": "readers-drawn-from-the-selected",
@@ -6197,7 +6398,9 @@
   },
   "exits": [
    {
-    "to": null,
+    "to": {
+     "en": "where the carriers are fewer than the others at the reading step at which the loss has reached its bound, the rule in force favouring the carriers, the course is not locked for good under the late pool from the next step on"
+    },
     "law": "Becoming.ClosedCapture.Thinned.kept_iff",
     "edge": {
      "en": "The loss read by the others: with their late reading the mirror of the carriers', and the rule in force favouring the carriers, the lock is kept for good exactly where the carriers are at least as many as the others when the loss is read; read from the start, the same readers reading the same loss lock the course the other way (witness)."
@@ -6206,7 +6409,11 @@
     "records": [
      "readers-drawn-from-the-selected"
     ],
-    "source": "theories/becoming/chapters/02-MAP.md#r-readers-drawn-from-the-selected"
+    "source": "theories/becoming/chapters/02-MAP.md#r-readers-drawn-from-the-selected",
+    "drops": [
+     "closedcapture-drawn-fv",
+     "closedcapture-unread"
+    ]
    }
   ],
   "transitions": [
@@ -6221,7 +6428,15 @@
     ],
     "records": [
      "readers-drawn-from-the-selected"
-    ]
+    ],
+    "between": {
+     "from": {
+      "en": "the pool favours the carriers: they are at least as many as the others"
+     },
+     "to": {
+      "en": "the pool favours the others: they are at least as many as the carriers"
+     }
+    }
    },
    {
     "kind": "window or deadline",
@@ -6234,7 +6449,15 @@
     ],
     "records": [
      "readers-drawn-from-the-selected"
-    ]
+    ],
+    "between": {
+     "from": {
+      "en": "at the reading step at which the loss has reached its bound, the rule in force favouring the carriers and the carriers at least as many as the others: locked for good under the late pool"
+     },
+     "to": {
+      "en": "there the rule in force favouring the others and the others at least as many as the carriers: locked the other way for good"
+     }
+    }
    }
   ],
   "tests": [
@@ -6266,7 +6489,100 @@
    "theories/becoming/chapters/02-MAP.md#r-readers-drawn-from-the-selected",
    "theories/becoming/chapters/02-MAP.md#t7"
   ],
-  "standing_without_record": null
+  "standing_without_record": null,
+  "premises": [
+   {
+    "law": "Becoming.ClosedCapture.Drawn.pool_reads_iff",
+    "takes": [
+     "closedcapture-drawn-pool"
+    ]
+   },
+   {
+    "law": "Becoming.ClosedCapture.Drawn.pool_against",
+    "takes": [
+     "closedcapture-drawn-pool",
+     "closedcapture-drawn-readers-against"
+    ]
+   },
+   {
+    "law": "Becoming.ClosedCapture.Drawn.pool_through",
+    "takes": [
+     "closedcapture-drawn-pool",
+     "closedcapture-drawn-readers",
+     "closedcapture-drawn-formed"
+    ]
+   },
+   {
+    "law": "Becoming.ClosedCapture.Drawn.through_locks",
+    "takes": [
+     "closedcapture-drawn-pool",
+     "closedcapture-drawn-readers",
+     "closedcapture-drawn-formed",
+     "closedcapture-drawn-fu",
+     "closedcapture-drawn-fv",
+     "rulecapture-carriercounts-select"
+    ]
+   },
+   {
+    "law": "Becoming.ClosedCapture.Drawn.mirror_favours_iff",
+    "takes": [
+     "closedcapture-drawn-pool",
+     "closedcapture-drawn-mirror",
+     "closedcapture-drawn-strict"
+    ]
+   },
+   {
+    "law": "Becoming.ClosedCapture.Drawn.mirror_disfavours_iff",
+    "takes": [
+     "closedcapture-drawn-pool",
+     "closedcapture-drawn-mirror",
+     "closedcapture-drawn-strict"
+    ]
+   },
+   {
+    "law": "Becoming.ClosedCapture.agreeing_stays",
+    "takes": [
+     "rulecapture-raises",
+     "rulecapture-readsshare",
+     "rulecapture-upper"
+    ]
+   },
+   {
+    "law": "Becoming.ClosedCapture.Thinned.read_late_kept",
+    "takes": [
+     "closedcapture-thinned-losspool",
+     "closedcapture-drawn-pool",
+     "rulecapture-carriercounts-select",
+     "closedcapture-accrues",
+     "closedcapture-thinned-readers",
+     "card-natural-number-amounts"
+    ]
+   },
+   {
+    "law": "Becoming.ClosedCapture.Thinned.kept_iff",
+    "takes": [
+     "closedcapture-thinned-losspool",
+     "closedcapture-drawn-pool",
+     "rulecapture-carriercounts-select",
+     "closedcapture-accrues",
+     "closedcapture-drawn-mirror",
+     "closedcapture-drawn-strict",
+     "card-natural-number-amounts"
+    ]
+   },
+   {
+    "law": "Becoming.ClosedCapture.Thinned.turned_iff",
+    "takes": [
+     "closedcapture-thinned-losspool",
+     "closedcapture-drawn-pool",
+     "rulecapture-carriercounts-select",
+     "closedcapture-accrues",
+     "closedcapture-drawn-mirror",
+     "closedcapture-drawn-strict",
+     "card-natural-number-amounts"
+    ]
+   }
+  ]
  },
  {
   "id": "shaping-the-rule-selected-by-what-comes-back",
@@ -6311,7 +6627,9 @@
   "forbids": null,
   "exits": [
    {
-    "to": null,
+    "to": {
+     "en": "the shapers' share falls strictly at every step of the run, nothing coming back to them alone, the cost positive and shapers present at the start"
+    },
     "law": "Becoming.RuleShaping.nothing_back_falls",
     "edge": {
      "en": "Shaping that brings nothing back to the shapers alone: with a positive cost and the shapers present, their share falls at every step; where something does come back, the shared part can turn a stretch, and cheaper shaping raises the selection for control."
@@ -6320,7 +6638,10 @@
     "records": [
      "shaping-the-rule-selected-by-what-comes-back"
     ],
-    "source": "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions"
+    "source": "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+    "drops": [
+     "ruleshaping-covers"
+    ]
    }
   ],
   "transitions": [
@@ -6336,7 +6657,15 @@
     ],
     "records": [
      "shaping-the-rule-selected-by-what-comes-back"
-    ]
+    ],
+    "between": {
+     "from": {
+      "en": "c ≤ s: the rule after shaping favours the shapers, weakly"
+     },
+     "to": {
+      "en": "s ≤ c: it favours the others, weakly"
+     }
+    }
    },
    {
     "kind": "tipping in a parameter",
@@ -6349,7 +6678,15 @@
     ],
     "records": [
      "shaping-the-rule-selected-by-what-comes-back"
-    ]
+    ],
+    "between": {
+     "from": {
+      "en": "(a + c + p)^m (a + c + p)^n ≤ (a + p)^m (a + s + p)^n: the shapers' share does not fall across the stretch, and rises strictly where the inequality is strict"
+     },
+     "to": {
+      "en": "the reverse strict inequality: the share falls across the stretch"
+     }
+    }
    },
    {
     "kind": "critical mass",
@@ -6363,7 +6700,15 @@
     ],
     "records": [
      "shaping-the-rule-selected-by-what-comes-back"
-    ]
+    ],
+    "between": {
+     "from": {
+      "en": "the shapers fewer than the others, lo < c, from a start under the rule read there (what comes back lo), shapers present: their share falls strictly at every step"
+     },
+     "to": {
+      "en": "the shapers at least as many as the others, c < hi, from a start under the rule read there (what comes back hi), shapers present: their share rises strictly at every step"
+     }
+    }
    },
    {
     "kind": "tipping in a parameter",
@@ -6375,7 +6720,15 @@
     ],
     "records": [
      "shaping-selected-among-groups"
-    ]
+    ],
+    "between": {
+     "from": {
+      "en": "c times the spread of shaping at least s times it with m q times the spread among groups: the whole does not select for shaping"
+     },
+     "to": {
+      "en": "c times the spread falls short: the whole selects for shaping (read over the rationals, c < s + m q ρ)"
+     }
+    }
    },
    {
     "kind": "tipping in a parameter",
@@ -6387,7 +6740,15 @@
     ],
     "records": [
      "shaping-selected-among-groups"
-    ]
+    ],
+    "between": {
+     "from": {
+      "en": "in groups of any sizes, c times the variance of shaping at least s times it with q times the covariance of a member's group's shapers with its group's share of them: the whole does not select for shaping"
+     },
+     "to": {
+      "en": "it falls short: the whole selects for shaping"
+     }
+    }
    }
   ],
   "tests": [
@@ -6423,7 +6784,104 @@
    "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions"
   ],
-  "standing_without_record": null
+  "standing_without_record": null,
+  "premises": [
+   {
+    "law": "Becoming.RuleShaping.favours_iff",
+    "takes": [
+     "ruleshaping-shaped"
+    ]
+   },
+   {
+    "law": "Becoming.RuleShaping.favours_alike",
+    "takes": [
+     "ruleshaping-shaped"
+    ]
+   },
+   {
+    "law": "Becoming.RuleShaping.lower_c_raises",
+    "takes": [
+     "ruleshaping-shaped"
+    ]
+   },
+   {
+    "law": "Becoming.RuleShaping.nothing_back_falls",
+    "takes": [
+     "ruleshaping-shaped",
+     "rulecapture-carriercounts-select"
+    ]
+   },
+   {
+    "law": "Becoming.RuleShaping.stretch_iff",
+    "takes": [
+     "ruleshaping-shaped",
+     "rulecapture-carriercounts-select"
+    ]
+   },
+   {
+    "law": "Becoming.RuleShaping.byBack_reads_iff",
+    "takes": [
+     "ruleshaping-byback",
+     "ruleshaping-shaped"
+    ]
+   },
+   {
+    "law": "Becoming.RuleShaping.covering_locks",
+    "takes": [
+     "ruleshaping-byback",
+     "ruleshaping-shaped",
+     "rulecapture-carriercounts-select",
+     "ruleshaping-mono",
+     "ruleshaping-covers"
+    ]
+   },
+   {
+    "law": "Becoming.RuleShaping.threshold_rises",
+    "takes": [
+     "ruleshaping-byback",
+     "ruleshaping-thresholdback",
+     "ruleshaping-shaped",
+     "rulecapture-carriercounts-select",
+     "ruleshaping-step"
+    ]
+   },
+   {
+    "law": "Becoming.RuleShaping.threshold_falls",
+    "takes": [
+     "ruleshaping-byback",
+     "ruleshaping-thresholdback",
+     "ruleshaping-shaped",
+     "rulecapture-carriercounts-select",
+     "ruleshaping-step"
+    ]
+   },
+   {
+    "law": "Becoming.RuleShaping.grouped_rises_iff",
+    "takes": [
+     "ruleshaping-grouped",
+     "ruleshaping-equal",
+     "ruleshaping-shaped"
+    ]
+   },
+   {
+    "law": "Becoming.RuleShaping.grouped_rises_iff_sized",
+    "takes": [
+     "ruleshaping-grouped",
+     "ruleshaping-shaped",
+     "ruleshaping-common"
+    ]
+   },
+   {
+    "law": "Becoming.RuleShaping.grouped_alike_iff",
+    "takes": [
+     "ruleshaping-grouped",
+     "ruleshaping-equal",
+     "ruleshaping-alike",
+     "ruleshaping-shaped",
+     "ruleshaping-varies"
+    ]
+   }
+  ]
  },
  {
   "id": "shaping-read-by-readers-drawn-from-the-selected",
@@ -6472,7 +6930,9 @@
   },
   "exits": [
    {
-    "to": "loss-read-in-time-by-the-others",
+    "to": {
+     "en": "from a start the rule read there favours, the others reading the loss from step N, steps N and N + 1 reading: locked the other way under the late reading at every step from N + 2, exactly where the late reading favours the others (ties included) at the share of step N + 1"
+    },
     "law": "Becoming.ReadInTime.turned_early_iff",
     "edge": {
      "en": "Read the loss in time: with lo ≤ hi and lo' ≤ hi, the loss growing by one a step, from a start favouring the shapers, a reading, the next step reading too, turns the course for good exactly where the late reading still favours the others at the share a step on; once it would favour the shapers every later reading keeps the lock, at most one step lies between, and a deadline bounds the window."
@@ -6481,10 +6941,15 @@
     "records": [
      "loss-read-in-time-by-the-others"
     ],
-    "source": "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions"
+    "source": "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
+    "drops": [
+     "closedcapture-unread"
+    ]
    },
    {
-    "to": null,
+    "to": {
+     "en": "drawn one member at a time, from every count i ≤ M the histories losing every shaper weigh at least ((M + 1)(a + c + p))^i times every later history, above the critical mass too; from shapers present within reach of the top, those fixing them weigh at least a^k, below it too: either lock is left with positive weight"
+    },
     "law": "Becoming.DrawnReplacement.lost_ge",
     "edge": {
      "en": "Drift: drawn one member at a time, from every mixed count the histories losing every shaper weigh at least down^i times every later history, above the critical mass too, and those fixing them at least a^k within reach of the top, below it too; no new reader and no change in what is read."
@@ -6493,7 +6958,10 @@
     "records": [
      "drawn-shaping-drawn-one-at-a-time"
     ],
-    "source": "theories/becoming/chapters/02-MAP.md#r-drawn-shaping-drawn-one-at-a-time"
+    "source": "theories/becoming/chapters/02-MAP.md#r-drawn-shaping-drawn-one-at-a-time",
+    "drops": [
+     "rulecapture-carriercounts-select"
+    ]
    }
   ],
   "transitions": [
@@ -6508,7 +6976,15 @@
     ],
     "records": [
      "shaping-read-by-readers-drawn-from-the-selected"
-    ]
+    ],
+    "between": {
+     "from": {
+      "en": "with lo ≤ c ≤ hi, x.other · (c − lo) ≤ x.carrier · (hi − c): the rule read favours the shapers, and from a start under it the course is locked in their favour"
+     },
+     "to": {
+      "en": "the reverse strict inequality: the rule read favours the others strictly, and the course is locked the other way"
+     }
+    }
    },
    {
     "kind": "tipping in a parameter",
@@ -6521,7 +6997,15 @@
     ],
     "records": [
      "shaping-read-by-readers-drawn-from-the-selected"
-    ]
+    ],
+    "between": {
+     "from": {
+      "en": "c ≤ lo and c ≤ hi: the rule read favours the shapers at every share"
+     },
+     "to": {
+      "en": "lo < c and hi ≤ c: it favours the others strictly at every share"
+     }
+    }
    },
    {
     "kind": "exit by drift",
@@ -6534,7 +7018,15 @@
     ],
     "records": [
      "drawn-shaping-drawn-one-at-a-time"
-    ]
+    ],
+    "between": {
+     "from": {
+      "en": "drawn one member at a time, at counts above the critical mass, where the rule read at count s favours the shapers"
+     },
+     "to": {
+      "en": "every shaper lost, the histories' weight, times the shapers' weights over s + 1 … s + n, at most t · down^n times the whole weight"
+     }
+    }
    },
    {
     "kind": "tipping in a parameter",
@@ -6548,7 +7040,15 @@
     ],
     "records": [
      "drawn-shaping-drawn-one-at-a-time"
-    ]
+    ],
+    "between": {
+     "from": {
+      "en": "2c < hi + lo: at an even population the rule read favours the shapers strictly (risk dominance in counts)"
+     },
+     "to": {
+      "en": "hi + lo ≤ 2c: it does not favour them strictly there"
+     }
+    }
    }
   ],
   "tests": [],
@@ -6580,7 +7080,124 @@
    "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions"
   ],
-  "standing_without_record": null
+  "standing_without_record": null,
+  "premises": [
+   {
+    "law": "Becoming.DrawnShaping.drawn_reads_iff",
+    "takes": [
+     "closedcapture-drawn-pool",
+     "ruleshaping-shaped"
+    ]
+   },
+   {
+    "law": "Becoming.DrawnShaping.drawn_against",
+    "takes": [
+     "closedcapture-drawn-pool",
+     "ruleshaping-shaped",
+     "drawnshaping-readers"
+    ]
+   },
+   {
+    "law": "Becoming.DrawnShaping.critical_iff",
+    "takes": [
+     "closedcapture-drawn-pool",
+     "ruleshaping-shaped"
+    ]
+   },
+   {
+    "law": "Becoming.DrawnShaping.critical_mass_iff",
+    "takes": [
+     "closedcapture-drawn-pool",
+     "ruleshaping-shaped",
+     "drawnshaping-step"
+    ]
+   },
+   {
+    "law": "Becoming.DrawnShaping.drawn_locks",
+    "takes": [
+     "closedcapture-drawn-pool",
+     "ruleshaping-shaped",
+     "rulecapture-carriercounts-select",
+     "drawnshaping-step"
+    ]
+   },
+   {
+    "law": "Becoming.DrawnShaping.drawn_from_below",
+    "takes": [
+     "closedcapture-drawn-pool",
+     "ruleshaping-shaped",
+     "rulecapture-carriercounts-select",
+     "drawnshaping-step"
+    ]
+   },
+   {
+    "law": "Becoming.DrawnShaping.drawn_locked_either",
+    "takes": [
+     "closedcapture-drawn-pool",
+     "ruleshaping-shaped",
+     "rulecapture-carriercounts-select",
+     "drawnshaping-step"
+    ]
+   },
+   {
+    "law": "Becoming.DrawnShaping.drawn_rises",
+    "takes": [
+     "closedcapture-drawn-pool",
+     "ruleshaping-shaped",
+     "rulecapture-carriercounts-select",
+     "drawnshaping-step"
+    ]
+   },
+   {
+    "law": "Becoming.DrawnShaping.drawn_falls",
+    "takes": [
+     "closedcapture-drawn-pool",
+     "ruleshaping-shaped",
+     "rulecapture-carriercounts-select",
+     "drawnshaping-step"
+    ]
+   },
+   {
+    "law": "Becoming.DrawnReplacement.fixation",
+    "takes": [
+     "drift-replacement-valueby",
+     "drawnshaping-step"
+    ]
+   },
+   {
+    "law": "Becoming.DrawnReplacement.lost_ge",
+    "takes": [
+     "drift-replacement-valueby"
+    ]
+   },
+   {
+    "law": "Becoming.DrawnReplacement.fixed_ge",
+    "takes": [
+     "drift-replacement-valueby"
+    ]
+   },
+   {
+    "law": "Becoming.DrawnReplacement.lost_above",
+    "takes": [
+     "drift-replacement-valueby",
+     "drawnshaping-step"
+    ]
+   },
+   {
+    "law": "Becoming.DrawnReplacement.fixed_below",
+    "takes": [
+     "drift-replacement-valueby",
+     "drawnshaping-step"
+    ]
+   },
+   {
+    "law": "Becoming.DrawnReplacement.risk_dominant_iff",
+    "takes": [
+     "closedcapture-drawn-pool",
+     "ruleshaping-shaped"
+    ]
+   }
+  ]
  },
  {
   "id": "loss-read-in-time-by-the-others",
@@ -6623,7 +7240,9 @@
   "forbids": null,
   "exits": [
    {
-    "to": null,
+    "to": {
+     "en": "at a reading step r at which the loss has reached its bound and the late reading favours the others there (ties included), r + 1 reading too: locked the other way under the late reading (lo′ in place of lo) at every step from r + 2, exactly where the late reading favours the others (ties included) at the share at r + 1"
+    },
     "law": "Becoming.ReadInTime.turned_iff",
     "edge": {
      "en": "Where every step adds at least one to the loss and lo' ≤ hi, at a reading step at which the loss has reached N and the late reading favours the others at the share there (ties included), the next step reading too, the course is locked the other way for good from two steps after the reading exactly where the late reading favours the others at the share of the next step; it can do so where control is selected (Window.in_time, a witness)."
@@ -6632,7 +7251,8 @@
     "records": [
      "loss-read-in-time-by-the-others"
     ],
-    "source": "theories/becoming/chapters/02-MAP.md#r-loss-read-in-time-by-the-others"
+    "source": "theories/becoming/chapters/02-MAP.md#r-loss-read-in-time-by-the-others",
+    "drops": []
    }
   ],
   "transitions": [
@@ -6649,7 +7269,15 @@
     ],
     "records": [
      "loss-read-in-time-by-the-others"
-    ]
+    ],
+    "between": {
+     "from": {
+      "en": "the late reading favours the shapers at the share of step N: locked in their favour for good from N + 1"
+     },
+     "to": {
+      "en": "it favours the others, ties included, at the share of step N + 1, that step reading too: locked the other way for good from N + 2"
+     }
+    }
    },
    {
     "kind": "window or deadline",
@@ -6661,7 +7289,13 @@
     ],
     "records": [
      "loss-read-in-time-by-the-others"
-    ]
+    ],
+    "between": {
+     "from": null,
+     "to": {
+      "en": "from a start with a shaper present whose rule read there, g, favours the shapers strictly, lo ≤ hi and lo' ≤ hi, the others reading the loss from any reading step N with g.other · c · x.other ≤ N: locked in the shapers' favour at every step from N + 1, under every schedule"
+     }
+    }
    },
    {
     "kind": "exact threshold",
@@ -6675,7 +7309,15 @@
     ],
     "records": [
      "loss-read-in-time-by-the-others"
-    ]
+    ],
+    "between": {
+     "from": {
+      "en": "with c ≤ hi, x.other · c ≤ x.carrier · (hi − c): the least late reading (lo' = 0) favours the shapers, so every late reading of this form does, and read from a later step each keeps the lock"
+     },
+     "to": {
+      "en": "x.carrier · (hi − c) < x.other · c: the least late reading does not favour the shapers"
+     }
+    }
    }
   ],
   "tests": [
@@ -6714,7 +7356,137 @@
    "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions"
   ],
-  "standing_without_record": null
+  "standing_without_record": null,
+  "premises": [
+   {
+    "law": "Becoming.ReadInTime.kept_iff",
+    "takes": [
+     "closedcapture-accrues",
+     "readintime-readers",
+     "closedcapture-thinned-losspool",
+     "closedcapture-drawn-pool",
+     "ruleshaping-shaped",
+     "rulecapture-carriercounts-select",
+     "card-natural-number-amounts"
+    ]
+   },
+   {
+    "law": "Becoming.ReadInTime.turned_iff",
+    "takes": [
+     "closedcapture-accrues",
+     "readintime-readers",
+     "closedcapture-thinned-losspool",
+     "closedcapture-drawn-pool",
+     "ruleshaping-shaped",
+     "rulecapture-carriercounts-select",
+     "card-natural-number-amounts"
+    ]
+   },
+   {
+    "law": "Becoming.ReadInTime.late_never_falls",
+    "takes": [
+     "drawnshaping-step",
+     "readintime-readers",
+     "closedcapture-drawn-pool",
+     "ruleshaping-shaped",
+     "rulecapture-carriercounts-select"
+    ]
+   },
+   {
+    "law": "Becoming.ReadInTime.kept_early_iff",
+    "takes": [
+     "drawnshaping-step",
+     "readintime-readers",
+     "closedcapture-accrues",
+     "closedcapture-thinned-losspool",
+     "closedcapture-drawn-pool",
+     "ruleshaping-shaped",
+     "rulecapture-carriercounts-select",
+     "card-natural-number-amounts"
+    ]
+   },
+   {
+    "law": "Becoming.ReadInTime.turned_early_iff",
+    "takes": [
+     "drawnshaping-step",
+     "readintime-readers",
+     "closedcapture-accrues",
+     "closedcapture-thinned-losspool",
+     "closedcapture-drawn-pool",
+     "ruleshaping-shaped",
+     "rulecapture-carriercounts-select",
+     "card-natural-number-amounts"
+    ]
+   },
+   {
+    "law": "Becoming.ReadInTime.in_time_earlier",
+    "takes": [
+     "drawnshaping-step",
+     "readintime-readers",
+     "closedcapture-drawn-pool",
+     "ruleshaping-shaped",
+     "rulecapture-carriercounts-select"
+    ]
+   },
+   {
+    "law": "Becoming.ReadInTime.at_most_one_between",
+    "takes": [
+     "drawnshaping-step",
+     "closedcapture-drawn-pool",
+     "ruleshaping-shaped",
+     "rulecapture-carriercounts-select"
+    ]
+   },
+   {
+    "law": "Becoming.ReadInTime.kept_next_round_iff",
+    "takes": [
+     "readintime-readers",
+     "closedcapture-accrues",
+     "closedcapture-thinned-losspool",
+     "closedcapture-drawn-pool",
+     "ruleshaping-shaped",
+     "rulecapture-carriercounts-select",
+     "card-natural-number-amounts"
+    ]
+   },
+   {
+    "law": "Becoming.ReadInTime.kept_once_favoured",
+    "takes": [
+     "drawnshaping-step",
+     "readintime-readers",
+     "closedcapture-accrues",
+     "closedcapture-thinned-losspool",
+     "closedcapture-drawn-pool",
+     "ruleshaping-shaped",
+     "rulecapture-carriercounts-select",
+     "card-natural-number-amounts"
+    ]
+   },
+   {
+    "law": "Becoming.ReadInTime.least_iff",
+    "takes": [
+     "closedcapture-drawn-pool",
+     "ruleshaping-shaped"
+    ]
+   },
+   {
+    "law": "Becoming.ReadInTime.deadline",
+    "takes": [
+     "drawnshaping-step",
+     "readintime-readers",
+     "closedcapture-accrues",
+     "closedcapture-thinned-losspool",
+     "closedcapture-drawn-pool",
+     "ruleshaping-shaped",
+     "rulecapture-carriercounts-select",
+     "card-natural-number-amounts"
+    ]
+   },
+   {
+    "law": "Becoming.ReadInTime.Window.in_time",
+    "takes": []
+   }
+  ]
  },
  {
   "id": "capture-by-counted-choices",
@@ -6751,7 +7523,9 @@
   "forbids": null,
   "exits": [
    {
-    "to": null,
+    "to": {
+     "en": "counts three to two under the score one to two, the rule in force read from them: along every schedule the rule favours the second policy strictly at every step"
+    },
     "law": "Becoming.ChoiceCountCapture.Witness.moved_locks_down",
     "edge": {
      "en": "A moved count: three choices to one keep the first policy against a score weighing the second twice as much; one count moved, three to two, locks the other way (witness)."
@@ -6760,10 +7534,13 @@
     "records": [
      "capture-by-counted-choices"
     ],
-    "source": "theories/becoming/chapters/02-MAP.md#r-capture-by-counted-choices"
+    "source": "theories/becoming/chapters/02-MAP.md#r-capture-by-counted-choices",
+    "drops": []
    },
    {
-    "to": null,
+    "to": {
+     "en": "counts three to one under a new score one to four, read at once: along every schedule the rule favours the second policy strictly at every step; read one step late, the old rule in force, the course is locked for the first policy from step 2"
+    },
     "law": "Becoming.ChoiceCountCapture.Witness.Stale.devalued_read_at_once_locks_down",
     "edge": {
      "en": "A change of score: to one to four, read at once, it locks the other way, while read one step late, the old rule still in force, it leaves the first policy locked (witness)."
@@ -6772,7 +7549,8 @@
     "records": [
      "capture-by-counted-choices"
     ],
-    "source": "theories/becoming/chapters/02-MAP.md#r-capture-by-counted-choices"
+    "source": "theories/becoming/chapters/02-MAP.md#r-capture-by-counted-choices",
+    "drops": []
    }
   ],
   "transitions": [
@@ -6788,7 +7566,15 @@
     ],
     "records": [
      "capture-by-counted-choices"
-    ]
+    ],
+    "between": {
+     "from": {
+      "en": "κo · other ≤ κc · carrier: the chooser takes the first policy at every step, the course locked, neither share nor rule falling"
+     },
+     "to": {
+      "en": "κc · carrier < κo · other: it takes the second policy at every step, neither share nor rule rising"
+     }
+    }
    }
   ],
   "tests": [],
@@ -6814,7 +7600,78 @@
    "theories/becoming/chapters/02-MAP.md#r-capture-by-counted-choices",
    "theories/becoming/chapters/02-MAP.md#which-locks-noise-leaves"
   ],
-  "standing_without_record": null
+  "standing_without_record": null,
+  "premises": [
+   {
+    "law": "Becoming.ChoiceCountCapture.selectsThrough",
+    "takes": [
+     "identificationruns-valuesthrough"
+    ]
+   },
+   {
+    "law": "Becoming.ChoiceCountCapture.unchosen_beyond_coupling",
+    "takes": [
+     "admission-withheldlevels",
+     "k3-balance",
+     "identificationruns-valuesthrough",
+     "testing-withincoupling"
+    ]
+   },
+   {
+    "law": "Becoming.ChoiceCountCapture.weighted_reads",
+    "takes": [
+     "choicecountcapture-weighted"
+    ]
+   },
+   {
+    "law": "Becoming.ChoiceCountCapture.weighted_favours_iff",
+    "takes": [
+     "choicecountcapture-weighted"
+    ]
+   },
+   {
+    "law": "Becoming.ChoiceCountCapture.counted_locks",
+    "takes": [
+     "choicecountcapture-choose",
+     "choicecountcapture-weighted",
+     "choicecountcapture-in-sync-start"
+    ]
+   },
+   {
+    "law": "Becoming.ChoiceCountCapture.counted_chooses",
+    "takes": [
+     "choicecountcapture-choose",
+     "choicecountcapture-weighted",
+     "choicecountcapture-in-sync-start"
+    ]
+   },
+   {
+    "law": "Becoming.ChoiceCountCapture.counted_locks_down",
+    "takes": [
+     "choicecountcapture-choose",
+     "choicecountcapture-weighted",
+     "choicecountcapture-in-sync-start"
+    ]
+   },
+   {
+    "law": "Becoming.ChoiceCountCapture.counted_outlives_loss",
+    "takes": [
+     "choicecountcapture-choose",
+     "choicecountcapture-weighted",
+     "choicecountcapture-in-sync-start",
+     "closedcapture-accrues",
+     "closedcapture-unread",
+     "card-natural-number-amounts"
+    ]
+   },
+   {
+    "law": "Becoming.ChoiceCountCapture.posterior_course_falls",
+    "takes": [
+     "rulecapture-carriercounts-select",
+     "choicecountcapture-byscore"
+    ]
+   }
+  ]
  },
  {
   "id": "self-reproducing-selection-across-carriers",
@@ -6845,7 +7702,8 @@
    "theories/becoming/chapters/02-MAP.md#capture",
    "theories/becoming/chapters/02-MAP.md#open"
   ],
-  "standing_without_record": "open"
+  "standing_without_record": "open",
+  "premises": []
  },
  {
   "id": "capture-reaching-the-routes-of-correction",
@@ -6870,7 +7728,8 @@
   "sources": [
    "theories/becoming/chapters/02-MAP.md#capture"
   ],
-  "standing_without_record": "reading"
+  "standing_without_record": "reading",
+  "premises": []
  },
  {
   "id": "selection-for-narrowing-what-couples-in",
@@ -6897,7 +7756,8 @@
   "sources": [
    "theories/becoming/chapters/02-MAP.md#capture"
   ],
-  "standing_without_record": "reading"
+  "standing_without_record": "reading",
+  "premises": []
  },
  {
   "id": "habit-lock-in-active-inference",
@@ -6921,7 +7781,9 @@
   "forbids": null,
   "exits": [
    {
-    "to": null,
+    "to": {
+     "en": "counts three to two under the score one to two, the rule in force read from them: along every schedule the rule favours the second policy strictly at every step"
+    },
     "law": "Becoming.ChoiceCountCapture.Witness.moved_locks_down",
     "edge": {
      "en": "A moved count carries the course across (a witness on the law beneath the reading)."
@@ -6930,10 +7792,13 @@
     "records": [
      "capture-by-counted-choices"
     ],
-    "source": "theories/becoming/chapters/02-MAP.md#r-capture-by-counted-choices"
+    "source": "theories/becoming/chapters/02-MAP.md#r-capture-by-counted-choices",
+    "drops": []
    },
    {
-    "to": null,
+    "to": {
+     "en": "counts three to one under a new score one to four, read at once: along every schedule the rule favours the second policy strictly at every step; read one step late, the old rule in force, the course is locked for the first policy from step 2"
+    },
     "law": "Becoming.ChoiceCountCapture.Witness.Stale.devalued_read_at_once_locks_down",
     "edge": {
      "en": "A change of score, read at once, locks the other way; read one step late, the old rule still in force, it leaves the first policy locked (a witness on the law beneath the reading)."
@@ -6942,7 +7807,8 @@
     "records": [
      "capture-by-counted-choices"
     ],
-    "source": "theories/becoming/chapters/02-MAP.md#r-capture-by-counted-choices"
+    "source": "theories/becoming/chapters/02-MAP.md#r-capture-by-counted-choices",
+    "drops": []
    }
   ],
   "transitions": [],
@@ -6972,7 +7838,44 @@
    "theories/becoming/chapters/02-MAP.md#which-locks-noise-leaves",
    "theories/becoming/chapters/08-METHOD.md#known-results"
   ],
-  "standing_without_record": "reading"
+  "standing_without_record": "reading",
+  "premises": [
+   {
+    "law": "Becoming.ChoiceCountCapture.counted_locks",
+    "takes": [
+     "choicecountcapture-choose",
+     "choicecountcapture-weighted",
+     "choicecountcapture-in-sync-start"
+    ]
+   },
+   {
+    "law": "Becoming.ChoiceCountCapture.counted_locks_down",
+    "takes": [
+     "choicecountcapture-choose",
+     "choicecountcapture-weighted",
+     "choicecountcapture-in-sync-start"
+    ]
+   },
+   {
+    "law": "Becoming.ChoiceCountCapture.counted_outlives_loss",
+    "takes": [
+     "choicecountcapture-choose",
+     "choicecountcapture-weighted",
+     "choicecountcapture-in-sync-start",
+     "closedcapture-accrues",
+     "closedcapture-unread",
+     "card-natural-number-amounts"
+    ]
+   },
+   {
+    "law": "Becoming.ChoiceCountCapture.Witness.moved_locks_down",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ChoiceCountCapture.Witness.Stale.devalued_read_at_once_locks_down",
+    "takes": []
+   }
+  ]
  },
  {
   "id": "a-counter-rule-read-from-its-own-share",
@@ -6996,7 +7899,9 @@
   "forbids": null,
   "exits": [
    {
-    "to": null,
+    "to": {
+     "en": "from the locked configuration carriers two to one under hi, the rule reversed to lo and held one step before the threshold reading reads: the course is locked the other way from step 1, neither share nor rule rises at any later step, and the rule after the first reading step is below hi"
+    },
     "law": "Becoming.RuleCapture.Reversed.not_absorbed",
     "edge": {
      "en": "Where its reading favours only above a threshold, a change carrying the share across the threshold leaves (a witness, under a threshold reading)."
@@ -7005,10 +7910,16 @@
     "records": [
      "capture-through-the-rule"
     ],
-    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise"
+    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
+    "drops": [
+     "rulecapture-uniform",
+     "rulecapture-keeps"
+    ]
    },
    {
-    "to": null,
+    "to": {
+     "en": "at the step after every reading step r with N ≤ b + r, the rule in force does not favour, so the course is not locked there, whatever the share"
+    },
     "law": "Becoming.ClosedCapture.turned_by_loss",
     "edge": {
      "en": "Only a change of law, such as reading what lies beyond its share, leaves the lock for long: where each step adds at least one beyond, a reading favouring at no loss above a bound unlocks the course at the step after every reading step past it. A sufficient way out, not shown necessary."
@@ -7017,7 +7928,10 @@
     "records": [
      "closed-capture"
     ],
-    "source": "theories/becoming/chapters/02-MAP.md#r-closed-capture"
+    "source": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+    "drops": [
+     "closedcapture-unread"
+    ]
    }
   ],
   "transitions": [],
@@ -7035,7 +7949,42 @@
    "theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule",
    "theories/becoming/chapters/02-MAP.md#r-closed-capture"
   ],
-  "standing_without_record": "reading"
+  "standing_without_record": "reading",
+  "premises": [
+   {
+    "law": "Becoming.RuleCapture.uniform_locks",
+    "takes": [
+     "rulecapture-raises",
+     "rulecapture-readsshare",
+     "rulecapture-uniform"
+    ]
+   },
+   {
+    "law": "Becoming.RuleCapture.locked_stays",
+    "takes": [
+     "rulecapture-raises",
+     "rulecapture-readsshare",
+     "rulecapture-upper",
+     "rulecapture-locked"
+    ]
+   },
+   {
+    "law": "Becoming.RuleCapture.Reversed.not_absorbed",
+    "takes": []
+   },
+   {
+    "law": "Becoming.RuleCapture.Alternating.never_locked",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ClosedCapture.turned_by_loss",
+    "takes": [
+     "closedcapture-accrues",
+     "closedcapture-turns",
+     "card-natural-number-amounts"
+    ]
+   }
+  ]
  },
  {
   "id": "a-code-formed-between-formations",
@@ -7092,7 +8041,9 @@
   "forbids": null,
   "exits": [
    {
-    "to": null,
+    "to": {
+     "en": "every formation gives the sense one form, from every start, after the order of hearings, exactly where the order gives all formations one origin at the sense; agreement of all is then a rest under every rule"
+    },
     "law": "Becoming.SharedCodes.agrees_every_start_iff",
     "edge": {
      "en": "Out of disagreement: where two forms differ, an order of hearings that take the form heard brings every start to agreement at a sense exactly where it gives all formations one origin at that sense. Being joined through couplings is not enough (Path.never_agree, a witness)."
@@ -7101,10 +8052,15 @@
     "records": [
      "a-code-formed-between-formations"
     ],
-    "source": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations"
+    "source": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations",
+    "drops": [
+     "sharedcodes-keepsexchange"
+    ]
    },
    {
-    "to": null,
+    "to": {
+     "en": "the group no longer agrees at the sense after the step: a member hearing it took, under the rule, the speaker's form, which differs from its own"
+    },
     "law": "Becoming.SharedCodes.run_kept_iff",
     "edge": {
      "en": "For a group agreeing at a sense with a member other than the step's hearer, the members agree after the step exactly where, if the hearer is a member hearing that sense and the rule takes the form, the speaker's form is the hearer's."
@@ -7113,10 +8069,15 @@
     "records": [
      "a-code-formed-between-formations"
     ],
-    "source": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations"
+    "source": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations",
+    "drops": [
+     "sharedcodes-closed"
+    ]
    },
    {
-    "to": null,
+    "to": {
+     "en": "leaving needs a formation holding a form other than the imposed one at the sense (or a coined form); without one, every formation holds the imposed form at the sense at every later step, under every rule"
+    },
     "law": "Becoming.SharedCodes.outside_needed",
     "edge": {
      "en": "Under hearings that copy, where every formation holds the imposed form at a sense, all hold it at every later step: a merged distinction returns only from a form held outside, or by coining."
@@ -7125,10 +8086,13 @@
     "records": [
      "a-code-formed-between-formations"
     ],
-    "source": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations"
+    "source": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations",
+    "drops": []
    },
    {
-    "to": null,
+    "to": {
+     "en": "the formation hearing tells m from m' at the next step: it holds at m the outside form and at m' the imposed one, though the imposed code merges them"
+    },
     "law": "Becoming.SharedCodes.outside_returns",
     "edge": {
      "en": "A merged distinction returns from a form held outside: where a formation holds the imposed form at one sense and hears, at another the code merges with it, a formation whose form there is not the imposed one, it then tells the two apart."
@@ -7137,10 +8101,13 @@
     "records": [
      "a-code-formed-between-formations"
     ],
-    "source": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations"
+    "source": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations",
+    "drops": []
    },
    {
-    "to": null,
+    "to": {
+     "en": "every formation tells m and m' apart again: each holds at m the coined form, which the imposed code does not give m'"
+    },
     "law": "Becoming.SharedCodes.coined_returns",
     "edge": {
      "en": "Where all hold a code merging two senses, a form coined at one that the code does not give the other, heard by all, makes every formation tell them apart again."
@@ -7149,10 +8116,13 @@
     "records": [
      "synonyms-and-coined-forms"
     ],
-    "source": "theories/becoming/chapters/05-COLLECTIVES.md#r-synonyms-and-coined-forms"
+    "source": "theories/becoming/chapters/05-COLLECTIVES.md#r-synonyms-and-coined-forms",
+    "drops": []
    },
    {
-    "to": null,
+    "to": {
+     "en": "in a witness of two formations from a symmetric disagreement, each of three laws brings the two to agree in one step: a centre both take and one hearing in order break the exchange symmetry and keep the renaming one, a preferred form breaks the renaming symmetry and keeps the exchange one"
+    },
     "law": "Becoming.SharedCodes.TwoFormations.three_agree",
     "edge": {
      "en": "From a symmetric disagreement, in a witness of two formations, a formation both hear, a preferred form and an order of hearing each break one symmetry and bring agreement."
@@ -7161,7 +8131,11 @@
     "records": [
      "a-code-formed-between-formations"
     ],
-    "source": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations"
+    "source": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations",
+    "drops": [
+     "sharedcodes-keepsexchange",
+     "sharedcodes-keepsrenaming"
+    ]
    }
   ],
   "transitions": [],
@@ -7192,7 +8166,136 @@
    "theories/becoming/chapters/05-COLLECTIVES.md#r-synonyms-and-coined-forms",
    "theories/becoming/chapters/05-COLLECTIVES.md#shared-codes"
   ],
-  "standing_without_record": null
+  "standing_without_record": null,
+  "premises": [
+   {
+    "law": "Becoming.SharedCodes.run_changes_iff",
+    "takes": [
+     "k3-decided"
+    ]
+   },
+   {
+    "law": "Becoming.SharedCodes.agreement_kept",
+    "takes": [
+     "sharedcodes-closed",
+     "k3-decided",
+     "sharedcodes-agreeat"
+    ]
+   },
+   {
+    "law": "Becoming.SharedCodes.run_kept_iff",
+    "takes": [
+     "k3-decided",
+     "sharedcodes-agreeat"
+    ]
+   },
+   {
+    "law": "Becoming.SharedCodes.all_agree_rest",
+    "takes": [
+     "k3-decided"
+    ]
+   },
+   {
+    "law": "Becoming.SharedCodes.agrees_every_start_iff",
+    "takes": [
+     "sharedcodes-apart",
+     "sharedcodes-always",
+     "k3-decided"
+    ]
+   },
+   {
+    "law": "Becoming.SharedCodes.run_agrees_every_start_iff",
+    "takes": [
+     "sharedcodes-apart",
+     "sharedcodes-always",
+     "k3-decided"
+    ]
+   },
+   {
+    "law": "Becoming.SharedCodes.shared_iff_in_use",
+    "takes": [
+     "sharedcodes-every",
+     "sharedcodes-always",
+     "k3-decided"
+    ]
+   },
+   {
+    "law": "Becoming.SharedCodes.never_agrees_of_both",
+    "takes": [
+     "sharedcodes-keepsexchange",
+     "sharedcodes-keepsrenaming",
+     "sharedcodes-relabels",
+     "sharedcodes-moves"
+    ]
+   },
+   {
+    "law": "Becoming.SharedCodes.TwoFormations.crossing_never_agrees",
+    "takes": []
+   },
+   {
+    "law": "Becoming.SharedCodes.TwoFormations.three_agree",
+    "takes": []
+   },
+   {
+    "law": "Becoming.SharedCodes.Path.never_agree",
+    "takes": []
+   },
+   {
+    "law": "Becoming.SharedCodes.impose_agrees",
+    "takes": []
+   },
+   {
+    "law": "Becoming.SharedCodes.impose_loses_iff",
+    "takes": []
+   },
+   {
+    "law": "Becoming.SharedCodes.source_loses_nothing",
+    "takes": []
+   },
+   {
+    "law": "Becoming.SharedCodes.impose_keeps_exchange",
+    "takes": []
+   },
+   {
+    "law": "Becoming.SharedCodes.impose_privileges_forms",
+    "takes": []
+   },
+   {
+    "law": "Becoming.SharedCodes.run_from_imposition",
+    "takes": [
+     "k3-decided"
+    ]
+   },
+   {
+    "law": "Becoming.SharedCodes.outside_needed",
+    "takes": [
+     "k3-decided"
+    ]
+   },
+   {
+    "law": "Becoming.SharedCodes.outside_returns",
+    "takes": [
+     "sharedcodes-always",
+     "k3-decided"
+    ]
+   },
+   {
+    "law": "Becoming.SharedCodes.written_rests",
+    "takes": [
+     "sharedcodes-writesexactly",
+     "card-listed",
+     "k3-decided"
+    ]
+   },
+   {
+    "law": "Becoming.SharedCodes.coined_returns",
+    "takes": [
+     "sharedcodes-every",
+     "sharedcodes-always",
+     "k3-decided"
+    ]
+   }
+  ]
  },
  {
   "id": "a-code-held-as-counts",
@@ -7247,7 +8350,9 @@
   },
   "exits": [
    {
-    "to": null,
+    "to": {
+     "en": "from no counts, one hearing of the first word of greatest count, a tie going to the first word, gives both agents that word as uniquely greatest: a shared uniquely greatest word"
+    },
     "law": "Becoming.CountedCodes.Witness.sayFirst_shared",
     "edge": {
      "en": "A preferred word: from no counts, a speaker saying the first word of greatest count, a tie going to the first word, brings both agents to hold that word as uniquely greatest after one hearing; that rule does not commute with renaming (a witness)."
@@ -7256,10 +8361,16 @@
     "records": [
      "a-code-held-as-counts"
     ],
-    "source": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-held-as-counts"
+    "source": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-held-as-counts",
+    "drops": [
+     "countedcodes-keepsrelation",
+     "countedcodes-commuteswithrenaming"
+    ]
    },
    {
-    "to": null,
+    "to": {
+     "en": "from counts 1, 0 for one agent and 0, 0 for the other, one step of adding the speaker's counts gives both agents 1, 0, the first word uniquely greatest for each"
+    },
     "law": "Becoming.CountedCodes.Witness.asymmetric_shared",
     "edge": {
      "en": "An asymmetric start: counts 1, 0 and 0, 0, which the exchange with the renaming does not relate to themselves, give both agents 1, 0 after one step of adding the speaker's counts (a witness)."
@@ -7268,7 +8379,10 @@
     "records": [
      "a-code-held-as-counts"
     ],
-    "source": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-held-as-counts"
+    "source": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-held-as-counts",
+    "drops": [
+     "countedcodes-renamed"
+    ]
    }
   ],
   "transitions": [],
@@ -7292,7 +8406,131 @@
   "sources": [
    "theories/becoming/chapters/05-COLLECTIVES.md#r-a-code-held-as-counts"
   ],
-  "standing_without_record": null
+  "standing_without_record": null,
+  "premises": [
+   {
+    "law": "Becoming.CountedCodes.unique_greatest_exchanged_run",
+    "takes": [
+     "countedcodes-keepsrelation",
+     "countedcodes-renamed",
+     "countedcodes-onto",
+     "card-pointwise-statements"
+    ]
+   },
+   {
+    "law": "Becoming.CountedCodes.never_shared",
+    "takes": [
+     "countedcodes-irrefl",
+     "countedcodes-trans",
+     "countedcodes-keepsrelation",
+     "countedcodes-renamed",
+     "countedcodes-onto",
+     "countedcodes-moves",
+     "card-pointwise-statements"
+    ]
+   },
+   {
+    "law": "Becoming.CountedCodes.never_shared_of_involution",
+    "takes": [
+     "countedcodes-irrefl",
+     "countedcodes-trans",
+     "countedcodes-keepsrelation",
+     "countedcodes-renamed",
+     "countedcodes-involution",
+     "countedcodes-moves",
+     "card-pointwise-statements"
+    ]
+   },
+   {
+    "law": "Becoming.CountedCodes.shared_no_unique_greatest",
+    "takes": [
+     "countedcodes-irrefl",
+     "countedcodes-keepsrelation",
+     "countedcodes-renamed",
+     "countedcodes-moves",
+     "card-pointwise-statements"
+    ]
+   },
+   {
+    "law": "Becoming.CountedCodes.hear_keeps",
+    "takes": [
+     "countedcodes-commutes",
+     "countedcodes-readscountbycount",
+     "countedcodes-commuteswithrenaming",
+     "card-pointwise-statements"
+    ]
+   },
+   {
+    "law": "Becoming.CountedCodes.addHeard_keeps",
+    "takes": [
+     "countedcodes-commutes",
+     "countedcodes-reads",
+     "countedcodes-alike",
+     "card-pointwise-statements"
+    ]
+   },
+   {
+    "law": "Becoming.CountedCodes.gatedHear_keeps",
+    "takes": [
+     "countedcodes-commutes",
+     "countedcodes-reads",
+     "countedcodes-alike",
+     "countedcodes-invariant",
+     "card-pointwise-statements"
+    ]
+   },
+   {
+    "law": "Becoming.CountedCodes.addSpeaker_shares",
+    "takes": [
+     "countedcodes-involution-speaker"
+    ]
+   },
+   {
+    "law": "Becoming.CountedCodes.addSpeaker_tied",
+    "takes": [
+     "countedcodes-involution",
+     "countedcodes-renamed",
+     "countedcodes-moves",
+     "card-pointwise-statements"
+    ]
+   },
+   {
+    "law": "Becoming.CountedCodes.bound_invariant",
+    "takes": [
+     "countedcodes-permutes"
+    ]
+   },
+   {
+    "law": "Becoming.CountedCodes.minimizer_no_unique_greatest",
+    "takes": [
+     "countedcodes-moves",
+     "countedcodes-every",
+     "countedcodes-fixed",
+     "countedcodes-positive",
+     "countedcodes-reaches"
+    ]
+   },
+   {
+    "law": "Becoming.CountedCodes.shared_minimizer_no_unique_greatest",
+    "takes": [
+     "countedcodes-keepsrelation",
+     "countedcodes-renamed",
+     "countedcodes-moves",
+     "countedcodes-every",
+     "countedcodes-positive",
+     "card-pointwise-statements",
+     "countedcodes-reaches"
+    ]
+   },
+   {
+    "law": "Becoming.CountedCodes.Witness.sayFirst_shared",
+    "takes": []
+   },
+   {
+    "law": "Becoming.CountedCodes.Witness.asymmetric_shared",
+    "takes": []
+   }
+  ]
  },
  {
   "id": "a-reading-against-the-share-does-not-ratchet",
@@ -7332,7 +8570,24 @@
   "sources": [
    "theories/becoming/chapters/02-MAP.md#r-a-reading-against-the-share-does-not-ratchet"
   ],
-  "standing_without_record": null
+  "standing_without_record": null,
+  "premises": [
+   {
+    "law": "Becoming.RuleCapture.share_kept_along",
+    "takes": [
+     "rulecapture-raises",
+     "rulecapture-favouring"
+    ]
+   },
+   {
+    "law": "Becoming.RuleCapture.against_not_rising",
+    "takes": [
+     "rulecapture-raises",
+     "rulecapture-against",
+     "rulecapture-favouring"
+    ]
+   }
+  ]
  },
  {
   "id": "seeking-boundary",
@@ -7387,7 +8642,9 @@
   "forbids": null,
   "exits": [
    {
-    "to": null,
+    "to": {
+     "en": "the orbit rests with its target met from some step on, exactly where it has reached a state the law leaves unchanged that meets the target"
+    },
     "law": "Becoming.Law.rests_iff",
     "edge": {
      "en": "Under a determined law the orbit comes to rest with its target met exactly where it reaches a state the law leaves unchanged that meets the target."
@@ -7396,10 +8653,15 @@
     "records": [
      "seeking-boundary"
     ],
-    "source": "theories/becoming/chapters/03-KNOWING.md#r-seeking-boundary"
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-seeking-boundary",
+    "drops": [
+     "seeking-morethannow"
+    ]
    },
    {
-    "to": null,
+    "to": {
+     "en": "for every condition, it is not the case that it rises at arbitrarily late steps (exhaustion, not enough); no last rise is named, and nothing is said of the seekers ending"
+    },
     "law": "Becoming.Flow.more_exhausted",
     "edge": {
      "en": "Under a census of what stands, where what stands runs down at every step from some step on, no condition rises at arbitrarily late steps: exhaustion, not enough. It shows only that the rises do not recur, not that exhaustion ends the seekers."
@@ -7408,7 +8670,10 @@
     "records": [
      "seeking-boundary"
     ],
-    "source": "theories/becoming/chapters/03-KNOWING.md#r-seeking-boundary"
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-seeking-boundary",
+    "drops": [
+     "seeking-rises-recur"
+    ]
    }
   ],
   "transitions": [],
@@ -7445,7 +8710,86 @@
    "theories/becoming/chapters/03-KNOWING.md#learning",
    "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings"
   ],
-  "standing_without_record": null
+  "standing_without_record": null,
+  "premises": [
+   {
+    "law": "Becoming.Law.rests_iff",
+    "takes": []
+   },
+   {
+    "law": "Becoming.SeekingRuns.rests_iff",
+    "takes": []
+   },
+   {
+    "law": "Becoming.more_not_at_rest",
+    "takes": [
+     "seeking-morethannow"
+    ]
+   },
+   {
+    "law": "Becoming.Law.more_never_rests",
+    "takes": []
+   },
+   {
+    "law": "Becoming.more_needs_open",
+    "takes": [
+     "seeking-morethannow"
+    ]
+   },
+   {
+    "law": "Becoming.succ_more",
+    "takes": []
+   },
+   {
+    "law": "Becoming.aboveAll_unique",
+    "takes": [
+     "seeking-aboveall"
+    ]
+   },
+   {
+    "law": "Becoming.Law.aboveAll_never_rests",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Flow.more_needs_unrun",
+    "takes": [
+     "k3-a-census",
+     "seeking-rises-recur"
+    ]
+   },
+   {
+    "law": "Becoming.Flow.more_exhausted",
+    "takes": [
+     "k3-a-census",
+     "locality-runsdown"
+    ]
+   },
+   {
+    "law": "Becoming.Enough.possibly_rests_iff",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Enough.assured_iff",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Enough.law_possibly_iff_assured",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Enough.Free.stays_meet_not_assured",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Flow.unselected_beyond_coupling",
+    "takes": [
+     "admission-withheldlevels",
+     "k3-balance",
+     "testing-withincoupling",
+     "selection-selectsthrough"
+    ]
+   }
+  ]
  },
  {
   "id": "locked-seeking",
@@ -7490,7 +8834,21 @@
    "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-training-installs",
    "theories/becoming/chapters/03-KNOWING.md#r-where-a-formations-acts-return"
   ],
-  "standing_without_record": "reading"
+  "standing_without_record": "reading",
+  "premises": [
+   {
+    "law": "Becoming.Law.rests_iff",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Law.more_never_rests",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Law.aboveAll_never_rests",
+    "takes": []
+   }
+  ]
  },
  {
   "id": "obscuration-and-reopening",
@@ -7522,7 +8880,8 @@
    "theories/becoming/chapters/03-KNOWING.md#r-the-boundary-of-enough-under-undetermined-laws",
    "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-training-installs"
   ],
-  "standing_without_record": "reading"
+  "standing_without_record": "reading",
+  "premises": []
  },
  {
   "id": "what-a-course-chosen-through-its-model-does-not-test",
@@ -7578,7 +8937,9 @@
   "forbids": null,
   "exits": [
    {
-    "to": null,
+    "to": {
+     "en": "the values the formation senses in the two worlds differ at the step after the first one at which the worlds answer the act it takes, at the value it senses, differently"
+    },
     "law": "Becoming.ReadingLoop.sensed_alike_iff",
     "edge": {
      "en": "Two worlds give the formation one sensed course through step n exactly as long as, at each step before n, they answer alike the act it takes at the value it senses: the course parts them only at an answer that differs."
@@ -7587,10 +8948,13 @@
     "records": [
      "what-a-course-chosen-through-its-model-does-not-test"
     ],
-    "source": "theories/becoming/chapters/03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test"
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test",
+    "drops": []
    },
    {
-    "to": null,
+    "to": {
+     "en": "a formation that senses the two worlds apart does not keep the task K at every step in the second world"
+    },
     "law": "Becoming.ReadingLoop.alike_of_kept",
     "edge": {
      "en": "Equality of values sensed decided: where each answer of the second world to the first course's act and value that differs from the first world's breaks a task on the values sensed, a formation keeping the task at every step in the second world senses alike in both. So a formation sensing the two apart does not keep the task at every step in the second."
@@ -7599,10 +8963,15 @@
     "records": [
      "what-a-course-chosen-through-its-model-does-not-test"
     ],
-    "source": "theories/becoming/chapters/03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test"
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test",
+    "drops": [
+     "readingloop-kept"
+    ]
    },
    {
-    "to": null,
+    "to": {
+     "en": "started with both candidates and the untried act, the formation separates the worlds: in the first it rests from step four on the true candidate alone, the untried act and the high value; in the second from step three on the true candidate alone and the known act, having sensed the low value at step one and at no other step (a witness)"
+    },
     "law": "Becoming.ReadingLoop.Untested.explorer_up",
     "edge": {
      "en": "Started the same way but with the untried act, it separates the worlds and rests on the true candidate in each, sensing the low value at step one and at no other step in the second (a witness)."
@@ -7611,10 +8980,15 @@
     "records": [
      "what-a-course-chosen-through-its-model-does-not-test"
     ],
-    "source": "theories/becoming/chapters/03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test"
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test",
+    "drops": [
+     "readingloop-floor"
+    ]
    },
    {
-    "to": null,
+    "to": {
+     "en": "started with the true candidate alone and the first ranking of the values, the formation takes the untried act and senses the high value from step three on in the first world, while the second ranking, so started, keeps the known act (a witness; informing is represented by the start, not by an act within the law)"
+    },
     "law": "Becoming.ReadingLoop.Untested.informed_turns",
     "edge": {
      "en": "Started the same way with the true candidate alone, the first ranking takes the untried act and senses high from step three on, while the second, already so started, keeps the known act (a witness; informing is represented by its outcome, a start with the true candidate alone, not by an act within the law; informing and revaluing as acts within one law are a-reading-informed-and-revalued's)."
@@ -7623,7 +8997,10 @@
     "records": [
      "acts-alike-from-a-model-or-from-an-order"
     ],
-    "source": "theories/becoming/chapters/03-KNOWING.md#r-acts-alike-from-a-model-or-from-an-order"
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-acts-alike-from-a-model-or-from-an-order",
+    "drops": [
+     "readingloop-floor"
+    ]
    }
   ],
   "transitions": [],
@@ -7675,7 +9052,119 @@
    "theories/becoming/chapters/03-KNOWING.md#the-reading-loop",
    "theories/becoming/chapters/03-KNOWING.md#r-a-reading-informed-and-revalued"
   ],
-  "standing_without_record": null
+  "standing_without_record": null,
+  "premises": [
+   {
+    "law": "Becoming.ReadingLoop.sensed_alike_iff",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ReadingLoop.alike_within",
+    "takes": [
+     "k3-decided",
+     "readingloop-breaks",
+     "readingloop-kept"
+    ]
+   },
+   {
+    "law": "Becoming.ReadingLoop.alike_of_kept",
+    "takes": [
+     "k3-decided",
+     "readingloop-breaks",
+     "readingloop-kept"
+    ]
+   },
+   {
+    "law": "Becoming.ReadingLoop.Loop.kept_iff",
+    "takes": [
+     "k3-decided"
+    ]
+   },
+   {
+    "law": "Becoming.ReadingLoop.Loop.kept_alike",
+    "takes": [
+     "k3-decided",
+     "readingloop-predict-alike"
+    ]
+   },
+   {
+    "law": "Becoming.ReadingLoop.Loop.faithful_kept",
+    "takes": [
+     "k3-decided",
+     "readingloop-faithful"
+    ]
+   },
+   {
+    "law": "Becoming.ReadingLoop.Loop.rests_of_unrefuted",
+    "takes": [
+     "k3-decided",
+     "readingloop-start-fixed",
+     "readingloop-unrefuted"
+    ]
+   },
+   {
+    "law": "Becoming.ReadingLoop.Untested.rests",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ReadingLoop.Untested.alike_in_both",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ReadingLoop.Untested.never_high",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ReadingLoop.Untested.true_kept",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ReadingLoop.Untested.explorer_up",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ReadingLoop.Untested.explorer_down",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ReadingLoop.Untested.explorer_low_once",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ReadingLoop.Untested.floor_forgoes",
+    "takes": [
+     "readingloop-reply-sensed",
+     "readingloop-world-stays",
+     "readingloop-floor"
+    ]
+   },
+   {
+    "law": "Becoming.ReadingLoop.Untested.floor_never_high",
+    "takes": [
+     "readingloop-reply-sensed",
+     "readingloop-world-stays",
+     "readingloop-floor"
+    ]
+   },
+   {
+    "law": "Becoming.ReadingLoop.observed_alike",
+    "takes": [
+     "readingloop-relation-kept"
+    ]
+   },
+   {
+    "law": "Becoming.ReadingLoop.Untested.model_or_order",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ReadingLoop.Untested.order_rests",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ReadingLoop.Untested.informed_turns",
+    "takes": []
+   }
+  ]
  },
  {
   "id": "what-seeking-cannot-separate",
@@ -7728,7 +9217,9 @@
   },
   "exits": [
    {
-    "to": null,
+    "to": {
+     "en": "with the experiment reading both tosses chosen, the course of two heads leaves the true coin above the tails-biased one: the order the agreement-reading experiment kept turns (a witness)"
+    },
     "law": "Becoming.LumpedSeeking.Agree.seeking_turns_tails",
     "edge": {
      "en": "With two experiments, reading both tosses or only whether they agree, and a policy choosing the first, the same outcome turns the order (a witness)."
@@ -7737,7 +9228,10 @@
     "records": [
      "what-seeking-cannot-separate"
     ],
-    "source": "theories/becoming/chapters/03-KNOWING.md#r-what-seeking-cannot-separate"
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-what-seeking-cannot-separate",
+    "drops": [
+     "lumpedseeking-tied"
+    ]
    }
   ],
   "transitions": [
@@ -7772,7 +9266,75 @@
    "theories/becoming/chapters/03-KNOWING.md#r-selection-when-the-lumping-changes",
    "theories/becoming/chapters/03-KNOWING.md#r-expected-free-energy-and-its-terms"
   ],
-  "standing_without_record": null
+  "standing_without_record": null,
+  "premises": [
+   {
+    "law": "Becoming.LumpedSeeking.posterior_le_iff_prior",
+    "takes": [
+     "k3-decided",
+     "card-listed",
+     "lumpedseeking-tied",
+     "lumpedseeking-weighs"
+    ]
+   },
+   {
+    "law": "Becoming.LumpedSeeking.posterior_ratio_kept",
+    "takes": [
+     "k3-decided",
+     "card-listed",
+     "lumpedseeking-tied"
+    ]
+   },
+   {
+    "law": "Becoming.LumpedSeeking.order_kept",
+    "takes": [
+     "k3-decided",
+     "card-listed",
+     "lumpedseeking-tied",
+     "lumpedseeking-weighs"
+    ]
+   },
+   {
+    "law": "Becoming.LumpedSeeking.seek_tied",
+    "takes": [
+     "lumpedseeking-tied"
+    ]
+   },
+   {
+    "law": "Becoming.LumpedSeeking.seeking_keeps_order",
+    "takes": [
+     "k3-decided",
+     "card-listed",
+     "lumpedseeking-tied",
+     "lumpedseeking-weighs"
+    ]
+   },
+   {
+    "law": "Becoming.LumpedSeeking.Agree.turns_fair",
+    "takes": []
+   },
+   {
+    "law": "Becoming.LumpedSeeking.Agree.keeps_tails",
+    "takes": []
+   },
+   {
+    "law": "Becoming.LumpedSeeking.Agree.seeking_keeps_tails",
+    "takes": []
+   },
+   {
+    "law": "Becoming.LumpedSeeking.Agree.seeking_turns_tails",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ExpectedFreeEnergy.efe_seeking_keeps_order",
+    "takes": [
+     "k3-decided",
+     "card-listed",
+     "lumpedseeking-tied",
+     "expectedfreeenergyreals-weighs"
+    ]
+   }
+  ]
  },
  {
   "id": "a-stop-passed-by-a-listing-that-fixes-the-sign",
@@ -7818,7 +9380,9 @@
   "forbids": null,
   "exits": [
    {
-    "to": null,
+    "to": {
+     "en": "listing both signs and holding first, the formation is off from the second step where going on loses (and goes on from the second where it gains, both_on) (a witness)"
+    },
     "law": "Becoming.HeldForReading.SignLoop.both_off",
     "edge": {
      "en": "Listing both signs and holding first, it is off from the second step where going on loses, and goes on from the second where it gains (a witness)."
@@ -7827,7 +9391,10 @@
     "records": [
      "what-holding-for-a-reading-is-worth"
     ],
-    "source": "theories/becoming/chapters/03-KNOWING.md#r-what-holding-for-a-reading-is-worth"
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-what-holding-for-a-reading-is-worth",
+    "drops": [
+     "heldforreading-all-predict-gain"
+    ]
    }
   ],
   "transitions": [],
@@ -7855,7 +9422,53 @@
    "theories/becoming/chapters/03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test",
    "theories/becoming/chapters/07-SIGNIFICANCE.md#executable"
   ],
-  "standing_without_record": null
+  "standing_without_record": null,
+  "premises": [
+   {
+    "law": "Becoming.HeldForReading.SignLoop.rests_unread",
+    "takes": [
+     "heldforreading-all-predict-gain"
+    ]
+   },
+   {
+    "law": "Becoming.HeldForReading.SignLoop.never_senses_stop",
+    "takes": [
+     "heldforreading-all-predict-gain"
+    ]
+   },
+   {
+    "law": "Becoming.HeldForReading.SignLoop.refuted_senses_stop",
+    "takes": []
+   },
+   {
+    "law": "Becoming.HeldForReading.SignLoop.refuted_drops",
+    "takes": []
+   },
+   {
+    "law": "Becoming.HeldForReading.SignLoop.refuted_goes_on",
+    "takes": []
+   },
+   {
+    "law": "Becoming.HeldForReading.SignLoop.both_off",
+    "takes": []
+   },
+   {
+    "law": "Becoming.HeldForReading.SignLoop.both_on",
+    "takes": []
+   },
+   {
+    "law": "Becoming.HeldForReading.SignLoop.choose_hold_iff",
+    "takes": []
+   },
+   {
+    "law": "Becoming.HeldForReading.SignLoop.choose_go_ties",
+    "takes": []
+   },
+   {
+    "law": "Becoming.HeldForReading.SignLoop.choose_off_ties",
+    "takes": []
+   }
+  ]
  },
  {
   "id": "a-prediction-read-by-what-it-predicts",
@@ -7906,7 +9519,15 @@
     ],
     "records": [
      "a-prediction-read-by-what-it-predicts"
-    ]
+    ],
+    "between": {
+     "from": {
+      "en": "publication under the threshold response on 0, 1, 2 starting at 0, which stays 0 (itself right)"
+     },
+     "to": {
+      "en": "publication starting at 1, which reaches the right prediction 2 after one step and stays there"
+     }
+    }
    },
    {
     "kind": "pace bound",
@@ -7918,7 +9539,15 @@
     ],
     "records": [
      "a-prediction-read-by-what-it-predicts"
-    ]
+    ],
+    "between": {
+     "from": {
+      "en": "repeated publication from the bottom value 0 of the chain 0 to n, under a response mapping the chain into itself and keeping its order"
+     },
+     "to": {
+      "en": "a right prediction by step n, the least right prediction on the chain"
+     }
+    }
    }
   ],
   "tests": [
@@ -7947,7 +9576,87 @@
   "sources": [
    "theories/becoming/chapters/03-KNOWING.md#r-a-prediction-read-by-what-it-predicts"
   ],
-  "standing_without_record": null
+  "standing_without_record": null,
+  "premises": [
+   {
+    "law": "Becoming.ReflexivePrediction.none_right_of_moves",
+    "takes": [
+     "reflexiveprediction-moves"
+    ]
+   },
+   {
+    "law": "Becoming.ReflexivePrediction.no_predictor_right",
+    "takes": [
+     "reflexiveprediction-moves"
+    ]
+   },
+   {
+    "law": "Becoming.ReflexivePrediction.predictor_iff",
+    "takes": [
+     "keeping-choiceover"
+    ]
+   },
+   {
+    "law": "Becoming.ReflexivePrediction.rests_iff_right",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ReflexivePrediction.right_rests",
+    "takes": [
+     "reflexiveprediction-right"
+    ]
+   },
+   {
+    "law": "Becoming.ReflexivePrediction.reached_rests",
+    "takes": [
+     "reflexiveprediction-right"
+    ]
+   },
+   {
+    "law": "Becoming.ReflexivePrediction.on_chain",
+    "takes": [
+     "reflexiveprediction-within"
+    ]
+   },
+   {
+    "law": "Becoming.ReflexivePrediction.rises",
+    "takes": [
+     "reflexiveprediction-within",
+     "reflexiveprediction-keeps"
+    ]
+   },
+   {
+    "law": "Becoming.ReflexivePrediction.below_right",
+    "takes": [
+     "reflexiveprediction-keeps",
+     "reflexiveprediction-right"
+    ]
+   },
+   {
+    "law": "Becoming.ReflexivePrediction.bottom_rests",
+    "takes": [
+     "reflexiveprediction-within",
+     "reflexiveprediction-keeps",
+     "card-natural-number-amounts"
+    ]
+   },
+   {
+    "law": "Becoming.ReflexivePrediction.ThresholdResponse.reached_by_start",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ReflexivePrediction.Negating.alternates",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ReflexivePrediction.Reflecting.reverses",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ReflexivePrediction.Reflecting.middle_right",
+    "takes": []
+   }
+  ]
  },
  {
   "id": "a-break-read-only-by-threshold",
@@ -8002,7 +9711,9 @@
   },
   "exits": [
    {
-    "to": null,
+    "to": {
+     "en": "with the stock coupled into the formation by level, any positive raise sets the webs apart through its couplings at every step: a raise of the stock couples in"
+    },
     "law": "Becoming.Web.observed_raise_couples",
     "edge": {
      "en": "Coupled by level, every raise passes at once: with the stock coupled into the formation by level, any positive raise sets the webs apart through its couplings at every step."
@@ -8011,7 +9722,10 @@
     "records": [
      "runaway-distance-uncoupled"
     ],
-    "source": "theories/becoming/chapters/02-MAP.md#r-runaway-distance-uncoupled"
+    "source": "theories/becoming/chapters/02-MAP.md#r-runaway-distance-uncoupled",
+    "drops": [
+     "runaway-unobserved"
+    ]
    }
   ],
   "transitions": [],
@@ -8055,7 +9769,92 @@
    "theories/becoming/chapters/03-KNOWING.md#r-the-markov-blanket-as-a-coupling-structure",
    "theories/becoming/chapters/03-KNOWING.md#break-seen-coming"
   ],
-  "standing_without_record": null
+  "standing_without_record": null,
+  "premises": [
+   {
+    "law": "Becoming.Flow.policy_keeps_difference",
+    "takes": [
+     "k3-decided",
+     "k3-balance",
+     "runaway-present",
+     "runaway-policythrough",
+     "runaway-othersfixed",
+     "feedback-dependson",
+     "runaway-unobserved",
+     "runaway-supported",
+     "card-requirements-as-thresholds"
+    ]
+   },
+   {
+    "law": "Becoming.Flow.policy_uses_after_failure",
+    "takes": [
+     "k3-decided",
+     "k3-balance",
+     "runaway-present",
+     "runaway-policythrough",
+     "runaway-othersfixed",
+     "testing-coupledinto",
+     "card-requirements-as-thresholds"
+    ]
+   },
+   {
+    "law": "Becoming.Web.alikeThrough_raise",
+    "takes": [
+     "k3-decided",
+     "runaway-unobserved",
+     "runaway-supported",
+     "card-requirements-as-thresholds"
+    ]
+   },
+   {
+    "law": "Becoming.Web.observed_raise_couples",
+    "takes": [
+     "k3-decided",
+     "runaway-observed"
+    ]
+   },
+   {
+    "law": "Becoming.Web.break_not_bounded",
+    "takes": [
+     "k3-decided",
+     "runaway-unobserved",
+     "runaway-others-met",
+     "card-requirements-as-thresholds"
+    ]
+   },
+   {
+    "law": "Becoming.SupportDrawn.break_uncoupled",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Attracting.higher_breaks_first",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Blanket.Blanketed.agent_through_sensory",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Blanket.Blanketed.through_reading",
+    "takes": [
+     "learning-lumped"
+    ]
+   },
+   {
+    "law": "Becoming.Blanket.ThresholdDrain.any_model",
+    "takes": [
+     "blanket-reads-through-four"
+    ]
+   },
+   {
+    "law": "Becoming.Blanket.ThresholdDrain.sensory_apart_at_four",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Blanket.ThresholdDrain.blanket_iff_through",
+    "takes": []
+   }
+  ]
  },
  {
   "id": "a-reading-kept-by-its-update",
@@ -8134,7 +9933,87 @@
    "theories/becoming/chapters/03-KNOWING.md#r-a-reading-kept-by-its-update",
    "theories/becoming/chapters/03-KNOWING.md#r-a-response-common-over-a-reading"
   ],
-  "standing_without_record": null
+  "standing_without_record": null,
+  "premises": [
+   {
+    "law": "Becoming.ReadingLoop.kept_iff_closed",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ReadingLoop.closed_of_keptBy",
+    "takes": [
+     "readingloop-keptby"
+    ]
+   },
+   {
+    "law": "Becoming.ReadingLoop.keeps_of_leadsInto",
+    "takes": [
+     "grammarlaws-bi",
+     "readingloop-leadsinto"
+    ]
+   },
+   {
+    "law": "Becoming.ReadingLoop.keeps_iff_leadsInto",
+    "takes": [
+     "readingloop-keptby"
+    ]
+   },
+   {
+    "law": "Becoming.ReadingLoop.keeps_continues_iff",
+    "takes": [
+     "readingloop-keptby"
+    ]
+   },
+   {
+    "law": "Becoming.ReadingLoop.keeping_policy_iff",
+    "takes": [
+     "keeping-choiceover",
+     "readingloop-keptby"
+    ]
+   },
+   {
+    "law": "Becoming.ReadingLoop.everything_kept",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ReadingLoop.nothing_kept",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ReadingLoop.PairwiseShared.two_share",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ReadingLoop.PairwiseShared.none_for_all",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ReadingLoop.possible_kept",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ReadingLoop.possible_least",
+    "takes": [
+     "readingloop-keptby"
+    ]
+   },
+   {
+    "law": "Becoming.ReadingLoop.history_keeps_iff",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ReadingLoop.history_continues_iff",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Viability.kernel_iff_held",
+    "takes": []
+   },
+   {
+    "law": "Becoming.«所闭之承最大»",
+    "takes": []
+   }
+  ]
  },
  {
   "id": "what-training-installs",
@@ -8178,7 +10057,9 @@
   "forbids": null,
   "exits": [
    {
-    "to": null,
+    "to": {
+     "en": "in the commons where the rest outruns the renewal, a local search in which every candidate is a neighbour moves from restraint to the drawing law at its first step, at every weight; one with empty neighbourhoods rests at restraint, which the reward settles on at no weight (a witness)"
+    },
     "law": "Becoming.Training.Commons.outrun_neighbourhood_decides",
     "edge": {
      "en": "Where the rest outruns the renewal, restraint is settled at no weight, yet a local search whose neighbourhoods are empty rests at it; one in which every candidate is a neighbour moves from it to the drawing law (a witness)."
@@ -8187,7 +10068,8 @@
     "records": [
      "what-training-installs"
     ],
-    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-training-installs"
+    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-training-installs",
+    "drops": []
    }
   ],
   "transitions": [
@@ -8201,7 +10083,15 @@
     ],
     "records": [
      "what-training-installs"
-    ]
+    ],
+    "between": {
+     "from": {
+      "en": "any start of a search improving for a natural-number reward at most B"
+     },
+     "to": {
+      "en": "a rest of the search, a candidate the step leaves unchanged, reached by step B + 1"
+     }
+    }
    },
    {
     "kind": "tipping in a parameter",
@@ -8216,7 +10106,15 @@
     ],
     "records": [
      "what-training-installs"
-    ]
+    ],
+    "between": {
+     "from": {
+      "en": "the computed commons with the rest drawing one unit a step, within the renewal: restraint is settled exactly at weights of at least one; at weight one both laws are settled and every improving search keeps the one it starts from"
+     },
+     "to": {
+      "en": "the rest drawing two units a step, outrunning the renewal: restraint is settled at no weight and the drawing law at every weight"
+     }
+    }
    }
   ],
   "tests": [],
@@ -8249,7 +10147,144 @@
   "sources": [
    "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-training-installs"
   ],
-  "standing_without_record": null
+  "standing_without_record": null,
+  "premises": [
+   {
+    "law": "Becoming.Training.same_courses_of_along",
+    "takes": [
+     "k3-a-supplied-law-of-exchange",
+     "counterfactual-nonanticipating",
+     "training-along"
+    ]
+   },
+   {
+    "law": "Becoming.Training.trained_alike_of_along",
+    "takes": [
+     "k3-a-supplied-law-of-exchange",
+     "counterfactual-nonanticipating",
+     "training-along",
+     "training-reads"
+    ]
+   },
+   {
+    "law": "Becoming.Training.explored_same_courses",
+    "takes": [
+     "k3-a-supplied-law-of-exchange",
+     "counterfactual-nonanticipating",
+     "training-along"
+    ]
+   },
+   {
+    "law": "Becoming.Training.installed_where_lumped",
+    "takes": [
+     "k3-a-supplied-law-of-exchange",
+     "training-readsthrough",
+     "training-samecourses",
+     "training-lumped-with-course"
+    ]
+   },
+   {
+    "law": "Becoming.Training.free_where_unlumped",
+    "takes": [
+     "k3-a-supplied-law-of-exchange",
+     "counterfactual-nonanticipating",
+     "training-readsthrough",
+     "k3-decided",
+     "training-unlumped"
+    ]
+   },
+   {
+    "law": "Becoming.Training.response_free_where_unlumped",
+    "takes": [
+     "k3-a-supplied-law-of-exchange",
+     "counterfactual-nonanticipating",
+     "training-readsthrough",
+     "k3-decided",
+     "training-unlumped"
+    ]
+   },
+   {
+    "law": "Becoming.Training.trained_alike_iff",
+    "takes": [
+     "k3-a-supplied-law-of-exchange"
+    ]
+   },
+   {
+    "law": "Becoming.Training.settled_stays",
+    "takes": [
+     "training-improving",
+     "training-settles"
+    ]
+   },
+   {
+    "law": "Becoming.Training.comes_to_rest",
+    "takes": [
+     "training-improving",
+     "training-reward-bounded",
+     "card-natural-number-amounts"
+    ]
+   },
+   {
+    "law": "Becoming.Training.LocalSearch.rests_iff",
+    "takes": [
+     "training-localsearch"
+    ]
+   },
+   {
+    "law": "Becoming.Training.LocalSearch.rests_iff_settles",
+    "takes": [
+     "training-localsearch"
+    ]
+   },
+   {
+    "law": "Becoming.Training.trained_alike_beyond_closure",
+    "takes": [
+     "k3-a-supplied-law-of-exchange",
+     "counterfactual-nonanticipating",
+     "counterfactual-through",
+     "counterfactual-feasible",
+     "training-agree-on-closure",
+     "training-trainsthrough"
+    ]
+   },
+   {
+    "law": "Becoming.Training.outrun_settles_iff",
+    "takes": [
+     "k3-a-supplied-law-of-exchange",
+     "k3-balance",
+     "k3-only-active-relata-give",
+     "k3-activity-needing-support",
+     "training-gated-renewal",
+     "card-listed",
+     "training-rest-outruns",
+     "training-score-reads-late",
+     "card-natural-number-amounts",
+     "card-requirements-as-thresholds"
+    ]
+   },
+   {
+    "law": "Becoming.Training.Commons.start_decides",
+    "takes": [
+     "training-improving"
+    ]
+   },
+   {
+    "law": "Becoming.Training.Commons.outrun_neighbourhood_decides",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Training.Commons.renewed_restraint_settles_iff",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Training.Commons.outrun_restraint_unsettled",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Training.Commons.outrun_drawing_settles",
+    "takes": []
+   }
+  ]
  },
  {
   "id": "what-a-commuting-law-keeps-apart",
@@ -8296,7 +10331,9 @@
   },
   "exits": [
    {
-    "to": null,
+    "to": {
+     "en": "a law under which the runs from x and from σ x are at one configuration at some step: such a law does not commute with σ"
+    },
     "law": "Becoming.Law.Commutes.breaks",
     "edge": {
      "en": "To merge what a symmetry tells apart, a law must break the symmetry: where σ moves every configuration and the runs from x and σ x are at one configuration at a step, the law does not commute with σ."
@@ -8305,7 +10342,10 @@
     "records": [
      "what-a-commuting-law-keeps-apart"
     ],
-    "source": "theories/becoming/chapters/01-ROOT.md#r-what-a-commuting-law-keeps-apart"
+    "source": "theories/becoming/chapters/01-ROOT.md#r-what-a-commuting-law-keeps-apart",
+    "drops": [
+     "commuting-commutes"
+    ]
    }
   ],
   "transitions": [],
@@ -8349,7 +10389,88 @@
    "theories/becoming/chapters/05-COLLECTIVES.md#r-a-commuting-learner-drives-no-unread-choice",
    "theories/becoming/chapters/05-COLLECTIVES.md#t3"
   ],
-  "standing_without_record": null
+  "standing_without_record": null,
+  "premises": [
+   {
+    "law": "Becoming.Law.Commutes.iterate",
+    "takes": [
+     "commuting-commutes"
+    ]
+   },
+   {
+    "law": "Becoming.Law.Commutes.apart",
+    "takes": [
+     "commuting-commutes",
+     "diagonal-moves"
+    ]
+   },
+   {
+    "law": "Becoming.Law.Commutes.breaks",
+    "takes": [
+     "diagonal-moves"
+    ]
+   },
+   {
+    "law": "Becoming.Law.Commutes.not_drawn_to_one",
+    "takes": [
+     "commuting-commutes",
+     "diagonal-moves"
+    ]
+   },
+   {
+    "law": "Becoming.Law.Commutes.keeps_fixed",
+    "takes": [
+     "commuting-commutes"
+    ]
+   },
+   {
+    "law": "Becoming.Law.Commutes.self_apart",
+    "takes": [
+     "diagonal-moves"
+    ]
+   },
+   {
+    "law": "Becoming.Weighted.Commutes.carried",
+    "takes": [
+     "weightedcommuting-commutes"
+    ]
+   },
+   {
+    "law": "Becoming.Weighted.Commutes.fixed_expect",
+    "takes": [
+     "weightedcommuting-commutes"
+    ]
+   },
+   {
+    "law": "Becoming.Weighted.Commutes.start_expect",
+    "takes": [
+     "weightedcommuting-commutes",
+     "weightedcommuting-unchanged"
+    ]
+   },
+   {
+    "law": "Becoming.Weighted.Commutes.of_samples",
+    "takes": [
+     "weightedcommuting-samples-carried"
+    ]
+   },
+   {
+    "law": "Becoming.Weighted.Reinforcing.expect_equal",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Weighted.Reinforcing.oneSided",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Weighted.Pooling.share_rises",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Weighted.Pooling.share_below_half",
+    "takes": []
+   }
+  ]
  },
  {
   "id": "readings-within-what-they-read",
@@ -8411,7 +10532,81 @@
   "sources": [
    "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read"
   ],
-  "standing_without_record": null
+  "standing_without_record": null,
+  "premises": [
+   {
+    "law": "Becoming.Diagonal.gap_unsaid",
+    "takes": [
+     "diagonal-moves"
+    ]
+   },
+   {
+    "law": "Becoming.Diagonal.claims_incomplete",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Diagonal.complete_iff_alike",
+    "takes": [
+     "k3-decided"
+    ]
+   },
+   {
+    "law": "Becoming.Diagonal.Unfolds.incomplete",
+    "takes": [
+     "diagonal-unfolds",
+     "diagonal-moves"
+    ]
+   },
+   {
+    "law": "Becoming.Diagonal.Unfolds.gap_new",
+    "takes": [
+     "diagonal-unfolds",
+     "diagonal-moves"
+    ]
+   },
+   {
+    "law": "Becoming.Diagonal.Unfolds.gaps_differ",
+    "takes": [
+     "diagonal-unfolds",
+     "diagonal-moves",
+     "diagonal-same-transitive"
+    ]
+   },
+   {
+    "law": "Becoming.Diagonal.Unfolds.never_returns",
+    "takes": [
+     "diagonal-unfolds",
+     "diagonal-moves"
+    ]
+   },
+   {
+    "law": "Becoming.Diagonal.Unfolds.unheld",
+    "takes": [
+     "diagonal-unfolds",
+     "diagonal-moves",
+     "diagonal-same-symmetric",
+     "diagonal-same-transitive"
+    ]
+   },
+   {
+    "law": "Becoming.Diagonal.unfolding_open",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Diagonal.revision_never_rests",
+    "takes": [
+     "diagonal-moves"
+    ]
+   },
+   {
+    "law": "Becoming.Diagonal.negation_never_rests",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Diagonal.negation_returns",
+    "takes": []
+   }
+  ]
  },
  {
   "id": "adaptive-closure-cannot-resolve",
@@ -8450,7 +10645,9 @@
   "forbids": null,
   "exits": [
    {
-    "to": null,
+    "to": {
+     "en": "in the named history, after reopening, inspecting and taking up, the changed history's judgment is the present target (true), with the inspection budget and the work at nothing; reopening and taking up without inspection, or with no inspection left, leaves it not correct (a witness)"
+    },
     "law": "Generative.NormativeActivity.reopening_and_inspection_repair",
     "edge": {
      "en": "In the named history, reopening, inspecting and taking up repairs the judgment, using up the inspection available; reopening and taking up without inspection does not, nor does reopening with no inspection left (a witness)."
@@ -8459,7 +10656,11 @@
     "records": [
      "adaptive-closure-cannot-resolve"
     ],
-    "source": "theories/becoming/chapters/03-KNOWING.md#r-adaptive-closure-cannot-resolve"
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-adaptive-closure-cannot-resolve",
+    "drops": [
+     "normativeactivity-closedlocal",
+     "normativeactivity-closeddomain"
+    ]
    }
   ],
   "transitions": [],
@@ -8479,7 +10680,50 @@
   "sources": [
    "theories/becoming/chapters/03-KNOWING.md#r-adaptive-closure-cannot-resolve"
   ],
-  "standing_without_record": null
+  "standing_without_record": null,
+  "premises": [
+   {
+    "law": "Generative.NormativeActivity.adaptive_closed_invariant",
+    "takes": [
+     "normativeactivity-closedlocal",
+     "normativeactivity-closeddomain"
+    ]
+   },
+   {
+    "law": "Generative.NormativeActivity.adaptive_closed_cannot_resolve",
+    "takes": [
+     "normativeactivity-closedlocal"
+    ]
+   },
+   {
+    "law": "Generative.NormativeActivity.closed_continuations_remain_unresolved",
+    "takes": [
+     "normativeactivity-closedlocal"
+    ]
+   },
+   {
+    "law": "Generative.NormativeActivity.sound_closed_answer_abstains",
+    "takes": [
+     "knowledgecorrespondence-soundon"
+    ]
+   },
+   {
+    "law": "Generative.NormativeActivity.historical_truth_present_error",
+    "takes": []
+   },
+   {
+    "law": "Generative.NormativeActivity.reopening_and_inspection_repair",
+    "takes": []
+   },
+   {
+    "law": "Generative.NormativeActivity.reopening_without_inspection_does_not_repair",
+    "takes": []
+   },
+   {
+    "law": "Generative.NormativeActivity.exhausted_reopening_does_not_repair",
+    "takes": []
+   }
+  ]
  },
  {
   "id": "correction-is-not-calibration",
@@ -8520,7 +10764,9 @@
   "forbids": null,
   "exits": [
    {
-    "to": null,
+    "to": {
+     "en": "the admitted run equals the run with responsive reports, for every network and task list"
+    },
     "law": "CalibrationRenewal.renewed_run",
     "edge": {
      "en": "Inspecting the channels with at least seven units, through a connected apparatus and with every gain nonzero, makes the admitted run equal the run with responsive reports, for every network and task list."
@@ -8529,10 +10775,13 @@
     "records": [
      "correction-is-not-calibration"
     ],
-    "source": "theories/becoming/chapters/03-KNOWING.md#r-correction-is-not-calibration"
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-correction-is-not-calibration",
+    "drops": []
    },
    {
-    "to": null,
+    "to": {
+     "en": "in the named runs, inspecting the changed channels with seven units revises the overwritten matrix within two tasks, one succeeding; with six units it stays unrevised, none succeeding (a witness)"
+    },
     "law": "CalibrationRenewal.actual_repair_after_inspection",
     "edge": {
      "en": "In the named runs, seven units revise the overwritten matrix within two tasks, one succeeding; six leave it unrevised, none succeeding (a witness)."
@@ -8541,7 +10790,8 @@
     "records": [
      "correction-is-not-calibration"
     ],
-    "source": "theories/becoming/chapters/03-KNOWING.md#r-correction-is-not-calibration"
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-correction-is-not-calibration",
+    "drops": []
    }
   ],
   "transitions": [],
@@ -8565,7 +10815,61 @@
   "sources": [
    "theories/becoming/chapters/03-KNOWING.md#r-correction-is-not-calibration"
   ],
-  "standing_without_record": null
+  "standing_without_record": null,
+  "premises": [
+   {
+    "law": "CalibratedUpdater.acquired_local_exact",
+    "takes": [
+     "calibratedupdater-nonzero-gain"
+    ]
+   },
+   {
+    "law": "CalibrationRenewal.two_references_complete",
+    "takes": []
+   },
+   {
+    "law": "CalibrationRenewal.zero_reference_blind",
+    "takes": []
+   },
+   {
+    "law": "CalibrationRenewal.all_signs_transfer_iff",
+    "takes": [
+     "calibrationrenewal-nonzero-gain"
+    ]
+   },
+   {
+    "law": "CalibrationRenewal.mixed_epoch_false_success",
+    "takes": []
+   },
+   {
+    "law": "CalibrationRenewal.late_change_still_fails",
+    "takes": []
+   },
+   {
+    "law": "CalibratedUpdater.stale_channel_blocks_actual_repair",
+    "takes": []
+   },
+   {
+    "law": "CalibrationRenewal.false_success_stalls",
+    "takes": []
+   },
+   {
+    "law": "CalibrationRenewal.renewed_run",
+    "takes": [
+     "calibrationrenewal-connected",
+     "calibrationrenewal-fuel",
+     "calibrationrenewal-nonzero-gain"
+    ]
+   },
+   {
+    "law": "CalibrationRenewal.actual_repair_after_inspection",
+    "takes": []
+   },
+   {
+    "law": "CalibrationRenewal.six_units_cannot_revise",
+    "takes": []
+   }
+  ]
  },
  {
   "id": "learning-by-refutation",
@@ -8630,7 +10934,15 @@
     ],
     "records": [
      "learning-by-refutation"
-    ]
+    ],
+    "between": {
+     "from": {
+      "en": "elimination over the lasso candidates on the orbit, read through any map, of a determined law held by a list l, before step length of l"
+     },
+     "to": {
+      "en": "from step length of l on, it proposes a value at every step, its current candidate having stayed below place tri (length of l); misses do not recur at arbitrarily late steps, and that it proposes and is right from some step on is not refuted"
+     }
+    }
    }
   ],
   "tests": [],
@@ -8658,7 +10970,116 @@
    "theories/becoming/chapters/03-KNOWING.md#r-learning-by-refutation",
    "theories/becoming/chapters/03-KNOWING.md#refutation"
   ],
-  "standing_without_record": null
+  "standing_without_record": null,
+  "premises": [
+   {
+    "law": "Becoming.Learning.no_prefix_fixes_next",
+    "takes": [
+     "learning-two-values"
+    ]
+   },
+   {
+    "law": "Becoming.Learning.no_prefix_fixes_next_finite",
+    "takes": [
+     "learning-two-values"
+    ]
+   },
+   {
+    "law": "Becoming.Learning.diagonal_misses",
+    "takes": [
+     "learning-moves"
+    ]
+   },
+   {
+    "law": "Becoming.Learning.diagonal_unrested",
+    "takes": [
+     "learning-moves"
+    ]
+   },
+   {
+    "law": "Becoming.Learning.diagonal_open",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Learning.index_le_of_accords",
+    "takes": [
+     "k3-decided",
+     "learning-accords"
+    ]
+   },
+   {
+    "law": "Becoming.Learning.misses_not_recurring",
+    "takes": [
+     "k3-decided",
+     "learning-accords"
+    ]
+   },
+   {
+    "law": "Becoming.Learning.lasso_byElimination_bounded",
+    "takes": [
+     "k3-decided",
+     "learning-lasso"
+    ]
+   },
+   {
+    "law": "Becoming.Learning.rest_unrefuted",
+    "takes": [
+     "k3-decided",
+     "learning-lasso"
+    ]
+   },
+   {
+    "law": "Becoming.Learning.lasso_of_rest",
+    "takes": [
+     "k3-decided"
+    ]
+   },
+   {
+    "law": "Becoming.Learning.diagonal_not_lasso",
+    "takes": [
+     "k3-decided",
+     "learning-moves"
+    ]
+   },
+   {
+    "law": "Becoming.Learning.held_byElimination_bounded",
+    "takes": [
+     "k3-decided",
+     "learning-orbit-held"
+    ]
+   },
+   {
+    "law": "Becoming.Learning.held_rest_unrefuted",
+    "takes": [
+     "k3-decided",
+     "learning-orbit-held"
+    ]
+   },
+   {
+    "law": "Becoming.Learning.stable_unrefuted",
+    "takes": [
+     "card-natural-number-amounts"
+    ]
+   },
+   {
+    "law": "Becoming.Learning.merged_bound",
+    "takes": [
+     "k3-decided",
+     "learning-accords"
+    ]
+   },
+   {
+    "law": "Becoming.Learning.merged_unrested",
+    "takes": [
+     "k3-decided",
+     "learning-moves"
+    ]
+   },
+   {
+    "law": "Becoming.Learning.Alternate.rests",
+    "takes": []
+   }
+  ]
  },
  {
   "id": "a-cascade-at-the-histories-reached",
@@ -8747,7 +11168,72 @@
    "theories/becoming/chapters/05-COLLECTIVES.md#r-readers-reading-readers",
    "theories/becoming/chapters/05-COLLECTIVES.md#pools"
   ],
-  "standing_without_record": null
+  "standing_without_record": null,
+  "premises": [
+   {
+    "law": "Becoming.Turns.lawAlikeAlong_of_along",
+    "takes": [
+     "reachedcascade-readsonlyactsalong"
+    ]
+   },
+   {
+    "law": "Becoming.Turns.readsOnlyActsAlong_of_from",
+    "takes": [
+     "cascade-readsonlyactsfrom"
+    ]
+   },
+   {
+    "law": "Becoming.Turns.acts_alike_along",
+    "takes": [
+     "reachedcascade-lawalikealong",
+     "cascade-alikebefore"
+    ]
+   },
+   {
+    "law": "Becoming.Turns.act_alike_along",
+    "takes": [
+     "reachedcascade-lawalikealong",
+     "cascade-alikebefore"
+    ]
+   },
+   {
+    "law": "Becoming.Turns.cascade_through_along",
+    "takes": [
+     "reachedcascade-readsonlyactsalong"
+    ]
+   },
+   {
+    "law": "Becoming.Turns.Unreached.along",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Turns.Unreached.not_from",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Turns.acts_alike_of_cascade",
+    "takes": [
+     "cascade-readsonlyactsfrom",
+     "cascade-alikebefore"
+    ]
+   },
+   {
+    "law": "Becoming.Turns.cascade_through",
+    "takes": [
+     "cascade-readsonlyactsfrom"
+    ]
+   },
+   {
+    "law": "Becoming.Turns.separates_at",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Turns.Copying.reaches_first_only",
+    "takes": [
+     "cascade-alikebefore"
+    ]
+   }
+  ]
  },
  {
   "id": "a-pool-that-recruits-through-itself",
@@ -8786,7 +11272,9 @@
   "forbids": null,
   "exits": [
    {
-    "to": null,
+    "to": {
+     "en": "the pool admitting a reader where the habitat reads empty couples the lost and the spared history apart at step 1 (a witness)"
+    },
     "law": "Becoming.PoolCourse.called_apart",
     "edge": {
      "en": "A pool admitting a reader where the habitat reads empty does not recruit through itself and couples the loss apart at once (a witness)."
@@ -8795,10 +11283,15 @@
     "records": [
      "a-pool-that-recruits-through-itself"
     ],
-    "source": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself"
+    "source": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself",
+    "drops": [
+     "poolcourse-recruitsthrough"
+    ]
    },
    {
-    "to": null,
+    "to": {
+     "en": "the scheduled pool, alike before step 2, couples the lost and the spared history apart at step 2, through the reader, a member at step 2 along the spared history too (a witness)"
+    },
     "law": "Becoming.PoolCourse.scheduled_apart",
     "edge": {
      "en": "The scheduled pool, recruiting through itself and admitting a reader at step 2 in every history, couples the loss apart there, through a member the course without the loss holds too (a witness)."
@@ -8807,7 +11300,8 @@
     "records": [
      "a-pool-that-recruits-through-itself"
     ],
-    "source": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself"
+    "source": "theories/becoming/chapters/05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself",
+    "drops": []
    }
   ],
   "transitions": [],
@@ -8839,7 +11333,81 @@
    "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
    "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions"
   ],
-  "standing_without_record": null
+  "standing_without_record": null,
+  "premises": [
+   {
+    "law": "Becoming.Web.apart_while_member",
+    "takes": [
+     "poolcourse-differ"
+    ]
+   },
+   {
+    "law": "Becoming.Web.selects_alike_of_members",
+    "takes": [
+     "testing-alikethroughupto",
+     "selection-selectsthroughall"
+    ]
+   },
+   {
+    "law": "Becoming.Web.RecruitsThrough.members_alike",
+    "takes": [
+     "poolcourse-recruitsthrough",
+     "poolcourse-samemembers"
+    ]
+   },
+   {
+    "law": "Becoming.Web.RecruitsThrough.first_apart",
+    "takes": [
+     "poolcourse-recruitsthrough",
+     "poolcourse-samemembers",
+     "testing-alikethroughall"
+    ]
+   },
+   {
+    "law": "Becoming.Web.RecruitsThrough.members_alike_always",
+    "takes": [
+     "poolcourse-recruitsthrough",
+     "poolcourse-samemembers",
+     "testing-alikethroughall"
+    ]
+   },
+   {
+    "law": "Becoming.Web.RecruitsThrough.alike_iff",
+    "takes": [
+     "poolcourse-recruitsthrough",
+     "poolcourse-samemembers"
+    ]
+   },
+   {
+    "law": "Becoming.Web.RecruitsThrough.selects_alike",
+    "takes": [
+     "poolcourse-recruitsthrough",
+     "poolcourse-samemembers",
+     "testing-alikethroughupto",
+     "selection-selectsthroughall"
+    ]
+   },
+   {
+    "law": "Becoming.PoolCourse.alone_never_apart",
+    "takes": []
+   },
+   {
+    "law": "Becoming.PoolCourse.called_not_through",
+    "takes": []
+   },
+   {
+    "law": "Becoming.PoolCourse.called_apart",
+    "takes": []
+   },
+   {
+    "law": "Becoming.PoolCourse.scheduled_through",
+    "takes": []
+   },
+   {
+    "law": "Becoming.PoolCourse.scheduled_apart",
+    "takes": []
+   }
+  ]
  },
  {
   "id": "selection-when-the-lumping-changes",
@@ -8894,7 +11462,9 @@
   "forbids": null,
   "exits": [
    {
-    "to": null,
+    "to": {
+     "en": "where the new relation makes alike a pair the old one tells apart, some selection through the old relation is not through the new one"
+    },
     "law": "Becoming.Learning.Training.keeps_through_iff",
     "edge": {
      "en": "For a reflexive, symmetric and transitive old relation and any new relation on the same alternatives, every selection through the old is through the new exactly where every pair the new relation makes alike the old one makes alike; a pair the new makes alike and the old tells apart gives a selection through the old that is not through the new (Learning.Training.lost_choice)."
@@ -8903,10 +11473,13 @@
     "records": [
      "selection-when-the-lumping-changes"
     ],
-    "source": "theories/becoming/chapters/03-KNOWING.md#r-selection-when-the-lumping-changes"
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-selection-when-the-lumping-changes",
+    "drops": []
    },
    {
-    "to": null,
+    "to": {
+     "en": "run jointly with a process, the stock process executes a course exactly where the stock covers it and the process can execute it; where either fails, the course is not executed"
+    },
     "law": "Becoming.Stock.product_feasible_iff",
     "edge": {
      "en": "Run jointly with any process step for step, the stock process executes a course from a stock and a configuration exactly where the stock covers the course and the process can execute it."
@@ -8915,10 +11488,13 @@
     "records": [
      "selection-when-the-lumping-changes"
     ],
-    "source": "theories/becoming/chapters/03-KNOWING.md#r-selection-when-the-lumping-changes"
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-selection-when-the-lumping-changes",
+    "drops": []
    },
    {
-    "to": null,
+    "to": {
+     "en": "from two units, rebuilding the link reaches (1, link formed, response false): the selection 'is true' is through its lumping and correction is enabled; from one unit it reaches (0, link formed, false) with correction disabled (a witness)"
+    },
     "law": "Becoming.Revising.opens_with_correction",
     "edge": {
      "en": "From two units, rebuilding the link forms the selection 'is true' and leaves correction enabled; from one unit it forms it and leaves correction disabled (Revising.opens_without_correction; a witness)."
@@ -8927,10 +11503,13 @@
     "records": [
      "selection-when-the-lumping-changes"
     ],
-    "source": "theories/becoming/chapters/03-KNOWING.md#r-selection-when-the-lumping-changes"
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-selection-when-the-lumping-changes",
+    "drops": []
    },
    {
-    "to": null,
+    "to": {
+     "en": "rebuilding the link away from two units reaches (1, link unformed, response false): the selection 'is true' is no longer through the lumping, and correction is disabled (a witness)"
+    },
     "law": "Becoming.Revising.closes_choice",
     "edge": {
      "en": "Rebuilding the link away from two units loses the selection 'is true' and leaves correction disabled with one unit left (a witness)."
@@ -8939,7 +11518,8 @@
     "records": [
      "selection-when-the-lumping-changes"
     ],
-    "source": "theories/becoming/chapters/03-KNOWING.md#r-selection-when-the-lumping-changes"
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-selection-when-the-lumping-changes",
+    "drops": []
    },
    {
     "to": "a-revision-that-opens-a-correction",
@@ -8951,7 +11531,9 @@
     "records": [
      "selection-when-the-lumping-changes"
     ],
-    "source": "theories/becoming/chapters/03-KNOWING.md#r-selection-when-the-lumping-changes"
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-selection-when-the-lumping-changes",
+    "drops": [],
+    "to_law": "Becoming.OpenedCorrection.Linked.opens_after_replenishing"
    }
   ],
   "transitions": [
@@ -8966,7 +11548,15 @@
     ],
     "records": [
      "selection-when-the-lumping-changes"
-    ]
+    ],
+    "between": {
+     "from": {
+      "en": "a configuration of Revising with no stock (rebuilding disabled), or with the link unformed (correcting disabled)"
+     },
+     "to": {
+      "en": "a configuration with positive stock (rebuilding enabled), and with the link formed as well (correcting enabled)"
+     }
+    }
    }
   ],
   "tests": [],
@@ -8999,7 +11589,86 @@
    "theories/becoming/chapters/03-KNOWING.md#r-what-seeking-cannot-separate",
    "theories/becoming/chapters/03-KNOWING.md#r-a-revision-that-opens-a-correction"
   ],
-  "standing_without_record": null
+  "standing_without_record": null,
+  "premises": [
+   {
+    "law": "Becoming.Learning.Training.keeps_through_iff",
+    "takes": [
+     "revision-old-equivalence"
+    ]
+   },
+   {
+    "law": "Becoming.Learning.Training.lost_choice",
+    "takes": [
+     "revision-old-equivalence"
+    ]
+   },
+   {
+    "law": "Becoming.Registration.retained_keeps",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Registration.retained_gains",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Stock.covered_of_trace",
+    "takes": [
+     "stock-balanced",
+     "stock-drawsheld"
+    ]
+   },
+   {
+    "law": "Becoming.Stock.feasible_iff_covered",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Stock.product_feasible_iff",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Revising.rebuild_enabled_iff",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Revising.correction_enabled_iff",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Revising.feasible_iff",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Revising.covered_not_enacted",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Revising.linked_not_enacted",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Revising.old_cannot_select_rebuild",
+    "takes": [
+     "learning-through"
+    ]
+   },
+   {
+    "law": "Becoming.Revising.opens_without_correction",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Revising.opens_with_correction",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Revising.closes_choice",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Revising.controlled_revision",
+    "takes": []
+   }
+  ]
  },
  {
   "id": "a-wrong-projection-admitted-at-every-step",
@@ -9048,7 +11717,9 @@
   "forbids": null,
   "exits": [
    {
-    "to": null,
+    "to": {
+     "en": "with the moves varied against the hidden bit, no determined process admits the projected steps of the run up to the fifth configuration: the model in which the move decides the outcome is excluded, as is every determined model read through the outcome (a witness)"
+    },
     "law": "Becoming.Confound.varied_refutes",
     "edge": {
      "en": "Moving left again where the hidden bit differs from the first step, no determined process admits the projected steps up to the fifth: in this witness a move varied against the hidden bit excludes every determined model read through the outcome."
@@ -9057,7 +11728,8 @@
     "records": [
      "experiment-needs-return"
     ],
-    "source": "theories/becoming/chapters/03-KNOWING.md#r-experiment-needs-return"
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-experiment-needs-return",
+    "drops": []
    }
   ],
   "transitions": [],
@@ -9086,7 +11758,33 @@
    "theories/becoming/chapters/03-KNOWING.md#r-experiment-needs-return",
    "theories/becoming/chapters/03-KNOWING.md#testing"
   ],
-  "standing_without_record": null
+  "standing_without_record": null,
+  "premises": [
+   {
+    "law": "Becoming.Confound.move_idle",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Confound.misattributes",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Confound.aligned_with_hidden",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Confound.moveDecides_determined",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Confound.confounded",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Confound.varied_refutes",
+    "takes": []
+   }
+  ]
  },
  {
   "id": "evidence-through-change",
@@ -9131,7 +11829,9 @@
   "forbids": null,
   "exits": [
    {
-    "to": null,
+    "to": {
+     "en": "after a change recorded as steady while the world moved, the actual world lies outside the possible ones, two models remain, the pooled certificate passes on compromised support and the audit fails (a witness)"
+    },
     "law": "TemporalInspection.understated_change_can_leave_false_confidence",
     "edge": {
      "en": "A change recorded as steady when the world moved leaves the actual world outside the possible ones, the certificate passing on compromised support while the audit fails (a witness)."
@@ -9140,10 +11840,15 @@
     "records": [
      "evidence-through-change"
     ],
-    "source": "theories/becoming/chapters/03-KNOWING.md#r-evidence-through-change"
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-evidence-through-change",
+    "drops": [
+     "temporalinspection-history"
+    ]
    },
    {
-    "to": null,
+    "to": {
+     "en": "after a scan leaves two models, predicting a reset reopens all three, and the pooled certificate that passed fails (a witness)"
+    },
     "law": "TemporalInspection.predicting_change_reopens_relevant_alternatives",
     "edge": {
      "en": "After a scan leaves two models, predicting a reset reopens all three and the certificate that passed fails (a witness)."
@@ -9152,10 +11857,15 @@
     "records": [
      "evidence-through-change"
     ],
-    "source": "theories/becoming/chapters/03-KNOWING.md#r-evidence-through-change"
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-evidence-through-change",
+    "drops": [
+     "temporalinspection-certificate-accepted"
+    ]
    },
    {
-    "to": null,
+    "to": {
+     "en": "a control change after the last report reopens all three models (a witness)"
+    },
     "law": "TemporalInspection.new_change_after_last_report_reopens_coverage",
     "edge": {
      "en": "A control change after the last report reopens all three (a witness)."
@@ -9164,7 +11874,8 @@
     "records": [
      "evidence-through-change"
     ],
-    "source": "theories/becoming/chapters/03-KNOWING.md#r-evidence-through-change"
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-evidence-through-change",
+    "drops": []
    }
   ],
   "transitions": [
@@ -9178,7 +11889,15 @@
     ],
     "records": [
      "evidence-through-change"
-    ]
+    ],
+    "between": {
+     "from": {
+      "en": "ages t at which 2ρt ≤ B − L − 2σ, where a certificate from the reading may hold (the law gives no sufficiency)"
+     },
+     "to": {
+      "en": "ages t at which 2ρt > B − L − 2σ, where no intervention is certified from the reading"
+     }
+    }
    }
   ],
   "tests": [],
@@ -9201,7 +11920,69 @@
   "sources": [
    "theories/becoming/chapters/03-KNOWING.md#r-evidence-through-change"
   ],
-  "standing_without_record": null
+  "standing_without_record": null,
+  "premises": [
+   {
+    "law": "TemporalInspection.received_actual_retained",
+    "takes": [
+     "temporalinspection-actual-among-possible",
+     "temporalinspection-report-fits"
+    ]
+   },
+   {
+    "law": "TemporalInspection.prediction_contains_successor",
+    "takes": []
+   },
+   {
+    "law": "TemporalInspection.lawful_history_preserves_known",
+    "takes": [
+     "temporalinspection-history",
+     "temporalinspection-known"
+    ]
+   },
+   {
+    "law": "TemporalInspection.current_pool_sound",
+    "takes": [
+     "temporalinspection-actual-among-possible",
+     "temporalinspection-represented",
+     "temporalinspection-faithful",
+     "temporalinspection-certificate-accepted"
+    ]
+   },
+   {
+    "law": "TemporalInspection.history_to_current_certificate",
+    "takes": [
+     "temporalinspection-history",
+     "temporalinspection-known",
+     "temporalinspection-faithful",
+     "temporalinspection-certificate-accepted"
+    ]
+   },
+   {
+    "law": "TemporalInspection.predicting_change_reopens_relevant_alternatives",
+    "takes": []
+   },
+   {
+    "law": "TemporalInspection.new_change_after_last_report_reopens_coverage",
+    "takes": []
+   },
+   {
+    "law": "TemporalInspection.understated_change_can_leave_false_confidence",
+    "takes": []
+   },
+   {
+    "law": "ChangingDependency.uncertainty_requires_tolerance",
+    "takes": [
+     "changingdependency-certified"
+    ]
+   },
+   {
+    "law": "ChangingDependency.error_growth_budget",
+    "takes": [
+     "changingdependency-certified"
+    ]
+   }
+  ]
  },
  {
   "id": "encounter-selection-and-revision",
@@ -9255,7 +12036,9 @@
   "forbids": null,
   "exits": [
    {
-    "to": null,
+    "to": {
+     "en": "the meaning is no longer a candidate after n + k steps: some bearing move between steps n and n + k does not offer it, and it stays out at every later step"
+    },
     "law": "Becoming.Courses.run_stays_iff",
     "edge": {
      "en": "Along a run, a candidate stays one exactly while every later bearing move offers it."
@@ -9264,10 +12047,13 @@
     "records": [
      "encounter-selection-and-revision"
     ],
-    "source": "theories/becoming/chapters/03-KNOWING.md#r-encounter-selection-and-revision"
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-encounter-selection-and-revision",
+    "drops": []
    },
    {
-    "to": null,
+    "to": {
+     "en": "after surveying the place again, the recalled access report is the current one, the earlier reports kept, and the next choice is (0, 1) where the stale report gave (2, 2) (a witness; the rearrangement and the survey are supplied interventions)"
+    },
     "law": "Generative.EncounterChoice.reobservation_revises_the_access_model_and_next_choice",
     "edge": {
      "en": "After a supplied rearrangement, surveying the place again revises the recalled report, keeping the earlier reports, and the next choice with it (a witness; reobservation is a supplied intervention)."
@@ -9276,7 +12062,8 @@
     "records": [
      "encounter-selection-and-revision"
     ],
-    "source": "theories/becoming/chapters/03-KNOWING.md#r-encounter-selection-and-revision"
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-encounter-selection-and-revision",
+    "drops": []
    }
   ],
   "transitions": [],
@@ -9306,7 +12093,73 @@
   "sources": [
    "theories/becoming/chapters/03-KNOWING.md#r-encounter-selection-and-revision"
   ],
-  "standing_without_record": null
+  "standing_without_record": null,
+  "premises": [
+   {
+    "law": "Becoming.CrossSituational.candidates_append",
+    "takes": []
+   },
+   {
+    "law": "Becoming.CrossSituational.narrows",
+    "takes": []
+   },
+   {
+    "law": "Becoming.CrossSituational.stays_iff",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Courses.run_candidates_append",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Courses.run_narrows",
+    "takes": []
+   },
+   {
+    "law": "Becoming.Courses.run_stays_iff",
+    "takes": []
+   },
+   {
+    "law": "Becoming.MachineInstances.acquired_interprets_every",
+    "takes": []
+   },
+   {
+    "law": "Generative.EncounterChoice.binding_changes_which_scene_is_chosen",
+    "takes": []
+   },
+   {
+    "law": "Generative.EncounterChoice.selected_encounters_transfer_to_all_sequences",
+    "takes": []
+   },
+   {
+    "law": "Generative.EncounterChoice.changed_arrangement_can_leave_an_accurate_old_record_stale",
+    "takes": []
+   },
+   {
+    "law": "Generative.EncounterChoice.stale_prediction_changes_choice_before_reobservation",
+    "takes": []
+   },
+   {
+    "law": "Generative.EncounterChoice.reobservation_revises_the_access_model_and_next_choice",
+    "takes": []
+   },
+   {
+    "law": "Generative.EncounterChoice.poor_catalogue_leaves_ambiguity",
+    "takes": []
+   },
+   {
+    "law": "Generative.EncounterChoice.acquired_binding_can_exhaust_response_support",
+    "takes": []
+   },
+   {
+    "law": "Generative.EncounterChoice.removing_coverage_can_make_the_stopping_rule_wrong",
+    "takes": []
+   },
+   {
+    "law": "Generative.EncounterChoice.selected_history_reaches_actual_response",
+    "takes": []
+   }
+  ]
  },
  {
   "id": "a-reading-informed-and-revalued",
@@ -9361,7 +12214,9 @@
   "forbids": null,
   "exits": [
    {
-    "to": null,
+    "to": {
+     "en": "along the course from both worlds listed, the agreeing valuation and a scheduled demonstration, holding for the reading formation's answer falls short, by the reference on the listing of both worlds, by 1 at step 1 and by nothing at step 2 (a witness; there being shown removes the least shortfall)"
+    },
     "law": "Becoming.ListingValuation.TwoWorlds.shown_course",
     "edge": {
      "en": "From both worlds listed and a valuation agreeing with the supplied reference, being shown turns an answer that revaluing leaves; along the course, by that reference on the holding formation's listing of both worlds, holding for the answer falls short by 1 at step 1 and by nothing at step 2 (a witness; there it removes the least shortfall, in these witnesses only)."
@@ -9370,10 +12225,13 @@
     "records": [
      "a-reading-informed-and-revalued"
     ],
-    "source": "theories/becoming/chapters/03-KNOWING.md#r-a-reading-informed-and-revalued"
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-a-reading-informed-and-revalued",
+    "drops": []
    },
    {
-    "to": null,
+    "to": {
+     "en": "along the course from the first world alone, the reversed valuation and a presented input, the answer falls short of the reference by 1 at step 1 and by nothing at step 2 (a witness; there revaluing removes the residual)"
+    },
     "law": "Becoming.ListingValuation.TwoWorlds.presented_course",
     "edge": {
      "en": "From the first world alone and the reversed valuation, revaluing turns an answer that being shown leaves; along the course, by that reference on the first world alone, holding for the answer falls short by 1 at step 1 and by nothing at step 2 (a witness; there it removes the residual, in these witnesses only)."
@@ -9382,7 +12240,8 @@
     "records": [
      "a-reading-informed-and-revalued"
     ],
-    "source": "theories/becoming/chapters/03-KNOWING.md#r-a-reading-informed-and-revalued"
+    "source": "theories/becoming/chapters/03-KNOWING.md#r-a-reading-informed-and-revalued",
+    "drops": []
    }
   ],
   "transitions": [],
@@ -9415,7 +12274,84 @@
    "theories/becoming/chapters/03-KNOWING.md#r-a-reading-informed-and-revalued",
    "theories/becoming/chapters/03-KNOWING.md#r-acts-alike-from-a-model-or-from-an-order"
   ],
-  "standing_without_record": null
+  "standing_without_record": null,
+  "premises": [
+   {
+    "law": "Becoming.ListingValuation.world_fixed",
+    "takes": [
+     "k3-decided"
+    ]
+   },
+   {
+    "law": "Becoming.ListingValuation.through_sensed",
+    "takes": [
+     "k3-decided"
+    ]
+   },
+   {
+    "law": "Becoming.ListingValuation.updates_commute",
+    "takes": [
+     "k3-decided"
+    ]
+   },
+   {
+    "law": "Becoming.ListingValuation.inputs_alike_before",
+    "takes": [
+     "k3-decided"
+    ]
+   },
+   {
+    "law": "Becoming.ListingValuation.undemonstrated_alike",
+    "takes": [
+     "k3-decided",
+     "listingvaluation-undemonstrated"
+    ]
+   },
+   {
+    "law": "Becoming.ListingValuation.TwoWorlds.shown_turns",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ListingValuation.TwoWorlds.presented_turns",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ListingValuation.TwoWorlds.shown_removes_least",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ListingValuation.TwoWorlds.presented_removes_residual",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ListingValuation.TwoWorlds.shown_course",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ListingValuation.TwoWorlds.presented_course",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ListingValuation.TwoWorlds.orders_apart",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ListingValuation.TwoWorlds.routes_alike",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ListingValuation.TwoWorlds.changed_apart",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ListingValuation.TwoWorlds.not_lumped",
+    "takes": []
+   },
+   {
+    "law": "Becoming.ListingValuation.TwoWorlds.lumped_with_start",
+    "takes": []
+   }
+  ]
  },
  {
   "id": "giving-that-waits-on-giving",

@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "about": "The atlas's closed lists. An entry names its family by the family's letter and every other item by its en text. The bases are 08-METHOD §2's seven, and 'reading' and 'open' its labels, with the Chinese 06 writes for them; the families and the kinds of transition are the atlas plan's §4.1 and §4.2. A Chinese name is given only where a chapter gives one. An exit's strength says what the Lean shows: a general condition sufficient, necessary or exact, or a witness, 08 §2's constructed example labelled as one, which shows that a course can leave so and gives no condition for it. A test's state is designed, frozen or run, or refused: frozen, then stopped at its own header before any verdict.",
+ "about": "The atlas's closed lists. An entry names its family by the family's letter and every other item by its en text. The bases are 08-METHOD §2's seven, and 'reading' and 'open' its labels, with the Chinese 06 writes for them; the families and the kinds of transition are the atlas plan's §4.1 and §4.2. A Chinese name is given only where a chapter gives one. An exit's strength says what the Lean shows: a general condition sufficient, necessary or exact, or a witness, 08 §2's constructed example labelled as one, which shows that a course can leave so and gives no condition for it. A test's state is designed, frozen or run, or refused: frozen, then stopped at its own header before any verdict. A premise's kind follows 08's premise card: a commitment of the representation, a local hypothesis, a World premise, dynamics and correspondence (whose standing the card gives row by row), ethics or practice, or a hypothesis of one law (a Lean structure or named binder); what seeded it is K3's list in COVERAGE.json, 08's card or the Lean (PLAN §13, step 2).",
  "families": [
   {"id": "A", "en": "Absorption and ending"},
   {"id": "B", "en": "Drains beyond what couples in"},
@@ -101,5 +101,18 @@
  "source_bases": [
   {"en": "read-in-repo"},
   {"en": "ai-knowledge"}
+ ],
+ "premise_kinds": [
+  {"en": "commitment of the representation"},
+  {"en": "local hypothesis"},
+  {"en": "World premise"},
+  {"en": "dynamics and correspondence"},
+  {"en": "ethics or practice"},
+  {"en": "hypothesis of a law"}
+ ],
+ "premise_seeds": [
+  {"en": "K3"},
+  {"en": "08 card"},
+  {"en": "Lean"}
  ]
 }

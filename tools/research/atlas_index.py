@@ -53,11 +53,11 @@ CREATE TABLE record_home (record TEXT, chapter TEXT, anchor TEXT);
 CREATE TABLE record_hypothesis (record TEXT, idx INTEGER, en TEXT, zh TEXT);
 CREATE TABLE record_reference (record TEXT, path TEXT, role TEXT);
 CREATE TABLE record_declaration (record TEXT, name TEXT);
-CREATE TABLE dynamic (id TEXT PRIMARY KEY, family TEXT, name_en TEXT, name_zh TEXT, base TEXT, standing_without_record TEXT);
+CREATE TABLE dynamic (id TEXT PRIMARY KEY, family TEXT, name_en TEXT, name_zh TEXT, base TEXT, standing_without_record TEXT, premises_read INTEGER);
 CREATE TABLE dynamic_record (dynamic TEXT, record TEXT, via TEXT);
 CREATE TABLE dynamic_declaration (dynamic TEXT, name TEXT, full TEXT, in_core INTEGER);
-CREATE TABLE exit (dynamic TEXT, idx INTEGER, to_dynamic TEXT, to_text TEXT, law TEXT, strength TEXT, source TEXT);
-CREATE TABLE transition (dynamic TEXT, idx INTEGER, kind TEXT, condition TEXT);
+CREATE TABLE exit (dynamic TEXT, idx INTEGER, to_dynamic TEXT, to_text TEXT, law TEXT, strength TEXT, source TEXT, drops TEXT);
+CREATE TABLE transition (dynamic TEXT, idx INTEGER, kind TEXT, condition TEXT, between_named INTEGER);
 CREATE TABLE dynamic_test (dynamic TEXT, path TEXT, thesis TEXT, state TEXT);
 CREATE TABLE test (row INTEGER PRIMARY KEY, id TEXT, name TEXT, thesis TEXT, folder TEXT, directory TEXT, outcome TEXT,
                    frozen TEXT, run TEXT);
@@ -198,7 +198,8 @@ def build(conn: sqlite3.Connection, src: dict, full: bool = False) -> None:
     data = src['atlas'] or {'dynamics': [], 'correspondences': []}
     dyn, drec, ddec, exits, trans, dtests = [], set(), set(), [], [], []
     for d in data['dynamics']:
-        dyn.append((d['id'], d['family'], _en(d['name']), _zh(d['name']), d.get('base'), d.get('standing_without_record')))
+        dyn.append((d['id'], d['family'], _en(d['name']), _zh(d['name']), d.get('base'), d.get('standing_without_record'),
+                    int('premises' in d)))
         for r in d.get('records') or []:
             drec.add((d['id'], r, 'records'))
         for h in d.get('hypotheses') or []:
@@ -211,18 +212,20 @@ def build(conn: sqlite3.Connection, src: dict, full: bool = False) -> None:
         for i, x in enumerate(d.get('exits') or [], 1):
             to = x.get('to')
             exits.append((d['id'], i, to if isinstance(to, str) else None, _en(to) if isinstance(to, dict) else None,
-                          x.get('law'), x.get('strength'), x.get('source')))
+                          x.get('law'), x.get('strength'), x.get('source'), ','.join(x['drops']) if 'drops' in x else None))
             drec.update((d['id'], r, 'exit') for r in x.get('records') or [])
         for i, t in enumerate(d.get('transitions') or [], 1):
-            trans.append((d['id'], i, t.get('kind'), _en(t.get('condition'))))
+            ends = t.get('between') or {}
+            trans.append((d['id'], i, t.get('kind'), _en(t.get('condition')),
+                          int(ends.get('from') is not None and ends.get('to') is not None)))
             drec.update((d['id'], r, 'transition') for r in t.get('records') or [])
         for t in d.get('tests') or []:
             dtests.append((d['id'], t.get('path'), t.get('thesis'), t.get('state')))
-    conn.executemany('INSERT INTO dynamic VALUES (?,?,?,?,?,?)', dyn)
+    conn.executemany('INSERT INTO dynamic VALUES (?,?,?,?,?,?,?)', dyn)
     conn.executemany('INSERT INTO dynamic_record VALUES (?,?,?)', sorted(drec))
     conn.executemany('INSERT INTO dynamic_declaration VALUES (?,?,?,?)', sorted(ddec))
-    conn.executemany('INSERT INTO exit VALUES (?,?,?,?,?,?,?)', exits)
-    conn.executemany('INSERT INTO transition VALUES (?,?,?,?)', trans)
+    conn.executemany('INSERT INTO exit VALUES (?,?,?,?,?,?,?,?)', exits)
+    conn.executemany('INSERT INTO transition VALUES (?,?,?,?,?)', trans)
     conn.executemany('INSERT INTO dynamic_test VALUES (?,?,?,?)', dtests)
 
     cw, targets = [], []
@@ -331,6 +334,9 @@ def measure(conn: sqlite3.Connection) -> dict:
     m['destinations'] = _all(conn, 'SELECT e.dynamic, e.idx, e.to_dynamic, e.to_text, e.strength FROM exit e '
                                    'WHERE e.to_dynamic IS NOT NULL OR e.to_text IS NOT NULL ORDER BY e.dynamic, e.idx')
     m['transitions'] = q('SELECT count(*) FROM transition')
+    m['transitions_between'] = q('SELECT count(*) FROM transition WHERE between_named = 1')
+    m['exits_with_drops'] = q('SELECT count(*) FROM exit WHERE drops IS NOT NULL')
+    m['dynamics_premises_read'] = q('SELECT count(*) FROM dynamic WHERE premises_read = 1')
     # Tests.
     m['tests'] = q('SELECT count(*) FROM test')
     m['test_folders_shared'] = _all(conn, 'SELECT directory, group_concat(id, \'; \') FROM test GROUP BY directory HAVING count(*) > 1 ORDER BY directory')
@@ -484,7 +490,9 @@ def page(m: dict, atlas_data: dict, family_names: dict) -> str:
     out += ['## The counts', '', '| What | Measured |', '|---|---:|',
             f'| Exits that name a destination (a dynamic, or a state in words) | {_pct(m["exits_to_dynamic"] + m["exits_to_text"], m["exits"])} |',
             f'| Dynamics with no exit | {_pct(len(m["no_exit"]), m["dynamics"])} |',
-            f'| Transitions that name what they lie between | 0 of {_n(m["transitions"])} (the entry has no field for it) |',
+            f'| Transitions that name what they lie between | {_pct(m["transitions_between"], m["transitions"])} |',
+            f'| Exits that say which premise they drop (none, where they leave within the premises) | {_pct(m["exits_with_drops"], m["exits"])} |',
+            f'| Dynamics read for the premises their laws take | {_pct(m["dynamics_premises_read"], m["dynamics"])} |',
             f'| Tests whose row names a record or a dynamic | 0 of {_n(m["tests"])} (the table has no field for either) |',
             f'| Tests joined to records exactly: a record cites a file in a folder holding that test alone | {_pct(m["tests_record_exact"], m["tests"])} |',
             f'| Tests joined to records only through a folder other tests share | {_pct(m["tests_record_ambiguous"], m["tests"])} |',
@@ -501,8 +509,8 @@ def page(m: dict, atlas_data: dict, family_names: dict) -> str:
             f'{_n(m["exits"])} exits on {_n(m["dynamics"])} dynamics. {_n(m["exits_to_dynamic"])} name another dynamic as their '
             f'destination and {_n(m["exits_to_text"])} name a state in words; {_n(m["exits_nowhere"])} name none. '
             f'{_n(m["exits_witness"])} are witnesses: a constructed example that shows a course can leave, with no condition for it. '
-            f'{_n(len(m["no_exit"]))} dynamics have no exit. No transition names what it lies between: the atlas\'s transition '
-            'has a kind, a condition, declarations and records, and no ends.' +
+            f'{_n(len(m["no_exit"]))} dynamics have no exit. {_n(m["transitions_between"])} of {_n(m["transitions"])} transitions '
+            'name what they lie between (their `between`); the rest have a kind, a condition, declarations and records, and no ends yet.' +
             (f' {len(m["exits_dangling"])} exits name a destination that is not a dynamic.' if m['exits_dangling'] else ''), '',
             '| Family | Dynamics | With no exit | Exits | Naming a destination | Witnesses | Transitions |',
             '|---|---:|---:|---:|---:|---:|---:|']
@@ -619,7 +627,9 @@ def page(m: dict, atlas_data: dict, family_names: dict) -> str:
             'dynamic can say which stage or round it means; the folder cannot.', '']
 
     out += ['## Pilot: premise ids', '',
-            f'K3\'s {len(m["premises"])} premises (`COVERAGE.json`) are the one place premises are data. For each, a proposed id, '
+            f'K3\'s {len(m["premises"])} premises (`COVERAGE.json`) were the one place premises were data until step 2 of the next phase made '
+            'premises entries of their own ([the premise ledger](PREMISES.md)), seeded from them and from 08\'s card; this pilot is still measured, at each '
+            'render, on K3\'s patterns. For each, a proposed id, '
             'the live record hypotheses that name it in words and those its Lean pattern matches, the dynamics that quote such a '
             'hypothesis, and how many of its witnesses the core run lists. A hypothesis is text, so a match is a candidate join, '
             f'not a reading of it. {_n(m["premise_hypotheses"])} of the {_n(m["hypotheses"])} live hypotheses match some premise, '
